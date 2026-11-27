@@ -2,6 +2,7 @@ import json,os,re,csv,collections,sys
 K=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','..')
 sys.path.insert(0,os.path.join(K,'kitap_destek','turetme_motoru'))
 import istikak as I
+import mesmu as MS
 KAYDET = '--yaz' in sys.argv
 R=re.compile('[ً-ِْٰ]')
 def f(x): return R.sub('',re.sub(r'\d+$','',x.strip())).replace('ـ','')
@@ -24,8 +25,8 @@ for ad in ('kuranda_var','kuranda_yok'):
 mus=collections.defaultdict(set)
 for k in sorted(yol):
     j=json.load(open(yol[k],encoding='utf-8'))
-    for v in j.get('mustaklar',{}).values():
-        for r in v: mus[f(r[1])].add(k)
+    for v in MS.mustak_tam(j).values():
+        for r in v: mus[f(r[2])].add(k)
 kel=json.load(open(K+'/kaynak/sozluk/kelimeler.json',encoding='utf-8'))
 kk={}
 for x in kel:
@@ -67,13 +68,20 @@ for cid,c in ont.items():
 degisen=0
 for k,p in yol.items():
     j=json.load(open(p,encoding='utf-8'))
-    eski=[c['id'] for c in j.get('sozlukler',{}).get('arabic_ontology',[])]
+    eski=[c['id'] for c in j.get('ontoloji',[])]
     yn=[c['id'] for c in yeni.get(k,[])]
     if eski!=yn:
         degisen+=1
         if KAYDET:
-            j.setdefault('sozlukler',{})
-            if yn: j['sozlukler']['arabic_ontology']=yeni[k]
-            else: j['sozlukler'].pop('arabic_ontology',None)
-            open(p,'w',encoding='utf-8').write(okunur(j))
+            mevcut={c['id']:c for c in j.get('ontoloji',[])}
+            if yn:
+                liste=[]
+                for c in yeni[k]:
+                    c={a:b for a,b in c.items() if a!='kunye'}
+                    for a,b in mevcut.get(c['id'],{}).items():
+                        if a.endswith('_tr'): c[a]=b
+                    liste.append(c)
+                j['ontoloji']=liste
+            else: j.pop('ontoloji',None)
+            open(p,'w',encoding='utf-8').write(okunur(j)+'\n')
 print('değişen kök dosyası',degisen,'| köke bağlanan kavram yeri',sum(len(v) for v in yeni.values()))

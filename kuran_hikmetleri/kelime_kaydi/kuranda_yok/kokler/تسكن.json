@@ -1,317 +1,226 @@
 {
   "kok": "تسكن",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تسكن", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تسكني",
-        "u": "تسكني",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تَسَكَّنِي • (tasakkanī) (form V) /ta.sak.ka.niː/\n# second-person feminine singular imperative of تَسَكَّنَ (tasakkana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tasakkanī", "tasakkana"],
-        "k": "تسكن",
-        "yol": "kök"
-      },
-      {
-        "w": "تسكنوا",
-        "u": "تسكنوا",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تَسَكَّنُوا • (tasakkanū) (form V) /ta.sak.ka.nuː/\n# inflection of تَسَكَّنَ (tasakkana):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tasakkanū", "tasakkana"],
-        "k": "تسكن",
-        "yol": "kök"
-      },
-      {
-        "w": "تسكنا",
-        "u": "تسكنا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تسكنا (form V)\n# تَسَكَّنَا (tasakkanā) /ta.sak.ka.naː/: inflection of تَسَكَّنَ (tasakkana):\n## third-person masculine dual past active\n## second-person dual imperative\n# تَسَكَّنَّا (tasakkannā) /ta.sak.kan.naː/: first-person plural past active of تَسَكَّنَ (tasakkana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tasakkanā", "tasakkana", "tasakkannā"],
-        "k": "تسكن",
-        "yol": "kök"
-      },
-      {
-        "w": "تسكنتن",
-        "u": "تسكنتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَسَكَّنْتُنَّ • (tasakkantunna) (form V) /ta.sak.kan.tun.na/\n# second-person feminine plural past active of تَسَكَّنَ (tasakkana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tasakkantunna", "tasakkana"],
-        "k": "تسكن",
-        "yol": "kök"
-      },
-      {
-        "w": "تسكنت",
-        "u": "تسكنت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تسكنت (form V)\n# تَسَكَّنْتُ (tasakkantu) /ta.sak.kan.tu/: first-person singular past active of تَسَكَّنَ (tasakkana)\n# تَسَكَّنْتَ (tasakkanta) /ta.sak.kan.ta/: second-person masculine singular past active of تَسَكَّنَ (tasakkana)\n# تَسَكَّنْتِ (tasakkanti) /ta.sak.kan.ti/: second-person feminine singular past active of تَسَكَّنَ (tasakkana)\n# تَسَكَّنَتْ (tasakkanat) /ta.sak.ka.nat/: third-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tasakkantu", "tasakkana", "tasakkanta"],
-        "k": "تسكن",
-        "yol": "kök"
-      },
-      {
-        "w": "تسكنتما",
-        "u": "تسكنتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَسَكَّنْتُمَا • (tasakkantumā) (form V) /ta.sak.kan.tu.maː/\n# second-person dual past active of تَسَكَّنَ (tasakkana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tasakkantumā", "tasakkana"],
-        "k": "تسكن",
-        "yol": "kök"
-      },
-      {
-        "w": "تسكنتا",
-        "u": "تسكنتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَسَكَّنَتَا • (tasakkanatā) (form V) /ta.sak.ka.na.taː/\n# third-person feminine dual past active of تَسَكَّنَ (tasakkana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tasakkanatā", "tasakkana"],
-        "k": "تسكن",
-        "yol": "kök"
-      },
-      {
-        "w": "أتسكن",
-        "u": "أتسكن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتسكن (form V)\n# أَتَسَكَّنُ (ʔatasakkanu) /ʔa.ta.sak.ka.nu/: first-person singular non-past active indicative of تَسَكَّنَ (tasakkana)\n# أَتَسَكَّنَ (ʔatasakkana) /ʔa.ta.sak.ka.na/: first-person singular non-past active subjunctive of تَسَكَّنَ (tasakkana)\n# أَتَسَكَّنْ (ʔatasakkan) /ʔa.ta.sak.kan/: first-person singular non-past active jussive of تَسَكَّنَ (tasakkana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔatasakkanu", "tasakkana", "ʔatasakkana"],
-        "k": "تسكن",
-        "yol": "kök"
-      },
-      {
-        "w": "تسكنتم",
-        "u": "تسكنتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَسَكَّنْتُمْ • (tasakkantum) (form V) /ta.sak.kan.tum/\n# second-person masculine plural past active of تَسَكَّنَ (tasakkana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tasakkantum", "tasakkana"],
-        "k": "تسكن",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسكنين",
-        "u": "تتسكنين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَسَكَّنِينَ • (tatasakkanīna) (form V) /ta.ta.sak.ka.niː.na/\n# second-person feminine singular non-past active indicative of تَسَكَّنَ (tasakkana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatasakkanīna", "tasakkana"],
-        "k": "تسكن",
-        "yol": "kök"
-      },
-      {
-        "w": "يتسكنان",
-        "u": "يتسكنان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَسَكَّنَانِ • (yatasakkanāni) (form V) /ja.ta.sak.ka.naː.ni/\n# third-person masculine dual non-past active indicative of تَسَكَّنَ (tasakkana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatasakkanāni", "tasakkana"],
-        "k": "تسكن",
-        "yol": "kök"
-      },
-      {
-        "w": "يتسكن",
-        "u": "يتسكن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتسكن (form V)\n# يَتَسَكَّنُ (yatasakkanu) /ja.ta.sak.ka.nu/: third-person masculine singular non-past active indicative of تَسَكَّنَ (tasakkana)\n# يَتَسَكَّنَّ (yatasakkanna) /ja.ta.sak.kan.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of تَسَكَّنَ (tasakkana)\n# يَتَسَكَّنَ (yatasakkana) /ja.ta.sak.ka.na/: third-person masculine singular non-past active subjunct",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatasakkanu", "tasakkana", "yatasakkanna"],
-        "k": "تسكن",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسكن",
-        "u": "تتسكن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتسكن (form V)\n# تَتَسَكَّنُ (tatasakkanu) /ta.ta.sak.ka.nu/: inflection of تَسَكَّنَ (tasakkana):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَسَكَّنَّ (tatasakkanna) /ta.ta.sak.kan.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of تَسَكَّنَ (tasakkana)\n# تَتَسَكَّنَ (tatasakkan",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatasakkanu", "tasakkana", "tatasakkanna"],
-        "k": "تسكن",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسكنون",
-        "u": "تتسكنون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَسَكَّنُونَ • (tatasakkanūna) (form V) /ta.ta.sak.ka.nuː.na/\n# second-person masculine plural non-past active indicative of تَسَكَّنَ (tasakkana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatasakkanūna", "tasakkana"],
-        "k": "تسكن",
-        "yol": "kök"
-      },
-      {
-        "w": "نتسكن",
-        "u": "نتسكن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتسكن (form V)\n# نَتَسَكَّنُ (natasakkanu) /na.ta.sak.ka.nu/: first-person plural non-past active indicative of تَسَكَّنَ (tasakkana)\n# نَتَسَكَّنَ (natasakkana) /na.ta.sak.ka.na/: first-person plural non-past active subjunctive of تَسَكَّنَ (tasakkana)\n# نَتَسَكَّنْ (natasakkan) /na.ta.sak.kan/: first-person plural non-past active jussive of تَسَكَّنَ (tasakkana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["natasakkanu", "tasakkana", "natasakkana"],
-        "k": "تسكن",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسكنان",
-        "u": "تتسكنان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَسَكَّنَانِ • (tatasakkanāni) (form V) /ta.ta.sak.ka.naː.ni/\n# inflection of تَسَكَّنَ (tasakkana):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatasakkanāni", "tasakkana"],
-        "k": "تسكن",
-        "yol": "kök"
-      },
-      {
-        "w": "يتسكنون",
-        "u": "يتسكنون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَسَكَّنُونَ • (yatasakkanūna) (form V) /ja.ta.sak.ka.nuː.na/\n# third-person masculine plural non-past active indicative of تَسَكَّنَ (tasakkana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatasakkanūna", "tasakkana"],
-        "k": "تسكن",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسكنا",
-        "u": "تتسكنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَسَكَّنَا • (tatasakkanā) (form V) /ta.ta.sak.ka.naː/\n# inflection of تَسَكَّنَ (tasakkana):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatasakkanā", "tasakkana"],
-        "k": "تسكن",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسكني",
-        "u": "تتسكني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَسَكَّنِي • (tatasakkanī) (form V) /ta.ta.sak.ka.niː/\n# second-person feminine singular non-past active subjunctive/jussive of تَسَكَّنَ (tasakkana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatasakkanī", "tasakkana"],
-        "k": "تسكن",
-        "yol": "kök"
-      },
-      {
-        "w": "يتسكنوا",
-        "u": "يتسكنوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَسَكَّنُوا • (yatasakkanū) (form V) /ja.ta.sak.ka.nuː/\n# third-person masculine plural non-past active subjunctive/jussive of تَسَكَّنَ (tasakkana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatasakkanū", "tasakkana"],
-        "k": "تسكن",
-        "yol": "kök"
-      },
-      {
-        "w": "يتسكنا",
-        "u": "يتسكنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَسَكَّنَا • (yatasakkanā) (form V) /ja.ta.sak.ka.naː/\n# third-person masculine dual non-past active subjunctive/jussive of تَسَكَّنَ (tasakkana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatasakkanā", "tasakkana"],
-        "k": "تسكن",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسكنوا",
-        "u": "تتسكنوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَسَكَّنُوا • (tatasakkanū) (form V) /ta.ta.sak.ka.nuː/\n# second-person masculine plural non-past active subjunctive/jussive of تَسَكَّنَ (tasakkana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatasakkanū", "tasakkana"],
-        "k": "تسكن",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تس",
+  "ses": {
     "harf": "ت",
+    "fasil": "تس",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تسكني",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تَسَكَّنِي • (tasakkanī) (form V) /ta.sak.ka.niː/\n# second-person feminine singular imperative of تَسَكَّنَ (tasakkana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tasakkanī", "tasakkana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسكنوا",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تَسَكَّنُوا • (tasakkanū) (form V) /ta.sak.ka.nuː/\n# inflection of تَسَكَّنَ (tasakkana):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tasakkanū", "tasakkana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسكنا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تسكنا (form V)\n# تَسَكَّنَا (tasakkanā) /ta.sak.ka.naː/: inflection of تَسَكَّنَ (tasakkana):\n## third-person masculine dual past active\n## second-person dual imperative\n# تَسَكَّنَّا (tasakkannā) /ta.sak.kan.naː/: first-person plural past active of تَسَكَّنَ (tasakkana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tasakkanā", "tasakkana", "tasakkannā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسكنتن",
+      "tur": "verb",
+      "baslik": "تَسَكَّنْتُنَّ • (tasakkantunna) (form V) /ta.sak.kan.tun.na/\n# second-person feminine plural past active of تَسَكَّنَ (tasakkana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tasakkantunna", "tasakkana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسكنت",
+      "tur": "verb",
+      "baslik": "تسكنت (form V)\n# تَسَكَّنْتُ (tasakkantu) /ta.sak.kan.tu/: first-person singular past active of تَسَكَّنَ (tasakkana)\n# تَسَكَّنْتَ (tasakkanta) /ta.sak.kan.ta/: second-person masculine singular past active of تَسَكَّنَ (tasakkana)\n# تَسَكَّنْتِ (tasakkanti) /ta.sak.kan.ti/: second-person feminine singular past active of تَسَكَّنَ (tasakkana)\n# تَسَكَّنَتْ (tasakkanat) /ta.sak.ka.nat/: third-perso",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tasakkantu", "tasakkana", "tasakkanta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسكنتما",
+      "tur": "verb",
+      "baslik": "تَسَكَّنْتُمَا • (tasakkantumā) (form V) /ta.sak.kan.tu.maː/\n# second-person dual past active of تَسَكَّنَ (tasakkana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tasakkantumā", "tasakkana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسكنتا",
+      "tur": "verb",
+      "baslik": "تَسَكَّنَتَا • (tasakkanatā) (form V) /ta.sak.ka.na.taː/\n# third-person feminine dual past active of تَسَكَّنَ (tasakkana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tasakkanatā", "tasakkana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتسكن",
+      "tur": "verb",
+      "baslik": "أتسكن (form V)\n# أَتَسَكَّنُ (ʔatasakkanu) /ʔa.ta.sak.ka.nu/: first-person singular non-past active indicative of تَسَكَّنَ (tasakkana)\n# أَتَسَكَّنَ (ʔatasakkana) /ʔa.ta.sak.ka.na/: first-person singular non-past active subjunctive of تَسَكَّنَ (tasakkana)\n# أَتَسَكَّنْ (ʔatasakkan) /ʔa.ta.sak.kan/: first-person singular non-past active jussive of تَسَكَّنَ (tasakkana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔatasakkanu", "tasakkana", "ʔatasakkana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسكنتم",
+      "tur": "verb",
+      "baslik": "تَسَكَّنْتُمْ • (tasakkantum) (form V) /ta.sak.kan.tum/\n# second-person masculine plural past active of تَسَكَّنَ (tasakkana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tasakkantum", "tasakkana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسكنين",
+      "tur": "verb",
+      "baslik": "تَتَسَكَّنِينَ • (tatasakkanīna) (form V) /ta.ta.sak.ka.niː.na/\n# second-person feminine singular non-past active indicative of تَسَكَّنَ (tasakkana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatasakkanīna", "tasakkana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتسكنان",
+      "tur": "verb",
+      "baslik": "يَتَسَكَّنَانِ • (yatasakkanāni) (form V) /ja.ta.sak.ka.naː.ni/\n# third-person masculine dual non-past active indicative of تَسَكَّنَ (tasakkana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatasakkanāni", "tasakkana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتسكن",
+      "tur": "verb",
+      "baslik": "يتسكن (form V)\n# يَتَسَكَّنُ (yatasakkanu) /ja.ta.sak.ka.nu/: third-person masculine singular non-past active indicative of تَسَكَّنَ (tasakkana)\n# يَتَسَكَّنَّ (yatasakkanna) /ja.ta.sak.kan.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of تَسَكَّنَ (tasakkana)\n# يَتَسَكَّنَ (yatasakkana) /ja.ta.sak.ka.na/: third-person masculine singular non-past active subjunct",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatasakkanu", "tasakkana", "yatasakkanna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسكن",
+      "tur": "verb",
+      "baslik": "تتسكن (form V)\n# تَتَسَكَّنُ (tatasakkanu) /ta.ta.sak.ka.nu/: inflection of تَسَكَّنَ (tasakkana):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَسَكَّنَّ (tatasakkanna) /ta.ta.sak.kan.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of تَسَكَّنَ (tasakkana)\n# تَتَسَكَّنَ (tatasakkan",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatasakkanu", "tasakkana", "tatasakkanna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسكنون",
+      "tur": "verb",
+      "baslik": "تَتَسَكَّنُونَ • (tatasakkanūna) (form V) /ta.ta.sak.ka.nuː.na/\n# second-person masculine plural non-past active indicative of تَسَكَّنَ (tasakkana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatasakkanūna", "tasakkana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتسكن",
+      "tur": "verb",
+      "baslik": "نتسكن (form V)\n# نَتَسَكَّنُ (natasakkanu) /na.ta.sak.ka.nu/: first-person plural non-past active indicative of تَسَكَّنَ (tasakkana)\n# نَتَسَكَّنَ (natasakkana) /na.ta.sak.ka.na/: first-person plural non-past active subjunctive of تَسَكَّنَ (tasakkana)\n# نَتَسَكَّنْ (natasakkan) /na.ta.sak.kan/: first-person plural non-past active jussive of تَسَكَّنَ (tasakkana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["natasakkanu", "tasakkana", "natasakkana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسكنان",
+      "tur": "verb",
+      "baslik": "تَتَسَكَّنَانِ • (tatasakkanāni) (form V) /ta.ta.sak.ka.naː.ni/\n# inflection of تَسَكَّنَ (tasakkana):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatasakkanāni", "tasakkana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتسكنون",
+      "tur": "verb",
+      "baslik": "يَتَسَكَّنُونَ • (yatasakkanūna) (form V) /ja.ta.sak.ka.nuː.na/\n# third-person masculine plural non-past active indicative of تَسَكَّنَ (tasakkana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatasakkanūna", "tasakkana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسكنا",
+      "tur": "verb",
+      "baslik": "تَتَسَكَّنَا • (tatasakkanā) (form V) /ta.ta.sak.ka.naː/\n# inflection of تَسَكَّنَ (tasakkana):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatasakkanā", "tasakkana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسكني",
+      "tur": "verb",
+      "baslik": "تَتَسَكَّنِي • (tatasakkanī) (form V) /ta.ta.sak.ka.niː/\n# second-person feminine singular non-past active subjunctive/jussive of تَسَكَّنَ (tasakkana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatasakkanī", "tasakkana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتسكنوا",
+      "tur": "verb",
+      "baslik": "يَتَسَكَّنُوا • (yatasakkanū) (form V) /ja.ta.sak.ka.nuː/\n# third-person masculine plural non-past active subjunctive/jussive of تَسَكَّنَ (tasakkana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatasakkanū", "tasakkana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتسكنا",
+      "tur": "verb",
+      "baslik": "يَتَسَكَّنَا • (yatasakkanā) (form V) /ja.ta.sak.ka.naː/\n# third-person masculine dual non-past active subjunctive/jussive of تَسَكَّنَ (tasakkana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatasakkanā", "tasakkana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسكنوا",
+      "tur": "verb",
+      "baslik": "تَتَسَكَّنُوا • (tatasakkanū) (form V) /ta.ta.sak.ka.nuː/\n# second-person masculine plural non-past active subjunctive/jussive of تَسَكَّنَ (tasakkana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatasakkanū", "tasakkana"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تسكن", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

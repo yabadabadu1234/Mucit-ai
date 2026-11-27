@@ -1,489 +1,356 @@
 {
   "kok": "وصى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "وصى", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "mekayis": [
-      {
-        "baslik": "وَصَى",
-        "metin": "(وَصَى) الْوَاوُ وَالصَّادُ وَالْحَرْفُ الْمُعْتَلُّ: أَصْلٌ يَدُلُّ عَلَى وَصْلِ شَيْءٍ بِشَيْءٍ. وَوَصَيْتُ الشَّيْءَ: وَصَلْتُهُ. وَيُقَالُ: وَطِئْنَا أَرْضًا وَاصِيَةً، أَيْ إِنَّ نَبْتَهَا مُتَّصِلٌ قَدِ امْتَلَأَتْ مِنْهُ. وَوَصَيْتُ اللَّيْلَةَ بِالْيَوْمِ: وَصَلْتُهَا، وَذَلِكَ فِي عَمَلٍ تَعْمَلُهُ. وَالْوَصِيَّةُ مِنْ هَذَا الْقِيَاسِ، كَأَنَّهُ كَلَامٌ يُوصَى أَيْ يُوصَلُ. يُقَالُ: وَصَّيْتُهُ تَوْصِيَةً، وَأَوْصَيْتُهُ إِيصَاءً."
-      }
-    ],
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الشين والهاء",
-      "baslik": "وصى",
-      "mihveri": "التزام الأشياء بعضها بعضا كالمحزوم بالجريد والنبات الملتف، وكالمتصل بعضه ببعض منه إذ هو متضام. ومن هذا الالتزام جاء معنى الإيجاب في الوصية فهي عهد وتكليف وإلزام. {فَلَكُمُ الرُّبُعُ مِمَّا تَرَكْنَ مِنْ بَعْدِ وَصِيَّةٍ يُوصِينَ بِهَا أَوْ دَيْنٍ} [النساء: 12]، {فَمَنْ خَافَ مِنْ مُوصٍ جَنَفًا أَوْ إِثْمًا فَأَصْلَحَ بَيْنَهُمْ فَلَا إِثْمَ عَلَيْهِ} [البقرة: 182]. {يُوصِيكُمُ اللَّهُ فِي أَوْلَادِكُمْ لِلذَّكَرِ مِثْلُ حَظِّ الْأُنْثَيَيْنِ} [النساء: 11]. أي يفرض عليكم {وَلَا تَقْتُلُوا النَّفْسَ الَّتِي حَرَّمَ اللَّهُ إِلَّا بِالْحَقِّ ذَلِكُمْ وَصَّاكُمْ بِهِ} [الأنعام: 151 وكذلك 152، و 153] وبهذا المعنى يفسر قوله تعالى: {وَالَّذِينَ يُتَوَفَّوْنَ مِنْكُمْ وَيَذَرُونَ أَزْوَاجًا وَصِيَّةً لِأَزْوَاجِهِمْ مَتَاعًا إِلَى الْحَوْلِ غَيْرَ إِخْرَاجٍ} [البقرة: 240]. أي فريضةً، إذ كان ذلك حقًّا واجبًا لهن غير معلق بالتوصية من الأزواج [طب 5/ 252]. وهذا الملحظ يغنى عن تأولهم في الآية {وَلَكُمْ نِصْفُ مَا تَرَكَ أَزْوَاجُكُمْ إِنْ لَمْ يَكُنْ لَهُنَّ وَلَدٌ. . . وَصِيَّةً مِنَ اللَّهِ وَاللَّهُ عَلِيمٌ حَلِيمٌ} [النساء: 12]. قال طب: أي عهدًا من اللَّه إليكم فيما يجب لكم من ميراث من مات منكم [8/ 68 وأيضًا 8/ 30]. هذا وقد قالوا إن (الوَصِيّ) هو المُوصَي -اسما فاعل ومفعول، وإنها من الأضداد. وأساس ذلك أن صيغة (فعيل) تصلح لاسمي الفاعل والمفعول، فهو من سعة مجال الصيغة ولا تضاد في المعنى الأصلي للتركيب. وليس في القرآن من التركيب إلا الوصية (والفعل واسم الفاعل منها) بالمعنى الذي ذكرناه. (3/",
-      "sesler": "",
-      "tam_metin": "{شَرَعَ لَكُمْ مِنَ الدِّينِ مَا وَصَّى بِهِ نُوحًا وَالَّذِي أَوْحَيْنَا إِلَيْكَ} [الشورى: 13]\n\"الوَصَي -كفَتَي وكغَنِيّ: جرائد النخل التي يُحْزَم بها، وقيل هي من الفسيل خاصّة وفلاة واصبة: تتصل بفلاة أخرى. وأرض واصية: متصلة النبات. وقد وَصَى النبتُ: اتصل وكثر [الأساس]. ووَصَت الأرضُ تَصي: يصل نباتها بعضه ببعضه. والوَصِيّ -كغَنِيّ: النباتُ الملتف \".\n(3/1181)\n° المعنى المحوري\nالتزام الأشياء بعضها بعضا كالمحزوم بالجريد والنبات الملتف، وكالمتصل بعضه ببعض منه إذ هو متضام. ومن هذا الالتزام جاء معنى الإيجاب في الوصية فهي عهد وتكليف وإلزام. {فَلَكُمُ الرُّبُعُ مِمَّا تَرَكْنَ مِنْ بَعْدِ وَصِيَّةٍ يُوصِينَ بِهَا أَوْ دَيْنٍ} [النساء: 12]، {فَمَنْ خَافَ مِنْ مُوصٍ جَنَفًا أَوْ إِثْمًا فَأَصْلَحَ بَيْنَهُمْ فَلَا إِثْمَ عَلَيْهِ} [البقرة: 182]. {يُوصِيكُمُ اللَّهُ فِي أَوْلَادِكُمْ لِلذَّكَرِ مِثْلُ حَظِّ الْأُنْثَيَيْنِ} [النساء: 11]. أي يفرض عليكم {وَلَا تَقْتُلُوا النَّفْسَ الَّتِي حَرَّمَ اللَّهُ إِلَّا بِالْحَقِّ ذَلِكُمْ وَصَّاكُمْ بِهِ} [الأنعام: 151 وكذلك 152، و 153] وبهذا المعنى يفسر قوله تعالى: {وَالَّذِينَ يُتَوَفَّوْنَ مِنْكُمْ وَيَذَرُونَ أَزْوَاجًا وَصِيَّةً لِأَزْوَاجِهِمْ مَتَاعًا إِلَى الْحَوْلِ غَيْرَ إِخْرَاجٍ} [البقرة: 240]. أي فريضةً، إذ كان ذلك حقًّا واجبًا لهن غير معلق بالتوصية من الأزواج [طب 5/ 252]. وهذا الملحظ يغنى عن تأولهم في الآية {وَلَكُمْ نِصْفُ مَا تَرَكَ أَزْوَاجُكُمْ إِنْ لَمْ يَكُنْ لَهُنَّ وَلَدٌ. . . وَصِيَّةً مِنَ اللَّهِ وَاللَّهُ عَلِيمٌ حَلِيمٌ} [النساء: 12]. قال طب: أي عهدًا من اللَّه إليكم فيما يجب لكم من ميراث من مات منكم [8/ 68 وأيضًا 8/ 30].\nهذا وقد قالوا إن (الوَصِيّ) هو المُوصَي -اسما فاعل ومفعول، وإنها من الأضداد. وأساس ذلك أن صيغة (فعيل) تصلح لاسمي الفاعل والمفعول، فهو من سعة مجال الصيغة ولا تضاد في المعنى الأصلي للتركيب.\nوليس في القرآن من التركيب إلا الوصية (والفعل واسم الفاعل منها) بالمعنى الذي ذكرناه.\n(3/1182)",
-      "fasil_ozeti": "° معنى الفصل المعجمي (شه) : هو وجود فراغ ما -كالذي في نفْس ذي الشهوة من فقد ما يشتهيه -في (شهو شهى)، وخفة لهب الشهاب وكذا البياض -فالسواد كثافة -في (شهب)، والفراغ الدي يشغله العسل في قرصه، وكذلك وجود شاهد في حيز الواقعة -في (شهد)، وظهور الهلال في الأفق الخالى وكذلك الإعلان عن مجهول -في (شهر)، واختراق رأس الجبل الأقق، وسحب الهواء إلى المصدر الخالي بقوة -في (شهق)."
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "أوصى",
-        "u": "أوصى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أُوَصَّى • (ʔuwaṣṣā) (form II) /ʔu.wasˤ.sˤaː/\n# first-person singular non-past passive indicative/subjunctive of وَصَّى (waṣṣā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuwaṣṣā", "waṣṣā"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "وصي",
-        "u": "وصي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وصي (form II)\n# وُصِّيَ (wuṣṣiya) /wusˤ.sˤi.ja/: third-person masculine singular past passive of وَصَّى (waṣṣā)\n# وَصِّي (waṣṣī) /wasˤ.sˤiː/: second-person feminine singular imperative of وَصَّى (waṣṣā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["wuṣṣiya", "waṣṣā", "waṣṣī"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوصي",
-        "u": "يوصي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يوصي (form II)\n# يُوَصِّي (yuwaṣṣī) /ju.wasˤ.sˤiː/: third-person masculine singular non-past active indicative of وَصَّى (waṣṣā)\n# يُوَصِّيَ (yuwaṣṣiya) /ju.wasˤ.sˤi.ja/: third-person masculine singular non-past active subjunctive of وَصَّى (waṣṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaṣṣī", "waṣṣā", "yuwaṣṣiya"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "أوصي",
-        "u": "أوصي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أوصي (form II)\n# أُوَصِّي (ʔuwaṣṣī) /ʔu.wasˤ.sˤiː/: first-person singular non-past active indicative of وَصَّى (waṣṣā)\n# أُوَصِّيَ (ʔuwaṣṣiya) /ʔu.wasˤ.sˤi.ja/: first-person singular non-past active subjunctive of وَصَّى (waṣṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuwaṣṣī", "waṣṣā", "ʔuwaṣṣiya"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "توصي",
-        "u": "توصي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "توصي (form II)\n# تُوَصِّي (tuwaṣṣī) /tu.wasˤ.sˤiː/: inflection of وَصَّى (waṣṣā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُوَصِّيَ (tuwaṣṣiya) /tu.wasˤ.sˤi.ja/: inflection of وَصَّى (waṣṣā):\n## second-person masculine singular non-past active",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaṣṣī", "waṣṣā", "tuwaṣṣiya"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "توصيان",
-        "u": "توصيان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "توصيان (form II)\n# تُوَصِّيَانِ (tuwaṣṣiyāni) /tu.wasˤ.sˤi.jaː.ni/: inflection of وَصَّى (waṣṣā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُوَصَّيَانِ (tuwaṣṣayāni) /tu.wasˤ.sˤa.jaː.ni/: inflection of وَصَّى (waṣṣā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaṣṣiyāni", "waṣṣā", "tuwaṣṣayāni"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "توصين",
-        "u": "توصين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "توصين (form II)\n# تُوَصِّينَ (tuwaṣṣīna) /tu.wasˤ.sˤiː.na/: inflection of وَصَّى (waṣṣā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُوَصَّيْنَ (tuwaṣṣayna) /tu.wasˤ.sˤaj.na/: inflection of وَصَّى (waṣṣā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaṣṣīna", "waṣṣā", "tuwaṣṣayna"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "توصون",
-        "u": "توصون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "توصون (form II)\n# تُوَصُّونَ (tuwaṣṣūna) /tu.wasˤ.sˤuː.na/: second-person masculine plural non-past active indicative of وَصَّى (waṣṣā)\n# تُوَصَّوْنَ (tuwaṣṣawna) /tu.wasˤ.sˤaw.na/: second-person masculine plural non-past passive indicative of وَصَّى (waṣṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaṣṣūna", "waṣṣā", "tuwaṣṣawna"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوصيان",
-        "u": "يوصيان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يوصيان (form II)\n# يُوَصِّيَانِ (yuwaṣṣiyāni) /ju.wasˤ.sˤi.jaː.ni/: third-person masculine dual non-past active indicative of وَصَّى (waṣṣā)\n# يُوَصَّيَانِ (yuwaṣṣayāni) /ju.wasˤ.sˤa.jaː.ni/: third-person masculine dual non-past passive indicative of وَصَّى (waṣṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaṣṣiyāni", "waṣṣā", "yuwaṣṣayāni"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوصون",
-        "u": "يوصون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يوصون (form II)\n# يُوَصُّونَ (yuwaṣṣūna) /ju.wasˤ.sˤuː.na/: third-person masculine plural non-past active indicative of وَصَّى (waṣṣā)\n# يُوَصَّوْنَ (yuwaṣṣawna) /ju.wasˤ.sˤaw.na/: third-person masculine plural non-past passive indicative of وَصَّى (waṣṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaṣṣūna", "waṣṣā", "yuwaṣṣawna"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوصي",
-        "u": "نوصي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نوصي (form II)\n# نُوَصِّي (nuwaṣṣī) /nu.wasˤ.sˤiː/: first-person plural non-past active indicative of وَصَّى (waṣṣā)\n# نُوَصِّيَ (nuwaṣṣiya) /nu.wasˤ.sˤi.ja/: first-person plural non-past active subjunctive of وَصَّى (waṣṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuwaṣṣī", "waṣṣā", "nuwaṣṣiya"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوصى",
-        "u": "نوصى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نُوَصَّى • (nuwaṣṣā) (form II) /nu.wasˤ.sˤaː/\n# first-person plural non-past passive indicative/subjunctive of وَصَّى (waṣṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuwaṣṣā", "waṣṣā"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوصى",
-        "u": "يوصى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُوَصَّى • (yuwaṣṣā) (form II) /ju.wasˤ.sˤaː/\n# third-person masculine singular non-past passive indicative/subjunctive of وَصَّى (waṣṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaṣṣā", "waṣṣā"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "توصى",
-        "u": "توصى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُوَصَّى • (tuwaṣṣā) (form II) /tu.wasˤ.sˤaː/\n# inflection of وَصَّى (waṣṣā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaṣṣā", "waṣṣā"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "توصوا",
-        "u": "توصوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "توصوا (form II)\n# تُوَصُّوا (tuwaṣṣū) /tu.wasˤ.sˤuː/: second-person masculine plural non-past active subjunctive/jussive of وَصَّى (waṣṣā)\n# تُوَصَّوْا (tuwaṣṣaw) /tu.wasˤ.sˤaw/: second-person masculine plural non-past passive subjunctive/jussive of وَصَّى (waṣṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaṣṣū", "waṣṣā", "tuwaṣṣaw"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "توصيا",
-        "u": "توصيا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "توصيا (form II)\n# تُوَصِّيَا (tuwaṣṣiyā) /tu.wasˤ.sˤi.jaː/: inflection of وَصَّى (waṣṣā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُوَصَّيَا (tuwaṣṣayā) /tu.wasˤ.sˤa.jaː/: inflection of وَصَّى (waṣṣā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjun",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaṣṣiyā", "waṣṣā", "tuwaṣṣayā"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوصين",
-        "u": "يوصين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يوصين (form II)\n# يُوَصِّينَ (yuwaṣṣīna) /ju.wasˤ.sˤiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of وَصَّى (waṣṣā)\n# يُوَصَّيْنَ (yuwaṣṣayna) /ju.wasˤ.sˤaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of وَصَّى (waṣṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaṣṣīna", "waṣṣā", "yuwaṣṣayna"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوصوا",
-        "u": "يوصوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يوصوا (form II)\n# يُوَصُّوا (yuwaṣṣū) /ju.wasˤ.sˤuː/: third-person masculine plural non-past active subjunctive/jussive of وَصَّى (waṣṣā)\n# يُوَصَّوْا (yuwaṣṣaw) /ju.wasˤ.sˤaw/: third-person masculine plural non-past passive subjunctive/jussive of وَصَّى (waṣṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaṣṣū", "waṣṣā", "yuwaṣṣaw"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوصيا",
-        "u": "يوصيا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يوصيا (form II)\n# يُوَصِّيَا (yuwaṣṣiyā) /ju.wasˤ.sˤi.jaː/: third-person masculine dual non-past active subjunctive/jussive of وَصَّى (waṣṣā)\n# يُوَصَّيَا (yuwaṣṣayā) /ju.wasˤ.sˤa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of وَصَّى (waṣṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaṣṣiyā", "waṣṣā", "yuwaṣṣayā"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "أوص",
-        "u": "أوص",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أوص (form II)\n# أُوَصِّ (ʔuwaṣṣi) /ʔu.wasˤ.sˤi/: first-person singular non-past active jussive of وَصَّى (waṣṣā)\n# أُوَصَّ (ʔuwaṣṣa) /ʔu.wasˤ.sˤa/: first-person singular non-past passive jussive of وَصَّى (waṣṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuwaṣṣi", "waṣṣā", "ʔuwaṣṣa"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "توص",
-        "u": "توص",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "توص (form II)\n# تُوَصِّ (tuwaṣṣi) /tu.wasˤ.sˤi/: inflection of وَصَّى (waṣṣā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُوَصَّ (tuwaṣṣa) /tu.wasˤ.sˤa/: inflection of وَصَّى (waṣṣā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaṣṣi", "waṣṣā", "tuwaṣṣa"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوص",
-        "u": "نوص",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نوص (form II)\n# نُوَصِّ (nuwaṣṣi) /nu.wasˤ.sˤi/: first-person plural non-past active jussive of وَصَّى (waṣṣā)\n# نُوَصَّ (nuwaṣṣa) /nu.wasˤ.sˤa/: first-person plural non-past passive jussive of وَصَّى (waṣṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuwaṣṣi", "waṣṣā", "nuwaṣṣa"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوص",
-        "u": "يوص",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يوص (form II)\n# يُوَصِّ (yuwaṣṣi) /ju.wasˤ.sˤi/: third-person masculine singular non-past active jussive of وَصَّى (waṣṣā)\n# يُوَصَّ (yuwaṣṣa) /ju.wasˤ.sˤa/: third-person masculine singular non-past passive jussive of وَصَّى (waṣṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaṣṣi", "waṣṣā", "yuwaṣṣa"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "وصت",
-        "u": "وصت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وَصَّتْ • (waṣṣat) (form II) /wasˤ.sˤat/\n# third-person feminine singular past active of وَصَّى (waṣṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waṣṣat", "waṣṣā"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "وصيتما",
-        "u": "وصيتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وصيتما (form II)\n# وَصَّيْتُمَا (waṣṣaytumā) /wasˤ.sˤaj.tu.maː/: second-person dual past active of وَصَّى (waṣṣā)\n# وُصِّيتُمَا (wuṣṣītumā) /wusˤ.sˤiː.tu.maː/: second-person dual past passive of وَصَّى (waṣṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waṣṣaytumā", "waṣṣā", "wuṣṣītumā"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "وصيت",
-        "u": "وصيت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وصيت (form II)\n# وَصَّيْتُ (waṣṣaytu) /wasˤ.sˤaj.tu/: first-person singular past active of وَصَّى (waṣṣā)\n# وَصَّيْتَ (waṣṣayta) /wasˤ.sˤaj.ta/: second-person masculine singular past active of وَصَّى (waṣṣā)\n# وَصَّيْتِ (waṣṣayti) /wasˤ.sˤaj.ti/: second-person feminine singular past active of وَصَّى (waṣṣā)\n# وُصِّيتُ (wuṣṣītu) /wusˤ.sˤiː.tu/: first-person singular past passive of وَصَّى (waṣṣā)\n#",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waṣṣaytu", "waṣṣā", "waṣṣayta"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "وصتا",
-        "u": "وصتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وَصَّتَا • (waṣṣatā) (form II) /wasˤ.sˤa.taː/\n# third-person feminine dual past active of وَصَّى (waṣṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waṣṣatā", "waṣṣā"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "وصيتم",
-        "u": "وصيتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وصيتم (form II)\n# وَصَّيْتُمْ (waṣṣaytum) /wasˤ.sˤaj.tum/: second-person masculine plural past active of وَصَّى (waṣṣā)\n# وُصِّيتُمْ (wuṣṣītum) /wusˤ.sˤiː.tum/: second-person masculine plural past passive of وَصَّى (waṣṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waṣṣaytum", "waṣṣā", "wuṣṣītum"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "وصيتن",
-        "u": "وصيتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وصيتن (form II)\n# وَصَّيْتُنَّ (waṣṣaytunna) /wasˤ.sˤaj.tun.na/: second-person feminine plural past active of وَصَّى (waṣṣā)\n# وُصِّيتُنَّ (wuṣṣītunna) /wusˤ.sˤiː.tun.na/: second-person feminine plural past passive of وَصَّى (waṣṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waṣṣaytunna", "waṣṣā", "wuṣṣītunna"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "وصيا",
-        "u": "وصيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وصيا (form II)\n# وَصَّيَا (waṣṣayā) /wasˤ.sˤa.jaː/: third-person masculine dual past active of وَصَّى (waṣṣā)\n# وُصِّيَا (wuṣṣiyā) /wusˤ.sˤi.jaː/: third-person masculine dual past passive of وَصَّى (waṣṣā)\n# وَصِّيَا (waṣṣiyā) /wasˤ.sˤi.jaː/: second-person dual imperative of وَصَّى (waṣṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waṣṣayā", "waṣṣā", "wuṣṣiyā"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "وصينا",
-        "u": "وصينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وصينا (form II)\n# وَصَّيْنَا (waṣṣaynā) /wasˤ.sˤaj.naː/: first-person plural past active of وَصَّى (waṣṣā)\n# وُصِّينَا (wuṣṣīnā) /wusˤ.sˤiː.naː/: first-person plural past passive of وَصَّى (waṣṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waṣṣaynā", "waṣṣā", "wuṣṣīnā"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "وص",
-        "u": "وص",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وَصِّ • (waṣṣi) (form II) /wasˤ.sˤi/\n# second-person masculine singular imperative of وَصَّى (waṣṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waṣṣi", "waṣṣā"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "وصيتا",
-        "u": "وصيتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وُصِّيَتَا • (wuṣṣiyatā) (form II) /wusˤ.sˤi.ja.taː/\n# third-person feminine dual past passive of وَصَّى (waṣṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["wuṣṣiyatā", "waṣṣā"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "وصوا",
-        "u": "وصوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وصوا (form II)\n# وَصَّوْا (waṣṣaw) /wasˤ.sˤaw/: third-person masculine plural past active of وَصَّى (waṣṣā)\n# وُصُّوا (wuṣṣū) /wusˤ.sˤuː/: third-person masculine plural past passive of وَصَّى (waṣṣā)\n# وَصُّوا (waṣṣū) /wasˤ.sˤuː/: second-person masculine plural imperative of وَصَّى (waṣṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waṣṣaw", "waṣṣā", "wuṣṣū"],
-        "k": "وصى",
-        "yol": "kök"
-      },
-      {
-        "w": "وصين",
-        "u": "وصين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وصين (form II)\n# وَصَّيْنَ (waṣṣayna) /wasˤ.sˤaj.na/: third-person feminine plural past active of وَصَّى (waṣṣā)\n# وُصِّينَ (wuṣṣīna) /wusˤ.sˤiː.na/: third-person feminine plural past passive of وَصَّى (waṣṣā)\n# وَصِّينَ (waṣṣīna) /wasˤ.sˤiː.na/: second-person feminine plural imperative of وَصَّى (waṣṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waṣṣayna", "waṣṣā", "wuṣṣīna"],
-        "k": "وصى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "صى",
+  "ses": {
     "harf": "و",
+    "fasil": "صى",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "mekayis": [
+    {
+      "baslik": "وَصَى",
+      "metin": "(وَصَى) الْوَاوُ وَالصَّادُ وَالْحَرْفُ الْمُعْتَلُّ: أَصْلٌ يَدُلُّ عَلَى وَصْلِ شَيْءٍ بِشَيْءٍ. وَوَصَيْتُ الشَّيْءَ: وَصَلْتُهُ. وَيُقَالُ: وَطِئْنَا أَرْضًا وَاصِيَةً، أَيْ إِنَّ نَبْتَهَا مُتَّصِلٌ قَدِ امْتَلَأَتْ مِنْهُ. وَوَصَيْتُ اللَّيْلَةَ بِالْيَوْمِ: وَصَلْتُهَا، وَذَلِكَ فِي عَمَلٍ تَعْمَلُهُ. وَالْوَصِيَّةُ مِنْ هَذَا الْقِيَاسِ، كَأَنَّهُ كَلَامٌ يُوصَى أَيْ يُوصَلُ. يُقَالُ: وَصَّيْتُهُ تَوْصِيَةً، وَأَوْصَيْتُهُ إِيصَاءً."
+    }
+  ],
+  "cebel": {
+    "fasil": "الشين والهاء",
+    "baslik": "وصى",
+    "mihveri": "التزام الأشياء بعضها بعضا كالمحزوم بالجريد والنبات الملتف، وكالمتصل بعضه ببعض منه إذ هو متضام. ومن هذا الالتزام جاء معنى الإيجاب في الوصية فهي عهد وتكليف وإلزام. {فَلَكُمُ الرُّبُعُ مِمَّا تَرَكْنَ مِنْ بَعْدِ وَصِيَّةٍ يُوصِينَ بِهَا أَوْ دَيْنٍ} [النساء: 12]، {فَمَنْ خَافَ مِنْ مُوصٍ جَنَفًا أَوْ إِثْمًا فَأَصْلَحَ بَيْنَهُمْ فَلَا إِثْمَ عَلَيْهِ} [البقرة: 182]. {يُوصِيكُمُ اللَّهُ فِي أَوْلَادِكُمْ لِلذَّكَرِ مِثْلُ حَظِّ الْأُنْثَيَيْنِ} [النساء: 11]. أي يفرض عليكم {وَلَا تَقْتُلُوا النَّفْسَ الَّتِي حَرَّمَ اللَّهُ إِلَّا بِالْحَقِّ ذَلِكُمْ وَصَّاكُمْ بِهِ} [الأنعام: 151 وكذلك 152، و 153] وبهذا المعنى يفسر قوله تعالى: {وَالَّذِينَ يُتَوَفَّوْنَ مِنْكُمْ وَيَذَرُونَ أَزْوَاجًا وَصِيَّةً لِأَزْوَاجِهِمْ مَتَاعًا إِلَى الْحَوْلِ غَيْرَ إِخْرَاجٍ} [البقرة: 240]. أي فريضةً، إذ كان ذلك حقًّا واجبًا لهن غير معلق بالتوصية من الأزواج [طب 5/ 252]. وهذا الملحظ يغنى عن تأولهم في الآية {وَلَكُمْ نِصْفُ مَا تَرَكَ أَزْوَاجُكُمْ إِنْ لَمْ يَكُنْ لَهُنَّ وَلَدٌ. . . وَصِيَّةً مِنَ اللَّهِ وَاللَّهُ عَلِيمٌ حَلِيمٌ} [النساء: 12]. قال طب: أي عهدًا من اللَّه إليكم فيما يجب لكم من ميراث من مات منكم [8/ 68 وأيضًا 8/ 30]. هذا وقد قالوا إن (الوَصِيّ) هو المُوصَي -اسما فاعل ومفعول، وإنها من الأضداد. وأساس ذلك أن صيغة (فعيل) تصلح لاسمي الفاعل والمفعول، فهو من سعة مجال الصيغة ولا تضاد في المعنى الأصلي للتركيب. وليس في القرآن من التركيب إلا الوصية (والفعل واسم الفاعل منها) بالمعنى الذي ذكرناه. (3/",
+    "tam_metin": "{شَرَعَ لَكُمْ مِنَ الدِّينِ مَا وَصَّى بِهِ نُوحًا وَالَّذِي أَوْحَيْنَا إِلَيْكَ} [الشورى: 13]\n\"الوَصَي -كفَتَي وكغَنِيّ: جرائد النخل التي يُحْزَم بها، وقيل هي من الفسيل خاصّة وفلاة واصبة: تتصل بفلاة أخرى. وأرض واصية: متصلة النبات. وقد وَصَى النبتُ: اتصل وكثر [الأساس]. ووَصَت الأرضُ تَصي: يصل نباتها بعضه ببعضه. والوَصِيّ -كغَنِيّ: النباتُ الملتف \".\n(3/1181)\n° المعنى المحوري\nالتزام الأشياء بعضها بعضا كالمحزوم بالجريد والنبات الملتف، وكالمتصل بعضه ببعض منه إذ هو متضام. ومن هذا الالتزام جاء معنى الإيجاب في الوصية فهي عهد وتكليف وإلزام. {فَلَكُمُ الرُّبُعُ مِمَّا تَرَكْنَ مِنْ بَعْدِ وَصِيَّةٍ يُوصِينَ بِهَا أَوْ دَيْنٍ} [النساء: 12]، {فَمَنْ خَافَ مِنْ مُوصٍ جَنَفًا أَوْ إِثْمًا فَأَصْلَحَ بَيْنَهُمْ فَلَا إِثْمَ عَلَيْهِ} [البقرة: 182]. {يُوصِيكُمُ اللَّهُ فِي أَوْلَادِكُمْ لِلذَّكَرِ مِثْلُ حَظِّ الْأُنْثَيَيْنِ} [النساء: 11]. أي يفرض عليكم {وَلَا تَقْتُلُوا النَّفْسَ الَّتِي حَرَّمَ اللَّهُ إِلَّا بِالْحَقِّ ذَلِكُمْ وَصَّاكُمْ بِهِ} [الأنعام: 151 وكذلك 152، و 153] وبهذا المعنى يفسر قوله تعالى: {وَالَّذِينَ يُتَوَفَّوْنَ مِنْكُمْ وَيَذَرُونَ أَزْوَاجًا وَصِيَّةً لِأَزْوَاجِهِمْ مَتَاعًا إِلَى الْحَوْلِ غَيْرَ إِخْرَاجٍ} [البقرة: 240]. أي فريضةً، إذ كان ذلك حقًّا واجبًا لهن غير معلق بالتوصية من الأزواج [طب 5/ 252]. وهذا الملحظ يغنى عن تأولهم في الآية {وَلَكُمْ نِصْفُ مَا تَرَكَ أَزْوَاجُكُمْ إِنْ لَمْ يَكُنْ لَهُنَّ وَلَدٌ. . . وَصِيَّةً مِنَ اللَّهِ وَاللَّهُ عَلِيمٌ حَلِيمٌ} [النساء: 12]. قال طب: أي عهدًا من اللَّه إليكم فيما يجب لكم من ميراث من مات منكم [8/ 68 وأيضًا 8/ 30].\nهذا وقد قالوا إن (الوَصِيّ) هو المُوصَي -اسما فاعل ومفعول، وإنها من الأضداد. وأساس ذلك أن صيغة (فعيل) تصلح لاسمي الفاعل والمفعول، فهو من سعة مجال الصيغة ولا تضاد في المعنى الأصلي للتركيب.\nوليس في القرآن من التركيب إلا الوصية (والفعل واسم الفاعل منها) بالمعنى الذي ذكرناه.\n(3/1182)",
+    "fasil_ozeti": "° معنى الفصل المعجمي (شه) : هو وجود فراغ ما -كالذي في نفْس ذي الشهوة من فقد ما يشتهيه -في (شهو شهى)، وخفة لهب الشهاب وكذا البياض -فالسواد كثافة -في (شهب)، والفراغ الدي يشغله العسل في قرصه، وكذلك وجود شاهد في حيز الواقعة -في (شهد)، وظهور الهلال في الأفق الخالى وكذلك الإعلان عن مجهول -في (شهر)، واختراق رأس الجبل الأقق، وسحب الهواء إلى المصدر الخالي بقوة -في (شهق)."
+  },
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "أوصى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أُوَصَّى • (ʔuwaṣṣā) (form II) /ʔu.wasˤ.sˤaː/\n# first-person singular non-past passive indicative/subjunctive of وَصَّى (waṣṣā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuwaṣṣā", "waṣṣā"]
+    },
+    {
+      "madde": "وصي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وصي (form II)\n# وُصِّيَ (wuṣṣiya) /wusˤ.sˤi.ja/: third-person masculine singular past passive of وَصَّى (waṣṣā)\n# وَصِّي (waṣṣī) /wasˤ.sˤiː/: second-person feminine singular imperative of وَصَّى (waṣṣā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["wuṣṣiya", "waṣṣā", "waṣṣī"]
+    },
+    {
+      "madde": "يوصي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يوصي (form II)\n# يُوَصِّي (yuwaṣṣī) /ju.wasˤ.sˤiː/: third-person masculine singular non-past active indicative of وَصَّى (waṣṣā)\n# يُوَصِّيَ (yuwaṣṣiya) /ju.wasˤ.sˤi.ja/: third-person masculine singular non-past active subjunctive of وَصَّى (waṣṣā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaṣṣī", "waṣṣā", "yuwaṣṣiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أوصي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أوصي (form II)\n# أُوَصِّي (ʔuwaṣṣī) /ʔu.wasˤ.sˤiː/: first-person singular non-past active indicative of وَصَّى (waṣṣā)\n# أُوَصِّيَ (ʔuwaṣṣiya) /ʔu.wasˤ.sˤi.ja/: first-person singular non-past active subjunctive of وَصَّى (waṣṣā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuwaṣṣī", "waṣṣā", "ʔuwaṣṣiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "توصي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "توصي (form II)\n# تُوَصِّي (tuwaṣṣī) /tu.wasˤ.sˤiː/: inflection of وَصَّى (waṣṣā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُوَصِّيَ (tuwaṣṣiya) /tu.wasˤ.sˤi.ja/: inflection of وَصَّى (waṣṣā):\n## second-person masculine singular non-past active",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaṣṣī", "waṣṣā", "tuwaṣṣiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "توصيان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "توصيان (form II)\n# تُوَصِّيَانِ (tuwaṣṣiyāni) /tu.wasˤ.sˤi.jaː.ni/: inflection of وَصَّى (waṣṣā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُوَصَّيَانِ (tuwaṣṣayāni) /tu.wasˤ.sˤa.jaː.ni/: inflection of وَصَّى (waṣṣā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaṣṣiyāni", "waṣṣā", "tuwaṣṣayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "توصين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "توصين (form II)\n# تُوَصِّينَ (tuwaṣṣīna) /tu.wasˤ.sˤiː.na/: inflection of وَصَّى (waṣṣā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُوَصَّيْنَ (tuwaṣṣayna) /tu.wasˤ.sˤaj.na/: inflection of وَصَّى (waṣṣā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine ",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaṣṣīna", "waṣṣā", "tuwaṣṣayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "توصون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "توصون (form II)\n# تُوَصُّونَ (tuwaṣṣūna) /tu.wasˤ.sˤuː.na/: second-person masculine plural non-past active indicative of وَصَّى (waṣṣā)\n# تُوَصَّوْنَ (tuwaṣṣawna) /tu.wasˤ.sˤaw.na/: second-person masculine plural non-past passive indicative of وَصَّى (waṣṣā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaṣṣūna", "waṣṣā", "tuwaṣṣawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يوصيان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يوصيان (form II)\n# يُوَصِّيَانِ (yuwaṣṣiyāni) /ju.wasˤ.sˤi.jaː.ni/: third-person masculine dual non-past active indicative of وَصَّى (waṣṣā)\n# يُوَصَّيَانِ (yuwaṣṣayāni) /ju.wasˤ.sˤa.jaː.ni/: third-person masculine dual non-past passive indicative of وَصَّى (waṣṣā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaṣṣiyāni", "waṣṣā", "yuwaṣṣayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يوصون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يوصون (form II)\n# يُوَصُّونَ (yuwaṣṣūna) /ju.wasˤ.sˤuː.na/: third-person masculine plural non-past active indicative of وَصَّى (waṣṣā)\n# يُوَصَّوْنَ (yuwaṣṣawna) /ju.wasˤ.sˤaw.na/: third-person masculine plural non-past passive indicative of وَصَّى (waṣṣā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaṣṣūna", "waṣṣā", "yuwaṣṣawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوصي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نوصي (form II)\n# نُوَصِّي (nuwaṣṣī) /nu.wasˤ.sˤiː/: first-person plural non-past active indicative of وَصَّى (waṣṣā)\n# نُوَصِّيَ (nuwaṣṣiya) /nu.wasˤ.sˤi.ja/: first-person plural non-past active subjunctive of وَصَّى (waṣṣā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuwaṣṣī", "waṣṣā", "nuwaṣṣiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوصى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نُوَصَّى • (nuwaṣṣā) (form II) /nu.wasˤ.sˤaː/\n# first-person plural non-past passive indicative/subjunctive of وَصَّى (waṣṣā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuwaṣṣā", "waṣṣā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يوصى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُوَصَّى • (yuwaṣṣā) (form II) /ju.wasˤ.sˤaː/\n# third-person masculine singular non-past passive indicative/subjunctive of وَصَّى (waṣṣā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaṣṣā", "waṣṣā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "توصى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُوَصَّى • (tuwaṣṣā) (form II) /tu.wasˤ.sˤaː/\n# inflection of وَصَّى (waṣṣā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaṣṣā", "waṣṣā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "توصوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "توصوا (form II)\n# تُوَصُّوا (tuwaṣṣū) /tu.wasˤ.sˤuː/: second-person masculine plural non-past active subjunctive/jussive of وَصَّى (waṣṣā)\n# تُوَصَّوْا (tuwaṣṣaw) /tu.wasˤ.sˤaw/: second-person masculine plural non-past passive subjunctive/jussive of وَصَّى (waṣṣā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaṣṣū", "waṣṣā", "tuwaṣṣaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "توصيا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "توصيا (form II)\n# تُوَصِّيَا (tuwaṣṣiyā) /tu.wasˤ.sˤi.jaː/: inflection of وَصَّى (waṣṣā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُوَصَّيَا (tuwaṣṣayā) /tu.wasˤ.sˤa.jaː/: inflection of وَصَّى (waṣṣā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjun",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaṣṣiyā", "waṣṣā", "tuwaṣṣayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يوصين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يوصين (form II)\n# يُوَصِّينَ (yuwaṣṣīna) /ju.wasˤ.sˤiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of وَصَّى (waṣṣā)\n# يُوَصَّيْنَ (yuwaṣṣayna) /ju.wasˤ.sˤaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of وَصَّى (waṣṣā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaṣṣīna", "waṣṣā", "yuwaṣṣayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يوصوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يوصوا (form II)\n# يُوَصُّوا (yuwaṣṣū) /ju.wasˤ.sˤuː/: third-person masculine plural non-past active subjunctive/jussive of وَصَّى (waṣṣā)\n# يُوَصَّوْا (yuwaṣṣaw) /ju.wasˤ.sˤaw/: third-person masculine plural non-past passive subjunctive/jussive of وَصَّى (waṣṣā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaṣṣū", "waṣṣā", "yuwaṣṣaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يوصيا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يوصيا (form II)\n# يُوَصِّيَا (yuwaṣṣiyā) /ju.wasˤ.sˤi.jaː/: third-person masculine dual non-past active subjunctive/jussive of وَصَّى (waṣṣā)\n# يُوَصَّيَا (yuwaṣṣayā) /ju.wasˤ.sˤa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of وَصَّى (waṣṣā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaṣṣiyā", "waṣṣā", "yuwaṣṣayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أوص",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أوص (form II)\n# أُوَصِّ (ʔuwaṣṣi) /ʔu.wasˤ.sˤi/: first-person singular non-past active jussive of وَصَّى (waṣṣā)\n# أُوَصَّ (ʔuwaṣṣa) /ʔu.wasˤ.sˤa/: first-person singular non-past passive jussive of وَصَّى (waṣṣā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuwaṣṣi", "waṣṣā", "ʔuwaṣṣa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "توص",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "توص (form II)\n# تُوَصِّ (tuwaṣṣi) /tu.wasˤ.sˤi/: inflection of وَصَّى (waṣṣā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُوَصَّ (tuwaṣṣa) /tu.wasˤ.sˤa/: inflection of وَصَّى (waṣṣā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaṣṣi", "waṣṣā", "tuwaṣṣa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوص",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نوص (form II)\n# نُوَصِّ (nuwaṣṣi) /nu.wasˤ.sˤi/: first-person plural non-past active jussive of وَصَّى (waṣṣā)\n# نُوَصَّ (nuwaṣṣa) /nu.wasˤ.sˤa/: first-person plural non-past passive jussive of وَصَّى (waṣṣā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuwaṣṣi", "waṣṣā", "nuwaṣṣa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يوص",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يوص (form II)\n# يُوَصِّ (yuwaṣṣi) /ju.wasˤ.sˤi/: third-person masculine singular non-past active jussive of وَصَّى (waṣṣā)\n# يُوَصَّ (yuwaṣṣa) /ju.wasˤ.sˤa/: third-person masculine singular non-past passive jussive of وَصَّى (waṣṣā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaṣṣi", "waṣṣā", "yuwaṣṣa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وصت",
+      "tur": "verb",
+      "baslik": "وَصَّتْ • (waṣṣat) (form II) /wasˤ.sˤat/\n# third-person feminine singular past active of وَصَّى (waṣṣā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waṣṣat", "waṣṣā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وصيتما",
+      "tur": "verb",
+      "baslik": "وصيتما (form II)\n# وَصَّيْتُمَا (waṣṣaytumā) /wasˤ.sˤaj.tu.maː/: second-person dual past active of وَصَّى (waṣṣā)\n# وُصِّيتُمَا (wuṣṣītumā) /wusˤ.sˤiː.tu.maː/: second-person dual past passive of وَصَّى (waṣṣā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waṣṣaytumā", "waṣṣā", "wuṣṣītumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وصيت",
+      "tur": "verb",
+      "baslik": "وصيت (form II)\n# وَصَّيْتُ (waṣṣaytu) /wasˤ.sˤaj.tu/: first-person singular past active of وَصَّى (waṣṣā)\n# وَصَّيْتَ (waṣṣayta) /wasˤ.sˤaj.ta/: second-person masculine singular past active of وَصَّى (waṣṣā)\n# وَصَّيْتِ (waṣṣayti) /wasˤ.sˤaj.ti/: second-person feminine singular past active of وَصَّى (waṣṣā)\n# وُصِّيتُ (wuṣṣītu) /wusˤ.sˤiː.tu/: first-person singular past passive of وَصَّى (waṣṣā)\n#",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waṣṣaytu", "waṣṣā", "waṣṣayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وصتا",
+      "tur": "verb",
+      "baslik": "وَصَّتَا • (waṣṣatā) (form II) /wasˤ.sˤa.taː/\n# third-person feminine dual past active of وَصَّى (waṣṣā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waṣṣatā", "waṣṣā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وصيتم",
+      "tur": "verb",
+      "baslik": "وصيتم (form II)\n# وَصَّيْتُمْ (waṣṣaytum) /wasˤ.sˤaj.tum/: second-person masculine plural past active of وَصَّى (waṣṣā)\n# وُصِّيتُمْ (wuṣṣītum) /wusˤ.sˤiː.tum/: second-person masculine plural past passive of وَصَّى (waṣṣā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waṣṣaytum", "waṣṣā", "wuṣṣītum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وصيتن",
+      "tur": "verb",
+      "baslik": "وصيتن (form II)\n# وَصَّيْتُنَّ (waṣṣaytunna) /wasˤ.sˤaj.tun.na/: second-person feminine plural past active of وَصَّى (waṣṣā)\n# وُصِّيتُنَّ (wuṣṣītunna) /wusˤ.sˤiː.tun.na/: second-person feminine plural past passive of وَصَّى (waṣṣā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waṣṣaytunna", "waṣṣā", "wuṣṣītunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وصيا",
+      "tur": "verb",
+      "baslik": "وصيا (form II)\n# وَصَّيَا (waṣṣayā) /wasˤ.sˤa.jaː/: third-person masculine dual past active of وَصَّى (waṣṣā)\n# وُصِّيَا (wuṣṣiyā) /wusˤ.sˤi.jaː/: third-person masculine dual past passive of وَصَّى (waṣṣā)\n# وَصِّيَا (waṣṣiyā) /wasˤ.sˤi.jaː/: second-person dual imperative of وَصَّى (waṣṣā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waṣṣayā", "waṣṣā", "wuṣṣiyā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وصينا",
+      "tur": "verb",
+      "baslik": "وصينا (form II)\n# وَصَّيْنَا (waṣṣaynā) /wasˤ.sˤaj.naː/: first-person plural past active of وَصَّى (waṣṣā)\n# وُصِّينَا (wuṣṣīnā) /wusˤ.sˤiː.naː/: first-person plural past passive of وَصَّى (waṣṣā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waṣṣaynā", "waṣṣā", "wuṣṣīnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وص",
+      "tur": "verb",
+      "baslik": "وَصِّ • (waṣṣi) (form II) /wasˤ.sˤi/\n# second-person masculine singular imperative of وَصَّى (waṣṣā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waṣṣi", "waṣṣā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وصيتا",
+      "tur": "verb",
+      "baslik": "وُصِّيَتَا • (wuṣṣiyatā) (form II) /wusˤ.sˤi.ja.taː/\n# third-person feminine dual past passive of وَصَّى (waṣṣā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["wuṣṣiyatā", "waṣṣā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وصوا",
+      "tur": "verb",
+      "baslik": "وصوا (form II)\n# وَصَّوْا (waṣṣaw) /wasˤ.sˤaw/: third-person masculine plural past active of وَصَّى (waṣṣā)\n# وُصُّوا (wuṣṣū) /wusˤ.sˤuː/: third-person masculine plural past passive of وَصَّى (waṣṣā)\n# وَصُّوا (waṣṣū) /wasˤ.sˤuː/: second-person masculine plural imperative of وَصَّى (waṣṣā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waṣṣaw", "waṣṣā", "wuṣṣū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وصين",
+      "tur": "verb",
+      "baslik": "وصين (form II)\n# وَصَّيْنَ (waṣṣayna) /wasˤ.sˤaj.na/: third-person feminine plural past active of وَصَّى (waṣṣā)\n# وُصِّينَ (wuṣṣīna) /wusˤ.sˤiː.na/: third-person feminine plural past passive of وَصَّى (waṣṣā)\n# وَصِّينَ (waṣṣīna) /wasˤ.sˤiː.na/: second-person feminine plural imperative of وَصَّى (waṣṣā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waṣṣayna", "waṣṣā", "wuṣṣīna"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "وصى", "r7"]
+  ],
+  "mana": {
     "ince": "bequeath.v.01",
     "orta": "verb.possession",
     "ust": "insan ve toplum",
@@ -491,25 +358,8 @@
     "dayanak_tanim": "leave or give by will after one's death",
     "synset_sayisi": 2
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "الشين والهاء",
-    "mihveri": "التزام الأشياء بعضها بعضا كالمحزوم بالجريد والنبات الملتف، وكالمتصل بعضه ببعض منه إذ هو متضام. ومن هذا الالتزام جاء معنى الإيجاب في الوصية فهي عهد وتكليف وإلزام. {فَلَكُمُ الرُّبُعُ مِمَّا تَرَكْنَ مِنْ بَعْدِ وَصِيَّةٍ يُوصِينَ بِهَا أَوْ دَيْنٍ} [النساء: 12]، {فَمَنْ خَافَ مِنْ مُوصٍ جَنَفًا أَوْ إِثْمًا فَأَصْلَحَ بَيْنَهُمْ فَلَا إِثْمَ عَلَيْهِ} [البقرة: 182]. {يُوصِيكُمُ اللَّهُ فِي أَوْلَادِكُمْ لِلذَّكَرِ مِثْلُ حَظِّ الْأُنْثَيَيْنِ} [النساء: 11]. أي يفرض عليكم {وَلَا تَقْتُلُوا النَّفْسَ الَّتِي حَرَّمَ اللَّهُ إِلَّا بِالْحَقِّ ذَلِكُمْ وَصَّاكُمْ بِهِ} [الأنعام: 151 وكذلك 152، و 153] وبهذا المعنى يفسر قوله تعالى: {وَالَّذِينَ يُتَوَفَّوْنَ مِنْكُمْ وَيَذَرُونَ أَزْوَاجًا وَصِيَّةً لِأَزْوَاجِهِمْ مَتَاعًا إِلَى الْحَوْلِ غَيْرَ إِخْرَاجٍ} [البقرة: 240]. أي فريضةً، إذ كان ذلك حقًّا واجبًا لهن غير معلق بالتوصية من الأزواج [طب 5/ 252]. وهذا الملحظ يغنى عن تأولهم في الآية {وَلَكُمْ نِصْفُ مَا تَرَكَ أَزْوَاجُكُمْ إِنْ لَمْ يَكُنْ لَهُنَّ وَلَدٌ. . . وَصِيَّةً مِنَ اللَّهِ وَاللَّهُ عَلِيمٌ حَلِيمٌ} [النساء: 12]. قال طب: أي عهدًا من اللَّه إليكم فيما يجب لكم من ميراث من مات منكم [8/ 68 وأيضًا 8/ 30]. هذا وقد قالوا إن (الوَصِيّ) هو المُوصَي -اسما فاعل ومفعول، وإنها من الأضداد. وأساس ذلك أن صيغة (فعيل) تصلح لاسمي الفاعل والمفعول، فهو من سعة مجال الصيغة ولا تضاد في المعنى الأصلي للتركيب. وليس في القرآن من التركيب إلا الوصية (والفعل واسم الفاعل منها) بالمعنى الذي ذكرناه. (3/",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (شه) : هو وجود فراغ ما -كالذي في نفْس ذي الشهوة من فقد ما يشتهيه -في (شهو شهى)، وخفة لهب الشهاب وكذا البياض -فالسواد كثافة -في (شهب)، والفراغ الدي يشغله العسل في قرصه، وكذلك وجود شاهد في حيز الواقعة -في (شهد)، وظهور الهلال في الأفق الخالى وكذلك الإعلان عن مجهول -في (شهر)، واختراق رأس الجبل الأقق، وسحب الهواء إلى المصدر الخالي بقوة -في (شهق).",
-    "tam_metin": "{شَرَعَ لَكُمْ مِنَ الدِّينِ مَا وَصَّى بِهِ نُوحًا وَالَّذِي أَوْحَيْنَا إِلَيْكَ} [الشورى: 13]\n\"الوَصَي -كفَتَي وكغَنِيّ: جرائد النخل التي يُحْزَم بها، وقيل هي من الفسيل خاصّة وفلاة واصبة: تتصل بفلاة أخرى. وأرض واصية: متصلة النبات. وقد وَصَى النبتُ: اتصل وكثر [الأساس]. ووَصَت الأرضُ تَصي: يصل نباتها بعضه ببعضه. والوَصِيّ -كغَنِيّ: النباتُ الملتف \".\n(3/1181)\n° المعنى المحوري\nالتزام الأشياء بعضها بعضا كالمحزوم بالجريد والنبات الملتف، وكالمتصل بعضه ببعض منه إذ هو متضام. ومن هذا الالتزام جاء معنى الإيجاب في الوصية فهي عهد وتكليف وإلزام. {فَلَكُمُ الرُّبُعُ مِمَّا تَرَكْنَ مِنْ بَعْدِ وَصِيَّةٍ يُوصِينَ بِهَا أَوْ دَيْنٍ} [النساء: 12]، {فَمَنْ خَافَ مِنْ مُوصٍ جَنَفًا أَوْ إِثْمًا فَأَصْلَحَ بَيْنَهُمْ فَلَا إِثْمَ عَلَيْهِ} [البقرة: 182]. {يُوصِيكُمُ اللَّهُ فِي أَوْلَادِكُمْ لِلذَّكَرِ مِثْلُ حَظِّ الْأُنْثَيَيْنِ} [النساء: 11]. أي يفرض عليكم {وَلَا تَقْتُلُوا النَّفْسَ الَّتِي حَرَّمَ اللَّهُ إِلَّا بِالْحَقِّ ذَلِكُمْ وَصَّاكُمْ بِهِ} [الأنعام: 151 وكذلك 152، و 153] وبهذا المعنى يفسر قوله تعالى: {وَالَّذِينَ يُتَوَفَّوْنَ مِنْكُمْ وَيَذَرُونَ أَزْوَاجًا وَصِيَّةً لِأَزْوَاجِهِمْ مَتَاعًا إِلَى الْحَوْلِ غَيْرَ إِخْرَاجٍ} [البقرة: 240]. أي فريضةً، إذ كان ذلك حقًّا واجبًا لهن غير معلق بالتوصية من الأزواج [طب 5/ 252]. وهذا الملحظ يغنى عن تأولهم في الآية {وَلَكُمْ نِصْفُ مَا تَرَكَ أَزْوَاجُكُمْ إِنْ لَمْ يَكُنْ لَهُنَّ وَلَدٌ. . . وَصِيَّةً مِنَ اللَّهِ وَاللَّهُ عَلِيمٌ حَلِيمٌ} [النساء: 12]. قال طب: أي عهدًا من اللَّه إليكم فيما يجب لكم من ميراث من مات منكم [8/ 68 وأيضًا 8/ 30].\nهذا وقد قالوا إن (الوَصِيّ) هو المُوصَي -اسما فاعل ومفعول، وإنها من الأضداد. وأساس ذلك أن صيغة (فعيل) تصلح لاسمي الفاعل والمفعول، فهو من سعة مجال الصيغة ولا تضاد في المعنى الأصلي للتركيب.\nوليس في القرآن من التركيب إلا الوصية (والفعل واسم الفاعل منها) بالمعنى الذي ذكرناه.\n(3/1182)"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["bequeath.v.01", "preserver.n.03"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 4,
       "merkez_kok": "درك",
@@ -529,6 +379,11 @@
       "boy": 36
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["bequeath.v.01", "preserver.n.03"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,703 +1,500 @@
 {
   "kok": "طاق",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "طاق", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "طاقت",
-        "u": "طاقت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَاقَتْ • (ṭāqat) (form I) /tˤaː.qat/\n# third-person feminine singular past active of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭāqat", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "نطق",
-        "u": "نطق",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "نطق (form I)\n# نَطُقْ (naṭuq) /na.tˤuq/: first-person plural non-past active jussive of طَاقَ (ṭāqa)\n# نُطَقْ (nuṭaq) /nu.tˤaq/: first-person plural non-past passive jussive of طَاقَ (ṭāqa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naṭuq", "ṭāqa", "nuṭaq"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "نطاق",
-        "u": "نطاق",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نطاق (form I)\n# نُطَاقُ (nuṭāqu) /nu.tˤaː.qu/: first-person plural non-past passive indicative of طَاقَ (ṭāqa)\n# نُطَاقَ (nuṭāqa) /nu.tˤaː.qa/: first-person plural non-past passive subjunctive of طَاقَ (ṭāqa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuṭāqu", "ṭāqa", "nuṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أطاق",
-        "u": "أطاق",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أطاق (form I)\n# أُطَاقُ (ʔuṭāqu) /ʔu.tˤaː.qu/: first-person singular non-past passive indicative of طَاقَ (ṭāqa)\n# أُطَاقَ (ʔuṭāqa) /ʔu.tˤaː.qa/: first-person singular non-past passive subjunctive of طَاقَ (ṭāqa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔuṭāqu", "ṭāqa", "ʔuṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "طق",
-        "u": "طق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُقْ • (ṭuq) (form I) /tˤuq/\n# second-person masculine singular imperative of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭuq", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطقن",
-        "u": "تطقن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تطقن (form I)\n# تَطُقْنَ (taṭuqna) /ta.tˤuq.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of طَاقَ (ṭāqa)\n# تُطَقْنَ (tuṭaqna) /tu.tˤaq.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭuqna", "ṭāqa", "tuṭaqna"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطقن",
-        "u": "يطقن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يطقن (form I)\n# يَطُقْنَ (yaṭuqna) /ja.tˤuq.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of طَاقَ (ṭāqa)\n# يُطَقْنَ (yuṭaqna) /ju.tˤaq.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭuqna", "ṭāqa", "yuṭaqna"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطاق",
-        "u": "يطاق",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يطاق (form I)\n# يُطَاقُ (yuṭāqu) /ju.tˤaː.qu/: third-person masculine singular non-past passive indicative of طَاقَ (ṭāqa)\n# يُطَاقَ (yuṭāqa) /ju.tˤaː.qa/: third-person masculine singular non-past passive subjunctive of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuṭāqu", "ṭāqa", "yuṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطاقان",
-        "u": "تطاقان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُطَاقَانِ • (tuṭāqāni) (form I) /tu.tˤaː.qaː.ni/\n# inflection of طَاقَ (ṭāqa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṭāqāni", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطاق",
-        "u": "تطاق",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تطاق (form I)\n# تُطَاقُ (tuṭāqu) /tu.tˤaː.qu/: inflection of طَاقَ (ṭāqa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُطَاقَ (tuṭāqa) /tu.tˤaː.qa/: inflection of طَاقَ (ṭāqa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṭāqu", "ṭāqa", "tuṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطاقون",
-        "u": "يطاقون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُطَاقُونَ • (yuṭāqūna) (form I) /ju.tˤaː.quː.na/\n# third-person masculine plural non-past passive indicative of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuṭāqūna", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطاقان",
-        "u": "يطاقان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُطَاقَانِ • (yuṭāqāni) (form I) /ju.tˤaː.qaː.ni/\n# third-person masculine dual non-past passive indicative of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuṭāqāni", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطاقون",
-        "u": "تطاقون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُطَاقُونَ • (tuṭāqūna) (form I) /tu.tˤaː.quː.na/\n# second-person masculine plural non-past passive indicative of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṭāqūna", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطاقين",
-        "u": "تطاقين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُطَاقِينَ • (tuṭāqīna) (form I) /tu.tˤaː.qiː.na/\n# second-person feminine singular non-past passive indicative of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṭāqīna", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطاقي",
-        "u": "تطاقي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُطَاقِي • (tuṭāqī) (form I) /tu.tˤaː.qiː/\n# second-person feminine singular non-past passive subjunctive/jussive of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṭāqī", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطاقا",
-        "u": "تطاقا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُطَاقَا • (tuṭāqā) (form I) /tu.tˤaː.qaː/\n# inflection of طَاقَ (ṭāqa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṭāqā", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطاقوا",
-        "u": "تطاقوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُطَاقُوا • (tuṭāqū) (form I) /tu.tˤaː.quː/\n# second-person masculine plural non-past passive subjunctive/jussive of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṭāqū", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطاقا",
-        "u": "يطاقا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُطَاقَا • (yuṭāqā) (form I) /ju.tˤaː.qaː/\n# third-person masculine dual non-past passive subjunctive/jussive of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuṭāqā", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطاقوا",
-        "u": "يطاقوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُطَاقُوا • (yuṭāqū) (form I) /ju.tˤaː.quː/\n# third-person masculine plural non-past passive subjunctive/jussive of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuṭāqū", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطق",
-        "u": "تطق",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تطق (form I)\n# تَطُقْ (taṭuq) /ta.tˤuq/: inflection of طَاقَ (ṭāqa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُطَقْ (tuṭaq) /tu.tˤaq/: inflection of طَاقَ (ṭāqa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭuq", "ṭāqa", "tuṭaq"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أطق",
-        "u": "أطق",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أطق (form I)\n# أَطُقْ (ʔaṭuq) /ʔa.tˤuq/: first-person singular non-past active jussive of طَاقَ (ṭāqa)\n# أُطَقْ (ʔuṭaq) /ʔu.tˤaq/: first-person singular non-past passive jussive of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaṭuq", "ṭāqa", "ʔuṭaq"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطق",
-        "u": "يطق",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يطق (form I)\n# يَطُقْ (yaṭuq) /ja.tˤuq/: third-person masculine singular non-past active jussive of طَاقَ (ṭāqa)\n# يُطَقْ (yuṭaq) /ju.tˤaq/: third-person masculine singular non-past passive jussive of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭuq", "ṭāqa", "yuṭaq"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "طقتما",
-        "u": "طقتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طقتما (form I)\n# طُقْتُمَا (ṭuqtumā) /tˤuq.tu.maː/: second-person dual past active of طَاقَ (ṭāqa)\n# طِقْتُمَا (ṭiqtumā) /tˤiq.tu.maː/: second-person dual past passive of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭuqtumā", "ṭāqa", "ṭiqtumā"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "طاقتا",
-        "u": "طاقتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَاقَتَا • (ṭāqatā) (form I) /tˤaː.qa.taː/\n# third-person feminine dual past active of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭāqatā", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "طقت",
-        "u": "طقت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طقت (form I)\n# طُقْتُ (ṭuqtu) /tˤuq.tu/: first-person singular past active of طَاقَ (ṭāqa)\n# طُقْتَ (ṭuqta) /tˤuq.ta/: second-person masculine singular past active of طَاقَ (ṭāqa)\n# طُقْتِ (ṭuqti) /tˤuq.ti/: second-person feminine singular past active of طَاقَ (ṭāqa)\n# طِقْتُ (ṭiqtu) /tˤiq.tu/: first-person singular past passive of طَاقَ (ṭāqa)\n# طِقْتَ (ṭiqta) /tˤiq.ta/: second-person masculine s",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭuqtu", "ṭāqa", "ṭuqta"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "طاقا",
-        "u": "طاقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَاقَا • (ṭāqā) (form I) /tˤaː.qaː/\n# third-person masculine dual past active of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭāqā", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "طقتن",
-        "u": "طقتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طقتن (form I)\n# طُقْتُنَّ (ṭuqtunna) /tˤuq.tun.na/: second-person feminine plural past active of طَاقَ (ṭāqa)\n# طِقْتُنَّ (ṭiqtunna) /tˤiq.tun.na/: second-person feminine plural past passive of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭuqtunna", "ṭāqa", "ṭiqtunna"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "طقنا",
-        "u": "طقنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طقنا (form I)\n# طُقْنَا (ṭuqnā) /tˤuq.naː/: first-person plural past active of طَاقَ (ṭāqa)\n# طِقْنَا (ṭiqnā) /tˤiq.naː/: first-person plural past passive of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭuqnā", "ṭāqa", "ṭiqnā"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "طيق",
-        "u": "طيق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِيقَ • (ṭīqa) (form I) /tˤiː.qa/\n# third-person masculine singular past passive of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭīqa", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "طاقوا",
-        "u": "طاقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَاقُوا • (ṭāqū) (form I) /tˤaː.quː/\n# third-person masculine plural past active of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭāqū", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "طقتم",
-        "u": "طقتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طقتم (form I)\n# طُقْتُمْ (ṭuqtum) /tˤuq.tum/: second-person masculine plural past active of طَاقَ (ṭāqa)\n# طِقْتُمْ (ṭiqtum) /tˤiq.tum/: second-person masculine plural past passive of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭuqtum", "ṭāqa", "ṭiqtum"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "طيقا",
-        "u": "طيقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِيقَا • (ṭīqā) (form I) /tˤiː.qaː/\n# third-person masculine dual past passive of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭīqā", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "طيقت",
-        "u": "طيقت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِيقَتْ • (ṭīqat) (form I) /tˤiː.qat/\n# third-person feminine singular past passive of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭīqat", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "طقن",
-        "u": "طقن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طقن (form I)\n# طُقْنَ (ṭuqna) /tˤuq.na/: inflection of طَاقَ (ṭāqa):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# طِقْنَ (ṭiqna) /tˤiq.na/: third-person feminine plural past passive of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭuqna", "ṭāqa", "ṭiqna"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطوق",
-        "u": "تطوق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تطوق (form I)\n# تَطُوقُ (taṭūqu) /ta.tˤuː.qu/: inflection of طَاقَ (ṭāqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَطُوقَ (taṭūqa) /ta.tˤuː.qa/: inflection of طَاقَ (ṭāqa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭūqu", "ṭāqa", "taṭūqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أطوق",
-        "u": "أطوق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أطوق (form I)\n# أَطُوقُ (ʔaṭūqu) /ʔa.tˤuː.qu/: first-person singular non-past active indicative of طَاقَ (ṭāqa)\n# أَطُوقَ (ʔaṭūqa) /ʔa.tˤuː.qa/: first-person singular non-past active subjunctive of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaṭūqu", "ṭāqa", "ʔaṭūqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطوقان",
-        "u": "يطوقان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَطُوقَانِ • (yaṭūqāni) (form I) /ja.tˤuː.qaː.ni/\n# third-person masculine dual non-past active indicative of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭūqāni", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "نطوق",
-        "u": "نطوق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نطوق (form I)\n# نَطُوقُ (naṭūqu) /na.tˤuː.qu/: first-person plural non-past active indicative of طَاقَ (ṭāqa)\n# نَطُوقَ (naṭūqa) /na.tˤuː.qa/: first-person plural non-past active subjunctive of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naṭūqu", "ṭāqa", "naṭūqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "طيقوا",
-        "u": "طيقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِيقُوا • (ṭīqū) (form I) /tˤiː.quː/\n# third-person masculine plural past passive of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭīqū", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "طيقتا",
-        "u": "طيقتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِيقَتَا • (ṭīqatā) (form I) /tˤiː.qa.taː/\n# third-person feminine dual past passive of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭīqatā", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطوقون",
-        "u": "يطوقون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَطُوقُونَ • (yaṭūqūna) (form I) /ja.tˤuː.quː.na/\n# third-person masculine plural non-past active indicative of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭūqūna", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطوق",
-        "u": "يطوق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يطوق (form I)\n# يَطُوقُ (yaṭūqu) /ja.tˤuː.qu/: third-person masculine singular non-past active indicative of طَاقَ (ṭāqa)\n# يَطُوقَ (yaṭūqa) /ja.tˤuː.qa/: third-person masculine singular non-past active subjunctive of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭūqu", "ṭāqa", "yaṭūqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطوقين",
-        "u": "تطوقين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَطُوقِينَ • (taṭūqīna) (form I) /ta.tˤuː.qiː.na/\n# second-person feminine singular non-past active indicative of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭūqīna", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطوقا",
-        "u": "تطوقا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَطُوقَا • (taṭūqā) (form I) /ta.tˤuː.qaː/\n# inflection of طَاقَ (ṭāqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭūqā", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطوقون",
-        "u": "تطوقون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَطُوقُونَ • (taṭūqūna) (form I) /ta.tˤuː.quː.na/\n# second-person masculine plural non-past active indicative of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭūqūna", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطوقان",
-        "u": "تطوقان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَطُوقَانِ • (taṭūqāni) (form I) /ta.tˤuː.qaː.ni/\n# inflection of طَاقَ (ṭāqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭūqāni", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطوقي",
-        "u": "تطوقي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَطُوقِي • (taṭūqī) (form I) /ta.tˤuː.qiː/\n# second-person feminine singular non-past active subjunctive/jussive of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭūqī", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطوقوا",
-        "u": "يطوقوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَطُوقُوا • (yaṭūqū) (form I) /ja.tˤuː.quː/\n# third-person masculine plural non-past active subjunctive/jussive of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭūqū", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطوقا",
-        "u": "يطوقا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَطُوقَا • (yaṭūqā) (form I) /ja.tˤuː.qaː/\n# third-person masculine dual non-past active subjunctive/jussive of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭūqā", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطوقوا",
-        "u": "تطوقوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَطُوقُوا • (taṭūqū) (form I) /ta.tˤuː.quː/\n# second-person masculine plural non-past active subjunctive/jussive of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭūqū", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "طوقي",
-        "u": "طوقي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "طُوقِي • (ṭūqī) (form I) /tˤuː.qiː/\n# second-person feminine singular imperative of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭūqī", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "طوقا",
-        "u": "طوقا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "طُوقَا • (ṭūqā) (form I) /tˤuː.qaː/\n# second-person dual imperative of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭūqā", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      },
-      {
-        "w": "طوقوا",
-        "u": "طوقوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "طُوقُوا • (ṭūqū) (form I) /tˤuː.quː/\n# second-person masculine plural imperative of طَاقَ (ṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭūqū", "ṭāqa"],
-        "k": "طاق",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "طق",
+  "ses": {
     "harf": "ط",
+    "fasil": "طق",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "طاقت",
+      "tur": "verb",
+      "baslik": "طَاقَتْ • (ṭāqat) (form I) /tˤaː.qat/\n# third-person feminine singular past active of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭāqat", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نطق",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "نطق (form I)\n# نَطُقْ (naṭuq) /na.tˤuq/: first-person plural non-past active jussive of طَاقَ (ṭāqa)\n# نُطَقْ (nuṭaq) /nu.tˤaq/: first-person plural non-past passive jussive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naṭuq", "ṭāqa", "nuṭaq"]
+    },
+    {
+      "madde": "نطاق",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نطاق (form I)\n# نُطَاقُ (nuṭāqu) /nu.tˤaː.qu/: first-person plural non-past passive indicative of طَاقَ (ṭāqa)\n# نُطَاقَ (nuṭāqa) /nu.tˤaː.qa/: first-person plural non-past passive subjunctive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuṭāqu", "ṭāqa", "nuṭāqa"]
+    },
+    {
+      "madde": "أطاق",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أطاق (form I)\n# أُطَاقُ (ʔuṭāqu) /ʔu.tˤaː.qu/: first-person singular non-past passive indicative of طَاقَ (ṭāqa)\n# أُطَاقَ (ʔuṭāqa) /ʔu.tˤaː.qa/: first-person singular non-past passive subjunctive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔuṭāqu", "ṭāqa", "ʔuṭāqa"]
+    },
+    {
+      "madde": "طق",
+      "tur": "verb",
+      "baslik": "طُقْ • (ṭuq) (form I) /tˤuq/\n# second-person masculine singular imperative of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭuq", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطقن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تطقن (form I)\n# تَطُقْنَ (taṭuqna) /ta.tˤuq.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of طَاقَ (ṭāqa)\n# تُطَقْنَ (tuṭaqna) /tu.tˤaq.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭuqna", "ṭāqa", "tuṭaqna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطقن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يطقن (form I)\n# يَطُقْنَ (yaṭuqna) /ja.tˤuq.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of طَاقَ (ṭāqa)\n# يُطَقْنَ (yuṭaqna) /ju.tˤaq.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭuqna", "ṭāqa", "yuṭaqna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطاق",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يطاق (form I)\n# يُطَاقُ (yuṭāqu) /ju.tˤaː.qu/: third-person masculine singular non-past passive indicative of طَاقَ (ṭāqa)\n# يُطَاقَ (yuṭāqa) /ju.tˤaː.qa/: third-person masculine singular non-past passive subjunctive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuṭāqu", "ṭāqa", "yuṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطاقان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُطَاقَانِ • (tuṭāqāni) (form I) /tu.tˤaː.qaː.ni/\n# inflection of طَاقَ (ṭāqa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṭāqāni", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطاق",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تطاق (form I)\n# تُطَاقُ (tuṭāqu) /tu.tˤaː.qu/: inflection of طَاقَ (ṭāqa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُطَاقَ (tuṭāqa) /tu.tˤaː.qa/: inflection of طَاقَ (ṭāqa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṭāqu", "ṭāqa", "tuṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطاقون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُطَاقُونَ • (yuṭāqūna) (form I) /ju.tˤaː.quː.na/\n# third-person masculine plural non-past passive indicative of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuṭāqūna", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطاقان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُطَاقَانِ • (yuṭāqāni) (form I) /ju.tˤaː.qaː.ni/\n# third-person masculine dual non-past passive indicative of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuṭāqāni", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطاقون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُطَاقُونَ • (tuṭāqūna) (form I) /tu.tˤaː.quː.na/\n# second-person masculine plural non-past passive indicative of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṭāqūna", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطاقين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُطَاقِينَ • (tuṭāqīna) (form I) /tu.tˤaː.qiː.na/\n# second-person feminine singular non-past passive indicative of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṭāqīna", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطاقي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُطَاقِي • (tuṭāqī) (form I) /tu.tˤaː.qiː/\n# second-person feminine singular non-past passive subjunctive/jussive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṭāqī", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطاقا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُطَاقَا • (tuṭāqā) (form I) /tu.tˤaː.qaː/\n# inflection of طَاقَ (ṭāqa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṭāqā", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطاقوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُطَاقُوا • (tuṭāqū) (form I) /tu.tˤaː.quː/\n# second-person masculine plural non-past passive subjunctive/jussive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṭāqū", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطاقا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُطَاقَا • (yuṭāqā) (form I) /ju.tˤaː.qaː/\n# third-person masculine dual non-past passive subjunctive/jussive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuṭāqā", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطاقوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُطَاقُوا • (yuṭāqū) (form I) /ju.tˤaː.quː/\n# third-person masculine plural non-past passive subjunctive/jussive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuṭāqū", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطق",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تطق (form I)\n# تَطُقْ (taṭuq) /ta.tˤuq/: inflection of طَاقَ (ṭāqa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُطَقْ (tuṭaq) /tu.tˤaq/: inflection of طَاقَ (ṭāqa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭuq", "ṭāqa", "tuṭaq"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أطق",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أطق (form I)\n# أَطُقْ (ʔaṭuq) /ʔa.tˤuq/: first-person singular non-past active jussive of طَاقَ (ṭāqa)\n# أُطَقْ (ʔuṭaq) /ʔu.tˤaq/: first-person singular non-past passive jussive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaṭuq", "ṭāqa", "ʔuṭaq"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطق",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يطق (form I)\n# يَطُقْ (yaṭuq) /ja.tˤuq/: third-person masculine singular non-past active jussive of طَاقَ (ṭāqa)\n# يُطَقْ (yuṭaq) /ju.tˤaq/: third-person masculine singular non-past passive jussive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭuq", "ṭāqa", "yuṭaq"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طقتما",
+      "tur": "verb",
+      "baslik": "طقتما (form I)\n# طُقْتُمَا (ṭuqtumā) /tˤuq.tu.maː/: second-person dual past active of طَاقَ (ṭāqa)\n# طِقْتُمَا (ṭiqtumā) /tˤiq.tu.maː/: second-person dual past passive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭuqtumā", "ṭāqa", "ṭiqtumā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طاقتا",
+      "tur": "verb",
+      "baslik": "طَاقَتَا • (ṭāqatā) (form I) /tˤaː.qa.taː/\n# third-person feminine dual past active of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭāqatā", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طقت",
+      "tur": "verb",
+      "baslik": "طقت (form I)\n# طُقْتُ (ṭuqtu) /tˤuq.tu/: first-person singular past active of طَاقَ (ṭāqa)\n# طُقْتَ (ṭuqta) /tˤuq.ta/: second-person masculine singular past active of طَاقَ (ṭāqa)\n# طُقْتِ (ṭuqti) /tˤuq.ti/: second-person feminine singular past active of طَاقَ (ṭāqa)\n# طِقْتُ (ṭiqtu) /tˤiq.tu/: first-person singular past passive of طَاقَ (ṭāqa)\n# طِقْتَ (ṭiqta) /tˤiq.ta/: second-person masculine s",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭuqtu", "ṭāqa", "ṭuqta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طاقا",
+      "tur": "verb",
+      "baslik": "طَاقَا • (ṭāqā) (form I) /tˤaː.qaː/\n# third-person masculine dual past active of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭāqā", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طقتن",
+      "tur": "verb",
+      "baslik": "طقتن (form I)\n# طُقْتُنَّ (ṭuqtunna) /tˤuq.tun.na/: second-person feminine plural past active of طَاقَ (ṭāqa)\n# طِقْتُنَّ (ṭiqtunna) /tˤiq.tun.na/: second-person feminine plural past passive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭuqtunna", "ṭāqa", "ṭiqtunna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طقنا",
+      "tur": "verb",
+      "baslik": "طقنا (form I)\n# طُقْنَا (ṭuqnā) /tˤuq.naː/: first-person plural past active of طَاقَ (ṭāqa)\n# طِقْنَا (ṭiqnā) /tˤiq.naː/: first-person plural past passive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭuqnā", "ṭāqa", "ṭiqnā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طيق",
+      "tur": "verb",
+      "baslik": "طِيقَ • (ṭīqa) (form I) /tˤiː.qa/\n# third-person masculine singular past passive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭīqa", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طاقوا",
+      "tur": "verb",
+      "baslik": "طَاقُوا • (ṭāqū) (form I) /tˤaː.quː/\n# third-person masculine plural past active of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭāqū", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طقتم",
+      "tur": "verb",
+      "baslik": "طقتم (form I)\n# طُقْتُمْ (ṭuqtum) /tˤuq.tum/: second-person masculine plural past active of طَاقَ (ṭāqa)\n# طِقْتُمْ (ṭiqtum) /tˤiq.tum/: second-person masculine plural past passive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭuqtum", "ṭāqa", "ṭiqtum"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طيقا",
+      "tur": "verb",
+      "baslik": "طِيقَا • (ṭīqā) (form I) /tˤiː.qaː/\n# third-person masculine dual past passive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭīqā", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طيقت",
+      "tur": "verb",
+      "baslik": "طِيقَتْ • (ṭīqat) (form I) /tˤiː.qat/\n# third-person feminine singular past passive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭīqat", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طقن",
+      "tur": "verb",
+      "baslik": "طقن (form I)\n# طُقْنَ (ṭuqna) /tˤuq.na/: inflection of طَاقَ (ṭāqa):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# طِقْنَ (ṭiqna) /tˤiq.na/: third-person feminine plural past passive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭuqna", "ṭāqa", "ṭiqna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطوق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تطوق (form I)\n# تَطُوقُ (taṭūqu) /ta.tˤuː.qu/: inflection of طَاقَ (ṭāqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَطُوقَ (taṭūqa) /ta.tˤuː.qa/: inflection of طَاقَ (ṭāqa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭūqu", "ṭāqa", "taṭūqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أطوق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أطوق (form I)\n# أَطُوقُ (ʔaṭūqu) /ʔa.tˤuː.qu/: first-person singular non-past active indicative of طَاقَ (ṭāqa)\n# أَطُوقَ (ʔaṭūqa) /ʔa.tˤuː.qa/: first-person singular non-past active subjunctive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaṭūqu", "ṭāqa", "ʔaṭūqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطوقان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَطُوقَانِ • (yaṭūqāni) (form I) /ja.tˤuː.qaː.ni/\n# third-person masculine dual non-past active indicative of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭūqāni", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نطوق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نطوق (form I)\n# نَطُوقُ (naṭūqu) /na.tˤuː.qu/: first-person plural non-past active indicative of طَاقَ (ṭāqa)\n# نَطُوقَ (naṭūqa) /na.tˤuː.qa/: first-person plural non-past active subjunctive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naṭūqu", "ṭāqa", "naṭūqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طيقوا",
+      "tur": "verb",
+      "baslik": "طِيقُوا • (ṭīqū) (form I) /tˤiː.quː/\n# third-person masculine plural past passive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭīqū", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طيقتا",
+      "tur": "verb",
+      "baslik": "طِيقَتَا • (ṭīqatā) (form I) /tˤiː.qa.taː/\n# third-person feminine dual past passive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭīqatā", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطوقون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَطُوقُونَ • (yaṭūqūna) (form I) /ja.tˤuː.quː.na/\n# third-person masculine plural non-past active indicative of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭūqūna", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطوق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يطوق (form I)\n# يَطُوقُ (yaṭūqu) /ja.tˤuː.qu/: third-person masculine singular non-past active indicative of طَاقَ (ṭāqa)\n# يَطُوقَ (yaṭūqa) /ja.tˤuː.qa/: third-person masculine singular non-past active subjunctive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭūqu", "ṭāqa", "yaṭūqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطوقين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَطُوقِينَ • (taṭūqīna) (form I) /ta.tˤuː.qiː.na/\n# second-person feminine singular non-past active indicative of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭūqīna", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطوقا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَطُوقَا • (taṭūqā) (form I) /ta.tˤuː.qaː/\n# inflection of طَاقَ (ṭāqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭūqā", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطوقون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَطُوقُونَ • (taṭūqūna) (form I) /ta.tˤuː.quː.na/\n# second-person masculine plural non-past active indicative of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭūqūna", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطوقان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَطُوقَانِ • (taṭūqāni) (form I) /ta.tˤuː.qaː.ni/\n# inflection of طَاقَ (ṭāqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭūqāni", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطوقي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَطُوقِي • (taṭūqī) (form I) /ta.tˤuː.qiː/\n# second-person feminine singular non-past active subjunctive/jussive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭūqī", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطوقوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَطُوقُوا • (yaṭūqū) (form I) /ja.tˤuː.quː/\n# third-person masculine plural non-past active subjunctive/jussive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭūqū", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطوقا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَطُوقَا • (yaṭūqā) (form I) /ja.tˤuː.qaː/\n# third-person masculine dual non-past active subjunctive/jussive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭūqā", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطوقوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَطُوقُوا • (taṭūqū) (form I) /ta.tˤuː.quː/\n# second-person masculine plural non-past active subjunctive/jussive of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭūqū", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طوقي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "طُوقِي • (ṭūqī) (form I) /tˤuː.qiː/\n# second-person feminine singular imperative of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭūqī", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طوقا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "طُوقَا • (ṭūqā) (form I) /tˤuː.qaː/\n# second-person dual imperative of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭūqā", "ṭāqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طوقوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "طُوقُوا • (ṭūqū) (form I) /tˤuː.quː/\n# second-person masculine plural imperative of طَاقَ (ṭāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭūqū", "ṭāqa"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "طاق", "r7"]
+  ],
+  "mana": {
     "ince": "auditory_communication.n.01",
     "orta": "noun.communication",
     "ust": "söz ve haber",
@@ -705,16 +502,11 @@
     "dayanak_tanim": "the use of uttered sounds for auditory communication",
     "synset_sayisi": 28
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "artifact.n.01",
     "bear.v.04",
     "bear.v.05",
@@ -741,12 +533,10 @@
     "utterance.n.01",
     "yield.v.10"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

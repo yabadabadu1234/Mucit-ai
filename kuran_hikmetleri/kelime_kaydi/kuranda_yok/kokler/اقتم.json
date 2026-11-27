@@ -1,436 +1,305 @@
 {
   "kok": "اقتم",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "اقتم", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "اقتممت",
-        "u": "اقتممت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اقتممت (form IX)\n# اِقْتَمَمْتُ (iqtamamtu) /iq.ta.mam.tu/: first-person singular past active of اِقْتَمَّ (iqtamma)\n# اِقْتَمَمْتَ (iqtamamta) /iq.ta.mam.ta/: second-person masculine singular past active of اِقْتَمَّ (iqtamma)\n# اِقْتَمَمْتِ (iqtamamti) /iq.ta.mam.ti/: second-person feminine singular past active of اِقْتَمَّ (iqtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iqtamamtu", "iqtamma", "iqtamamta"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "اقتمت",
-        "u": "اقتمت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِقْتَمَّتْ • (iqtammat) (form IX) /iq.tam.mat/\n# third-person feminine singular past active of اِقْتَمَّ (iqtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iqtammat", "iqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "اقتما",
-        "u": "اقتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِقْتَمَّا • (iqtammā) (form IX) /iq.tam.maː/\n# inflection of اِقْتَمَّ (iqtamma):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iqtammā", "iqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "اقتممنا",
-        "u": "اقتممنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِقْتَمَمْنَا • (iqtamamnā) (form IX) /iq.ta.mam.naː/\n# first-person plural past active of اِقْتَمَّ (iqtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iqtamamnā", "iqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "اقتممن",
-        "u": "اقتممن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اقتممن (form IX)\n# اِقْتَمَمْنَ (iqtamamna) /iq.ta.mam.na/: third-person feminine plural past active of اِقْتَمَّ (iqtamma)\n# اِقْتَمِمْنَ (iqtamimna) /iq.ta.mim.na/: second-person feminine plural imperative of اِقْتَمَّ (iqtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iqtamamna", "iqtamma", "iqtamimna"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "اقتممتن",
-        "u": "اقتممتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِقْتَمَمْتُنَّ • (iqtamamtunna) (form IX) /iq.ta.mam.tun.na/\n# second-person feminine plural past active of اِقْتَمَّ (iqtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iqtamamtunna", "iqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "اقتممتما",
-        "u": "اقتممتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِقْتَمَمْتُمَا • (iqtamamtumā) (form IX) /iq.ta.mam.tu.maː/\n# second-person dual past active of اِقْتَمَّ (iqtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iqtamamtumā", "iqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "اقتموا",
-        "u": "اقتموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِقْتَمُّوا • (iqtammū) (form IX) /iq.tam.muː/\n# inflection of اِقْتَمَّ (iqtamma):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iqtammū", "iqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "اقتمتا",
-        "u": "اقتمتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِقْتَمَّتَا • (iqtammatā) (form IX) /iq.tam.ma.taː/\n# third-person feminine dual past active of اِقْتَمَّ (iqtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iqtammatā", "iqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "اقتممتم",
-        "u": "اقتممتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِقْتَمَمْتُمْ • (iqtamamtum) (form IX) /iq.ta.mam.tum/\n# second-person masculine plural past active of اِقْتَمَّ (iqtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iqtamamtum", "iqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تقتمان",
-        "u": "تقتمان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَقْتَمَّانِ • (taqtammāni) (form IX) /taq.tam.maː.ni/\n# inflection of اِقْتَمَّ (iqtamma):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["taqtammāni", "iqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "يقتمون",
-        "u": "يقتمون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَقْتَمُّونَ • (yaqtammūna) (form IX) /jaq.tam.muː.na/\n# third-person masculine plural non-past active indicative of اِقْتَمَّ (iqtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["yaqtammūna", "iqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "أقتم",
-        "u": "أقتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أقتم (form IX)\n# أَقْتَمُّ (ʔaqtammu) /ʔaq.tam.mu/: first-person singular non-past active indicative of اِقْتَمَّ (iqtamma)\n# أَقْتَمَّ (ʔaqtamma) /ʔaq.tam.ma/: first-person singular non-past active subjunctive/jussive of اِقْتَمَّ (iqtamma)\n# أَقْتَمِّ (ʔaqtammi) /ʔaq.tam.mi/: first-person singular non-past active jussive of اِقْتَمَّ (iqtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["ʔaqtammu", "iqtamma", "ʔaqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تقتمين",
-        "u": "تقتمين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَقْتَمِّينَ • (taqtammīna) (form IX) /taq.tam.miː.na/\n# second-person feminine singular non-past active indicative of اِقْتَمَّ (iqtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["taqtammīna", "iqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "يقتم",
-        "u": "يقتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يقتم (form IX)\n# يَقْتَمُّ (yaqtammu) /jaq.tam.mu/: third-person masculine singular non-past active indicative of اِقْتَمَّ (iqtamma)\n# يَقْتَمَّ (yaqtamma) /jaq.tam.ma/: third-person masculine singular non-past active subjunctive/jussive of اِقْتَمَّ (iqtamma)\n# يَقْتَمِّ (yaqtammi) /jaq.tam.mi/: third-person masculine singular non-past active jussive of اِقْتَمَّ (iqtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["yaqtammu", "iqtamma", "yaqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "يقتممن",
-        "u": "يقتممن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَقْتَمِمْنَ • (yaqtamimna) (form IX) /jaq.ta.mim.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِقْتَمَّ (iqtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["yaqtamimna", "iqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "يقتمان",
-        "u": "يقتمان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَقْتَمَّانِ • (yaqtammāni) (form IX) /jaq.tam.maː.ni/\n# third-person masculine dual non-past active indicative of اِقْتَمَّ (iqtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["yaqtammāni", "iqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تقتمي",
-        "u": "تقتمي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَقْتَمِّي • (taqtammī) (form IX) /taq.tam.miː/\n# second-person feminine singular non-past active subjunctive/jussive of اِقْتَمَّ (iqtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["taqtammī", "iqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تقتممن",
-        "u": "تقتممن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَقْتَمِمْنَ • (taqtamimna) (form IX) /taq.ta.mim.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِقْتَمَّ (iqtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["taqtamimna", "iqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تقتمون",
-        "u": "تقتمون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَقْتَمُّونَ • (taqtammūna) (form IX) /taq.tam.muː.na/\n# second-person masculine plural non-past active indicative of اِقْتَمَّ (iqtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["taqtammūna", "iqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تقتموا",
-        "u": "تقتموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَقْتَمُّوا • (taqtammū) (form IX) /taq.tam.muː/\n# second-person masculine plural non-past active subjunctive/jussive of اِقْتَمَّ (iqtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["taqtammū", "iqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "نقتم",
-        "u": "نقتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نقتم (form IX)\n# نَقْتَمُّ (naqtammu) /naq.tam.mu/: first-person plural non-past active indicative of اِقْتَمَّ (iqtamma)\n# نَقْتَمَّ (naqtamma) /naq.tam.ma/: first-person plural non-past active subjunctive/jussive of اِقْتَمَّ (iqtamma)\n# نَقْتَمِّ (naqtammi) /naq.tam.mi/: first-person plural non-past active jussive of اِقْتَمَّ (iqtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["naqtammu", "iqtamma", "naqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تقتم",
-        "u": "تقتم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تقتم (form IX)\n# تَقْتَمُّ (taqtammu) /taq.tam.mu/: inflection of اِقْتَمَّ (iqtamma):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَقْتَمَّ (taqtamma) /taq.tam.ma/: inflection of اِقْتَمَّ (iqtamma):\n## second-person masculine singular non-past active subjunctive/jussive\n## third-person feminine singular non-past ac",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["taqtammu", "iqtamma", "taqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تقتمم",
-        "u": "تقتمم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَقْتَمِمْ • (taqtamim) (form IX) /taq.ta.mim/\n# inflection of اِقْتَمَّ (iqtamma):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["taqtamim", "iqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تقتما",
-        "u": "تقتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَقْتَمَّا • (taqtammā) (form IX) /taq.tam.maː/\n# inflection of اِقْتَمَّ (iqtamma):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["taqtammā", "iqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "أقتمم",
-        "u": "أقتمم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَقْتَمِمْ • (ʔaqtamim) (form IX) /ʔaq.ta.mim/\n# first-person singular non-past active jussive of اِقْتَمَّ (iqtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["ʔaqtamim", "iqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "نقتمم",
-        "u": "نقتمم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَقْتَمِمْ • (naqtamim) (form IX) /naq.ta.mim/\n# first-person plural non-past active jussive of اِقْتَمَّ (iqtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["naqtamim", "iqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "اقتمم",
-        "u": "اقتمم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِقْتَمِمْ • (iqtamim) (form IX) /iq.ta.mim/\n# second-person masculine singular imperative of اِقْتَمَّ (iqtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iqtamim", "iqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "يقتموا",
-        "u": "يقتموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَقْتَمُّوا • (yaqtammū) (form IX) /jaq.tam.muː/\n# third-person masculine plural non-past active subjunctive/jussive of اِقْتَمَّ (iqtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["yaqtammū", "iqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "يقتمم",
-        "u": "يقتمم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَقْتَمِمْ • (yaqtamim) (form IX) /jaq.ta.mim/\n# third-person masculine singular non-past active jussive of اِقْتَمَّ (iqtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["yaqtamim", "iqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "اقتمي",
-        "u": "اقتمي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِقْتَمِّي • (iqtammī) (form IX) /iq.tam.miː/\n# second-person feminine singular imperative of اِقْتَمَّ (iqtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iqtammī", "iqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      },
-      {
-        "w": "يقتما",
-        "u": "يقتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَقْتَمَّا • (yaqtammā) (form IX) /jaq.tam.maː/\n# third-person masculine dual non-past active subjunctive/jussive of اِقْتَمَّ (iqtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["yaqtammā", "iqtamma"],
-        "k": "اقتم",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "قت",
+  "ses": {
     "harf": "ا",
+    "fasil": "قت",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "اقتممت",
+      "tur": "verb",
+      "baslik": "اقتممت (form IX)\n# اِقْتَمَمْتُ (iqtamamtu) /iq.ta.mam.tu/: first-person singular past active of اِقْتَمَّ (iqtamma)\n# اِقْتَمَمْتَ (iqtamamta) /iq.ta.mam.ta/: second-person masculine singular past active of اِقْتَمَّ (iqtamma)\n# اِقْتَمَمْتِ (iqtamamti) /iq.ta.mam.ti/: second-person feminine singular past active of اِقْتَمَّ (iqtamma)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iqtamamtu", "iqtamma", "iqtamamta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اقتمت",
+      "tur": "verb",
+      "baslik": "اِقْتَمَّتْ • (iqtammat) (form IX) /iq.tam.mat/\n# third-person feminine singular past active of اِقْتَمَّ (iqtamma)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iqtammat", "iqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اقتما",
+      "tur": "verb",
+      "baslik": "اِقْتَمَّا • (iqtammā) (form IX) /iq.tam.maː/\n# inflection of اِقْتَمَّ (iqtamma):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iqtammā", "iqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اقتممنا",
+      "tur": "verb",
+      "baslik": "اِقْتَمَمْنَا • (iqtamamnā) (form IX) /iq.ta.mam.naː/\n# first-person plural past active of اِقْتَمَّ (iqtamma)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iqtamamnā", "iqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اقتممن",
+      "tur": "verb",
+      "baslik": "اقتممن (form IX)\n# اِقْتَمَمْنَ (iqtamamna) /iq.ta.mam.na/: third-person feminine plural past active of اِقْتَمَّ (iqtamma)\n# اِقْتَمِمْنَ (iqtamimna) /iq.ta.mim.na/: second-person feminine plural imperative of اِقْتَمَّ (iqtamma)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iqtamamna", "iqtamma", "iqtamimna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اقتممتن",
+      "tur": "verb",
+      "baslik": "اِقْتَمَمْتُنَّ • (iqtamamtunna) (form IX) /iq.ta.mam.tun.na/\n# second-person feminine plural past active of اِقْتَمَّ (iqtamma)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iqtamamtunna", "iqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اقتممتما",
+      "tur": "verb",
+      "baslik": "اِقْتَمَمْتُمَا • (iqtamamtumā) (form IX) /iq.ta.mam.tu.maː/\n# second-person dual past active of اِقْتَمَّ (iqtamma)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iqtamamtumā", "iqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اقتموا",
+      "tur": "verb",
+      "baslik": "اِقْتَمُّوا • (iqtammū) (form IX) /iq.tam.muː/\n# inflection of اِقْتَمَّ (iqtamma):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iqtammū", "iqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اقتمتا",
+      "tur": "verb",
+      "baslik": "اِقْتَمَّتَا • (iqtammatā) (form IX) /iq.tam.ma.taː/\n# third-person feminine dual past active of اِقْتَمَّ (iqtamma)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iqtammatā", "iqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اقتممتم",
+      "tur": "verb",
+      "baslik": "اِقْتَمَمْتُمْ • (iqtamamtum) (form IX) /iq.ta.mam.tum/\n# second-person masculine plural past active of اِقْتَمَّ (iqtamma)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iqtamamtum", "iqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقتمان",
+      "tur": "verb",
+      "baslik": "تَقْتَمَّانِ • (taqtammāni) (form IX) /taq.tam.maː.ni/\n# inflection of اِقْتَمَّ (iqtamma):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["taqtammāni", "iqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقتمون",
+      "tur": "verb",
+      "baslik": "يَقْتَمُّونَ • (yaqtammūna) (form IX) /jaq.tam.muː.na/\n# third-person masculine plural non-past active indicative of اِقْتَمَّ (iqtamma)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["yaqtammūna", "iqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقتم",
+      "tur": "verb",
+      "baslik": "أقتم (form IX)\n# أَقْتَمُّ (ʔaqtammu) /ʔaq.tam.mu/: first-person singular non-past active indicative of اِقْتَمَّ (iqtamma)\n# أَقْتَمَّ (ʔaqtamma) /ʔaq.tam.ma/: first-person singular non-past active subjunctive/jussive of اِقْتَمَّ (iqtamma)\n# أَقْتَمِّ (ʔaqtammi) /ʔaq.tam.mi/: first-person singular non-past active jussive of اِقْتَمَّ (iqtamma)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["ʔaqtammu", "iqtamma", "ʔaqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقتمين",
+      "tur": "verb",
+      "baslik": "تَقْتَمِّينَ • (taqtammīna) (form IX) /taq.tam.miː.na/\n# second-person feminine singular non-past active indicative of اِقْتَمَّ (iqtamma)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["taqtammīna", "iqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقتم",
+      "tur": "verb",
+      "baslik": "يقتم (form IX)\n# يَقْتَمُّ (yaqtammu) /jaq.tam.mu/: third-person masculine singular non-past active indicative of اِقْتَمَّ (iqtamma)\n# يَقْتَمَّ (yaqtamma) /jaq.tam.ma/: third-person masculine singular non-past active subjunctive/jussive of اِقْتَمَّ (iqtamma)\n# يَقْتَمِّ (yaqtammi) /jaq.tam.mi/: third-person masculine singular non-past active jussive of اِقْتَمَّ (iqtamma)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["yaqtammu", "iqtamma", "yaqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقتممن",
+      "tur": "verb",
+      "baslik": "يَقْتَمِمْنَ • (yaqtamimna) (form IX) /jaq.ta.mim.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِقْتَمَّ (iqtamma)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["yaqtamimna", "iqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقتمان",
+      "tur": "verb",
+      "baslik": "يَقْتَمَّانِ • (yaqtammāni) (form IX) /jaq.tam.maː.ni/\n# third-person masculine dual non-past active indicative of اِقْتَمَّ (iqtamma)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["yaqtammāni", "iqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقتمي",
+      "tur": "verb",
+      "baslik": "تَقْتَمِّي • (taqtammī) (form IX) /taq.tam.miː/\n# second-person feminine singular non-past active subjunctive/jussive of اِقْتَمَّ (iqtamma)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["taqtammī", "iqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقتممن",
+      "tur": "verb",
+      "baslik": "تَقْتَمِمْنَ • (taqtamimna) (form IX) /taq.ta.mim.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِقْتَمَّ (iqtamma)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["taqtamimna", "iqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقتمون",
+      "tur": "verb",
+      "baslik": "تَقْتَمُّونَ • (taqtammūna) (form IX) /taq.tam.muː.na/\n# second-person masculine plural non-past active indicative of اِقْتَمَّ (iqtamma)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["taqtammūna", "iqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقتموا",
+      "tur": "verb",
+      "baslik": "تَقْتَمُّوا • (taqtammū) (form IX) /taq.tam.muː/\n# second-person masculine plural non-past active subjunctive/jussive of اِقْتَمَّ (iqtamma)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["taqtammū", "iqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نقتم",
+      "tur": "verb",
+      "baslik": "نقتم (form IX)\n# نَقْتَمُّ (naqtammu) /naq.tam.mu/: first-person plural non-past active indicative of اِقْتَمَّ (iqtamma)\n# نَقْتَمَّ (naqtamma) /naq.tam.ma/: first-person plural non-past active subjunctive/jussive of اِقْتَمَّ (iqtamma)\n# نَقْتَمِّ (naqtammi) /naq.tam.mi/: first-person plural non-past active jussive of اِقْتَمَّ (iqtamma)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["naqtammu", "iqtamma", "naqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقتم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تقتم (form IX)\n# تَقْتَمُّ (taqtammu) /taq.tam.mu/: inflection of اِقْتَمَّ (iqtamma):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَقْتَمَّ (taqtamma) /taq.tam.ma/: inflection of اِقْتَمَّ (iqtamma):\n## second-person masculine singular non-past active subjunctive/jussive\n## third-person feminine singular non-past ac",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["taqtammu", "iqtamma", "taqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقتمم",
+      "tur": "verb",
+      "baslik": "تَقْتَمِمْ • (taqtamim) (form IX) /taq.ta.mim/\n# inflection of اِقْتَمَّ (iqtamma):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["taqtamim", "iqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَقْتَمَّا • (taqtammā) (form IX) /taq.tam.maː/\n# inflection of اِقْتَمَّ (iqtamma):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["taqtammā", "iqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقتمم",
+      "tur": "verb",
+      "baslik": "أَقْتَمِمْ • (ʔaqtamim) (form IX) /ʔaq.ta.mim/\n# first-person singular non-past active jussive of اِقْتَمَّ (iqtamma)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["ʔaqtamim", "iqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نقتمم",
+      "tur": "verb",
+      "baslik": "نَقْتَمِمْ • (naqtamim) (form IX) /naq.ta.mim/\n# first-person plural non-past active jussive of اِقْتَمَّ (iqtamma)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["naqtamim", "iqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اقتمم",
+      "tur": "verb",
+      "baslik": "اِقْتَمِمْ • (iqtamim) (form IX) /iq.ta.mim/\n# second-person masculine singular imperative of اِقْتَمَّ (iqtamma)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iqtamim", "iqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقتموا",
+      "tur": "verb",
+      "baslik": "يَقْتَمُّوا • (yaqtammū) (form IX) /jaq.tam.muː/\n# third-person masculine plural non-past active subjunctive/jussive of اِقْتَمَّ (iqtamma)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["yaqtammū", "iqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقتمم",
+      "tur": "verb",
+      "baslik": "يَقْتَمِمْ • (yaqtamim) (form IX) /jaq.ta.mim/\n# third-person masculine singular non-past active jussive of اِقْتَمَّ (iqtamma)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["yaqtamim", "iqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اقتمي",
+      "tur": "verb",
+      "baslik": "اِقْتَمِّي • (iqtammī) (form IX) /iq.tam.miː/\n# second-person feminine singular imperative of اِقْتَمَّ (iqtamma)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iqtammī", "iqtamma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقتما",
+      "tur": "verb",
+      "baslik": "يَقْتَمَّا • (yaqtammā) (form IX) /jaq.tam.maː/\n# third-person masculine dual non-past active subjunctive/jussive of اِقْتَمَّ (iqtamma)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["yaqtammā", "iqtamma"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "اقتم", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

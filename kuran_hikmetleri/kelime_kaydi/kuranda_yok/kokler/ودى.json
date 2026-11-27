@@ -1,913 +1,648 @@
 {
   "kok": "ودى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ودى", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "mekayis": [
-      {
-        "baslik": "وَدَى",
-        "metin": "(وَدَى) الْوَاوُ وَالدَّالُ وَالْحَرْفُ الْمُعْتَلُّ: ثَلَاثُ كَلِمَاتٍ غَيْرُ مُنْقَاسَةٍ: الْأُولَى وَدَى الْفَرَسُ لِيَضْرِبَ أَوْ يَبُولَ، إِذَا أَدْلَى. وَمِنْهُ الْوَدْيُ: مَاءٌ يَخْرُجُ مِنَ الْإِنْسَانِ كَالْمَذْيِ.\nوَالثَّانِيَةُ: وَدَيْتُ الرَّجُلَ أَدِيهِ دِيَةً.\nوَالثَّالِثَةُ: الْوَدِيُّ: صِغَارُ الْفُسْلَانِ.\nوَإِذَا هُمِزَ تَغَيَّرَ الْمَعْنَى وَصَارَ إِلَى بَابٍ مِنَ الْهَلَاكِ وَالضَّيَاعِ. يَقُولُونَ: الْمُوَدَّأَةُ: الْمَهْلَكَةُ، وَهِيَ عَلَى لَفْظِ الْمَفْعُولِ بِهِ. وَيَقُولُونَ: وَدَّأْتُ عَلَيْهِ الْأَرْضَ، إِذَا دَفَنْتُهُ. وَوَدَّأَ بِالْقَوْمِ، إِذَا أَرْدَاهُمْ."
-      }
-    ],
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الخاء والنون",
-      "baslik": "ودى",
-      "mihveri": "حَيّزٌ يمتدّ دقيقًا منصوّبًا يسيل فيه مائع برفق. كالوادي فهو مسيل منحدِر هابط يسيل إليه ماء المطر فيحوزه ويجرى فيه ممتدًّا برفق وهوادة لأنه يتجمع من ماء المطر شيئًا بعد شيء. والوَدِيّ الذي يسيل من عضو الرجل بعد البول سائل يخرج بلا دَفْق، والوَدِيّ الذي هو فسيل النخل وصغاره ينبت أي يمتد من أصل النخلة قليلًا قليلًا وهو ممتد البقاء، وكلاهما كان مَحُوزًا في باطن مصدره. وقولهم وَدَي الحمارُ بمعنى أدْلَى هو من ذلك، والدِيَة (أصلها اللفظي. وِدْيَة) مالٌ كان محوزًا يخرجه القاتل إلى وَلى الدم بيُسْر، لأنه ينقذ به نفسه من القصاص، ولعل المقصود بالاسم هو حَوْزُ الولِيّ إياها. {وَدِيَةٌ مُسَلَّمَةٌ إِلَى أَهْلِهِ} [النساء: 92]. ومن أودية الماء قوله تعالى {أَنْزَلَ مِنَ السَّمَاءِ مَاءً فَسَالَتْ أَوْدِيَةٌ بِقَدَرِهَا} [الرعد: 17]، {إِنِّي أَسْكَنْتُ مِنْ ذُرِّيَّتِي بِوَادٍ غَيْرِ ذِي زَرْعٍ} (2/619) [إبراهيم: 37]. وكل ما في القرآن من التركيب عدا (الدية) هو (الوادي) وجمعه أودية. ومن ذلك الامتداد بإبعاد قولهم \"أوْدَى بالشيء: ذهب به، وكذلك أوْدَى به المنون: أهلكه \". والتعبيران لا يعرضان لكيفية الذهاب والهلاك. وكأن المقصود بهما هو التعبير عن مجرد ذهاب الشيء والشخص من الحيز أخذًا من الامتداد في الأصل.",
-      "sesler": "",
-      "tam_metin": "{فَاخْلَعْ نَعْلَيْكَ إِنَّكَ بِالْوَادِ الْمُقَدَّسِ طُوًى} [طه: 12]\n\"الوادي: كُلُّ مَفْرَجٍ بَينَ الجبالِ والتِلالِ والأَكَم .. يكون مَسْلَكًا للسَيْل ومَنْفَذًا. والوَدِىّ -كغَنِيّ: فَسِيلُ النَخْل وصِغَارُه، والسائلُ اللَزِجُ الذي يخرج من الذَكَر بعد البَول، وهو الوَدْىُ -بالفتح -أيضًا. وَدَىَ الحمار والفرس: أدلى ليبوك \".\n° المعنى المحوري\nحَيّزٌ يمتدّ دقيقًا منصوّبًا يسيل فيه مائع برفق. كالوادي فهو مسيل منحدِر هابط يسيل إليه ماء المطر فيحوزه ويجرى فيه ممتدًّا برفق وهوادة لأنه يتجمع من ماء المطر شيئًا بعد شيء. والوَدِيّ الذي يسيل من عضو الرجل بعد البول سائل يخرج بلا دَفْق، والوَدِيّ الذي هو فسيل النخل وصغاره ينبت أي يمتد من أصل النخلة قليلًا قليلًا وهو ممتد البقاء، وكلاهما كان مَحُوزًا في باطن مصدره. وقولهم وَدَي الحمارُ بمعنى أدْلَى هو من ذلك، والدِيَة (أصلها اللفظي. وِدْيَة) مالٌ كان محوزًا يخرجه القاتل إلى وَلى الدم بيُسْر، لأنه ينقذ به نفسه من القصاص، ولعل المقصود بالاسم هو حَوْزُ الولِيّ إياها. {وَدِيَةٌ مُسَلَّمَةٌ إِلَى أَهْلِهِ} [النساء: 92]. ومن أودية الماء قوله تعالى {أَنْزَلَ مِنَ السَّمَاءِ مَاءً فَسَالَتْ أَوْدِيَةٌ بِقَدَرِهَا} [الرعد: 17]، {إِنِّي أَسْكَنْتُ مِنْ ذُرِّيَّتِي بِوَادٍ غَيْرِ ذِي زَرْعٍ}\n(2/619)\n[إبراهيم: 37]. وكل ما في القرآن من التركيب عدا (الدية) هو (الوادي) وجمعه أودية.\nومن ذلك الامتداد بإبعاد قولهم \"أوْدَى بالشيء: ذهب به، وكذلك أوْدَى به المنون: أهلكه \". والتعبيران لا يعرضان لكيفية الذهاب والهلاك. وكأن المقصود بهما هو التعبير عن مجرد ذهاب الشيء والشخص من الحيز أخذًا من الامتداد في الأصل.",
-      "fasil_ozeti": "° معنى الفصل المعجمي (خن) : التخلخل الممتد في الباطن -كما يتمثل في فراغ جوف السفينة وفراغ الغُرْلة -في (خنن)، وفي ضعف قوة إبصار العين وانتقاص الشيء -في (خون)، وفي الأثناء التي زخرت بالغازات المنتنة -في (خنز)، وفي الأثناء التي احتفظت بذلك النتن وزادت عليه قبح المنظر -في (خنزر)، وفي الفراغ الذي رجع فيه جسم الأنف وإليه الإبهام -في (خنس)، والتجوف الذي يسده أو يعترضه غليظ صلب -في (خنق)."
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "يد",
-        "u": "يد",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَدِ • (yadi) (form I) /ja.di/\n# third-person masculine singular non-past active jussive of وَدَى (wadā)",
-        "tag": ["countable", "form-i", "no-gloss"],
-        "r": ["yadi", "wadā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "دين",
-        "u": "دين",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "دِينَ • (dīna) (form I) /diː.na/\n# second-person feminine plural imperative of وَدَى (wadā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["dīna", "wadā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "د",
-        "u": "د",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "دِ • (di) (form I) /di/\n# second-person masculine singular imperative of وَدَى (wadā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["di", "wadā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "نود",
-        "u": "نود",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "نود (form II)\n# نُوَدِّ (nuwaddi) /nu.wad.di/: first-person plural non-past active jussive of وَدَّى (waddā)\n# نُوَدَّ (nuwadda) /nu.wad.da/: first-person plural non-past passive jussive of وَدَّى (waddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuwaddi", "waddā", "nuwadda"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "تود",
-        "u": "تود",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تود (form II)\n# تُوَدِّ (tuwaddi) /tu.wad.di/: inflection of وَدَّى (waddā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُوَدَّ (tuwadda) /tu.wad.da/: inflection of وَدَّى (waddā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaddi", "waddā", "tuwadda"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "دي",
-        "u": "دي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دِي • (dī) (form I) /diː/\n# second-person feminine singular imperative of وَدَى (wadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["dī", "wadā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "يود",
-        "u": "يود",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "يود (form II)\n# يُوَدِّ (yuwaddi) /ju.wad.di/: third-person masculine singular non-past active jussive of وَدَّى (waddā)\n# يُوَدَّ (yuwadda) /ju.wad.da/: third-person masculine singular non-past passive jussive of وَدَّى (waddā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaddi", "waddā", "yuwadda"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "دوا",
-        "u": "دوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دُوا • (dū) (form I) /duː/\n# second-person masculine plural imperative of وَدَى (wadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["dū", "wadā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "يدي",
-        "u": "يدي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يدي (form I)\n# يَدِي (yadī) /ja.diː/: third-person masculine singular non-past active indicative of وَدَى (wadā)\n# يَدِيَ (yadiya) /ja.di.ja/: third-person masculine singular non-past active subjunctive of وَدَى (wadā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yadī", "wadā", "yadiya"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "يدين",
-        "u": "يدين",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يَدِينَ • (yadīna) (form I) /ja.diː.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of وَدَى (wadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yadīna", "wadā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "ندي",
-        "u": "ندي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ندي (form I)\n# نَدِي (nadī) /na.diː/: first-person plural non-past active indicative of وَدَى (wadā)\n# نَدِيَ (nadiya) /na.di.ja/: first-person plural non-past active subjunctive of وَدَى (wadā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nadī", "wadā", "nadiya"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "ود",
-        "u": "ود",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "وَدِّ • (waddi) (form II) /wad.di/\n# second-person masculine singular imperative of وَدَّى (waddā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waddi", "waddā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "يدون",
-        "u": "يدون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يَدُونَ • (yadūna) (form I) /ja.duː.na/\n# third-person masculine plural non-past active indicative of وَدَى (wadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yadūna", "wadā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "أدي",
-        "u": "أدي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أدي (form I)\n# أَدِي (ʔadī) /ʔa.diː/: first-person singular non-past active indicative of وَدَى (wadā)\n# أَدِيَ (ʔadiya) /ʔa.di.ja/: first-person singular non-past active subjunctive of وَدَى (wadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔadī", "wadā", "ʔadiya"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "نودي",
-        "u": "نودي",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "نودي (form II)\n# نُوَدِّي (nuwaddī) /nu.wad.diː/: first-person plural non-past active indicative of وَدَّى (waddā)\n# نُوَدِّيَ (nuwaddiya) /nu.wad.di.ja/: first-person plural non-past active subjunctive of وَدَّى (waddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuwaddī", "waddā", "nuwaddiya"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "أد",
-        "u": "أد",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أَدِ • (ʔadi) (form I) /ʔa.di/\n# first-person singular non-past active jussive of وَدَى (wadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔadi", "wadā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "تدين",
-        "u": "تدين",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "تَدِينَ • (tadīna) (form I) /ta.diː.na/\n# inflection of وَدَى (wadā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tadīna", "wadā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "تدون",
-        "u": "تدون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَدُونَ • (tadūna) (form I) /ta.duː.na/\n# second-person masculine plural non-past active indicative of وَدَى (wadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tadūna", "wadā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "ودت",
-        "u": "ودت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وَدَّتْ • (waddat) (form II) /wad.dat/\n# third-person feminine singular past active of وَدَّى (waddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waddat", "waddā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "ودت",
-        "u": "ودت",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "وَدَتْ • (wadat) (form I) /wa.dat/\n# third-person feminine singular past active of وَدَى (wadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wadat", "wadā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "تودين",
-        "u": "تودين",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تودين (form II)\n# تُوَدِّينَ (tuwaddīna) /tu.wad.diː.na/: inflection of وَدَّى (waddā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُوَدَّيْنَ (tuwaddayna) /tu.wad.daj.na/: inflection of وَدَّى (waddā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plur",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaddīna", "waddā", "tuwaddayna"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "تودي",
-        "u": "تودي",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تودي (form II)\n# تُوَدِّي (tuwaddī) /tu.wad.diː/: inflection of وَدَّى (waddā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُوَدِّيَ (tuwaddiya) /tu.wad.di.ja/: inflection of وَدَّى (waddā):\n## second-person masculine singular non-past active sub",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaddī", "waddā", "tuwaddiya"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "ودي",
-        "u": "ودي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ودي (form II)\n# وُدِّيَ (wuddiya) /wud.di.ja/: third-person masculine singular past passive of وَدَّى (waddā)\n# وَدِّي (waddī) /wad.diː/: second-person feminine singular imperative of وَدَّى (waddā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["wuddiya", "waddā", "waddī"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "أود",
-        "u": "أود",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "أود (form II)\n# أُوَدِّ (ʔuwaddi) /ʔu.wad.di/: first-person singular non-past active jussive of وَدَّى (waddā)\n# أُوَدَّ (ʔuwadda) /ʔu.wad.da/: first-person singular non-past passive jussive of وَدَّى (waddā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuwaddi", "waddā", "ʔuwadda"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "تودون",
-        "u": "تودون",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تودون (form II)\n# تُوَدُّونَ (tuwaddūna) /tu.wad.duː.na/: second-person masculine plural non-past active indicative of وَدَّى (waddā)\n# تُوَدَّوْنَ (tuwaddawna) /tu.wad.daw.na/: second-person masculine plural non-past passive indicative of وَدَّى (waddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaddūna", "waddā", "tuwaddawna"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "تودوا",
-        "u": "تودوا",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تودوا (form II)\n# تُوَدُّوا (tuwaddū) /tu.wad.duː/: second-person masculine plural non-past active subjunctive/jussive of وَدَّى (waddā)\n# تُوَدَّوْا (tuwaddaw) /tu.wad.daw/: second-person masculine plural non-past passive subjunctive/jussive of وَدَّى (waddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaddū", "waddā", "tuwaddaw"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "ودوا",
-        "u": "ودوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ودوا (form II)\n# وَدَّوْا (waddaw) /wad.daw/: third-person masculine plural past active of وَدَّى (waddā)\n# وُدُّوا (wuddū) /wud.duː/: third-person masculine plural past passive of وَدَّى (waddā)\n# وَدُّوا (waddū) /wad.duː/: second-person masculine plural imperative of وَدَّى (waddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waddaw", "waddā", "wuddū"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "ودوا",
-        "u": "ودوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "ودوا (form I)\n# وَدَوْا (wadaw) /wa.daw/: third-person masculine plural past active of وَدَى (wadā)\n# وُدُوا (wudū) /wu.duː/: third-person masculine plural past passive of وَدَى (wadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wadaw", "wadā", "wudū"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "يودون",
-        "u": "يودون",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يودون (form II)\n# يُوَدُّونَ (yuwaddūna) /ju.wad.duː.na/: third-person masculine plural non-past active indicative of وَدَّى (waddā)\n# يُوَدَّوْنَ (yuwaddawna) /ju.wad.daw.na/: third-person masculine plural non-past passive indicative of وَدَّى (waddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaddūna", "waddā", "yuwaddawna"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "يودوا",
-        "u": "يودوا",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يودوا (form II)\n# يُوَدُّوا (yuwaddū) /ju.wad.duː/: third-person masculine plural non-past active subjunctive/jussive of وَدَّى (waddā)\n# يُوَدَّوْا (yuwaddaw) /ju.wad.daw/: third-person masculine plural non-past passive subjunctive/jussive of وَدَّى (waddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaddū", "waddā", "yuwaddaw"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "أودى",
-        "u": "أودى",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أُوَدَّى • (ʔuwaddā) (form II) /ʔu.wad.daː/\n# first-person singular non-past passive indicative/subjunctive of وَدَّى (waddā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuwaddā", "waddā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "ند",
-        "u": "ند",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نَدِ • (nadi) (form I) /na.di/\n# first-person plural non-past active jussive of وَدَى (wadā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nadi", "wadā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "أودي",
-        "u": "أودي",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "أودي (form II)\n# أُوَدِّي (ʔuwaddī) /ʔu.wad.diː/: first-person singular non-past active indicative of وَدَّى (waddā)\n# أُوَدِّيَ (ʔuwaddiya) /ʔu.wad.di.ja/: first-person singular non-past active subjunctive of وَدَّى (waddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuwaddī", "waddā", "ʔuwaddiya"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "يودي",
-        "u": "يودي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يودي (form II)\n# يُوَدِّي (yuwaddī) /ju.wad.diː/: third-person masculine singular non-past active indicative of وَدَّى (waddā)\n# يُوَدِّيَ (yuwaddiya) /ju.wad.di.ja/: third-person masculine singular non-past active subjunctive of وَدَّى (waddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaddī", "waddā", "yuwaddiya"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "توديان",
-        "u": "توديان",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "توديان (form II)\n# تُوَدِّيَانِ (tuwaddiyāni) /tu.wad.di.jaː.ni/: inflection of وَدَّى (waddā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُوَدَّيَانِ (tuwaddayāni) /tu.wad.da.jaː.ni/: inflection of وَدَّى (waddā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaddiyāni", "waddā", "tuwaddayāni"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوديان",
-        "u": "يوديان",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يوديان (form II)\n# يُوَدِّيَانِ (yuwaddiyāni) /ju.wad.di.jaː.ni/: third-person masculine dual non-past active indicative of وَدَّى (waddā)\n# يُوَدَّيَانِ (yuwaddayāni) /ju.wad.da.jaː.ni/: third-person masculine dual non-past passive indicative of وَدَّى (waddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaddiyāni", "waddā", "yuwaddayāni"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "تودى",
-        "u": "تودى",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُوَدَّى • (tuwaddā) (form II) /tu.wad.daː/\n# inflection of وَدَّى (waddā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaddā", "waddā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "يودى",
-        "u": "يودى",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يُوَدَّى • (yuwaddā) (form II) /ju.wad.daː/\n# third-person masculine singular non-past passive indicative/subjunctive of وَدَّى (waddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaddā", "waddā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "يودين",
-        "u": "يودين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يودين (form II)\n# يُوَدِّينَ (yuwaddīna) /ju.wad.diː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of وَدَّى (waddā)\n# يُوَدَّيْنَ (yuwaddayna) /ju.wad.daj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of وَدَّى (waddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaddīna", "waddā", "yuwaddayna"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "توديا",
-        "u": "توديا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "توديا (form II)\n# تُوَدِّيَا (tuwaddiyā) /tu.wad.di.jaː/: inflection of وَدَّى (waddā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُوَدَّيَا (tuwaddayā) /tu.wad.da.jaː/: inflection of وَدَّى (waddā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctiv",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaddiyā", "waddā", "tuwaddayā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوديا",
-        "u": "يوديا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يوديا (form II)\n# يُوَدِّيَا (yuwaddiyā) /ju.wad.di.jaː/: third-person masculine dual non-past active subjunctive/jussive of وَدَّى (waddā)\n# يُوَدَّيَا (yuwaddayā) /ju.wad.da.jaː/: third-person masculine dual non-past passive subjunctive/jussive of وَدَّى (waddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaddiyā", "waddā", "yuwaddayā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "نودى",
-        "u": "نودى",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نُوَدَّى • (nuwaddā) (form II) /nu.wad.daː/\n# first-person plural non-past passive indicative/subjunctive of وَدَّى (waddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuwaddā", "waddā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "تدوا",
-        "u": "تدوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَدُوا • (tadū) (form I) /ta.duː/\n# second-person masculine plural non-past active subjunctive/jussive of وَدَى (wadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tadū", "wadā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "تدي",
-        "u": "تدي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تدي (form I)\n# تَدِي (tadī) /ta.diː/: inflection of وَدَى (wadā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَدِيَ (tadiya) /ta.di.ja/: inflection of وَدَى (wadā):\n## second-person masculine singular non-past active subjunctive\n## third-person f",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tadī", "wadā", "tadiya"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "تد",
-        "u": "تد",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَدِ • (tadi) (form I) /ta.di/\n# inflection of وَدَى (wadā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tadi", "wadā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "ودتا",
-        "u": "ودتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وَدَّتَا • (waddatā) (form II) /wad.da.taː/\n# third-person feminine dual past active of وَدَّى (waddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waddatā", "waddā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "ودتا",
-        "u": "ودتا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "وَدَتَا • (wadatā) (form I) /wa.da.taː/\n# third-person feminine dual past active of وَدَى (wadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wadatā", "wadā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "وديا",
-        "u": "وديا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وديا (form II)\n# وَدَّيَا (waddayā) /wad.da.jaː/: third-person masculine dual past active of وَدَّى (waddā)\n# وُدِّيَا (wuddiyā) /wud.di.jaː/: third-person masculine dual past passive of وَدَّى (waddā)\n# وَدِّيَا (waddiyā) /wad.di.jaː/: second-person dual imperative of وَدَّى (waddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waddayā", "waddā", "wuddiyā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "وديا",
-        "u": "وديا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وديا (form I)\n# وَدَيَا (wadayā) /wa.da.jaː/: third-person masculine dual past active of وَدَى (wadā)\n# وُدِيَا (wudiyā) /wu.di.jaː/: third-person masculine dual past passive of وَدَى (wadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wadayā", "wadā", "wudiyā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "وديت",
-        "u": "وديت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وديت (form II)\n# وَدَّيْتُ (waddaytu) /wad.daj.tu/: first-person singular past active of وَدَّى (waddā)\n# وَدَّيْتَ (waddayta) /wad.daj.ta/: second-person masculine singular past active of وَدَّى (waddā)\n# وَدَّيْتِ (waddayti) /wad.daj.ti/: second-person feminine singular past active of وَدَّى (waddā)\n# وُدِّيتُ (wuddītu) /wud.diː.tu/: first-person singular past passive of وَدَّى (waddā)\n# وُدِّيت",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waddaytu", "waddā", "waddayta"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "وديت",
-        "u": "وديت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وديت (form I)\n# وَدَيْتُ (wadaytu) /wa.daj.tu/: first-person singular past active of وَدَى (wadā)\n# وَدَيْتَ (wadayta) /wa.daj.ta/: second-person masculine singular past active of وَدَى (wadā)\n# وَدَيْتِ (wadayti) /wa.daj.ti/: second-person feminine singular past active of وَدَى (wadā)\n# وُدِيتُ (wudītu) /wu.diː.tu/: first-person singular past passive of وَدَى (wadā)\n# وُدِيتَ (wudīta) /wu.diː.ta/",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wadaytu", "wadā", "wadayta"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "وديتما",
-        "u": "وديتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وديتما (form II)\n# وَدَّيْتُمَا (waddaytumā) /wad.daj.tu.maː/: second-person dual past active of وَدَّى (waddā)\n# وُدِّيتُمَا (wuddītumā) /wud.diː.tu.maː/: second-person dual past passive of وَدَّى (waddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waddaytumā", "waddā", "wuddītumā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "وديتما",
-        "u": "وديتما",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وديتما (form I)\n# وَدَيْتُمَا (wadaytumā) /wa.daj.tu.maː/: second-person dual past active of وَدَى (wadā)\n# وُدِيتُمَا (wudītumā) /wu.diː.tu.maː/: second-person dual past passive of وَدَى (wadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wadaytumā", "wadā", "wudītumā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "وديتم",
-        "u": "وديتم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وديتم (form II)\n# وَدَّيْتُمْ (waddaytum) /wad.daj.tum/: second-person masculine plural past active of وَدَّى (waddā)\n# وُدِّيتُمْ (wuddītum) /wud.diː.tum/: second-person masculine plural past passive of وَدَّى (waddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waddaytum", "waddā", "wuddītum"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "وديتم",
-        "u": "وديتم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وديتم (form I)\n# وَدَيْتُمْ (wadaytum) /wa.daj.tum/: second-person masculine plural past active of وَدَى (wadā)\n# وُدِيتُمْ (wudītum) /wu.diː.tum/: second-person masculine plural past passive of وَدَى (wadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wadaytum", "wadā", "wudītum"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "ودينا",
-        "u": "ودينا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ودينا (form II)\n# وَدَّيْنَا (waddaynā) /wad.daj.naː/: first-person plural past active of وَدَّى (waddā)\n# وُدِّينَا (wuddīnā) /wud.diː.naː/: first-person plural past passive of وَدَّى (waddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waddaynā", "waddā", "wuddīnā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "ودينا",
-        "u": "ودينا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ودينا (form I)\n# وَدَيْنَا (wadaynā) /wa.daj.naː/: first-person plural past active of وَدَى (wadā)\n# وُدِينَا (wudīnā) /wu.diː.naː/: first-person plural past passive of وَدَى (wadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wadaynā", "wadā", "wudīnā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "وديتا",
-        "u": "وديتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وُدِّيَتَا • (wuddiyatā) (form II) /wud.di.ja.taː/\n# third-person feminine dual past passive of وَدَّى (waddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["wuddiyatā", "waddā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "ودين",
-        "u": "ودين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ودين (form II)\n# وَدَّيْنَ (waddayna) /wad.daj.na/: third-person feminine plural past active of وَدَّى (waddā)\n# وُدِّينَ (wuddīna) /wud.diː.na/: third-person feminine plural past passive of وَدَّى (waddā)\n# وَدِّينَ (waddīna) /wad.diː.na/: second-person feminine plural imperative of وَدَّى (waddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waddayna", "waddā", "wuddīna"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "ودين",
-        "u": "ودين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ودين (form I)\n# وَدَيْنَ (wadayna) /wa.daj.na/: third-person feminine plural past active of وَدَى (wadā)\n# وُدِينَ (wudīna) /wu.diː.na/: third-person feminine plural past passive of وَدَى (wadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wadayna", "wadā", "wudīna"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "تديا",
-        "u": "تديا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَدِيَا • (tadiyā) (form I) /ta.di.jaː/\n# inflection of وَدَى (wadā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tadiyā", "wadā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "يديان",
-        "u": "يديان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَدِيَانِ • (yadiyāni) (form I) /ja.di.jaː.ni/\n# third-person masculine dual non-past active indicative of وَدَى (wadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yadiyāni", "wadā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "يديا",
-        "u": "يديا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَدِيَا • (yadiyā) (form I) /ja.di.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of وَدَى (wadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yadiyā", "wadā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "وديتن",
-        "u": "وديتن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وديتن (form II)\n# وَدَّيْتُنَّ (waddaytunna) /wad.daj.tun.na/: second-person feminine plural past active of وَدَّى (waddā)\n# وُدِّيتُنَّ (wuddītunna) /wud.diː.tun.na/: second-person feminine plural past passive of وَدَّى (waddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waddaytunna", "waddā", "wuddītunna"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "وديتن",
-        "u": "وديتن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وديتن (form I)\n# وَدَيْتُنَّ (wadaytunna) /wa.daj.tun.na/: second-person feminine plural past active of وَدَى (wadā)\n# وُدِيتُنَّ (wudītunna) /wu.diː.tun.na/: second-person feminine plural past passive of وَدَى (wadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wadaytunna", "wadā", "wudītunna"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "تديان",
-        "u": "تديان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَدِيَانِ • (tadiyāni) (form I) /ta.di.jaː.ni/\n# inflection of وَدَى (wadā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tadiyāni", "wadā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "يدوا",
-        "u": "يدوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَدُوا • (yadū) (form I) /ja.duː/\n# third-person masculine plural non-past active subjunctive/jussive of وَدَى (wadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yadū", "wadā"],
-        "k": "ودى",
-        "yol": "kök"
-      },
-      {
-        "w": "ديا",
-        "u": "ديا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دِيَا • (diyā) (form I) /di.jaː/\n# second-person dual imperative of وَدَى (wadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["diyā", "wadā"],
-        "k": "ودى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "دى",
+  "ses": {
     "harf": "و",
+    "fasil": "دى",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "mekayis": [
+    {
+      "baslik": "وَدَى",
+      "metin": "(وَدَى) الْوَاوُ وَالدَّالُ وَالْحَرْفُ الْمُعْتَلُّ: ثَلَاثُ كَلِمَاتٍ غَيْرُ مُنْقَاسَةٍ: الْأُولَى وَدَى الْفَرَسُ لِيَضْرِبَ أَوْ يَبُولَ، إِذَا أَدْلَى. وَمِنْهُ الْوَدْيُ: مَاءٌ يَخْرُجُ مِنَ الْإِنْسَانِ كَالْمَذْيِ.\nوَالثَّانِيَةُ: وَدَيْتُ الرَّجُلَ أَدِيهِ دِيَةً.\nوَالثَّالِثَةُ: الْوَدِيُّ: صِغَارُ الْفُسْلَانِ.\nوَإِذَا هُمِزَ تَغَيَّرَ الْمَعْنَى وَصَارَ إِلَى بَابٍ مِنَ الْهَلَاكِ وَالضَّيَاعِ. يَقُولُونَ: الْمُوَدَّأَةُ: الْمَهْلَكَةُ، وَهِيَ عَلَى لَفْظِ الْمَفْعُولِ بِهِ. وَيَقُولُونَ: وَدَّأْتُ عَلَيْهِ الْأَرْضَ، إِذَا دَفَنْتُهُ. وَوَدَّأَ بِالْقَوْمِ، إِذَا أَرْدَاهُمْ."
+    }
+  ],
+  "cebel": {
+    "fasil": "الخاء والنون",
+    "baslik": "ودى",
+    "mihveri": "حَيّزٌ يمتدّ دقيقًا منصوّبًا يسيل فيه مائع برفق. كالوادي فهو مسيل منحدِر هابط يسيل إليه ماء المطر فيحوزه ويجرى فيه ممتدًّا برفق وهوادة لأنه يتجمع من ماء المطر شيئًا بعد شيء. والوَدِيّ الذي يسيل من عضو الرجل بعد البول سائل يخرج بلا دَفْق، والوَدِيّ الذي هو فسيل النخل وصغاره ينبت أي يمتد من أصل النخلة قليلًا قليلًا وهو ممتد البقاء، وكلاهما كان مَحُوزًا في باطن مصدره. وقولهم وَدَي الحمارُ بمعنى أدْلَى هو من ذلك، والدِيَة (أصلها اللفظي. وِدْيَة) مالٌ كان محوزًا يخرجه القاتل إلى وَلى الدم بيُسْر، لأنه ينقذ به نفسه من القصاص، ولعل المقصود بالاسم هو حَوْزُ الولِيّ إياها. {وَدِيَةٌ مُسَلَّمَةٌ إِلَى أَهْلِهِ} [النساء: 92]. ومن أودية الماء قوله تعالى {أَنْزَلَ مِنَ السَّمَاءِ مَاءً فَسَالَتْ أَوْدِيَةٌ بِقَدَرِهَا} [الرعد: 17]، {إِنِّي أَسْكَنْتُ مِنْ ذُرِّيَّتِي بِوَادٍ غَيْرِ ذِي زَرْعٍ} (2/619) [إبراهيم: 37]. وكل ما في القرآن من التركيب عدا (الدية) هو (الوادي) وجمعه أودية. ومن ذلك الامتداد بإبعاد قولهم \"أوْدَى بالشيء: ذهب به، وكذلك أوْدَى به المنون: أهلكه \". والتعبيران لا يعرضان لكيفية الذهاب والهلاك. وكأن المقصود بهما هو التعبير عن مجرد ذهاب الشيء والشخص من الحيز أخذًا من الامتداد في الأصل.",
+    "tam_metin": "{فَاخْلَعْ نَعْلَيْكَ إِنَّكَ بِالْوَادِ الْمُقَدَّسِ طُوًى} [طه: 12]\n\"الوادي: كُلُّ مَفْرَجٍ بَينَ الجبالِ والتِلالِ والأَكَم .. يكون مَسْلَكًا للسَيْل ومَنْفَذًا. والوَدِىّ -كغَنِيّ: فَسِيلُ النَخْل وصِغَارُه، والسائلُ اللَزِجُ الذي يخرج من الذَكَر بعد البَول، وهو الوَدْىُ -بالفتح -أيضًا. وَدَىَ الحمار والفرس: أدلى ليبوك \".\n° المعنى المحوري\nحَيّزٌ يمتدّ دقيقًا منصوّبًا يسيل فيه مائع برفق. كالوادي فهو مسيل منحدِر هابط يسيل إليه ماء المطر فيحوزه ويجرى فيه ممتدًّا برفق وهوادة لأنه يتجمع من ماء المطر شيئًا بعد شيء. والوَدِيّ الذي يسيل من عضو الرجل بعد البول سائل يخرج بلا دَفْق، والوَدِيّ الذي هو فسيل النخل وصغاره ينبت أي يمتد من أصل النخلة قليلًا قليلًا وهو ممتد البقاء، وكلاهما كان مَحُوزًا في باطن مصدره. وقولهم وَدَي الحمارُ بمعنى أدْلَى هو من ذلك، والدِيَة (أصلها اللفظي. وِدْيَة) مالٌ كان محوزًا يخرجه القاتل إلى وَلى الدم بيُسْر، لأنه ينقذ به نفسه من القصاص، ولعل المقصود بالاسم هو حَوْزُ الولِيّ إياها. {وَدِيَةٌ مُسَلَّمَةٌ إِلَى أَهْلِهِ} [النساء: 92]. ومن أودية الماء قوله تعالى {أَنْزَلَ مِنَ السَّمَاءِ مَاءً فَسَالَتْ أَوْدِيَةٌ بِقَدَرِهَا} [الرعد: 17]، {إِنِّي أَسْكَنْتُ مِنْ ذُرِّيَّتِي بِوَادٍ غَيْرِ ذِي زَرْعٍ}\n(2/619)\n[إبراهيم: 37]. وكل ما في القرآن من التركيب عدا (الدية) هو (الوادي) وجمعه أودية.\nومن ذلك الامتداد بإبعاد قولهم \"أوْدَى بالشيء: ذهب به، وكذلك أوْدَى به المنون: أهلكه \". والتعبيران لا يعرضان لكيفية الذهاب والهلاك. وكأن المقصود بهما هو التعبير عن مجرد ذهاب الشيء والشخص من الحيز أخذًا من الامتداد في الأصل.",
+    "fasil_ozeti": "° معنى الفصل المعجمي (خن) : التخلخل الممتد في الباطن -كما يتمثل في فراغ جوف السفينة وفراغ الغُرْلة -في (خنن)، وفي ضعف قوة إبصار العين وانتقاص الشيء -في (خون)، وفي الأثناء التي زخرت بالغازات المنتنة -في (خنز)، وفي الأثناء التي احتفظت بذلك النتن وزادت عليه قبح المنظر -في (خنزر)، وفي الفراغ الذي رجع فيه جسم الأنف وإليه الإبهام -في (خنس)، والتجوف الذي يسده أو يعترضه غليظ صلب -في (خنق)."
+  },
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "يد",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَدِ • (yadi) (form I) /ja.di/\n# third-person masculine singular non-past active jussive of وَدَى (wadā)",
+      "etiket": ["countable", "form-i", "no-gloss"],
+      "okunus": ["yadi", "wadā"]
+    },
+    {
+      "madde": "دين",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "دِينَ • (dīna) (form I) /diː.na/\n# second-person feminine plural imperative of وَدَى (wadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["dīna", "wadā"]
+    },
+    {
+      "madde": "د",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "دِ • (di) (form I) /di/\n# second-person masculine singular imperative of وَدَى (wadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["di", "wadā"]
+    },
+    {
+      "madde": "نود",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "نود (form II)\n# نُوَدِّ (nuwaddi) /nu.wad.di/: first-person plural non-past active jussive of وَدَّى (waddā)\n# نُوَدَّ (nuwadda) /nu.wad.da/: first-person plural non-past passive jussive of وَدَّى (waddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuwaddi", "waddā", "nuwadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تود",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تود (form II)\n# تُوَدِّ (tuwaddi) /tu.wad.di/: inflection of وَدَّى (waddā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُوَدَّ (tuwadda) /tu.wad.da/: inflection of وَدَّى (waddā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaddi", "waddā", "tuwadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "دي",
+      "tur": "verb",
+      "baslik": "دِي • (dī) (form I) /diː/\n# second-person feminine singular imperative of وَدَى (wadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["dī", "wadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يود",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "يود (form II)\n# يُوَدِّ (yuwaddi) /ju.wad.di/: third-person masculine singular non-past active jussive of وَدَّى (waddā)\n# يُوَدَّ (yuwadda) /ju.wad.da/: third-person masculine singular non-past passive jussive of وَدَّى (waddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaddi", "waddā", "yuwadda"]
+    },
+    {
+      "madde": "دوا",
+      "tur": "verb",
+      "baslik": "دُوا • (dū) (form I) /duː/\n# second-person masculine plural imperative of وَدَى (wadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["dū", "wadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يدي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يدي (form I)\n# يَدِي (yadī) /ja.diː/: third-person masculine singular non-past active indicative of وَدَى (wadā)\n# يَدِيَ (yadiya) /ja.di.ja/: third-person masculine singular non-past active subjunctive of وَدَى (wadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yadī", "wadā", "yadiya"]
+    },
+    {
+      "madde": "يدين",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يَدِينَ • (yadīna) (form I) /ja.diː.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of وَدَى (wadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yadīna", "wadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ندي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ندي (form I)\n# نَدِي (nadī) /na.diː/: first-person plural non-past active indicative of وَدَى (wadā)\n# نَدِيَ (nadiya) /na.di.ja/: first-person plural non-past active subjunctive of وَدَى (wadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nadī", "wadā", "nadiya"]
+    },
+    {
+      "madde": "ود",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "وَدِّ • (waddi) (form II) /wad.di/\n# second-person masculine singular imperative of وَدَّى (waddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waddi", "waddā"]
+    },
+    {
+      "madde": "يدون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يَدُونَ • (yadūna) (form I) /ja.duː.na/\n# third-person masculine plural non-past active indicative of وَدَى (wadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yadūna", "wadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أدي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أدي (form I)\n# أَدِي (ʔadī) /ʔa.diː/: first-person singular non-past active indicative of وَدَى (wadā)\n# أَدِيَ (ʔadiya) /ʔa.di.ja/: first-person singular non-past active subjunctive of وَدَى (wadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔadī", "wadā", "ʔadiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نودي",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "نودي (form II)\n# نُوَدِّي (nuwaddī) /nu.wad.diː/: first-person plural non-past active indicative of وَدَّى (waddā)\n# نُوَدِّيَ (nuwaddiya) /nu.wad.di.ja/: first-person plural non-past active subjunctive of وَدَّى (waddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuwaddī", "waddā", "nuwaddiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أد",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أَدِ • (ʔadi) (form I) /ʔa.di/\n# first-person singular non-past active jussive of وَدَى (wadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔadi", "wadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تدين",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "تَدِينَ • (tadīna) (form I) /ta.diː.na/\n# inflection of وَدَى (wadā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tadīna", "wadā"]
+    },
+    {
+      "madde": "تدون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَدُونَ • (tadūna) (form I) /ta.duː.na/\n# second-person masculine plural non-past active indicative of وَدَى (wadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tadūna", "wadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ودت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وَدَّتْ • (waddat) (form II) /wad.dat/\n# third-person feminine singular past active of وَدَّى (waddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waddat", "waddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ودت",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "وَدَتْ • (wadat) (form I) /wa.dat/\n# third-person feminine singular past active of وَدَى (wadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wadat", "wadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تودين",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تودين (form II)\n# تُوَدِّينَ (tuwaddīna) /tu.wad.diː.na/: inflection of وَدَّى (waddā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُوَدَّيْنَ (tuwaddayna) /tu.wad.daj.na/: inflection of وَدَّى (waddā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plur",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaddīna", "waddā", "tuwaddayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تودي",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تودي (form II)\n# تُوَدِّي (tuwaddī) /tu.wad.diː/: inflection of وَدَّى (waddā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُوَدِّيَ (tuwaddiya) /tu.wad.di.ja/: inflection of وَدَّى (waddā):\n## second-person masculine singular non-past active sub",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaddī", "waddā", "tuwaddiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ودي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ودي (form II)\n# وُدِّيَ (wuddiya) /wud.di.ja/: third-person masculine singular past passive of وَدَّى (waddā)\n# وَدِّي (waddī) /wad.diː/: second-person feminine singular imperative of وَدَّى (waddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["wuddiya", "waddā", "waddī"]
+    },
+    {
+      "madde": "أود",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "أود (form II)\n# أُوَدِّ (ʔuwaddi) /ʔu.wad.di/: first-person singular non-past active jussive of وَدَّى (waddā)\n# أُوَدَّ (ʔuwadda) /ʔu.wad.da/: first-person singular non-past passive jussive of وَدَّى (waddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuwaddi", "waddā", "ʔuwadda"]
+    },
+    {
+      "madde": "تودون",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تودون (form II)\n# تُوَدُّونَ (tuwaddūna) /tu.wad.duː.na/: second-person masculine plural non-past active indicative of وَدَّى (waddā)\n# تُوَدَّوْنَ (tuwaddawna) /tu.wad.daw.na/: second-person masculine plural non-past passive indicative of وَدَّى (waddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaddūna", "waddā", "tuwaddawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تودوا",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تودوا (form II)\n# تُوَدُّوا (tuwaddū) /tu.wad.duː/: second-person masculine plural non-past active subjunctive/jussive of وَدَّى (waddā)\n# تُوَدَّوْا (tuwaddaw) /tu.wad.daw/: second-person masculine plural non-past passive subjunctive/jussive of وَدَّى (waddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaddū", "waddā", "tuwaddaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ودوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ودوا (form II)\n# وَدَّوْا (waddaw) /wad.daw/: third-person masculine plural past active of وَدَّى (waddā)\n# وُدُّوا (wuddū) /wud.duː/: third-person masculine plural past passive of وَدَّى (waddā)\n# وَدُّوا (waddū) /wad.duː/: second-person masculine plural imperative of وَدَّى (waddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waddaw", "waddā", "wuddū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ودوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "ودوا (form I)\n# وَدَوْا (wadaw) /wa.daw/: third-person masculine plural past active of وَدَى (wadā)\n# وُدُوا (wudū) /wu.duː/: third-person masculine plural past passive of وَدَى (wadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wadaw", "wadā", "wudū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يودون",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يودون (form II)\n# يُوَدُّونَ (yuwaddūna) /ju.wad.duː.na/: third-person masculine plural non-past active indicative of وَدَّى (waddā)\n# يُوَدَّوْنَ (yuwaddawna) /ju.wad.daw.na/: third-person masculine plural non-past passive indicative of وَدَّى (waddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaddūna", "waddā", "yuwaddawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يودوا",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يودوا (form II)\n# يُوَدُّوا (yuwaddū) /ju.wad.duː/: third-person masculine plural non-past active subjunctive/jussive of وَدَّى (waddā)\n# يُوَدَّوْا (yuwaddaw) /ju.wad.daw/: third-person masculine plural non-past passive subjunctive/jussive of وَدَّى (waddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaddū", "waddā", "yuwaddaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أودى",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أُوَدَّى • (ʔuwaddā) (form II) /ʔu.wad.daː/\n# first-person singular non-past passive indicative/subjunctive of وَدَّى (waddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuwaddā", "waddā"]
+    },
+    {
+      "madde": "ند",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نَدِ • (nadi) (form I) /na.di/\n# first-person plural non-past active jussive of وَدَى (wadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nadi", "wadā"]
+    },
+    {
+      "madde": "أودي",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "أودي (form II)\n# أُوَدِّي (ʔuwaddī) /ʔu.wad.diː/: first-person singular non-past active indicative of وَدَّى (waddā)\n# أُوَدِّيَ (ʔuwaddiya) /ʔu.wad.di.ja/: first-person singular non-past active subjunctive of وَدَّى (waddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuwaddī", "waddā", "ʔuwaddiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يودي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يودي (form II)\n# يُوَدِّي (yuwaddī) /ju.wad.diː/: third-person masculine singular non-past active indicative of وَدَّى (waddā)\n# يُوَدِّيَ (yuwaddiya) /ju.wad.di.ja/: third-person masculine singular non-past active subjunctive of وَدَّى (waddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaddī", "waddā", "yuwaddiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "توديان",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "توديان (form II)\n# تُوَدِّيَانِ (tuwaddiyāni) /tu.wad.di.jaː.ni/: inflection of وَدَّى (waddā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُوَدَّيَانِ (tuwaddayāni) /tu.wad.da.jaː.ni/: inflection of وَدَّى (waddā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaddiyāni", "waddā", "tuwaddayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يوديان",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يوديان (form II)\n# يُوَدِّيَانِ (yuwaddiyāni) /ju.wad.di.jaː.ni/: third-person masculine dual non-past active indicative of وَدَّى (waddā)\n# يُوَدَّيَانِ (yuwaddayāni) /ju.wad.da.jaː.ni/: third-person masculine dual non-past passive indicative of وَدَّى (waddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaddiyāni", "waddā", "yuwaddayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تودى",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُوَدَّى • (tuwaddā) (form II) /tu.wad.daː/\n# inflection of وَدَّى (waddā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaddā", "waddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يودى",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يُوَدَّى • (yuwaddā) (form II) /ju.wad.daː/\n# third-person masculine singular non-past passive indicative/subjunctive of وَدَّى (waddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaddā", "waddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يودين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يودين (form II)\n# يُوَدِّينَ (yuwaddīna) /ju.wad.diː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of وَدَّى (waddā)\n# يُوَدَّيْنَ (yuwaddayna) /ju.wad.daj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of وَدَّى (waddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaddīna", "waddā", "yuwaddayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "توديا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "توديا (form II)\n# تُوَدِّيَا (tuwaddiyā) /tu.wad.di.jaː/: inflection of وَدَّى (waddā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُوَدَّيَا (tuwaddayā) /tu.wad.da.jaː/: inflection of وَدَّى (waddā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctiv",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaddiyā", "waddā", "tuwaddayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يوديا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يوديا (form II)\n# يُوَدِّيَا (yuwaddiyā) /ju.wad.di.jaː/: third-person masculine dual non-past active subjunctive/jussive of وَدَّى (waddā)\n# يُوَدَّيَا (yuwaddayā) /ju.wad.da.jaː/: third-person masculine dual non-past passive subjunctive/jussive of وَدَّى (waddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaddiyā", "waddā", "yuwaddayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نودى",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نُوَدَّى • (nuwaddā) (form II) /nu.wad.daː/\n# first-person plural non-past passive indicative/subjunctive of وَدَّى (waddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuwaddā", "waddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تدوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَدُوا • (tadū) (form I) /ta.duː/\n# second-person masculine plural non-past active subjunctive/jussive of وَدَى (wadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tadū", "wadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تدي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تدي (form I)\n# تَدِي (tadī) /ta.diː/: inflection of وَدَى (wadā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَدِيَ (tadiya) /ta.di.ja/: inflection of وَدَى (wadā):\n## second-person masculine singular non-past active subjunctive\n## third-person f",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tadī", "wadā", "tadiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تد",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَدِ • (tadi) (form I) /ta.di/\n# inflection of وَدَى (wadā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tadi", "wadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ودتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وَدَّتَا • (waddatā) (form II) /wad.da.taː/\n# third-person feminine dual past active of وَدَّى (waddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waddatā", "waddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ودتا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "وَدَتَا • (wadatā) (form I) /wa.da.taː/\n# third-person feminine dual past active of وَدَى (wadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wadatā", "wadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وديا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وديا (form II)\n# وَدَّيَا (waddayā) /wad.da.jaː/: third-person masculine dual past active of وَدَّى (waddā)\n# وُدِّيَا (wuddiyā) /wud.di.jaː/: third-person masculine dual past passive of وَدَّى (waddā)\n# وَدِّيَا (waddiyā) /wad.di.jaː/: second-person dual imperative of وَدَّى (waddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waddayā", "waddā", "wuddiyā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وديا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وديا (form I)\n# وَدَيَا (wadayā) /wa.da.jaː/: third-person masculine dual past active of وَدَى (wadā)\n# وُدِيَا (wudiyā) /wu.di.jaː/: third-person masculine dual past passive of وَدَى (wadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wadayā", "wadā", "wudiyā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وديت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وديت (form II)\n# وَدَّيْتُ (waddaytu) /wad.daj.tu/: first-person singular past active of وَدَّى (waddā)\n# وَدَّيْتَ (waddayta) /wad.daj.ta/: second-person masculine singular past active of وَدَّى (waddā)\n# وَدَّيْتِ (waddayti) /wad.daj.ti/: second-person feminine singular past active of وَدَّى (waddā)\n# وُدِّيتُ (wuddītu) /wud.diː.tu/: first-person singular past passive of وَدَّى (waddā)\n# وُدِّيت",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waddaytu", "waddā", "waddayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وديت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وديت (form I)\n# وَدَيْتُ (wadaytu) /wa.daj.tu/: first-person singular past active of وَدَى (wadā)\n# وَدَيْتَ (wadayta) /wa.daj.ta/: second-person masculine singular past active of وَدَى (wadā)\n# وَدَيْتِ (wadayti) /wa.daj.ti/: second-person feminine singular past active of وَدَى (wadā)\n# وُدِيتُ (wudītu) /wu.diː.tu/: first-person singular past passive of وَدَى (wadā)\n# وُدِيتَ (wudīta) /wu.diː.ta/",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wadaytu", "wadā", "wadayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وديتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وديتما (form II)\n# وَدَّيْتُمَا (waddaytumā) /wad.daj.tu.maː/: second-person dual past active of وَدَّى (waddā)\n# وُدِّيتُمَا (wuddītumā) /wud.diː.tu.maː/: second-person dual past passive of وَدَّى (waddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waddaytumā", "waddā", "wuddītumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وديتما",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وديتما (form I)\n# وَدَيْتُمَا (wadaytumā) /wa.daj.tu.maː/: second-person dual past active of وَدَى (wadā)\n# وُدِيتُمَا (wudītumā) /wu.diː.tu.maː/: second-person dual past passive of وَدَى (wadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wadaytumā", "wadā", "wudītumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وديتم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وديتم (form II)\n# وَدَّيْتُمْ (waddaytum) /wad.daj.tum/: second-person masculine plural past active of وَدَّى (waddā)\n# وُدِّيتُمْ (wuddītum) /wud.diː.tum/: second-person masculine plural past passive of وَدَّى (waddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waddaytum", "waddā", "wuddītum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وديتم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وديتم (form I)\n# وَدَيْتُمْ (wadaytum) /wa.daj.tum/: second-person masculine plural past active of وَدَى (wadā)\n# وُدِيتُمْ (wudītum) /wu.diː.tum/: second-person masculine plural past passive of وَدَى (wadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wadaytum", "wadā", "wudītum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ودينا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ودينا (form II)\n# وَدَّيْنَا (waddaynā) /wad.daj.naː/: first-person plural past active of وَدَّى (waddā)\n# وُدِّينَا (wuddīnā) /wud.diː.naː/: first-person plural past passive of وَدَّى (waddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waddaynā", "waddā", "wuddīnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ودينا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ودينا (form I)\n# وَدَيْنَا (wadaynā) /wa.daj.naː/: first-person plural past active of وَدَى (wadā)\n# وُدِينَا (wudīnā) /wu.diː.naː/: first-person plural past passive of وَدَى (wadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wadaynā", "wadā", "wudīnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وديتا",
+      "tur": "verb",
+      "baslik": "وُدِّيَتَا • (wuddiyatā) (form II) /wud.di.ja.taː/\n# third-person feminine dual past passive of وَدَّى (waddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["wuddiyatā", "waddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ودين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ودين (form II)\n# وَدَّيْنَ (waddayna) /wad.daj.na/: third-person feminine plural past active of وَدَّى (waddā)\n# وُدِّينَ (wuddīna) /wud.diː.na/: third-person feminine plural past passive of وَدَّى (waddā)\n# وَدِّينَ (waddīna) /wad.diː.na/: second-person feminine plural imperative of وَدَّى (waddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waddayna", "waddā", "wuddīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ودين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ودين (form I)\n# وَدَيْنَ (wadayna) /wa.daj.na/: third-person feminine plural past active of وَدَى (wadā)\n# وُدِينَ (wudīna) /wu.diː.na/: third-person feminine plural past passive of وَدَى (wadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wadayna", "wadā", "wudīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تديا",
+      "tur": "verb",
+      "baslik": "تَدِيَا • (tadiyā) (form I) /ta.di.jaː/\n# inflection of وَدَى (wadā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tadiyā", "wadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يديان",
+      "tur": "verb",
+      "baslik": "يَدِيَانِ • (yadiyāni) (form I) /ja.di.jaː.ni/\n# third-person masculine dual non-past active indicative of وَدَى (wadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yadiyāni", "wadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يديا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَدِيَا • (yadiyā) (form I) /ja.di.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of وَدَى (wadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yadiyā", "wadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وديتن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وديتن (form II)\n# وَدَّيْتُنَّ (waddaytunna) /wad.daj.tun.na/: second-person feminine plural past active of وَدَّى (waddā)\n# وُدِّيتُنَّ (wuddītunna) /wud.diː.tun.na/: second-person feminine plural past passive of وَدَّى (waddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waddaytunna", "waddā", "wuddītunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وديتن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وديتن (form I)\n# وَدَيْتُنَّ (wadaytunna) /wa.daj.tun.na/: second-person feminine plural past active of وَدَى (wadā)\n# وُدِيتُنَّ (wudītunna) /wu.diː.tun.na/: second-person feminine plural past passive of وَدَى (wadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wadaytunna", "wadā", "wudītunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تديان",
+      "tur": "verb",
+      "baslik": "تَدِيَانِ • (tadiyāni) (form I) /ta.di.jaː.ni/\n# inflection of وَدَى (wadā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tadiyāni", "wadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يدوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَدُوا • (yadū) (form I) /ja.duː/\n# third-person masculine plural non-past active subjunctive/jussive of وَدَى (wadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yadū", "wadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ديا",
+      "tur": "verb",
+      "baslik": "دِيَا • (diyā) (form I) /di.jaː/\n# second-person dual imperative of وَدَى (wadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["diyā", "wadā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ودى", "r7"]
+  ],
+  "mana": {
     "ince": "possession.n.02",
     "orta": "noun.possession",
     "ust": "insan ve toplum",
@@ -915,38 +650,8 @@
     "dayanak_tanim": "anything that is owed to someone else",
     "synset_sayisi": 16
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "الخاء والنون",
-    "mihveri": "حَيّزٌ يمتدّ دقيقًا منصوّبًا يسيل فيه مائع برفق. كالوادي فهو مسيل منحدِر هابط يسيل إليه ماء المطر فيحوزه ويجرى فيه ممتدًّا برفق وهوادة لأنه يتجمع من ماء المطر شيئًا بعد شيء. والوَدِيّ الذي يسيل من عضو الرجل بعد البول سائل يخرج بلا دَفْق، والوَدِيّ الذي هو فسيل النخل وصغاره ينبت أي يمتد من أصل النخلة قليلًا قليلًا وهو ممتد البقاء، وكلاهما كان مَحُوزًا في باطن مصدره. وقولهم وَدَي الحمارُ بمعنى أدْلَى هو من ذلك، والدِيَة (أصلها اللفظي. وِدْيَة) مالٌ كان محوزًا يخرجه القاتل إلى وَلى الدم بيُسْر، لأنه ينقذ به نفسه من القصاص، ولعل المقصود بالاسم هو حَوْزُ الولِيّ إياها. {وَدِيَةٌ مُسَلَّمَةٌ إِلَى أَهْلِهِ} [النساء: 92]. ومن أودية الماء قوله تعالى {أَنْزَلَ مِنَ السَّمَاءِ مَاءً فَسَالَتْ أَوْدِيَةٌ بِقَدَرِهَا} [الرعد: 17]، {إِنِّي أَسْكَنْتُ مِنْ ذُرِّيَّتِي بِوَادٍ غَيْرِ ذِي زَرْعٍ} (2/619) [إبراهيم: 37]. وكل ما في القرآن من التركيب عدا (الدية) هو (الوادي) وجمعه أودية. ومن ذلك الامتداد بإبعاد قولهم \"أوْدَى بالشيء: ذهب به، وكذلك أوْدَى به المنون: أهلكه \". والتعبيران لا يعرضان لكيفية الذهاب والهلاك. وكأن المقصود بهما هو التعبير عن مجرد ذهاب الشيء والشخص من الحيز أخذًا من الامتداد في الأصل.",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (خن) : التخلخل الممتد في الباطن -كما يتمثل في فراغ جوف السفينة وفراغ الغُرْلة -في (خنن)، وفي ضعف قوة إبصار العين وانتقاص الشيء -في (خون)، وفي الأثناء التي زخرت بالغازات المنتنة -في (خنز)، وفي الأثناء التي احتفظت بذلك النتن وزادت عليه قبح المنظر -في (خنزر)، وفي الفراغ الذي رجع فيه جسم الأنف وإليه الإبهام -في (خنس)، والتجوف الذي يسده أو يعترضه غليظ صلب -في (خنق).",
-    "tam_metin": "{فَاخْلَعْ نَعْلَيْكَ إِنَّكَ بِالْوَادِ الْمُقَدَّسِ طُوًى} [طه: 12]\n\"الوادي: كُلُّ مَفْرَجٍ بَينَ الجبالِ والتِلالِ والأَكَم .. يكون مَسْلَكًا للسَيْل ومَنْفَذًا. والوَدِىّ -كغَنِيّ: فَسِيلُ النَخْل وصِغَارُه، والسائلُ اللَزِجُ الذي يخرج من الذَكَر بعد البَول، وهو الوَدْىُ -بالفتح -أيضًا. وَدَىَ الحمار والفرس: أدلى ليبوك \".\n° المعنى المحوري\nحَيّزٌ يمتدّ دقيقًا منصوّبًا يسيل فيه مائع برفق. كالوادي فهو مسيل منحدِر هابط يسيل إليه ماء المطر فيحوزه ويجرى فيه ممتدًّا برفق وهوادة لأنه يتجمع من ماء المطر شيئًا بعد شيء. والوَدِيّ الذي يسيل من عضو الرجل بعد البول سائل يخرج بلا دَفْق، والوَدِيّ الذي هو فسيل النخل وصغاره ينبت أي يمتد من أصل النخلة قليلًا قليلًا وهو ممتد البقاء، وكلاهما كان مَحُوزًا في باطن مصدره. وقولهم وَدَي الحمارُ بمعنى أدْلَى هو من ذلك، والدِيَة (أصلها اللفظي. وِدْيَة) مالٌ كان محوزًا يخرجه القاتل إلى وَلى الدم بيُسْر، لأنه ينقذ به نفسه من القصاص، ولعل المقصود بالاسم هو حَوْزُ الولِيّ إياها. {وَدِيَةٌ مُسَلَّمَةٌ إِلَى أَهْلِهِ} [النساء: 92]. ومن أودية الماء قوله تعالى {أَنْزَلَ مِنَ السَّمَاءِ مَاءً فَسَالَتْ أَوْدِيَةٌ بِقَدَرِهَا} [الرعد: 17]، {إِنِّي أَسْكَنْتُ مِنْ ذُرِّيَّتِي بِوَادٍ غَيْرِ ذِي زَرْعٍ}\n(2/619)\n[إبراهيم: 37]. وكل ما في القرآن من التركيب عدا (الدية) هو (الوادي) وجمعه أودية.\nومن ذلك الامتداد بإبعاد قولهم \"أوْدَى بالشيء: ذهب به، وكذلك أوْدَى به المنون: أهلكه \". والتعبيران لا يعرضان لكيفية الذهاب والهلاك. وكأن المقصود بهما هو التعبير عن مجرد ذهاب الشيء والشخص من الحيز أخذًا من الامتداد في الأصل."
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
-    "body_part.n.01",
-    "contestant.n.01",
-    "feeling.n.01",
-    "iodine.n.01",
-    "liabilities.n.01",
-    "like.v.04",
-    "like.v.05",
-    "organization.n.01",
-    "peer.n.01",
-    "spatial_property.n.01",
-    "sympathetic.a.01",
-    "wish.v.02"
-  ],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 1,
       "merkez_kok": "قره",
@@ -966,6 +671,24 @@
       "boy": 265
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": [
+    "body_part.n.01",
+    "contestant.n.01",
+    "feeling.n.01",
+    "iodine.n.01",
+    "liabilities.n.01",
+    "like.v.04",
+    "like.v.05",
+    "organization.n.01",
+    "peer.n.01",
+    "spatial_property.n.01",
+    "sympathetic.a.01",
+    "wish.v.02"
+  ],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

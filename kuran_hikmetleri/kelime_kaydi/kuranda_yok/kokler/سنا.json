@@ -1,623 +1,444 @@
 {
   "kok": "سنا",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "سنا", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "سنت",
-        "u": "سنت",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "سَنَتْ • (sanat) (form I) /sa.nat/\n# third-person feminine singular past active of سَنَا (sanā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sanat", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "أسن",
-        "u": "أسن",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "أسن (form I)\n# أَسْنُ (ʔasnu) /ʔas.nu/: first-person singular non-past active jussive of سَنَا (sanā)\n# أُسْنَ (ʔusna) /ʔus.na/: first-person singular non-past passive jussive of سَنَا (sanā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔasnu", "sanā", "ʔusna"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "سنون",
-        "u": "سنون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "سَنَوْنَ • (sanawna) (form I) /sa.naw.na/\n# third-person feminine plural past active of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sanawna", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "يسن",
-        "u": "يسن",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يسن (form I)\n# يَسْنُ (yasnu) /jas.nu/: third-person masculine singular non-past active jussive of سَنَا (sanā)\n# يُسْنَ (yusna) /jus.na/: third-person masculine singular non-past passive jussive of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasnu", "sanā", "yusna"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "تسنين",
-        "u": "تسنين",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "تسنين (form I)\n# تَسْنِينَ (tasnīna) /tas.niː.na/: second-person feminine singular non-past active indicative of سَنَا (sanā)\n# تُسْنَيْنَ (tusnayna) /tus.naj.na/: inflection of سَنَا (sanā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passive subjunctive/jussive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasnīna", "sanā", "tusnayna"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "سني",
-        "u": "سني",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "سُنِيَ • (suniya) (form I) /su.ni.ja/\n# third-person masculine singular past passive of سَنَا (sanā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["suniya", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "تسن",
-        "u": "تسن",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تسن (form I)\n# تَسْنُ (tasnu) /tas.nu/: inflection of سَنَا (sanā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُسْنَ (tusna) /tus.na/: inflection of سَنَا (sanā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasnu", "sanā", "tusna"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "تسني",
-        "u": "تسني",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تسني (form I)\n# تَسْنِي (tasnī) /tas.niː/: second-person feminine singular non-past active subjunctive/jussive of سَنَا (sanā)\n# تُسْنَيْ (tusnay) /tus.naj/: second-person feminine singular non-past passive subjunctive/jussive of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasnī", "sanā", "tusnay"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "نسن",
-        "u": "نسن",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "نسن (form I)\n# نَسْنُ (nasnu) /nas.nu/: first-person plural non-past active jussive of سَنَا (sanā)\n# نُسْنَ (nusna) /nus.na/: first-person plural non-past passive jussive of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nasnu", "sanā", "nusna"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "تسنون",
-        "u": "تسنون",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تسنون (form I)\n# تَسْنُونَ (tasnūna) /tas.nuː.na/: inflection of سَنَا (sanā):\n## second-person masculine/feminine plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُسْنَوْنَ (tusnawna) /tus.naw.na/: second-person masculine plural non-past passive indicative of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasnūna", "sanā", "tusnawna"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "تسنوا",
-        "u": "تسنوا",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تسنوا (form I)\n# تَسْنُوَا (tasnuwā) /tas.nu.waː/: inflection of سَنَا (sanā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تَسْنُوا (tasnū) /tas.nuː/: second-person masculine plural non-past active subjunctive/jussive of سَنَا (sanā)\n# تُسْنَوْا (tusnaw) /tus.naw/: second-person masculine plural non-past passive subj",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasnuwā", "sanā", "tasnū"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "يسنون",
-        "u": "يسنون",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يسنون (form I)\n# يَسْنُونَ (yasnūna) /jas.nuː.na/: inflection of سَنَا (sanā):\n## third-person masculine/feminine plural non-past active indicative\n## third-person feminine plural non-past active subjunctive/jussive\n# يُسْنَوْنَ (yusnawna) /jus.naw.na/: third-person masculine plural non-past passive indicative of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasnūna", "sanā", "yusnawna"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "يسنوا",
-        "u": "يسنوا",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يسنوا (form I)\n# يَسْنُوَا (yasnuwā) /jas.nu.waː/: third-person masculine dual non-past active subjunctive/jussive of سَنَا (sanā)\n# يَسْنُوا (yasnū) /jas.nuː/: third-person masculine plural non-past active subjunctive/jussive of سَنَا (sanā)\n# يُسْنَوْا (yusnaw) /jus.naw/: third-person masculine plural non-past passive subjunctive/jussive of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasnuwā", "sanā", "yasnū"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "سنوا",
-        "u": "سنوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "سنوا (form I)\n# سَنَوَا (sanawā) /sa.na.waː/: third-person masculine dual past active of سَنَا (sanā)\n# سَنَوْا (sanaw) /sa.naw/: third-person masculine plural past active of سَنَا (sanā)\n# سُنُوا (sunū) /su.nuː/: third-person masculine plural past passive of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sanawā", "sanā", "sanaw"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "أسنى",
-        "u": "أسنى",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أُسْنَى • (ʔusnā) (form I) /ʔus.naː/\n# first-person singular non-past passive indicative/subjunctive of سَنَا (sanā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔusnā", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "تسنى",
-        "u": "تسنى",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُسْنَى • (tusnā) (form I) /tus.naː/\n# inflection of سَنَا (sanā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tusnā", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "سنوت",
-        "u": "سنوت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "سنوت (form I)\n# سَنَوْتُ (sanawtu) /sa.naw.tu/: first-person singular past active of سَنَا (sanā)\n# سَنَوْتَ (sanawta) /sa.naw.ta/: second-person masculine singular past active of سَنَا (sanā)\n# سَنَوْتِ (sanawti) /sa.naw.ti/: second-person feminine singular past active of سَنَا (sanā)",
-        "tag": ["form-i", "no-gloss", "rare"],
-        "r": ["sanawtu", "sanā", "sanawta"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "اسن",
-        "u": "اسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُسْنُ • (usnu) (form I) /us.nu/\n# second-person masculine singular imperative of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["usnu", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "سنين",
-        "u": "سنين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "سُنِينَ • (sunīna) (form I) /su.niː.na/\n# third-person feminine plural past passive of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sunīna", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "يسنى",
-        "u": "يسنى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُسْنَى • (yusnā) (form I) /jus.naː/\n# third-person masculine singular non-past passive indicative/subjunctive of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yusnā", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "تسنيان",
-        "u": "تسنيان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُسْنَيَانِ • (tusnayāni) (form I) /tus.na.jaː.ni/\n# inflection of سَنَا (sanā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tusnayāni", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "يسنيان",
-        "u": "يسنيان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُسْنَيَانِ • (yusnayāni) (form I) /jus.na.jaː.ni/\n# third-person masculine dual non-past passive indicative of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yusnayāni", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "يسنين",
-        "u": "يسنين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُسْنَيْنَ • (yusnayna) (form I) /jus.naj.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yusnayna", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "نسنى",
-        "u": "نسنى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نُسْنَى • (nusnā) (form I) /nus.naː/\n# first-person plural non-past passive indicative/subjunctive of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nusnā", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "تسنيا",
-        "u": "تسنيا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُسْنَيَا • (tusnayā) (form I) /tus.na.jaː/\n# inflection of سَنَا (sanā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tusnayā", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "يسنيا",
-        "u": "يسنيا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُسْنَيَا • (yusnayā) (form I) /jus.na.jaː/\n# third-person masculine dual non-past passive subjunctive/jussive of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yusnayā", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "سنونا",
-        "u": "سنونا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سَنَوْنَا • (sanawnā) (form I) /sa.naw.naː/\n# first-person plural past active of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sanawnā", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "سنتا",
-        "u": "سنتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "سَنَتَا • (sanatā) (form I) /sa.na.taː/\n# third-person feminine dual past active of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sanatā", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "سنوتما",
-        "u": "سنوتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سَنَوْتُمَا • (sanawtumā) (form I) /sa.naw.tu.maː/\n# second-person dual past active of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sanawtumā", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "سنوتم",
-        "u": "سنوتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سَنَوْتُمْ • (sanawtum) (form I) /sa.naw.tum/\n# second-person masculine plural past active of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sanawtum", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "سنوتن",
-        "u": "سنوتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سَنَوْتُنَّ • (sanawtunna) (form I) /sa.naw.tun.na/\n# second-person feminine plural past active of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sanawtunna", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "سنيتما",
-        "u": "سنيتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "سُنِيتُمَا • (sunītumā) (form I) /su.niː.tu.maː/\n# second-person dual past passive of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sunītumā", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "سنيت",
-        "u": "سنيت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "سنيت (form I)\n# سُنِيتُ (sunītu) /su.niː.tu/: first-person singular past passive of سَنَا (sanā)\n# سُنِيتَ (sunīta) /su.niː.ta/: second-person masculine singular past passive of سَنَا (sanā)\n# سُنِيتِ (sunīti) /su.niː.ti/: second-person feminine singular past passive of سَنَا (sanā)\n# سُنِيَتْ (suniyat) /su.ni.jat/: third-person feminine singular past passive of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sunītu", "sanā", "sunīta"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "سنيتا",
-        "u": "سنيتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "سُنِيَتَا • (suniyatā) (form I) /su.ni.ja.taː/\n# third-person feminine dual past passive of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["suniyatā", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "سنيا",
-        "u": "سنيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "سُنِيَا • (suniyā) (form I) /su.ni.jaː/\n# third-person masculine dual past passive of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["suniyā", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "سنيتم",
-        "u": "سنيتم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "سُنِيتُمْ • (sunītum) (form I) /su.niː.tum/\n# second-person masculine plural past passive of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sunītum", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "سنينا",
-        "u": "سنينا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "سُنِينَا • (sunīnā) (form I) /su.niː.naː/\n# first-person plural past passive of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sunīnā", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "تسنو",
-        "u": "تسنو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تسنو (form I)\n# تَسْنُو (tasnū) /tas.nuː/: inflection of سَنَا (sanā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَسْنُوَ (tasnuwa) /tas.nu.wa/: inflection of سَنَا (sanā):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasnū", "sanā", "tasnuwa"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "سنيتن",
-        "u": "سنيتن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "سُنِيتُنَّ • (sunītunna) (form I) /su.niː.tun.na/\n# second-person feminine plural past passive of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sunītunna", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "يسنو",
-        "u": "يسنو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يسنو (form I)\n# يَسْنُو (yasnū) /jas.nuː/: third-person masculine singular non-past active indicative of سَنَا (sanā)\n# يَسْنُوَ (yasnuwa) /jas.nu.wa/: third-person masculine singular non-past active subjunctive of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasnū", "sanā", "yasnuwa"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "تسنوان",
-        "u": "تسنوان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَسْنُوَانِ • (tasnuwāni) (form I) /tas.nu.waː.ni/\n# inflection of سَنَا (sanā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasnuwāni", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "اسني",
-        "u": "اسني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُسْنِي • (usnī) (form I) /us.niː/\n# second-person feminine singular imperative of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["usnī", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "نسنو",
-        "u": "نسنو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نسنو (form I)\n# نَسْنُو (nasnū) /nas.nuː/: first-person plural non-past active indicative of سَنَا (sanā)\n# نَسْنُوَ (nasnuwa) /nas.nu.wa/: first-person plural non-past active subjunctive of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nasnū", "sanā", "nasnuwa"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "اسنوا",
-        "u": "اسنوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اسنوا (form I)\n# اُسْنُوَا (usnuwā) /us.nu.waː/: second-person dual imperative of سَنَا (sanā)\n# اُسْنُوا (usnū) /us.nuː/: second-person masculine plural imperative of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["usnuwā", "sanā", "usnū"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "يسنوان",
-        "u": "يسنوان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَسْنُوَانِ • (yasnuwāni) (form I) /jas.nu.waː.ni/\n# third-person masculine dual non-past active indicative of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasnuwāni", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "اسنون",
-        "u": "اسنون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُسْنُونَ • (usnūna) (form I) /us.nuː.na/\n# second-person feminine plural imperative of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["usnūna", "sanā"],
-        "k": "سنا",
-        "yol": "kök"
-      },
-      {
-        "w": "أسنو",
-        "u": "أسنو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أسنو (form I)\n# أَسْنُو (ʔasnū) /ʔas.nuː/: first-person singular non-past active indicative of سَنَا (sanā)\n# أَسْنُوَ (ʔasnuwa) /ʔas.nu.wa/: first-person singular non-past active subjunctive of سَنَا (sanā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔasnū", "sanā", "ʔasnuwa"],
-        "k": "سنا",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "سن",
+  "ses": {
     "harf": "س",
+    "fasil": "سن",
     "mahrec": "esaliyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "سنت",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "سَنَتْ • (sanat) (form I) /sa.nat/\n# third-person feminine singular past active of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sanat", "sanā"]
+    },
+    {
+      "madde": "أسن",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "أسن (form I)\n# أَسْنُ (ʔasnu) /ʔas.nu/: first-person singular non-past active jussive of سَنَا (sanā)\n# أُسْنَ (ʔusna) /ʔus.na/: first-person singular non-past passive jussive of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔasnu", "sanā", "ʔusna"]
+    },
+    {
+      "madde": "سنون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "سَنَوْنَ • (sanawna) (form I) /sa.naw.na/\n# third-person feminine plural past active of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sanawna", "sanā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسن",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يسن (form I)\n# يَسْنُ (yasnu) /jas.nu/: third-person masculine singular non-past active jussive of سَنَا (sanā)\n# يُسْنَ (yusna) /jus.na/: third-person masculine singular non-past passive jussive of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasnu", "sanā", "yusna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسنين",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "تسنين (form I)\n# تَسْنِينَ (tasnīna) /tas.niː.na/: second-person feminine singular non-past active indicative of سَنَا (sanā)\n# تُسْنَيْنَ (tusnayna) /tus.naj.na/: inflection of سَنَا (sanā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasnīna", "sanā", "tusnayna"]
+    },
+    {
+      "madde": "سني",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "سُنِيَ • (suniya) (form I) /su.ni.ja/\n# third-person masculine singular past passive of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["suniya", "sanā"]
+    },
+    {
+      "madde": "تسن",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تسن (form I)\n# تَسْنُ (tasnu) /tas.nu/: inflection of سَنَا (sanā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُسْنَ (tusna) /tus.na/: inflection of سَنَا (sanā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasnu", "sanā", "tusna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسني",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تسني (form I)\n# تَسْنِي (tasnī) /tas.niː/: second-person feminine singular non-past active subjunctive/jussive of سَنَا (sanā)\n# تُسْنَيْ (tusnay) /tus.naj/: second-person feminine singular non-past passive subjunctive/jussive of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasnī", "sanā", "tusnay"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نسن",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "نسن (form I)\n# نَسْنُ (nasnu) /nas.nu/: first-person plural non-past active jussive of سَنَا (sanā)\n# نُسْنَ (nusna) /nus.na/: first-person plural non-past passive jussive of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nasnu", "sanā", "nusna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسنون",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تسنون (form I)\n# تَسْنُونَ (tasnūna) /tas.nuː.na/: inflection of سَنَا (sanā):\n## second-person masculine/feminine plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُسْنَوْنَ (tusnawna) /tus.naw.na/: second-person masculine plural non-past passive indicative of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasnūna", "sanā", "tusnawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسنوا",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تسنوا (form I)\n# تَسْنُوَا (tasnuwā) /tas.nu.waː/: inflection of سَنَا (sanā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تَسْنُوا (tasnū) /tas.nuː/: second-person masculine plural non-past active subjunctive/jussive of سَنَا (sanā)\n# تُسْنَوْا (tusnaw) /tus.naw/: second-person masculine plural non-past passive subj",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasnuwā", "sanā", "tasnū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسنون",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يسنون (form I)\n# يَسْنُونَ (yasnūna) /jas.nuː.na/: inflection of سَنَا (sanā):\n## third-person masculine/feminine plural non-past active indicative\n## third-person feminine plural non-past active subjunctive/jussive\n# يُسْنَوْنَ (yusnawna) /jus.naw.na/: third-person masculine plural non-past passive indicative of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasnūna", "sanā", "yusnawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسنوا",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يسنوا (form I)\n# يَسْنُوَا (yasnuwā) /jas.nu.waː/: third-person masculine dual non-past active subjunctive/jussive of سَنَا (sanā)\n# يَسْنُوا (yasnū) /jas.nuː/: third-person masculine plural non-past active subjunctive/jussive of سَنَا (sanā)\n# يُسْنَوْا (yusnaw) /jus.naw/: third-person masculine plural non-past passive subjunctive/jussive of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasnuwā", "sanā", "yasnū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سنوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "سنوا (form I)\n# سَنَوَا (sanawā) /sa.na.waː/: third-person masculine dual past active of سَنَا (sanā)\n# سَنَوْا (sanaw) /sa.naw/: third-person masculine plural past active of سَنَا (sanā)\n# سُنُوا (sunū) /su.nuː/: third-person masculine plural past passive of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sanawā", "sanā", "sanaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسنى",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أُسْنَى • (ʔusnā) (form I) /ʔus.naː/\n# first-person singular non-past passive indicative/subjunctive of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔusnā", "sanā"]
+    },
+    {
+      "madde": "تسنى",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُسْنَى • (tusnā) (form I) /tus.naː/\n# inflection of سَنَا (sanā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tusnā", "sanā"]
+    },
+    {
+      "madde": "سنوت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "سنوت (form I)\n# سَنَوْتُ (sanawtu) /sa.naw.tu/: first-person singular past active of سَنَا (sanā)\n# سَنَوْتَ (sanawta) /sa.naw.ta/: second-person masculine singular past active of سَنَا (sanā)\n# سَنَوْتِ (sanawti) /sa.naw.ti/: second-person feminine singular past active of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss", "rare"],
+      "okunus": ["sanawtu", "sanā", "sanawta"]
+    },
+    {
+      "madde": "اسن",
+      "tur": "verb",
+      "baslik": "اُسْنُ • (usnu) (form I) /us.nu/\n# second-person masculine singular imperative of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["usnu", "sanā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سنين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "سُنِينَ • (sunīna) (form I) /su.niː.na/\n# third-person feminine plural past passive of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sunīna", "sanā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسنى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُسْنَى • (yusnā) (form I) /jus.naː/\n# third-person masculine singular non-past passive indicative/subjunctive of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yusnā", "sanā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسنيان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُسْنَيَانِ • (tusnayāni) (form I) /tus.na.jaː.ni/\n# inflection of سَنَا (sanā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tusnayāni", "sanā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسنيان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُسْنَيَانِ • (yusnayāni) (form I) /jus.na.jaː.ni/\n# third-person masculine dual non-past passive indicative of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yusnayāni", "sanā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسنين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُسْنَيْنَ • (yusnayna) (form I) /jus.naj.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yusnayna", "sanā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نسنى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نُسْنَى • (nusnā) (form I) /nus.naː/\n# first-person plural non-past passive indicative/subjunctive of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nusnā", "sanā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسنيا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُسْنَيَا • (tusnayā) (form I) /tus.na.jaː/\n# inflection of سَنَا (sanā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tusnayā", "sanā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسنيا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُسْنَيَا • (yusnayā) (form I) /jus.na.jaː/\n# third-person masculine dual non-past passive subjunctive/jussive of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yusnayā", "sanā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سنونا",
+      "tur": "verb",
+      "baslik": "سَنَوْنَا • (sanawnā) (form I) /sa.naw.naː/\n# first-person plural past active of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sanawnā", "sanā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سنتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "سَنَتَا • (sanatā) (form I) /sa.na.taː/\n# third-person feminine dual past active of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sanatā", "sanā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سنوتما",
+      "tur": "verb",
+      "baslik": "سَنَوْتُمَا • (sanawtumā) (form I) /sa.naw.tu.maː/\n# second-person dual past active of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sanawtumā", "sanā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سنوتم",
+      "tur": "verb",
+      "baslik": "سَنَوْتُمْ • (sanawtum) (form I) /sa.naw.tum/\n# second-person masculine plural past active of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sanawtum", "sanā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سنوتن",
+      "tur": "verb",
+      "baslik": "سَنَوْتُنَّ • (sanawtunna) (form I) /sa.naw.tun.na/\n# second-person feminine plural past active of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sanawtunna", "sanā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سنيتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "سُنِيتُمَا • (sunītumā) (form I) /su.niː.tu.maː/\n# second-person dual past passive of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sunītumā", "sanā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سنيت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "سنيت (form I)\n# سُنِيتُ (sunītu) /su.niː.tu/: first-person singular past passive of سَنَا (sanā)\n# سُنِيتَ (sunīta) /su.niː.ta/: second-person masculine singular past passive of سَنَا (sanā)\n# سُنِيتِ (sunīti) /su.niː.ti/: second-person feminine singular past passive of سَنَا (sanā)\n# سُنِيَتْ (suniyat) /su.ni.jat/: third-person feminine singular past passive of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sunītu", "sanā", "sunīta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سنيتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "سُنِيَتَا • (suniyatā) (form I) /su.ni.ja.taː/\n# third-person feminine dual past passive of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["suniyatā", "sanā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سنيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "سُنِيَا • (suniyā) (form I) /su.ni.jaː/\n# third-person masculine dual past passive of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["suniyā", "sanā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سنيتم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "سُنِيتُمْ • (sunītum) (form I) /su.niː.tum/\n# second-person masculine plural past passive of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sunītum", "sanā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سنينا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "سُنِينَا • (sunīnā) (form I) /su.niː.naː/\n# first-person plural past passive of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sunīnā", "sanā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسنو",
+      "tur": "verb",
+      "baslik": "تسنو (form I)\n# تَسْنُو (tasnū) /tas.nuː/: inflection of سَنَا (sanā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَسْنُوَ (tasnuwa) /tas.nu.wa/: inflection of سَنَا (sanā):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasnū", "sanā", "tasnuwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سنيتن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "سُنِيتُنَّ • (sunītunna) (form I) /su.niː.tun.na/\n# second-person feminine plural past passive of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sunītunna", "sanā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسنو",
+      "tur": "verb",
+      "baslik": "يسنو (form I)\n# يَسْنُو (yasnū) /jas.nuː/: third-person masculine singular non-past active indicative of سَنَا (sanā)\n# يَسْنُوَ (yasnuwa) /jas.nu.wa/: third-person masculine singular non-past active subjunctive of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasnū", "sanā", "yasnuwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسنوان",
+      "tur": "verb",
+      "baslik": "تَسْنُوَانِ • (tasnuwāni) (form I) /tas.nu.waː.ni/\n# inflection of سَنَا (sanā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasnuwāni", "sanā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اسني",
+      "tur": "verb",
+      "baslik": "اُسْنِي • (usnī) (form I) /us.niː/\n# second-person feminine singular imperative of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["usnī", "sanā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نسنو",
+      "tur": "verb",
+      "baslik": "نسنو (form I)\n# نَسْنُو (nasnū) /nas.nuː/: first-person plural non-past active indicative of سَنَا (sanā)\n# نَسْنُوَ (nasnuwa) /nas.nu.wa/: first-person plural non-past active subjunctive of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nasnū", "sanā", "nasnuwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اسنوا",
+      "tur": "verb",
+      "baslik": "اسنوا (form I)\n# اُسْنُوَا (usnuwā) /us.nu.waː/: second-person dual imperative of سَنَا (sanā)\n# اُسْنُوا (usnū) /us.nuː/: second-person masculine plural imperative of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["usnuwā", "sanā", "usnū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسنوان",
+      "tur": "verb",
+      "baslik": "يَسْنُوَانِ • (yasnuwāni) (form I) /jas.nu.waː.ni/\n# third-person masculine dual non-past active indicative of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasnuwāni", "sanā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اسنون",
+      "tur": "verb",
+      "baslik": "اُسْنُونَ • (usnūna) (form I) /us.nuː.na/\n# second-person feminine plural imperative of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["usnūna", "sanā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسنو",
+      "tur": "verb",
+      "baslik": "أسنو (form I)\n# أَسْنُو (ʔasnū) /ʔas.nuː/: first-person singular non-past active indicative of سَنَا (sanā)\n# أَسْنُوَ (ʔasnuwa) /ʔas.nu.wa/: first-person singular non-past active subjunctive of سَنَا (sanā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔasnū", "sanā", "ʔasnuwa"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "سنا", "r7"]
+  ],
+  "mana": {
     "ince": "definite_quantity.n.01",
     "orta": "noun.quantity",
     "ust": "ölçü, mekân ve zaman",
@@ -625,22 +446,15 @@
     "dayanak_tanim": "a fractional monetary unit of several countries",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["unit_of_measurement.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["unit_of_measurement.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,458 +1,319 @@
 {
   "kok": "طاش",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "طاش", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "طشت",
-        "u": "طشت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طشت (form I)\n# طِشْتُ (ṭištu) /tˤiʃ.tu/: first-person singular past active of طَاشَ (ṭāša)\n# طِشْتَ (ṭišta) /tˤiʃ.ta/: second-person masculine singular past active of طَاشَ (ṭāša)\n# طِشْتِ (ṭišti) /tˤiʃ.ti/: second-person feminine singular past active of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭištu", "ṭāša", "ṭišta"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "طش",
-        "u": "طش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِشْ • (ṭiš) (form I) /tˤiʃ/\n# second-person masculine singular imperative of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭiš", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "طشتما",
-        "u": "طشتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِشْتُمَا • (ṭištumā) (form I) /tˤiʃ.tu.maː/\n# second-person dual past active of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭištumā", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "طاشا",
-        "u": "طاشا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَاشَا • (ṭāšā) (form I) /tˤaː.ʃaː/\n# third-person masculine dual past active of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭāšā", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "طاشت",
-        "u": "طاشت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَاشَتْ • (ṭāšat) (form I) /tˤaː.ʃat/\n# third-person feminine singular past active of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭāšat", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "طاشتا",
-        "u": "طاشتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَاشَتَا • (ṭāšatā) (form I) /tˤaː.ʃa.taː/\n# third-person feminine dual past active of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭāšatā", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "طشنا",
-        "u": "طشنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِشْنَا • (ṭišnā) (form I) /tˤiʃ.naː/\n# first-person plural past active of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭišnā", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "طشتم",
-        "u": "طشتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِشْتُمْ • (ṭištum) (form I) /tˤiʃ.tum/\n# second-person masculine plural past active of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭištum", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "طشتن",
-        "u": "طشتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِشْتُنَّ • (ṭištunna) (form I) /tˤiʃ.tun.na/\n# second-person feminine plural past active of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭištunna", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "طاشوا",
-        "u": "طاشوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَاشُوا • (ṭāšū) (form I) /tˤaː.ʃuː/\n# third-person masculine plural past active of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭāšū", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "أطيش",
-        "u": "أطيش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أطيش (form I)\n# أَطِيشُ (ʔaṭīšu) /ʔa.tˤiː.ʃu/: first-person singular non-past active indicative of طَاشَ (ṭāša)\n# أَطِيشَ (ʔaṭīša) /ʔa.tˤiː.ʃa/: first-person singular non-past active subjunctive of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaṭīšu", "ṭāša", "ʔaṭīša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "طشن",
-        "u": "طشن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِشْنَ • (ṭišna) (form I) /tˤiʃ.na/\n# inflection of طَاشَ (ṭāša):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭišna", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيشين",
-        "u": "تطيشين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَطِيشِينَ • (taṭīšīna) (form I) /ta.tˤiː.ʃiː.na/\n# second-person feminine singular non-past active indicative of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭīšīna", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "يطيشان",
-        "u": "يطيشان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَطِيشَانِ • (yaṭīšāni) (form I) /ja.tˤiː.ʃaː.ni/\n# third-person masculine dual non-past active indicative of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭīšāni", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيش",
-        "u": "تطيش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطيش (form I)\n# تَطِيشُ (taṭīšu) /ta.tˤiː.ʃu/: inflection of طَاشَ (ṭāša):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَطِيشَ (taṭīša) /ta.tˤiː.ʃa/: inflection of طَاشَ (ṭāša):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭīšu", "ṭāša", "taṭīša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "يطيش",
-        "u": "يطيش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطيش (form I)\n# يَطِيشُ (yaṭīšu) /ja.tˤiː.ʃu/: third-person masculine singular non-past active indicative of طَاشَ (ṭāša)\n# يَطِيشَ (yaṭīša) /ja.tˤiː.ʃa/: third-person masculine singular non-past active subjunctive of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭīšu", "ṭāša", "yaṭīša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "نطيش",
-        "u": "نطيش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نطيش (form I)\n# نَطِيشُ (naṭīšu) /na.tˤiː.ʃu/: first-person plural non-past active indicative of طَاشَ (ṭāša)\n# نَطِيشَ (naṭīša) /na.tˤiː.ʃa/: first-person plural non-past active subjunctive of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naṭīšu", "ṭāša", "naṭīša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيشون",
-        "u": "تطيشون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَطِيشُونَ • (taṭīšūna) (form I) /ta.tˤiː.ʃuː.na/\n# second-person masculine plural non-past active indicative of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭīšūna", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيشان",
-        "u": "تطيشان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَطِيشَانِ • (taṭīšāni) (form I) /ta.tˤiː.ʃaː.ni/\n# inflection of طَاشَ (ṭāša):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭīšāni", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "تطشن",
-        "u": "تطشن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَطِشْنَ • (taṭišna) (form I) /ta.tˤiʃ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭišna", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "يطشن",
-        "u": "يطشن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَطِشْنَ • (yaṭišna) (form I) /ja.tˤiʃ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭišna", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيشا",
-        "u": "تطيشا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَطِيشَا • (taṭīšā) (form I) /ta.tˤiː.ʃaː/\n# inflection of طَاشَ (ṭāša):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭīšā", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيشي",
-        "u": "تطيشي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَطِيشِي • (taṭīšī) (form I) /ta.tˤiː.ʃiː/\n# second-person feminine singular non-past active subjunctive/jussive of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭīšī", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "يطيشون",
-        "u": "يطيشون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَطِيشُونَ • (yaṭīšūna) (form I) /ja.tˤiː.ʃuː.na/\n# third-person masculine plural non-past active indicative of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭīšūna", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيشوا",
-        "u": "تطيشوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَطِيشُوا • (taṭīšū) (form I) /ta.tˤiː.ʃuː/\n# second-person masculine plural non-past active subjunctive/jussive of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭīšū", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "يطيشا",
-        "u": "يطيشا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَطِيشَا • (yaṭīšā) (form I) /ja.tˤiː.ʃaː/\n# third-person masculine dual non-past active subjunctive/jussive of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭīšā", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "أطش",
-        "u": "أطش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَطِشْ • (ʔaṭiš) (form I) /ʔa.tˤiʃ/\n# first-person singular non-past active jussive of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaṭiš", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "يطش",
-        "u": "يطش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَطِشْ • (yaṭiš) (form I) /ja.tˤiʃ/\n# third-person masculine singular non-past active jussive of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭiš", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "نطش",
-        "u": "نطش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَطِشْ • (naṭiš) (form I) /na.tˤiʃ/\n# first-person plural non-past active jussive of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naṭiš", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "تطش",
-        "u": "تطش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَطِشْ • (taṭiš) (form I) /ta.tˤiʃ/\n# inflection of طَاشَ (ṭāša):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭiš", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "يطيشوا",
-        "u": "يطيشوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَطِيشُوا • (yaṭīšū) (form I) /ja.tˤiː.ʃuː/\n# third-person masculine plural non-past active subjunctive/jussive of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭīšū", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "طيشي",
-        "u": "طيشي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِيشِي • (ṭīšī) (form I) /tˤiː.ʃiː/\n# second-person feminine singular imperative of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭīšī", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "طيشا",
-        "u": "طيشا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِيشَا • (ṭīšā) (form I) /tˤiː.ʃaː/\n# second-person dual imperative of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭīšā", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      },
-      {
-        "w": "طيشوا",
-        "u": "طيشوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِيشُوا • (ṭīšū) (form I) /tˤiː.ʃuː/\n# second-person masculine plural imperative of طَاشَ (ṭāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭīšū", "ṭāša"],
-        "k": "طاش",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "طش",
+  "ses": {
     "harf": "ط",
+    "fasil": "طش",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "طشت",
+      "tur": "verb",
+      "baslik": "طشت (form I)\n# طِشْتُ (ṭištu) /tˤiʃ.tu/: first-person singular past active of طَاشَ (ṭāša)\n# طِشْتَ (ṭišta) /tˤiʃ.ta/: second-person masculine singular past active of طَاشَ (ṭāša)\n# طِشْتِ (ṭišti) /tˤiʃ.ti/: second-person feminine singular past active of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭištu", "ṭāša", "ṭišta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طش",
+      "tur": "verb",
+      "baslik": "طِشْ • (ṭiš) (form I) /tˤiʃ/\n# second-person masculine singular imperative of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭiš", "ṭāša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طشتما",
+      "tur": "verb",
+      "baslik": "طِشْتُمَا • (ṭištumā) (form I) /tˤiʃ.tu.maː/\n# second-person dual past active of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭištumā", "ṭāša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طاشا",
+      "tur": "verb",
+      "baslik": "طَاشَا • (ṭāšā) (form I) /tˤaː.ʃaː/\n# third-person masculine dual past active of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭāšā", "ṭāša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طاشت",
+      "tur": "verb",
+      "baslik": "طَاشَتْ • (ṭāšat) (form I) /tˤaː.ʃat/\n# third-person feminine singular past active of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭāšat", "ṭāša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طاشتا",
+      "tur": "verb",
+      "baslik": "طَاشَتَا • (ṭāšatā) (form I) /tˤaː.ʃa.taː/\n# third-person feminine dual past active of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭāšatā", "ṭāša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طشنا",
+      "tur": "verb",
+      "baslik": "طِشْنَا • (ṭišnā) (form I) /tˤiʃ.naː/\n# first-person plural past active of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭišnā", "ṭāša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طشتم",
+      "tur": "verb",
+      "baslik": "طِشْتُمْ • (ṭištum) (form I) /tˤiʃ.tum/\n# second-person masculine plural past active of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭištum", "ṭāša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طشتن",
+      "tur": "verb",
+      "baslik": "طِشْتُنَّ • (ṭištunna) (form I) /tˤiʃ.tun.na/\n# second-person feminine plural past active of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭištunna", "ṭāša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طاشوا",
+      "tur": "verb",
+      "baslik": "طَاشُوا • (ṭāšū) (form I) /tˤaː.ʃuː/\n# third-person masculine plural past active of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭāšū", "ṭāša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أطيش",
+      "tur": "verb",
+      "baslik": "أطيش (form I)\n# أَطِيشُ (ʔaṭīšu) /ʔa.tˤiː.ʃu/: first-person singular non-past active indicative of طَاشَ (ṭāša)\n# أَطِيشَ (ʔaṭīša) /ʔa.tˤiː.ʃa/: first-person singular non-past active subjunctive of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaṭīšu", "ṭāša", "ʔaṭīša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طشن",
+      "tur": "verb",
+      "baslik": "طِشْنَ • (ṭišna) (form I) /tˤiʃ.na/\n# inflection of طَاشَ (ṭāša):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭišna", "ṭāša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطيشين",
+      "tur": "verb",
+      "baslik": "تَطِيشِينَ • (taṭīšīna) (form I) /ta.tˤiː.ʃiː.na/\n# second-person feminine singular non-past active indicative of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭīšīna", "ṭāša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطيشان",
+      "tur": "verb",
+      "baslik": "يَطِيشَانِ • (yaṭīšāni) (form I) /ja.tˤiː.ʃaː.ni/\n# third-person masculine dual non-past active indicative of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭīšāni", "ṭāša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطيش",
+      "tur": "verb",
+      "baslik": "تطيش (form I)\n# تَطِيشُ (taṭīšu) /ta.tˤiː.ʃu/: inflection of طَاشَ (ṭāša):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَطِيشَ (taṭīša) /ta.tˤiː.ʃa/: inflection of طَاشَ (ṭāša):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭīšu", "ṭāša", "taṭīša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطيش",
+      "tur": "verb",
+      "baslik": "يطيش (form I)\n# يَطِيشُ (yaṭīšu) /ja.tˤiː.ʃu/: third-person masculine singular non-past active indicative of طَاشَ (ṭāša)\n# يَطِيشَ (yaṭīša) /ja.tˤiː.ʃa/: third-person masculine singular non-past active subjunctive of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭīšu", "ṭāša", "yaṭīša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نطيش",
+      "tur": "verb",
+      "baslik": "نطيش (form I)\n# نَطِيشُ (naṭīšu) /na.tˤiː.ʃu/: first-person plural non-past active indicative of طَاشَ (ṭāša)\n# نَطِيشَ (naṭīša) /na.tˤiː.ʃa/: first-person plural non-past active subjunctive of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naṭīšu", "ṭāša", "naṭīša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطيشون",
+      "tur": "verb",
+      "baslik": "تَطِيشُونَ • (taṭīšūna) (form I) /ta.tˤiː.ʃuː.na/\n# second-person masculine plural non-past active indicative of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭīšūna", "ṭāša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطيشان",
+      "tur": "verb",
+      "baslik": "تَطِيشَانِ • (taṭīšāni) (form I) /ta.tˤiː.ʃaː.ni/\n# inflection of طَاشَ (ṭāša):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭīšāni", "ṭāša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطشن",
+      "tur": "verb",
+      "baslik": "تَطِشْنَ • (taṭišna) (form I) /ta.tˤiʃ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭišna", "ṭāša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطشن",
+      "tur": "verb",
+      "baslik": "يَطِشْنَ • (yaṭišna) (form I) /ja.tˤiʃ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭišna", "ṭāša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطيشا",
+      "tur": "verb",
+      "baslik": "تَطِيشَا • (taṭīšā) (form I) /ta.tˤiː.ʃaː/\n# inflection of طَاشَ (ṭāša):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭīšā", "ṭāša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطيشي",
+      "tur": "verb",
+      "baslik": "تَطِيشِي • (taṭīšī) (form I) /ta.tˤiː.ʃiː/\n# second-person feminine singular non-past active subjunctive/jussive of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭīšī", "ṭāša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطيشون",
+      "tur": "verb",
+      "baslik": "يَطِيشُونَ • (yaṭīšūna) (form I) /ja.tˤiː.ʃuː.na/\n# third-person masculine plural non-past active indicative of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭīšūna", "ṭāša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطيشوا",
+      "tur": "verb",
+      "baslik": "تَطِيشُوا • (taṭīšū) (form I) /ta.tˤiː.ʃuː/\n# second-person masculine plural non-past active subjunctive/jussive of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭīšū", "ṭāša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطيشا",
+      "tur": "verb",
+      "baslik": "يَطِيشَا • (yaṭīšā) (form I) /ja.tˤiː.ʃaː/\n# third-person masculine dual non-past active subjunctive/jussive of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭīšā", "ṭāša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أطش",
+      "tur": "verb",
+      "baslik": "أَطِشْ • (ʔaṭiš) (form I) /ʔa.tˤiʃ/\n# first-person singular non-past active jussive of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaṭiš", "ṭāša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطش",
+      "tur": "verb",
+      "baslik": "يَطِشْ • (yaṭiš) (form I) /ja.tˤiʃ/\n# third-person masculine singular non-past active jussive of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭiš", "ṭāša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نطش",
+      "tur": "verb",
+      "baslik": "نَطِشْ • (naṭiš) (form I) /na.tˤiʃ/\n# first-person plural non-past active jussive of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naṭiš", "ṭāša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطش",
+      "tur": "verb",
+      "baslik": "تَطِشْ • (taṭiš) (form I) /ta.tˤiʃ/\n# inflection of طَاشَ (ṭāša):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭiš", "ṭāša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطيشوا",
+      "tur": "verb",
+      "baslik": "يَطِيشُوا • (yaṭīšū) (form I) /ja.tˤiː.ʃuː/\n# third-person masculine plural non-past active subjunctive/jussive of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭīšū", "ṭāša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طيشي",
+      "tur": "verb",
+      "baslik": "طِيشِي • (ṭīšī) (form I) /tˤiː.ʃiː/\n# second-person feminine singular imperative of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭīšī", "ṭāša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طيشا",
+      "tur": "verb",
+      "baslik": "طِيشَا • (ṭīšā) (form I) /tˤiː.ʃaː/\n# second-person dual imperative of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭīšā", "ṭāša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طيشوا",
+      "tur": "verb",
+      "baslik": "طِيشُوا • (ṭīšū) (form I) /tˤiː.ʃuː/\n# second-person masculine plural imperative of طَاشَ (ṭāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭīšū", "ṭāša"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "طاش", "r7"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,717 +1,519 @@
 {
   "kok": "شاب",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "شاب", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "شب",
-        "u": "شب",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "شب (form I)\n# شِبْ (šib) /ʃib/: second-person masculine singular imperative of شَابَ (šāba)\n# شُبْ (šub) /ʃub/: second-person masculine singular imperative of شَابَ (šāba)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šib", "šāba", "šub"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "شبت",
-        "u": "شبت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "شبت (form I)\n# شِبْتُ (šibtu) /ʃib.tu/: first-person singular past active/passive of شَابَ (šāba)\n# شِبْتَ (šibta) /ʃib.ta/: second-person masculine singular past active/passive of شَابَ (šāba)\n# شِبْتِ (šibti) /ʃib.ti/: second-person feminine singular past active/passive of شَابَ (šāba)\n# شُبْتُ (šubtu) /ʃub.tu/: first-person singular past active of شَابَ (šāba)\n# شُبْتَ (šubta) /ʃub.ta/: second-",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šibtu", "šāba", "šibta"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يشب",
-        "u": "يشب",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يشب (form I)\n# يَشِبْ (yašib) /ja.ʃib/: third-person masculine singular non-past active jussive of شَابَ (šāba)\n# يَشُبْ (yašub) /ja.ʃub/: third-person masculine singular non-past active jussive of شَابَ (šāba)\n# يُشَبْ (yušab) /ju.ʃab/: third-person masculine singular non-past passive jussive of شَابَ (šāba)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašib", "šāba", "yašub"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "أشيب",
-        "u": "أشيب",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أشيب (form I)\n# أَشِيبُ (ʔašību) /ʔa.ʃiː.bu/: first-person singular non-past active indicative of شَابَ (šāba)\n# أَشِيبَ (ʔašība) /ʔa.ʃiː.ba/: first-person singular non-past active subjunctive of شَابَ (šāba)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔašību", "šāba", "ʔašība"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "أشب",
-        "u": "أشب",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أشب (form I)\n# أَشِبْ (ʔašib) /ʔa.ʃib/: first-person singular non-past active jussive of شَابَ (šāba)\n# أَشُبْ (ʔašub) /ʔa.ʃub/: first-person singular non-past active jussive of شَابَ (šāba)\n# أُشَبْ (ʔušab) /ʔu.ʃab/: first-person singular non-past passive jussive of شَابَ (šāba)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔašib", "šāba", "ʔašub"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "نشب",
-        "u": "نشب",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "نشب (form I)\n# نَشِبْ (našib) /na.ʃib/: first-person plural non-past active jussive of شَابَ (šāba)\n# نَشُبْ (našub) /na.ʃub/: first-person plural non-past active jussive of شَابَ (šāba)\n# نُشَبْ (nušab) /nu.ʃab/: first-person plural non-past passive jussive of شَابَ (šāba)",
-        "tag": ["Yemen", "form-i", "no-gloss"],
-        "r": ["našib", "šāba", "našub"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "نشب",
-        "u": "نشب",
-        "p": "verb",
-        "n": "5.1",
-        "h": "ar-verb form",
-        "e": "نشب (form I)\n# نَشِبْ (našib) /na.ʃib/: first-person plural non-past active jussive of شَابَ (šāba)\n# نَشُبْ (našub) /na.ʃub/: first-person plural non-past active jussive of شَابَ (šāba)\n# نُشَبْ (nušab) /nu.ʃab/: first-person plural non-past passive jussive of شَابَ (šāba)",
-        "tag": ["Yemen", "form-i", "no-gloss"],
-        "r": ["našib", "šāba", "našub"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "نشبة",
-        "u": "نشبة",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "نُشْبَة or نِشْبَة or نَشْبَة • (nušba or nišba or našba) f",
-        "t": "Borrowed from Aramaic נשבא / ܢܫܒܐ (nešbā, “snare”).",
-        "s": [
-          ["bor+", "Borrowed from Aramaic נשבא"]
-        ],
-        "g": [
-          "snare",
-          "whammy, calamity, accroachment, trepan",
-          "something attached or stuck",
-          "someone who clings to a matter without being able to let it go",
-          "verbal noun of نَشِبَ (našiba, “to stick or get stuck”) (form I)",
-          "wolf"
-        ],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["نَشِبَ"],
-        "r": ["nušba", "nišba", "našba"],
-        "el": [
-          ["נשבא", "נשבא#Aramaic"],
-          ["ܢܫܒܐ", "ܢܫܒܐ#Classical_Syriac"]
-        ],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "تشيب",
-        "u": "تشيب",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تشيب (form I)\n# تَشِيبُ (tašību) /ta.ʃiː.bu/: inflection of شَابَ (šāba):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَشِيبَ (tašība) /ta.ʃiː.ba/: inflection of شَابَ (šāba):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašību", "šāba", "tašība"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يشيب",
-        "u": "يشيب",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يشيب (form I)\n# يَشِيبُ (yašību) /ja.ʃiː.bu/: third-person masculine singular non-past active indicative of شَابَ (šāba)\n# يَشِيبَ (yašība) /ja.ʃiː.ba/: third-person masculine singular non-past active subjunctive of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašību", "šāba", "yašība"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تشيبين",
-        "u": "تشيبين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَشِيبِينَ • (tašībīna) (form I) /ta.ʃiː.biː.na/\n# second-person feminine singular non-past active indicative of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašībīna", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تشيبان",
-        "u": "تشيبان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَشِيبَانِ • (tašībāni) (form I) /ta.ʃiː.baː.ni/\n# inflection of شَابَ (šāba):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašībāni", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تشيبون",
-        "u": "تشيبون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَشِيبُونَ • (tašībūna) (form I) /ta.ʃiː.buː.na/\n# second-person masculine plural non-past active indicative of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašībūna", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "نشيب",
-        "u": "نشيب",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نشيب (form I)\n# نَشِيبُ (našību) /na.ʃiː.bu/: first-person plural non-past active indicative of شَابَ (šāba)\n# نَشِيبَ (našība) /na.ʃiː.ba/: first-person plural non-past active subjunctive of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["našību", "šāba", "našība"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يشبن",
-        "u": "يشبن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يشبن (form I)\n# يَشِبْنَ (yašibna) /ja.ʃib.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of شَابَ (šāba)\n# يَشُبْنَ (yašubna) /ja.ʃub.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of شَابَ (šāba)\n# يُشَبْنَ (yušabna) /ju.ʃab.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašibna", "šāba", "yašubna"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يشيبون",
-        "u": "يشيبون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَشِيبُونَ • (yašībūna) (form I) /ja.ʃiː.buː.na/\n# third-person masculine plural non-past active indicative of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašībūna", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تشبن",
-        "u": "تشبن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تشبن (form I)\n# تَشِبْنَ (tašibna) /ta.ʃib.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of شَابَ (šāba)\n# تَشُبْنَ (tašubna) /ta.ʃub.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of شَابَ (šāba)\n# تُشَبْنَ (tušabna) /tu.ʃab.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašibna", "šāba", "tašubna"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يشيبان",
-        "u": "يشيبان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَشِيبَانِ • (yašībāni) (form I) /ja.ʃiː.baː.ni/\n# third-person masculine dual non-past active indicative of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašībāni", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تشيبي",
-        "u": "تشيبي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَشِيبِي • (tašībī) (form I) /ta.ʃiː.biː/\n# second-person feminine singular non-past active subjunctive/jussive of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašībī", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يشيبا",
-        "u": "يشيبا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَشِيبَا • (yašībā) (form I) /ja.ʃiː.baː/\n# third-person masculine dual non-past active subjunctive/jussive of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašībā", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تشيبوا",
-        "u": "تشيبوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَشِيبُوا • (tašībū) (form I) /ta.ʃiː.buː/\n# second-person masculine plural non-past active subjunctive/jussive of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašībū", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تشيبا",
-        "u": "تشيبا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَشِيبَا • (tašībā) (form I) /ta.ʃiː.baː/\n# inflection of شَابَ (šāba):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašībā", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يشيبوا",
-        "u": "يشيبوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَشِيبُوا • (yašībū) (form I) /ja.ʃiː.buː/\n# third-person masculine plural non-past active subjunctive/jussive of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašībū", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تشب",
-        "u": "تشب",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تشب (form I)\n# تَشِبْ (tašib) /ta.ʃib/: inflection of شَابَ (šāba):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تَشُبْ (tašub) /ta.ʃub/: inflection of شَابَ (šāba):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُشَبْ (tušab) /tu.ʃab/: inflection of ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašib", "šāba", "tašub"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "شابت",
-        "u": "شابت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "شَابَتْ • (šābat) (form I) /ʃaː.bat/\n# third-person feminine singular past active of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šābat", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "شبتما",
-        "u": "شبتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "شبتما (form I)\n# شِبْتُمَا (šibtumā) /ʃib.tu.maː/: second-person dual past active/passive of شَابَ (šāba)\n# شُبْتُمَا (šubtumā) /ʃub.tu.maː/: second-person dual past active of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šibtumā", "šāba", "šubtumā"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "شابا",
-        "u": "شابا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "شَابَا • (šābā) (form I) /ʃaː.baː/\n# third-person masculine dual past active of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šābā", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "شابتا",
-        "u": "شابتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "شَابَتَا • (šābatā) (form I) /ʃaː.ba.taː/\n# third-person feminine dual past active of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šābatā", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "شبتم",
-        "u": "شبتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "شبتم (form I)\n# شِبْتُمْ (šibtum) /ʃib.tum/: second-person masculine plural past active/passive of شَابَ (šāba)\n# شُبْتُمْ (šubtum) /ʃub.tum/: second-person masculine plural past active of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šibtum", "šāba", "šubtum"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "شبنا",
-        "u": "شبنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "شبنا (form I)\n# شِبْنَا (šibnā) /ʃib.naː/: first-person plural past active/passive of شَابَ (šāba)\n# شُبْنَا (šubnā) /ʃub.naː/: first-person plural past active of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šibnā", "šāba", "šubnā"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "شيبا",
-        "u": "شيبا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "شِيبَا • (šībā) (form I) /ʃiː.baː/\n# inflection of شَابَ (šāba):\n## second-person dual imperative\n## third-person masculine dual past passive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šībā", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "شبن",
-        "u": "شبن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "شبن (form I)\n# شِبْنَ (šibna) /ʃib.na/: inflection of شَابَ (šāba):\n## third-person feminine plural past active/passive\n## second-person feminine plural imperative\n# شُبْنَ (šubna) /ʃub.na/: inflection of شَابَ (šāba):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šibna", "šāba", "šubna"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "شبتن",
-        "u": "شبتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "شبتن (form I)\n# شِبْتُنَّ (šibtunna) /ʃib.tun.na/: second-person feminine plural past active/passive of شَابَ (šāba)\n# شُبْتُنَّ (šubtunna) /ʃub.tun.na/: second-person feminine plural past active of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šibtunna", "šāba", "šubtunna"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "شيبوا",
-        "u": "شيبوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "شِيبُوا • (šībū) (form I) /ʃiː.buː/\n# inflection of شَابَ (šāba):\n## second-person masculine plural imperative\n## third-person masculine plural past passive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šībū", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "شيبي",
-        "u": "شيبي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "شِيبِي • (šībī) (form I) /ʃiː.biː/\n# second-person feminine singular imperative of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šībī", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "شابوا",
-        "u": "شابوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "شَابُوا • (šābū) (form I) /ʃaː.buː/\n# third-person masculine plural past active of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šābū", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تشوبين",
-        "u": "تشوبين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَشُوبِينَ • (tašūbīna) (form I) /ta.ʃuː.biː.na/\n# second-person feminine singular non-past active indicative of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašūbīna", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تشوب",
-        "u": "تشوب",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تشوب (form I)\n# تَشُوبُ (tašūbu) /ta.ʃuː.bu/: inflection of شَابَ (šāba):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَشُوبَ (tašūba) /ta.ʃuː.ba/: inflection of شَابَ (šāba):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašūbu", "šāba", "tašūba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "أشوب",
-        "u": "أشوب",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أشوب (form I)\n# أَشُوبُ (ʔašūbu) /ʔa.ʃuː.bu/: first-person singular non-past active indicative of شَابَ (šāba)\n# أَشُوبَ (ʔašūba) /ʔa.ʃuː.ba/: first-person singular non-past active subjunctive of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔašūbu", "šāba", "ʔašūba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يشوب",
-        "u": "يشوب",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يشوب (form I)\n# يَشُوبُ (yašūbu) /ja.ʃuː.bu/: third-person masculine singular non-past active indicative of شَابَ (šāba)\n# يَشُوبَ (yašūba) /ja.ʃuː.ba/: third-person masculine singular non-past active subjunctive of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašūbu", "šāba", "yašūba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يشوبان",
-        "u": "يشوبان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَشُوبَانِ • (yašūbāni) (form I) /ja.ʃuː.baː.ni/\n# third-person masculine dual non-past active indicative of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašūbāni", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "نشوب",
-        "u": "نشوب",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نشوب (form I)\n# نَشُوبُ (našūbu) /na.ʃuː.bu/: first-person plural non-past active indicative of شَابَ (šāba)\n# نَشُوبَ (našūba) /na.ʃuː.ba/: first-person plural non-past active subjunctive of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["našūbu", "šāba", "našūba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تشوبان",
-        "u": "تشوبان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَشُوبَانِ • (tašūbāni) (form I) /ta.ʃuː.baː.ni/\n# inflection of شَابَ (šāba):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašūbāni", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تشوبون",
-        "u": "تشوبون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَشُوبُونَ • (tašūbūna) (form I) /ta.ʃuː.buː.na/\n# second-person masculine plural non-past active indicative of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašūbūna", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يشوبون",
-        "u": "يشوبون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَشُوبُونَ • (yašūbūna) (form I) /ja.ʃuː.buː.na/\n# third-person masculine plural non-past active indicative of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašūbūna", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تشوبي",
-        "u": "تشوبي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَشُوبِي • (tašūbī) (form I) /ta.ʃuː.biː/\n# second-person feminine singular non-past active subjunctive/jussive of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašūbī", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تشوبا",
-        "u": "تشوبا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَشُوبَا • (tašūbā) (form I) /ta.ʃuː.baː/\n# inflection of شَابَ (šāba):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašūbā", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تشوبوا",
-        "u": "تشوبوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَشُوبُوا • (tašūbū) (form I) /ta.ʃuː.buː/\n# second-person masculine plural non-past active subjunctive/jussive of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašūbū", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "شوبي",
-        "u": "شوبي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "شُوبِي • (šūbī) (form I) /ʃuː.biː/\n# second-person feminine singular imperative of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šūbī", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يشوبا",
-        "u": "يشوبا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَشُوبَا • (yašūbā) (form I) /ja.ʃuː.baː/\n# third-person masculine dual non-past active subjunctive/jussive of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašūbā", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يشوبوا",
-        "u": "يشوبوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَشُوبُوا • (yašūbū) (form I) /ja.ʃuː.buː/\n# third-person masculine plural non-past active subjunctive/jussive of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašūbū", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "شوبوا",
-        "u": "شوبوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "شُوبُوا • (šūbū) (form I) /ʃuː.buː/\n# second-person masculine plural imperative of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šūbū", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      },
-      {
-        "w": "شوبا",
-        "u": "شوبا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "شُوبَا • (šūbā) (form I) /ʃuː.baː/\n# second-person dual imperative of شَابَ (šāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šūbā", "šāba"],
-        "k": "شاب",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "شب",
+  "ses": {
     "harf": "ش",
+    "fasil": "شب",
     "mahrec": "şeceriyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "شب",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "شب (form I)\n# شِبْ (šib) /ʃib/: second-person masculine singular imperative of شَابَ (šāba)\n# شُبْ (šub) /ʃub/: second-person masculine singular imperative of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šib", "šāba", "šub"]
+    },
+    {
+      "madde": "شبت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "شبت (form I)\n# شِبْتُ (šibtu) /ʃib.tu/: first-person singular past active/passive of شَابَ (šāba)\n# شِبْتَ (šibta) /ʃib.ta/: second-person masculine singular past active/passive of شَابَ (šāba)\n# شِبْتِ (šibti) /ʃib.ti/: second-person feminine singular past active/passive of شَابَ (šāba)\n# شُبْتُ (šubtu) /ʃub.tu/: first-person singular past active of شَابَ (šāba)\n# شُبْتَ (šubta) /ʃub.ta/: second-",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šibtu", "šāba", "šibta"]
+    },
+    {
+      "madde": "يشب",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يشب (form I)\n# يَشِبْ (yašib) /ja.ʃib/: third-person masculine singular non-past active jussive of شَابَ (šāba)\n# يَشُبْ (yašub) /ja.ʃub/: third-person masculine singular non-past active jussive of شَابَ (šāba)\n# يُشَبْ (yušab) /ju.ʃab/: third-person masculine singular non-past passive jussive of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašib", "šāba", "yašub"]
+    },
+    {
+      "madde": "أشيب",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أشيب (form I)\n# أَشِيبُ (ʔašību) /ʔa.ʃiː.bu/: first-person singular non-past active indicative of شَابَ (šāba)\n# أَشِيبَ (ʔašība) /ʔa.ʃiː.ba/: first-person singular non-past active subjunctive of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔašību", "šāba", "ʔašība"]
+    },
+    {
+      "madde": "أشب",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أشب (form I)\n# أَشِبْ (ʔašib) /ʔa.ʃib/: first-person singular non-past active jussive of شَابَ (šāba)\n# أَشُبْ (ʔašub) /ʔa.ʃub/: first-person singular non-past active jussive of شَابَ (šāba)\n# أُشَبْ (ʔušab) /ʔu.ʃab/: first-person singular non-past passive jussive of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔašib", "šāba", "ʔašub"]
+    },
+    {
+      "madde": "نشب",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "نشب (form I)\n# نَشِبْ (našib) /na.ʃib/: first-person plural non-past active jussive of شَابَ (šāba)\n# نَشُبْ (našub) /na.ʃub/: first-person plural non-past active jussive of شَابَ (šāba)\n# نُشَبْ (nušab) /nu.ʃab/: first-person plural non-past passive jussive of شَابَ (šāba)",
+      "etiket": ["Yemen", "form-i", "no-gloss"],
+      "okunus": ["našib", "šāba", "našub"]
+    },
+    {
+      "madde": "نشب",
+      "tur": "verb",
+      "etim_no": "5.1",
+      "baslik": "نشب (form I)\n# نَشِبْ (našib) /na.ʃib/: first-person plural non-past active jussive of شَابَ (šāba)\n# نَشُبْ (našub) /na.ʃub/: first-person plural non-past active jussive of شَابَ (šāba)\n# نُشَبْ (nušab) /nu.ʃab/: first-person plural non-past passive jussive of شَابَ (šāba)",
+      "etiket": ["Yemen", "form-i", "no-gloss"],
+      "okunus": ["našib", "šāba", "našub"]
+    },
+    {
+      "madde": "نشبة",
+      "tur": "noun",
+      "baslik": "نُشْبَة or نِشْبَة or نَشْبَة • (nušba or nišba or našba) f",
+      "etim_sablon": [
+        ["bor+", "Borrowed from Aramaic נשבא"]
+      ],
+      "anlam": [
+        "snare",
+        "whammy, calamity, accroachment, trepan",
+        "something attached or stuck",
+        "someone who clings to a matter without being able to let it go",
+        "verbal noun of نَشِبَ (našiba, “to stick or get stuck”) (form I)",
+        "wolf"
+      ],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["نَشِبَ"],
+      "okunus": ["nušba", "nišba", "našba"],
+      "bag": "asıl madde",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تشيب",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تشيب (form I)\n# تَشِيبُ (tašību) /ta.ʃiː.bu/: inflection of شَابَ (šāba):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَشِيبَ (tašība) /ta.ʃiː.ba/: inflection of شَابَ (šāba):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašību", "šāba", "tašība"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يشيب",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يشيب (form I)\n# يَشِيبُ (yašību) /ja.ʃiː.bu/: third-person masculine singular non-past active indicative of شَابَ (šāba)\n# يَشِيبَ (yašība) /ja.ʃiː.ba/: third-person masculine singular non-past active subjunctive of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašību", "šāba", "yašība"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تشيبين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَشِيبِينَ • (tašībīna) (form I) /ta.ʃiː.biː.na/\n# second-person feminine singular non-past active indicative of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašībīna", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تشيبان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَشِيبَانِ • (tašībāni) (form I) /ta.ʃiː.baː.ni/\n# inflection of شَابَ (šāba):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašībāni", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تشيبون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَشِيبُونَ • (tašībūna) (form I) /ta.ʃiː.buː.na/\n# second-person masculine plural non-past active indicative of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašībūna", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "نشيب",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نشيب (form I)\n# نَشِيبُ (našību) /na.ʃiː.bu/: first-person plural non-past active indicative of شَابَ (šāba)\n# نَشِيبَ (našība) /na.ʃiː.ba/: first-person plural non-past active subjunctive of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["našību", "šāba", "našība"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يشبن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يشبن (form I)\n# يَشِبْنَ (yašibna) /ja.ʃib.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of شَابَ (šāba)\n# يَشُبْنَ (yašubna) /ja.ʃub.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of شَابَ (šāba)\n# يُشَبْنَ (yušabna) /ju.ʃab.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašibna", "šāba", "yašubna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يشيبون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَشِيبُونَ • (yašībūna) (form I) /ja.ʃiː.buː.na/\n# third-person masculine plural non-past active indicative of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašībūna", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تشبن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تشبن (form I)\n# تَشِبْنَ (tašibna) /ta.ʃib.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of شَابَ (šāba)\n# تَشُبْنَ (tašubna) /ta.ʃub.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of شَابَ (šāba)\n# تُشَبْنَ (tušabna) /tu.ʃab.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašibna", "šāba", "tašubna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يشيبان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَشِيبَانِ • (yašībāni) (form I) /ja.ʃiː.baː.ni/\n# third-person masculine dual non-past active indicative of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašībāni", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تشيبي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَشِيبِي • (tašībī) (form I) /ta.ʃiː.biː/\n# second-person feminine singular non-past active subjunctive/jussive of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašībī", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يشيبا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَشِيبَا • (yašībā) (form I) /ja.ʃiː.baː/\n# third-person masculine dual non-past active subjunctive/jussive of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašībā", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تشيبوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَشِيبُوا • (tašībū) (form I) /ta.ʃiː.buː/\n# second-person masculine plural non-past active subjunctive/jussive of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašībū", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تشيبا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَشِيبَا • (tašībā) (form I) /ta.ʃiː.baː/\n# inflection of شَابَ (šāba):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašībā", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يشيبوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَشِيبُوا • (yašībū) (form I) /ja.ʃiː.buː/\n# third-person masculine plural non-past active subjunctive/jussive of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašībū", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تشب",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تشب (form I)\n# تَشِبْ (tašib) /ta.ʃib/: inflection of شَابَ (šāba):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تَشُبْ (tašub) /ta.ʃub/: inflection of شَابَ (šāba):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُشَبْ (tušab) /tu.ʃab/: inflection of ",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašib", "šāba", "tašub"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "شابت",
+      "tur": "verb",
+      "baslik": "شَابَتْ • (šābat) (form I) /ʃaː.bat/\n# third-person feminine singular past active of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šābat", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "شبتما",
+      "tur": "verb",
+      "baslik": "شبتما (form I)\n# شِبْتُمَا (šibtumā) /ʃib.tu.maː/: second-person dual past active/passive of شَابَ (šāba)\n# شُبْتُمَا (šubtumā) /ʃub.tu.maː/: second-person dual past active of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šibtumā", "šāba", "šubtumā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "شابا",
+      "tur": "verb",
+      "baslik": "شَابَا • (šābā) (form I) /ʃaː.baː/\n# third-person masculine dual past active of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šābā", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "شابتا",
+      "tur": "verb",
+      "baslik": "شَابَتَا • (šābatā) (form I) /ʃaː.ba.taː/\n# third-person feminine dual past active of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šābatā", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "شبتم",
+      "tur": "verb",
+      "baslik": "شبتم (form I)\n# شِبْتُمْ (šibtum) /ʃib.tum/: second-person masculine plural past active/passive of شَابَ (šāba)\n# شُبْتُمْ (šubtum) /ʃub.tum/: second-person masculine plural past active of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šibtum", "šāba", "šubtum"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "شبنا",
+      "tur": "verb",
+      "baslik": "شبنا (form I)\n# شِبْنَا (šibnā) /ʃib.naː/: first-person plural past active/passive of شَابَ (šāba)\n# شُبْنَا (šubnā) /ʃub.naː/: first-person plural past active of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šibnā", "šāba", "šubnā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "شيبا",
+      "tur": "verb",
+      "baslik": "شِيبَا • (šībā) (form I) /ʃiː.baː/\n# inflection of شَابَ (šāba):\n## second-person dual imperative\n## third-person masculine dual past passive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šībā", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "شبن",
+      "tur": "verb",
+      "baslik": "شبن (form I)\n# شِبْنَ (šibna) /ʃib.na/: inflection of شَابَ (šāba):\n## third-person feminine plural past active/passive\n## second-person feminine plural imperative\n# شُبْنَ (šubna) /ʃub.na/: inflection of شَابَ (šāba):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šibna", "šāba", "šubna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "شبتن",
+      "tur": "verb",
+      "baslik": "شبتن (form I)\n# شِبْتُنَّ (šibtunna) /ʃib.tun.na/: second-person feminine plural past active/passive of شَابَ (šāba)\n# شُبْتُنَّ (šubtunna) /ʃub.tun.na/: second-person feminine plural past active of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šibtunna", "šāba", "šubtunna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "شيبوا",
+      "tur": "verb",
+      "baslik": "شِيبُوا • (šībū) (form I) /ʃiː.buː/\n# inflection of شَابَ (šāba):\n## second-person masculine plural imperative\n## third-person masculine plural past passive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šībū", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "شيبي",
+      "tur": "verb",
+      "baslik": "شِيبِي • (šībī) (form I) /ʃiː.biː/\n# second-person feminine singular imperative of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šībī", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "شابوا",
+      "tur": "verb",
+      "baslik": "شَابُوا • (šābū) (form I) /ʃaː.buː/\n# third-person masculine plural past active of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šābū", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تشوبين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَشُوبِينَ • (tašūbīna) (form I) /ta.ʃuː.biː.na/\n# second-person feminine singular non-past active indicative of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašūbīna", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تشوب",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تشوب (form I)\n# تَشُوبُ (tašūbu) /ta.ʃuː.bu/: inflection of شَابَ (šāba):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَشُوبَ (tašūba) /ta.ʃuː.ba/: inflection of شَابَ (šāba):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašūbu", "šāba", "tašūba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "أشوب",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أشوب (form I)\n# أَشُوبُ (ʔašūbu) /ʔa.ʃuː.bu/: first-person singular non-past active indicative of شَابَ (šāba)\n# أَشُوبَ (ʔašūba) /ʔa.ʃuː.ba/: first-person singular non-past active subjunctive of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔašūbu", "šāba", "ʔašūba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يشوب",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يشوب (form I)\n# يَشُوبُ (yašūbu) /ja.ʃuː.bu/: third-person masculine singular non-past active indicative of شَابَ (šāba)\n# يَشُوبَ (yašūba) /ja.ʃuː.ba/: third-person masculine singular non-past active subjunctive of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašūbu", "šāba", "yašūba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يشوبان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَشُوبَانِ • (yašūbāni) (form I) /ja.ʃuː.baː.ni/\n# third-person masculine dual non-past active indicative of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašūbāni", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "نشوب",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نشوب (form I)\n# نَشُوبُ (našūbu) /na.ʃuː.bu/: first-person plural non-past active indicative of شَابَ (šāba)\n# نَشُوبَ (našūba) /na.ʃuː.ba/: first-person plural non-past active subjunctive of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["našūbu", "šāba", "našūba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تشوبان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَشُوبَانِ • (tašūbāni) (form I) /ta.ʃuː.baː.ni/\n# inflection of شَابَ (šāba):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašūbāni", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تشوبون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَشُوبُونَ • (tašūbūna) (form I) /ta.ʃuː.buː.na/\n# second-person masculine plural non-past active indicative of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašūbūna", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يشوبون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَشُوبُونَ • (yašūbūna) (form I) /ja.ʃuː.buː.na/\n# third-person masculine plural non-past active indicative of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašūbūna", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تشوبي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَشُوبِي • (tašūbī) (form I) /ta.ʃuː.biː/\n# second-person feminine singular non-past active subjunctive/jussive of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašūbī", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تشوبا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَشُوبَا • (tašūbā) (form I) /ta.ʃuː.baː/\n# inflection of شَابَ (šāba):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašūbā", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تشوبوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَشُوبُوا • (tašūbū) (form I) /ta.ʃuː.buː/\n# second-person masculine plural non-past active subjunctive/jussive of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašūbū", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "شوبي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "شُوبِي • (šūbī) (form I) /ʃuː.biː/\n# second-person feminine singular imperative of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šūbī", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يشوبا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَشُوبَا • (yašūbā) (form I) /ja.ʃuː.baː/\n# third-person masculine dual non-past active subjunctive/jussive of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašūbā", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يشوبوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَشُوبُوا • (yašūbū) (form I) /ja.ʃuː.buː/\n# third-person masculine plural non-past active subjunctive/jussive of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašūbū", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "شوبوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "شُوبُوا • (šūbū) (form I) /ʃuː.buː/\n# second-person masculine plural imperative of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šūbū", "šāba"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "شوبا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "شُوبَا • (šūbā) (form I) /ʃuː.baː/\n# second-person dual imperative of شَابَ (šāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šūbā", "šāba"],
+      "etimoloji": 2
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "Borrowed from Aramaic נשבא / ܢܫܒܐ (nešbā, “snare”).",
+      "kognatlar": [
+        ["נשבא", "נשבא#Aramaic"],
+        ["ܢܫܒܐ", "ܢܫܒܐ#Classical_Syriac"]
+      ]
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "شاب", "r7"]
+  ],
+  "mana": {
     "ince": "complain.v.01",
     "orta": "verb.communication",
     "ust": "söz ve haber",
@@ -719,20 +521,8 @@
     "dayanak_tanim": "express complaints, discontent, displeasure, or unhappiness",
     "synset_sayisi": 4
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["complain.v.01", "engage.v.07", "happening.n.01", "thrust.v.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 4,
       "merkez_kok": "درك",
@@ -752,6 +542,11 @@
       "boy": 11
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["complain.v.01", "engage.v.07", "happening.n.01", "thrust.v.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

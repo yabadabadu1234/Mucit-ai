@@ -1,883 +1,608 @@
 {
   "kok": "راءى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "راءى", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "راء",
-        "u": "راء",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "رَاءِ • (rāʔi) (form III) /raː.ʔi/\n# second-person masculine singular imperative of رَاءَى (rāʔā)",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rāʔi", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "تراءى",
-        "u": "تراءى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُرَاءَى • (turāʔā) (form III) /tu.raː.ʔaː/\n# inflection of رَاءَى (rāʔā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turāʔā", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "تراءيا",
-        "u": "تراءيا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُرَاءَيَا • (turāʔayā) (form III) /tu.raː.ʔa.jaː/\n# inflection of رَاءَى (rāʔā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turāʔayā", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "تراءوا",
-        "u": "تراءوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُرَاءَوْا • (turāʔaw) (form III) /tu.raː.ʔaw/\n# second-person masculine plural non-past passive subjunctive/jussive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turāʔaw", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "تراءين",
-        "u": "تراءين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُرَاءَيْنَ • (turāʔayna) (form III) /tu.raː.ʔaj.na/\n# inflection of رَاءَى (rāʔā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turāʔayna", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "تراء",
-        "u": "تراء",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تراء (form III)\n# تُرَاءِ (turāʔi) /tu.raː.ʔi/: inflection of رَاءَى (rāʔā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُرَاءَ (turāʔa) /tu.raː.ʔa/: inflection of رَاءَى (rāʔā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turāʔi", "rāʔā", "turāʔa"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "تراءي",
-        "u": "تراءي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُرَاءَيْ • (turāʔay) (form III) /tu.raː.ʔaj/\n# second-person feminine singular non-past passive subjunctive/jussive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turāʔay", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "راءيت",
-        "u": "راءيت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "راءيت (form III)\n# رَاءَيْتُ (rāʔaytu) /raː.ʔaj.tu/: first-person singular past active of رَاءَى (rāʔā)\n# رَاءَيْتَ (rāʔayta) /raː.ʔaj.ta/: second-person masculine singular past active of رَاءَى (rāʔā)\n# رَاءَيْتِ (rāʔayti) /raː.ʔaj.ti/: second-person feminine singular past active of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rāʔaytu", "rāʔā", "rāʔayta"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "راءيا",
-        "u": "راءيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاءَيَا • (rāʔayā) (form III) /raː.ʔa.jaː/\n# third-person masculine dual past active of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rāʔayā", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "راءت",
-        "u": "راءت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاءَتْ • (rāʔat) (form III) /raː.ʔat/\n# third-person feminine singular past active of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rāʔat", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "راءتا",
-        "u": "راءتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاءَتَا • (rāʔatā) (form III) /raː.ʔa.taː/\n# third-person feminine dual past active of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rāʔatā", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "راءيتما",
-        "u": "راءيتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاءَيْتُمَا • (rāʔaytumā) (form III) /raː.ʔaj.tu.maː/\n# second-person dual past active of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rāʔaytumā", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "راءينا",
-        "u": "راءينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاءَيْنَا • (rāʔaynā) (form III) /raː.ʔaj.naː/\n# first-person plural past active of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rāʔaynā", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "راءوا",
-        "u": "راءوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاءَوْا • (rāʔaw) (form III) /raː.ʔaw/\n# third-person masculine plural past active of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rāʔaw", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "راءيتن",
-        "u": "راءيتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاءَيْتُنَّ • (rāʔaytunna) (form III) /raː.ʔaj.tun.na/\n# second-person feminine plural past active of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rāʔaytunna", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "راءيتم",
-        "u": "راءيتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاءَيْتُمْ • (rāʔaytum) (form III) /raː.ʔaj.tum/\n# second-person masculine plural past active of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rāʔaytum", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "روئيت",
-        "u": "روئيت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "روئيت (form III)\n# رُوئِيتُ (rūʔītu) /ruː.ʔiː.tu/: first-person singular past passive of رَاءَى (rāʔā)\n# رُوئِيتَ (rūʔīta) /ruː.ʔiː.ta/: second-person masculine singular past passive of رَاءَى (rāʔā)\n# رُوئِيتِ (rūʔīti) /ruː.ʔiː.ti/: second-person feminine singular past passive of رَاءَى (rāʔā)\n# رُوئِيَتْ (rūʔiyat) /ruː.ʔi.jat/: third-person feminine singular past passive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rūʔītu", "rāʔā", "rūʔīta"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "راءين",
-        "u": "راءين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاءَيْنَ • (rāʔayna) (form III) /raː.ʔaj.na/\n# third-person feminine plural past active of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rāʔayna", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "روئيتما",
-        "u": "روئيتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُوئِيتُمَا • (rūʔītumā) (form III) /ruː.ʔiː.tu.maː/\n# second-person dual past passive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rūʔītumā", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "روئيا",
-        "u": "روئيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُوئِيَا • (rūʔiyā) (form III) /ruː.ʔi.jaː/\n# third-person masculine dual past passive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rūʔiyā", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "روئي",
-        "u": "روئي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُوئِيَ • (rūʔiya) (form III) /ruː.ʔi.ja/\n# third-person masculine singular past passive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rūʔiya", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "روئيتن",
-        "u": "روئيتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُوئِيتُنَّ • (rūʔītunna) (form III) /ruː.ʔiː.tun.na/\n# second-person feminine plural past passive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rūʔītunna", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "روئيتا",
-        "u": "روئيتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُوئِيَتَا • (rūʔiyatā) (form III) /ruː.ʔi.ja.taː/\n# third-person feminine dual past passive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rūʔiyatā", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "روئينا",
-        "u": "روئينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُوئِينَا • (rūʔīnā) (form III) /ruː.ʔiː.naː/\n# first-person plural past passive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rūʔīnā", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "روءوا",
-        "u": "روءوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُوءُوا • (rūʔū) (form III) /ruː.ʔuː/\n# third-person masculine plural past passive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rūʔū", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "روئيتم",
-        "u": "روئيتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُوئِيتُمْ • (rūʔītum) (form III) /ruː.ʔiː.tum/\n# second-person masculine plural past passive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rūʔītum", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "روئين",
-        "u": "روئين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُوئِينَ • (rūʔīna) (form III) /ruː.ʔiː.na/\n# third-person feminine plural past passive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rūʔīna", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "روئوا",
-        "u": "روئوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُوئُوا • (rūʔū) (form III) /ruː.ʔuː/\n# third-person masculine plural past passive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rūʔū", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "يرائي",
-        "u": "يرائي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يرائي (form III)\n# يُرَائِي (yurāʔī) /ju.raː.ʔiː/: third-person masculine singular non-past active indicative of رَاءَى (rāʔā)\n# يُرَائِيَ (yurāʔiya) /ju.raː.ʔi.ja/: third-person masculine singular non-past active subjunctive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yurāʔī", "rāʔā", "yurāʔiya"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "ترائي",
-        "u": "ترائي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ترائي (form III)\n# تُرَائِي (turāʔī) /tu.raː.ʔiː/: inflection of رَاءَى (rāʔā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُرَائِيَ (turāʔiya) /tu.raː.ʔi.ja/: inflection of رَاءَى (rāʔā):\n## second-person masculine singular non-past active subju",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turāʔī", "rāʔā", "turāʔiya"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "أرائي",
-        "u": "أرائي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أرائي (form III)\n# أُرَائِي (ʔurāʔī) /ʔu.raː.ʔiː/: first-person singular non-past active indicative of رَاءَى (rāʔā)\n# أُرَائِيَ (ʔurāʔiya) /ʔu.raː.ʔi.ja/: first-person singular non-past active subjunctive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔurāʔī", "rāʔā", "ʔurāʔiya"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "ترائيان",
-        "u": "ترائيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُرَائِيَانِ • (turāʔiyāni) (form III) /tu.raː.ʔi.jaː.ni/\n# inflection of رَاءَى (rāʔā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turāʔiyāni", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "يرائيان",
-        "u": "يرائيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُرَائِيَانِ • (yurāʔiyāni) (form III) /ju.raː.ʔi.jaː.ni/\n# third-person masculine dual non-past active indicative of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yurāʔiyāni", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "نرائي",
-        "u": "نرائي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نرائي (form III)\n# نُرَائِي (nurāʔī) /nu.raː.ʔiː/: first-person plural non-past active indicative of رَاءَى (rāʔā)\n# نُرَائِيَ (nurāʔiya) /nu.raː.ʔi.ja/: first-person plural non-past active subjunctive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nurāʔī", "rāʔā", "nurāʔiya"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "ترائون",
-        "u": "ترائون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُرَائُونَ • (turāʔūna) (form III) /tu.raː.ʔuː.na/\n# second-person masculine plural non-past active indicative of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turāʔūna", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "يرائون",
-        "u": "يرائون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُرَائُونَ • (yurāʔūna) (form III) /ju.raː.ʔuː.na/\n# third-person masculine plural non-past active indicative of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yurāʔūna", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "تراؤون",
-        "u": "تراؤون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُرَاؤُونَ • (turāʔūna) (form III) /tu.raː.ʔuː.na/\n# second-person masculine plural non-past active indicative of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turāʔūna", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "يرائين",
-        "u": "يرائين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُرَائِينَ • (yurāʔīna) (form III) /ju.raː.ʔiː.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yurāʔīna", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "يراؤون",
-        "u": "يراؤون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُرَاؤُونَ • (yurāʔūna) (form III) /ju.raː.ʔuː.na/\n# third-person masculine plural non-past active indicative of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yurāʔūna", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "ترائين",
-        "u": "ترائين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُرَائِينَ • (turāʔīna) (form III) /tu.raː.ʔiː.na/\n# inflection of رَاءَى (rāʔā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turāʔīna", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "يراءى",
-        "u": "يراءى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُرَاءَى • (yurāʔā) (form III) /ju.raː.ʔaː/\n# third-person masculine singular non-past passive indicative/subjunctive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yurāʔā", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "يراءيان",
-        "u": "يراءيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُرَاءَيَانِ • (yurāʔayāni) (form III) /ju.raː.ʔa.jaː.ni/\n# third-person masculine dual non-past passive indicative of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yurāʔayāni", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "نراءى",
-        "u": "نراءى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُرَاءَى • (nurāʔā) (form III) /nu.raː.ʔaː/\n# first-person plural non-past passive indicative/subjunctive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nurāʔā", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "تراءيان",
-        "u": "تراءيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُرَاءَيَانِ • (turāʔayāni) (form III) /tu.raː.ʔa.jaː.ni/\n# inflection of رَاءَى (rāʔā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turāʔayāni", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "أراءى",
-        "u": "أراءى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُرَاءَى • (ʔurāʔā) (form III) /ʔu.raː.ʔaː/\n# first-person singular non-past passive indicative/subjunctive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔurāʔā", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "يراءون",
-        "u": "يراءون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُرَاءَوْنَ • (yurāʔawna) (form III) /ju.raː.ʔaw.na/\n# third-person masculine plural non-past passive indicative of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yurāʔawna", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "تراءون",
-        "u": "تراءون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُرَاءَوْنَ • (turāʔawna) (form III) /tu.raː.ʔaw.na/\n# second-person masculine plural non-past passive indicative of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turāʔawna", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "ترائيا",
-        "u": "ترائيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُرَائِيَا • (turāʔiyā) (form III) /tu.raː.ʔi.jaː/\n# inflection of رَاءَى (rāʔā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turāʔiyā", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "يرائيا",
-        "u": "يرائيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُرَائِيَا • (yurāʔiyā) (form III) /ju.raː.ʔi.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yurāʔiyā", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "يراءين",
-        "u": "يراءين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُرَاءَيْنَ • (yurāʔayna) (form III) /ju.raː.ʔaj.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yurāʔayna", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "تراؤوا",
-        "u": "تراؤوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُرَاؤُوا • (turāʔū) (form III) /tu.raː.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turāʔū", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "يراءوا",
-        "u": "يراءوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُرَاءَوْا • (yurāʔaw) (form III) /ju.raː.ʔaw/\n# third-person masculine plural non-past passive subjunctive/jussive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yurāʔaw", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "يراءيا",
-        "u": "يراءيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُرَاءَيَا • (yurāʔayā) (form III) /ju.raː.ʔa.jaː/\n# third-person masculine dual non-past passive subjunctive/jussive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yurāʔayā", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "يرائوا",
-        "u": "يرائوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُرَائُوا • (yurāʔū) (form III) /ju.raː.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yurāʔū", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "يراؤوا",
-        "u": "يراؤوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُرَاؤُوا • (yurāʔū) (form III) /ju.raː.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yurāʔū", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "ترائوا",
-        "u": "ترائوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُرَائُوا • (turāʔū) (form III) /tu.raː.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turāʔū", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "أراء",
-        "u": "أراء",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أراء (form III)\n# أُرَاءِ (ʔurāʔi) /ʔu.raː.ʔi/: first-person singular non-past active jussive of رَاءَى (rāʔā)\n# أُرَاءَ (ʔurāʔa) /ʔu.raː.ʔa/: first-person singular non-past passive jussive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔurāʔi", "rāʔā", "ʔurāʔa"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "أرائ",
-        "u": "أرائ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُرَائِ • (ʔurāʔi) (form III) /ʔu.raː.ʔi/\n# first-person singular non-past active jussive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔurāʔi", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "يراء",
-        "u": "يراء",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يراء (form III)\n# يُرَاءِ (yurāʔi) /ju.raː.ʔi/: third-person masculine singular non-past active jussive of رَاءَى (rāʔā)\n# يُرَاءَ (yurāʔa) /ju.raː.ʔa/: third-person masculine singular non-past passive jussive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yurāʔi", "rāʔā", "yurāʔa"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "يرائ",
-        "u": "يرائ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُرَائِ • (yurāʔi) (form III) /ju.raː.ʔi/\n# third-person masculine singular non-past active jussive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yurāʔi", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "نراء",
-        "u": "نراء",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نراء (form III)\n# نُرَاءِ (nurāʔi) /nu.raː.ʔi/: first-person plural non-past active jussive of رَاءَى (rāʔā)\n# نُرَاءَ (nurāʔa) /nu.raː.ʔa/: first-person plural non-past passive jussive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nurāʔi", "rāʔā", "nurāʔa"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "ترائ",
-        "u": "ترائ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُرَائِ • (turāʔi) (form III) /tu.raː.ʔi/\n# inflection of رَاءَى (rāʔā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turāʔi", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "نرائ",
-        "u": "نرائ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُرَائِ • (nurāʔi) (form III) /nu.raː.ʔi/\n# first-person plural non-past active jussive of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nurāʔi", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "رائي",
-        "u": "رائي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَائِي • (rāʔī) (form III) /raː.ʔiː/\n# second-person feminine singular imperative of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rāʔī", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "رائ",
-        "u": "رائ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَائِ • (rāʔi) (form III) /raː.ʔi/\n# second-person masculine singular imperative of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rāʔi", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "رائوا",
-        "u": "رائوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَائُوا • (rāʔū) (form III) /raː.ʔuː/\n# second-person masculine plural imperative of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rāʔū", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "رائيا",
-        "u": "رائيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَائِيَا • (rāʔiyā) (form III) /raː.ʔi.jaː/\n# second-person dual imperative of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rāʔiyā", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "راؤوا",
-        "u": "راؤوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاؤُوا • (rāʔū) (form III) /raː.ʔuː/\n# second-person masculine plural imperative of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rāʔū", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      },
-      {
-        "w": "رائين",
-        "u": "رائين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَائِينَ • (rāʔīna) (form III) /raː.ʔiː.na/\n# second-person feminine plural imperative of رَاءَى (rāʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rāʔīna", "rāʔā"],
-        "k": "راءى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "رى",
+  "ses": {
     "harf": "ر",
+    "fasil": "رى",
     "mahrec": "zelakiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "راء",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "رَاءِ • (rāʔi) (form III) /raː.ʔi/\n# second-person masculine singular imperative of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rāʔi", "rāʔā"]
+    },
+    {
+      "madde": "تراءى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُرَاءَى • (turāʔā) (form III) /tu.raː.ʔaː/\n# inflection of رَاءَى (rāʔā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turāʔā", "rāʔā"]
+    },
+    {
+      "madde": "تراءيا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُرَاءَيَا • (turāʔayā) (form III) /tu.raː.ʔa.jaː/\n# inflection of رَاءَى (rāʔā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turāʔayā", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تراءوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُرَاءَوْا • (turāʔaw) (form III) /tu.raː.ʔaw/\n# second-person masculine plural non-past passive subjunctive/jussive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turāʔaw", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تراءين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُرَاءَيْنَ • (turāʔayna) (form III) /tu.raː.ʔaj.na/\n# inflection of رَاءَى (rāʔā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passive subjunctive/jussive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turāʔayna", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تراء",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تراء (form III)\n# تُرَاءِ (turāʔi) /tu.raː.ʔi/: inflection of رَاءَى (rāʔā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُرَاءَ (turāʔa) /tu.raː.ʔa/: inflection of رَاءَى (rāʔā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turāʔi", "rāʔā", "turāʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تراءي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُرَاءَيْ • (turāʔay) (form III) /tu.raː.ʔaj/\n# second-person feminine singular non-past passive subjunctive/jussive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turāʔay", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "راءيت",
+      "tur": "verb",
+      "baslik": "راءيت (form III)\n# رَاءَيْتُ (rāʔaytu) /raː.ʔaj.tu/: first-person singular past active of رَاءَى (rāʔā)\n# رَاءَيْتَ (rāʔayta) /raː.ʔaj.ta/: second-person masculine singular past active of رَاءَى (rāʔā)\n# رَاءَيْتِ (rāʔayti) /raː.ʔaj.ti/: second-person feminine singular past active of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rāʔaytu", "rāʔā", "rāʔayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "راءيا",
+      "tur": "verb",
+      "baslik": "رَاءَيَا • (rāʔayā) (form III) /raː.ʔa.jaː/\n# third-person masculine dual past active of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rāʔayā", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "راءت",
+      "tur": "verb",
+      "baslik": "رَاءَتْ • (rāʔat) (form III) /raː.ʔat/\n# third-person feminine singular past active of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rāʔat", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "راءتا",
+      "tur": "verb",
+      "baslik": "رَاءَتَا • (rāʔatā) (form III) /raː.ʔa.taː/\n# third-person feminine dual past active of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rāʔatā", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "راءيتما",
+      "tur": "verb",
+      "baslik": "رَاءَيْتُمَا • (rāʔaytumā) (form III) /raː.ʔaj.tu.maː/\n# second-person dual past active of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rāʔaytumā", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "راءينا",
+      "tur": "verb",
+      "baslik": "رَاءَيْنَا • (rāʔaynā) (form III) /raː.ʔaj.naː/\n# first-person plural past active of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rāʔaynā", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "راءوا",
+      "tur": "verb",
+      "baslik": "رَاءَوْا • (rāʔaw) (form III) /raː.ʔaw/\n# third-person masculine plural past active of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rāʔaw", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "راءيتن",
+      "tur": "verb",
+      "baslik": "رَاءَيْتُنَّ • (rāʔaytunna) (form III) /raː.ʔaj.tun.na/\n# second-person feminine plural past active of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rāʔaytunna", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "راءيتم",
+      "tur": "verb",
+      "baslik": "رَاءَيْتُمْ • (rāʔaytum) (form III) /raː.ʔaj.tum/\n# second-person masculine plural past active of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rāʔaytum", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "روئيت",
+      "tur": "verb",
+      "baslik": "روئيت (form III)\n# رُوئِيتُ (rūʔītu) /ruː.ʔiː.tu/: first-person singular past passive of رَاءَى (rāʔā)\n# رُوئِيتَ (rūʔīta) /ruː.ʔiː.ta/: second-person masculine singular past passive of رَاءَى (rāʔā)\n# رُوئِيتِ (rūʔīti) /ruː.ʔiː.ti/: second-person feminine singular past passive of رَاءَى (rāʔā)\n# رُوئِيَتْ (rūʔiyat) /ruː.ʔi.jat/: third-person feminine singular past passive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rūʔītu", "rāʔā", "rūʔīta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "راءين",
+      "tur": "verb",
+      "baslik": "رَاءَيْنَ • (rāʔayna) (form III) /raː.ʔaj.na/\n# third-person feminine plural past active of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rāʔayna", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "روئيتما",
+      "tur": "verb",
+      "baslik": "رُوئِيتُمَا • (rūʔītumā) (form III) /ruː.ʔiː.tu.maː/\n# second-person dual past passive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rūʔītumā", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "روئيا",
+      "tur": "verb",
+      "baslik": "رُوئِيَا • (rūʔiyā) (form III) /ruː.ʔi.jaː/\n# third-person masculine dual past passive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rūʔiyā", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "روئي",
+      "tur": "verb",
+      "baslik": "رُوئِيَ • (rūʔiya) (form III) /ruː.ʔi.ja/\n# third-person masculine singular past passive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rūʔiya", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "روئيتن",
+      "tur": "verb",
+      "baslik": "رُوئِيتُنَّ • (rūʔītunna) (form III) /ruː.ʔiː.tun.na/\n# second-person feminine plural past passive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rūʔītunna", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "روئيتا",
+      "tur": "verb",
+      "baslik": "رُوئِيَتَا • (rūʔiyatā) (form III) /ruː.ʔi.ja.taː/\n# third-person feminine dual past passive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rūʔiyatā", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "روئينا",
+      "tur": "verb",
+      "baslik": "رُوئِينَا • (rūʔīnā) (form III) /ruː.ʔiː.naː/\n# first-person plural past passive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rūʔīnā", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "روءوا",
+      "tur": "verb",
+      "baslik": "رُوءُوا • (rūʔū) (form III) /ruː.ʔuː/\n# third-person masculine plural past passive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rūʔū", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "روئيتم",
+      "tur": "verb",
+      "baslik": "رُوئِيتُمْ • (rūʔītum) (form III) /ruː.ʔiː.tum/\n# second-person masculine plural past passive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rūʔītum", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "روئين",
+      "tur": "verb",
+      "baslik": "رُوئِينَ • (rūʔīna) (form III) /ruː.ʔiː.na/\n# third-person feminine plural past passive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rūʔīna", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "روئوا",
+      "tur": "verb",
+      "baslik": "رُوئُوا • (rūʔū) (form III) /ruː.ʔuː/\n# third-person masculine plural past passive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rūʔū", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يرائي",
+      "tur": "verb",
+      "baslik": "يرائي (form III)\n# يُرَائِي (yurāʔī) /ju.raː.ʔiː/: third-person masculine singular non-past active indicative of رَاءَى (rāʔā)\n# يُرَائِيَ (yurāʔiya) /ju.raː.ʔi.ja/: third-person masculine singular non-past active subjunctive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yurāʔī", "rāʔā", "yurāʔiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ترائي",
+      "tur": "verb",
+      "baslik": "ترائي (form III)\n# تُرَائِي (turāʔī) /tu.raː.ʔiː/: inflection of رَاءَى (rāʔā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُرَائِيَ (turāʔiya) /tu.raː.ʔi.ja/: inflection of رَاءَى (rāʔā):\n## second-person masculine singular non-past active subju",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turāʔī", "rāʔā", "turāʔiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أرائي",
+      "tur": "verb",
+      "baslik": "أرائي (form III)\n# أُرَائِي (ʔurāʔī) /ʔu.raː.ʔiː/: first-person singular non-past active indicative of رَاءَى (rāʔā)\n# أُرَائِيَ (ʔurāʔiya) /ʔu.raː.ʔi.ja/: first-person singular non-past active subjunctive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔurāʔī", "rāʔā", "ʔurāʔiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ترائيان",
+      "tur": "verb",
+      "baslik": "تُرَائِيَانِ • (turāʔiyāni) (form III) /tu.raː.ʔi.jaː.ni/\n# inflection of رَاءَى (rāʔā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turāʔiyāni", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يرائيان",
+      "tur": "verb",
+      "baslik": "يُرَائِيَانِ • (yurāʔiyāni) (form III) /ju.raː.ʔi.jaː.ni/\n# third-person masculine dual non-past active indicative of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yurāʔiyāni", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نرائي",
+      "tur": "verb",
+      "baslik": "نرائي (form III)\n# نُرَائِي (nurāʔī) /nu.raː.ʔiː/: first-person plural non-past active indicative of رَاءَى (rāʔā)\n# نُرَائِيَ (nurāʔiya) /nu.raː.ʔi.ja/: first-person plural non-past active subjunctive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nurāʔī", "rāʔā", "nurāʔiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ترائون",
+      "tur": "verb",
+      "baslik": "تُرَائُونَ • (turāʔūna) (form III) /tu.raː.ʔuː.na/\n# second-person masculine plural non-past active indicative of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turāʔūna", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يرائون",
+      "tur": "verb",
+      "baslik": "يُرَائُونَ • (yurāʔūna) (form III) /ju.raː.ʔuː.na/\n# third-person masculine plural non-past active indicative of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yurāʔūna", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تراؤون",
+      "tur": "verb",
+      "baslik": "تُرَاؤُونَ • (turāʔūna) (form III) /tu.raː.ʔuː.na/\n# second-person masculine plural non-past active indicative of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turāʔūna", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يرائين",
+      "tur": "verb",
+      "baslik": "يُرَائِينَ • (yurāʔīna) (form III) /ju.raː.ʔiː.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yurāʔīna", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يراؤون",
+      "tur": "verb",
+      "baslik": "يُرَاؤُونَ • (yurāʔūna) (form III) /ju.raː.ʔuː.na/\n# third-person masculine plural non-past active indicative of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yurāʔūna", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ترائين",
+      "tur": "verb",
+      "baslik": "تُرَائِينَ • (turāʔīna) (form III) /tu.raː.ʔiː.na/\n# inflection of رَاءَى (rāʔā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turāʔīna", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يراءى",
+      "tur": "verb",
+      "baslik": "يُرَاءَى • (yurāʔā) (form III) /ju.raː.ʔaː/\n# third-person masculine singular non-past passive indicative/subjunctive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yurāʔā", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يراءيان",
+      "tur": "verb",
+      "baslik": "يُرَاءَيَانِ • (yurāʔayāni) (form III) /ju.raː.ʔa.jaː.ni/\n# third-person masculine dual non-past passive indicative of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yurāʔayāni", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نراءى",
+      "tur": "verb",
+      "baslik": "نُرَاءَى • (nurāʔā) (form III) /nu.raː.ʔaː/\n# first-person plural non-past passive indicative/subjunctive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nurāʔā", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تراءيان",
+      "tur": "verb",
+      "baslik": "تُرَاءَيَانِ • (turāʔayāni) (form III) /tu.raː.ʔa.jaː.ni/\n# inflection of رَاءَى (rāʔā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turāʔayāni", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أراءى",
+      "tur": "verb",
+      "baslik": "أُرَاءَى • (ʔurāʔā) (form III) /ʔu.raː.ʔaː/\n# first-person singular non-past passive indicative/subjunctive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔurāʔā", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يراءون",
+      "tur": "verb",
+      "baslik": "يُرَاءَوْنَ • (yurāʔawna) (form III) /ju.raː.ʔaw.na/\n# third-person masculine plural non-past passive indicative of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yurāʔawna", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تراءون",
+      "tur": "verb",
+      "baslik": "تُرَاءَوْنَ • (turāʔawna) (form III) /tu.raː.ʔaw.na/\n# second-person masculine plural non-past passive indicative of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turāʔawna", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ترائيا",
+      "tur": "verb",
+      "baslik": "تُرَائِيَا • (turāʔiyā) (form III) /tu.raː.ʔi.jaː/\n# inflection of رَاءَى (rāʔā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turāʔiyā", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يرائيا",
+      "tur": "verb",
+      "baslik": "يُرَائِيَا • (yurāʔiyā) (form III) /ju.raː.ʔi.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yurāʔiyā", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يراءين",
+      "tur": "verb",
+      "baslik": "يُرَاءَيْنَ • (yurāʔayna) (form III) /ju.raː.ʔaj.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yurāʔayna", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تراؤوا",
+      "tur": "verb",
+      "baslik": "تُرَاؤُوا • (turāʔū) (form III) /tu.raː.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turāʔū", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يراءوا",
+      "tur": "verb",
+      "baslik": "يُرَاءَوْا • (yurāʔaw) (form III) /ju.raː.ʔaw/\n# third-person masculine plural non-past passive subjunctive/jussive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yurāʔaw", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يراءيا",
+      "tur": "verb",
+      "baslik": "يُرَاءَيَا • (yurāʔayā) (form III) /ju.raː.ʔa.jaː/\n# third-person masculine dual non-past passive subjunctive/jussive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yurāʔayā", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يرائوا",
+      "tur": "verb",
+      "baslik": "يُرَائُوا • (yurāʔū) (form III) /ju.raː.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yurāʔū", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يراؤوا",
+      "tur": "verb",
+      "baslik": "يُرَاؤُوا • (yurāʔū) (form III) /ju.raː.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yurāʔū", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ترائوا",
+      "tur": "verb",
+      "baslik": "تُرَائُوا • (turāʔū) (form III) /tu.raː.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turāʔū", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أراء",
+      "tur": "verb",
+      "baslik": "أراء (form III)\n# أُرَاءِ (ʔurāʔi) /ʔu.raː.ʔi/: first-person singular non-past active jussive of رَاءَى (rāʔā)\n# أُرَاءَ (ʔurāʔa) /ʔu.raː.ʔa/: first-person singular non-past passive jussive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔurāʔi", "rāʔā", "ʔurāʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أرائ",
+      "tur": "verb",
+      "baslik": "أُرَائِ • (ʔurāʔi) (form III) /ʔu.raː.ʔi/\n# first-person singular non-past active jussive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔurāʔi", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يراء",
+      "tur": "verb",
+      "baslik": "يراء (form III)\n# يُرَاءِ (yurāʔi) /ju.raː.ʔi/: third-person masculine singular non-past active jussive of رَاءَى (rāʔā)\n# يُرَاءَ (yurāʔa) /ju.raː.ʔa/: third-person masculine singular non-past passive jussive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yurāʔi", "rāʔā", "yurāʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يرائ",
+      "tur": "verb",
+      "baslik": "يُرَائِ • (yurāʔi) (form III) /ju.raː.ʔi/\n# third-person masculine singular non-past active jussive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yurāʔi", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نراء",
+      "tur": "verb",
+      "baslik": "نراء (form III)\n# نُرَاءِ (nurāʔi) /nu.raː.ʔi/: first-person plural non-past active jussive of رَاءَى (rāʔā)\n# نُرَاءَ (nurāʔa) /nu.raː.ʔa/: first-person plural non-past passive jussive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nurāʔi", "rāʔā", "nurāʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ترائ",
+      "tur": "verb",
+      "baslik": "تُرَائِ • (turāʔi) (form III) /tu.raː.ʔi/\n# inflection of رَاءَى (rāʔā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turāʔi", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نرائ",
+      "tur": "verb",
+      "baslik": "نُرَائِ • (nurāʔi) (form III) /nu.raː.ʔi/\n# first-person plural non-past active jussive of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nurāʔi", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "رائي",
+      "tur": "verb",
+      "baslik": "رَائِي • (rāʔī) (form III) /raː.ʔiː/\n# second-person feminine singular imperative of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rāʔī", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "رائ",
+      "tur": "verb",
+      "baslik": "رَائِ • (rāʔi) (form III) /raː.ʔi/\n# second-person masculine singular imperative of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rāʔi", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "رائوا",
+      "tur": "verb",
+      "baslik": "رَائُوا • (rāʔū) (form III) /raː.ʔuː/\n# second-person masculine plural imperative of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rāʔū", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "رائيا",
+      "tur": "verb",
+      "baslik": "رَائِيَا • (rāʔiyā) (form III) /raː.ʔi.jaː/\n# second-person dual imperative of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rāʔiyā", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "راؤوا",
+      "tur": "verb",
+      "baslik": "رَاؤُوا • (rāʔū) (form III) /raː.ʔuː/\n# second-person masculine plural imperative of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rāʔū", "rāʔā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "رائين",
+      "tur": "verb",
+      "baslik": "رَائِينَ • (rāʔīna) (form III) /raː.ʔiː.na/\n# second-person feminine plural imperative of رَاءَى (rāʔā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rāʔīna", "rāʔā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "راءى", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

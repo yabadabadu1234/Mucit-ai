@@ -1,450 +1,329 @@
 {
   "kok": "مان",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "مان", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "من",
-        "u": "من",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "من (form I)\n# مِنَّ (minna) /min.na/: inflection of مَانَ (māna):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# مِنْ (min) /min/: second-person masculine singular imperative of مَانَ (māna)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["minna", "māna"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "منت",
-        "u": "منت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "منت (form I)\n# مِنْتُ (mintu) /min.tu/: first-person singular past active of مَانَ (māna)\n# مِنْتَ (minta) /min.ta/: second-person masculine singular past active of مَانَ (māna)\n# مِنْتِ (minti) /min.ti/: second-person feminine singular past active of مَانَ (māna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["mintu", "māna", "minta"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "أمين",
-        "u": "أمين",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "أمين (form I)\n# أَمِينُ (ʔamīnu) /ʔa.miː.nu/: first-person singular non-past active indicative of مَانَ (māna)\n# أَمِينَ (ʔamīna) /ʔa.miː.na/: first-person singular non-past active subjunctive of مَانَ (māna)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔamīnu", "māna", "ʔamīna"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "مانتا",
-        "u": "مانتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَانَتَا • (mānatā) (form I) /maː.na.taː/\n# third-person feminine dual past active of مَانَ (māna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["mānatā", "māna"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "أيمن",
-        "u": "أيمن",
-        "p": "noun",
-        "n": "3",
-        "h": "ar-head",
-        "e": "أَيْمُن • (ʔaymun) f pl",
-        "g": ["plural of يَمِين (yamīn)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["يَمِين"],
-        "r": ["ʔaymun"],
-        "ipa": ["/ʔaj.mun/"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "يمين",
-        "u": "يمين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يمين (form I)\n# يَمِينُ (yamīnu) /ja.miː.nu/: third-person masculine singular non-past active indicative of مَانَ (māna)\n# يَمِينَ (yamīna) /ja.miː.na/: third-person masculine singular non-past active subjunctive of مَانَ (māna)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamīnu", "māna", "yamīna"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "تمن",
-        "u": "تمن",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تمن (form I)\n# تَمِنَّ (taminna) /ta.min.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of مَانَ (māna)\n# تَمِنْ (tamin) /ta.min/: inflection of مَانَ (māna):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taminna", "māna", "tamin"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "يمن",
-        "u": "يمن",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يمن (form I)\n# يَمِنَّ (yaminna) /ja.min.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of مَانَ (māna)\n# يَمِنْ (yamin) /ja.min/: third-person masculine singular non-past active jussive of مَانَ (māna)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaminna", "māna", "yamin"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "أمن",
-        "u": "أمن",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "أَمِنْ • (ʔamin) (form I) /ʔa.min/\n# first-person singular non-past active jussive of مَانَ (māna)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔamin", "māna"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "أيمان",
-        "u": "أيمان",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "أَيْمَان • (ʔaymān) f pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of يَمِين (yamīn)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["يَمِين"],
-        "r": ["ʔaymān"],
-        "ipa": ["/ʔaj.maːn/"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "مينا",
-        "u": "مينا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "مِينَا • (mīnā) (form I) /miː.naː/\n# second-person dual imperative of مَانَ (māna)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["mīnā", "māna"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "موانئ",
-        "u": "موانئ",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "مَوَانِئ • (mawāniʔ) m pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of مِينَا (mīnā)", "plural of مِينَاء (mīnāʔ)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["مِينَا", "مِينَاء"],
-        "r": ["mawāniʔ"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "نمن",
-        "u": "نمن",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "نَمِنْ • (namin) (form I) /na.min/\n# first-person plural non-past active jussive of مَانَ (māna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["namin", "māna"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "نمين",
-        "u": "نمين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نمين (form I)\n# نَمِينُ (namīnu) /na.miː.nu/: first-person plural non-past active indicative of مَانَ (māna)\n# نَمِينَ (namīna) /na.miː.na/: first-person plural non-past active subjunctive of مَانَ (māna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["namīnu", "māna", "namīna"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "منا",
-        "u": "منا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "مِنَّا • (minnā) (form I) /min.naː/\n# first-person plural past active of مَانَ (māna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["minnā", "māna"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "منتن",
-        "u": "منتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مِنْتُنَّ • (mintunna) (form I) /min.tun.na/\n# second-person feminine plural past active of مَانَ (māna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["mintunna", "māna"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "مانا",
-        "u": "مانا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَانَا • (mānā) (form I) /maː.naː/\n# third-person masculine dual past active of مَانَ (māna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["mānā", "māna"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "منتما",
-        "u": "منتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مِنْتُمَا • (mintumā) (form I) /min.tu.maː/\n# second-person dual past active of مَانَ (māna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["mintumā", "māna"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "منتم",
-        "u": "منتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مِنْتُمْ • (mintum) (form I) /min.tum/\n# second-person masculine plural past active of مَانَ (māna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["mintum", "māna"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "تمين",
-        "u": "تمين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تمين (form I)\n# تَمِينُ (tamīnu) /ta.miː.nu/: inflection of مَانَ (māna):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَمِينَ (tamīna) /ta.miː.na/: inflection of مَانَ (māna):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamīnu", "māna", "tamīna"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "مانوا",
-        "u": "مانوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَانُوا • (mānū) (form I) /maː.nuː/\n# third-person masculine plural past active of مَانَ (māna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["mānū", "māna"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "تمينان",
-        "u": "تمينان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَمِينَانِ • (tamīnāni) (form I) /ta.miː.naː.ni/\n# inflection of مَانَ (māna):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamīnāni", "māna"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "تمينين",
-        "u": "تمينين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَمِينِينَ • (tamīnīna) (form I) /ta.miː.niː.na/\n# second-person feminine singular non-past active indicative of مَانَ (māna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamīnīna", "māna"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "تمينون",
-        "u": "تمينون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَمِينُونَ • (tamīnūna) (form I) /ta.miː.nuː.na/\n# second-person masculine plural non-past active indicative of مَانَ (māna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamīnūna", "māna"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "يمينان",
-        "u": "يمينان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَمِينَانِ • (yamīnāni) (form I) /ja.miː.naː.ni/\n# third-person masculine dual non-past active indicative of مَانَ (māna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamīnāni", "māna"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "يمينون",
-        "u": "يمينون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَمِينُونَ • (yamīnūna) (form I) /ja.miː.nuː.na/\n# third-person masculine plural non-past active indicative of مَانَ (māna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamīnūna", "māna"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "تميني",
-        "u": "تميني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَمِينِي • (tamīnī) (form I) /ta.miː.niː/\n# second-person feminine singular non-past active subjunctive/jussive of مَانَ (māna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamīnī", "māna"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "يمينوا",
-        "u": "يمينوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَمِينُوا • (yamīnū) (form I) /ja.miː.nuː/\n# third-person masculine plural non-past active subjunctive/jussive of مَانَ (māna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamīnū", "māna"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "تمينوا",
-        "u": "تمينوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَمِينُوا • (tamīnū) (form I) /ta.miː.nuː/\n# second-person masculine plural non-past active subjunctive/jussive of مَانَ (māna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamīnū", "māna"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "تمينا",
-        "u": "تمينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَمِينَا • (tamīnā) (form I) /ta.miː.naː/\n# inflection of مَانَ (māna):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamīnā", "māna"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "ميني",
-        "u": "ميني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مِينِي • (mīnī) (form I) /miː.niː/\n# second-person feminine singular imperative of مَانَ (māna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["mīnī", "māna"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "يمينا",
-        "u": "يمينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَمِينَا • (yamīnā) (form I) /ja.miː.naː/\n# third-person masculine dual non-past active subjunctive/jussive of مَانَ (māna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamīnā", "māna"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "مينوا",
-        "u": "مينوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مِينُوا • (mīnū) (form I) /miː.nuː/\n# second-person masculine plural imperative of مَانَ (māna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["mīnū", "māna"],
-        "k": "مان",
-        "yol": "kök"
-      },
-      {
-        "w": "مانت",
-        "u": "مانت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَانَتْ • (mānat) (form I) /maː.nat/\n# third-person feminine singular past active of مَانَ (māna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["mānat", "māna"],
-        "k": "مان",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "من",
+  "ses": {
     "harf": "م",
+    "fasil": "من",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "من",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "من (form I)\n# مِنَّ (minna) /min.na/: inflection of مَانَ (māna):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# مِنْ (min) /min/: second-person masculine singular imperative of مَانَ (māna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["minna", "māna"]
+    },
+    {
+      "madde": "منت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "منت (form I)\n# مِنْتُ (mintu) /min.tu/: first-person singular past active of مَانَ (māna)\n# مِنْتَ (minta) /min.ta/: second-person masculine singular past active of مَانَ (māna)\n# مِنْتِ (minti) /min.ti/: second-person feminine singular past active of مَانَ (māna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["mintu", "māna", "minta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أمين",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "أمين (form I)\n# أَمِينُ (ʔamīnu) /ʔa.miː.nu/: first-person singular non-past active indicative of مَانَ (māna)\n# أَمِينَ (ʔamīna) /ʔa.miː.na/: first-person singular non-past active subjunctive of مَانَ (māna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔamīnu", "māna", "ʔamīna"]
+    },
+    {
+      "madde": "مانتا",
+      "tur": "verb",
+      "baslik": "مَانَتَا • (mānatā) (form I) /maː.na.taː/\n# third-person feminine dual past active of مَانَ (māna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["mānatā", "māna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أيمن",
+      "tur": "noun",
+      "etim_no": "3",
+      "baslik": "أَيْمُن • (ʔaymun) f pl",
+      "anlam": ["plural of يَمِين (yamīn)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["يَمِين"],
+      "okunus": ["ʔaymun"],
+      "ipa": ["/ʔaj.mun/"],
+      "bag": "asıl madde"
+    },
+    {
+      "madde": "يمين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يمين (form I)\n# يَمِينُ (yamīnu) /ja.miː.nu/: third-person masculine singular non-past active indicative of مَانَ (māna)\n# يَمِينَ (yamīna) /ja.miː.na/: third-person masculine singular non-past active subjunctive of مَانَ (māna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamīnu", "māna", "yamīna"]
+    },
+    {
+      "madde": "تمن",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تمن (form I)\n# تَمِنَّ (taminna) /ta.min.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of مَانَ (māna)\n# تَمِنْ (tamin) /ta.min/: inflection of مَانَ (māna):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taminna", "māna", "tamin"]
+    },
+    {
+      "madde": "يمن",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يمن (form I)\n# يَمِنَّ (yaminna) /ja.min.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of مَانَ (māna)\n# يَمِنْ (yamin) /ja.min/: third-person masculine singular non-past active jussive of مَانَ (māna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaminna", "māna", "yamin"]
+    },
+    {
+      "madde": "أمن",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "أَمِنْ • (ʔamin) (form I) /ʔa.min/\n# first-person singular non-past active jussive of مَانَ (māna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔamin", "māna"]
+    },
+    {
+      "madde": "أيمان",
+      "tur": "noun",
+      "baslik": "أَيْمَان • (ʔaymān) f pl",
+      "anlam": ["plural of يَمِين (yamīn)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["يَمِين"],
+      "okunus": ["ʔaymān"],
+      "ipa": ["/ʔaj.maːn/"],
+      "bag": "asıl madde",
+      "etimoloji": 1
+    },
+    {
+      "madde": "مينا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "مِينَا • (mīnā) (form I) /miː.naː/\n# second-person dual imperative of مَانَ (māna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["mīnā", "māna"]
+    },
+    {
+      "madde": "موانئ",
+      "tur": "noun",
+      "baslik": "مَوَانِئ • (mawāniʔ) m pl",
+      "anlam": ["plural of مِينَا (mīnā)", "plural of مِينَاء (mīnāʔ)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["مِينَا", "مِينَاء"],
+      "okunus": ["mawāniʔ"],
+      "bag": "asıl madde",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نمن",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "نَمِنْ • (namin) (form I) /na.min/\n# first-person plural non-past active jussive of مَانَ (māna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["namin", "māna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نمين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نمين (form I)\n# نَمِينُ (namīnu) /na.miː.nu/: first-person plural non-past active indicative of مَانَ (māna)\n# نَمِينَ (namīna) /na.miː.na/: first-person plural non-past active subjunctive of مَانَ (māna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["namīnu", "māna", "namīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "منا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "مِنَّا • (minnā) (form I) /min.naː/\n# first-person plural past active of مَانَ (māna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["minnā", "māna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "منتن",
+      "tur": "verb",
+      "baslik": "مِنْتُنَّ • (mintunna) (form I) /min.tun.na/\n# second-person feminine plural past active of مَانَ (māna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["mintunna", "māna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مانا",
+      "tur": "verb",
+      "baslik": "مَانَا • (mānā) (form I) /maː.naː/\n# third-person masculine dual past active of مَانَ (māna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["mānā", "māna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "منتما",
+      "tur": "verb",
+      "baslik": "مِنْتُمَا • (mintumā) (form I) /min.tu.maː/\n# second-person dual past active of مَانَ (māna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["mintumā", "māna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "منتم",
+      "tur": "verb",
+      "baslik": "مِنْتُمْ • (mintum) (form I) /min.tum/\n# second-person masculine plural past active of مَانَ (māna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["mintum", "māna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمين",
+      "tur": "verb",
+      "baslik": "تمين (form I)\n# تَمِينُ (tamīnu) /ta.miː.nu/: inflection of مَانَ (māna):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَمِينَ (tamīna) /ta.miː.na/: inflection of مَانَ (māna):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamīnu", "māna", "tamīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مانوا",
+      "tur": "verb",
+      "baslik": "مَانُوا • (mānū) (form I) /maː.nuː/\n# third-person masculine plural past active of مَانَ (māna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["mānū", "māna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمينان",
+      "tur": "verb",
+      "baslik": "تَمِينَانِ • (tamīnāni) (form I) /ta.miː.naː.ni/\n# inflection of مَانَ (māna):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamīnāni", "māna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمينين",
+      "tur": "verb",
+      "baslik": "تَمِينِينَ • (tamīnīna) (form I) /ta.miː.niː.na/\n# second-person feminine singular non-past active indicative of مَانَ (māna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamīnīna", "māna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمينون",
+      "tur": "verb",
+      "baslik": "تَمِينُونَ • (tamīnūna) (form I) /ta.miː.nuː.na/\n# second-person masculine plural non-past active indicative of مَانَ (māna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamīnūna", "māna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يمينان",
+      "tur": "verb",
+      "baslik": "يَمِينَانِ • (yamīnāni) (form I) /ja.miː.naː.ni/\n# third-person masculine dual non-past active indicative of مَانَ (māna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamīnāni", "māna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يمينون",
+      "tur": "verb",
+      "baslik": "يَمِينُونَ • (yamīnūna) (form I) /ja.miː.nuː.na/\n# third-person masculine plural non-past active indicative of مَانَ (māna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamīnūna", "māna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تميني",
+      "tur": "verb",
+      "baslik": "تَمِينِي • (tamīnī) (form I) /ta.miː.niː/\n# second-person feminine singular non-past active subjunctive/jussive of مَانَ (māna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamīnī", "māna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يمينوا",
+      "tur": "verb",
+      "baslik": "يَمِينُوا • (yamīnū) (form I) /ja.miː.nuː/\n# third-person masculine plural non-past active subjunctive/jussive of مَانَ (māna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamīnū", "māna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمينوا",
+      "tur": "verb",
+      "baslik": "تَمِينُوا • (tamīnū) (form I) /ta.miː.nuː/\n# second-person masculine plural non-past active subjunctive/jussive of مَانَ (māna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamīnū", "māna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمينا",
+      "tur": "verb",
+      "baslik": "تَمِينَا • (tamīnā) (form I) /ta.miː.naː/\n# inflection of مَانَ (māna):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamīnā", "māna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ميني",
+      "tur": "verb",
+      "baslik": "مِينِي • (mīnī) (form I) /miː.niː/\n# second-person feminine singular imperative of مَانَ (māna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["mīnī", "māna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يمينا",
+      "tur": "verb",
+      "baslik": "يَمِينَا • (yamīnā) (form I) /ja.miː.naː/\n# third-person masculine dual non-past active subjunctive/jussive of مَانَ (māna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamīnā", "māna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مينوا",
+      "tur": "verb",
+      "baslik": "مِينُوا • (mīnū) (form I) /miː.nuː/\n# second-person masculine plural imperative of مَانَ (māna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["mīnū", "māna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مانت",
+      "tur": "verb",
+      "baslik": "مَانَتْ • (mānat) (form I) /maː.nat/\n# third-person feminine singular past active of مَانَ (māna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["mānat", "māna"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "مان", "r7"]
+  ],
+  "mana": {
     "ince": "state.n.02",
     "orta": "noun.state",
     "ust": "hâl ve vasıf",
@@ -452,16 +331,11 @@
     "dayanak_tanim": "an auspicious state resulting from favorable outcomes",
     "synset_sayisi": 18
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "authorize.v.01",
     "commitment.n.04",
     "condition.n.01",
@@ -480,12 +354,10 @@
     "set.n.05",
     "substance.n.01"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

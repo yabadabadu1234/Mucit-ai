@@ -1,644 +1,509 @@
 {
   "kok": "ءقاد",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءقاد", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يقد",
-        "u": "يقد",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يقد (form IV)\n# يُقِدْ (yuqid) /ju.qid/: third-person masculine singular non-past active jussive of أَقَادَ (ʔaqāda)\n# يُقَدْ (yuqad) /ju.qad/: third-person masculine singular non-past passive jussive of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuqid", "ʔaqāda", "yuqad"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "نقد",
-        "u": "نقد",
-        "p": "verb",
-        "n": "4.2",
-        "h": "ar-verb form",
-        "e": "نقد (form IV)\n# نُقِدْ (nuqid) /nu.qid/: first-person plural non-past active jussive of أَقَادَ (ʔaqāda)\n# نُقَدْ (nuqad) /nu.qad/: first-person plural non-past passive jussive of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "s": [
-          ["nonlemma", "See the etymology of the corresponding lemma form."]
-        ],
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuqid", "ʔaqāda", "nuqad"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "أقد",
-        "u": "أقد",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "أقد (form IV)\n# أُقِدْ (ʔuqid) /ʔu.qid/: first-person singular non-past active jussive of أَقَادَ (ʔaqāda)\n# أُقَدْ (ʔuqad) /ʔu.qad/: first-person singular non-past passive jussive of أَقَادَ (ʔaqāda)\n# أَقِدْ (ʔaqid) /ʔa.qid/: second-person masculine singular imperative of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuqid", "ʔaqāda", "ʔuqad"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "يقاد",
-        "u": "يقاد",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يقاد (form IV)\n# يُقَادُ (yuqādu) /ju.qaː.du/: third-person masculine singular non-past passive indicative of أَقَادَ (ʔaqāda)\n# يُقَادَ (yuqāda) /ju.qaː.da/: third-person masculine singular non-past passive subjunctive of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuqādu", "ʔaqāda", "yuqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تقد",
-        "u": "تقد",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تقد (form IV)\n# تُقِدْ (tuqid) /tu.qid/: inflection of أَقَادَ (ʔaqāda):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُقَدْ (tuqad) /tu.qad/: inflection of أَقَادَ (ʔaqāda):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqid", "ʔaqāda", "tuqad"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تقاد",
-        "u": "تقاد",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تقاد (form IV)\n# تُقَادُ (tuqādu) /tu.qaː.du/: inflection of أَقَادَ (ʔaqāda):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُقَادَ (tuqāda) /tu.qaː.da/: inflection of أَقَادَ (ʔaqāda):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqādu", "ʔaqāda", "tuqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تقادين",
-        "u": "تقادين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُقَادِينَ • (tuqādīna) (form IV) /tu.qaː.diː.na/\n# second-person feminine singular non-past passive indicative of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqādīna", "ʔaqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تقادي",
-        "u": "تقادي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُقَادِي • (tuqādī) (form IV) /tu.qaː.diː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqādī", "ʔaqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "نقاد",
-        "u": "نقاد",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نقاد (form IV)\n# نُقَادُ (nuqādu) /nu.qaː.du/: first-person plural non-past passive indicative of أَقَادَ (ʔaqāda)\n# نُقَادَ (nuqāda) /nu.qaː.da/: first-person plural non-past passive subjunctive of أَقَادَ (ʔaqāda)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuqādu", "ʔaqāda", "nuqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تقادون",
-        "u": "تقادون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُقَادُونَ • (tuqādūna) (form IV) /tu.qaː.duː.na/\n# second-person masculine plural non-past passive indicative of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqādūna", "ʔaqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تقادوا",
-        "u": "تقادوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُقَادُوا • (tuqādū) (form IV) /tu.qaː.duː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqādū", "ʔaqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "يقادون",
-        "u": "يقادون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُقَادُونَ • (yuqādūna) (form IV) /ju.qaː.duː.na/\n# third-person masculine plural non-past passive indicative of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuqādūna", "ʔaqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "يقادوا",
-        "u": "يقادوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُقَادُوا • (yuqādū) (form IV) /ju.qaː.duː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuqādū", "ʔaqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تقدن",
-        "u": "تقدن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تقدن (form IV)\n# تُقِدْنَ (tuqidna) /tu.qid.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَقَادَ (ʔaqāda)\n# تُقَدْنَ (tuqadna) /tu.qad.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqidna", "ʔaqāda", "tuqadna"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "يقدن",
-        "u": "يقدن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يقدن (form IV)\n# يُقِدْنَ (yuqidna) /ju.qid.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَقَادَ (ʔaqāda)\n# يُقَدْنَ (yuqadna) /ju.qad.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuqidna", "ʔaqāda", "yuqadna"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "أقدت",
-        "u": "أقدت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أقدت (form IV)\n# أَقَدْتُ (ʔaqadtu) /ʔa.qad.tu/: first-person singular past active of أَقَادَ (ʔaqāda)\n# أَقَدْتَ (ʔaqadta) /ʔa.qad.ta/: second-person masculine singular past active of أَقَادَ (ʔaqāda)\n# أَقَدْتِ (ʔaqadti) /ʔa.qad.ti/: second-person feminine singular past active of أَقَادَ (ʔaqāda)\n# أُقِدْتُ (ʔuqidtu) /ʔu.qid.tu/: first-person singular past passive of أَقَادَ (ʔaqāda)\n# أُقِدْتَ ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqadtu", "ʔaqāda", "ʔaqadta"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "أقادت",
-        "u": "أقادت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَقَادَتْ • (ʔaqādat) (form IV) /ʔa.qaː.dat/\n# third-person feminine singular past active of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqādat", "ʔaqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "أقدتما",
-        "u": "أقدتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أقدتما (form IV)\n# أَقَدْتُمَا (ʔaqadtumā) /ʔa.qad.tu.maː/: second-person dual past active of أَقَادَ (ʔaqāda)\n# أُقِدْتُمَا (ʔuqidtumā) /ʔu.qid.tu.maː/: second-person dual past passive of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqadtumā", "ʔaqāda", "ʔuqidtumā"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "أقادتا",
-        "u": "أقادتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَقَادَتَا • (ʔaqādatā) (form IV) /ʔa.qaː.da.taː/\n# third-person feminine dual past active of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqādatā", "ʔaqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "أقادا",
-        "u": "أقادا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَقَادَا • (ʔaqādā) (form IV) /ʔa.qaː.daː/\n# third-person masculine dual past active of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqādā", "ʔaqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "أقدنا",
-        "u": "أقدنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أقدنا (form IV)\n# أَقَدْنَا (ʔaqadnā) /ʔa.qad.naː/: first-person plural past active of أَقَادَ (ʔaqāda)\n# أُقِدْنَا (ʔuqidnā) /ʔu.qid.naː/: first-person plural past passive of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqadnā", "ʔaqāda", "ʔuqidnā"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "أقادوا",
-        "u": "أقادوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَقَادُوا • (ʔaqādū) (form IV) /ʔa.qaː.duː/\n# third-person masculine plural past active of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqādū", "ʔaqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "أقدن",
-        "u": "أقدن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أقدن (form IV)\n# أَقَدْنَ (ʔaqadna) /ʔa.qad.na/: third-person feminine plural past active of أَقَادَ (ʔaqāda)\n# أُقِدْنَ (ʔuqidna) /ʔu.qid.na/: third-person feminine plural past passive of أَقَادَ (ʔaqāda)\n# أَقِدْنَ (ʔaqidna) /ʔa.qid.na/: second-person feminine plural imperative of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqadna", "ʔaqāda", "ʔuqidna"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "أقدتن",
-        "u": "أقدتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أقدتن (form IV)\n# أَقَدْتُنَّ (ʔaqadtunna) /ʔa.qad.tun.na/: second-person feminine plural past active of أَقَادَ (ʔaqāda)\n# أُقِدْتُنَّ (ʔuqidtunna) /ʔu.qid.tun.na/: second-person feminine plural past passive of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqadtunna", "ʔaqāda", "ʔuqidtunna"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "أقيد",
-        "u": "أقيد",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أقيد (form IV)\n# أُقِيدَ (ʔuqīda) /ʔu.qiː.da/: inflection of أَقَادَ (ʔaqāda):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُقِيدُ (ʔuqīdu) /ʔu.qiː.du/: first-person singular non-past active indicative of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuqīda", "ʔaqāda", "ʔuqīdu"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "أقدتم",
-        "u": "أقدتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أقدتم (form IV)\n# أَقَدْتُمْ (ʔaqadtum) /ʔa.qad.tum/: second-person masculine plural past active of أَقَادَ (ʔaqāda)\n# أُقِدْتُمْ (ʔuqidtum) /ʔu.qid.tum/: second-person masculine plural past passive of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqadtum", "ʔaqāda", "ʔuqidtum"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "أقيدا",
-        "u": "أقيدا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أقيدا (form IV)\n# أُقِيدَا (ʔuqīdā) /ʔu.qiː.daː/: third-person masculine dual past passive of أَقَادَ (ʔaqāda)\n# أَقِيدَا (ʔaqīdā) /ʔa.qiː.daː/: second-person dual imperative of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuqīdā", "ʔaqāda", "ʔaqīdā"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "أقيدت",
-        "u": "أقيدت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُقِيدَتْ • (ʔuqīdat) (form IV) /ʔu.qiː.dat/\n# third-person feminine singular past passive of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuqīdat", "ʔaqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "أقيدتا",
-        "u": "أقيدتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُقِيدَتَا • (ʔuqīdatā) (form IV) /ʔu.qiː.da.taː/\n# third-person feminine dual past passive of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuqīdatā", "ʔaqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "أقيدوا",
-        "u": "أقيدوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أقيدوا (form IV)\n# أُقِيدُوا (ʔuqīdū) /ʔu.qiː.duː/: third-person masculine plural past passive of أَقَادَ (ʔaqāda)\n# أَقِيدُوا (ʔaqīdū) /ʔa.qiː.duː/: second-person masculine plural imperative of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuqīdū", "ʔaqāda", "ʔaqīdū"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تقيدين",
-        "u": "تقيدين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُقِيدِينَ • (tuqīdīna) (form IV) /tu.qiː.diː.na/\n# second-person feminine singular non-past active indicative of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqīdīna", "ʔaqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تقيد",
-        "u": "تقيد",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تقيد (form IV)\n# تُقِيدُ (tuqīdu) /tu.qiː.du/: inflection of أَقَادَ (ʔaqāda):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُقِيدَ (tuqīda) /tu.qiː.da/: inflection of أَقَادَ (ʔaqāda):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqīdu", "ʔaqāda", "tuqīda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تقيدان",
-        "u": "تقيدان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُقِيدَانِ • (tuqīdāni) (form IV) /tu.qiː.daː.ni/\n# inflection of أَقَادَ (ʔaqāda):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqīdāni", "ʔaqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تقيدون",
-        "u": "تقيدون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُقِيدُونَ • (tuqīdūna) (form IV) /tu.qiː.duː.na/\n# second-person masculine plural non-past active indicative of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqīdūna", "ʔaqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "يقيد",
-        "u": "يقيد",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يقيد (form IV)\n# يُقِيدُ (yuqīdu) /ju.qiː.du/: third-person masculine singular non-past active indicative of أَقَادَ (ʔaqāda)\n# يُقِيدَ (yuqīda) /ju.qiː.da/: third-person masculine singular non-past active subjunctive of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuqīdu", "ʔaqāda", "yuqīda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "يقيدان",
-        "u": "يقيدان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُقِيدَانِ • (yuqīdāni) (form IV) /ju.qiː.daː.ni/\n# third-person masculine dual non-past active indicative of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuqīdāni", "ʔaqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تقادان",
-        "u": "تقادان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُقَادَانِ • (tuqādāni) (form IV) /tu.qaː.daː.ni/\n# inflection of أَقَادَ (ʔaqāda):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqādāni", "ʔaqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "نقيد",
-        "u": "نقيد",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نقيد (form IV)\n# نُقِيدُ (nuqīdu) /nu.qiː.du/: first-person plural non-past active indicative of أَقَادَ (ʔaqāda)\n# نُقِيدَ (nuqīda) /nu.qiː.da/: first-person plural non-past active subjunctive of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuqīdu", "ʔaqāda", "nuqīda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تقيدي",
-        "u": "تقيدي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُقِيدِي • (tuqīdī) (form IV) /tu.qiː.diː/\n# second-person feminine singular non-past active subjunctive/jussive of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqīdī", "ʔaqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تقيدا",
-        "u": "تقيدا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُقِيدَا • (tuqīdā) (form IV) /tu.qiː.daː/\n# inflection of أَقَادَ (ʔaqāda):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqīdā", "ʔaqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "يقادان",
-        "u": "يقادان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُقَادَانِ • (yuqādāni) (form IV) /ju.qaː.daː.ni/\n# third-person masculine dual non-past passive indicative of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuqādāni", "ʔaqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "يقيدا",
-        "u": "يقيدا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُقِيدَا • (yuqīdā) (form IV) /ju.qiː.daː/\n# third-person masculine dual non-past active subjunctive/jussive of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuqīdā", "ʔaqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "يقيدون",
-        "u": "يقيدون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُقِيدُونَ • (yuqīdūna) (form IV) /ju.qiː.duː.na/\n# third-person masculine plural non-past active indicative of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuqīdūna", "ʔaqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تقيدوا",
-        "u": "تقيدوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُقِيدُوا • (tuqīdū) (form IV) /tu.qiː.duː/\n# second-person masculine plural non-past active subjunctive/jussive of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqīdū", "ʔaqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تقادا",
-        "u": "تقادا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُقَادَا • (tuqādā) (form IV) /tu.qaː.daː/\n# inflection of أَقَادَ (ʔaqāda):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqādā", "ʔaqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "يقيدوا",
-        "u": "يقيدوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُقِيدُوا • (yuqīdū) (form IV) /ju.qiː.duː/\n# third-person masculine plural non-past active subjunctive/jussive of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuqīdū", "ʔaqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "يقادا",
-        "u": "يقادا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُقَادَا • (yuqādā) (form IV) /ju.qaː.daː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuqādā", "ʔaqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      },
-      {
-        "w": "أقيدي",
-        "u": "أقيدي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَقِيدِي • (ʔaqīdī) (form IV) /ʔa.qiː.diː/\n# second-person feminine singular imperative of أَقَادَ (ʔaqāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqīdī", "ʔaqāda"],
-        "k": "أقاد",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "قد",
+  "ses": {
     "harf": "ء",
+    "fasil": "قد",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "يقد",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يقد (form IV)\n# يُقِدْ (yuqid) /ju.qid/: third-person masculine singular non-past active jussive of أَقَادَ (ʔaqāda)\n# يُقَدْ (yuqad) /ju.qad/: third-person masculine singular non-past passive jussive of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuqid", "ʔaqāda", "yuqad"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نقد",
+      "tur": "verb",
+      "etim_no": "4.2",
+      "baslik": "نقد (form IV)\n# نُقِدْ (nuqid) /nu.qid/: first-person plural non-past active jussive of أَقَادَ (ʔaqāda)\n# نُقَدْ (nuqad) /nu.qad/: first-person plural non-past passive jussive of أَقَادَ (ʔaqāda)",
+      "etim_sablon": [
+        ["nonlemma", "See the etymology of the corresponding lemma form."]
+      ],
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuqid", "ʔaqāda", "nuqad"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقد",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "أقد (form IV)\n# أُقِدْ (ʔuqid) /ʔu.qid/: first-person singular non-past active jussive of أَقَادَ (ʔaqāda)\n# أُقَدْ (ʔuqad) /ʔu.qad/: first-person singular non-past passive jussive of أَقَادَ (ʔaqāda)\n# أَقِدْ (ʔaqid) /ʔa.qid/: second-person masculine singular imperative of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuqid", "ʔaqāda", "ʔuqad"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقاد",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يقاد (form IV)\n# يُقَادُ (yuqādu) /ju.qaː.du/: third-person masculine singular non-past passive indicative of أَقَادَ (ʔaqāda)\n# يُقَادَ (yuqāda) /ju.qaː.da/: third-person masculine singular non-past passive subjunctive of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuqādu", "ʔaqāda", "yuqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقد",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تقد (form IV)\n# تُقِدْ (tuqid) /tu.qid/: inflection of أَقَادَ (ʔaqāda):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُقَدْ (tuqad) /tu.qad/: inflection of أَقَادَ (ʔaqāda):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqid", "ʔaqāda", "tuqad"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقاد",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تقاد (form IV)\n# تُقَادُ (tuqādu) /tu.qaː.du/: inflection of أَقَادَ (ʔaqāda):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُقَادَ (tuqāda) /tu.qaː.da/: inflection of أَقَادَ (ʔaqāda):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqādu", "ʔaqāda", "tuqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقادين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُقَادِينَ • (tuqādīna) (form IV) /tu.qaː.diː.na/\n# second-person feminine singular non-past passive indicative of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqādīna", "ʔaqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقادي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُقَادِي • (tuqādī) (form IV) /tu.qaː.diː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqādī", "ʔaqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نقاد",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نقاد (form IV)\n# نُقَادُ (nuqādu) /nu.qaː.du/: first-person plural non-past passive indicative of أَقَادَ (ʔaqāda)\n# نُقَادَ (nuqāda) /nu.qaː.da/: first-person plural non-past passive subjunctive of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuqādu", "ʔaqāda", "nuqāda"],
+      "kok_yazilis": "أقاد"
+    },
+    {
+      "madde": "تقادون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُقَادُونَ • (tuqādūna) (form IV) /tu.qaː.duː.na/\n# second-person masculine plural non-past passive indicative of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqādūna", "ʔaqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقادوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُقَادُوا • (tuqādū) (form IV) /tu.qaː.duː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqādū", "ʔaqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقادون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُقَادُونَ • (yuqādūna) (form IV) /ju.qaː.duː.na/\n# third-person masculine plural non-past passive indicative of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuqādūna", "ʔaqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقادوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُقَادُوا • (yuqādū) (form IV) /ju.qaː.duː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuqādū", "ʔaqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقدن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تقدن (form IV)\n# تُقِدْنَ (tuqidna) /tu.qid.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَقَادَ (ʔaqāda)\n# تُقَدْنَ (tuqadna) /tu.qad.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqidna", "ʔaqāda", "tuqadna"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقدن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يقدن (form IV)\n# يُقِدْنَ (yuqidna) /ju.qid.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَقَادَ (ʔaqāda)\n# يُقَدْنَ (yuqadna) /ju.qad.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuqidna", "ʔaqāda", "yuqadna"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقدت",
+      "tur": "verb",
+      "baslik": "أقدت (form IV)\n# أَقَدْتُ (ʔaqadtu) /ʔa.qad.tu/: first-person singular past active of أَقَادَ (ʔaqāda)\n# أَقَدْتَ (ʔaqadta) /ʔa.qad.ta/: second-person masculine singular past active of أَقَادَ (ʔaqāda)\n# أَقَدْتِ (ʔaqadti) /ʔa.qad.ti/: second-person feminine singular past active of أَقَادَ (ʔaqāda)\n# أُقِدْتُ (ʔuqidtu) /ʔu.qid.tu/: first-person singular past passive of أَقَادَ (ʔaqāda)\n# أُقِدْتَ ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqadtu", "ʔaqāda", "ʔaqadta"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقادت",
+      "tur": "verb",
+      "baslik": "أَقَادَتْ • (ʔaqādat) (form IV) /ʔa.qaː.dat/\n# third-person feminine singular past active of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqādat", "ʔaqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقدتما",
+      "tur": "verb",
+      "baslik": "أقدتما (form IV)\n# أَقَدْتُمَا (ʔaqadtumā) /ʔa.qad.tu.maː/: second-person dual past active of أَقَادَ (ʔaqāda)\n# أُقِدْتُمَا (ʔuqidtumā) /ʔu.qid.tu.maː/: second-person dual past passive of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqadtumā", "ʔaqāda", "ʔuqidtumā"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقادتا",
+      "tur": "verb",
+      "baslik": "أَقَادَتَا • (ʔaqādatā) (form IV) /ʔa.qaː.da.taː/\n# third-person feminine dual past active of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqādatā", "ʔaqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقادا",
+      "tur": "verb",
+      "baslik": "أَقَادَا • (ʔaqādā) (form IV) /ʔa.qaː.daː/\n# third-person masculine dual past active of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqādā", "ʔaqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقدنا",
+      "tur": "verb",
+      "baslik": "أقدنا (form IV)\n# أَقَدْنَا (ʔaqadnā) /ʔa.qad.naː/: first-person plural past active of أَقَادَ (ʔaqāda)\n# أُقِدْنَا (ʔuqidnā) /ʔu.qid.naː/: first-person plural past passive of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqadnā", "ʔaqāda", "ʔuqidnā"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقادوا",
+      "tur": "verb",
+      "baslik": "أَقَادُوا • (ʔaqādū) (form IV) /ʔa.qaː.duː/\n# third-person masculine plural past active of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqādū", "ʔaqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقدن",
+      "tur": "verb",
+      "baslik": "أقدن (form IV)\n# أَقَدْنَ (ʔaqadna) /ʔa.qad.na/: third-person feminine plural past active of أَقَادَ (ʔaqāda)\n# أُقِدْنَ (ʔuqidna) /ʔu.qid.na/: third-person feminine plural past passive of أَقَادَ (ʔaqāda)\n# أَقِدْنَ (ʔaqidna) /ʔa.qid.na/: second-person feminine plural imperative of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqadna", "ʔaqāda", "ʔuqidna"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقدتن",
+      "tur": "verb",
+      "baslik": "أقدتن (form IV)\n# أَقَدْتُنَّ (ʔaqadtunna) /ʔa.qad.tun.na/: second-person feminine plural past active of أَقَادَ (ʔaqāda)\n# أُقِدْتُنَّ (ʔuqidtunna) /ʔu.qid.tun.na/: second-person feminine plural past passive of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqadtunna", "ʔaqāda", "ʔuqidtunna"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقيد",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أقيد (form IV)\n# أُقِيدَ (ʔuqīda) /ʔu.qiː.da/: inflection of أَقَادَ (ʔaqāda):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُقِيدُ (ʔuqīdu) /ʔu.qiː.du/: first-person singular non-past active indicative of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuqīda", "ʔaqāda", "ʔuqīdu"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقدتم",
+      "tur": "verb",
+      "baslik": "أقدتم (form IV)\n# أَقَدْتُمْ (ʔaqadtum) /ʔa.qad.tum/: second-person masculine plural past active of أَقَادَ (ʔaqāda)\n# أُقِدْتُمْ (ʔuqidtum) /ʔu.qid.tum/: second-person masculine plural past passive of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqadtum", "ʔaqāda", "ʔuqidtum"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقيدا",
+      "tur": "verb",
+      "baslik": "أقيدا (form IV)\n# أُقِيدَا (ʔuqīdā) /ʔu.qiː.daː/: third-person masculine dual past passive of أَقَادَ (ʔaqāda)\n# أَقِيدَا (ʔaqīdā) /ʔa.qiː.daː/: second-person dual imperative of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuqīdā", "ʔaqāda", "ʔaqīdā"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقيدت",
+      "tur": "verb",
+      "baslik": "أُقِيدَتْ • (ʔuqīdat) (form IV) /ʔu.qiː.dat/\n# third-person feminine singular past passive of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuqīdat", "ʔaqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقيدتا",
+      "tur": "verb",
+      "baslik": "أُقِيدَتَا • (ʔuqīdatā) (form IV) /ʔu.qiː.da.taː/\n# third-person feminine dual past passive of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuqīdatā", "ʔaqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقيدوا",
+      "tur": "verb",
+      "baslik": "أقيدوا (form IV)\n# أُقِيدُوا (ʔuqīdū) /ʔu.qiː.duː/: third-person masculine plural past passive of أَقَادَ (ʔaqāda)\n# أَقِيدُوا (ʔaqīdū) /ʔa.qiː.duː/: second-person masculine plural imperative of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuqīdū", "ʔaqāda", "ʔaqīdū"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقيدين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُقِيدِينَ • (tuqīdīna) (form IV) /tu.qiː.diː.na/\n# second-person feminine singular non-past active indicative of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqīdīna", "ʔaqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقيد",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تقيد (form IV)\n# تُقِيدُ (tuqīdu) /tu.qiː.du/: inflection of أَقَادَ (ʔaqāda):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُقِيدَ (tuqīda) /tu.qiː.da/: inflection of أَقَادَ (ʔaqāda):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqīdu", "ʔaqāda", "tuqīda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقيدان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُقِيدَانِ • (tuqīdāni) (form IV) /tu.qiː.daː.ni/\n# inflection of أَقَادَ (ʔaqāda):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqīdāni", "ʔaqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقيدون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُقِيدُونَ • (tuqīdūna) (form IV) /tu.qiː.duː.na/\n# second-person masculine plural non-past active indicative of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqīdūna", "ʔaqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقيد",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يقيد (form IV)\n# يُقِيدُ (yuqīdu) /ju.qiː.du/: third-person masculine singular non-past active indicative of أَقَادَ (ʔaqāda)\n# يُقِيدَ (yuqīda) /ju.qiː.da/: third-person masculine singular non-past active subjunctive of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuqīdu", "ʔaqāda", "yuqīda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقيدان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُقِيدَانِ • (yuqīdāni) (form IV) /ju.qiː.daː.ni/\n# third-person masculine dual non-past active indicative of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuqīdāni", "ʔaqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقادان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُقَادَانِ • (tuqādāni) (form IV) /tu.qaː.daː.ni/\n# inflection of أَقَادَ (ʔaqāda):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqādāni", "ʔaqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نقيد",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نقيد (form IV)\n# نُقِيدُ (nuqīdu) /nu.qiː.du/: first-person plural non-past active indicative of أَقَادَ (ʔaqāda)\n# نُقِيدَ (nuqīda) /nu.qiː.da/: first-person plural non-past active subjunctive of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuqīdu", "ʔaqāda", "nuqīda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقيدي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُقِيدِي • (tuqīdī) (form IV) /tu.qiː.diː/\n# second-person feminine singular non-past active subjunctive/jussive of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqīdī", "ʔaqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقيدا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُقِيدَا • (tuqīdā) (form IV) /tu.qiː.daː/\n# inflection of أَقَادَ (ʔaqāda):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqīdā", "ʔaqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقادان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُقَادَانِ • (yuqādāni) (form IV) /ju.qaː.daː.ni/\n# third-person masculine dual non-past passive indicative of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuqādāni", "ʔaqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقيدا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُقِيدَا • (yuqīdā) (form IV) /ju.qiː.daː/\n# third-person masculine dual non-past active subjunctive/jussive of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuqīdā", "ʔaqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقيدون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُقِيدُونَ • (yuqīdūna) (form IV) /ju.qiː.duː.na/\n# third-person masculine plural non-past active indicative of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuqīdūna", "ʔaqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقيدوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُقِيدُوا • (tuqīdū) (form IV) /tu.qiː.duː/\n# second-person masculine plural non-past active subjunctive/jussive of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqīdū", "ʔaqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقادا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُقَادَا • (tuqādā) (form IV) /tu.qaː.daː/\n# inflection of أَقَادَ (ʔaqāda):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqādā", "ʔaqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقيدوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُقِيدُوا • (yuqīdū) (form IV) /ju.qiː.duː/\n# third-person masculine plural non-past active subjunctive/jussive of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuqīdū", "ʔaqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقادا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُقَادَا • (yuqādā) (form IV) /ju.qaː.daː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuqādā", "ʔaqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقيدي",
+      "tur": "verb",
+      "baslik": "أَقِيدِي • (ʔaqīdī) (form IV) /ʔa.qiː.diː/\n# second-person feminine singular imperative of أَقَادَ (ʔaqāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqīdī", "ʔaqāda"],
+      "kok_yazilis": "أقاد",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ءقاد", "r6"]
+  ],
+  "mana": {
     "ince": "system_of_measurement.n.01",
     "orta": "noun.possession",
     "ust": "insan ve toplum",
@@ -646,22 +511,15 @@
     "dayanak_tanim": "the most common medium of exchange; functions as legal tender",
     "synset_sayisi": 5
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["disapproval.n.02", "knock.v.06", "observe.v.04", "standard.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["disapproval.n.02", "knock.v.06", "observe.v.04", "standard.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

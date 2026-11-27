@@ -1,381 +1,301 @@
 {
   "kok": "تءلم",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تءلم", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تؤلم",
-        "u": "تؤلم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُؤُلِّمَ • (tuʔullima) (form V) /tu.ʔul.li.ma/\n# third-person masculine singular past passive of تَأَلَّمَ (taʔallama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tuʔullima", "taʔallama"],
-        "k": "تألم",
-        "yol": "kök"
-      },
-      {
-        "w": "تألمي",
-        "u": "تألمي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَأَلَّمِي • (taʔallamī) (form V) /ta.ʔal.la.miː/\n# second-person feminine singular imperative of تَأَلَّمَ (taʔallama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔallamī", "taʔallama"],
-        "k": "تألم",
-        "yol": "kök"
-      },
-      {
-        "w": "تألموا",
-        "u": "تألموا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَأَلَّمُوا • (taʔallamū) (form V) /ta.ʔal.la.muː/\n# inflection of تَأَلَّمَ (taʔallama):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔallamū", "taʔallama"],
-        "k": "تألم",
-        "yol": "kök"
-      },
-      {
-        "w": "تألمن",
-        "u": "تألمن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَأَلَّمْنَ • (taʔallamna) (form V) /ta.ʔal.lam.na/\n# inflection of تَأَلَّمَ (taʔallama):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔallamna", "taʔallama"],
-        "k": "تألم",
-        "yol": "kök"
-      },
-      {
-        "w": "تألما",
-        "u": "تألما",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَأَلَّمَا • (taʔallamā) (form V) /ta.ʔal.la.maː/\n# inflection of تَأَلَّمَ (taʔallama):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔallamā", "taʔallama"],
-        "k": "تألم",
-        "yol": "kök"
-      },
-      {
-        "w": "تألمنا",
-        "u": "تألمنا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَأَلَّمْنَا • (taʔallamnā) (form V) /ta.ʔal.lam.naː/\n# first-person plural past active of تَأَلَّمَ (taʔallama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔallamnā", "taʔallama"],
-        "k": "تألم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتألمن",
-        "u": "تتألمن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَتَأَلَّمْنَ • (tataʔallamna) (form V) /ta.ta.ʔal.lam.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَأَلَّمَ (taʔallama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔallamna", "taʔallama"],
-        "k": "تألم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتألمن",
-        "u": "يتألمن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَتَأَلَّمْنَ • (yataʔallamna) (form V) /ja.ta.ʔal.lam.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَأَلَّمَ (taʔallama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔallamna", "taʔallama"],
-        "k": "تألم",
-        "yol": "kök"
-      },
-      {
-        "w": "تألمت",
-        "u": "تألمت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تألمت (form V)\n# تَأَلَّمْتُ (taʔallamtu) /ta.ʔal.lam.tu/: first-person singular past active of تَأَلَّمَ (taʔallama)\n# تَأَلَّمْتَ (taʔallamta) /ta.ʔal.lam.ta/: second-person masculine singular past active of تَأَلَّمَ (taʔallama)\n# تَأَلَّمْتِ (taʔallamti) /ta.ʔal.lam.ti/: second-person feminine singular past active of تَأَلَّمَ (taʔallama)\n# تَأَلَّمَتْ (taʔallamat) /ta.ʔal.la.mat/: third-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔallamtu", "taʔallama", "taʔallamta"],
-        "k": "تألم",
-        "yol": "kök"
-      },
-      {
-        "w": "تألمتما",
-        "u": "تألمتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَلَّمْتُمَا • (taʔallamtumā) (form V) /ta.ʔal.lam.tu.maː/\n# second-person dual past active of تَأَلَّمَ (taʔallama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔallamtumā", "taʔallama"],
-        "k": "تألم",
-        "yol": "kök"
-      },
-      {
-        "w": "تألمتا",
-        "u": "تألمتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَلَّمَتَا • (taʔallamatā) (form V) /ta.ʔal.la.ma.taː/\n# third-person feminine dual past active of تَأَلَّمَ (taʔallama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔallamatā", "taʔallama"],
-        "k": "تألم",
-        "yol": "kök"
-      },
-      {
-        "w": "تألمتم",
-        "u": "تألمتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَلَّمْتُمْ • (taʔallamtum) (form V) /ta.ʔal.lam.tum/\n# second-person masculine plural past active of تَأَلَّمَ (taʔallama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔallamtum", "taʔallama"],
-        "k": "تألم",
-        "yol": "kök"
-      },
-      {
-        "w": "تألمتن",
-        "u": "تألمتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَلَّمْتُنَّ • (taʔallamtunna) (form V) /ta.ʔal.lam.tun.na/\n# second-person feminine plural past active of تَأَلَّمَ (taʔallama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔallamtunna", "taʔallama"],
-        "k": "تألم",
-        "yol": "kök"
-      },
-      {
-        "w": "أتألم",
-        "u": "أتألم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتألم (form V)\n# أَتَأَلَّمُ (ʔataʔallamu) /ʔa.ta.ʔal.la.mu/: first-person singular non-past active indicative of تَأَلَّمَ (taʔallama)\n# أَتَأَلَّمَ (ʔataʔallama) /ʔa.ta.ʔal.la.ma/: first-person singular non-past active subjunctive of تَأَلَّمَ (taʔallama)\n# أَتَأَلَّمْ (ʔataʔallam) /ʔa.ta.ʔal.lam/: first-person singular non-past active jussive of تَأَلَّمَ (taʔallama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔataʔallamu", "taʔallama", "ʔataʔallama"],
-        "k": "تألم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتألمين",
-        "u": "تتألمين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَلَّمِينَ • (tataʔallamīna) (form V) /ta.ta.ʔal.la.miː.na/\n# second-person feminine singular non-past active indicative of تَأَلَّمَ (taʔallama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔallamīna", "taʔallama"],
-        "k": "تألم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتألم",
-        "u": "تتألم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتألم (form V)\n# تَتَأَلَّمُ (tataʔallamu) /ta.ta.ʔal.la.mu/: inflection of تَأَلَّمَ (taʔallama):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَأَلَّمَ (tataʔallama) /ta.ta.ʔal.la.ma/: inflection of تَأَلَّمَ (taʔallama):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔallamu", "taʔallama", "tataʔallama"],
-        "k": "تألم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتألم",
-        "u": "يتألم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتألم (form V)\n# يَتَأَلَّمُ (yataʔallamu) /ja.ta.ʔal.la.mu/: third-person masculine singular non-past active indicative of تَأَلَّمَ (taʔallama)\n# يُتَأَلَّمُ (yutaʔallamu) /ju.ta.ʔal.la.mu/: third-person masculine singular non-past passive indicative of تَأَلَّمَ (taʔallama)\n# يَتَأَلَّمَ (yataʔallama) /ja.ta.ʔal.la.ma/: third-person masculine singular non-past active subjunctive of تَأَلَّمَ (t",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔallamu", "taʔallama", "yutaʔallamu"],
-        "k": "تألم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتألمان",
-        "u": "تتألمان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَلَّمَانِ • (tataʔallamāni) (form V) /ta.ta.ʔal.la.maː.ni/\n# inflection of تَأَلَّمَ (taʔallama):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔallamāni", "taʔallama"],
-        "k": "تألم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتألمون",
-        "u": "تتألمون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَلَّمُونَ • (tataʔallamūna) (form V) /ta.ta.ʔal.la.muː.na/\n# second-person masculine plural non-past active indicative of تَأَلَّمَ (taʔallama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔallamūna", "taʔallama"],
-        "k": "تألم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتألمان",
-        "u": "يتألمان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَأَلَّمَانِ • (yataʔallamāni) (form V) /ja.ta.ʔal.la.maː.ni/\n# third-person masculine dual non-past active indicative of تَأَلَّمَ (taʔallama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔallamāni", "taʔallama"],
-        "k": "تألم",
-        "yol": "kök"
-      },
-      {
-        "w": "نتألم",
-        "u": "نتألم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتألم (form V)\n# نَتَأَلَّمُ (nataʔallamu) /na.ta.ʔal.la.mu/: first-person plural non-past active indicative of تَأَلَّمَ (taʔallama)\n# نَتَأَلَّمَ (nataʔallama) /na.ta.ʔal.la.ma/: first-person plural non-past active subjunctive of تَأَلَّمَ (taʔallama)\n# نَتَأَلَّمْ (nataʔallam) /na.ta.ʔal.lam/: first-person plural non-past active jussive of تَأَلَّمَ (taʔallama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["nataʔallamu", "taʔallama", "nataʔallama"],
-        "k": "تألم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتألمون",
-        "u": "يتألمون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَأَلَّمُونَ • (yataʔallamūna) (form V) /ja.ta.ʔal.la.muː.na/\n# third-person masculine plural non-past active indicative of تَأَلَّمَ (taʔallama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔallamūna", "taʔallama"],
-        "k": "تألم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتألمي",
-        "u": "تتألمي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَلَّمِي • (tataʔallamī) (form V) /ta.ta.ʔal.la.miː/\n# second-person feminine singular non-past active subjunctive/jussive of تَأَلَّمَ (taʔallama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔallamī", "taʔallama"],
-        "k": "تألم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتألما",
-        "u": "تتألما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَلَّمَا • (tataʔallamā) (form V) /ta.ta.ʔal.la.maː/\n# inflection of تَأَلَّمَ (taʔallama):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔallamā", "taʔallama"],
-        "k": "تألم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتألما",
-        "u": "يتألما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَأَلَّمَا • (yataʔallamā) (form V) /ja.ta.ʔal.la.maː/\n# third-person masculine dual non-past active subjunctive/jussive of تَأَلَّمَ (taʔallama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔallamā", "taʔallama"],
-        "k": "تألم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتألموا",
-        "u": "يتألموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَأَلَّمُوا • (yataʔallamū) (form V) /ja.ta.ʔal.la.muː/\n# third-person masculine plural non-past active subjunctive/jussive of تَأَلَّمَ (taʔallama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔallamū", "taʔallama"],
-        "k": "تألم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتألموا",
-        "u": "تتألموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَلَّمُوا • (tataʔallamū) (form V) /ta.ta.ʔal.la.muː/\n# second-person masculine plural non-past active subjunctive/jussive of تَأَلَّمَ (taʔallama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔallamū", "taʔallama"],
-        "k": "تألم",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تل",
+  "ses": {
     "harf": "ت",
+    "fasil": "تل",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تؤلم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُؤُلِّمَ • (tuʔullima) (form V) /tu.ʔul.li.ma/\n# third-person masculine singular past passive of تَأَلَّمَ (taʔallama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tuʔullima", "taʔallama"],
+      "kok_yazilis": "تألم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تألمي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَأَلَّمِي • (taʔallamī) (form V) /ta.ʔal.la.miː/\n# second-person feminine singular imperative of تَأَلَّمَ (taʔallama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔallamī", "taʔallama"],
+      "kok_yazilis": "تألم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تألموا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَأَلَّمُوا • (taʔallamū) (form V) /ta.ʔal.la.muː/\n# inflection of تَأَلَّمَ (taʔallama):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔallamū", "taʔallama"],
+      "kok_yazilis": "تألم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تألمن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَأَلَّمْنَ • (taʔallamna) (form V) /ta.ʔal.lam.na/\n# inflection of تَأَلَّمَ (taʔallama):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔallamna", "taʔallama"],
+      "kok_yazilis": "تألم"
+    },
+    {
+      "madde": "تألما",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَأَلَّمَا • (taʔallamā) (form V) /ta.ʔal.la.maː/\n# inflection of تَأَلَّمَ (taʔallama):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔallamā", "taʔallama"],
+      "kok_yazilis": "تألم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تألمنا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَأَلَّمْنَا • (taʔallamnā) (form V) /ta.ʔal.lam.naː/\n# first-person plural past active of تَأَلَّمَ (taʔallama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔallamnā", "taʔallama"],
+      "kok_yazilis": "تألم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتألمن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَتَأَلَّمْنَ • (tataʔallamna) (form V) /ta.ta.ʔal.lam.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَأَلَّمَ (taʔallama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔallamna", "taʔallama"],
+      "kok_yazilis": "تألم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتألمن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَتَأَلَّمْنَ • (yataʔallamna) (form V) /ja.ta.ʔal.lam.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَأَلَّمَ (taʔallama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔallamna", "taʔallama"],
+      "kok_yazilis": "تألم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تألمت",
+      "tur": "verb",
+      "baslik": "تألمت (form V)\n# تَأَلَّمْتُ (taʔallamtu) /ta.ʔal.lam.tu/: first-person singular past active of تَأَلَّمَ (taʔallama)\n# تَأَلَّمْتَ (taʔallamta) /ta.ʔal.lam.ta/: second-person masculine singular past active of تَأَلَّمَ (taʔallama)\n# تَأَلَّمْتِ (taʔallamti) /ta.ʔal.lam.ti/: second-person feminine singular past active of تَأَلَّمَ (taʔallama)\n# تَأَلَّمَتْ (taʔallamat) /ta.ʔal.la.mat/: third-perso",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔallamtu", "taʔallama", "taʔallamta"],
+      "kok_yazilis": "تألم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تألمتما",
+      "tur": "verb",
+      "baslik": "تَأَلَّمْتُمَا • (taʔallamtumā) (form V) /ta.ʔal.lam.tu.maː/\n# second-person dual past active of تَأَلَّمَ (taʔallama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔallamtumā", "taʔallama"],
+      "kok_yazilis": "تألم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تألمتا",
+      "tur": "verb",
+      "baslik": "تَأَلَّمَتَا • (taʔallamatā) (form V) /ta.ʔal.la.ma.taː/\n# third-person feminine dual past active of تَأَلَّمَ (taʔallama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔallamatā", "taʔallama"],
+      "kok_yazilis": "تألم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تألمتم",
+      "tur": "verb",
+      "baslik": "تَأَلَّمْتُمْ • (taʔallamtum) (form V) /ta.ʔal.lam.tum/\n# second-person masculine plural past active of تَأَلَّمَ (taʔallama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔallamtum", "taʔallama"],
+      "kok_yazilis": "تألم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تألمتن",
+      "tur": "verb",
+      "baslik": "تَأَلَّمْتُنَّ • (taʔallamtunna) (form V) /ta.ʔal.lam.tun.na/\n# second-person feminine plural past active of تَأَلَّمَ (taʔallama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔallamtunna", "taʔallama"],
+      "kok_yazilis": "تألم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتألم",
+      "tur": "verb",
+      "baslik": "أتألم (form V)\n# أَتَأَلَّمُ (ʔataʔallamu) /ʔa.ta.ʔal.la.mu/: first-person singular non-past active indicative of تَأَلَّمَ (taʔallama)\n# أَتَأَلَّمَ (ʔataʔallama) /ʔa.ta.ʔal.la.ma/: first-person singular non-past active subjunctive of تَأَلَّمَ (taʔallama)\n# أَتَأَلَّمْ (ʔataʔallam) /ʔa.ta.ʔal.lam/: first-person singular non-past active jussive of تَأَلَّمَ (taʔallama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔataʔallamu", "taʔallama", "ʔataʔallama"],
+      "kok_yazilis": "تألم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتألمين",
+      "tur": "verb",
+      "baslik": "تَتَأَلَّمِينَ • (tataʔallamīna) (form V) /ta.ta.ʔal.la.miː.na/\n# second-person feminine singular non-past active indicative of تَأَلَّمَ (taʔallama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔallamīna", "taʔallama"],
+      "kok_yazilis": "تألم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتألم",
+      "tur": "verb",
+      "baslik": "تتألم (form V)\n# تَتَأَلَّمُ (tataʔallamu) /ta.ta.ʔal.la.mu/: inflection of تَأَلَّمَ (taʔallama):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَأَلَّمَ (tataʔallama) /ta.ta.ʔal.la.ma/: inflection of تَأَلَّمَ (taʔallama):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔallamu", "taʔallama", "tataʔallama"],
+      "kok_yazilis": "تألم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتألم",
+      "tur": "verb",
+      "baslik": "يتألم (form V)\n# يَتَأَلَّمُ (yataʔallamu) /ja.ta.ʔal.la.mu/: third-person masculine singular non-past active indicative of تَأَلَّمَ (taʔallama)\n# يُتَأَلَّمُ (yutaʔallamu) /ju.ta.ʔal.la.mu/: third-person masculine singular non-past passive indicative of تَأَلَّمَ (taʔallama)\n# يَتَأَلَّمَ (yataʔallama) /ja.ta.ʔal.la.ma/: third-person masculine singular non-past active subjunctive of تَأَلَّمَ (t",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔallamu", "taʔallama", "yutaʔallamu"],
+      "kok_yazilis": "تألم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتألمان",
+      "tur": "verb",
+      "baslik": "تَتَأَلَّمَانِ • (tataʔallamāni) (form V) /ta.ta.ʔal.la.maː.ni/\n# inflection of تَأَلَّمَ (taʔallama):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔallamāni", "taʔallama"],
+      "kok_yazilis": "تألم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتألمون",
+      "tur": "verb",
+      "baslik": "تَتَأَلَّمُونَ • (tataʔallamūna) (form V) /ta.ta.ʔal.la.muː.na/\n# second-person masculine plural non-past active indicative of تَأَلَّمَ (taʔallama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔallamūna", "taʔallama"],
+      "kok_yazilis": "تألم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتألمان",
+      "tur": "verb",
+      "baslik": "يَتَأَلَّمَانِ • (yataʔallamāni) (form V) /ja.ta.ʔal.la.maː.ni/\n# third-person masculine dual non-past active indicative of تَأَلَّمَ (taʔallama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔallamāni", "taʔallama"],
+      "kok_yazilis": "تألم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتألم",
+      "tur": "verb",
+      "baslik": "نتألم (form V)\n# نَتَأَلَّمُ (nataʔallamu) /na.ta.ʔal.la.mu/: first-person plural non-past active indicative of تَأَلَّمَ (taʔallama)\n# نَتَأَلَّمَ (nataʔallama) /na.ta.ʔal.la.ma/: first-person plural non-past active subjunctive of تَأَلَّمَ (taʔallama)\n# نَتَأَلَّمْ (nataʔallam) /na.ta.ʔal.lam/: first-person plural non-past active jussive of تَأَلَّمَ (taʔallama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["nataʔallamu", "taʔallama", "nataʔallama"],
+      "kok_yazilis": "تألم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتألمون",
+      "tur": "verb",
+      "baslik": "يَتَأَلَّمُونَ • (yataʔallamūna) (form V) /ja.ta.ʔal.la.muː.na/\n# third-person masculine plural non-past active indicative of تَأَلَّمَ (taʔallama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔallamūna", "taʔallama"],
+      "kok_yazilis": "تألم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتألمي",
+      "tur": "verb",
+      "baslik": "تَتَأَلَّمِي • (tataʔallamī) (form V) /ta.ta.ʔal.la.miː/\n# second-person feminine singular non-past active subjunctive/jussive of تَأَلَّمَ (taʔallama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔallamī", "taʔallama"],
+      "kok_yazilis": "تألم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتألما",
+      "tur": "verb",
+      "baslik": "تَتَأَلَّمَا • (tataʔallamā) (form V) /ta.ta.ʔal.la.maː/\n# inflection of تَأَلَّمَ (taʔallama):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔallamā", "taʔallama"],
+      "kok_yazilis": "تألم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتألما",
+      "tur": "verb",
+      "baslik": "يَتَأَلَّمَا • (yataʔallamā) (form V) /ja.ta.ʔal.la.maː/\n# third-person masculine dual non-past active subjunctive/jussive of تَأَلَّمَ (taʔallama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔallamā", "taʔallama"],
+      "kok_yazilis": "تألم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتألموا",
+      "tur": "verb",
+      "baslik": "يَتَأَلَّمُوا • (yataʔallamū) (form V) /ja.ta.ʔal.la.muː/\n# third-person masculine plural non-past active subjunctive/jussive of تَأَلَّمَ (taʔallama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔallamū", "taʔallama"],
+      "kok_yazilis": "تألم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتألموا",
+      "tur": "verb",
+      "baslik": "تَتَأَلَّمُوا • (tataʔallamū) (form V) /ta.ta.ʔal.la.muː/\n# second-person masculine plural non-past active subjunctive/jussive of تَأَلَّمَ (taʔallama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔallamū", "taʔallama"],
+      "kok_yazilis": "تألم",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تءلم", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

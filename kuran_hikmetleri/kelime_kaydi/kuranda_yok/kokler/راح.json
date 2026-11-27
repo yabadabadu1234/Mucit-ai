@@ -1,494 +1,359 @@
 {
   "kok": "راح",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "راح", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "ريح",
-        "u": "ريح",
-        "p": "verb",
-        "n": "2.2",
-        "h": "ar-verb form",
-        "e": "رِيحَ • (rīḥa) (form I) /riː.ħa/\n# third-person masculine singular past passive of رَاحَ (rāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "s": [
-          ["nonlemma", "See the etymology of the corresponding lemma form."]
-        ],
-        "tag": ["form-i", "no-gloss"],
-        "r": ["rīḥa", "rāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "راحت",
-        "u": "راحت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاحَتْ • (rāḥat) (form I) /raː.ħat/\n# third-person feminine singular past active of رَاحَ (rāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["rāḥat", "rāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "رح",
-        "u": "رح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُحْ • (ruḥ) (form I) /ruħ/\n# second-person masculine singular imperative of رَاحَ (rāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ruḥ", "rāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "أروح",
-        "u": "أروح",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أروح (form I)\n# أَرُوحُ (ʔarūḥu) /ʔa.ruː.ħu/: first-person singular non-past active indicative of رَاحَ (rāḥa)\n# أَرُوحَ (ʔarūḥa) /ʔa.ruː.ħa/: first-person singular non-past active subjunctive of رَاحَ (rāḥa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔarūḥu", "rāḥa", "ʔarūḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "روحي",
-        "u": "روحي",
-        "p": "verb",
-        "n": "1.2",
-        "h": "ar-verb form",
-        "e": "رُوحِي • (rūḥī) (form I) /ruː.ħiː/\n# second-person feminine singular imperative of رَاحَ (rāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "s": [
-          ["nonlemma", "See the etymology of the corresponding lemma form."]
-        ],
-        "tag": ["form-i", "no-gloss"],
-        "r": ["rūḥī", "rāḥa"],
-        "ipa": ["/ruː.ħiː/"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "يراح",
-        "u": "يراح",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يراح (form I)\n# يُرَاحُ (yurāḥu) /ju.raː.ħu/: third-person masculine singular non-past passive indicative of رَاحَ (rāḥa)\n# يُرَاحَ (yurāḥa) /ju.raː.ħa/: third-person masculine singular non-past passive subjunctive of رَاحَ (rāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yurāḥu", "rāḥa", "yurāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "يروح",
-        "u": "يروح",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يروح (form I)\n# يَرُوحُ (yarūḥu) /ja.ruː.ħu/: third-person masculine singular non-past active indicative of رَاحَ (rāḥa)\n# يَرُوحَ (yarūḥa) /ja.ruː.ħa/: third-person masculine singular non-past active subjunctive of رَاحَ (rāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yarūḥu", "rāḥa", "yarūḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "يرح",
-        "u": "يرح",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يرح (form I)\n# يَرُحْ (yaruḥ) /ja.ruħ/: third-person masculine singular non-past active jussive of رَاحَ (rāḥa)\n# يُرَحْ (yuraḥ) /ju.raħ/: third-person masculine singular non-past passive jussive of رَاحَ (rāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaruḥ", "rāḥa", "yuraḥ"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "ترح",
-        "u": "ترح",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَرُحْ • (taruḥ) (form I) /ta.ruħ/\n# inflection of رَاحَ (rāḥa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taruḥ", "rāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "تروح",
-        "u": "تروح",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تروح (form I)\n# تَرُوحُ (tarūḥu) /ta.ruː.ħu/: inflection of رَاحَ (rāḥa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَرُوحَ (tarūḥa) /ta.ruː.ħa/: inflection of رَاحَ (rāḥa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tarūḥu", "rāḥa", "tarūḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "أرح",
-        "u": "أرح",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَرُحْ • (ʔaruḥ) (form I) /ʔa.ruħ/\n# first-person singular non-past active jussive of رَاحَ (rāḥa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaruḥ", "rāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "تروحين",
-        "u": "تروحين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَرُوحِينَ • (tarūḥīna) (form I) /ta.ruː.ħiː.na/\n# second-person feminine singular non-past active indicative of رَاحَ (rāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tarūḥīna", "rāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "تروحي",
-        "u": "تروحي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَرُوحِي • (tarūḥī) (form I) /ta.ruː.ħiː/\n# second-person feminine singular non-past active subjunctive/jussive of رَاحَ (rāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tarūḥī", "rāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "رحت",
-        "u": "رحت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "رحت (form I)\n# رُحْتُ (ruḥtu) /ruħ.tu/: first-person singular past active of رَاحَ (rāḥa)\n# رُحْتَ (ruḥta) /ruħ.ta/: second-person masculine singular past active of رَاحَ (rāḥa)\n# رُحْتِ (ruḥti) /ruħ.ti/: second-person feminine singular past active of رَاحَ (rāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ruḥtu", "rāḥa", "ruḥta"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "نرح",
-        "u": "نرح",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نَرُحْ • (naruḥ) (form I) /na.ruħ/\n# first-person plural non-past active jussive of رَاحَ (rāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naruḥ", "rāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "نروح",
-        "u": "نروح",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نروح (form I)\n# نَرُوحُ (narūḥu) /na.ruː.ħu/: first-person plural non-past active indicative of رَاحَ (rāḥa)\n# نَرُوحَ (narūḥa) /na.ruː.ħa/: first-person plural non-past active subjunctive of رَاحَ (rāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["narūḥu", "rāḥa", "narūḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "رحنا",
-        "u": "رحنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُحْنَا • (ruḥnā) (form I) /ruħ.naː/\n# first-person plural past active of رَاحَ (rāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ruḥnā", "rāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "تروحون",
-        "u": "تروحون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَرُوحُونَ • (tarūḥūna) (form I) /ta.ruː.ħuː.na/\n# second-person masculine plural non-past active indicative of رَاحَ (rāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tarūḥūna", "rāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "تروحوا",
-        "u": "تروحوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَرُوحُوا • (tarūḥū) (form I) /ta.ruː.ħuː/\n# second-person masculine plural non-past active subjunctive/jussive of رَاحَ (rāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tarūḥū", "rāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "رحتم",
-        "u": "رحتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُحْتُمْ • (ruḥtum) (form I) /ruħ.tum/\n# second-person masculine plural past active of رَاحَ (rāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ruḥtum", "rāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "روحوا",
-        "u": "روحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُوحُوا • (rūḥū) (form I) /ruː.ħuː/\n# second-person masculine plural imperative of رَاحَ (rāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["rūḥū", "rāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "يروحون",
-        "u": "يروحون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَرُوحُونَ • (yarūḥūna) (form I) /ja.ruː.ħuː.na/\n# third-person masculine plural non-past active indicative of رَاحَ (rāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yarūḥūna", "rāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "يروحوا",
-        "u": "يروحوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَرُوحُوا • (yarūḥū) (form I) /ja.ruː.ħuː/\n# third-person masculine plural non-past active subjunctive/jussive of رَاحَ (rāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yarūḥū", "rāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "راحوا",
-        "u": "راحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاحُوا • (rāḥū) (form I) /raː.ħuː/\n# third-person masculine plural past active of رَاحَ (rāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["rāḥū", "rāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "ترحن",
-        "u": "ترحن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَرُحْنَ • (taruḥna) (form I) /ta.ruħ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of رَاحَ (rāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taruḥna", "rāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "رحتن",
-        "u": "رحتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُحْتُنَّ • (ruḥtunna) (form I) /ruħ.tun.na/\n# second-person feminine plural past active of رَاحَ (rāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ruḥtunna", "rāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "رحن",
-        "u": "رحن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُحْنَ • (ruḥna) (form I) /ruħ.na/\n# inflection of رَاحَ (rāḥa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ruḥna", "rāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "يرحن",
-        "u": "يرحن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَرُحْنَ • (yaruḥna) (form I) /ja.ruħ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of رَاحَ (rāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaruḥna", "rāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "روحا",
-        "u": "روحا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "رُوحَا • (rūḥā) (form I) /ruː.ħaː/\n# second-person dual imperative of رَاحَ (rāḥa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["rūḥā", "rāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "تروحا",
-        "u": "تروحا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَرُوحَا • (tarūḥā) (form I) /ta.ruː.ħaː/\n# inflection of رَاحَ (rāḥa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tarūḥā", "rāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "تروحان",
-        "u": "تروحان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَرُوحَانِ • (tarūḥāni) (form I) /ta.ruː.ħaː.ni/\n# inflection of رَاحَ (rāḥa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tarūḥāni", "rāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "يروحان",
-        "u": "يروحان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَرُوحَانِ • (yarūḥāni) (form I) /ja.ruː.ħaː.ni/\n# third-person masculine dual non-past active indicative of رَاحَ (rāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yarūḥāni", "rāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "يروحا",
-        "u": "يروحا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَرُوحَا • (yarūḥā) (form I) /ja.ruː.ħaː/\n# third-person masculine dual non-past active subjunctive/jussive of رَاحَ (rāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yarūḥā", "rāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "رحتما",
-        "u": "رحتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُحْتُمَا • (ruḥtumā) (form I) /ruħ.tu.maː/\n# second-person dual past active of رَاحَ (rāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ruḥtumā", "rāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "راحتا",
-        "u": "راحتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاحَتَا • (rāḥatā) (form I) /raː.ħa.taː/\n# third-person feminine dual past active of رَاحَ (rāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["rāḥatā", "rāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      },
-      {
-        "w": "راحا",
-        "u": "راحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاحَا • (rāḥā) (form I) /raː.ħaː/\n# third-person masculine dual past active of رَاحَ (rāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["rāḥā", "rāḥa"],
-        "k": "راح",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "رح",
+  "ses": {
     "harf": "ر",
+    "fasil": "رح",
     "mahrec": "zelakiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "ريح",
+      "tur": "verb",
+      "etim_no": "2.2",
+      "baslik": "رِيحَ • (rīḥa) (form I) /riː.ħa/\n# third-person masculine singular past passive of رَاحَ (rāḥa)",
+      "etim_sablon": [
+        ["nonlemma", "See the etymology of the corresponding lemma form."]
+      ],
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rīḥa", "rāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "راحت",
+      "tur": "verb",
+      "baslik": "رَاحَتْ • (rāḥat) (form I) /raː.ħat/\n# third-person feminine singular past active of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rāḥat", "rāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "رح",
+      "tur": "verb",
+      "baslik": "رُحْ • (ruḥ) (form I) /ruħ/\n# second-person masculine singular imperative of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ruḥ", "rāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أروح",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أروح (form I)\n# أَرُوحُ (ʔarūḥu) /ʔa.ruː.ħu/: first-person singular non-past active indicative of رَاحَ (rāḥa)\n# أَرُوحَ (ʔarūḥa) /ʔa.ruː.ħa/: first-person singular non-past active subjunctive of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔarūḥu", "rāḥa", "ʔarūḥa"]
+    },
+    {
+      "madde": "روحي",
+      "tur": "verb",
+      "etim_no": "1.2",
+      "baslik": "رُوحِي • (rūḥī) (form I) /ruː.ħiː/\n# second-person feminine singular imperative of رَاحَ (rāḥa)",
+      "etim_sablon": [
+        ["nonlemma", "See the etymology of the corresponding lemma form."]
+      ],
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rūḥī", "rāḥa"],
+      "ipa": ["/ruː.ħiː/"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يراح",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يراح (form I)\n# يُرَاحُ (yurāḥu) /ju.raː.ħu/: third-person masculine singular non-past passive indicative of رَاحَ (rāḥa)\n# يُرَاحَ (yurāḥa) /ju.raː.ħa/: third-person masculine singular non-past passive subjunctive of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yurāḥu", "rāḥa", "yurāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يروح",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يروح (form I)\n# يَرُوحُ (yarūḥu) /ja.ruː.ħu/: third-person masculine singular non-past active indicative of رَاحَ (rāḥa)\n# يَرُوحَ (yarūḥa) /ja.ruː.ħa/: third-person masculine singular non-past active subjunctive of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yarūḥu", "rāḥa", "yarūḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يرح",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يرح (form I)\n# يَرُحْ (yaruḥ) /ja.ruħ/: third-person masculine singular non-past active jussive of رَاحَ (rāḥa)\n# يُرَحْ (yuraḥ) /ju.raħ/: third-person masculine singular non-past passive jussive of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaruḥ", "rāḥa", "yuraḥ"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ترح",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَرُحْ • (taruḥ) (form I) /ta.ruħ/\n# inflection of رَاحَ (rāḥa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taruḥ", "rāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تروح",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تروح (form I)\n# تَرُوحُ (tarūḥu) /ta.ruː.ħu/: inflection of رَاحَ (rāḥa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَرُوحَ (tarūḥa) /ta.ruː.ħa/: inflection of رَاحَ (rāḥa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tarūḥu", "rāḥa", "tarūḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أرح",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَرُحْ • (ʔaruḥ) (form I) /ʔa.ruħ/\n# first-person singular non-past active jussive of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaruḥ", "rāḥa"]
+    },
+    {
+      "madde": "تروحين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَرُوحِينَ • (tarūḥīna) (form I) /ta.ruː.ħiː.na/\n# second-person feminine singular non-past active indicative of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tarūḥīna", "rāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تروحي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَرُوحِي • (tarūḥī) (form I) /ta.ruː.ħiː/\n# second-person feminine singular non-past active subjunctive/jussive of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tarūḥī", "rāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "رحت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "رحت (form I)\n# رُحْتُ (ruḥtu) /ruħ.tu/: first-person singular past active of رَاحَ (rāḥa)\n# رُحْتَ (ruḥta) /ruħ.ta/: second-person masculine singular past active of رَاحَ (rāḥa)\n# رُحْتِ (ruḥti) /ruħ.ti/: second-person feminine singular past active of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ruḥtu", "rāḥa", "ruḥta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نرح",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نَرُحْ • (naruḥ) (form I) /na.ruħ/\n# first-person plural non-past active jussive of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naruḥ", "rāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نروح",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نروح (form I)\n# نَرُوحُ (narūḥu) /na.ruː.ħu/: first-person plural non-past active indicative of رَاحَ (rāḥa)\n# نَرُوحَ (narūḥa) /na.ruː.ħa/: first-person plural non-past active subjunctive of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["narūḥu", "rāḥa", "narūḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "رحنا",
+      "tur": "verb",
+      "baslik": "رُحْنَا • (ruḥnā) (form I) /ruħ.naː/\n# first-person plural past active of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ruḥnā", "rāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تروحون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَرُوحُونَ • (tarūḥūna) (form I) /ta.ruː.ħuː.na/\n# second-person masculine plural non-past active indicative of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tarūḥūna", "rāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تروحوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَرُوحُوا • (tarūḥū) (form I) /ta.ruː.ħuː/\n# second-person masculine plural non-past active subjunctive/jussive of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tarūḥū", "rāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "رحتم",
+      "tur": "verb",
+      "baslik": "رُحْتُمْ • (ruḥtum) (form I) /ruħ.tum/\n# second-person masculine plural past active of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ruḥtum", "rāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "روحوا",
+      "tur": "verb",
+      "baslik": "رُوحُوا • (rūḥū) (form I) /ruː.ħuː/\n# second-person masculine plural imperative of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rūḥū", "rāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يروحون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَرُوحُونَ • (yarūḥūna) (form I) /ja.ruː.ħuː.na/\n# third-person masculine plural non-past active indicative of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yarūḥūna", "rāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يروحوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَرُوحُوا • (yarūḥū) (form I) /ja.ruː.ħuː/\n# third-person masculine plural non-past active subjunctive/jussive of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yarūḥū", "rāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "راحوا",
+      "tur": "verb",
+      "baslik": "رَاحُوا • (rāḥū) (form I) /raː.ħuː/\n# third-person masculine plural past active of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rāḥū", "rāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ترحن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَرُحْنَ • (taruḥna) (form I) /ta.ruħ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taruḥna", "rāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "رحتن",
+      "tur": "verb",
+      "baslik": "رُحْتُنَّ • (ruḥtunna) (form I) /ruħ.tun.na/\n# second-person feminine plural past active of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ruḥtunna", "rāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "رحن",
+      "tur": "verb",
+      "baslik": "رُحْنَ • (ruḥna) (form I) /ruħ.na/\n# inflection of رَاحَ (rāḥa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ruḥna", "rāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يرحن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَرُحْنَ • (yaruḥna) (form I) /ja.ruħ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaruḥna", "rāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "روحا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "رُوحَا • (rūḥā) (form I) /ruː.ħaː/\n# second-person dual imperative of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rūḥā", "rāḥa"]
+    },
+    {
+      "madde": "تروحا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَرُوحَا • (tarūḥā) (form I) /ta.ruː.ħaː/\n# inflection of رَاحَ (rāḥa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tarūḥā", "rāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تروحان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَرُوحَانِ • (tarūḥāni) (form I) /ta.ruː.ħaː.ni/\n# inflection of رَاحَ (rāḥa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tarūḥāni", "rāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يروحان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَرُوحَانِ • (yarūḥāni) (form I) /ja.ruː.ħaː.ni/\n# third-person masculine dual non-past active indicative of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yarūḥāni", "rāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يروحا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَرُوحَا • (yarūḥā) (form I) /ja.ruː.ħaː/\n# third-person masculine dual non-past active subjunctive/jussive of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yarūḥā", "rāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "رحتما",
+      "tur": "verb",
+      "baslik": "رُحْتُمَا • (ruḥtumā) (form I) /ruħ.tu.maː/\n# second-person dual past active of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ruḥtumā", "rāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "راحتا",
+      "tur": "verb",
+      "baslik": "رَاحَتَا • (rāḥatā) (form I) /raː.ħa.taː/\n# third-person feminine dual past active of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rāḥatā", "rāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "راحا",
+      "tur": "verb",
+      "baslik": "رَاحَا • (rāḥā) (form I) /raː.ħaː/\n# third-person masculine dual past active of رَاحَ (rāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rāḥā", "rāḥa"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "راح", "r7"]
+  ],
+  "mana": {
     "ince": "rest.v.03",
     "orta": "verb.communication",
     "ust": "söz ve haber",
@@ -496,22 +361,15 @@
     "dayanak_tanim": "give a rest to",
     "synset_sayisi": 4
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["feeling.n.01", "natural_phenomenon.n.01", "olfactory_property.n.01", "rest.v.03"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["feeling.n.01", "natural_phenomenon.n.01", "olfactory_property.n.01", "rest.v.03"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

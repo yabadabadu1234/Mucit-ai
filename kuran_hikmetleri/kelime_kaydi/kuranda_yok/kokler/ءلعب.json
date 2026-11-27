@@ -1,364 +1,290 @@
 {
   "kok": "ءلعب",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءلعب", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تلعب",
-        "u": "تلعب",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تلعب (form IV)\n# تُلْعِبُ (tulʕibu) /tul.ʕi.bu/: inflection of أَلْعَبَ (ʔalʕaba):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُلْعَبُ (tulʕabu) /tul.ʕa.bu/: inflection of أَلْعَبَ (ʔalʕaba):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tulʕibu", "ʔalʕaba", "tulʕabu"],
-        "k": "ألعب",
-        "yol": "kök"
-      },
-      {
-        "w": "يلعب",
-        "u": "يلعب",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يلعب (form IV)\n# يُلْعِبُ (yulʕibu) /jul.ʕi.bu/: third-person masculine singular non-past active indicative of أَلْعَبَ (ʔalʕaba)\n# يُلْعَبُ (yulʕabu) /jul.ʕa.bu/: third-person masculine singular non-past passive indicative of أَلْعَبَ (ʔalʕaba)\n# يُلْعِبَ (yulʕiba) /jul.ʕi.ba/: third-person masculine singular non-past active subjunctive of أَلْعَبَ (ʔalʕaba)\n# يُلْعَبَ (yulʕaba) /jul.ʕa.ba/: thir",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yulʕibu", "ʔalʕaba", "yulʕabu"],
-        "k": "ألعب",
-        "yol": "kök"
-      },
-      {
-        "w": "ألعبت",
-        "u": "ألعبت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ألعبت (form IV)\n# أَلْعَبْتُ (ʔalʕabtu) /ʔal.ʕab.tu/: first-person singular past active of أَلْعَبَ (ʔalʕaba)\n# أَلْعَبْتَ (ʔalʕabta) /ʔal.ʕab.ta/: second-person masculine singular past active of أَلْعَبَ (ʔalʕaba)\n# أَلْعَبْتِ (ʔalʕabti) /ʔal.ʕab.ti/: second-person feminine singular past active of أَلْعَبَ (ʔalʕaba)\n# أَلْعَبَتْ (ʔalʕabat) /ʔal.ʕa.bat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔalʕabtu", "ʔalʕaba", "ʔalʕabta"],
-        "k": "ألعب",
-        "yol": "kök"
-      },
-      {
-        "w": "تلعبين",
-        "u": "تلعبين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تلعبين (form IV)\n# تُلْعِبِينَ (tulʕibīna) /tul.ʕi.biː.na/: second-person feminine singular non-past active indicative of أَلْعَبَ (ʔalʕaba)\n# تُلْعَبِينَ (tulʕabīna) /tul.ʕa.biː.na/: second-person feminine singular non-past passive indicative of أَلْعَبَ (ʔalʕaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tulʕibīna", "ʔalʕaba", "tulʕabīna"],
-        "k": "ألعب",
-        "yol": "kök"
-      },
-      {
-        "w": "تلعبي",
-        "u": "تلعبي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تلعبي (form IV)\n# تُلْعِبِي (tulʕibī) /tul.ʕi.biː/: second-person feminine singular non-past active subjunctive/jussive of أَلْعَبَ (ʔalʕaba)\n# تُلْعَبِي (tulʕabī) /tul.ʕa.biː/: second-person feminine singular non-past passive subjunctive/jussive of أَلْعَبَ (ʔalʕaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tulʕibī", "ʔalʕaba", "tulʕabī"],
-        "k": "ألعب",
-        "yol": "kök"
-      },
-      {
-        "w": "ألعبي",
-        "u": "ألعبي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَلْعِبِي • (ʔalʕibī) (form IV) /ʔal.ʕi.biː/\n# second-person feminine singular imperative of أَلْعَبَ (ʔalʕaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔalʕibī", "ʔalʕaba"],
-        "k": "ألعب",
-        "yol": "kök"
-      },
-      {
-        "w": "ألعبنا",
-        "u": "ألعبنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ألعبنا (form IV)\n# أَلْعَبْنَا (ʔalʕabnā) /ʔal.ʕab.naː/: first-person plural past active of أَلْعَبَ (ʔalʕaba)\n# أُلْعِبْنَا (ʔulʕibnā) /ʔul.ʕib.naː/: first-person plural past passive of أَلْعَبَ (ʔalʕaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔalʕabnā", "ʔalʕaba", "ʔulʕibnā"],
-        "k": "ألعب",
-        "yol": "kök"
-      },
-      {
-        "w": "نلعب",
-        "u": "نلعب",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نلعب (form IV)\n# نُلْعِبُ (nulʕibu) /nul.ʕi.bu/: first-person plural non-past active indicative of أَلْعَبَ (ʔalʕaba)\n# نُلْعَبُ (nulʕabu) /nul.ʕa.bu/: first-person plural non-past passive indicative of أَلْعَبَ (ʔalʕaba)\n# نُلْعِبَ (nulʕiba) /nul.ʕi.ba/: first-person plural non-past active subjunctive of أَلْعَبَ (ʔalʕaba)\n# نُلْعَبَ (nulʕaba) /nul.ʕa.ba/: first-person plural non-past passive sub",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nulʕibu", "ʔalʕaba", "nulʕabu"],
-        "k": "ألعب",
-        "yol": "kök"
-      },
-      {
-        "w": "ألعبتم",
-        "u": "ألعبتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ألعبتم (form IV)\n# أَلْعَبْتُمْ (ʔalʕabtum) /ʔal.ʕab.tum/: second-person masculine plural past active of أَلْعَبَ (ʔalʕaba)\n# أُلْعِبْتُمْ (ʔulʕibtum) /ʔul.ʕib.tum/: second-person masculine plural past passive of أَلْعَبَ (ʔalʕaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔalʕabtum", "ʔalʕaba", "ʔulʕibtum"],
-        "k": "ألعب",
-        "yol": "kök"
-      },
-      {
-        "w": "تلعبون",
-        "u": "تلعبون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تلعبون (form IV)\n# تُلْعِبُونَ (tulʕibūna) /tul.ʕi.buː.na/: second-person masculine plural non-past active indicative of أَلْعَبَ (ʔalʕaba)\n# تُلْعَبُونَ (tulʕabūna) /tul.ʕa.buː.na/: second-person masculine plural non-past passive indicative of أَلْعَبَ (ʔalʕaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tulʕibūna", "ʔalʕaba", "tulʕabūna"],
-        "k": "ألعب",
-        "yol": "kök"
-      },
-      {
-        "w": "ألعبوا",
-        "u": "ألعبوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ألعبوا (form IV)\n# أَلْعَبُوا (ʔalʕabū) /ʔal.ʕa.buː/: third-person masculine plural past active of أَلْعَبَ (ʔalʕaba)\n# أُلْعِبُوا (ʔulʕibū) /ʔul.ʕi.buː/: third-person masculine plural past passive of أَلْعَبَ (ʔalʕaba)\n# أَلْعِبُوا (ʔalʕibū) /ʔal.ʕi.buː/: second-person masculine plural imperative of أَلْعَبَ (ʔalʕaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔalʕabū", "ʔalʕaba", "ʔulʕibū"],
-        "k": "ألعب",
-        "yol": "kök"
-      },
-      {
-        "w": "يلعبون",
-        "u": "يلعبون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يلعبون (form IV)\n# يُلْعِبُونَ (yulʕibūna) /jul.ʕi.buː.na/: third-person masculine plural non-past active indicative of أَلْعَبَ (ʔalʕaba)\n# يُلْعَبُونَ (yulʕabūna) /jul.ʕa.buː.na/: third-person masculine plural non-past passive indicative of أَلْعَبَ (ʔalʕaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yulʕibūna", "ʔalʕaba", "yulʕabūna"],
-        "k": "ألعب",
-        "yol": "kök"
-      },
-      {
-        "w": "يلعبوا",
-        "u": "يلعبوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يلعبوا (form IV)\n# يُلْعِبُوا (yulʕibū) /jul.ʕi.buː/: third-person masculine plural non-past active subjunctive/jussive of أَلْعَبَ (ʔalʕaba)\n# يُلْعَبُوا (yulʕabū) /jul.ʕa.buː/: third-person masculine plural non-past passive subjunctive/jussive of أَلْعَبَ (ʔalʕaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yulʕibū", "ʔalʕaba", "yulʕabū"],
-        "k": "ألعب",
-        "yol": "kök"
-      },
-      {
-        "w": "تلعبوا",
-        "u": "تلعبوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تلعبوا (form IV)\n# تُلْعِبُوا (tulʕibū) /tul.ʕi.buː/: second-person masculine plural non-past active subjunctive/jussive of أَلْعَبَ (ʔalʕaba)\n# تُلْعَبُوا (tulʕabū) /tul.ʕa.buː/: second-person masculine plural non-past passive subjunctive/jussive of أَلْعَبَ (ʔalʕaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tulʕibū", "ʔalʕaba", "tulʕabū"],
-        "k": "ألعب",
-        "yol": "kök"
-      },
-      {
-        "w": "ألعبتن",
-        "u": "ألعبتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ألعبتن (form IV)\n# أَلْعَبْتُنَّ (ʔalʕabtunna) /ʔal.ʕab.tun.na/: second-person feminine plural past active of أَلْعَبَ (ʔalʕaba)\n# أُلْعِبْتُنَّ (ʔulʕibtunna) /ʔul.ʕib.tun.na/: second-person feminine plural past passive of أَلْعَبَ (ʔalʕaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔalʕabtunna", "ʔalʕaba", "ʔulʕibtunna"],
-        "k": "ألعب",
-        "yol": "kök"
-      },
-      {
-        "w": "تلعبن",
-        "u": "تلعبن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تلعبن (form IV)\n# تُلْعِبْنَ (tulʕibna) /tul.ʕib.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَلْعَبَ (ʔalʕaba)\n# تُلْعَبْنَ (tulʕabna) /tul.ʕab.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَلْعَبَ (ʔalʕaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tulʕibna", "ʔalʕaba", "tulʕabna"],
-        "k": "ألعب",
-        "yol": "kök"
-      },
-      {
-        "w": "ألعبن",
-        "u": "ألعبن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ألعبن (form IV)\n# أَلْعَبْنَ (ʔalʕabna) /ʔal.ʕab.na/: third-person feminine plural past active of أَلْعَبَ (ʔalʕaba)\n# أُلْعِبْنَ (ʔulʕibna) /ʔul.ʕib.na/: third-person feminine plural past passive of أَلْعَبَ (ʔalʕaba)\n# أَلْعِبْنَ (ʔalʕibna) /ʔal.ʕib.na/: second-person feminine plural imperative of أَلْعَبَ (ʔalʕaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔalʕabna", "ʔalʕaba", "ʔulʕibna"],
-        "k": "ألعب",
-        "yol": "kök"
-      },
-      {
-        "w": "يلعبن",
-        "u": "يلعبن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يلعبن (form IV)\n# يُلْعِبْنَ (yulʕibna) /jul.ʕib.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَلْعَبَ (ʔalʕaba)\n# يُلْعَبْنَ (yulʕabna) /jul.ʕab.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَلْعَبَ (ʔalʕaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yulʕibna", "ʔalʕaba", "yulʕabna"],
-        "k": "ألعب",
-        "yol": "kök"
-      },
-      {
-        "w": "ألعبتما",
-        "u": "ألعبتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ألعبتما (form IV)\n# أَلْعَبْتُمَا (ʔalʕabtumā) /ʔal.ʕab.tu.maː/: second-person dual past active of أَلْعَبَ (ʔalʕaba)\n# أُلْعِبْتُمَا (ʔulʕibtumā) /ʔul.ʕib.tu.maː/: second-person dual past passive of أَلْعَبَ (ʔalʕaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔalʕabtumā", "ʔalʕaba", "ʔulʕibtumā"],
-        "k": "ألعب",
-        "yol": "kök"
-      },
-      {
-        "w": "ألعبا",
-        "u": "ألعبا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ألعبا (form IV)\n# أَلْعَبَا (ʔalʕabā) /ʔal.ʕa.baː/: third-person masculine dual past active of أَلْعَبَ (ʔalʕaba)\n# أُلْعِبَا (ʔulʕibā) /ʔul.ʕi.baː/: third-person masculine dual past passive of أَلْعَبَ (ʔalʕaba)\n# أَلْعِبَا (ʔalʕibā) /ʔal.ʕi.baː/: second-person dual imperative of أَلْعَبَ (ʔalʕaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔalʕabā", "ʔalʕaba", "ʔulʕibā"],
-        "k": "ألعب",
-        "yol": "kök"
-      },
-      {
-        "w": "ألعبتا",
-        "u": "ألعبتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ألعبتا (form IV)\n# أَلْعَبَتَا (ʔalʕabatā) /ʔal.ʕa.ba.taː/: third-person feminine dual past active of أَلْعَبَ (ʔalʕaba)\n# أُلْعِبَتَا (ʔulʕibatā) /ʔul.ʕi.ba.taː/: third-person feminine dual past passive of أَلْعَبَ (ʔalʕaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔalʕabatā", "ʔalʕaba", "ʔulʕibatā"],
-        "k": "ألعب",
-        "yol": "kök"
-      },
-      {
-        "w": "تلعبان",
-        "u": "تلعبان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تلعبان (form IV)\n# تُلْعِبَانِ (tulʕibāni) /tul.ʕi.baː.ni/: inflection of أَلْعَبَ (ʔalʕaba):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُلْعَبَانِ (tulʕabāni) /tul.ʕa.baː.ni/: inflection of أَلْعَبَ (ʔalʕaba):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tulʕibāni", "ʔalʕaba", "tulʕabāni"],
-        "k": "ألعب",
-        "yol": "kök"
-      },
-      {
-        "w": "يلعبان",
-        "u": "يلعبان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يلعبان (form IV)\n# يُلْعِبَانِ (yulʕibāni) /jul.ʕi.baː.ni/: third-person masculine dual non-past active indicative of أَلْعَبَ (ʔalʕaba)\n# يُلْعَبَانِ (yulʕabāni) /jul.ʕa.baː.ni/: third-person masculine dual non-past passive indicative of أَلْعَبَ (ʔalʕaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yulʕibāni", "ʔalʕaba", "yulʕabāni"],
-        "k": "ألعب",
-        "yol": "kök"
-      },
-      {
-        "w": "تلعبا",
-        "u": "تلعبا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تلعبا (form IV)\n# تُلْعِبَا (tulʕibā) /tul.ʕi.baː/: inflection of أَلْعَبَ (ʔalʕaba):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُلْعَبَا (tulʕabā) /tul.ʕa.baː/: inflection of أَلْعَبَ (ʔalʕaba):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/ju",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tulʕibā", "ʔalʕaba", "tulʕabā"],
-        "k": "ألعب",
-        "yol": "kök"
-      },
-      {
-        "w": "يلعبا",
-        "u": "يلعبا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يلعبا (form IV)\n# يُلْعِبَا (yulʕibā) /jul.ʕi.baː/: third-person masculine dual non-past active subjunctive/jussive of أَلْعَبَ (ʔalʕaba)\n# يُلْعَبَا (yulʕabā) /jul.ʕa.baː/: third-person masculine dual non-past passive subjunctive/jussive of أَلْعَبَ (ʔalʕaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yulʕibā", "ʔalʕaba", "yulʕabā"],
-        "k": "ألعب",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "لع",
+  "ses": {
     "harf": "ء",
+    "fasil": "لع",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تلعب",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تلعب (form IV)\n# تُلْعِبُ (tulʕibu) /tul.ʕi.bu/: inflection of أَلْعَبَ (ʔalʕaba):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُلْعَبُ (tulʕabu) /tul.ʕa.bu/: inflection of أَلْعَبَ (ʔalʕaba):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tulʕibu", "ʔalʕaba", "tulʕabu"],
+      "kok_yazilis": "ألعب"
+    },
+    {
+      "madde": "يلعب",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يلعب (form IV)\n# يُلْعِبُ (yulʕibu) /jul.ʕi.bu/: third-person masculine singular non-past active indicative of أَلْعَبَ (ʔalʕaba)\n# يُلْعَبُ (yulʕabu) /jul.ʕa.bu/: third-person masculine singular non-past passive indicative of أَلْعَبَ (ʔalʕaba)\n# يُلْعِبَ (yulʕiba) /jul.ʕi.ba/: third-person masculine singular non-past active subjunctive of أَلْعَبَ (ʔalʕaba)\n# يُلْعَبَ (yulʕaba) /jul.ʕa.ba/: thir",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yulʕibu", "ʔalʕaba", "yulʕabu"],
+      "kok_yazilis": "ألعب",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ألعبت",
+      "tur": "verb",
+      "baslik": "ألعبت (form IV)\n# أَلْعَبْتُ (ʔalʕabtu) /ʔal.ʕab.tu/: first-person singular past active of أَلْعَبَ (ʔalʕaba)\n# أَلْعَبْتَ (ʔalʕabta) /ʔal.ʕab.ta/: second-person masculine singular past active of أَلْعَبَ (ʔalʕaba)\n# أَلْعَبْتِ (ʔalʕabti) /ʔal.ʕab.ti/: second-person feminine singular past active of أَلْعَبَ (ʔalʕaba)\n# أَلْعَبَتْ (ʔalʕabat) /ʔal.ʕa.bat/: third-person feminine singular past active ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔalʕabtu", "ʔalʕaba", "ʔalʕabta"],
+      "kok_yazilis": "ألعب",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلعبين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تلعبين (form IV)\n# تُلْعِبِينَ (tulʕibīna) /tul.ʕi.biː.na/: second-person feminine singular non-past active indicative of أَلْعَبَ (ʔalʕaba)\n# تُلْعَبِينَ (tulʕabīna) /tul.ʕa.biː.na/: second-person feminine singular non-past passive indicative of أَلْعَبَ (ʔalʕaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tulʕibīna", "ʔalʕaba", "tulʕabīna"],
+      "kok_yazilis": "ألعب",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلعبي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تلعبي (form IV)\n# تُلْعِبِي (tulʕibī) /tul.ʕi.biː/: second-person feminine singular non-past active subjunctive/jussive of أَلْعَبَ (ʔalʕaba)\n# تُلْعَبِي (tulʕabī) /tul.ʕa.biː/: second-person feminine singular non-past passive subjunctive/jussive of أَلْعَبَ (ʔalʕaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tulʕibī", "ʔalʕaba", "tulʕabī"],
+      "kok_yazilis": "ألعب",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ألعبي",
+      "tur": "verb",
+      "baslik": "أَلْعِبِي • (ʔalʕibī) (form IV) /ʔal.ʕi.biː/\n# second-person feminine singular imperative of أَلْعَبَ (ʔalʕaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔalʕibī", "ʔalʕaba"],
+      "kok_yazilis": "ألعب",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ألعبنا",
+      "tur": "verb",
+      "baslik": "ألعبنا (form IV)\n# أَلْعَبْنَا (ʔalʕabnā) /ʔal.ʕab.naː/: first-person plural past active of أَلْعَبَ (ʔalʕaba)\n# أُلْعِبْنَا (ʔulʕibnā) /ʔul.ʕib.naː/: first-person plural past passive of أَلْعَبَ (ʔalʕaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔalʕabnā", "ʔalʕaba", "ʔulʕibnā"],
+      "kok_yazilis": "ألعب",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نلعب",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نلعب (form IV)\n# نُلْعِبُ (nulʕibu) /nul.ʕi.bu/: first-person plural non-past active indicative of أَلْعَبَ (ʔalʕaba)\n# نُلْعَبُ (nulʕabu) /nul.ʕa.bu/: first-person plural non-past passive indicative of أَلْعَبَ (ʔalʕaba)\n# نُلْعِبَ (nulʕiba) /nul.ʕi.ba/: first-person plural non-past active subjunctive of أَلْعَبَ (ʔalʕaba)\n# نُلْعَبَ (nulʕaba) /nul.ʕa.ba/: first-person plural non-past passive sub",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nulʕibu", "ʔalʕaba", "nulʕabu"],
+      "kok_yazilis": "ألعب",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ألعبتم",
+      "tur": "verb",
+      "baslik": "ألعبتم (form IV)\n# أَلْعَبْتُمْ (ʔalʕabtum) /ʔal.ʕab.tum/: second-person masculine plural past active of أَلْعَبَ (ʔalʕaba)\n# أُلْعِبْتُمْ (ʔulʕibtum) /ʔul.ʕib.tum/: second-person masculine plural past passive of أَلْعَبَ (ʔalʕaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔalʕabtum", "ʔalʕaba", "ʔulʕibtum"],
+      "kok_yazilis": "ألعب",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلعبون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تلعبون (form IV)\n# تُلْعِبُونَ (tulʕibūna) /tul.ʕi.buː.na/: second-person masculine plural non-past active indicative of أَلْعَبَ (ʔalʕaba)\n# تُلْعَبُونَ (tulʕabūna) /tul.ʕa.buː.na/: second-person masculine plural non-past passive indicative of أَلْعَبَ (ʔalʕaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tulʕibūna", "ʔalʕaba", "tulʕabūna"],
+      "kok_yazilis": "ألعب",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ألعبوا",
+      "tur": "verb",
+      "baslik": "ألعبوا (form IV)\n# أَلْعَبُوا (ʔalʕabū) /ʔal.ʕa.buː/: third-person masculine plural past active of أَلْعَبَ (ʔalʕaba)\n# أُلْعِبُوا (ʔulʕibū) /ʔul.ʕi.buː/: third-person masculine plural past passive of أَلْعَبَ (ʔalʕaba)\n# أَلْعِبُوا (ʔalʕibū) /ʔal.ʕi.buː/: second-person masculine plural imperative of أَلْعَبَ (ʔalʕaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔalʕabū", "ʔalʕaba", "ʔulʕibū"],
+      "kok_yazilis": "ألعب",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يلعبون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يلعبون (form IV)\n# يُلْعِبُونَ (yulʕibūna) /jul.ʕi.buː.na/: third-person masculine plural non-past active indicative of أَلْعَبَ (ʔalʕaba)\n# يُلْعَبُونَ (yulʕabūna) /jul.ʕa.buː.na/: third-person masculine plural non-past passive indicative of أَلْعَبَ (ʔalʕaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yulʕibūna", "ʔalʕaba", "yulʕabūna"],
+      "kok_yazilis": "ألعب",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يلعبوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يلعبوا (form IV)\n# يُلْعِبُوا (yulʕibū) /jul.ʕi.buː/: third-person masculine plural non-past active subjunctive/jussive of أَلْعَبَ (ʔalʕaba)\n# يُلْعَبُوا (yulʕabū) /jul.ʕa.buː/: third-person masculine plural non-past passive subjunctive/jussive of أَلْعَبَ (ʔalʕaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yulʕibū", "ʔalʕaba", "yulʕabū"],
+      "kok_yazilis": "ألعب",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلعبوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تلعبوا (form IV)\n# تُلْعِبُوا (tulʕibū) /tul.ʕi.buː/: second-person masculine plural non-past active subjunctive/jussive of أَلْعَبَ (ʔalʕaba)\n# تُلْعَبُوا (tulʕabū) /tul.ʕa.buː/: second-person masculine plural non-past passive subjunctive/jussive of أَلْعَبَ (ʔalʕaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tulʕibū", "ʔalʕaba", "tulʕabū"],
+      "kok_yazilis": "ألعب",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ألعبتن",
+      "tur": "verb",
+      "baslik": "ألعبتن (form IV)\n# أَلْعَبْتُنَّ (ʔalʕabtunna) /ʔal.ʕab.tun.na/: second-person feminine plural past active of أَلْعَبَ (ʔalʕaba)\n# أُلْعِبْتُنَّ (ʔulʕibtunna) /ʔul.ʕib.tun.na/: second-person feminine plural past passive of أَلْعَبَ (ʔalʕaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔalʕabtunna", "ʔalʕaba", "ʔulʕibtunna"],
+      "kok_yazilis": "ألعب",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلعبن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تلعبن (form IV)\n# تُلْعِبْنَ (tulʕibna) /tul.ʕib.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَلْعَبَ (ʔalʕaba)\n# تُلْعَبْنَ (tulʕabna) /tul.ʕab.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَلْعَبَ (ʔalʕaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tulʕibna", "ʔalʕaba", "tulʕabna"],
+      "kok_yazilis": "ألعب",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ألعبن",
+      "tur": "verb",
+      "baslik": "ألعبن (form IV)\n# أَلْعَبْنَ (ʔalʕabna) /ʔal.ʕab.na/: third-person feminine plural past active of أَلْعَبَ (ʔalʕaba)\n# أُلْعِبْنَ (ʔulʕibna) /ʔul.ʕib.na/: third-person feminine plural past passive of أَلْعَبَ (ʔalʕaba)\n# أَلْعِبْنَ (ʔalʕibna) /ʔal.ʕib.na/: second-person feminine plural imperative of أَلْعَبَ (ʔalʕaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔalʕabna", "ʔalʕaba", "ʔulʕibna"],
+      "kok_yazilis": "ألعب",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يلعبن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يلعبن (form IV)\n# يُلْعِبْنَ (yulʕibna) /jul.ʕib.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَلْعَبَ (ʔalʕaba)\n# يُلْعَبْنَ (yulʕabna) /jul.ʕab.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَلْعَبَ (ʔalʕaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yulʕibna", "ʔalʕaba", "yulʕabna"],
+      "kok_yazilis": "ألعب",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ألعبتما",
+      "tur": "verb",
+      "baslik": "ألعبتما (form IV)\n# أَلْعَبْتُمَا (ʔalʕabtumā) /ʔal.ʕab.tu.maː/: second-person dual past active of أَلْعَبَ (ʔalʕaba)\n# أُلْعِبْتُمَا (ʔulʕibtumā) /ʔul.ʕib.tu.maː/: second-person dual past passive of أَلْعَبَ (ʔalʕaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔalʕabtumā", "ʔalʕaba", "ʔulʕibtumā"],
+      "kok_yazilis": "ألعب",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ألعبا",
+      "tur": "verb",
+      "baslik": "ألعبا (form IV)\n# أَلْعَبَا (ʔalʕabā) /ʔal.ʕa.baː/: third-person masculine dual past active of أَلْعَبَ (ʔalʕaba)\n# أُلْعِبَا (ʔulʕibā) /ʔul.ʕi.baː/: third-person masculine dual past passive of أَلْعَبَ (ʔalʕaba)\n# أَلْعِبَا (ʔalʕibā) /ʔal.ʕi.baː/: second-person dual imperative of أَلْعَبَ (ʔalʕaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔalʕabā", "ʔalʕaba", "ʔulʕibā"],
+      "kok_yazilis": "ألعب",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ألعبتا",
+      "tur": "verb",
+      "baslik": "ألعبتا (form IV)\n# أَلْعَبَتَا (ʔalʕabatā) /ʔal.ʕa.ba.taː/: third-person feminine dual past active of أَلْعَبَ (ʔalʕaba)\n# أُلْعِبَتَا (ʔulʕibatā) /ʔul.ʕi.ba.taː/: third-person feminine dual past passive of أَلْعَبَ (ʔalʕaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔalʕabatā", "ʔalʕaba", "ʔulʕibatā"],
+      "kok_yazilis": "ألعب",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلعبان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تلعبان (form IV)\n# تُلْعِبَانِ (tulʕibāni) /tul.ʕi.baː.ni/: inflection of أَلْعَبَ (ʔalʕaba):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُلْعَبَانِ (tulʕabāni) /tul.ʕa.baː.ni/: inflection of أَلْعَبَ (ʔalʕaba):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tulʕibāni", "ʔalʕaba", "tulʕabāni"],
+      "kok_yazilis": "ألعب",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يلعبان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يلعبان (form IV)\n# يُلْعِبَانِ (yulʕibāni) /jul.ʕi.baː.ni/: third-person masculine dual non-past active indicative of أَلْعَبَ (ʔalʕaba)\n# يُلْعَبَانِ (yulʕabāni) /jul.ʕa.baː.ni/: third-person masculine dual non-past passive indicative of أَلْعَبَ (ʔalʕaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yulʕibāni", "ʔalʕaba", "yulʕabāni"],
+      "kok_yazilis": "ألعب",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلعبا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تلعبا (form IV)\n# تُلْعِبَا (tulʕibā) /tul.ʕi.baː/: inflection of أَلْعَبَ (ʔalʕaba):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُلْعَبَا (tulʕabā) /tul.ʕa.baː/: inflection of أَلْعَبَ (ʔalʕaba):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/ju",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tulʕibā", "ʔalʕaba", "tulʕabā"],
+      "kok_yazilis": "ألعب",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يلعبا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يلعبا (form IV)\n# يُلْعِبَا (yulʕibā) /jul.ʕi.baː/: third-person masculine dual non-past active subjunctive/jussive of أَلْعَبَ (ʔalʕaba)\n# يُلْعَبَا (yulʕabā) /jul.ʕa.baː/: third-person masculine dual non-past passive subjunctive/jussive of أَلْعَبَ (ʔalʕaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yulʕibā", "ʔalʕaba", "yulʕabā"],
+      "kok_yazilis": "ألعب",
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءلعب", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

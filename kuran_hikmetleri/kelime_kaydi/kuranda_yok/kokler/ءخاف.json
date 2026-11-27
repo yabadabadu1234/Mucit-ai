@@ -1,629 +1,494 @@
 {
   "kok": "ءخاف",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءخاف", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يخيف",
-        "u": "يخيف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يخيف (form IV)\n# يُخِيفُ (yuḵīfu) /ju.xiː.fu/: third-person masculine singular non-past active indicative of أَخَافَ (ʔaḵāfa)\n# يُخِيفَ (yuḵīfa) /ju.xiː.fa/: third-person masculine singular non-past active subjunctive of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḵīfu", "ʔaḵāfa", "yuḵīfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يخاف",
-        "u": "يخاف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يخاف (form IV)\n# يُخَافُ (yuḵāfu) /ju.xaː.fu/: third-person masculine singular non-past passive indicative of أَخَافَ (ʔaḵāfa)\n# يُخَافَ (yuḵāfa) /ju.xaː.fa/: third-person masculine singular non-past passive subjunctive of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḵāfu", "ʔaḵāfa", "yuḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "أخف",
-        "u": "أخف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أخف (form IV)\n# أُخِفْ (ʔuḵif) /ʔu.xif/: first-person singular non-past active jussive of أَخَافَ (ʔaḵāfa)\n# أُخَفْ (ʔuḵaf) /ʔu.xaf/: first-person singular non-past passive jussive of أَخَافَ (ʔaḵāfa)\n# أَخِفْ (ʔaḵif) /ʔa.xif/: second-person masculine singular imperative of أَخَافَ (ʔaḵāfa)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuḵif", "ʔaḵāfa", "ʔuḵaf"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يخف",
-        "u": "يخف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يخف (form IV)\n# يُخِفْ (yuḵif) /ju.xif/: third-person masculine singular non-past active jussive of أَخَافَ (ʔaḵāfa)\n# يُخَفْ (yuḵaf) /ju.xaf/: third-person masculine singular non-past passive jussive of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḵif", "ʔaḵāfa", "yuḵaf"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "أخيف",
-        "u": "أخيف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أخيف (form IV)\n# أُخِيفَ (ʔuḵīfa) /ʔu.xiː.fa/: inflection of أَخَافَ (ʔaḵāfa):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُخِيفُ (ʔuḵīfu) /ʔu.xiː.fu/: first-person singular non-past active indicative of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuḵīfa", "ʔaḵāfa", "ʔuḵīfu"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "أخافت",
-        "u": "أخافت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أَخَافَتْ • (ʔaḵāfat) (form IV) /ʔa.xaː.fat/\n# third-person feminine singular past active of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵāfat", "ʔaḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تخيف",
-        "u": "تخيف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تخيف (form IV)\n# تُخِيفُ (tuḵīfu) /tu.xiː.fu/: inflection of أَخَافَ (ʔaḵāfa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُخِيفَ (tuḵīfa) /tu.xiː.fa/: inflection of أَخَافَ (ʔaḵāfa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵīfu", "ʔaḵāfa", "tuḵīfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تخف",
-        "u": "تخف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تخف (form IV)\n# تُخِفْ (tuḵif) /tu.xif/: inflection of أَخَافَ (ʔaḵāfa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُخَفْ (tuḵaf) /tu.xaf/: inflection of أَخَافَ (ʔaḵāfa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵif", "ʔaḵāfa", "tuḵaf"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "أخيفت",
-        "u": "أخيفت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُخِيفَتْ • (ʔuḵīfat) (form IV) /ʔu.xiː.fat/\n# third-person feminine singular past passive of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuḵīfat", "ʔaḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تخاف",
-        "u": "تخاف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تخاف (form IV)\n# تُخَافُ (tuḵāfu) /tu.xaː.fu/: inflection of أَخَافَ (ʔaḵāfa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُخَافَ (tuḵāfa) /tu.xaː.fa/: inflection of أَخَافَ (ʔaḵāfa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵāfu", "ʔaḵāfa", "tuḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "أخفت",
-        "u": "أخفت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أخفت (form IV)\n# أَخَفْتُ (ʔaḵaftu) /ʔa.xaf.tu/: first-person singular past active of أَخَافَ (ʔaḵāfa)\n# أَخَفْتَ (ʔaḵafta) /ʔa.xaf.ta/: second-person masculine singular past active of أَخَافَ (ʔaḵāfa)\n# أَخَفْتِ (ʔaḵafti) /ʔa.xaf.ti/: second-person feminine singular past active of أَخَافَ (ʔaḵāfa)\n# أُخِفْتُ (ʔuḵiftu) /ʔu.xif.tu/: first-person singular past passive of أَخَافَ (ʔaḵāfa)\n# أُخِفْتَ ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵaftu", "ʔaḵāfa", "ʔaḵafta"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تخيفين",
-        "u": "تخيفين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُخِيفِينَ • (tuḵīfīna) (form IV) /tu.xiː.fiː.na/\n# second-person feminine singular non-past active indicative of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵīfīna", "ʔaḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تخيفي",
-        "u": "تخيفي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُخِيفِي • (tuḵīfī) (form IV) /tu.xiː.fiː/\n# second-person feminine singular non-past active subjunctive/jussive of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵīfī", "ʔaḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "أخيفي",
-        "u": "أخيفي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَخِيفِي • (ʔaḵīfī) (form IV) /ʔa.xiː.fiː/\n# second-person feminine singular imperative of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵīfī", "ʔaḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تخافين",
-        "u": "تخافين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُخَافِينَ • (tuḵāfīna) (form IV) /tu.xaː.fiː.na/\n# second-person feminine singular non-past passive indicative of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵāfīna", "ʔaḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تخافي",
-        "u": "تخافي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُخَافِي • (tuḵāfī) (form IV) /tu.xaː.fiː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵāfī", "ʔaḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "أخفنا",
-        "u": "أخفنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أخفنا (form IV)\n# أَخَفْنَا (ʔaḵafnā) /ʔa.xaf.naː/: first-person plural past active of أَخَافَ (ʔaḵāfa)\n# أُخِفْنَا (ʔuḵifnā) /ʔu.xif.naː/: first-person plural past passive of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵafnā", "ʔaḵāfa", "ʔuḵifnā"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "نخيف",
-        "u": "نخيف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نخيف (form IV)\n# نُخِيفُ (nuḵīfu) /nu.xiː.fu/: first-person plural non-past active indicative of أَخَافَ (ʔaḵāfa)\n# نُخِيفَ (nuḵīfa) /nu.xiː.fa/: first-person plural non-past active subjunctive of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuḵīfu", "ʔaḵāfa", "nuḵīfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "نخف",
-        "u": "نخف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نخف (form IV)\n# نُخِفْ (nuḵif) /nu.xif/: first-person plural non-past active jussive of أَخَافَ (ʔaḵāfa)\n# نُخَفْ (nuḵaf) /nu.xaf/: first-person plural non-past passive jussive of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuḵif", "ʔaḵāfa", "nuḵaf"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "نخاف",
-        "u": "نخاف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نخاف (form IV)\n# نُخَافُ (nuḵāfu) /nu.xaː.fu/: first-person plural non-past passive indicative of أَخَافَ (ʔaḵāfa)\n# نُخَافَ (nuḵāfa) /nu.xaː.fa/: first-person plural non-past passive subjunctive of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuḵāfu", "ʔaḵāfa", "nuḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "أخفتم",
-        "u": "أخفتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أخفتم (form IV)\n# أَخَفْتُمْ (ʔaḵaftum) /ʔa.xaf.tum/: second-person masculine plural past active of أَخَافَ (ʔaḵāfa)\n# أُخِفْتُمْ (ʔuḵiftum) /ʔu.xif.tum/: second-person masculine plural past passive of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵaftum", "ʔaḵāfa", "ʔuḵiftum"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تخيفون",
-        "u": "تخيفون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُخِيفُونَ • (tuḵīfūna) (form IV) /tu.xiː.fuː.na/\n# second-person masculine plural non-past active indicative of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵīfūna", "ʔaḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تخيفوا",
-        "u": "تخيفوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُخِيفُوا • (tuḵīfū) (form IV) /tu.xiː.fuː/\n# second-person masculine plural non-past active subjunctive/jussive of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵīfū", "ʔaḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تخافون",
-        "u": "تخافون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُخَافُونَ • (tuḵāfūna) (form IV) /tu.xaː.fuː.na/\n# second-person masculine plural non-past passive indicative of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵāfūna", "ʔaḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تخافوا",
-        "u": "تخافوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُخَافُوا • (tuḵāfū) (form IV) /tu.xaː.fuː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵāfū", "ʔaḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "أخافوا",
-        "u": "أخافوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَخَافُوا • (ʔaḵāfū) (form IV) /ʔa.xaː.fuː/\n# third-person masculine plural past active of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵāfū", "ʔaḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يخيفون",
-        "u": "يخيفون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُخِيفُونَ • (yuḵīfūna) (form IV) /ju.xiː.fuː.na/\n# third-person masculine plural non-past active indicative of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḵīfūna", "ʔaḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يخيفوا",
-        "u": "يخيفوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُخِيفُوا • (yuḵīfū) (form IV) /ju.xiː.fuː/\n# third-person masculine plural non-past active subjunctive/jussive of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḵīfū", "ʔaḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "أخيفوا",
-        "u": "أخيفوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أخيفوا (form IV)\n# أُخِيفُوا (ʔuḵīfū) /ʔu.xiː.fuː/: third-person masculine plural past passive of أَخَافَ (ʔaḵāfa)\n# أَخِيفُوا (ʔaḵīfū) /ʔa.xiː.fuː/: second-person masculine plural imperative of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuḵīfū", "ʔaḵāfa", "ʔaḵīfū"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يخافون",
-        "u": "يخافون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُخَافُونَ • (yuḵāfūna) (form IV) /ju.xaː.fuː.na/\n# third-person masculine plural non-past passive indicative of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḵāfūna", "ʔaḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يخافوا",
-        "u": "يخافوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُخَافُوا • (yuḵāfū) (form IV) /ju.xaː.fuː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḵāfū", "ʔaḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "أخفتن",
-        "u": "أخفتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أخفتن (form IV)\n# أَخَفْتُنَّ (ʔaḵaftunna) /ʔa.xaf.tun.na/: second-person feminine plural past active of أَخَافَ (ʔaḵāfa)\n# أُخِفْتُنَّ (ʔuḵiftunna) /ʔu.xif.tun.na/: second-person feminine plural past passive of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵaftunna", "ʔaḵāfa", "ʔuḵiftunna"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تخفن",
-        "u": "تخفن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تخفن (form IV)\n# تُخِفْنَ (tuḵifna) /tu.xif.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَخَافَ (ʔaḵāfa)\n# تُخَفْنَ (tuḵafna) /tu.xaf.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵifna", "ʔaḵāfa", "tuḵafna"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "أخفن",
-        "u": "أخفن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أخفن (form IV)\n# أَخَفْنَ (ʔaḵafna) /ʔa.xaf.na/: third-person feminine plural past active of أَخَافَ (ʔaḵāfa)\n# أُخِفْنَ (ʔuḵifna) /ʔu.xif.na/: third-person feminine plural past passive of أَخَافَ (ʔaḵāfa)\n# أَخِفْنَ (ʔaḵifna) /ʔa.xif.na/: second-person feminine plural imperative of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵafna", "ʔaḵāfa", "ʔuḵifna"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يخفن",
-        "u": "يخفن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يخفن (form IV)\n# يُخِفْنَ (yuḵifna) /ju.xif.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَخَافَ (ʔaḵāfa)\n# يُخَفْنَ (yuḵafna) /ju.xaf.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḵifna", "ʔaḵāfa", "yuḵafna"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "أخفتما",
-        "u": "أخفتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أخفتما (form IV)\n# أَخَفْتُمَا (ʔaḵaftumā) /ʔa.xaf.tu.maː/: second-person dual past active of أَخَافَ (ʔaḵāfa)\n# أُخِفْتُمَا (ʔuḵiftumā) /ʔu.xif.tu.maː/: second-person dual past passive of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵaftumā", "ʔaḵāfa", "ʔuḵiftumā"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "أخافا",
-        "u": "أخافا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَخَافَا • (ʔaḵāfā) (form IV) /ʔa.xaː.faː/\n# third-person masculine dual past active of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵāfā", "ʔaḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "أخيفتا",
-        "u": "أخيفتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُخِيفَتَا • (ʔuḵīfatā) (form IV) /ʔu.xiː.fa.taː/\n# third-person feminine dual past passive of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuḵīfatā", "ʔaḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "أخافتا",
-        "u": "أخافتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَخَافَتَا • (ʔaḵāfatā) (form IV) /ʔa.xaː.fa.taː/\n# third-person feminine dual past active of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵāfatā", "ʔaḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "أخيفا",
-        "u": "أخيفا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أخيفا (form IV)\n# أُخِيفَا (ʔuḵīfā) /ʔu.xiː.faː/: third-person masculine dual past passive of أَخَافَ (ʔaḵāfa)\n# أَخِيفَا (ʔaḵīfā) /ʔa.xiː.faː/: second-person dual imperative of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuḵīfā", "ʔaḵāfa", "ʔaḵīfā"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تخيفان",
-        "u": "تخيفان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُخِيفَانِ • (tuḵīfāni) (form IV) /tu.xiː.faː.ni/\n# inflection of أَخَافَ (ʔaḵāfa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵīfāni", "ʔaḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يخيفان",
-        "u": "يخيفان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُخِيفَانِ • (yuḵīfāni) (form IV) /ju.xiː.faː.ni/\n# third-person masculine dual non-past active indicative of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḵīfāni", "ʔaḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تخافان",
-        "u": "تخافان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُخَافَانِ • (tuḵāfāni) (form IV) /tu.xaː.faː.ni/\n# inflection of أَخَافَ (ʔaḵāfa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵāfāni", "ʔaḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يخافان",
-        "u": "يخافان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُخَافَانِ • (yuḵāfāni) (form IV) /ju.xaː.faː.ni/\n# third-person masculine dual non-past passive indicative of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḵāfāni", "ʔaḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تخيفا",
-        "u": "تخيفا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُخِيفَا • (tuḵīfā) (form IV) /tu.xiː.faː/\n# inflection of أَخَافَ (ʔaḵāfa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵīfā", "ʔaḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يخيفا",
-        "u": "يخيفا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُخِيفَا • (yuḵīfā) (form IV) /ju.xiː.faː/\n# third-person masculine dual non-past active subjunctive/jussive of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḵīfā", "ʔaḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تخافا",
-        "u": "تخافا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُخَافَا • (tuḵāfā) (form IV) /tu.xaː.faː/\n# inflection of أَخَافَ (ʔaḵāfa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵāfā", "ʔaḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يخافا",
-        "u": "يخافا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُخَافَا • (yuḵāfā) (form IV) /ju.xaː.faː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَخَافَ (ʔaḵāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḵāfā", "ʔaḵāfa"],
-        "k": "أخاف",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "خف",
+  "ses": {
     "harf": "ء",
+    "fasil": "خف",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "يخيف",
+      "tur": "verb",
+      "baslik": "يخيف (form IV)\n# يُخِيفُ (yuḵīfu) /ju.xiː.fu/: third-person masculine singular non-past active indicative of أَخَافَ (ʔaḵāfa)\n# يُخِيفَ (yuḵīfa) /ju.xiː.fa/: third-person masculine singular non-past active subjunctive of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḵīfu", "ʔaḵāfa", "yuḵīfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يخاف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يخاف (form IV)\n# يُخَافُ (yuḵāfu) /ju.xaː.fu/: third-person masculine singular non-past passive indicative of أَخَافَ (ʔaḵāfa)\n# يُخَافَ (yuḵāfa) /ju.xaː.fa/: third-person masculine singular non-past passive subjunctive of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḵāfu", "ʔaḵāfa", "yuḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أخف (form IV)\n# أُخِفْ (ʔuḵif) /ʔu.xif/: first-person singular non-past active jussive of أَخَافَ (ʔaḵāfa)\n# أُخَفْ (ʔuḵaf) /ʔu.xaf/: first-person singular non-past passive jussive of أَخَافَ (ʔaḵāfa)\n# أَخِفْ (ʔaḵif) /ʔa.xif/: second-person masculine singular imperative of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuḵif", "ʔaḵāfa", "ʔuḵaf"],
+      "kok_yazilis": "أخاف"
+    },
+    {
+      "madde": "يخف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يخف (form IV)\n# يُخِفْ (yuḵif) /ju.xif/: third-person masculine singular non-past active jussive of أَخَافَ (ʔaḵāfa)\n# يُخَفْ (yuḵaf) /ju.xaf/: third-person masculine singular non-past passive jussive of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḵif", "ʔaḵāfa", "yuḵaf"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخيف",
+      "tur": "verb",
+      "baslik": "أخيف (form IV)\n# أُخِيفَ (ʔuḵīfa) /ʔu.xiː.fa/: inflection of أَخَافَ (ʔaḵāfa):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُخِيفُ (ʔuḵīfu) /ʔu.xiː.fu/: first-person singular non-past active indicative of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuḵīfa", "ʔaḵāfa", "ʔuḵīfu"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخافت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أَخَافَتْ • (ʔaḵāfat) (form IV) /ʔa.xaː.fat/\n# third-person feminine singular past active of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵāfat", "ʔaḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخيف",
+      "tur": "verb",
+      "baslik": "تخيف (form IV)\n# تُخِيفُ (tuḵīfu) /tu.xiː.fu/: inflection of أَخَافَ (ʔaḵāfa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُخِيفَ (tuḵīfa) /tu.xiː.fa/: inflection of أَخَافَ (ʔaḵāfa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵīfu", "ʔaḵāfa", "tuḵīfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تخف (form IV)\n# تُخِفْ (tuḵif) /tu.xif/: inflection of أَخَافَ (ʔaḵāfa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُخَفْ (tuḵaf) /tu.xaf/: inflection of أَخَافَ (ʔaḵāfa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵif", "ʔaḵāfa", "tuḵaf"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخيفت",
+      "tur": "verb",
+      "baslik": "أُخِيفَتْ • (ʔuḵīfat) (form IV) /ʔu.xiː.fat/\n# third-person feminine singular past passive of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuḵīfat", "ʔaḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخاف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تخاف (form IV)\n# تُخَافُ (tuḵāfu) /tu.xaː.fu/: inflection of أَخَافَ (ʔaḵāfa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُخَافَ (tuḵāfa) /tu.xaː.fa/: inflection of أَخَافَ (ʔaḵāfa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵāfu", "ʔaḵāfa", "tuḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخفت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أخفت (form IV)\n# أَخَفْتُ (ʔaḵaftu) /ʔa.xaf.tu/: first-person singular past active of أَخَافَ (ʔaḵāfa)\n# أَخَفْتَ (ʔaḵafta) /ʔa.xaf.ta/: second-person masculine singular past active of أَخَافَ (ʔaḵāfa)\n# أَخَفْتِ (ʔaḵafti) /ʔa.xaf.ti/: second-person feminine singular past active of أَخَافَ (ʔaḵāfa)\n# أُخِفْتُ (ʔuḵiftu) /ʔu.xif.tu/: first-person singular past passive of أَخَافَ (ʔaḵāfa)\n# أُخِفْتَ ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵaftu", "ʔaḵāfa", "ʔaḵafta"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخيفين",
+      "tur": "verb",
+      "baslik": "تُخِيفِينَ • (tuḵīfīna) (form IV) /tu.xiː.fiː.na/\n# second-person feminine singular non-past active indicative of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵīfīna", "ʔaḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخيفي",
+      "tur": "verb",
+      "baslik": "تُخِيفِي • (tuḵīfī) (form IV) /tu.xiː.fiː/\n# second-person feminine singular non-past active subjunctive/jussive of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵīfī", "ʔaḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخيفي",
+      "tur": "verb",
+      "baslik": "أَخِيفِي • (ʔaḵīfī) (form IV) /ʔa.xiː.fiː/\n# second-person feminine singular imperative of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵīfī", "ʔaḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخافين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُخَافِينَ • (tuḵāfīna) (form IV) /tu.xaː.fiː.na/\n# second-person feminine singular non-past passive indicative of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵāfīna", "ʔaḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخافي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُخَافِي • (tuḵāfī) (form IV) /tu.xaː.fiː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵāfī", "ʔaḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخفنا",
+      "tur": "verb",
+      "baslik": "أخفنا (form IV)\n# أَخَفْنَا (ʔaḵafnā) /ʔa.xaf.naː/: first-person plural past active of أَخَافَ (ʔaḵāfa)\n# أُخِفْنَا (ʔuḵifnā) /ʔu.xif.naː/: first-person plural past passive of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵafnā", "ʔaḵāfa", "ʔuḵifnā"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نخيف",
+      "tur": "verb",
+      "baslik": "نخيف (form IV)\n# نُخِيفُ (nuḵīfu) /nu.xiː.fu/: first-person plural non-past active indicative of أَخَافَ (ʔaḵāfa)\n# نُخِيفَ (nuḵīfa) /nu.xiː.fa/: first-person plural non-past active subjunctive of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuḵīfu", "ʔaḵāfa", "nuḵīfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نخف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نخف (form IV)\n# نُخِفْ (nuḵif) /nu.xif/: first-person plural non-past active jussive of أَخَافَ (ʔaḵāfa)\n# نُخَفْ (nuḵaf) /nu.xaf/: first-person plural non-past passive jussive of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuḵif", "ʔaḵāfa", "nuḵaf"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نخاف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نخاف (form IV)\n# نُخَافُ (nuḵāfu) /nu.xaː.fu/: first-person plural non-past passive indicative of أَخَافَ (ʔaḵāfa)\n# نُخَافَ (nuḵāfa) /nu.xaː.fa/: first-person plural non-past passive subjunctive of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuḵāfu", "ʔaḵāfa", "nuḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخفتم",
+      "tur": "verb",
+      "baslik": "أخفتم (form IV)\n# أَخَفْتُمْ (ʔaḵaftum) /ʔa.xaf.tum/: second-person masculine plural past active of أَخَافَ (ʔaḵāfa)\n# أُخِفْتُمْ (ʔuḵiftum) /ʔu.xif.tum/: second-person masculine plural past passive of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵaftum", "ʔaḵāfa", "ʔuḵiftum"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخيفون",
+      "tur": "verb",
+      "baslik": "تُخِيفُونَ • (tuḵīfūna) (form IV) /tu.xiː.fuː.na/\n# second-person masculine plural non-past active indicative of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵīfūna", "ʔaḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخيفوا",
+      "tur": "verb",
+      "baslik": "تُخِيفُوا • (tuḵīfū) (form IV) /tu.xiː.fuː/\n# second-person masculine plural non-past active subjunctive/jussive of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵīfū", "ʔaḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخافون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُخَافُونَ • (tuḵāfūna) (form IV) /tu.xaː.fuː.na/\n# second-person masculine plural non-past passive indicative of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵāfūna", "ʔaḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخافوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُخَافُوا • (tuḵāfū) (form IV) /tu.xaː.fuː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵāfū", "ʔaḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخافوا",
+      "tur": "verb",
+      "baslik": "أَخَافُوا • (ʔaḵāfū) (form IV) /ʔa.xaː.fuː/\n# third-person masculine plural past active of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵāfū", "ʔaḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يخيفون",
+      "tur": "verb",
+      "baslik": "يُخِيفُونَ • (yuḵīfūna) (form IV) /ju.xiː.fuː.na/\n# third-person masculine plural non-past active indicative of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḵīfūna", "ʔaḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يخيفوا",
+      "tur": "verb",
+      "baslik": "يُخِيفُوا • (yuḵīfū) (form IV) /ju.xiː.fuː/\n# third-person masculine plural non-past active subjunctive/jussive of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḵīfū", "ʔaḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخيفوا",
+      "tur": "verb",
+      "baslik": "أخيفوا (form IV)\n# أُخِيفُوا (ʔuḵīfū) /ʔu.xiː.fuː/: third-person masculine plural past passive of أَخَافَ (ʔaḵāfa)\n# أَخِيفُوا (ʔaḵīfū) /ʔa.xiː.fuː/: second-person masculine plural imperative of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuḵīfū", "ʔaḵāfa", "ʔaḵīfū"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يخافون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُخَافُونَ • (yuḵāfūna) (form IV) /ju.xaː.fuː.na/\n# third-person masculine plural non-past passive indicative of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḵāfūna", "ʔaḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يخافوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُخَافُوا • (yuḵāfū) (form IV) /ju.xaː.fuː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḵāfū", "ʔaḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخفتن",
+      "tur": "verb",
+      "baslik": "أخفتن (form IV)\n# أَخَفْتُنَّ (ʔaḵaftunna) /ʔa.xaf.tun.na/: second-person feminine plural past active of أَخَافَ (ʔaḵāfa)\n# أُخِفْتُنَّ (ʔuḵiftunna) /ʔu.xif.tun.na/: second-person feminine plural past passive of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵaftunna", "ʔaḵāfa", "ʔuḵiftunna"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخفن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تخفن (form IV)\n# تُخِفْنَ (tuḵifna) /tu.xif.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَخَافَ (ʔaḵāfa)\n# تُخَفْنَ (tuḵafna) /tu.xaf.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵifna", "ʔaḵāfa", "tuḵafna"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخفن",
+      "tur": "verb",
+      "baslik": "أخفن (form IV)\n# أَخَفْنَ (ʔaḵafna) /ʔa.xaf.na/: third-person feminine plural past active of أَخَافَ (ʔaḵāfa)\n# أُخِفْنَ (ʔuḵifna) /ʔu.xif.na/: third-person feminine plural past passive of أَخَافَ (ʔaḵāfa)\n# أَخِفْنَ (ʔaḵifna) /ʔa.xif.na/: second-person feminine plural imperative of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵafna", "ʔaḵāfa", "ʔuḵifna"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يخفن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يخفن (form IV)\n# يُخِفْنَ (yuḵifna) /ju.xif.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَخَافَ (ʔaḵāfa)\n# يُخَفْنَ (yuḵafna) /ju.xaf.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḵifna", "ʔaḵāfa", "yuḵafna"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخفتما",
+      "tur": "verb",
+      "baslik": "أخفتما (form IV)\n# أَخَفْتُمَا (ʔaḵaftumā) /ʔa.xaf.tu.maː/: second-person dual past active of أَخَافَ (ʔaḵāfa)\n# أُخِفْتُمَا (ʔuḵiftumā) /ʔu.xif.tu.maː/: second-person dual past passive of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵaftumā", "ʔaḵāfa", "ʔuḵiftumā"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخافا",
+      "tur": "verb",
+      "baslik": "أَخَافَا • (ʔaḵāfā) (form IV) /ʔa.xaː.faː/\n# third-person masculine dual past active of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵāfā", "ʔaḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخيفتا",
+      "tur": "verb",
+      "baslik": "أُخِيفَتَا • (ʔuḵīfatā) (form IV) /ʔu.xiː.fa.taː/\n# third-person feminine dual past passive of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuḵīfatā", "ʔaḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخافتا",
+      "tur": "verb",
+      "baslik": "أَخَافَتَا • (ʔaḵāfatā) (form IV) /ʔa.xaː.fa.taː/\n# third-person feminine dual past active of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵāfatā", "ʔaḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخيفا",
+      "tur": "verb",
+      "baslik": "أخيفا (form IV)\n# أُخِيفَا (ʔuḵīfā) /ʔu.xiː.faː/: third-person masculine dual past passive of أَخَافَ (ʔaḵāfa)\n# أَخِيفَا (ʔaḵīfā) /ʔa.xiː.faː/: second-person dual imperative of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuḵīfā", "ʔaḵāfa", "ʔaḵīfā"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخيفان",
+      "tur": "verb",
+      "baslik": "تُخِيفَانِ • (tuḵīfāni) (form IV) /tu.xiː.faː.ni/\n# inflection of أَخَافَ (ʔaḵāfa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵīfāni", "ʔaḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يخيفان",
+      "tur": "verb",
+      "baslik": "يُخِيفَانِ • (yuḵīfāni) (form IV) /ju.xiː.faː.ni/\n# third-person masculine dual non-past active indicative of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḵīfāni", "ʔaḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخافان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُخَافَانِ • (tuḵāfāni) (form IV) /tu.xaː.faː.ni/\n# inflection of أَخَافَ (ʔaḵāfa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵāfāni", "ʔaḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يخافان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُخَافَانِ • (yuḵāfāni) (form IV) /ju.xaː.faː.ni/\n# third-person masculine dual non-past passive indicative of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḵāfāni", "ʔaḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخيفا",
+      "tur": "verb",
+      "baslik": "تُخِيفَا • (tuḵīfā) (form IV) /tu.xiː.faː/\n# inflection of أَخَافَ (ʔaḵāfa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵīfā", "ʔaḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يخيفا",
+      "tur": "verb",
+      "baslik": "يُخِيفَا • (yuḵīfā) (form IV) /ju.xiː.faː/\n# third-person masculine dual non-past active subjunctive/jussive of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḵīfā", "ʔaḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخافا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُخَافَا • (tuḵāfā) (form IV) /tu.xaː.faː/\n# inflection of أَخَافَ (ʔaḵāfa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵāfā", "ʔaḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يخافا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُخَافَا • (yuḵāfā) (form IV) /ju.xaː.faː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَخَافَ (ʔaḵāfa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḵāfā", "ʔaḵāfa"],
+      "kok_yazilis": "أخاف",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ءخاف", "r6"]
+  ],
+  "mana": {
     "ince": "deaden.v.06",
     "orta": "verb.change",
     "ust": "fiil ve hadise",
@@ -631,22 +496,15 @@
     "dayanak_tanim": "make less lively, intense, or vigorous; impair in vigor, force, activity, or sensation",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["deaden.v.06"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["deaden.v.06"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,364 +1,290 @@
 {
   "kok": "ءهجر",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءهجر", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يهجر",
-        "u": "يهجر",
-        "p": "verb",
-        "n": "1.2",
-        "h": "ar-verb form",
-        "e": "يهجر (form IV)\n# يُهْجِرُ (yuhjiru) /juh.d͡ʒi.ru/: third-person masculine singular non-past active indicative of أَهْجَرَ (ʔahjara)\n# يُهْجَرُ (yuhjaru) /juh.d͡ʒa.ru/: third-person masculine singular non-past passive indicative of أَهْجَرَ (ʔahjara)\n# يُهْجِرَ (yuhjira) /juh.d͡ʒi.ra/: third-person masculine singular non-past active subjunctive of أَهْجَرَ (ʔahjara)\n# يُهْجَرَ (yuhjara) /juh.d͡ʒa.r",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuhjiru", "ʔahjara", "yuhjaru"],
-        "k": "أهجر",
-        "yol": "kök"
-      },
-      {
-        "w": "أهجرت",
-        "u": "أهجرت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أهجرت (form IV)\n# أَهْجَرْتُ (ʔahjartu) /ʔah.d͡ʒar.tu/: first-person singular past active of أَهْجَرَ (ʔahjara)\n# أَهْجَرْتَ (ʔahjarta) /ʔah.d͡ʒar.ta/: second-person masculine singular past active of أَهْجَرَ (ʔahjara)\n# أَهْجَرْتِ (ʔahjarti) /ʔah.d͡ʒar.ti/: second-person feminine singular past active of أَهْجَرَ (ʔahjara)\n# أَهْجَرَتْ (ʔahjarat) /ʔah.d͡ʒa.rat/: third-person feminine singular past",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔahjartu", "ʔahjara", "ʔahjarta"],
-        "k": "أهجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تهجر",
-        "u": "تهجر",
-        "p": "verb",
-        "n": "1.4",
-        "h": "ar-verb form",
-        "e": "تهجر (form IV)\n# تُهْجِرُ (tuhjiru) /tuh.d͡ʒi.ru/: inflection of أَهْجَرَ (ʔahjara):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُهْجَرُ (tuhjaru) /tuh.d͡ʒa.ru/: inflection of أَهْجَرَ (ʔahjara):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indica",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuhjiru", "ʔahjara", "tuhjaru"],
-        "k": "أهجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تهجرين",
-        "u": "تهجرين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تهجرين (form IV)\n# تُهْجِرِينَ (tuhjirīna) /tuh.d͡ʒi.riː.na/: second-person feminine singular non-past active indicative of أَهْجَرَ (ʔahjara)\n# تُهْجَرِينَ (tuhjarīna) /tuh.d͡ʒa.riː.na/: second-person feminine singular non-past passive indicative of أَهْجَرَ (ʔahjara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuhjirīna", "ʔahjara", "tuhjarīna"],
-        "k": "أهجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تهجري",
-        "u": "تهجري",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تهجري (form IV)\n# تُهْجِرِي (tuhjirī) /tuh.d͡ʒi.riː/: second-person feminine singular non-past active subjunctive/jussive of أَهْجَرَ (ʔahjara)\n# تُهْجَرِي (tuhjarī) /tuh.d͡ʒa.riː/: second-person feminine singular non-past passive subjunctive/jussive of أَهْجَرَ (ʔahjara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuhjirī", "ʔahjara", "tuhjarī"],
-        "k": "أهجر",
-        "yol": "kök"
-      },
-      {
-        "w": "أهجري",
-        "u": "أهجري",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَهْجِرِي • (ʔahjirī) (form IV) /ʔah.d͡ʒi.riː/\n# second-person feminine singular imperative of أَهْجَرَ (ʔahjara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔahjirī", "ʔahjara"],
-        "k": "أهجر",
-        "yol": "kök"
-      },
-      {
-        "w": "أهجرنا",
-        "u": "أهجرنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أهجرنا (form IV)\n# أَهْجَرْنَا (ʔahjarnā) /ʔah.d͡ʒar.naː/: first-person plural past active of أَهْجَرَ (ʔahjara)\n# أُهْجِرْنَا (ʔuhjirnā) /ʔuh.d͡ʒir.naː/: first-person plural past passive of أَهْجَرَ (ʔahjara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔahjarnā", "ʔahjara", "ʔuhjirnā"],
-        "k": "أهجر",
-        "yol": "kök"
-      },
-      {
-        "w": "نهجر",
-        "u": "نهجر",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نهجر (form IV)\n# نُهْجِرُ (nuhjiru) /nuh.d͡ʒi.ru/: first-person plural non-past active indicative of أَهْجَرَ (ʔahjara)\n# نُهْجَرُ (nuhjaru) /nuh.d͡ʒa.ru/: first-person plural non-past passive indicative of أَهْجَرَ (ʔahjara)\n# نُهْجِرَ (nuhjira) /nuh.d͡ʒi.ra/: first-person plural non-past active subjunctive of أَهْجَرَ (ʔahjara)\n# نُهْجَرَ (nuhjara) /nuh.d͡ʒa.ra/: first-person plural non-past pas",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuhjiru", "ʔahjara", "nuhjaru"],
-        "k": "أهجر",
-        "yol": "kök"
-      },
-      {
-        "w": "أهجرتم",
-        "u": "أهجرتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أهجرتم (form IV)\n# أَهْجَرْتُمْ (ʔahjartum) /ʔah.d͡ʒar.tum/: second-person masculine plural past active of أَهْجَرَ (ʔahjara)\n# أُهْجِرْتُمْ (ʔuhjirtum) /ʔuh.d͡ʒir.tum/: second-person masculine plural past passive of أَهْجَرَ (ʔahjara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔahjartum", "ʔahjara", "ʔuhjirtum"],
-        "k": "أهجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تهجرون",
-        "u": "تهجرون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تهجرون (form IV)\n# تُهْجِرُونَ (tuhjirūna) /tuh.d͡ʒi.ruː.na/: second-person masculine plural non-past active indicative of أَهْجَرَ (ʔahjara)\n# تُهْجَرُونَ (tuhjarūna) /tuh.d͡ʒa.ruː.na/: second-person masculine plural non-past passive indicative of أَهْجَرَ (ʔahjara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuhjirūna", "ʔahjara", "tuhjarūna"],
-        "k": "أهجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تهجروا",
-        "u": "تهجروا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تهجروا (form IV)\n# تُهْجِرُوا (tuhjirū) /tuh.d͡ʒi.ruː/: second-person masculine plural non-past active subjunctive/jussive of أَهْجَرَ (ʔahjara)\n# تُهْجَرُوا (tuhjarū) /tuh.d͡ʒa.ruː/: second-person masculine plural non-past passive subjunctive/jussive of أَهْجَرَ (ʔahjara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuhjirū", "ʔahjara", "tuhjarū"],
-        "k": "أهجر",
-        "yol": "kök"
-      },
-      {
-        "w": "أهجروا",
-        "u": "أهجروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أهجروا (form IV)\n# أَهْجَرُوا (ʔahjarū) /ʔah.d͡ʒa.ruː/: third-person masculine plural past active of أَهْجَرَ (ʔahjara)\n# أُهْجِرُوا (ʔuhjirū) /ʔuh.d͡ʒi.ruː/: third-person masculine plural past passive of أَهْجَرَ (ʔahjara)\n# أَهْجِرُوا (ʔahjirū) /ʔah.d͡ʒi.ruː/: second-person masculine plural imperative of أَهْجَرَ (ʔahjara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔahjarū", "ʔahjara", "ʔuhjirū"],
-        "k": "أهجر",
-        "yol": "kök"
-      },
-      {
-        "w": "يهجرون",
-        "u": "يهجرون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يهجرون (form IV)\n# يُهْجِرُونَ (yuhjirūna) /juh.d͡ʒi.ruː.na/: third-person masculine plural non-past active indicative of أَهْجَرَ (ʔahjara)\n# يُهْجَرُونَ (yuhjarūna) /juh.d͡ʒa.ruː.na/: third-person masculine plural non-past passive indicative of أَهْجَرَ (ʔahjara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuhjirūna", "ʔahjara", "yuhjarūna"],
-        "k": "أهجر",
-        "yol": "kök"
-      },
-      {
-        "w": "يهجروا",
-        "u": "يهجروا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يهجروا (form IV)\n# يُهْجِرُوا (yuhjirū) /juh.d͡ʒi.ruː/: third-person masculine plural non-past active subjunctive/jussive of أَهْجَرَ (ʔahjara)\n# يُهْجَرُوا (yuhjarū) /juh.d͡ʒa.ruː/: third-person masculine plural non-past passive subjunctive/jussive of أَهْجَرَ (ʔahjara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuhjirū", "ʔahjara", "yuhjarū"],
-        "k": "أهجر",
-        "yol": "kök"
-      },
-      {
-        "w": "أهجرتن",
-        "u": "أهجرتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أهجرتن (form IV)\n# أَهْجَرْتُنَّ (ʔahjartunna) /ʔah.d͡ʒar.tun.na/: second-person feminine plural past active of أَهْجَرَ (ʔahjara)\n# أُهْجِرْتُنَّ (ʔuhjirtunna) /ʔuh.d͡ʒir.tun.na/: second-person feminine plural past passive of أَهْجَرَ (ʔahjara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔahjartunna", "ʔahjara", "ʔuhjirtunna"],
-        "k": "أهجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تهجرن",
-        "u": "تهجرن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تهجرن (form IV)\n# تُهْجِرْنَ (tuhjirna) /tuh.d͡ʒir.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَهْجَرَ (ʔahjara)\n# تُهْجَرْنَ (tuhjarna) /tuh.d͡ʒar.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَهْجَرَ (ʔahjara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuhjirna", "ʔahjara", "tuhjarna"],
-        "k": "أهجر",
-        "yol": "kök"
-      },
-      {
-        "w": "أهجرن",
-        "u": "أهجرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أهجرن (form IV)\n# أَهْجَرْنَ (ʔahjarna) /ʔah.d͡ʒar.na/: third-person feminine plural past active of أَهْجَرَ (ʔahjara)\n# أُهْجِرْنَ (ʔuhjirna) /ʔuh.d͡ʒir.na/: third-person feminine plural past passive of أَهْجَرَ (ʔahjara)\n# أَهْجِرْنَ (ʔahjirna) /ʔah.d͡ʒir.na/: second-person feminine plural imperative of أَهْجَرَ (ʔahjara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔahjarna", "ʔahjara", "ʔuhjirna"],
-        "k": "أهجر",
-        "yol": "kök"
-      },
-      {
-        "w": "يهجرن",
-        "u": "يهجرن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يهجرن (form IV)\n# يُهْجِرْنَ (yuhjirna) /juh.d͡ʒir.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَهْجَرَ (ʔahjara)\n# يُهْجَرْنَ (yuhjarna) /juh.d͡ʒar.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَهْجَرَ (ʔahjara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuhjirna", "ʔahjara", "yuhjarna"],
-        "k": "أهجر",
-        "yol": "kök"
-      },
-      {
-        "w": "أهجرا",
-        "u": "أهجرا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أهجرا (form IV)\n# أَهْجَرَا (ʔahjarā) /ʔah.d͡ʒa.raː/: third-person masculine dual past active of أَهْجَرَ (ʔahjara)\n# أُهْجِرَا (ʔuhjirā) /ʔuh.d͡ʒi.raː/: third-person masculine dual past passive of أَهْجَرَ (ʔahjara)\n# أَهْجِرَا (ʔahjirā) /ʔah.d͡ʒi.raː/: second-person dual imperative of أَهْجَرَ (ʔahjara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔahjarā", "ʔahjara", "ʔuhjirā"],
-        "k": "أهجر",
-        "yol": "kök"
-      },
-      {
-        "w": "أهجرتا",
-        "u": "أهجرتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أهجرتا (form IV)\n# أَهْجَرَتَا (ʔahjaratā) /ʔah.d͡ʒa.ra.taː/: third-person feminine dual past active of أَهْجَرَ (ʔahjara)\n# أُهْجِرَتَا (ʔuhjiratā) /ʔuh.d͡ʒi.ra.taː/: third-person feminine dual past passive of أَهْجَرَ (ʔahjara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔahjaratā", "ʔahjara", "ʔuhjiratā"],
-        "k": "أهجر",
-        "yol": "kök"
-      },
-      {
-        "w": "أهجرتما",
-        "u": "أهجرتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أهجرتما (form IV)\n# أَهْجَرْتُمَا (ʔahjartumā) /ʔah.d͡ʒar.tu.maː/: second-person dual past active of أَهْجَرَ (ʔahjara)\n# أُهْجِرْتُمَا (ʔuhjirtumā) /ʔuh.d͡ʒir.tu.maː/: second-person dual past passive of أَهْجَرَ (ʔahjara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔahjartumā", "ʔahjara", "ʔuhjirtumā"],
-        "k": "أهجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تهجران",
-        "u": "تهجران",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تهجران (form IV)\n# تُهْجِرَانِ (tuhjirāni) /tuh.d͡ʒi.raː.ni/: inflection of أَهْجَرَ (ʔahjara):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُهْجَرَانِ (tuhjarāni) /tuh.d͡ʒa.raː.ni/: inflection of أَهْجَرَ (ʔahjara):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuhjirāni", "ʔahjara", "tuhjarāni"],
-        "k": "أهجر",
-        "yol": "kök"
-      },
-      {
-        "w": "يهجران",
-        "u": "يهجران",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يهجران (form IV)\n# يُهْجِرَانِ (yuhjirāni) /juh.d͡ʒi.raː.ni/: third-person masculine dual non-past active indicative of أَهْجَرَ (ʔahjara)\n# يُهْجَرَانِ (yuhjarāni) /juh.d͡ʒa.raː.ni/: third-person masculine dual non-past passive indicative of أَهْجَرَ (ʔahjara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuhjirāni", "ʔahjara", "yuhjarāni"],
-        "k": "أهجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تهجرا",
-        "u": "تهجرا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تهجرا (form IV)\n# تُهْجِرَا (tuhjirā) /tuh.d͡ʒi.raː/: inflection of أَهْجَرَ (ʔahjara):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُهْجَرَا (tuhjarā) /tuh.d͡ʒa.raː/: inflection of أَهْجَرَ (ʔahjara):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctiv",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuhjirā", "ʔahjara", "tuhjarā"],
-        "k": "أهجر",
-        "yol": "kök"
-      },
-      {
-        "w": "يهجرا",
-        "u": "يهجرا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يهجرا (form IV)\n# يُهْجِرَا (yuhjirā) /juh.d͡ʒi.raː/: third-person masculine dual non-past active subjunctive/jussive of أَهْجَرَ (ʔahjara)\n# يُهْجَرَا (yuhjarā) /juh.d͡ʒa.raː/: third-person masculine dual non-past passive subjunctive/jussive of أَهْجَرَ (ʔahjara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuhjirā", "ʔahjara", "yuhjarā"],
-        "k": "أهجر",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "هج",
+  "ses": {
     "harf": "ء",
+    "fasil": "هج",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يهجر",
+      "tur": "verb",
+      "etim_no": "1.2",
+      "baslik": "يهجر (form IV)\n# يُهْجِرُ (yuhjiru) /juh.d͡ʒi.ru/: third-person masculine singular non-past active indicative of أَهْجَرَ (ʔahjara)\n# يُهْجَرُ (yuhjaru) /juh.d͡ʒa.ru/: third-person masculine singular non-past passive indicative of أَهْجَرَ (ʔahjara)\n# يُهْجِرَ (yuhjira) /juh.d͡ʒi.ra/: third-person masculine singular non-past active subjunctive of أَهْجَرَ (ʔahjara)\n# يُهْجَرَ (yuhjara) /juh.d͡ʒa.r",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuhjiru", "ʔahjara", "yuhjaru"],
+      "kok_yazilis": "أهجر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أهجرت",
+      "tur": "verb",
+      "baslik": "أهجرت (form IV)\n# أَهْجَرْتُ (ʔahjartu) /ʔah.d͡ʒar.tu/: first-person singular past active of أَهْجَرَ (ʔahjara)\n# أَهْجَرْتَ (ʔahjarta) /ʔah.d͡ʒar.ta/: second-person masculine singular past active of أَهْجَرَ (ʔahjara)\n# أَهْجَرْتِ (ʔahjarti) /ʔah.d͡ʒar.ti/: second-person feminine singular past active of أَهْجَرَ (ʔahjara)\n# أَهْجَرَتْ (ʔahjarat) /ʔah.d͡ʒa.rat/: third-person feminine singular past",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔahjartu", "ʔahjara", "ʔahjarta"],
+      "kok_yazilis": "أهجر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهجر",
+      "tur": "verb",
+      "etim_no": "1.4",
+      "baslik": "تهجر (form IV)\n# تُهْجِرُ (tuhjiru) /tuh.d͡ʒi.ru/: inflection of أَهْجَرَ (ʔahjara):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُهْجَرُ (tuhjaru) /tuh.d͡ʒa.ru/: inflection of أَهْجَرَ (ʔahjara):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indica",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuhjiru", "ʔahjara", "tuhjaru"],
+      "kok_yazilis": "أهجر"
+    },
+    {
+      "madde": "تهجرين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تهجرين (form IV)\n# تُهْجِرِينَ (tuhjirīna) /tuh.d͡ʒi.riː.na/: second-person feminine singular non-past active indicative of أَهْجَرَ (ʔahjara)\n# تُهْجَرِينَ (tuhjarīna) /tuh.d͡ʒa.riː.na/: second-person feminine singular non-past passive indicative of أَهْجَرَ (ʔahjara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuhjirīna", "ʔahjara", "tuhjarīna"],
+      "kok_yazilis": "أهجر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهجري",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تهجري (form IV)\n# تُهْجِرِي (tuhjirī) /tuh.d͡ʒi.riː/: second-person feminine singular non-past active subjunctive/jussive of أَهْجَرَ (ʔahjara)\n# تُهْجَرِي (tuhjarī) /tuh.d͡ʒa.riː/: second-person feminine singular non-past passive subjunctive/jussive of أَهْجَرَ (ʔahjara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuhjirī", "ʔahjara", "tuhjarī"],
+      "kok_yazilis": "أهجر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أهجري",
+      "tur": "verb",
+      "baslik": "أَهْجِرِي • (ʔahjirī) (form IV) /ʔah.d͡ʒi.riː/\n# second-person feminine singular imperative of أَهْجَرَ (ʔahjara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔahjirī", "ʔahjara"],
+      "kok_yazilis": "أهجر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أهجرنا",
+      "tur": "verb",
+      "baslik": "أهجرنا (form IV)\n# أَهْجَرْنَا (ʔahjarnā) /ʔah.d͡ʒar.naː/: first-person plural past active of أَهْجَرَ (ʔahjara)\n# أُهْجِرْنَا (ʔuhjirnā) /ʔuh.d͡ʒir.naː/: first-person plural past passive of أَهْجَرَ (ʔahjara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔahjarnā", "ʔahjara", "ʔuhjirnā"],
+      "kok_yazilis": "أهجر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نهجر",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نهجر (form IV)\n# نُهْجِرُ (nuhjiru) /nuh.d͡ʒi.ru/: first-person plural non-past active indicative of أَهْجَرَ (ʔahjara)\n# نُهْجَرُ (nuhjaru) /nuh.d͡ʒa.ru/: first-person plural non-past passive indicative of أَهْجَرَ (ʔahjara)\n# نُهْجِرَ (nuhjira) /nuh.d͡ʒi.ra/: first-person plural non-past active subjunctive of أَهْجَرَ (ʔahjara)\n# نُهْجَرَ (nuhjara) /nuh.d͡ʒa.ra/: first-person plural non-past pas",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuhjiru", "ʔahjara", "nuhjaru"],
+      "kok_yazilis": "أهجر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أهجرتم",
+      "tur": "verb",
+      "baslik": "أهجرتم (form IV)\n# أَهْجَرْتُمْ (ʔahjartum) /ʔah.d͡ʒar.tum/: second-person masculine plural past active of أَهْجَرَ (ʔahjara)\n# أُهْجِرْتُمْ (ʔuhjirtum) /ʔuh.d͡ʒir.tum/: second-person masculine plural past passive of أَهْجَرَ (ʔahjara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔahjartum", "ʔahjara", "ʔuhjirtum"],
+      "kok_yazilis": "أهجر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهجرون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تهجرون (form IV)\n# تُهْجِرُونَ (tuhjirūna) /tuh.d͡ʒi.ruː.na/: second-person masculine plural non-past active indicative of أَهْجَرَ (ʔahjara)\n# تُهْجَرُونَ (tuhjarūna) /tuh.d͡ʒa.ruː.na/: second-person masculine plural non-past passive indicative of أَهْجَرَ (ʔahjara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuhjirūna", "ʔahjara", "tuhjarūna"],
+      "kok_yazilis": "أهجر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهجروا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تهجروا (form IV)\n# تُهْجِرُوا (tuhjirū) /tuh.d͡ʒi.ruː/: second-person masculine plural non-past active subjunctive/jussive of أَهْجَرَ (ʔahjara)\n# تُهْجَرُوا (tuhjarū) /tuh.d͡ʒa.ruː/: second-person masculine plural non-past passive subjunctive/jussive of أَهْجَرَ (ʔahjara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuhjirū", "ʔahjara", "tuhjarū"],
+      "kok_yazilis": "أهجر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أهجروا",
+      "tur": "verb",
+      "baslik": "أهجروا (form IV)\n# أَهْجَرُوا (ʔahjarū) /ʔah.d͡ʒa.ruː/: third-person masculine plural past active of أَهْجَرَ (ʔahjara)\n# أُهْجِرُوا (ʔuhjirū) /ʔuh.d͡ʒi.ruː/: third-person masculine plural past passive of أَهْجَرَ (ʔahjara)\n# أَهْجِرُوا (ʔahjirū) /ʔah.d͡ʒi.ruː/: second-person masculine plural imperative of أَهْجَرَ (ʔahjara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔahjarū", "ʔahjara", "ʔuhjirū"],
+      "kok_yazilis": "أهجر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهجرون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يهجرون (form IV)\n# يُهْجِرُونَ (yuhjirūna) /juh.d͡ʒi.ruː.na/: third-person masculine plural non-past active indicative of أَهْجَرَ (ʔahjara)\n# يُهْجَرُونَ (yuhjarūna) /juh.d͡ʒa.ruː.na/: third-person masculine plural non-past passive indicative of أَهْجَرَ (ʔahjara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuhjirūna", "ʔahjara", "yuhjarūna"],
+      "kok_yazilis": "أهجر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهجروا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يهجروا (form IV)\n# يُهْجِرُوا (yuhjirū) /juh.d͡ʒi.ruː/: third-person masculine plural non-past active subjunctive/jussive of أَهْجَرَ (ʔahjara)\n# يُهْجَرُوا (yuhjarū) /juh.d͡ʒa.ruː/: third-person masculine plural non-past passive subjunctive/jussive of أَهْجَرَ (ʔahjara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuhjirū", "ʔahjara", "yuhjarū"],
+      "kok_yazilis": "أهجر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أهجرتن",
+      "tur": "verb",
+      "baslik": "أهجرتن (form IV)\n# أَهْجَرْتُنَّ (ʔahjartunna) /ʔah.d͡ʒar.tun.na/: second-person feminine plural past active of أَهْجَرَ (ʔahjara)\n# أُهْجِرْتُنَّ (ʔuhjirtunna) /ʔuh.d͡ʒir.tun.na/: second-person feminine plural past passive of أَهْجَرَ (ʔahjara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔahjartunna", "ʔahjara", "ʔuhjirtunna"],
+      "kok_yazilis": "أهجر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهجرن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تهجرن (form IV)\n# تُهْجِرْنَ (tuhjirna) /tuh.d͡ʒir.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَهْجَرَ (ʔahjara)\n# تُهْجَرْنَ (tuhjarna) /tuh.d͡ʒar.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَهْجَرَ (ʔahjara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuhjirna", "ʔahjara", "tuhjarna"],
+      "kok_yazilis": "أهجر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أهجرن",
+      "tur": "verb",
+      "baslik": "أهجرن (form IV)\n# أَهْجَرْنَ (ʔahjarna) /ʔah.d͡ʒar.na/: third-person feminine plural past active of أَهْجَرَ (ʔahjara)\n# أُهْجِرْنَ (ʔuhjirna) /ʔuh.d͡ʒir.na/: third-person feminine plural past passive of أَهْجَرَ (ʔahjara)\n# أَهْجِرْنَ (ʔahjirna) /ʔah.d͡ʒir.na/: second-person feminine plural imperative of أَهْجَرَ (ʔahjara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔahjarna", "ʔahjara", "ʔuhjirna"],
+      "kok_yazilis": "أهجر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهجرن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يهجرن (form IV)\n# يُهْجِرْنَ (yuhjirna) /juh.d͡ʒir.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَهْجَرَ (ʔahjara)\n# يُهْجَرْنَ (yuhjarna) /juh.d͡ʒar.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَهْجَرَ (ʔahjara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuhjirna", "ʔahjara", "yuhjarna"],
+      "kok_yazilis": "أهجر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أهجرا",
+      "tur": "verb",
+      "baslik": "أهجرا (form IV)\n# أَهْجَرَا (ʔahjarā) /ʔah.d͡ʒa.raː/: third-person masculine dual past active of أَهْجَرَ (ʔahjara)\n# أُهْجِرَا (ʔuhjirā) /ʔuh.d͡ʒi.raː/: third-person masculine dual past passive of أَهْجَرَ (ʔahjara)\n# أَهْجِرَا (ʔahjirā) /ʔah.d͡ʒi.raː/: second-person dual imperative of أَهْجَرَ (ʔahjara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔahjarā", "ʔahjara", "ʔuhjirā"],
+      "kok_yazilis": "أهجر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أهجرتا",
+      "tur": "verb",
+      "baslik": "أهجرتا (form IV)\n# أَهْجَرَتَا (ʔahjaratā) /ʔah.d͡ʒa.ra.taː/: third-person feminine dual past active of أَهْجَرَ (ʔahjara)\n# أُهْجِرَتَا (ʔuhjiratā) /ʔuh.d͡ʒi.ra.taː/: third-person feminine dual past passive of أَهْجَرَ (ʔahjara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔahjaratā", "ʔahjara", "ʔuhjiratā"],
+      "kok_yazilis": "أهجر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أهجرتما",
+      "tur": "verb",
+      "baslik": "أهجرتما (form IV)\n# أَهْجَرْتُمَا (ʔahjartumā) /ʔah.d͡ʒar.tu.maː/: second-person dual past active of أَهْجَرَ (ʔahjara)\n# أُهْجِرْتُمَا (ʔuhjirtumā) /ʔuh.d͡ʒir.tu.maː/: second-person dual past passive of أَهْجَرَ (ʔahjara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔahjartumā", "ʔahjara", "ʔuhjirtumā"],
+      "kok_yazilis": "أهجر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهجران",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تهجران (form IV)\n# تُهْجِرَانِ (tuhjirāni) /tuh.d͡ʒi.raː.ni/: inflection of أَهْجَرَ (ʔahjara):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُهْجَرَانِ (tuhjarāni) /tuh.d͡ʒa.raː.ni/: inflection of أَهْجَرَ (ʔahjara):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuhjirāni", "ʔahjara", "tuhjarāni"],
+      "kok_yazilis": "أهجر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهجران",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يهجران (form IV)\n# يُهْجِرَانِ (yuhjirāni) /juh.d͡ʒi.raː.ni/: third-person masculine dual non-past active indicative of أَهْجَرَ (ʔahjara)\n# يُهْجَرَانِ (yuhjarāni) /juh.d͡ʒa.raː.ni/: third-person masculine dual non-past passive indicative of أَهْجَرَ (ʔahjara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuhjirāni", "ʔahjara", "yuhjarāni"],
+      "kok_yazilis": "أهجر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهجرا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تهجرا (form IV)\n# تُهْجِرَا (tuhjirā) /tuh.d͡ʒi.raː/: inflection of أَهْجَرَ (ʔahjara):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُهْجَرَا (tuhjarā) /tuh.d͡ʒa.raː/: inflection of أَهْجَرَ (ʔahjara):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctiv",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuhjirā", "ʔahjara", "tuhjarā"],
+      "kok_yazilis": "أهجر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهجرا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يهجرا (form IV)\n# يُهْجِرَا (yuhjirā) /juh.d͡ʒi.raː/: third-person masculine dual non-past active subjunctive/jussive of أَهْجَرَ (ʔahjara)\n# يُهْجَرَا (yuhjarā) /juh.d͡ʒa.raː/: third-person masculine dual non-past passive subjunctive/jussive of أَهْجَرَ (ʔahjara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuhjirā", "ʔahjara", "yuhjarā"],
+      "kok_yazilis": "أهجر",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءهجر", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

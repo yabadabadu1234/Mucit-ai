@@ -1,1146 +1,808 @@
 {
   "kok": "ناء",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ناء", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "نؤت",
-        "u": "نؤت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نؤت (form I)\n# نُؤْتُ (nuʔtu) /nuʔ.tu/: first-person singular past active of نَاءَ (nāʔa)\n# نُؤْتَ (nuʔta) /nuʔ.ta/: second-person masculine singular past active of نَاءَ (nāʔa)\n# نُؤْتِ (nuʔti) /nuʔ.ti/: second-person feminine singular past active of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuʔtu", "nāʔa", "nuʔta"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "نؤت",
-        "u": "نؤت",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نؤت (form I)\n# نُؤْتُ (nuʔtu) /nuʔ.tu/: first-person singular past active of نَاءَ (nāʔa)\n# نُؤْتَ (nuʔta) /nuʔ.ta/: second-person masculine singular past active of نَاءَ (nāʔa)\n# نُؤْتِ (nuʔti) /nuʔ.ti/: second-person feminine singular past active of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuʔtu", "nāʔa", "nuʔta"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "نؤتم",
-        "u": "نؤتم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نُؤْتُمْ • (nuʔtum) (form I) /nuʔ.tum/\n# second-person masculine plural past active of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuʔtum", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "أوان",
-        "u": "أوان",
-        "p": "noun",
-        "n": "2",
-        "h": "ar-head",
-        "e": "أَوَانٍ • (ʔawānin) m pl",
-        "t": "The regular plural of إِنَاء (ʔināʔ, “vessel”) would have originally been *أَأْنِيَة (*ʔaʔniya), which became آنِيَة (ʔāniya, “vessels”) due to a regular sound shift affecting consecutive hamzahs. However, آنِيَة (ʔāniya) coincidentally has the form of a singular feminine active participle, so it appears to have been pluralized again to أَوَانٍ (ʔawānin, “vessels”) to reinforce its status as a plural.",
-        "s": [
-          ["lg", "sound shift"]
-        ],
-        "g": ["plural of إِنَاء (ʔināʔ, “vessel”)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["إِنَاء"],
-        "r": ["ʔawānin"],
-        "ipa": ["/ʔa.waː.nin/"],
-        "el": [
-          ["إِنَاء", "إناء#Arabic"],
-          ["آنِيَة", "آنية#Arabic"],
-          ["آنِيَة", "آنية#Arabic"],
-          ["أَوَانٍ", "أوان#Arabic"]
-        ],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "نيء",
-        "u": "نيء",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نِيءَ • (nīʔa) (form I) /niː.ʔa/\n# third-person masculine singular past passive of نَاءَ (nāʔa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nīʔa", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "نؤ",
-        "u": "نؤ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُؤْ • (nuʔ) (form I) /nuʔ/\n# second-person masculine singular imperative of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuʔ", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "أناء",
-        "u": "أناء",
-        "p": "verb",
-        "n": "1.2",
-        "h": "ar-verb form",
-        "e": "أناء (form I)\n# أُنَاءُ (ʔunāʔu) /ʔu.naː.ʔu/: first-person singular non-past passive indicative of نَاءَ (nāʔa)\n# أُنَاءَ (ʔunāʔa) /ʔu.naː.ʔa/: first-person singular non-past passive subjunctive of نَاءَ (nāʔa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔunāʔu", "nāʔa", "ʔunāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "نؤن",
-        "u": "نؤن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نُؤْنَ • (nuʔna) (form I) /nuʔ.na/\n# inflection of نَاءَ (nāʔa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuʔna", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "نئ",
-        "u": "نئ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نِئْ • (niʔ) (form I) /niʔ/\n# second-person masculine singular imperative of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["niʔ", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "أنأ",
-        "u": "أنأ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أُنَأْ • (ʔunaʔ) (form I) /ʔu.naʔ/\n# first-person singular non-past passive jussive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔunaʔ", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "تنأ",
-        "u": "تنأ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُنَأْ • (tunaʔ) (form I) /tu.naʔ/\n# inflection of نَاءَ (nāʔa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tunaʔ", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ينأ",
-        "u": "ينأ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُنَأْ • (yunaʔ) (form I) /ju.naʔ/\n# third-person masculine singular non-past passive jussive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yunaʔ", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ننأ",
-        "u": "ننأ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نُنَأْ • (nunaʔ) (form I) /nu.naʔ/\n# first-person plural non-past passive jussive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nunaʔ", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "أنئ",
-        "u": "أنئ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَنِئْ • (ʔaniʔ) (form I) /ʔa.niʔ/\n# first-person singular non-past active jussive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaniʔ", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "تنئ",
-        "u": "تنئ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَنِئْ • (taniʔ) (form I) /ta.niʔ/\n# inflection of نَاءَ (nāʔa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taniʔ", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ينئ",
-        "u": "ينئ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَنِئْ • (yaniʔ) (form I) /ja.niʔ/\n# third-person masculine singular non-past active jussive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaniʔ", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ننئ",
-        "u": "ننئ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نَنِئْ • (naniʔ) (form I) /na.niʔ/\n# first-person plural non-past active jussive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naniʔ", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "نئن",
-        "u": "نئن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نِئْنَ • (niʔna) (form I) /niʔ.na/\n# inflection of نَاءَ (nāʔa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["niʔna", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "تنيء",
-        "u": "تنيء",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تنيء (form I)\n# تَنِيءُ (tanīʔu) /ta.niː.ʔu/: inflection of نَاءَ (nāʔa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَنِيءَ (tanīʔa) /ta.niː.ʔa/: inflection of نَاءَ (nāʔa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanīʔu", "nāʔa", "tanīʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "أنيء",
-        "u": "أنيء",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أنيء (form I)\n# أَنِيءُ (ʔanīʔu) /ʔa.niː.ʔu/: first-person singular non-past active indicative of نَاءَ (nāʔa)\n# أَنِيءَ (ʔanīʔa) /ʔa.niː.ʔa/: first-person singular non-past active subjunctive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔanīʔu", "nāʔa", "ʔanīʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "تنيئون",
-        "u": "تنيئون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَنِيئُونَ • (tanīʔūna) (form I) /ta.niː.ʔuː.na/\n# second-person masculine plural non-past active indicative of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanīʔūna", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ينيء",
-        "u": "ينيء",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ينيء (form I)\n# يَنِيءُ (yanīʔu) /ja.niː.ʔu/: third-person masculine singular non-past active indicative of نَاءَ (nāʔa)\n# يَنِيءَ (yanīʔa) /ja.niː.ʔa/: third-person masculine singular non-past active subjunctive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanīʔu", "nāʔa", "yanīʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ننيء",
-        "u": "ننيء",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ننيء (form I)\n# نَنِيءُ (nanīʔu) /na.niː.ʔu/: first-person plural non-past active indicative of نَاءَ (nāʔa)\n# نَنِيءَ (nanīʔa) /na.niː.ʔa/: first-person plural non-past active subjunctive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nanīʔu", "nāʔa", "nanīʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ينيئان",
-        "u": "ينيئان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَنِيئَانِ • (yanīʔāni) (form I) /ja.niː.ʔaː.ni/\n# third-person masculine dual non-past active indicative of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanīʔāni", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "تنيئان",
-        "u": "تنيئان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَنِيئَانِ • (tanīʔāni) (form I) /ta.niː.ʔaː.ni/\n# inflection of نَاءَ (nāʔa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanīʔāni", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "تنيئين",
-        "u": "تنيئين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَنِيئِينَ • (tanīʔīna) (form I) /ta.niː.ʔiː.na/\n# second-person feminine singular non-past active indicative of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanīʔīna", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "تنئن",
-        "u": "تنئن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَنِئْنَ • (taniʔna) (form I) /ta.niʔ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taniʔna", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ينئن",
-        "u": "ينئن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَنِئْنَ • (yaniʔna) (form I) /ja.niʔ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaniʔna", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ينيئون",
-        "u": "ينيئون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَنِيئُونَ • (yanīʔūna) (form I) /ja.niː.ʔuː.na/\n# third-person masculine plural non-past active indicative of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanīʔūna", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "تنيؤون",
-        "u": "تنيؤون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَنِيؤُونَ • (tanīʔūna) (form I) /ta.niː.ʔuː.na/\n# second-person masculine plural non-past active indicative of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanīʔūna", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ينيؤون",
-        "u": "ينيؤون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَنِيؤُونَ • (yanīʔūna) (form I) /ja.niː.ʔuː.na/\n# third-person masculine plural non-past active indicative of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanīʔūna", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ينيئا",
-        "u": "ينيئا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَنِيئَا • (yanīʔā) (form I) /ja.niː.ʔaː/\n# third-person masculine dual non-past active subjunctive/jussive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanīʔā", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "تنيئا",
-        "u": "تنيئا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَنِيئَا • (tanīʔā) (form I) /ta.niː.ʔaː/\n# inflection of نَاءَ (nāʔa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanīʔā", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "تنيئي",
-        "u": "تنيئي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَنِيئِي • (tanīʔī) (form I) /ta.niː.ʔiː/\n# second-person feminine singular non-past active subjunctive/jussive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanīʔī", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "تنيؤوا",
-        "u": "تنيؤوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَنِيؤُوا • (tanīʔū) (form I) /ta.niː.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanīʔū", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ينيؤوا",
-        "u": "ينيؤوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَنِيؤُوا • (yanīʔū) (form I) /ja.niː.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanīʔū", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ينيئوا",
-        "u": "ينيئوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَنِيئُوا • (yanīʔū) (form I) /ja.niː.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanīʔū", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "تنيئوا",
-        "u": "تنيئوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَنِيئُوا • (tanīʔū) (form I) /ta.niː.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanīʔū", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوئي",
-        "u": "تنوئي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَنُوئِي • (tanūʔī) (form I) /ta.nuː.ʔiː/\n# second-person feminine singular non-past active subjunctive/jussive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūʔī", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "نئتما",
-        "u": "نئتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نِئْتُمَا • (niʔtumā) (form I) /niʔ.tu.maː/\n# second-person dual past active of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["niʔtumā", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ناؤوا",
-        "u": "ناؤوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نَاؤُوا • (nāʔū) (form I) /naː.ʔuː/\n# third-person masculine plural past active of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nāʔū", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ناؤوا",
-        "u": "ناؤوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نَاؤُوا • (nāʔū) (form I) /naː.ʔuː/\n# third-person masculine plural past active of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nāʔū", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "نئنا",
-        "u": "نئنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نِئْنَا • (niʔnā) (form I) /niʔ.naː/\n# first-person plural past active of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["niʔnā", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ناءتا",
-        "u": "ناءتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نَاءَتَا • (nāʔatā) (form I) /naː.ʔa.taː/\n# third-person feminine dual past active of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nāʔatā", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ناءتا",
-        "u": "ناءتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نَاءَتَا • (nāʔatā) (form I) /naː.ʔa.taː/\n# third-person feminine dual past active of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nāʔatā", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ناءت",
-        "u": "ناءت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نَاءَتْ • (nāʔat) (form I) /naː.ʔat/\n# third-person feminine singular past active of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nāʔat", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ناءت",
-        "u": "ناءت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نَاءَتْ • (nāʔat) (form I) /naː.ʔat/\n# third-person feminine singular past active of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nāʔat", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "نائوا",
-        "u": "نائوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نَائُوا • (nāʔū) (form I) /naː.ʔuː/\n# third-person masculine plural past active of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nāʔū", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "نائوا",
-        "u": "نائوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نَائُوا • (nāʔū) (form I) /naː.ʔuː/\n# third-person masculine plural past active of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nāʔū", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "نيئي",
-        "u": "نيئي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نِيئِي • (nīʔī) (form I) /niː.ʔiː/\n# second-person feminine singular imperative of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nīʔī", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "نئت",
-        "u": "نئت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نئت (form I)\n# نِئْتُ (niʔtu) /niʔ.tu/: first-person singular past active of نَاءَ (nāʔa)\n# نِئْتَ (niʔta) /niʔ.ta/: second-person masculine singular past active of نَاءَ (nāʔa)\n# نِئْتِ (niʔti) /niʔ.ti/: second-person feminine singular past active of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["niʔtu", "nāʔa", "niʔta"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ناءا",
-        "u": "ناءا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نَاءَا • (nāʔā) (form I) /naː.ʔaː/\n# third-person masculine dual past active of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nāʔā", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ناءا",
-        "u": "ناءا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نَاءَا • (nāʔā) (form I) /naː.ʔaː/\n# third-person masculine dual past active of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nāʔā", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "نيئوا",
-        "u": "نيئوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نِيئُوا • (nīʔū) (form I) /niː.ʔuː/\n# second-person masculine plural imperative of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nīʔū", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "نيؤوا",
-        "u": "نيؤوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نِيؤُوا • (nīʔū) (form I) /niː.ʔuː/\n# second-person masculine plural imperative of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nīʔū", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "نؤتما",
-        "u": "نؤتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُؤْتُمَا • (nuʔtumā) (form I) /nuʔ.tu.maː/\n# second-person dual past active of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuʔtumā", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "نيئا",
-        "u": "نيئا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نِيئَا • (nīʔā) (form I) /niː.ʔaː/\n# second-person dual imperative of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nīʔā", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "نؤنا",
-        "u": "نؤنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُؤْنَا • (nuʔnā) (form I) /nuʔ.naː/\n# first-person plural past active of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuʔnā", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "نؤتن",
-        "u": "نؤتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُؤْتُنَّ • (nuʔtunna) (form I) /nuʔ.tun.na/\n# second-person feminine plural past active of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuʔtunna", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ينوء",
-        "u": "ينوء",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ينوء (form I)\n# يَنُوءُ (yanūʔu) /ja.nuː.ʔu/: third-person masculine singular non-past active indicative of نَاءَ (nāʔa)\n# يَنُوءَ (yanūʔa) /ja.nuː.ʔa/: third-person masculine singular non-past active subjunctive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanūʔu", "nāʔa", "yanūʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوء",
-        "u": "تنوء",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تنوء (form I)\n# تَنُوءُ (tanūʔu) /ta.nuː.ʔu/: inflection of نَاءَ (nāʔa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَنُوءَ (tanūʔa) /ta.nuː.ʔa/: inflection of نَاءَ (nāʔa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūʔu", "nāʔa", "tanūʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "أنوء",
-        "u": "أنوء",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنوء (form I)\n# أَنُوءُ (ʔanūʔu) /ʔa.nuː.ʔu/: first-person singular non-past active indicative of نَاءَ (nāʔa)\n# أَنُوءَ (ʔanūʔa) /ʔa.nuː.ʔa/: first-person singular non-past active subjunctive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔanūʔu", "nāʔa", "ʔanūʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوئين",
-        "u": "تنوئين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنُوئِينَ • (tanūʔīna) (form I) /ta.nuː.ʔiː.na/\n# second-person feminine singular non-past active indicative of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūʔīna", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ننوء",
-        "u": "ننوء",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ننوء (form I)\n# نَنُوءُ (nanūʔu) /na.nuː.ʔu/: first-person plural non-past active indicative of نَاءَ (nāʔa)\n# نَنُوءَ (nanūʔa) /na.nuː.ʔa/: first-person plural non-past active subjunctive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nanūʔu", "nāʔa", "nanūʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوءان",
-        "u": "تنوءان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنُوءَانِ • (tanūʔāni) (form I) /ta.nuː.ʔaː.ni/\n# inflection of نَاءَ (nāʔa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūʔāni", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ينوءان",
-        "u": "ينوءان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَنُوءَانِ • (yanūʔāni) (form I) /ja.nuː.ʔaː.ni/\n# third-person masculine dual non-past active indicative of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanūʔāni", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "تنؤن",
-        "u": "تنؤن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنُؤْنَ • (tanuʔna) (form I) /ta.nuʔ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanuʔna", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوئون",
-        "u": "تنوئون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنُوئُونَ • (tanūʔūna) (form I) /ta.nuː.ʔuː.na/\n# second-person masculine plural non-past active indicative of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūʔūna", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ينؤن",
-        "u": "ينؤن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَنُؤْنَ • (yanuʔna) (form I) /ja.nuʔ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanuʔna", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ينوءون",
-        "u": "ينوءون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَنُوءُونَ • (yanūʔūna) (form I) /ja.nuː.ʔuː.na/\n# third-person masculine plural non-past active indicative of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanūʔūna", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوءون",
-        "u": "تنوءون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنُوءُونَ • (tanūʔūna) (form I) /ta.nuː.ʔuː.na/\n# second-person masculine plural non-past active indicative of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūʔūna", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوءا",
-        "u": "تنوءا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنُوءَا • (tanūʔā) (form I) /ta.nuː.ʔaː/\n# inflection of نَاءَ (nāʔa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūʔā", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ينوئون",
-        "u": "ينوئون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَنُوئُونَ • (yanūʔūna) (form I) /ja.nuː.ʔuː.na/\n# third-person masculine plural non-past active indicative of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanūʔūna", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ينوئوا",
-        "u": "ينوئوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَنُوئُوا • (yanūʔū) (form I) /ja.nuː.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanūʔū", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوئوا",
-        "u": "تنوئوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنُوئُوا • (tanūʔū) (form I) /ta.nuː.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūʔū", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوءوا",
-        "u": "تنوءوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنُوءُوا • (tanūʔū) (form I) /ta.nuː.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūʔū", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ينوءا",
-        "u": "ينوءا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَنُوءَا • (yanūʔā) (form I) /ja.nuː.ʔaː/\n# third-person masculine dual non-past active subjunctive/jussive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanūʔā", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ينؤ",
-        "u": "ينؤ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَنُؤْ • (yanuʔ) (form I) /ja.nuʔ/\n# third-person masculine singular non-past active jussive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanuʔ", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "تنؤ",
-        "u": "تنؤ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنُؤْ • (tanuʔ) (form I) /ta.nuʔ/\n# inflection of نَاءَ (nāʔa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanuʔ", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ينوءوا",
-        "u": "ينوءوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَنُوءُوا • (yanūʔū) (form I) /ja.nuː.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanūʔū", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "نوئوا",
-        "u": "نوئوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوئُوا • (nūʔū) (form I) /nuː.ʔuː/\n# second-person masculine plural imperative of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nūʔū", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "أنؤ",
-        "u": "أنؤ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَنُؤْ • (ʔanuʔ) (form I) /ʔa.nuʔ/\n# first-person singular non-past active jussive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔanuʔ", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "نوئي",
-        "u": "نوئي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوئِي • (nūʔī) (form I) /nuː.ʔiː/\n# second-person feminine singular imperative of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nūʔī", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "نوءا",
-        "u": "نوءا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوءَا • (nūʔā) (form I) /nuː.ʔaː/\n# second-person dual imperative of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nūʔā", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "ننؤ",
-        "u": "ننؤ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَنُؤْ • (nanuʔ) (form I) /na.nuʔ/\n# first-person plural non-past active jussive of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nanuʔ", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "نوءوا",
-        "u": "نوءوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوءُوا • (nūʔū) (form I) /nuː.ʔuː/\n# second-person masculine plural imperative of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nūʔū", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "نئتن",
-        "u": "نئتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نِئْتُنَّ • (niʔtunna) (form I) /niʔ.tun.na/\n# second-person feminine plural past active of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["niʔtunna", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      },
-      {
-        "w": "نئتم",
-        "u": "نئتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نِئْتُمْ • (niʔtum) (form I) /niʔ.tum/\n# second-person masculine plural past active of نَاءَ (nāʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["niʔtum", "nāʔa"],
-        "k": "ناء",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "نن",
+  "ses": {
     "harf": "ن",
+    "fasil": "نن",
     "mahrec": "zelakiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "نؤت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نؤت (form I)\n# نُؤْتُ (nuʔtu) /nuʔ.tu/: first-person singular past active of نَاءَ (nāʔa)\n# نُؤْتَ (nuʔta) /nuʔ.ta/: second-person masculine singular past active of نَاءَ (nāʔa)\n# نُؤْتِ (nuʔti) /nuʔ.ti/: second-person feminine singular past active of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuʔtu", "nāʔa", "nuʔta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نؤت",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نؤت (form I)\n# نُؤْتُ (nuʔtu) /nuʔ.tu/: first-person singular past active of نَاءَ (nāʔa)\n# نُؤْتَ (nuʔta) /nuʔ.ta/: second-person masculine singular past active of نَاءَ (nāʔa)\n# نُؤْتِ (nuʔti) /nuʔ.ti/: second-person feminine singular past active of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuʔtu", "nāʔa", "nuʔta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نؤتم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نُؤْتُمْ • (nuʔtum) (form I) /nuʔ.tum/\n# second-person masculine plural past active of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuʔtum", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوان",
+      "tur": "noun",
+      "etim_no": "2",
+      "baslik": "أَوَانٍ • (ʔawānin) m pl",
+      "etim_sablon": [
+        ["lg", "sound shift"]
+      ],
+      "anlam": ["plural of إِنَاء (ʔināʔ, “vessel”)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["إِنَاء"],
+      "okunus": ["ʔawānin"],
+      "ipa": ["/ʔa.waː.nin/"],
+      "bag": "asıl madde",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نيء",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نِيءَ • (nīʔa) (form I) /niː.ʔa/\n# third-person masculine singular past passive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nīʔa", "nāʔa"]
+    },
+    {
+      "madde": "نؤ",
+      "tur": "verb",
+      "baslik": "نُؤْ • (nuʔ) (form I) /nuʔ/\n# second-person masculine singular imperative of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuʔ", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أناء",
+      "tur": "verb",
+      "etim_no": "1.2",
+      "baslik": "أناء (form I)\n# أُنَاءُ (ʔunāʔu) /ʔu.naː.ʔu/: first-person singular non-past passive indicative of نَاءَ (nāʔa)\n# أُنَاءَ (ʔunāʔa) /ʔu.naː.ʔa/: first-person singular non-past passive subjunctive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔunāʔu", "nāʔa", "ʔunāʔa"]
+    },
+    {
+      "madde": "نؤن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نُؤْنَ • (nuʔna) (form I) /nuʔ.na/\n# inflection of نَاءَ (nāʔa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuʔna", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نئ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نِئْ • (niʔ) (form I) /niʔ/\n# second-person masculine singular imperative of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["niʔ", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنأ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أُنَأْ • (ʔunaʔ) (form I) /ʔu.naʔ/\n# first-person singular non-past passive jussive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔunaʔ", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنأ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُنَأْ • (tunaʔ) (form I) /tu.naʔ/\n# inflection of نَاءَ (nāʔa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tunaʔ", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينأ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُنَأْ • (yunaʔ) (form I) /ju.naʔ/\n# third-person masculine singular non-past passive jussive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yunaʔ", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ننأ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نُنَأْ • (nunaʔ) (form I) /nu.naʔ/\n# first-person plural non-past passive jussive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nunaʔ", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنئ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَنِئْ • (ʔaniʔ) (form I) /ʔa.niʔ/\n# first-person singular non-past active jussive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaniʔ", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنئ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَنِئْ • (taniʔ) (form I) /ta.niʔ/\n# inflection of نَاءَ (nāʔa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taniʔ", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينئ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَنِئْ • (yaniʔ) (form I) /ja.niʔ/\n# third-person masculine singular non-past active jussive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaniʔ", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ننئ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نَنِئْ • (naniʔ) (form I) /na.niʔ/\n# first-person plural non-past active jussive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naniʔ", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نئن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نِئْنَ • (niʔna) (form I) /niʔ.na/\n# inflection of نَاءَ (nāʔa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["niʔna", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنيء",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تنيء (form I)\n# تَنِيءُ (tanīʔu) /ta.niː.ʔu/: inflection of نَاءَ (nāʔa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَنِيءَ (tanīʔa) /ta.niː.ʔa/: inflection of نَاءَ (nāʔa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanīʔu", "nāʔa", "tanīʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنيء",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أنيء (form I)\n# أَنِيءُ (ʔanīʔu) /ʔa.niː.ʔu/: first-person singular non-past active indicative of نَاءَ (nāʔa)\n# أَنِيءَ (ʔanīʔa) /ʔa.niː.ʔa/: first-person singular non-past active subjunctive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔanīʔu", "nāʔa", "ʔanīʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنيئون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَنِيئُونَ • (tanīʔūna) (form I) /ta.niː.ʔuː.na/\n# second-person masculine plural non-past active indicative of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanīʔūna", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينيء",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ينيء (form I)\n# يَنِيءُ (yanīʔu) /ja.niː.ʔu/: third-person masculine singular non-past active indicative of نَاءَ (nāʔa)\n# يَنِيءَ (yanīʔa) /ja.niː.ʔa/: third-person masculine singular non-past active subjunctive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanīʔu", "nāʔa", "yanīʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ننيء",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ننيء (form I)\n# نَنِيءُ (nanīʔu) /na.niː.ʔu/: first-person plural non-past active indicative of نَاءَ (nāʔa)\n# نَنِيءَ (nanīʔa) /na.niː.ʔa/: first-person plural non-past active subjunctive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nanīʔu", "nāʔa", "nanīʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينيئان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَنِيئَانِ • (yanīʔāni) (form I) /ja.niː.ʔaː.ni/\n# third-person masculine dual non-past active indicative of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanīʔāni", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنيئان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَنِيئَانِ • (tanīʔāni) (form I) /ta.niː.ʔaː.ni/\n# inflection of نَاءَ (nāʔa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanīʔāni", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنيئين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَنِيئِينَ • (tanīʔīna) (form I) /ta.niː.ʔiː.na/\n# second-person feminine singular non-past active indicative of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanīʔīna", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنئن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَنِئْنَ • (taniʔna) (form I) /ta.niʔ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taniʔna", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينئن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَنِئْنَ • (yaniʔna) (form I) /ja.niʔ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaniʔna", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينيئون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَنِيئُونَ • (yanīʔūna) (form I) /ja.niː.ʔuː.na/\n# third-person masculine plural non-past active indicative of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanīʔūna", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنيؤون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَنِيؤُونَ • (tanīʔūna) (form I) /ta.niː.ʔuː.na/\n# second-person masculine plural non-past active indicative of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanīʔūna", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينيؤون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَنِيؤُونَ • (yanīʔūna) (form I) /ja.niː.ʔuː.na/\n# third-person masculine plural non-past active indicative of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanīʔūna", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينيئا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَنِيئَا • (yanīʔā) (form I) /ja.niː.ʔaː/\n# third-person masculine dual non-past active subjunctive/jussive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanīʔā", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنيئا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَنِيئَا • (tanīʔā) (form I) /ta.niː.ʔaː/\n# inflection of نَاءَ (nāʔa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanīʔā", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنيئي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَنِيئِي • (tanīʔī) (form I) /ta.niː.ʔiː/\n# second-person feminine singular non-past active subjunctive/jussive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanīʔī", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنيؤوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَنِيؤُوا • (tanīʔū) (form I) /ta.niː.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanīʔū", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينيؤوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَنِيؤُوا • (yanīʔū) (form I) /ja.niː.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanīʔū", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينيئوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَنِيئُوا • (yanīʔū) (form I) /ja.niː.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanīʔū", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنيئوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَنِيئُوا • (tanīʔū) (form I) /ta.niː.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanīʔū", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنوئي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَنُوئِي • (tanūʔī) (form I) /ta.nuː.ʔiː/\n# second-person feminine singular non-past active subjunctive/jussive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūʔī", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نئتما",
+      "tur": "verb",
+      "baslik": "نِئْتُمَا • (niʔtumā) (form I) /niʔ.tu.maː/\n# second-person dual past active of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["niʔtumā", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناؤوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نَاؤُوا • (nāʔū) (form I) /naː.ʔuː/\n# third-person masculine plural past active of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nāʔū", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناؤوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نَاؤُوا • (nāʔū) (form I) /naː.ʔuː/\n# third-person masculine plural past active of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nāʔū", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نئنا",
+      "tur": "verb",
+      "baslik": "نِئْنَا • (niʔnā) (form I) /niʔ.naː/\n# first-person plural past active of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["niʔnā", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناءتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نَاءَتَا • (nāʔatā) (form I) /naː.ʔa.taː/\n# third-person feminine dual past active of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nāʔatā", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناءتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نَاءَتَا • (nāʔatā) (form I) /naː.ʔa.taː/\n# third-person feminine dual past active of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nāʔatā", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناءت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نَاءَتْ • (nāʔat) (form I) /naː.ʔat/\n# third-person feminine singular past active of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nāʔat", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناءت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نَاءَتْ • (nāʔat) (form I) /naː.ʔat/\n# third-person feminine singular past active of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nāʔat", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نائوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نَائُوا • (nāʔū) (form I) /naː.ʔuː/\n# third-person masculine plural past active of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nāʔū", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نائوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نَائُوا • (nāʔū) (form I) /naː.ʔuː/\n# third-person masculine plural past active of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nāʔū", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نيئي",
+      "tur": "verb",
+      "baslik": "نِيئِي • (nīʔī) (form I) /niː.ʔiː/\n# second-person feminine singular imperative of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nīʔī", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نئت",
+      "tur": "verb",
+      "baslik": "نئت (form I)\n# نِئْتُ (niʔtu) /niʔ.tu/: first-person singular past active of نَاءَ (nāʔa)\n# نِئْتَ (niʔta) /niʔ.ta/: second-person masculine singular past active of نَاءَ (nāʔa)\n# نِئْتِ (niʔti) /niʔ.ti/: second-person feminine singular past active of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["niʔtu", "nāʔa", "niʔta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناءا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نَاءَا • (nāʔā) (form I) /naː.ʔaː/\n# third-person masculine dual past active of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nāʔā", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناءا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نَاءَا • (nāʔā) (form I) /naː.ʔaː/\n# third-person masculine dual past active of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nāʔā", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نيئوا",
+      "tur": "verb",
+      "baslik": "نِيئُوا • (nīʔū) (form I) /niː.ʔuː/\n# second-person masculine plural imperative of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nīʔū", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نيؤوا",
+      "tur": "verb",
+      "baslik": "نِيؤُوا • (nīʔū) (form I) /niː.ʔuː/\n# second-person masculine plural imperative of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nīʔū", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نؤتما",
+      "tur": "verb",
+      "baslik": "نُؤْتُمَا • (nuʔtumā) (form I) /nuʔ.tu.maː/\n# second-person dual past active of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuʔtumā", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نيئا",
+      "tur": "verb",
+      "baslik": "نِيئَا • (nīʔā) (form I) /niː.ʔaː/\n# second-person dual imperative of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nīʔā", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نؤنا",
+      "tur": "verb",
+      "baslik": "نُؤْنَا • (nuʔnā) (form I) /nuʔ.naː/\n# first-person plural past active of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuʔnā", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نؤتن",
+      "tur": "verb",
+      "baslik": "نُؤْتُنَّ • (nuʔtunna) (form I) /nuʔ.tun.na/\n# second-person feminine plural past active of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuʔtunna", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينوء",
+      "tur": "verb",
+      "baslik": "ينوء (form I)\n# يَنُوءُ (yanūʔu) /ja.nuː.ʔu/: third-person masculine singular non-past active indicative of نَاءَ (nāʔa)\n# يَنُوءَ (yanūʔa) /ja.nuː.ʔa/: third-person masculine singular non-past active subjunctive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanūʔu", "nāʔa", "yanūʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنوء",
+      "tur": "verb",
+      "baslik": "تنوء (form I)\n# تَنُوءُ (tanūʔu) /ta.nuː.ʔu/: inflection of نَاءَ (nāʔa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَنُوءَ (tanūʔa) /ta.nuː.ʔa/: inflection of نَاءَ (nāʔa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūʔu", "nāʔa", "tanūʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنوء",
+      "tur": "verb",
+      "baslik": "أنوء (form I)\n# أَنُوءُ (ʔanūʔu) /ʔa.nuː.ʔu/: first-person singular non-past active indicative of نَاءَ (nāʔa)\n# أَنُوءَ (ʔanūʔa) /ʔa.nuː.ʔa/: first-person singular non-past active subjunctive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔanūʔu", "nāʔa", "ʔanūʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنوئين",
+      "tur": "verb",
+      "baslik": "تَنُوئِينَ • (tanūʔīna) (form I) /ta.nuː.ʔiː.na/\n# second-person feminine singular non-past active indicative of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūʔīna", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ننوء",
+      "tur": "verb",
+      "baslik": "ننوء (form I)\n# نَنُوءُ (nanūʔu) /na.nuː.ʔu/: first-person plural non-past active indicative of نَاءَ (nāʔa)\n# نَنُوءَ (nanūʔa) /na.nuː.ʔa/: first-person plural non-past active subjunctive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nanūʔu", "nāʔa", "nanūʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنوءان",
+      "tur": "verb",
+      "baslik": "تَنُوءَانِ • (tanūʔāni) (form I) /ta.nuː.ʔaː.ni/\n# inflection of نَاءَ (nāʔa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūʔāni", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينوءان",
+      "tur": "verb",
+      "baslik": "يَنُوءَانِ • (yanūʔāni) (form I) /ja.nuː.ʔaː.ni/\n# third-person masculine dual non-past active indicative of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanūʔāni", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنؤن",
+      "tur": "verb",
+      "baslik": "تَنُؤْنَ • (tanuʔna) (form I) /ta.nuʔ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanuʔna", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنوئون",
+      "tur": "verb",
+      "baslik": "تَنُوئُونَ • (tanūʔūna) (form I) /ta.nuː.ʔuː.na/\n# second-person masculine plural non-past active indicative of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūʔūna", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينؤن",
+      "tur": "verb",
+      "baslik": "يَنُؤْنَ • (yanuʔna) (form I) /ja.nuʔ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanuʔna", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينوءون",
+      "tur": "verb",
+      "baslik": "يَنُوءُونَ • (yanūʔūna) (form I) /ja.nuː.ʔuː.na/\n# third-person masculine plural non-past active indicative of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanūʔūna", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنوءون",
+      "tur": "verb",
+      "baslik": "تَنُوءُونَ • (tanūʔūna) (form I) /ta.nuː.ʔuː.na/\n# second-person masculine plural non-past active indicative of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūʔūna", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنوءا",
+      "tur": "verb",
+      "baslik": "تَنُوءَا • (tanūʔā) (form I) /ta.nuː.ʔaː/\n# inflection of نَاءَ (nāʔa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūʔā", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينوئون",
+      "tur": "verb",
+      "baslik": "يَنُوئُونَ • (yanūʔūna) (form I) /ja.nuː.ʔuː.na/\n# third-person masculine plural non-past active indicative of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanūʔūna", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينوئوا",
+      "tur": "verb",
+      "baslik": "يَنُوئُوا • (yanūʔū) (form I) /ja.nuː.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanūʔū", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنوئوا",
+      "tur": "verb",
+      "baslik": "تَنُوئُوا • (tanūʔū) (form I) /ta.nuː.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūʔū", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنوءوا",
+      "tur": "verb",
+      "baslik": "تَنُوءُوا • (tanūʔū) (form I) /ta.nuː.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūʔū", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينوءا",
+      "tur": "verb",
+      "baslik": "يَنُوءَا • (yanūʔā) (form I) /ja.nuː.ʔaː/\n# third-person masculine dual non-past active subjunctive/jussive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanūʔā", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينؤ",
+      "tur": "verb",
+      "baslik": "يَنُؤْ • (yanuʔ) (form I) /ja.nuʔ/\n# third-person masculine singular non-past active jussive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanuʔ", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنؤ",
+      "tur": "verb",
+      "baslik": "تَنُؤْ • (tanuʔ) (form I) /ta.nuʔ/\n# inflection of نَاءَ (nāʔa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanuʔ", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينوءوا",
+      "tur": "verb",
+      "baslik": "يَنُوءُوا • (yanūʔū) (form I) /ja.nuː.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanūʔū", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نوئوا",
+      "tur": "verb",
+      "baslik": "نُوئُوا • (nūʔū) (form I) /nuː.ʔuː/\n# second-person masculine plural imperative of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nūʔū", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنؤ",
+      "tur": "verb",
+      "baslik": "أَنُؤْ • (ʔanuʔ) (form I) /ʔa.nuʔ/\n# first-person singular non-past active jussive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔanuʔ", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نوئي",
+      "tur": "verb",
+      "baslik": "نُوئِي • (nūʔī) (form I) /nuː.ʔiː/\n# second-person feminine singular imperative of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nūʔī", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نوءا",
+      "tur": "verb",
+      "baslik": "نُوءَا • (nūʔā) (form I) /nuː.ʔaː/\n# second-person dual imperative of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nūʔā", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ننؤ",
+      "tur": "verb",
+      "baslik": "نَنُؤْ • (nanuʔ) (form I) /na.nuʔ/\n# first-person plural non-past active jussive of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nanuʔ", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نوءوا",
+      "tur": "verb",
+      "baslik": "نُوءُوا • (nūʔū) (form I) /nuː.ʔuː/\n# second-person masculine plural imperative of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nūʔū", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نئتن",
+      "tur": "verb",
+      "baslik": "نِئْتُنَّ • (niʔtunna) (form I) /niʔ.tun.na/\n# second-person feminine plural past active of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["niʔtunna", "nāʔa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نئتم",
+      "tur": "verb",
+      "baslik": "نِئْتُمْ • (niʔtum) (form I) /niʔ.tum/\n# second-person masculine plural past active of نَاءَ (nāʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["niʔtum", "nāʔa"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "The regular plural of إِنَاء (ʔināʔ, “vessel”) would have originally been *أَأْنِيَة (*ʔaʔniya), which became آنِيَة (ʔāniya, “vessels”) due to a regular sound shift affecting consecutive hamzahs. However, آنِيَة (ʔāniya) coincidentally has the form of a singular feminine active participle, so it appears to have been pluralized again to أَوَانٍ (ʔawānin, “vessels”) to reinforce its status as a plural.",
+      "kognatlar": [
+        ["إِنَاء", "إناء#Arabic"],
+        ["آنِيَة", "آنية#Arabic"],
+        ["آنِيَة", "آنية#Arabic"],
+        ["أَوَانٍ", "أوان#Arabic"]
+      ]
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ناء", "r7"]
+  ],
+  "mana": {
     "ince": "point.n.06",
     "orta": "noun.time",
     "ust": "ölçü, mekân ve zaman",
@@ -1148,22 +810,15 @@
     "dayanak_tanim": "a suitable moment",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["moment.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["moment.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,317 +1,226 @@
 {
   "kok": "تحسن",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تحسن", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يتحسن",
-        "u": "يتحسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتحسن (form V)\n# يَتَحَسَّنُ (yataḥassanu) /ja.ta.ħas.sa.nu/: third-person masculine singular non-past active indicative of تَحَسَّنَ (taḥassana)\n# يَتَحَسَّنَّ (yataḥassanna) /ja.ta.ħas.san.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of تَحَسَّنَ (taḥassana)\n# يَتَحَسَّنَ (yataḥassana) /ja.ta.ħas.sa.na/: third-person masculine singular non-past active subjunct",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḥassanu", "taḥassana", "yataḥassanna"],
-        "k": "تحسن",
-        "yol": "kök"
-      },
-      {
-        "w": "تحسني",
-        "u": "تحسني",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تَحَسَّنِي • (taḥassanī) (form V) /ta.ħas.sa.niː/\n# second-person feminine singular imperative of تَحَسَّنَ (taḥassana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥassanī", "taḥassana"],
-        "k": "تحسن",
-        "yol": "kök"
-      },
-      {
-        "w": "تحسنت",
-        "u": "تحسنت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تحسنت (form V)\n# تَحَسَّنْتُ (taḥassantu) /ta.ħas.san.tu/: first-person singular past active of تَحَسَّنَ (taḥassana)\n# تَحَسَّنْتَ (taḥassanta) /ta.ħas.san.ta/: second-person masculine singular past active of تَحَسَّنَ (taḥassana)\n# تَحَسَّنْتِ (taḥassanti) /ta.ħas.san.ti/: second-person feminine singular past active of تَحَسَّنَ (taḥassana)\n# تَحَسَّنَتْ (taḥassanat) /ta.ħas.sa.nat/: third-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥassantu", "taḥassana", "taḥassanta"],
-        "k": "تحسن",
-        "yol": "kök"
-      },
-      {
-        "w": "تتحسن",
-        "u": "تتحسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتحسن (form V)\n# تَتَحَسَّنُ (tataḥassanu) /ta.ta.ħas.sa.nu/: inflection of تَحَسَّنَ (taḥassana):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَحَسَّنَّ (tataḥassanna) /ta.ta.ħas.san.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of تَحَسَّنَ (taḥassana)\n# تَتَحَسَّنَ (tataḥassan",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḥassanu", "taḥassana", "tataḥassanna"],
-        "k": "تحسن",
-        "yol": "kök"
-      },
-      {
-        "w": "تتحسنين",
-        "u": "تتحسنين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَحَسَّنِينَ • (tataḥassanīna) (form V) /ta.ta.ħas.sa.niː.na/\n# second-person feminine singular non-past active indicative of تَحَسَّنَ (taḥassana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḥassanīna", "taḥassana"],
-        "k": "تحسن",
-        "yol": "kök"
-      },
-      {
-        "w": "تتحسني",
-        "u": "تتحسني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَحَسَّنِي • (tataḥassanī) (form V) /ta.ta.ħas.sa.niː/\n# second-person feminine singular non-past active subjunctive/jussive of تَحَسَّنَ (taḥassana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḥassanī", "taḥassana"],
-        "k": "تحسن",
-        "yol": "kök"
-      },
-      {
-        "w": "أتحسن",
-        "u": "أتحسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتحسن (form V)\n# أَتَحَسَّنُ (ʔataḥassanu) /ʔa.ta.ħas.sa.nu/: first-person singular non-past active indicative of تَحَسَّنَ (taḥassana)\n# أَتَحَسَّنَ (ʔataḥassana) /ʔa.ta.ħas.sa.na/: first-person singular non-past active subjunctive of تَحَسَّنَ (taḥassana)\n# أَتَحَسَّنْ (ʔataḥassan) /ʔa.ta.ħas.san/: first-person singular non-past active jussive of تَحَسَّنَ (taḥassana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔataḥassanu", "taḥassana", "ʔataḥassana"],
-        "k": "تحسن",
-        "yol": "kök"
-      },
-      {
-        "w": "تحسنا",
-        "u": "تحسنا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تحسنا (form V)\n# تَحَسَّنَا (taḥassanā) /ta.ħas.sa.naː/: inflection of تَحَسَّنَ (taḥassana):\n## third-person masculine dual past active\n## second-person dual imperative\n# تَحَسَّنَّا (taḥassannā) /ta.ħas.san.naː/: first-person plural past active of تَحَسَّنَ (taḥassana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥassanā", "taḥassana", "taḥassannā"],
-        "k": "تحسن",
-        "yol": "kök"
-      },
-      {
-        "w": "نتحسن",
-        "u": "نتحسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتحسن (form V)\n# نَتَحَسَّنُ (nataḥassanu) /na.ta.ħas.sa.nu/: first-person plural non-past active indicative of تَحَسَّنَ (taḥassana)\n# نَتَحَسَّنَ (nataḥassana) /na.ta.ħas.sa.na/: first-person plural non-past active subjunctive of تَحَسَّنَ (taḥassana)\n# نَتَحَسَّنْ (nataḥassan) /na.ta.ħas.san/: first-person plural non-past active jussive of تَحَسَّنَ (taḥassana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["nataḥassanu", "taḥassana", "nataḥassana"],
-        "k": "تحسن",
-        "yol": "kök"
-      },
-      {
-        "w": "تحسنتم",
-        "u": "تحسنتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحَسَّنْتُمْ • (taḥassantum) (form V) /ta.ħas.san.tum/\n# second-person masculine plural past active of تَحَسَّنَ (taḥassana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥassantum", "taḥassana"],
-        "k": "تحسن",
-        "yol": "kök"
-      },
-      {
-        "w": "تتحسنون",
-        "u": "تتحسنون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَحَسَّنُونَ • (tataḥassanūna) (form V) /ta.ta.ħas.sa.nuː.na/\n# second-person masculine plural non-past active indicative of تَحَسَّنَ (taḥassana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḥassanūna", "taḥassana"],
-        "k": "تحسن",
-        "yol": "kök"
-      },
-      {
-        "w": "تتحسنوا",
-        "u": "تتحسنوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَحَسَّنُوا • (tataḥassanū) (form V) /ta.ta.ħas.sa.nuː/\n# second-person masculine plural non-past active subjunctive/jussive of تَحَسَّنَ (taḥassana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḥassanū", "taḥassana"],
-        "k": "تحسن",
-        "yol": "kök"
-      },
-      {
-        "w": "تحسنوا",
-        "u": "تحسنوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَحَسَّنُوا • (taḥassanū) (form V) /ta.ħas.sa.nuː/\n# inflection of تَحَسَّنَ (taḥassana):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥassanū", "taḥassana"],
-        "k": "تحسن",
-        "yol": "kök"
-      },
-      {
-        "w": "يتحسنون",
-        "u": "يتحسنون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَحَسَّنُونَ • (yataḥassanūna) (form V) /ja.ta.ħas.sa.nuː.na/\n# third-person masculine plural non-past active indicative of تَحَسَّنَ (taḥassana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḥassanūna", "taḥassana"],
-        "k": "تحسن",
-        "yol": "kök"
-      },
-      {
-        "w": "يتحسنوا",
-        "u": "يتحسنوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَحَسَّنُوا • (yataḥassanū) (form V) /ja.ta.ħas.sa.nuː/\n# third-person masculine plural non-past active subjunctive/jussive of تَحَسَّنَ (taḥassana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḥassanū", "taḥassana"],
-        "k": "تحسن",
-        "yol": "kök"
-      },
-      {
-        "w": "تحسنتن",
-        "u": "تحسنتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحَسَّنْتُنَّ • (taḥassantunna) (form V) /ta.ħas.san.tun.na/\n# second-person feminine plural past active of تَحَسَّنَ (taḥassana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥassantunna", "taḥassana"],
-        "k": "تحسن",
-        "yol": "kök"
-      },
-      {
-        "w": "تحسنتما",
-        "u": "تحسنتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحَسَّنْتُمَا • (taḥassantumā) (form V) /ta.ħas.san.tu.maː/\n# second-person dual past active of تَحَسَّنَ (taḥassana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥassantumā", "taḥassana"],
-        "k": "تحسن",
-        "yol": "kök"
-      },
-      {
-        "w": "يتحسنا",
-        "u": "يتحسنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَحَسَّنَا • (yataḥassanā) (form V) /ja.ta.ħas.sa.naː/\n# third-person masculine dual non-past active subjunctive/jussive of تَحَسَّنَ (taḥassana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḥassanā", "taḥassana"],
-        "k": "تحسن",
-        "yol": "kök"
-      },
-      {
-        "w": "يتحسنان",
-        "u": "يتحسنان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَحَسَّنَانِ • (yataḥassanāni) (form V) /ja.ta.ħas.sa.naː.ni/\n# third-person masculine dual non-past active indicative of تَحَسَّنَ (taḥassana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḥassanāni", "taḥassana"],
-        "k": "تحسن",
-        "yol": "kök"
-      },
-      {
-        "w": "تحسنتا",
-        "u": "تحسنتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحَسَّنَتَا • (taḥassanatā) (form V) /ta.ħas.sa.na.taː/\n# third-person feminine dual past active of تَحَسَّنَ (taḥassana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥassanatā", "taḥassana"],
-        "k": "تحسن",
-        "yol": "kök"
-      },
-      {
-        "w": "تتحسنان",
-        "u": "تتحسنان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَحَسَّنَانِ • (tataḥassanāni) (form V) /ta.ta.ħas.sa.naː.ni/\n# inflection of تَحَسَّنَ (taḥassana):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḥassanāni", "taḥassana"],
-        "k": "تحسن",
-        "yol": "kök"
-      },
-      {
-        "w": "تتحسنا",
-        "u": "تتحسنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَحَسَّنَا • (tataḥassanā) (form V) /ta.ta.ħas.sa.naː/\n# inflection of تَحَسَّنَ (taḥassana):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḥassanā", "taḥassana"],
-        "k": "تحسن",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تح",
+  "ses": {
     "harf": "ت",
+    "fasil": "تح",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يتحسن",
+      "tur": "verb",
+      "baslik": "يتحسن (form V)\n# يَتَحَسَّنُ (yataḥassanu) /ja.ta.ħas.sa.nu/: third-person masculine singular non-past active indicative of تَحَسَّنَ (taḥassana)\n# يَتَحَسَّنَّ (yataḥassanna) /ja.ta.ħas.san.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of تَحَسَّنَ (taḥassana)\n# يَتَحَسَّنَ (yataḥassana) /ja.ta.ħas.sa.na/: third-person masculine singular non-past active subjunct",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḥassanu", "taḥassana", "yataḥassanna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحسني",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تَحَسَّنِي • (taḥassanī) (form V) /ta.ħas.sa.niː/\n# second-person feminine singular imperative of تَحَسَّنَ (taḥassana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥassanī", "taḥassana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحسنت",
+      "tur": "verb",
+      "baslik": "تحسنت (form V)\n# تَحَسَّنْتُ (taḥassantu) /ta.ħas.san.tu/: first-person singular past active of تَحَسَّنَ (taḥassana)\n# تَحَسَّنْتَ (taḥassanta) /ta.ħas.san.ta/: second-person masculine singular past active of تَحَسَّنَ (taḥassana)\n# تَحَسَّنْتِ (taḥassanti) /ta.ħas.san.ti/: second-person feminine singular past active of تَحَسَّنَ (taḥassana)\n# تَحَسَّنَتْ (taḥassanat) /ta.ħas.sa.nat/: third-perso",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥassantu", "taḥassana", "taḥassanta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتحسن",
+      "tur": "verb",
+      "baslik": "تتحسن (form V)\n# تَتَحَسَّنُ (tataḥassanu) /ta.ta.ħas.sa.nu/: inflection of تَحَسَّنَ (taḥassana):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَحَسَّنَّ (tataḥassanna) /ta.ta.ħas.san.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of تَحَسَّنَ (taḥassana)\n# تَتَحَسَّنَ (tataḥassan",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḥassanu", "taḥassana", "tataḥassanna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتحسنين",
+      "tur": "verb",
+      "baslik": "تَتَحَسَّنِينَ • (tataḥassanīna) (form V) /ta.ta.ħas.sa.niː.na/\n# second-person feminine singular non-past active indicative of تَحَسَّنَ (taḥassana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḥassanīna", "taḥassana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتحسني",
+      "tur": "verb",
+      "baslik": "تَتَحَسَّنِي • (tataḥassanī) (form V) /ta.ta.ħas.sa.niː/\n# second-person feminine singular non-past active subjunctive/jussive of تَحَسَّنَ (taḥassana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḥassanī", "taḥassana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتحسن",
+      "tur": "verb",
+      "baslik": "أتحسن (form V)\n# أَتَحَسَّنُ (ʔataḥassanu) /ʔa.ta.ħas.sa.nu/: first-person singular non-past active indicative of تَحَسَّنَ (taḥassana)\n# أَتَحَسَّنَ (ʔataḥassana) /ʔa.ta.ħas.sa.na/: first-person singular non-past active subjunctive of تَحَسَّنَ (taḥassana)\n# أَتَحَسَّنْ (ʔataḥassan) /ʔa.ta.ħas.san/: first-person singular non-past active jussive of تَحَسَّنَ (taḥassana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔataḥassanu", "taḥassana", "ʔataḥassana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحسنا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تحسنا (form V)\n# تَحَسَّنَا (taḥassanā) /ta.ħas.sa.naː/: inflection of تَحَسَّنَ (taḥassana):\n## third-person masculine dual past active\n## second-person dual imperative\n# تَحَسَّنَّا (taḥassannā) /ta.ħas.san.naː/: first-person plural past active of تَحَسَّنَ (taḥassana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥassanā", "taḥassana", "taḥassannā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتحسن",
+      "tur": "verb",
+      "baslik": "نتحسن (form V)\n# نَتَحَسَّنُ (nataḥassanu) /na.ta.ħas.sa.nu/: first-person plural non-past active indicative of تَحَسَّنَ (taḥassana)\n# نَتَحَسَّنَ (nataḥassana) /na.ta.ħas.sa.na/: first-person plural non-past active subjunctive of تَحَسَّنَ (taḥassana)\n# نَتَحَسَّنْ (nataḥassan) /na.ta.ħas.san/: first-person plural non-past active jussive of تَحَسَّنَ (taḥassana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["nataḥassanu", "taḥassana", "nataḥassana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحسنتم",
+      "tur": "verb",
+      "baslik": "تَحَسَّنْتُمْ • (taḥassantum) (form V) /ta.ħas.san.tum/\n# second-person masculine plural past active of تَحَسَّنَ (taḥassana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥassantum", "taḥassana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتحسنون",
+      "tur": "verb",
+      "baslik": "تَتَحَسَّنُونَ • (tataḥassanūna) (form V) /ta.ta.ħas.sa.nuː.na/\n# second-person masculine plural non-past active indicative of تَحَسَّنَ (taḥassana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḥassanūna", "taḥassana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتحسنوا",
+      "tur": "verb",
+      "baslik": "تَتَحَسَّنُوا • (tataḥassanū) (form V) /ta.ta.ħas.sa.nuː/\n# second-person masculine plural non-past active subjunctive/jussive of تَحَسَّنَ (taḥassana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḥassanū", "taḥassana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحسنوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَحَسَّنُوا • (taḥassanū) (form V) /ta.ħas.sa.nuː/\n# inflection of تَحَسَّنَ (taḥassana):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥassanū", "taḥassana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتحسنون",
+      "tur": "verb",
+      "baslik": "يَتَحَسَّنُونَ • (yataḥassanūna) (form V) /ja.ta.ħas.sa.nuː.na/\n# third-person masculine plural non-past active indicative of تَحَسَّنَ (taḥassana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḥassanūna", "taḥassana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتحسنوا",
+      "tur": "verb",
+      "baslik": "يَتَحَسَّنُوا • (yataḥassanū) (form V) /ja.ta.ħas.sa.nuː/\n# third-person masculine plural non-past active subjunctive/jussive of تَحَسَّنَ (taḥassana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḥassanū", "taḥassana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحسنتن",
+      "tur": "verb",
+      "baslik": "تَحَسَّنْتُنَّ • (taḥassantunna) (form V) /ta.ħas.san.tun.na/\n# second-person feminine plural past active of تَحَسَّنَ (taḥassana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥassantunna", "taḥassana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحسنتما",
+      "tur": "verb",
+      "baslik": "تَحَسَّنْتُمَا • (taḥassantumā) (form V) /ta.ħas.san.tu.maː/\n# second-person dual past active of تَحَسَّنَ (taḥassana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥassantumā", "taḥassana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتحسنا",
+      "tur": "verb",
+      "baslik": "يَتَحَسَّنَا • (yataḥassanā) (form V) /ja.ta.ħas.sa.naː/\n# third-person masculine dual non-past active subjunctive/jussive of تَحَسَّنَ (taḥassana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḥassanā", "taḥassana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتحسنان",
+      "tur": "verb",
+      "baslik": "يَتَحَسَّنَانِ • (yataḥassanāni) (form V) /ja.ta.ħas.sa.naː.ni/\n# third-person masculine dual non-past active indicative of تَحَسَّنَ (taḥassana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḥassanāni", "taḥassana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحسنتا",
+      "tur": "verb",
+      "baslik": "تَحَسَّنَتَا • (taḥassanatā) (form V) /ta.ħas.sa.na.taː/\n# third-person feminine dual past active of تَحَسَّنَ (taḥassana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥassanatā", "taḥassana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتحسنان",
+      "tur": "verb",
+      "baslik": "تَتَحَسَّنَانِ • (tataḥassanāni) (form V) /ta.ta.ħas.sa.naː.ni/\n# inflection of تَحَسَّنَ (taḥassana):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḥassanāni", "taḥassana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتحسنا",
+      "tur": "verb",
+      "baslik": "تَتَحَسَّنَا • (tataḥassanā) (form V) /ta.ta.ħas.sa.naː/\n# inflection of تَحَسَّنَ (taḥassana):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḥassanā", "taḥassana"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تحسن", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

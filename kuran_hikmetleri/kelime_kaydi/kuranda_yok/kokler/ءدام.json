@@ -1,631 +1,494 @@
 {
   "kok": "ءدام",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءدام", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يدام",
-        "u": "يدام",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يدام (form IV)\n# يُدَامُ (yudāmu) /ju.daː.mu/: third-person masculine singular non-past passive indicative of أَدَامَ (ʔadāma)\n# يُدَامَ (yudāma) /ju.daː.ma/: third-person masculine singular non-past passive subjunctive of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudāmu", "ʔadāma", "yudāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "يدم",
-        "u": "يدم",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يدم (form IV)\n# يُدِمْ (yudim) /ju.dim/: third-person masculine singular non-past active jussive of أَدَامَ (ʔadāma)\n# يُدَمْ (yudam) /ju.dam/: third-person masculine singular non-past passive jussive of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudim", "ʔadāma", "yudam"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "أدمن",
-        "u": "أدمن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أدمن (form IV)\n# أَدَمْنَ (ʔadamna) /ʔa.dam.na/: third-person feminine plural past active of أَدَامَ (ʔadāma)\n# أُدِمْنَ (ʔudimna) /ʔu.dim.na/: third-person feminine plural past passive of أَدَامَ (ʔadāma)\n# أَدِمْنَ (ʔadimna) /ʔa.dim.na/: second-person feminine plural imperative of أَدَامَ (ʔadāma)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadamna", "ʔadāma", "ʔudimna"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "يدمن",
-        "u": "يدمن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يدمن (form IV)\n# يُدِمْنَ (yudimna) /ju.dim.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَدَامَ (ʔadāma)\n# يُدَمْنَ (yudamna) /ju.dam.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudimna", "ʔadāma", "yudamna"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "تدمن",
-        "u": "تدمن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تدمن (form IV)\n# تُدِمْنَ (tudimna) /tu.dim.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَدَامَ (ʔadāma)\n# تُدَمْنَ (tudamna) /tu.dam.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَدَامَ (ʔadāma)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudimna", "ʔadāma", "tudamna"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "تدم",
-        "u": "تدم",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تدم (form IV)\n# تُدِمْ (tudim) /tu.dim/: inflection of أَدَامَ (ʔadāma):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُدَمْ (tudam) /tu.dam/: inflection of أَدَامَ (ʔadāma):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudim", "ʔadāma", "tudam"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "أدم",
-        "u": "أدم",
-        "p": "noun",
-        "n": "2.2",
-        "h": "ar-head",
-        "e": "أُدُم • (ʔudum)",
-        "g": ["plural of أَدِيم (ʔadīm, “skin, hide”)"],
-        "tag": ["archaic", "form-of", "obsolete", "plural"],
-        "fo": ["أَدِيم"],
-        "r": ["ʔudum"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "أدم",
-        "u": "أدم",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "أدم (form IV)\n# أُدِمْ (ʔudim) /ʔu.dim/: first-person singular non-past active jussive of أَدَامَ (ʔadāma)\n# أُدَمْ (ʔudam) /ʔu.dam/: first-person singular non-past passive jussive of أَدَامَ (ʔadāma)\n# أَدِمْ (ʔadim) /ʔa.dim/: second-person masculine singular imperative of أَدَامَ (ʔadāma)",
-        "tag": ["archaic", "form-iv", "no-gloss", "obsolete"],
-        "r": ["ʔudim", "ʔadāma", "ʔudam"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "أدمنا",
-        "u": "أدمنا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أدمنا (form IV)\n# أَدَمْنَا (ʔadamnā) /ʔa.dam.naː/: first-person plural past active of أَدَامَ (ʔadāma)\n# أُدِمْنَا (ʔudimnā) /ʔu.dim.naː/: first-person plural past passive of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadamnā", "ʔadāma", "ʔudimnā"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "ندم",
-        "u": "ندم",
-        "p": "verb",
-        "n": "3.2",
-        "h": "ar-verb form",
-        "e": "ندم (form IV)\n# نُدِمْ (nudim) /nu.dim/: first-person plural non-past active jussive of أَدَامَ (ʔadāma)\n# نُدَمْ (nudam) /nu.dam/: first-person plural non-past passive jussive of أَدَامَ (ʔadāma)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nudim", "ʔadāma", "nudam"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "نديم",
-        "u": "نديم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نديم (form IV)\n# نُدِيمُ (nudīmu) /nu.diː.mu/: first-person plural non-past active indicative of أَدَامَ (ʔadāma)\n# نُدِيمَ (nudīma) /nu.diː.ma/: first-person plural non-past active subjunctive of أَدَامَ (ʔadāma)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nudīmu", "ʔadāma", "nudīma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "أدمت",
-        "u": "أدمت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أدمت (form IV)\n# أَدَمْتُ (ʔadamtu) /ʔa.dam.tu/: first-person singular past active of أَدَامَ (ʔadāma)\n# أَدَمْتَ (ʔadamta) /ʔa.dam.ta/: second-person masculine singular past active of أَدَامَ (ʔadāma)\n# أَدَمْتِ (ʔadamti) /ʔa.dam.ti/: second-person feminine singular past active of أَدَامَ (ʔadāma)\n# أُدِمْتُ (ʔudimtu) /ʔu.dim.tu/: first-person singular past passive of أَدَامَ (ʔadāma)\n# أُدِمْتَ ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadamtu", "ʔadāma", "ʔadamta"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "أدامت",
-        "u": "أدامت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَدَامَتْ • (ʔadāmat) (form IV) /ʔa.daː.mat/\n# third-person feminine singular past active of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadāmat", "ʔadāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "أدمتما",
-        "u": "أدمتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أدمتما (form IV)\n# أَدَمْتُمَا (ʔadamtumā) /ʔa.dam.tu.maː/: second-person dual past active of أَدَامَ (ʔadāma)\n# أُدِمْتُمَا (ʔudimtumā) /ʔu.dim.tu.maː/: second-person dual past passive of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadamtumā", "ʔadāma", "ʔudimtumā"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "أداما",
-        "u": "أداما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَدَامَا • (ʔadāmā) (form IV) /ʔa.daː.maː/\n# third-person masculine dual past active of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadāmā", "ʔadāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "أدامتا",
-        "u": "أدامتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَدَامَتَا • (ʔadāmatā) (form IV) /ʔa.daː.ma.taː/\n# third-person feminine dual past active of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadāmatā", "ʔadāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "أدمتن",
-        "u": "أدمتن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أدمتن (form IV)\n# أَدَمْتُنَّ (ʔadamtunna) /ʔa.dam.tun.na/: second-person feminine plural past active of أَدَامَ (ʔadāma)\n# أُدِمْتُنَّ (ʔudimtunna) /ʔu.dim.tun.na/: second-person feminine plural past passive of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadamtunna", "ʔadāma", "ʔudimtunna"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "أدمتم",
-        "u": "أدمتم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أدمتم (form IV)\n# أَدَمْتُمْ (ʔadamtum) /ʔa.dam.tum/: second-person masculine plural past active of أَدَامَ (ʔadāma)\n# أُدِمْتُمْ (ʔudimtum) /ʔu.dim.tum/: second-person masculine plural past passive of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadamtum", "ʔadāma", "ʔudimtum"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "أداموا",
-        "u": "أداموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَدَامُوا • (ʔadāmū) (form IV) /ʔa.daː.muː/\n# third-person masculine plural past active of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadāmū", "ʔadāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "أديم",
-        "u": "أديم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أديم (form IV)\n# أُدِيمَ (ʔudīma) /ʔu.diː.ma/: inflection of أَدَامَ (ʔadāma):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُدِيمُ (ʔudīmu) /ʔu.diː.mu/: first-person singular non-past active indicative of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔudīma", "ʔadāma", "ʔudīmu"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "أديمت",
-        "u": "أديمت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُدِيمَتْ • (ʔudīmat) (form IV) /ʔu.diː.mat/\n# third-person feminine singular past passive of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔudīmat", "ʔadāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "أديمتا",
-        "u": "أديمتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُدِيمَتَا • (ʔudīmatā) (form IV) /ʔu.diː.ma.taː/\n# third-person feminine dual past passive of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔudīmatā", "ʔadāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "أديما",
-        "u": "أديما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أديما (form IV)\n# أُدِيمَا (ʔudīmā) /ʔu.diː.maː/: third-person masculine dual past passive of أَدَامَ (ʔadāma)\n# أَدِيمَا (ʔadīmā) /ʔa.diː.maː/: second-person dual imperative of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔudīmā", "ʔadāma", "ʔadīmā"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "أديموا",
-        "u": "أديموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أديموا (form IV)\n# أُدِيمُوا (ʔudīmū) /ʔu.diː.muː/: third-person masculine plural past passive of أَدَامَ (ʔadāma)\n# أَدِيمُوا (ʔadīmū) /ʔa.diː.muː/: second-person masculine plural imperative of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔudīmū", "ʔadāma", "ʔadīmū"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "تديم",
-        "u": "تديم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تديم (form IV)\n# تُدِيمُ (tudīmu) /tu.diː.mu/: inflection of أَدَامَ (ʔadāma):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُدِيمَ (tudīma) /tu.diː.ma/: inflection of أَدَامَ (ʔadāma):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudīmu", "ʔadāma", "tudīma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "يديم",
-        "u": "يديم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يديم (form IV)\n# يُدِيمُ (yudīmu) /ju.diː.mu/: third-person masculine singular non-past active indicative of أَدَامَ (ʔadāma)\n# يُدِيمَ (yudīma) /ju.diː.ma/: third-person masculine singular non-past active subjunctive of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudīmu", "ʔadāma", "yudīma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "تديمان",
-        "u": "تديمان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُدِيمَانِ • (tudīmāni) (form IV) /tu.diː.maː.ni/\n# inflection of أَدَامَ (ʔadāma):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudīmāni", "ʔadāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "تديمين",
-        "u": "تديمين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُدِيمِينَ • (tudīmīna) (form IV) /tu.diː.miː.na/\n# second-person feminine singular non-past active indicative of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudīmīna", "ʔadāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "تديمون",
-        "u": "تديمون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُدِيمُونَ • (tudīmūna) (form IV) /tu.diː.muː.na/\n# second-person masculine plural non-past active indicative of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudīmūna", "ʔadāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "يديمون",
-        "u": "يديمون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُدِيمُونَ • (yudīmūna) (form IV) /ju.diː.muː.na/\n# third-person masculine plural non-past active indicative of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudīmūna", "ʔadāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "يديمان",
-        "u": "يديمان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُدِيمَانِ • (yudīmāni) (form IV) /ju.diː.maː.ni/\n# third-person masculine dual non-past active indicative of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudīmāni", "ʔadāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "تدام",
-        "u": "تدام",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تدام (form IV)\n# تُدَامُ (tudāmu) /tu.daː.mu/: inflection of أَدَامَ (ʔadāma):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُدَامَ (tudāma) /tu.daː.ma/: inflection of أَدَامَ (ʔadāma):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudāmu", "ʔadāma", "tudāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "تدامين",
-        "u": "تدامين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُدَامِينَ • (tudāmīna) (form IV) /tu.daː.miː.na/\n# second-person feminine singular non-past passive indicative of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudāmīna", "ʔadāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "تدامان",
-        "u": "تدامان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُدَامَانِ • (tudāmāni) (form IV) /tu.daː.maː.ni/\n# inflection of أَدَامَ (ʔadāma):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudāmāni", "ʔadāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "يدامان",
-        "u": "يدامان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُدَامَانِ • (yudāmāni) (form IV) /ju.daː.maː.ni/\n# third-person masculine dual non-past passive indicative of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudāmāni", "ʔadāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "تدامون",
-        "u": "تدامون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُدَامُونَ • (tudāmūna) (form IV) /tu.daː.muː.na/\n# second-person masculine plural non-past passive indicative of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudāmūna", "ʔadāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "ندام",
-        "u": "ندام",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ندام (form IV)\n# نُدَامُ (nudāmu) /nu.daː.mu/: first-person plural non-past passive indicative of أَدَامَ (ʔadāma)\n# نُدَامَ (nudāma) /nu.daː.ma/: first-person plural non-past passive subjunctive of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nudāmu", "ʔadāma", "nudāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "يدامون",
-        "u": "يدامون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُدَامُونَ • (yudāmūna) (form IV) /ju.daː.muː.na/\n# third-person masculine plural non-past passive indicative of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudāmūna", "ʔadāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "يديما",
-        "u": "يديما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُدِيمَا • (yudīmā) (form IV) /ju.diː.maː/\n# third-person masculine dual non-past active subjunctive/jussive of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudīmā", "ʔadāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "تديمي",
-        "u": "تديمي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُدِيمِي • (tudīmī) (form IV) /tu.diː.miː/\n# second-person feminine singular non-past active subjunctive/jussive of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudīmī", "ʔadāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "تديموا",
-        "u": "تديموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُدِيمُوا • (tudīmū) (form IV) /tu.diː.muː/\n# second-person masculine plural non-past active subjunctive/jussive of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudīmū", "ʔadāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "يداما",
-        "u": "يداما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُدَامَا • (yudāmā) (form IV) /ju.daː.maː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudāmā", "ʔadāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "تداما",
-        "u": "تداما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُدَامَا • (tudāmā) (form IV) /tu.daː.maː/\n# inflection of أَدَامَ (ʔadāma):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudāmā", "ʔadāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "تدامي",
-        "u": "تدامي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُدَامِي • (tudāmī) (form IV) /tu.daː.miː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudāmī", "ʔadāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "تديما",
-        "u": "تديما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُدِيمَا • (tudīmā) (form IV) /tu.diː.maː/\n# inflection of أَدَامَ (ʔadāma):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudīmā", "ʔadāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "يديموا",
-        "u": "يديموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُدِيمُوا • (yudīmū) (form IV) /ju.diː.muː/\n# third-person masculine plural non-past active subjunctive/jussive of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudīmū", "ʔadāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "يداموا",
-        "u": "يداموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُدَامُوا • (yudāmū) (form IV) /ju.daː.muː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudāmū", "ʔadāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "تداموا",
-        "u": "تداموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُدَامُوا • (tudāmū) (form IV) /tu.daː.muː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudāmū", "ʔadāma"],
-        "k": "أدام",
-        "yol": "kök"
-      },
-      {
-        "w": "أديمي",
-        "u": "أديمي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَدِيمِي • (ʔadīmī) (form IV) /ʔa.diː.miː/\n# second-person feminine singular imperative of أَدَامَ (ʔadāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadīmī", "ʔadāma"],
-        "k": "أدام",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "دم",
+  "ses": {
     "harf": "ء",
+    "fasil": "دم",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "يدام",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يدام (form IV)\n# يُدَامُ (yudāmu) /ju.daː.mu/: third-person masculine singular non-past passive indicative of أَدَامَ (ʔadāma)\n# يُدَامَ (yudāma) /ju.daː.ma/: third-person masculine singular non-past passive subjunctive of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudāmu", "ʔadāma", "yudāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدم",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يدم (form IV)\n# يُدِمْ (yudim) /ju.dim/: third-person masculine singular non-past active jussive of أَدَامَ (ʔadāma)\n# يُدَمْ (yudam) /ju.dam/: third-person masculine singular non-past passive jussive of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudim", "ʔadāma", "yudam"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدمن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أدمن (form IV)\n# أَدَمْنَ (ʔadamna) /ʔa.dam.na/: third-person feminine plural past active of أَدَامَ (ʔadāma)\n# أُدِمْنَ (ʔudimna) /ʔu.dim.na/: third-person feminine plural past passive of أَدَامَ (ʔadāma)\n# أَدِمْنَ (ʔadimna) /ʔa.dim.na/: second-person feminine plural imperative of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadamna", "ʔadāma", "ʔudimna"],
+      "kok_yazilis": "أدام"
+    },
+    {
+      "madde": "يدمن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يدمن (form IV)\n# يُدِمْنَ (yudimna) /ju.dim.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَدَامَ (ʔadāma)\n# يُدَمْنَ (yudamna) /ju.dam.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudimna", "ʔadāma", "yudamna"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدمن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تدمن (form IV)\n# تُدِمْنَ (tudimna) /tu.dim.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَدَامَ (ʔadāma)\n# تُدَمْنَ (tudamna) /tu.dam.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudimna", "ʔadāma", "tudamna"],
+      "kok_yazilis": "أدام"
+    },
+    {
+      "madde": "تدم",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تدم (form IV)\n# تُدِمْ (tudim) /tu.dim/: inflection of أَدَامَ (ʔadāma):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُدَمْ (tudam) /tu.dam/: inflection of أَدَامَ (ʔadāma):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudim", "ʔadāma", "tudam"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدم",
+      "tur": "noun",
+      "etim_no": "2.2",
+      "baslik": "أُدُم • (ʔudum)",
+      "anlam": ["plural of أَدِيم (ʔadīm, “skin, hide”)"],
+      "etiket": ["archaic", "form-of", "obsolete", "plural"],
+      "form_of": ["أَدِيم"],
+      "okunus": ["ʔudum"],
+      "bag": "asıl madde"
+    },
+    {
+      "madde": "أدم",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "أدم (form IV)\n# أُدِمْ (ʔudim) /ʔu.dim/: first-person singular non-past active jussive of أَدَامَ (ʔadāma)\n# أُدَمْ (ʔudam) /ʔu.dam/: first-person singular non-past passive jussive of أَدَامَ (ʔadāma)\n# أَدِمْ (ʔadim) /ʔa.dim/: second-person masculine singular imperative of أَدَامَ (ʔadāma)",
+      "etiket": ["archaic", "form-iv", "no-gloss", "obsolete"],
+      "okunus": ["ʔudim", "ʔadāma", "ʔudam"],
+      "kok_yazilis": "أدام"
+    },
+    {
+      "madde": "أدمنا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أدمنا (form IV)\n# أَدَمْنَا (ʔadamnā) /ʔa.dam.naː/: first-person plural past active of أَدَامَ (ʔadāma)\n# أُدِمْنَا (ʔudimnā) /ʔu.dim.naː/: first-person plural past passive of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadamnā", "ʔadāma", "ʔudimnā"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ندم",
+      "tur": "verb",
+      "etim_no": "3.2",
+      "baslik": "ندم (form IV)\n# نُدِمْ (nudim) /nu.dim/: first-person plural non-past active jussive of أَدَامَ (ʔadāma)\n# نُدَمْ (nudam) /nu.dam/: first-person plural non-past passive jussive of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nudim", "ʔadāma", "nudam"],
+      "kok_yazilis": "أدام"
+    },
+    {
+      "madde": "نديم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نديم (form IV)\n# نُدِيمُ (nudīmu) /nu.diː.mu/: first-person plural non-past active indicative of أَدَامَ (ʔadāma)\n# نُدِيمَ (nudīma) /nu.diː.ma/: first-person plural non-past active subjunctive of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nudīmu", "ʔadāma", "nudīma"],
+      "kok_yazilis": "أدام"
+    },
+    {
+      "madde": "أدمت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أدمت (form IV)\n# أَدَمْتُ (ʔadamtu) /ʔa.dam.tu/: first-person singular past active of أَدَامَ (ʔadāma)\n# أَدَمْتَ (ʔadamta) /ʔa.dam.ta/: second-person masculine singular past active of أَدَامَ (ʔadāma)\n# أَدَمْتِ (ʔadamti) /ʔa.dam.ti/: second-person feminine singular past active of أَدَامَ (ʔadāma)\n# أُدِمْتُ (ʔudimtu) /ʔu.dim.tu/: first-person singular past passive of أَدَامَ (ʔadāma)\n# أُدِمْتَ ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadamtu", "ʔadāma", "ʔadamta"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدامت",
+      "tur": "verb",
+      "baslik": "أَدَامَتْ • (ʔadāmat) (form IV) /ʔa.daː.mat/\n# third-person feminine singular past active of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadāmat", "ʔadāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدمتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أدمتما (form IV)\n# أَدَمْتُمَا (ʔadamtumā) /ʔa.dam.tu.maː/: second-person dual past active of أَدَامَ (ʔadāma)\n# أُدِمْتُمَا (ʔudimtumā) /ʔu.dim.tu.maː/: second-person dual past passive of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadamtumā", "ʔadāma", "ʔudimtumā"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أداما",
+      "tur": "verb",
+      "baslik": "أَدَامَا • (ʔadāmā) (form IV) /ʔa.daː.maː/\n# third-person masculine dual past active of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadāmā", "ʔadāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدامتا",
+      "tur": "verb",
+      "baslik": "أَدَامَتَا • (ʔadāmatā) (form IV) /ʔa.daː.ma.taː/\n# third-person feminine dual past active of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadāmatā", "ʔadāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدمتن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أدمتن (form IV)\n# أَدَمْتُنَّ (ʔadamtunna) /ʔa.dam.tun.na/: second-person feminine plural past active of أَدَامَ (ʔadāma)\n# أُدِمْتُنَّ (ʔudimtunna) /ʔu.dim.tun.na/: second-person feminine plural past passive of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadamtunna", "ʔadāma", "ʔudimtunna"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدمتم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أدمتم (form IV)\n# أَدَمْتُمْ (ʔadamtum) /ʔa.dam.tum/: second-person masculine plural past active of أَدَامَ (ʔadāma)\n# أُدِمْتُمْ (ʔudimtum) /ʔu.dim.tum/: second-person masculine plural past passive of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadamtum", "ʔadāma", "ʔudimtum"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أداموا",
+      "tur": "verb",
+      "baslik": "أَدَامُوا • (ʔadāmū) (form IV) /ʔa.daː.muː/\n# third-person masculine plural past active of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadāmū", "ʔadāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أديم",
+      "tur": "verb",
+      "baslik": "أديم (form IV)\n# أُدِيمَ (ʔudīma) /ʔu.diː.ma/: inflection of أَدَامَ (ʔadāma):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُدِيمُ (ʔudīmu) /ʔu.diː.mu/: first-person singular non-past active indicative of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔudīma", "ʔadāma", "ʔudīmu"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أديمت",
+      "tur": "verb",
+      "baslik": "أُدِيمَتْ • (ʔudīmat) (form IV) /ʔu.diː.mat/\n# third-person feminine singular past passive of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔudīmat", "ʔadāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أديمتا",
+      "tur": "verb",
+      "baslik": "أُدِيمَتَا • (ʔudīmatā) (form IV) /ʔu.diː.ma.taː/\n# third-person feminine dual past passive of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔudīmatā", "ʔadāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أديما",
+      "tur": "verb",
+      "baslik": "أديما (form IV)\n# أُدِيمَا (ʔudīmā) /ʔu.diː.maː/: third-person masculine dual past passive of أَدَامَ (ʔadāma)\n# أَدِيمَا (ʔadīmā) /ʔa.diː.maː/: second-person dual imperative of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔudīmā", "ʔadāma", "ʔadīmā"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أديموا",
+      "tur": "verb",
+      "baslik": "أديموا (form IV)\n# أُدِيمُوا (ʔudīmū) /ʔu.diː.muː/: third-person masculine plural past passive of أَدَامَ (ʔadāma)\n# أَدِيمُوا (ʔadīmū) /ʔa.diː.muː/: second-person masculine plural imperative of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔudīmū", "ʔadāma", "ʔadīmū"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تديم",
+      "tur": "verb",
+      "baslik": "تديم (form IV)\n# تُدِيمُ (tudīmu) /tu.diː.mu/: inflection of أَدَامَ (ʔadāma):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُدِيمَ (tudīma) /tu.diː.ma/: inflection of أَدَامَ (ʔadāma):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudīmu", "ʔadāma", "tudīma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يديم",
+      "tur": "verb",
+      "baslik": "يديم (form IV)\n# يُدِيمُ (yudīmu) /ju.diː.mu/: third-person masculine singular non-past active indicative of أَدَامَ (ʔadāma)\n# يُدِيمَ (yudīma) /ju.diː.ma/: third-person masculine singular non-past active subjunctive of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudīmu", "ʔadāma", "yudīma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تديمان",
+      "tur": "verb",
+      "baslik": "تُدِيمَانِ • (tudīmāni) (form IV) /tu.diː.maː.ni/\n# inflection of أَدَامَ (ʔadāma):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudīmāni", "ʔadāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تديمين",
+      "tur": "verb",
+      "baslik": "تُدِيمِينَ • (tudīmīna) (form IV) /tu.diː.miː.na/\n# second-person feminine singular non-past active indicative of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudīmīna", "ʔadāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تديمون",
+      "tur": "verb",
+      "baslik": "تُدِيمُونَ • (tudīmūna) (form IV) /tu.diː.muː.na/\n# second-person masculine plural non-past active indicative of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudīmūna", "ʔadāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يديمون",
+      "tur": "verb",
+      "baslik": "يُدِيمُونَ • (yudīmūna) (form IV) /ju.diː.muː.na/\n# third-person masculine plural non-past active indicative of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudīmūna", "ʔadāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يديمان",
+      "tur": "verb",
+      "baslik": "يُدِيمَانِ • (yudīmāni) (form IV) /ju.diː.maː.ni/\n# third-person masculine dual non-past active indicative of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudīmāni", "ʔadāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدام",
+      "tur": "verb",
+      "baslik": "تدام (form IV)\n# تُدَامُ (tudāmu) /tu.daː.mu/: inflection of أَدَامَ (ʔadāma):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُدَامَ (tudāma) /tu.daː.ma/: inflection of أَدَامَ (ʔadāma):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudāmu", "ʔadāma", "tudāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدامين",
+      "tur": "verb",
+      "baslik": "تُدَامِينَ • (tudāmīna) (form IV) /tu.daː.miː.na/\n# second-person feminine singular non-past passive indicative of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudāmīna", "ʔadāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدامان",
+      "tur": "verb",
+      "baslik": "تُدَامَانِ • (tudāmāni) (form IV) /tu.daː.maː.ni/\n# inflection of أَدَامَ (ʔadāma):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudāmāni", "ʔadāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدامان",
+      "tur": "verb",
+      "baslik": "يُدَامَانِ • (yudāmāni) (form IV) /ju.daː.maː.ni/\n# third-person masculine dual non-past passive indicative of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudāmāni", "ʔadāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدامون",
+      "tur": "verb",
+      "baslik": "تُدَامُونَ • (tudāmūna) (form IV) /tu.daː.muː.na/\n# second-person masculine plural non-past passive indicative of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudāmūna", "ʔadāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ندام",
+      "tur": "verb",
+      "baslik": "ندام (form IV)\n# نُدَامُ (nudāmu) /nu.daː.mu/: first-person plural non-past passive indicative of أَدَامَ (ʔadāma)\n# نُدَامَ (nudāma) /nu.daː.ma/: first-person plural non-past passive subjunctive of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nudāmu", "ʔadāma", "nudāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدامون",
+      "tur": "verb",
+      "baslik": "يُدَامُونَ • (yudāmūna) (form IV) /ju.daː.muː.na/\n# third-person masculine plural non-past passive indicative of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudāmūna", "ʔadāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يديما",
+      "tur": "verb",
+      "baslik": "يُدِيمَا • (yudīmā) (form IV) /ju.diː.maː/\n# third-person masculine dual non-past active subjunctive/jussive of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudīmā", "ʔadāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تديمي",
+      "tur": "verb",
+      "baslik": "تُدِيمِي • (tudīmī) (form IV) /tu.diː.miː/\n# second-person feminine singular non-past active subjunctive/jussive of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudīmī", "ʔadāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تديموا",
+      "tur": "verb",
+      "baslik": "تُدِيمُوا • (tudīmū) (form IV) /tu.diː.muː/\n# second-person masculine plural non-past active subjunctive/jussive of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudīmū", "ʔadāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يداما",
+      "tur": "verb",
+      "baslik": "يُدَامَا • (yudāmā) (form IV) /ju.daː.maː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudāmā", "ʔadāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تداما",
+      "tur": "verb",
+      "baslik": "تُدَامَا • (tudāmā) (form IV) /tu.daː.maː/\n# inflection of أَدَامَ (ʔadāma):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudāmā", "ʔadāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدامي",
+      "tur": "verb",
+      "baslik": "تُدَامِي • (tudāmī) (form IV) /tu.daː.miː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudāmī", "ʔadāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تديما",
+      "tur": "verb",
+      "baslik": "تُدِيمَا • (tudīmā) (form IV) /tu.diː.maː/\n# inflection of أَدَامَ (ʔadāma):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudīmā", "ʔadāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يديموا",
+      "tur": "verb",
+      "baslik": "يُدِيمُوا • (yudīmū) (form IV) /ju.diː.muː/\n# third-person masculine plural non-past active subjunctive/jussive of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudīmū", "ʔadāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يداموا",
+      "tur": "verb",
+      "baslik": "يُدَامُوا • (yudāmū) (form IV) /ju.daː.muː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudāmū", "ʔadāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تداموا",
+      "tur": "verb",
+      "baslik": "تُدَامُوا • (tudāmū) (form IV) /tu.daː.muː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudāmū", "ʔadāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أديمي",
+      "tur": "verb",
+      "baslik": "أَدِيمِي • (ʔadīmī) (form IV) /ʔa.diː.miː/\n# second-person feminine singular imperative of أَدَامَ (ʔadāma)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadīmī", "ʔadāma"],
+      "kok_yazilis": "أدام",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ءدام", "r6"]
+  ],
+  "mana": {
     "ince": "state.n.02",
     "orta": "noun.feeling",
     "ust": "his ve nefis",
@@ -633,22 +496,15 @@
     "dayanak_tanim": "sadness associated with some wrong done or some disappointment",
     "synset_sayisi": 4
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["feeling.n.01", "repent.v.02"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["feeling.n.01", "repent.v.02"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

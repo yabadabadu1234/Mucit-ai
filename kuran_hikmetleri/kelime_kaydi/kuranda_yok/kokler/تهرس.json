@@ -1,366 +1,259 @@
 {
   "kok": "تهرس",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تهرس", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تهرسا",
-        "u": "تهرسا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهَرَّسَا • (taharrasā) (form V) /ta.har.ra.saː/\n# inflection of تَهَرَّسَ (taharrasa):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taharrasā", "taharrasa"],
-        "k": "تهرس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهرست",
-        "u": "تهرست",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهرست (form V)\n# تَهَرَّسْتُ (taharrastu) /ta.har.ras.tu/: first-person singular past active of تَهَرَّسَ (taharrasa)\n# تَهَرَّسْتَ (taharrasta) /ta.har.ras.ta/: second-person masculine singular past active of تَهَرَّسَ (taharrasa)\n# تَهَرَّسْتِ (taharrasti) /ta.har.ras.ti/: second-person feminine singular past active of تَهَرَّسَ (taharrasa)\n# تَهَرَّسَتْ (taharrasat) /ta.har.ra.sat/: third-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taharrastu", "taharrasa", "taharrasta"],
-        "k": "تهرس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهرستما",
-        "u": "تهرستما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهَرَّسْتُمَا • (taharrastumā) (form V) /ta.har.ras.tu.maː/\n# second-person dual past active of تَهَرَّسَ (taharrasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taharrastumā", "taharrasa"],
-        "k": "تهرس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهرستا",
-        "u": "تهرستا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهَرَّسَتَا • (taharrasatā) (form V) /ta.har.ra.sa.taː/\n# third-person feminine dual past active of تَهَرَّسَ (taharrasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taharrasatā", "taharrasa"],
-        "k": "تهرس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهرستم",
-        "u": "تهرستم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهَرَّسْتُمْ • (taharrastum) (form V) /ta.har.ras.tum/\n# second-person masculine plural past active of تَهَرَّسَ (taharrasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taharrastum", "taharrasa"],
-        "k": "تهرس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهرسنا",
-        "u": "تهرسنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهَرَّسْنَا • (taharrasnā) (form V) /ta.har.ras.naː/\n# first-person plural past active of تَهَرَّسَ (taharrasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taharrasnā", "taharrasa"],
-        "k": "تهرس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهرسوا",
-        "u": "تهرسوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهَرَّسُوا • (taharrasū) (form V) /ta.har.ra.suː/\n# inflection of تَهَرَّسَ (taharrasa):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taharrasū", "taharrasa"],
-        "k": "تهرس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهرستن",
-        "u": "تهرستن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهَرَّسْتُنَّ • (taharrastunna) (form V) /ta.har.ras.tun.na/\n# second-person feminine plural past active of تَهَرَّسَ (taharrasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taharrastunna", "taharrasa"],
-        "k": "تهرس",
-        "yol": "kök"
-      },
-      {
-        "w": "أتهرس",
-        "u": "أتهرس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتهرس (form V)\n# أَتَهَرَّسُ (ʔataharrasu) /ʔa.ta.har.ra.su/: first-person singular non-past active indicative of تَهَرَّسَ (taharrasa)\n# أَتَهَرَّسَ (ʔataharrasa) /ʔa.ta.har.ra.sa/: first-person singular non-past active subjunctive of تَهَرَّسَ (taharrasa)\n# أَتَهَرَّسْ (ʔataharras) /ʔa.ta.har.ras/: first-person singular non-past active jussive of تَهَرَّسَ (taharrasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔataharrasu", "taharrasa", "ʔataharrasa"],
-        "k": "تهرس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهرسن",
-        "u": "تهرسن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهَرَّسْنَ • (taharrasna) (form V) /ta.har.ras.na/\n# inflection of تَهَرَّسَ (taharrasa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taharrasna", "taharrasa"],
-        "k": "تهرس",
-        "yol": "kök"
-      },
-      {
-        "w": "يتهرس",
-        "u": "يتهرس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتهرس (form V)\n# يَتَهَرَّسُ (yataharrasu) /ja.ta.har.ra.su/: third-person masculine singular non-past active indicative of تَهَرَّسَ (taharrasa)\n# يَتَهَرَّسَ (yataharrasa) /ja.ta.har.ra.sa/: third-person masculine singular non-past active subjunctive of تَهَرَّسَ (taharrasa)\n# يَتَهَرَّسْ (yataharras) /ja.ta.har.ras/: third-person masculine singular non-past active jussive of تَهَرَّسَ (taharras",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataharrasu", "taharrasa", "yataharrasa"],
-        "k": "تهرس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهرسان",
-        "u": "تتهرسان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَهَرَّسَانِ • (tataharrasāni) (form V) /ta.ta.har.ra.saː.ni/\n# inflection of تَهَرَّسَ (taharrasa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataharrasāni", "taharrasa"],
-        "k": "تهرس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهرسين",
-        "u": "تتهرسين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَهَرَّسِينَ • (tataharrasīna) (form V) /ta.ta.har.ra.siː.na/\n# second-person feminine singular non-past active indicative of تَهَرَّسَ (taharrasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataharrasīna", "taharrasa"],
-        "k": "تهرس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهرس",
-        "u": "تتهرس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتهرس (form V)\n# تَتَهَرَّسُ (tataharrasu) /ta.ta.har.ra.su/: inflection of تَهَرَّسَ (taharrasa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَهَرَّسَ (tataharrasa) /ta.ta.har.ra.sa/: inflection of تَهَرَّسَ (taharrasa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataharrasu", "taharrasa", "tataharrasa"],
-        "k": "تهرس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهرسن",
-        "u": "تتهرسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَهَرَّسْنَ • (tataharrasna) (form V) /ta.ta.har.ras.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَهَرَّسَ (taharrasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataharrasna", "taharrasa"],
-        "k": "تهرس",
-        "yol": "kök"
-      },
-      {
-        "w": "نتهرس",
-        "u": "نتهرس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتهرس (form V)\n# نَتَهَرَّسُ (nataharrasu) /na.ta.har.ra.su/: first-person plural non-past active indicative of تَهَرَّسَ (taharrasa)\n# نَتَهَرَّسَ (nataharrasa) /na.ta.har.ra.sa/: first-person plural non-past active subjunctive of تَهَرَّسَ (taharrasa)\n# نَتَهَرَّسْ (nataharras) /na.ta.har.ras/: first-person plural non-past active jussive of تَهَرَّسَ (taharrasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["nataharrasu", "taharrasa", "nataharrasa"],
-        "k": "تهرس",
-        "yol": "kök"
-      },
-      {
-        "w": "يتهرسان",
-        "u": "يتهرسان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَهَرَّسَانِ • (yataharrasāni) (form V) /ja.ta.har.ra.saː.ni/\n# third-person masculine dual non-past active indicative of تَهَرَّسَ (taharrasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataharrasāni", "taharrasa"],
-        "k": "تهرس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهرسون",
-        "u": "تتهرسون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَهَرَّسُونَ • (tataharrasūna) (form V) /ta.ta.har.ra.suː.na/\n# second-person masculine plural non-past active indicative of تَهَرَّسَ (taharrasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataharrasūna", "taharrasa"],
-        "k": "تهرس",
-        "yol": "kök"
-      },
-      {
-        "w": "يتهرسون",
-        "u": "يتهرسون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَهَرَّسُونَ • (yataharrasūna) (form V) /ja.ta.har.ra.suː.na/\n# third-person masculine plural non-past active indicative of تَهَرَّسَ (taharrasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataharrasūna", "taharrasa"],
-        "k": "تهرس",
-        "yol": "kök"
-      },
-      {
-        "w": "يتهرسن",
-        "u": "يتهرسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَهَرَّسْنَ • (yataharrasna) (form V) /ja.ta.har.ras.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَهَرَّسَ (taharrasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataharrasna", "taharrasa"],
-        "k": "تهرس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهرسي",
-        "u": "تتهرسي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَهَرَّسِي • (tataharrasī) (form V) /ta.ta.har.ra.siː/\n# second-person feminine singular non-past active subjunctive/jussive of تَهَرَّسَ (taharrasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataharrasī", "taharrasa"],
-        "k": "تهرس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهرسوا",
-        "u": "تتهرسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَهَرَّسُوا • (tataharrasū) (form V) /ta.ta.har.ra.suː/\n# second-person masculine plural non-past active subjunctive/jussive of تَهَرَّسَ (taharrasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataharrasū", "taharrasa"],
-        "k": "تهرس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهرسا",
-        "u": "تتهرسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَهَرَّسَا • (tataharrasā) (form V) /ta.ta.har.ra.saː/\n# inflection of تَهَرَّسَ (taharrasa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataharrasā", "taharrasa"],
-        "k": "تهرس",
-        "yol": "kök"
-      },
-      {
-        "w": "يتهرسوا",
-        "u": "يتهرسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَهَرَّسُوا • (yataharrasū) (form V) /ja.ta.har.ra.suː/\n# third-person masculine plural non-past active subjunctive/jussive of تَهَرَّسَ (taharrasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataharrasū", "taharrasa"],
-        "k": "تهرس",
-        "yol": "kök"
-      },
-      {
-        "w": "يتهرسا",
-        "u": "يتهرسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَهَرَّسَا • (yataharrasā) (form V) /ja.ta.har.ra.saː/\n# third-person masculine dual non-past active subjunctive/jussive of تَهَرَّسَ (taharrasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataharrasā", "taharrasa"],
-        "k": "تهرس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهرسي",
-        "u": "تهرسي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهَرَّسِي • (taharrasī) (form V) /ta.har.ra.siː/\n# second-person feminine singular imperative of تَهَرَّسَ (taharrasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taharrasī", "taharrasa"],
-        "k": "تهرس",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "ته",
+  "ses": {
     "harf": "ت",
+    "fasil": "ته",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تهرسا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهَرَّسَا • (taharrasā) (form V) /ta.har.ra.saː/\n# inflection of تَهَرَّسَ (taharrasa):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taharrasā", "taharrasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهرست",
+      "tur": "verb",
+      "baslik": "تهرست (form V)\n# تَهَرَّسْتُ (taharrastu) /ta.har.ras.tu/: first-person singular past active of تَهَرَّسَ (taharrasa)\n# تَهَرَّسْتَ (taharrasta) /ta.har.ras.ta/: second-person masculine singular past active of تَهَرَّسَ (taharrasa)\n# تَهَرَّسْتِ (taharrasti) /ta.har.ras.ti/: second-person feminine singular past active of تَهَرَّسَ (taharrasa)\n# تَهَرَّسَتْ (taharrasat) /ta.har.ra.sat/: third-perso",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taharrastu", "taharrasa", "taharrasta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهرستما",
+      "tur": "verb",
+      "baslik": "تَهَرَّسْتُمَا • (taharrastumā) (form V) /ta.har.ras.tu.maː/\n# second-person dual past active of تَهَرَّسَ (taharrasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taharrastumā", "taharrasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهرستا",
+      "tur": "verb",
+      "baslik": "تَهَرَّسَتَا • (taharrasatā) (form V) /ta.har.ra.sa.taː/\n# third-person feminine dual past active of تَهَرَّسَ (taharrasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taharrasatā", "taharrasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهرستم",
+      "tur": "verb",
+      "baslik": "تَهَرَّسْتُمْ • (taharrastum) (form V) /ta.har.ras.tum/\n# second-person masculine plural past active of تَهَرَّسَ (taharrasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taharrastum", "taharrasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهرسنا",
+      "tur": "verb",
+      "baslik": "تَهَرَّسْنَا • (taharrasnā) (form V) /ta.har.ras.naː/\n# first-person plural past active of تَهَرَّسَ (taharrasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taharrasnā", "taharrasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهرسوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهَرَّسُوا • (taharrasū) (form V) /ta.har.ra.suː/\n# inflection of تَهَرَّسَ (taharrasa):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taharrasū", "taharrasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهرستن",
+      "tur": "verb",
+      "baslik": "تَهَرَّسْتُنَّ • (taharrastunna) (form V) /ta.har.ras.tun.na/\n# second-person feminine plural past active of تَهَرَّسَ (taharrasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taharrastunna", "taharrasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتهرس",
+      "tur": "verb",
+      "baslik": "أتهرس (form V)\n# أَتَهَرَّسُ (ʔataharrasu) /ʔa.ta.har.ra.su/: first-person singular non-past active indicative of تَهَرَّسَ (taharrasa)\n# أَتَهَرَّسَ (ʔataharrasa) /ʔa.ta.har.ra.sa/: first-person singular non-past active subjunctive of تَهَرَّسَ (taharrasa)\n# أَتَهَرَّسْ (ʔataharras) /ʔa.ta.har.ras/: first-person singular non-past active jussive of تَهَرَّسَ (taharrasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔataharrasu", "taharrasa", "ʔataharrasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهرسن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهَرَّسْنَ • (taharrasna) (form V) /ta.har.ras.na/\n# inflection of تَهَرَّسَ (taharrasa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taharrasna", "taharrasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتهرس",
+      "tur": "verb",
+      "baslik": "يتهرس (form V)\n# يَتَهَرَّسُ (yataharrasu) /ja.ta.har.ra.su/: third-person masculine singular non-past active indicative of تَهَرَّسَ (taharrasa)\n# يَتَهَرَّسَ (yataharrasa) /ja.ta.har.ra.sa/: third-person masculine singular non-past active subjunctive of تَهَرَّسَ (taharrasa)\n# يَتَهَرَّسْ (yataharras) /ja.ta.har.ras/: third-person masculine singular non-past active jussive of تَهَرَّسَ (taharras",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataharrasu", "taharrasa", "yataharrasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهرسان",
+      "tur": "verb",
+      "baslik": "تَتَهَرَّسَانِ • (tataharrasāni) (form V) /ta.ta.har.ra.saː.ni/\n# inflection of تَهَرَّسَ (taharrasa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataharrasāni", "taharrasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهرسين",
+      "tur": "verb",
+      "baslik": "تَتَهَرَّسِينَ • (tataharrasīna) (form V) /ta.ta.har.ra.siː.na/\n# second-person feminine singular non-past active indicative of تَهَرَّسَ (taharrasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataharrasīna", "taharrasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهرس",
+      "tur": "verb",
+      "baslik": "تتهرس (form V)\n# تَتَهَرَّسُ (tataharrasu) /ta.ta.har.ra.su/: inflection of تَهَرَّسَ (taharrasa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَهَرَّسَ (tataharrasa) /ta.ta.har.ra.sa/: inflection of تَهَرَّسَ (taharrasa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataharrasu", "taharrasa", "tataharrasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهرسن",
+      "tur": "verb",
+      "baslik": "تَتَهَرَّسْنَ • (tataharrasna) (form V) /ta.ta.har.ras.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَهَرَّسَ (taharrasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataharrasna", "taharrasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتهرس",
+      "tur": "verb",
+      "baslik": "نتهرس (form V)\n# نَتَهَرَّسُ (nataharrasu) /na.ta.har.ra.su/: first-person plural non-past active indicative of تَهَرَّسَ (taharrasa)\n# نَتَهَرَّسَ (nataharrasa) /na.ta.har.ra.sa/: first-person plural non-past active subjunctive of تَهَرَّسَ (taharrasa)\n# نَتَهَرَّسْ (nataharras) /na.ta.har.ras/: first-person plural non-past active jussive of تَهَرَّسَ (taharrasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["nataharrasu", "taharrasa", "nataharrasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتهرسان",
+      "tur": "verb",
+      "baslik": "يَتَهَرَّسَانِ • (yataharrasāni) (form V) /ja.ta.har.ra.saː.ni/\n# third-person masculine dual non-past active indicative of تَهَرَّسَ (taharrasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataharrasāni", "taharrasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهرسون",
+      "tur": "verb",
+      "baslik": "تَتَهَرَّسُونَ • (tataharrasūna) (form V) /ta.ta.har.ra.suː.na/\n# second-person masculine plural non-past active indicative of تَهَرَّسَ (taharrasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataharrasūna", "taharrasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتهرسون",
+      "tur": "verb",
+      "baslik": "يَتَهَرَّسُونَ • (yataharrasūna) (form V) /ja.ta.har.ra.suː.na/\n# third-person masculine plural non-past active indicative of تَهَرَّسَ (taharrasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataharrasūna", "taharrasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتهرسن",
+      "tur": "verb",
+      "baslik": "يَتَهَرَّسْنَ • (yataharrasna) (form V) /ja.ta.har.ras.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَهَرَّسَ (taharrasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataharrasna", "taharrasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهرسي",
+      "tur": "verb",
+      "baslik": "تَتَهَرَّسِي • (tataharrasī) (form V) /ta.ta.har.ra.siː/\n# second-person feminine singular non-past active subjunctive/jussive of تَهَرَّسَ (taharrasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataharrasī", "taharrasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهرسوا",
+      "tur": "verb",
+      "baslik": "تَتَهَرَّسُوا • (tataharrasū) (form V) /ta.ta.har.ra.suː/\n# second-person masculine plural non-past active subjunctive/jussive of تَهَرَّسَ (taharrasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataharrasū", "taharrasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهرسا",
+      "tur": "verb",
+      "baslik": "تَتَهَرَّسَا • (tataharrasā) (form V) /ta.ta.har.ra.saː/\n# inflection of تَهَرَّسَ (taharrasa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataharrasā", "taharrasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتهرسوا",
+      "tur": "verb",
+      "baslik": "يَتَهَرَّسُوا • (yataharrasū) (form V) /ja.ta.har.ra.suː/\n# third-person masculine plural non-past active subjunctive/jussive of تَهَرَّسَ (taharrasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataharrasū", "taharrasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتهرسا",
+      "tur": "verb",
+      "baslik": "يَتَهَرَّسَا • (yataharrasā) (form V) /ja.ta.har.ra.saː/\n# third-person masculine dual non-past active subjunctive/jussive of تَهَرَّسَ (taharrasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataharrasā", "taharrasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهرسي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهَرَّسِي • (taharrasī) (form V) /ta.har.ra.siː/\n# second-person feminine singular imperative of تَهَرَّسَ (taharrasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taharrasī", "taharrasa"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تهرس", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

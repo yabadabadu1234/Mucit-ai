@@ -1,364 +1,290 @@
 {
   "kok": "ءفرج",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءفرج", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يفرج",
-        "u": "يفرج",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يفرج (form IV)\n# يُفْرِجُ (yufriju) /juf.ri.d͡ʒu/: third-person masculine singular non-past active indicative of أَفْرَجَ (ʔafraja)\n# يُفْرَجُ (yufraju) /juf.ra.d͡ʒu/: third-person masculine singular non-past passive indicative of أَفْرَجَ (ʔafraja)\n# يُفْرِجَ (yufrija) /juf.ri.d͡ʒa/: third-person masculine singular non-past active subjunctive of أَفْرَجَ (ʔafraja)\n# يُفْرَجَ (yufraja) /juf.ra.d͡ʒ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yufriju", "ʔafraja", "yufraju"],
-        "k": "أفرج",
-        "yol": "kök"
-      },
-      {
-        "w": "تفرج",
-        "u": "تفرج",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تفرج (form IV)\n# تُفْرِجُ (tufriju) /tuf.ri.d͡ʒu/: inflection of أَفْرَجَ (ʔafraja):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُفْرِجَ (tufrija) /tuf.ri.d͡ʒa/: inflection of أَفْرَجَ (ʔafraja):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunc",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tufriju", "ʔafraja", "tufrija"],
-        "k": "أفرج",
-        "yol": "kök"
-      },
-      {
-        "w": "تفرجين",
-        "u": "تفرجين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُفْرِجِينَ • (tufrijīna) (form IV) /tuf.ri.d͡ʒiː.na/\n# second-person feminine singular non-past active indicative of أَفْرَجَ (ʔafraja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tufrijīna", "ʔafraja"],
-        "k": "أفرج",
-        "yol": "kök"
-      },
-      {
-        "w": "تفرجي",
-        "u": "تفرجي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُفْرِجِي • (tufrijī) (form IV) /tuf.ri.d͡ʒiː/\n# second-person feminine singular non-past active subjunctive/jussive of أَفْرَجَ (ʔafraja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tufrijī", "ʔafraja"],
-        "k": "أفرج",
-        "yol": "kök"
-      },
-      {
-        "w": "نفرج",
-        "u": "نفرج",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نفرج (form IV)\n# نُفْرِجُ (nufriju) /nuf.ri.d͡ʒu/: first-person plural non-past active indicative of أَفْرَجَ (ʔafraja)\n# نُفْرِجَ (nufrija) /nuf.ri.d͡ʒa/: first-person plural non-past active subjunctive of أَفْرَجَ (ʔafraja)\n# نُفْرِجْ (nufrij) /nuf.rid͡ʒ/: first-person plural non-past active jussive of أَفْرَجَ (ʔafraja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nufriju", "ʔafraja", "nufrija"],
-        "k": "أفرج",
-        "yol": "kök"
-      },
-      {
-        "w": "تفرجون",
-        "u": "تفرجون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُفْرِجُونَ • (tufrijūna) (form IV) /tuf.ri.d͡ʒuː.na/\n# second-person masculine plural non-past active indicative of أَفْرَجَ (ʔafraja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tufrijūna", "ʔafraja"],
-        "k": "أفرج",
-        "yol": "kök"
-      },
-      {
-        "w": "تفرجوا",
-        "u": "تفرجوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُفْرِجُوا • (tufrijū) (form IV) /tuf.ri.d͡ʒuː/\n# second-person masculine plural non-past active subjunctive/jussive of أَفْرَجَ (ʔafraja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tufrijū", "ʔafraja"],
-        "k": "أفرج",
-        "yol": "kök"
-      },
-      {
-        "w": "يفرجون",
-        "u": "يفرجون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يُفْرِجُونَ • (yufrijūna) (form IV) /juf.ri.d͡ʒuː.na/\n# third-person masculine plural non-past active indicative of أَفْرَجَ (ʔafraja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yufrijūna", "ʔafraja"],
-        "k": "أفرج",
-        "yol": "kök"
-      },
-      {
-        "w": "يفرجوا",
-        "u": "يفرجوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يُفْرِجُوا • (yufrijū) (form IV) /juf.ri.d͡ʒuː/\n# third-person masculine plural non-past active subjunctive/jussive of أَفْرَجَ (ʔafraja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yufrijū", "ʔafraja"],
-        "k": "أفرج",
-        "yol": "kök"
-      },
-      {
-        "w": "تفرجن",
-        "u": "تفرجن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُفْرِجْنَ • (tufrijna) (form IV) /tuf.rid͡ʒ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of أَفْرَجَ (ʔafraja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tufrijna", "ʔafraja"],
-        "k": "أفرج",
-        "yol": "kök"
-      },
-      {
-        "w": "يفرجن",
-        "u": "يفرجن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يُفْرِجْنَ • (yufrijna) (form IV) /juf.rid͡ʒ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of أَفْرَجَ (ʔafraja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yufrijna", "ʔafraja"],
-        "k": "أفرج",
-        "yol": "kök"
-      },
-      {
-        "w": "أفرجت",
-        "u": "أفرجت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أفرجت (form IV)\n# أَفْرَجْتُ (ʔafrajtu) /ʔaf.rad͡ʒ.tu/: first-person singular past active of أَفْرَجَ (ʔafraja)\n# أَفْرَجْتَ (ʔafrajta) /ʔaf.rad͡ʒ.ta/: second-person masculine singular past active of أَفْرَجَ (ʔafraja)\n# أَفْرَجْتِ (ʔafrajti) /ʔaf.rad͡ʒ.ti/: second-person feminine singular past active of أَفْرَجَ (ʔafraja)\n# أَفْرَجَتْ (ʔafrajat) /ʔaf.ra.d͡ʒat/: third-person feminine singular past",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔafrajtu", "ʔafraja", "ʔafrajta"],
-        "k": "أفرج",
-        "yol": "kök"
-      },
-      {
-        "w": "أفرجا",
-        "u": "أفرجا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أفرجا (form IV)\n# أَفْرَجَا (ʔafrajā) /ʔaf.ra.d͡ʒaː/: third-person masculine dual past active of أَفْرَجَ (ʔafraja)\n# أَفْرِجَا (ʔafrijā) /ʔaf.ri.d͡ʒaː/: second-person dual imperative of أَفْرَجَ (ʔafraja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔafrajā", "ʔafraja", "ʔafrijā"],
-        "k": "أفرج",
-        "yol": "kök"
-      },
-      {
-        "w": "أفرجتما",
-        "u": "أفرجتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَفْرَجْتُمَا • (ʔafrajtumā) (form IV) /ʔaf.rad͡ʒ.tu.maː/\n# second-person dual past active of أَفْرَجَ (ʔafraja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔafrajtumā", "ʔafraja"],
-        "k": "أفرج",
-        "yol": "kök"
-      },
-      {
-        "w": "أفرجتم",
-        "u": "أفرجتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَفْرَجْتُمْ • (ʔafrajtum) (form IV) /ʔaf.rad͡ʒ.tum/\n# second-person masculine plural past active of أَفْرَجَ (ʔafraja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔafrajtum", "ʔafraja"],
-        "k": "أفرج",
-        "yol": "kök"
-      },
-      {
-        "w": "أفرجتا",
-        "u": "أفرجتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَفْرَجَتَا • (ʔafrajatā) (form IV) /ʔaf.ra.d͡ʒa.taː/\n# third-person feminine dual past active of أَفْرَجَ (ʔafraja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔafrajatā", "ʔafraja"],
-        "k": "أفرج",
-        "yol": "kök"
-      },
-      {
-        "w": "أفرجتن",
-        "u": "أفرجتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَفْرَجْتُنَّ • (ʔafrajtunna) (form IV) /ʔaf.rad͡ʒ.tun.na/\n# second-person feminine plural past active of أَفْرَجَ (ʔafraja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔafrajtunna", "ʔafraja"],
-        "k": "أفرج",
-        "yol": "kök"
-      },
-      {
-        "w": "أفرجنا",
-        "u": "أفرجنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَفْرَجْنَا • (ʔafrajnā) (form IV) /ʔaf.rad͡ʒ.naː/\n# first-person plural past active of أَفْرَجَ (ʔafraja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔafrajnā", "ʔafraja"],
-        "k": "أفرج",
-        "yol": "kök"
-      },
-      {
-        "w": "أفرجوا",
-        "u": "أفرجوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أفرجوا (form IV)\n# أَفْرَجُوا (ʔafrajū) /ʔaf.ra.d͡ʒuː/: third-person masculine plural past active of أَفْرَجَ (ʔafraja)\n# أَفْرِجُوا (ʔafrijū) /ʔaf.ri.d͡ʒuː/: second-person masculine plural imperative of أَفْرَجَ (ʔafraja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔafrajū", "ʔafraja", "ʔafrijū"],
-        "k": "أفرج",
-        "yol": "kök"
-      },
-      {
-        "w": "أفرجن",
-        "u": "أفرجن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أفرجن (form IV)\n# أَفْرَجْنَ (ʔafrajna) /ʔaf.rad͡ʒ.na/: third-person feminine plural past active of أَفْرَجَ (ʔafraja)\n# أَفْرِجْنَ (ʔafrijna) /ʔaf.rid͡ʒ.na/: second-person feminine plural imperative of أَفْرَجَ (ʔafraja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔafrajna", "ʔafraja", "ʔafrijna"],
-        "k": "أفرج",
-        "yol": "kök"
-      },
-      {
-        "w": "تفرجان",
-        "u": "تفرجان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُفْرِجَانِ • (tufrijāni) (form IV) /tuf.ri.d͡ʒaː.ni/\n# inflection of أَفْرَجَ (ʔafraja):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tufrijāni", "ʔafraja"],
-        "k": "أفرج",
-        "yol": "kök"
-      },
-      {
-        "w": "يفرجان",
-        "u": "يفرجان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُفْرِجَانِ • (yufrijāni) (form IV) /juf.ri.d͡ʒaː.ni/\n# third-person masculine dual non-past active indicative of أَفْرَجَ (ʔafraja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yufrijāni", "ʔafraja"],
-        "k": "أفرج",
-        "yol": "kök"
-      },
-      {
-        "w": "تفرجا",
-        "u": "تفرجا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُفْرِجَا • (tufrijā) (form IV) /tuf.ri.d͡ʒaː/\n# inflection of أَفْرَجَ (ʔafraja):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tufrijā", "ʔafraja"],
-        "k": "أفرج",
-        "yol": "kök"
-      },
-      {
-        "w": "يفرجا",
-        "u": "يفرجا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُفْرِجَا • (yufrijā) (form IV) /juf.ri.d͡ʒaː/\n# third-person masculine dual non-past active subjunctive/jussive of أَفْرَجَ (ʔafraja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yufrijā", "ʔafraja"],
-        "k": "أفرج",
-        "yol": "kök"
-      },
-      {
-        "w": "أفرجي",
-        "u": "أفرجي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَفْرِجِي • (ʔafrijī) (form IV) /ʔaf.ri.d͡ʒiː/\n# second-person feminine singular imperative of أَفْرَجَ (ʔafraja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔafrijī", "ʔafraja"],
-        "k": "أفرج",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "فر",
+  "ses": {
     "harf": "ء",
+    "fasil": "فر",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يفرج",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يفرج (form IV)\n# يُفْرِجُ (yufriju) /juf.ri.d͡ʒu/: third-person masculine singular non-past active indicative of أَفْرَجَ (ʔafraja)\n# يُفْرَجُ (yufraju) /juf.ra.d͡ʒu/: third-person masculine singular non-past passive indicative of أَفْرَجَ (ʔafraja)\n# يُفْرِجَ (yufrija) /juf.ri.d͡ʒa/: third-person masculine singular non-past active subjunctive of أَفْرَجَ (ʔafraja)\n# يُفْرَجَ (yufraja) /juf.ra.d͡ʒ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yufriju", "ʔafraja", "yufraju"],
+      "kok_yazilis": "أفرج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفرج",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تفرج (form IV)\n# تُفْرِجُ (tufriju) /tuf.ri.d͡ʒu/: inflection of أَفْرَجَ (ʔafraja):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُفْرِجَ (tufrija) /tuf.ri.d͡ʒa/: inflection of أَفْرَجَ (ʔafraja):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunc",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tufriju", "ʔafraja", "tufrija"],
+      "kok_yazilis": "أفرج"
+    },
+    {
+      "madde": "تفرجين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُفْرِجِينَ • (tufrijīna) (form IV) /tuf.ri.d͡ʒiː.na/\n# second-person feminine singular non-past active indicative of أَفْرَجَ (ʔafraja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tufrijīna", "ʔafraja"],
+      "kok_yazilis": "أفرج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفرجي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُفْرِجِي • (tufrijī) (form IV) /tuf.ri.d͡ʒiː/\n# second-person feminine singular non-past active subjunctive/jussive of أَفْرَجَ (ʔafraja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tufrijī", "ʔafraja"],
+      "kok_yazilis": "أفرج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نفرج",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نفرج (form IV)\n# نُفْرِجُ (nufriju) /nuf.ri.d͡ʒu/: first-person plural non-past active indicative of أَفْرَجَ (ʔafraja)\n# نُفْرِجَ (nufrija) /nuf.ri.d͡ʒa/: first-person plural non-past active subjunctive of أَفْرَجَ (ʔafraja)\n# نُفْرِجْ (nufrij) /nuf.rid͡ʒ/: first-person plural non-past active jussive of أَفْرَجَ (ʔafraja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nufriju", "ʔafraja", "nufrija"],
+      "kok_yazilis": "أفرج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفرجون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُفْرِجُونَ • (tufrijūna) (form IV) /tuf.ri.d͡ʒuː.na/\n# second-person masculine plural non-past active indicative of أَفْرَجَ (ʔafraja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tufrijūna", "ʔafraja"],
+      "kok_yazilis": "أفرج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفرجوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُفْرِجُوا • (tufrijū) (form IV) /tuf.ri.d͡ʒuː/\n# second-person masculine plural non-past active subjunctive/jussive of أَفْرَجَ (ʔafraja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tufrijū", "ʔafraja"],
+      "kok_yazilis": "أفرج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يفرجون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يُفْرِجُونَ • (yufrijūna) (form IV) /juf.ri.d͡ʒuː.na/\n# third-person masculine plural non-past active indicative of أَفْرَجَ (ʔafraja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yufrijūna", "ʔafraja"],
+      "kok_yazilis": "أفرج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يفرجوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يُفْرِجُوا • (yufrijū) (form IV) /juf.ri.d͡ʒuː/\n# third-person masculine plural non-past active subjunctive/jussive of أَفْرَجَ (ʔafraja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yufrijū", "ʔafraja"],
+      "kok_yazilis": "أفرج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفرجن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُفْرِجْنَ • (tufrijna) (form IV) /tuf.rid͡ʒ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of أَفْرَجَ (ʔafraja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tufrijna", "ʔafraja"],
+      "kok_yazilis": "أفرج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يفرجن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يُفْرِجْنَ • (yufrijna) (form IV) /juf.rid͡ʒ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of أَفْرَجَ (ʔafraja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yufrijna", "ʔafraja"],
+      "kok_yazilis": "أفرج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أفرجت",
+      "tur": "verb",
+      "baslik": "أفرجت (form IV)\n# أَفْرَجْتُ (ʔafrajtu) /ʔaf.rad͡ʒ.tu/: first-person singular past active of أَفْرَجَ (ʔafraja)\n# أَفْرَجْتَ (ʔafrajta) /ʔaf.rad͡ʒ.ta/: second-person masculine singular past active of أَفْرَجَ (ʔafraja)\n# أَفْرَجْتِ (ʔafrajti) /ʔaf.rad͡ʒ.ti/: second-person feminine singular past active of أَفْرَجَ (ʔafraja)\n# أَفْرَجَتْ (ʔafrajat) /ʔaf.ra.d͡ʒat/: third-person feminine singular past",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔafrajtu", "ʔafraja", "ʔafrajta"],
+      "kok_yazilis": "أفرج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أفرجا",
+      "tur": "verb",
+      "baslik": "أفرجا (form IV)\n# أَفْرَجَا (ʔafrajā) /ʔaf.ra.d͡ʒaː/: third-person masculine dual past active of أَفْرَجَ (ʔafraja)\n# أَفْرِجَا (ʔafrijā) /ʔaf.ri.d͡ʒaː/: second-person dual imperative of أَفْرَجَ (ʔafraja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔafrajā", "ʔafraja", "ʔafrijā"],
+      "kok_yazilis": "أفرج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أفرجتما",
+      "tur": "verb",
+      "baslik": "أَفْرَجْتُمَا • (ʔafrajtumā) (form IV) /ʔaf.rad͡ʒ.tu.maː/\n# second-person dual past active of أَفْرَجَ (ʔafraja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔafrajtumā", "ʔafraja"],
+      "kok_yazilis": "أفرج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أفرجتم",
+      "tur": "verb",
+      "baslik": "أَفْرَجْتُمْ • (ʔafrajtum) (form IV) /ʔaf.rad͡ʒ.tum/\n# second-person masculine plural past active of أَفْرَجَ (ʔafraja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔafrajtum", "ʔafraja"],
+      "kok_yazilis": "أفرج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أفرجتا",
+      "tur": "verb",
+      "baslik": "أَفْرَجَتَا • (ʔafrajatā) (form IV) /ʔaf.ra.d͡ʒa.taː/\n# third-person feminine dual past active of أَفْرَجَ (ʔafraja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔafrajatā", "ʔafraja"],
+      "kok_yazilis": "أفرج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أفرجتن",
+      "tur": "verb",
+      "baslik": "أَفْرَجْتُنَّ • (ʔafrajtunna) (form IV) /ʔaf.rad͡ʒ.tun.na/\n# second-person feminine plural past active of أَفْرَجَ (ʔafraja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔafrajtunna", "ʔafraja"],
+      "kok_yazilis": "أفرج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أفرجنا",
+      "tur": "verb",
+      "baslik": "أَفْرَجْنَا • (ʔafrajnā) (form IV) /ʔaf.rad͡ʒ.naː/\n# first-person plural past active of أَفْرَجَ (ʔafraja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔafrajnā", "ʔafraja"],
+      "kok_yazilis": "أفرج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أفرجوا",
+      "tur": "verb",
+      "baslik": "أفرجوا (form IV)\n# أَفْرَجُوا (ʔafrajū) /ʔaf.ra.d͡ʒuː/: third-person masculine plural past active of أَفْرَجَ (ʔafraja)\n# أَفْرِجُوا (ʔafrijū) /ʔaf.ri.d͡ʒuː/: second-person masculine plural imperative of أَفْرَجَ (ʔafraja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔafrajū", "ʔafraja", "ʔafrijū"],
+      "kok_yazilis": "أفرج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أفرجن",
+      "tur": "verb",
+      "baslik": "أفرجن (form IV)\n# أَفْرَجْنَ (ʔafrajna) /ʔaf.rad͡ʒ.na/: third-person feminine plural past active of أَفْرَجَ (ʔafraja)\n# أَفْرِجْنَ (ʔafrijna) /ʔaf.rid͡ʒ.na/: second-person feminine plural imperative of أَفْرَجَ (ʔafraja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔafrajna", "ʔafraja", "ʔafrijna"],
+      "kok_yazilis": "أفرج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفرجان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُفْرِجَانِ • (tufrijāni) (form IV) /tuf.ri.d͡ʒaː.ni/\n# inflection of أَفْرَجَ (ʔafraja):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tufrijāni", "ʔafraja"],
+      "kok_yazilis": "أفرج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يفرجان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُفْرِجَانِ • (yufrijāni) (form IV) /juf.ri.d͡ʒaː.ni/\n# third-person masculine dual non-past active indicative of أَفْرَجَ (ʔafraja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yufrijāni", "ʔafraja"],
+      "kok_yazilis": "أفرج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفرجا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُفْرِجَا • (tufrijā) (form IV) /tuf.ri.d͡ʒaː/\n# inflection of أَفْرَجَ (ʔafraja):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tufrijā", "ʔafraja"],
+      "kok_yazilis": "أفرج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يفرجا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُفْرِجَا • (yufrijā) (form IV) /juf.ri.d͡ʒaː/\n# third-person masculine dual non-past active subjunctive/jussive of أَفْرَجَ (ʔafraja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yufrijā", "ʔafraja"],
+      "kok_yazilis": "أفرج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أفرجي",
+      "tur": "verb",
+      "baslik": "أَفْرِجِي • (ʔafrijī) (form IV) /ʔaf.ri.d͡ʒiː/\n# second-person feminine singular imperative of أَفْرَجَ (ʔafraja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔafrijī", "ʔafraja"],
+      "kok_yazilis": "أفرج",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءفرج", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

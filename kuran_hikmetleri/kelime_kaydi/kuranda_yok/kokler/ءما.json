@@ -1,407 +1,329 @@
 {
   "kok": "ءما",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءما", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تأمين",
-        "u": "تأمين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَأْمِينَ • (taʔmīna) (form I) /taʔ.miː.na/\n# second-person feminine singular non-past active indicative of أَمَا (ʔamā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʔmīna", "ʔamā"],
-        "k": "أما",
-        "yol": "kök"
-      },
-      {
-        "w": "آم",
-        "u": "آم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "آمُ • (ʔāmu) (form I) /ʔaː.mu/\n# first-person singular non-past active jussive of أَمَا (ʔamā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔāmu", "ʔamā"],
-        "k": "أما",
-        "yol": "kök"
-      },
-      {
-        "w": "أمت",
-        "u": "أمت",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "أَمَتْ • (ʔamat) (form I) /ʔa.mat/\n# third-person feminine singular past active of أَمَا (ʔamā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔamat", "ʔamā"],
-        "k": "أما",
-        "yol": "kök"
-      },
-      {
-        "w": "أموت",
-        "u": "أموت",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أموت (form I)\n# أَمَوْتُ (ʔamawtu) /ʔa.maw.tu/: first-person singular past active of أَمَا (ʔamā)\n# أَمَوْتَ (ʔamawta) /ʔa.maw.ta/: second-person masculine singular past active of أَمَا (ʔamā)\n# أَمَوْتِ (ʔamawti) /ʔa.maw.ti/: second-person feminine singular past active of أَمَا (ʔamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔamawtu", "ʔamā", "ʔamawta"],
-        "k": "أما",
-        "yol": "kök"
-      },
-      {
-        "w": "أموا",
-        "u": "أموا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أموا (form I)\n# أَمَوَا (ʔamawā) /ʔa.ma.waː/: third-person masculine dual past active of أَمَا (ʔamā)\n# أَمَوْا (ʔamaw) /ʔa.maw/: third-person masculine plural past active of أَمَا (ʔamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔamawā", "ʔamā", "ʔamaw"],
-        "k": "أما",
-        "yol": "kök"
-      },
-      {
-        "w": "آمو",
-        "u": "آمو",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "آمو (form I)\n# آمُو (ʔāmū) /ʔaː.muː/: first-person singular non-past active indicative of أَمَا (ʔamā)\n# آمُوَ (ʔāmuwa) /ʔaː.mu.wa/: first-person singular non-past active subjunctive of أَمَا (ʔamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔāmū", "ʔamā", "ʔāmuwa"],
-        "k": "أما",
-        "yol": "kök"
-      },
-      {
-        "w": "أمتا",
-        "u": "أمتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَمَتَا • (ʔamatā) (form I) /ʔa.ma.taː/\n# third-person feminine dual past active of أَمَا (ʔamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔamatā", "ʔamā"],
-        "k": "أما",
-        "yol": "kök"
-      },
-      {
-        "w": "أموتما",
-        "u": "أموتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أَمَوْتُمَا • (ʔamawtumā) (form I) /ʔa.maw.tu.maː/\n# second-person dual past active of أَمَا (ʔamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔamawtumā", "ʔamā"],
-        "k": "أما",
-        "yol": "kök"
-      },
-      {
-        "w": "أموتم",
-        "u": "أموتم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أَمَوْتُمْ • (ʔamawtum) (form I) /ʔa.maw.tum/\n# second-person masculine plural past active of أَمَا (ʔamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔamawtum", "ʔamā"],
-        "k": "أما",
-        "yol": "kök"
-      },
-      {
-        "w": "أمونا",
-        "u": "أمونا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أَمَوْنَا • (ʔamawnā) (form I) /ʔa.maw.naː/\n# first-person plural past active of أَمَا (ʔamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔamawnā", "ʔamā"],
-        "k": "أما",
-        "yol": "kök"
-      },
-      {
-        "w": "تأمو",
-        "u": "تأمو",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تأمو (form I)\n# تَأْمُو (taʔmū) /taʔ.muː/: inflection of أَمَا (ʔamā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَأْمُوَ (taʔmuwa) /taʔ.mu.wa/: inflection of أَمَا (ʔamā):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʔmū", "ʔamā", "taʔmuwa"],
-        "k": "أما",
-        "yol": "kök"
-      },
-      {
-        "w": "أموتن",
-        "u": "أموتن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أَمَوْتُنَّ • (ʔamawtunna) (form I) /ʔa.maw.tun.na/\n# second-person feminine plural past active of أَمَا (ʔamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔamawtunna", "ʔamā"],
-        "k": "أما",
-        "yol": "kök"
-      },
-      {
-        "w": "أمون",
-        "u": "أمون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أَمَوْنَ • (ʔamawna) (form I) /ʔa.maw.na/\n# third-person feminine plural past active of أَمَا (ʔamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔamawna", "ʔamā"],
-        "k": "أما",
-        "yol": "kök"
-      },
-      {
-        "w": "تأموان",
-        "u": "تأموان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَأْمُوَانِ • (taʔmuwāni) (form I) /taʔ.mu.waː.ni/\n# inflection of أَمَا (ʔamā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʔmuwāni", "ʔamā"],
-        "k": "أما",
-        "yol": "kök"
-      },
-      {
-        "w": "يأمو",
-        "u": "يأمو",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يأمو (form I)\n# يَأْمُو (yaʔmū) /jaʔ.muː/: third-person masculine singular non-past active indicative of أَمَا (ʔamā)\n# يَأْمُوَ (yaʔmuwa) /jaʔ.mu.wa/: third-person masculine singular non-past active subjunctive of أَمَا (ʔamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʔmū", "ʔamā", "yaʔmuwa"],
-        "k": "أما",
-        "yol": "kök"
-      },
-      {
-        "w": "يأموان",
-        "u": "يأموان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَأْمُوَانِ • (yaʔmuwāni) (form I) /jaʔ.mu.waː.ni/\n# third-person masculine dual non-past active indicative of أَمَا (ʔamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʔmuwāni", "ʔamā"],
-        "k": "أما",
-        "yol": "kök"
-      },
-      {
-        "w": "نأمو",
-        "u": "نأمو",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نأمو (form I)\n# نَأْمُو (naʔmū) /naʔ.muː/: first-person plural non-past active indicative of أَمَا (ʔamā)\n# نَأْمُوَ (naʔmuwa) /naʔ.mu.wa/: first-person plural non-past active subjunctive of أَمَا (ʔamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naʔmū", "ʔamā", "naʔmuwa"],
-        "k": "أما",
-        "yol": "kök"
-      },
-      {
-        "w": "تأمون",
-        "u": "تأمون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَأْمُونَ • (taʔmūna) (form I) /taʔ.muː.na/\n# inflection of أَمَا (ʔamā):\n## second-person masculine/feminine plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʔmūna", "ʔamā"],
-        "k": "أما",
-        "yol": "kök"
-      },
-      {
-        "w": "يأمون",
-        "u": "يأمون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَأْمُونَ • (yaʔmūna) (form I) /jaʔ.muː.na/\n# inflection of أَمَا (ʔamā):\n## third-person masculine/feminine plural non-past active indicative\n## third-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʔmūna", "ʔamā"],
-        "k": "أما",
-        "yol": "kök"
-      },
-      {
-        "w": "تأموا",
-        "u": "تأموا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تأموا (form I)\n# تَأْمُوَا (taʔmuwā) /taʔ.mu.waː/: inflection of أَمَا (ʔamā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تَأْمُوا (taʔmū) /taʔ.muː/: second-person masculine plural non-past active subjunctive/jussive of أَمَا (ʔamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʔmuwā", "ʔamā", "taʔmū"],
-        "k": "أما",
-        "yol": "kök"
-      },
-      {
-        "w": "يأموا",
-        "u": "يأموا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يأموا (form I)\n# يَأْمُوَا (yaʔmuwā) /jaʔ.mu.waː/: third-person masculine dual non-past active subjunctive/jussive of أَمَا (ʔamā)\n# يَأْمُوا (yaʔmū) /jaʔ.muː/: third-person masculine plural non-past active subjunctive/jussive of أَمَا (ʔamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʔmuwā", "ʔamā", "yaʔmū"],
-        "k": "أما",
-        "yol": "kök"
-      },
-      {
-        "w": "تأمي",
-        "u": "تأمي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَأْمِي • (taʔmī) (form I) /taʔ.miː/\n# second-person feminine singular non-past active subjunctive/jussive of أَمَا (ʔamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʔmī", "ʔamā"],
-        "k": "أما",
-        "yol": "kök"
-      },
-      {
-        "w": "تأم",
-        "u": "تأم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَأْمُ • (taʔmu) (form I) /taʔ.mu/\n# inflection of أَمَا (ʔamā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʔmu", "ʔamā"],
-        "k": "أما",
-        "yol": "kök"
-      },
-      {
-        "w": "يأم",
-        "u": "يأم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَأْمُ • (yaʔmu) (form I) /jaʔ.mu/\n# third-person masculine singular non-past active jussive of أَمَا (ʔamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʔmu", "ʔamā"],
-        "k": "أما",
-        "yol": "kök"
-      },
-      {
-        "w": "نأم",
-        "u": "نأم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نَأْمُ • (naʔmu) (form I) /naʔ.mu/\n# first-person plural non-past active jussive of أَمَا (ʔamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naʔmu", "ʔamā"],
-        "k": "أما",
-        "yol": "kök"
-      },
-      {
-        "w": "اؤمي",
-        "u": "اؤمي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اُؤْمِي • (uʔmī) (form I) /uʔ.miː/\n# second-person feminine singular imperative of أَمَا (ʔamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uʔmī", "ʔamā"],
-        "k": "أما",
-        "yol": "kök"
-      },
-      {
-        "w": "اؤم",
-        "u": "اؤم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اُؤْمُ • (uʔmu) (form I) /uʔ.mu/\n# second-person masculine singular imperative of أَمَا (ʔamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uʔmu", "ʔamā"],
-        "k": "أما",
-        "yol": "kök"
-      },
-      {
-        "w": "اؤموا",
-        "u": "اؤموا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اؤموا (form I)\n# اُؤْمُوَا (uʔmuwā) /uʔ.mu.waː/: second-person dual imperative of أَمَا (ʔamā)\n# اُؤْمُوا (uʔmū) /uʔ.muː/: second-person masculine plural imperative of أَمَا (ʔamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uʔmuwā", "ʔamā", "uʔmū"],
-        "k": "أما",
-        "yol": "kök"
-      },
-      {
-        "w": "اؤمون",
-        "u": "اؤمون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اُؤْمُونَ • (uʔmūna) (form I) /uʔ.muː.na/\n# second-person feminine plural imperative of أَمَا (ʔamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uʔmūna", "ʔamā"],
-        "k": "أما",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "مم",
+  "ses": {
     "harf": "ء",
+    "fasil": "مم",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "تأمين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَأْمِينَ • (taʔmīna) (form I) /taʔ.miː.na/\n# second-person feminine singular non-past active indicative of أَمَا (ʔamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʔmīna", "ʔamā"],
+      "kok_yazilis": "أما"
+    },
+    {
+      "madde": "آم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "آمُ • (ʔāmu) (form I) /ʔaː.mu/\n# first-person singular non-past active jussive of أَمَا (ʔamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔāmu", "ʔamā"],
+      "kok_yazilis": "أما"
+    },
+    {
+      "madde": "أمت",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "أَمَتْ • (ʔamat) (form I) /ʔa.mat/\n# third-person feminine singular past active of أَمَا (ʔamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔamat", "ʔamā"],
+      "kok_yazilis": "أما"
+    },
+    {
+      "madde": "أموت",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أموت (form I)\n# أَمَوْتُ (ʔamawtu) /ʔa.maw.tu/: first-person singular past active of أَمَا (ʔamā)\n# أَمَوْتَ (ʔamawta) /ʔa.maw.ta/: second-person masculine singular past active of أَمَا (ʔamā)\n# أَمَوْتِ (ʔamawti) /ʔa.maw.ti/: second-person feminine singular past active of أَمَا (ʔamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔamawtu", "ʔamā", "ʔamawta"],
+      "kok_yazilis": "أما",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أموا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أموا (form I)\n# أَمَوَا (ʔamawā) /ʔa.ma.waː/: third-person masculine dual past active of أَمَا (ʔamā)\n# أَمَوْا (ʔamaw) /ʔa.maw/: third-person masculine plural past active of أَمَا (ʔamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔamawā", "ʔamā", "ʔamaw"],
+      "kok_yazilis": "أما",
+      "etimoloji": 1
+    },
+    {
+      "madde": "آمو",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "آمو (form I)\n# آمُو (ʔāmū) /ʔaː.muː/: first-person singular non-past active indicative of أَمَا (ʔamā)\n# آمُوَ (ʔāmuwa) /ʔaː.mu.wa/: first-person singular non-past active subjunctive of أَمَا (ʔamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔāmū", "ʔamā", "ʔāmuwa"],
+      "kok_yazilis": "أما",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أمتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَمَتَا • (ʔamatā) (form I) /ʔa.ma.taː/\n# third-person feminine dual past active of أَمَا (ʔamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔamatā", "ʔamā"],
+      "kok_yazilis": "أما",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أموتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أَمَوْتُمَا • (ʔamawtumā) (form I) /ʔa.maw.tu.maː/\n# second-person dual past active of أَمَا (ʔamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔamawtumā", "ʔamā"],
+      "kok_yazilis": "أما",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أموتم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أَمَوْتُمْ • (ʔamawtum) (form I) /ʔa.maw.tum/\n# second-person masculine plural past active of أَمَا (ʔamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔamawtum", "ʔamā"],
+      "kok_yazilis": "أما",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أمونا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أَمَوْنَا • (ʔamawnā) (form I) /ʔa.maw.naː/\n# first-person plural past active of أَمَا (ʔamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔamawnā", "ʔamā"],
+      "kok_yazilis": "أما",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تأمو",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تأمو (form I)\n# تَأْمُو (taʔmū) /taʔ.muː/: inflection of أَمَا (ʔamā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَأْمُوَ (taʔmuwa) /taʔ.mu.wa/: inflection of أَمَا (ʔamā):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʔmū", "ʔamā", "taʔmuwa"],
+      "kok_yazilis": "أما",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أموتن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أَمَوْتُنَّ • (ʔamawtunna) (form I) /ʔa.maw.tun.na/\n# second-person feminine plural past active of أَمَا (ʔamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔamawtunna", "ʔamā"],
+      "kok_yazilis": "أما",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أمون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أَمَوْنَ • (ʔamawna) (form I) /ʔa.maw.na/\n# third-person feminine plural past active of أَمَا (ʔamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔamawna", "ʔamā"],
+      "kok_yazilis": "أما",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تأموان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَأْمُوَانِ • (taʔmuwāni) (form I) /taʔ.mu.waː.ni/\n# inflection of أَمَا (ʔamā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʔmuwāni", "ʔamā"],
+      "kok_yazilis": "أما",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يأمو",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يأمو (form I)\n# يَأْمُو (yaʔmū) /jaʔ.muː/: third-person masculine singular non-past active indicative of أَمَا (ʔamā)\n# يَأْمُوَ (yaʔmuwa) /jaʔ.mu.wa/: third-person masculine singular non-past active subjunctive of أَمَا (ʔamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʔmū", "ʔamā", "yaʔmuwa"],
+      "kok_yazilis": "أما",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يأموان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَأْمُوَانِ • (yaʔmuwāni) (form I) /jaʔ.mu.waː.ni/\n# third-person masculine dual non-past active indicative of أَمَا (ʔamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʔmuwāni", "ʔamā"],
+      "kok_yazilis": "أما",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نأمو",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نأمو (form I)\n# نَأْمُو (naʔmū) /naʔ.muː/: first-person plural non-past active indicative of أَمَا (ʔamā)\n# نَأْمُوَ (naʔmuwa) /naʔ.mu.wa/: first-person plural non-past active subjunctive of أَمَا (ʔamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naʔmū", "ʔamā", "naʔmuwa"],
+      "kok_yazilis": "أما",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تأمون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَأْمُونَ • (taʔmūna) (form I) /taʔ.muː.na/\n# inflection of أَمَا (ʔamā):\n## second-person masculine/feminine plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʔmūna", "ʔamā"],
+      "kok_yazilis": "أما",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يأمون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَأْمُونَ • (yaʔmūna) (form I) /jaʔ.muː.na/\n# inflection of أَمَا (ʔamā):\n## third-person masculine/feminine plural non-past active indicative\n## third-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʔmūna", "ʔamā"],
+      "kok_yazilis": "أما",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تأموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تأموا (form I)\n# تَأْمُوَا (taʔmuwā) /taʔ.mu.waː/: inflection of أَمَا (ʔamā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تَأْمُوا (taʔmū) /taʔ.muː/: second-person masculine plural non-past active subjunctive/jussive of أَمَا (ʔamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʔmuwā", "ʔamā", "taʔmū"],
+      "kok_yazilis": "أما",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يأموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يأموا (form I)\n# يَأْمُوَا (yaʔmuwā) /jaʔ.mu.waː/: third-person masculine dual non-past active subjunctive/jussive of أَمَا (ʔamā)\n# يَأْمُوا (yaʔmū) /jaʔ.muː/: third-person masculine plural non-past active subjunctive/jussive of أَمَا (ʔamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʔmuwā", "ʔamā", "yaʔmū"],
+      "kok_yazilis": "أما",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تأمي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَأْمِي • (taʔmī) (form I) /taʔ.miː/\n# second-person feminine singular non-past active subjunctive/jussive of أَمَا (ʔamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʔmī", "ʔamā"],
+      "kok_yazilis": "أما",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تأم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَأْمُ • (taʔmu) (form I) /taʔ.mu/\n# inflection of أَمَا (ʔamā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʔmu", "ʔamā"],
+      "kok_yazilis": "أما",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يأم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَأْمُ • (yaʔmu) (form I) /jaʔ.mu/\n# third-person masculine singular non-past active jussive of أَمَا (ʔamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʔmu", "ʔamā"],
+      "kok_yazilis": "أما",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نأم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نَأْمُ • (naʔmu) (form I) /naʔ.mu/\n# first-person plural non-past active jussive of أَمَا (ʔamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naʔmu", "ʔamā"],
+      "kok_yazilis": "أما",
+      "etimoloji": 1
+    },
+    {
+      "madde": "اؤمي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اُؤْمِي • (uʔmī) (form I) /uʔ.miː/\n# second-person feminine singular imperative of أَمَا (ʔamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uʔmī", "ʔamā"],
+      "kok_yazilis": "أما",
+      "etimoloji": 1
+    },
+    {
+      "madde": "اؤم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اُؤْمُ • (uʔmu) (form I) /uʔ.mu/\n# second-person masculine singular imperative of أَمَا (ʔamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uʔmu", "ʔamā"],
+      "kok_yazilis": "أما",
+      "etimoloji": 1
+    },
+    {
+      "madde": "اؤموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اؤموا (form I)\n# اُؤْمُوَا (uʔmuwā) /uʔ.mu.waː/: second-person dual imperative of أَمَا (ʔamā)\n# اُؤْمُوا (uʔmū) /uʔ.muː/: second-person masculine plural imperative of أَمَا (ʔamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uʔmuwā", "ʔamā", "uʔmū"],
+      "kok_yazilis": "أما",
+      "etimoloji": 1
+    },
+    {
+      "madde": "اؤمون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اُؤْمُونَ • (uʔmūna) (form I) /uʔ.muː.na/\n# second-person feminine plural imperative of أَمَا (ʔamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uʔmūna", "ʔamā"],
+      "kok_yazilis": "أما",
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ءما", "r7"]
+  ],
+  "mana": {
     "ince": "quality.n.01",
     "orta": "noun.attribute",
     "ust": "hâl ve vasıf",
@@ -409,22 +331,15 @@
     "dayanak_tanim": "powerlessness revealed by an inability to act",
     "synset_sayisi": 3
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["condition.n.01", "powerlessness.n.01", "transferred_property.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["condition.n.01", "powerlessness.n.01", "transferred_property.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

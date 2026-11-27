@@ -1,75 +1,63 @@
 {
   "kok": "حندر",
+  "tur": "isim",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["fiil-yok"],
+  "lugat_fiil": false,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "حندر", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "جندري",
-        "u": "جندري",
-        "p": "adj",
-        "n": "1",
-        "h": "ar-adj",
-        "e": "جَنْدَرِيّ • (jandariyy)",
-        "t": "Etymology tree\nArabic جَنْدَر (jandar)\nProto-Afroasiatic\nProto-Semitic\nArabic ـِيّ (-iyy)\nArabic جندري\nFrom جَنْدَر (jandar, “gender”) + ـِيّ (-iyy). First attested in 2002.",
-        "s": [
-          ["ar-rootbox", ""]
-        ],
-        "g": ["relating to gender, gender identity", "relating to grammatical gender"],
-        "tag": ["relational"],
-        "r": ["jandariyy"],
-        "ipa": ["/d͡ʒan.da.rijj/"],
-        "rl": ["جِنْسِيّ"],
-        "el": [
-          ["جَنْدَر", "جندر#Arabic"],
-          ["ـِيّ", "ي#Arabic:_nisba"],
-          ["gender", "gender"],
-          ["جَنْدَر", "جندر#Arabic"],
-          ["gender", "gender"],
-          ["ـِيّ", "ي#Arabic:_nisba"]
-        ],
-        "k": "حندر",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "حن",
+  "ses": {
     "harf": "ح",
+    "fasil": "حن",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "جندري",
+      "tur": "adj",
+      "etim_no": "1",
+      "baslik": "جَنْدَرِيّ • (jandariyy)",
+      "etim_sablon": [
+        ["ar-rootbox", ""]
+      ],
+      "anlam": ["relating to gender, gender identity", "relating to grammatical gender"],
+      "etiket": ["relational"],
+      "okunus": ["jandariyy"],
+      "ipa": ["/d͡ʒan.da.rijj/"],
+      "rl": ["جِنْسِيّ"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "Etymology tree\nArabic جَنْدَر (jandar)\nProto-Afroasiatic\nProto-Semitic\nArabic ـِيّ (-iyy)\nArabic جندري\nFrom جَنْدَر (jandar, “gender”) + ـِيّ (-iyy). First attested in 2002.",
+      "kognatlar": [
+        ["جَنْدَر", "جندر#Arabic"],
+        ["ـِيّ", "ي#Arabic:_nisba"],
+        ["gender", "gender"],
+        ["جَنْدَر", "جندر#Arabic"],
+        ["gender", "gender"],
+        ["ـِيّ", "ي#Arabic:_nisba"]
+      ]
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "حندر", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "ust": {
       "kume": 8,
       "merkez_kok": "سير",
@@ -89,6 +77,10 @@
       "boy": 5
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

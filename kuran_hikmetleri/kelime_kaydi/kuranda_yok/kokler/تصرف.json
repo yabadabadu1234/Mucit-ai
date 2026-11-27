@@ -1,366 +1,259 @@
 {
   "kok": "تصرف",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تصرف", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تصرفي",
-        "u": "تصرفي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَصَرَّفِي • (taṣarrafī) (form V) /ta.sˤar.ra.fiː/\n# second-person feminine singular imperative of تَصَرَّفَ (taṣarrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṣarrafī", "taṣarrafa"],
-        "k": "تصرف",
-        "yol": "kök"
-      },
-      {
-        "w": "تصرفوا",
-        "u": "تصرفوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَصَرَّفُوا • (taṣarrafū) (form V) /ta.sˤar.ra.fuː/\n# inflection of تَصَرَّفَ (taṣarrafa):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṣarrafū", "taṣarrafa"],
-        "k": "تصرف",
-        "yol": "kök"
-      },
-      {
-        "w": "تصرفن",
-        "u": "تصرفن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَصَرَّفْنَ • (taṣarrafna) (form V) /ta.sˤar.raf.na/\n# inflection of تَصَرَّفَ (taṣarrafa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṣarrafna", "taṣarrafa"],
-        "k": "تصرف",
-        "yol": "kök"
-      },
-      {
-        "w": "تصرفتما",
-        "u": "تصرفتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَصَرَّفْتُمَا • (taṣarraftumā) (form V) /ta.sˤar.raf.tu.maː/\n# second-person dual past active of تَصَرَّفَ (taṣarrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṣarraftumā", "taṣarrafa"],
-        "k": "تصرف",
-        "yol": "kök"
-      },
-      {
-        "w": "تصرفا",
-        "u": "تصرفا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَصَرَّفَا • (taṣarrafā) (form V) /ta.sˤar.ra.faː/\n# inflection of تَصَرَّفَ (taṣarrafa):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṣarrafā", "taṣarrafa"],
-        "k": "تصرف",
-        "yol": "kök"
-      },
-      {
-        "w": "تصرفنا",
-        "u": "تصرفنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَصَرَّفْنَا • (taṣarrafnā) (form V) /ta.sˤar.raf.naː/\n# first-person plural past active of تَصَرَّفَ (taṣarrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṣarrafnā", "taṣarrafa"],
-        "k": "تصرف",
-        "yol": "kök"
-      },
-      {
-        "w": "تصرفتا",
-        "u": "تصرفتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَصَرَّفَتَا • (taṣarrafatā) (form V) /ta.sˤar.ra.fa.taː/\n# third-person feminine dual past active of تَصَرَّفَ (taṣarrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṣarrafatā", "taṣarrafa"],
-        "k": "تصرف",
-        "yol": "kök"
-      },
-      {
-        "w": "تصرفت",
-        "u": "تصرفت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تصرفت (form V)\n# تَصَرَّفْتُ (taṣarraftu) /ta.sˤar.raf.tu/: first-person singular past active of تَصَرَّفَ (taṣarrafa)\n# تَصَرَّفْتَ (taṣarrafta) /ta.sˤar.raf.ta/: second-person masculine singular past active of تَصَرَّفَ (taṣarrafa)\n# تَصَرَّفْتِ (taṣarrafti) /ta.sˤar.raf.ti/: second-person feminine singular past active of تَصَرَّفَ (taṣarrafa)\n# تَصَرَّفَتْ (taṣarrafat) /ta.sˤar.ra.fat/: third-p",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṣarraftu", "taṣarrafa", "taṣarrafta"],
-        "k": "تصرف",
-        "yol": "kök"
-      },
-      {
-        "w": "تصرفتم",
-        "u": "تصرفتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَصَرَّفْتُمْ • (taṣarraftum) (form V) /ta.sˤar.raf.tum/\n# second-person masculine plural past active of تَصَرَّفَ (taṣarrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṣarraftum", "taṣarrafa"],
-        "k": "تصرف",
-        "yol": "kök"
-      },
-      {
-        "w": "تصرفتن",
-        "u": "تصرفتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَصَرَّفْتُنَّ • (taṣarraftunna) (form V) /ta.sˤar.raf.tun.na/\n# second-person feminine plural past active of تَصَرَّفَ (taṣarrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṣarraftunna", "taṣarrafa"],
-        "k": "تصرف",
-        "yol": "kök"
-      },
-      {
-        "w": "أتصرف",
-        "u": "أتصرف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتصرف (form V)\n# أَتَصَرَّفُ (ʔataṣarrafu) /ʔa.ta.sˤar.ra.fu/: first-person singular non-past active indicative of تَصَرَّفَ (taṣarrafa)\n# أَتَصَرَّفَ (ʔataṣarrafa) /ʔa.ta.sˤar.ra.fa/: first-person singular non-past active subjunctive of تَصَرَّفَ (taṣarrafa)\n# أَتَصَرَّفْ (ʔataṣarraf) /ʔa.ta.sˤar.raf/: first-person singular non-past active jussive of تَصَرَّفَ (taṣarrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔataṣarrafu", "taṣarrafa", "ʔataṣarrafa"],
-        "k": "تصرف",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصرفان",
-        "u": "تتصرفان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَصَرَّفَانِ • (tataṣarrafāni) (form V) /ta.ta.sˤar.ra.faː.ni/\n# inflection of تَصَرَّفَ (taṣarrafa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṣarrafāni", "taṣarrafa"],
-        "k": "تصرف",
-        "yol": "kök"
-      },
-      {
-        "w": "يتصرف",
-        "u": "يتصرف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتصرف (form V)\n# يَتَصَرَّفُ (yataṣarrafu) /ja.ta.sˤar.ra.fu/: third-person masculine singular non-past active indicative of تَصَرَّفَ (taṣarrafa)\n# يَتَصَرَّفَ (yataṣarrafa) /ja.ta.sˤar.ra.fa/: third-person masculine singular non-past active subjunctive of تَصَرَّفَ (taṣarrafa)\n# يَتَصَرَّفْ (yataṣarraf) /ja.ta.sˤar.raf/: third-person masculine singular non-past active jussive of تَصَرَّفَ (taṣar",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataṣarrafu", "taṣarrafa", "yataṣarrafa"],
-        "k": "تصرف",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصرفين",
-        "u": "تتصرفين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَصَرَّفِينَ • (tataṣarrafīna) (form V) /ta.ta.sˤar.ra.fiː.na/\n# second-person feminine singular non-past active indicative of تَصَرَّفَ (taṣarrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṣarrafīna", "taṣarrafa"],
-        "k": "تصرف",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصرف",
-        "u": "تتصرف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتصرف (form V)\n# تَتَصَرَّفُ (tataṣarrafu) /ta.ta.sˤar.ra.fu/: inflection of تَصَرَّفَ (taṣarrafa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَصَرَّفَ (tataṣarrafa) /ta.ta.sˤar.ra.fa/: inflection of تَصَرَّفَ (taṣarrafa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine si",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṣarrafu", "taṣarrafa", "tataṣarrafa"],
-        "k": "تصرف",
-        "yol": "kök"
-      },
-      {
-        "w": "نتصرف",
-        "u": "نتصرف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتصرف (form V)\n# نَتَصَرَّفُ (nataṣarrafu) /na.ta.sˤar.ra.fu/: first-person plural non-past active indicative of تَصَرَّفَ (taṣarrafa)\n# نَتَصَرَّفَ (nataṣarrafa) /na.ta.sˤar.ra.fa/: first-person plural non-past active subjunctive of تَصَرَّفَ (taṣarrafa)\n# نَتَصَرَّفْ (nataṣarraf) /na.ta.sˤar.raf/: first-person plural non-past active jussive of تَصَرَّفَ (taṣarrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["nataṣarrafu", "taṣarrafa", "nataṣarrafa"],
-        "k": "تصرف",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصرفون",
-        "u": "تتصرفون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَصَرَّفُونَ • (tataṣarrafūna) (form V) /ta.ta.sˤar.ra.fuː.na/\n# second-person masculine plural non-past active indicative of تَصَرَّفَ (taṣarrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṣarrafūna", "taṣarrafa"],
-        "k": "تصرف",
-        "yol": "kök"
-      },
-      {
-        "w": "يتصرفان",
-        "u": "يتصرفان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَصَرَّفَانِ • (yataṣarrafāni) (form V) /ja.ta.sˤar.ra.faː.ni/\n# third-person masculine dual non-past active indicative of تَصَرَّفَ (taṣarrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataṣarrafāni", "taṣarrafa"],
-        "k": "تصرف",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصرفن",
-        "u": "تتصرفن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَصَرَّفْنَ • (tataṣarrafna) (form V) /ta.ta.sˤar.raf.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَصَرَّفَ (taṣarrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṣarrafna", "taṣarrafa"],
-        "k": "تصرف",
-        "yol": "kök"
-      },
-      {
-        "w": "يتصرفون",
-        "u": "يتصرفون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَصَرَّفُونَ • (yataṣarrafūna) (form V) /ja.ta.sˤar.ra.fuː.na/\n# third-person masculine plural non-past active indicative of تَصَرَّفَ (taṣarrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataṣarrafūna", "taṣarrafa"],
-        "k": "تصرف",
-        "yol": "kök"
-      },
-      {
-        "w": "يتصرفن",
-        "u": "يتصرفن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَصَرَّفْنَ • (yataṣarrafna) (form V) /ja.ta.sˤar.raf.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَصَرَّفَ (taṣarrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataṣarrafna", "taṣarrafa"],
-        "k": "تصرف",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصرفا",
-        "u": "تتصرفا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَصَرَّفَا • (tataṣarrafā) (form V) /ta.ta.sˤar.ra.faː/\n# inflection of تَصَرَّفَ (taṣarrafa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṣarrafā", "taṣarrafa"],
-        "k": "تصرف",
-        "yol": "kök"
-      },
-      {
-        "w": "يتصرفا",
-        "u": "يتصرفا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَصَرَّفَا • (yataṣarrafā) (form V) /ja.ta.sˤar.ra.faː/\n# third-person masculine dual non-past active subjunctive/jussive of تَصَرَّفَ (taṣarrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataṣarrafā", "taṣarrafa"],
-        "k": "تصرف",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصرفي",
-        "u": "تتصرفي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَصَرَّفِي • (tataṣarrafī) (form V) /ta.ta.sˤar.ra.fiː/\n# second-person feminine singular non-past active subjunctive/jussive of تَصَرَّفَ (taṣarrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṣarrafī", "taṣarrafa"],
-        "k": "تصرف",
-        "yol": "kök"
-      },
-      {
-        "w": "يتصرفوا",
-        "u": "يتصرفوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَصَرَّفُوا • (yataṣarrafū) (form V) /ja.ta.sˤar.ra.fuː/\n# third-person masculine plural non-past active subjunctive/jussive of تَصَرَّفَ (taṣarrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataṣarrafū", "taṣarrafa"],
-        "k": "تصرف",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصرفوا",
-        "u": "تتصرفوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَصَرَّفُوا • (tataṣarrafū) (form V) /ta.ta.sˤar.ra.fuː/\n# second-person masculine plural non-past active subjunctive/jussive of تَصَرَّفَ (taṣarrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṣarrafū", "taṣarrafa"],
-        "k": "تصرف",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تص",
+  "ses": {
     "harf": "ت",
+    "fasil": "تص",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تصرفي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَصَرَّفِي • (taṣarrafī) (form V) /ta.sˤar.ra.fiː/\n# second-person feminine singular imperative of تَصَرَّفَ (taṣarrafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṣarrafī", "taṣarrafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصرفوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَصَرَّفُوا • (taṣarrafū) (form V) /ta.sˤar.ra.fuː/\n# inflection of تَصَرَّفَ (taṣarrafa):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṣarrafū", "taṣarrafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصرفن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَصَرَّفْنَ • (taṣarrafna) (form V) /ta.sˤar.raf.na/\n# inflection of تَصَرَّفَ (taṣarrafa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṣarrafna", "taṣarrafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصرفتما",
+      "tur": "verb",
+      "baslik": "تَصَرَّفْتُمَا • (taṣarraftumā) (form V) /ta.sˤar.raf.tu.maː/\n# second-person dual past active of تَصَرَّفَ (taṣarrafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṣarraftumā", "taṣarrafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصرفا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَصَرَّفَا • (taṣarrafā) (form V) /ta.sˤar.ra.faː/\n# inflection of تَصَرَّفَ (taṣarrafa):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṣarrafā", "taṣarrafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصرفنا",
+      "tur": "verb",
+      "baslik": "تَصَرَّفْنَا • (taṣarrafnā) (form V) /ta.sˤar.raf.naː/\n# first-person plural past active of تَصَرَّفَ (taṣarrafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṣarrafnā", "taṣarrafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصرفتا",
+      "tur": "verb",
+      "baslik": "تَصَرَّفَتَا • (taṣarrafatā) (form V) /ta.sˤar.ra.fa.taː/\n# third-person feminine dual past active of تَصَرَّفَ (taṣarrafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṣarrafatā", "taṣarrafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصرفت",
+      "tur": "verb",
+      "baslik": "تصرفت (form V)\n# تَصَرَّفْتُ (taṣarraftu) /ta.sˤar.raf.tu/: first-person singular past active of تَصَرَّفَ (taṣarrafa)\n# تَصَرَّفْتَ (taṣarrafta) /ta.sˤar.raf.ta/: second-person masculine singular past active of تَصَرَّفَ (taṣarrafa)\n# تَصَرَّفْتِ (taṣarrafti) /ta.sˤar.raf.ti/: second-person feminine singular past active of تَصَرَّفَ (taṣarrafa)\n# تَصَرَّفَتْ (taṣarrafat) /ta.sˤar.ra.fat/: third-p",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṣarraftu", "taṣarrafa", "taṣarrafta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصرفتم",
+      "tur": "verb",
+      "baslik": "تَصَرَّفْتُمْ • (taṣarraftum) (form V) /ta.sˤar.raf.tum/\n# second-person masculine plural past active of تَصَرَّفَ (taṣarrafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṣarraftum", "taṣarrafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصرفتن",
+      "tur": "verb",
+      "baslik": "تَصَرَّفْتُنَّ • (taṣarraftunna) (form V) /ta.sˤar.raf.tun.na/\n# second-person feminine plural past active of تَصَرَّفَ (taṣarrafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṣarraftunna", "taṣarrafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتصرف",
+      "tur": "verb",
+      "baslik": "أتصرف (form V)\n# أَتَصَرَّفُ (ʔataṣarrafu) /ʔa.ta.sˤar.ra.fu/: first-person singular non-past active indicative of تَصَرَّفَ (taṣarrafa)\n# أَتَصَرَّفَ (ʔataṣarrafa) /ʔa.ta.sˤar.ra.fa/: first-person singular non-past active subjunctive of تَصَرَّفَ (taṣarrafa)\n# أَتَصَرَّفْ (ʔataṣarraf) /ʔa.ta.sˤar.raf/: first-person singular non-past active jussive of تَصَرَّفَ (taṣarrafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔataṣarrafu", "taṣarrafa", "ʔataṣarrafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصرفان",
+      "tur": "verb",
+      "baslik": "تَتَصَرَّفَانِ • (tataṣarrafāni) (form V) /ta.ta.sˤar.ra.faː.ni/\n# inflection of تَصَرَّفَ (taṣarrafa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṣarrafāni", "taṣarrafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتصرف",
+      "tur": "verb",
+      "baslik": "يتصرف (form V)\n# يَتَصَرَّفُ (yataṣarrafu) /ja.ta.sˤar.ra.fu/: third-person masculine singular non-past active indicative of تَصَرَّفَ (taṣarrafa)\n# يَتَصَرَّفَ (yataṣarrafa) /ja.ta.sˤar.ra.fa/: third-person masculine singular non-past active subjunctive of تَصَرَّفَ (taṣarrafa)\n# يَتَصَرَّفْ (yataṣarraf) /ja.ta.sˤar.raf/: third-person masculine singular non-past active jussive of تَصَرَّفَ (taṣar",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataṣarrafu", "taṣarrafa", "yataṣarrafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصرفين",
+      "tur": "verb",
+      "baslik": "تَتَصَرَّفِينَ • (tataṣarrafīna) (form V) /ta.ta.sˤar.ra.fiː.na/\n# second-person feminine singular non-past active indicative of تَصَرَّفَ (taṣarrafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṣarrafīna", "taṣarrafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصرف",
+      "tur": "verb",
+      "baslik": "تتصرف (form V)\n# تَتَصَرَّفُ (tataṣarrafu) /ta.ta.sˤar.ra.fu/: inflection of تَصَرَّفَ (taṣarrafa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَصَرَّفَ (tataṣarrafa) /ta.ta.sˤar.ra.fa/: inflection of تَصَرَّفَ (taṣarrafa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine si",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṣarrafu", "taṣarrafa", "tataṣarrafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتصرف",
+      "tur": "verb",
+      "baslik": "نتصرف (form V)\n# نَتَصَرَّفُ (nataṣarrafu) /na.ta.sˤar.ra.fu/: first-person plural non-past active indicative of تَصَرَّفَ (taṣarrafa)\n# نَتَصَرَّفَ (nataṣarrafa) /na.ta.sˤar.ra.fa/: first-person plural non-past active subjunctive of تَصَرَّفَ (taṣarrafa)\n# نَتَصَرَّفْ (nataṣarraf) /na.ta.sˤar.raf/: first-person plural non-past active jussive of تَصَرَّفَ (taṣarrafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["nataṣarrafu", "taṣarrafa", "nataṣarrafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصرفون",
+      "tur": "verb",
+      "baslik": "تَتَصَرَّفُونَ • (tataṣarrafūna) (form V) /ta.ta.sˤar.ra.fuː.na/\n# second-person masculine plural non-past active indicative of تَصَرَّفَ (taṣarrafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṣarrafūna", "taṣarrafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتصرفان",
+      "tur": "verb",
+      "baslik": "يَتَصَرَّفَانِ • (yataṣarrafāni) (form V) /ja.ta.sˤar.ra.faː.ni/\n# third-person masculine dual non-past active indicative of تَصَرَّفَ (taṣarrafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataṣarrafāni", "taṣarrafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصرفن",
+      "tur": "verb",
+      "baslik": "تَتَصَرَّفْنَ • (tataṣarrafna) (form V) /ta.ta.sˤar.raf.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَصَرَّفَ (taṣarrafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṣarrafna", "taṣarrafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتصرفون",
+      "tur": "verb",
+      "baslik": "يَتَصَرَّفُونَ • (yataṣarrafūna) (form V) /ja.ta.sˤar.ra.fuː.na/\n# third-person masculine plural non-past active indicative of تَصَرَّفَ (taṣarrafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataṣarrafūna", "taṣarrafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتصرفن",
+      "tur": "verb",
+      "baslik": "يَتَصَرَّفْنَ • (yataṣarrafna) (form V) /ja.ta.sˤar.raf.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَصَرَّفَ (taṣarrafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataṣarrafna", "taṣarrafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصرفا",
+      "tur": "verb",
+      "baslik": "تَتَصَرَّفَا • (tataṣarrafā) (form V) /ta.ta.sˤar.ra.faː/\n# inflection of تَصَرَّفَ (taṣarrafa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṣarrafā", "taṣarrafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتصرفا",
+      "tur": "verb",
+      "baslik": "يَتَصَرَّفَا • (yataṣarrafā) (form V) /ja.ta.sˤar.ra.faː/\n# third-person masculine dual non-past active subjunctive/jussive of تَصَرَّفَ (taṣarrafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataṣarrafā", "taṣarrafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصرفي",
+      "tur": "verb",
+      "baslik": "تَتَصَرَّفِي • (tataṣarrafī) (form V) /ta.ta.sˤar.ra.fiː/\n# second-person feminine singular non-past active subjunctive/jussive of تَصَرَّفَ (taṣarrafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṣarrafī", "taṣarrafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتصرفوا",
+      "tur": "verb",
+      "baslik": "يَتَصَرَّفُوا • (yataṣarrafū) (form V) /ja.ta.sˤar.ra.fuː/\n# third-person masculine plural non-past active subjunctive/jussive of تَصَرَّفَ (taṣarrafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataṣarrafū", "taṣarrafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصرفوا",
+      "tur": "verb",
+      "baslik": "تَتَصَرَّفُوا • (tataṣarrafū) (form V) /ta.ta.sˤar.ra.fuː/\n# second-person masculine plural non-past active subjunctive/jussive of تَصَرَّفَ (taṣarrafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṣarrafū", "taṣarrafa"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تصرف", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,366 +1,259 @@
 {
   "kok": "تسبب",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تسبب", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تسببي",
-        "u": "تسببي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَسَبَّبِي • (tasabbabī) (form V) /ta.sab.ba.biː/\n# second-person feminine singular imperative of تَسَبَّبَ (tasabbaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tasabbabī", "tasabbaba"],
-        "k": "تسبب",
-        "yol": "kök"
-      },
-      {
-        "w": "تسببوا",
-        "u": "تسببوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَسَبَّبُوا • (tasabbabū) (form V) /ta.sab.ba.buː/\n# inflection of تَسَبَّبَ (tasabbaba):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tasabbabū", "tasabbaba"],
-        "k": "تسبب",
-        "yol": "kök"
-      },
-      {
-        "w": "تسببن",
-        "u": "تسببن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَسَبَّبْنَ • (tasabbabna) (form V) /ta.sab.bab.na/\n# inflection of تَسَبَّبَ (tasabbaba):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tasabbabna", "tasabbaba"],
-        "k": "تسبب",
-        "yol": "kök"
-      },
-      {
-        "w": "تسببتما",
-        "u": "تسببتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَسَبَّبْتُمَا • (tasabbabtumā) (form V) /ta.sab.bab.tu.maː/\n# second-person dual past active of تَسَبَّبَ (tasabbaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tasabbabtumā", "tasabbaba"],
-        "k": "تسبب",
-        "yol": "kök"
-      },
-      {
-        "w": "تسببنا",
-        "u": "تسببنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَسَبَّبْنَا • (tasabbabnā) (form V) /ta.sab.bab.naː/\n# first-person plural past active of تَسَبَّبَ (tasabbaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tasabbabnā", "tasabbaba"],
-        "k": "تسبب",
-        "yol": "kök"
-      },
-      {
-        "w": "تسببتا",
-        "u": "تسببتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَسَبَّبَتَا • (tasabbabatā) (form V) /ta.sab.ba.ba.taː/\n# third-person feminine dual past active of تَسَبَّبَ (tasabbaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tasabbabatā", "tasabbaba"],
-        "k": "تسبب",
-        "yol": "kök"
-      },
-      {
-        "w": "أتسبب",
-        "u": "أتسبب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتسبب (form V)\n# أَتَسَبَّبُ (ʔatasabbabu) /ʔa.ta.sab.ba.bu/: first-person singular non-past active indicative of تَسَبَّبَ (tasabbaba)\n# أَتَسَبَّبَ (ʔatasabbaba) /ʔa.ta.sab.ba.ba/: first-person singular non-past active subjunctive of تَسَبَّبَ (tasabbaba)\n# أَتَسَبَّبْ (ʔatasabbab) /ʔa.ta.sab.bab/: first-person singular non-past active jussive of تَسَبَّبَ (tasabbaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔatasabbabu", "tasabbaba", "ʔatasabbaba"],
-        "k": "تسبب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسبب",
-        "u": "تتسبب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتسبب (form V)\n# تَتَسَبَّبُ (tatasabbabu) /ta.ta.sab.ba.bu/: inflection of تَسَبَّبَ (tasabbaba):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَسَبَّبَ (tatasabbaba) /ta.ta.sab.ba.ba/: inflection of تَسَبَّبَ (tasabbaba):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatasabbabu", "tasabbaba", "tatasabbaba"],
-        "k": "تسبب",
-        "yol": "kök"
-      },
-      {
-        "w": "تسببا",
-        "u": "تسببا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَسَبَّبَا • (tasabbabā) (form V) /ta.sab.ba.baː/\n# inflection of تَسَبَّبَ (tasabbaba):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tasabbabā", "tasabbaba"],
-        "k": "تسبب",
-        "yol": "kök"
-      },
-      {
-        "w": "تسببت",
-        "u": "تسببت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تسببت (form V)\n# تَسَبَّبْتُ (tasabbabtu) /ta.sab.bab.tu/: first-person singular past active of تَسَبَّبَ (tasabbaba)\n# تَسَبَّبْتَ (tasabbabta) /ta.sab.bab.ta/: second-person masculine singular past active of تَسَبَّبَ (tasabbaba)\n# تَسَبَّبْتِ (tasabbabti) /ta.sab.bab.ti/: second-person feminine singular past active of تَسَبَّبَ (tasabbaba)\n# تَسَبَّبَتْ (tasabbabat) /ta.sab.ba.bat/: third-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tasabbabtu", "tasabbaba", "tasabbabta"],
-        "k": "تسبب",
-        "yol": "kök"
-      },
-      {
-        "w": "يتسبب",
-        "u": "يتسبب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتسبب (form V)\n# يَتَسَبَّبُ (yatasabbabu) /ja.ta.sab.ba.bu/: third-person masculine singular non-past active indicative of تَسَبَّبَ (tasabbaba)\n# يَتَسَبَّبَ (yatasabbaba) /ja.ta.sab.ba.ba/: third-person masculine singular non-past active subjunctive of تَسَبَّبَ (tasabbaba)\n# يَتَسَبَّبْ (yatasabbab) /ja.ta.sab.bab/: third-person masculine singular non-past active jussive of تَسَبَّبَ (tasabbab",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatasabbabu", "tasabbaba", "yatasabbaba"],
-        "k": "تسبب",
-        "yol": "kök"
-      },
-      {
-        "w": "تسببتن",
-        "u": "تسببتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَسَبَّبْتُنَّ • (tasabbabtunna) (form V) /ta.sab.bab.tun.na/\n# second-person feminine plural past active of تَسَبَّبَ (tasabbaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tasabbabtunna", "tasabbaba"],
-        "k": "تسبب",
-        "yol": "kök"
-      },
-      {
-        "w": "تسببتم",
-        "u": "تسببتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَسَبَّبْتُمْ • (tasabbabtum) (form V) /ta.sab.bab.tum/\n# second-person masculine plural past active of تَسَبَّبَ (tasabbaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tasabbabtum", "tasabbaba"],
-        "k": "تسبب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسببين",
-        "u": "تتسببين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَسَبَّبِينَ • (tatasabbabīna) (form V) /ta.ta.sab.ba.biː.na/\n# second-person feminine singular non-past active indicative of تَسَبَّبَ (tasabbaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatasabbabīna", "tasabbaba"],
-        "k": "تسبب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسببان",
-        "u": "تتسببان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَسَبَّبَانِ • (tatasabbabāni) (form V) /ta.ta.sab.ba.baː.ni/\n# inflection of تَسَبَّبَ (tasabbaba):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatasabbabāni", "tasabbaba"],
-        "k": "تسبب",
-        "yol": "kök"
-      },
-      {
-        "w": "يتسببان",
-        "u": "يتسببان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَسَبَّبَانِ • (yatasabbabāni) (form V) /ja.ta.sab.ba.baː.ni/\n# third-person masculine dual non-past active indicative of تَسَبَّبَ (tasabbaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatasabbabāni", "tasabbaba"],
-        "k": "تسبب",
-        "yol": "kök"
-      },
-      {
-        "w": "نتسبب",
-        "u": "نتسبب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتسبب (form V)\n# نَتَسَبَّبُ (natasabbabu) /na.ta.sab.ba.bu/: first-person plural non-past active indicative of تَسَبَّبَ (tasabbaba)\n# نَتَسَبَّبَ (natasabbaba) /na.ta.sab.ba.ba/: first-person plural non-past active subjunctive of تَسَبَّبَ (tasabbaba)\n# نَتَسَبَّبْ (natasabbab) /na.ta.sab.bab/: first-person plural non-past active jussive of تَسَبَّبَ (tasabbaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["natasabbabu", "tasabbaba", "natasabbaba"],
-        "k": "تسبب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسببون",
-        "u": "تتسببون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَسَبَّبُونَ • (tatasabbabūna) (form V) /ta.ta.sab.ba.buː.na/\n# second-person masculine plural non-past active indicative of تَسَبَّبَ (tasabbaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatasabbabūna", "tasabbaba"],
-        "k": "تسبب",
-        "yol": "kök"
-      },
-      {
-        "w": "يتسببن",
-        "u": "يتسببن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَسَبَّبْنَ • (yatasabbabna) (form V) /ja.ta.sab.bab.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَسَبَّبَ (tasabbaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatasabbabna", "tasabbaba"],
-        "k": "تسبب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسببن",
-        "u": "تتسببن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَسَبَّبْنَ • (tatasabbabna) (form V) /ta.ta.sab.bab.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَسَبَّبَ (tasabbaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatasabbabna", "tasabbaba"],
-        "k": "تسبب",
-        "yol": "kök"
-      },
-      {
-        "w": "يتسببون",
-        "u": "يتسببون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَسَبَّبُونَ • (yatasabbabūna) (form V) /ja.ta.sab.ba.buː.na/\n# third-person masculine plural non-past active indicative of تَسَبَّبَ (tasabbaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatasabbabūna", "tasabbaba"],
-        "k": "تسبب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسببي",
-        "u": "تتسببي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَسَبَّبِي • (tatasabbabī) (form V) /ta.ta.sab.ba.biː/\n# second-person feminine singular non-past active subjunctive/jussive of تَسَبَّبَ (tasabbaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatasabbabī", "tasabbaba"],
-        "k": "تسبب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسببوا",
-        "u": "تتسببوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَسَبَّبُوا • (tatasabbabū) (form V) /ta.ta.sab.ba.buː/\n# second-person masculine plural non-past active subjunctive/jussive of تَسَبَّبَ (tasabbaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatasabbabū", "tasabbaba"],
-        "k": "تسبب",
-        "yol": "kök"
-      },
-      {
-        "w": "يتسببا",
-        "u": "يتسببا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَسَبَّبَا • (yatasabbabā) (form V) /ja.ta.sab.ba.baː/\n# third-person masculine dual non-past active subjunctive/jussive of تَسَبَّبَ (tasabbaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatasabbabā", "tasabbaba"],
-        "k": "تسبب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسببا",
-        "u": "تتسببا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَسَبَّبَا • (tatasabbabā) (form V) /ta.ta.sab.ba.baː/\n# inflection of تَسَبَّبَ (tasabbaba):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatasabbabā", "tasabbaba"],
-        "k": "تسبب",
-        "yol": "kök"
-      },
-      {
-        "w": "يتسببوا",
-        "u": "يتسببوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَسَبَّبُوا • (yatasabbabū) (form V) /ja.ta.sab.ba.buː/\n# third-person masculine plural non-past active subjunctive/jussive of تَسَبَّبَ (tasabbaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatasabbabū", "tasabbaba"],
-        "k": "تسبب",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تس",
+  "ses": {
     "harf": "ت",
+    "fasil": "تس",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تسببي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَسَبَّبِي • (tasabbabī) (form V) /ta.sab.ba.biː/\n# second-person feminine singular imperative of تَسَبَّبَ (tasabbaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tasabbabī", "tasabbaba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسببوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَسَبَّبُوا • (tasabbabū) (form V) /ta.sab.ba.buː/\n# inflection of تَسَبَّبَ (tasabbaba):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tasabbabū", "tasabbaba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسببن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَسَبَّبْنَ • (tasabbabna) (form V) /ta.sab.bab.na/\n# inflection of تَسَبَّبَ (tasabbaba):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tasabbabna", "tasabbaba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسببتما",
+      "tur": "verb",
+      "baslik": "تَسَبَّبْتُمَا • (tasabbabtumā) (form V) /ta.sab.bab.tu.maː/\n# second-person dual past active of تَسَبَّبَ (tasabbaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tasabbabtumā", "tasabbaba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسببنا",
+      "tur": "verb",
+      "baslik": "تَسَبَّبْنَا • (tasabbabnā) (form V) /ta.sab.bab.naː/\n# first-person plural past active of تَسَبَّبَ (tasabbaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tasabbabnā", "tasabbaba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسببتا",
+      "tur": "verb",
+      "baslik": "تَسَبَّبَتَا • (tasabbabatā) (form V) /ta.sab.ba.ba.taː/\n# third-person feminine dual past active of تَسَبَّبَ (tasabbaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tasabbabatā", "tasabbaba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتسبب",
+      "tur": "verb",
+      "baslik": "أتسبب (form V)\n# أَتَسَبَّبُ (ʔatasabbabu) /ʔa.ta.sab.ba.bu/: first-person singular non-past active indicative of تَسَبَّبَ (tasabbaba)\n# أَتَسَبَّبَ (ʔatasabbaba) /ʔa.ta.sab.ba.ba/: first-person singular non-past active subjunctive of تَسَبَّبَ (tasabbaba)\n# أَتَسَبَّبْ (ʔatasabbab) /ʔa.ta.sab.bab/: first-person singular non-past active jussive of تَسَبَّبَ (tasabbaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔatasabbabu", "tasabbaba", "ʔatasabbaba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسبب",
+      "tur": "verb",
+      "baslik": "تتسبب (form V)\n# تَتَسَبَّبُ (tatasabbabu) /ta.ta.sab.ba.bu/: inflection of تَسَبَّبَ (tasabbaba):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَسَبَّبَ (tatasabbaba) /ta.ta.sab.ba.ba/: inflection of تَسَبَّبَ (tasabbaba):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatasabbabu", "tasabbaba", "tatasabbaba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسببا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَسَبَّبَا • (tasabbabā) (form V) /ta.sab.ba.baː/\n# inflection of تَسَبَّبَ (tasabbaba):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tasabbabā", "tasabbaba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسببت",
+      "tur": "verb",
+      "baslik": "تسببت (form V)\n# تَسَبَّبْتُ (tasabbabtu) /ta.sab.bab.tu/: first-person singular past active of تَسَبَّبَ (tasabbaba)\n# تَسَبَّبْتَ (tasabbabta) /ta.sab.bab.ta/: second-person masculine singular past active of تَسَبَّبَ (tasabbaba)\n# تَسَبَّبْتِ (tasabbabti) /ta.sab.bab.ti/: second-person feminine singular past active of تَسَبَّبَ (tasabbaba)\n# تَسَبَّبَتْ (tasabbabat) /ta.sab.ba.bat/: third-perso",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tasabbabtu", "tasabbaba", "tasabbabta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتسبب",
+      "tur": "verb",
+      "baslik": "يتسبب (form V)\n# يَتَسَبَّبُ (yatasabbabu) /ja.ta.sab.ba.bu/: third-person masculine singular non-past active indicative of تَسَبَّبَ (tasabbaba)\n# يَتَسَبَّبَ (yatasabbaba) /ja.ta.sab.ba.ba/: third-person masculine singular non-past active subjunctive of تَسَبَّبَ (tasabbaba)\n# يَتَسَبَّبْ (yatasabbab) /ja.ta.sab.bab/: third-person masculine singular non-past active jussive of تَسَبَّبَ (tasabbab",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatasabbabu", "tasabbaba", "yatasabbaba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسببتن",
+      "tur": "verb",
+      "baslik": "تَسَبَّبْتُنَّ • (tasabbabtunna) (form V) /ta.sab.bab.tun.na/\n# second-person feminine plural past active of تَسَبَّبَ (tasabbaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tasabbabtunna", "tasabbaba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسببتم",
+      "tur": "verb",
+      "baslik": "تَسَبَّبْتُمْ • (tasabbabtum) (form V) /ta.sab.bab.tum/\n# second-person masculine plural past active of تَسَبَّبَ (tasabbaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tasabbabtum", "tasabbaba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسببين",
+      "tur": "verb",
+      "baslik": "تَتَسَبَّبِينَ • (tatasabbabīna) (form V) /ta.ta.sab.ba.biː.na/\n# second-person feminine singular non-past active indicative of تَسَبَّبَ (tasabbaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatasabbabīna", "tasabbaba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسببان",
+      "tur": "verb",
+      "baslik": "تَتَسَبَّبَانِ • (tatasabbabāni) (form V) /ta.ta.sab.ba.baː.ni/\n# inflection of تَسَبَّبَ (tasabbaba):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatasabbabāni", "tasabbaba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتسببان",
+      "tur": "verb",
+      "baslik": "يَتَسَبَّبَانِ • (yatasabbabāni) (form V) /ja.ta.sab.ba.baː.ni/\n# third-person masculine dual non-past active indicative of تَسَبَّبَ (tasabbaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatasabbabāni", "tasabbaba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتسبب",
+      "tur": "verb",
+      "baslik": "نتسبب (form V)\n# نَتَسَبَّبُ (natasabbabu) /na.ta.sab.ba.bu/: first-person plural non-past active indicative of تَسَبَّبَ (tasabbaba)\n# نَتَسَبَّبَ (natasabbaba) /na.ta.sab.ba.ba/: first-person plural non-past active subjunctive of تَسَبَّبَ (tasabbaba)\n# نَتَسَبَّبْ (natasabbab) /na.ta.sab.bab/: first-person plural non-past active jussive of تَسَبَّبَ (tasabbaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["natasabbabu", "tasabbaba", "natasabbaba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسببون",
+      "tur": "verb",
+      "baslik": "تَتَسَبَّبُونَ • (tatasabbabūna) (form V) /ta.ta.sab.ba.buː.na/\n# second-person masculine plural non-past active indicative of تَسَبَّبَ (tasabbaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatasabbabūna", "tasabbaba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتسببن",
+      "tur": "verb",
+      "baslik": "يَتَسَبَّبْنَ • (yatasabbabna) (form V) /ja.ta.sab.bab.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَسَبَّبَ (tasabbaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatasabbabna", "tasabbaba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسببن",
+      "tur": "verb",
+      "baslik": "تَتَسَبَّبْنَ • (tatasabbabna) (form V) /ta.ta.sab.bab.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَسَبَّبَ (tasabbaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatasabbabna", "tasabbaba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتسببون",
+      "tur": "verb",
+      "baslik": "يَتَسَبَّبُونَ • (yatasabbabūna) (form V) /ja.ta.sab.ba.buː.na/\n# third-person masculine plural non-past active indicative of تَسَبَّبَ (tasabbaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatasabbabūna", "tasabbaba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسببي",
+      "tur": "verb",
+      "baslik": "تَتَسَبَّبِي • (tatasabbabī) (form V) /ta.ta.sab.ba.biː/\n# second-person feminine singular non-past active subjunctive/jussive of تَسَبَّبَ (tasabbaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatasabbabī", "tasabbaba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسببوا",
+      "tur": "verb",
+      "baslik": "تَتَسَبَّبُوا • (tatasabbabū) (form V) /ta.ta.sab.ba.buː/\n# second-person masculine plural non-past active subjunctive/jussive of تَسَبَّبَ (tasabbaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatasabbabū", "tasabbaba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتسببا",
+      "tur": "verb",
+      "baslik": "يَتَسَبَّبَا • (yatasabbabā) (form V) /ja.ta.sab.ba.baː/\n# third-person masculine dual non-past active subjunctive/jussive of تَسَبَّبَ (tasabbaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatasabbabā", "tasabbaba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسببا",
+      "tur": "verb",
+      "baslik": "تَتَسَبَّبَا • (tatasabbabā) (form V) /ta.ta.sab.ba.baː/\n# inflection of تَسَبَّبَ (tasabbaba):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatasabbabā", "tasabbaba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتسببوا",
+      "tur": "verb",
+      "baslik": "يَتَسَبَّبُوا • (yatasabbabū) (form V) /ja.ta.sab.ba.buː/\n# third-person masculine plural non-past active subjunctive/jussive of تَسَبَّبَ (tasabbaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatasabbabū", "tasabbaba"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تسبب", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

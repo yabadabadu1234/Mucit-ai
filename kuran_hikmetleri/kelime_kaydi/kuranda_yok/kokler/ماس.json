@@ -1,590 +1,425 @@
 {
   "kok": "ماس",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ماس", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "ماست",
-        "u": "ماست",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "مَاسَّتْ • (māssat) (form III) /maːs.sat/\n# third-person feminine singular past active of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "s": [
-          ["nonlemma", "See the etymology of the corresponding lemma form."]
-        ],
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["māssat", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "موس",
-        "u": "موس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُوسَّ • (mūssa) (form III) /muːs.sa/\n# third-person masculine singular past passive of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["mūssa", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "تماس",
-        "u": "تماس",
-        "p": "noun",
-        "n": "1.2",
-        "h": "ar-noun",
-        "e": "تَمَاسّ • (tamāss) m",
-        "g": ["verbal noun of تَمَاسَّ (tamāssa) (form VI)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["تَمَاسَّ"],
-        "r": ["tamāss"],
-        "ds": [
-          ["az", "təmas", ""],
-          ["ota", "تماس", "temas"]
-        ],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "تماس",
-        "u": "تماس",
-        "p": "verb",
-        "n": "1.3",
-        "h": "ar-verb form",
-        "e": "تماس (form III)\n# تُمَاسُّ (tumāssu) /tu.maːs.su/: inflection of مَاسَّ (māssa):\n## second-person masculine singular non-past active/passive indicative\n## third-person feminine singular non-past active/passive indicative\n# تُمَاسَّ (tumāssa) /tu.maːs.sa/: inflection of مَاسَّ (māssa):\n## second-person masculine singular non-past active/passive subjunctive/jussive\n## third-person feminine singular ",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tumāssu", "māssa", "tumāssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "تماسس",
-        "u": "تماسس",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تماسس (form III)\n# تُمَاسِسْ (tumāsis) /tu.maː.sis/: inflection of مَاسَّ (māssa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُمَاسَسْ (tumāsas) /tu.maː.sas/: inflection of مَاسَّ (māssa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tumāsis", "māssa", "tumāsas"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "يماس",
-        "u": "يماس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يماس (form III)\n# يُمَاسُّ (yumāssu) /ju.maːs.su/: third-person masculine singular non-past active/passive indicative of مَاسَّ (māssa)\n# يُمَاسَّ (yumāssa) /ju.maːs.sa/: third-person masculine singular non-past active/passive subjunctive/jussive of مَاسَّ (māssa)\n# يُمَاسِّ (yumāssi) /ju.maːs.si/: third-person masculine singular non-past active/passive jussive of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yumāssu", "māssa", "yumāssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "يماسس",
-        "u": "يماسس",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يماسس (form III)\n# يُمَاسِسْ (yumāsis) /ju.maː.sis/: third-person masculine singular non-past active jussive of مَاسَّ (māssa)\n# يُمَاسَسْ (yumāsas) /ju.maː.sas/: third-person masculine singular non-past passive jussive of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yumāsis", "māssa", "yumāsas"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "ماسس",
-        "u": "ماسس",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "مَاسِسْ • (māsis) (form III) /maː.sis/\n# second-person masculine singular imperative of مَاسَّ (māssa)",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["māsis", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "ماسست",
-        "u": "ماسست",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ماسست (form III)\n# مَاسَسْتُ (māsastu) /maː.sas.tu/: first-person singular past active of مَاسَّ (māssa)\n# مَاسَسْتَ (māsasta) /maː.sas.ta/: second-person masculine singular past active of مَاسَّ (māssa)\n# مَاسَسْتِ (māsasti) /maː.sas.ti/: second-person feminine singular past active of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["māsastu", "māssa", "māsasta"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "موسست",
-        "u": "موسست",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "موسست (form III)\n# مُوسِسْتُ (mūsistu) /muː.sis.tu/: first-person singular past passive of مَاسَّ (māssa)\n# مُوسِسْتَ (mūsista) /muː.sis.ta/: second-person masculine singular past passive of مَاسَّ (māssa)\n# مُوسِسْتِ (mūsisti) /muː.sis.ti/: second-person feminine singular past passive of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["mūsistu", "māssa", "mūsista"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "تماسي",
-        "u": "تماسي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُمَاسِّي • (tumāssī) (form III) /tu.maːs.siː/\n# second-person feminine singular non-past active/passive subjunctive/jussive of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tumāssī", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "تماسين",
-        "u": "تماسين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُمَاسِّينَ • (tumāssīna) (form III) /tu.maːs.siː.na/\n# second-person feminine singular non-past active/passive indicative of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tumāssīna", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "ماسي",
-        "u": "ماسي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَاسِّي • (māssī) (form III) /maːs.siː/\n# second-person feminine singular imperative of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["māssī", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "أماس",
-        "u": "أماس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أماس (form III)\n# أُمَاسُّ (ʔumāssu) /ʔu.maːs.su/: first-person singular non-past active/passive indicative of مَاسَّ (māssa)\n# أُمَاسَّ (ʔumāssa) /ʔu.maːs.sa/: first-person singular non-past active/passive subjunctive/jussive of مَاسَّ (māssa)\n# أُمَاسِّ (ʔumāssi) /ʔu.maːs.si/: first-person singular non-past active/passive jussive of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔumāssu", "māssa", "ʔumāssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "أماسس",
-        "u": "أماسس",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أماسس (form III)\n# أُمَاسِسْ (ʔumāsis) /ʔu.maː.sis/: first-person singular non-past active jussive of مَاسَّ (māssa)\n# أُمَاسَسْ (ʔumāsas) /ʔu.maː.sas/: first-person singular non-past passive jussive of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔumāsis", "māssa", "ʔumāsas"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "ماسسنا",
-        "u": "ماسسنا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "مَاسَسْنَا • (māsasnā) (form III) /maː.sas.naː/\n# first-person plural past active of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["māsasnā", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "نماس",
-        "u": "نماس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نماس (form III)\n# نُمَاسُّ (numāssu) /nu.maːs.su/: first-person plural non-past active/passive indicative of مَاسَّ (māssa)\n# نُمَاسَّ (numāssa) /nu.maːs.sa/: first-person plural non-past active/passive subjunctive/jussive of مَاسَّ (māssa)\n# نُمَاسِّ (numāssi) /nu.maːs.si/: first-person plural non-past active/passive jussive of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["numāssu", "māssa", "numāssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "نماسس",
-        "u": "نماسس",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نماسس (form III)\n# نُمَاسِسْ (numāsis) /nu.maː.sis/: first-person plural non-past active jussive of مَاسَّ (māssa)\n# نُمَاسَسْ (numāsas) /nu.maː.sas/: first-person plural non-past passive jussive of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["numāsis", "māssa", "numāsas"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "موسسنا",
-        "u": "موسسنا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "مُوسِسْنَا • (mūsisnā) (form III) /muː.sis.naː/\n# first-person plural past passive of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["mūsisnā", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "ماسستم",
-        "u": "ماسستم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "مَاسَسْتُمْ • (māsastum) (form III) /maː.sas.tum/\n# second-person masculine plural past active of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["māsastum", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "تماسون",
-        "u": "تماسون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُمَاسُّونَ • (tumāssūna) (form III) /tu.maːs.suː.na/\n# second-person masculine plural non-past active/passive indicative of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tumāssūna", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "موسستم",
-        "u": "موسستم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "مُوسِسْتُمْ • (mūsistum) (form III) /muː.sis.tum/\n# second-person masculine plural past passive of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["mūsistum", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "تماسوا",
-        "u": "تماسوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُمَاسُّوا • (tumāssū) (form III) /tu.maːs.suː/\n# second-person masculine plural non-past active/passive subjunctive/jussive of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tumāssū", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "ماسوا",
-        "u": "ماسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَاسُّوا • (māssū) (form III) /maːs.suː/\n# inflection of مَاسَّ (māssa):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["māssū", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "يماسون",
-        "u": "يماسون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُمَاسُّونَ • (yumāssūna) (form III) /ju.maːs.suː.na/\n# third-person masculine plural non-past active/passive indicative of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yumāssūna", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "يماسوا",
-        "u": "يماسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُمَاسُّوا • (yumāssū) (form III) /ju.maːs.suː/\n# third-person masculine plural non-past active/passive subjunctive/jussive of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yumāssū", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "تماسسن",
-        "u": "تماسسن",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تماسسن (form III)\n# تُمَاسِسْنَ (tumāsisna) /tu.maː.sis.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of مَاسَّ (māssa)\n# تُمَاسَسْنَ (tumāsasna) /tu.maː.sas.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tumāsisna", "māssa", "tumāsasna"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "ماسستن",
-        "u": "ماسستن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "مَاسَسْتُنَّ • (māsastunna) (form III) /maː.sas.tun.na/\n# second-person feminine plural past active of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["māsastunna", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "ماسسن",
-        "u": "ماسسن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ماسسن (form III)\n# مَاسَسْنَ (māsasna) /maː.sas.na/: third-person feminine plural past active of مَاسَّ (māssa)\n# مَاسِسْنَ (māsisna) /maː.sis.na/: second-person feminine plural imperative of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["māsasna", "māssa", "māsisna"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "موسستن",
-        "u": "موسستن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "مُوسِسْتُنَّ • (mūsistunna) (form III) /muː.sis.tun.na/\n# second-person feminine plural past passive of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["mūsistunna", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "يماسسن",
-        "u": "يماسسن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يماسسن (form III)\n# يُمَاسِسْنَ (yumāsisna) /ju.maː.sis.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of مَاسَّ (māssa)\n# يُمَاسَسْنَ (yumāsasna) /ju.maː.sas.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yumāsisna", "māssa", "yumāsasna"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "موسسن",
-        "u": "موسسن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "مُوسِسْنَ • (mūsisna) (form III) /muː.sis.na/\n# third-person feminine plural past passive of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["mūsisna", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "تماسا",
-        "u": "تماسا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُمَاسَّا • (tumāssā) (form III) /tu.maːs.saː/\n# inflection of مَاسَّ (māssa):\n## second-person dual non-past active/passive subjunctive/jussive\n## third-person feminine dual non-past active/passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tumāssā", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "ماسستما",
-        "u": "ماسستما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "مَاسَسْتُمَا • (māsastumā) (form III) /maː.sas.tu.maː/\n# second-person dual past active of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["māsastumā", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "ماسا",
-        "u": "ماسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَاسَّا • (māssā) (form III) /maːs.saː/\n# inflection of مَاسَّ (māssa):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["māssā", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "موست",
-        "u": "موست",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُوسَّتْ • (mūssat) (form III) /muːs.sat/\n# third-person feminine singular past passive of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["mūssat", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "ماستا",
-        "u": "ماستا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَاسَّتَا • (māssatā) (form III) /maːs.sa.taː/\n# third-person feminine dual past active of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["māssatā", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "موسا",
-        "u": "موسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُوسَّا • (mūssā) (form III) /muːs.saː/\n# third-person masculine dual past passive of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["mūssā", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "موسستما",
-        "u": "موسستما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "مُوسِسْتُمَا • (mūsistumā) (form III) /muː.sis.tu.maː/\n# second-person dual past passive of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["mūsistumā", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "تماسان",
-        "u": "تماسان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُمَاسَّانِ • (tumāssāni) (form III) /tu.maːs.saː.ni/\n# inflection of مَاسَّ (māssa):\n## second-person dual non-past active/passive indicative\n## third-person feminine dual non-past active/passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tumāssāni", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "يماسا",
-        "u": "يماسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُمَاسَّا • (yumāssā) (form III) /ju.maːs.saː/\n# third-person masculine dual non-past active/passive subjunctive/jussive of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yumāssā", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "موستا",
-        "u": "موستا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُوسَّتَا • (mūssatā) (form III) /muːs.sa.taː/\n# third-person feminine dual past passive of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["mūssatā", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "موسوا",
-        "u": "موسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُوسُّوا • (mūssū) (form III) /muːs.suː/\n# third-person masculine plural past passive of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["mūssū", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      },
-      {
-        "w": "يماسان",
-        "u": "يماسان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُمَاسَّانِ • (yumāssāni) (form III) /ju.maːs.saː.ni/\n# third-person masculine dual non-past active/passive indicative of مَاسَّ (māssa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yumāssāni", "māssa"],
-        "k": "ماس",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "مس",
+  "ses": {
     "harf": "م",
+    "fasil": "مس",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "ماست",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "مَاسَّتْ • (māssat) (form III) /maːs.sat/\n# third-person feminine singular past active of مَاسَّ (māssa)",
+      "etim_sablon": [
+        ["nonlemma", "See the etymology of the corresponding lemma form."]
+      ],
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["māssat", "māssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "موس",
+      "tur": "verb",
+      "baslik": "مُوسَّ • (mūssa) (form III) /muːs.sa/\n# third-person masculine singular past passive of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["mūssa", "māssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تماس",
+      "tur": "noun",
+      "etim_no": "1.2",
+      "baslik": "تَمَاسّ • (tamāss) m",
+      "anlam": ["verbal noun of تَمَاسَّ (tamāssa) (form VI)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["تَمَاسَّ"],
+      "okunus": ["tamāss"],
+      "torunlar": [
+        ["az", "təmas", ""],
+        ["ota", "تماس", "temas"]
+      ],
+      "bag": "asıl madde"
+    },
+    {
+      "madde": "تماس",
+      "tur": "verb",
+      "etim_no": "1.3",
+      "baslik": "تماس (form III)\n# تُمَاسُّ (tumāssu) /tu.maːs.su/: inflection of مَاسَّ (māssa):\n## second-person masculine singular non-past active/passive indicative\n## third-person feminine singular non-past active/passive indicative\n# تُمَاسَّ (tumāssa) /tu.maːs.sa/: inflection of مَاسَّ (māssa):\n## second-person masculine singular non-past active/passive subjunctive/jussive\n## third-person feminine singular ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tumāssu", "māssa", "tumāssa"]
+    },
+    {
+      "madde": "تماسس",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تماسس (form III)\n# تُمَاسِسْ (tumāsis) /tu.maː.sis/: inflection of مَاسَّ (māssa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُمَاسَسْ (tumāsas) /tu.maː.sas/: inflection of مَاسَّ (māssa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tumāsis", "māssa", "tumāsas"]
+    },
+    {
+      "madde": "يماس",
+      "tur": "verb",
+      "baslik": "يماس (form III)\n# يُمَاسُّ (yumāssu) /ju.maːs.su/: third-person masculine singular non-past active/passive indicative of مَاسَّ (māssa)\n# يُمَاسَّ (yumāssa) /ju.maːs.sa/: third-person masculine singular non-past active/passive subjunctive/jussive of مَاسَّ (māssa)\n# يُمَاسِّ (yumāssi) /ju.maːs.si/: third-person masculine singular non-past active/passive jussive of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yumāssu", "māssa", "yumāssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يماسس",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يماسس (form III)\n# يُمَاسِسْ (yumāsis) /ju.maː.sis/: third-person masculine singular non-past active jussive of مَاسَّ (māssa)\n# يُمَاسَسْ (yumāsas) /ju.maː.sas/: third-person masculine singular non-past passive jussive of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yumāsis", "māssa", "yumāsas"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ماسس",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "مَاسِسْ • (māsis) (form III) /maː.sis/\n# second-person masculine singular imperative of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["māsis", "māssa"]
+    },
+    {
+      "madde": "ماسست",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ماسست (form III)\n# مَاسَسْتُ (māsastu) /maː.sas.tu/: first-person singular past active of مَاسَّ (māssa)\n# مَاسَسْتَ (māsasta) /maː.sas.ta/: second-person masculine singular past active of مَاسَّ (māssa)\n# مَاسَسْتِ (māsasti) /maː.sas.ti/: second-person feminine singular past active of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["māsastu", "māssa", "māsasta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "موسست",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "موسست (form III)\n# مُوسِسْتُ (mūsistu) /muː.sis.tu/: first-person singular past passive of مَاسَّ (māssa)\n# مُوسِسْتَ (mūsista) /muː.sis.ta/: second-person masculine singular past passive of مَاسَّ (māssa)\n# مُوسِسْتِ (mūsisti) /muː.sis.ti/: second-person feminine singular past passive of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["mūsistu", "māssa", "mūsista"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تماسي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُمَاسِّي • (tumāssī) (form III) /tu.maːs.siː/\n# second-person feminine singular non-past active/passive subjunctive/jussive of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tumāssī", "māssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تماسين",
+      "tur": "verb",
+      "baslik": "تُمَاسِّينَ • (tumāssīna) (form III) /tu.maːs.siː.na/\n# second-person feminine singular non-past active/passive indicative of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tumāssīna", "māssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ماسي",
+      "tur": "verb",
+      "baslik": "مَاسِّي • (māssī) (form III) /maːs.siː/\n# second-person feminine singular imperative of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["māssī", "māssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أماس",
+      "tur": "verb",
+      "baslik": "أماس (form III)\n# أُمَاسُّ (ʔumāssu) /ʔu.maːs.su/: first-person singular non-past active/passive indicative of مَاسَّ (māssa)\n# أُمَاسَّ (ʔumāssa) /ʔu.maːs.sa/: first-person singular non-past active/passive subjunctive/jussive of مَاسَّ (māssa)\n# أُمَاسِّ (ʔumāssi) /ʔu.maːs.si/: first-person singular non-past active/passive jussive of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔumāssu", "māssa", "ʔumāssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أماسس",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أماسس (form III)\n# أُمَاسِسْ (ʔumāsis) /ʔu.maː.sis/: first-person singular non-past active jussive of مَاسَّ (māssa)\n# أُمَاسَسْ (ʔumāsas) /ʔu.maː.sas/: first-person singular non-past passive jussive of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔumāsis", "māssa", "ʔumāsas"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ماسسنا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "مَاسَسْنَا • (māsasnā) (form III) /maː.sas.naː/\n# first-person plural past active of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["māsasnā", "māssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نماس",
+      "tur": "verb",
+      "baslik": "نماس (form III)\n# نُمَاسُّ (numāssu) /nu.maːs.su/: first-person plural non-past active/passive indicative of مَاسَّ (māssa)\n# نُمَاسَّ (numāssa) /nu.maːs.sa/: first-person plural non-past active/passive subjunctive/jussive of مَاسَّ (māssa)\n# نُمَاسِّ (numāssi) /nu.maːs.si/: first-person plural non-past active/passive jussive of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["numāssu", "māssa", "numāssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نماسس",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نماسس (form III)\n# نُمَاسِسْ (numāsis) /nu.maː.sis/: first-person plural non-past active jussive of مَاسَّ (māssa)\n# نُمَاسَسْ (numāsas) /nu.maː.sas/: first-person plural non-past passive jussive of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["numāsis", "māssa", "numāsas"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "موسسنا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "مُوسِسْنَا • (mūsisnā) (form III) /muː.sis.naː/\n# first-person plural past passive of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["mūsisnā", "māssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ماسستم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "مَاسَسْتُمْ • (māsastum) (form III) /maː.sas.tum/\n# second-person masculine plural past active of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["māsastum", "māssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تماسون",
+      "tur": "verb",
+      "baslik": "تُمَاسُّونَ • (tumāssūna) (form III) /tu.maːs.suː.na/\n# second-person masculine plural non-past active/passive indicative of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tumāssūna", "māssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "موسستم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "مُوسِسْتُمْ • (mūsistum) (form III) /muː.sis.tum/\n# second-person masculine plural past passive of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["mūsistum", "māssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تماسوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُمَاسُّوا • (tumāssū) (form III) /tu.maːs.suː/\n# second-person masculine plural non-past active/passive subjunctive/jussive of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tumāssū", "māssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ماسوا",
+      "tur": "verb",
+      "baslik": "مَاسُّوا • (māssū) (form III) /maːs.suː/\n# inflection of مَاسَّ (māssa):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["māssū", "māssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يماسون",
+      "tur": "verb",
+      "baslik": "يُمَاسُّونَ • (yumāssūna) (form III) /ju.maːs.suː.na/\n# third-person masculine plural non-past active/passive indicative of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yumāssūna", "māssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يماسوا",
+      "tur": "verb",
+      "baslik": "يُمَاسُّوا • (yumāssū) (form III) /ju.maːs.suː/\n# third-person masculine plural non-past active/passive subjunctive/jussive of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yumāssū", "māssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تماسسن",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تماسسن (form III)\n# تُمَاسِسْنَ (tumāsisna) /tu.maː.sis.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of مَاسَّ (māssa)\n# تُمَاسَسْنَ (tumāsasna) /tu.maː.sas.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tumāsisna", "māssa", "tumāsasna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ماسستن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "مَاسَسْتُنَّ • (māsastunna) (form III) /maː.sas.tun.na/\n# second-person feminine plural past active of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["māsastunna", "māssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ماسسن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ماسسن (form III)\n# مَاسَسْنَ (māsasna) /maː.sas.na/: third-person feminine plural past active of مَاسَّ (māssa)\n# مَاسِسْنَ (māsisna) /maː.sis.na/: second-person feminine plural imperative of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["māsasna", "māssa", "māsisna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "موسستن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "مُوسِسْتُنَّ • (mūsistunna) (form III) /muː.sis.tun.na/\n# second-person feminine plural past passive of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["mūsistunna", "māssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يماسسن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يماسسن (form III)\n# يُمَاسِسْنَ (yumāsisna) /ju.maː.sis.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of مَاسَّ (māssa)\n# يُمَاسَسْنَ (yumāsasna) /ju.maː.sas.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yumāsisna", "māssa", "yumāsasna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "موسسن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "مُوسِسْنَ • (mūsisna) (form III) /muː.sis.na/\n# third-person feminine plural past passive of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["mūsisna", "māssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تماسا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُمَاسَّا • (tumāssā) (form III) /tu.maːs.saː/\n# inflection of مَاسَّ (māssa):\n## second-person dual non-past active/passive subjunctive/jussive\n## third-person feminine dual non-past active/passive subjunctive/jussive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tumāssā", "māssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ماسستما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "مَاسَسْتُمَا • (māsastumā) (form III) /maː.sas.tu.maː/\n# second-person dual past active of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["māsastumā", "māssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ماسا",
+      "tur": "verb",
+      "baslik": "مَاسَّا • (māssā) (form III) /maːs.saː/\n# inflection of مَاسَّ (māssa):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["māssā", "māssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "موست",
+      "tur": "verb",
+      "baslik": "مُوسَّتْ • (mūssat) (form III) /muːs.sat/\n# third-person feminine singular past passive of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["mūssat", "māssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ماستا",
+      "tur": "verb",
+      "baslik": "مَاسَّتَا • (māssatā) (form III) /maːs.sa.taː/\n# third-person feminine dual past active of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["māssatā", "māssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "موسا",
+      "tur": "verb",
+      "baslik": "مُوسَّا • (mūssā) (form III) /muːs.saː/\n# third-person masculine dual past passive of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["mūssā", "māssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "موسستما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "مُوسِسْتُمَا • (mūsistumā) (form III) /muː.sis.tu.maː/\n# second-person dual past passive of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["mūsistumā", "māssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تماسان",
+      "tur": "verb",
+      "baslik": "تُمَاسَّانِ • (tumāssāni) (form III) /tu.maːs.saː.ni/\n# inflection of مَاسَّ (māssa):\n## second-person dual non-past active/passive indicative\n## third-person feminine dual non-past active/passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tumāssāni", "māssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يماسا",
+      "tur": "verb",
+      "baslik": "يُمَاسَّا • (yumāssā) (form III) /ju.maːs.saː/\n# third-person masculine dual non-past active/passive subjunctive/jussive of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yumāssā", "māssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "موستا",
+      "tur": "verb",
+      "baslik": "مُوسَّتَا • (mūssatā) (form III) /muːs.sa.taː/\n# third-person feminine dual past passive of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["mūssatā", "māssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "موسوا",
+      "tur": "verb",
+      "baslik": "مُوسُّوا • (mūssū) (form III) /muːs.suː/\n# third-person masculine plural past passive of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["mūssū", "māssa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يماسان",
+      "tur": "verb",
+      "baslik": "يُمَاسَّانِ • (yumāssāni) (form III) /ju.maːs.saː.ni/\n# third-person masculine dual non-past active/passive indicative of مَاسَّ (māssa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yumāssāni", "māssa"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ماس", "r7"]
+  ],
+  "mana": {
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
@@ -592,22 +427,15 @@
     "dayanak_tanim": "the act of touching physically",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["act.n.02"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["act.n.02"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

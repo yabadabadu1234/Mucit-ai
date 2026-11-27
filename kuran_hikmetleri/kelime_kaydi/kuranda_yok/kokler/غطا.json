@@ -1,411 +1,292 @@
 {
   "kok": "غطا",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "غطا", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يغط",
-        "u": "يغط",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يغط (form I)\n# يَغْطُ (yaḡṭu) /jaɣ.tˤu/: third-person masculine singular non-past active jussive of غَطَا (ḡaṭā)\n# يُغْطَ (yuḡṭa) /juɣ.tˤa/: third-person masculine singular non-past passive jussive of غَطَا (ḡaṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡṭu", "ḡaṭā", "yuḡṭa"],
-        "k": "غطا",
-        "yol": "kök"
-      },
-      {
-        "w": "غطت",
-        "u": "غطت",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "غَطَتْ • (ḡaṭat) (form I) /ɣa.tˤat/\n# third-person feminine singular past active of غَطَا (ḡaṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡaṭat", "ḡaṭā"],
-        "k": "غطا",
-        "yol": "kök"
-      },
-      {
-        "w": "تغطي",
-        "u": "تغطي",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تغطي (form I)\n# تَغْطِي (taḡṭī) /taɣ.tˤiː/: second-person feminine singular non-past active subjunctive/jussive of غَطَا (ḡaṭā)\n# تُغْطَيْ (tuḡṭay) /tuɣ.tˤaj/: second-person feminine singular non-past passive subjunctive/jussive of غَطَا (ḡaṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡṭī", "ḡaṭā", "tuḡṭay"],
-        "k": "غطا",
-        "yol": "kök"
-      },
-      {
-        "w": "تغط",
-        "u": "تغط",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تغط (form I)\n# تَغْطُ (taḡṭu) /taɣ.tˤu/: inflection of غَطَا (ḡaṭā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُغْطَ (tuḡṭa) /tuɣ.tˤa/: inflection of غَطَا (ḡaṭā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡṭu", "ḡaṭā", "tuḡṭa"],
-        "k": "غطا",
-        "yol": "kök"
-      },
-      {
-        "w": "تغطين",
-        "u": "تغطين",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تغطين (form I)\n# تَغْطِينَ (taḡṭīna) /taɣ.tˤiː.na/: second-person feminine singular non-past active indicative of غَطَا (ḡaṭā)\n# تُغْطَيْنَ (tuḡṭayna) /tuɣ.tˤaj.na/: inflection of غَطَا (ḡaṭā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡṭīna", "ḡaṭā", "tuḡṭayna"],
-        "k": "غطا",
-        "yol": "kök"
-      },
-      {
-        "w": "أغط",
-        "u": "أغط",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أغط (form I)\n# أَغْطُ (ʔaḡṭu) /ʔaɣ.tˤu/: first-person singular non-past active jussive of غَطَا (ḡaṭā)\n# أُغْطَ (ʔuḡṭa) /ʔuɣ.tˤa/: first-person singular non-past passive jussive of غَطَا (ḡaṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḡṭu", "ḡaṭā", "ʔuḡṭa"],
-        "k": "غطا",
-        "yol": "kök"
-      },
-      {
-        "w": "نغط",
-        "u": "نغط",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نغط (form I)\n# نَغْطُ (naḡṭu) /naɣ.tˤu/: first-person plural non-past active jussive of غَطَا (ḡaṭā)\n# نُغْطَ (nuḡṭa) /nuɣ.tˤa/: first-person plural non-past passive jussive of غَطَا (ḡaṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḡṭu", "ḡaṭā", "nuḡṭa"],
-        "k": "غطا",
-        "yol": "kök"
-      },
-      {
-        "w": "تغطون",
-        "u": "تغطون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تغطون (form I)\n# تَغْطُونَ (taḡṭūna) /taɣ.tˤuː.na/: inflection of غَطَا (ḡaṭā):\n## second-person masculine/feminine plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُغْطَوْنَ (tuḡṭawna) /tuɣ.tˤaw.na/: second-person masculine plural non-past passive indicative of غَطَا (ḡaṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡṭūna", "ḡaṭā", "tuḡṭawna"],
-        "k": "غطا",
-        "yol": "kök"
-      },
-      {
-        "w": "تغطوا",
-        "u": "تغطوا",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تغطوا (form I)\n# تَغْطُوَا (taḡṭuwā) /taɣ.tˤu.waː/: inflection of غَطَا (ḡaṭā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تَغْطُوا (taḡṭū) /taɣ.tˤuː/: second-person masculine plural non-past active subjunctive/jussive of غَطَا (ḡaṭā)\n# تُغْطَوْا (tuḡṭaw) /tuɣ.tˤaw/: second-person masculine plural non-past passive s",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡṭuwā", "ḡaṭā", "taḡṭū"],
-        "k": "غطا",
-        "yol": "kök"
-      },
-      {
-        "w": "غطوا",
-        "u": "غطوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "غطوا (form I)\n# غَطَوَا (ḡaṭawā) /ɣa.tˤa.waː/: third-person masculine dual past active of غَطَا (ḡaṭā)\n# غَطَوْا (ḡaṭaw) /ɣa.tˤaw/: third-person masculine plural past active of غَطَا (ḡaṭā)\n# غُطُوا (ḡuṭū) /ɣu.tˤuː/: third-person masculine plural past passive of غَطَا (ḡaṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡaṭawā", "ḡaṭā", "ḡaṭaw"],
-        "k": "غطا",
-        "yol": "kök"
-      },
-      {
-        "w": "يغطون",
-        "u": "يغطون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يغطون (form I)\n# يَغْطُونَ (yaḡṭūna) /jaɣ.tˤuː.na/: inflection of غَطَا (ḡaṭā):\n## third-person masculine/feminine plural non-past active indicative\n## third-person feminine plural non-past active subjunctive/jussive\n# يُغْطَوْنَ (yuḡṭawna) /juɣ.tˤaw.na/: third-person masculine plural non-past passive indicative of غَطَا (ḡaṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡṭūna", "ḡaṭā", "yuḡṭawna"],
-        "k": "غطا",
-        "yol": "kök"
-      },
-      {
-        "w": "يغطوا",
-        "u": "يغطوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يغطوا (form I)\n# يَغْطُوَا (yaḡṭuwā) /jaɣ.tˤu.waː/: third-person masculine dual non-past active subjunctive/jussive of غَطَا (ḡaṭā)\n# يَغْطُوا (yaḡṭū) /jaɣ.tˤuː/: third-person masculine plural non-past active subjunctive/jussive of غَطَا (ḡaṭā)\n# يُغْطَوْا (yuḡṭaw) /juɣ.tˤaw/: third-person masculine plural non-past passive subjunctive/jussive of غَطَا (ḡaṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡṭuwā", "ḡaṭā", "yaḡṭū"],
-        "k": "غطا",
-        "yol": "kök"
-      },
-      {
-        "w": "غطتا",
-        "u": "غطتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "غَطَتَا • (ḡaṭatā) (form I) /ɣa.tˤa.taː/\n# third-person feminine dual past active of غَطَا (ḡaṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡaṭatā", "ḡaṭā"],
-        "k": "غطا",
-        "yol": "kök"
-      },
-      {
-        "w": "غطون",
-        "u": "غطون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غَطَوْنَ • (ḡaṭawna) (form I) /ɣa.tˤaw.na/\n# third-person feminine plural past active of غَطَا (ḡaṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡaṭawna", "ḡaṭā"],
-        "k": "غطا",
-        "yol": "kök"
-      },
-      {
-        "w": "غطونا",
-        "u": "غطونا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غَطَوْنَا • (ḡaṭawnā) (form I) /ɣa.tˤaw.naː/\n# first-person plural past active of غَطَا (ḡaṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡaṭawnā", "ḡaṭā"],
-        "k": "غطا",
-        "yol": "kök"
-      },
-      {
-        "w": "غطوت",
-        "u": "غطوت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غطوت (form I)\n# غَطَوْتُ (ḡaṭawtu) /ɣa.tˤaw.tu/: first-person singular past active of غَطَا (ḡaṭā)\n# غَطَوْتَ (ḡaṭawta) /ɣa.tˤaw.ta/: second-person masculine singular past active of غَطَا (ḡaṭā)\n# غَطَوْتِ (ḡaṭawti) /ɣa.tˤaw.ti/: second-person feminine singular past active of غَطَا (ḡaṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡaṭawtu", "ḡaṭā", "ḡaṭawta"],
-        "k": "غطا",
-        "yol": "kök"
-      },
-      {
-        "w": "غطوتما",
-        "u": "غطوتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غَطَوْتُمَا • (ḡaṭawtumā) (form I) /ɣa.tˤaw.tu.maː/\n# second-person dual past active of غَطَا (ḡaṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡaṭawtumā", "ḡaṭā"],
-        "k": "غطا",
-        "yol": "kök"
-      },
-      {
-        "w": "أغطو",
-        "u": "أغطو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أغطو (form I)\n# أَغْطُو (ʔaḡṭū) /ʔaɣ.tˤuː/: first-person singular non-past active indicative of غَطَا (ḡaṭā)\n# أَغْطُوَ (ʔaḡṭuwa) /ʔaɣ.tˤu.wa/: first-person singular non-past active subjunctive of غَطَا (ḡaṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḡṭū", "ḡaṭā", "ʔaḡṭuwa"],
-        "k": "غطا",
-        "yol": "kök"
-      },
-      {
-        "w": "غطوتم",
-        "u": "غطوتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غَطَوْتُمْ • (ḡaṭawtum) (form I) /ɣa.tˤaw.tum/\n# second-person masculine plural past active of غَطَا (ḡaṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡaṭawtum", "ḡaṭā"],
-        "k": "غطا",
-        "yol": "kök"
-      },
-      {
-        "w": "غطوتن",
-        "u": "غطوتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غَطَوْتُنَّ • (ḡaṭawtunna) (form I) /ɣa.tˤaw.tun.na/\n# second-person feminine plural past active of غَطَا (ḡaṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡaṭawtunna", "ḡaṭā"],
-        "k": "غطا",
-        "yol": "kök"
-      },
-      {
-        "w": "تغطو",
-        "u": "تغطو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تغطو (form I)\n# تَغْطُو (taḡṭū) /taɣ.tˤuː/: inflection of غَطَا (ḡaṭā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَغْطُوَ (taḡṭuwa) /taɣ.tˤu.wa/: inflection of غَطَا (ḡaṭā):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡṭū", "ḡaṭā", "taḡṭuwa"],
-        "k": "غطا",
-        "yol": "kök"
-      },
-      {
-        "w": "يغطو",
-        "u": "يغطو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يغطو (form I)\n# يَغْطُو (yaḡṭū) /jaɣ.tˤuː/: third-person masculine singular non-past active indicative of غَطَا (ḡaṭā)\n# يَغْطُوَ (yaḡṭuwa) /jaɣ.tˤu.wa/: third-person masculine singular non-past active subjunctive of غَطَا (ḡaṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡṭū", "ḡaṭā", "yaḡṭuwa"],
-        "k": "غطا",
-        "yol": "kök"
-      },
-      {
-        "w": "اغطوا",
-        "u": "اغطوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اغطوا (form I)\n# اُغْطُوَا (uḡṭuwā) /uɣ.tˤu.waː/: second-person dual imperative of غَطَا (ḡaṭā)\n# اُغْطُوا (uḡṭū) /uɣ.tˤuː/: second-person masculine plural imperative of غَطَا (ḡaṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uḡṭuwā", "ḡaṭā", "uḡṭū"],
-        "k": "غطا",
-        "yol": "kök"
-      },
-      {
-        "w": "اغطي",
-        "u": "اغطي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُغْطِي • (uḡṭī) (form I) /uɣ.tˤiː/\n# second-person feminine singular imperative of غَطَا (ḡaṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uḡṭī", "ḡaṭā"],
-        "k": "غطا",
-        "yol": "kök"
-      },
-      {
-        "w": "تغطوان",
-        "u": "تغطوان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغْطُوَانِ • (taḡṭuwāni) (form I) /taɣ.tˤu.waː.ni/\n# inflection of غَطَا (ḡaṭā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡṭuwāni", "ḡaṭā"],
-        "k": "غطا",
-        "yol": "kök"
-      },
-      {
-        "w": "اغطون",
-        "u": "اغطون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُغْطُونَ • (uḡṭūna) (form I) /uɣ.tˤuː.na/\n# second-person feminine plural imperative of غَطَا (ḡaṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uḡṭūna", "ḡaṭā"],
-        "k": "غطا",
-        "yol": "kök"
-      },
-      {
-        "w": "يغطوان",
-        "u": "يغطوان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَغْطُوَانِ • (yaḡṭuwāni) (form I) /jaɣ.tˤu.waː.ni/\n# third-person masculine dual non-past active indicative of غَطَا (ḡaṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡṭuwāni", "ḡaṭā"],
-        "k": "غطا",
-        "yol": "kök"
-      },
-      {
-        "w": "نغطو",
-        "u": "نغطو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نغطو (form I)\n# نَغْطُو (naḡṭū) /naɣ.tˤuː/: first-person plural non-past active indicative of غَطَا (ḡaṭā)\n# نَغْطُوَ (naḡṭuwa) /naɣ.tˤu.wa/: first-person plural non-past active subjunctive of غَطَا (ḡaṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḡṭū", "ḡaṭā", "naḡṭuwa"],
-        "k": "غطا",
-        "yol": "kök"
-      },
-      {
-        "w": "اغط",
-        "u": "اغط",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُغْطُ • (uḡṭu) (form I) /uɣ.tˤu/\n# second-person masculine singular imperative of غَطَا (ḡaṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uḡṭu", "ḡaṭā"],
-        "k": "غطا",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "غط",
+  "ses": {
     "harf": "غ",
+    "fasil": "غط",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يغط",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يغط (form I)\n# يَغْطُ (yaḡṭu) /jaɣ.tˤu/: third-person masculine singular non-past active jussive of غَطَا (ḡaṭā)\n# يُغْطَ (yuḡṭa) /juɣ.tˤa/: third-person masculine singular non-past passive jussive of غَطَا (ḡaṭā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡṭu", "ḡaṭā", "yuḡṭa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "غطت",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "غَطَتْ • (ḡaṭat) (form I) /ɣa.tˤat/\n# third-person feminine singular past active of غَطَا (ḡaṭā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡaṭat", "ḡaṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغطي",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تغطي (form I)\n# تَغْطِي (taḡṭī) /taɣ.tˤiː/: second-person feminine singular non-past active subjunctive/jussive of غَطَا (ḡaṭā)\n# تُغْطَيْ (tuḡṭay) /tuɣ.tˤaj/: second-person feminine singular non-past passive subjunctive/jussive of غَطَا (ḡaṭā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡṭī", "ḡaṭā", "tuḡṭay"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغط",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تغط (form I)\n# تَغْطُ (taḡṭu) /taɣ.tˤu/: inflection of غَطَا (ḡaṭā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُغْطَ (tuḡṭa) /tuɣ.tˤa/: inflection of غَطَا (ḡaṭā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡṭu", "ḡaṭā", "tuḡṭa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغطين",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تغطين (form I)\n# تَغْطِينَ (taḡṭīna) /taɣ.tˤiː.na/: second-person feminine singular non-past active indicative of غَطَا (ḡaṭā)\n# تُغْطَيْنَ (tuḡṭayna) /tuɣ.tˤaj.na/: inflection of غَطَا (ḡaṭā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡṭīna", "ḡaṭā", "tuḡṭayna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغط",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أغط (form I)\n# أَغْطُ (ʔaḡṭu) /ʔaɣ.tˤu/: first-person singular non-past active jussive of غَطَا (ḡaṭā)\n# أُغْطَ (ʔuḡṭa) /ʔuɣ.tˤa/: first-person singular non-past passive jussive of غَطَا (ḡaṭā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḡṭu", "ḡaṭā", "ʔuḡṭa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نغط",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نغط (form I)\n# نَغْطُ (naḡṭu) /naɣ.tˤu/: first-person plural non-past active jussive of غَطَا (ḡaṭā)\n# نُغْطَ (nuḡṭa) /nuɣ.tˤa/: first-person plural non-past passive jussive of غَطَا (ḡaṭā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḡṭu", "ḡaṭā", "nuḡṭa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغطون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تغطون (form I)\n# تَغْطُونَ (taḡṭūna) /taɣ.tˤuː.na/: inflection of غَطَا (ḡaṭā):\n## second-person masculine/feminine plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُغْطَوْنَ (tuḡṭawna) /tuɣ.tˤaw.na/: second-person masculine plural non-past passive indicative of غَطَا (ḡaṭā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡṭūna", "ḡaṭā", "tuḡṭawna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغطوا",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تغطوا (form I)\n# تَغْطُوَا (taḡṭuwā) /taɣ.tˤu.waː/: inflection of غَطَا (ḡaṭā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تَغْطُوا (taḡṭū) /taɣ.tˤuː/: second-person masculine plural non-past active subjunctive/jussive of غَطَا (ḡaṭā)\n# تُغْطَوْا (tuḡṭaw) /tuɣ.tˤaw/: second-person masculine plural non-past passive s",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡṭuwā", "ḡaṭā", "taḡṭū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "غطوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "غطوا (form I)\n# غَطَوَا (ḡaṭawā) /ɣa.tˤa.waː/: third-person masculine dual past active of غَطَا (ḡaṭā)\n# غَطَوْا (ḡaṭaw) /ɣa.tˤaw/: third-person masculine plural past active of غَطَا (ḡaṭā)\n# غُطُوا (ḡuṭū) /ɣu.tˤuː/: third-person masculine plural past passive of غَطَا (ḡaṭā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡaṭawā", "ḡaṭā", "ḡaṭaw"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغطون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يغطون (form I)\n# يَغْطُونَ (yaḡṭūna) /jaɣ.tˤuː.na/: inflection of غَطَا (ḡaṭā):\n## third-person masculine/feminine plural non-past active indicative\n## third-person feminine plural non-past active subjunctive/jussive\n# يُغْطَوْنَ (yuḡṭawna) /juɣ.tˤaw.na/: third-person masculine plural non-past passive indicative of غَطَا (ḡaṭā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡṭūna", "ḡaṭā", "yuḡṭawna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغطوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يغطوا (form I)\n# يَغْطُوَا (yaḡṭuwā) /jaɣ.tˤu.waː/: third-person masculine dual non-past active subjunctive/jussive of غَطَا (ḡaṭā)\n# يَغْطُوا (yaḡṭū) /jaɣ.tˤuː/: third-person masculine plural non-past active subjunctive/jussive of غَطَا (ḡaṭā)\n# يُغْطَوْا (yuḡṭaw) /juɣ.tˤaw/: third-person masculine plural non-past passive subjunctive/jussive of غَطَا (ḡaṭā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡṭuwā", "ḡaṭā", "yaḡṭū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "غطتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "غَطَتَا • (ḡaṭatā) (form I) /ɣa.tˤa.taː/\n# third-person feminine dual past active of غَطَا (ḡaṭā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡaṭatā", "ḡaṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "غطون",
+      "tur": "verb",
+      "baslik": "غَطَوْنَ • (ḡaṭawna) (form I) /ɣa.tˤaw.na/\n# third-person feminine plural past active of غَطَا (ḡaṭā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡaṭawna", "ḡaṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "غطونا",
+      "tur": "verb",
+      "baslik": "غَطَوْنَا • (ḡaṭawnā) (form I) /ɣa.tˤaw.naː/\n# first-person plural past active of غَطَا (ḡaṭā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡaṭawnā", "ḡaṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "غطوت",
+      "tur": "verb",
+      "baslik": "غطوت (form I)\n# غَطَوْتُ (ḡaṭawtu) /ɣa.tˤaw.tu/: first-person singular past active of غَطَا (ḡaṭā)\n# غَطَوْتَ (ḡaṭawta) /ɣa.tˤaw.ta/: second-person masculine singular past active of غَطَا (ḡaṭā)\n# غَطَوْتِ (ḡaṭawti) /ɣa.tˤaw.ti/: second-person feminine singular past active of غَطَا (ḡaṭā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡaṭawtu", "ḡaṭā", "ḡaṭawta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "غطوتما",
+      "tur": "verb",
+      "baslik": "غَطَوْتُمَا • (ḡaṭawtumā) (form I) /ɣa.tˤaw.tu.maː/\n# second-person dual past active of غَطَا (ḡaṭā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡaṭawtumā", "ḡaṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغطو",
+      "tur": "verb",
+      "baslik": "أغطو (form I)\n# أَغْطُو (ʔaḡṭū) /ʔaɣ.tˤuː/: first-person singular non-past active indicative of غَطَا (ḡaṭā)\n# أَغْطُوَ (ʔaḡṭuwa) /ʔaɣ.tˤu.wa/: first-person singular non-past active subjunctive of غَطَا (ḡaṭā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḡṭū", "ḡaṭā", "ʔaḡṭuwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "غطوتم",
+      "tur": "verb",
+      "baslik": "غَطَوْتُمْ • (ḡaṭawtum) (form I) /ɣa.tˤaw.tum/\n# second-person masculine plural past active of غَطَا (ḡaṭā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡaṭawtum", "ḡaṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "غطوتن",
+      "tur": "verb",
+      "baslik": "غَطَوْتُنَّ • (ḡaṭawtunna) (form I) /ɣa.tˤaw.tun.na/\n# second-person feminine plural past active of غَطَا (ḡaṭā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡaṭawtunna", "ḡaṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغطو",
+      "tur": "verb",
+      "baslik": "تغطو (form I)\n# تَغْطُو (taḡṭū) /taɣ.tˤuː/: inflection of غَطَا (ḡaṭā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَغْطُوَ (taḡṭuwa) /taɣ.tˤu.wa/: inflection of غَطَا (ḡaṭā):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡṭū", "ḡaṭā", "taḡṭuwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغطو",
+      "tur": "verb",
+      "baslik": "يغطو (form I)\n# يَغْطُو (yaḡṭū) /jaɣ.tˤuː/: third-person masculine singular non-past active indicative of غَطَا (ḡaṭā)\n# يَغْطُوَ (yaḡṭuwa) /jaɣ.tˤu.wa/: third-person masculine singular non-past active subjunctive of غَطَا (ḡaṭā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡṭū", "ḡaṭā", "yaḡṭuwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اغطوا",
+      "tur": "verb",
+      "baslik": "اغطوا (form I)\n# اُغْطُوَا (uḡṭuwā) /uɣ.tˤu.waː/: second-person dual imperative of غَطَا (ḡaṭā)\n# اُغْطُوا (uḡṭū) /uɣ.tˤuː/: second-person masculine plural imperative of غَطَا (ḡaṭā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uḡṭuwā", "ḡaṭā", "uḡṭū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اغطي",
+      "tur": "verb",
+      "baslik": "اُغْطِي • (uḡṭī) (form I) /uɣ.tˤiː/\n# second-person feminine singular imperative of غَطَا (ḡaṭā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uḡṭī", "ḡaṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغطوان",
+      "tur": "verb",
+      "baslik": "تَغْطُوَانِ • (taḡṭuwāni) (form I) /taɣ.tˤu.waː.ni/\n# inflection of غَطَا (ḡaṭā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡṭuwāni", "ḡaṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اغطون",
+      "tur": "verb",
+      "baslik": "اُغْطُونَ • (uḡṭūna) (form I) /uɣ.tˤuː.na/\n# second-person feminine plural imperative of غَطَا (ḡaṭā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uḡṭūna", "ḡaṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغطوان",
+      "tur": "verb",
+      "baslik": "يَغْطُوَانِ • (yaḡṭuwāni) (form I) /jaɣ.tˤu.waː.ni/\n# third-person masculine dual non-past active indicative of غَطَا (ḡaṭā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡṭuwāni", "ḡaṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نغطو",
+      "tur": "verb",
+      "baslik": "نغطو (form I)\n# نَغْطُو (naḡṭū) /naɣ.tˤuː/: first-person plural non-past active indicative of غَطَا (ḡaṭā)\n# نَغْطُوَ (naḡṭuwa) /naɣ.tˤu.wa/: first-person plural non-past active subjunctive of غَطَا (ḡaṭā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḡṭū", "ḡaṭā", "naḡṭuwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اغط",
+      "tur": "verb",
+      "baslik": "اُغْطُ • (uḡṭu) (form I) /uɣ.tˤu/\n# second-person masculine singular imperative of غَطَا (ḡaṭā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uḡṭu", "ḡaṭā"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "غطا", "r7"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

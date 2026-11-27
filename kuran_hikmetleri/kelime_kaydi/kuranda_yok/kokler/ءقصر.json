@@ -1,365 +1,287 @@
 {
   "kok": "ءقصر",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءقصر", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يقصر",
-        "u": "يقصر",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يقصر (form IV)\n# يُقْصِرُ (yuqṣiru) /juq.sˤi.ru/: third-person masculine singular non-past active indicative of أَقْصَرَ (ʔaqṣara)\n# يُقْصَرُ (yuqṣaru) /juq.sˤa.ru/: third-person masculine singular non-past passive indicative of أَقْصَرَ (ʔaqṣara)\n# يُقْصِرَ (yuqṣira) /juq.sˤi.ra/: third-person masculine singular non-past active subjunctive of أَقْصَرَ (ʔaqṣara)\n# يُقْصَرَ (yuqṣara) /juq.sˤa.ra/: ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuqṣiru", "ʔaqṣara", "yuqṣaru"],
-        "k": "أقصر",
-        "yol": "kök"
-      },
-      {
-        "w": "تقصر",
-        "u": "تقصر",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تقصر (form IV)\n# تُقْصِرُ (tuqṣiru) /tuq.sˤi.ru/: inflection of أَقْصَرَ (ʔaqṣara):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُقْصَرُ (tuqṣaru) /tuq.sˤa.ru/: inflection of أَقْصَرَ (ʔaqṣara):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicati",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqṣiru", "ʔaqṣara", "tuqṣaru"],
-        "k": "أقصر",
-        "yol": "kök"
-      },
-      {
-        "w": "تقصرين",
-        "u": "تقصرين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تقصرين (form IV)\n# تُقْصِرِينَ (tuqṣirīna) /tuq.sˤi.riː.na/: second-person feminine singular non-past active indicative of أَقْصَرَ (ʔaqṣara)\n# تُقْصَرِينَ (tuqṣarīna) /tuq.sˤa.riː.na/: second-person feminine singular non-past passive indicative of أَقْصَرَ (ʔaqṣara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqṣirīna", "ʔaqṣara", "tuqṣarīna"],
-        "k": "أقصر",
-        "yol": "kök"
-      },
-      {
-        "w": "تقصري",
-        "u": "تقصري",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تقصري (form IV)\n# تُقْصِرِي (tuqṣirī) /tuq.sˤi.riː/: second-person feminine singular non-past active subjunctive/jussive of أَقْصَرَ (ʔaqṣara)\n# تُقْصَرِي (tuqṣarī) /tuq.sˤa.riː/: second-person feminine singular non-past passive subjunctive/jussive of أَقْصَرَ (ʔaqṣara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqṣirī", "ʔaqṣara", "tuqṣarī"],
-        "k": "أقصر",
-        "yol": "kök"
-      },
-      {
-        "w": "نقصر",
-        "u": "نقصر",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نقصر (form IV)\n# نُقْصِرُ (nuqṣiru) /nuq.sˤi.ru/: first-person plural non-past active indicative of أَقْصَرَ (ʔaqṣara)\n# نُقْصَرُ (nuqṣaru) /nuq.sˤa.ru/: first-person plural non-past passive indicative of أَقْصَرَ (ʔaqṣara)\n# نُقْصِرَ (nuqṣira) /nuq.sˤi.ra/: first-person plural non-past active subjunctive of أَقْصَرَ (ʔaqṣara)\n# نُقْصَرَ (nuqṣara) /nuq.sˤa.ra/: first-person plural non-past passive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuqṣiru", "ʔaqṣara", "nuqṣaru"],
-        "k": "أقصر",
-        "yol": "kök"
-      },
-      {
-        "w": "تقصرون",
-        "u": "تقصرون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تقصرون (form IV)\n# تُقْصِرُونَ (tuqṣirūna) /tuq.sˤi.ruː.na/: second-person masculine plural non-past active indicative of أَقْصَرَ (ʔaqṣara)\n# تُقْصَرُونَ (tuqṣarūna) /tuq.sˤa.ruː.na/: second-person masculine plural non-past passive indicative of أَقْصَرَ (ʔaqṣara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqṣirūna", "ʔaqṣara", "tuqṣarūna"],
-        "k": "أقصر",
-        "yol": "kök"
-      },
-      {
-        "w": "تقصروا",
-        "u": "تقصروا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تقصروا (form IV)\n# تُقْصِرُوا (tuqṣirū) /tuq.sˤi.ruː/: second-person masculine plural non-past active subjunctive/jussive of أَقْصَرَ (ʔaqṣara)\n# تُقْصَرُوا (tuqṣarū) /tuq.sˤa.ruː/: second-person masculine plural non-past passive subjunctive/jussive of أَقْصَرَ (ʔaqṣara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqṣirū", "ʔaqṣara", "tuqṣarū"],
-        "k": "أقصر",
-        "yol": "kök"
-      },
-      {
-        "w": "يقصرون",
-        "u": "يقصرون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يقصرون (form IV)\n# يُقْصِرُونَ (yuqṣirūna) /juq.sˤi.ruː.na/: third-person masculine plural non-past active indicative of أَقْصَرَ (ʔaqṣara)\n# يُقْصَرُونَ (yuqṣarūna) /juq.sˤa.ruː.na/: third-person masculine plural non-past passive indicative of أَقْصَرَ (ʔaqṣara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuqṣirūna", "ʔaqṣara", "yuqṣarūna"],
-        "k": "أقصر",
-        "yol": "kök"
-      },
-      {
-        "w": "يقصروا",
-        "u": "يقصروا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يقصروا (form IV)\n# يُقْصِرُوا (yuqṣirū) /juq.sˤi.ruː/: third-person masculine plural non-past active subjunctive/jussive of أَقْصَرَ (ʔaqṣara)\n# يُقْصَرُوا (yuqṣarū) /juq.sˤa.ruː/: third-person masculine plural non-past passive subjunctive/jussive of أَقْصَرَ (ʔaqṣara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuqṣirū", "ʔaqṣara", "yuqṣarū"],
-        "k": "أقصر",
-        "yol": "kök"
-      },
-      {
-        "w": "تقصرن",
-        "u": "تقصرن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تقصرن (form IV)\n# تُقْصِرْنَ (tuqṣirna) /tuq.sˤir.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَقْصَرَ (ʔaqṣara)\n# تُقْصَرْنَ (tuqṣarna) /tuq.sˤar.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَقْصَرَ (ʔaqṣara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqṣirna", "ʔaqṣara", "tuqṣarna"],
-        "k": "أقصر",
-        "yol": "kök"
-      },
-      {
-        "w": "يقصرن",
-        "u": "يقصرن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يقصرن (form IV)\n# يُقْصِرْنَ (yuqṣirna) /juq.sˤir.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَقْصَرَ (ʔaqṣara)\n# يُقْصَرْنَ (yuqṣarna) /juq.sˤar.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَقْصَرَ (ʔaqṣara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuqṣirna", "ʔaqṣara", "yuqṣarna"],
-        "k": "أقصر",
-        "yol": "kök"
-      },
-      {
-        "w": "أقصرت",
-        "u": "أقصرت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أقصرت (form IV)\n# أَقْصَرْتُ (ʔaqṣartu) /ʔaq.sˤar.tu/: first-person singular past active of أَقْصَرَ (ʔaqṣara)\n# أَقْصَرْتَ (ʔaqṣarta) /ʔaq.sˤar.ta/: second-person masculine singular past active of أَقْصَرَ (ʔaqṣara)\n# أَقْصَرْتِ (ʔaqṣarti) /ʔaq.sˤar.ti/: second-person feminine singular past active of أَقْصَرَ (ʔaqṣara)\n# أَقْصَرَتْ (ʔaqṣarat) /ʔaq.sˤa.rat/: third-person feminine singular past act",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqṣartu", "ʔaqṣara", "ʔaqṣarta"],
-        "k": "أقصر",
-        "yol": "kök"
-      },
-      {
-        "w": "أقصرتما",
-        "u": "أقصرتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أقصرتما (form IV)\n# أَقْصَرْتُمَا (ʔaqṣartumā) /ʔaq.sˤar.tu.maː/: second-person dual past active of أَقْصَرَ (ʔaqṣara)\n# أُقْصِرْتُمَا (ʔuqṣirtumā) /ʔuq.sˤir.tu.maː/: second-person dual past passive of أَقْصَرَ (ʔaqṣara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqṣartumā", "ʔaqṣara", "ʔuqṣirtumā"],
-        "k": "أقصر",
-        "yol": "kök"
-      },
-      {
-        "w": "أقصرتم",
-        "u": "أقصرتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أقصرتم (form IV)\n# أَقْصَرْتُمْ (ʔaqṣartum) /ʔaq.sˤar.tum/: second-person masculine plural past active of أَقْصَرَ (ʔaqṣara)\n# أُقْصِرْتُمْ (ʔuqṣirtum) /ʔuq.sˤir.tum/: second-person masculine plural past passive of أَقْصَرَ (ʔaqṣara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqṣartum", "ʔaqṣara", "ʔuqṣirtum"],
-        "k": "أقصر",
-        "yol": "kök"
-      },
-      {
-        "w": "أقصرتا",
-        "u": "أقصرتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أقصرتا (form IV)\n# أَقْصَرَتَا (ʔaqṣaratā) /ʔaq.sˤa.ra.taː/: third-person feminine dual past active of أَقْصَرَ (ʔaqṣara)\n# أُقْصِرَتَا (ʔuqṣiratā) /ʔuq.sˤi.ra.taː/: third-person feminine dual past passive of أَقْصَرَ (ʔaqṣara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqṣaratā", "ʔaqṣara", "ʔuqṣiratā"],
-        "k": "أقصر",
-        "yol": "kök"
-      },
-      {
-        "w": "أقصرا",
-        "u": "أقصرا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أقصرا (form IV)\n# أَقْصَرَا (ʔaqṣarā) /ʔaq.sˤa.raː/: third-person masculine dual past active of أَقْصَرَ (ʔaqṣara)\n# أُقْصِرَا (ʔuqṣirā) /ʔuq.sˤi.raː/: third-person masculine dual past passive of أَقْصَرَ (ʔaqṣara)\n# أَقْصِرَا (ʔaqṣirā) /ʔaq.sˤi.raː/: second-person dual imperative of أَقْصَرَ (ʔaqṣara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqṣarā", "ʔaqṣara", "ʔuqṣirā"],
-        "k": "أقصر",
-        "yol": "kök"
-      },
-      {
-        "w": "أقصرنا",
-        "u": "أقصرنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أقصرنا (form IV)\n# أَقْصَرْنَا (ʔaqṣarnā) /ʔaq.sˤar.naː/: first-person plural past active of أَقْصَرَ (ʔaqṣara)\n# أُقْصِرْنَا (ʔuqṣirnā) /ʔuq.sˤir.naː/: first-person plural past passive of أَقْصَرَ (ʔaqṣara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqṣarnā", "ʔaqṣara", "ʔuqṣirnā"],
-        "k": "أقصر",
-        "yol": "kök"
-      },
-      {
-        "w": "أقصروا",
-        "u": "أقصروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أقصروا (form IV)\n# أَقْصَرُوا (ʔaqṣarū) /ʔaq.sˤa.ruː/: third-person masculine plural past active of أَقْصَرَ (ʔaqṣara)\n# أُقْصِرُوا (ʔuqṣirū) /ʔuq.sˤi.ruː/: third-person masculine plural past passive of أَقْصَرَ (ʔaqṣara)\n# أَقْصِرُوا (ʔaqṣirū) /ʔaq.sˤi.ruː/: second-person masculine plural imperative of أَقْصَرَ (ʔaqṣara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqṣarū", "ʔaqṣara", "ʔuqṣirū"],
-        "k": "أقصر",
-        "yol": "kök"
-      },
-      {
-        "w": "أقصرتن",
-        "u": "أقصرتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أقصرتن (form IV)\n# أَقْصَرْتُنَّ (ʔaqṣartunna) /ʔaq.sˤar.tun.na/: second-person feminine plural past active of أَقْصَرَ (ʔaqṣara)\n# أُقْصِرْتُنَّ (ʔuqṣirtunna) /ʔuq.sˤir.tun.na/: second-person feminine plural past passive of أَقْصَرَ (ʔaqṣara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqṣartunna", "ʔaqṣara", "ʔuqṣirtunna"],
-        "k": "أقصر",
-        "yol": "kök"
-      },
-      {
-        "w": "أقصرن",
-        "u": "أقصرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أقصرن (form IV)\n# أَقْصَرْنَ (ʔaqṣarna) /ʔaq.sˤar.na/: third-person feminine plural past active of أَقْصَرَ (ʔaqṣara)\n# أُقْصِرْنَ (ʔuqṣirna) /ʔuq.sˤir.na/: third-person feminine plural past passive of أَقْصَرَ (ʔaqṣara)\n# أَقْصِرْنَ (ʔaqṣirna) /ʔaq.sˤir.na/: second-person feminine plural imperative of أَقْصَرَ (ʔaqṣara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqṣarna", "ʔaqṣara", "ʔuqṣirna"],
-        "k": "أقصر",
-        "yol": "kök"
-      },
-      {
-        "w": "تقصران",
-        "u": "تقصران",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تقصران (form IV)\n# تُقْصِرَانِ (tuqṣirāni) /tuq.sˤi.raː.ni/: inflection of أَقْصَرَ (ʔaqṣara):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُقْصَرَانِ (tuqṣarāni) /tuq.sˤa.raː.ni/: inflection of أَقْصَرَ (ʔaqṣara):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqṣirāni", "ʔaqṣara", "tuqṣarāni"],
-        "k": "أقصر",
-        "yol": "kök"
-      },
-      {
-        "w": "يقصران",
-        "u": "يقصران",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يقصران (form IV)\n# يُقْصِرَانِ (yuqṣirāni) /juq.sˤi.raː.ni/: third-person masculine dual non-past active indicative of أَقْصَرَ (ʔaqṣara)\n# يُقْصَرَانِ (yuqṣarāni) /juq.sˤa.raː.ni/: third-person masculine dual non-past passive indicative of أَقْصَرَ (ʔaqṣara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuqṣirāni", "ʔaqṣara", "yuqṣarāni"],
-        "k": "أقصر",
-        "yol": "kök"
-      },
-      {
-        "w": "أقصري",
-        "u": "أقصري",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَقْصِرِي • (ʔaqṣirī) (form IV) /ʔaq.sˤi.riː/\n# second-person feminine singular imperative of أَقْصَرَ (ʔaqṣara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqṣirī", "ʔaqṣara"],
-        "k": "أقصر",
-        "yol": "kök"
-      },
-      {
-        "w": "تقصرا",
-        "u": "تقصرا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تقصرا (form IV)\n# تُقْصِرَا (tuqṣirā) /tuq.sˤi.raː/: inflection of أَقْصَرَ (ʔaqṣara):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُقْصَرَا (tuqṣarā) /tuq.sˤa.raː/: inflection of أَقْصَرَ (ʔaqṣara):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqṣirā", "ʔaqṣara", "tuqṣarā"],
-        "k": "أقصر",
-        "yol": "kök"
-      },
-      {
-        "w": "يقصرا",
-        "u": "يقصرا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يقصرا (form IV)\n# يُقْصِرَا (yuqṣirā) /juq.sˤi.raː/: third-person masculine dual non-past active subjunctive/jussive of أَقْصَرَ (ʔaqṣara)\n# يُقْصَرَا (yuqṣarā) /juq.sˤa.raː/: third-person masculine dual non-past passive subjunctive/jussive of أَقْصَرَ (ʔaqṣara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuqṣirā", "ʔaqṣara", "yuqṣarā"],
-        "k": "أقصر",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "قص",
+  "ses": {
     "harf": "ء",
+    "fasil": "قص",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يقصر",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يقصر (form IV)\n# يُقْصِرُ (yuqṣiru) /juq.sˤi.ru/: third-person masculine singular non-past active indicative of أَقْصَرَ (ʔaqṣara)\n# يُقْصَرُ (yuqṣaru) /juq.sˤa.ru/: third-person masculine singular non-past passive indicative of أَقْصَرَ (ʔaqṣara)\n# يُقْصِرَ (yuqṣira) /juq.sˤi.ra/: third-person masculine singular non-past active subjunctive of أَقْصَرَ (ʔaqṣara)\n# يُقْصَرَ (yuqṣara) /juq.sˤa.ra/: ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuqṣiru", "ʔaqṣara", "yuqṣaru"],
+      "kok_yazilis": "أقصر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقصر",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تقصر (form IV)\n# تُقْصِرُ (tuqṣiru) /tuq.sˤi.ru/: inflection of أَقْصَرَ (ʔaqṣara):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُقْصَرُ (tuqṣaru) /tuq.sˤa.ru/: inflection of أَقْصَرَ (ʔaqṣara):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicati",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqṣiru", "ʔaqṣara", "tuqṣaru"],
+      "kok_yazilis": "أقصر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقصرين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تقصرين (form IV)\n# تُقْصِرِينَ (tuqṣirīna) /tuq.sˤi.riː.na/: second-person feminine singular non-past active indicative of أَقْصَرَ (ʔaqṣara)\n# تُقْصَرِينَ (tuqṣarīna) /tuq.sˤa.riː.na/: second-person feminine singular non-past passive indicative of أَقْصَرَ (ʔaqṣara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqṣirīna", "ʔaqṣara", "tuqṣarīna"],
+      "kok_yazilis": "أقصر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقصري",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تقصري (form IV)\n# تُقْصِرِي (tuqṣirī) /tuq.sˤi.riː/: second-person feminine singular non-past active subjunctive/jussive of أَقْصَرَ (ʔaqṣara)\n# تُقْصَرِي (tuqṣarī) /tuq.sˤa.riː/: second-person feminine singular non-past passive subjunctive/jussive of أَقْصَرَ (ʔaqṣara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqṣirī", "ʔaqṣara", "tuqṣarī"],
+      "kok_yazilis": "أقصر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نقصر",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نقصر (form IV)\n# نُقْصِرُ (nuqṣiru) /nuq.sˤi.ru/: first-person plural non-past active indicative of أَقْصَرَ (ʔaqṣara)\n# نُقْصَرُ (nuqṣaru) /nuq.sˤa.ru/: first-person plural non-past passive indicative of أَقْصَرَ (ʔaqṣara)\n# نُقْصِرَ (nuqṣira) /nuq.sˤi.ra/: first-person plural non-past active subjunctive of أَقْصَرَ (ʔaqṣara)\n# نُقْصَرَ (nuqṣara) /nuq.sˤa.ra/: first-person plural non-past passive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuqṣiru", "ʔaqṣara", "nuqṣaru"],
+      "kok_yazilis": "أقصر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقصرون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تقصرون (form IV)\n# تُقْصِرُونَ (tuqṣirūna) /tuq.sˤi.ruː.na/: second-person masculine plural non-past active indicative of أَقْصَرَ (ʔaqṣara)\n# تُقْصَرُونَ (tuqṣarūna) /tuq.sˤa.ruː.na/: second-person masculine plural non-past passive indicative of أَقْصَرَ (ʔaqṣara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqṣirūna", "ʔaqṣara", "tuqṣarūna"],
+      "kok_yazilis": "أقصر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقصروا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تقصروا (form IV)\n# تُقْصِرُوا (tuqṣirū) /tuq.sˤi.ruː/: second-person masculine plural non-past active subjunctive/jussive of أَقْصَرَ (ʔaqṣara)\n# تُقْصَرُوا (tuqṣarū) /tuq.sˤa.ruː/: second-person masculine plural non-past passive subjunctive/jussive of أَقْصَرَ (ʔaqṣara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqṣirū", "ʔaqṣara", "tuqṣarū"],
+      "kok_yazilis": "أقصر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقصرون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يقصرون (form IV)\n# يُقْصِرُونَ (yuqṣirūna) /juq.sˤi.ruː.na/: third-person masculine plural non-past active indicative of أَقْصَرَ (ʔaqṣara)\n# يُقْصَرُونَ (yuqṣarūna) /juq.sˤa.ruː.na/: third-person masculine plural non-past passive indicative of أَقْصَرَ (ʔaqṣara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuqṣirūna", "ʔaqṣara", "yuqṣarūna"],
+      "kok_yazilis": "أقصر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقصروا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يقصروا (form IV)\n# يُقْصِرُوا (yuqṣirū) /juq.sˤi.ruː/: third-person masculine plural non-past active subjunctive/jussive of أَقْصَرَ (ʔaqṣara)\n# يُقْصَرُوا (yuqṣarū) /juq.sˤa.ruː/: third-person masculine plural non-past passive subjunctive/jussive of أَقْصَرَ (ʔaqṣara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuqṣirū", "ʔaqṣara", "yuqṣarū"],
+      "kok_yazilis": "أقصر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقصرن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تقصرن (form IV)\n# تُقْصِرْنَ (tuqṣirna) /tuq.sˤir.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَقْصَرَ (ʔaqṣara)\n# تُقْصَرْنَ (tuqṣarna) /tuq.sˤar.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَقْصَرَ (ʔaqṣara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqṣirna", "ʔaqṣara", "tuqṣarna"],
+      "kok_yazilis": "أقصر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقصرن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يقصرن (form IV)\n# يُقْصِرْنَ (yuqṣirna) /juq.sˤir.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَقْصَرَ (ʔaqṣara)\n# يُقْصَرْنَ (yuqṣarna) /juq.sˤar.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَقْصَرَ (ʔaqṣara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuqṣirna", "ʔaqṣara", "yuqṣarna"],
+      "kok_yazilis": "أقصر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقصرت",
+      "tur": "verb",
+      "baslik": "أقصرت (form IV)\n# أَقْصَرْتُ (ʔaqṣartu) /ʔaq.sˤar.tu/: first-person singular past active of أَقْصَرَ (ʔaqṣara)\n# أَقْصَرْتَ (ʔaqṣarta) /ʔaq.sˤar.ta/: second-person masculine singular past active of أَقْصَرَ (ʔaqṣara)\n# أَقْصَرْتِ (ʔaqṣarti) /ʔaq.sˤar.ti/: second-person feminine singular past active of أَقْصَرَ (ʔaqṣara)\n# أَقْصَرَتْ (ʔaqṣarat) /ʔaq.sˤa.rat/: third-person feminine singular past act",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqṣartu", "ʔaqṣara", "ʔaqṣarta"],
+      "kok_yazilis": "أقصر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقصرتما",
+      "tur": "verb",
+      "baslik": "أقصرتما (form IV)\n# أَقْصَرْتُمَا (ʔaqṣartumā) /ʔaq.sˤar.tu.maː/: second-person dual past active of أَقْصَرَ (ʔaqṣara)\n# أُقْصِرْتُمَا (ʔuqṣirtumā) /ʔuq.sˤir.tu.maː/: second-person dual past passive of أَقْصَرَ (ʔaqṣara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqṣartumā", "ʔaqṣara", "ʔuqṣirtumā"],
+      "kok_yazilis": "أقصر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقصرتم",
+      "tur": "verb",
+      "baslik": "أقصرتم (form IV)\n# أَقْصَرْتُمْ (ʔaqṣartum) /ʔaq.sˤar.tum/: second-person masculine plural past active of أَقْصَرَ (ʔaqṣara)\n# أُقْصِرْتُمْ (ʔuqṣirtum) /ʔuq.sˤir.tum/: second-person masculine plural past passive of أَقْصَرَ (ʔaqṣara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqṣartum", "ʔaqṣara", "ʔuqṣirtum"],
+      "kok_yazilis": "أقصر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقصرتا",
+      "tur": "verb",
+      "baslik": "أقصرتا (form IV)\n# أَقْصَرَتَا (ʔaqṣaratā) /ʔaq.sˤa.ra.taː/: third-person feminine dual past active of أَقْصَرَ (ʔaqṣara)\n# أُقْصِرَتَا (ʔuqṣiratā) /ʔuq.sˤi.ra.taː/: third-person feminine dual past passive of أَقْصَرَ (ʔaqṣara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqṣaratā", "ʔaqṣara", "ʔuqṣiratā"],
+      "kok_yazilis": "أقصر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقصرا",
+      "tur": "verb",
+      "baslik": "أقصرا (form IV)\n# أَقْصَرَا (ʔaqṣarā) /ʔaq.sˤa.raː/: third-person masculine dual past active of أَقْصَرَ (ʔaqṣara)\n# أُقْصِرَا (ʔuqṣirā) /ʔuq.sˤi.raː/: third-person masculine dual past passive of أَقْصَرَ (ʔaqṣara)\n# أَقْصِرَا (ʔaqṣirā) /ʔaq.sˤi.raː/: second-person dual imperative of أَقْصَرَ (ʔaqṣara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqṣarā", "ʔaqṣara", "ʔuqṣirā"],
+      "kok_yazilis": "أقصر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقصرنا",
+      "tur": "verb",
+      "baslik": "أقصرنا (form IV)\n# أَقْصَرْنَا (ʔaqṣarnā) /ʔaq.sˤar.naː/: first-person plural past active of أَقْصَرَ (ʔaqṣara)\n# أُقْصِرْنَا (ʔuqṣirnā) /ʔuq.sˤir.naː/: first-person plural past passive of أَقْصَرَ (ʔaqṣara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqṣarnā", "ʔaqṣara", "ʔuqṣirnā"],
+      "kok_yazilis": "أقصر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقصروا",
+      "tur": "verb",
+      "baslik": "أقصروا (form IV)\n# أَقْصَرُوا (ʔaqṣarū) /ʔaq.sˤa.ruː/: third-person masculine plural past active of أَقْصَرَ (ʔaqṣara)\n# أُقْصِرُوا (ʔuqṣirū) /ʔuq.sˤi.ruː/: third-person masculine plural past passive of أَقْصَرَ (ʔaqṣara)\n# أَقْصِرُوا (ʔaqṣirū) /ʔaq.sˤi.ruː/: second-person masculine plural imperative of أَقْصَرَ (ʔaqṣara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqṣarū", "ʔaqṣara", "ʔuqṣirū"],
+      "kok_yazilis": "أقصر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقصرتن",
+      "tur": "verb",
+      "baslik": "أقصرتن (form IV)\n# أَقْصَرْتُنَّ (ʔaqṣartunna) /ʔaq.sˤar.tun.na/: second-person feminine plural past active of أَقْصَرَ (ʔaqṣara)\n# أُقْصِرْتُنَّ (ʔuqṣirtunna) /ʔuq.sˤir.tun.na/: second-person feminine plural past passive of أَقْصَرَ (ʔaqṣara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqṣartunna", "ʔaqṣara", "ʔuqṣirtunna"],
+      "kok_yazilis": "أقصر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقصرن",
+      "tur": "verb",
+      "baslik": "أقصرن (form IV)\n# أَقْصَرْنَ (ʔaqṣarna) /ʔaq.sˤar.na/: third-person feminine plural past active of أَقْصَرَ (ʔaqṣara)\n# أُقْصِرْنَ (ʔuqṣirna) /ʔuq.sˤir.na/: third-person feminine plural past passive of أَقْصَرَ (ʔaqṣara)\n# أَقْصِرْنَ (ʔaqṣirna) /ʔaq.sˤir.na/: second-person feminine plural imperative of أَقْصَرَ (ʔaqṣara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqṣarna", "ʔaqṣara", "ʔuqṣirna"],
+      "kok_yazilis": "أقصر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقصران",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تقصران (form IV)\n# تُقْصِرَانِ (tuqṣirāni) /tuq.sˤi.raː.ni/: inflection of أَقْصَرَ (ʔaqṣara):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُقْصَرَانِ (tuqṣarāni) /tuq.sˤa.raː.ni/: inflection of أَقْصَرَ (ʔaqṣara):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqṣirāni", "ʔaqṣara", "tuqṣarāni"],
+      "kok_yazilis": "أقصر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقصران",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يقصران (form IV)\n# يُقْصِرَانِ (yuqṣirāni) /juq.sˤi.raː.ni/: third-person masculine dual non-past active indicative of أَقْصَرَ (ʔaqṣara)\n# يُقْصَرَانِ (yuqṣarāni) /juq.sˤa.raː.ni/: third-person masculine dual non-past passive indicative of أَقْصَرَ (ʔaqṣara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuqṣirāni", "ʔaqṣara", "yuqṣarāni"],
+      "kok_yazilis": "أقصر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقصري",
+      "tur": "verb",
+      "baslik": "أَقْصِرِي • (ʔaqṣirī) (form IV) /ʔaq.sˤi.riː/\n# second-person feminine singular imperative of أَقْصَرَ (ʔaqṣara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqṣirī", "ʔaqṣara"],
+      "kok_yazilis": "أقصر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقصرا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تقصرا (form IV)\n# تُقْصِرَا (tuqṣirā) /tuq.sˤi.raː/: inflection of أَقْصَرَ (ʔaqṣara):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُقْصَرَا (tuqṣarā) /tuq.sˤa.raː/: inflection of أَقْصَرَ (ʔaqṣara):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqṣirā", "ʔaqṣara", "tuqṣarā"],
+      "kok_yazilis": "أقصر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقصرا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يقصرا (form IV)\n# يُقْصِرَا (yuqṣirā) /juq.sˤi.raː/: third-person masculine dual non-past active subjunctive/jussive of أَقْصَرَ (ʔaqṣara)\n# يُقْصَرَا (yuqṣarā) /juq.sˤa.raː/: third-person masculine dual non-past passive subjunctive/jussive of أَقْصَرَ (ʔaqṣara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuqṣirā", "ʔaqṣara", "yuqṣarā"],
+      "kok_yazilis": "أقصر",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءقصر", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

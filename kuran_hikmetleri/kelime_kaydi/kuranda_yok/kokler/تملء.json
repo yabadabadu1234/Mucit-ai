@@ -1,379 +1,295 @@
 {
   "kok": "تملء",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تملء", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تملئي",
-        "u": "تملئي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَمَلَّئِي • (tamallaʔī) (form V) /ta.mal.la.ʔiː/\n# second-person feminine singular imperative of تَمَلَّأَ (tamallaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tamallaʔī", "tamallaʔa"],
-        "k": "تملأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تملؤوا",
-        "u": "تملؤوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَمَلَّؤُوا • (tamallaʔū) (form V) /ta.mal.la.ʔuː/\n# inflection of تَمَلَّأَ (tamallaʔa):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tamallaʔū", "tamallaʔa"],
-        "k": "تملأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تملأن",
-        "u": "تملأن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَمَلَّأْنَ • (tamallaʔna) (form V) /ta.mal.laʔ.na/\n# inflection of تَمَلَّأَ (tamallaʔa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tamallaʔna", "tamallaʔa"],
-        "k": "تملأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تملئ",
-        "u": "تملئ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُمُلِّئَ • (tumulliʔa) (form V) /tu.mul.li.ʔa/\n# third-person masculine singular past passive of تَمَلَّأَ (tamallaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tumulliʔa", "tamallaʔa"],
-        "k": "تملأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تملآ",
-        "u": "تملآ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَمَلَّآ • (tamallaʔā) (form V) /ta.mal.la.ʔaː/\n# inflection of تَمَلَّأَ (tamallaʔa):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tamallaʔā", "tamallaʔa"],
-        "k": "تملأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تملأتما",
-        "u": "تملأتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَمَلَّأْتُمَا • (tamallaʔtumā) (form V) /ta.mal.laʔ.tu.maː/\n# second-person dual past active of تَمَلَّأَ (tamallaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tamallaʔtumā", "tamallaʔa"],
-        "k": "تملأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تملأتا",
-        "u": "تملأتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَمَلَّأَتَا • (tamallaʔatā) (form V) /ta.mal.la.ʔa.taː/\n# third-person feminine dual past active of تَمَلَّأَ (tamallaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tamallaʔatā", "tamallaʔa"],
-        "k": "تملأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تملأنا",
-        "u": "تملأنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَمَلَّأْنَا • (tamallaʔnā) (form V) /ta.mal.laʔ.naː/\n# first-person plural past active of تَمَلَّأَ (tamallaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tamallaʔnā", "tamallaʔa"],
-        "k": "تملأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تملأتم",
-        "u": "تملأتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَمَلَّأْتُمْ • (tamallaʔtum) (form V) /ta.mal.laʔ.tum/\n# second-person masculine plural past active of تَمَلَّأَ (tamallaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tamallaʔtum", "tamallaʔa"],
-        "k": "تملأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تملأت",
-        "u": "تملأت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تملأت (form V)\n# تَمَلَّأْتُ (tamallaʔtu) /ta.mal.laʔ.tu/: first-person singular past active of تَمَلَّأَ (tamallaʔa)\n# تَمَلَّأْتَ (tamallaʔta) /ta.mal.laʔ.ta/: second-person masculine singular past active of تَمَلَّأَ (tamallaʔa)\n# تَمَلَّأْتِ (tamallaʔti) /ta.mal.laʔ.ti/: second-person feminine singular past active of تَمَلَّأَ (tamallaʔa)\n# تَمَلَّأَتْ (tamallaʔat) /ta.mal.la.ʔat/: third-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tamallaʔtu", "tamallaʔa", "tamallaʔta"],
-        "k": "تملأ",
-        "yol": "kök"
-      },
-      {
-        "w": "أتملأ",
-        "u": "أتملأ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتملأ (form V)\n# أَتَمَلَّأُ (ʔatamallaʔu) /ʔa.ta.mal.la.ʔu/: first-person singular non-past active indicative of تَمَلَّأَ (tamallaʔa)\n# أَتَمَلَّأَ (ʔatamallaʔa) /ʔa.ta.mal.la.ʔa/: first-person singular non-past active subjunctive of تَمَلَّأَ (tamallaʔa)\n# أَتَمَلَّأْ (ʔatamallaʔ) /ʔa.ta.mal.laʔ/: first-person singular non-past active jussive of تَمَلَّأَ (tamallaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔatamallaʔu", "tamallaʔa", "ʔatamallaʔa"],
-        "k": "تملأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تملأتن",
-        "u": "تملأتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَمَلَّأْتُنَّ • (tamallaʔtunna) (form V) /ta.mal.laʔ.tun.na/\n# second-person feminine plural past active of تَمَلَّأَ (tamallaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tamallaʔtunna", "tamallaʔa"],
-        "k": "تملأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تتملئين",
-        "u": "تتملئين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَمَلَّئِينَ • (tatamallaʔīna) (form V) /ta.ta.mal.la.ʔiː.na/\n# second-person feminine singular non-past active indicative of تَمَلَّأَ (tamallaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatamallaʔīna", "tamallaʔa"],
-        "k": "تملأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تتملآن",
-        "u": "تتملآن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَمَلَّآنِ • (tatamallaʔāni) (form V) /ta.ta.mal.la.ʔaː.ni/\n# inflection of تَمَلَّأَ (tamallaʔa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatamallaʔāni", "tamallaʔa"],
-        "k": "تملأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يتملأ",
-        "u": "يتملأ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتملأ (form V)\n# يَتَمَلَّأُ (yatamallaʔu) /ja.ta.mal.la.ʔu/: third-person masculine singular non-past active indicative of تَمَلَّأَ (tamallaʔa)\n# يُتَمَلَّأُ (yutamallaʔu) /ju.ta.mal.la.ʔu/: third-person masculine singular non-past passive indicative of تَمَلَّأَ (tamallaʔa)\n# يَتَمَلَّأَ (yatamallaʔa) /ja.ta.mal.la.ʔa/: third-person masculine singular non-past active subjunctive of تَمَلَّأَ (t",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatamallaʔu", "tamallaʔa", "yutamallaʔu"],
-        "k": "تملأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يتملآن",
-        "u": "يتملآن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَمَلَّآنِ • (yatamallaʔāni) (form V) /ja.ta.mal.la.ʔaː.ni/\n# third-person masculine dual non-past active indicative of تَمَلَّأَ (tamallaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatamallaʔāni", "tamallaʔa"],
-        "k": "تملأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تتملأ",
-        "u": "تتملأ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتملأ (form V)\n# تَتَمَلَّأُ (tatamallaʔu) /ta.ta.mal.la.ʔu/: inflection of تَمَلَّأَ (tamallaʔa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَمَلَّأَ (tatamallaʔa) /ta.ta.mal.la.ʔa/: inflection of تَمَلَّأَ (tamallaʔa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatamallaʔu", "tamallaʔa", "tatamallaʔa"],
-        "k": "تملأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تتملأن",
-        "u": "تتملأن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَمَلَّأْنَ • (tatamallaʔna) (form V) /ta.ta.mal.laʔ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَمَلَّأَ (tamallaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatamallaʔna", "tamallaʔa"],
-        "k": "تملأ",
-        "yol": "kök"
-      },
-      {
-        "w": "نتملأ",
-        "u": "نتملأ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتملأ (form V)\n# نَتَمَلَّأُ (natamallaʔu) /na.ta.mal.la.ʔu/: first-person plural non-past active indicative of تَمَلَّأَ (tamallaʔa)\n# نَتَمَلَّأَ (natamallaʔa) /na.ta.mal.la.ʔa/: first-person plural non-past active subjunctive of تَمَلَّأَ (tamallaʔa)\n# نَتَمَلَّأْ (natamallaʔ) /na.ta.mal.laʔ/: first-person plural non-past active jussive of تَمَلَّأَ (tamallaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["natamallaʔu", "tamallaʔa", "natamallaʔa"],
-        "k": "تملأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يتملؤون",
-        "u": "يتملؤون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَمَلَّؤُونَ • (yatamallaʔūna) (form V) /ja.ta.mal.la.ʔuː.na/\n# third-person masculine plural non-past active indicative of تَمَلَّأَ (tamallaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatamallaʔūna", "tamallaʔa"],
-        "k": "تملأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تتملؤون",
-        "u": "تتملؤون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَمَلَّؤُونَ • (tatamallaʔūna) (form V) /ta.ta.mal.la.ʔuː.na/\n# second-person masculine plural non-past active indicative of تَمَلَّأَ (tamallaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatamallaʔūna", "tamallaʔa"],
-        "k": "تملأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يتملأن",
-        "u": "يتملأن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَمَلَّأْنَ • (yatamallaʔna) (form V) /ja.ta.mal.laʔ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَمَلَّأَ (tamallaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatamallaʔna", "tamallaʔa"],
-        "k": "تملأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تتملآ",
-        "u": "تتملآ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَمَلَّآ • (tatamallaʔā) (form V) /ta.ta.mal.la.ʔaː/\n# inflection of تَمَلَّأَ (tamallaʔa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatamallaʔā", "tamallaʔa"],
-        "k": "تملأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يتملآ",
-        "u": "يتملآ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَمَلَّآ • (yatamallaʔā) (form V) /ja.ta.mal.la.ʔaː/\n# third-person masculine dual non-past active subjunctive/jussive of تَمَلَّأَ (tamallaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatamallaʔā", "tamallaʔa"],
-        "k": "تملأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تتملئي",
-        "u": "تتملئي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَمَلَّئِي • (tatamallaʔī) (form V) /ta.ta.mal.la.ʔiː/\n# second-person feminine singular non-past active subjunctive/jussive of تَمَلَّأَ (tamallaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatamallaʔī", "tamallaʔa"],
-        "k": "تملأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يتملؤوا",
-        "u": "يتملؤوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَمَلَّؤُوا • (yatamallaʔū) (form V) /ja.ta.mal.la.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of تَمَلَّأَ (tamallaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatamallaʔū", "tamallaʔa"],
-        "k": "تملأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تتملؤوا",
-        "u": "تتملؤوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَمَلَّؤُوا • (tatamallaʔū) (form V) /ta.ta.mal.la.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of تَمَلَّأَ (tamallaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatamallaʔū", "tamallaʔa"],
-        "k": "تملأ",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تم",
+  "ses": {
     "harf": "ت",
+    "fasil": "تم",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تملئي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَمَلَّئِي • (tamallaʔī) (form V) /ta.mal.la.ʔiː/\n# second-person feminine singular imperative of تَمَلَّأَ (tamallaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tamallaʔī", "tamallaʔa"],
+      "kok_yazilis": "تملأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تملؤوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَمَلَّؤُوا • (tamallaʔū) (form V) /ta.mal.la.ʔuː/\n# inflection of تَمَلَّأَ (tamallaʔa):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tamallaʔū", "tamallaʔa"],
+      "kok_yazilis": "تملأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تملأن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَمَلَّأْنَ • (tamallaʔna) (form V) /ta.mal.laʔ.na/\n# inflection of تَمَلَّأَ (tamallaʔa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tamallaʔna", "tamallaʔa"],
+      "kok_yazilis": "تملأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تملئ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُمُلِّئَ • (tumulliʔa) (form V) /tu.mul.li.ʔa/\n# third-person masculine singular past passive of تَمَلَّأَ (tamallaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tumulliʔa", "tamallaʔa"],
+      "kok_yazilis": "تملأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تملآ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَمَلَّآ • (tamallaʔā) (form V) /ta.mal.la.ʔaː/\n# inflection of تَمَلَّأَ (tamallaʔa):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tamallaʔā", "tamallaʔa"],
+      "kok_yazilis": "تملأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تملأتما",
+      "tur": "verb",
+      "baslik": "تَمَلَّأْتُمَا • (tamallaʔtumā) (form V) /ta.mal.laʔ.tu.maː/\n# second-person dual past active of تَمَلَّأَ (tamallaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tamallaʔtumā", "tamallaʔa"],
+      "kok_yazilis": "تملأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تملأتا",
+      "tur": "verb",
+      "baslik": "تَمَلَّأَتَا • (tamallaʔatā) (form V) /ta.mal.la.ʔa.taː/\n# third-person feminine dual past active of تَمَلَّأَ (tamallaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tamallaʔatā", "tamallaʔa"],
+      "kok_yazilis": "تملأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تملأنا",
+      "tur": "verb",
+      "baslik": "تَمَلَّأْنَا • (tamallaʔnā) (form V) /ta.mal.laʔ.naː/\n# first-person plural past active of تَمَلَّأَ (tamallaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tamallaʔnā", "tamallaʔa"],
+      "kok_yazilis": "تملأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تملأتم",
+      "tur": "verb",
+      "baslik": "تَمَلَّأْتُمْ • (tamallaʔtum) (form V) /ta.mal.laʔ.tum/\n# second-person masculine plural past active of تَمَلَّأَ (tamallaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tamallaʔtum", "tamallaʔa"],
+      "kok_yazilis": "تملأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تملأت",
+      "tur": "verb",
+      "baslik": "تملأت (form V)\n# تَمَلَّأْتُ (tamallaʔtu) /ta.mal.laʔ.tu/: first-person singular past active of تَمَلَّأَ (tamallaʔa)\n# تَمَلَّأْتَ (tamallaʔta) /ta.mal.laʔ.ta/: second-person masculine singular past active of تَمَلَّأَ (tamallaʔa)\n# تَمَلَّأْتِ (tamallaʔti) /ta.mal.laʔ.ti/: second-person feminine singular past active of تَمَلَّأَ (tamallaʔa)\n# تَمَلَّأَتْ (tamallaʔat) /ta.mal.la.ʔat/: third-perso",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tamallaʔtu", "tamallaʔa", "tamallaʔta"],
+      "kok_yazilis": "تملأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتملأ",
+      "tur": "verb",
+      "baslik": "أتملأ (form V)\n# أَتَمَلَّأُ (ʔatamallaʔu) /ʔa.ta.mal.la.ʔu/: first-person singular non-past active indicative of تَمَلَّأَ (tamallaʔa)\n# أَتَمَلَّأَ (ʔatamallaʔa) /ʔa.ta.mal.la.ʔa/: first-person singular non-past active subjunctive of تَمَلَّأَ (tamallaʔa)\n# أَتَمَلَّأْ (ʔatamallaʔ) /ʔa.ta.mal.laʔ/: first-person singular non-past active jussive of تَمَلَّأَ (tamallaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔatamallaʔu", "tamallaʔa", "ʔatamallaʔa"],
+      "kok_yazilis": "تملأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تملأتن",
+      "tur": "verb",
+      "baslik": "تَمَلَّأْتُنَّ • (tamallaʔtunna) (form V) /ta.mal.laʔ.tun.na/\n# second-person feminine plural past active of تَمَلَّأَ (tamallaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tamallaʔtunna", "tamallaʔa"],
+      "kok_yazilis": "تملأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتملئين",
+      "tur": "verb",
+      "baslik": "تَتَمَلَّئِينَ • (tatamallaʔīna) (form V) /ta.ta.mal.la.ʔiː.na/\n# second-person feminine singular non-past active indicative of تَمَلَّأَ (tamallaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatamallaʔīna", "tamallaʔa"],
+      "kok_yazilis": "تملأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتملآن",
+      "tur": "verb",
+      "baslik": "تَتَمَلَّآنِ • (tatamallaʔāni) (form V) /ta.ta.mal.la.ʔaː.ni/\n# inflection of تَمَلَّأَ (tamallaʔa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatamallaʔāni", "tamallaʔa"],
+      "kok_yazilis": "تملأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتملأ",
+      "tur": "verb",
+      "baslik": "يتملأ (form V)\n# يَتَمَلَّأُ (yatamallaʔu) /ja.ta.mal.la.ʔu/: third-person masculine singular non-past active indicative of تَمَلَّأَ (tamallaʔa)\n# يُتَمَلَّأُ (yutamallaʔu) /ju.ta.mal.la.ʔu/: third-person masculine singular non-past passive indicative of تَمَلَّأَ (tamallaʔa)\n# يَتَمَلَّأَ (yatamallaʔa) /ja.ta.mal.la.ʔa/: third-person masculine singular non-past active subjunctive of تَمَلَّأَ (t",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatamallaʔu", "tamallaʔa", "yutamallaʔu"],
+      "kok_yazilis": "تملأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتملآن",
+      "tur": "verb",
+      "baslik": "يَتَمَلَّآنِ • (yatamallaʔāni) (form V) /ja.ta.mal.la.ʔaː.ni/\n# third-person masculine dual non-past active indicative of تَمَلَّأَ (tamallaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatamallaʔāni", "tamallaʔa"],
+      "kok_yazilis": "تملأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتملأ",
+      "tur": "verb",
+      "baslik": "تتملأ (form V)\n# تَتَمَلَّأُ (tatamallaʔu) /ta.ta.mal.la.ʔu/: inflection of تَمَلَّأَ (tamallaʔa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَمَلَّأَ (tatamallaʔa) /ta.ta.mal.la.ʔa/: inflection of تَمَلَّأَ (tamallaʔa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatamallaʔu", "tamallaʔa", "tatamallaʔa"],
+      "kok_yazilis": "تملأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتملأن",
+      "tur": "verb",
+      "baslik": "تَتَمَلَّأْنَ • (tatamallaʔna) (form V) /ta.ta.mal.laʔ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَمَلَّأَ (tamallaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatamallaʔna", "tamallaʔa"],
+      "kok_yazilis": "تملأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتملأ",
+      "tur": "verb",
+      "baslik": "نتملأ (form V)\n# نَتَمَلَّأُ (natamallaʔu) /na.ta.mal.la.ʔu/: first-person plural non-past active indicative of تَمَلَّأَ (tamallaʔa)\n# نَتَمَلَّأَ (natamallaʔa) /na.ta.mal.la.ʔa/: first-person plural non-past active subjunctive of تَمَلَّأَ (tamallaʔa)\n# نَتَمَلَّأْ (natamallaʔ) /na.ta.mal.laʔ/: first-person plural non-past active jussive of تَمَلَّأَ (tamallaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["natamallaʔu", "tamallaʔa", "natamallaʔa"],
+      "kok_yazilis": "تملأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتملؤون",
+      "tur": "verb",
+      "baslik": "يَتَمَلَّؤُونَ • (yatamallaʔūna) (form V) /ja.ta.mal.la.ʔuː.na/\n# third-person masculine plural non-past active indicative of تَمَلَّأَ (tamallaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatamallaʔūna", "tamallaʔa"],
+      "kok_yazilis": "تملأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتملؤون",
+      "tur": "verb",
+      "baslik": "تَتَمَلَّؤُونَ • (tatamallaʔūna) (form V) /ta.ta.mal.la.ʔuː.na/\n# second-person masculine plural non-past active indicative of تَمَلَّأَ (tamallaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatamallaʔūna", "tamallaʔa"],
+      "kok_yazilis": "تملأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتملأن",
+      "tur": "verb",
+      "baslik": "يَتَمَلَّأْنَ • (yatamallaʔna) (form V) /ja.ta.mal.laʔ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَمَلَّأَ (tamallaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatamallaʔna", "tamallaʔa"],
+      "kok_yazilis": "تملأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتملآ",
+      "tur": "verb",
+      "baslik": "تَتَمَلَّآ • (tatamallaʔā) (form V) /ta.ta.mal.la.ʔaː/\n# inflection of تَمَلَّأَ (tamallaʔa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatamallaʔā", "tamallaʔa"],
+      "kok_yazilis": "تملأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتملآ",
+      "tur": "verb",
+      "baslik": "يَتَمَلَّآ • (yatamallaʔā) (form V) /ja.ta.mal.la.ʔaː/\n# third-person masculine dual non-past active subjunctive/jussive of تَمَلَّأَ (tamallaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatamallaʔā", "tamallaʔa"],
+      "kok_yazilis": "تملأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتملئي",
+      "tur": "verb",
+      "baslik": "تَتَمَلَّئِي • (tatamallaʔī) (form V) /ta.ta.mal.la.ʔiː/\n# second-person feminine singular non-past active subjunctive/jussive of تَمَلَّأَ (tamallaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatamallaʔī", "tamallaʔa"],
+      "kok_yazilis": "تملأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتملؤوا",
+      "tur": "verb",
+      "baslik": "يَتَمَلَّؤُوا • (yatamallaʔū) (form V) /ja.ta.mal.la.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of تَمَلَّأَ (tamallaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatamallaʔū", "tamallaʔa"],
+      "kok_yazilis": "تملأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتملؤوا",
+      "tur": "verb",
+      "baslik": "تَتَمَلَّؤُوا • (tatamallaʔū) (form V) /ta.ta.mal.la.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of تَمَلَّأَ (tamallaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatamallaʔū", "tamallaʔa"],
+      "kok_yazilis": "تملأ",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تملء", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

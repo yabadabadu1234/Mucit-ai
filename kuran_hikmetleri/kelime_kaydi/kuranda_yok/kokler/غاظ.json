@@ -1,478 +1,339 @@
 {
   "kok": "غاظ",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "غاظ", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أغيظ",
-        "u": "أغيظ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أغيظ (form I)\n# أَغِيظُ (ʔaḡīẓu) /ʔa.ɣiː.ðˤu/: first-person singular non-past active indicative of غَاظَ (ḡāẓa)\n# أَغِيظَ (ʔaḡīẓa) /ʔa.ɣiː.ðˤa/: first-person singular non-past active subjunctive of غَاظَ (ḡāẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḡīẓu", "ḡāẓa", "ʔaḡīẓa"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "تغيظ",
-        "u": "تغيظ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تغيظ (form I)\n# تَغِيظُ (taḡīẓu) /ta.ɣiː.ðˤu/: inflection of غَاظَ (ḡāẓa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَغِيظَ (taḡīẓa) /ta.ɣiː.ðˤa/: inflection of غَاظَ (ḡāẓa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡīẓu", "ḡāẓa", "taḡīẓa"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "تغيظين",
-        "u": "تغيظين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَغِيظِينَ • (taḡīẓīna) (form I) /ta.ɣiː.ðˤiː.na/\n# second-person feminine singular non-past active indicative of غَاظَ (ḡāẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡīẓīna", "ḡāẓa"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "يغيظ",
-        "u": "يغيظ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يغيظ (form I)\n# يَغِيظُ (yaḡīẓu) /ja.ɣiː.ðˤu/: third-person masculine singular non-past active indicative of غَاظَ (ḡāẓa)\n# يَغِيظَ (yaḡīẓa) /ja.ɣiː.ðˤa/: third-person masculine singular non-past active subjunctive of غَاظَ (ḡāẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡīẓu", "ḡāẓa", "yaḡīẓa"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "تغيظان",
-        "u": "تغيظان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَغِيظَانِ • (taḡīẓāni) (form I) /ta.ɣiː.ðˤaː.ni/\n# inflection of غَاظَ (ḡāẓa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡīẓāni", "ḡāẓa"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "يغيظان",
-        "u": "يغيظان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَغِيظَانِ • (yaḡīẓāni) (form I) /ja.ɣiː.ðˤaː.ni/\n# third-person masculine dual non-past active indicative of غَاظَ (ḡāẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡīẓāni", "ḡāẓa"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "نغيظ",
-        "u": "نغيظ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نغيظ (form I)\n# نَغِيظُ (naḡīẓu) /na.ɣiː.ðˤu/: first-person plural non-past active indicative of غَاظَ (ḡāẓa)\n# نَغِيظَ (naḡīẓa) /na.ɣiː.ðˤa/: first-person plural non-past active subjunctive of غَاظَ (ḡāẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḡīẓu", "ḡāẓa", "naḡīẓa"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "تغيظون",
-        "u": "تغيظون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَغِيظُونَ • (taḡīẓūna) (form I) /ta.ɣiː.ðˤuː.na/\n# second-person masculine plural non-past active indicative of غَاظَ (ḡāẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡīẓūna", "ḡāẓa"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "تغظن",
-        "u": "تغظن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تغظن (form I)\n# تَغِظْنَ (taḡiẓna) /ta.ɣiðˤ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of غَاظَ (ḡāẓa)\n# تُغَظْنَ (tuḡaẓna) /tu.ɣaðˤ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of غَاظَ (ḡāẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡiẓna", "ḡāẓa", "tuḡaẓna"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "يغيظون",
-        "u": "يغيظون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَغِيظُونَ • (yaḡīẓūna) (form I) /ja.ɣiː.ðˤuː.na/\n# third-person masculine plural non-past active indicative of غَاظَ (ḡāẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡīẓūna", "ḡāẓa"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "يغظن",
-        "u": "يغظن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يغظن (form I)\n# يَغِظْنَ (yaḡiẓna) /ja.ɣiðˤ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of غَاظَ (ḡāẓa)\n# يُغَظْنَ (yuḡaẓna) /ju.ɣaðˤ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of غَاظَ (ḡāẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡiẓna", "ḡāẓa", "yuḡaẓna"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "تغيظا",
-        "u": "تغيظا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَغِيظَا • (taḡīẓā) (form I) /ta.ɣiː.ðˤaː/\n# inflection of غَاظَ (ḡāẓa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡīẓā", "ḡāẓa"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "تغيظي",
-        "u": "تغيظي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَغِيظِي • (taḡīẓī) (form I) /ta.ɣiː.ðˤiː/\n# second-person feminine singular non-past active subjunctive/jussive of غَاظَ (ḡāẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡīẓī", "ḡāẓa"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "تغيظوا",
-        "u": "تغيظوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَغِيظُوا • (taḡīẓū) (form I) /ta.ɣiː.ðˤuː/\n# second-person masculine plural non-past active subjunctive/jussive of غَاظَ (ḡāẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡīẓū", "ḡāẓa"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "يغيظا",
-        "u": "يغيظا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَغِيظَا • (yaḡīẓā) (form I) /ja.ɣiː.ðˤaː/\n# third-person masculine dual non-past active subjunctive/jussive of غَاظَ (ḡāẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡīẓā", "ḡāẓa"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "يغيظوا",
-        "u": "يغيظوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَغِيظُوا • (yaḡīẓū) (form I) /ja.ɣiː.ðˤuː/\n# third-person masculine plural non-past active subjunctive/jussive of غَاظَ (ḡāẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡīẓū", "ḡāẓa"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "أغظ",
-        "u": "أغظ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أغظ (form I)\n# أَغِظْ (ʔaḡiẓ) /ʔa.ɣiðˤ/: first-person singular non-past active jussive of غَاظَ (ḡāẓa)\n# أُغَظْ (ʔuḡaẓ) /ʔu.ɣaðˤ/: first-person singular non-past passive jussive of غَاظَ (ḡāẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḡiẓ", "ḡāẓa", "ʔuḡaẓ"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "نغظ",
-        "u": "نغظ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نغظ (form I)\n# نَغِظْ (naḡiẓ) /na.ɣiðˤ/: first-person plural non-past active jussive of غَاظَ (ḡāẓa)\n# نُغَظْ (nuḡaẓ) /nu.ɣaðˤ/: first-person plural non-past passive jussive of غَاظَ (ḡāẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḡiẓ", "ḡāẓa", "nuḡaẓ"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "تغظ",
-        "u": "تغظ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تغظ (form I)\n# تَغِظْ (taḡiẓ) /ta.ɣiðˤ/: inflection of غَاظَ (ḡāẓa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُغَظْ (tuḡaẓ) /tu.ɣaðˤ/: inflection of غَاظَ (ḡāẓa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡiẓ", "ḡāẓa", "tuḡaẓ"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "يغظ",
-        "u": "يغظ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يغظ (form I)\n# يَغِظْ (yaḡiẓ) /ja.ɣiðˤ/: third-person masculine singular non-past active jussive of غَاظَ (ḡāẓa)\n# يُغَظْ (yuḡaẓ) /ju.ɣaðˤ/: third-person masculine singular non-past passive jussive of غَاظَ (ḡāẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡiẓ", "ḡāẓa", "yuḡaẓ"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "غظت",
-        "u": "غظت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غظت (form I)\n# غِظْتُ (ḡiẓtu) /ɣiðˤ.tu/: first-person singular past active/passive of غَاظَ (ḡāẓa)\n# غِظْتَ (ḡiẓta) /ɣiðˤ.ta/: second-person masculine singular past active/passive of غَاظَ (ḡāẓa)\n# غِظْتِ (ḡiẓti) /ɣiðˤ.ti/: second-person feminine singular past active/passive of غَاظَ (ḡāẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡiẓtu", "ḡāẓa", "ḡiẓta"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "غاظت",
-        "u": "غاظت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غَاظَتْ • (ḡāẓat) (form I) /ɣaː.ðˤat/\n# third-person feminine singular past active of غَاظَ (ḡāẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡāẓat", "ḡāẓa"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "غاظا",
-        "u": "غاظا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غَاظَا • (ḡāẓā) (form I) /ɣaː.ðˤaː/\n# third-person masculine dual past active of غَاظَ (ḡāẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡāẓā", "ḡāẓa"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "غظتما",
-        "u": "غظتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غِظْتُمَا • (ḡiẓtumā) (form I) /ɣiðˤ.tu.maː/\n# second-person dual past active/passive of غَاظَ (ḡāẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡiẓtumā", "ḡāẓa"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "غظنا",
-        "u": "غظنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غِظْنَا • (ḡiẓnā) (form I) /ɣiðˤ.naː/\n# first-person plural past active/passive of غَاظَ (ḡāẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡiẓnā", "ḡāẓa"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "غاظتا",
-        "u": "غاظتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غَاظَتَا • (ḡāẓatā) (form I) /ɣaː.ðˤa.taː/\n# third-person feminine dual past active of غَاظَ (ḡāẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡāẓatā", "ḡāẓa"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "غظتم",
-        "u": "غظتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غِظْتُمْ • (ḡiẓtum) (form I) /ɣiðˤ.tum/\n# second-person masculine plural past active/passive of غَاظَ (ḡāẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡiẓtum", "ḡāẓa"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "غظتن",
-        "u": "غظتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غِظْتُنَّ • (ḡiẓtunna) (form I) /ɣiðˤ.tun.na/\n# second-person feminine plural past active/passive of غَاظَ (ḡāẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡiẓtunna", "ḡāẓa"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "غاظوا",
-        "u": "غاظوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غَاظُوا • (ḡāẓū) (form I) /ɣaː.ðˤuː/\n# third-person masculine plural past active of غَاظَ (ḡāẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡāẓū", "ḡāẓa"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "غظ",
-        "u": "غظ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غِظْ • (ḡiẓ) (form I) /ɣiðˤ/\n# second-person masculine singular imperative of غَاظَ (ḡāẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡiẓ", "ḡāẓa"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "غيظي",
-        "u": "غيظي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غِيظِي • (ḡīẓī) (form I) /ɣiː.ðˤiː/\n# second-person feminine singular imperative of غَاظَ (ḡāẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡīẓī", "ḡāẓa"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "غظن",
-        "u": "غظن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غِظْنَ • (ḡiẓna) (form I) /ɣiðˤ.na/\n# inflection of غَاظَ (ḡāẓa):\n## third-person feminine plural past active/passive\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡiẓna", "ḡāẓa"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "غيظا",
-        "u": "غيظا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غِيظَا • (ḡīẓā) (form I) /ɣiː.ðˤaː/\n# inflection of غَاظَ (ḡāẓa):\n## third-person masculine dual past passive\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡīẓā", "ḡāẓa"],
-        "k": "غاظ",
-        "yol": "kök"
-      },
-      {
-        "w": "غيظوا",
-        "u": "غيظوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غِيظُوا • (ḡīẓū) (form I) /ɣiː.ðˤuː/\n# inflection of غَاظَ (ḡāẓa):\n## third-person masculine plural past passive\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡīẓū", "ḡāẓa"],
-        "k": "غاظ",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "غظ",
+  "ses": {
     "harf": "غ",
+    "fasil": "غظ",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "أغيظ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أغيظ (form I)\n# أَغِيظُ (ʔaḡīẓu) /ʔa.ɣiː.ðˤu/: first-person singular non-past active indicative of غَاظَ (ḡāẓa)\n# أَغِيظَ (ʔaḡīẓa) /ʔa.ɣiː.ðˤa/: first-person singular non-past active subjunctive of غَاظَ (ḡāẓa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḡīẓu", "ḡāẓa", "ʔaḡīẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغيظ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تغيظ (form I)\n# تَغِيظُ (taḡīẓu) /ta.ɣiː.ðˤu/: inflection of غَاظَ (ḡāẓa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَغِيظَ (taḡīẓa) /ta.ɣiː.ðˤa/: inflection of غَاظَ (ḡāẓa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡīẓu", "ḡāẓa", "taḡīẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغيظين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَغِيظِينَ • (taḡīẓīna) (form I) /ta.ɣiː.ðˤiː.na/\n# second-person feminine singular non-past active indicative of غَاظَ (ḡāẓa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡīẓīna", "ḡāẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغيظ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يغيظ (form I)\n# يَغِيظُ (yaḡīẓu) /ja.ɣiː.ðˤu/: third-person masculine singular non-past active indicative of غَاظَ (ḡāẓa)\n# يَغِيظَ (yaḡīẓa) /ja.ɣiː.ðˤa/: third-person masculine singular non-past active subjunctive of غَاظَ (ḡāẓa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡīẓu", "ḡāẓa", "yaḡīẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغيظان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَغِيظَانِ • (taḡīẓāni) (form I) /ta.ɣiː.ðˤaː.ni/\n# inflection of غَاظَ (ḡāẓa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡīẓāni", "ḡāẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغيظان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَغِيظَانِ • (yaḡīẓāni) (form I) /ja.ɣiː.ðˤaː.ni/\n# third-person masculine dual non-past active indicative of غَاظَ (ḡāẓa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡīẓāni", "ḡāẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نغيظ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نغيظ (form I)\n# نَغِيظُ (naḡīẓu) /na.ɣiː.ðˤu/: first-person plural non-past active indicative of غَاظَ (ḡāẓa)\n# نَغِيظَ (naḡīẓa) /na.ɣiː.ðˤa/: first-person plural non-past active subjunctive of غَاظَ (ḡāẓa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḡīẓu", "ḡāẓa", "naḡīẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغيظون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَغِيظُونَ • (taḡīẓūna) (form I) /ta.ɣiː.ðˤuː.na/\n# second-person masculine plural non-past active indicative of غَاظَ (ḡāẓa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡīẓūna", "ḡāẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغظن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تغظن (form I)\n# تَغِظْنَ (taḡiẓna) /ta.ɣiðˤ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of غَاظَ (ḡāẓa)\n# تُغَظْنَ (tuḡaẓna) /tu.ɣaðˤ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of غَاظَ (ḡāẓa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡiẓna", "ḡāẓa", "tuḡaẓna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغيظون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَغِيظُونَ • (yaḡīẓūna) (form I) /ja.ɣiː.ðˤuː.na/\n# third-person masculine plural non-past active indicative of غَاظَ (ḡāẓa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡīẓūna", "ḡāẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغظن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يغظن (form I)\n# يَغِظْنَ (yaḡiẓna) /ja.ɣiðˤ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of غَاظَ (ḡāẓa)\n# يُغَظْنَ (yuḡaẓna) /ju.ɣaðˤ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of غَاظَ (ḡāẓa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡiẓna", "ḡāẓa", "yuḡaẓna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغيظا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَغِيظَا • (taḡīẓā) (form I) /ta.ɣiː.ðˤaː/\n# inflection of غَاظَ (ḡāẓa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡīẓā", "ḡāẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغيظي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَغِيظِي • (taḡīẓī) (form I) /ta.ɣiː.ðˤiː/\n# second-person feminine singular non-past active subjunctive/jussive of غَاظَ (ḡāẓa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡīẓī", "ḡāẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغيظوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَغِيظُوا • (taḡīẓū) (form I) /ta.ɣiː.ðˤuː/\n# second-person masculine plural non-past active subjunctive/jussive of غَاظَ (ḡāẓa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡīẓū", "ḡāẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغيظا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَغِيظَا • (yaḡīẓā) (form I) /ja.ɣiː.ðˤaː/\n# third-person masculine dual non-past active subjunctive/jussive of غَاظَ (ḡāẓa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡīẓā", "ḡāẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغيظوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَغِيظُوا • (yaḡīẓū) (form I) /ja.ɣiː.ðˤuː/\n# third-person masculine plural non-past active subjunctive/jussive of غَاظَ (ḡāẓa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡīẓū", "ḡāẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغظ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أغظ (form I)\n# أَغِظْ (ʔaḡiẓ) /ʔa.ɣiðˤ/: first-person singular non-past active jussive of غَاظَ (ḡāẓa)\n# أُغَظْ (ʔuḡaẓ) /ʔu.ɣaðˤ/: first-person singular non-past passive jussive of غَاظَ (ḡāẓa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḡiẓ", "ḡāẓa", "ʔuḡaẓ"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نغظ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نغظ (form I)\n# نَغِظْ (naḡiẓ) /na.ɣiðˤ/: first-person plural non-past active jussive of غَاظَ (ḡāẓa)\n# نُغَظْ (nuḡaẓ) /nu.ɣaðˤ/: first-person plural non-past passive jussive of غَاظَ (ḡāẓa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḡiẓ", "ḡāẓa", "nuḡaẓ"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغظ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تغظ (form I)\n# تَغِظْ (taḡiẓ) /ta.ɣiðˤ/: inflection of غَاظَ (ḡāẓa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُغَظْ (tuḡaẓ) /tu.ɣaðˤ/: inflection of غَاظَ (ḡāẓa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡiẓ", "ḡāẓa", "tuḡaẓ"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغظ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يغظ (form I)\n# يَغِظْ (yaḡiẓ) /ja.ɣiðˤ/: third-person masculine singular non-past active jussive of غَاظَ (ḡāẓa)\n# يُغَظْ (yuḡaẓ) /ju.ɣaðˤ/: third-person masculine singular non-past passive jussive of غَاظَ (ḡāẓa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡiẓ", "ḡāẓa", "yuḡaẓ"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "غظت",
+      "tur": "verb",
+      "baslik": "غظت (form I)\n# غِظْتُ (ḡiẓtu) /ɣiðˤ.tu/: first-person singular past active/passive of غَاظَ (ḡāẓa)\n# غِظْتَ (ḡiẓta) /ɣiðˤ.ta/: second-person masculine singular past active/passive of غَاظَ (ḡāẓa)\n# غِظْتِ (ḡiẓti) /ɣiðˤ.ti/: second-person feminine singular past active/passive of غَاظَ (ḡāẓa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡiẓtu", "ḡāẓa", "ḡiẓta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "غاظت",
+      "tur": "verb",
+      "baslik": "غَاظَتْ • (ḡāẓat) (form I) /ɣaː.ðˤat/\n# third-person feminine singular past active of غَاظَ (ḡāẓa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡāẓat", "ḡāẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "غاظا",
+      "tur": "verb",
+      "baslik": "غَاظَا • (ḡāẓā) (form I) /ɣaː.ðˤaː/\n# third-person masculine dual past active of غَاظَ (ḡāẓa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡāẓā", "ḡāẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "غظتما",
+      "tur": "verb",
+      "baslik": "غِظْتُمَا • (ḡiẓtumā) (form I) /ɣiðˤ.tu.maː/\n# second-person dual past active/passive of غَاظَ (ḡāẓa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡiẓtumā", "ḡāẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "غظنا",
+      "tur": "verb",
+      "baslik": "غِظْنَا • (ḡiẓnā) (form I) /ɣiðˤ.naː/\n# first-person plural past active/passive of غَاظَ (ḡāẓa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡiẓnā", "ḡāẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "غاظتا",
+      "tur": "verb",
+      "baslik": "غَاظَتَا • (ḡāẓatā) (form I) /ɣaː.ðˤa.taː/\n# third-person feminine dual past active of غَاظَ (ḡāẓa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡāẓatā", "ḡāẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "غظتم",
+      "tur": "verb",
+      "baslik": "غِظْتُمْ • (ḡiẓtum) (form I) /ɣiðˤ.tum/\n# second-person masculine plural past active/passive of غَاظَ (ḡāẓa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡiẓtum", "ḡāẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "غظتن",
+      "tur": "verb",
+      "baslik": "غِظْتُنَّ • (ḡiẓtunna) (form I) /ɣiðˤ.tun.na/\n# second-person feminine plural past active/passive of غَاظَ (ḡāẓa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡiẓtunna", "ḡāẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "غاظوا",
+      "tur": "verb",
+      "baslik": "غَاظُوا • (ḡāẓū) (form I) /ɣaː.ðˤuː/\n# third-person masculine plural past active of غَاظَ (ḡāẓa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡāẓū", "ḡāẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "غظ",
+      "tur": "verb",
+      "baslik": "غِظْ • (ḡiẓ) (form I) /ɣiðˤ/\n# second-person masculine singular imperative of غَاظَ (ḡāẓa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡiẓ", "ḡāẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "غيظي",
+      "tur": "verb",
+      "baslik": "غِيظِي • (ḡīẓī) (form I) /ɣiː.ðˤiː/\n# second-person feminine singular imperative of غَاظَ (ḡāẓa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡīẓī", "ḡāẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "غظن",
+      "tur": "verb",
+      "baslik": "غِظْنَ • (ḡiẓna) (form I) /ɣiðˤ.na/\n# inflection of غَاظَ (ḡāẓa):\n## third-person feminine plural past active/passive\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡiẓna", "ḡāẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "غيظا",
+      "tur": "verb",
+      "baslik": "غِيظَا • (ḡīẓā) (form I) /ɣiː.ðˤaː/\n# inflection of غَاظَ (ḡāẓa):\n## third-person masculine dual past passive\n## second-person dual imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡīẓā", "ḡāẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "غيظوا",
+      "tur": "verb",
+      "baslik": "غِيظُوا • (ḡīẓū) (form I) /ɣiː.ðˤuː/\n# inflection of غَاظَ (ḡāẓa):\n## third-person masculine plural past passive\n## second-person masculine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡīẓū", "ḡāẓa"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "غاظ", "r7"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

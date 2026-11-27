@@ -1,388 +1,287 @@
 {
   "kok": "فسفس",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "فسفس", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الفاء والسين",
-      "baslik": "فسفس",
-      "mihveri": "ضَعْفُ القوة المختزنة في باطن الشيء أو ذهابها والخلو منها (1).",
-      "sesler": "تعبر الفاء عن نفي أو إبعاد بقوة، والسين عن نفاذ بدقة وحدّة، والفصل منهما يعبر عن ضعف القوة المختزنة كأنما اختُرقت بحاد أو تَسَرَّبت. وفي (فسح) تعبر الحاء =",
-      "tam_metin": "\"الفَسيسُ: الرجل الضعيفُ البدن، والضعيفُ العقل. وفَسْفَس الرجل: حَمُق حماقة محكمة \".\n° المعنى المحوري\nضَعْفُ القوة المختزنة في باطن الشيء أو ذهابها والخلو منها (1).\n__________\n(1) (صوتيًّا): تعبر الفاء عن نفي أو إبعاد بقوة، والسين عن نفاذ بدقة وحدّة، والفصل منهما يعبر عن ضعف القوة المختزنة كأنما اختُرقت بحاد أو تَسَرَّبت. وفي (فسح) تعبر الحاء =\n(3/1670)",
-      "fasil_ozeti": "° معنى الفصل المعجمي (فس) : هو ذهاب غلظ الشيء بتسرب قوته أو غلظه منه: كتسرب القوة والصحة من أثناء الشخص الضعيف البدن والعقل -في (فسس)، وكذلك ذهاب الكتل الغليظة التي تشغل المكان فيتسع فراغه -في (فسح)، وكذهاب نفع الشيء وصلاحه منه وبقائه على حدّة الفساد والتلف في أثنائه -في (فسد)، وكذهاب الكدر والكثافة من أثناء البول فيصفو وتنكشف أثناؤه وتعرف حاله -في (فسر)، وكما تخرج الرطبة من قشرها وتخرج الفواسق من جِحَرتها -في (فسق)."
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "فسفس",
-        "u": "فسفس",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb",
-        "e": "فَسْفَسَ • (fasfasa) Iq (non-past يُفَسْفِسُ (yufasfisu), verbal noun فَسْفَسَة (fasfasa))",
-        "t": "From the reduplicated root ف س ف س (f s f s).",
-        "s": [
-          ["glossary", "reduplicated"],
-          ["ar-reduplicated", "reduplicated"],
-          ["ar-root", "ف س ف س (f s f s)"]
-        ],
-        "g": ["to aggravate one's stupidity, to be extremely stupid"],
-        "r": ["fasfasa"],
-        "el": [
-          ["ف س ف س", "Appendix:Arabic roots/ف س ف س"]
-        ],
-        "k": "فسفس",
-        "yol": "kök"
-      },
-      {
-        "w": "فسافس",
-        "u": "فسافس",
-        "p": "adj",
-        "h": "ar-adj",
-        "e": "فَسَافِس • (fasāfis)",
-        "synonyms": ["كَلِيل"],
-        "g": ["extremely stupid, idiot", "blunt; not sharp"],
-        "r": ["fasāfis"],
-        "ipa": ["/fa.saː.fis/"],
-        "k": "فسفس",
-        "yol": "kök"
-      },
-      {
-        "w": "فسفست",
-        "u": "فسفست",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فسفست (form Iq)\n# فَسْفَسْتُ (fasfastu) /fas.fas.tu/: first-person singular past active of فَسْفَسَ (fasfasa)\n# فَسْفَسْتَ (fasfasta) /fas.fas.ta/: second-person masculine singular past active of فَسْفَسَ (fasfasa)\n# فَسْفَسْتِ (fasfasti) /fas.fas.ti/: second-person feminine singular past active of فَسْفَسَ (fasfasa)\n# فَسْفَسَتْ (fasfasat) /fas.fa.sat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["fasfastu", "fasfasa", "fasfasta"],
-        "k": "فسفس",
-        "yol": "kök"
-      },
-      {
-        "w": "فسفستما",
-        "u": "فسفستما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فَسْفَسْتُمَا • (fasfastumā) (form Iq) /fas.fas.tu.maː/\n# second-person dual past active of فَسْفَسَ (fasfasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["fasfastumā", "fasfasa"],
-        "k": "فسفس",
-        "yol": "kök"
-      },
-      {
-        "w": "فسفسا",
-        "u": "فسفسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فسفسا (form Iq)\n# فَسْفَسَا (fasfasā) /fas.fa.saː/: third-person masculine dual past active of فَسْفَسَ (fasfasa)\n# فَسْفِسَا (fasfisā) /fas.fi.saː/: second-person dual imperative of فَسْفَسَ (fasfasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["fasfasā", "fasfasa", "fasfisā"],
-        "k": "فسفس",
-        "yol": "kök"
-      },
-      {
-        "w": "فسفستا",
-        "u": "فسفستا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فَسْفَسَتَا • (fasfasatā) (form Iq) /fas.fa.sa.taː/\n# third-person feminine dual past active of فَسْفَسَ (fasfasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["fasfasatā", "fasfasa"],
-        "k": "فسفس",
-        "yol": "kök"
-      },
-      {
-        "w": "فسفستم",
-        "u": "فسفستم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فَسْفَسْتُمْ • (fasfastum) (form Iq) /fas.fas.tum/\n# second-person masculine plural past active of فَسْفَسَ (fasfasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["fasfastum", "fasfasa"],
-        "k": "فسفس",
-        "yol": "kök"
-      },
-      {
-        "w": "فسفسنا",
-        "u": "فسفسنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فَسْفَسْنَا • (fasfasnā) (form Iq) /fas.fas.naː/\n# first-person plural past active of فَسْفَسَ (fasfasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["fasfasnā", "fasfasa"],
-        "k": "فسفس",
-        "yol": "kök"
-      },
-      {
-        "w": "فسفستن",
-        "u": "فسفستن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فَسْفَسْتُنَّ • (fasfastunna) (form Iq) /fas.fas.tun.na/\n# second-person feminine plural past active of فَسْفَسَ (fasfasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["fasfastunna", "fasfasa"],
-        "k": "فسفس",
-        "yol": "kök"
-      },
-      {
-        "w": "فسفسن",
-        "u": "فسفسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فسفسن (form Iq)\n# فَسْفَسْنَ (fasfasna) /fas.fas.na/: third-person feminine plural past active of فَسْفَسَ (fasfasa)\n# فَسْفِسْنَ (fasfisna) /fas.fis.na/: second-person feminine plural imperative of فَسْفَسَ (fasfasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["fasfasna", "fasfasa", "fasfisna"],
-        "k": "فسفس",
-        "yol": "kök"
-      },
-      {
-        "w": "فسفسوا",
-        "u": "فسفسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فسفسوا (form Iq)\n# فَسْفَسُوا (fasfasū) /fas.fa.suː/: third-person masculine plural past active of فَسْفَسَ (fasfasa)\n# فَسْفِسُوا (fasfisū) /fas.fi.suː/: second-person masculine plural imperative of فَسْفَسَ (fasfasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["fasfasū", "fasfasa", "fasfisū"],
-        "k": "فسفس",
-        "yol": "kök"
-      },
-      {
-        "w": "تفسفس",
-        "u": "تفسفس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تفسفس (form Iq)\n# تُفَسْفِسُ (tufasfisu) /tu.fas.fi.su/: inflection of فَسْفَسَ (fasfasa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُفَسْفِسَ (tufasfisa) /tu.fas.fi.sa/: inflection of فَسْفَسَ (fasfasa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past act",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tufasfisu", "fasfasa", "tufasfisa"],
-        "k": "فسفس",
-        "yol": "kök"
-      },
-      {
-        "w": "تفسفسين",
-        "u": "تفسفسين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُفَسْفِسِينَ • (tufasfisīna) (form Iq) /tu.fas.fi.siː.na/\n# second-person feminine singular non-past active indicative of فَسْفَسَ (fasfasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tufasfisīna", "fasfasa"],
-        "k": "فسفس",
-        "yol": "kök"
-      },
-      {
-        "w": "تفسفسان",
-        "u": "تفسفسان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُفَسْفِسَانِ • (tufasfisāni) (form Iq) /tu.fas.fi.saː.ni/\n# inflection of فَسْفَسَ (fasfasa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tufasfisāni", "fasfasa"],
-        "k": "فسفس",
-        "yol": "kök"
-      },
-      {
-        "w": "يفسفس",
-        "u": "يفسفس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يفسفس (form Iq)\n# يُفَسْفِسُ (yufasfisu) /ju.fas.fi.su/: third-person masculine singular non-past active indicative of فَسْفَسَ (fasfasa)\n# يُفَسْفِسَ (yufasfisa) /ju.fas.fi.sa/: third-person masculine singular non-past active subjunctive of فَسْفَسَ (fasfasa)\n# يُفَسْفِسْ (yufasfis) /ju.fas.fis/: third-person masculine singular non-past active jussive of فَسْفَسَ (fasfasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yufasfisu", "fasfasa", "yufasfisa"],
-        "k": "فسفس",
-        "yol": "kök"
-      },
-      {
-        "w": "تفسفسون",
-        "u": "تفسفسون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُفَسْفِسُونَ • (tufasfisūna) (form Iq) /tu.fas.fi.suː.na/\n# second-person masculine plural non-past active indicative of فَسْفَسَ (fasfasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tufasfisūna", "fasfasa"],
-        "k": "فسفس",
-        "yol": "kök"
-      },
-      {
-        "w": "يفسفسان",
-        "u": "يفسفسان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُفَسْفِسَانِ • (yufasfisāni) (form Iq) /ju.fas.fi.saː.ni/\n# third-person masculine dual non-past active indicative of فَسْفَسَ (fasfasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yufasfisāni", "fasfasa"],
-        "k": "فسفس",
-        "yol": "kök"
-      },
-      {
-        "w": "يفسفسون",
-        "u": "يفسفسون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُفَسْفِسُونَ • (yufasfisūna) (form Iq) /ju.fas.fi.suː.na/\n# third-person masculine plural non-past active indicative of فَسْفَسَ (fasfasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yufasfisūna", "fasfasa"],
-        "k": "فسفس",
-        "yol": "kök"
-      },
-      {
-        "w": "تفسفسن",
-        "u": "تفسفسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُفَسْفِسْنَ • (tufasfisna) (form Iq) /tu.fas.fis.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of فَسْفَسَ (fasfasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tufasfisna", "fasfasa"],
-        "k": "فسفس",
-        "yol": "kök"
-      },
-      {
-        "w": "أفسفس",
-        "u": "أفسفس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أفسفس (form Iq)\n# أُفَسْفِسُ (ʔufasfisu) /ʔu.fas.fi.su/: first-person singular non-past active indicative of فَسْفَسَ (fasfasa)\n# أُفَسْفِسَ (ʔufasfisa) /ʔu.fas.fi.sa/: first-person singular non-past active subjunctive of فَسْفَسَ (fasfasa)\n# أُفَسْفِسْ (ʔufasfis) /ʔu.fas.fis/: first-person singular non-past active jussive of فَسْفَسَ (fasfasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʔufasfisu", "fasfasa", "ʔufasfisa"],
-        "k": "فسفس",
-        "yol": "kök"
-      },
-      {
-        "w": "نفسفس",
-        "u": "نفسفس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نفسفس (form Iq)\n# نُفَسْفِسُ (nufasfisu) /nu.fas.fi.su/: first-person plural non-past active indicative of فَسْفَسَ (fasfasa)\n# نُفَسْفِسَ (nufasfisa) /nu.fas.fi.sa/: first-person plural non-past active subjunctive of فَسْفَسَ (fasfasa)\n# نُفَسْفِسْ (nufasfis) /nu.fas.fis/: first-person plural non-past active jussive of فَسْفَسَ (fasfasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["nufasfisu", "fasfasa", "nufasfisa"],
-        "k": "فسفس",
-        "yol": "kök"
-      },
-      {
-        "w": "يفسفسن",
-        "u": "يفسفسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُفَسْفِسْنَ • (yufasfisna) (form Iq) /ju.fas.fis.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of فَسْفَسَ (fasfasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yufasfisna", "fasfasa"],
-        "k": "فسفس",
-        "yol": "kök"
-      },
-      {
-        "w": "يفسفسا",
-        "u": "يفسفسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُفَسْفِسَا • (yufasfisā) (form Iq) /ju.fas.fi.saː/\n# third-person masculine dual non-past active subjunctive/jussive of فَسْفَسَ (fasfasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yufasfisā", "fasfasa"],
-        "k": "فسفس",
-        "yol": "kök"
-      },
-      {
-        "w": "تفسفسي",
-        "u": "تفسفسي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُفَسْفِسِي • (tufasfisī) (form Iq) /tu.fas.fi.siː/\n# second-person feminine singular non-past active subjunctive/jussive of فَسْفَسَ (fasfasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tufasfisī", "fasfasa"],
-        "k": "فسفس",
-        "yol": "kök"
-      },
-      {
-        "w": "تفسفسا",
-        "u": "تفسفسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُفَسْفِسَا • (tufasfisā) (form Iq) /tu.fas.fi.saː/\n# inflection of فَسْفَسَ (fasfasa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tufasfisā", "fasfasa"],
-        "k": "فسفس",
-        "yol": "kök"
-      },
-      {
-        "w": "فسفسي",
-        "u": "فسفسي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فَسْفِسِي • (fasfisī) (form Iq) /fas.fi.siː/\n# second-person feminine singular imperative of فَسْفَسَ (fasfasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["fasfisī", "fasfasa"],
-        "k": "فسفس",
-        "yol": "kök"
-      },
-      {
-        "w": "تفسفسوا",
-        "u": "تفسفسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُفَسْفِسُوا • (tufasfisū) (form Iq) /tu.fas.fi.suː/\n# second-person masculine plural non-past active subjunctive/jussive of فَسْفَسَ (fasfasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tufasfisū", "fasfasa"],
-        "k": "فسفس",
-        "yol": "kök"
-      },
-      {
-        "w": "يفسفسوا",
-        "u": "يفسفسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُفَسْفِسُوا • (yufasfisū) (form Iq) /ju.fas.fi.suː/\n# third-person masculine plural non-past active subjunctive/jussive of فَسْفَسَ (fasfasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yufasfisū", "fasfasa"],
-        "k": "فسفس",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "فس",
+  "ses": {
     "harf": "ف",
+    "fasil": "فس",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
+  "cebel": {
+    "fasil": "الفاء والسين",
+    "baslik": "فسفس",
+    "mihveri": "ضَعْفُ القوة المختزنة في باطن الشيء أو ذهابها والخلو منها (1).",
+    "sesler": "تعبر الفاء عن نفي أو إبعاد بقوة، والسين عن نفاذ بدقة وحدّة، والفصل منهما يعبر عن ضعف القوة المختزنة كأنما اختُرقت بحاد أو تَسَرَّبت. وفي (فسح) تعبر الحاء =",
+    "tam_metin": "\"الفَسيسُ: الرجل الضعيفُ البدن، والضعيفُ العقل. وفَسْفَس الرجل: حَمُق حماقة محكمة \".\n° المعنى المحوري\nضَعْفُ القوة المختزنة في باطن الشيء أو ذهابها والخلو منها (1).\n__________\n(1) (صوتيًّا): تعبر الفاء عن نفي أو إبعاد بقوة، والسين عن نفاذ بدقة وحدّة، والفصل منهما يعبر عن ضعف القوة المختزنة كأنما اختُرقت بحاد أو تَسَرَّبت. وفي (فسح) تعبر الحاء =\n(3/1670)",
+    "fasil_ozeti": "° معنى الفصل المعجمي (فس) : هو ذهاب غلظ الشيء بتسرب قوته أو غلظه منه: كتسرب القوة والصحة من أثناء الشخص الضعيف البدن والعقل -في (فسس)، وكذلك ذهاب الكتل الغليظة التي تشغل المكان فيتسع فراغه -في (فسح)، وكذهاب نفع الشيء وصلاحه منه وبقائه على حدّة الفساد والتلف في أثنائه -في (فسد)، وكذهاب الكدر والكثافة من أثناء البول فيصفو وتنكشف أثناؤه وتعرف حاله -في (فسر)، وكما تخرج الرطبة من قشرها وتخرج الفواسق من جِحَرتها -في (فسق)."
+  },
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "فسفس",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "فَسْفَسَ • (fasfasa) Iq (non-past يُفَسْفِسُ (yufasfisu), verbal noun فَسْفَسَة (fasfasa))",
+      "etim_sablon": [
+        ["glossary", "reduplicated"],
+        ["ar-reduplicated", "reduplicated"],
+        ["ar-root", "ف س ف س (f s f s)"]
+      ],
+      "anlam": ["to aggravate one's stupidity, to be extremely stupid"],
+      "okunus": ["fasfasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "فسافس",
+      "tur": "adj",
+      "baslik": "فَسَافِس • (fasāfis)",
+      "esanlamli": ["كَلِيل"],
+      "anlam": ["extremely stupid, idiot", "blunt; not sharp"],
+      "okunus": ["fasāfis"],
+      "ipa": ["/fa.saː.fis/"]
+    },
+    {
+      "madde": "فسفست",
+      "tur": "verb",
+      "baslik": "فسفست (form Iq)\n# فَسْفَسْتُ (fasfastu) /fas.fas.tu/: first-person singular past active of فَسْفَسَ (fasfasa)\n# فَسْفَسْتَ (fasfasta) /fas.fas.ta/: second-person masculine singular past active of فَسْفَسَ (fasfasa)\n# فَسْفَسْتِ (fasfasti) /fas.fas.ti/: second-person feminine singular past active of فَسْفَسَ (fasfasa)\n# فَسْفَسَتْ (fasfasat) /fas.fa.sat/: third-person feminine singular past active ",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["fasfastu", "fasfasa", "fasfasta"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "فسفستما",
+      "tur": "verb",
+      "baslik": "فَسْفَسْتُمَا • (fasfastumā) (form Iq) /fas.fas.tu.maː/\n# second-person dual past active of فَسْفَسَ (fasfasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["fasfastumā", "fasfasa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "فسفسا",
+      "tur": "verb",
+      "baslik": "فسفسا (form Iq)\n# فَسْفَسَا (fasfasā) /fas.fa.saː/: third-person masculine dual past active of فَسْفَسَ (fasfasa)\n# فَسْفِسَا (fasfisā) /fas.fi.saː/: second-person dual imperative of فَسْفَسَ (fasfasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["fasfasā", "fasfasa", "fasfisā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "فسفستا",
+      "tur": "verb",
+      "baslik": "فَسْفَسَتَا • (fasfasatā) (form Iq) /fas.fa.sa.taː/\n# third-person feminine dual past active of فَسْفَسَ (fasfasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["fasfasatā", "fasfasa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "فسفستم",
+      "tur": "verb",
+      "baslik": "فَسْفَسْتُمْ • (fasfastum) (form Iq) /fas.fas.tum/\n# second-person masculine plural past active of فَسْفَسَ (fasfasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["fasfastum", "fasfasa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "فسفسنا",
+      "tur": "verb",
+      "baslik": "فَسْفَسْنَا • (fasfasnā) (form Iq) /fas.fas.naː/\n# first-person plural past active of فَسْفَسَ (fasfasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["fasfasnā", "fasfasa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "فسفستن",
+      "tur": "verb",
+      "baslik": "فَسْفَسْتُنَّ • (fasfastunna) (form Iq) /fas.fas.tun.na/\n# second-person feminine plural past active of فَسْفَسَ (fasfasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["fasfastunna", "fasfasa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "فسفسن",
+      "tur": "verb",
+      "baslik": "فسفسن (form Iq)\n# فَسْفَسْنَ (fasfasna) /fas.fas.na/: third-person feminine plural past active of فَسْفَسَ (fasfasa)\n# فَسْفِسْنَ (fasfisna) /fas.fis.na/: second-person feminine plural imperative of فَسْفَسَ (fasfasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["fasfasna", "fasfasa", "fasfisna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "فسفسوا",
+      "tur": "verb",
+      "baslik": "فسفسوا (form Iq)\n# فَسْفَسُوا (fasfasū) /fas.fa.suː/: third-person masculine plural past active of فَسْفَسَ (fasfasa)\n# فَسْفِسُوا (fasfisū) /fas.fi.suː/: second-person masculine plural imperative of فَسْفَسَ (fasfasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["fasfasū", "fasfasa", "fasfisū"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تفسفس",
+      "tur": "verb",
+      "baslik": "تفسفس (form Iq)\n# تُفَسْفِسُ (tufasfisu) /tu.fas.fi.su/: inflection of فَسْفَسَ (fasfasa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُفَسْفِسَ (tufasfisa) /tu.fas.fi.sa/: inflection of فَسْفَسَ (fasfasa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past act",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tufasfisu", "fasfasa", "tufasfisa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تفسفسين",
+      "tur": "verb",
+      "baslik": "تُفَسْفِسِينَ • (tufasfisīna) (form Iq) /tu.fas.fi.siː.na/\n# second-person feminine singular non-past active indicative of فَسْفَسَ (fasfasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tufasfisīna", "fasfasa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تفسفسان",
+      "tur": "verb",
+      "baslik": "تُفَسْفِسَانِ • (tufasfisāni) (form Iq) /tu.fas.fi.saː.ni/\n# inflection of فَسْفَسَ (fasfasa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tufasfisāni", "fasfasa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يفسفس",
+      "tur": "verb",
+      "baslik": "يفسفس (form Iq)\n# يُفَسْفِسُ (yufasfisu) /ju.fas.fi.su/: third-person masculine singular non-past active indicative of فَسْفَسَ (fasfasa)\n# يُفَسْفِسَ (yufasfisa) /ju.fas.fi.sa/: third-person masculine singular non-past active subjunctive of فَسْفَسَ (fasfasa)\n# يُفَسْفِسْ (yufasfis) /ju.fas.fis/: third-person masculine singular non-past active jussive of فَسْفَسَ (fasfasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yufasfisu", "fasfasa", "yufasfisa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تفسفسون",
+      "tur": "verb",
+      "baslik": "تُفَسْفِسُونَ • (tufasfisūna) (form Iq) /tu.fas.fi.suː.na/\n# second-person masculine plural non-past active indicative of فَسْفَسَ (fasfasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tufasfisūna", "fasfasa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يفسفسان",
+      "tur": "verb",
+      "baslik": "يُفَسْفِسَانِ • (yufasfisāni) (form Iq) /ju.fas.fi.saː.ni/\n# third-person masculine dual non-past active indicative of فَسْفَسَ (fasfasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yufasfisāni", "fasfasa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يفسفسون",
+      "tur": "verb",
+      "baslik": "يُفَسْفِسُونَ • (yufasfisūna) (form Iq) /ju.fas.fi.suː.na/\n# third-person masculine plural non-past active indicative of فَسْفَسَ (fasfasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yufasfisūna", "fasfasa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تفسفسن",
+      "tur": "verb",
+      "baslik": "تُفَسْفِسْنَ • (tufasfisna) (form Iq) /tu.fas.fis.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of فَسْفَسَ (fasfasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tufasfisna", "fasfasa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "أفسفس",
+      "tur": "verb",
+      "baslik": "أفسفس (form Iq)\n# أُفَسْفِسُ (ʔufasfisu) /ʔu.fas.fi.su/: first-person singular non-past active indicative of فَسْفَسَ (fasfasa)\n# أُفَسْفِسَ (ʔufasfisa) /ʔu.fas.fi.sa/: first-person singular non-past active subjunctive of فَسْفَسَ (fasfasa)\n# أُفَسْفِسْ (ʔufasfis) /ʔu.fas.fis/: first-person singular non-past active jussive of فَسْفَسَ (fasfasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʔufasfisu", "fasfasa", "ʔufasfisa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "نفسفس",
+      "tur": "verb",
+      "baslik": "نفسفس (form Iq)\n# نُفَسْفِسُ (nufasfisu) /nu.fas.fi.su/: first-person plural non-past active indicative of فَسْفَسَ (fasfasa)\n# نُفَسْفِسَ (nufasfisa) /nu.fas.fi.sa/: first-person plural non-past active subjunctive of فَسْفَسَ (fasfasa)\n# نُفَسْفِسْ (nufasfis) /nu.fas.fis/: first-person plural non-past active jussive of فَسْفَسَ (fasfasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["nufasfisu", "fasfasa", "nufasfisa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يفسفسن",
+      "tur": "verb",
+      "baslik": "يُفَسْفِسْنَ • (yufasfisna) (form Iq) /ju.fas.fis.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of فَسْفَسَ (fasfasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yufasfisna", "fasfasa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يفسفسا",
+      "tur": "verb",
+      "baslik": "يُفَسْفِسَا • (yufasfisā) (form Iq) /ju.fas.fi.saː/\n# third-person masculine dual non-past active subjunctive/jussive of فَسْفَسَ (fasfasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yufasfisā", "fasfasa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تفسفسي",
+      "tur": "verb",
+      "baslik": "تُفَسْفِسِي • (tufasfisī) (form Iq) /tu.fas.fi.siː/\n# second-person feminine singular non-past active subjunctive/jussive of فَسْفَسَ (fasfasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tufasfisī", "fasfasa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تفسفسا",
+      "tur": "verb",
+      "baslik": "تُفَسْفِسَا • (tufasfisā) (form Iq) /tu.fas.fi.saː/\n# inflection of فَسْفَسَ (fasfasa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tufasfisā", "fasfasa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "فسفسي",
+      "tur": "verb",
+      "baslik": "فَسْفِسِي • (fasfisī) (form Iq) /fas.fi.siː/\n# second-person feminine singular imperative of فَسْفَسَ (fasfasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["fasfisī", "fasfasa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تفسفسوا",
+      "tur": "verb",
+      "baslik": "تُفَسْفِسُوا • (tufasfisū) (form Iq) /tu.fas.fi.suː/\n# second-person masculine plural non-past active subjunctive/jussive of فَسْفَسَ (fasfasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tufasfisū", "fasfasa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يفسفسوا",
+      "tur": "verb",
+      "baslik": "يُفَسْفِسُوا • (yufasfisū) (form Iq) /ju.fas.fi.suː/\n# third-person masculine plural non-past active subjunctive/jussive of فَسْفَسَ (fasfasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yufasfisū", "fasfasa"],
+      "etimoloji": 2
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "From the reduplicated root ف س ف س (f s f s).",
+      "kognatlar": [
+        ["ف س ف س", "Appendix:Arabic roots/ف س ف س"]
+      ]
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "فسفس", "r6"]
+  ],
+  "mana": {
     "ince": "stupid.a.01",
     "orta": "adj.all",
     "ust": "hâl ve vasıf",
@@ -390,25 +289,8 @@
     "dayanak_tanim": "lacking or marked by lack of intellectual acuity",
     "dayanak_karsilik": "extremely stupid"
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "الفاء والسين",
-    "mihveri": "ضَعْفُ القوة المختزنة في باطن الشيء أو ذهابها والخلو منها (1).",
-    "sesler": "تعبر الفاء عن نفي أو إبعاد بقوة، والسين عن نفاذ بدقة وحدّة، والفصل منهما يعبر عن ضعف القوة المختزنة كأنما اختُرقت بحاد أو تَسَرَّبت. وفي (فسح) تعبر الحاء =",
-    "fasil_ozeti": "° معنى الفصل المعجمي (فس) : هو ذهاب غلظ الشيء بتسرب قوته أو غلظه منه: كتسرب القوة والصحة من أثناء الشخص الضعيف البدن والعقل -في (فسس)، وكذلك ذهاب الكتل الغليظة التي تشغل المكان فيتسع فراغه -في (فسح)، وكذهاب نفع الشيء وصلاحه منه وبقائه على حدّة الفساد والتلف في أثنائه -في (فسد)، وكذهاب الكدر والكثافة من أثناء البول فيصفو وتنكشف أثناؤه وتعرف حاله -في (فسر)، وكما تخرج الرطبة من قشرها وتخرج الفواسق من جِحَرتها -في (فسق).",
-    "tam_metin": "\"الفَسيسُ: الرجل الضعيفُ البدن، والضعيفُ العقل. وفَسْفَس الرجل: حَمُق حماقة محكمة \".\n° المعنى المحوري\nضَعْفُ القوة المختزنة في باطن الشيء أو ذهابها والخلو منها (1).\n__________\n(1) (صوتيًّا): تعبر الفاء عن نفي أو إبعاد بقوة، والسين عن نفاذ بدقة وحدّة، والفصل منهما يعبر عن ضعف القوة المختزنة كأنما اختُرقت بحاد أو تَسَرَّبت. وفي (فسح) تعبر الحاء =\n(3/1670)"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m2",
+  "gomme": {
     "ust": {
       "kume": 9,
       "merkez_kok": "سفك",
@@ -428,6 +310,10 @@
       "boy": 9
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

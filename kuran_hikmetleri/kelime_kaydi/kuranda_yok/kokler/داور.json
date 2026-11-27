@@ -1,482 +1,335 @@
 {
   "kok": "داور",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "داور", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يداور",
-        "u": "يداور",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يداور (form III)\n# يُدَاوِرُ (yudāwiru) /ju.daː.wi.ru/: third-person masculine singular non-past active indicative of دَاوَرَ (dāwara)\n# يُدَاوَرُ (yudāwaru) /ju.daː.wa.ru/: third-person masculine singular non-past passive indicative of دَاوَرَ (dāwara)\n# يُدَاوِرَ (yudāwira) /ju.daː.wi.ra/: third-person masculine singular non-past active subjunctive of دَاوَرَ (dāwara)\n# يُدَاوَرَ (yudāwara) /ju.",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yudāwiru", "dāwara", "yudāwaru"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "دوور",
-        "u": "دوور",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دُووِرَ • (dūwira) (form III) /duː.wi.ra/\n# third-person masculine singular past passive of دَاوَرَ (dāwara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["dūwira", "dāwara"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "داورت",
-        "u": "داورت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "داورت (form III)\n# دَاوَرْتُ (dāwartu) /daː.war.tu/: first-person singular past active of دَاوَرَ (dāwara)\n# دَاوَرْتَ (dāwarta) /daː.war.ta/: second-person masculine singular past active of دَاوَرَ (dāwara)\n# دَاوَرْتِ (dāwarti) /daː.war.ti/: second-person feminine singular past active of دَاوَرَ (dāwara)\n# دَاوَرَتْ (dāwarat) /daː.wa.rat/: third-person feminine singular past active of دَاوَرَ (d",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["dāwartu", "dāwara", "dāwarta"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "تداور",
-        "u": "تداور",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تداور (form III)\n# تُدَاوِرُ (tudāwiru) /tu.daː.wi.ru/: inflection of دَاوَرَ (dāwara):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُدَاوَرُ (tudāwaru) /tu.daː.wa.ru/: inflection of دَاوَرَ (dāwara):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive in",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tudāwiru", "dāwara", "tudāwaru"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "دوورت",
-        "u": "دوورت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دوورت (form III)\n# دُووِرْتُ (dūwirtu) /duː.wir.tu/: first-person singular past passive of دَاوَرَ (dāwara)\n# دُووِرْتَ (dūwirta) /duː.wir.ta/: second-person masculine singular past passive of دَاوَرَ (dāwara)\n# دُووِرْتِ (dūwirti) /duː.wir.ti/: second-person feminine singular past passive of دَاوَرَ (dāwara)\n# دُووِرَتْ (dūwirat) /duː.wi.rat/: third-person feminine singular past passive of دَاوَر",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["dūwirtu", "dāwara", "dūwirta"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "تداورين",
-        "u": "تداورين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تداورين (form III)\n# تُدَاوِرِينَ (tudāwirīna) /tu.daː.wi.riː.na/: second-person feminine singular non-past active indicative of دَاوَرَ (dāwara)\n# تُدَاوَرِينَ (tudāwarīna) /tu.daː.wa.riː.na/: second-person feminine singular non-past passive indicative of دَاوَرَ (dāwara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tudāwirīna", "dāwara", "tudāwarīna"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "تداوري",
-        "u": "تداوري",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تداوري (form III)\n# تُدَاوِرِي (tudāwirī) /tu.daː.wi.riː/: second-person feminine singular non-past active subjunctive/jussive of دَاوَرَ (dāwara)\n# تُدَاوَرِي (tudāwarī) /tu.daː.wa.riː/: second-person feminine singular non-past passive subjunctive/jussive of دَاوَرَ (dāwara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tudāwirī", "dāwara", "tudāwarī"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "داوري",
-        "u": "داوري",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دَاوِرِي • (dāwirī) (form III) /daː.wi.riː/\n# second-person feminine singular imperative of دَاوَرَ (dāwara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["dāwirī", "dāwara"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "أداور",
-        "u": "أداور",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أداور (form III)\n# أُدَاوِرُ (ʔudāwiru) /ʔu.daː.wi.ru/: first-person singular non-past active indicative of دَاوَرَ (dāwara)\n# أُدَاوَرُ (ʔudāwaru) /ʔu.daː.wa.ru/: first-person singular non-past passive indicative of دَاوَرَ (dāwara)\n# أُدَاوِرَ (ʔudāwira) /ʔu.daː.wi.ra/: first-person singular non-past active subjunctive of دَاوَرَ (dāwara)\n# أُدَاوَرَ (ʔudāwara) /ʔu.daː.wa.ra/: first-person singu",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔudāwiru", "dāwara", "ʔudāwaru"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "داورنا",
-        "u": "داورنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دَاوَرْنَا • (dāwarnā) (form III) /daː.war.naː/\n# first-person plural past active of دَاوَرَ (dāwara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["dāwarnā", "dāwara"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "نداور",
-        "u": "نداور",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نداور (form III)\n# نُدَاوِرُ (nudāwiru) /nu.daː.wi.ru/: first-person plural non-past active indicative of دَاوَرَ (dāwara)\n# نُدَاوَرُ (nudāwaru) /nu.daː.wa.ru/: first-person plural non-past passive indicative of دَاوَرَ (dāwara)\n# نُدَاوِرَ (nudāwira) /nu.daː.wi.ra/: first-person plural non-past active subjunctive of دَاوَرَ (dāwara)\n# نُدَاوَرَ (nudāwara) /nu.daː.wa.ra/: first-person plural non-",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nudāwiru", "dāwara", "nudāwaru"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "دوورنا",
-        "u": "دوورنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دُووِرْنَا • (dūwirnā) (form III) /duː.wir.naː/\n# first-person plural past passive of دَاوَرَ (dāwara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["dūwirnā", "dāwara"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "داورتم",
-        "u": "داورتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دَاوَرْتُمْ • (dāwartum) (form III) /daː.war.tum/\n# second-person masculine plural past active of دَاوَرَ (dāwara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["dāwartum", "dāwara"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "تداورون",
-        "u": "تداورون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تداورون (form III)\n# تُدَاوِرُونَ (tudāwirūna) /tu.daː.wi.ruː.na/: second-person masculine plural non-past active indicative of دَاوَرَ (dāwara)\n# تُدَاوَرُونَ (tudāwarūna) /tu.daː.wa.ruː.na/: second-person masculine plural non-past passive indicative of دَاوَرَ (dāwara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tudāwirūna", "dāwara", "tudāwarūna"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "تداوروا",
-        "u": "تداوروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تداوروا (form III)\n# تُدَاوِرُوا (tudāwirū) /tu.daː.wi.ruː/: second-person masculine plural non-past active subjunctive/jussive of دَاوَرَ (dāwara)\n# تُدَاوَرُوا (tudāwarū) /tu.daː.wa.ruː/: second-person masculine plural non-past passive subjunctive/jussive of دَاوَرَ (dāwara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tudāwirū", "dāwara", "tudāwarū"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "دوورتم",
-        "u": "دوورتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دُووِرْتُمْ • (dūwirtum) (form III) /duː.wir.tum/\n# second-person masculine plural past passive of دَاوَرَ (dāwara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["dūwirtum", "dāwara"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "داوروا",
-        "u": "داوروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "داوروا (form III)\n# دَاوَرُوا (dāwarū) /daː.wa.ruː/: third-person masculine plural past active of دَاوَرَ (dāwara)\n# دَاوِرُوا (dāwirū) /daː.wi.ruː/: second-person masculine plural imperative of دَاوَرَ (dāwara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["dāwarū", "dāwara", "dāwirū"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "يداورون",
-        "u": "يداورون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يداورون (form III)\n# يُدَاوِرُونَ (yudāwirūna) /ju.daː.wi.ruː.na/: third-person masculine plural non-past active indicative of دَاوَرَ (dāwara)\n# يُدَاوَرُونَ (yudāwarūna) /ju.daː.wa.ruː.na/: third-person masculine plural non-past passive indicative of دَاوَرَ (dāwara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yudāwirūna", "dāwara", "yudāwarūna"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "يداوروا",
-        "u": "يداوروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يداوروا (form III)\n# يُدَاوِرُوا (yudāwirū) /ju.daː.wi.ruː/: third-person masculine plural non-past active subjunctive/jussive of دَاوَرَ (dāwara)\n# يُدَاوَرُوا (yudāwarū) /ju.daː.wa.ruː/: third-person masculine plural non-past passive subjunctive/jussive of دَاوَرَ (dāwara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yudāwirū", "dāwara", "yudāwarū"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "دووروا",
-        "u": "دووروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دُووِرُوا • (dūwirū) (form III) /duː.wi.ruː/\n# third-person masculine plural past passive of دَاوَرَ (dāwara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["dūwirū", "dāwara"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "داورتن",
-        "u": "داورتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دَاوَرْتُنَّ • (dāwartunna) (form III) /daː.war.tun.na/\n# second-person feminine plural past active of دَاوَرَ (dāwara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["dāwartunna", "dāwara"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "تداورن",
-        "u": "تداورن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تداورن (form III)\n# تُدَاوِرْنَ (tudāwirna) /tu.daː.wir.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of دَاوَرَ (dāwara)\n# تُدَاوَرْنَ (tudāwarna) /tu.daː.war.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of دَاوَرَ (dāwara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tudāwirna", "dāwara", "tudāwarna"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "داورن",
-        "u": "داورن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "داورن (form III)\n# دَاوَرْنَ (dāwarna) /daː.war.na/: third-person feminine plural past active of دَاوَرَ (dāwara)\n# دَاوِرْنَ (dāwirna) /daː.wir.na/: second-person feminine plural imperative of دَاوَرَ (dāwara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["dāwarna", "dāwara", "dāwirna"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "دوورتن",
-        "u": "دوورتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دُووِرْتُنَّ • (dūwirtunna) (form III) /duː.wir.tun.na/\n# second-person feminine plural past passive of دَاوَرَ (dāwara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["dūwirtunna", "dāwara"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "يداورن",
-        "u": "يداورن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يداورن (form III)\n# يُدَاوِرْنَ (yudāwirna) /ju.daː.wir.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of دَاوَرَ (dāwara)\n# يُدَاوَرْنَ (yudāwarna) /ju.daː.war.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of دَاوَرَ (dāwara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yudāwirna", "dāwara", "yudāwarna"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "دوورن",
-        "u": "دوورن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دُووِرْنَ • (dūwirna) (form III) /duː.wir.na/\n# third-person feminine plural past passive of دَاوَرَ (dāwara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["dūwirna", "dāwara"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "داورتما",
-        "u": "داورتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دَاوَرْتُمَا • (dāwartumā) (form III) /daː.war.tu.maː/\n# second-person dual past active of دَاوَرَ (dāwara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["dāwartumā", "dāwara"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "داورتا",
-        "u": "داورتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دَاوَرَتَا • (dāwaratā) (form III) /daː.wa.ra.taː/\n# third-person feminine dual past active of دَاوَرَ (dāwara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["dāwaratā", "dāwara"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "دوورتما",
-        "u": "دوورتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دُووِرْتُمَا • (dūwirtumā) (form III) /duː.wir.tu.maː/\n# second-person dual past passive of دَاوَرَ (dāwara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["dūwirtumā", "dāwara"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "داورا",
-        "u": "داورا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "داورا (form III)\n# دَاوَرَا (dāwarā) /daː.wa.raː/: third-person masculine dual past active of دَاوَرَ (dāwara)\n# دَاوِرَا (dāwirā) /daː.wi.raː/: second-person dual imperative of دَاوَرَ (dāwara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["dāwarā", "dāwara", "dāwirā"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "دوورا",
-        "u": "دوورا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دُووِرَا • (dūwirā) (form III) /duː.wi.raː/\n# third-person masculine dual past passive of دَاوَرَ (dāwara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["dūwirā", "dāwara"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "دوورتا",
-        "u": "دوورتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دُووِرَتَا • (dūwiratā) (form III) /duː.wi.ra.taː/\n# third-person feminine dual past passive of دَاوَرَ (dāwara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["dūwiratā", "dāwara"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "تداوران",
-        "u": "تداوران",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تداوران (form III)\n# تُدَاوِرَانِ (tudāwirāni) /tu.daː.wi.raː.ni/: inflection of دَاوَرَ (dāwara):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُدَاوَرَانِ (tudāwarāni) /tu.daː.wa.raː.ni/: inflection of دَاوَرَ (dāwara):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tudāwirāni", "dāwara", "tudāwarāni"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "تداورا",
-        "u": "تداورا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تداورا (form III)\n# تُدَاوِرَا (tudāwirā) /tu.daː.wi.raː/: inflection of دَاوَرَ (dāwara):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُدَاوَرَا (tudāwarā) /tu.daː.wa.raː/: inflection of دَاوَرَ (dāwara):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjun",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tudāwirā", "dāwara", "tudāwarā"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "يداوران",
-        "u": "يداوران",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يداوران (form III)\n# يُدَاوِرَانِ (yudāwirāni) /ju.daː.wi.raː.ni/: third-person masculine dual non-past active indicative of دَاوَرَ (dāwara)\n# يُدَاوَرَانِ (yudāwarāni) /ju.daː.wa.raː.ni/: third-person masculine dual non-past passive indicative of دَاوَرَ (dāwara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yudāwirāni", "dāwara", "yudāwarāni"],
-        "k": "داور",
-        "yol": "kök"
-      },
-      {
-        "w": "يداورا",
-        "u": "يداورا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يداورا (form III)\n# يُدَاوِرَا (yudāwirā) /ju.daː.wi.raː/: third-person masculine dual non-past active subjunctive/jussive of دَاوَرَ (dāwara)\n# يُدَاوَرَا (yudāwarā) /ju.daː.wa.raː/: third-person masculine dual non-past passive subjunctive/jussive of دَاوَرَ (dāwara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yudāwirā", "dāwara", "yudāwarā"],
-        "k": "داور",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "در",
+  "ses": {
     "harf": "د",
+    "fasil": "در",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يداور",
+      "tur": "verb",
+      "baslik": "يداور (form III)\n# يُدَاوِرُ (yudāwiru) /ju.daː.wi.ru/: third-person masculine singular non-past active indicative of دَاوَرَ (dāwara)\n# يُدَاوَرُ (yudāwaru) /ju.daː.wa.ru/: third-person masculine singular non-past passive indicative of دَاوَرَ (dāwara)\n# يُدَاوِرَ (yudāwira) /ju.daː.wi.ra/: third-person masculine singular non-past active subjunctive of دَاوَرَ (dāwara)\n# يُدَاوَرَ (yudāwara) /ju.",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yudāwiru", "dāwara", "yudāwaru"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "دوور",
+      "tur": "verb",
+      "baslik": "دُووِرَ • (dūwira) (form III) /duː.wi.ra/\n# third-person masculine singular past passive of دَاوَرَ (dāwara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["dūwira", "dāwara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "داورت",
+      "tur": "verb",
+      "baslik": "داورت (form III)\n# دَاوَرْتُ (dāwartu) /daː.war.tu/: first-person singular past active of دَاوَرَ (dāwara)\n# دَاوَرْتَ (dāwarta) /daː.war.ta/: second-person masculine singular past active of دَاوَرَ (dāwara)\n# دَاوَرْتِ (dāwarti) /daː.war.ti/: second-person feminine singular past active of دَاوَرَ (dāwara)\n# دَاوَرَتْ (dāwarat) /daː.wa.rat/: third-person feminine singular past active of دَاوَرَ (d",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["dāwartu", "dāwara", "dāwarta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تداور",
+      "tur": "verb",
+      "baslik": "تداور (form III)\n# تُدَاوِرُ (tudāwiru) /tu.daː.wi.ru/: inflection of دَاوَرَ (dāwara):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُدَاوَرُ (tudāwaru) /tu.daː.wa.ru/: inflection of دَاوَرَ (dāwara):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive in",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tudāwiru", "dāwara", "tudāwaru"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "دوورت",
+      "tur": "verb",
+      "baslik": "دوورت (form III)\n# دُووِرْتُ (dūwirtu) /duː.wir.tu/: first-person singular past passive of دَاوَرَ (dāwara)\n# دُووِرْتَ (dūwirta) /duː.wir.ta/: second-person masculine singular past passive of دَاوَرَ (dāwara)\n# دُووِرْتِ (dūwirti) /duː.wir.ti/: second-person feminine singular past passive of دَاوَرَ (dāwara)\n# دُووِرَتْ (dūwirat) /duː.wi.rat/: third-person feminine singular past passive of دَاوَر",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["dūwirtu", "dāwara", "dūwirta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تداورين",
+      "tur": "verb",
+      "baslik": "تداورين (form III)\n# تُدَاوِرِينَ (tudāwirīna) /tu.daː.wi.riː.na/: second-person feminine singular non-past active indicative of دَاوَرَ (dāwara)\n# تُدَاوَرِينَ (tudāwarīna) /tu.daː.wa.riː.na/: second-person feminine singular non-past passive indicative of دَاوَرَ (dāwara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tudāwirīna", "dāwara", "tudāwarīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تداوري",
+      "tur": "verb",
+      "baslik": "تداوري (form III)\n# تُدَاوِرِي (tudāwirī) /tu.daː.wi.riː/: second-person feminine singular non-past active subjunctive/jussive of دَاوَرَ (dāwara)\n# تُدَاوَرِي (tudāwarī) /tu.daː.wa.riː/: second-person feminine singular non-past passive subjunctive/jussive of دَاوَرَ (dāwara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tudāwirī", "dāwara", "tudāwarī"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "داوري",
+      "tur": "verb",
+      "baslik": "دَاوِرِي • (dāwirī) (form III) /daː.wi.riː/\n# second-person feminine singular imperative of دَاوَرَ (dāwara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["dāwirī", "dāwara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أداور",
+      "tur": "verb",
+      "baslik": "أداور (form III)\n# أُدَاوِرُ (ʔudāwiru) /ʔu.daː.wi.ru/: first-person singular non-past active indicative of دَاوَرَ (dāwara)\n# أُدَاوَرُ (ʔudāwaru) /ʔu.daː.wa.ru/: first-person singular non-past passive indicative of دَاوَرَ (dāwara)\n# أُدَاوِرَ (ʔudāwira) /ʔu.daː.wi.ra/: first-person singular non-past active subjunctive of دَاوَرَ (dāwara)\n# أُدَاوَرَ (ʔudāwara) /ʔu.daː.wa.ra/: first-person singu",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔudāwiru", "dāwara", "ʔudāwaru"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "داورنا",
+      "tur": "verb",
+      "baslik": "دَاوَرْنَا • (dāwarnā) (form III) /daː.war.naː/\n# first-person plural past active of دَاوَرَ (dāwara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["dāwarnā", "dāwara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نداور",
+      "tur": "verb",
+      "baslik": "نداور (form III)\n# نُدَاوِرُ (nudāwiru) /nu.daː.wi.ru/: first-person plural non-past active indicative of دَاوَرَ (dāwara)\n# نُدَاوَرُ (nudāwaru) /nu.daː.wa.ru/: first-person plural non-past passive indicative of دَاوَرَ (dāwara)\n# نُدَاوِرَ (nudāwira) /nu.daː.wi.ra/: first-person plural non-past active subjunctive of دَاوَرَ (dāwara)\n# نُدَاوَرَ (nudāwara) /nu.daː.wa.ra/: first-person plural non-",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nudāwiru", "dāwara", "nudāwaru"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "دوورنا",
+      "tur": "verb",
+      "baslik": "دُووِرْنَا • (dūwirnā) (form III) /duː.wir.naː/\n# first-person plural past passive of دَاوَرَ (dāwara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["dūwirnā", "dāwara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "داورتم",
+      "tur": "verb",
+      "baslik": "دَاوَرْتُمْ • (dāwartum) (form III) /daː.war.tum/\n# second-person masculine plural past active of دَاوَرَ (dāwara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["dāwartum", "dāwara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تداورون",
+      "tur": "verb",
+      "baslik": "تداورون (form III)\n# تُدَاوِرُونَ (tudāwirūna) /tu.daː.wi.ruː.na/: second-person masculine plural non-past active indicative of دَاوَرَ (dāwara)\n# تُدَاوَرُونَ (tudāwarūna) /tu.daː.wa.ruː.na/: second-person masculine plural non-past passive indicative of دَاوَرَ (dāwara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tudāwirūna", "dāwara", "tudāwarūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تداوروا",
+      "tur": "verb",
+      "baslik": "تداوروا (form III)\n# تُدَاوِرُوا (tudāwirū) /tu.daː.wi.ruː/: second-person masculine plural non-past active subjunctive/jussive of دَاوَرَ (dāwara)\n# تُدَاوَرُوا (tudāwarū) /tu.daː.wa.ruː/: second-person masculine plural non-past passive subjunctive/jussive of دَاوَرَ (dāwara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tudāwirū", "dāwara", "tudāwarū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "دوورتم",
+      "tur": "verb",
+      "baslik": "دُووِرْتُمْ • (dūwirtum) (form III) /duː.wir.tum/\n# second-person masculine plural past passive of دَاوَرَ (dāwara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["dūwirtum", "dāwara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "داوروا",
+      "tur": "verb",
+      "baslik": "داوروا (form III)\n# دَاوَرُوا (dāwarū) /daː.wa.ruː/: third-person masculine plural past active of دَاوَرَ (dāwara)\n# دَاوِرُوا (dāwirū) /daː.wi.ruː/: second-person masculine plural imperative of دَاوَرَ (dāwara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["dāwarū", "dāwara", "dāwirū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يداورون",
+      "tur": "verb",
+      "baslik": "يداورون (form III)\n# يُدَاوِرُونَ (yudāwirūna) /ju.daː.wi.ruː.na/: third-person masculine plural non-past active indicative of دَاوَرَ (dāwara)\n# يُدَاوَرُونَ (yudāwarūna) /ju.daː.wa.ruː.na/: third-person masculine plural non-past passive indicative of دَاوَرَ (dāwara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yudāwirūna", "dāwara", "yudāwarūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يداوروا",
+      "tur": "verb",
+      "baslik": "يداوروا (form III)\n# يُدَاوِرُوا (yudāwirū) /ju.daː.wi.ruː/: third-person masculine plural non-past active subjunctive/jussive of دَاوَرَ (dāwara)\n# يُدَاوَرُوا (yudāwarū) /ju.daː.wa.ruː/: third-person masculine plural non-past passive subjunctive/jussive of دَاوَرَ (dāwara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yudāwirū", "dāwara", "yudāwarū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "دووروا",
+      "tur": "verb",
+      "baslik": "دُووِرُوا • (dūwirū) (form III) /duː.wi.ruː/\n# third-person masculine plural past passive of دَاوَرَ (dāwara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["dūwirū", "dāwara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "داورتن",
+      "tur": "verb",
+      "baslik": "دَاوَرْتُنَّ • (dāwartunna) (form III) /daː.war.tun.na/\n# second-person feminine plural past active of دَاوَرَ (dāwara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["dāwartunna", "dāwara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تداورن",
+      "tur": "verb",
+      "baslik": "تداورن (form III)\n# تُدَاوِرْنَ (tudāwirna) /tu.daː.wir.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of دَاوَرَ (dāwara)\n# تُدَاوَرْنَ (tudāwarna) /tu.daː.war.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of دَاوَرَ (dāwara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tudāwirna", "dāwara", "tudāwarna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "داورن",
+      "tur": "verb",
+      "baslik": "داورن (form III)\n# دَاوَرْنَ (dāwarna) /daː.war.na/: third-person feminine plural past active of دَاوَرَ (dāwara)\n# دَاوِرْنَ (dāwirna) /daː.wir.na/: second-person feminine plural imperative of دَاوَرَ (dāwara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["dāwarna", "dāwara", "dāwirna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "دوورتن",
+      "tur": "verb",
+      "baslik": "دُووِرْتُنَّ • (dūwirtunna) (form III) /duː.wir.tun.na/\n# second-person feminine plural past passive of دَاوَرَ (dāwara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["dūwirtunna", "dāwara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يداورن",
+      "tur": "verb",
+      "baslik": "يداورن (form III)\n# يُدَاوِرْنَ (yudāwirna) /ju.daː.wir.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of دَاوَرَ (dāwara)\n# يُدَاوَرْنَ (yudāwarna) /ju.daː.war.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of دَاوَرَ (dāwara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yudāwirna", "dāwara", "yudāwarna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "دوورن",
+      "tur": "verb",
+      "baslik": "دُووِرْنَ • (dūwirna) (form III) /duː.wir.na/\n# third-person feminine plural past passive of دَاوَرَ (dāwara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["dūwirna", "dāwara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "داورتما",
+      "tur": "verb",
+      "baslik": "دَاوَرْتُمَا • (dāwartumā) (form III) /daː.war.tu.maː/\n# second-person dual past active of دَاوَرَ (dāwara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["dāwartumā", "dāwara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "داورتا",
+      "tur": "verb",
+      "baslik": "دَاوَرَتَا • (dāwaratā) (form III) /daː.wa.ra.taː/\n# third-person feminine dual past active of دَاوَرَ (dāwara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["dāwaratā", "dāwara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "دوورتما",
+      "tur": "verb",
+      "baslik": "دُووِرْتُمَا • (dūwirtumā) (form III) /duː.wir.tu.maː/\n# second-person dual past passive of دَاوَرَ (dāwara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["dūwirtumā", "dāwara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "داورا",
+      "tur": "verb",
+      "baslik": "داورا (form III)\n# دَاوَرَا (dāwarā) /daː.wa.raː/: third-person masculine dual past active of دَاوَرَ (dāwara)\n# دَاوِرَا (dāwirā) /daː.wi.raː/: second-person dual imperative of دَاوَرَ (dāwara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["dāwarā", "dāwara", "dāwirā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "دوورا",
+      "tur": "verb",
+      "baslik": "دُووِرَا • (dūwirā) (form III) /duː.wi.raː/\n# third-person masculine dual past passive of دَاوَرَ (dāwara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["dūwirā", "dāwara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "دوورتا",
+      "tur": "verb",
+      "baslik": "دُووِرَتَا • (dūwiratā) (form III) /duː.wi.ra.taː/\n# third-person feminine dual past passive of دَاوَرَ (dāwara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["dūwiratā", "dāwara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تداوران",
+      "tur": "verb",
+      "baslik": "تداوران (form III)\n# تُدَاوِرَانِ (tudāwirāni) /tu.daː.wi.raː.ni/: inflection of دَاوَرَ (dāwara):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُدَاوَرَانِ (tudāwarāni) /tu.daː.wa.raː.ni/: inflection of دَاوَرَ (dāwara):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tudāwirāni", "dāwara", "tudāwarāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تداورا",
+      "tur": "verb",
+      "baslik": "تداورا (form III)\n# تُدَاوِرَا (tudāwirā) /tu.daː.wi.raː/: inflection of دَاوَرَ (dāwara):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُدَاوَرَا (tudāwarā) /tu.daː.wa.raː/: inflection of دَاوَرَ (dāwara):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjun",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tudāwirā", "dāwara", "tudāwarā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يداوران",
+      "tur": "verb",
+      "baslik": "يداوران (form III)\n# يُدَاوِرَانِ (yudāwirāni) /ju.daː.wi.raː.ni/: third-person masculine dual non-past active indicative of دَاوَرَ (dāwara)\n# يُدَاوَرَانِ (yudāwarāni) /ju.daː.wa.raː.ni/: third-person masculine dual non-past passive indicative of دَاوَرَ (dāwara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yudāwirāni", "dāwara", "yudāwarāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يداورا",
+      "tur": "verb",
+      "baslik": "يداورا (form III)\n# يُدَاوِرَا (yudāwirā) /ju.daː.wi.raː/: third-person masculine dual non-past active subjunctive/jussive of دَاوَرَ (dāwara)\n# يُدَاوَرَا (yudāwarā) /ju.daː.wa.raː/: third-person masculine dual non-past passive subjunctive/jussive of دَاوَرَ (dāwara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yudāwirā", "dāwara", "yudāwarā"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "داور", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

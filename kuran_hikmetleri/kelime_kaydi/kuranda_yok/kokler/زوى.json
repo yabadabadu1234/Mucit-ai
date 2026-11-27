@@ -1,944 +1,665 @@
 {
   "kok": "زوى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "زوى", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تزوى",
-        "u": "تزوى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُزْوَى • (tuzwā) (form I) /tuz.waː/\n# inflection of زَوَى (zawā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzwā", "zawā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تزو",
-        "u": "تزو",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تزو (form I)\n# تَزْوِ (tazwi) /taz.wi/: inflection of زَوَى (zawā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُزْوَ (tuzwa) /tuz.wa/: inflection of زَوَى (zawā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazwi", "zawā", "tuzwa"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تزو",
-        "u": "تزو",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُزَوِّ • (tuzawwi) (form II) /tu.zaw.wi/\n# inflection of زَوَّى (zawwā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuzawwi", "zawwā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "زوي",
-        "u": "زوي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "زُوِيَ • (zuwiya) (form I) /zu.wi.ja/\n# third-person masculine singular past passive of زَوَى (zawā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zuwiya", "zawā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "زوي",
-        "u": "زوي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "زوي (form II)\n# زُوِّيَ (zuwwiya) /zuw.wi.ja/: third-person masculine singular past passive of زَوَّى (zawwā)\n# زَوِّي (zawwī) /zaw.wiː/: second-person feminine singular imperative of زَوَّى (zawwā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["zuwwiya", "zawwā", "zawwī"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يزوي",
-        "u": "يزوي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يزوي (form I)\n# يَزْوِي (yazwī) /jaz.wiː/: third-person masculine singular non-past active indicative of زَوَى (zawā)\n# يَزْوِيَ (yazwiya) /jaz.wi.ja/: third-person masculine singular non-past active subjunctive of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazwī", "zawā", "yazwiya"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يزوي",
-        "u": "يزوي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يزوي (form II)\n# يُزَوِّي (yuzawwī) /ju.zaw.wiː/: third-person masculine singular non-past active indicative of زَوَّى (zawwā)\n# يُزَوِّيَ (yuzawwiya) /ju.zaw.wi.ja/: third-person masculine singular non-past active subjunctive of زَوَّى (zawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuzawwī", "zawwā", "yuzawwiya"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يزوى",
-        "u": "يزوى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُزْوَى • (yuzwā) (form I) /juz.waː/\n# third-person masculine singular non-past passive indicative/subjunctive of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuzwā", "zawā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يزوى",
-        "u": "يزوى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُزَوَّى • (yuzawwā) (form II) /ju.zaw.waː/\n# third-person masculine singular non-past passive indicative/subjunctive of زَوَّى (zawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuzawwā", "zawwā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تزوي",
-        "u": "تزوي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تزوي (form I)\n# تَزْوِي (tazwī) /taz.wiː/: inflection of زَوَى (zawā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَزْوِيَ (tazwiya) /taz.wi.ja/: inflection of زَوَى (zawā):\n## second-person masculine singular non-past active subjunctive\n## third",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazwī", "zawā", "tazwiya"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تزوي",
-        "u": "تزوي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تزوي (form II)\n# تُزَوِّي (tuzawwī) /tu.zaw.wiː/: inflection of زَوَّى (zawwā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُزَوِّيَ (tuzawwiya) /tu.zaw.wi.ja/: inflection of زَوَّى (zawwā):\n## second-person masculine singular non-past active sub",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuzawwī", "zawwā", "tuzawwiya"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يزو",
-        "u": "يزو",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يزو (form I)\n# يَزْوِ (yazwi) /jaz.wi/: third-person masculine singular non-past active jussive of زَوَى (zawā)\n# يُزْوَ (yuzwa) /juz.wa/: third-person masculine singular non-past passive jussive of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazwi", "zawā", "yuzwa"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يزو",
-        "u": "يزو",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يزو (form II)\n# يُزَوِّ (yuzawwi) /ju.zaw.wi/: third-person masculine singular non-past active jussive of زَوَّى (zawwā)\n# يُزَوَّ (yuzawwa) /ju.zaw.wa/: third-person masculine singular non-past passive jussive of زَوَّى (zawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuzawwi", "zawwā", "yuzawwa"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "زوت",
-        "u": "زوت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زَوَتْ • (zawat) (form I) /za.wat/\n# third-person feminine singular past active of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zawat", "zawā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "زوت",
-        "u": "زوت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "زَوَّتْ • (zawwat) (form II) /zaw.wat/\n# third-person feminine singular past active of زَوَّى (zawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["zawwat", "zawwā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "زويت",
-        "u": "زويت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زويت (form I)\n# زَوَيْتُ (zawaytu) /za.waj.tu/: first-person singular past active of زَوَى (zawā)\n# زَوَيْتَ (zawayta) /za.waj.ta/: second-person masculine singular past active of زَوَى (zawā)\n# زَوَيْتِ (zawayti) /za.waj.ti/: second-person feminine singular past active of زَوَى (zawā)\n# زُوِيتُ (zuwītu) /zu.wiː.tu/: first-person singular past passive of زَوَى (zawā)\n# زُوِيتَ (zuwīta) /zu.wiː.ta/",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zawaytu", "zawā", "zawayta"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "زويت",
-        "u": "زويت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "زويت (form II)\n# زَوَّيْتُ (zawwaytu) /zaw.waj.tu/: first-person singular past active of زَوَّى (zawwā)\n# زَوَّيْتَ (zawwayta) /zaw.waj.ta/: second-person masculine singular past active of زَوَّى (zawwā)\n# زَوَّيْتِ (zawwayti) /zaw.waj.ti/: second-person feminine singular past active of زَوَّى (zawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["zawwaytu", "zawwā", "zawwayta"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "ازو",
-        "u": "ازو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِزْوِ • (izwi) (form I) /iz.wi/\n# second-person masculine singular imperative of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["izwi", "zawā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "زو",
-        "u": "زو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زَوِّ • (zawwi) (form II) /zaw.wi/\n# second-person masculine singular imperative of زَوَّى (zawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["zawwi", "zawwā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تزوين",
-        "u": "تزوين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تزوين (form I)\n# تَزْوِينَ (tazwīna) /taz.wiː.na/: inflection of زَوَى (zawā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُزْوَيْنَ (tuzwayna) /tuz.waj.na/: inflection of زَوَى (zawā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passi",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazwīna", "zawā", "tuzwayna"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تزوين",
-        "u": "تزوين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُزَوِّينَ • (tuzawwīna) (form II) /tu.zaw.wiː.na/\n# inflection of زَوَّى (zawwā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuzawwīna", "zawwā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "ازوي",
-        "u": "ازوي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِزْوِي • (izwī) (form I) /iz.wiː/\n# second-person feminine singular imperative of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["izwī", "zawā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "أزوي",
-        "u": "أزوي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أزوي (form I)\n# أَزْوِي (ʔazwī) /ʔaz.wiː/: first-person singular non-past active indicative of زَوَى (zawā)\n# أَزْوِيَ (ʔazwiya) /ʔaz.wi.ja/: first-person singular non-past active subjunctive of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔazwī", "zawā", "ʔazwiya"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "أزوي",
-        "u": "أزوي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أزوي (form II)\n# أُزَوِّي (ʔuzawwī) /ʔu.zaw.wiː/: first-person singular non-past active indicative of زَوَّى (zawwā)\n# أُزَوِّيَ (ʔuzawwiya) /ʔu.zaw.wi.ja/: first-person singular non-past active subjunctive of زَوَّى (zawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuzawwī", "zawwā", "ʔuzawwiya"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "أزو",
-        "u": "أزو",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أزو (form I)\n# أَزْوِ (ʔazwi) /ʔaz.wi/: first-person singular non-past active jussive of زَوَى (zawā)\n# أُزْوَ (ʔuzwa) /ʔuz.wa/: first-person singular non-past passive jussive of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔazwi", "zawā", "ʔuzwa"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "أزو",
-        "u": "أزو",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أُزَوِّ • (ʔuzawwi) (form II) /ʔu.zaw.wi/\n# first-person singular non-past active jussive of زَوَّى (zawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuzawwi", "zawwā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "أزوى",
-        "u": "أزوى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُزْوَى • (ʔuzwā) (form I) /ʔuz.waː/\n# first-person singular non-past passive indicative/subjunctive of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔuzwā", "zawā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "زوينا",
-        "u": "زوينا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زوينا (form I)\n# زَوَيْنَا (zawaynā) /za.waj.naː/: first-person plural past active of زَوَى (zawā)\n# زُوِينَا (zuwīnā) /zu.wiː.naː/: first-person plural past passive of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zawaynā", "zawā", "zuwīnā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "زوينا",
-        "u": "زوينا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "زَوَّيْنَا • (zawwaynā) (form II) /zaw.waj.naː/\n# first-person plural past active of زَوَّى (zawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["zawwaynā", "zawwā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "نزوي",
-        "u": "نزوي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نزوي (form I)\n# نَزْوِي (nazwī) /naz.wiː/: first-person plural non-past active indicative of زَوَى (zawā)\n# نَزْوِيَ (nazwiya) /naz.wi.ja/: first-person plural non-past active subjunctive of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nazwī", "zawā", "nazwiya"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "نزوي",
-        "u": "نزوي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نزوي (form II)\n# نُزَوِّي (nuzawwī) /nu.zaw.wiː/: first-person plural non-past active indicative of زَوَّى (zawwā)\n# نُزَوِّيَ (nuzawwiya) /nu.zaw.wi.ja/: first-person plural non-past active subjunctive of زَوَّى (zawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuzawwī", "zawwā", "nuzawwiya"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "نزو",
-        "u": "نزو",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نزو (form I)\n# نَزْوِ (nazwi) /naz.wi/: first-person plural non-past active jussive of زَوَى (zawā)\n# نُزْوَ (nuzwa) /nuz.wa/: first-person plural non-past passive jussive of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nazwi", "zawā", "nuzwa"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "نزو",
-        "u": "نزو",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نُزَوِّ • (nuzawwi) (form II) /nu.zaw.wi/\n# first-person plural non-past active jussive of زَوَّى (zawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuzawwi", "zawwā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "نزوى",
-        "u": "نزوى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نُزْوَى • (nuzwā) (form I) /nuz.waː/\n# first-person plural non-past passive indicative/subjunctive of زَوَى (zawā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuzwā", "zawā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تزووا",
-        "u": "تزووا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تزووا (form I)\n# تَزْوُوا (tazwū) /taz.wuː/: second-person masculine plural non-past active subjunctive/jussive of زَوَى (zawā)\n# تُزْوَوْا (tuzwaw) /tuz.waw/: second-person masculine plural non-past passive subjunctive/jussive of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazwū", "zawā", "tuzwaw"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تزووا",
-        "u": "تزووا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُزَوُّوا • (tuzawwū) (form II) /tu.zaw.wuː/\n# second-person masculine plural non-past active subjunctive/jussive of زَوَّى (zawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuzawwū", "zawwā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "زويتم",
-        "u": "زويتم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زويتم (form I)\n# زَوَيْتُمْ (zawaytum) /za.waj.tum/: second-person masculine plural past active of زَوَى (zawā)\n# زُوِيتُمْ (zuwītum) /zu.wiː.tum/: second-person masculine plural past passive of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zawaytum", "zawā", "zuwītum"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "زويتم",
-        "u": "زويتم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "زَوَّيْتُمْ • (zawwaytum) (form II) /zaw.waj.tum/\n# second-person masculine plural past active of زَوَّى (zawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["zawwaytum", "zawwā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تزوون",
-        "u": "تزوون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تزوون (form I)\n# تَزْوُونَ (tazwūna) /taz.wuː.na/: second-person masculine plural non-past active indicative of زَوَى (zawā)\n# تُزْوَوْنَ (tuzwawna) /tuz.waw.na/: second-person masculine plural non-past passive indicative of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazwūna", "zawā", "tuzwawna"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تزوون",
-        "u": "تزوون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُزَوُّونَ • (tuzawwūna) (form II) /tu.zaw.wuː.na/\n# second-person masculine plural non-past active indicative of زَوَّى (zawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuzawwūna", "zawwā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "ازووا",
-        "u": "ازووا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِزْوُوا • (izwū) (form I) /iz.wuː/\n# second-person masculine plural imperative of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["izwū", "zawā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "زووا",
-        "u": "زووا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زووا (form I)\n# زَوَوْا (zawaw) /za.waw/: third-person masculine plural past active of زَوَى (zawā)\n# زُوُوا (zuwū) /zu.wuː/: third-person masculine plural past passive of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zawaw", "zawā", "zuwū"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "زووا",
-        "u": "زووا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "زووا (form II)\n# زَوَّوْا (zawwaw) /zaw.waw/: third-person masculine plural past active of زَوَّى (zawwā)\n# زَوُّوا (zawwū) /zaw.wuː/: second-person masculine plural imperative of زَوَّى (zawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["zawwaw", "zawwā", "zawwū"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يزوون",
-        "u": "يزوون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يزوون (form I)\n# يَزْوُونَ (yazwūna) /jaz.wuː.na/: third-person masculine plural non-past active indicative of زَوَى (zawā)\n# يُزْوَوْنَ (yuzwawna) /juz.waw.na/: third-person masculine plural non-past passive indicative of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazwūna", "zawā", "yuzwawna"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يزوون",
-        "u": "يزوون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُزَوُّونَ • (yuzawwūna) (form II) /ju.zaw.wuː.na/\n# third-person masculine plural non-past active indicative of زَوَّى (zawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuzawwūna", "zawwā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يزووا",
-        "u": "يزووا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يزووا (form I)\n# يَزْوُوا (yazwū) /jaz.wuː/: third-person masculine plural non-past active subjunctive/jussive of زَوَى (zawā)\n# يُزْوَوْا (yuzwaw) /juz.waw/: third-person masculine plural non-past passive subjunctive/jussive of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazwū", "zawā", "yuzwaw"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يزووا",
-        "u": "يزووا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُزَوُّوا • (yuzawwū) (form II) /ju.zaw.wuː/\n# third-person masculine plural non-past active subjunctive/jussive of زَوَّى (zawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuzawwū", "zawwā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "زويتن",
-        "u": "زويتن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زويتن (form I)\n# زَوَيْتُنَّ (zawaytunna) /za.waj.tun.na/: second-person feminine plural past active of زَوَى (zawā)\n# زُوِيتُنَّ (zuwītunna) /zu.wiː.tun.na/: second-person feminine plural past passive of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zawaytunna", "zawā", "zuwītunna"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "زويتن",
-        "u": "زويتن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "زَوَّيْتُنَّ • (zawwaytunna) (form II) /zaw.waj.tun.na/\n# second-person feminine plural past active of زَوَّى (zawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["zawwaytunna", "zawwā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "ازوين",
-        "u": "ازوين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِزْوِينَ • (izwīna) (form I) /iz.wiː.na/\n# second-person feminine plural imperative of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["izwīna", "zawā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "زوين",
-        "u": "زوين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زوين (form I)\n# زَوَيْنَ (zawayna) /za.waj.na/: third-person feminine plural past active of زَوَى (zawā)\n# زُوِينَ (zuwīna) /zu.wiː.na/: third-person feminine plural past passive of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zawayna", "zawā", "zuwīna"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "زوين",
-        "u": "زوين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "زوين (form II)\n# زَوَّيْنَ (zawwayna) /zaw.waj.na/: third-person feminine plural past active of زَوَّى (zawwā)\n# زَوِّينَ (zawwīna) /zaw.wiː.na/: second-person feminine plural imperative of زَوَّى (zawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["zawwayna", "zawwā", "zawwīna"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يزوين",
-        "u": "يزوين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يزوين (form I)\n# يَزْوِينَ (yazwīna) /jaz.wiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of زَوَى (zawā)\n# يُزْوَيْنَ (yuzwayna) /juz.waj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazwīna", "zawā", "yuzwayna"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يزوين",
-        "u": "يزوين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُزَوِّينَ • (yuzawwīna) (form II) /ju.zaw.wiː.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of زَوَّى (zawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuzawwīna", "zawwā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تزويا",
-        "u": "تزويا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تزويا (form I)\n# تَزْوِيَا (tazwiyā) /taz.wi.jaː/: inflection of زَوَى (zawā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُزْوَيَا (tuzwayā) /tuz.wa.jaː/: inflection of زَوَى (zawā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazwiyā", "zawā", "tuzwayā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تزويا",
-        "u": "تزويا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُزَوِّيَا • (tuzawwiyā) (form II) /tu.zaw.wi.jaː/\n# inflection of زَوَّى (zawwā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuzawwiyā", "zawwā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "زويتما",
-        "u": "زويتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زويتما (form I)\n# زَوَيْتُمَا (zawaytumā) /za.waj.tu.maː/: second-person dual past active of زَوَى (zawā)\n# زُوِيتُمَا (zuwītumā) /zu.wiː.tu.maː/: second-person dual past passive of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zawaytumā", "zawā", "zuwītumā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "زويتما",
-        "u": "زويتما",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "زَوَّيْتُمَا • (zawwaytumā) (form II) /zaw.waj.tu.maː/\n# second-person dual past active of زَوَّى (zawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["zawwaytumā", "zawwā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "زويا",
-        "u": "زويا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زويا (form I)\n# زَوَيَا (zawayā) /za.wa.jaː/: third-person masculine dual past active of زَوَى (zawā)\n# زُوِيَا (zuwiyā) /zu.wi.jaː/: third-person masculine dual past passive of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zawayā", "zawā", "zuwiyā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "زويا",
-        "u": "زويا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "زويا (form II)\n# زَوَّيَا (zawwayā) /zaw.wa.jaː/: third-person masculine dual past active of زَوَّى (zawwā)\n# زَوِّيَا (zawwiyā) /zaw.wi.jaː/: second-person dual imperative of زَوَّى (zawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["zawwayā", "zawwā", "zawwiyā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "زوتا",
-        "u": "زوتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زَوَتَا • (zawatā) (form I) /za.wa.taː/\n# third-person feminine dual past active of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zawatā", "zawā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "زوتا",
-        "u": "زوتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "زَوَّتَا • (zawwatā) (form II) /zaw.wa.taː/\n# third-person feminine dual past active of زَوَّى (zawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["zawwatā", "zawwā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "زويتا",
-        "u": "زويتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زُوِيَتَا • (zuwiyatā) (form I) /zu.wi.ja.taː/\n# third-person feminine dual past passive of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zuwiyatā", "zawā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يزويان",
-        "u": "يزويان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يزويان (form I)\n# يَزْوِيَانِ (yazwiyāni) /jaz.wi.jaː.ni/: third-person masculine dual non-past active indicative of زَوَى (zawā)\n# يُزْوَيَانِ (yuzwayāni) /juz.wa.jaː.ni/: third-person masculine dual non-past passive indicative of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazwiyāni", "zawā", "yuzwayāni"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يزويان",
-        "u": "يزويان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُزَوِّيَانِ • (yuzawwiyāni) (form II) /ju.zaw.wi.jaː.ni/\n# third-person masculine dual non-past active indicative of زَوَّى (zawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuzawwiyāni", "zawwā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "ازويا",
-        "u": "ازويا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِزْوِيَا • (izwiyā) (form I) /iz.wi.jaː/\n# second-person dual imperative of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["izwiyā", "zawā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تزويان",
-        "u": "تزويان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تزويان (form I)\n# تَزْوِيَانِ (tazwiyāni) /taz.wi.jaː.ni/: inflection of زَوَى (zawā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُزْوَيَانِ (tuzwayāni) /tuz.wa.jaː.ni/: inflection of زَوَى (zawā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazwiyāni", "zawā", "tuzwayāni"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تزويان",
-        "u": "تزويان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُزَوِّيَانِ • (tuzawwiyāni) (form II) /tu.zaw.wi.jaː.ni/\n# inflection of زَوَّى (zawwā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuzawwiyāni", "zawwā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يزويا",
-        "u": "يزويا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يزويا (form I)\n# يَزْوِيَا (yazwiyā) /jaz.wi.jaː/: third-person masculine dual non-past active subjunctive/jussive of زَوَى (zawā)\n# يُزْوَيَا (yuzwayā) /juz.wa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of زَوَى (zawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazwiyā", "zawā", "yuzwayā"],
-        "k": "زوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يزويا",
-        "u": "يزويا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُزَوِّيَا • (yuzawwiyā) (form II) /ju.zaw.wi.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of زَوَّى (zawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuzawwiyā", "zawwā"],
-        "k": "زوى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "زى",
+  "ses": {
     "harf": "ز",
+    "fasil": "زى",
     "mahrec": "esaliyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تزوى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُزْوَى • (tuzwā) (form I) /tuz.waː/\n# inflection of زَوَى (zawā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzwā", "zawā"]
+    },
+    {
+      "madde": "تزو",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تزو (form I)\n# تَزْوِ (tazwi) /taz.wi/: inflection of زَوَى (zawā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُزْوَ (tuzwa) /tuz.wa/: inflection of زَوَى (zawā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazwi", "zawā", "tuzwa"]
+    },
+    {
+      "madde": "تزو",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُزَوِّ • (tuzawwi) (form II) /tu.zaw.wi/\n# inflection of زَوَّى (zawwā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuzawwi", "zawwā"]
+    },
+    {
+      "madde": "زوي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "زُوِيَ • (zuwiya) (form I) /zu.wi.ja/\n# third-person masculine singular past passive of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zuwiya", "zawā"]
+    },
+    {
+      "madde": "زوي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "زوي (form II)\n# زُوِّيَ (zuwwiya) /zuw.wi.ja/: third-person masculine singular past passive of زَوَّى (zawwā)\n# زَوِّي (zawwī) /zaw.wiː/: second-person feminine singular imperative of زَوَّى (zawwā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["zuwwiya", "zawwā", "zawwī"]
+    },
+    {
+      "madde": "يزوي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يزوي (form I)\n# يَزْوِي (yazwī) /jaz.wiː/: third-person masculine singular non-past active indicative of زَوَى (zawā)\n# يَزْوِيَ (yazwiya) /jaz.wi.ja/: third-person masculine singular non-past active subjunctive of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazwī", "zawā", "yazwiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزوي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يزوي (form II)\n# يُزَوِّي (yuzawwī) /ju.zaw.wiː/: third-person masculine singular non-past active indicative of زَوَّى (zawwā)\n# يُزَوِّيَ (yuzawwiya) /ju.zaw.wi.ja/: third-person masculine singular non-past active subjunctive of زَوَّى (zawwā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuzawwī", "zawwā", "yuzawwiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزوى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُزْوَى • (yuzwā) (form I) /juz.waː/\n# third-person masculine singular non-past passive indicative/subjunctive of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuzwā", "zawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزوى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُزَوَّى • (yuzawwā) (form II) /ju.zaw.waː/\n# third-person masculine singular non-past passive indicative/subjunctive of زَوَّى (zawwā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuzawwā", "zawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزوي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تزوي (form I)\n# تَزْوِي (tazwī) /taz.wiː/: inflection of زَوَى (zawā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَزْوِيَ (tazwiya) /taz.wi.ja/: inflection of زَوَى (zawā):\n## second-person masculine singular non-past active subjunctive\n## third",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazwī", "zawā", "tazwiya"]
+    },
+    {
+      "madde": "تزوي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تزوي (form II)\n# تُزَوِّي (tuzawwī) /tu.zaw.wiː/: inflection of زَوَّى (zawwā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُزَوِّيَ (tuzawwiya) /tu.zaw.wi.ja/: inflection of زَوَّى (zawwā):\n## second-person masculine singular non-past active sub",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuzawwī", "zawwā", "tuzawwiya"]
+    },
+    {
+      "madde": "يزو",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يزو (form I)\n# يَزْوِ (yazwi) /jaz.wi/: third-person masculine singular non-past active jussive of زَوَى (zawā)\n# يُزْوَ (yuzwa) /juz.wa/: third-person masculine singular non-past passive jussive of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazwi", "zawā", "yuzwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزو",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يزو (form II)\n# يُزَوِّ (yuzawwi) /ju.zaw.wi/: third-person masculine singular non-past active jussive of زَوَّى (zawwā)\n# يُزَوَّ (yuzawwa) /ju.zaw.wa/: third-person masculine singular non-past passive jussive of زَوَّى (zawwā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuzawwi", "zawwā", "yuzawwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زوت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زَوَتْ • (zawat) (form I) /za.wat/\n# third-person feminine singular past active of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zawat", "zawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زوت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "زَوَّتْ • (zawwat) (form II) /zaw.wat/\n# third-person feminine singular past active of زَوَّى (zawwā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["zawwat", "zawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زويت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زويت (form I)\n# زَوَيْتُ (zawaytu) /za.waj.tu/: first-person singular past active of زَوَى (zawā)\n# زَوَيْتَ (zawayta) /za.waj.ta/: second-person masculine singular past active of زَوَى (zawā)\n# زَوَيْتِ (zawayti) /za.waj.ti/: second-person feminine singular past active of زَوَى (zawā)\n# زُوِيتُ (zuwītu) /zu.wiː.tu/: first-person singular past passive of زَوَى (zawā)\n# زُوِيتَ (zuwīta) /zu.wiː.ta/",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zawaytu", "zawā", "zawayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زويت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "زويت (form II)\n# زَوَّيْتُ (zawwaytu) /zaw.waj.tu/: first-person singular past active of زَوَّى (zawwā)\n# زَوَّيْتَ (zawwayta) /zaw.waj.ta/: second-person masculine singular past active of زَوَّى (zawwā)\n# زَوَّيْتِ (zawwayti) /zaw.waj.ti/: second-person feminine singular past active of زَوَّى (zawwā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["zawwaytu", "zawwā", "zawwayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ازو",
+      "tur": "verb",
+      "baslik": "اِزْوِ • (izwi) (form I) /iz.wi/\n# second-person masculine singular imperative of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["izwi", "zawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زو",
+      "tur": "verb",
+      "baslik": "زَوِّ • (zawwi) (form II) /zaw.wi/\n# second-person masculine singular imperative of زَوَّى (zawwā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["zawwi", "zawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزوين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تزوين (form I)\n# تَزْوِينَ (tazwīna) /taz.wiː.na/: inflection of زَوَى (zawā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُزْوَيْنَ (tuzwayna) /tuz.waj.na/: inflection of زَوَى (zawā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passi",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazwīna", "zawā", "tuzwayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزوين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُزَوِّينَ • (tuzawwīna) (form II) /tu.zaw.wiː.na/\n# inflection of زَوَّى (zawwā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuzawwīna", "zawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ازوي",
+      "tur": "verb",
+      "baslik": "اِزْوِي • (izwī) (form I) /iz.wiː/\n# second-person feminine singular imperative of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["izwī", "zawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أزوي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أزوي (form I)\n# أَزْوِي (ʔazwī) /ʔaz.wiː/: first-person singular non-past active indicative of زَوَى (zawā)\n# أَزْوِيَ (ʔazwiya) /ʔaz.wi.ja/: first-person singular non-past active subjunctive of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔazwī", "zawā", "ʔazwiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أزوي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أزوي (form II)\n# أُزَوِّي (ʔuzawwī) /ʔu.zaw.wiː/: first-person singular non-past active indicative of زَوَّى (zawwā)\n# أُزَوِّيَ (ʔuzawwiya) /ʔu.zaw.wi.ja/: first-person singular non-past active subjunctive of زَوَّى (zawwā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuzawwī", "zawwā", "ʔuzawwiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أزو",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أزو (form I)\n# أَزْوِ (ʔazwi) /ʔaz.wi/: first-person singular non-past active jussive of زَوَى (zawā)\n# أُزْوَ (ʔuzwa) /ʔuz.wa/: first-person singular non-past passive jussive of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔazwi", "zawā", "ʔuzwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أزو",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أُزَوِّ • (ʔuzawwi) (form II) /ʔu.zaw.wi/\n# first-person singular non-past active jussive of زَوَّى (zawwā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuzawwi", "zawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أزوى",
+      "tur": "verb",
+      "baslik": "أُزْوَى • (ʔuzwā) (form I) /ʔuz.waː/\n# first-person singular non-past passive indicative/subjunctive of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔuzwā", "zawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زوينا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زوينا (form I)\n# زَوَيْنَا (zawaynā) /za.waj.naː/: first-person plural past active of زَوَى (zawā)\n# زُوِينَا (zuwīnā) /zu.wiː.naː/: first-person plural past passive of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zawaynā", "zawā", "zuwīnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زوينا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "زَوَّيْنَا • (zawwaynā) (form II) /zaw.waj.naː/\n# first-person plural past active of زَوَّى (zawwā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["zawwaynā", "zawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نزوي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نزوي (form I)\n# نَزْوِي (nazwī) /naz.wiː/: first-person plural non-past active indicative of زَوَى (zawā)\n# نَزْوِيَ (nazwiya) /naz.wi.ja/: first-person plural non-past active subjunctive of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nazwī", "zawā", "nazwiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نزوي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نزوي (form II)\n# نُزَوِّي (nuzawwī) /nu.zaw.wiː/: first-person plural non-past active indicative of زَوَّى (zawwā)\n# نُزَوِّيَ (nuzawwiya) /nu.zaw.wi.ja/: first-person plural non-past active subjunctive of زَوَّى (zawwā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuzawwī", "zawwā", "nuzawwiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نزو",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نزو (form I)\n# نَزْوِ (nazwi) /naz.wi/: first-person plural non-past active jussive of زَوَى (zawā)\n# نُزْوَ (nuzwa) /nuz.wa/: first-person plural non-past passive jussive of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nazwi", "zawā", "nuzwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نزو",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نُزَوِّ • (nuzawwi) (form II) /nu.zaw.wi/\n# first-person plural non-past active jussive of زَوَّى (zawwā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuzawwi", "zawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نزوى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نُزْوَى • (nuzwā) (form I) /nuz.waː/\n# first-person plural non-past passive indicative/subjunctive of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuzwā", "zawā"]
+    },
+    {
+      "madde": "تزووا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تزووا (form I)\n# تَزْوُوا (tazwū) /taz.wuː/: second-person masculine plural non-past active subjunctive/jussive of زَوَى (zawā)\n# تُزْوَوْا (tuzwaw) /tuz.waw/: second-person masculine plural non-past passive subjunctive/jussive of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazwū", "zawā", "tuzwaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزووا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُزَوُّوا • (tuzawwū) (form II) /tu.zaw.wuː/\n# second-person masculine plural non-past active subjunctive/jussive of زَوَّى (zawwā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuzawwū", "zawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زويتم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زويتم (form I)\n# زَوَيْتُمْ (zawaytum) /za.waj.tum/: second-person masculine plural past active of زَوَى (zawā)\n# زُوِيتُمْ (zuwītum) /zu.wiː.tum/: second-person masculine plural past passive of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zawaytum", "zawā", "zuwītum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زويتم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "زَوَّيْتُمْ • (zawwaytum) (form II) /zaw.waj.tum/\n# second-person masculine plural past active of زَوَّى (zawwā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["zawwaytum", "zawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزوون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تزوون (form I)\n# تَزْوُونَ (tazwūna) /taz.wuː.na/: second-person masculine plural non-past active indicative of زَوَى (zawā)\n# تُزْوَوْنَ (tuzwawna) /tuz.waw.na/: second-person masculine plural non-past passive indicative of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazwūna", "zawā", "tuzwawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزوون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُزَوُّونَ • (tuzawwūna) (form II) /tu.zaw.wuː.na/\n# second-person masculine plural non-past active indicative of زَوَّى (zawwā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuzawwūna", "zawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ازووا",
+      "tur": "verb",
+      "baslik": "اِزْوُوا • (izwū) (form I) /iz.wuː/\n# second-person masculine plural imperative of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["izwū", "zawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زووا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زووا (form I)\n# زَوَوْا (zawaw) /za.waw/: third-person masculine plural past active of زَوَى (zawā)\n# زُوُوا (zuwū) /zu.wuː/: third-person masculine plural past passive of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zawaw", "zawā", "zuwū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زووا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "زووا (form II)\n# زَوَّوْا (zawwaw) /zaw.waw/: third-person masculine plural past active of زَوَّى (zawwā)\n# زَوُّوا (zawwū) /zaw.wuː/: second-person masculine plural imperative of زَوَّى (zawwā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["zawwaw", "zawwā", "zawwū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزوون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يزوون (form I)\n# يَزْوُونَ (yazwūna) /jaz.wuː.na/: third-person masculine plural non-past active indicative of زَوَى (zawā)\n# يُزْوَوْنَ (yuzwawna) /juz.waw.na/: third-person masculine plural non-past passive indicative of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazwūna", "zawā", "yuzwawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزوون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُزَوُّونَ • (yuzawwūna) (form II) /ju.zaw.wuː.na/\n# third-person masculine plural non-past active indicative of زَوَّى (zawwā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuzawwūna", "zawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزووا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يزووا (form I)\n# يَزْوُوا (yazwū) /jaz.wuː/: third-person masculine plural non-past active subjunctive/jussive of زَوَى (zawā)\n# يُزْوَوْا (yuzwaw) /juz.waw/: third-person masculine plural non-past passive subjunctive/jussive of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazwū", "zawā", "yuzwaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزووا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُزَوُّوا • (yuzawwū) (form II) /ju.zaw.wuː/\n# third-person masculine plural non-past active subjunctive/jussive of زَوَّى (zawwā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuzawwū", "zawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زويتن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زويتن (form I)\n# زَوَيْتُنَّ (zawaytunna) /za.waj.tun.na/: second-person feminine plural past active of زَوَى (zawā)\n# زُوِيتُنَّ (zuwītunna) /zu.wiː.tun.na/: second-person feminine plural past passive of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zawaytunna", "zawā", "zuwītunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زويتن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "زَوَّيْتُنَّ • (zawwaytunna) (form II) /zaw.waj.tun.na/\n# second-person feminine plural past active of زَوَّى (zawwā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["zawwaytunna", "zawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ازوين",
+      "tur": "verb",
+      "baslik": "اِزْوِينَ • (izwīna) (form I) /iz.wiː.na/\n# second-person feminine plural imperative of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["izwīna", "zawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زوين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زوين (form I)\n# زَوَيْنَ (zawayna) /za.waj.na/: third-person feminine plural past active of زَوَى (zawā)\n# زُوِينَ (zuwīna) /zu.wiː.na/: third-person feminine plural past passive of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zawayna", "zawā", "zuwīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زوين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "زوين (form II)\n# زَوَّيْنَ (zawwayna) /zaw.waj.na/: third-person feminine plural past active of زَوَّى (zawwā)\n# زَوِّينَ (zawwīna) /zaw.wiː.na/: second-person feminine plural imperative of زَوَّى (zawwā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["zawwayna", "zawwā", "zawwīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزوين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يزوين (form I)\n# يَزْوِينَ (yazwīna) /jaz.wiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of زَوَى (zawā)\n# يُزْوَيْنَ (yuzwayna) /juz.waj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazwīna", "zawā", "yuzwayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزوين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُزَوِّينَ • (yuzawwīna) (form II) /ju.zaw.wiː.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of زَوَّى (zawwā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuzawwīna", "zawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزويا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تزويا (form I)\n# تَزْوِيَا (tazwiyā) /taz.wi.jaː/: inflection of زَوَى (zawā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُزْوَيَا (tuzwayā) /tuz.wa.jaː/: inflection of زَوَى (zawā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazwiyā", "zawā", "tuzwayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزويا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُزَوِّيَا • (tuzawwiyā) (form II) /tu.zaw.wi.jaː/\n# inflection of زَوَّى (zawwā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuzawwiyā", "zawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زويتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زويتما (form I)\n# زَوَيْتُمَا (zawaytumā) /za.waj.tu.maː/: second-person dual past active of زَوَى (zawā)\n# زُوِيتُمَا (zuwītumā) /zu.wiː.tu.maː/: second-person dual past passive of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zawaytumā", "zawā", "zuwītumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زويتما",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "زَوَّيْتُمَا • (zawwaytumā) (form II) /zaw.waj.tu.maː/\n# second-person dual past active of زَوَّى (zawwā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["zawwaytumā", "zawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زويا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زويا (form I)\n# زَوَيَا (zawayā) /za.wa.jaː/: third-person masculine dual past active of زَوَى (zawā)\n# زُوِيَا (zuwiyā) /zu.wi.jaː/: third-person masculine dual past passive of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zawayā", "zawā", "zuwiyā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زويا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "زويا (form II)\n# زَوَّيَا (zawwayā) /zaw.wa.jaː/: third-person masculine dual past active of زَوَّى (zawwā)\n# زَوِّيَا (zawwiyā) /zaw.wi.jaː/: second-person dual imperative of زَوَّى (zawwā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["zawwayā", "zawwā", "zawwiyā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زوتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زَوَتَا • (zawatā) (form I) /za.wa.taː/\n# third-person feminine dual past active of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zawatā", "zawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زوتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "زَوَّتَا • (zawwatā) (form II) /zaw.wa.taː/\n# third-person feminine dual past active of زَوَّى (zawwā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["zawwatā", "zawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زويتا",
+      "tur": "verb",
+      "baslik": "زُوِيَتَا • (zuwiyatā) (form I) /zu.wi.ja.taː/\n# third-person feminine dual past passive of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zuwiyatā", "zawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزويان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يزويان (form I)\n# يَزْوِيَانِ (yazwiyāni) /jaz.wi.jaː.ni/: third-person masculine dual non-past active indicative of زَوَى (zawā)\n# يُزْوَيَانِ (yuzwayāni) /juz.wa.jaː.ni/: third-person masculine dual non-past passive indicative of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazwiyāni", "zawā", "yuzwayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزويان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُزَوِّيَانِ • (yuzawwiyāni) (form II) /ju.zaw.wi.jaː.ni/\n# third-person masculine dual non-past active indicative of زَوَّى (zawwā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuzawwiyāni", "zawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ازويا",
+      "tur": "verb",
+      "baslik": "اِزْوِيَا • (izwiyā) (form I) /iz.wi.jaː/\n# second-person dual imperative of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["izwiyā", "zawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزويان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تزويان (form I)\n# تَزْوِيَانِ (tazwiyāni) /taz.wi.jaː.ni/: inflection of زَوَى (zawā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُزْوَيَانِ (tuzwayāni) /tuz.wa.jaː.ni/: inflection of زَوَى (zawā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazwiyāni", "zawā", "tuzwayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزويان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُزَوِّيَانِ • (tuzawwiyāni) (form II) /tu.zaw.wi.jaː.ni/\n# inflection of زَوَّى (zawwā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuzawwiyāni", "zawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزويا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يزويا (form I)\n# يَزْوِيَا (yazwiyā) /jaz.wi.jaː/: third-person masculine dual non-past active subjunctive/jussive of زَوَى (zawā)\n# يُزْوَيَا (yuzwayā) /juz.wa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of زَوَى (zawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazwiyā", "zawā", "yuzwayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزويا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُزَوِّيَا • (yuzawwiyā) (form II) /ju.zaw.wi.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of زَوَّى (zawwā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuzawwiyā", "zawwā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "زوى", "r7"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

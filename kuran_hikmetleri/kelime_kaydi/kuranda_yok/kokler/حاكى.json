@@ -1,566 +1,399 @@
 {
   "kok": "حاكى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "حاكى", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "حاك",
-        "u": "حاك",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "حَاكِ • (ḥāki) (form III) /ħaː.ki/\n# second-person masculine singular imperative of حَاكَى (ḥākā)",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥāki", "ḥākā"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "حاكت",
-        "u": "حاكت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "حَاكَتْ • (ḥākat) (form III) /ħaː.kat/\n# third-person feminine singular past active of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥākat", "ḥākā"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "حاكتا",
-        "u": "حاكتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "حَاكَتَا • (ḥākatā) (form III) /ħaː.ka.taː/\n# third-person feminine dual past active of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥākatā", "ḥākā"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "حاكوا",
-        "u": "حاكوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "حاكوا (form III)\n# حَاكَوْا (ḥākaw) /ħaː.kaw/: third-person masculine plural past active of حَاكَى (ḥākā)\n# حَاكُوا (ḥākū) /ħaː.kuː/: second-person masculine plural imperative of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥākaw", "ḥākā", "ḥākū"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "حوكي",
-        "u": "حوكي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "حُوكِيَ • (ḥūkiya) (form III) /ħuː.ki.ja/\n# third-person masculine singular past passive of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥūkiya", "ḥākā"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "حاكيتما",
-        "u": "حاكيتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حَاكَيْتُمَا • (ḥākaytumā) (form III) /ħaː.kaj.tu.maː/\n# second-person dual past active of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥākaytumā", "ḥākā"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "حاكيت",
-        "u": "حاكيت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حاكيت (form III)\n# حَاكَيْتُ (ḥākaytu) /ħaː.kaj.tu/: first-person singular past active of حَاكَى (ḥākā)\n# حَاكَيْتَ (ḥākayta) /ħaː.kaj.ta/: second-person masculine singular past active of حَاكَى (ḥākā)\n# حَاكَيْتِ (ḥākayti) /ħaː.kaj.ti/: second-person feminine singular past active of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥākaytu", "ḥākā", "ḥākayta"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "حاكينا",
-        "u": "حاكينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حَاكَيْنَا • (ḥākaynā) (form III) /ħaː.kaj.naː/\n# first-person plural past active of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥākaynā", "ḥākā"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "حوكوا",
-        "u": "حوكوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "حُوكُوا • (ḥūkū) (form III) /ħuː.kuː/\n# third-person masculine plural past passive of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥūkū", "ḥākā"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "حاكيتم",
-        "u": "حاكيتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حَاكَيْتُمْ • (ḥākaytum) (form III) /ħaː.kaj.tum/\n# second-person masculine plural past active of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥākaytum", "ḥākā"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "حاكيا",
-        "u": "حاكيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حاكيا (form III)\n# حَاكَيَا (ḥākayā) /ħaː.ka.jaː/: third-person masculine dual past active of حَاكَى (ḥākā)\n# حَاكِيَا (ḥākiyā) /ħaː.ki.jaː/: second-person dual imperative of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥākayā", "ḥākā", "ḥākiyā"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "حاكيتن",
-        "u": "حاكيتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حَاكَيْتُنَّ • (ḥākaytunna) (form III) /ħaː.kaj.tun.na/\n# second-person feminine plural past active of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥākaytunna", "ḥākā"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "حاكين",
-        "u": "حاكين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حاكين (form III)\n# حَاكَيْنَ (ḥākayna) /ħaː.kaj.na/: third-person feminine plural past active of حَاكَى (ḥākā)\n# حَاكِينَ (ḥākīna) /ħaː.kiː.na/: second-person feminine plural imperative of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥākayna", "ḥākā", "ḥākīna"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "حوكيتما",
-        "u": "حوكيتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حُوكِيتُمَا • (ḥūkītumā) (form III) /ħuː.kiː.tu.maː/\n# second-person dual past passive of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥūkītumā", "ḥākā"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "حوكيت",
-        "u": "حوكيت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حوكيت (form III)\n# حُوكِيتُ (ḥūkītu) /ħuː.kiː.tu/: first-person singular past passive of حَاكَى (ḥākā)\n# حُوكِيتَ (ḥūkīta) /ħuː.kiː.ta/: second-person masculine singular past passive of حَاكَى (ḥākā)\n# حُوكِيتِ (ḥūkīti) /ħuː.kiː.ti/: second-person feminine singular past passive of حَاكَى (ḥākā)\n# حُوكِيَتْ (ḥūkiyat) /ħuː.ki.jat/: third-person feminine singular past passive of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥūkītu", "ḥākā", "ḥūkīta"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "حوكيا",
-        "u": "حوكيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حُوكِيَا • (ḥūkiyā) (form III) /ħuː.ki.jaː/\n# third-person masculine dual past passive of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥūkiyā", "ḥākā"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "حوكيتا",
-        "u": "حوكيتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حُوكِيَتَا • (ḥūkiyatā) (form III) /ħuː.ki.ja.taː/\n# third-person feminine dual past passive of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥūkiyatā", "ḥākā"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "حوكين",
-        "u": "حوكين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حُوكِينَ • (ḥūkīna) (form III) /ħuː.kiː.na/\n# third-person feminine plural past passive of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥūkīna", "ḥākā"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "حوكيتم",
-        "u": "حوكيتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حُوكِيتُمْ • (ḥūkītum) (form III) /ħuː.kiː.tum/\n# second-person masculine plural past passive of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥūkītum", "ḥākā"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "حوكيتن",
-        "u": "حوكيتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حُوكِيتُنَّ • (ḥūkītunna) (form III) /ħuː.kiː.tun.na/\n# second-person feminine plural past passive of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥūkītunna", "ḥākā"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "أحاكي",
-        "u": "أحاكي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أحاكي (form III)\n# أُحَاكِي (ʔuḥākī) /ʔu.ħaː.kiː/: first-person singular non-past active indicative of حَاكَى (ḥākā)\n# أُحَاكِيَ (ʔuḥākiya) /ʔu.ħaː.ki.ja/: first-person singular non-past active subjunctive of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔuḥākī", "ḥākā", "ʔuḥākiya"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحاكين",
-        "u": "تحاكين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تحاكين (form III)\n# تُحَاكِينَ (tuḥākīna) /tu.ħaː.kiː.na/: inflection of حَاكَى (ḥākā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُحَاكَيْنَ (tuḥākayna) /tu.ħaː.kaj.na/: inflection of حَاكَى (ḥākā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuḥākīna", "ḥākā", "tuḥākayna"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحاكي",
-        "u": "يحاكي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يحاكي (form III)\n# يُحَاكِي (yuḥākī) /ju.ħaː.kiː/: third-person masculine singular non-past active indicative of حَاكَى (ḥākā)\n# يُحَاكِيَ (yuḥākiya) /ju.ħaː.ki.ja/: third-person masculine singular non-past active subjunctive of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuḥākī", "ḥākā", "yuḥākiya"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "حوكينا",
-        "u": "حوكينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حُوكِينَا • (ḥūkīnā) (form III) /ħuː.kiː.naː/\n# first-person plural past passive of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥūkīnā", "ḥākā"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحاكيان",
-        "u": "يحاكيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يحاكيان (form III)\n# يُحَاكِيَانِ (yuḥākiyāni) /ju.ħaː.ki.jaː.ni/: third-person masculine dual non-past active indicative of حَاكَى (ḥākā)\n# يُحَاكَيَانِ (yuḥākayāni) /ju.ħaː.ka.jaː.ni/: third-person masculine dual non-past passive indicative of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuḥākiyāni", "ḥākā", "yuḥākayāni"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحاكي",
-        "u": "تحاكي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تحاكي (form III)\n# تُحَاكِي (tuḥākī) /tu.ħaː.kiː/: inflection of حَاكَى (ḥākā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُحَاكِيَ (tuḥākiya) /tu.ħaː.ki.ja/: inflection of حَاكَى (ḥākā):\n## second-person masculine singular non-past active subju",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuḥākī", "ḥākā", "tuḥākiya"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "نحاكي",
-        "u": "نحاكي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نحاكي (form III)\n# نُحَاكِي (nuḥākī) /nu.ħaː.kiː/: first-person plural non-past active indicative of حَاكَى (ḥākā)\n# نُحَاكِيَ (nuḥākiya) /nu.ħaː.ki.ja/: first-person plural non-past active subjunctive of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nuḥākī", "ḥākā", "nuḥākiya"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحاكيان",
-        "u": "تحاكيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تحاكيان (form III)\n# تُحَاكِيَانِ (tuḥākiyāni) /tu.ħaː.ki.jaː.ni/: inflection of حَاكَى (ḥākā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُحَاكَيَانِ (tuḥākayāni) /tu.ħaː.ka.jaː.ni/: inflection of حَاكَى (ḥākā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuḥākiyāni", "ḥākā", "tuḥākayāni"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحاكون",
-        "u": "تحاكون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تحاكون (form III)\n# تُحَاكُونَ (tuḥākūna) /tu.ħaː.kuː.na/: second-person masculine plural non-past active indicative of حَاكَى (ḥākā)\n# تُحَاكَوْنَ (tuḥākawna) /tu.ħaː.kaw.na/: second-person masculine plural non-past passive indicative of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuḥākūna", "ḥākā", "tuḥākawna"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحاكين",
-        "u": "يحاكين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يحاكين (form III)\n# يُحَاكِينَ (yuḥākīna) /ju.ħaː.kiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of حَاكَى (ḥākā)\n# يُحَاكَيْنَ (yuḥākayna) /ju.ħaː.kaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuḥākīna", "ḥākā", "yuḥākayna"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحاكون",
-        "u": "يحاكون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يحاكون (form III)\n# يُحَاكُونَ (yuḥākūna) /ju.ħaː.kuː.na/: third-person masculine plural non-past active indicative of حَاكَى (ḥākā)\n# يُحَاكَوْنَ (yuḥākawna) /ju.ħaː.kaw.na/: third-person masculine plural non-past passive indicative of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuḥākūna", "ḥākā", "yuḥākawna"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "أحاكى",
-        "u": "أحاكى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُحَاكَى • (ʔuḥākā) (form III) /ʔu.ħaː.kaː/\n# first-person singular non-past passive indicative/subjunctive of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔuḥākā", "ḥākā"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحاكى",
-        "u": "تحاكى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُحَاكَى • (tuḥākā) (form III) /tu.ħaː.kaː/\n# inflection of حَاكَى (ḥākā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuḥākā", "ḥākā"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحاكيا",
-        "u": "يحاكيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يحاكيا (form III)\n# يُحَاكِيَا (yuḥākiyā) /ju.ħaː.ki.jaː/: third-person masculine dual non-past active subjunctive/jussive of حَاكَى (ḥākā)\n# يُحَاكَيَا (yuḥākayā) /ju.ħaː.ka.jaː/: third-person masculine dual non-past passive subjunctive/jussive of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuḥākiyā", "ḥākā", "yuḥākayā"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحاكى",
-        "u": "يحاكى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُحَاكَى • (yuḥākā) (form III) /ju.ħaː.kaː/\n# third-person masculine singular non-past passive indicative/subjunctive of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuḥākā", "ḥākā"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "نحاكى",
-        "u": "نحاكى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُحَاكَى • (nuḥākā) (form III) /nu.ħaː.kaː/\n# first-person plural non-past passive indicative/subjunctive of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nuḥākā", "ḥākā"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحاكوا",
-        "u": "تحاكوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تحاكوا (form III)\n# تُحَاكُوا (tuḥākū) /tu.ħaː.kuː/: second-person masculine plural non-past active subjunctive/jussive of حَاكَى (ḥākā)\n# تُحَاكَوْا (tuḥākaw) /tu.ħaː.kaw/: second-person masculine plural non-past passive subjunctive/jussive of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuḥākū", "ḥākā", "tuḥākaw"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "أحاك",
-        "u": "أحاك",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أحاك (form III)\n# أُحَاكِ (ʔuḥāki) /ʔu.ħaː.ki/: first-person singular non-past active jussive of حَاكَى (ḥākā)\n# أُحَاكَ (ʔuḥāka) /ʔu.ħaː.ka/: first-person singular non-past passive jussive of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔuḥāki", "ḥākā", "ʔuḥāka"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحاكوا",
-        "u": "يحاكوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يحاكوا (form III)\n# يُحَاكُوا (yuḥākū) /ju.ħaː.kuː/: third-person masculine plural non-past active subjunctive/jussive of حَاكَى (ḥākā)\n# يُحَاكَوْا (yuḥākaw) /ju.ħaː.kaw/: third-person masculine plural non-past passive subjunctive/jussive of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuḥākū", "ḥākā", "yuḥākaw"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحاكيا",
-        "u": "تحاكيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تحاكيا (form III)\n# تُحَاكِيَا (tuḥākiyā) /tu.ħaː.ki.jaː/: inflection of حَاكَى (ḥākā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُحَاكَيَا (tuḥākayā) /tu.ħaː.ka.jaː/: inflection of حَاكَى (ḥākā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuḥākiyā", "ḥākā", "tuḥākayā"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحاك",
-        "u": "يحاك",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يحاك (form III)\n# يُحَاكِ (yuḥāki) /ju.ħaː.ki/: third-person masculine singular non-past active jussive of حَاكَى (ḥākā)\n# يُحَاكَ (yuḥāka) /ju.ħaː.ka/: third-person masculine singular non-past passive jussive of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuḥāki", "ḥākā", "yuḥāka"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحاك",
-        "u": "تحاك",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تحاك (form III)\n# تُحَاكِ (tuḥāki) /tu.ħaː.ki/: inflection of حَاكَى (ḥākā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُحَاكَ (tuḥāka) /tu.ħaː.ka/: inflection of حَاكَى (ḥākā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuḥāki", "ḥākā", "tuḥāka"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "حاكي",
-        "u": "حاكي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حَاكِي • (ḥākī) (form III) /ħaː.kiː/\n# second-person feminine singular imperative of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥākī", "ḥākā"],
-        "k": "حاكى",
-        "yol": "kök"
-      },
-      {
-        "w": "نحاك",
-        "u": "نحاك",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نحاك (form III)\n# نُحَاكِ (nuḥāki) /nu.ħaː.ki/: first-person plural non-past active jussive of حَاكَى (ḥākā)\n# نُحَاكَ (nuḥāka) /nu.ħaː.ka/: first-person plural non-past passive jussive of حَاكَى (ḥākā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nuḥāki", "ḥākā", "nuḥāka"],
-        "k": "حاكى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "حك",
+  "ses": {
     "harf": "ح",
+    "fasil": "حك",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "حاك",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "حَاكِ • (ḥāki) (form III) /ħaː.ki/\n# second-person masculine singular imperative of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥāki", "ḥākā"]
+    },
+    {
+      "madde": "حاكت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "حَاكَتْ • (ḥākat) (form III) /ħaː.kat/\n# third-person feminine singular past active of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥākat", "ḥākā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حاكتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "حَاكَتَا • (ḥākatā) (form III) /ħaː.ka.taː/\n# third-person feminine dual past active of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥākatā", "ḥākā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حاكوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "حاكوا (form III)\n# حَاكَوْا (ḥākaw) /ħaː.kaw/: third-person masculine plural past active of حَاكَى (ḥākā)\n# حَاكُوا (ḥākū) /ħaː.kuː/: second-person masculine plural imperative of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥākaw", "ḥākā", "ḥākū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حوكي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "حُوكِيَ • (ḥūkiya) (form III) /ħuː.ki.ja/\n# third-person masculine singular past passive of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥūkiya", "ḥākā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حاكيتما",
+      "tur": "verb",
+      "baslik": "حَاكَيْتُمَا • (ḥākaytumā) (form III) /ħaː.kaj.tu.maː/\n# second-person dual past active of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥākaytumā", "ḥākā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حاكيت",
+      "tur": "verb",
+      "baslik": "حاكيت (form III)\n# حَاكَيْتُ (ḥākaytu) /ħaː.kaj.tu/: first-person singular past active of حَاكَى (ḥākā)\n# حَاكَيْتَ (ḥākayta) /ħaː.kaj.ta/: second-person masculine singular past active of حَاكَى (ḥākā)\n# حَاكَيْتِ (ḥākayti) /ħaː.kaj.ti/: second-person feminine singular past active of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥākaytu", "ḥākā", "ḥākayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حاكينا",
+      "tur": "verb",
+      "baslik": "حَاكَيْنَا • (ḥākaynā) (form III) /ħaː.kaj.naː/\n# first-person plural past active of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥākaynā", "ḥākā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حوكوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "حُوكُوا • (ḥūkū) (form III) /ħuː.kuː/\n# third-person masculine plural past passive of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥūkū", "ḥākā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حاكيتم",
+      "tur": "verb",
+      "baslik": "حَاكَيْتُمْ • (ḥākaytum) (form III) /ħaː.kaj.tum/\n# second-person masculine plural past active of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥākaytum", "ḥākā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حاكيا",
+      "tur": "verb",
+      "baslik": "حاكيا (form III)\n# حَاكَيَا (ḥākayā) /ħaː.ka.jaː/: third-person masculine dual past active of حَاكَى (ḥākā)\n# حَاكِيَا (ḥākiyā) /ħaː.ki.jaː/: second-person dual imperative of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥākayā", "ḥākā", "ḥākiyā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حاكيتن",
+      "tur": "verb",
+      "baslik": "حَاكَيْتُنَّ • (ḥākaytunna) (form III) /ħaː.kaj.tun.na/\n# second-person feminine plural past active of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥākaytunna", "ḥākā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حاكين",
+      "tur": "verb",
+      "baslik": "حاكين (form III)\n# حَاكَيْنَ (ḥākayna) /ħaː.kaj.na/: third-person feminine plural past active of حَاكَى (ḥākā)\n# حَاكِينَ (ḥākīna) /ħaː.kiː.na/: second-person feminine plural imperative of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥākayna", "ḥākā", "ḥākīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حوكيتما",
+      "tur": "verb",
+      "baslik": "حُوكِيتُمَا • (ḥūkītumā) (form III) /ħuː.kiː.tu.maː/\n# second-person dual past passive of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥūkītumā", "ḥākā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حوكيت",
+      "tur": "verb",
+      "baslik": "حوكيت (form III)\n# حُوكِيتُ (ḥūkītu) /ħuː.kiː.tu/: first-person singular past passive of حَاكَى (ḥākā)\n# حُوكِيتَ (ḥūkīta) /ħuː.kiː.ta/: second-person masculine singular past passive of حَاكَى (ḥākā)\n# حُوكِيتِ (ḥūkīti) /ħuː.kiː.ti/: second-person feminine singular past passive of حَاكَى (ḥākā)\n# حُوكِيَتْ (ḥūkiyat) /ħuː.ki.jat/: third-person feminine singular past passive of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥūkītu", "ḥākā", "ḥūkīta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حوكيا",
+      "tur": "verb",
+      "baslik": "حُوكِيَا • (ḥūkiyā) (form III) /ħuː.ki.jaː/\n# third-person masculine dual past passive of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥūkiyā", "ḥākā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حوكيتا",
+      "tur": "verb",
+      "baslik": "حُوكِيَتَا • (ḥūkiyatā) (form III) /ħuː.ki.ja.taː/\n# third-person feminine dual past passive of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥūkiyatā", "ḥākā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حوكين",
+      "tur": "verb",
+      "baslik": "حُوكِينَ • (ḥūkīna) (form III) /ħuː.kiː.na/\n# third-person feminine plural past passive of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥūkīna", "ḥākā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حوكيتم",
+      "tur": "verb",
+      "baslik": "حُوكِيتُمْ • (ḥūkītum) (form III) /ħuː.kiː.tum/\n# second-person masculine plural past passive of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥūkītum", "ḥākā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حوكيتن",
+      "tur": "verb",
+      "baslik": "حُوكِيتُنَّ • (ḥūkītunna) (form III) /ħuː.kiː.tun.na/\n# second-person feminine plural past passive of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥūkītunna", "ḥākā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أحاكي",
+      "tur": "verb",
+      "baslik": "أحاكي (form III)\n# أُحَاكِي (ʔuḥākī) /ʔu.ħaː.kiː/: first-person singular non-past active indicative of حَاكَى (ḥākā)\n# أُحَاكِيَ (ʔuḥākiya) /ʔu.ħaː.ki.ja/: first-person singular non-past active subjunctive of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔuḥākī", "ḥākā", "ʔuḥākiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحاكين",
+      "tur": "verb",
+      "baslik": "تحاكين (form III)\n# تُحَاكِينَ (tuḥākīna) /tu.ħaː.kiː.na/: inflection of حَاكَى (ḥākā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُحَاكَيْنَ (tuḥākayna) /tu.ħaː.kaj.na/: inflection of حَاكَى (ḥākā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuḥākīna", "ḥākā", "tuḥākayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحاكي",
+      "tur": "verb",
+      "baslik": "يحاكي (form III)\n# يُحَاكِي (yuḥākī) /ju.ħaː.kiː/: third-person masculine singular non-past active indicative of حَاكَى (ḥākā)\n# يُحَاكِيَ (yuḥākiya) /ju.ħaː.ki.ja/: third-person masculine singular non-past active subjunctive of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuḥākī", "ḥākā", "yuḥākiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حوكينا",
+      "tur": "verb",
+      "baslik": "حُوكِينَا • (ḥūkīnā) (form III) /ħuː.kiː.naː/\n# first-person plural past passive of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥūkīnā", "ḥākā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحاكيان",
+      "tur": "verb",
+      "baslik": "يحاكيان (form III)\n# يُحَاكِيَانِ (yuḥākiyāni) /ju.ħaː.ki.jaː.ni/: third-person masculine dual non-past active indicative of حَاكَى (ḥākā)\n# يُحَاكَيَانِ (yuḥākayāni) /ju.ħaː.ka.jaː.ni/: third-person masculine dual non-past passive indicative of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuḥākiyāni", "ḥākā", "yuḥākayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحاكي",
+      "tur": "verb",
+      "baslik": "تحاكي (form III)\n# تُحَاكِي (tuḥākī) /tu.ħaː.kiː/: inflection of حَاكَى (ḥākā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُحَاكِيَ (tuḥākiya) /tu.ħaː.ki.ja/: inflection of حَاكَى (ḥākā):\n## second-person masculine singular non-past active subju",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuḥākī", "ḥākā", "tuḥākiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نحاكي",
+      "tur": "verb",
+      "baslik": "نحاكي (form III)\n# نُحَاكِي (nuḥākī) /nu.ħaː.kiː/: first-person plural non-past active indicative of حَاكَى (ḥākā)\n# نُحَاكِيَ (nuḥākiya) /nu.ħaː.ki.ja/: first-person plural non-past active subjunctive of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nuḥākī", "ḥākā", "nuḥākiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحاكيان",
+      "tur": "verb",
+      "baslik": "تحاكيان (form III)\n# تُحَاكِيَانِ (tuḥākiyāni) /tu.ħaː.ki.jaː.ni/: inflection of حَاكَى (ḥākā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُحَاكَيَانِ (tuḥākayāni) /tu.ħaː.ka.jaː.ni/: inflection of حَاكَى (ḥākā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuḥākiyāni", "ḥākā", "tuḥākayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحاكون",
+      "tur": "verb",
+      "baslik": "تحاكون (form III)\n# تُحَاكُونَ (tuḥākūna) /tu.ħaː.kuː.na/: second-person masculine plural non-past active indicative of حَاكَى (ḥākā)\n# تُحَاكَوْنَ (tuḥākawna) /tu.ħaː.kaw.na/: second-person masculine plural non-past passive indicative of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuḥākūna", "ḥākā", "tuḥākawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحاكين",
+      "tur": "verb",
+      "baslik": "يحاكين (form III)\n# يُحَاكِينَ (yuḥākīna) /ju.ħaː.kiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of حَاكَى (ḥākā)\n# يُحَاكَيْنَ (yuḥākayna) /ju.ħaː.kaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuḥākīna", "ḥākā", "yuḥākayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحاكون",
+      "tur": "verb",
+      "baslik": "يحاكون (form III)\n# يُحَاكُونَ (yuḥākūna) /ju.ħaː.kuː.na/: third-person masculine plural non-past active indicative of حَاكَى (ḥākā)\n# يُحَاكَوْنَ (yuḥākawna) /ju.ħaː.kaw.na/: third-person masculine plural non-past passive indicative of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuḥākūna", "ḥākā", "yuḥākawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أحاكى",
+      "tur": "verb",
+      "baslik": "أُحَاكَى • (ʔuḥākā) (form III) /ʔu.ħaː.kaː/\n# first-person singular non-past passive indicative/subjunctive of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔuḥākā", "ḥākā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحاكى",
+      "tur": "verb",
+      "baslik": "تُحَاكَى • (tuḥākā) (form III) /tu.ħaː.kaː/\n# inflection of حَاكَى (ḥākā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuḥākā", "ḥākā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحاكيا",
+      "tur": "verb",
+      "baslik": "يحاكيا (form III)\n# يُحَاكِيَا (yuḥākiyā) /ju.ħaː.ki.jaː/: third-person masculine dual non-past active subjunctive/jussive of حَاكَى (ḥākā)\n# يُحَاكَيَا (yuḥākayā) /ju.ħaː.ka.jaː/: third-person masculine dual non-past passive subjunctive/jussive of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuḥākiyā", "ḥākā", "yuḥākayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحاكى",
+      "tur": "verb",
+      "baslik": "يُحَاكَى • (yuḥākā) (form III) /ju.ħaː.kaː/\n# third-person masculine singular non-past passive indicative/subjunctive of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuḥākā", "ḥākā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نحاكى",
+      "tur": "verb",
+      "baslik": "نُحَاكَى • (nuḥākā) (form III) /nu.ħaː.kaː/\n# first-person plural non-past passive indicative/subjunctive of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nuḥākā", "ḥākā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحاكوا",
+      "tur": "verb",
+      "baslik": "تحاكوا (form III)\n# تُحَاكُوا (tuḥākū) /tu.ħaː.kuː/: second-person masculine plural non-past active subjunctive/jussive of حَاكَى (ḥākā)\n# تُحَاكَوْا (tuḥākaw) /tu.ħaː.kaw/: second-person masculine plural non-past passive subjunctive/jussive of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuḥākū", "ḥākā", "tuḥākaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أحاك",
+      "tur": "verb",
+      "baslik": "أحاك (form III)\n# أُحَاكِ (ʔuḥāki) /ʔu.ħaː.ki/: first-person singular non-past active jussive of حَاكَى (ḥākā)\n# أُحَاكَ (ʔuḥāka) /ʔu.ħaː.ka/: first-person singular non-past passive jussive of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔuḥāki", "ḥākā", "ʔuḥāka"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحاكوا",
+      "tur": "verb",
+      "baslik": "يحاكوا (form III)\n# يُحَاكُوا (yuḥākū) /ju.ħaː.kuː/: third-person masculine plural non-past active subjunctive/jussive of حَاكَى (ḥākā)\n# يُحَاكَوْا (yuḥākaw) /ju.ħaː.kaw/: third-person masculine plural non-past passive subjunctive/jussive of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuḥākū", "ḥākā", "yuḥākaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحاكيا",
+      "tur": "verb",
+      "baslik": "تحاكيا (form III)\n# تُحَاكِيَا (tuḥākiyā) /tu.ħaː.ki.jaː/: inflection of حَاكَى (ḥākā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُحَاكَيَا (tuḥākayā) /tu.ħaː.ka.jaː/: inflection of حَاكَى (ḥākā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuḥākiyā", "ḥākā", "tuḥākayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحاك",
+      "tur": "verb",
+      "baslik": "يحاك (form III)\n# يُحَاكِ (yuḥāki) /ju.ħaː.ki/: third-person masculine singular non-past active jussive of حَاكَى (ḥākā)\n# يُحَاكَ (yuḥāka) /ju.ħaː.ka/: third-person masculine singular non-past passive jussive of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuḥāki", "ḥākā", "yuḥāka"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحاك",
+      "tur": "verb",
+      "baslik": "تحاك (form III)\n# تُحَاكِ (tuḥāki) /tu.ħaː.ki/: inflection of حَاكَى (ḥākā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُحَاكَ (tuḥāka) /tu.ħaː.ka/: inflection of حَاكَى (ḥākā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuḥāki", "ḥākā", "tuḥāka"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حاكي",
+      "tur": "verb",
+      "baslik": "حَاكِي • (ḥākī) (form III) /ħaː.kiː/\n# second-person feminine singular imperative of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥākī", "ḥākā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نحاك",
+      "tur": "verb",
+      "baslik": "نحاك (form III)\n# نُحَاكِ (nuḥāki) /nu.ħaː.ki/: first-person plural non-past active jussive of حَاكَى (ḥākā)\n# نُحَاكَ (nuḥāka) /nu.ħaː.ka/: first-person plural non-past passive jussive of حَاكَى (ḥākā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nuḥāki", "ḥākā", "nuḥāka"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "حاكى", "r6"]
+  ],
+  "mana": {
     "ince": "weave.v.04",
     "orta": "verb.motion",
     "ust": "fiil ve hadise",
@@ -568,22 +401,15 @@
     "dayanak_tanim": "to move or cause to move in a sinuous, spiral, or circular course",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["weave.v.04"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["weave.v.04"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,626 +1,479 @@
 {
   "kok": "ءدوء",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءدوء", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أدوأت",
-        "u": "أدوأت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أدوأت (form IV)\n# أَدْوَأْتُ (ʔadwaʔtu) /ʔad.waʔ.tu/: first-person singular past active of أَدْوَأَ (ʔadwaʔa)\n# أَدْوَأْتَ (ʔadwaʔta) /ʔad.waʔ.ta/: second-person masculine singular past active of أَدْوَأَ (ʔadwaʔa)\n# أَدْوَأْتِ (ʔadwaʔti) /ʔad.waʔ.ti/: second-person feminine singular past active of أَدْوَأَ (ʔadwaʔa)\n# أَدْوَأَتْ (ʔadwaʔat) /ʔad.wa.ʔat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadwaʔtu", "ʔadwaʔa", "ʔadwaʔta"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "أدوآ",
-        "u": "أدوآ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَدْوَآ • (ʔadwaʔā) (form IV) /ʔad.wa.ʔaː/\n# third-person masculine dual past active of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadwaʔā", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "أدوأتما",
-        "u": "أدوأتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَدْوَأْتُمَا • (ʔadwaʔtumā) (form IV) /ʔad.waʔ.tu.maː/\n# second-person dual past active of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadwaʔtumā", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "أدوأنا",
-        "u": "أدوأنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَدْوَأْنَا • (ʔadwaʔnā) (form IV) /ʔad.waʔ.naː/\n# first-person plural past active of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadwaʔnā", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "أدوأتم",
-        "u": "أدوأتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَدْوَأْتُمْ • (ʔadwaʔtum) (form IV) /ʔad.waʔ.tum/\n# second-person masculine plural past active of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadwaʔtum", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "أدوأتن",
-        "u": "أدوأتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَدْوَأْتُنَّ • (ʔadwaʔtunna) (form IV) /ʔad.waʔ.tun.na/\n# second-person feminine plural past active of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadwaʔtunna", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "أدوأتا",
-        "u": "أدوأتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَدْوَأَتَا • (ʔadwaʔatā) (form IV) /ʔad.wa.ʔa.taː/\n# third-person feminine dual past active of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadwaʔatā", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "أدوؤوا",
-        "u": "أدوؤوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَدْوَؤُوا • (ʔadwaʔū) (form IV) /ʔad.wa.ʔuː/\n# third-person masculine plural past active of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadwaʔū", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "أدوئتما",
-        "u": "أدوئتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُدْوِئْتُمَا • (ʔudwiʔtumā) (form IV) /ʔud.wiʔ.tu.maː/\n# second-person dual past passive of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔudwiʔtumā", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "أدوئت",
-        "u": "أدوئت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أدوئت (form IV)\n# أُدْوِئْتُ (ʔudwiʔtu) /ʔud.wiʔ.tu/: first-person singular past passive of أَدْوَأَ (ʔadwaʔa)\n# أُدْوِئْتَ (ʔudwiʔta) /ʔud.wiʔ.ta/: second-person masculine singular past passive of أَدْوَأَ (ʔadwaʔa)\n# أُدْوِئْتِ (ʔudwiʔti) /ʔud.wiʔ.ti/: second-person feminine singular past passive of أَدْوَأَ (ʔadwaʔa)\n# أُدْوِئَتْ (ʔudwiʔat) /ʔud.wi.ʔat/: third-person feminine singular past pass",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔudwiʔtu", "ʔadwaʔa", "ʔudwiʔta"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "أدوأن",
-        "u": "أدوأن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَدْوَأْنَ • (ʔadwaʔna) (form IV) /ʔad.waʔ.na/\n# third-person feminine plural past active of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadwaʔna", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "أدوئا",
-        "u": "أدوئا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أدوئا (form IV)\n# أُدْوِئَا (ʔudwiʔā) /ʔud.wi.ʔaː/: third-person masculine dual past passive of أَدْوَأَ (ʔadwaʔa)\n# أَدْوِئَا (ʔadwiʔā) /ʔad.wi.ʔaː/: second-person dual imperative of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔudwiʔā", "ʔadwaʔa", "ʔadwiʔā"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "أدوئ",
-        "u": "أدوئ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أدوئ (form IV)\n# أُدْوِئَ (ʔudwiʔa) /ʔud.wi.ʔa/: inflection of أَدْوَأَ (ʔadwaʔa):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُدْوِئُ (ʔudwiʔu) /ʔud.wi.ʔu/: first-person singular non-past active indicative of أَدْوَأَ (ʔadwaʔa)\n# أُدْوِئْ (ʔudwiʔ) /ʔud.wiʔ/: first-person singular non-past active jussive of أَدْوَأَ (ʔadwaʔa)\n# أَدْوِئْ (",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔudwiʔa", "ʔadwaʔa", "ʔudwiʔu"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "أدوئنا",
-        "u": "أدوئنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُدْوِئْنَا • (ʔudwiʔnā) (form IV) /ʔud.wiʔ.naː/\n# first-person plural past passive of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔudwiʔnā", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "أدوئتم",
-        "u": "أدوئتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُدْوِئْتُمْ • (ʔudwiʔtum) (form IV) /ʔud.wiʔ.tum/\n# second-person masculine plural past passive of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔudwiʔtum", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "أدوئتا",
-        "u": "أدوئتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُدْوِئَتَا • (ʔudwiʔatā) (form IV) /ʔud.wi.ʔa.taː/\n# third-person feminine dual past passive of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔudwiʔatā", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "أدوئوا",
-        "u": "أدوئوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أدوئوا (form IV)\n# أُدْوِئُوا (ʔudwiʔū) /ʔud.wi.ʔuː/: third-person masculine plural past passive of أَدْوَأَ (ʔadwaʔa)\n# أَدْوِئُوا (ʔadwiʔū) /ʔad.wi.ʔuː/: second-person masculine plural imperative of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔudwiʔū", "ʔadwaʔa", "ʔadwiʔū"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "أدوئتن",
-        "u": "أدوئتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُدْوِئْتُنَّ • (ʔudwiʔtunna) (form IV) /ʔud.wiʔ.tun.na/\n# second-person feminine plural past passive of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔudwiʔtunna", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدوئين",
-        "u": "تدوئين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تدوئين (form IV)\n# تُدْوِئِينَ (tudwiʔīna) /tud.wi.ʔiː.na/: second-person feminine singular non-past active indicative of أَدْوَأَ (ʔadwaʔa)\n# تُدْوَئِينَ (tudwaʔīna) /tud.wa.ʔiː.na/: second-person feminine singular non-past passive indicative of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudwiʔīna", "ʔadwaʔa", "tudwaʔīna"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "أدوئن",
-        "u": "أدوئن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أدوئن (form IV)\n# أُدْوِئْنَ (ʔudwiʔna) /ʔud.wiʔ.na/: third-person feminine plural past passive of أَدْوَأَ (ʔadwaʔa)\n# أَدْوِئْنَ (ʔadwiʔna) /ʔad.wiʔ.na/: second-person feminine plural imperative of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔudwiʔna", "ʔadwaʔa", "ʔadwiʔna"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدوئ",
-        "u": "تدوئ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تدوئ (form IV)\n# تُدْوِئُ (tudwiʔu) /tud.wi.ʔu/: inflection of أَدْوَأَ (ʔadwaʔa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُدْوِئَ (tudwiʔa) /tud.wi.ʔa/: inflection of أَدْوَأَ (ʔadwaʔa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudwiʔu", "ʔadwaʔa", "tudwiʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يدوئ",
-        "u": "يدوئ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يدوئ (form IV)\n# يُدْوِئُ (yudwiʔu) /jud.wi.ʔu/: third-person masculine singular non-past active indicative of أَدْوَأَ (ʔadwaʔa)\n# يُدْوِئَ (yudwiʔa) /jud.wi.ʔa/: third-person masculine singular non-past active subjunctive of أَدْوَأَ (ʔadwaʔa)\n# يُدْوِئْ (yudwiʔ) /jud.wiʔ/: third-person masculine singular non-past active jussive of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudwiʔu", "ʔadwaʔa", "yudwiʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يدوئان",
-        "u": "يدوئان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُدْوِئَانِ • (yudwiʔāni) (form IV) /jud.wi.ʔaː.ni/\n# third-person masculine dual non-past active indicative of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudwiʔāni", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدوئان",
-        "u": "تدوئان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُدْوِئَانِ • (tudwiʔāni) (form IV) /tud.wi.ʔaː.ni/\n# inflection of أَدْوَأَ (ʔadwaʔa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudwiʔāni", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "ندوئ",
-        "u": "ندوئ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ندوئ (form IV)\n# نُدْوِئُ (nudwiʔu) /nud.wi.ʔu/: first-person plural non-past active indicative of أَدْوَأَ (ʔadwaʔa)\n# نُدْوِئَ (nudwiʔa) /nud.wi.ʔa/: first-person plural non-past active subjunctive of أَدْوَأَ (ʔadwaʔa)\n# نُدْوِئْ (nudwiʔ) /nud.wiʔ/: first-person plural non-past active jussive of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nudwiʔu", "ʔadwaʔa", "nudwiʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدوئون",
-        "u": "تدوئون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُدْوِئُونَ • (tudwiʔūna) (form IV) /tud.wi.ʔuː.na/\n# second-person masculine plural non-past active indicative of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudwiʔūna", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدوئن",
-        "u": "تدوئن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُدْوِئْنَ • (tudwiʔna) (form IV) /tud.wiʔ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudwiʔna", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدوأ",
-        "u": "تدوأ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تدوأ (form IV)\n# تُدْوَأُ (tudwaʔu) /tud.wa.ʔu/: inflection of أَدْوَأَ (ʔadwaʔa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُدْوَأَ (tudwaʔa) /tud.wa.ʔa/: inflection of أَدْوَأَ (ʔadwaʔa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunc",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudwaʔu", "ʔadwaʔa", "tudwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يدوئون",
-        "u": "يدوئون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُدْوِئُونَ • (yudwiʔūna) (form IV) /jud.wi.ʔuː.na/\n# third-person masculine plural non-past active indicative of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudwiʔūna", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يدوئن",
-        "u": "يدوئن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُدْوِئْنَ • (yudwiʔna) (form IV) /jud.wiʔ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudwiʔna", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدوآن",
-        "u": "تدوآن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُدْوَآنِ • (tudwaʔāni) (form IV) /tud.wa.ʔaː.ni/\n# inflection of أَدْوَأَ (ʔadwaʔa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudwaʔāni", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يدوأ",
-        "u": "يدوأ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يدوأ (form IV)\n# يُدْوَأُ (yudwaʔu) /jud.wa.ʔu/: third-person masculine singular non-past passive indicative of أَدْوَأَ (ʔadwaʔa)\n# يُدْوَأَ (yudwaʔa) /jud.wa.ʔa/: third-person masculine singular non-past passive subjunctive of أَدْوَأَ (ʔadwaʔa)\n# يُدْوَأْ (yudwaʔ) /jud.waʔ/: third-person masculine singular non-past passive jussive of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudwaʔu", "ʔadwaʔa", "yudwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "ندوأ",
-        "u": "ندوأ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ندوأ (form IV)\n# نُدْوَأُ (nudwaʔu) /nud.wa.ʔu/: first-person plural non-past passive indicative of أَدْوَأَ (ʔadwaʔa)\n# نُدْوَأَ (nudwaʔa) /nud.wa.ʔa/: first-person plural non-past passive subjunctive of أَدْوَأَ (ʔadwaʔa)\n# نُدْوَأْ (nudwaʔ) /nud.waʔ/: first-person plural non-past passive jussive of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nudwaʔu", "ʔadwaʔa", "nudwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يدوآن",
-        "u": "يدوآن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُدْوَآنِ • (yudwaʔāni) (form IV) /jud.wa.ʔaː.ni/\n# third-person masculine dual non-past passive indicative of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudwaʔāni", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدوأن",
-        "u": "تدوأن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُدْوَأْنَ • (tudwaʔna) (form IV) /tud.waʔ.na/\n# second-person feminine plural non-past passive indicative/subjunctive/jussive of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudwaʔna", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدوؤون",
-        "u": "تدوؤون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُدْوَؤُونَ • (tudwaʔūna) (form IV) /tud.wa.ʔuː.na/\n# second-person masculine plural non-past passive indicative of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudwaʔūna", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يدوأن",
-        "u": "يدوأن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُدْوَأْنَ • (yudwaʔna) (form IV) /jud.waʔ.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudwaʔna", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يدوؤون",
-        "u": "يدوؤون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُدْوَؤُونَ • (yudwaʔūna) (form IV) /jud.wa.ʔuː.na/\n# third-person masculine plural non-past passive indicative of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudwaʔūna", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يدوئا",
-        "u": "يدوئا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُدْوِئَا • (yudwiʔā) (form IV) /jud.wi.ʔaː/\n# third-person masculine dual non-past active subjunctive/jussive of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudwiʔā", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدوئوا",
-        "u": "تدوئوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُدْوِئُوا • (tudwiʔū) (form IV) /tud.wi.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudwiʔū", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدوئا",
-        "u": "تدوئا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُدْوِئَا • (tudwiʔā) (form IV) /tud.wi.ʔaː/\n# inflection of أَدْوَأَ (ʔadwaʔa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudwiʔā", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يدوآ",
-        "u": "يدوآ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُدْوَآ • (yudwaʔā) (form IV) /jud.wa.ʔaː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudwaʔā", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدوئي",
-        "u": "تدوئي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تدوئي (form IV)\n# تُدْوِئِي (tudwiʔī) /tud.wi.ʔiː/: second-person feminine singular non-past active subjunctive/jussive of أَدْوَأَ (ʔadwaʔa)\n# تُدْوَئِي (tudwaʔī) /tud.wa.ʔiː/: second-person feminine singular non-past passive subjunctive/jussive of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudwiʔī", "ʔadwaʔa", "tudwaʔī"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدوآ",
-        "u": "تدوآ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُدْوَآ • (tudwaʔā) (form IV) /tud.wa.ʔaː/\n# inflection of أَدْوَأَ (ʔadwaʔa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudwaʔā", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يدوئوا",
-        "u": "يدوئوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُدْوِئُوا • (yudwiʔū) (form IV) /jud.wi.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudwiʔū", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "أدوئي",
-        "u": "أدوئي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَدْوِئِي • (ʔadwiʔī) (form IV) /ʔad.wi.ʔiː/\n# second-person feminine singular imperative of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadwiʔī", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدوؤوا",
-        "u": "تدوؤوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُدْوَؤُوا • (tudwaʔū) (form IV) /tud.wa.ʔuː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudwaʔū", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يدوؤوا",
-        "u": "يدوؤوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُدْوَؤُوا • (yudwaʔū) (form IV) /jud.wa.ʔuː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَدْوَأَ (ʔadwaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudwaʔū", "ʔadwaʔa"],
-        "k": "أدوأ",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "دد",
+  "ses": {
     "harf": "ء",
+    "fasil": "دد",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "أدوأت",
+      "tur": "verb",
+      "baslik": "أدوأت (form IV)\n# أَدْوَأْتُ (ʔadwaʔtu) /ʔad.waʔ.tu/: first-person singular past active of أَدْوَأَ (ʔadwaʔa)\n# أَدْوَأْتَ (ʔadwaʔta) /ʔad.waʔ.ta/: second-person masculine singular past active of أَدْوَأَ (ʔadwaʔa)\n# أَدْوَأْتِ (ʔadwaʔti) /ʔad.waʔ.ti/: second-person feminine singular past active of أَدْوَأَ (ʔadwaʔa)\n# أَدْوَأَتْ (ʔadwaʔat) /ʔad.wa.ʔat/: third-person feminine singular past active ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadwaʔtu", "ʔadwaʔa", "ʔadwaʔta"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدوآ",
+      "tur": "verb",
+      "baslik": "أَدْوَآ • (ʔadwaʔā) (form IV) /ʔad.wa.ʔaː/\n# third-person masculine dual past active of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadwaʔā", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدوأتما",
+      "tur": "verb",
+      "baslik": "أَدْوَأْتُمَا • (ʔadwaʔtumā) (form IV) /ʔad.waʔ.tu.maː/\n# second-person dual past active of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadwaʔtumā", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدوأنا",
+      "tur": "verb",
+      "baslik": "أَدْوَأْنَا • (ʔadwaʔnā) (form IV) /ʔad.waʔ.naː/\n# first-person plural past active of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadwaʔnā", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدوأتم",
+      "tur": "verb",
+      "baslik": "أَدْوَأْتُمْ • (ʔadwaʔtum) (form IV) /ʔad.waʔ.tum/\n# second-person masculine plural past active of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadwaʔtum", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدوأتن",
+      "tur": "verb",
+      "baslik": "أَدْوَأْتُنَّ • (ʔadwaʔtunna) (form IV) /ʔad.waʔ.tun.na/\n# second-person feminine plural past active of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadwaʔtunna", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدوأتا",
+      "tur": "verb",
+      "baslik": "أَدْوَأَتَا • (ʔadwaʔatā) (form IV) /ʔad.wa.ʔa.taː/\n# third-person feminine dual past active of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadwaʔatā", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدوؤوا",
+      "tur": "verb",
+      "baslik": "أَدْوَؤُوا • (ʔadwaʔū) (form IV) /ʔad.wa.ʔuː/\n# third-person masculine plural past active of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadwaʔū", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدوئتما",
+      "tur": "verb",
+      "baslik": "أُدْوِئْتُمَا • (ʔudwiʔtumā) (form IV) /ʔud.wiʔ.tu.maː/\n# second-person dual past passive of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔudwiʔtumā", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدوئت",
+      "tur": "verb",
+      "baslik": "أدوئت (form IV)\n# أُدْوِئْتُ (ʔudwiʔtu) /ʔud.wiʔ.tu/: first-person singular past passive of أَدْوَأَ (ʔadwaʔa)\n# أُدْوِئْتَ (ʔudwiʔta) /ʔud.wiʔ.ta/: second-person masculine singular past passive of أَدْوَأَ (ʔadwaʔa)\n# أُدْوِئْتِ (ʔudwiʔti) /ʔud.wiʔ.ti/: second-person feminine singular past passive of أَدْوَأَ (ʔadwaʔa)\n# أُدْوِئَتْ (ʔudwiʔat) /ʔud.wi.ʔat/: third-person feminine singular past pass",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔudwiʔtu", "ʔadwaʔa", "ʔudwiʔta"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدوأن",
+      "tur": "verb",
+      "baslik": "أَدْوَأْنَ • (ʔadwaʔna) (form IV) /ʔad.waʔ.na/\n# third-person feminine plural past active of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadwaʔna", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدوئا",
+      "tur": "verb",
+      "baslik": "أدوئا (form IV)\n# أُدْوِئَا (ʔudwiʔā) /ʔud.wi.ʔaː/: third-person masculine dual past passive of أَدْوَأَ (ʔadwaʔa)\n# أَدْوِئَا (ʔadwiʔā) /ʔad.wi.ʔaː/: second-person dual imperative of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔudwiʔā", "ʔadwaʔa", "ʔadwiʔā"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدوئ",
+      "tur": "verb",
+      "baslik": "أدوئ (form IV)\n# أُدْوِئَ (ʔudwiʔa) /ʔud.wi.ʔa/: inflection of أَدْوَأَ (ʔadwaʔa):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُدْوِئُ (ʔudwiʔu) /ʔud.wi.ʔu/: first-person singular non-past active indicative of أَدْوَأَ (ʔadwaʔa)\n# أُدْوِئْ (ʔudwiʔ) /ʔud.wiʔ/: first-person singular non-past active jussive of أَدْوَأَ (ʔadwaʔa)\n# أَدْوِئْ (",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔudwiʔa", "ʔadwaʔa", "ʔudwiʔu"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدوئنا",
+      "tur": "verb",
+      "baslik": "أُدْوِئْنَا • (ʔudwiʔnā) (form IV) /ʔud.wiʔ.naː/\n# first-person plural past passive of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔudwiʔnā", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدوئتم",
+      "tur": "verb",
+      "baslik": "أُدْوِئْتُمْ • (ʔudwiʔtum) (form IV) /ʔud.wiʔ.tum/\n# second-person masculine plural past passive of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔudwiʔtum", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدوئتا",
+      "tur": "verb",
+      "baslik": "أُدْوِئَتَا • (ʔudwiʔatā) (form IV) /ʔud.wi.ʔa.taː/\n# third-person feminine dual past passive of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔudwiʔatā", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدوئوا",
+      "tur": "verb",
+      "baslik": "أدوئوا (form IV)\n# أُدْوِئُوا (ʔudwiʔū) /ʔud.wi.ʔuː/: third-person masculine plural past passive of أَدْوَأَ (ʔadwaʔa)\n# أَدْوِئُوا (ʔadwiʔū) /ʔad.wi.ʔuː/: second-person masculine plural imperative of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔudwiʔū", "ʔadwaʔa", "ʔadwiʔū"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدوئتن",
+      "tur": "verb",
+      "baslik": "أُدْوِئْتُنَّ • (ʔudwiʔtunna) (form IV) /ʔud.wiʔ.tun.na/\n# second-person feminine plural past passive of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔudwiʔtunna", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدوئين",
+      "tur": "verb",
+      "baslik": "تدوئين (form IV)\n# تُدْوِئِينَ (tudwiʔīna) /tud.wi.ʔiː.na/: second-person feminine singular non-past active indicative of أَدْوَأَ (ʔadwaʔa)\n# تُدْوَئِينَ (tudwaʔīna) /tud.wa.ʔiː.na/: second-person feminine singular non-past passive indicative of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudwiʔīna", "ʔadwaʔa", "tudwaʔīna"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدوئن",
+      "tur": "verb",
+      "baslik": "أدوئن (form IV)\n# أُدْوِئْنَ (ʔudwiʔna) /ʔud.wiʔ.na/: third-person feminine plural past passive of أَدْوَأَ (ʔadwaʔa)\n# أَدْوِئْنَ (ʔadwiʔna) /ʔad.wiʔ.na/: second-person feminine plural imperative of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔudwiʔna", "ʔadwaʔa", "ʔadwiʔna"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدوئ",
+      "tur": "verb",
+      "baslik": "تدوئ (form IV)\n# تُدْوِئُ (tudwiʔu) /tud.wi.ʔu/: inflection of أَدْوَأَ (ʔadwaʔa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُدْوِئَ (tudwiʔa) /tud.wi.ʔa/: inflection of أَدْوَأَ (ʔadwaʔa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudwiʔu", "ʔadwaʔa", "tudwiʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدوئ",
+      "tur": "verb",
+      "baslik": "يدوئ (form IV)\n# يُدْوِئُ (yudwiʔu) /jud.wi.ʔu/: third-person masculine singular non-past active indicative of أَدْوَأَ (ʔadwaʔa)\n# يُدْوِئَ (yudwiʔa) /jud.wi.ʔa/: third-person masculine singular non-past active subjunctive of أَدْوَأَ (ʔadwaʔa)\n# يُدْوِئْ (yudwiʔ) /jud.wiʔ/: third-person masculine singular non-past active jussive of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudwiʔu", "ʔadwaʔa", "yudwiʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدوئان",
+      "tur": "verb",
+      "baslik": "يُدْوِئَانِ • (yudwiʔāni) (form IV) /jud.wi.ʔaː.ni/\n# third-person masculine dual non-past active indicative of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudwiʔāni", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدوئان",
+      "tur": "verb",
+      "baslik": "تُدْوِئَانِ • (tudwiʔāni) (form IV) /tud.wi.ʔaː.ni/\n# inflection of أَدْوَأَ (ʔadwaʔa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudwiʔāni", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ندوئ",
+      "tur": "verb",
+      "baslik": "ندوئ (form IV)\n# نُدْوِئُ (nudwiʔu) /nud.wi.ʔu/: first-person plural non-past active indicative of أَدْوَأَ (ʔadwaʔa)\n# نُدْوِئَ (nudwiʔa) /nud.wi.ʔa/: first-person plural non-past active subjunctive of أَدْوَأَ (ʔadwaʔa)\n# نُدْوِئْ (nudwiʔ) /nud.wiʔ/: first-person plural non-past active jussive of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nudwiʔu", "ʔadwaʔa", "nudwiʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدوئون",
+      "tur": "verb",
+      "baslik": "تُدْوِئُونَ • (tudwiʔūna) (form IV) /tud.wi.ʔuː.na/\n# second-person masculine plural non-past active indicative of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudwiʔūna", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدوئن",
+      "tur": "verb",
+      "baslik": "تُدْوِئْنَ • (tudwiʔna) (form IV) /tud.wiʔ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudwiʔna", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدوأ",
+      "tur": "verb",
+      "baslik": "تدوأ (form IV)\n# تُدْوَأُ (tudwaʔu) /tud.wa.ʔu/: inflection of أَدْوَأَ (ʔadwaʔa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُدْوَأَ (tudwaʔa) /tud.wa.ʔa/: inflection of أَدْوَأَ (ʔadwaʔa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunc",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudwaʔu", "ʔadwaʔa", "tudwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدوئون",
+      "tur": "verb",
+      "baslik": "يُدْوِئُونَ • (yudwiʔūna) (form IV) /jud.wi.ʔuː.na/\n# third-person masculine plural non-past active indicative of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudwiʔūna", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدوئن",
+      "tur": "verb",
+      "baslik": "يُدْوِئْنَ • (yudwiʔna) (form IV) /jud.wiʔ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudwiʔna", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدوآن",
+      "tur": "verb",
+      "baslik": "تُدْوَآنِ • (tudwaʔāni) (form IV) /tud.wa.ʔaː.ni/\n# inflection of أَدْوَأَ (ʔadwaʔa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudwaʔāni", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدوأ",
+      "tur": "verb",
+      "baslik": "يدوأ (form IV)\n# يُدْوَأُ (yudwaʔu) /jud.wa.ʔu/: third-person masculine singular non-past passive indicative of أَدْوَأَ (ʔadwaʔa)\n# يُدْوَأَ (yudwaʔa) /jud.wa.ʔa/: third-person masculine singular non-past passive subjunctive of أَدْوَأَ (ʔadwaʔa)\n# يُدْوَأْ (yudwaʔ) /jud.waʔ/: third-person masculine singular non-past passive jussive of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudwaʔu", "ʔadwaʔa", "yudwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ندوأ",
+      "tur": "verb",
+      "baslik": "ندوأ (form IV)\n# نُدْوَأُ (nudwaʔu) /nud.wa.ʔu/: first-person plural non-past passive indicative of أَدْوَأَ (ʔadwaʔa)\n# نُدْوَأَ (nudwaʔa) /nud.wa.ʔa/: first-person plural non-past passive subjunctive of أَدْوَأَ (ʔadwaʔa)\n# نُدْوَأْ (nudwaʔ) /nud.waʔ/: first-person plural non-past passive jussive of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nudwaʔu", "ʔadwaʔa", "nudwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدوآن",
+      "tur": "verb",
+      "baslik": "يُدْوَآنِ • (yudwaʔāni) (form IV) /jud.wa.ʔaː.ni/\n# third-person masculine dual non-past passive indicative of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudwaʔāni", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدوأن",
+      "tur": "verb",
+      "baslik": "تُدْوَأْنَ • (tudwaʔna) (form IV) /tud.waʔ.na/\n# second-person feminine plural non-past passive indicative/subjunctive/jussive of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudwaʔna", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدوؤون",
+      "tur": "verb",
+      "baslik": "تُدْوَؤُونَ • (tudwaʔūna) (form IV) /tud.wa.ʔuː.na/\n# second-person masculine plural non-past passive indicative of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudwaʔūna", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدوأن",
+      "tur": "verb",
+      "baslik": "يُدْوَأْنَ • (yudwaʔna) (form IV) /jud.waʔ.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudwaʔna", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدوؤون",
+      "tur": "verb",
+      "baslik": "يُدْوَؤُونَ • (yudwaʔūna) (form IV) /jud.wa.ʔuː.na/\n# third-person masculine plural non-past passive indicative of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudwaʔūna", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدوئا",
+      "tur": "verb",
+      "baslik": "يُدْوِئَا • (yudwiʔā) (form IV) /jud.wi.ʔaː/\n# third-person masculine dual non-past active subjunctive/jussive of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudwiʔā", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدوئوا",
+      "tur": "verb",
+      "baslik": "تُدْوِئُوا • (tudwiʔū) (form IV) /tud.wi.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudwiʔū", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدوئا",
+      "tur": "verb",
+      "baslik": "تُدْوِئَا • (tudwiʔā) (form IV) /tud.wi.ʔaː/\n# inflection of أَدْوَأَ (ʔadwaʔa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudwiʔā", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدوآ",
+      "tur": "verb",
+      "baslik": "يُدْوَآ • (yudwaʔā) (form IV) /jud.wa.ʔaː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudwaʔā", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدوئي",
+      "tur": "verb",
+      "baslik": "تدوئي (form IV)\n# تُدْوِئِي (tudwiʔī) /tud.wi.ʔiː/: second-person feminine singular non-past active subjunctive/jussive of أَدْوَأَ (ʔadwaʔa)\n# تُدْوَئِي (tudwaʔī) /tud.wa.ʔiː/: second-person feminine singular non-past passive subjunctive/jussive of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudwiʔī", "ʔadwaʔa", "tudwaʔī"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدوآ",
+      "tur": "verb",
+      "baslik": "تُدْوَآ • (tudwaʔā) (form IV) /tud.wa.ʔaː/\n# inflection of أَدْوَأَ (ʔadwaʔa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudwaʔā", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدوئوا",
+      "tur": "verb",
+      "baslik": "يُدْوِئُوا • (yudwiʔū) (form IV) /jud.wi.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudwiʔū", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدوئي",
+      "tur": "verb",
+      "baslik": "أَدْوِئِي • (ʔadwiʔī) (form IV) /ʔad.wi.ʔiː/\n# second-person feminine singular imperative of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadwiʔī", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدوؤوا",
+      "tur": "verb",
+      "baslik": "تُدْوَؤُوا • (tudwaʔū) (form IV) /tud.wa.ʔuː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudwaʔū", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدوؤوا",
+      "tur": "verb",
+      "baslik": "يُدْوَؤُوا • (yudwaʔū) (form IV) /jud.wa.ʔuː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَدْوَأَ (ʔadwaʔa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudwaʔū", "ʔadwaʔa"],
+      "kok_yazilis": "أدوأ",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءدوء", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

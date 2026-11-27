@@ -1,444 +1,320 @@
 {
   "kok": "هان",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "هان", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "هنا",
-        "u": "هنا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "هُنَّا • (hunnā) (form I) /hun.naː/\n# first-person plural past active of هَانَ (hāna)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hunnā", "hāna"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "هن",
-        "u": "هن",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "هن (form I)\n# هُنَّ (hunna) /hun.na/: inflection of هَانَ (hāna):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# هُنْ (hun) /hun/: second-person masculine singular imperative of هَانَ (hāna)",
-        "tag": ["dialectal", "form-i", "no-gloss", "obsolete"],
-        "r": ["hunna", "hāna", "hun"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "يهن",
-        "u": "يهن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يهن (form I)\n# يَهُنَّ (yahunna) /ja.hun.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of هَانَ (hāna)\n# يَهُنْ (yahun) /ja.hun/: third-person masculine singular non-past active jussive of هَانَ (hāna)\n# يُهَنْ (yuhan) /ju.han/: third-person masculine singular non-past passive jussive of هَانَ (hāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahunna", "hāna", "yahun"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "تهن",
-        "u": "تهن",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تهن (form I)\n# تَهُنَّ (tahunna) /ta.hun.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of هَانَ (hāna)\n# تَهُنْ (tahun) /ta.hun/: inflection of هَانَ (hāna):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahunna", "hāna", "tahun"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "أهن",
-        "u": "أهن",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "أَهُنْ • (ʔahun) (form I) /ʔa.hun/\n# first-person singular non-past active jussive of هَانَ (hāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔahun", "hāna"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "نهن",
-        "u": "نهن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نَهُنْ • (nahun) (form I) /na.hun/\n# first-person plural non-past active jussive of هَانَ (hāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nahun", "hāna"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "أهون",
-        "u": "أهون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أهون (form I)\n# أَهُونُ (ʔahūnu) /ʔa.huː.nu/: first-person singular non-past active indicative of هَانَ (hāna)\n# أَهُونَ (ʔahūna) /ʔa.huː.na/: first-person singular non-past active subjunctive of هَانَ (hāna)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔahūnu", "hāna", "ʔahūna"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "يهون",
-        "u": "يهون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يهون (form I)\n# يَهُونُ (yahūnu) /ja.huː.nu/: third-person masculine singular non-past active indicative of هَانَ (hāna)\n# يَهُونَ (yahūna) /ja.huː.na/: third-person masculine singular non-past active subjunctive of هَانَ (hāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahūnu", "hāna", "yahūna"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "هوني",
-        "u": "هوني",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "هُونِي • (hūnī) (form I) /huː.niː/\n# second-person feminine singular imperative of هَانَ (hāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hūnī", "hāna"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "هنت",
-        "u": "هنت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "هنت (form I)\n# هُنْتُ (huntu) /hun.tu/: first-person singular past active of هَانَ (hāna)\n# هُنْتَ (hunta) /hun.ta/: second-person masculine singular past active of هَانَ (hāna)\n# هُنْتِ (hunti) /hun.ti/: second-person feminine singular past active of هَانَ (hāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["huntu", "hāna", "hunta"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "هنتما",
-        "u": "هنتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هُنْتُمَا • (huntumā) (form I) /hun.tu.maː/\n# second-person dual past active of هَانَ (hāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["huntumā", "hāna"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "هانت",
-        "u": "هانت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَانَتْ • (hānat) (form I) /haː.nat/\n# third-person feminine singular past active of هَانَ (hāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hānat", "hāna"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "هانا",
-        "u": "هانا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَانَا • (hānā) (form I) /haː.naː/\n# third-person masculine dual past active of هَانَ (hāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hānā", "hāna"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "هانتا",
-        "u": "هانتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَانَتَا • (hānatā) (form I) /haː.na.taː/\n# third-person feminine dual past active of هَانَ (hāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hānatā", "hāna"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "هانوا",
-        "u": "هانوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَانُوا • (hānū) (form I) /haː.nuː/\n# third-person masculine plural past active of هَانَ (hāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hānū", "hāna"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "هنتم",
-        "u": "هنتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هُنْتُمْ • (huntum) (form I) /hun.tum/\n# second-person masculine plural past active of هَانَ (hāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["huntum", "hāna"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "هنتن",
-        "u": "هنتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هُنْتُنَّ • (huntunna) (form I) /hun.tun.na/\n# second-person feminine plural past active of هَانَ (hāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["huntunna", "hāna"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "تهون",
-        "u": "تهون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تهون (form I)\n# تَهُونُ (tahūnu) /ta.huː.nu/: inflection of هَانَ (hāna):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَهُونَ (tahūna) /ta.huː.na/: inflection of هَانَ (hāna):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahūnu", "hāna", "tahūna"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "تهونين",
-        "u": "تهونين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهُونِينَ • (tahūnīna) (form I) /ta.huː.niː.na/\n# second-person feminine singular non-past active indicative of هَانَ (hāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahūnīna", "hāna"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "تهونان",
-        "u": "تهونان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهُونَانِ • (tahūnāni) (form I) /ta.huː.naː.ni/\n# inflection of هَانَ (hāna):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahūnāni", "hāna"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "يهونان",
-        "u": "يهونان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَهُونَانِ • (yahūnāni) (form I) /ja.huː.naː.ni/\n# third-person masculine dual non-past active indicative of هَانَ (hāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahūnāni", "hāna"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "تهونون",
-        "u": "تهونون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهُونُونَ • (tahūnūna) (form I) /ta.huː.nuː.na/\n# second-person masculine plural non-past active indicative of هَانَ (hāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahūnūna", "hāna"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "يهونون",
-        "u": "يهونون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَهُونُونَ • (yahūnūna) (form I) /ja.huː.nuː.na/\n# third-person masculine plural non-past active indicative of هَانَ (hāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahūnūna", "hāna"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "يهونا",
-        "u": "يهونا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَهُونَا • (yahūnā) (form I) /ja.huː.naː/\n# third-person masculine dual non-past active subjunctive/jussive of هَانَ (hāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahūnā", "hāna"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "نهون",
-        "u": "نهون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نهون (form I)\n# نَهُونُ (nahūnu) /na.huː.nu/: first-person plural non-past active indicative of هَانَ (hāna)\n# نَهُونَ (nahūna) /na.huː.na/: first-person plural non-past active subjunctive of هَانَ (hāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nahūnu", "hāna", "nahūna"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "تهوني",
-        "u": "تهوني",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهُونِي • (tahūnī) (form I) /ta.huː.niː/\n# second-person feminine singular non-past active subjunctive/jussive of هَانَ (hāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahūnī", "hāna"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "تهونا",
-        "u": "تهونا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهُونَا • (tahūnā) (form I) /ta.huː.naː/\n# inflection of هَانَ (hāna):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahūnā", "hāna"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "تهونوا",
-        "u": "تهونوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهُونُوا • (tahūnū) (form I) /ta.huː.nuː/\n# second-person masculine plural non-past active subjunctive/jussive of هَانَ (hāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahūnū", "hāna"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "هونا",
-        "u": "هونا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "هُونَا • (hūnā) (form I) /huː.naː/\n# second-person dual imperative of هَانَ (hāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hūnā", "hāna"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "يهونوا",
-        "u": "يهونوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَهُونُوا • (yahūnū) (form I) /ja.huː.nuː/\n# third-person masculine plural non-past active subjunctive/jussive of هَانَ (hāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahūnū", "hāna"],
-        "k": "هان",
-        "yol": "kök"
-      },
-      {
-        "w": "هونوا",
-        "u": "هونوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "هُونُوا • (hūnū) (form I) /huː.nuː/\n# second-person masculine plural imperative of هَانَ (hāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hūnū", "hāna"],
-        "k": "هان",
-        "yol": "kök"
-      }
-    ],
-    "tercume": {}
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "هن",
+  "ses": {
     "harf": "ه",
+    "fasil": "هن",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "هنا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "هُنَّا • (hunnā) (form I) /hun.naː/\n# first-person plural past active of هَانَ (hāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hunnā", "hāna"]
+    },
+    {
+      "madde": "هن",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "هن (form I)\n# هُنَّ (hunna) /hun.na/: inflection of هَانَ (hāna):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# هُنْ (hun) /hun/: second-person masculine singular imperative of هَانَ (hāna)",
+      "etiket": ["dialectal", "form-i", "no-gloss", "obsolete"],
+      "okunus": ["hunna", "hāna", "hun"]
+    },
+    {
+      "madde": "يهن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يهن (form I)\n# يَهُنَّ (yahunna) /ja.hun.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of هَانَ (hāna)\n# يَهُنْ (yahun) /ja.hun/: third-person masculine singular non-past active jussive of هَانَ (hāna)\n# يُهَنْ (yuhan) /ju.han/: third-person masculine singular non-past passive jussive of هَانَ (hāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahunna", "hāna", "yahun"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهن",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تهن (form I)\n# تَهُنَّ (tahunna) /ta.hun.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of هَانَ (hāna)\n# تَهُنْ (tahun) /ta.hun/: inflection of هَانَ (hāna):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahunna", "hāna", "tahun"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أهن",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "أَهُنْ • (ʔahun) (form I) /ʔa.hun/\n# first-person singular non-past active jussive of هَانَ (hāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔahun", "hāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نهن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نَهُنْ • (nahun) (form I) /na.hun/\n# first-person plural non-past active jussive of هَانَ (hāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nahun", "hāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أهون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أهون (form I)\n# أَهُونُ (ʔahūnu) /ʔa.huː.nu/: first-person singular non-past active indicative of هَانَ (hāna)\n# أَهُونَ (ʔahūna) /ʔa.huː.na/: first-person singular non-past active subjunctive of هَانَ (hāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔahūnu", "hāna", "ʔahūna"]
+    },
+    {
+      "madde": "يهون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يهون (form I)\n# يَهُونُ (yahūnu) /ja.huː.nu/: third-person masculine singular non-past active indicative of هَانَ (hāna)\n# يَهُونَ (yahūna) /ja.huː.na/: third-person masculine singular non-past active subjunctive of هَانَ (hāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahūnu", "hāna", "yahūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هوني",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "هُونِي • (hūnī) (form I) /huː.niː/\n# second-person feminine singular imperative of هَانَ (hāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hūnī", "hāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هنت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "هنت (form I)\n# هُنْتُ (huntu) /hun.tu/: first-person singular past active of هَانَ (hāna)\n# هُنْتَ (hunta) /hun.ta/: second-person masculine singular past active of هَانَ (hāna)\n# هُنْتِ (hunti) /hun.ti/: second-person feminine singular past active of هَانَ (hāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["huntu", "hāna", "hunta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هنتما",
+      "tur": "verb",
+      "baslik": "هُنْتُمَا • (huntumā) (form I) /hun.tu.maː/\n# second-person dual past active of هَانَ (hāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["huntumā", "hāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هانت",
+      "tur": "verb",
+      "baslik": "هَانَتْ • (hānat) (form I) /haː.nat/\n# third-person feminine singular past active of هَانَ (hāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hānat", "hāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هانا",
+      "tur": "verb",
+      "baslik": "هَانَا • (hānā) (form I) /haː.naː/\n# third-person masculine dual past active of هَانَ (hāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hānā", "hāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هانتا",
+      "tur": "verb",
+      "baslik": "هَانَتَا • (hānatā) (form I) /haː.na.taː/\n# third-person feminine dual past active of هَانَ (hāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hānatā", "hāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هانوا",
+      "tur": "verb",
+      "baslik": "هَانُوا • (hānū) (form I) /haː.nuː/\n# third-person masculine plural past active of هَانَ (hāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hānū", "hāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هنتم",
+      "tur": "verb",
+      "baslik": "هُنْتُمْ • (huntum) (form I) /hun.tum/\n# second-person masculine plural past active of هَانَ (hāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["huntum", "hāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هنتن",
+      "tur": "verb",
+      "baslik": "هُنْتُنَّ • (huntunna) (form I) /hun.tun.na/\n# second-person feminine plural past active of هَانَ (hāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["huntunna", "hāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تهون (form I)\n# تَهُونُ (tahūnu) /ta.huː.nu/: inflection of هَانَ (hāna):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَهُونَ (tahūna) /ta.huː.na/: inflection of هَانَ (hāna):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahūnu", "hāna", "tahūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهونين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهُونِينَ • (tahūnīna) (form I) /ta.huː.niː.na/\n# second-person feminine singular non-past active indicative of هَانَ (hāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahūnīna", "hāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهونان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهُونَانِ • (tahūnāni) (form I) /ta.huː.naː.ni/\n# inflection of هَانَ (hāna):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahūnāni", "hāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهونان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَهُونَانِ • (yahūnāni) (form I) /ja.huː.naː.ni/\n# third-person masculine dual non-past active indicative of هَانَ (hāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahūnāni", "hāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهونون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهُونُونَ • (tahūnūna) (form I) /ta.huː.nuː.na/\n# second-person masculine plural non-past active indicative of هَانَ (hāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahūnūna", "hāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهونون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَهُونُونَ • (yahūnūna) (form I) /ja.huː.nuː.na/\n# third-person masculine plural non-past active indicative of هَانَ (hāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahūnūna", "hāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهونا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَهُونَا • (yahūnā) (form I) /ja.huː.naː/\n# third-person masculine dual non-past active subjunctive/jussive of هَانَ (hāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahūnā", "hāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نهون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نهون (form I)\n# نَهُونُ (nahūnu) /na.huː.nu/: first-person plural non-past active indicative of هَانَ (hāna)\n# نَهُونَ (nahūna) /na.huː.na/: first-person plural non-past active subjunctive of هَانَ (hāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nahūnu", "hāna", "nahūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهوني",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهُونِي • (tahūnī) (form I) /ta.huː.niː/\n# second-person feminine singular non-past active subjunctive/jussive of هَانَ (hāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahūnī", "hāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهونا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهُونَا • (tahūnā) (form I) /ta.huː.naː/\n# inflection of هَانَ (hāna):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahūnā", "hāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهونوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهُونُوا • (tahūnū) (form I) /ta.huː.nuː/\n# second-person masculine plural non-past active subjunctive/jussive of هَانَ (hāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahūnū", "hāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هونا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "هُونَا • (hūnā) (form I) /huː.naː/\n# second-person dual imperative of هَانَ (hāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hūnā", "hāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهونوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَهُونُوا • (yahūnū) (form I) /ja.huː.nuː/\n# third-person masculine plural non-past active subjunctive/jussive of هَانَ (hāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahūnū", "hāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هونوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "هُونُوا • (hūnū) (form I) /huː.nuː/\n# second-person masculine plural imperative of هَانَ (hāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hūnū", "hāna"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "هان", "r7"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

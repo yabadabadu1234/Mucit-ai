@@ -1,45 +1,46 @@
 {
   "kok": "بختر",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "بختر", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تبختر",
-        "u": "تبختر",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "تَبَخْتَرَ • (tabaḵtara) IIq (non-past يَتَبَخْتَرُ (yatabaḵtaru), verbal noun تَبَخْتُر (tabaḵtur))",
-        "g": ["to swagger, to walk gracefully, to swing while walking"],
-        "tag": ["Classical"],
-        "r": ["tabaḵtara"],
-        "k": "بختر",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "بخ",
+  "ses": {
     "harf": "ب",
+    "fasil": "بخ",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "تبختر",
+      "tur": "verb",
+      "baslik": "تَبَخْتَرَ • (tabaḵtara) IIq (non-past يَتَبَخْتَرُ (yatabaḵtaru), verbal noun تَبَخْتُر (tabaḵtur))",
+      "anlam": ["to swagger, to walk gracefully, to swing while walking"],
+      "etiket": ["Classical"],
+      "okunus": ["tabaḵtara"]
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "بختر", "r6"]
+  ],
+  "mana": {
     "ince": "tittup.v.01",
     "orta": "verb.motion",
     "ust": "fiil ve hadise",
@@ -47,20 +48,8 @@
     "dayanak_tanim": "to walk with a lofty proud gait, often in an attempt to impress others",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["tittup.v.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 8,
       "merkez_kok": "سير",
@@ -80,6 +69,11 @@
       "boy": 5
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["tittup.v.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

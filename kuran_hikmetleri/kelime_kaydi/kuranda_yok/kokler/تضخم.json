@@ -1,366 +1,259 @@
 {
   "kok": "تضخم",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تضخم", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يتضخم",
-        "u": "يتضخم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتضخم (form V)\n# يَتَضَخَّمُ (yataḍaḵḵamu) /ja.ta.dˤax.xa.mu/: third-person masculine singular non-past active indicative of تَضَخَّمَ (taḍaḵḵama)\n# يَتَضَخَّمَ (yataḍaḵḵama) /ja.ta.dˤax.xa.ma/: third-person masculine singular non-past active subjunctive of تَضَخَّمَ (taḍaḵḵama)\n# يَتَضَخَّمْ (yataḍaḵḵam) /ja.ta.dˤax.xam/: third-person masculine singular non-past active jussive of تَضَخَّمَ (taḍaḵ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḍaḵḵamu", "taḍaḵḵama", "yataḍaḵḵama"],
-        "k": "تضخم",
-        "yol": "kök"
-      },
-      {
-        "w": "تضخمت",
-        "u": "تضخمت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تضخمت (form V)\n# تَضَخَّمْتُ (taḍaḵḵamtu) /ta.dˤax.xam.tu/: first-person singular past active of تَضَخَّمَ (taḍaḵḵama)\n# تَضَخَّمْتَ (taḍaḵḵamta) /ta.dˤax.xam.ta/: second-person masculine singular past active of تَضَخَّمَ (taḍaḵḵama)\n# تَضَخَّمْتِ (taḍaḵḵamti) /ta.dˤax.xam.ti/: second-person feminine singular past active of تَضَخَّمَ (taḍaḵḵama)\n# تَضَخَّمَتْ (taḍaḵḵamat) /ta.dˤax.xa.mat/: third-p",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḍaḵḵamtu", "taḍaḵḵama", "taḍaḵḵamta"],
-        "k": "تضخم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتضخم",
-        "u": "تتضخم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتضخم (form V)\n# تَتَضَخَّمُ (tataḍaḵḵamu) /ta.ta.dˤax.xa.mu/: inflection of تَضَخَّمَ (taḍaḵḵama):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَضَخَّمَ (tataḍaḵḵama) /ta.ta.dˤax.xa.ma/: inflection of تَضَخَّمَ (taḍaḵḵama):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine si",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḍaḵḵamu", "taḍaḵḵama", "tataḍaḵḵama"],
-        "k": "تضخم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتضخمين",
-        "u": "تتضخمين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَضَخَّمِينَ • (tataḍaḵḵamīna) (form V) /ta.ta.dˤax.xa.miː.na/\n# second-person feminine singular non-past active indicative of تَضَخَّمَ (taḍaḵḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḍaḵḵamīna", "taḍaḵḵama"],
-        "k": "تضخم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتضخمي",
-        "u": "تتضخمي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَضَخَّمِي • (tataḍaḵḵamī) (form V) /ta.ta.dˤax.xa.miː/\n# second-person feminine singular non-past active subjunctive/jussive of تَضَخَّمَ (taḍaḵḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḍaḵḵamī", "taḍaḵḵama"],
-        "k": "تضخم",
-        "yol": "kök"
-      },
-      {
-        "w": "تضخمي",
-        "u": "تضخمي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَضَخَّمِي • (taḍaḵḵamī) (form V) /ta.dˤax.xa.miː/\n# second-person feminine singular imperative of تَضَخَّمَ (taḍaḵḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḍaḵḵamī", "taḍaḵḵama"],
-        "k": "تضخم",
-        "yol": "kök"
-      },
-      {
-        "w": "أتضخم",
-        "u": "أتضخم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتضخم (form V)\n# أَتَضَخَّمُ (ʔataḍaḵḵamu) /ʔa.ta.dˤax.xa.mu/: first-person singular non-past active indicative of تَضَخَّمَ (taḍaḵḵama)\n# أَتَضَخَّمَ (ʔataḍaḵḵama) /ʔa.ta.dˤax.xa.ma/: first-person singular non-past active subjunctive of تَضَخَّمَ (taḍaḵḵama)\n# أَتَضَخَّمْ (ʔataḍaḵḵam) /ʔa.ta.dˤax.xam/: first-person singular non-past active jussive of تَضَخَّمَ (taḍaḵḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔataḍaḵḵamu", "taḍaḵḵama", "ʔataḍaḵḵama"],
-        "k": "تضخم",
-        "yol": "kök"
-      },
-      {
-        "w": "تضخمنا",
-        "u": "تضخمنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَضَخَّمْنَا • (taḍaḵḵamnā) (form V) /ta.dˤax.xam.naː/\n# first-person plural past active of تَضَخَّمَ (taḍaḵḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḍaḵḵamnā", "taḍaḵḵama"],
-        "k": "تضخم",
-        "yol": "kök"
-      },
-      {
-        "w": "نتضخم",
-        "u": "نتضخم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتضخم (form V)\n# نَتَضَخَّمُ (nataḍaḵḵamu) /na.ta.dˤax.xa.mu/: first-person plural non-past active indicative of تَضَخَّمَ (taḍaḵḵama)\n# نَتَضَخَّمَ (nataḍaḵḵama) /na.ta.dˤax.xa.ma/: first-person plural non-past active subjunctive of تَضَخَّمَ (taḍaḵḵama)\n# نَتَضَخَّمْ (nataḍaḵḵam) /na.ta.dˤax.xam/: first-person plural non-past active jussive of تَضَخَّمَ (taḍaḵḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["nataḍaḵḵamu", "taḍaḵḵama", "nataḍaḵḵama"],
-        "k": "تضخم",
-        "yol": "kök"
-      },
-      {
-        "w": "تضخمتم",
-        "u": "تضخمتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَضَخَّمْتُمْ • (taḍaḵḵamtum) (form V) /ta.dˤax.xam.tum/\n# second-person masculine plural past active of تَضَخَّمَ (taḍaḵḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḍaḵḵamtum", "taḍaḵḵama"],
-        "k": "تضخم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتضخمون",
-        "u": "تتضخمون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَضَخَّمُونَ • (tataḍaḵḵamūna) (form V) /ta.ta.dˤax.xa.muː.na/\n# second-person masculine plural non-past active indicative of تَضَخَّمَ (taḍaḵḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḍaḵḵamūna", "taḍaḵḵama"],
-        "k": "تضخم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتضخموا",
-        "u": "تتضخموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَضَخَّمُوا • (tataḍaḵḵamū) (form V) /ta.ta.dˤax.xa.muː/\n# second-person masculine plural non-past active subjunctive/jussive of تَضَخَّمَ (taḍaḵḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḍaḵḵamū", "taḍaḵḵama"],
-        "k": "تضخم",
-        "yol": "kök"
-      },
-      {
-        "w": "تضخموا",
-        "u": "تضخموا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَضَخَّمُوا • (taḍaḵḵamū) (form V) /ta.dˤax.xa.muː/\n# inflection of تَضَخَّمَ (taḍaḵḵama):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḍaḵḵamū", "taḍaḵḵama"],
-        "k": "تضخم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتضخمون",
-        "u": "يتضخمون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَضَخَّمُونَ • (yataḍaḵḵamūna) (form V) /ja.ta.dˤax.xa.muː.na/\n# third-person masculine plural non-past active indicative of تَضَخَّمَ (taḍaḵḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḍaḵḵamūna", "taḍaḵḵama"],
-        "k": "تضخم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتضخموا",
-        "u": "يتضخموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَضَخَّمُوا • (yataḍaḵḵamū) (form V) /ja.ta.dˤax.xa.muː/\n# third-person masculine plural non-past active subjunctive/jussive of تَضَخَّمَ (taḍaḵḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḍaḵḵamū", "taḍaḵḵama"],
-        "k": "تضخم",
-        "yol": "kök"
-      },
-      {
-        "w": "تضخمتن",
-        "u": "تضخمتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَضَخَّمْتُنَّ • (taḍaḵḵamtunna) (form V) /ta.dˤax.xam.tun.na/\n# second-person feminine plural past active of تَضَخَّمَ (taḍaḵḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḍaḵḵamtunna", "taḍaḵḵama"],
-        "k": "تضخم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتضخمن",
-        "u": "تتضخمن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَضَخَّمْنَ • (tataḍaḵḵamna) (form V) /ta.ta.dˤax.xam.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَضَخَّمَ (taḍaḵḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḍaḵḵamna", "taḍaḵḵama"],
-        "k": "تضخم",
-        "yol": "kök"
-      },
-      {
-        "w": "تضخمن",
-        "u": "تضخمن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَضَخَّمْنَ • (taḍaḵḵamna) (form V) /ta.dˤax.xam.na/\n# inflection of تَضَخَّمَ (taḍaḵḵama):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḍaḵḵamna", "taḍaḵḵama"],
-        "k": "تضخم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتضخمن",
-        "u": "يتضخمن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَضَخَّمْنَ • (yataḍaḵḵamna) (form V) /ja.ta.dˤax.xam.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَضَخَّمَ (taḍaḵḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḍaḵḵamna", "taḍaḵḵama"],
-        "k": "تضخم",
-        "yol": "kök"
-      },
-      {
-        "w": "تضخمتما",
-        "u": "تضخمتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَضَخَّمْتُمَا • (taḍaḵḵamtumā) (form V) /ta.dˤax.xam.tu.maː/\n# second-person dual past active of تَضَخَّمَ (taḍaḵḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḍaḵḵamtumā", "taḍaḵḵama"],
-        "k": "تضخم",
-        "yol": "kök"
-      },
-      {
-        "w": "تضخما",
-        "u": "تضخما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَضَخَّمَا • (taḍaḵḵamā) (form V) /ta.dˤax.xa.maː/\n# inflection of تَضَخَّمَ (taḍaḵḵama):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḍaḵḵamā", "taḍaḵḵama"],
-        "k": "تضخم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتضخمان",
-        "u": "تتضخمان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَضَخَّمَانِ • (tataḍaḵḵamāni) (form V) /ta.ta.dˤax.xa.maː.ni/\n# inflection of تَضَخَّمَ (taḍaḵḵama):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḍaḵḵamāni", "taḍaḵḵama"],
-        "k": "تضخم",
-        "yol": "kök"
-      },
-      {
-        "w": "تضخمتا",
-        "u": "تضخمتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَضَخَّمَتَا • (taḍaḵḵamatā) (form V) /ta.dˤax.xa.ma.taː/\n# third-person feminine dual past active of تَضَخَّمَ (taḍaḵḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḍaḵḵamatā", "taḍaḵḵama"],
-        "k": "تضخم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتضخما",
-        "u": "يتضخما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَضَخَّمَا • (yataḍaḵḵamā) (form V) /ja.ta.dˤax.xa.maː/\n# third-person masculine dual non-past active subjunctive/jussive of تَضَخَّمَ (taḍaḵḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḍaḵḵamā", "taḍaḵḵama"],
-        "k": "تضخم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتضخمان",
-        "u": "يتضخمان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَضَخَّمَانِ • (yataḍaḵḵamāni) (form V) /ja.ta.dˤax.xa.maː.ni/\n# third-person masculine dual non-past active indicative of تَضَخَّمَ (taḍaḵḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḍaḵḵamāni", "taḍaḵḵama"],
-        "k": "تضخم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتضخما",
-        "u": "تتضخما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَضَخَّمَا • (tataḍaḵḵamā) (form V) /ta.ta.dˤax.xa.maː/\n# inflection of تَضَخَّمَ (taḍaḵḵama):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḍaḵḵamā", "taḍaḵḵama"],
-        "k": "تضخم",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تض",
+  "ses": {
     "harf": "ت",
+    "fasil": "تض",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يتضخم",
+      "tur": "verb",
+      "baslik": "يتضخم (form V)\n# يَتَضَخَّمُ (yataḍaḵḵamu) /ja.ta.dˤax.xa.mu/: third-person masculine singular non-past active indicative of تَضَخَّمَ (taḍaḵḵama)\n# يَتَضَخَّمَ (yataḍaḵḵama) /ja.ta.dˤax.xa.ma/: third-person masculine singular non-past active subjunctive of تَضَخَّمَ (taḍaḵḵama)\n# يَتَضَخَّمْ (yataḍaḵḵam) /ja.ta.dˤax.xam/: third-person masculine singular non-past active jussive of تَضَخَّمَ (taḍaḵ",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḍaḵḵamu", "taḍaḵḵama", "yataḍaḵḵama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضخمت",
+      "tur": "verb",
+      "baslik": "تضخمت (form V)\n# تَضَخَّمْتُ (taḍaḵḵamtu) /ta.dˤax.xam.tu/: first-person singular past active of تَضَخَّمَ (taḍaḵḵama)\n# تَضَخَّمْتَ (taḍaḵḵamta) /ta.dˤax.xam.ta/: second-person masculine singular past active of تَضَخَّمَ (taḍaḵḵama)\n# تَضَخَّمْتِ (taḍaḵḵamti) /ta.dˤax.xam.ti/: second-person feminine singular past active of تَضَخَّمَ (taḍaḵḵama)\n# تَضَخَّمَتْ (taḍaḵḵamat) /ta.dˤax.xa.mat/: third-p",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḍaḵḵamtu", "taḍaḵḵama", "taḍaḵḵamta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتضخم",
+      "tur": "verb",
+      "baslik": "تتضخم (form V)\n# تَتَضَخَّمُ (tataḍaḵḵamu) /ta.ta.dˤax.xa.mu/: inflection of تَضَخَّمَ (taḍaḵḵama):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَضَخَّمَ (tataḍaḵḵama) /ta.ta.dˤax.xa.ma/: inflection of تَضَخَّمَ (taḍaḵḵama):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine si",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḍaḵḵamu", "taḍaḵḵama", "tataḍaḵḵama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتضخمين",
+      "tur": "verb",
+      "baslik": "تَتَضَخَّمِينَ • (tataḍaḵḵamīna) (form V) /ta.ta.dˤax.xa.miː.na/\n# second-person feminine singular non-past active indicative of تَضَخَّمَ (taḍaḵḵama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḍaḵḵamīna", "taḍaḵḵama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتضخمي",
+      "tur": "verb",
+      "baslik": "تَتَضَخَّمِي • (tataḍaḵḵamī) (form V) /ta.ta.dˤax.xa.miː/\n# second-person feminine singular non-past active subjunctive/jussive of تَضَخَّمَ (taḍaḵḵama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḍaḵḵamī", "taḍaḵḵama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضخمي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَضَخَّمِي • (taḍaḵḵamī) (form V) /ta.dˤax.xa.miː/\n# second-person feminine singular imperative of تَضَخَّمَ (taḍaḵḵama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḍaḵḵamī", "taḍaḵḵama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتضخم",
+      "tur": "verb",
+      "baslik": "أتضخم (form V)\n# أَتَضَخَّمُ (ʔataḍaḵḵamu) /ʔa.ta.dˤax.xa.mu/: first-person singular non-past active indicative of تَضَخَّمَ (taḍaḵḵama)\n# أَتَضَخَّمَ (ʔataḍaḵḵama) /ʔa.ta.dˤax.xa.ma/: first-person singular non-past active subjunctive of تَضَخَّمَ (taḍaḵḵama)\n# أَتَضَخَّمْ (ʔataḍaḵḵam) /ʔa.ta.dˤax.xam/: first-person singular non-past active jussive of تَضَخَّمَ (taḍaḵḵama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔataḍaḵḵamu", "taḍaḵḵama", "ʔataḍaḵḵama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضخمنا",
+      "tur": "verb",
+      "baslik": "تَضَخَّمْنَا • (taḍaḵḵamnā) (form V) /ta.dˤax.xam.naː/\n# first-person plural past active of تَضَخَّمَ (taḍaḵḵama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḍaḵḵamnā", "taḍaḵḵama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتضخم",
+      "tur": "verb",
+      "baslik": "نتضخم (form V)\n# نَتَضَخَّمُ (nataḍaḵḵamu) /na.ta.dˤax.xa.mu/: first-person plural non-past active indicative of تَضَخَّمَ (taḍaḵḵama)\n# نَتَضَخَّمَ (nataḍaḵḵama) /na.ta.dˤax.xa.ma/: first-person plural non-past active subjunctive of تَضَخَّمَ (taḍaḵḵama)\n# نَتَضَخَّمْ (nataḍaḵḵam) /na.ta.dˤax.xam/: first-person plural non-past active jussive of تَضَخَّمَ (taḍaḵḵama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["nataḍaḵḵamu", "taḍaḵḵama", "nataḍaḵḵama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضخمتم",
+      "tur": "verb",
+      "baslik": "تَضَخَّمْتُمْ • (taḍaḵḵamtum) (form V) /ta.dˤax.xam.tum/\n# second-person masculine plural past active of تَضَخَّمَ (taḍaḵḵama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḍaḵḵamtum", "taḍaḵḵama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتضخمون",
+      "tur": "verb",
+      "baslik": "تَتَضَخَّمُونَ • (tataḍaḵḵamūna) (form V) /ta.ta.dˤax.xa.muː.na/\n# second-person masculine plural non-past active indicative of تَضَخَّمَ (taḍaḵḵama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḍaḵḵamūna", "taḍaḵḵama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتضخموا",
+      "tur": "verb",
+      "baslik": "تَتَضَخَّمُوا • (tataḍaḵḵamū) (form V) /ta.ta.dˤax.xa.muː/\n# second-person masculine plural non-past active subjunctive/jussive of تَضَخَّمَ (taḍaḵḵama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḍaḵḵamū", "taḍaḵḵama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضخموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَضَخَّمُوا • (taḍaḵḵamū) (form V) /ta.dˤax.xa.muː/\n# inflection of تَضَخَّمَ (taḍaḵḵama):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḍaḵḵamū", "taḍaḵḵama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتضخمون",
+      "tur": "verb",
+      "baslik": "يَتَضَخَّمُونَ • (yataḍaḵḵamūna) (form V) /ja.ta.dˤax.xa.muː.na/\n# third-person masculine plural non-past active indicative of تَضَخَّمَ (taḍaḵḵama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḍaḵḵamūna", "taḍaḵḵama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتضخموا",
+      "tur": "verb",
+      "baslik": "يَتَضَخَّمُوا • (yataḍaḵḵamū) (form V) /ja.ta.dˤax.xa.muː/\n# third-person masculine plural non-past active subjunctive/jussive of تَضَخَّمَ (taḍaḵḵama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḍaḵḵamū", "taḍaḵḵama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضخمتن",
+      "tur": "verb",
+      "baslik": "تَضَخَّمْتُنَّ • (taḍaḵḵamtunna) (form V) /ta.dˤax.xam.tun.na/\n# second-person feminine plural past active of تَضَخَّمَ (taḍaḵḵama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḍaḵḵamtunna", "taḍaḵḵama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتضخمن",
+      "tur": "verb",
+      "baslik": "تَتَضَخَّمْنَ • (tataḍaḵḵamna) (form V) /ta.ta.dˤax.xam.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَضَخَّمَ (taḍaḵḵama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḍaḵḵamna", "taḍaḵḵama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضخمن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَضَخَّمْنَ • (taḍaḵḵamna) (form V) /ta.dˤax.xam.na/\n# inflection of تَضَخَّمَ (taḍaḵḵama):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḍaḵḵamna", "taḍaḵḵama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتضخمن",
+      "tur": "verb",
+      "baslik": "يَتَضَخَّمْنَ • (yataḍaḵḵamna) (form V) /ja.ta.dˤax.xam.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَضَخَّمَ (taḍaḵḵama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḍaḵḵamna", "taḍaḵḵama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضخمتما",
+      "tur": "verb",
+      "baslik": "تَضَخَّمْتُمَا • (taḍaḵḵamtumā) (form V) /ta.dˤax.xam.tu.maː/\n# second-person dual past active of تَضَخَّمَ (taḍaḵḵama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḍaḵḵamtumā", "taḍaḵḵama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضخما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَضَخَّمَا • (taḍaḵḵamā) (form V) /ta.dˤax.xa.maː/\n# inflection of تَضَخَّمَ (taḍaḵḵama):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḍaḵḵamā", "taḍaḵḵama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتضخمان",
+      "tur": "verb",
+      "baslik": "تَتَضَخَّمَانِ • (tataḍaḵḵamāni) (form V) /ta.ta.dˤax.xa.maː.ni/\n# inflection of تَضَخَّمَ (taḍaḵḵama):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḍaḵḵamāni", "taḍaḵḵama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضخمتا",
+      "tur": "verb",
+      "baslik": "تَضَخَّمَتَا • (taḍaḵḵamatā) (form V) /ta.dˤax.xa.ma.taː/\n# third-person feminine dual past active of تَضَخَّمَ (taḍaḵḵama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḍaḵḵamatā", "taḍaḵḵama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتضخما",
+      "tur": "verb",
+      "baslik": "يَتَضَخَّمَا • (yataḍaḵḵamā) (form V) /ja.ta.dˤax.xa.maː/\n# third-person masculine dual non-past active subjunctive/jussive of تَضَخَّمَ (taḍaḵḵama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḍaḵḵamā", "taḍaḵḵama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتضخمان",
+      "tur": "verb",
+      "baslik": "يَتَضَخَّمَانِ • (yataḍaḵḵamāni) (form V) /ja.ta.dˤax.xa.maː.ni/\n# third-person masculine dual non-past active indicative of تَضَخَّمَ (taḍaḵḵama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḍaḵḵamāni", "taḍaḵḵama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتضخما",
+      "tur": "verb",
+      "baslik": "تَتَضَخَّمَا • (tataḍaḵḵamā) (form V) /ta.ta.dˤax.xa.maː/\n# inflection of تَضَخَّمَ (taḍaḵḵama):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḍaḵḵamā", "taḍaḵḵama"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تضخم", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

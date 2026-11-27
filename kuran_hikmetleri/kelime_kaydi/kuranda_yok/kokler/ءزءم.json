@@ -1,665 +1,512 @@
 {
   "kok": "ءزءم",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءزءم", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أزأمت",
-        "u": "أزأمت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أزأمت (form IV)\n# أَزْأَمْتُ (ʔazʔamtu) /ʔaz.ʔam.tu/: first-person singular past active of أَزْأَمَ (ʔazʔama)\n# أَزْأَمْتَ (ʔazʔamta) /ʔaz.ʔam.ta/: second-person masculine singular past active of أَزْأَمَ (ʔazʔama)\n# أَزْأَمْتِ (ʔazʔamti) /ʔaz.ʔam.ti/: second-person feminine singular past active of أَزْأَمَ (ʔazʔama)\n# أَزْأَمَتْ (ʔazʔamat) /ʔaz.ʔa.mat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔazʔamtu", "ʔazʔama", "ʔazʔamta"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "أزأمتا",
-        "u": "أزأمتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَزْأَمَتَا • (ʔazʔamatā) (form IV) /ʔaz.ʔa.ma.taː/\n# third-person feminine dual past active of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔazʔamatā", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "أزأمتما",
-        "u": "أزأمتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَزْأَمْتُمَا • (ʔazʔamtumā) (form IV) /ʔaz.ʔam.tu.maː/\n# second-person dual past active of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔazʔamtumā", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "أزأمنا",
-        "u": "أزأمنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَزْأَمْنَا • (ʔazʔamnā) (form IV) /ʔaz.ʔam.naː/\n# first-person plural past active of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔazʔamnā", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "أزأما",
-        "u": "أزأما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَزْأَمَا • (ʔazʔamā) (form IV) /ʔaz.ʔa.maː/\n# third-person masculine dual past active of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔazʔamā", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "أزأمتم",
-        "u": "أزأمتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَزْأَمْتُمْ • (ʔazʔamtum) (form IV) /ʔaz.ʔam.tum/\n# second-person masculine plural past active of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔazʔamtum", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "أزأموا",
-        "u": "أزأموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَزْأَمُوا • (ʔazʔamū) (form IV) /ʔaz.ʔa.muː/\n# third-person masculine plural past active of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔazʔamū", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "أزأمتن",
-        "u": "أزأمتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَزْأَمْتُنَّ • (ʔazʔamtunna) (form IV) /ʔaz.ʔam.tun.na/\n# second-person feminine plural past active of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔazʔamtunna", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "أزأمن",
-        "u": "أزأمن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَزْأَمْنَ • (ʔazʔamna) (form IV) /ʔaz.ʔam.na/\n# third-person feminine plural past active of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔazʔamna", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "أزئم",
-        "u": "أزئم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أزئم (form IV)\n# أُزْئِمَ (ʔuzʔima) /ʔuz.ʔi.ma/: inflection of أَزْأَمَ (ʔazʔama):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُزْئِمُ (ʔuzʔimu) /ʔuz.ʔi.mu/: first-person singular non-past active indicative of أَزْأَمَ (ʔazʔama)\n# أُزْئِمْ (ʔuzʔim) /ʔuz.ʔim/: first-person singular non-past active jussive of أَزْأَمَ (ʔazʔama)\n# أَزْئِمْ (",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuzʔima", "ʔazʔama", "ʔuzʔimu"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "أزئمت",
-        "u": "أزئمت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أزئمت (form IV)\n# أُزْئِمْتُ (ʔuzʔimtu) /ʔuz.ʔim.tu/: first-person singular past passive of أَزْأَمَ (ʔazʔama)\n# أُزْئِمْتَ (ʔuzʔimta) /ʔuz.ʔim.ta/: second-person masculine singular past passive of أَزْأَمَ (ʔazʔama)\n# أُزْئِمْتِ (ʔuzʔimti) /ʔuz.ʔim.ti/: second-person feminine singular past passive of أَزْأَمَ (ʔazʔama)\n# أُزْئِمَتْ (ʔuzʔimat) /ʔuz.ʔi.mat/: third-person feminine singular past pass",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuzʔimtu", "ʔazʔama", "ʔuzʔimta"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "أزئمتما",
-        "u": "أزئمتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُزْئِمْتُمَا • (ʔuzʔimtumā) (form IV) /ʔuz.ʔim.tu.maː/\n# second-person dual past passive of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuzʔimtumā", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "أزئما",
-        "u": "أزئما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أزئما (form IV)\n# أُزْئِمَا (ʔuzʔimā) /ʔuz.ʔi.maː/: third-person masculine dual past passive of أَزْأَمَ (ʔazʔama)\n# أَزْئِمَا (ʔazʔimā) /ʔaz.ʔi.maː/: second-person dual imperative of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuzʔimā", "ʔazʔama", "ʔazʔimā"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "أزئمنا",
-        "u": "أزئمنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُزْئِمْنَا • (ʔuzʔimnā) (form IV) /ʔuz.ʔim.naː/\n# first-person plural past passive of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuzʔimnā", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "أزئمتا",
-        "u": "أزئمتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُزْئِمَتَا • (ʔuzʔimatā) (form IV) /ʔuz.ʔi.ma.taː/\n# third-person feminine dual past passive of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuzʔimatā", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "أزئمتن",
-        "u": "أزئمتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُزْئِمْتُنَّ • (ʔuzʔimtunna) (form IV) /ʔuz.ʔim.tun.na/\n# second-person feminine plural past passive of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuzʔimtunna", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "أزئمن",
-        "u": "أزئمن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أزئمن (form IV)\n# أُزْئِمْنَ (ʔuzʔimna) /ʔuz.ʔim.na/: third-person feminine plural past passive of أَزْأَمَ (ʔazʔama)\n# أَزْئِمْنَ (ʔazʔimna) /ʔaz.ʔim.na/: second-person feminine plural imperative of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuzʔimna", "ʔazʔama", "ʔazʔimna"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "أزئمتم",
-        "u": "أزئمتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُزْئِمْتُمْ • (ʔuzʔimtum) (form IV) /ʔuz.ʔim.tum/\n# second-person masculine plural past passive of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuzʔimtum", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "تزئم",
-        "u": "تزئم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تزئم (form IV)\n# تُزْئِمُ (tuzʔimu) /tuz.ʔi.mu/: inflection of أَزْأَمَ (ʔazʔama):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُزْئِمَ (tuzʔima) /tuz.ʔi.ma/: inflection of أَزْأَمَ (ʔazʔama):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuzʔimu", "ʔazʔama", "tuzʔima"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "أزئموا",
-        "u": "أزئموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أزئموا (form IV)\n# أُزْئِمُوا (ʔuzʔimū) /ʔuz.ʔi.muː/: third-person masculine plural past passive of أَزْأَمَ (ʔazʔama)\n# أَزْئِمُوا (ʔazʔimū) /ʔaz.ʔi.muː/: second-person masculine plural imperative of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuzʔimū", "ʔazʔama", "ʔazʔimū"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "تزئمين",
-        "u": "تزئمين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزْئِمِينَ • (tuzʔimīna) (form IV) /tuz.ʔi.miː.na/\n# second-person feminine singular non-past active indicative of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuzʔimīna", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "يزئم",
-        "u": "يزئم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يزئم (form IV)\n# يُزْئِمُ (yuzʔimu) /juz.ʔi.mu/: third-person masculine singular non-past active indicative of أَزْأَمَ (ʔazʔama)\n# يُزْئِمَ (yuzʔima) /juz.ʔi.ma/: third-person masculine singular non-past active subjunctive of أَزْأَمَ (ʔazʔama)\n# يُزْئِمْ (yuzʔim) /juz.ʔim/: third-person masculine singular non-past active jussive of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuzʔimu", "ʔazʔama", "yuzʔima"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "تزئمون",
-        "u": "تزئمون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزْئِمُونَ • (tuzʔimūna) (form IV) /tuz.ʔi.muː.na/\n# second-person masculine plural non-past active indicative of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuzʔimūna", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "تزئمن",
-        "u": "تزئمن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزْئِمْنَ • (tuzʔimna) (form IV) /tuz.ʔim.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuzʔimna", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "يزئمان",
-        "u": "يزئمان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُزْئِمَانِ • (yuzʔimāni) (form IV) /juz.ʔi.maː.ni/\n# third-person masculine dual non-past active indicative of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuzʔimāni", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "تزئمان",
-        "u": "تزئمان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزْئِمَانِ • (tuzʔimāni) (form IV) /tuz.ʔi.maː.ni/\n# inflection of أَزْأَمَ (ʔazʔama):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuzʔimāni", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "يزئمون",
-        "u": "يزئمون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُزْئِمُونَ • (yuzʔimūna) (form IV) /juz.ʔi.muː.na/\n# third-person masculine plural non-past active indicative of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuzʔimūna", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "يزئمن",
-        "u": "يزئمن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُزْئِمْنَ • (yuzʔimna) (form IV) /juz.ʔim.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuzʔimna", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "تزأم",
-        "u": "تزأم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تزأم (form IV)\n# تُزْأَمُ (tuzʔamu) /tuz.ʔa.mu/: inflection of أَزْأَمَ (ʔazʔama):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُزْأَمَ (tuzʔama) /tuz.ʔa.ma/: inflection of أَزْأَمَ (ʔazʔama):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunc",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuzʔamu", "ʔazʔama", "tuzʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "نزئم",
-        "u": "نزئم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نزئم (form IV)\n# نُزْئِمُ (nuzʔimu) /nuz.ʔi.mu/: first-person plural non-past active indicative of أَزْأَمَ (ʔazʔama)\n# نُزْئِمَ (nuzʔima) /nuz.ʔi.ma/: first-person plural non-past active subjunctive of أَزْأَمَ (ʔazʔama)\n# نُزْئِمْ (nuzʔim) /nuz.ʔim/: first-person plural non-past active jussive of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuzʔimu", "ʔazʔama", "nuzʔima"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "يزأم",
-        "u": "يزأم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يزأم (form IV)\n# يُزْأَمُ (yuzʔamu) /juz.ʔa.mu/: third-person masculine singular non-past passive indicative of أَزْأَمَ (ʔazʔama)\n# يُزْأَمَ (yuzʔama) /juz.ʔa.ma/: third-person masculine singular non-past passive subjunctive of أَزْأَمَ (ʔazʔama)\n# يُزْأَمْ (yuzʔam) /juz.ʔam/: third-person masculine singular non-past passive jussive of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuzʔamu", "ʔazʔama", "yuzʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "تزأمين",
-        "u": "تزأمين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُزْأَمِينَ • (tuzʔamīna) (form IV) /tuz.ʔa.miː.na/\n# second-person feminine singular non-past passive indicative of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuzʔamīna", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "تزأمان",
-        "u": "تزأمان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُزْأَمَانِ • (tuzʔamāni) (form IV) /tuz.ʔa.maː.ni/\n# inflection of أَزْأَمَ (ʔazʔama):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuzʔamāni", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "يزأمان",
-        "u": "يزأمان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُزْأَمَانِ • (yuzʔamāni) (form IV) /juz.ʔa.maː.ni/\n# third-person masculine dual non-past passive indicative of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuzʔamāni", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "تزأمون",
-        "u": "تزأمون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُزْأَمُونَ • (tuzʔamūna) (form IV) /tuz.ʔa.muː.na/\n# second-person masculine plural non-past passive indicative of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuzʔamūna", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "نزأم",
-        "u": "نزأم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نزأم (form IV)\n# نُزْأَمُ (nuzʔamu) /nuz.ʔa.mu/: first-person plural non-past passive indicative of أَزْأَمَ (ʔazʔama)\n# نُزْأَمَ (nuzʔama) /nuz.ʔa.ma/: first-person plural non-past passive subjunctive of أَزْأَمَ (ʔazʔama)\n# نُزْأَمْ (nuzʔam) /nuz.ʔam/: first-person plural non-past passive jussive of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuzʔamu", "ʔazʔama", "nuzʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "يزأمن",
-        "u": "يزأمن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُزْأَمْنَ • (yuzʔamna) (form IV) /juz.ʔam.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuzʔamna", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "تزأمن",
-        "u": "تزأمن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُزْأَمْنَ • (tuzʔamna) (form IV) /tuz.ʔam.na/\n# second-person feminine plural non-past passive indicative/subjunctive/jussive of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuzʔamna", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "يزأمون",
-        "u": "يزأمون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُزْأَمُونَ • (yuzʔamūna) (form IV) /juz.ʔa.muː.na/\n# third-person masculine plural non-past passive indicative of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuzʔamūna", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "تزئمي",
-        "u": "تزئمي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزْئِمِي • (tuzʔimī) (form IV) /tuz.ʔi.miː/\n# second-person feminine singular non-past active subjunctive/jussive of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuzʔimī", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "تزئما",
-        "u": "تزئما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزْئِمَا • (tuzʔimā) (form IV) /tuz.ʔi.maː/\n# inflection of أَزْأَمَ (ʔazʔama):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuzʔimā", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "يزئما",
-        "u": "يزئما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُزْئِمَا • (yuzʔimā) (form IV) /juz.ʔi.maː/\n# third-person masculine dual non-past active subjunctive/jussive of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuzʔimā", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "تزئموا",
-        "u": "تزئموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزْئِمُوا • (tuzʔimū) (form IV) /tuz.ʔi.muː/\n# second-person masculine plural non-past active subjunctive/jussive of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuzʔimū", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "يزئموا",
-        "u": "يزئموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُزْئِمُوا • (yuzʔimū) (form IV) /juz.ʔi.muː/\n# third-person masculine plural non-past active subjunctive/jussive of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuzʔimū", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "تزأمي",
-        "u": "تزأمي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُزْأَمِي • (tuzʔamī) (form IV) /tuz.ʔa.miː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuzʔamī", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "تزأما",
-        "u": "تزأما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُزْأَمَا • (tuzʔamā) (form IV) /tuz.ʔa.maː/\n# inflection of أَزْأَمَ (ʔazʔama):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuzʔamā", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "يزأما",
-        "u": "يزأما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُزْأَمَا • (yuzʔamā) (form IV) /juz.ʔa.maː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuzʔamā", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "تزأموا",
-        "u": "تزأموا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُزْأَمُوا • (tuzʔamū) (form IV) /tuz.ʔa.muː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuzʔamū", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "أزئمي",
-        "u": "أزئمي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَزْئِمِي • (ʔazʔimī) (form IV) /ʔaz.ʔi.miː/\n# second-person feminine singular imperative of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔazʔimī", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      },
-      {
-        "w": "يزأموا",
-        "u": "يزأموا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُزْأَمُوا • (yuzʔamū) (form IV) /juz.ʔa.muː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَزْأَمَ (ʔazʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuzʔamū", "ʔazʔama"],
-        "k": "أزأم",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "زم",
+  "ses": {
     "harf": "ء",
+    "fasil": "زم",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "أزأمت",
+      "tur": "verb",
+      "baslik": "أزأمت (form IV)\n# أَزْأَمْتُ (ʔazʔamtu) /ʔaz.ʔam.tu/: first-person singular past active of أَزْأَمَ (ʔazʔama)\n# أَزْأَمْتَ (ʔazʔamta) /ʔaz.ʔam.ta/: second-person masculine singular past active of أَزْأَمَ (ʔazʔama)\n# أَزْأَمْتِ (ʔazʔamti) /ʔaz.ʔam.ti/: second-person feminine singular past active of أَزْأَمَ (ʔazʔama)\n# أَزْأَمَتْ (ʔazʔamat) /ʔaz.ʔa.mat/: third-person feminine singular past active ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔazʔamtu", "ʔazʔama", "ʔazʔamta"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أزأمتا",
+      "tur": "verb",
+      "baslik": "أَزْأَمَتَا • (ʔazʔamatā) (form IV) /ʔaz.ʔa.ma.taː/\n# third-person feminine dual past active of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔazʔamatā", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أزأمتما",
+      "tur": "verb",
+      "baslik": "أَزْأَمْتُمَا • (ʔazʔamtumā) (form IV) /ʔaz.ʔam.tu.maː/\n# second-person dual past active of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔazʔamtumā", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أزأمنا",
+      "tur": "verb",
+      "baslik": "أَزْأَمْنَا • (ʔazʔamnā) (form IV) /ʔaz.ʔam.naː/\n# first-person plural past active of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔazʔamnā", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أزأما",
+      "tur": "verb",
+      "baslik": "أَزْأَمَا • (ʔazʔamā) (form IV) /ʔaz.ʔa.maː/\n# third-person masculine dual past active of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔazʔamā", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أزأمتم",
+      "tur": "verb",
+      "baslik": "أَزْأَمْتُمْ • (ʔazʔamtum) (form IV) /ʔaz.ʔam.tum/\n# second-person masculine plural past active of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔazʔamtum", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أزأموا",
+      "tur": "verb",
+      "baslik": "أَزْأَمُوا • (ʔazʔamū) (form IV) /ʔaz.ʔa.muː/\n# third-person masculine plural past active of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔazʔamū", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أزأمتن",
+      "tur": "verb",
+      "baslik": "أَزْأَمْتُنَّ • (ʔazʔamtunna) (form IV) /ʔaz.ʔam.tun.na/\n# second-person feminine plural past active of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔazʔamtunna", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أزأمن",
+      "tur": "verb",
+      "baslik": "أَزْأَمْنَ • (ʔazʔamna) (form IV) /ʔaz.ʔam.na/\n# third-person feminine plural past active of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔazʔamna", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أزئم",
+      "tur": "verb",
+      "baslik": "أزئم (form IV)\n# أُزْئِمَ (ʔuzʔima) /ʔuz.ʔi.ma/: inflection of أَزْأَمَ (ʔazʔama):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُزْئِمُ (ʔuzʔimu) /ʔuz.ʔi.mu/: first-person singular non-past active indicative of أَزْأَمَ (ʔazʔama)\n# أُزْئِمْ (ʔuzʔim) /ʔuz.ʔim/: first-person singular non-past active jussive of أَزْأَمَ (ʔazʔama)\n# أَزْئِمْ (",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuzʔima", "ʔazʔama", "ʔuzʔimu"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أزئمت",
+      "tur": "verb",
+      "baslik": "أزئمت (form IV)\n# أُزْئِمْتُ (ʔuzʔimtu) /ʔuz.ʔim.tu/: first-person singular past passive of أَزْأَمَ (ʔazʔama)\n# أُزْئِمْتَ (ʔuzʔimta) /ʔuz.ʔim.ta/: second-person masculine singular past passive of أَزْأَمَ (ʔazʔama)\n# أُزْئِمْتِ (ʔuzʔimti) /ʔuz.ʔim.ti/: second-person feminine singular past passive of أَزْأَمَ (ʔazʔama)\n# أُزْئِمَتْ (ʔuzʔimat) /ʔuz.ʔi.mat/: third-person feminine singular past pass",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuzʔimtu", "ʔazʔama", "ʔuzʔimta"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أزئمتما",
+      "tur": "verb",
+      "baslik": "أُزْئِمْتُمَا • (ʔuzʔimtumā) (form IV) /ʔuz.ʔim.tu.maː/\n# second-person dual past passive of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuzʔimtumā", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أزئما",
+      "tur": "verb",
+      "baslik": "أزئما (form IV)\n# أُزْئِمَا (ʔuzʔimā) /ʔuz.ʔi.maː/: third-person masculine dual past passive of أَزْأَمَ (ʔazʔama)\n# أَزْئِمَا (ʔazʔimā) /ʔaz.ʔi.maː/: second-person dual imperative of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuzʔimā", "ʔazʔama", "ʔazʔimā"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أزئمنا",
+      "tur": "verb",
+      "baslik": "أُزْئِمْنَا • (ʔuzʔimnā) (form IV) /ʔuz.ʔim.naː/\n# first-person plural past passive of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuzʔimnā", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أزئمتا",
+      "tur": "verb",
+      "baslik": "أُزْئِمَتَا • (ʔuzʔimatā) (form IV) /ʔuz.ʔi.ma.taː/\n# third-person feminine dual past passive of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuzʔimatā", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أزئمتن",
+      "tur": "verb",
+      "baslik": "أُزْئِمْتُنَّ • (ʔuzʔimtunna) (form IV) /ʔuz.ʔim.tun.na/\n# second-person feminine plural past passive of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuzʔimtunna", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أزئمن",
+      "tur": "verb",
+      "baslik": "أزئمن (form IV)\n# أُزْئِمْنَ (ʔuzʔimna) /ʔuz.ʔim.na/: third-person feminine plural past passive of أَزْأَمَ (ʔazʔama)\n# أَزْئِمْنَ (ʔazʔimna) /ʔaz.ʔim.na/: second-person feminine plural imperative of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuzʔimna", "ʔazʔama", "ʔazʔimna"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أزئمتم",
+      "tur": "verb",
+      "baslik": "أُزْئِمْتُمْ • (ʔuzʔimtum) (form IV) /ʔuz.ʔim.tum/\n# second-person masculine plural past passive of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuzʔimtum", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزئم",
+      "tur": "verb",
+      "baslik": "تزئم (form IV)\n# تُزْئِمُ (tuzʔimu) /tuz.ʔi.mu/: inflection of أَزْأَمَ (ʔazʔama):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُزْئِمَ (tuzʔima) /tuz.ʔi.ma/: inflection of أَزْأَمَ (ʔazʔama):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuzʔimu", "ʔazʔama", "tuzʔima"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أزئموا",
+      "tur": "verb",
+      "baslik": "أزئموا (form IV)\n# أُزْئِمُوا (ʔuzʔimū) /ʔuz.ʔi.muː/: third-person masculine plural past passive of أَزْأَمَ (ʔazʔama)\n# أَزْئِمُوا (ʔazʔimū) /ʔaz.ʔi.muː/: second-person masculine plural imperative of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuzʔimū", "ʔazʔama", "ʔazʔimū"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزئمين",
+      "tur": "verb",
+      "baslik": "تُزْئِمِينَ • (tuzʔimīna) (form IV) /tuz.ʔi.miː.na/\n# second-person feminine singular non-past active indicative of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuzʔimīna", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزئم",
+      "tur": "verb",
+      "baslik": "يزئم (form IV)\n# يُزْئِمُ (yuzʔimu) /juz.ʔi.mu/: third-person masculine singular non-past active indicative of أَزْأَمَ (ʔazʔama)\n# يُزْئِمَ (yuzʔima) /juz.ʔi.ma/: third-person masculine singular non-past active subjunctive of أَزْأَمَ (ʔazʔama)\n# يُزْئِمْ (yuzʔim) /juz.ʔim/: third-person masculine singular non-past active jussive of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuzʔimu", "ʔazʔama", "yuzʔima"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزئمون",
+      "tur": "verb",
+      "baslik": "تُزْئِمُونَ • (tuzʔimūna) (form IV) /tuz.ʔi.muː.na/\n# second-person masculine plural non-past active indicative of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuzʔimūna", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزئمن",
+      "tur": "verb",
+      "baslik": "تُزْئِمْنَ • (tuzʔimna) (form IV) /tuz.ʔim.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuzʔimna", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزئمان",
+      "tur": "verb",
+      "baslik": "يُزْئِمَانِ • (yuzʔimāni) (form IV) /juz.ʔi.maː.ni/\n# third-person masculine dual non-past active indicative of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuzʔimāni", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزئمان",
+      "tur": "verb",
+      "baslik": "تُزْئِمَانِ • (tuzʔimāni) (form IV) /tuz.ʔi.maː.ni/\n# inflection of أَزْأَمَ (ʔazʔama):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuzʔimāni", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزئمون",
+      "tur": "verb",
+      "baslik": "يُزْئِمُونَ • (yuzʔimūna) (form IV) /juz.ʔi.muː.na/\n# third-person masculine plural non-past active indicative of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuzʔimūna", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزئمن",
+      "tur": "verb",
+      "baslik": "يُزْئِمْنَ • (yuzʔimna) (form IV) /juz.ʔim.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuzʔimna", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزأم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تزأم (form IV)\n# تُزْأَمُ (tuzʔamu) /tuz.ʔa.mu/: inflection of أَزْأَمَ (ʔazʔama):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُزْأَمَ (tuzʔama) /tuz.ʔa.ma/: inflection of أَزْأَمَ (ʔazʔama):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunc",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuzʔamu", "ʔazʔama", "tuzʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نزئم",
+      "tur": "verb",
+      "baslik": "نزئم (form IV)\n# نُزْئِمُ (nuzʔimu) /nuz.ʔi.mu/: first-person plural non-past active indicative of أَزْأَمَ (ʔazʔama)\n# نُزْئِمَ (nuzʔima) /nuz.ʔi.ma/: first-person plural non-past active subjunctive of أَزْأَمَ (ʔazʔama)\n# نُزْئِمْ (nuzʔim) /nuz.ʔim/: first-person plural non-past active jussive of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuzʔimu", "ʔazʔama", "nuzʔima"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزأم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يزأم (form IV)\n# يُزْأَمُ (yuzʔamu) /juz.ʔa.mu/: third-person masculine singular non-past passive indicative of أَزْأَمَ (ʔazʔama)\n# يُزْأَمَ (yuzʔama) /juz.ʔa.ma/: third-person masculine singular non-past passive subjunctive of أَزْأَمَ (ʔazʔama)\n# يُزْأَمْ (yuzʔam) /juz.ʔam/: third-person masculine singular non-past passive jussive of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuzʔamu", "ʔazʔama", "yuzʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزأمين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُزْأَمِينَ • (tuzʔamīna) (form IV) /tuz.ʔa.miː.na/\n# second-person feminine singular non-past passive indicative of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuzʔamīna", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزأمان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُزْأَمَانِ • (tuzʔamāni) (form IV) /tuz.ʔa.maː.ni/\n# inflection of أَزْأَمَ (ʔazʔama):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuzʔamāni", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزأمان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُزْأَمَانِ • (yuzʔamāni) (form IV) /juz.ʔa.maː.ni/\n# third-person masculine dual non-past passive indicative of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuzʔamāni", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزأمون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُزْأَمُونَ • (tuzʔamūna) (form IV) /tuz.ʔa.muː.na/\n# second-person masculine plural non-past passive indicative of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuzʔamūna", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نزأم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نزأم (form IV)\n# نُزْأَمُ (nuzʔamu) /nuz.ʔa.mu/: first-person plural non-past passive indicative of أَزْأَمَ (ʔazʔama)\n# نُزْأَمَ (nuzʔama) /nuz.ʔa.ma/: first-person plural non-past passive subjunctive of أَزْأَمَ (ʔazʔama)\n# نُزْأَمْ (nuzʔam) /nuz.ʔam/: first-person plural non-past passive jussive of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuzʔamu", "ʔazʔama", "nuzʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزأمن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُزْأَمْنَ • (yuzʔamna) (form IV) /juz.ʔam.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuzʔamna", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزأمن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُزْأَمْنَ • (tuzʔamna) (form IV) /tuz.ʔam.na/\n# second-person feminine plural non-past passive indicative/subjunctive/jussive of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuzʔamna", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزأمون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُزْأَمُونَ • (yuzʔamūna) (form IV) /juz.ʔa.muː.na/\n# third-person masculine plural non-past passive indicative of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuzʔamūna", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزئمي",
+      "tur": "verb",
+      "baslik": "تُزْئِمِي • (tuzʔimī) (form IV) /tuz.ʔi.miː/\n# second-person feminine singular non-past active subjunctive/jussive of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuzʔimī", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزئما",
+      "tur": "verb",
+      "baslik": "تُزْئِمَا • (tuzʔimā) (form IV) /tuz.ʔi.maː/\n# inflection of أَزْأَمَ (ʔazʔama):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuzʔimā", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزئما",
+      "tur": "verb",
+      "baslik": "يُزْئِمَا • (yuzʔimā) (form IV) /juz.ʔi.maː/\n# third-person masculine dual non-past active subjunctive/jussive of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuzʔimā", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزئموا",
+      "tur": "verb",
+      "baslik": "تُزْئِمُوا • (tuzʔimū) (form IV) /tuz.ʔi.muː/\n# second-person masculine plural non-past active subjunctive/jussive of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuzʔimū", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزئموا",
+      "tur": "verb",
+      "baslik": "يُزْئِمُوا • (yuzʔimū) (form IV) /juz.ʔi.muː/\n# third-person masculine plural non-past active subjunctive/jussive of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuzʔimū", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزأمي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُزْأَمِي • (tuzʔamī) (form IV) /tuz.ʔa.miː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuzʔamī", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزأما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُزْأَمَا • (tuzʔamā) (form IV) /tuz.ʔa.maː/\n# inflection of أَزْأَمَ (ʔazʔama):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuzʔamā", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزأما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُزْأَمَا • (yuzʔamā) (form IV) /juz.ʔa.maː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuzʔamā", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزأموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُزْأَمُوا • (tuzʔamū) (form IV) /tuz.ʔa.muː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuzʔamū", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أزئمي",
+      "tur": "verb",
+      "baslik": "أَزْئِمِي • (ʔazʔimī) (form IV) /ʔaz.ʔi.miː/\n# second-person feminine singular imperative of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔazʔimī", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزأموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُزْأَمُوا • (yuzʔamū) (form IV) /juz.ʔa.muː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَزْأَمَ (ʔazʔama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuzʔamū", "ʔazʔama"],
+      "kok_yazilis": "أزأم",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءزءم", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

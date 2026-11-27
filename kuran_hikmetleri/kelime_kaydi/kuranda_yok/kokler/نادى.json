@@ -1,563 +1,395 @@
 {
   "kok": "نادى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "نادى", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "ناديا",
-        "u": "ناديا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ناديا (form III)\n# نَادَيَا (nādayā) /naː.da.jaː/: third-person masculine dual past active of نَادَى (nādā)\n# نَادِيَا (nādiyā) /naː.di.jaː/: second-person dual imperative of نَادَى (nādā)",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nādayā", "nādā", "nādiyā"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "ناد",
-        "u": "ناد",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نَادِ • (nādi) (form III) /naː.di/\n# second-person masculine singular imperative of نَادَى (nādā)",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nādi", "nādā"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "نادي",
-        "u": "نادي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نَادِي • (nādī) (form III) /naː.diː/\n# second-person feminine singular imperative of نَادَى (nādā)",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nādī", "nādā"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "ينادي",
-        "u": "ينادي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ينادي (form III)\n# يُنَادِي (yunādī) /ju.naː.diː/: third-person masculine singular non-past active indicative of نَادَى (nādā)\n# يُنَادِيَ (yunādiya) /ju.naː.di.ja/: third-person masculine singular non-past active subjunctive of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yunādī", "nādā", "yunādiya"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "ينادى",
-        "u": "ينادى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُنَادَى • (yunādā) (form III) /ju.naː.daː/\n# third-person masculine singular non-past passive indicative/subjunctive of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yunādā", "nādā"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "يناد",
-        "u": "يناد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يناد (form III)\n# يُنَادِ (yunādi) /ju.naː.di/: third-person masculine singular non-past active jussive of نَادَى (nādā)\n# يُنَادَ (yunāda) /ju.naː.da/: third-person masculine singular non-past passive jussive of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yunādi", "nādā", "yunāda"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "نودي",
-        "u": "نودي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نُودِيَ • (nūdiya) (form III) /nuː.di.ja/\n# third-person masculine singular past passive of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūdiya", "nādā"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "نادت",
-        "u": "نادت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَادَتْ • (nādat) (form III) /naː.dat/\n# third-person feminine singular past active of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nādat", "nādā"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "تنادي",
-        "u": "تنادي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تنادي (form III)\n# تُنَادِي (tunādī) /tu.naː.diː/: inflection of نَادَى (nādā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُنَادِيَ (tunādiya) /tu.naː.di.ja/: inflection of نَادَى (nādā):\n## second-person masculine singular non-past active subju",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunādī", "nādā", "tunādiya"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "تناد",
-        "u": "تناد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تناد (form III)\n# تُنَادِ (tunādi) /tu.naː.di/: inflection of نَادَى (nādā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُنَادَ (tunāda) /tu.naː.da/: inflection of نَادَى (nādā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunādi", "nādā", "tunāda"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوديت",
-        "u": "نوديت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نوديت (form III)\n# نُودِيتُ (nūdītu) /nuː.diː.tu/: first-person singular past passive of نَادَى (nādā)\n# نُودِيتَ (nūdīta) /nuː.diː.ta/: second-person masculine singular past passive of نَادَى (nādā)\n# نُودِيتِ (nūdīti) /nuː.diː.ti/: second-person feminine singular past passive of نَادَى (nādā)\n# نُودِيَتْ (nūdiyat) /nuː.di.jat/: third-person feminine singular past passive of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūdītu", "nādā", "nūdīta"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "تنادى",
-        "u": "تنادى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُنَادَى • (tunādā) (form III) /tu.naː.daː/\n# inflection of نَادَى (nādā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunādā", "nādā"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "ناديت",
-        "u": "ناديت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ناديت (form III)\n# نَادَيْتُ (nādaytu) /naː.daj.tu/: first-person singular past active of نَادَى (nādā)\n# نَادَيْتَ (nādayta) /naː.daj.ta/: second-person masculine singular past active of نَادَى (nādā)\n# نَادَيْتِ (nādayti) /naː.daj.ti/: second-person feminine singular past active of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nādaytu", "nādā", "nādayta"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "تنادين",
-        "u": "تنادين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تنادين (form III)\n# تُنَادِينَ (tunādīna) /tu.naː.diː.na/: inflection of نَادَى (nādā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُنَادَيْنَ (tunādayna) /tu.naː.daj.na/: inflection of نَادَى (nādā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunādīna", "nādā", "tunādayna"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "أنادي",
-        "u": "أنادي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنادي (form III)\n# أُنَادِي (ʔunādī) /ʔu.naː.diː/: first-person singular non-past active indicative of نَادَى (nādā)\n# أُنَادِيَ (ʔunādiya) /ʔu.naː.di.ja/: first-person singular non-past active subjunctive of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔunādī", "nādā", "ʔunādiya"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "أناد",
-        "u": "أناد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أناد (form III)\n# أُنَادِ (ʔunādi) /ʔu.naː.di/: first-person singular non-past active jussive of نَادَى (nādā)\n# أُنَادَ (ʔunāda) /ʔu.naː.da/: first-person singular non-past passive jussive of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔunādi", "nādā", "ʔunāda"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "أنادى",
-        "u": "أنادى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُنَادَى • (ʔunādā) (form III) /ʔu.naː.daː/\n# first-person singular non-past passive indicative/subjunctive of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔunādā", "nādā"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "نادينا",
-        "u": "نادينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَادَيْنَا • (nādaynā) (form III) /naː.daj.naː/\n# first-person plural past active of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nādaynā", "nādā"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "ننادي",
-        "u": "ننادي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ننادي (form III)\n# نُنَادِي (nunādī) /nu.naː.diː/: first-person plural non-past active indicative of نَادَى (nādā)\n# نُنَادِيَ (nunādiya) /nu.naː.di.ja/: first-person plural non-past active subjunctive of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nunādī", "nādā", "nunādiya"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "نناد",
-        "u": "نناد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نناد (form III)\n# نُنَادِ (nunādi) /nu.naː.di/: first-person plural non-past active jussive of نَادَى (nādā)\n# نُنَادَ (nunāda) /nu.naː.da/: first-person plural non-past passive jussive of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nunādi", "nādā", "nunāda"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "نودينا",
-        "u": "نودينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُودِينَا • (nūdīnā) (form III) /nuː.diː.naː/\n# first-person plural past passive of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūdīnā", "nādā"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "ننادى",
-        "u": "ننادى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُنَادَى • (nunādā) (form III) /nu.naː.daː/\n# first-person plural non-past passive indicative/subjunctive of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nunādā", "nādā"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "ناديتم",
-        "u": "ناديتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَادَيْتُمْ • (nādaytum) (form III) /naː.daj.tum/\n# second-person masculine plural past active of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nādaytum", "nādā"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "تنادون",
-        "u": "تنادون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تنادون (form III)\n# تُنَادُونَ (tunādūna) /tu.naː.duː.na/: second-person masculine plural non-past active indicative of نَادَى (nādā)\n# تُنَادَوْنَ (tunādawna) /tu.naː.daw.na/: second-person masculine plural non-past passive indicative of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunādūna", "nādā", "tunādawna"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "تنادوا",
-        "u": "تنادوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تنادوا (form III)\n# تُنَادُوا (tunādū) /tu.naː.duː/: second-person masculine plural non-past active subjunctive/jussive of نَادَى (nādā)\n# تُنَادَوْا (tunādaw) /tu.naː.daw/: second-person masculine plural non-past passive subjunctive/jussive of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunādū", "nādā", "tunādaw"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "نادوا",
-        "u": "نادوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نادوا (form III)\n# نَادَوْا (nādaw) /naː.daw/: third-person masculine plural past active of نَادَى (nādā)\n# نَادُوا (nādū) /naː.duː/: second-person masculine plural imperative of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nādaw", "nādā", "nādū"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوديتم",
-        "u": "نوديتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُودِيتُمْ • (nūdītum) (form III) /nuː.diː.tum/\n# second-person masculine plural past passive of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūdītum", "nādā"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "ينادون",
-        "u": "ينادون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ينادون (form III)\n# يُنَادُونَ (yunādūna) /ju.naː.duː.na/: third-person masculine plural non-past active indicative of نَادَى (nādā)\n# يُنَادَوْنَ (yunādawna) /ju.naː.daw.na/: third-person masculine plural non-past passive indicative of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yunādūna", "nādā", "yunādawna"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "ينادوا",
-        "u": "ينادوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ينادوا (form III)\n# يُنَادُوا (yunādū) /ju.naː.duː/: third-person masculine plural non-past active subjunctive/jussive of نَادَى (nādā)\n# يُنَادَوْا (yunādaw) /ju.naː.daw/: third-person masculine plural non-past passive subjunctive/jussive of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yunādū", "nādā", "yunādaw"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "نودوا",
-        "u": "نودوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُودُوا • (nūdū) (form III) /nuː.duː/\n# third-person masculine plural past passive of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūdū", "nādā"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "ناديتن",
-        "u": "ناديتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَادَيْتُنَّ • (nādaytunna) (form III) /naː.daj.tun.na/\n# second-person feminine plural past active of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nādaytunna", "nādā"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "نادين",
-        "u": "نادين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نادين (form III)\n# نَادَيْنَ (nādayna) /naː.daj.na/: third-person feminine plural past active of نَادَى (nādā)\n# نَادِينَ (nādīna) /naː.diː.na/: second-person feminine plural imperative of نَادَى (nādā)",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nādayna", "nādā", "nādīna"],
-        "ipa": ["/naː.diːn/"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوديتن",
-        "u": "نوديتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُودِيتُنَّ • (nūdītunna) (form III) /nuː.diː.tun.na/\n# second-person feminine plural past passive of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūdītunna", "nādā"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "ينادين",
-        "u": "ينادين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ينادين (form III)\n# يُنَادِينَ (yunādīna) /ju.naː.diː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of نَادَى (nādā)\n# يُنَادَيْنَ (yunādayna) /ju.naː.daj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yunādīna", "nādā", "yunādayna"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "نودين",
-        "u": "نودين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُودِينَ • (nūdīna) (form III) /nuː.diː.na/\n# third-person feminine plural past passive of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūdīna", "nādā"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "ناديتما",
-        "u": "ناديتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَادَيْتُمَا • (nādaytumā) (form III) /naː.daj.tu.maː/\n# second-person dual past active of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nādaytumā", "nādā"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوديتما",
-        "u": "نوديتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُودِيتُمَا • (nūdītumā) (form III) /nuː.diː.tu.maː/\n# second-person dual past passive of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūdītumā", "nādā"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "نادتا",
-        "u": "نادتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَادَتَا • (nādatā) (form III) /naː.da.taː/\n# third-person feminine dual past active of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nādatā", "nādā"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوديا",
-        "u": "نوديا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُودِيَا • (nūdiyā) (form III) /nuː.di.jaː/\n# third-person masculine dual past passive of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūdiyā", "nādā"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "تناديان",
-        "u": "تناديان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تناديان (form III)\n# تُنَادِيَانِ (tunādiyāni) /tu.naː.di.jaː.ni/: inflection of نَادَى (nādā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُنَادَيَانِ (tunādayāni) /tu.naː.da.jaː.ni/: inflection of نَادَى (nādā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunādiyāni", "nādā", "tunādayāni"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "يناديان",
-        "u": "يناديان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يناديان (form III)\n# يُنَادِيَانِ (yunādiyāni) /ju.naː.di.jaː.ni/: third-person masculine dual non-past active indicative of نَادَى (nādā)\n# يُنَادَيَانِ (yunādayāni) /ju.naː.da.jaː.ni/: third-person masculine dual non-past passive indicative of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yunādiyāni", "nādā", "yunādayāni"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوديتا",
-        "u": "نوديتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُودِيَتَا • (nūdiyatā) (form III) /nuː.di.ja.taː/\n# third-person feminine dual past passive of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūdiyatā", "nādā"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "يناديا",
-        "u": "يناديا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يناديا (form III)\n# يُنَادِيَا (yunādiyā) /ju.naː.di.jaː/: third-person masculine dual non-past active subjunctive/jussive of نَادَى (nādā)\n# يُنَادَيَا (yunādayā) /ju.naː.da.jaː/: third-person masculine dual non-past passive subjunctive/jussive of نَادَى (nādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yunādiyā", "nādā", "yunādayā"],
-        "k": "نادى",
-        "yol": "kök"
-      },
-      {
-        "w": "تناديا",
-        "u": "تناديا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تناديا (form III)\n# تُنَادِيَا (tunādiyā) /tu.naː.di.jaː/: inflection of نَادَى (nādā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُنَادَيَا (tunādayā) /tu.naː.da.jaː/: inflection of نَادَى (nādā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunādiyā", "nādā", "tunādayā"],
-        "k": "نادى",
-        "yol": "kök"
-      }
-    ],
-    "tercume": {}
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "ند",
+  "ses": {
     "harf": "ن",
+    "fasil": "ند",
     "mahrec": "zelakiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "ناديا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ناديا (form III)\n# نَادَيَا (nādayā) /naː.da.jaː/: third-person masculine dual past active of نَادَى (nādā)\n# نَادِيَا (nādiyā) /naː.di.jaː/: second-person dual imperative of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nādayā", "nādā", "nādiyā"]
+    },
+    {
+      "madde": "ناد",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نَادِ • (nādi) (form III) /naː.di/\n# second-person masculine singular imperative of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nādi", "nādā"]
+    },
+    {
+      "madde": "نادي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نَادِي • (nādī) (form III) /naː.diː/\n# second-person feminine singular imperative of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nādī", "nādā"]
+    },
+    {
+      "madde": "ينادي",
+      "tur": "verb",
+      "baslik": "ينادي (form III)\n# يُنَادِي (yunādī) /ju.naː.diː/: third-person masculine singular non-past active indicative of نَادَى (nādā)\n# يُنَادِيَ (yunādiya) /ju.naː.di.ja/: third-person masculine singular non-past active subjunctive of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yunādī", "nādā", "yunādiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينادى",
+      "tur": "verb",
+      "baslik": "يُنَادَى • (yunādā) (form III) /ju.naː.daː/\n# third-person masculine singular non-past passive indicative/subjunctive of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yunādā", "nādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يناد",
+      "tur": "verb",
+      "baslik": "يناد (form III)\n# يُنَادِ (yunādi) /ju.naː.di/: third-person masculine singular non-past active jussive of نَادَى (nādā)\n# يُنَادَ (yunāda) /ju.naː.da/: third-person masculine singular non-past passive jussive of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yunādi", "nādā", "yunāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نودي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نُودِيَ • (nūdiya) (form III) /nuː.di.ja/\n# third-person masculine singular past passive of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūdiya", "nādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نادت",
+      "tur": "verb",
+      "baslik": "نَادَتْ • (nādat) (form III) /naː.dat/\n# third-person feminine singular past active of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nādat", "nādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنادي",
+      "tur": "verb",
+      "baslik": "تنادي (form III)\n# تُنَادِي (tunādī) /tu.naː.diː/: inflection of نَادَى (nādā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُنَادِيَ (tunādiya) /tu.naː.di.ja/: inflection of نَادَى (nādā):\n## second-person masculine singular non-past active subju",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunādī", "nādā", "tunādiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تناد",
+      "tur": "verb",
+      "baslik": "تناد (form III)\n# تُنَادِ (tunādi) /tu.naː.di/: inflection of نَادَى (nādā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُنَادَ (tunāda) /tu.naː.da/: inflection of نَادَى (nādā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunādi", "nādā", "tunāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوديت",
+      "tur": "verb",
+      "baslik": "نوديت (form III)\n# نُودِيتُ (nūdītu) /nuː.diː.tu/: first-person singular past passive of نَادَى (nādā)\n# نُودِيتَ (nūdīta) /nuː.diː.ta/: second-person masculine singular past passive of نَادَى (nādā)\n# نُودِيتِ (nūdīti) /nuː.diː.ti/: second-person feminine singular past passive of نَادَى (nādā)\n# نُودِيَتْ (nūdiyat) /nuː.di.jat/: third-person feminine singular past passive of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūdītu", "nādā", "nūdīta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنادى",
+      "tur": "verb",
+      "baslik": "تُنَادَى • (tunādā) (form III) /tu.naː.daː/\n# inflection of نَادَى (nādā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunādā", "nādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ناديت",
+      "tur": "verb",
+      "baslik": "ناديت (form III)\n# نَادَيْتُ (nādaytu) /naː.daj.tu/: first-person singular past active of نَادَى (nādā)\n# نَادَيْتَ (nādayta) /naː.daj.ta/: second-person masculine singular past active of نَادَى (nādā)\n# نَادَيْتِ (nādayti) /naː.daj.ti/: second-person feminine singular past active of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nādaytu", "nādā", "nādayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنادين",
+      "tur": "verb",
+      "baslik": "تنادين (form III)\n# تُنَادِينَ (tunādīna) /tu.naː.diː.na/: inflection of نَادَى (nādā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُنَادَيْنَ (tunādayna) /tu.naː.daj.na/: inflection of نَادَى (nādā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunādīna", "nādā", "tunādayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أنادي",
+      "tur": "verb",
+      "baslik": "أنادي (form III)\n# أُنَادِي (ʔunādī) /ʔu.naː.diː/: first-person singular non-past active indicative of نَادَى (nādā)\n# أُنَادِيَ (ʔunādiya) /ʔu.naː.di.ja/: first-person singular non-past active subjunctive of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔunādī", "nādā", "ʔunādiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أناد",
+      "tur": "verb",
+      "baslik": "أناد (form III)\n# أُنَادِ (ʔunādi) /ʔu.naː.di/: first-person singular non-past active jussive of نَادَى (nādā)\n# أُنَادَ (ʔunāda) /ʔu.naː.da/: first-person singular non-past passive jussive of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔunādi", "nādā", "ʔunāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أنادى",
+      "tur": "verb",
+      "baslik": "أُنَادَى • (ʔunādā) (form III) /ʔu.naː.daː/\n# first-person singular non-past passive indicative/subjunctive of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔunādā", "nādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نادينا",
+      "tur": "verb",
+      "baslik": "نَادَيْنَا • (nādaynā) (form III) /naː.daj.naː/\n# first-person plural past active of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nādaynā", "nādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ننادي",
+      "tur": "verb",
+      "baslik": "ننادي (form III)\n# نُنَادِي (nunādī) /nu.naː.diː/: first-person plural non-past active indicative of نَادَى (nādā)\n# نُنَادِيَ (nunādiya) /nu.naː.di.ja/: first-person plural non-past active subjunctive of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nunādī", "nādā", "nunādiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نناد",
+      "tur": "verb",
+      "baslik": "نناد (form III)\n# نُنَادِ (nunādi) /nu.naː.di/: first-person plural non-past active jussive of نَادَى (nādā)\n# نُنَادَ (nunāda) /nu.naː.da/: first-person plural non-past passive jussive of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nunādi", "nādā", "nunāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نودينا",
+      "tur": "verb",
+      "baslik": "نُودِينَا • (nūdīnā) (form III) /nuː.diː.naː/\n# first-person plural past passive of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūdīnā", "nādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ننادى",
+      "tur": "verb",
+      "baslik": "نُنَادَى • (nunādā) (form III) /nu.naː.daː/\n# first-person plural non-past passive indicative/subjunctive of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nunādā", "nādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ناديتم",
+      "tur": "verb",
+      "baslik": "نَادَيْتُمْ • (nādaytum) (form III) /naː.daj.tum/\n# second-person masculine plural past active of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nādaytum", "nādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنادون",
+      "tur": "verb",
+      "baslik": "تنادون (form III)\n# تُنَادُونَ (tunādūna) /tu.naː.duː.na/: second-person masculine plural non-past active indicative of نَادَى (nādā)\n# تُنَادَوْنَ (tunādawna) /tu.naː.daw.na/: second-person masculine plural non-past passive indicative of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunādūna", "nādā", "tunādawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنادوا",
+      "tur": "verb",
+      "baslik": "تنادوا (form III)\n# تُنَادُوا (tunādū) /tu.naː.duː/: second-person masculine plural non-past active subjunctive/jussive of نَادَى (nādā)\n# تُنَادَوْا (tunādaw) /tu.naː.daw/: second-person masculine plural non-past passive subjunctive/jussive of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunādū", "nādā", "tunādaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نادوا",
+      "tur": "verb",
+      "baslik": "نادوا (form III)\n# نَادَوْا (nādaw) /naː.daw/: third-person masculine plural past active of نَادَى (nādā)\n# نَادُوا (nādū) /naː.duː/: second-person masculine plural imperative of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nādaw", "nādā", "nādū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوديتم",
+      "tur": "verb",
+      "baslik": "نُودِيتُمْ • (nūdītum) (form III) /nuː.diː.tum/\n# second-person masculine plural past passive of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūdītum", "nādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينادون",
+      "tur": "verb",
+      "baslik": "ينادون (form III)\n# يُنَادُونَ (yunādūna) /ju.naː.duː.na/: third-person masculine plural non-past active indicative of نَادَى (nādā)\n# يُنَادَوْنَ (yunādawna) /ju.naː.daw.na/: third-person masculine plural non-past passive indicative of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yunādūna", "nādā", "yunādawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينادوا",
+      "tur": "verb",
+      "baslik": "ينادوا (form III)\n# يُنَادُوا (yunādū) /ju.naː.duː/: third-person masculine plural non-past active subjunctive/jussive of نَادَى (nādā)\n# يُنَادَوْا (yunādaw) /ju.naː.daw/: third-person masculine plural non-past passive subjunctive/jussive of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yunādū", "nādā", "yunādaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نودوا",
+      "tur": "verb",
+      "baslik": "نُودُوا • (nūdū) (form III) /nuː.duː/\n# third-person masculine plural past passive of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūdū", "nādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ناديتن",
+      "tur": "verb",
+      "baslik": "نَادَيْتُنَّ • (nādaytunna) (form III) /naː.daj.tun.na/\n# second-person feminine plural past active of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nādaytunna", "nādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نادين",
+      "tur": "verb",
+      "baslik": "نادين (form III)\n# نَادَيْنَ (nādayna) /naː.daj.na/: third-person feminine plural past active of نَادَى (nādā)\n# نَادِينَ (nādīna) /naː.diː.na/: second-person feminine plural imperative of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nādayna", "nādā", "nādīna"],
+      "ipa": ["/naː.diːn/"]
+    },
+    {
+      "madde": "نوديتن",
+      "tur": "verb",
+      "baslik": "نُودِيتُنَّ • (nūdītunna) (form III) /nuː.diː.tun.na/\n# second-person feminine plural past passive of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūdītunna", "nādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينادين",
+      "tur": "verb",
+      "baslik": "ينادين (form III)\n# يُنَادِينَ (yunādīna) /ju.naː.diː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of نَادَى (nādā)\n# يُنَادَيْنَ (yunādayna) /ju.naː.daj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yunādīna", "nādā", "yunādayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نودين",
+      "tur": "verb",
+      "baslik": "نُودِينَ • (nūdīna) (form III) /nuː.diː.na/\n# third-person feminine plural past passive of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūdīna", "nādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ناديتما",
+      "tur": "verb",
+      "baslik": "نَادَيْتُمَا • (nādaytumā) (form III) /naː.daj.tu.maː/\n# second-person dual past active of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nādaytumā", "nādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوديتما",
+      "tur": "verb",
+      "baslik": "نُودِيتُمَا • (nūdītumā) (form III) /nuː.diː.tu.maː/\n# second-person dual past passive of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūdītumā", "nādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نادتا",
+      "tur": "verb",
+      "baslik": "نَادَتَا • (nādatā) (form III) /naː.da.taː/\n# third-person feminine dual past active of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nādatā", "nādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوديا",
+      "tur": "verb",
+      "baslik": "نُودِيَا • (nūdiyā) (form III) /nuː.di.jaː/\n# third-person masculine dual past passive of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūdiyā", "nādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تناديان",
+      "tur": "verb",
+      "baslik": "تناديان (form III)\n# تُنَادِيَانِ (tunādiyāni) /tu.naː.di.jaː.ni/: inflection of نَادَى (nādā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُنَادَيَانِ (tunādayāni) /tu.naː.da.jaː.ni/: inflection of نَادَى (nādā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunādiyāni", "nādā", "tunādayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يناديان",
+      "tur": "verb",
+      "baslik": "يناديان (form III)\n# يُنَادِيَانِ (yunādiyāni) /ju.naː.di.jaː.ni/: third-person masculine dual non-past active indicative of نَادَى (nādā)\n# يُنَادَيَانِ (yunādayāni) /ju.naː.da.jaː.ni/: third-person masculine dual non-past passive indicative of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yunādiyāni", "nādā", "yunādayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوديتا",
+      "tur": "verb",
+      "baslik": "نُودِيَتَا • (nūdiyatā) (form III) /nuː.di.ja.taː/\n# third-person feminine dual past passive of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūdiyatā", "nādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يناديا",
+      "tur": "verb",
+      "baslik": "يناديا (form III)\n# يُنَادِيَا (yunādiyā) /ju.naː.di.jaː/: third-person masculine dual non-past active subjunctive/jussive of نَادَى (nādā)\n# يُنَادَيَا (yunādayā) /ju.naː.da.jaː/: third-person masculine dual non-past passive subjunctive/jussive of نَادَى (nādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yunādiyā", "nādā", "yunādayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تناديا",
+      "tur": "verb",
+      "baslik": "تناديا (form III)\n# تُنَادِيَا (tunādiyā) /tu.naː.di.jaː/: inflection of نَادَى (nādā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُنَادَيَا (tunādayā) /tu.naː.da.jaː/: inflection of نَادَى (nādā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunādiyā", "nādā", "tunādayā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "نادى", "r6"]
+  ],
+  "mana": {
     "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
@@ -565,22 +397,15 @@
     "dayanak_tanim": "a building that is occupied by a social club",
     "synset_sayisi": 2
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["artifact.n.01", "organization.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["artifact.n.01", "organization.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

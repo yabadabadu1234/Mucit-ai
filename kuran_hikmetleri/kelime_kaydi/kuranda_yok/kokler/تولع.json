@@ -1,366 +1,259 @@
 {
   "kok": "تولع",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تولع", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تولعن",
-        "u": "تولعن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَوَلَّعْنَ • (tawallaʕna) (form V) /ta.wal.laʕ.na/\n# inflection of تَوَلَّعَ (tawallaʕa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tawallaʕna", "tawallaʕa"],
-        "k": "تولع",
-        "yol": "kök"
-      },
-      {
-        "w": "تولعي",
-        "u": "تولعي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَوَلَّعِي • (tawallaʕī) (form V) /ta.wal.la.ʕiː/\n# second-person feminine singular imperative of تَوَلَّعَ (tawallaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tawallaʕī", "tawallaʕa"],
-        "k": "تولع",
-        "yol": "kök"
-      },
-      {
-        "w": "تولعا",
-        "u": "تولعا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَوَلَّعَا • (tawallaʕā) (form V) /ta.wal.la.ʕaː/\n# inflection of تَوَلَّعَ (tawallaʕa):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tawallaʕā", "tawallaʕa"],
-        "k": "تولع",
-        "yol": "kök"
-      },
-      {
-        "w": "تولعوا",
-        "u": "تولعوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَوَلَّعُوا • (tawallaʕū) (form V) /ta.wal.la.ʕuː/\n# inflection of تَوَلَّعَ (tawallaʕa):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tawallaʕū", "tawallaʕa"],
-        "k": "تولع",
-        "yol": "kök"
-      },
-      {
-        "w": "تولعنا",
-        "u": "تولعنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَوَلَّعْنَا • (tawallaʕnā) (form V) /ta.wal.laʕ.naː/\n# first-person plural past active of تَوَلَّعَ (tawallaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tawallaʕnā", "tawallaʕa"],
-        "k": "تولع",
-        "yol": "kök"
-      },
-      {
-        "w": "تولعتما",
-        "u": "تولعتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَوَلَّعْتُمَا • (tawallaʕtumā) (form V) /ta.wal.laʕ.tu.maː/\n# second-person dual past active of تَوَلَّعَ (tawallaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tawallaʕtumā", "tawallaʕa"],
-        "k": "تولع",
-        "yol": "kök"
-      },
-      {
-        "w": "تولعتم",
-        "u": "تولعتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَوَلَّعْتُمْ • (tawallaʕtum) (form V) /ta.wal.laʕ.tum/\n# second-person masculine plural past active of تَوَلَّعَ (tawallaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tawallaʕtum", "tawallaʕa"],
-        "k": "تولع",
-        "yol": "kök"
-      },
-      {
-        "w": "تتولعان",
-        "u": "تتولعان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَوَلَّعَانِ • (tatawallaʕāni) (form V) /ta.ta.wal.la.ʕaː.ni/\n# inflection of تَوَلَّعَ (tawallaʕa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatawallaʕāni", "tawallaʕa"],
-        "k": "تولع",
-        "yol": "kök"
-      },
-      {
-        "w": "تتولع",
-        "u": "تتولع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتولع (form V)\n# تَتَوَلَّعُ (tatawallaʕu) /ta.ta.wal.la.ʕu/: inflection of تَوَلَّعَ (tawallaʕa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَوَلَّعَ (tatawallaʕa) /ta.ta.wal.la.ʕa/: inflection of تَوَلَّعَ (tawallaʕa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatawallaʕu", "tawallaʕa", "tatawallaʕa"],
-        "k": "تولع",
-        "yol": "kök"
-      },
-      {
-        "w": "تولعت",
-        "u": "تولعت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تولعت (form V)\n# تَوَلَّعْتُ (tawallaʕtu) /ta.wal.laʕ.tu/: first-person singular past active of تَوَلَّعَ (tawallaʕa)\n# تَوَلَّعْتَ (tawallaʕta) /ta.wal.laʕ.ta/: second-person masculine singular past active of تَوَلَّعَ (tawallaʕa)\n# تَوَلَّعْتِ (tawallaʕti) /ta.wal.laʕ.ti/: second-person feminine singular past active of تَوَلَّعَ (tawallaʕa)\n# تَوَلَّعَتْ (tawallaʕat) /ta.wal.la.ʕat/: third-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tawallaʕtu", "tawallaʕa", "tawallaʕta"],
-        "k": "تولع",
-        "yol": "kök"
-      },
-      {
-        "w": "تولعتا",
-        "u": "تولعتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَوَلَّعَتَا • (tawallaʕatā) (form V) /ta.wal.la.ʕa.taː/\n# third-person feminine dual past active of تَوَلَّعَ (tawallaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tawallaʕatā", "tawallaʕa"],
-        "k": "تولع",
-        "yol": "kök"
-      },
-      {
-        "w": "أتولع",
-        "u": "أتولع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتولع (form V)\n# أَتَوَلَّعُ (ʔatawallaʕu) /ʔa.ta.wal.la.ʕu/: first-person singular non-past active indicative of تَوَلَّعَ (tawallaʕa)\n# أَتَوَلَّعَ (ʔatawallaʕa) /ʔa.ta.wal.la.ʕa/: first-person singular non-past active subjunctive of تَوَلَّعَ (tawallaʕa)\n# أَتَوَلَّعْ (ʔatawallaʕ) /ʔa.ta.wal.laʕ/: first-person singular non-past active jussive of تَوَلَّعَ (tawallaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔatawallaʕu", "tawallaʕa", "ʔatawallaʕa"],
-        "k": "تولع",
-        "yol": "kök"
-      },
-      {
-        "w": "تتولعين",
-        "u": "تتولعين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَوَلَّعِينَ • (tatawallaʕīna) (form V) /ta.ta.wal.la.ʕiː.na/\n# second-person feminine singular non-past active indicative of تَوَلَّعَ (tawallaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatawallaʕīna", "tawallaʕa"],
-        "k": "تولع",
-        "yol": "kök"
-      },
-      {
-        "w": "يتولعان",
-        "u": "يتولعان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَوَلَّعَانِ • (yatawallaʕāni) (form V) /ja.ta.wal.la.ʕaː.ni/\n# third-person masculine dual non-past active indicative of تَوَلَّعَ (tawallaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatawallaʕāni", "tawallaʕa"],
-        "k": "تولع",
-        "yol": "kök"
-      },
-      {
-        "w": "نتولع",
-        "u": "نتولع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتولع (form V)\n# نَتَوَلَّعُ (natawallaʕu) /na.ta.wal.la.ʕu/: first-person plural non-past active indicative of تَوَلَّعَ (tawallaʕa)\n# نَتَوَلَّعَ (natawallaʕa) /na.ta.wal.la.ʕa/: first-person plural non-past active subjunctive of تَوَلَّعَ (tawallaʕa)\n# نَتَوَلَّعْ (natawallaʕ) /na.ta.wal.laʕ/: first-person plural non-past active jussive of تَوَلَّعَ (tawallaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["natawallaʕu", "tawallaʕa", "natawallaʕa"],
-        "k": "تولع",
-        "yol": "kök"
-      },
-      {
-        "w": "تتولعون",
-        "u": "تتولعون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَوَلَّعُونَ • (tatawallaʕūna) (form V) /ta.ta.wal.la.ʕuː.na/\n# second-person masculine plural non-past active indicative of تَوَلَّعَ (tawallaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatawallaʕūna", "tawallaʕa"],
-        "k": "تولع",
-        "yol": "kök"
-      },
-      {
-        "w": "يتولعون",
-        "u": "يتولعون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَوَلَّعُونَ • (yatawallaʕūna) (form V) /ja.ta.wal.la.ʕuː.na/\n# third-person masculine plural non-past active indicative of تَوَلَّعَ (tawallaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatawallaʕūna", "tawallaʕa"],
-        "k": "تولع",
-        "yol": "kök"
-      },
-      {
-        "w": "تولعتن",
-        "u": "تولعتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَوَلَّعْتُنَّ • (tawallaʕtunna) (form V) /ta.wal.laʕ.tun.na/\n# second-person feminine plural past active of تَوَلَّعَ (tawallaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tawallaʕtunna", "tawallaʕa"],
-        "k": "تولع",
-        "yol": "kök"
-      },
-      {
-        "w": "يتولع",
-        "u": "يتولع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتولع (form V)\n# يَتَوَلَّعُ (yatawallaʕu) /ja.ta.wal.la.ʕu/: third-person masculine singular non-past active indicative of تَوَلَّعَ (tawallaʕa)\n# يَتَوَلَّعَ (yatawallaʕa) /ja.ta.wal.la.ʕa/: third-person masculine singular non-past active subjunctive of تَوَلَّعَ (tawallaʕa)\n# يَتَوَلَّعْ (yatawallaʕ) /ja.ta.wal.laʕ/: third-person masculine singular non-past active jussive of تَوَلَّعَ (tawallaʕ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatawallaʕu", "tawallaʕa", "yatawallaʕa"],
-        "k": "تولع",
-        "yol": "kök"
-      },
-      {
-        "w": "تتولعن",
-        "u": "تتولعن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَوَلَّعْنَ • (tatawallaʕna) (form V) /ta.ta.wal.laʕ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَوَلَّعَ (tawallaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatawallaʕna", "tawallaʕa"],
-        "k": "تولع",
-        "yol": "kök"
-      },
-      {
-        "w": "تتولعي",
-        "u": "تتولعي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَوَلَّعِي • (tatawallaʕī) (form V) /ta.ta.wal.la.ʕiː/\n# second-person feminine singular non-past active subjunctive/jussive of تَوَلَّعَ (tawallaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatawallaʕī", "tawallaʕa"],
-        "k": "تولع",
-        "yol": "kök"
-      },
-      {
-        "w": "يتولعن",
-        "u": "يتولعن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَوَلَّعْنَ • (yatawallaʕna) (form V) /ja.ta.wal.laʕ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَوَلَّعَ (tawallaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatawallaʕna", "tawallaʕa"],
-        "k": "تولع",
-        "yol": "kök"
-      },
-      {
-        "w": "تتولعا",
-        "u": "تتولعا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَوَلَّعَا • (tatawallaʕā) (form V) /ta.ta.wal.la.ʕaː/\n# inflection of تَوَلَّعَ (tawallaʕa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatawallaʕā", "tawallaʕa"],
-        "k": "تولع",
-        "yol": "kök"
-      },
-      {
-        "w": "يتولعا",
-        "u": "يتولعا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَوَلَّعَا • (yatawallaʕā) (form V) /ja.ta.wal.la.ʕaː/\n# third-person masculine dual non-past active subjunctive/jussive of تَوَلَّعَ (tawallaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatawallaʕā", "tawallaʕa"],
-        "k": "تولع",
-        "yol": "kök"
-      },
-      {
-        "w": "يتولعوا",
-        "u": "يتولعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَوَلَّعُوا • (yatawallaʕū) (form V) /ja.ta.wal.la.ʕuː/\n# third-person masculine plural non-past active subjunctive/jussive of تَوَلَّعَ (tawallaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatawallaʕū", "tawallaʕa"],
-        "k": "تولع",
-        "yol": "kök"
-      },
-      {
-        "w": "تتولعوا",
-        "u": "تتولعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَوَلَّعُوا • (tatawallaʕū) (form V) /ta.ta.wal.la.ʕuː/\n# second-person masculine plural non-past active subjunctive/jussive of تَوَلَّعَ (tawallaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatawallaʕū", "tawallaʕa"],
-        "k": "تولع",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تل",
+  "ses": {
     "harf": "ت",
+    "fasil": "تل",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تولعن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَوَلَّعْنَ • (tawallaʕna) (form V) /ta.wal.laʕ.na/\n# inflection of تَوَلَّعَ (tawallaʕa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tawallaʕna", "tawallaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تولعي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَوَلَّعِي • (tawallaʕī) (form V) /ta.wal.la.ʕiː/\n# second-person feminine singular imperative of تَوَلَّعَ (tawallaʕa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tawallaʕī", "tawallaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تولعا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَوَلَّعَا • (tawallaʕā) (form V) /ta.wal.la.ʕaː/\n# inflection of تَوَلَّعَ (tawallaʕa):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tawallaʕā", "tawallaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تولعوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَوَلَّعُوا • (tawallaʕū) (form V) /ta.wal.la.ʕuː/\n# inflection of تَوَلَّعَ (tawallaʕa):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tawallaʕū", "tawallaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تولعنا",
+      "tur": "verb",
+      "baslik": "تَوَلَّعْنَا • (tawallaʕnā) (form V) /ta.wal.laʕ.naː/\n# first-person plural past active of تَوَلَّعَ (tawallaʕa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tawallaʕnā", "tawallaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تولعتما",
+      "tur": "verb",
+      "baslik": "تَوَلَّعْتُمَا • (tawallaʕtumā) (form V) /ta.wal.laʕ.tu.maː/\n# second-person dual past active of تَوَلَّعَ (tawallaʕa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tawallaʕtumā", "tawallaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تولعتم",
+      "tur": "verb",
+      "baslik": "تَوَلَّعْتُمْ • (tawallaʕtum) (form V) /ta.wal.laʕ.tum/\n# second-person masculine plural past active of تَوَلَّعَ (tawallaʕa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tawallaʕtum", "tawallaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتولعان",
+      "tur": "verb",
+      "baslik": "تَتَوَلَّعَانِ • (tatawallaʕāni) (form V) /ta.ta.wal.la.ʕaː.ni/\n# inflection of تَوَلَّعَ (tawallaʕa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatawallaʕāni", "tawallaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتولع",
+      "tur": "verb",
+      "baslik": "تتولع (form V)\n# تَتَوَلَّعُ (tatawallaʕu) /ta.ta.wal.la.ʕu/: inflection of تَوَلَّعَ (tawallaʕa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَوَلَّعَ (tatawallaʕa) /ta.ta.wal.la.ʕa/: inflection of تَوَلَّعَ (tawallaʕa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatawallaʕu", "tawallaʕa", "tatawallaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تولعت",
+      "tur": "verb",
+      "baslik": "تولعت (form V)\n# تَوَلَّعْتُ (tawallaʕtu) /ta.wal.laʕ.tu/: first-person singular past active of تَوَلَّعَ (tawallaʕa)\n# تَوَلَّعْتَ (tawallaʕta) /ta.wal.laʕ.ta/: second-person masculine singular past active of تَوَلَّعَ (tawallaʕa)\n# تَوَلَّعْتِ (tawallaʕti) /ta.wal.laʕ.ti/: second-person feminine singular past active of تَوَلَّعَ (tawallaʕa)\n# تَوَلَّعَتْ (tawallaʕat) /ta.wal.la.ʕat/: third-perso",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tawallaʕtu", "tawallaʕa", "tawallaʕta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تولعتا",
+      "tur": "verb",
+      "baslik": "تَوَلَّعَتَا • (tawallaʕatā) (form V) /ta.wal.la.ʕa.taː/\n# third-person feminine dual past active of تَوَلَّعَ (tawallaʕa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tawallaʕatā", "tawallaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتولع",
+      "tur": "verb",
+      "baslik": "أتولع (form V)\n# أَتَوَلَّعُ (ʔatawallaʕu) /ʔa.ta.wal.la.ʕu/: first-person singular non-past active indicative of تَوَلَّعَ (tawallaʕa)\n# أَتَوَلَّعَ (ʔatawallaʕa) /ʔa.ta.wal.la.ʕa/: first-person singular non-past active subjunctive of تَوَلَّعَ (tawallaʕa)\n# أَتَوَلَّعْ (ʔatawallaʕ) /ʔa.ta.wal.laʕ/: first-person singular non-past active jussive of تَوَلَّعَ (tawallaʕa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔatawallaʕu", "tawallaʕa", "ʔatawallaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتولعين",
+      "tur": "verb",
+      "baslik": "تَتَوَلَّعِينَ • (tatawallaʕīna) (form V) /ta.ta.wal.la.ʕiː.na/\n# second-person feminine singular non-past active indicative of تَوَلَّعَ (tawallaʕa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatawallaʕīna", "tawallaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتولعان",
+      "tur": "verb",
+      "baslik": "يَتَوَلَّعَانِ • (yatawallaʕāni) (form V) /ja.ta.wal.la.ʕaː.ni/\n# third-person masculine dual non-past active indicative of تَوَلَّعَ (tawallaʕa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatawallaʕāni", "tawallaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتولع",
+      "tur": "verb",
+      "baslik": "نتولع (form V)\n# نَتَوَلَّعُ (natawallaʕu) /na.ta.wal.la.ʕu/: first-person plural non-past active indicative of تَوَلَّعَ (tawallaʕa)\n# نَتَوَلَّعَ (natawallaʕa) /na.ta.wal.la.ʕa/: first-person plural non-past active subjunctive of تَوَلَّعَ (tawallaʕa)\n# نَتَوَلَّعْ (natawallaʕ) /na.ta.wal.laʕ/: first-person plural non-past active jussive of تَوَلَّعَ (tawallaʕa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["natawallaʕu", "tawallaʕa", "natawallaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتولعون",
+      "tur": "verb",
+      "baslik": "تَتَوَلَّعُونَ • (tatawallaʕūna) (form V) /ta.ta.wal.la.ʕuː.na/\n# second-person masculine plural non-past active indicative of تَوَلَّعَ (tawallaʕa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatawallaʕūna", "tawallaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتولعون",
+      "tur": "verb",
+      "baslik": "يَتَوَلَّعُونَ • (yatawallaʕūna) (form V) /ja.ta.wal.la.ʕuː.na/\n# third-person masculine plural non-past active indicative of تَوَلَّعَ (tawallaʕa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatawallaʕūna", "tawallaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تولعتن",
+      "tur": "verb",
+      "baslik": "تَوَلَّعْتُنَّ • (tawallaʕtunna) (form V) /ta.wal.laʕ.tun.na/\n# second-person feminine plural past active of تَوَلَّعَ (tawallaʕa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tawallaʕtunna", "tawallaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتولع",
+      "tur": "verb",
+      "baslik": "يتولع (form V)\n# يَتَوَلَّعُ (yatawallaʕu) /ja.ta.wal.la.ʕu/: third-person masculine singular non-past active indicative of تَوَلَّعَ (tawallaʕa)\n# يَتَوَلَّعَ (yatawallaʕa) /ja.ta.wal.la.ʕa/: third-person masculine singular non-past active subjunctive of تَوَلَّعَ (tawallaʕa)\n# يَتَوَلَّعْ (yatawallaʕ) /ja.ta.wal.laʕ/: third-person masculine singular non-past active jussive of تَوَلَّعَ (tawallaʕ",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatawallaʕu", "tawallaʕa", "yatawallaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتولعن",
+      "tur": "verb",
+      "baslik": "تَتَوَلَّعْنَ • (tatawallaʕna) (form V) /ta.ta.wal.laʕ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَوَلَّعَ (tawallaʕa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatawallaʕna", "tawallaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتولعي",
+      "tur": "verb",
+      "baslik": "تَتَوَلَّعِي • (tatawallaʕī) (form V) /ta.ta.wal.la.ʕiː/\n# second-person feminine singular non-past active subjunctive/jussive of تَوَلَّعَ (tawallaʕa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatawallaʕī", "tawallaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتولعن",
+      "tur": "verb",
+      "baslik": "يَتَوَلَّعْنَ • (yatawallaʕna) (form V) /ja.ta.wal.laʕ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَوَلَّعَ (tawallaʕa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatawallaʕna", "tawallaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتولعا",
+      "tur": "verb",
+      "baslik": "تَتَوَلَّعَا • (tatawallaʕā) (form V) /ta.ta.wal.la.ʕaː/\n# inflection of تَوَلَّعَ (tawallaʕa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatawallaʕā", "tawallaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتولعا",
+      "tur": "verb",
+      "baslik": "يَتَوَلَّعَا • (yatawallaʕā) (form V) /ja.ta.wal.la.ʕaː/\n# third-person masculine dual non-past active subjunctive/jussive of تَوَلَّعَ (tawallaʕa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatawallaʕā", "tawallaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتولعوا",
+      "tur": "verb",
+      "baslik": "يَتَوَلَّعُوا • (yatawallaʕū) (form V) /ja.ta.wal.la.ʕuː/\n# third-person masculine plural non-past active subjunctive/jussive of تَوَلَّعَ (tawallaʕa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatawallaʕū", "tawallaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتولعوا",
+      "tur": "verb",
+      "baslik": "تَتَوَلَّعُوا • (tatawallaʕū) (form V) /ta.ta.wal.la.ʕuː/\n# second-person masculine plural non-past active subjunctive/jussive of تَوَلَّعَ (tawallaʕa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatawallaʕū", "tawallaʕa"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تولع", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

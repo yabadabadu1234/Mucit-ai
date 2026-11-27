@@ -1,60 +1,40 @@
 {
   "kok": "غظغظ",
+  "tur": "isim",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["fiil-yok"],
+  "lugat_fiil": false,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "غظغظ", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الغين والظاء",
-      "baslik": "غظغظ",
-      "mihveri": "غليان ما في جوف الشيء غَلَيانًا شديدًا (1).",
-      "sesler": "",
-      "tam_metin": "\"المُغَظْغِظَة -بكسر الغين الثانية: القِدْرُ الشديدة الغليان \".\n° المعنى المحوري\nغليان ما في جوف الشيء غَلَيانًا شديدًا (1).",
-      "fasil_ozeti": "° معنى الفصل المعجمي (غظ) : هو الحر الشديد في الجوف كجوف المُغَظْغِظة: القِدْر الشديدة الغليان -في (غظظ)، وكحَمْى الهاجرة وشدة حَرّها -في (غيظ)."
-    }
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "غظ",
+  "ses": {
     "harf": "غ",
+    "fasil": "غظ",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+  "cebel": {
     "fasil": "الغين والظاء",
+    "baslik": "غظغظ",
     "mihveri": "غليان ما في جوف الشيء غَلَيانًا شديدًا (1).",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (غظ) : هو الحر الشديد في الجوف كجوف المُغَظْغِظة: القِدْر الشديدة الغليان -في (غظظ)، وكحَمْى الهاجرة وشدة حَرّها -في (غيظ).",
-    "tam_metin": "\"المُغَظْغِظَة -بكسر الغين الثانية: القِدْرُ الشديدة الغليان \".\n° المعنى المحوري\nغليان ما في جوف الشيء غَلَيانًا شديدًا (1)."
+    "tam_metin": "\"المُغَظْغِظَة -بكسر الغين الثانية: القِدْرُ الشديدة الغليان \".\n° المعنى المحوري\nغليان ما في جوف الشيء غَلَيانًا شديدًا (1).",
+    "fasil_ozeti": "° معنى الفصل المعجمي (غظ) : هو الحر الشديد في الجوف كجوف المُغَظْغِظة: القِدْر الشديدة الغليان -في (غظظ)، وكحَمْى الهاجرة وشدة حَرّها -في (غيظ)."
   },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "غظغظ", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "ust": {
       "kume": 9,
       "merkez_kok": "سفك",
@@ -74,6 +54,10 @@
       "boy": 14
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

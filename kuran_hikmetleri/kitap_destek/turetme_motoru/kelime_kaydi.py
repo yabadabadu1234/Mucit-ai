@@ -19,22 +19,13 @@ import turkce as T
 import mekayis as MK
 import osmanlica_lugat as OS
 import wikt
+import kok_sadelestir as KS
 
 KOK = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..')
 SOZ = os.path.join(KOK, 'kaynak', 'sozluk')
 ETI = os.path.join(KOK, 'kaynak', 'lugat', 'etimoloji')
 HAR = os.path.join(KOK, 'veri_harici')
 CIKTI = os.path.join(KOK, 'kelime_kaydi', 'KELIME_KAYDI.json.gz')
-
-SEMA = {
-    'sema': 'graf-ic-graf',
-    'kok_dosyasi': 'kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler',
-    'kok_alt_grafi': 'kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder',
-    'sozluk_dali': 'kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler',
-    'kelime_dali': 'kelimeler[i].morfoloji = Kur\'ân içindeki ilk geçiş ve kelime çevirileri',
-    'satir_alanlari': ['kalip', 'arapca', 'latin', 'turkce', 'guven', 'tanik'],
-}
-
 
 def okunur(o, g=0, en=110):
     ic = '  ' * (g + 1)
@@ -351,7 +342,7 @@ def uret():
             'motorun_reddettigi_kok': sum(hata.values()), 'kokü_olmayan_kelime': sum(1 for e in kelimeler if not e['kok'])}
     assert sayi['renk_sozluk_girdi'] == sum(renk_yer.values()), 'renk sözlüğü maddesi yerleşmedi'
     assert sayi['kaikki_girdi'] == sayi['kaikki_koke_yerlesen'] + sayi['kaikki_koksuz'], 'kaikki maddesi yerleşmedi'
-    return {'sema': SEMA, 'sayilar': sayi, 'kaliplar': kaliplar, 'kokler': kokler, 'kelimeler': kelimeler, 'kaikki_koksuz': kk_koksuz, 'kelime_dosyalari': kelime_dosyalari}
+    return {'sayilar': sayi, 'kaliplar': kaliplar, 'kokler': kokler, 'kelimeler': kelimeler, 'kaikki_koksuz': kk_koksuz, 'kelime_dosyalari': kelime_dosyalari}
 
 
 MAHREC = {'halkiyye': 'ءهعحغخ', 'lehaviyye': 'قك', 'şeceriyye': 'جشض', 'esaliyye': 'صسز', 'nit‘iyye': 'طدت', 'lessiyye': 'ظذث', 'zelakiyye': 'رلن', 'şefeviyye': 'فبم', 'cevfiyye': 'ويا'}
@@ -452,6 +443,8 @@ def yaz():
     for k_, x_ in cb_.items():
         if k_ in d['kokler']:
             cbag.setdefault(x_['fasil'], []).append(k_)
+    esas, ek_lugat, etim = KS.ekler()
+    KS.tohum()
     agac = {}
     kelime_kok = {}
     toplam = collections.Counter()
@@ -460,7 +453,6 @@ def yaz():
         klasor = os.path.join(taban, ad, 'kokler')
         os.makedirs(klasor, exist_ok=True)
         dugum = dict(r)
-        dugum['sema'] = SEMA
         dugum['tasnif'] = tasnif(k)
         dugum['mana_tasnif'] = aw.get(k) or {'durum': 'Arabic WordNet v2 kaydı yok'}
         dugum['ses_mana_tasnif'] = ({'kaynak': 'Cebel, el-Mu\'cemü\'l-İştikâkıyyü\'l-Mü\'asssal', 'fasil': cb_[k]['fasil'], 'mihveri': cb_[k]['mihveri'], 'sesler': cb_[k]['sesler'], 'fasil_ozeti': cb_[k]['fasil_ozeti'], 'tam_metin': cb_[k]['tam_metin']} if k in cb_ else {'durum': 'Cebel mu\'cemlerinde kök yok'})
@@ -474,7 +466,7 @@ def yaz():
         dugum['kelimeler'] = gruplar.get(k, [])
         yol = os.path.join(klasor, k + '.json')
         with open(yol, 'w', encoding='utf-8') as f:
-            f.write(okunur(dugum))
+            f.write(KS.okunur(KS.donustur(dugum, esas, ek_lugat, etim)) + '\n')
         toplam[ad] += os.path.getsize(yol)
         fih[ad].append([k + '.json', k, len(dugum['kelimeler']), sum(len(v) for v in r.get('mustaklar', {}).values())])
         t = dugum['tasnif']
@@ -491,8 +483,10 @@ def yaz():
     d['sayilar']['kelime_dosyasi'] = len(d['kelime_dosyalari'])
     for ad in ('kuranda_var', 'kuranda_yok'):
         with open(os.path.join(taban, ad, 'FIHRIST.json'), 'w', encoding='utf-8') as f:
-            f.write(okunur({'sema': SEMA, 'sayilar': d['sayilar'], 'alanlar_kokler': ['dosya', 'kok', 'kelime_sayisi', 'mustak_satiri'], 'kokler': fih[ad],
+            f.write(okunur({'sayilar': d['sayilar'], 'alanlar_kokler': ['dosya', 'kok', 'kelime_sayisi', 'mustak_satiri'], 'kokler': fih[ad],
                             'tasnif_agaci': tasnif_ozeti(agac), 'mana_tasnif_agaci': awn_agaci(aw), 'mana_tasnif_gomme_agaci': mana_agaci(mt), 'muhassas_agaci': muhassas_agaci(mh), 'kolekzifikasyon_agi': {'yontem': 'bir kökün altında birlikte görülen WordNet kavram çiftleri (4. ata basamağı), dizelge adları farklı kavramlar, en az 4 kökte, ilk 3000 çift (ilk geçiş)', 'cift_sayisi': len(col), 'ciftler': [{'a': a_, 'b': b_, 'kok_sayisi': n_, 'benzerlik': sc_, 'ornek_kokler': ks_} for a_, b_, n_, sc_, ks_ in col]}, 'hakikat_mecaz_ozeti': {'kok': len(as_), 'mecazli_kok': sum(1 for v in as_.values() if v['mecaz_var'])}, 'prototip_yayilim_ozeti': {'kok': len(pt), 'halka_dagilimi': dict(collections.Counter(y['halka'] for v in pt.values() for y in v['yayilim']))}, 'ses_mana_agaci': {'kaynak': 'Cebel (fasıl = ilk iki harf; her fasılın ortak mihverî manası ve ses izahı kök dosyalarında)', 'fasil_sayisi': len(cbag), 'kok': sum(len(v) for v in cbag.values()), 'fasil': {f: len(v) for f, v in sorted(cbag.items())}}, 'kelime_kok': kelime_kok if ad == 'kuranda_var' else {}}))
+    for ad in ('kuranda_var', 'kuranda_yok'):
+        KS.fihrist(os.path.join(taban, ad))
     print(d['sayilar'], {k: len(v) for k, v in fih.items()}, {k: v // 1024 // 1024 for k, v in toplam.items()}, 'MB')
 
 

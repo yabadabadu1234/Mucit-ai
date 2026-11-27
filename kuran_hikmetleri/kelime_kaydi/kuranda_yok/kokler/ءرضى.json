@@ -1,441 +1,354 @@
 {
   "kok": "ءرضى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءرضى", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أرض",
-        "u": "أرض",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "أرض (form IV)\n# أُرْضِ (ʔurḍi) /ʔur.dˤi/: first-person singular non-past active jussive of أَرْضَى (ʔarḍā)\n# أُرْضَ (ʔurḍa) /ʔur.dˤa/: first-person singular non-past passive jussive of أَرْضَى (ʔarḍā)\n# أَرْضِ (ʔarḍi) /ʔar.dˤi/: second-person masculine singular imperative of أَرْضَى (ʔarḍā)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔurḍi", "ʔarḍā", "ʔurḍa"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "يرضى",
-        "u": "يرضى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُرْضَى • (yurḍā) (form IV) /jur.dˤaː/\n# third-person masculine singular non-past passive indicative/subjunctive of أَرْضَى (ʔarḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurḍā", "ʔarḍā"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "أرضي",
-        "u": "أرضي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أرضي (form IV)\n# أُرْضِيَ (ʔurḍiya) /ʔur.dˤi.ja/: inflection of أَرْضَى (ʔarḍā):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُرْضِي (ʔurḍī) /ʔur.dˤiː/: first-person singular non-past active indicative of أَرْضَى (ʔarḍā)\n# أَرْضِي (ʔarḍī) /ʔar.dˤiː/: second-person feminine singular imperative of أَرْضَى (ʔarḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "s": [
-          ["nonlemma", "See the etymology of the corresponding lemma form."]
-        ],
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔurḍiya", "ʔarḍā", "ʔurḍī"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "يرضي",
-        "u": "يرضي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يرضي (form IV)\n# يُرْضِي (yurḍī) /jur.dˤiː/: third-person masculine singular non-past active indicative of أَرْضَى (ʔarḍā)\n# يُرْضِيَ (yurḍiya) /jur.dˤi.ja/: third-person masculine singular non-past active subjunctive of أَرْضَى (ʔarḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurḍī", "ʔarḍā", "yurḍiya"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "يرض",
-        "u": "يرض",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يرض (form IV)\n# يُرْضِ (yurḍi) /jur.dˤi/: third-person masculine singular non-past active jussive of أَرْضَى (ʔarḍā)\n# يُرْضَ (yurḍa) /jur.dˤa/: third-person masculine singular non-past passive jussive of أَرْضَى (ʔarḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurḍi", "ʔarḍā", "yurḍa"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "أرضت",
-        "u": "أرضت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أَرْضَتْ • (ʔarḍat) (form IV) /ʔar.dˤat/\n# third-person feminine singular past active of أَرْضَى (ʔarḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔarḍat", "ʔarḍā"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "ترضي",
-        "u": "ترضي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ترضي (form IV)\n# تُرْضِي (turḍī) /tur.dˤiː/: inflection of أَرْضَى (ʔarḍā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُرْضِيَ (turḍiya) /tur.dˤi.ja/: inflection of أَرْضَى (ʔarḍā):\n## second-person masculine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turḍī", "ʔarḍā", "turḍiya"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "ترض",
-        "u": "ترض",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ترض (form IV)\n# تُرْضِ (turḍi) /tur.dˤi/: inflection of أَرْضَى (ʔarḍā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُرْضَ (turḍa) /tur.dˤa/: inflection of أَرْضَى (ʔarḍā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turḍi", "ʔarḍā", "turḍa"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "أرضيت",
-        "u": "أرضيت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أرضيت (form IV)\n# أَرْضَيْتُ (ʔarḍaytu) /ʔar.dˤaj.tu/: first-person singular past active of أَرْضَى (ʔarḍā)\n# أَرْضَيْتَ (ʔarḍayta) /ʔar.dˤaj.ta/: second-person masculine singular past active of أَرْضَى (ʔarḍā)\n# أَرْضَيْتِ (ʔarḍayti) /ʔar.dˤaj.ti/: second-person feminine singular past active of أَرْضَى (ʔarḍā)\n# أُرْضِيتُ (ʔurḍītu) /ʔur.dˤiː.tu/: first-person singular past passive of أَرْضَى (ʔar",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔarḍaytu", "ʔarḍā", "ʔarḍayta"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "ترضى",
-        "u": "ترضى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُرْضَى • (turḍā) (form IV) /tur.dˤaː/\n# inflection of أَرْضَى (ʔarḍā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turḍā", "ʔarḍā"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "ترضين",
-        "u": "ترضين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ترضين (form IV)\n# تُرْضِينَ (turḍīna) /tur.dˤiː.na/: inflection of أَرْضَى (ʔarḍā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُرْضَيْنَ (turḍayna) /tur.dˤaj.na/: inflection of أَرْضَى (ʔarḍā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-p",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turḍīna", "ʔarḍā", "turḍayna"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "أرضينا",
-        "u": "أرضينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أرضينا (form IV)\n# أَرْضَيْنَا (ʔarḍaynā) /ʔar.dˤaj.naː/: first-person plural past active of أَرْضَى (ʔarḍā)\n# أُرْضِينَا (ʔurḍīnā) /ʔur.dˤiː.naː/: first-person plural past passive of أَرْضَى (ʔarḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔarḍaynā", "ʔarḍā", "ʔurḍīnā"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "نرضي",
-        "u": "نرضي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نرضي (form IV)\n# نُرْضِي (nurḍī) /nur.dˤiː/: first-person plural non-past active indicative of أَرْضَى (ʔarḍā)\n# نُرْضِيَ (nurḍiya) /nur.dˤi.ja/: first-person plural non-past active subjunctive of أَرْضَى (ʔarḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nurḍī", "ʔarḍā", "nurḍiya"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "نرض",
-        "u": "نرض",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نرض (form IV)\n# نُرْضِ (nurḍi) /nur.dˤi/: first-person plural non-past active jussive of أَرْضَى (ʔarḍā)\n# نُرْضَ (nurḍa) /nur.dˤa/: first-person plural non-past passive jussive of أَرْضَى (ʔarḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nurḍi", "ʔarḍā", "nurḍa"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "نرضى",
-        "u": "نرضى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نُرْضَى • (nurḍā) (form IV) /nur.dˤaː/\n# first-person plural non-past passive indicative/subjunctive of أَرْضَى (ʔarḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nurḍā", "ʔarḍā"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "أرضيتم",
-        "u": "أرضيتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أرضيتم (form IV)\n# أَرْضَيْتُمْ (ʔarḍaytum) /ʔar.dˤaj.tum/: second-person masculine plural past active of أَرْضَى (ʔarḍā)\n# أُرْضِيتُمْ (ʔurḍītum) /ʔur.dˤiː.tum/: second-person masculine plural past passive of أَرْضَى (ʔarḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔarḍaytum", "ʔarḍā", "ʔurḍītum"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "ترضون",
-        "u": "ترضون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ترضون (form IV)\n# تُرْضُونَ (turḍūna) /tur.dˤuː.na/: second-person masculine plural non-past active indicative of أَرْضَى (ʔarḍā)\n# تُرْضَوْنَ (turḍawna) /tur.dˤaw.na/: second-person masculine plural non-past passive indicative of أَرْضَى (ʔarḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turḍūna", "ʔarḍā", "turḍawna"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "ترضوا",
-        "u": "ترضوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ترضوا (form IV)\n# تُرْضُوا (turḍū) /tur.dˤuː/: second-person masculine plural non-past active subjunctive/jussive of أَرْضَى (ʔarḍā)\n# تُرْضَوْا (turḍaw) /tur.dˤaw/: second-person masculine plural non-past passive subjunctive/jussive of أَرْضَى (ʔarḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turḍū", "ʔarḍā", "turḍaw"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "أرضوا",
-        "u": "أرضوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أرضوا (form IV)\n# أَرْضَوْا (ʔarḍaw) /ʔar.dˤaw/: third-person masculine plural past active of أَرْضَى (ʔarḍā)\n# أُرْضُوا (ʔurḍū) /ʔur.dˤuː/: third-person masculine plural past passive of أَرْضَى (ʔarḍā)\n# أَرْضُوا (ʔarḍū) /ʔar.dˤuː/: second-person masculine plural imperative of أَرْضَى (ʔarḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔarḍaw", "ʔarḍā", "ʔurḍū"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "يرضون",
-        "u": "يرضون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يرضون (form IV)\n# يُرْضُونَ (yurḍūna) /jur.dˤuː.na/: third-person masculine plural non-past active indicative of أَرْضَى (ʔarḍā)\n# يُرْضَوْنَ (yurḍawna) /jur.dˤaw.na/: third-person masculine plural non-past passive indicative of أَرْضَى (ʔarḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurḍūna", "ʔarḍā", "yurḍawna"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "يرضوا",
-        "u": "يرضوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يرضوا (form IV)\n# يُرْضُوا (yurḍū) /jur.dˤuː/: third-person masculine plural non-past active subjunctive/jussive of أَرْضَى (ʔarḍā)\n# يُرْضَوْا (yurḍaw) /jur.dˤaw/: third-person masculine plural non-past passive subjunctive/jussive of أَرْضَى (ʔarḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurḍū", "ʔarḍā", "yurḍaw"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "أرضيتن",
-        "u": "أرضيتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أرضيتن (form IV)\n# أَرْضَيْتُنَّ (ʔarḍaytunna) /ʔar.dˤaj.tun.na/: second-person feminine plural past active of أَرْضَى (ʔarḍā)\n# أُرْضِيتُنَّ (ʔurḍītunna) /ʔur.dˤiː.tun.na/: second-person feminine plural past passive of أَرْضَى (ʔarḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔarḍaytunna", "ʔarḍā", "ʔurḍītunna"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "أرضين",
-        "u": "أرضين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أرضين (form IV)\n# أَرْضَيْنَ (ʔarḍayna) /ʔar.dˤaj.na/: third-person feminine plural past active of أَرْضَى (ʔarḍā)\n# أُرْضِينَ (ʔurḍīna) /ʔur.dˤiː.na/: third-person feminine plural past passive of أَرْضَى (ʔarḍā)\n# أَرْضِينَ (ʔarḍīna) /ʔar.dˤiː.na/: second-person feminine plural imperative of أَرْضَى (ʔarḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔarḍayna", "ʔarḍā", "ʔurḍīna"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "يرضين",
-        "u": "يرضين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يرضين (form IV)\n# يُرْضِينَ (yurḍīna) /jur.dˤiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَرْضَى (ʔarḍā)\n# يُرْضَيْنَ (yurḍayna) /jur.dˤaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَرْضَى (ʔarḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurḍīna", "ʔarḍā", "yurḍayna"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "أرضتا",
-        "u": "أرضتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَرْضَتَا • (ʔarḍatā) (form IV) /ʔar.dˤa.taː/\n# third-person feminine dual past active of أَرْضَى (ʔarḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔarḍatā", "ʔarḍā"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "أرضيتما",
-        "u": "أرضيتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أرضيتما (form IV)\n# أَرْضَيْتُمَا (ʔarḍaytumā) /ʔar.dˤaj.tu.maː/: second-person dual past active of أَرْضَى (ʔarḍā)\n# أُرْضِيتُمَا (ʔurḍītumā) /ʔur.dˤiː.tu.maː/: second-person dual past passive of أَرْضَى (ʔarḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔarḍaytumā", "ʔarḍā", "ʔurḍītumā"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "أرضيا",
-        "u": "أرضيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أرضيا (form IV)\n# أَرْضَيَا (ʔarḍayā) /ʔar.dˤa.jaː/: third-person masculine dual past active of أَرْضَى (ʔarḍā)\n# أُرْضِيَا (ʔurḍiyā) /ʔur.dˤi.jaː/: third-person masculine dual past passive of أَرْضَى (ʔarḍā)\n# أَرْضِيَا (ʔarḍiyā) /ʔar.dˤi.jaː/: second-person dual imperative of أَرْضَى (ʔarḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔarḍayā", "ʔarḍā", "ʔurḍiyā"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "أرضيتا",
-        "u": "أرضيتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُرْضِيَتَا • (ʔurḍiyatā) (form IV) /ʔur.dˤi.ja.taː/\n# third-person feminine dual past passive of أَرْضَى (ʔarḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔurḍiyatā", "ʔarḍā"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "يرضيان",
-        "u": "يرضيان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يرضيان (form IV)\n# يُرْضِيَانِ (yurḍiyāni) /jur.dˤi.jaː.ni/: third-person masculine dual non-past active indicative of أَرْضَى (ʔarḍā)\n# يُرْضَيَانِ (yurḍayāni) /jur.dˤa.jaː.ni/: third-person masculine dual non-past passive indicative of أَرْضَى (ʔarḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurḍiyāni", "ʔarḍā", "yurḍayāni"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "ترضيان",
-        "u": "ترضيان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ترضيان (form IV)\n# تُرْضِيَانِ (turḍiyāni) /tur.dˤi.jaː.ni/: inflection of أَرْضَى (ʔarḍā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُرْضَيَانِ (turḍayāni) /tur.dˤa.jaː.ni/: inflection of أَرْضَى (ʔarḍā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turḍiyāni", "ʔarḍā", "turḍayāni"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "ترضيا",
-        "u": "ترضيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ترضيا (form IV)\n# تُرْضِيَا (turḍiyā) /tur.dˤi.jaː/: inflection of أَرْضَى (ʔarḍā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُرْضَيَا (turḍayā) /tur.dˤa.jaː/: inflection of أَرْضَى (ʔarḍā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussiv",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turḍiyā", "ʔarḍā", "turḍayā"],
-        "k": "أرضى",
-        "yol": "kök"
-      },
-      {
-        "w": "يرضيا",
-        "u": "يرضيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يرضيا (form IV)\n# يُرْضِيَا (yurḍiyā) /jur.dˤi.jaː/: third-person masculine dual non-past active subjunctive/jussive of أَرْضَى (ʔarḍā)\n# يُرْضَيَا (yurḍayā) /jur.dˤa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of أَرْضَى (ʔarḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurḍiyā", "ʔarḍā", "yurḍayā"],
-        "k": "أرضى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "رض",
+  "ses": {
     "harf": "ء",
+    "fasil": "رض",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "أرض",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "أرض (form IV)\n# أُرْضِ (ʔurḍi) /ʔur.dˤi/: first-person singular non-past active jussive of أَرْضَى (ʔarḍā)\n# أُرْضَ (ʔurḍa) /ʔur.dˤa/: first-person singular non-past passive jussive of أَرْضَى (ʔarḍā)\n# أَرْضِ (ʔarḍi) /ʔar.dˤi/: second-person masculine singular imperative of أَرْضَى (ʔarḍā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔurḍi", "ʔarḍā", "ʔurḍa"],
+      "kok_yazilis": "أرضى"
+    },
+    {
+      "madde": "يرضى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُرْضَى • (yurḍā) (form IV) /jur.dˤaː/\n# third-person masculine singular non-past passive indicative/subjunctive of أَرْضَى (ʔarḍā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurḍā", "ʔarḍā"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أرضي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أرضي (form IV)\n# أُرْضِيَ (ʔurḍiya) /ʔur.dˤi.ja/: inflection of أَرْضَى (ʔarḍā):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُرْضِي (ʔurḍī) /ʔur.dˤiː/: first-person singular non-past active indicative of أَرْضَى (ʔarḍā)\n# أَرْضِي (ʔarḍī) /ʔar.dˤiː/: second-person feminine singular imperative of أَرْضَى (ʔarḍā)",
+      "etim_sablon": [
+        ["nonlemma", "See the etymology of the corresponding lemma form."]
+      ],
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔurḍiya", "ʔarḍā", "ʔurḍī"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يرضي",
+      "tur": "verb",
+      "baslik": "يرضي (form IV)\n# يُرْضِي (yurḍī) /jur.dˤiː/: third-person masculine singular non-past active indicative of أَرْضَى (ʔarḍā)\n# يُرْضِيَ (yurḍiya) /jur.dˤi.ja/: third-person masculine singular non-past active subjunctive of أَرْضَى (ʔarḍā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurḍī", "ʔarḍā", "yurḍiya"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يرض",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يرض (form IV)\n# يُرْضِ (yurḍi) /jur.dˤi/: third-person masculine singular non-past active jussive of أَرْضَى (ʔarḍā)\n# يُرْضَ (yurḍa) /jur.dˤa/: third-person masculine singular non-past passive jussive of أَرْضَى (ʔarḍā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurḍi", "ʔarḍā", "yurḍa"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أرضت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أَرْضَتْ • (ʔarḍat) (form IV) /ʔar.dˤat/\n# third-person feminine singular past active of أَرْضَى (ʔarḍā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔarḍat", "ʔarḍā"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ترضي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ترضي (form IV)\n# تُرْضِي (turḍī) /tur.dˤiː/: inflection of أَرْضَى (ʔarḍā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُرْضِيَ (turḍiya) /tur.dˤi.ja/: inflection of أَرْضَى (ʔarḍā):\n## second-person masculine singular non-past active subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turḍī", "ʔarḍā", "turḍiya"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ترض",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ترض (form IV)\n# تُرْضِ (turḍi) /tur.dˤi/: inflection of أَرْضَى (ʔarḍā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُرْضَ (turḍa) /tur.dˤa/: inflection of أَرْضَى (ʔarḍā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turḍi", "ʔarḍā", "turḍa"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أرضيت",
+      "tur": "verb",
+      "baslik": "أرضيت (form IV)\n# أَرْضَيْتُ (ʔarḍaytu) /ʔar.dˤaj.tu/: first-person singular past active of أَرْضَى (ʔarḍā)\n# أَرْضَيْتَ (ʔarḍayta) /ʔar.dˤaj.ta/: second-person masculine singular past active of أَرْضَى (ʔarḍā)\n# أَرْضَيْتِ (ʔarḍayti) /ʔar.dˤaj.ti/: second-person feminine singular past active of أَرْضَى (ʔarḍā)\n# أُرْضِيتُ (ʔurḍītu) /ʔur.dˤiː.tu/: first-person singular past passive of أَرْضَى (ʔar",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔarḍaytu", "ʔarḍā", "ʔarḍayta"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ترضى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُرْضَى • (turḍā) (form IV) /tur.dˤaː/\n# inflection of أَرْضَى (ʔarḍā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turḍā", "ʔarḍā"],
+      "kok_yazilis": "أرضى"
+    },
+    {
+      "madde": "ترضين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ترضين (form IV)\n# تُرْضِينَ (turḍīna) /tur.dˤiː.na/: inflection of أَرْضَى (ʔarḍā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُرْضَيْنَ (turḍayna) /tur.dˤaj.na/: inflection of أَرْضَى (ʔarḍā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-p",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turḍīna", "ʔarḍā", "turḍayna"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أرضينا",
+      "tur": "verb",
+      "baslik": "أرضينا (form IV)\n# أَرْضَيْنَا (ʔarḍaynā) /ʔar.dˤaj.naː/: first-person plural past active of أَرْضَى (ʔarḍā)\n# أُرْضِينَا (ʔurḍīnā) /ʔur.dˤiː.naː/: first-person plural past passive of أَرْضَى (ʔarḍā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔarḍaynā", "ʔarḍā", "ʔurḍīnā"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نرضي",
+      "tur": "verb",
+      "baslik": "نرضي (form IV)\n# نُرْضِي (nurḍī) /nur.dˤiː/: first-person plural non-past active indicative of أَرْضَى (ʔarḍā)\n# نُرْضِيَ (nurḍiya) /nur.dˤi.ja/: first-person plural non-past active subjunctive of أَرْضَى (ʔarḍā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nurḍī", "ʔarḍā", "nurḍiya"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نرض",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نرض (form IV)\n# نُرْضِ (nurḍi) /nur.dˤi/: first-person plural non-past active jussive of أَرْضَى (ʔarḍā)\n# نُرْضَ (nurḍa) /nur.dˤa/: first-person plural non-past passive jussive of أَرْضَى (ʔarḍā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nurḍi", "ʔarḍā", "nurḍa"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نرضى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نُرْضَى • (nurḍā) (form IV) /nur.dˤaː/\n# first-person plural non-past passive indicative/subjunctive of أَرْضَى (ʔarḍā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nurḍā", "ʔarḍā"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أرضيتم",
+      "tur": "verb",
+      "baslik": "أرضيتم (form IV)\n# أَرْضَيْتُمْ (ʔarḍaytum) /ʔar.dˤaj.tum/: second-person masculine plural past active of أَرْضَى (ʔarḍā)\n# أُرْضِيتُمْ (ʔurḍītum) /ʔur.dˤiː.tum/: second-person masculine plural past passive of أَرْضَى (ʔarḍā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔarḍaytum", "ʔarḍā", "ʔurḍītum"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ترضون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ترضون (form IV)\n# تُرْضُونَ (turḍūna) /tur.dˤuː.na/: second-person masculine plural non-past active indicative of أَرْضَى (ʔarḍā)\n# تُرْضَوْنَ (turḍawna) /tur.dˤaw.na/: second-person masculine plural non-past passive indicative of أَرْضَى (ʔarḍā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turḍūna", "ʔarḍā", "turḍawna"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ترضوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ترضوا (form IV)\n# تُرْضُوا (turḍū) /tur.dˤuː/: second-person masculine plural non-past active subjunctive/jussive of أَرْضَى (ʔarḍā)\n# تُرْضَوْا (turḍaw) /tur.dˤaw/: second-person masculine plural non-past passive subjunctive/jussive of أَرْضَى (ʔarḍā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turḍū", "ʔarḍā", "turḍaw"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أرضوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أرضوا (form IV)\n# أَرْضَوْا (ʔarḍaw) /ʔar.dˤaw/: third-person masculine plural past active of أَرْضَى (ʔarḍā)\n# أُرْضُوا (ʔurḍū) /ʔur.dˤuː/: third-person masculine plural past passive of أَرْضَى (ʔarḍā)\n# أَرْضُوا (ʔarḍū) /ʔar.dˤuː/: second-person masculine plural imperative of أَرْضَى (ʔarḍā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔarḍaw", "ʔarḍā", "ʔurḍū"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يرضون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يرضون (form IV)\n# يُرْضُونَ (yurḍūna) /jur.dˤuː.na/: third-person masculine plural non-past active indicative of أَرْضَى (ʔarḍā)\n# يُرْضَوْنَ (yurḍawna) /jur.dˤaw.na/: third-person masculine plural non-past passive indicative of أَرْضَى (ʔarḍā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurḍūna", "ʔarḍā", "yurḍawna"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يرضوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يرضوا (form IV)\n# يُرْضُوا (yurḍū) /jur.dˤuː/: third-person masculine plural non-past active subjunctive/jussive of أَرْضَى (ʔarḍā)\n# يُرْضَوْا (yurḍaw) /jur.dˤaw/: third-person masculine plural non-past passive subjunctive/jussive of أَرْضَى (ʔarḍā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurḍū", "ʔarḍā", "yurḍaw"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أرضيتن",
+      "tur": "verb",
+      "baslik": "أرضيتن (form IV)\n# أَرْضَيْتُنَّ (ʔarḍaytunna) /ʔar.dˤaj.tun.na/: second-person feminine plural past active of أَرْضَى (ʔarḍā)\n# أُرْضِيتُنَّ (ʔurḍītunna) /ʔur.dˤiː.tun.na/: second-person feminine plural past passive of أَرْضَى (ʔarḍā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔarḍaytunna", "ʔarḍā", "ʔurḍītunna"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أرضين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أرضين (form IV)\n# أَرْضَيْنَ (ʔarḍayna) /ʔar.dˤaj.na/: third-person feminine plural past active of أَرْضَى (ʔarḍā)\n# أُرْضِينَ (ʔurḍīna) /ʔur.dˤiː.na/: third-person feminine plural past passive of أَرْضَى (ʔarḍā)\n# أَرْضِينَ (ʔarḍīna) /ʔar.dˤiː.na/: second-person feminine plural imperative of أَرْضَى (ʔarḍā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔarḍayna", "ʔarḍā", "ʔurḍīna"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يرضين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يرضين (form IV)\n# يُرْضِينَ (yurḍīna) /jur.dˤiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَرْضَى (ʔarḍā)\n# يُرْضَيْنَ (yurḍayna) /jur.dˤaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَرْضَى (ʔarḍā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurḍīna", "ʔarḍā", "yurḍayna"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أرضتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَرْضَتَا • (ʔarḍatā) (form IV) /ʔar.dˤa.taː/\n# third-person feminine dual past active of أَرْضَى (ʔarḍā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔarḍatā", "ʔarḍā"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أرضيتما",
+      "tur": "verb",
+      "baslik": "أرضيتما (form IV)\n# أَرْضَيْتُمَا (ʔarḍaytumā) /ʔar.dˤaj.tu.maː/: second-person dual past active of أَرْضَى (ʔarḍā)\n# أُرْضِيتُمَا (ʔurḍītumā) /ʔur.dˤiː.tu.maː/: second-person dual past passive of أَرْضَى (ʔarḍā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔarḍaytumā", "ʔarḍā", "ʔurḍītumā"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أرضيا",
+      "tur": "verb",
+      "baslik": "أرضيا (form IV)\n# أَرْضَيَا (ʔarḍayā) /ʔar.dˤa.jaː/: third-person masculine dual past active of أَرْضَى (ʔarḍā)\n# أُرْضِيَا (ʔurḍiyā) /ʔur.dˤi.jaː/: third-person masculine dual past passive of أَرْضَى (ʔarḍā)\n# أَرْضِيَا (ʔarḍiyā) /ʔar.dˤi.jaː/: second-person dual imperative of أَرْضَى (ʔarḍā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔarḍayā", "ʔarḍā", "ʔurḍiyā"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أرضيتا",
+      "tur": "verb",
+      "baslik": "أُرْضِيَتَا • (ʔurḍiyatā) (form IV) /ʔur.dˤi.ja.taː/\n# third-person feminine dual past passive of أَرْضَى (ʔarḍā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔurḍiyatā", "ʔarḍā"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يرضيان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يرضيان (form IV)\n# يُرْضِيَانِ (yurḍiyāni) /jur.dˤi.jaː.ni/: third-person masculine dual non-past active indicative of أَرْضَى (ʔarḍā)\n# يُرْضَيَانِ (yurḍayāni) /jur.dˤa.jaː.ni/: third-person masculine dual non-past passive indicative of أَرْضَى (ʔarḍā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurḍiyāni", "ʔarḍā", "yurḍayāni"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ترضيان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ترضيان (form IV)\n# تُرْضِيَانِ (turḍiyāni) /tur.dˤi.jaː.ni/: inflection of أَرْضَى (ʔarḍā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُرْضَيَانِ (turḍayāni) /tur.dˤa.jaː.ni/: inflection of أَرْضَى (ʔarḍā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turḍiyāni", "ʔarḍā", "turḍayāni"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ترضيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ترضيا (form IV)\n# تُرْضِيَا (turḍiyā) /tur.dˤi.jaː/: inflection of أَرْضَى (ʔarḍā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُرْضَيَا (turḍayā) /tur.dˤa.jaː/: inflection of أَرْضَى (ʔarḍā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussiv",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turḍiyā", "ʔarḍā", "turḍayā"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يرضيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يرضيا (form IV)\n# يُرْضِيَا (yurḍiyā) /jur.dˤi.jaː/: third-person masculine dual non-past active subjunctive/jussive of أَرْضَى (ʔarḍā)\n# يُرْضَيَا (yurḍayā) /jur.dˤa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of أَرْضَى (ʔarḍā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurḍiyā", "ʔarḍā", "yurḍayā"],
+      "kok_yazilis": "أرضى",
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ءرضى", "r6"]
+  ],
+  "mana": {
     "ince": "location.n.01",
     "orta": "noun.location",
     "ust": "ölçü, mekân ve zaman",
@@ -443,16 +356,11 @@
     "dayanak_tanim": "territory over which rule or control is exercised",
     "synset_sayisi": 10
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "artifact.n.01",
     "earth.n.04",
     "land.n.02",
@@ -461,12 +369,10 @@
     "region.n.03",
     "substance.n.01"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

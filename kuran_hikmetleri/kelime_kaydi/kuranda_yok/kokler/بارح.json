@@ -1,482 +1,335 @@
 {
   "kok": "بارح",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "بارح", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "بارحت",
-        "u": "بارحت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بارحت (form III)\n# بَارَحْتُ (bāraḥtu) /baː.raħ.tu/: first-person singular past active of بَارَحَ (bāraḥa)\n# بَارَحْتَ (bāraḥta) /baː.raħ.ta/: second-person masculine singular past active of بَارَحَ (bāraḥa)\n# بَارَحْتِ (bāraḥti) /baː.raħ.ti/: second-person feminine singular past active of بَارَحَ (bāraḥa)\n# بَارَحَتْ (bāraḥat) /baː.ra.ħat/: third-person feminine singular past active of بَارَحَ (b",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["bāraḥtu", "bāraḥa", "bāraḥta"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "بارحا",
-        "u": "بارحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بارحا (form III)\n# بَارَحَا (bāraḥā) /baː.ra.ħaː/: third-person masculine dual past active of بَارَحَ (bāraḥa)\n# بَارِحَا (bāriḥā) /baː.ri.ħaː/: second-person dual imperative of بَارَحَ (bāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["bāraḥā", "bāraḥa", "bāriḥā"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "بارحتما",
-        "u": "بارحتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَارَحْتُمَا • (bāraḥtumā) (form III) /baː.raħ.tu.maː/\n# second-person dual past active of بَارَحَ (bāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["bāraḥtumā", "bāraḥa"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "بارحتن",
-        "u": "بارحتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَارَحْتُنَّ • (bāraḥtunna) (form III) /baː.raħ.tun.na/\n# second-person feminine plural past active of بَارَحَ (bāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["bāraḥtunna", "bāraḥa"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "بارحتا",
-        "u": "بارحتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَارَحَتَا • (bāraḥatā) (form III) /baː.ra.ħa.taː/\n# third-person feminine dual past active of بَارَحَ (bāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["bāraḥatā", "bāraḥa"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "بارحنا",
-        "u": "بارحنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَارَحْنَا • (bāraḥnā) (form III) /baː.raħ.naː/\n# first-person plural past active of بَارَحَ (bāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["bāraḥnā", "bāraḥa"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "بارحوا",
-        "u": "بارحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بارحوا (form III)\n# بَارَحُوا (bāraḥū) /baː.ra.ħuː/: third-person masculine plural past active of بَارَحَ (bāraḥa)\n# بَارِحُوا (bāriḥū) /baː.ri.ħuː/: second-person masculine plural imperative of بَارَحَ (bāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["bāraḥū", "bāraḥa", "bāriḥū"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "بارحن",
-        "u": "بارحن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بارحن (form III)\n# بَارَحْنَ (bāraḥna) /baː.raħ.na/: third-person feminine plural past active of بَارَحَ (bāraḥa)\n# بَارِحْنَ (bāriḥna) /baː.riħ.na/: second-person feminine plural imperative of بَارَحَ (bāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["bāraḥna", "bāraḥa", "bāriḥna"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "بورح",
-        "u": "بورح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بُورِحَ • (būriḥa) (form III) /buː.ri.ħa/\n# third-person masculine singular past passive of بَارَحَ (bāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["būriḥa", "bāraḥa"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "بورحت",
-        "u": "بورحت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بورحت (form III)\n# بُورِحْتُ (būriḥtu) /buː.riħ.tu/: first-person singular past passive of بَارَحَ (bāraḥa)\n# بُورِحْتَ (būriḥta) /buː.riħ.ta/: second-person masculine singular past passive of بَارَحَ (bāraḥa)\n# بُورِحْتِ (būriḥti) /buː.riħ.ti/: second-person feminine singular past passive of بَارَحَ (bāraḥa)\n# بُورِحَتْ (būriḥat) /buː.ri.ħat/: third-person feminine singular past passive of بَارَح",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["būriḥtu", "bāraḥa", "būriḥta"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "بارحتم",
-        "u": "بارحتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَارَحْتُمْ • (bāraḥtum) (form III) /baː.raħ.tum/\n# second-person masculine plural past active of بَارَحَ (bāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["bāraḥtum", "bāraḥa"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "بورحتما",
-        "u": "بورحتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بُورِحْتُمَا • (būriḥtumā) (form III) /buː.riħ.tu.maː/\n# second-person dual past passive of بَارَحَ (bāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["būriḥtumā", "bāraḥa"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "بورحتا",
-        "u": "بورحتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بُورِحَتَا • (būriḥatā) (form III) /buː.ri.ħa.taː/\n# third-person feminine dual past passive of بَارَحَ (bāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["būriḥatā", "bāraḥa"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "بورحا",
-        "u": "بورحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بُورِحَا • (būriḥā) (form III) /buː.ri.ħaː/\n# third-person masculine dual past passive of بَارَحَ (bāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["būriḥā", "bāraḥa"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "بورحتن",
-        "u": "بورحتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بُورِحْتُنَّ • (būriḥtunna) (form III) /buː.riħ.tun.na/\n# second-person feminine plural past passive of بَارَحَ (bāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["būriḥtunna", "bāraḥa"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "بورحنا",
-        "u": "بورحنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بُورِحْنَا • (būriḥnā) (form III) /buː.riħ.naː/\n# first-person plural past passive of بَارَحَ (bāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["būriḥnā", "bāraḥa"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "بورحتم",
-        "u": "بورحتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بُورِحْتُمْ • (būriḥtum) (form III) /buː.riħ.tum/\n# second-person masculine plural past passive of بَارَحَ (bāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["būriḥtum", "bāraḥa"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "بورحوا",
-        "u": "بورحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بُورِحُوا • (būriḥū) (form III) /buː.ri.ħuː/\n# third-person masculine plural past passive of بَارَحَ (bāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["būriḥū", "bāraḥa"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "أبارح",
-        "u": "أبارح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبارح (form III)\n# أُبَارِحُ (ʔubāriḥu) /ʔu.baː.ri.ħu/: first-person singular non-past active indicative of بَارَحَ (bāraḥa)\n# أُبَارَحُ (ʔubāraḥu) /ʔu.baː.ra.ħu/: first-person singular non-past passive indicative of بَارَحَ (bāraḥa)\n# أُبَارِحَ (ʔubāriḥa) /ʔu.baː.ri.ħa/: first-person singular non-past active subjunctive of بَارَحَ (bāraḥa)\n# أُبَارَحَ (ʔubāraḥa) /ʔu.baː.ra.ħa/: first-person singu",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔubāriḥu", "bāraḥa", "ʔubāraḥu"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "بورحن",
-        "u": "بورحن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بُورِحْنَ • (būriḥna) (form III) /buː.riħ.na/\n# third-person feminine plural past passive of بَارَحَ (bāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["būriḥna", "bāraḥa"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "تبارح",
-        "u": "تبارح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبارح (form III)\n# تُبَارِحُ (tubāriḥu) /tu.baː.ri.ħu/: inflection of بَارَحَ (bāraḥa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُبَارَحُ (tubāraḥu) /tu.baː.ra.ħu/: inflection of بَارَحَ (bāraḥa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive in",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tubāriḥu", "bāraḥa", "tubāraḥu"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "تبارحين",
-        "u": "تبارحين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبارحين (form III)\n# تُبَارِحِينَ (tubāriḥīna) /tu.baː.ri.ħiː.na/: second-person feminine singular non-past active indicative of بَارَحَ (bāraḥa)\n# تُبَارَحِينَ (tubāraḥīna) /tu.baː.ra.ħiː.na/: second-person feminine singular non-past passive indicative of بَارَحَ (bāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tubāriḥīna", "bāraḥa", "tubāraḥīna"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "يبارح",
-        "u": "يبارح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبارح (form III)\n# يُبَارِحُ (yubāriḥu) /ju.baː.ri.ħu/: third-person masculine singular non-past active indicative of بَارَحَ (bāraḥa)\n# يُبَارَحُ (yubāraḥu) /ju.baː.ra.ħu/: third-person masculine singular non-past passive indicative of بَارَحَ (bāraḥa)\n# يُبَارِحَ (yubāriḥa) /ju.baː.ri.ħa/: third-person masculine singular non-past active subjunctive of بَارَحَ (bāraḥa)\n# يُبَارَحَ (yubāraḥa) /ju.",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yubāriḥu", "bāraḥa", "yubāraḥu"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "يبارحان",
-        "u": "يبارحان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبارحان (form III)\n# يُبَارِحَانِ (yubāriḥāni) /ju.baː.ri.ħaː.ni/: third-person masculine dual non-past active indicative of بَارَحَ (bāraḥa)\n# يُبَارَحَانِ (yubāraḥāni) /ju.baː.ra.ħaː.ni/: third-person masculine dual non-past passive indicative of بَارَحَ (bāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yubāriḥāni", "bāraḥa", "yubāraḥāni"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "تبارحان",
-        "u": "تبارحان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبارحان (form III)\n# تُبَارِحَانِ (tubāriḥāni) /tu.baː.ri.ħaː.ni/: inflection of بَارَحَ (bāraḥa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُبَارَحَانِ (tubāraḥāni) /tu.baː.ra.ħaː.ni/: inflection of بَارَحَ (bāraḥa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tubāriḥāni", "bāraḥa", "tubāraḥāni"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "تبارحن",
-        "u": "تبارحن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبارحن (form III)\n# تُبَارِحْنَ (tubāriḥna) /tu.baː.riħ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of بَارَحَ (bāraḥa)\n# تُبَارَحْنَ (tubāraḥna) /tu.baː.raħ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of بَارَحَ (bāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tubāriḥna", "bāraḥa", "tubāraḥna"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "تبارحون",
-        "u": "تبارحون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبارحون (form III)\n# تُبَارِحُونَ (tubāriḥūna) /tu.baː.ri.ħuː.na/: second-person masculine plural non-past active indicative of بَارَحَ (bāraḥa)\n# تُبَارَحُونَ (tubāraḥūna) /tu.baː.ra.ħuː.na/: second-person masculine plural non-past passive indicative of بَارَحَ (bāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tubāriḥūna", "bāraḥa", "tubāraḥūna"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "يبارحون",
-        "u": "يبارحون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبارحون (form III)\n# يُبَارِحُونَ (yubāriḥūna) /ju.baː.ri.ħuː.na/: third-person masculine plural non-past active indicative of بَارَحَ (bāraḥa)\n# يُبَارَحُونَ (yubāraḥūna) /ju.baː.ra.ħuː.na/: third-person masculine plural non-past passive indicative of بَارَحَ (bāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yubāriḥūna", "bāraḥa", "yubāraḥūna"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "نبارح",
-        "u": "نبارح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نبارح (form III)\n# نُبَارِحُ (nubāriḥu) /nu.baː.ri.ħu/: first-person plural non-past active indicative of بَارَحَ (bāraḥa)\n# نُبَارَحُ (nubāraḥu) /nu.baː.ra.ħu/: first-person plural non-past passive indicative of بَارَحَ (bāraḥa)\n# نُبَارِحَ (nubāriḥa) /nu.baː.ri.ħa/: first-person plural non-past active subjunctive of بَارَحَ (bāraḥa)\n# نُبَارَحَ (nubāraḥa) /nu.baː.ra.ħa/: first-person plural non-",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nubāriḥu", "bāraḥa", "nubāraḥu"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "يبارحن",
-        "u": "يبارحن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبارحن (form III)\n# يُبَارِحْنَ (yubāriḥna) /ju.baː.riħ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of بَارَحَ (bāraḥa)\n# يُبَارَحْنَ (yubāraḥna) /ju.baː.raħ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of بَارَحَ (bāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yubāriḥna", "bāraḥa", "yubāraḥna"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "تبارحي",
-        "u": "تبارحي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبارحي (form III)\n# تُبَارِحِي (tubāriḥī) /tu.baː.ri.ħiː/: second-person feminine singular non-past active subjunctive/jussive of بَارَحَ (bāraḥa)\n# تُبَارَحِي (tubāraḥī) /tu.baː.ra.ħiː/: second-person feminine singular non-past passive subjunctive/jussive of بَارَحَ (bāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tubāriḥī", "bāraḥa", "tubāraḥī"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "تبارحوا",
-        "u": "تبارحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبارحوا (form III)\n# تُبَارِحُوا (tubāriḥū) /tu.baː.ri.ħuː/: second-person masculine plural non-past active subjunctive/jussive of بَارَحَ (bāraḥa)\n# تُبَارَحُوا (tubāraḥū) /tu.baː.ra.ħuː/: second-person masculine plural non-past passive subjunctive/jussive of بَارَحَ (bāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tubāriḥū", "bāraḥa", "tubāraḥū"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "تبارحا",
-        "u": "تبارحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبارحا (form III)\n# تُبَارِحَا (tubāriḥā) /tu.baː.ri.ħaː/: inflection of بَارَحَ (bāraḥa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُبَارَحَا (tubāraḥā) /tu.baː.ra.ħaː/: inflection of بَارَحَ (bāraḥa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjun",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tubāriḥā", "bāraḥa", "tubāraḥā"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "يبارحوا",
-        "u": "يبارحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبارحوا (form III)\n# يُبَارِحُوا (yubāriḥū) /ju.baː.ri.ħuː/: third-person masculine plural non-past active subjunctive/jussive of بَارَحَ (bāraḥa)\n# يُبَارَحُوا (yubāraḥū) /ju.baː.ra.ħuː/: third-person masculine plural non-past passive subjunctive/jussive of بَارَحَ (bāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yubāriḥū", "bāraḥa", "yubāraḥū"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "بارحي",
-        "u": "بارحي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَارِحِي • (bāriḥī) (form III) /baː.ri.ħiː/\n# second-person feminine singular imperative of بَارَحَ (bāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["bāriḥī", "bāraḥa"],
-        "k": "بارح",
-        "yol": "kök"
-      },
-      {
-        "w": "يبارحا",
-        "u": "يبارحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبارحا (form III)\n# يُبَارِحَا (yubāriḥā) /ju.baː.ri.ħaː/: third-person masculine dual non-past active subjunctive/jussive of بَارَحَ (bāraḥa)\n# يُبَارَحَا (yubāraḥā) /ju.baː.ra.ħaː/: third-person masculine dual non-past passive subjunctive/jussive of بَارَحَ (bāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yubāriḥā", "bāraḥa", "yubāraḥā"],
-        "k": "بارح",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "بر",
+  "ses": {
     "harf": "ب",
+    "fasil": "بر",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "بارحت",
+      "tur": "verb",
+      "baslik": "بارحت (form III)\n# بَارَحْتُ (bāraḥtu) /baː.raħ.tu/: first-person singular past active of بَارَحَ (bāraḥa)\n# بَارَحْتَ (bāraḥta) /baː.raħ.ta/: second-person masculine singular past active of بَارَحَ (bāraḥa)\n# بَارَحْتِ (bāraḥti) /baː.raħ.ti/: second-person feminine singular past active of بَارَحَ (bāraḥa)\n# بَارَحَتْ (bāraḥat) /baː.ra.ħat/: third-person feminine singular past active of بَارَحَ (b",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["bāraḥtu", "bāraḥa", "bāraḥta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بارحا",
+      "tur": "verb",
+      "baslik": "بارحا (form III)\n# بَارَحَا (bāraḥā) /baː.ra.ħaː/: third-person masculine dual past active of بَارَحَ (bāraḥa)\n# بَارِحَا (bāriḥā) /baː.ri.ħaː/: second-person dual imperative of بَارَحَ (bāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["bāraḥā", "bāraḥa", "bāriḥā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بارحتما",
+      "tur": "verb",
+      "baslik": "بَارَحْتُمَا • (bāraḥtumā) (form III) /baː.raħ.tu.maː/\n# second-person dual past active of بَارَحَ (bāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["bāraḥtumā", "bāraḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بارحتن",
+      "tur": "verb",
+      "baslik": "بَارَحْتُنَّ • (bāraḥtunna) (form III) /baː.raħ.tun.na/\n# second-person feminine plural past active of بَارَحَ (bāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["bāraḥtunna", "bāraḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بارحتا",
+      "tur": "verb",
+      "baslik": "بَارَحَتَا • (bāraḥatā) (form III) /baː.ra.ħa.taː/\n# third-person feminine dual past active of بَارَحَ (bāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["bāraḥatā", "bāraḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بارحنا",
+      "tur": "verb",
+      "baslik": "بَارَحْنَا • (bāraḥnā) (form III) /baː.raħ.naː/\n# first-person plural past active of بَارَحَ (bāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["bāraḥnā", "bāraḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بارحوا",
+      "tur": "verb",
+      "baslik": "بارحوا (form III)\n# بَارَحُوا (bāraḥū) /baː.ra.ħuː/: third-person masculine plural past active of بَارَحَ (bāraḥa)\n# بَارِحُوا (bāriḥū) /baː.ri.ħuː/: second-person masculine plural imperative of بَارَحَ (bāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["bāraḥū", "bāraḥa", "bāriḥū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بارحن",
+      "tur": "verb",
+      "baslik": "بارحن (form III)\n# بَارَحْنَ (bāraḥna) /baː.raħ.na/: third-person feminine plural past active of بَارَحَ (bāraḥa)\n# بَارِحْنَ (bāriḥna) /baː.riħ.na/: second-person feminine plural imperative of بَارَحَ (bāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["bāraḥna", "bāraḥa", "bāriḥna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بورح",
+      "tur": "verb",
+      "baslik": "بُورِحَ • (būriḥa) (form III) /buː.ri.ħa/\n# third-person masculine singular past passive of بَارَحَ (bāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["būriḥa", "bāraḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بورحت",
+      "tur": "verb",
+      "baslik": "بورحت (form III)\n# بُورِحْتُ (būriḥtu) /buː.riħ.tu/: first-person singular past passive of بَارَحَ (bāraḥa)\n# بُورِحْتَ (būriḥta) /buː.riħ.ta/: second-person masculine singular past passive of بَارَحَ (bāraḥa)\n# بُورِحْتِ (būriḥti) /buː.riħ.ti/: second-person feminine singular past passive of بَارَحَ (bāraḥa)\n# بُورِحَتْ (būriḥat) /buː.ri.ħat/: third-person feminine singular past passive of بَارَح",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["būriḥtu", "bāraḥa", "būriḥta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بارحتم",
+      "tur": "verb",
+      "baslik": "بَارَحْتُمْ • (bāraḥtum) (form III) /baː.raħ.tum/\n# second-person masculine plural past active of بَارَحَ (bāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["bāraḥtum", "bāraḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بورحتما",
+      "tur": "verb",
+      "baslik": "بُورِحْتُمَا • (būriḥtumā) (form III) /buː.riħ.tu.maː/\n# second-person dual past passive of بَارَحَ (bāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["būriḥtumā", "bāraḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بورحتا",
+      "tur": "verb",
+      "baslik": "بُورِحَتَا • (būriḥatā) (form III) /buː.ri.ħa.taː/\n# third-person feminine dual past passive of بَارَحَ (bāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["būriḥatā", "bāraḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بورحا",
+      "tur": "verb",
+      "baslik": "بُورِحَا • (būriḥā) (form III) /buː.ri.ħaː/\n# third-person masculine dual past passive of بَارَحَ (bāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["būriḥā", "bāraḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بورحتن",
+      "tur": "verb",
+      "baslik": "بُورِحْتُنَّ • (būriḥtunna) (form III) /buː.riħ.tun.na/\n# second-person feminine plural past passive of بَارَحَ (bāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["būriḥtunna", "bāraḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بورحنا",
+      "tur": "verb",
+      "baslik": "بُورِحْنَا • (būriḥnā) (form III) /buː.riħ.naː/\n# first-person plural past passive of بَارَحَ (bāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["būriḥnā", "bāraḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بورحتم",
+      "tur": "verb",
+      "baslik": "بُورِحْتُمْ • (būriḥtum) (form III) /buː.riħ.tum/\n# second-person masculine plural past passive of بَارَحَ (bāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["būriḥtum", "bāraḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بورحوا",
+      "tur": "verb",
+      "baslik": "بُورِحُوا • (būriḥū) (form III) /buː.ri.ħuː/\n# third-person masculine plural past passive of بَارَحَ (bāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["būriḥū", "bāraḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبارح",
+      "tur": "verb",
+      "baslik": "أبارح (form III)\n# أُبَارِحُ (ʔubāriḥu) /ʔu.baː.ri.ħu/: first-person singular non-past active indicative of بَارَحَ (bāraḥa)\n# أُبَارَحُ (ʔubāraḥu) /ʔu.baː.ra.ħu/: first-person singular non-past passive indicative of بَارَحَ (bāraḥa)\n# أُبَارِحَ (ʔubāriḥa) /ʔu.baː.ri.ħa/: first-person singular non-past active subjunctive of بَارَحَ (bāraḥa)\n# أُبَارَحَ (ʔubāraḥa) /ʔu.baː.ra.ħa/: first-person singu",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔubāriḥu", "bāraḥa", "ʔubāraḥu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بورحن",
+      "tur": "verb",
+      "baslik": "بُورِحْنَ • (būriḥna) (form III) /buː.riħ.na/\n# third-person feminine plural past passive of بَارَحَ (bāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["būriḥna", "bāraḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبارح",
+      "tur": "verb",
+      "baslik": "تبارح (form III)\n# تُبَارِحُ (tubāriḥu) /tu.baː.ri.ħu/: inflection of بَارَحَ (bāraḥa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُبَارَحُ (tubāraḥu) /tu.baː.ra.ħu/: inflection of بَارَحَ (bāraḥa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive in",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tubāriḥu", "bāraḥa", "tubāraḥu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبارحين",
+      "tur": "verb",
+      "baslik": "تبارحين (form III)\n# تُبَارِحِينَ (tubāriḥīna) /tu.baː.ri.ħiː.na/: second-person feminine singular non-past active indicative of بَارَحَ (bāraḥa)\n# تُبَارَحِينَ (tubāraḥīna) /tu.baː.ra.ħiː.na/: second-person feminine singular non-past passive indicative of بَارَحَ (bāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tubāriḥīna", "bāraḥa", "tubāraḥīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبارح",
+      "tur": "verb",
+      "baslik": "يبارح (form III)\n# يُبَارِحُ (yubāriḥu) /ju.baː.ri.ħu/: third-person masculine singular non-past active indicative of بَارَحَ (bāraḥa)\n# يُبَارَحُ (yubāraḥu) /ju.baː.ra.ħu/: third-person masculine singular non-past passive indicative of بَارَحَ (bāraḥa)\n# يُبَارِحَ (yubāriḥa) /ju.baː.ri.ħa/: third-person masculine singular non-past active subjunctive of بَارَحَ (bāraḥa)\n# يُبَارَحَ (yubāraḥa) /ju.",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yubāriḥu", "bāraḥa", "yubāraḥu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبارحان",
+      "tur": "verb",
+      "baslik": "يبارحان (form III)\n# يُبَارِحَانِ (yubāriḥāni) /ju.baː.ri.ħaː.ni/: third-person masculine dual non-past active indicative of بَارَحَ (bāraḥa)\n# يُبَارَحَانِ (yubāraḥāni) /ju.baː.ra.ħaː.ni/: third-person masculine dual non-past passive indicative of بَارَحَ (bāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yubāriḥāni", "bāraḥa", "yubāraḥāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبارحان",
+      "tur": "verb",
+      "baslik": "تبارحان (form III)\n# تُبَارِحَانِ (tubāriḥāni) /tu.baː.ri.ħaː.ni/: inflection of بَارَحَ (bāraḥa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُبَارَحَانِ (tubāraḥāni) /tu.baː.ra.ħaː.ni/: inflection of بَارَحَ (bāraḥa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tubāriḥāni", "bāraḥa", "tubāraḥāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبارحن",
+      "tur": "verb",
+      "baslik": "تبارحن (form III)\n# تُبَارِحْنَ (tubāriḥna) /tu.baː.riħ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of بَارَحَ (bāraḥa)\n# تُبَارَحْنَ (tubāraḥna) /tu.baː.raħ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of بَارَحَ (bāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tubāriḥna", "bāraḥa", "tubāraḥna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبارحون",
+      "tur": "verb",
+      "baslik": "تبارحون (form III)\n# تُبَارِحُونَ (tubāriḥūna) /tu.baː.ri.ħuː.na/: second-person masculine plural non-past active indicative of بَارَحَ (bāraḥa)\n# تُبَارَحُونَ (tubāraḥūna) /tu.baː.ra.ħuː.na/: second-person masculine plural non-past passive indicative of بَارَحَ (bāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tubāriḥūna", "bāraḥa", "tubāraḥūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبارحون",
+      "tur": "verb",
+      "baslik": "يبارحون (form III)\n# يُبَارِحُونَ (yubāriḥūna) /ju.baː.ri.ħuː.na/: third-person masculine plural non-past active indicative of بَارَحَ (bāraḥa)\n# يُبَارَحُونَ (yubāraḥūna) /ju.baː.ra.ħuː.na/: third-person masculine plural non-past passive indicative of بَارَحَ (bāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yubāriḥūna", "bāraḥa", "yubāraḥūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نبارح",
+      "tur": "verb",
+      "baslik": "نبارح (form III)\n# نُبَارِحُ (nubāriḥu) /nu.baː.ri.ħu/: first-person plural non-past active indicative of بَارَحَ (bāraḥa)\n# نُبَارَحُ (nubāraḥu) /nu.baː.ra.ħu/: first-person plural non-past passive indicative of بَارَحَ (bāraḥa)\n# نُبَارِحَ (nubāriḥa) /nu.baː.ri.ħa/: first-person plural non-past active subjunctive of بَارَحَ (bāraḥa)\n# نُبَارَحَ (nubāraḥa) /nu.baː.ra.ħa/: first-person plural non-",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nubāriḥu", "bāraḥa", "nubāraḥu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبارحن",
+      "tur": "verb",
+      "baslik": "يبارحن (form III)\n# يُبَارِحْنَ (yubāriḥna) /ju.baː.riħ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of بَارَحَ (bāraḥa)\n# يُبَارَحْنَ (yubāraḥna) /ju.baː.raħ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of بَارَحَ (bāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yubāriḥna", "bāraḥa", "yubāraḥna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبارحي",
+      "tur": "verb",
+      "baslik": "تبارحي (form III)\n# تُبَارِحِي (tubāriḥī) /tu.baː.ri.ħiː/: second-person feminine singular non-past active subjunctive/jussive of بَارَحَ (bāraḥa)\n# تُبَارَحِي (tubāraḥī) /tu.baː.ra.ħiː/: second-person feminine singular non-past passive subjunctive/jussive of بَارَحَ (bāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tubāriḥī", "bāraḥa", "tubāraḥī"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبارحوا",
+      "tur": "verb",
+      "baslik": "تبارحوا (form III)\n# تُبَارِحُوا (tubāriḥū) /tu.baː.ri.ħuː/: second-person masculine plural non-past active subjunctive/jussive of بَارَحَ (bāraḥa)\n# تُبَارَحُوا (tubāraḥū) /tu.baː.ra.ħuː/: second-person masculine plural non-past passive subjunctive/jussive of بَارَحَ (bāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tubāriḥū", "bāraḥa", "tubāraḥū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبارحا",
+      "tur": "verb",
+      "baslik": "تبارحا (form III)\n# تُبَارِحَا (tubāriḥā) /tu.baː.ri.ħaː/: inflection of بَارَحَ (bāraḥa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُبَارَحَا (tubāraḥā) /tu.baː.ra.ħaː/: inflection of بَارَحَ (bāraḥa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjun",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tubāriḥā", "bāraḥa", "tubāraḥā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبارحوا",
+      "tur": "verb",
+      "baslik": "يبارحوا (form III)\n# يُبَارِحُوا (yubāriḥū) /ju.baː.ri.ħuː/: third-person masculine plural non-past active subjunctive/jussive of بَارَحَ (bāraḥa)\n# يُبَارَحُوا (yubāraḥū) /ju.baː.ra.ħuː/: third-person masculine plural non-past passive subjunctive/jussive of بَارَحَ (bāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yubāriḥū", "bāraḥa", "yubāraḥū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بارحي",
+      "tur": "verb",
+      "baslik": "بَارِحِي • (bāriḥī) (form III) /baː.ri.ħiː/\n# second-person feminine singular imperative of بَارَحَ (bāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["bāriḥī", "bāraḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبارحا",
+      "tur": "verb",
+      "baslik": "يبارحا (form III)\n# يُبَارِحَا (yubāriḥā) /ju.baː.ri.ħaː/: third-person masculine dual non-past active subjunctive/jussive of بَارَحَ (bāraḥa)\n# يُبَارَحَا (yubāraḥā) /ju.baː.ra.ħaː/: third-person masculine dual non-past passive subjunctive/jussive of بَارَحَ (bāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yubāriḥā", "bāraḥa", "yubāraḥā"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "بارح", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

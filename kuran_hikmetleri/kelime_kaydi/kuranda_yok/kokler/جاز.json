@@ -1,713 +1,510 @@
 {
   "kok": "جاز",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "جاز", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "جز",
-        "u": "جز",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "جُزْ • (juz) (form I) /d͡ʒuz/\n# second-person masculine singular imperative of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "s": [
-          ["nonlemma", "See the etymology of the corresponding lemma form."]
-        ],
-        "tag": ["form-i", "no-gloss"],
-        "r": ["juz", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "جوزا",
-        "u": "جوزا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "جُوزَا • (jūzā) (form I) /d͡ʒuː.zaː/\n# second-person dual imperative of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jūzā", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "يجوز",
-        "u": "يجوز",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يجوز (form I)\n# يَجُوزُ (yajūzu) /ja.d͡ʒuː.zu/: third-person masculine singular non-past active indicative of جَازَ (jāza)\n# يَجُوزَ (yajūza) /ja.d͡ʒuː.za/: third-person masculine singular non-past active subjunctive of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajūzu", "jāza", "yajūza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "يجاز",
-        "u": "يجاز",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يجاز (form I)\n# يُجَازُ (yujāzu) /ju.d͡ʒaː.zu/: third-person masculine singular non-past passive indicative of جَازَ (jāza)\n# يُجَازَ (yujāza) /ju.d͡ʒaː.za/: third-person masculine singular non-past passive subjunctive of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yujāzu", "jāza", "yujāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "يجز",
-        "u": "يجز",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يجز (form I)\n# يَجُزْ (yajuz) /ja.d͡ʒuz/: third-person masculine singular non-past active jussive of جَازَ (jāza)\n# يُجَزْ (yujaz) /ju.d͡ʒaz/: third-person masculine singular non-past passive jussive of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajuz", "jāza", "yujaz"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "جيز",
-        "u": "جيز",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جِيزَ • (jīza) (form I) /d͡ʒiː.za/\n# third-person masculine singular past passive of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jīza", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "جازت",
-        "u": "جازت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "جَازَتْ • (jāzat) (form I) /d͡ʒaː.zat/\n# third-person feminine singular past active of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jāzat", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "تجوز",
-        "u": "تجوز",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تجوز (form I)\n# تَجُوزُ (tajūzu) /ta.d͡ʒuː.zu/: inflection of جَازَ (jāza):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَجُوزَ (tajūza) /ta.d͡ʒuː.za/: inflection of جَازَ (jāza):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajūzu", "jāza", "tajūza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "تجز",
-        "u": "تجز",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تجز (form I)\n# تَجُزْ (tajuz) /ta.d͡ʒuz/: inflection of جَازَ (jāza):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُجَزْ (tujaz) /tu.d͡ʒaz/: inflection of جَازَ (jāza):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajuz", "jāza", "tujaz"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "جيزت",
-        "u": "جيزت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جِيزَتْ • (jīzat) (form I) /d͡ʒiː.zat/\n# third-person feminine singular past passive of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jīzat", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "تجاز",
-        "u": "تجاز",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تجاز (form I)\n# تُجَازُ (tujāzu) /tu.d͡ʒaː.zu/: inflection of جَازَ (jāza):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُجَازَ (tujāza) /tu.d͡ʒaː.za/: inflection of جَازَ (jāza):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tujāzu", "jāza", "tujāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "جزت",
-        "u": "جزت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "جزت (form I)\n# جُزْتُ (juztu) /d͡ʒuz.tu/: first-person singular past active of جَازَ (jāza)\n# جُزْتَ (juzta) /d͡ʒuz.ta/: second-person masculine singular past active of جَازَ (jāza)\n# جُزْتِ (juzti) /d͡ʒuz.ti/: second-person feminine singular past active of جَازَ (jāza)\n# جِزْتُ (jiztu) /d͡ʒiz.tu/: first-person singular past passive of جَازَ (jāza)\n# جِزْتَ (jizta) /d͡ʒiz.ta/: second-person mascul",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["juztu", "jāza", "juzta"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "تجوزين",
-        "u": "تجوزين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَجُوزِينَ • (tajūzīna) (form I) /ta.d͡ʒuː.ziː.na/\n# second-person feminine singular non-past active indicative of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajūzīna", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "تجوزي",
-        "u": "تجوزي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَجُوزِي • (tajūzī) (form I) /ta.d͡ʒuː.ziː/\n# second-person feminine singular non-past active subjunctive/jussive of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajūzī", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "جوزي",
-        "u": "جوزي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "جُوزِي • (jūzī) (form I) /d͡ʒuː.ziː/\n# second-person feminine singular imperative of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jūzī", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "تجازين",
-        "u": "تجازين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُجَازِينَ • (tujāzīna) (form I) /tu.d͡ʒaː.ziː.na/\n# second-person feminine singular non-past passive indicative of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tujāzīna", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "تجازي",
-        "u": "تجازي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُجَازِي • (tujāzī) (form I) /tu.d͡ʒaː.ziː/\n# second-person feminine singular non-past passive subjunctive/jussive of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tujāzī", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "أجوز",
-        "u": "أجوز",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أجوز (form I)\n# أَجُوزُ (ʔajūzu) /ʔa.d͡ʒuː.zu/: first-person singular non-past active indicative of جَازَ (jāza)\n# أَجُوزَ (ʔajūza) /ʔa.d͡ʒuː.za/: first-person singular non-past active subjunctive of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔajūzu", "jāza", "ʔajūza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "أجز",
-        "u": "أجز",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أجز (form I)\n# أَجُزْ (ʔajuz) /ʔa.d͡ʒuz/: first-person singular non-past active jussive of جَازَ (jāza)\n# أُجَزْ (ʔujaz) /ʔu.d͡ʒaz/: first-person singular non-past passive jussive of جَازَ (jāza)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔajuz", "jāza", "ʔujaz"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "أجاز",
-        "u": "أجاز",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أجاز (form I)\n# أُجَازُ (ʔujāzu) /ʔu.d͡ʒaː.zu/: first-person singular non-past passive indicative of جَازَ (jāza)\n# أُجَازَ (ʔujāza) /ʔu.d͡ʒaː.za/: first-person singular non-past passive subjunctive of جَازَ (jāza)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔujāzu", "jāza", "ʔujāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "جزنا",
-        "u": "جزنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جزنا (form I)\n# جُزْنَا (juznā) /d͡ʒuz.naː/: first-person plural past active of جَازَ (jāza)\n# جِزْنَا (jiznā) /d͡ʒiz.naː/: first-person plural past passive of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["juznā", "jāza", "jiznā"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "نجوز",
-        "u": "نجوز",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نجوز (form I)\n# نَجُوزُ (najūzu) /na.d͡ʒuː.zu/: first-person plural non-past active indicative of جَازَ (jāza)\n# نَجُوزَ (najūza) /na.d͡ʒuː.za/: first-person plural non-past active subjunctive of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["najūzu", "jāza", "najūza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "نجز",
-        "u": "نجز",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نجز (form I)\n# نَجُزْ (najuz) /na.d͡ʒuz/: first-person plural non-past active jussive of جَازَ (jāza)\n# نُجَزْ (nujaz) /nu.d͡ʒaz/: first-person plural non-past passive jussive of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["najuz", "jāza", "nujaz"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "نجاز",
-        "u": "نجاز",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نجاز (form I)\n# نُجَازُ (nujāzu) /nu.d͡ʒaː.zu/: first-person plural non-past passive indicative of جَازَ (jāza)\n# نُجَازَ (nujāza) /nu.d͡ʒaː.za/: first-person plural non-past passive subjunctive of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nujāzu", "jāza", "nujāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "جزتم",
-        "u": "جزتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جزتم (form I)\n# جُزْتُمْ (juztum) /d͡ʒuz.tum/: second-person masculine plural past active of جَازَ (jāza)\n# جِزْتُمْ (jiztum) /d͡ʒiz.tum/: second-person masculine plural past passive of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["juztum", "jāza", "jiztum"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "تجوزون",
-        "u": "تجوزون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَجُوزُونَ • (tajūzūna) (form I) /ta.d͡ʒuː.zuː.na/\n# second-person masculine plural non-past active indicative of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajūzūna", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "تجوزوا",
-        "u": "تجوزوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَجُوزُوا • (tajūzū) (form I) /ta.d͡ʒuː.zuː/\n# second-person masculine plural non-past active subjunctive/jussive of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajūzū", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "تجازون",
-        "u": "تجازون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُجَازُونَ • (tujāzūna) (form I) /tu.d͡ʒaː.zuː.na/\n# second-person masculine plural non-past passive indicative of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tujāzūna", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "تجازوا",
-        "u": "تجازوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُجَازُوا • (tujāzū) (form I) /tu.d͡ʒaː.zuː/\n# second-person masculine plural non-past passive subjunctive/jussive of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tujāzū", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "جازوا",
-        "u": "جازوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "جَازُوا • (jāzū) (form I) /d͡ʒaː.zuː/\n# third-person masculine plural past active of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jāzū", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "يجوزون",
-        "u": "يجوزون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَجُوزُونَ • (yajūzūna) (form I) /ja.d͡ʒuː.zuː.na/\n# third-person masculine plural non-past active indicative of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajūzūna", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "يجوزوا",
-        "u": "يجوزوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَجُوزُوا • (yajūzū) (form I) /ja.d͡ʒuː.zuː/\n# third-person masculine plural non-past active subjunctive/jussive of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajūzū", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "جيزوا",
-        "u": "جيزوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جِيزُوا • (jīzū) (form I) /d͡ʒiː.zuː/\n# third-person masculine plural past passive of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jīzū", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "يجازون",
-        "u": "يجازون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُجَازُونَ • (yujāzūna) (form I) /ju.d͡ʒaː.zuː.na/\n# third-person masculine plural non-past passive indicative of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yujāzūna", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "يجازوا",
-        "u": "يجازوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُجَازُوا • (yujāzū) (form I) /ju.d͡ʒaː.zuː/\n# third-person masculine plural non-past passive subjunctive/jussive of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yujāzū", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "جوزوا",
-        "u": "جوزوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "جُوزُوا • (jūzū) (form I) /d͡ʒuː.zuː/\n# second-person masculine plural imperative of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jūzū", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "جزتن",
-        "u": "جزتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جزتن (form I)\n# جُزْتُنَّ (juztunna) /d͡ʒuz.tun.na/: second-person feminine plural past active of جَازَ (jāza)\n# جِزْتُنَّ (jiztunna) /d͡ʒiz.tun.na/: second-person feminine plural past passive of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["juztunna", "jāza", "jiztunna"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "تجزن",
-        "u": "تجزن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تجزن (form I)\n# تَجُزْنَ (tajuzna) /ta.d͡ʒuz.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of جَازَ (jāza)\n# تُجَزْنَ (tujazna) /tu.d͡ʒaz.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajuzna", "jāza", "tujazna"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "جزن",
-        "u": "جزن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "جزن (form I)\n# جُزْنَ (juzna) /d͡ʒuz.na/: inflection of جَازَ (jāza):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# جِزْنَ (jizna) /d͡ʒiz.na/: third-person feminine plural past passive of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["juzna", "jāza", "jizna"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "يجزن",
-        "u": "يجزن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يجزن (form I)\n# يَجُزْنَ (yajuzna) /ja.d͡ʒuz.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of جَازَ (jāza)\n# يُجَزْنَ (yujazna) /ju.d͡ʒaz.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajuzna", "jāza", "yujazna"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "جازا",
-        "u": "جازا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جَازَا • (jāzā) (form I) /d͡ʒaː.zaː/\n# third-person masculine dual past active of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jāzā", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "تجازان",
-        "u": "تجازان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُجَازَانِ • (tujāzāni) (form I) /tu.d͡ʒaː.zaː.ni/\n# inflection of جَازَ (jāza):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tujāzāni", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "يجازان",
-        "u": "يجازان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُجَازَانِ • (yujāzāni) (form I) /ju.d͡ʒaː.zaː.ni/\n# third-person masculine dual non-past passive indicative of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yujāzāni", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "تجازا",
-        "u": "تجازا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُجَازَا • (tujāzā) (form I) /tu.d͡ʒaː.zaː/\n# inflection of جَازَ (jāza):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tujāzā", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "يجازا",
-        "u": "يجازا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُجَازَا • (yujāzā) (form I) /ju.d͡ʒaː.zaː/\n# third-person masculine dual non-past passive subjunctive/jussive of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yujāzā", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "جزتما",
-        "u": "جزتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جزتما (form I)\n# جُزْتُمَا (juztumā) /d͡ʒuz.tu.maː/: second-person dual past active of جَازَ (jāza)\n# جِزْتُمَا (jiztumā) /d͡ʒiz.tu.maː/: second-person dual past passive of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["juztumā", "jāza", "jiztumā"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "جازتا",
-        "u": "جازتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "جَازَتَا • (jāzatā) (form I) /d͡ʒaː.za.taː/\n# third-person feminine dual past active of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jāzatā", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "جيزا",
-        "u": "جيزا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جِيزَا • (jīzā) (form I) /d͡ʒiː.zaː/\n# third-person masculine dual past passive of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jīzā", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "تجوزان",
-        "u": "تجوزان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَجُوزَانِ • (tajūzāni) (form I) /ta.d͡ʒuː.zaː.ni/\n# inflection of جَازَ (jāza):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajūzāni", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "جيزتا",
-        "u": "جيزتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جِيزَتَا • (jīzatā) (form I) /d͡ʒiː.za.taː/\n# third-person feminine dual past passive of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jīzatā", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "يجوزا",
-        "u": "يجوزا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَجُوزَا • (yajūzā) (form I) /ja.d͡ʒuː.zaː/\n# third-person masculine dual non-past active subjunctive/jussive of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajūzā", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "يجوزان",
-        "u": "يجوزان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَجُوزَانِ • (yajūzāni) (form I) /ja.d͡ʒuː.zaː.ni/\n# third-person masculine dual non-past active indicative of جَازَ (jāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajūzāni", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      },
-      {
-        "w": "تجوزا",
-        "u": "تجوزا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَجُوزَا • (tajūzā) (form I) /ta.d͡ʒuː.zaː/\n# inflection of جَازَ (jāza):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajūzā", "jāza"],
-        "k": "جاز",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "جز",
+  "ses": {
     "harf": "ج",
+    "fasil": "جز",
     "mahrec": "şeceriyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "جز",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "جُزْ • (juz) (form I) /d͡ʒuz/\n# second-person masculine singular imperative of جَازَ (jāza)",
+      "etim_sablon": [
+        ["nonlemma", "See the etymology of the corresponding lemma form."]
+      ],
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["juz", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جوزا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "جُوزَا • (jūzā) (form I) /d͡ʒuː.zaː/\n# second-person dual imperative of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jūzā", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجوز",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يجوز (form I)\n# يَجُوزُ (yajūzu) /ja.d͡ʒuː.zu/: third-person masculine singular non-past active indicative of جَازَ (jāza)\n# يَجُوزَ (yajūza) /ja.d͡ʒuː.za/: third-person masculine singular non-past active subjunctive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajūzu", "jāza", "yajūza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجاز",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يجاز (form I)\n# يُجَازُ (yujāzu) /ju.d͡ʒaː.zu/: third-person masculine singular non-past passive indicative of جَازَ (jāza)\n# يُجَازَ (yujāza) /ju.d͡ʒaː.za/: third-person masculine singular non-past passive subjunctive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yujāzu", "jāza", "yujāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجز",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يجز (form I)\n# يَجُزْ (yajuz) /ja.d͡ʒuz/: third-person masculine singular non-past active jussive of جَازَ (jāza)\n# يُجَزْ (yujaz) /ju.d͡ʒaz/: third-person masculine singular non-past passive jussive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajuz", "jāza", "yujaz"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جيز",
+      "tur": "verb",
+      "baslik": "جِيزَ • (jīza) (form I) /d͡ʒiː.za/\n# third-person masculine singular past passive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jīza", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جازت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "جَازَتْ • (jāzat) (form I) /d͡ʒaː.zat/\n# third-person feminine singular past active of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jāzat", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجوز",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تجوز (form I)\n# تَجُوزُ (tajūzu) /ta.d͡ʒuː.zu/: inflection of جَازَ (jāza):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَجُوزَ (tajūza) /ta.d͡ʒuː.za/: inflection of جَازَ (jāza):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajūzu", "jāza", "tajūza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجز",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تجز (form I)\n# تَجُزْ (tajuz) /ta.d͡ʒuz/: inflection of جَازَ (jāza):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُجَزْ (tujaz) /tu.d͡ʒaz/: inflection of جَازَ (jāza):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajuz", "jāza", "tujaz"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جيزت",
+      "tur": "verb",
+      "baslik": "جِيزَتْ • (jīzat) (form I) /d͡ʒiː.zat/\n# third-person feminine singular past passive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jīzat", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجاز",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تجاز (form I)\n# تُجَازُ (tujāzu) /tu.d͡ʒaː.zu/: inflection of جَازَ (jāza):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُجَازَ (tujāza) /tu.d͡ʒaː.za/: inflection of جَازَ (jāza):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tujāzu", "jāza", "tujāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جزت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "جزت (form I)\n# جُزْتُ (juztu) /d͡ʒuz.tu/: first-person singular past active of جَازَ (jāza)\n# جُزْتَ (juzta) /d͡ʒuz.ta/: second-person masculine singular past active of جَازَ (jāza)\n# جُزْتِ (juzti) /d͡ʒuz.ti/: second-person feminine singular past active of جَازَ (jāza)\n# جِزْتُ (jiztu) /d͡ʒiz.tu/: first-person singular past passive of جَازَ (jāza)\n# جِزْتَ (jizta) /d͡ʒiz.ta/: second-person mascul",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["juztu", "jāza", "juzta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجوزين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَجُوزِينَ • (tajūzīna) (form I) /ta.d͡ʒuː.ziː.na/\n# second-person feminine singular non-past active indicative of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajūzīna", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجوزي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَجُوزِي • (tajūzī) (form I) /ta.d͡ʒuː.ziː/\n# second-person feminine singular non-past active subjunctive/jussive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajūzī", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جوزي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "جُوزِي • (jūzī) (form I) /d͡ʒuː.ziː/\n# second-person feminine singular imperative of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jūzī", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجازين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُجَازِينَ • (tujāzīna) (form I) /tu.d͡ʒaː.ziː.na/\n# second-person feminine singular non-past passive indicative of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tujāzīna", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجازي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُجَازِي • (tujāzī) (form I) /tu.d͡ʒaː.ziː/\n# second-person feminine singular non-past passive subjunctive/jussive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tujāzī", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجوز",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أجوز (form I)\n# أَجُوزُ (ʔajūzu) /ʔa.d͡ʒuː.zu/: first-person singular non-past active indicative of جَازَ (jāza)\n# أَجُوزَ (ʔajūza) /ʔa.d͡ʒuː.za/: first-person singular non-past active subjunctive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔajūzu", "jāza", "ʔajūza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجز",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أجز (form I)\n# أَجُزْ (ʔajuz) /ʔa.d͡ʒuz/: first-person singular non-past active jussive of جَازَ (jāza)\n# أُجَزْ (ʔujaz) /ʔu.d͡ʒaz/: first-person singular non-past passive jussive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔajuz", "jāza", "ʔujaz"]
+    },
+    {
+      "madde": "أجاز",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أجاز (form I)\n# أُجَازُ (ʔujāzu) /ʔu.d͡ʒaː.zu/: first-person singular non-past passive indicative of جَازَ (jāza)\n# أُجَازَ (ʔujāza) /ʔu.d͡ʒaː.za/: first-person singular non-past passive subjunctive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔujāzu", "jāza", "ʔujāza"]
+    },
+    {
+      "madde": "جزنا",
+      "tur": "verb",
+      "baslik": "جزنا (form I)\n# جُزْنَا (juznā) /d͡ʒuz.naː/: first-person plural past active of جَازَ (jāza)\n# جِزْنَا (jiznā) /d͡ʒiz.naː/: first-person plural past passive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["juznā", "jāza", "jiznā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نجوز",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نجوز (form I)\n# نَجُوزُ (najūzu) /na.d͡ʒuː.zu/: first-person plural non-past active indicative of جَازَ (jāza)\n# نَجُوزَ (najūza) /na.d͡ʒuː.za/: first-person plural non-past active subjunctive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["najūzu", "jāza", "najūza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نجز",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نجز (form I)\n# نَجُزْ (najuz) /na.d͡ʒuz/: first-person plural non-past active jussive of جَازَ (jāza)\n# نُجَزْ (nujaz) /nu.d͡ʒaz/: first-person plural non-past passive jussive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["najuz", "jāza", "nujaz"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نجاز",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نجاز (form I)\n# نُجَازُ (nujāzu) /nu.d͡ʒaː.zu/: first-person plural non-past passive indicative of جَازَ (jāza)\n# نُجَازَ (nujāza) /nu.d͡ʒaː.za/: first-person plural non-past passive subjunctive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nujāzu", "jāza", "nujāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جزتم",
+      "tur": "verb",
+      "baslik": "جزتم (form I)\n# جُزْتُمْ (juztum) /d͡ʒuz.tum/: second-person masculine plural past active of جَازَ (jāza)\n# جِزْتُمْ (jiztum) /d͡ʒiz.tum/: second-person masculine plural past passive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["juztum", "jāza", "jiztum"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجوزون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَجُوزُونَ • (tajūzūna) (form I) /ta.d͡ʒuː.zuː.na/\n# second-person masculine plural non-past active indicative of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajūzūna", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجوزوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَجُوزُوا • (tajūzū) (form I) /ta.d͡ʒuː.zuː/\n# second-person masculine plural non-past active subjunctive/jussive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajūzū", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجازون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُجَازُونَ • (tujāzūna) (form I) /tu.d͡ʒaː.zuː.na/\n# second-person masculine plural non-past passive indicative of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tujāzūna", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجازوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُجَازُوا • (tujāzū) (form I) /tu.d͡ʒaː.zuː/\n# second-person masculine plural non-past passive subjunctive/jussive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tujāzū", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جازوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "جَازُوا • (jāzū) (form I) /d͡ʒaː.zuː/\n# third-person masculine plural past active of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jāzū", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجوزون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَجُوزُونَ • (yajūzūna) (form I) /ja.d͡ʒuː.zuː.na/\n# third-person masculine plural non-past active indicative of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajūzūna", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجوزوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَجُوزُوا • (yajūzū) (form I) /ja.d͡ʒuː.zuː/\n# third-person masculine plural non-past active subjunctive/jussive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajūzū", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جيزوا",
+      "tur": "verb",
+      "baslik": "جِيزُوا • (jīzū) (form I) /d͡ʒiː.zuː/\n# third-person masculine plural past passive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jīzū", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجازون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُجَازُونَ • (yujāzūna) (form I) /ju.d͡ʒaː.zuː.na/\n# third-person masculine plural non-past passive indicative of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yujāzūna", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجازوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُجَازُوا • (yujāzū) (form I) /ju.d͡ʒaː.zuː/\n# third-person masculine plural non-past passive subjunctive/jussive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yujāzū", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جوزوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "جُوزُوا • (jūzū) (form I) /d͡ʒuː.zuː/\n# second-person masculine plural imperative of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jūzū", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جزتن",
+      "tur": "verb",
+      "baslik": "جزتن (form I)\n# جُزْتُنَّ (juztunna) /d͡ʒuz.tun.na/: second-person feminine plural past active of جَازَ (jāza)\n# جِزْتُنَّ (jiztunna) /d͡ʒiz.tun.na/: second-person feminine plural past passive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["juztunna", "jāza", "jiztunna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجزن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تجزن (form I)\n# تَجُزْنَ (tajuzna) /ta.d͡ʒuz.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of جَازَ (jāza)\n# تُجَزْنَ (tujazna) /tu.d͡ʒaz.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajuzna", "jāza", "tujazna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جزن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "جزن (form I)\n# جُزْنَ (juzna) /d͡ʒuz.na/: inflection of جَازَ (jāza):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# جِزْنَ (jizna) /d͡ʒiz.na/: third-person feminine plural past passive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["juzna", "jāza", "jizna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجزن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يجزن (form I)\n# يَجُزْنَ (yajuzna) /ja.d͡ʒuz.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of جَازَ (jāza)\n# يُجَزْنَ (yujazna) /ju.d͡ʒaz.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajuzna", "jāza", "yujazna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جازا",
+      "tur": "verb",
+      "baslik": "جَازَا • (jāzā) (form I) /d͡ʒaː.zaː/\n# third-person masculine dual past active of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jāzā", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجازان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُجَازَانِ • (tujāzāni) (form I) /tu.d͡ʒaː.zaː.ni/\n# inflection of جَازَ (jāza):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tujāzāni", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجازان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُجَازَانِ • (yujāzāni) (form I) /ju.d͡ʒaː.zaː.ni/\n# third-person masculine dual non-past passive indicative of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yujāzāni", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجازا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُجَازَا • (tujāzā) (form I) /tu.d͡ʒaː.zaː/\n# inflection of جَازَ (jāza):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tujāzā", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجازا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُجَازَا • (yujāzā) (form I) /ju.d͡ʒaː.zaː/\n# third-person masculine dual non-past passive subjunctive/jussive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yujāzā", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جزتما",
+      "tur": "verb",
+      "baslik": "جزتما (form I)\n# جُزْتُمَا (juztumā) /d͡ʒuz.tu.maː/: second-person dual past active of جَازَ (jāza)\n# جِزْتُمَا (jiztumā) /d͡ʒiz.tu.maː/: second-person dual past passive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["juztumā", "jāza", "jiztumā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جازتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "جَازَتَا • (jāzatā) (form I) /d͡ʒaː.za.taː/\n# third-person feminine dual past active of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jāzatā", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جيزا",
+      "tur": "verb",
+      "baslik": "جِيزَا • (jīzā) (form I) /d͡ʒiː.zaː/\n# third-person masculine dual past passive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jīzā", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجوزان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَجُوزَانِ • (tajūzāni) (form I) /ta.d͡ʒuː.zaː.ni/\n# inflection of جَازَ (jāza):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajūzāni", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جيزتا",
+      "tur": "verb",
+      "baslik": "جِيزَتَا • (jīzatā) (form I) /d͡ʒiː.za.taː/\n# third-person feminine dual past passive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jīzatā", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجوزا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَجُوزَا • (yajūzā) (form I) /ja.d͡ʒuː.zaː/\n# third-person masculine dual non-past active subjunctive/jussive of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajūzā", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجوزان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَجُوزَانِ • (yajūzāni) (form I) /ja.d͡ʒuː.zaː.ni/\n# third-person masculine dual non-past active indicative of جَازَ (jāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajūzāni", "jāza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجوزا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَجُوزَا • (tajūzā) (form I) /ta.d͡ʒuː.zaː/\n# inflection of جَازَ (jāza):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajūzā", "jāza"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "جاز", "r7"]
+  ],
+  "mana": {
     "ince": "permit.v.01",
     "orta": "verb.communication",
     "ust": "söz ve haber",
@@ -715,16 +512,11 @@
     "dayanak_tanim": "consent to, give permission",
     "synset_sayisi": 35
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "achieve.v.01",
     "act.v.02",
     "advance.v.12",
@@ -758,12 +550,10 @@
     "unclutter.v.01",
     "victimize.v.01"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

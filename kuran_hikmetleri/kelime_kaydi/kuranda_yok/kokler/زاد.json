@@ -1,824 +1,581 @@
 {
   "kok": "زاد",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "زاد", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "زدن",
-        "u": "زدن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زدن (form I)\n# زِدْنَ (zidna) /zid.na/: inflection of زَادَ (zāda):\n## third-person feminine plural past active/passive\n## second-person feminine plural imperative\n# زُدْنَ (zudna) /zud.na/: inflection of زَادَ (zāda):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zidna", "zāda", "zudna"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "نزد",
-        "u": "نزد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نزد (form I)\n# نَزِدْ (nazid) /na.zid/: first-person plural non-past active jussive of زَادَ (zāda)\n# نُزَدْ (nuzad) /nu.zad/: first-person plural non-past passive jussive of زَادَ (zāda)\n# نَزُدْ (nazud) /na.zud/: first-person plural non-past active jussive of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nazid", "zāda", "nuzad"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "زيد",
-        "u": "زيد",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "زِيدَ • (zīda) (form I) /ziː.da/\n# third-person masculine singular past passive of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zīda", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "يزيد",
-        "u": "يزيد",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يزيد (form I)\n# يَزِيدُ (yazīdu) /ja.ziː.du/: third-person masculine singular non-past active indicative of زَادَ (zāda)\n# يَزِيدَ (yazīda) /ja.ziː.da/: third-person masculine singular non-past active subjunctive of زَادَ (zāda)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazīdu", "zāda", "yazīda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "يزاد",
-        "u": "يزاد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يزاد (form I)\n# يُزَادُ (yuzādu) /ju.zaː.du/: third-person masculine singular non-past passive indicative of زَادَ (zāda)\n# يُزَادَ (yuzāda) /ju.zaː.da/: third-person masculine singular non-past passive subjunctive of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuzādu", "zāda", "yuzāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "أزيد",
-        "u": "أزيد",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أزيد (form I)\n# أَزِيدُ (ʔazīdu) /ʔa.ziː.du/: first-person singular non-past active indicative of زَادَ (zāda)\n# أَزِيدَ (ʔazīda) /ʔa.ziː.da/: first-person singular non-past active subjunctive of زَادَ (zāda)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔazīdu", "zāda", "ʔazīda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "يزدن",
-        "u": "يزدن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يزدن (form I)\n# يَزِدْنَ (yazidna) /ja.zid.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of زَادَ (zāda)\n# يُزَدْنَ (yuzadna) /ju.zad.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of زَادَ (zāda)\n# يَزُدْنَ (yazudna) /ja.zud.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazidna", "zāda", "yuzadna"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "يزد",
-        "u": "يزد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يزد (form I)\n# يَزِدْ (yazid) /ja.zid/: third-person masculine singular non-past active jussive of زَادَ (zāda)\n# يُزَدْ (yuzad) /ju.zad/: third-person masculine singular non-past passive jussive of زَادَ (zāda)\n# يَزُدْ (yazud) /ja.zud/: third-person masculine singular non-past active jussive of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazid", "zāda", "yuzad"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تزدن",
-        "u": "تزدن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تزدن (form I)\n# تَزِدْنَ (tazidna) /ta.zid.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of زَادَ (zāda)\n# تُزَدْنَ (tuzadna) /tu.zad.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of زَادَ (zāda)\n# تَزُدْنَ (tazudna) /ta.zud.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazidna", "zāda", "tuzadna"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "زادت",
-        "u": "زادت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زَادَتْ • (zādat) (form I) /zaː.dat/\n# third-person feminine singular past active of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zādat", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تزيد",
-        "u": "تزيد",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تزيد (form I)\n# تَزِيدُ (tazīdu) /ta.ziː.du/: inflection of زَادَ (zāda):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَزِيدَ (tazīda) /ta.ziː.da/: inflection of زَادَ (zāda):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazīdu", "zāda", "tazīda"],
-        "ipa": ["/ta.zaj.ja.da/"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تزد",
-        "u": "تزد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تزد (form I)\n# تَزِدْ (tazid) /ta.zid/: inflection of زَادَ (zāda):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُزَدْ (tuzad) /tu.zad/: inflection of زَادَ (zāda):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive\n# تَزُدْ (tazud) /ta.zud/: inflection o",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazid", "zāda", "tuzad"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "زيدت",
-        "u": "زيدت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زِيدَتْ • (zīdat) (form I) /ziː.dat/\n# third-person feminine singular past passive of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zīdat", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تزاد",
-        "u": "تزاد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تزاد (form I)\n# تُزَادُ (tuzādu) /tu.zaː.du/: inflection of زَادَ (zāda):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُزَادَ (tuzāda) /tu.zaː.da/: inflection of زَادَ (zāda):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzādu", "zāda", "tuzāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "زدت",
-        "u": "زدت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زدت (form I)\n# زِدْتُ (zidtu) /zid.tu/: first-person singular past active/passive of زَادَ (zāda)\n# زِدْتَ (zidta) /zid.ta/: second-person masculine singular past active/passive of زَادَ (zāda)\n# زِدْتِ (zidti) /zid.ti/: second-person feminine singular past active/passive of زَادَ (zāda)\n# زُدْتُ (zudtu) /zud.tu/: first-person singular past active of زَادَ (zāda)\n# زُدْتَ (zudta) /zud.ta/: second-",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zidtu", "zāda", "zidta"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "زد",
-        "u": "زد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زد (form I)\n# زِدْ (zid) /zid/: second-person masculine singular imperative of زَادَ (zāda)\n# زُدْ (zud) /zud/: second-person masculine singular imperative of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zid", "zāda", "zud"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تزيدين",
-        "u": "تزيدين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَزِيدِينَ • (tazīdīna) (form I) /ta.ziː.diː.na/\n# second-person feminine singular non-past active indicative of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazīdīna", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تزيدي",
-        "u": "تزيدي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَزِيدِي • (tazīdī) (form I) /ta.ziː.diː/\n# second-person feminine singular non-past active subjunctive/jussive of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazīdī", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "زيدي",
-        "u": "زيدي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "زِيدِي • (zīdī) (form I) /ziː.diː/\n# second-person feminine singular imperative of زَادَ (zāda)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zīdī", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تزادين",
-        "u": "تزادين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزَادِينَ • (tuzādīna) (form I) /tu.zaː.diː.na/\n# second-person feminine singular non-past passive indicative of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzādīna", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تزادي",
-        "u": "تزادي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزَادِي • (tuzādī) (form I) /tu.zaː.diː/\n# second-person feminine singular non-past passive subjunctive/jussive of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzādī", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "أزد",
-        "u": "أزد",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أزد (form I)\n# أَزِدْ (ʔazid) /ʔa.zid/: first-person singular non-past active jussive of زَادَ (zāda)\n# أُزَدْ (ʔuzad) /ʔu.zad/: first-person singular non-past passive jussive of زَادَ (zāda)\n# أَزُدْ (ʔazud) /ʔa.zud/: first-person singular non-past active jussive of زَادَ (zāda)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔazid", "zāda", "ʔuzad"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "أزاد",
-        "u": "أزاد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أزاد (form I)\n# أُزَادُ (ʔuzādu) /ʔu.zaː.du/: first-person singular non-past passive indicative of زَادَ (zāda)\n# أُزَادَ (ʔuzāda) /ʔu.zaː.da/: first-person singular non-past passive subjunctive of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔuzādu", "zāda", "ʔuzāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "زدنا",
-        "u": "زدنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زدنا (form I)\n# زِدْنَا (zidnā) /zid.naː/: first-person plural past active/passive of زَادَ (zāda)\n# زُدْنَا (zudnā) /zud.naː/: first-person plural past active of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zidnā", "zāda", "zudnā"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "نزيد",
-        "u": "نزيد",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نزيد (form I)\n# نَزِيدُ (nazīdu) /na.ziː.du/: first-person plural non-past active indicative of زَادَ (zāda)\n# نَزِيدَ (nazīda) /na.ziː.da/: first-person plural non-past active subjunctive of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nazīdu", "zāda", "nazīda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "نزاد",
-        "u": "نزاد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نزاد (form I)\n# نُزَادُ (nuzādu) /nu.zaː.du/: first-person plural non-past passive indicative of زَادَ (zāda)\n# نُزَادَ (nuzāda) /nu.zaː.da/: first-person plural non-past passive subjunctive of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuzādu", "zāda", "nuzāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "زدتم",
-        "u": "زدتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زدتم (form I)\n# زِدْتُمْ (zidtum) /zid.tum/: second-person masculine plural past active/passive of زَادَ (zāda)\n# زُدْتُمْ (zudtum) /zud.tum/: second-person masculine plural past active of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zidtum", "zāda", "zudtum"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تزيدون",
-        "u": "تزيدون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَزِيدُونَ • (tazīdūna) (form I) /ta.ziː.duː.na/\n# second-person masculine plural non-past active indicative of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazīdūna", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تزيدوا",
-        "u": "تزيدوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَزِيدُوا • (tazīdū) (form I) /ta.ziː.duː/\n# second-person masculine plural non-past active subjunctive/jussive of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazīdū", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تزادون",
-        "u": "تزادون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزَادُونَ • (tuzādūna) (form I) /tu.zaː.duː.na/\n# second-person masculine plural non-past passive indicative of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzādūna", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تزادوا",
-        "u": "تزادوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزَادُوا • (tuzādū) (form I) /tu.zaː.duː/\n# second-person masculine plural non-past passive subjunctive/jussive of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzādū", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "زادوا",
-        "u": "زادوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زَادُوا • (zādū) (form I) /zaː.duː/\n# third-person masculine plural past active of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zādū", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "يزيدون",
-        "u": "يزيدون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَزِيدُونَ • (yazīdūna) (form I) /ja.ziː.duː.na/\n# third-person masculine plural non-past active indicative of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazīdūna", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "يزيدوا",
-        "u": "يزيدوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَزِيدُوا • (yazīdū) (form I) /ja.ziː.duː/\n# third-person masculine plural non-past active subjunctive/jussive of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazīdū", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "زيدوا",
-        "u": "زيدوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زِيدُوا • (zīdū) (form I) /ziː.duː/\n# inflection of زَادَ (zāda):\n## third-person masculine plural past passive\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zīdū", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "يزادون",
-        "u": "يزادون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُزَادُونَ • (yuzādūna) (form I) /ju.zaː.duː.na/\n# third-person masculine plural non-past passive indicative of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuzādūna", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "يزادوا",
-        "u": "يزادوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُزَادُوا • (yuzādū) (form I) /ju.zaː.duː/\n# third-person masculine plural non-past passive subjunctive/jussive of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuzādū", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "زدتن",
-        "u": "زدتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زدتن (form I)\n# زِدْتُنَّ (zidtunna) /zid.tun.na/: second-person feminine plural past active/passive of زَادَ (zāda)\n# زُدْتُنَّ (zudtunna) /zud.tun.na/: second-person feminine plural past active of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zidtunna", "zāda", "zudtunna"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تزيدا",
-        "u": "تزيدا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَزِيدَا • (tazīdā) (form I) /ta.ziː.daː/\n# inflection of زَادَ (zāda):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazīdā", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "زدتما",
-        "u": "زدتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زدتما (form I)\n# زِدْتُمَا (zidtumā) /zid.tu.maː/: second-person dual past active/passive of زَادَ (zāda)\n# زُدْتُمَا (zudtumā) /zud.tu.maː/: second-person dual past active of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zidtumā", "zāda", "zudtumā"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "زادا",
-        "u": "زادا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زَادَا • (zādā) (form I) /zaː.daː/\n# third-person masculine dual past active of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zādā", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "زادتا",
-        "u": "زادتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زَادَتَا • (zādatā) (form I) /zaː.da.taː/\n# third-person feminine dual past active of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zādatā", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "يزيدان",
-        "u": "يزيدان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَزِيدَانِ • (yazīdāni) (form I) /ja.ziː.daː.ni/\n# third-person masculine dual non-past active indicative of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazīdāni", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تزيدان",
-        "u": "تزيدان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَزِيدَانِ • (tazīdāni) (form I) /ta.ziː.daː.ni/\n# inflection of زَادَ (zāda):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazīdāni", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تزودين",
-        "u": "تزودين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَزُودِينَ • (tazūdīna) (form I) /ta.zuː.diː.na/\n# second-person feminine singular non-past active indicative of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazūdīna", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "زيدا",
-        "u": "زيدا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زِيدَا • (zīdā) (form I) /ziː.daː/\n# inflection of زَادَ (zāda):\n## third-person masculine dual past passive\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zīdā", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "أزود",
-        "u": "أزود",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أزود (form I)\n# أَزُودُ (ʔazūdu) /ʔa.zuː.du/: first-person singular non-past active indicative of زَادَ (zāda)\n# أَزُودَ (ʔazūda) /ʔa.zuː.da/: first-person singular non-past active subjunctive of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔazūdu", "zāda", "ʔazūda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تزود",
-        "u": "تزود",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تزود (form I)\n# تَزُودُ (tazūdu) /ta.zuː.du/: inflection of زَادَ (zāda):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَزُودَ (tazūda) /ta.zuː.da/: inflection of زَادَ (zāda):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazūdu", "zāda", "tazūda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "يزيدا",
-        "u": "يزيدا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَزِيدَا • (yazīdā) (form I) /ja.ziː.daː/\n# third-person masculine dual non-past active subjunctive/jussive of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazīdā", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "يزود",
-        "u": "يزود",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يزود (form I)\n# يَزُودُ (yazūdu) /ja.zuː.du/: third-person masculine singular non-past active indicative of زَادَ (zāda)\n# يَزُودَ (yazūda) /ja.zuː.da/: third-person masculine singular non-past active subjunctive of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazūdu", "zāda", "yazūda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "يزودان",
-        "u": "يزودان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَزُودَانِ • (yazūdāni) (form I) /ja.zuː.daː.ni/\n# third-person masculine dual non-past active indicative of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazūdāni", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تزودان",
-        "u": "تزودان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَزُودَانِ • (tazūdāni) (form I) /ta.zuː.daː.ni/\n# inflection of زَادَ (zāda):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazūdāni", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تزودون",
-        "u": "تزودون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَزُودُونَ • (tazūdūna) (form I) /ta.zuː.duː.na/\n# second-person masculine plural non-past active indicative of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazūdūna", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "يزودون",
-        "u": "يزودون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَزُودُونَ • (yazūdūna) (form I) /ja.zuː.duː.na/\n# third-person masculine plural non-past active indicative of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazūdūna", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "نزود",
-        "u": "نزود",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نزود (form I)\n# نَزُودُ (nazūdu) /na.zuː.du/: first-person plural non-past active indicative of زَادَ (zāda)\n# نَزُودَ (nazūda) /na.zuː.da/: first-person plural non-past active subjunctive of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nazūdu", "zāda", "nazūda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تزودي",
-        "u": "تزودي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَزُودِي • (tazūdī) (form I) /ta.zuː.diː/\n# second-person feminine singular non-past active subjunctive/jussive of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazūdī", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تزودا",
-        "u": "تزودا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَزُودَا • (tazūdā) (form I) /ta.zuː.daː/\n# inflection of زَادَ (zāda):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazūdā", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "تزودوا",
-        "u": "تزودوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَزُودُوا • (tazūdū) (form I) /ta.zuː.duː/\n# second-person masculine plural non-past active subjunctive/jussive of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazūdū", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "يزودوا",
-        "u": "يزودوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَزُودُوا • (yazūdū) (form I) /ja.zuː.duː/\n# third-person masculine plural non-past active subjunctive/jussive of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazūdū", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "يزودا",
-        "u": "يزودا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَزُودَا • (yazūdā) (form I) /ja.zuː.daː/\n# third-person masculine dual non-past active subjunctive/jussive of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazūdā", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "زودي",
-        "u": "زودي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زُودِي • (zūdī) (form I) /zuː.diː/\n# second-person feminine singular imperative of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zūdī", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "زودا",
-        "u": "زودا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زُودَا • (zūdā) (form I) /zuː.daː/\n# second-person dual imperative of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zūdā", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      },
-      {
-        "w": "زودوا",
-        "u": "زودوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زُودُوا • (zūdū) (form I) /zuː.duː/\n# second-person masculine plural imperative of زَادَ (zāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zūdū", "zāda"],
-        "k": "زاد",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "زد",
+  "ses": {
     "harf": "ز",
+    "fasil": "زد",
     "mahrec": "esaliyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "زدن",
+      "tur": "verb",
+      "baslik": "زدن (form I)\n# زِدْنَ (zidna) /zid.na/: inflection of زَادَ (zāda):\n## third-person feminine plural past active/passive\n## second-person feminine plural imperative\n# زُدْنَ (zudna) /zud.na/: inflection of زَادَ (zāda):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zidna", "zāda", "zudna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نزد",
+      "tur": "verb",
+      "baslik": "نزد (form I)\n# نَزِدْ (nazid) /na.zid/: first-person plural non-past active jussive of زَادَ (zāda)\n# نُزَدْ (nuzad) /nu.zad/: first-person plural non-past passive jussive of زَادَ (zāda)\n# نَزُدْ (nazud) /na.zud/: first-person plural non-past active jussive of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nazid", "zāda", "nuzad"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زيد",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "زِيدَ • (zīda) (form I) /ziː.da/\n# third-person masculine singular past passive of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zīda", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزيد",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يزيد (form I)\n# يَزِيدُ (yazīdu) /ja.ziː.du/: third-person masculine singular non-past active indicative of زَادَ (zāda)\n# يَزِيدَ (yazīda) /ja.ziː.da/: third-person masculine singular non-past active subjunctive of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazīdu", "zāda", "yazīda"]
+    },
+    {
+      "madde": "يزاد",
+      "tur": "verb",
+      "baslik": "يزاد (form I)\n# يُزَادُ (yuzādu) /ju.zaː.du/: third-person masculine singular non-past passive indicative of زَادَ (zāda)\n# يُزَادَ (yuzāda) /ju.zaː.da/: third-person masculine singular non-past passive subjunctive of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuzādu", "zāda", "yuzāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أزيد",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أزيد (form I)\n# أَزِيدُ (ʔazīdu) /ʔa.ziː.du/: first-person singular non-past active indicative of زَادَ (zāda)\n# أَزِيدَ (ʔazīda) /ʔa.ziː.da/: first-person singular non-past active subjunctive of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔazīdu", "zāda", "ʔazīda"]
+    },
+    {
+      "madde": "يزدن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يزدن (form I)\n# يَزِدْنَ (yazidna) /ja.zid.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of زَادَ (zāda)\n# يُزَدْنَ (yuzadna) /ju.zad.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of زَادَ (zāda)\n# يَزُدْنَ (yazudna) /ja.zud.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazidna", "zāda", "yuzadna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزد",
+      "tur": "verb",
+      "baslik": "يزد (form I)\n# يَزِدْ (yazid) /ja.zid/: third-person masculine singular non-past active jussive of زَادَ (zāda)\n# يُزَدْ (yuzad) /ju.zad/: third-person masculine singular non-past passive jussive of زَادَ (zāda)\n# يَزُدْ (yazud) /ja.zud/: third-person masculine singular non-past active jussive of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazid", "zāda", "yuzad"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزدن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تزدن (form I)\n# تَزِدْنَ (tazidna) /ta.zid.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of زَادَ (zāda)\n# تُزَدْنَ (tuzadna) /tu.zad.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of زَادَ (zāda)\n# تَزُدْنَ (tazudna) /ta.zud.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazidna", "zāda", "tuzadna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زادت",
+      "tur": "verb",
+      "baslik": "زَادَتْ • (zādat) (form I) /zaː.dat/\n# third-person feminine singular past active of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zādat", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزيد",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تزيد (form I)\n# تَزِيدُ (tazīdu) /ta.ziː.du/: inflection of زَادَ (zāda):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَزِيدَ (tazīda) /ta.ziː.da/: inflection of زَادَ (zāda):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazīdu", "zāda", "tazīda"],
+      "ipa": ["/ta.zaj.ja.da/"]
+    },
+    {
+      "madde": "تزد",
+      "tur": "verb",
+      "baslik": "تزد (form I)\n# تَزِدْ (tazid) /ta.zid/: inflection of زَادَ (zāda):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُزَدْ (tuzad) /tu.zad/: inflection of زَادَ (zāda):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive\n# تَزُدْ (tazud) /ta.zud/: inflection o",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazid", "zāda", "tuzad"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زيدت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زِيدَتْ • (zīdat) (form I) /ziː.dat/\n# third-person feminine singular past passive of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zīdat", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزاد",
+      "tur": "verb",
+      "baslik": "تزاد (form I)\n# تُزَادُ (tuzādu) /tu.zaː.du/: inflection of زَادَ (zāda):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُزَادَ (tuzāda) /tu.zaː.da/: inflection of زَادَ (zāda):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzādu", "zāda", "tuzāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زدت",
+      "tur": "verb",
+      "baslik": "زدت (form I)\n# زِدْتُ (zidtu) /zid.tu/: first-person singular past active/passive of زَادَ (zāda)\n# زِدْتَ (zidta) /zid.ta/: second-person masculine singular past active/passive of زَادَ (zāda)\n# زِدْتِ (zidti) /zid.ti/: second-person feminine singular past active/passive of زَادَ (zāda)\n# زُدْتُ (zudtu) /zud.tu/: first-person singular past active of زَادَ (zāda)\n# زُدْتَ (zudta) /zud.ta/: second-",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zidtu", "zāda", "zidta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زد",
+      "tur": "verb",
+      "baslik": "زد (form I)\n# زِدْ (zid) /zid/: second-person masculine singular imperative of زَادَ (zāda)\n# زُدْ (zud) /zud/: second-person masculine singular imperative of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zid", "zāda", "zud"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزيدين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَزِيدِينَ • (tazīdīna) (form I) /ta.ziː.diː.na/\n# second-person feminine singular non-past active indicative of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazīdīna", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزيدي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَزِيدِي • (tazīdī) (form I) /ta.ziː.diː/\n# second-person feminine singular non-past active subjunctive/jussive of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazīdī", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زيدي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "زِيدِي • (zīdī) (form I) /ziː.diː/\n# second-person feminine singular imperative of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zīdī", "zāda"]
+    },
+    {
+      "madde": "تزادين",
+      "tur": "verb",
+      "baslik": "تُزَادِينَ • (tuzādīna) (form I) /tu.zaː.diː.na/\n# second-person feminine singular non-past passive indicative of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzādīna", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزادي",
+      "tur": "verb",
+      "baslik": "تُزَادِي • (tuzādī) (form I) /tu.zaː.diː/\n# second-person feminine singular non-past passive subjunctive/jussive of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzādī", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أزد",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أزد (form I)\n# أَزِدْ (ʔazid) /ʔa.zid/: first-person singular non-past active jussive of زَادَ (zāda)\n# أُزَدْ (ʔuzad) /ʔu.zad/: first-person singular non-past passive jussive of زَادَ (zāda)\n# أَزُدْ (ʔazud) /ʔa.zud/: first-person singular non-past active jussive of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔazid", "zāda", "ʔuzad"]
+    },
+    {
+      "madde": "أزاد",
+      "tur": "verb",
+      "baslik": "أزاد (form I)\n# أُزَادُ (ʔuzādu) /ʔu.zaː.du/: first-person singular non-past passive indicative of زَادَ (zāda)\n# أُزَادَ (ʔuzāda) /ʔu.zaː.da/: first-person singular non-past passive subjunctive of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔuzādu", "zāda", "ʔuzāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زدنا",
+      "tur": "verb",
+      "baslik": "زدنا (form I)\n# زِدْنَا (zidnā) /zid.naː/: first-person plural past active/passive of زَادَ (zāda)\n# زُدْنَا (zudnā) /zud.naː/: first-person plural past active of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zidnā", "zāda", "zudnā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نزيد",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نزيد (form I)\n# نَزِيدُ (nazīdu) /na.ziː.du/: first-person plural non-past active indicative of زَادَ (zāda)\n# نَزِيدَ (nazīda) /na.ziː.da/: first-person plural non-past active subjunctive of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nazīdu", "zāda", "nazīda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نزاد",
+      "tur": "verb",
+      "baslik": "نزاد (form I)\n# نُزَادُ (nuzādu) /nu.zaː.du/: first-person plural non-past passive indicative of زَادَ (zāda)\n# نُزَادَ (nuzāda) /nu.zaː.da/: first-person plural non-past passive subjunctive of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuzādu", "zāda", "nuzāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زدتم",
+      "tur": "verb",
+      "baslik": "زدتم (form I)\n# زِدْتُمْ (zidtum) /zid.tum/: second-person masculine plural past active/passive of زَادَ (zāda)\n# زُدْتُمْ (zudtum) /zud.tum/: second-person masculine plural past active of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zidtum", "zāda", "zudtum"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزيدون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَزِيدُونَ • (tazīdūna) (form I) /ta.ziː.duː.na/\n# second-person masculine plural non-past active indicative of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazīdūna", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزيدوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَزِيدُوا • (tazīdū) (form I) /ta.ziː.duː/\n# second-person masculine plural non-past active subjunctive/jussive of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazīdū", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزادون",
+      "tur": "verb",
+      "baslik": "تُزَادُونَ • (tuzādūna) (form I) /tu.zaː.duː.na/\n# second-person masculine plural non-past passive indicative of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzādūna", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزادوا",
+      "tur": "verb",
+      "baslik": "تُزَادُوا • (tuzādū) (form I) /tu.zaː.duː/\n# second-person masculine plural non-past passive subjunctive/jussive of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzādū", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زادوا",
+      "tur": "verb",
+      "baslik": "زَادُوا • (zādū) (form I) /zaː.duː/\n# third-person masculine plural past active of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zādū", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزيدون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَزِيدُونَ • (yazīdūna) (form I) /ja.ziː.duː.na/\n# third-person masculine plural non-past active indicative of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazīdūna", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزيدوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَزِيدُوا • (yazīdū) (form I) /ja.ziː.duː/\n# third-person masculine plural non-past active subjunctive/jussive of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazīdū", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زيدوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زِيدُوا • (zīdū) (form I) /ziː.duː/\n# inflection of زَادَ (zāda):\n## third-person masculine plural past passive\n## second-person masculine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zīdū", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزادون",
+      "tur": "verb",
+      "baslik": "يُزَادُونَ • (yuzādūna) (form I) /ju.zaː.duː.na/\n# third-person masculine plural non-past passive indicative of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuzādūna", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزادوا",
+      "tur": "verb",
+      "baslik": "يُزَادُوا • (yuzādū) (form I) /ju.zaː.duː/\n# third-person masculine plural non-past passive subjunctive/jussive of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuzādū", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زدتن",
+      "tur": "verb",
+      "baslik": "زدتن (form I)\n# زِدْتُنَّ (zidtunna) /zid.tun.na/: second-person feminine plural past active/passive of زَادَ (zāda)\n# زُدْتُنَّ (zudtunna) /zud.tun.na/: second-person feminine plural past active of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zidtunna", "zāda", "zudtunna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزيدا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَزِيدَا • (tazīdā) (form I) /ta.ziː.daː/\n# inflection of زَادَ (zāda):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazīdā", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زدتما",
+      "tur": "verb",
+      "baslik": "زدتما (form I)\n# زِدْتُمَا (zidtumā) /zid.tu.maː/: second-person dual past active/passive of زَادَ (zāda)\n# زُدْتُمَا (zudtumā) /zud.tu.maː/: second-person dual past active of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zidtumā", "zāda", "zudtumā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زادا",
+      "tur": "verb",
+      "baslik": "زَادَا • (zādā) (form I) /zaː.daː/\n# third-person masculine dual past active of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zādā", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زادتا",
+      "tur": "verb",
+      "baslik": "زَادَتَا • (zādatā) (form I) /zaː.da.taː/\n# third-person feminine dual past active of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zādatā", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزيدان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَزِيدَانِ • (yazīdāni) (form I) /ja.ziː.daː.ni/\n# third-person masculine dual non-past active indicative of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazīdāni", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزيدان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَزِيدَانِ • (tazīdāni) (form I) /ta.ziː.daː.ni/\n# inflection of زَادَ (zāda):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazīdāni", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزودين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَزُودِينَ • (tazūdīna) (form I) /ta.zuː.diː.na/\n# second-person feminine singular non-past active indicative of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazūdīna", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زيدا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زِيدَا • (zīdā) (form I) /ziː.daː/\n# inflection of زَادَ (zāda):\n## third-person masculine dual past passive\n## second-person dual imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zīdā", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أزود",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أزود (form I)\n# أَزُودُ (ʔazūdu) /ʔa.zuː.du/: first-person singular non-past active indicative of زَادَ (zāda)\n# أَزُودَ (ʔazūda) /ʔa.zuː.da/: first-person singular non-past active subjunctive of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔazūdu", "zāda", "ʔazūda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزود",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تزود (form I)\n# تَزُودُ (tazūdu) /ta.zuː.du/: inflection of زَادَ (zāda):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَزُودَ (tazūda) /ta.zuː.da/: inflection of زَادَ (zāda):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazūdu", "zāda", "tazūda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزيدا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَزِيدَا • (yazīdā) (form I) /ja.ziː.daː/\n# third-person masculine dual non-past active subjunctive/jussive of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazīdā", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزود",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يزود (form I)\n# يَزُودُ (yazūdu) /ja.zuː.du/: third-person masculine singular non-past active indicative of زَادَ (zāda)\n# يَزُودَ (yazūda) /ja.zuː.da/: third-person masculine singular non-past active subjunctive of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazūdu", "zāda", "yazūda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزودان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَزُودَانِ • (yazūdāni) (form I) /ja.zuː.daː.ni/\n# third-person masculine dual non-past active indicative of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazūdāni", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزودان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَزُودَانِ • (tazūdāni) (form I) /ta.zuː.daː.ni/\n# inflection of زَادَ (zāda):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazūdāni", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزودون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَزُودُونَ • (tazūdūna) (form I) /ta.zuː.duː.na/\n# second-person masculine plural non-past active indicative of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazūdūna", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزودون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَزُودُونَ • (yazūdūna) (form I) /ja.zuː.duː.na/\n# third-person masculine plural non-past active indicative of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazūdūna", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نزود",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نزود (form I)\n# نَزُودُ (nazūdu) /na.zuː.du/: first-person plural non-past active indicative of زَادَ (zāda)\n# نَزُودَ (nazūda) /na.zuː.da/: first-person plural non-past active subjunctive of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nazūdu", "zāda", "nazūda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزودي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَزُودِي • (tazūdī) (form I) /ta.zuː.diː/\n# second-person feminine singular non-past active subjunctive/jussive of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazūdī", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزودا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَزُودَا • (tazūdā) (form I) /ta.zuː.daː/\n# inflection of زَادَ (zāda):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazūdā", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزودوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَزُودُوا • (tazūdū) (form I) /ta.zuː.duː/\n# second-person masculine plural non-past active subjunctive/jussive of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazūdū", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزودوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَزُودُوا • (yazūdū) (form I) /ja.zuː.duː/\n# third-person masculine plural non-past active subjunctive/jussive of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazūdū", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزودا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَزُودَا • (yazūdā) (form I) /ja.zuː.daː/\n# third-person masculine dual non-past active subjunctive/jussive of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazūdā", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زودي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زُودِي • (zūdī) (form I) /zuː.diː/\n# second-person feminine singular imperative of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zūdī", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زودا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زُودَا • (zūdā) (form I) /zuː.daː/\n# second-person dual imperative of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zūdā", "zāda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زودوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زُودُوا • (zūdū) (form I) /zuː.duː/\n# second-person masculine plural imperative of زَادَ (zāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zūdū", "zāda"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "زاد", "r7"]
+  ],
+  "mana": {
     "ince": "add.v.02",
     "orta": "verb.communication",
     "ust": "söz ve haber",
@@ -826,22 +583,15 @@
     "dayanak_tanim": "state or say further",
     "synset_sayisi": 4
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["add.v.02", "leave.v.06", "provide.v.02", "supply.v.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["add.v.02", "leave.v.06", "provide.v.02", "supply.v.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

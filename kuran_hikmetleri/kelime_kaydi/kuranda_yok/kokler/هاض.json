@@ -1,483 +1,347 @@
 {
   "kok": "هاض",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "هاض", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "نهض",
-        "u": "نهض",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نَهِضْ • (nahiḍ) (form I) /na.hidˤ/\n# first-person plural non-past active jussive of هَاضَ (hāḍa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nahiḍ", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "هيض",
-        "u": "هيض",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "هِيضَ • (hīḍa) (form I) /hiː.dˤa/\n# third-person masculine singular past passive of هَاضَ (hāḍa)",
-        "tag": ["form-i", "no-gloss", "transitive"],
-        "r": ["hīḍa", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "هضت",
-        "u": "هضت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هضت (form I)\n# هِضْتُ (hiḍtu) /hidˤ.tu/: first-person singular past active of هَاضَ (hāḍa)\n# هِضْتَ (hiḍta) /hidˤ.ta/: second-person masculine singular past active of هَاضَ (hāḍa)\n# هِضْتِ (hiḍti) /hidˤ.ti/: second-person feminine singular past active of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hiḍtu", "hāḍa", "hiḍta"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "هاضتا",
-        "u": "هاضتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَاضَتَا • (hāḍatā) (form I) /haː.dˤa.taː/\n# third-person feminine dual past active of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hāḍatā", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "هاضا",
-        "u": "هاضا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَاضَا • (hāḍā) (form I) /haː.dˤaː/\n# third-person masculine dual past active of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hāḍā", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "هاضت",
-        "u": "هاضت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَاضَتْ • (hāḍat) (form I) /haː.dˤat/\n# third-person feminine singular past active of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hāḍat", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "هضتما",
-        "u": "هضتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هِضْتُمَا • (hiḍtumā) (form I) /hidˤ.tu.maː/\n# second-person dual past active of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hiḍtumā", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "هضتم",
-        "u": "هضتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هِضْتُمْ • (hiḍtum) (form I) /hidˤ.tum/\n# second-person masculine plural past active of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hiḍtum", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "هاضوا",
-        "u": "هاضوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَاضُوا • (hāḍū) (form I) /haː.dˤuː/\n# third-person masculine plural past active of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hāḍū", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "هضتن",
-        "u": "هضتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هِضْتُنَّ • (hiḍtunna) (form I) /hidˤ.tun.na/\n# second-person feminine plural past active of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hiḍtunna", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "هضن",
-        "u": "هضن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هِضْنَ • (hiḍna) (form I) /hidˤ.na/\n# inflection of هَاضَ (hāḍa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hiḍna", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "هضنا",
-        "u": "هضنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هِضْنَا • (hiḍnā) (form I) /hidˤ.naː/\n# first-person plural past active of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hiḍnā", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "أهيض",
-        "u": "أهيض",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أهيض (form I)\n# أَهِيضُ (ʔahīḍu) /ʔa.hiː.dˤu/: first-person singular non-past active indicative of هَاضَ (hāḍa)\n# أَهِيضَ (ʔahīḍa) /ʔa.hiː.dˤa/: first-person singular non-past active subjunctive of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔahīḍu", "hāḍa", "ʔahīḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تهيض",
-        "u": "تهيض",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تهيض (form I)\n# تَهِيضُ (tahīḍu) /ta.hiː.dˤu/: inflection of هَاضَ (hāḍa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَهِيضَ (tahīḍa) /ta.hiː.dˤa/: inflection of هَاضَ (hāḍa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahīḍu", "hāḍa", "tahīḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تهيضان",
-        "u": "تهيضان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهِيضَانِ • (tahīḍāni) (form I) /ta.hiː.dˤaː.ni/\n# inflection of هَاضَ (hāḍa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahīḍāni", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "يهيض",
-        "u": "يهيض",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يهيض (form I)\n# يَهِيضُ (yahīḍu) /ja.hiː.dˤu/: third-person masculine singular non-past active indicative of هَاضَ (hāḍa)\n# يَهِيضَ (yahīḍa) /ja.hiː.dˤa/: third-person masculine singular non-past active subjunctive of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahīḍu", "hāḍa", "yahīḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تهيضين",
-        "u": "تهيضين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهِيضِينَ • (tahīḍīna) (form I) /ta.hiː.dˤiː.na/\n# second-person feminine singular non-past active indicative of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahīḍīna", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "نهيض",
-        "u": "نهيض",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نهيض (form I)\n# نَهِيضُ (nahīḍu) /na.hiː.dˤu/: first-person plural non-past active indicative of هَاضَ (hāḍa)\n# نَهِيضَ (nahīḍa) /na.hiː.dˤa/: first-person plural non-past active subjunctive of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nahīḍu", "hāḍa", "nahīḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "يهيضون",
-        "u": "يهيضون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَهِيضُونَ • (yahīḍūna) (form I) /ja.hiː.dˤuː.na/\n# third-person masculine plural non-past active indicative of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahīḍūna", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تهيضون",
-        "u": "تهيضون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهِيضُونَ • (tahīḍūna) (form I) /ta.hiː.dˤuː.na/\n# second-person masculine plural non-past active indicative of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahīḍūna", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تهضن",
-        "u": "تهضن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهِضْنَ • (tahiḍna) (form I) /ta.hidˤ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahiḍna", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "يهيضان",
-        "u": "يهيضان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَهِيضَانِ • (yahīḍāni) (form I) /ja.hiː.dˤaː.ni/\n# third-person masculine dual non-past active indicative of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahīḍāni", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "يهضن",
-        "u": "يهضن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَهِضْنَ • (yahiḍna) (form I) /ja.hidˤ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahiḍna", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تهيضي",
-        "u": "تهيضي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهِيضِي • (tahīḍī) (form I) /ta.hiː.dˤiː/\n# second-person feminine singular non-past active subjunctive/jussive of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahīḍī", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تهيضا",
-        "u": "تهيضا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهِيضَا • (tahīḍā) (form I) /ta.hiː.dˤaː/\n# inflection of هَاضَ (hāḍa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahīḍā", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تهيضوا",
-        "u": "تهيضوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهِيضُوا • (tahīḍū) (form I) /ta.hiː.dˤuː/\n# second-person masculine plural non-past active subjunctive/jussive of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahīḍū", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "يهاض",
-        "u": "يهاض",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهاض (form I)\n# يُهَاضُ (yuhāḍu) /ju.haː.dˤu/: third-person masculine singular non-past passive indicative of هَاضَ (hāḍa)\n# يُهَاضَ (yuhāḍa) /ju.haː.dˤa/: third-person masculine singular non-past passive subjunctive of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuhāḍu", "hāḍa", "yuhāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "يهيضوا",
-        "u": "يهيضوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَهِيضُوا • (yahīḍū) (form I) /ja.hiː.dˤuː/\n# third-person masculine plural non-past active subjunctive/jussive of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahīḍū", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "يهيضا",
-        "u": "يهيضا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَهِيضَا • (yahīḍā) (form I) /ja.hiː.dˤaː/\n# third-person masculine dual non-past active subjunctive/jussive of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahīḍā", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "أهض",
-        "u": "أهض",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَهِضْ • (ʔahiḍ) (form I) /ʔa.hidˤ/\n# first-person singular non-past active jussive of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔahiḍ", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "يهض",
-        "u": "يهض",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهض (form I)\n# يَهِضْ (yahiḍ) /ja.hidˤ/: third-person masculine singular non-past active jussive of هَاضَ (hāḍa)\n# يُهَضْ (yuhaḍ) /ju.hadˤ/: third-person masculine singular non-past passive jussive of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahiḍ", "hāḍa", "yuhaḍ"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تهض",
-        "u": "تهض",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهِضْ • (tahiḍ) (form I) /ta.hidˤ/\n# inflection of هَاضَ (hāḍa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahiḍ", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "هض",
-        "u": "هض",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هِضْ • (hiḍ) (form I) /hidˤ/\n# second-person masculine singular imperative of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hiḍ", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "هيضي",
-        "u": "هيضي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "هِيضِي • (hīḍī) (form I) /hiː.dˤiː/\n# second-person feminine singular imperative of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hīḍī", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "هيضوا",
-        "u": "هيضوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "هِيضُوا • (hīḍū) (form I) /hiː.dˤuː/\n# second-person masculine plural imperative of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hīḍū", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      },
-      {
-        "w": "هيضا",
-        "u": "هيضا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "هِيضَا • (hīḍā) (form I) /hiː.dˤaː/\n# second-person dual imperative of هَاضَ (hāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hīḍā", "hāḍa"],
-        "k": "هاض",
-        "yol": "kök"
-      }
-    ],
-    "tercume": {}
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "هض",
+  "ses": {
     "harf": "ه",
+    "fasil": "هض",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "نهض",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نَهِضْ • (nahiḍ) (form I) /na.hidˤ/\n# first-person plural non-past active jussive of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nahiḍ", "hāḍa"]
+    },
+    {
+      "madde": "هيض",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "هِيضَ • (hīḍa) (form I) /hiː.dˤa/\n# third-person masculine singular past passive of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss", "transitive"],
+      "okunus": ["hīḍa", "hāḍa"]
+    },
+    {
+      "madde": "هضت",
+      "tur": "verb",
+      "baslik": "هضت (form I)\n# هِضْتُ (hiḍtu) /hidˤ.tu/: first-person singular past active of هَاضَ (hāḍa)\n# هِضْتَ (hiḍta) /hidˤ.ta/: second-person masculine singular past active of هَاضَ (hāḍa)\n# هِضْتِ (hiḍti) /hidˤ.ti/: second-person feminine singular past active of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hiḍtu", "hāḍa", "hiḍta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هاضتا",
+      "tur": "verb",
+      "baslik": "هَاضَتَا • (hāḍatā) (form I) /haː.dˤa.taː/\n# third-person feminine dual past active of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hāḍatā", "hāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هاضا",
+      "tur": "verb",
+      "baslik": "هَاضَا • (hāḍā) (form I) /haː.dˤaː/\n# third-person masculine dual past active of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hāḍā", "hāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هاضت",
+      "tur": "verb",
+      "baslik": "هَاضَتْ • (hāḍat) (form I) /haː.dˤat/\n# third-person feminine singular past active of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hāḍat", "hāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هضتما",
+      "tur": "verb",
+      "baslik": "هِضْتُمَا • (hiḍtumā) (form I) /hidˤ.tu.maː/\n# second-person dual past active of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hiḍtumā", "hāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هضتم",
+      "tur": "verb",
+      "baslik": "هِضْتُمْ • (hiḍtum) (form I) /hidˤ.tum/\n# second-person masculine plural past active of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hiḍtum", "hāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هاضوا",
+      "tur": "verb",
+      "baslik": "هَاضُوا • (hāḍū) (form I) /haː.dˤuː/\n# third-person masculine plural past active of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hāḍū", "hāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هضتن",
+      "tur": "verb",
+      "baslik": "هِضْتُنَّ • (hiḍtunna) (form I) /hidˤ.tun.na/\n# second-person feminine plural past active of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hiḍtunna", "hāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هضن",
+      "tur": "verb",
+      "baslik": "هِضْنَ • (hiḍna) (form I) /hidˤ.na/\n# inflection of هَاضَ (hāḍa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hiḍna", "hāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هضنا",
+      "tur": "verb",
+      "baslik": "هِضْنَا • (hiḍnā) (form I) /hidˤ.naː/\n# first-person plural past active of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hiḍnā", "hāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أهيض",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أهيض (form I)\n# أَهِيضُ (ʔahīḍu) /ʔa.hiː.dˤu/: first-person singular non-past active indicative of هَاضَ (hāḍa)\n# أَهِيضَ (ʔahīḍa) /ʔa.hiː.dˤa/: first-person singular non-past active subjunctive of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔahīḍu", "hāḍa", "ʔahīḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهيض",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تهيض (form I)\n# تَهِيضُ (tahīḍu) /ta.hiː.dˤu/: inflection of هَاضَ (hāḍa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَهِيضَ (tahīḍa) /ta.hiː.dˤa/: inflection of هَاضَ (hāḍa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahīḍu", "hāḍa", "tahīḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهيضان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهِيضَانِ • (tahīḍāni) (form I) /ta.hiː.dˤaː.ni/\n# inflection of هَاضَ (hāḍa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahīḍāni", "hāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهيض",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يهيض (form I)\n# يَهِيضُ (yahīḍu) /ja.hiː.dˤu/: third-person masculine singular non-past active indicative of هَاضَ (hāḍa)\n# يَهِيضَ (yahīḍa) /ja.hiː.dˤa/: third-person masculine singular non-past active subjunctive of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahīḍu", "hāḍa", "yahīḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهيضين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهِيضِينَ • (tahīḍīna) (form I) /ta.hiː.dˤiː.na/\n# second-person feminine singular non-past active indicative of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahīḍīna", "hāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نهيض",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نهيض (form I)\n# نَهِيضُ (nahīḍu) /na.hiː.dˤu/: first-person plural non-past active indicative of هَاضَ (hāḍa)\n# نَهِيضَ (nahīḍa) /na.hiː.dˤa/: first-person plural non-past active subjunctive of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nahīḍu", "hāḍa", "nahīḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهيضون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَهِيضُونَ • (yahīḍūna) (form I) /ja.hiː.dˤuː.na/\n# third-person masculine plural non-past active indicative of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahīḍūna", "hāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهيضون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهِيضُونَ • (tahīḍūna) (form I) /ta.hiː.dˤuː.na/\n# second-person masculine plural non-past active indicative of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahīḍūna", "hāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهضن",
+      "tur": "verb",
+      "baslik": "تَهِضْنَ • (tahiḍna) (form I) /ta.hidˤ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahiḍna", "hāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهيضان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَهِيضَانِ • (yahīḍāni) (form I) /ja.hiː.dˤaː.ni/\n# third-person masculine dual non-past active indicative of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahīḍāni", "hāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهضن",
+      "tur": "verb",
+      "baslik": "يَهِضْنَ • (yahiḍna) (form I) /ja.hidˤ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahiḍna", "hāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهيضي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهِيضِي • (tahīḍī) (form I) /ta.hiː.dˤiː/\n# second-person feminine singular non-past active subjunctive/jussive of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahīḍī", "hāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهيضا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهِيضَا • (tahīḍā) (form I) /ta.hiː.dˤaː/\n# inflection of هَاضَ (hāḍa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahīḍā", "hāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهيضوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهِيضُوا • (tahīḍū) (form I) /ta.hiː.dˤuː/\n# second-person masculine plural non-past active subjunctive/jussive of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahīḍū", "hāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهاض",
+      "tur": "verb",
+      "baslik": "يهاض (form I)\n# يُهَاضُ (yuhāḍu) /ju.haː.dˤu/: third-person masculine singular non-past passive indicative of هَاضَ (hāḍa)\n# يُهَاضَ (yuhāḍa) /ju.haː.dˤa/: third-person masculine singular non-past passive subjunctive of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuhāḍu", "hāḍa", "yuhāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهيضوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَهِيضُوا • (yahīḍū) (form I) /ja.hiː.dˤuː/\n# third-person masculine plural non-past active subjunctive/jussive of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahīḍū", "hāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهيضا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَهِيضَا • (yahīḍā) (form I) /ja.hiː.dˤaː/\n# third-person masculine dual non-past active subjunctive/jussive of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahīḍā", "hāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أهض",
+      "tur": "verb",
+      "baslik": "أَهِضْ • (ʔahiḍ) (form I) /ʔa.hidˤ/\n# first-person singular non-past active jussive of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔahiḍ", "hāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهض",
+      "tur": "verb",
+      "baslik": "يهض (form I)\n# يَهِضْ (yahiḍ) /ja.hidˤ/: third-person masculine singular non-past active jussive of هَاضَ (hāḍa)\n# يُهَضْ (yuhaḍ) /ju.hadˤ/: third-person masculine singular non-past passive jussive of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahiḍ", "hāḍa", "yuhaḍ"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهض",
+      "tur": "verb",
+      "baslik": "تَهِضْ • (tahiḍ) (form I) /ta.hidˤ/\n# inflection of هَاضَ (hāḍa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahiḍ", "hāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هض",
+      "tur": "verb",
+      "baslik": "هِضْ • (hiḍ) (form I) /hidˤ/\n# second-person masculine singular imperative of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hiḍ", "hāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هيضي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "هِيضِي • (hīḍī) (form I) /hiː.dˤiː/\n# second-person feminine singular imperative of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hīḍī", "hāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هيضوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "هِيضُوا • (hīḍū) (form I) /hiː.dˤuː/\n# second-person masculine plural imperative of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hīḍū", "hāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هيضا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "هِيضَا • (hīḍā) (form I) /hiː.dˤaː/\n# second-person dual imperative of هَاضَ (hāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hīḍā", "hāḍa"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "هاض", "r7"]
+  ],
+  "mana": {
     "ince": "arouse.v.01",
     "orta": "verb.emotion",
     "ust": "his ve nefis",
@@ -485,16 +349,11 @@
     "dayanak_tanim": "call forth (emotions, feelings, and responses)",
     "synset_sayisi": 13
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "arise.v.03",
     "arouse.v.01",
     "elate.v.01",
@@ -509,12 +368,10 @@
     "stand.v.10",
     "wake_up.v.02"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

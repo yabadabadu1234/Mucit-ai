@@ -11,7 +11,7 @@ import mesmu as MS
 SIN = {'mesmu': 2, 'kiyasi': 1, 'aykiri': 0}
 BAB = ['sülâsî mücerred', 'sülâsî'] + ['bâb ' + r for r in 'II III IV V VI VII VIII IX X XI XII XIII'.split()]
 for k in A:
-    dk = json.load(open(KOK / f'{k}.json', encoding='utf-8')); m = dk.get('mustak') or {}; SN = MS.siniflar(dk)
+    dk = json.load(open(KOK / f'{k}.json', encoding='utf-8')); m = MS.mustak_tam(dk); SN = MS.siniflar(dk)
     LUG = {}
     for eser, L in (dk.get('lugat') or {}).items():
         for e in L:

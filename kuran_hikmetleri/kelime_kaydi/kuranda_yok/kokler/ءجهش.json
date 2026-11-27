@@ -1,350 +1,272 @@
 {
   "kok": "ءجهش",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءجهش", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أجهشت",
-        "u": "أجهشت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجهشت (form IV)\n# أَجْهَشْتُ (ʔajhaštu) /ʔad͡ʒ.haʃ.tu/: first-person singular past active of أَجْهَشَ (ʔajhaša)\n# أَجْهَشْتَ (ʔajhašta) /ʔad͡ʒ.haʃ.ta/: second-person masculine singular past active of أَجْهَشَ (ʔajhaša)\n# أَجْهَشْتِ (ʔajhašti) /ʔad͡ʒ.haʃ.ti/: second-person feminine singular past active of أَجْهَشَ (ʔajhaša)\n# أَجْهَشَتْ (ʔajhašat) /ʔad͡ʒ.ha.ʃat/: third-person feminine singular past",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajhaštu", "ʔajhaša", "ʔajhašta"],
-        "k": "أجهش",
-        "yol": "kök"
-      },
-      {
-        "w": "أجهشتما",
-        "u": "أجهشتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجهشتما (form IV)\n# أَجْهَشْتُمَا (ʔajhaštumā) /ʔad͡ʒ.haʃ.tu.maː/: second-person dual past active of أَجْهَشَ (ʔajhaša)\n# أُجْهِشْتُمَا (ʔujhištumā) /ʔud͡ʒ.hiʃ.tu.maː/: second-person dual past passive of أَجْهَشَ (ʔajhaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajhaštumā", "ʔajhaša", "ʔujhištumā"],
-        "k": "أجهش",
-        "yol": "kök"
-      },
-      {
-        "w": "أجهشا",
-        "u": "أجهشا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجهشا (form IV)\n# أَجْهَشَا (ʔajhašā) /ʔad͡ʒ.ha.ʃaː/: third-person masculine dual past active of أَجْهَشَ (ʔajhaša)\n# أُجْهِشَا (ʔujhišā) /ʔud͡ʒ.hi.ʃaː/: third-person masculine dual past passive of أَجْهَشَ (ʔajhaša)\n# أَجْهِشَا (ʔajhišā) /ʔad͡ʒ.hi.ʃaː/: second-person dual imperative of أَجْهَشَ (ʔajhaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajhašā", "ʔajhaša", "ʔujhišā"],
-        "k": "أجهش",
-        "yol": "kök"
-      },
-      {
-        "w": "أجهشتم",
-        "u": "أجهشتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجهشتم (form IV)\n# أَجْهَشْتُمْ (ʔajhaštum) /ʔad͡ʒ.haʃ.tum/: second-person masculine plural past active of أَجْهَشَ (ʔajhaša)\n# أُجْهِشْتُمْ (ʔujhištum) /ʔud͡ʒ.hiʃ.tum/: second-person masculine plural past passive of أَجْهَشَ (ʔajhaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajhaštum", "ʔajhaša", "ʔujhištum"],
-        "k": "أجهش",
-        "yol": "kök"
-      },
-      {
-        "w": "أجهشوا",
-        "u": "أجهشوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجهشوا (form IV)\n# أَجْهَشُوا (ʔajhašū) /ʔad͡ʒ.ha.ʃuː/: third-person masculine plural past active of أَجْهَشَ (ʔajhaša)\n# أُجْهِشُوا (ʔujhišū) /ʔud͡ʒ.hi.ʃuː/: third-person masculine plural past passive of أَجْهَشَ (ʔajhaša)\n# أَجْهِشُوا (ʔajhišū) /ʔad͡ʒ.hi.ʃuː/: second-person masculine plural imperative of أَجْهَشَ (ʔajhaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajhašū", "ʔajhaša", "ʔujhišū"],
-        "k": "أجهش",
-        "yol": "kök"
-      },
-      {
-        "w": "أجهشتا",
-        "u": "أجهشتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجهشتا (form IV)\n# أَجْهَشَتَا (ʔajhašatā) /ʔad͡ʒ.ha.ʃa.taː/: third-person feminine dual past active of أَجْهَشَ (ʔajhaša)\n# أُجْهِشَتَا (ʔujhišatā) /ʔud͡ʒ.hi.ʃa.taː/: third-person feminine dual past passive of أَجْهَشَ (ʔajhaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajhašatā", "ʔajhaša", "ʔujhišatā"],
-        "k": "أجهش",
-        "yol": "kök"
-      },
-      {
-        "w": "أجهشنا",
-        "u": "أجهشنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجهشنا (form IV)\n# أَجْهَشْنَا (ʔajhašnā) /ʔad͡ʒ.haʃ.naː/: first-person plural past active of أَجْهَشَ (ʔajhaša)\n# أُجْهِشْنَا (ʔujhišnā) /ʔud͡ʒ.hiʃ.naː/: first-person plural past passive of أَجْهَشَ (ʔajhaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajhašnā", "ʔajhaša", "ʔujhišnā"],
-        "k": "أجهش",
-        "yol": "kök"
-      },
-      {
-        "w": "أجهشتن",
-        "u": "أجهشتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجهشتن (form IV)\n# أَجْهَشْتُنَّ (ʔajhaštunna) /ʔad͡ʒ.haʃ.tun.na/: second-person feminine plural past active of أَجْهَشَ (ʔajhaša)\n# أُجْهِشْتُنَّ (ʔujhištunna) /ʔud͡ʒ.hiʃ.tun.na/: second-person feminine plural past passive of أَجْهَشَ (ʔajhaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajhaštunna", "ʔajhaša", "ʔujhištunna"],
-        "k": "أجهش",
-        "yol": "kök"
-      },
-      {
-        "w": "أجهشن",
-        "u": "أجهشن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجهشن (form IV)\n# أَجْهَشْنَ (ʔajhašna) /ʔad͡ʒ.haʃ.na/: third-person feminine plural past active of أَجْهَشَ (ʔajhaša)\n# أُجْهِشْنَ (ʔujhišna) /ʔud͡ʒ.hiʃ.na/: third-person feminine plural past passive of أَجْهَشَ (ʔajhaša)\n# أَجْهِشْنَ (ʔajhišna) /ʔad͡ʒ.hiʃ.na/: second-person feminine plural imperative of أَجْهَشَ (ʔajhaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajhašna", "ʔajhaša", "ʔujhišna"],
-        "k": "أجهش",
-        "yol": "kök"
-      },
-      {
-        "w": "تجهش",
-        "u": "تجهش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجهش (form IV)\n# تُجْهِشُ (tujhišu) /tud͡ʒ.hi.ʃu/: inflection of أَجْهَشَ (ʔajhaša):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُجْهَشُ (tujhašu) /tud͡ʒ.ha.ʃu/: inflection of أَجْهَشَ (ʔajhaša):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indica",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujhišu", "ʔajhaša", "tujhašu"],
-        "k": "أجهش",
-        "yol": "kök"
-      },
-      {
-        "w": "تجهشين",
-        "u": "تجهشين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجهشين (form IV)\n# تُجْهِشِينَ (tujhišīna) /tud͡ʒ.hi.ʃiː.na/: second-person feminine singular non-past active indicative of أَجْهَشَ (ʔajhaša)\n# تُجْهَشِينَ (tujhašīna) /tud͡ʒ.ha.ʃiː.na/: second-person feminine singular non-past passive indicative of أَجْهَشَ (ʔajhaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujhišīna", "ʔajhaša", "tujhašīna"],
-        "k": "أجهش",
-        "yol": "kök"
-      },
-      {
-        "w": "يجهش",
-        "u": "يجهش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يجهش (form IV)\n# يُجْهِشُ (yujhišu) /jud͡ʒ.hi.ʃu/: third-person masculine singular non-past active indicative of أَجْهَشَ (ʔajhaša)\n# يُجْهَشُ (yujhašu) /jud͡ʒ.ha.ʃu/: third-person masculine singular non-past passive indicative of أَجْهَشَ (ʔajhaša)\n# يُجْهِشَ (yujhiša) /jud͡ʒ.hi.ʃa/: third-person masculine singular non-past active subjunctive of أَجْهَشَ (ʔajhaša)\n# يُجْهَشَ (yujhaša) /jud͡ʒ.ha.ʃ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yujhišu", "ʔajhaša", "yujhašu"],
-        "k": "أجهش",
-        "yol": "kök"
-      },
-      {
-        "w": "تجهشان",
-        "u": "تجهشان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجهشان (form IV)\n# تُجْهِشَانِ (tujhišāni) /tud͡ʒ.hi.ʃaː.ni/: inflection of أَجْهَشَ (ʔajhaša):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُجْهَشَانِ (tujhašāni) /tud͡ʒ.ha.ʃaː.ni/: inflection of أَجْهَشَ (ʔajhaša):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujhišāni", "ʔajhaša", "tujhašāni"],
-        "k": "أجهش",
-        "yol": "kök"
-      },
-      {
-        "w": "نجهش",
-        "u": "نجهش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نجهش (form IV)\n# نُجْهِشُ (nujhišu) /nud͡ʒ.hi.ʃu/: first-person plural non-past active indicative of أَجْهَشَ (ʔajhaša)\n# نُجْهَشُ (nujhašu) /nud͡ʒ.ha.ʃu/: first-person plural non-past passive indicative of أَجْهَشَ (ʔajhaša)\n# نُجْهِشَ (nujhiša) /nud͡ʒ.hi.ʃa/: first-person plural non-past active subjunctive of أَجْهَشَ (ʔajhaša)\n# نُجْهَشَ (nujhaša) /nud͡ʒ.ha.ʃa/: first-person plural non-past pas",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nujhišu", "ʔajhaša", "nujhašu"],
-        "k": "أجهش",
-        "yol": "kök"
-      },
-      {
-        "w": "تجهشون",
-        "u": "تجهشون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجهشون (form IV)\n# تُجْهِشُونَ (tujhišūna) /tud͡ʒ.hi.ʃuː.na/: second-person masculine plural non-past active indicative of أَجْهَشَ (ʔajhaša)\n# تُجْهَشُونَ (tujhašūna) /tud͡ʒ.ha.ʃuː.na/: second-person masculine plural non-past passive indicative of أَجْهَشَ (ʔajhaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujhišūna", "ʔajhaša", "tujhašūna"],
-        "k": "أجهش",
-        "yol": "kök"
-      },
-      {
-        "w": "يجهشان",
-        "u": "يجهشان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يجهشان (form IV)\n# يُجْهِشَانِ (yujhišāni) /jud͡ʒ.hi.ʃaː.ni/: third-person masculine dual non-past active indicative of أَجْهَشَ (ʔajhaša)\n# يُجْهَشَانِ (yujhašāni) /jud͡ʒ.ha.ʃaː.ni/: third-person masculine dual non-past passive indicative of أَجْهَشَ (ʔajhaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yujhišāni", "ʔajhaša", "yujhašāni"],
-        "k": "أجهش",
-        "yol": "kök"
-      },
-      {
-        "w": "يجهشون",
-        "u": "يجهشون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يجهشون (form IV)\n# يُجْهِشُونَ (yujhišūna) /jud͡ʒ.hi.ʃuː.na/: third-person masculine plural non-past active indicative of أَجْهَشَ (ʔajhaša)\n# يُجْهَشُونَ (yujhašūna) /jud͡ʒ.ha.ʃuː.na/: third-person masculine plural non-past passive indicative of أَجْهَشَ (ʔajhaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yujhišūna", "ʔajhaša", "yujhašūna"],
-        "k": "أجهش",
-        "yol": "kök"
-      },
-      {
-        "w": "تجهشن",
-        "u": "تجهشن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجهشن (form IV)\n# تُجْهِشْنَ (tujhišna) /tud͡ʒ.hiʃ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَجْهَشَ (ʔajhaša)\n# تُجْهَشْنَ (tujhašna) /tud͡ʒ.haʃ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَجْهَشَ (ʔajhaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujhišna", "ʔajhaša", "tujhašna"],
-        "k": "أجهش",
-        "yol": "kök"
-      },
-      {
-        "w": "يجهشن",
-        "u": "يجهشن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يجهشن (form IV)\n# يُجْهِشْنَ (yujhišna) /jud͡ʒ.hiʃ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَجْهَشَ (ʔajhaša)\n# يُجْهَشْنَ (yujhašna) /jud͡ʒ.haʃ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَجْهَشَ (ʔajhaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yujhišna", "ʔajhaša", "yujhašna"],
-        "k": "أجهش",
-        "yol": "kök"
-      },
-      {
-        "w": "يجهشا",
-        "u": "يجهشا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يجهشا (form IV)\n# يُجْهِشَا (yujhišā) /jud͡ʒ.hi.ʃaː/: third-person masculine dual non-past active subjunctive/jussive of أَجْهَشَ (ʔajhaša)\n# يُجْهَشَا (yujhašā) /jud͡ʒ.ha.ʃaː/: third-person masculine dual non-past passive subjunctive/jussive of أَجْهَشَ (ʔajhaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yujhišā", "ʔajhaša", "yujhašā"],
-        "k": "أجهش",
-        "yol": "kök"
-      },
-      {
-        "w": "تجهشا",
-        "u": "تجهشا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجهشا (form IV)\n# تُجْهِشَا (tujhišā) /tud͡ʒ.hi.ʃaː/: inflection of أَجْهَشَ (ʔajhaša):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُجْهَشَا (tujhašā) /tud͡ʒ.ha.ʃaː/: inflection of أَجْهَشَ (ʔajhaša):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctiv",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujhišā", "ʔajhaša", "tujhašā"],
-        "k": "أجهش",
-        "yol": "kök"
-      },
-      {
-        "w": "تجهشي",
-        "u": "تجهشي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجهشي (form IV)\n# تُجْهِشِي (tujhišī) /tud͡ʒ.hi.ʃiː/: second-person feminine singular non-past active subjunctive/jussive of أَجْهَشَ (ʔajhaša)\n# تُجْهَشِي (tujhašī) /tud͡ʒ.ha.ʃiː/: second-person feminine singular non-past passive subjunctive/jussive of أَجْهَشَ (ʔajhaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujhišī", "ʔajhaša", "tujhašī"],
-        "k": "أجهش",
-        "yol": "kök"
-      },
-      {
-        "w": "يجهشوا",
-        "u": "يجهشوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يجهشوا (form IV)\n# يُجْهِشُوا (yujhišū) /jud͡ʒ.hi.ʃuː/: third-person masculine plural non-past active subjunctive/jussive of أَجْهَشَ (ʔajhaša)\n# يُجْهَشُوا (yujhašū) /jud͡ʒ.ha.ʃuː/: third-person masculine plural non-past passive subjunctive/jussive of أَجْهَشَ (ʔajhaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yujhišū", "ʔajhaša", "yujhašū"],
-        "k": "أجهش",
-        "yol": "kök"
-      },
-      {
-        "w": "أجهشي",
-        "u": "أجهشي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَجْهِشِي • (ʔajhišī) (form IV) /ʔad͡ʒ.hi.ʃiː/\n# second-person feminine singular imperative of أَجْهَشَ (ʔajhaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajhišī", "ʔajhaša"],
-        "k": "أجهش",
-        "yol": "kök"
-      },
-      {
-        "w": "تجهشوا",
-        "u": "تجهشوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجهشوا (form IV)\n# تُجْهِشُوا (tujhišū) /tud͡ʒ.hi.ʃuː/: second-person masculine plural non-past active subjunctive/jussive of أَجْهَشَ (ʔajhaša)\n# تُجْهَشُوا (tujhašū) /tud͡ʒ.ha.ʃuː/: second-person masculine plural non-past passive subjunctive/jussive of أَجْهَشَ (ʔajhaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujhišū", "ʔajhaša", "tujhašū"],
-        "k": "أجهش",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "جه",
+  "ses": {
     "harf": "ء",
+    "fasil": "جه",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "أجهشت",
+      "tur": "verb",
+      "baslik": "أجهشت (form IV)\n# أَجْهَشْتُ (ʔajhaštu) /ʔad͡ʒ.haʃ.tu/: first-person singular past active of أَجْهَشَ (ʔajhaša)\n# أَجْهَشْتَ (ʔajhašta) /ʔad͡ʒ.haʃ.ta/: second-person masculine singular past active of أَجْهَشَ (ʔajhaša)\n# أَجْهَشْتِ (ʔajhašti) /ʔad͡ʒ.haʃ.ti/: second-person feminine singular past active of أَجْهَشَ (ʔajhaša)\n# أَجْهَشَتْ (ʔajhašat) /ʔad͡ʒ.ha.ʃat/: third-person feminine singular past",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajhaštu", "ʔajhaša", "ʔajhašta"],
+      "kok_yazilis": "أجهش",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجهشتما",
+      "tur": "verb",
+      "baslik": "أجهشتما (form IV)\n# أَجْهَشْتُمَا (ʔajhaštumā) /ʔad͡ʒ.haʃ.tu.maː/: second-person dual past active of أَجْهَشَ (ʔajhaša)\n# أُجْهِشْتُمَا (ʔujhištumā) /ʔud͡ʒ.hiʃ.tu.maː/: second-person dual past passive of أَجْهَشَ (ʔajhaša)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajhaštumā", "ʔajhaša", "ʔujhištumā"],
+      "kok_yazilis": "أجهش",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجهشا",
+      "tur": "verb",
+      "baslik": "أجهشا (form IV)\n# أَجْهَشَا (ʔajhašā) /ʔad͡ʒ.ha.ʃaː/: third-person masculine dual past active of أَجْهَشَ (ʔajhaša)\n# أُجْهِشَا (ʔujhišā) /ʔud͡ʒ.hi.ʃaː/: third-person masculine dual past passive of أَجْهَشَ (ʔajhaša)\n# أَجْهِشَا (ʔajhišā) /ʔad͡ʒ.hi.ʃaː/: second-person dual imperative of أَجْهَشَ (ʔajhaša)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajhašā", "ʔajhaša", "ʔujhišā"],
+      "kok_yazilis": "أجهش",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجهشتم",
+      "tur": "verb",
+      "baslik": "أجهشتم (form IV)\n# أَجْهَشْتُمْ (ʔajhaštum) /ʔad͡ʒ.haʃ.tum/: second-person masculine plural past active of أَجْهَشَ (ʔajhaša)\n# أُجْهِشْتُمْ (ʔujhištum) /ʔud͡ʒ.hiʃ.tum/: second-person masculine plural past passive of أَجْهَشَ (ʔajhaša)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajhaštum", "ʔajhaša", "ʔujhištum"],
+      "kok_yazilis": "أجهش",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجهشوا",
+      "tur": "verb",
+      "baslik": "أجهشوا (form IV)\n# أَجْهَشُوا (ʔajhašū) /ʔad͡ʒ.ha.ʃuː/: third-person masculine plural past active of أَجْهَشَ (ʔajhaša)\n# أُجْهِشُوا (ʔujhišū) /ʔud͡ʒ.hi.ʃuː/: third-person masculine plural past passive of أَجْهَشَ (ʔajhaša)\n# أَجْهِشُوا (ʔajhišū) /ʔad͡ʒ.hi.ʃuː/: second-person masculine plural imperative of أَجْهَشَ (ʔajhaša)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajhašū", "ʔajhaša", "ʔujhišū"],
+      "kok_yazilis": "أجهش",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجهشتا",
+      "tur": "verb",
+      "baslik": "أجهشتا (form IV)\n# أَجْهَشَتَا (ʔajhašatā) /ʔad͡ʒ.ha.ʃa.taː/: third-person feminine dual past active of أَجْهَشَ (ʔajhaša)\n# أُجْهِشَتَا (ʔujhišatā) /ʔud͡ʒ.hi.ʃa.taː/: third-person feminine dual past passive of أَجْهَشَ (ʔajhaša)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajhašatā", "ʔajhaša", "ʔujhišatā"],
+      "kok_yazilis": "أجهش",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجهشنا",
+      "tur": "verb",
+      "baslik": "أجهشنا (form IV)\n# أَجْهَشْنَا (ʔajhašnā) /ʔad͡ʒ.haʃ.naː/: first-person plural past active of أَجْهَشَ (ʔajhaša)\n# أُجْهِشْنَا (ʔujhišnā) /ʔud͡ʒ.hiʃ.naː/: first-person plural past passive of أَجْهَشَ (ʔajhaša)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajhašnā", "ʔajhaša", "ʔujhišnā"],
+      "kok_yazilis": "أجهش",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجهشتن",
+      "tur": "verb",
+      "baslik": "أجهشتن (form IV)\n# أَجْهَشْتُنَّ (ʔajhaštunna) /ʔad͡ʒ.haʃ.tun.na/: second-person feminine plural past active of أَجْهَشَ (ʔajhaša)\n# أُجْهِشْتُنَّ (ʔujhištunna) /ʔud͡ʒ.hiʃ.tun.na/: second-person feminine plural past passive of أَجْهَشَ (ʔajhaša)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajhaštunna", "ʔajhaša", "ʔujhištunna"],
+      "kok_yazilis": "أجهش",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجهشن",
+      "tur": "verb",
+      "baslik": "أجهشن (form IV)\n# أَجْهَشْنَ (ʔajhašna) /ʔad͡ʒ.haʃ.na/: third-person feminine plural past active of أَجْهَشَ (ʔajhaša)\n# أُجْهِشْنَ (ʔujhišna) /ʔud͡ʒ.hiʃ.na/: third-person feminine plural past passive of أَجْهَشَ (ʔajhaša)\n# أَجْهِشْنَ (ʔajhišna) /ʔad͡ʒ.hiʃ.na/: second-person feminine plural imperative of أَجْهَشَ (ʔajhaša)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajhašna", "ʔajhaša", "ʔujhišna"],
+      "kok_yazilis": "أجهش",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجهش",
+      "tur": "verb",
+      "baslik": "تجهش (form IV)\n# تُجْهِشُ (tujhišu) /tud͡ʒ.hi.ʃu/: inflection of أَجْهَشَ (ʔajhaša):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُجْهَشُ (tujhašu) /tud͡ʒ.ha.ʃu/: inflection of أَجْهَشَ (ʔajhaša):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indica",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujhišu", "ʔajhaša", "tujhašu"],
+      "kok_yazilis": "أجهش",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجهشين",
+      "tur": "verb",
+      "baslik": "تجهشين (form IV)\n# تُجْهِشِينَ (tujhišīna) /tud͡ʒ.hi.ʃiː.na/: second-person feminine singular non-past active indicative of أَجْهَشَ (ʔajhaša)\n# تُجْهَشِينَ (tujhašīna) /tud͡ʒ.ha.ʃiː.na/: second-person feminine singular non-past passive indicative of أَجْهَشَ (ʔajhaša)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujhišīna", "ʔajhaša", "tujhašīna"],
+      "kok_yazilis": "أجهش",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجهش",
+      "tur": "verb",
+      "baslik": "يجهش (form IV)\n# يُجْهِشُ (yujhišu) /jud͡ʒ.hi.ʃu/: third-person masculine singular non-past active indicative of أَجْهَشَ (ʔajhaša)\n# يُجْهَشُ (yujhašu) /jud͡ʒ.ha.ʃu/: third-person masculine singular non-past passive indicative of أَجْهَشَ (ʔajhaša)\n# يُجْهِشَ (yujhiša) /jud͡ʒ.hi.ʃa/: third-person masculine singular non-past active subjunctive of أَجْهَشَ (ʔajhaša)\n# يُجْهَشَ (yujhaša) /jud͡ʒ.ha.ʃ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yujhišu", "ʔajhaša", "yujhašu"],
+      "kok_yazilis": "أجهش",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجهشان",
+      "tur": "verb",
+      "baslik": "تجهشان (form IV)\n# تُجْهِشَانِ (tujhišāni) /tud͡ʒ.hi.ʃaː.ni/: inflection of أَجْهَشَ (ʔajhaša):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُجْهَشَانِ (tujhašāni) /tud͡ʒ.ha.ʃaː.ni/: inflection of أَجْهَشَ (ʔajhaša):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujhišāni", "ʔajhaša", "tujhašāni"],
+      "kok_yazilis": "أجهش",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نجهش",
+      "tur": "verb",
+      "baslik": "نجهش (form IV)\n# نُجْهِشُ (nujhišu) /nud͡ʒ.hi.ʃu/: first-person plural non-past active indicative of أَجْهَشَ (ʔajhaša)\n# نُجْهَشُ (nujhašu) /nud͡ʒ.ha.ʃu/: first-person plural non-past passive indicative of أَجْهَشَ (ʔajhaša)\n# نُجْهِشَ (nujhiša) /nud͡ʒ.hi.ʃa/: first-person plural non-past active subjunctive of أَجْهَشَ (ʔajhaša)\n# نُجْهَشَ (nujhaša) /nud͡ʒ.ha.ʃa/: first-person plural non-past pas",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nujhišu", "ʔajhaša", "nujhašu"],
+      "kok_yazilis": "أجهش",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجهشون",
+      "tur": "verb",
+      "baslik": "تجهشون (form IV)\n# تُجْهِشُونَ (tujhišūna) /tud͡ʒ.hi.ʃuː.na/: second-person masculine plural non-past active indicative of أَجْهَشَ (ʔajhaša)\n# تُجْهَشُونَ (tujhašūna) /tud͡ʒ.ha.ʃuː.na/: second-person masculine plural non-past passive indicative of أَجْهَشَ (ʔajhaša)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujhišūna", "ʔajhaša", "tujhašūna"],
+      "kok_yazilis": "أجهش",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجهشان",
+      "tur": "verb",
+      "baslik": "يجهشان (form IV)\n# يُجْهِشَانِ (yujhišāni) /jud͡ʒ.hi.ʃaː.ni/: third-person masculine dual non-past active indicative of أَجْهَشَ (ʔajhaša)\n# يُجْهَشَانِ (yujhašāni) /jud͡ʒ.ha.ʃaː.ni/: third-person masculine dual non-past passive indicative of أَجْهَشَ (ʔajhaša)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yujhišāni", "ʔajhaša", "yujhašāni"],
+      "kok_yazilis": "أجهش",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجهشون",
+      "tur": "verb",
+      "baslik": "يجهشون (form IV)\n# يُجْهِشُونَ (yujhišūna) /jud͡ʒ.hi.ʃuː.na/: third-person masculine plural non-past active indicative of أَجْهَشَ (ʔajhaša)\n# يُجْهَشُونَ (yujhašūna) /jud͡ʒ.ha.ʃuː.na/: third-person masculine plural non-past passive indicative of أَجْهَشَ (ʔajhaša)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yujhišūna", "ʔajhaša", "yujhašūna"],
+      "kok_yazilis": "أجهش",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجهشن",
+      "tur": "verb",
+      "baslik": "تجهشن (form IV)\n# تُجْهِشْنَ (tujhišna) /tud͡ʒ.hiʃ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَجْهَشَ (ʔajhaša)\n# تُجْهَشْنَ (tujhašna) /tud͡ʒ.haʃ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَجْهَشَ (ʔajhaša)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujhišna", "ʔajhaša", "tujhašna"],
+      "kok_yazilis": "أجهش",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجهشن",
+      "tur": "verb",
+      "baslik": "يجهشن (form IV)\n# يُجْهِشْنَ (yujhišna) /jud͡ʒ.hiʃ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَجْهَشَ (ʔajhaša)\n# يُجْهَشْنَ (yujhašna) /jud͡ʒ.haʃ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَجْهَشَ (ʔajhaša)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yujhišna", "ʔajhaša", "yujhašna"],
+      "kok_yazilis": "أجهش",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجهشا",
+      "tur": "verb",
+      "baslik": "يجهشا (form IV)\n# يُجْهِشَا (yujhišā) /jud͡ʒ.hi.ʃaː/: third-person masculine dual non-past active subjunctive/jussive of أَجْهَشَ (ʔajhaša)\n# يُجْهَشَا (yujhašā) /jud͡ʒ.ha.ʃaː/: third-person masculine dual non-past passive subjunctive/jussive of أَجْهَشَ (ʔajhaša)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yujhišā", "ʔajhaša", "yujhašā"],
+      "kok_yazilis": "أجهش",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجهشا",
+      "tur": "verb",
+      "baslik": "تجهشا (form IV)\n# تُجْهِشَا (tujhišā) /tud͡ʒ.hi.ʃaː/: inflection of أَجْهَشَ (ʔajhaša):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُجْهَشَا (tujhašā) /tud͡ʒ.ha.ʃaː/: inflection of أَجْهَشَ (ʔajhaša):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctiv",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujhišā", "ʔajhaša", "tujhašā"],
+      "kok_yazilis": "أجهش",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجهشي",
+      "tur": "verb",
+      "baslik": "تجهشي (form IV)\n# تُجْهِشِي (tujhišī) /tud͡ʒ.hi.ʃiː/: second-person feminine singular non-past active subjunctive/jussive of أَجْهَشَ (ʔajhaša)\n# تُجْهَشِي (tujhašī) /tud͡ʒ.ha.ʃiː/: second-person feminine singular non-past passive subjunctive/jussive of أَجْهَشَ (ʔajhaša)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujhišī", "ʔajhaša", "tujhašī"],
+      "kok_yazilis": "أجهش",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجهشوا",
+      "tur": "verb",
+      "baslik": "يجهشوا (form IV)\n# يُجْهِشُوا (yujhišū) /jud͡ʒ.hi.ʃuː/: third-person masculine plural non-past active subjunctive/jussive of أَجْهَشَ (ʔajhaša)\n# يُجْهَشُوا (yujhašū) /jud͡ʒ.ha.ʃuː/: third-person masculine plural non-past passive subjunctive/jussive of أَجْهَشَ (ʔajhaša)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yujhišū", "ʔajhaša", "yujhašū"],
+      "kok_yazilis": "أجهش",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجهشي",
+      "tur": "verb",
+      "baslik": "أَجْهِشِي • (ʔajhišī) (form IV) /ʔad͡ʒ.hi.ʃiː/\n# second-person feminine singular imperative of أَجْهَشَ (ʔajhaša)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajhišī", "ʔajhaša"],
+      "kok_yazilis": "أجهش",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجهشوا",
+      "tur": "verb",
+      "baslik": "تجهشوا (form IV)\n# تُجْهِشُوا (tujhišū) /tud͡ʒ.hi.ʃuː/: second-person masculine plural non-past active subjunctive/jussive of أَجْهَشَ (ʔajhaša)\n# تُجْهَشُوا (tujhašū) /tud͡ʒ.ha.ʃuː/: second-person masculine plural non-past passive subjunctive/jussive of أَجْهَشَ (ʔajhaša)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujhišū", "ʔajhaša", "tujhašū"],
+      "kok_yazilis": "أجهش",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءجهش", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

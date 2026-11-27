@@ -1,677 +1,482 @@
 {
   "kok": "زاح",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "زاح", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أزاح",
-        "u": "أزاح",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أزاح (form I)\n# أُزَاحُ (ʔuzāḥu) /ʔu.zaː.ħu/: first-person singular non-past passive indicative of زَاحَ (zāḥa)\n# أُزَاحَ (ʔuzāḥa) /ʔu.zaː.ħa/: first-person singular non-past passive subjunctive of زَاحَ (zāḥa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔuzāḥu", "zāḥa", "ʔuzāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "نزح",
-        "u": "نزح",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "نزح (form I)\n# نَزِحْ (naziḥ) /na.ziħ/: first-person plural non-past active jussive of زَاحَ (zāḥa)\n# نُزَحْ (nuzaḥ) /nu.zaħ/: first-person plural non-past passive jussive of زَاحَ (zāḥa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naziḥ", "zāḥa", "nuzaḥ"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "أزيح",
-        "u": "أزيح",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أزيح (form I)\n# أَزِيحُ (ʔazīḥu) /ʔa.ziː.ħu/: first-person singular non-past active indicative of زَاحَ (zāḥa)\n# أَزِيحَ (ʔazīḥa) /ʔa.ziː.ħa/: first-person singular non-past active subjunctive of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔazīḥu", "zāḥa", "ʔazīḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "يزيح",
-        "u": "يزيح",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يزيح (form I)\n# يَزِيحُ (yazīḥu) /ja.ziː.ħu/: third-person masculine singular non-past active indicative of زَاحَ (zāḥa)\n# يَزِيحَ (yazīḥa) /ja.ziː.ħa/: third-person masculine singular non-past active subjunctive of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazīḥu", "zāḥa", "yazīḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تزيح",
-        "u": "تزيح",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تزيح (form I)\n# تَزِيحُ (tazīḥu) /ta.ziː.ħu/: inflection of زَاحَ (zāḥa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَزِيحَ (tazīḥa) /ta.ziː.ħa/: inflection of زَاحَ (zāḥa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazīḥu", "zāḥa", "tazīḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "يزيحان",
-        "u": "يزيحان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَزِيحَانِ • (yazīḥāni) (form I) /ja.ziː.ħaː.ni/\n# third-person masculine dual non-past active indicative of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazīḥāni", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تزيحين",
-        "u": "تزيحين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَزِيحِينَ • (tazīḥīna) (form I) /ta.ziː.ħiː.na/\n# second-person feminine singular non-past active indicative of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazīḥīna", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تزيحان",
-        "u": "تزيحان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَزِيحَانِ • (tazīḥāni) (form I) /ta.ziː.ħaː.ni/\n# inflection of زَاحَ (zāḥa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazīḥāni", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "نزيح",
-        "u": "نزيح",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نزيح (form I)\n# نَزِيحُ (nazīḥu) /na.ziː.ħu/: first-person plural non-past active indicative of زَاحَ (zāḥa)\n# نَزِيحَ (nazīḥa) /na.ziː.ħa/: first-person plural non-past active subjunctive of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nazīḥu", "zāḥa", "nazīḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تزحن",
-        "u": "تزحن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تزحن (form I)\n# تَزِحْنَ (taziḥna) /ta.ziħ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of زَاحَ (zāḥa)\n# تُزَحْنَ (tuzaḥna) /tu.zaħ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taziḥna", "zāḥa", "tuzaḥna"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "يزيحون",
-        "u": "يزيحون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَزِيحُونَ • (yazīḥūna) (form I) /ja.ziː.ħuː.na/\n# third-person masculine plural non-past active indicative of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazīḥūna", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تزيحون",
-        "u": "تزيحون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَزِيحُونَ • (tazīḥūna) (form I) /ta.ziː.ħuː.na/\n# second-person masculine plural non-past active indicative of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazīḥūna", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "يزحن",
-        "u": "يزحن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يزحن (form I)\n# يَزِحْنَ (yaziḥna) /ja.ziħ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of زَاحَ (zāḥa)\n# يُزَحْنَ (yuzaḥna) /ju.zaħ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaziḥna", "zāḥa", "yuzaḥna"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تزاح",
-        "u": "تزاح",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تزاح (form I)\n# تُزَاحُ (tuzāḥu) /tu.zaː.ħu/: inflection of زَاحَ (zāḥa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُزَاحَ (tuzāḥa) /tu.zaː.ħa/: inflection of زَاحَ (zāḥa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzāḥu", "zāḥa", "tuzāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تزاحين",
-        "u": "تزاحين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُزَاحِينَ • (tuzāḥīna) (form I) /tu.zaː.ħiː.na/\n# second-person feminine singular non-past passive indicative of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzāḥīna", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "يزاح",
-        "u": "يزاح",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يزاح (form I)\n# يُزَاحُ (yuzāḥu) /ju.zaː.ħu/: third-person masculine singular non-past passive indicative of زَاحَ (zāḥa)\n# يُزَاحَ (yuzāḥa) /ju.zaː.ħa/: third-person masculine singular non-past passive subjunctive of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuzāḥu", "zāḥa", "yuzāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تزاحان",
-        "u": "تزاحان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُزَاحَانِ • (tuzāḥāni) (form I) /tu.zaː.ħaː.ni/\n# inflection of زَاحَ (zāḥa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzāḥāni", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "يزاحان",
-        "u": "يزاحان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُزَاحَانِ • (yuzāḥāni) (form I) /ju.zaː.ħaː.ni/\n# third-person masculine dual non-past passive indicative of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuzāḥāni", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "نزاح",
-        "u": "نزاح",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نزاح (form I)\n# نُزَاحُ (nuzāḥu) /nu.zaː.ħu/: first-person plural non-past passive indicative of زَاحَ (zāḥa)\n# نُزَاحَ (nuzāḥa) /nu.zaː.ħa/: first-person plural non-past passive subjunctive of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuzāḥu", "zāḥa", "nuzāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تزاحون",
-        "u": "تزاحون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُزَاحُونَ • (tuzāḥūna) (form I) /tu.zaː.ħuː.na/\n# second-person masculine plural non-past passive indicative of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzāḥūna", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تزيحي",
-        "u": "تزيحي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَزِيحِي • (tazīḥī) (form I) /ta.ziː.ħiː/\n# second-person feminine singular non-past active subjunctive/jussive of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazīḥī", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "يزاحون",
-        "u": "يزاحون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُزَاحُونَ • (yuzāḥūna) (form I) /ju.zaː.ħuː.na/\n# third-person masculine plural non-past passive indicative of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuzāḥūna", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تزيحوا",
-        "u": "تزيحوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَزِيحُوا • (tazīḥū) (form I) /ta.ziː.ħuː/\n# second-person masculine plural non-past active subjunctive/jussive of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazīḥū", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تزيحا",
-        "u": "تزيحا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَزِيحَا • (tazīḥā) (form I) /ta.ziː.ħaː/\n# inflection of زَاحَ (zāḥa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazīḥā", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "يزيحوا",
-        "u": "يزيحوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَزِيحُوا • (yazīḥū) (form I) /ja.ziː.ħuː/\n# third-person masculine plural non-past active subjunctive/jussive of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazīḥū", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "يزيحا",
-        "u": "يزيحا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَزِيحَا • (yazīḥā) (form I) /ja.ziː.ħaː/\n# third-person masculine dual non-past active subjunctive/jussive of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazīḥā", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تزاحي",
-        "u": "تزاحي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُزَاحِي • (tuzāḥī) (form I) /tu.zaː.ħiː/\n# second-person feminine singular non-past passive subjunctive/jussive of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzāḥī", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "يزاحا",
-        "u": "يزاحا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُزَاحَا • (yuzāḥā) (form I) /ju.zaː.ħaː/\n# third-person masculine dual non-past passive subjunctive/jussive of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuzāḥā", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تزاحا",
-        "u": "تزاحا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُزَاحَا • (tuzāḥā) (form I) /tu.zaː.ħaː/\n# inflection of زَاحَ (zāḥa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzāḥā", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "يزاحوا",
-        "u": "يزاحوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُزَاحُوا • (yuzāḥū) (form I) /ju.zaː.ħuː/\n# third-person masculine plural non-past passive subjunctive/jussive of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuzāḥū", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تزاحوا",
-        "u": "تزاحوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُزَاحُوا • (tuzāḥū) (form I) /tu.zaː.ħuː/\n# second-person masculine plural non-past passive subjunctive/jussive of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzāḥū", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "أزح",
-        "u": "أزح",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أزح (form I)\n# أَزِحْ (ʔaziḥ) /ʔa.ziħ/: first-person singular non-past active jussive of زَاحَ (zāḥa)\n# أُزَحْ (ʔuzaḥ) /ʔu.zaħ/: first-person singular non-past passive jussive of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaziḥ", "zāḥa", "ʔuzaḥ"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تزح",
-        "u": "تزح",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تزح (form I)\n# تَزِحْ (taziḥ) /ta.ziħ/: inflection of زَاحَ (zāḥa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُزَحْ (tuzaḥ) /tu.zaħ/: inflection of زَاحَ (zāḥa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taziḥ", "zāḥa", "tuzaḥ"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "يزح",
-        "u": "يزح",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يزح (form I)\n# يَزِحْ (yaziḥ) /ja.ziħ/: third-person masculine singular non-past active jussive of زَاحَ (zāḥa)\n# يُزَحْ (yuzaḥ) /ju.zaħ/: third-person masculine singular non-past passive jussive of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaziḥ", "zāḥa", "yuzaḥ"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "زحت",
-        "u": "زحت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زحت (form I)\n# زِحْتُ (ziḥtu) /ziħ.tu/: first-person singular past active/passive of زَاحَ (zāḥa)\n# زِحْتَ (ziḥta) /ziħ.ta/: second-person masculine singular past active/passive of زَاحَ (zāḥa)\n# زِحْتِ (ziḥti) /ziħ.ti/: second-person feminine singular past active/passive of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ziḥtu", "zāḥa", "ziḥta"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "زاحت",
-        "u": "زاحت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زَاحَتْ • (zāḥat) (form I) /zaː.ħat/\n# third-person feminine singular past active of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zāḥat", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "زاحا",
-        "u": "زاحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زَاحَا • (zāḥā) (form I) /zaː.ħaː/\n# third-person masculine dual past active of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zāḥā", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "زحتما",
-        "u": "زحتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زِحْتُمَا • (ziḥtumā) (form I) /ziħ.tu.maː/\n# second-person dual past active/passive of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ziḥtumā", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "زحنا",
-        "u": "زحنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زِحْنَا • (ziḥnā) (form I) /ziħ.naː/\n# first-person plural past active/passive of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ziḥnā", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "زاحتا",
-        "u": "زاحتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زَاحَتَا • (zāḥatā) (form I) /zaː.ħa.taː/\n# third-person feminine dual past active of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zāḥatā", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "زحتم",
-        "u": "زحتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زِحْتُمْ • (ziḥtum) (form I) /ziħ.tum/\n# second-person masculine plural past active/passive of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ziḥtum", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "زحتن",
-        "u": "زحتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زِحْتُنَّ • (ziḥtunna) (form I) /ziħ.tun.na/\n# second-person feminine plural past active/passive of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ziḥtunna", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "زاحوا",
-        "u": "زاحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زَاحُوا • (zāḥū) (form I) /zaː.ħuː/\n# third-person masculine plural past active of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zāḥū", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "زحن",
-        "u": "زحن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زِحْنَ • (ziḥna) (form I) /ziħ.na/\n# inflection of زَاحَ (zāḥa):\n## third-person feminine plural past active/passive\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ziḥna", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "زيح",
-        "u": "زيح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زِيحَ • (zīḥa) (form I) /ziː.ħa/\n# third-person masculine singular past passive of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zīḥa", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "زيحت",
-        "u": "زيحت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زِيحَتْ • (zīḥat) (form I) /ziː.ħat/\n# third-person feminine singular past passive of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zīḥat", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "زيحتا",
-        "u": "زيحتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زِيحَتَا • (zīḥatā) (form I) /ziː.ħa.taː/\n# third-person feminine dual past passive of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zīḥatā", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "زيحا",
-        "u": "زيحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زِيحَا • (zīḥā) (form I) /ziː.ħaː/\n# inflection of زَاحَ (zāḥa):\n## third-person masculine dual past passive\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zīḥā", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "زيحوا",
-        "u": "زيحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زِيحُوا • (zīḥū) (form I) /ziː.ħuː/\n# inflection of زَاحَ (zāḥa):\n## third-person masculine plural past passive\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zīḥū", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "زيحي",
-        "u": "زيحي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زِيحِي • (zīḥī) (form I) /ziː.ħiː/\n# second-person feminine singular imperative of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zīḥī", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      },
-      {
-        "w": "زح",
-        "u": "زح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زِحْ • (ziḥ) (form I) /ziħ/\n# second-person masculine singular imperative of زَاحَ (zāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ziḥ", "zāḥa"],
-        "k": "زاح",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "زح",
+  "ses": {
     "harf": "ز",
+    "fasil": "زح",
     "mahrec": "esaliyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "أزاح",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أزاح (form I)\n# أُزَاحُ (ʔuzāḥu) /ʔu.zaː.ħu/: first-person singular non-past passive indicative of زَاحَ (zāḥa)\n# أُزَاحَ (ʔuzāḥa) /ʔu.zaː.ħa/: first-person singular non-past passive subjunctive of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔuzāḥu", "zāḥa", "ʔuzāḥa"]
+    },
+    {
+      "madde": "نزح",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "نزح (form I)\n# نَزِحْ (naziḥ) /na.ziħ/: first-person plural non-past active jussive of زَاحَ (zāḥa)\n# نُزَحْ (nuzaḥ) /nu.zaħ/: first-person plural non-past passive jussive of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naziḥ", "zāḥa", "nuzaḥ"]
+    },
+    {
+      "madde": "أزيح",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أزيح (form I)\n# أَزِيحُ (ʔazīḥu) /ʔa.ziː.ħu/: first-person singular non-past active indicative of زَاحَ (zāḥa)\n# أَزِيحَ (ʔazīḥa) /ʔa.ziː.ħa/: first-person singular non-past active subjunctive of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔazīḥu", "zāḥa", "ʔazīḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزيح",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يزيح (form I)\n# يَزِيحُ (yazīḥu) /ja.ziː.ħu/: third-person masculine singular non-past active indicative of زَاحَ (zāḥa)\n# يَزِيحَ (yazīḥa) /ja.ziː.ħa/: third-person masculine singular non-past active subjunctive of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazīḥu", "zāḥa", "yazīḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزيح",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تزيح (form I)\n# تَزِيحُ (tazīḥu) /ta.ziː.ħu/: inflection of زَاحَ (zāḥa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَزِيحَ (tazīḥa) /ta.ziː.ħa/: inflection of زَاحَ (zāḥa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazīḥu", "zāḥa", "tazīḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزيحان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَزِيحَانِ • (yazīḥāni) (form I) /ja.ziː.ħaː.ni/\n# third-person masculine dual non-past active indicative of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazīḥāni", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزيحين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَزِيحِينَ • (tazīḥīna) (form I) /ta.ziː.ħiː.na/\n# second-person feminine singular non-past active indicative of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazīḥīna", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزيحان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَزِيحَانِ • (tazīḥāni) (form I) /ta.ziː.ħaː.ni/\n# inflection of زَاحَ (zāḥa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazīḥāni", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نزيح",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نزيح (form I)\n# نَزِيحُ (nazīḥu) /na.ziː.ħu/: first-person plural non-past active indicative of زَاحَ (zāḥa)\n# نَزِيحَ (nazīḥa) /na.ziː.ħa/: first-person plural non-past active subjunctive of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nazīḥu", "zāḥa", "nazīḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزحن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تزحن (form I)\n# تَزِحْنَ (taziḥna) /ta.ziħ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of زَاحَ (zāḥa)\n# تُزَحْنَ (tuzaḥna) /tu.zaħ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taziḥna", "zāḥa", "tuzaḥna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزيحون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَزِيحُونَ • (yazīḥūna) (form I) /ja.ziː.ħuː.na/\n# third-person masculine plural non-past active indicative of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazīḥūna", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزيحون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَزِيحُونَ • (tazīḥūna) (form I) /ta.ziː.ħuː.na/\n# second-person masculine plural non-past active indicative of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazīḥūna", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزحن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يزحن (form I)\n# يَزِحْنَ (yaziḥna) /ja.ziħ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of زَاحَ (zāḥa)\n# يُزَحْنَ (yuzaḥna) /ju.zaħ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaziḥna", "zāḥa", "yuzaḥna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزاح",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تزاح (form I)\n# تُزَاحُ (tuzāḥu) /tu.zaː.ħu/: inflection of زَاحَ (zāḥa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُزَاحَ (tuzāḥa) /tu.zaː.ħa/: inflection of زَاحَ (zāḥa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzāḥu", "zāḥa", "tuzāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزاحين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُزَاحِينَ • (tuzāḥīna) (form I) /tu.zaː.ħiː.na/\n# second-person feminine singular non-past passive indicative of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzāḥīna", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزاح",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يزاح (form I)\n# يُزَاحُ (yuzāḥu) /ju.zaː.ħu/: third-person masculine singular non-past passive indicative of زَاحَ (zāḥa)\n# يُزَاحَ (yuzāḥa) /ju.zaː.ħa/: third-person masculine singular non-past passive subjunctive of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuzāḥu", "zāḥa", "yuzāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزاحان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُزَاحَانِ • (tuzāḥāni) (form I) /tu.zaː.ħaː.ni/\n# inflection of زَاحَ (zāḥa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzāḥāni", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزاحان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُزَاحَانِ • (yuzāḥāni) (form I) /ju.zaː.ħaː.ni/\n# third-person masculine dual non-past passive indicative of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuzāḥāni", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نزاح",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نزاح (form I)\n# نُزَاحُ (nuzāḥu) /nu.zaː.ħu/: first-person plural non-past passive indicative of زَاحَ (zāḥa)\n# نُزَاحَ (nuzāḥa) /nu.zaː.ħa/: first-person plural non-past passive subjunctive of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuzāḥu", "zāḥa", "nuzāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزاحون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُزَاحُونَ • (tuzāḥūna) (form I) /tu.zaː.ħuː.na/\n# second-person masculine plural non-past passive indicative of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzāḥūna", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزيحي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَزِيحِي • (tazīḥī) (form I) /ta.ziː.ħiː/\n# second-person feminine singular non-past active subjunctive/jussive of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazīḥī", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزاحون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُزَاحُونَ • (yuzāḥūna) (form I) /ju.zaː.ħuː.na/\n# third-person masculine plural non-past passive indicative of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuzāḥūna", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزيحوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَزِيحُوا • (tazīḥū) (form I) /ta.ziː.ħuː/\n# second-person masculine plural non-past active subjunctive/jussive of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazīḥū", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزيحا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَزِيحَا • (tazīḥā) (form I) /ta.ziː.ħaː/\n# inflection of زَاحَ (zāḥa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazīḥā", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزيحوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَزِيحُوا • (yazīḥū) (form I) /ja.ziː.ħuː/\n# third-person masculine plural non-past active subjunctive/jussive of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazīḥū", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزيحا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَزِيحَا • (yazīḥā) (form I) /ja.ziː.ħaː/\n# third-person masculine dual non-past active subjunctive/jussive of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazīḥā", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزاحي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُزَاحِي • (tuzāḥī) (form I) /tu.zaː.ħiː/\n# second-person feminine singular non-past passive subjunctive/jussive of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzāḥī", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزاحا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُزَاحَا • (yuzāḥā) (form I) /ju.zaː.ħaː/\n# third-person masculine dual non-past passive subjunctive/jussive of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuzāḥā", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزاحا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُزَاحَا • (tuzāḥā) (form I) /tu.zaː.ħaː/\n# inflection of زَاحَ (zāḥa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzāḥā", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزاحوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُزَاحُوا • (yuzāḥū) (form I) /ju.zaː.ħuː/\n# third-person masculine plural non-past passive subjunctive/jussive of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuzāḥū", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزاحوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُزَاحُوا • (tuzāḥū) (form I) /tu.zaː.ħuː/\n# second-person masculine plural non-past passive subjunctive/jussive of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzāḥū", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أزح",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أزح (form I)\n# أَزِحْ (ʔaziḥ) /ʔa.ziħ/: first-person singular non-past active jussive of زَاحَ (zāḥa)\n# أُزَحْ (ʔuzaḥ) /ʔu.zaħ/: first-person singular non-past passive jussive of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaziḥ", "zāḥa", "ʔuzaḥ"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزح",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تزح (form I)\n# تَزِحْ (taziḥ) /ta.ziħ/: inflection of زَاحَ (zāḥa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُزَحْ (tuzaḥ) /tu.zaħ/: inflection of زَاحَ (zāḥa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taziḥ", "zāḥa", "tuzaḥ"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزح",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يزح (form I)\n# يَزِحْ (yaziḥ) /ja.ziħ/: third-person masculine singular non-past active jussive of زَاحَ (zāḥa)\n# يُزَحْ (yuzaḥ) /ju.zaħ/: third-person masculine singular non-past passive jussive of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaziḥ", "zāḥa", "yuzaḥ"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زحت",
+      "tur": "verb",
+      "baslik": "زحت (form I)\n# زِحْتُ (ziḥtu) /ziħ.tu/: first-person singular past active/passive of زَاحَ (zāḥa)\n# زِحْتَ (ziḥta) /ziħ.ta/: second-person masculine singular past active/passive of زَاحَ (zāḥa)\n# زِحْتِ (ziḥti) /ziħ.ti/: second-person feminine singular past active/passive of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ziḥtu", "zāḥa", "ziḥta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زاحت",
+      "tur": "verb",
+      "baslik": "زَاحَتْ • (zāḥat) (form I) /zaː.ħat/\n# third-person feminine singular past active of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zāḥat", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زاحا",
+      "tur": "verb",
+      "baslik": "زَاحَا • (zāḥā) (form I) /zaː.ħaː/\n# third-person masculine dual past active of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zāḥā", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زحتما",
+      "tur": "verb",
+      "baslik": "زِحْتُمَا • (ziḥtumā) (form I) /ziħ.tu.maː/\n# second-person dual past active/passive of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ziḥtumā", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زحنا",
+      "tur": "verb",
+      "baslik": "زِحْنَا • (ziḥnā) (form I) /ziħ.naː/\n# first-person plural past active/passive of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ziḥnā", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زاحتا",
+      "tur": "verb",
+      "baslik": "زَاحَتَا • (zāḥatā) (form I) /zaː.ħa.taː/\n# third-person feminine dual past active of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zāḥatā", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زحتم",
+      "tur": "verb",
+      "baslik": "زِحْتُمْ • (ziḥtum) (form I) /ziħ.tum/\n# second-person masculine plural past active/passive of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ziḥtum", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زحتن",
+      "tur": "verb",
+      "baslik": "زِحْتُنَّ • (ziḥtunna) (form I) /ziħ.tun.na/\n# second-person feminine plural past active/passive of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ziḥtunna", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زاحوا",
+      "tur": "verb",
+      "baslik": "زَاحُوا • (zāḥū) (form I) /zaː.ħuː/\n# third-person masculine plural past active of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zāḥū", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زحن",
+      "tur": "verb",
+      "baslik": "زِحْنَ • (ziḥna) (form I) /ziħ.na/\n# inflection of زَاحَ (zāḥa):\n## third-person feminine plural past active/passive\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ziḥna", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زيح",
+      "tur": "verb",
+      "baslik": "زِيحَ • (zīḥa) (form I) /ziː.ħa/\n# third-person masculine singular past passive of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zīḥa", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زيحت",
+      "tur": "verb",
+      "baslik": "زِيحَتْ • (zīḥat) (form I) /ziː.ħat/\n# third-person feminine singular past passive of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zīḥat", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زيحتا",
+      "tur": "verb",
+      "baslik": "زِيحَتَا • (zīḥatā) (form I) /ziː.ħa.taː/\n# third-person feminine dual past passive of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zīḥatā", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زيحا",
+      "tur": "verb",
+      "baslik": "زِيحَا • (zīḥā) (form I) /ziː.ħaː/\n# inflection of زَاحَ (zāḥa):\n## third-person masculine dual past passive\n## second-person dual imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zīḥā", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زيحوا",
+      "tur": "verb",
+      "baslik": "زِيحُوا • (zīḥū) (form I) /ziː.ħuː/\n# inflection of زَاحَ (zāḥa):\n## third-person masculine plural past passive\n## second-person masculine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zīḥū", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زيحي",
+      "tur": "verb",
+      "baslik": "زِيحِي • (zīḥī) (form I) /ziː.ħiː/\n# second-person feminine singular imperative of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zīḥī", "zāḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زح",
+      "tur": "verb",
+      "baslik": "زِحْ • (ziḥ) (form I) /ziħ/\n# second-person masculine singular imperative of زَاحَ (zāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ziḥ", "zāḥa"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "زاح", "r7"]
+  ],
+  "mana": {
     "ince": "dislocate.v.02",
     "orta": "verb.change",
     "ust": "fiil ve hadise",
@@ -679,16 +484,11 @@
     "dayanak_tanim": "put out of its usual place, position, or relationship",
     "synset_sayisi": 19
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "bump.v.01",
     "dislocate.v.02",
     "dislodge.v.01",
@@ -709,12 +509,10 @@
     "remove.v.08",
     "shift.v.02"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

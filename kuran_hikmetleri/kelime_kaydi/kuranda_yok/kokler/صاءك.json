@@ -1,722 +1,495 @@
 {
   "kok": "صاءك",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "صاءك", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "صاءكتما",
-        "u": "صاءكتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَاءَكْتُمَا • (ṣāʔaktumā) (form III) /sˤaː.ʔak.tu.maː/\n# second-person dual past active of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣāʔaktumā", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "صاءكت",
-        "u": "صاءكت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صاءكت (form III)\n# صَاءَكْتُ (ṣāʔaktu) /sˤaː.ʔak.tu/: first-person singular past active of صَاءَكَ (ṣāʔaka)\n# صَاءَكْتَ (ṣāʔakta) /sˤaː.ʔak.ta/: second-person masculine singular past active of صَاءَكَ (ṣāʔaka)\n# صَاءَكْتِ (ṣāʔakti) /sˤaː.ʔak.ti/: second-person feminine singular past active of صَاءَكَ (ṣāʔaka)\n# صَاءَكَتْ (ṣāʔakat) /sˤaː.ʔa.kat/: third-person feminine singular past active of صَاءَك",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣāʔaktu", "ṣāʔaka", "ṣāʔakta"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "صاءكا",
-        "u": "صاءكا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَاءَكَا • (ṣāʔakā) (form III) /sˤaː.ʔa.kaː/\n# third-person masculine dual past active of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣāʔakā", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "صاءكتم",
-        "u": "صاءكتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَاءَكْتُمْ • (ṣāʔaktum) (form III) /sˤaː.ʔak.tum/\n# second-person masculine plural past active of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣāʔaktum", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "صاءكتا",
-        "u": "صاءكتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَاءَكَتَا • (ṣāʔakatā) (form III) /sˤaː.ʔa.ka.taː/\n# third-person feminine dual past active of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣāʔakatā", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "صاءكنا",
-        "u": "صاءكنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَاءَكْنَا • (ṣāʔaknā) (form III) /sˤaː.ʔak.naː/\n# first-person plural past active of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣāʔaknā", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "صاءكوا",
-        "u": "صاءكوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَاءَكُوا • (ṣāʔakū) (form III) /sˤaː.ʔa.kuː/\n# third-person masculine plural past active of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣāʔakū", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "صاءكتن",
-        "u": "صاءكتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَاءَكْتُنَّ • (ṣāʔaktunna) (form III) /sˤaː.ʔak.tun.na/\n# second-person feminine plural past active of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣāʔaktunna", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "صوئكتما",
-        "u": "صوئكتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صُوئِكْتُمَا • (ṣūʔiktumā) (form III) /sˤuː.ʔik.tu.maː/\n# second-person dual past passive of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣūʔiktumā", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "صاءكن",
-        "u": "صاءكن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَاءَكْنَ • (ṣāʔakna) (form III) /sˤaː.ʔak.na/\n# third-person feminine plural past active of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣāʔakna", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "صوئكت",
-        "u": "صوئكت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صوئكت (form III)\n# صُوئِكْتُ (ṣūʔiktu) /sˤuː.ʔik.tu/: first-person singular past passive of صَاءَكَ (ṣāʔaka)\n# صُوئِكْتَ (ṣūʔikta) /sˤuː.ʔik.ta/: second-person masculine singular past passive of صَاءَكَ (ṣāʔaka)\n# صُوئِكْتِ (ṣūʔikti) /sˤuː.ʔik.ti/: second-person feminine singular past passive of صَاءَكَ (ṣāʔaka)\n# صُوئِكَتْ (ṣūʔikat) /sˤuː.ʔi.kat/: third-person feminine singular past passive of صَ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣūʔiktu", "ṣāʔaka", "ṣūʔikta"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "صوئك",
-        "u": "صوئك",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صُوئِكَ • (ṣūʔika) (form III) /sˤuː.ʔi.ka/\n# third-person masculine singular past passive of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣūʔika", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "صوئكنا",
-        "u": "صوئكنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صُوئِكْنَا • (ṣūʔiknā) (form III) /sˤuː.ʔik.naː/\n# first-person plural past passive of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣūʔiknā", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "صوئكتا",
-        "u": "صوئكتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صُوئِكَتَا • (ṣūʔikatā) (form III) /sˤuː.ʔi.ka.taː/\n# third-person feminine dual past passive of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣūʔikatā", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "صوئكا",
-        "u": "صوئكا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صُوئِكَا • (ṣūʔikā) (form III) /sˤuː.ʔi.kaː/\n# third-person masculine dual past passive of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣūʔikā", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "صوئكوا",
-        "u": "صوئكوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صُوئِكُوا • (ṣūʔikū) (form III) /sˤuː.ʔi.kuː/\n# third-person masculine plural past passive of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣūʔikū", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "صوئكن",
-        "u": "صوئكن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صُوئِكْنَ • (ṣūʔikna) (form III) /sˤuː.ʔik.na/\n# third-person feminine plural past passive of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣūʔikna", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "أصائك",
-        "u": "أصائك",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أصائك (form III)\n# أُصَائِكُ (ʔuṣāʔiku) /ʔu.sˤaː.ʔi.ku/: first-person singular non-past active indicative of صَاءَكَ (ṣāʔaka)\n# أُصَائِكَ (ʔuṣāʔika) /ʔu.sˤaː.ʔi.ka/: first-person singular non-past active subjunctive of صَاءَكَ (ṣāʔaka)\n# أُصَائِكْ (ʔuṣāʔik) /ʔu.sˤaː.ʔik/: first-person singular non-past active jussive of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔuṣāʔiku", "ṣāʔaka", "ʔuṣāʔika"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "صوئكتم",
-        "u": "صوئكتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صُوئِكْتُمْ • (ṣūʔiktum) (form III) /sˤuː.ʔik.tum/\n# second-person masculine plural past passive of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣūʔiktum", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "صوئكتن",
-        "u": "صوئكتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صُوئِكْتُنَّ • (ṣūʔiktunna) (form III) /sˤuː.ʔik.tun.na/\n# second-person feminine plural past passive of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣūʔiktunna", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "تصائك",
-        "u": "تصائك",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تصائك (form III)\n# تُصَائِكُ (tuṣāʔiku) /tu.sˤaː.ʔi.ku/: inflection of صَاءَكَ (ṣāʔaka):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُصَائِكَ (tuṣāʔika) /tu.sˤaː.ʔi.ka/: inflection of صَاءَكَ (ṣāʔaka):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active s",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṣāʔiku", "ṣāʔaka", "tuṣāʔika"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "يصائكان",
-        "u": "يصائكان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُصَائِكَانِ • (yuṣāʔikāni) (form III) /ju.sˤaː.ʔi.kaː.ni/\n# third-person masculine dual non-past active indicative of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṣāʔikāni", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "يصائك",
-        "u": "يصائك",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يصائك (form III)\n# يُصَائِكُ (yuṣāʔiku) /ju.sˤaː.ʔi.ku/: third-person masculine singular non-past active indicative of صَاءَكَ (ṣāʔaka)\n# يُصَائِكَ (yuṣāʔika) /ju.sˤaː.ʔi.ka/: third-person masculine singular non-past active subjunctive of صَاءَكَ (ṣāʔaka)\n# يُصَائِكْ (yuṣāʔik) /ju.sˤaː.ʔik/: third-person masculine singular non-past active jussive of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṣāʔiku", "ṣāʔaka", "yuṣāʔika"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "تصائكان",
-        "u": "تصائكان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُصَائِكَانِ • (tuṣāʔikāni) (form III) /tu.sˤaː.ʔi.kaː.ni/\n# inflection of صَاءَكَ (ṣāʔaka):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṣāʔikāni", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "تصائكون",
-        "u": "تصائكون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُصَائِكُونَ • (tuṣāʔikūna) (form III) /tu.sˤaː.ʔi.kuː.na/\n# second-person masculine plural non-past active indicative of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṣāʔikūna", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "تصائكين",
-        "u": "تصائكين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُصَائِكِينَ • (tuṣāʔikīna) (form III) /tu.sˤaː.ʔi.kiː.na/\n# second-person feminine singular non-past active indicative of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṣāʔikīna", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "نصائك",
-        "u": "نصائك",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نصائك (form III)\n# نُصَائِكُ (nuṣāʔiku) /nu.sˤaː.ʔi.ku/: first-person plural non-past active indicative of صَاءَكَ (ṣāʔaka)\n# نُصَائِكَ (nuṣāʔika) /nu.sˤaː.ʔi.ka/: first-person plural non-past active subjunctive of صَاءَكَ (ṣāʔaka)\n# نُصَائِكْ (nuṣāʔik) /nu.sˤaː.ʔik/: first-person plural non-past active jussive of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nuṣāʔiku", "ṣāʔaka", "nuṣāʔika"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "يصائكون",
-        "u": "يصائكون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُصَائِكُونَ • (yuṣāʔikūna) (form III) /ju.sˤaː.ʔi.kuː.na/\n# third-person masculine plural non-past active indicative of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṣāʔikūna", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "تصائكن",
-        "u": "تصائكن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُصَائِكْنَ • (tuṣāʔikna) (form III) /tu.sˤaː.ʔik.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṣāʔikna", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "تصاءك",
-        "u": "تصاءك",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تصاءك (form III)\n# تُصَاءَكُ (tuṣāʔaku) /tu.sˤaː.ʔa.ku/: inflection of صَاءَكَ (ṣāʔaka):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُصَاءَكَ (tuṣāʔaka) /tu.sˤaː.ʔa.ka/: inflection of صَاءَكَ (ṣāʔaka):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passi",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṣāʔaku", "ṣāʔaka", "tuṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "تصاءكين",
-        "u": "تصاءكين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُصَاءَكِينَ • (tuṣāʔakīna) (form III) /tu.sˤaː.ʔa.kiː.na/\n# second-person feminine singular non-past passive indicative of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṣāʔakīna", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "يصاءك",
-        "u": "يصاءك",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يصاءك (form III)\n# يُصَاءَكُ (yuṣāʔaku) /ju.sˤaː.ʔa.ku/: third-person masculine singular non-past passive indicative of صَاءَكَ (ṣāʔaka)\n# يُصَاءَكَ (yuṣāʔaka) /ju.sˤaː.ʔa.ka/: third-person masculine singular non-past passive subjunctive of صَاءَكَ (ṣāʔaka)\n# يُصَاءَكْ (yuṣāʔak) /ju.sˤaː.ʔak/: third-person masculine singular non-past passive jussive of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṣāʔaku", "ṣāʔaka", "yuṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "يصائكن",
-        "u": "يصائكن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُصَائِكْنَ • (yuṣāʔikna) (form III) /ju.sˤaː.ʔik.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṣāʔikna", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "تصاءكان",
-        "u": "تصاءكان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُصَاءَكَانِ • (tuṣāʔakāni) (form III) /tu.sˤaː.ʔa.kaː.ni/\n# inflection of صَاءَكَ (ṣāʔaka):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṣāʔakāni", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "نصاءك",
-        "u": "نصاءك",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نصاءك (form III)\n# نُصَاءَكُ (nuṣāʔaku) /nu.sˤaː.ʔa.ku/: first-person plural non-past passive indicative of صَاءَكَ (ṣāʔaka)\n# نُصَاءَكَ (nuṣāʔaka) /nu.sˤaː.ʔa.ka/: first-person plural non-past passive subjunctive of صَاءَكَ (ṣāʔaka)\n# نُصَاءَكْ (nuṣāʔak) /nu.sˤaː.ʔak/: first-person plural non-past passive jussive of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nuṣāʔaku", "ṣāʔaka", "nuṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "أصاءك",
-        "u": "أصاءك",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أصاءك (form III)\n# أُصَاءَكُ (ʔuṣāʔaku) /ʔu.sˤaː.ʔa.ku/: first-person singular non-past passive indicative of صَاءَكَ (ṣāʔaka)\n# أُصَاءَكَ (ʔuṣāʔaka) /ʔu.sˤaː.ʔa.ka/: first-person singular non-past passive subjunctive of صَاءَكَ (ṣāʔaka)\n# أُصَاءَكْ (ʔuṣāʔak) /ʔu.sˤaː.ʔak/: first-person singular non-past passive jussive of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔuṣāʔaku", "ṣāʔaka", "ʔuṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "يصاءكان",
-        "u": "يصاءكان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُصَاءَكَانِ • (yuṣāʔakāni) (form III) /ju.sˤaː.ʔa.kaː.ni/\n# third-person masculine dual non-past passive indicative of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṣāʔakāni", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "تصاءكن",
-        "u": "تصاءكن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُصَاءَكْنَ • (tuṣāʔakna) (form III) /tu.sˤaː.ʔak.na/\n# second-person feminine plural non-past passive indicative/subjunctive/jussive of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṣāʔakna", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "تصاءكون",
-        "u": "تصاءكون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُصَاءَكُونَ • (tuṣāʔakūna) (form III) /tu.sˤaː.ʔa.kuː.na/\n# second-person masculine plural non-past passive indicative of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṣāʔakūna", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "يصاءكون",
-        "u": "يصاءكون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُصَاءَكُونَ • (yuṣāʔakūna) (form III) /ju.sˤaː.ʔa.kuː.na/\n# third-person masculine plural non-past passive indicative of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṣāʔakūna", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "يصاءكن",
-        "u": "يصاءكن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُصَاءَكْنَ • (yuṣāʔakna) (form III) /ju.sˤaː.ʔak.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṣāʔakna", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "يصائكا",
-        "u": "يصائكا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُصَائِكَا • (yuṣāʔikā) (form III) /ju.sˤaː.ʔi.kaː/\n# third-person masculine dual non-past active subjunctive/jussive of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṣāʔikā", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "تصائكي",
-        "u": "تصائكي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُصَائِكِي • (tuṣāʔikī) (form III) /tu.sˤaː.ʔi.kiː/\n# second-person feminine singular non-past active subjunctive/jussive of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṣāʔikī", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "تصائكا",
-        "u": "تصائكا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُصَائِكَا • (tuṣāʔikā) (form III) /tu.sˤaː.ʔi.kaː/\n# inflection of صَاءَكَ (ṣāʔaka):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṣāʔikā", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "تصاءكي",
-        "u": "تصاءكي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُصَاءَكِي • (tuṣāʔakī) (form III) /tu.sˤaː.ʔa.kiː/\n# second-person feminine singular non-past passive subjunctive/jussive of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṣāʔakī", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "يصائكوا",
-        "u": "يصائكوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُصَائِكُوا • (yuṣāʔikū) (form III) /ju.sˤaː.ʔi.kuː/\n# third-person masculine plural non-past active subjunctive/jussive of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṣāʔikū", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "تصائكوا",
-        "u": "تصائكوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُصَائِكُوا • (tuṣāʔikū) (form III) /tu.sˤaː.ʔi.kuː/\n# second-person masculine plural non-past active subjunctive/jussive of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṣāʔikū", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "صائكي",
-        "u": "صائكي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَائِكِي • (ṣāʔikī) (form III) /sˤaː.ʔi.kiː/\n# second-person feminine singular imperative of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣāʔikī", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "تصاءكا",
-        "u": "تصاءكا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُصَاءَكَا • (tuṣāʔakā) (form III) /tu.sˤaː.ʔa.kaː/\n# inflection of صَاءَكَ (ṣāʔaka):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṣāʔakā", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "تصاءكوا",
-        "u": "تصاءكوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُصَاءَكُوا • (tuṣāʔakū) (form III) /tu.sˤaː.ʔa.kuː/\n# second-person masculine plural non-past passive subjunctive/jussive of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṣāʔakū", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "صائك",
-        "u": "صائك",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَائِكْ • (ṣāʔik) (form III) /sˤaː.ʔik/\n# second-person masculine singular imperative of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣāʔik", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "يصاءكوا",
-        "u": "يصاءكوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُصَاءَكُوا • (yuṣāʔakū) (form III) /ju.sˤaː.ʔa.kuː/\n# third-person masculine plural non-past passive subjunctive/jussive of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṣāʔakū", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "صائكا",
-        "u": "صائكا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَائِكَا • (ṣāʔikā) (form III) /sˤaː.ʔi.kaː/\n# second-person dual imperative of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣāʔikā", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "يصاءكا",
-        "u": "يصاءكا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُصَاءَكَا • (yuṣāʔakā) (form III) /ju.sˤaː.ʔa.kaː/\n# third-person masculine dual non-past passive subjunctive/jussive of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṣāʔakā", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "صائكوا",
-        "u": "صائكوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَائِكُوا • (ṣāʔikū) (form III) /sˤaː.ʔi.kuː/\n# second-person masculine plural imperative of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣāʔikū", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      },
-      {
-        "w": "صائكن",
-        "u": "صائكن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَائِكْنَ • (ṣāʔikna) (form III) /sˤaː.ʔik.na/\n# second-person feminine plural imperative of صَاءَكَ (ṣāʔaka)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣāʔikna", "ṣāʔaka"],
-        "k": "صاءك",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "صك",
+  "ses": {
     "harf": "ص",
+    "fasil": "صك",
     "mahrec": "esaliyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "صاءكتما",
+      "tur": "verb",
+      "baslik": "صَاءَكْتُمَا • (ṣāʔaktumā) (form III) /sˤaː.ʔak.tu.maː/\n# second-person dual past active of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣāʔaktumā", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صاءكت",
+      "tur": "verb",
+      "baslik": "صاءكت (form III)\n# صَاءَكْتُ (ṣāʔaktu) /sˤaː.ʔak.tu/: first-person singular past active of صَاءَكَ (ṣāʔaka)\n# صَاءَكْتَ (ṣāʔakta) /sˤaː.ʔak.ta/: second-person masculine singular past active of صَاءَكَ (ṣāʔaka)\n# صَاءَكْتِ (ṣāʔakti) /sˤaː.ʔak.ti/: second-person feminine singular past active of صَاءَكَ (ṣāʔaka)\n# صَاءَكَتْ (ṣāʔakat) /sˤaː.ʔa.kat/: third-person feminine singular past active of صَاءَك",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣāʔaktu", "ṣāʔaka", "ṣāʔakta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صاءكا",
+      "tur": "verb",
+      "baslik": "صَاءَكَا • (ṣāʔakā) (form III) /sˤaː.ʔa.kaː/\n# third-person masculine dual past active of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣāʔakā", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صاءكتم",
+      "tur": "verb",
+      "baslik": "صَاءَكْتُمْ • (ṣāʔaktum) (form III) /sˤaː.ʔak.tum/\n# second-person masculine plural past active of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣāʔaktum", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صاءكتا",
+      "tur": "verb",
+      "baslik": "صَاءَكَتَا • (ṣāʔakatā) (form III) /sˤaː.ʔa.ka.taː/\n# third-person feminine dual past active of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣāʔakatā", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صاءكنا",
+      "tur": "verb",
+      "baslik": "صَاءَكْنَا • (ṣāʔaknā) (form III) /sˤaː.ʔak.naː/\n# first-person plural past active of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣāʔaknā", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صاءكوا",
+      "tur": "verb",
+      "baslik": "صَاءَكُوا • (ṣāʔakū) (form III) /sˤaː.ʔa.kuː/\n# third-person masculine plural past active of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣāʔakū", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صاءكتن",
+      "tur": "verb",
+      "baslik": "صَاءَكْتُنَّ • (ṣāʔaktunna) (form III) /sˤaː.ʔak.tun.na/\n# second-person feminine plural past active of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣāʔaktunna", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صوئكتما",
+      "tur": "verb",
+      "baslik": "صُوئِكْتُمَا • (ṣūʔiktumā) (form III) /sˤuː.ʔik.tu.maː/\n# second-person dual past passive of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣūʔiktumā", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صاءكن",
+      "tur": "verb",
+      "baslik": "صَاءَكْنَ • (ṣāʔakna) (form III) /sˤaː.ʔak.na/\n# third-person feminine plural past active of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣāʔakna", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صوئكت",
+      "tur": "verb",
+      "baslik": "صوئكت (form III)\n# صُوئِكْتُ (ṣūʔiktu) /sˤuː.ʔik.tu/: first-person singular past passive of صَاءَكَ (ṣāʔaka)\n# صُوئِكْتَ (ṣūʔikta) /sˤuː.ʔik.ta/: second-person masculine singular past passive of صَاءَكَ (ṣāʔaka)\n# صُوئِكْتِ (ṣūʔikti) /sˤuː.ʔik.ti/: second-person feminine singular past passive of صَاءَكَ (ṣāʔaka)\n# صُوئِكَتْ (ṣūʔikat) /sˤuː.ʔi.kat/: third-person feminine singular past passive of صَ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣūʔiktu", "ṣāʔaka", "ṣūʔikta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صوئك",
+      "tur": "verb",
+      "baslik": "صُوئِكَ • (ṣūʔika) (form III) /sˤuː.ʔi.ka/\n# third-person masculine singular past passive of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣūʔika", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صوئكنا",
+      "tur": "verb",
+      "baslik": "صُوئِكْنَا • (ṣūʔiknā) (form III) /sˤuː.ʔik.naː/\n# first-person plural past passive of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣūʔiknā", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صوئكتا",
+      "tur": "verb",
+      "baslik": "صُوئِكَتَا • (ṣūʔikatā) (form III) /sˤuː.ʔi.ka.taː/\n# third-person feminine dual past passive of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣūʔikatā", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صوئكا",
+      "tur": "verb",
+      "baslik": "صُوئِكَا • (ṣūʔikā) (form III) /sˤuː.ʔi.kaː/\n# third-person masculine dual past passive of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣūʔikā", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صوئكوا",
+      "tur": "verb",
+      "baslik": "صُوئِكُوا • (ṣūʔikū) (form III) /sˤuː.ʔi.kuː/\n# third-person masculine plural past passive of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣūʔikū", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صوئكن",
+      "tur": "verb",
+      "baslik": "صُوئِكْنَ • (ṣūʔikna) (form III) /sˤuː.ʔik.na/\n# third-person feminine plural past passive of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣūʔikna", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أصائك",
+      "tur": "verb",
+      "baslik": "أصائك (form III)\n# أُصَائِكُ (ʔuṣāʔiku) /ʔu.sˤaː.ʔi.ku/: first-person singular non-past active indicative of صَاءَكَ (ṣāʔaka)\n# أُصَائِكَ (ʔuṣāʔika) /ʔu.sˤaː.ʔi.ka/: first-person singular non-past active subjunctive of صَاءَكَ (ṣāʔaka)\n# أُصَائِكْ (ʔuṣāʔik) /ʔu.sˤaː.ʔik/: first-person singular non-past active jussive of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔuṣāʔiku", "ṣāʔaka", "ʔuṣāʔika"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صوئكتم",
+      "tur": "verb",
+      "baslik": "صُوئِكْتُمْ • (ṣūʔiktum) (form III) /sˤuː.ʔik.tum/\n# second-person masculine plural past passive of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣūʔiktum", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صوئكتن",
+      "tur": "verb",
+      "baslik": "صُوئِكْتُنَّ • (ṣūʔiktunna) (form III) /sˤuː.ʔik.tun.na/\n# second-person feminine plural past passive of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣūʔiktunna", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصائك",
+      "tur": "verb",
+      "baslik": "تصائك (form III)\n# تُصَائِكُ (tuṣāʔiku) /tu.sˤaː.ʔi.ku/: inflection of صَاءَكَ (ṣāʔaka):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُصَائِكَ (tuṣāʔika) /tu.sˤaː.ʔi.ka/: inflection of صَاءَكَ (ṣāʔaka):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active s",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṣāʔiku", "ṣāʔaka", "tuṣāʔika"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصائكان",
+      "tur": "verb",
+      "baslik": "يُصَائِكَانِ • (yuṣāʔikāni) (form III) /ju.sˤaː.ʔi.kaː.ni/\n# third-person masculine dual non-past active indicative of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṣāʔikāni", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصائك",
+      "tur": "verb",
+      "baslik": "يصائك (form III)\n# يُصَائِكُ (yuṣāʔiku) /ju.sˤaː.ʔi.ku/: third-person masculine singular non-past active indicative of صَاءَكَ (ṣāʔaka)\n# يُصَائِكَ (yuṣāʔika) /ju.sˤaː.ʔi.ka/: third-person masculine singular non-past active subjunctive of صَاءَكَ (ṣāʔaka)\n# يُصَائِكْ (yuṣāʔik) /ju.sˤaː.ʔik/: third-person masculine singular non-past active jussive of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṣāʔiku", "ṣāʔaka", "yuṣāʔika"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصائكان",
+      "tur": "verb",
+      "baslik": "تُصَائِكَانِ • (tuṣāʔikāni) (form III) /tu.sˤaː.ʔi.kaː.ni/\n# inflection of صَاءَكَ (ṣāʔaka):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṣāʔikāni", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصائكون",
+      "tur": "verb",
+      "baslik": "تُصَائِكُونَ • (tuṣāʔikūna) (form III) /tu.sˤaː.ʔi.kuː.na/\n# second-person masculine plural non-past active indicative of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṣāʔikūna", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصائكين",
+      "tur": "verb",
+      "baslik": "تُصَائِكِينَ • (tuṣāʔikīna) (form III) /tu.sˤaː.ʔi.kiː.na/\n# second-person feminine singular non-past active indicative of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṣāʔikīna", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نصائك",
+      "tur": "verb",
+      "baslik": "نصائك (form III)\n# نُصَائِكُ (nuṣāʔiku) /nu.sˤaː.ʔi.ku/: first-person plural non-past active indicative of صَاءَكَ (ṣāʔaka)\n# نُصَائِكَ (nuṣāʔika) /nu.sˤaː.ʔi.ka/: first-person plural non-past active subjunctive of صَاءَكَ (ṣāʔaka)\n# نُصَائِكْ (nuṣāʔik) /nu.sˤaː.ʔik/: first-person plural non-past active jussive of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nuṣāʔiku", "ṣāʔaka", "nuṣāʔika"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصائكون",
+      "tur": "verb",
+      "baslik": "يُصَائِكُونَ • (yuṣāʔikūna) (form III) /ju.sˤaː.ʔi.kuː.na/\n# third-person masculine plural non-past active indicative of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṣāʔikūna", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصائكن",
+      "tur": "verb",
+      "baslik": "تُصَائِكْنَ • (tuṣāʔikna) (form III) /tu.sˤaː.ʔik.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṣāʔikna", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصاءك",
+      "tur": "verb",
+      "baslik": "تصاءك (form III)\n# تُصَاءَكُ (tuṣāʔaku) /tu.sˤaː.ʔa.ku/: inflection of صَاءَكَ (ṣāʔaka):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُصَاءَكَ (tuṣāʔaka) /tu.sˤaː.ʔa.ka/: inflection of صَاءَكَ (ṣāʔaka):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passi",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṣāʔaku", "ṣāʔaka", "tuṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصاءكين",
+      "tur": "verb",
+      "baslik": "تُصَاءَكِينَ • (tuṣāʔakīna) (form III) /tu.sˤaː.ʔa.kiː.na/\n# second-person feminine singular non-past passive indicative of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṣāʔakīna", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصاءك",
+      "tur": "verb",
+      "baslik": "يصاءك (form III)\n# يُصَاءَكُ (yuṣāʔaku) /ju.sˤaː.ʔa.ku/: third-person masculine singular non-past passive indicative of صَاءَكَ (ṣāʔaka)\n# يُصَاءَكَ (yuṣāʔaka) /ju.sˤaː.ʔa.ka/: third-person masculine singular non-past passive subjunctive of صَاءَكَ (ṣāʔaka)\n# يُصَاءَكْ (yuṣāʔak) /ju.sˤaː.ʔak/: third-person masculine singular non-past passive jussive of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṣāʔaku", "ṣāʔaka", "yuṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصائكن",
+      "tur": "verb",
+      "baslik": "يُصَائِكْنَ • (yuṣāʔikna) (form III) /ju.sˤaː.ʔik.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṣāʔikna", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصاءكان",
+      "tur": "verb",
+      "baslik": "تُصَاءَكَانِ • (tuṣāʔakāni) (form III) /tu.sˤaː.ʔa.kaː.ni/\n# inflection of صَاءَكَ (ṣāʔaka):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṣāʔakāni", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نصاءك",
+      "tur": "verb",
+      "baslik": "نصاءك (form III)\n# نُصَاءَكُ (nuṣāʔaku) /nu.sˤaː.ʔa.ku/: first-person plural non-past passive indicative of صَاءَكَ (ṣāʔaka)\n# نُصَاءَكَ (nuṣāʔaka) /nu.sˤaː.ʔa.ka/: first-person plural non-past passive subjunctive of صَاءَكَ (ṣāʔaka)\n# نُصَاءَكْ (nuṣāʔak) /nu.sˤaː.ʔak/: first-person plural non-past passive jussive of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nuṣāʔaku", "ṣāʔaka", "nuṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أصاءك",
+      "tur": "verb",
+      "baslik": "أصاءك (form III)\n# أُصَاءَكُ (ʔuṣāʔaku) /ʔu.sˤaː.ʔa.ku/: first-person singular non-past passive indicative of صَاءَكَ (ṣāʔaka)\n# أُصَاءَكَ (ʔuṣāʔaka) /ʔu.sˤaː.ʔa.ka/: first-person singular non-past passive subjunctive of صَاءَكَ (ṣāʔaka)\n# أُصَاءَكْ (ʔuṣāʔak) /ʔu.sˤaː.ʔak/: first-person singular non-past passive jussive of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔuṣāʔaku", "ṣāʔaka", "ʔuṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصاءكان",
+      "tur": "verb",
+      "baslik": "يُصَاءَكَانِ • (yuṣāʔakāni) (form III) /ju.sˤaː.ʔa.kaː.ni/\n# third-person masculine dual non-past passive indicative of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṣāʔakāni", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصاءكن",
+      "tur": "verb",
+      "baslik": "تُصَاءَكْنَ • (tuṣāʔakna) (form III) /tu.sˤaː.ʔak.na/\n# second-person feminine plural non-past passive indicative/subjunctive/jussive of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṣāʔakna", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصاءكون",
+      "tur": "verb",
+      "baslik": "تُصَاءَكُونَ • (tuṣāʔakūna) (form III) /tu.sˤaː.ʔa.kuː.na/\n# second-person masculine plural non-past passive indicative of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṣāʔakūna", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصاءكون",
+      "tur": "verb",
+      "baslik": "يُصَاءَكُونَ • (yuṣāʔakūna) (form III) /ju.sˤaː.ʔa.kuː.na/\n# third-person masculine plural non-past passive indicative of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṣāʔakūna", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصاءكن",
+      "tur": "verb",
+      "baslik": "يُصَاءَكْنَ • (yuṣāʔakna) (form III) /ju.sˤaː.ʔak.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṣāʔakna", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصائكا",
+      "tur": "verb",
+      "baslik": "يُصَائِكَا • (yuṣāʔikā) (form III) /ju.sˤaː.ʔi.kaː/\n# third-person masculine dual non-past active subjunctive/jussive of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṣāʔikā", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصائكي",
+      "tur": "verb",
+      "baslik": "تُصَائِكِي • (tuṣāʔikī) (form III) /tu.sˤaː.ʔi.kiː/\n# second-person feminine singular non-past active subjunctive/jussive of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṣāʔikī", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصائكا",
+      "tur": "verb",
+      "baslik": "تُصَائِكَا • (tuṣāʔikā) (form III) /tu.sˤaː.ʔi.kaː/\n# inflection of صَاءَكَ (ṣāʔaka):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṣāʔikā", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصاءكي",
+      "tur": "verb",
+      "baslik": "تُصَاءَكِي • (tuṣāʔakī) (form III) /tu.sˤaː.ʔa.kiː/\n# second-person feminine singular non-past passive subjunctive/jussive of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṣāʔakī", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصائكوا",
+      "tur": "verb",
+      "baslik": "يُصَائِكُوا • (yuṣāʔikū) (form III) /ju.sˤaː.ʔi.kuː/\n# third-person masculine plural non-past active subjunctive/jussive of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṣāʔikū", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصائكوا",
+      "tur": "verb",
+      "baslik": "تُصَائِكُوا • (tuṣāʔikū) (form III) /tu.sˤaː.ʔi.kuː/\n# second-person masculine plural non-past active subjunctive/jussive of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṣāʔikū", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صائكي",
+      "tur": "verb",
+      "baslik": "صَائِكِي • (ṣāʔikī) (form III) /sˤaː.ʔi.kiː/\n# second-person feminine singular imperative of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣāʔikī", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصاءكا",
+      "tur": "verb",
+      "baslik": "تُصَاءَكَا • (tuṣāʔakā) (form III) /tu.sˤaː.ʔa.kaː/\n# inflection of صَاءَكَ (ṣāʔaka):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṣāʔakā", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصاءكوا",
+      "tur": "verb",
+      "baslik": "تُصَاءَكُوا • (tuṣāʔakū) (form III) /tu.sˤaː.ʔa.kuː/\n# second-person masculine plural non-past passive subjunctive/jussive of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṣāʔakū", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صائك",
+      "tur": "verb",
+      "baslik": "صَائِكْ • (ṣāʔik) (form III) /sˤaː.ʔik/\n# second-person masculine singular imperative of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣāʔik", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصاءكوا",
+      "tur": "verb",
+      "baslik": "يُصَاءَكُوا • (yuṣāʔakū) (form III) /ju.sˤaː.ʔa.kuː/\n# third-person masculine plural non-past passive subjunctive/jussive of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṣāʔakū", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صائكا",
+      "tur": "verb",
+      "baslik": "صَائِكَا • (ṣāʔikā) (form III) /sˤaː.ʔi.kaː/\n# second-person dual imperative of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣāʔikā", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصاءكا",
+      "tur": "verb",
+      "baslik": "يُصَاءَكَا • (yuṣāʔakā) (form III) /ju.sˤaː.ʔa.kaː/\n# third-person masculine dual non-past passive subjunctive/jussive of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṣāʔakā", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صائكوا",
+      "tur": "verb",
+      "baslik": "صَائِكُوا • (ṣāʔikū) (form III) /sˤaː.ʔi.kuː/\n# second-person masculine plural imperative of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣāʔikū", "ṣāʔaka"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صائكن",
+      "tur": "verb",
+      "baslik": "صَائِكْنَ • (ṣāʔikna) (form III) /sˤaː.ʔik.na/\n# second-person feminine plural imperative of صَاءَكَ (ṣāʔaka)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣāʔikna", "ṣāʔaka"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "صاءك", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

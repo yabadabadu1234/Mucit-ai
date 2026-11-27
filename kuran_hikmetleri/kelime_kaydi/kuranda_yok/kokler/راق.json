@@ -1,488 +1,355 @@
 {
   "kok": "راق",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "راق", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "رق",
-        "u": "رق",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "رُقْ • (ruq) (form I) /ruq/\n# second-person masculine singular imperative of رَاقَ (rāqa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ruq", "rāqa"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "أرق",
-        "u": "أرق",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "أرق (form I)\n# أَرُقْ (ʔaruq) /ʔa.ruq/: first-person singular non-past active jussive of رَاقَ (rāqa)\n# أُرَقْ (ʔuraq) /ʔu.raq/: first-person singular non-past passive jussive of رَاقَ (rāqa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaruq", "rāqa", "ʔuraq"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "يرق",
-        "u": "يرق",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يرق (form I)\n# يَرُقْ (yaruq) /ja.ruq/: third-person masculine singular non-past active jussive of رَاقَ (rāqa)\n# يُرَقْ (yuraq) /ju.raq/: third-person masculine singular non-past passive jussive of رَاقَ (rāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaruq", "rāqa", "yuraq"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "روق",
-        "u": "روق",
-        "p": "adj",
-        "n": "2.3",
-        "h": "ar-head",
-        "e": "رُوق • (rūq)",
-        "g": ["masculine plural of أَرْوَق (ʔarwaq, “having long teeth, with an overbite”)"],
-        "tag": ["form-of", "masculine", "plural"],
-        "fo": ["أَرْوَق"],
-        "r": ["rūq"],
-        "ipa": ["/ruːq/"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "أراق",
-        "u": "أراق",
-        "p": "verb",
-        "n": "1.2",
-        "h": "ar-verb form",
-        "e": "أراق (form I)\n# أُرَاقُ (ʔurāqu) /ʔu.raː.qu/: first-person singular non-past passive indicative of رَاقَ (rāqa)\n# أُرَاقَ (ʔurāqa) /ʔu.raː.qa/: first-person singular non-past passive subjunctive of رَاقَ (rāqa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔurāqu", "rāqa", "ʔurāqa"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "ترق",
-        "u": "ترق",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "ترق (form I)\n# تَرُقْ (taruq) /ta.ruq/: inflection of رَاقَ (rāqa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُرَقْ (turaq) /tu.raq/: inflection of رَاقَ (rāqa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taruq", "rāqa", "turaq"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "تروق",
-        "u": "تروق",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تروق (form I)\n# تَرُوقُ (tarūqu) /ta.ruː.qu/: inflection of رَاقَ (rāqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَرُوقَ (tarūqa) /ta.ruː.qa/: inflection of رَاقَ (rāqa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tarūqu", "rāqa", "tarūqa"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "يروق",
-        "u": "يروق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يروق (form I)\n# يَرُوقُ (yarūqu) /ja.ruː.qu/: third-person masculine singular non-past active indicative of رَاقَ (rāqa)\n# يَرُوقَ (yarūqa) /ja.ruː.qa/: third-person masculine singular non-past active subjunctive of رَاقَ (rāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yarūqu", "rāqa", "yarūqa"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "ترقن",
-        "u": "ترقن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ترقن (form I)\n# تَرُقْنَ (taruqna) /ta.ruq.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of رَاقَ (rāqa)\n# تُرَقْنَ (turaqna) /tu.raq.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of رَاقَ (rāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taruqna", "rāqa", "turaqna"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "يرقن",
-        "u": "يرقن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يرقن (form I)\n# يَرُقْنَ (yaruqna) /ja.ruq.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of رَاقَ (rāqa)\n# يُرَقْنَ (yuraqna) /ju.raq.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of رَاقَ (rāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaruqna", "rāqa", "yuraqna"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "نرق",
-        "u": "نرق",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نرق (form I)\n# نَرُقْ (naruq) /na.ruq/: first-person plural non-past active jussive of رَاقَ (rāqa)\n# نُرَقْ (nuraq) /nu.raq/: first-person plural non-past passive jussive of رَاقَ (rāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naruq", "rāqa", "nuraq"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "تروقي",
-        "u": "تروقي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَرُوقِي • (tarūqī) (form I) /ta.ruː.qiː/\n# second-person feminine singular non-past active subjunctive/jussive of رَاقَ (rāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tarūqī", "rāqa"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "تروقا",
-        "u": "تروقا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَرُوقَا • (tarūqā) (form I) /ta.ruː.qaː/\n# inflection of رَاقَ (rāqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tarūqā", "rāqa"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "تروقوا",
-        "u": "تروقوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَرُوقُوا • (tarūqū) (form I) /ta.ruː.quː/\n# second-person masculine plural non-past active subjunctive/jussive of رَاقَ (rāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tarūqū", "rāqa"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "رقت",
-        "u": "رقت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "رقت (form I)\n# رُقْتُ (ruqtu) /ruq.tu/: first-person singular past active of رَاقَ (rāqa)\n# رُقْتَ (ruqta) /ruq.ta/: second-person masculine singular past active of رَاقَ (rāqa)\n# رُقْتِ (ruqti) /ruq.ti/: second-person feminine singular past active of رَاقَ (rāqa)\n# رِقْتُ (riqtu) /riq.tu/: first-person singular past passive of رَاقَ (rāqa)\n# رِقْتَ (riqta) /riq.ta/: second-person masculine singul",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ruqtu", "rāqa", "ruqta"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "رقتما",
-        "u": "رقتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رقتما (form I)\n# رُقْتُمَا (ruqtumā) /ruq.tu.maː/: second-person dual past active of رَاقَ (rāqa)\n# رِقْتُمَا (riqtumā) /riq.tu.maː/: second-person dual past passive of رَاقَ (rāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ruqtumā", "rāqa", "riqtumā"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "راقت",
-        "u": "راقت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاقَتْ • (rāqat) (form I) /raː.qat/\n# third-person feminine singular past active of رَاقَ (rāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["rāqat", "rāqa"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "راقا",
-        "u": "راقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاقَا • (rāqā) (form I) /raː.qaː/\n# third-person masculine dual past active of رَاقَ (rāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["rāqā", "rāqa"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "راقتا",
-        "u": "راقتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاقَتَا • (rāqatā) (form I) /raː.qa.taː/\n# third-person feminine dual past active of رَاقَ (rāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["rāqatā", "rāqa"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "رقنا",
-        "u": "رقنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رقنا (form I)\n# رُقْنَا (ruqnā) /ruq.naː/: first-person plural past active of رَاقَ (rāqa)\n# رِقْنَا (riqnā) /riq.naː/: first-person plural past passive of رَاقَ (rāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ruqnā", "rāqa", "riqnā"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "رقتم",
-        "u": "رقتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رقتم (form I)\n# رُقْتُمْ (ruqtum) /ruq.tum/: second-person masculine plural past active of رَاقَ (rāqa)\n# رِقْتُمْ (riqtum) /riq.tum/: second-person masculine plural past passive of رَاقَ (rāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ruqtum", "rāqa", "riqtum"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "رقتن",
-        "u": "رقتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رقتن (form I)\n# رُقْتُنَّ (ruqtunna) /ruq.tun.na/: second-person feminine plural past active of رَاقَ (rāqa)\n# رِقْتُنَّ (riqtunna) /riq.tun.na/: second-person feminine plural past passive of رَاقَ (rāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ruqtunna", "rāqa", "riqtunna"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "رقن",
-        "u": "رقن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رقن (form I)\n# رُقْنَ (ruqna) /ruq.na/: inflection of رَاقَ (rāqa):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# رِقْنَ (riqna) /riq.na/: third-person feminine plural past passive of رَاقَ (rāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ruqna", "rāqa", "riqna"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "تروقين",
-        "u": "تروقين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَرُوقِينَ • (tarūqīna) (form I) /ta.ruː.qiː.na/\n# second-person feminine singular non-past active indicative of رَاقَ (rāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tarūqīna", "rāqa"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "راقوا",
-        "u": "راقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاقُوا • (rāqū) (form I) /raː.quː/\n# third-person masculine plural past active of رَاقَ (rāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["rāqū", "rāqa"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "أروق",
-        "u": "أروق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أروق (form I)\n# أَرُوقُ (ʔarūqu) /ʔa.ruː.qu/: first-person singular non-past active indicative of رَاقَ (rāqa)\n# أَرُوقَ (ʔarūqa) /ʔa.ruː.qa/: first-person singular non-past active subjunctive of رَاقَ (rāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔarūqu", "rāqa", "ʔarūqa"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "يروقان",
-        "u": "يروقان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَرُوقَانِ • (yarūqāni) (form I) /ja.ruː.qaː.ni/\n# third-person masculine dual non-past active indicative of رَاقَ (rāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yarūqāni", "rāqa"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "تروقان",
-        "u": "تروقان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَرُوقَانِ • (tarūqāni) (form I) /ta.ruː.qaː.ni/\n# inflection of رَاقَ (rāqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tarūqāni", "rāqa"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "نروق",
-        "u": "نروق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نروق (form I)\n# نَرُوقُ (narūqu) /na.ruː.qu/: first-person plural non-past active indicative of رَاقَ (rāqa)\n# نَرُوقَ (narūqa) /na.ruː.qa/: first-person plural non-past active subjunctive of رَاقَ (rāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["narūqu", "rāqa", "narūqa"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "تروقون",
-        "u": "تروقون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَرُوقُونَ • (tarūqūna) (form I) /ta.ruː.quː.na/\n# second-person masculine plural non-past active indicative of رَاقَ (rāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tarūqūna", "rāqa"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "يروقون",
-        "u": "يروقون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَرُوقُونَ • (yarūqūna) (form I) /ja.ruː.quː.na/\n# third-person masculine plural non-past active indicative of رَاقَ (rāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yarūqūna", "rāqa"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "يروقا",
-        "u": "يروقا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَرُوقَا • (yarūqā) (form I) /ja.ruː.qaː/\n# third-person masculine dual non-past active subjunctive/jussive of رَاقَ (rāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yarūqā", "rāqa"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "يروقوا",
-        "u": "يروقوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَرُوقُوا • (yarūqū) (form I) /ja.ruː.quː/\n# third-person masculine plural non-past active subjunctive/jussive of رَاقَ (rāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yarūqū", "rāqa"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "روقي",
-        "u": "روقي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "رُوقِي • (rūqī) (form I) /ruː.qiː/\n# second-person feminine singular imperative of رَاقَ (rāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["rūqī", "rāqa"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "روقا",
-        "u": "روقا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "رُوقَا • (rūqā) (form I) /ruː.qaː/\n# second-person dual imperative of رَاقَ (rāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["rūqā", "rāqa"],
-        "k": "راق",
-        "yol": "kök"
-      },
-      {
-        "w": "روقوا",
-        "u": "روقوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "رُوقُوا • (rūqū) (form I) /ruː.quː/\n# second-person masculine plural imperative of رَاقَ (rāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["rūqū", "rāqa"],
-        "k": "راق",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "رق",
+  "ses": {
     "harf": "ر",
+    "fasil": "رق",
     "mahrec": "zelakiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "رق",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "رُقْ • (ruq) (form I) /ruq/\n# second-person masculine singular imperative of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ruq", "rāqa"]
+    },
+    {
+      "madde": "أرق",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "أرق (form I)\n# أَرُقْ (ʔaruq) /ʔa.ruq/: first-person singular non-past active jussive of رَاقَ (rāqa)\n# أُرَقْ (ʔuraq) /ʔu.raq/: first-person singular non-past passive jussive of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaruq", "rāqa", "ʔuraq"]
+    },
+    {
+      "madde": "يرق",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يرق (form I)\n# يَرُقْ (yaruq) /ja.ruq/: third-person masculine singular non-past active jussive of رَاقَ (rāqa)\n# يُرَقْ (yuraq) /ju.raq/: third-person masculine singular non-past passive jussive of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaruq", "rāqa", "yuraq"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "روق",
+      "tur": "adj",
+      "etim_no": "2.3",
+      "baslik": "رُوق • (rūq)",
+      "anlam": ["masculine plural of أَرْوَق (ʔarwaq, “having long teeth, with an overbite”)"],
+      "etiket": ["form-of", "masculine", "plural"],
+      "form_of": ["أَرْوَق"],
+      "okunus": ["rūq"],
+      "ipa": ["/ruːq/"],
+      "bag": "asıl madde"
+    },
+    {
+      "madde": "أراق",
+      "tur": "verb",
+      "etim_no": "1.2",
+      "baslik": "أراق (form I)\n# أُرَاقُ (ʔurāqu) /ʔu.raː.qu/: first-person singular non-past passive indicative of رَاقَ (rāqa)\n# أُرَاقَ (ʔurāqa) /ʔu.raː.qa/: first-person singular non-past passive subjunctive of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔurāqu", "rāqa", "ʔurāqa"]
+    },
+    {
+      "madde": "ترق",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "ترق (form I)\n# تَرُقْ (taruq) /ta.ruq/: inflection of رَاقَ (rāqa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُرَقْ (turaq) /tu.raq/: inflection of رَاقَ (rāqa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taruq", "rāqa", "turaq"]
+    },
+    {
+      "madde": "تروق",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تروق (form I)\n# تَرُوقُ (tarūqu) /ta.ruː.qu/: inflection of رَاقَ (rāqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَرُوقَ (tarūqa) /ta.ruː.qa/: inflection of رَاقَ (rāqa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tarūqu", "rāqa", "tarūqa"]
+    },
+    {
+      "madde": "يروق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يروق (form I)\n# يَرُوقُ (yarūqu) /ja.ruː.qu/: third-person masculine singular non-past active indicative of رَاقَ (rāqa)\n# يَرُوقَ (yarūqa) /ja.ruː.qa/: third-person masculine singular non-past active subjunctive of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yarūqu", "rāqa", "yarūqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ترقن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ترقن (form I)\n# تَرُقْنَ (taruqna) /ta.ruq.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of رَاقَ (rāqa)\n# تُرَقْنَ (turaqna) /tu.raq.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taruqna", "rāqa", "turaqna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يرقن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يرقن (form I)\n# يَرُقْنَ (yaruqna) /ja.ruq.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of رَاقَ (rāqa)\n# يُرَقْنَ (yuraqna) /ju.raq.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaruqna", "rāqa", "yuraqna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نرق",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نرق (form I)\n# نَرُقْ (naruq) /na.ruq/: first-person plural non-past active jussive of رَاقَ (rāqa)\n# نُرَقْ (nuraq) /nu.raq/: first-person plural non-past passive jussive of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naruq", "rāqa", "nuraq"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تروقي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَرُوقِي • (tarūqī) (form I) /ta.ruː.qiː/\n# second-person feminine singular non-past active subjunctive/jussive of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tarūqī", "rāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تروقا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَرُوقَا • (tarūqā) (form I) /ta.ruː.qaː/\n# inflection of رَاقَ (rāqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tarūqā", "rāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تروقوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَرُوقُوا • (tarūqū) (form I) /ta.ruː.quː/\n# second-person masculine plural non-past active subjunctive/jussive of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tarūqū", "rāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "رقت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "رقت (form I)\n# رُقْتُ (ruqtu) /ruq.tu/: first-person singular past active of رَاقَ (rāqa)\n# رُقْتَ (ruqta) /ruq.ta/: second-person masculine singular past active of رَاقَ (rāqa)\n# رُقْتِ (ruqti) /ruq.ti/: second-person feminine singular past active of رَاقَ (rāqa)\n# رِقْتُ (riqtu) /riq.tu/: first-person singular past passive of رَاقَ (rāqa)\n# رِقْتَ (riqta) /riq.ta/: second-person masculine singul",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ruqtu", "rāqa", "ruqta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "رقتما",
+      "tur": "verb",
+      "baslik": "رقتما (form I)\n# رُقْتُمَا (ruqtumā) /ruq.tu.maː/: second-person dual past active of رَاقَ (rāqa)\n# رِقْتُمَا (riqtumā) /riq.tu.maː/: second-person dual past passive of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ruqtumā", "rāqa", "riqtumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "راقت",
+      "tur": "verb",
+      "baslik": "رَاقَتْ • (rāqat) (form I) /raː.qat/\n# third-person feminine singular past active of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rāqat", "rāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "راقا",
+      "tur": "verb",
+      "baslik": "رَاقَا • (rāqā) (form I) /raː.qaː/\n# third-person masculine dual past active of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rāqā", "rāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "راقتا",
+      "tur": "verb",
+      "baslik": "رَاقَتَا • (rāqatā) (form I) /raː.qa.taː/\n# third-person feminine dual past active of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rāqatā", "rāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "رقنا",
+      "tur": "verb",
+      "baslik": "رقنا (form I)\n# رُقْنَا (ruqnā) /ruq.naː/: first-person plural past active of رَاقَ (rāqa)\n# رِقْنَا (riqnā) /riq.naː/: first-person plural past passive of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ruqnā", "rāqa", "riqnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "رقتم",
+      "tur": "verb",
+      "baslik": "رقتم (form I)\n# رُقْتُمْ (ruqtum) /ruq.tum/: second-person masculine plural past active of رَاقَ (rāqa)\n# رِقْتُمْ (riqtum) /riq.tum/: second-person masculine plural past passive of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ruqtum", "rāqa", "riqtum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "رقتن",
+      "tur": "verb",
+      "baslik": "رقتن (form I)\n# رُقْتُنَّ (ruqtunna) /ruq.tun.na/: second-person feminine plural past active of رَاقَ (rāqa)\n# رِقْتُنَّ (riqtunna) /riq.tun.na/: second-person feminine plural past passive of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ruqtunna", "rāqa", "riqtunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "رقن",
+      "tur": "verb",
+      "baslik": "رقن (form I)\n# رُقْنَ (ruqna) /ruq.na/: inflection of رَاقَ (rāqa):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# رِقْنَ (riqna) /riq.na/: third-person feminine plural past passive of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ruqna", "rāqa", "riqna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تروقين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَرُوقِينَ • (tarūqīna) (form I) /ta.ruː.qiː.na/\n# second-person feminine singular non-past active indicative of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tarūqīna", "rāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "راقوا",
+      "tur": "verb",
+      "baslik": "رَاقُوا • (rāqū) (form I) /raː.quː/\n# third-person masculine plural past active of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rāqū", "rāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أروق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أروق (form I)\n# أَرُوقُ (ʔarūqu) /ʔa.ruː.qu/: first-person singular non-past active indicative of رَاقَ (rāqa)\n# أَرُوقَ (ʔarūqa) /ʔa.ruː.qa/: first-person singular non-past active subjunctive of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔarūqu", "rāqa", "ʔarūqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يروقان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَرُوقَانِ • (yarūqāni) (form I) /ja.ruː.qaː.ni/\n# third-person masculine dual non-past active indicative of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yarūqāni", "rāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تروقان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَرُوقَانِ • (tarūqāni) (form I) /ta.ruː.qaː.ni/\n# inflection of رَاقَ (rāqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tarūqāni", "rāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نروق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نروق (form I)\n# نَرُوقُ (narūqu) /na.ruː.qu/: first-person plural non-past active indicative of رَاقَ (rāqa)\n# نَرُوقَ (narūqa) /na.ruː.qa/: first-person plural non-past active subjunctive of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["narūqu", "rāqa", "narūqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تروقون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَرُوقُونَ • (tarūqūna) (form I) /ta.ruː.quː.na/\n# second-person masculine plural non-past active indicative of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tarūqūna", "rāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يروقون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَرُوقُونَ • (yarūqūna) (form I) /ja.ruː.quː.na/\n# third-person masculine plural non-past active indicative of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yarūqūna", "rāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يروقا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَرُوقَا • (yarūqā) (form I) /ja.ruː.qaː/\n# third-person masculine dual non-past active subjunctive/jussive of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yarūqā", "rāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يروقوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَرُوقُوا • (yarūqū) (form I) /ja.ruː.quː/\n# third-person masculine plural non-past active subjunctive/jussive of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yarūqū", "rāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "روقي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "رُوقِي • (rūqī) (form I) /ruː.qiː/\n# second-person feminine singular imperative of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rūqī", "rāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "روقا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "رُوقَا • (rūqā) (form I) /ruː.qaː/\n# second-person dual imperative of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rūqā", "rāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "روقوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "رُوقُوا • (rūqū) (form I) /ruː.quː/\n# second-person masculine plural imperative of رَاقَ (rāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rūqū", "rāqa"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "راق", "r7"]
+  ],
+  "mana": {
     "ince": "melt.v.01",
     "orta": "verb.change",
     "ust": "fiil ve hadise",
@@ -490,16 +357,11 @@
     "dayanak_tanim": "reduce or cause to be reduced from a solid to a liquid state, usually by heating",
     "synset_sayisi": 11
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "act.n.02",
     "dissolve.v.09",
     "explain.v.01",
@@ -512,12 +374,10 @@
     "think_up.v.01",
     "yield.v.05"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

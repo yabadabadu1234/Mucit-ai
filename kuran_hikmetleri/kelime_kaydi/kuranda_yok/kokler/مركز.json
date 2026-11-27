@@ -1,60 +1,60 @@
 {
   "kok": "مركز",
+  "tur": "isim",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["fiil-yok"],
+  "lugat_fiil": false,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "مركز", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تمركز",
-        "u": "تمركز",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "تَمَرْكُز • (tamarkuz) m",
-        "t": "Denominal verb of مَرْكَز (markaz, “center”) forming the denominal root م ر ك ز (m r k z).",
-        "s": [
-          ["denominal verb", "Denominal verb of مَرْكَز (markaz, “center”)"],
-          ["ar-root", "م ر ك ز (m r k z)"]
-        ],
-        "g": ["verbal noun of تَمَرْكَزَ (tamarkaza) (form IIq)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["تَمَرْكَزَ"],
-        "r": ["tamarkuz"],
-        "ipa": ["/ta.mar.ka.za/"],
-        "ds": [
-          ["az", "təmərküz", ""],
-          ["fa-cls", "تمرکز", ""]
-        ],
-        "el": [
-          ["مَرْكَز", "مركز#Arabic"],
-          ["م ر ك ز", "Appendix:Arabic roots/م ر ك ز"]
-        ],
-        "k": "مركز",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "مر",
+  "ses": {
     "harf": "م",
+    "fasil": "مر",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "تمركز",
+      "tur": "noun",
+      "baslik": "تَمَرْكُز • (tamarkuz) m",
+      "etim_sablon": [
+        ["denominal verb", "Denominal verb of مَرْكَز (markaz, “center”)"],
+        ["ar-root", "م ر ك ز (m r k z)"]
+      ],
+      "anlam": ["verbal noun of تَمَرْكَزَ (tamarkaza) (form IIq)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["تَمَرْكَزَ"],
+      "okunus": ["tamarkuz"],
+      "ipa": ["/ta.mar.ka.za/"],
+      "torunlar": [
+        ["az", "təmərküz", ""],
+        ["fa-cls", "تمرکز", ""]
+      ],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "Denominal verb of مَرْكَز (markaz, “center”) forming the denominal root م ر ك ز (m r k z).",
+      "kognatlar": [
+        ["مَرْكَز", "مركز#Arabic"],
+        ["م ر ك ز", "Appendix:Arabic roots/م ر ك ز"]
+      ]
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "مركز", "r6"]
+  ],
+  "mana": {
     "ince": "concentrate.v.02",
     "orta": "verb.cognition",
     "ust": "zihin ve ilim",
@@ -62,22 +62,15 @@
     "dayanak_tanim": "direct one's attention on something",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["concentrate.v.02"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["concentrate.v.02"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

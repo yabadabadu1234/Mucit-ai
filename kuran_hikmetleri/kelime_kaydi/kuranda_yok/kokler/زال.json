@@ -1,1009 +1,710 @@
 {
   "kok": "زال",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "زال", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "نزل",
-        "u": "نزل",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نزل (form I)\n# نَزُلْ (nazul) /na.zul/: first-person plural non-past active jussive of زَالَ (zāla, “to go away, to leave”)\n# نَزَلْ (nazal) /na.zal/: first-person plural non-past active jussive of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)\n# نَزِلْ (nazil) /na.zil/: first-person plural non-past active jussive of زَالَ (zāla, “to separate”)\n# نُزَلْ (nuzal) /nu.z",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nazul", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "نزول",
-        "u": "نزول",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نزول (form I)\n# نَزُولُ (nazūlu) /na.zuː.lu/: first-person plural non-past active indicative of زَالَ (zāla, “to go away, to leave”)\n# نَزُولَ (nazūla) /na.zuː.la/: first-person plural non-past active subjunctive of زَالَ (zāla, “to go away, to leave”)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nazūlu", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "زيل",
-        "u": "زيل",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "زِيلَ • (zīla) (form I) /ziː.la/\n# third-person masculine singular past passive of زَالَ (zāla, “to go away, to leave”) and زَالَ (zāla, “to separate”)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zīla", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "يزول",
-        "u": "يزول",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يزول (form I)\n# يَزُولُ (yazūlu) /ja.zuː.lu/: third-person masculine singular non-past active indicative of زَالَ (zāla, “to go away, to leave”)\n# يَزُولَ (yazūla) /ja.zuː.la/: third-person masculine singular non-past active subjunctive of زَالَ (zāla, “to go away, to leave”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazūlu", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "يزال",
-        "u": "يزال",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يزال (form I)\n# يُزَالُ (yuzālu) /ju.zaː.lu/: third-person masculine singular non-past passive indicative of زَالَ (zāla, “to go away, to leave”) and زَالَ (zāla, “to separate”)\n# يُزَالَ (yuzāla) /ju.zaː.la/: third-person masculine singular non-past passive subjunctive of زَالَ (zāla, “to go away, to leave”) and زَالَ (zāla, “to separate”)\n# يَزَالُ (yazālu) /ja.zaː.lu/: third-person masculine si",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuzālu", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "يزل",
-        "u": "يزل",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يزل (form I)\n# يَزُلْ (yazul) /ja.zul/: third-person masculine singular non-past active jussive of زَالَ (zāla, “to go away, to leave”)\n# يُزَلْ (yuzal) /ju.zal/: third-person masculine singular non-past passive jussive of زَالَ (zāla, “to go away, to leave”) and زَالَ (zāla, “to separate”)\n# يَزَلْ (yazal) /ja.zal/: third-person masculine singular non-past active jussive of زَالَ (zāla, “to cease",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazul", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "زالت",
-        "u": "زالت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زَالَتْ • (zālat) (form I) /zaː.lat/\n# third-person feminine singular past active of زَالَ (zāla, “to go away, to leave”), زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”), and زَالَ (zāla, “to separate”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zālat", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "تزول",
-        "u": "تزول",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تزول (form I)\n# تَزُولُ (tazūlu) /ta.zuː.lu/: inflection of زَالَ (zāla, “to go away, to leave”):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَزُولَ (tazūla) /ta.zuː.la/: inflection of زَالَ (zāla, “to go away, to leave”):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singu",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazūlu", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "تزل",
-        "u": "تزل",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تزل (form I)\n# تَزُلْ (tazul) /ta.zul/: inflection of زَالَ (zāla, “to go away, to leave”):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تَزَلْ (tazal) /ta.zal/: inflection of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”):\n## second-person masculine singular non-past active jussive\n## third-p",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazul", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "تزال",
-        "u": "تزال",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تزال (form I)\n# تَزَالُ (tazālu) /ta.zaː.lu/: inflection of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَزَالَ (tazāla) /ta.zaː.la/: inflection of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”):\n## second-pe",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazālu", "tazāla", "tuzālu"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "زلت",
-        "u": "زلت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زلت (form I)\n# زُلْتُ (zultu) /zul.tu/: first-person singular past active of زَالَ (zāla, “to go away, to leave”)\n# زُلْتَ (zulta) /zul.ta/: second-person masculine singular past active of زَالَ (zāla, “to go away, to leave”)\n# زُلْتِ (zulti) /zul.ti/: second-person feminine singular past active of زَالَ (zāla, “to go away, to leave”)\n# زِلْتُ (ziltu) /zil.tu/:\n## first-person singular past active",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zultu", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "زل",
-        "u": "زل",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "زل (form I)\n# زُلْ (zul) /zul/: second-person masculine singular imperative of زَالَ (zāla, “to go away, to leave”)\n# زِلْ (zil) /zil/: second-person masculine singular imperative of زَالَ (zāla, “to separate”)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zul", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "تزولين",
-        "u": "تزولين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَزُولِينَ • (tazūlīna) (form I) /ta.zuː.liː.na/\n# second-person feminine singular non-past active indicative of زَالَ (zāla, “to go away, to leave”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazūlīna", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "تزولي",
-        "u": "تزولي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَزُولِي • (tazūlī) (form I) /ta.zuː.liː/\n# second-person feminine singular non-past active subjunctive/jussive of زَالَ (zāla, “to go away, to leave”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazūlī", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "زولي",
-        "u": "زولي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زُولِي • (zūlī) (form I) /zuː.liː/\n# second-person feminine singular imperative of زَالَ (zāla, “to go away, to leave”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zūlī", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "تزالين",
-        "u": "تزالين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تزالين (form I)\n# تَزَالِينَ (tazālīna) /ta.zaː.liː.na/: second-person feminine singular non-past active indicative of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)\n# تُزَالِينَ (tuzālīna) /tu.zaː.liː.na/: second-person feminine singular non-past passive indicative of زَالَ (zāla, “to separate”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazālīna", "tuzālīna", "zāla"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "تزالي",
-        "u": "تزالي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تزالي (form I)\n# تَزَالِي (tazālī) /ta.zaː.liː/: second-person feminine singular non-past active subjunctive/jussive of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)\n# تُزَالِي (tuzālī) /tu.zaː.liː/: second-person feminine singular non-past passive subjunctive/jussive of زَالَ (zāla, “to separate”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazālī", "tuzālī", "zāla"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "أزول",
-        "u": "أزول",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أزول (form I)\n# أَزُولُ (ʔazūlu) /ʔa.zuː.lu/: first-person singular non-past active indicative of زَالَ (zāla, “to go away, to leave”)\n# أَزُولَ (ʔazūla) /ʔa.zuː.la/: first-person singular non-past active subjunctive of زَالَ (zāla, “to go away, to leave”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔazūlu", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "أزال",
-        "u": "أزال",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أزال (form I)\n# أَزَالُ (ʔazālu) /ʔa.zaː.lu/: first-person singular non-past active indicative of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)\n# أَزَالَ (ʔazāla) /ʔa.zaː.la/: first-person singular non-past active subjunctive of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)\n# أُزَالُ (ʔuzālu) /ʔu.zaː.lu/: first-person singular non-pas",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔazālu", "ʔazāla", "ʔuzālu"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "زلنا",
-        "u": "زلنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زلنا (form I)\n# زُلْنَا (zulnā) /zul.naː/: first-person plural past active of زَالَ (zāla, “to go away, to leave”)\n# زِلْنَا (zilnā) /zil.naː/:\n## first-person plural past active of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”) and زَالَ (zāla, “to separate”)\n## first-person plural past passive of زَالَ (zāla, “to separate”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zulnā", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "نزال",
-        "u": "نزال",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نزال (form I)\n# نَزَالُ (nazālu) /na.zaː.lu/: first-person plural non-past active indicative of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)\n# نَزَالَ (nazāla) /na.zaː.la/: first-person plural non-past active subjunctive of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)\n# نُزَالُ (nuzālu) /nu.zaː.lu/: first-person plural non-past pass",
-        "t": "See the etymology of the corresponding lemma form.",
-        "s": [
-          ["nonlemma", "See the etymology of the corresponding lemma form."]
-        ],
-        "tag": ["form-i", "no-gloss", "pre-Classical"],
-        "r": ["nazālu", "nazāla", "nuzālu"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "زلتم",
-        "u": "زلتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زلتم (form I)\n# زُلْتُمْ (zultum) /zul.tum/: second-person masculine plural past active of زَالَ (zāla, “to go away, to leave”)\n# زِلْتُمْ (ziltum) /zil.tum/:\n## second-person masculine plural past active of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”) and زَالَ (zāla, “to separate”)\n## second-person masculine plural past passive of زَالَ (zāla, “to separate”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zultum", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "تزولون",
-        "u": "تزولون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَزُولُونَ • (tazūlūna) (form I) /ta.zuː.luː.na/\n# second-person masculine plural non-past active indicative of زَالَ (zāla, “to go away, to leave”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazūlūna", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "تزولوا",
-        "u": "تزولوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَزُولُوا • (tazūlū) (form I) /ta.zuː.luː/\n# second-person masculine plural non-past active subjunctive/jussive of زَالَ (zāla, “to go away, to leave”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazūlū", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "زولوا",
-        "u": "زولوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زُولُوا • (zūlū) (form I) /zuː.luː/\n# second-person masculine plural imperative of زَالَ (zāla, “to go away, to leave”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zūlū", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "تزالون",
-        "u": "تزالون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تزالون (form I)\n# تَزَالُونَ (tazālūna) /ta.zaː.luː.na/: second-person masculine plural non-past active indicative of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)\n# تُزَالُونَ (tuzālūna) /tu.zaː.luː.na/: second-person masculine plural non-past passive indicative of زَالَ (zāla, “to separate”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazālūna", "tuzālūna", "zāla"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "تزالوا",
-        "u": "تزالوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تزالوا (form I)\n# تَزَالُوا (tazālū) /ta.zaː.luː/: second-person masculine plural non-past active subjunctive/jussive of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)\n# تُزَالُوا (tuzālū) /tu.zaː.luː/: second-person masculine plural non-past passive subjunctive/jussive of زَالَ (zāla, “to separate”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazālū", "tuzālū", "zāla"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "زالوا",
-        "u": "زالوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زَالُوا • (zālū) (form I) /zaː.luː/\n# third-person masculine plural past active of زَالَ (zāla, “to go away, to leave”), زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”), and زَالَ (zāla, “to separate”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zālū", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "يزولون",
-        "u": "يزولون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَزُولُونَ • (yazūlūna) (form I) /ja.zuː.luː.na/\n# third-person masculine plural non-past active indicative of زَالَ (zāla, “to go away, to leave”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazūlūna", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "يزولوا",
-        "u": "يزولوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَزُولُوا • (yazūlū) (form I) /ja.zuː.luː/\n# third-person masculine plural non-past active subjunctive/jussive of زَالَ (zāla, “to go away, to leave”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazūlū", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "يزالون",
-        "u": "يزالون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يزالون (form I)\n# يَزَالُونَ (yazālūna) /ja.zaː.luː.na/: third-person masculine plural non-past active indicative of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)\n# يُزَالُونَ (yuzālūna) /ju.zaː.luː.na/: third-person masculine plural non-past passive indicative of زَالَ (zāla, “to separate”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazālūna", "yuzālūna", "zāla"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "يزالوا",
-        "u": "يزالوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يزالوا (form I)\n# يَزَالُوا (yazālū) /ja.zaː.luː/: third-person masculine plural non-past active subjunctive/jussive of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)\n# يُزَالُوا (yuzālū) /ju.zaː.luː/: third-person masculine plural non-past passive subjunctive/jussive of زَالَ (zāla, “to separate”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazālū", "yuzālū", "zāla"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "زلتن",
-        "u": "زلتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زلتن (form I)\n# زُلْتُنَّ (zultunna) /zul.tun.na/: second-person feminine plural past active of زَالَ (zāla, “to go away, to leave”)\n# زِلْتُنَّ (ziltunna) /zil.tun.na/:\n## second-person feminine plural past active of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”) and زَالَ (zāla, “to separate”)\n## second-person feminine plural past passive of زَالَ (zāla, “to separa",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zultunna", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "تزلن",
-        "u": "تزلن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تزلن (form I)\n# تَزُلْنَ (tazulna) /ta.zul.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of زَالَ (zāla, “to go away, to leave”)\n# تَزَلْنَ (tazalna) /ta.zal.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)\n# تَزِلْنَ (tazilna) /ta.zil.na/: second-pe",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazulna", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "زلن",
-        "u": "زلن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زلن (form I)\n# زُلْنَ (zulna) /zul.na/: inflection of زَالَ (zāla, “to go away, to leave”):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# زِلْنَ (zilna) /zil.na/:\n## third-person feminine plural past active of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”) and زَالَ (zāla, “to separate”)\n## inflection of زَالَ (zāla, “to se",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zulna", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "يزلن",
-        "u": "يزلن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يزلن (form I)\n# يَزُلْنَ (yazulna) /ja.zul.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of زَالَ (zāla, “to go away, to leave”)\n# يَزَلْنَ (yazalna) /ja.zal.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)\n# يَزِلْنَ (yazilna) /ja.zil.na/: third-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazulna", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "نزيل",
-        "u": "نزيل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نزيل (form I)\n# نَزِيلُ (nazīlu) /na.ziː.lu/: first-person plural non-past active indicative of زَالَ (zāla, “to separate”)\n# نَزِيلَ (nazīla) /na.ziː.la/: first-person plural non-past active subjunctive of زَالَ (zāla, “to separate”)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nazīlu", "zāla", "“to separate”"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "أزيل",
-        "u": "أزيل",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أزيل (form I)\n# أَزِيلُ (ʔazīlu) /ʔa.ziː.lu/: first-person singular non-past active indicative of زَالَ (zāla, “to separate”)\n# أَزِيلَ (ʔazīla) /ʔa.ziː.la/: first-person singular non-past active subjunctive of زَالَ (zāla, “to separate”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔazīlu", "zāla", "“to separate”"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "تزيل",
-        "u": "تزيل",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تزيل (form I)\n# تَزِيلُ (tazīlu) /ta.ziː.lu/: inflection of زَالَ (zāla, “to separate”):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَزِيلَ (tazīla) /ta.ziː.la/: inflection of زَالَ (zāla, “to separate”):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past activ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazīlu", "zāla", "“to separate”"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "يزيل",
-        "u": "يزيل",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يزيل (form I)\n# يَزِيلُ (yazīlu) /ja.ziː.lu/: third-person masculine singular non-past active indicative of زَالَ (zāla, “to separate”)\n# يَزِيلَ (yazīla) /ja.ziː.la/: third-person masculine singular non-past active subjunctive of زَالَ (zāla, “to separate”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazīlu", "zāla", "“to separate”"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "تزيلين",
-        "u": "تزيلين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَزِيلِينَ • (tazīlīna) (form I) /ta.ziː.liː.na/\n# second-person feminine singular non-past active indicative of زَالَ (zāla, “to separate”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazīlīna", "zāla", "“to separate”"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "تزيلان",
-        "u": "تزيلان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَزِيلَانِ • (tazīlāni) (form I) /ta.ziː.laː.ni/\n# inflection of زَالَ (zāla, “to separate”):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazīlāni", "zāla", "“to separate”"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "يزيلون",
-        "u": "يزيلون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَزِيلُونَ • (yazīlūna) (form I) /ja.ziː.luː.na/\n# third-person masculine plural non-past active indicative of زَالَ (zāla, “to separate”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazīlūna", "zāla", "“to separate”"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "تزيلون",
-        "u": "تزيلون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَزِيلُونَ • (tazīlūna) (form I) /ta.ziː.luː.na/\n# second-person masculine plural non-past active indicative of زَالَ (zāla, “to separate”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazīlūna", "zāla", "“to separate”"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "تزالان",
-        "u": "تزالان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَزَالَانِ • (tazālāni) (form I) /ta.zaː.laː.ni/\n# inflection of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazālāni"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "تزالان",
-        "u": "تزالان",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُزَالَانِ • (tuzālāni) (form I) /tu.zaː.laː.ni/\n# inflection of زَالَ (zāla, “to separate”):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzālāni", "zāla", "“to separate”"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "يزالان",
-        "u": "يزالان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَزَالَانِ • (yazālāni) (form I) /ja.zaː.laː.ni/\n# third-person masculine dual non-past active indicative of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazālāni"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "يزالان",
-        "u": "يزالان",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يُزَالَانِ • (yuzālāni) (form I) /ju.zaː.laː.ni/\n# third-person masculine dual non-past passive indicative of زَالَ (zāla, “to separate”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuzālāni", "zāla", "“to separate”"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "تزيلا",
-        "u": "تزيلا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَزِيلَا • (tazīlā) (form I) /ta.ziː.laː/\n# inflection of زَالَ (zāla, “to separate”):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazīlā", "zāla", "“to separate”"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "يزيلا",
-        "u": "يزيلا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَزِيلَا • (yazīlā) (form I) /ja.ziː.laː/\n# third-person masculine dual non-past active subjunctive/jussive of زَالَ (zāla, “to separate”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazīlā", "zāla", "“to separate”"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "تزيلي",
-        "u": "تزيلي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَزِيلِي • (tazīlī) (form I) /ta.ziː.liː/\n# second-person feminine singular non-past active subjunctive/jussive of زَالَ (zāla, “to separate”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazīlī", "zāla", "“to separate”"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "تزيلوا",
-        "u": "تزيلوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَزِيلُوا • (tazīlū) (form I) /ta.ziː.luː/\n# second-person masculine plural non-past active subjunctive/jussive of زَالَ (zāla, “to separate”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazīlū", "zāla", "“to separate”"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "يزيلوا",
-        "u": "يزيلوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَزِيلُوا • (yazīlū) (form I) /ja.ziː.luː/\n# third-person masculine plural non-past active subjunctive/jussive of زَالَ (zāla, “to separate”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazīlū", "zāla", "“to separate”"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "تزالا",
-        "u": "تزالا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَزَالَا • (tazālā) (form I) /ta.zaː.laː/\n# inflection of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazālā"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "تزالا",
-        "u": "تزالا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُزَالَا • (tuzālā) (form I) /tu.zaː.laː/\n# inflection of زَالَ (zāla, “to separate”):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzālā", "zāla", "“to separate”"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "يزالا",
-        "u": "يزالا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَزَالَا • (yazālā) (form I) /ja.zaː.laː/\n# third-person masculine dual non-past active subjunctive/jussive of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazālā"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "يزالا",
-        "u": "يزالا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يُزَالَا • (yuzālā) (form I) /ju.zaː.laː/\n# third-person masculine dual non-past passive subjunctive/jussive of زَالَ (zāla, “to separate”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuzālā", "zāla", "“to separate”"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "يزيلان",
-        "u": "يزيلان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَزِيلَانِ • (yazīlāni) (form I) /ja.ziː.laː.ni/\n# third-person masculine dual non-past active indicative of زَالَ (zāla, “to separate”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazīlāni", "zāla", "“to separate”"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "زلتما",
-        "u": "زلتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زُلْتُمَا • (zultumā) (form I) /zul.tu.maː/\n# second-person dual past active of زَالَ (zāla, “to go away, to leave”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zultumā", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "زلتما",
-        "u": "زلتما",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "زِلْتُمَا • (ziltumā) (form I) /zil.tu.maː/\n# second-person dual past active of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ziltumā"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "زلتما",
-        "u": "زلتما",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "زِلْتُمَا • (ziltumā) (form I) /zil.tu.maː/\n# second-person dual past active/passive of زَالَ (zāla, “to separate”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ziltumā", "zāla", "“to separate”"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "زالا",
-        "u": "زالا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زَالَا • (zālā) (form I) /zaː.laː/\n# third-person masculine dual past active of زَالَ (zāla, “to go away, to leave”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zālā", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "زالا",
-        "u": "زالا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "زَالَا • (zālā) (form I) /zaː.laː/\n# third-person masculine dual past active of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zālā"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "زالا",
-        "u": "زالا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "زَالَا • (zālā) (form I) /zaː.laː/\n# third-person masculine dual past active of زَالَ (zāla, “to separate”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zālā", "zāla", "“to separate”"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "يزولان",
-        "u": "يزولان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَزُولَانِ • (yazūlāni) (form I) /ja.zuː.laː.ni/\n# third-person masculine dual non-past active indicative of زَالَ (zāla, “to go away, to leave”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazūlāni", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "زالتا",
-        "u": "زالتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زَالَتَا • (zālatā) (form I) /zaː.la.taː/\n# third-person feminine dual past active of زَالَ (zāla, “to go away, to leave”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zālatā", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "زالتا",
-        "u": "زالتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "زَالَتَا • (zālatā) (form I) /zaː.la.taː/\n# third-person feminine dual past active of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zālatā"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "زالتا",
-        "u": "زالتا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "زَالَتَا • (zālatā) (form I) /zaː.la.taː/\n# third-person feminine dual past active of زَالَ (zāla, “to separate”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zālatā", "zāla", "“to separate”"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "تزولا",
-        "u": "تزولا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَزُولَا • (tazūlā) (form I) /ta.zuː.laː/\n# inflection of زَالَ (zāla, “to go away, to leave”):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazūlā", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "زولا",
-        "u": "زولا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زُولَا • (zūlā) (form I) /zuː.laː/\n# second-person dual imperative of زَالَ (zāla, “to go away, to leave”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zūlā", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "يزولا",
-        "u": "يزولا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَزُولَا • (yazūlā) (form I) /ja.zuː.laː/\n# third-person masculine dual non-past active subjunctive/jussive of زَالَ (zāla, “to go away, to leave”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazūlā", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "تزولان",
-        "u": "تزولان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَزُولَانِ • (tazūlāni) (form I) /ta.zuː.laː.ni/\n# inflection of زَالَ (zāla, “to go away, to leave”):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazūlāni", "zāla", "“to go away"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "زيلا",
-        "u": "زيلا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زِيلَا • (zīlā) (form I) /ziː.laː/\n# inflection of زَالَ (zāla, “to separate”):\n## third-person masculine dual past passive\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zīlā", "zāla", "“to separate”"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "زيلت",
-        "u": "زيلت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زِيلَتْ • (zīlat) (form I) /ziː.lat/\n# third-person feminine singular past passive of زَالَ (zāla, “to separate”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zīlat", "zāla", "“to separate”"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "زيلوا",
-        "u": "زيلوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زِيلُوا • (zīlū) (form I) /ziː.luː/\n# inflection of زَالَ (zāla, “to separate”):\n## third-person masculine plural past passive\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zīlū", "zāla", "“to separate”"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "زيلتا",
-        "u": "زيلتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زِيلَتَا • (zīlatā) (form I) /ziː.la.taː/\n# third-person feminine dual past passive of زَالَ (zāla, “to separate”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zīlatā", "zāla", "“to separate”"],
-        "k": "زال",
-        "yol": "kök"
-      },
-      {
-        "w": "زيلي",
-        "u": "زيلي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زِيلِي • (zīlī) (form I) /ziː.liː/\n# second-person feminine singular imperative of زَالَ (zāla, “to separate”)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zīlī", "zāla", "“to separate”"],
-        "k": "زال",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "زل",
+  "ses": {
     "harf": "ز",
+    "fasil": "زل",
     "mahrec": "esaliyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "نزل",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نزل (form I)\n# نَزُلْ (nazul) /na.zul/: first-person plural non-past active jussive of زَالَ (zāla, “to go away, to leave”)\n# نَزَلْ (nazal) /na.zal/: first-person plural non-past active jussive of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)\n# نَزِلْ (nazil) /na.zil/: first-person plural non-past active jussive of زَالَ (zāla, “to separate”)\n# نُزَلْ (nuzal) /nu.z",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nazul", "zāla", "“to go away"]
+    },
+    {
+      "madde": "نزول",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نزول (form I)\n# نَزُولُ (nazūlu) /na.zuː.lu/: first-person plural non-past active indicative of زَالَ (zāla, “to go away, to leave”)\n# نَزُولَ (nazūla) /na.zuː.la/: first-person plural non-past active subjunctive of زَالَ (zāla, “to go away, to leave”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nazūlu", "zāla", "“to go away"]
+    },
+    {
+      "madde": "زيل",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "زِيلَ • (zīla) (form I) /ziː.la/\n# third-person masculine singular past passive of زَالَ (zāla, “to go away, to leave”) and زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zīla", "zāla", "“to go away"]
+    },
+    {
+      "madde": "يزول",
+      "tur": "verb",
+      "baslik": "يزول (form I)\n# يَزُولُ (yazūlu) /ja.zuː.lu/: third-person masculine singular non-past active indicative of زَالَ (zāla, “to go away, to leave”)\n# يَزُولَ (yazūla) /ja.zuː.la/: third-person masculine singular non-past active subjunctive of زَالَ (zāla, “to go away, to leave”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazūlu", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزال",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يزال (form I)\n# يُزَالُ (yuzālu) /ju.zaː.lu/: third-person masculine singular non-past passive indicative of زَالَ (zāla, “to go away, to leave”) and زَالَ (zāla, “to separate”)\n# يُزَالَ (yuzāla) /ju.zaː.la/: third-person masculine singular non-past passive subjunctive of زَالَ (zāla, “to go away, to leave”) and زَالَ (zāla, “to separate”)\n# يَزَالُ (yazālu) /ja.zaː.lu/: third-person masculine si",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuzālu", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزل",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يزل (form I)\n# يَزُلْ (yazul) /ja.zul/: third-person masculine singular non-past active jussive of زَالَ (zāla, “to go away, to leave”)\n# يُزَلْ (yuzal) /ju.zal/: third-person masculine singular non-past passive jussive of زَالَ (zāla, “to go away, to leave”) and زَالَ (zāla, “to separate”)\n# يَزَلْ (yazal) /ja.zal/: third-person masculine singular non-past active jussive of زَالَ (zāla, “to cease",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazul", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زالت",
+      "tur": "verb",
+      "baslik": "زَالَتْ • (zālat) (form I) /zaː.lat/\n# third-person feminine singular past active of زَالَ (zāla, “to go away, to leave”), زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”), and زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zālat", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزول",
+      "tur": "verb",
+      "baslik": "تزول (form I)\n# تَزُولُ (tazūlu) /ta.zuː.lu/: inflection of زَالَ (zāla, “to go away, to leave”):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَزُولَ (tazūla) /ta.zuː.la/: inflection of زَالَ (zāla, “to go away, to leave”):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singu",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazūlu", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزل",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تزل (form I)\n# تَزُلْ (tazul) /ta.zul/: inflection of زَالَ (zāla, “to go away, to leave”):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تَزَلْ (tazal) /ta.zal/: inflection of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”):\n## second-person masculine singular non-past active jussive\n## third-p",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazul", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزال",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تزال (form I)\n# تَزَالُ (tazālu) /ta.zaː.lu/: inflection of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَزَالَ (tazāla) /ta.zaː.la/: inflection of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”):\n## second-pe",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazālu", "tazāla", "tuzālu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زلت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زلت (form I)\n# زُلْتُ (zultu) /zul.tu/: first-person singular past active of زَالَ (zāla, “to go away, to leave”)\n# زُلْتَ (zulta) /zul.ta/: second-person masculine singular past active of زَالَ (zāla, “to go away, to leave”)\n# زُلْتِ (zulti) /zul.ti/: second-person feminine singular past active of زَالَ (zāla, “to go away, to leave”)\n# زِلْتُ (ziltu) /zil.tu/:\n## first-person singular past active",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zultu", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زل",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "زل (form I)\n# زُلْ (zul) /zul/: second-person masculine singular imperative of زَالَ (zāla, “to go away, to leave”)\n# زِلْ (zil) /zil/: second-person masculine singular imperative of زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zul", "zāla", "“to go away"]
+    },
+    {
+      "madde": "تزولين",
+      "tur": "verb",
+      "baslik": "تَزُولِينَ • (tazūlīna) (form I) /ta.zuː.liː.na/\n# second-person feminine singular non-past active indicative of زَالَ (zāla, “to go away, to leave”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazūlīna", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزولي",
+      "tur": "verb",
+      "baslik": "تَزُولِي • (tazūlī) (form I) /ta.zuː.liː/\n# second-person feminine singular non-past active subjunctive/jussive of زَالَ (zāla, “to go away, to leave”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazūlī", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زولي",
+      "tur": "verb",
+      "baslik": "زُولِي • (zūlī) (form I) /zuː.liː/\n# second-person feminine singular imperative of زَالَ (zāla, “to go away, to leave”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zūlī", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزالين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تزالين (form I)\n# تَزَالِينَ (tazālīna) /ta.zaː.liː.na/: second-person feminine singular non-past active indicative of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)\n# تُزَالِينَ (tuzālīna) /tu.zaː.liː.na/: second-person feminine singular non-past passive indicative of زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazālīna", "tuzālīna", "zāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزالي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تزالي (form I)\n# تَزَالِي (tazālī) /ta.zaː.liː/: second-person feminine singular non-past active subjunctive/jussive of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)\n# تُزَالِي (tuzālī) /tu.zaː.liː/: second-person feminine singular non-past passive subjunctive/jussive of زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazālī", "tuzālī", "zāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أزول",
+      "tur": "verb",
+      "baslik": "أزول (form I)\n# أَزُولُ (ʔazūlu) /ʔa.zuː.lu/: first-person singular non-past active indicative of زَالَ (zāla, “to go away, to leave”)\n# أَزُولَ (ʔazūla) /ʔa.zuː.la/: first-person singular non-past active subjunctive of زَالَ (zāla, “to go away, to leave”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔazūlu", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أزال",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أزال (form I)\n# أَزَالُ (ʔazālu) /ʔa.zaː.lu/: first-person singular non-past active indicative of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)\n# أَزَالَ (ʔazāla) /ʔa.zaː.la/: first-person singular non-past active subjunctive of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)\n# أُزَالُ (ʔuzālu) /ʔu.zaː.lu/: first-person singular non-pas",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔazālu", "ʔazāla", "ʔuzālu"]
+    },
+    {
+      "madde": "زلنا",
+      "tur": "verb",
+      "baslik": "زلنا (form I)\n# زُلْنَا (zulnā) /zul.naː/: first-person plural past active of زَالَ (zāla, “to go away, to leave”)\n# زِلْنَا (zilnā) /zil.naː/:\n## first-person plural past active of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”) and زَالَ (zāla, “to separate”)\n## first-person plural past passive of زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zulnā", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نزال",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نزال (form I)\n# نَزَالُ (nazālu) /na.zaː.lu/: first-person plural non-past active indicative of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)\n# نَزَالَ (nazāla) /na.zaː.la/: first-person plural non-past active subjunctive of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)\n# نُزَالُ (nuzālu) /nu.zaː.lu/: first-person plural non-past pass",
+      "etim_sablon": [
+        ["nonlemma", "See the etymology of the corresponding lemma form."]
+      ],
+      "etiket": ["form-i", "no-gloss", "pre-Classical"],
+      "okunus": ["nazālu", "nazāla", "nuzālu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زلتم",
+      "tur": "verb",
+      "baslik": "زلتم (form I)\n# زُلْتُمْ (zultum) /zul.tum/: second-person masculine plural past active of زَالَ (zāla, “to go away, to leave”)\n# زِلْتُمْ (ziltum) /zil.tum/:\n## second-person masculine plural past active of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”) and زَالَ (zāla, “to separate”)\n## second-person masculine plural past passive of زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zultum", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزولون",
+      "tur": "verb",
+      "baslik": "تَزُولُونَ • (tazūlūna) (form I) /ta.zuː.luː.na/\n# second-person masculine plural non-past active indicative of زَالَ (zāla, “to go away, to leave”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazūlūna", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزولوا",
+      "tur": "verb",
+      "baslik": "تَزُولُوا • (tazūlū) (form I) /ta.zuː.luː/\n# second-person masculine plural non-past active subjunctive/jussive of زَالَ (zāla, “to go away, to leave”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazūlū", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زولوا",
+      "tur": "verb",
+      "baslik": "زُولُوا • (zūlū) (form I) /zuː.luː/\n# second-person masculine plural imperative of زَالَ (zāla, “to go away, to leave”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zūlū", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزالون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تزالون (form I)\n# تَزَالُونَ (tazālūna) /ta.zaː.luː.na/: second-person masculine plural non-past active indicative of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)\n# تُزَالُونَ (tuzālūna) /tu.zaː.luː.na/: second-person masculine plural non-past passive indicative of زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazālūna", "tuzālūna", "zāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزالوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تزالوا (form I)\n# تَزَالُوا (tazālū) /ta.zaː.luː/: second-person masculine plural non-past active subjunctive/jussive of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)\n# تُزَالُوا (tuzālū) /tu.zaː.luː/: second-person masculine plural non-past passive subjunctive/jussive of زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazālū", "tuzālū", "zāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زالوا",
+      "tur": "verb",
+      "baslik": "زَالُوا • (zālū) (form I) /zaː.luː/\n# third-person masculine plural past active of زَالَ (zāla, “to go away, to leave”), زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”), and زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zālū", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزولون",
+      "tur": "verb",
+      "baslik": "يَزُولُونَ • (yazūlūna) (form I) /ja.zuː.luː.na/\n# third-person masculine plural non-past active indicative of زَالَ (zāla, “to go away, to leave”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazūlūna", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزولوا",
+      "tur": "verb",
+      "baslik": "يَزُولُوا • (yazūlū) (form I) /ja.zuː.luː/\n# third-person masculine plural non-past active subjunctive/jussive of زَالَ (zāla, “to go away, to leave”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazūlū", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزالون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يزالون (form I)\n# يَزَالُونَ (yazālūna) /ja.zaː.luː.na/: third-person masculine plural non-past active indicative of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)\n# يُزَالُونَ (yuzālūna) /ju.zaː.luː.na/: third-person masculine plural non-past passive indicative of زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazālūna", "yuzālūna", "zāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزالوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يزالوا (form I)\n# يَزَالُوا (yazālū) /ja.zaː.luː/: third-person masculine plural non-past active subjunctive/jussive of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)\n# يُزَالُوا (yuzālū) /ju.zaː.luː/: third-person masculine plural non-past passive subjunctive/jussive of زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazālū", "yuzālū", "zāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زلتن",
+      "tur": "verb",
+      "baslik": "زلتن (form I)\n# زُلْتُنَّ (zultunna) /zul.tun.na/: second-person feminine plural past active of زَالَ (zāla, “to go away, to leave”)\n# زِلْتُنَّ (ziltunna) /zil.tun.na/:\n## second-person feminine plural past active of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”) and زَالَ (zāla, “to separate”)\n## second-person feminine plural past passive of زَالَ (zāla, “to separa",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zultunna", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزلن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تزلن (form I)\n# تَزُلْنَ (tazulna) /ta.zul.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of زَالَ (zāla, “to go away, to leave”)\n# تَزَلْنَ (tazalna) /ta.zal.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)\n# تَزِلْنَ (tazilna) /ta.zil.na/: second-pe",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazulna", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زلن",
+      "tur": "verb",
+      "baslik": "زلن (form I)\n# زُلْنَ (zulna) /zul.na/: inflection of زَالَ (zāla, “to go away, to leave”):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# زِلْنَ (zilna) /zil.na/:\n## third-person feminine plural past active of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”) and زَالَ (zāla, “to separate”)\n## inflection of زَالَ (zāla, “to se",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zulna", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزلن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يزلن (form I)\n# يَزُلْنَ (yazulna) /ja.zul.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of زَالَ (zāla, “to go away, to leave”)\n# يَزَلْنَ (yazalna) /ja.zal.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)\n# يَزِلْنَ (yazilna) /ja.zil.na/: third-perso",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazulna", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نزيل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نزيل (form I)\n# نَزِيلُ (nazīlu) /na.ziː.lu/: first-person plural non-past active indicative of زَالَ (zāla, “to separate”)\n# نَزِيلَ (nazīla) /na.ziː.la/: first-person plural non-past active subjunctive of زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nazīlu", "zāla", "“to separate”"]
+    },
+    {
+      "madde": "أزيل",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أزيل (form I)\n# أَزِيلُ (ʔazīlu) /ʔa.ziː.lu/: first-person singular non-past active indicative of زَالَ (zāla, “to separate”)\n# أَزِيلَ (ʔazīla) /ʔa.ziː.la/: first-person singular non-past active subjunctive of زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔazīlu", "zāla", "“to separate”"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزيل",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تزيل (form I)\n# تَزِيلُ (tazīlu) /ta.ziː.lu/: inflection of زَالَ (zāla, “to separate”):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَزِيلَ (tazīla) /ta.ziː.la/: inflection of زَالَ (zāla, “to separate”):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past activ",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazīlu", "zāla", "“to separate”"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزيل",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يزيل (form I)\n# يَزِيلُ (yazīlu) /ja.ziː.lu/: third-person masculine singular non-past active indicative of زَالَ (zāla, “to separate”)\n# يَزِيلَ (yazīla) /ja.ziː.la/: third-person masculine singular non-past active subjunctive of زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazīlu", "zāla", "“to separate”"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزيلين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَزِيلِينَ • (tazīlīna) (form I) /ta.ziː.liː.na/\n# second-person feminine singular non-past active indicative of زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazīlīna", "zāla", "“to separate”"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزيلان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَزِيلَانِ • (tazīlāni) (form I) /ta.ziː.laː.ni/\n# inflection of زَالَ (zāla, “to separate”):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazīlāni", "zāla", "“to separate”"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزيلون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَزِيلُونَ • (yazīlūna) (form I) /ja.ziː.luː.na/\n# third-person masculine plural non-past active indicative of زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazīlūna", "zāla", "“to separate”"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزيلون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَزِيلُونَ • (tazīlūna) (form I) /ta.ziː.luː.na/\n# second-person masculine plural non-past active indicative of زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazīlūna", "zāla", "“to separate”"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزالان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَزَالَانِ • (tazālāni) (form I) /ta.zaː.laː.ni/\n# inflection of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazālāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزالان",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُزَالَانِ • (tuzālāni) (form I) /tu.zaː.laː.ni/\n# inflection of زَالَ (zāla, “to separate”):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzālāni", "zāla", "“to separate”"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزالان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَزَالَانِ • (yazālāni) (form I) /ja.zaː.laː.ni/\n# third-person masculine dual non-past active indicative of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazālāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزالان",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يُزَالَانِ • (yuzālāni) (form I) /ju.zaː.laː.ni/\n# third-person masculine dual non-past passive indicative of زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuzālāni", "zāla", "“to separate”"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزيلا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَزِيلَا • (tazīlā) (form I) /ta.ziː.laː/\n# inflection of زَالَ (zāla, “to separate”):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazīlā", "zāla", "“to separate”"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزيلا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَزِيلَا • (yazīlā) (form I) /ja.ziː.laː/\n# third-person masculine dual non-past active subjunctive/jussive of زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazīlā", "zāla", "“to separate”"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزيلي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَزِيلِي • (tazīlī) (form I) /ta.ziː.liː/\n# second-person feminine singular non-past active subjunctive/jussive of زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazīlī", "zāla", "“to separate”"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزيلوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَزِيلُوا • (tazīlū) (form I) /ta.ziː.luː/\n# second-person masculine plural non-past active subjunctive/jussive of زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazīlū", "zāla", "“to separate”"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزيلوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَزِيلُوا • (yazīlū) (form I) /ja.ziː.luː/\n# third-person masculine plural non-past active subjunctive/jussive of زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazīlū", "zāla", "“to separate”"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزالا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَزَالَا • (tazālā) (form I) /ta.zaː.laː/\n# inflection of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazālā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزالا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُزَالَا • (tuzālā) (form I) /tu.zaː.laː/\n# inflection of زَالَ (zāla, “to separate”):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzālā", "zāla", "“to separate”"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزالا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَزَالَا • (yazālā) (form I) /ja.zaː.laː/\n# third-person masculine dual non-past active subjunctive/jussive of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazālā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزالا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يُزَالَا • (yuzālā) (form I) /ju.zaː.laː/\n# third-person masculine dual non-past passive subjunctive/jussive of زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuzālā", "zāla", "“to separate”"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزيلان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَزِيلَانِ • (yazīlāni) (form I) /ja.ziː.laː.ni/\n# third-person masculine dual non-past active indicative of زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazīlāni", "zāla", "“to separate”"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زلتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زُلْتُمَا • (zultumā) (form I) /zul.tu.maː/\n# second-person dual past active of زَالَ (zāla, “to go away, to leave”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zultumā", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زلتما",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "زِلْتُمَا • (ziltumā) (form I) /zil.tu.maː/\n# second-person dual past active of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ziltumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زلتما",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "زِلْتُمَا • (ziltumā) (form I) /zil.tu.maː/\n# second-person dual past active/passive of زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ziltumā", "zāla", "“to separate”"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زالا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زَالَا • (zālā) (form I) /zaː.laː/\n# third-person masculine dual past active of زَالَ (zāla, “to go away, to leave”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zālā", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زالا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "زَالَا • (zālā) (form I) /zaː.laː/\n# third-person masculine dual past active of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zālā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زالا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "زَالَا • (zālā) (form I) /zaː.laː/\n# third-person masculine dual past active of زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zālā", "zāla", "“to separate”"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزولان",
+      "tur": "verb",
+      "baslik": "يَزُولَانِ • (yazūlāni) (form I) /ja.zuː.laː.ni/\n# third-person masculine dual non-past active indicative of زَالَ (zāla, “to go away, to leave”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazūlāni", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زالتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زَالَتَا • (zālatā) (form I) /zaː.la.taː/\n# third-person feminine dual past active of زَالَ (zāla, “to go away, to leave”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zālatā", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زالتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "زَالَتَا • (zālatā) (form I) /zaː.la.taː/\n# third-person feminine dual past active of زَالَ (zāla, “to cease (idiomatically used in the negative meaning \"still\")”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zālatā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زالتا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "زَالَتَا • (zālatā) (form I) /zaː.la.taː/\n# third-person feminine dual past active of زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zālatā", "zāla", "“to separate”"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزولا",
+      "tur": "verb",
+      "baslik": "تَزُولَا • (tazūlā) (form I) /ta.zuː.laː/\n# inflection of زَالَ (zāla, “to go away, to leave”):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazūlā", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زولا",
+      "tur": "verb",
+      "baslik": "زُولَا • (zūlā) (form I) /zuː.laː/\n# second-person dual imperative of زَالَ (zāla, “to go away, to leave”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zūlā", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزولا",
+      "tur": "verb",
+      "baslik": "يَزُولَا • (yazūlā) (form I) /ja.zuː.laː/\n# third-person masculine dual non-past active subjunctive/jussive of زَالَ (zāla, “to go away, to leave”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazūlā", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزولان",
+      "tur": "verb",
+      "baslik": "تَزُولَانِ • (tazūlāni) (form I) /ta.zuː.laː.ni/\n# inflection of زَالَ (zāla, “to go away, to leave”):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazūlāni", "zāla", "“to go away"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زيلا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زِيلَا • (zīlā) (form I) /ziː.laː/\n# inflection of زَالَ (zāla, “to separate”):\n## third-person masculine dual past passive\n## second-person dual imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zīlā", "zāla", "“to separate”"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زيلت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زِيلَتْ • (zīlat) (form I) /ziː.lat/\n# third-person feminine singular past passive of زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zīlat", "zāla", "“to separate”"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زيلوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زِيلُوا • (zīlū) (form I) /ziː.luː/\n# inflection of زَالَ (zāla, “to separate”):\n## third-person masculine plural past passive\n## second-person masculine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zīlū", "zāla", "“to separate”"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زيلتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زِيلَتَا • (zīlatā) (form I) /ziː.la.taː/\n# third-person feminine dual past passive of زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zīlatā", "zāla", "“to separate”"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زيلي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زِيلِي • (zīlī) (form I) /ziː.liː/\n# second-person feminine singular imperative of زَالَ (zāla, “to separate”)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zīlī", "zāla", "“to separate”"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "زال", "r7"]
+  ],
+  "mana": {
     "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
@@ -1011,16 +712,11 @@
     "dayanak_tanim": "a building where travelers can pay for lodging and meals and other services",
     "synset_sayisi": 69
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "act.v.01",
     "affect.v.05",
     "artifact.n.01",
@@ -1088,12 +784,10 @@
     "unclutter.v.01",
     "unhorse.v.01"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

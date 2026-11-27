@@ -1,434 +1,315 @@
 {
   "kok": "انقض",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "انقض", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "ينقض",
-        "u": "ينقض",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "ينقض (form VII)\n# يَنْقَضُّ (yanqaḍḍu) /jan.qadˤ.dˤu/: third-person masculine singular non-past active indicative of اِنْقَضَّ (inqaḍḍa)\n# يَنْقَضَّ (yanqaḍḍa) /jan.qadˤ.dˤa/: third-person masculine singular non-past active subjunctive/jussive of اِنْقَضَّ (inqaḍḍa)\n# يَنْقَضِّ (yanqaḍḍi) /jan.qadˤ.dˤi/: third-person masculine singular non-past active jussive of اِنْقَضَّ (inqaḍḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["yanqaḍḍu", "inqaḍḍa", "yanqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "انقضت",
-        "u": "انقضت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "اِنْقَضَّتْ • (inqaḍḍat) (form VII) /in.qadˤ.dˤat/\n# third-person feminine singular past active of اِنْقَضَّ (inqaḍḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["inqaḍḍat", "inqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "تنقضي",
-        "u": "تنقضي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَنْقَضِّي • (tanqaḍḍī) (form VII) /tan.qadˤ.dˤiː/\n# second-person feminine singular non-past active subjunctive/jussive of اِنْقَضَّ (inqaḍḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["tanqaḍḍī", "inqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "تنقض",
-        "u": "تنقض",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تنقض (form VII)\n# تَنْقَضُّ (tanqaḍḍu) /tan.qadˤ.dˤu/: inflection of اِنْقَضَّ (inqaḍḍa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَنْقَضَّ (tanqaḍḍa) /tan.qadˤ.dˤa/: inflection of اِنْقَضَّ (inqaḍḍa):\n## second-person masculine singular non-past active subjunctive/jussive\n## third-person feminine singular non-pa",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["tanqaḍḍu", "inqaḍḍa", "tanqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "تنقضين",
-        "u": "تنقضين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَنْقَضِّينَ • (tanqaḍḍīna) (form VII) /tan.qadˤ.dˤiː.na/\n# second-person feminine singular non-past active indicative of اِنْقَضَّ (inqaḍḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["tanqaḍḍīna", "inqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "انقضي",
-        "u": "انقضي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "اِنْقَضِّي • (inqaḍḍī) (form VII) /in.qadˤ.dˤiː/\n# second-person feminine singular imperative of اِنْقَضَّ (inqaḍḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["inqaḍḍī", "inqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "أنقض",
-        "u": "أنقض",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أنقض (form VII)\n# أَنْقَضُّ (ʔanqaḍḍu) /ʔan.qadˤ.dˤu/: first-person singular non-past active indicative of اِنْقَضَّ (inqaḍḍa)\n# أَنْقَضَّ (ʔanqaḍḍa) /ʔan.qadˤ.dˤa/: first-person singular non-past active subjunctive/jussive of اِنْقَضَّ (inqaḍḍa)\n# أَنْقَضِّ (ʔanqaḍḍi) /ʔan.qadˤ.dˤi/: first-person singular non-past active jussive of اِنْقَضَّ (inqaḍḍa)",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["ʔanqaḍḍu", "inqaḍḍa", "ʔanqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "ننقض",
-        "u": "ننقض",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "ننقض (form VII)\n# نَنْقَضُّ (nanqaḍḍu) /nan.qadˤ.dˤu/: first-person plural non-past active indicative of اِنْقَضَّ (inqaḍḍa)\n# نَنْقَضَّ (nanqaḍḍa) /nan.qadˤ.dˤa/: first-person plural non-past active subjunctive/jussive of اِنْقَضَّ (inqaḍḍa)\n# نَنْقَضِّ (nanqaḍḍi) /nan.qadˤ.dˤi/: first-person plural non-past active jussive of اِنْقَضَّ (inqaḍḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["nanqaḍḍu", "inqaḍḍa", "nanqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "تنقضون",
-        "u": "تنقضون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَنْقَضُّونَ • (tanqaḍḍūna) (form VII) /tan.qadˤ.dˤuː.na/\n# second-person masculine plural non-past active indicative of اِنْقَضَّ (inqaḍḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["tanqaḍḍūna", "inqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "تنقضوا",
-        "u": "تنقضوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَنْقَضُّوا • (tanqaḍḍū) (form VII) /tan.qadˤ.dˤuː/\n# second-person masculine plural non-past active subjunctive/jussive of اِنْقَضَّ (inqaḍḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["tanqaḍḍū", "inqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "انقضوا",
-        "u": "انقضوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "اِنْقَضُّوا • (inqaḍḍū) (form VII) /in.qadˤ.dˤuː/\n# inflection of اِنْقَضَّ (inqaḍḍa):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["inqaḍḍū", "inqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "ينقضون",
-        "u": "ينقضون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يَنْقَضُّونَ • (yanqaḍḍūna) (form VII) /jan.qadˤ.dˤuː.na/\n# third-person masculine plural non-past active indicative of اِنْقَضَّ (inqaḍḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["yanqaḍḍūna", "inqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "ينقضوا",
-        "u": "ينقضوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يَنْقَضُّوا • (yanqaḍḍū) (form VII) /jan.qadˤ.dˤuː/\n# third-person masculine plural non-past active subjunctive/jussive of اِنْقَضَّ (inqaḍḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["yanqaḍḍū", "inqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "انقضا",
-        "u": "انقضا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِنْقَضَّا • (inqaḍḍā) (form VII) /in.qadˤ.dˤaː/\n# inflection of اِنْقَضَّ (inqaḍḍa):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["inqaḍḍā", "inqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "تنقضان",
-        "u": "تنقضان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَنْقَضَّانِ • (tanqaḍḍāni) (form VII) /tan.qadˤ.dˤaː.ni/\n# inflection of اِنْقَضَّ (inqaḍḍa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["tanqaḍḍāni", "inqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "ينقضان",
-        "u": "ينقضان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَنْقَضَّانِ • (yanqaḍḍāni) (form VII) /jan.qadˤ.dˤaː.ni/\n# third-person masculine dual non-past active indicative of اِنْقَضَّ (inqaḍḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["yanqaḍḍāni", "inqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "ينقضا",
-        "u": "ينقضا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَنْقَضَّا • (yanqaḍḍā) (form VII) /jan.qadˤ.dˤaː/\n# third-person masculine dual non-past active subjunctive/jussive of اِنْقَضَّ (inqaḍḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["yanqaḍḍā", "inqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "تنقضا",
-        "u": "تنقضا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَنْقَضَّا • (tanqaḍḍā) (form VII) /tan.qadˤ.dˤaː/\n# inflection of اِنْقَضَّ (inqaḍḍa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["tanqaḍḍā", "inqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "انقضضت",
-        "u": "انقضضت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "انقضضت (form VII)\n# اِنْقَضَضْتُ (inqaḍaḍtu) /in.qa.dˤadˤ.tu/: first-person singular past active of اِنْقَضَّ (inqaḍḍa)\n# اِنْقَضَضْتَ (inqaḍaḍta) /in.qa.dˤadˤ.ta/: second-person masculine singular past active of اِنْقَضَّ (inqaḍḍa)\n# اِنْقَضَضْتِ (inqaḍaḍti) /in.qa.dˤadˤ.ti/: second-person feminine singular past active of اِنْقَضَّ (inqaḍḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["inqaḍaḍtu", "inqaḍḍa", "inqaḍaḍta"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "انقضضتما",
-        "u": "انقضضتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِنْقَضَضْتُمَا • (inqaḍaḍtumā) (form VII) /in.qa.dˤadˤ.tu.maː/\n# second-person dual past active of اِنْقَضَّ (inqaḍḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["inqaḍaḍtumā", "inqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "انقضتا",
-        "u": "انقضتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِنْقَضَّتَا • (inqaḍḍatā) (form VII) /in.qadˤ.dˤa.taː/\n# third-person feminine dual past active of اِنْقَضَّ (inqaḍḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["inqaḍḍatā", "inqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "انقضضنا",
-        "u": "انقضضنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِنْقَضَضْنَا • (inqaḍaḍnā) (form VII) /in.qa.dˤadˤ.naː/\n# first-person plural past active of اِنْقَضَّ (inqaḍḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["inqaḍaḍnā", "inqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "انقضضتم",
-        "u": "انقضضتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِنْقَضَضْتُمْ • (inqaḍaḍtum) (form VII) /in.qa.dˤadˤ.tum/\n# second-person masculine plural past active of اِنْقَضَّ (inqaḍḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["inqaḍaḍtum", "inqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "انقضضتن",
-        "u": "انقضضتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِنْقَضَضْتُنَّ • (inqaḍaḍtunna) (form VII) /in.qa.dˤadˤ.tun.na/\n# second-person feminine plural past active of اِنْقَضَّ (inqaḍḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["inqaḍaḍtunna", "inqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "أنقضض",
-        "u": "أنقضض",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَنْقَضِضْ • (ʔanqaḍiḍ) (form VII) /ʔan.qa.dˤidˤ/\n# first-person singular non-past active jussive of اِنْقَضَّ (inqaḍḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["ʔanqaḍiḍ", "inqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "انقضضن",
-        "u": "انقضضن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "انقضضن (form VII)\n# اِنْقَضَضْنَ (inqaḍaḍna) /in.qa.dˤadˤ.na/: third-person feminine plural past active of اِنْقَضَّ (inqaḍḍa)\n# اِنْقَضِضْنَ (inqaḍiḍna) /in.qa.dˤidˤ.na/: second-person feminine plural imperative of اِنْقَضَّ (inqaḍḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["inqaḍaḍna", "inqaḍḍa", "inqaḍiḍna"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "ينقضضن",
-        "u": "ينقضضن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَنْقَضِضْنَ • (yanqaḍiḍna) (form VII) /jan.qa.dˤidˤ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِنْقَضَّ (inqaḍḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["yanqaḍiḍna", "inqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "تنقضضن",
-        "u": "تنقضضن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنْقَضِضْنَ • (tanqaḍiḍna) (form VII) /tan.qa.dˤidˤ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِنْقَضَّ (inqaḍḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["tanqaḍiḍna", "inqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "تنقضض",
-        "u": "تنقضض",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنْقَضِضْ • (tanqaḍiḍ) (form VII) /tan.qa.dˤidˤ/\n# inflection of اِنْقَضَّ (inqaḍḍa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["tanqaḍiḍ", "inqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "ينقضض",
-        "u": "ينقضض",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَنْقَضِضْ • (yanqaḍiḍ) (form VII) /jan.qa.dˤidˤ/\n# third-person masculine singular non-past active jussive of اِنْقَضَّ (inqaḍḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["yanqaḍiḍ", "inqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "ننقضض",
-        "u": "ننقضض",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَنْقَضِضْ • (nanqaḍiḍ) (form VII) /nan.qa.dˤidˤ/\n# first-person plural non-past active jussive of اِنْقَضَّ (inqaḍḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["nanqaḍiḍ", "inqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      },
-      {
-        "w": "انقضض",
-        "u": "انقضض",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِنْقَضِضْ • (inqaḍiḍ) (form VII) /in.qa.dˤidˤ/\n# second-person masculine singular imperative of اِنْقَضَّ (inqaḍḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vii", "no-gloss"],
-        "r": ["inqaḍiḍ", "inqaḍḍa"],
-        "k": "انقض",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "نق",
+  "ses": {
     "harf": "ا",
+    "fasil": "نق",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "ينقض",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "ينقض (form VII)\n# يَنْقَضُّ (yanqaḍḍu) /jan.qadˤ.dˤu/: third-person masculine singular non-past active indicative of اِنْقَضَّ (inqaḍḍa)\n# يَنْقَضَّ (yanqaḍḍa) /jan.qadˤ.dˤa/: third-person masculine singular non-past active subjunctive/jussive of اِنْقَضَّ (inqaḍḍa)\n# يَنْقَضِّ (yanqaḍḍi) /jan.qadˤ.dˤi/: third-person masculine singular non-past active jussive of اِنْقَضَّ (inqaḍḍa)",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["yanqaḍḍu", "inqaḍḍa", "yanqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "انقضت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "اِنْقَضَّتْ • (inqaḍḍat) (form VII) /in.qadˤ.dˤat/\n# third-person feminine singular past active of اِنْقَضَّ (inqaḍḍa)",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["inqaḍḍat", "inqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنقضي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَنْقَضِّي • (tanqaḍḍī) (form VII) /tan.qadˤ.dˤiː/\n# second-person feminine singular non-past active subjunctive/jussive of اِنْقَضَّ (inqaḍḍa)",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["tanqaḍḍī", "inqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنقض",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تنقض (form VII)\n# تَنْقَضُّ (tanqaḍḍu) /tan.qadˤ.dˤu/: inflection of اِنْقَضَّ (inqaḍḍa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَنْقَضَّ (tanqaḍḍa) /tan.qadˤ.dˤa/: inflection of اِنْقَضَّ (inqaḍḍa):\n## second-person masculine singular non-past active subjunctive/jussive\n## third-person feminine singular non-pa",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["tanqaḍḍu", "inqaḍḍa", "tanqaḍḍa"]
+    },
+    {
+      "madde": "تنقضين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَنْقَضِّينَ • (tanqaḍḍīna) (form VII) /tan.qadˤ.dˤiː.na/\n# second-person feminine singular non-past active indicative of اِنْقَضَّ (inqaḍḍa)",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["tanqaḍḍīna", "inqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "انقضي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "اِنْقَضِّي • (inqaḍḍī) (form VII) /in.qadˤ.dˤiː/\n# second-person feminine singular imperative of اِنْقَضَّ (inqaḍḍa)",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["inqaḍḍī", "inqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنقض",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أنقض (form VII)\n# أَنْقَضُّ (ʔanqaḍḍu) /ʔan.qadˤ.dˤu/: first-person singular non-past active indicative of اِنْقَضَّ (inqaḍḍa)\n# أَنْقَضَّ (ʔanqaḍḍa) /ʔan.qadˤ.dˤa/: first-person singular non-past active subjunctive/jussive of اِنْقَضَّ (inqaḍḍa)\n# أَنْقَضِّ (ʔanqaḍḍi) /ʔan.qadˤ.dˤi/: first-person singular non-past active jussive of اِنْقَضَّ (inqaḍḍa)",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["ʔanqaḍḍu", "inqaḍḍa", "ʔanqaḍḍa"]
+    },
+    {
+      "madde": "ننقض",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "ننقض (form VII)\n# نَنْقَضُّ (nanqaḍḍu) /nan.qadˤ.dˤu/: first-person plural non-past active indicative of اِنْقَضَّ (inqaḍḍa)\n# نَنْقَضَّ (nanqaḍḍa) /nan.qadˤ.dˤa/: first-person plural non-past active subjunctive/jussive of اِنْقَضَّ (inqaḍḍa)\n# نَنْقَضِّ (nanqaḍḍi) /nan.qadˤ.dˤi/: first-person plural non-past active jussive of اِنْقَضَّ (inqaḍḍa)",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["nanqaḍḍu", "inqaḍḍa", "nanqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنقضون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَنْقَضُّونَ • (tanqaḍḍūna) (form VII) /tan.qadˤ.dˤuː.na/\n# second-person masculine plural non-past active indicative of اِنْقَضَّ (inqaḍḍa)",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["tanqaḍḍūna", "inqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنقضوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَنْقَضُّوا • (tanqaḍḍū) (form VII) /tan.qadˤ.dˤuː/\n# second-person masculine plural non-past active subjunctive/jussive of اِنْقَضَّ (inqaḍḍa)",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["tanqaḍḍū", "inqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "انقضوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "اِنْقَضُّوا • (inqaḍḍū) (form VII) /in.qadˤ.dˤuː/\n# inflection of اِنْقَضَّ (inqaḍḍa):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["inqaḍḍū", "inqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينقضون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يَنْقَضُّونَ • (yanqaḍḍūna) (form VII) /jan.qadˤ.dˤuː.na/\n# third-person masculine plural non-past active indicative of اِنْقَضَّ (inqaḍḍa)",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["yanqaḍḍūna", "inqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينقضوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يَنْقَضُّوا • (yanqaḍḍū) (form VII) /jan.qadˤ.dˤuː/\n# third-person masculine plural non-past active subjunctive/jussive of اِنْقَضَّ (inqaḍḍa)",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["yanqaḍḍū", "inqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "انقضا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِنْقَضَّا • (inqaḍḍā) (form VII) /in.qadˤ.dˤaː/\n# inflection of اِنْقَضَّ (inqaḍḍa):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["inqaḍḍā", "inqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنقضان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَنْقَضَّانِ • (tanqaḍḍāni) (form VII) /tan.qadˤ.dˤaː.ni/\n# inflection of اِنْقَضَّ (inqaḍḍa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["tanqaḍḍāni", "inqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينقضان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَنْقَضَّانِ • (yanqaḍḍāni) (form VII) /jan.qadˤ.dˤaː.ni/\n# third-person masculine dual non-past active indicative of اِنْقَضَّ (inqaḍḍa)",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["yanqaḍḍāni", "inqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينقضا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَنْقَضَّا • (yanqaḍḍā) (form VII) /jan.qadˤ.dˤaː/\n# third-person masculine dual non-past active subjunctive/jussive of اِنْقَضَّ (inqaḍḍa)",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["yanqaḍḍā", "inqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنقضا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَنْقَضَّا • (tanqaḍḍā) (form VII) /tan.qadˤ.dˤaː/\n# inflection of اِنْقَضَّ (inqaḍḍa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["tanqaḍḍā", "inqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "انقضضت",
+      "tur": "verb",
+      "baslik": "انقضضت (form VII)\n# اِنْقَضَضْتُ (inqaḍaḍtu) /in.qa.dˤadˤ.tu/: first-person singular past active of اِنْقَضَّ (inqaḍḍa)\n# اِنْقَضَضْتَ (inqaḍaḍta) /in.qa.dˤadˤ.ta/: second-person masculine singular past active of اِنْقَضَّ (inqaḍḍa)\n# اِنْقَضَضْتِ (inqaḍaḍti) /in.qa.dˤadˤ.ti/: second-person feminine singular past active of اِنْقَضَّ (inqaḍḍa)",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["inqaḍaḍtu", "inqaḍḍa", "inqaḍaḍta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "انقضضتما",
+      "tur": "verb",
+      "baslik": "اِنْقَضَضْتُمَا • (inqaḍaḍtumā) (form VII) /in.qa.dˤadˤ.tu.maː/\n# second-person dual past active of اِنْقَضَّ (inqaḍḍa)",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["inqaḍaḍtumā", "inqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "انقضتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِنْقَضَّتَا • (inqaḍḍatā) (form VII) /in.qadˤ.dˤa.taː/\n# third-person feminine dual past active of اِنْقَضَّ (inqaḍḍa)",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["inqaḍḍatā", "inqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "انقضضنا",
+      "tur": "verb",
+      "baslik": "اِنْقَضَضْنَا • (inqaḍaḍnā) (form VII) /in.qa.dˤadˤ.naː/\n# first-person plural past active of اِنْقَضَّ (inqaḍḍa)",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["inqaḍaḍnā", "inqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "انقضضتم",
+      "tur": "verb",
+      "baslik": "اِنْقَضَضْتُمْ • (inqaḍaḍtum) (form VII) /in.qa.dˤadˤ.tum/\n# second-person masculine plural past active of اِنْقَضَّ (inqaḍḍa)",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["inqaḍaḍtum", "inqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "انقضضتن",
+      "tur": "verb",
+      "baslik": "اِنْقَضَضْتُنَّ • (inqaḍaḍtunna) (form VII) /in.qa.dˤadˤ.tun.na/\n# second-person feminine plural past active of اِنْقَضَّ (inqaḍḍa)",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["inqaḍaḍtunna", "inqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنقضض",
+      "tur": "verb",
+      "baslik": "أَنْقَضِضْ • (ʔanqaḍiḍ) (form VII) /ʔan.qa.dˤidˤ/\n# first-person singular non-past active jussive of اِنْقَضَّ (inqaḍḍa)",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["ʔanqaḍiḍ", "inqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "انقضضن",
+      "tur": "verb",
+      "baslik": "انقضضن (form VII)\n# اِنْقَضَضْنَ (inqaḍaḍna) /in.qa.dˤadˤ.na/: third-person feminine plural past active of اِنْقَضَّ (inqaḍḍa)\n# اِنْقَضِضْنَ (inqaḍiḍna) /in.qa.dˤidˤ.na/: second-person feminine plural imperative of اِنْقَضَّ (inqaḍḍa)",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["inqaḍaḍna", "inqaḍḍa", "inqaḍiḍna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينقضضن",
+      "tur": "verb",
+      "baslik": "يَنْقَضِضْنَ • (yanqaḍiḍna) (form VII) /jan.qa.dˤidˤ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِنْقَضَّ (inqaḍḍa)",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["yanqaḍiḍna", "inqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنقضضن",
+      "tur": "verb",
+      "baslik": "تَنْقَضِضْنَ • (tanqaḍiḍna) (form VII) /tan.qa.dˤidˤ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِنْقَضَّ (inqaḍḍa)",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["tanqaḍiḍna", "inqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنقضض",
+      "tur": "verb",
+      "baslik": "تَنْقَضِضْ • (tanqaḍiḍ) (form VII) /tan.qa.dˤidˤ/\n# inflection of اِنْقَضَّ (inqaḍḍa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["tanqaḍiḍ", "inqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينقضض",
+      "tur": "verb",
+      "baslik": "يَنْقَضِضْ • (yanqaḍiḍ) (form VII) /jan.qa.dˤidˤ/\n# third-person masculine singular non-past active jussive of اِنْقَضَّ (inqaḍḍa)",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["yanqaḍiḍ", "inqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ننقضض",
+      "tur": "verb",
+      "baslik": "نَنْقَضِضْ • (nanqaḍiḍ) (form VII) /nan.qa.dˤidˤ/\n# first-person plural non-past active jussive of اِنْقَضَّ (inqaḍḍa)",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["nanqaḍiḍ", "inqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "انقضض",
+      "tur": "verb",
+      "baslik": "اِنْقَضِضْ • (inqaḍiḍ) (form VII) /in.qa.dˤidˤ/\n# second-person masculine singular imperative of اِنْقَضَّ (inqaḍḍa)",
+      "etiket": ["form-vii", "no-gloss"],
+      "okunus": ["inqaḍiḍ", "inqaḍḍa"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "انقض", "r6"]
+  ],
+  "mana": {
     "ince": "die.v.01",
     "orta": "verb.change",
     "ust": "fiil ve hadise",
@@ -436,22 +317,15 @@
     "dayanak_tanim": "pass from physical life and lose all bodily attributes and functions necessary to sustain life",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["die.v.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["die.v.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

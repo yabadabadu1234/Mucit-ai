@@ -1,486 +1,343 @@
 {
   "kok": "طارح",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "طارح", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تطارح",
-        "u": "تطارح",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تطارح (form III)\n# تُطَارِحُ (tuṭāriḥu) /tu.tˤaː.ri.ħu/: inflection of طَارَحَ (ṭāraḥa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُطَارَحُ (tuṭāraḥu) /tu.tˤaː.ra.ħu/: inflection of طَارَحَ (ṭāraḥa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive ",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṭāriḥu", "ṭāraḥa", "tuṭāraḥu"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "يطارح",
-        "u": "يطارح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطارح (form III)\n# يُطَارِحُ (yuṭāriḥu) /ju.tˤaː.ri.ħu/: third-person masculine singular non-past active indicative of طَارَحَ (ṭāraḥa)\n# يُطَارَحُ (yuṭāraḥu) /ju.tˤaː.ra.ħu/: third-person masculine singular non-past passive indicative of طَارَحَ (ṭāraḥa)\n# يُطَارِحَ (yuṭāriḥa) /ju.tˤaː.ri.ħa/: third-person masculine singular non-past active subjunctive of طَارَحَ (ṭāraḥa)\n# يُطَارَحَ (yuṭāraḥa) /",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṭāriḥu", "ṭāraḥa", "yuṭāraḥu"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "طورح",
-        "u": "طورح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُورِحَ • (ṭūriḥa) (form III) /tˤuː.ri.ħa/\n# third-person masculine singular past passive of طَارَحَ (ṭāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūriḥa", "ṭāraḥa"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "طارحت",
-        "u": "طارحت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طارحت (form III)\n# طَارَحْتُ (ṭāraḥtu) /tˤaː.raħ.tu/: first-person singular past active of طَارَحَ (ṭāraḥa)\n# طَارَحْتَ (ṭāraḥta) /tˤaː.raħ.ta/: second-person masculine singular past active of طَارَحَ (ṭāraḥa)\n# طَارَحْتِ (ṭāraḥti) /tˤaː.raħ.ti/: second-person feminine singular past active of طَارَحَ (ṭāraḥa)\n# طَارَحَتْ (ṭāraḥat) /tˤaː.ra.ħat/: third-person feminine singular past active of طَارَح",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭāraḥtu", "ṭāraḥa", "ṭāraḥta"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "طورحت",
-        "u": "طورحت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طورحت (form III)\n# طُورِحْتُ (ṭūriḥtu) /tˤuː.riħ.tu/: first-person singular past passive of طَارَحَ (ṭāraḥa)\n# طُورِحْتَ (ṭūriḥta) /tˤuː.riħ.ta/: second-person masculine singular past passive of طَارَحَ (ṭāraḥa)\n# طُورِحْتِ (ṭūriḥti) /tˤuː.riħ.ti/: second-person feminine singular past passive of طَارَحَ (ṭāraḥa)\n# طُورِحَتْ (ṭūriḥat) /tˤuː.ri.ħat/: third-person feminine singular past passive of طَ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūriḥtu", "ṭāraḥa", "ṭūriḥta"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "تطارحي",
-        "u": "تطارحي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تطارحي (form III)\n# تُطَارِحِي (tuṭāriḥī) /tu.tˤaː.ri.ħiː/: second-person feminine singular non-past active subjunctive/jussive of طَارَحَ (ṭāraḥa)\n# تُطَارَحِي (tuṭāraḥī) /tu.tˤaː.ra.ħiː/: second-person feminine singular non-past passive subjunctive/jussive of طَارَحَ (ṭāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṭāriḥī", "ṭāraḥa", "tuṭāraḥī"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "تطارحين",
-        "u": "تطارحين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطارحين (form III)\n# تُطَارِحِينَ (tuṭāriḥīna) /tu.tˤaː.ri.ħiː.na/: second-person feminine singular non-past active indicative of طَارَحَ (ṭāraḥa)\n# تُطَارَحِينَ (tuṭāraḥīna) /tu.tˤaː.ra.ħiː.na/: second-person feminine singular non-past passive indicative of طَارَحَ (ṭāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṭāriḥīna", "ṭāraḥa", "tuṭāraḥīna"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "طارحي",
-        "u": "طارحي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَارِحِي • (ṭāriḥī) (form III) /tˤaː.ri.ħiː/\n# second-person feminine singular imperative of طَارَحَ (ṭāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭāriḥī", "ṭāraḥa"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "أطارح",
-        "u": "أطارح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أطارح (form III)\n# أُطَارِحُ (ʔuṭāriḥu) /ʔu.tˤaː.ri.ħu/: first-person singular non-past active indicative of طَارَحَ (ṭāraḥa)\n# أُطَارَحُ (ʔuṭāraḥu) /ʔu.tˤaː.ra.ħu/: first-person singular non-past passive indicative of طَارَحَ (ṭāraḥa)\n# أُطَارِحَ (ʔuṭāriḥa) /ʔu.tˤaː.ri.ħa/: first-person singular non-past active subjunctive of طَارَحَ (ṭāraḥa)\n# أُطَارَحَ (ʔuṭāraḥa) /ʔu.tˤaː.ra.ħa/: first-person s",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔuṭāriḥu", "ṭāraḥa", "ʔuṭāraḥu"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "طارحنا",
-        "u": "طارحنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَارَحْنَا • (ṭāraḥnā) (form III) /tˤaː.raħ.naː/\n# first-person plural past active of طَارَحَ (ṭāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭāraḥnā", "ṭāraḥa"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "نطارح",
-        "u": "نطارح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نطارح (form III)\n# نُطَارِحُ (nuṭāriḥu) /nu.tˤaː.ri.ħu/: first-person plural non-past active indicative of طَارَحَ (ṭāraḥa)\n# نُطَارَحُ (nuṭāraḥu) /nu.tˤaː.ra.ħu/: first-person plural non-past passive indicative of طَارَحَ (ṭāraḥa)\n# نُطَارِحَ (nuṭāriḥa) /nu.tˤaː.ri.ħa/: first-person plural non-past active subjunctive of طَارَحَ (ṭāraḥa)\n# نُطَارَحَ (nuṭāraḥa) /nu.tˤaː.ra.ħa/: first-person plural ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nuṭāriḥu", "ṭāraḥa", "nuṭāraḥu"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "طورحنا",
-        "u": "طورحنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُورِحْنَا • (ṭūriḥnā) (form III) /tˤuː.riħ.naː/\n# first-person plural past passive of طَارَحَ (ṭāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūriḥnā", "ṭāraḥa"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "طارحتم",
-        "u": "طارحتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَارَحْتُمْ • (ṭāraḥtum) (form III) /tˤaː.raħ.tum/\n# second-person masculine plural past active of طَارَحَ (ṭāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭāraḥtum", "ṭāraḥa"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "تطارحون",
-        "u": "تطارحون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطارحون (form III)\n# تُطَارِحُونَ (tuṭāriḥūna) /tu.tˤaː.ri.ħuː.na/: second-person masculine plural non-past active indicative of طَارَحَ (ṭāraḥa)\n# تُطَارَحُونَ (tuṭāraḥūna) /tu.tˤaː.ra.ħuː.na/: second-person masculine plural non-past passive indicative of طَارَحَ (ṭāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṭāriḥūna", "ṭāraḥa", "tuṭāraḥūna"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "طورحتم",
-        "u": "طورحتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُورِحْتُمْ • (ṭūriḥtum) (form III) /tˤuː.riħ.tum/\n# second-person masculine plural past passive of طَارَحَ (ṭāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūriḥtum", "ṭāraḥa"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "تطارحوا",
-        "u": "تطارحوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تطارحوا (form III)\n# تُطَارِحُوا (tuṭāriḥū) /tu.tˤaː.ri.ħuː/: second-person masculine plural non-past active subjunctive/jussive of طَارَحَ (ṭāraḥa)\n# تُطَارَحُوا (tuṭāraḥū) /tu.tˤaː.ra.ħuː/: second-person masculine plural non-past passive subjunctive/jussive of طَارَحَ (ṭāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṭāriḥū", "ṭāraḥa", "tuṭāraḥū"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "طارحوا",
-        "u": "طارحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طارحوا (form III)\n# طَارَحُوا (ṭāraḥū) /tˤaː.ra.ħuː/: third-person masculine plural past active of طَارَحَ (ṭāraḥa)\n# طَارِحُوا (ṭāriḥū) /tˤaː.ri.ħuː/: second-person masculine plural imperative of طَارَحَ (ṭāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭāraḥū", "ṭāraḥa", "ṭāriḥū"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "يطارحون",
-        "u": "يطارحون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطارحون (form III)\n# يُطَارِحُونَ (yuṭāriḥūna) /ju.tˤaː.ri.ħuː.na/: third-person masculine plural non-past active indicative of طَارَحَ (ṭāraḥa)\n# يُطَارَحُونَ (yuṭāraḥūna) /ju.tˤaː.ra.ħuː.na/: third-person masculine plural non-past passive indicative of طَارَحَ (ṭāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṭāriḥūna", "ṭāraḥa", "yuṭāraḥūna"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "يطارحوا",
-        "u": "يطارحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطارحوا (form III)\n# يُطَارِحُوا (yuṭāriḥū) /ju.tˤaː.ri.ħuː/: third-person masculine plural non-past active subjunctive/jussive of طَارَحَ (ṭāraḥa)\n# يُطَارَحُوا (yuṭāraḥū) /ju.tˤaː.ra.ħuː/: third-person masculine plural non-past passive subjunctive/jussive of طَارَحَ (ṭāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṭāriḥū", "ṭāraḥa", "yuṭāraḥū"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "طورحوا",
-        "u": "طورحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُورِحُوا • (ṭūriḥū) (form III) /tˤuː.ri.ħuː/\n# third-person masculine plural past passive of طَارَحَ (ṭāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūriḥū", "ṭāraḥa"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "تطارحن",
-        "u": "تطارحن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تطارحن (form III)\n# تُطَارِحْنَ (tuṭāriḥna) /tu.tˤaː.riħ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of طَارَحَ (ṭāraḥa)\n# تُطَارَحْنَ (tuṭāraḥna) /tu.tˤaː.raħ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of طَارَحَ (ṭāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṭāriḥna", "ṭāraḥa", "tuṭāraḥna"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "طارحتن",
-        "u": "طارحتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَارَحْتُنَّ • (ṭāraḥtunna) (form III) /tˤaː.raħ.tun.na/\n# second-person feminine plural past active of طَارَحَ (ṭāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭāraḥtunna", "ṭāraḥa"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "طارحن",
-        "u": "طارحن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طارحن (form III)\n# طَارَحْنَ (ṭāraḥna) /tˤaː.raħ.na/: third-person feminine plural past active of طَارَحَ (ṭāraḥa)\n# طَارِحْنَ (ṭāriḥna) /tˤaː.riħ.na/: second-person feminine plural imperative of طَارَحَ (ṭāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭāraḥna", "ṭāraḥa", "ṭāriḥna"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "طورحتن",
-        "u": "طورحتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُورِحْتُنَّ • (ṭūriḥtunna) (form III) /tˤuː.riħ.tun.na/\n# second-person feminine plural past passive of طَارَحَ (ṭāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūriḥtunna", "ṭāraḥa"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "يطارحن",
-        "u": "يطارحن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطارحن (form III)\n# يُطَارِحْنَ (yuṭāriḥna) /ju.tˤaː.riħ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of طَارَحَ (ṭāraḥa)\n# يُطَارَحْنَ (yuṭāraḥna) /ju.tˤaː.raħ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of طَارَحَ (ṭāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṭāriḥna", "ṭāraḥa", "yuṭāraḥna"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "طورحن",
-        "u": "طورحن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُورِحْنَ • (ṭūriḥna) (form III) /tˤuː.riħ.na/\n# third-person feminine plural past passive of طَارَحَ (ṭāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūriḥna", "ṭāraḥa"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "تطارحا",
-        "u": "تطارحا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تطارحا (form III)\n# تُطَارِحَا (tuṭāriḥā) /tu.tˤaː.ri.ħaː/: inflection of طَارَحَ (ṭāraḥa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُطَارَحَا (tuṭāraḥā) /tu.tˤaː.ra.ħaː/: inflection of طَارَحَ (ṭāraḥa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subj",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṭāriḥā", "ṭāraḥa", "tuṭāraḥā"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "طارحتما",
-        "u": "طارحتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَارَحْتُمَا • (ṭāraḥtumā) (form III) /tˤaː.raħ.tu.maː/\n# second-person dual past active of طَارَحَ (ṭāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭāraḥtumā", "ṭāraḥa"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "طارحتا",
-        "u": "طارحتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَارَحَتَا • (ṭāraḥatā) (form III) /tˤaː.ra.ħa.taː/\n# third-person feminine dual past active of طَارَحَ (ṭāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭāraḥatā", "ṭāraḥa"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "طورحا",
-        "u": "طورحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُورِحَا • (ṭūriḥā) (form III) /tˤuː.ri.ħaː/\n# third-person masculine dual past passive of طَارَحَ (ṭāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūriḥā", "ṭāraḥa"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "طارحا",
-        "u": "طارحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طارحا (form III)\n# طَارَحَا (ṭāraḥā) /tˤaː.ra.ħaː/: third-person masculine dual past active of طَارَحَ (ṭāraḥa)\n# طَارِحَا (ṭāriḥā) /tˤaː.ri.ħaː/: second-person dual imperative of طَارَحَ (ṭāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭāraḥā", "ṭāraḥa", "ṭāriḥā"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "طورحتا",
-        "u": "طورحتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُورِحَتَا • (ṭūriḥatā) (form III) /tˤuː.ri.ħa.taː/\n# third-person feminine dual past passive of طَارَحَ (ṭāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūriḥatā", "ṭāraḥa"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "طورحتما",
-        "u": "طورحتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُورِحْتُمَا • (ṭūriḥtumā) (form III) /tˤuː.riħ.tu.maː/\n# second-person dual past passive of طَارَحَ (ṭāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūriḥtumā", "ṭāraḥa"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "تطارحان",
-        "u": "تطارحان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطارحان (form III)\n# تُطَارِحَانِ (tuṭāriḥāni) /tu.tˤaː.ri.ħaː.ni/: inflection of طَارَحَ (ṭāraḥa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُطَارَحَانِ (tuṭāraḥāni) /tu.tˤaː.ra.ħaː.ni/: inflection of طَارَحَ (ṭāraḥa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṭāriḥāni", "ṭāraḥa", "tuṭāraḥāni"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "يطارحا",
-        "u": "يطارحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطارحا (form III)\n# يُطَارِحَا (yuṭāriḥā) /ju.tˤaː.ri.ħaː/: third-person masculine dual non-past active subjunctive/jussive of طَارَحَ (ṭāraḥa)\n# يُطَارَحَا (yuṭāraḥā) /ju.tˤaː.ra.ħaː/: third-person masculine dual non-past passive subjunctive/jussive of طَارَحَ (ṭāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṭāriḥā", "ṭāraḥa", "yuṭāraḥā"],
-        "k": "طارح",
-        "yol": "kök"
-      },
-      {
-        "w": "يطارحان",
-        "u": "يطارحان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطارحان (form III)\n# يُطَارِحَانِ (yuṭāriḥāni) /ju.tˤaː.ri.ħaː.ni/: third-person masculine dual non-past active indicative of طَارَحَ (ṭāraḥa)\n# يُطَارَحَانِ (yuṭāraḥāni) /ju.tˤaː.ra.ħaː.ni/: third-person masculine dual non-past passive indicative of طَارَحَ (ṭāraḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṭāriḥāni", "ṭāraḥa", "yuṭāraḥāni"],
-        "k": "طارح",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "طر",
+  "ses": {
     "harf": "ط",
+    "fasil": "طر",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تطارح",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تطارح (form III)\n# تُطَارِحُ (tuṭāriḥu) /tu.tˤaː.ri.ħu/: inflection of طَارَحَ (ṭāraḥa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُطَارَحُ (tuṭāraḥu) /tu.tˤaː.ra.ħu/: inflection of طَارَحَ (ṭāraḥa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṭāriḥu", "ṭāraḥa", "tuṭāraḥu"]
+    },
+    {
+      "madde": "يطارح",
+      "tur": "verb",
+      "baslik": "يطارح (form III)\n# يُطَارِحُ (yuṭāriḥu) /ju.tˤaː.ri.ħu/: third-person masculine singular non-past active indicative of طَارَحَ (ṭāraḥa)\n# يُطَارَحُ (yuṭāraḥu) /ju.tˤaː.ra.ħu/: third-person masculine singular non-past passive indicative of طَارَحَ (ṭāraḥa)\n# يُطَارِحَ (yuṭāriḥa) /ju.tˤaː.ri.ħa/: third-person masculine singular non-past active subjunctive of طَارَحَ (ṭāraḥa)\n# يُطَارَحَ (yuṭāraḥa) /",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṭāriḥu", "ṭāraḥa", "yuṭāraḥu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طورح",
+      "tur": "verb",
+      "baslik": "طُورِحَ • (ṭūriḥa) (form III) /tˤuː.ri.ħa/\n# third-person masculine singular past passive of طَارَحَ (ṭāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūriḥa", "ṭāraḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طارحت",
+      "tur": "verb",
+      "baslik": "طارحت (form III)\n# طَارَحْتُ (ṭāraḥtu) /tˤaː.raħ.tu/: first-person singular past active of طَارَحَ (ṭāraḥa)\n# طَارَحْتَ (ṭāraḥta) /tˤaː.raħ.ta/: second-person masculine singular past active of طَارَحَ (ṭāraḥa)\n# طَارَحْتِ (ṭāraḥti) /tˤaː.raħ.ti/: second-person feminine singular past active of طَارَحَ (ṭāraḥa)\n# طَارَحَتْ (ṭāraḥat) /tˤaː.ra.ħat/: third-person feminine singular past active of طَارَح",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭāraḥtu", "ṭāraḥa", "ṭāraḥta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طورحت",
+      "tur": "verb",
+      "baslik": "طورحت (form III)\n# طُورِحْتُ (ṭūriḥtu) /tˤuː.riħ.tu/: first-person singular past passive of طَارَحَ (ṭāraḥa)\n# طُورِحْتَ (ṭūriḥta) /tˤuː.riħ.ta/: second-person masculine singular past passive of طَارَحَ (ṭāraḥa)\n# طُورِحْتِ (ṭūriḥti) /tˤuː.riħ.ti/: second-person feminine singular past passive of طَارَحَ (ṭāraḥa)\n# طُورِحَتْ (ṭūriḥat) /tˤuː.ri.ħat/: third-person feminine singular past passive of طَ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūriḥtu", "ṭāraḥa", "ṭūriḥta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطارحي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تطارحي (form III)\n# تُطَارِحِي (tuṭāriḥī) /tu.tˤaː.ri.ħiː/: second-person feminine singular non-past active subjunctive/jussive of طَارَحَ (ṭāraḥa)\n# تُطَارَحِي (tuṭāraḥī) /tu.tˤaː.ra.ħiː/: second-person feminine singular non-past passive subjunctive/jussive of طَارَحَ (ṭāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṭāriḥī", "ṭāraḥa", "tuṭāraḥī"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطارحين",
+      "tur": "verb",
+      "baslik": "تطارحين (form III)\n# تُطَارِحِينَ (tuṭāriḥīna) /tu.tˤaː.ri.ħiː.na/: second-person feminine singular non-past active indicative of طَارَحَ (ṭāraḥa)\n# تُطَارَحِينَ (tuṭāraḥīna) /tu.tˤaː.ra.ħiː.na/: second-person feminine singular non-past passive indicative of طَارَحَ (ṭāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṭāriḥīna", "ṭāraḥa", "tuṭāraḥīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طارحي",
+      "tur": "verb",
+      "baslik": "طَارِحِي • (ṭāriḥī) (form III) /tˤaː.ri.ħiː/\n# second-person feminine singular imperative of طَارَحَ (ṭāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭāriḥī", "ṭāraḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أطارح",
+      "tur": "verb",
+      "baslik": "أطارح (form III)\n# أُطَارِحُ (ʔuṭāriḥu) /ʔu.tˤaː.ri.ħu/: first-person singular non-past active indicative of طَارَحَ (ṭāraḥa)\n# أُطَارَحُ (ʔuṭāraḥu) /ʔu.tˤaː.ra.ħu/: first-person singular non-past passive indicative of طَارَحَ (ṭāraḥa)\n# أُطَارِحَ (ʔuṭāriḥa) /ʔu.tˤaː.ri.ħa/: first-person singular non-past active subjunctive of طَارَحَ (ṭāraḥa)\n# أُطَارَحَ (ʔuṭāraḥa) /ʔu.tˤaː.ra.ħa/: first-person s",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔuṭāriḥu", "ṭāraḥa", "ʔuṭāraḥu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طارحنا",
+      "tur": "verb",
+      "baslik": "طَارَحْنَا • (ṭāraḥnā) (form III) /tˤaː.raħ.naː/\n# first-person plural past active of طَارَحَ (ṭāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭāraḥnā", "ṭāraḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نطارح",
+      "tur": "verb",
+      "baslik": "نطارح (form III)\n# نُطَارِحُ (nuṭāriḥu) /nu.tˤaː.ri.ħu/: first-person plural non-past active indicative of طَارَحَ (ṭāraḥa)\n# نُطَارَحُ (nuṭāraḥu) /nu.tˤaː.ra.ħu/: first-person plural non-past passive indicative of طَارَحَ (ṭāraḥa)\n# نُطَارِحَ (nuṭāriḥa) /nu.tˤaː.ri.ħa/: first-person plural non-past active subjunctive of طَارَحَ (ṭāraḥa)\n# نُطَارَحَ (nuṭāraḥa) /nu.tˤaː.ra.ħa/: first-person plural ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nuṭāriḥu", "ṭāraḥa", "nuṭāraḥu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طورحنا",
+      "tur": "verb",
+      "baslik": "طُورِحْنَا • (ṭūriḥnā) (form III) /tˤuː.riħ.naː/\n# first-person plural past passive of طَارَحَ (ṭāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūriḥnā", "ṭāraḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طارحتم",
+      "tur": "verb",
+      "baslik": "طَارَحْتُمْ • (ṭāraḥtum) (form III) /tˤaː.raħ.tum/\n# second-person masculine plural past active of طَارَحَ (ṭāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭāraḥtum", "ṭāraḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطارحون",
+      "tur": "verb",
+      "baslik": "تطارحون (form III)\n# تُطَارِحُونَ (tuṭāriḥūna) /tu.tˤaː.ri.ħuː.na/: second-person masculine plural non-past active indicative of طَارَحَ (ṭāraḥa)\n# تُطَارَحُونَ (tuṭāraḥūna) /tu.tˤaː.ra.ħuː.na/: second-person masculine plural non-past passive indicative of طَارَحَ (ṭāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṭāriḥūna", "ṭāraḥa", "tuṭāraḥūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طورحتم",
+      "tur": "verb",
+      "baslik": "طُورِحْتُمْ • (ṭūriḥtum) (form III) /tˤuː.riħ.tum/\n# second-person masculine plural past passive of طَارَحَ (ṭāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūriḥtum", "ṭāraḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطارحوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تطارحوا (form III)\n# تُطَارِحُوا (tuṭāriḥū) /tu.tˤaː.ri.ħuː/: second-person masculine plural non-past active subjunctive/jussive of طَارَحَ (ṭāraḥa)\n# تُطَارَحُوا (tuṭāraḥū) /tu.tˤaː.ra.ħuː/: second-person masculine plural non-past passive subjunctive/jussive of طَارَحَ (ṭāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṭāriḥū", "ṭāraḥa", "tuṭāraḥū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طارحوا",
+      "tur": "verb",
+      "baslik": "طارحوا (form III)\n# طَارَحُوا (ṭāraḥū) /tˤaː.ra.ħuː/: third-person masculine plural past active of طَارَحَ (ṭāraḥa)\n# طَارِحُوا (ṭāriḥū) /tˤaː.ri.ħuː/: second-person masculine plural imperative of طَارَحَ (ṭāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭāraḥū", "ṭāraḥa", "ṭāriḥū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطارحون",
+      "tur": "verb",
+      "baslik": "يطارحون (form III)\n# يُطَارِحُونَ (yuṭāriḥūna) /ju.tˤaː.ri.ħuː.na/: third-person masculine plural non-past active indicative of طَارَحَ (ṭāraḥa)\n# يُطَارَحُونَ (yuṭāraḥūna) /ju.tˤaː.ra.ħuː.na/: third-person masculine plural non-past passive indicative of طَارَحَ (ṭāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṭāriḥūna", "ṭāraḥa", "yuṭāraḥūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطارحوا",
+      "tur": "verb",
+      "baslik": "يطارحوا (form III)\n# يُطَارِحُوا (yuṭāriḥū) /ju.tˤaː.ri.ħuː/: third-person masculine plural non-past active subjunctive/jussive of طَارَحَ (ṭāraḥa)\n# يُطَارَحُوا (yuṭāraḥū) /ju.tˤaː.ra.ħuː/: third-person masculine plural non-past passive subjunctive/jussive of طَارَحَ (ṭāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṭāriḥū", "ṭāraḥa", "yuṭāraḥū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طورحوا",
+      "tur": "verb",
+      "baslik": "طُورِحُوا • (ṭūriḥū) (form III) /tˤuː.ri.ħuː/\n# third-person masculine plural past passive of طَارَحَ (ṭāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūriḥū", "ṭāraḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطارحن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تطارحن (form III)\n# تُطَارِحْنَ (tuṭāriḥna) /tu.tˤaː.riħ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of طَارَحَ (ṭāraḥa)\n# تُطَارَحْنَ (tuṭāraḥna) /tu.tˤaː.raħ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of طَارَحَ (ṭāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṭāriḥna", "ṭāraḥa", "tuṭāraḥna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طارحتن",
+      "tur": "verb",
+      "baslik": "طَارَحْتُنَّ • (ṭāraḥtunna) (form III) /tˤaː.raħ.tun.na/\n# second-person feminine plural past active of طَارَحَ (ṭāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭāraḥtunna", "ṭāraḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طارحن",
+      "tur": "verb",
+      "baslik": "طارحن (form III)\n# طَارَحْنَ (ṭāraḥna) /tˤaː.raħ.na/: third-person feminine plural past active of طَارَحَ (ṭāraḥa)\n# طَارِحْنَ (ṭāriḥna) /tˤaː.riħ.na/: second-person feminine plural imperative of طَارَحَ (ṭāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭāraḥna", "ṭāraḥa", "ṭāriḥna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طورحتن",
+      "tur": "verb",
+      "baslik": "طُورِحْتُنَّ • (ṭūriḥtunna) (form III) /tˤuː.riħ.tun.na/\n# second-person feminine plural past passive of طَارَحَ (ṭāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūriḥtunna", "ṭāraḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطارحن",
+      "tur": "verb",
+      "baslik": "يطارحن (form III)\n# يُطَارِحْنَ (yuṭāriḥna) /ju.tˤaː.riħ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of طَارَحَ (ṭāraḥa)\n# يُطَارَحْنَ (yuṭāraḥna) /ju.tˤaː.raħ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of طَارَحَ (ṭāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṭāriḥna", "ṭāraḥa", "yuṭāraḥna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طورحن",
+      "tur": "verb",
+      "baslik": "طُورِحْنَ • (ṭūriḥna) (form III) /tˤuː.riħ.na/\n# third-person feminine plural past passive of طَارَحَ (ṭāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūriḥna", "ṭāraḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطارحا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تطارحا (form III)\n# تُطَارِحَا (tuṭāriḥā) /tu.tˤaː.ri.ħaː/: inflection of طَارَحَ (ṭāraḥa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُطَارَحَا (tuṭāraḥā) /tu.tˤaː.ra.ħaː/: inflection of طَارَحَ (ṭāraḥa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subj",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṭāriḥā", "ṭāraḥa", "tuṭāraḥā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طارحتما",
+      "tur": "verb",
+      "baslik": "طَارَحْتُمَا • (ṭāraḥtumā) (form III) /tˤaː.raħ.tu.maː/\n# second-person dual past active of طَارَحَ (ṭāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭāraḥtumā", "ṭāraḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طارحتا",
+      "tur": "verb",
+      "baslik": "طَارَحَتَا • (ṭāraḥatā) (form III) /tˤaː.ra.ħa.taː/\n# third-person feminine dual past active of طَارَحَ (ṭāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭāraḥatā", "ṭāraḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طورحا",
+      "tur": "verb",
+      "baslik": "طُورِحَا • (ṭūriḥā) (form III) /tˤuː.ri.ħaː/\n# third-person masculine dual past passive of طَارَحَ (ṭāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūriḥā", "ṭāraḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طارحا",
+      "tur": "verb",
+      "baslik": "طارحا (form III)\n# طَارَحَا (ṭāraḥā) /tˤaː.ra.ħaː/: third-person masculine dual past active of طَارَحَ (ṭāraḥa)\n# طَارِحَا (ṭāriḥā) /tˤaː.ri.ħaː/: second-person dual imperative of طَارَحَ (ṭāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭāraḥā", "ṭāraḥa", "ṭāriḥā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طورحتا",
+      "tur": "verb",
+      "baslik": "طُورِحَتَا • (ṭūriḥatā) (form III) /tˤuː.ri.ħa.taː/\n# third-person feminine dual past passive of طَارَحَ (ṭāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūriḥatā", "ṭāraḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طورحتما",
+      "tur": "verb",
+      "baslik": "طُورِحْتُمَا • (ṭūriḥtumā) (form III) /tˤuː.riħ.tu.maː/\n# second-person dual past passive of طَارَحَ (ṭāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūriḥtumā", "ṭāraḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطارحان",
+      "tur": "verb",
+      "baslik": "تطارحان (form III)\n# تُطَارِحَانِ (tuṭāriḥāni) /tu.tˤaː.ri.ħaː.ni/: inflection of طَارَحَ (ṭāraḥa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُطَارَحَانِ (tuṭāraḥāni) /tu.tˤaː.ra.ħaː.ni/: inflection of طَارَحَ (ṭāraḥa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṭāriḥāni", "ṭāraḥa", "tuṭāraḥāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطارحا",
+      "tur": "verb",
+      "baslik": "يطارحا (form III)\n# يُطَارِحَا (yuṭāriḥā) /ju.tˤaː.ri.ħaː/: third-person masculine dual non-past active subjunctive/jussive of طَارَحَ (ṭāraḥa)\n# يُطَارَحَا (yuṭāraḥā) /ju.tˤaː.ra.ħaː/: third-person masculine dual non-past passive subjunctive/jussive of طَارَحَ (ṭāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṭāriḥā", "ṭāraḥa", "yuṭāraḥā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطارحان",
+      "tur": "verb",
+      "baslik": "يطارحان (form III)\n# يُطَارِحَانِ (yuṭāriḥāni) /ju.tˤaː.ri.ħaː.ni/: third-person masculine dual non-past active indicative of طَارَحَ (ṭāraḥa)\n# يُطَارَحَانِ (yuṭāraḥāni) /ju.tˤaː.ra.ħaː.ni/: third-person masculine dual non-past passive indicative of طَارَحَ (ṭāraḥa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṭāriḥāni", "ṭāraḥa", "yuṭāraḥāni"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "طارح", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

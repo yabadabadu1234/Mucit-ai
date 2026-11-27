@@ -1,678 +1,519 @@
 {
   "kok": "تءكل",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تءكل", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يتآكل",
-        "u": "يتآكل",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتآكل (form VI)\n# يَتَآكَلُ (yataʔākalu) /ja.ta.ʔaː.ka.lu/: third-person masculine singular non-past active indicative of تَآكَلَ (taʔākala)\n# يَتَآكَلَ (yataʔākala) /ja.ta.ʔaː.ka.la/: third-person masculine singular non-past active subjunctive of تَآكَلَ (taʔākala)\n# يَتَآكَلْ (yataʔākal) /ja.ta.ʔaː.kal/: third-person masculine singular non-past active jussive of تَآكَلَ (taʔākala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["yataʔākalu", "taʔākala", "yataʔākala"],
-        "k": "تآكل",
-        "yol": "kök"
-      },
-      {
-        "w": "يتأكل",
-        "u": "يتأكل",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتأكل (form V)\n# يَتَأَكَّلُ (yataʔakkalu) /ja.ta.ʔak.ka.lu/: third-person masculine singular non-past active indicative of تَأَكَّلَ (taʔakkala)\n# يَتَأَكَّلَ (yataʔakkala) /ja.ta.ʔak.ka.la/: third-person masculine singular non-past active subjunctive of تَأَكَّلَ (taʔakkala)\n# يَتَأَكَّلْ (yataʔakkal) /ja.ta.ʔak.kal/: third-person masculine singular non-past active jussive of تَأَكَّلَ (taʔakkal",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔakkalu", "taʔakkala", "yataʔakkala"],
-        "k": "تأكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تآكلت",
-        "u": "تآكلت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تآكلت (form VI)\n# تَآكَلْتُ (taʔākaltu) /ta.ʔaː.kal.tu/: first-person singular past active of تَآكَلَ (taʔākala)\n# تَآكَلْتَ (taʔākalta) /ta.ʔaː.kal.ta/: second-person masculine singular past active of تَآكَلَ (taʔākala)\n# تَآكَلْتِ (taʔākalti) /ta.ʔaː.kal.ti/: second-person feminine singular past active of تَآكَلَ (taʔākala)\n# تَآكَلَتْ (taʔākalat) /ta.ʔaː.ka.lat/: third-person feminine singular ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["taʔākaltu", "taʔākala", "taʔākalta"],
-        "k": "تآكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تتآكل",
-        "u": "تتآكل",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتآكل (form VI)\n# تَتَآكَلُ (tataʔākalu) /ta.ta.ʔaː.ka.lu/: inflection of تَآكَلَ (taʔākala):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَآكَلَ (tataʔākala) /ta.ta.ʔaː.ka.la/: inflection of تَآكَلَ (taʔākala):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-pa",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tataʔākalu", "taʔākala", "tataʔākala"],
-        "k": "تآكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تأكلت",
-        "u": "تأكلت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تأكلت (form V)\n# تَأَكَّلْتُ (taʔakkaltu) /ta.ʔak.kal.tu/: first-person singular past active of تَأَكَّلَ (taʔakkala)\n# تَأَكَّلْتَ (taʔakkalta) /ta.ʔak.kal.ta/: second-person masculine singular past active of تَأَكَّلَ (taʔakkala)\n# تَأَكَّلْتِ (taʔakkalti) /ta.ʔak.kal.ti/: second-person feminine singular past active of تَأَكَّلَ (taʔakkala)\n# تَأَكَّلَتْ (taʔakkalat) /ta.ʔak.ka.lat/: third-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔakkaltu", "taʔakkala", "taʔakkalta"],
-        "k": "تأكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأكل",
-        "u": "تتأكل",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتأكل (form V)\n# تَتَأَكَّلُ (tataʔakkalu) /ta.ta.ʔak.ka.lu/: inflection of تَأَكَّلَ (taʔakkala):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَأَكَّلَ (tataʔakkala) /ta.ta.ʔak.ka.la/: inflection of تَأَكَّلَ (taʔakkala):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔakkalu", "taʔakkala", "tataʔakkala"],
-        "k": "تأكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تأكلي",
-        "u": "تأكلي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَأَكَّلِي • (taʔakkalī) (form V) /ta.ʔak.ka.liː/\n# second-person feminine singular imperative of تَأَكَّلَ (taʔakkala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔakkalī", "taʔakkala"],
-        "k": "تأكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تتآكلين",
-        "u": "تتآكلين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَآكَلِينَ • (tataʔākalīna) (form VI) /ta.ta.ʔaː.ka.liː.na/\n# second-person feminine singular non-past active indicative of تَآكَلَ (taʔākala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tataʔākalīna", "taʔākala"],
-        "k": "تآكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تتآكلي",
-        "u": "تتآكلي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَآكَلِي • (tataʔākalī) (form VI) /ta.ta.ʔaː.ka.liː/\n# second-person feminine singular non-past active subjunctive/jussive of تَآكَلَ (taʔākala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tataʔākalī", "taʔākala"],
-        "k": "تآكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تآكلي",
-        "u": "تآكلي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَآكَلِي • (taʔākalī) (form VI) /ta.ʔaː.ka.liː/\n# second-person feminine singular imperative of تَآكَلَ (taʔākala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["taʔākalī", "taʔākala"],
-        "k": "تآكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأكلين",
-        "u": "تتأكلين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَكَّلِينَ • (tataʔakkalīna) (form V) /ta.ta.ʔak.ka.liː.na/\n# second-person feminine singular non-past active indicative of تَأَكَّلَ (taʔakkala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔakkalīna", "taʔakkala"],
-        "k": "تأكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأكلي",
-        "u": "تتأكلي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَكَّلِي • (tataʔakkalī) (form V) /ta.ta.ʔak.ka.liː/\n# second-person feminine singular non-past active subjunctive/jussive of تَأَكَّلَ (taʔakkala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔakkalī", "taʔakkala"],
-        "k": "تأكل",
-        "yol": "kök"
-      },
-      {
-        "w": "أتآكل",
-        "u": "أتآكل",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتآكل (form VI)\n# أَتَآكَلُ (ʔataʔākalu) /ʔa.ta.ʔaː.ka.lu/: first-person singular non-past active indicative of تَآكَلَ (taʔākala)\n# أَتَآكَلَ (ʔataʔākala) /ʔa.ta.ʔaː.ka.la/: first-person singular non-past active subjunctive of تَآكَلَ (taʔākala)\n# أَتَآكَلْ (ʔataʔākal) /ʔa.ta.ʔaː.kal/: first-person singular non-past active jussive of تَآكَلَ (taʔākala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["ʔataʔākalu", "taʔākala", "ʔataʔākala"],
-        "k": "تآكل",
-        "yol": "kök"
-      },
-      {
-        "w": "أتأكل",
-        "u": "أتأكل",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتأكل (form V)\n# أَتَأَكَّلُ (ʔataʔakkalu) /ʔa.ta.ʔak.ka.lu/: first-person singular non-past active indicative of تَأَكَّلَ (taʔakkala)\n# أَتَأَكَّلَ (ʔataʔakkala) /ʔa.ta.ʔak.ka.la/: first-person singular non-past active subjunctive of تَأَكَّلَ (taʔakkala)\n# أَتَأَكَّلْ (ʔataʔakkal) /ʔa.ta.ʔak.kal/: first-person singular non-past active jussive of تَأَكَّلَ (taʔakkala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔataʔakkalu", "taʔakkala", "ʔataʔakkala"],
-        "k": "تأكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تآكلنا",
-        "u": "تآكلنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَآكَلْنَا • (taʔākalnā) (form VI) /ta.ʔaː.kal.naː/\n# first-person plural past active of تَآكَلَ (taʔākala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["taʔākalnā", "taʔākala"],
-        "k": "تآكل",
-        "yol": "kök"
-      },
-      {
-        "w": "نتآكل",
-        "u": "نتآكل",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتآكل (form VI)\n# نَتَآكَلُ (nataʔākalu) /na.ta.ʔaː.ka.lu/: first-person plural non-past active indicative of تَآكَلَ (taʔākala)\n# نَتَآكَلَ (nataʔākala) /na.ta.ʔaː.ka.la/: first-person plural non-past active subjunctive of تَآكَلَ (taʔākala)\n# نَتَآكَلْ (nataʔākal) /na.ta.ʔaː.kal/: first-person plural non-past active jussive of تَآكَلَ (taʔākala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["nataʔākalu", "taʔākala", "nataʔākala"],
-        "k": "تآكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تأكلنا",
-        "u": "تأكلنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَكَّلْنَا • (taʔakkalnā) (form V) /ta.ʔak.kal.naː/\n# first-person plural past active of تَأَكَّلَ (taʔakkala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔakkalnā", "taʔakkala"],
-        "k": "تأكل",
-        "yol": "kök"
-      },
-      {
-        "w": "نتأكل",
-        "u": "نتأكل",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتأكل (form V)\n# نَتَأَكَّلُ (nataʔakkalu) /na.ta.ʔak.ka.lu/: first-person plural non-past active indicative of تَأَكَّلَ (taʔakkala)\n# نَتَأَكَّلَ (nataʔakkala) /na.ta.ʔak.ka.la/: first-person plural non-past active subjunctive of تَأَكَّلَ (taʔakkala)\n# نَتَأَكَّلْ (nataʔakkal) /na.ta.ʔak.kal/: first-person plural non-past active jussive of تَأَكَّلَ (taʔakkala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["nataʔakkalu", "taʔakkala", "nataʔakkala"],
-        "k": "تأكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تآكلتم",
-        "u": "تآكلتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَآكَلْتُمْ • (taʔākaltum) (form VI) /ta.ʔaː.kal.tum/\n# second-person masculine plural past active of تَآكَلَ (taʔākala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["taʔākaltum", "taʔākala"],
-        "k": "تآكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تتآكلون",
-        "u": "تتآكلون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَآكَلُونَ • (tataʔākalūna) (form VI) /ta.ta.ʔaː.ka.luː.na/\n# second-person masculine plural non-past active indicative of تَآكَلَ (taʔākala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tataʔākalūna", "taʔākala"],
-        "k": "تآكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تتآكلوا",
-        "u": "تتآكلوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَآكَلُوا • (tataʔākalū) (form VI) /ta.ta.ʔaː.ka.luː/\n# second-person masculine plural non-past active subjunctive/jussive of تَآكَلَ (taʔākala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tataʔākalū", "taʔākala"],
-        "k": "تآكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تأكلتم",
-        "u": "تأكلتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَكَّلْتُمْ • (taʔakkaltum) (form V) /ta.ʔak.kal.tum/\n# second-person masculine plural past active of تَأَكَّلَ (taʔakkala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔakkaltum", "taʔakkala"],
-        "k": "تأكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأكلون",
-        "u": "تتأكلون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَكَّلُونَ • (tataʔakkalūna) (form V) /ta.ta.ʔak.ka.luː.na/\n# second-person masculine plural non-past active indicative of تَأَكَّلَ (taʔakkala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔakkalūna", "taʔakkala"],
-        "k": "تأكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأكلوا",
-        "u": "تتأكلوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَكَّلُوا • (tataʔakkalū) (form V) /ta.ta.ʔak.ka.luː/\n# second-person masculine plural non-past active subjunctive/jussive of تَأَكَّلَ (taʔakkala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔakkalū", "taʔakkala"],
-        "k": "تأكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تآكلوا",
-        "u": "تآكلوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَآكَلُوا • (taʔākalū) (form VI) /ta.ʔaː.ka.luː/\n# inflection of تَآكَلَ (taʔākala):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["taʔākalū", "taʔākala"],
-        "k": "تآكل",
-        "yol": "kök"
-      },
-      {
-        "w": "يتآكلون",
-        "u": "يتآكلون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَآكَلُونَ • (yataʔākalūna) (form VI) /ja.ta.ʔaː.ka.luː.na/\n# third-person masculine plural non-past active indicative of تَآكَلَ (taʔākala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["yataʔākalūna", "taʔākala"],
-        "k": "تآكل",
-        "yol": "kök"
-      },
-      {
-        "w": "يتآكلوا",
-        "u": "يتآكلوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَآكَلُوا • (yataʔākalū) (form VI) /ja.ta.ʔaː.ka.luː/\n# third-person masculine plural non-past active subjunctive/jussive of تَآكَلَ (taʔākala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["yataʔākalū", "taʔākala"],
-        "k": "تآكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تأكلوا",
-        "u": "تأكلوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَأَكَّلُوا • (taʔakkalū) (form V) /ta.ʔak.ka.luː/\n# inflection of تَأَكَّلَ (taʔakkala):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔakkalū", "taʔakkala"],
-        "k": "تأكل",
-        "yol": "kök"
-      },
-      {
-        "w": "يتأكلون",
-        "u": "يتأكلون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَأَكَّلُونَ • (yataʔakkalūna) (form V) /ja.ta.ʔak.ka.luː.na/\n# third-person masculine plural non-past active indicative of تَأَكَّلَ (taʔakkala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔakkalūna", "taʔakkala"],
-        "k": "تأكل",
-        "yol": "kök"
-      },
-      {
-        "w": "يتأكلوا",
-        "u": "يتأكلوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَأَكَّلُوا • (yataʔakkalū) (form V) /ja.ta.ʔak.ka.luː/\n# third-person masculine plural non-past active subjunctive/jussive of تَأَكَّلَ (taʔakkala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔakkalū", "taʔakkala"],
-        "k": "تأكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تأكلن",
-        "u": "تأكلن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَأَكَّلْنَ • (taʔakkalna) (form V) /ta.ʔak.kal.na/\n# inflection of تَأَكَّلَ (taʔakkala):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔakkalna", "taʔakkala"],
-        "k": "تأكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تآكلتن",
-        "u": "تآكلتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَآكَلْتُنَّ • (taʔākaltunna) (form VI) /ta.ʔaː.kal.tun.na/\n# second-person feminine plural past active of تَآكَلَ (taʔākala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["taʔākaltunna", "taʔākala"],
-        "k": "تآكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تتآكلن",
-        "u": "تتآكلن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَآكَلْنَ • (tataʔākalna) (form VI) /ta.ta.ʔaː.kal.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَآكَلَ (taʔākala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tataʔākalna", "taʔākala"],
-        "k": "تآكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تآكلن",
-        "u": "تآكلن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَآكَلْنَ • (taʔākalna) (form VI) /ta.ʔaː.kal.na/\n# inflection of تَآكَلَ (taʔākala):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["taʔākalna", "taʔākala"],
-        "k": "تآكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تأكلتن",
-        "u": "تأكلتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَكَّلْتُنَّ • (taʔakkaltunna) (form V) /ta.ʔak.kal.tun.na/\n# second-person feminine plural past active of تَأَكَّلَ (taʔakkala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔakkaltunna", "taʔakkala"],
-        "k": "تأكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأكلن",
-        "u": "تتأكلن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَكَّلْنَ • (tataʔakkalna) (form V) /ta.ta.ʔak.kal.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَأَكَّلَ (taʔakkala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔakkalna", "taʔakkala"],
-        "k": "تأكل",
-        "yol": "kök"
-      },
-      {
-        "w": "يتآكلن",
-        "u": "يتآكلن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَآكَلْنَ • (yataʔākalna) (form VI) /ja.ta.ʔaː.kal.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَآكَلَ (taʔākala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["yataʔākalna", "taʔākala"],
-        "k": "تآكل",
-        "yol": "kök"
-      },
-      {
-        "w": "يتأكلن",
-        "u": "يتأكلن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَأَكَّلْنَ • (yataʔakkalna) (form V) /ja.ta.ʔak.kal.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَأَكَّلَ (taʔakkala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔakkalna", "taʔakkala"],
-        "k": "تأكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تأكلا",
-        "u": "تأكلا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَأَكَّلَا • (taʔakkalā) (form V) /ta.ʔak.ka.laː/\n# inflection of تَأَكَّلَ (taʔakkala):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔakkalā", "taʔakkala"],
-        "k": "تأكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تآكلتما",
-        "u": "تآكلتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَآكَلْتُمَا • (taʔākaltumā) (form VI) /ta.ʔaː.kal.tu.maː/\n# second-person dual past active of تَآكَلَ (taʔākala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["taʔākaltumā", "taʔākala"],
-        "k": "تآكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تآكلا",
-        "u": "تآكلا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَآكَلَا • (taʔākalā) (form VI) /ta.ʔaː.ka.laː/\n# inflection of تَآكَلَ (taʔākala):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["taʔākalā", "taʔākala"],
-        "k": "تآكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تآكلتا",
-        "u": "تآكلتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَآكَلَتَا • (taʔākalatā) (form VI) /ta.ʔaː.ka.la.taː/\n# third-person feminine dual past active of تَآكَلَ (taʔākala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["taʔākalatā", "taʔākala"],
-        "k": "تآكل",
-        "yol": "kök"
-      },
-      {
-        "w": "يتآكلان",
-        "u": "يتآكلان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَآكَلَانِ • (yataʔākalāni) (form VI) /ja.ta.ʔaː.ka.laː.ni/\n# third-person masculine dual non-past active indicative of تَآكَلَ (taʔākala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["yataʔākalāni", "taʔākala"],
-        "k": "تآكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تتآكلان",
-        "u": "تتآكلان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَآكَلَانِ • (tataʔākalāni) (form VI) /ta.ta.ʔaː.ka.laː.ni/\n# inflection of تَآكَلَ (taʔākala):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tataʔākalāni", "taʔākala"],
-        "k": "تآكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تتآكلا",
-        "u": "تتآكلا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَآكَلَا • (tataʔākalā) (form VI) /ta.ta.ʔaː.ka.laː/\n# inflection of تَآكَلَ (taʔākala):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tataʔākalā", "taʔākala"],
-        "k": "تآكل",
-        "yol": "kök"
-      },
-      {
-        "w": "يتآكلا",
-        "u": "يتآكلا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَآكَلَا • (yataʔākalā) (form VI) /ja.ta.ʔaː.ka.laː/\n# third-person masculine dual non-past active subjunctive/jussive of تَآكَلَ (taʔākala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["yataʔākalā", "taʔākala"],
-        "k": "تآكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تأكلتما",
-        "u": "تأكلتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَكَّلْتُمَا • (taʔakkaltumā) (form V) /ta.ʔak.kal.tu.maː/\n# second-person dual past active of تَأَكَّلَ (taʔakkala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔakkaltumā", "taʔakkala"],
-        "k": "تأكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأكلان",
-        "u": "تتأكلان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَكَّلَانِ • (tataʔakkalāni) (form V) /ta.ta.ʔak.ka.laː.ni/\n# inflection of تَأَكَّلَ (taʔakkala):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔakkalāni", "taʔakkala"],
-        "k": "تأكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأكلا",
-        "u": "تتأكلا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَكَّلَا • (tataʔakkalā) (form V) /ta.ta.ʔak.ka.laː/\n# inflection of تَأَكَّلَ (taʔakkala):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔakkalā", "taʔakkala"],
-        "k": "تأكل",
-        "yol": "kök"
-      },
-      {
-        "w": "تأكلتا",
-        "u": "تأكلتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَكَّلَتَا • (taʔakkalatā) (form V) /ta.ʔak.ka.la.taː/\n# third-person feminine dual past active of تَأَكَّلَ (taʔakkala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔakkalatā", "taʔakkala"],
-        "k": "تأكل",
-        "yol": "kök"
-      },
-      {
-        "w": "يتأكلان",
-        "u": "يتأكلان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَأَكَّلَانِ • (yataʔakkalāni) (form V) /ja.ta.ʔak.ka.laː.ni/\n# third-person masculine dual non-past active indicative of تَأَكَّلَ (taʔakkala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔakkalāni", "taʔakkala"],
-        "k": "تأكل",
-        "yol": "kök"
-      },
-      {
-        "w": "يتأكلا",
-        "u": "يتأكلا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَأَكَّلَا • (yataʔakkalā) (form V) /ja.ta.ʔak.ka.laː/\n# third-person masculine dual non-past active subjunctive/jussive of تَأَكَّلَ (taʔakkala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔakkalā", "taʔakkala"],
-        "k": "تأكل",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تك",
+  "ses": {
     "harf": "ت",
+    "fasil": "تك",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يتآكل",
+      "tur": "verb",
+      "baslik": "يتآكل (form VI)\n# يَتَآكَلُ (yataʔākalu) /ja.ta.ʔaː.ka.lu/: third-person masculine singular non-past active indicative of تَآكَلَ (taʔākala)\n# يَتَآكَلَ (yataʔākala) /ja.ta.ʔaː.ka.la/: third-person masculine singular non-past active subjunctive of تَآكَلَ (taʔākala)\n# يَتَآكَلْ (yataʔākal) /ja.ta.ʔaː.kal/: third-person masculine singular non-past active jussive of تَآكَلَ (taʔākala)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["yataʔākalu", "taʔākala", "yataʔākala"],
+      "kok_yazilis": "تآكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتأكل",
+      "tur": "verb",
+      "baslik": "يتأكل (form V)\n# يَتَأَكَّلُ (yataʔakkalu) /ja.ta.ʔak.ka.lu/: third-person masculine singular non-past active indicative of تَأَكَّلَ (taʔakkala)\n# يَتَأَكَّلَ (yataʔakkala) /ja.ta.ʔak.ka.la/: third-person masculine singular non-past active subjunctive of تَأَكَّلَ (taʔakkala)\n# يَتَأَكَّلْ (yataʔakkal) /ja.ta.ʔak.kal/: third-person masculine singular non-past active jussive of تَأَكَّلَ (taʔakkal",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔakkalu", "taʔakkala", "yataʔakkala"],
+      "kok_yazilis": "تأكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تآكلت",
+      "tur": "verb",
+      "baslik": "تآكلت (form VI)\n# تَآكَلْتُ (taʔākaltu) /ta.ʔaː.kal.tu/: first-person singular past active of تَآكَلَ (taʔākala)\n# تَآكَلْتَ (taʔākalta) /ta.ʔaː.kal.ta/: second-person masculine singular past active of تَآكَلَ (taʔākala)\n# تَآكَلْتِ (taʔākalti) /ta.ʔaː.kal.ti/: second-person feminine singular past active of تَآكَلَ (taʔākala)\n# تَآكَلَتْ (taʔākalat) /ta.ʔaː.ka.lat/: third-person feminine singular ",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["taʔākaltu", "taʔākala", "taʔākalta"],
+      "kok_yazilis": "تآكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتآكل",
+      "tur": "verb",
+      "baslik": "تتآكل (form VI)\n# تَتَآكَلُ (tataʔākalu) /ta.ta.ʔaː.ka.lu/: inflection of تَآكَلَ (taʔākala):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَآكَلَ (tataʔākala) /ta.ta.ʔaː.ka.la/: inflection of تَآكَلَ (taʔākala):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-pa",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tataʔākalu", "taʔākala", "tataʔākala"],
+      "kok_yazilis": "تآكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأكلت",
+      "tur": "verb",
+      "baslik": "تأكلت (form V)\n# تَأَكَّلْتُ (taʔakkaltu) /ta.ʔak.kal.tu/: first-person singular past active of تَأَكَّلَ (taʔakkala)\n# تَأَكَّلْتَ (taʔakkalta) /ta.ʔak.kal.ta/: second-person masculine singular past active of تَأَكَّلَ (taʔakkala)\n# تَأَكَّلْتِ (taʔakkalti) /ta.ʔak.kal.ti/: second-person feminine singular past active of تَأَكَّلَ (taʔakkala)\n# تَأَكَّلَتْ (taʔakkalat) /ta.ʔak.ka.lat/: third-perso",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔakkaltu", "taʔakkala", "taʔakkalta"],
+      "kok_yazilis": "تأكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأكل",
+      "tur": "verb",
+      "baslik": "تتأكل (form V)\n# تَتَأَكَّلُ (tataʔakkalu) /ta.ta.ʔak.ka.lu/: inflection of تَأَكَّلَ (taʔakkala):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَأَكَّلَ (tataʔakkala) /ta.ta.ʔak.ka.la/: inflection of تَأَكَّلَ (taʔakkala):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔakkalu", "taʔakkala", "tataʔakkala"],
+      "kok_yazilis": "تأكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأكلي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَأَكَّلِي • (taʔakkalī) (form V) /ta.ʔak.ka.liː/\n# second-person feminine singular imperative of تَأَكَّلَ (taʔakkala)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔakkalī", "taʔakkala"],
+      "kok_yazilis": "تأكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتآكلين",
+      "tur": "verb",
+      "baslik": "تَتَآكَلِينَ • (tataʔākalīna) (form VI) /ta.ta.ʔaː.ka.liː.na/\n# second-person feminine singular non-past active indicative of تَآكَلَ (taʔākala)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tataʔākalīna", "taʔākala"],
+      "kok_yazilis": "تآكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتآكلي",
+      "tur": "verb",
+      "baslik": "تَتَآكَلِي • (tataʔākalī) (form VI) /ta.ta.ʔaː.ka.liː/\n# second-person feminine singular non-past active subjunctive/jussive of تَآكَلَ (taʔākala)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tataʔākalī", "taʔākala"],
+      "kok_yazilis": "تآكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تآكلي",
+      "tur": "verb",
+      "baslik": "تَآكَلِي • (taʔākalī) (form VI) /ta.ʔaː.ka.liː/\n# second-person feminine singular imperative of تَآكَلَ (taʔākala)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["taʔākalī", "taʔākala"],
+      "kok_yazilis": "تآكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأكلين",
+      "tur": "verb",
+      "baslik": "تَتَأَكَّلِينَ • (tataʔakkalīna) (form V) /ta.ta.ʔak.ka.liː.na/\n# second-person feminine singular non-past active indicative of تَأَكَّلَ (taʔakkala)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔakkalīna", "taʔakkala"],
+      "kok_yazilis": "تأكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأكلي",
+      "tur": "verb",
+      "baslik": "تَتَأَكَّلِي • (tataʔakkalī) (form V) /ta.ta.ʔak.ka.liː/\n# second-person feminine singular non-past active subjunctive/jussive of تَأَكَّلَ (taʔakkala)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔakkalī", "taʔakkala"],
+      "kok_yazilis": "تأكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتآكل",
+      "tur": "verb",
+      "baslik": "أتآكل (form VI)\n# أَتَآكَلُ (ʔataʔākalu) /ʔa.ta.ʔaː.ka.lu/: first-person singular non-past active indicative of تَآكَلَ (taʔākala)\n# أَتَآكَلَ (ʔataʔākala) /ʔa.ta.ʔaː.ka.la/: first-person singular non-past active subjunctive of تَآكَلَ (taʔākala)\n# أَتَآكَلْ (ʔataʔākal) /ʔa.ta.ʔaː.kal/: first-person singular non-past active jussive of تَآكَلَ (taʔākala)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["ʔataʔākalu", "taʔākala", "ʔataʔākala"],
+      "kok_yazilis": "تآكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتأكل",
+      "tur": "verb",
+      "baslik": "أتأكل (form V)\n# أَتَأَكَّلُ (ʔataʔakkalu) /ʔa.ta.ʔak.ka.lu/: first-person singular non-past active indicative of تَأَكَّلَ (taʔakkala)\n# أَتَأَكَّلَ (ʔataʔakkala) /ʔa.ta.ʔak.ka.la/: first-person singular non-past active subjunctive of تَأَكَّلَ (taʔakkala)\n# أَتَأَكَّلْ (ʔataʔakkal) /ʔa.ta.ʔak.kal/: first-person singular non-past active jussive of تَأَكَّلَ (taʔakkala)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔataʔakkalu", "taʔakkala", "ʔataʔakkala"],
+      "kok_yazilis": "تأكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تآكلنا",
+      "tur": "verb",
+      "baslik": "تَآكَلْنَا • (taʔākalnā) (form VI) /ta.ʔaː.kal.naː/\n# first-person plural past active of تَآكَلَ (taʔākala)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["taʔākalnā", "taʔākala"],
+      "kok_yazilis": "تآكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتآكل",
+      "tur": "verb",
+      "baslik": "نتآكل (form VI)\n# نَتَآكَلُ (nataʔākalu) /na.ta.ʔaː.ka.lu/: first-person plural non-past active indicative of تَآكَلَ (taʔākala)\n# نَتَآكَلَ (nataʔākala) /na.ta.ʔaː.ka.la/: first-person plural non-past active subjunctive of تَآكَلَ (taʔākala)\n# نَتَآكَلْ (nataʔākal) /na.ta.ʔaː.kal/: first-person plural non-past active jussive of تَآكَلَ (taʔākala)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["nataʔākalu", "taʔākala", "nataʔākala"],
+      "kok_yazilis": "تآكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأكلنا",
+      "tur": "verb",
+      "baslik": "تَأَكَّلْنَا • (taʔakkalnā) (form V) /ta.ʔak.kal.naː/\n# first-person plural past active of تَأَكَّلَ (taʔakkala)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔakkalnā", "taʔakkala"],
+      "kok_yazilis": "تأكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتأكل",
+      "tur": "verb",
+      "baslik": "نتأكل (form V)\n# نَتَأَكَّلُ (nataʔakkalu) /na.ta.ʔak.ka.lu/: first-person plural non-past active indicative of تَأَكَّلَ (taʔakkala)\n# نَتَأَكَّلَ (nataʔakkala) /na.ta.ʔak.ka.la/: first-person plural non-past active subjunctive of تَأَكَّلَ (taʔakkala)\n# نَتَأَكَّلْ (nataʔakkal) /na.ta.ʔak.kal/: first-person plural non-past active jussive of تَأَكَّلَ (taʔakkala)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["nataʔakkalu", "taʔakkala", "nataʔakkala"],
+      "kok_yazilis": "تأكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تآكلتم",
+      "tur": "verb",
+      "baslik": "تَآكَلْتُمْ • (taʔākaltum) (form VI) /ta.ʔaː.kal.tum/\n# second-person masculine plural past active of تَآكَلَ (taʔākala)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["taʔākaltum", "taʔākala"],
+      "kok_yazilis": "تآكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتآكلون",
+      "tur": "verb",
+      "baslik": "تَتَآكَلُونَ • (tataʔākalūna) (form VI) /ta.ta.ʔaː.ka.luː.na/\n# second-person masculine plural non-past active indicative of تَآكَلَ (taʔākala)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tataʔākalūna", "taʔākala"],
+      "kok_yazilis": "تآكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتآكلوا",
+      "tur": "verb",
+      "baslik": "تَتَآكَلُوا • (tataʔākalū) (form VI) /ta.ta.ʔaː.ka.luː/\n# second-person masculine plural non-past active subjunctive/jussive of تَآكَلَ (taʔākala)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tataʔākalū", "taʔākala"],
+      "kok_yazilis": "تآكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأكلتم",
+      "tur": "verb",
+      "baslik": "تَأَكَّلْتُمْ • (taʔakkaltum) (form V) /ta.ʔak.kal.tum/\n# second-person masculine plural past active of تَأَكَّلَ (taʔakkala)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔakkaltum", "taʔakkala"],
+      "kok_yazilis": "تأكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأكلون",
+      "tur": "verb",
+      "baslik": "تَتَأَكَّلُونَ • (tataʔakkalūna) (form V) /ta.ta.ʔak.ka.luː.na/\n# second-person masculine plural non-past active indicative of تَأَكَّلَ (taʔakkala)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔakkalūna", "taʔakkala"],
+      "kok_yazilis": "تأكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأكلوا",
+      "tur": "verb",
+      "baslik": "تَتَأَكَّلُوا • (tataʔakkalū) (form V) /ta.ta.ʔak.ka.luː/\n# second-person masculine plural non-past active subjunctive/jussive of تَأَكَّلَ (taʔakkala)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔakkalū", "taʔakkala"],
+      "kok_yazilis": "تأكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تآكلوا",
+      "tur": "verb",
+      "baslik": "تَآكَلُوا • (taʔākalū) (form VI) /ta.ʔaː.ka.luː/\n# inflection of تَآكَلَ (taʔākala):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["taʔākalū", "taʔākala"],
+      "kok_yazilis": "تآكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتآكلون",
+      "tur": "verb",
+      "baslik": "يَتَآكَلُونَ • (yataʔākalūna) (form VI) /ja.ta.ʔaː.ka.luː.na/\n# third-person masculine plural non-past active indicative of تَآكَلَ (taʔākala)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["yataʔākalūna", "taʔākala"],
+      "kok_yazilis": "تآكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتآكلوا",
+      "tur": "verb",
+      "baslik": "يَتَآكَلُوا • (yataʔākalū) (form VI) /ja.ta.ʔaː.ka.luː/\n# third-person masculine plural non-past active subjunctive/jussive of تَآكَلَ (taʔākala)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["yataʔākalū", "taʔākala"],
+      "kok_yazilis": "تآكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأكلوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَأَكَّلُوا • (taʔakkalū) (form V) /ta.ʔak.ka.luː/\n# inflection of تَأَكَّلَ (taʔakkala):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔakkalū", "taʔakkala"],
+      "kok_yazilis": "تأكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتأكلون",
+      "tur": "verb",
+      "baslik": "يَتَأَكَّلُونَ • (yataʔakkalūna) (form V) /ja.ta.ʔak.ka.luː.na/\n# third-person masculine plural non-past active indicative of تَأَكَّلَ (taʔakkala)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔakkalūna", "taʔakkala"],
+      "kok_yazilis": "تأكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتأكلوا",
+      "tur": "verb",
+      "baslik": "يَتَأَكَّلُوا • (yataʔakkalū) (form V) /ja.ta.ʔak.ka.luː/\n# third-person masculine plural non-past active subjunctive/jussive of تَأَكَّلَ (taʔakkala)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔakkalū", "taʔakkala"],
+      "kok_yazilis": "تأكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأكلن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَأَكَّلْنَ • (taʔakkalna) (form V) /ta.ʔak.kal.na/\n# inflection of تَأَكَّلَ (taʔakkala):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔakkalna", "taʔakkala"],
+      "kok_yazilis": "تأكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تآكلتن",
+      "tur": "verb",
+      "baslik": "تَآكَلْتُنَّ • (taʔākaltunna) (form VI) /ta.ʔaː.kal.tun.na/\n# second-person feminine plural past active of تَآكَلَ (taʔākala)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["taʔākaltunna", "taʔākala"],
+      "kok_yazilis": "تآكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتآكلن",
+      "tur": "verb",
+      "baslik": "تَتَآكَلْنَ • (tataʔākalna) (form VI) /ta.ta.ʔaː.kal.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَآكَلَ (taʔākala)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tataʔākalna", "taʔākala"],
+      "kok_yazilis": "تآكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تآكلن",
+      "tur": "verb",
+      "baslik": "تَآكَلْنَ • (taʔākalna) (form VI) /ta.ʔaː.kal.na/\n# inflection of تَآكَلَ (taʔākala):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["taʔākalna", "taʔākala"],
+      "kok_yazilis": "تآكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأكلتن",
+      "tur": "verb",
+      "baslik": "تَأَكَّلْتُنَّ • (taʔakkaltunna) (form V) /ta.ʔak.kal.tun.na/\n# second-person feminine plural past active of تَأَكَّلَ (taʔakkala)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔakkaltunna", "taʔakkala"],
+      "kok_yazilis": "تأكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأكلن",
+      "tur": "verb",
+      "baslik": "تَتَأَكَّلْنَ • (tataʔakkalna) (form V) /ta.ta.ʔak.kal.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَأَكَّلَ (taʔakkala)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔakkalna", "taʔakkala"],
+      "kok_yazilis": "تأكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتآكلن",
+      "tur": "verb",
+      "baslik": "يَتَآكَلْنَ • (yataʔākalna) (form VI) /ja.ta.ʔaː.kal.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَآكَلَ (taʔākala)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["yataʔākalna", "taʔākala"],
+      "kok_yazilis": "تآكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتأكلن",
+      "tur": "verb",
+      "baslik": "يَتَأَكَّلْنَ • (yataʔakkalna) (form V) /ja.ta.ʔak.kal.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَأَكَّلَ (taʔakkala)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔakkalna", "taʔakkala"],
+      "kok_yazilis": "تأكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأكلا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَأَكَّلَا • (taʔakkalā) (form V) /ta.ʔak.ka.laː/\n# inflection of تَأَكَّلَ (taʔakkala):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔakkalā", "taʔakkala"],
+      "kok_yazilis": "تأكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تآكلتما",
+      "tur": "verb",
+      "baslik": "تَآكَلْتُمَا • (taʔākaltumā) (form VI) /ta.ʔaː.kal.tu.maː/\n# second-person dual past active of تَآكَلَ (taʔākala)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["taʔākaltumā", "taʔākala"],
+      "kok_yazilis": "تآكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تآكلا",
+      "tur": "verb",
+      "baslik": "تَآكَلَا • (taʔākalā) (form VI) /ta.ʔaː.ka.laː/\n# inflection of تَآكَلَ (taʔākala):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["taʔākalā", "taʔākala"],
+      "kok_yazilis": "تآكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تآكلتا",
+      "tur": "verb",
+      "baslik": "تَآكَلَتَا • (taʔākalatā) (form VI) /ta.ʔaː.ka.la.taː/\n# third-person feminine dual past active of تَآكَلَ (taʔākala)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["taʔākalatā", "taʔākala"],
+      "kok_yazilis": "تآكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتآكلان",
+      "tur": "verb",
+      "baslik": "يَتَآكَلَانِ • (yataʔākalāni) (form VI) /ja.ta.ʔaː.ka.laː.ni/\n# third-person masculine dual non-past active indicative of تَآكَلَ (taʔākala)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["yataʔākalāni", "taʔākala"],
+      "kok_yazilis": "تآكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتآكلان",
+      "tur": "verb",
+      "baslik": "تَتَآكَلَانِ • (tataʔākalāni) (form VI) /ta.ta.ʔaː.ka.laː.ni/\n# inflection of تَآكَلَ (taʔākala):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tataʔākalāni", "taʔākala"],
+      "kok_yazilis": "تآكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتآكلا",
+      "tur": "verb",
+      "baslik": "تَتَآكَلَا • (tataʔākalā) (form VI) /ta.ta.ʔaː.ka.laː/\n# inflection of تَآكَلَ (taʔākala):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tataʔākalā", "taʔākala"],
+      "kok_yazilis": "تآكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتآكلا",
+      "tur": "verb",
+      "baslik": "يَتَآكَلَا • (yataʔākalā) (form VI) /ja.ta.ʔaː.ka.laː/\n# third-person masculine dual non-past active subjunctive/jussive of تَآكَلَ (taʔākala)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["yataʔākalā", "taʔākala"],
+      "kok_yazilis": "تآكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأكلتما",
+      "tur": "verb",
+      "baslik": "تَأَكَّلْتُمَا • (taʔakkaltumā) (form V) /ta.ʔak.kal.tu.maː/\n# second-person dual past active of تَأَكَّلَ (taʔakkala)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔakkaltumā", "taʔakkala"],
+      "kok_yazilis": "تأكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأكلان",
+      "tur": "verb",
+      "baslik": "تَتَأَكَّلَانِ • (tataʔakkalāni) (form V) /ta.ta.ʔak.ka.laː.ni/\n# inflection of تَأَكَّلَ (taʔakkala):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔakkalāni", "taʔakkala"],
+      "kok_yazilis": "تأكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأكلا",
+      "tur": "verb",
+      "baslik": "تَتَأَكَّلَا • (tataʔakkalā) (form V) /ta.ta.ʔak.ka.laː/\n# inflection of تَأَكَّلَ (taʔakkala):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔakkalā", "taʔakkala"],
+      "kok_yazilis": "تأكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأكلتا",
+      "tur": "verb",
+      "baslik": "تَأَكَّلَتَا • (taʔakkalatā) (form V) /ta.ʔak.ka.la.taː/\n# third-person feminine dual past active of تَأَكَّلَ (taʔakkala)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔakkalatā", "taʔakkala"],
+      "kok_yazilis": "تأكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتأكلان",
+      "tur": "verb",
+      "baslik": "يَتَأَكَّلَانِ • (yataʔakkalāni) (form V) /ja.ta.ʔak.ka.laː.ni/\n# third-person masculine dual non-past active indicative of تَأَكَّلَ (taʔakkala)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔakkalāni", "taʔakkala"],
+      "kok_yazilis": "تأكل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتأكلا",
+      "tur": "verb",
+      "baslik": "يَتَأَكَّلَا • (yataʔakkalā) (form V) /ja.ta.ʔak.ka.laː/\n# third-person masculine dual non-past active subjunctive/jussive of تَأَكَّلَ (taʔakkala)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔakkalā", "taʔakkala"],
+      "kok_yazilis": "تأكل",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تءكل", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

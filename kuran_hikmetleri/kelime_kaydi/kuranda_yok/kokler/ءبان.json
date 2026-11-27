@@ -1,594 +1,468 @@
 {
   "kok": "ءبان",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءبان", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يبين",
-        "u": "يبين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يبين (form IV)\n# يُبِينُ (yubīnu) /ju.biː.nu/: third-person masculine singular non-past active indicative of أَبَانَ (ʔabāna)\n# يُبِينَ (yubīna) /ju.biː.na/: third-person masculine singular non-past active subjunctive of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubīnu", "ʔabāna", "yubīna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "يبان",
-        "u": "يبان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يبان (form IV)\n# يُبَانُ (yubānu) /ju.baː.nu/: third-person masculine singular non-past passive indicative of أَبَانَ (ʔabāna)\n# يُبَانَ (yubāna) /ju.baː.na/: third-person masculine singular non-past passive subjunctive of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubānu", "ʔabāna", "yubāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "يبن",
-        "u": "يبن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يبن (form IV)\n# يُبِنَّ (yubinna) /ju.bin.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَبَانَ (ʔabāna)\n# يُبَنَّ (yubanna) /ju.ban.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَبَانَ (ʔabāna)\n# يُبِنْ (yubin) /ju.bin/: third-person masculine singular non-past active jussive of أَبَانَ (ʔabāna)\n# يُبَنْ (yuban) /ju.ban",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubinna", "ʔabāna", "yubanna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "تبين",
-        "u": "تبين",
-        "p": "verb",
-        "n": "1.4",
-        "h": "ar-verb form",
-        "e": "تبين (form IV)\n# تُبِينُ (tubīnu) /tu.biː.nu/: inflection of أَبَانَ (ʔabāna):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُبِينَ (tubīna) /tu.biː.na/: inflection of أَبَانَ (ʔabāna):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubīnu", "ʔabāna", "tubīna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "تبن",
-        "u": "تبن",
-        "p": "verb",
-        "n": "7",
-        "h": "ar-verb form",
-        "e": "تبن (form IV)\n# تُبِنَّ (tubinna) /tu.bin.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَبَانَ (ʔabāna)\n# تُبَنَّ (tubanna) /tu.ban.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَبَانَ (ʔabāna)\n# تُبِنْ (tubin) /tu.bin/: inflection of أَبَانَ (ʔabāna):\n## second-person masculine singular non-past active jussive\n## thi",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubinna", "ʔabāna", "tubanna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "تبينين",
-        "u": "تبينين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُبِينِينَ • (tubīnīna) (form IV) /tu.biː.niː.na/\n# second-person feminine singular non-past active indicative of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubīnīna", "ʔabāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيني",
-        "u": "تبيني",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُبِينِي • (tubīnī) (form IV) /tu.biː.niː/\n# second-person feminine singular non-past active subjunctive/jussive of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubīnī", "ʔabāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "أبين",
-        "u": "أبين",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "أبين (form IV)\n# أُبِينَ (ʔubīna) /ʔu.biː.na/: inflection of أَبَانَ (ʔabāna):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُبِينُ (ʔubīnu) /ʔu.biː.nu/: first-person singular non-past active indicative of أَبَانَ (ʔabāna)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔubīna", "ʔabāna", "ʔubīnu"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "أبن",
-        "u": "أبن",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "أبن (form IV)\n# أَبَنَّ (ʔabanna) /ʔa.ban.na/: third-person feminine plural past active of أَبَانَ (ʔabāna)\n# أُبِنَّ (ʔubinna) /ʔu.bin.na/: third-person feminine plural past passive of أَبَانَ (ʔabāna)\n# أُبِنْ (ʔubin) /ʔu.bin/: first-person singular non-past active jussive of أَبَانَ (ʔabāna)\n# أُبَنْ (ʔuban) /ʔu.ban/: first-person singular non-past passive jussive of أَبَانَ (ʔabāna)\n# أَبِنْ (",
-        "tag": ["form-iv", "no-gloss", "obsolete"],
-        "r": ["ʔabanna", "ʔabāna", "ʔubinna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "أبنا",
-        "u": "أبنا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أبنا (form IV)\n# أَبَنَّا (ʔabannā) /ʔa.ban.naː/: first-person plural past active of أَبَانَ (ʔabāna)\n# أُبِنَّا (ʔubinnā) /ʔu.bin.naː/: first-person plural past passive of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabannā", "ʔabāna", "ʔubinnā"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "أبينا",
-        "u": "أبينا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أبينا (form IV)\n# أُبِينَا (ʔubīnā) /ʔu.biː.naː/: third-person masculine dual past passive of أَبَانَ (ʔabāna)\n# أَبِينَا (ʔabīnā) /ʔa.biː.naː/: second-person dual imperative of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔubīnā", "ʔabāna", "ʔabīnā"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "نبين",
-        "u": "نبين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نبين (form IV)\n# نُبِينُ (nubīnu) /nu.biː.nu/: first-person plural non-past active indicative of أَبَانَ (ʔabāna)\n# نُبِينَ (nubīna) /nu.biː.na/: first-person plural non-past active subjunctive of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nubīnu", "ʔabāna", "nubīna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "نبن",
-        "u": "نبن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نبن (form IV)\n# نُبِنْ (nubin) /nu.bin/: first-person plural non-past active jussive of أَبَانَ (ʔabāna)\n# نُبَنْ (nuban) /nu.ban/: first-person plural non-past passive jussive of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nubin", "ʔabāna", "nuban"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "تبينون",
-        "u": "تبينون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُبِينُونَ • (tubīnūna) (form IV) /tu.biː.nuː.na/\n# second-person masculine plural non-past active indicative of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubīnūna", "ʔabāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "تبينوا",
-        "u": "تبينوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُبِينُوا • (tubīnū) (form IV) /tu.biː.nuː/\n# second-person masculine plural non-past active subjunctive/jussive of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubīnū", "ʔabāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "يبينون",
-        "u": "يبينون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُبِينُونَ • (yubīnūna) (form IV) /ju.biː.nuː.na/\n# third-person masculine plural non-past active indicative of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubīnūna", "ʔabāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "يبينوا",
-        "u": "يبينوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُبِينُوا • (yubīnū) (form IV) /ju.biː.nuː/\n# third-person masculine plural non-past active subjunctive/jussive of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubīnū", "ʔabāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "تبان",
-        "u": "تبان",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تبان (form IV)\n# تُبَانُ (tubānu) /tu.baː.nu/: inflection of أَبَانَ (ʔabāna):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُبَانَ (tubāna) /tu.baː.na/: inflection of أَبَانَ (ʔabāna):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubānu", "ʔabāna", "tubāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "أبانت",
-        "u": "أبانت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَبَانَتْ • (ʔabānat) (form IV) /ʔa.baː.nat/\n# third-person feminine singular past active of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabānat", "ʔabāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "أبنت",
-        "u": "أبنت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أبنت (form IV)\n# أَبَنْتُ (ʔabantu) /ʔa.ban.tu/: first-person singular past active of أَبَانَ (ʔabāna)\n# أَبَنْتَ (ʔabanta) /ʔa.ban.ta/: second-person masculine singular past active of أَبَانَ (ʔabāna)\n# أَبَنْتِ (ʔabanti) /ʔa.ban.ti/: second-person feminine singular past active of أَبَانَ (ʔabāna)\n# أُبِنْتُ (ʔubintu) /ʔu.bin.tu/: first-person singular past passive of أَبَانَ (ʔabāna)\n# أُبِنْتَ ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabantu", "ʔabāna", "ʔabanta"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "أبانتا",
-        "u": "أبانتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَبَانَتَا • (ʔabānatā) (form IV) /ʔa.baː.na.taː/\n# third-person feminine dual past active of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabānatā", "ʔabāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "أبنتما",
-        "u": "أبنتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أبنتما (form IV)\n# أَبَنْتُمَا (ʔabantumā) /ʔa.ban.tu.maː/: second-person dual past active of أَبَانَ (ʔabāna)\n# أُبِنْتُمَا (ʔubintumā) /ʔu.bin.tu.maː/: second-person dual past passive of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabantumā", "ʔabāna", "ʔubintumā"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "أبانا",
-        "u": "أبانا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَبَانَا • (ʔabānā) (form IV) /ʔa.baː.naː/\n# third-person masculine dual past active of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabānā", "ʔabāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "أبانوا",
-        "u": "أبانوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَبَانُوا • (ʔabānū) (form IV) /ʔa.baː.nuː/\n# third-person masculine plural past active of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabānū", "ʔabāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "أبنتن",
-        "u": "أبنتن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أبنتن (form IV)\n# أَبَنْتُنَّ (ʔabantunna) /ʔa.ban.tun.na/: second-person feminine plural past active of أَبَانَ (ʔabāna)\n# أُبِنْتُنَّ (ʔubintunna) /ʔu.bin.tun.na/: second-person feminine plural past passive of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabantunna", "ʔabāna", "ʔubintunna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "أبينت",
-        "u": "أبينت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُبِينَتْ • (ʔubīnat) (form IV) /ʔu.biː.nat/\n# third-person feminine singular past passive of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔubīnat", "ʔabāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "أبينتا",
-        "u": "أبينتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُبِينَتَا • (ʔubīnatā) (form IV) /ʔu.biː.na.taː/\n# third-person feminine dual past passive of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔubīnatā", "ʔabāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "أبينوا",
-        "u": "أبينوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبينوا (form IV)\n# أُبِينُوا (ʔubīnū) /ʔu.biː.nuː/: third-person masculine plural past passive of أَبَانَ (ʔabāna)\n# أَبِينُوا (ʔabīnū) /ʔa.biː.nuː/: second-person masculine plural imperative of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔubīnū", "ʔabāna", "ʔabīnū"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "أبنتم",
-        "u": "أبنتم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أبنتم (form IV)\n# أَبَنْتُمْ (ʔabantum) /ʔa.ban.tum/: second-person masculine plural past active of أَبَانَ (ʔabāna)\n# أُبِنْتُمْ (ʔubintum) /ʔu.bin.tum/: second-person masculine plural past passive of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabantum", "ʔabāna", "ʔubintum"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "تبانين",
-        "u": "تبانين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُبَانِينَ • (tubānīna) (form IV) /tu.baː.niː.na/\n# second-person feminine singular non-past passive indicative of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubānīna", "ʔabāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "نبان",
-        "u": "نبان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نبان (form IV)\n# نُبَانُ (nubānu) /nu.baː.nu/: first-person plural non-past passive indicative of أَبَانَ (ʔabāna)\n# نُبَانَ (nubāna) /nu.baː.na/: first-person plural non-past passive subjunctive of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nubānu", "ʔabāna", "nubāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "يبانون",
-        "u": "يبانون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُبَانُونَ • (yubānūna) (form IV) /ju.baː.nuː.na/\n# third-person masculine plural non-past passive indicative of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubānūna", "ʔabāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "يبانان",
-        "u": "يبانان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُبَانَانِ • (yubānāni) (form IV) /ju.baː.naː.ni/\n# third-person masculine dual non-past passive indicative of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubānāni", "ʔabāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "تباني",
-        "u": "تباني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُبَانِي • (tubānī) (form IV) /tu.baː.niː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubānī", "ʔabāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "تبانان",
-        "u": "تبانان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُبَانَانِ • (tubānāni) (form IV) /tu.baː.naː.ni/\n# inflection of أَبَانَ (ʔabāna):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubānāni", "ʔabāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "تبينان",
-        "u": "تبينان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُبِينَانِ • (tubīnāni) (form IV) /tu.biː.naː.ni/\n# inflection of أَبَانَ (ʔabāna):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubīnāni", "ʔabāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "تبانون",
-        "u": "تبانون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُبَانُونَ • (tubānūna) (form IV) /tu.baː.nuː.na/\n# second-person masculine plural non-past passive indicative of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubānūna", "ʔabāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "يبينا",
-        "u": "يبينا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُبِينَا • (yubīnā) (form IV) /ju.biː.naː/\n# third-person masculine dual non-past active subjunctive/jussive of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubīnā", "ʔabāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "تبانا",
-        "u": "تبانا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُبَانَا • (tubānā) (form IV) /tu.baː.naː/\n# inflection of أَبَانَ (ʔabāna):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubānā", "ʔabāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "يبانا",
-        "u": "يبانا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُبَانَا • (yubānā) (form IV) /ju.baː.naː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubānā", "ʔabāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "تبانوا",
-        "u": "تبانوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُبَانُوا • (tubānū) (form IV) /tu.baː.nuː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubānū", "ʔabāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "يبانوا",
-        "u": "يبانوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُبَانُوا • (yubānū) (form IV) /ju.baː.nuː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubānū", "ʔabāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "تبينا",
-        "u": "تبينا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُبِينَا • (tubīnā) (form IV) /tu.biː.naː/\n# inflection of أَبَانَ (ʔabāna):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubīnā", "ʔabāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "أبيني",
-        "u": "أبيني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَبِينِي • (ʔabīnī) (form IV) /ʔa.biː.niː/\n# second-person feminine singular imperative of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabīnī", "ʔabāna"],
-        "k": "أبان",
-        "yol": "kök"
-      },
-      {
-        "w": "يبينان",
-        "u": "يبينان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُبِينَانِ • (yubīnāni) (form IV) /ju.biː.naː.ni/\n# third-person masculine dual non-past active indicative of أَبَانَ (ʔabāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubīnāni", "ʔabāna"],
-        "k": "أبان",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "بن",
+  "ses": {
     "harf": "ء",
+    "fasil": "بن",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "يبين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يبين (form IV)\n# يُبِينُ (yubīnu) /ju.biː.nu/: third-person masculine singular non-past active indicative of أَبَانَ (ʔabāna)\n# يُبِينَ (yubīna) /ju.biː.na/: third-person masculine singular non-past active subjunctive of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubīnu", "ʔabāna", "yubīna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يبان (form IV)\n# يُبَانُ (yubānu) /ju.baː.nu/: third-person masculine singular non-past passive indicative of أَبَانَ (ʔabāna)\n# يُبَانَ (yubāna) /ju.baː.na/: third-person masculine singular non-past passive subjunctive of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubānu", "ʔabāna", "yubāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يبن (form IV)\n# يُبِنَّ (yubinna) /ju.bin.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَبَانَ (ʔabāna)\n# يُبَنَّ (yubanna) /ju.ban.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَبَانَ (ʔabāna)\n# يُبِنْ (yubin) /ju.bin/: third-person masculine singular non-past active jussive of أَبَانَ (ʔabāna)\n# يُبَنْ (yuban) /ju.ban",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubinna", "ʔabāna", "yubanna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبين",
+      "tur": "verb",
+      "etim_no": "1.4",
+      "baslik": "تبين (form IV)\n# تُبِينُ (tubīnu) /tu.biː.nu/: inflection of أَبَانَ (ʔabāna):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُبِينَ (tubīna) /tu.biː.na/: inflection of أَبَانَ (ʔabāna):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubīnu", "ʔabāna", "tubīna"],
+      "kok_yazilis": "أبان"
+    },
+    {
+      "madde": "تبن",
+      "tur": "verb",
+      "etim_no": "7",
+      "baslik": "تبن (form IV)\n# تُبِنَّ (tubinna) /tu.bin.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَبَانَ (ʔabāna)\n# تُبَنَّ (tubanna) /tu.ban.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَبَانَ (ʔabāna)\n# تُبِنْ (tubin) /tu.bin/: inflection of أَبَانَ (ʔabāna):\n## second-person masculine singular non-past active jussive\n## thi",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubinna", "ʔabāna", "tubanna"],
+      "kok_yazilis": "أبان"
+    },
+    {
+      "madde": "تبينين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُبِينِينَ • (tubīnīna) (form IV) /tu.biː.niː.na/\n# second-person feminine singular non-past active indicative of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubīnīna", "ʔabāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبيني",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُبِينِي • (tubīnī) (form IV) /tu.biː.niː/\n# second-person feminine singular non-past active subjunctive/jussive of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubīnī", "ʔabāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبين",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "أبين (form IV)\n# أُبِينَ (ʔubīna) /ʔu.biː.na/: inflection of أَبَانَ (ʔabāna):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُبِينُ (ʔubīnu) /ʔu.biː.nu/: first-person singular non-past active indicative of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔubīna", "ʔabāna", "ʔubīnu"],
+      "kok_yazilis": "أبان"
+    },
+    {
+      "madde": "أبن",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "أبن (form IV)\n# أَبَنَّ (ʔabanna) /ʔa.ban.na/: third-person feminine plural past active of أَبَانَ (ʔabāna)\n# أُبِنَّ (ʔubinna) /ʔu.bin.na/: third-person feminine plural past passive of أَبَانَ (ʔabāna)\n# أُبِنْ (ʔubin) /ʔu.bin/: first-person singular non-past active jussive of أَبَانَ (ʔabāna)\n# أُبَنْ (ʔuban) /ʔu.ban/: first-person singular non-past passive jussive of أَبَانَ (ʔabāna)\n# أَبِنْ (",
+      "etiket": ["form-iv", "no-gloss", "obsolete"],
+      "okunus": ["ʔabanna", "ʔabāna", "ʔubinna"],
+      "kok_yazilis": "أبان"
+    },
+    {
+      "madde": "أبنا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أبنا (form IV)\n# أَبَنَّا (ʔabannā) /ʔa.ban.naː/: first-person plural past active of أَبَانَ (ʔabāna)\n# أُبِنَّا (ʔubinnā) /ʔu.bin.naː/: first-person plural past passive of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabannā", "ʔabāna", "ʔubinnā"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبينا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أبينا (form IV)\n# أُبِينَا (ʔubīnā) /ʔu.biː.naː/: third-person masculine dual past passive of أَبَانَ (ʔabāna)\n# أَبِينَا (ʔabīnā) /ʔa.biː.naː/: second-person dual imperative of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔubīnā", "ʔabāna", "ʔabīnā"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نبين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نبين (form IV)\n# نُبِينُ (nubīnu) /nu.biː.nu/: first-person plural non-past active indicative of أَبَانَ (ʔabāna)\n# نُبِينَ (nubīna) /nu.biː.na/: first-person plural non-past active subjunctive of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nubīnu", "ʔabāna", "nubīna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نبن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نبن (form IV)\n# نُبِنْ (nubin) /nu.bin/: first-person plural non-past active jussive of أَبَانَ (ʔabāna)\n# نُبَنْ (nuban) /nu.ban/: first-person plural non-past passive jussive of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nubin", "ʔabāna", "nuban"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبينون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُبِينُونَ • (tubīnūna) (form IV) /tu.biː.nuː.na/\n# second-person masculine plural non-past active indicative of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubīnūna", "ʔabāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبينوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُبِينُوا • (tubīnū) (form IV) /tu.biː.nuː/\n# second-person masculine plural non-past active subjunctive/jussive of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubīnū", "ʔabāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبينون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُبِينُونَ • (yubīnūna) (form IV) /ju.biː.nuː.na/\n# third-person masculine plural non-past active indicative of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubīnūna", "ʔabāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبينوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُبِينُوا • (yubīnū) (form IV) /ju.biː.nuː/\n# third-person masculine plural non-past active subjunctive/jussive of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubīnū", "ʔabāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبان",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تبان (form IV)\n# تُبَانُ (tubānu) /tu.baː.nu/: inflection of أَبَانَ (ʔabāna):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُبَانَ (tubāna) /tu.baː.na/: inflection of أَبَانَ (ʔabāna):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubānu", "ʔabāna", "tubāna"],
+      "kok_yazilis": "أبان"
+    },
+    {
+      "madde": "أبانت",
+      "tur": "verb",
+      "baslik": "أَبَانَتْ • (ʔabānat) (form IV) /ʔa.baː.nat/\n# third-person feminine singular past active of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabānat", "ʔabāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبنت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أبنت (form IV)\n# أَبَنْتُ (ʔabantu) /ʔa.ban.tu/: first-person singular past active of أَبَانَ (ʔabāna)\n# أَبَنْتَ (ʔabanta) /ʔa.ban.ta/: second-person masculine singular past active of أَبَانَ (ʔabāna)\n# أَبَنْتِ (ʔabanti) /ʔa.ban.ti/: second-person feminine singular past active of أَبَانَ (ʔabāna)\n# أُبِنْتُ (ʔubintu) /ʔu.bin.tu/: first-person singular past passive of أَبَانَ (ʔabāna)\n# أُبِنْتَ ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabantu", "ʔabāna", "ʔabanta"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبانتا",
+      "tur": "verb",
+      "baslik": "أَبَانَتَا • (ʔabānatā) (form IV) /ʔa.baː.na.taː/\n# third-person feminine dual past active of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabānatā", "ʔabāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبنتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أبنتما (form IV)\n# أَبَنْتُمَا (ʔabantumā) /ʔa.ban.tu.maː/: second-person dual past active of أَبَانَ (ʔabāna)\n# أُبِنْتُمَا (ʔubintumā) /ʔu.bin.tu.maː/: second-person dual past passive of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabantumā", "ʔabāna", "ʔubintumā"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبانا",
+      "tur": "verb",
+      "baslik": "أَبَانَا • (ʔabānā) (form IV) /ʔa.baː.naː/\n# third-person masculine dual past active of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabānā", "ʔabāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبانوا",
+      "tur": "verb",
+      "baslik": "أَبَانُوا • (ʔabānū) (form IV) /ʔa.baː.nuː/\n# third-person masculine plural past active of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabānū", "ʔabāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبنتن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أبنتن (form IV)\n# أَبَنْتُنَّ (ʔabantunna) /ʔa.ban.tun.na/: second-person feminine plural past active of أَبَانَ (ʔabāna)\n# أُبِنْتُنَّ (ʔubintunna) /ʔu.bin.tun.na/: second-person feminine plural past passive of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabantunna", "ʔabāna", "ʔubintunna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبينت",
+      "tur": "verb",
+      "baslik": "أُبِينَتْ • (ʔubīnat) (form IV) /ʔu.biː.nat/\n# third-person feminine singular past passive of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔubīnat", "ʔabāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبينتا",
+      "tur": "verb",
+      "baslik": "أُبِينَتَا • (ʔubīnatā) (form IV) /ʔu.biː.na.taː/\n# third-person feminine dual past passive of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔubīnatā", "ʔabāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبينوا",
+      "tur": "verb",
+      "baslik": "أبينوا (form IV)\n# أُبِينُوا (ʔubīnū) /ʔu.biː.nuː/: third-person masculine plural past passive of أَبَانَ (ʔabāna)\n# أَبِينُوا (ʔabīnū) /ʔa.biː.nuː/: second-person masculine plural imperative of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔubīnū", "ʔabāna", "ʔabīnū"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبنتم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أبنتم (form IV)\n# أَبَنْتُمْ (ʔabantum) /ʔa.ban.tum/: second-person masculine plural past active of أَبَانَ (ʔabāna)\n# أُبِنْتُمْ (ʔubintum) /ʔu.bin.tum/: second-person masculine plural past passive of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabantum", "ʔabāna", "ʔubintum"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبانين",
+      "tur": "verb",
+      "baslik": "تُبَانِينَ • (tubānīna) (form IV) /tu.baː.niː.na/\n# second-person feminine singular non-past passive indicative of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubānīna", "ʔabāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نبان",
+      "tur": "verb",
+      "baslik": "نبان (form IV)\n# نُبَانُ (nubānu) /nu.baː.nu/: first-person plural non-past passive indicative of أَبَانَ (ʔabāna)\n# نُبَانَ (nubāna) /nu.baː.na/: first-person plural non-past passive subjunctive of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nubānu", "ʔabāna", "nubāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبانون",
+      "tur": "verb",
+      "baslik": "يُبَانُونَ • (yubānūna) (form IV) /ju.baː.nuː.na/\n# third-person masculine plural non-past passive indicative of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubānūna", "ʔabāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبانان",
+      "tur": "verb",
+      "baslik": "يُبَانَانِ • (yubānāni) (form IV) /ju.baː.naː.ni/\n# third-person masculine dual non-past passive indicative of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubānāni", "ʔabāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تباني",
+      "tur": "verb",
+      "baslik": "تُبَانِي • (tubānī) (form IV) /tu.baː.niː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubānī", "ʔabāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبانان",
+      "tur": "verb",
+      "baslik": "تُبَانَانِ • (tubānāni) (form IV) /tu.baː.naː.ni/\n# inflection of أَبَانَ (ʔabāna):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubānāni", "ʔabāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبينان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُبِينَانِ • (tubīnāni) (form IV) /tu.biː.naː.ni/\n# inflection of أَبَانَ (ʔabāna):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubīnāni", "ʔabāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبانون",
+      "tur": "verb",
+      "baslik": "تُبَانُونَ • (tubānūna) (form IV) /tu.baː.nuː.na/\n# second-person masculine plural non-past passive indicative of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubānūna", "ʔabāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبينا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُبِينَا • (yubīnā) (form IV) /ju.biː.naː/\n# third-person masculine dual non-past active subjunctive/jussive of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubīnā", "ʔabāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبانا",
+      "tur": "verb",
+      "baslik": "تُبَانَا • (tubānā) (form IV) /tu.baː.naː/\n# inflection of أَبَانَ (ʔabāna):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubānā", "ʔabāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبانا",
+      "tur": "verb",
+      "baslik": "يُبَانَا • (yubānā) (form IV) /ju.baː.naː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubānā", "ʔabāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبانوا",
+      "tur": "verb",
+      "baslik": "تُبَانُوا • (tubānū) (form IV) /tu.baː.nuː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubānū", "ʔabāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبانوا",
+      "tur": "verb",
+      "baslik": "يُبَانُوا • (yubānū) (form IV) /ju.baː.nuː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubānū", "ʔabāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبينا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُبِينَا • (tubīnā) (form IV) /tu.biː.naː/\n# inflection of أَبَانَ (ʔabāna):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubīnā", "ʔabāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبيني",
+      "tur": "verb",
+      "baslik": "أَبِينِي • (ʔabīnī) (form IV) /ʔa.biː.niː/\n# second-person feminine singular imperative of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabīnī", "ʔabāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبينان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُبِينَانِ • (yubīnāni) (form IV) /ju.biː.naː.ni/\n# third-person masculine dual non-past active indicative of أَبَانَ (ʔabāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubīnāni", "ʔabāna"],
+      "kok_yazilis": "أبان",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ءبان", "r6"]
+  ],
+  "mana": {
     "ince": "spot.v.02",
     "orta": "verb.perception",
     "ust": "zihin ve ilim",
@@ -596,22 +470,15 @@
     "dayanak_tanim": "detect with the senses",
     "synset_sayisi": 2
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["food.n.01", "spot.v.02"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["food.n.01", "spot.v.02"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

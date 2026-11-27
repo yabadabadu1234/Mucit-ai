@@ -1,434 +1,303 @@
 {
   "kok": "اختل",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "اختل", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أختل",
-        "u": "أختل",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أختل (form VIII)\n# أَخْتَلُّ (ʔaḵtallu) /ʔax.tal.lu/: first-person singular non-past active indicative of اِخْتَلَّ (iḵtalla)\n# أُخْتَلُّ (ʔuḵtallu) /ʔux.tal.lu/: first-person singular non-past passive indicative of اِخْتَلَّ (iḵtalla)\n# أَخْتَلَّ (ʔaḵtalla) /ʔax.tal.la/: first-person singular non-past active subjunctive/jussive of اِخْتَلَّ (iḵtalla)\n# أُخْتَلَّ (ʔuḵtalla) /ʔux.tal.la/: first-per",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ʔaḵtallu", "iḵtalla", "ʔuḵtallu"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "نختل",
-        "u": "نختل",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نختل (form VIII)\n# نَخْتَلُّ (naḵtallu) /nax.tal.lu/: first-person plural non-past active indicative of اِخْتَلَّ (iḵtalla)\n# نُخْتَلُّ (nuḵtallu) /nux.tal.lu/: first-person plural non-past passive indicative of اِخْتَلَّ (iḵtalla)\n# نَخْتَلَّ (naḵtalla) /nax.tal.la/: first-person plural non-past active subjunctive/jussive of اِخْتَلَّ (iḵtalla)\n# نُخْتَلَّ (nuḵtalla) /nux.tal.la/: first-person pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["naḵtallu", "iḵtalla", "nuḵtallu"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "اختللت",
-        "u": "اختللت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اختللت (form VIII)\n# اِخْتَلَلْتُ (iḵtalaltu) /ix.ta.lal.tu/: first-person singular past active of اِخْتَلَّ (iḵtalla)\n# اِخْتَلَلْتَ (iḵtalalta) /ix.ta.lal.ta/: second-person masculine singular past active of اِخْتَلَّ (iḵtalla)\n# اِخْتَلَلْتِ (iḵtalalti) /ix.ta.lal.ti/: second-person feminine singular past active of اِخْتَلَّ (iḵtalla)\n# اُخْتُلِلْتُ (uḵtuliltu) /ux.tu.lil.tu/: first-person sing",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḵtalaltu", "iḵtalla", "iḵtalalta"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "اختلت",
-        "u": "اختلت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اختلت (form VIII)\n# اِخْتَلَّتْ (iḵtallat) /ix.tal.lat/: third-person feminine singular past active of اِخْتَلَّ (iḵtalla)\n# اُخْتُلَّتْ (uḵtullat) /ux.tul.lat/: third-person feminine singular past passive of اِخْتَلَّ (iḵtalla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḵtallat", "iḵtalla", "uḵtullat"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "اختللتما",
-        "u": "اختللتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اختللتما (form VIII)\n# اِخْتَلَلْتُمَا (iḵtalaltumā) /ix.ta.lal.tu.maː/: second-person dual past active of اِخْتَلَّ (iḵtalla)\n# اُخْتُلِلْتُمَا (uḵtuliltumā) /ux.tu.lil.tu.maː/: second-person dual past passive of اِخْتَلَّ (iḵtalla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḵtalaltumā", "iḵtalla", "uḵtuliltumā"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "اختلتا",
-        "u": "اختلتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اختلتا (form VIII)\n# اِخْتَلَّتَا (iḵtallatā) /ix.tal.la.taː/: third-person feminine dual past active of اِخْتَلَّ (iḵtalla)\n# اُخْتُلَّتَا (uḵtullatā) /ux.tul.la.taː/: third-person feminine dual past passive of اِخْتَلَّ (iḵtalla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḵtallatā", "iḵtalla", "uḵtullatā"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "اختلا",
-        "u": "اختلا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اختلا (form VIII)\n# اِخْتَلَّا (iḵtallā) /ix.tal.laː/: inflection of اِخْتَلَّ (iḵtalla):\n## third-person masculine dual past active\n## second-person dual imperative\n# اُخْتُلَّا (uḵtullā) /ux.tul.laː/: third-person masculine dual past passive of اِخْتَلَّ (iḵtalla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḵtallā", "iḵtalla", "uḵtullā"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "اختللتم",
-        "u": "اختللتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اختللتم (form VIII)\n# اِخْتَلَلْتُمْ (iḵtalaltum) /ix.ta.lal.tum/: second-person masculine plural past active of اِخْتَلَّ (iḵtalla)\n# اُخْتُلِلْتُمْ (uḵtuliltum) /ux.tu.lil.tum/: second-person masculine plural past passive of اِخْتَلَّ (iḵtalla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḵtalaltum", "iḵtalla", "uḵtuliltum"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "اختللتن",
-        "u": "اختللتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اختللتن (form VIII)\n# اِخْتَلَلْتُنَّ (iḵtalaltunna) /ix.ta.lal.tun.na/: second-person feminine plural past active of اِخْتَلَّ (iḵtalla)\n# اُخْتُلِلْتُنَّ (uḵtuliltunna) /ux.tu.lil.tun.na/: second-person feminine plural past passive of اِخْتَلَّ (iḵtalla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḵtalaltunna", "iḵtalla", "uḵtuliltunna"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "اختللنا",
-        "u": "اختللنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اختللنا (form VIII)\n# اِخْتَلَلْنَا (iḵtalalnā) /ix.ta.lal.naː/: first-person plural past active of اِخْتَلَّ (iḵtalla)\n# اُخْتُلِلْنَا (uḵtulilnā) /ux.tu.lil.naː/: first-person plural past passive of اِخْتَلَّ (iḵtalla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḵtalalnā", "iḵtalla", "uḵtulilnā"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "اختلوا",
-        "u": "اختلوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اختلوا (form VIII)\n# اِخْتَلُّوا (iḵtallū) /ix.tal.luː/: inflection of اِخْتَلَّ (iḵtalla):\n## third-person masculine plural past active\n## second-person masculine plural imperative\n# اُخْتُلُّوا (uḵtullū) /ux.tul.luː/: third-person masculine plural past passive of اِخْتَلَّ (iḵtalla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḵtallū", "iḵtalla", "uḵtullū"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "اختللن",
-        "u": "اختللن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اختللن (form VIII)\n# اِخْتَلَلْنَ (iḵtalalna) /ix.ta.lal.na/: third-person feminine plural past active of اِخْتَلَّ (iḵtalla)\n# اُخْتُلِلْنَ (uḵtulilna) /ux.tu.lil.na/: third-person feminine plural past passive of اِخْتَلَّ (iḵtalla)\n# اِخْتَلِلْنَ (iḵtalilna) /ix.ta.lil.na/: second-person feminine plural imperative of اِخْتَلَّ (iḵtalla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḵtalalna", "iḵtalla", "uḵtulilna"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "تختلين",
-        "u": "تختلين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تختلين (form VIII)\n# تَخْتَلِّينَ (taḵtallīna) /tax.tal.liː.na/: second-person feminine singular non-past active indicative of اِخْتَلَّ (iḵtalla)\n# تُخْتَلِّينَ (tuḵtallīna) /tux.tal.liː.na/: second-person feminine singular non-past passive indicative of اِخْتَلَّ (iḵtalla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["taḵtallīna", "iḵtalla", "tuḵtallīna"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "تختل",
-        "u": "تختل",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تختل (form VIII)\n# تَخْتَلُّ (taḵtallu) /tax.tal.lu/: inflection of اِخْتَلَّ (iḵtalla):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُخْتَلُّ (tuḵtallu) /tux.tal.lu/: inflection of اِخْتَلَّ (iḵtalla):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["taḵtallu", "iḵtalla", "tuḵtallu"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "يختل",
-        "u": "يختل",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يختل (form VIII)\n# يَخْتَلُّ (yaḵtallu) /jax.tal.lu/: third-person masculine singular non-past active indicative of اِخْتَلَّ (iḵtalla)\n# يُخْتَلُّ (yuḵtallu) /jux.tal.lu/: third-person masculine singular non-past passive indicative of اِخْتَلَّ (iḵtalla)\n# يَخْتَلَّ (yaḵtalla) /jax.tal.la/: third-person masculine singular non-past active subjunctive/jussive of اِخْتَلَّ (iḵtalla)\n# يُخْتَلَّ (yuḵ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yaḵtallu", "iḵtalla", "yuḵtallu"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "يختلون",
-        "u": "يختلون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يختلون (form VIII)\n# يَخْتَلُّونَ (yaḵtallūna) /jax.tal.luː.na/: third-person masculine plural non-past active indicative of اِخْتَلَّ (iḵtalla)\n# يُخْتَلُّونَ (yuḵtallūna) /jux.tal.luː.na/: third-person masculine plural non-past passive indicative of اِخْتَلَّ (iḵtalla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yaḵtallūna", "iḵtalla", "yuḵtallūna"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "تختلون",
-        "u": "تختلون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تختلون (form VIII)\n# تَخْتَلُّونَ (taḵtallūna) /tax.tal.luː.na/: second-person masculine plural non-past active indicative of اِخْتَلَّ (iḵtalla)\n# تُخْتَلُّونَ (tuḵtallūna) /tux.tal.luː.na/: second-person masculine plural non-past passive indicative of اِخْتَلَّ (iḵtalla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["taḵtallūna", "iḵtalla", "tuḵtallūna"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "تختلان",
-        "u": "تختلان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تختلان (form VIII)\n# تَخْتَلَّانِ (taḵtallāni) /tax.tal.laː.ni/: inflection of اِخْتَلَّ (iḵtalla):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُخْتَلَّانِ (tuḵtallāni) /tux.tal.laː.ni/: inflection of اِخْتَلَّ (iḵtalla):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["taḵtallāni", "iḵtalla", "tuḵtallāni"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "يختللن",
-        "u": "يختللن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يختللن (form VIII)\n# يَخْتَلِلْنَ (yaḵtalilna) /jax.ta.lil.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of اِخْتَلَّ (iḵtalla)\n# يُخْتَلَلْنَ (yuḵtalalna) /jux.ta.lal.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of اِخْتَلَّ (iḵtalla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yaḵtalilna", "iḵtalla", "yuḵtalalna"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "تختللن",
-        "u": "تختللن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تختللن (form VIII)\n# تَخْتَلِلْنَ (taḵtalilna) /tax.ta.lil.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of اِخْتَلَّ (iḵtalla)\n# تُخْتَلَلْنَ (tuḵtalalna) /tux.ta.lal.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of اِخْتَلَّ (iḵtalla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["taḵtalilna", "iḵtalla", "tuḵtalalna"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "تختلا",
-        "u": "تختلا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تختلا (form VIII)\n# تَخْتَلَّا (taḵtallā) /tax.tal.laː/: inflection of اِخْتَلَّ (iḵtalla):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُخْتَلَّا (tuḵtallā) /tux.tal.laː/: inflection of اِخْتَلَّ (iḵtalla):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subj",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["taḵtallā", "iḵtalla", "tuḵtallā"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "يختلا",
-        "u": "يختلا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يختلا (form VIII)\n# يَخْتَلَّا (yaḵtallā) /jax.tal.laː/: third-person masculine dual non-past active subjunctive/jussive of اِخْتَلَّ (iḵtalla)\n# يُخْتَلَّا (yuḵtallā) /jux.tal.laː/: third-person masculine dual non-past passive subjunctive/jussive of اِخْتَلَّ (iḵtalla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yaḵtallā", "iḵtalla", "yuḵtallā"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "تختلوا",
-        "u": "تختلوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تختلوا (form VIII)\n# تَخْتَلُّوا (taḵtallū) /tax.tal.luː/: second-person masculine plural non-past active subjunctive/jussive of اِخْتَلَّ (iḵtalla)\n# تُخْتَلُّوا (tuḵtallū) /tux.tal.luː/: second-person masculine plural non-past passive subjunctive/jussive of اِخْتَلَّ (iḵtalla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["taḵtallū", "iḵtalla", "tuḵtallū"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "تختلي",
-        "u": "تختلي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تختلي (form VIII)\n# تَخْتَلِّي (taḵtallī) /tax.tal.liː/: second-person feminine singular non-past active subjunctive/jussive of اِخْتَلَّ (iḵtalla)\n# تُخْتَلِّي (tuḵtallī) /tux.tal.liː/: second-person feminine singular non-past passive subjunctive/jussive of اِخْتَلَّ (iḵtalla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["taḵtallī", "iḵtalla", "tuḵtallī"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "يختلوا",
-        "u": "يختلوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يختلوا (form VIII)\n# يَخْتَلُّوا (yaḵtallū) /jax.tal.luː/: third-person masculine plural non-past active subjunctive/jussive of اِخْتَلَّ (iḵtalla)\n# يُخْتَلُّوا (yuḵtallū) /jux.tal.luː/: third-person masculine plural non-past passive subjunctive/jussive of اِخْتَلَّ (iḵtalla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yaḵtallū", "iḵtalla", "yuḵtallū"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "يختلان",
-        "u": "يختلان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يختلان (form VIII)\n# يَخْتَلَّانِ (yaḵtallāni) /jax.tal.laː.ni/: third-person masculine dual non-past active indicative of اِخْتَلَّ (iḵtalla)\n# يُخْتَلَّانِ (yuḵtallāni) /jux.tal.laː.ni/: third-person masculine dual non-past passive indicative of اِخْتَلَّ (iḵtalla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yaḵtallāni", "iḵtalla", "yuḵtallāni"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "أختلل",
-        "u": "أختلل",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أختلل (form VIII)\n# أَخْتَلِلْ (ʔaḵtalil) /ʔax.ta.lil/: first-person singular non-past active jussive of اِخْتَلَّ (iḵtalla)\n# أُخْتَلَلْ (ʔuḵtalal) /ʔux.ta.lal/: first-person singular non-past passive jussive of اِخْتَلَّ (iḵtalla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ʔaḵtalil", "iḵtalla", "ʔuḵtalal"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "تختلل",
-        "u": "تختلل",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تختلل (form VIII)\n# تَخْتَلِلْ (taḵtalil) /tax.ta.lil/: inflection of اِخْتَلَّ (iḵtalla):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُخْتَلَلْ (tuḵtalal) /tux.ta.lal/: inflection of اِخْتَلَّ (iḵtalla):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussiv",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["taḵtalil", "iḵtalla", "tuḵtalal"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "يختلل",
-        "u": "يختلل",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يختلل (form VIII)\n# يَخْتَلِلْ (yaḵtalil) /jax.ta.lil/: third-person masculine singular non-past active jussive of اِخْتَلَّ (iḵtalla)\n# يُخْتَلَلْ (yuḵtalal) /jux.ta.lal/: third-person masculine singular non-past passive jussive of اِخْتَلَّ (iḵtalla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yaḵtalil", "iḵtalla", "yuḵtalal"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "نختلل",
-        "u": "نختلل",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نختلل (form VIII)\n# نَخْتَلِلْ (naḵtalil) /nax.ta.lil/: first-person plural non-past active jussive of اِخْتَلَّ (iḵtalla)\n# نُخْتَلَلْ (nuḵtalal) /nux.ta.lal/: first-person plural non-past passive jussive of اِخْتَلَّ (iḵtalla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["naḵtalil", "iḵtalla", "nuḵtalal"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "اختلل",
-        "u": "اختلل",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِخْتَلِلْ • (iḵtalil) (form VIII) /ix.ta.lil/\n# second-person masculine singular imperative of اِخْتَلَّ (iḵtalla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḵtalil", "iḵtalla"],
-        "k": "اختل",
-        "yol": "kök"
-      },
-      {
-        "w": "اختلي",
-        "u": "اختلي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِخْتَلِّي • (iḵtallī) (form VIII) /ix.tal.liː/\n# second-person feminine singular imperative of اِخْتَلَّ (iḵtalla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḵtallī", "iḵtalla"],
-        "k": "اختل",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "خت",
+  "ses": {
     "harf": "ا",
+    "fasil": "خت",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "أختل",
+      "tur": "verb",
+      "baslik": "أختل (form VIII)\n# أَخْتَلُّ (ʔaḵtallu) /ʔax.tal.lu/: first-person singular non-past active indicative of اِخْتَلَّ (iḵtalla)\n# أُخْتَلُّ (ʔuḵtallu) /ʔux.tal.lu/: first-person singular non-past passive indicative of اِخْتَلَّ (iḵtalla)\n# أَخْتَلَّ (ʔaḵtalla) /ʔax.tal.la/: first-person singular non-past active subjunctive/jussive of اِخْتَلَّ (iḵtalla)\n# أُخْتَلَّ (ʔuḵtalla) /ʔux.tal.la/: first-per",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ʔaḵtallu", "iḵtalla", "ʔuḵtallu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نختل",
+      "tur": "verb",
+      "baslik": "نختل (form VIII)\n# نَخْتَلُّ (naḵtallu) /nax.tal.lu/: first-person plural non-past active indicative of اِخْتَلَّ (iḵtalla)\n# نُخْتَلُّ (nuḵtallu) /nux.tal.lu/: first-person plural non-past passive indicative of اِخْتَلَّ (iḵtalla)\n# نَخْتَلَّ (naḵtalla) /nax.tal.la/: first-person plural non-past active subjunctive/jussive of اِخْتَلَّ (iḵtalla)\n# نُخْتَلَّ (nuḵtalla) /nux.tal.la/: first-person pl",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["naḵtallu", "iḵtalla", "nuḵtallu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اختللت",
+      "tur": "verb",
+      "baslik": "اختللت (form VIII)\n# اِخْتَلَلْتُ (iḵtalaltu) /ix.ta.lal.tu/: first-person singular past active of اِخْتَلَّ (iḵtalla)\n# اِخْتَلَلْتَ (iḵtalalta) /ix.ta.lal.ta/: second-person masculine singular past active of اِخْتَلَّ (iḵtalla)\n# اِخْتَلَلْتِ (iḵtalalti) /ix.ta.lal.ti/: second-person feminine singular past active of اِخْتَلَّ (iḵtalla)\n# اُخْتُلِلْتُ (uḵtuliltu) /ux.tu.lil.tu/: first-person sing",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḵtalaltu", "iḵtalla", "iḵtalalta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اختلت",
+      "tur": "verb",
+      "baslik": "اختلت (form VIII)\n# اِخْتَلَّتْ (iḵtallat) /ix.tal.lat/: third-person feminine singular past active of اِخْتَلَّ (iḵtalla)\n# اُخْتُلَّتْ (uḵtullat) /ux.tul.lat/: third-person feminine singular past passive of اِخْتَلَّ (iḵtalla)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḵtallat", "iḵtalla", "uḵtullat"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اختللتما",
+      "tur": "verb",
+      "baslik": "اختللتما (form VIII)\n# اِخْتَلَلْتُمَا (iḵtalaltumā) /ix.ta.lal.tu.maː/: second-person dual past active of اِخْتَلَّ (iḵtalla)\n# اُخْتُلِلْتُمَا (uḵtuliltumā) /ux.tu.lil.tu.maː/: second-person dual past passive of اِخْتَلَّ (iḵtalla)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḵtalaltumā", "iḵtalla", "uḵtuliltumā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اختلتا",
+      "tur": "verb",
+      "baslik": "اختلتا (form VIII)\n# اِخْتَلَّتَا (iḵtallatā) /ix.tal.la.taː/: third-person feminine dual past active of اِخْتَلَّ (iḵtalla)\n# اُخْتُلَّتَا (uḵtullatā) /ux.tul.la.taː/: third-person feminine dual past passive of اِخْتَلَّ (iḵtalla)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḵtallatā", "iḵtalla", "uḵtullatā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اختلا",
+      "tur": "verb",
+      "baslik": "اختلا (form VIII)\n# اِخْتَلَّا (iḵtallā) /ix.tal.laː/: inflection of اِخْتَلَّ (iḵtalla):\n## third-person masculine dual past active\n## second-person dual imperative\n# اُخْتُلَّا (uḵtullā) /ux.tul.laː/: third-person masculine dual past passive of اِخْتَلَّ (iḵtalla)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḵtallā", "iḵtalla", "uḵtullā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اختللتم",
+      "tur": "verb",
+      "baslik": "اختللتم (form VIII)\n# اِخْتَلَلْتُمْ (iḵtalaltum) /ix.ta.lal.tum/: second-person masculine plural past active of اِخْتَلَّ (iḵtalla)\n# اُخْتُلِلْتُمْ (uḵtuliltum) /ux.tu.lil.tum/: second-person masculine plural past passive of اِخْتَلَّ (iḵtalla)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḵtalaltum", "iḵtalla", "uḵtuliltum"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اختللتن",
+      "tur": "verb",
+      "baslik": "اختللتن (form VIII)\n# اِخْتَلَلْتُنَّ (iḵtalaltunna) /ix.ta.lal.tun.na/: second-person feminine plural past active of اِخْتَلَّ (iḵtalla)\n# اُخْتُلِلْتُنَّ (uḵtuliltunna) /ux.tu.lil.tun.na/: second-person feminine plural past passive of اِخْتَلَّ (iḵtalla)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḵtalaltunna", "iḵtalla", "uḵtuliltunna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اختللنا",
+      "tur": "verb",
+      "baslik": "اختللنا (form VIII)\n# اِخْتَلَلْنَا (iḵtalalnā) /ix.ta.lal.naː/: first-person plural past active of اِخْتَلَّ (iḵtalla)\n# اُخْتُلِلْنَا (uḵtulilnā) /ux.tu.lil.naː/: first-person plural past passive of اِخْتَلَّ (iḵtalla)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḵtalalnā", "iḵtalla", "uḵtulilnā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اختلوا",
+      "tur": "verb",
+      "baslik": "اختلوا (form VIII)\n# اِخْتَلُّوا (iḵtallū) /ix.tal.luː/: inflection of اِخْتَلَّ (iḵtalla):\n## third-person masculine plural past active\n## second-person masculine plural imperative\n# اُخْتُلُّوا (uḵtullū) /ux.tul.luː/: third-person masculine plural past passive of اِخْتَلَّ (iḵtalla)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḵtallū", "iḵtalla", "uḵtullū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اختللن",
+      "tur": "verb",
+      "baslik": "اختللن (form VIII)\n# اِخْتَلَلْنَ (iḵtalalna) /ix.ta.lal.na/: third-person feminine plural past active of اِخْتَلَّ (iḵtalla)\n# اُخْتُلِلْنَ (uḵtulilna) /ux.tu.lil.na/: third-person feminine plural past passive of اِخْتَلَّ (iḵtalla)\n# اِخْتَلِلْنَ (iḵtalilna) /ix.ta.lil.na/: second-person feminine plural imperative of اِخْتَلَّ (iḵtalla)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḵtalalna", "iḵtalla", "uḵtulilna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تختلين",
+      "tur": "verb",
+      "baslik": "تختلين (form VIII)\n# تَخْتَلِّينَ (taḵtallīna) /tax.tal.liː.na/: second-person feminine singular non-past active indicative of اِخْتَلَّ (iḵtalla)\n# تُخْتَلِّينَ (tuḵtallīna) /tux.tal.liː.na/: second-person feminine singular non-past passive indicative of اِخْتَلَّ (iḵtalla)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["taḵtallīna", "iḵtalla", "tuḵtallīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تختل",
+      "tur": "verb",
+      "baslik": "تختل (form VIII)\n# تَخْتَلُّ (taḵtallu) /tax.tal.lu/: inflection of اِخْتَلَّ (iḵtalla):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُخْتَلُّ (tuḵtallu) /tux.tal.lu/: inflection of اِخْتَلَّ (iḵtalla):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive ",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["taḵtallu", "iḵtalla", "tuḵtallu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يختل",
+      "tur": "verb",
+      "baslik": "يختل (form VIII)\n# يَخْتَلُّ (yaḵtallu) /jax.tal.lu/: third-person masculine singular non-past active indicative of اِخْتَلَّ (iḵtalla)\n# يُخْتَلُّ (yuḵtallu) /jux.tal.lu/: third-person masculine singular non-past passive indicative of اِخْتَلَّ (iḵtalla)\n# يَخْتَلَّ (yaḵtalla) /jax.tal.la/: third-person masculine singular non-past active subjunctive/jussive of اِخْتَلَّ (iḵtalla)\n# يُخْتَلَّ (yuḵ",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yaḵtallu", "iḵtalla", "yuḵtallu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يختلون",
+      "tur": "verb",
+      "baslik": "يختلون (form VIII)\n# يَخْتَلُّونَ (yaḵtallūna) /jax.tal.luː.na/: third-person masculine plural non-past active indicative of اِخْتَلَّ (iḵtalla)\n# يُخْتَلُّونَ (yuḵtallūna) /jux.tal.luː.na/: third-person masculine plural non-past passive indicative of اِخْتَلَّ (iḵtalla)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yaḵtallūna", "iḵtalla", "yuḵtallūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تختلون",
+      "tur": "verb",
+      "baslik": "تختلون (form VIII)\n# تَخْتَلُّونَ (taḵtallūna) /tax.tal.luː.na/: second-person masculine plural non-past active indicative of اِخْتَلَّ (iḵtalla)\n# تُخْتَلُّونَ (tuḵtallūna) /tux.tal.luː.na/: second-person masculine plural non-past passive indicative of اِخْتَلَّ (iḵtalla)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["taḵtallūna", "iḵtalla", "tuḵtallūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تختلان",
+      "tur": "verb",
+      "baslik": "تختلان (form VIII)\n# تَخْتَلَّانِ (taḵtallāni) /tax.tal.laː.ni/: inflection of اِخْتَلَّ (iḵtalla):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُخْتَلَّانِ (tuḵtallāni) /tux.tal.laː.ni/: inflection of اِخْتَلَّ (iḵtalla):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["taḵtallāni", "iḵtalla", "tuḵtallāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يختللن",
+      "tur": "verb",
+      "baslik": "يختللن (form VIII)\n# يَخْتَلِلْنَ (yaḵtalilna) /jax.ta.lil.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of اِخْتَلَّ (iḵtalla)\n# يُخْتَلَلْنَ (yuḵtalalna) /jux.ta.lal.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of اِخْتَلَّ (iḵtalla)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yaḵtalilna", "iḵtalla", "yuḵtalalna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تختللن",
+      "tur": "verb",
+      "baslik": "تختللن (form VIII)\n# تَخْتَلِلْنَ (taḵtalilna) /tax.ta.lil.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of اِخْتَلَّ (iḵtalla)\n# تُخْتَلَلْنَ (tuḵtalalna) /tux.ta.lal.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of اِخْتَلَّ (iḵtalla)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["taḵtalilna", "iḵtalla", "tuḵtalalna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تختلا",
+      "tur": "verb",
+      "baslik": "تختلا (form VIII)\n# تَخْتَلَّا (taḵtallā) /tax.tal.laː/: inflection of اِخْتَلَّ (iḵtalla):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُخْتَلَّا (tuḵtallā) /tux.tal.laː/: inflection of اِخْتَلَّ (iḵtalla):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subj",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["taḵtallā", "iḵtalla", "tuḵtallā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يختلا",
+      "tur": "verb",
+      "baslik": "يختلا (form VIII)\n# يَخْتَلَّا (yaḵtallā) /jax.tal.laː/: third-person masculine dual non-past active subjunctive/jussive of اِخْتَلَّ (iḵtalla)\n# يُخْتَلَّا (yuḵtallā) /jux.tal.laː/: third-person masculine dual non-past passive subjunctive/jussive of اِخْتَلَّ (iḵtalla)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yaḵtallā", "iḵtalla", "yuḵtallā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تختلوا",
+      "tur": "verb",
+      "baslik": "تختلوا (form VIII)\n# تَخْتَلُّوا (taḵtallū) /tax.tal.luː/: second-person masculine plural non-past active subjunctive/jussive of اِخْتَلَّ (iḵtalla)\n# تُخْتَلُّوا (tuḵtallū) /tux.tal.luː/: second-person masculine plural non-past passive subjunctive/jussive of اِخْتَلَّ (iḵtalla)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["taḵtallū", "iḵtalla", "tuḵtallū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تختلي",
+      "tur": "verb",
+      "baslik": "تختلي (form VIII)\n# تَخْتَلِّي (taḵtallī) /tax.tal.liː/: second-person feminine singular non-past active subjunctive/jussive of اِخْتَلَّ (iḵtalla)\n# تُخْتَلِّي (tuḵtallī) /tux.tal.liː/: second-person feminine singular non-past passive subjunctive/jussive of اِخْتَلَّ (iḵtalla)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["taḵtallī", "iḵtalla", "tuḵtallī"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يختلوا",
+      "tur": "verb",
+      "baslik": "يختلوا (form VIII)\n# يَخْتَلُّوا (yaḵtallū) /jax.tal.luː/: third-person masculine plural non-past active subjunctive/jussive of اِخْتَلَّ (iḵtalla)\n# يُخْتَلُّوا (yuḵtallū) /jux.tal.luː/: third-person masculine plural non-past passive subjunctive/jussive of اِخْتَلَّ (iḵtalla)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yaḵtallū", "iḵtalla", "yuḵtallū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يختلان",
+      "tur": "verb",
+      "baslik": "يختلان (form VIII)\n# يَخْتَلَّانِ (yaḵtallāni) /jax.tal.laː.ni/: third-person masculine dual non-past active indicative of اِخْتَلَّ (iḵtalla)\n# يُخْتَلَّانِ (yuḵtallāni) /jux.tal.laː.ni/: third-person masculine dual non-past passive indicative of اِخْتَلَّ (iḵtalla)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yaḵtallāni", "iḵtalla", "yuḵtallāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أختلل",
+      "tur": "verb",
+      "baslik": "أختلل (form VIII)\n# أَخْتَلِلْ (ʔaḵtalil) /ʔax.ta.lil/: first-person singular non-past active jussive of اِخْتَلَّ (iḵtalla)\n# أُخْتَلَلْ (ʔuḵtalal) /ʔux.ta.lal/: first-person singular non-past passive jussive of اِخْتَلَّ (iḵtalla)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ʔaḵtalil", "iḵtalla", "ʔuḵtalal"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تختلل",
+      "tur": "verb",
+      "baslik": "تختلل (form VIII)\n# تَخْتَلِلْ (taḵtalil) /tax.ta.lil/: inflection of اِخْتَلَّ (iḵtalla):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُخْتَلَلْ (tuḵtalal) /tux.ta.lal/: inflection of اِخْتَلَّ (iḵtalla):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussiv",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["taḵtalil", "iḵtalla", "tuḵtalal"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يختلل",
+      "tur": "verb",
+      "baslik": "يختلل (form VIII)\n# يَخْتَلِلْ (yaḵtalil) /jax.ta.lil/: third-person masculine singular non-past active jussive of اِخْتَلَّ (iḵtalla)\n# يُخْتَلَلْ (yuḵtalal) /jux.ta.lal/: third-person masculine singular non-past passive jussive of اِخْتَلَّ (iḵtalla)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yaḵtalil", "iḵtalla", "yuḵtalal"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نختلل",
+      "tur": "verb",
+      "baslik": "نختلل (form VIII)\n# نَخْتَلِلْ (naḵtalil) /nax.ta.lil/: first-person plural non-past active jussive of اِخْتَلَّ (iḵtalla)\n# نُخْتَلَلْ (nuḵtalal) /nux.ta.lal/: first-person plural non-past passive jussive of اِخْتَلَّ (iḵtalla)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["naḵtalil", "iḵtalla", "nuḵtalal"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اختلل",
+      "tur": "verb",
+      "baslik": "اِخْتَلِلْ • (iḵtalil) (form VIII) /ix.ta.lil/\n# second-person masculine singular imperative of اِخْتَلَّ (iḵtalla)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḵtalil", "iḵtalla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اختلي",
+      "tur": "verb",
+      "baslik": "اِخْتَلِّي • (iḵtallī) (form VIII) /ix.tal.liː/\n# second-person feminine singular imperative of اِخْتَلَّ (iḵtalla)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḵtallī", "iḵtalla"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "اختل", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,25 +1,24 @@
-"""Kök dosyalarındaki müştak Türkçelerini turkce.py kurallarıyla yeniden yazar; Kur'ân'da geçen müştakta Kur'ân kelimesinin Türkçesi esastır."""
-import json, glob, os, collections
+import json, glob, os, collections, re
 import turkce as T
 import mustak_lugat as ML
 import lugat_yapisi as LY
+import kok_sadelestir as KS
+import mesmu as MS
 LUG = ML.yukle()
-from kelime_kaydi import okunur
-KLAS = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'kelime_kaydi')
+KLAS = os.environ.get('KELIME_KAYDI') or os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'kelime_kaydi')
 say = collections.Counter()
 for f in glob.glob(os.path.join(KLAS, 'kuranda_*', 'kokler', '*.json')):
-    d = json.load(open(f, encoding='utf-8')); k = d['kok']; K = d.get('kaliplar') or {}
-    if not d.get('mustaklar'): continue
+    d = MS.genislet(json.load(open(f, encoding='utf-8'))); k = d['kok']
+    if not d.get('mustak'): continue
     kur = {}
-    for e in d.get('kelimeler', []):
-        tr = (e.get('turkce') or {}).get('lemma')
-        if e.get('lemma') and tr: kur.setdefault(e['lemma'], tr)
+    for g in d.get('kelimeler', []):
+        if g.get('lemma') and g.get('tr'): kur.setdefault(g['lemma'], g['tr'])
     yap = {}
     satir = []
-    for g, L in d['mustaklar'].items():
+    for gr, L in d['mustak'].items():
+        bm = re.search(r'bâb ([IVX]+)', gr)
         for x in L:
-            kal = K.get(str(x[0]), [g, '', '', ''])
-            satir.append({'grup': kal[0], 'ad': kal[1], 'etiket': kal[2], 'bab': kal[3], 'ar': x[1], '_x': x})
+            satir.append({'grup': gr, 'ad': x[0], 'etiket': x[1], 'bab': bm.group(1) if bm else '', 'ar': x[2], '_x': x})
     try:
         T.isle(k, satir)
     except Exception as e:
@@ -32,15 +31,23 @@ for f in glob.glob(os.path.join(KLAS, 'kuranda_*', 'kokler', '*.json')):
             yy = LY.yapilandir(lm['maddeler'])
             if yy: yap[s['ar']] = yy
         if lt:
-            x[3], x[4] = lt, 'lugat'; say['lugat'] += 1
-            if le not in (x[5] or ''): x[5] = ((x[5] + ' · ') if x[5] else '') + le
+            x[4], x[5] = lt, 'lugat'; say['lugat'] += 1
+            if le not in (x[6] or ''): x[6] = ((x[6] + ' · ') if x[6] else '') + le
         elif s['ar'] in kur:
-            x[3], x[4] = kur[s['ar']], 'kuran'; say['kuran'] += 1
-            if not x[5]: x[5] = "Kur'ân"
+            x[4], x[5] = kur[s['ar']], 'kuran'; say['kuran'] += 1
+            if not x[6]: x[6] = "Kur'ân"
         else:
-            x[3], x[4] = s.get('tr', x[3]), s.get('guven', x[4]); say['kural'] += 1
-    soz = d.setdefault('sozlukler', {})
-    if yap: soz['mustak_lugat'] = yap
-    else: soz.pop('mustak_lugat', None)
-    open(f, 'w', encoding='utf-8').write(okunur(d))
+            x[4], x[5] = s.get('tr', x[4]), s.get('guven', x[5]); say['kural'] += 1
+    mevcut = {e: [m for m in L if 'manalar' not in m] for e, L in (d.get('lugat') or {}).items()}
+    yeni = KS.lugat({'mustak_lugat': yap})
+    birlesik = collections.OrderedDict()
+    for e in list(mevcut) + [e for e in yeni if e not in mevcut]:
+        L = yeni.get(e, []) + mevcut.get(e, [])
+        if L: birlesik[e] = L
+    if birlesik: d['lugat'] = birlesik
+    else: d.pop('lugat', None)
+    kanit = MS.kanit_ayir(k, d['mustak'])
+    if kanit is not None:
+        d = collections.OrderedDict((('mustak_kanit', kanit) if a == 'mustak' else (a, b)) for a, b in d.items())
+    open(f, 'w', encoding='utf-8').write(KS.okunur(d) + '\n')
 print(dict(say))

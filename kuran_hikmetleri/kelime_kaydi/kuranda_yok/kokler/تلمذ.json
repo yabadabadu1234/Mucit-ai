@@ -1,104 +1,106 @@
 {
   "kok": "تلمذ",
+  "tur": "isim",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["fiil-yok"],
+  "lugat_fiil": false,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تلمذ", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تلميذ",
-        "u": "تلميذ",
-        "p": "noun",
-        "h": "ar-noun+",
-        "e": "تِلْمِيذ • (tilmīḏ) m (plural تَلَامِيذ (talāmīḏ) or تَلَامِذَة (talāmiḏa), feminine تِلْمِيذَة (tilmīḏa))",
-        "t": "From Hebrew תַּלְמִיד (talmīḏ) and Aramaic תַּלְמִידָא (talmīḏā), from Akkadian 𒊑𒈪𒁺 (talmīdu). Related to Classical Syriac ܬܠܡܝܕܐ (talmīḏā), Ge'ez ተልሚድ (tälmid), تَلْمُود (talmūd), another borrowing from the same Hebrew and Aramaic root. Formations after the root pattern ت ل م ذ (t l m ḏ) have been innovated in Arabic afterwards.",
-        "s": [
-          ["bor", "Hebrew תַּלְמִיד (talmīḏ)"],
-          ["bor", "Aramaic תַּלְמִידָא (talmīḏā)"],
-          ["der", "Akkadian 𒊑𒈪𒁺 (talmīdu)"],
-          ["cog", "Classical Syriac ܬܠܡܝܕܐ (talmīḏā)"],
-          ["cog", "Ge'ez ተልሚድ (tälmid)"],
-          ["ar-root", "ت ل م ذ (t l m ḏ)"]
-        ],
-        "synonyms": ["طَالِب"],
-        "g": ["pupil, student, disciple", "apprentice", "cadet", "Disciple", "Talmud"],
-        "tag": ["Judaism"],
-        "r": ["tilmīḏ"],
-        "ipa": ["/til.miːð/"],
-        "el": [
-          ["תַּלְמִיד", "תלמיד#Hebrew"],
-          ["תַּלְמִידָא", "תלמידא#Aramaic"],
-          ["𒊑𒈪𒁺", "talmīdum#Akkadian"],
-          ["ܬܠܡܝܕܐ", "ܬܠܡܝܕܐ#Classical_Syriac"],
-          ["ተልሚድ", "ተልሚድ#Ge'ez"],
-          ["تَلْمُود", "تلمود#Arabic"],
-          ["ت ل م ذ", "Appendix:Arabic roots/ت ل م ذ"]
-        ],
-        "k": "تلمذ",
-        "yol": "kök"
-      },
-      {
-        "w": "تلاميذ",
-        "u": "تلاميذ",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "تَلَامِيذ • (talāmīḏ) m pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of تِلْمِيذ (tilmīḏ)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["تِلْمِيذ"],
-        "r": ["talāmīḏ"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "تلامذة",
-        "u": "تلامذة",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "تَلَامِذَة • (talāmiḏa) m pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of تِلْمِيذ (tilmīḏ)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["تِلْمِيذ"],
-        "r": ["talāmiḏa"],
-        "ipa": ["/ta.laː.mi.ða/"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "تلميذة",
-        "u": "تلميذة",
-        "p": "noun",
-        "h": "ar-noun+",
-        "e": "تِلْمِيذَة • (tilmīḏa) f (plural تِلْمِيذَات (tilmīḏāt), masculine تِلْمِيذ (tilmīḏ))",
-        "g": ["female equivalent of تِلْمِيذ (tilmīḏ)"],
-        "tag": ["feminine", "form-of"],
-        "fo": ["تِلْمِيذ"],
-        "r": ["tilmīḏa"],
-        "yol": "asıl madde"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تل",
+  "ses": {
     "harf": "ت",
+    "fasil": "تل",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "تلميذ",
+      "tur": "noun",
+      "baslik": "تِلْمِيذ • (tilmīḏ) m (plural تَلَامِيذ (talāmīḏ) or تَلَامِذَة (talāmiḏa), feminine تِلْمِيذَة (tilmīḏa))",
+      "etim_sablon": [
+        ["bor", "Hebrew תַּלְמִיד (talmīḏ)"],
+        ["bor", "Aramaic תַּלְמִידָא (talmīḏā)"],
+        ["der", "Akkadian 𒊑𒈪𒁺 (talmīdu)"],
+        ["cog", "Classical Syriac ܬܠܡܝܕܐ (talmīḏā)"],
+        ["cog", "Ge'ez ተልሚድ (tälmid)"],
+        ["ar-root", "ت ل م ذ (t l m ḏ)"]
+      ],
+      "esanlamli": ["طَالِب"],
+      "anlam": ["pupil, student, disciple", "apprentice", "cadet", "Disciple", "Talmud"],
+      "etiket": ["Judaism"],
+      "okunus": ["tilmīḏ"],
+      "ipa": ["/til.miːð/"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تلاميذ",
+      "tur": "noun",
+      "baslik": "تَلَامِيذ • (talāmīḏ) m pl",
+      "anlam": ["plural of تِلْمِيذ (tilmīḏ)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["تِلْمِيذ"],
+      "okunus": ["talāmīḏ"],
+      "bag": "asıl madde",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلامذة",
+      "tur": "noun",
+      "baslik": "تَلَامِذَة • (talāmiḏa) m pl",
+      "anlam": ["plural of تِلْمِيذ (tilmīḏ)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["تِلْمِيذ"],
+      "okunus": ["talāmiḏa"],
+      "ipa": ["/ta.laː.mi.ða/"],
+      "bag": "asıl madde",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلميذة",
+      "tur": "noun",
+      "baslik": "تِلْمِيذَة • (tilmīḏa) f (plural تِلْمِيذَات (tilmīḏāt), masculine تِلْمِيذ (tilmīḏ))",
+      "anlam": ["female equivalent of تِلْمِيذ (tilmīḏ)"],
+      "etiket": ["feminine", "form-of"],
+      "form_of": ["تِلْمِيذ"],
+      "okunus": ["tilmīḏa"],
+      "bag": "asıl madde"
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "From Hebrew תַּלְמִיד (talmīḏ) and Aramaic תַּלְמִידָא (talmīḏā), from Akkadian 𒊑𒈪𒁺 (talmīdu). Related to Classical Syriac ܬܠܡܝܕܐ (talmīḏā), Ge'ez ተልሚድ (tälmid), تَلْمُود (talmūd), another borrowing from the same Hebrew and Aramaic root. Formations after the root pattern ت ل م ذ (t l m ḏ) have been innovated in Arabic afterwards.",
+      "kognatlar": [
+        ["תַּלְמִיד", "תלמיד#Hebrew"],
+        ["תַּלְמִידָא", "תלמידא#Aramaic"],
+        ["𒊑𒈪𒁺", "talmīdum#Akkadian"],
+        ["ܬܠܡܝܕܐ", "ܬܠܡܝܕܐ#Classical_Syriac"],
+        ["ተልሚድ", "ተልሚድ#Ge'ez"],
+        ["تَلْمُود", "تلمود#Arabic"],
+        ["ت ل م ذ", "Appendix:Arabic roots/ت ل م ذ"]
+      ]
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "تلمذ", "r6"]
+  ],
+  "mana": {
     "ince": "person.n.01",
     "orta": "noun.person",
     "ust": "insan ve toplum",
@@ -106,20 +108,8 @@
     "dayanak_tanim": "a young person attending school (up through senior high school)",
     "synset_sayisi": 3
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["enrollee.n.01", "juvenile.n.01", "learner.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 8,
       "merkez_kok": "سير",
@@ -139,6 +129,11 @@
       "boy": 4
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["enrollee.n.01", "juvenile.n.01", "learner.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

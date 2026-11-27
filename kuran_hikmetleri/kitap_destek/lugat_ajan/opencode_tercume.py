@@ -17,28 +17,28 @@ ISTEM = ('Aşağıdaki JSON dizisindeki her metni Osmanlıca, Mehmed Âkif ciddi
 
 
 def topla(j):
-    s = j.get('sozlukler', {})
     liste = []
     yer = []
-    for i, x in enumerate(s.get('mekayis', [])):
+    for i, x in enumerate(j.get('mekayis') or []):
         for a in ('baslik', 'metin'):
-            if x.get(a):
+            if x.get(a) and not x.get(a + '_tr'):
                 liste.append(x[a]); yer.append(('mekayis', i, a))
-    c = s.get('cebel_mihveri')
+    c = j.get('cebel')
     if c:
         for a in ('mihveri', 'sesler'):
-            if c.get(a):
+            if c.get(a) and not c.get(a + '_tr'):
                 liste.append(c[a]); yer.append(('cebel', 0, a))
-    for i, x in enumerate(s.get('arabic_ontology', [])):
+    for i, x in enumerate(j.get('ontoloji') or []):
         for a in ('tanim', 'misal'):
-            if x.get(a):
+            if x.get(a) and not x.get(a + '_tr'):
                 liste.append(x[a]); yer.append(('onto', i, a))
-    e = s.get('etymarab')
-    if e and e.get('kok_maddesi'):
+    e = j.get('etymarab')
+    if e and e.get('kok_maddesi') and not e.get('kok_maddesi_tr'):
         liste.append(e['kok_maddesi']); yer.append(('etym', 0, 'kok_maddesi'))
-    for i, x in enumerate(s.get('kaikki_vikisozluk', [])):
-        for k, g in enumerate(x.get('g', []) if isinstance(x.get('g'), list) else []):
-            liste.append(g); yer.append(('kaikki', i, k))
+    for i, x in enumerate(j.get('vikisozluk') or []):
+        if isinstance(x.get('anlam'), list) and not x.get('anlam_tr'):
+            for k, g in enumerate(x['anlam']):
+                liste.append(g); yer.append(('kaikki', i, k))
     return liste, yer
 
 
@@ -91,22 +91,18 @@ def cevir(liste):
 
 
 def yaz(j, yer, tr):
-    t = {}
     for (kaynak, i, a), v in zip(yer, tr):
         if kaynak == 'mekayis':
-            lst = t.setdefault('mekayis', [{} for _ in j['sozlukler']['mekayis']])
-            lst[i][a] = v
+            j['mekayis'][i][a + '_tr'] = v
         elif kaynak == 'cebel':
-            t.setdefault('cebel_mihveri', {})[a] = v
+            j['cebel'][a + '_tr'] = v
         elif kaynak == 'onto':
-            lst = t.setdefault('arabic_ontology', [{} for _ in j['sozlukler']['arabic_ontology']])
-            lst[i][a] = v
+            j['ontoloji'][i][a + '_tr'] = v
         elif kaynak == 'etym':
-            t.setdefault('etymarab', {})[a] = v
+            j['etymarab'][a + '_tr'] = v
         else:
-            lst = t.setdefault('kaikki_vikisozluk', [{} for _ in j['sozlukler']['kaikki_vikisozluk']])
-            lst[i].setdefault('g', []).append(v)
-    return t
+            j['vikisozluk'][i].setdefault('anlam_tr', []).append(v)
+    return j
 
 
 def okunur(o, g=0, en=110):
@@ -130,16 +126,13 @@ def okunur(o, g=0, en=110):
 def isle(ad):
     yol = os.path.join(KOKLER, ad)
     j = json.load(open(yol, encoding='utf-8'))
-    if 'tercume' in j.get('sozlukler', {}):
-        return ad, 'var'
     liste, yer = topla(j)
-    tr = cevir(liste) if liste else []
+    if not liste:
+        return ad, 'var'
+    tr = cevir(liste)
     if tr is None:
         return ad, 'basarisiz'
-    j2 = json.load(open(yol, encoding='utf-8'))
-    if 'tercume' in j2.get('sozlukler', {}):
-        return ad, 'var'
-    j2['sozlukler']['tercume'] = yaz(j2, yer, tr)
+    j2 = yaz(json.load(open(yol, encoding='utf-8')), yer, tr)
     with open(yol, 'w', encoding='utf-8') as f:
         f.write(okunur(j2))
     return ad, 'tamam'
@@ -148,7 +141,7 @@ def isle(ad):
 def main():
     iscı = int(sys.argv[1]) if len(sys.argv) > 1 else 6
     adlar = sorted(os.listdir(KOKLER), reverse=True)
-    adlar = [a for a in adlar if 'tercume' not in json.load(open(os.path.join(KOKLER, a), encoding='utf-8')).get('sozlukler', {})]
+    adlar = [a for a in adlar if topla(json.load(open(os.path.join(KOKLER, a), encoding='utf-8')))[0]]
     print(len(adlar), 'dosya sırada', flush=True)
     with concurrent.futures.ThreadPoolExecutor(iscı) as ex:
         for ad, d in ex.map(isle, adlar):

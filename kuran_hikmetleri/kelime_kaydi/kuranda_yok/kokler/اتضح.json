@@ -1,362 +1,255 @@
 {
   "kok": "اتضح",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "اتضح", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "اتضحا",
-        "u": "اتضحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتضحا (form VIII)\n# اِتَّضَحَا (ittaḍaḥā) /it.ta.dˤa.ħaː/: third-person masculine dual past active of اِتَّضَحَ (ittaḍaḥa)\n# اِتَّضِحَا (ittaḍiḥā) /it.ta.dˤi.ħaː/: second-person dual imperative of اِتَّضَحَ (ittaḍaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaḍaḥā", "ittaḍaḥa", "ittaḍiḥā"],
-        "k": "اتضح",
-        "yol": "kök"
-      },
-      {
-        "w": "اتضحت",
-        "u": "اتضحت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتضحت (form VIII)\n# اِتَّضَحْتُ (ittaḍaḥtu) /it.ta.dˤaħ.tu/: first-person singular past active of اِتَّضَحَ (ittaḍaḥa)\n# اِتَّضَحْتَ (ittaḍaḥta) /it.ta.dˤaħ.ta/: second-person masculine singular past active of اِتَّضَحَ (ittaḍaḥa)\n# اِتَّضَحْتِ (ittaḍaḥti) /it.ta.dˤaħ.ti/: second-person feminine singular past active of اِتَّضَحَ (ittaḍaḥa)\n# اِتَّضَحَتْ (ittaḍaḥat) /it.ta.dˤa.ħat/: third-person fe",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaḍaḥtu", "ittaḍaḥa", "ittaḍaḥta"],
-        "k": "اتضح",
-        "yol": "kök"
-      },
-      {
-        "w": "اتضحتما",
-        "u": "اتضحتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّضَحْتُمَا • (ittaḍaḥtumā) (form VIII) /it.ta.dˤaħ.tu.maː/\n# second-person dual past active of اِتَّضَحَ (ittaḍaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaḍaḥtumā", "ittaḍaḥa"],
-        "k": "اتضح",
-        "yol": "kök"
-      },
-      {
-        "w": "اتضحتم",
-        "u": "اتضحتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّضَحْتُمْ • (ittaḍaḥtum) (form VIII) /it.ta.dˤaħ.tum/\n# second-person masculine plural past active of اِتَّضَحَ (ittaḍaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaḍaḥtum", "ittaḍaḥa"],
-        "k": "اتضح",
-        "yol": "kök"
-      },
-      {
-        "w": "اتضحنا",
-        "u": "اتضحنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّضَحْنَا • (ittaḍaḥnā) (form VIII) /it.ta.dˤaħ.naː/\n# first-person plural past active of اِتَّضَحَ (ittaḍaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaḍaḥnā", "ittaḍaḥa"],
-        "k": "اتضح",
-        "yol": "kök"
-      },
-      {
-        "w": "اتضحتن",
-        "u": "اتضحتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّضَحْتُنَّ • (ittaḍaḥtunna) (form VIII) /it.ta.dˤaħ.tun.na/\n# second-person feminine plural past active of اِتَّضَحَ (ittaḍaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaḍaḥtunna", "ittaḍaḥa"],
-        "k": "اتضح",
-        "yol": "kök"
-      },
-      {
-        "w": "اتضحتا",
-        "u": "اتضحتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّضَحَتَا • (ittaḍaḥatā) (form VIII) /it.ta.dˤa.ħa.taː/\n# third-person feminine dual past active of اِتَّضَحَ (ittaḍaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaḍaḥatā", "ittaḍaḥa"],
-        "k": "اتضح",
-        "yol": "kök"
-      },
-      {
-        "w": "اتضحوا",
-        "u": "اتضحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتضحوا (form VIII)\n# اِتَّضَحُوا (ittaḍaḥū) /it.ta.dˤa.ħuː/: third-person masculine plural past active of اِتَّضَحَ (ittaḍaḥa)\n# اِتَّضِحُوا (ittaḍiḥū) /it.ta.dˤi.ħuː/: second-person masculine plural imperative of اِتَّضَحَ (ittaḍaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaḍaḥū", "ittaḍaḥa", "ittaḍiḥū"],
-        "k": "اتضح",
-        "yol": "kök"
-      },
-      {
-        "w": "اتضحن",
-        "u": "اتضحن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتضحن (form VIII)\n# اِتَّضَحْنَ (ittaḍaḥna) /it.ta.dˤaħ.na/: third-person feminine plural past active of اِتَّضَحَ (ittaḍaḥa)\n# اِتَّضِحْنَ (ittaḍiḥna) /it.ta.dˤiħ.na/: second-person feminine plural imperative of اِتَّضَحَ (ittaḍaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaḍaḥna", "ittaḍaḥa", "ittaḍiḥna"],
-        "k": "اتضح",
-        "yol": "kök"
-      },
-      {
-        "w": "أتضح",
-        "u": "أتضح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتضح (form VIII)\n# أَتَّضِحُ (ʔattaḍiḥu) /ʔat.ta.dˤi.ħu/: first-person singular non-past active indicative of اِتَّضَحَ (ittaḍaḥa)\n# أَتَّضِحَ (ʔattaḍiḥa) /ʔat.ta.dˤi.ħa/: first-person singular non-past active subjunctive of اِتَّضَحَ (ittaḍaḥa)\n# أَتَّضِحْ (ʔattaḍiḥ) /ʔat.ta.dˤiħ/: first-person singular non-past active jussive of اِتَّضَحَ (ittaḍaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ʔattaḍiḥu", "ittaḍaḥa", "ʔattaḍiḥa"],
-        "k": "اتضح",
-        "yol": "kök"
-      },
-      {
-        "w": "تتضحين",
-        "u": "تتضحين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَّضِحِينَ • (tattaḍiḥīna) (form VIII) /tat.ta.dˤi.ħiː.na/\n# second-person feminine singular non-past active indicative of اِتَّضَحَ (ittaḍaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattaḍiḥīna", "ittaḍaḥa"],
-        "k": "اتضح",
-        "yol": "kök"
-      },
-      {
-        "w": "تتضح",
-        "u": "تتضح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتضح (form VIII)\n# تَتَّضِحُ (tattaḍiḥu) /tat.ta.dˤi.ħu/: inflection of اِتَّضَحَ (ittaḍaḥa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَّضِحَ (tattaḍiḥa) /tat.ta.dˤi.ħa/: inflection of اِتَّضَحَ (ittaḍaḥa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-pas",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattaḍiḥu", "ittaḍaḥa", "tattaḍiḥa"],
-        "k": "اتضح",
-        "yol": "kök"
-      },
-      {
-        "w": "يتضح",
-        "u": "يتضح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتضح (form VIII)\n# يَتَّضِحُ (yattaḍiḥu) /jat.ta.dˤi.ħu/: third-person masculine singular non-past active indicative of اِتَّضَحَ (ittaḍaḥa)\n# يَتَّضِحَ (yattaḍiḥa) /jat.ta.dˤi.ħa/: third-person masculine singular non-past active subjunctive of اِتَّضَحَ (ittaḍaḥa)\n# يَتَّضِحْ (yattaḍiḥ) /jat.ta.dˤiħ/: third-person masculine singular non-past active jussive of اِتَّضَحَ (ittaḍaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattaḍiḥu", "ittaḍaḥa", "yattaḍiḥa"],
-        "k": "اتضح",
-        "yol": "kök"
-      },
-      {
-        "w": "تتضحان",
-        "u": "تتضحان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَّضِحَانِ • (tattaḍiḥāni) (form VIII) /tat.ta.dˤi.ħaː.ni/\n# inflection of اِتَّضَحَ (ittaḍaḥa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattaḍiḥāni", "ittaḍaḥa"],
-        "k": "اتضح",
-        "yol": "kök"
-      },
-      {
-        "w": "يتضحان",
-        "u": "يتضحان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَّضِحَانِ • (yattaḍiḥāni) (form VIII) /jat.ta.dˤi.ħaː.ni/\n# third-person masculine dual non-past active indicative of اِتَّضَحَ (ittaḍaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattaḍiḥāni", "ittaḍaḥa"],
-        "k": "اتضح",
-        "yol": "kök"
-      },
-      {
-        "w": "تتضحون",
-        "u": "تتضحون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَّضِحُونَ • (tattaḍiḥūna) (form VIII) /tat.ta.dˤi.ħuː.na/\n# second-person masculine plural non-past active indicative of اِتَّضَحَ (ittaḍaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattaḍiḥūna", "ittaḍaḥa"],
-        "k": "اتضح",
-        "yol": "kök"
-      },
-      {
-        "w": "نتضح",
-        "u": "نتضح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتضح (form VIII)\n# نَتَّضِحُ (nattaḍiḥu) /nat.ta.dˤi.ħu/: first-person plural non-past active indicative of اِتَّضَحَ (ittaḍaḥa)\n# نَتَّضِحَ (nattaḍiḥa) /nat.ta.dˤi.ħa/: first-person plural non-past active subjunctive of اِتَّضَحَ (ittaḍaḥa)\n# نَتَّضِحْ (nattaḍiḥ) /nat.ta.dˤiħ/: first-person plural non-past active jussive of اِتَّضَحَ (ittaḍaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["nattaḍiḥu", "ittaḍaḥa", "nattaḍiḥa"],
-        "k": "اتضح",
-        "yol": "kök"
-      },
-      {
-        "w": "تتضحن",
-        "u": "تتضحن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَّضِحْنَ • (tattaḍiḥna) (form VIII) /tat.ta.dˤiħ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِتَّضَحَ (ittaḍaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattaḍiḥna", "ittaḍaḥa"],
-        "k": "اتضح",
-        "yol": "kök"
-      },
-      {
-        "w": "يتضحن",
-        "u": "يتضحن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَّضِحْنَ • (yattaḍiḥna) (form VIII) /jat.ta.dˤiħ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِتَّضَحَ (ittaḍaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattaḍiḥna", "ittaḍaḥa"],
-        "k": "اتضح",
-        "yol": "kök"
-      },
-      {
-        "w": "تتضحا",
-        "u": "تتضحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَّضِحَا • (tattaḍiḥā) (form VIII) /tat.ta.dˤi.ħaː/\n# inflection of اِتَّضَحَ (ittaḍaḥa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattaḍiḥā", "ittaḍaḥa"],
-        "k": "اتضح",
-        "yol": "kök"
-      },
-      {
-        "w": "يتضحا",
-        "u": "يتضحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَّضِحَا • (yattaḍiḥā) (form VIII) /jat.ta.dˤi.ħaː/\n# third-person masculine dual non-past active subjunctive/jussive of اِتَّضَحَ (ittaḍaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattaḍiḥā", "ittaḍaḥa"],
-        "k": "اتضح",
-        "yol": "kök"
-      },
-      {
-        "w": "تتضحي",
-        "u": "تتضحي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَّضِحِي • (tattaḍiḥī) (form VIII) /tat.ta.dˤi.ħiː/\n# second-person feminine singular non-past active subjunctive/jussive of اِتَّضَحَ (ittaḍaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattaḍiḥī", "ittaḍaḥa"],
-        "k": "اتضح",
-        "yol": "kök"
-      },
-      {
-        "w": "تتضحوا",
-        "u": "تتضحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَّضِحُوا • (tattaḍiḥū) (form VIII) /tat.ta.dˤi.ħuː/\n# second-person masculine plural non-past active subjunctive/jussive of اِتَّضَحَ (ittaḍaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattaḍiḥū", "ittaḍaḥa"],
-        "k": "اتضح",
-        "yol": "kök"
-      },
-      {
-        "w": "يتضحون",
-        "u": "يتضحون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَّضِحُونَ • (yattaḍiḥūna) (form VIII) /jat.ta.dˤi.ħuː.na/\n# third-person masculine plural non-past active indicative of اِتَّضَحَ (ittaḍaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattaḍiḥūna", "ittaḍaḥa"],
-        "k": "اتضح",
-        "yol": "kök"
-      },
-      {
-        "w": "اتضحي",
-        "u": "اتضحي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّضِحِي • (ittaḍiḥī) (form VIII) /it.ta.dˤi.ħiː/\n# second-person feminine singular imperative of اِتَّضَحَ (ittaḍaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaḍiḥī", "ittaḍaḥa"],
-        "k": "اتضح",
-        "yol": "kök"
-      },
-      {
-        "w": "يتضحوا",
-        "u": "يتضحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَّضِحُوا • (yattaḍiḥū) (form VIII) /jat.ta.dˤi.ħuː/\n# third-person masculine plural non-past active subjunctive/jussive of اِتَّضَحَ (ittaḍaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattaḍiḥū", "ittaḍaḥa"],
-        "k": "اتضح",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تض",
+  "ses": {
     "harf": "ا",
+    "fasil": "تض",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "اتضحا",
+      "tur": "verb",
+      "baslik": "اتضحا (form VIII)\n# اِتَّضَحَا (ittaḍaḥā) /it.ta.dˤa.ħaː/: third-person masculine dual past active of اِتَّضَحَ (ittaḍaḥa)\n# اِتَّضِحَا (ittaḍiḥā) /it.ta.dˤi.ħaː/: second-person dual imperative of اِتَّضَحَ (ittaḍaḥa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaḍaḥā", "ittaḍaḥa", "ittaḍiḥā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتضحت",
+      "tur": "verb",
+      "baslik": "اتضحت (form VIII)\n# اِتَّضَحْتُ (ittaḍaḥtu) /it.ta.dˤaħ.tu/: first-person singular past active of اِتَّضَحَ (ittaḍaḥa)\n# اِتَّضَحْتَ (ittaḍaḥta) /it.ta.dˤaħ.ta/: second-person masculine singular past active of اِتَّضَحَ (ittaḍaḥa)\n# اِتَّضَحْتِ (ittaḍaḥti) /it.ta.dˤaħ.ti/: second-person feminine singular past active of اِتَّضَحَ (ittaḍaḥa)\n# اِتَّضَحَتْ (ittaḍaḥat) /it.ta.dˤa.ħat/: third-person fe",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaḍaḥtu", "ittaḍaḥa", "ittaḍaḥta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتضحتما",
+      "tur": "verb",
+      "baslik": "اِتَّضَحْتُمَا • (ittaḍaḥtumā) (form VIII) /it.ta.dˤaħ.tu.maː/\n# second-person dual past active of اِتَّضَحَ (ittaḍaḥa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaḍaḥtumā", "ittaḍaḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتضحتم",
+      "tur": "verb",
+      "baslik": "اِتَّضَحْتُمْ • (ittaḍaḥtum) (form VIII) /it.ta.dˤaħ.tum/\n# second-person masculine plural past active of اِتَّضَحَ (ittaḍaḥa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaḍaḥtum", "ittaḍaḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتضحنا",
+      "tur": "verb",
+      "baslik": "اِتَّضَحْنَا • (ittaḍaḥnā) (form VIII) /it.ta.dˤaħ.naː/\n# first-person plural past active of اِتَّضَحَ (ittaḍaḥa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaḍaḥnā", "ittaḍaḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتضحتن",
+      "tur": "verb",
+      "baslik": "اِتَّضَحْتُنَّ • (ittaḍaḥtunna) (form VIII) /it.ta.dˤaħ.tun.na/\n# second-person feminine plural past active of اِتَّضَحَ (ittaḍaḥa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaḍaḥtunna", "ittaḍaḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتضحتا",
+      "tur": "verb",
+      "baslik": "اِتَّضَحَتَا • (ittaḍaḥatā) (form VIII) /it.ta.dˤa.ħa.taː/\n# third-person feminine dual past active of اِتَّضَحَ (ittaḍaḥa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaḍaḥatā", "ittaḍaḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتضحوا",
+      "tur": "verb",
+      "baslik": "اتضحوا (form VIII)\n# اِتَّضَحُوا (ittaḍaḥū) /it.ta.dˤa.ħuː/: third-person masculine plural past active of اِتَّضَحَ (ittaḍaḥa)\n# اِتَّضِحُوا (ittaḍiḥū) /it.ta.dˤi.ħuː/: second-person masculine plural imperative of اِتَّضَحَ (ittaḍaḥa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaḍaḥū", "ittaḍaḥa", "ittaḍiḥū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتضحن",
+      "tur": "verb",
+      "baslik": "اتضحن (form VIII)\n# اِتَّضَحْنَ (ittaḍaḥna) /it.ta.dˤaħ.na/: third-person feminine plural past active of اِتَّضَحَ (ittaḍaḥa)\n# اِتَّضِحْنَ (ittaḍiḥna) /it.ta.dˤiħ.na/: second-person feminine plural imperative of اِتَّضَحَ (ittaḍaḥa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaḍaḥna", "ittaḍaḥa", "ittaḍiḥna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتضح",
+      "tur": "verb",
+      "baslik": "أتضح (form VIII)\n# أَتَّضِحُ (ʔattaḍiḥu) /ʔat.ta.dˤi.ħu/: first-person singular non-past active indicative of اِتَّضَحَ (ittaḍaḥa)\n# أَتَّضِحَ (ʔattaḍiḥa) /ʔat.ta.dˤi.ħa/: first-person singular non-past active subjunctive of اِتَّضَحَ (ittaḍaḥa)\n# أَتَّضِحْ (ʔattaḍiḥ) /ʔat.ta.dˤiħ/: first-person singular non-past active jussive of اِتَّضَحَ (ittaḍaḥa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ʔattaḍiḥu", "ittaḍaḥa", "ʔattaḍiḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتضحين",
+      "tur": "verb",
+      "baslik": "تَتَّضِحِينَ • (tattaḍiḥīna) (form VIII) /tat.ta.dˤi.ħiː.na/\n# second-person feminine singular non-past active indicative of اِتَّضَحَ (ittaḍaḥa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattaḍiḥīna", "ittaḍaḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتضح",
+      "tur": "verb",
+      "baslik": "تتضح (form VIII)\n# تَتَّضِحُ (tattaḍiḥu) /tat.ta.dˤi.ħu/: inflection of اِتَّضَحَ (ittaḍaḥa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَّضِحَ (tattaḍiḥa) /tat.ta.dˤi.ħa/: inflection of اِتَّضَحَ (ittaḍaḥa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-pas",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattaḍiḥu", "ittaḍaḥa", "tattaḍiḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتضح",
+      "tur": "verb",
+      "baslik": "يتضح (form VIII)\n# يَتَّضِحُ (yattaḍiḥu) /jat.ta.dˤi.ħu/: third-person masculine singular non-past active indicative of اِتَّضَحَ (ittaḍaḥa)\n# يَتَّضِحَ (yattaḍiḥa) /jat.ta.dˤi.ħa/: third-person masculine singular non-past active subjunctive of اِتَّضَحَ (ittaḍaḥa)\n# يَتَّضِحْ (yattaḍiḥ) /jat.ta.dˤiħ/: third-person masculine singular non-past active jussive of اِتَّضَحَ (ittaḍaḥa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattaḍiḥu", "ittaḍaḥa", "yattaḍiḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتضحان",
+      "tur": "verb",
+      "baslik": "تَتَّضِحَانِ • (tattaḍiḥāni) (form VIII) /tat.ta.dˤi.ħaː.ni/\n# inflection of اِتَّضَحَ (ittaḍaḥa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattaḍiḥāni", "ittaḍaḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتضحان",
+      "tur": "verb",
+      "baslik": "يَتَّضِحَانِ • (yattaḍiḥāni) (form VIII) /jat.ta.dˤi.ħaː.ni/\n# third-person masculine dual non-past active indicative of اِتَّضَحَ (ittaḍaḥa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattaḍiḥāni", "ittaḍaḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتضحون",
+      "tur": "verb",
+      "baslik": "تَتَّضِحُونَ • (tattaḍiḥūna) (form VIII) /tat.ta.dˤi.ħuː.na/\n# second-person masculine plural non-past active indicative of اِتَّضَحَ (ittaḍaḥa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattaḍiḥūna", "ittaḍaḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتضح",
+      "tur": "verb",
+      "baslik": "نتضح (form VIII)\n# نَتَّضِحُ (nattaḍiḥu) /nat.ta.dˤi.ħu/: first-person plural non-past active indicative of اِتَّضَحَ (ittaḍaḥa)\n# نَتَّضِحَ (nattaḍiḥa) /nat.ta.dˤi.ħa/: first-person plural non-past active subjunctive of اِتَّضَحَ (ittaḍaḥa)\n# نَتَّضِحْ (nattaḍiḥ) /nat.ta.dˤiħ/: first-person plural non-past active jussive of اِتَّضَحَ (ittaḍaḥa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["nattaḍiḥu", "ittaḍaḥa", "nattaḍiḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتضحن",
+      "tur": "verb",
+      "baslik": "تَتَّضِحْنَ • (tattaḍiḥna) (form VIII) /tat.ta.dˤiħ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِتَّضَحَ (ittaḍaḥa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattaḍiḥna", "ittaḍaḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتضحن",
+      "tur": "verb",
+      "baslik": "يَتَّضِحْنَ • (yattaḍiḥna) (form VIII) /jat.ta.dˤiħ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِتَّضَحَ (ittaḍaḥa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattaḍiḥna", "ittaḍaḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتضحا",
+      "tur": "verb",
+      "baslik": "تَتَّضِحَا • (tattaḍiḥā) (form VIII) /tat.ta.dˤi.ħaː/\n# inflection of اِتَّضَحَ (ittaḍaḥa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattaḍiḥā", "ittaḍaḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتضحا",
+      "tur": "verb",
+      "baslik": "يَتَّضِحَا • (yattaḍiḥā) (form VIII) /jat.ta.dˤi.ħaː/\n# third-person masculine dual non-past active subjunctive/jussive of اِتَّضَحَ (ittaḍaḥa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattaḍiḥā", "ittaḍaḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتضحي",
+      "tur": "verb",
+      "baslik": "تَتَّضِحِي • (tattaḍiḥī) (form VIII) /tat.ta.dˤi.ħiː/\n# second-person feminine singular non-past active subjunctive/jussive of اِتَّضَحَ (ittaḍaḥa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattaḍiḥī", "ittaḍaḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتضحوا",
+      "tur": "verb",
+      "baslik": "تَتَّضِحُوا • (tattaḍiḥū) (form VIII) /tat.ta.dˤi.ħuː/\n# second-person masculine plural non-past active subjunctive/jussive of اِتَّضَحَ (ittaḍaḥa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattaḍiḥū", "ittaḍaḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتضحون",
+      "tur": "verb",
+      "baslik": "يَتَّضِحُونَ • (yattaḍiḥūna) (form VIII) /jat.ta.dˤi.ħuː.na/\n# third-person masculine plural non-past active indicative of اِتَّضَحَ (ittaḍaḥa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattaḍiḥūna", "ittaḍaḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتضحي",
+      "tur": "verb",
+      "baslik": "اِتَّضِحِي • (ittaḍiḥī) (form VIII) /it.ta.dˤi.ħiː/\n# second-person feminine singular imperative of اِتَّضَحَ (ittaḍaḥa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaḍiḥī", "ittaḍaḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتضحوا",
+      "tur": "verb",
+      "baslik": "يَتَّضِحُوا • (yattaḍiḥū) (form VIII) /jat.ta.dˤi.ħuː/\n# third-person masculine plural non-past active subjunctive/jussive of اِتَّضَحَ (ittaḍaḥa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattaḍiḥū", "ittaḍaḥa"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "اتضح", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

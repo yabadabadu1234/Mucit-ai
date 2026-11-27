@@ -1,700 +1,497 @@
 {
   "kok": "طاع",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "طاع", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أطاع",
-        "u": "أطاع",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أطاع (form I)\n# أُطَاعُ (ʔuṭāʕu) /ʔu.tˤaː.ʕu/: first-person singular non-past passive indicative of طَاعَ (ṭāʕa)\n# أُطَاعَ (ʔuṭāʕa) /ʔu.tˤaː.ʕa/: first-person singular non-past passive subjunctive of طَاعَ (ṭāʕa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔuṭāʕu", "ṭāʕa", "ʔuṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تطوع",
-        "u": "تطوع",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تطوع (form I)\n# تَطُوعُ (taṭūʕu) /ta.tˤuː.ʕu/: inflection of طَاعَ (ṭāʕa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَطُوعَ (taṭūʕa) /ta.tˤuː.ʕa/: inflection of طَاعَ (ṭāʕa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭūʕu", "ṭāʕa", "taṭūʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يطاع",
-        "u": "يطاع",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يطاع (form I)\n# يُطَاعُ (yuṭāʕu) /ju.tˤaː.ʕu/: third-person masculine singular non-past passive indicative of طَاعَ (ṭāʕa)\n# يُطَاعَ (yuṭāʕa) /ju.tˤaː.ʕa/: third-person masculine singular non-past passive subjunctive of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuṭāʕu", "ṭāʕa", "yuṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يطوع",
-        "u": "يطوع",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يطوع (form I)\n# يَطُوعُ (yaṭūʕu) /ja.tˤuː.ʕu/: third-person masculine singular non-past active indicative of طَاعَ (ṭāʕa)\n# يَطُوعَ (yaṭūʕa) /ja.tˤuː.ʕa/: third-person masculine singular non-past active subjunctive of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭūʕu", "ṭāʕa", "yaṭūʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "طعن",
-        "u": "طعن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طعن (form I)\n# طُعْنَ (ṭuʕna) /tˤuʕ.na/: inflection of طَاعَ (ṭāʕa):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# طِعْنَ (ṭiʕna) /tˤiʕ.na/: third-person feminine plural past passive of طَاعَ (ṭāʕa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭuʕna", "ṭāʕa", "ṭiʕna"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "أطوع",
-        "u": "أطوع",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أطوع (form I)\n# أَطُوعُ (ʔaṭūʕu) /ʔa.tˤuː.ʕu/: first-person singular non-past active indicative of طَاعَ (ṭāʕa)\n# أَطُوعَ (ʔaṭūʕa) /ʔa.tˤuː.ʕa/: first-person singular non-past active subjunctive of طَاعَ (ṭāʕa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaṭūʕu", "ṭāʕa", "ʔaṭūʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يطعن",
-        "u": "يطعن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يطعن (form I)\n# يَطُعْنَ (yaṭuʕna) /ja.tˤuʕ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of طَاعَ (ṭāʕa)\n# يُطَعْنَ (yuṭaʕna) /ju.tˤaʕ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭuʕna", "ṭāʕa", "yuṭaʕna"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يطع",
-        "u": "يطع",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يطع (form I)\n# يَطُعْ (yaṭuʕ) /ja.tˤuʕ/: third-person masculine singular non-past active jussive of طَاعَ (ṭāʕa)\n# يُطَعْ (yuṭaʕ) /ju.tˤaʕ/: third-person masculine singular non-past passive jussive of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭuʕ", "ṭāʕa", "yuṭaʕ"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تطع",
-        "u": "تطع",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تطع (form I)\n# تَطُعْ (taṭuʕ) /ta.tˤuʕ/: inflection of طَاعَ (ṭāʕa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُطَعْ (tuṭaʕ) /tu.tˤaʕ/: inflection of طَاعَ (ṭāʕa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭuʕ", "ṭāʕa", "tuṭaʕ"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تطاع",
-        "u": "تطاع",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تطاع (form I)\n# تُطَاعُ (tuṭāʕu) /tu.tˤaː.ʕu/: inflection of طَاعَ (ṭāʕa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُطَاعَ (tuṭāʕa) /tu.tˤaː.ʕa/: inflection of طَاعَ (ṭāʕa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṭāʕu", "ṭāʕa", "tuṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "طيع",
-        "u": "طيع",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "طِيعَ • (ṭīʕa) (form I) /tˤiː.ʕa/\n# third-person masculine singular past passive of طَاعَ (ṭāʕa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭīʕa", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "أطع",
-        "u": "أطع",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أطع (form I)\n# أَطُعْ (ʔaṭuʕ) /ʔa.tˤuʕ/: first-person singular non-past active jussive of طَاعَ (ṭāʕa)\n# أُطَعْ (ʔuṭaʕ) /ʔu.tˤaʕ/: first-person singular non-past passive jussive of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaṭuʕ", "ṭāʕa", "ʔuṭaʕ"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تطاعين",
-        "u": "تطاعين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُطَاعِينَ • (tuṭāʕīna) (form I) /tu.tˤaː.ʕiː.na/\n# second-person feminine singular non-past passive indicative of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṭāʕīna", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تطاعي",
-        "u": "تطاعي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُطَاعِي • (tuṭāʕī) (form I) /tu.tˤaː.ʕiː/\n# second-person feminine singular non-past passive subjunctive/jussive of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṭāʕī", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "طاعت",
-        "u": "طاعت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَاعَتْ • (ṭāʕat) (form I) /tˤaː.ʕat/\n# third-person feminine singular past active of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭāʕat", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "طيعت",
-        "u": "طيعت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِيعَتْ • (ṭīʕat) (form I) /tˤiː.ʕat/\n# third-person feminine singular past passive of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭīʕat", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تطعن",
-        "u": "تطعن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تطعن (form I)\n# تَطُعْنَ (taṭuʕna) /ta.tˤuʕ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of طَاعَ (ṭāʕa)\n# تُطَعْنَ (tuṭaʕna) /tu.tˤaʕ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭuʕna", "ṭāʕa", "tuṭaʕna"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "طعت",
-        "u": "طعت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طعت (form I)\n# طُعْتُ (ṭuʕtu) /tˤuʕ.tu/: first-person singular past active of طَاعَ (ṭāʕa)\n# طُعْتَ (ṭuʕta) /tˤuʕ.ta/: second-person masculine singular past active of طَاعَ (ṭāʕa)\n# طُعْتِ (ṭuʕti) /tˤuʕ.ti/: second-person feminine singular past active of طَاعَ (ṭāʕa)\n# طِعْتُ (ṭiʕtu) /tˤiʕ.tu/: first-person singular past passive of طَاعَ (ṭāʕa)\n# طِعْتَ (ṭiʕta) /tˤiʕ.ta/: second-person masculine s",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭuʕtu", "ṭāʕa", "ṭuʕta"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "طع",
-        "u": "طع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُعْ • (ṭuʕ) (form I) /tˤuʕ/\n# second-person masculine singular imperative of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭuʕ", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تطوعي",
-        "u": "تطوعي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَطُوعِي • (taṭūʕī) (form I) /ta.tˤuː.ʕiː/\n# second-person feminine singular non-past active subjunctive/jussive of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭūʕī", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تطوعين",
-        "u": "تطوعين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَطُوعِينَ • (taṭūʕīna) (form I) /ta.tˤuː.ʕiː.na/\n# second-person feminine singular non-past active indicative of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭūʕīna", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "طوعي",
-        "u": "طوعي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "طُوعِي • (ṭūʕī) (form I) /tˤuː.ʕiː/\n# second-person feminine singular imperative of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭūʕī", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "نطع",
-        "u": "نطع",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نطع (form I)\n# نَطُعْ (naṭuʕ) /na.tˤuʕ/: first-person plural non-past active jussive of طَاعَ (ṭāʕa)\n# نُطَعْ (nuṭaʕ) /nu.tˤaʕ/: first-person plural non-past passive jussive of طَاعَ (ṭāʕa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naṭuʕ", "ṭāʕa", "nuṭaʕ"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "نطاع",
-        "u": "نطاع",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نطاع (form I)\n# نُطَاعُ (nuṭāʕu) /nu.tˤaː.ʕu/: first-person plural non-past passive indicative of طَاعَ (ṭāʕa)\n# نُطَاعَ (nuṭāʕa) /nu.tˤaː.ʕa/: first-person plural non-past passive subjunctive of طَاعَ (ṭāʕa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuṭāʕu", "ṭāʕa", "nuṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "طعنا",
-        "u": "طعنا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "طعنا (form I)\n# طُعْنَا (ṭuʕnā) /tˤuʕ.naː/: first-person plural past active of طَاعَ (ṭāʕa)\n# طِعْنَا (ṭiʕnā) /tˤiʕ.naː/: first-person plural past passive of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭuʕnā", "ṭāʕa", "ṭiʕnā"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "نطوع",
-        "u": "نطوع",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نطوع (form I)\n# نَطُوعُ (naṭūʕu) /na.tˤuː.ʕu/: first-person plural non-past active indicative of طَاعَ (ṭāʕa)\n# نَطُوعَ (naṭūʕa) /na.tˤuː.ʕa/: first-person plural non-past active subjunctive of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naṭūʕu", "ṭāʕa", "naṭūʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تطاعون",
-        "u": "تطاعون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُطَاعُونَ • (tuṭāʕūna) (form I) /tu.tˤaː.ʕuː.na/\n# second-person masculine plural non-past passive indicative of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṭāʕūna", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تطاعوا",
-        "u": "تطاعوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُطَاعُوا • (tuṭāʕū) (form I) /tu.tˤaː.ʕuː/\n# second-person masculine plural non-past passive subjunctive/jussive of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṭāʕū", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "طعتم",
-        "u": "طعتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طعتم (form I)\n# طُعْتُمْ (ṭuʕtum) /tˤuʕ.tum/: second-person masculine plural past active of طَاعَ (ṭāʕa)\n# طِعْتُمْ (ṭiʕtum) /tˤiʕ.tum/: second-person masculine plural past passive of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭuʕtum", "ṭāʕa", "ṭiʕtum"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تطوعون",
-        "u": "تطوعون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَطُوعُونَ • (taṭūʕūna) (form I) /ta.tˤuː.ʕuː.na/\n# second-person masculine plural non-past active indicative of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭūʕūna", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يطاعون",
-        "u": "يطاعون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُطَاعُونَ • (yuṭāʕūna) (form I) /ju.tˤaː.ʕuː.na/\n# third-person masculine plural non-past passive indicative of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuṭāʕūna", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يطاعوا",
-        "u": "يطاعوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُطَاعُوا • (yuṭāʕū) (form I) /ju.tˤaː.ʕuː/\n# third-person masculine plural non-past passive subjunctive/jussive of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuṭāʕū", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تطوعوا",
-        "u": "تطوعوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَطُوعُوا • (taṭūʕū) (form I) /ta.tˤuː.ʕuː/\n# second-person masculine plural non-past active subjunctive/jussive of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭūʕū", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "طاعوا",
-        "u": "طاعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَاعُوا • (ṭāʕū) (form I) /tˤaː.ʕuː/\n# third-person masculine plural past active of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭāʕū", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يطوعون",
-        "u": "يطوعون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَطُوعُونَ • (yaṭūʕūna) (form I) /ja.tˤuː.ʕuː.na/\n# third-person masculine plural non-past active indicative of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭūʕūna", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يطوعوا",
-        "u": "يطوعوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَطُوعُوا • (yaṭūʕū) (form I) /ja.tˤuː.ʕuː/\n# third-person masculine plural non-past active subjunctive/jussive of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭūʕū", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "طيعوا",
-        "u": "طيعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِيعُوا • (ṭīʕū) (form I) /tˤiː.ʕuː/\n# third-person masculine plural past passive of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭīʕū", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "طوعوا",
-        "u": "طوعوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "طُوعُوا • (ṭūʕū) (form I) /tˤuː.ʕuː/\n# second-person masculine plural imperative of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭūʕū", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "طعتن",
-        "u": "طعتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طعتن (form I)\n# طُعْتُنَّ (ṭuʕtunna) /tˤuʕ.tun.na/: second-person feminine plural past active of طَاعَ (ṭāʕa)\n# طِعْتُنَّ (ṭiʕtunna) /tˤiʕ.tun.na/: second-person feminine plural past passive of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭuʕtunna", "ṭāʕa", "ṭiʕtunna"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "طوعا",
-        "u": "طوعا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "طُوعَا • (ṭūʕā) (form I) /tˤuː.ʕaː/\n# second-person dual imperative of طَاعَ (ṭāʕa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭūʕā", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تطاعان",
-        "u": "تطاعان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُطَاعَانِ • (tuṭāʕāni) (form I) /tu.tˤaː.ʕaː.ni/\n# inflection of طَاعَ (ṭāʕa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṭāʕāni", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يطاعان",
-        "u": "يطاعان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُطَاعَانِ • (yuṭāʕāni) (form I) /ju.tˤaː.ʕaː.ni/\n# third-person masculine dual non-past passive indicative of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuṭāʕāni", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تطاعا",
-        "u": "تطاعا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُطَاعَا • (tuṭāʕā) (form I) /tu.tˤaː.ʕaː/\n# inflection of طَاعَ (ṭāʕa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṭāʕā", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يطاعا",
-        "u": "يطاعا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُطَاعَا • (yuṭāʕā) (form I) /ju.tˤaː.ʕaː/\n# third-person masculine dual non-past passive subjunctive/jussive of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuṭāʕā", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يطوعان",
-        "u": "يطوعان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَطُوعَانِ • (yaṭūʕāni) (form I) /ja.tˤuː.ʕaː.ni/\n# third-person masculine dual non-past active indicative of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭūʕāni", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تطوعان",
-        "u": "تطوعان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَطُوعَانِ • (taṭūʕāni) (form I) /ta.tˤuː.ʕaː.ni/\n# inflection of طَاعَ (ṭāʕa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭūʕāni", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تطوعا",
-        "u": "تطوعا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَطُوعَا • (taṭūʕā) (form I) /ta.tˤuː.ʕaː/\n# inflection of طَاعَ (ṭāʕa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭūʕā", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يطوعا",
-        "u": "يطوعا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَطُوعَا • (yaṭūʕā) (form I) /ja.tˤuː.ʕaː/\n# third-person masculine dual non-past active subjunctive/jussive of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭūʕā", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "طعتما",
-        "u": "طعتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طعتما (form I)\n# طُعْتُمَا (ṭuʕtumā) /tˤuʕ.tu.maː/: second-person dual past active of طَاعَ (ṭāʕa)\n# طِعْتُمَا (ṭiʕtumā) /tˤiʕ.tu.maː/: second-person dual past passive of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭuʕtumā", "ṭāʕa", "ṭiʕtumā"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "طيعتا",
-        "u": "طيعتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِيعَتَا • (ṭīʕatā) (form I) /tˤiː.ʕa.taː/\n# third-person feminine dual past passive of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭīʕatā", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "طاعا",
-        "u": "طاعا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَاعَا • (ṭāʕā) (form I) /tˤaː.ʕaː/\n# third-person masculine dual past active of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭāʕā", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "طاعتا",
-        "u": "طاعتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَاعَتَا • (ṭāʕatā) (form I) /tˤaː.ʕa.taː/\n# third-person feminine dual past active of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭāʕatā", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      },
-      {
-        "w": "طيعا",
-        "u": "طيعا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِيعَا • (ṭīʕā) (form I) /tˤiː.ʕaː/\n# third-person masculine dual past passive of طَاعَ (ṭāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭīʕā", "ṭāʕa"],
-        "k": "طاع",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "طع",
+  "ses": {
     "harf": "ط",
+    "fasil": "طع",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "أطاع",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أطاع (form I)\n# أُطَاعُ (ʔuṭāʕu) /ʔu.tˤaː.ʕu/: first-person singular non-past passive indicative of طَاعَ (ṭāʕa)\n# أُطَاعَ (ʔuṭāʕa) /ʔu.tˤaː.ʕa/: first-person singular non-past passive subjunctive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔuṭāʕu", "ṭāʕa", "ʔuṭāʕa"]
+    },
+    {
+      "madde": "تطوع",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تطوع (form I)\n# تَطُوعُ (taṭūʕu) /ta.tˤuː.ʕu/: inflection of طَاعَ (ṭāʕa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَطُوعَ (taṭūʕa) /ta.tˤuː.ʕa/: inflection of طَاعَ (ṭāʕa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭūʕu", "ṭāʕa", "taṭūʕa"]
+    },
+    {
+      "madde": "يطاع",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يطاع (form I)\n# يُطَاعُ (yuṭāʕu) /ju.tˤaː.ʕu/: third-person masculine singular non-past passive indicative of طَاعَ (ṭāʕa)\n# يُطَاعَ (yuṭāʕa) /ju.tˤaː.ʕa/: third-person masculine singular non-past passive subjunctive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuṭāʕu", "ṭāʕa", "yuṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطوع",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يطوع (form I)\n# يَطُوعُ (yaṭūʕu) /ja.tˤuː.ʕu/: third-person masculine singular non-past active indicative of طَاعَ (ṭāʕa)\n# يَطُوعَ (yaṭūʕa) /ja.tˤuː.ʕa/: third-person masculine singular non-past active subjunctive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭūʕu", "ṭāʕa", "yaṭūʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طعن",
+      "tur": "verb",
+      "baslik": "طعن (form I)\n# طُعْنَ (ṭuʕna) /tˤuʕ.na/: inflection of طَاعَ (ṭāʕa):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# طِعْنَ (ṭiʕna) /tˤiʕ.na/: third-person feminine plural past passive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭuʕna", "ṭāʕa", "ṭiʕna"]
+    },
+    {
+      "madde": "أطوع",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أطوع (form I)\n# أَطُوعُ (ʔaṭūʕu) /ʔa.tˤuː.ʕu/: first-person singular non-past active indicative of طَاعَ (ṭāʕa)\n# أَطُوعَ (ʔaṭūʕa) /ʔa.tˤuː.ʕa/: first-person singular non-past active subjunctive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaṭūʕu", "ṭāʕa", "ʔaṭūʕa"]
+    },
+    {
+      "madde": "يطعن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يطعن (form I)\n# يَطُعْنَ (yaṭuʕna) /ja.tˤuʕ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of طَاعَ (ṭāʕa)\n# يُطَعْنَ (yuṭaʕna) /ju.tˤaʕ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭuʕna", "ṭāʕa", "yuṭaʕna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطع",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يطع (form I)\n# يَطُعْ (yaṭuʕ) /ja.tˤuʕ/: third-person masculine singular non-past active jussive of طَاعَ (ṭāʕa)\n# يُطَعْ (yuṭaʕ) /ju.tˤaʕ/: third-person masculine singular non-past passive jussive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭuʕ", "ṭāʕa", "yuṭaʕ"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطع",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تطع (form I)\n# تَطُعْ (taṭuʕ) /ta.tˤuʕ/: inflection of طَاعَ (ṭāʕa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُطَعْ (tuṭaʕ) /tu.tˤaʕ/: inflection of طَاعَ (ṭāʕa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭuʕ", "ṭāʕa", "tuṭaʕ"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطاع",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تطاع (form I)\n# تُطَاعُ (tuṭāʕu) /tu.tˤaː.ʕu/: inflection of طَاعَ (ṭāʕa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُطَاعَ (tuṭāʕa) /tu.tˤaː.ʕa/: inflection of طَاعَ (ṭāʕa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṭāʕu", "ṭāʕa", "tuṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طيع",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "طِيعَ • (ṭīʕa) (form I) /tˤiː.ʕa/\n# third-person masculine singular past passive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭīʕa", "ṭāʕa"]
+    },
+    {
+      "madde": "أطع",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أطع (form I)\n# أَطُعْ (ʔaṭuʕ) /ʔa.tˤuʕ/: first-person singular non-past active jussive of طَاعَ (ṭāʕa)\n# أُطَعْ (ʔuṭaʕ) /ʔu.tˤaʕ/: first-person singular non-past passive jussive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaṭuʕ", "ṭāʕa", "ʔuṭaʕ"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطاعين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُطَاعِينَ • (tuṭāʕīna) (form I) /tu.tˤaː.ʕiː.na/\n# second-person feminine singular non-past passive indicative of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṭāʕīna", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطاعي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُطَاعِي • (tuṭāʕī) (form I) /tu.tˤaː.ʕiː/\n# second-person feminine singular non-past passive subjunctive/jussive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṭāʕī", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طاعت",
+      "tur": "verb",
+      "baslik": "طَاعَتْ • (ṭāʕat) (form I) /tˤaː.ʕat/\n# third-person feminine singular past active of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭāʕat", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طيعت",
+      "tur": "verb",
+      "baslik": "طِيعَتْ • (ṭīʕat) (form I) /tˤiː.ʕat/\n# third-person feminine singular past passive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭīʕat", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطعن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تطعن (form I)\n# تَطُعْنَ (taṭuʕna) /ta.tˤuʕ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of طَاعَ (ṭāʕa)\n# تُطَعْنَ (tuṭaʕna) /tu.tˤaʕ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭuʕna", "ṭāʕa", "tuṭaʕna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طعت",
+      "tur": "verb",
+      "baslik": "طعت (form I)\n# طُعْتُ (ṭuʕtu) /tˤuʕ.tu/: first-person singular past active of طَاعَ (ṭāʕa)\n# طُعْتَ (ṭuʕta) /tˤuʕ.ta/: second-person masculine singular past active of طَاعَ (ṭāʕa)\n# طُعْتِ (ṭuʕti) /tˤuʕ.ti/: second-person feminine singular past active of طَاعَ (ṭāʕa)\n# طِعْتُ (ṭiʕtu) /tˤiʕ.tu/: first-person singular past passive of طَاعَ (ṭāʕa)\n# طِعْتَ (ṭiʕta) /tˤiʕ.ta/: second-person masculine s",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭuʕtu", "ṭāʕa", "ṭuʕta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طع",
+      "tur": "verb",
+      "baslik": "طُعْ • (ṭuʕ) (form I) /tˤuʕ/\n# second-person masculine singular imperative of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭuʕ", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطوعي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَطُوعِي • (taṭūʕī) (form I) /ta.tˤuː.ʕiː/\n# second-person feminine singular non-past active subjunctive/jussive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭūʕī", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطوعين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَطُوعِينَ • (taṭūʕīna) (form I) /ta.tˤuː.ʕiː.na/\n# second-person feminine singular non-past active indicative of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭūʕīna", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طوعي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "طُوعِي • (ṭūʕī) (form I) /tˤuː.ʕiː/\n# second-person feminine singular imperative of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭūʕī", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نطع",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نطع (form I)\n# نَطُعْ (naṭuʕ) /na.tˤuʕ/: first-person plural non-past active jussive of طَاعَ (ṭāʕa)\n# نُطَعْ (nuṭaʕ) /nu.tˤaʕ/: first-person plural non-past passive jussive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naṭuʕ", "ṭāʕa", "nuṭaʕ"]
+    },
+    {
+      "madde": "نطاع",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نطاع (form I)\n# نُطَاعُ (nuṭāʕu) /nu.tˤaː.ʕu/: first-person plural non-past passive indicative of طَاعَ (ṭāʕa)\n# نُطَاعَ (nuṭāʕa) /nu.tˤaː.ʕa/: first-person plural non-past passive subjunctive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuṭāʕu", "ṭāʕa", "nuṭāʕa"]
+    },
+    {
+      "madde": "طعنا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "طعنا (form I)\n# طُعْنَا (ṭuʕnā) /tˤuʕ.naː/: first-person plural past active of طَاعَ (ṭāʕa)\n# طِعْنَا (ṭiʕnā) /tˤiʕ.naː/: first-person plural past passive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭuʕnā", "ṭāʕa", "ṭiʕnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نطوع",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نطوع (form I)\n# نَطُوعُ (naṭūʕu) /na.tˤuː.ʕu/: first-person plural non-past active indicative of طَاعَ (ṭāʕa)\n# نَطُوعَ (naṭūʕa) /na.tˤuː.ʕa/: first-person plural non-past active subjunctive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naṭūʕu", "ṭāʕa", "naṭūʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطاعون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُطَاعُونَ • (tuṭāʕūna) (form I) /tu.tˤaː.ʕuː.na/\n# second-person masculine plural non-past passive indicative of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṭāʕūna", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطاعوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُطَاعُوا • (tuṭāʕū) (form I) /tu.tˤaː.ʕuː/\n# second-person masculine plural non-past passive subjunctive/jussive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṭāʕū", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طعتم",
+      "tur": "verb",
+      "baslik": "طعتم (form I)\n# طُعْتُمْ (ṭuʕtum) /tˤuʕ.tum/: second-person masculine plural past active of طَاعَ (ṭāʕa)\n# طِعْتُمْ (ṭiʕtum) /tˤiʕ.tum/: second-person masculine plural past passive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭuʕtum", "ṭāʕa", "ṭiʕtum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطوعون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَطُوعُونَ • (taṭūʕūna) (form I) /ta.tˤuː.ʕuː.na/\n# second-person masculine plural non-past active indicative of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭūʕūna", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطاعون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُطَاعُونَ • (yuṭāʕūna) (form I) /ju.tˤaː.ʕuː.na/\n# third-person masculine plural non-past passive indicative of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuṭāʕūna", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطاعوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُطَاعُوا • (yuṭāʕū) (form I) /ju.tˤaː.ʕuː/\n# third-person masculine plural non-past passive subjunctive/jussive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuṭāʕū", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطوعوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَطُوعُوا • (taṭūʕū) (form I) /ta.tˤuː.ʕuː/\n# second-person masculine plural non-past active subjunctive/jussive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭūʕū", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طاعوا",
+      "tur": "verb",
+      "baslik": "طَاعُوا • (ṭāʕū) (form I) /tˤaː.ʕuː/\n# third-person masculine plural past active of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭāʕū", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطوعون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَطُوعُونَ • (yaṭūʕūna) (form I) /ja.tˤuː.ʕuː.na/\n# third-person masculine plural non-past active indicative of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭūʕūna", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطوعوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَطُوعُوا • (yaṭūʕū) (form I) /ja.tˤuː.ʕuː/\n# third-person masculine plural non-past active subjunctive/jussive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭūʕū", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طيعوا",
+      "tur": "verb",
+      "baslik": "طِيعُوا • (ṭīʕū) (form I) /tˤiː.ʕuː/\n# third-person masculine plural past passive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭīʕū", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طوعوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "طُوعُوا • (ṭūʕū) (form I) /tˤuː.ʕuː/\n# second-person masculine plural imperative of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭūʕū", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طعتن",
+      "tur": "verb",
+      "baslik": "طعتن (form I)\n# طُعْتُنَّ (ṭuʕtunna) /tˤuʕ.tun.na/: second-person feminine plural past active of طَاعَ (ṭāʕa)\n# طِعْتُنَّ (ṭiʕtunna) /tˤiʕ.tun.na/: second-person feminine plural past passive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭuʕtunna", "ṭāʕa", "ṭiʕtunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طوعا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "طُوعَا • (ṭūʕā) (form I) /tˤuː.ʕaː/\n# second-person dual imperative of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭūʕā", "ṭāʕa"]
+    },
+    {
+      "madde": "تطاعان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُطَاعَانِ • (tuṭāʕāni) (form I) /tu.tˤaː.ʕaː.ni/\n# inflection of طَاعَ (ṭāʕa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṭāʕāni", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطاعان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُطَاعَانِ • (yuṭāʕāni) (form I) /ju.tˤaː.ʕaː.ni/\n# third-person masculine dual non-past passive indicative of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuṭāʕāni", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطاعا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُطَاعَا • (tuṭāʕā) (form I) /tu.tˤaː.ʕaː/\n# inflection of طَاعَ (ṭāʕa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṭāʕā", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطاعا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُطَاعَا • (yuṭāʕā) (form I) /ju.tˤaː.ʕaː/\n# third-person masculine dual non-past passive subjunctive/jussive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuṭāʕā", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطوعان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَطُوعَانِ • (yaṭūʕāni) (form I) /ja.tˤuː.ʕaː.ni/\n# third-person masculine dual non-past active indicative of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭūʕāni", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطوعان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَطُوعَانِ • (taṭūʕāni) (form I) /ta.tˤuː.ʕaː.ni/\n# inflection of طَاعَ (ṭāʕa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭūʕāni", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطوعا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَطُوعَا • (taṭūʕā) (form I) /ta.tˤuː.ʕaː/\n# inflection of طَاعَ (ṭāʕa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭūʕā", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطوعا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَطُوعَا • (yaṭūʕā) (form I) /ja.tˤuː.ʕaː/\n# third-person masculine dual non-past active subjunctive/jussive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭūʕā", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طعتما",
+      "tur": "verb",
+      "baslik": "طعتما (form I)\n# طُعْتُمَا (ṭuʕtumā) /tˤuʕ.tu.maː/: second-person dual past active of طَاعَ (ṭāʕa)\n# طِعْتُمَا (ṭiʕtumā) /tˤiʕ.tu.maː/: second-person dual past passive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭuʕtumā", "ṭāʕa", "ṭiʕtumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طيعتا",
+      "tur": "verb",
+      "baslik": "طِيعَتَا • (ṭīʕatā) (form I) /tˤiː.ʕa.taː/\n# third-person feminine dual past passive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭīʕatā", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طاعا",
+      "tur": "verb",
+      "baslik": "طَاعَا • (ṭāʕā) (form I) /tˤaː.ʕaː/\n# third-person masculine dual past active of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭāʕā", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طاعتا",
+      "tur": "verb",
+      "baslik": "طَاعَتَا • (ṭāʕatā) (form I) /tˤaː.ʕa.taː/\n# third-person feminine dual past active of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭāʕatā", "ṭāʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طيعا",
+      "tur": "verb",
+      "baslik": "طِيعَا • (ṭīʕā) (form I) /tˤiː.ʕaː/\n# third-person masculine dual past passive of طَاعَ (ṭāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭīʕā", "ṭāʕa"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "طاع", "r7"]
+  ],
+  "mana": {
     "ince": "surface.v.01",
     "orta": "verb.motion",
     "ust": "fiil ve hadise",
@@ -702,16 +499,11 @@
     "dayanak_tanim": "come to the surface",
     "synset_sayisi": 18
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "abridge.v.01",
     "affect.v.05",
     "cut.v.01",
@@ -731,12 +523,10 @@
     "voluntary.a.01",
     "volunteer.v.02"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

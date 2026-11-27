@@ -1,67 +1,69 @@
 {
   "kok": "جلعد",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "جلعد", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "اجلعد",
-        "u": "اجلعد",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "اِجْلَعَدَّ • (ijlaʕadda) IVq (non-past يَجْلَعِدُّ (yajlaʕiddu), verbal noun اِجْلِعْدَاد (ijliʕdād))",
-        "t": "Compare جَلْعَدَ (jalʕada, “(transitive) to stretch lengthways on the ground”).",
-        "s": [
-          ["ar-rootbox", ""],
-          ["lb", "(transitive)"]
-        ],
-        "g": ["to be thrown down", "to be stretched out"],
-        "r": ["ijlaʕadda"],
-        "el": [
-          ["جَلْعَدَ", "جلعد#Arabic"],
-          ["stretch", "stretch"],
-          ["lengthways", "lengthways"],
-          ["ground", "ground"]
-        ],
-        "k": "جلعد",
-        "yol": "kök"
-      },
-      {
-        "w": "اجلعداد",
-        "u": "اجلعداد",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "اِجْلِعْدَاد • (ijliʕdād) m",
-        "g": ["verbal noun of اِجْلَعَدَّ (ijlaʕadda) (form IVq)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["اِجْلَعَدَّ"],
-        "r": ["ijliʕdād"],
-        "yol": "asıl madde"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "جل",
+  "ses": {
     "harf": "ج",
+    "fasil": "جل",
     "mahrec": "şeceriyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "اجلعد",
+      "tur": "verb",
+      "baslik": "اِجْلَعَدَّ • (ijlaʕadda) IVq (non-past يَجْلَعِدُّ (yajlaʕiddu), verbal noun اِجْلِعْدَاد (ijliʕdād))",
+      "etim_sablon": [
+        ["ar-rootbox", ""],
+        ["lb", "(transitive)"]
+      ],
+      "anlam": ["to be thrown down", "to be stretched out"],
+      "okunus": ["ijlaʕadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اجلعداد",
+      "tur": "noun",
+      "baslik": "اِجْلِعْدَاد • (ijliʕdād) m",
+      "anlam": ["verbal noun of اِجْلَعَدَّ (ijlaʕadda) (form IVq)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["اِجْلَعَدَّ"],
+      "okunus": ["ijliʕdād"],
+      "bag": "asıl madde"
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "Compare جَلْعَدَ (jalʕada, “(transitive) to stretch lengthways on the ground”).",
+      "kognatlar": [
+        ["جَلْعَدَ", "جلعد#Arabic"],
+        ["stretch", "stretch"],
+        ["lengthways", "lengthways"],
+        ["ground", "ground"]
+      ]
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "جلعد", "r6"]
+  ],
+  "mana": {
     "ince": "toss_off.v.02",
     "orta": "verb.consumption",
     "ust": "canlı ve beden",
@@ -69,20 +71,8 @@
     "dayanak_tanim": "drink down entirely",
     "dayanak_karsilik": "be thrown down"
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m2",
+  "gomme": {
     "ust": {
       "kume": 8,
       "merkez_kok": "سير",
@@ -102,6 +92,10 @@
       "boy": 10
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

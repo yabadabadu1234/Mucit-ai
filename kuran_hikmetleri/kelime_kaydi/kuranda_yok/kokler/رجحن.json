@@ -1,67 +1,69 @@
 {
   "kok": "رجحن",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "رجحن", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "ارجحن",
-        "u": "ارجحن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb",
-        "e": "اِرْجَحَنَّ • (irjaḥanna) IVq (non-past يَرْجَحِنُّ (yarjaḥinnu), verbal noun اِرْجِحْنَان (irjiḥnān))",
-        "t": "Compare رُجْحَان (rujḥān, “sinking of the scale, preponderating”).",
-        "s": [
-          ["ar-rootbox", ""]
-        ],
-        "g": ["to weigh heavier", "to swing up and down, to swing to and fro (of a balance)"],
-        "r": ["irjaḥanna"],
-        "el": [
-          ["رُجْحَان", "رجحان#Arabic"],
-          ["sinking", "sinking"],
-          ["scale", "scale"],
-          ["preponderating", "preponderating"]
-        ],
-        "k": "رجحن",
-        "yol": "kök"
-      },
-      {
-        "w": "ارجحنان",
-        "u": "ارجحنان",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "اِرْجِحْنَان • (irjiḥnān) m",
-        "g": ["verbal noun of اِرْجَحَنَّ (irjaḥanna) (form IVq)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["اِرْجَحَنَّ"],
-        "r": ["irjiḥnān"],
-        "yol": "asıl madde"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "رج",
+  "ses": {
     "harf": "ر",
+    "fasil": "رج",
     "mahrec": "zelakiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "ارجحن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِرْجَحَنَّ • (irjaḥanna) IVq (non-past يَرْجَحِنُّ (yarjaḥinnu), verbal noun اِرْجِحْنَان (irjiḥnān))",
+      "etim_sablon": [
+        ["ar-rootbox", ""]
+      ],
+      "anlam": ["to weigh heavier", "to swing up and down, to swing to and fro (of a balance)"],
+      "okunus": ["irjaḥanna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ارجحنان",
+      "tur": "noun",
+      "baslik": "اِرْجِحْنَان • (irjiḥnān) m",
+      "anlam": ["verbal noun of اِرْجَحَنَّ (irjaḥanna) (form IVq)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["اِرْجَحَنَّ"],
+      "okunus": ["irjiḥnān"],
+      "bag": "asıl madde"
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "Compare رُجْحَان (rujḥān, “sinking of the scale, preponderating”).",
+      "kognatlar": [
+        ["رُجْحَان", "رجحان#Arabic"],
+        ["sinking", "sinking"],
+        ["scale", "scale"],
+        ["preponderating", "preponderating"]
+      ]
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "رجحن", "r6"]
+  ],
+  "mana": {
     "ince": "toss_off.v.02",
     "orta": "verb.consumption",
     "ust": "canlı ve beden",
@@ -69,20 +71,8 @@
     "dayanak_tanim": "drink down entirely",
     "dayanak_karsilik": "swing up and down"
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m2",
+  "gomme": {
     "ust": {
       "kume": 8,
       "merkez_kok": "سير",
@@ -102,6 +92,10 @@
       "boy": 6
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

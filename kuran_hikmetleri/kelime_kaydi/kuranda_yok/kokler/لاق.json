@@ -1,450 +1,323 @@
 {
   "kok": "لاق",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "لاق", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أليق",
-        "u": "أليق",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أليق (form I)\n# أَلِيقُ (ʔalīqu) /ʔa.liː.qu/: first-person singular non-past active indicative of لَاقَ (lāqa)\n# أَلِيقَ (ʔalīqa) /ʔa.liː.qa/: first-person singular non-past active subjunctive of لَاقَ (lāqa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔalīqu", "lāqa", "ʔalīqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يليق",
-        "u": "يليق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يليق (form I)\n# يَلِيقُ (yalīqu) /ja.liː.qu/: third-person masculine singular non-past active indicative of لَاقَ (lāqa)\n# يَلِيقَ (yalīqa) /ja.liː.qa/: third-person masculine singular non-past active subjunctive of لَاقَ (lāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yalīqu", "lāqa", "yalīqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يلق",
-        "u": "يلق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَلِقْ • (yaliq) (form I) /ja.liq/\n# third-person masculine singular non-past active jussive of لَاقَ (lāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaliq", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تلق",
-        "u": "تلق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَلِقْ • (taliq) (form I) /ta.liq/\n# inflection of لَاقَ (lāqa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taliq", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "ألق",
-        "u": "ألق",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَلِقْ • (ʔaliq) (form I) /ʔa.liq/\n# first-person singular non-past active jussive of لَاقَ (lāqa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaliq", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "لاقت",
-        "u": "لاقت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "لَاقَتْ • (lāqat) (form I) /laː.qat/\n# third-person feminine singular past active of لَاقَ (lāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["lāqat", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تليق",
-        "u": "تليق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تليق (form I)\n# تَلِيقُ (talīqu) /ta.liː.qu/: inflection of لَاقَ (lāqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَلِيقَ (talīqa) /ta.liː.qa/: inflection of لَاقَ (lāqa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["talīqu", "lāqa", "talīqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "لقت",
-        "u": "لقت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لقت (form I)\n# لِقْتُ (liqtu) /liq.tu/: first-person singular past active of لَاقَ (lāqa)\n# لِقْتَ (liqta) /liq.ta/: second-person masculine singular past active of لَاقَ (lāqa)\n# لِقْتِ (liqti) /liq.ti/: second-person feminine singular past active of لَاقَ (lāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["liqtu", "lāqa", "liqta"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "لق",
-        "u": "لق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لِقْ • (liq) (form I) /liq/\n# second-person masculine singular imperative of لَاقَ (lāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["liq", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تليقين",
-        "u": "تليقين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَلِيقِينَ • (talīqīna) (form I) /ta.liː.qiː.na/\n# second-person feminine singular non-past active indicative of لَاقَ (lāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["talīqīna", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تليقي",
-        "u": "تليقي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَلِيقِي • (talīqī) (form I) /ta.liː.qiː/\n# second-person feminine singular non-past active subjunctive/jussive of لَاقَ (lāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["talīqī", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "ليقي",
-        "u": "ليقي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لِيقِي • (līqī) (form I) /liː.qiː/\n# second-person feminine singular imperative of لَاقَ (lāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["līqī", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "نلق",
-        "u": "نلق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نَلِقْ • (naliq) (form I) /na.liq/\n# first-person plural non-past active jussive of لَاقَ (lāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naliq", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "لقنا",
-        "u": "لقنا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "لِقْنَا • (liqnā) (form I) /liq.naː/\n# first-person plural past active of لَاقَ (lāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["liqnā", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "نليق",
-        "u": "نليق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نليق (form I)\n# نَلِيقُ (nalīqu) /na.liː.qu/: first-person plural non-past active indicative of لَاقَ (lāqa)\n# نَلِيقَ (nalīqa) /na.liː.qa/: first-person plural non-past active subjunctive of لَاقَ (lāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nalīqu", "lāqa", "nalīqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "لقتم",
-        "u": "لقتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لِقْتُمْ • (liqtum) (form I) /liq.tum/\n# second-person masculine plural past active of لَاقَ (lāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["liqtum", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تليقون",
-        "u": "تليقون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَلِيقُونَ • (talīqūna) (form I) /ta.liː.quː.na/\n# second-person masculine plural non-past active indicative of لَاقَ (lāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["talīqūna", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تليقوا",
-        "u": "تليقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَلِيقُوا • (talīqū) (form I) /ta.liː.quː/\n# second-person masculine plural non-past active subjunctive/jussive of لَاقَ (lāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["talīqū", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "ليقوا",
-        "u": "ليقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لِيقُوا • (līqū) (form I) /liː.quː/\n# second-person masculine plural imperative of لَاقَ (lāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["līqū", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "لاقوا",
-        "u": "لاقوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "لَاقُوا • (lāqū) (form I) /laː.quː/\n# third-person masculine plural past active of لَاقَ (lāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["lāqū", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يليقون",
-        "u": "يليقون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَلِيقُونَ • (yalīqūna) (form I) /ja.liː.quː.na/\n# third-person masculine plural non-past active indicative of لَاقَ (lāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yalīqūna", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يليقوا",
-        "u": "يليقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَلِيقُوا • (yalīqū) (form I) /ja.liː.quː/\n# third-person masculine plural non-past active subjunctive/jussive of لَاقَ (lāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yalīqū", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "لقتن",
-        "u": "لقتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لِقْتُنَّ • (liqtunna) (form I) /liq.tun.na/\n# second-person feminine plural past active of لَاقَ (lāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["liqtunna", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تلقن",
-        "u": "تلقن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَلِقْنَ • (taliqna) (form I) /ta.liq.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of لَاقَ (lāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taliqna", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "لقن",
-        "u": "لقن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "لِقْنَ • (liqna) (form I) /liq.na/\n# inflection of لَاقَ (lāqa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["liqna", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يلقن",
-        "u": "يلقن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَلِقْنَ • (yaliqna) (form I) /ja.liq.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of لَاقَ (lāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaliqna", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "لاقتا",
-        "u": "لاقتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "لَاقَتَا • (lāqatā) (form I) /laː.qa.taː/\n# third-person feminine dual past active of لَاقَ (lāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["lāqatā", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "لقتما",
-        "u": "لقتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لِقْتُمَا • (liqtumā) (form I) /liq.tu.maː/\n# second-person dual past active of لَاقَ (lāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["liqtumā", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تليقان",
-        "u": "تليقان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَلِيقَانِ • (talīqāni) (form I) /ta.liː.qaː.ni/\n# inflection of لَاقَ (lāqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["talīqāni", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "لاقا",
-        "u": "لاقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لَاقَا • (lāqā) (form I) /laː.qaː/\n# third-person masculine dual past active of لَاقَ (lāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["lāqā", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يليقان",
-        "u": "يليقان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَلِيقَانِ • (yalīqāni) (form I) /ja.liː.qaː.ni/\n# third-person masculine dual non-past active indicative of لَاقَ (lāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yalīqāni", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "ليقا",
-        "u": "ليقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لِيقَا • (līqā) (form I) /liː.qaː/\n# second-person dual imperative of لَاقَ (lāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["līqā", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يليقا",
-        "u": "يليقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَلِيقَا • (yalīqā) (form I) /ja.liː.qaː/\n# third-person masculine dual non-past active subjunctive/jussive of لَاقَ (lāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yalīqā", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تليقا",
-        "u": "تليقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَلِيقَا • (talīqā) (form I) /ta.liː.qaː/\n# inflection of لَاقَ (lāqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["talīqā", "lāqa"],
-        "k": "لاق",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "لق",
+  "ses": {
     "harf": "ل",
+    "fasil": "لق",
     "mahrec": "zelakiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "أليق",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أليق (form I)\n# أَلِيقُ (ʔalīqu) /ʔa.liː.qu/: first-person singular non-past active indicative of لَاقَ (lāqa)\n# أَلِيقَ (ʔalīqa) /ʔa.liː.qa/: first-person singular non-past active subjunctive of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔalīqu", "lāqa", "ʔalīqa"]
+    },
+    {
+      "madde": "يليق",
+      "tur": "verb",
+      "baslik": "يليق (form I)\n# يَلِيقُ (yalīqu) /ja.liː.qu/: third-person masculine singular non-past active indicative of لَاقَ (lāqa)\n# يَلِيقَ (yalīqa) /ja.liː.qa/: third-person masculine singular non-past active subjunctive of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yalīqu", "lāqa", "yalīqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يلق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَلِقْ • (yaliq) (form I) /ja.liq/\n# third-person masculine singular non-past active jussive of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaliq", "lāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَلِقْ • (taliq) (form I) /ta.liq/\n# inflection of لَاقَ (lāqa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taliq", "lāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ألق",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَلِقْ • (ʔaliq) (form I) /ʔa.liq/\n# first-person singular non-past active jussive of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaliq", "lāqa"]
+    },
+    {
+      "madde": "لاقت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "لَاقَتْ • (lāqat) (form I) /laː.qat/\n# third-person feminine singular past active of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["lāqat", "lāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تليق",
+      "tur": "verb",
+      "baslik": "تليق (form I)\n# تَلِيقُ (talīqu) /ta.liː.qu/: inflection of لَاقَ (lāqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَلِيقَ (talīqa) /ta.liː.qa/: inflection of لَاقَ (lāqa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["talīqu", "lāqa", "talīqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لقت",
+      "tur": "verb",
+      "baslik": "لقت (form I)\n# لِقْتُ (liqtu) /liq.tu/: first-person singular past active of لَاقَ (lāqa)\n# لِقْتَ (liqta) /liq.ta/: second-person masculine singular past active of لَاقَ (lāqa)\n# لِقْتِ (liqti) /liq.ti/: second-person feminine singular past active of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["liqtu", "lāqa", "liqta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لق",
+      "tur": "verb",
+      "baslik": "لِقْ • (liq) (form I) /liq/\n# second-person masculine singular imperative of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["liq", "lāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تليقين",
+      "tur": "verb",
+      "baslik": "تَلِيقِينَ • (talīqīna) (form I) /ta.liː.qiː.na/\n# second-person feminine singular non-past active indicative of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["talīqīna", "lāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تليقي",
+      "tur": "verb",
+      "baslik": "تَلِيقِي • (talīqī) (form I) /ta.liː.qiː/\n# second-person feminine singular non-past active subjunctive/jussive of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["talīqī", "lāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ليقي",
+      "tur": "verb",
+      "baslik": "لِيقِي • (līqī) (form I) /liː.qiː/\n# second-person feminine singular imperative of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["līqī", "lāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نلق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نَلِقْ • (naliq) (form I) /na.liq/\n# first-person plural non-past active jussive of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naliq", "lāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لقنا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "لِقْنَا • (liqnā) (form I) /liq.naː/\n# first-person plural past active of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["liqnā", "lāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نليق",
+      "tur": "verb",
+      "baslik": "نليق (form I)\n# نَلِيقُ (nalīqu) /na.liː.qu/: first-person plural non-past active indicative of لَاقَ (lāqa)\n# نَلِيقَ (nalīqa) /na.liː.qa/: first-person plural non-past active subjunctive of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nalīqu", "lāqa", "nalīqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لقتم",
+      "tur": "verb",
+      "baslik": "لِقْتُمْ • (liqtum) (form I) /liq.tum/\n# second-person masculine plural past active of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["liqtum", "lāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تليقون",
+      "tur": "verb",
+      "baslik": "تَلِيقُونَ • (talīqūna) (form I) /ta.liː.quː.na/\n# second-person masculine plural non-past active indicative of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["talīqūna", "lāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تليقوا",
+      "tur": "verb",
+      "baslik": "تَلِيقُوا • (talīqū) (form I) /ta.liː.quː/\n# second-person masculine plural non-past active subjunctive/jussive of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["talīqū", "lāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ليقوا",
+      "tur": "verb",
+      "baslik": "لِيقُوا • (līqū) (form I) /liː.quː/\n# second-person masculine plural imperative of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["līqū", "lāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لاقوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "لَاقُوا • (lāqū) (form I) /laː.quː/\n# third-person masculine plural past active of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["lāqū", "lāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يليقون",
+      "tur": "verb",
+      "baslik": "يَلِيقُونَ • (yalīqūna) (form I) /ja.liː.quː.na/\n# third-person masculine plural non-past active indicative of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yalīqūna", "lāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يليقوا",
+      "tur": "verb",
+      "baslik": "يَلِيقُوا • (yalīqū) (form I) /ja.liː.quː/\n# third-person masculine plural non-past active subjunctive/jussive of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yalīqū", "lāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لقتن",
+      "tur": "verb",
+      "baslik": "لِقْتُنَّ • (liqtunna) (form I) /liq.tun.na/\n# second-person feminine plural past active of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["liqtunna", "lāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلقن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَلِقْنَ • (taliqna) (form I) /ta.liq.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taliqna", "lāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لقن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "لِقْنَ • (liqna) (form I) /liq.na/\n# inflection of لَاقَ (lāqa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["liqna", "lāqa"]
+    },
+    {
+      "madde": "يلقن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَلِقْنَ • (yaliqna) (form I) /ja.liq.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaliqna", "lāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لاقتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "لَاقَتَا • (lāqatā) (form I) /laː.qa.taː/\n# third-person feminine dual past active of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["lāqatā", "lāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لقتما",
+      "tur": "verb",
+      "baslik": "لِقْتُمَا • (liqtumā) (form I) /liq.tu.maː/\n# second-person dual past active of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["liqtumā", "lāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تليقان",
+      "tur": "verb",
+      "baslik": "تَلِيقَانِ • (talīqāni) (form I) /ta.liː.qaː.ni/\n# inflection of لَاقَ (lāqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["talīqāni", "lāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لاقا",
+      "tur": "verb",
+      "baslik": "لَاقَا • (lāqā) (form I) /laː.qaː/\n# third-person masculine dual past active of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["lāqā", "lāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يليقان",
+      "tur": "verb",
+      "baslik": "يَلِيقَانِ • (yalīqāni) (form I) /ja.liː.qaː.ni/\n# third-person masculine dual non-past active indicative of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yalīqāni", "lāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ليقا",
+      "tur": "verb",
+      "baslik": "لِيقَا • (līqā) (form I) /liː.qaː/\n# second-person dual imperative of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["līqā", "lāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يليقا",
+      "tur": "verb",
+      "baslik": "يَلِيقَا • (yalīqā) (form I) /ja.liː.qaː/\n# third-person masculine dual non-past active subjunctive/jussive of لَاقَ (lāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yalīqā", "lāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تليقا",
+      "tur": "verb",
+      "baslik": "تَلِيقَا • (talīqā) (form I) /ta.liː.qaː/\n# inflection of لَاقَ (lāqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["talīqā", "lāqa"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "لاق", "r7"]
+  ],
+  "mana": {
     "ince": "inform.v.01",
     "orta": "verb.communication",
     "ust": "söz ve haber",
@@ -452,22 +325,15 @@
     "dayanak_tanim": "assist (somebody acting or reciting) by suggesting the next words of something forgotten or imperfectly learned",
     "synset_sayisi": 4
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["prompt.v.03", "teach.v.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["prompt.v.03", "teach.v.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

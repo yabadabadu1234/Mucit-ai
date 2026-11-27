@@ -1,434 +1,303 @@
 {
   "kok": "اهتز",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "اهتز", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "اهتززت",
-        "u": "اهتززت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اهتززت (form VIII)\n# اِهْتَزَزْتُ (ihtazaztu) /ih.ta.zaz.tu/: first-person singular past active of اِهْتَزَّ (ihtazza)\n# اِهْتَزَزْتَ (ihtazazta) /ih.ta.zaz.ta/: second-person masculine singular past active of اِهْتَزَّ (ihtazza)\n# اِهْتَزَزْتِ (ihtazazti) /ih.ta.zaz.ti/: second-person feminine singular past active of اِهْتَزَّ (ihtazza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ihtazaztu", "ihtazza", "ihtazazta"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "اهتززتما",
-        "u": "اهتززتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِهْتَزَزْتُمَا • (ihtazaztumā) (form VIII) /ih.ta.zaz.tu.maː/\n# second-person dual past active of اِهْتَزَّ (ihtazza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ihtazaztumā", "ihtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "اهتزت",
-        "u": "اهتزت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِهْتَزَّتْ • (ihtazzat) (form VIII) /ih.taz.zat/\n# third-person feminine singular past active of اِهْتَزَّ (ihtazza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ihtazzat", "ihtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "اهتزا",
-        "u": "اهتزا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِهْتَزَّا • (ihtazzā) (form VIII) /ih.taz.zaː/\n# inflection of اِهْتَزَّ (ihtazza):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ihtazzā", "ihtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "اهتززتن",
-        "u": "اهتززتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِهْتَزَزْتُنَّ • (ihtazaztunna) (form VIII) /ih.ta.zaz.tun.na/\n# second-person feminine plural past active of اِهْتَزَّ (ihtazza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ihtazaztunna", "ihtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "اهتزتا",
-        "u": "اهتزتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِهْتَزَّتَا • (ihtazzatā) (form VIII) /ih.taz.za.taː/\n# third-person feminine dual past active of اِهْتَزَّ (ihtazza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ihtazzatā", "ihtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "اهتززتم",
-        "u": "اهتززتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِهْتَزَزْتُمْ • (ihtazaztum) (form VIII) /ih.ta.zaz.tum/\n# second-person masculine plural past active of اِهْتَزَّ (ihtazza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ihtazaztum", "ihtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "اهتززنا",
-        "u": "اهتززنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِهْتَزَزْنَا • (ihtazaznā) (form VIII) /ih.ta.zaz.naː/\n# first-person plural past active of اِهْتَزَّ (ihtazza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ihtazaznā", "ihtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "اهتزوا",
-        "u": "اهتزوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِهْتَزُّوا • (ihtazzū) (form VIII) /ih.taz.zuː/\n# inflection of اِهْتَزَّ (ihtazza):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ihtazzū", "ihtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "اهتززن",
-        "u": "اهتززن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اهتززن (form VIII)\n# اِهْتَزَزْنَ (ihtazazna) /ih.ta.zaz.na/: third-person feminine plural past active of اِهْتَزَّ (ihtazza)\n# اِهْتَزِزْنَ (ihtazizna) /ih.ta.ziz.na/: second-person feminine plural imperative of اِهْتَزَّ (ihtazza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ihtazazna", "ihtazza", "ihtazizna"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "أهتز",
-        "u": "أهتز",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أهتز (form VIII)\n# أَهْتَزُّ (ʔahtazzu) /ʔah.taz.zu/: first-person singular non-past active indicative of اِهْتَزَّ (ihtazza)\n# أَهْتَزَّ (ʔahtazza) /ʔah.taz.za/: first-person singular non-past active subjunctive/jussive of اِهْتَزَّ (ihtazza)\n# أَهْتَزِّ (ʔahtazzi) /ʔah.taz.zi/: first-person singular non-past active jussive of اِهْتَزَّ (ihtazza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ʔahtazzu", "ihtazza", "ʔahtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "يهتز",
-        "u": "يهتز",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهتز (form VIII)\n# يَهْتَزُّ (yahtazzu) /jah.taz.zu/: third-person masculine singular non-past active indicative of اِهْتَزَّ (ihtazza)\n# يَهْتَزَّ (yahtazza) /jah.taz.za/: third-person masculine singular non-past active subjunctive/jussive of اِهْتَزَّ (ihtazza)\n# يَهْتَزِّ (yahtazzi) /jah.taz.zi/: third-person masculine singular non-past active jussive of اِهْتَزَّ (ihtazza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yahtazzu", "ihtazza", "yahtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "تهتز",
-        "u": "تهتز",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهتز (form VIII)\n# تَهْتَزُّ (tahtazzu) /tah.taz.zu/: inflection of اِهْتَزَّ (ihtazza):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَهْتَزَّ (tahtazza) /tah.taz.za/: inflection of اِهْتَزَّ (ihtazza):\n## second-person masculine singular non-past active subjunctive/jussive\n## third-person feminine singular non-past ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tahtazzu", "ihtazza", "tahtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "يهتزان",
-        "u": "يهتزان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَهْتَزَّانِ • (yahtazzāni) (form VIII) /jah.taz.zaː.ni/\n# third-person masculine dual non-past active indicative of اِهْتَزَّ (ihtazza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yahtazzāni", "ihtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "تهتزين",
-        "u": "تهتزين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهْتَزِّينَ • (tahtazzīna) (form VIII) /tah.taz.ziː.na/\n# second-person feminine singular non-past active indicative of اِهْتَزَّ (ihtazza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tahtazzīna", "ihtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "تهتزان",
-        "u": "تهتزان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهْتَزَّانِ • (tahtazzāni) (form VIII) /tah.taz.zaː.ni/\n# inflection of اِهْتَزَّ (ihtazza):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tahtazzāni", "ihtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "تهتزي",
-        "u": "تهتزي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهْتَزِّي • (tahtazzī) (form VIII) /tah.taz.ziː/\n# second-person feminine singular non-past active subjunctive/jussive of اِهْتَزَّ (ihtazza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tahtazzī", "ihtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "تهتزون",
-        "u": "تهتزون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهْتَزُّونَ • (tahtazzūna) (form VIII) /tah.taz.zuː.na/\n# second-person masculine plural non-past active indicative of اِهْتَزَّ (ihtazza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tahtazzūna", "ihtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "تهتزا",
-        "u": "تهتزا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهْتَزَّا • (tahtazzā) (form VIII) /tah.taz.zaː/\n# inflection of اِهْتَزَّ (ihtazza):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tahtazzā", "ihtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "يهتزون",
-        "u": "يهتزون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَهْتَزُّونَ • (yahtazzūna) (form VIII) /jah.taz.zuː.na/\n# third-person masculine plural non-past active indicative of اِهْتَزَّ (ihtazza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yahtazzūna", "ihtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "نهتز",
-        "u": "نهتز",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نهتز (form VIII)\n# نَهْتَزُّ (nahtazzu) /nah.taz.zu/: first-person plural non-past active indicative of اِهْتَزَّ (ihtazza)\n# نَهْتَزَّ (nahtazza) /nah.taz.za/: first-person plural non-past active subjunctive/jussive of اِهْتَزَّ (ihtazza)\n# نَهْتَزِّ (nahtazzi) /nah.taz.zi/: first-person plural non-past active jussive of اِهْتَزَّ (ihtazza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["nahtazzu", "ihtazza", "nahtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "يهتزا",
-        "u": "يهتزا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَهْتَزَّا • (yahtazzā) (form VIII) /jah.taz.zaː/\n# third-person masculine dual non-past active subjunctive/jussive of اِهْتَزَّ (ihtazza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yahtazzā", "ihtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "تهتززن",
-        "u": "تهتززن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهْتَزِزْنَ • (tahtazizna) (form VIII) /tah.ta.ziz.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِهْتَزَّ (ihtazza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tahtazizna", "ihtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "يهتززن",
-        "u": "يهتززن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَهْتَزِزْنَ • (yahtazizna) (form VIII) /jah.ta.ziz.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِهْتَزَّ (ihtazza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yahtazizna", "ihtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "تهتزوا",
-        "u": "تهتزوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهْتَزُّوا • (tahtazzū) (form VIII) /tah.taz.zuː/\n# second-person masculine plural non-past active subjunctive/jussive of اِهْتَزَّ (ihtazza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tahtazzū", "ihtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "أهتزز",
-        "u": "أهتزز",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَهْتَزِزْ • (ʔahtaziz) (form VIII) /ʔah.ta.ziz/\n# first-person singular non-past active jussive of اِهْتَزَّ (ihtazza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ʔahtaziz", "ihtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "تهتزز",
-        "u": "تهتزز",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهْتَزِزْ • (tahtaziz) (form VIII) /tah.ta.ziz/\n# inflection of اِهْتَزَّ (ihtazza):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tahtaziz", "ihtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "يهتزوا",
-        "u": "يهتزوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَهْتَزُّوا • (yahtazzū) (form VIII) /jah.taz.zuː/\n# third-person masculine plural non-past active subjunctive/jussive of اِهْتَزَّ (ihtazza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yahtazzū", "ihtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "يهتزز",
-        "u": "يهتزز",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَهْتَزِزْ • (yahtaziz) (form VIII) /jah.ta.ziz/\n# third-person masculine singular non-past active jussive of اِهْتَزَّ (ihtazza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yahtaziz", "ihtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "اهتزي",
-        "u": "اهتزي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِهْتَزِّي • (ihtazzī) (form VIII) /ih.taz.ziː/\n# second-person feminine singular imperative of اِهْتَزَّ (ihtazza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ihtazzī", "ihtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "نهتزز",
-        "u": "نهتزز",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَهْتَزِزْ • (nahtaziz) (form VIII) /nah.ta.ziz/\n# first-person plural non-past active jussive of اِهْتَزَّ (ihtazza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["nahtaziz", "ihtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      },
-      {
-        "w": "اهتزز",
-        "u": "اهتزز",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِهْتَزِزْ • (ihtaziz) (form VIII) /ih.ta.ziz/\n# second-person masculine singular imperative of اِهْتَزَّ (ihtazza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ihtaziz", "ihtazza"],
-        "k": "اهتز",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "هت",
+  "ses": {
     "harf": "ا",
+    "fasil": "هت",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "اهتززت",
+      "tur": "verb",
+      "baslik": "اهتززت (form VIII)\n# اِهْتَزَزْتُ (ihtazaztu) /ih.ta.zaz.tu/: first-person singular past active of اِهْتَزَّ (ihtazza)\n# اِهْتَزَزْتَ (ihtazazta) /ih.ta.zaz.ta/: second-person masculine singular past active of اِهْتَزَّ (ihtazza)\n# اِهْتَزَزْتِ (ihtazazti) /ih.ta.zaz.ti/: second-person feminine singular past active of اِهْتَزَّ (ihtazza)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ihtazaztu", "ihtazza", "ihtazazta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اهتززتما",
+      "tur": "verb",
+      "baslik": "اِهْتَزَزْتُمَا • (ihtazaztumā) (form VIII) /ih.ta.zaz.tu.maː/\n# second-person dual past active of اِهْتَزَّ (ihtazza)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ihtazaztumā", "ihtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اهتزت",
+      "tur": "verb",
+      "baslik": "اِهْتَزَّتْ • (ihtazzat) (form VIII) /ih.taz.zat/\n# third-person feminine singular past active of اِهْتَزَّ (ihtazza)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ihtazzat", "ihtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اهتزا",
+      "tur": "verb",
+      "baslik": "اِهْتَزَّا • (ihtazzā) (form VIII) /ih.taz.zaː/\n# inflection of اِهْتَزَّ (ihtazza):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ihtazzā", "ihtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اهتززتن",
+      "tur": "verb",
+      "baslik": "اِهْتَزَزْتُنَّ • (ihtazaztunna) (form VIII) /ih.ta.zaz.tun.na/\n# second-person feminine plural past active of اِهْتَزَّ (ihtazza)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ihtazaztunna", "ihtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اهتزتا",
+      "tur": "verb",
+      "baslik": "اِهْتَزَّتَا • (ihtazzatā) (form VIII) /ih.taz.za.taː/\n# third-person feminine dual past active of اِهْتَزَّ (ihtazza)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ihtazzatā", "ihtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اهتززتم",
+      "tur": "verb",
+      "baslik": "اِهْتَزَزْتُمْ • (ihtazaztum) (form VIII) /ih.ta.zaz.tum/\n# second-person masculine plural past active of اِهْتَزَّ (ihtazza)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ihtazaztum", "ihtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اهتززنا",
+      "tur": "verb",
+      "baslik": "اِهْتَزَزْنَا • (ihtazaznā) (form VIII) /ih.ta.zaz.naː/\n# first-person plural past active of اِهْتَزَّ (ihtazza)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ihtazaznā", "ihtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اهتزوا",
+      "tur": "verb",
+      "baslik": "اِهْتَزُّوا • (ihtazzū) (form VIII) /ih.taz.zuː/\n# inflection of اِهْتَزَّ (ihtazza):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ihtazzū", "ihtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اهتززن",
+      "tur": "verb",
+      "baslik": "اهتززن (form VIII)\n# اِهْتَزَزْنَ (ihtazazna) /ih.ta.zaz.na/: third-person feminine plural past active of اِهْتَزَّ (ihtazza)\n# اِهْتَزِزْنَ (ihtazizna) /ih.ta.ziz.na/: second-person feminine plural imperative of اِهْتَزَّ (ihtazza)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ihtazazna", "ihtazza", "ihtazizna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أهتز",
+      "tur": "verb",
+      "baslik": "أهتز (form VIII)\n# أَهْتَزُّ (ʔahtazzu) /ʔah.taz.zu/: first-person singular non-past active indicative of اِهْتَزَّ (ihtazza)\n# أَهْتَزَّ (ʔahtazza) /ʔah.taz.za/: first-person singular non-past active subjunctive/jussive of اِهْتَزَّ (ihtazza)\n# أَهْتَزِّ (ʔahtazzi) /ʔah.taz.zi/: first-person singular non-past active jussive of اِهْتَزَّ (ihtazza)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ʔahtazzu", "ihtazza", "ʔahtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهتز",
+      "tur": "verb",
+      "baslik": "يهتز (form VIII)\n# يَهْتَزُّ (yahtazzu) /jah.taz.zu/: third-person masculine singular non-past active indicative of اِهْتَزَّ (ihtazza)\n# يَهْتَزَّ (yahtazza) /jah.taz.za/: third-person masculine singular non-past active subjunctive/jussive of اِهْتَزَّ (ihtazza)\n# يَهْتَزِّ (yahtazzi) /jah.taz.zi/: third-person masculine singular non-past active jussive of اِهْتَزَّ (ihtazza)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yahtazzu", "ihtazza", "yahtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهتز",
+      "tur": "verb",
+      "baslik": "تهتز (form VIII)\n# تَهْتَزُّ (tahtazzu) /tah.taz.zu/: inflection of اِهْتَزَّ (ihtazza):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَهْتَزَّ (tahtazza) /tah.taz.za/: inflection of اِهْتَزَّ (ihtazza):\n## second-person masculine singular non-past active subjunctive/jussive\n## third-person feminine singular non-past ",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tahtazzu", "ihtazza", "tahtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهتزان",
+      "tur": "verb",
+      "baslik": "يَهْتَزَّانِ • (yahtazzāni) (form VIII) /jah.taz.zaː.ni/\n# third-person masculine dual non-past active indicative of اِهْتَزَّ (ihtazza)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yahtazzāni", "ihtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهتزين",
+      "tur": "verb",
+      "baslik": "تَهْتَزِّينَ • (tahtazzīna) (form VIII) /tah.taz.ziː.na/\n# second-person feminine singular non-past active indicative of اِهْتَزَّ (ihtazza)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tahtazzīna", "ihtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهتزان",
+      "tur": "verb",
+      "baslik": "تَهْتَزَّانِ • (tahtazzāni) (form VIII) /tah.taz.zaː.ni/\n# inflection of اِهْتَزَّ (ihtazza):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tahtazzāni", "ihtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهتزي",
+      "tur": "verb",
+      "baslik": "تَهْتَزِّي • (tahtazzī) (form VIII) /tah.taz.ziː/\n# second-person feminine singular non-past active subjunctive/jussive of اِهْتَزَّ (ihtazza)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tahtazzī", "ihtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهتزون",
+      "tur": "verb",
+      "baslik": "تَهْتَزُّونَ • (tahtazzūna) (form VIII) /tah.taz.zuː.na/\n# second-person masculine plural non-past active indicative of اِهْتَزَّ (ihtazza)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tahtazzūna", "ihtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهتزا",
+      "tur": "verb",
+      "baslik": "تَهْتَزَّا • (tahtazzā) (form VIII) /tah.taz.zaː/\n# inflection of اِهْتَزَّ (ihtazza):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tahtazzā", "ihtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهتزون",
+      "tur": "verb",
+      "baslik": "يَهْتَزُّونَ • (yahtazzūna) (form VIII) /jah.taz.zuː.na/\n# third-person masculine plural non-past active indicative of اِهْتَزَّ (ihtazza)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yahtazzūna", "ihtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نهتز",
+      "tur": "verb",
+      "baslik": "نهتز (form VIII)\n# نَهْتَزُّ (nahtazzu) /nah.taz.zu/: first-person plural non-past active indicative of اِهْتَزَّ (ihtazza)\n# نَهْتَزَّ (nahtazza) /nah.taz.za/: first-person plural non-past active subjunctive/jussive of اِهْتَزَّ (ihtazza)\n# نَهْتَزِّ (nahtazzi) /nah.taz.zi/: first-person plural non-past active jussive of اِهْتَزَّ (ihtazza)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["nahtazzu", "ihtazza", "nahtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهتزا",
+      "tur": "verb",
+      "baslik": "يَهْتَزَّا • (yahtazzā) (form VIII) /jah.taz.zaː/\n# third-person masculine dual non-past active subjunctive/jussive of اِهْتَزَّ (ihtazza)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yahtazzā", "ihtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهتززن",
+      "tur": "verb",
+      "baslik": "تَهْتَزِزْنَ • (tahtazizna) (form VIII) /tah.ta.ziz.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِهْتَزَّ (ihtazza)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tahtazizna", "ihtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهتززن",
+      "tur": "verb",
+      "baslik": "يَهْتَزِزْنَ • (yahtazizna) (form VIII) /jah.ta.ziz.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِهْتَزَّ (ihtazza)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yahtazizna", "ihtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهتزوا",
+      "tur": "verb",
+      "baslik": "تَهْتَزُّوا • (tahtazzū) (form VIII) /tah.taz.zuː/\n# second-person masculine plural non-past active subjunctive/jussive of اِهْتَزَّ (ihtazza)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tahtazzū", "ihtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أهتزز",
+      "tur": "verb",
+      "baslik": "أَهْتَزِزْ • (ʔahtaziz) (form VIII) /ʔah.ta.ziz/\n# first-person singular non-past active jussive of اِهْتَزَّ (ihtazza)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ʔahtaziz", "ihtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهتزز",
+      "tur": "verb",
+      "baslik": "تَهْتَزِزْ • (tahtaziz) (form VIII) /tah.ta.ziz/\n# inflection of اِهْتَزَّ (ihtazza):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tahtaziz", "ihtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهتزوا",
+      "tur": "verb",
+      "baslik": "يَهْتَزُّوا • (yahtazzū) (form VIII) /jah.taz.zuː/\n# third-person masculine plural non-past active subjunctive/jussive of اِهْتَزَّ (ihtazza)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yahtazzū", "ihtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهتزز",
+      "tur": "verb",
+      "baslik": "يَهْتَزِزْ • (yahtaziz) (form VIII) /jah.ta.ziz/\n# third-person masculine singular non-past active jussive of اِهْتَزَّ (ihtazza)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yahtaziz", "ihtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اهتزي",
+      "tur": "verb",
+      "baslik": "اِهْتَزِّي • (ihtazzī) (form VIII) /ih.taz.ziː/\n# second-person feminine singular imperative of اِهْتَزَّ (ihtazza)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ihtazzī", "ihtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نهتزز",
+      "tur": "verb",
+      "baslik": "نَهْتَزِزْ • (nahtaziz) (form VIII) /nah.ta.ziz/\n# first-person plural non-past active jussive of اِهْتَزَّ (ihtazza)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["nahtaziz", "ihtazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اهتزز",
+      "tur": "verb",
+      "baslik": "اِهْتَزِزْ • (ihtaziz) (form VIII) /ih.ta.ziz/\n# second-person masculine singular imperative of اِهْتَزَّ (ihtazza)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ihtaziz", "ihtazza"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "اهتز", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

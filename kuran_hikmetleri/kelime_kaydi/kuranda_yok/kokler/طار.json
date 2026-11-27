@@ -1,501 +1,364 @@
 {
   "kok": "طار",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "طار", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "طير",
-        "u": "طير",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "طِيرَ • (ṭīra) (form I) /tˤiː.ra/\n# third-person masculine singular past passive of طَارَ (ṭāra)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭīra", "ṭāra"],
-        "ipa": ["/tˤiː.ra/"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "طيور",
-        "u": "طيور",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "طُيُور • (ṭuyūr) m pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of طَيْر (ṭayr)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["طَيْر"],
-        "r": ["ṭuyūr"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "يطير",
-        "u": "يطير",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يطير (form I)\n# يَطِيرُ (yaṭīru) /ja.tˤiː.ru/: third-person masculine singular non-past active indicative of طَارَ (ṭāra)\n# يَطِيرَ (yaṭīra) /ja.tˤiː.ra/: third-person masculine singular non-past active subjunctive of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭīru", "ṭāra", "yaṭīra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "يطار",
-        "u": "يطار",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطار (form I)\n# يُطَارُ (yuṭāru) /ju.tˤaː.ru/: third-person masculine singular non-past passive indicative of طَارَ (ṭāra)\n# يُطَارَ (yuṭāra) /ju.tˤaː.ra/: third-person masculine singular non-past passive subjunctive of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuṭāru", "ṭāra", "yuṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "أطير",
-        "u": "أطير",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أطير (form I)\n# أَطِيرُ (ʔaṭīru) /ʔa.tˤiː.ru/: first-person singular non-past active indicative of طَارَ (ṭāra)\n# أَطِيرَ (ʔaṭīra) /ʔa.tˤiː.ra/: first-person singular non-past active subjunctive of طَارَ (ṭāra)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaṭīru", "ṭāra", "ʔaṭīra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "يطر",
-        "u": "يطر",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يطر (form I)\n# يَطِرْ (yaṭir) /ja.tˤir/: third-person masculine singular non-past active jussive of طَارَ (ṭāra)\n# يُطَرْ (yuṭar) /ju.tˤar/: third-person masculine singular non-past passive jussive of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭir", "ṭāra", "yuṭar"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "طارت",
-        "u": "طارت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَارَتْ • (ṭārat) (form I) /tˤaː.rat/\n# third-person feminine singular past active of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭārat", "ṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "تطير",
-        "u": "تطير",
-        "p": "verb",
-        "n": "1.2",
-        "h": "ar-verb form",
-        "e": "تطير (form I)\n# تَطِيرُ (taṭīru) /ta.tˤiː.ru/: inflection of طَارَ (ṭāra):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَطِيرَ (taṭīra) /ta.tˤiː.ra/: inflection of طَارَ (ṭāra):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭīru", "ṭāra", "taṭīra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "تطر",
-        "u": "تطر",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَطِرْ • (taṭir) (form I) /ta.tˤir/\n# inflection of طَارَ (ṭāra):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭir", "ṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "طرت",
-        "u": "طرت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طرت (form I)\n# طِرْتُ (ṭirtu) /tˤir.tu/: first-person singular past active of طَارَ (ṭāra)\n# طِرْتَ (ṭirta) /tˤir.ta/: second-person masculine singular past active of طَارَ (ṭāra)\n# طِرْتِ (ṭirti) /tˤir.ti/: second-person feminine singular past active of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭirtu", "ṭāra", "ṭirta"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "طر",
-        "u": "طر",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِرْ • (ṭir) (form I) /tˤir/\n# second-person masculine singular imperative of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭir", "ṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيرين",
-        "u": "تطيرين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَطِيرِينَ • (taṭīrīna) (form I) /ta.tˤiː.riː.na/\n# second-person feminine singular non-past active indicative of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭīrīna", "ṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيري",
-        "u": "تطيري",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَطِيرِي • (taṭīrī) (form I) /ta.tˤiː.riː/\n# second-person feminine singular non-past active subjunctive/jussive of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭīrī", "ṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "طيري",
-        "u": "طيري",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "طِيرِي • (ṭīrī) (form I) /tˤiː.riː/\n# second-person feminine singular imperative of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭīrī", "ṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "أطر",
-        "u": "أطر",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَطِرْ • (ʔaṭir) (form I) /ʔa.tˤir/\n# first-person singular non-past active jussive of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "s": [
-          ["nonlemma", "See the etymology of the corresponding lemma form."]
-        ],
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaṭir", "ṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "طرنا",
-        "u": "طرنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِرْنَا • (ṭirnā) (form I) /tˤir.naː/\n# first-person plural past active of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭirnā", "ṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "نطير",
-        "u": "نطير",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نطير (form I)\n# نَطِيرُ (naṭīru) /na.tˤiː.ru/: first-person plural non-past active indicative of طَارَ (ṭāra)\n# نَطِيرَ (naṭīra) /na.tˤiː.ra/: first-person plural non-past active subjunctive of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naṭīru", "ṭāra", "naṭīra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "نطر",
-        "u": "نطر",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نَطِرْ • (naṭir) (form I) /na.tˤir/\n# first-person plural non-past active jussive of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naṭir", "ṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "طرتم",
-        "u": "طرتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِرْتُمْ • (ṭirtum) (form I) /tˤir.tum/\n# second-person masculine plural past active of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭirtum", "ṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيرون",
-        "u": "تطيرون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَطِيرُونَ • (taṭīrūna) (form I) /ta.tˤiː.ruː.na/\n# second-person masculine plural non-past active indicative of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭīrūna", "ṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيروا",
-        "u": "تطيروا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَطِيرُوا • (taṭīrū) (form I) /ta.tˤiː.ruː/\n# second-person masculine plural non-past active subjunctive/jussive of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭīrū", "ṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "طيروا",
-        "u": "طيروا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "طِيرُوا • (ṭīrū) (form I) /tˤiː.ruː/\n# second-person masculine plural imperative of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭīrū", "ṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "طاروا",
-        "u": "طاروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَارُوا • (ṭārū) (form I) /tˤaː.ruː/\n# third-person masculine plural past active of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭārū", "ṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "يطيرون",
-        "u": "يطيرون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَطِيرُونَ • (yaṭīrūna) (form I) /ja.tˤiː.ruː.na/\n# third-person masculine plural non-past active indicative of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭīrūna", "ṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "يطيروا",
-        "u": "يطيروا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَطِيرُوا • (yaṭīrū) (form I) /ja.tˤiː.ruː/\n# third-person masculine plural non-past active subjunctive/jussive of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭīrū", "ṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "طرتن",
-        "u": "طرتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِرْتُنَّ • (ṭirtunna) (form I) /tˤir.tun.na/\n# second-person feminine plural past active of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭirtunna", "ṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "تطرن",
-        "u": "تطرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَطِرْنَ • (taṭirna) (form I) /ta.tˤir.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭirna", "ṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "طرن",
-        "u": "طرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِرْنَ • (ṭirna) (form I) /tˤir.na/\n# inflection of طَارَ (ṭāra):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭirna", "ṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "يطرن",
-        "u": "يطرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَطِرْنَ • (yaṭirna) (form I) /ja.tˤir.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭirna", "ṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيران",
-        "u": "تطيران",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَطِيرَانِ • (taṭīrāni) (form I) /ta.tˤiː.raː.ni/\n# inflection of طَارَ (ṭāra):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭīrāni", "ṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "يطيران",
-        "u": "يطيران",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَطِيرَانِ • (yaṭīrāni) (form I) /ja.tˤiː.raː.ni/\n# third-person masculine dual non-past active indicative of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭīrāni", "ṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "يطيرا",
-        "u": "يطيرا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَطِيرَا • (yaṭīrā) (form I) /ja.tˤiː.raː/\n# third-person masculine dual non-past active subjunctive/jussive of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭīrā", "ṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيرا",
-        "u": "تطيرا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَطِيرَا • (taṭīrā) (form I) /ta.tˤiː.raː/\n# inflection of طَارَ (ṭāra):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭīrā", "ṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "طرتما",
-        "u": "طرتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِرْتُمَا • (ṭirtumā) (form I) /tˤir.tu.maː/\n# second-person dual past active of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭirtumā", "ṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "طارتا",
-        "u": "طارتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَارَتَا • (ṭāratā) (form I) /tˤaː.ra.taː/\n# third-person feminine dual past active of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭāratā", "ṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "طارا",
-        "u": "طارا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَارَا • (ṭārā) (form I) /tˤaː.raː/\n# third-person masculine dual past active of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭārā", "ṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      },
-      {
-        "w": "طيرا",
-        "u": "طيرا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "طِيرَا • (ṭīrā) (form I) /tˤiː.raː/\n# second-person dual imperative of طَارَ (ṭāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭīrā", "ṭāra"],
-        "k": "طار",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "طر",
+  "ses": {
     "harf": "ط",
+    "fasil": "طر",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "طير",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "طِيرَ • (ṭīra) (form I) /tˤiː.ra/\n# third-person masculine singular past passive of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭīra", "ṭāra"],
+      "ipa": ["/tˤiː.ra/"]
+    },
+    {
+      "madde": "طيور",
+      "tur": "noun",
+      "baslik": "طُيُور • (ṭuyūr) m pl",
+      "anlam": ["plural of طَيْر (ṭayr)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["طَيْر"],
+      "okunus": ["ṭuyūr"],
+      "bag": "asıl madde",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطير",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يطير (form I)\n# يَطِيرُ (yaṭīru) /ja.tˤiː.ru/: third-person masculine singular non-past active indicative of طَارَ (ṭāra)\n# يَطِيرَ (yaṭīra) /ja.tˤiː.ra/: third-person masculine singular non-past active subjunctive of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭīru", "ṭāra", "yaṭīra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطار",
+      "tur": "verb",
+      "baslik": "يطار (form I)\n# يُطَارُ (yuṭāru) /ju.tˤaː.ru/: third-person masculine singular non-past passive indicative of طَارَ (ṭāra)\n# يُطَارَ (yuṭāra) /ju.tˤaː.ra/: third-person masculine singular non-past passive subjunctive of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuṭāru", "ṭāra", "yuṭāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أطير",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أطير (form I)\n# أَطِيرُ (ʔaṭīru) /ʔa.tˤiː.ru/: first-person singular non-past active indicative of طَارَ (ṭāra)\n# أَطِيرَ (ʔaṭīra) /ʔa.tˤiː.ra/: first-person singular non-past active subjunctive of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaṭīru", "ṭāra", "ʔaṭīra"]
+    },
+    {
+      "madde": "يطر",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يطر (form I)\n# يَطِرْ (yaṭir) /ja.tˤir/: third-person masculine singular non-past active jussive of طَارَ (ṭāra)\n# يُطَرْ (yuṭar) /ju.tˤar/: third-person masculine singular non-past passive jussive of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭir", "ṭāra", "yuṭar"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طارت",
+      "tur": "verb",
+      "baslik": "طَارَتْ • (ṭārat) (form I) /tˤaː.rat/\n# third-person feminine singular past active of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭārat", "ṭāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطير",
+      "tur": "verb",
+      "etim_no": "1.2",
+      "baslik": "تطير (form I)\n# تَطِيرُ (taṭīru) /ta.tˤiː.ru/: inflection of طَارَ (ṭāra):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَطِيرَ (taṭīra) /ta.tˤiː.ra/: inflection of طَارَ (ṭāra):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭīru", "ṭāra", "taṭīra"]
+    },
+    {
+      "madde": "تطر",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَطِرْ • (taṭir) (form I) /ta.tˤir/\n# inflection of طَارَ (ṭāra):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭir", "ṭāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طرت",
+      "tur": "verb",
+      "baslik": "طرت (form I)\n# طِرْتُ (ṭirtu) /tˤir.tu/: first-person singular past active of طَارَ (ṭāra)\n# طِرْتَ (ṭirta) /tˤir.ta/: second-person masculine singular past active of طَارَ (ṭāra)\n# طِرْتِ (ṭirti) /tˤir.ti/: second-person feminine singular past active of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭirtu", "ṭāra", "ṭirta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طر",
+      "tur": "verb",
+      "baslik": "طِرْ • (ṭir) (form I) /tˤir/\n# second-person masculine singular imperative of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭir", "ṭāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطيرين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَطِيرِينَ • (taṭīrīna) (form I) /ta.tˤiː.riː.na/\n# second-person feminine singular non-past active indicative of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭīrīna", "ṭāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطيري",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَطِيرِي • (taṭīrī) (form I) /ta.tˤiː.riː/\n# second-person feminine singular non-past active subjunctive/jussive of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭīrī", "ṭāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طيري",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "طِيرِي • (ṭīrī) (form I) /tˤiː.riː/\n# second-person feminine singular imperative of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭīrī", "ṭāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أطر",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَطِرْ • (ʔaṭir) (form I) /ʔa.tˤir/\n# first-person singular non-past active jussive of طَارَ (ṭāra)",
+      "etim_sablon": [
+        ["nonlemma", "See the etymology of the corresponding lemma form."]
+      ],
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaṭir", "ṭāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طرنا",
+      "tur": "verb",
+      "baslik": "طِرْنَا • (ṭirnā) (form I) /tˤir.naː/\n# first-person plural past active of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭirnā", "ṭāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نطير",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نطير (form I)\n# نَطِيرُ (naṭīru) /na.tˤiː.ru/: first-person plural non-past active indicative of طَارَ (ṭāra)\n# نَطِيرَ (naṭīra) /na.tˤiː.ra/: first-person plural non-past active subjunctive of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naṭīru", "ṭāra", "naṭīra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نطر",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نَطِرْ • (naṭir) (form I) /na.tˤir/\n# first-person plural non-past active jussive of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naṭir", "ṭāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طرتم",
+      "tur": "verb",
+      "baslik": "طِرْتُمْ • (ṭirtum) (form I) /tˤir.tum/\n# second-person masculine plural past active of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭirtum", "ṭāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطيرون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَطِيرُونَ • (taṭīrūna) (form I) /ta.tˤiː.ruː.na/\n# second-person masculine plural non-past active indicative of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭīrūna", "ṭāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطيروا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَطِيرُوا • (taṭīrū) (form I) /ta.tˤiː.ruː/\n# second-person masculine plural non-past active subjunctive/jussive of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭīrū", "ṭāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طيروا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "طِيرُوا • (ṭīrū) (form I) /tˤiː.ruː/\n# second-person masculine plural imperative of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭīrū", "ṭāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طاروا",
+      "tur": "verb",
+      "baslik": "طَارُوا • (ṭārū) (form I) /tˤaː.ruː/\n# third-person masculine plural past active of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭārū", "ṭāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطيرون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَطِيرُونَ • (yaṭīrūna) (form I) /ja.tˤiː.ruː.na/\n# third-person masculine plural non-past active indicative of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭīrūna", "ṭāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطيروا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَطِيرُوا • (yaṭīrū) (form I) /ja.tˤiː.ruː/\n# third-person masculine plural non-past active subjunctive/jussive of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭīrū", "ṭāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طرتن",
+      "tur": "verb",
+      "baslik": "طِرْتُنَّ • (ṭirtunna) (form I) /tˤir.tun.na/\n# second-person feminine plural past active of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭirtunna", "ṭāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطرن",
+      "tur": "verb",
+      "baslik": "تَطِرْنَ • (taṭirna) (form I) /ta.tˤir.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭirna", "ṭāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طرن",
+      "tur": "verb",
+      "baslik": "طِرْنَ • (ṭirna) (form I) /tˤir.na/\n# inflection of طَارَ (ṭāra):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭirna", "ṭāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطرن",
+      "tur": "verb",
+      "baslik": "يَطِرْنَ • (yaṭirna) (form I) /ja.tˤir.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭirna", "ṭāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطيران",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَطِيرَانِ • (taṭīrāni) (form I) /ta.tˤiː.raː.ni/\n# inflection of طَارَ (ṭāra):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭīrāni", "ṭāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطيران",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَطِيرَانِ • (yaṭīrāni) (form I) /ja.tˤiː.raː.ni/\n# third-person masculine dual non-past active indicative of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭīrāni", "ṭāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطيرا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَطِيرَا • (yaṭīrā) (form I) /ja.tˤiː.raː/\n# third-person masculine dual non-past active subjunctive/jussive of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭīrā", "ṭāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطيرا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَطِيرَا • (taṭīrā) (form I) /ta.tˤiː.raː/\n# inflection of طَارَ (ṭāra):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭīrā", "ṭāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طرتما",
+      "tur": "verb",
+      "baslik": "طِرْتُمَا • (ṭirtumā) (form I) /tˤir.tu.maː/\n# second-person dual past active of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭirtumā", "ṭāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طارتا",
+      "tur": "verb",
+      "baslik": "طَارَتَا • (ṭāratā) (form I) /tˤaː.ra.taː/\n# third-person feminine dual past active of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭāratā", "ṭāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طارا",
+      "tur": "verb",
+      "baslik": "طَارَا • (ṭārā) (form I) /tˤaː.raː/\n# third-person masculine dual past active of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭārā", "ṭāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طيرا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "طِيرَا • (ṭīrā) (form I) /tˤiː.raː/\n# second-person dual imperative of طَارَ (ṭāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭīrā", "ṭāra"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "طار", "r7"]
+  ],
+  "mana": {
     "ince": "whole.n.02",
     "orta": "noun.animal",
     "ust": "canlı ve beden",
@@ -503,22 +366,15 @@
     "dayanak_tanim": "warm-blooded egg-laying vertebrates characterized by feathers and forelimbs modified as wings",
     "synset_sayisi": 4
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["avian.a.01", "fly.v.03", "food.n.02", "living_thing.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["avian.a.01", "fly.v.03", "food.n.02", "living_thing.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

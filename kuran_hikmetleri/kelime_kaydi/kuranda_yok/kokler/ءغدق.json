@@ -1,365 +1,287 @@
 {
   "kok": "ءغدق",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءغدق", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أغدقت",
-        "u": "أغدقت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أغدقت (form IV)\n# أَغْدَقْتُ (ʔaḡdaqtu) /ʔaɣ.daq.tu/: first-person singular past active of أَغْدَقَ (ʔaḡdaqa)\n# أَغْدَقْتَ (ʔaḡdaqta) /ʔaɣ.daq.ta/: second-person masculine singular past active of أَغْدَقَ (ʔaḡdaqa)\n# أَغْدَقْتِ (ʔaḡdaqti) /ʔaɣ.daq.ti/: second-person feminine singular past active of أَغْدَقَ (ʔaḡdaqa)\n# أَغْدَقَتْ (ʔaḡdaqat) /ʔaɣ.da.qat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḡdaqtu", "ʔaḡdaqa", "ʔaḡdaqta"],
-        "k": "أغدق",
-        "yol": "kök"
-      },
-      {
-        "w": "أغدقتما",
-        "u": "أغدقتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أغدقتما (form IV)\n# أَغْدَقْتُمَا (ʔaḡdaqtumā) /ʔaɣ.daq.tu.maː/: second-person dual past active of أَغْدَقَ (ʔaḡdaqa)\n# أُغْدِقْتُمَا (ʔuḡdiqtumā) /ʔuɣ.diq.tu.maː/: second-person dual past passive of أَغْدَقَ (ʔaḡdaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḡdaqtumā", "ʔaḡdaqa", "ʔuḡdiqtumā"],
-        "k": "أغدق",
-        "yol": "kök"
-      },
-      {
-        "w": "أغدقتن",
-        "u": "أغدقتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أغدقتن (form IV)\n# أَغْدَقْتُنَّ (ʔaḡdaqtunna) /ʔaɣ.daq.tun.na/: second-person feminine plural past active of أَغْدَقَ (ʔaḡdaqa)\n# أُغْدِقْتُنَّ (ʔuḡdiqtunna) /ʔuɣ.diq.tun.na/: second-person feminine plural past passive of أَغْدَقَ (ʔaḡdaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḡdaqtunna", "ʔaḡdaqa", "ʔuḡdiqtunna"],
-        "k": "أغدق",
-        "yol": "kök"
-      },
-      {
-        "w": "أغدقنا",
-        "u": "أغدقنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أغدقنا (form IV)\n# أَغْدَقْنَا (ʔaḡdaqnā) /ʔaɣ.daq.naː/: first-person plural past active of أَغْدَقَ (ʔaḡdaqa)\n# أُغْدِقْنَا (ʔuḡdiqnā) /ʔuɣ.diq.naː/: first-person plural past passive of أَغْدَقَ (ʔaḡdaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḡdaqnā", "ʔaḡdaqa", "ʔuḡdiqnā"],
-        "k": "أغدق",
-        "yol": "kök"
-      },
-      {
-        "w": "أغدقا",
-        "u": "أغدقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أغدقا (form IV)\n# أَغْدَقَا (ʔaḡdaqā) /ʔaɣ.da.qaː/: third-person masculine dual past active of أَغْدَقَ (ʔaḡdaqa)\n# أُغْدِقَا (ʔuḡdiqā) /ʔuɣ.di.qaː/: third-person masculine dual past passive of أَغْدَقَ (ʔaḡdaqa)\n# أَغْدِقَا (ʔaḡdiqā) /ʔaɣ.di.qaː/: second-person dual imperative of أَغْدَقَ (ʔaḡdaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḡdaqā", "ʔaḡdaqa", "ʔuḡdiqā"],
-        "k": "أغدق",
-        "yol": "kök"
-      },
-      {
-        "w": "أغدقوا",
-        "u": "أغدقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أغدقوا (form IV)\n# أَغْدَقُوا (ʔaḡdaqū) /ʔaɣ.da.quː/: third-person masculine plural past active of أَغْدَقَ (ʔaḡdaqa)\n# أُغْدِقُوا (ʔuḡdiqū) /ʔuɣ.di.quː/: third-person masculine plural past passive of أَغْدَقَ (ʔaḡdaqa)\n# أَغْدِقُوا (ʔaḡdiqū) /ʔaɣ.di.quː/: second-person masculine plural imperative of أَغْدَقَ (ʔaḡdaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḡdaqū", "ʔaḡdaqa", "ʔuḡdiqū"],
-        "k": "أغدق",
-        "yol": "kök"
-      },
-      {
-        "w": "أغدقتا",
-        "u": "أغدقتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أغدقتا (form IV)\n# أَغْدَقَتَا (ʔaḡdaqatā) /ʔaɣ.da.qa.taː/: third-person feminine dual past active of أَغْدَقَ (ʔaḡdaqa)\n# أُغْدِقَتَا (ʔuḡdiqatā) /ʔuɣ.di.qa.taː/: third-person feminine dual past passive of أَغْدَقَ (ʔaḡdaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḡdaqatā", "ʔaḡdaqa", "ʔuḡdiqatā"],
-        "k": "أغدق",
-        "yol": "kök"
-      },
-      {
-        "w": "تغدقين",
-        "u": "تغدقين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تغدقين (form IV)\n# تُغْدِقِينَ (tuḡdiqīna) /tuɣ.di.qiː.na/: second-person feminine singular non-past active indicative of أَغْدَقَ (ʔaḡdaqa)\n# تُغْدَقِينَ (tuḡdaqīna) /tuɣ.da.qiː.na/: second-person feminine singular non-past passive indicative of أَغْدَقَ (ʔaḡdaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḡdiqīna", "ʔaḡdaqa", "tuḡdaqīna"],
-        "k": "أغدق",
-        "yol": "kök"
-      },
-      {
-        "w": "أغدقن",
-        "u": "أغدقن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أغدقن (form IV)\n# أَغْدَقْنَ (ʔaḡdaqna) /ʔaɣ.daq.na/: third-person feminine plural past active of أَغْدَقَ (ʔaḡdaqa)\n# أُغْدِقْنَ (ʔuḡdiqna) /ʔuɣ.diq.na/: third-person feminine plural past passive of أَغْدَقَ (ʔaḡdaqa)\n# أَغْدِقْنَ (ʔaḡdiqna) /ʔaɣ.diq.na/: second-person feminine plural imperative of أَغْدَقَ (ʔaḡdaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḡdaqna", "ʔaḡdaqa", "ʔuḡdiqna"],
-        "k": "أغدق",
-        "yol": "kök"
-      },
-      {
-        "w": "أغدقتم",
-        "u": "أغدقتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أغدقتم (form IV)\n# أَغْدَقْتُمْ (ʔaḡdaqtum) /ʔaɣ.daq.tum/: second-person masculine plural past active of أَغْدَقَ (ʔaḡdaqa)\n# أُغْدِقْتُمْ (ʔuḡdiqtum) /ʔuɣ.diq.tum/: second-person masculine plural past passive of أَغْدَقَ (ʔaḡdaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḡdaqtum", "ʔaḡdaqa", "ʔuḡdiqtum"],
-        "k": "أغدق",
-        "yol": "kök"
-      },
-      {
-        "w": "يغدق",
-        "u": "يغدق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يغدق (form IV)\n# يُغْدِقُ (yuḡdiqu) /juɣ.di.qu/: third-person masculine singular non-past active indicative of أَغْدَقَ (ʔaḡdaqa)\n# يُغْدَقُ (yuḡdaqu) /juɣ.da.qu/: third-person masculine singular non-past passive indicative of أَغْدَقَ (ʔaḡdaqa)\n# يُغْدِقَ (yuḡdiqa) /juɣ.di.qa/: third-person masculine singular non-past active subjunctive of أَغْدَقَ (ʔaḡdaqa)\n# يُغْدَقَ (yuḡdaqa) /juɣ.da.qa/: thir",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḡdiqu", "ʔaḡdaqa", "yuḡdaqu"],
-        "k": "أغدق",
-        "yol": "kök"
-      },
-      {
-        "w": "تغدقان",
-        "u": "تغدقان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تغدقان (form IV)\n# تُغْدِقَانِ (tuḡdiqāni) /tuɣ.di.qaː.ni/: inflection of أَغْدَقَ (ʔaḡdaqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُغْدَقَانِ (tuḡdaqāni) /tuɣ.da.qaː.ni/: inflection of أَغْدَقَ (ʔaḡdaqa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḡdiqāni", "ʔaḡdaqa", "tuḡdaqāni"],
-        "k": "أغدق",
-        "yol": "kök"
-      },
-      {
-        "w": "تغدق",
-        "u": "تغدق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تغدق (form IV)\n# تُغْدِقُ (tuḡdiqu) /tuɣ.di.qu/: inflection of أَغْدَقَ (ʔaḡdaqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُغْدَقُ (tuḡdaqu) /tuɣ.da.qu/: inflection of أَغْدَقَ (ʔaḡdaqa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḡdiqu", "ʔaḡdaqa", "tuḡdaqu"],
-        "k": "أغدق",
-        "yol": "kök"
-      },
-      {
-        "w": "تغدقن",
-        "u": "تغدقن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تغدقن (form IV)\n# تُغْدِقْنَ (tuḡdiqna) /tuɣ.diq.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَغْدَقَ (ʔaḡdaqa)\n# تُغْدَقْنَ (tuḡdaqna) /tuɣ.daq.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَغْدَقَ (ʔaḡdaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḡdiqna", "ʔaḡdaqa", "tuḡdaqna"],
-        "k": "أغدق",
-        "yol": "kök"
-      },
-      {
-        "w": "تغدقون",
-        "u": "تغدقون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تغدقون (form IV)\n# تُغْدِقُونَ (tuḡdiqūna) /tuɣ.di.quː.na/: second-person masculine plural non-past active indicative of أَغْدَقَ (ʔaḡdaqa)\n# تُغْدَقُونَ (tuḡdaqūna) /tuɣ.da.quː.na/: second-person masculine plural non-past passive indicative of أَغْدَقَ (ʔaḡdaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḡdiqūna", "ʔaḡdaqa", "tuḡdaqūna"],
-        "k": "أغدق",
-        "yol": "kök"
-      },
-      {
-        "w": "نغدق",
-        "u": "نغدق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نغدق (form IV)\n# نُغْدِقُ (nuḡdiqu) /nuɣ.di.qu/: first-person plural non-past active indicative of أَغْدَقَ (ʔaḡdaqa)\n# نُغْدَقُ (nuḡdaqu) /nuɣ.da.qu/: first-person plural non-past passive indicative of أَغْدَقَ (ʔaḡdaqa)\n# نُغْدِقَ (nuḡdiqa) /nuɣ.di.qa/: first-person plural non-past active subjunctive of أَغْدَقَ (ʔaḡdaqa)\n# نُغْدَقَ (nuḡdaqa) /nuɣ.da.qa/: first-person plural non-past passive sub",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuḡdiqu", "ʔaḡdaqa", "nuḡdaqu"],
-        "k": "أغدق",
-        "yol": "kök"
-      },
-      {
-        "w": "أغدقي",
-        "u": "أغدقي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَغْدِقِي • (ʔaḡdiqī) (form IV) /ʔaɣ.di.qiː/\n# second-person feminine singular imperative of أَغْدَقَ (ʔaḡdaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḡdiqī", "ʔaḡdaqa"],
-        "k": "أغدق",
-        "yol": "kök"
-      },
-      {
-        "w": "يغدقن",
-        "u": "يغدقن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يغدقن (form IV)\n# يُغْدِقْنَ (yuḡdiqna) /juɣ.diq.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَغْدَقَ (ʔaḡdaqa)\n# يُغْدَقْنَ (yuḡdaqna) /juɣ.daq.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَغْدَقَ (ʔaḡdaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḡdiqna", "ʔaḡdaqa", "yuḡdaqna"],
-        "k": "أغدق",
-        "yol": "kök"
-      },
-      {
-        "w": "يغدقون",
-        "u": "يغدقون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يغدقون (form IV)\n# يُغْدِقُونَ (yuḡdiqūna) /juɣ.di.quː.na/: third-person masculine plural non-past active indicative of أَغْدَقَ (ʔaḡdaqa)\n# يُغْدَقُونَ (yuḡdaqūna) /juɣ.da.quː.na/: third-person masculine plural non-past passive indicative of أَغْدَقَ (ʔaḡdaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḡdiqūna", "ʔaḡdaqa", "yuḡdaqūna"],
-        "k": "أغدق",
-        "yol": "kök"
-      },
-      {
-        "w": "يغدقان",
-        "u": "يغدقان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يغدقان (form IV)\n# يُغْدِقَانِ (yuḡdiqāni) /juɣ.di.qaː.ni/: third-person masculine dual non-past active indicative of أَغْدَقَ (ʔaḡdaqa)\n# يُغْدَقَانِ (yuḡdaqāni) /juɣ.da.qaː.ni/: third-person masculine dual non-past passive indicative of أَغْدَقَ (ʔaḡdaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḡdiqāni", "ʔaḡdaqa", "yuḡdaqāni"],
-        "k": "أغدق",
-        "yol": "kök"
-      },
-      {
-        "w": "تغدقي",
-        "u": "تغدقي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تغدقي (form IV)\n# تُغْدِقِي (tuḡdiqī) /tuɣ.di.qiː/: second-person feminine singular non-past active subjunctive/jussive of أَغْدَقَ (ʔaḡdaqa)\n# تُغْدَقِي (tuḡdaqī) /tuɣ.da.qiː/: second-person feminine singular non-past passive subjunctive/jussive of أَغْدَقَ (ʔaḡdaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḡdiqī", "ʔaḡdaqa", "tuḡdaqī"],
-        "k": "أغدق",
-        "yol": "kök"
-      },
-      {
-        "w": "تغدقا",
-        "u": "تغدقا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تغدقا (form IV)\n# تُغْدِقَا (tuḡdiqā) /tuɣ.di.qaː/: inflection of أَغْدَقَ (ʔaḡdaqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُغْدَقَا (tuḡdaqā) /tuɣ.da.qaː/: inflection of أَغْدَقَ (ʔaḡdaqa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/ju",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḡdiqā", "ʔaḡdaqa", "tuḡdaqā"],
-        "k": "أغدق",
-        "yol": "kök"
-      },
-      {
-        "w": "يغدقا",
-        "u": "يغدقا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يغدقا (form IV)\n# يُغْدِقَا (yuḡdiqā) /juɣ.di.qaː/: third-person masculine dual non-past active subjunctive/jussive of أَغْدَقَ (ʔaḡdaqa)\n# يُغْدَقَا (yuḡdaqā) /juɣ.da.qaː/: third-person masculine dual non-past passive subjunctive/jussive of أَغْدَقَ (ʔaḡdaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḡdiqā", "ʔaḡdaqa", "yuḡdaqā"],
-        "k": "أغدق",
-        "yol": "kök"
-      },
-      {
-        "w": "تغدقوا",
-        "u": "تغدقوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تغدقوا (form IV)\n# تُغْدِقُوا (tuḡdiqū) /tuɣ.di.quː/: second-person masculine plural non-past active subjunctive/jussive of أَغْدَقَ (ʔaḡdaqa)\n# تُغْدَقُوا (tuḡdaqū) /tuɣ.da.quː/: second-person masculine plural non-past passive subjunctive/jussive of أَغْدَقَ (ʔaḡdaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḡdiqū", "ʔaḡdaqa", "tuḡdaqū"],
-        "k": "أغدق",
-        "yol": "kök"
-      },
-      {
-        "w": "يغدقوا",
-        "u": "يغدقوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يغدقوا (form IV)\n# يُغْدِقُوا (yuḡdiqū) /juɣ.di.quː/: third-person masculine plural non-past active subjunctive/jussive of أَغْدَقَ (ʔaḡdaqa)\n# يُغْدَقُوا (yuḡdaqū) /juɣ.da.quː/: third-person masculine plural non-past passive subjunctive/jussive of أَغْدَقَ (ʔaḡdaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḡdiqū", "ʔaḡdaqa", "yuḡdaqū"],
-        "k": "أغدق",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "غد",
+  "ses": {
     "harf": "ء",
+    "fasil": "غد",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "أغدقت",
+      "tur": "verb",
+      "baslik": "أغدقت (form IV)\n# أَغْدَقْتُ (ʔaḡdaqtu) /ʔaɣ.daq.tu/: first-person singular past active of أَغْدَقَ (ʔaḡdaqa)\n# أَغْدَقْتَ (ʔaḡdaqta) /ʔaɣ.daq.ta/: second-person masculine singular past active of أَغْدَقَ (ʔaḡdaqa)\n# أَغْدَقْتِ (ʔaḡdaqti) /ʔaɣ.daq.ti/: second-person feminine singular past active of أَغْدَقَ (ʔaḡdaqa)\n# أَغْدَقَتْ (ʔaḡdaqat) /ʔaɣ.da.qat/: third-person feminine singular past active ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḡdaqtu", "ʔaḡdaqa", "ʔaḡdaqta"],
+      "kok_yazilis": "أغدق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغدقتما",
+      "tur": "verb",
+      "baslik": "أغدقتما (form IV)\n# أَغْدَقْتُمَا (ʔaḡdaqtumā) /ʔaɣ.daq.tu.maː/: second-person dual past active of أَغْدَقَ (ʔaḡdaqa)\n# أُغْدِقْتُمَا (ʔuḡdiqtumā) /ʔuɣ.diq.tu.maː/: second-person dual past passive of أَغْدَقَ (ʔaḡdaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḡdaqtumā", "ʔaḡdaqa", "ʔuḡdiqtumā"],
+      "kok_yazilis": "أغدق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغدقتن",
+      "tur": "verb",
+      "baslik": "أغدقتن (form IV)\n# أَغْدَقْتُنَّ (ʔaḡdaqtunna) /ʔaɣ.daq.tun.na/: second-person feminine plural past active of أَغْدَقَ (ʔaḡdaqa)\n# أُغْدِقْتُنَّ (ʔuḡdiqtunna) /ʔuɣ.diq.tun.na/: second-person feminine plural past passive of أَغْدَقَ (ʔaḡdaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḡdaqtunna", "ʔaḡdaqa", "ʔuḡdiqtunna"],
+      "kok_yazilis": "أغدق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغدقنا",
+      "tur": "verb",
+      "baslik": "أغدقنا (form IV)\n# أَغْدَقْنَا (ʔaḡdaqnā) /ʔaɣ.daq.naː/: first-person plural past active of أَغْدَقَ (ʔaḡdaqa)\n# أُغْدِقْنَا (ʔuḡdiqnā) /ʔuɣ.diq.naː/: first-person plural past passive of أَغْدَقَ (ʔaḡdaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḡdaqnā", "ʔaḡdaqa", "ʔuḡdiqnā"],
+      "kok_yazilis": "أغدق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغدقا",
+      "tur": "verb",
+      "baslik": "أغدقا (form IV)\n# أَغْدَقَا (ʔaḡdaqā) /ʔaɣ.da.qaː/: third-person masculine dual past active of أَغْدَقَ (ʔaḡdaqa)\n# أُغْدِقَا (ʔuḡdiqā) /ʔuɣ.di.qaː/: third-person masculine dual past passive of أَغْدَقَ (ʔaḡdaqa)\n# أَغْدِقَا (ʔaḡdiqā) /ʔaɣ.di.qaː/: second-person dual imperative of أَغْدَقَ (ʔaḡdaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḡdaqā", "ʔaḡdaqa", "ʔuḡdiqā"],
+      "kok_yazilis": "أغدق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغدقوا",
+      "tur": "verb",
+      "baslik": "أغدقوا (form IV)\n# أَغْدَقُوا (ʔaḡdaqū) /ʔaɣ.da.quː/: third-person masculine plural past active of أَغْدَقَ (ʔaḡdaqa)\n# أُغْدِقُوا (ʔuḡdiqū) /ʔuɣ.di.quː/: third-person masculine plural past passive of أَغْدَقَ (ʔaḡdaqa)\n# أَغْدِقُوا (ʔaḡdiqū) /ʔaɣ.di.quː/: second-person masculine plural imperative of أَغْدَقَ (ʔaḡdaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḡdaqū", "ʔaḡdaqa", "ʔuḡdiqū"],
+      "kok_yazilis": "أغدق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغدقتا",
+      "tur": "verb",
+      "baslik": "أغدقتا (form IV)\n# أَغْدَقَتَا (ʔaḡdaqatā) /ʔaɣ.da.qa.taː/: third-person feminine dual past active of أَغْدَقَ (ʔaḡdaqa)\n# أُغْدِقَتَا (ʔuḡdiqatā) /ʔuɣ.di.qa.taː/: third-person feminine dual past passive of أَغْدَقَ (ʔaḡdaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḡdaqatā", "ʔaḡdaqa", "ʔuḡdiqatā"],
+      "kok_yazilis": "أغدق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغدقين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تغدقين (form IV)\n# تُغْدِقِينَ (tuḡdiqīna) /tuɣ.di.qiː.na/: second-person feminine singular non-past active indicative of أَغْدَقَ (ʔaḡdaqa)\n# تُغْدَقِينَ (tuḡdaqīna) /tuɣ.da.qiː.na/: second-person feminine singular non-past passive indicative of أَغْدَقَ (ʔaḡdaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḡdiqīna", "ʔaḡdaqa", "tuḡdaqīna"],
+      "kok_yazilis": "أغدق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغدقن",
+      "tur": "verb",
+      "baslik": "أغدقن (form IV)\n# أَغْدَقْنَ (ʔaḡdaqna) /ʔaɣ.daq.na/: third-person feminine plural past active of أَغْدَقَ (ʔaḡdaqa)\n# أُغْدِقْنَ (ʔuḡdiqna) /ʔuɣ.diq.na/: third-person feminine plural past passive of أَغْدَقَ (ʔaḡdaqa)\n# أَغْدِقْنَ (ʔaḡdiqna) /ʔaɣ.diq.na/: second-person feminine plural imperative of أَغْدَقَ (ʔaḡdaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḡdaqna", "ʔaḡdaqa", "ʔuḡdiqna"],
+      "kok_yazilis": "أغدق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغدقتم",
+      "tur": "verb",
+      "baslik": "أغدقتم (form IV)\n# أَغْدَقْتُمْ (ʔaḡdaqtum) /ʔaɣ.daq.tum/: second-person masculine plural past active of أَغْدَقَ (ʔaḡdaqa)\n# أُغْدِقْتُمْ (ʔuḡdiqtum) /ʔuɣ.diq.tum/: second-person masculine plural past passive of أَغْدَقَ (ʔaḡdaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḡdaqtum", "ʔaḡdaqa", "ʔuḡdiqtum"],
+      "kok_yazilis": "أغدق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغدق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يغدق (form IV)\n# يُغْدِقُ (yuḡdiqu) /juɣ.di.qu/: third-person masculine singular non-past active indicative of أَغْدَقَ (ʔaḡdaqa)\n# يُغْدَقُ (yuḡdaqu) /juɣ.da.qu/: third-person masculine singular non-past passive indicative of أَغْدَقَ (ʔaḡdaqa)\n# يُغْدِقَ (yuḡdiqa) /juɣ.di.qa/: third-person masculine singular non-past active subjunctive of أَغْدَقَ (ʔaḡdaqa)\n# يُغْدَقَ (yuḡdaqa) /juɣ.da.qa/: thir",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḡdiqu", "ʔaḡdaqa", "yuḡdaqu"],
+      "kok_yazilis": "أغدق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغدقان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تغدقان (form IV)\n# تُغْدِقَانِ (tuḡdiqāni) /tuɣ.di.qaː.ni/: inflection of أَغْدَقَ (ʔaḡdaqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُغْدَقَانِ (tuḡdaqāni) /tuɣ.da.qaː.ni/: inflection of أَغْدَقَ (ʔaḡdaqa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḡdiqāni", "ʔaḡdaqa", "tuḡdaqāni"],
+      "kok_yazilis": "أغدق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغدق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تغدق (form IV)\n# تُغْدِقُ (tuḡdiqu) /tuɣ.di.qu/: inflection of أَغْدَقَ (ʔaḡdaqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُغْدَقُ (tuḡdaqu) /tuɣ.da.qu/: inflection of أَغْدَقَ (ʔaḡdaqa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḡdiqu", "ʔaḡdaqa", "tuḡdaqu"],
+      "kok_yazilis": "أغدق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغدقن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تغدقن (form IV)\n# تُغْدِقْنَ (tuḡdiqna) /tuɣ.diq.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَغْدَقَ (ʔaḡdaqa)\n# تُغْدَقْنَ (tuḡdaqna) /tuɣ.daq.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَغْدَقَ (ʔaḡdaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḡdiqna", "ʔaḡdaqa", "tuḡdaqna"],
+      "kok_yazilis": "أغدق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغدقون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تغدقون (form IV)\n# تُغْدِقُونَ (tuḡdiqūna) /tuɣ.di.quː.na/: second-person masculine plural non-past active indicative of أَغْدَقَ (ʔaḡdaqa)\n# تُغْدَقُونَ (tuḡdaqūna) /tuɣ.da.quː.na/: second-person masculine plural non-past passive indicative of أَغْدَقَ (ʔaḡdaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḡdiqūna", "ʔaḡdaqa", "tuḡdaqūna"],
+      "kok_yazilis": "أغدق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نغدق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نغدق (form IV)\n# نُغْدِقُ (nuḡdiqu) /nuɣ.di.qu/: first-person plural non-past active indicative of أَغْدَقَ (ʔaḡdaqa)\n# نُغْدَقُ (nuḡdaqu) /nuɣ.da.qu/: first-person plural non-past passive indicative of أَغْدَقَ (ʔaḡdaqa)\n# نُغْدِقَ (nuḡdiqa) /nuɣ.di.qa/: first-person plural non-past active subjunctive of أَغْدَقَ (ʔaḡdaqa)\n# نُغْدَقَ (nuḡdaqa) /nuɣ.da.qa/: first-person plural non-past passive sub",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuḡdiqu", "ʔaḡdaqa", "nuḡdaqu"],
+      "kok_yazilis": "أغدق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغدقي",
+      "tur": "verb",
+      "baslik": "أَغْدِقِي • (ʔaḡdiqī) (form IV) /ʔaɣ.di.qiː/\n# second-person feminine singular imperative of أَغْدَقَ (ʔaḡdaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḡdiqī", "ʔaḡdaqa"],
+      "kok_yazilis": "أغدق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغدقن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يغدقن (form IV)\n# يُغْدِقْنَ (yuḡdiqna) /juɣ.diq.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَغْدَقَ (ʔaḡdaqa)\n# يُغْدَقْنَ (yuḡdaqna) /juɣ.daq.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَغْدَقَ (ʔaḡdaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḡdiqna", "ʔaḡdaqa", "yuḡdaqna"],
+      "kok_yazilis": "أغدق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغدقون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يغدقون (form IV)\n# يُغْدِقُونَ (yuḡdiqūna) /juɣ.di.quː.na/: third-person masculine plural non-past active indicative of أَغْدَقَ (ʔaḡdaqa)\n# يُغْدَقُونَ (yuḡdaqūna) /juɣ.da.quː.na/: third-person masculine plural non-past passive indicative of أَغْدَقَ (ʔaḡdaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḡdiqūna", "ʔaḡdaqa", "yuḡdaqūna"],
+      "kok_yazilis": "أغدق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغدقان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يغدقان (form IV)\n# يُغْدِقَانِ (yuḡdiqāni) /juɣ.di.qaː.ni/: third-person masculine dual non-past active indicative of أَغْدَقَ (ʔaḡdaqa)\n# يُغْدَقَانِ (yuḡdaqāni) /juɣ.da.qaː.ni/: third-person masculine dual non-past passive indicative of أَغْدَقَ (ʔaḡdaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḡdiqāni", "ʔaḡdaqa", "yuḡdaqāni"],
+      "kok_yazilis": "أغدق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغدقي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تغدقي (form IV)\n# تُغْدِقِي (tuḡdiqī) /tuɣ.di.qiː/: second-person feminine singular non-past active subjunctive/jussive of أَغْدَقَ (ʔaḡdaqa)\n# تُغْدَقِي (tuḡdaqī) /tuɣ.da.qiː/: second-person feminine singular non-past passive subjunctive/jussive of أَغْدَقَ (ʔaḡdaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḡdiqī", "ʔaḡdaqa", "tuḡdaqī"],
+      "kok_yazilis": "أغدق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغدقا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تغدقا (form IV)\n# تُغْدِقَا (tuḡdiqā) /tuɣ.di.qaː/: inflection of أَغْدَقَ (ʔaḡdaqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُغْدَقَا (tuḡdaqā) /tuɣ.da.qaː/: inflection of أَغْدَقَ (ʔaḡdaqa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/ju",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḡdiqā", "ʔaḡdaqa", "tuḡdaqā"],
+      "kok_yazilis": "أغدق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغدقا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يغدقا (form IV)\n# يُغْدِقَا (yuḡdiqā) /juɣ.di.qaː/: third-person masculine dual non-past active subjunctive/jussive of أَغْدَقَ (ʔaḡdaqa)\n# يُغْدَقَا (yuḡdaqā) /juɣ.da.qaː/: third-person masculine dual non-past passive subjunctive/jussive of أَغْدَقَ (ʔaḡdaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḡdiqā", "ʔaḡdaqa", "yuḡdaqā"],
+      "kok_yazilis": "أغدق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغدقوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تغدقوا (form IV)\n# تُغْدِقُوا (tuḡdiqū) /tuɣ.di.quː/: second-person masculine plural non-past active subjunctive/jussive of أَغْدَقَ (ʔaḡdaqa)\n# تُغْدَقُوا (tuḡdaqū) /tuɣ.da.quː/: second-person masculine plural non-past passive subjunctive/jussive of أَغْدَقَ (ʔaḡdaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḡdiqū", "ʔaḡdaqa", "tuḡdaqū"],
+      "kok_yazilis": "أغدق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغدقوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يغدقوا (form IV)\n# يُغْدِقُوا (yuḡdiqū) /juɣ.di.quː/: third-person masculine plural non-past active subjunctive/jussive of أَغْدَقَ (ʔaḡdaqa)\n# يُغْدَقُوا (yuḡdaqū) /juɣ.da.quː/: third-person masculine plural non-past passive subjunctive/jussive of أَغْدَقَ (ʔaḡdaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḡdiqū", "ʔaḡdaqa", "yuḡdaqū"],
+      "kok_yazilis": "أغدق",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءغدق", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,678 +1,483 @@
 {
   "kok": "باع",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "باع", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "بعت",
-        "u": "بعت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بعت (form I)\n# بِعْتُ (biʕtu) /biʕ.tu/: first-person singular past active/passive of بَاعَ (bāʕa)\n# بِعْتَ (biʕta) /biʕ.ta/: second-person masculine singular past active/passive of بَاعَ (bāʕa)\n# بِعْتِ (biʕti) /biʕ.ti/: second-person feminine singular past active/passive of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["biʕtu", "bāʕa", "biʕta"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "تبع",
-        "u": "تبع",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تبع (form I)\n# تَبِعْ (tabiʕ) /ta.biʕ/: inflection of بَاعَ (bāʕa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُبَعْ (tubaʕ) /tu.baʕ/: inflection of بَاعَ (bāʕa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabiʕ", "bāʕa", "tubaʕ"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "تباع",
-        "u": "تباع",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تباع (form I)\n# تُبَاعُ (tubāʕu) /tu.baː.ʕu/: inflection of بَاعَ (bāʕa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُبَاعَ (tubāʕa) /tu.baː.ʕa/: inflection of بَاعَ (bāʕa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tubāʕu", "bāʕa", "tubāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "بيع",
-        "u": "بيع",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "بِيعَ • (bīʕa) (form I) /biː.ʕa/\n# third-person masculine singular past passive of بَاعَ (bāʕa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bīʕa", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "يبيع",
-        "u": "يبيع",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يبيع (form I)\n# يَبِيعُ (yabīʕu) /ja.biː.ʕu/: third-person masculine singular non-past active indicative of بَاعَ (bāʕa)\n# يَبِيعَ (yabīʕa) /ja.biː.ʕa/: third-person masculine singular non-past active subjunctive of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabīʕu", "bāʕa", "yabīʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "يباع",
-        "u": "يباع",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يباع (form I)\n# يُبَاعُ (yubāʕu) /ju.baː.ʕu/: third-person masculine singular non-past passive indicative of بَاعَ (bāʕa)\n# يُبَاعَ (yubāʕa) /ju.baː.ʕa/: third-person masculine singular non-past passive subjunctive of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yubāʕu", "bāʕa", "yubāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "يبع",
-        "u": "يبع",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يبع (form I)\n# يَبِعْ (yabiʕ) /ja.biʕ/: third-person masculine singular non-past active jussive of بَاعَ (bāʕa)\n# يُبَعْ (yubaʕ) /ju.baʕ/: third-person masculine singular non-past passive jussive of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabiʕ", "bāʕa", "yubaʕ"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "باعت",
-        "u": "باعت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَاعَتْ • (bāʕat) (form I) /baː.ʕat/\n# third-person feminine singular past active of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bāʕat", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيع",
-        "u": "تبيع",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تبيع (form I)\n# تَبِيعُ (tabīʕu) /ta.biː.ʕu/: inflection of بَاعَ (bāʕa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَبِيعَ (tabīʕa) /ta.biː.ʕa/: inflection of بَاعَ (bāʕa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabīʕu", "bāʕa", "tabīʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "بيعت",
-        "u": "بيعت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بِيعَتْ • (bīʕat) (form I) /biː.ʕat/\n# third-person feminine singular past passive of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bīʕat", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "بع",
-        "u": "بع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بِعْ • (biʕ) (form I) /biʕ/\n# second-person masculine singular imperative of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["biʕ", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيعين",
-        "u": "تبيعين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَبِيعِينَ • (tabīʕīna) (form I) /ta.biː.ʕiː.na/\n# second-person feminine singular non-past active indicative of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabīʕīna", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيعي",
-        "u": "تبيعي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَبِيعِي • (tabīʕī) (form I) /ta.biː.ʕiː/\n# second-person feminine singular non-past active subjunctive/jussive of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabīʕī", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "بيعي",
-        "u": "بيعي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بِيعِي • (bīʕī) (form I) /biː.ʕiː/\n# second-person feminine singular imperative of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bīʕī", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "تباعين",
-        "u": "تباعين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُبَاعِينَ • (tubāʕīna) (form I) /tu.baː.ʕiː.na/\n# second-person feminine singular non-past passive indicative of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tubāʕīna", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "تباعي",
-        "u": "تباعي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُبَاعِي • (tubāʕī) (form I) /tu.baː.ʕiː/\n# second-person feminine singular non-past passive subjunctive/jussive of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tubāʕī", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "أبيع",
-        "u": "أبيع",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أبيع (form I)\n# أَبِيعُ (ʔabīʕu) /ʔa.biː.ʕu/: first-person singular non-past active indicative of بَاعَ (bāʕa)\n# أَبِيعَ (ʔabīʕa) /ʔa.biː.ʕa/: first-person singular non-past active subjunctive of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔabīʕu", "bāʕa", "ʔabīʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "أبع",
-        "u": "أبع",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أبع (form I)\n# أَبِعْ (ʔabiʕ) /ʔa.biʕ/: first-person singular non-past active jussive of بَاعَ (bāʕa)\n# أُبَعْ (ʔubaʕ) /ʔu.baʕ/: first-person singular non-past passive jussive of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔabiʕ", "bāʕa", "ʔubaʕ"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "أباع",
-        "u": "أباع",
-        "p": "verb",
-        "n": "1.2",
-        "h": "ar-verb form",
-        "e": "أباع (form I)\n# أُبَاعُ (ʔubāʕu) /ʔu.baː.ʕu/: first-person singular non-past passive indicative of بَاعَ (bāʕa)\n# أُبَاعَ (ʔubāʕa) /ʔu.baː.ʕa/: first-person singular non-past passive subjunctive of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "s": [
-          ["nonlemma", "See the etymology of the corresponding lemma form."]
-        ],
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔubāʕu", "bāʕa", "ʔubāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "بعنا",
-        "u": "بعنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بِعْنَا • (biʕnā) (form I) /biʕ.naː/\n# first-person plural past active/passive of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["biʕnā", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "نبيع",
-        "u": "نبيع",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نبيع (form I)\n# نَبِيعُ (nabīʕu) /na.biː.ʕu/: first-person plural non-past active indicative of بَاعَ (bāʕa)\n# نَبِيعَ (nabīʕa) /na.biː.ʕa/: first-person plural non-past active subjunctive of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nabīʕu", "bāʕa", "nabīʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "نبع",
-        "u": "نبع",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نبع (form I)\n# نَبِعْ (nabiʕ) /na.biʕ/: first-person plural non-past active jussive of بَاعَ (bāʕa)\n# نُبَعْ (nubaʕ) /nu.baʕ/: first-person plural non-past passive jussive of بَاعَ (bāʕa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nabiʕ", "bāʕa", "nubaʕ"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "نباع",
-        "u": "نباع",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نباع (form I)\n# نُبَاعُ (nubāʕu) /nu.baː.ʕu/: first-person plural non-past passive indicative of بَاعَ (bāʕa)\n# نُبَاعَ (nubāʕa) /nu.baː.ʕa/: first-person plural non-past passive subjunctive of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nubāʕu", "bāʕa", "nubāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "بعتم",
-        "u": "بعتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بِعْتُمْ • (biʕtum) (form I) /biʕ.tum/\n# second-person masculine plural past active/passive of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["biʕtum", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيعون",
-        "u": "تبيعون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَبِيعُونَ • (tabīʕūna) (form I) /ta.biː.ʕuː.na/\n# second-person masculine plural non-past active indicative of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabīʕūna", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيعوا",
-        "u": "تبيعوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَبِيعُوا • (tabīʕū) (form I) /ta.biː.ʕuː/\n# second-person masculine plural non-past active subjunctive/jussive of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabīʕū", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "تباعون",
-        "u": "تباعون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُبَاعُونَ • (tubāʕūna) (form I) /tu.baː.ʕuː.na/\n# second-person masculine plural non-past passive indicative of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tubāʕūna", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "تباعوا",
-        "u": "تباعوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُبَاعُوا • (tubāʕū) (form I) /tu.baː.ʕuː/\n# second-person masculine plural non-past passive subjunctive/jussive of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tubāʕū", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "باعوا",
-        "u": "باعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَاعُوا • (bāʕū) (form I) /baː.ʕuː/\n# third-person masculine plural past active of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bāʕū", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "يبيعون",
-        "u": "يبيعون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَبِيعُونَ • (yabīʕūna) (form I) /ja.biː.ʕuː.na/\n# third-person masculine plural non-past active indicative of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabīʕūna", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "يبيعوا",
-        "u": "يبيعوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَبِيعُوا • (yabīʕū) (form I) /ja.biː.ʕuː/\n# third-person masculine plural non-past active subjunctive/jussive of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabīʕū", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "بيعوا",
-        "u": "بيعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بِيعُوا • (bīʕū) (form I) /biː.ʕuː/\n# inflection of بَاعَ (bāʕa):\n## third-person masculine plural past passive\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bīʕū", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "يباعون",
-        "u": "يباعون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُبَاعُونَ • (yubāʕūna) (form I) /ju.baː.ʕuː.na/\n# third-person masculine plural non-past passive indicative of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yubāʕūna", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "يباعوا",
-        "u": "يباعوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُبَاعُوا • (yubāʕū) (form I) /ju.baː.ʕuː/\n# third-person masculine plural non-past passive subjunctive/jussive of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yubāʕū", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "بعتن",
-        "u": "بعتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بِعْتُنَّ • (biʕtunna) (form I) /biʕ.tun.na/\n# second-person feminine plural past active/passive of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["biʕtunna", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "تبعن",
-        "u": "تبعن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تبعن (form I)\n# تَبِعْنَ (tabiʕna) /ta.biʕ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of بَاعَ (bāʕa)\n# تُبَعْنَ (tubaʕna) /tu.baʕ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabiʕna", "bāʕa", "tubaʕna"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "بعن",
-        "u": "بعن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بِعْنَ • (biʕna) (form I) /biʕ.na/\n# inflection of بَاعَ (bāʕa):\n## third-person feminine plural past active/passive\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["biʕna", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "يبعن",
-        "u": "يبعن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يبعن (form I)\n# يَبِعْنَ (yabiʕna) /ja.biʕ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of بَاعَ (bāʕa)\n# يُبَعْنَ (yubaʕna) /ju.baʕ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabiʕna", "bāʕa", "yubaʕna"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "تباعا",
-        "u": "تباعا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُبَاعَا • (tubāʕā) (form I) /tu.baː.ʕaː/\n# inflection of بَاعَ (bāʕa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tubāʕā", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "يبيعا",
-        "u": "يبيعا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَبِيعَا • (yabīʕā) (form I) /ja.biː.ʕaː/\n# third-person masculine dual non-past active subjunctive/jussive of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabīʕā", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "يبيعان",
-        "u": "يبيعان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَبِيعَانِ • (yabīʕāni) (form I) /ja.biː.ʕaː.ni/\n# third-person masculine dual non-past active indicative of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabīʕāni", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "تباعان",
-        "u": "تباعان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُبَاعَانِ • (tubāʕāni) (form I) /tu.baː.ʕaː.ni/\n# inflection of بَاعَ (bāʕa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tubāʕāni", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "يباعان",
-        "u": "يباعان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُبَاعَانِ • (yubāʕāni) (form I) /ju.baː.ʕaː.ni/\n# third-person masculine dual non-past passive indicative of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yubāʕāni", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيعا",
-        "u": "تبيعا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَبِيعَا • (tabīʕā) (form I) /ta.biː.ʕaː/\n# inflection of بَاعَ (bāʕa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabīʕā", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيعان",
-        "u": "تبيعان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَبِيعَانِ • (tabīʕāni) (form I) /ta.biː.ʕaː.ni/\n# inflection of بَاعَ (bāʕa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabīʕāni", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "يباعا",
-        "u": "يباعا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُبَاعَا • (yubāʕā) (form I) /ju.baː.ʕaː/\n# third-person masculine dual non-past passive subjunctive/jussive of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yubāʕā", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "بعتما",
-        "u": "بعتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بِعْتُمَا • (biʕtumā) (form I) /biʕ.tu.maː/\n# second-person dual past active/passive of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["biʕtumā", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "باعتا",
-        "u": "باعتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَاعَتَا • (bāʕatā) (form I) /baː.ʕa.taː/\n# third-person feminine dual past active of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bāʕatā", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "باعا",
-        "u": "باعا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَاعَا • (bāʕā) (form I) /baː.ʕaː/\n# third-person masculine dual past active of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bāʕā", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "بيعتا",
-        "u": "بيعتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بِيعَتَا • (bīʕatā) (form I) /biː.ʕa.taː/\n# third-person feminine dual past passive of بَاعَ (bāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bīʕatā", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      },
-      {
-        "w": "بيعا",
-        "u": "بيعا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بِيعَا • (bīʕā) (form I) /biː.ʕaː/\n# inflection of بَاعَ (bāʕa):\n## third-person masculine dual past passive\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bīʕā", "bāʕa"],
-        "k": "باع",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "بع",
+  "ses": {
     "harf": "ب",
+    "fasil": "بع",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "بعت",
+      "tur": "verb",
+      "baslik": "بعت (form I)\n# بِعْتُ (biʕtu) /biʕ.tu/: first-person singular past active/passive of بَاعَ (bāʕa)\n# بِعْتَ (biʕta) /biʕ.ta/: second-person masculine singular past active/passive of بَاعَ (bāʕa)\n# بِعْتِ (biʕti) /biʕ.ti/: second-person feminine singular past active/passive of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["biʕtu", "bāʕa", "biʕta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبع",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تبع (form I)\n# تَبِعْ (tabiʕ) /ta.biʕ/: inflection of بَاعَ (bāʕa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُبَعْ (tubaʕ) /tu.baʕ/: inflection of بَاعَ (bāʕa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabiʕ", "bāʕa", "tubaʕ"]
+    },
+    {
+      "madde": "تباع",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تباع (form I)\n# تُبَاعُ (tubāʕu) /tu.baː.ʕu/: inflection of بَاعَ (bāʕa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُبَاعَ (tubāʕa) /tu.baː.ʕa/: inflection of بَاعَ (bāʕa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tubāʕu", "bāʕa", "tubāʕa"]
+    },
+    {
+      "madde": "بيع",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "بِيعَ • (bīʕa) (form I) /biː.ʕa/\n# third-person masculine singular past passive of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bīʕa", "bāʕa"]
+    },
+    {
+      "madde": "يبيع",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يبيع (form I)\n# يَبِيعُ (yabīʕu) /ja.biː.ʕu/: third-person masculine singular non-past active indicative of بَاعَ (bāʕa)\n# يَبِيعَ (yabīʕa) /ja.biː.ʕa/: third-person masculine singular non-past active subjunctive of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabīʕu", "bāʕa", "yabīʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يباع",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يباع (form I)\n# يُبَاعُ (yubāʕu) /ju.baː.ʕu/: third-person masculine singular non-past passive indicative of بَاعَ (bāʕa)\n# يُبَاعَ (yubāʕa) /ju.baː.ʕa/: third-person masculine singular non-past passive subjunctive of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yubāʕu", "bāʕa", "yubāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبع",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يبع (form I)\n# يَبِعْ (yabiʕ) /ja.biʕ/: third-person masculine singular non-past active jussive of بَاعَ (bāʕa)\n# يُبَعْ (yubaʕ) /ju.baʕ/: third-person masculine singular non-past passive jussive of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabiʕ", "bāʕa", "yubaʕ"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "باعت",
+      "tur": "verb",
+      "baslik": "بَاعَتْ • (bāʕat) (form I) /baː.ʕat/\n# third-person feminine singular past active of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bāʕat", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبيع",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تبيع (form I)\n# تَبِيعُ (tabīʕu) /ta.biː.ʕu/: inflection of بَاعَ (bāʕa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَبِيعَ (tabīʕa) /ta.biː.ʕa/: inflection of بَاعَ (bāʕa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabīʕu", "bāʕa", "tabīʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بيعت",
+      "tur": "verb",
+      "baslik": "بِيعَتْ • (bīʕat) (form I) /biː.ʕat/\n# third-person feminine singular past passive of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bīʕat", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بع",
+      "tur": "verb",
+      "baslik": "بِعْ • (biʕ) (form I) /biʕ/\n# second-person masculine singular imperative of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["biʕ", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبيعين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَبِيعِينَ • (tabīʕīna) (form I) /ta.biː.ʕiː.na/\n# second-person feminine singular non-past active indicative of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabīʕīna", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبيعي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَبِيعِي • (tabīʕī) (form I) /ta.biː.ʕiː/\n# second-person feminine singular non-past active subjunctive/jussive of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabīʕī", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بيعي",
+      "tur": "verb",
+      "baslik": "بِيعِي • (bīʕī) (form I) /biː.ʕiː/\n# second-person feminine singular imperative of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bīʕī", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تباعين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُبَاعِينَ • (tubāʕīna) (form I) /tu.baː.ʕiː.na/\n# second-person feminine singular non-past passive indicative of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tubāʕīna", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تباعي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُبَاعِي • (tubāʕī) (form I) /tu.baː.ʕiː/\n# second-person feminine singular non-past passive subjunctive/jussive of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tubāʕī", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبيع",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أبيع (form I)\n# أَبِيعُ (ʔabīʕu) /ʔa.biː.ʕu/: first-person singular non-past active indicative of بَاعَ (bāʕa)\n# أَبِيعَ (ʔabīʕa) /ʔa.biː.ʕa/: first-person singular non-past active subjunctive of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔabīʕu", "bāʕa", "ʔabīʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبع",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أبع (form I)\n# أَبِعْ (ʔabiʕ) /ʔa.biʕ/: first-person singular non-past active jussive of بَاعَ (bāʕa)\n# أُبَعْ (ʔubaʕ) /ʔu.baʕ/: first-person singular non-past passive jussive of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔabiʕ", "bāʕa", "ʔubaʕ"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أباع",
+      "tur": "verb",
+      "etim_no": "1.2",
+      "baslik": "أباع (form I)\n# أُبَاعُ (ʔubāʕu) /ʔu.baː.ʕu/: first-person singular non-past passive indicative of بَاعَ (bāʕa)\n# أُبَاعَ (ʔubāʕa) /ʔu.baː.ʕa/: first-person singular non-past passive subjunctive of بَاعَ (bāʕa)",
+      "etim_sablon": [
+        ["nonlemma", "See the etymology of the corresponding lemma form."]
+      ],
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔubāʕu", "bāʕa", "ʔubāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بعنا",
+      "tur": "verb",
+      "baslik": "بِعْنَا • (biʕnā) (form I) /biʕ.naː/\n# first-person plural past active/passive of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["biʕnā", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نبيع",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نبيع (form I)\n# نَبِيعُ (nabīʕu) /na.biː.ʕu/: first-person plural non-past active indicative of بَاعَ (bāʕa)\n# نَبِيعَ (nabīʕa) /na.biː.ʕa/: first-person plural non-past active subjunctive of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nabīʕu", "bāʕa", "nabīʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نبع",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نبع (form I)\n# نَبِعْ (nabiʕ) /na.biʕ/: first-person plural non-past active jussive of بَاعَ (bāʕa)\n# نُبَعْ (nubaʕ) /nu.baʕ/: first-person plural non-past passive jussive of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nabiʕ", "bāʕa", "nubaʕ"]
+    },
+    {
+      "madde": "نباع",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نباع (form I)\n# نُبَاعُ (nubāʕu) /nu.baː.ʕu/: first-person plural non-past passive indicative of بَاعَ (bāʕa)\n# نُبَاعَ (nubāʕa) /nu.baː.ʕa/: first-person plural non-past passive subjunctive of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nubāʕu", "bāʕa", "nubāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بعتم",
+      "tur": "verb",
+      "baslik": "بِعْتُمْ • (biʕtum) (form I) /biʕ.tum/\n# second-person masculine plural past active/passive of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["biʕtum", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبيعون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَبِيعُونَ • (tabīʕūna) (form I) /ta.biː.ʕuː.na/\n# second-person masculine plural non-past active indicative of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabīʕūna", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبيعوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَبِيعُوا • (tabīʕū) (form I) /ta.biː.ʕuː/\n# second-person masculine plural non-past active subjunctive/jussive of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabīʕū", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تباعون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُبَاعُونَ • (tubāʕūna) (form I) /tu.baː.ʕuː.na/\n# second-person masculine plural non-past passive indicative of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tubāʕūna", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تباعوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُبَاعُوا • (tubāʕū) (form I) /tu.baː.ʕuː/\n# second-person masculine plural non-past passive subjunctive/jussive of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tubāʕū", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "باعوا",
+      "tur": "verb",
+      "baslik": "بَاعُوا • (bāʕū) (form I) /baː.ʕuː/\n# third-person masculine plural past active of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bāʕū", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبيعون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَبِيعُونَ • (yabīʕūna) (form I) /ja.biː.ʕuː.na/\n# third-person masculine plural non-past active indicative of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabīʕūna", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبيعوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَبِيعُوا • (yabīʕū) (form I) /ja.biː.ʕuː/\n# third-person masculine plural non-past active subjunctive/jussive of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabīʕū", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بيعوا",
+      "tur": "verb",
+      "baslik": "بِيعُوا • (bīʕū) (form I) /biː.ʕuː/\n# inflection of بَاعَ (bāʕa):\n## third-person masculine plural past passive\n## second-person masculine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bīʕū", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يباعون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُبَاعُونَ • (yubāʕūna) (form I) /ju.baː.ʕuː.na/\n# third-person masculine plural non-past passive indicative of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yubāʕūna", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يباعوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُبَاعُوا • (yubāʕū) (form I) /ju.baː.ʕuː/\n# third-person masculine plural non-past passive subjunctive/jussive of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yubāʕū", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بعتن",
+      "tur": "verb",
+      "baslik": "بِعْتُنَّ • (biʕtunna) (form I) /biʕ.tun.na/\n# second-person feminine plural past active/passive of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["biʕtunna", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبعن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تبعن (form I)\n# تَبِعْنَ (tabiʕna) /ta.biʕ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of بَاعَ (bāʕa)\n# تُبَعْنَ (tubaʕna) /tu.baʕ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabiʕna", "bāʕa", "tubaʕna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بعن",
+      "tur": "verb",
+      "baslik": "بِعْنَ • (biʕna) (form I) /biʕ.na/\n# inflection of بَاعَ (bāʕa):\n## third-person feminine plural past active/passive\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["biʕna", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبعن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يبعن (form I)\n# يَبِعْنَ (yabiʕna) /ja.biʕ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of بَاعَ (bāʕa)\n# يُبَعْنَ (yubaʕna) /ju.baʕ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabiʕna", "bāʕa", "yubaʕna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تباعا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُبَاعَا • (tubāʕā) (form I) /tu.baː.ʕaː/\n# inflection of بَاعَ (bāʕa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tubāʕā", "bāʕa"]
+    },
+    {
+      "madde": "يبيعا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَبِيعَا • (yabīʕā) (form I) /ja.biː.ʕaː/\n# third-person masculine dual non-past active subjunctive/jussive of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabīʕā", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبيعان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَبِيعَانِ • (yabīʕāni) (form I) /ja.biː.ʕaː.ni/\n# third-person masculine dual non-past active indicative of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabīʕāni", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تباعان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُبَاعَانِ • (tubāʕāni) (form I) /tu.baː.ʕaː.ni/\n# inflection of بَاعَ (bāʕa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tubāʕāni", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يباعان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُبَاعَانِ • (yubāʕāni) (form I) /ju.baː.ʕaː.ni/\n# third-person masculine dual non-past passive indicative of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yubāʕāni", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبيعا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَبِيعَا • (tabīʕā) (form I) /ta.biː.ʕaː/\n# inflection of بَاعَ (bāʕa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabīʕā", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبيعان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَبِيعَانِ • (tabīʕāni) (form I) /ta.biː.ʕaː.ni/\n# inflection of بَاعَ (bāʕa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabīʕāni", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يباعا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُبَاعَا • (yubāʕā) (form I) /ju.baː.ʕaː/\n# third-person masculine dual non-past passive subjunctive/jussive of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yubāʕā", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بعتما",
+      "tur": "verb",
+      "baslik": "بِعْتُمَا • (biʕtumā) (form I) /biʕ.tu.maː/\n# second-person dual past active/passive of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["biʕtumā", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "باعتا",
+      "tur": "verb",
+      "baslik": "بَاعَتَا • (bāʕatā) (form I) /baː.ʕa.taː/\n# third-person feminine dual past active of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bāʕatā", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "باعا",
+      "tur": "verb",
+      "baslik": "بَاعَا • (bāʕā) (form I) /baː.ʕaː/\n# third-person masculine dual past active of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bāʕā", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بيعتا",
+      "tur": "verb",
+      "baslik": "بِيعَتَا • (bīʕatā) (form I) /biː.ʕa.taː/\n# third-person feminine dual past passive of بَاعَ (bāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bīʕatā", "bāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بيعا",
+      "tur": "verb",
+      "baslik": "بِيعَا • (bīʕā) (form I) /biː.ʕaː/\n# inflection of بَاعَ (bāʕa):\n## third-person masculine dual past passive\n## second-person dual imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bīʕā", "bāʕa"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "باع", "r7"]
+  ],
+  "mana": {
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
@@ -680,16 +485,11 @@
     "dayanak_tanim": "the exchange of goods for an agreed sum of money",
     "synset_sayisi": 17
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "adopt.v.01",
     "aim.v.01",
     "follow.v.01",
@@ -707,12 +507,10 @@
     "succeed.v.02",
     "watch.v.02"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,432 +1,345 @@
 {
   "kok": "ءلا",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءلا", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "آلو",
-        "u": "آلو",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "آلو (form I)\n# آلُو (ʔālū) /ʔaː.luː/: first-person singular non-past active indicative of أَلَا (ʔalā)\n# آلُوَ (ʔāluwa) /ʔaː.lu.wa/: first-person singular non-past active subjunctive of أَلَا (ʔalā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔālū", "ʔalā", "ʔāluwa"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "آل",
-        "u": "آل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "آلُ • (ʔālu) (form I) /ʔaː.lu/\n# first-person singular non-past active jussive of أَلَا (ʔalā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔālu", "ʔalā"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "ألي",
-        "u": "ألي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أُلِيَ • (ʔuliya) (form I) /ʔu.li.ja/\n# third-person masculine singular past passive of أَلَا (ʔalā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔuliya", "ʔalā"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "يؤل",
-        "u": "يؤل",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُؤْلَ • (yuʔla) (form I) /juʔ.la/\n# third-person masculine singular non-past passive jussive of أَلَا (ʔalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuʔla", "ʔalā"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "يأل",
-        "u": "يأل",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَأْلُ • (yaʔlu) (form I) /jaʔ.lu/\n# third-person masculine singular non-past active jussive of أَلَا (ʔalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʔlu", "ʔalā"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "يألو",
-        "u": "يألو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يألو (form I)\n# يَأْلُو (yaʔlū) /jaʔ.luː/: third-person masculine singular non-past active indicative of أَلَا (ʔalā)\n# يَأْلُوَ (yaʔluwa) /jaʔ.lu.wa/: third-person masculine singular non-past active subjunctive of أَلَا (ʔalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʔlū", "ʔalā", "yaʔluwa"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "يؤلى",
-        "u": "يؤلى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُؤْلَى • (yuʔlā) (form I) /juʔ.laː/\n# third-person masculine singular non-past passive indicative/subjunctive of أَلَا (ʔalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuʔlā", "ʔalā"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "ألت",
-        "u": "ألت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَلَتْ • (ʔalat) (form I) /ʔa.lat/\n# third-person feminine singular past active of أَلَا (ʔalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔalat", "ʔalā"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "تأل",
-        "u": "تأل",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَأْلُ • (taʔlu) (form I) /taʔ.lu/\n# inflection of أَلَا (ʔalā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʔlu", "ʔalā"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "تألو",
-        "u": "تألو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تألو (form I)\n# تَأْلُو (taʔlū) /taʔ.luː/: inflection of أَلَا (ʔalā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَأْلُوَ (taʔluwa) /taʔ.lu.wa/: inflection of أَلَا (ʔalā):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʔlū", "ʔalā", "taʔluwa"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "ألوت",
-        "u": "ألوت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ألوت (form I)\n# أَلَوْتُ (ʔalawtu) /ʔa.law.tu/: first-person singular past active of أَلَا (ʔalā)\n# أَلَوْتَ (ʔalawta) /ʔa.law.ta/: second-person masculine singular past active of أَلَا (ʔalā)\n# أَلَوْتِ (ʔalawti) /ʔa.law.ti/: second-person feminine singular past active of أَلَا (ʔalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔalawtu", "ʔalā", "ʔalawta"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "تألين",
-        "u": "تألين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَأْلِينَ • (taʔlīna) (form I) /taʔ.liː.na/\n# second-person feminine singular non-past active indicative of أَلَا (ʔalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʔlīna", "ʔalā"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "تألي",
-        "u": "تألي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَأْلِي • (taʔlī) (form I) /taʔ.liː/\n# second-person feminine singular non-past active subjunctive/jussive of أَلَا (ʔalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʔlī", "ʔalā"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "نأل",
-        "u": "نأل",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نَأْلُ • (naʔlu) (form I) /naʔ.lu/\n# first-person plural non-past active jussive of أَلَا (ʔalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naʔlu", "ʔalā"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "ألونا",
-        "u": "ألونا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَلَوْنَا • (ʔalawnā) (form I) /ʔa.law.naː/\n# first-person plural past active of أَلَا (ʔalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔalawnā", "ʔalā"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "نألو",
-        "u": "نألو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نألو (form I)\n# نَأْلُو (naʔlū) /naʔ.luː/: first-person plural non-past active indicative of أَلَا (ʔalā)\n# نَأْلُوَ (naʔluwa) /naʔ.lu.wa/: first-person plural non-past active subjunctive of أَلَا (ʔalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naʔlū", "ʔalā", "naʔluwa"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "تألون",
-        "u": "تألون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَأْلُونَ • (taʔlūna) (form I) /taʔ.luː.na/\n# inflection of أَلَا (ʔalā):\n## second-person masculine/feminine plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʔlūna", "ʔalā"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "ألوتم",
-        "u": "ألوتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَلَوْتُمْ • (ʔalawtum) (form I) /ʔa.law.tum/\n# second-person masculine plural past active of أَلَا (ʔalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔalawtum", "ʔalā"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "تألوا",
-        "u": "تألوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تألوا (form I)\n# تَأْلُوَا (taʔluwā) /taʔ.lu.waː/: inflection of أَلَا (ʔalā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تَأْلُوا (taʔlū) /taʔ.luː/: second-person masculine plural non-past active subjunctive/jussive of أَلَا (ʔalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʔluwā", "ʔalā", "taʔlū"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "ألوا",
-        "u": "ألوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ألوا (form I)\n# أَلَوَا (ʔalawā) /ʔa.la.waː/: third-person masculine dual past active of أَلَا (ʔalā)\n# أَلَوْا (ʔalaw) /ʔa.law/: third-person masculine plural past active of أَلَا (ʔalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔalawā", "ʔalā", "ʔalaw"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "يألون",
-        "u": "يألون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَأْلُونَ • (yaʔlūna) (form I) /jaʔ.luː.na/\n# inflection of أَلَا (ʔalā):\n## third-person masculine/feminine plural non-past active indicative\n## third-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʔlūna", "ʔalā"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "يألوا",
-        "u": "يألوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يألوا (form I)\n# يَأْلُوَا (yaʔluwā) /jaʔ.lu.waː/: third-person masculine dual non-past active subjunctive/jussive of أَلَا (ʔalā)\n# يَأْلُوا (yaʔlū) /jaʔ.luː/: third-person masculine plural non-past active subjunctive/jussive of أَلَا (ʔalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʔluwā", "ʔalā", "yaʔlū"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "ألوتن",
-        "u": "ألوتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَلَوْتُنَّ • (ʔalawtunna) (form I) /ʔa.law.tun.na/\n# second-person feminine plural past active of أَلَا (ʔalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔalawtunna", "ʔalā"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "ألون",
-        "u": "ألون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أَلَوْنَ • (ʔalawna) (form I) /ʔa.law.na/\n# third-person feminine plural past active of أَلَا (ʔalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔalawna", "ʔalā"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "ألتا",
-        "u": "ألتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَلَتَا • (ʔalatā) (form I) /ʔa.la.taː/\n# third-person feminine dual past active of أَلَا (ʔalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔalatā", "ʔalā"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "ألوتما",
-        "u": "ألوتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَلَوْتُمَا • (ʔalawtumā) (form I) /ʔa.law.tu.maː/\n# second-person dual past active of أَلَا (ʔalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔalawtumā", "ʔalā"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "يألوان",
-        "u": "يألوان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَأْلُوَانِ • (yaʔluwāni) (form I) /jaʔ.lu.waː.ni/\n# third-person masculine dual non-past active indicative of أَلَا (ʔalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʔluwāni", "ʔalā"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "اؤلي",
-        "u": "اؤلي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُؤْلِي • (uʔlī) (form I) /uʔ.liː/\n# second-person feminine singular imperative of أَلَا (ʔalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uʔlī", "ʔalā"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "اؤلوا",
-        "u": "اؤلوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اؤلوا (form I)\n# اُؤْلُوَا (uʔluwā) /uʔ.lu.waː/: second-person dual imperative of أَلَا (ʔalā)\n# اُؤْلُوا (uʔlū) /uʔ.luː/: second-person masculine plural imperative of أَلَا (ʔalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uʔluwā", "ʔalā", "uʔlū"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "تألوان",
-        "u": "تألوان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأْلُوَانِ • (taʔluwāni) (form I) /taʔ.lu.waː.ni/\n# inflection of أَلَا (ʔalā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʔluwāni", "ʔalā"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "اؤلون",
-        "u": "اؤلون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُؤْلُونَ • (uʔlūna) (form I) /uʔ.luː.na/\n# second-person feminine plural imperative of أَلَا (ʔalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uʔlūna", "ʔalā"],
-        "k": "ألا",
-        "yol": "kök"
-      },
-      {
-        "w": "اؤل",
-        "u": "اؤل",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُؤْلُ • (uʔlu) (form I) /uʔ.lu/\n# second-person masculine singular imperative of أَلَا (ʔalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uʔlu", "ʔalā"],
-        "k": "ألا",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "لل",
+  "ses": {
     "harf": "ء",
+    "fasil": "لل",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "آلو",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "آلو (form I)\n# آلُو (ʔālū) /ʔaː.luː/: first-person singular non-past active indicative of أَلَا (ʔalā)\n# آلُوَ (ʔāluwa) /ʔaː.lu.wa/: first-person singular non-past active subjunctive of أَلَا (ʔalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔālū", "ʔalā", "ʔāluwa"],
+      "kok_yazilis": "ألا"
+    },
+    {
+      "madde": "آل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "آلُ • (ʔālu) (form I) /ʔaː.lu/\n# first-person singular non-past active jussive of أَلَا (ʔalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔālu", "ʔalā"],
+      "kok_yazilis": "ألا"
+    },
+    {
+      "madde": "ألي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أُلِيَ • (ʔuliya) (form I) /ʔu.li.ja/\n# third-person masculine singular past passive of أَلَا (ʔalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔuliya", "ʔalā"],
+      "kok_yazilis": "ألا"
+    },
+    {
+      "madde": "يؤل",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُؤْلَ • (yuʔla) (form I) /juʔ.la/\n# third-person masculine singular non-past passive jussive of أَلَا (ʔalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuʔla", "ʔalā"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يأل",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَأْلُ • (yaʔlu) (form I) /jaʔ.lu/\n# third-person masculine singular non-past active jussive of أَلَا (ʔalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʔlu", "ʔalā"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يألو",
+      "tur": "verb",
+      "baslik": "يألو (form I)\n# يَأْلُو (yaʔlū) /jaʔ.luː/: third-person masculine singular non-past active indicative of أَلَا (ʔalā)\n# يَأْلُوَ (yaʔluwa) /jaʔ.lu.wa/: third-person masculine singular non-past active subjunctive of أَلَا (ʔalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʔlū", "ʔalā", "yaʔluwa"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يؤلى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُؤْلَى • (yuʔlā) (form I) /juʔ.laː/\n# third-person masculine singular non-past passive indicative/subjunctive of أَلَا (ʔalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuʔlā", "ʔalā"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ألت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَلَتْ • (ʔalat) (form I) /ʔa.lat/\n# third-person feminine singular past active of أَلَا (ʔalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔalat", "ʔalā"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تأل",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَأْلُ • (taʔlu) (form I) /taʔ.lu/\n# inflection of أَلَا (ʔalā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʔlu", "ʔalā"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تألو",
+      "tur": "verb",
+      "baslik": "تألو (form I)\n# تَأْلُو (taʔlū) /taʔ.luː/: inflection of أَلَا (ʔalā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَأْلُوَ (taʔluwa) /taʔ.lu.wa/: inflection of أَلَا (ʔalā):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʔlū", "ʔalā", "taʔluwa"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ألوت",
+      "tur": "verb",
+      "baslik": "ألوت (form I)\n# أَلَوْتُ (ʔalawtu) /ʔa.law.tu/: first-person singular past active of أَلَا (ʔalā)\n# أَلَوْتَ (ʔalawta) /ʔa.law.ta/: second-person masculine singular past active of أَلَا (ʔalā)\n# أَلَوْتِ (ʔalawti) /ʔa.law.ti/: second-person feminine singular past active of أَلَا (ʔalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔalawtu", "ʔalā", "ʔalawta"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تألين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَأْلِينَ • (taʔlīna) (form I) /taʔ.liː.na/\n# second-person feminine singular non-past active indicative of أَلَا (ʔalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʔlīna", "ʔalā"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تألي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَأْلِي • (taʔlī) (form I) /taʔ.liː/\n# second-person feminine singular non-past active subjunctive/jussive of أَلَا (ʔalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʔlī", "ʔalā"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نأل",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نَأْلُ • (naʔlu) (form I) /naʔ.lu/\n# first-person plural non-past active jussive of أَلَا (ʔalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naʔlu", "ʔalā"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ألونا",
+      "tur": "verb",
+      "baslik": "أَلَوْنَا • (ʔalawnā) (form I) /ʔa.law.naː/\n# first-person plural past active of أَلَا (ʔalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔalawnā", "ʔalā"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نألو",
+      "tur": "verb",
+      "baslik": "نألو (form I)\n# نَأْلُو (naʔlū) /naʔ.luː/: first-person plural non-past active indicative of أَلَا (ʔalā)\n# نَأْلُوَ (naʔluwa) /naʔ.lu.wa/: first-person plural non-past active subjunctive of أَلَا (ʔalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naʔlū", "ʔalā", "naʔluwa"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تألون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَأْلُونَ • (taʔlūna) (form I) /taʔ.luː.na/\n# inflection of أَلَا (ʔalā):\n## second-person masculine/feminine plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʔlūna", "ʔalā"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ألوتم",
+      "tur": "verb",
+      "baslik": "أَلَوْتُمْ • (ʔalawtum) (form I) /ʔa.law.tum/\n# second-person masculine plural past active of أَلَا (ʔalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔalawtum", "ʔalā"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تألوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تألوا (form I)\n# تَأْلُوَا (taʔluwā) /taʔ.lu.waː/: inflection of أَلَا (ʔalā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تَأْلُوا (taʔlū) /taʔ.luː/: second-person masculine plural non-past active subjunctive/jussive of أَلَا (ʔalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʔluwā", "ʔalā", "taʔlū"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ألوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ألوا (form I)\n# أَلَوَا (ʔalawā) /ʔa.la.waː/: third-person masculine dual past active of أَلَا (ʔalā)\n# أَلَوْا (ʔalaw) /ʔa.law/: third-person masculine plural past active of أَلَا (ʔalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔalawā", "ʔalā", "ʔalaw"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يألون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَأْلُونَ • (yaʔlūna) (form I) /jaʔ.luː.na/\n# inflection of أَلَا (ʔalā):\n## third-person masculine/feminine plural non-past active indicative\n## third-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʔlūna", "ʔalā"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يألوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يألوا (form I)\n# يَأْلُوَا (yaʔluwā) /jaʔ.lu.waː/: third-person masculine dual non-past active subjunctive/jussive of أَلَا (ʔalā)\n# يَأْلُوا (yaʔlū) /jaʔ.luː/: third-person masculine plural non-past active subjunctive/jussive of أَلَا (ʔalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʔluwā", "ʔalā", "yaʔlū"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ألوتن",
+      "tur": "verb",
+      "baslik": "أَلَوْتُنَّ • (ʔalawtunna) (form I) /ʔa.law.tun.na/\n# second-person feminine plural past active of أَلَا (ʔalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔalawtunna", "ʔalā"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ألون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أَلَوْنَ • (ʔalawna) (form I) /ʔa.law.na/\n# third-person feminine plural past active of أَلَا (ʔalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔalawna", "ʔalā"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ألتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَلَتَا • (ʔalatā) (form I) /ʔa.la.taː/\n# third-person feminine dual past active of أَلَا (ʔalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔalatā", "ʔalā"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ألوتما",
+      "tur": "verb",
+      "baslik": "أَلَوْتُمَا • (ʔalawtumā) (form I) /ʔa.law.tu.maː/\n# second-person dual past active of أَلَا (ʔalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔalawtumā", "ʔalā"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يألوان",
+      "tur": "verb",
+      "baslik": "يَأْلُوَانِ • (yaʔluwāni) (form I) /jaʔ.lu.waː.ni/\n# third-person masculine dual non-past active indicative of أَلَا (ʔalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʔluwāni", "ʔalā"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    },
+    {
+      "madde": "اؤلي",
+      "tur": "verb",
+      "baslik": "اُؤْلِي • (uʔlī) (form I) /uʔ.liː/\n# second-person feminine singular imperative of أَلَا (ʔalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uʔlī", "ʔalā"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    },
+    {
+      "madde": "اؤلوا",
+      "tur": "verb",
+      "baslik": "اؤلوا (form I)\n# اُؤْلُوَا (uʔluwā) /uʔ.lu.waː/: second-person dual imperative of أَلَا (ʔalā)\n# اُؤْلُوا (uʔlū) /uʔ.luː/: second-person masculine plural imperative of أَلَا (ʔalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uʔluwā", "ʔalā", "uʔlū"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تألوان",
+      "tur": "verb",
+      "baslik": "تَأْلُوَانِ • (taʔluwāni) (form I) /taʔ.lu.waː.ni/\n# inflection of أَلَا (ʔalā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʔluwāni", "ʔalā"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    },
+    {
+      "madde": "اؤلون",
+      "tur": "verb",
+      "baslik": "اُؤْلُونَ • (uʔlūna) (form I) /uʔ.luː.na/\n# second-person feminine plural imperative of أَلَا (ʔalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uʔlūna", "ʔalā"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    },
+    {
+      "madde": "اؤل",
+      "tur": "verb",
+      "baslik": "اُؤْلُ • (uʔlu) (form I) /uʔ.lu/\n# second-person masculine singular imperative of أَلَا (ʔalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uʔlu", "ʔalā"],
+      "kok_yazilis": "ألا",
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ءلا", "r7"]
+  ],
+  "mana": {
     "ince": "location.n.01",
     "orta": "noun.location",
     "ust": "ölçü, mekân ve zaman",
@@ -434,22 +347,15 @@
     "dayanak_tanim": "a kingdom (constitutional monarchy) in northwestern Africa with a largely Muslim population; achieved independence from France in 1956",
     "synset_sayisi": 2
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["leader.n.01", "region.n.03"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["leader.n.01", "region.n.03"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

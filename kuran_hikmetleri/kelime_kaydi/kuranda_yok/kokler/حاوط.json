@@ -1,482 +1,335 @@
 {
   "kok": "حاوط",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "حاوط", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يحاوط",
-        "u": "يحاوط",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يحاوط (form III)\n# يُحَاوِطُ (yuḥāwiṭu) /ju.ħaː.wi.tˤu/: third-person masculine singular non-past active indicative of حَاوَطَ (ḥāwaṭa)\n# يُحَاوَطُ (yuḥāwaṭu) /ju.ħaː.wa.tˤu/: third-person masculine singular non-past passive indicative of حَاوَطَ (ḥāwaṭa)\n# يُحَاوِطَ (yuḥāwiṭa) /ju.ħaː.wi.tˤa/: third-person masculine singular non-past active subjunctive of حَاوَطَ (ḥāwaṭa)\n# يُحَاوَطَ (yuḥāwaṭa) /",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuḥāwiṭu", "ḥāwaṭa", "yuḥāwaṭu"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "حووط",
-        "u": "حووط",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حُووِطَ • (ḥūwiṭa) (form III) /ħuː.wi.tˤa/\n# third-person masculine singular past passive of حَاوَطَ (ḥāwaṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥūwiṭa", "ḥāwaṭa"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "حاوطت",
-        "u": "حاوطت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حاوطت (form III)\n# حَاوَطْتُ (ḥāwaṭtu) /ħaː.watˤ.tu/: first-person singular past active of حَاوَطَ (ḥāwaṭa)\n# حَاوَطْتَ (ḥāwaṭta) /ħaː.watˤ.ta/: second-person masculine singular past active of حَاوَطَ (ḥāwaṭa)\n# حَاوَطْتِ (ḥāwaṭti) /ħaː.watˤ.ti/: second-person feminine singular past active of حَاوَطَ (ḥāwaṭa)\n# حَاوَطَتْ (ḥāwaṭat) /ħaː.wa.tˤat/: third-person feminine singular past active of حَاوَط",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥāwaṭtu", "ḥāwaṭa", "ḥāwaṭta"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "تحاوط",
-        "u": "تحاوط",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تحاوط (form III)\n# تُحَاوِطُ (tuḥāwiṭu) /tu.ħaː.wi.tˤu/: inflection of حَاوَطَ (ḥāwaṭa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُحَاوَطُ (tuḥāwaṭu) /tu.ħaː.wa.tˤu/: inflection of حَاوَطَ (ḥāwaṭa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuḥāwiṭu", "ḥāwaṭa", "tuḥāwaṭu"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "حووطت",
-        "u": "حووطت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حووطت (form III)\n# حُووِطْتُ (ḥūwiṭtu) /ħuː.witˤ.tu/: first-person singular past passive of حَاوَطَ (ḥāwaṭa)\n# حُووِطْتَ (ḥūwiṭta) /ħuː.witˤ.ta/: second-person masculine singular past passive of حَاوَطَ (ḥāwaṭa)\n# حُووِطْتِ (ḥūwiṭti) /ħuː.witˤ.ti/: second-person feminine singular past passive of حَاوَطَ (ḥāwaṭa)\n# حُووِطَتْ (ḥūwiṭat) /ħuː.wi.tˤat/: third-person feminine singular past passive of حَ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥūwiṭtu", "ḥāwaṭa", "ḥūwiṭta"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "تحاوطين",
-        "u": "تحاوطين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تحاوطين (form III)\n# تُحَاوِطِينَ (tuḥāwiṭīna) /tu.ħaː.wi.tˤiː.na/: second-person feminine singular non-past active indicative of حَاوَطَ (ḥāwaṭa)\n# تُحَاوَطِينَ (tuḥāwaṭīna) /tu.ħaː.wa.tˤiː.na/: second-person feminine singular non-past passive indicative of حَاوَطَ (ḥāwaṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuḥāwiṭīna", "ḥāwaṭa", "tuḥāwaṭīna"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "تحاوطي",
-        "u": "تحاوطي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تحاوطي (form III)\n# تُحَاوِطِي (tuḥāwiṭī) /tu.ħaː.wi.tˤiː/: second-person feminine singular non-past active subjunctive/jussive of حَاوَطَ (ḥāwaṭa)\n# تُحَاوَطِي (tuḥāwaṭī) /tu.ħaː.wa.tˤiː/: second-person feminine singular non-past passive subjunctive/jussive of حَاوَطَ (ḥāwaṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuḥāwiṭī", "ḥāwaṭa", "tuḥāwaṭī"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "حاوطي",
-        "u": "حاوطي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حَاوِطِي • (ḥāwiṭī) (form III) /ħaː.wi.tˤiː/\n# second-person feminine singular imperative of حَاوَطَ (ḥāwaṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥāwiṭī", "ḥāwaṭa"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "أحاوط",
-        "u": "أحاوط",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أحاوط (form III)\n# أُحَاوِطُ (ʔuḥāwiṭu) /ʔu.ħaː.wi.tˤu/: first-person singular non-past active indicative of حَاوَطَ (ḥāwaṭa)\n# أُحَاوَطُ (ʔuḥāwaṭu) /ʔu.ħaː.wa.tˤu/: first-person singular non-past passive indicative of حَاوَطَ (ḥāwaṭa)\n# أُحَاوِطَ (ʔuḥāwiṭa) /ʔu.ħaː.wi.tˤa/: first-person singular non-past active subjunctive of حَاوَطَ (ḥāwaṭa)\n# أُحَاوَطَ (ʔuḥāwaṭa) /ʔu.ħaː.wa.tˤa/: first-person s",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔuḥāwiṭu", "ḥāwaṭa", "ʔuḥāwaṭu"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "حاوطنا",
-        "u": "حاوطنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حَاوَطْنَا • (ḥāwaṭnā) (form III) /ħaː.watˤ.naː/\n# first-person plural past active of حَاوَطَ (ḥāwaṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥāwaṭnā", "ḥāwaṭa"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "نحاوط",
-        "u": "نحاوط",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نحاوط (form III)\n# نُحَاوِطُ (nuḥāwiṭu) /nu.ħaː.wi.tˤu/: first-person plural non-past active indicative of حَاوَطَ (ḥāwaṭa)\n# نُحَاوَطُ (nuḥāwaṭu) /nu.ħaː.wa.tˤu/: first-person plural non-past passive indicative of حَاوَطَ (ḥāwaṭa)\n# نُحَاوِطَ (nuḥāwiṭa) /nu.ħaː.wi.tˤa/: first-person plural non-past active subjunctive of حَاوَطَ (ḥāwaṭa)\n# نُحَاوَطَ (nuḥāwaṭa) /nu.ħaː.wa.tˤa/: first-person plural ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nuḥāwiṭu", "ḥāwaṭa", "nuḥāwaṭu"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "حووطنا",
-        "u": "حووطنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حُووِطْنَا • (ḥūwiṭnā) (form III) /ħuː.witˤ.naː/\n# first-person plural past passive of حَاوَطَ (ḥāwaṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥūwiṭnā", "ḥāwaṭa"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "حاوطتم",
-        "u": "حاوطتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حَاوَطْتُمْ • (ḥāwaṭtum) (form III) /ħaː.watˤ.tum/\n# second-person masculine plural past active of حَاوَطَ (ḥāwaṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥāwaṭtum", "ḥāwaṭa"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "تحاوطون",
-        "u": "تحاوطون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تحاوطون (form III)\n# تُحَاوِطُونَ (tuḥāwiṭūna) /tu.ħaː.wi.tˤuː.na/: second-person masculine plural non-past active indicative of حَاوَطَ (ḥāwaṭa)\n# تُحَاوَطُونَ (tuḥāwaṭūna) /tu.ħaː.wa.tˤuː.na/: second-person masculine plural non-past passive indicative of حَاوَطَ (ḥāwaṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuḥāwiṭūna", "ḥāwaṭa", "tuḥāwaṭūna"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "تحاوطوا",
-        "u": "تحاوطوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تحاوطوا (form III)\n# تُحَاوِطُوا (tuḥāwiṭū) /tu.ħaː.wi.tˤuː/: second-person masculine plural non-past active subjunctive/jussive of حَاوَطَ (ḥāwaṭa)\n# تُحَاوَطُوا (tuḥāwaṭū) /tu.ħaː.wa.tˤuː/: second-person masculine plural non-past passive subjunctive/jussive of حَاوَطَ (ḥāwaṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuḥāwiṭū", "ḥāwaṭa", "tuḥāwaṭū"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "حووطتم",
-        "u": "حووطتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حُووِطْتُمْ • (ḥūwiṭtum) (form III) /ħuː.witˤ.tum/\n# second-person masculine plural past passive of حَاوَطَ (ḥāwaṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥūwiṭtum", "ḥāwaṭa"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "حاوطوا",
-        "u": "حاوطوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حاوطوا (form III)\n# حَاوَطُوا (ḥāwaṭū) /ħaː.wa.tˤuː/: third-person masculine plural past active of حَاوَطَ (ḥāwaṭa)\n# حَاوِطُوا (ḥāwiṭū) /ħaː.wi.tˤuː/: second-person masculine plural imperative of حَاوَطَ (ḥāwaṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥāwaṭū", "ḥāwaṭa", "ḥāwiṭū"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "يحاوطون",
-        "u": "يحاوطون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يحاوطون (form III)\n# يُحَاوِطُونَ (yuḥāwiṭūna) /ju.ħaː.wi.tˤuː.na/: third-person masculine plural non-past active indicative of حَاوَطَ (ḥāwaṭa)\n# يُحَاوَطُونَ (yuḥāwaṭūna) /ju.ħaː.wa.tˤuː.na/: third-person masculine plural non-past passive indicative of حَاوَطَ (ḥāwaṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuḥāwiṭūna", "ḥāwaṭa", "yuḥāwaṭūna"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "يحاوطوا",
-        "u": "يحاوطوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يحاوطوا (form III)\n# يُحَاوِطُوا (yuḥāwiṭū) /ju.ħaː.wi.tˤuː/: third-person masculine plural non-past active subjunctive/jussive of حَاوَطَ (ḥāwaṭa)\n# يُحَاوَطُوا (yuḥāwaṭū) /ju.ħaː.wa.tˤuː/: third-person masculine plural non-past passive subjunctive/jussive of حَاوَطَ (ḥāwaṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuḥāwiṭū", "ḥāwaṭa", "yuḥāwaṭū"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "حووطوا",
-        "u": "حووطوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حُووِطُوا • (ḥūwiṭū) (form III) /ħuː.wi.tˤuː/\n# third-person masculine plural past passive of حَاوَطَ (ḥāwaṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥūwiṭū", "ḥāwaṭa"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "حاوطتن",
-        "u": "حاوطتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حَاوَطْتُنَّ • (ḥāwaṭtunna) (form III) /ħaː.watˤ.tun.na/\n# second-person feminine plural past active of حَاوَطَ (ḥāwaṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥāwaṭtunna", "ḥāwaṭa"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "تحاوطن",
-        "u": "تحاوطن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تحاوطن (form III)\n# تُحَاوِطْنَ (tuḥāwiṭna) /tu.ħaː.witˤ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of حَاوَطَ (ḥāwaṭa)\n# تُحَاوَطْنَ (tuḥāwaṭna) /tu.ħaː.watˤ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of حَاوَطَ (ḥāwaṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuḥāwiṭna", "ḥāwaṭa", "tuḥāwaṭna"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "حاوطن",
-        "u": "حاوطن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حاوطن (form III)\n# حَاوَطْنَ (ḥāwaṭna) /ħaː.watˤ.na/: third-person feminine plural past active of حَاوَطَ (ḥāwaṭa)\n# حَاوِطْنَ (ḥāwiṭna) /ħaː.witˤ.na/: second-person feminine plural imperative of حَاوَطَ (ḥāwaṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥāwaṭna", "ḥāwaṭa", "ḥāwiṭna"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "حووطتن",
-        "u": "حووطتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حُووِطْتُنَّ • (ḥūwiṭtunna) (form III) /ħuː.witˤ.tun.na/\n# second-person feminine plural past passive of حَاوَطَ (ḥāwaṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥūwiṭtunna", "ḥāwaṭa"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "يحاوطن",
-        "u": "يحاوطن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يحاوطن (form III)\n# يُحَاوِطْنَ (yuḥāwiṭna) /ju.ħaː.witˤ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of حَاوَطَ (ḥāwaṭa)\n# يُحَاوَطْنَ (yuḥāwaṭna) /ju.ħaː.watˤ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of حَاوَطَ (ḥāwaṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuḥāwiṭna", "ḥāwaṭa", "yuḥāwaṭna"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "حووطن",
-        "u": "حووطن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حُووِطْنَ • (ḥūwiṭna) (form III) /ħuː.witˤ.na/\n# third-person feminine plural past passive of حَاوَطَ (ḥāwaṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥūwiṭna", "ḥāwaṭa"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "حاوطا",
-        "u": "حاوطا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حاوطا (form III)\n# حَاوَطَا (ḥāwaṭā) /ħaː.wa.tˤaː/: third-person masculine dual past active of حَاوَطَ (ḥāwaṭa)\n# حَاوِطَا (ḥāwiṭā) /ħaː.wi.tˤaː/: second-person dual imperative of حَاوَطَ (ḥāwaṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥāwaṭā", "ḥāwaṭa", "ḥāwiṭā"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "حاوطتا",
-        "u": "حاوطتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حَاوَطَتَا • (ḥāwaṭatā) (form III) /ħaː.wa.tˤa.taː/\n# third-person feminine dual past active of حَاوَطَ (ḥāwaṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥāwaṭatā", "ḥāwaṭa"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "حووطا",
-        "u": "حووطا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حُووِطَا • (ḥūwiṭā) (form III) /ħuː.wi.tˤaː/\n# third-person masculine dual past passive of حَاوَطَ (ḥāwaṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥūwiṭā", "ḥāwaṭa"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "حاوطتما",
-        "u": "حاوطتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حَاوَطْتُمَا • (ḥāwaṭtumā) (form III) /ħaː.watˤ.tu.maː/\n# second-person dual past active of حَاوَطَ (ḥāwaṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥāwaṭtumā", "ḥāwaṭa"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "حووطتما",
-        "u": "حووطتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حُووِطْتُمَا • (ḥūwiṭtumā) (form III) /ħuː.witˤ.tu.maː/\n# second-person dual past passive of حَاوَطَ (ḥāwaṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥūwiṭtumā", "ḥāwaṭa"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "حووطتا",
-        "u": "حووطتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حُووِطَتَا • (ḥūwiṭatā) (form III) /ħuː.wi.tˤa.taː/\n# third-person feminine dual past passive of حَاوَطَ (ḥāwaṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ḥūwiṭatā", "ḥāwaṭa"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "تحاوطان",
-        "u": "تحاوطان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تحاوطان (form III)\n# تُحَاوِطَانِ (tuḥāwiṭāni) /tu.ħaː.wi.tˤaː.ni/: inflection of حَاوَطَ (ḥāwaṭa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُحَاوَطَانِ (tuḥāwaṭāni) /tu.ħaː.wa.tˤaː.ni/: inflection of حَاوَطَ (ḥāwaṭa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuḥāwiṭāni", "ḥāwaṭa", "tuḥāwaṭāni"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "يحاوطان",
-        "u": "يحاوطان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يحاوطان (form III)\n# يُحَاوِطَانِ (yuḥāwiṭāni) /ju.ħaː.wi.tˤaː.ni/: third-person masculine dual non-past active indicative of حَاوَطَ (ḥāwaṭa)\n# يُحَاوَطَانِ (yuḥāwaṭāni) /ju.ħaː.wa.tˤaː.ni/: third-person masculine dual non-past passive indicative of حَاوَطَ (ḥāwaṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuḥāwiṭāni", "ḥāwaṭa", "yuḥāwaṭāni"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "تحاوطا",
-        "u": "تحاوطا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تحاوطا (form III)\n# تُحَاوِطَا (tuḥāwiṭā) /tu.ħaː.wi.tˤaː/: inflection of حَاوَطَ (ḥāwaṭa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُحَاوَطَا (tuḥāwaṭā) /tu.ħaː.wa.tˤaː/: inflection of حَاوَطَ (ḥāwaṭa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subj",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuḥāwiṭā", "ḥāwaṭa", "tuḥāwaṭā"],
-        "k": "حاوط",
-        "yol": "kök"
-      },
-      {
-        "w": "يحاوطا",
-        "u": "يحاوطا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يحاوطا (form III)\n# يُحَاوِطَا (yuḥāwiṭā) /ju.ħaː.wi.tˤaː/: third-person masculine dual non-past active subjunctive/jussive of حَاوَطَ (ḥāwaṭa)\n# يُحَاوَطَا (yuḥāwaṭā) /ju.ħaː.wa.tˤaː/: third-person masculine dual non-past passive subjunctive/jussive of حَاوَطَ (ḥāwaṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuḥāwiṭā", "ḥāwaṭa", "yuḥāwaṭā"],
-        "k": "حاوط",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "حط",
+  "ses": {
     "harf": "ح",
+    "fasil": "حط",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يحاوط",
+      "tur": "verb",
+      "baslik": "يحاوط (form III)\n# يُحَاوِطُ (yuḥāwiṭu) /ju.ħaː.wi.tˤu/: third-person masculine singular non-past active indicative of حَاوَطَ (ḥāwaṭa)\n# يُحَاوَطُ (yuḥāwaṭu) /ju.ħaː.wa.tˤu/: third-person masculine singular non-past passive indicative of حَاوَطَ (ḥāwaṭa)\n# يُحَاوِطَ (yuḥāwiṭa) /ju.ħaː.wi.tˤa/: third-person masculine singular non-past active subjunctive of حَاوَطَ (ḥāwaṭa)\n# يُحَاوَطَ (yuḥāwaṭa) /",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuḥāwiṭu", "ḥāwaṭa", "yuḥāwaṭu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حووط",
+      "tur": "verb",
+      "baslik": "حُووِطَ • (ḥūwiṭa) (form III) /ħuː.wi.tˤa/\n# third-person masculine singular past passive of حَاوَطَ (ḥāwaṭa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥūwiṭa", "ḥāwaṭa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حاوطت",
+      "tur": "verb",
+      "baslik": "حاوطت (form III)\n# حَاوَطْتُ (ḥāwaṭtu) /ħaː.watˤ.tu/: first-person singular past active of حَاوَطَ (ḥāwaṭa)\n# حَاوَطْتَ (ḥāwaṭta) /ħaː.watˤ.ta/: second-person masculine singular past active of حَاوَطَ (ḥāwaṭa)\n# حَاوَطْتِ (ḥāwaṭti) /ħaː.watˤ.ti/: second-person feminine singular past active of حَاوَطَ (ḥāwaṭa)\n# حَاوَطَتْ (ḥāwaṭat) /ħaː.wa.tˤat/: third-person feminine singular past active of حَاوَط",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥāwaṭtu", "ḥāwaṭa", "ḥāwaṭta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحاوط",
+      "tur": "verb",
+      "baslik": "تحاوط (form III)\n# تُحَاوِطُ (tuḥāwiṭu) /tu.ħaː.wi.tˤu/: inflection of حَاوَطَ (ḥāwaṭa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُحَاوَطُ (tuḥāwaṭu) /tu.ħaː.wa.tˤu/: inflection of حَاوَطَ (ḥāwaṭa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuḥāwiṭu", "ḥāwaṭa", "tuḥāwaṭu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حووطت",
+      "tur": "verb",
+      "baslik": "حووطت (form III)\n# حُووِطْتُ (ḥūwiṭtu) /ħuː.witˤ.tu/: first-person singular past passive of حَاوَطَ (ḥāwaṭa)\n# حُووِطْتَ (ḥūwiṭta) /ħuː.witˤ.ta/: second-person masculine singular past passive of حَاوَطَ (ḥāwaṭa)\n# حُووِطْتِ (ḥūwiṭti) /ħuː.witˤ.ti/: second-person feminine singular past passive of حَاوَطَ (ḥāwaṭa)\n# حُووِطَتْ (ḥūwiṭat) /ħuː.wi.tˤat/: third-person feminine singular past passive of حَ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥūwiṭtu", "ḥāwaṭa", "ḥūwiṭta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحاوطين",
+      "tur": "verb",
+      "baslik": "تحاوطين (form III)\n# تُحَاوِطِينَ (tuḥāwiṭīna) /tu.ħaː.wi.tˤiː.na/: second-person feminine singular non-past active indicative of حَاوَطَ (ḥāwaṭa)\n# تُحَاوَطِينَ (tuḥāwaṭīna) /tu.ħaː.wa.tˤiː.na/: second-person feminine singular non-past passive indicative of حَاوَطَ (ḥāwaṭa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuḥāwiṭīna", "ḥāwaṭa", "tuḥāwaṭīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحاوطي",
+      "tur": "verb",
+      "baslik": "تحاوطي (form III)\n# تُحَاوِطِي (tuḥāwiṭī) /tu.ħaː.wi.tˤiː/: second-person feminine singular non-past active subjunctive/jussive of حَاوَطَ (ḥāwaṭa)\n# تُحَاوَطِي (tuḥāwaṭī) /tu.ħaː.wa.tˤiː/: second-person feminine singular non-past passive subjunctive/jussive of حَاوَطَ (ḥāwaṭa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuḥāwiṭī", "ḥāwaṭa", "tuḥāwaṭī"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حاوطي",
+      "tur": "verb",
+      "baslik": "حَاوِطِي • (ḥāwiṭī) (form III) /ħaː.wi.tˤiː/\n# second-person feminine singular imperative of حَاوَطَ (ḥāwaṭa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥāwiṭī", "ḥāwaṭa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أحاوط",
+      "tur": "verb",
+      "baslik": "أحاوط (form III)\n# أُحَاوِطُ (ʔuḥāwiṭu) /ʔu.ħaː.wi.tˤu/: first-person singular non-past active indicative of حَاوَطَ (ḥāwaṭa)\n# أُحَاوَطُ (ʔuḥāwaṭu) /ʔu.ħaː.wa.tˤu/: first-person singular non-past passive indicative of حَاوَطَ (ḥāwaṭa)\n# أُحَاوِطَ (ʔuḥāwiṭa) /ʔu.ħaː.wi.tˤa/: first-person singular non-past active subjunctive of حَاوَطَ (ḥāwaṭa)\n# أُحَاوَطَ (ʔuḥāwaṭa) /ʔu.ħaː.wa.tˤa/: first-person s",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔuḥāwiṭu", "ḥāwaṭa", "ʔuḥāwaṭu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حاوطنا",
+      "tur": "verb",
+      "baslik": "حَاوَطْنَا • (ḥāwaṭnā) (form III) /ħaː.watˤ.naː/\n# first-person plural past active of حَاوَطَ (ḥāwaṭa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥāwaṭnā", "ḥāwaṭa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نحاوط",
+      "tur": "verb",
+      "baslik": "نحاوط (form III)\n# نُحَاوِطُ (nuḥāwiṭu) /nu.ħaː.wi.tˤu/: first-person plural non-past active indicative of حَاوَطَ (ḥāwaṭa)\n# نُحَاوَطُ (nuḥāwaṭu) /nu.ħaː.wa.tˤu/: first-person plural non-past passive indicative of حَاوَطَ (ḥāwaṭa)\n# نُحَاوِطَ (nuḥāwiṭa) /nu.ħaː.wi.tˤa/: first-person plural non-past active subjunctive of حَاوَطَ (ḥāwaṭa)\n# نُحَاوَطَ (nuḥāwaṭa) /nu.ħaː.wa.tˤa/: first-person plural ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nuḥāwiṭu", "ḥāwaṭa", "nuḥāwaṭu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حووطنا",
+      "tur": "verb",
+      "baslik": "حُووِطْنَا • (ḥūwiṭnā) (form III) /ħuː.witˤ.naː/\n# first-person plural past passive of حَاوَطَ (ḥāwaṭa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥūwiṭnā", "ḥāwaṭa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حاوطتم",
+      "tur": "verb",
+      "baslik": "حَاوَطْتُمْ • (ḥāwaṭtum) (form III) /ħaː.watˤ.tum/\n# second-person masculine plural past active of حَاوَطَ (ḥāwaṭa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥāwaṭtum", "ḥāwaṭa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحاوطون",
+      "tur": "verb",
+      "baslik": "تحاوطون (form III)\n# تُحَاوِطُونَ (tuḥāwiṭūna) /tu.ħaː.wi.tˤuː.na/: second-person masculine plural non-past active indicative of حَاوَطَ (ḥāwaṭa)\n# تُحَاوَطُونَ (tuḥāwaṭūna) /tu.ħaː.wa.tˤuː.na/: second-person masculine plural non-past passive indicative of حَاوَطَ (ḥāwaṭa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuḥāwiṭūna", "ḥāwaṭa", "tuḥāwaṭūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحاوطوا",
+      "tur": "verb",
+      "baslik": "تحاوطوا (form III)\n# تُحَاوِطُوا (tuḥāwiṭū) /tu.ħaː.wi.tˤuː/: second-person masculine plural non-past active subjunctive/jussive of حَاوَطَ (ḥāwaṭa)\n# تُحَاوَطُوا (tuḥāwaṭū) /tu.ħaː.wa.tˤuː/: second-person masculine plural non-past passive subjunctive/jussive of حَاوَطَ (ḥāwaṭa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuḥāwiṭū", "ḥāwaṭa", "tuḥāwaṭū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حووطتم",
+      "tur": "verb",
+      "baslik": "حُووِطْتُمْ • (ḥūwiṭtum) (form III) /ħuː.witˤ.tum/\n# second-person masculine plural past passive of حَاوَطَ (ḥāwaṭa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥūwiṭtum", "ḥāwaṭa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حاوطوا",
+      "tur": "verb",
+      "baslik": "حاوطوا (form III)\n# حَاوَطُوا (ḥāwaṭū) /ħaː.wa.tˤuː/: third-person masculine plural past active of حَاوَطَ (ḥāwaṭa)\n# حَاوِطُوا (ḥāwiṭū) /ħaː.wi.tˤuː/: second-person masculine plural imperative of حَاوَطَ (ḥāwaṭa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥāwaṭū", "ḥāwaṭa", "ḥāwiṭū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يحاوطون",
+      "tur": "verb",
+      "baslik": "يحاوطون (form III)\n# يُحَاوِطُونَ (yuḥāwiṭūna) /ju.ħaː.wi.tˤuː.na/: third-person masculine plural non-past active indicative of حَاوَطَ (ḥāwaṭa)\n# يُحَاوَطُونَ (yuḥāwaṭūna) /ju.ħaː.wa.tˤuː.na/: third-person masculine plural non-past passive indicative of حَاوَطَ (ḥāwaṭa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuḥāwiṭūna", "ḥāwaṭa", "yuḥāwaṭūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يحاوطوا",
+      "tur": "verb",
+      "baslik": "يحاوطوا (form III)\n# يُحَاوِطُوا (yuḥāwiṭū) /ju.ħaː.wi.tˤuː/: third-person masculine plural non-past active subjunctive/jussive of حَاوَطَ (ḥāwaṭa)\n# يُحَاوَطُوا (yuḥāwaṭū) /ju.ħaː.wa.tˤuː/: third-person masculine plural non-past passive subjunctive/jussive of حَاوَطَ (ḥāwaṭa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuḥāwiṭū", "ḥāwaṭa", "yuḥāwaṭū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حووطوا",
+      "tur": "verb",
+      "baslik": "حُووِطُوا • (ḥūwiṭū) (form III) /ħuː.wi.tˤuː/\n# third-person masculine plural past passive of حَاوَطَ (ḥāwaṭa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥūwiṭū", "ḥāwaṭa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حاوطتن",
+      "tur": "verb",
+      "baslik": "حَاوَطْتُنَّ • (ḥāwaṭtunna) (form III) /ħaː.watˤ.tun.na/\n# second-person feminine plural past active of حَاوَطَ (ḥāwaṭa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥāwaṭtunna", "ḥāwaṭa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحاوطن",
+      "tur": "verb",
+      "baslik": "تحاوطن (form III)\n# تُحَاوِطْنَ (tuḥāwiṭna) /tu.ħaː.witˤ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of حَاوَطَ (ḥāwaṭa)\n# تُحَاوَطْنَ (tuḥāwaṭna) /tu.ħaː.watˤ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of حَاوَطَ (ḥāwaṭa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuḥāwiṭna", "ḥāwaṭa", "tuḥāwaṭna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حاوطن",
+      "tur": "verb",
+      "baslik": "حاوطن (form III)\n# حَاوَطْنَ (ḥāwaṭna) /ħaː.watˤ.na/: third-person feminine plural past active of حَاوَطَ (ḥāwaṭa)\n# حَاوِطْنَ (ḥāwiṭna) /ħaː.witˤ.na/: second-person feminine plural imperative of حَاوَطَ (ḥāwaṭa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥāwaṭna", "ḥāwaṭa", "ḥāwiṭna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حووطتن",
+      "tur": "verb",
+      "baslik": "حُووِطْتُنَّ • (ḥūwiṭtunna) (form III) /ħuː.witˤ.tun.na/\n# second-person feminine plural past passive of حَاوَطَ (ḥāwaṭa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥūwiṭtunna", "ḥāwaṭa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يحاوطن",
+      "tur": "verb",
+      "baslik": "يحاوطن (form III)\n# يُحَاوِطْنَ (yuḥāwiṭna) /ju.ħaː.witˤ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of حَاوَطَ (ḥāwaṭa)\n# يُحَاوَطْنَ (yuḥāwaṭna) /ju.ħaː.watˤ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of حَاوَطَ (ḥāwaṭa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuḥāwiṭna", "ḥāwaṭa", "yuḥāwaṭna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حووطن",
+      "tur": "verb",
+      "baslik": "حُووِطْنَ • (ḥūwiṭna) (form III) /ħuː.witˤ.na/\n# third-person feminine plural past passive of حَاوَطَ (ḥāwaṭa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥūwiṭna", "ḥāwaṭa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حاوطا",
+      "tur": "verb",
+      "baslik": "حاوطا (form III)\n# حَاوَطَا (ḥāwaṭā) /ħaː.wa.tˤaː/: third-person masculine dual past active of حَاوَطَ (ḥāwaṭa)\n# حَاوِطَا (ḥāwiṭā) /ħaː.wi.tˤaː/: second-person dual imperative of حَاوَطَ (ḥāwaṭa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥāwaṭā", "ḥāwaṭa", "ḥāwiṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حاوطتا",
+      "tur": "verb",
+      "baslik": "حَاوَطَتَا • (ḥāwaṭatā) (form III) /ħaː.wa.tˤa.taː/\n# third-person feminine dual past active of حَاوَطَ (ḥāwaṭa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥāwaṭatā", "ḥāwaṭa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حووطا",
+      "tur": "verb",
+      "baslik": "حُووِطَا • (ḥūwiṭā) (form III) /ħuː.wi.tˤaː/\n# third-person masculine dual past passive of حَاوَطَ (ḥāwaṭa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥūwiṭā", "ḥāwaṭa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حاوطتما",
+      "tur": "verb",
+      "baslik": "حَاوَطْتُمَا • (ḥāwaṭtumā) (form III) /ħaː.watˤ.tu.maː/\n# second-person dual past active of حَاوَطَ (ḥāwaṭa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥāwaṭtumā", "ḥāwaṭa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حووطتما",
+      "tur": "verb",
+      "baslik": "حُووِطْتُمَا • (ḥūwiṭtumā) (form III) /ħuː.witˤ.tu.maː/\n# second-person dual past passive of حَاوَطَ (ḥāwaṭa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥūwiṭtumā", "ḥāwaṭa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حووطتا",
+      "tur": "verb",
+      "baslik": "حُووِطَتَا • (ḥūwiṭatā) (form III) /ħuː.wi.tˤa.taː/\n# third-person feminine dual past passive of حَاوَطَ (ḥāwaṭa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ḥūwiṭatā", "ḥāwaṭa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحاوطان",
+      "tur": "verb",
+      "baslik": "تحاوطان (form III)\n# تُحَاوِطَانِ (tuḥāwiṭāni) /tu.ħaː.wi.tˤaː.ni/: inflection of حَاوَطَ (ḥāwaṭa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُحَاوَطَانِ (tuḥāwaṭāni) /tu.ħaː.wa.tˤaː.ni/: inflection of حَاوَطَ (ḥāwaṭa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuḥāwiṭāni", "ḥāwaṭa", "tuḥāwaṭāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يحاوطان",
+      "tur": "verb",
+      "baslik": "يحاوطان (form III)\n# يُحَاوِطَانِ (yuḥāwiṭāni) /ju.ħaː.wi.tˤaː.ni/: third-person masculine dual non-past active indicative of حَاوَطَ (ḥāwaṭa)\n# يُحَاوَطَانِ (yuḥāwaṭāni) /ju.ħaː.wa.tˤaː.ni/: third-person masculine dual non-past passive indicative of حَاوَطَ (ḥāwaṭa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuḥāwiṭāni", "ḥāwaṭa", "yuḥāwaṭāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحاوطا",
+      "tur": "verb",
+      "baslik": "تحاوطا (form III)\n# تُحَاوِطَا (tuḥāwiṭā) /tu.ħaː.wi.tˤaː/: inflection of حَاوَطَ (ḥāwaṭa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُحَاوَطَا (tuḥāwaṭā) /tu.ħaː.wa.tˤaː/: inflection of حَاوَطَ (ḥāwaṭa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subj",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuḥāwiṭā", "ḥāwaṭa", "tuḥāwaṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يحاوطا",
+      "tur": "verb",
+      "baslik": "يحاوطا (form III)\n# يُحَاوِطَا (yuḥāwiṭā) /ju.ħaː.wi.tˤaː/: third-person masculine dual non-past active subjunctive/jussive of حَاوَطَ (ḥāwaṭa)\n# يُحَاوَطَا (yuḥāwaṭā) /ju.ħaː.wa.tˤaː/: third-person masculine dual non-past passive subjunctive/jussive of حَاوَطَ (ḥāwaṭa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuḥāwiṭā", "ḥāwaṭa", "yuḥāwaṭā"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "حاوط", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

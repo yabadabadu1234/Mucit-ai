@@ -1,67 +1,55 @@
 {
   "kok": "كفهر",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "كفهر", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "اكفهر",
-        "u": "اكفهر",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "اِكْفَهَرَّ • (ikfaharra) IVq (non-past يَكْفَهِرُّ (yakfahirru), verbal noun اِكْفِهْرَار (ikfihrār))",
-        "t": "From the root ك ف ه ر (k f h r).",
-        "s": [
-          ["ar-root", "ك ف ه ر (k f h r)"]
-        ],
-        "g": ["to be dark", "to become dark, to darken", "to be gloomy, to become gloomy"],
-        "r": ["ikfaharra"],
-        "ipa": ["/ik.fa.har.ra/"],
-        "el": [
-          ["ك ف ه ر", "Appendix:Arabic roots/ك ف ه ر"]
-        ],
-        "k": "كفهر",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "كف",
+  "ses": {
     "harf": "ك",
+    "fasil": "كف",
     "mahrec": "lehaviyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "اكفهر",
+      "tur": "verb",
+      "baslik": "اِكْفَهَرَّ • (ikfaharra) IVq (non-past يَكْفَهِرُّ (yakfahirru), verbal noun اِكْفِهْرَار (ikfihrār))",
+      "etim_sablon": [
+        ["ar-root", "ك ف ه ر (k f h r)"]
+      ],
+      "anlam": ["to be dark", "to become dark, to darken", "to be gloomy, to become gloomy"],
+      "okunus": ["ikfaharra"],
+      "ipa": ["/ik.fa.har.ra/"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "From the root ك ف ه ر (k f h r).",
+      "kognatlar": [
+        ["ك ف ه ر", "Appendix:Arabic roots/ك ف ه ر"]
+      ]
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "كفهر", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "ust": {
       "kume": 7,
       "merkez_kok": "حدق",
@@ -81,6 +69,10 @@
       "boy": 3
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

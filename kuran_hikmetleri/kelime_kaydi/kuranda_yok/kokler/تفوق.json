@@ -1,365 +1,258 @@
 {
   "kok": "تفوق",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تفوق", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تفوقت",
-        "u": "تفوقت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تفوقت (form V)\n# تَفَوَّقْتُ (tafawwaqtu) /ta.faw.waq.tu/: first-person singular past active of تَفَوَّقَ (tafawwaqa)\n# تَفَوَّقْتَ (tafawwaqta) /ta.faw.waq.ta/: second-person masculine singular past active of تَفَوَّقَ (tafawwaqa)\n# تَفَوَّقْتِ (tafawwaqti) /ta.faw.waq.ti/: second-person feminine singular past active of تَفَوَّقَ (tafawwaqa)\n# تَفَوَّقَتْ (tafawwaqat) /ta.faw.wa.qat/: third-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tafawwaqtu", "tafawwaqa", "tafawwaqta"],
-        "k": "تفوق",
-        "yol": "kök"
-      },
-      {
-        "w": "تفوقتم",
-        "u": "تفوقتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَفَوَّقْتُمْ • (tafawwaqtum) (form V) /ta.faw.waq.tum/\n# second-person masculine plural past active of تَفَوَّقَ (tafawwaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tafawwaqtum", "tafawwaqa"],
-        "k": "تفوق",
-        "yol": "kök"
-      },
-      {
-        "w": "تفوقتا",
-        "u": "تفوقتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَفَوَّقَتَا • (tafawwaqatā) (form V) /ta.faw.wa.qa.taː/\n# third-person feminine dual past active of تَفَوَّقَ (tafawwaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tafawwaqatā", "tafawwaqa"],
-        "k": "تفوق",
-        "yol": "kök"
-      },
-      {
-        "w": "تفوقنا",
-        "u": "تفوقنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَفَوَّقْنَا • (tafawwaqnā) (form V) /ta.faw.waq.naː/\n# first-person plural past active of تَفَوَّقَ (tafawwaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tafawwaqnā", "tafawwaqa"],
-        "k": "تفوق",
-        "yol": "kök"
-      },
-      {
-        "w": "تفوقن",
-        "u": "تفوقن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَفَوَّقْنَ • (tafawwaqna) (form V) /ta.faw.waq.na/\n# inflection of تَفَوَّقَ (tafawwaqa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tafawwaqna", "tafawwaqa"],
-        "k": "تفوق",
-        "yol": "kök"
-      },
-      {
-        "w": "تفوقتما",
-        "u": "تفوقتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَفَوَّقْتُمَا • (tafawwaqtumā) (form V) /ta.faw.waq.tu.maː/\n# second-person dual past active of تَفَوَّقَ (tafawwaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tafawwaqtumā", "tafawwaqa"],
-        "k": "تفوق",
-        "yol": "kök"
-      },
-      {
-        "w": "تفوقتن",
-        "u": "تفوقتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَفَوَّقْتُنَّ • (tafawwaqtunna) (form V) /ta.faw.waq.tun.na/\n# second-person feminine plural past active of تَفَوَّقَ (tafawwaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tafawwaqtunna", "tafawwaqa"],
-        "k": "تفوق",
-        "yol": "kök"
-      },
-      {
-        "w": "أتفوق",
-        "u": "أتفوق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتفوق (form V)\n# أَتَفَوَّقُ (ʔatafawwaqu) /ʔa.ta.faw.wa.qu/: first-person singular non-past active indicative of تَفَوَّقَ (tafawwaqa)\n# أَتَفَوَّقَ (ʔatafawwaqa) /ʔa.ta.faw.wa.qa/: first-person singular non-past active subjunctive of تَفَوَّقَ (tafawwaqa)\n# أَتَفَوَّقْ (ʔatafawwaq) /ʔa.ta.faw.waq/: first-person singular non-past active jussive of تَفَوَّقَ (tafawwaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔatafawwaqu", "tafawwaqa", "ʔatafawwaqa"],
-        "k": "تفوق",
-        "yol": "kök"
-      },
-      {
-        "w": "تفوقا",
-        "u": "تفوقا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَفَوَّقَا • (tafawwaqā) (form V) /ta.faw.wa.qaː/\n# inflection of تَفَوَّقَ (tafawwaqa):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tafawwaqā", "tafawwaqa"],
-        "k": "تفوق",
-        "yol": "kök"
-      },
-      {
-        "w": "تفوقوا",
-        "u": "تفوقوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَفَوَّقُوا • (tafawwaqū) (form V) /ta.faw.wa.quː/\n# inflection of تَفَوَّقَ (tafawwaqa):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tafawwaqū", "tafawwaqa"],
-        "k": "تفوق",
-        "yol": "kök"
-      },
-      {
-        "w": "تتفوق",
-        "u": "تتفوق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتفوق (form V)\n# تَتَفَوَّقُ (tatafawwaqu) /ta.ta.faw.wa.qu/: inflection of تَفَوَّقَ (tafawwaqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَفَوَّقَ (tatafawwaqa) /ta.ta.faw.wa.qa/: inflection of تَفَوَّقَ (tafawwaqa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatafawwaqu", "tafawwaqa", "tatafawwaqa"],
-        "k": "تفوق",
-        "yol": "kök"
-      },
-      {
-        "w": "نتفوق",
-        "u": "نتفوق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتفوق (form V)\n# نَتَفَوَّقُ (natafawwaqu) /na.ta.faw.wa.qu/: first-person plural non-past active indicative of تَفَوَّقَ (tafawwaqa)\n# نَتَفَوَّقَ (natafawwaqa) /na.ta.faw.wa.qa/: first-person plural non-past active subjunctive of تَفَوَّقَ (tafawwaqa)\n# نَتَفَوَّقْ (natafawwaq) /na.ta.faw.waq/: first-person plural non-past active jussive of تَفَوَّقَ (tafawwaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["natafawwaqu", "tafawwaqa", "natafawwaqa"],
-        "k": "تفوق",
-        "yol": "kök"
-      },
-      {
-        "w": "تتفوقين",
-        "u": "تتفوقين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَفَوَّقِينَ • (tatafawwaqīna) (form V) /ta.ta.faw.wa.qiː.na/\n# second-person feminine singular non-past active indicative of تَفَوَّقَ (tafawwaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatafawwaqīna", "tafawwaqa"],
-        "k": "تفوق",
-        "yol": "kök"
-      },
-      {
-        "w": "تتفوقون",
-        "u": "تتفوقون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَفَوَّقُونَ • (tatafawwaqūna) (form V) /ta.ta.faw.wa.quː.na/\n# second-person masculine plural non-past active indicative of تَفَوَّقَ (tafawwaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatafawwaqūna", "tafawwaqa"],
-        "k": "تفوق",
-        "yol": "kök"
-      },
-      {
-        "w": "يتفوق",
-        "u": "يتفوق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتفوق (form V)\n# يَتَفَوَّقُ (yatafawwaqu) /ja.ta.faw.wa.qu/: third-person masculine singular non-past active indicative of تَفَوَّقَ (tafawwaqa)\n# يُتَفَوَّقُ (yutafawwaqu) /ju.ta.faw.wa.qu/: third-person masculine singular non-past passive indicative of تَفَوَّقَ (tafawwaqa)\n# يَتَفَوَّقَ (yatafawwaqa) /ja.ta.faw.wa.qa/: third-person masculine singular non-past active subjunctive of تَفَوَّقَ (t",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatafawwaqu", "tafawwaqa", "yutafawwaqu"],
-        "k": "تفوق",
-        "yol": "kök"
-      },
-      {
-        "w": "تتفوقان",
-        "u": "تتفوقان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَفَوَّقَانِ • (tatafawwaqāni) (form V) /ta.ta.faw.wa.qaː.ni/\n# inflection of تَفَوَّقَ (tafawwaqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatafawwaqāni", "tafawwaqa"],
-        "k": "تفوق",
-        "yol": "kök"
-      },
-      {
-        "w": "تتفوقن",
-        "u": "تتفوقن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَفَوَّقْنَ • (tatafawwaqna) (form V) /ta.ta.faw.waq.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَفَوَّقَ (tafawwaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatafawwaqna", "tafawwaqa"],
-        "k": "تفوق",
-        "yol": "kök"
-      },
-      {
-        "w": "يتفوقون",
-        "u": "يتفوقون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَفَوَّقُونَ • (yatafawwaqūna) (form V) /ja.ta.faw.wa.quː.na/\n# third-person masculine plural non-past active indicative of تَفَوَّقَ (tafawwaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatafawwaqūna", "tafawwaqa"],
-        "k": "تفوق",
-        "yol": "kök"
-      },
-      {
-        "w": "يتفوقان",
-        "u": "يتفوقان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَفَوَّقَانِ • (yatafawwaqāni) (form V) /ja.ta.faw.wa.qaː.ni/\n# third-person masculine dual non-past active indicative of تَفَوَّقَ (tafawwaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatafawwaqāni", "tafawwaqa"],
-        "k": "تفوق",
-        "yol": "kök"
-      },
-      {
-        "w": "تتفوقوا",
-        "u": "تتفوقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَفَوَّقُوا • (tatafawwaqū) (form V) /ta.ta.faw.wa.quː/\n# second-person masculine plural non-past active subjunctive/jussive of تَفَوَّقَ (tafawwaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatafawwaqū", "tafawwaqa"],
-        "k": "تفوق",
-        "yol": "kök"
-      },
-      {
-        "w": "تتفوقا",
-        "u": "تتفوقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَفَوَّقَا • (tatafawwaqā) (form V) /ta.ta.faw.wa.qaː/\n# inflection of تَفَوَّقَ (tafawwaqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatafawwaqā", "tafawwaqa"],
-        "k": "تفوق",
-        "yol": "kök"
-      },
-      {
-        "w": "يتفوقا",
-        "u": "يتفوقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَفَوَّقَا • (yatafawwaqā) (form V) /ja.ta.faw.wa.qaː/\n# third-person masculine dual non-past active subjunctive/jussive of تَفَوَّقَ (tafawwaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatafawwaqā", "tafawwaqa"],
-        "k": "تفوق",
-        "yol": "kök"
-      },
-      {
-        "w": "يتفوقن",
-        "u": "يتفوقن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَفَوَّقْنَ • (yatafawwaqna) (form V) /ja.ta.faw.waq.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَفَوَّقَ (tafawwaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatafawwaqna", "tafawwaqa"],
-        "k": "تفوق",
-        "yol": "kök"
-      },
-      {
-        "w": "يتفوقوا",
-        "u": "يتفوقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَفَوَّقُوا • (yatafawwaqū) (form V) /ja.ta.faw.wa.quː/\n# third-person masculine plural non-past active subjunctive/jussive of تَفَوَّقَ (tafawwaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatafawwaqū", "tafawwaqa"],
-        "k": "تفوق",
-        "yol": "kök"
-      },
-      {
-        "w": "تفوقي",
-        "u": "تفوقي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَفَوَّقِي • (tafawwaqī) (form V) /ta.faw.wa.qiː/\n# second-person feminine singular imperative of تَفَوَّقَ (tafawwaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tafawwaqī", "tafawwaqa"],
-        "k": "تفوق",
-        "yol": "kök"
-      },
-      {
-        "w": "تتفوقي",
-        "u": "تتفوقي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَفَوَّقِي • (tatafawwaqī) (form V) /ta.ta.faw.wa.qiː/\n# second-person feminine singular non-past active subjunctive/jussive of تَفَوَّقَ (tafawwaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatafawwaqī", "tafawwaqa"],
-        "k": "تفوق",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تف",
+  "ses": {
     "harf": "ت",
+    "fasil": "تف",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تفوقت",
+      "tur": "verb",
+      "baslik": "تفوقت (form V)\n# تَفَوَّقْتُ (tafawwaqtu) /ta.faw.waq.tu/: first-person singular past active of تَفَوَّقَ (tafawwaqa)\n# تَفَوَّقْتَ (tafawwaqta) /ta.faw.waq.ta/: second-person masculine singular past active of تَفَوَّقَ (tafawwaqa)\n# تَفَوَّقْتِ (tafawwaqti) /ta.faw.waq.ti/: second-person feminine singular past active of تَفَوَّقَ (tafawwaqa)\n# تَفَوَّقَتْ (tafawwaqat) /ta.faw.wa.qat/: third-perso",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tafawwaqtu", "tafawwaqa", "tafawwaqta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفوقتم",
+      "tur": "verb",
+      "baslik": "تَفَوَّقْتُمْ • (tafawwaqtum) (form V) /ta.faw.waq.tum/\n# second-person masculine plural past active of تَفَوَّقَ (tafawwaqa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tafawwaqtum", "tafawwaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفوقتا",
+      "tur": "verb",
+      "baslik": "تَفَوَّقَتَا • (tafawwaqatā) (form V) /ta.faw.wa.qa.taː/\n# third-person feminine dual past active of تَفَوَّقَ (tafawwaqa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tafawwaqatā", "tafawwaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفوقنا",
+      "tur": "verb",
+      "baslik": "تَفَوَّقْنَا • (tafawwaqnā) (form V) /ta.faw.waq.naː/\n# first-person plural past active of تَفَوَّقَ (tafawwaqa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tafawwaqnā", "tafawwaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفوقن",
+      "tur": "verb",
+      "baslik": "تَفَوَّقْنَ • (tafawwaqna) (form V) /ta.faw.waq.na/\n# inflection of تَفَوَّقَ (tafawwaqa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tafawwaqna", "tafawwaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفوقتما",
+      "tur": "verb",
+      "baslik": "تَفَوَّقْتُمَا • (tafawwaqtumā) (form V) /ta.faw.waq.tu.maː/\n# second-person dual past active of تَفَوَّقَ (tafawwaqa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tafawwaqtumā", "tafawwaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفوقتن",
+      "tur": "verb",
+      "baslik": "تَفَوَّقْتُنَّ • (tafawwaqtunna) (form V) /ta.faw.waq.tun.na/\n# second-person feminine plural past active of تَفَوَّقَ (tafawwaqa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tafawwaqtunna", "tafawwaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتفوق",
+      "tur": "verb",
+      "baslik": "أتفوق (form V)\n# أَتَفَوَّقُ (ʔatafawwaqu) /ʔa.ta.faw.wa.qu/: first-person singular non-past active indicative of تَفَوَّقَ (tafawwaqa)\n# أَتَفَوَّقَ (ʔatafawwaqa) /ʔa.ta.faw.wa.qa/: first-person singular non-past active subjunctive of تَفَوَّقَ (tafawwaqa)\n# أَتَفَوَّقْ (ʔatafawwaq) /ʔa.ta.faw.waq/: first-person singular non-past active jussive of تَفَوَّقَ (tafawwaqa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔatafawwaqu", "tafawwaqa", "ʔatafawwaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفوقا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَفَوَّقَا • (tafawwaqā) (form V) /ta.faw.wa.qaː/\n# inflection of تَفَوَّقَ (tafawwaqa):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tafawwaqā", "tafawwaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفوقوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَفَوَّقُوا • (tafawwaqū) (form V) /ta.faw.wa.quː/\n# inflection of تَفَوَّقَ (tafawwaqa):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tafawwaqū", "tafawwaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتفوق",
+      "tur": "verb",
+      "baslik": "تتفوق (form V)\n# تَتَفَوَّقُ (tatafawwaqu) /ta.ta.faw.wa.qu/: inflection of تَفَوَّقَ (tafawwaqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَفَوَّقَ (tatafawwaqa) /ta.ta.faw.wa.qa/: inflection of تَفَوَّقَ (tafawwaqa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatafawwaqu", "tafawwaqa", "tatafawwaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتفوق",
+      "tur": "verb",
+      "baslik": "نتفوق (form V)\n# نَتَفَوَّقُ (natafawwaqu) /na.ta.faw.wa.qu/: first-person plural non-past active indicative of تَفَوَّقَ (tafawwaqa)\n# نَتَفَوَّقَ (natafawwaqa) /na.ta.faw.wa.qa/: first-person plural non-past active subjunctive of تَفَوَّقَ (tafawwaqa)\n# نَتَفَوَّقْ (natafawwaq) /na.ta.faw.waq/: first-person plural non-past active jussive of تَفَوَّقَ (tafawwaqa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["natafawwaqu", "tafawwaqa", "natafawwaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتفوقين",
+      "tur": "verb",
+      "baslik": "تَتَفَوَّقِينَ • (tatafawwaqīna) (form V) /ta.ta.faw.wa.qiː.na/\n# second-person feminine singular non-past active indicative of تَفَوَّقَ (tafawwaqa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatafawwaqīna", "tafawwaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتفوقون",
+      "tur": "verb",
+      "baslik": "تَتَفَوَّقُونَ • (tatafawwaqūna) (form V) /ta.ta.faw.wa.quː.na/\n# second-person masculine plural non-past active indicative of تَفَوَّقَ (tafawwaqa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatafawwaqūna", "tafawwaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتفوق",
+      "tur": "verb",
+      "baslik": "يتفوق (form V)\n# يَتَفَوَّقُ (yatafawwaqu) /ja.ta.faw.wa.qu/: third-person masculine singular non-past active indicative of تَفَوَّقَ (tafawwaqa)\n# يُتَفَوَّقُ (yutafawwaqu) /ju.ta.faw.wa.qu/: third-person masculine singular non-past passive indicative of تَفَوَّقَ (tafawwaqa)\n# يَتَفَوَّقَ (yatafawwaqa) /ja.ta.faw.wa.qa/: third-person masculine singular non-past active subjunctive of تَفَوَّقَ (t",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatafawwaqu", "tafawwaqa", "yutafawwaqu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتفوقان",
+      "tur": "verb",
+      "baslik": "تَتَفَوَّقَانِ • (tatafawwaqāni) (form V) /ta.ta.faw.wa.qaː.ni/\n# inflection of تَفَوَّقَ (tafawwaqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatafawwaqāni", "tafawwaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتفوقن",
+      "tur": "verb",
+      "baslik": "تَتَفَوَّقْنَ • (tatafawwaqna) (form V) /ta.ta.faw.waq.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَفَوَّقَ (tafawwaqa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatafawwaqna", "tafawwaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتفوقون",
+      "tur": "verb",
+      "baslik": "يَتَفَوَّقُونَ • (yatafawwaqūna) (form V) /ja.ta.faw.wa.quː.na/\n# third-person masculine plural non-past active indicative of تَفَوَّقَ (tafawwaqa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatafawwaqūna", "tafawwaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتفوقان",
+      "tur": "verb",
+      "baslik": "يَتَفَوَّقَانِ • (yatafawwaqāni) (form V) /ja.ta.faw.wa.qaː.ni/\n# third-person masculine dual non-past active indicative of تَفَوَّقَ (tafawwaqa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatafawwaqāni", "tafawwaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتفوقوا",
+      "tur": "verb",
+      "baslik": "تَتَفَوَّقُوا • (tatafawwaqū) (form V) /ta.ta.faw.wa.quː/\n# second-person masculine plural non-past active subjunctive/jussive of تَفَوَّقَ (tafawwaqa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatafawwaqū", "tafawwaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتفوقا",
+      "tur": "verb",
+      "baslik": "تَتَفَوَّقَا • (tatafawwaqā) (form V) /ta.ta.faw.wa.qaː/\n# inflection of تَفَوَّقَ (tafawwaqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatafawwaqā", "tafawwaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتفوقا",
+      "tur": "verb",
+      "baslik": "يَتَفَوَّقَا • (yatafawwaqā) (form V) /ja.ta.faw.wa.qaː/\n# third-person masculine dual non-past active subjunctive/jussive of تَفَوَّقَ (tafawwaqa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatafawwaqā", "tafawwaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتفوقن",
+      "tur": "verb",
+      "baslik": "يَتَفَوَّقْنَ • (yatafawwaqna) (form V) /ja.ta.faw.waq.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَفَوَّقَ (tafawwaqa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatafawwaqna", "tafawwaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتفوقوا",
+      "tur": "verb",
+      "baslik": "يَتَفَوَّقُوا • (yatafawwaqū) (form V) /ja.ta.faw.wa.quː/\n# third-person masculine plural non-past active subjunctive/jussive of تَفَوَّقَ (tafawwaqa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatafawwaqū", "tafawwaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفوقي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَفَوَّقِي • (tafawwaqī) (form V) /ta.faw.wa.qiː/\n# second-person feminine singular imperative of تَفَوَّقَ (tafawwaqa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tafawwaqī", "tafawwaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتفوقي",
+      "tur": "verb",
+      "baslik": "تَتَفَوَّقِي • (tatafawwaqī) (form V) /ta.ta.faw.wa.qiː/\n# second-person feminine singular non-past active subjunctive/jussive of تَفَوَّقَ (tafawwaqa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatafawwaqī", "tafawwaqa"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تفوق", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

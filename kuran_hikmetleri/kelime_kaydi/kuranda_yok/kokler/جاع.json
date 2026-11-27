@@ -1,510 +1,369 @@
 {
   "kok": "جاع",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "جاع", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يجوع",
-        "u": "يجوع",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يجوع (form I)\n# يَجُوعُ (yajūʕu) /ja.d͡ʒuː.ʕu/: third-person masculine singular non-past active indicative of جَاعَ (jāʕa)\n# يَجُوعَ (yajūʕa) /ja.d͡ʒuː.ʕa/: third-person masculine singular non-past active subjunctive of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajūʕu", "jāʕa", "yajūʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يجع",
-        "u": "يجع",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَجُعْ • (yajuʕ) (form I) /ja.d͡ʒuʕ/\n# third-person masculine singular non-past active jussive of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajuʕ", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "جاعت",
-        "u": "جاعت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جَاعَتْ • (jāʕat) (form I) /d͡ʒaː.ʕat/\n# third-person feminine singular past active of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jāʕat", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تجوع",
-        "u": "تجوع",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تجوع (form I)\n# تَجُوعُ (tajūʕu) /ta.d͡ʒuː.ʕu/: inflection of جَاعَ (jāʕa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَجُوعَ (tajūʕa) /ta.d͡ʒuː.ʕa/: inflection of جَاعَ (jāʕa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajūʕu", "jāʕa", "tajūʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تجع",
-        "u": "تجع",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَجُعْ • (tajuʕ) (form I) /ta.d͡ʒuʕ/\n# inflection of جَاعَ (jāʕa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajuʕ", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "جعت",
-        "u": "جعت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جعت (form I)\n# جُعْتُ (juʕtu) /d͡ʒuʕ.tu/: first-person singular past active of جَاعَ (jāʕa)\n# جُعْتَ (juʕta) /d͡ʒuʕ.ta/: second-person masculine singular past active of جَاعَ (jāʕa)\n# جُعْتِ (juʕti) /d͡ʒuʕ.ti/: second-person feminine singular past active of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["juʕtu", "jāʕa", "juʕta"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "جع",
-        "u": "جع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جُعْ • (juʕ) (form I) /d͡ʒuʕ/\n# second-person masculine singular imperative of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["juʕ", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تجوعين",
-        "u": "تجوعين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَجُوعِينَ • (tajūʕīna) (form I) /ta.d͡ʒuː.ʕiː.na/\n# second-person feminine singular non-past active indicative of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajūʕīna", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تجوعي",
-        "u": "تجوعي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَجُوعِي • (tajūʕī) (form I) /ta.d͡ʒuː.ʕiː/\n# second-person feminine singular non-past active subjunctive/jussive of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajūʕī", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "جوعي",
-        "u": "جوعي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "جُوعِي • (jūʕī) (form I) /d͡ʒuː.ʕiː/\n# second-person feminine singular imperative of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jūʕī", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "أجوع",
-        "u": "أجوع",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أجوع (form I)\n# أَجُوعُ (ʔajūʕu) /ʔa.d͡ʒuː.ʕu/: first-person singular non-past active indicative of جَاعَ (jāʕa)\n# أَجُوعَ (ʔajūʕa) /ʔa.d͡ʒuː.ʕa/: first-person singular non-past active subjunctive of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔajūʕu", "jāʕa", "ʔajūʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "أجع",
-        "u": "أجع",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أَجُعْ • (ʔajuʕ) (form I) /ʔa.d͡ʒuʕ/\n# first-person singular non-past active jussive of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔajuʕ", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "جعنا",
-        "u": "جعنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جُعْنَا • (juʕnā) (form I) /d͡ʒuʕ.naː/\n# first-person plural past active of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["juʕnā", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "نجوع",
-        "u": "نجوع",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نجوع (form I)\n# نَجُوعُ (najūʕu) /na.d͡ʒuː.ʕu/: first-person plural non-past active indicative of جَاعَ (jāʕa)\n# نَجُوعَ (najūʕa) /na.d͡ʒuː.ʕa/: first-person plural non-past active subjunctive of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["najūʕu", "jāʕa", "najūʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "نجع",
-        "u": "نجع",
-        "p": "noun",
-        "n": "1",
-        "h": "ar-noun",
-        "e": "نَجْع • (najʕ) m",
-        "g": ["verbal noun of نَجَعَ (najaʕa) (form I)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["نَجَعَ"],
-        "r": ["najʕ"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "نجع",
-        "u": "نجع",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نَجُعْ • (najuʕ) (form I) /na.d͡ʒuʕ/\n# first-person plural non-past active jussive of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "s": [
-          ["nonlemma", "See the etymology of the corresponding lemma form."]
-        ],
-        "tag": ["form-i", "no-gloss"],
-        "r": ["najuʕ", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "جعتم",
-        "u": "جعتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جُعْتُمْ • (juʕtum) (form I) /d͡ʒuʕ.tum/\n# second-person masculine plural past active of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["juʕtum", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تجوعون",
-        "u": "تجوعون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَجُوعُونَ • (tajūʕūna) (form I) /ta.d͡ʒuː.ʕuː.na/\n# second-person masculine plural non-past active indicative of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajūʕūna", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تجوعوا",
-        "u": "تجوعوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَجُوعُوا • (tajūʕū) (form I) /ta.d͡ʒuː.ʕuː/\n# second-person masculine plural non-past active subjunctive/jussive of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajūʕū", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "جوعوا",
-        "u": "جوعوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "جُوعُوا • (jūʕū) (form I) /d͡ʒuː.ʕuː/\n# second-person masculine plural imperative of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jūʕū", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "جاعوا",
-        "u": "جاعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جَاعُوا • (jāʕū) (form I) /d͡ʒaː.ʕuː/\n# third-person masculine plural past active of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jāʕū", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يجوعون",
-        "u": "يجوعون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَجُوعُونَ • (yajūʕūna) (form I) /ja.d͡ʒuː.ʕuː.na/\n# third-person masculine plural non-past active indicative of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajūʕūna", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يجوعوا",
-        "u": "يجوعوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَجُوعُوا • (yajūʕū) (form I) /ja.d͡ʒuː.ʕuː/\n# third-person masculine plural non-past active subjunctive/jussive of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajūʕū", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "جعتن",
-        "u": "جعتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جُعْتُنَّ • (juʕtunna) (form I) /d͡ʒuʕ.tun.na/\n# second-person feminine plural past active of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["juʕtunna", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تجعن",
-        "u": "تجعن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَجُعْنَ • (tajuʕna) (form I) /ta.d͡ʒuʕ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajuʕna", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "جعن",
-        "u": "جعن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جُعْنَ • (juʕna) (form I) /d͡ʒuʕ.na/\n# inflection of جَاعَ (jāʕa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["juʕna", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يجعن",
-        "u": "يجعن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَجُعْنَ • (yajuʕna) (form I) /ja.d͡ʒuʕ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajuʕna", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يجعن",
-        "u": "يجعن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَجُعْنَ • (yajuʕna) (form I) /ja.d͡ʒuʕ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajuʕna", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "جعتما",
-        "u": "جعتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جُعْتُمَا • (juʕtumā) (form I) /d͡ʒuʕ.tu.maː/\n# second-person dual past active of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["juʕtumā", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يجوعان",
-        "u": "يجوعان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَجُوعَانِ • (yajūʕāni) (form I) /ja.d͡ʒuː.ʕaː.ni/\n# third-person masculine dual non-past active indicative of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajūʕāni", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "جاعا",
-        "u": "جاعا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جَاعَا • (jāʕā) (form I) /d͡ʒaː.ʕaː/\n# third-person masculine dual past active of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jāʕā", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تجوعا",
-        "u": "تجوعا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَجُوعَا • (tajūʕā) (form I) /ta.d͡ʒuː.ʕaː/\n# inflection of جَاعَ (jāʕa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajūʕā", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "جاعتا",
-        "u": "جاعتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جَاعَتَا • (jāʕatā) (form I) /d͡ʒaː.ʕa.taː/\n# third-person feminine dual past active of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jāʕatā", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يجوعا",
-        "u": "يجوعا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَجُوعَا • (yajūʕā) (form I) /ja.d͡ʒuː.ʕaː/\n# third-person masculine dual non-past active subjunctive/jussive of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajūʕā", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تجوعان",
-        "u": "تجوعان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَجُوعَانِ • (tajūʕāni) (form I) /ta.d͡ʒuː.ʕaː.ni/\n# inflection of جَاعَ (jāʕa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajūʕāni", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      },
-      {
-        "w": "جوعا",
-        "u": "جوعا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "جُوعَا • (jūʕā) (form I) /d͡ʒuː.ʕaː/\n# second-person dual imperative of جَاعَ (jāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jūʕā", "jāʕa"],
-        "k": "جاع",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "جع",
+  "ses": {
     "harf": "ج",
+    "fasil": "جع",
     "mahrec": "şeceriyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يجوع",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يجوع (form I)\n# يَجُوعُ (yajūʕu) /ja.d͡ʒuː.ʕu/: third-person masculine singular non-past active indicative of جَاعَ (jāʕa)\n# يَجُوعَ (yajūʕa) /ja.d͡ʒuː.ʕa/: third-person masculine singular non-past active subjunctive of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajūʕu", "jāʕa", "yajūʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجع",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَجُعْ • (yajuʕ) (form I) /ja.d͡ʒuʕ/\n# third-person masculine singular non-past active jussive of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajuʕ", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جاعت",
+      "tur": "verb",
+      "baslik": "جَاعَتْ • (jāʕat) (form I) /d͡ʒaː.ʕat/\n# third-person feminine singular past active of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jāʕat", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجوع",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تجوع (form I)\n# تَجُوعُ (tajūʕu) /ta.d͡ʒuː.ʕu/: inflection of جَاعَ (jāʕa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَجُوعَ (tajūʕa) /ta.d͡ʒuː.ʕa/: inflection of جَاعَ (jāʕa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajūʕu", "jāʕa", "tajūʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجع",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَجُعْ • (tajuʕ) (form I) /ta.d͡ʒuʕ/\n# inflection of جَاعَ (jāʕa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajuʕ", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جعت",
+      "tur": "verb",
+      "baslik": "جعت (form I)\n# جُعْتُ (juʕtu) /d͡ʒuʕ.tu/: first-person singular past active of جَاعَ (jāʕa)\n# جُعْتَ (juʕta) /d͡ʒuʕ.ta/: second-person masculine singular past active of جَاعَ (jāʕa)\n# جُعْتِ (juʕti) /d͡ʒuʕ.ti/: second-person feminine singular past active of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["juʕtu", "jāʕa", "juʕta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جع",
+      "tur": "verb",
+      "baslik": "جُعْ • (juʕ) (form I) /d͡ʒuʕ/\n# second-person masculine singular imperative of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["juʕ", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجوعين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَجُوعِينَ • (tajūʕīna) (form I) /ta.d͡ʒuː.ʕiː.na/\n# second-person feminine singular non-past active indicative of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajūʕīna", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجوعي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَجُوعِي • (tajūʕī) (form I) /ta.d͡ʒuː.ʕiː/\n# second-person feminine singular non-past active subjunctive/jussive of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajūʕī", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جوعي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "جُوعِي • (jūʕī) (form I) /d͡ʒuː.ʕiː/\n# second-person feminine singular imperative of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jūʕī", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجوع",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أجوع (form I)\n# أَجُوعُ (ʔajūʕu) /ʔa.d͡ʒuː.ʕu/: first-person singular non-past active indicative of جَاعَ (jāʕa)\n# أَجُوعَ (ʔajūʕa) /ʔa.d͡ʒuː.ʕa/: first-person singular non-past active subjunctive of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔajūʕu", "jāʕa", "ʔajūʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجع",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أَجُعْ • (ʔajuʕ) (form I) /ʔa.d͡ʒuʕ/\n# first-person singular non-past active jussive of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔajuʕ", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جعنا",
+      "tur": "verb",
+      "baslik": "جُعْنَا • (juʕnā) (form I) /d͡ʒuʕ.naː/\n# first-person plural past active of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["juʕnā", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نجوع",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نجوع (form I)\n# نَجُوعُ (najūʕu) /na.d͡ʒuː.ʕu/: first-person plural non-past active indicative of جَاعَ (jāʕa)\n# نَجُوعَ (najūʕa) /na.d͡ʒuː.ʕa/: first-person plural non-past active subjunctive of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["najūʕu", "jāʕa", "najūʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نجع",
+      "tur": "noun",
+      "etim_no": "1",
+      "baslik": "نَجْع • (najʕ) m",
+      "anlam": ["verbal noun of نَجَعَ (najaʕa) (form I)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["نَجَعَ"],
+      "okunus": ["najʕ"],
+      "bag": "asıl madde"
+    },
+    {
+      "madde": "نجع",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نَجُعْ • (najuʕ) (form I) /na.d͡ʒuʕ/\n# first-person plural non-past active jussive of جَاعَ (jāʕa)",
+      "etim_sablon": [
+        ["nonlemma", "See the etymology of the corresponding lemma form."]
+      ],
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["najuʕ", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جعتم",
+      "tur": "verb",
+      "baslik": "جُعْتُمْ • (juʕtum) (form I) /d͡ʒuʕ.tum/\n# second-person masculine plural past active of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["juʕtum", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجوعون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَجُوعُونَ • (tajūʕūna) (form I) /ta.d͡ʒuː.ʕuː.na/\n# second-person masculine plural non-past active indicative of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajūʕūna", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجوعوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَجُوعُوا • (tajūʕū) (form I) /ta.d͡ʒuː.ʕuː/\n# second-person masculine plural non-past active subjunctive/jussive of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajūʕū", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جوعوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "جُوعُوا • (jūʕū) (form I) /d͡ʒuː.ʕuː/\n# second-person masculine plural imperative of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jūʕū", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جاعوا",
+      "tur": "verb",
+      "baslik": "جَاعُوا • (jāʕū) (form I) /d͡ʒaː.ʕuː/\n# third-person masculine plural past active of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jāʕū", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجوعون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَجُوعُونَ • (yajūʕūna) (form I) /ja.d͡ʒuː.ʕuː.na/\n# third-person masculine plural non-past active indicative of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajūʕūna", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجوعوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَجُوعُوا • (yajūʕū) (form I) /ja.d͡ʒuː.ʕuː/\n# third-person masculine plural non-past active subjunctive/jussive of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajūʕū", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جعتن",
+      "tur": "verb",
+      "baslik": "جُعْتُنَّ • (juʕtunna) (form I) /d͡ʒuʕ.tun.na/\n# second-person feminine plural past active of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["juʕtunna", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجعن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَجُعْنَ • (tajuʕna) (form I) /ta.d͡ʒuʕ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajuʕna", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جعن",
+      "tur": "verb",
+      "baslik": "جُعْنَ • (juʕna) (form I) /d͡ʒuʕ.na/\n# inflection of جَاعَ (jāʕa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["juʕna", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجعن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَجُعْنَ • (yajuʕna) (form I) /ja.d͡ʒuʕ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajuʕna", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجعن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَجُعْنَ • (yajuʕna) (form I) /ja.d͡ʒuʕ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajuʕna", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جعتما",
+      "tur": "verb",
+      "baslik": "جُعْتُمَا • (juʕtumā) (form I) /d͡ʒuʕ.tu.maː/\n# second-person dual past active of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["juʕtumā", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجوعان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَجُوعَانِ • (yajūʕāni) (form I) /ja.d͡ʒuː.ʕaː.ni/\n# third-person masculine dual non-past active indicative of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajūʕāni", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جاعا",
+      "tur": "verb",
+      "baslik": "جَاعَا • (jāʕā) (form I) /d͡ʒaː.ʕaː/\n# third-person masculine dual past active of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jāʕā", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجوعا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَجُوعَا • (tajūʕā) (form I) /ta.d͡ʒuː.ʕaː/\n# inflection of جَاعَ (jāʕa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajūʕā", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جاعتا",
+      "tur": "verb",
+      "baslik": "جَاعَتَا • (jāʕatā) (form I) /d͡ʒaː.ʕa.taː/\n# third-person feminine dual past active of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jāʕatā", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجوعا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَجُوعَا • (yajūʕā) (form I) /ja.d͡ʒuː.ʕaː/\n# third-person masculine dual non-past active subjunctive/jussive of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajūʕā", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجوعان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَجُوعَانِ • (tajūʕāni) (form I) /ta.d͡ʒuː.ʕaː.ni/\n# inflection of جَاعَ (jāʕa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajūʕāni", "jāʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جوعا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "جُوعَا • (jūʕā) (form I) /d͡ʒuː.ʕaː/\n# second-person dual imperative of جَاعَ (jāʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jūʕā", "jāʕa"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "جاع", "r7"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

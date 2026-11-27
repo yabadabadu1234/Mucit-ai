@@ -1,366 +1,259 @@
 {
   "kok": "تطير",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تطير", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تطيري",
-        "u": "تطيري",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَطَيَّرِي • (taṭayyarī) (form V) /ta.tˤaj.ja.riː/\n# second-person feminine singular imperative of تَطَيَّرَ (taṭayyara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṭayyarī", "taṭayyara"],
-        "k": "تطير",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيروا",
-        "u": "تطيروا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَطَيَّرُوا • (taṭayyarū) (form V) /ta.tˤaj.ja.ruː/\n# inflection of تَطَيَّرَ (taṭayyara):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṭayyarū", "taṭayyara"],
-        "k": "تطير",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيرن",
-        "u": "تطيرن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَطَيَّرْنَ • (taṭayyarna) (form V) /ta.tˤaj.jar.na/\n# inflection of تَطَيَّرَ (taṭayyara):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṭayyarna", "taṭayyara"],
-        "k": "تطير",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيرا",
-        "u": "تطيرا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَطَيَّرَا • (taṭayyarā) (form V) /ta.tˤaj.ja.raː/\n# inflection of تَطَيَّرَ (taṭayyara):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṭayyarā", "taṭayyara"],
-        "k": "تطير",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيرتا",
-        "u": "تطيرتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَطَيَّرَتَا • (taṭayyaratā) (form V) /ta.tˤaj.ja.ra.taː/\n# third-person feminine dual past active of تَطَيَّرَ (taṭayyara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṭayyaratā", "taṭayyara"],
-        "k": "تطير",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيرنا",
-        "u": "تطيرنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَطَيَّرْنَا • (taṭayyarnā) (form V) /ta.tˤaj.jar.naː/\n# first-person plural past active of تَطَيَّرَ (taṭayyara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṭayyarnā", "taṭayyara"],
-        "k": "تطير",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيرتم",
-        "u": "تطيرتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَطَيَّرْتُمْ • (taṭayyartum) (form V) /ta.tˤaj.jar.tum/\n# second-person masculine plural past active of تَطَيَّرَ (taṭayyara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṭayyartum", "taṭayyara"],
-        "k": "تطير",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيرتما",
-        "u": "تطيرتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَطَيَّرْتُمَا • (taṭayyartumā) (form V) /ta.tˤaj.jar.tu.maː/\n# second-person dual past active of تَطَيَّرَ (taṭayyara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṭayyartumā", "taṭayyara"],
-        "k": "تطير",
-        "yol": "kök"
-      },
-      {
-        "w": "تتطير",
-        "u": "تتطير",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتطير (form V)\n# تَتَطَيَّرُ (tataṭayyaru) /ta.ta.tˤaj.ja.ru/: inflection of تَطَيَّرَ (taṭayyara):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَطَيَّرَ (tataṭayyara) /ta.ta.tˤaj.ja.ra/: inflection of تَطَيَّرَ (taṭayyara):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine si",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṭayyaru", "taṭayyara", "tataṭayyara"],
-        "k": "تطير",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيرت",
-        "u": "تطيرت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطيرت (form V)\n# تَطَيَّرْتُ (taṭayyartu) /ta.tˤaj.jar.tu/: first-person singular past active of تَطَيَّرَ (taṭayyara)\n# تَطَيَّرْتَ (taṭayyarta) /ta.tˤaj.jar.ta/: second-person masculine singular past active of تَطَيَّرَ (taṭayyara)\n# تَطَيَّرْتِ (taṭayyarti) /ta.tˤaj.jar.ti/: second-person feminine singular past active of تَطَيَّرَ (taṭayyara)\n# تَطَيَّرَتْ (taṭayyarat) /ta.tˤaj.ja.rat/: third-p",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṭayyartu", "taṭayyara", "taṭayyarta"],
-        "k": "تطير",
-        "yol": "kök"
-      },
-      {
-        "w": "تتطيران",
-        "u": "تتطيران",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَطَيَّرَانِ • (tataṭayyarāni) (form V) /ta.ta.tˤaj.ja.raː.ni/\n# inflection of تَطَيَّرَ (taṭayyara):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṭayyarāni", "taṭayyara"],
-        "k": "تطير",
-        "yol": "kök"
-      },
-      {
-        "w": "تتطيرين",
-        "u": "تتطيرين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَطَيَّرِينَ • (tataṭayyarīna) (form V) /ta.ta.tˤaj.ja.riː.na/\n# second-person feminine singular non-past active indicative of تَطَيَّرَ (taṭayyara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṭayyarīna", "taṭayyara"],
-        "k": "تطير",
-        "yol": "kök"
-      },
-      {
-        "w": "أتطير",
-        "u": "أتطير",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتطير (form V)\n# أَتَطَيَّرُ (ʔataṭayyaru) /ʔa.ta.tˤaj.ja.ru/: first-person singular non-past active indicative of تَطَيَّرَ (taṭayyara)\n# أَتَطَيَّرَ (ʔataṭayyara) /ʔa.ta.tˤaj.ja.ra/: first-person singular non-past active subjunctive of تَطَيَّرَ (taṭayyara)\n# أَتَطَيَّرْ (ʔataṭayyar) /ʔa.ta.tˤaj.jar/: first-person singular non-past active jussive of تَطَيَّرَ (taṭayyara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔataṭayyaru", "taṭayyara", "ʔataṭayyara"],
-        "k": "تطير",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيرتن",
-        "u": "تطيرتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَطَيَّرْتُنَّ • (taṭayyartunna) (form V) /ta.tˤaj.jar.tun.na/\n# second-person feminine plural past active of تَطَيَّرَ (taṭayyara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṭayyartunna", "taṭayyara"],
-        "k": "تطير",
-        "yol": "kök"
-      },
-      {
-        "w": "يتطيران",
-        "u": "يتطيران",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَطَيَّرَانِ • (yataṭayyarāni) (form V) /ja.ta.tˤaj.ja.raː.ni/\n# third-person masculine dual non-past active indicative of تَطَيَّرَ (taṭayyara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataṭayyarāni", "taṭayyara"],
-        "k": "تطير",
-        "yol": "kök"
-      },
-      {
-        "w": "تتطيرون",
-        "u": "تتطيرون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَطَيَّرُونَ • (tataṭayyarūna) (form V) /ta.ta.tˤaj.ja.ruː.na/\n# second-person masculine plural non-past active indicative of تَطَيَّرَ (taṭayyara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṭayyarūna", "taṭayyara"],
-        "k": "تطير",
-        "yol": "kök"
-      },
-      {
-        "w": "يتطيرون",
-        "u": "يتطيرون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَطَيَّرُونَ • (yataṭayyarūna) (form V) /ja.ta.tˤaj.ja.ruː.na/\n# third-person masculine plural non-past active indicative of تَطَيَّرَ (taṭayyara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataṭayyarūna", "taṭayyara"],
-        "k": "تطير",
-        "yol": "kök"
-      },
-      {
-        "w": "نتطير",
-        "u": "نتطير",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتطير (form V)\n# نَتَطَيَّرُ (nataṭayyaru) /na.ta.tˤaj.ja.ru/: first-person plural non-past active indicative of تَطَيَّرَ (taṭayyara)\n# نَتَطَيَّرَ (nataṭayyara) /na.ta.tˤaj.ja.ra/: first-person plural non-past active subjunctive of تَطَيَّرَ (taṭayyara)\n# نَتَطَيَّرْ (nataṭayyar) /na.ta.tˤaj.jar/: first-person plural non-past active jussive of تَطَيَّرَ (taṭayyara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["nataṭayyaru", "taṭayyara", "nataṭayyara"],
-        "k": "تطير",
-        "yol": "kök"
-      },
-      {
-        "w": "يتطير",
-        "u": "يتطير",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتطير (form V)\n# يَتَطَيَّرُ (yataṭayyaru) /ja.ta.tˤaj.ja.ru/: third-person masculine singular non-past active indicative of تَطَيَّرَ (taṭayyara)\n# يَتَطَيَّرَ (yataṭayyara) /ja.ta.tˤaj.ja.ra/: third-person masculine singular non-past active subjunctive of تَطَيَّرَ (taṭayyara)\n# يَتَطَيَّرْ (yataṭayyar) /ja.ta.tˤaj.jar/: third-person masculine singular non-past active jussive of تَطَيَّرَ (taṭay",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataṭayyaru", "taṭayyara", "yataṭayyara"],
-        "k": "تطير",
-        "yol": "kök"
-      },
-      {
-        "w": "يتطيرن",
-        "u": "يتطيرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَطَيَّرْنَ • (yataṭayyarna) (form V) /ja.ta.tˤaj.jar.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَطَيَّرَ (taṭayyara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataṭayyarna", "taṭayyara"],
-        "k": "تطير",
-        "yol": "kök"
-      },
-      {
-        "w": "تتطيري",
-        "u": "تتطيري",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَطَيَّرِي • (tataṭayyarī) (form V) /ta.ta.tˤaj.ja.riː/\n# second-person feminine singular non-past active subjunctive/jussive of تَطَيَّرَ (taṭayyara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṭayyarī", "taṭayyara"],
-        "k": "تطير",
-        "yol": "kök"
-      },
-      {
-        "w": "تتطيرن",
-        "u": "تتطيرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَطَيَّرْنَ • (tataṭayyarna) (form V) /ta.ta.tˤaj.jar.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَطَيَّرَ (taṭayyara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṭayyarna", "taṭayyara"],
-        "k": "تطير",
-        "yol": "kök"
-      },
-      {
-        "w": "تتطيرا",
-        "u": "تتطيرا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَطَيَّرَا • (tataṭayyarā) (form V) /ta.ta.tˤaj.ja.raː/\n# inflection of تَطَيَّرَ (taṭayyara):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṭayyarā", "taṭayyara"],
-        "k": "تطير",
-        "yol": "kök"
-      },
-      {
-        "w": "يتطيرا",
-        "u": "يتطيرا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَطَيَّرَا • (yataṭayyarā) (form V) /ja.ta.tˤaj.ja.raː/\n# third-person masculine dual non-past active subjunctive/jussive of تَطَيَّرَ (taṭayyara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataṭayyarā", "taṭayyara"],
-        "k": "تطير",
-        "yol": "kök"
-      },
-      {
-        "w": "تتطيروا",
-        "u": "تتطيروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَطَيَّرُوا • (tataṭayyarū) (form V) /ta.ta.tˤaj.ja.ruː/\n# second-person masculine plural non-past active subjunctive/jussive of تَطَيَّرَ (taṭayyara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṭayyarū", "taṭayyara"],
-        "k": "تطير",
-        "yol": "kök"
-      },
-      {
-        "w": "يتطيروا",
-        "u": "يتطيروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَطَيَّرُوا • (yataṭayyarū) (form V) /ja.ta.tˤaj.ja.ruː/\n# third-person masculine plural non-past active subjunctive/jussive of تَطَيَّرَ (taṭayyara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataṭayyarū", "taṭayyara"],
-        "k": "تطير",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تط",
+  "ses": {
     "harf": "ت",
+    "fasil": "تط",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تطيري",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَطَيَّرِي • (taṭayyarī) (form V) /ta.tˤaj.ja.riː/\n# second-person feminine singular imperative of تَطَيَّرَ (taṭayyara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṭayyarī", "taṭayyara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطيروا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَطَيَّرُوا • (taṭayyarū) (form V) /ta.tˤaj.ja.ruː/\n# inflection of تَطَيَّرَ (taṭayyara):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṭayyarū", "taṭayyara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطيرن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَطَيَّرْنَ • (taṭayyarna) (form V) /ta.tˤaj.jar.na/\n# inflection of تَطَيَّرَ (taṭayyara):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṭayyarna", "taṭayyara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطيرا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَطَيَّرَا • (taṭayyarā) (form V) /ta.tˤaj.ja.raː/\n# inflection of تَطَيَّرَ (taṭayyara):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṭayyarā", "taṭayyara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطيرتا",
+      "tur": "verb",
+      "baslik": "تَطَيَّرَتَا • (taṭayyaratā) (form V) /ta.tˤaj.ja.ra.taː/\n# third-person feminine dual past active of تَطَيَّرَ (taṭayyara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṭayyaratā", "taṭayyara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطيرنا",
+      "tur": "verb",
+      "baslik": "تَطَيَّرْنَا • (taṭayyarnā) (form V) /ta.tˤaj.jar.naː/\n# first-person plural past active of تَطَيَّرَ (taṭayyara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṭayyarnā", "taṭayyara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطيرتم",
+      "tur": "verb",
+      "baslik": "تَطَيَّرْتُمْ • (taṭayyartum) (form V) /ta.tˤaj.jar.tum/\n# second-person masculine plural past active of تَطَيَّرَ (taṭayyara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṭayyartum", "taṭayyara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطيرتما",
+      "tur": "verb",
+      "baslik": "تَطَيَّرْتُمَا • (taṭayyartumā) (form V) /ta.tˤaj.jar.tu.maː/\n# second-person dual past active of تَطَيَّرَ (taṭayyara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṭayyartumā", "taṭayyara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتطير",
+      "tur": "verb",
+      "baslik": "تتطير (form V)\n# تَتَطَيَّرُ (tataṭayyaru) /ta.ta.tˤaj.ja.ru/: inflection of تَطَيَّرَ (taṭayyara):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَطَيَّرَ (tataṭayyara) /ta.ta.tˤaj.ja.ra/: inflection of تَطَيَّرَ (taṭayyara):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine si",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṭayyaru", "taṭayyara", "tataṭayyara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطيرت",
+      "tur": "verb",
+      "baslik": "تطيرت (form V)\n# تَطَيَّرْتُ (taṭayyartu) /ta.tˤaj.jar.tu/: first-person singular past active of تَطَيَّرَ (taṭayyara)\n# تَطَيَّرْتَ (taṭayyarta) /ta.tˤaj.jar.ta/: second-person masculine singular past active of تَطَيَّرَ (taṭayyara)\n# تَطَيَّرْتِ (taṭayyarti) /ta.tˤaj.jar.ti/: second-person feminine singular past active of تَطَيَّرَ (taṭayyara)\n# تَطَيَّرَتْ (taṭayyarat) /ta.tˤaj.ja.rat/: third-p",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṭayyartu", "taṭayyara", "taṭayyarta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتطيران",
+      "tur": "verb",
+      "baslik": "تَتَطَيَّرَانِ • (tataṭayyarāni) (form V) /ta.ta.tˤaj.ja.raː.ni/\n# inflection of تَطَيَّرَ (taṭayyara):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṭayyarāni", "taṭayyara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتطيرين",
+      "tur": "verb",
+      "baslik": "تَتَطَيَّرِينَ • (tataṭayyarīna) (form V) /ta.ta.tˤaj.ja.riː.na/\n# second-person feminine singular non-past active indicative of تَطَيَّرَ (taṭayyara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṭayyarīna", "taṭayyara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتطير",
+      "tur": "verb",
+      "baslik": "أتطير (form V)\n# أَتَطَيَّرُ (ʔataṭayyaru) /ʔa.ta.tˤaj.ja.ru/: first-person singular non-past active indicative of تَطَيَّرَ (taṭayyara)\n# أَتَطَيَّرَ (ʔataṭayyara) /ʔa.ta.tˤaj.ja.ra/: first-person singular non-past active subjunctive of تَطَيَّرَ (taṭayyara)\n# أَتَطَيَّرْ (ʔataṭayyar) /ʔa.ta.tˤaj.jar/: first-person singular non-past active jussive of تَطَيَّرَ (taṭayyara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔataṭayyaru", "taṭayyara", "ʔataṭayyara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطيرتن",
+      "tur": "verb",
+      "baslik": "تَطَيَّرْتُنَّ • (taṭayyartunna) (form V) /ta.tˤaj.jar.tun.na/\n# second-person feminine plural past active of تَطَيَّرَ (taṭayyara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṭayyartunna", "taṭayyara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتطيران",
+      "tur": "verb",
+      "baslik": "يَتَطَيَّرَانِ • (yataṭayyarāni) (form V) /ja.ta.tˤaj.ja.raː.ni/\n# third-person masculine dual non-past active indicative of تَطَيَّرَ (taṭayyara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataṭayyarāni", "taṭayyara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتطيرون",
+      "tur": "verb",
+      "baslik": "تَتَطَيَّرُونَ • (tataṭayyarūna) (form V) /ta.ta.tˤaj.ja.ruː.na/\n# second-person masculine plural non-past active indicative of تَطَيَّرَ (taṭayyara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṭayyarūna", "taṭayyara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتطيرون",
+      "tur": "verb",
+      "baslik": "يَتَطَيَّرُونَ • (yataṭayyarūna) (form V) /ja.ta.tˤaj.ja.ruː.na/\n# third-person masculine plural non-past active indicative of تَطَيَّرَ (taṭayyara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataṭayyarūna", "taṭayyara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتطير",
+      "tur": "verb",
+      "baslik": "نتطير (form V)\n# نَتَطَيَّرُ (nataṭayyaru) /na.ta.tˤaj.ja.ru/: first-person plural non-past active indicative of تَطَيَّرَ (taṭayyara)\n# نَتَطَيَّرَ (nataṭayyara) /na.ta.tˤaj.ja.ra/: first-person plural non-past active subjunctive of تَطَيَّرَ (taṭayyara)\n# نَتَطَيَّرْ (nataṭayyar) /na.ta.tˤaj.jar/: first-person plural non-past active jussive of تَطَيَّرَ (taṭayyara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["nataṭayyaru", "taṭayyara", "nataṭayyara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتطير",
+      "tur": "verb",
+      "baslik": "يتطير (form V)\n# يَتَطَيَّرُ (yataṭayyaru) /ja.ta.tˤaj.ja.ru/: third-person masculine singular non-past active indicative of تَطَيَّرَ (taṭayyara)\n# يَتَطَيَّرَ (yataṭayyara) /ja.ta.tˤaj.ja.ra/: third-person masculine singular non-past active subjunctive of تَطَيَّرَ (taṭayyara)\n# يَتَطَيَّرْ (yataṭayyar) /ja.ta.tˤaj.jar/: third-person masculine singular non-past active jussive of تَطَيَّرَ (taṭay",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataṭayyaru", "taṭayyara", "yataṭayyara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتطيرن",
+      "tur": "verb",
+      "baslik": "يَتَطَيَّرْنَ • (yataṭayyarna) (form V) /ja.ta.tˤaj.jar.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَطَيَّرَ (taṭayyara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataṭayyarna", "taṭayyara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتطيري",
+      "tur": "verb",
+      "baslik": "تَتَطَيَّرِي • (tataṭayyarī) (form V) /ta.ta.tˤaj.ja.riː/\n# second-person feminine singular non-past active subjunctive/jussive of تَطَيَّرَ (taṭayyara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṭayyarī", "taṭayyara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتطيرن",
+      "tur": "verb",
+      "baslik": "تَتَطَيَّرْنَ • (tataṭayyarna) (form V) /ta.ta.tˤaj.jar.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَطَيَّرَ (taṭayyara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṭayyarna", "taṭayyara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتطيرا",
+      "tur": "verb",
+      "baslik": "تَتَطَيَّرَا • (tataṭayyarā) (form V) /ta.ta.tˤaj.ja.raː/\n# inflection of تَطَيَّرَ (taṭayyara):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṭayyarā", "taṭayyara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتطيرا",
+      "tur": "verb",
+      "baslik": "يَتَطَيَّرَا • (yataṭayyarā) (form V) /ja.ta.tˤaj.ja.raː/\n# third-person masculine dual non-past active subjunctive/jussive of تَطَيَّرَ (taṭayyara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataṭayyarā", "taṭayyara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتطيروا",
+      "tur": "verb",
+      "baslik": "تَتَطَيَّرُوا • (tataṭayyarū) (form V) /ta.ta.tˤaj.ja.ruː/\n# second-person masculine plural non-past active subjunctive/jussive of تَطَيَّرَ (taṭayyara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṭayyarū", "taṭayyara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتطيروا",
+      "tur": "verb",
+      "baslik": "يَتَطَيَّرُوا • (yataṭayyarū) (form V) /ja.ta.tˤaj.ja.ruː/\n# third-person masculine plural non-past active subjunctive/jussive of تَطَيَّرَ (taṭayyara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataṭayyarū", "taṭayyara"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تطير", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,76 +1,67 @@
 {
   "kok": "ءغمي",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءغمي", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يغمى",
-        "u": "يغمى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُغْمَى • (yuḡmā) (form IV) /juɣ.maː/\n# third-person masculine singular non-past passive indicative/subjunctive of أُغْمِيَ (ʔuḡmiya)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḡmā", "ʔuḡmiya"],
-        "k": "أغمي",
-        "yol": "kök"
-      },
-      {
-        "w": "يغم",
-        "u": "يغم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُغْمَ • (yuḡma) (form IV) /juɣ.ma/\n# third-person masculine singular non-past passive jussive of أُغْمِيَ (ʔuḡmiya)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḡma", "ʔuḡmiya"],
-        "k": "أغمي",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "غم",
+  "ses": {
     "harf": "ء",
+    "fasil": "غم",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يغمى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُغْمَى • (yuḡmā) (form IV) /juɣ.maː/\n# third-person masculine singular non-past passive indicative/subjunctive of أُغْمِيَ (ʔuḡmiya)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḡmā", "ʔuḡmiya"],
+      "kok_yazilis": "أغمي",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُغْمَ • (yuḡma) (form IV) /juɣ.ma/\n# third-person masculine singular non-past passive jussive of أُغْمِيَ (ʔuḡmiya)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḡma", "ʔuḡmiya"],
+      "kok_yazilis": "أغمي",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءغمي", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

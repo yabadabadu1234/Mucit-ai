@@ -1,67 +1,69 @@
 {
   "kok": "سلطح",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "سلطح", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "اسلنطح",
-        "u": "اسلنطح",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "اِسْلَنْطَحَ • (islanṭaḥa) IIIq (non-past يَسْلَنْطِحُ (yaslanṭiḥu), verbal noun اِسْلِنْطَاح (islinṭāḥ))",
-        "t": "From the root س ل ط ح (s l ṭ ḥ); possibly related to سُلْطُح (sulṭuḥ, “slanting, rising gradually”).",
-        "s": [
-          ["ar-root", "س ل ط ح (s l ṭ ḥ)"]
-        ],
-        "g": ["to fall on the face", "to be long and wide"],
-        "r": ["islanṭaḥa"],
-        "el": [
-          ["س ل ط ح", "Appendix:Arabic roots/س ل ط ح"],
-          ["سُلْطُح", "سلطح#Arabic"],
-          ["slanting", "slanting"],
-          ["rising", "rising"],
-          ["gradually", "gradually"]
-        ],
-        "k": "سلطح",
-        "yol": "kök"
-      },
-      {
-        "w": "اسلنطاح",
-        "u": "اسلنطاح",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "اِسْلِنْطَاح • (islinṭāḥ) m",
-        "g": ["verbal noun of اِسْلَنْطَحَ (islanṭaḥa) (form IIIq)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["اِسْلَنْطَحَ"],
-        "r": ["islinṭāḥ"],
-        "yol": "asıl madde"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "سل",
+  "ses": {
     "harf": "س",
+    "fasil": "سل",
     "mahrec": "esaliyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "اسلنطح",
+      "tur": "verb",
+      "baslik": "اِسْلَنْطَحَ • (islanṭaḥa) IIIq (non-past يَسْلَنْطِحُ (yaslanṭiḥu), verbal noun اِسْلِنْطَاح (islinṭāḥ))",
+      "etim_sablon": [
+        ["ar-root", "س ل ط ح (s l ṭ ḥ)"]
+      ],
+      "anlam": ["to fall on the face", "to be long and wide"],
+      "okunus": ["islanṭaḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اسلنطاح",
+      "tur": "noun",
+      "baslik": "اِسْلِنْطَاح • (islinṭāḥ) m",
+      "anlam": ["verbal noun of اِسْلَنْطَحَ (islanṭaḥa) (form IIIq)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["اِسْلَنْطَحَ"],
+      "okunus": ["islinṭāḥ"],
+      "bag": "asıl madde"
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "From the root س ل ط ح (s l ṭ ḥ); possibly related to سُلْطُح (sulṭuḥ, “slanting, rising gradually”).",
+      "kognatlar": [
+        ["س ل ط ح", "Appendix:Arabic roots/س ل ط ح"],
+        ["سُلْطُح", "سلطح#Arabic"],
+        ["slanting", "slanting"],
+        ["rising", "rising"],
+        ["gradually", "gradually"]
+      ]
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "سلطح", "r6"]
+  ],
+  "mana": {
     "ince": "confront.v.02",
     "orta": "verb.communication",
     "ust": "söz ve haber",
@@ -69,20 +71,8 @@
     "dayanak_tanim": "deal with (something unpleasant) head on",
     "dayanak_karsilik": "fall on the face"
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m2",
+  "gomme": {
     "ust": {
       "kume": 8,
       "merkez_kok": "سير",
@@ -102,6 +92,10 @@
       "boy": 10
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

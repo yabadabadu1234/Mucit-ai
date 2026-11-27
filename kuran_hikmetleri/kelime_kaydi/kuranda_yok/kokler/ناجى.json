@@ -1,579 +1,399 @@
 {
   "kok": "ناجى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ناجى", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "ناجيت",
-        "u": "ناجيت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ناجيت (form III)\n# نَاجَيْتُ (nājaytu) /naː.d͡ʒaj.tu/: first-person singular past active of نَاجَى (nājā)\n# نَاجَيْتَ (nājayta) /naː.d͡ʒaj.ta/: second-person masculine singular past active of نَاجَى (nājā)\n# نَاجَيْتِ (nājayti) /naː.d͡ʒaj.ti/: second-person feminine singular past active of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nājaytu", "nājā", "nājayta"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "ناجيا",
-        "u": "ناجيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ناجيا (form III)\n# نَاجَيَا (nājayā) /naː.d͡ʒa.jaː/: third-person masculine dual past active of نَاجَى (nājā)\n# نَاجِيَا (nājiyā) /naː.d͡ʒi.jaː/: second-person dual imperative of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nājayā", "nājā", "nājiyā"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "ناجت",
-        "u": "ناجت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَاجَتْ • (nājat) (form III) /naː.d͡ʒat/\n# third-person feminine singular past active of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nājat", "nājā"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "ناجيتما",
-        "u": "ناجيتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَاجَيْتُمَا • (nājaytumā) (form III) /naː.d͡ʒaj.tu.maː/\n# second-person dual past active of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nājaytumā", "nājā"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "ناجينا",
-        "u": "ناجينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَاجَيْنَا • (nājaynā) (form III) /naː.d͡ʒaj.naː/\n# first-person plural past active of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nājaynā", "nājā"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "ناجيتم",
-        "u": "ناجيتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَاجَيْتُمْ • (nājaytum) (form III) /naː.d͡ʒaj.tum/\n# second-person masculine plural past active of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nājaytum", "nājā"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "ناجوا",
-        "u": "ناجوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ناجوا (form III)\n# نَاجَوْا (nājaw) /naː.d͡ʒaw/: third-person masculine plural past active of نَاجَى (nājā)\n# نَاجُوا (nājū) /naː.d͡ʒuː/: second-person masculine plural imperative of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nājaw", "nājā", "nājū"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "ناجتا",
-        "u": "ناجتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَاجَتَا • (nājatā) (form III) /naː.d͡ʒa.taː/\n# third-person feminine dual past active of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nājatā", "nājā"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "ناجين",
-        "u": "ناجين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ناجين (form III)\n# نَاجَيْنَ (nājayna) /naː.d͡ʒaj.na/: third-person feminine plural past active of نَاجَى (nājā)\n# نَاجِينَ (nājīna) /naː.d͡ʒiː.na/: second-person feminine plural imperative of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nājayna", "nājā", "nājīna"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "ناجيتن",
-        "u": "ناجيتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَاجَيْتُنَّ • (nājaytunna) (form III) /naː.d͡ʒaj.tun.na/\n# second-person feminine plural past active of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nājaytunna", "nājā"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوجي",
-        "u": "نوجي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوجِيَ • (nūjiya) (form III) /nuː.d͡ʒi.ja/\n# third-person masculine singular past passive of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūjiya", "nājā"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوجيت",
-        "u": "نوجيت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نوجيت (form III)\n# نُوجِيتُ (nūjītu) /nuː.d͡ʒiː.tu/: first-person singular past passive of نَاجَى (nājā)\n# نُوجِيتَ (nūjīta) /nuː.d͡ʒiː.ta/: second-person masculine singular past passive of نَاجَى (nājā)\n# نُوجِيتِ (nūjīti) /nuː.d͡ʒiː.ti/: second-person feminine singular past passive of نَاجَى (nājā)\n# نُوجِيَتْ (nūjiyat) /nuː.d͡ʒi.jat/: third-person feminine singular past passive of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūjītu", "nājā", "nūjīta"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوجيا",
-        "u": "نوجيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوجِيَا • (nūjiyā) (form III) /nuː.d͡ʒi.jaː/\n# third-person masculine dual past passive of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūjiyā", "nājā"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوجيتما",
-        "u": "نوجيتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوجِيتُمَا • (nūjītumā) (form III) /nuː.d͡ʒiː.tu.maː/\n# second-person dual past passive of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūjītumā", "nājā"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوجيتم",
-        "u": "نوجيتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوجِيتُمْ • (nūjītum) (form III) /nuː.d͡ʒiː.tum/\n# second-person masculine plural past passive of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūjītum", "nājā"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوجيتن",
-        "u": "نوجيتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوجِيتُنَّ • (nūjītunna) (form III) /nuː.d͡ʒiː.tun.na/\n# second-person feminine plural past passive of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūjītunna", "nājā"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوجينا",
-        "u": "نوجينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوجِينَا • (nūjīnā) (form III) /nuː.d͡ʒiː.naː/\n# first-person plural past passive of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūjīnā", "nājā"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوجيتا",
-        "u": "نوجيتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوجِيَتَا • (nūjiyatā) (form III) /nuː.d͡ʒi.ja.taː/\n# third-person feminine dual past passive of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūjiyatā", "nājā"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوجين",
-        "u": "نوجين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوجِينَ • (nūjīna) (form III) /nuː.d͡ʒiː.na/\n# third-person feminine plural past passive of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūjīna", "nājā"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "أناجي",
-        "u": "أناجي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أناجي (form III)\n# أُنَاجِي (ʔunājī) /ʔu.naː.d͡ʒiː/: first-person singular non-past active indicative of نَاجَى (nājā)\n# أُنَاجِيَ (ʔunājiya) /ʔu.naː.d͡ʒi.ja/: first-person singular non-past active subjunctive of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔunājī", "nājā", "ʔunājiya"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوجوا",
-        "u": "نوجوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوجُوا • (nūjū) (form III) /nuː.d͡ʒuː/\n# third-person masculine plural past passive of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūjū", "nājā"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "يناجي",
-        "u": "يناجي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يناجي (form III)\n# يُنَاجِي (yunājī) /ju.naː.d͡ʒiː/: third-person masculine singular non-past active indicative of نَاجَى (nājā)\n# يُنَاجِيَ (yunājiya) /ju.naː.d͡ʒi.ja/: third-person masculine singular non-past active subjunctive of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yunājī", "nājā", "yunājiya"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "تناجي",
-        "u": "تناجي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تناجي (form III)\n# تُنَاجِي (tunājī) /tu.naː.d͡ʒiː/: inflection of نَاجَى (nājā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُنَاجِيَ (tunājiya) /tu.naː.d͡ʒi.ja/: inflection of نَاجَى (nājā):\n## second-person masculine singular non-past active s",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunājī", "nājā", "tunājiya"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "تناجين",
-        "u": "تناجين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تناجين (form III)\n# تُنَاجِينَ (tunājīna) /tu.naː.d͡ʒiː.na/: inflection of نَاجَى (nājā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُنَاجَيْنَ (tunājayna) /tu.naː.d͡ʒaj.na/: inflection of نَاجَى (nājā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunājīna", "nājā", "tunājayna"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "تناجيان",
-        "u": "تناجيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تناجيان (form III)\n# تُنَاجِيَانِ (tunājiyāni) /tu.naː.d͡ʒi.jaː.ni/: inflection of نَاجَى (nājā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُنَاجَيَانِ (tunājayāni) /tu.naː.d͡ʒa.jaː.ni/: inflection of نَاجَى (nājā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunājiyāni", "nājā", "tunājayāni"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "يناجيان",
-        "u": "يناجيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يناجيان (form III)\n# يُنَاجِيَانِ (yunājiyāni) /ju.naː.d͡ʒi.jaː.ni/: third-person masculine dual non-past active indicative of نَاجَى (nājā)\n# يُنَاجَيَانِ (yunājayāni) /ju.naː.d͡ʒa.jaː.ni/: third-person masculine dual non-past passive indicative of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yunājiyāni", "nājā", "yunājayāni"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "نناجي",
-        "u": "نناجي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نناجي (form III)\n# نُنَاجِي (nunājī) /nu.naː.d͡ʒiː/: first-person plural non-past active indicative of نَاجَى (nājā)\n# نُنَاجِيَ (nunājiya) /nu.naː.d͡ʒi.ja/: first-person plural non-past active subjunctive of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nunājī", "nājā", "nunājiya"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "يناجين",
-        "u": "يناجين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يناجين (form III)\n# يُنَاجِينَ (yunājīna) /ju.naː.d͡ʒiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of نَاجَى (nājā)\n# يُنَاجَيْنَ (yunājayna) /ju.naː.d͡ʒaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yunājīna", "nājā", "yunājayna"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "تناجون",
-        "u": "تناجون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تناجون (form III)\n# تُنَاجُونَ (tunājūna) /tu.naː.d͡ʒuː.na/: second-person masculine plural non-past active indicative of نَاجَى (nājā)\n# تُنَاجَوْنَ (tunājawna) /tu.naː.d͡ʒaw.na/: second-person masculine plural non-past passive indicative of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunājūna", "nājā", "tunājawna"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "أناجى",
-        "u": "أناجى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُنَاجَى • (ʔunājā) (form III) /ʔu.naː.d͡ʒaː/\n# first-person singular non-past passive indicative/subjunctive of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔunājā", "nājā"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "يناجون",
-        "u": "يناجون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يناجون (form III)\n# يُنَاجُونَ (yunājūna) /ju.naː.d͡ʒuː.na/: third-person masculine plural non-past active indicative of نَاجَى (nājā)\n# يُنَاجَوْنَ (yunājawna) /ju.naː.d͡ʒaw.na/: third-person masculine plural non-past passive indicative of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yunājūna", "nājā", "yunājawna"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "نناجى",
-        "u": "نناجى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُنَاجَى • (nunājā) (form III) /nu.naː.d͡ʒaː/\n# first-person plural non-past passive indicative/subjunctive of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nunājā", "nājā"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "تناجى",
-        "u": "تناجى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُنَاجَى • (tunājā) (form III) /tu.naː.d͡ʒaː/\n# inflection of نَاجَى (nājā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunājā", "nājā"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "يناجيا",
-        "u": "يناجيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يناجيا (form III)\n# يُنَاجِيَا (yunājiyā) /ju.naː.d͡ʒi.jaː/: third-person masculine dual non-past active subjunctive/jussive of نَاجَى (nājā)\n# يُنَاجَيَا (yunājayā) /ju.naː.d͡ʒa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yunājiyā", "nājā", "yunājayā"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "تناجيا",
-        "u": "تناجيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تناجيا (form III)\n# تُنَاجِيَا (tunājiyā) /tu.naː.d͡ʒi.jaː/: inflection of نَاجَى (nājā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُنَاجَيَا (tunājayā) /tu.naː.d͡ʒa.jaː/: inflection of نَاجَى (nājā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunct",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunājiyā", "nājā", "tunājayā"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "يناجوا",
-        "u": "يناجوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يناجوا (form III)\n# يُنَاجُوا (yunājū) /ju.naː.d͡ʒuː/: third-person masculine plural non-past active subjunctive/jussive of نَاجَى (nājā)\n# يُنَاجَوْا (yunājaw) /ju.naː.d͡ʒaw/: third-person masculine plural non-past passive subjunctive/jussive of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yunājū", "nājā", "yunājaw"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "تناجوا",
-        "u": "تناجوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تناجوا (form III)\n# تُنَاجُوا (tunājū) /tu.naː.d͡ʒuː/: second-person masculine plural non-past active subjunctive/jussive of نَاجَى (nājā)\n# تُنَاجَوْا (tunājaw) /tu.naː.d͡ʒaw/: second-person masculine plural non-past passive subjunctive/jussive of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunājū", "nājā", "tunājaw"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "يناجى",
-        "u": "يناجى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُنَاجَى • (yunājā) (form III) /ju.naː.d͡ʒaː/\n# third-person masculine singular non-past passive indicative/subjunctive of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yunājā", "nājā"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "يناج",
-        "u": "يناج",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يناج (form III)\n# يُنَاجِ (yunāji) /ju.naː.d͡ʒi/: third-person masculine singular non-past active jussive of نَاجَى (nājā)\n# يُنَاجَ (yunāja) /ju.naː.d͡ʒa/: third-person masculine singular non-past passive jussive of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yunāji", "nājā", "yunāja"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "أناج",
-        "u": "أناج",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أناج (form III)\n# أُنَاجِ (ʔunāji) /ʔu.naː.d͡ʒi/: first-person singular non-past active jussive of نَاجَى (nājā)\n# أُنَاجَ (ʔunāja) /ʔu.naː.d͡ʒa/: first-person singular non-past passive jussive of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔunāji", "nājā", "ʔunāja"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "نناج",
-        "u": "نناج",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نناج (form III)\n# نُنَاجِ (nunāji) /nu.naː.d͡ʒi/: first-person plural non-past active jussive of نَاجَى (nājā)\n# نُنَاجَ (nunāja) /nu.naː.d͡ʒa/: first-person plural non-past passive jussive of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nunāji", "nājā", "nunāja"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "تناج",
-        "u": "تناج",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تناج (form III)\n# تُنَاجِ (tunāji) /tu.naː.d͡ʒi/: inflection of نَاجَى (nājā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُنَاجَ (tunāja) /tu.naː.d͡ʒa/: inflection of نَاجَى (nājā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunāji", "nājā", "tunāja"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "ناج",
-        "u": "ناج",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَاجِ • (nāji) (form III) /naː.d͡ʒi/\n# second-person masculine singular imperative of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nāji", "nājā"],
-        "k": "ناجى",
-        "yol": "kök"
-      },
-      {
-        "w": "ناجي",
-        "u": "ناجي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَاجِي • (nājī) (form III) /naː.d͡ʒiː/\n# second-person feminine singular imperative of نَاجَى (nājā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nājī", "nājā"],
-        "k": "ناجى",
-        "yol": "kök"
-      }
-    ],
-    "tercume": {}
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "نج",
+  "ses": {
     "harf": "ن",
+    "fasil": "نج",
     "mahrec": "zelakiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "ناجيت",
+      "tur": "verb",
+      "baslik": "ناجيت (form III)\n# نَاجَيْتُ (nājaytu) /naː.d͡ʒaj.tu/: first-person singular past active of نَاجَى (nājā)\n# نَاجَيْتَ (nājayta) /naː.d͡ʒaj.ta/: second-person masculine singular past active of نَاجَى (nājā)\n# نَاجَيْتِ (nājayti) /naː.d͡ʒaj.ti/: second-person feminine singular past active of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nājaytu", "nājā", "nājayta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناجيا",
+      "tur": "verb",
+      "baslik": "ناجيا (form III)\n# نَاجَيَا (nājayā) /naː.d͡ʒa.jaː/: third-person masculine dual past active of نَاجَى (nājā)\n# نَاجِيَا (nājiyā) /naː.d͡ʒi.jaː/: second-person dual imperative of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nājayā", "nājā", "nājiyā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناجت",
+      "tur": "verb",
+      "baslik": "نَاجَتْ • (nājat) (form III) /naː.d͡ʒat/\n# third-person feminine singular past active of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nājat", "nājā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناجيتما",
+      "tur": "verb",
+      "baslik": "نَاجَيْتُمَا • (nājaytumā) (form III) /naː.d͡ʒaj.tu.maː/\n# second-person dual past active of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nājaytumā", "nājā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناجينا",
+      "tur": "verb",
+      "baslik": "نَاجَيْنَا • (nājaynā) (form III) /naː.d͡ʒaj.naː/\n# first-person plural past active of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nājaynā", "nājā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناجيتم",
+      "tur": "verb",
+      "baslik": "نَاجَيْتُمْ • (nājaytum) (form III) /naː.d͡ʒaj.tum/\n# second-person masculine plural past active of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nājaytum", "nājā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناجوا",
+      "tur": "verb",
+      "baslik": "ناجوا (form III)\n# نَاجَوْا (nājaw) /naː.d͡ʒaw/: third-person masculine plural past active of نَاجَى (nājā)\n# نَاجُوا (nājū) /naː.d͡ʒuː/: second-person masculine plural imperative of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nājaw", "nājā", "nājū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناجتا",
+      "tur": "verb",
+      "baslik": "نَاجَتَا • (nājatā) (form III) /naː.d͡ʒa.taː/\n# third-person feminine dual past active of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nājatā", "nājā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناجين",
+      "tur": "verb",
+      "baslik": "ناجين (form III)\n# نَاجَيْنَ (nājayna) /naː.d͡ʒaj.na/: third-person feminine plural past active of نَاجَى (nājā)\n# نَاجِينَ (nājīna) /naː.d͡ʒiː.na/: second-person feminine plural imperative of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nājayna", "nājā", "nājīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناجيتن",
+      "tur": "verb",
+      "baslik": "نَاجَيْتُنَّ • (nājaytunna) (form III) /naː.d͡ʒaj.tun.na/\n# second-person feminine plural past active of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nājaytunna", "nājā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نوجي",
+      "tur": "verb",
+      "baslik": "نُوجِيَ • (nūjiya) (form III) /nuː.d͡ʒi.ja/\n# third-person masculine singular past passive of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūjiya", "nājā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نوجيت",
+      "tur": "verb",
+      "baslik": "نوجيت (form III)\n# نُوجِيتُ (nūjītu) /nuː.d͡ʒiː.tu/: first-person singular past passive of نَاجَى (nājā)\n# نُوجِيتَ (nūjīta) /nuː.d͡ʒiː.ta/: second-person masculine singular past passive of نَاجَى (nājā)\n# نُوجِيتِ (nūjīti) /nuː.d͡ʒiː.ti/: second-person feminine singular past passive of نَاجَى (nājā)\n# نُوجِيَتْ (nūjiyat) /nuː.d͡ʒi.jat/: third-person feminine singular past passive of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūjītu", "nājā", "nūjīta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نوجيا",
+      "tur": "verb",
+      "baslik": "نُوجِيَا • (nūjiyā) (form III) /nuː.d͡ʒi.jaː/\n# third-person masculine dual past passive of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūjiyā", "nājā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نوجيتما",
+      "tur": "verb",
+      "baslik": "نُوجِيتُمَا • (nūjītumā) (form III) /nuː.d͡ʒiː.tu.maː/\n# second-person dual past passive of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūjītumā", "nājā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نوجيتم",
+      "tur": "verb",
+      "baslik": "نُوجِيتُمْ • (nūjītum) (form III) /nuː.d͡ʒiː.tum/\n# second-person masculine plural past passive of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūjītum", "nājā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نوجيتن",
+      "tur": "verb",
+      "baslik": "نُوجِيتُنَّ • (nūjītunna) (form III) /nuː.d͡ʒiː.tun.na/\n# second-person feminine plural past passive of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūjītunna", "nājā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نوجينا",
+      "tur": "verb",
+      "baslik": "نُوجِينَا • (nūjīnā) (form III) /nuː.d͡ʒiː.naː/\n# first-person plural past passive of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūjīnā", "nājā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نوجيتا",
+      "tur": "verb",
+      "baslik": "نُوجِيَتَا • (nūjiyatā) (form III) /nuː.d͡ʒi.ja.taː/\n# third-person feminine dual past passive of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūjiyatā", "nājā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نوجين",
+      "tur": "verb",
+      "baslik": "نُوجِينَ • (nūjīna) (form III) /nuː.d͡ʒiː.na/\n# third-person feminine plural past passive of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūjīna", "nājā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أناجي",
+      "tur": "verb",
+      "baslik": "أناجي (form III)\n# أُنَاجِي (ʔunājī) /ʔu.naː.d͡ʒiː/: first-person singular non-past active indicative of نَاجَى (nājā)\n# أُنَاجِيَ (ʔunājiya) /ʔu.naː.d͡ʒi.ja/: first-person singular non-past active subjunctive of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔunājī", "nājā", "ʔunājiya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نوجوا",
+      "tur": "verb",
+      "baslik": "نُوجُوا • (nūjū) (form III) /nuː.d͡ʒuː/\n# third-person masculine plural past passive of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūjū", "nājā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يناجي",
+      "tur": "verb",
+      "baslik": "يناجي (form III)\n# يُنَاجِي (yunājī) /ju.naː.d͡ʒiː/: third-person masculine singular non-past active indicative of نَاجَى (nājā)\n# يُنَاجِيَ (yunājiya) /ju.naː.d͡ʒi.ja/: third-person masculine singular non-past active subjunctive of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yunājī", "nājā", "yunājiya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تناجي",
+      "tur": "verb",
+      "baslik": "تناجي (form III)\n# تُنَاجِي (tunājī) /tu.naː.d͡ʒiː/: inflection of نَاجَى (nājā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُنَاجِيَ (tunājiya) /tu.naː.d͡ʒi.ja/: inflection of نَاجَى (nājā):\n## second-person masculine singular non-past active s",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunājī", "nājā", "tunājiya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تناجين",
+      "tur": "verb",
+      "baslik": "تناجين (form III)\n# تُنَاجِينَ (tunājīna) /tu.naː.d͡ʒiː.na/: inflection of نَاجَى (nājā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُنَاجَيْنَ (tunājayna) /tu.naː.d͡ʒaj.na/: inflection of نَاجَى (nājā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine pl",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunājīna", "nājā", "tunājayna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تناجيان",
+      "tur": "verb",
+      "baslik": "تناجيان (form III)\n# تُنَاجِيَانِ (tunājiyāni) /tu.naː.d͡ʒi.jaː.ni/: inflection of نَاجَى (nājā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُنَاجَيَانِ (tunājayāni) /tu.naː.d͡ʒa.jaː.ni/: inflection of نَاجَى (nājā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunājiyāni", "nājā", "tunājayāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يناجيان",
+      "tur": "verb",
+      "baslik": "يناجيان (form III)\n# يُنَاجِيَانِ (yunājiyāni) /ju.naː.d͡ʒi.jaː.ni/: third-person masculine dual non-past active indicative of نَاجَى (nājā)\n# يُنَاجَيَانِ (yunājayāni) /ju.naː.d͡ʒa.jaː.ni/: third-person masculine dual non-past passive indicative of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yunājiyāni", "nājā", "yunājayāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نناجي",
+      "tur": "verb",
+      "baslik": "نناجي (form III)\n# نُنَاجِي (nunājī) /nu.naː.d͡ʒiː/: first-person plural non-past active indicative of نَاجَى (nājā)\n# نُنَاجِيَ (nunājiya) /nu.naː.d͡ʒi.ja/: first-person plural non-past active subjunctive of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nunājī", "nājā", "nunājiya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يناجين",
+      "tur": "verb",
+      "baslik": "يناجين (form III)\n# يُنَاجِينَ (yunājīna) /ju.naː.d͡ʒiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of نَاجَى (nājā)\n# يُنَاجَيْنَ (yunājayna) /ju.naː.d͡ʒaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yunājīna", "nājā", "yunājayna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تناجون",
+      "tur": "verb",
+      "baslik": "تناجون (form III)\n# تُنَاجُونَ (tunājūna) /tu.naː.d͡ʒuː.na/: second-person masculine plural non-past active indicative of نَاجَى (nājā)\n# تُنَاجَوْنَ (tunājawna) /tu.naː.d͡ʒaw.na/: second-person masculine plural non-past passive indicative of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunājūna", "nājā", "tunājawna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أناجى",
+      "tur": "verb",
+      "baslik": "أُنَاجَى • (ʔunājā) (form III) /ʔu.naː.d͡ʒaː/\n# first-person singular non-past passive indicative/subjunctive of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔunājā", "nājā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يناجون",
+      "tur": "verb",
+      "baslik": "يناجون (form III)\n# يُنَاجُونَ (yunājūna) /ju.naː.d͡ʒuː.na/: third-person masculine plural non-past active indicative of نَاجَى (nājā)\n# يُنَاجَوْنَ (yunājawna) /ju.naː.d͡ʒaw.na/: third-person masculine plural non-past passive indicative of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yunājūna", "nājā", "yunājawna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نناجى",
+      "tur": "verb",
+      "baslik": "نُنَاجَى • (nunājā) (form III) /nu.naː.d͡ʒaː/\n# first-person plural non-past passive indicative/subjunctive of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nunājā", "nājā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تناجى",
+      "tur": "verb",
+      "baslik": "تُنَاجَى • (tunājā) (form III) /tu.naː.d͡ʒaː/\n# inflection of نَاجَى (nājā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunājā", "nājā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يناجيا",
+      "tur": "verb",
+      "baslik": "يناجيا (form III)\n# يُنَاجِيَا (yunājiyā) /ju.naː.d͡ʒi.jaː/: third-person masculine dual non-past active subjunctive/jussive of نَاجَى (nājā)\n# يُنَاجَيَا (yunājayā) /ju.naː.d͡ʒa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yunājiyā", "nājā", "yunājayā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تناجيا",
+      "tur": "verb",
+      "baslik": "تناجيا (form III)\n# تُنَاجِيَا (tunājiyā) /tu.naː.d͡ʒi.jaː/: inflection of نَاجَى (nājā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُنَاجَيَا (tunājayā) /tu.naː.d͡ʒa.jaː/: inflection of نَاجَى (nājā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunct",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunājiyā", "nājā", "tunājayā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يناجوا",
+      "tur": "verb",
+      "baslik": "يناجوا (form III)\n# يُنَاجُوا (yunājū) /ju.naː.d͡ʒuː/: third-person masculine plural non-past active subjunctive/jussive of نَاجَى (nājā)\n# يُنَاجَوْا (yunājaw) /ju.naː.d͡ʒaw/: third-person masculine plural non-past passive subjunctive/jussive of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yunājū", "nājā", "yunājaw"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تناجوا",
+      "tur": "verb",
+      "baslik": "تناجوا (form III)\n# تُنَاجُوا (tunājū) /tu.naː.d͡ʒuː/: second-person masculine plural non-past active subjunctive/jussive of نَاجَى (nājā)\n# تُنَاجَوْا (tunājaw) /tu.naː.d͡ʒaw/: second-person masculine plural non-past passive subjunctive/jussive of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunājū", "nājā", "tunājaw"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يناجى",
+      "tur": "verb",
+      "baslik": "يُنَاجَى • (yunājā) (form III) /ju.naː.d͡ʒaː/\n# third-person masculine singular non-past passive indicative/subjunctive of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yunājā", "nājā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يناج",
+      "tur": "verb",
+      "baslik": "يناج (form III)\n# يُنَاجِ (yunāji) /ju.naː.d͡ʒi/: third-person masculine singular non-past active jussive of نَاجَى (nājā)\n# يُنَاجَ (yunāja) /ju.naː.d͡ʒa/: third-person masculine singular non-past passive jussive of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yunāji", "nājā", "yunāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أناج",
+      "tur": "verb",
+      "baslik": "أناج (form III)\n# أُنَاجِ (ʔunāji) /ʔu.naː.d͡ʒi/: first-person singular non-past active jussive of نَاجَى (nājā)\n# أُنَاجَ (ʔunāja) /ʔu.naː.d͡ʒa/: first-person singular non-past passive jussive of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔunāji", "nājā", "ʔunāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نناج",
+      "tur": "verb",
+      "baslik": "نناج (form III)\n# نُنَاجِ (nunāji) /nu.naː.d͡ʒi/: first-person plural non-past active jussive of نَاجَى (nājā)\n# نُنَاجَ (nunāja) /nu.naː.d͡ʒa/: first-person plural non-past passive jussive of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nunāji", "nājā", "nunāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تناج",
+      "tur": "verb",
+      "baslik": "تناج (form III)\n# تُنَاجِ (tunāji) /tu.naː.d͡ʒi/: inflection of نَاجَى (nājā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُنَاجَ (tunāja) /tu.naː.d͡ʒa/: inflection of نَاجَى (nājā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunāji", "nājā", "tunāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناج",
+      "tur": "verb",
+      "baslik": "نَاجِ • (nāji) (form III) /naː.d͡ʒi/\n# second-person masculine singular imperative of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nāji", "nājā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناجي",
+      "tur": "verb",
+      "baslik": "نَاجِي • (nājī) (form III) /naː.d͡ʒiː/\n# second-person feminine singular imperative of نَاجَى (nājā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nājī", "nājā"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ناجى", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

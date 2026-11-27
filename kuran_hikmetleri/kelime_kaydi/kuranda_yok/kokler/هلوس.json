@@ -1,359 +1,260 @@
 {
   "kok": "هلوس",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "هلوس", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "هلوسة",
-        "u": "هلوسة",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "هَلْوَسَة • (halwasa) f (plural هَلْوَسَات (halwasāt) or هَلَاوِس (halāwis))",
-        "g": ["verbal noun of هَلْوَسَ (halwasa) (form Iq)", "hallucination, delusion", "hallucination"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["هَلْوَسَ"],
-        "r": ["halwasa"],
-        "ipa": ["/hal.wa.sa/"],
-        "k": "هلوس",
-        "yol": "kök"
-      },
-      {
-        "w": "هلوست",
-        "u": "هلوست",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هلوست (form Iq)\n# هَلْوَسْتُ (halwastu) /hal.was.tu/: first-person singular past active of هَلْوَسَ (halwasa)\n# هَلْوَسْتَ (halwasta) /hal.was.ta/: second-person masculine singular past active of هَلْوَسَ (halwasa)\n# هَلْوَسْتِ (halwasti) /hal.was.ti/: second-person feminine singular past active of هَلْوَسَ (halwasa)\n# هَلْوَسَتْ (halwasat) /hal.wa.sat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["halwastu", "halwasa", "halwasta"],
-        "k": "هلوس",
-        "yol": "kök"
-      },
-      {
-        "w": "هلوسنا",
-        "u": "هلوسنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَلْوَسْنَا • (halwasnā) (form Iq) /hal.was.naː/\n# first-person plural past active of هَلْوَسَ (halwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["halwasnā", "halwasa"],
-        "k": "هلوس",
-        "yol": "kök"
-      },
-      {
-        "w": "هلوستما",
-        "u": "هلوستما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَلْوَسْتُمَا • (halwastumā) (form Iq) /hal.was.tu.maː/\n# second-person dual past active of هَلْوَسَ (halwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["halwastumā", "halwasa"],
-        "k": "هلوس",
-        "yol": "kök"
-      },
-      {
-        "w": "هلوستا",
-        "u": "هلوستا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَلْوَسَتَا • (halwasatā) (form Iq) /hal.wa.sa.taː/\n# third-person feminine dual past active of هَلْوَسَ (halwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["halwasatā", "halwasa"],
-        "k": "هلوس",
-        "yol": "kök"
-      },
-      {
-        "w": "هلوسا",
-        "u": "هلوسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هلوسا (form Iq)\n# هَلْوَسَا (halwasā) /hal.wa.saː/: third-person masculine dual past active of هَلْوَسَ (halwasa)\n# هَلْوِسَا (halwisā) /hal.wi.saː/: second-person dual imperative of هَلْوَسَ (halwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["halwasā", "halwasa", "halwisā"],
-        "k": "هلوس",
-        "yol": "kök"
-      },
-      {
-        "w": "هلوستم",
-        "u": "هلوستم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَلْوَسْتُمْ • (halwastum) (form Iq) /hal.was.tum/\n# second-person masculine plural past active of هَلْوَسَ (halwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["halwastum", "halwasa"],
-        "k": "هلوس",
-        "yol": "kök"
-      },
-      {
-        "w": "هلوسوا",
-        "u": "هلوسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هلوسوا (form Iq)\n# هَلْوَسُوا (halwasū) /hal.wa.suː/: third-person masculine plural past active of هَلْوَسَ (halwasa)\n# هَلْوِسُوا (halwisū) /hal.wi.suː/: second-person masculine plural imperative of هَلْوَسَ (halwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["halwasū", "halwasa", "halwisū"],
-        "k": "هلوس",
-        "yol": "kök"
-      },
-      {
-        "w": "هلوسن",
-        "u": "هلوسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هلوسن (form Iq)\n# هَلْوَسْنَ (halwasna) /hal.was.na/: third-person feminine plural past active of هَلْوَسَ (halwasa)\n# هَلْوِسْنَ (halwisna) /hal.wis.na/: second-person feminine plural imperative of هَلْوَسَ (halwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["halwasna", "halwasa", "halwisna"],
-        "k": "هلوس",
-        "yol": "kök"
-      },
-      {
-        "w": "أهلوس",
-        "u": "أهلوس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أهلوس (form Iq)\n# أُهَلْوِسُ (ʔuhalwisu) /ʔu.hal.wi.su/: first-person singular non-past active indicative of هَلْوَسَ (halwasa)\n# أُهَلْوِسَ (ʔuhalwisa) /ʔu.hal.wi.sa/: first-person singular non-past active subjunctive of هَلْوَسَ (halwasa)\n# أُهَلْوِسْ (ʔuhalwis) /ʔu.hal.wis/: first-person singular non-past active jussive of هَلْوَسَ (halwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʔuhalwisu", "halwasa", "ʔuhalwisa"],
-        "k": "هلوس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهلوسان",
-        "u": "تهلوسان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُهَلْوِسَانِ • (tuhalwisāni) (form Iq) /tu.hal.wi.saː.ni/\n# inflection of هَلْوَسَ (halwasa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuhalwisāni", "halwasa"],
-        "k": "هلوس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهلوسين",
-        "u": "تهلوسين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُهَلْوِسِينَ • (tuhalwisīna) (form Iq) /tu.hal.wi.siː.na/\n# second-person feminine singular non-past active indicative of هَلْوَسَ (halwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuhalwisīna", "halwasa"],
-        "k": "هلوس",
-        "yol": "kök"
-      },
-      {
-        "w": "هلوستن",
-        "u": "هلوستن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَلْوَسْتُنَّ • (halwastunna) (form Iq) /hal.was.tun.na/\n# second-person feminine plural past active of هَلْوَسَ (halwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["halwastunna", "halwasa"],
-        "k": "هلوس",
-        "yol": "kök"
-      },
-      {
-        "w": "يهلوس",
-        "u": "يهلوس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهلوس (form Iq)\n# يُهَلْوِسُ (yuhalwisu) /ju.hal.wi.su/: third-person masculine singular non-past active indicative of هَلْوَسَ (halwasa)\n# يُهَلْوِسَ (yuhalwisa) /ju.hal.wi.sa/: third-person masculine singular non-past active subjunctive of هَلْوَسَ (halwasa)\n# يُهَلْوِسْ (yuhalwis) /ju.hal.wis/: third-person masculine singular non-past active jussive of هَلْوَسَ (halwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuhalwisu", "halwasa", "yuhalwisa"],
-        "k": "هلوس",
-        "yol": "kök"
-      },
-      {
-        "w": "يهلوسان",
-        "u": "يهلوسان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُهَلْوِسَانِ • (yuhalwisāni) (form Iq) /ju.hal.wi.saː.ni/\n# third-person masculine dual non-past active indicative of هَلْوَسَ (halwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuhalwisāni", "halwasa"],
-        "k": "هلوس",
-        "yol": "kök"
-      },
-      {
-        "w": "نهلوس",
-        "u": "نهلوس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نهلوس (form Iq)\n# نُهَلْوِسُ (nuhalwisu) /nu.hal.wi.su/: first-person plural non-past active indicative of هَلْوَسَ (halwasa)\n# نُهَلْوِسَ (nuhalwisa) /nu.hal.wi.sa/: first-person plural non-past active subjunctive of هَلْوَسَ (halwasa)\n# نُهَلْوِسْ (nuhalwis) /nu.hal.wis/: first-person plural non-past active jussive of هَلْوَسَ (halwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["nuhalwisu", "halwasa", "nuhalwisa"],
-        "k": "هلوس",
-        "yol": "kök"
-      },
-      {
-        "w": "يهلوسن",
-        "u": "يهلوسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُهَلْوِسْنَ • (yuhalwisna) (form Iq) /ju.hal.wis.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of هَلْوَسَ (halwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuhalwisna", "halwasa"],
-        "k": "هلوس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهلوسن",
-        "u": "تهلوسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُهَلْوِسْنَ • (tuhalwisna) (form Iq) /tu.hal.wis.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of هَلْوَسَ (halwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuhalwisna", "halwasa"],
-        "k": "هلوس",
-        "yol": "kök"
-      },
-      {
-        "w": "يهلوسون",
-        "u": "يهلوسون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُهَلْوِسُونَ • (yuhalwisūna) (form Iq) /ju.hal.wi.suː.na/\n# third-person masculine plural non-past active indicative of هَلْوَسَ (halwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuhalwisūna", "halwasa"],
-        "k": "هلوس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهلوس",
-        "u": "تهلوس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهلوس (form Iq)\n# تُهَلْوِسُ (tuhalwisu) /tu.hal.wi.su/: inflection of هَلْوَسَ (halwasa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُهَلْوِسَ (tuhalwisa) /tu.hal.wi.sa/: inflection of هَلْوَسَ (halwasa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past act",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuhalwisu", "halwasa", "tuhalwisa"],
-        "k": "هلوس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهلوسون",
-        "u": "تهلوسون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُهَلْوِسُونَ • (tuhalwisūna) (form Iq) /tu.hal.wi.suː.na/\n# second-person masculine plural non-past active indicative of هَلْوَسَ (halwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuhalwisūna", "halwasa"],
-        "k": "هلوس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهلوسا",
-        "u": "تهلوسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُهَلْوِسَا • (tuhalwisā) (form Iq) /tu.hal.wi.saː/\n# inflection of هَلْوَسَ (halwasa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuhalwisā", "halwasa"],
-        "k": "هلوس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهلوسي",
-        "u": "تهلوسي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُهَلْوِسِي • (tuhalwisī) (form Iq) /tu.hal.wi.siː/\n# second-person feminine singular non-past active subjunctive/jussive of هَلْوَسَ (halwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuhalwisī", "halwasa"],
-        "k": "هلوس",
-        "yol": "kök"
-      },
-      {
-        "w": "يهلوسا",
-        "u": "يهلوسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُهَلْوِسَا • (yuhalwisā) (form Iq) /ju.hal.wi.saː/\n# third-person masculine dual non-past active subjunctive/jussive of هَلْوَسَ (halwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuhalwisā", "halwasa"],
-        "k": "هلوس",
-        "yol": "kök"
-      },
-      {
-        "w": "يهلوسوا",
-        "u": "يهلوسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُهَلْوِسُوا • (yuhalwisū) (form Iq) /ju.hal.wi.suː/\n# third-person masculine plural non-past active subjunctive/jussive of هَلْوَسَ (halwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuhalwisū", "halwasa"],
-        "k": "هلوس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهلوسوا",
-        "u": "تهلوسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُهَلْوِسُوا • (tuhalwisū) (form Iq) /tu.hal.wi.suː/\n# second-person masculine plural non-past active subjunctive/jussive of هَلْوَسَ (halwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuhalwisū", "halwasa"],
-        "k": "هلوس",
-        "yol": "kök"
-      },
-      {
-        "w": "هلوسي",
-        "u": "هلوسي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَلْوِسِي • (halwisī) (form Iq) /hal.wi.siː/\n# second-person feminine singular imperative of هَلْوَسَ (halwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["halwisī", "halwasa"],
-        "k": "هلوس",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "هل",
+  "ses": {
     "harf": "ه",
+    "fasil": "هل",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "هلوسة",
+      "tur": "noun",
+      "baslik": "هَلْوَسَة • (halwasa) f (plural هَلْوَسَات (halwasāt) or هَلَاوِس (halāwis))",
+      "anlam": ["verbal noun of هَلْوَسَ (halwasa) (form Iq)", "hallucination, delusion", "hallucination"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["هَلْوَسَ"],
+      "okunus": ["halwasa"],
+      "ipa": ["/hal.wa.sa/"]
+    },
+    {
+      "madde": "هلوست",
+      "tur": "verb",
+      "baslik": "هلوست (form Iq)\n# هَلْوَسْتُ (halwastu) /hal.was.tu/: first-person singular past active of هَلْوَسَ (halwasa)\n# هَلْوَسْتَ (halwasta) /hal.was.ta/: second-person masculine singular past active of هَلْوَسَ (halwasa)\n# هَلْوَسْتِ (halwasti) /hal.was.ti/: second-person feminine singular past active of هَلْوَسَ (halwasa)\n# هَلْوَسَتْ (halwasat) /hal.wa.sat/: third-person feminine singular past active ",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["halwastu", "halwasa", "halwasta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هلوسنا",
+      "tur": "verb",
+      "baslik": "هَلْوَسْنَا • (halwasnā) (form Iq) /hal.was.naː/\n# first-person plural past active of هَلْوَسَ (halwasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["halwasnā", "halwasa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هلوستما",
+      "tur": "verb",
+      "baslik": "هَلْوَسْتُمَا • (halwastumā) (form Iq) /hal.was.tu.maː/\n# second-person dual past active of هَلْوَسَ (halwasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["halwastumā", "halwasa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هلوستا",
+      "tur": "verb",
+      "baslik": "هَلْوَسَتَا • (halwasatā) (form Iq) /hal.wa.sa.taː/\n# third-person feminine dual past active of هَلْوَسَ (halwasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["halwasatā", "halwasa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هلوسا",
+      "tur": "verb",
+      "baslik": "هلوسا (form Iq)\n# هَلْوَسَا (halwasā) /hal.wa.saː/: third-person masculine dual past active of هَلْوَسَ (halwasa)\n# هَلْوِسَا (halwisā) /hal.wi.saː/: second-person dual imperative of هَلْوَسَ (halwasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["halwasā", "halwasa", "halwisā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هلوستم",
+      "tur": "verb",
+      "baslik": "هَلْوَسْتُمْ • (halwastum) (form Iq) /hal.was.tum/\n# second-person masculine plural past active of هَلْوَسَ (halwasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["halwastum", "halwasa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هلوسوا",
+      "tur": "verb",
+      "baslik": "هلوسوا (form Iq)\n# هَلْوَسُوا (halwasū) /hal.wa.suː/: third-person masculine plural past active of هَلْوَسَ (halwasa)\n# هَلْوِسُوا (halwisū) /hal.wi.suː/: second-person masculine plural imperative of هَلْوَسَ (halwasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["halwasū", "halwasa", "halwisū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هلوسن",
+      "tur": "verb",
+      "baslik": "هلوسن (form Iq)\n# هَلْوَسْنَ (halwasna) /hal.was.na/: third-person feminine plural past active of هَلْوَسَ (halwasa)\n# هَلْوِسْنَ (halwisna) /hal.wis.na/: second-person feminine plural imperative of هَلْوَسَ (halwasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["halwasna", "halwasa", "halwisna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أهلوس",
+      "tur": "verb",
+      "baslik": "أهلوس (form Iq)\n# أُهَلْوِسُ (ʔuhalwisu) /ʔu.hal.wi.su/: first-person singular non-past active indicative of هَلْوَسَ (halwasa)\n# أُهَلْوِسَ (ʔuhalwisa) /ʔu.hal.wi.sa/: first-person singular non-past active subjunctive of هَلْوَسَ (halwasa)\n# أُهَلْوِسْ (ʔuhalwis) /ʔu.hal.wis/: first-person singular non-past active jussive of هَلْوَسَ (halwasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʔuhalwisu", "halwasa", "ʔuhalwisa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهلوسان",
+      "tur": "verb",
+      "baslik": "تُهَلْوِسَانِ • (tuhalwisāni) (form Iq) /tu.hal.wi.saː.ni/\n# inflection of هَلْوَسَ (halwasa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuhalwisāni", "halwasa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهلوسين",
+      "tur": "verb",
+      "baslik": "تُهَلْوِسِينَ • (tuhalwisīna) (form Iq) /tu.hal.wi.siː.na/\n# second-person feminine singular non-past active indicative of هَلْوَسَ (halwasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuhalwisīna", "halwasa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هلوستن",
+      "tur": "verb",
+      "baslik": "هَلْوَسْتُنَّ • (halwastunna) (form Iq) /hal.was.tun.na/\n# second-person feminine plural past active of هَلْوَسَ (halwasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["halwastunna", "halwasa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهلوس",
+      "tur": "verb",
+      "baslik": "يهلوس (form Iq)\n# يُهَلْوِسُ (yuhalwisu) /ju.hal.wi.su/: third-person masculine singular non-past active indicative of هَلْوَسَ (halwasa)\n# يُهَلْوِسَ (yuhalwisa) /ju.hal.wi.sa/: third-person masculine singular non-past active subjunctive of هَلْوَسَ (halwasa)\n# يُهَلْوِسْ (yuhalwis) /ju.hal.wis/: third-person masculine singular non-past active jussive of هَلْوَسَ (halwasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuhalwisu", "halwasa", "yuhalwisa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهلوسان",
+      "tur": "verb",
+      "baslik": "يُهَلْوِسَانِ • (yuhalwisāni) (form Iq) /ju.hal.wi.saː.ni/\n# third-person masculine dual non-past active indicative of هَلْوَسَ (halwasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuhalwisāni", "halwasa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نهلوس",
+      "tur": "verb",
+      "baslik": "نهلوس (form Iq)\n# نُهَلْوِسُ (nuhalwisu) /nu.hal.wi.su/: first-person plural non-past active indicative of هَلْوَسَ (halwasa)\n# نُهَلْوِسَ (nuhalwisa) /nu.hal.wi.sa/: first-person plural non-past active subjunctive of هَلْوَسَ (halwasa)\n# نُهَلْوِسْ (nuhalwis) /nu.hal.wis/: first-person plural non-past active jussive of هَلْوَسَ (halwasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["nuhalwisu", "halwasa", "nuhalwisa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهلوسن",
+      "tur": "verb",
+      "baslik": "يُهَلْوِسْنَ • (yuhalwisna) (form Iq) /ju.hal.wis.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of هَلْوَسَ (halwasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuhalwisna", "halwasa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهلوسن",
+      "tur": "verb",
+      "baslik": "تُهَلْوِسْنَ • (tuhalwisna) (form Iq) /tu.hal.wis.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of هَلْوَسَ (halwasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuhalwisna", "halwasa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهلوسون",
+      "tur": "verb",
+      "baslik": "يُهَلْوِسُونَ • (yuhalwisūna) (form Iq) /ju.hal.wi.suː.na/\n# third-person masculine plural non-past active indicative of هَلْوَسَ (halwasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuhalwisūna", "halwasa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهلوس",
+      "tur": "verb",
+      "baslik": "تهلوس (form Iq)\n# تُهَلْوِسُ (tuhalwisu) /tu.hal.wi.su/: inflection of هَلْوَسَ (halwasa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُهَلْوِسَ (tuhalwisa) /tu.hal.wi.sa/: inflection of هَلْوَسَ (halwasa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past act",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuhalwisu", "halwasa", "tuhalwisa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهلوسون",
+      "tur": "verb",
+      "baslik": "تُهَلْوِسُونَ • (tuhalwisūna) (form Iq) /tu.hal.wi.suː.na/\n# second-person masculine plural non-past active indicative of هَلْوَسَ (halwasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuhalwisūna", "halwasa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهلوسا",
+      "tur": "verb",
+      "baslik": "تُهَلْوِسَا • (tuhalwisā) (form Iq) /tu.hal.wi.saː/\n# inflection of هَلْوَسَ (halwasa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuhalwisā", "halwasa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهلوسي",
+      "tur": "verb",
+      "baslik": "تُهَلْوِسِي • (tuhalwisī) (form Iq) /tu.hal.wi.siː/\n# second-person feminine singular non-past active subjunctive/jussive of هَلْوَسَ (halwasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuhalwisī", "halwasa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهلوسا",
+      "tur": "verb",
+      "baslik": "يُهَلْوِسَا • (yuhalwisā) (form Iq) /ju.hal.wi.saː/\n# third-person masculine dual non-past active subjunctive/jussive of هَلْوَسَ (halwasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuhalwisā", "halwasa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهلوسوا",
+      "tur": "verb",
+      "baslik": "يُهَلْوِسُوا • (yuhalwisū) (form Iq) /ju.hal.wi.suː/\n# third-person masculine plural non-past active subjunctive/jussive of هَلْوَسَ (halwasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuhalwisū", "halwasa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهلوسوا",
+      "tur": "verb",
+      "baslik": "تُهَلْوِسُوا • (tuhalwisū) (form Iq) /tu.hal.wi.suː/\n# second-person masculine plural non-past active subjunctive/jussive of هَلْوَسَ (halwasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuhalwisū", "halwasa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هلوسي",
+      "tur": "verb",
+      "baslik": "هَلْوِسِي • (halwisī) (form Iq) /hal.wi.siː/\n# second-person feminine singular imperative of هَلْوَسَ (halwasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["halwisī", "halwasa"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "هلوس", "r6"]
+  ],
+  "mana": {
     "ince": "state.n.02",
     "orta": "noun.state",
     "ust": "hâl ve vasıf",
@@ -361,20 +262,8 @@
     "dayanak_tanim": "illusory perception; a common symptom of severe mental disorder",
     "dayanak_karsilik": "hallucination"
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m2",
+  "gomme": {
     "ust": {
       "kume": 8,
       "merkez_kok": "سير",
@@ -394,6 +283,10 @@
       "boy": 6
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

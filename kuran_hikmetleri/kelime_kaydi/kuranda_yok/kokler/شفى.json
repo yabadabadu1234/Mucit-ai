@@ -1,457 +1,334 @@
 {
   "kok": "شفى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "شفى", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أشف",
-        "u": "أشف",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "أشف (form I)\n# أَشْفِ (ʔašfi) /ʔaʃ.fi/: first-person singular non-past active jussive of شَفَى (šafā)\n# أُشْفَ (ʔušfa) /ʔuʃ.fa/: first-person singular non-past passive jussive of شَفَى (šafā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔašfi", "šafā", "ʔušfa"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "نشف",
-        "u": "نشف",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "نشف (form I)\n# نَشْفِ (našfi) /naʃ.fi/: first-person plural non-past active jussive of شَفَى (šafā)\n# نُشْفَ (nušfa) /nuʃ.fa/: first-person plural non-past passive jussive of شَفَى (šafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["našfi", "šafā", "nušfa"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "شفت",
-        "u": "شفت",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "شَفَتْ • (šafat) (form I) /ʃa.fat/\n# third-person feminine singular past active of شَفَى (šafā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šafat", "šafā"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "تشف",
-        "u": "تشف",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تشف (form I)\n# تَشْفِ (tašfi) /taʃ.fi/: inflection of شَفَى (šafā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُشْفَ (tušfa) /tuʃ.fa/: inflection of شَفَى (šafā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašfi", "šafā", "tušfa"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "يشف",
-        "u": "يشف",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يشف (form I)\n# يَشْفِ (yašfi) /jaʃ.fi/: third-person masculine singular non-past active jussive of شَفَى (šafā)\n# يُشْفَ (yušfa) /juʃ.fa/: third-person masculine singular non-past passive jussive of شَفَى (šafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašfi", "šafā", "yušfa"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "تشفين",
-        "u": "تشفين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تشفين (form I)\n# تَشْفِينَ (tašfīna) /taʃ.fiː.na/: inflection of شَفَى (šafā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُشْفَيْنَ (tušfayna) /tuʃ.faj.na/: inflection of شَفَى (šafā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passi",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašfīna", "šafā", "tušfayna"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "شفتا",
-        "u": "شفتا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "شَفَتَا • (šafatā) (form I) /ʃa.fa.taː/\n# third-person feminine dual past active of شَفَى (šafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šafatā", "šafā"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "شفوا",
-        "u": "شفوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "شفوا (form I)\n# شَفَوْا (šafaw) /ʃa.faw/: third-person masculine plural past active of شَفَى (šafā)\n# شُفُوا (šufū) /ʃu.fuː/: third-person masculine plural past passive of شَفَى (šafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šafaw", "šafā", "šufū"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "تشفون",
-        "u": "تشفون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تشفون (form I)\n# تَشْفُونَ (tašfūna) /taʃ.fuː.na/: second-person masculine plural non-past active indicative of شَفَى (šafā)\n# تُشْفَوْنَ (tušfawna) /tuʃ.faw.na/: second-person masculine plural non-past passive indicative of شَفَى (šafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašfūna", "šafā", "tušfawna"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "يشفون",
-        "u": "يشفون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يشفون (form I)\n# يَشْفُونَ (yašfūna) /jaʃ.fuː.na/: third-person masculine plural non-past active indicative of شَفَى (šafā)\n# يُشْفَوْنَ (yušfawna) /juʃ.faw.na/: third-person masculine plural non-past passive indicative of شَفَى (šafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašfūna", "šafā", "yušfawna"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "تشفوا",
-        "u": "تشفوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تشفوا (form I)\n# تَشْفُوا (tašfū) /taʃ.fuː/: second-person masculine plural non-past active subjunctive/jussive of شَفَى (šafā)\n# تُشْفَوْا (tušfaw) /tuʃ.faw/: second-person masculine plural non-past passive subjunctive/jussive of شَفَى (šafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašfū", "šafā", "tušfaw"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "تشفي",
-        "u": "تشفي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تشفي (form I)\n# تَشْفِي (tašfī) /taʃ.fiː/: inflection of شَفَى (šafā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَشْفِيَ (tašfiya) /taʃ.fi.ja/: inflection of شَفَى (šafā):\n## second-person masculine singular non-past active subjunctive\n## third",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašfī", "šafā", "tašfiya"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "يشفوا",
-        "u": "يشفوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يشفوا (form I)\n# يَشْفُوا (yašfū) /jaʃ.fuː/: third-person masculine plural non-past active subjunctive/jussive of شَفَى (šafā)\n# يُشْفَوْا (yušfaw) /juʃ.faw/: third-person masculine plural non-past passive subjunctive/jussive of شَفَى (šafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašfū", "šafā", "yušfaw"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "اشف",
-        "u": "اشف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "اِشْفِ • (išfi) (form I) /iʃ.fi/\n# second-person masculine singular imperative of شَفَى (šafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["išfi", "šafā"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "اشفي",
-        "u": "اشفي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "اِشْفِي • (išfī) (form I) /iʃ.fiː/\n# second-person feminine singular imperative of شَفَى (šafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["išfī", "šafā"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "اشفوا",
-        "u": "اشفوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "اِشْفُوا • (išfū) (form I) /iʃ.fuː/\n# second-person masculine plural imperative of شَفَى (šafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["išfū", "šafā"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "شفيت",
-        "u": "شفيت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "شفيت (form I)\n# شَفَيْتُ (šafaytu) /ʃa.faj.tu/: first-person singular past active of شَفَى (šafā)\n# شَفَيْتَ (šafayta) /ʃa.faj.ta/: second-person masculine singular past active of شَفَى (šafā)\n# شَفَيْتِ (šafayti) /ʃa.faj.ti/: second-person feminine singular past active of شَفَى (šafā)\n# شُفِيتُ (šufītu) /ʃu.fiː.tu/: first-person singular past passive of شَفَى (šafā)\n# شُفِيتَ (šufīta) /ʃu.fiː.ta/",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šafaytu", "šafā", "šafayta"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "شفيتما",
-        "u": "شفيتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "شفيتما (form I)\n# شَفَيْتُمَا (šafaytumā) /ʃa.faj.tu.maː/: second-person dual past active of شَفَى (šafā)\n# شُفِيتُمَا (šufītumā) /ʃu.fiː.tu.maː/: second-person dual past passive of شَفَى (šafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šafaytumā", "šafā", "šufītumā"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "شفيا",
-        "u": "شفيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "شفيا (form I)\n# شَفَيَا (šafayā) /ʃa.fa.jaː/: third-person masculine dual past active of شَفَى (šafā)\n# شُفِيَا (šufiyā) /ʃu.fi.jaː/: third-person masculine dual past passive of شَفَى (šafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šafayā", "šafā", "šufiyā"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "أشفي",
-        "u": "أشفي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أشفي (form I)\n# أَشْفِي (ʔašfī) /ʔaʃ.fiː/: first-person singular non-past active indicative of شَفَى (šafā)\n# أَشْفِيَ (ʔašfiya) /ʔaʃ.fi.ja/: first-person singular non-past active subjunctive of شَفَى (šafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔašfī", "šafā", "ʔašfiya"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "شفيتن",
-        "u": "شفيتن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "شفيتن (form I)\n# شَفَيْتُنَّ (šafaytunna) /ʃa.faj.tun.na/: second-person feminine plural past active of شَفَى (šafā)\n# شُفِيتُنَّ (šufītunna) /ʃu.fiː.tun.na/: second-person feminine plural past passive of شَفَى (šafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šafaytunna", "šafā", "šufītunna"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "شفيتم",
-        "u": "شفيتم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "شفيتم (form I)\n# شَفَيْتُمْ (šafaytum) /ʃa.faj.tum/: second-person masculine plural past active of شَفَى (šafā)\n# شُفِيتُمْ (šufītum) /ʃu.fiː.tum/: second-person masculine plural past passive of شَفَى (šafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šafaytum", "šafā", "šufītum"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "شفين",
-        "u": "شفين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "شفين (form I)\n# شَفَيْنَ (šafayna) /ʃa.faj.na/: third-person feminine plural past active of شَفَى (šafā)\n# شُفِينَ (šufīna) /ʃu.fiː.na/: third-person feminine plural past passive of شَفَى (šafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šafayna", "šafā", "šufīna"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "شفينا",
-        "u": "شفينا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "شفينا (form I)\n# شَفَيْنَا (šafaynā) /ʃa.faj.naː/: first-person plural past active of شَفَى (šafā)\n# شُفِينَا (šufīnā) /ʃu.fiː.naː/: first-person plural past passive of شَفَى (šafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šafaynā", "šafā", "šufīnā"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "يشفي",
-        "u": "يشفي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يشفي (form I)\n# يَشْفِي (yašfī) /jaʃ.fiː/: third-person masculine singular non-past active indicative of شَفَى (šafā)\n# يَشْفِيَ (yašfiya) /jaʃ.fi.ja/: third-person masculine singular non-past active subjunctive of شَفَى (šafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašfī", "šafā", "yašfiya"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "يشفيان",
-        "u": "يشفيان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يشفيان (form I)\n# يَشْفِيَانِ (yašfiyāni) /jaʃ.fi.jaː.ni/: third-person masculine dual non-past active indicative of شَفَى (šafā)\n# يُشْفَيَانِ (yušfayāni) /juʃ.fa.jaː.ni/: third-person masculine dual non-past passive indicative of شَفَى (šafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašfiyāni", "šafā", "yušfayāni"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "تشفيان",
-        "u": "تشفيان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تشفيان (form I)\n# تَشْفِيَانِ (tašfiyāni) /taʃ.fi.jaː.ni/: inflection of شَفَى (šafā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُشْفَيَانِ (tušfayāni) /tuʃ.fa.jaː.ni/: inflection of شَفَى (šafā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašfiyāni", "šafā", "tušfayāni"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "يشفين",
-        "u": "يشفين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يشفين (form I)\n# يَشْفِينَ (yašfīna) /jaʃ.fiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of شَفَى (šafā)\n# يُشْفَيْنَ (yušfayna) /juʃ.faj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of شَفَى (šafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašfīna", "šafā", "yušfayna"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "نشفي",
-        "u": "نشفي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نشفي (form I)\n# نَشْفِي (našfī) /naʃ.fiː/: first-person plural non-past active indicative of شَفَى (šafā)\n# نَشْفِيَ (našfiya) /naʃ.fi.ja/: first-person plural non-past active subjunctive of شَفَى (šafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["našfī", "šafā", "našfiya"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "اشفيا",
-        "u": "اشفيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِشْفِيَا • (išfiyā) (form I) /iʃ.fi.jaː/\n# second-person dual imperative of شَفَى (šafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["išfiyā", "šafā"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "تشفيا",
-        "u": "تشفيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تشفيا (form I)\n# تَشْفِيَا (tašfiyā) /taʃ.fi.jaː/: inflection of شَفَى (šafā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُشْفَيَا (tušfayā) /tuʃ.fa.jaː/: inflection of شَفَى (šafā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašfiyā", "šafā", "tušfayā"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "اشفين",
-        "u": "اشفين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِشْفِينَ • (išfīna) (form I) /iʃ.fiː.na/\n# second-person feminine plural imperative of شَفَى (šafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["išfīna", "šafā"],
-        "k": "شفى",
-        "yol": "kök"
-      },
-      {
-        "w": "يشفيا",
-        "u": "يشفيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يشفيا (form I)\n# يَشْفِيَا (yašfiyā) /jaʃ.fi.jaː/: third-person masculine dual non-past active subjunctive/jussive of شَفَى (šafā)\n# يُشْفَيَا (yušfayā) /juʃ.fa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of شَفَى (šafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašfiyā", "šafā", "yušfayā"],
-        "k": "شفى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "شف",
+  "ses": {
     "harf": "ش",
+    "fasil": "شف",
     "mahrec": "şeceriyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "أشف",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "أشف (form I)\n# أَشْفِ (ʔašfi) /ʔaʃ.fi/: first-person singular non-past active jussive of شَفَى (šafā)\n# أُشْفَ (ʔušfa) /ʔuʃ.fa/: first-person singular non-past passive jussive of شَفَى (šafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔašfi", "šafā", "ʔušfa"]
+    },
+    {
+      "madde": "نشف",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "نشف (form I)\n# نَشْفِ (našfi) /naʃ.fi/: first-person plural non-past active jussive of شَفَى (šafā)\n# نُشْفَ (nušfa) /nuʃ.fa/: first-person plural non-past passive jussive of شَفَى (šafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["našfi", "šafā", "nušfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شفت",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "شَفَتْ • (šafat) (form I) /ʃa.fat/\n# third-person feminine singular past active of شَفَى (šafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šafat", "šafā"]
+    },
+    {
+      "madde": "تشف",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تشف (form I)\n# تَشْفِ (tašfi) /taʃ.fi/: inflection of شَفَى (šafā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُشْفَ (tušfa) /tuʃ.fa/: inflection of شَفَى (šafā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašfi", "šafā", "tušfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يشف",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يشف (form I)\n# يَشْفِ (yašfi) /jaʃ.fi/: third-person masculine singular non-past active jussive of شَفَى (šafā)\n# يُشْفَ (yušfa) /juʃ.fa/: third-person masculine singular non-past passive jussive of شَفَى (šafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašfi", "šafā", "yušfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تشفين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تشفين (form I)\n# تَشْفِينَ (tašfīna) /taʃ.fiː.na/: inflection of شَفَى (šafā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُشْفَيْنَ (tušfayna) /tuʃ.faj.na/: inflection of شَفَى (šafā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passi",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašfīna", "šafā", "tušfayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شفتا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "شَفَتَا • (šafatā) (form I) /ʃa.fa.taː/\n# third-person feminine dual past active of شَفَى (šafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šafatā", "šafā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شفوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "شفوا (form I)\n# شَفَوْا (šafaw) /ʃa.faw/: third-person masculine plural past active of شَفَى (šafā)\n# شُفُوا (šufū) /ʃu.fuː/: third-person masculine plural past passive of شَفَى (šafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šafaw", "šafā", "šufū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تشفون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تشفون (form I)\n# تَشْفُونَ (tašfūna) /taʃ.fuː.na/: second-person masculine plural non-past active indicative of شَفَى (šafā)\n# تُشْفَوْنَ (tušfawna) /tuʃ.faw.na/: second-person masculine plural non-past passive indicative of شَفَى (šafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašfūna", "šafā", "tušfawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يشفون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يشفون (form I)\n# يَشْفُونَ (yašfūna) /jaʃ.fuː.na/: third-person masculine plural non-past active indicative of شَفَى (šafā)\n# يُشْفَوْنَ (yušfawna) /juʃ.faw.na/: third-person masculine plural non-past passive indicative of شَفَى (šafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašfūna", "šafā", "yušfawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تشفوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تشفوا (form I)\n# تَشْفُوا (tašfū) /taʃ.fuː/: second-person masculine plural non-past active subjunctive/jussive of شَفَى (šafā)\n# تُشْفَوْا (tušfaw) /tuʃ.faw/: second-person masculine plural non-past passive subjunctive/jussive of شَفَى (šafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašfū", "šafā", "tušfaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تشفي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تشفي (form I)\n# تَشْفِي (tašfī) /taʃ.fiː/: inflection of شَفَى (šafā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَشْفِيَ (tašfiya) /taʃ.fi.ja/: inflection of شَفَى (šafā):\n## second-person masculine singular non-past active subjunctive\n## third",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašfī", "šafā", "tašfiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يشفوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يشفوا (form I)\n# يَشْفُوا (yašfū) /jaʃ.fuː/: third-person masculine plural non-past active subjunctive/jussive of شَفَى (šafā)\n# يُشْفَوْا (yušfaw) /juʃ.faw/: third-person masculine plural non-past passive subjunctive/jussive of شَفَى (šafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašfū", "šafā", "yušfaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اشف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "اِشْفِ • (išfi) (form I) /iʃ.fi/\n# second-person masculine singular imperative of شَفَى (šafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["išfi", "šafā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اشفي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "اِشْفِي • (išfī) (form I) /iʃ.fiː/\n# second-person feminine singular imperative of شَفَى (šafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["išfī", "šafā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اشفوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "اِشْفُوا • (išfū) (form I) /iʃ.fuː/\n# second-person masculine plural imperative of شَفَى (šafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["išfū", "šafā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شفيت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "شفيت (form I)\n# شَفَيْتُ (šafaytu) /ʃa.faj.tu/: first-person singular past active of شَفَى (šafā)\n# شَفَيْتَ (šafayta) /ʃa.faj.ta/: second-person masculine singular past active of شَفَى (šafā)\n# شَفَيْتِ (šafayti) /ʃa.faj.ti/: second-person feminine singular past active of شَفَى (šafā)\n# شُفِيتُ (šufītu) /ʃu.fiː.tu/: first-person singular past passive of شَفَى (šafā)\n# شُفِيتَ (šufīta) /ʃu.fiː.ta/",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šafaytu", "šafā", "šafayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شفيتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "شفيتما (form I)\n# شَفَيْتُمَا (šafaytumā) /ʃa.faj.tu.maː/: second-person dual past active of شَفَى (šafā)\n# شُفِيتُمَا (šufītumā) /ʃu.fiː.tu.maː/: second-person dual past passive of شَفَى (šafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šafaytumā", "šafā", "šufītumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شفيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "شفيا (form I)\n# شَفَيَا (šafayā) /ʃa.fa.jaː/: third-person masculine dual past active of شَفَى (šafā)\n# شُفِيَا (šufiyā) /ʃu.fi.jaː/: third-person masculine dual past passive of شَفَى (šafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šafayā", "šafā", "šufiyā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أشفي",
+      "tur": "verb",
+      "baslik": "أشفي (form I)\n# أَشْفِي (ʔašfī) /ʔaʃ.fiː/: first-person singular non-past active indicative of شَفَى (šafā)\n# أَشْفِيَ (ʔašfiya) /ʔaʃ.fi.ja/: first-person singular non-past active subjunctive of شَفَى (šafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔašfī", "šafā", "ʔašfiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شفيتن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "شفيتن (form I)\n# شَفَيْتُنَّ (šafaytunna) /ʃa.faj.tun.na/: second-person feminine plural past active of شَفَى (šafā)\n# شُفِيتُنَّ (šufītunna) /ʃu.fiː.tun.na/: second-person feminine plural past passive of شَفَى (šafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šafaytunna", "šafā", "šufītunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شفيتم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "شفيتم (form I)\n# شَفَيْتُمْ (šafaytum) /ʃa.faj.tum/: second-person masculine plural past active of شَفَى (šafā)\n# شُفِيتُمْ (šufītum) /ʃu.fiː.tum/: second-person masculine plural past passive of شَفَى (šafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šafaytum", "šafā", "šufītum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شفين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "شفين (form I)\n# شَفَيْنَ (šafayna) /ʃa.faj.na/: third-person feminine plural past active of شَفَى (šafā)\n# شُفِينَ (šufīna) /ʃu.fiː.na/: third-person feminine plural past passive of شَفَى (šafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šafayna", "šafā", "šufīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شفينا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "شفينا (form I)\n# شَفَيْنَا (šafaynā) /ʃa.faj.naː/: first-person plural past active of شَفَى (šafā)\n# شُفِينَا (šufīnā) /ʃu.fiː.naː/: first-person plural past passive of شَفَى (šafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šafaynā", "šafā", "šufīnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يشفي",
+      "tur": "verb",
+      "baslik": "يشفي (form I)\n# يَشْفِي (yašfī) /jaʃ.fiː/: third-person masculine singular non-past active indicative of شَفَى (šafā)\n# يَشْفِيَ (yašfiya) /jaʃ.fi.ja/: third-person masculine singular non-past active subjunctive of شَفَى (šafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašfī", "šafā", "yašfiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يشفيان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يشفيان (form I)\n# يَشْفِيَانِ (yašfiyāni) /jaʃ.fi.jaː.ni/: third-person masculine dual non-past active indicative of شَفَى (šafā)\n# يُشْفَيَانِ (yušfayāni) /juʃ.fa.jaː.ni/: third-person masculine dual non-past passive indicative of شَفَى (šafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašfiyāni", "šafā", "yušfayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تشفيان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تشفيان (form I)\n# تَشْفِيَانِ (tašfiyāni) /taʃ.fi.jaː.ni/: inflection of شَفَى (šafā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُشْفَيَانِ (tušfayāni) /tuʃ.fa.jaː.ni/: inflection of شَفَى (šafā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašfiyāni", "šafā", "tušfayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يشفين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يشفين (form I)\n# يَشْفِينَ (yašfīna) /jaʃ.fiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of شَفَى (šafā)\n# يُشْفَيْنَ (yušfayna) /juʃ.faj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of شَفَى (šafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašfīna", "šafā", "yušfayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نشفي",
+      "tur": "verb",
+      "baslik": "نشفي (form I)\n# نَشْفِي (našfī) /naʃ.fiː/: first-person plural non-past active indicative of شَفَى (šafā)\n# نَشْفِيَ (našfiya) /naʃ.fi.ja/: first-person plural non-past active subjunctive of شَفَى (šafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["našfī", "šafā", "našfiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اشفيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِشْفِيَا • (išfiyā) (form I) /iʃ.fi.jaː/\n# second-person dual imperative of شَفَى (šafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["išfiyā", "šafā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تشفيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تشفيا (form I)\n# تَشْفِيَا (tašfiyā) /taʃ.fi.jaː/: inflection of شَفَى (šafā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُشْفَيَا (tušfayā) /tuʃ.fa.jaː/: inflection of شَفَى (šafā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašfiyā", "šafā", "tušfayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اشفين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِشْفِينَ • (išfīna) (form I) /iʃ.fiː.na/\n# second-person feminine plural imperative of شَفَى (šafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["išfīna", "šafā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يشفيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يشفيا (form I)\n# يَشْفِيَا (yašfiyā) /jaʃ.fi.jaː/: third-person masculine dual non-past active subjunctive/jussive of شَفَى (šafā)\n# يُشْفَيَا (yušfayā) /juʃ.fa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of شَفَى (šafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašfiyā", "šafā", "yušfayā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "شفى", "r7"]
+  ],
+  "mana": {
     "ince": "dry.v.01",
     "orta": "verb.change",
     "ust": "fiil ve hadise",
@@ -459,22 +336,15 @@
     "dayanak_tanim": "remove the moisture from and make dry",
     "synset_sayisi": 2
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["dry.v.01", "wipe.v.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["dry.v.01", "wipe.v.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

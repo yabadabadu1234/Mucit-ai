@@ -1,51 +1,52 @@
 {
   "kok": "قلعف",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "قلعف", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "اقلعف",
-        "u": "اقلعف",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "اِقْلَعَفَّ • (iqlaʕaffa) IVq (non-past يَقْلَعِفُّ (yaqlaʕiffu), verbal noun اِقْلِعْفَاف (iqliʕfāf))",
-        "g": [
-          "to peel off",
-          "to get cramped",
-          "to stand on hamstrings while copulating a she-camel (of he-camel)",
-          "to let [+direct object] contract back after overstretching"
-        ],
-        "tag": ["intransitive", "transitive"],
-        "r": ["iqlaʕaffa"],
-        "ipa": ["/iq.la.ʕaf.fa/"],
-        "k": "قلعف",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "قل",
+  "ses": {
     "harf": "ق",
+    "fasil": "قل",
     "mahrec": "lehaviyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "اقلعف",
+      "tur": "verb",
+      "baslik": "اِقْلَعَفَّ • (iqlaʕaffa) IVq (non-past يَقْلَعِفُّ (yaqlaʕiffu), verbal noun اِقْلِعْفَاف (iqliʕfāf))",
+      "anlam": [
+        "to peel off",
+        "to get cramped",
+        "to stand on hamstrings while copulating a she-camel (of he-camel)",
+        "to let [+direct object] contract back after overstretching"
+      ],
+      "etiket": ["intransitive", "transitive"],
+      "okunus": ["iqlaʕaffa"],
+      "ipa": ["/iq.la.ʕaf.fa/"]
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "قلعف", "r6"]
+  ],
+  "mana": {
     "ince": "peel_off.v.01",
     "orta": "verb.contact",
     "ust": "fiil ve hadise",
@@ -53,20 +54,8 @@
     "dayanak_tanim": "peel off the outer layer of something",
     "dayanak_karsilik": "peel off"
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m2",
+  "gomme": {
     "ust": {
       "kume": 8,
       "merkez_kok": "سير",
@@ -86,6 +75,10 @@
       "boy": 8
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

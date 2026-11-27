@@ -1,319 +1,228 @@
 {
   "kok": "تعدن",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تعدن", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تتعدن",
-        "u": "تتعدن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تتعدن (form V)\n# تَتَعَدَّنُ (tataʕaddanu) /ta.ta.ʕad.da.nu/: inflection of تَعَدَّنَ (taʕaddana):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَعَدَّنَّ (tataʕaddanna) /ta.ta.ʕad.dan.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of تَعَدَّنَ (taʕaddana)\n# تَتَعَدَّنَ (tataʕaddan",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʕaddanu", "taʕaddana", "tataʕaddanna"],
-        "k": "تعدن",
-        "yol": "kök"
-      },
-      {
-        "w": "يتعدن",
-        "u": "يتعدن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يتعدن (form V)\n# يَتَعَدَّنُ (yataʕaddanu) /ja.ta.ʕad.da.nu/: third-person masculine singular non-past active indicative of تَعَدَّنَ (taʕaddana)\n# يَتَعَدَّنَّ (yataʕaddanna) /ja.ta.ʕad.dan.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of تَعَدَّنَ (taʕaddana)\n# يَتَعَدَّنَ (yataʕaddana) /ja.ta.ʕad.da.na/: third-person masculine singular non-past active subjunct",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʕaddanu", "taʕaddana", "yataʕaddanna"],
-        "k": "تعدن",
-        "yol": "kök"
-      },
-      {
-        "w": "تعدنتما",
-        "u": "تعدنتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَعَدَّنْتُمَا • (taʕaddantumā) (form V) /ta.ʕad.dan.tu.maː/\n# second-person dual past active of تَعَدَّنَ (taʕaddana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʕaddantumā", "taʕaddana"],
-        "k": "تعدن",
-        "yol": "kök"
-      },
-      {
-        "w": "تعدنتم",
-        "u": "تعدنتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَعَدَّنْتُمْ • (taʕaddantum) (form V) /ta.ʕad.dan.tum/\n# second-person masculine plural past active of تَعَدَّنَ (taʕaddana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʕaddantum", "taʕaddana"],
-        "k": "تعدن",
-        "yol": "kök"
-      },
-      {
-        "w": "تعدنتا",
-        "u": "تعدنتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَعَدَّنَتَا • (taʕaddanatā) (form V) /ta.ʕad.da.na.taː/\n# third-person feminine dual past active of تَعَدَّنَ (taʕaddana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʕaddanatā", "taʕaddana"],
-        "k": "تعدن",
-        "yol": "kök"
-      },
-      {
-        "w": "تعدنت",
-        "u": "تعدنت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تعدنت (form V)\n# تَعَدَّنْتُ (taʕaddantu) /ta.ʕad.dan.tu/: first-person singular past active of تَعَدَّنَ (taʕaddana)\n# تَعَدَّنْتَ (taʕaddanta) /ta.ʕad.dan.ta/: second-person masculine singular past active of تَعَدَّنَ (taʕaddana)\n# تَعَدَّنْتِ (taʕaddanti) /ta.ʕad.dan.ti/: second-person feminine singular past active of تَعَدَّنَ (taʕaddana)\n# تَعَدَّنَتْ (taʕaddanat) /ta.ʕad.da.nat/: third-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʕaddantu", "taʕaddana", "taʕaddanta"],
-        "k": "تعدن",
-        "yol": "kök"
-      },
-      {
-        "w": "تعدنتن",
-        "u": "تعدنتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَعَدَّنْتُنَّ • (taʕaddantunna) (form V) /ta.ʕad.dan.tun.na/\n# second-person feminine plural past active of تَعَدَّنَ (taʕaddana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʕaddantunna", "taʕaddana"],
-        "k": "تعدن",
-        "yol": "kök"
-      },
-      {
-        "w": "تعدنا",
-        "u": "تعدنا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تعدنا (form V)\n# تَعَدَّنَا (taʕaddanā) /ta.ʕad.da.naː/: inflection of تَعَدَّنَ (taʕaddana):\n## third-person masculine dual past active\n## second-person dual imperative\n# تَعَدَّنَّا (taʕaddannā) /ta.ʕad.dan.naː/: first-person plural past active of تَعَدَّنَ (taʕaddana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʕaddanā", "taʕaddana", "taʕaddannā"],
-        "k": "تعدن",
-        "yol": "kök"
-      },
-      {
-        "w": "تتعدنين",
-        "u": "تتعدنين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَعَدَّنِينَ • (tataʕaddanīna) (form V) /ta.ta.ʕad.da.niː.na/\n# second-person feminine singular non-past active indicative of تَعَدَّنَ (taʕaddana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʕaddanīna", "taʕaddana"],
-        "k": "تعدن",
-        "yol": "kök"
-      },
-      {
-        "w": "نتعدن",
-        "u": "نتعدن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتعدن (form V)\n# نَتَعَدَّنُ (nataʕaddanu) /na.ta.ʕad.da.nu/: first-person plural non-past active indicative of تَعَدَّنَ (taʕaddana)\n# نَتَعَدَّنَ (nataʕaddana) /na.ta.ʕad.da.na/: first-person plural non-past active subjunctive of تَعَدَّنَ (taʕaddana)\n# نَتَعَدَّنْ (nataʕaddan) /na.ta.ʕad.dan/: first-person plural non-past active jussive of تَعَدَّنَ (taʕaddana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["nataʕaddanu", "taʕaddana", "nataʕaddana"],
-        "k": "تعدن",
-        "yol": "kök"
-      },
-      {
-        "w": "تعدنوا",
-        "u": "تعدنوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَعَدَّنُوا • (taʕaddanū) (form V) /ta.ʕad.da.nuː/\n# inflection of تَعَدَّنَ (taʕaddana):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʕaddanū", "taʕaddana"],
-        "k": "تعدن",
-        "yol": "kök"
-      },
-      {
-        "w": "يتعدنان",
-        "u": "يتعدنان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَعَدَّنَانِ • (yataʕaddanāni) (form V) /ja.ta.ʕad.da.naː.ni/\n# third-person masculine dual non-past active indicative of تَعَدَّنَ (taʕaddana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʕaddanāni", "taʕaddana"],
-        "k": "تعدن",
-        "yol": "kök"
-      },
-      {
-        "w": "تتعدنان",
-        "u": "تتعدنان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَعَدَّنَانِ • (tataʕaddanāni) (form V) /ta.ta.ʕad.da.naː.ni/\n# inflection of تَعَدَّنَ (taʕaddana):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʕaddanāni", "taʕaddana"],
-        "k": "تعدن",
-        "yol": "kök"
-      },
-      {
-        "w": "تتعدني",
-        "u": "تتعدني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَعَدَّنِي • (tataʕaddanī) (form V) /ta.ta.ʕad.da.niː/\n# second-person feminine singular non-past active subjunctive/jussive of تَعَدَّنَ (taʕaddana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʕaddanī", "taʕaddana"],
-        "k": "تعدن",
-        "yol": "kök"
-      },
-      {
-        "w": "يتعدنا",
-        "u": "يتعدنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَعَدَّنَا • (yataʕaddanā) (form V) /ja.ta.ʕad.da.naː/\n# third-person masculine dual non-past active subjunctive/jussive of تَعَدَّنَ (taʕaddana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʕaddanā", "taʕaddana"],
-        "k": "تعدن",
-        "yol": "kök"
-      },
-      {
-        "w": "تتعدنون",
-        "u": "تتعدنون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَعَدَّنُونَ • (tataʕaddanūna) (form V) /ta.ta.ʕad.da.nuː.na/\n# second-person masculine plural non-past active indicative of تَعَدَّنَ (taʕaddana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʕaddanūna", "taʕaddana"],
-        "k": "تعدن",
-        "yol": "kök"
-      },
-      {
-        "w": "تتعدنوا",
-        "u": "تتعدنوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَعَدَّنُوا • (tataʕaddanū) (form V) /ta.ta.ʕad.da.nuː/\n# second-person masculine plural non-past active subjunctive/jussive of تَعَدَّنَ (taʕaddana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʕaddanū", "taʕaddana"],
-        "k": "تعدن",
-        "yol": "kök"
-      },
-      {
-        "w": "تعدني",
-        "u": "تعدني",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَعَدَّنِي • (taʕaddanī) (form V) /ta.ʕad.da.niː/\n# second-person feminine singular imperative of تَعَدَّنَ (taʕaddana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʕaddanī", "taʕaddana"],
-        "k": "تعدن",
-        "yol": "kök"
-      },
-      {
-        "w": "يتعدنوا",
-        "u": "يتعدنوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَعَدَّنُوا • (yataʕaddanū) (form V) /ja.ta.ʕad.da.nuː/\n# third-person masculine plural non-past active subjunctive/jussive of تَعَدَّنَ (taʕaddana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʕaddanū", "taʕaddana"],
-        "k": "تعدن",
-        "yol": "kök"
-      },
-      {
-        "w": "تتعدنا",
-        "u": "تتعدنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَعَدَّنَا • (tataʕaddanā) (form V) /ta.ta.ʕad.da.naː/\n# inflection of تَعَدَّنَ (taʕaddana):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʕaddanā", "taʕaddana"],
-        "k": "تعدن",
-        "yol": "kök"
-      },
-      {
-        "w": "أتعدن",
-        "u": "أتعدن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتعدن (form V)\n# أَتَعَدَّنُ (ʔataʕaddanu) /ʔa.ta.ʕad.da.nu/: first-person singular non-past active indicative of تَعَدَّنَ (taʕaddana)\n# أَتَعَدَّنَ (ʔataʕaddana) /ʔa.ta.ʕad.da.na/: first-person singular non-past active subjunctive of تَعَدَّنَ (taʕaddana)\n# أَتَعَدَّنْ (ʔataʕaddan) /ʔa.ta.ʕad.dan/: first-person singular non-past active jussive of تَعَدَّنَ (taʕaddana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔataʕaddanu", "taʕaddana", "ʔataʕaddana"],
-        "k": "تعدن",
-        "yol": "kök"
-      },
-      {
-        "w": "يتعدنون",
-        "u": "يتعدنون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَعَدَّنُونَ • (yataʕaddanūna) (form V) /ja.ta.ʕad.da.nuː.na/\n# third-person masculine plural non-past active indicative of تَعَدَّنَ (taʕaddana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʕaddanūna", "taʕaddana"],
-        "k": "تعدن",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تع",
+  "ses": {
     "harf": "ت",
+    "fasil": "تع",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تتعدن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تتعدن (form V)\n# تَتَعَدَّنُ (tataʕaddanu) /ta.ta.ʕad.da.nu/: inflection of تَعَدَّنَ (taʕaddana):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَعَدَّنَّ (tataʕaddanna) /ta.ta.ʕad.dan.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of تَعَدَّنَ (taʕaddana)\n# تَتَعَدَّنَ (tataʕaddan",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʕaddanu", "taʕaddana", "tataʕaddanna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتعدن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يتعدن (form V)\n# يَتَعَدَّنُ (yataʕaddanu) /ja.ta.ʕad.da.nu/: third-person masculine singular non-past active indicative of تَعَدَّنَ (taʕaddana)\n# يَتَعَدَّنَّ (yataʕaddanna) /ja.ta.ʕad.dan.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of تَعَدَّنَ (taʕaddana)\n# يَتَعَدَّنَ (yataʕaddana) /ja.ta.ʕad.da.na/: third-person masculine singular non-past active subjunct",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʕaddanu", "taʕaddana", "yataʕaddanna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعدنتما",
+      "tur": "verb",
+      "baslik": "تَعَدَّنْتُمَا • (taʕaddantumā) (form V) /ta.ʕad.dan.tu.maː/\n# second-person dual past active of تَعَدَّنَ (taʕaddana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʕaddantumā", "taʕaddana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعدنتم",
+      "tur": "verb",
+      "baslik": "تَعَدَّنْتُمْ • (taʕaddantum) (form V) /ta.ʕad.dan.tum/\n# second-person masculine plural past active of تَعَدَّنَ (taʕaddana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʕaddantum", "taʕaddana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعدنتا",
+      "tur": "verb",
+      "baslik": "تَعَدَّنَتَا • (taʕaddanatā) (form V) /ta.ʕad.da.na.taː/\n# third-person feminine dual past active of تَعَدَّنَ (taʕaddana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʕaddanatā", "taʕaddana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعدنت",
+      "tur": "verb",
+      "baslik": "تعدنت (form V)\n# تَعَدَّنْتُ (taʕaddantu) /ta.ʕad.dan.tu/: first-person singular past active of تَعَدَّنَ (taʕaddana)\n# تَعَدَّنْتَ (taʕaddanta) /ta.ʕad.dan.ta/: second-person masculine singular past active of تَعَدَّنَ (taʕaddana)\n# تَعَدَّنْتِ (taʕaddanti) /ta.ʕad.dan.ti/: second-person feminine singular past active of تَعَدَّنَ (taʕaddana)\n# تَعَدَّنَتْ (taʕaddanat) /ta.ʕad.da.nat/: third-perso",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʕaddantu", "taʕaddana", "taʕaddanta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعدنتن",
+      "tur": "verb",
+      "baslik": "تَعَدَّنْتُنَّ • (taʕaddantunna) (form V) /ta.ʕad.dan.tun.na/\n# second-person feminine plural past active of تَعَدَّنَ (taʕaddana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʕaddantunna", "taʕaddana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعدنا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تعدنا (form V)\n# تَعَدَّنَا (taʕaddanā) /ta.ʕad.da.naː/: inflection of تَعَدَّنَ (taʕaddana):\n## third-person masculine dual past active\n## second-person dual imperative\n# تَعَدَّنَّا (taʕaddannā) /ta.ʕad.dan.naː/: first-person plural past active of تَعَدَّنَ (taʕaddana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʕaddanā", "taʕaddana", "taʕaddannā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتعدنين",
+      "tur": "verb",
+      "baslik": "تَتَعَدَّنِينَ • (tataʕaddanīna) (form V) /ta.ta.ʕad.da.niː.na/\n# second-person feminine singular non-past active indicative of تَعَدَّنَ (taʕaddana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʕaddanīna", "taʕaddana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتعدن",
+      "tur": "verb",
+      "baslik": "نتعدن (form V)\n# نَتَعَدَّنُ (nataʕaddanu) /na.ta.ʕad.da.nu/: first-person plural non-past active indicative of تَعَدَّنَ (taʕaddana)\n# نَتَعَدَّنَ (nataʕaddana) /na.ta.ʕad.da.na/: first-person plural non-past active subjunctive of تَعَدَّنَ (taʕaddana)\n# نَتَعَدَّنْ (nataʕaddan) /na.ta.ʕad.dan/: first-person plural non-past active jussive of تَعَدَّنَ (taʕaddana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["nataʕaddanu", "taʕaddana", "nataʕaddana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعدنوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَعَدَّنُوا • (taʕaddanū) (form V) /ta.ʕad.da.nuː/\n# inflection of تَعَدَّنَ (taʕaddana):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʕaddanū", "taʕaddana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتعدنان",
+      "tur": "verb",
+      "baslik": "يَتَعَدَّنَانِ • (yataʕaddanāni) (form V) /ja.ta.ʕad.da.naː.ni/\n# third-person masculine dual non-past active indicative of تَعَدَّنَ (taʕaddana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʕaddanāni", "taʕaddana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتعدنان",
+      "tur": "verb",
+      "baslik": "تَتَعَدَّنَانِ • (tataʕaddanāni) (form V) /ta.ta.ʕad.da.naː.ni/\n# inflection of تَعَدَّنَ (taʕaddana):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʕaddanāni", "taʕaddana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتعدني",
+      "tur": "verb",
+      "baslik": "تَتَعَدَّنِي • (tataʕaddanī) (form V) /ta.ta.ʕad.da.niː/\n# second-person feminine singular non-past active subjunctive/jussive of تَعَدَّنَ (taʕaddana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʕaddanī", "taʕaddana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتعدنا",
+      "tur": "verb",
+      "baslik": "يَتَعَدَّنَا • (yataʕaddanā) (form V) /ja.ta.ʕad.da.naː/\n# third-person masculine dual non-past active subjunctive/jussive of تَعَدَّنَ (taʕaddana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʕaddanā", "taʕaddana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتعدنون",
+      "tur": "verb",
+      "baslik": "تَتَعَدَّنُونَ • (tataʕaddanūna) (form V) /ta.ta.ʕad.da.nuː.na/\n# second-person masculine plural non-past active indicative of تَعَدَّنَ (taʕaddana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʕaddanūna", "taʕaddana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتعدنوا",
+      "tur": "verb",
+      "baslik": "تَتَعَدَّنُوا • (tataʕaddanū) (form V) /ta.ta.ʕad.da.nuː/\n# second-person masculine plural non-past active subjunctive/jussive of تَعَدَّنَ (taʕaddana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʕaddanū", "taʕaddana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعدني",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَعَدَّنِي • (taʕaddanī) (form V) /ta.ʕad.da.niː/\n# second-person feminine singular imperative of تَعَدَّنَ (taʕaddana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʕaddanī", "taʕaddana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتعدنوا",
+      "tur": "verb",
+      "baslik": "يَتَعَدَّنُوا • (yataʕaddanū) (form V) /ja.ta.ʕad.da.nuː/\n# third-person masculine plural non-past active subjunctive/jussive of تَعَدَّنَ (taʕaddana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʕaddanū", "taʕaddana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتعدنا",
+      "tur": "verb",
+      "baslik": "تَتَعَدَّنَا • (tataʕaddanā) (form V) /ta.ta.ʕad.da.naː/\n# inflection of تَعَدَّنَ (taʕaddana):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʕaddanā", "taʕaddana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتعدن",
+      "tur": "verb",
+      "baslik": "أتعدن (form V)\n# أَتَعَدَّنُ (ʔataʕaddanu) /ʔa.ta.ʕad.da.nu/: first-person singular non-past active indicative of تَعَدَّنَ (taʕaddana)\n# أَتَعَدَّنَ (ʔataʕaddana) /ʔa.ta.ʕad.da.na/: first-person singular non-past active subjunctive of تَعَدَّنَ (taʕaddana)\n# أَتَعَدَّنْ (ʔataʕaddan) /ʔa.ta.ʕad.dan/: first-person singular non-past active jussive of تَعَدَّنَ (taʕaddana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔataʕaddanu", "taʕaddana", "ʔataʕaddana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتعدنون",
+      "tur": "verb",
+      "baslik": "يَتَعَدَّنُونَ • (yataʕaddanūna) (form V) /ja.ta.ʕad.da.nuː.na/\n# third-person masculine plural non-past active indicative of تَعَدَّنَ (taʕaddana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʕaddanūna", "taʕaddana"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تعدن", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

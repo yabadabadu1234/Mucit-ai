@@ -1,578 +1,409 @@
 {
   "kok": "والى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "والى", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "وال",
-        "u": "وال",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وَالِ • (wāli) (form III) /waː.li/\n# second-person masculine singular imperative of وَالَى (wālā)",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wāli", "wālā"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "والي",
-        "u": "والي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وَالِي • (wālī) (form III) /waː.liː/\n# second-person feminine singular imperative of وَالَى (wālā)",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wālī", "wālā"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "توالى",
-        "u": "توالى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُوَالَى • (tuwālā) (form III) /tu.waː.laː/\n# inflection of وَالَى (wālā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuwālā", "wālā"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "ولاة",
-        "u": "ولاة",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "وُلَاة • (wulāh) m pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of وَالٍ (wālin)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["وَالٍ"],
-        "r": ["wulāh"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "توال",
-        "u": "توال",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "توال (form III)\n# تُوَالِ (tuwāli) /tu.waː.li/: inflection of وَالَى (wālā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُوَالَ (tuwāla) /tu.waː.la/: inflection of وَالَى (wālā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuwāli", "wālā", "tuwāla"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوال",
-        "u": "نوال",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نوال (form III)\n# نُوَالِ (nuwāli) /nu.waː.li/: first-person plural non-past active jussive of وَالَى (wālā)\n# نُوَالَ (nuwāla) /nu.waː.la/: first-person plural non-past passive jussive of وَالَى (wālā)",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nuwāli", "wālā", "nuwāla"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوالي",
-        "u": "يوالي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يوالي (form III)\n# يُوَالِي (yuwālī) /ju.waː.liː/: third-person masculine singular non-past active indicative of وَالَى (wālā)\n# يُوَالِيَ (yuwāliya) /ju.waː.li.ja/: third-person masculine singular non-past active subjunctive of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuwālī", "wālā", "yuwāliya"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوالى",
-        "u": "يوالى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُوَالَى • (yuwālā) (form III) /ju.waː.laː/\n# third-person masculine singular non-past passive indicative/subjunctive of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuwālā", "wālā"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "أوال",
-        "u": "أوال",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أوال (form III)\n# أُوَالِ (ʔuwāli) /ʔu.waː.li/: first-person singular non-past active jussive of وَالَى (wālā)\n# أُوَالَ (ʔuwāla) /ʔu.waː.la/: first-person singular non-past passive jussive of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔuwāli", "wālā", "ʔuwāla"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوال",
-        "u": "يوال",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يوال (form III)\n# يُوَالِ (yuwāli) /ju.waː.li/: third-person masculine singular non-past active jussive of وَالَى (wālā)\n# يُوَالَ (yuwāla) /ju.waː.la/: third-person masculine singular non-past passive jussive of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuwāli", "wālā", "yuwāla"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "وولي",
-        "u": "وولي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وُولِيَ • (wūliya) (form III) /wuː.li.ja/\n# third-person masculine singular past passive of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wūliya", "wālā"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "والت",
-        "u": "والت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وَالَتْ • (wālat) (form III) /waː.lat/\n# third-person feminine singular past active of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wālat", "wālā"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "توالي",
-        "u": "توالي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "توالي (form III)\n# تُوَالِي (tuwālī) /tu.waː.liː/: inflection of وَالَى (wālā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُوَالِيَ (tuwāliya) /tu.waː.li.ja/: inflection of وَالَى (wālā):\n## second-person masculine singular non-past active subju",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuwālī", "wālā", "tuwāliya"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "ووليت",
-        "u": "ووليت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ووليت (form III)\n# وُولِيتُ (wūlītu) /wuː.liː.tu/: first-person singular past passive of وَالَى (wālā)\n# وُولِيتَ (wūlīta) /wuː.liː.ta/: second-person masculine singular past passive of وَالَى (wālā)\n# وُولِيتِ (wūlīti) /wuː.liː.ti/: second-person feminine singular past passive of وَالَى (wālā)\n# وُولِيَتْ (wūliyat) /wuː.li.jat/: third-person feminine singular past passive of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wūlītu", "wālā", "wūlīta"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "واليت",
-        "u": "واليت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "واليت (form III)\n# وَالَيْتُ (wālaytu) /waː.laj.tu/: first-person singular past active of وَالَى (wālā)\n# وَالَيْتَ (wālayta) /waː.laj.ta/: second-person masculine singular past active of وَالَى (wālā)\n# وَالَيْتِ (wālayti) /waː.laj.ti/: second-person feminine singular past active of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wālaytu", "wālā", "wālayta"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "توالين",
-        "u": "توالين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "توالين (form III)\n# تُوَالِينَ (tuwālīna) /tu.waː.liː.na/: inflection of وَالَى (wālā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُوَالَيْنَ (tuwālayna) /tu.waː.laj.na/: inflection of وَالَى (wālā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuwālīna", "wālā", "tuwālayna"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "أوالي",
-        "u": "أوالي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوالي (form III)\n# أُوَالِي (ʔuwālī) /ʔu.waː.liː/: first-person singular non-past active indicative of وَالَى (wālā)\n# أُوَالِيَ (ʔuwāliya) /ʔu.waː.li.ja/: first-person singular non-past active subjunctive of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔuwālī", "wālā", "ʔuwāliya"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "أوالى",
-        "u": "أوالى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُوَالَى • (ʔuwālā) (form III) /ʔu.waː.laː/\n# first-person singular non-past passive indicative/subjunctive of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔuwālā", "wālā"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "والينا",
-        "u": "والينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وَالَيْنَا • (wālaynā) (form III) /waː.laj.naː/\n# first-person plural past active of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wālaynā", "wālā"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوالي",
-        "u": "نوالي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نوالي (form III)\n# نُوَالِي (nuwālī) /nu.waː.liː/: first-person plural non-past active indicative of وَالَى (wālā)\n# نُوَالِيَ (nuwāliya) /nu.waː.li.ja/: first-person plural non-past active subjunctive of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nuwālī", "wālā", "nuwāliya"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "وولينا",
-        "u": "وولينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وُولِينَا • (wūlīnā) (form III) /wuː.liː.naː/\n# first-person plural past passive of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wūlīnā", "wālā"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوالى",
-        "u": "نوالى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوَالَى • (nuwālā) (form III) /nu.waː.laː/\n# first-person plural non-past passive indicative/subjunctive of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nuwālā", "wālā"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "توالوا",
-        "u": "توالوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "توالوا (form III)\n# تُوَالُوا (tuwālū) /tu.waː.luː/: second-person masculine plural non-past active subjunctive/jussive of وَالَى (wālā)\n# تُوَالَوْا (tuwālaw) /tu.waː.law/: second-person masculine plural non-past passive subjunctive/jussive of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuwālū", "wālā", "tuwālaw"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "واليتم",
-        "u": "واليتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وَالَيْتُمْ • (wālaytum) (form III) /waː.laj.tum/\n# second-person masculine plural past active of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wālaytum", "wālā"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "توالون",
-        "u": "توالون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "توالون (form III)\n# تُوَالُونَ (tuwālūna) /tu.waː.luː.na/: second-person masculine plural non-past active indicative of وَالَى (wālā)\n# تُوَالَوْنَ (tuwālawna) /tu.waː.law.na/: second-person masculine plural non-past passive indicative of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuwālūna", "wālā", "tuwālawna"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "والوا",
-        "u": "والوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "والوا (form III)\n# وَالَوْا (wālaw) /waː.law/: third-person masculine plural past active of وَالَى (wālā)\n# وَالُوا (wālū) /waː.luː/: second-person masculine plural imperative of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wālaw", "wālā", "wālū"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "ووليتم",
-        "u": "ووليتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وُولِيتُمْ • (wūlītum) (form III) /wuː.liː.tum/\n# second-person masculine plural past passive of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wūlītum", "wālā"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوالون",
-        "u": "يوالون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يوالون (form III)\n# يُوَالُونَ (yuwālūna) /ju.waː.luː.na/: third-person masculine plural non-past active indicative of وَالَى (wālā)\n# يُوَالَوْنَ (yuwālawna) /ju.waː.law.na/: third-person masculine plural non-past passive indicative of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuwālūna", "wālā", "yuwālawna"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوالوا",
-        "u": "يوالوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يوالوا (form III)\n# يُوَالُوا (yuwālū) /ju.waː.luː/: third-person masculine plural non-past active subjunctive/jussive of وَالَى (wālā)\n# يُوَالَوْا (yuwālaw) /ju.waː.law/: third-person masculine plural non-past passive subjunctive/jussive of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuwālū", "wālā", "yuwālaw"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "وولوا",
-        "u": "وولوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وُولُوا • (wūlū) (form III) /wuː.luː/\n# third-person masculine plural past passive of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wūlū", "wālā"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "واليتن",
-        "u": "واليتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وَالَيْتُنَّ • (wālaytunna) (form III) /waː.laj.tun.na/\n# second-person feminine plural past active of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wālaytunna", "wālā"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "والين",
-        "u": "والين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "والين (form III)\n# وَالَيْنَ (wālayna) /waː.laj.na/: third-person feminine plural past active of وَالَى (wālā)\n# وَالِينَ (wālīna) /waː.liː.na/: second-person feminine plural imperative of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wālayna", "wālā", "wālīna"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "ووليتن",
-        "u": "ووليتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وُولِيتُنَّ • (wūlītunna) (form III) /wuː.liː.tun.na/\n# second-person feminine plural past passive of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wūlītunna", "wālā"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوالين",
-        "u": "يوالين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يوالين (form III)\n# يُوَالِينَ (yuwālīna) /ju.waː.liː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of وَالَى (wālā)\n# يُوَالَيْنَ (yuwālayna) /ju.waː.laj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuwālīna", "wālā", "yuwālayna"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "وولين",
-        "u": "وولين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وُولِينَ • (wūlīna) (form III) /wuː.liː.na/\n# third-person feminine plural past passive of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wūlīna", "wālā"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "تواليا",
-        "u": "تواليا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تواليا (form III)\n# تُوَالِيَا (tuwāliyā) /tu.waː.li.jaː/: inflection of وَالَى (wālā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُوَالَيَا (tuwālayā) /tu.waː.la.jaː/: inflection of وَالَى (wālā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuwāliyā", "wālā", "tuwālayā"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "واليا",
-        "u": "واليا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "واليا (form III)\n# وَالَيَا (wālayā) /waː.la.jaː/: third-person masculine dual past active of وَالَى (wālā)\n# وَالِيَا (wāliyā) /waː.li.jaː/: second-person dual imperative of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wālayā", "wālā", "wāliyā"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "ووليتما",
-        "u": "ووليتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وُولِيتُمَا • (wūlītumā) (form III) /wuː.liː.tu.maː/\n# second-person dual past passive of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wūlītumā", "wālā"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "واليتما",
-        "u": "واليتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وَالَيْتُمَا • (wālaytumā) (form III) /waː.laj.tu.maː/\n# second-person dual past active of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wālaytumā", "wālā"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "والتا",
-        "u": "والتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وَالَتَا • (wālatā) (form III) /waː.la.taː/\n# third-person feminine dual past active of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wālatā", "wālā"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "ووليتا",
-        "u": "ووليتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وُولِيَتَا • (wūliyatā) (form III) /wuː.li.ja.taː/\n# third-person feminine dual past passive of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wūliyatā", "wālā"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "ووليا",
-        "u": "ووليا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وُولِيَا • (wūliyā) (form III) /wuː.li.jaː/\n# third-person masculine dual past passive of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wūliyā", "wālā"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "تواليان",
-        "u": "تواليان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تواليان (form III)\n# تُوَالِيَانِ (tuwāliyāni) /tu.waː.li.jaː.ni/: inflection of وَالَى (wālā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُوَالَيَانِ (tuwālayāni) /tu.waː.la.jaː.ni/: inflection of وَالَى (wālā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuwāliyāni", "wālā", "tuwālayāni"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "يواليان",
-        "u": "يواليان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يواليان (form III)\n# يُوَالِيَانِ (yuwāliyāni) /ju.waː.li.jaː.ni/: third-person masculine dual non-past active indicative of وَالَى (wālā)\n# يُوَالَيَانِ (yuwālayāni) /ju.waː.la.jaː.ni/: third-person masculine dual non-past passive indicative of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuwāliyāni", "wālā", "yuwālayāni"],
-        "k": "والى",
-        "yol": "kök"
-      },
-      {
-        "w": "يواليا",
-        "u": "يواليا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يواليا (form III)\n# يُوَالِيَا (yuwāliyā) /ju.waː.li.jaː/: third-person masculine dual non-past active subjunctive/jussive of وَالَى (wālā)\n# يُوَالَيَا (yuwālayā) /ju.waː.la.jaː/: third-person masculine dual non-past passive subjunctive/jussive of وَالَى (wālā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuwāliyā", "wālā", "yuwālayā"],
-        "k": "والى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "لى",
+  "ses": {
     "harf": "و",
+    "fasil": "لى",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "وال",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وَالِ • (wāli) (form III) /waː.li/\n# second-person masculine singular imperative of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wāli", "wālā"]
+    },
+    {
+      "madde": "والي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وَالِي • (wālī) (form III) /waː.liː/\n# second-person feminine singular imperative of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wālī", "wālā"]
+    },
+    {
+      "madde": "توالى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُوَالَى • (tuwālā) (form III) /tu.waː.laː/\n# inflection of وَالَى (wālā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuwālā", "wālā"]
+    },
+    {
+      "madde": "ولاة",
+      "tur": "noun",
+      "baslik": "وُلَاة • (wulāh) m pl",
+      "anlam": ["plural of وَالٍ (wālin)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["وَالٍ"],
+      "okunus": ["wulāh"],
+      "bag": "asıl madde",
+      "etimoloji": 1
+    },
+    {
+      "madde": "توال",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "توال (form III)\n# تُوَالِ (tuwāli) /tu.waː.li/: inflection of وَالَى (wālā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُوَالَ (tuwāla) /tu.waː.la/: inflection of وَالَى (wālā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuwāli", "wālā", "tuwāla"]
+    },
+    {
+      "madde": "نوال",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نوال (form III)\n# نُوَالِ (nuwāli) /nu.waː.li/: first-person plural non-past active jussive of وَالَى (wālā)\n# نُوَالَ (nuwāla) /nu.waː.la/: first-person plural non-past passive jussive of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nuwāli", "wālā", "nuwāla"]
+    },
+    {
+      "madde": "يوالي",
+      "tur": "verb",
+      "baslik": "يوالي (form III)\n# يُوَالِي (yuwālī) /ju.waː.liː/: third-person masculine singular non-past active indicative of وَالَى (wālā)\n# يُوَالِيَ (yuwāliya) /ju.waː.li.ja/: third-person masculine singular non-past active subjunctive of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuwālī", "wālā", "yuwāliya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يوالى",
+      "tur": "verb",
+      "baslik": "يُوَالَى • (yuwālā) (form III) /ju.waː.laː/\n# third-person masculine singular non-past passive indicative/subjunctive of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuwālā", "wālā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أوال",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أوال (form III)\n# أُوَالِ (ʔuwāli) /ʔu.waː.li/: first-person singular non-past active jussive of وَالَى (wālā)\n# أُوَالَ (ʔuwāla) /ʔu.waː.la/: first-person singular non-past passive jussive of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔuwāli", "wālā", "ʔuwāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يوال",
+      "tur": "verb",
+      "baslik": "يوال (form III)\n# يُوَالِ (yuwāli) /ju.waː.li/: third-person masculine singular non-past active jussive of وَالَى (wālā)\n# يُوَالَ (yuwāla) /ju.waː.la/: third-person masculine singular non-past passive jussive of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuwāli", "wālā", "yuwāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وولي",
+      "tur": "verb",
+      "baslik": "وُولِيَ • (wūliya) (form III) /wuː.li.ja/\n# third-person masculine singular past passive of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wūliya", "wālā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "والت",
+      "tur": "verb",
+      "baslik": "وَالَتْ • (wālat) (form III) /waː.lat/\n# third-person feminine singular past active of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wālat", "wālā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "توالي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "توالي (form III)\n# تُوَالِي (tuwālī) /tu.waː.liː/: inflection of وَالَى (wālā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُوَالِيَ (tuwāliya) /tu.waː.li.ja/: inflection of وَالَى (wālā):\n## second-person masculine singular non-past active subju",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuwālī", "wālā", "tuwāliya"]
+    },
+    {
+      "madde": "ووليت",
+      "tur": "verb",
+      "baslik": "ووليت (form III)\n# وُولِيتُ (wūlītu) /wuː.liː.tu/: first-person singular past passive of وَالَى (wālā)\n# وُولِيتَ (wūlīta) /wuː.liː.ta/: second-person masculine singular past passive of وَالَى (wālā)\n# وُولِيتِ (wūlīti) /wuː.liː.ti/: second-person feminine singular past passive of وَالَى (wālā)\n# وُولِيَتْ (wūliyat) /wuː.li.jat/: third-person feminine singular past passive of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wūlītu", "wālā", "wūlīta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "واليت",
+      "tur": "verb",
+      "baslik": "واليت (form III)\n# وَالَيْتُ (wālaytu) /waː.laj.tu/: first-person singular past active of وَالَى (wālā)\n# وَالَيْتَ (wālayta) /waː.laj.ta/: second-person masculine singular past active of وَالَى (wālā)\n# وَالَيْتِ (wālayti) /waː.laj.ti/: second-person feminine singular past active of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wālaytu", "wālā", "wālayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "توالين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "توالين (form III)\n# تُوَالِينَ (tuwālīna) /tu.waː.liː.na/: inflection of وَالَى (wālā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُوَالَيْنَ (tuwālayna) /tu.waː.laj.na/: inflection of وَالَى (wālā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuwālīna", "wālā", "tuwālayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أوالي",
+      "tur": "verb",
+      "baslik": "أوالي (form III)\n# أُوَالِي (ʔuwālī) /ʔu.waː.liː/: first-person singular non-past active indicative of وَالَى (wālā)\n# أُوَالِيَ (ʔuwāliya) /ʔu.waː.li.ja/: first-person singular non-past active subjunctive of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔuwālī", "wālā", "ʔuwāliya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أوالى",
+      "tur": "verb",
+      "baslik": "أُوَالَى • (ʔuwālā) (form III) /ʔu.waː.laː/\n# first-person singular non-past passive indicative/subjunctive of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔuwālā", "wālā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "والينا",
+      "tur": "verb",
+      "baslik": "وَالَيْنَا • (wālaynā) (form III) /waː.laj.naː/\n# first-person plural past active of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wālaynā", "wālā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوالي",
+      "tur": "verb",
+      "baslik": "نوالي (form III)\n# نُوَالِي (nuwālī) /nu.waː.liː/: first-person plural non-past active indicative of وَالَى (wālā)\n# نُوَالِيَ (nuwāliya) /nu.waː.li.ja/: first-person plural non-past active subjunctive of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nuwālī", "wālā", "nuwāliya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وولينا",
+      "tur": "verb",
+      "baslik": "وُولِينَا • (wūlīnā) (form III) /wuː.liː.naː/\n# first-person plural past passive of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wūlīnā", "wālā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوالى",
+      "tur": "verb",
+      "baslik": "نُوَالَى • (nuwālā) (form III) /nu.waː.laː/\n# first-person plural non-past passive indicative/subjunctive of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nuwālā", "wālā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "توالوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "توالوا (form III)\n# تُوَالُوا (tuwālū) /tu.waː.luː/: second-person masculine plural non-past active subjunctive/jussive of وَالَى (wālā)\n# تُوَالَوْا (tuwālaw) /tu.waː.law/: second-person masculine plural non-past passive subjunctive/jussive of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuwālū", "wālā", "tuwālaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "واليتم",
+      "tur": "verb",
+      "baslik": "وَالَيْتُمْ • (wālaytum) (form III) /waː.laj.tum/\n# second-person masculine plural past active of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wālaytum", "wālā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "توالون",
+      "tur": "verb",
+      "baslik": "توالون (form III)\n# تُوَالُونَ (tuwālūna) /tu.waː.luː.na/: second-person masculine plural non-past active indicative of وَالَى (wālā)\n# تُوَالَوْنَ (tuwālawna) /tu.waː.law.na/: second-person masculine plural non-past passive indicative of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuwālūna", "wālā", "tuwālawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "والوا",
+      "tur": "verb",
+      "baslik": "والوا (form III)\n# وَالَوْا (wālaw) /waː.law/: third-person masculine plural past active of وَالَى (wālā)\n# وَالُوا (wālū) /waː.luː/: second-person masculine plural imperative of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wālaw", "wālā", "wālū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ووليتم",
+      "tur": "verb",
+      "baslik": "وُولِيتُمْ • (wūlītum) (form III) /wuː.liː.tum/\n# second-person masculine plural past passive of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wūlītum", "wālā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يوالون",
+      "tur": "verb",
+      "baslik": "يوالون (form III)\n# يُوَالُونَ (yuwālūna) /ju.waː.luː.na/: third-person masculine plural non-past active indicative of وَالَى (wālā)\n# يُوَالَوْنَ (yuwālawna) /ju.waː.law.na/: third-person masculine plural non-past passive indicative of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuwālūna", "wālā", "yuwālawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يوالوا",
+      "tur": "verb",
+      "baslik": "يوالوا (form III)\n# يُوَالُوا (yuwālū) /ju.waː.luː/: third-person masculine plural non-past active subjunctive/jussive of وَالَى (wālā)\n# يُوَالَوْا (yuwālaw) /ju.waː.law/: third-person masculine plural non-past passive subjunctive/jussive of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuwālū", "wālā", "yuwālaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وولوا",
+      "tur": "verb",
+      "baslik": "وُولُوا • (wūlū) (form III) /wuː.luː/\n# third-person masculine plural past passive of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wūlū", "wālā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "واليتن",
+      "tur": "verb",
+      "baslik": "وَالَيْتُنَّ • (wālaytunna) (form III) /waː.laj.tun.na/\n# second-person feminine plural past active of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wālaytunna", "wālā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "والين",
+      "tur": "verb",
+      "baslik": "والين (form III)\n# وَالَيْنَ (wālayna) /waː.laj.na/: third-person feminine plural past active of وَالَى (wālā)\n# وَالِينَ (wālīna) /waː.liː.na/: second-person feminine plural imperative of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wālayna", "wālā", "wālīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ووليتن",
+      "tur": "verb",
+      "baslik": "وُولِيتُنَّ • (wūlītunna) (form III) /wuː.liː.tun.na/\n# second-person feminine plural past passive of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wūlītunna", "wālā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يوالين",
+      "tur": "verb",
+      "baslik": "يوالين (form III)\n# يُوَالِينَ (yuwālīna) /ju.waː.liː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of وَالَى (wālā)\n# يُوَالَيْنَ (yuwālayna) /ju.waː.laj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuwālīna", "wālā", "yuwālayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وولين",
+      "tur": "verb",
+      "baslik": "وُولِينَ • (wūlīna) (form III) /wuː.liː.na/\n# third-person feminine plural past passive of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wūlīna", "wālā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تواليا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تواليا (form III)\n# تُوَالِيَا (tuwāliyā) /tu.waː.li.jaː/: inflection of وَالَى (wālā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُوَالَيَا (tuwālayā) /tu.waː.la.jaː/: inflection of وَالَى (wālā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuwāliyā", "wālā", "tuwālayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "واليا",
+      "tur": "verb",
+      "baslik": "واليا (form III)\n# وَالَيَا (wālayā) /waː.la.jaː/: third-person masculine dual past active of وَالَى (wālā)\n# وَالِيَا (wāliyā) /waː.li.jaː/: second-person dual imperative of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wālayā", "wālā", "wāliyā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ووليتما",
+      "tur": "verb",
+      "baslik": "وُولِيتُمَا • (wūlītumā) (form III) /wuː.liː.tu.maː/\n# second-person dual past passive of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wūlītumā", "wālā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "واليتما",
+      "tur": "verb",
+      "baslik": "وَالَيْتُمَا • (wālaytumā) (form III) /waː.laj.tu.maː/\n# second-person dual past active of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wālaytumā", "wālā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "والتا",
+      "tur": "verb",
+      "baslik": "وَالَتَا • (wālatā) (form III) /waː.la.taː/\n# third-person feminine dual past active of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wālatā", "wālā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ووليتا",
+      "tur": "verb",
+      "baslik": "وُولِيَتَا • (wūliyatā) (form III) /wuː.li.ja.taː/\n# third-person feminine dual past passive of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wūliyatā", "wālā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ووليا",
+      "tur": "verb",
+      "baslik": "وُولِيَا • (wūliyā) (form III) /wuː.li.jaː/\n# third-person masculine dual past passive of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wūliyā", "wālā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تواليان",
+      "tur": "verb",
+      "baslik": "تواليان (form III)\n# تُوَالِيَانِ (tuwāliyāni) /tu.waː.li.jaː.ni/: inflection of وَالَى (wālā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُوَالَيَانِ (tuwālayāni) /tu.waː.la.jaː.ni/: inflection of وَالَى (wālā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuwāliyāni", "wālā", "tuwālayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يواليان",
+      "tur": "verb",
+      "baslik": "يواليان (form III)\n# يُوَالِيَانِ (yuwāliyāni) /ju.waː.li.jaː.ni/: third-person masculine dual non-past active indicative of وَالَى (wālā)\n# يُوَالَيَانِ (yuwālayāni) /ju.waː.la.jaː.ni/: third-person masculine dual non-past passive indicative of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuwāliyāni", "wālā", "yuwālayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يواليا",
+      "tur": "verb",
+      "baslik": "يواليا (form III)\n# يُوَالِيَا (yuwāliyā) /ju.waː.li.jaː/: third-person masculine dual non-past active subjunctive/jussive of وَالَى (wālā)\n# يُوَالَيَا (yuwālayā) /ju.waː.la.jaː/: third-person masculine dual non-past passive subjunctive/jussive of وَالَى (wālā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuwāliyā", "wālā", "yuwālayā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "والى", "r6"]
+  ],
+  "mana": {
     "ince": "succeed.v.02",
     "orta": "verb.social",
     "ust": "insan ve toplum",
@@ -580,22 +411,15 @@
     "dayanak_tanim": "be the successor (of)",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["succeed.v.02"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["succeed.v.02"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

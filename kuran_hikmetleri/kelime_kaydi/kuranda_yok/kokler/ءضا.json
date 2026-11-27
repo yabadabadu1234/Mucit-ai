@@ -1,56 +1,40 @@
 {
   "kok": "ءضا",
+  "tur": "isim",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["fiil-yok"],
+  "lugat_fiil": false,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءضا", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "mekayis": [
-      {
-        "baslik": "أَضَا",
-        "metin": "(أَضَا) الْهَمْزَةُ وَالضَّادُ مَعَ اعْتِلَالِ مَا بَعْدَهُمَا كَلِمَةٌ وَاحِدَةٌ، وَهِيَ الْأَضَاةُ، مَكَانٌ يَسْتَنْقِعُ فِيهِ الْمَاءُ كَالْغَدِيرِ. قَالَ أَبُو عُبَيْدٍ: الْأَضَاةُ الْمَاءُ الْمُسْتَنْقِعُ، مِنْ سَيْلٍ أَوْ غَيْرِهِ، وَجَمْعُهُ أَضًا، وَجَمْعُ الْأَضَا إِضَاءٌ مَمْدُودٌ، وَهُوَ نَادِرٌ.\n[بَابُ الْهَمْزَةِ وَالطَّاءِ وَمَا بَعْدَهُمَا فِي الثُّلَاثِيِّ]"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "ضض",
+  "ses": {
     "harf": "ء",
+    "fasil": "ضض",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+  "mekayis": [
+    {
+      "baslik": "أَضَا",
+      "metin": "(أَضَا) الْهَمْزَةُ وَالضَّادُ مَعَ اعْتِلَالِ مَا بَعْدَهُمَا كَلِمَةٌ وَاحِدَةٌ، وَهِيَ الْأَضَاةُ، مَكَانٌ يَسْتَنْقِعُ فِيهِ الْمَاءُ كَالْغَدِيرِ. قَالَ أَبُو عُبَيْدٍ: الْأَضَاةُ الْمَاءُ الْمُسْتَنْقِعُ، مِنْ سَيْلٍ أَوْ غَيْرِهِ، وَجَمْعُهُ أَضًا، وَجَمْعُ الْأَضَا إِضَاءٌ مَمْدُودٌ، وَهُوَ نَادِرٌ.\n[بَابُ الْهَمْزَةِ وَالطَّاءِ وَمَا بَعْدَهُمَا فِي الثُّلَاثِيِّ]"
+    }
+  ],
+  "zemahseri": {
     "hakikat": "عليه درع كالأضاة وهي الغدير، وعليهم دروع كالأضاء. وخرجوا لابسين الأضا، رامين بجمر الغضا.",
-    "mecaz": "",
-    "kinaye": "",
     "mecaz_var": false
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءضا", "r7"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "ust": {
       "kume": 1,
       "merkez_kok": "قره",
@@ -70,6 +54,10 @@
       "boy": 70
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

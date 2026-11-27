@@ -1,394 +1,319 @@
 {
   "kok": "ءغري",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءغري", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يغر",
-        "u": "يغر",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يُغْرَ • (yuḡra) (form IV) /juɣ.ra/\n# third-person masculine singular non-past passive jussive of أُغْرِيَ (ʔuḡriya)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḡra", "ʔuḡriya"],
-        "k": "أغري",
-        "yol": "kök"
-      },
-      {
-        "w": "تغر",
-        "u": "تغر",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تُغْرَ • (tuḡra) (form IV) /tuɣ.ra/\n# inflection of أُغْرِيَ (ʔuḡriya):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḡra", "ʔuḡriya"],
-        "k": "أغري",
-        "yol": "kök"
-      },
-      {
-        "w": "تغرين",
-        "u": "تغرين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُغْرَيْنَ • (tuḡrayna) (form IV) /tuɣ.raj.na/\n# inflection of أُغْرِيَ (ʔuḡriya):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḡrayna", "ʔuḡriya"],
-        "k": "أغري",
-        "yol": "kök"
-      },
-      {
-        "w": "تغري",
-        "u": "تغري",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُغْرَيْ • (tuḡray) (form IV) /tuɣ.raj/\n# second-person feminine singular non-past passive subjunctive/jussive of أُغْرِيَ (ʔuḡriya)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḡray", "ʔuḡriya"],
-        "k": "أغري",
-        "yol": "kök"
-      },
-      {
-        "w": "أغر",
-        "u": "أغر",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "أُغْرَ • (ʔuḡra) (form IV) /ʔuɣ.ra/\n# first-person singular non-past passive jussive of أُغْرِيَ (ʔuḡriya)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuḡra", "ʔuḡriya"],
-        "k": "أغري",
-        "yol": "kök"
-      },
-      {
-        "w": "نغر",
-        "u": "نغر",
-        "p": "verb",
-        "n": "8",
-        "h": "ar-verb form",
-        "e": "نُغْرَ • (nuḡra) (form IV) /nuɣ.ra/\n# first-person plural non-past passive jussive of أُغْرِيَ (ʔuḡriya)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuḡra", "ʔuḡriya"],
-        "k": "أغري",
-        "yol": "kök"
-      },
-      {
-        "w": "تغرون",
-        "u": "تغرون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُغْرَوْنَ • (tuḡrawna) (form IV) /tuɣ.raw.na/\n# second-person masculine plural non-past passive indicative of أُغْرِيَ (ʔuḡriya)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḡrawna", "ʔuḡriya"],
-        "k": "أغري",
-        "yol": "kök"
-      },
-      {
-        "w": "تغروا",
-        "u": "تغروا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُغْرَوْا • (tuḡraw) (form IV) /tuɣ.raw/\n# second-person masculine plural non-past passive subjunctive/jussive of أُغْرِيَ (ʔuḡriya)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḡraw", "ʔuḡriya"],
-        "k": "أغري",
-        "yol": "kök"
-      },
-      {
-        "w": "يغرون",
-        "u": "يغرون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يُغْرَوْنَ • (yuḡrawna) (form IV) /juɣ.raw.na/\n# third-person masculine plural non-past passive indicative of أُغْرِيَ (ʔuḡriya)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḡrawna", "ʔuḡriya"],
-        "k": "أغري",
-        "yol": "kök"
-      },
-      {
-        "w": "يغروا",
-        "u": "يغروا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يُغْرَوْا • (yuḡraw) (form IV) /juɣ.raw/\n# third-person masculine plural non-past passive subjunctive/jussive of أُغْرِيَ (ʔuḡriya)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḡraw", "ʔuḡriya"],
-        "k": "أغري",
-        "yol": "kök"
-      },
-      {
-        "w": "أغرى",
-        "u": "أغرى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أُغْرَى • (ʔuḡrā) (form IV) /ʔuɣ.raː/\n# first-person singular non-past passive indicative/subjunctive of أُغْرِيَ (ʔuḡriya)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuḡrā", "ʔuḡriya"],
-        "k": "أغري",
-        "yol": "kök"
-      },
-      {
-        "w": "أغريت",
-        "u": "أغريت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أغريت (form IV)\n# أُغْرِيتُ (ʔuḡrītu) /ʔuɣ.riː.tu/: first-person singular past passive of أُغْرِيَ (ʔuḡriya)\n# أُغْرِيتَ (ʔuḡrīta) /ʔuɣ.riː.ta/: second-person masculine singular past passive of أُغْرِيَ (ʔuḡriya)\n# أُغْرِيتِ (ʔuḡrīti) /ʔuɣ.riː.ti/: second-person feminine singular past passive of أُغْرِيَ (ʔuḡriya)\n# أُغْرِيَتْ (ʔuḡriyat) /ʔuɣ.ri.jat/: third-person feminine singular past passive of",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuḡrītu", "ʔuḡriya", "ʔuḡrīta"],
-        "k": "أغري",
-        "yol": "kök"
-      },
-      {
-        "w": "أغريا",
-        "u": "أغريا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أُغْرِيَا • (ʔuḡriyā) (form IV) /ʔuɣ.ri.jaː/\n# third-person masculine dual past passive of أُغْرِيَ (ʔuḡriya)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuḡriyā", "ʔuḡriya"],
-        "k": "أغري",
-        "yol": "kök"
-      },
-      {
-        "w": "أغريتما",
-        "u": "أغريتما",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أُغْرِيتُمَا • (ʔuḡrītumā) (form IV) /ʔuɣ.riː.tu.maː/\n# second-person dual past passive of أُغْرِيَ (ʔuḡriya)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuḡrītumā", "ʔuḡriya"],
-        "k": "أغري",
-        "yol": "kök"
-      },
-      {
-        "w": "أغريتم",
-        "u": "أغريتم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أُغْرِيتُمْ • (ʔuḡrītum) (form IV) /ʔuɣ.riː.tum/\n# second-person masculine plural past passive of أُغْرِيَ (ʔuḡriya)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuḡrītum", "ʔuḡriya"],
-        "k": "أغري",
-        "yol": "kök"
-      },
-      {
-        "w": "أغرينا",
-        "u": "أغرينا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أُغْرِينَا • (ʔuḡrīnā) (form IV) /ʔuɣ.riː.naː/\n# first-person plural past passive of أُغْرِيَ (ʔuḡriya)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuḡrīnā", "ʔuḡriya"],
-        "k": "أغري",
-        "yol": "kök"
-      },
-      {
-        "w": "أغريتا",
-        "u": "أغريتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أُغْرِيَتَا • (ʔuḡriyatā) (form IV) /ʔuɣ.ri.ja.taː/\n# third-person feminine dual past passive of أُغْرِيَ (ʔuḡriya)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuḡriyatā", "ʔuḡriya"],
-        "k": "أغري",
-        "yol": "kök"
-      },
-      {
-        "w": "أغروا",
-        "u": "أغروا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أُغْرُوا • (ʔuḡrū) (form IV) /ʔuɣ.ruː/\n# third-person masculine plural past passive of أُغْرِيَ (ʔuḡriya)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuḡrū", "ʔuḡriya"],
-        "k": "أغري",
-        "yol": "kök"
-      },
-      {
-        "w": "أغرين",
-        "u": "أغرين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أُغْرِينَ • (ʔuḡrīna) (form IV) /ʔuɣ.riː.na/\n# third-person feminine plural past passive of أُغْرِيَ (ʔuḡriya)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuḡrīna", "ʔuḡriya"],
-        "k": "أغري",
-        "yol": "kök"
-      },
-      {
-        "w": "تغريان",
-        "u": "تغريان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُغْرَيَانِ • (tuḡrayāni) (form IV) /tuɣ.ra.jaː.ni/\n# inflection of أُغْرِيَ (ʔuḡriya):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḡrayāni", "ʔuḡriya"],
-        "k": "أغري",
-        "yol": "kök"
-      },
-      {
-        "w": "يغريان",
-        "u": "يغريان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُغْرَيَانِ • (yuḡrayāni) (form IV) /juɣ.ra.jaː.ni/\n# third-person masculine dual non-past passive indicative of أُغْرِيَ (ʔuḡriya)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḡrayāni", "ʔuḡriya"],
-        "k": "أغري",
-        "yol": "kök"
-      },
-      {
-        "w": "أغريتن",
-        "u": "أغريتن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أُغْرِيتُنَّ • (ʔuḡrītunna) (form IV) /ʔuɣ.riː.tun.na/\n# second-person feminine plural past passive of أُغْرِيَ (ʔuḡriya)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuḡrītunna", "ʔuḡriya"],
-        "k": "أغري",
-        "yol": "kök"
-      },
-      {
-        "w": "يغرى",
-        "u": "يغرى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُغْرَى • (yuḡrā) (form IV) /juɣ.raː/\n# third-person masculine singular non-past passive indicative/subjunctive of أُغْرِيَ (ʔuḡriya)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḡrā", "ʔuḡriya"],
-        "k": "أغري",
-        "yol": "kök"
-      },
-      {
-        "w": "تغرى",
-        "u": "تغرى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُغْرَى • (tuḡrā) (form IV) /tuɣ.raː/\n# inflection of أُغْرِيَ (ʔuḡriya):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḡrā", "ʔuḡriya"],
-        "k": "أغري",
-        "yol": "kök"
-      },
-      {
-        "w": "نغرى",
-        "u": "نغرى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نُغْرَى • (nuḡrā) (form IV) /nuɣ.raː/\n# first-person plural non-past passive indicative/subjunctive of أُغْرِيَ (ʔuḡriya)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuḡrā", "ʔuḡriya"],
-        "k": "أغري",
-        "yol": "kök"
-      },
-      {
-        "w": "يغريا",
-        "u": "يغريا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُغْرَيَا • (yuḡrayā) (form IV) /juɣ.ra.jaː/\n# third-person masculine dual non-past passive subjunctive/jussive of أُغْرِيَ (ʔuḡriya)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḡrayā", "ʔuḡriya"],
-        "k": "أغري",
-        "yol": "kök"
-      },
-      {
-        "w": "يغرين",
-        "u": "يغرين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُغْرَيْنَ • (yuḡrayna) (form IV) /juɣ.raj.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of أُغْرِيَ (ʔuḡriya)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḡrayna", "ʔuḡriya"],
-        "k": "أغري",
-        "yol": "kök"
-      },
-      {
-        "w": "تغريا",
-        "u": "تغريا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُغْرَيَا • (tuḡrayā) (form IV) /tuɣ.ra.jaː/\n# inflection of أُغْرِيَ (ʔuḡriya):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḡrayā", "ʔuḡriya"],
-        "k": "أغري",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "غر",
+  "ses": {
     "harf": "ء",
+    "fasil": "غر",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "يغر",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يُغْرَ • (yuḡra) (form IV) /juɣ.ra/\n# third-person masculine singular non-past passive jussive of أُغْرِيَ (ʔuḡriya)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḡra", "ʔuḡriya"],
+      "kok_yazilis": "أغري",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغر",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تُغْرَ • (tuḡra) (form IV) /tuɣ.ra/\n# inflection of أُغْرِيَ (ʔuḡriya):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḡra", "ʔuḡriya"],
+      "kok_yazilis": "أغري",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغرين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُغْرَيْنَ • (tuḡrayna) (form IV) /tuɣ.raj.na/\n# inflection of أُغْرِيَ (ʔuḡriya):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḡrayna", "ʔuḡriya"],
+      "kok_yazilis": "أغري",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغري",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُغْرَيْ • (tuḡray) (form IV) /tuɣ.raj/\n# second-person feminine singular non-past passive subjunctive/jussive of أُغْرِيَ (ʔuḡriya)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḡray", "ʔuḡriya"],
+      "kok_yazilis": "أغري",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغر",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "أُغْرَ • (ʔuḡra) (form IV) /ʔuɣ.ra/\n# first-person singular non-past passive jussive of أُغْرِيَ (ʔuḡriya)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuḡra", "ʔuḡriya"],
+      "kok_yazilis": "أغري"
+    },
+    {
+      "madde": "نغر",
+      "tur": "verb",
+      "etim_no": "8",
+      "baslik": "نُغْرَ • (nuḡra) (form IV) /nuɣ.ra/\n# first-person plural non-past passive jussive of أُغْرِيَ (ʔuḡriya)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuḡra", "ʔuḡriya"],
+      "kok_yazilis": "أغري"
+    },
+    {
+      "madde": "تغرون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُغْرَوْنَ • (tuḡrawna) (form IV) /tuɣ.raw.na/\n# second-person masculine plural non-past passive indicative of أُغْرِيَ (ʔuḡriya)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḡrawna", "ʔuḡriya"],
+      "kok_yazilis": "أغري",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغروا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُغْرَوْا • (tuḡraw) (form IV) /tuɣ.raw/\n# second-person masculine plural non-past passive subjunctive/jussive of أُغْرِيَ (ʔuḡriya)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḡraw", "ʔuḡriya"],
+      "kok_yazilis": "أغري",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغرون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يُغْرَوْنَ • (yuḡrawna) (form IV) /juɣ.raw.na/\n# third-person masculine plural non-past passive indicative of أُغْرِيَ (ʔuḡriya)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḡrawna", "ʔuḡriya"],
+      "kok_yazilis": "أغري",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغروا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يُغْرَوْا • (yuḡraw) (form IV) /juɣ.raw/\n# third-person masculine plural non-past passive subjunctive/jussive of أُغْرِيَ (ʔuḡriya)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḡraw", "ʔuḡriya"],
+      "kok_yazilis": "أغري",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغرى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أُغْرَى • (ʔuḡrā) (form IV) /ʔuɣ.raː/\n# first-person singular non-past passive indicative/subjunctive of أُغْرِيَ (ʔuḡriya)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuḡrā", "ʔuḡriya"],
+      "kok_yazilis": "أغري"
+    },
+    {
+      "madde": "أغريت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أغريت (form IV)\n# أُغْرِيتُ (ʔuḡrītu) /ʔuɣ.riː.tu/: first-person singular past passive of أُغْرِيَ (ʔuḡriya)\n# أُغْرِيتَ (ʔuḡrīta) /ʔuɣ.riː.ta/: second-person masculine singular past passive of أُغْرِيَ (ʔuḡriya)\n# أُغْرِيتِ (ʔuḡrīti) /ʔuɣ.riː.ti/: second-person feminine singular past passive of أُغْرِيَ (ʔuḡriya)\n# أُغْرِيَتْ (ʔuḡriyat) /ʔuɣ.ri.jat/: third-person feminine singular past passive of",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuḡrītu", "ʔuḡriya", "ʔuḡrīta"],
+      "kok_yazilis": "أغري",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغريا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أُغْرِيَا • (ʔuḡriyā) (form IV) /ʔuɣ.ri.jaː/\n# third-person masculine dual past passive of أُغْرِيَ (ʔuḡriya)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuḡriyā", "ʔuḡriya"],
+      "kok_yazilis": "أغري",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغريتما",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أُغْرِيتُمَا • (ʔuḡrītumā) (form IV) /ʔuɣ.riː.tu.maː/\n# second-person dual past passive of أُغْرِيَ (ʔuḡriya)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuḡrītumā", "ʔuḡriya"],
+      "kok_yazilis": "أغري",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغريتم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أُغْرِيتُمْ • (ʔuḡrītum) (form IV) /ʔuɣ.riː.tum/\n# second-person masculine plural past passive of أُغْرِيَ (ʔuḡriya)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuḡrītum", "ʔuḡriya"],
+      "kok_yazilis": "أغري",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغرينا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أُغْرِينَا • (ʔuḡrīnā) (form IV) /ʔuɣ.riː.naː/\n# first-person plural past passive of أُغْرِيَ (ʔuḡriya)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuḡrīnā", "ʔuḡriya"],
+      "kok_yazilis": "أغري",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغريتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أُغْرِيَتَا • (ʔuḡriyatā) (form IV) /ʔuɣ.ri.ja.taː/\n# third-person feminine dual past passive of أُغْرِيَ (ʔuḡriya)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuḡriyatā", "ʔuḡriya"],
+      "kok_yazilis": "أغري",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغروا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أُغْرُوا • (ʔuḡrū) (form IV) /ʔuɣ.ruː/\n# third-person masculine plural past passive of أُغْرِيَ (ʔuḡriya)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuḡrū", "ʔuḡriya"],
+      "kok_yazilis": "أغري",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغرين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أُغْرِينَ • (ʔuḡrīna) (form IV) /ʔuɣ.riː.na/\n# third-person feminine plural past passive of أُغْرِيَ (ʔuḡriya)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuḡrīna", "ʔuḡriya"],
+      "kok_yazilis": "أغري",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغريان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُغْرَيَانِ • (tuḡrayāni) (form IV) /tuɣ.ra.jaː.ni/\n# inflection of أُغْرِيَ (ʔuḡriya):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḡrayāni", "ʔuḡriya"],
+      "kok_yazilis": "أغري",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغريان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُغْرَيَانِ • (yuḡrayāni) (form IV) /juɣ.ra.jaː.ni/\n# third-person masculine dual non-past passive indicative of أُغْرِيَ (ʔuḡriya)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḡrayāni", "ʔuḡriya"],
+      "kok_yazilis": "أغري",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغريتن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أُغْرِيتُنَّ • (ʔuḡrītunna) (form IV) /ʔuɣ.riː.tun.na/\n# second-person feminine plural past passive of أُغْرِيَ (ʔuḡriya)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuḡrītunna", "ʔuḡriya"],
+      "kok_yazilis": "أغري",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغرى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُغْرَى • (yuḡrā) (form IV) /juɣ.raː/\n# third-person masculine singular non-past passive indicative/subjunctive of أُغْرِيَ (ʔuḡriya)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḡrā", "ʔuḡriya"],
+      "kok_yazilis": "أغري",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغرى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُغْرَى • (tuḡrā) (form IV) /tuɣ.raː/\n# inflection of أُغْرِيَ (ʔuḡriya):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḡrā", "ʔuḡriya"],
+      "kok_yazilis": "أغري",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نغرى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نُغْرَى • (nuḡrā) (form IV) /nuɣ.raː/\n# first-person plural non-past passive indicative/subjunctive of أُغْرِيَ (ʔuḡriya)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuḡrā", "ʔuḡriya"],
+      "kok_yazilis": "أغري",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغريا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُغْرَيَا • (yuḡrayā) (form IV) /juɣ.ra.jaː/\n# third-person masculine dual non-past passive subjunctive/jussive of أُغْرِيَ (ʔuḡriya)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḡrayā", "ʔuḡriya"],
+      "kok_yazilis": "أغري",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغرين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُغْرَيْنَ • (yuḡrayna) (form IV) /juɣ.raj.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of أُغْرِيَ (ʔuḡriya)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḡrayna", "ʔuḡriya"],
+      "kok_yazilis": "أغري",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغريا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُغْرَيَا • (tuḡrayā) (form IV) /tuɣ.ra.jaː/\n# inflection of أُغْرِيَ (ʔuḡriya):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḡrayā", "ʔuḡriya"],
+      "kok_yazilis": "أغري",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ءغري", "r6"]
+  ],
+  "mana": {
     "ince": "lend.v.01",
     "orta": "verb.possession",
     "ust": "insan ve toplum",
@@ -396,16 +321,11 @@
     "dayanak_tanim": "bestow a quality on",
     "synset_sayisi": 11
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "beckon.v.01",
     "bring.v.01",
     "bring.v.04",
@@ -418,12 +338,10 @@
     "tempt.v.03",
     "undo.v.01"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

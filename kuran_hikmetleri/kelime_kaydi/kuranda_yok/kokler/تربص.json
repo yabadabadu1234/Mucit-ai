@@ -1,362 +1,255 @@
 {
   "kok": "تربص",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تربص", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تربصت",
-        "u": "تربصت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تربصت (form V)\n# تَرَبَّصْتُ (tarabbaṣtu) /ta.rab.basˤ.tu/: first-person singular past active of تَرَبَّصَ (tarabbaṣa)\n# تَرَبَّصْتَ (tarabbaṣta) /ta.rab.basˤ.ta/: second-person masculine singular past active of تَرَبَّصَ (tarabbaṣa)\n# تَرَبَّصْتِ (tarabbaṣti) /ta.rab.basˤ.ti/: second-person feminine singular past active of تَرَبَّصَ (tarabbaṣa)\n# تَرَبَّصَتْ (tarabbaṣat) /ta.rab.ba.sˤat/: third-p",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tarabbaṣtu", "tarabbaṣa", "tarabbaṣta"],
-        "k": "تربص",
-        "yol": "kök"
-      },
-      {
-        "w": "تربصتما",
-        "u": "تربصتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَرَبَّصْتُمَا • (tarabbaṣtumā) (form V) /ta.rab.basˤ.tu.maː/\n# second-person dual past active of تَرَبَّصَ (tarabbaṣa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tarabbaṣtumā", "tarabbaṣa"],
-        "k": "تربص",
-        "yol": "kök"
-      },
-      {
-        "w": "تربصتا",
-        "u": "تربصتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَرَبَّصَتَا • (tarabbaṣatā) (form V) /ta.rab.ba.sˤa.taː/\n# third-person feminine dual past active of تَرَبَّصَ (tarabbaṣa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tarabbaṣatā", "tarabbaṣa"],
-        "k": "تربص",
-        "yol": "kök"
-      },
-      {
-        "w": "تربصنا",
-        "u": "تربصنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَرَبَّصْنَا • (tarabbaṣnā) (form V) /ta.rab.basˤ.naː/\n# first-person plural past active of تَرَبَّصَ (tarabbaṣa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tarabbaṣnā", "tarabbaṣa"],
-        "k": "تربص",
-        "yol": "kök"
-      },
-      {
-        "w": "تربصتم",
-        "u": "تربصتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَرَبَّصْتُمْ • (tarabbaṣtum) (form V) /ta.rab.basˤ.tum/\n# second-person masculine plural past active of تَرَبَّصَ (tarabbaṣa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tarabbaṣtum", "tarabbaṣa"],
-        "k": "تربص",
-        "yol": "kök"
-      },
-      {
-        "w": "تربصا",
-        "u": "تربصا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَرَبَّصَا • (tarabbaṣā) (form V) /ta.rab.ba.sˤaː/\n# inflection of تَرَبَّصَ (tarabbaṣa):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tarabbaṣā", "tarabbaṣa"],
-        "k": "تربص",
-        "yol": "kök"
-      },
-      {
-        "w": "تربصتن",
-        "u": "تربصتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَرَبَّصْتُنَّ • (tarabbaṣtunna) (form V) /ta.rab.basˤ.tun.na/\n# second-person feminine plural past active of تَرَبَّصَ (tarabbaṣa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tarabbaṣtunna", "tarabbaṣa"],
-        "k": "تربص",
-        "yol": "kök"
-      },
-      {
-        "w": "تربصوا",
-        "u": "تربصوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَرَبَّصُوا • (tarabbaṣū) (form V) /ta.rab.ba.sˤuː/\n# inflection of تَرَبَّصَ (tarabbaṣa):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tarabbaṣū", "tarabbaṣa"],
-        "k": "تربص",
-        "yol": "kök"
-      },
-      {
-        "w": "أتربص",
-        "u": "أتربص",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتربص (form V)\n# أَتَرَبَّصُ (ʔatarabbaṣu) /ʔa.ta.rab.ba.sˤu/: first-person singular non-past active indicative of تَرَبَّصَ (tarabbaṣa)\n# أَتَرَبَّصَ (ʔatarabbaṣa) /ʔa.ta.rab.ba.sˤa/: first-person singular non-past active subjunctive of تَرَبَّصَ (tarabbaṣa)\n# أَتَرَبَّصْ (ʔatarabbaṣ) /ʔa.ta.rab.basˤ/: first-person singular non-past active jussive of تَرَبَّصَ (tarabbaṣa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔatarabbaṣu", "tarabbaṣa", "ʔatarabbaṣa"],
-        "k": "تربص",
-        "yol": "kök"
-      },
-      {
-        "w": "تتربص",
-        "u": "تتربص",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتربص (form V)\n# تَتَرَبَّصُ (tatarabbaṣu) /ta.ta.rab.ba.sˤu/: inflection of تَرَبَّصَ (tarabbaṣa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَرَبَّصَ (tatarabbaṣa) /ta.ta.rab.ba.sˤa/: inflection of تَرَبَّصَ (tarabbaṣa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine si",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatarabbaṣu", "tarabbaṣa", "tatarabbaṣa"],
-        "k": "تربص",
-        "yol": "kök"
-      },
-      {
-        "w": "تتربصين",
-        "u": "تتربصين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَرَبَّصِينَ • (tatarabbaṣīna) (form V) /ta.ta.rab.ba.sˤiː.na/\n# second-person feminine singular non-past active indicative of تَرَبَّصَ (tarabbaṣa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatarabbaṣīna", "tarabbaṣa"],
-        "k": "تربص",
-        "yol": "kök"
-      },
-      {
-        "w": "يتربص",
-        "u": "يتربص",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتربص (form V)\n# يَتَرَبَّصُ (yatarabbaṣu) /ja.ta.rab.ba.sˤu/: third-person masculine singular non-past active indicative of تَرَبَّصَ (tarabbaṣa)\n# يُتَرَبَّصُ (yutarabbaṣu) /ju.ta.rab.ba.sˤu/: third-person masculine singular non-past passive indicative of تَرَبَّصَ (tarabbaṣa)\n# يَتَرَبَّصَ (yatarabbaṣa) /ja.ta.rab.ba.sˤa/: third-person masculine singular non-past active subjunctive of تَرَبَّصَ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatarabbaṣu", "tarabbaṣa", "yutarabbaṣu"],
-        "k": "تربص",
-        "yol": "kök"
-      },
-      {
-        "w": "يتربصان",
-        "u": "يتربصان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَرَبَّصَانِ • (yatarabbaṣāni) (form V) /ja.ta.rab.ba.sˤaː.ni/\n# third-person masculine dual non-past active indicative of تَرَبَّصَ (tarabbaṣa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatarabbaṣāni", "tarabbaṣa"],
-        "k": "تربص",
-        "yol": "kök"
-      },
-      {
-        "w": "نتربص",
-        "u": "نتربص",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتربص (form V)\n# نَتَرَبَّصُ (natarabbaṣu) /na.ta.rab.ba.sˤu/: first-person plural non-past active indicative of تَرَبَّصَ (tarabbaṣa)\n# نَتَرَبَّصَ (natarabbaṣa) /na.ta.rab.ba.sˤa/: first-person plural non-past active subjunctive of تَرَبَّصَ (tarabbaṣa)\n# نَتَرَبَّصْ (natarabbaṣ) /na.ta.rab.basˤ/: first-person plural non-past active jussive of تَرَبَّصَ (tarabbaṣa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["natarabbaṣu", "tarabbaṣa", "natarabbaṣa"],
-        "k": "تربص",
-        "yol": "kök"
-      },
-      {
-        "w": "تتربصان",
-        "u": "تتربصان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَرَبَّصَانِ • (tatarabbaṣāni) (form V) /ta.ta.rab.ba.sˤaː.ni/\n# inflection of تَرَبَّصَ (tarabbaṣa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatarabbaṣāni", "tarabbaṣa"],
-        "k": "تربص",
-        "yol": "kök"
-      },
-      {
-        "w": "تتربصون",
-        "u": "تتربصون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَرَبَّصُونَ • (tatarabbaṣūna) (form V) /ta.ta.rab.ba.sˤuː.na/\n# second-person masculine plural non-past active indicative of تَرَبَّصَ (tarabbaṣa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatarabbaṣūna", "tarabbaṣa"],
-        "k": "تربص",
-        "yol": "kök"
-      },
-      {
-        "w": "تتربصن",
-        "u": "تتربصن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَرَبَّصْنَ • (tatarabbaṣna) (form V) /ta.ta.rab.basˤ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَرَبَّصَ (tarabbaṣa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatarabbaṣna", "tarabbaṣa"],
-        "k": "تربص",
-        "yol": "kök"
-      },
-      {
-        "w": "يتربصن",
-        "u": "يتربصن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَرَبَّصْنَ • (yatarabbaṣna) (form V) /ja.ta.rab.basˤ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَرَبَّصَ (tarabbaṣa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatarabbaṣna", "tarabbaṣa"],
-        "k": "تربص",
-        "yol": "kök"
-      },
-      {
-        "w": "يتربصون",
-        "u": "يتربصون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَرَبَّصُونَ • (yatarabbaṣūna) (form V) /ja.ta.rab.ba.sˤuː.na/\n# third-person masculine plural non-past active indicative of تَرَبَّصَ (tarabbaṣa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatarabbaṣūna", "tarabbaṣa"],
-        "k": "تربص",
-        "yol": "kök"
-      },
-      {
-        "w": "تتربصي",
-        "u": "تتربصي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَرَبَّصِي • (tatarabbaṣī) (form V) /ta.ta.rab.ba.sˤiː/\n# second-person feminine singular non-past active subjunctive/jussive of تَرَبَّصَ (tarabbaṣa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatarabbaṣī", "tarabbaṣa"],
-        "k": "تربص",
-        "yol": "kök"
-      },
-      {
-        "w": "تتربصوا",
-        "u": "تتربصوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَرَبَّصُوا • (tatarabbaṣū) (form V) /ta.ta.rab.ba.sˤuː/\n# second-person masculine plural non-past active subjunctive/jussive of تَرَبَّصَ (tarabbaṣa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatarabbaṣū", "tarabbaṣa"],
-        "k": "تربص",
-        "yol": "kök"
-      },
-      {
-        "w": "تتربصا",
-        "u": "تتربصا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَرَبَّصَا • (tatarabbaṣā) (form V) /ta.ta.rab.ba.sˤaː/\n# inflection of تَرَبَّصَ (tarabbaṣa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatarabbaṣā", "tarabbaṣa"],
-        "k": "تربص",
-        "yol": "kök"
-      },
-      {
-        "w": "تربصي",
-        "u": "تربصي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَرَبَّصِي • (tarabbaṣī) (form V) /ta.rab.ba.sˤiː/\n# second-person feminine singular imperative of تَرَبَّصَ (tarabbaṣa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tarabbaṣī", "tarabbaṣa"],
-        "k": "تربص",
-        "yol": "kök"
-      },
-      {
-        "w": "يتربصا",
-        "u": "يتربصا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَرَبَّصَا • (yatarabbaṣā) (form V) /ja.ta.rab.ba.sˤaː/\n# third-person masculine dual non-past active subjunctive/jussive of تَرَبَّصَ (tarabbaṣa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatarabbaṣā", "tarabbaṣa"],
-        "k": "تربص",
-        "yol": "kök"
-      },
-      {
-        "w": "تربصن",
-        "u": "تربصن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَرَبَّصْنَ • (tarabbaṣna) (form V) /ta.rab.basˤ.na/\n# inflection of تَرَبَّصَ (tarabbaṣa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tarabbaṣna", "tarabbaṣa"],
-        "k": "تربص",
-        "yol": "kök"
-      },
-      {
-        "w": "يتربصوا",
-        "u": "يتربصوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَرَبَّصُوا • (yatarabbaṣū) (form V) /ja.ta.rab.ba.sˤuː/\n# third-person masculine plural non-past active subjunctive/jussive of تَرَبَّصَ (tarabbaṣa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatarabbaṣū", "tarabbaṣa"],
-        "k": "تربص",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تر",
+  "ses": {
     "harf": "ت",
+    "fasil": "تر",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تربصت",
+      "tur": "verb",
+      "baslik": "تربصت (form V)\n# تَرَبَّصْتُ (tarabbaṣtu) /ta.rab.basˤ.tu/: first-person singular past active of تَرَبَّصَ (tarabbaṣa)\n# تَرَبَّصْتَ (tarabbaṣta) /ta.rab.basˤ.ta/: second-person masculine singular past active of تَرَبَّصَ (tarabbaṣa)\n# تَرَبَّصْتِ (tarabbaṣti) /ta.rab.basˤ.ti/: second-person feminine singular past active of تَرَبَّصَ (tarabbaṣa)\n# تَرَبَّصَتْ (tarabbaṣat) /ta.rab.ba.sˤat/: third-p",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tarabbaṣtu", "tarabbaṣa", "tarabbaṣta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تربصتما",
+      "tur": "verb",
+      "baslik": "تَرَبَّصْتُمَا • (tarabbaṣtumā) (form V) /ta.rab.basˤ.tu.maː/\n# second-person dual past active of تَرَبَّصَ (tarabbaṣa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tarabbaṣtumā", "tarabbaṣa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تربصتا",
+      "tur": "verb",
+      "baslik": "تَرَبَّصَتَا • (tarabbaṣatā) (form V) /ta.rab.ba.sˤa.taː/\n# third-person feminine dual past active of تَرَبَّصَ (tarabbaṣa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tarabbaṣatā", "tarabbaṣa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تربصنا",
+      "tur": "verb",
+      "baslik": "تَرَبَّصْنَا • (tarabbaṣnā) (form V) /ta.rab.basˤ.naː/\n# first-person plural past active of تَرَبَّصَ (tarabbaṣa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tarabbaṣnā", "tarabbaṣa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تربصتم",
+      "tur": "verb",
+      "baslik": "تَرَبَّصْتُمْ • (tarabbaṣtum) (form V) /ta.rab.basˤ.tum/\n# second-person masculine plural past active of تَرَبَّصَ (tarabbaṣa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tarabbaṣtum", "tarabbaṣa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تربصا",
+      "tur": "verb",
+      "baslik": "تَرَبَّصَا • (tarabbaṣā) (form V) /ta.rab.ba.sˤaː/\n# inflection of تَرَبَّصَ (tarabbaṣa):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tarabbaṣā", "tarabbaṣa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تربصتن",
+      "tur": "verb",
+      "baslik": "تَرَبَّصْتُنَّ • (tarabbaṣtunna) (form V) /ta.rab.basˤ.tun.na/\n# second-person feminine plural past active of تَرَبَّصَ (tarabbaṣa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tarabbaṣtunna", "tarabbaṣa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تربصوا",
+      "tur": "verb",
+      "baslik": "تَرَبَّصُوا • (tarabbaṣū) (form V) /ta.rab.ba.sˤuː/\n# inflection of تَرَبَّصَ (tarabbaṣa):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tarabbaṣū", "tarabbaṣa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتربص",
+      "tur": "verb",
+      "baslik": "أتربص (form V)\n# أَتَرَبَّصُ (ʔatarabbaṣu) /ʔa.ta.rab.ba.sˤu/: first-person singular non-past active indicative of تَرَبَّصَ (tarabbaṣa)\n# أَتَرَبَّصَ (ʔatarabbaṣa) /ʔa.ta.rab.ba.sˤa/: first-person singular non-past active subjunctive of تَرَبَّصَ (tarabbaṣa)\n# أَتَرَبَّصْ (ʔatarabbaṣ) /ʔa.ta.rab.basˤ/: first-person singular non-past active jussive of تَرَبَّصَ (tarabbaṣa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔatarabbaṣu", "tarabbaṣa", "ʔatarabbaṣa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتربص",
+      "tur": "verb",
+      "baslik": "تتربص (form V)\n# تَتَرَبَّصُ (tatarabbaṣu) /ta.ta.rab.ba.sˤu/: inflection of تَرَبَّصَ (tarabbaṣa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَرَبَّصَ (tatarabbaṣa) /ta.ta.rab.ba.sˤa/: inflection of تَرَبَّصَ (tarabbaṣa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine si",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatarabbaṣu", "tarabbaṣa", "tatarabbaṣa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتربصين",
+      "tur": "verb",
+      "baslik": "تَتَرَبَّصِينَ • (tatarabbaṣīna) (form V) /ta.ta.rab.ba.sˤiː.na/\n# second-person feminine singular non-past active indicative of تَرَبَّصَ (tarabbaṣa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatarabbaṣīna", "tarabbaṣa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتربص",
+      "tur": "verb",
+      "baslik": "يتربص (form V)\n# يَتَرَبَّصُ (yatarabbaṣu) /ja.ta.rab.ba.sˤu/: third-person masculine singular non-past active indicative of تَرَبَّصَ (tarabbaṣa)\n# يُتَرَبَّصُ (yutarabbaṣu) /ju.ta.rab.ba.sˤu/: third-person masculine singular non-past passive indicative of تَرَبَّصَ (tarabbaṣa)\n# يَتَرَبَّصَ (yatarabbaṣa) /ja.ta.rab.ba.sˤa/: third-person masculine singular non-past active subjunctive of تَرَبَّصَ",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatarabbaṣu", "tarabbaṣa", "yutarabbaṣu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتربصان",
+      "tur": "verb",
+      "baslik": "يَتَرَبَّصَانِ • (yatarabbaṣāni) (form V) /ja.ta.rab.ba.sˤaː.ni/\n# third-person masculine dual non-past active indicative of تَرَبَّصَ (tarabbaṣa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatarabbaṣāni", "tarabbaṣa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتربص",
+      "tur": "verb",
+      "baslik": "نتربص (form V)\n# نَتَرَبَّصُ (natarabbaṣu) /na.ta.rab.ba.sˤu/: first-person plural non-past active indicative of تَرَبَّصَ (tarabbaṣa)\n# نَتَرَبَّصَ (natarabbaṣa) /na.ta.rab.ba.sˤa/: first-person plural non-past active subjunctive of تَرَبَّصَ (tarabbaṣa)\n# نَتَرَبَّصْ (natarabbaṣ) /na.ta.rab.basˤ/: first-person plural non-past active jussive of تَرَبَّصَ (tarabbaṣa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["natarabbaṣu", "tarabbaṣa", "natarabbaṣa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتربصان",
+      "tur": "verb",
+      "baslik": "تَتَرَبَّصَانِ • (tatarabbaṣāni) (form V) /ta.ta.rab.ba.sˤaː.ni/\n# inflection of تَرَبَّصَ (tarabbaṣa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatarabbaṣāni", "tarabbaṣa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتربصون",
+      "tur": "verb",
+      "baslik": "تَتَرَبَّصُونَ • (tatarabbaṣūna) (form V) /ta.ta.rab.ba.sˤuː.na/\n# second-person masculine plural non-past active indicative of تَرَبَّصَ (tarabbaṣa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatarabbaṣūna", "tarabbaṣa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتربصن",
+      "tur": "verb",
+      "baslik": "تَتَرَبَّصْنَ • (tatarabbaṣna) (form V) /ta.ta.rab.basˤ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَرَبَّصَ (tarabbaṣa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatarabbaṣna", "tarabbaṣa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتربصن",
+      "tur": "verb",
+      "baslik": "يَتَرَبَّصْنَ • (yatarabbaṣna) (form V) /ja.ta.rab.basˤ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَرَبَّصَ (tarabbaṣa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatarabbaṣna", "tarabbaṣa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتربصون",
+      "tur": "verb",
+      "baslik": "يَتَرَبَّصُونَ • (yatarabbaṣūna) (form V) /ja.ta.rab.ba.sˤuː.na/\n# third-person masculine plural non-past active indicative of تَرَبَّصَ (tarabbaṣa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatarabbaṣūna", "tarabbaṣa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتربصي",
+      "tur": "verb",
+      "baslik": "تَتَرَبَّصِي • (tatarabbaṣī) (form V) /ta.ta.rab.ba.sˤiː/\n# second-person feminine singular non-past active subjunctive/jussive of تَرَبَّصَ (tarabbaṣa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatarabbaṣī", "tarabbaṣa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتربصوا",
+      "tur": "verb",
+      "baslik": "تَتَرَبَّصُوا • (tatarabbaṣū) (form V) /ta.ta.rab.ba.sˤuː/\n# second-person masculine plural non-past active subjunctive/jussive of تَرَبَّصَ (tarabbaṣa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatarabbaṣū", "tarabbaṣa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتربصا",
+      "tur": "verb",
+      "baslik": "تَتَرَبَّصَا • (tatarabbaṣā) (form V) /ta.ta.rab.ba.sˤaː/\n# inflection of تَرَبَّصَ (tarabbaṣa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatarabbaṣā", "tarabbaṣa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تربصي",
+      "tur": "verb",
+      "baslik": "تَرَبَّصِي • (tarabbaṣī) (form V) /ta.rab.ba.sˤiː/\n# second-person feminine singular imperative of تَرَبَّصَ (tarabbaṣa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tarabbaṣī", "tarabbaṣa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتربصا",
+      "tur": "verb",
+      "baslik": "يَتَرَبَّصَا • (yatarabbaṣā) (form V) /ja.ta.rab.ba.sˤaː/\n# third-person masculine dual non-past active subjunctive/jussive of تَرَبَّصَ (tarabbaṣa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatarabbaṣā", "tarabbaṣa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تربصن",
+      "tur": "verb",
+      "baslik": "تَرَبَّصْنَ • (tarabbaṣna) (form V) /ta.rab.basˤ.na/\n# inflection of تَرَبَّصَ (tarabbaṣa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tarabbaṣna", "tarabbaṣa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتربصوا",
+      "tur": "verb",
+      "baslik": "يَتَرَبَّصُوا • (yatarabbaṣū) (form V) /ja.ta.rab.ba.sˤuː/\n# third-person masculine plural non-past active subjunctive/jussive of تَرَبَّصَ (tarabbaṣa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatarabbaṣū", "tarabbaṣa"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تربص", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

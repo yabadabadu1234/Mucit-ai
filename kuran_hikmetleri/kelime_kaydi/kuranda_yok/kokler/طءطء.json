@@ -1,693 +1,538 @@
 {
   "kok": "طءطء",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "طءطء", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "طأطأ",
-        "u": "طأطأ",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "طَأْطَأَ • (ṭaʔṭaʔa) Iq (non-past يُطَأْطِئُ (yuṭaʔṭiʔu), verbal noun طَأْطَأَة (ṭaʔṭaʔa))",
-        "g": ["to bend, to bow", "to lower your head quickly to avoid being seen"],
-        "r": ["ṭaʔṭaʔa"],
-        "ipa": ["/tˤaʔ.tˤa.ʔa/"],
-        "k": "طءطء",
-        "yol": "kök"
-      },
-      {
-        "w": "طأطأنا",
-        "u": "طأطأنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَأْطَأْنَا • (ṭaʔṭaʔnā) (form Iq) /tˤaʔ.tˤaʔ.naː/\n# first-person plural past active of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭaʔṭaʔnā", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "طأطأت",
-        "u": "طأطأت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طأطأت (form Iq)\n# طَأْطَأْتُ (ṭaʔṭaʔtu) /tˤaʔ.tˤaʔ.tu/: first-person singular past active of طَأْطَأَ (ṭaʔṭaʔa)\n# طَأْطَأْتَ (ṭaʔṭaʔta) /tˤaʔ.tˤaʔ.ta/: second-person masculine singular past active of طَأْطَأَ (ṭaʔṭaʔa)\n# طَأْطَأْتِ (ṭaʔṭaʔti) /tˤaʔ.tˤaʔ.ti/: second-person feminine singular past active of طَأْطَأَ (ṭaʔṭaʔa)\n# طَأْطَأَتْ (ṭaʔṭaʔat) /tˤaʔ.tˤa.ʔat/: third-person feminine singular past",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭaʔṭaʔtu", "ṭaʔṭaʔa", "ṭaʔṭaʔta"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "طأطأتما",
-        "u": "طأطأتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَأْطَأْتُمَا • (ṭaʔṭaʔtumā) (form Iq) /tˤaʔ.tˤaʔ.tu.maː/\n# second-person dual past active of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭaʔṭaʔtumā", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "طأطآ",
-        "u": "طأطآ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَأْطَآ • (ṭaʔṭaʔā) (form Iq) /tˤaʔ.tˤa.ʔaː/\n# third-person masculine dual past active of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭaʔṭaʔā", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "طأطأتا",
-        "u": "طأطأتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَأْطَأَتَا • (ṭaʔṭaʔatā) (form Iq) /tˤaʔ.tˤa.ʔa.taː/\n# third-person feminine dual past active of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭaʔṭaʔatā", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "طأطأتم",
-        "u": "طأطأتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَأْطَأْتُمْ • (ṭaʔṭaʔtum) (form Iq) /tˤaʔ.tˤaʔ.tum/\n# second-person masculine plural past active of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭaʔṭaʔtum", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "طأطأتن",
-        "u": "طأطأتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَأْطَأْتُنَّ • (ṭaʔṭaʔtunna) (form Iq) /tˤaʔ.tˤaʔ.tun.na/\n# second-person feminine plural past active of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭaʔṭaʔtunna", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "طأطؤوا",
-        "u": "طأطؤوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَأْطَؤُوا • (ṭaʔṭaʔū) (form Iq) /tˤaʔ.tˤa.ʔuː/\n# third-person masculine plural past active of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭaʔṭaʔū", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "طؤطئت",
-        "u": "طؤطئت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طؤطئت (form Iq)\n# طُؤْطِئْتُ (ṭuʔṭiʔtu) /tˤuʔ.tˤiʔ.tu/: first-person singular past passive of طَأْطَأَ (ṭaʔṭaʔa)\n# طُؤْطِئْتَ (ṭuʔṭiʔta) /tˤuʔ.tˤiʔ.ta/: second-person masculine singular past passive of طَأْطَأَ (ṭaʔṭaʔa)\n# طُؤْطِئْتِ (ṭuʔṭiʔti) /tˤuʔ.tˤiʔ.ti/: second-person feminine singular past passive of طَأْطَأَ (ṭaʔṭaʔa)\n# طُؤْطِئَتْ (ṭuʔṭiʔat) /tˤuʔ.tˤi.ʔat/: third-person feminine singular p",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭuʔṭiʔtu", "ṭaʔṭaʔa", "ṭuʔṭiʔta"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "طؤطئتما",
-        "u": "طؤطئتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُؤْطِئْتُمَا • (ṭuʔṭiʔtumā) (form Iq) /tˤuʔ.tˤiʔ.tu.maː/\n# second-person dual past passive of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭuʔṭiʔtumā", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "طأطأن",
-        "u": "طأطأن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَأْطَأْنَ • (ṭaʔṭaʔna) (form Iq) /tˤaʔ.tˤaʔ.na/\n# third-person feminine plural past active of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭaʔṭaʔna", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "طؤطئ",
-        "u": "طؤطئ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُؤْطِئَ • (ṭuʔṭiʔa) (form Iq) /tˤuʔ.tˤi.ʔa/\n# third-person masculine singular past passive of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭuʔṭiʔa", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "طؤطئا",
-        "u": "طؤطئا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُؤْطِئَا • (ṭuʔṭiʔā) (form Iq) /tˤuʔ.tˤi.ʔaː/\n# third-person masculine dual past passive of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭuʔṭiʔā", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "طؤطئتا",
-        "u": "طؤطئتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُؤْطِئَتَا • (ṭuʔṭiʔatā) (form Iq) /tˤuʔ.tˤi.ʔa.taː/\n# third-person feminine dual past passive of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭuʔṭiʔatā", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "طؤطئنا",
-        "u": "طؤطئنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُؤْطِئْنَا • (ṭuʔṭiʔnā) (form Iq) /tˤuʔ.tˤiʔ.naː/\n# first-person plural past passive of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭuʔṭiʔnā", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "طؤطئتم",
-        "u": "طؤطئتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُؤْطِئْتُمْ • (ṭuʔṭiʔtum) (form Iq) /tˤuʔ.tˤiʔ.tum/\n# second-person masculine plural past passive of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭuʔṭiʔtum", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "طؤطئتن",
-        "u": "طؤطئتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُؤْطِئْتُنَّ • (ṭuʔṭiʔtunna) (form Iq) /tˤuʔ.tˤiʔ.tun.na/\n# second-person feminine plural past passive of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭuʔṭiʔtunna", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "طؤطئن",
-        "u": "طؤطئن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُؤْطِئْنَ • (ṭuʔṭiʔna) (form Iq) /tˤuʔ.tˤiʔ.na/\n# third-person feminine plural past passive of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭuʔṭiʔna", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "طؤطئوا",
-        "u": "طؤطئوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُؤْطِئُوا • (ṭuʔṭiʔū) (form Iq) /tˤuʔ.tˤi.ʔuː/\n# third-person masculine plural past passive of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭuʔṭiʔū", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "أطأطئ",
-        "u": "أطأطئ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أطأطئ (form Iq)\n# أُطَأْطِئُ (ʔuṭaʔṭiʔu) /ʔu.tˤaʔ.tˤi.ʔu/: first-person singular non-past active indicative of طَأْطَأَ (ṭaʔṭaʔa)\n# أُطَأْطِئَ (ʔuṭaʔṭiʔa) /ʔu.tˤaʔ.tˤi.ʔa/: first-person singular non-past active subjunctive of طَأْطَأَ (ṭaʔṭaʔa)\n# أُطَأْطِئْ (ʔuṭaʔṭiʔ) /ʔu.tˤaʔ.tˤiʔ/: first-person singular non-past active jussive of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʔuṭaʔṭiʔu", "ṭaʔṭaʔa", "ʔuṭaʔṭiʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تطأطئ",
-        "u": "تطأطئ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطأطئ (form Iq)\n# تُطَأْطِئُ (tuṭaʔṭiʔu) /tu.tˤaʔ.tˤi.ʔu/: inflection of طَأْطَأَ (ṭaʔṭaʔa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُطَأْطِئَ (tuṭaʔṭiʔa) /tu.tˤaʔ.tˤi.ʔa/: inflection of طَأْطَأَ (ṭaʔṭaʔa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuṭaʔṭiʔu", "ṭaʔṭaʔa", "tuṭaʔṭiʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يطأطئان",
-        "u": "يطأطئان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُطَأْطِئَانِ • (yuṭaʔṭiʔāni) (form Iq) /ju.tˤaʔ.tˤi.ʔaː.ni/\n# third-person masculine dual non-past active indicative of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuṭaʔṭiʔāni", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يطأطئ",
-        "u": "يطأطئ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطأطئ (form Iq)\n# يُطَأْطِئُ (yuṭaʔṭiʔu) /ju.tˤaʔ.tˤi.ʔu/: third-person masculine singular non-past active indicative of طَأْطَأَ (ṭaʔṭaʔa)\n# يُطَأْطِئَ (yuṭaʔṭiʔa) /ju.tˤaʔ.tˤi.ʔa/: third-person masculine singular non-past active subjunctive of طَأْطَأَ (ṭaʔṭaʔa)\n# يُطَأْطِئْ (yuṭaʔṭiʔ) /ju.tˤaʔ.tˤiʔ/: third-person masculine singular non-past active jussive of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuṭaʔṭiʔu", "ṭaʔṭaʔa", "yuṭaʔṭiʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تطأطئين",
-        "u": "تطأطئين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطأطئين (form Iq)\n# تُطَأْطِئِينَ (tuṭaʔṭiʔīna) /tu.tˤaʔ.tˤi.ʔiː.na/: second-person feminine singular non-past active indicative of طَأْطَأَ (ṭaʔṭaʔa)\n# تُطَأْطَئِينَ (tuṭaʔṭaʔīna) /tu.tˤaʔ.tˤa.ʔiː.na/: second-person feminine singular non-past passive indicative of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuṭaʔṭiʔīna", "ṭaʔṭaʔa", "tuṭaʔṭaʔīna"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تطأطئان",
-        "u": "تطأطئان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُطَأْطِئَانِ • (tuṭaʔṭiʔāni) (form Iq) /tu.tˤaʔ.tˤi.ʔaː.ni/\n# inflection of طَأْطَأَ (ṭaʔṭaʔa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuṭaʔṭiʔāni", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "نطأطئ",
-        "u": "نطأطئ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نطأطئ (form Iq)\n# نُطَأْطِئُ (nuṭaʔṭiʔu) /nu.tˤaʔ.tˤi.ʔu/: first-person plural non-past active indicative of طَأْطَأَ (ṭaʔṭaʔa)\n# نُطَأْطِئَ (nuṭaʔṭiʔa) /nu.tˤaʔ.tˤi.ʔa/: first-person plural non-past active subjunctive of طَأْطَأَ (ṭaʔṭaʔa)\n# نُطَأْطِئْ (nuṭaʔṭiʔ) /nu.tˤaʔ.tˤiʔ/: first-person plural non-past active jussive of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["nuṭaʔṭiʔu", "ṭaʔṭaʔa", "nuṭaʔṭiʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تطأطئون",
-        "u": "تطأطئون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُطَأْطِئُونَ • (tuṭaʔṭiʔūna) (form Iq) /tu.tˤaʔ.tˤi.ʔuː.na/\n# second-person masculine plural non-past active indicative of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuṭaʔṭiʔūna", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يطأطئون",
-        "u": "يطأطئون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُطَأْطِئُونَ • (yuṭaʔṭiʔūna) (form Iq) /ju.tˤaʔ.tˤi.ʔuː.na/\n# third-person masculine plural non-past active indicative of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuṭaʔṭiʔūna", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تطأطئن",
-        "u": "تطأطئن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُطَأْطِئْنَ • (tuṭaʔṭiʔna) (form Iq) /tu.tˤaʔ.tˤiʔ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuṭaʔṭiʔna", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يطأطئن",
-        "u": "يطأطئن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُطَأْطِئْنَ • (yuṭaʔṭiʔna) (form Iq) /ju.tˤaʔ.tˤiʔ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuṭaʔṭiʔna", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "أطأطأ",
-        "u": "أطأطأ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أطأطأ (form Iq)\n# أُطَأْطَأُ (ʔuṭaʔṭaʔu) /ʔu.tˤaʔ.tˤa.ʔu/: first-person singular non-past passive indicative of طَأْطَأَ (ṭaʔṭaʔa)\n# أُطَأْطَأَ (ʔuṭaʔṭaʔa) /ʔu.tˤaʔ.tˤa.ʔa/: first-person singular non-past passive subjunctive of طَأْطَأَ (ṭaʔṭaʔa)\n# أُطَأْطَأْ (ʔuṭaʔṭaʔ) /ʔu.tˤaʔ.tˤaʔ/: first-person singular non-past passive jussive of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʔuṭaʔṭaʔu", "ṭaʔṭaʔa", "ʔuṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يطأطآن",
-        "u": "يطأطآن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُطَأْطَآنِ • (yuṭaʔṭaʔāni) (form Iq) /ju.tˤaʔ.tˤa.ʔaː.ni/\n# third-person masculine dual non-past passive indicative of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuṭaʔṭaʔāni", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تطأطأ",
-        "u": "تطأطأ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطأطأ (form Iq)\n# تُطَأْطَأُ (tuṭaʔṭaʔu) /tu.tˤaʔ.tˤa.ʔu/: inflection of طَأْطَأَ (ṭaʔṭaʔa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُطَأْطَأَ (tuṭaʔṭaʔa) /tu.tˤaʔ.tˤa.ʔa/: inflection of طَأْطَأَ (ṭaʔṭaʔa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-p",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuṭaʔṭaʔu", "ṭaʔṭaʔa", "tuṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تطأطؤون",
-        "u": "تطأطؤون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُطَأْطَؤُونَ • (tuṭaʔṭaʔūna) (form Iq) /tu.tˤaʔ.tˤa.ʔuː.na/\n# second-person masculine plural non-past passive indicative of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuṭaʔṭaʔūna", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "نطأطأ",
-        "u": "نطأطأ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نطأطأ (form Iq)\n# نُطَأْطَأُ (nuṭaʔṭaʔu) /nu.tˤaʔ.tˤa.ʔu/: first-person plural non-past passive indicative of طَأْطَأَ (ṭaʔṭaʔa)\n# نُطَأْطَأَ (nuṭaʔṭaʔa) /nu.tˤaʔ.tˤa.ʔa/: first-person plural non-past passive subjunctive of طَأْطَأَ (ṭaʔṭaʔa)\n# نُطَأْطَأْ (nuṭaʔṭaʔ) /nu.tˤaʔ.tˤaʔ/: first-person plural non-past passive jussive of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["nuṭaʔṭaʔu", "ṭaʔṭaʔa", "nuṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تطأطأن",
-        "u": "تطأطأن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُطَأْطَأْنَ • (tuṭaʔṭaʔna) (form Iq) /tu.tˤaʔ.tˤaʔ.na/\n# second-person feminine plural non-past passive indicative/subjunctive/jussive of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuṭaʔṭaʔna", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تطأطآن",
-        "u": "تطأطآن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُطَأْطَآنِ • (tuṭaʔṭaʔāni) (form Iq) /tu.tˤaʔ.tˤa.ʔaː.ni/\n# inflection of طَأْطَأَ (ṭaʔṭaʔa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuṭaʔṭaʔāni", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يطأطأ",
-        "u": "يطأطأ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطأطأ (form Iq)\n# يُطَأْطَأُ (yuṭaʔṭaʔu) /ju.tˤaʔ.tˤa.ʔu/: third-person masculine singular non-past passive indicative of طَأْطَأَ (ṭaʔṭaʔa)\n# يُطَأْطَأَ (yuṭaʔṭaʔa) /ju.tˤaʔ.tˤa.ʔa/: third-person masculine singular non-past passive subjunctive of طَأْطَأَ (ṭaʔṭaʔa)\n# يُطَأْطَأْ (yuṭaʔṭaʔ) /ju.tˤaʔ.tˤaʔ/: third-person masculine singular non-past passive jussive of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuṭaʔṭaʔu", "ṭaʔṭaʔa", "yuṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يطأطؤون",
-        "u": "يطأطؤون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُطَأْطَؤُونَ • (yuṭaʔṭaʔūna) (form Iq) /ju.tˤaʔ.tˤa.ʔuː.na/\n# third-person masculine plural non-past passive indicative of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuṭaʔṭaʔūna", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يطأطأن",
-        "u": "يطأطأن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُطَأْطَأْنَ • (yuṭaʔṭaʔna) (form Iq) /ju.tˤaʔ.tˤaʔ.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuṭaʔṭaʔna", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تطأطئي",
-        "u": "تطأطئي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطأطئي (form Iq)\n# تُطَأْطِئِي (tuṭaʔṭiʔī) /tu.tˤaʔ.tˤi.ʔiː/: second-person feminine singular non-past active subjunctive/jussive of طَأْطَأَ (ṭaʔṭaʔa)\n# تُطَأْطَئِي (tuṭaʔṭaʔī) /tu.tˤaʔ.tˤa.ʔiː/: second-person feminine singular non-past passive subjunctive/jussive of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuṭaʔṭiʔī", "ṭaʔṭaʔa", "tuṭaʔṭaʔī"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تطأطئا",
-        "u": "تطأطئا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُطَأْطِئَا • (tuṭaʔṭiʔā) (form Iq) /tu.tˤaʔ.tˤi.ʔaː/\n# inflection of طَأْطَأَ (ṭaʔṭaʔa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuṭaʔṭiʔā", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يطأطئا",
-        "u": "يطأطئا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُطَأْطِئَا • (yuṭaʔṭiʔā) (form Iq) /ju.tˤaʔ.tˤi.ʔaː/\n# third-person masculine dual non-past active subjunctive/jussive of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuṭaʔṭiʔā", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تطأطئوا",
-        "u": "تطأطئوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُطَأْطِئُوا • (tuṭaʔṭiʔū) (form Iq) /tu.tˤaʔ.tˤi.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuṭaʔṭiʔū", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يطأطئوا",
-        "u": "يطأطئوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُطَأْطِئُوا • (yuṭaʔṭiʔū) (form Iq) /ju.tˤaʔ.tˤi.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuṭaʔṭiʔū", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تطأطآ",
-        "u": "تطأطآ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُطَأْطَآ • (tuṭaʔṭaʔā) (form Iq) /tu.tˤaʔ.tˤa.ʔaː/\n# inflection of طَأْطَأَ (ṭaʔṭaʔa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuṭaʔṭaʔā", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تطأطؤوا",
-        "u": "تطأطؤوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُطَأْطَؤُوا • (tuṭaʔṭaʔū) (form Iq) /tu.tˤaʔ.tˤa.ʔuː/\n# second-person masculine plural non-past passive subjunctive/jussive of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuṭaʔṭaʔū", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يطأطؤوا",
-        "u": "يطأطؤوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُطَأْطَؤُوا • (yuṭaʔṭaʔū) (form Iq) /ju.tˤaʔ.tˤa.ʔuː/\n# third-person masculine plural non-past passive subjunctive/jussive of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuṭaʔṭaʔū", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "طأطئي",
-        "u": "طأطئي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَأْطِئِي • (ṭaʔṭiʔī) (form Iq) /tˤaʔ.tˤi.ʔiː/\n# second-person feminine singular imperative of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭaʔṭiʔī", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "طأطئ",
-        "u": "طأطئ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَأْطِئْ • (ṭaʔṭiʔ) (form Iq) /tˤaʔ.tˤiʔ/\n# second-person masculine singular imperative of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭaʔṭiʔ", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يطأطآ",
-        "u": "يطأطآ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُطَأْطَآ • (yuṭaʔṭaʔā) (form Iq) /ju.tˤaʔ.tˤa.ʔaː/\n# third-person masculine dual non-past passive subjunctive/jussive of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuṭaʔṭaʔā", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "طأطئا",
-        "u": "طأطئا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَأْطِئَا • (ṭaʔṭiʔā) (form Iq) /tˤaʔ.tˤi.ʔaː/\n# second-person dual imperative of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭaʔṭiʔā", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "طأطئوا",
-        "u": "طأطئوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَأْطِئُوا • (ṭaʔṭiʔū) (form Iq) /tˤaʔ.tˤi.ʔuː/\n# second-person masculine plural imperative of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭaʔṭiʔū", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      },
-      {
-        "w": "طأطئن",
-        "u": "طأطئن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَأْطِئْنَ • (ṭaʔṭiʔna) (form Iq) /tˤaʔ.tˤiʔ.na/\n# second-person feminine plural imperative of طَأْطَأَ (ṭaʔṭaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭaʔṭiʔna", "ṭaʔṭaʔa"],
-        "k": "طأطأ",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "طط",
+  "ses": {
     "harf": "ط",
+    "fasil": "طط",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "hakikat": "طأطأ رأسه: صوّبه. وطأطأت يدي بعنان الفرس إذا خفضت يدك ولم ترفعها للكبح وأرخيت العنان ليحضر، وطأطأت الفرس: تركت كبحه لأنك إذا كبحته رفعت رأسه ألا ترى إلى قوله:\nشندف أشدف ما ورعته ... وإذا طؤطيء طيّارٌ طمِرّْ\nأي هو مائل في أحد الشقين ما كبحته بغياً ونشاطاً فإذا خفضت عنانه طار.",
+    "mecaz": "طأطأت المرأة سترها: حطته. قال:\nأرادت لتنتاش الرواق فلم تقم ... إليه ولكن طأطأته الولائد\nوطأطأ الحفرة: عمقها، وحفرة مطأطأة، قال أبو ذؤيب يصف حفرته:\nمطأطأة لم ينبطوها وإنها ... لترضى بها فرّاطهم أم واحد\nويقال: حجبه الطأطاء فلم أره وهو الغيب من الأرض المتطامن. ويقال للمسرف: قد طأطأ الركض في ماله. وفي مثل \" تطأطأ لها تخطّك \" وطأطأ فلان من خصمه، وتطاول عليّ فطأطأت منه.",
+    "mecaz_var": true
+  },
+  "vikisozluk": [
+    {
+      "madde": "طأطأ",
+      "tur": "verb",
+      "baslik": "طَأْطَأَ • (ṭaʔṭaʔa) Iq (non-past يُطَأْطِئُ (yuṭaʔṭiʔu), verbal noun طَأْطَأَة (ṭaʔṭaʔa))",
+      "anlam": ["to bend, to bow", "to lower your head quickly to avoid being seen"],
+      "okunus": ["ṭaʔṭaʔa"],
+      "ipa": ["/tˤaʔ.tˤa.ʔa/"]
+    },
+    {
+      "madde": "طأطأنا",
+      "tur": "verb",
+      "baslik": "طَأْطَأْنَا • (ṭaʔṭaʔnā) (form Iq) /tˤaʔ.tˤaʔ.naː/\n# first-person plural past active of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭaʔṭaʔnā", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "طأطأت",
+      "tur": "verb",
+      "baslik": "طأطأت (form Iq)\n# طَأْطَأْتُ (ṭaʔṭaʔtu) /tˤaʔ.tˤaʔ.tu/: first-person singular past active of طَأْطَأَ (ṭaʔṭaʔa)\n# طَأْطَأْتَ (ṭaʔṭaʔta) /tˤaʔ.tˤaʔ.ta/: second-person masculine singular past active of طَأْطَأَ (ṭaʔṭaʔa)\n# طَأْطَأْتِ (ṭaʔṭaʔti) /tˤaʔ.tˤaʔ.ti/: second-person feminine singular past active of طَأْطَأَ (ṭaʔṭaʔa)\n# طَأْطَأَتْ (ṭaʔṭaʔat) /tˤaʔ.tˤa.ʔat/: third-person feminine singular past",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭaʔṭaʔtu", "ṭaʔṭaʔa", "ṭaʔṭaʔta"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "طأطأتما",
+      "tur": "verb",
+      "baslik": "طَأْطَأْتُمَا • (ṭaʔṭaʔtumā) (form Iq) /tˤaʔ.tˤaʔ.tu.maː/\n# second-person dual past active of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭaʔṭaʔtumā", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "طأطآ",
+      "tur": "verb",
+      "baslik": "طَأْطَآ • (ṭaʔṭaʔā) (form Iq) /tˤaʔ.tˤa.ʔaː/\n# third-person masculine dual past active of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭaʔṭaʔā", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "طأطأتا",
+      "tur": "verb",
+      "baslik": "طَأْطَأَتَا • (ṭaʔṭaʔatā) (form Iq) /tˤaʔ.tˤa.ʔa.taː/\n# third-person feminine dual past active of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭaʔṭaʔatā", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "طأطأتم",
+      "tur": "verb",
+      "baslik": "طَأْطَأْتُمْ • (ṭaʔṭaʔtum) (form Iq) /tˤaʔ.tˤaʔ.tum/\n# second-person masculine plural past active of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭaʔṭaʔtum", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "طأطأتن",
+      "tur": "verb",
+      "baslik": "طَأْطَأْتُنَّ • (ṭaʔṭaʔtunna) (form Iq) /tˤaʔ.tˤaʔ.tun.na/\n# second-person feminine plural past active of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭaʔṭaʔtunna", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "طأطؤوا",
+      "tur": "verb",
+      "baslik": "طَأْطَؤُوا • (ṭaʔṭaʔū) (form Iq) /tˤaʔ.tˤa.ʔuː/\n# third-person masculine plural past active of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭaʔṭaʔū", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "طؤطئت",
+      "tur": "verb",
+      "baslik": "طؤطئت (form Iq)\n# طُؤْطِئْتُ (ṭuʔṭiʔtu) /tˤuʔ.tˤiʔ.tu/: first-person singular past passive of طَأْطَأَ (ṭaʔṭaʔa)\n# طُؤْطِئْتَ (ṭuʔṭiʔta) /tˤuʔ.tˤiʔ.ta/: second-person masculine singular past passive of طَأْطَأَ (ṭaʔṭaʔa)\n# طُؤْطِئْتِ (ṭuʔṭiʔti) /tˤuʔ.tˤiʔ.ti/: second-person feminine singular past passive of طَأْطَأَ (ṭaʔṭaʔa)\n# طُؤْطِئَتْ (ṭuʔṭiʔat) /tˤuʔ.tˤi.ʔat/: third-person feminine singular p",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭuʔṭiʔtu", "ṭaʔṭaʔa", "ṭuʔṭiʔta"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "طؤطئتما",
+      "tur": "verb",
+      "baslik": "طُؤْطِئْتُمَا • (ṭuʔṭiʔtumā) (form Iq) /tˤuʔ.tˤiʔ.tu.maː/\n# second-person dual past passive of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭuʔṭiʔtumā", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "طأطأن",
+      "tur": "verb",
+      "baslik": "طَأْطَأْنَ • (ṭaʔṭaʔna) (form Iq) /tˤaʔ.tˤaʔ.na/\n# third-person feminine plural past active of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭaʔṭaʔna", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "طؤطئ",
+      "tur": "verb",
+      "baslik": "طُؤْطِئَ • (ṭuʔṭiʔa) (form Iq) /tˤuʔ.tˤi.ʔa/\n# third-person masculine singular past passive of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭuʔṭiʔa", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "طؤطئا",
+      "tur": "verb",
+      "baslik": "طُؤْطِئَا • (ṭuʔṭiʔā) (form Iq) /tˤuʔ.tˤi.ʔaː/\n# third-person masculine dual past passive of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭuʔṭiʔā", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "طؤطئتا",
+      "tur": "verb",
+      "baslik": "طُؤْطِئَتَا • (ṭuʔṭiʔatā) (form Iq) /tˤuʔ.tˤi.ʔa.taː/\n# third-person feminine dual past passive of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭuʔṭiʔatā", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "طؤطئنا",
+      "tur": "verb",
+      "baslik": "طُؤْطِئْنَا • (ṭuʔṭiʔnā) (form Iq) /tˤuʔ.tˤiʔ.naː/\n# first-person plural past passive of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭuʔṭiʔnā", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "طؤطئتم",
+      "tur": "verb",
+      "baslik": "طُؤْطِئْتُمْ • (ṭuʔṭiʔtum) (form Iq) /tˤuʔ.tˤiʔ.tum/\n# second-person masculine plural past passive of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭuʔṭiʔtum", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "طؤطئتن",
+      "tur": "verb",
+      "baslik": "طُؤْطِئْتُنَّ • (ṭuʔṭiʔtunna) (form Iq) /tˤuʔ.tˤiʔ.tun.na/\n# second-person feminine plural past passive of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭuʔṭiʔtunna", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "طؤطئن",
+      "tur": "verb",
+      "baslik": "طُؤْطِئْنَ • (ṭuʔṭiʔna) (form Iq) /tˤuʔ.tˤiʔ.na/\n# third-person feminine plural past passive of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭuʔṭiʔna", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "طؤطئوا",
+      "tur": "verb",
+      "baslik": "طُؤْطِئُوا • (ṭuʔṭiʔū) (form Iq) /tˤuʔ.tˤi.ʔuː/\n# third-person masculine plural past passive of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭuʔṭiʔū", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أطأطئ",
+      "tur": "verb",
+      "baslik": "أطأطئ (form Iq)\n# أُطَأْطِئُ (ʔuṭaʔṭiʔu) /ʔu.tˤaʔ.tˤi.ʔu/: first-person singular non-past active indicative of طَأْطَأَ (ṭaʔṭaʔa)\n# أُطَأْطِئَ (ʔuṭaʔṭiʔa) /ʔu.tˤaʔ.tˤi.ʔa/: first-person singular non-past active subjunctive of طَأْطَأَ (ṭaʔṭaʔa)\n# أُطَأْطِئْ (ʔuṭaʔṭiʔ) /ʔu.tˤaʔ.tˤiʔ/: first-person singular non-past active jussive of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʔuṭaʔṭiʔu", "ṭaʔṭaʔa", "ʔuṭaʔṭiʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطأطئ",
+      "tur": "verb",
+      "baslik": "تطأطئ (form Iq)\n# تُطَأْطِئُ (tuṭaʔṭiʔu) /tu.tˤaʔ.tˤi.ʔu/: inflection of طَأْطَأَ (ṭaʔṭaʔa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُطَأْطِئَ (tuṭaʔṭiʔa) /tu.tˤaʔ.tˤi.ʔa/: inflection of طَأْطَأَ (ṭaʔṭaʔa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuṭaʔṭiʔu", "ṭaʔṭaʔa", "tuṭaʔṭiʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطأطئان",
+      "tur": "verb",
+      "baslik": "يُطَأْطِئَانِ • (yuṭaʔṭiʔāni) (form Iq) /ju.tˤaʔ.tˤi.ʔaː.ni/\n# third-person masculine dual non-past active indicative of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuṭaʔṭiʔāni", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطأطئ",
+      "tur": "verb",
+      "baslik": "يطأطئ (form Iq)\n# يُطَأْطِئُ (yuṭaʔṭiʔu) /ju.tˤaʔ.tˤi.ʔu/: third-person masculine singular non-past active indicative of طَأْطَأَ (ṭaʔṭaʔa)\n# يُطَأْطِئَ (yuṭaʔṭiʔa) /ju.tˤaʔ.tˤi.ʔa/: third-person masculine singular non-past active subjunctive of طَأْطَأَ (ṭaʔṭaʔa)\n# يُطَأْطِئْ (yuṭaʔṭiʔ) /ju.tˤaʔ.tˤiʔ/: third-person masculine singular non-past active jussive of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuṭaʔṭiʔu", "ṭaʔṭaʔa", "yuṭaʔṭiʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطأطئين",
+      "tur": "verb",
+      "baslik": "تطأطئين (form Iq)\n# تُطَأْطِئِينَ (tuṭaʔṭiʔīna) /tu.tˤaʔ.tˤi.ʔiː.na/: second-person feminine singular non-past active indicative of طَأْطَأَ (ṭaʔṭaʔa)\n# تُطَأْطَئِينَ (tuṭaʔṭaʔīna) /tu.tˤaʔ.tˤa.ʔiː.na/: second-person feminine singular non-past passive indicative of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuṭaʔṭiʔīna", "ṭaʔṭaʔa", "tuṭaʔṭaʔīna"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطأطئان",
+      "tur": "verb",
+      "baslik": "تُطَأْطِئَانِ • (tuṭaʔṭiʔāni) (form Iq) /tu.tˤaʔ.tˤi.ʔaː.ni/\n# inflection of طَأْطَأَ (ṭaʔṭaʔa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuṭaʔṭiʔāni", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نطأطئ",
+      "tur": "verb",
+      "baslik": "نطأطئ (form Iq)\n# نُطَأْطِئُ (nuṭaʔṭiʔu) /nu.tˤaʔ.tˤi.ʔu/: first-person plural non-past active indicative of طَأْطَأَ (ṭaʔṭaʔa)\n# نُطَأْطِئَ (nuṭaʔṭiʔa) /nu.tˤaʔ.tˤi.ʔa/: first-person plural non-past active subjunctive of طَأْطَأَ (ṭaʔṭaʔa)\n# نُطَأْطِئْ (nuṭaʔṭiʔ) /nu.tˤaʔ.tˤiʔ/: first-person plural non-past active jussive of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["nuṭaʔṭiʔu", "ṭaʔṭaʔa", "nuṭaʔṭiʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطأطئون",
+      "tur": "verb",
+      "baslik": "تُطَأْطِئُونَ • (tuṭaʔṭiʔūna) (form Iq) /tu.tˤaʔ.tˤi.ʔuː.na/\n# second-person masculine plural non-past active indicative of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuṭaʔṭiʔūna", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطأطئون",
+      "tur": "verb",
+      "baslik": "يُطَأْطِئُونَ • (yuṭaʔṭiʔūna) (form Iq) /ju.tˤaʔ.tˤi.ʔuː.na/\n# third-person masculine plural non-past active indicative of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuṭaʔṭiʔūna", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطأطئن",
+      "tur": "verb",
+      "baslik": "تُطَأْطِئْنَ • (tuṭaʔṭiʔna) (form Iq) /tu.tˤaʔ.tˤiʔ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuṭaʔṭiʔna", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطأطئن",
+      "tur": "verb",
+      "baslik": "يُطَأْطِئْنَ • (yuṭaʔṭiʔna) (form Iq) /ju.tˤaʔ.tˤiʔ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuṭaʔṭiʔna", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أطأطأ",
+      "tur": "verb",
+      "baslik": "أطأطأ (form Iq)\n# أُطَأْطَأُ (ʔuṭaʔṭaʔu) /ʔu.tˤaʔ.tˤa.ʔu/: first-person singular non-past passive indicative of طَأْطَأَ (ṭaʔṭaʔa)\n# أُطَأْطَأَ (ʔuṭaʔṭaʔa) /ʔu.tˤaʔ.tˤa.ʔa/: first-person singular non-past passive subjunctive of طَأْطَأَ (ṭaʔṭaʔa)\n# أُطَأْطَأْ (ʔuṭaʔṭaʔ) /ʔu.tˤaʔ.tˤaʔ/: first-person singular non-past passive jussive of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʔuṭaʔṭaʔu", "ṭaʔṭaʔa", "ʔuṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطأطآن",
+      "tur": "verb",
+      "baslik": "يُطَأْطَآنِ • (yuṭaʔṭaʔāni) (form Iq) /ju.tˤaʔ.tˤa.ʔaː.ni/\n# third-person masculine dual non-past passive indicative of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuṭaʔṭaʔāni", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطأطأ",
+      "tur": "verb",
+      "baslik": "تطأطأ (form Iq)\n# تُطَأْطَأُ (tuṭaʔṭaʔu) /tu.tˤaʔ.tˤa.ʔu/: inflection of طَأْطَأَ (ṭaʔṭaʔa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُطَأْطَأَ (tuṭaʔṭaʔa) /tu.tˤaʔ.tˤa.ʔa/: inflection of طَأْطَأَ (ṭaʔṭaʔa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-p",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuṭaʔṭaʔu", "ṭaʔṭaʔa", "tuṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطأطؤون",
+      "tur": "verb",
+      "baslik": "تُطَأْطَؤُونَ • (tuṭaʔṭaʔūna) (form Iq) /tu.tˤaʔ.tˤa.ʔuː.na/\n# second-person masculine plural non-past passive indicative of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuṭaʔṭaʔūna", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نطأطأ",
+      "tur": "verb",
+      "baslik": "نطأطأ (form Iq)\n# نُطَأْطَأُ (nuṭaʔṭaʔu) /nu.tˤaʔ.tˤa.ʔu/: first-person plural non-past passive indicative of طَأْطَأَ (ṭaʔṭaʔa)\n# نُطَأْطَأَ (nuṭaʔṭaʔa) /nu.tˤaʔ.tˤa.ʔa/: first-person plural non-past passive subjunctive of طَأْطَأَ (ṭaʔṭaʔa)\n# نُطَأْطَأْ (nuṭaʔṭaʔ) /nu.tˤaʔ.tˤaʔ/: first-person plural non-past passive jussive of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["nuṭaʔṭaʔu", "ṭaʔṭaʔa", "nuṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطأطأن",
+      "tur": "verb",
+      "baslik": "تُطَأْطَأْنَ • (tuṭaʔṭaʔna) (form Iq) /tu.tˤaʔ.tˤaʔ.na/\n# second-person feminine plural non-past passive indicative/subjunctive/jussive of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuṭaʔṭaʔna", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطأطآن",
+      "tur": "verb",
+      "baslik": "تُطَأْطَآنِ • (tuṭaʔṭaʔāni) (form Iq) /tu.tˤaʔ.tˤa.ʔaː.ni/\n# inflection of طَأْطَأَ (ṭaʔṭaʔa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuṭaʔṭaʔāni", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطأطأ",
+      "tur": "verb",
+      "baslik": "يطأطأ (form Iq)\n# يُطَأْطَأُ (yuṭaʔṭaʔu) /ju.tˤaʔ.tˤa.ʔu/: third-person masculine singular non-past passive indicative of طَأْطَأَ (ṭaʔṭaʔa)\n# يُطَأْطَأَ (yuṭaʔṭaʔa) /ju.tˤaʔ.tˤa.ʔa/: third-person masculine singular non-past passive subjunctive of طَأْطَأَ (ṭaʔṭaʔa)\n# يُطَأْطَأْ (yuṭaʔṭaʔ) /ju.tˤaʔ.tˤaʔ/: third-person masculine singular non-past passive jussive of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuṭaʔṭaʔu", "ṭaʔṭaʔa", "yuṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطأطؤون",
+      "tur": "verb",
+      "baslik": "يُطَأْطَؤُونَ • (yuṭaʔṭaʔūna) (form Iq) /ju.tˤaʔ.tˤa.ʔuː.na/\n# third-person masculine plural non-past passive indicative of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuṭaʔṭaʔūna", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطأطأن",
+      "tur": "verb",
+      "baslik": "يُطَأْطَأْنَ • (yuṭaʔṭaʔna) (form Iq) /ju.tˤaʔ.tˤaʔ.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuṭaʔṭaʔna", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطأطئي",
+      "tur": "verb",
+      "baslik": "تطأطئي (form Iq)\n# تُطَأْطِئِي (tuṭaʔṭiʔī) /tu.tˤaʔ.tˤi.ʔiː/: second-person feminine singular non-past active subjunctive/jussive of طَأْطَأَ (ṭaʔṭaʔa)\n# تُطَأْطَئِي (tuṭaʔṭaʔī) /tu.tˤaʔ.tˤa.ʔiː/: second-person feminine singular non-past passive subjunctive/jussive of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuṭaʔṭiʔī", "ṭaʔṭaʔa", "tuṭaʔṭaʔī"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطأطئا",
+      "tur": "verb",
+      "baslik": "تُطَأْطِئَا • (tuṭaʔṭiʔā) (form Iq) /tu.tˤaʔ.tˤi.ʔaː/\n# inflection of طَأْطَأَ (ṭaʔṭaʔa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuṭaʔṭiʔā", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطأطئا",
+      "tur": "verb",
+      "baslik": "يُطَأْطِئَا • (yuṭaʔṭiʔā) (form Iq) /ju.tˤaʔ.tˤi.ʔaː/\n# third-person masculine dual non-past active subjunctive/jussive of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuṭaʔṭiʔā", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطأطئوا",
+      "tur": "verb",
+      "baslik": "تُطَأْطِئُوا • (tuṭaʔṭiʔū) (form Iq) /tu.tˤaʔ.tˤi.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuṭaʔṭiʔū", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطأطئوا",
+      "tur": "verb",
+      "baslik": "يُطَأْطِئُوا • (yuṭaʔṭiʔū) (form Iq) /ju.tˤaʔ.tˤi.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuṭaʔṭiʔū", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطأطآ",
+      "tur": "verb",
+      "baslik": "تُطَأْطَآ • (tuṭaʔṭaʔā) (form Iq) /tu.tˤaʔ.tˤa.ʔaː/\n# inflection of طَأْطَأَ (ṭaʔṭaʔa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuṭaʔṭaʔā", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطأطؤوا",
+      "tur": "verb",
+      "baslik": "تُطَأْطَؤُوا • (tuṭaʔṭaʔū) (form Iq) /tu.tˤaʔ.tˤa.ʔuː/\n# second-person masculine plural non-past passive subjunctive/jussive of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuṭaʔṭaʔū", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطأطؤوا",
+      "tur": "verb",
+      "baslik": "يُطَأْطَؤُوا • (yuṭaʔṭaʔū) (form Iq) /ju.tˤaʔ.tˤa.ʔuː/\n# third-person masculine plural non-past passive subjunctive/jussive of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuṭaʔṭaʔū", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "طأطئي",
+      "tur": "verb",
+      "baslik": "طَأْطِئِي • (ṭaʔṭiʔī) (form Iq) /tˤaʔ.tˤi.ʔiː/\n# second-person feminine singular imperative of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭaʔṭiʔī", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "طأطئ",
+      "tur": "verb",
+      "baslik": "طَأْطِئْ • (ṭaʔṭiʔ) (form Iq) /tˤaʔ.tˤiʔ/\n# second-person masculine singular imperative of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭaʔṭiʔ", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطأطآ",
+      "tur": "verb",
+      "baslik": "يُطَأْطَآ • (yuṭaʔṭaʔā) (form Iq) /ju.tˤaʔ.tˤa.ʔaː/\n# third-person masculine dual non-past passive subjunctive/jussive of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuṭaʔṭaʔā", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "طأطئا",
+      "tur": "verb",
+      "baslik": "طَأْطِئَا • (ṭaʔṭiʔā) (form Iq) /tˤaʔ.tˤi.ʔaː/\n# second-person dual imperative of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭaʔṭiʔā", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "طأطئوا",
+      "tur": "verb",
+      "baslik": "طَأْطِئُوا • (ṭaʔṭiʔū) (form Iq) /tˤaʔ.tˤi.ʔuː/\n# second-person masculine plural imperative of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭaʔṭiʔū", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    },
+    {
+      "madde": "طأطئن",
+      "tur": "verb",
+      "baslik": "طَأْطِئْنَ • (ṭaʔṭiʔna) (form Iq) /tˤaʔ.tˤiʔ.na/\n# second-person feminine plural imperative of طَأْطَأَ (ṭaʔṭaʔa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭaʔṭiʔna", "ṭaʔṭaʔa"],
+      "kok_yazilis": "طأطأ",
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "طءطء", "r6"]
+  ],
+  "mana": {
     "ince": "duck.v.01",
     "orta": "verb.motion",
     "ust": "fiil ve hadise",
@@ -695,24 +540,32 @@
     "dayanak_tanim": "to move (the head or body) quickly downwards or away",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "ust": {
+      "kume": 8,
+      "merkez_kok": "سير",
+      "merkez_mana": "Seyr: gitmek, yürümek; sîre: hayat hikâyesi",
+      "boy": 262
+    },
+    "orta": {
+      "kume": 34,
+      "merkez_kok": "دبب",
+      "merkez_mana": "debbe: sürünmek, hareket / debbe: uğraşmak (?)",
+      "boy": 120
+    },
+    "ince": {
+      "kume": 214,
+      "merkez_kok": "جلعب",
+      "merkez_mana": "to lie down on one's side and stretch oneself out",
+      "boy": 10
+    }
   },
-  "hakikat_mecaz_tasnif": {
-    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
-    "hakikat": "طأطأ رأسه: صوّبه. وطأطأت يدي بعنان الفرس إذا خفضت يدك ولم ترفعها للكبح وأرخيت العنان ليحضر، وطأطأت الفرس: تركت كبحه لأنك إذا كبحته رفعت رأسه ألا ترى إلى قوله:\nشندف أشدف ما ورعته ... وإذا طؤطيء طيّارٌ طمِرّْ\nأي هو مائل في أحد الشقين ما كبحته بغياً ونشاطاً فإذا خفضت عنانه طار.",
-    "mecaz": "طأطأت المرأة سترها: حطته. قال:\nأرادت لتنتاش الرواق فلم تقم ... إليه ولكن طأطأته الولائد\nوطأطأ الحفرة: عمقها، وحفرة مطأطأة، قال أبو ذؤيب يصف حفرته:\nمطأطأة لم ينبطوها وإنها ... لترضى بها فرّاطهم أم واحد\nويقال: حجبه الطأطاء فلم أره وهو الغيب من الأرض المتطامن. ويقال للمسرف: قد طأطأ الركض في ماله. وفي مثل \" تطأطأ لها تخطّك \" وطأطأ فلان من خصمه، وتطاول عليّ فطأطأت منه.",
-    "kinaye": "",
-    "mecaz_var": true
+  "wordnet": ["duck.v.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
-    "prototipler": [
-      {
-        "kaynak": "Zemahşerî hakîkat kolu",
-        "metin": "طأطأ رأسه: صوّبه. وطأطأت يدي بعنان الفرس إذا خفضت يدك ولم ترفعها للكبح وأرخيت العنان ليحضر، وطأطأت الفرس: تركت كبحه لأنك إذا كبحته رفعت رأسه ألا ترى إلى قوله:\nشندف أشدف ما ورعته ... وإذا طؤطيء طيّارٌ طمِرّْ\nأي هو مائل في أحد الشقين ما كبحته بغياً ونشاطاً فإذا خفضت عنانه طار."
-      }
-    ],
+  "prototip": {
     "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
@@ -746,33 +599,6 @@
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.325,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
-  },
-  "kolekzifikasyon_kavramlari": ["duck.v.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
-    "ust": {
-      "kume": 8,
-      "merkez_kok": "سير",
-      "merkez_mana": "Seyr: gitmek, yürümek; sîre: hayat hikâyesi",
-      "boy": 262
-    },
-    "orta": {
-      "kume": 34,
-      "merkez_kok": "دبب",
-      "merkez_mana": "debbe: sürünmek, hareket / debbe: uğraşmak (?)",
-      "boy": 120
-    },
-    "ince": {
-      "kume": 214,
-      "merkez_kok": "جلعب",
-      "merkez_mana": "to lie down on one's side and stretch oneself out",
-      "boy": 10
-    }
-  },
-  "kaliplar": {},
-  "kelimeler": []
+    "ortalama_benzerlik": 0.325
+  }
 }

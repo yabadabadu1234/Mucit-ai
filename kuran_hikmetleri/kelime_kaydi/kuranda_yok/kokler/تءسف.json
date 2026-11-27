@@ -1,379 +1,295 @@
 {
   "kok": "تءسف",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تءسف", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تؤسف",
-        "u": "تؤسف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُؤُسِّفَ • (tuʔussifa) (form V) /tu.ʔus.si.fa/\n# third-person masculine singular past passive of تَأَسَّفَ (taʔassafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tuʔussifa", "taʔassafa"],
-        "k": "تأسف",
-        "yol": "kök"
-      },
-      {
-        "w": "تأسفن",
-        "u": "تأسفن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَأَسَّفْنَ • (taʔassafna) (form V) /ta.ʔas.saf.na/\n# inflection of تَأَسَّفَ (taʔassafa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔassafna", "taʔassafa"],
-        "k": "تأسف",
-        "yol": "kök"
-      },
-      {
-        "w": "تأسفي",
-        "u": "تأسفي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَأَسَّفِي • (taʔassafī) (form V) /ta.ʔas.sa.fiː/\n# second-person feminine singular imperative of تَأَسَّفَ (taʔassafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔassafī", "taʔassafa"],
-        "k": "تأسف",
-        "yol": "kök"
-      },
-      {
-        "w": "تأسفا",
-        "u": "تأسفا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَأَسَّفَا • (taʔassafā) (form V) /ta.ʔas.sa.faː/\n# inflection of تَأَسَّفَ (taʔassafa):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔassafā", "taʔassafa"],
-        "k": "تأسف",
-        "yol": "kök"
-      },
-      {
-        "w": "تأسفوا",
-        "u": "تأسفوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَأَسَّفُوا • (taʔassafū) (form V) /ta.ʔas.sa.fuː/\n# inflection of تَأَسَّفَ (taʔassafa):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔassafū", "taʔassafa"],
-        "k": "تأسف",
-        "yol": "kök"
-      },
-      {
-        "w": "تأسفتا",
-        "u": "تأسفتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَسَّفَتَا • (taʔassafatā) (form V) /ta.ʔas.sa.fa.taː/\n# third-person feminine dual past active of تَأَسَّفَ (taʔassafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔassafatā", "taʔassafa"],
-        "k": "تأسف",
-        "yol": "kök"
-      },
-      {
-        "w": "تأسفتما",
-        "u": "تأسفتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَسَّفْتُمَا • (taʔassaftumā) (form V) /ta.ʔas.saf.tu.maː/\n# second-person dual past active of تَأَسَّفَ (taʔassafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔassaftumā", "taʔassafa"],
-        "k": "تأسف",
-        "yol": "kök"
-      },
-      {
-        "w": "تأسفتم",
-        "u": "تأسفتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَسَّفْتُمْ • (taʔassaftum) (form V) /ta.ʔas.saf.tum/\n# second-person masculine plural past active of تَأَسَّفَ (taʔassafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔassaftum", "taʔassafa"],
-        "k": "تأسف",
-        "yol": "kök"
-      },
-      {
-        "w": "تأسفنا",
-        "u": "تأسفنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَسَّفْنَا • (taʔassafnā) (form V) /ta.ʔas.saf.naː/\n# first-person plural past active of تَأَسَّفَ (taʔassafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔassafnā", "taʔassafa"],
-        "k": "تأسف",
-        "yol": "kök"
-      },
-      {
-        "w": "تأسفتن",
-        "u": "تأسفتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَسَّفْتُنَّ • (taʔassaftunna) (form V) /ta.ʔas.saf.tun.na/\n# second-person feminine plural past active of تَأَسَّفَ (taʔassafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔassaftunna", "taʔassafa"],
-        "k": "تأسف",
-        "yol": "kök"
-      },
-      {
-        "w": "يتأسف",
-        "u": "يتأسف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتأسف (form V)\n# يَتَأَسَّفُ (yataʔassafu) /ja.ta.ʔas.sa.fu/: third-person masculine singular non-past active indicative of تَأَسَّفَ (taʔassafa)\n# يُتَأَسَّفُ (yutaʔassafu) /ju.ta.ʔas.sa.fu/: third-person masculine singular non-past passive indicative of تَأَسَّفَ (taʔassafa)\n# يَتَأَسَّفَ (yataʔassafa) /ja.ta.ʔas.sa.fa/: third-person masculine singular non-past active subjunctive of تَأَسَّفَ (t",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔassafu", "taʔassafa", "yutaʔassafu"],
-        "k": "تأسف",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأسف",
-        "u": "تتأسف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتأسف (form V)\n# تَتَأَسَّفُ (tataʔassafu) /ta.ta.ʔas.sa.fu/: inflection of تَأَسَّفَ (taʔassafa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَأَسَّفَ (tataʔassafa) /ta.ta.ʔas.sa.fa/: inflection of تَأَسَّفَ (taʔassafa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔassafu", "taʔassafa", "tataʔassafa"],
-        "k": "تأسف",
-        "yol": "kök"
-      },
-      {
-        "w": "يتأسفان",
-        "u": "يتأسفان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَأَسَّفَانِ • (yataʔassafāni) (form V) /ja.ta.ʔas.sa.faː.ni/\n# third-person masculine dual non-past active indicative of تَأَسَّفَ (taʔassafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔassafāni", "taʔassafa"],
-        "k": "تأسف",
-        "yol": "kök"
-      },
-      {
-        "w": "أتأسف",
-        "u": "أتأسف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتأسف (form V)\n# أَتَأَسَّفُ (ʔataʔassafu) /ʔa.ta.ʔas.sa.fu/: first-person singular non-past active indicative of تَأَسَّفَ (taʔassafa)\n# أَتَأَسَّفَ (ʔataʔassafa) /ʔa.ta.ʔas.sa.fa/: first-person singular non-past active subjunctive of تَأَسَّفَ (taʔassafa)\n# أَتَأَسَّفْ (ʔataʔassaf) /ʔa.ta.ʔas.saf/: first-person singular non-past active jussive of تَأَسَّفَ (taʔassafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔataʔassafu", "taʔassafa", "ʔataʔassafa"],
-        "k": "تأسف",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأسفين",
-        "u": "تتأسفين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَسَّفِينَ • (tataʔassafīna) (form V) /ta.ta.ʔas.sa.fiː.na/\n# second-person feminine singular non-past active indicative of تَأَسَّفَ (taʔassafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔassafīna", "taʔassafa"],
-        "k": "تأسف",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأسفان",
-        "u": "تتأسفان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَسَّفَانِ • (tataʔassafāni) (form V) /ta.ta.ʔas.sa.faː.ni/\n# inflection of تَأَسَّفَ (taʔassafa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔassafāni", "taʔassafa"],
-        "k": "تأسف",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأسفون",
-        "u": "تتأسفون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَسَّفُونَ • (tataʔassafūna) (form V) /ta.ta.ʔas.sa.fuː.na/\n# second-person masculine plural non-past active indicative of تَأَسَّفَ (taʔassafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔassafūna", "taʔassafa"],
-        "k": "تأسف",
-        "yol": "kök"
-      },
-      {
-        "w": "نتأسف",
-        "u": "نتأسف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتأسف (form V)\n# نَتَأَسَّفُ (nataʔassafu) /na.ta.ʔas.sa.fu/: first-person plural non-past active indicative of تَأَسَّفَ (taʔassafa)\n# نَتَأَسَّفَ (nataʔassafa) /na.ta.ʔas.sa.fa/: first-person plural non-past active subjunctive of تَأَسَّفَ (taʔassafa)\n# نَتَأَسَّفْ (nataʔassaf) /na.ta.ʔas.saf/: first-person plural non-past active jussive of تَأَسَّفَ (taʔassafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["nataʔassafu", "taʔassafa", "nataʔassafa"],
-        "k": "تأسف",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأسفن",
-        "u": "تتأسفن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَسَّفْنَ • (tataʔassafna) (form V) /ta.ta.ʔas.saf.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَأَسَّفَ (taʔassafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔassafna", "taʔassafa"],
-        "k": "تأسف",
-        "yol": "kök"
-      },
-      {
-        "w": "يتأسفون",
-        "u": "يتأسفون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَأَسَّفُونَ • (yataʔassafūna) (form V) /ja.ta.ʔas.sa.fuː.na/\n# third-person masculine plural non-past active indicative of تَأَسَّفَ (taʔassafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔassafūna", "taʔassafa"],
-        "k": "تأسف",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأسفي",
-        "u": "تتأسفي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَسَّفِي • (tataʔassafī) (form V) /ta.ta.ʔas.sa.fiː/\n# second-person feminine singular non-past active subjunctive/jussive of تَأَسَّفَ (taʔassafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔassafī", "taʔassafa"],
-        "k": "تأسف",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأسفا",
-        "u": "تتأسفا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَسَّفَا • (tataʔassafā) (form V) /ta.ta.ʔas.sa.faː/\n# inflection of تَأَسَّفَ (taʔassafa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔassafā", "taʔassafa"],
-        "k": "تأسف",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأسفوا",
-        "u": "تتأسفوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَسَّفُوا • (tataʔassafū) (form V) /ta.ta.ʔas.sa.fuː/\n# second-person masculine plural non-past active subjunctive/jussive of تَأَسَّفَ (taʔassafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔassafū", "taʔassafa"],
-        "k": "تأسف",
-        "yol": "kök"
-      },
-      {
-        "w": "يتأسفوا",
-        "u": "يتأسفوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَأَسَّفُوا • (yataʔassafū) (form V) /ja.ta.ʔas.sa.fuː/\n# third-person masculine plural non-past active subjunctive/jussive of تَأَسَّفَ (taʔassafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔassafū", "taʔassafa"],
-        "k": "تأسف",
-        "yol": "kök"
-      },
-      {
-        "w": "يتأسفن",
-        "u": "يتأسفن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَأَسَّفْنَ • (yataʔassafna) (form V) /ja.ta.ʔas.saf.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَأَسَّفَ (taʔassafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔassafna", "taʔassafa"],
-        "k": "تأسف",
-        "yol": "kök"
-      },
-      {
-        "w": "يتأسفا",
-        "u": "يتأسفا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَأَسَّفَا • (yataʔassafā) (form V) /ja.ta.ʔas.sa.faː/\n# third-person masculine dual non-past active subjunctive/jussive of تَأَسَّفَ (taʔassafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔassafā", "taʔassafa"],
-        "k": "تأسف",
-        "yol": "kök"
-      },
-      {
-        "w": "تأسفت",
-        "u": "تأسفت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تأسفت (form V)\n# تَأَسَّفْتُ (taʔassaftu) /ta.ʔas.saf.tu/: first-person singular past active of تَأَسَّفَ (taʔassafa)\n# تَأَسَّفْتَ (taʔassafta) /ta.ʔas.saf.ta/: second-person masculine singular past active of تَأَسَّفَ (taʔassafa)\n# تَأَسَّفْتِ (taʔassafti) /ta.ʔas.saf.ti/: second-person feminine singular past active of تَأَسَّفَ (taʔassafa)\n# تَأَسَّفَتْ (taʔassafat) /ta.ʔas.sa.fat/: third-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔassaftu", "taʔassafa", "taʔassafta"],
-        "k": "تأسف",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تس",
+  "ses": {
     "harf": "ت",
+    "fasil": "تس",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تؤسف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُؤُسِّفَ • (tuʔussifa) (form V) /tu.ʔus.si.fa/\n# third-person masculine singular past passive of تَأَسَّفَ (taʔassafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tuʔussifa", "taʔassafa"],
+      "kok_yazilis": "تأسف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأسفن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَأَسَّفْنَ • (taʔassafna) (form V) /ta.ʔas.saf.na/\n# inflection of تَأَسَّفَ (taʔassafa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔassafna", "taʔassafa"],
+      "kok_yazilis": "تأسف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأسفي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَأَسَّفِي • (taʔassafī) (form V) /ta.ʔas.sa.fiː/\n# second-person feminine singular imperative of تَأَسَّفَ (taʔassafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔassafī", "taʔassafa"],
+      "kok_yazilis": "تأسف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأسفا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَأَسَّفَا • (taʔassafā) (form V) /ta.ʔas.sa.faː/\n# inflection of تَأَسَّفَ (taʔassafa):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔassafā", "taʔassafa"],
+      "kok_yazilis": "تأسف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأسفوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَأَسَّفُوا • (taʔassafū) (form V) /ta.ʔas.sa.fuː/\n# inflection of تَأَسَّفَ (taʔassafa):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔassafū", "taʔassafa"],
+      "kok_yazilis": "تأسف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأسفتا",
+      "tur": "verb",
+      "baslik": "تَأَسَّفَتَا • (taʔassafatā) (form V) /ta.ʔas.sa.fa.taː/\n# third-person feminine dual past active of تَأَسَّفَ (taʔassafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔassafatā", "taʔassafa"],
+      "kok_yazilis": "تأسف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأسفتما",
+      "tur": "verb",
+      "baslik": "تَأَسَّفْتُمَا • (taʔassaftumā) (form V) /ta.ʔas.saf.tu.maː/\n# second-person dual past active of تَأَسَّفَ (taʔassafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔassaftumā", "taʔassafa"],
+      "kok_yazilis": "تأسف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأسفتم",
+      "tur": "verb",
+      "baslik": "تَأَسَّفْتُمْ • (taʔassaftum) (form V) /ta.ʔas.saf.tum/\n# second-person masculine plural past active of تَأَسَّفَ (taʔassafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔassaftum", "taʔassafa"],
+      "kok_yazilis": "تأسف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأسفنا",
+      "tur": "verb",
+      "baslik": "تَأَسَّفْنَا • (taʔassafnā) (form V) /ta.ʔas.saf.naː/\n# first-person plural past active of تَأَسَّفَ (taʔassafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔassafnā", "taʔassafa"],
+      "kok_yazilis": "تأسف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأسفتن",
+      "tur": "verb",
+      "baslik": "تَأَسَّفْتُنَّ • (taʔassaftunna) (form V) /ta.ʔas.saf.tun.na/\n# second-person feminine plural past active of تَأَسَّفَ (taʔassafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔassaftunna", "taʔassafa"],
+      "kok_yazilis": "تأسف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتأسف",
+      "tur": "verb",
+      "baslik": "يتأسف (form V)\n# يَتَأَسَّفُ (yataʔassafu) /ja.ta.ʔas.sa.fu/: third-person masculine singular non-past active indicative of تَأَسَّفَ (taʔassafa)\n# يُتَأَسَّفُ (yutaʔassafu) /ju.ta.ʔas.sa.fu/: third-person masculine singular non-past passive indicative of تَأَسَّفَ (taʔassafa)\n# يَتَأَسَّفَ (yataʔassafa) /ja.ta.ʔas.sa.fa/: third-person masculine singular non-past active subjunctive of تَأَسَّفَ (t",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔassafu", "taʔassafa", "yutaʔassafu"],
+      "kok_yazilis": "تأسف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأسف",
+      "tur": "verb",
+      "baslik": "تتأسف (form V)\n# تَتَأَسَّفُ (tataʔassafu) /ta.ta.ʔas.sa.fu/: inflection of تَأَسَّفَ (taʔassafa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَأَسَّفَ (tataʔassafa) /ta.ta.ʔas.sa.fa/: inflection of تَأَسَّفَ (taʔassafa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔassafu", "taʔassafa", "tataʔassafa"],
+      "kok_yazilis": "تأسف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتأسفان",
+      "tur": "verb",
+      "baslik": "يَتَأَسَّفَانِ • (yataʔassafāni) (form V) /ja.ta.ʔas.sa.faː.ni/\n# third-person masculine dual non-past active indicative of تَأَسَّفَ (taʔassafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔassafāni", "taʔassafa"],
+      "kok_yazilis": "تأسف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتأسف",
+      "tur": "verb",
+      "baslik": "أتأسف (form V)\n# أَتَأَسَّفُ (ʔataʔassafu) /ʔa.ta.ʔas.sa.fu/: first-person singular non-past active indicative of تَأَسَّفَ (taʔassafa)\n# أَتَأَسَّفَ (ʔataʔassafa) /ʔa.ta.ʔas.sa.fa/: first-person singular non-past active subjunctive of تَأَسَّفَ (taʔassafa)\n# أَتَأَسَّفْ (ʔataʔassaf) /ʔa.ta.ʔas.saf/: first-person singular non-past active jussive of تَأَسَّفَ (taʔassafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔataʔassafu", "taʔassafa", "ʔataʔassafa"],
+      "kok_yazilis": "تأسف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأسفين",
+      "tur": "verb",
+      "baslik": "تَتَأَسَّفِينَ • (tataʔassafīna) (form V) /ta.ta.ʔas.sa.fiː.na/\n# second-person feminine singular non-past active indicative of تَأَسَّفَ (taʔassafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔassafīna", "taʔassafa"],
+      "kok_yazilis": "تأسف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأسفان",
+      "tur": "verb",
+      "baslik": "تَتَأَسَّفَانِ • (tataʔassafāni) (form V) /ta.ta.ʔas.sa.faː.ni/\n# inflection of تَأَسَّفَ (taʔassafa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔassafāni", "taʔassafa"],
+      "kok_yazilis": "تأسف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأسفون",
+      "tur": "verb",
+      "baslik": "تَتَأَسَّفُونَ • (tataʔassafūna) (form V) /ta.ta.ʔas.sa.fuː.na/\n# second-person masculine plural non-past active indicative of تَأَسَّفَ (taʔassafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔassafūna", "taʔassafa"],
+      "kok_yazilis": "تأسف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتأسف",
+      "tur": "verb",
+      "baslik": "نتأسف (form V)\n# نَتَأَسَّفُ (nataʔassafu) /na.ta.ʔas.sa.fu/: first-person plural non-past active indicative of تَأَسَّفَ (taʔassafa)\n# نَتَأَسَّفَ (nataʔassafa) /na.ta.ʔas.sa.fa/: first-person plural non-past active subjunctive of تَأَسَّفَ (taʔassafa)\n# نَتَأَسَّفْ (nataʔassaf) /na.ta.ʔas.saf/: first-person plural non-past active jussive of تَأَسَّفَ (taʔassafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["nataʔassafu", "taʔassafa", "nataʔassafa"],
+      "kok_yazilis": "تأسف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأسفن",
+      "tur": "verb",
+      "baslik": "تَتَأَسَّفْنَ • (tataʔassafna) (form V) /ta.ta.ʔas.saf.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَأَسَّفَ (taʔassafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔassafna", "taʔassafa"],
+      "kok_yazilis": "تأسف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتأسفون",
+      "tur": "verb",
+      "baslik": "يَتَأَسَّفُونَ • (yataʔassafūna) (form V) /ja.ta.ʔas.sa.fuː.na/\n# third-person masculine plural non-past active indicative of تَأَسَّفَ (taʔassafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔassafūna", "taʔassafa"],
+      "kok_yazilis": "تأسف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأسفي",
+      "tur": "verb",
+      "baslik": "تَتَأَسَّفِي • (tataʔassafī) (form V) /ta.ta.ʔas.sa.fiː/\n# second-person feminine singular non-past active subjunctive/jussive of تَأَسَّفَ (taʔassafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔassafī", "taʔassafa"],
+      "kok_yazilis": "تأسف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأسفا",
+      "tur": "verb",
+      "baslik": "تَتَأَسَّفَا • (tataʔassafā) (form V) /ta.ta.ʔas.sa.faː/\n# inflection of تَأَسَّفَ (taʔassafa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔassafā", "taʔassafa"],
+      "kok_yazilis": "تأسف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأسفوا",
+      "tur": "verb",
+      "baslik": "تَتَأَسَّفُوا • (tataʔassafū) (form V) /ta.ta.ʔas.sa.fuː/\n# second-person masculine plural non-past active subjunctive/jussive of تَأَسَّفَ (taʔassafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔassafū", "taʔassafa"],
+      "kok_yazilis": "تأسف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتأسفوا",
+      "tur": "verb",
+      "baslik": "يَتَأَسَّفُوا • (yataʔassafū) (form V) /ja.ta.ʔas.sa.fuː/\n# third-person masculine plural non-past active subjunctive/jussive of تَأَسَّفَ (taʔassafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔassafū", "taʔassafa"],
+      "kok_yazilis": "تأسف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتأسفن",
+      "tur": "verb",
+      "baslik": "يَتَأَسَّفْنَ • (yataʔassafna) (form V) /ja.ta.ʔas.saf.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَأَسَّفَ (taʔassafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔassafna", "taʔassafa"],
+      "kok_yazilis": "تأسف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتأسفا",
+      "tur": "verb",
+      "baslik": "يَتَأَسَّفَا • (yataʔassafā) (form V) /ja.ta.ʔas.sa.faː/\n# third-person masculine dual non-past active subjunctive/jussive of تَأَسَّفَ (taʔassafa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔassafā", "taʔassafa"],
+      "kok_yazilis": "تأسف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأسفت",
+      "tur": "verb",
+      "baslik": "تأسفت (form V)\n# تَأَسَّفْتُ (taʔassaftu) /ta.ʔas.saf.tu/: first-person singular past active of تَأَسَّفَ (taʔassafa)\n# تَأَسَّفْتَ (taʔassafta) /ta.ʔas.saf.ta/: second-person masculine singular past active of تَأَسَّفَ (taʔassafa)\n# تَأَسَّفْتِ (taʔassafti) /ta.ʔas.saf.ti/: second-person feminine singular past active of تَأَسَّفَ (taʔassafa)\n# تَأَسَّفَتْ (taʔassafat) /ta.ʔas.sa.fat/: third-perso",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔassaftu", "taʔassafa", "taʔassafta"],
+      "kok_yazilis": "تأسف",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تءسف", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

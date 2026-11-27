@@ -1,633 +1,450 @@
 {
   "kok": "زان",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "زان", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "زن",
-        "u": "زن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "زن (form I)\n# زِنَّ (zinna) /zin.na/: inflection of زَانَ (zāna):\n## third-person feminine plural past active/passive\n## second-person feminine plural imperative\n# زِنْ (zin) /zin/: second-person masculine singular imperative of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zinna", "zāna", "zin"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "زنا",
-        "u": "زنا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "زِنَّا • (zinnā) (form I) /zin.naː/\n# first-person plural past active/passive of زَانَ (zāna)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zinnā", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "زين",
-        "u": "زين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "زِينَ • (zīna) (form I) /ziː.na/\n# third-person masculine singular past passive of زَانَ (zāna)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zīna", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "تزين",
-        "u": "تزين",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تزين (form I)\n# تَزِينُ (tazīnu) /ta.ziː.nu/: inflection of زَانَ (zāna):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَزِينَ (tazīna) /ta.ziː.na/: inflection of زَانَ (zāna):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazīnu", "zāna", "tazīna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "يزين",
-        "u": "يزين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يزين (form I)\n# يَزِينُ (yazīnu) /ja.ziː.nu/: third-person masculine singular non-past active indicative of زَانَ (zāna)\n# يَزِينَ (yazīna) /ja.ziː.na/: third-person masculine singular non-past active subjunctive of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazīnu", "zāna", "yazīna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "يزن",
-        "u": "يزن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يزن (form I)\n# يَزِنَّ (yazinna) /ja.zin.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of زَانَ (zāna)\n# يُزَنَّ (yuzanna) /ju.zan.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of زَانَ (zāna)\n# يَزِنْ (yazin) /ja.zin/: third-person masculine singular non-past active jussive of زَانَ (zāna)\n# يُزَنْ (yuzan) /ju.zan/: third-pers",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazinna", "zāna", "yuzanna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "زنت",
-        "u": "زنت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "زنت (form I)\n# زِنْتُ (zintu) /zin.tu/: first-person singular past active/passive of زَانَ (zāna)\n# زِنْتَ (zinta) /zin.ta/: second-person masculine singular past active/passive of زَانَ (zāna)\n# زِنْتِ (zinti) /zin.ti/: second-person feminine singular past active/passive of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zintu", "zāna", "zinta"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "تزن",
-        "u": "تزن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تزن (form I)\n# تَزِنَّ (tazinna) /ta.zin.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of زَانَ (zāna)\n# تُزَنَّ (tuzanna) /tu.zan.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of زَانَ (zāna)\n# تَزِنْ (tazin) /ta.zin/: inflection of زَانَ (zāna):\n## second-person masculine singular non-past active jussive\n## third-person fem",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazinna", "zāna", "tuzanna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "زينت",
-        "u": "زينت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "زِينَتْ • (zīnat) (form I) /ziː.nat/\n# third-person feminine singular past passive of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zīnat", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "تزيني",
-        "u": "تزيني",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تَزِينِي • (tazīnī) (form I) /ta.ziː.niː/\n# second-person feminine singular non-past active subjunctive/jussive of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazīnī", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "تزينين",
-        "u": "تزينين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَزِينِينَ • (tazīnīna) (form I) /ta.ziː.niː.na/\n# second-person feminine singular non-past active indicative of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazīnīna", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "زيني",
-        "u": "زيني",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "زِينِي • (zīnī) (form I) /ziː.niː/\n# second-person feminine singular imperative of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zīnī", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "أزن",
-        "u": "أزن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أزن (form I)\n# أَزِنْ (ʔazin) /ʔa.zin/: first-person singular non-past active jussive of زَانَ (zāna)\n# أُزَنْ (ʔuzan) /ʔu.zan/: first-person singular non-past passive jussive of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔazin", "zāna", "ʔuzan"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "أزين",
-        "u": "أزين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أزين (form I)\n# أَزِينُ (ʔazīnu) /ʔa.ziː.nu/: first-person singular non-past active indicative of زَانَ (zāna)\n# أَزِينَ (ʔazīna) /ʔa.ziː.na/: first-person singular non-past active subjunctive of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔazīnu", "zāna", "ʔazīna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "تزينا",
-        "u": "تزينا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَزِينَا • (tazīnā) (form I) /ta.ziː.naː/\n# inflection of زَانَ (zāna):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazīnā", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "نزن",
-        "u": "نزن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نزن (form I)\n# نَزِنْ (nazin) /na.zin/: first-person plural non-past active jussive of زَانَ (zāna)\n# نُزَنْ (nuzan) /nu.zan/: first-person plural non-past passive jussive of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nazin", "zāna", "nuzan"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "زينا",
-        "u": "زينا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "زِينَا • (zīnā) (form I) /ziː.naː/\n# inflection of زَانَ (zāna):\n## third-person masculine dual past passive\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zīnā", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "نزين",
-        "u": "نزين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نزين (form I)\n# نَزِينُ (nazīnu) /na.ziː.nu/: first-person plural non-past active indicative of زَانَ (zāna)\n# نَزِينَ (nazīna) /na.ziː.na/: first-person plural non-past active subjunctive of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nazīnu", "zāna", "nazīna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "تزينون",
-        "u": "تزينون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَزِينُونَ • (tazīnūna) (form I) /ta.ziː.nuː.na/\n# second-person masculine plural non-past active indicative of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazīnūna", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "تزينوا",
-        "u": "تزينوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَزِينُوا • (tazīnū) (form I) /ta.ziː.nuː/\n# second-person masculine plural non-past active subjunctive/jussive of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazīnū", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "زينوا",
-        "u": "زينوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "زِينُوا • (zīnū) (form I) /ziː.nuː/\n# inflection of زَانَ (zāna):\n## third-person masculine plural past passive\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zīnū", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "يزينون",
-        "u": "يزينون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يَزِينُونَ • (yazīnūna) (form I) /ja.ziː.nuː.na/\n# third-person masculine plural non-past active indicative of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazīnūna", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "يزينوا",
-        "u": "يزينوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يَزِينُوا • (yazīnū) (form I) /ja.ziː.nuː/\n# third-person masculine plural non-past active subjunctive/jussive of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazīnū", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "يزينا",
-        "u": "يزينا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَزِينَا • (yazīnā) (form I) /ja.ziː.naː/\n# third-person masculine dual non-past active subjunctive/jussive of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazīnā", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "تزينان",
-        "u": "تزينان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَزِينَانِ • (tazīnāni) (form I) /ta.ziː.naː.ni/\n# inflection of زَانَ (zāna):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazīnāni", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "يزينان",
-        "u": "يزينان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَزِينَانِ • (yazīnāni) (form I) /ja.ziː.naː.ni/\n# third-person masculine dual non-past active indicative of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazīnāni", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "زانت",
-        "u": "زانت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زَانَتْ • (zānat) (form I) /zaː.nat/\n# third-person feminine singular past active of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zānat", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "زانتا",
-        "u": "زانتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زَانَتَا • (zānatā) (form I) /zaː.na.taː/\n# third-person feminine dual past active of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zānatā", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "زانا",
-        "u": "زانا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زَانَا • (zānā) (form I) /zaː.naː/\n# third-person masculine dual past active of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zānā", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "زنتم",
-        "u": "زنتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زِنْتُمْ • (zintum) (form I) /zin.tum/\n# second-person masculine plural past active/passive of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zintum", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "زينتا",
-        "u": "زينتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زِينَتَا • (zīnatā) (form I) /ziː.na.taː/\n# third-person feminine dual past passive of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zīnatā", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "زنتما",
-        "u": "زنتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زِنْتُمَا • (zintumā) (form I) /zin.tu.maː/\n# second-person dual past active/passive of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zintumā", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "أزان",
-        "u": "أزان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أزان (form I)\n# أُزَانُ (ʔuzānu) /ʔu.zaː.nu/: first-person singular non-past passive indicative of زَانَ (zāna)\n# أُزَانَ (ʔuzāna) /ʔu.zaː.na/: first-person singular non-past passive subjunctive of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔuzānu", "zāna", "ʔuzāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "زنتن",
-        "u": "زنتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زِنْتُنَّ • (zintunna) (form I) /zin.tun.na/\n# second-person feminine plural past active/passive of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zintunna", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "زانوا",
-        "u": "زانوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زَانُوا • (zānū) (form I) /zaː.nuː/\n# third-person masculine plural past active of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zānū", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "تزان",
-        "u": "تزان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تزان (form I)\n# تُزَانُ (tuzānu) /tu.zaː.nu/: inflection of زَانَ (zāna):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُزَانَ (tuzāna) /tu.zaː.na/: inflection of زَانَ (zāna):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzānu", "zāna", "tuzāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "يزان",
-        "u": "يزان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يزان (form I)\n# يُزَانُ (yuzānu) /ju.zaː.nu/: third-person masculine singular non-past passive indicative of زَانَ (zāna)\n# يُزَانَ (yuzāna) /ju.zaː.na/: third-person masculine singular non-past passive subjunctive of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuzānu", "zāna", "yuzāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "تزانين",
-        "u": "تزانين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزَانِينَ • (tuzānīna) (form I) /tu.zaː.niː.na/\n# second-person feminine singular non-past passive indicative of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzānīna", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "تزانان",
-        "u": "تزانان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزَانَانِ • (tuzānāni) (form I) /tu.zaː.naː.ni/\n# inflection of زَانَ (zāna):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzānāni", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "يزانون",
-        "u": "يزانون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُزَانُونَ • (yuzānūna) (form I) /ju.zaː.nuː.na/\n# third-person masculine plural non-past passive indicative of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuzānūna", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "تزاني",
-        "u": "تزاني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزَانِي • (tuzānī) (form I) /tu.zaː.niː/\n# second-person feminine singular non-past passive subjunctive/jussive of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzānī", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "تزانون",
-        "u": "تزانون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزَانُونَ • (tuzānūna) (form I) /tu.zaː.nuː.na/\n# second-person masculine plural non-past passive indicative of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzānūna", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "نزان",
-        "u": "نزان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نزان (form I)\n# نُزَانُ (nuzānu) /nu.zaː.nu/: first-person plural non-past passive indicative of زَانَ (zāna)\n# نُزَانَ (nuzāna) /nu.zaː.na/: first-person plural non-past passive subjunctive of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuzānu", "zāna", "nuzāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "يزانان",
-        "u": "يزانان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُزَانَانِ • (yuzānāni) (form I) /ju.zaː.naː.ni/\n# third-person masculine dual non-past passive indicative of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuzānāni", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "تزانوا",
-        "u": "تزانوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزَانُوا • (tuzānū) (form I) /tu.zaː.nuː/\n# second-person masculine plural non-past passive subjunctive/jussive of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzānū", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "يزانا",
-        "u": "يزانا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُزَانَا • (yuzānā) (form I) /ju.zaː.naː/\n# third-person masculine dual non-past passive subjunctive/jussive of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuzānā", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "تزانا",
-        "u": "تزانا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزَانَا • (tuzānā) (form I) /tu.zaː.naː/\n# inflection of زَانَ (zāna):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzānā", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      },
-      {
-        "w": "يزانوا",
-        "u": "يزانوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُزَانُوا • (yuzānū) (form I) /ju.zaː.nuː/\n# third-person masculine plural non-past passive subjunctive/jussive of زَانَ (zāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuzānū", "zāna"],
-        "k": "زان",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "زن",
+  "ses": {
     "harf": "ز",
+    "fasil": "زن",
     "mahrec": "esaliyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "زن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "زن (form I)\n# زِنَّ (zinna) /zin.na/: inflection of زَانَ (zāna):\n## third-person feminine plural past active/passive\n## second-person feminine plural imperative\n# زِنْ (zin) /zin/: second-person masculine singular imperative of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zinna", "zāna", "zin"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زنا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "زِنَّا • (zinnā) (form I) /zin.naː/\n# first-person plural past active/passive of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zinnā", "zāna"]
+    },
+    {
+      "madde": "زين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "زِينَ • (zīna) (form I) /ziː.na/\n# third-person masculine singular past passive of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zīna", "zāna"]
+    },
+    {
+      "madde": "تزين",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تزين (form I)\n# تَزِينُ (tazīnu) /ta.ziː.nu/: inflection of زَانَ (zāna):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَزِينَ (tazīna) /ta.ziː.na/: inflection of زَانَ (zāna):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazīnu", "zāna", "tazīna"]
+    },
+    {
+      "madde": "يزين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يزين (form I)\n# يَزِينُ (yazīnu) /ja.ziː.nu/: third-person masculine singular non-past active indicative of زَانَ (zāna)\n# يَزِينَ (yazīna) /ja.ziː.na/: third-person masculine singular non-past active subjunctive of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazīnu", "zāna", "yazīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يزن (form I)\n# يَزِنَّ (yazinna) /ja.zin.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of زَانَ (zāna)\n# يُزَنَّ (yuzanna) /ju.zan.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of زَانَ (zāna)\n# يَزِنْ (yazin) /ja.zin/: third-person masculine singular non-past active jussive of زَانَ (zāna)\n# يُزَنْ (yuzan) /ju.zan/: third-pers",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazinna", "zāna", "yuzanna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زنت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "زنت (form I)\n# زِنْتُ (zintu) /zin.tu/: first-person singular past active/passive of زَانَ (zāna)\n# زِنْتَ (zinta) /zin.ta/: second-person masculine singular past active/passive of زَانَ (zāna)\n# زِنْتِ (zinti) /zin.ti/: second-person feminine singular past active/passive of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zintu", "zāna", "zinta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تزن (form I)\n# تَزِنَّ (tazinna) /ta.zin.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of زَانَ (zāna)\n# تُزَنَّ (tuzanna) /tu.zan.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of زَانَ (zāna)\n# تَزِنْ (tazin) /ta.zin/: inflection of زَانَ (zāna):\n## second-person masculine singular non-past active jussive\n## third-person fem",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazinna", "zāna", "tuzanna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زينت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "زِينَتْ • (zīnat) (form I) /ziː.nat/\n# third-person feminine singular past passive of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zīnat", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزيني",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تَزِينِي • (tazīnī) (form I) /ta.ziː.niː/\n# second-person feminine singular non-past active subjunctive/jussive of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazīnī", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزينين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَزِينِينَ • (tazīnīna) (form I) /ta.ziː.niː.na/\n# second-person feminine singular non-past active indicative of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazīnīna", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زيني",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "زِينِي • (zīnī) (form I) /ziː.niː/\n# second-person feminine singular imperative of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zīnī", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أزن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أزن (form I)\n# أَزِنْ (ʔazin) /ʔa.zin/: first-person singular non-past active jussive of زَانَ (zāna)\n# أُزَنْ (ʔuzan) /ʔu.zan/: first-person singular non-past passive jussive of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔazin", "zāna", "ʔuzan"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أزين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أزين (form I)\n# أَزِينُ (ʔazīnu) /ʔa.ziː.nu/: first-person singular non-past active indicative of زَانَ (zāna)\n# أَزِينَ (ʔazīna) /ʔa.ziː.na/: first-person singular non-past active subjunctive of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔazīnu", "zāna", "ʔazīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزينا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَزِينَا • (tazīnā) (form I) /ta.ziː.naː/\n# inflection of زَانَ (zāna):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazīnā", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نزن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نزن (form I)\n# نَزِنْ (nazin) /na.zin/: first-person plural non-past active jussive of زَانَ (zāna)\n# نُزَنْ (nuzan) /nu.zan/: first-person plural non-past passive jussive of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nazin", "zāna", "nuzan"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زينا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "زِينَا • (zīnā) (form I) /ziː.naː/\n# inflection of زَانَ (zāna):\n## third-person masculine dual past passive\n## second-person dual imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zīnā", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نزين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نزين (form I)\n# نَزِينُ (nazīnu) /na.ziː.nu/: first-person plural non-past active indicative of زَانَ (zāna)\n# نَزِينَ (nazīna) /na.ziː.na/: first-person plural non-past active subjunctive of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nazīnu", "zāna", "nazīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزينون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَزِينُونَ • (tazīnūna) (form I) /ta.ziː.nuː.na/\n# second-person masculine plural non-past active indicative of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazīnūna", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزينوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَزِينُوا • (tazīnū) (form I) /ta.ziː.nuː/\n# second-person masculine plural non-past active subjunctive/jussive of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazīnū", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زينوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "زِينُوا • (zīnū) (form I) /ziː.nuː/\n# inflection of زَانَ (zāna):\n## third-person masculine plural past passive\n## second-person masculine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zīnū", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزينون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يَزِينُونَ • (yazīnūna) (form I) /ja.ziː.nuː.na/\n# third-person masculine plural non-past active indicative of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazīnūna", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزينوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يَزِينُوا • (yazīnū) (form I) /ja.ziː.nuː/\n# third-person masculine plural non-past active subjunctive/jussive of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazīnū", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزينا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَزِينَا • (yazīnā) (form I) /ja.ziː.naː/\n# third-person masculine dual non-past active subjunctive/jussive of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazīnā", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزينان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَزِينَانِ • (tazīnāni) (form I) /ta.ziː.naː.ni/\n# inflection of زَانَ (zāna):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazīnāni", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزينان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَزِينَانِ • (yazīnāni) (form I) /ja.ziː.naː.ni/\n# third-person masculine dual non-past active indicative of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazīnāni", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زانت",
+      "tur": "verb",
+      "baslik": "زَانَتْ • (zānat) (form I) /zaː.nat/\n# third-person feminine singular past active of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zānat", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زانتا",
+      "tur": "verb",
+      "baslik": "زَانَتَا • (zānatā) (form I) /zaː.na.taː/\n# third-person feminine dual past active of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zānatā", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زانا",
+      "tur": "verb",
+      "baslik": "زَانَا • (zānā) (form I) /zaː.naː/\n# third-person masculine dual past active of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zānā", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زنتم",
+      "tur": "verb",
+      "baslik": "زِنْتُمْ • (zintum) (form I) /zin.tum/\n# second-person masculine plural past active/passive of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zintum", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زينتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زِينَتَا • (zīnatā) (form I) /ziː.na.taː/\n# third-person feminine dual past passive of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zīnatā", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زنتما",
+      "tur": "verb",
+      "baslik": "زِنْتُمَا • (zintumā) (form I) /zin.tu.maː/\n# second-person dual past active/passive of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zintumā", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أزان",
+      "tur": "verb",
+      "baslik": "أزان (form I)\n# أُزَانُ (ʔuzānu) /ʔu.zaː.nu/: first-person singular non-past passive indicative of زَانَ (zāna)\n# أُزَانَ (ʔuzāna) /ʔu.zaː.na/: first-person singular non-past passive subjunctive of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔuzānu", "zāna", "ʔuzāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زنتن",
+      "tur": "verb",
+      "baslik": "زِنْتُنَّ • (zintunna) (form I) /zin.tun.na/\n# second-person feminine plural past active/passive of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zintunna", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زانوا",
+      "tur": "verb",
+      "baslik": "زَانُوا • (zānū) (form I) /zaː.nuː/\n# third-person masculine plural past active of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zānū", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزان",
+      "tur": "verb",
+      "baslik": "تزان (form I)\n# تُزَانُ (tuzānu) /tu.zaː.nu/: inflection of زَانَ (zāna):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُزَانَ (tuzāna) /tu.zaː.na/: inflection of زَانَ (zāna):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzānu", "zāna", "tuzāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزان",
+      "tur": "verb",
+      "baslik": "يزان (form I)\n# يُزَانُ (yuzānu) /ju.zaː.nu/: third-person masculine singular non-past passive indicative of زَانَ (zāna)\n# يُزَانَ (yuzāna) /ju.zaː.na/: third-person masculine singular non-past passive subjunctive of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuzānu", "zāna", "yuzāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزانين",
+      "tur": "verb",
+      "baslik": "تُزَانِينَ • (tuzānīna) (form I) /tu.zaː.niː.na/\n# second-person feminine singular non-past passive indicative of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzānīna", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزانان",
+      "tur": "verb",
+      "baslik": "تُزَانَانِ • (tuzānāni) (form I) /tu.zaː.naː.ni/\n# inflection of زَانَ (zāna):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzānāni", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزانون",
+      "tur": "verb",
+      "baslik": "يُزَانُونَ • (yuzānūna) (form I) /ju.zaː.nuː.na/\n# third-person masculine plural non-past passive indicative of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuzānūna", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزاني",
+      "tur": "verb",
+      "baslik": "تُزَانِي • (tuzānī) (form I) /tu.zaː.niː/\n# second-person feminine singular non-past passive subjunctive/jussive of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzānī", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزانون",
+      "tur": "verb",
+      "baslik": "تُزَانُونَ • (tuzānūna) (form I) /tu.zaː.nuː.na/\n# second-person masculine plural non-past passive indicative of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzānūna", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نزان",
+      "tur": "verb",
+      "baslik": "نزان (form I)\n# نُزَانُ (nuzānu) /nu.zaː.nu/: first-person plural non-past passive indicative of زَانَ (zāna)\n# نُزَانَ (nuzāna) /nu.zaː.na/: first-person plural non-past passive subjunctive of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuzānu", "zāna", "nuzāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزانان",
+      "tur": "verb",
+      "baslik": "يُزَانَانِ • (yuzānāni) (form I) /ju.zaː.naː.ni/\n# third-person masculine dual non-past passive indicative of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuzānāni", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزانوا",
+      "tur": "verb",
+      "baslik": "تُزَانُوا • (tuzānū) (form I) /tu.zaː.nuː/\n# second-person masculine plural non-past passive subjunctive/jussive of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzānū", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزانا",
+      "tur": "verb",
+      "baslik": "يُزَانَا • (yuzānā) (form I) /ju.zaː.naː/\n# third-person masculine dual non-past passive subjunctive/jussive of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuzānā", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزانا",
+      "tur": "verb",
+      "baslik": "تُزَانَا • (tuzānā) (form I) /tu.zaː.naː/\n# inflection of زَانَ (zāna):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzānā", "zāna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزانوا",
+      "tur": "verb",
+      "baslik": "يُزَانُوا • (yuzānū) (form I) /ju.zaː.nuː/\n# third-person masculine plural non-past passive subjunctive/jussive of زَانَ (zāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuzānū", "zāna"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "زان", "r7"]
+  ],
+  "mana": {
     "ince": "calculate.v.01",
     "orta": "verb.cognition",
     "ust": "zihin ve ilim",
@@ -635,16 +452,11 @@
     "dayanak_tanim": "make a mathematical calculation or computation",
     "synset_sayisi": 16
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "balance.v.01",
     "calculate.v.01",
     "decorate.v.01",
@@ -662,12 +474,10 @@
     "shriek.v.01",
     "visualize.v.01"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

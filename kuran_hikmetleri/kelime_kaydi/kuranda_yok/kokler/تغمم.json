@@ -1,366 +1,259 @@
 {
   "kok": "تغمم",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تغمم", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تغممتا",
-        "u": "تغممتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغَمَّمَتَا • (taḡammamatā) (form V) /ta.ɣam.ma.ma.taː/\n# third-person feminine dual past active of تَغَمَّمَ (taḡammama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡammamatā", "taḡammama"],
-        "k": "تغمم",
-        "yol": "kök"
-      },
-      {
-        "w": "تغممت",
-        "u": "تغممت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تغممت (form V)\n# تَغَمَّمْتُ (taḡammamtu) /ta.ɣam.mam.tu/: first-person singular past active of تَغَمَّمَ (taḡammama)\n# تَغَمَّمْتَ (taḡammamta) /ta.ɣam.mam.ta/: second-person masculine singular past active of تَغَمَّمَ (taḡammama)\n# تَغَمَّمْتِ (taḡammamti) /ta.ɣam.mam.ti/: second-person feminine singular past active of تَغَمَّمَ (taḡammama)\n# تَغَمَّمَتْ (taḡammamat) /ta.ɣam.ma.mat/: third-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡammamtu", "taḡammama", "taḡammamta"],
-        "k": "تغمم",
-        "yol": "kök"
-      },
-      {
-        "w": "تغممتما",
-        "u": "تغممتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغَمَّمْتُمَا • (taḡammamtumā) (form V) /ta.ɣam.mam.tu.maː/\n# second-person dual past active of تَغَمَّمَ (taḡammama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡammamtumā", "taḡammama"],
-        "k": "تغمم",
-        "yol": "kök"
-      },
-      {
-        "w": "تغمما",
-        "u": "تغمما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَغَمَّمَا • (taḡammamā) (form V) /ta.ɣam.ma.maː/\n# inflection of تَغَمَّمَ (taḡammama):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡammamā", "taḡammama"],
-        "k": "تغمم",
-        "yol": "kök"
-      },
-      {
-        "w": "تغممنا",
-        "u": "تغممنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغَمَّمْنَا • (taḡammamnā) (form V) /ta.ɣam.mam.naː/\n# first-person plural past active of تَغَمَّمَ (taḡammama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡammamnā", "taḡammama"],
-        "k": "تغمم",
-        "yol": "kök"
-      },
-      {
-        "w": "تغممتن",
-        "u": "تغممتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغَمَّمْتُنَّ • (taḡammamtunna) (form V) /ta.ɣam.mam.tun.na/\n# second-person feminine plural past active of تَغَمَّمَ (taḡammama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡammamtunna", "taḡammama"],
-        "k": "تغمم",
-        "yol": "kök"
-      },
-      {
-        "w": "تغممتم",
-        "u": "تغممتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغَمَّمْتُمْ • (taḡammamtum) (form V) /ta.ɣam.mam.tum/\n# second-person masculine plural past active of تَغَمَّمَ (taḡammama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡammamtum", "taḡammama"],
-        "k": "تغمم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتغمم",
-        "u": "تتغمم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتغمم (form V)\n# تَتَغَمَّمُ (tataḡammamu) /ta.ta.ɣam.ma.mu/: inflection of تَغَمَّمَ (taḡammama):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَغَمَّمَ (tataḡammama) /ta.ta.ɣam.ma.ma/: inflection of تَغَمَّمَ (taḡammama):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḡammamu", "taḡammama", "tataḡammama"],
-        "k": "تغمم",
-        "yol": "kök"
-      },
-      {
-        "w": "أتغمم",
-        "u": "أتغمم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتغمم (form V)\n# أَتَغَمَّمُ (ʔataḡammamu) /ʔa.ta.ɣam.ma.mu/: first-person singular non-past active indicative of تَغَمَّمَ (taḡammama)\n# أَتَغَمَّمَ (ʔataḡammama) /ʔa.ta.ɣam.ma.ma/: first-person singular non-past active subjunctive of تَغَمَّمَ (taḡammama)\n# أَتَغَمَّمْ (ʔataḡammam) /ʔa.ta.ɣam.mam/: first-person singular non-past active jussive of تَغَمَّمَ (taḡammama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔataḡammamu", "taḡammama", "ʔataḡammama"],
-        "k": "تغمم",
-        "yol": "kök"
-      },
-      {
-        "w": "تغمموا",
-        "u": "تغمموا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَغَمَّمُوا • (taḡammamū) (form V) /ta.ɣam.ma.muː/\n# inflection of تَغَمَّمَ (taḡammama):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡammamū", "taḡammama"],
-        "k": "تغمم",
-        "yol": "kök"
-      },
-      {
-        "w": "تغممن",
-        "u": "تغممن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَغَمَّمْنَ • (taḡammamna) (form V) /ta.ɣam.mam.na/\n# inflection of تَغَمَّمَ (taḡammama):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡammamna", "taḡammama"],
-        "k": "تغمم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتغممين",
-        "u": "تتغممين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَغَمَّمِينَ • (tataḡammamīna) (form V) /ta.ta.ɣam.ma.miː.na/\n# second-person feminine singular non-past active indicative of تَغَمَّمَ (taḡammama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḡammamīna", "taḡammama"],
-        "k": "تغمم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتغمم",
-        "u": "يتغمم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتغمم (form V)\n# يَتَغَمَّمُ (yataḡammamu) /ja.ta.ɣam.ma.mu/: third-person masculine singular non-past active indicative of تَغَمَّمَ (taḡammama)\n# يَتَغَمَّمَ (yataḡammama) /ja.ta.ɣam.ma.ma/: third-person masculine singular non-past active subjunctive of تَغَمَّمَ (taḡammama)\n# يَتَغَمَّمْ (yataḡammam) /ja.ta.ɣam.mam/: third-person masculine singular non-past active jussive of تَغَمَّمَ (taḡammam",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḡammamu", "taḡammama", "yataḡammama"],
-        "k": "تغمم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتغممان",
-        "u": "يتغممان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَغَمَّمَانِ • (yataḡammamāni) (form V) /ja.ta.ɣam.ma.maː.ni/\n# third-person masculine dual non-past active indicative of تَغَمَّمَ (taḡammama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḡammamāni", "taḡammama"],
-        "k": "تغمم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتغممون",
-        "u": "تتغممون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَغَمَّمُونَ • (tataḡammamūna) (form V) /ta.ta.ɣam.ma.muː.na/\n# second-person masculine plural non-past active indicative of تَغَمَّمَ (taḡammama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḡammamūna", "taḡammama"],
-        "k": "تغمم",
-        "yol": "kök"
-      },
-      {
-        "w": "نتغمم",
-        "u": "نتغمم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتغمم (form V)\n# نَتَغَمَّمُ (nataḡammamu) /na.ta.ɣam.ma.mu/: first-person plural non-past active indicative of تَغَمَّمَ (taḡammama)\n# نَتَغَمَّمَ (nataḡammama) /na.ta.ɣam.ma.ma/: first-person plural non-past active subjunctive of تَغَمَّمَ (taḡammama)\n# نَتَغَمَّمْ (nataḡammam) /na.ta.ɣam.mam/: first-person plural non-past active jussive of تَغَمَّمَ (taḡammama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["nataḡammamu", "taḡammama", "nataḡammama"],
-        "k": "تغمم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتغممون",
-        "u": "يتغممون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَغَمَّمُونَ • (yataḡammamūna) (form V) /ja.ta.ɣam.ma.muː.na/\n# third-person masculine plural non-past active indicative of تَغَمَّمَ (taḡammama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḡammamūna", "taḡammama"],
-        "k": "تغمم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتغممان",
-        "u": "تتغممان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَغَمَّمَانِ • (tataḡammamāni) (form V) /ta.ta.ɣam.ma.maː.ni/\n# inflection of تَغَمَّمَ (taḡammama):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḡammamāni", "taḡammama"],
-        "k": "تغمم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتغمما",
-        "u": "تتغمما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَغَمَّمَا • (tataḡammamā) (form V) /ta.ta.ɣam.ma.maː/\n# inflection of تَغَمَّمَ (taḡammama):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḡammamā", "taḡammama"],
-        "k": "تغمم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتغممن",
-        "u": "تتغممن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَغَمَّمْنَ • (tataḡammamna) (form V) /ta.ta.ɣam.mam.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَغَمَّمَ (taḡammama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḡammamna", "taḡammama"],
-        "k": "تغمم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتغمموا",
-        "u": "يتغمموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَغَمَّمُوا • (yataḡammamū) (form V) /ja.ta.ɣam.ma.muː/\n# third-person masculine plural non-past active subjunctive/jussive of تَغَمَّمَ (taḡammama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḡammamū", "taḡammama"],
-        "k": "تغمم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتغممن",
-        "u": "يتغممن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَغَمَّمْنَ • (yataḡammamna) (form V) /ja.ta.ɣam.mam.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَغَمَّمَ (taḡammama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḡammamna", "taḡammama"],
-        "k": "تغمم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتغمما",
-        "u": "يتغمما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَغَمَّمَا • (yataḡammamā) (form V) /ja.ta.ɣam.ma.maː/\n# third-person masculine dual non-past active subjunctive/jussive of تَغَمَّمَ (taḡammama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḡammamā", "taḡammama"],
-        "k": "تغمم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتغممي",
-        "u": "تتغممي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَغَمَّمِي • (tataḡammamī) (form V) /ta.ta.ɣam.ma.miː/\n# second-person feminine singular non-past active subjunctive/jussive of تَغَمَّمَ (taḡammama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḡammamī", "taḡammama"],
-        "k": "تغمم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتغمموا",
-        "u": "تتغمموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَغَمَّمُوا • (tataḡammamū) (form V) /ta.ta.ɣam.ma.muː/\n# second-person masculine plural non-past active subjunctive/jussive of تَغَمَّمَ (taḡammama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḡammamū", "taḡammama"],
-        "k": "تغمم",
-        "yol": "kök"
-      },
-      {
-        "w": "تغممي",
-        "u": "تغممي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَغَمَّمِي • (taḡammamī) (form V) /ta.ɣam.ma.miː/\n# second-person feminine singular imperative of تَغَمَّمَ (taḡammama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡammamī", "taḡammama"],
-        "k": "تغمم",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تغ",
+  "ses": {
     "harf": "ت",
+    "fasil": "تغ",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تغممتا",
+      "tur": "verb",
+      "baslik": "تَغَمَّمَتَا • (taḡammamatā) (form V) /ta.ɣam.ma.ma.taː/\n# third-person feminine dual past active of تَغَمَّمَ (taḡammama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡammamatā", "taḡammama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغممت",
+      "tur": "verb",
+      "baslik": "تغممت (form V)\n# تَغَمَّمْتُ (taḡammamtu) /ta.ɣam.mam.tu/: first-person singular past active of تَغَمَّمَ (taḡammama)\n# تَغَمَّمْتَ (taḡammamta) /ta.ɣam.mam.ta/: second-person masculine singular past active of تَغَمَّمَ (taḡammama)\n# تَغَمَّمْتِ (taḡammamti) /ta.ɣam.mam.ti/: second-person feminine singular past active of تَغَمَّمَ (taḡammama)\n# تَغَمَّمَتْ (taḡammamat) /ta.ɣam.ma.mat/: third-perso",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡammamtu", "taḡammama", "taḡammamta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغممتما",
+      "tur": "verb",
+      "baslik": "تَغَمَّمْتُمَا • (taḡammamtumā) (form V) /ta.ɣam.mam.tu.maː/\n# second-person dual past active of تَغَمَّمَ (taḡammama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡammamtumā", "taḡammama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغمما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَغَمَّمَا • (taḡammamā) (form V) /ta.ɣam.ma.maː/\n# inflection of تَغَمَّمَ (taḡammama):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡammamā", "taḡammama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغممنا",
+      "tur": "verb",
+      "baslik": "تَغَمَّمْنَا • (taḡammamnā) (form V) /ta.ɣam.mam.naː/\n# first-person plural past active of تَغَمَّمَ (taḡammama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡammamnā", "taḡammama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغممتن",
+      "tur": "verb",
+      "baslik": "تَغَمَّمْتُنَّ • (taḡammamtunna) (form V) /ta.ɣam.mam.tun.na/\n# second-person feminine plural past active of تَغَمَّمَ (taḡammama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡammamtunna", "taḡammama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغممتم",
+      "tur": "verb",
+      "baslik": "تَغَمَّمْتُمْ • (taḡammamtum) (form V) /ta.ɣam.mam.tum/\n# second-person masculine plural past active of تَغَمَّمَ (taḡammama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡammamtum", "taḡammama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتغمم",
+      "tur": "verb",
+      "baslik": "تتغمم (form V)\n# تَتَغَمَّمُ (tataḡammamu) /ta.ta.ɣam.ma.mu/: inflection of تَغَمَّمَ (taḡammama):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَغَمَّمَ (tataḡammama) /ta.ta.ɣam.ma.ma/: inflection of تَغَمَّمَ (taḡammama):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḡammamu", "taḡammama", "tataḡammama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتغمم",
+      "tur": "verb",
+      "baslik": "أتغمم (form V)\n# أَتَغَمَّمُ (ʔataḡammamu) /ʔa.ta.ɣam.ma.mu/: first-person singular non-past active indicative of تَغَمَّمَ (taḡammama)\n# أَتَغَمَّمَ (ʔataḡammama) /ʔa.ta.ɣam.ma.ma/: first-person singular non-past active subjunctive of تَغَمَّمَ (taḡammama)\n# أَتَغَمَّمْ (ʔataḡammam) /ʔa.ta.ɣam.mam/: first-person singular non-past active jussive of تَغَمَّمَ (taḡammama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔataḡammamu", "taḡammama", "ʔataḡammama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغمموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَغَمَّمُوا • (taḡammamū) (form V) /ta.ɣam.ma.muː/\n# inflection of تَغَمَّمَ (taḡammama):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡammamū", "taḡammama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغممن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَغَمَّمْنَ • (taḡammamna) (form V) /ta.ɣam.mam.na/\n# inflection of تَغَمَّمَ (taḡammama):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡammamna", "taḡammama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتغممين",
+      "tur": "verb",
+      "baslik": "تَتَغَمَّمِينَ • (tataḡammamīna) (form V) /ta.ta.ɣam.ma.miː.na/\n# second-person feminine singular non-past active indicative of تَغَمَّمَ (taḡammama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḡammamīna", "taḡammama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتغمم",
+      "tur": "verb",
+      "baslik": "يتغمم (form V)\n# يَتَغَمَّمُ (yataḡammamu) /ja.ta.ɣam.ma.mu/: third-person masculine singular non-past active indicative of تَغَمَّمَ (taḡammama)\n# يَتَغَمَّمَ (yataḡammama) /ja.ta.ɣam.ma.ma/: third-person masculine singular non-past active subjunctive of تَغَمَّمَ (taḡammama)\n# يَتَغَمَّمْ (yataḡammam) /ja.ta.ɣam.mam/: third-person masculine singular non-past active jussive of تَغَمَّمَ (taḡammam",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḡammamu", "taḡammama", "yataḡammama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتغممان",
+      "tur": "verb",
+      "baslik": "يَتَغَمَّمَانِ • (yataḡammamāni) (form V) /ja.ta.ɣam.ma.maː.ni/\n# third-person masculine dual non-past active indicative of تَغَمَّمَ (taḡammama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḡammamāni", "taḡammama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتغممون",
+      "tur": "verb",
+      "baslik": "تَتَغَمَّمُونَ • (tataḡammamūna) (form V) /ta.ta.ɣam.ma.muː.na/\n# second-person masculine plural non-past active indicative of تَغَمَّمَ (taḡammama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḡammamūna", "taḡammama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتغمم",
+      "tur": "verb",
+      "baslik": "نتغمم (form V)\n# نَتَغَمَّمُ (nataḡammamu) /na.ta.ɣam.ma.mu/: first-person plural non-past active indicative of تَغَمَّمَ (taḡammama)\n# نَتَغَمَّمَ (nataḡammama) /na.ta.ɣam.ma.ma/: first-person plural non-past active subjunctive of تَغَمَّمَ (taḡammama)\n# نَتَغَمَّمْ (nataḡammam) /na.ta.ɣam.mam/: first-person plural non-past active jussive of تَغَمَّمَ (taḡammama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["nataḡammamu", "taḡammama", "nataḡammama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتغممون",
+      "tur": "verb",
+      "baslik": "يَتَغَمَّمُونَ • (yataḡammamūna) (form V) /ja.ta.ɣam.ma.muː.na/\n# third-person masculine plural non-past active indicative of تَغَمَّمَ (taḡammama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḡammamūna", "taḡammama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتغممان",
+      "tur": "verb",
+      "baslik": "تَتَغَمَّمَانِ • (tataḡammamāni) (form V) /ta.ta.ɣam.ma.maː.ni/\n# inflection of تَغَمَّمَ (taḡammama):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḡammamāni", "taḡammama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتغمما",
+      "tur": "verb",
+      "baslik": "تَتَغَمَّمَا • (tataḡammamā) (form V) /ta.ta.ɣam.ma.maː/\n# inflection of تَغَمَّمَ (taḡammama):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḡammamā", "taḡammama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتغممن",
+      "tur": "verb",
+      "baslik": "تَتَغَمَّمْنَ • (tataḡammamna) (form V) /ta.ta.ɣam.mam.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَغَمَّمَ (taḡammama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḡammamna", "taḡammama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتغمموا",
+      "tur": "verb",
+      "baslik": "يَتَغَمَّمُوا • (yataḡammamū) (form V) /ja.ta.ɣam.ma.muː/\n# third-person masculine plural non-past active subjunctive/jussive of تَغَمَّمَ (taḡammama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḡammamū", "taḡammama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتغممن",
+      "tur": "verb",
+      "baslik": "يَتَغَمَّمْنَ • (yataḡammamna) (form V) /ja.ta.ɣam.mam.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَغَمَّمَ (taḡammama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḡammamna", "taḡammama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتغمما",
+      "tur": "verb",
+      "baslik": "يَتَغَمَّمَا • (yataḡammamā) (form V) /ja.ta.ɣam.ma.maː/\n# third-person masculine dual non-past active subjunctive/jussive of تَغَمَّمَ (taḡammama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḡammamā", "taḡammama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتغممي",
+      "tur": "verb",
+      "baslik": "تَتَغَمَّمِي • (tataḡammamī) (form V) /ta.ta.ɣam.ma.miː/\n# second-person feminine singular non-past active subjunctive/jussive of تَغَمَّمَ (taḡammama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḡammamī", "taḡammama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتغمموا",
+      "tur": "verb",
+      "baslik": "تَتَغَمَّمُوا • (tataḡammamū) (form V) /ta.ta.ɣam.ma.muː/\n# second-person masculine plural non-past active subjunctive/jussive of تَغَمَّمَ (taḡammama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḡammamū", "taḡammama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغممي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَغَمَّمِي • (taḡammamī) (form V) /ta.ɣam.ma.miː/\n# second-person feminine singular imperative of تَغَمَّمَ (taḡammama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡammamī", "taḡammama"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تغمم", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

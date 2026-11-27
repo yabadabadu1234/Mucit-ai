@@ -1,46 +1,47 @@
 {
   "kok": "نحنح",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "نحنح", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تنحنح",
-        "u": "تنحنح",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "تَنَحْنَحَ • (tanaḥnaḥa) IIq (non-past يَتَنَحْنَحُ (yatanaḥnaḥu), verbal noun تَنَحْنُح (tanaḥnuḥ))",
-        "g": ["to clear one's throat"],
-        "tag": ["intransitive"],
-        "r": ["tanaḥnaḥa"],
-        "ipa": ["/ta.naħ.na.ħa/"],
-        "k": "نحنح",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "نح",
+  "ses": {
     "harf": "ن",
+    "fasil": "نح",
     "mahrec": "zelakiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "تنحنح",
+      "tur": "verb",
+      "baslik": "تَنَحْنَحَ • (tanaḥnaḥa) IIq (non-past يَتَنَحْنَحُ (yatanaḥnaḥu), verbal noun تَنَحْنُح (tanaḥnuḥ))",
+      "anlam": ["to clear one's throat"],
+      "etiket": ["intransitive"],
+      "okunus": ["tanaḥnaḥa"],
+      "ipa": ["/ta.naħ.na.ħa/"]
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "نحنح", "r6"]
+  ],
+  "mana": {
     "ince": "clear.v.24",
     "orta": "verb.change",
     "ust": "fiil ve hadise",
@@ -48,20 +49,8 @@
     "dayanak_tanim": "free (the throat) by making a rasping sound",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["clear.v.24"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 7,
       "merkez_kok": "حدق",
@@ -81,6 +70,11 @@
       "boy": 5
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["clear.v.24"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

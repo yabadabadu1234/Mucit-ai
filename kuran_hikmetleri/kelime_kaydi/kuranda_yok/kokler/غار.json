@@ -1,738 +1,527 @@
 {
   "kok": "غار",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "غار", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "mekayis": [
-      {
-        "baslik": "غَارَ",
-        "metin": "(غَارَ) الْغَيْنُ وَالْأَلِفُ وَالرَّاءُ. وَالْأَلْفُ فِي هَذَا الْبَابِ لَا تَكُونُ إِلَّا مُبْدَلَةً. فَالْغَارُ: نَبَاتٌ طَيِّبٌ. قَالَ:\nرُبَّ نَارٍ بِتُّ أَرْمُقُهَا ... تَقْضَمُ الْهِنْدِيَّ وَالْغَارَا\nوَالْغَارُ: لُغَةٌ فِي الْغَيْرَةِ، وَقَدْ مَرَّ تَفْسِيرُهَا. قَالَ:\nلَهُنَّ نَشِيجٌ بِالنَّشِيلِ كَأَنَّهَا ... ضَرَائِرُ حِرْمِيٍّ تَفَاحَشَ غَارُهَا\nوَالْغَارُ: الْجَيْشُ الْعَظِيمُ. وَمِنْ ذَلِكَ حَدِيثُ عَلِيٍّ - عَلَيْهِ السَّلَامُ -: &quot; مَا ظَنُّكَ بِامْرِئٍ جَمَعَ بَيْنَ هَذَيْنِ الْغَارَيْنِ &quot;. وَالْغَارُ: غَارُ الْفَمِ. وَالْغَارُ: أَصْلُ الرَّجُلِ وَقَبِيلَتُهُ. وَالْغَارُ: الْكَهْفُ. وَقَدْ مَضَى قِيَاسُ ذَلِكَ كُلِّهِ. وَاللَّهُ أَعْلَمُ.\n[بَابُ الْغَيْنِ وَالْبَاءِ وَمَا يَثْلِثُهُمَا]"
-      }
-    ],
-    "kaikki_vikisozluk": [
-      {
-        "w": "غير",
-        "u": "غير",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "غِيرَ • (ḡīra) (form I) /ɣiː.ra/\n# third-person masculine singular past passive of غَارَ (ḡāra)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡīra", "ḡāra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "غر",
-        "u": "غر",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "غر (form I)\n# غَرْ (ḡar) /ɣar/: second-person masculine singular imperative of غَارَ (ḡāra)\n# غُرْ (ḡur) /ɣur/: second-person masculine singular imperative of غَارَ (ḡāra)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡar", "ḡāra", "ḡur"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "تغار",
-        "u": "تغار",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تغار (form I)\n# تَغَارُ (taḡāru) /ta.ɣaː.ru/: inflection of غَارَ (ḡāra):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَغَارَ (taḡāra) /ta.ɣaː.ra/: inflection of غَارَ (ḡāra):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive\n# تُغَارُ (tuḡār",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡāru", "ḡāra", "taḡāra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "يغر",
-        "u": "يغر",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "يغر (form I)\n# يَغَرْ (yaḡar) /ja.ɣar/: third-person masculine singular non-past active jussive of غَارَ (ḡāra)\n# يُغَرْ (yuḡar) /ju.ɣar/: third-person masculine singular non-past passive jussive of غَارَ (ḡāra)\n# يَغُرْ (yaḡur) /ja.ɣur/: third-person masculine singular non-past active jussive of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡar", "ḡāra", "yuḡar"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "غرت",
-        "u": "غرت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "غرت (form I)\n# غِرْتُ (ḡirtu) /ɣir.tu/: first-person singular past active/passive of غَارَ (ḡāra)\n# غِرْتَ (ḡirta) /ɣir.ta/: second-person masculine singular past active/passive of غَارَ (ḡāra)\n# غِرْتِ (ḡirti) /ɣir.ti/: second-person feminine singular past active/passive of غَارَ (ḡāra)\n# غُرْتُ (ḡurtu) /ɣur.tu/: first-person singular past active of غَارَ (ḡāra)\n# غُرْتَ (ḡurta) /ɣur.ta/: second-",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡirtu", "ḡāra", "ḡirta"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "تغر",
-        "u": "تغر",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تغر (form I)\n# تَغَرْ (taḡar) /ta.ɣar/: inflection of غَارَ (ḡāra):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تَغُرْ (taḡur) /ta.ɣur/: inflection of غَارَ (ḡāra):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُغَرْ (tuḡar) /tu.ɣar/: inflection of ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡar", "ḡāra", "taḡur"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "غيرت",
-        "u": "غيرت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "غِيرَتْ • (ḡīrat) (form I) /ɣiː.rat/\n# third-person feminine singular past passive of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡīrat", "ḡāra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "أغر",
-        "u": "أغر",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "أغر (form I)\n# أَغَرْ (ʔaḡar) /ʔa.ɣar/: first-person singular non-past active jussive of غَارَ (ḡāra)\n# أَغُرْ (ʔaḡur) /ʔa.ɣur/: first-person singular non-past active jussive of غَارَ (ḡāra)\n# أُغَرْ (ʔuḡar) /ʔu.ɣar/: first-person singular non-past passive jussive of غَارَ (ḡāra)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḡar", "ḡāra", "ʔaḡur"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "نغر",
-        "u": "نغر",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نغر (form I)\n# نَغَرْ (naḡar) /na.ɣar/: first-person plural non-past active jussive of غَارَ (ḡāra)\n# نَغُرْ (naḡur) /na.ɣur/: first-person plural non-past active jussive of غَارَ (ḡāra)\n# نُغَرْ (nuḡar) /nu.ɣar/: first-person plural non-past passive jussive of غَارَ (ḡāra)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḡar", "ḡāra", "naḡur"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "نغر",
-        "u": "نغر",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "نغر (form I)\n# نَغَرْ (naḡar) /na.ɣar/: first-person plural non-past active jussive of غَارَ (ḡāra)\n# نَغُرْ (naḡur) /na.ɣur/: first-person plural non-past active jussive of غَارَ (ḡāra)\n# نُغَرْ (nuḡar) /nu.ɣar/: first-person plural non-past passive jussive of غَارَ (ḡāra)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḡar", "ḡāra", "naḡur"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "غيروا",
-        "u": "غيروا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "غِيرُوا • (ḡīrū) (form I) /ɣiː.ruː/\n# third-person masculine plural past passive of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡīrū", "ḡāra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "غوري",
-        "u": "غوري",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "غُورِي • (ḡūrī) (form I) /ɣuː.riː/\n# second-person feminine singular imperative of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡūrī", "ḡāra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "أغار",
-        "u": "أغار",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أغار (form I)\n# أَغَارُ (ʔaḡāru) /ʔa.ɣaː.ru/: first-person singular non-past active indicative of غَارَ (ḡāra)\n# أَغَارَ (ʔaḡāra) /ʔa.ɣaː.ra/: first-person singular non-past active subjunctive of غَارَ (ḡāra)\n# أُغَارُ (ʔuḡāru) /ʔu.ɣaː.ru/: first-person singular non-past passive indicative of غَارَ (ḡāra)\n# أُغَارَ (ʔuḡāra) /ʔu.ɣaː.ra/: first-person singular non-past passive subjunctive of غَارَ (",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḡāru", "ḡāra", "ʔaḡāra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "غارت",
-        "u": "غارت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غَارَتْ • (ḡārat) (form I) /ɣaː.rat/\n# third-person feminine singular past active of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡārat", "ḡāra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "يغور",
-        "u": "يغور",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يغور (form I)\n# يَغُورُ (yaḡūru) /ja.ɣuː.ru/: third-person masculine singular non-past active indicative of غَارَ (ḡāra)\n# يَغُورَ (yaḡūra) /ja.ɣuː.ra/: third-person masculine singular non-past active subjunctive of غَارَ (ḡāra)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡūru", "ḡāra", "yaḡūra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "تغرن",
-        "u": "تغرن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تغرن (form I)\n# تَغَرْنَ (taḡarna) /ta.ɣar.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of غَارَ (ḡāra)\n# تَغُرْنَ (taḡurna) /ta.ɣur.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of غَارَ (ḡāra)\n# تُغَرْنَ (tuḡarna) /tu.ɣar.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡarna", "ḡāra", "taḡurna"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "يغرن",
-        "u": "يغرن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يغرن (form I)\n# يَغَرْنَ (yaḡarna) /ja.ɣar.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of غَارَ (ḡāra)\n# يَغُرْنَ (yaḡurna) /ja.ɣur.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of غَارَ (ḡāra)\n# يُغَرْنَ (yuḡarna) /ju.ɣar.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡarna", "ḡāra", "yaḡurna"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "تغارين",
-        "u": "تغارين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تغارين (form I)\n# تَغَارِينَ (taḡārīna) /ta.ɣaː.riː.na/: second-person feminine singular non-past active indicative of غَارَ (ḡāra)\n# تُغَارِينَ (tuḡārīna) /tu.ɣaː.riː.na/: second-person feminine singular non-past passive indicative of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡārīna", "ḡāra", "tuḡārīna"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "يغار",
-        "u": "يغار",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يغار (form I)\n# يَغَارُ (yaḡāru) /ja.ɣaː.ru/: third-person masculine singular non-past active indicative of غَارَ (ḡāra)\n# يُغَارُ (yuḡāru) /ju.ɣaː.ru/: third-person masculine singular non-past passive indicative of غَارَ (ḡāra)\n# يَغَارَ (yaḡāra) /ja.ɣaː.ra/: third-person masculine singular non-past active subjunctive of غَارَ (ḡāra)\n# يُغَارَ (yuḡāra) /ju.ɣaː.ra/: third-person masculine singular",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡāru", "ḡāra", "yuḡāru"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "تغاران",
-        "u": "تغاران",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تغاران (form I)\n# تَغَارَانِ (taḡārāni) /ta.ɣaː.raː.ni/: inflection of غَارَ (ḡāra):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُغَارَانِ (tuḡārāni) /tu.ɣaː.raː.ni/: inflection of غَارَ (ḡāra):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡārāni", "ḡāra", "tuḡārāni"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "يغاران",
-        "u": "يغاران",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يغاران (form I)\n# يَغَارَانِ (yaḡārāni) /ja.ɣaː.raː.ni/: third-person masculine dual non-past active indicative of غَارَ (ḡāra)\n# يُغَارَانِ (yuḡārāni) /ju.ɣaː.raː.ni/: third-person masculine dual non-past passive indicative of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡārāni", "ḡāra", "yuḡārāni"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "يغارون",
-        "u": "يغارون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يغارون (form I)\n# يَغَارُونَ (yaḡārūna) /ja.ɣaː.ruː.na/: third-person masculine plural non-past active indicative of غَارَ (ḡāra)\n# يُغَارُونَ (yuḡārūna) /ju.ɣaː.ruː.na/: third-person masculine plural non-past passive indicative of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡārūna", "ḡāra", "yuḡārūna"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "نغار",
-        "u": "نغار",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نغار (form I)\n# نَغَارُ (naḡāru) /na.ɣaː.ru/: first-person plural non-past active indicative of غَارَ (ḡāra)\n# نَغَارَ (naḡāra) /na.ɣaː.ra/: first-person plural non-past active subjunctive of غَارَ (ḡāra)\n# نُغَارُ (nuḡāru) /nu.ɣaː.ru/: first-person plural non-past passive indicative of غَارَ (ḡāra)\n# نُغَارَ (nuḡāra) /nu.ɣaː.ra/: first-person plural non-past passive subjunctive of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḡāru", "ḡāra", "naḡāra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "تغارون",
-        "u": "تغارون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تغارون (form I)\n# تَغَارُونَ (taḡārūna) /ta.ɣaː.ruː.na/: second-person masculine plural non-past active indicative of غَارَ (ḡāra)\n# تُغَارُونَ (tuḡārūna) /tu.ɣaː.ruː.na/: second-person masculine plural non-past passive indicative of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡārūna", "ḡāra", "tuḡārūna"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "تغارا",
-        "u": "تغارا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تغارا (form I)\n# تَغَارَا (taḡārā) /ta.ɣaː.raː/: inflection of غَارَ (ḡāra):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُغَارَا (tuḡārā) /tu.ɣaː.raː/: inflection of غَارَ (ḡāra):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡārā", "ḡāra", "tuḡārā"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "يغارا",
-        "u": "يغارا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يغارا (form I)\n# يَغَارَا (yaḡārā) /ja.ɣaː.raː/: third-person masculine dual non-past active subjunctive/jussive of غَارَ (ḡāra)\n# يُغَارَا (yuḡārā) /ju.ɣaː.raː/: third-person masculine dual non-past passive subjunctive/jussive of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡārā", "ḡāra", "yuḡārā"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "تغاروا",
-        "u": "تغاروا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تغاروا (form I)\n# تَغَارُوا (taḡārū) /ta.ɣaː.ruː/: second-person masculine plural non-past active subjunctive/jussive of غَارَ (ḡāra)\n# تُغَارُوا (tuḡārū) /tu.ɣaː.ruː/: second-person masculine plural non-past passive subjunctive/jussive of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡārū", "ḡāra", "tuḡārū"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "تغاري",
-        "u": "تغاري",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تغاري (form I)\n# تَغَارِي (taḡārī) /ta.ɣaː.riː/: second-person feminine singular non-past active subjunctive/jussive of غَارَ (ḡāra)\n# تُغَارِي (tuḡārī) /tu.ɣaː.riː/: second-person feminine singular non-past passive subjunctive/jussive of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡārī", "ḡāra", "tuḡārī"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "يغاروا",
-        "u": "يغاروا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يغاروا (form I)\n# يَغَارُوا (yaḡārū) /ja.ɣaː.ruː/: third-person masculine plural non-past active subjunctive/jussive of غَارَ (ḡāra)\n# يُغَارُوا (yuḡārū) /ju.ɣaː.ruː/: third-person masculine plural non-past passive subjunctive/jussive of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡārū", "ḡāra", "yuḡārū"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "غرتما",
-        "u": "غرتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غرتما (form I)\n# غِرْتُمَا (ḡirtumā) /ɣir.tu.maː/: second-person dual past active/passive of غَارَ (ḡāra)\n# غُرْتُمَا (ḡurtumā) /ɣur.tu.maː/: second-person dual past active of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡirtumā", "ḡāra", "ḡurtumā"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "غارتا",
-        "u": "غارتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غَارَتَا • (ḡāratā) (form I) /ɣaː.ra.taː/\n# third-person feminine dual past active of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡāratā", "ḡāra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "غاروا",
-        "u": "غاروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غَارُوا • (ḡārū) (form I) /ɣaː.ruː/\n# inflection of غَارَ (ḡāra):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡārū", "ḡāra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "غرتن",
-        "u": "غرتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غرتن (form I)\n# غِرْتُنَّ (ḡirtunna) /ɣir.tun.na/: second-person feminine plural past active/passive of غَارَ (ḡāra)\n# غُرْتُنَّ (ḡurtunna) /ɣur.tun.na/: second-person feminine plural past active of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡirtunna", "ḡāra", "ḡurtunna"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "غرنا",
-        "u": "غرنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غرنا (form I)\n# غِرْنَا (ḡirnā) /ɣir.naː/: first-person plural past active/passive of غَارَ (ḡāra)\n# غُرْنَا (ḡurnā) /ɣur.naː/: first-person plural past active of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡirnā", "ḡāra", "ḡurnā"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "غارا",
-        "u": "غارا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غَارَا • (ḡārā) (form I) /ɣaː.raː/\n# inflection of غَارَ (ḡāra):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡārā", "ḡāra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "غرتم",
-        "u": "غرتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غرتم (form I)\n# غِرْتُمْ (ḡirtum) /ɣir.tum/: second-person masculine plural past active/passive of غَارَ (ḡāra)\n# غُرْتُمْ (ḡurtum) /ɣur.tum/: second-person masculine plural past active of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡirtum", "ḡāra", "ḡurtum"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "غرن",
-        "u": "غرن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "غرن (form I)\n# غِرْنَ (ḡirna) /ɣir.na/: third-person feminine plural past active/passive of غَارَ (ḡāra)\n# غَرْنَ (ḡarna) /ɣar.na/: second-person feminine plural imperative of غَارَ (ḡāra)\n# غُرْنَ (ḡurna) /ɣur.na/: inflection of غَارَ (ḡāra):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡirna", "ḡāra", "ḡarna"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "غاري",
-        "u": "غاري",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غَارِي • (ḡārī) (form I) /ɣaː.riː/\n# second-person feminine singular imperative of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡārī", "ḡāra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "غيرا",
-        "u": "غيرا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "غِيرَا • (ḡīrā) (form I) /ɣiː.raː/\n# third-person masculine dual past passive of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡīrā", "ḡāra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "غيرتا",
-        "u": "غيرتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "غِيرَتَا • (ḡīratā) (form I) /ɣiː.ra.taː/\n# third-person feminine dual past passive of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡīratā", "ḡāra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "تغوران",
-        "u": "تغوران",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَغُورَانِ • (taḡūrāni) (form I) /ta.ɣuː.raː.ni/\n# inflection of غَارَ (ḡāra):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡūrāni", "ḡāra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "تغور",
-        "u": "تغور",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تغور (form I)\n# تَغُورُ (taḡūru) /ta.ɣuː.ru/: inflection of غَارَ (ḡāra):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَغُورَ (taḡūra) /ta.ɣuː.ra/: inflection of غَارَ (ḡāra):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡūru", "ḡāra", "taḡūra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "أغور",
-        "u": "أغور",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أغور (form I)\n# أَغُورُ (ʔaḡūru) /ʔa.ɣuː.ru/: first-person singular non-past active indicative of غَارَ (ḡāra)\n# أَغُورَ (ʔaḡūra) /ʔa.ɣuː.ra/: first-person singular non-past active subjunctive of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḡūru", "ḡāra", "ʔaḡūra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "تغورين",
-        "u": "تغورين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَغُورِينَ • (taḡūrīna) (form I) /ta.ɣuː.riː.na/\n# second-person feminine singular non-past active indicative of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡūrīna", "ḡāra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "نغور",
-        "u": "نغور",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نغور (form I)\n# نَغُورُ (naḡūru) /na.ɣuː.ru/: first-person plural non-past active indicative of غَارَ (ḡāra)\n# نَغُورَ (naḡūra) /na.ɣuː.ra/: first-person plural non-past active subjunctive of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḡūru", "ḡāra", "naḡūra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "يغوران",
-        "u": "يغوران",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَغُورَانِ • (yaḡūrāni) (form I) /ja.ɣuː.raː.ni/\n# third-person masculine dual non-past active indicative of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡūrāni", "ḡāra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "تغوري",
-        "u": "تغوري",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَغُورِي • (taḡūrī) (form I) /ta.ɣuː.riː/\n# second-person feminine singular non-past active subjunctive/jussive of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡūrī", "ḡāra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "تغورون",
-        "u": "تغورون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَغُورُونَ • (taḡūrūna) (form I) /ta.ɣuː.ruː.na/\n# second-person masculine plural non-past active indicative of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡūrūna", "ḡāra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "يغورون",
-        "u": "يغورون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَغُورُونَ • (yaḡūrūna) (form I) /ja.ɣuː.ruː.na/\n# third-person masculine plural non-past active indicative of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡūrūna", "ḡāra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "يغورا",
-        "u": "يغورا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَغُورَا • (yaḡūrā) (form I) /ja.ɣuː.raː/\n# third-person masculine dual non-past active subjunctive/jussive of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡūrā", "ḡāra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "تغوروا",
-        "u": "تغوروا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَغُورُوا • (taḡūrū) (form I) /ta.ɣuː.ruː/\n# second-person masculine plural non-past active subjunctive/jussive of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡūrū", "ḡāra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "تغورا",
-        "u": "تغورا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَغُورَا • (taḡūrā) (form I) /ta.ɣuː.raː/\n# inflection of غَارَ (ḡāra):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡūrā", "ḡāra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "يغوروا",
-        "u": "يغوروا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَغُورُوا • (yaḡūrū) (form I) /ja.ɣuː.ruː/\n# third-person masculine plural non-past active subjunctive/jussive of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡūrū", "ḡāra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "غوروا",
-        "u": "غوروا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "غُورُوا • (ḡūrū) (form I) /ɣuː.ruː/\n# second-person masculine plural imperative of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡūrū", "ḡāra"],
-        "k": "غار",
-        "yol": "kök"
-      },
-      {
-        "w": "غورا",
-        "u": "غورا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "غُورَا • (ḡūrā) (form I) /ɣuː.raː/\n# second-person dual imperative of غَارَ (ḡāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡūrā", "ḡāra"],
-        "k": "غار",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "غر",
+  "ses": {
     "harf": "غ",
+    "fasil": "غر",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "mekayis": [
+    {
+      "baslik": "غَارَ",
+      "metin": "(غَارَ) الْغَيْنُ وَالْأَلِفُ وَالرَّاءُ. وَالْأَلْفُ فِي هَذَا الْبَابِ لَا تَكُونُ إِلَّا مُبْدَلَةً. فَالْغَارُ: نَبَاتٌ طَيِّبٌ. قَالَ:\nرُبَّ نَارٍ بِتُّ أَرْمُقُهَا ... تَقْضَمُ الْهِنْدِيَّ وَالْغَارَا\nوَالْغَارُ: لُغَةٌ فِي الْغَيْرَةِ، وَقَدْ مَرَّ تَفْسِيرُهَا. قَالَ:\nلَهُنَّ نَشِيجٌ بِالنَّشِيلِ كَأَنَّهَا ... ضَرَائِرُ حِرْمِيٍّ تَفَاحَشَ غَارُهَا\nوَالْغَارُ: الْجَيْشُ الْعَظِيمُ. وَمِنْ ذَلِكَ حَدِيثُ عَلِيٍّ - عَلَيْهِ السَّلَامُ -: &quot; مَا ظَنُّكَ بِامْرِئٍ جَمَعَ بَيْنَ هَذَيْنِ الْغَارَيْنِ &quot;. وَالْغَارُ: غَارُ الْفَمِ. وَالْغَارُ: أَصْلُ الرَّجُلِ وَقَبِيلَتُهُ. وَالْغَارُ: الْكَهْفُ. وَقَدْ مَضَى قِيَاسُ ذَلِكَ كُلِّهِ. وَاللَّهُ أَعْلَمُ.\n[بَابُ الْغَيْنِ وَالْبَاءِ وَمَا يَثْلِثُهُمَا]"
+    }
+  ],
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "غير",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "غِيرَ • (ḡīra) (form I) /ɣiː.ra/\n# third-person masculine singular past passive of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡīra", "ḡāra"]
+    },
+    {
+      "madde": "غر",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "غر (form I)\n# غَرْ (ḡar) /ɣar/: second-person masculine singular imperative of غَارَ (ḡāra)\n# غُرْ (ḡur) /ɣur/: second-person masculine singular imperative of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡar", "ḡāra", "ḡur"]
+    },
+    {
+      "madde": "تغار",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تغار (form I)\n# تَغَارُ (taḡāru) /ta.ɣaː.ru/: inflection of غَارَ (ḡāra):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَغَارَ (taḡāra) /ta.ɣaː.ra/: inflection of غَارَ (ḡāra):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive\n# تُغَارُ (tuḡār",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡāru", "ḡāra", "taḡāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغر",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "يغر (form I)\n# يَغَرْ (yaḡar) /ja.ɣar/: third-person masculine singular non-past active jussive of غَارَ (ḡāra)\n# يُغَرْ (yuḡar) /ju.ɣar/: third-person masculine singular non-past passive jussive of غَارَ (ḡāra)\n# يَغُرْ (yaḡur) /ja.ɣur/: third-person masculine singular non-past active jussive of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡar", "ḡāra", "yuḡar"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غرت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "غرت (form I)\n# غِرْتُ (ḡirtu) /ɣir.tu/: first-person singular past active/passive of غَارَ (ḡāra)\n# غِرْتَ (ḡirta) /ɣir.ta/: second-person masculine singular past active/passive of غَارَ (ḡāra)\n# غِرْتِ (ḡirti) /ɣir.ti/: second-person feminine singular past active/passive of غَارَ (ḡāra)\n# غُرْتُ (ḡurtu) /ɣur.tu/: first-person singular past active of غَارَ (ḡāra)\n# غُرْتَ (ḡurta) /ɣur.ta/: second-",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡirtu", "ḡāra", "ḡirta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغر",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تغر (form I)\n# تَغَرْ (taḡar) /ta.ɣar/: inflection of غَارَ (ḡāra):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تَغُرْ (taḡur) /ta.ɣur/: inflection of غَارَ (ḡāra):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُغَرْ (tuḡar) /tu.ɣar/: inflection of ",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡar", "ḡāra", "taḡur"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غيرت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "غِيرَتْ • (ḡīrat) (form I) /ɣiː.rat/\n# third-person feminine singular past passive of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡīrat", "ḡāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أغر",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "أغر (form I)\n# أَغَرْ (ʔaḡar) /ʔa.ɣar/: first-person singular non-past active jussive of غَارَ (ḡāra)\n# أَغُرْ (ʔaḡur) /ʔa.ɣur/: first-person singular non-past active jussive of غَارَ (ḡāra)\n# أُغَرْ (ʔuḡar) /ʔu.ɣar/: first-person singular non-past passive jussive of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḡar", "ḡāra", "ʔaḡur"]
+    },
+    {
+      "madde": "نغر",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نغر (form I)\n# نَغَرْ (naḡar) /na.ɣar/: first-person plural non-past active jussive of غَارَ (ḡāra)\n# نَغُرْ (naḡur) /na.ɣur/: first-person plural non-past active jussive of غَارَ (ḡāra)\n# نُغَرْ (nuḡar) /nu.ɣar/: first-person plural non-past passive jussive of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḡar", "ḡāra", "naḡur"]
+    },
+    {
+      "madde": "نغر",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "نغر (form I)\n# نَغَرْ (naḡar) /na.ɣar/: first-person plural non-past active jussive of غَارَ (ḡāra)\n# نَغُرْ (naḡur) /na.ɣur/: first-person plural non-past active jussive of غَارَ (ḡāra)\n# نُغَرْ (nuḡar) /nu.ɣar/: first-person plural non-past passive jussive of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḡar", "ḡāra", "naḡur"]
+    },
+    {
+      "madde": "غيروا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "غِيرُوا • (ḡīrū) (form I) /ɣiː.ruː/\n# third-person masculine plural past passive of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡīrū", "ḡāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غوري",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "غُورِي • (ḡūrī) (form I) /ɣuː.riː/\n# second-person feminine singular imperative of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡūrī", "ḡāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أغار",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أغار (form I)\n# أَغَارُ (ʔaḡāru) /ʔa.ɣaː.ru/: first-person singular non-past active indicative of غَارَ (ḡāra)\n# أَغَارَ (ʔaḡāra) /ʔa.ɣaː.ra/: first-person singular non-past active subjunctive of غَارَ (ḡāra)\n# أُغَارُ (ʔuḡāru) /ʔu.ɣaː.ru/: first-person singular non-past passive indicative of غَارَ (ḡāra)\n# أُغَارَ (ʔuḡāra) /ʔu.ɣaː.ra/: first-person singular non-past passive subjunctive of غَارَ (",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḡāru", "ḡāra", "ʔaḡāra"]
+    },
+    {
+      "madde": "غارت",
+      "tur": "verb",
+      "baslik": "غَارَتْ • (ḡārat) (form I) /ɣaː.rat/\n# third-person feminine singular past active of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡārat", "ḡāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغور",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يغور (form I)\n# يَغُورُ (yaḡūru) /ja.ɣuː.ru/: third-person masculine singular non-past active indicative of غَارَ (ḡāra)\n# يَغُورَ (yaḡūra) /ja.ɣuː.ra/: third-person masculine singular non-past active subjunctive of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡūru", "ḡāra", "yaḡūra"]
+    },
+    {
+      "madde": "تغرن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تغرن (form I)\n# تَغَرْنَ (taḡarna) /ta.ɣar.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of غَارَ (ḡāra)\n# تَغُرْنَ (taḡurna) /ta.ɣur.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of غَارَ (ḡāra)\n# تُغَرْنَ (tuḡarna) /tu.ɣar.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡarna", "ḡāra", "taḡurna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغرن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يغرن (form I)\n# يَغَرْنَ (yaḡarna) /ja.ɣar.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of غَارَ (ḡāra)\n# يَغُرْنَ (yaḡurna) /ja.ɣur.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of غَارَ (ḡāra)\n# يُغَرْنَ (yuḡarna) /ju.ɣar.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡarna", "ḡāra", "yaḡurna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغارين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تغارين (form I)\n# تَغَارِينَ (taḡārīna) /ta.ɣaː.riː.na/: second-person feminine singular non-past active indicative of غَارَ (ḡāra)\n# تُغَارِينَ (tuḡārīna) /tu.ɣaː.riː.na/: second-person feminine singular non-past passive indicative of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡārīna", "ḡāra", "tuḡārīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغار",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يغار (form I)\n# يَغَارُ (yaḡāru) /ja.ɣaː.ru/: third-person masculine singular non-past active indicative of غَارَ (ḡāra)\n# يُغَارُ (yuḡāru) /ju.ɣaː.ru/: third-person masculine singular non-past passive indicative of غَارَ (ḡāra)\n# يَغَارَ (yaḡāra) /ja.ɣaː.ra/: third-person masculine singular non-past active subjunctive of غَارَ (ḡāra)\n# يُغَارَ (yuḡāra) /ju.ɣaː.ra/: third-person masculine singular",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡāru", "ḡāra", "yuḡāru"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغاران",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تغاران (form I)\n# تَغَارَانِ (taḡārāni) /ta.ɣaː.raː.ni/: inflection of غَارَ (ḡāra):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُغَارَانِ (tuḡārāni) /tu.ɣaː.raː.ni/: inflection of غَارَ (ḡāra):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡārāni", "ḡāra", "tuḡārāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغاران",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يغاران (form I)\n# يَغَارَانِ (yaḡārāni) /ja.ɣaː.raː.ni/: third-person masculine dual non-past active indicative of غَارَ (ḡāra)\n# يُغَارَانِ (yuḡārāni) /ju.ɣaː.raː.ni/: third-person masculine dual non-past passive indicative of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡārāni", "ḡāra", "yuḡārāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغارون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يغارون (form I)\n# يَغَارُونَ (yaḡārūna) /ja.ɣaː.ruː.na/: third-person masculine plural non-past active indicative of غَارَ (ḡāra)\n# يُغَارُونَ (yuḡārūna) /ju.ɣaː.ruː.na/: third-person masculine plural non-past passive indicative of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡārūna", "ḡāra", "yuḡārūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نغار",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نغار (form I)\n# نَغَارُ (naḡāru) /na.ɣaː.ru/: first-person plural non-past active indicative of غَارَ (ḡāra)\n# نَغَارَ (naḡāra) /na.ɣaː.ra/: first-person plural non-past active subjunctive of غَارَ (ḡāra)\n# نُغَارُ (nuḡāru) /nu.ɣaː.ru/: first-person plural non-past passive indicative of غَارَ (ḡāra)\n# نُغَارَ (nuḡāra) /nu.ɣaː.ra/: first-person plural non-past passive subjunctive of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḡāru", "ḡāra", "naḡāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغارون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تغارون (form I)\n# تَغَارُونَ (taḡārūna) /ta.ɣaː.ruː.na/: second-person masculine plural non-past active indicative of غَارَ (ḡāra)\n# تُغَارُونَ (tuḡārūna) /tu.ɣaː.ruː.na/: second-person masculine plural non-past passive indicative of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡārūna", "ḡāra", "tuḡārūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغارا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تغارا (form I)\n# تَغَارَا (taḡārā) /ta.ɣaː.raː/: inflection of غَارَ (ḡāra):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُغَارَا (tuḡārā) /tu.ɣaː.raː/: inflection of غَارَ (ḡāra):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡārā", "ḡāra", "tuḡārā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغارا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يغارا (form I)\n# يَغَارَا (yaḡārā) /ja.ɣaː.raː/: third-person masculine dual non-past active subjunctive/jussive of غَارَ (ḡāra)\n# يُغَارَا (yuḡārā) /ju.ɣaː.raː/: third-person masculine dual non-past passive subjunctive/jussive of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡārā", "ḡāra", "yuḡārā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغاروا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تغاروا (form I)\n# تَغَارُوا (taḡārū) /ta.ɣaː.ruː/: second-person masculine plural non-past active subjunctive/jussive of غَارَ (ḡāra)\n# تُغَارُوا (tuḡārū) /tu.ɣaː.ruː/: second-person masculine plural non-past passive subjunctive/jussive of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡārū", "ḡāra", "tuḡārū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغاري",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تغاري (form I)\n# تَغَارِي (taḡārī) /ta.ɣaː.riː/: second-person feminine singular non-past active subjunctive/jussive of غَارَ (ḡāra)\n# تُغَارِي (tuḡārī) /tu.ɣaː.riː/: second-person feminine singular non-past passive subjunctive/jussive of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡārī", "ḡāra", "tuḡārī"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغاروا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يغاروا (form I)\n# يَغَارُوا (yaḡārū) /ja.ɣaː.ruː/: third-person masculine plural non-past active subjunctive/jussive of غَارَ (ḡāra)\n# يُغَارُوا (yuḡārū) /ju.ɣaː.ruː/: third-person masculine plural non-past passive subjunctive/jussive of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡārū", "ḡāra", "yuḡārū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غرتما",
+      "tur": "verb",
+      "baslik": "غرتما (form I)\n# غِرْتُمَا (ḡirtumā) /ɣir.tu.maː/: second-person dual past active/passive of غَارَ (ḡāra)\n# غُرْتُمَا (ḡurtumā) /ɣur.tu.maː/: second-person dual past active of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡirtumā", "ḡāra", "ḡurtumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غارتا",
+      "tur": "verb",
+      "baslik": "غَارَتَا • (ḡāratā) (form I) /ɣaː.ra.taː/\n# third-person feminine dual past active of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡāratā", "ḡāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غاروا",
+      "tur": "verb",
+      "baslik": "غَارُوا • (ḡārū) (form I) /ɣaː.ruː/\n# inflection of غَارَ (ḡāra):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡārū", "ḡāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غرتن",
+      "tur": "verb",
+      "baslik": "غرتن (form I)\n# غِرْتُنَّ (ḡirtunna) /ɣir.tun.na/: second-person feminine plural past active/passive of غَارَ (ḡāra)\n# غُرْتُنَّ (ḡurtunna) /ɣur.tun.na/: second-person feminine plural past active of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡirtunna", "ḡāra", "ḡurtunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غرنا",
+      "tur": "verb",
+      "baslik": "غرنا (form I)\n# غِرْنَا (ḡirnā) /ɣir.naː/: first-person plural past active/passive of غَارَ (ḡāra)\n# غُرْنَا (ḡurnā) /ɣur.naː/: first-person plural past active of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡirnā", "ḡāra", "ḡurnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غارا",
+      "tur": "verb",
+      "baslik": "غَارَا • (ḡārā) (form I) /ɣaː.raː/\n# inflection of غَارَ (ḡāra):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡārā", "ḡāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غرتم",
+      "tur": "verb",
+      "baslik": "غرتم (form I)\n# غِرْتُمْ (ḡirtum) /ɣir.tum/: second-person masculine plural past active/passive of غَارَ (ḡāra)\n# غُرْتُمْ (ḡurtum) /ɣur.tum/: second-person masculine plural past active of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡirtum", "ḡāra", "ḡurtum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غرن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "غرن (form I)\n# غِرْنَ (ḡirna) /ɣir.na/: third-person feminine plural past active/passive of غَارَ (ḡāra)\n# غَرْنَ (ḡarna) /ɣar.na/: second-person feminine plural imperative of غَارَ (ḡāra)\n# غُرْنَ (ḡurna) /ɣur.na/: inflection of غَارَ (ḡāra):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡirna", "ḡāra", "ḡarna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غاري",
+      "tur": "verb",
+      "baslik": "غَارِي • (ḡārī) (form I) /ɣaː.riː/\n# second-person feminine singular imperative of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡārī", "ḡāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غيرا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "غِيرَا • (ḡīrā) (form I) /ɣiː.raː/\n# third-person masculine dual past passive of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡīrā", "ḡāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غيرتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "غِيرَتَا • (ḡīratā) (form I) /ɣiː.ra.taː/\n# third-person feminine dual past passive of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡīratā", "ḡāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغوران",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَغُورَانِ • (taḡūrāni) (form I) /ta.ɣuː.raː.ni/\n# inflection of غَارَ (ḡāra):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡūrāni", "ḡāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغور",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تغور (form I)\n# تَغُورُ (taḡūru) /ta.ɣuː.ru/: inflection of غَارَ (ḡāra):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَغُورَ (taḡūra) /ta.ɣuː.ra/: inflection of غَارَ (ḡāra):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡūru", "ḡāra", "taḡūra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أغور",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أغور (form I)\n# أَغُورُ (ʔaḡūru) /ʔa.ɣuː.ru/: first-person singular non-past active indicative of غَارَ (ḡāra)\n# أَغُورَ (ʔaḡūra) /ʔa.ɣuː.ra/: first-person singular non-past active subjunctive of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḡūru", "ḡāra", "ʔaḡūra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغورين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَغُورِينَ • (taḡūrīna) (form I) /ta.ɣuː.riː.na/\n# second-person feminine singular non-past active indicative of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡūrīna", "ḡāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نغور",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نغور (form I)\n# نَغُورُ (naḡūru) /na.ɣuː.ru/: first-person plural non-past active indicative of غَارَ (ḡāra)\n# نَغُورَ (naḡūra) /na.ɣuː.ra/: first-person plural non-past active subjunctive of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḡūru", "ḡāra", "naḡūra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغوران",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَغُورَانِ • (yaḡūrāni) (form I) /ja.ɣuː.raː.ni/\n# third-person masculine dual non-past active indicative of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡūrāni", "ḡāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغوري",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَغُورِي • (taḡūrī) (form I) /ta.ɣuː.riː/\n# second-person feminine singular non-past active subjunctive/jussive of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡūrī", "ḡāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغورون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَغُورُونَ • (taḡūrūna) (form I) /ta.ɣuː.ruː.na/\n# second-person masculine plural non-past active indicative of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡūrūna", "ḡāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغورون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَغُورُونَ • (yaḡūrūna) (form I) /ja.ɣuː.ruː.na/\n# third-person masculine plural non-past active indicative of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡūrūna", "ḡāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغورا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَغُورَا • (yaḡūrā) (form I) /ja.ɣuː.raː/\n# third-person masculine dual non-past active subjunctive/jussive of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡūrā", "ḡāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغوروا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَغُورُوا • (taḡūrū) (form I) /ta.ɣuː.ruː/\n# second-person masculine plural non-past active subjunctive/jussive of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡūrū", "ḡāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغورا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَغُورَا • (taḡūrā) (form I) /ta.ɣuː.raː/\n# inflection of غَارَ (ḡāra):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡūrā", "ḡāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغوروا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَغُورُوا • (yaḡūrū) (form I) /ja.ɣuː.ruː/\n# third-person masculine plural non-past active subjunctive/jussive of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡūrū", "ḡāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غوروا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "غُورُوا • (ḡūrū) (form I) /ɣuː.ruː/\n# second-person masculine plural imperative of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡūrū", "ḡāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غورا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "غُورَا • (ḡūrā) (form I) /ɣuː.raː/\n# second-person dual imperative of غَارَ (ḡāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡūrā", "ḡāra"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "غار", "r7"]
+  ],
+  "mana": {
     "ince": "shape.v.03",
     "orta": "verb.change",
     "ust": "fiil ve hadise",
@@ -740,16 +529,28 @@
     "dayanak_tanim": "give shape or form to",
     "synset_sayisi": 23
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "ust": {
+      "kume": 3,
+      "merkez_kok": "فقص",
+      "merkez_mana": "",
+      "boy": 569
+    },
+    "orta": {
+      "kume": 6,
+      "merkez_kok": "قلخ",
+      "merkez_mana": "",
+      "boy": 141
+    },
+    "ince": {
+      "kume": 30,
+      "merkez_kok": "قلخ",
+      "merkez_mana": "",
+      "boy": 91
+    }
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "attack.v.01",
     "change.v.01",
     "change.v.02",
@@ -774,29 +575,10 @@
     "turn.v.01",
     "turn.v.09"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "ust": {
-      "kume": 3,
-      "merkez_kok": "فقص",
-      "merkez_mana": "",
-      "boy": 569
-    },
-    "orta": {
-      "kume": 6,
-      "merkez_kok": "قلخ",
-      "merkez_mana": "",
-      "boy": 141
-    },
-    "ince": {
-      "kume": 30,
-      "merkez_kok": "قلخ",
-      "merkez_mana": "",
-      "boy": 91
-    }
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

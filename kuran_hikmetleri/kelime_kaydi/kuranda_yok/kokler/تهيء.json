@@ -1,366 +1,285 @@
 {
   "kok": "تهيء",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تهيء", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يتهيأ",
-        "u": "يتهيأ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتهيأ (form V)\n# يَتَهَيَّأُ (yatahayyaʔu) /ja.ta.haj.ja.ʔu/: third-person masculine singular non-past active indicative of تَهَيَّأَ (tahayyaʔa)\n# يَتَهَيَّأَ (yatahayyaʔa) /ja.ta.haj.ja.ʔa/: third-person masculine singular non-past active subjunctive of تَهَيَّأَ (tahayyaʔa)\n# يَتَهَيَّأْ (yatahayyaʔ) /ja.ta.haj.jaʔ/: third-person masculine singular non-past active jussive of تَهَيَّأَ (tahayyaʔ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatahayyaʔu", "tahayyaʔa", "yatahayyaʔa"],
-        "k": "تهيأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تهيأت",
-        "u": "تهيأت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهيأت (form V)\n# تَهَيَّأْتُ (tahayyaʔtu) /ta.haj.jaʔ.tu/: first-person singular past active of تَهَيَّأَ (tahayyaʔa)\n# تَهَيَّأْتَ (tahayyaʔta) /ta.haj.jaʔ.ta/: second-person masculine singular past active of تَهَيَّأَ (tahayyaʔa)\n# تَهَيَّأْتِ (tahayyaʔti) /ta.haj.jaʔ.ti/: second-person feminine singular past active of تَهَيَّأَ (tahayyaʔa)\n# تَهَيَّأَتْ (tahayyaʔat) /ta.haj.ja.ʔat/: third-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahayyaʔtu", "tahayyaʔa", "tahayyaʔta"],
-        "k": "تهيأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهيأ",
-        "u": "تتهيأ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتهيأ (form V)\n# تَتَهَيَّأُ (tatahayyaʔu) /ta.ta.haj.ja.ʔu/: inflection of تَهَيَّأَ (tahayyaʔa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَهَيَّأَ (tatahayyaʔa) /ta.ta.haj.ja.ʔa/: inflection of تَهَيَّأَ (tahayyaʔa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatahayyaʔu", "tahayyaʔa", "tatahayyaʔa"],
-        "k": "تهيأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهيئين",
-        "u": "تتهيئين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَهَيَّئِينَ • (tatahayyaʔīna) (form V) /ta.ta.haj.ja.ʔiː.na/\n# second-person feminine singular non-past active indicative of تَهَيَّأَ (tahayyaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatahayyaʔīna", "tahayyaʔa"],
-        "k": "تهيأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهيئي",
-        "u": "تتهيئي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَهَيَّئِي • (tatahayyaʔī) (form V) /ta.ta.haj.ja.ʔiː/\n# second-person feminine singular non-past active subjunctive/jussive of تَهَيَّأَ (tahayyaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatahayyaʔī", "tahayyaʔa"],
-        "k": "تهيأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تهيئي",
-        "u": "تهيئي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهَيَّئِي • (tahayyaʔī) (form V) /ta.haj.ja.ʔiː/\n# second-person feminine singular imperative of تَهَيَّأَ (tahayyaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahayyaʔī", "tahayyaʔa"],
-        "k": "تهيأ",
-        "yol": "kök"
-      },
-      {
-        "w": "أتهيأ",
-        "u": "أتهيأ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتهيأ (form V)\n# أَتَهَيَّأُ (ʔatahayyaʔu) /ʔa.ta.haj.ja.ʔu/: first-person singular non-past active indicative of تَهَيَّأَ (tahayyaʔa)\n# أَتَهَيَّأَ (ʔatahayyaʔa) /ʔa.ta.haj.ja.ʔa/: first-person singular non-past active subjunctive of تَهَيَّأَ (tahayyaʔa)\n# أَتَهَيَّأْ (ʔatahayyaʔ) /ʔa.ta.haj.jaʔ/: first-person singular non-past active jussive of تَهَيَّأَ (tahayyaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔatahayyaʔu", "tahayyaʔa", "ʔatahayyaʔa"],
-        "k": "تهيأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تهيأنا",
-        "u": "تهيأنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهَيَّأْنَا • (tahayyaʔnā) (form V) /ta.haj.jaʔ.naː/\n# first-person plural past active of تَهَيَّأَ (tahayyaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahayyaʔnā", "tahayyaʔa"],
-        "k": "تهيأ",
-        "yol": "kök"
-      },
-      {
-        "w": "نتهيأ",
-        "u": "نتهيأ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتهيأ (form V)\n# نَتَهَيَّأُ (natahayyaʔu) /na.ta.haj.ja.ʔu/: first-person plural non-past active indicative of تَهَيَّأَ (tahayyaʔa)\n# نَتَهَيَّأَ (natahayyaʔa) /na.ta.haj.ja.ʔa/: first-person plural non-past active subjunctive of تَهَيَّأَ (tahayyaʔa)\n# نَتَهَيَّأْ (natahayyaʔ) /na.ta.haj.jaʔ/: first-person plural non-past active jussive of تَهَيَّأَ (tahayyaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["natahayyaʔu", "tahayyaʔa", "natahayyaʔa"],
-        "k": "تهيأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تهيأتم",
-        "u": "تهيأتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهَيَّأْتُمْ • (tahayyaʔtum) (form V) /ta.haj.jaʔ.tum/\n# second-person masculine plural past active of تَهَيَّأَ (tahayyaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahayyaʔtum", "tahayyaʔa"],
-        "k": "تهيأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهيؤون",
-        "u": "تتهيؤون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَهَيَّؤُونَ • (tatahayyaʔūna) (form V) /ta.ta.haj.ja.ʔuː.na/\n# second-person masculine plural non-past active indicative of تَهَيَّأَ (tahayyaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatahayyaʔūna", "tahayyaʔa"],
-        "k": "تهيأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهيؤوا",
-        "u": "تتهيؤوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَهَيَّؤُوا • (tatahayyaʔū) (form V) /ta.ta.haj.ja.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of تَهَيَّأَ (tahayyaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatahayyaʔū", "tahayyaʔa"],
-        "k": "تهيأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تهيؤوا",
-        "u": "تهيؤوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهَيَّؤُوا • (tahayyaʔū) (form V) /ta.haj.ja.ʔuː/\n# inflection of تَهَيَّأَ (tahayyaʔa):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahayyaʔū", "tahayyaʔa"],
-        "k": "تهيأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يتهيؤون",
-        "u": "يتهيؤون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَهَيَّؤُونَ • (yatahayyaʔūna) (form V) /ja.ta.haj.ja.ʔuː.na/\n# third-person masculine plural non-past active indicative of تَهَيَّأَ (tahayyaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatahayyaʔūna", "tahayyaʔa"],
-        "k": "تهيأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يتهيؤوا",
-        "u": "يتهيؤوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَهَيَّؤُوا • (yatahayyaʔū) (form V) /ja.ta.haj.ja.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of تَهَيَّأَ (tahayyaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatahayyaʔū", "tahayyaʔa"],
-        "k": "تهيأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تهيأتن",
-        "u": "تهيأتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهَيَّأْتُنَّ • (tahayyaʔtunna) (form V) /ta.haj.jaʔ.tun.na/\n# second-person feminine plural past active of تَهَيَّأَ (tahayyaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahayyaʔtunna", "tahayyaʔa"],
-        "k": "تهيأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهيأن",
-        "u": "تتهيأن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَهَيَّأْنَ • (tatahayyaʔna) (form V) /ta.ta.haj.jaʔ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَهَيَّأَ (tahayyaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatahayyaʔna", "tahayyaʔa"],
-        "k": "تهيأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تهيأن",
-        "u": "تهيأن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهَيَّأْنَ • (tahayyaʔna) (form V) /ta.haj.jaʔ.na/\n# inflection of تَهَيَّأَ (tahayyaʔa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahayyaʔna", "tahayyaʔa"],
-        "k": "تهيأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يتهيأن",
-        "u": "يتهيأن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَهَيَّأْنَ • (yatahayyaʔna) (form V) /ja.ta.haj.jaʔ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَهَيَّأَ (tahayyaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatahayyaʔna", "tahayyaʔa"],
-        "k": "تهيأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تهيأتما",
-        "u": "تهيأتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهَيَّأْتُمَا • (tahayyaʔtumā) (form V) /ta.haj.jaʔ.tu.maː/\n# second-person dual past active of تَهَيَّأَ (tahayyaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahayyaʔtumā", "tahayyaʔa"],
-        "k": "تهيأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تهيأتا",
-        "u": "تهيأتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهَيَّأَتَا • (tahayyaʔatā) (form V) /ta.haj.ja.ʔa.taː/\n# third-person feminine dual past active of تَهَيَّأَ (tahayyaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahayyaʔatā", "tahayyaʔa"],
-        "k": "تهيأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهيآن",
-        "u": "تتهيآن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَهَيَّآنِ • (tatahayyaʔāni) (form V) /ta.ta.haj.ja.ʔaː.ni/\n# inflection of تَهَيَّأَ (tahayyaʔa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatahayyaʔāni", "tahayyaʔa"],
-        "k": "تهيأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تهيآ",
-        "u": "تهيآ",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهَيَّآ • (tahayyaʔā) (form V) /ta.haj.ja.ʔaː/\n# inflection of تَهَيَّأَ (tahayyaʔa):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahayyaʔā", "tahayyaʔa"],
-        "k": "تهيأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يتهيآن",
-        "u": "يتهيآن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَهَيَّآنِ • (yatahayyaʔāni) (form V) /ja.ta.haj.ja.ʔaː.ni/\n# third-person masculine dual non-past active indicative of تَهَيَّأَ (tahayyaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatahayyaʔāni", "tahayyaʔa"],
-        "k": "تهيأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهيآ",
-        "u": "تتهيآ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَهَيَّآ • (tatahayyaʔā) (form V) /ta.ta.haj.ja.ʔaː/\n# inflection of تَهَيَّأَ (tahayyaʔa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatahayyaʔā", "tahayyaʔa"],
-        "k": "تهيأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يتهيآ",
-        "u": "يتهيآ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَهَيَّآ • (yatahayyaʔā) (form V) /ja.ta.haj.ja.ʔaː/\n# third-person masculine dual non-past active subjunctive/jussive of تَهَيَّأَ (tahayyaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatahayyaʔā", "tahayyaʔa"],
-        "k": "تهيأ",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "ته",
+  "ses": {
     "harf": "ت",
+    "fasil": "ته",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يتهيأ",
+      "tur": "verb",
+      "baslik": "يتهيأ (form V)\n# يَتَهَيَّأُ (yatahayyaʔu) /ja.ta.haj.ja.ʔu/: third-person masculine singular non-past active indicative of تَهَيَّأَ (tahayyaʔa)\n# يَتَهَيَّأَ (yatahayyaʔa) /ja.ta.haj.ja.ʔa/: third-person masculine singular non-past active subjunctive of تَهَيَّأَ (tahayyaʔa)\n# يَتَهَيَّأْ (yatahayyaʔ) /ja.ta.haj.jaʔ/: third-person masculine singular non-past active jussive of تَهَيَّأَ (tahayyaʔ",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatahayyaʔu", "tahayyaʔa", "yatahayyaʔa"],
+      "kok_yazilis": "تهيأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهيأت",
+      "tur": "verb",
+      "baslik": "تهيأت (form V)\n# تَهَيَّأْتُ (tahayyaʔtu) /ta.haj.jaʔ.tu/: first-person singular past active of تَهَيَّأَ (tahayyaʔa)\n# تَهَيَّأْتَ (tahayyaʔta) /ta.haj.jaʔ.ta/: second-person masculine singular past active of تَهَيَّأَ (tahayyaʔa)\n# تَهَيَّأْتِ (tahayyaʔti) /ta.haj.jaʔ.ti/: second-person feminine singular past active of تَهَيَّأَ (tahayyaʔa)\n# تَهَيَّأَتْ (tahayyaʔat) /ta.haj.ja.ʔat/: third-perso",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahayyaʔtu", "tahayyaʔa", "tahayyaʔta"],
+      "kok_yazilis": "تهيأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهيأ",
+      "tur": "verb",
+      "baslik": "تتهيأ (form V)\n# تَتَهَيَّأُ (tatahayyaʔu) /ta.ta.haj.ja.ʔu/: inflection of تَهَيَّأَ (tahayyaʔa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَهَيَّأَ (tatahayyaʔa) /ta.ta.haj.ja.ʔa/: inflection of تَهَيَّأَ (tahayyaʔa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatahayyaʔu", "tahayyaʔa", "tatahayyaʔa"],
+      "kok_yazilis": "تهيأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهيئين",
+      "tur": "verb",
+      "baslik": "تَتَهَيَّئِينَ • (tatahayyaʔīna) (form V) /ta.ta.haj.ja.ʔiː.na/\n# second-person feminine singular non-past active indicative of تَهَيَّأَ (tahayyaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatahayyaʔīna", "tahayyaʔa"],
+      "kok_yazilis": "تهيأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهيئي",
+      "tur": "verb",
+      "baslik": "تَتَهَيَّئِي • (tatahayyaʔī) (form V) /ta.ta.haj.ja.ʔiː/\n# second-person feminine singular non-past active subjunctive/jussive of تَهَيَّأَ (tahayyaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatahayyaʔī", "tahayyaʔa"],
+      "kok_yazilis": "تهيأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهيئي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهَيَّئِي • (tahayyaʔī) (form V) /ta.haj.ja.ʔiː/\n# second-person feminine singular imperative of تَهَيَّأَ (tahayyaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahayyaʔī", "tahayyaʔa"],
+      "kok_yazilis": "تهيأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتهيأ",
+      "tur": "verb",
+      "baslik": "أتهيأ (form V)\n# أَتَهَيَّأُ (ʔatahayyaʔu) /ʔa.ta.haj.ja.ʔu/: first-person singular non-past active indicative of تَهَيَّأَ (tahayyaʔa)\n# أَتَهَيَّأَ (ʔatahayyaʔa) /ʔa.ta.haj.ja.ʔa/: first-person singular non-past active subjunctive of تَهَيَّأَ (tahayyaʔa)\n# أَتَهَيَّأْ (ʔatahayyaʔ) /ʔa.ta.haj.jaʔ/: first-person singular non-past active jussive of تَهَيَّأَ (tahayyaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔatahayyaʔu", "tahayyaʔa", "ʔatahayyaʔa"],
+      "kok_yazilis": "تهيأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهيأنا",
+      "tur": "verb",
+      "baslik": "تَهَيَّأْنَا • (tahayyaʔnā) (form V) /ta.haj.jaʔ.naː/\n# first-person plural past active of تَهَيَّأَ (tahayyaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahayyaʔnā", "tahayyaʔa"],
+      "kok_yazilis": "تهيأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتهيأ",
+      "tur": "verb",
+      "baslik": "نتهيأ (form V)\n# نَتَهَيَّأُ (natahayyaʔu) /na.ta.haj.ja.ʔu/: first-person plural non-past active indicative of تَهَيَّأَ (tahayyaʔa)\n# نَتَهَيَّأَ (natahayyaʔa) /na.ta.haj.ja.ʔa/: first-person plural non-past active subjunctive of تَهَيَّأَ (tahayyaʔa)\n# نَتَهَيَّأْ (natahayyaʔ) /na.ta.haj.jaʔ/: first-person plural non-past active jussive of تَهَيَّأَ (tahayyaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["natahayyaʔu", "tahayyaʔa", "natahayyaʔa"],
+      "kok_yazilis": "تهيأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهيأتم",
+      "tur": "verb",
+      "baslik": "تَهَيَّأْتُمْ • (tahayyaʔtum) (form V) /ta.haj.jaʔ.tum/\n# second-person masculine plural past active of تَهَيَّأَ (tahayyaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahayyaʔtum", "tahayyaʔa"],
+      "kok_yazilis": "تهيأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهيؤون",
+      "tur": "verb",
+      "baslik": "تَتَهَيَّؤُونَ • (tatahayyaʔūna) (form V) /ta.ta.haj.ja.ʔuː.na/\n# second-person masculine plural non-past active indicative of تَهَيَّأَ (tahayyaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatahayyaʔūna", "tahayyaʔa"],
+      "kok_yazilis": "تهيأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهيؤوا",
+      "tur": "verb",
+      "baslik": "تَتَهَيَّؤُوا • (tatahayyaʔū) (form V) /ta.ta.haj.ja.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of تَهَيَّأَ (tahayyaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatahayyaʔū", "tahayyaʔa"],
+      "kok_yazilis": "تهيأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهيؤوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهَيَّؤُوا • (tahayyaʔū) (form V) /ta.haj.ja.ʔuː/\n# inflection of تَهَيَّأَ (tahayyaʔa):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahayyaʔū", "tahayyaʔa"],
+      "kok_yazilis": "تهيأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتهيؤون",
+      "tur": "verb",
+      "baslik": "يَتَهَيَّؤُونَ • (yatahayyaʔūna) (form V) /ja.ta.haj.ja.ʔuː.na/\n# third-person masculine plural non-past active indicative of تَهَيَّأَ (tahayyaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatahayyaʔūna", "tahayyaʔa"],
+      "kok_yazilis": "تهيأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتهيؤوا",
+      "tur": "verb",
+      "baslik": "يَتَهَيَّؤُوا • (yatahayyaʔū) (form V) /ja.ta.haj.ja.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of تَهَيَّأَ (tahayyaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatahayyaʔū", "tahayyaʔa"],
+      "kok_yazilis": "تهيأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهيأتن",
+      "tur": "verb",
+      "baslik": "تَهَيَّأْتُنَّ • (tahayyaʔtunna) (form V) /ta.haj.jaʔ.tun.na/\n# second-person feminine plural past active of تَهَيَّأَ (tahayyaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahayyaʔtunna", "tahayyaʔa"],
+      "kok_yazilis": "تهيأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهيأن",
+      "tur": "verb",
+      "baslik": "تَتَهَيَّأْنَ • (tatahayyaʔna) (form V) /ta.ta.haj.jaʔ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَهَيَّأَ (tahayyaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatahayyaʔna", "tahayyaʔa"],
+      "kok_yazilis": "تهيأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهيأن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهَيَّأْنَ • (tahayyaʔna) (form V) /ta.haj.jaʔ.na/\n# inflection of تَهَيَّأَ (tahayyaʔa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahayyaʔna", "tahayyaʔa"],
+      "kok_yazilis": "تهيأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتهيأن",
+      "tur": "verb",
+      "baslik": "يَتَهَيَّأْنَ • (yatahayyaʔna) (form V) /ja.ta.haj.jaʔ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَهَيَّأَ (tahayyaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatahayyaʔna", "tahayyaʔa"],
+      "kok_yazilis": "تهيأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهيأتما",
+      "tur": "verb",
+      "baslik": "تَهَيَّأْتُمَا • (tahayyaʔtumā) (form V) /ta.haj.jaʔ.tu.maː/\n# second-person dual past active of تَهَيَّأَ (tahayyaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahayyaʔtumā", "tahayyaʔa"],
+      "kok_yazilis": "تهيأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهيأتا",
+      "tur": "verb",
+      "baslik": "تَهَيَّأَتَا • (tahayyaʔatā) (form V) /ta.haj.ja.ʔa.taː/\n# third-person feminine dual past active of تَهَيَّأَ (tahayyaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahayyaʔatā", "tahayyaʔa"],
+      "kok_yazilis": "تهيأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهيآن",
+      "tur": "verb",
+      "baslik": "تَتَهَيَّآنِ • (tatahayyaʔāni) (form V) /ta.ta.haj.ja.ʔaː.ni/\n# inflection of تَهَيَّأَ (tahayyaʔa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatahayyaʔāni", "tahayyaʔa"],
+      "kok_yazilis": "تهيأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهيآ",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهَيَّآ • (tahayyaʔā) (form V) /ta.haj.ja.ʔaː/\n# inflection of تَهَيَّأَ (tahayyaʔa):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahayyaʔā", "tahayyaʔa"],
+      "kok_yazilis": "تهيأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتهيآن",
+      "tur": "verb",
+      "baslik": "يَتَهَيَّآنِ • (yatahayyaʔāni) (form V) /ja.ta.haj.ja.ʔaː.ni/\n# third-person masculine dual non-past active indicative of تَهَيَّأَ (tahayyaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatahayyaʔāni", "tahayyaʔa"],
+      "kok_yazilis": "تهيأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهيآ",
+      "tur": "verb",
+      "baslik": "تَتَهَيَّآ • (tatahayyaʔā) (form V) /ta.ta.haj.ja.ʔaː/\n# inflection of تَهَيَّأَ (tahayyaʔa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatahayyaʔā", "tahayyaʔa"],
+      "kok_yazilis": "تهيأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتهيآ",
+      "tur": "verb",
+      "baslik": "يَتَهَيَّآ • (yatahayyaʔā) (form V) /ja.ta.haj.ja.ʔaː/\n# third-person masculine dual non-past active subjunctive/jussive of تَهَيَّأَ (tahayyaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatahayyaʔā", "tahayyaʔa"],
+      "kok_yazilis": "تهيأ",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تهيء", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

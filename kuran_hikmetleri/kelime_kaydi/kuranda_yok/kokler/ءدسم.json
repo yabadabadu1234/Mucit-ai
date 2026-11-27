@@ -1,365 +1,287 @@
 {
   "kok": "ءدسم",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءدسم", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أدسمت",
-        "u": "أدسمت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أدسمت (form IV)\n# أَدْسَمْتُ (ʔadsamtu) /ʔad.sam.tu/: first-person singular past active of أَدْسَمَ (ʔadsama)\n# أَدْسَمْتَ (ʔadsamta) /ʔad.sam.ta/: second-person masculine singular past active of أَدْسَمَ (ʔadsama)\n# أَدْسَمْتِ (ʔadsamti) /ʔad.sam.ti/: second-person feminine singular past active of أَدْسَمَ (ʔadsama)\n# أَدْسَمَتْ (ʔadsamat) /ʔad.sa.mat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadsamtu", "ʔadsama", "ʔadsamta"],
-        "k": "أدسم",
-        "yol": "kök"
-      },
-      {
-        "w": "أدسمتما",
-        "u": "أدسمتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أدسمتما (form IV)\n# أَدْسَمْتُمَا (ʔadsamtumā) /ʔad.sam.tu.maː/: second-person dual past active of أَدْسَمَ (ʔadsama)\n# أُدْسِمْتُمَا (ʔudsimtumā) /ʔud.sim.tu.maː/: second-person dual past passive of أَدْسَمَ (ʔadsama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadsamtumā", "ʔadsama", "ʔudsimtumā"],
-        "k": "أدسم",
-        "yol": "kök"
-      },
-      {
-        "w": "أدسمتا",
-        "u": "أدسمتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أدسمتا (form IV)\n# أَدْسَمَتَا (ʔadsamatā) /ʔad.sa.ma.taː/: third-person feminine dual past active of أَدْسَمَ (ʔadsama)\n# أُدْسِمَتَا (ʔudsimatā) /ʔud.si.ma.taː/: third-person feminine dual past passive of أَدْسَمَ (ʔadsama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadsamatā", "ʔadsama", "ʔudsimatā"],
-        "k": "أدسم",
-        "yol": "kök"
-      },
-      {
-        "w": "أدسما",
-        "u": "أدسما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أدسما (form IV)\n# أَدْسَمَا (ʔadsamā) /ʔad.sa.maː/: third-person masculine dual past active of أَدْسَمَ (ʔadsama)\n# أُدْسِمَا (ʔudsimā) /ʔud.si.maː/: third-person masculine dual past passive of أَدْسَمَ (ʔadsama)\n# أَدْسِمَا (ʔadsimā) /ʔad.si.maː/: second-person dual imperative of أَدْسَمَ (ʔadsama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadsamā", "ʔadsama", "ʔudsimā"],
-        "k": "أدسم",
-        "yol": "kök"
-      },
-      {
-        "w": "أدسمنا",
-        "u": "أدسمنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أدسمنا (form IV)\n# أَدْسَمْنَا (ʔadsamnā) /ʔad.sam.naː/: first-person plural past active of أَدْسَمَ (ʔadsama)\n# أُدْسِمْنَا (ʔudsimnā) /ʔud.sim.naː/: first-person plural past passive of أَدْسَمَ (ʔadsama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadsamnā", "ʔadsama", "ʔudsimnā"],
-        "k": "أدسم",
-        "yol": "kök"
-      },
-      {
-        "w": "أدسموا",
-        "u": "أدسموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أدسموا (form IV)\n# أَدْسَمُوا (ʔadsamū) /ʔad.sa.muː/: third-person masculine plural past active of أَدْسَمَ (ʔadsama)\n# أُدْسِمُوا (ʔudsimū) /ʔud.si.muː/: third-person masculine plural past passive of أَدْسَمَ (ʔadsama)\n# أَدْسِمُوا (ʔadsimū) /ʔad.si.muː/: second-person masculine plural imperative of أَدْسَمَ (ʔadsama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadsamū", "ʔadsama", "ʔudsimū"],
-        "k": "أدسم",
-        "yol": "kök"
-      },
-      {
-        "w": "أدسمتن",
-        "u": "أدسمتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أدسمتن (form IV)\n# أَدْسَمْتُنَّ (ʔadsamtunna) /ʔad.sam.tun.na/: second-person feminine plural past active of أَدْسَمَ (ʔadsama)\n# أُدْسِمْتُنَّ (ʔudsimtunna) /ʔud.sim.tun.na/: second-person feminine plural past passive of أَدْسَمَ (ʔadsama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadsamtunna", "ʔadsama", "ʔudsimtunna"],
-        "k": "أدسم",
-        "yol": "kök"
-      },
-      {
-        "w": "أدسمتم",
-        "u": "أدسمتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أدسمتم (form IV)\n# أَدْسَمْتُمْ (ʔadsamtum) /ʔad.sam.tum/: second-person masculine plural past active of أَدْسَمَ (ʔadsama)\n# أُدْسِمْتُمْ (ʔudsimtum) /ʔud.sim.tum/: second-person masculine plural past passive of أَدْسَمَ (ʔadsama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadsamtum", "ʔadsama", "ʔudsimtum"],
-        "k": "أدسم",
-        "yol": "kök"
-      },
-      {
-        "w": "تدسمين",
-        "u": "تدسمين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تدسمين (form IV)\n# تُدْسِمِينَ (tudsimīna) /tud.si.miː.na/: second-person feminine singular non-past active indicative of أَدْسَمَ (ʔadsama)\n# تُدْسَمِينَ (tudsamīna) /tud.sa.miː.na/: second-person feminine singular non-past passive indicative of أَدْسَمَ (ʔadsama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudsimīna", "ʔadsama", "tudsamīna"],
-        "k": "أدسم",
-        "yol": "kök"
-      },
-      {
-        "w": "أدسمن",
-        "u": "أدسمن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أدسمن (form IV)\n# أَدْسَمْنَ (ʔadsamna) /ʔad.sam.na/: third-person feminine plural past active of أَدْسَمَ (ʔadsama)\n# أُدْسِمْنَ (ʔudsimna) /ʔud.sim.na/: third-person feminine plural past passive of أَدْسَمَ (ʔadsama)\n# أَدْسِمْنَ (ʔadsimna) /ʔad.sim.na/: second-person feminine plural imperative of أَدْسَمَ (ʔadsama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadsamna", "ʔadsama", "ʔudsimna"],
-        "k": "أدسم",
-        "yol": "kök"
-      },
-      {
-        "w": "يدسم",
-        "u": "يدسم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يدسم (form IV)\n# يُدْسِمُ (yudsimu) /jud.si.mu/: third-person masculine singular non-past active indicative of أَدْسَمَ (ʔadsama)\n# يُدْسَمُ (yudsamu) /jud.sa.mu/: third-person masculine singular non-past passive indicative of أَدْسَمَ (ʔadsama)\n# يُدْسِمَ (yudsima) /jud.si.ma/: third-person masculine singular non-past active subjunctive of أَدْسَمَ (ʔadsama)\n# يُدْسَمَ (yudsama) /jud.sa.ma/: thir",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudsimu", "ʔadsama", "yudsamu"],
-        "k": "أدسم",
-        "yol": "kök"
-      },
-      {
-        "w": "تدسمان",
-        "u": "تدسمان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تدسمان (form IV)\n# تُدْسِمَانِ (tudsimāni) /tud.si.maː.ni/: inflection of أَدْسَمَ (ʔadsama):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُدْسَمَانِ (tudsamāni) /tud.sa.maː.ni/: inflection of أَدْسَمَ (ʔadsama):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudsimāni", "ʔadsama", "tudsamāni"],
-        "k": "أدسم",
-        "yol": "kök"
-      },
-      {
-        "w": "تدسم",
-        "u": "تدسم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تدسم (form IV)\n# تُدْسِمُ (tudsimu) /tud.si.mu/: inflection of أَدْسَمَ (ʔadsama):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُدْسَمُ (tudsamu) /tud.sa.mu/: inflection of أَدْسَمَ (ʔadsama):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudsimu", "ʔadsama", "tudsamu"],
-        "k": "أدسم",
-        "yol": "kök"
-      },
-      {
-        "w": "يدسمان",
-        "u": "يدسمان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يدسمان (form IV)\n# يُدْسِمَانِ (yudsimāni) /jud.si.maː.ni/: third-person masculine dual non-past active indicative of أَدْسَمَ (ʔadsama)\n# يُدْسَمَانِ (yudsamāni) /jud.sa.maː.ni/: third-person masculine dual non-past passive indicative of أَدْسَمَ (ʔadsama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudsimāni", "ʔadsama", "yudsamāni"],
-        "k": "أدسم",
-        "yol": "kök"
-      },
-      {
-        "w": "ندسم",
-        "u": "ندسم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ندسم (form IV)\n# نُدْسِمُ (nudsimu) /nud.si.mu/: first-person plural non-past active indicative of أَدْسَمَ (ʔadsama)\n# نُدْسَمُ (nudsamu) /nud.sa.mu/: first-person plural non-past passive indicative of أَدْسَمَ (ʔadsama)\n# نُدْسِمَ (nudsima) /nud.si.ma/: first-person plural non-past active subjunctive of أَدْسَمَ (ʔadsama)\n# نُدْسَمَ (nudsama) /nud.sa.ma/: first-person plural non-past passive sub",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nudsimu", "ʔadsama", "nudsamu"],
-        "k": "أدسم",
-        "yol": "kök"
-      },
-      {
-        "w": "تدسمون",
-        "u": "تدسمون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تدسمون (form IV)\n# تُدْسِمُونَ (tudsimūna) /tud.si.muː.na/: second-person masculine plural non-past active indicative of أَدْسَمَ (ʔadsama)\n# تُدْسَمُونَ (tudsamūna) /tud.sa.muː.na/: second-person masculine plural non-past passive indicative of أَدْسَمَ (ʔadsama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudsimūna", "ʔadsama", "tudsamūna"],
-        "k": "أدسم",
-        "yol": "kök"
-      },
-      {
-        "w": "يدسمن",
-        "u": "يدسمن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يدسمن (form IV)\n# يُدْسِمْنَ (yudsimna) /jud.sim.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَدْسَمَ (ʔadsama)\n# يُدْسَمْنَ (yudsamna) /jud.sam.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَدْسَمَ (ʔadsama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudsimna", "ʔadsama", "yudsamna"],
-        "k": "أدسم",
-        "yol": "kök"
-      },
-      {
-        "w": "تدسمن",
-        "u": "تدسمن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تدسمن (form IV)\n# تُدْسِمْنَ (tudsimna) /tud.sim.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَدْسَمَ (ʔadsama)\n# تُدْسَمْنَ (tudsamna) /tud.sam.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَدْسَمَ (ʔadsama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudsimna", "ʔadsama", "tudsamna"],
-        "k": "أدسم",
-        "yol": "kök"
-      },
-      {
-        "w": "تدسما",
-        "u": "تدسما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تدسما (form IV)\n# تُدْسِمَا (tudsimā) /tud.si.maː/: inflection of أَدْسَمَ (ʔadsama):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُدْسَمَا (tudsamā) /tud.sa.maː/: inflection of أَدْسَمَ (ʔadsama):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/ju",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudsimā", "ʔadsama", "tudsamā"],
-        "k": "أدسم",
-        "yol": "kök"
-      },
-      {
-        "w": "يدسمون",
-        "u": "يدسمون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يدسمون (form IV)\n# يُدْسِمُونَ (yudsimūna) /jud.si.muː.na/: third-person masculine plural non-past active indicative of أَدْسَمَ (ʔadsama)\n# يُدْسَمُونَ (yudsamūna) /jud.sa.muː.na/: third-person masculine plural non-past passive indicative of أَدْسَمَ (ʔadsama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudsimūna", "ʔadsama", "yudsamūna"],
-        "k": "أدسم",
-        "yol": "kök"
-      },
-      {
-        "w": "تدسمي",
-        "u": "تدسمي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تدسمي (form IV)\n# تُدْسِمِي (tudsimī) /tud.si.miː/: second-person feminine singular non-past active subjunctive/jussive of أَدْسَمَ (ʔadsama)\n# تُدْسَمِي (tudsamī) /tud.sa.miː/: second-person feminine singular non-past passive subjunctive/jussive of أَدْسَمَ (ʔadsama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudsimī", "ʔadsama", "tudsamī"],
-        "k": "أدسم",
-        "yol": "kök"
-      },
-      {
-        "w": "تدسموا",
-        "u": "تدسموا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تدسموا (form IV)\n# تُدْسِمُوا (tudsimū) /tud.si.muː/: second-person masculine plural non-past active subjunctive/jussive of أَدْسَمَ (ʔadsama)\n# تُدْسَمُوا (tudsamū) /tud.sa.muː/: second-person masculine plural non-past passive subjunctive/jussive of أَدْسَمَ (ʔadsama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudsimū", "ʔadsama", "tudsamū"],
-        "k": "أدسم",
-        "yol": "kök"
-      },
-      {
-        "w": "أدسمي",
-        "u": "أدسمي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَدْسِمِي • (ʔadsimī) (form IV) /ʔad.si.miː/\n# second-person feminine singular imperative of أَدْسَمَ (ʔadsama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadsimī", "ʔadsama"],
-        "k": "أدسم",
-        "yol": "kök"
-      },
-      {
-        "w": "يدسما",
-        "u": "يدسما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يدسما (form IV)\n# يُدْسِمَا (yudsimā) /jud.si.maː/: third-person masculine dual non-past active subjunctive/jussive of أَدْسَمَ (ʔadsama)\n# يُدْسَمَا (yudsamā) /jud.sa.maː/: third-person masculine dual non-past passive subjunctive/jussive of أَدْسَمَ (ʔadsama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudsimā", "ʔadsama", "yudsamā"],
-        "k": "أدسم",
-        "yol": "kök"
-      },
-      {
-        "w": "يدسموا",
-        "u": "يدسموا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يدسموا (form IV)\n# يُدْسِمُوا (yudsimū) /jud.si.muː/: third-person masculine plural non-past active subjunctive/jussive of أَدْسَمَ (ʔadsama)\n# يُدْسَمُوا (yudsamū) /jud.sa.muː/: third-person masculine plural non-past passive subjunctive/jussive of أَدْسَمَ (ʔadsama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudsimū", "ʔadsama", "yudsamū"],
-        "k": "أدسم",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "دس",
+  "ses": {
     "harf": "ء",
+    "fasil": "دس",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "أدسمت",
+      "tur": "verb",
+      "baslik": "أدسمت (form IV)\n# أَدْسَمْتُ (ʔadsamtu) /ʔad.sam.tu/: first-person singular past active of أَدْسَمَ (ʔadsama)\n# أَدْسَمْتَ (ʔadsamta) /ʔad.sam.ta/: second-person masculine singular past active of أَدْسَمَ (ʔadsama)\n# أَدْسَمْتِ (ʔadsamti) /ʔad.sam.ti/: second-person feminine singular past active of أَدْسَمَ (ʔadsama)\n# أَدْسَمَتْ (ʔadsamat) /ʔad.sa.mat/: third-person feminine singular past active ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadsamtu", "ʔadsama", "ʔadsamta"],
+      "kok_yazilis": "أدسم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدسمتما",
+      "tur": "verb",
+      "baslik": "أدسمتما (form IV)\n# أَدْسَمْتُمَا (ʔadsamtumā) /ʔad.sam.tu.maː/: second-person dual past active of أَدْسَمَ (ʔadsama)\n# أُدْسِمْتُمَا (ʔudsimtumā) /ʔud.sim.tu.maː/: second-person dual past passive of أَدْسَمَ (ʔadsama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadsamtumā", "ʔadsama", "ʔudsimtumā"],
+      "kok_yazilis": "أدسم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدسمتا",
+      "tur": "verb",
+      "baslik": "أدسمتا (form IV)\n# أَدْسَمَتَا (ʔadsamatā) /ʔad.sa.ma.taː/: third-person feminine dual past active of أَدْسَمَ (ʔadsama)\n# أُدْسِمَتَا (ʔudsimatā) /ʔud.si.ma.taː/: third-person feminine dual past passive of أَدْسَمَ (ʔadsama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadsamatā", "ʔadsama", "ʔudsimatā"],
+      "kok_yazilis": "أدسم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدسما",
+      "tur": "verb",
+      "baslik": "أدسما (form IV)\n# أَدْسَمَا (ʔadsamā) /ʔad.sa.maː/: third-person masculine dual past active of أَدْسَمَ (ʔadsama)\n# أُدْسِمَا (ʔudsimā) /ʔud.si.maː/: third-person masculine dual past passive of أَدْسَمَ (ʔadsama)\n# أَدْسِمَا (ʔadsimā) /ʔad.si.maː/: second-person dual imperative of أَدْسَمَ (ʔadsama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadsamā", "ʔadsama", "ʔudsimā"],
+      "kok_yazilis": "أدسم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدسمنا",
+      "tur": "verb",
+      "baslik": "أدسمنا (form IV)\n# أَدْسَمْنَا (ʔadsamnā) /ʔad.sam.naː/: first-person plural past active of أَدْسَمَ (ʔadsama)\n# أُدْسِمْنَا (ʔudsimnā) /ʔud.sim.naː/: first-person plural past passive of أَدْسَمَ (ʔadsama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadsamnā", "ʔadsama", "ʔudsimnā"],
+      "kok_yazilis": "أدسم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدسموا",
+      "tur": "verb",
+      "baslik": "أدسموا (form IV)\n# أَدْسَمُوا (ʔadsamū) /ʔad.sa.muː/: third-person masculine plural past active of أَدْسَمَ (ʔadsama)\n# أُدْسِمُوا (ʔudsimū) /ʔud.si.muː/: third-person masculine plural past passive of أَدْسَمَ (ʔadsama)\n# أَدْسِمُوا (ʔadsimū) /ʔad.si.muː/: second-person masculine plural imperative of أَدْسَمَ (ʔadsama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadsamū", "ʔadsama", "ʔudsimū"],
+      "kok_yazilis": "أدسم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدسمتن",
+      "tur": "verb",
+      "baslik": "أدسمتن (form IV)\n# أَدْسَمْتُنَّ (ʔadsamtunna) /ʔad.sam.tun.na/: second-person feminine plural past active of أَدْسَمَ (ʔadsama)\n# أُدْسِمْتُنَّ (ʔudsimtunna) /ʔud.sim.tun.na/: second-person feminine plural past passive of أَدْسَمَ (ʔadsama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadsamtunna", "ʔadsama", "ʔudsimtunna"],
+      "kok_yazilis": "أدسم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدسمتم",
+      "tur": "verb",
+      "baslik": "أدسمتم (form IV)\n# أَدْسَمْتُمْ (ʔadsamtum) /ʔad.sam.tum/: second-person masculine plural past active of أَدْسَمَ (ʔadsama)\n# أُدْسِمْتُمْ (ʔudsimtum) /ʔud.sim.tum/: second-person masculine plural past passive of أَدْسَمَ (ʔadsama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadsamtum", "ʔadsama", "ʔudsimtum"],
+      "kok_yazilis": "أدسم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدسمين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تدسمين (form IV)\n# تُدْسِمِينَ (tudsimīna) /tud.si.miː.na/: second-person feminine singular non-past active indicative of أَدْسَمَ (ʔadsama)\n# تُدْسَمِينَ (tudsamīna) /tud.sa.miː.na/: second-person feminine singular non-past passive indicative of أَدْسَمَ (ʔadsama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudsimīna", "ʔadsama", "tudsamīna"],
+      "kok_yazilis": "أدسم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدسمن",
+      "tur": "verb",
+      "baslik": "أدسمن (form IV)\n# أَدْسَمْنَ (ʔadsamna) /ʔad.sam.na/: third-person feminine plural past active of أَدْسَمَ (ʔadsama)\n# أُدْسِمْنَ (ʔudsimna) /ʔud.sim.na/: third-person feminine plural past passive of أَدْسَمَ (ʔadsama)\n# أَدْسِمْنَ (ʔadsimna) /ʔad.sim.na/: second-person feminine plural imperative of أَدْسَمَ (ʔadsama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadsamna", "ʔadsama", "ʔudsimna"],
+      "kok_yazilis": "أدسم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدسم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يدسم (form IV)\n# يُدْسِمُ (yudsimu) /jud.si.mu/: third-person masculine singular non-past active indicative of أَدْسَمَ (ʔadsama)\n# يُدْسَمُ (yudsamu) /jud.sa.mu/: third-person masculine singular non-past passive indicative of أَدْسَمَ (ʔadsama)\n# يُدْسِمَ (yudsima) /jud.si.ma/: third-person masculine singular non-past active subjunctive of أَدْسَمَ (ʔadsama)\n# يُدْسَمَ (yudsama) /jud.sa.ma/: thir",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudsimu", "ʔadsama", "yudsamu"],
+      "kok_yazilis": "أدسم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدسمان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تدسمان (form IV)\n# تُدْسِمَانِ (tudsimāni) /tud.si.maː.ni/: inflection of أَدْسَمَ (ʔadsama):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُدْسَمَانِ (tudsamāni) /tud.sa.maː.ni/: inflection of أَدْسَمَ (ʔadsama):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudsimāni", "ʔadsama", "tudsamāni"],
+      "kok_yazilis": "أدسم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدسم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تدسم (form IV)\n# تُدْسِمُ (tudsimu) /tud.si.mu/: inflection of أَدْسَمَ (ʔadsama):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُدْسَمُ (tudsamu) /tud.sa.mu/: inflection of أَدْسَمَ (ʔadsama):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudsimu", "ʔadsama", "tudsamu"],
+      "kok_yazilis": "أدسم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدسمان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يدسمان (form IV)\n# يُدْسِمَانِ (yudsimāni) /jud.si.maː.ni/: third-person masculine dual non-past active indicative of أَدْسَمَ (ʔadsama)\n# يُدْسَمَانِ (yudsamāni) /jud.sa.maː.ni/: third-person masculine dual non-past passive indicative of أَدْسَمَ (ʔadsama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudsimāni", "ʔadsama", "yudsamāni"],
+      "kok_yazilis": "أدسم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ندسم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ندسم (form IV)\n# نُدْسِمُ (nudsimu) /nud.si.mu/: first-person plural non-past active indicative of أَدْسَمَ (ʔadsama)\n# نُدْسَمُ (nudsamu) /nud.sa.mu/: first-person plural non-past passive indicative of أَدْسَمَ (ʔadsama)\n# نُدْسِمَ (nudsima) /nud.si.ma/: first-person plural non-past active subjunctive of أَدْسَمَ (ʔadsama)\n# نُدْسَمَ (nudsama) /nud.sa.ma/: first-person plural non-past passive sub",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nudsimu", "ʔadsama", "nudsamu"],
+      "kok_yazilis": "أدسم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدسمون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تدسمون (form IV)\n# تُدْسِمُونَ (tudsimūna) /tud.si.muː.na/: second-person masculine plural non-past active indicative of أَدْسَمَ (ʔadsama)\n# تُدْسَمُونَ (tudsamūna) /tud.sa.muː.na/: second-person masculine plural non-past passive indicative of أَدْسَمَ (ʔadsama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudsimūna", "ʔadsama", "tudsamūna"],
+      "kok_yazilis": "أدسم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدسمن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يدسمن (form IV)\n# يُدْسِمْنَ (yudsimna) /jud.sim.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَدْسَمَ (ʔadsama)\n# يُدْسَمْنَ (yudsamna) /jud.sam.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَدْسَمَ (ʔadsama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudsimna", "ʔadsama", "yudsamna"],
+      "kok_yazilis": "أدسم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدسمن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تدسمن (form IV)\n# تُدْسِمْنَ (tudsimna) /tud.sim.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَدْسَمَ (ʔadsama)\n# تُدْسَمْنَ (tudsamna) /tud.sam.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَدْسَمَ (ʔadsama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudsimna", "ʔadsama", "tudsamna"],
+      "kok_yazilis": "أدسم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدسما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تدسما (form IV)\n# تُدْسِمَا (tudsimā) /tud.si.maː/: inflection of أَدْسَمَ (ʔadsama):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُدْسَمَا (tudsamā) /tud.sa.maː/: inflection of أَدْسَمَ (ʔadsama):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/ju",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudsimā", "ʔadsama", "tudsamā"],
+      "kok_yazilis": "أدسم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدسمون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يدسمون (form IV)\n# يُدْسِمُونَ (yudsimūna) /jud.si.muː.na/: third-person masculine plural non-past active indicative of أَدْسَمَ (ʔadsama)\n# يُدْسَمُونَ (yudsamūna) /jud.sa.muː.na/: third-person masculine plural non-past passive indicative of أَدْسَمَ (ʔadsama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudsimūna", "ʔadsama", "yudsamūna"],
+      "kok_yazilis": "أدسم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدسمي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تدسمي (form IV)\n# تُدْسِمِي (tudsimī) /tud.si.miː/: second-person feminine singular non-past active subjunctive/jussive of أَدْسَمَ (ʔadsama)\n# تُدْسَمِي (tudsamī) /tud.sa.miː/: second-person feminine singular non-past passive subjunctive/jussive of أَدْسَمَ (ʔadsama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudsimī", "ʔadsama", "tudsamī"],
+      "kok_yazilis": "أدسم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدسموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تدسموا (form IV)\n# تُدْسِمُوا (tudsimū) /tud.si.muː/: second-person masculine plural non-past active subjunctive/jussive of أَدْسَمَ (ʔadsama)\n# تُدْسَمُوا (tudsamū) /tud.sa.muː/: second-person masculine plural non-past passive subjunctive/jussive of أَدْسَمَ (ʔadsama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudsimū", "ʔadsama", "tudsamū"],
+      "kok_yazilis": "أدسم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدسمي",
+      "tur": "verb",
+      "baslik": "أَدْسِمِي • (ʔadsimī) (form IV) /ʔad.si.miː/\n# second-person feminine singular imperative of أَدْسَمَ (ʔadsama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadsimī", "ʔadsama"],
+      "kok_yazilis": "أدسم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدسما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يدسما (form IV)\n# يُدْسِمَا (yudsimā) /jud.si.maː/: third-person masculine dual non-past active subjunctive/jussive of أَدْسَمَ (ʔadsama)\n# يُدْسَمَا (yudsamā) /jud.sa.maː/: third-person masculine dual non-past passive subjunctive/jussive of أَدْسَمَ (ʔadsama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudsimā", "ʔadsama", "yudsamā"],
+      "kok_yazilis": "أدسم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدسموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يدسموا (form IV)\n# يُدْسِمُوا (yudsimū) /jud.si.muː/: third-person masculine plural non-past active subjunctive/jussive of أَدْسَمَ (ʔadsama)\n# يُدْسَمُوا (yudsamū) /jud.sa.muː/: third-person masculine plural non-past passive subjunctive/jussive of أَدْسَمَ (ʔadsama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudsimū", "ʔadsama", "yudsamū"],
+      "kok_yazilis": "أدسم",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءدسم", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

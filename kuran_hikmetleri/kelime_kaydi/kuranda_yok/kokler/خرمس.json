@@ -1,81 +1,71 @@
 {
   "kok": "خرمس",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "خرمس", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "اخرنمس",
-        "u": "اخرنمس",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "اِخْرَنْمَسَ • (iḵranmasa) IIIq (non-past يَخْرَنْمِسُ (yaḵranmisu), verbal noun اِخْرِنْمَاس (iḵrinmās))",
-        "t": "From the root خ ر م س (ḵ r m s); possibly related to خِرْمِس (ḵirmis, “dark night”).",
-        "s": [
-          ["ar-root", "خ ر م س (ḵ r m s)"]
-        ],
-        "g": ["to humble oneself, submit, cringe", "to keep silent"],
-        "r": ["iḵranmasa"],
-        "el": [
-          ["خ ر م س", "Appendix:Arabic roots/خ ر م س"],
-          ["خِرْمِس", "خرمس#Arabic"],
-          ["dark", "dark"],
-          ["night", "night"]
-        ],
-        "k": "خرمس",
-        "yol": "kök"
-      },
-      {
-        "w": "اخرنماس",
-        "u": "اخرنماس",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "اِخْرِنْمَاس • (iḵrinmās) m",
-        "g": ["verbal noun of اِخْرَنْمَسَ (iḵranmasa) (form IIIq)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["اِخْرَنْمَسَ"],
-        "r": ["iḵrinmās"],
-        "yol": "asıl madde"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "خر",
+  "ses": {
     "harf": "خ",
+    "fasil": "خر",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "اخرنمس",
+      "tur": "verb",
+      "baslik": "اِخْرَنْمَسَ • (iḵranmasa) IIIq (non-past يَخْرَنْمِسُ (yaḵranmisu), verbal noun اِخْرِنْمَاس (iḵrinmās))",
+      "etim_sablon": [
+        ["ar-root", "خ ر م س (ḵ r m s)"]
+      ],
+      "anlam": ["to humble oneself, submit, cringe", "to keep silent"],
+      "okunus": ["iḵranmasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اخرنماس",
+      "tur": "noun",
+      "baslik": "اِخْرِنْمَاس • (iḵrinmās) m",
+      "anlam": ["verbal noun of اِخْرَنْمَسَ (iḵranmasa) (form IIIq)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["اِخْرَنْمَسَ"],
+      "okunus": ["iḵrinmās"],
+      "bag": "asıl madde"
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "From the root خ ر م س (ḵ r m s); possibly related to خِرْمِس (ḵirmis, “dark night”).",
+      "kognatlar": [
+        ["خ ر م س", "Appendix:Arabic roots/خ ر م س"],
+        ["خِرْمِس", "خرمس#Arabic"],
+        ["dark", "dark"],
+        ["night", "night"]
+      ]
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "خرمس", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "ust": {
       "kume": 6,
       "merkez_kok": "كفت",
@@ -95,6 +85,10 @@
       "boy": 7
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

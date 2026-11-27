@@ -1,626 +1,491 @@
 {
   "kok": "ءراد",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءراد", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "نرد",
-        "u": "نرد",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "نرد (form IV)\n# نُرِدْ (nurid) /nu.rid/: first-person plural non-past active jussive of أَرَادَ (ʔarāda)\n# نُرَدْ (nurad) /nu.rad/: first-person plural non-past passive jussive of أَرَادَ (ʔarāda)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nurid", "ʔarāda", "nurad"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "ترد",
-        "u": "ترد",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "ترد (form IV)\n# تُرِدْ (turid) /tu.rid/: inflection of أَرَادَ (ʔarāda):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُرَدْ (turad) /tu.rad/: inflection of أَرَادَ (ʔarāda):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turid", "ʔarāda", "turad"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "يريد",
-        "u": "يريد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يريد (form IV)\n# يُرِيدُ (yurīdu) /ju.riː.du/: third-person masculine singular non-past active indicative of أَرَادَ (ʔarāda)\n# يُرِيدَ (yurīda) /ju.riː.da/: third-person masculine singular non-past active subjunctive of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurīdu", "ʔarāda", "yurīda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "يراد",
-        "u": "يراد",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يراد (form IV)\n# يُرَادُ (yurādu) /ju.raː.du/: third-person masculine singular non-past passive indicative of أَرَادَ (ʔarāda)\n# يُرَادَ (yurāda) /ju.raː.da/: third-person masculine singular non-past passive subjunctive of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurādu", "ʔarāda", "yurāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "يرد",
-        "u": "يرد",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يرد (form IV)\n# يُرِدْ (yurid) /ju.rid/: third-person masculine singular non-past active jussive of أَرَادَ (ʔarāda)\n# يُرَدْ (yurad) /ju.rad/: third-person masculine singular non-past passive jussive of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurid", "ʔarāda", "yurad"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "تراد",
-        "u": "تراد",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تراد (form IV)\n# تُرَادُ (turādu) /tu.raː.du/: inflection of أَرَادَ (ʔarāda):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُرَادَ (turāda) /tu.raː.da/: inflection of أَرَادَ (ʔarāda):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turādu", "ʔarāda", "turāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "أرد",
-        "u": "أرد",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "أرد (form IV)\n# أُرِدْ (ʔurid) /ʔu.rid/: first-person singular non-past active jussive of أَرَادَ (ʔarāda)\n# أُرَدْ (ʔurad) /ʔu.rad/: first-person singular non-past passive jussive of أَرَادَ (ʔarāda)\n# أَرِدْ (ʔarid) /ʔa.rid/: second-person masculine singular imperative of أَرَادَ (ʔarāda)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔurid", "ʔarāda", "ʔurad"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "أريد",
-        "u": "أريد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أريد (form IV)\n# أُرِيدَ (ʔurīda) /ʔu.riː.da/: inflection of أَرَادَ (ʔarāda):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُرِيدُ (ʔurīdu) /ʔu.riː.du/: first-person singular non-past active indicative of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔurīda", "ʔarāda", "ʔurīdu"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "أرادت",
-        "u": "أرادت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَرَادَتْ • (ʔarādat) (form IV) /ʔa.raː.dat/\n# third-person feminine singular past active of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔarādat", "ʔarāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "تريد",
-        "u": "تريد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تريد (form IV)\n# تُرِيدُ (turīdu) /tu.riː.du/: inflection of أَرَادَ (ʔarāda):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُرِيدَ (turīda) /tu.riː.da/: inflection of أَرَادَ (ʔarāda):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turīdu", "ʔarāda", "turīda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "أريدت",
-        "u": "أريدت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُرِيدَتْ • (ʔurīdat) (form IV) /ʔu.riː.dat/\n# third-person feminine singular past passive of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔurīdat", "ʔarāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "أردت",
-        "u": "أردت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أردت (form IV)\n# أَرَدْتُ (ʔaradtu) /ʔa.rad.tu/: first-person singular past active of أَرَادَ (ʔarāda)\n# أَرَدْتَ (ʔaradta) /ʔa.rad.ta/: second-person masculine singular past active of أَرَادَ (ʔarāda)\n# أَرَدْتِ (ʔaradti) /ʔa.rad.ti/: second-person feminine singular past active of أَرَادَ (ʔarāda)\n# أُرِدْتُ (ʔuridtu) /ʔu.rid.tu/: first-person singular past passive of أَرَادَ (ʔarāda)\n# أُرِدْتَ ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaradtu", "ʔarāda", "ʔaradta"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "تريدين",
-        "u": "تريدين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُرِيدِينَ • (turīdīna) (form IV) /tu.riː.diː.na/\n# second-person feminine singular non-past active indicative of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turīdīna", "ʔarāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "تريدي",
-        "u": "تريدي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُرِيدِي • (turīdī) (form IV) /tu.riː.diː/\n# second-person feminine singular non-past active subjunctive/jussive of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turīdī", "ʔarāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "أريدي",
-        "u": "أريدي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَرِيدِي • (ʔarīdī) (form IV) /ʔa.riː.diː/\n# second-person feminine singular imperative of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔarīdī", "ʔarāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "ترادين",
-        "u": "ترادين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُرَادِينَ • (turādīna) (form IV) /tu.raː.diː.na/\n# second-person feminine singular non-past passive indicative of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turādīna", "ʔarāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "ترادي",
-        "u": "ترادي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُرَادِي • (turādī) (form IV) /tu.raː.diː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turādī", "ʔarāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "أردن",
-        "u": "أردن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أردن (form IV)\n# أَرَدْنَ (ʔaradna) /ʔa.rad.na/: third-person feminine plural past active of أَرَادَ (ʔarāda)\n# أُرِدْنَ (ʔuridna) /ʔu.rid.na/: third-person feminine plural past passive of أَرَادَ (ʔarāda)\n# أَرِدْنَ (ʔaridna) /ʔa.rid.na/: second-person feminine plural imperative of أَرَادَ (ʔarāda)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaradna", "ʔarāda", "ʔuridna"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "أردنا",
-        "u": "أردنا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أردنا (form IV)\n# أَرَدْنَا (ʔaradnā) /ʔa.rad.naː/: first-person plural past active of أَرَادَ (ʔarāda)\n# أُرِدْنَا (ʔuridnā) /ʔu.rid.naː/: first-person plural past passive of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaradnā", "ʔarāda", "ʔuridnā"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "نريد",
-        "u": "نريد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نريد (form IV)\n# نُرِيدُ (nurīdu) /nu.riː.du/: first-person plural non-past active indicative of أَرَادَ (ʔarāda)\n# نُرِيدَ (nurīda) /nu.riː.da/: first-person plural non-past active subjunctive of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nurīdu", "ʔarāda", "nurīda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "نراد",
-        "u": "نراد",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نراد (form IV)\n# نُرَادُ (nurādu) /nu.raː.du/: first-person plural non-past passive indicative of أَرَادَ (ʔarāda)\n# نُرَادَ (nurāda) /nu.raː.da/: first-person plural non-past passive subjunctive of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nurādu", "ʔarāda", "nurāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "أردتم",
-        "u": "أردتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أردتم (form IV)\n# أَرَدْتُمْ (ʔaradtum) /ʔa.rad.tum/: second-person masculine plural past active of أَرَادَ (ʔarāda)\n# أُرِدْتُمْ (ʔuridtum) /ʔu.rid.tum/: second-person masculine plural past passive of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaradtum", "ʔarāda", "ʔuridtum"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "تريدون",
-        "u": "تريدون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُرِيدُونَ • (turīdūna) (form IV) /tu.riː.duː.na/\n# second-person masculine plural non-past active indicative of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turīdūna", "ʔarāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "تريدوا",
-        "u": "تريدوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُرِيدُوا • (turīdū) (form IV) /tu.riː.duː/\n# second-person masculine plural non-past active subjunctive/jussive of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turīdū", "ʔarāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "ترادون",
-        "u": "ترادون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُرَادُونَ • (turādūna) (form IV) /tu.raː.duː.na/\n# second-person masculine plural non-past passive indicative of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turādūna", "ʔarāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "أرادوا",
-        "u": "أرادوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَرَادُوا • (ʔarādū) (form IV) /ʔa.raː.duː/\n# third-person masculine plural past active of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔarādū", "ʔarāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "يريدون",
-        "u": "يريدون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُرِيدُونَ • (yurīdūna) (form IV) /ju.riː.duː.na/\n# third-person masculine plural non-past active indicative of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurīdūna", "ʔarāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "يريدوا",
-        "u": "يريدوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُرِيدُوا • (yurīdū) (form IV) /ju.riː.duː/\n# third-person masculine plural non-past active subjunctive/jussive of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurīdū", "ʔarāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "أريدوا",
-        "u": "أريدوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أريدوا (form IV)\n# أُرِيدُوا (ʔurīdū) /ʔu.riː.duː/: third-person masculine plural past passive of أَرَادَ (ʔarāda)\n# أَرِيدُوا (ʔarīdū) /ʔa.riː.duː/: second-person masculine plural imperative of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔurīdū", "ʔarāda", "ʔarīdū"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "يرادون",
-        "u": "يرادون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُرَادُونَ • (yurādūna) (form IV) /ju.raː.duː.na/\n# third-person masculine plural non-past passive indicative of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurādūna", "ʔarāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "يرادوا",
-        "u": "يرادوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُرَادُوا • (yurādū) (form IV) /ju.raː.duː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurādū", "ʔarāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "ترادوا",
-        "u": "ترادوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُرَادُوا • (turādū) (form IV) /tu.raː.duː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turādū", "ʔarāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "أردتن",
-        "u": "أردتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أردتن (form IV)\n# أَرَدْتُنَّ (ʔaradtunna) /ʔa.rad.tun.na/: second-person feminine plural past active of أَرَادَ (ʔarāda)\n# أُرِدْتُنَّ (ʔuridtunna) /ʔu.rid.tun.na/: second-person feminine plural past passive of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaradtunna", "ʔarāda", "ʔuridtunna"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "تردن",
-        "u": "تردن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تردن (form IV)\n# تُرِدْنَ (turidna) /tu.rid.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَرَادَ (ʔarāda)\n# تُرَدْنَ (turadna) /tu.rad.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turidna", "ʔarāda", "turadna"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "يردن",
-        "u": "يردن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يردن (form IV)\n# يُرِدْنَ (yuridna) /ju.rid.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَرَادَ (ʔarāda)\n# يُرَدْنَ (yuradna) /ju.rad.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuridna", "ʔarāda", "yuradna"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "أرادا",
-        "u": "أرادا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَرَادَا • (ʔarādā) (form IV) /ʔa.raː.daː/\n# third-person masculine dual past active of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔarādā", "ʔarāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "أردتما",
-        "u": "أردتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أردتما (form IV)\n# أَرَدْتُمَا (ʔaradtumā) /ʔa.rad.tu.maː/: second-person dual past active of أَرَادَ (ʔarāda)\n# أُرِدْتُمَا (ʔuridtumā) /ʔu.rid.tu.maː/: second-person dual past passive of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaradtumā", "ʔarāda", "ʔuridtumā"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "أريدا",
-        "u": "أريدا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أريدا (form IV)\n# أُرِيدَا (ʔurīdā) /ʔu.riː.daː/: third-person masculine dual past passive of أَرَادَ (ʔarāda)\n# أَرِيدَا (ʔarīdā) /ʔa.riː.daː/: second-person dual imperative of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔurīdā", "ʔarāda", "ʔarīdā"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "أرادتا",
-        "u": "أرادتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَرَادَتَا • (ʔarādatā) (form IV) /ʔa.raː.da.taː/\n# third-person feminine dual past active of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔarādatā", "ʔarāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "أريدتا",
-        "u": "أريدتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُرِيدَتَا • (ʔurīdatā) (form IV) /ʔu.riː.da.taː/\n# third-person feminine dual past passive of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔurīdatā", "ʔarāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "تريدان",
-        "u": "تريدان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُرِيدَانِ • (turīdāni) (form IV) /tu.riː.daː.ni/\n# inflection of أَرَادَ (ʔarāda):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turīdāni", "ʔarāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "ترادان",
-        "u": "ترادان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُرَادَانِ • (turādāni) (form IV) /tu.raː.daː.ni/\n# inflection of أَرَادَ (ʔarāda):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turādāni", "ʔarāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "يريدان",
-        "u": "يريدان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُرِيدَانِ • (yurīdāni) (form IV) /ju.riː.daː.ni/\n# third-person masculine dual non-past active indicative of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurīdāni", "ʔarāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "تريدا",
-        "u": "تريدا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُرِيدَا • (turīdā) (form IV) /tu.riː.daː/\n# inflection of أَرَادَ (ʔarāda):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turīdā", "ʔarāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "يريدا",
-        "u": "يريدا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُرِيدَا • (yurīdā) (form IV) /ju.riː.daː/\n# third-person masculine dual non-past active subjunctive/jussive of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurīdā", "ʔarāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "يرادان",
-        "u": "يرادان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُرَادَانِ • (yurādāni) (form IV) /ju.raː.daː.ni/\n# third-person masculine dual non-past passive indicative of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurādāni", "ʔarāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "يرادا",
-        "u": "يرادا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُرَادَا • (yurādā) (form IV) /ju.raː.daː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَرَادَ (ʔarāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurādā", "ʔarāda"],
-        "k": "أراد",
-        "yol": "kök"
-      },
-      {
-        "w": "ترادا",
-        "u": "ترادا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُرَادَا • (turādā) (form IV) /tu.raː.daː/\n# inflection of أَرَادَ (ʔarāda):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turādā", "ʔarāda"],
-        "k": "أراد",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "رد",
+  "ses": {
     "harf": "ء",
+    "fasil": "رد",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "نرد",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "نرد (form IV)\n# نُرِدْ (nurid) /nu.rid/: first-person plural non-past active jussive of أَرَادَ (ʔarāda)\n# نُرَدْ (nurad) /nu.rad/: first-person plural non-past passive jussive of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nurid", "ʔarāda", "nurad"],
+      "kok_yazilis": "أراد"
+    },
+    {
+      "madde": "ترد",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "ترد (form IV)\n# تُرِدْ (turid) /tu.rid/: inflection of أَرَادَ (ʔarāda):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُرَدْ (turad) /tu.rad/: inflection of أَرَادَ (ʔarāda):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turid", "ʔarāda", "turad"],
+      "kok_yazilis": "أراد"
+    },
+    {
+      "madde": "يريد",
+      "tur": "verb",
+      "baslik": "يريد (form IV)\n# يُرِيدُ (yurīdu) /ju.riː.du/: third-person masculine singular non-past active indicative of أَرَادَ (ʔarāda)\n# يُرِيدَ (yurīda) /ju.riː.da/: third-person masculine singular non-past active subjunctive of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurīdu", "ʔarāda", "yurīda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يراد",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يراد (form IV)\n# يُرَادُ (yurādu) /ju.raː.du/: third-person masculine singular non-past passive indicative of أَرَادَ (ʔarāda)\n# يُرَادَ (yurāda) /ju.raː.da/: third-person masculine singular non-past passive subjunctive of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurādu", "ʔarāda", "yurāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يرد",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يرد (form IV)\n# يُرِدْ (yurid) /ju.rid/: third-person masculine singular non-past active jussive of أَرَادَ (ʔarāda)\n# يُرَدْ (yurad) /ju.rad/: third-person masculine singular non-past passive jussive of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurid", "ʔarāda", "yurad"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تراد",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تراد (form IV)\n# تُرَادُ (turādu) /tu.raː.du/: inflection of أَرَادَ (ʔarāda):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُرَادَ (turāda) /tu.raː.da/: inflection of أَرَادَ (ʔarāda):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turādu", "ʔarāda", "turāda"],
+      "kok_yazilis": "أراد"
+    },
+    {
+      "madde": "أرد",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "أرد (form IV)\n# أُرِدْ (ʔurid) /ʔu.rid/: first-person singular non-past active jussive of أَرَادَ (ʔarāda)\n# أُرَدْ (ʔurad) /ʔu.rad/: first-person singular non-past passive jussive of أَرَادَ (ʔarāda)\n# أَرِدْ (ʔarid) /ʔa.rid/: second-person masculine singular imperative of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔurid", "ʔarāda", "ʔurad"],
+      "kok_yazilis": "أراد"
+    },
+    {
+      "madde": "أريد",
+      "tur": "verb",
+      "baslik": "أريد (form IV)\n# أُرِيدَ (ʔurīda) /ʔu.riː.da/: inflection of أَرَادَ (ʔarāda):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُرِيدُ (ʔurīdu) /ʔu.riː.du/: first-person singular non-past active indicative of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔurīda", "ʔarāda", "ʔurīdu"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أرادت",
+      "tur": "verb",
+      "baslik": "أَرَادَتْ • (ʔarādat) (form IV) /ʔa.raː.dat/\n# third-person feminine singular past active of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔarādat", "ʔarāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تريد",
+      "tur": "verb",
+      "baslik": "تريد (form IV)\n# تُرِيدُ (turīdu) /tu.riː.du/: inflection of أَرَادَ (ʔarāda):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُرِيدَ (turīda) /tu.riː.da/: inflection of أَرَادَ (ʔarāda):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turīdu", "ʔarāda", "turīda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أريدت",
+      "tur": "verb",
+      "baslik": "أُرِيدَتْ • (ʔurīdat) (form IV) /ʔu.riː.dat/\n# third-person feminine singular past passive of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔurīdat", "ʔarāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أردت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أردت (form IV)\n# أَرَدْتُ (ʔaradtu) /ʔa.rad.tu/: first-person singular past active of أَرَادَ (ʔarāda)\n# أَرَدْتَ (ʔaradta) /ʔa.rad.ta/: second-person masculine singular past active of أَرَادَ (ʔarāda)\n# أَرَدْتِ (ʔaradti) /ʔa.rad.ti/: second-person feminine singular past active of أَرَادَ (ʔarāda)\n# أُرِدْتُ (ʔuridtu) /ʔu.rid.tu/: first-person singular past passive of أَرَادَ (ʔarāda)\n# أُرِدْتَ ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaradtu", "ʔarāda", "ʔaradta"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تريدين",
+      "tur": "verb",
+      "baslik": "تُرِيدِينَ • (turīdīna) (form IV) /tu.riː.diː.na/\n# second-person feminine singular non-past active indicative of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turīdīna", "ʔarāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تريدي",
+      "tur": "verb",
+      "baslik": "تُرِيدِي • (turīdī) (form IV) /tu.riː.diː/\n# second-person feminine singular non-past active subjunctive/jussive of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turīdī", "ʔarāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أريدي",
+      "tur": "verb",
+      "baslik": "أَرِيدِي • (ʔarīdī) (form IV) /ʔa.riː.diː/\n# second-person feminine singular imperative of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔarīdī", "ʔarāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ترادين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُرَادِينَ • (turādīna) (form IV) /tu.raː.diː.na/\n# second-person feminine singular non-past passive indicative of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turādīna", "ʔarāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ترادي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُرَادِي • (turādī) (form IV) /tu.raː.diː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turādī", "ʔarāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أردن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أردن (form IV)\n# أَرَدْنَ (ʔaradna) /ʔa.rad.na/: third-person feminine plural past active of أَرَادَ (ʔarāda)\n# أُرِدْنَ (ʔuridna) /ʔu.rid.na/: third-person feminine plural past passive of أَرَادَ (ʔarāda)\n# أَرِدْنَ (ʔaridna) /ʔa.rid.na/: second-person feminine plural imperative of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaradna", "ʔarāda", "ʔuridna"],
+      "kok_yazilis": "أراد"
+    },
+    {
+      "madde": "أردنا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أردنا (form IV)\n# أَرَدْنَا (ʔaradnā) /ʔa.rad.naː/: first-person plural past active of أَرَادَ (ʔarāda)\n# أُرِدْنَا (ʔuridnā) /ʔu.rid.naː/: first-person plural past passive of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaradnā", "ʔarāda", "ʔuridnā"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نريد",
+      "tur": "verb",
+      "baslik": "نريد (form IV)\n# نُرِيدُ (nurīdu) /nu.riː.du/: first-person plural non-past active indicative of أَرَادَ (ʔarāda)\n# نُرِيدَ (nurīda) /nu.riː.da/: first-person plural non-past active subjunctive of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nurīdu", "ʔarāda", "nurīda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نراد",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نراد (form IV)\n# نُرَادُ (nurādu) /nu.raː.du/: first-person plural non-past passive indicative of أَرَادَ (ʔarāda)\n# نُرَادَ (nurāda) /nu.raː.da/: first-person plural non-past passive subjunctive of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nurādu", "ʔarāda", "nurāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أردتم",
+      "tur": "verb",
+      "baslik": "أردتم (form IV)\n# أَرَدْتُمْ (ʔaradtum) /ʔa.rad.tum/: second-person masculine plural past active of أَرَادَ (ʔarāda)\n# أُرِدْتُمْ (ʔuridtum) /ʔu.rid.tum/: second-person masculine plural past passive of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaradtum", "ʔarāda", "ʔuridtum"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تريدون",
+      "tur": "verb",
+      "baslik": "تُرِيدُونَ • (turīdūna) (form IV) /tu.riː.duː.na/\n# second-person masculine plural non-past active indicative of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turīdūna", "ʔarāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تريدوا",
+      "tur": "verb",
+      "baslik": "تُرِيدُوا • (turīdū) (form IV) /tu.riː.duː/\n# second-person masculine plural non-past active subjunctive/jussive of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turīdū", "ʔarāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ترادون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُرَادُونَ • (turādūna) (form IV) /tu.raː.duː.na/\n# second-person masculine plural non-past passive indicative of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turādūna", "ʔarāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أرادوا",
+      "tur": "verb",
+      "baslik": "أَرَادُوا • (ʔarādū) (form IV) /ʔa.raː.duː/\n# third-person masculine plural past active of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔarādū", "ʔarāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يريدون",
+      "tur": "verb",
+      "baslik": "يُرِيدُونَ • (yurīdūna) (form IV) /ju.riː.duː.na/\n# third-person masculine plural non-past active indicative of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurīdūna", "ʔarāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يريدوا",
+      "tur": "verb",
+      "baslik": "يُرِيدُوا • (yurīdū) (form IV) /ju.riː.duː/\n# third-person masculine plural non-past active subjunctive/jussive of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurīdū", "ʔarāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أريدوا",
+      "tur": "verb",
+      "baslik": "أريدوا (form IV)\n# أُرِيدُوا (ʔurīdū) /ʔu.riː.duː/: third-person masculine plural past passive of أَرَادَ (ʔarāda)\n# أَرِيدُوا (ʔarīdū) /ʔa.riː.duː/: second-person masculine plural imperative of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔurīdū", "ʔarāda", "ʔarīdū"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يرادون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُرَادُونَ • (yurādūna) (form IV) /ju.raː.duː.na/\n# third-person masculine plural non-past passive indicative of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurādūna", "ʔarāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يرادوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُرَادُوا • (yurādū) (form IV) /ju.raː.duː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurādū", "ʔarāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ترادوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُرَادُوا • (turādū) (form IV) /tu.raː.duː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turādū", "ʔarāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أردتن",
+      "tur": "verb",
+      "baslik": "أردتن (form IV)\n# أَرَدْتُنَّ (ʔaradtunna) /ʔa.rad.tun.na/: second-person feminine plural past active of أَرَادَ (ʔarāda)\n# أُرِدْتُنَّ (ʔuridtunna) /ʔu.rid.tun.na/: second-person feminine plural past passive of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaradtunna", "ʔarāda", "ʔuridtunna"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تردن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تردن (form IV)\n# تُرِدْنَ (turidna) /tu.rid.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَرَادَ (ʔarāda)\n# تُرَدْنَ (turadna) /tu.rad.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turidna", "ʔarāda", "turadna"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يردن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يردن (form IV)\n# يُرِدْنَ (yuridna) /ju.rid.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَرَادَ (ʔarāda)\n# يُرَدْنَ (yuradna) /ju.rad.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuridna", "ʔarāda", "yuradna"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أرادا",
+      "tur": "verb",
+      "baslik": "أَرَادَا • (ʔarādā) (form IV) /ʔa.raː.daː/\n# third-person masculine dual past active of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔarādā", "ʔarāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أردتما",
+      "tur": "verb",
+      "baslik": "أردتما (form IV)\n# أَرَدْتُمَا (ʔaradtumā) /ʔa.rad.tu.maː/: second-person dual past active of أَرَادَ (ʔarāda)\n# أُرِدْتُمَا (ʔuridtumā) /ʔu.rid.tu.maː/: second-person dual past passive of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaradtumā", "ʔarāda", "ʔuridtumā"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أريدا",
+      "tur": "verb",
+      "baslik": "أريدا (form IV)\n# أُرِيدَا (ʔurīdā) /ʔu.riː.daː/: third-person masculine dual past passive of أَرَادَ (ʔarāda)\n# أَرِيدَا (ʔarīdā) /ʔa.riː.daː/: second-person dual imperative of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔurīdā", "ʔarāda", "ʔarīdā"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أرادتا",
+      "tur": "verb",
+      "baslik": "أَرَادَتَا • (ʔarādatā) (form IV) /ʔa.raː.da.taː/\n# third-person feminine dual past active of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔarādatā", "ʔarāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أريدتا",
+      "tur": "verb",
+      "baslik": "أُرِيدَتَا • (ʔurīdatā) (form IV) /ʔu.riː.da.taː/\n# third-person feminine dual past passive of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔurīdatā", "ʔarāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تريدان",
+      "tur": "verb",
+      "baslik": "تُرِيدَانِ • (turīdāni) (form IV) /tu.riː.daː.ni/\n# inflection of أَرَادَ (ʔarāda):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turīdāni", "ʔarāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ترادان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُرَادَانِ • (turādāni) (form IV) /tu.raː.daː.ni/\n# inflection of أَرَادَ (ʔarāda):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turādāni", "ʔarāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يريدان",
+      "tur": "verb",
+      "baslik": "يُرِيدَانِ • (yurīdāni) (form IV) /ju.riː.daː.ni/\n# third-person masculine dual non-past active indicative of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurīdāni", "ʔarāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تريدا",
+      "tur": "verb",
+      "baslik": "تُرِيدَا • (turīdā) (form IV) /tu.riː.daː/\n# inflection of أَرَادَ (ʔarāda):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turīdā", "ʔarāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يريدا",
+      "tur": "verb",
+      "baslik": "يُرِيدَا • (yurīdā) (form IV) /ju.riː.daː/\n# third-person masculine dual non-past active subjunctive/jussive of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurīdā", "ʔarāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يرادان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُرَادَانِ • (yurādāni) (form IV) /ju.raː.daː.ni/\n# third-person masculine dual non-past passive indicative of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurādāni", "ʔarāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يرادا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُرَادَا • (yurādā) (form IV) /ju.raː.daː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَرَادَ (ʔarāda)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurādā", "ʔarāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ترادا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُرَادَا • (turādā) (form IV) /tu.raː.daː/\n# inflection of أَرَادَ (ʔarāda):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turādā", "ʔarāda"],
+      "kok_yazilis": "أراد",
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ءراد", "r6"]
+  ],
+  "mana": {
     "ince": "body_of_water.n.01",
     "orta": "noun.object",
     "ust": "tabiat",
@@ -628,22 +493,15 @@
     "dayanak_tanim": "a river in Palestine that empties into the Dead Sea; John the Baptist baptized Jesus in the Jordan",
     "synset_sayisi": 2
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["artifact.n.01", "stream.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["artifact.n.01", "stream.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

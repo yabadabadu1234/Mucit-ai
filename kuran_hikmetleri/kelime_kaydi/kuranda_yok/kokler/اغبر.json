@@ -1,417 +1,298 @@
 {
   "kok": "اغبر",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "اغبر", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أغبر",
-        "u": "أغبر",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أغبر (form IX)\n# أَغْبَرُّ (ʔaḡbarru) /ʔaɣ.bar.ru/: first-person singular non-past active indicative of اِغْبَرَّ (iḡbarra)\n# أَغْبَرَّ (ʔaḡbarra) /ʔaɣ.bar.ra/: first-person singular non-past active subjunctive/jussive of اِغْبَرَّ (iḡbarra)\n# أَغْبَرِّ (ʔaḡbarri) /ʔaɣ.bar.ri/: first-person singular non-past active jussive of اِغْبَرَّ (iḡbarra)",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["ʔaḡbarru", "iḡbarra", "ʔaḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "اغبررت",
-        "u": "اغبررت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اغبررت (form IX)\n# اِغْبَرَرْتُ (iḡbarartu) /iɣ.ba.rar.tu/: first-person singular past active of اِغْبَرَّ (iḡbarra)\n# اِغْبَرَرْتَ (iḡbararta) /iɣ.ba.rar.ta/: second-person masculine singular past active of اِغْبَرَّ (iḡbarra)\n# اِغْبَرَرْتِ (iḡbararti) /iɣ.ba.rar.ti/: second-person feminine singular past active of اِغْبَرَّ (iḡbarra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iḡbarartu", "iḡbarra", "iḡbararta"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "اغبررتما",
-        "u": "اغبررتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِغْبَرَرْتُمَا • (iḡbarartumā) (form IX) /iɣ.ba.rar.tu.maː/\n# second-person dual past active of اِغْبَرَّ (iḡbarra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iḡbarartumā", "iḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "اغبرا",
-        "u": "اغبرا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِغْبَرَّا • (iḡbarrā) (form IX) /iɣ.bar.raː/\n# inflection of اِغْبَرَّ (iḡbarra):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iḡbarrā", "iḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "اغبرت",
-        "u": "اغبرت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِغْبَرَّتْ • (iḡbarrat) (form IX) /iɣ.bar.rat/\n# third-person feminine singular past active of اِغْبَرَّ (iḡbarra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iḡbarrat", "iḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "اغبررتم",
-        "u": "اغبررتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِغْبَرَرْتُمْ • (iḡbarartum) (form IX) /iɣ.ba.rar.tum/\n# second-person masculine plural past active of اِغْبَرَّ (iḡbarra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iḡbarartum", "iḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "اغبررتن",
-        "u": "اغبررتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِغْبَرَرْتُنَّ • (iḡbarartunna) (form IX) /iɣ.ba.rar.tun.na/\n# second-person feminine plural past active of اِغْبَرَّ (iḡbarra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iḡbarartunna", "iḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "اغبررنا",
-        "u": "اغبررنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِغْبَرَرْنَا • (iḡbararnā) (form IX) /iɣ.ba.rar.naː/\n# first-person plural past active of اِغْبَرَّ (iḡbarra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iḡbararnā", "iḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "اغبروا",
-        "u": "اغبروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِغْبَرُّوا • (iḡbarrū) (form IX) /iɣ.bar.ruː/\n# inflection of اِغْبَرَّ (iḡbarra):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iḡbarrū", "iḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "يغبر",
-        "u": "يغبر",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يغبر (form IX)\n# يَغْبَرُّ (yaḡbarru) /jaɣ.bar.ru/: third-person masculine singular non-past active indicative of اِغْبَرَّ (iḡbarra)\n# يَغْبَرَّ (yaḡbarra) /jaɣ.bar.ra/: third-person masculine singular non-past active subjunctive/jussive of اِغْبَرَّ (iḡbarra)\n# يَغْبَرِّ (yaḡbarri) /jaɣ.bar.ri/: third-person masculine singular non-past active jussive of اِغْبَرَّ (iḡbarra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["yaḡbarru", "iḡbarra", "yaḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "اغبررن",
-        "u": "اغبررن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اغبررن (form IX)\n# اِغْبَرَرْنَ (iḡbararna) /iɣ.ba.rar.na/: third-person feminine plural past active of اِغْبَرَّ (iḡbarra)\n# اِغْبَرِرْنَ (iḡbarirna) /iɣ.ba.rir.na/: second-person feminine plural imperative of اِغْبَرَّ (iḡbarra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iḡbararna", "iḡbarra", "iḡbarirna"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "تغبر",
-        "u": "تغبر",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تغبر (form IX)\n# تَغْبَرُّ (taḡbarru) /taɣ.bar.ru/: inflection of اِغْبَرَّ (iḡbarra):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَغْبَرَّ (taḡbarra) /taɣ.bar.ra/: inflection of اِغْبَرَّ (iḡbarra):\n## second-person masculine singular non-past active subjunctive/jussive\n## third-person feminine singular non-past ac",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["taḡbarru", "iḡbarra", "taḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "تغبرون",
-        "u": "تغبرون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغْبَرُّونَ • (taḡbarrūna) (form IX) /taɣ.bar.ruː.na/\n# second-person masculine plural non-past active indicative of اِغْبَرَّ (iḡbarra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["taḡbarrūna", "iḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "نغبر",
-        "u": "نغبر",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نغبر (form IX)\n# نَغْبَرُّ (naḡbarru) /naɣ.bar.ru/: first-person plural non-past active indicative of اِغْبَرَّ (iḡbarra)\n# نَغْبَرَّ (naḡbarra) /naɣ.bar.ra/: first-person plural non-past active subjunctive/jussive of اِغْبَرَّ (iḡbarra)\n# نَغْبَرِّ (naḡbarri) /naɣ.bar.ri/: first-person plural non-past active jussive of اِغْبَرَّ (iḡbarra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["naḡbarru", "iḡbarra", "naḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "تغبران",
-        "u": "تغبران",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغْبَرَّانِ • (taḡbarrāni) (form IX) /taɣ.bar.raː.ni/\n# inflection of اِغْبَرَّ (iḡbarra):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["taḡbarrāni", "iḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "تغبررن",
-        "u": "تغبررن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغْبَرِرْنَ • (taḡbarirna) (form IX) /taɣ.ba.rir.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِغْبَرَّ (iḡbarra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["taḡbarirna", "iḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "يغبران",
-        "u": "يغبران",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَغْبَرَّانِ • (yaḡbarrāni) (form IX) /jaɣ.bar.raː.ni/\n# third-person masculine dual non-past active indicative of اِغْبَرَّ (iḡbarra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["yaḡbarrāni", "iḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "يغبرون",
-        "u": "يغبرون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَغْبَرُّونَ • (yaḡbarrūna) (form IX) /jaɣ.bar.ruː.na/\n# third-person masculine plural non-past active indicative of اِغْبَرَّ (iḡbarra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["yaḡbarrūna", "iḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "يغبررن",
-        "u": "يغبررن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَغْبَرِرْنَ • (yaḡbarirna) (form IX) /jaɣ.ba.rir.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِغْبَرَّ (iḡbarra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["yaḡbarirna", "iḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "اغبرتا",
-        "u": "اغبرتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِغْبَرَّتَا • (iḡbarratā) (form IX) /iɣ.bar.ra.taː/\n# third-person feminine dual past active of اِغْبَرَّ (iḡbarra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iḡbarratā", "iḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "تغبرين",
-        "u": "تغبرين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغْبَرِّينَ • (taḡbarrīna) (form IX) /taɣ.bar.riː.na/\n# second-person feminine singular non-past active indicative of اِغْبَرَّ (iḡbarra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["taḡbarrīna", "iḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "تغبري",
-        "u": "تغبري",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغْبَرِّي • (taḡbarrī) (form IX) /taɣ.bar.riː/\n# second-person feminine singular non-past active subjunctive/jussive of اِغْبَرَّ (iḡbarra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["taḡbarrī", "iḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "تغبرا",
-        "u": "تغبرا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغْبَرَّا • (taḡbarrā) (form IX) /taɣ.bar.raː/\n# inflection of اِغْبَرَّ (iḡbarra):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["taḡbarrā", "iḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "يغبرا",
-        "u": "يغبرا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَغْبَرَّا • (yaḡbarrā) (form IX) /jaɣ.bar.raː/\n# third-person masculine dual non-past active subjunctive/jussive of اِغْبَرَّ (iḡbarra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["yaḡbarrā", "iḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "تغبروا",
-        "u": "تغبروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغْبَرُّوا • (taḡbarrū) (form IX) /taɣ.bar.ruː/\n# second-person masculine plural non-past active subjunctive/jussive of اِغْبَرَّ (iḡbarra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["taḡbarrū", "iḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "يغبروا",
-        "u": "يغبروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَغْبَرُّوا • (yaḡbarrū) (form IX) /jaɣ.bar.ruː/\n# third-person masculine plural non-past active subjunctive/jussive of اِغْبَرَّ (iḡbarra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["yaḡbarrū", "iḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "أغبرر",
-        "u": "أغبرر",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَغْبَرِرْ • (ʔaḡbarir) (form IX) /ʔaɣ.ba.rir/\n# first-person singular non-past active jussive of اِغْبَرَّ (iḡbarra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["ʔaḡbarir", "iḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "تغبرر",
-        "u": "تغبرر",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغْبَرِرْ • (taḡbarir) (form IX) /taɣ.ba.rir/\n# inflection of اِغْبَرَّ (iḡbarra):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["taḡbarir", "iḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "نغبرر",
-        "u": "نغبرر",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَغْبَرِرْ • (naḡbarir) (form IX) /naɣ.ba.rir/\n# first-person plural non-past active jussive of اِغْبَرَّ (iḡbarra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["naḡbarir", "iḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "اغبرر",
-        "u": "اغبرر",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِغْبَرِرْ • (iḡbarir) (form IX) /iɣ.ba.rir/\n# second-person masculine singular imperative of اِغْبَرَّ (iḡbarra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iḡbarir", "iḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "يغبرر",
-        "u": "يغبرر",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَغْبَرِرْ • (yaḡbarir) (form IX) /jaɣ.ba.rir/\n# third-person masculine singular non-past active jussive of اِغْبَرَّ (iḡbarra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["yaḡbarir", "iḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      },
-      {
-        "w": "اغبري",
-        "u": "اغبري",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِغْبَرِّي • (iḡbarrī) (form IX) /iɣ.bar.riː/\n# second-person feminine singular imperative of اِغْبَرَّ (iḡbarra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iḡbarrī", "iḡbarra"],
-        "k": "اغبر",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "غب",
+  "ses": {
     "harf": "ا",
+    "fasil": "غب",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "أغبر",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أغبر (form IX)\n# أَغْبَرُّ (ʔaḡbarru) /ʔaɣ.bar.ru/: first-person singular non-past active indicative of اِغْبَرَّ (iḡbarra)\n# أَغْبَرَّ (ʔaḡbarra) /ʔaɣ.bar.ra/: first-person singular non-past active subjunctive/jussive of اِغْبَرَّ (iḡbarra)\n# أَغْبَرِّ (ʔaḡbarri) /ʔaɣ.bar.ri/: first-person singular non-past active jussive of اِغْبَرَّ (iḡbarra)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["ʔaḡbarru", "iḡbarra", "ʔaḡbarra"]
+    },
+    {
+      "madde": "اغبررت",
+      "tur": "verb",
+      "baslik": "اغبررت (form IX)\n# اِغْبَرَرْتُ (iḡbarartu) /iɣ.ba.rar.tu/: first-person singular past active of اِغْبَرَّ (iḡbarra)\n# اِغْبَرَرْتَ (iḡbararta) /iɣ.ba.rar.ta/: second-person masculine singular past active of اِغْبَرَّ (iḡbarra)\n# اِغْبَرَرْتِ (iḡbararti) /iɣ.ba.rar.ti/: second-person feminine singular past active of اِغْبَرَّ (iḡbarra)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iḡbarartu", "iḡbarra", "iḡbararta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اغبررتما",
+      "tur": "verb",
+      "baslik": "اِغْبَرَرْتُمَا • (iḡbarartumā) (form IX) /iɣ.ba.rar.tu.maː/\n# second-person dual past active of اِغْبَرَّ (iḡbarra)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iḡbarartumā", "iḡbarra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اغبرا",
+      "tur": "verb",
+      "baslik": "اِغْبَرَّا • (iḡbarrā) (form IX) /iɣ.bar.raː/\n# inflection of اِغْبَرَّ (iḡbarra):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iḡbarrā", "iḡbarra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اغبرت",
+      "tur": "verb",
+      "baslik": "اِغْبَرَّتْ • (iḡbarrat) (form IX) /iɣ.bar.rat/\n# third-person feminine singular past active of اِغْبَرَّ (iḡbarra)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iḡbarrat", "iḡbarra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اغبررتم",
+      "tur": "verb",
+      "baslik": "اِغْبَرَرْتُمْ • (iḡbarartum) (form IX) /iɣ.ba.rar.tum/\n# second-person masculine plural past active of اِغْبَرَّ (iḡbarra)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iḡbarartum", "iḡbarra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اغبررتن",
+      "tur": "verb",
+      "baslik": "اِغْبَرَرْتُنَّ • (iḡbarartunna) (form IX) /iɣ.ba.rar.tun.na/\n# second-person feminine plural past active of اِغْبَرَّ (iḡbarra)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iḡbarartunna", "iḡbarra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اغبررنا",
+      "tur": "verb",
+      "baslik": "اِغْبَرَرْنَا • (iḡbararnā) (form IX) /iɣ.ba.rar.naː/\n# first-person plural past active of اِغْبَرَّ (iḡbarra)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iḡbararnā", "iḡbarra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اغبروا",
+      "tur": "verb",
+      "baslik": "اِغْبَرُّوا • (iḡbarrū) (form IX) /iɣ.bar.ruː/\n# inflection of اِغْبَرَّ (iḡbarra):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iḡbarrū", "iḡbarra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغبر",
+      "tur": "verb",
+      "baslik": "يغبر (form IX)\n# يَغْبَرُّ (yaḡbarru) /jaɣ.bar.ru/: third-person masculine singular non-past active indicative of اِغْبَرَّ (iḡbarra)\n# يَغْبَرَّ (yaḡbarra) /jaɣ.bar.ra/: third-person masculine singular non-past active subjunctive/jussive of اِغْبَرَّ (iḡbarra)\n# يَغْبَرِّ (yaḡbarri) /jaɣ.bar.ri/: third-person masculine singular non-past active jussive of اِغْبَرَّ (iḡbarra)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["yaḡbarru", "iḡbarra", "yaḡbarra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اغبررن",
+      "tur": "verb",
+      "baslik": "اغبررن (form IX)\n# اِغْبَرَرْنَ (iḡbararna) /iɣ.ba.rar.na/: third-person feminine plural past active of اِغْبَرَّ (iḡbarra)\n# اِغْبَرِرْنَ (iḡbarirna) /iɣ.ba.rir.na/: second-person feminine plural imperative of اِغْبَرَّ (iḡbarra)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iḡbararna", "iḡbarra", "iḡbarirna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغبر",
+      "tur": "verb",
+      "baslik": "تغبر (form IX)\n# تَغْبَرُّ (taḡbarru) /taɣ.bar.ru/: inflection of اِغْبَرَّ (iḡbarra):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَغْبَرَّ (taḡbarra) /taɣ.bar.ra/: inflection of اِغْبَرَّ (iḡbarra):\n## second-person masculine singular non-past active subjunctive/jussive\n## third-person feminine singular non-past ac",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["taḡbarru", "iḡbarra", "taḡbarra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغبرون",
+      "tur": "verb",
+      "baslik": "تَغْبَرُّونَ • (taḡbarrūna) (form IX) /taɣ.bar.ruː.na/\n# second-person masculine plural non-past active indicative of اِغْبَرَّ (iḡbarra)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["taḡbarrūna", "iḡbarra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نغبر",
+      "tur": "verb",
+      "baslik": "نغبر (form IX)\n# نَغْبَرُّ (naḡbarru) /naɣ.bar.ru/: first-person plural non-past active indicative of اِغْبَرَّ (iḡbarra)\n# نَغْبَرَّ (naḡbarra) /naɣ.bar.ra/: first-person plural non-past active subjunctive/jussive of اِغْبَرَّ (iḡbarra)\n# نَغْبَرِّ (naḡbarri) /naɣ.bar.ri/: first-person plural non-past active jussive of اِغْبَرَّ (iḡbarra)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["naḡbarru", "iḡbarra", "naḡbarra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغبران",
+      "tur": "verb",
+      "baslik": "تَغْبَرَّانِ • (taḡbarrāni) (form IX) /taɣ.bar.raː.ni/\n# inflection of اِغْبَرَّ (iḡbarra):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["taḡbarrāni", "iḡbarra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغبررن",
+      "tur": "verb",
+      "baslik": "تَغْبَرِرْنَ • (taḡbarirna) (form IX) /taɣ.ba.rir.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِغْبَرَّ (iḡbarra)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["taḡbarirna", "iḡbarra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغبران",
+      "tur": "verb",
+      "baslik": "يَغْبَرَّانِ • (yaḡbarrāni) (form IX) /jaɣ.bar.raː.ni/\n# third-person masculine dual non-past active indicative of اِغْبَرَّ (iḡbarra)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["yaḡbarrāni", "iḡbarra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغبرون",
+      "tur": "verb",
+      "baslik": "يَغْبَرُّونَ • (yaḡbarrūna) (form IX) /jaɣ.bar.ruː.na/\n# third-person masculine plural non-past active indicative of اِغْبَرَّ (iḡbarra)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["yaḡbarrūna", "iḡbarra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغبررن",
+      "tur": "verb",
+      "baslik": "يَغْبَرِرْنَ • (yaḡbarirna) (form IX) /jaɣ.ba.rir.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِغْبَرَّ (iḡbarra)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["yaḡbarirna", "iḡbarra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اغبرتا",
+      "tur": "verb",
+      "baslik": "اِغْبَرَّتَا • (iḡbarratā) (form IX) /iɣ.bar.ra.taː/\n# third-person feminine dual past active of اِغْبَرَّ (iḡbarra)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iḡbarratā", "iḡbarra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغبرين",
+      "tur": "verb",
+      "baslik": "تَغْبَرِّينَ • (taḡbarrīna) (form IX) /taɣ.bar.riː.na/\n# second-person feminine singular non-past active indicative of اِغْبَرَّ (iḡbarra)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["taḡbarrīna", "iḡbarra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغبري",
+      "tur": "verb",
+      "baslik": "تَغْبَرِّي • (taḡbarrī) (form IX) /taɣ.bar.riː/\n# second-person feminine singular non-past active subjunctive/jussive of اِغْبَرَّ (iḡbarra)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["taḡbarrī", "iḡbarra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغبرا",
+      "tur": "verb",
+      "baslik": "تَغْبَرَّا • (taḡbarrā) (form IX) /taɣ.bar.raː/\n# inflection of اِغْبَرَّ (iḡbarra):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["taḡbarrā", "iḡbarra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغبرا",
+      "tur": "verb",
+      "baslik": "يَغْبَرَّا • (yaḡbarrā) (form IX) /jaɣ.bar.raː/\n# third-person masculine dual non-past active subjunctive/jussive of اِغْبَرَّ (iḡbarra)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["yaḡbarrā", "iḡbarra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغبروا",
+      "tur": "verb",
+      "baslik": "تَغْبَرُّوا • (taḡbarrū) (form IX) /taɣ.bar.ruː/\n# second-person masculine plural non-past active subjunctive/jussive of اِغْبَرَّ (iḡbarra)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["taḡbarrū", "iḡbarra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغبروا",
+      "tur": "verb",
+      "baslik": "يَغْبَرُّوا • (yaḡbarrū) (form IX) /jaɣ.bar.ruː/\n# third-person masculine plural non-past active subjunctive/jussive of اِغْبَرَّ (iḡbarra)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["yaḡbarrū", "iḡbarra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أغبرر",
+      "tur": "verb",
+      "baslik": "أَغْبَرِرْ • (ʔaḡbarir) (form IX) /ʔaɣ.ba.rir/\n# first-person singular non-past active jussive of اِغْبَرَّ (iḡbarra)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["ʔaḡbarir", "iḡbarra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغبرر",
+      "tur": "verb",
+      "baslik": "تَغْبَرِرْ • (taḡbarir) (form IX) /taɣ.ba.rir/\n# inflection of اِغْبَرَّ (iḡbarra):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["taḡbarir", "iḡbarra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نغبرر",
+      "tur": "verb",
+      "baslik": "نَغْبَرِرْ • (naḡbarir) (form IX) /naɣ.ba.rir/\n# first-person plural non-past active jussive of اِغْبَرَّ (iḡbarra)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["naḡbarir", "iḡbarra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اغبرر",
+      "tur": "verb",
+      "baslik": "اِغْبَرِرْ • (iḡbarir) (form IX) /iɣ.ba.rir/\n# second-person masculine singular imperative of اِغْبَرَّ (iḡbarra)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iḡbarir", "iḡbarra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغبرر",
+      "tur": "verb",
+      "baslik": "يَغْبَرِرْ • (yaḡbarir) (form IX) /jaɣ.ba.rir/\n# third-person masculine singular non-past active jussive of اِغْبَرَّ (iḡbarra)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["yaḡbarir", "iḡbarra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اغبري",
+      "tur": "verb",
+      "baslik": "اِغْبَرِّي • (iḡbarrī) (form IX) /iɣ.bar.riː/\n# second-person feminine singular imperative of اِغْبَرَّ (iḡbarra)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iḡbarrī", "iḡbarra"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "اغبر", "r6"]
+  ],
+  "mana": {
     "ince": "scatter.v.03",
     "orta": "verb.contact",
     "ust": "fiil ve hadise",
@@ -419,22 +300,15 @@
     "dayanak_tanim": "distribute loosely",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["scatter.v.03"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["scatter.v.03"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

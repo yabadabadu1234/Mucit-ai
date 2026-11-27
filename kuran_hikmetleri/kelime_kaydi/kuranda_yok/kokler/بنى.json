@@ -1,583 +1,428 @@
 {
   "kok": "بنى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "بنى", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "بنت",
-        "u": "بنت",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "بَنَتْ • (banat) (form I) /ba.nat/\n# third-person feminine singular past active of بَنَى (banā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["banat", "banā"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "ابن",
-        "u": "ابن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "اِبْنِ • (ibni) (form I) /ib.ni/\n# second-person masculine singular imperative of بَنَى (banā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ibni", "banā"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "بنين",
-        "u": "بنين",
-        "p": "noun",
-        "n": "1",
-        "h": "ar-head",
-        "e": "بَنِين • (banīn) m pl",
-        "g": ["accusative/genitive plural of اِبْن (ibn)"],
-        "tag": ["accusative", "form-of", "genitive", "plural"],
-        "fo": ["اِبْن"],
-        "r": ["banīn"],
-        "ipa": ["/ba.niːn/"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "بنين",
-        "u": "بنين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "بنين (form I)\n# بَنَيْنَ (banayna) /ba.naj.na/: third-person feminine plural past active of بَنَى (banā)\n# بُنِينَ (bunīna) /bu.niː.na/: third-person feminine plural past passive of بَنَى (banā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["banayna", "banā", "bunīna"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبناء",
-        "u": "أبناء",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "أَبْنَاء • (ʔabnāʔ) m pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of اِبْن (ibn)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["اِبْن"],
-        "r": ["ʔabnāʔ"],
-        "ipa": ["/ʔab.naːʔ/"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "بنون",
-        "u": "بنون",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "بَنُون • (banūn) m pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of اِبْن (ibn)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["اِبْن"],
-        "r": ["banūn"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "بني",
-        "u": "بني",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "بُنِيَ • (buniya) (form I) /bu.ni.ja/\n# third-person masculine singular past passive of بَنَى (banā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["buniya", "banā"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "بنية",
-        "u": "بنية",
-        "p": "adj",
-        "n": "3",
-        "h": "ar-head",
-        "e": "بُنِّيَّة • (bunniyya)",
-        "g": ["feminine singular of بُنِّيّ (bunniyy)"],
-        "tag": ["feminine", "form-of", "singular"],
-        "fo": ["بُنِّيّ"],
-        "r": ["bunniyya"],
-        "ipa": ["/bun.nij.ja/"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "يبني",
-        "u": "يبني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبني (form I)\n# يَبْنِي (yabnī) /jab.niː/: third-person masculine singular non-past active indicative of بَنَى (banā)\n# يَبْنِيَ (yabniya) /jab.ni.ja/: third-person masculine singular non-past active subjunctive of بَنَى (banā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabnī", "banā", "yabniya"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "يبنى",
-        "u": "يبنى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُبْنَى • (yubnā) (form I) /jub.naː/\n# third-person masculine singular non-past passive indicative/subjunctive of بَنَى (banā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yubnā", "banā"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "بنيون",
-        "u": "بنيون",
-        "p": "adj",
-        "h": "ar-head",
-        "e": "بُنِّيُّون • (bunniyyūn)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["masculine plural of بُنِّيّ (bunniyy)"],
-        "tag": ["form-of", "masculine", "plural"],
-        "fo": ["بُنِّيّ"],
-        "r": ["bunniyyūn"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "يبن",
-        "u": "يبن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يبن (form I)\n# يَبْنِ (yabni) /jab.ni/: third-person masculine singular non-past active jussive of بَنَى (banā)\n# يُبْنَ (yubna) /jub.na/: third-person masculine singular non-past passive jussive of بَنَى (banā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabni", "banā", "yubna"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبن",
-        "u": "تبن",
-        "p": "verb",
-        "n": "10",
-        "h": "ar-verb form",
-        "e": "تبن (form I)\n# تَبْنِ (tabni) /tab.ni/: inflection of بَنَى (banā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُبْنَ (tubna) /tub.na/: inflection of بَنَى (banā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabni", "banā", "tubna"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبني",
-        "u": "تبني",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تبني (form I)\n# تَبْنِي (tabnī) /tab.niː/: inflection of بَنَى (banā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَبْنِيَ (tabniya) /tab.ni.ja/: inflection of بَنَى (banā):\n## second-person masculine singular non-past active subjunctive\n## third",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabnī", "banā", "tabniya"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "بنيت",
-        "u": "بنيت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بنيت (form I)\n# بَنَيْتُ (banaytu) /ba.naj.tu/: first-person singular past active of بَنَى (banā)\n# بَنَيْتَ (banayta) /ba.naj.ta/: second-person masculine singular past active of بَنَى (banā)\n# بَنَيْتِ (banayti) /ba.naj.ti/: second-person feminine singular past active of بَنَى (banā)\n# بُنِيتُ (bunītu) /bu.niː.tu/: first-person singular past passive of بَنَى (banā)\n# بُنِيتَ (bunīta) /bu.niː.ta/",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["banaytu", "banā", "banayta"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبنين",
-        "u": "تبنين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تبنين (form I)\n# تَبْنِينَ (tabnīna) /tab.niː.na/: inflection of بَنَى (banā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُبْنَيْنَ (tubnayna) /tub.naj.na/: inflection of بَنَى (banā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passi",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabnīna", "banā", "tubnayna"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "ابني",
-        "u": "ابني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِبْنِي • (ibnī) (form I) /ib.niː/\n# second-person feminine singular imperative of بَنَى (banā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ibnī", "banā"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبن",
-        "u": "أبن",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "أبن (form I)\n# أَبْنِ (ʔabni) /ʔab.ni/: first-person singular non-past active jussive of بَنَى (banā)\n# أُبْنَ (ʔubna) /ʔub.na/: first-person singular non-past passive jussive of بَنَى (banā)",
-        "tag": ["form-i", "no-gloss", "obsolete"],
-        "r": ["ʔabni", "banā", "ʔubna"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبني",
-        "u": "أبني",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أبني (form I)\n# أَبْنِي (ʔabnī) /ʔab.niː/: first-person singular non-past active indicative of بَنَى (banā)\n# أَبْنِيَ (ʔabniya) /ʔab.ni.ja/: first-person singular non-past active subjunctive of بَنَى (banā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔabnī", "banā", "ʔabniya"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبنى",
-        "u": "أبنى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُبْنَى • (ʔubnā) (form I) /ʔub.naː/\n# first-person singular non-past passive indicative/subjunctive of بَنَى (banā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔubnā", "banā"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "نبن",
-        "u": "نبن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نبن (form I)\n# نَبْنِ (nabni) /nab.ni/: first-person plural non-past active jussive of بَنَى (banā)\n# نُبْنَ (nubna) /nub.na/: first-person plural non-past passive jussive of بَنَى (banā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nabni", "banā", "nubna"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "بنينا",
-        "u": "بنينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بنينا (form I)\n# بَنَيْنَا (banaynā) /ba.naj.naː/: first-person plural past active of بَنَى (banā)\n# بُنِينَا (bunīnā) /bu.niː.naː/: first-person plural past passive of بَنَى (banā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["banaynā", "banā", "bunīnā"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "نبني",
-        "u": "نبني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نبني (form I)\n# نَبْنِي (nabnī) /nab.niː/: first-person plural non-past active indicative of بَنَى (banā)\n# نَبْنِيَ (nabniya) /nab.ni.ja/: first-person plural non-past active subjunctive of بَنَى (banā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nabnī", "banā", "nabniya"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "نبنى",
-        "u": "نبنى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُبْنَى • (nubnā) (form I) /nub.naː/\n# first-person plural non-past passive indicative/subjunctive of بَنَى (banā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nubnā", "banā"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "بنيتم",
-        "u": "بنيتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بنيتم (form I)\n# بَنَيْتُمْ (banaytum) /ba.naj.tum/: second-person masculine plural past active of بَنَى (banā)\n# بُنِيتُمْ (bunītum) /bu.niː.tum/: second-person masculine plural past passive of بَنَى (banā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["banaytum", "banā", "bunītum"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبنون",
-        "u": "تبنون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تبنون (form I)\n# تَبْنُونَ (tabnūna) /tab.nuː.na/: second-person masculine plural non-past active indicative of بَنَى (banā)\n# تُبْنَوْنَ (tubnawna) /tub.naw.na/: second-person masculine plural non-past passive indicative of بَنَى (banā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabnūna", "banā", "tubnawna"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبنوا",
-        "u": "تبنوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تبنوا (form I)\n# تَبْنُوا (tabnū) /tab.nuː/: second-person masculine plural non-past active subjunctive/jussive of بَنَى (banā)\n# تُبْنَوْا (tubnaw) /tub.naw/: second-person masculine plural non-past passive subjunctive/jussive of بَنَى (banā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabnū", "banā", "tubnaw"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "ابنوا",
-        "u": "ابنوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِبْنُوا • (ibnū) (form I) /ib.nuː/\n# second-person masculine plural imperative of بَنَى (banā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ibnū", "banā"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "بنوا",
-        "u": "بنوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "بنوا (form I)\n# بَنَوْا (banaw) /ba.naw/: third-person masculine plural past active of بَنَى (banā)\n# بُنُوا (bunū) /bu.nuː/: third-person masculine plural past passive of بَنَى (banā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["banaw", "banā", "bunū"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "يبنون",
-        "u": "يبنون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يبنون (form I)\n# يَبْنُونَ (yabnūna) /jab.nuː.na/: third-person masculine plural non-past active indicative of بَنَى (banā)\n# يُبْنَوْنَ (yubnawna) /jub.naw.na/: third-person masculine plural non-past passive indicative of بَنَى (banā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabnūna", "banā", "yubnawna"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "يبنوا",
-        "u": "يبنوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يبنوا (form I)\n# يَبْنُوا (yabnū) /jab.nuː/: third-person masculine plural non-past active subjunctive/jussive of بَنَى (banā)\n# يُبْنَوْا (yubnaw) /jub.naw/: third-person masculine plural non-past passive subjunctive/jussive of بَنَى (banā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabnū", "banā", "yubnaw"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "بنيتن",
-        "u": "بنيتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بنيتن (form I)\n# بَنَيْتُنَّ (banaytunna) /ba.naj.tun.na/: second-person feminine plural past active of بَنَى (banā)\n# بُنِيتُنَّ (bunītunna) /bu.niː.tun.na/: second-person feminine plural past passive of بَنَى (banā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["banaytunna", "banā", "bunītunna"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "ابنين",
-        "u": "ابنين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِبْنِينَ • (ibnīna) (form I) /ib.niː.na/\n# second-person feminine plural imperative of بَنَى (banā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ibnīna", "banā"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "يبنين",
-        "u": "يبنين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبنين (form I)\n# يَبْنِينَ (yabnīna) /jab.niː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of بَنَى (banā)\n# يُبْنَيْنَ (yubnayna) /jub.naj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of بَنَى (banā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabnīna", "banā", "yubnayna"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "بنو",
-        "u": "بنو",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "بَنُو • (banū) m pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["construct state nominative plural of اِبْن (ibn)"],
-        "tag": ["construct", "form-of", "nominative", "plural"],
-        "fo": ["اِبْن"],
-        "r": ["banū"],
-        "ipa": ["/ba.nuː/"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "بنتا",
-        "u": "بنتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "بَنَتَا • (banatā) (form I) /ba.na.taː/\n# third-person feminine dual past active of بَنَى (banā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["banatā", "banā"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "بنيا",
-        "u": "بنيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بنيا (form I)\n# بَنَيَا (banayā) /ba.na.jaː/: third-person masculine dual past active of بَنَى (banā)\n# بُنِيَا (buniyā) /bu.ni.jaː/: third-person masculine dual past passive of بَنَى (banā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["banayā", "banā", "buniyā"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "بنيتما",
-        "u": "بنيتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بنيتما (form I)\n# بَنَيْتُمَا (banaytumā) /ba.naj.tu.maː/: second-person dual past active of بَنَى (banā)\n# بُنِيتُمَا (bunītumā) /bu.niː.tu.maː/: second-person dual past passive of بَنَى (banā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["banaytumā", "banā", "bunītumā"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "بنيتا",
-        "u": "بنيتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بُنِيَتَا • (buniyatā) (form I) /bu.ni.ja.taː/\n# third-person feminine dual past passive of بَنَى (banā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["buniyatā", "banā"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "يبنيا",
-        "u": "يبنيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبنيا (form I)\n# يَبْنِيَا (yabniyā) /jab.ni.jaː/: third-person masculine dual non-past active subjunctive/jussive of بَنَى (banā)\n# يُبْنَيَا (yubnayā) /jub.na.jaː/: third-person masculine dual non-past passive subjunctive/jussive of بَنَى (banā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabniyā", "banā", "yubnayā"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "يبنيان",
-        "u": "يبنيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبنيان (form I)\n# يَبْنِيَانِ (yabniyāni) /jab.ni.jaː.ni/: third-person masculine dual non-past active indicative of بَنَى (banā)\n# يُبْنَيَانِ (yubnayāni) /jub.na.jaː.ni/: third-person masculine dual non-past passive indicative of بَنَى (banā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabniyāni", "banā", "yubnayāni"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبنيا",
-        "u": "تبنيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تبنيا (form I)\n# تَبْنِيَا (tabniyā) /tab.ni.jaː/: inflection of بَنَى (banā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُبْنَيَا (tubnayā) /tub.na.jaː/: inflection of بَنَى (banā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabniyā", "banā", "tubnayā"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبنيان",
-        "u": "تبنيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبنيان (form I)\n# تَبْنِيَانِ (tabniyāni) /tab.ni.jaː.ni/: inflection of بَنَى (banā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُبْنَيَانِ (tubnayāni) /tub.na.jaː.ni/: inflection of بَنَى (banā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabniyāni", "banā", "tubnayāni"],
-        "k": "بنى",
-        "yol": "kök"
-      },
-      {
-        "w": "ابنيا",
-        "u": "ابنيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِبْنِيَا • (ibniyā) (form I) /ib.ni.jaː/\n# second-person dual imperative of بَنَى (banā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ibniyā", "banā"],
-        "k": "بنى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "بن",
+  "ses": {
     "harf": "ب",
+    "fasil": "بن",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "بنت",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "بَنَتْ • (banat) (form I) /ba.nat/\n# third-person feminine singular past active of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["banat", "banā"]
+    },
+    {
+      "madde": "ابن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "اِبْنِ • (ibni) (form I) /ib.ni/\n# second-person masculine singular imperative of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ibni", "banā"]
+    },
+    {
+      "madde": "بنين",
+      "tur": "noun",
+      "etim_no": "1",
+      "baslik": "بَنِين • (banīn) m pl",
+      "anlam": ["accusative/genitive plural of اِبْن (ibn)"],
+      "etiket": ["accusative", "form-of", "genitive", "plural"],
+      "form_of": ["اِبْن"],
+      "okunus": ["banīn"],
+      "ipa": ["/ba.niːn/"],
+      "bag": "asıl madde"
+    },
+    {
+      "madde": "بنين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "بنين (form I)\n# بَنَيْنَ (banayna) /ba.naj.na/: third-person feminine plural past active of بَنَى (banā)\n# بُنِينَ (bunīna) /bu.niː.na/: third-person feminine plural past passive of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["banayna", "banā", "bunīna"]
+    },
+    {
+      "madde": "أبناء",
+      "tur": "noun",
+      "baslik": "أَبْنَاء • (ʔabnāʔ) m pl",
+      "anlam": ["plural of اِبْن (ibn)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["اِبْن"],
+      "okunus": ["ʔabnāʔ"],
+      "ipa": ["/ʔab.naːʔ/"],
+      "bag": "asıl madde",
+      "etimoloji": 1
+    },
+    {
+      "madde": "بنون",
+      "tur": "noun",
+      "baslik": "بَنُون • (banūn) m pl",
+      "anlam": ["plural of اِبْن (ibn)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["اِبْن"],
+      "okunus": ["banūn"],
+      "bag": "asıl madde",
+      "etimoloji": 1
+    },
+    {
+      "madde": "بني",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "بُنِيَ • (buniya) (form I) /bu.ni.ja/\n# third-person masculine singular past passive of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["buniya", "banā"]
+    },
+    {
+      "madde": "بنية",
+      "tur": "adj",
+      "etim_no": "3",
+      "baslik": "بُنِّيَّة • (bunniyya)",
+      "anlam": ["feminine singular of بُنِّيّ (bunniyy)"],
+      "etiket": ["feminine", "form-of", "singular"],
+      "form_of": ["بُنِّيّ"],
+      "okunus": ["bunniyya"],
+      "ipa": ["/bun.nij.ja/"],
+      "bag": "asıl madde"
+    },
+    {
+      "madde": "يبني",
+      "tur": "verb",
+      "baslik": "يبني (form I)\n# يَبْنِي (yabnī) /jab.niː/: third-person masculine singular non-past active indicative of بَنَى (banā)\n# يَبْنِيَ (yabniya) /jab.ni.ja/: third-person masculine singular non-past active subjunctive of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabnī", "banā", "yabniya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبنى",
+      "tur": "verb",
+      "baslik": "يُبْنَى • (yubnā) (form I) /jub.naː/\n# third-person masculine singular non-past passive indicative/subjunctive of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yubnā", "banā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بنيون",
+      "tur": "adj",
+      "baslik": "بُنِّيُّون • (bunniyyūn)",
+      "anlam": ["masculine plural of بُنِّيّ (bunniyy)"],
+      "etiket": ["form-of", "masculine", "plural"],
+      "form_of": ["بُنِّيّ"],
+      "okunus": ["bunniyyūn"],
+      "bag": "asıl madde",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يبن (form I)\n# يَبْنِ (yabni) /jab.ni/: third-person masculine singular non-past active jussive of بَنَى (banā)\n# يُبْنَ (yubna) /jub.na/: third-person masculine singular non-past passive jussive of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabni", "banā", "yubna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبن",
+      "tur": "verb",
+      "etim_no": "10",
+      "baslik": "تبن (form I)\n# تَبْنِ (tabni) /tab.ni/: inflection of بَنَى (banā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُبْنَ (tubna) /tub.na/: inflection of بَنَى (banā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabni", "banā", "tubna"]
+    },
+    {
+      "madde": "تبني",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تبني (form I)\n# تَبْنِي (tabnī) /tab.niː/: inflection of بَنَى (banā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَبْنِيَ (tabniya) /tab.ni.ja/: inflection of بَنَى (banā):\n## second-person masculine singular non-past active subjunctive\n## third",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabnī", "banā", "tabniya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بنيت",
+      "tur": "verb",
+      "baslik": "بنيت (form I)\n# بَنَيْتُ (banaytu) /ba.naj.tu/: first-person singular past active of بَنَى (banā)\n# بَنَيْتَ (banayta) /ba.naj.ta/: second-person masculine singular past active of بَنَى (banā)\n# بَنَيْتِ (banayti) /ba.naj.ti/: second-person feminine singular past active of بَنَى (banā)\n# بُنِيتُ (bunītu) /bu.niː.tu/: first-person singular past passive of بَنَى (banā)\n# بُنِيتَ (bunīta) /bu.niː.ta/",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["banaytu", "banā", "banayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبنين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تبنين (form I)\n# تَبْنِينَ (tabnīna) /tab.niː.na/: inflection of بَنَى (banā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُبْنَيْنَ (tubnayna) /tub.naj.na/: inflection of بَنَى (banā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passi",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabnīna", "banā", "tubnayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ابني",
+      "tur": "verb",
+      "baslik": "اِبْنِي • (ibnī) (form I) /ib.niː/\n# second-person feminine singular imperative of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ibnī", "banā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبن",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "أبن (form I)\n# أَبْنِ (ʔabni) /ʔab.ni/: first-person singular non-past active jussive of بَنَى (banā)\n# أُبْنَ (ʔubna) /ʔub.na/: first-person singular non-past passive jussive of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss", "obsolete"],
+      "okunus": ["ʔabni", "banā", "ʔubna"]
+    },
+    {
+      "madde": "أبني",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أبني (form I)\n# أَبْنِي (ʔabnī) /ʔab.niː/: first-person singular non-past active indicative of بَنَى (banā)\n# أَبْنِيَ (ʔabniya) /ʔab.ni.ja/: first-person singular non-past active subjunctive of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔabnī", "banā", "ʔabniya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبنى",
+      "tur": "verb",
+      "baslik": "أُبْنَى • (ʔubnā) (form I) /ʔub.naː/\n# first-person singular non-past passive indicative/subjunctive of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔubnā", "banā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نبن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نبن (form I)\n# نَبْنِ (nabni) /nab.ni/: first-person plural non-past active jussive of بَنَى (banā)\n# نُبْنَ (nubna) /nub.na/: first-person plural non-past passive jussive of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nabni", "banā", "nubna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بنينا",
+      "tur": "verb",
+      "baslik": "بنينا (form I)\n# بَنَيْنَا (banaynā) /ba.naj.naː/: first-person plural past active of بَنَى (banā)\n# بُنِينَا (bunīnā) /bu.niː.naː/: first-person plural past passive of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["banaynā", "banā", "bunīnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نبني",
+      "tur": "verb",
+      "baslik": "نبني (form I)\n# نَبْنِي (nabnī) /nab.niː/: first-person plural non-past active indicative of بَنَى (banā)\n# نَبْنِيَ (nabniya) /nab.ni.ja/: first-person plural non-past active subjunctive of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nabnī", "banā", "nabniya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نبنى",
+      "tur": "verb",
+      "baslik": "نُبْنَى • (nubnā) (form I) /nub.naː/\n# first-person plural non-past passive indicative/subjunctive of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nubnā", "banā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بنيتم",
+      "tur": "verb",
+      "baslik": "بنيتم (form I)\n# بَنَيْتُمْ (banaytum) /ba.naj.tum/: second-person masculine plural past active of بَنَى (banā)\n# بُنِيتُمْ (bunītum) /bu.niː.tum/: second-person masculine plural past passive of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["banaytum", "banā", "bunītum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبنون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تبنون (form I)\n# تَبْنُونَ (tabnūna) /tab.nuː.na/: second-person masculine plural non-past active indicative of بَنَى (banā)\n# تُبْنَوْنَ (tubnawna) /tub.naw.na/: second-person masculine plural non-past passive indicative of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabnūna", "banā", "tubnawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبنوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تبنوا (form I)\n# تَبْنُوا (tabnū) /tab.nuː/: second-person masculine plural non-past active subjunctive/jussive of بَنَى (banā)\n# تُبْنَوْا (tubnaw) /tub.naw/: second-person masculine plural non-past passive subjunctive/jussive of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabnū", "banā", "tubnaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ابنوا",
+      "tur": "verb",
+      "baslik": "اِبْنُوا • (ibnū) (form I) /ib.nuː/\n# second-person masculine plural imperative of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ibnū", "banā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بنوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "بنوا (form I)\n# بَنَوْا (banaw) /ba.naw/: third-person masculine plural past active of بَنَى (banā)\n# بُنُوا (bunū) /bu.nuː/: third-person masculine plural past passive of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["banaw", "banā", "bunū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبنون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يبنون (form I)\n# يَبْنُونَ (yabnūna) /jab.nuː.na/: third-person masculine plural non-past active indicative of بَنَى (banā)\n# يُبْنَوْنَ (yubnawna) /jub.naw.na/: third-person masculine plural non-past passive indicative of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabnūna", "banā", "yubnawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبنوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يبنوا (form I)\n# يَبْنُوا (yabnū) /jab.nuː/: third-person masculine plural non-past active subjunctive/jussive of بَنَى (banā)\n# يُبْنَوْا (yubnaw) /jub.naw/: third-person masculine plural non-past passive subjunctive/jussive of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabnū", "banā", "yubnaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بنيتن",
+      "tur": "verb",
+      "baslik": "بنيتن (form I)\n# بَنَيْتُنَّ (banaytunna) /ba.naj.tun.na/: second-person feminine plural past active of بَنَى (banā)\n# بُنِيتُنَّ (bunītunna) /bu.niː.tun.na/: second-person feminine plural past passive of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["banaytunna", "banā", "bunītunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ابنين",
+      "tur": "verb",
+      "baslik": "اِبْنِينَ • (ibnīna) (form I) /ib.niː.na/\n# second-person feminine plural imperative of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ibnīna", "banā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبنين",
+      "tur": "verb",
+      "baslik": "يبنين (form I)\n# يَبْنِينَ (yabnīna) /jab.niː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of بَنَى (banā)\n# يُبْنَيْنَ (yubnayna) /jub.naj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabnīna", "banā", "yubnayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بنو",
+      "tur": "noun",
+      "baslik": "بَنُو • (banū) m pl",
+      "anlam": ["construct state nominative plural of اِبْن (ibn)"],
+      "etiket": ["construct", "form-of", "nominative", "plural"],
+      "form_of": ["اِبْن"],
+      "okunus": ["banū"],
+      "ipa": ["/ba.nuː/"],
+      "bag": "asıl madde",
+      "etimoloji": 1
+    },
+    {
+      "madde": "بنتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "بَنَتَا • (banatā) (form I) /ba.na.taː/\n# third-person feminine dual past active of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["banatā", "banā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بنيا",
+      "tur": "verb",
+      "baslik": "بنيا (form I)\n# بَنَيَا (banayā) /ba.na.jaː/: third-person masculine dual past active of بَنَى (banā)\n# بُنِيَا (buniyā) /bu.ni.jaː/: third-person masculine dual past passive of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["banayā", "banā", "buniyā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بنيتما",
+      "tur": "verb",
+      "baslik": "بنيتما (form I)\n# بَنَيْتُمَا (banaytumā) /ba.naj.tu.maː/: second-person dual past active of بَنَى (banā)\n# بُنِيتُمَا (bunītumā) /bu.niː.tu.maː/: second-person dual past passive of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["banaytumā", "banā", "bunītumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بنيتا",
+      "tur": "verb",
+      "baslik": "بُنِيَتَا • (buniyatā) (form I) /bu.ni.ja.taː/\n# third-person feminine dual past passive of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["buniyatā", "banā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبنيا",
+      "tur": "verb",
+      "baslik": "يبنيا (form I)\n# يَبْنِيَا (yabniyā) /jab.ni.jaː/: third-person masculine dual non-past active subjunctive/jussive of بَنَى (banā)\n# يُبْنَيَا (yubnayā) /jub.na.jaː/: third-person masculine dual non-past passive subjunctive/jussive of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabniyā", "banā", "yubnayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبنيان",
+      "tur": "verb",
+      "baslik": "يبنيان (form I)\n# يَبْنِيَانِ (yabniyāni) /jab.ni.jaː.ni/: third-person masculine dual non-past active indicative of بَنَى (banā)\n# يُبْنَيَانِ (yubnayāni) /jub.na.jaː.ni/: third-person masculine dual non-past passive indicative of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabniyāni", "banā", "yubnayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبنيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تبنيا (form I)\n# تَبْنِيَا (tabniyā) /tab.ni.jaː/: inflection of بَنَى (banā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُبْنَيَا (tubnayā) /tub.na.jaː/: inflection of بَنَى (banā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabniyā", "banā", "tubnayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبنيان",
+      "tur": "verb",
+      "baslik": "تبنيان (form I)\n# تَبْنِيَانِ (tabniyāni) /tab.ni.jaː.ni/: inflection of بَنَى (banā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُبْنَيَانِ (tubnayāni) /tub.na.jaː.ni/: inflection of بَنَى (banā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabniyāni", "banā", "tubnayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ابنيا",
+      "tur": "verb",
+      "baslik": "اِبْنِيَا • (ibniyā) (form I) /ib.ni.jaː/\n# second-person dual imperative of بَنَى (banā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ibniyā", "banā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "بنى", "r7"]
+  ],
+  "mana": {
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
@@ -585,30 +430,8 @@
     "dayanak_tanim": "the act of building up an accumulation",
     "synset_sayisi": 10
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
-    "act.n.02",
-    "adult.n.01",
-    "artifact.n.01",
-    "body_part.n.01",
-    "female.n.02",
-    "food.n.01",
-    "natural_object.n.01",
-    "placement.n.01",
-    "region.n.03"
-  ],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 7,
       "merkez_kok": "حدق",
@@ -628,6 +451,21 @@
       "boy": 15
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": [
+    "act.n.02",
+    "adult.n.01",
+    "artifact.n.01",
+    "body_part.n.01",
+    "female.n.02",
+    "food.n.01",
+    "natural_object.n.01",
+    "placement.n.01",
+    "region.n.03"
+  ],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,461 +1,338 @@
 {
   "kok": "بغى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "بغى", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الباء والغين",
-      "baslik": "بغو - بغى",
-      "mihveri": "هو: تزايد الشيء نموًّا وقوةً أو توصّلا لاكتمال حاله: كالبغو الموصوف، فهو في طور النمو ليبلغ الاكتمال. ومنه: البَغِيّة - كهدية: الطليعةُ التي تكون قبل ورود الجيش (فهي تُهيِّئُ وتُمهد لبلوغ الجيش مأربه). ومن التزايد اتجاهًا وتهيؤًا لاكتمال الحال جاء معنى الطلب لأنه ازدياد: \"بَغَى الشيءَ يبغيه: طلبه \". وبه جاءت كل صيغتي (ابتغى)، (ابتغاء)، {ابْتِغَاءَ مَرْضَاتِ اللَّهِ} [البقرة: 207]. وكذلك صيغة (بَغَى) التي ليست لمعنى التجاوز. \"بَغَى الضالّةَ والحاجة وكذلك ابتغى الشيء وتبغّاه واستبْغاه. والبُغْية - بالكسر والضم: الحاجة المَبْغِيّة \": {أَفَغَيْرَ دِينِ اللَّهِ يَبْغُونَ} [آل عمران: 83]، {لَيْسَ عَلَيْكُمْ جُنَاحٌ أَنْ تَبْتَغُوا فَضْلًا مِنْ رَبِّكُمْ} [البقرة: 198]. ومن الطلب \"بَغَت الأَمَةُ: عَهَرَت وزَنَت \". فهذا الأمر لا يكون إلا بقبولها - على الأقل، والرضا في باب الشهوة كالطلب، وقد يكون بسعيها حقيقة {وَمَا كَانَتْ أُمُّكِ بَغِيًّا} [مريم: 28]، {وَلَا تُكْرِهُوا فَتَيَاتِكُمْ عَلَى الْبِغَاءِ إِنْ أَرَدْنَ تَحَصُّنًا} [النور: 33] (فالتي تريد التحصن ستقاوم فلا يجوز إكراهها. أما التي لا تريد التحصن فإنه لا يُستطاع منعها إلا بالحبس، وحبسها يُهْدر ما اقتُنِيت لأجله). ومن مطاوعة الطلب: التأتي والتيسّر: \"انبغى له الشيء: تسهَّل وتيسر (أن يصل إليه) ما يصلح له \": {وَمَا عَلَّمْنَاهُ الشِّعْرَ وَمَا يَنْبَغِي لَهُ} [يس: 69]، {وَمَا يَنْبَغِي لِلرَّحْمَنِ أَنْ يَتَّخِذَ وَلَدًا} [مريم: 92]: (لا حاجة به إلى ذلك، ولا يليق به، (1/150) هو سبحانه منزه عن هذا). ومن التزايد جاء معنى التجاوز، لأن",
-      "sesler": "الباء للتجمع الرخو مع تلاصق ما، والغين لنحو الغشاء القوي، والفصل منهما يعبر عن امتلاء بماله حدّة أو قوة كامتلاء البئر وسمن التيس من الظباء. وفي (بغوبغى) تعبر الواو عن الاشتمال على ما له حدة مع تزايده، أو كونه في مرحلة التزايد. ومن هذا جاء تعبير (بغى) عن الطلب وعن البغى. وفي (بغت) أضافت التاء ضغطتها الدقيقة (والحدة والدقة من باب واحد)؛ فعبر التركيب عن المفاجأة (الصدمة) بشرّ. وفي (بغض) أضافت الضاد غلظًا مع الحدة، فعبر التركيب عن تجمع غلظ وحدة في الباطن، وهو حقيقة البغض. وفي (بغل) عبرت اللام عن تعلق واستقلال، وعبر التركيب عن تعلق حاد بأثناء الشيء مع بقائه وتميزه بذلك، كما هو حال البغل.",
-      "tam_metin": "{ذَلِكَ مَا كُنَّا نَبْغِ} [الكهف: 64] {أَفَغَيْرَ اللَّهِ أَبْتَغِي حَكَمًا} [الأنعام: 114]\n__________\n(1) (صوتيًّا): الباء للتجمع الرخو مع تلاصق ما، والغين لنحو الغشاء القوي، والفصل منهما يعبر عن امتلاء بماله حدّة أو قوة كامتلاء البئر وسمن التيس من الظباء. وفي (بغوبغى) تعبر الواو عن الاشتمال على ما له حدة مع تزايده، أو كونه في مرحلة التزايد. ومن هذا جاء تعبير (بغى) عن الطلب وعن البغى. وفي (بغت) أضافت التاء ضغطتها الدقيقة (والحدة والدقة من باب واحد)؛ فعبر التركيب عن المفاجأة (الصدمة) بشرّ. وفي (بغض) أضافت الضاد غلظًا مع الحدة، فعبر التركيب عن تجمع غلظ وحدة في الباطن، وهو حقيقة البغض. وفي (بغل) عبرت اللام عن تعلق واستقلال، وعبر التركيب عن تعلق حاد بأثناء الشيء مع بقائه وتميزه بذلك، كما هو حال البغل.\n(1/149)\n\"البَغْوة - بالفتح: الطلعةُ حين تنشقّ فتخرُجُ بيضاءَ رَطْبة/ الثمرةُ قبل أن تَنْضَج/ قبل أن يستحكم يُبْسها. البَغْو والبَغوة: كل شجرٍ غضّ ثمرُهُ أخضرُ صغيرٌ لم يبلغ \".\n° المعنى المحوري\nهو: تزايد الشيء نموًّا وقوةً أو توصّلا لاكتمال حاله: كالبغو الموصوف، فهو في طور النمو ليبلغ الاكتمال. ومنه: البَغِيّة - كهدية: الطليعةُ التي تكون قبل ورود الجيش (فهي تُهيِّئُ وتُمهد لبلوغ الجيش مأربه).\nومن التزايد اتجاهًا وتهيؤًا لاكتمال الحال جاء معنى الطلب لأنه ازدياد: \"بَغَى الشيءَ يبغيه: طلبه \". وبه جاءت كل صيغتي (ابتغى)، (ابتغاء)، {ابْتِغَاءَ مَرْضَاتِ اللَّهِ} [البقرة: 207]. وكذلك صيغة (بَغَى) التي ليست لمعنى التجاوز. \"بَغَى الضالّةَ والحاجة وكذلك ابتغى الشيء وتبغّاه واستبْغاه. والبُغْية - بالكسر والضم: الحاجة المَبْغِيّة \": {أَفَغَيْرَ دِينِ اللَّهِ يَبْغُونَ} [آل عمران: 83]، {لَيْسَ عَلَيْكُمْ جُنَاحٌ أَنْ تَبْتَغُوا فَضْلًا مِنْ رَبِّكُمْ} [البقرة: 198]. ومن الطلب \"بَغَت الأَمَةُ: عَهَرَت وزَنَت \". فهذا الأمر لا يكون إلا بقبولها - على الأقل، والرضا في باب الشهوة كالطلب، وقد يكون بسعيها حقيقة {وَمَا كَانَتْ أُمُّكِ بَغِيًّا} [مريم: 28]، {وَلَا تُكْرِهُوا فَتَيَاتِكُمْ عَلَى الْبِغَاءِ إِنْ أَرَدْنَ تَحَصُّنًا} [النور: 33] (فالتي تريد التحصن ستقاوم فلا يجوز إكراهها. أما التي لا تريد التحصن فإنه لا يُستطاع منعها إلا بالحبس، وحبسها يُهْدر ما اقتُنِيت لأجله).\nومن مطاوعة الطلب: التأتي والتيسّر: \"انبغى له الشيء: تسهَّل وتيسر (أن يصل إليه) ما يصلح له \": {وَمَا عَلَّمْنَاهُ الشِّعْرَ وَمَا يَنْبَغِي لَهُ} [يس: 69]، {وَمَا يَنْبَغِي لِلرَّحْمَنِ أَنْ يَتَّخِذَ وَلَدًا} [مريم: 92]: (لا حاجة به إلى ذلك، ولا يليق به،\n(1/150)\nهو سبحانه منزه عن هذا).\nومن التزايد جاء معنى التجاوز، لأنه تعدٍّ وتزيّد: \"بغى عليهم: عَدَل عن الحق واستطال \" (التعدي تزيد وتخطٍّ توصلا إلى نيل ما لا يُستحق). و \"بَغَى الوالي: ظَلَم. وكل مجاوزة وإفراط على المقدار الذي هو حد الشيء بَغْى \" (كأن الأصل أن البغي لا يكون إلا عند التجاوز في استيفاء حق ما): وبه جاء كل لفظ (بَغَى)، (بَغْى)، (باغٍ) عدا ما أسلفنا من بغى التي للطلب. {إِنَّ قَارُونَ كَانَ مِنْ قَوْمِ مُوسَى فَبَغَى عَلَيْهِمْ} [القصص: 76]، {وَلَوْ بَسَطَ اللَّهُ الرِّزْقَ لِعِبَادِهِ لَبَغَوْا فِي الْأَرْضِ} [الشورى: 27]، {فَأَتْبَعَهُمْ فِرْعَوْنُ وَجُنُودُهُ بَغْيًا وَعَدْوًا} [يونس: 90].\nأما قولهم: \"دَفْعنا بَغْىَ السماء خلْفَنا: أي شدتها ومُعْظم مطرها \"فذلك من التزايد، كأنه كان يزداد ليبلغ أقصاه. ومعنى دفعوه خلفهم أنهم مروا واجتازوا المنطقة التي كان المطر يتزايد فيها فصارت خلفهم.",
-      "fasil_ozeti": "° معنى الفصل المعجمي (بغ): الامتلاء بما له حدّة: كما في السِمَن وكثرة الماء - في (بغغ)، وفي غضاضة (البَغْوة) وتزايدها في سبيل النضج - في (بغو - بغي) وهذه قوة نمو من باب الحدة، وفي وقع المفاجأة عند عدم التوقع - في (البغت)، وفي مشاعر الكراهة - في (البغض)، وفي غرابة الخروج عن الجنس السوي المعتاد - في (البغل)."
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "تبغ",
-        "u": "تبغ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تبغ (form I)\n# تَبْغِ (tabḡi) /tab.ɣi/: inflection of بَغَى (baḡā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُبْغَ (tubḡa) /tub.ɣa/: inflection of بَغَى (baḡā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabḡi", "baḡā", "tubḡa"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "يبغي",
-        "u": "يبغي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبغي (form I)\n# يَبْغِي (yabḡī) /jab.ɣiː/: third-person masculine singular non-past active indicative of بَغَى (baḡā)\n# يَبْغِيَ (yabḡiya) /jab.ɣi.ja/: third-person masculine singular non-past active subjunctive of بَغَى (baḡā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabḡī", "baḡā", "yabḡiya"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "بغتة",
-        "u": "بغتة",
-        "p": "noun",
-        "n": "1.1",
-        "h": "ar-noun",
-        "e": "بَغْتَة • (baḡta) f",
-        "t": "Instance noun from the verb بَغَتَ (baḡata, “to surprise someone”).",
-        "s": [
-          ["if-ar-lect", ""],
-          ["ar-instance noun", "Instance noun"]
-        ],
-        "g": ["verbal noun of بَغَتَ (baḡata) (form I)", "abruptness", "unexpected astonishing event"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["بَغَتَ"],
-        "r": ["baḡta"],
-        "ipa": ["/baɣ.ta/"],
-        "el": [
-          ["بَغَتَ", "بغت#Arabic"],
-          ["surprise", "surprise"]
-        ],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "نبغ",
-        "u": "نبغ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نبغ (form I)\n# نَبْغِ (nabḡi) /nab.ɣi/: first-person plural non-past active jussive of بَغَى (baḡā)\n# نُبْغَ (nubḡa) /nub.ɣa/: first-person plural non-past passive jussive of بَغَى (baḡā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nabḡi", "baḡā", "nubḡa"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "بغت",
-        "u": "بغت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَغَتْ • (baḡat) (form I) /ba.ɣat/\n# third-person feminine singular past active of بَغَى (baḡā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["baḡat", "baḡā"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "بغيتما",
-        "u": "بغيتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بغيتما (form I)\n# بَغَيْتُمَا (baḡaytumā) /ba.ɣaj.tu.maː/: second-person dual past active of بَغَى (baḡā)\n# بُغِيتُمَا (buḡītumā) /bu.ɣiː.tu.maː/: second-person dual past passive of بَغَى (baḡā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["baḡaytumā", "baḡā", "buḡītumā"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "بغيت",
-        "u": "بغيت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بغيت (form I)\n# بَغَيْتُ (baḡaytu) /ba.ɣaj.tu/: first-person singular past active of بَغَى (baḡā)\n# بَغَيْتَ (baḡayta) /ba.ɣaj.ta/: second-person masculine singular past active of بَغَى (baḡā)\n# بَغَيْتِ (baḡayti) /ba.ɣaj.ti/: second-person feminine singular past active of بَغَى (baḡā)\n# بُغِيتُ (buḡītu) /bu.ɣiː.tu/: first-person singular past passive of بَغَى (baḡā)\n# بُغِيتَ (buḡīta) /bu.ɣiː.ta/",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["baḡaytu", "baḡā", "baḡayta"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "بغيا",
-        "u": "بغيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بغيا (form I)\n# بَغَيَا (baḡayā) /ba.ɣa.jaː/: third-person masculine dual past active of بَغَى (baḡā)\n# بُغِيَا (buḡiyā) /bu.ɣi.jaː/: third-person masculine dual past passive of بَغَى (baḡā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["baḡayā", "baḡā", "buḡiyā"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "بغتا",
-        "u": "بغتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَغَتَا • (baḡatā) (form I) /ba.ɣa.taː/\n# third-person feminine dual past active of بَغَى (baḡā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["baḡatā", "baḡā"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "بغينا",
-        "u": "بغينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بغينا (form I)\n# بَغَيْنَا (baḡaynā) /ba.ɣaj.naː/: first-person plural past active of بَغَى (baḡā)\n# بُغِينَا (buḡīnā) /bu.ɣiː.naː/: first-person plural past passive of بَغَى (baḡā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["baḡaynā", "baḡā", "buḡīnā"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "بغيتم",
-        "u": "بغيتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بغيتم (form I)\n# بَغَيْتُمْ (baḡaytum) /ba.ɣaj.tum/: second-person masculine plural past active of بَغَى (baḡā)\n# بُغِيتُمْ (buḡītum) /bu.ɣiː.tum/: second-person masculine plural past passive of بَغَى (baḡā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["baḡaytum", "baḡā", "buḡītum"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "بغيتن",
-        "u": "بغيتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بغيتن (form I)\n# بَغَيْتُنَّ (baḡaytunna) /ba.ɣaj.tun.na/: second-person feminine plural past active of بَغَى (baḡā)\n# بُغِيتُنَّ (buḡītunna) /bu.ɣiː.tun.na/: second-person feminine plural past passive of بَغَى (baḡā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["baḡaytunna", "baḡā", "buḡītunna"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبغي",
-        "u": "أبغي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبغي (form I)\n# أَبْغِي (ʔabḡī) /ʔab.ɣiː/: first-person singular non-past active indicative of بَغَى (baḡā)\n# أَبْغِيَ (ʔabḡiya) /ʔab.ɣi.ja/: first-person singular non-past active subjunctive of بَغَى (baḡā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔabḡī", "baḡā", "ʔabḡiya"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "بغين",
-        "u": "بغين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بغين (form I)\n# بَغَيْنَ (baḡayna) /ba.ɣaj.na/: third-person feminine plural past active of بَغَى (baḡā)\n# بُغِينَ (buḡīna) /bu.ɣiː.na/: third-person feminine plural past passive of بَغَى (baḡā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["baḡayna", "baḡā", "buḡīna"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "بغوا",
-        "u": "بغوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بغوا (form I)\n# بَغَوْا (baḡaw) /ba.ɣaw/: third-person masculine plural past active of بَغَى (baḡā)\n# بُغُوا (buḡū) /bu.ɣuː/: third-person masculine plural past passive of بَغَى (baḡā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["baḡaw", "baḡā", "buḡū"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبغي",
-        "u": "تبغي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبغي (form I)\n# تَبْغِي (tabḡī) /tab.ɣiː/: inflection of بَغَى (baḡā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَبْغِيَ (tabḡiya) /tab.ɣi.ja/: inflection of بَغَى (baḡā):\n## second-person masculine singular non-past active subjunctive\n## third",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabḡī", "baḡā", "tabḡiya"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبغيان",
-        "u": "تبغيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبغيان (form I)\n# تَبْغِيَانِ (tabḡiyāni) /tab.ɣi.jaː.ni/: inflection of بَغَى (baḡā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُبْغَيَانِ (tubḡayāni) /tub.ɣa.jaː.ni/: inflection of بَغَى (baḡā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabḡiyāni", "baḡā", "tubḡayāni"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "يبغيان",
-        "u": "يبغيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبغيان (form I)\n# يَبْغِيَانِ (yabḡiyāni) /jab.ɣi.jaː.ni/: third-person masculine dual non-past active indicative of بَغَى (baḡā)\n# يُبْغَيَانِ (yubḡayāni) /jub.ɣa.jaː.ni/: third-person masculine dual non-past passive indicative of بَغَى (baḡā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabḡiyāni", "baḡā", "yubḡayāni"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبغين",
-        "u": "تبغين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبغين (form I)\n# تَبْغِينَ (tabḡīna) /tab.ɣiː.na/: inflection of بَغَى (baḡā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُبْغَيْنَ (tubḡayna) /tub.ɣaj.na/: inflection of بَغَى (baḡā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passi",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabḡīna", "baḡā", "tubḡayna"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبغون",
-        "u": "تبغون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبغون (form I)\n# تَبْغُونَ (tabḡūna) /tab.ɣuː.na/: second-person masculine plural non-past active indicative of بَغَى (baḡā)\n# تُبْغَوْنَ (tubḡawna) /tub.ɣaw.na/: second-person masculine plural non-past passive indicative of بَغَى (baḡā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabḡūna", "baḡā", "tubḡawna"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "يبغون",
-        "u": "يبغون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبغون (form I)\n# يَبْغُونَ (yabḡūna) /jab.ɣuː.na/: third-person masculine plural non-past active indicative of بَغَى (baḡā)\n# يُبْغَوْنَ (yubḡawna) /jub.ɣaw.na/: third-person masculine plural non-past passive indicative of بَغَى (baḡā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabḡūna", "baḡā", "yubḡawna"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "يبغيا",
-        "u": "يبغيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبغيا (form I)\n# يَبْغِيَا (yabḡiyā) /jab.ɣi.jaː/: third-person masculine dual non-past active subjunctive/jussive of بَغَى (baḡā)\n# يُبْغَيَا (yubḡayā) /jub.ɣa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of بَغَى (baḡā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabḡiyā", "baḡā", "yubḡayā"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "يبغين",
-        "u": "يبغين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبغين (form I)\n# يَبْغِينَ (yabḡīna) /jab.ɣiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of بَغَى (baḡā)\n# يُبْغَيْنَ (yubḡayna) /jub.ɣaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of بَغَى (baḡā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabḡīna", "baḡā", "yubḡayna"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبغوا",
-        "u": "تبغوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبغوا (form I)\n# تَبْغُوا (tabḡū) /tab.ɣuː/: second-person masculine plural non-past active subjunctive/jussive of بَغَى (baḡā)\n# تُبْغَوْا (tubḡaw) /tub.ɣaw/: second-person masculine plural non-past passive subjunctive/jussive of بَغَى (baḡā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabḡū", "baḡā", "tubḡaw"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبغ",
-        "u": "أبغ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبغ (form I)\n# أَبْغِ (ʔabḡi) /ʔab.ɣi/: first-person singular non-past active jussive of بَغَى (baḡā)\n# أُبْغَ (ʔubḡa) /ʔub.ɣa/: first-person singular non-past passive jussive of بَغَى (baḡā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔabḡi", "baḡā", "ʔubḡa"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبغيا",
-        "u": "تبغيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبغيا (form I)\n# تَبْغِيَا (tabḡiyā) /tab.ɣi.jaː/: inflection of بَغَى (baḡā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُبْغَيَا (tubḡayā) /tub.ɣa.jaː/: inflection of بَغَى (baḡā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabḡiyā", "baḡā", "tubḡayā"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "يبغوا",
-        "u": "يبغوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبغوا (form I)\n# يَبْغُوا (yabḡū) /jab.ɣuː/: third-person masculine plural non-past active subjunctive/jussive of بَغَى (baḡā)\n# يُبْغَوْا (yubḡaw) /jub.ɣaw/: third-person masculine plural non-past passive subjunctive/jussive of بَغَى (baḡā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabḡū", "baḡā", "yubḡaw"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "ابغي",
-        "u": "ابغي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِبْغِي • (ibḡī) (form I) /ib.ɣiː/\n# second-person feminine singular imperative of بَغَى (baḡā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ibḡī", "baḡā"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "ابغيا",
-        "u": "ابغيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِبْغِيَا • (ibḡiyā) (form I) /ib.ɣi.jaː/\n# second-person dual imperative of بَغَى (baḡā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ibḡiyā", "baḡā"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "ابغ",
-        "u": "ابغ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِبْغِ • (ibḡi) (form I) /ib.ɣi/\n# second-person masculine singular imperative of بَغَى (baḡā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ibḡi", "baḡā"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "ابغوا",
-        "u": "ابغوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِبْغُوا • (ibḡū) (form I) /ib.ɣuː/\n# second-person masculine plural imperative of بَغَى (baḡā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ibḡū", "baḡā"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "يبغ",
-        "u": "يبغ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبغ (form I)\n# يَبْغِ (yabḡi) /jab.ɣi/: third-person masculine singular non-past active jussive of بَغَى (baḡā)\n# يُبْغَ (yubḡa) /jub.ɣa/: third-person masculine singular non-past passive jussive of بَغَى (baḡā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabḡi", "baḡā", "yubḡa"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "ابغين",
-        "u": "ابغين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِبْغِينَ • (ibḡīna) (form I) /ib.ɣiː.na/\n# second-person feminine plural imperative of بَغَى (baḡā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ibḡīna", "baḡā"],
-        "k": "بغى",
-        "yol": "kök"
-      },
-      {
-        "w": "نبغي",
-        "u": "نبغي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نبغي (form I)\n# نَبْغِي (nabḡī) /nab.ɣiː/: first-person plural non-past active indicative of بَغَى (baḡā)\n# نَبْغِيَ (nabḡiya) /nab.ɣi.ja/: first-person plural non-past active subjunctive of بَغَى (baḡā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nabḡī", "baḡā", "nabḡiya"],
-        "k": "بغى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "بغ",
+  "ses": {
     "harf": "ب",
+    "fasil": "بغ",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "cebel": {
+    "fasil": "الباء والغين",
+    "baslik": "بغو - بغى",
+    "mihveri": "هو: تزايد الشيء نموًّا وقوةً أو توصّلا لاكتمال حاله: كالبغو الموصوف، فهو في طور النمو ليبلغ الاكتمال. ومنه: البَغِيّة - كهدية: الطليعةُ التي تكون قبل ورود الجيش (فهي تُهيِّئُ وتُمهد لبلوغ الجيش مأربه). ومن التزايد اتجاهًا وتهيؤًا لاكتمال الحال جاء معنى الطلب لأنه ازدياد: \"بَغَى الشيءَ يبغيه: طلبه \". وبه جاءت كل صيغتي (ابتغى)، (ابتغاء)، {ابْتِغَاءَ مَرْضَاتِ اللَّهِ} [البقرة: 207]. وكذلك صيغة (بَغَى) التي ليست لمعنى التجاوز. \"بَغَى الضالّةَ والحاجة وكذلك ابتغى الشيء وتبغّاه واستبْغاه. والبُغْية - بالكسر والضم: الحاجة المَبْغِيّة \": {أَفَغَيْرَ دِينِ اللَّهِ يَبْغُونَ} [آل عمران: 83]، {لَيْسَ عَلَيْكُمْ جُنَاحٌ أَنْ تَبْتَغُوا فَضْلًا مِنْ رَبِّكُمْ} [البقرة: 198]. ومن الطلب \"بَغَت الأَمَةُ: عَهَرَت وزَنَت \". فهذا الأمر لا يكون إلا بقبولها - على الأقل، والرضا في باب الشهوة كالطلب، وقد يكون بسعيها حقيقة {وَمَا كَانَتْ أُمُّكِ بَغِيًّا} [مريم: 28]، {وَلَا تُكْرِهُوا فَتَيَاتِكُمْ عَلَى الْبِغَاءِ إِنْ أَرَدْنَ تَحَصُّنًا} [النور: 33] (فالتي تريد التحصن ستقاوم فلا يجوز إكراهها. أما التي لا تريد التحصن فإنه لا يُستطاع منعها إلا بالحبس، وحبسها يُهْدر ما اقتُنِيت لأجله). ومن مطاوعة الطلب: التأتي والتيسّر: \"انبغى له الشيء: تسهَّل وتيسر (أن يصل إليه) ما يصلح له \": {وَمَا عَلَّمْنَاهُ الشِّعْرَ وَمَا يَنْبَغِي لَهُ} [يس: 69]، {وَمَا يَنْبَغِي لِلرَّحْمَنِ أَنْ يَتَّخِذَ وَلَدًا} [مريم: 92]: (لا حاجة به إلى ذلك، ولا يليق به، (1/150) هو سبحانه منزه عن هذا). ومن التزايد جاء معنى التجاوز، لأن",
+    "sesler": "الباء للتجمع الرخو مع تلاصق ما، والغين لنحو الغشاء القوي، والفصل منهما يعبر عن امتلاء بماله حدّة أو قوة كامتلاء البئر وسمن التيس من الظباء. وفي (بغوبغى) تعبر الواو عن الاشتمال على ما له حدة مع تزايده، أو كونه في مرحلة التزايد. ومن هذا جاء تعبير (بغى) عن الطلب وعن البغى. وفي (بغت) أضافت التاء ضغطتها الدقيقة (والحدة والدقة من باب واحد)؛ فعبر التركيب عن المفاجأة (الصدمة) بشرّ. وفي (بغض) أضافت الضاد غلظًا مع الحدة، فعبر التركيب عن تجمع غلظ وحدة في الباطن، وهو حقيقة البغض. وفي (بغل) عبرت اللام عن تعلق واستقلال، وعبر التركيب عن تعلق حاد بأثناء الشيء مع بقائه وتميزه بذلك، كما هو حال البغل.",
+    "tam_metin": "{ذَلِكَ مَا كُنَّا نَبْغِ} [الكهف: 64] {أَفَغَيْرَ اللَّهِ أَبْتَغِي حَكَمًا} [الأنعام: 114]\n__________\n(1) (صوتيًّا): الباء للتجمع الرخو مع تلاصق ما، والغين لنحو الغشاء القوي، والفصل منهما يعبر عن امتلاء بماله حدّة أو قوة كامتلاء البئر وسمن التيس من الظباء. وفي (بغوبغى) تعبر الواو عن الاشتمال على ما له حدة مع تزايده، أو كونه في مرحلة التزايد. ومن هذا جاء تعبير (بغى) عن الطلب وعن البغى. وفي (بغت) أضافت التاء ضغطتها الدقيقة (والحدة والدقة من باب واحد)؛ فعبر التركيب عن المفاجأة (الصدمة) بشرّ. وفي (بغض) أضافت الضاد غلظًا مع الحدة، فعبر التركيب عن تجمع غلظ وحدة في الباطن، وهو حقيقة البغض. وفي (بغل) عبرت اللام عن تعلق واستقلال، وعبر التركيب عن تعلق حاد بأثناء الشيء مع بقائه وتميزه بذلك، كما هو حال البغل.\n(1/149)\n\"البَغْوة - بالفتح: الطلعةُ حين تنشقّ فتخرُجُ بيضاءَ رَطْبة/ الثمرةُ قبل أن تَنْضَج/ قبل أن يستحكم يُبْسها. البَغْو والبَغوة: كل شجرٍ غضّ ثمرُهُ أخضرُ صغيرٌ لم يبلغ \".\n° المعنى المحوري\nهو: تزايد الشيء نموًّا وقوةً أو توصّلا لاكتمال حاله: كالبغو الموصوف، فهو في طور النمو ليبلغ الاكتمال. ومنه: البَغِيّة - كهدية: الطليعةُ التي تكون قبل ورود الجيش (فهي تُهيِّئُ وتُمهد لبلوغ الجيش مأربه).\nومن التزايد اتجاهًا وتهيؤًا لاكتمال الحال جاء معنى الطلب لأنه ازدياد: \"بَغَى الشيءَ يبغيه: طلبه \". وبه جاءت كل صيغتي (ابتغى)، (ابتغاء)، {ابْتِغَاءَ مَرْضَاتِ اللَّهِ} [البقرة: 207]. وكذلك صيغة (بَغَى) التي ليست لمعنى التجاوز. \"بَغَى الضالّةَ والحاجة وكذلك ابتغى الشيء وتبغّاه واستبْغاه. والبُغْية - بالكسر والضم: الحاجة المَبْغِيّة \": {أَفَغَيْرَ دِينِ اللَّهِ يَبْغُونَ} [آل عمران: 83]، {لَيْسَ عَلَيْكُمْ جُنَاحٌ أَنْ تَبْتَغُوا فَضْلًا مِنْ رَبِّكُمْ} [البقرة: 198]. ومن الطلب \"بَغَت الأَمَةُ: عَهَرَت وزَنَت \". فهذا الأمر لا يكون إلا بقبولها - على الأقل، والرضا في باب الشهوة كالطلب، وقد يكون بسعيها حقيقة {وَمَا كَانَتْ أُمُّكِ بَغِيًّا} [مريم: 28]، {وَلَا تُكْرِهُوا فَتَيَاتِكُمْ عَلَى الْبِغَاءِ إِنْ أَرَدْنَ تَحَصُّنًا} [النور: 33] (فالتي تريد التحصن ستقاوم فلا يجوز إكراهها. أما التي لا تريد التحصن فإنه لا يُستطاع منعها إلا بالحبس، وحبسها يُهْدر ما اقتُنِيت لأجله).\nومن مطاوعة الطلب: التأتي والتيسّر: \"انبغى له الشيء: تسهَّل وتيسر (أن يصل إليه) ما يصلح له \": {وَمَا عَلَّمْنَاهُ الشِّعْرَ وَمَا يَنْبَغِي لَهُ} [يس: 69]، {وَمَا يَنْبَغِي لِلرَّحْمَنِ أَنْ يَتَّخِذَ وَلَدًا} [مريم: 92]: (لا حاجة به إلى ذلك، ولا يليق به،\n(1/150)\nهو سبحانه منزه عن هذا).\nومن التزايد جاء معنى التجاوز، لأنه تعدٍّ وتزيّد: \"بغى عليهم: عَدَل عن الحق واستطال \" (التعدي تزيد وتخطٍّ توصلا إلى نيل ما لا يُستحق). و \"بَغَى الوالي: ظَلَم. وكل مجاوزة وإفراط على المقدار الذي هو حد الشيء بَغْى \" (كأن الأصل أن البغي لا يكون إلا عند التجاوز في استيفاء حق ما): وبه جاء كل لفظ (بَغَى)، (بَغْى)، (باغٍ) عدا ما أسلفنا من بغى التي للطلب. {إِنَّ قَارُونَ كَانَ مِنْ قَوْمِ مُوسَى فَبَغَى عَلَيْهِمْ} [القصص: 76]، {وَلَوْ بَسَطَ اللَّهُ الرِّزْقَ لِعِبَادِهِ لَبَغَوْا فِي الْأَرْضِ} [الشورى: 27]، {فَأَتْبَعَهُمْ فِرْعَوْنُ وَجُنُودُهُ بَغْيًا وَعَدْوًا} [يونس: 90].\nأما قولهم: \"دَفْعنا بَغْىَ السماء خلْفَنا: أي شدتها ومُعْظم مطرها \"فذلك من التزايد، كأنه كان يزداد ليبلغ أقصاه. ومعنى دفعوه خلفهم أنهم مروا واجتازوا المنطقة التي كان المطر يتزايد فيها فصارت خلفهم.",
+    "fasil_ozeti": "° معنى الفصل المعجمي (بغ): الامتلاء بما له حدّة: كما في السِمَن وكثرة الماء - في (بغغ)، وفي غضاضة (البَغْوة) وتزايدها في سبيل النضج - في (بغو - بغي) وهذه قوة نمو من باب الحدة، وفي وقع المفاجأة عند عدم التوقع - في (البغت)، وفي مشاعر الكراهة - في (البغض)، وفي غرابة الخروج عن الجنس السوي المعتاد - في (البغل)."
+  },
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "تبغ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تبغ (form I)\n# تَبْغِ (tabḡi) /tab.ɣi/: inflection of بَغَى (baḡā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُبْغَ (tubḡa) /tub.ɣa/: inflection of بَغَى (baḡā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabḡi", "baḡā", "tubḡa"]
+    },
+    {
+      "madde": "يبغي",
+      "tur": "verb",
+      "baslik": "يبغي (form I)\n# يَبْغِي (yabḡī) /jab.ɣiː/: third-person masculine singular non-past active indicative of بَغَى (baḡā)\n# يَبْغِيَ (yabḡiya) /jab.ɣi.ja/: third-person masculine singular non-past active subjunctive of بَغَى (baḡā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabḡī", "baḡā", "yabḡiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بغتة",
+      "tur": "noun",
+      "etim_no": "1.1",
+      "baslik": "بَغْتَة • (baḡta) f",
+      "etim_sablon": [
+        ["if-ar-lect", ""],
+        ["ar-instance noun", "Instance noun"]
+      ],
+      "anlam": ["verbal noun of بَغَتَ (baḡata) (form I)", "abruptness", "unexpected astonishing event"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["بَغَتَ"],
+      "okunus": ["baḡta"],
+      "ipa": ["/baɣ.ta/"],
+      "bag": "asıl madde",
+      "etimoloji": 2
+    },
+    {
+      "madde": "نبغ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نبغ (form I)\n# نَبْغِ (nabḡi) /nab.ɣi/: first-person plural non-past active jussive of بَغَى (baḡā)\n# نُبْغَ (nubḡa) /nub.ɣa/: first-person plural non-past passive jussive of بَغَى (baḡā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nabḡi", "baḡā", "nubḡa"]
+    },
+    {
+      "madde": "بغت",
+      "tur": "verb",
+      "baslik": "بَغَتْ • (baḡat) (form I) /ba.ɣat/\n# third-person feminine singular past active of بَغَى (baḡā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["baḡat", "baḡā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بغيتما",
+      "tur": "verb",
+      "baslik": "بغيتما (form I)\n# بَغَيْتُمَا (baḡaytumā) /ba.ɣaj.tu.maː/: second-person dual past active of بَغَى (baḡā)\n# بُغِيتُمَا (buḡītumā) /bu.ɣiː.tu.maː/: second-person dual past passive of بَغَى (baḡā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["baḡaytumā", "baḡā", "buḡītumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بغيت",
+      "tur": "verb",
+      "baslik": "بغيت (form I)\n# بَغَيْتُ (baḡaytu) /ba.ɣaj.tu/: first-person singular past active of بَغَى (baḡā)\n# بَغَيْتَ (baḡayta) /ba.ɣaj.ta/: second-person masculine singular past active of بَغَى (baḡā)\n# بَغَيْتِ (baḡayti) /ba.ɣaj.ti/: second-person feminine singular past active of بَغَى (baḡā)\n# بُغِيتُ (buḡītu) /bu.ɣiː.tu/: first-person singular past passive of بَغَى (baḡā)\n# بُغِيتَ (buḡīta) /bu.ɣiː.ta/",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["baḡaytu", "baḡā", "baḡayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بغيا",
+      "tur": "verb",
+      "baslik": "بغيا (form I)\n# بَغَيَا (baḡayā) /ba.ɣa.jaː/: third-person masculine dual past active of بَغَى (baḡā)\n# بُغِيَا (buḡiyā) /bu.ɣi.jaː/: third-person masculine dual past passive of بَغَى (baḡā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["baḡayā", "baḡā", "buḡiyā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بغتا",
+      "tur": "verb",
+      "baslik": "بَغَتَا • (baḡatā) (form I) /ba.ɣa.taː/\n# third-person feminine dual past active of بَغَى (baḡā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["baḡatā", "baḡā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بغينا",
+      "tur": "verb",
+      "baslik": "بغينا (form I)\n# بَغَيْنَا (baḡaynā) /ba.ɣaj.naː/: first-person plural past active of بَغَى (baḡā)\n# بُغِينَا (buḡīnā) /bu.ɣiː.naː/: first-person plural past passive of بَغَى (baḡā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["baḡaynā", "baḡā", "buḡīnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بغيتم",
+      "tur": "verb",
+      "baslik": "بغيتم (form I)\n# بَغَيْتُمْ (baḡaytum) /ba.ɣaj.tum/: second-person masculine plural past active of بَغَى (baḡā)\n# بُغِيتُمْ (buḡītum) /bu.ɣiː.tum/: second-person masculine plural past passive of بَغَى (baḡā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["baḡaytum", "baḡā", "buḡītum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بغيتن",
+      "tur": "verb",
+      "baslik": "بغيتن (form I)\n# بَغَيْتُنَّ (baḡaytunna) /ba.ɣaj.tun.na/: second-person feminine plural past active of بَغَى (baḡā)\n# بُغِيتُنَّ (buḡītunna) /bu.ɣiː.tun.na/: second-person feminine plural past passive of بَغَى (baḡā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["baḡaytunna", "baḡā", "buḡītunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبغي",
+      "tur": "verb",
+      "baslik": "أبغي (form I)\n# أَبْغِي (ʔabḡī) /ʔab.ɣiː/: first-person singular non-past active indicative of بَغَى (baḡā)\n# أَبْغِيَ (ʔabḡiya) /ʔab.ɣi.ja/: first-person singular non-past active subjunctive of بَغَى (baḡā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔabḡī", "baḡā", "ʔabḡiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بغين",
+      "tur": "verb",
+      "baslik": "بغين (form I)\n# بَغَيْنَ (baḡayna) /ba.ɣaj.na/: third-person feminine plural past active of بَغَى (baḡā)\n# بُغِينَ (buḡīna) /bu.ɣiː.na/: third-person feminine plural past passive of بَغَى (baḡā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["baḡayna", "baḡā", "buḡīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بغوا",
+      "tur": "verb",
+      "baslik": "بغوا (form I)\n# بَغَوْا (baḡaw) /ba.ɣaw/: third-person masculine plural past active of بَغَى (baḡā)\n# بُغُوا (buḡū) /bu.ɣuː/: third-person masculine plural past passive of بَغَى (baḡā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["baḡaw", "baḡā", "buḡū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبغي",
+      "tur": "verb",
+      "baslik": "تبغي (form I)\n# تَبْغِي (tabḡī) /tab.ɣiː/: inflection of بَغَى (baḡā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَبْغِيَ (tabḡiya) /tab.ɣi.ja/: inflection of بَغَى (baḡā):\n## second-person masculine singular non-past active subjunctive\n## third",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabḡī", "baḡā", "tabḡiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبغيان",
+      "tur": "verb",
+      "baslik": "تبغيان (form I)\n# تَبْغِيَانِ (tabḡiyāni) /tab.ɣi.jaː.ni/: inflection of بَغَى (baḡā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُبْغَيَانِ (tubḡayāni) /tub.ɣa.jaː.ni/: inflection of بَغَى (baḡā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabḡiyāni", "baḡā", "tubḡayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبغيان",
+      "tur": "verb",
+      "baslik": "يبغيان (form I)\n# يَبْغِيَانِ (yabḡiyāni) /jab.ɣi.jaː.ni/: third-person masculine dual non-past active indicative of بَغَى (baḡā)\n# يُبْغَيَانِ (yubḡayāni) /jub.ɣa.jaː.ni/: third-person masculine dual non-past passive indicative of بَغَى (baḡā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabḡiyāni", "baḡā", "yubḡayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبغين",
+      "tur": "verb",
+      "baslik": "تبغين (form I)\n# تَبْغِينَ (tabḡīna) /tab.ɣiː.na/: inflection of بَغَى (baḡā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُبْغَيْنَ (tubḡayna) /tub.ɣaj.na/: inflection of بَغَى (baḡā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passi",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabḡīna", "baḡā", "tubḡayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبغون",
+      "tur": "verb",
+      "baslik": "تبغون (form I)\n# تَبْغُونَ (tabḡūna) /tab.ɣuː.na/: second-person masculine plural non-past active indicative of بَغَى (baḡā)\n# تُبْغَوْنَ (tubḡawna) /tub.ɣaw.na/: second-person masculine plural non-past passive indicative of بَغَى (baḡā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabḡūna", "baḡā", "tubḡawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبغون",
+      "tur": "verb",
+      "baslik": "يبغون (form I)\n# يَبْغُونَ (yabḡūna) /jab.ɣuː.na/: third-person masculine plural non-past active indicative of بَغَى (baḡā)\n# يُبْغَوْنَ (yubḡawna) /jub.ɣaw.na/: third-person masculine plural non-past passive indicative of بَغَى (baḡā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabḡūna", "baḡā", "yubḡawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبغيا",
+      "tur": "verb",
+      "baslik": "يبغيا (form I)\n# يَبْغِيَا (yabḡiyā) /jab.ɣi.jaː/: third-person masculine dual non-past active subjunctive/jussive of بَغَى (baḡā)\n# يُبْغَيَا (yubḡayā) /jub.ɣa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of بَغَى (baḡā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabḡiyā", "baḡā", "yubḡayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبغين",
+      "tur": "verb",
+      "baslik": "يبغين (form I)\n# يَبْغِينَ (yabḡīna) /jab.ɣiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of بَغَى (baḡā)\n# يُبْغَيْنَ (yubḡayna) /jub.ɣaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of بَغَى (baḡā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabḡīna", "baḡā", "yubḡayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبغوا",
+      "tur": "verb",
+      "baslik": "تبغوا (form I)\n# تَبْغُوا (tabḡū) /tab.ɣuː/: second-person masculine plural non-past active subjunctive/jussive of بَغَى (baḡā)\n# تُبْغَوْا (tubḡaw) /tub.ɣaw/: second-person masculine plural non-past passive subjunctive/jussive of بَغَى (baḡā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabḡū", "baḡā", "tubḡaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبغ",
+      "tur": "verb",
+      "baslik": "أبغ (form I)\n# أَبْغِ (ʔabḡi) /ʔab.ɣi/: first-person singular non-past active jussive of بَغَى (baḡā)\n# أُبْغَ (ʔubḡa) /ʔub.ɣa/: first-person singular non-past passive jussive of بَغَى (baḡā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔabḡi", "baḡā", "ʔubḡa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبغيا",
+      "tur": "verb",
+      "baslik": "تبغيا (form I)\n# تَبْغِيَا (tabḡiyā) /tab.ɣi.jaː/: inflection of بَغَى (baḡā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُبْغَيَا (tubḡayā) /tub.ɣa.jaː/: inflection of بَغَى (baḡā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabḡiyā", "baḡā", "tubḡayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبغوا",
+      "tur": "verb",
+      "baslik": "يبغوا (form I)\n# يَبْغُوا (yabḡū) /jab.ɣuː/: third-person masculine plural non-past active subjunctive/jussive of بَغَى (baḡā)\n# يُبْغَوْا (yubḡaw) /jub.ɣaw/: third-person masculine plural non-past passive subjunctive/jussive of بَغَى (baḡā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabḡū", "baḡā", "yubḡaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ابغي",
+      "tur": "verb",
+      "baslik": "اِبْغِي • (ibḡī) (form I) /ib.ɣiː/\n# second-person feminine singular imperative of بَغَى (baḡā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ibḡī", "baḡā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ابغيا",
+      "tur": "verb",
+      "baslik": "اِبْغِيَا • (ibḡiyā) (form I) /ib.ɣi.jaː/\n# second-person dual imperative of بَغَى (baḡā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ibḡiyā", "baḡā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ابغ",
+      "tur": "verb",
+      "baslik": "اِبْغِ • (ibḡi) (form I) /ib.ɣi/\n# second-person masculine singular imperative of بَغَى (baḡā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ibḡi", "baḡā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ابغوا",
+      "tur": "verb",
+      "baslik": "اِبْغُوا • (ibḡū) (form I) /ib.ɣuː/\n# second-person masculine plural imperative of بَغَى (baḡā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ibḡū", "baḡā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبغ",
+      "tur": "verb",
+      "baslik": "يبغ (form I)\n# يَبْغِ (yabḡi) /jab.ɣi/: third-person masculine singular non-past active jussive of بَغَى (baḡā)\n# يُبْغَ (yubḡa) /jub.ɣa/: third-person masculine singular non-past passive jussive of بَغَى (baḡā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabḡi", "baḡā", "yubḡa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ابغين",
+      "tur": "verb",
+      "baslik": "اِبْغِينَ • (ibḡīna) (form I) /ib.ɣiː.na/\n# second-person feminine plural imperative of بَغَى (baḡā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ibḡīna", "baḡā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نبغي",
+      "tur": "verb",
+      "baslik": "نبغي (form I)\n# نَبْغِي (nabḡī) /nab.ɣiː/: first-person plural non-past active indicative of بَغَى (baḡā)\n# نَبْغِيَ (nabḡiya) /nab.ɣi.ja/: first-person plural non-past active subjunctive of بَغَى (baḡā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nabḡī", "baḡā", "nabḡiya"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "Instance noun from the verb بَغَتَ (baḡata, “to surprise someone”).",
+      "kognatlar": [
+        ["بَغَتَ", "بغت#Arabic"],
+        ["surprise", "surprise"]
+      ]
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "بغى", "r7"]
+  ],
+  "mana": {
     "ince": "state.n.02",
     "orta": "noun.feeling",
     "ust": "his ve nefis",
@@ -463,25 +340,8 @@
     "dayanak_tanim": "the astonishment you feel when something totally unexpected happens to you",
     "synset_sayisi": 3
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "الباء والغين",
-    "mihveri": "هو: تزايد الشيء نموًّا وقوةً أو توصّلا لاكتمال حاله: كالبغو الموصوف، فهو في طور النمو ليبلغ الاكتمال. ومنه: البَغِيّة - كهدية: الطليعةُ التي تكون قبل ورود الجيش (فهي تُهيِّئُ وتُمهد لبلوغ الجيش مأربه). ومن التزايد اتجاهًا وتهيؤًا لاكتمال الحال جاء معنى الطلب لأنه ازدياد: \"بَغَى الشيءَ يبغيه: طلبه \". وبه جاءت كل صيغتي (ابتغى)، (ابتغاء)، {ابْتِغَاءَ مَرْضَاتِ اللَّهِ} [البقرة: 207]. وكذلك صيغة (بَغَى) التي ليست لمعنى التجاوز. \"بَغَى الضالّةَ والحاجة وكذلك ابتغى الشيء وتبغّاه واستبْغاه. والبُغْية - بالكسر والضم: الحاجة المَبْغِيّة \": {أَفَغَيْرَ دِينِ اللَّهِ يَبْغُونَ} [آل عمران: 83]، {لَيْسَ عَلَيْكُمْ جُنَاحٌ أَنْ تَبْتَغُوا فَضْلًا مِنْ رَبِّكُمْ} [البقرة: 198]. ومن الطلب \"بَغَت الأَمَةُ: عَهَرَت وزَنَت \". فهذا الأمر لا يكون إلا بقبولها - على الأقل، والرضا في باب الشهوة كالطلب، وقد يكون بسعيها حقيقة {وَمَا كَانَتْ أُمُّكِ بَغِيًّا} [مريم: 28]، {وَلَا تُكْرِهُوا فَتَيَاتِكُمْ عَلَى الْبِغَاءِ إِنْ أَرَدْنَ تَحَصُّنًا} [النور: 33] (فالتي تريد التحصن ستقاوم فلا يجوز إكراهها. أما التي لا تريد التحصن فإنه لا يُستطاع منعها إلا بالحبس، وحبسها يُهْدر ما اقتُنِيت لأجله). ومن مطاوعة الطلب: التأتي والتيسّر: \"انبغى له الشيء: تسهَّل وتيسر (أن يصل إليه) ما يصلح له \": {وَمَا عَلَّمْنَاهُ الشِّعْرَ وَمَا يَنْبَغِي لَهُ} [يس: 69]، {وَمَا يَنْبَغِي لِلرَّحْمَنِ أَنْ يَتَّخِذَ وَلَدًا} [مريم: 92]: (لا حاجة به إلى ذلك، ولا يليق به، (1/150) هو سبحانه منزه عن هذا). ومن التزايد جاء معنى التجاوز، لأن",
-    "sesler": "الباء للتجمع الرخو مع تلاصق ما، والغين لنحو الغشاء القوي، والفصل منهما يعبر عن امتلاء بماله حدّة أو قوة كامتلاء البئر وسمن التيس من الظباء. وفي (بغوبغى) تعبر الواو عن الاشتمال على ما له حدة مع تزايده، أو كونه في مرحلة التزايد. ومن هذا جاء تعبير (بغى) عن الطلب وعن البغى. وفي (بغت) أضافت التاء ضغطتها الدقيقة (والحدة والدقة من باب واحد)؛ فعبر التركيب عن المفاجأة (الصدمة) بشرّ. وفي (بغض) أضافت الضاد غلظًا مع الحدة، فعبر التركيب عن تجمع غلظ وحدة في الباطن، وهو حقيقة البغض. وفي (بغل) عبرت اللام عن تعلق واستقلال، وعبر التركيب عن تعلق حاد بأثناء الشيء مع بقائه وتميزه بذلك، كما هو حال البغل.",
-    "fasil_ozeti": "° معنى الفصل المعجمي (بغ): الامتلاء بما له حدّة: كما في السِمَن وكثرة الماء - في (بغغ)، وفي غضاضة (البَغْوة) وتزايدها في سبيل النضج - في (بغو - بغي) وهذه قوة نمو من باب الحدة، وفي وقع المفاجأة عند عدم التوقع - في (البغت)، وفي مشاعر الكراهة - في (البغض)، وفي غرابة الخروج عن الجنس السوي المعتاد - في (البغل).",
-    "tam_metin": "{ذَلِكَ مَا كُنَّا نَبْغِ} [الكهف: 64] {أَفَغَيْرَ اللَّهِ أَبْتَغِي حَكَمًا} [الأنعام: 114]\n__________\n(1) (صوتيًّا): الباء للتجمع الرخو مع تلاصق ما، والغين لنحو الغشاء القوي، والفصل منهما يعبر عن امتلاء بماله حدّة أو قوة كامتلاء البئر وسمن التيس من الظباء. وفي (بغوبغى) تعبر الواو عن الاشتمال على ما له حدة مع تزايده، أو كونه في مرحلة التزايد. ومن هذا جاء تعبير (بغى) عن الطلب وعن البغى. وفي (بغت) أضافت التاء ضغطتها الدقيقة (والحدة والدقة من باب واحد)؛ فعبر التركيب عن المفاجأة (الصدمة) بشرّ. وفي (بغض) أضافت الضاد غلظًا مع الحدة، فعبر التركيب عن تجمع غلظ وحدة في الباطن، وهو حقيقة البغض. وفي (بغل) عبرت اللام عن تعلق واستقلال، وعبر التركيب عن تعلق حاد بأثناء الشيء مع بقائه وتميزه بذلك، كما هو حال البغل.\n(1/149)\n\"البَغْوة - بالفتح: الطلعةُ حين تنشقّ فتخرُجُ بيضاءَ رَطْبة/ الثمرةُ قبل أن تَنْضَج/ قبل أن يستحكم يُبْسها. البَغْو والبَغوة: كل شجرٍ غضّ ثمرُهُ أخضرُ صغيرٌ لم يبلغ \".\n° المعنى المحوري\nهو: تزايد الشيء نموًّا وقوةً أو توصّلا لاكتمال حاله: كالبغو الموصوف، فهو في طور النمو ليبلغ الاكتمال. ومنه: البَغِيّة - كهدية: الطليعةُ التي تكون قبل ورود الجيش (فهي تُهيِّئُ وتُمهد لبلوغ الجيش مأربه).\nومن التزايد اتجاهًا وتهيؤًا لاكتمال الحال جاء معنى الطلب لأنه ازدياد: \"بَغَى الشيءَ يبغيه: طلبه \". وبه جاءت كل صيغتي (ابتغى)، (ابتغاء)، {ابْتِغَاءَ مَرْضَاتِ اللَّهِ} [البقرة: 207]. وكذلك صيغة (بَغَى) التي ليست لمعنى التجاوز. \"بَغَى الضالّةَ والحاجة وكذلك ابتغى الشيء وتبغّاه واستبْغاه. والبُغْية - بالكسر والضم: الحاجة المَبْغِيّة \": {أَفَغَيْرَ دِينِ اللَّهِ يَبْغُونَ} [آل عمران: 83]، {لَيْسَ عَلَيْكُمْ جُنَاحٌ أَنْ تَبْتَغُوا فَضْلًا مِنْ رَبِّكُمْ} [البقرة: 198]. ومن الطلب \"بَغَت الأَمَةُ: عَهَرَت وزَنَت \". فهذا الأمر لا يكون إلا بقبولها - على الأقل، والرضا في باب الشهوة كالطلب، وقد يكون بسعيها حقيقة {وَمَا كَانَتْ أُمُّكِ بَغِيًّا} [مريم: 28]، {وَلَا تُكْرِهُوا فَتَيَاتِكُمْ عَلَى الْبِغَاءِ إِنْ أَرَدْنَ تَحَصُّنًا} [النور: 33] (فالتي تريد التحصن ستقاوم فلا يجوز إكراهها. أما التي لا تريد التحصن فإنه لا يُستطاع منعها إلا بالحبس، وحبسها يُهْدر ما اقتُنِيت لأجله).\nومن مطاوعة الطلب: التأتي والتيسّر: \"انبغى له الشيء: تسهَّل وتيسر (أن يصل إليه) ما يصلح له \": {وَمَا عَلَّمْنَاهُ الشِّعْرَ وَمَا يَنْبَغِي لَهُ} [يس: 69]، {وَمَا يَنْبَغِي لِلرَّحْمَنِ أَنْ يَتَّخِذَ وَلَدًا} [مريم: 92]: (لا حاجة به إلى ذلك، ولا يليق به،\n(1/150)\nهو سبحانه منزه عن هذا).\nومن التزايد جاء معنى التجاوز، لأنه تعدٍّ وتزيّد: \"بغى عليهم: عَدَل عن الحق واستطال \" (التعدي تزيد وتخطٍّ توصلا إلى نيل ما لا يُستحق). و \"بَغَى الوالي: ظَلَم. وكل مجاوزة وإفراط على المقدار الذي هو حد الشيء بَغْى \" (كأن الأصل أن البغي لا يكون إلا عند التجاوز في استيفاء حق ما): وبه جاء كل لفظ (بَغَى)، (بَغْى)، (باغٍ) عدا ما أسلفنا من بغى التي للطلب. {إِنَّ قَارُونَ كَانَ مِنْ قَوْمِ مُوسَى فَبَغَى عَلَيْهِمْ} [القصص: 76]، {وَلَوْ بَسَطَ اللَّهُ الرِّزْقَ لِعِبَادِهِ لَبَغَوْا فِي الْأَرْضِ} [الشورى: 27]، {فَأَتْبَعَهُمْ فِرْعَوْنُ وَجُنُودُهُ بَغْيًا وَعَدْوًا} [يونس: 90].\nأما قولهم: \"دَفْعنا بَغْىَ السماء خلْفَنا: أي شدتها ومُعْظم مطرها \"فذلك من التزايد، كأنه كان يزداد ليبلغ أقصاه. ومعنى دفعوه خلفهم أنهم مروا واجتازوا المنطقة التي كان المطر يتزايد فيها فصارت خلفهم."
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["feeling.n.01", "happening.n.01", "substance.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 6,
       "merkez_kok": "كفت",
@@ -501,6 +361,11 @@
       "boy": 28
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["feeling.n.01", "happening.n.01", "substance.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

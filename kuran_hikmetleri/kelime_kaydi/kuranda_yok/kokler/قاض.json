@@ -1,464 +1,337 @@
 {
   "kok": "قاض",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "قاض", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يقض",
-        "u": "يقض",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يقض (form I)\n# يَقُضْ (yaquḍ) /ja.qudˤ/: third-person masculine singular non-past active jussive of قَاضَ (qāḍa)\n# يُقَضْ (yuqaḍ) /ju.qadˤ/: third-person masculine singular non-past passive jussive of قَاضَ (qāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaquḍ", "qāḍa", "yuqaḍ"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "قضت",
-        "u": "قضت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "قضت (form I)\n# قُضْتُ (quḍtu) /qudˤ.tu/: first-person singular past active of قَاضَ (qāḍa)\n# قُضْتَ (quḍta) /qudˤ.ta/: second-person masculine singular past active of قَاضَ (qāḍa)\n# قُضْتِ (quḍti) /qudˤ.ti/: second-person feminine singular past active of قَاضَ (qāḍa)\n# قِضْتُ (qiḍtu) /qidˤ.tu/: first-person singular past passive of قَاضَ (qāḍa)\n# قِضْتَ (qiḍta) /qidˤ.ta/: second-person masculine s",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["quḍtu", "qāḍa", "quḍta"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تقض",
-        "u": "تقض",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تقض (form I)\n# تَقُضْ (taquḍ) /ta.qudˤ/: inflection of قَاضَ (qāḍa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُقَضْ (tuqaḍ) /tu.qadˤ/: inflection of قَاضَ (qāḍa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taquḍ", "qāḍa", "tuqaḍ"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "أقض",
-        "u": "أقض",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أقض (form I)\n# أَقُضْ (ʔaquḍ) /ʔa.qudˤ/: first-person singular non-past active jussive of قَاضَ (qāḍa)\n# أُقَضْ (ʔuqaḍ) /ʔu.qadˤ/: first-person singular non-past passive jussive of قَاضَ (qāḍa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaquḍ", "qāḍa", "ʔuqaḍ"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "نقض",
-        "u": "نقض",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "نقض (form I)\n# نَقُضْ (naquḍ) /na.qudˤ/: first-person plural non-past active jussive of قَاضَ (qāḍa)\n# نُقَضْ (nuqaḍ) /nu.qadˤ/: first-person plural non-past passive jussive of قَاضَ (qāḍa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naquḍ", "qāḍa", "nuqaḍ"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تقوض",
-        "u": "تقوض",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تقوض (form I)\n# تَقُوضُ (taqūḍu) /ta.quː.dˤu/: inflection of قَاضَ (qāḍa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَقُوضَ (taqūḍa) /ta.quː.dˤa/: inflection of قَاضَ (qāḍa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taqūḍu", "qāḍa", "taqūḍa"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تقوضي",
-        "u": "تقوضي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَقُوضِي • (taqūḍī) (form I) /ta.quː.dˤiː/\n# second-person feminine singular non-past active subjunctive/jussive of قَاضَ (qāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taqūḍī", "qāḍa"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تقوضين",
-        "u": "تقوضين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَقُوضِينَ • (taqūḍīna) (form I) /ta.quː.dˤiː.na/\n# second-person feminine singular non-past active indicative of قَاضَ (qāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taqūḍīna", "qāḍa"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تقوضوا",
-        "u": "تقوضوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَقُوضُوا • (taqūḍū) (form I) /ta.quː.dˤuː/\n# second-person masculine plural non-past active subjunctive/jussive of قَاضَ (qāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taqūḍū", "qāḍa"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تقوضا",
-        "u": "تقوضا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَقُوضَا • (taqūḍā) (form I) /ta.quː.dˤaː/\n# inflection of قَاضَ (qāḍa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taqūḍā", "qāḍa"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "قضتما",
-        "u": "قضتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قضتما (form I)\n# قُضْتُمَا (quḍtumā) /qudˤ.tu.maː/: second-person dual past active of قَاضَ (qāḍa)\n# قِضْتُمَا (qiḍtumā) /qidˤ.tu.maː/: second-person dual past passive of قَاضَ (qāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["quḍtumā", "qāḍa", "qiḍtumā"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "قضنا",
-        "u": "قضنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قضنا (form I)\n# قُضْنَا (quḍnā) /qudˤ.naː/: first-person plural past active of قَاضَ (qāḍa)\n# قِضْنَا (qiḍnā) /qidˤ.naː/: first-person plural past passive of قَاضَ (qāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["quḍnā", "qāḍa", "qiḍnā"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "قاضت",
-        "u": "قاضت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "قَاضَتْ • (qāḍat) (form I) /qaː.dˤat/\n# third-person feminine singular past active of قَاضَ (qāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qāḍat", "qāḍa"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "قضتم",
-        "u": "قضتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قضتم (form I)\n# قُضْتُمْ (quḍtum) /qudˤ.tum/: second-person masculine plural past active of قَاضَ (qāḍa)\n# قِضْتُمْ (qiḍtum) /qidˤ.tum/: second-person masculine plural past passive of قَاضَ (qāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["quḍtum", "qāḍa", "qiḍtum"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "قاضتا",
-        "u": "قاضتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "قَاضَتَا • (qāḍatā) (form I) /qaː.dˤa.taː/\n# third-person feminine dual past active of قَاضَ (qāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qāḍatā", "qāḍa"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "قاضا",
-        "u": "قاضا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قَاضَا • (qāḍā) (form I) /qaː.dˤaː/\n# third-person masculine dual past active of قَاضَ (qāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qāḍā", "qāḍa"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "قضن",
-        "u": "قضن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قضن (form I)\n# قُضْنَ (quḍna) /qudˤ.na/: inflection of قَاضَ (qāḍa):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# قِضْنَ (qiḍna) /qidˤ.na/: third-person feminine plural past passive of قَاضَ (qāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["quḍna", "qāḍa", "qiḍna"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "قضتن",
-        "u": "قضتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قضتن (form I)\n# قُضْتُنَّ (quḍtunna) /qudˤ.tun.na/: second-person feminine plural past active of قَاضَ (qāḍa)\n# قِضْتُنَّ (qiḍtunna) /qidˤ.tun.na/: second-person feminine plural past passive of قَاضَ (qāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["quḍtunna", "qāḍa", "qiḍtunna"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "أقوض",
-        "u": "أقوض",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أقوض (form I)\n# أَقُوضُ (ʔaqūḍu) /ʔa.quː.dˤu/: first-person singular non-past active indicative of قَاضَ (qāḍa)\n# أَقُوضَ (ʔaqūḍa) /ʔa.quː.dˤa/: first-person singular non-past active subjunctive of قَاضَ (qāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaqūḍu", "qāḍa", "ʔaqūḍa"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "يقوض",
-        "u": "يقوض",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يقوض (form I)\n# يَقُوضُ (yaqūḍu) /ja.quː.dˤu/: third-person masculine singular non-past active indicative of قَاضَ (qāḍa)\n# يَقُوضَ (yaqūḍa) /ja.quː.dˤa/: third-person masculine singular non-past active subjunctive of قَاضَ (qāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaqūḍu", "qāḍa", "yaqūḍa"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "قاضوا",
-        "u": "قاضوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "قَاضُوا • (qāḍū) (form I) /qaː.dˤuː/\n# third-person masculine plural past active of قَاضَ (qāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qāḍū", "qāḍa"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تقوضان",
-        "u": "تقوضان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَقُوضَانِ • (taqūḍāni) (form I) /ta.quː.dˤaː.ni/\n# inflection of قَاضَ (qāḍa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taqūḍāni", "qāḍa"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "يقوضان",
-        "u": "يقوضان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَقُوضَانِ • (yaqūḍāni) (form I) /ja.quː.dˤaː.ni/\n# third-person masculine dual non-past active indicative of قَاضَ (qāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaqūḍāni", "qāḍa"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تقوضون",
-        "u": "تقوضون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَقُوضُونَ • (taqūḍūna) (form I) /ta.quː.dˤuː.na/\n# second-person masculine plural non-past active indicative of قَاضَ (qāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taqūḍūna", "qāḍa"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "نقوض",
-        "u": "نقوض",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نقوض (form I)\n# نَقُوضُ (naqūḍu) /na.quː.dˤu/: first-person plural non-past active indicative of قَاضَ (qāḍa)\n# نَقُوضَ (naqūḍa) /na.quː.dˤa/: first-person plural non-past active subjunctive of قَاضَ (qāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naqūḍu", "qāḍa", "naqūḍa"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تقضن",
-        "u": "تقضن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تقضن (form I)\n# تَقُضْنَ (taquḍna) /ta.qudˤ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of قَاضَ (qāḍa)\n# تُقَضْنَ (tuqaḍna) /tu.qadˤ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of قَاضَ (qāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taquḍna", "qāḍa", "tuqaḍna"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "يقوضون",
-        "u": "يقوضون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَقُوضُونَ • (yaqūḍūna) (form I) /ja.quː.dˤuː.na/\n# third-person masculine plural non-past active indicative of قَاضَ (qāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaqūḍūna", "qāḍa"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "يقضن",
-        "u": "يقضن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يقضن (form I)\n# يَقُضْنَ (yaquḍna) /ja.qudˤ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of قَاضَ (qāḍa)\n# يُقَضْنَ (yuqaḍna) /ju.qadˤ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of قَاضَ (qāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaquḍna", "qāḍa", "yuqaḍna"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "يقوضوا",
-        "u": "يقوضوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَقُوضُوا • (yaqūḍū) (form I) /ja.quː.dˤuː/\n# third-person masculine plural non-past active subjunctive/jussive of قَاضَ (qāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaqūḍū", "qāḍa"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "قض",
-        "u": "قض",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "قُضْ • (quḍ) (form I) /qudˤ/\n# second-person masculine singular imperative of قَاضَ (qāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["quḍ", "qāḍa"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "قوضا",
-        "u": "قوضا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "قُوضَا • (qūḍā) (form I) /quː.dˤaː/\n# second-person dual imperative of قَاضَ (qāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qūḍā", "qāḍa"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "يقوضا",
-        "u": "يقوضا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَقُوضَا • (yaqūḍā) (form I) /ja.quː.dˤaː/\n# third-person masculine dual non-past active subjunctive/jussive of قَاضَ (qāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaqūḍā", "qāḍa"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "قوضي",
-        "u": "قوضي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "قُوضِي • (qūḍī) (form I) /quː.dˤiː/\n# second-person feminine singular imperative of قَاضَ (qāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qūḍī", "qāḍa"],
-        "k": "قاض",
-        "yol": "kök"
-      },
-      {
-        "w": "قوضوا",
-        "u": "قوضوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "قُوضُوا • (qūḍū) (form I) /quː.dˤuː/\n# second-person masculine plural imperative of قَاضَ (qāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qūḍū", "qāḍa"],
-        "k": "قاض",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "قض",
+  "ses": {
     "harf": "ق",
+    "fasil": "قض",
     "mahrec": "lehaviyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "يقض",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يقض (form I)\n# يَقُضْ (yaquḍ) /ja.qudˤ/: third-person masculine singular non-past active jussive of قَاضَ (qāḍa)\n# يُقَضْ (yuqaḍ) /ju.qadˤ/: third-person masculine singular non-past passive jussive of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaquḍ", "qāḍa", "yuqaḍ"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قضت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "قضت (form I)\n# قُضْتُ (quḍtu) /qudˤ.tu/: first-person singular past active of قَاضَ (qāḍa)\n# قُضْتَ (quḍta) /qudˤ.ta/: second-person masculine singular past active of قَاضَ (qāḍa)\n# قُضْتِ (quḍti) /qudˤ.ti/: second-person feminine singular past active of قَاضَ (qāḍa)\n# قِضْتُ (qiḍtu) /qidˤ.tu/: first-person singular past passive of قَاضَ (qāḍa)\n# قِضْتَ (qiḍta) /qidˤ.ta/: second-person masculine s",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["quḍtu", "qāḍa", "quḍta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقض",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تقض (form I)\n# تَقُضْ (taquḍ) /ta.qudˤ/: inflection of قَاضَ (qāḍa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُقَضْ (tuqaḍ) /tu.qadˤ/: inflection of قَاضَ (qāḍa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taquḍ", "qāḍa", "tuqaḍ"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقض",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أقض (form I)\n# أَقُضْ (ʔaquḍ) /ʔa.qudˤ/: first-person singular non-past active jussive of قَاضَ (qāḍa)\n# أُقَضْ (ʔuqaḍ) /ʔu.qadˤ/: first-person singular non-past passive jussive of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaquḍ", "qāḍa", "ʔuqaḍ"]
+    },
+    {
+      "madde": "نقض",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "نقض (form I)\n# نَقُضْ (naquḍ) /na.qudˤ/: first-person plural non-past active jussive of قَاضَ (qāḍa)\n# نُقَضْ (nuqaḍ) /nu.qadˤ/: first-person plural non-past passive jussive of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naquḍ", "qāḍa", "nuqaḍ"]
+    },
+    {
+      "madde": "تقوض",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تقوض (form I)\n# تَقُوضُ (taqūḍu) /ta.quː.dˤu/: inflection of قَاضَ (qāḍa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَقُوضَ (taqūḍa) /ta.quː.dˤa/: inflection of قَاضَ (qāḍa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taqūḍu", "qāḍa", "taqūḍa"]
+    },
+    {
+      "madde": "تقوضي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَقُوضِي • (taqūḍī) (form I) /ta.quː.dˤiː/\n# second-person feminine singular non-past active subjunctive/jussive of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taqūḍī", "qāḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقوضين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَقُوضِينَ • (taqūḍīna) (form I) /ta.quː.dˤiː.na/\n# second-person feminine singular non-past active indicative of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taqūḍīna", "qāḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقوضوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَقُوضُوا • (taqūḍū) (form I) /ta.quː.dˤuː/\n# second-person masculine plural non-past active subjunctive/jussive of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taqūḍū", "qāḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقوضا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَقُوضَا • (taqūḍā) (form I) /ta.quː.dˤaː/\n# inflection of قَاضَ (qāḍa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taqūḍā", "qāḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قضتما",
+      "tur": "verb",
+      "baslik": "قضتما (form I)\n# قُضْتُمَا (quḍtumā) /qudˤ.tu.maː/: second-person dual past active of قَاضَ (qāḍa)\n# قِضْتُمَا (qiḍtumā) /qidˤ.tu.maː/: second-person dual past passive of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["quḍtumā", "qāḍa", "qiḍtumā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قضنا",
+      "tur": "verb",
+      "baslik": "قضنا (form I)\n# قُضْنَا (quḍnā) /qudˤ.naː/: first-person plural past active of قَاضَ (qāḍa)\n# قِضْنَا (qiḍnā) /qidˤ.naː/: first-person plural past passive of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["quḍnā", "qāḍa", "qiḍnā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قاضت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "قَاضَتْ • (qāḍat) (form I) /qaː.dˤat/\n# third-person feminine singular past active of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qāḍat", "qāḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قضتم",
+      "tur": "verb",
+      "baslik": "قضتم (form I)\n# قُضْتُمْ (quḍtum) /qudˤ.tum/: second-person masculine plural past active of قَاضَ (qāḍa)\n# قِضْتُمْ (qiḍtum) /qidˤ.tum/: second-person masculine plural past passive of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["quḍtum", "qāḍa", "qiḍtum"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قاضتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "قَاضَتَا • (qāḍatā) (form I) /qaː.dˤa.taː/\n# third-person feminine dual past active of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qāḍatā", "qāḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قاضا",
+      "tur": "verb",
+      "baslik": "قَاضَا • (qāḍā) (form I) /qaː.dˤaː/\n# third-person masculine dual past active of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qāḍā", "qāḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قضن",
+      "tur": "verb",
+      "baslik": "قضن (form I)\n# قُضْنَ (quḍna) /qudˤ.na/: inflection of قَاضَ (qāḍa):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# قِضْنَ (qiḍna) /qidˤ.na/: third-person feminine plural past passive of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["quḍna", "qāḍa", "qiḍna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قضتن",
+      "tur": "verb",
+      "baslik": "قضتن (form I)\n# قُضْتُنَّ (quḍtunna) /qudˤ.tun.na/: second-person feminine plural past active of قَاضَ (qāḍa)\n# قِضْتُنَّ (qiḍtunna) /qidˤ.tun.na/: second-person feminine plural past passive of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["quḍtunna", "qāḍa", "qiḍtunna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقوض",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أقوض (form I)\n# أَقُوضُ (ʔaqūḍu) /ʔa.quː.dˤu/: first-person singular non-past active indicative of قَاضَ (qāḍa)\n# أَقُوضَ (ʔaqūḍa) /ʔa.quː.dˤa/: first-person singular non-past active subjunctive of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaqūḍu", "qāḍa", "ʔaqūḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقوض",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يقوض (form I)\n# يَقُوضُ (yaqūḍu) /ja.quː.dˤu/: third-person masculine singular non-past active indicative of قَاضَ (qāḍa)\n# يَقُوضَ (yaqūḍa) /ja.quː.dˤa/: third-person masculine singular non-past active subjunctive of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaqūḍu", "qāḍa", "yaqūḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قاضوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "قَاضُوا • (qāḍū) (form I) /qaː.dˤuː/\n# third-person masculine plural past active of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qāḍū", "qāḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقوضان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَقُوضَانِ • (taqūḍāni) (form I) /ta.quː.dˤaː.ni/\n# inflection of قَاضَ (qāḍa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taqūḍāni", "qāḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقوضان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَقُوضَانِ • (yaqūḍāni) (form I) /ja.quː.dˤaː.ni/\n# third-person masculine dual non-past active indicative of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaqūḍāni", "qāḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقوضون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَقُوضُونَ • (taqūḍūna) (form I) /ta.quː.dˤuː.na/\n# second-person masculine plural non-past active indicative of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taqūḍūna", "qāḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نقوض",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نقوض (form I)\n# نَقُوضُ (naqūḍu) /na.quː.dˤu/: first-person plural non-past active indicative of قَاضَ (qāḍa)\n# نَقُوضَ (naqūḍa) /na.quː.dˤa/: first-person plural non-past active subjunctive of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naqūḍu", "qāḍa", "naqūḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقضن",
+      "tur": "verb",
+      "baslik": "تقضن (form I)\n# تَقُضْنَ (taquḍna) /ta.qudˤ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of قَاضَ (qāḍa)\n# تُقَضْنَ (tuqaḍna) /tu.qadˤ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taquḍna", "qāḍa", "tuqaḍna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقوضون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَقُوضُونَ • (yaqūḍūna) (form I) /ja.quː.dˤuː.na/\n# third-person masculine plural non-past active indicative of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaqūḍūna", "qāḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقضن",
+      "tur": "verb",
+      "baslik": "يقضن (form I)\n# يَقُضْنَ (yaquḍna) /ja.qudˤ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of قَاضَ (qāḍa)\n# يُقَضْنَ (yuqaḍna) /ju.qadˤ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaquḍna", "qāḍa", "yuqaḍna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقوضوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَقُوضُوا • (yaqūḍū) (form I) /ja.quː.dˤuː/\n# third-person masculine plural non-past active subjunctive/jussive of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaqūḍū", "qāḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قض",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "قُضْ • (quḍ) (form I) /qudˤ/\n# second-person masculine singular imperative of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["quḍ", "qāḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قوضا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "قُوضَا • (qūḍā) (form I) /quː.dˤaː/\n# second-person dual imperative of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qūḍā", "qāḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقوضا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَقُوضَا • (yaqūḍā) (form I) /ja.quː.dˤaː/\n# third-person masculine dual non-past active subjunctive/jussive of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaqūḍā", "qāḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قوضي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "قُوضِي • (qūḍī) (form I) /quː.dˤiː/\n# second-person feminine singular imperative of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qūḍī", "qāḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قوضوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "قُوضُوا • (qūḍū) (form I) /quː.dˤuː/\n# second-person masculine plural imperative of قَاضَ (qāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qūḍū", "qāḍa"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "قاض", "r7"]
+  ],
+  "mana": {
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
@@ -466,16 +339,11 @@
     "dayanak_tanim": "(law) the act of rescinding; the cancellation of a contract and the return of the parties to the positions they would have had if the contract had not been made",
     "synset_sayisi": 14
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "act.n.02",
     "break.v.02",
     "break.v.04",
@@ -491,12 +359,10 @@
     "separate.v.08",
     "tell.v.02"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

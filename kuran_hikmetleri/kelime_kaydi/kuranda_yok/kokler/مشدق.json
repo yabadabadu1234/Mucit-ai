@@ -1,53 +1,53 @@
 {
   "kok": "مشدق",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "مشدق", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تمشدق",
-        "u": "تمشدق",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "تَمَشْدَقَ • (tamašdaqa) IIq (non-past يَتَمَشْدَقُ (yatamašdaqu), verbal noun تَمَشْدُق (tamašduq))",
-        "t": "From the root م ش د ق (m š d q), from شِدْق (šidq, “corners of the mouth or jaw”).",
-        "s": [
-          ["ar-root", "م ش د ق (m š d q)"]
-        ],
-        "synonyms": ["تَشَدَّقَ"],
-        "g": ["to babble", "to speak in an excessively eloquent manner."],
-        "r": ["tamašdaqa"],
-        "el": [
-          ["م ش د ق", "Appendix:Arabic roots/م ش د ق"],
-          ["شِدْق", "شدق#Arabic"]
-        ],
-        "k": "مشدق",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "مش",
+  "ses": {
     "harf": "م",
+    "fasil": "مش",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "تمشدق",
+      "tur": "verb",
+      "baslik": "تَمَشْدَقَ • (tamašdaqa) IIq (non-past يَتَمَشْدَقُ (yatamašdaqu), verbal noun تَمَشْدُق (tamašduq))",
+      "etim_sablon": [
+        ["ar-root", "م ش د ق (m š d q)"]
+      ],
+      "esanlamli": ["تَشَدَّقَ"],
+      "anlam": ["to babble", "to speak in an excessively eloquent manner."],
+      "okunus": ["tamašdaqa"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "From the root م ش د ق (m š d q), from شِدْق (šidq, “corners of the mouth or jaw”).",
+      "kognatlar": [
+        ["م ش د ق", "Appendix:Arabic roots/م ش د ق"],
+        ["شِدْق", "شدق#Arabic"]
+      ]
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "مشدق", "r6"]
+  ],
+  "mana": {
     "ince": "talk.v.02",
     "orta": "verb.communication",
     "ust": "söz ve haber",
@@ -55,20 +55,8 @@
     "dayanak_tanim": "talk in a noisy, excited, or declamatory manner",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["rant.v.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 5,
       "merkez_kok": "خون",
@@ -88,6 +76,11 @@
       "boy": 12
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["rant.v.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

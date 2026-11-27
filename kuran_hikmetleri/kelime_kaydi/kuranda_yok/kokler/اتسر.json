@@ -1,372 +1,265 @@
 {
   "kok": "اتسر",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "اتسر", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يتسر",
-        "u": "يتسر",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يتسر (form VIII)\n# يَتَّسِرُ (yattasiru) /jat.ta.si.ru/: third-person masculine singular non-past active indicative of اِتَّسَرَ (ittasara)\n# يُتَّسَرُ (yuttasaru) /jut.ta.sa.ru/: third-person masculine singular non-past passive indicative of اِتَّسَرَ (ittasara)\n# يَتَّسِرَ (yattasira) /jat.ta.si.ra/: third-person masculine singular non-past active subjunctive of اِتَّسَرَ (ittasara)\n# يُتَّسَرَ ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattasiru", "ittasara", "yuttasaru"],
-        "k": "اتسر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسر",
-        "u": "تتسر",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تتسر (form VIII)\n# تَتَّسِرُ (tattasiru) /tat.ta.si.ru/: inflection of اِتَّسَرَ (ittasara):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُتَّسَرُ (tuttasaru) /tut.ta.sa.ru/: inflection of اِتَّسَرَ (ittasara):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattasiru", "ittasara", "tuttasaru"],
-        "k": "اتسر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسرين",
-        "u": "تتسرين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تتسرين (form VIII)\n# تَتَّسِرِينَ (tattasirīna) /tat.ta.si.riː.na/: second-person feminine singular non-past active indicative of اِتَّسَرَ (ittasara)\n# تُتَّسَرِينَ (tuttasarīna) /tut.ta.sa.riː.na/: second-person feminine singular non-past passive indicative of اِتَّسَرَ (ittasara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattasirīna", "ittasara", "tuttasarīna"],
-        "k": "اتسر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسري",
-        "u": "تتسري",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تتسري (form VIII)\n# تَتَّسِرِي (tattasirī) /tat.ta.si.riː/: second-person feminine singular non-past active subjunctive/jussive of اِتَّسَرَ (ittasara)\n# تُتَّسَرِي (tuttasarī) /tut.ta.sa.riː/: second-person feminine singular non-past passive subjunctive/jussive of اِتَّسَرَ (ittasara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattasirī", "ittasara", "tuttasarī"],
-        "k": "اتسر",
-        "yol": "kök"
-      },
-      {
-        "w": "أتسر",
-        "u": "أتسر",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أتسر (form VIII)\n# أَتَّسِرُ (ʔattasiru) /ʔat.ta.si.ru/: first-person singular non-past active indicative of اِتَّسَرَ (ittasara)\n# أُتَّسَرُ (ʔuttasaru) /ʔut.ta.sa.ru/: first-person singular non-past passive indicative of اِتَّسَرَ (ittasara)\n# أَتَّسِرَ (ʔattasira) /ʔat.ta.si.ra/: first-person singular non-past active subjunctive of اِتَّسَرَ (ittasara)\n# أُتَّسَرَ (ʔuttasara) /ʔut.ta.sa.ra/: fi",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ʔattasiru", "ittasara", "ʔuttasaru"],
-        "k": "اتسر",
-        "yol": "kök"
-      },
-      {
-        "w": "نتسر",
-        "u": "نتسر",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نتسر (form VIII)\n# نَتَّسِرُ (nattasiru) /nat.ta.si.ru/: first-person plural non-past active indicative of اِتَّسَرَ (ittasara)\n# نُتَّسَرُ (nuttasaru) /nut.ta.sa.ru/: first-person plural non-past passive indicative of اِتَّسَرَ (ittasara)\n# نَتَّسِرَ (nattasira) /nat.ta.si.ra/: first-person plural non-past active subjunctive of اِتَّسَرَ (ittasara)\n# نُتَّسَرَ (nuttasara) /nut.ta.sa.ra/: first-pe",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["nattasiru", "ittasara", "nuttasaru"],
-        "k": "اتسر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسرون",
-        "u": "تتسرون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تتسرون (form VIII)\n# تَتَّسِرُونَ (tattasirūna) /tat.ta.si.ruː.na/: second-person masculine plural non-past active indicative of اِتَّسَرَ (ittasara)\n# تُتَّسَرُونَ (tuttasarūna) /tut.ta.sa.ruː.na/: second-person masculine plural non-past passive indicative of اِتَّسَرَ (ittasara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattasirūna", "ittasara", "tuttasarūna"],
-        "k": "اتسر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسروا",
-        "u": "تتسروا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تتسروا (form VIII)\n# تَتَّسِرُوا (tattasirū) /tat.ta.si.ruː/: second-person masculine plural non-past active subjunctive/jussive of اِتَّسَرَ (ittasara)\n# تُتَّسَرُوا (tuttasarū) /tut.ta.sa.ruː/: second-person masculine plural non-past passive subjunctive/jussive of اِتَّسَرَ (ittasara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattasirū", "ittasara", "tuttasarū"],
-        "k": "اتسر",
-        "yol": "kök"
-      },
-      {
-        "w": "يتسرون",
-        "u": "يتسرون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يتسرون (form VIII)\n# يَتَّسِرُونَ (yattasirūna) /jat.ta.si.ruː.na/: third-person masculine plural non-past active indicative of اِتَّسَرَ (ittasara)\n# يُتَّسَرُونَ (yuttasarūna) /jut.ta.sa.ruː.na/: third-person masculine plural non-past passive indicative of اِتَّسَرَ (ittasara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattasirūna", "ittasara", "yuttasarūna"],
-        "k": "اتسر",
-        "yol": "kök"
-      },
-      {
-        "w": "يتسروا",
-        "u": "يتسروا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يتسروا (form VIII)\n# يَتَّسِرُوا (yattasirū) /jat.ta.si.ruː/: third-person masculine plural non-past active subjunctive/jussive of اِتَّسَرَ (ittasara)\n# يُتَّسَرُوا (yuttasarū) /jut.ta.sa.ruː/: third-person masculine plural non-past passive subjunctive/jussive of اِتَّسَرَ (ittasara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattasirū", "ittasara", "yuttasarū"],
-        "k": "اتسر",
-        "yol": "kök"
-      },
-      {
-        "w": "اتسرا",
-        "u": "اتسرا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتسرا (form VIII)\n# اِتَّسَرَا (ittasarā) /it.ta.sa.raː/: third-person masculine dual past active of اِتَّسَرَ (ittasara)\n# اُتُّسِرَا (uttusirā) /ut.tu.si.raː/: third-person masculine dual past passive of اِتَّسَرَ (ittasara)\n# اِتَّسِرَا (ittasirā) /it.ta.si.raː/: second-person dual imperative of اِتَّسَرَ (ittasara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittasarā", "ittasara", "uttusirā"],
-        "k": "اتسر",
-        "yol": "kök"
-      },
-      {
-        "w": "اتسرتما",
-        "u": "اتسرتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتسرتما (form VIII)\n# اِتَّسَرْتُمَا (ittasartumā) /it.ta.sar.tu.maː/: second-person dual past active of اِتَّسَرَ (ittasara)\n# اُتُّسِرْتُمَا (uttusirtumā) /ut.tu.sir.tu.maː/: second-person dual past passive of اِتَّسَرَ (ittasara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittasartumā", "ittasara", "uttusirtumā"],
-        "k": "اتسر",
-        "yol": "kök"
-      },
-      {
-        "w": "اتسرت",
-        "u": "اتسرت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتسرت (form VIII)\n# اِتَّسَرْتُ (ittasartu) /it.ta.sar.tu/: first-person singular past active of اِتَّسَرَ (ittasara)\n# اِتَّسَرْتَ (ittasarta) /it.ta.sar.ta/: second-person masculine singular past active of اِتَّسَرَ (ittasara)\n# اِتَّسَرْتِ (ittasarti) /it.ta.sar.ti/: second-person feminine singular past active of اِتَّسَرَ (ittasara)\n# اِتَّسَرَتْ (ittasarat) /it.ta.sa.rat/: third-person femini",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittasartu", "ittasara", "ittasarta"],
-        "k": "اتسر",
-        "yol": "kök"
-      },
-      {
-        "w": "اتسرنا",
-        "u": "اتسرنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتسرنا (form VIII)\n# اِتَّسَرْنَا (ittasarnā) /it.ta.sar.naː/: first-person plural past active of اِتَّسَرَ (ittasara)\n# اُتُّسِرْنَا (uttusirnā) /ut.tu.sir.naː/: first-person plural past passive of اِتَّسَرَ (ittasara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittasarnā", "ittasara", "uttusirnā"],
-        "k": "اتسر",
-        "yol": "kök"
-      },
-      {
-        "w": "اتسرتا",
-        "u": "اتسرتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتسرتا (form VIII)\n# اِتَّسَرَتَا (ittasaratā) /it.ta.sa.ra.taː/: third-person feminine dual past active of اِتَّسَرَ (ittasara)\n# اُتُّسِرَتَا (uttusiratā) /ut.tu.si.ra.taː/: third-person feminine dual past passive of اِتَّسَرَ (ittasara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittasaratā", "ittasara", "uttusiratā"],
-        "k": "اتسر",
-        "yol": "kök"
-      },
-      {
-        "w": "اتسروا",
-        "u": "اتسروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتسروا (form VIII)\n# اِتَّسَرُوا (ittasarū) /it.ta.sa.ruː/: third-person masculine plural past active of اِتَّسَرَ (ittasara)\n# اُتُّسِرُوا (uttusirū) /ut.tu.si.ruː/: third-person masculine plural past passive of اِتَّسَرَ (ittasara)\n# اِتَّسِرُوا (ittasirū) /it.ta.si.ruː/: second-person masculine plural imperative of اِتَّسَرَ (ittasara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittasarū", "ittasara", "uttusirū"],
-        "k": "اتسر",
-        "yol": "kök"
-      },
-      {
-        "w": "اتسرتم",
-        "u": "اتسرتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتسرتم (form VIII)\n# اِتَّسَرْتُمْ (ittasartum) /it.ta.sar.tum/: second-person masculine plural past active of اِتَّسَرَ (ittasara)\n# اُتُّسِرْتُمْ (uttusirtum) /ut.tu.sir.tum/: second-person masculine plural past passive of اِتَّسَرَ (ittasara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittasartum", "ittasara", "uttusirtum"],
-        "k": "اتسر",
-        "yol": "kök"
-      },
-      {
-        "w": "اتسرتن",
-        "u": "اتسرتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتسرتن (form VIII)\n# اِتَّسَرْتُنَّ (ittasartunna) /it.ta.sar.tun.na/: second-person feminine plural past active of اِتَّسَرَ (ittasara)\n# اُتُّسِرْتُنَّ (uttusirtunna) /ut.tu.sir.tun.na/: second-person feminine plural past passive of اِتَّسَرَ (ittasara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittasartunna", "ittasara", "uttusirtunna"],
-        "k": "اتسر",
-        "yol": "kök"
-      },
-      {
-        "w": "اتسرن",
-        "u": "اتسرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتسرن (form VIII)\n# اِتَّسَرْنَ (ittasarna) /it.ta.sar.na/: third-person feminine plural past active of اِتَّسَرَ (ittasara)\n# اُتُّسِرْنَ (uttusirna) /ut.tu.sir.na/: third-person feminine plural past passive of اِتَّسَرَ (ittasara)\n# اِتَّسِرْنَ (ittasirna) /it.ta.sir.na/: second-person feminine plural imperative of اِتَّسَرَ (ittasara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittasarna", "ittasara", "uttusirna"],
-        "k": "اتسر",
-        "yol": "kök"
-      },
-      {
-        "w": "يتسران",
-        "u": "يتسران",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتسران (form VIII)\n# يَتَّسِرَانِ (yattasirāni) /jat.ta.si.raː.ni/: third-person masculine dual non-past active indicative of اِتَّسَرَ (ittasara)\n# يُتَّسَرَانِ (yuttasarāni) /jut.ta.sa.raː.ni/: third-person masculine dual non-past passive indicative of اِتَّسَرَ (ittasara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattasirāni", "ittasara", "yuttasarāni"],
-        "k": "اتسر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسران",
-        "u": "تتسران",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتسران (form VIII)\n# تَتَّسِرَانِ (tattasirāni) /tat.ta.si.raː.ni/: inflection of اِتَّسَرَ (ittasara):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُتَّسَرَانِ (tuttasarāni) /tut.ta.sa.raː.ni/: inflection of اِتَّسَرَ (ittasara):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicati",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattasirāni", "ittasara", "tuttasarāni"],
-        "k": "اتسر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسرن",
-        "u": "تتسرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتسرن (form VIII)\n# تَتَّسِرْنَ (tattasirna) /tat.ta.sir.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of اِتَّسَرَ (ittasara)\n# تُتَّسَرْنَ (tuttasarna) /tut.ta.sar.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of اِتَّسَرَ (ittasara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattasirna", "ittasara", "tuttasarna"],
-        "k": "اتسر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسرا",
-        "u": "تتسرا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتسرا (form VIII)\n# تَتَّسِرَا (tattasirā) /tat.ta.si.raː/: inflection of اِتَّسَرَ (ittasara):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُتَّسَرَا (tuttasarā) /tut.ta.sa.raː/: inflection of اِتَّسَرَ (ittasara):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past pass",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattasirā", "ittasara", "tuttasarā"],
-        "k": "اتسر",
-        "yol": "kök"
-      },
-      {
-        "w": "يتسرا",
-        "u": "يتسرا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتسرا (form VIII)\n# يَتَّسِرَا (yattasirā) /jat.ta.si.raː/: third-person masculine dual non-past active subjunctive/jussive of اِتَّسَرَ (ittasara)\n# يُتَّسَرَا (yuttasarā) /jut.ta.sa.raː/: third-person masculine dual non-past passive subjunctive/jussive of اِتَّسَرَ (ittasara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattasirā", "ittasara", "yuttasarā"],
-        "k": "اتسر",
-        "yol": "kök"
-      },
-      {
-        "w": "يتسرن",
-        "u": "يتسرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتسرن (form VIII)\n# يَتَّسِرْنَ (yattasirna) /jat.ta.sir.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of اِتَّسَرَ (ittasara)\n# يُتَّسَرْنَ (yuttasarna) /jut.ta.sar.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of اِتَّسَرَ (ittasara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattasirna", "ittasara", "yuttasarna"],
-        "k": "اتسر",
-        "yol": "kök"
-      },
-      {
-        "w": "اتسري",
-        "u": "اتسري",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّسِرِي • (ittasirī) (form VIII) /it.ta.si.riː/\n# second-person feminine singular imperative of اِتَّسَرَ (ittasara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittasirī", "ittasara"],
-        "k": "اتسر",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تس",
+  "ses": {
     "harf": "ا",
+    "fasil": "تس",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يتسر",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يتسر (form VIII)\n# يَتَّسِرُ (yattasiru) /jat.ta.si.ru/: third-person masculine singular non-past active indicative of اِتَّسَرَ (ittasara)\n# يُتَّسَرُ (yuttasaru) /jut.ta.sa.ru/: third-person masculine singular non-past passive indicative of اِتَّسَرَ (ittasara)\n# يَتَّسِرَ (yattasira) /jat.ta.si.ra/: third-person masculine singular non-past active subjunctive of اِتَّسَرَ (ittasara)\n# يُتَّسَرَ ",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattasiru", "ittasara", "yuttasaru"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسر",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تتسر (form VIII)\n# تَتَّسِرُ (tattasiru) /tat.ta.si.ru/: inflection of اِتَّسَرَ (ittasara):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُتَّسَرُ (tuttasaru) /tut.ta.sa.ru/: inflection of اِتَّسَرَ (ittasara):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past ",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattasiru", "ittasara", "tuttasaru"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسرين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تتسرين (form VIII)\n# تَتَّسِرِينَ (tattasirīna) /tat.ta.si.riː.na/: second-person feminine singular non-past active indicative of اِتَّسَرَ (ittasara)\n# تُتَّسَرِينَ (tuttasarīna) /tut.ta.sa.riː.na/: second-person feminine singular non-past passive indicative of اِتَّسَرَ (ittasara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattasirīna", "ittasara", "tuttasarīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسري",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تتسري (form VIII)\n# تَتَّسِرِي (tattasirī) /tat.ta.si.riː/: second-person feminine singular non-past active subjunctive/jussive of اِتَّسَرَ (ittasara)\n# تُتَّسَرِي (tuttasarī) /tut.ta.sa.riː/: second-person feminine singular non-past passive subjunctive/jussive of اِتَّسَرَ (ittasara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattasirī", "ittasara", "tuttasarī"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتسر",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أتسر (form VIII)\n# أَتَّسِرُ (ʔattasiru) /ʔat.ta.si.ru/: first-person singular non-past active indicative of اِتَّسَرَ (ittasara)\n# أُتَّسَرُ (ʔuttasaru) /ʔut.ta.sa.ru/: first-person singular non-past passive indicative of اِتَّسَرَ (ittasara)\n# أَتَّسِرَ (ʔattasira) /ʔat.ta.si.ra/: first-person singular non-past active subjunctive of اِتَّسَرَ (ittasara)\n# أُتَّسَرَ (ʔuttasara) /ʔut.ta.sa.ra/: fi",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ʔattasiru", "ittasara", "ʔuttasaru"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتسر",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نتسر (form VIII)\n# نَتَّسِرُ (nattasiru) /nat.ta.si.ru/: first-person plural non-past active indicative of اِتَّسَرَ (ittasara)\n# نُتَّسَرُ (nuttasaru) /nut.ta.sa.ru/: first-person plural non-past passive indicative of اِتَّسَرَ (ittasara)\n# نَتَّسِرَ (nattasira) /nat.ta.si.ra/: first-person plural non-past active subjunctive of اِتَّسَرَ (ittasara)\n# نُتَّسَرَ (nuttasara) /nut.ta.sa.ra/: first-pe",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["nattasiru", "ittasara", "nuttasaru"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسرون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تتسرون (form VIII)\n# تَتَّسِرُونَ (tattasirūna) /tat.ta.si.ruː.na/: second-person masculine plural non-past active indicative of اِتَّسَرَ (ittasara)\n# تُتَّسَرُونَ (tuttasarūna) /tut.ta.sa.ruː.na/: second-person masculine plural non-past passive indicative of اِتَّسَرَ (ittasara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattasirūna", "ittasara", "tuttasarūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسروا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تتسروا (form VIII)\n# تَتَّسِرُوا (tattasirū) /tat.ta.si.ruː/: second-person masculine plural non-past active subjunctive/jussive of اِتَّسَرَ (ittasara)\n# تُتَّسَرُوا (tuttasarū) /tut.ta.sa.ruː/: second-person masculine plural non-past passive subjunctive/jussive of اِتَّسَرَ (ittasara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattasirū", "ittasara", "tuttasarū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتسرون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يتسرون (form VIII)\n# يَتَّسِرُونَ (yattasirūna) /jat.ta.si.ruː.na/: third-person masculine plural non-past active indicative of اِتَّسَرَ (ittasara)\n# يُتَّسَرُونَ (yuttasarūna) /jut.ta.sa.ruː.na/: third-person masculine plural non-past passive indicative of اِتَّسَرَ (ittasara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattasirūna", "ittasara", "yuttasarūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتسروا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يتسروا (form VIII)\n# يَتَّسِرُوا (yattasirū) /jat.ta.si.ruː/: third-person masculine plural non-past active subjunctive/jussive of اِتَّسَرَ (ittasara)\n# يُتَّسَرُوا (yuttasarū) /jut.ta.sa.ruː/: third-person masculine plural non-past passive subjunctive/jussive of اِتَّسَرَ (ittasara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattasirū", "ittasara", "yuttasarū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتسرا",
+      "tur": "verb",
+      "baslik": "اتسرا (form VIII)\n# اِتَّسَرَا (ittasarā) /it.ta.sa.raː/: third-person masculine dual past active of اِتَّسَرَ (ittasara)\n# اُتُّسِرَا (uttusirā) /ut.tu.si.raː/: third-person masculine dual past passive of اِتَّسَرَ (ittasara)\n# اِتَّسِرَا (ittasirā) /it.ta.si.raː/: second-person dual imperative of اِتَّسَرَ (ittasara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittasarā", "ittasara", "uttusirā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتسرتما",
+      "tur": "verb",
+      "baslik": "اتسرتما (form VIII)\n# اِتَّسَرْتُمَا (ittasartumā) /it.ta.sar.tu.maː/: second-person dual past active of اِتَّسَرَ (ittasara)\n# اُتُّسِرْتُمَا (uttusirtumā) /ut.tu.sir.tu.maː/: second-person dual past passive of اِتَّسَرَ (ittasara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittasartumā", "ittasara", "uttusirtumā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتسرت",
+      "tur": "verb",
+      "baslik": "اتسرت (form VIII)\n# اِتَّسَرْتُ (ittasartu) /it.ta.sar.tu/: first-person singular past active of اِتَّسَرَ (ittasara)\n# اِتَّسَرْتَ (ittasarta) /it.ta.sar.ta/: second-person masculine singular past active of اِتَّسَرَ (ittasara)\n# اِتَّسَرْتِ (ittasarti) /it.ta.sar.ti/: second-person feminine singular past active of اِتَّسَرَ (ittasara)\n# اِتَّسَرَتْ (ittasarat) /it.ta.sa.rat/: third-person femini",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittasartu", "ittasara", "ittasarta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتسرنا",
+      "tur": "verb",
+      "baslik": "اتسرنا (form VIII)\n# اِتَّسَرْنَا (ittasarnā) /it.ta.sar.naː/: first-person plural past active of اِتَّسَرَ (ittasara)\n# اُتُّسِرْنَا (uttusirnā) /ut.tu.sir.naː/: first-person plural past passive of اِتَّسَرَ (ittasara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittasarnā", "ittasara", "uttusirnā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتسرتا",
+      "tur": "verb",
+      "baslik": "اتسرتا (form VIII)\n# اِتَّسَرَتَا (ittasaratā) /it.ta.sa.ra.taː/: third-person feminine dual past active of اِتَّسَرَ (ittasara)\n# اُتُّسِرَتَا (uttusiratā) /ut.tu.si.ra.taː/: third-person feminine dual past passive of اِتَّسَرَ (ittasara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittasaratā", "ittasara", "uttusiratā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتسروا",
+      "tur": "verb",
+      "baslik": "اتسروا (form VIII)\n# اِتَّسَرُوا (ittasarū) /it.ta.sa.ruː/: third-person masculine plural past active of اِتَّسَرَ (ittasara)\n# اُتُّسِرُوا (uttusirū) /ut.tu.si.ruː/: third-person masculine plural past passive of اِتَّسَرَ (ittasara)\n# اِتَّسِرُوا (ittasirū) /it.ta.si.ruː/: second-person masculine plural imperative of اِتَّسَرَ (ittasara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittasarū", "ittasara", "uttusirū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتسرتم",
+      "tur": "verb",
+      "baslik": "اتسرتم (form VIII)\n# اِتَّسَرْتُمْ (ittasartum) /it.ta.sar.tum/: second-person masculine plural past active of اِتَّسَرَ (ittasara)\n# اُتُّسِرْتُمْ (uttusirtum) /ut.tu.sir.tum/: second-person masculine plural past passive of اِتَّسَرَ (ittasara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittasartum", "ittasara", "uttusirtum"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتسرتن",
+      "tur": "verb",
+      "baslik": "اتسرتن (form VIII)\n# اِتَّسَرْتُنَّ (ittasartunna) /it.ta.sar.tun.na/: second-person feminine plural past active of اِتَّسَرَ (ittasara)\n# اُتُّسِرْتُنَّ (uttusirtunna) /ut.tu.sir.tun.na/: second-person feminine plural past passive of اِتَّسَرَ (ittasara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittasartunna", "ittasara", "uttusirtunna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتسرن",
+      "tur": "verb",
+      "baslik": "اتسرن (form VIII)\n# اِتَّسَرْنَ (ittasarna) /it.ta.sar.na/: third-person feminine plural past active of اِتَّسَرَ (ittasara)\n# اُتُّسِرْنَ (uttusirna) /ut.tu.sir.na/: third-person feminine plural past passive of اِتَّسَرَ (ittasara)\n# اِتَّسِرْنَ (ittasirna) /it.ta.sir.na/: second-person feminine plural imperative of اِتَّسَرَ (ittasara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittasarna", "ittasara", "uttusirna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتسران",
+      "tur": "verb",
+      "baslik": "يتسران (form VIII)\n# يَتَّسِرَانِ (yattasirāni) /jat.ta.si.raː.ni/: third-person masculine dual non-past active indicative of اِتَّسَرَ (ittasara)\n# يُتَّسَرَانِ (yuttasarāni) /jut.ta.sa.raː.ni/: third-person masculine dual non-past passive indicative of اِتَّسَرَ (ittasara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattasirāni", "ittasara", "yuttasarāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسران",
+      "tur": "verb",
+      "baslik": "تتسران (form VIII)\n# تَتَّسِرَانِ (tattasirāni) /tat.ta.si.raː.ni/: inflection of اِتَّسَرَ (ittasara):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُتَّسَرَانِ (tuttasarāni) /tut.ta.sa.raː.ni/: inflection of اِتَّسَرَ (ittasara):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicati",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattasirāni", "ittasara", "tuttasarāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسرن",
+      "tur": "verb",
+      "baslik": "تتسرن (form VIII)\n# تَتَّسِرْنَ (tattasirna) /tat.ta.sir.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of اِتَّسَرَ (ittasara)\n# تُتَّسَرْنَ (tuttasarna) /tut.ta.sar.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of اِتَّسَرَ (ittasara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattasirna", "ittasara", "tuttasarna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسرا",
+      "tur": "verb",
+      "baslik": "تتسرا (form VIII)\n# تَتَّسِرَا (tattasirā) /tat.ta.si.raː/: inflection of اِتَّسَرَ (ittasara):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُتَّسَرَا (tuttasarā) /tut.ta.sa.raː/: inflection of اِتَّسَرَ (ittasara):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past pass",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattasirā", "ittasara", "tuttasarā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتسرا",
+      "tur": "verb",
+      "baslik": "يتسرا (form VIII)\n# يَتَّسِرَا (yattasirā) /jat.ta.si.raː/: third-person masculine dual non-past active subjunctive/jussive of اِتَّسَرَ (ittasara)\n# يُتَّسَرَا (yuttasarā) /jut.ta.sa.raː/: third-person masculine dual non-past passive subjunctive/jussive of اِتَّسَرَ (ittasara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattasirā", "ittasara", "yuttasarā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتسرن",
+      "tur": "verb",
+      "baslik": "يتسرن (form VIII)\n# يَتَّسِرْنَ (yattasirna) /jat.ta.sir.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of اِتَّسَرَ (ittasara)\n# يُتَّسَرْنَ (yuttasarna) /jut.ta.sar.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of اِتَّسَرَ (ittasara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattasirna", "ittasara", "yuttasarna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتسري",
+      "tur": "verb",
+      "baslik": "اِتَّسِرِي • (ittasirī) (form VIII) /it.ta.si.riː/\n# second-person feminine singular imperative of اِتَّسَرَ (ittasara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittasirī", "ittasara"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "اتسر", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

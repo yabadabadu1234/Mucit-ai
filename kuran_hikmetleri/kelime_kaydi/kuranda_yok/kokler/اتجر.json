@@ -1,382 +1,275 @@
 {
   "kok": "اتجر",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "اتجر", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يتجر",
-        "u": "يتجر",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يتجر (form VIII)\n# يَتَّجِرُ (yattajiru) /jat.ta.d͡ʒi.ru/: third-person masculine singular non-past active indicative of اِتَّجَرَ (ittajara)\n# يُتَّجَرُ (yuttajaru) /jut.ta.d͡ʒa.ru/: third-person masculine singular non-past passive indicative of اِتَّجَرَ (ittajara)\n# يَتَّجِرَ (yattajira) /jat.ta.d͡ʒi.ra/: third-person masculine singular non-past active subjunctive of اِتَّجَرَ (ittajara)\n# يُتَ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattajiru", "ittajara", "yuttajaru"],
-        "k": "اتجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجر",
-        "u": "تتجر",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تتجر (form VIII)\n# تَتَّجِرُ (tattajiru) /tat.ta.d͡ʒi.ru/: inflection of اِتَّجَرَ (ittajara):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَّجِرَ (tattajira) /tat.ta.d͡ʒi.ra/: inflection of اِتَّجَرَ (ittajara):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-p",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattajiru", "ittajara", "tattajira"],
-        "k": "اتجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجرين",
-        "u": "تتجرين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَتَّجِرِينَ • (tattajirīna) (form VIII) /tat.ta.d͡ʒi.riː.na/\n# second-person feminine singular non-past active indicative of اِتَّجَرَ (ittajara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattajirīna", "ittajara"],
-        "k": "اتجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجري",
-        "u": "تتجري",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَتَّجِرِي • (tattajirī) (form VIII) /tat.ta.d͡ʒi.riː/\n# second-person feminine singular non-past active subjunctive/jussive of اِتَّجَرَ (ittajara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattajirī", "ittajara"],
-        "k": "اتجر",
-        "yol": "kök"
-      },
-      {
-        "w": "اتجري",
-        "u": "اتجري",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "اِتَّجِرِي • (ittajirī) (form VIII) /it.ta.d͡ʒi.riː/\n# second-person feminine singular imperative of اِتَّجَرَ (ittajara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittajirī", "ittajara"],
-        "k": "اتجر",
-        "yol": "kök"
-      },
-      {
-        "w": "أتجر",
-        "u": "أتجر",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أتجر (form VIII)\n# أَتَّجِرُ (ʔattajiru) /ʔat.ta.d͡ʒi.ru/: first-person singular non-past active indicative of اِتَّجَرَ (ittajara)\n# أَتَّجِرَ (ʔattajira) /ʔat.ta.d͡ʒi.ra/: first-person singular non-past active subjunctive of اِتَّجَرَ (ittajara)\n# أَتَّجِرْ (ʔattajir) /ʔat.ta.d͡ʒir/: first-person singular non-past active jussive of اِتَّجَرَ (ittajara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ʔattajiru", "ittajara", "ʔattajira"],
-        "k": "اتجر",
-        "yol": "kök"
-      },
-      {
-        "w": "نتجر",
-        "u": "نتجر",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نتجر (form VIII)\n# نَتَّجِرُ (nattajiru) /nat.ta.d͡ʒi.ru/: first-person plural non-past active indicative of اِتَّجَرَ (ittajara)\n# نَتَّجِرَ (nattajira) /nat.ta.d͡ʒi.ra/: first-person plural non-past active subjunctive of اِتَّجَرَ (ittajara)\n# نَتَّجِرْ (nattajir) /nat.ta.d͡ʒir/: first-person plural non-past active jussive of اِتَّجَرَ (ittajara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["nattajiru", "ittajara", "nattajira"],
-        "k": "اتجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجرون",
-        "u": "تتجرون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَتَّجِرُونَ • (tattajirūna) (form VIII) /tat.ta.d͡ʒi.ruː.na/\n# second-person masculine plural non-past active indicative of اِتَّجَرَ (ittajara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattajirūna", "ittajara"],
-        "k": "اتجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجروا",
-        "u": "تتجروا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَتَّجِرُوا • (tattajirū) (form VIII) /tat.ta.d͡ʒi.ruː/\n# second-person masculine plural non-past active subjunctive/jussive of اِتَّجَرَ (ittajara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattajirū", "ittajara"],
-        "k": "اتجر",
-        "yol": "kök"
-      },
-      {
-        "w": "اتجروا",
-        "u": "اتجروا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "اتجروا (form VIII)\n# اِتَّجَرُوا (ittajarū) /it.ta.d͡ʒa.ruː/: third-person masculine plural past active of اِتَّجَرَ (ittajara)\n# اِتَّجِرُوا (ittajirū) /it.ta.d͡ʒi.ruː/: second-person masculine plural imperative of اِتَّجَرَ (ittajara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittajarū", "ittajara", "ittajirū"],
-        "k": "اتجر",
-        "yol": "kök"
-      },
-      {
-        "w": "يتجرون",
-        "u": "يتجرون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَتَّجِرُونَ • (yattajirūna) (form VIII) /jat.ta.d͡ʒi.ruː.na/\n# third-person masculine plural non-past active indicative of اِتَّجَرَ (ittajara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattajirūna", "ittajara"],
-        "k": "اتجر",
-        "yol": "kök"
-      },
-      {
-        "w": "يتجروا",
-        "u": "يتجروا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَتَّجِرُوا • (yattajirū) (form VIII) /jat.ta.d͡ʒi.ruː/\n# third-person masculine plural non-past active subjunctive/jussive of اِتَّجَرَ (ittajara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattajirū", "ittajara"],
-        "k": "اتجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجرن",
-        "u": "تتجرن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَتَّجِرْنَ • (tattajirna) (form VIII) /tat.ta.d͡ʒir.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِتَّجَرَ (ittajara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattajirna", "ittajara"],
-        "k": "اتجر",
-        "yol": "kök"
-      },
-      {
-        "w": "اتجرن",
-        "u": "اتجرن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "اتجرن (form VIII)\n# اِتَّجَرْنَ (ittajarna) /it.ta.d͡ʒar.na/: third-person feminine plural past active of اِتَّجَرَ (ittajara)\n# اِتَّجِرْنَ (ittajirna) /it.ta.d͡ʒir.na/: second-person feminine plural imperative of اِتَّجَرَ (ittajara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittajarna", "ittajara", "ittajirna"],
-        "k": "اتجر",
-        "yol": "kök"
-      },
-      {
-        "w": "يتجرن",
-        "u": "يتجرن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَتَّجِرْنَ • (yattajirna) (form VIII) /jat.ta.d͡ʒir.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِتَّجَرَ (ittajara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattajirna", "ittajara"],
-        "k": "اتجر",
-        "yol": "kök"
-      },
-      {
-        "w": "اتجرتما",
-        "u": "اتجرتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّجَرْتُمَا • (ittajartumā) (form VIII) /it.ta.d͡ʒar.tu.maː/\n# second-person dual past active of اِتَّجَرَ (ittajara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittajartumā", "ittajara"],
-        "k": "اتجر",
-        "yol": "kök"
-      },
-      {
-        "w": "اتجرت",
-        "u": "اتجرت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتجرت (form VIII)\n# اِتَّجَرْتُ (ittajartu) /it.ta.d͡ʒar.tu/: first-person singular past active of اِتَّجَرَ (ittajara)\n# اِتَّجَرْتَ (ittajarta) /it.ta.d͡ʒar.ta/: second-person masculine singular past active of اِتَّجَرَ (ittajara)\n# اِتَّجَرْتِ (ittajarti) /it.ta.d͡ʒar.ti/: second-person feminine singular past active of اِتَّجَرَ (ittajara)\n# اِتَّجَرَتْ (ittajarat) /it.ta.d͡ʒa.rat/: third-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittajartu", "ittajara", "ittajarta"],
-        "k": "اتجر",
-        "yol": "kök"
-      },
-      {
-        "w": "اتجرا",
-        "u": "اتجرا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اتجرا (form VIII)\n# اِتَّجَرَا (ittajarā) /it.ta.d͡ʒa.raː/: third-person masculine dual past active of اِتَّجَرَ (ittajara)\n# اِتَّجِرَا (ittajirā) /it.ta.d͡ʒi.raː/: second-person dual imperative of اِتَّجَرَ (ittajara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittajarā", "ittajara", "ittajirā"],
-        "k": "اتجر",
-        "yol": "kök"
-      },
-      {
-        "w": "اتجرتا",
-        "u": "اتجرتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّجَرَتَا • (ittajaratā) (form VIII) /it.ta.d͡ʒa.ra.taː/\n# third-person feminine dual past active of اِتَّجَرَ (ittajara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittajaratā", "ittajara"],
-        "k": "اتجر",
-        "yol": "kök"
-      },
-      {
-        "w": "اتجرتم",
-        "u": "اتجرتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّجَرْتُمْ • (ittajartum) (form VIII) /it.ta.d͡ʒar.tum/\n# second-person masculine plural past active of اِتَّجَرَ (ittajara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittajartum", "ittajara"],
-        "k": "اتجر",
-        "yol": "kök"
-      },
-      {
-        "w": "اتجرنا",
-        "u": "اتجرنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّجَرْنَا • (ittajarnā) (form VIII) /it.ta.d͡ʒar.naː/\n# first-person plural past active of اِتَّجَرَ (ittajara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittajarnā", "ittajara"],
-        "k": "اتجر",
-        "yol": "kök"
-      },
-      {
-        "w": "يتجران",
-        "u": "يتجران",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَتَّجِرَانِ • (yattajirāni) (form VIII) /jat.ta.d͡ʒi.raː.ni/\n# third-person masculine dual non-past active indicative of اِتَّجَرَ (ittajara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattajirāni", "ittajara"],
-        "k": "اتجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجران",
-        "u": "تتجران",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَتَّجِرَانِ • (tattajirāni) (form VIII) /tat.ta.d͡ʒi.raː.ni/\n# inflection of اِتَّجَرَ (ittajara):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattajirāni", "ittajara"],
-        "k": "اتجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجرا",
-        "u": "تتجرا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَتَّجِرَا • (tattajirā) (form VIII) /tat.ta.d͡ʒi.raː/\n# inflection of اِتَّجَرَ (ittajara):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattajirā", "ittajara"],
-        "k": "اتجر",
-        "yol": "kök"
-      },
-      {
-        "w": "يتجرا",
-        "u": "يتجرا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَتَّجِرَا • (yattajirā) (form VIII) /jat.ta.d͡ʒi.raː/\n# third-person masculine dual non-past active subjunctive/jussive of اِتَّجَرَ (ittajara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattajirā", "ittajara"],
-        "k": "اتجر",
-        "yol": "kök"
-      },
-      {
-        "w": "اتجرتن",
-        "u": "اتجرتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّجَرْتُنَّ • (ittajartunna) (form VIII) /it.ta.d͡ʒar.tun.na/\n# second-person feminine plural past active of اِتَّجَرَ (ittajara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittajartunna", "ittajara"],
-        "k": "اتجر",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تج",
+  "ses": {
     "harf": "ا",
+    "fasil": "تج",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يتجر",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يتجر (form VIII)\n# يَتَّجِرُ (yattajiru) /jat.ta.d͡ʒi.ru/: third-person masculine singular non-past active indicative of اِتَّجَرَ (ittajara)\n# يُتَّجَرُ (yuttajaru) /jut.ta.d͡ʒa.ru/: third-person masculine singular non-past passive indicative of اِتَّجَرَ (ittajara)\n# يَتَّجِرَ (yattajira) /jat.ta.d͡ʒi.ra/: third-person masculine singular non-past active subjunctive of اِتَّجَرَ (ittajara)\n# يُتَ",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattajiru", "ittajara", "yuttajaru"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجر",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تتجر (form VIII)\n# تَتَّجِرُ (tattajiru) /tat.ta.d͡ʒi.ru/: inflection of اِتَّجَرَ (ittajara):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَّجِرَ (tattajira) /tat.ta.d͡ʒi.ra/: inflection of اِتَّجَرَ (ittajara):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-p",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattajiru", "ittajara", "tattajira"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجرين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَتَّجِرِينَ • (tattajirīna) (form VIII) /tat.ta.d͡ʒi.riː.na/\n# second-person feminine singular non-past active indicative of اِتَّجَرَ (ittajara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattajirīna", "ittajara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجري",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَتَّجِرِي • (tattajirī) (form VIII) /tat.ta.d͡ʒi.riː/\n# second-person feminine singular non-past active subjunctive/jussive of اِتَّجَرَ (ittajara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattajirī", "ittajara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتجري",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "اِتَّجِرِي • (ittajirī) (form VIII) /it.ta.d͡ʒi.riː/\n# second-person feminine singular imperative of اِتَّجَرَ (ittajara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittajirī", "ittajara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتجر",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أتجر (form VIII)\n# أَتَّجِرُ (ʔattajiru) /ʔat.ta.d͡ʒi.ru/: first-person singular non-past active indicative of اِتَّجَرَ (ittajara)\n# أَتَّجِرَ (ʔattajira) /ʔat.ta.d͡ʒi.ra/: first-person singular non-past active subjunctive of اِتَّجَرَ (ittajara)\n# أَتَّجِرْ (ʔattajir) /ʔat.ta.d͡ʒir/: first-person singular non-past active jussive of اِتَّجَرَ (ittajara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ʔattajiru", "ittajara", "ʔattajira"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتجر",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نتجر (form VIII)\n# نَتَّجِرُ (nattajiru) /nat.ta.d͡ʒi.ru/: first-person plural non-past active indicative of اِتَّجَرَ (ittajara)\n# نَتَّجِرَ (nattajira) /nat.ta.d͡ʒi.ra/: first-person plural non-past active subjunctive of اِتَّجَرَ (ittajara)\n# نَتَّجِرْ (nattajir) /nat.ta.d͡ʒir/: first-person plural non-past active jussive of اِتَّجَرَ (ittajara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["nattajiru", "ittajara", "nattajira"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجرون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَتَّجِرُونَ • (tattajirūna) (form VIII) /tat.ta.d͡ʒi.ruː.na/\n# second-person masculine plural non-past active indicative of اِتَّجَرَ (ittajara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattajirūna", "ittajara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجروا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَتَّجِرُوا • (tattajirū) (form VIII) /tat.ta.d͡ʒi.ruː/\n# second-person masculine plural non-past active subjunctive/jussive of اِتَّجَرَ (ittajara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattajirū", "ittajara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتجروا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "اتجروا (form VIII)\n# اِتَّجَرُوا (ittajarū) /it.ta.d͡ʒa.ruː/: third-person masculine plural past active of اِتَّجَرَ (ittajara)\n# اِتَّجِرُوا (ittajirū) /it.ta.d͡ʒi.ruː/: second-person masculine plural imperative of اِتَّجَرَ (ittajara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittajarū", "ittajara", "ittajirū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتجرون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَتَّجِرُونَ • (yattajirūna) (form VIII) /jat.ta.d͡ʒi.ruː.na/\n# third-person masculine plural non-past active indicative of اِتَّجَرَ (ittajara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattajirūna", "ittajara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتجروا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَتَّجِرُوا • (yattajirū) (form VIII) /jat.ta.d͡ʒi.ruː/\n# third-person masculine plural non-past active subjunctive/jussive of اِتَّجَرَ (ittajara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattajirū", "ittajara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجرن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَتَّجِرْنَ • (tattajirna) (form VIII) /tat.ta.d͡ʒir.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِتَّجَرَ (ittajara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattajirna", "ittajara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتجرن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "اتجرن (form VIII)\n# اِتَّجَرْنَ (ittajarna) /it.ta.d͡ʒar.na/: third-person feminine plural past active of اِتَّجَرَ (ittajara)\n# اِتَّجِرْنَ (ittajirna) /it.ta.d͡ʒir.na/: second-person feminine plural imperative of اِتَّجَرَ (ittajara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittajarna", "ittajara", "ittajirna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتجرن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَتَّجِرْنَ • (yattajirna) (form VIII) /jat.ta.d͡ʒir.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِتَّجَرَ (ittajara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattajirna", "ittajara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتجرتما",
+      "tur": "verb",
+      "baslik": "اِتَّجَرْتُمَا • (ittajartumā) (form VIII) /it.ta.d͡ʒar.tu.maː/\n# second-person dual past active of اِتَّجَرَ (ittajara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittajartumā", "ittajara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتجرت",
+      "tur": "verb",
+      "baslik": "اتجرت (form VIII)\n# اِتَّجَرْتُ (ittajartu) /it.ta.d͡ʒar.tu/: first-person singular past active of اِتَّجَرَ (ittajara)\n# اِتَّجَرْتَ (ittajarta) /it.ta.d͡ʒar.ta/: second-person masculine singular past active of اِتَّجَرَ (ittajara)\n# اِتَّجَرْتِ (ittajarti) /it.ta.d͡ʒar.ti/: second-person feminine singular past active of اِتَّجَرَ (ittajara)\n# اِتَّجَرَتْ (ittajarat) /it.ta.d͡ʒa.rat/: third-perso",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittajartu", "ittajara", "ittajarta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتجرا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اتجرا (form VIII)\n# اِتَّجَرَا (ittajarā) /it.ta.d͡ʒa.raː/: third-person masculine dual past active of اِتَّجَرَ (ittajara)\n# اِتَّجِرَا (ittajirā) /it.ta.d͡ʒi.raː/: second-person dual imperative of اِتَّجَرَ (ittajara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittajarā", "ittajara", "ittajirā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتجرتا",
+      "tur": "verb",
+      "baslik": "اِتَّجَرَتَا • (ittajaratā) (form VIII) /it.ta.d͡ʒa.ra.taː/\n# third-person feminine dual past active of اِتَّجَرَ (ittajara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittajaratā", "ittajara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتجرتم",
+      "tur": "verb",
+      "baslik": "اِتَّجَرْتُمْ • (ittajartum) (form VIII) /it.ta.d͡ʒar.tum/\n# second-person masculine plural past active of اِتَّجَرَ (ittajara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittajartum", "ittajara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتجرنا",
+      "tur": "verb",
+      "baslik": "اِتَّجَرْنَا • (ittajarnā) (form VIII) /it.ta.d͡ʒar.naː/\n# first-person plural past active of اِتَّجَرَ (ittajara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittajarnā", "ittajara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتجران",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَتَّجِرَانِ • (yattajirāni) (form VIII) /jat.ta.d͡ʒi.raː.ni/\n# third-person masculine dual non-past active indicative of اِتَّجَرَ (ittajara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattajirāni", "ittajara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجران",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَتَّجِرَانِ • (tattajirāni) (form VIII) /tat.ta.d͡ʒi.raː.ni/\n# inflection of اِتَّجَرَ (ittajara):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattajirāni", "ittajara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجرا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَتَّجِرَا • (tattajirā) (form VIII) /tat.ta.d͡ʒi.raː/\n# inflection of اِتَّجَرَ (ittajara):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattajirā", "ittajara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتجرا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَتَّجِرَا • (yattajirā) (form VIII) /jat.ta.d͡ʒi.raː/\n# third-person masculine dual non-past active subjunctive/jussive of اِتَّجَرَ (ittajara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattajirā", "ittajara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتجرتن",
+      "tur": "verb",
+      "baslik": "اِتَّجَرْتُنَّ • (ittajartunna) (form VIII) /it.ta.d͡ʒar.tun.na/\n# second-person feminine plural past active of اِتَّجَرَ (ittajara)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittajartunna", "ittajara"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "اتجر", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,426 +1,303 @@
 {
   "kok": "تلظى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تلظى", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تلظ",
-        "u": "تلظ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَلَظَّ • (talaẓẓa) (form V) /ta.laðˤ.ðˤa/\n# second-person masculine singular imperative of تَلَظَّى (talaẓẓā)",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["talaẓẓa", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "تلظيتما",
-        "u": "تلظيتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَلَظَّيْتُمَا • (talaẓẓaytumā) (form V) /ta.laðˤ.ðˤaj.tu.maː/\n# second-person dual past active of تَلَظَّى (talaẓẓā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["talaẓẓaytumā", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "تلظتا",
-        "u": "تلظتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَلَظَّتَا • (talaẓẓatā) (form V) /ta.laðˤ.ðˤa.taː/\n# third-person feminine dual past active of تَلَظَّى (talaẓẓā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["talaẓẓatā", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "تلظيت",
-        "u": "تلظيت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تلظيت (form V)\n# تَلَظَّيْتُ (talaẓẓaytu) /ta.laðˤ.ðˤaj.tu/: first-person singular past active of تَلَظَّى (talaẓẓā)\n# تَلَظَّيْتَ (talaẓẓayta) /ta.laðˤ.ðˤaj.ta/: second-person masculine singular past active of تَلَظَّى (talaẓẓā)\n# تَلَظَّيْتِ (talaẓẓayti) /ta.laðˤ.ðˤaj.ti/: second-person feminine singular past active of تَلَظَّى (talaẓẓā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["talaẓẓaytu", "talaẓẓā", "talaẓẓayta"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "تلظت",
-        "u": "تلظت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَلَظَّتْ • (talaẓẓat) (form V) /ta.laðˤ.ðˤat/\n# third-person feminine singular past active of تَلَظَّى (talaẓẓā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["talaẓẓat", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "تلظينا",
-        "u": "تلظينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَلَظَّيْنَا • (talaẓẓaynā) (form V) /ta.laðˤ.ðˤaj.naː/\n# first-person plural past active of تَلَظَّى (talaẓẓā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["talaẓẓaynā", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "تلظيتم",
-        "u": "تلظيتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَلَظَّيْتُمْ • (talaẓẓaytum) (form V) /ta.laðˤ.ðˤaj.tum/\n# second-person masculine plural past active of تَلَظَّى (talaẓẓā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["talaẓẓaytum", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "تلظيتن",
-        "u": "تلظيتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَلَظَّيْتُنَّ • (talaẓẓaytunna) (form V) /ta.laðˤ.ðˤaj.tun.na/\n# second-person feminine plural past active of تَلَظَّى (talaẓẓā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["talaẓẓaytunna", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "تلظيا",
-        "u": "تلظيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَلَظَّيَا • (talaẓẓayā) (form V) /ta.laðˤ.ðˤa.jaː/\n# inflection of تَلَظَّى (talaẓẓā):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["talaẓẓayā", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "تلظوا",
-        "u": "تلظوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَلَظَّوْا • (talaẓẓaw) (form V) /ta.laðˤ.ðˤaw/\n# inflection of تَلَظَّى (talaẓẓā):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["talaẓẓaw", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتلظى",
-        "u": "تتلظى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَلَظَّى • (tatalaẓẓā) (form V) /ta.ta.laðˤ.ðˤaː/\n# inflection of تَلَظَّى (talaẓẓā):\n## second-person masculine singular non-past active indicative/subjunctive\n## third-person feminine singular non-past active indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatalaẓẓā", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "أتلظى",
-        "u": "أتلظى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَتَلَظَّى • (ʔatalaẓẓā) (form V) /ʔa.ta.laðˤ.ðˤaː/\n# first-person singular non-past active indicative/subjunctive of تَلَظَّى (talaẓẓā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔatalaẓẓā", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "تلظين",
-        "u": "تلظين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَلَظَّيْنَ • (talaẓẓayna) (form V) /ta.laðˤ.ðˤaj.na/\n# inflection of تَلَظَّى (talaẓẓā):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["talaẓẓayna", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتلظين",
-        "u": "تتلظين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَلَظَّيْنَ • (tatalaẓẓayna) (form V) /ta.ta.laðˤ.ðˤaj.na/\n# inflection of تَلَظَّى (talaẓẓā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatalaẓẓayna", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتلظون",
-        "u": "تتلظون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَلَظَّوْنَ • (tatalaẓẓawna) (form V) /ta.ta.laðˤ.ðˤaw.na/\n# second-person masculine plural non-past active indicative of تَلَظَّى (talaẓẓā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatalaẓẓawna", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتلظى",
-        "u": "يتلظى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَلَظَّى • (yatalaẓẓā) (form V) /ja.ta.laðˤ.ðˤaː/\n# third-person masculine singular non-past active indicative/subjunctive of تَلَظَّى (talaẓẓā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatalaẓẓā", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "نتلظى",
-        "u": "نتلظى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَتَلَظَّى • (natalaẓẓā) (form V) /na.ta.laðˤ.ðˤaː/\n# first-person plural non-past active indicative/subjunctive of تَلَظَّى (talaẓẓā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["natalaẓẓā", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتلظون",
-        "u": "يتلظون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَلَظَّوْنَ • (yatalaẓẓawna) (form V) /ja.ta.laðˤ.ðˤaw.na/\n# third-person masculine plural non-past active indicative of تَلَظَّى (talaẓẓā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatalaẓẓawna", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتلظيان",
-        "u": "يتلظيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَلَظَّيَانِ • (yatalaẓẓayāni) (form V) /ja.ta.laðˤ.ðˤa.jaː.ni/\n# third-person masculine dual non-past active indicative of تَلَظَّى (talaẓẓā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatalaẓẓayāni", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتلظيان",
-        "u": "تتلظيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَلَظَّيَانِ • (tatalaẓẓayāni) (form V) /ta.ta.laðˤ.ðˤa.jaː.ni/\n# inflection of تَلَظَّى (talaẓẓā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatalaẓẓayāni", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتلظين",
-        "u": "يتلظين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَلَظَّيْنَ • (yatalaẓẓayna) (form V) /ja.ta.laðˤ.ðˤaj.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَلَظَّى (talaẓẓā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatalaẓẓayna", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتلظيا",
-        "u": "تتلظيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَلَظَّيَا • (tatalaẓẓayā) (form V) /ta.ta.laðˤ.ðˤa.jaː/\n# inflection of تَلَظَّى (talaẓẓā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatalaẓẓayā", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتلظي",
-        "u": "تتلظي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَلَظَّيْ • (tatalaẓẓay) (form V) /ta.ta.laðˤ.ðˤaj/\n# second-person feminine singular non-past active subjunctive/jussive of تَلَظَّى (talaẓẓā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatalaẓẓay", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتلظ",
-        "u": "تتلظ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَلَظَّ • (tatalaẓẓa) (form V) /ta.ta.laðˤ.ðˤa/\n# inflection of تَلَظَّى (talaẓẓā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatalaẓẓa", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتلظيا",
-        "u": "يتلظيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَلَظَّيَا • (yatalaẓẓayā) (form V) /ja.ta.laðˤ.ðˤa.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of تَلَظَّى (talaẓẓā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatalaẓẓayā", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "أتلظ",
-        "u": "أتلظ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَتَلَظَّ • (ʔatalaẓẓa) (form V) /ʔa.ta.laðˤ.ðˤa/\n# first-person singular non-past active jussive of تَلَظَّى (talaẓẓā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔatalaẓẓa", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "تلظي",
-        "u": "تلظي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَلَظَّيْ • (talaẓẓay) (form V) /ta.laðˤ.ðˤaj/\n# second-person feminine singular imperative of تَلَظَّى (talaẓẓā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["talaẓẓay", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتلظ",
-        "u": "يتلظ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَلَظَّ • (yatalaẓẓa) (form V) /ja.ta.laðˤ.ðˤa/\n# third-person masculine singular non-past active jussive of تَلَظَّى (talaẓẓā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatalaẓẓa", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتلظوا",
-        "u": "تتلظوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَلَظَّوْا • (tatalaẓẓaw) (form V) /ta.ta.laðˤ.ðˤaw/\n# second-person masculine plural non-past active subjunctive/jussive of تَلَظَّى (talaẓẓā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatalaẓẓaw", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتلظوا",
-        "u": "يتلظوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَلَظَّوْا • (yatalaẓẓaw) (form V) /ja.ta.laðˤ.ðˤaw/\n# third-person masculine plural non-past active subjunctive/jussive of تَلَظَّى (talaẓẓā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatalaẓẓaw", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      },
-      {
-        "w": "نتلظ",
-        "u": "نتلظ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَتَلَظَّ • (natalaẓẓa) (form V) /na.ta.laðˤ.ðˤa/\n# first-person plural non-past active jussive of تَلَظَّى (talaẓẓā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["natalaẓẓa", "talaẓẓā"],
-        "k": "تلظى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تل",
+  "ses": {
     "harf": "ت",
+    "fasil": "تل",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تلظ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَلَظَّ • (talaẓẓa) (form V) /ta.laðˤ.ðˤa/\n# second-person masculine singular imperative of تَلَظَّى (talaẓẓā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["talaẓẓa", "talaẓẓā"]
+    },
+    {
+      "madde": "تلظيتما",
+      "tur": "verb",
+      "baslik": "تَلَظَّيْتُمَا • (talaẓẓaytumā) (form V) /ta.laðˤ.ðˤaj.tu.maː/\n# second-person dual past active of تَلَظَّى (talaẓẓā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["talaẓẓaytumā", "talaẓẓā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلظتا",
+      "tur": "verb",
+      "baslik": "تَلَظَّتَا • (talaẓẓatā) (form V) /ta.laðˤ.ðˤa.taː/\n# third-person feminine dual past active of تَلَظَّى (talaẓẓā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["talaẓẓatā", "talaẓẓā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلظيت",
+      "tur": "verb",
+      "baslik": "تلظيت (form V)\n# تَلَظَّيْتُ (talaẓẓaytu) /ta.laðˤ.ðˤaj.tu/: first-person singular past active of تَلَظَّى (talaẓẓā)\n# تَلَظَّيْتَ (talaẓẓayta) /ta.laðˤ.ðˤaj.ta/: second-person masculine singular past active of تَلَظَّى (talaẓẓā)\n# تَلَظَّيْتِ (talaẓẓayti) /ta.laðˤ.ðˤaj.ti/: second-person feminine singular past active of تَلَظَّى (talaẓẓā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["talaẓẓaytu", "talaẓẓā", "talaẓẓayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلظت",
+      "tur": "verb",
+      "baslik": "تَلَظَّتْ • (talaẓẓat) (form V) /ta.laðˤ.ðˤat/\n# third-person feminine singular past active of تَلَظَّى (talaẓẓā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["talaẓẓat", "talaẓẓā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلظينا",
+      "tur": "verb",
+      "baslik": "تَلَظَّيْنَا • (talaẓẓaynā) (form V) /ta.laðˤ.ðˤaj.naː/\n# first-person plural past active of تَلَظَّى (talaẓẓā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["talaẓẓaynā", "talaẓẓā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلظيتم",
+      "tur": "verb",
+      "baslik": "تَلَظَّيْتُمْ • (talaẓẓaytum) (form V) /ta.laðˤ.ðˤaj.tum/\n# second-person masculine plural past active of تَلَظَّى (talaẓẓā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["talaẓẓaytum", "talaẓẓā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلظيتن",
+      "tur": "verb",
+      "baslik": "تَلَظَّيْتُنَّ • (talaẓẓaytunna) (form V) /ta.laðˤ.ðˤaj.tun.na/\n# second-person feminine plural past active of تَلَظَّى (talaẓẓā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["talaẓẓaytunna", "talaẓẓā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلظيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَلَظَّيَا • (talaẓẓayā) (form V) /ta.laðˤ.ðˤa.jaː/\n# inflection of تَلَظَّى (talaẓẓā):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["talaẓẓayā", "talaẓẓā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلظوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَلَظَّوْا • (talaẓẓaw) (form V) /ta.laðˤ.ðˤaw/\n# inflection of تَلَظَّى (talaẓẓā):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["talaẓẓaw", "talaẓẓā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتلظى",
+      "tur": "verb",
+      "baslik": "تَتَلَظَّى • (tatalaẓẓā) (form V) /ta.ta.laðˤ.ðˤaː/\n# inflection of تَلَظَّى (talaẓẓā):\n## second-person masculine singular non-past active indicative/subjunctive\n## third-person feminine singular non-past active indicative/subjunctive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatalaẓẓā", "talaẓẓā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أتلظى",
+      "tur": "verb",
+      "baslik": "أَتَلَظَّى • (ʔatalaẓẓā) (form V) /ʔa.ta.laðˤ.ðˤaː/\n# first-person singular non-past active indicative/subjunctive of تَلَظَّى (talaẓẓā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔatalaẓẓā", "talaẓẓā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلظين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَلَظَّيْنَ • (talaẓẓayna) (form V) /ta.laðˤ.ðˤaj.na/\n# inflection of تَلَظَّى (talaẓẓā):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["talaẓẓayna", "talaẓẓā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتلظين",
+      "tur": "verb",
+      "baslik": "تَتَلَظَّيْنَ • (tatalaẓẓayna) (form V) /ta.ta.laðˤ.ðˤaj.na/\n# inflection of تَلَظَّى (talaẓẓā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatalaẓẓayna", "talaẓẓā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتلظون",
+      "tur": "verb",
+      "baslik": "تَتَلَظَّوْنَ • (tatalaẓẓawna) (form V) /ta.ta.laðˤ.ðˤaw.na/\n# second-person masculine plural non-past active indicative of تَلَظَّى (talaẓẓā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatalaẓẓawna", "talaẓẓā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتلظى",
+      "tur": "verb",
+      "baslik": "يَتَلَظَّى • (yatalaẓẓā) (form V) /ja.ta.laðˤ.ðˤaː/\n# third-person masculine singular non-past active indicative/subjunctive of تَلَظَّى (talaẓẓā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatalaẓẓā", "talaẓẓā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نتلظى",
+      "tur": "verb",
+      "baslik": "نَتَلَظَّى • (natalaẓẓā) (form V) /na.ta.laðˤ.ðˤaː/\n# first-person plural non-past active indicative/subjunctive of تَلَظَّى (talaẓẓā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["natalaẓẓā", "talaẓẓā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتلظون",
+      "tur": "verb",
+      "baslik": "يَتَلَظَّوْنَ • (yatalaẓẓawna) (form V) /ja.ta.laðˤ.ðˤaw.na/\n# third-person masculine plural non-past active indicative of تَلَظَّى (talaẓẓā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatalaẓẓawna", "talaẓẓā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتلظيان",
+      "tur": "verb",
+      "baslik": "يَتَلَظَّيَانِ • (yatalaẓẓayāni) (form V) /ja.ta.laðˤ.ðˤa.jaː.ni/\n# third-person masculine dual non-past active indicative of تَلَظَّى (talaẓẓā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatalaẓẓayāni", "talaẓẓā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتلظيان",
+      "tur": "verb",
+      "baslik": "تَتَلَظَّيَانِ • (tatalaẓẓayāni) (form V) /ta.ta.laðˤ.ðˤa.jaː.ni/\n# inflection of تَلَظَّى (talaẓẓā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatalaẓẓayāni", "talaẓẓā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتلظين",
+      "tur": "verb",
+      "baslik": "يَتَلَظَّيْنَ • (yatalaẓẓayna) (form V) /ja.ta.laðˤ.ðˤaj.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَلَظَّى (talaẓẓā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatalaẓẓayna", "talaẓẓā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتلظيا",
+      "tur": "verb",
+      "baslik": "تَتَلَظَّيَا • (tatalaẓẓayā) (form V) /ta.ta.laðˤ.ðˤa.jaː/\n# inflection of تَلَظَّى (talaẓẓā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatalaẓẓayā", "talaẓẓā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتلظي",
+      "tur": "verb",
+      "baslik": "تَتَلَظَّيْ • (tatalaẓẓay) (form V) /ta.ta.laðˤ.ðˤaj/\n# second-person feminine singular non-past active subjunctive/jussive of تَلَظَّى (talaẓẓā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatalaẓẓay", "talaẓẓā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتلظ",
+      "tur": "verb",
+      "baslik": "تَتَلَظَّ • (tatalaẓẓa) (form V) /ta.ta.laðˤ.ðˤa/\n# inflection of تَلَظَّى (talaẓẓā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatalaẓẓa", "talaẓẓā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتلظيا",
+      "tur": "verb",
+      "baslik": "يَتَلَظَّيَا • (yatalaẓẓayā) (form V) /ja.ta.laðˤ.ðˤa.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of تَلَظَّى (talaẓẓā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatalaẓẓayā", "talaẓẓā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أتلظ",
+      "tur": "verb",
+      "baslik": "أَتَلَظَّ • (ʔatalaẓẓa) (form V) /ʔa.ta.laðˤ.ðˤa/\n# first-person singular non-past active jussive of تَلَظَّى (talaẓẓā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔatalaẓẓa", "talaẓẓā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلظي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَلَظَّيْ • (talaẓẓay) (form V) /ta.laðˤ.ðˤaj/\n# second-person feminine singular imperative of تَلَظَّى (talaẓẓā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["talaẓẓay", "talaẓẓā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتلظ",
+      "tur": "verb",
+      "baslik": "يَتَلَظَّ • (yatalaẓẓa) (form V) /ja.ta.laðˤ.ðˤa/\n# third-person masculine singular non-past active jussive of تَلَظَّى (talaẓẓā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatalaẓẓa", "talaẓẓā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتلظوا",
+      "tur": "verb",
+      "baslik": "تَتَلَظَّوْا • (tatalaẓẓaw) (form V) /ta.ta.laðˤ.ðˤaw/\n# second-person masculine plural non-past active subjunctive/jussive of تَلَظَّى (talaẓẓā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatalaẓẓaw", "talaẓẓā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتلظوا",
+      "tur": "verb",
+      "baslik": "يَتَلَظَّوْا • (yatalaẓẓaw) (form V) /ja.ta.laðˤ.ðˤaw/\n# third-person masculine plural non-past active subjunctive/jussive of تَلَظَّى (talaẓẓā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatalaẓẓaw", "talaẓẓā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نتلظ",
+      "tur": "verb",
+      "baslik": "نَتَلَظَّ • (natalaẓẓa) (form V) /na.ta.laðˤ.ðˤa/\n# first-person plural non-past active jussive of تَلَظَّى (talaẓẓā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["natalaẓẓa", "talaẓẓā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تلظى", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

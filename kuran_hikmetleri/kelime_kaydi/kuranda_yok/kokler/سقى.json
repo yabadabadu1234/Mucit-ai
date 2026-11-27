@@ -1,549 +1,403 @@
 {
   "kok": "سقى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "سقى", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "mekayis": [
-      {
-        "baslik": "سَقَى",
-        "metin": "(سَقَى) السِّينُ وَالْقَافُ وَالْحَرْفُ الْمُعْتَلُّ أَصْلٌ وَاحِدٌ، وَهُوَ إِشْرَابُ الشَّيْءِ الْمَاءَ وَمَا أَشْبَهَهُ. تَقُولُ: سَقَيْتُهُ بِيَدِي أَسْقِيهِ سَقْيًا، وَأَسْقَيْتُهُ، إِذَا جَعَلْتَ لَهُ سِقْيًا. وَالسُّقْيُ: الْمَصْدَرُ، وَكَمْ سِقْيُ أَرْضِكَ، أَيْ حَظُّهَا مِنَ الشُّرْبِ. وَيُقَالُ:\nأَسْقَيْتُكَ هَذَا الْجِلْدَ، أَيْ وَهِبَتُهُ لَكَ تَتَّخِذُهُ سِقَاءً. وَسَقَيْتُ عَلَى فُلَانٍ، أَيْ قُلْتُ: سَقَاهُ اللَّهُ. حَكَاهُ الْأَخْفَشُ. وَالسِّقَايَةُ: الْمَوْضِعُ الَّذِي يُتَّخَذُ فِيهِ الشَّرَابُ فِي الْمَوْسِمِ. وَالسِّقَايَةُ: الصُّوَاعُ، وَفِي قَوْلِهِ جَلَّ وَعَزَّ: {جَعَلَ السِّقَايَةَ فِي رَحْلِ أَخِيهِ} [يوسف: 70] ، وَهُوَ الَّذِي كَانَ يَشْرَبُ فِيهِ الْمَلِكُ. وَسَقَى بَطْنُ فُلَانٍ، وَذَلِكَ مَاءٌ أَصْفَرُ يَقَعُ فِيهِ. وَسَقَى فُلَانٌ عَلَى فُلَانٍ بِمَا يَكْرَهُ، إِذَا كَرَّرَهُ عَلَيْهِ. وَالسَّقِيُّ: الْبَرْدِيُّ فِي قَوْلِ امْرِئِ الْقَيْسِ:\nوَسَاقٍ كَأُنْبُوبِ السَّقِيِّ الْمَذَلَّلِ\nوَالسَّقِيُّ، عَلَى فَعِيلٍ أَيْضًا: السَّحَابَةُ الْعَظِيمَةُ الْقَطْرِ. وَالسِّقَاءُ مَعْرُوفٌ، وَيُشْتَقُّ مِنْ هَذَا أَسْقَيْتُ الرَّجُلَ، إِذَا اغْتَبْتَهُ. قَالَ ابْنُ أَحْمَرَ:\nوَلَا أَيَّ مَنْ عَادَيْتُ أَسْقِي سِقَائِيَا"
-      }
-    ],
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "السين والقاف",
-      "baslik": "سقى",
-      "mihveri": "تحصيل الماء ونحوه من المائع في الجوف بإنفاذه إليه: كما في شُرب الماء، وسَقْى الثوب. والسِقاء أداة لذلك، والساقية تسقى الزرع. ومنه: السَقِيّ - فعيل: البَرْديّ لنباته في الماء أو قريبًا منه، والنخلُ الذي يُسْقَى بالسواني أي الدوالي. وكل استعمالات التركيب واضحة المأخذ من الأصل. {وَسَقَاهُمْ رَبُّهُمْ شَرَابًا طَهُورًا} [الإنسان: 21]، {وَأَسْقَيْنَاكُمْ مَاءً فُرَاتًا} [المرسلات: 27]، {نُسْقِيكُمْ مِمَّا فِي بُطُونِهِ مِنْ بَيْنِ فَرْثٍ وَدَمٍ لَبَنًا خَالِصًا} [النحل: 66] قُرئ بفتح النون من: سَقَى يَسْقى، وبالضم من: أَسْقَى. تقول \"لما كان من يدك إلى فيه سَقَيْتُه، فإذا جعلتَ له شِرْبًا أو عرضته لأن يشرب بفيه أو بزرعه/ أو دللته على الماء: أسقيتُه \" [قر 10/ 123، 1/ 418]. {أَجَعَلْتُمْ سِقَايَةَ الْحَاجِّ} [التوبة: 19] مصدر كالسَقْي وجاءت على هذه الصيغة لأنها التزام كالحِرفة. و \"السقاية أيضًا: الإناء يسقى به/ الصاع والصواع بعينه \"وهو على صيغة اسم الآلة لدوام السقي به {جَعَلَ السِّقَايَةَ فِي رَحْلِ أَخِيهِ} [يوسف: 70] {نَاقَةَ اللَّهِ وَسُقْيَاهَا}",
-      "sesler": "",
-      "tam_metin": "{وَأَسْقَيْنَاكُمْ مَاءً فُرَاتًا} [المرسلات: 27]\n\"السِقاء: القِرْبة للماء من جلد السَخْلة. والساقية: النهر الصغير. سَقَى الحيوانَ والنباتَ (رمى): أرواه، وسَقَى الثوبَ: أشربه صِبْغًا \".\n° المعنى المحوري\nتحصيل الماء ونحوه من المائع في الجوف بإنفاذه إليه: كما في شُرب الماء، وسَقْى الثوب. والسِقاء أداة لذلك، والساقية تسقى الزرع. ومنه: السَقِيّ - فعيل: البَرْديّ لنباته في الماء أو قريبًا منه، والنخلُ الذي يُسْقَى بالسواني أي الدوالي. وكل استعمالات التركيب واضحة المأخذ من الأصل. {وَسَقَاهُمْ رَبُّهُمْ شَرَابًا طَهُورًا} [الإنسان: 21]، {وَأَسْقَيْنَاكُمْ مَاءً فُرَاتًا} [المرسلات: 27]، {نُسْقِيكُمْ مِمَّا فِي بُطُونِهِ مِنْ بَيْنِ فَرْثٍ وَدَمٍ لَبَنًا خَالِصًا} [النحل: 66] قُرئ بفتح النون من: سَقَى يَسْقى، وبالضم من: أَسْقَى. تقول \"لما كان من يدك إلى فيه سَقَيْتُه، فإذا جعلتَ له شِرْبًا أو عرضته لأن يشرب بفيه أو بزرعه/ أو دللته على الماء: أسقيتُه \" [قر 10/ 123، 1/ 418]. {أَجَعَلْتُمْ سِقَايَةَ الْحَاجِّ} [التوبة: 19] مصدر كالسَقْي وجاءت على هذه الصيغة لأنها التزام كالحِرفة. و \"السقاية أيضًا: الإناء يسقى به/ الصاع والصواع بعينه \"وهو على صيغة اسم الآلة لدوام السقي به {جَعَلَ السِّقَايَةَ فِي رَحْلِ أَخِيهِ} [يوسف: 70] {نَاقَةَ اللَّهِ وَسُقْيَاهَا}\n__________\n= (سقف) تعبّر الفاء عن مباعدة وانفصال بقوة؛ فيعبّر التركيب عن غِماء، أي غطاء لعُمق الشيء وجوفه منفصل عنه، كالسقف. وفي (سقم) تعبّر الميم عن تضامٍّ واستواء ظاهري؛ فيعبّر التركيب عن التئام (ظاهر) الجسم ضامًا غليظًا حادًا في جوفه، كحال السقيم - أي الذي به علة في عمق بدنه.\n(2/1031)\n[الشمس: 13]: السُقْيا هو الاسم من سَقَى [ل، الوسيط] وقد فسرها [قر 20/ 78، 13/ 131] بالشِرْب - بالكسر: أي حظِّها من الماء، وهو أدق، إذ هو مقتضى الصيغة، فهو الماء الذي تشربه، وهم قد نَفِسوا عليها حظَّها من الماء - لا مَبدأ الشُرْب. والاستسقاء: طلب السقيا {وَإِذِ اسْتَسْقَى مُوسَى} [البقرة: 60]. وكل ما في القرآن من التركيب هو من سقى المائع ماء أو لبنا أو حميما والعياذ بالله وقد فرّقنا بين المراد بصيغها.",
-      "fasil_ozeti": "° معنى الفصل المعجمي (سق): نفاذ غليظ أو مهم من الجوف أو إليه. ويتمثل ذلك - في (سقق) في نفاذ ذرق الطائر من جوفه، وفي (سقى) في نفاذ الماء وهو بالغ الأهمية إلى الجوف، وفي (سوق) في القوة المحتواة في الباطن التي تدفع إلى الأمام أو إلى"
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "سقي",
-        "u": "سقي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "سُقِيَ • (suqiya) (form I) /su.qi.ja/\n# third-person masculine singular past passive of سَقَى (saqā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["suqiya", "saqā"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسقي",
-        "u": "يسقي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يسقي (form I)\n# يَسْقِي (yasqī) /jas.qiː/: third-person masculine singular non-past active indicative of سَقَى (saqā)\n# يَسْقِيَ (yasqiya) /jas.qi.ja/: third-person masculine singular non-past active subjunctive of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasqī", "saqā", "yasqiya"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسقى",
-        "u": "يسقى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُسْقَى • (yusqā) (form I) /jus.qaː/\n# third-person masculine singular non-past passive indicative/subjunctive of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yusqā", "saqā"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسق",
-        "u": "يسق",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يسق (form I)\n# يَسْقِ (yasqi) /jas.qi/: third-person masculine singular non-past active jussive of سَقَى (saqā)\n# يُسْقَ (yusqa) /jus.qa/: third-person masculine singular non-past passive jussive of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasqi", "saqā", "yusqa"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسق",
-        "u": "تسق",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تسق (form I)\n# تَسْقِ (tasqi) /tas.qi/: inflection of سَقَى (saqā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُسْقَ (tusqa) /tus.qa/: inflection of سَقَى (saqā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasqi", "saqā", "tusqa"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "سقت",
-        "u": "سقت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "سَقَتْ • (saqat) (form I) /sa.qat/\n# third-person feminine singular past active of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["saqat", "saqā"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسقي",
-        "u": "تسقي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تسقي (form I)\n# تَسْقِي (tasqī) /tas.qiː/: inflection of سَقَى (saqā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَسْقِيَ (tasqiya) /tas.qi.ja/: inflection of سَقَى (saqā):\n## second-person masculine singular non-past active subjunctive\n## third",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasqī", "saqā", "tasqiya"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "سقيت",
-        "u": "سقيت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سقيت (form I)\n# سَقَيْتُ (saqaytu) /sa.qaj.tu/: first-person singular past active of سَقَى (saqā)\n# سَقَيْتَ (saqayta) /sa.qaj.ta/: second-person masculine singular past active of سَقَى (saqā)\n# سَقَيْتِ (saqayti) /sa.qaj.ti/: second-person feminine singular past active of سَقَى (saqā)\n# سُقِيتُ (suqītu) /su.qiː.tu/: first-person singular past passive of سَقَى (saqā)\n# سُقِيتَ (suqīta) /su.qiː.ta/",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["saqaytu", "saqā", "saqayta"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسقى",
-        "u": "تسقى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُسْقَى • (tusqā) (form I) /tus.qaː/\n# inflection of سَقَى (saqā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tusqā", "saqā"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "اسق",
-        "u": "اسق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِسْقِ • (isqi) (form I) /is.qi/\n# second-person masculine singular imperative of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["isqi", "saqā"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسقين",
-        "u": "تسقين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تسقين (form I)\n# تَسْقِينَ (tasqīna) /tas.qiː.na/: inflection of سَقَى (saqā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُسْقَيْنَ (tusqayna) /tus.qaj.na/: inflection of سَقَى (saqā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passi",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasqīna", "saqā", "tusqayna"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "اسقي",
-        "u": "اسقي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِسْقِي • (isqī) (form I) /is.qiː/\n# second-person feminine singular imperative of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["isqī", "saqā"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسق",
-        "u": "أسق",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أسق (form I)\n# أَسْقِ (ʔasqi) /ʔas.qi/: first-person singular non-past active jussive of سَقَى (saqā)\n# أُسْقَ (ʔusqa) /ʔus.qa/: first-person singular non-past passive jussive of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔasqi", "saqā", "ʔusqa"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسقي",
-        "u": "أسقي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أسقي (form I)\n# أَسْقِي (ʔasqī) /ʔas.qiː/: first-person singular non-past active indicative of سَقَى (saqā)\n# أَسْقِيَ (ʔasqiya) /ʔas.qi.ja/: first-person singular non-past active subjunctive of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔasqī", "saqā", "ʔasqiya"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسقى",
-        "u": "أسقى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُسْقَى • (ʔusqā) (form I) /ʔus.qaː/\n# first-person singular non-past passive indicative/subjunctive of سَقَى (saqā)",
-        "t": "Cognate with Hebrew הִשְׁקָה (hišqā).",
-        "s": [
-          ["cog", "Hebrew הִשְׁקָה (hišqā)"]
-        ],
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔusqā", "saqā"],
-        "ipa": ["/ʔas.qaː/"],
-        "el": [
-          ["הִשְׁקָה", "השקה#Hebrew"]
-        ],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "نسق",
-        "u": "نسق",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نسق (form I)\n# نَسْقِ (nasqi) /nas.qi/: first-person plural non-past active jussive of سَقَى (saqā)\n# نُسْقَ (nusqa) /nus.qa/: first-person plural non-past passive jussive of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "s": [
-          ["nonlemma", "See the etymology of the corresponding lemma form."]
-        ],
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nasqi", "saqā", "nusqa"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "سقينا",
-        "u": "سقينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سقينا (form I)\n# سَقَيْنَا (saqaynā) /sa.qaj.naː/: first-person plural past active of سَقَى (saqā)\n# سُقِينَا (suqīnā) /su.qiː.naː/: first-person plural past passive of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["saqaynā", "saqā", "suqīnā"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "نسقي",
-        "u": "نسقي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نسقي (form I)\n# نَسْقِي (nasqī) /nas.qiː/: first-person plural non-past active indicative of سَقَى (saqā)\n# نَسْقِيَ (nasqiya) /nas.qi.ja/: first-person plural non-past active subjunctive of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nasqī", "saqā", "nasqiya"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "نسقى",
-        "u": "نسقى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نُسْقَى • (nusqā) (form I) /nus.qaː/\n# first-person plural non-past passive indicative/subjunctive of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nusqā", "saqā"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "سقيتم",
-        "u": "سقيتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سقيتم (form I)\n# سَقَيْتُمْ (saqaytum) /sa.qaj.tum/: second-person masculine plural past active of سَقَى (saqā)\n# سُقِيتُمْ (suqītum) /su.qiː.tum/: second-person masculine plural past passive of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["saqaytum", "saqā", "suqītum"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسقون",
-        "u": "تسقون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تسقون (form I)\n# تَسْقُونَ (tasqūna) /tas.quː.na/: second-person masculine plural non-past active indicative of سَقَى (saqā)\n# تُسْقَوْنَ (tusqawna) /tus.qaw.na/: second-person masculine plural non-past passive indicative of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasqūna", "saqā", "tusqawna"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسقوا",
-        "u": "تسقوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تسقوا (form I)\n# تَسْقُوا (tasqū) /tas.quː/: second-person masculine plural non-past active subjunctive/jussive of سَقَى (saqā)\n# تُسْقَوْا (tusqaw) /tus.qaw/: second-person masculine plural non-past passive subjunctive/jussive of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasqū", "saqā", "tusqaw"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "اسقوا",
-        "u": "اسقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِسْقُوا • (isqū) (form I) /is.quː/\n# second-person masculine plural imperative of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["isqū", "saqā"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "سقوا",
-        "u": "سقوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "سقوا (form I)\n# سَقَوْا (saqaw) /sa.qaw/: third-person masculine plural past active of سَقَى (saqā)\n# سُقُوا (suqū) /su.quː/: third-person masculine plural past passive of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["saqaw", "saqā", "suqū"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسقون",
-        "u": "يسقون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يسقون (form I)\n# يَسْقُونَ (yasqūna) /jas.quː.na/: third-person masculine plural non-past active indicative of سَقَى (saqā)\n# يُسْقَوْنَ (yusqawna) /jus.qaw.na/: third-person masculine plural non-past passive indicative of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasqūna", "saqā", "yusqawna"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسقوا",
-        "u": "يسقوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يسقوا (form I)\n# يَسْقُوا (yasqū) /jas.quː/: third-person masculine plural non-past active subjunctive/jussive of سَقَى (saqā)\n# يُسْقَوْا (yusqaw) /jus.qaw/: third-person masculine plural non-past passive subjunctive/jussive of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasqū", "saqā", "yusqaw"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "سقيتن",
-        "u": "سقيتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سقيتن (form I)\n# سَقَيْتُنَّ (saqaytunna) /sa.qaj.tun.na/: second-person feminine plural past active of سَقَى (saqā)\n# سُقِيتُنَّ (suqītunna) /su.qiː.tun.na/: second-person feminine plural past passive of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["saqaytunna", "saqā", "suqītunna"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "اسقين",
-        "u": "اسقين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِسْقِينَ • (isqīna) (form I) /is.qiː.na/\n# second-person feminine plural imperative of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["isqīna", "saqā"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "سقين",
-        "u": "سقين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سقين (form I)\n# سَقَيْنَ (saqayna) /sa.qaj.na/: third-person feminine plural past active of سَقَى (saqā)\n# سُقِينَ (suqīna) /su.qiː.na/: third-person feminine plural past passive of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["saqayna", "saqā", "suqīna"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسقين",
-        "u": "يسقين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يسقين (form I)\n# يَسْقِينَ (yasqīna) /jas.qiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of سَقَى (saqā)\n# يُسْقَيْنَ (yusqayna) /jus.qaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasqīna", "saqā", "yusqayna"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسقيان",
-        "u": "تسقيان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تسقيان (form I)\n# تَسْقِيَانِ (tasqiyāni) /tas.qi.jaː.ni/: inflection of سَقَى (saqā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُسْقَيَانِ (tusqayāni) /tus.qa.jaː.ni/: inflection of سَقَى (saqā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasqiyāni", "saqā", "tusqayāni"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسقيا",
-        "u": "تسقيا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تسقيا (form I)\n# تَسْقِيَا (tasqiyā) /tas.qi.jaː/: inflection of سَقَى (saqā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُسْقَيَا (tusqayā) /tus.qa.jaː/: inflection of سَقَى (saqā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasqiyā", "saqā", "tusqayā"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسقيان",
-        "u": "يسقيان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يسقيان (form I)\n# يَسْقِيَانِ (yasqiyāni) /jas.qi.jaː.ni/: third-person masculine dual non-past active indicative of سَقَى (saqā)\n# يُسْقَيَانِ (yusqayāni) /jus.qa.jaː.ni/: third-person masculine dual non-past passive indicative of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasqiyāni", "saqā", "yusqayāni"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسقيا",
-        "u": "يسقيا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يسقيا (form I)\n# يَسْقِيَا (yasqiyā) /jas.qi.jaː/: third-person masculine dual non-past active subjunctive/jussive of سَقَى (saqā)\n# يُسْقَيَا (yusqayā) /jus.qa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasqiyā", "saqā", "yusqayā"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "سقيتما",
-        "u": "سقيتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سقيتما (form I)\n# سَقَيْتُمَا (saqaytumā) /sa.qaj.tu.maː/: second-person dual past active of سَقَى (saqā)\n# سُقِيتُمَا (suqītumā) /su.qiː.tu.maː/: second-person dual past passive of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["saqaytumā", "saqā", "suqītumā"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "سقيا",
-        "u": "سقيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سقيا (form I)\n# سَقَيَا (saqayā) /sa.qa.jaː/: third-person masculine dual past active of سَقَى (saqā)\n# سُقِيَا (suqiyā) /su.qi.jaː/: third-person masculine dual past passive of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["saqayā", "saqā", "suqiyā"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "سقتا",
-        "u": "سقتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سَقَتَا • (saqatā) (form I) /sa.qa.taː/\n# third-person feminine dual past active of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["saqatā", "saqā"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "سقيتا",
-        "u": "سقيتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سُقِيَتَا • (suqiyatā) (form I) /su.qi.ja.taː/\n# third-person feminine dual past passive of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["suqiyatā", "saqā"],
-        "k": "سقى",
-        "yol": "kök"
-      },
-      {
-        "w": "اسقيا",
-        "u": "اسقيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِسْقِيَا • (isqiyā) (form I) /is.qi.jaː/\n# second-person dual imperative of سَقَى (saqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["isqiyā", "saqā"],
-        "k": "سقى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "سق",
+  "ses": {
     "harf": "س",
+    "fasil": "سق",
     "mahrec": "esaliyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "mekayis": [
+    {
+      "baslik": "سَقَى",
+      "metin": "(سَقَى) السِّينُ وَالْقَافُ وَالْحَرْفُ الْمُعْتَلُّ أَصْلٌ وَاحِدٌ، وَهُوَ إِشْرَابُ الشَّيْءِ الْمَاءَ وَمَا أَشْبَهَهُ. تَقُولُ: سَقَيْتُهُ بِيَدِي أَسْقِيهِ سَقْيًا، وَأَسْقَيْتُهُ، إِذَا جَعَلْتَ لَهُ سِقْيًا. وَالسُّقْيُ: الْمَصْدَرُ، وَكَمْ سِقْيُ أَرْضِكَ، أَيْ حَظُّهَا مِنَ الشُّرْبِ. وَيُقَالُ:\nأَسْقَيْتُكَ هَذَا الْجِلْدَ، أَيْ وَهِبَتُهُ لَكَ تَتَّخِذُهُ سِقَاءً. وَسَقَيْتُ عَلَى فُلَانٍ، أَيْ قُلْتُ: سَقَاهُ اللَّهُ. حَكَاهُ الْأَخْفَشُ. وَالسِّقَايَةُ: الْمَوْضِعُ الَّذِي يُتَّخَذُ فِيهِ الشَّرَابُ فِي الْمَوْسِمِ. وَالسِّقَايَةُ: الصُّوَاعُ، وَفِي قَوْلِهِ جَلَّ وَعَزَّ: {جَعَلَ السِّقَايَةَ فِي رَحْلِ أَخِيهِ} [يوسف: 70] ، وَهُوَ الَّذِي كَانَ يَشْرَبُ فِيهِ الْمَلِكُ. وَسَقَى بَطْنُ فُلَانٍ، وَذَلِكَ مَاءٌ أَصْفَرُ يَقَعُ فِيهِ. وَسَقَى فُلَانٌ عَلَى فُلَانٍ بِمَا يَكْرَهُ، إِذَا كَرَّرَهُ عَلَيْهِ. وَالسَّقِيُّ: الْبَرْدِيُّ فِي قَوْلِ امْرِئِ الْقَيْسِ:\nوَسَاقٍ كَأُنْبُوبِ السَّقِيِّ الْمَذَلَّلِ\nوَالسَّقِيُّ، عَلَى فَعِيلٍ أَيْضًا: السَّحَابَةُ الْعَظِيمَةُ الْقَطْرِ. وَالسِّقَاءُ مَعْرُوفٌ، وَيُشْتَقُّ مِنْ هَذَا أَسْقَيْتُ الرَّجُلَ، إِذَا اغْتَبْتَهُ. قَالَ ابْنُ أَحْمَرَ:\nوَلَا أَيَّ مَنْ عَادَيْتُ أَسْقِي سِقَائِيَا"
+    }
+  ],
+  "cebel": {
+    "fasil": "السين والقاف",
+    "baslik": "سقى",
+    "mihveri": "تحصيل الماء ونحوه من المائع في الجوف بإنفاذه إليه: كما في شُرب الماء، وسَقْى الثوب. والسِقاء أداة لذلك، والساقية تسقى الزرع. ومنه: السَقِيّ - فعيل: البَرْديّ لنباته في الماء أو قريبًا منه، والنخلُ الذي يُسْقَى بالسواني أي الدوالي. وكل استعمالات التركيب واضحة المأخذ من الأصل. {وَسَقَاهُمْ رَبُّهُمْ شَرَابًا طَهُورًا} [الإنسان: 21]، {وَأَسْقَيْنَاكُمْ مَاءً فُرَاتًا} [المرسلات: 27]، {نُسْقِيكُمْ مِمَّا فِي بُطُونِهِ مِنْ بَيْنِ فَرْثٍ وَدَمٍ لَبَنًا خَالِصًا} [النحل: 66] قُرئ بفتح النون من: سَقَى يَسْقى، وبالضم من: أَسْقَى. تقول \"لما كان من يدك إلى فيه سَقَيْتُه، فإذا جعلتَ له شِرْبًا أو عرضته لأن يشرب بفيه أو بزرعه/ أو دللته على الماء: أسقيتُه \" [قر 10/ 123، 1/ 418]. {أَجَعَلْتُمْ سِقَايَةَ الْحَاجِّ} [التوبة: 19] مصدر كالسَقْي وجاءت على هذه الصيغة لأنها التزام كالحِرفة. و \"السقاية أيضًا: الإناء يسقى به/ الصاع والصواع بعينه \"وهو على صيغة اسم الآلة لدوام السقي به {جَعَلَ السِّقَايَةَ فِي رَحْلِ أَخِيهِ} [يوسف: 70] {نَاقَةَ اللَّهِ وَسُقْيَاهَا}",
+    "tam_metin": "{وَأَسْقَيْنَاكُمْ مَاءً فُرَاتًا} [المرسلات: 27]\n\"السِقاء: القِرْبة للماء من جلد السَخْلة. والساقية: النهر الصغير. سَقَى الحيوانَ والنباتَ (رمى): أرواه، وسَقَى الثوبَ: أشربه صِبْغًا \".\n° المعنى المحوري\nتحصيل الماء ونحوه من المائع في الجوف بإنفاذه إليه: كما في شُرب الماء، وسَقْى الثوب. والسِقاء أداة لذلك، والساقية تسقى الزرع. ومنه: السَقِيّ - فعيل: البَرْديّ لنباته في الماء أو قريبًا منه، والنخلُ الذي يُسْقَى بالسواني أي الدوالي. وكل استعمالات التركيب واضحة المأخذ من الأصل. {وَسَقَاهُمْ رَبُّهُمْ شَرَابًا طَهُورًا} [الإنسان: 21]، {وَأَسْقَيْنَاكُمْ مَاءً فُرَاتًا} [المرسلات: 27]، {نُسْقِيكُمْ مِمَّا فِي بُطُونِهِ مِنْ بَيْنِ فَرْثٍ وَدَمٍ لَبَنًا خَالِصًا} [النحل: 66] قُرئ بفتح النون من: سَقَى يَسْقى، وبالضم من: أَسْقَى. تقول \"لما كان من يدك إلى فيه سَقَيْتُه، فإذا جعلتَ له شِرْبًا أو عرضته لأن يشرب بفيه أو بزرعه/ أو دللته على الماء: أسقيتُه \" [قر 10/ 123، 1/ 418]. {أَجَعَلْتُمْ سِقَايَةَ الْحَاجِّ} [التوبة: 19] مصدر كالسَقْي وجاءت على هذه الصيغة لأنها التزام كالحِرفة. و \"السقاية أيضًا: الإناء يسقى به/ الصاع والصواع بعينه \"وهو على صيغة اسم الآلة لدوام السقي به {جَعَلَ السِّقَايَةَ فِي رَحْلِ أَخِيهِ} [يوسف: 70] {نَاقَةَ اللَّهِ وَسُقْيَاهَا}\n__________\n= (سقف) تعبّر الفاء عن مباعدة وانفصال بقوة؛ فيعبّر التركيب عن غِماء، أي غطاء لعُمق الشيء وجوفه منفصل عنه، كالسقف. وفي (سقم) تعبّر الميم عن تضامٍّ واستواء ظاهري؛ فيعبّر التركيب عن التئام (ظاهر) الجسم ضامًا غليظًا حادًا في جوفه، كحال السقيم - أي الذي به علة في عمق بدنه.\n(2/1031)\n[الشمس: 13]: السُقْيا هو الاسم من سَقَى [ل، الوسيط] وقد فسرها [قر 20/ 78، 13/ 131] بالشِرْب - بالكسر: أي حظِّها من الماء، وهو أدق، إذ هو مقتضى الصيغة، فهو الماء الذي تشربه، وهم قد نَفِسوا عليها حظَّها من الماء - لا مَبدأ الشُرْب. والاستسقاء: طلب السقيا {وَإِذِ اسْتَسْقَى مُوسَى} [البقرة: 60]. وكل ما في القرآن من التركيب هو من سقى المائع ماء أو لبنا أو حميما والعياذ بالله وقد فرّقنا بين المراد بصيغها.",
+    "fasil_ozeti": "° معنى الفصل المعجمي (سق): نفاذ غليظ أو مهم من الجوف أو إليه. ويتمثل ذلك - في (سقق) في نفاذ ذرق الطائر من جوفه، وفي (سقى) في نفاذ الماء وهو بالغ الأهمية إلى الجوف، وفي (سوق) في القوة المحتواة في الباطن التي تدفع إلى الأمام أو إلى"
+  },
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "سقي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "سُقِيَ • (suqiya) (form I) /su.qi.ja/\n# third-person masculine singular past passive of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["suqiya", "saqā"]
+    },
+    {
+      "madde": "يسقي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يسقي (form I)\n# يَسْقِي (yasqī) /jas.qiː/: third-person masculine singular non-past active indicative of سَقَى (saqā)\n# يَسْقِيَ (yasqiya) /jas.qi.ja/: third-person masculine singular non-past active subjunctive of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasqī", "saqā", "yasqiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسقى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُسْقَى • (yusqā) (form I) /jus.qaː/\n# third-person masculine singular non-past passive indicative/subjunctive of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yusqā", "saqā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسق",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يسق (form I)\n# يَسْقِ (yasqi) /jas.qi/: third-person masculine singular non-past active jussive of سَقَى (saqā)\n# يُسْقَ (yusqa) /jus.qa/: third-person masculine singular non-past passive jussive of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasqi", "saqā", "yusqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسق",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تسق (form I)\n# تَسْقِ (tasqi) /tas.qi/: inflection of سَقَى (saqā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُسْقَ (tusqa) /tus.qa/: inflection of سَقَى (saqā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasqi", "saqā", "tusqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سقت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "سَقَتْ • (saqat) (form I) /sa.qat/\n# third-person feminine singular past active of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["saqat", "saqā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسقي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تسقي (form I)\n# تَسْقِي (tasqī) /tas.qiː/: inflection of سَقَى (saqā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَسْقِيَ (tasqiya) /tas.qi.ja/: inflection of سَقَى (saqā):\n## second-person masculine singular non-past active subjunctive\n## third",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasqī", "saqā", "tasqiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سقيت",
+      "tur": "verb",
+      "baslik": "سقيت (form I)\n# سَقَيْتُ (saqaytu) /sa.qaj.tu/: first-person singular past active of سَقَى (saqā)\n# سَقَيْتَ (saqayta) /sa.qaj.ta/: second-person masculine singular past active of سَقَى (saqā)\n# سَقَيْتِ (saqayti) /sa.qaj.ti/: second-person feminine singular past active of سَقَى (saqā)\n# سُقِيتُ (suqītu) /su.qiː.tu/: first-person singular past passive of سَقَى (saqā)\n# سُقِيتَ (suqīta) /su.qiː.ta/",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["saqaytu", "saqā", "saqayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسقى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُسْقَى • (tusqā) (form I) /tus.qaː/\n# inflection of سَقَى (saqā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tusqā", "saqā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اسق",
+      "tur": "verb",
+      "baslik": "اِسْقِ • (isqi) (form I) /is.qi/\n# second-person masculine singular imperative of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["isqi", "saqā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسقين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تسقين (form I)\n# تَسْقِينَ (tasqīna) /tas.qiː.na/: inflection of سَقَى (saqā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُسْقَيْنَ (tusqayna) /tus.qaj.na/: inflection of سَقَى (saqā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passi",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasqīna", "saqā", "tusqayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اسقي",
+      "tur": "verb",
+      "baslik": "اِسْقِي • (isqī) (form I) /is.qiː/\n# second-person feminine singular imperative of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["isqī", "saqā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسق",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أسق (form I)\n# أَسْقِ (ʔasqi) /ʔas.qi/: first-person singular non-past active jussive of سَقَى (saqā)\n# أُسْقَ (ʔusqa) /ʔus.qa/: first-person singular non-past passive jussive of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔasqi", "saqā", "ʔusqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسقي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أسقي (form I)\n# أَسْقِي (ʔasqī) /ʔas.qiː/: first-person singular non-past active indicative of سَقَى (saqā)\n# أَسْقِيَ (ʔasqiya) /ʔas.qi.ja/: first-person singular non-past active subjunctive of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔasqī", "saqā", "ʔasqiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسقى",
+      "tur": "verb",
+      "baslik": "أُسْقَى • (ʔusqā) (form I) /ʔus.qaː/\n# first-person singular non-past passive indicative/subjunctive of سَقَى (saqā)",
+      "etim_sablon": [
+        ["cog", "Hebrew הִשְׁקָה (hišqā)"]
+      ],
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔusqā", "saqā"],
+      "ipa": ["/ʔas.qaː/"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "نسق",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نسق (form I)\n# نَسْقِ (nasqi) /nas.qi/: first-person plural non-past active jussive of سَقَى (saqā)\n# نُسْقَ (nusqa) /nus.qa/: first-person plural non-past passive jussive of سَقَى (saqā)",
+      "etim_sablon": [
+        ["nonlemma", "See the etymology of the corresponding lemma form."]
+      ],
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nasqi", "saqā", "nusqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سقينا",
+      "tur": "verb",
+      "baslik": "سقينا (form I)\n# سَقَيْنَا (saqaynā) /sa.qaj.naː/: first-person plural past active of سَقَى (saqā)\n# سُقِينَا (suqīnā) /su.qiː.naː/: first-person plural past passive of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["saqaynā", "saqā", "suqīnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نسقي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نسقي (form I)\n# نَسْقِي (nasqī) /nas.qiː/: first-person plural non-past active indicative of سَقَى (saqā)\n# نَسْقِيَ (nasqiya) /nas.qi.ja/: first-person plural non-past active subjunctive of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nasqī", "saqā", "nasqiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نسقى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نُسْقَى • (nusqā) (form I) /nus.qaː/\n# first-person plural non-past passive indicative/subjunctive of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nusqā", "saqā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سقيتم",
+      "tur": "verb",
+      "baslik": "سقيتم (form I)\n# سَقَيْتُمْ (saqaytum) /sa.qaj.tum/: second-person masculine plural past active of سَقَى (saqā)\n# سُقِيتُمْ (suqītum) /su.qiː.tum/: second-person masculine plural past passive of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["saqaytum", "saqā", "suqītum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسقون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تسقون (form I)\n# تَسْقُونَ (tasqūna) /tas.quː.na/: second-person masculine plural non-past active indicative of سَقَى (saqā)\n# تُسْقَوْنَ (tusqawna) /tus.qaw.na/: second-person masculine plural non-past passive indicative of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasqūna", "saqā", "tusqawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسقوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تسقوا (form I)\n# تَسْقُوا (tasqū) /tas.quː/: second-person masculine plural non-past active subjunctive/jussive of سَقَى (saqā)\n# تُسْقَوْا (tusqaw) /tus.qaw/: second-person masculine plural non-past passive subjunctive/jussive of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasqū", "saqā", "tusqaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اسقوا",
+      "tur": "verb",
+      "baslik": "اِسْقُوا • (isqū) (form I) /is.quː/\n# second-person masculine plural imperative of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["isqū", "saqā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سقوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "سقوا (form I)\n# سَقَوْا (saqaw) /sa.qaw/: third-person masculine plural past active of سَقَى (saqā)\n# سُقُوا (suqū) /su.quː/: third-person masculine plural past passive of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["saqaw", "saqā", "suqū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسقون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يسقون (form I)\n# يَسْقُونَ (yasqūna) /jas.quː.na/: third-person masculine plural non-past active indicative of سَقَى (saqā)\n# يُسْقَوْنَ (yusqawna) /jus.qaw.na/: third-person masculine plural non-past passive indicative of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasqūna", "saqā", "yusqawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسقوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يسقوا (form I)\n# يَسْقُوا (yasqū) /jas.quː/: third-person masculine plural non-past active subjunctive/jussive of سَقَى (saqā)\n# يُسْقَوْا (yusqaw) /jus.qaw/: third-person masculine plural non-past passive subjunctive/jussive of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasqū", "saqā", "yusqaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سقيتن",
+      "tur": "verb",
+      "baslik": "سقيتن (form I)\n# سَقَيْتُنَّ (saqaytunna) /sa.qaj.tun.na/: second-person feminine plural past active of سَقَى (saqā)\n# سُقِيتُنَّ (suqītunna) /su.qiː.tun.na/: second-person feminine plural past passive of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["saqaytunna", "saqā", "suqītunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اسقين",
+      "tur": "verb",
+      "baslik": "اِسْقِينَ • (isqīna) (form I) /is.qiː.na/\n# second-person feminine plural imperative of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["isqīna", "saqā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سقين",
+      "tur": "verb",
+      "baslik": "سقين (form I)\n# سَقَيْنَ (saqayna) /sa.qaj.na/: third-person feminine plural past active of سَقَى (saqā)\n# سُقِينَ (suqīna) /su.qiː.na/: third-person feminine plural past passive of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["saqayna", "saqā", "suqīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسقين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يسقين (form I)\n# يَسْقِينَ (yasqīna) /jas.qiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of سَقَى (saqā)\n# يُسْقَيْنَ (yusqayna) /jus.qaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasqīna", "saqā", "yusqayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسقيان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تسقيان (form I)\n# تَسْقِيَانِ (tasqiyāni) /tas.qi.jaː.ni/: inflection of سَقَى (saqā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُسْقَيَانِ (tusqayāni) /tus.qa.jaː.ni/: inflection of سَقَى (saqā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasqiyāni", "saqā", "tusqayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسقيا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تسقيا (form I)\n# تَسْقِيَا (tasqiyā) /tas.qi.jaː/: inflection of سَقَى (saqā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُسْقَيَا (tusqayā) /tus.qa.jaː/: inflection of سَقَى (saqā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasqiyā", "saqā", "tusqayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسقيان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يسقيان (form I)\n# يَسْقِيَانِ (yasqiyāni) /jas.qi.jaː.ni/: third-person masculine dual non-past active indicative of سَقَى (saqā)\n# يُسْقَيَانِ (yusqayāni) /jus.qa.jaː.ni/: third-person masculine dual non-past passive indicative of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasqiyāni", "saqā", "yusqayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسقيا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يسقيا (form I)\n# يَسْقِيَا (yasqiyā) /jas.qi.jaː/: third-person masculine dual non-past active subjunctive/jussive of سَقَى (saqā)\n# يُسْقَيَا (yusqayā) /jus.qa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasqiyā", "saqā", "yusqayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سقيتما",
+      "tur": "verb",
+      "baslik": "سقيتما (form I)\n# سَقَيْتُمَا (saqaytumā) /sa.qaj.tu.maː/: second-person dual past active of سَقَى (saqā)\n# سُقِيتُمَا (suqītumā) /su.qiː.tu.maː/: second-person dual past passive of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["saqaytumā", "saqā", "suqītumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سقيا",
+      "tur": "verb",
+      "baslik": "سقيا (form I)\n# سَقَيَا (saqayā) /sa.qa.jaː/: third-person masculine dual past active of سَقَى (saqā)\n# سُقِيَا (suqiyā) /su.qi.jaː/: third-person masculine dual past passive of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["saqayā", "saqā", "suqiyā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سقتا",
+      "tur": "verb",
+      "baslik": "سَقَتَا • (saqatā) (form I) /sa.qa.taː/\n# third-person feminine dual past active of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["saqatā", "saqā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سقيتا",
+      "tur": "verb",
+      "baslik": "سُقِيَتَا • (suqiyatā) (form I) /su.qi.ja.taː/\n# third-person feminine dual past passive of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["suqiyatā", "saqā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اسقيا",
+      "tur": "verb",
+      "baslik": "اِسْقِيَا • (isqiyā) (form I) /is.qi.jaː/\n# second-person dual imperative of سَقَى (saqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["isqiyā", "saqā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "Cognate with Hebrew הִשְׁקָה (hišqā).",
+      "kognatlar": [
+        ["הִשְׁקָה", "השקה#Hebrew"]
+      ]
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "سقى", "r7"]
+  ],
+  "mana": {
     "ince": "pit.v.01",
     "orta": "verb.competition",
     "ust": "insan ve toplum",
@@ -551,36 +405,8 @@
     "dayanak_tanim": "set into opposition or rivalry",
     "synset_sayisi": 11
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "السين والقاف",
-    "mihveri": "تحصيل الماء ونحوه من المائع في الجوف بإنفاذه إليه: كما في شُرب الماء، وسَقْى الثوب. والسِقاء أداة لذلك، والساقية تسقى الزرع. ومنه: السَقِيّ - فعيل: البَرْديّ لنباته في الماء أو قريبًا منه، والنخلُ الذي يُسْقَى بالسواني أي الدوالي. وكل استعمالات التركيب واضحة المأخذ من الأصل. {وَسَقَاهُمْ رَبُّهُمْ شَرَابًا طَهُورًا} [الإنسان: 21]، {وَأَسْقَيْنَاكُمْ مَاءً فُرَاتًا} [المرسلات: 27]، {نُسْقِيكُمْ مِمَّا فِي بُطُونِهِ مِنْ بَيْنِ فَرْثٍ وَدَمٍ لَبَنًا خَالِصًا} [النحل: 66] قُرئ بفتح النون من: سَقَى يَسْقى، وبالضم من: أَسْقَى. تقول \"لما كان من يدك إلى فيه سَقَيْتُه، فإذا جعلتَ له شِرْبًا أو عرضته لأن يشرب بفيه أو بزرعه/ أو دللته على الماء: أسقيتُه \" [قر 10/ 123، 1/ 418]. {أَجَعَلْتُمْ سِقَايَةَ الْحَاجِّ} [التوبة: 19] مصدر كالسَقْي وجاءت على هذه الصيغة لأنها التزام كالحِرفة. و \"السقاية أيضًا: الإناء يسقى به/ الصاع والصواع بعينه \"وهو على صيغة اسم الآلة لدوام السقي به {جَعَلَ السِّقَايَةَ فِي رَحْلِ أَخِيهِ} [يوسف: 70] {نَاقَةَ اللَّهِ وَسُقْيَاهَا}",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (سق): نفاذ غليظ أو مهم من الجوف أو إليه. ويتمثل ذلك - في (سقق) في نفاذ ذرق الطائر من جوفه، وفي (سقى) في نفاذ الماء وهو بالغ الأهمية إلى الجوف، وفي (سوق) في القوة المحتواة في الباطن التي تدفع إلى الأمام أو إلى",
-    "tam_metin": "{وَأَسْقَيْنَاكُمْ مَاءً فُرَاتًا} [المرسلات: 27]\n\"السِقاء: القِرْبة للماء من جلد السَخْلة. والساقية: النهر الصغير. سَقَى الحيوانَ والنباتَ (رمى): أرواه، وسَقَى الثوبَ: أشربه صِبْغًا \".\n° المعنى المحوري\nتحصيل الماء ونحوه من المائع في الجوف بإنفاذه إليه: كما في شُرب الماء، وسَقْى الثوب. والسِقاء أداة لذلك، والساقية تسقى الزرع. ومنه: السَقِيّ - فعيل: البَرْديّ لنباته في الماء أو قريبًا منه، والنخلُ الذي يُسْقَى بالسواني أي الدوالي. وكل استعمالات التركيب واضحة المأخذ من الأصل. {وَسَقَاهُمْ رَبُّهُمْ شَرَابًا طَهُورًا} [الإنسان: 21]، {وَأَسْقَيْنَاكُمْ مَاءً فُرَاتًا} [المرسلات: 27]، {نُسْقِيكُمْ مِمَّا فِي بُطُونِهِ مِنْ بَيْنِ فَرْثٍ وَدَمٍ لَبَنًا خَالِصًا} [النحل: 66] قُرئ بفتح النون من: سَقَى يَسْقى، وبالضم من: أَسْقَى. تقول \"لما كان من يدك إلى فيه سَقَيْتُه، فإذا جعلتَ له شِرْبًا أو عرضته لأن يشرب بفيه أو بزرعه/ أو دللته على الماء: أسقيتُه \" [قر 10/ 123، 1/ 418]. {أَجَعَلْتُمْ سِقَايَةَ الْحَاجِّ} [التوبة: 19] مصدر كالسَقْي وجاءت على هذه الصيغة لأنها التزام كالحِرفة. و \"السقاية أيضًا: الإناء يسقى به/ الصاع والصواع بعينه \"وهو على صيغة اسم الآلة لدوام السقي به {جَعَلَ السِّقَايَةَ فِي رَحْلِ أَخِيهِ} [يوسف: 70] {نَاقَةَ اللَّهِ وَسُقْيَاهَا}\n__________\n= (سقف) تعبّر الفاء عن مباعدة وانفصال بقوة؛ فيعبّر التركيب عن غِماء، أي غطاء لعُمق الشيء وجوفه منفصل عنه، كالسقف. وفي (سقم) تعبّر الميم عن تضامٍّ واستواء ظاهري؛ فيعبّر التركيب عن التئام (ظاهر) الجسم ضامًا غليظًا حادًا في جوفه، كحال السقيم - أي الذي به علة في عمق بدنه.\n(2/1031)\n[الشمس: 13]: السُقْيا هو الاسم من سَقَى [ل، الوسيط] وقد فسرها [قر 20/ 78، 13/ 131] بالشِرْب - بالكسر: أي حظِّها من الماء، وهو أدق، إذ هو مقتضى الصيغة، فهو الماء الذي تشربه، وهم قد نَفِسوا عليها حظَّها من الماء - لا مَبدأ الشُرْب. والاستسقاء: طلب السقيا {وَإِذِ اسْتَسْقَى مُوسَى} [البقرة: 60]. وكل ما في القرآن من التركيب هو من سقى المائع ماء أو لبنا أو حميما والعياذ بالله وقد فرّقنا بين المراد بصيغها."
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
-    "act.n.02",
-    "array.n.01",
-    "assortment.n.01",
-    "equal.v.03",
-    "match.v.01",
-    "match.v.05",
-    "meet.v.06",
-    "ordering.n.01",
-    "pit.v.01",
-    "structure.n.03"
-  ],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 2,
       "merkez_kok": "حنج",
@@ -600,6 +426,22 @@
       "boy": 46
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": [
+    "act.n.02",
+    "array.n.01",
+    "assortment.n.01",
+    "equal.v.03",
+    "match.v.01",
+    "match.v.05",
+    "meet.v.06",
+    "ordering.n.01",
+    "pit.v.01",
+    "structure.n.03"
+  ],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

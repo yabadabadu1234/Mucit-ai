@@ -1,49 +1,41 @@
 {
   "kok": "شهـق",
-  "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "شهـق", "üç harfli değil"]
-  ],
-  "sozlukler": {},
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
+  "tur": "isim",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["fiil-yok"],
+  "lugat_fiil": false,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
   },
-  "tasnif": {
-    "fasil": "شه",
+  "sinif": "reddedildi",
+  "ses": {
     "harf": "ش",
+    "fasil": "شه",
     "mahrec": "şeceriyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+  "zemahseri": {
     "hakikat": "له زفير وشهيق: إخراج نفس ورده. وجبل شاهق: ممتنع طولاً.",
     "mecaz": "فحل ذو شاهق وصاهل إذا هاج فسمع له صوت خارج من جوفه. وإن فلاناً لذو شاهق وصاهل إذا اشتدّ غضبه. وشهقت عيني عليه إذا أعجبك فأدمت النظر إليه. قال مزاحم:\nإذا شهقت عيني عليه عزوته ... لغير أبيه لست أبرح راقيا\nأي أقول: هو هجين لأكسر الناظر إليه حتى لا يعان.",
-    "kinaye": "",
     "mecaz_var": true
   },
-  "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
-    "prototipler": [
-      {
-        "kaynak": "Zemahşerî hakîkat kolu",
-        "metin": "له زفير وشهيق: إخراج نفس ورده. وجبل شاهق: ممتنع طولاً."
-      }
-    ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "شهـق", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
+  },
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
     "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
@@ -65,16 +57,6 @@
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.426,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
-  },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+    "ortalama_benzerlik": 0.426
+  }
 }

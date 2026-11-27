@@ -1,785 +1,605 @@
 {
   "kok": "ءنءى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءنءى", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تنأى",
-        "u": "تنأى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُنْأَى • (tunʔā) (form IV) /tun.ʔaː/\n# inflection of أَنْأَى (ʔanʔā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunʔā", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "ينأى",
-        "u": "ينأى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُنْأَى • (yunʔā) (form IV) /jun.ʔaː/\n# third-person masculine singular non-past passive indicative/subjunctive of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunʔā", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "تنأين",
-        "u": "تنأين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُنْأَيْنَ • (tunʔayna) (form IV) /tun.ʔaj.na/\n# inflection of أَنْأَى (ʔanʔā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunʔayna", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "تنأي",
-        "u": "تنأي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُنْأَيْ • (tunʔay) (form IV) /tun.ʔaj/\n# second-person feminine singular non-past passive subjunctive/jussive of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunʔay", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "أنء",
-        "u": "أنء",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أنء (form IV)\n# أُنْءِ (ʔunʔi) /ʔun.ʔi/: first-person singular non-past active jussive of أَنْأَى (ʔanʔā)\n# أُنْءَ (ʔunʔa) /ʔun.ʔa/: first-person singular non-past passive jussive of أَنْأَى (ʔanʔā)\n# أَنْءِ (ʔanʔi) /ʔan.ʔi/: second-person masculine singular imperative of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔunʔi", "ʔanʔā", "ʔunʔa"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "أنأ",
-        "u": "أنأ",
-        "p": "verb",
-        "n": "1.2",
-        "h": "ar-verb form",
-        "e": "أُنْأَ • (ʔunʔa) (form IV) /ʔun.ʔa/\n# first-person singular non-past passive jussive of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔunʔa", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "تنء",
-        "u": "تنء",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تنء (form IV)\n# تُنْءِ (tunʔi) /tun.ʔi/: inflection of أَنْأَى (ʔanʔā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُنْءَ (tunʔa) /tun.ʔa/: inflection of أَنْأَى (ʔanʔā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunʔi", "ʔanʔā", "tunʔa"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "تنأ",
-        "u": "تنأ",
-        "p": "verb",
-        "n": "1.2",
-        "h": "ar-verb form",
-        "e": "تُنْأَ • (tunʔa) (form IV) /tun.ʔa/\n# inflection of أَنْأَى (ʔanʔā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunʔa", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "ينء",
-        "u": "ينء",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ينء (form IV)\n# يُنْءِ (yunʔi) /jun.ʔi/: third-person masculine singular non-past active jussive of أَنْأَى (ʔanʔā)\n# يُنْءَ (yunʔa) /jun.ʔa/: third-person masculine singular non-past passive jussive of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunʔi", "ʔanʔā", "yunʔa"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "ينأ",
-        "u": "ينأ",
-        "p": "verb",
-        "n": "1.2",
-        "h": "ar-verb form",
-        "e": "يُنْأَ • (yunʔa) (form IV) /jun.ʔa/\n# third-person masculine singular non-past passive jussive of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunʔa", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "تنأيان",
-        "u": "تنأيان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُنْأَيَانِ • (tunʔayāni) (form IV) /tun.ʔa.jaː.ni/\n# inflection of أَنْأَى (ʔanʔā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunʔayāni", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "ينأيان",
-        "u": "ينأيان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُنْأَيَانِ • (yunʔayāni) (form IV) /jun.ʔa.jaː.ni/\n# third-person masculine dual non-past passive indicative of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunʔayāni", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "تنأيا",
-        "u": "تنأيا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُنْأَيَا • (tunʔayā) (form IV) /tun.ʔa.jaː/\n# inflection of أَنْأَى (ʔanʔā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunʔayā", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "ينأيا",
-        "u": "ينأيا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُنْأَيَا • (yunʔayā) (form IV) /jun.ʔa.jaː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunʔayā", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "ننأى",
-        "u": "ننأى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نُنْأَى • (nunʔā) (form IV) /nun.ʔaː/\n# first-person plural non-past passive indicative/subjunctive of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nunʔā", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "تنأون",
-        "u": "تنأون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُنْأَوْنَ • (tunʔawna) (form IV) /tun.ʔaw.na/\n# second-person masculine plural non-past passive indicative of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunʔawna", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "ينأون",
-        "u": "ينأون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُنْأَوْنَ • (yunʔawna) (form IV) /jun.ʔaw.na/\n# third-person masculine plural non-past passive indicative of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunʔawna", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "ينأين",
-        "u": "ينأين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُنْأَيْنَ • (yunʔayna) (form IV) /jun.ʔaj.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunʔayna", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "تنأوا",
-        "u": "تنأوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُنْأَوْا • (tunʔaw) (form IV) /tun.ʔaw/\n# second-person masculine plural non-past passive subjunctive/jussive of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunʔaw", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "ينأوا",
-        "u": "ينأوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُنْأَوْا • (yunʔaw) (form IV) /jun.ʔaw/\n# third-person masculine plural non-past passive subjunctive/jussive of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunʔaw", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "ننء",
-        "u": "ننء",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ننء (form IV)\n# نُنْءِ (nunʔi) /nun.ʔi/: first-person plural non-past active jussive of أَنْأَى (ʔanʔā)\n# نُنْءَ (nunʔa) /nun.ʔa/: first-person plural non-past passive jussive of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nunʔi", "ʔanʔā", "nunʔa"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "ننأ",
-        "u": "ننأ",
-        "p": "verb",
-        "n": "1.2",
-        "h": "ar-verb form",
-        "e": "نُنْأَ • (nunʔa) (form IV) /nun.ʔa/\n# first-person plural non-past passive jussive of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nunʔa", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "أنأيت",
-        "u": "أنأيت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنأيت (form IV)\n# أَنْأَيْتُ (ʔanʔaytu) /ʔan.ʔaj.tu/: first-person singular past active of أَنْأَى (ʔanʔā)\n# أَنْأَيْتَ (ʔanʔayta) /ʔan.ʔaj.ta/: second-person masculine singular past active of أَنْأَى (ʔanʔā)\n# أَنْأَيْتِ (ʔanʔayti) /ʔan.ʔaj.ti/: second-person feminine singular past active of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanʔaytu", "ʔanʔā", "ʔanʔayta"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "أنأت",
-        "u": "أنأت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أَنْأَتْ • (ʔanʔat) (form IV) /ʔan.ʔat/\n# third-person feminine singular past active of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanʔat", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "أنئي",
-        "u": "أنئي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنئي (form IV)\n# أُنْئِيَ (ʔunʔiya) /ʔun.ʔi.ja/: inflection of أَنْأَى (ʔanʔā):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُنْئِي (ʔunʔī) /ʔun.ʔiː/: first-person singular non-past active indicative of أَنْأَى (ʔanʔā)\n# أَنْئِي (ʔanʔī) /ʔan.ʔiː/: second-person feminine singular imperative of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔunʔiya", "ʔanʔā", "ʔunʔī"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "تنئي",
-        "u": "تنئي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تنئي (form IV)\n# تُنْئِي (tunʔī) /tun.ʔiː/: inflection of أَنْأَى (ʔanʔā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُنْئِيَ (tunʔiya) /tun.ʔi.ja/: inflection of أَنْأَى (ʔanʔā):\n## second-person masculine singular non-past active subjunctive\n#",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunʔī", "ʔanʔā", "tunʔiya"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "تنئين",
-        "u": "تنئين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُنْئِينَ • (tunʔīna) (form IV) /tun.ʔiː.na/\n# inflection of أَنْأَى (ʔanʔā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunʔīna", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "ينئي",
-        "u": "ينئي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ينئي (form IV)\n# يُنْئِي (yunʔī) /jun.ʔiː/: third-person masculine singular non-past active indicative of أَنْأَى (ʔanʔā)\n# يُنْئِيَ (yunʔiya) /jun.ʔi.ja/: third-person masculine singular non-past active subjunctive of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunʔī", "ʔanʔā", "yunʔiya"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "أنئ",
-        "u": "أنئ",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أنئ (form IV)\n# أُنْئِ (ʔunʔi) /ʔun.ʔi/: first-person singular non-past active jussive of أَنْأَى (ʔanʔā)\n# أَنْئِ (ʔanʔi) /ʔan.ʔi/: second-person masculine singular imperative of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔunʔi", "ʔanʔā", "ʔanʔi"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "تنئ",
-        "u": "تنئ",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُنْئِ • (tunʔi) (form IV) /tun.ʔi/\n# inflection of أَنْأَى (ʔanʔā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunʔi", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "ينئ",
-        "u": "ينئ",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُنْئِ • (yunʔi) (form IV) /jun.ʔi/\n# third-person masculine singular non-past active jussive of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunʔi", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "أنأيا",
-        "u": "أنأيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَنْأَيَا • (ʔanʔayā) (form IV) /ʔan.ʔa.jaː/\n# third-person masculine dual past active of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanʔayā", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "أنأتا",
-        "u": "أنأتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَنْأَتَا • (ʔanʔatā) (form IV) /ʔan.ʔa.taː/\n# third-person feminine dual past active of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanʔatā", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "تنئيان",
-        "u": "تنئيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُنْئِيَانِ • (tunʔiyāni) (form IV) /tun.ʔi.jaː.ni/\n# inflection of أَنْأَى (ʔanʔā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunʔiyāni", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "ينئيان",
-        "u": "ينئيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُنْئِيَانِ • (yunʔiyāni) (form IV) /jun.ʔi.jaː.ni/\n# third-person masculine dual non-past active indicative of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunʔiyāni", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "تنئيا",
-        "u": "تنئيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُنْئِيَا • (tunʔiyā) (form IV) /tun.ʔi.jaː/\n# inflection of أَنْأَى (ʔanʔā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunʔiyā", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "ينئيا",
-        "u": "ينئيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُنْئِيَا • (yunʔiyā) (form IV) /jun.ʔi.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunʔiyā", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "أنئيا",
-        "u": "أنئيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنئيا (form IV)\n# أُنْئِيَا (ʔunʔiyā) /ʔun.ʔi.jaː/: third-person masculine dual past passive of أَنْأَى (ʔanʔā)\n# أَنْئِيَا (ʔanʔiyā) /ʔan.ʔi.jaː/: second-person dual imperative of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔunʔiyā", "ʔanʔā", "ʔanʔiyā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "أنأينا",
-        "u": "أنأينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَنْأَيْنَا • (ʔanʔaynā) (form IV) /ʔan.ʔaj.naː/\n# first-person plural past active of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanʔaynā", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "أنأيتم",
-        "u": "أنأيتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَنْأَيْتُمْ • (ʔanʔaytum) (form IV) /ʔan.ʔaj.tum/\n# second-person masculine plural past active of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanʔaytum", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "أنأوا",
-        "u": "أنأوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَنْأَوْا • (ʔanʔaw) (form IV) /ʔan.ʔaw/\n# third-person masculine plural past active of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanʔaw", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "أنأيتن",
-        "u": "أنأيتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَنْأَيْتُنَّ • (ʔanʔaytunna) (form IV) /ʔan.ʔaj.tun.na/\n# second-person feminine plural past active of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanʔaytunna", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "أنأين",
-        "u": "أنأين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَنْأَيْنَ • (ʔanʔayna) (form IV) /ʔan.ʔaj.na/\n# third-person feminine plural past active of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanʔayna", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "ننئي",
-        "u": "ننئي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ننئي (form IV)\n# نُنْئِي (nunʔī) /nun.ʔiː/: first-person plural non-past active indicative of أَنْأَى (ʔanʔā)\n# نُنْئِيَ (nunʔiya) /nun.ʔi.ja/: first-person plural non-past active subjunctive of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nunʔī", "ʔanʔā", "nunʔiya"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "تنؤون",
-        "u": "تنؤون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُنْؤُونَ • (tunʔūna) (form IV) /tun.ʔuː.na/\n# second-person masculine plural non-past active indicative of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunʔūna", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "ينؤون",
-        "u": "ينؤون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُنْؤُونَ • (yunʔūna) (form IV) /jun.ʔuː.na/\n# third-person masculine plural non-past active indicative of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunʔūna", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "ينئين",
-        "u": "ينئين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُنْئِينَ • (yunʔīna) (form IV) /jun.ʔiː.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunʔīna", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "تنؤوا",
-        "u": "تنؤوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُنْؤُوا • (tunʔū) (form IV) /tun.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunʔū", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "ينؤوا",
-        "u": "ينؤوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُنْؤُوا • (yunʔū) (form IV) /jun.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunʔū", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "ننئ",
-        "u": "ننئ",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نُنْئِ • (nunʔi) (form IV) /nun.ʔi/\n# first-person plural non-past active jussive of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nunʔi", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "أنؤوا",
-        "u": "أنؤوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنؤوا (form IV)\n# أُنْؤُوا (ʔunʔū) /ʔun.ʔuː/: third-person masculine plural past passive of أَنْأَى (ʔanʔā)\n# أَنْؤُوا (ʔanʔū) /ʔan.ʔuː/: second-person masculine plural imperative of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔunʔū", "ʔanʔā", "ʔanʔū"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "أنئين",
-        "u": "أنئين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنئين (form IV)\n# أُنْئِينَ (ʔunʔīna) /ʔun.ʔiː.na/: third-person feminine plural past passive of أَنْأَى (ʔanʔā)\n# أَنْئِينَ (ʔanʔīna) /ʔan.ʔiː.na/: second-person feminine plural imperative of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔunʔīna", "ʔanʔā", "ʔanʔīna"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "أنئيت",
-        "u": "أنئيت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنئيت (form IV)\n# أُنْئِيتُ (ʔunʔītu) /ʔun.ʔiː.tu/: first-person singular past passive of أَنْأَى (ʔanʔā)\n# أُنْئِيتَ (ʔunʔīta) /ʔun.ʔiː.ta/: second-person masculine singular past passive of أَنْأَى (ʔanʔā)\n# أُنْئِيتِ (ʔunʔīti) /ʔun.ʔiː.ti/: second-person feminine singular past passive of أَنْأَى (ʔanʔā)\n# أُنْئِيَتْ (ʔunʔiyat) /ʔun.ʔi.jat/: third-person feminine singular past passive of أَنْأَى ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔunʔītu", "ʔanʔā", "ʔunʔīta"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "أنئيتما",
-        "u": "أنئيتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُنْئِيتُمَا • (ʔunʔītumā) (form IV) /ʔun.ʔiː.tu.maː/\n# second-person dual past passive of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔunʔītumā", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "أنئيتا",
-        "u": "أنئيتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُنْئِيَتَا • (ʔunʔiyatā) (form IV) /ʔun.ʔi.ja.taː/\n# third-person feminine dual past passive of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔunʔiyatā", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "أنئينا",
-        "u": "أنئينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُنْئِينَا • (ʔunʔīnā) (form IV) /ʔun.ʔiː.naː/\n# first-person plural past passive of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔunʔīnā", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "أنئيتم",
-        "u": "أنئيتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُنْئِيتُمْ • (ʔunʔītum) (form IV) /ʔun.ʔiː.tum/\n# second-person masculine plural past passive of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔunʔītum", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "أنئيتن",
-        "u": "أنئيتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُنْئِيتُنَّ • (ʔunʔītunna) (form IV) /ʔun.ʔiː.tun.na/\n# second-person feminine plural past passive of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔunʔītunna", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      },
-      {
-        "w": "أنأيتما",
-        "u": "أنأيتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَنْأَيْتُمَا • (ʔanʔaytumā) (form IV) /ʔan.ʔaj.tu.maː/\n# second-person dual past active of أَنْأَى (ʔanʔā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanʔaytumā", "ʔanʔā"],
-        "k": "أنأى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "نى",
+  "ses": {
     "harf": "ء",
+    "fasil": "نى",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تنأى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُنْأَى • (tunʔā) (form IV) /tun.ʔaː/\n# inflection of أَنْأَى (ʔanʔā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunʔā", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينأى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُنْأَى • (yunʔā) (form IV) /jun.ʔaː/\n# third-person masculine singular non-past passive indicative/subjunctive of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunʔā", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنأين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُنْأَيْنَ • (tunʔayna) (form IV) /tun.ʔaj.na/\n# inflection of أَنْأَى (ʔanʔā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunʔayna", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنأي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُنْأَيْ • (tunʔay) (form IV) /tun.ʔaj/\n# second-person feminine singular non-past passive subjunctive/jussive of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunʔay", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنء",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أنء (form IV)\n# أُنْءِ (ʔunʔi) /ʔun.ʔi/: first-person singular non-past active jussive of أَنْأَى (ʔanʔā)\n# أُنْءَ (ʔunʔa) /ʔun.ʔa/: first-person singular non-past passive jussive of أَنْأَى (ʔanʔā)\n# أَنْءِ (ʔanʔi) /ʔan.ʔi/: second-person masculine singular imperative of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔunʔi", "ʔanʔā", "ʔunʔa"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنأ",
+      "tur": "verb",
+      "etim_no": "1.2",
+      "baslik": "أُنْأَ • (ʔunʔa) (form IV) /ʔun.ʔa/\n# first-person singular non-past passive jussive of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔunʔa", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنء",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تنء (form IV)\n# تُنْءِ (tunʔi) /tun.ʔi/: inflection of أَنْأَى (ʔanʔā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُنْءَ (tunʔa) /tun.ʔa/: inflection of أَنْأَى (ʔanʔā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunʔi", "ʔanʔā", "tunʔa"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنأ",
+      "tur": "verb",
+      "etim_no": "1.2",
+      "baslik": "تُنْأَ • (tunʔa) (form IV) /tun.ʔa/\n# inflection of أَنْأَى (ʔanʔā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunʔa", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينء",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ينء (form IV)\n# يُنْءِ (yunʔi) /jun.ʔi/: third-person masculine singular non-past active jussive of أَنْأَى (ʔanʔā)\n# يُنْءَ (yunʔa) /jun.ʔa/: third-person masculine singular non-past passive jussive of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunʔi", "ʔanʔā", "yunʔa"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينأ",
+      "tur": "verb",
+      "etim_no": "1.2",
+      "baslik": "يُنْأَ • (yunʔa) (form IV) /jun.ʔa/\n# third-person masculine singular non-past passive jussive of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunʔa", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنأيان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُنْأَيَانِ • (tunʔayāni) (form IV) /tun.ʔa.jaː.ni/\n# inflection of أَنْأَى (ʔanʔā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunʔayāni", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينأيان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُنْأَيَانِ • (yunʔayāni) (form IV) /jun.ʔa.jaː.ni/\n# third-person masculine dual non-past passive indicative of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunʔayāni", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنأيا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُنْأَيَا • (tunʔayā) (form IV) /tun.ʔa.jaː/\n# inflection of أَنْأَى (ʔanʔā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunʔayā", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينأيا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُنْأَيَا • (yunʔayā) (form IV) /jun.ʔa.jaː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunʔayā", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ننأى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نُنْأَى • (nunʔā) (form IV) /nun.ʔaː/\n# first-person plural non-past passive indicative/subjunctive of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nunʔā", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنأون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُنْأَوْنَ • (tunʔawna) (form IV) /tun.ʔaw.na/\n# second-person masculine plural non-past passive indicative of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunʔawna", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينأون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُنْأَوْنَ • (yunʔawna) (form IV) /jun.ʔaw.na/\n# third-person masculine plural non-past passive indicative of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunʔawna", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينأين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُنْأَيْنَ • (yunʔayna) (form IV) /jun.ʔaj.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunʔayna", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنأوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُنْأَوْا • (tunʔaw) (form IV) /tun.ʔaw/\n# second-person masculine plural non-past passive subjunctive/jussive of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunʔaw", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينأوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُنْأَوْا • (yunʔaw) (form IV) /jun.ʔaw/\n# third-person masculine plural non-past passive subjunctive/jussive of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunʔaw", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ننء",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ننء (form IV)\n# نُنْءِ (nunʔi) /nun.ʔi/: first-person plural non-past active jussive of أَنْأَى (ʔanʔā)\n# نُنْءَ (nunʔa) /nun.ʔa/: first-person plural non-past passive jussive of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nunʔi", "ʔanʔā", "nunʔa"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ننأ",
+      "tur": "verb",
+      "etim_no": "1.2",
+      "baslik": "نُنْأَ • (nunʔa) (form IV) /nun.ʔa/\n# first-person plural non-past passive jussive of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nunʔa", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنأيت",
+      "tur": "verb",
+      "baslik": "أنأيت (form IV)\n# أَنْأَيْتُ (ʔanʔaytu) /ʔan.ʔaj.tu/: first-person singular past active of أَنْأَى (ʔanʔā)\n# أَنْأَيْتَ (ʔanʔayta) /ʔan.ʔaj.ta/: second-person masculine singular past active of أَنْأَى (ʔanʔā)\n# أَنْأَيْتِ (ʔanʔayti) /ʔan.ʔaj.ti/: second-person feminine singular past active of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanʔaytu", "ʔanʔā", "ʔanʔayta"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنأت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أَنْأَتْ • (ʔanʔat) (form IV) /ʔan.ʔat/\n# third-person feminine singular past active of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanʔat", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنئي",
+      "tur": "verb",
+      "baslik": "أنئي (form IV)\n# أُنْئِيَ (ʔunʔiya) /ʔun.ʔi.ja/: inflection of أَنْأَى (ʔanʔā):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُنْئِي (ʔunʔī) /ʔun.ʔiː/: first-person singular non-past active indicative of أَنْأَى (ʔanʔā)\n# أَنْئِي (ʔanʔī) /ʔan.ʔiː/: second-person feminine singular imperative of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔunʔiya", "ʔanʔā", "ʔunʔī"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنئي",
+      "tur": "verb",
+      "baslik": "تنئي (form IV)\n# تُنْئِي (tunʔī) /tun.ʔiː/: inflection of أَنْأَى (ʔanʔā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُنْئِيَ (tunʔiya) /tun.ʔi.ja/: inflection of أَنْأَى (ʔanʔā):\n## second-person masculine singular non-past active subjunctive\n#",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunʔī", "ʔanʔā", "tunʔiya"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنئين",
+      "tur": "verb",
+      "baslik": "تُنْئِينَ • (tunʔīna) (form IV) /tun.ʔiː.na/\n# inflection of أَنْأَى (ʔanʔā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunʔīna", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينئي",
+      "tur": "verb",
+      "baslik": "ينئي (form IV)\n# يُنْئِي (yunʔī) /jun.ʔiː/: third-person masculine singular non-past active indicative of أَنْأَى (ʔanʔā)\n# يُنْئِيَ (yunʔiya) /jun.ʔi.ja/: third-person masculine singular non-past active subjunctive of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunʔī", "ʔanʔā", "yunʔiya"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنئ",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أنئ (form IV)\n# أُنْئِ (ʔunʔi) /ʔun.ʔi/: first-person singular non-past active jussive of أَنْأَى (ʔanʔā)\n# أَنْئِ (ʔanʔi) /ʔan.ʔi/: second-person masculine singular imperative of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔunʔi", "ʔanʔā", "ʔanʔi"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنئ",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُنْئِ • (tunʔi) (form IV) /tun.ʔi/\n# inflection of أَنْأَى (ʔanʔā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunʔi", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينئ",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُنْئِ • (yunʔi) (form IV) /jun.ʔi/\n# third-person masculine singular non-past active jussive of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunʔi", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنأيا",
+      "tur": "verb",
+      "baslik": "أَنْأَيَا • (ʔanʔayā) (form IV) /ʔan.ʔa.jaː/\n# third-person masculine dual past active of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanʔayā", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنأتا",
+      "tur": "verb",
+      "baslik": "أَنْأَتَا • (ʔanʔatā) (form IV) /ʔan.ʔa.taː/\n# third-person feminine dual past active of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanʔatā", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنئيان",
+      "tur": "verb",
+      "baslik": "تُنْئِيَانِ • (tunʔiyāni) (form IV) /tun.ʔi.jaː.ni/\n# inflection of أَنْأَى (ʔanʔā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunʔiyāni", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينئيان",
+      "tur": "verb",
+      "baslik": "يُنْئِيَانِ • (yunʔiyāni) (form IV) /jun.ʔi.jaː.ni/\n# third-person masculine dual non-past active indicative of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunʔiyāni", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنئيا",
+      "tur": "verb",
+      "baslik": "تُنْئِيَا • (tunʔiyā) (form IV) /tun.ʔi.jaː/\n# inflection of أَنْأَى (ʔanʔā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunʔiyā", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينئيا",
+      "tur": "verb",
+      "baslik": "يُنْئِيَا • (yunʔiyā) (form IV) /jun.ʔi.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunʔiyā", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنئيا",
+      "tur": "verb",
+      "baslik": "أنئيا (form IV)\n# أُنْئِيَا (ʔunʔiyā) /ʔun.ʔi.jaː/: third-person masculine dual past passive of أَنْأَى (ʔanʔā)\n# أَنْئِيَا (ʔanʔiyā) /ʔan.ʔi.jaː/: second-person dual imperative of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔunʔiyā", "ʔanʔā", "ʔanʔiyā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنأينا",
+      "tur": "verb",
+      "baslik": "أَنْأَيْنَا • (ʔanʔaynā) (form IV) /ʔan.ʔaj.naː/\n# first-person plural past active of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanʔaynā", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنأيتم",
+      "tur": "verb",
+      "baslik": "أَنْأَيْتُمْ • (ʔanʔaytum) (form IV) /ʔan.ʔaj.tum/\n# second-person masculine plural past active of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanʔaytum", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنأوا",
+      "tur": "verb",
+      "baslik": "أَنْأَوْا • (ʔanʔaw) (form IV) /ʔan.ʔaw/\n# third-person masculine plural past active of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanʔaw", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنأيتن",
+      "tur": "verb",
+      "baslik": "أَنْأَيْتُنَّ • (ʔanʔaytunna) (form IV) /ʔan.ʔaj.tun.na/\n# second-person feminine plural past active of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanʔaytunna", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنأين",
+      "tur": "verb",
+      "baslik": "أَنْأَيْنَ • (ʔanʔayna) (form IV) /ʔan.ʔaj.na/\n# third-person feminine plural past active of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanʔayna", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ننئي",
+      "tur": "verb",
+      "baslik": "ننئي (form IV)\n# نُنْئِي (nunʔī) /nun.ʔiː/: first-person plural non-past active indicative of أَنْأَى (ʔanʔā)\n# نُنْئِيَ (nunʔiya) /nun.ʔi.ja/: first-person plural non-past active subjunctive of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nunʔī", "ʔanʔā", "nunʔiya"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنؤون",
+      "tur": "verb",
+      "baslik": "تُنْؤُونَ • (tunʔūna) (form IV) /tun.ʔuː.na/\n# second-person masculine plural non-past active indicative of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunʔūna", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينؤون",
+      "tur": "verb",
+      "baslik": "يُنْؤُونَ • (yunʔūna) (form IV) /jun.ʔuː.na/\n# third-person masculine plural non-past active indicative of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunʔūna", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينئين",
+      "tur": "verb",
+      "baslik": "يُنْئِينَ • (yunʔīna) (form IV) /jun.ʔiː.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunʔīna", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنؤوا",
+      "tur": "verb",
+      "baslik": "تُنْؤُوا • (tunʔū) (form IV) /tun.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunʔū", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينؤوا",
+      "tur": "verb",
+      "baslik": "يُنْؤُوا • (yunʔū) (form IV) /jun.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunʔū", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ننئ",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نُنْئِ • (nunʔi) (form IV) /nun.ʔi/\n# first-person plural non-past active jussive of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nunʔi", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنؤوا",
+      "tur": "verb",
+      "baslik": "أنؤوا (form IV)\n# أُنْؤُوا (ʔunʔū) /ʔun.ʔuː/: third-person masculine plural past passive of أَنْأَى (ʔanʔā)\n# أَنْؤُوا (ʔanʔū) /ʔan.ʔuː/: second-person masculine plural imperative of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔunʔū", "ʔanʔā", "ʔanʔū"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنئين",
+      "tur": "verb",
+      "baslik": "أنئين (form IV)\n# أُنْئِينَ (ʔunʔīna) /ʔun.ʔiː.na/: third-person feminine plural past passive of أَنْأَى (ʔanʔā)\n# أَنْئِينَ (ʔanʔīna) /ʔan.ʔiː.na/: second-person feminine plural imperative of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔunʔīna", "ʔanʔā", "ʔanʔīna"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنئيت",
+      "tur": "verb",
+      "baslik": "أنئيت (form IV)\n# أُنْئِيتُ (ʔunʔītu) /ʔun.ʔiː.tu/: first-person singular past passive of أَنْأَى (ʔanʔā)\n# أُنْئِيتَ (ʔunʔīta) /ʔun.ʔiː.ta/: second-person masculine singular past passive of أَنْأَى (ʔanʔā)\n# أُنْئِيتِ (ʔunʔīti) /ʔun.ʔiː.ti/: second-person feminine singular past passive of أَنْأَى (ʔanʔā)\n# أُنْئِيَتْ (ʔunʔiyat) /ʔun.ʔi.jat/: third-person feminine singular past passive of أَنْأَى ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔunʔītu", "ʔanʔā", "ʔunʔīta"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنئيتما",
+      "tur": "verb",
+      "baslik": "أُنْئِيتُمَا • (ʔunʔītumā) (form IV) /ʔun.ʔiː.tu.maː/\n# second-person dual past passive of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔunʔītumā", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنئيتا",
+      "tur": "verb",
+      "baslik": "أُنْئِيَتَا • (ʔunʔiyatā) (form IV) /ʔun.ʔi.ja.taː/\n# third-person feminine dual past passive of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔunʔiyatā", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنئينا",
+      "tur": "verb",
+      "baslik": "أُنْئِينَا • (ʔunʔīnā) (form IV) /ʔun.ʔiː.naː/\n# first-person plural past passive of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔunʔīnā", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنئيتم",
+      "tur": "verb",
+      "baslik": "أُنْئِيتُمْ • (ʔunʔītum) (form IV) /ʔun.ʔiː.tum/\n# second-person masculine plural past passive of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔunʔītum", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنئيتن",
+      "tur": "verb",
+      "baslik": "أُنْئِيتُنَّ • (ʔunʔītunna) (form IV) /ʔun.ʔiː.tun.na/\n# second-person feminine plural past passive of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔunʔītunna", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنأيتما",
+      "tur": "verb",
+      "baslik": "أَنْأَيْتُمَا • (ʔanʔaytumā) (form IV) /ʔan.ʔaj.tu.maː/\n# second-person dual past active of أَنْأَى (ʔanʔā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanʔaytumā", "ʔanʔā"],
+      "kok_yazilis": "أنأى",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءنءى", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

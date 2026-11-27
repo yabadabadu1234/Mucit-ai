@@ -1,483 +1,335 @@
 {
   "kok": "واكظ",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "واكظ", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "واكظت",
-        "u": "واكظت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "واكظت (form III)\n# وَاكَظْتُ (wākaẓtu) /waː.kaðˤ.tu/: first-person singular past active of وَاكَظَ (wākaẓa)\n# وَاكَظْتَ (wākaẓta) /waː.kaðˤ.ta/: second-person masculine singular past active of وَاكَظَ (wākaẓa)\n# وَاكَظْتِ (wākaẓti) /waː.kaðˤ.ti/: second-person feminine singular past active of وَاكَظَ (wākaẓa)\n# وَاكَظَتْ (wākaẓat) /waː.ka.ðˤat/: third-person feminine singular past active of وَاكَظ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wākaẓtu", "wākaẓa", "wākaẓta"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "واكظا",
-        "u": "واكظا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "واكظا (form III)\n# وَاكَظَا (wākaẓā) /waː.ka.ðˤaː/: third-person masculine dual past active of وَاكَظَ (wākaẓa)\n# وَاكِظَا (wākiẓā) /waː.ki.ðˤaː/: second-person dual imperative of وَاكَظَ (wākaẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wākaẓā", "wākaẓa", "wākiẓā"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "واكظتم",
-        "u": "واكظتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وَاكَظْتُمْ • (wākaẓtum) (form III) /waː.kaðˤ.tum/\n# second-person masculine plural past active of وَاكَظَ (wākaẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wākaẓtum", "wākaẓa"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "واكظتما",
-        "u": "واكظتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وَاكَظْتُمَا • (wākaẓtumā) (form III) /waː.kaðˤ.tu.maː/\n# second-person dual past active of وَاكَظَ (wākaẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wākaẓtumā", "wākaẓa"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "واكظتا",
-        "u": "واكظتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وَاكَظَتَا • (wākaẓatā) (form III) /waː.ka.ðˤa.taː/\n# third-person feminine dual past active of وَاكَظَ (wākaẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wākaẓatā", "wākaẓa"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "واكظن",
-        "u": "واكظن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "واكظن (form III)\n# وَاكَظْنَ (wākaẓna) /waː.kaðˤ.na/: third-person feminine plural past active of وَاكَظَ (wākaẓa)\n# وَاكِظْنَ (wākiẓna) /waː.kiðˤ.na/: second-person feminine plural imperative of وَاكَظَ (wākaẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wākaẓna", "wākaẓa", "wākiẓna"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "واكظنا",
-        "u": "واكظنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وَاكَظْنَا • (wākaẓnā) (form III) /waː.kaðˤ.naː/\n# first-person plural past active of وَاكَظَ (wākaẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wākaẓnā", "wākaẓa"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "واكظتن",
-        "u": "واكظتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وَاكَظْتُنَّ • (wākaẓtunna) (form III) /waː.kaðˤ.tun.na/\n# second-person feminine plural past active of وَاكَظَ (wākaẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wākaẓtunna", "wākaẓa"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "واكظوا",
-        "u": "واكظوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "واكظوا (form III)\n# وَاكَظُوا (wākaẓū) /waː.ka.ðˤuː/: third-person masculine plural past active of وَاكَظَ (wākaẓa)\n# وَاكِظُوا (wākiẓū) /waː.ki.ðˤuː/: second-person masculine plural imperative of وَاكَظَ (wākaẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wākaẓū", "wākaẓa", "wākiẓū"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "ووكظتما",
-        "u": "ووكظتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وُوكِظْتُمَا • (wūkiẓtumā) (form III) /wuː.kiðˤ.tu.maː/\n# second-person dual past passive of وَاكَظَ (wākaẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wūkiẓtumā", "wākaẓa"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "ووكظا",
-        "u": "ووكظا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وُوكِظَا • (wūkiẓā) (form III) /wuː.ki.ðˤaː/\n# third-person masculine dual past passive of وَاكَظَ (wākaẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wūkiẓā", "wākaẓa"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "ووكظ",
-        "u": "ووكظ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وُوكِظَ • (wūkiẓa) (form III) /wuː.ki.ðˤa/\n# third-person masculine singular past passive of وَاكَظَ (wākaẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wūkiẓa", "wākaẓa"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "ووكظت",
-        "u": "ووكظت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ووكظت (form III)\n# وُوكِظْتُ (wūkiẓtu) /wuː.kiðˤ.tu/: first-person singular past passive of وَاكَظَ (wākaẓa)\n# وُوكِظْتَ (wūkiẓta) /wuː.kiðˤ.ta/: second-person masculine singular past passive of وَاكَظَ (wākaẓa)\n# وُوكِظْتِ (wūkiẓti) /wuː.kiðˤ.ti/: second-person feminine singular past passive of وَاكَظَ (wākaẓa)\n# وُوكِظَتْ (wūkiẓat) /wuː.ki.ðˤat/: third-person feminine singular past passive of وَ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wūkiẓtu", "wākaẓa", "wūkiẓta"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "ووكظتم",
-        "u": "ووكظتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وُوكِظْتُمْ • (wūkiẓtum) (form III) /wuː.kiðˤ.tum/\n# second-person masculine plural past passive of وَاكَظَ (wākaẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wūkiẓtum", "wākaẓa"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "ووكظتن",
-        "u": "ووكظتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وُوكِظْتُنَّ • (wūkiẓtunna) (form III) /wuː.kiðˤ.tun.na/\n# second-person feminine plural past passive of وَاكَظَ (wākaẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wūkiẓtunna", "wākaẓa"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "ووكظنا",
-        "u": "ووكظنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وُوكِظْنَا • (wūkiẓnā) (form III) /wuː.kiðˤ.naː/\n# first-person plural past passive of وَاكَظَ (wākaẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wūkiẓnā", "wākaẓa"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "ووكظتا",
-        "u": "ووكظتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وُوكِظَتَا • (wūkiẓatā) (form III) /wuː.ki.ðˤa.taː/\n# third-person feminine dual past passive of وَاكَظَ (wākaẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wūkiẓatā", "wākaẓa"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "أواكظ",
-        "u": "أواكظ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أواكظ (form III)\n# أُوَاكِظُ (ʔuwākiẓu) /ʔu.waː.ki.ðˤu/: first-person singular non-past active indicative of وَاكَظَ (wākaẓa)\n# أُوَاكَظُ (ʔuwākaẓu) /ʔu.waː.ka.ðˤu/: first-person singular non-past passive indicative of وَاكَظَ (wākaẓa)\n# أُوَاكِظَ (ʔuwākiẓa) /ʔu.waː.ki.ðˤa/: first-person singular non-past active subjunctive of وَاكَظَ (wākaẓa)\n# أُوَاكَظَ (ʔuwākaẓa) /ʔu.waː.ka.ðˤa/: first-person s",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔuwākiẓu", "wākaẓa", "ʔuwākaẓu"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "ووكظوا",
-        "u": "ووكظوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وُوكِظُوا • (wūkiẓū) (form III) /wuː.ki.ðˤuː/\n# third-person masculine plural past passive of وَاكَظَ (wākaẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wūkiẓū", "wākaẓa"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "ووكظن",
-        "u": "ووكظن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وُوكِظْنَ • (wūkiẓna) (form III) /wuː.kiðˤ.na/\n# third-person feminine plural past passive of وَاكَظَ (wākaẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wūkiẓna", "wākaẓa"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "تواكظين",
-        "u": "تواكظين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تواكظين (form III)\n# تُوَاكِظِينَ (tuwākiẓīna) /tu.waː.ki.ðˤiː.na/: second-person feminine singular non-past active indicative of وَاكَظَ (wākaẓa)\n# تُوَاكَظِينَ (tuwākaẓīna) /tu.waː.ka.ðˤiː.na/: second-person feminine singular non-past passive indicative of وَاكَظَ (wākaẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuwākiẓīna", "wākaẓa", "tuwākaẓīna"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "يواكظ",
-        "u": "يواكظ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يواكظ (form III)\n# يُوَاكِظُ (yuwākiẓu) /ju.waː.ki.ðˤu/: third-person masculine singular non-past active indicative of وَاكَظَ (wākaẓa)\n# يُوَاكَظُ (yuwākaẓu) /ju.waː.ka.ðˤu/: third-person masculine singular non-past passive indicative of وَاكَظَ (wākaẓa)\n# يُوَاكِظَ (yuwākiẓa) /ju.waː.ki.ðˤa/: third-person masculine singular non-past active subjunctive of وَاكَظَ (wākaẓa)\n# يُوَاكَظَ (yuwākaẓa) /",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuwākiẓu", "wākaẓa", "yuwākaẓu"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "نواكظ",
-        "u": "نواكظ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نواكظ (form III)\n# نُوَاكِظُ (nuwākiẓu) /nu.waː.ki.ðˤu/: first-person plural non-past active indicative of وَاكَظَ (wākaẓa)\n# نُوَاكَظُ (nuwākaẓu) /nu.waː.ka.ðˤu/: first-person plural non-past passive indicative of وَاكَظَ (wākaẓa)\n# نُوَاكِظَ (nuwākiẓa) /nu.waː.ki.ðˤa/: first-person plural non-past active subjunctive of وَاكَظَ (wākaẓa)\n# نُوَاكَظَ (nuwākaẓa) /nu.waː.ka.ðˤa/: first-person plural ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nuwākiẓu", "wākaẓa", "nuwākaẓu"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "تواكظ",
-        "u": "تواكظ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تواكظ (form III)\n# تُوَاكِظُ (tuwākiẓu) /tu.waː.ki.ðˤu/: inflection of وَاكَظَ (wākaẓa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُوَاكَظُ (tuwākaẓu) /tu.waː.ka.ðˤu/: inflection of وَاكَظَ (wākaẓa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuwākiẓu", "wākaẓa", "tuwākaẓu"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "يواكظان",
-        "u": "يواكظان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يواكظان (form III)\n# يُوَاكِظَانِ (yuwākiẓāni) /ju.waː.ki.ðˤaː.ni/: third-person masculine dual non-past active indicative of وَاكَظَ (wākaẓa)\n# يُوَاكَظَانِ (yuwākaẓāni) /ju.waː.ka.ðˤaː.ni/: third-person masculine dual non-past passive indicative of وَاكَظَ (wākaẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuwākiẓāni", "wākaẓa", "yuwākaẓāni"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "تواكظان",
-        "u": "تواكظان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تواكظان (form III)\n# تُوَاكِظَانِ (tuwākiẓāni) /tu.waː.ki.ðˤaː.ni/: inflection of وَاكَظَ (wākaẓa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُوَاكَظَانِ (tuwākaẓāni) /tu.waː.ka.ðˤaː.ni/: inflection of وَاكَظَ (wākaẓa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuwākiẓāni", "wākaẓa", "tuwākaẓāni"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "يواكظون",
-        "u": "يواكظون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يواكظون (form III)\n# يُوَاكِظُونَ (yuwākiẓūna) /ju.waː.ki.ðˤuː.na/: third-person masculine plural non-past active indicative of وَاكَظَ (wākaẓa)\n# يُوَاكَظُونَ (yuwākaẓūna) /ju.waː.ka.ðˤuː.na/: third-person masculine plural non-past passive indicative of وَاكَظَ (wākaẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuwākiẓūna", "wākaẓa", "yuwākaẓūna"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "يواكظن",
-        "u": "يواكظن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يواكظن (form III)\n# يُوَاكِظْنَ (yuwākiẓna) /ju.waː.kiðˤ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of وَاكَظَ (wākaẓa)\n# يُوَاكَظْنَ (yuwākaẓna) /ju.waː.kaðˤ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of وَاكَظَ (wākaẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuwākiẓna", "wākaẓa", "yuwākaẓna"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "تواكظي",
-        "u": "تواكظي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تواكظي (form III)\n# تُوَاكِظِي (tuwākiẓī) /tu.waː.ki.ðˤiː/: second-person feminine singular non-past active subjunctive/jussive of وَاكَظَ (wākaẓa)\n# تُوَاكَظِي (tuwākaẓī) /tu.waː.ka.ðˤiː/: second-person feminine singular non-past passive subjunctive/jussive of وَاكَظَ (wākaẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuwākiẓī", "wākaẓa", "tuwākaẓī"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "تواكظون",
-        "u": "تواكظون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تواكظون (form III)\n# تُوَاكِظُونَ (tuwākiẓūna) /tu.waː.ki.ðˤuː.na/: second-person masculine plural non-past active indicative of وَاكَظَ (wākaẓa)\n# تُوَاكَظُونَ (tuwākaẓūna) /tu.waː.ka.ðˤuː.na/: second-person masculine plural non-past passive indicative of وَاكَظَ (wākaẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuwākiẓūna", "wākaẓa", "tuwākaẓūna"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "تواكظن",
-        "u": "تواكظن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تواكظن (form III)\n# تُوَاكِظْنَ (tuwākiẓna) /tu.waː.kiðˤ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of وَاكَظَ (wākaẓa)\n# تُوَاكَظْنَ (tuwākaẓna) /tu.waː.kaðˤ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of وَاكَظَ (wākaẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuwākiẓna", "wākaẓa", "tuwākaẓna"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "يواكظا",
-        "u": "يواكظا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يواكظا (form III)\n# يُوَاكِظَا (yuwākiẓā) /ju.waː.ki.ðˤaː/: third-person masculine dual non-past active subjunctive/jussive of وَاكَظَ (wākaẓa)\n# يُوَاكَظَا (yuwākaẓā) /ju.waː.ka.ðˤaː/: third-person masculine dual non-past passive subjunctive/jussive of وَاكَظَ (wākaẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuwākiẓā", "wākaẓa", "yuwākaẓā"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "تواكظا",
-        "u": "تواكظا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تواكظا (form III)\n# تُوَاكِظَا (tuwākiẓā) /tu.waː.ki.ðˤaː/: inflection of وَاكَظَ (wākaẓa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُوَاكَظَا (tuwākaẓā) /tu.waː.ka.ðˤaː/: inflection of وَاكَظَ (wākaẓa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subj",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuwākiẓā", "wākaẓa", "tuwākaẓā"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "تواكظوا",
-        "u": "تواكظوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تواكظوا (form III)\n# تُوَاكِظُوا (tuwākiẓū) /tu.waː.ki.ðˤuː/: second-person masculine plural non-past active subjunctive/jussive of وَاكَظَ (wākaẓa)\n# تُوَاكَظُوا (tuwākaẓū) /tu.waː.ka.ðˤuː/: second-person masculine plural non-past passive subjunctive/jussive of وَاكَظَ (wākaẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuwākiẓū", "wākaẓa", "tuwākaẓū"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "واكظي",
-        "u": "واكظي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وَاكِظِي • (wākiẓī) (form III) /waː.ki.ðˤiː/\n# second-person feminine singular imperative of وَاكَظَ (wākaẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["wākiẓī", "wākaẓa"],
-        "k": "واكظ",
-        "yol": "kök"
-      },
-      {
-        "w": "يواكظوا",
-        "u": "يواكظوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يواكظوا (form III)\n# يُوَاكِظُوا (yuwākiẓū) /ju.waː.ki.ðˤuː/: third-person masculine plural non-past active subjunctive/jussive of وَاكَظَ (wākaẓa)\n# يُوَاكَظُوا (yuwākaẓū) /ju.waː.ka.ðˤuː/: third-person masculine plural non-past passive subjunctive/jussive of وَاكَظَ (wākaẓa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuwākiẓū", "wākaẓa", "yuwākaẓū"],
-        "k": "واكظ",
-        "yol": "kök"
-      }
-    ],
-    "tercume": {}
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "كظ",
+  "ses": {
     "harf": "و",
+    "fasil": "كظ",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "واكظت",
+      "tur": "verb",
+      "baslik": "واكظت (form III)\n# وَاكَظْتُ (wākaẓtu) /waː.kaðˤ.tu/: first-person singular past active of وَاكَظَ (wākaẓa)\n# وَاكَظْتَ (wākaẓta) /waː.kaðˤ.ta/: second-person masculine singular past active of وَاكَظَ (wākaẓa)\n# وَاكَظْتِ (wākaẓti) /waː.kaðˤ.ti/: second-person feminine singular past active of وَاكَظَ (wākaẓa)\n# وَاكَظَتْ (wākaẓat) /waː.ka.ðˤat/: third-person feminine singular past active of وَاكَظ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wākaẓtu", "wākaẓa", "wākaẓta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "واكظا",
+      "tur": "verb",
+      "baslik": "واكظا (form III)\n# وَاكَظَا (wākaẓā) /waː.ka.ðˤaː/: third-person masculine dual past active of وَاكَظَ (wākaẓa)\n# وَاكِظَا (wākiẓā) /waː.ki.ðˤaː/: second-person dual imperative of وَاكَظَ (wākaẓa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wākaẓā", "wākaẓa", "wākiẓā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "واكظتم",
+      "tur": "verb",
+      "baslik": "وَاكَظْتُمْ • (wākaẓtum) (form III) /waː.kaðˤ.tum/\n# second-person masculine plural past active of وَاكَظَ (wākaẓa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wākaẓtum", "wākaẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "واكظتما",
+      "tur": "verb",
+      "baslik": "وَاكَظْتُمَا • (wākaẓtumā) (form III) /waː.kaðˤ.tu.maː/\n# second-person dual past active of وَاكَظَ (wākaẓa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wākaẓtumā", "wākaẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "واكظتا",
+      "tur": "verb",
+      "baslik": "وَاكَظَتَا • (wākaẓatā) (form III) /waː.ka.ðˤa.taː/\n# third-person feminine dual past active of وَاكَظَ (wākaẓa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wākaẓatā", "wākaẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "واكظن",
+      "tur": "verb",
+      "baslik": "واكظن (form III)\n# وَاكَظْنَ (wākaẓna) /waː.kaðˤ.na/: third-person feminine plural past active of وَاكَظَ (wākaẓa)\n# وَاكِظْنَ (wākiẓna) /waː.kiðˤ.na/: second-person feminine plural imperative of وَاكَظَ (wākaẓa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wākaẓna", "wākaẓa", "wākiẓna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "واكظنا",
+      "tur": "verb",
+      "baslik": "وَاكَظْنَا • (wākaẓnā) (form III) /waː.kaðˤ.naː/\n# first-person plural past active of وَاكَظَ (wākaẓa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wākaẓnā", "wākaẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "واكظتن",
+      "tur": "verb",
+      "baslik": "وَاكَظْتُنَّ • (wākaẓtunna) (form III) /waː.kaðˤ.tun.na/\n# second-person feminine plural past active of وَاكَظَ (wākaẓa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wākaẓtunna", "wākaẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "واكظوا",
+      "tur": "verb",
+      "baslik": "واكظوا (form III)\n# وَاكَظُوا (wākaẓū) /waː.ka.ðˤuː/: third-person masculine plural past active of وَاكَظَ (wākaẓa)\n# وَاكِظُوا (wākiẓū) /waː.ki.ðˤuː/: second-person masculine plural imperative of وَاكَظَ (wākaẓa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wākaẓū", "wākaẓa", "wākiẓū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ووكظتما",
+      "tur": "verb",
+      "baslik": "وُوكِظْتُمَا • (wūkiẓtumā) (form III) /wuː.kiðˤ.tu.maː/\n# second-person dual past passive of وَاكَظَ (wākaẓa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wūkiẓtumā", "wākaẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ووكظا",
+      "tur": "verb",
+      "baslik": "وُوكِظَا • (wūkiẓā) (form III) /wuː.ki.ðˤaː/\n# third-person masculine dual past passive of وَاكَظَ (wākaẓa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wūkiẓā", "wākaẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ووكظ",
+      "tur": "verb",
+      "baslik": "وُوكِظَ • (wūkiẓa) (form III) /wuː.ki.ðˤa/\n# third-person masculine singular past passive of وَاكَظَ (wākaẓa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wūkiẓa", "wākaẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ووكظت",
+      "tur": "verb",
+      "baslik": "ووكظت (form III)\n# وُوكِظْتُ (wūkiẓtu) /wuː.kiðˤ.tu/: first-person singular past passive of وَاكَظَ (wākaẓa)\n# وُوكِظْتَ (wūkiẓta) /wuː.kiðˤ.ta/: second-person masculine singular past passive of وَاكَظَ (wākaẓa)\n# وُوكِظْتِ (wūkiẓti) /wuː.kiðˤ.ti/: second-person feminine singular past passive of وَاكَظَ (wākaẓa)\n# وُوكِظَتْ (wūkiẓat) /wuː.ki.ðˤat/: third-person feminine singular past passive of وَ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wūkiẓtu", "wākaẓa", "wūkiẓta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ووكظتم",
+      "tur": "verb",
+      "baslik": "وُوكِظْتُمْ • (wūkiẓtum) (form III) /wuː.kiðˤ.tum/\n# second-person masculine plural past passive of وَاكَظَ (wākaẓa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wūkiẓtum", "wākaẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ووكظتن",
+      "tur": "verb",
+      "baslik": "وُوكِظْتُنَّ • (wūkiẓtunna) (form III) /wuː.kiðˤ.tun.na/\n# second-person feminine plural past passive of وَاكَظَ (wākaẓa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wūkiẓtunna", "wākaẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ووكظنا",
+      "tur": "verb",
+      "baslik": "وُوكِظْنَا • (wūkiẓnā) (form III) /wuː.kiðˤ.naː/\n# first-person plural past passive of وَاكَظَ (wākaẓa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wūkiẓnā", "wākaẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ووكظتا",
+      "tur": "verb",
+      "baslik": "وُوكِظَتَا • (wūkiẓatā) (form III) /wuː.ki.ðˤa.taː/\n# third-person feminine dual past passive of وَاكَظَ (wākaẓa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wūkiẓatā", "wākaẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أواكظ",
+      "tur": "verb",
+      "baslik": "أواكظ (form III)\n# أُوَاكِظُ (ʔuwākiẓu) /ʔu.waː.ki.ðˤu/: first-person singular non-past active indicative of وَاكَظَ (wākaẓa)\n# أُوَاكَظُ (ʔuwākaẓu) /ʔu.waː.ka.ðˤu/: first-person singular non-past passive indicative of وَاكَظَ (wākaẓa)\n# أُوَاكِظَ (ʔuwākiẓa) /ʔu.waː.ki.ðˤa/: first-person singular non-past active subjunctive of وَاكَظَ (wākaẓa)\n# أُوَاكَظَ (ʔuwākaẓa) /ʔu.waː.ka.ðˤa/: first-person s",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔuwākiẓu", "wākaẓa", "ʔuwākaẓu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ووكظوا",
+      "tur": "verb",
+      "baslik": "وُوكِظُوا • (wūkiẓū) (form III) /wuː.ki.ðˤuː/\n# third-person masculine plural past passive of وَاكَظَ (wākaẓa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wūkiẓū", "wākaẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ووكظن",
+      "tur": "verb",
+      "baslik": "وُوكِظْنَ • (wūkiẓna) (form III) /wuː.kiðˤ.na/\n# third-person feminine plural past passive of وَاكَظَ (wākaẓa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wūkiẓna", "wākaẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تواكظين",
+      "tur": "verb",
+      "baslik": "تواكظين (form III)\n# تُوَاكِظِينَ (tuwākiẓīna) /tu.waː.ki.ðˤiː.na/: second-person feminine singular non-past active indicative of وَاكَظَ (wākaẓa)\n# تُوَاكَظِينَ (tuwākaẓīna) /tu.waː.ka.ðˤiː.na/: second-person feminine singular non-past passive indicative of وَاكَظَ (wākaẓa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuwākiẓīna", "wākaẓa", "tuwākaẓīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يواكظ",
+      "tur": "verb",
+      "baslik": "يواكظ (form III)\n# يُوَاكِظُ (yuwākiẓu) /ju.waː.ki.ðˤu/: third-person masculine singular non-past active indicative of وَاكَظَ (wākaẓa)\n# يُوَاكَظُ (yuwākaẓu) /ju.waː.ka.ðˤu/: third-person masculine singular non-past passive indicative of وَاكَظَ (wākaẓa)\n# يُوَاكِظَ (yuwākiẓa) /ju.waː.ki.ðˤa/: third-person masculine singular non-past active subjunctive of وَاكَظَ (wākaẓa)\n# يُوَاكَظَ (yuwākaẓa) /",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuwākiẓu", "wākaẓa", "yuwākaẓu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نواكظ",
+      "tur": "verb",
+      "baslik": "نواكظ (form III)\n# نُوَاكِظُ (nuwākiẓu) /nu.waː.ki.ðˤu/: first-person plural non-past active indicative of وَاكَظَ (wākaẓa)\n# نُوَاكَظُ (nuwākaẓu) /nu.waː.ka.ðˤu/: first-person plural non-past passive indicative of وَاكَظَ (wākaẓa)\n# نُوَاكِظَ (nuwākiẓa) /nu.waː.ki.ðˤa/: first-person plural non-past active subjunctive of وَاكَظَ (wākaẓa)\n# نُوَاكَظَ (nuwākaẓa) /nu.waː.ka.ðˤa/: first-person plural ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nuwākiẓu", "wākaẓa", "nuwākaẓu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تواكظ",
+      "tur": "verb",
+      "baslik": "تواكظ (form III)\n# تُوَاكِظُ (tuwākiẓu) /tu.waː.ki.ðˤu/: inflection of وَاكَظَ (wākaẓa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُوَاكَظُ (tuwākaẓu) /tu.waː.ka.ðˤu/: inflection of وَاكَظَ (wākaẓa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuwākiẓu", "wākaẓa", "tuwākaẓu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يواكظان",
+      "tur": "verb",
+      "baslik": "يواكظان (form III)\n# يُوَاكِظَانِ (yuwākiẓāni) /ju.waː.ki.ðˤaː.ni/: third-person masculine dual non-past active indicative of وَاكَظَ (wākaẓa)\n# يُوَاكَظَانِ (yuwākaẓāni) /ju.waː.ka.ðˤaː.ni/: third-person masculine dual non-past passive indicative of وَاكَظَ (wākaẓa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuwākiẓāni", "wākaẓa", "yuwākaẓāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تواكظان",
+      "tur": "verb",
+      "baslik": "تواكظان (form III)\n# تُوَاكِظَانِ (tuwākiẓāni) /tu.waː.ki.ðˤaː.ni/: inflection of وَاكَظَ (wākaẓa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُوَاكَظَانِ (tuwākaẓāni) /tu.waː.ka.ðˤaː.ni/: inflection of وَاكَظَ (wākaẓa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuwākiẓāni", "wākaẓa", "tuwākaẓāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يواكظون",
+      "tur": "verb",
+      "baslik": "يواكظون (form III)\n# يُوَاكِظُونَ (yuwākiẓūna) /ju.waː.ki.ðˤuː.na/: third-person masculine plural non-past active indicative of وَاكَظَ (wākaẓa)\n# يُوَاكَظُونَ (yuwākaẓūna) /ju.waː.ka.ðˤuː.na/: third-person masculine plural non-past passive indicative of وَاكَظَ (wākaẓa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuwākiẓūna", "wākaẓa", "yuwākaẓūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يواكظن",
+      "tur": "verb",
+      "baslik": "يواكظن (form III)\n# يُوَاكِظْنَ (yuwākiẓna) /ju.waː.kiðˤ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of وَاكَظَ (wākaẓa)\n# يُوَاكَظْنَ (yuwākaẓna) /ju.waː.kaðˤ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of وَاكَظَ (wākaẓa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuwākiẓna", "wākaẓa", "yuwākaẓna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تواكظي",
+      "tur": "verb",
+      "baslik": "تواكظي (form III)\n# تُوَاكِظِي (tuwākiẓī) /tu.waː.ki.ðˤiː/: second-person feminine singular non-past active subjunctive/jussive of وَاكَظَ (wākaẓa)\n# تُوَاكَظِي (tuwākaẓī) /tu.waː.ka.ðˤiː/: second-person feminine singular non-past passive subjunctive/jussive of وَاكَظَ (wākaẓa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuwākiẓī", "wākaẓa", "tuwākaẓī"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تواكظون",
+      "tur": "verb",
+      "baslik": "تواكظون (form III)\n# تُوَاكِظُونَ (tuwākiẓūna) /tu.waː.ki.ðˤuː.na/: second-person masculine plural non-past active indicative of وَاكَظَ (wākaẓa)\n# تُوَاكَظُونَ (tuwākaẓūna) /tu.waː.ka.ðˤuː.na/: second-person masculine plural non-past passive indicative of وَاكَظَ (wākaẓa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuwākiẓūna", "wākaẓa", "tuwākaẓūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تواكظن",
+      "tur": "verb",
+      "baslik": "تواكظن (form III)\n# تُوَاكِظْنَ (tuwākiẓna) /tu.waː.kiðˤ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of وَاكَظَ (wākaẓa)\n# تُوَاكَظْنَ (tuwākaẓna) /tu.waː.kaðˤ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of وَاكَظَ (wākaẓa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuwākiẓna", "wākaẓa", "tuwākaẓna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يواكظا",
+      "tur": "verb",
+      "baslik": "يواكظا (form III)\n# يُوَاكِظَا (yuwākiẓā) /ju.waː.ki.ðˤaː/: third-person masculine dual non-past active subjunctive/jussive of وَاكَظَ (wākaẓa)\n# يُوَاكَظَا (yuwākaẓā) /ju.waː.ka.ðˤaː/: third-person masculine dual non-past passive subjunctive/jussive of وَاكَظَ (wākaẓa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuwākiẓā", "wākaẓa", "yuwākaẓā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تواكظا",
+      "tur": "verb",
+      "baslik": "تواكظا (form III)\n# تُوَاكِظَا (tuwākiẓā) /tu.waː.ki.ðˤaː/: inflection of وَاكَظَ (wākaẓa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُوَاكَظَا (tuwākaẓā) /tu.waː.ka.ðˤaː/: inflection of وَاكَظَ (wākaẓa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subj",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuwākiẓā", "wākaẓa", "tuwākaẓā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تواكظوا",
+      "tur": "verb",
+      "baslik": "تواكظوا (form III)\n# تُوَاكِظُوا (tuwākiẓū) /tu.waː.ki.ðˤuː/: second-person masculine plural non-past active subjunctive/jussive of وَاكَظَ (wākaẓa)\n# تُوَاكَظُوا (tuwākaẓū) /tu.waː.ka.ðˤuː/: second-person masculine plural non-past passive subjunctive/jussive of وَاكَظَ (wākaẓa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuwākiẓū", "wākaẓa", "tuwākaẓū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "واكظي",
+      "tur": "verb",
+      "baslik": "وَاكِظِي • (wākiẓī) (form III) /waː.ki.ðˤiː/\n# second-person feminine singular imperative of وَاكَظَ (wākaẓa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["wākiẓī", "wākaẓa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يواكظوا",
+      "tur": "verb",
+      "baslik": "يواكظوا (form III)\n# يُوَاكِظُوا (yuwākiẓū) /ju.waː.ki.ðˤuː/: third-person masculine plural non-past active subjunctive/jussive of وَاكَظَ (wākaẓa)\n# يُوَاكَظُوا (yuwākaẓū) /ju.waː.ka.ðˤuː/: third-person masculine plural non-past passive subjunctive/jussive of وَاكَظَ (wākaẓa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuwākiẓū", "wākaẓa", "yuwākaẓū"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "واكظ", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

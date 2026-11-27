@@ -1,60 +1,41 @@
 {
   "kok": "طحطح",
+  "tur": "isim",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["fiil-yok"],
+  "lugat_fiil": false,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "طحطح", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الطاء والحاء",
-      "baslik": "طحح - طحطح",
-      "mihveri": "انبساط الجرم شديدًا عن ضغط شديد يسحقه أو يكاد (1):",
-      "sesler": "تعبر الطاء عن ضغط وتمدد، والحاء عن عرض بجفاف أو قوة، والفصل منهما يعبر عن ضغط جرم الشيء حتى ينبسط كما في الطح. وفي (طحو طحى) تعبر =",
-      "tam_metin": "\"طَحَّه (رد) بسطه، وطحّه: وضع عَقِبَه عليه ثُمّ سَحَجَه \".\n° المعنى المحوري\nانبساط الجرم شديدًا عن ضغط شديد يسحقه أو يكاد (1):\n__________\n(1) (صوتيًّا): تعبر الطاء عن ضغط وتمدد، والحاء عن عرض بجفاف أو قوة، والفصل منهما يعبر عن ضغط جرم الشيء حتى ينبسط كما في الطح. وفي (طحو طحى) تعبر =\n(3/1313)\nكالطح بتفسيريه. ومنه \"طحطح الشيءَ فتطحطح: فرّقه وكسره إهلاكًا \".",
-      "fasil_ozeti": "° معنى الفصل المعجمي (طح) : هو الانبساط عن ضغط كطَحّ الشيء بسطه بسحجه بالعقب -في (طحح)، وكالطحا المنبسط من الأرض -في (طحو طحى). __________ = الواو والياء عن زيادةٍ اشتمالًا أو اتصالًا، والتركيبان يعبران عن زيادة الانبساط كما في الطحا: المنبسط من الأرض."
-    }
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "طح",
+  "ses": {
     "harf": "ط",
+    "fasil": "طح",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+  "cebel": {
     "fasil": "الطاء والحاء",
+    "baslik": "طحح - طحطح",
     "mihveri": "انبساط الجرم شديدًا عن ضغط شديد يسحقه أو يكاد (1):",
     "sesler": "تعبر الطاء عن ضغط وتمدد، والحاء عن عرض بجفاف أو قوة، والفصل منهما يعبر عن ضغط جرم الشيء حتى ينبسط كما في الطح. وفي (طحو طحى) تعبر =",
-    "fasil_ozeti": "° معنى الفصل المعجمي (طح) : هو الانبساط عن ضغط كطَحّ الشيء بسطه بسحجه بالعقب -في (طحح)، وكالطحا المنبسط من الأرض -في (طحو طحى). __________ = الواو والياء عن زيادةٍ اشتمالًا أو اتصالًا، والتركيبان يعبران عن زيادة الانبساط كما في الطحا: المنبسط من الأرض.",
-    "tam_metin": "\"طَحَّه (رد) بسطه، وطحّه: وضع عَقِبَه عليه ثُمّ سَحَجَه \".\n° المعنى المحوري\nانبساط الجرم شديدًا عن ضغط شديد يسحقه أو يكاد (1):\n__________\n(1) (صوتيًّا): تعبر الطاء عن ضغط وتمدد، والحاء عن عرض بجفاف أو قوة، والفصل منهما يعبر عن ضغط جرم الشيء حتى ينبسط كما في الطح. وفي (طحو طحى) تعبر =\n(3/1313)\nكالطح بتفسيريه. ومنه \"طحطح الشيءَ فتطحطح: فرّقه وكسره إهلاكًا \"."
+    "tam_metin": "\"طَحَّه (رد) بسطه، وطحّه: وضع عَقِبَه عليه ثُمّ سَحَجَه \".\n° المعنى المحوري\nانبساط الجرم شديدًا عن ضغط شديد يسحقه أو يكاد (1):\n__________\n(1) (صوتيًّا): تعبر الطاء عن ضغط وتمدد، والحاء عن عرض بجفاف أو قوة، والفصل منهما يعبر عن ضغط جرم الشيء حتى ينبسط كما في الطح. وفي (طحو طحى) تعبر =\n(3/1313)\nكالطح بتفسيريه. ومنه \"طحطح الشيءَ فتطحطح: فرّقه وكسره إهلاكًا \".",
+    "fasil_ozeti": "° معنى الفصل المعجمي (طح) : هو الانبساط عن ضغط كطَحّ الشيء بسطه بسحجه بالعقب -في (طحح)، وكالطحا المنبسط من الأرض -في (طحو طحى). __________ = الواو والياء عن زيادةٍ اشتمالًا أو اتصالًا، والتركيبان يعبران عن زيادة الانبساط كما في الطحا: المنبسط من الأرض."
   },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "طحطح", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "ust": {
       "kume": 9,
       "merkez_kok": "سفك",
@@ -74,6 +55,10 @@
       "boy": 11
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,365 +1,287 @@
 {
   "kok": "ءخبث",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءخبث", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أخبثت",
-        "u": "أخبثت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أخبثت (form IV)\n# أَخْبَثْتُ (ʔaḵbaṯtu) /ʔax.baθ.tu/: first-person singular past active of أَخْبَثَ (ʔaḵbaṯa)\n# أَخْبَثْتَ (ʔaḵbaṯta) /ʔax.baθ.ta/: second-person masculine singular past active of أَخْبَثَ (ʔaḵbaṯa)\n# أَخْبَثْتِ (ʔaḵbaṯti) /ʔax.baθ.ti/: second-person feminine singular past active of أَخْبَثَ (ʔaḵbaṯa)\n# أَخْبَثَتْ (ʔaḵbaṯat) /ʔax.ba.θat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵbaṯtu", "ʔaḵbaṯa", "ʔaḵbaṯta"],
-        "k": "أخبث",
-        "yol": "kök"
-      },
-      {
-        "w": "أخبثتما",
-        "u": "أخبثتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أخبثتما (form IV)\n# أَخْبَثْتُمَا (ʔaḵbaṯtumā) /ʔax.baθ.tu.maː/: second-person dual past active of أَخْبَثَ (ʔaḵbaṯa)\n# أُخْبِثْتُمَا (ʔuḵbiṯtumā) /ʔux.biθ.tu.maː/: second-person dual past passive of أَخْبَثَ (ʔaḵbaṯa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵbaṯtumā", "ʔaḵbaṯa", "ʔuḵbiṯtumā"],
-        "k": "أخبث",
-        "yol": "kök"
-      },
-      {
-        "w": "أخبثتا",
-        "u": "أخبثتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أخبثتا (form IV)\n# أَخْبَثَتَا (ʔaḵbaṯatā) /ʔax.ba.θa.taː/: third-person feminine dual past active of أَخْبَثَ (ʔaḵbaṯa)\n# أُخْبِثَتَا (ʔuḵbiṯatā) /ʔux.bi.θa.taː/: third-person feminine dual past passive of أَخْبَثَ (ʔaḵbaṯa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵbaṯatā", "ʔaḵbaṯa", "ʔuḵbiṯatā"],
-        "k": "أخبث",
-        "yol": "kök"
-      },
-      {
-        "w": "أخبثتم",
-        "u": "أخبثتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أخبثتم (form IV)\n# أَخْبَثْتُمْ (ʔaḵbaṯtum) /ʔax.baθ.tum/: second-person masculine plural past active of أَخْبَثَ (ʔaḵbaṯa)\n# أُخْبِثْتُمْ (ʔuḵbiṯtum) /ʔux.biθ.tum/: second-person masculine plural past passive of أَخْبَثَ (ʔaḵbaṯa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵbaṯtum", "ʔaḵbaṯa", "ʔuḵbiṯtum"],
-        "k": "أخبث",
-        "yol": "kök"
-      },
-      {
-        "w": "أخبثا",
-        "u": "أخبثا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أخبثا (form IV)\n# أَخْبَثَا (ʔaḵbaṯā) /ʔax.ba.θaː/: third-person masculine dual past active of أَخْبَثَ (ʔaḵbaṯa)\n# أُخْبِثَا (ʔuḵbiṯā) /ʔux.bi.θaː/: third-person masculine dual past passive of أَخْبَثَ (ʔaḵbaṯa)\n# أَخْبِثَا (ʔaḵbiṯā) /ʔax.bi.θaː/: second-person dual imperative of أَخْبَثَ (ʔaḵbaṯa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵbaṯā", "ʔaḵbaṯa", "ʔuḵbiṯā"],
-        "k": "أخبث",
-        "yol": "kök"
-      },
-      {
-        "w": "أخبثتن",
-        "u": "أخبثتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أخبثتن (form IV)\n# أَخْبَثْتُنَّ (ʔaḵbaṯtunna) /ʔax.baθ.tun.na/: second-person feminine plural past active of أَخْبَثَ (ʔaḵbaṯa)\n# أُخْبِثْتُنَّ (ʔuḵbiṯtunna) /ʔux.biθ.tun.na/: second-person feminine plural past passive of أَخْبَثَ (ʔaḵbaṯa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵbaṯtunna", "ʔaḵbaṯa", "ʔuḵbiṯtunna"],
-        "k": "أخبث",
-        "yol": "kök"
-      },
-      {
-        "w": "أخبثوا",
-        "u": "أخبثوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أخبثوا (form IV)\n# أَخْبَثُوا (ʔaḵbaṯū) /ʔax.ba.θuː/: third-person masculine plural past active of أَخْبَثَ (ʔaḵbaṯa)\n# أُخْبِثُوا (ʔuḵbiṯū) /ʔux.bi.θuː/: third-person masculine plural past passive of أَخْبَثَ (ʔaḵbaṯa)\n# أَخْبِثُوا (ʔaḵbiṯū) /ʔax.bi.θuː/: second-person masculine plural imperative of أَخْبَثَ (ʔaḵbaṯa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵbaṯū", "ʔaḵbaṯa", "ʔuḵbiṯū"],
-        "k": "أخبث",
-        "yol": "kök"
-      },
-      {
-        "w": "تخبثين",
-        "u": "تخبثين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تخبثين (form IV)\n# تُخْبِثِينَ (tuḵbiṯīna) /tux.bi.θiː.na/: second-person feminine singular non-past active indicative of أَخْبَثَ (ʔaḵbaṯa)\n# تُخْبَثِينَ (tuḵbaṯīna) /tux.ba.θiː.na/: second-person feminine singular non-past passive indicative of أَخْبَثَ (ʔaḵbaṯa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵbiṯīna", "ʔaḵbaṯa", "tuḵbaṯīna"],
-        "k": "أخبث",
-        "yol": "kök"
-      },
-      {
-        "w": "أخبثنا",
-        "u": "أخبثنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أخبثنا (form IV)\n# أَخْبَثْنَا (ʔaḵbaṯnā) /ʔax.baθ.naː/: first-person plural past active of أَخْبَثَ (ʔaḵbaṯa)\n# أُخْبِثْنَا (ʔuḵbiṯnā) /ʔux.biθ.naː/: first-person plural past passive of أَخْبَثَ (ʔaḵbaṯa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵbaṯnā", "ʔaḵbaṯa", "ʔuḵbiṯnā"],
-        "k": "أخبث",
-        "yol": "kök"
-      },
-      {
-        "w": "أخبثن",
-        "u": "أخبثن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أخبثن (form IV)\n# أَخْبَثْنَ (ʔaḵbaṯna) /ʔax.baθ.na/: third-person feminine plural past active of أَخْبَثَ (ʔaḵbaṯa)\n# أُخْبِثْنَ (ʔuḵbiṯna) /ʔux.biθ.na/: third-person feminine plural past passive of أَخْبَثَ (ʔaḵbaṯa)\n# أَخْبِثْنَ (ʔaḵbiṯna) /ʔax.biθ.na/: second-person feminine plural imperative of أَخْبَثَ (ʔaḵbaṯa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵbaṯna", "ʔaḵbaṯa", "ʔuḵbiṯna"],
-        "k": "أخبث",
-        "yol": "kök"
-      },
-      {
-        "w": "تخبث",
-        "u": "تخبث",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تخبث (form IV)\n# تُخْبِثُ (tuḵbiṯu) /tux.bi.θu/: inflection of أَخْبَثَ (ʔaḵbaṯa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُخْبَثُ (tuḵbaṯu) /tux.ba.θu/: inflection of أَخْبَثَ (ʔaḵbaṯa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵbiṯu", "ʔaḵbaṯa", "tuḵbaṯu"],
-        "k": "أخبث",
-        "yol": "kök"
-      },
-      {
-        "w": "تخبثان",
-        "u": "تخبثان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تخبثان (form IV)\n# تُخْبِثَانِ (tuḵbiṯāni) /tux.bi.θaː.ni/: inflection of أَخْبَثَ (ʔaḵbaṯa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُخْبَثَانِ (tuḵbaṯāni) /tux.ba.θaː.ni/: inflection of أَخْبَثَ (ʔaḵbaṯa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵbiṯāni", "ʔaḵbaṯa", "tuḵbaṯāni"],
-        "k": "أخبث",
-        "yol": "kök"
-      },
-      {
-        "w": "يخبث",
-        "u": "يخبث",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يخبث (form IV)\n# يُخْبِثُ (yuḵbiṯu) /jux.bi.θu/: third-person masculine singular non-past active indicative of أَخْبَثَ (ʔaḵbaṯa)\n# يُخْبَثُ (yuḵbaṯu) /jux.ba.θu/: third-person masculine singular non-past passive indicative of أَخْبَثَ (ʔaḵbaṯa)\n# يُخْبِثَ (yuḵbiṯa) /jux.bi.θa/: third-person masculine singular non-past active subjunctive of أَخْبَثَ (ʔaḵbaṯa)\n# يُخْبَثَ (yuḵbaṯa) /jux.ba.θa/: thir",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḵbiṯu", "ʔaḵbaṯa", "yuḵbaṯu"],
-        "k": "أخبث",
-        "yol": "kök"
-      },
-      {
-        "w": "يخبثان",
-        "u": "يخبثان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يخبثان (form IV)\n# يُخْبِثَانِ (yuḵbiṯāni) /jux.bi.θaː.ni/: third-person masculine dual non-past active indicative of أَخْبَثَ (ʔaḵbaṯa)\n# يُخْبَثَانِ (yuḵbaṯāni) /jux.ba.θaː.ni/: third-person masculine dual non-past passive indicative of أَخْبَثَ (ʔaḵbaṯa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḵbiṯāni", "ʔaḵbaṯa", "yuḵbaṯāni"],
-        "k": "أخبث",
-        "yol": "kök"
-      },
-      {
-        "w": "تخبثون",
-        "u": "تخبثون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تخبثون (form IV)\n# تُخْبِثُونَ (tuḵbiṯūna) /tux.bi.θuː.na/: second-person masculine plural non-past active indicative of أَخْبَثَ (ʔaḵbaṯa)\n# تُخْبَثُونَ (tuḵbaṯūna) /tux.ba.θuː.na/: second-person masculine plural non-past passive indicative of أَخْبَثَ (ʔaḵbaṯa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵbiṯūna", "ʔaḵbaṯa", "tuḵbaṯūna"],
-        "k": "أخبث",
-        "yol": "kök"
-      },
-      {
-        "w": "نخبث",
-        "u": "نخبث",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نخبث (form IV)\n# نُخْبِثُ (nuḵbiṯu) /nux.bi.θu/: first-person plural non-past active indicative of أَخْبَثَ (ʔaḵbaṯa)\n# نُخْبَثُ (nuḵbaṯu) /nux.ba.θu/: first-person plural non-past passive indicative of أَخْبَثَ (ʔaḵbaṯa)\n# نُخْبِثَ (nuḵbiṯa) /nux.bi.θa/: first-person plural non-past active subjunctive of أَخْبَثَ (ʔaḵbaṯa)\n# نُخْبَثَ (nuḵbaṯa) /nux.ba.θa/: first-person plural non-past passive sub",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuḵbiṯu", "ʔaḵbaṯa", "nuḵbaṯu"],
-        "k": "أخبث",
-        "yol": "kök"
-      },
-      {
-        "w": "تخبثن",
-        "u": "تخبثن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تخبثن (form IV)\n# تُخْبِثْنَ (tuḵbiṯna) /tux.biθ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَخْبَثَ (ʔaḵbaṯa)\n# تُخْبَثْنَ (tuḵbaṯna) /tux.baθ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَخْبَثَ (ʔaḵbaṯa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵbiṯna", "ʔaḵbaṯa", "tuḵbaṯna"],
-        "k": "أخبث",
-        "yol": "kök"
-      },
-      {
-        "w": "يخبثون",
-        "u": "يخبثون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يخبثون (form IV)\n# يُخْبِثُونَ (yuḵbiṯūna) /jux.bi.θuː.na/: third-person masculine plural non-past active indicative of أَخْبَثَ (ʔaḵbaṯa)\n# يُخْبَثُونَ (yuḵbaṯūna) /jux.ba.θuː.na/: third-person masculine plural non-past passive indicative of أَخْبَثَ (ʔaḵbaṯa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḵbiṯūna", "ʔaḵbaṯa", "yuḵbaṯūna"],
-        "k": "أخبث",
-        "yol": "kök"
-      },
-      {
-        "w": "تخبثي",
-        "u": "تخبثي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تخبثي (form IV)\n# تُخْبِثِي (tuḵbiṯī) /tux.bi.θiː/: second-person feminine singular non-past active subjunctive/jussive of أَخْبَثَ (ʔaḵbaṯa)\n# تُخْبَثِي (tuḵbaṯī) /tux.ba.θiː/: second-person feminine singular non-past passive subjunctive/jussive of أَخْبَثَ (ʔaḵbaṯa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵbiṯī", "ʔaḵbaṯa", "tuḵbaṯī"],
-        "k": "أخبث",
-        "yol": "kök"
-      },
-      {
-        "w": "يخبثن",
-        "u": "يخبثن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يخبثن (form IV)\n# يُخْبِثْنَ (yuḵbiṯna) /jux.biθ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَخْبَثَ (ʔaḵbaṯa)\n# يُخْبَثْنَ (yuḵbaṯna) /jux.baθ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَخْبَثَ (ʔaḵbaṯa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḵbiṯna", "ʔaḵbaṯa", "yuḵbaṯna"],
-        "k": "أخبث",
-        "yol": "kök"
-      },
-      {
-        "w": "تخبثا",
-        "u": "تخبثا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تخبثا (form IV)\n# تُخْبِثَا (tuḵbiṯā) /tux.bi.θaː/: inflection of أَخْبَثَ (ʔaḵbaṯa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُخْبَثَا (tuḵbaṯā) /tux.ba.θaː/: inflection of أَخْبَثَ (ʔaḵbaṯa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/ju",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵbiṯā", "ʔaḵbaṯa", "tuḵbaṯā"],
-        "k": "أخبث",
-        "yol": "kök"
-      },
-      {
-        "w": "تخبثوا",
-        "u": "تخبثوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تخبثوا (form IV)\n# تُخْبِثُوا (tuḵbiṯū) /tux.bi.θuː/: second-person masculine plural non-past active subjunctive/jussive of أَخْبَثَ (ʔaḵbaṯa)\n# تُخْبَثُوا (tuḵbaṯū) /tux.ba.θuː/: second-person masculine plural non-past passive subjunctive/jussive of أَخْبَثَ (ʔaḵbaṯa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵbiṯū", "ʔaḵbaṯa", "tuḵbaṯū"],
-        "k": "أخبث",
-        "yol": "kök"
-      },
-      {
-        "w": "يخبثا",
-        "u": "يخبثا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يخبثا (form IV)\n# يُخْبِثَا (yuḵbiṯā) /jux.bi.θaː/: third-person masculine dual non-past active subjunctive/jussive of أَخْبَثَ (ʔaḵbaṯa)\n# يُخْبَثَا (yuḵbaṯā) /jux.ba.θaː/: third-person masculine dual non-past passive subjunctive/jussive of أَخْبَثَ (ʔaḵbaṯa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḵbiṯā", "ʔaḵbaṯa", "yuḵbaṯā"],
-        "k": "أخبث",
-        "yol": "kök"
-      },
-      {
-        "w": "أخبثي",
-        "u": "أخبثي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَخْبِثِي • (ʔaḵbiṯī) (form IV) /ʔax.bi.θiː/\n# second-person feminine singular imperative of أَخْبَثَ (ʔaḵbaṯa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵbiṯī", "ʔaḵbaṯa"],
-        "k": "أخبث",
-        "yol": "kök"
-      },
-      {
-        "w": "يخبثوا",
-        "u": "يخبثوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يخبثوا (form IV)\n# يُخْبِثُوا (yuḵbiṯū) /jux.bi.θuː/: third-person masculine plural non-past active subjunctive/jussive of أَخْبَثَ (ʔaḵbaṯa)\n# يُخْبَثُوا (yuḵbaṯū) /jux.ba.θuː/: third-person masculine plural non-past passive subjunctive/jussive of أَخْبَثَ (ʔaḵbaṯa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḵbiṯū", "ʔaḵbaṯa", "yuḵbaṯū"],
-        "k": "أخبث",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "خب",
+  "ses": {
     "harf": "ء",
+    "fasil": "خب",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "أخبثت",
+      "tur": "verb",
+      "baslik": "أخبثت (form IV)\n# أَخْبَثْتُ (ʔaḵbaṯtu) /ʔax.baθ.tu/: first-person singular past active of أَخْبَثَ (ʔaḵbaṯa)\n# أَخْبَثْتَ (ʔaḵbaṯta) /ʔax.baθ.ta/: second-person masculine singular past active of أَخْبَثَ (ʔaḵbaṯa)\n# أَخْبَثْتِ (ʔaḵbaṯti) /ʔax.baθ.ti/: second-person feminine singular past active of أَخْبَثَ (ʔaḵbaṯa)\n# أَخْبَثَتْ (ʔaḵbaṯat) /ʔax.ba.θat/: third-person feminine singular past active ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵbaṯtu", "ʔaḵbaṯa", "ʔaḵbaṯta"],
+      "kok_yazilis": "أخبث",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخبثتما",
+      "tur": "verb",
+      "baslik": "أخبثتما (form IV)\n# أَخْبَثْتُمَا (ʔaḵbaṯtumā) /ʔax.baθ.tu.maː/: second-person dual past active of أَخْبَثَ (ʔaḵbaṯa)\n# أُخْبِثْتُمَا (ʔuḵbiṯtumā) /ʔux.biθ.tu.maː/: second-person dual past passive of أَخْبَثَ (ʔaḵbaṯa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵbaṯtumā", "ʔaḵbaṯa", "ʔuḵbiṯtumā"],
+      "kok_yazilis": "أخبث",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخبثتا",
+      "tur": "verb",
+      "baslik": "أخبثتا (form IV)\n# أَخْبَثَتَا (ʔaḵbaṯatā) /ʔax.ba.θa.taː/: third-person feminine dual past active of أَخْبَثَ (ʔaḵbaṯa)\n# أُخْبِثَتَا (ʔuḵbiṯatā) /ʔux.bi.θa.taː/: third-person feminine dual past passive of أَخْبَثَ (ʔaḵbaṯa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵbaṯatā", "ʔaḵbaṯa", "ʔuḵbiṯatā"],
+      "kok_yazilis": "أخبث",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخبثتم",
+      "tur": "verb",
+      "baslik": "أخبثتم (form IV)\n# أَخْبَثْتُمْ (ʔaḵbaṯtum) /ʔax.baθ.tum/: second-person masculine plural past active of أَخْبَثَ (ʔaḵbaṯa)\n# أُخْبِثْتُمْ (ʔuḵbiṯtum) /ʔux.biθ.tum/: second-person masculine plural past passive of أَخْبَثَ (ʔaḵbaṯa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵbaṯtum", "ʔaḵbaṯa", "ʔuḵbiṯtum"],
+      "kok_yazilis": "أخبث",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخبثا",
+      "tur": "verb",
+      "baslik": "أخبثا (form IV)\n# أَخْبَثَا (ʔaḵbaṯā) /ʔax.ba.θaː/: third-person masculine dual past active of أَخْبَثَ (ʔaḵbaṯa)\n# أُخْبِثَا (ʔuḵbiṯā) /ʔux.bi.θaː/: third-person masculine dual past passive of أَخْبَثَ (ʔaḵbaṯa)\n# أَخْبِثَا (ʔaḵbiṯā) /ʔax.bi.θaː/: second-person dual imperative of أَخْبَثَ (ʔaḵbaṯa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵbaṯā", "ʔaḵbaṯa", "ʔuḵbiṯā"],
+      "kok_yazilis": "أخبث",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخبثتن",
+      "tur": "verb",
+      "baslik": "أخبثتن (form IV)\n# أَخْبَثْتُنَّ (ʔaḵbaṯtunna) /ʔax.baθ.tun.na/: second-person feminine plural past active of أَخْبَثَ (ʔaḵbaṯa)\n# أُخْبِثْتُنَّ (ʔuḵbiṯtunna) /ʔux.biθ.tun.na/: second-person feminine plural past passive of أَخْبَثَ (ʔaḵbaṯa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵbaṯtunna", "ʔaḵbaṯa", "ʔuḵbiṯtunna"],
+      "kok_yazilis": "أخبث",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخبثوا",
+      "tur": "verb",
+      "baslik": "أخبثوا (form IV)\n# أَخْبَثُوا (ʔaḵbaṯū) /ʔax.ba.θuː/: third-person masculine plural past active of أَخْبَثَ (ʔaḵbaṯa)\n# أُخْبِثُوا (ʔuḵbiṯū) /ʔux.bi.θuː/: third-person masculine plural past passive of أَخْبَثَ (ʔaḵbaṯa)\n# أَخْبِثُوا (ʔaḵbiṯū) /ʔax.bi.θuː/: second-person masculine plural imperative of أَخْبَثَ (ʔaḵbaṯa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵbaṯū", "ʔaḵbaṯa", "ʔuḵbiṯū"],
+      "kok_yazilis": "أخبث",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخبثين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تخبثين (form IV)\n# تُخْبِثِينَ (tuḵbiṯīna) /tux.bi.θiː.na/: second-person feminine singular non-past active indicative of أَخْبَثَ (ʔaḵbaṯa)\n# تُخْبَثِينَ (tuḵbaṯīna) /tux.ba.θiː.na/: second-person feminine singular non-past passive indicative of أَخْبَثَ (ʔaḵbaṯa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵbiṯīna", "ʔaḵbaṯa", "tuḵbaṯīna"],
+      "kok_yazilis": "أخبث",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخبثنا",
+      "tur": "verb",
+      "baslik": "أخبثنا (form IV)\n# أَخْبَثْنَا (ʔaḵbaṯnā) /ʔax.baθ.naː/: first-person plural past active of أَخْبَثَ (ʔaḵbaṯa)\n# أُخْبِثْنَا (ʔuḵbiṯnā) /ʔux.biθ.naː/: first-person plural past passive of أَخْبَثَ (ʔaḵbaṯa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵbaṯnā", "ʔaḵbaṯa", "ʔuḵbiṯnā"],
+      "kok_yazilis": "أخبث",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخبثن",
+      "tur": "verb",
+      "baslik": "أخبثن (form IV)\n# أَخْبَثْنَ (ʔaḵbaṯna) /ʔax.baθ.na/: third-person feminine plural past active of أَخْبَثَ (ʔaḵbaṯa)\n# أُخْبِثْنَ (ʔuḵbiṯna) /ʔux.biθ.na/: third-person feminine plural past passive of أَخْبَثَ (ʔaḵbaṯa)\n# أَخْبِثْنَ (ʔaḵbiṯna) /ʔax.biθ.na/: second-person feminine plural imperative of أَخْبَثَ (ʔaḵbaṯa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵbaṯna", "ʔaḵbaṯa", "ʔuḵbiṯna"],
+      "kok_yazilis": "أخبث",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخبث",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تخبث (form IV)\n# تُخْبِثُ (tuḵbiṯu) /tux.bi.θu/: inflection of أَخْبَثَ (ʔaḵbaṯa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُخْبَثُ (tuḵbaṯu) /tux.ba.θu/: inflection of أَخْبَثَ (ʔaḵbaṯa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵbiṯu", "ʔaḵbaṯa", "tuḵbaṯu"],
+      "kok_yazilis": "أخبث",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخبثان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تخبثان (form IV)\n# تُخْبِثَانِ (tuḵbiṯāni) /tux.bi.θaː.ni/: inflection of أَخْبَثَ (ʔaḵbaṯa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُخْبَثَانِ (tuḵbaṯāni) /tux.ba.θaː.ni/: inflection of أَخْبَثَ (ʔaḵbaṯa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵbiṯāni", "ʔaḵbaṯa", "tuḵbaṯāni"],
+      "kok_yazilis": "أخبث",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يخبث",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يخبث (form IV)\n# يُخْبِثُ (yuḵbiṯu) /jux.bi.θu/: third-person masculine singular non-past active indicative of أَخْبَثَ (ʔaḵbaṯa)\n# يُخْبَثُ (yuḵbaṯu) /jux.ba.θu/: third-person masculine singular non-past passive indicative of أَخْبَثَ (ʔaḵbaṯa)\n# يُخْبِثَ (yuḵbiṯa) /jux.bi.θa/: third-person masculine singular non-past active subjunctive of أَخْبَثَ (ʔaḵbaṯa)\n# يُخْبَثَ (yuḵbaṯa) /jux.ba.θa/: thir",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḵbiṯu", "ʔaḵbaṯa", "yuḵbaṯu"],
+      "kok_yazilis": "أخبث",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يخبثان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يخبثان (form IV)\n# يُخْبِثَانِ (yuḵbiṯāni) /jux.bi.θaː.ni/: third-person masculine dual non-past active indicative of أَخْبَثَ (ʔaḵbaṯa)\n# يُخْبَثَانِ (yuḵbaṯāni) /jux.ba.θaː.ni/: third-person masculine dual non-past passive indicative of أَخْبَثَ (ʔaḵbaṯa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḵbiṯāni", "ʔaḵbaṯa", "yuḵbaṯāni"],
+      "kok_yazilis": "أخبث",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخبثون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تخبثون (form IV)\n# تُخْبِثُونَ (tuḵbiṯūna) /tux.bi.θuː.na/: second-person masculine plural non-past active indicative of أَخْبَثَ (ʔaḵbaṯa)\n# تُخْبَثُونَ (tuḵbaṯūna) /tux.ba.θuː.na/: second-person masculine plural non-past passive indicative of أَخْبَثَ (ʔaḵbaṯa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵbiṯūna", "ʔaḵbaṯa", "tuḵbaṯūna"],
+      "kok_yazilis": "أخبث",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نخبث",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نخبث (form IV)\n# نُخْبِثُ (nuḵbiṯu) /nux.bi.θu/: first-person plural non-past active indicative of أَخْبَثَ (ʔaḵbaṯa)\n# نُخْبَثُ (nuḵbaṯu) /nux.ba.θu/: first-person plural non-past passive indicative of أَخْبَثَ (ʔaḵbaṯa)\n# نُخْبِثَ (nuḵbiṯa) /nux.bi.θa/: first-person plural non-past active subjunctive of أَخْبَثَ (ʔaḵbaṯa)\n# نُخْبَثَ (nuḵbaṯa) /nux.ba.θa/: first-person plural non-past passive sub",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuḵbiṯu", "ʔaḵbaṯa", "nuḵbaṯu"],
+      "kok_yazilis": "أخبث",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخبثن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تخبثن (form IV)\n# تُخْبِثْنَ (tuḵbiṯna) /tux.biθ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَخْبَثَ (ʔaḵbaṯa)\n# تُخْبَثْنَ (tuḵbaṯna) /tux.baθ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَخْبَثَ (ʔaḵbaṯa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵbiṯna", "ʔaḵbaṯa", "tuḵbaṯna"],
+      "kok_yazilis": "أخبث",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يخبثون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يخبثون (form IV)\n# يُخْبِثُونَ (yuḵbiṯūna) /jux.bi.θuː.na/: third-person masculine plural non-past active indicative of أَخْبَثَ (ʔaḵbaṯa)\n# يُخْبَثُونَ (yuḵbaṯūna) /jux.ba.θuː.na/: third-person masculine plural non-past passive indicative of أَخْبَثَ (ʔaḵbaṯa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḵbiṯūna", "ʔaḵbaṯa", "yuḵbaṯūna"],
+      "kok_yazilis": "أخبث",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخبثي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تخبثي (form IV)\n# تُخْبِثِي (tuḵbiṯī) /tux.bi.θiː/: second-person feminine singular non-past active subjunctive/jussive of أَخْبَثَ (ʔaḵbaṯa)\n# تُخْبَثِي (tuḵbaṯī) /tux.ba.θiː/: second-person feminine singular non-past passive subjunctive/jussive of أَخْبَثَ (ʔaḵbaṯa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵbiṯī", "ʔaḵbaṯa", "tuḵbaṯī"],
+      "kok_yazilis": "أخبث",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يخبثن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يخبثن (form IV)\n# يُخْبِثْنَ (yuḵbiṯna) /jux.biθ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَخْبَثَ (ʔaḵbaṯa)\n# يُخْبَثْنَ (yuḵbaṯna) /jux.baθ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَخْبَثَ (ʔaḵbaṯa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḵbiṯna", "ʔaḵbaṯa", "yuḵbaṯna"],
+      "kok_yazilis": "أخبث",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخبثا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تخبثا (form IV)\n# تُخْبِثَا (tuḵbiṯā) /tux.bi.θaː/: inflection of أَخْبَثَ (ʔaḵbaṯa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُخْبَثَا (tuḵbaṯā) /tux.ba.θaː/: inflection of أَخْبَثَ (ʔaḵbaṯa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/ju",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵbiṯā", "ʔaḵbaṯa", "tuḵbaṯā"],
+      "kok_yazilis": "أخبث",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخبثوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تخبثوا (form IV)\n# تُخْبِثُوا (tuḵbiṯū) /tux.bi.θuː/: second-person masculine plural non-past active subjunctive/jussive of أَخْبَثَ (ʔaḵbaṯa)\n# تُخْبَثُوا (tuḵbaṯū) /tux.ba.θuː/: second-person masculine plural non-past passive subjunctive/jussive of أَخْبَثَ (ʔaḵbaṯa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵbiṯū", "ʔaḵbaṯa", "tuḵbaṯū"],
+      "kok_yazilis": "أخبث",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يخبثا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يخبثا (form IV)\n# يُخْبِثَا (yuḵbiṯā) /jux.bi.θaː/: third-person masculine dual non-past active subjunctive/jussive of أَخْبَثَ (ʔaḵbaṯa)\n# يُخْبَثَا (yuḵbaṯā) /jux.ba.θaː/: third-person masculine dual non-past passive subjunctive/jussive of أَخْبَثَ (ʔaḵbaṯa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḵbiṯā", "ʔaḵbaṯa", "yuḵbaṯā"],
+      "kok_yazilis": "أخبث",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخبثي",
+      "tur": "verb",
+      "baslik": "أَخْبِثِي • (ʔaḵbiṯī) (form IV) /ʔax.bi.θiː/\n# second-person feminine singular imperative of أَخْبَثَ (ʔaḵbaṯa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵbiṯī", "ʔaḵbaṯa"],
+      "kok_yazilis": "أخبث",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يخبثوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يخبثوا (form IV)\n# يُخْبِثُوا (yuḵbiṯū) /jux.bi.θuː/: third-person masculine plural non-past active subjunctive/jussive of أَخْبَثَ (ʔaḵbaṯa)\n# يُخْبَثُوا (yuḵbaṯū) /jux.ba.θuː/: third-person masculine plural non-past passive subjunctive/jussive of أَخْبَثَ (ʔaḵbaṯa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḵbiṯū", "ʔaḵbaṯa", "yuḵbaṯū"],
+      "kok_yazilis": "أخبث",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءخبث", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

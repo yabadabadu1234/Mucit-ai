@@ -1,486 +1,339 @@
 {
   "kok": "تاجر",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تاجر", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تاجرت",
-        "u": "تاجرت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تاجرت (form III)\n# تَاجَرْتُ (tājartu) /taː.d͡ʒar.tu/: first-person singular past active of تَاجَرَ (tājara)\n# تَاجَرْتَ (tājarta) /taː.d͡ʒar.ta/: second-person masculine singular past active of تَاجَرَ (tājara)\n# تَاجَرْتِ (tājarti) /taː.d͡ʒar.ti/: second-person feminine singular past active of تَاجَرَ (tājara)\n# تَاجَرَتْ (tājarat) /taː.d͡ʒa.rat/: third-person feminine singular past active of تَ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tājartu", "tājara", "tājarta"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تاجرتما",
-        "u": "تاجرتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَاجَرْتُمَا • (tājartumā) (form III) /taː.d͡ʒar.tu.maː/\n# second-person dual past active of تَاجَرَ (tājara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tājartumā", "tājara"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تاجرا",
-        "u": "تاجرا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تاجرا (form III)\n# تَاجَرَا (tājarā) /taː.d͡ʒa.raː/: third-person masculine dual past active of تَاجَرَ (tājara)\n# تَاجِرَا (tājirā) /taː.d͡ʒi.raː/: second-person dual imperative of تَاجَرَ (tājara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tājarā", "tājara", "tājirā"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تاجرتا",
-        "u": "تاجرتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَاجَرَتَا • (tājaratā) (form III) /taː.d͡ʒa.ra.taː/\n# third-person feminine dual past active of تَاجَرَ (tājara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tājaratā", "tājara"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تاجرنا",
-        "u": "تاجرنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَاجَرْنَا • (tājarnā) (form III) /taː.d͡ʒar.naː/\n# first-person plural past active of تَاجَرَ (tājara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tājarnā", "tājara"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تاجرتن",
-        "u": "تاجرتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَاجَرْتُنَّ • (tājartunna) (form III) /taː.d͡ʒar.tun.na/\n# second-person feminine plural past active of تَاجَرَ (tājara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tājartunna", "tājara"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تاجروا",
-        "u": "تاجروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تاجروا (form III)\n# تَاجَرُوا (tājarū) /taː.d͡ʒa.ruː/: third-person masculine plural past active of تَاجَرَ (tājara)\n# تَاجِرُوا (tājirū) /taː.d͡ʒi.ruː/: second-person masculine plural imperative of تَاجَرَ (tājara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tājarū", "tājara", "tājirū"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تاجرن",
-        "u": "تاجرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تاجرن (form III)\n# تَاجَرْنَ (tājarna) /taː.d͡ʒar.na/: third-person feminine plural past active of تَاجَرَ (tājara)\n# تَاجِرْنَ (tājirna) /taː.d͡ʒir.na/: second-person feminine plural imperative of تَاجَرَ (tājara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tājarna", "tājara", "tājirna"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "توجرت",
-        "u": "توجرت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "توجرت (form III)\n# تُوجِرْتُ (tūjirtu) /tuː.d͡ʒir.tu/: first-person singular past passive of تَاجَرَ (tājara)\n# تُوجِرْتَ (tūjirta) /tuː.d͡ʒir.ta/: second-person masculine singular past passive of تَاجَرَ (tājara)\n# تُوجِرْتِ (tūjirti) /tuː.d͡ʒir.ti/: second-person feminine singular past passive of تَاجَرَ (tājara)\n# تُوجِرَتْ (tūjirat) /tuː.d͡ʒi.rat/: third-person feminine singular past passive o",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tūjirtu", "tājara", "tūjirta"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "توجرتما",
-        "u": "توجرتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُوجِرْتُمَا • (tūjirtumā) (form III) /tuː.d͡ʒir.tu.maː/\n# second-person dual past passive of تَاجَرَ (tājara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tūjirtumā", "tājara"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "توجرتا",
-        "u": "توجرتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُوجِرَتَا • (tūjiratā) (form III) /tuː.d͡ʒi.ra.taː/\n# third-person feminine dual past passive of تَاجَرَ (tājara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tūjiratā", "tājara"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "توجرنا",
-        "u": "توجرنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُوجِرْنَا • (tūjirnā) (form III) /tuː.d͡ʒir.naː/\n# first-person plural past passive of تَاجَرَ (tājara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tūjirnā", "tājara"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "توجرا",
-        "u": "توجرا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُوجِرَا • (tūjirā) (form III) /tuː.d͡ʒi.raː/\n# third-person masculine dual past passive of تَاجَرَ (tājara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tūjirā", "tājara"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "توجر",
-        "u": "توجر",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُوجِرَ • (tūjira) (form III) /tuː.d͡ʒi.ra/\n# third-person masculine singular past passive of تَاجَرَ (tājara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tūjira", "tājara"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "توجرتم",
-        "u": "توجرتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُوجِرْتُمْ • (tūjirtum) (form III) /tuː.d͡ʒir.tum/\n# second-person masculine plural past passive of تَاجَرَ (tājara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tūjirtum", "tājara"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تاجرتم",
-        "u": "تاجرتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَاجَرْتُمْ • (tājartum) (form III) /taː.d͡ʒar.tum/\n# second-person masculine plural past active of تَاجَرَ (tājara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tājartum", "tājara"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "توجرتن",
-        "u": "توجرتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُوجِرْتُنَّ • (tūjirtunna) (form III) /tuː.d͡ʒir.tun.na/\n# second-person feminine plural past passive of تَاجَرَ (tājara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tūjirtunna", "tājara"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتاجر",
-        "u": "تتاجر",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتاجر (form III)\n# تُتَاجِرُ (tutājiru) /tu.taː.d͡ʒi.ru/: inflection of تَاجَرَ (tājara):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُتَاجَرُ (tutājaru) /tu.taː.d͡ʒa.ru/: inflection of تَاجَرَ (tājara):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passiv",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tutājiru", "tājara", "tutājaru"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتاجران",
-        "u": "تتاجران",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتاجران (form III)\n# تُتَاجِرَانِ (tutājirāni) /tu.taː.d͡ʒi.raː.ni/: inflection of تَاجَرَ (tājara):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُتَاجَرَانِ (tutājarāni) /tu.taː.d͡ʒa.raː.ni/: inflection of تَاجَرَ (tājara):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tutājirāni", "tājara", "tutājarāni"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "أتاجر",
-        "u": "أتاجر",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتاجر (form III)\n# أُتَاجِرُ (ʔutājiru) /ʔu.taː.d͡ʒi.ru/: first-person singular non-past active indicative of تَاجَرَ (tājara)\n# أُتَاجَرُ (ʔutājaru) /ʔu.taː.d͡ʒa.ru/: first-person singular non-past passive indicative of تَاجَرَ (tājara)\n# أُتَاجِرَ (ʔutājira) /ʔu.taː.d͡ʒi.ra/: first-person singular non-past active subjunctive of تَاجَرَ (tājara)\n# أُتَاجَرَ (ʔutājara) /ʔu.taː.d͡ʒa.ra/: first-pers",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔutājiru", "tājara", "ʔutājaru"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "توجروا",
-        "u": "توجروا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُوجِرُوا • (tūjirū) (form III) /tuː.d͡ʒi.ruː/\n# third-person masculine plural past passive of تَاجَرَ (tājara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tūjirū", "tājara"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتاجرين",
-        "u": "تتاجرين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتاجرين (form III)\n# تُتَاجِرِينَ (tutājirīna) /tu.taː.d͡ʒi.riː.na/: second-person feminine singular non-past active indicative of تَاجَرَ (tājara)\n# تُتَاجَرِينَ (tutājarīna) /tu.taː.d͡ʒa.riː.na/: second-person feminine singular non-past passive indicative of تَاجَرَ (tājara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tutājirīna", "tājara", "tutājarīna"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتاجرون",
-        "u": "تتاجرون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتاجرون (form III)\n# تُتَاجِرُونَ (tutājirūna) /tu.taː.d͡ʒi.ruː.na/: second-person masculine plural non-past active indicative of تَاجَرَ (tājara)\n# تُتَاجَرُونَ (tutājarūna) /tu.taː.d͡ʒa.ruː.na/: second-person masculine plural non-past passive indicative of تَاجَرَ (tājara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tutājirūna", "tājara", "tutājarūna"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "يتاجر",
-        "u": "يتاجر",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتاجر (form III)\n# يُتَاجِرُ (yutājiru) /ju.taː.d͡ʒi.ru/: third-person masculine singular non-past active indicative of تَاجَرَ (tājara)\n# يُتَاجَرُ (yutājaru) /ju.taː.d͡ʒa.ru/: third-person masculine singular non-past passive indicative of تَاجَرَ (tājara)\n# يُتَاجِرَ (yutājira) /ju.taː.d͡ʒi.ra/: third-person masculine singular non-past active subjunctive of تَاجَرَ (tājara)\n# يُتَاجَرَ (yutājara",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yutājiru", "tājara", "yutājaru"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتاجرن",
-        "u": "تتاجرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتاجرن (form III)\n# تُتَاجِرْنَ (tutājirna) /tu.taː.d͡ʒir.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of تَاجَرَ (tājara)\n# تُتَاجَرْنَ (tutājarna) /tu.taː.d͡ʒar.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of تَاجَرَ (tājara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tutājirna", "tājara", "tutājarna"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "يتاجرن",
-        "u": "يتاجرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتاجرن (form III)\n# يُتَاجِرْنَ (yutājirna) /ju.taː.d͡ʒir.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of تَاجَرَ (tājara)\n# يُتَاجَرْنَ (yutājarna) /ju.taː.d͡ʒar.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of تَاجَرَ (tājara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yutājirna", "tājara", "yutājarna"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "توجرن",
-        "u": "توجرن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُوجِرْنَ • (tūjirna) (form III) /tuː.d͡ʒir.na/\n# third-person feminine plural past passive of تَاجَرَ (tājara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tūjirna", "tājara"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "يتاجران",
-        "u": "يتاجران",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتاجران (form III)\n# يُتَاجِرَانِ (yutājirāni) /ju.taː.d͡ʒi.raː.ni/: third-person masculine dual non-past active indicative of تَاجَرَ (tājara)\n# يُتَاجَرَانِ (yutājarāni) /ju.taː.d͡ʒa.raː.ni/: third-person masculine dual non-past passive indicative of تَاجَرَ (tājara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yutājirāni", "tājara", "yutājarāni"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "نتاجر",
-        "u": "نتاجر",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتاجر (form III)\n# نُتَاجِرُ (nutājiru) /nu.taː.d͡ʒi.ru/: first-person plural non-past active indicative of تَاجَرَ (tājara)\n# نُتَاجَرُ (nutājaru) /nu.taː.d͡ʒa.ru/: first-person plural non-past passive indicative of تَاجَرَ (tājara)\n# نُتَاجِرَ (nutājira) /nu.taː.d͡ʒi.ra/: first-person plural non-past active subjunctive of تَاجَرَ (tājara)\n# نُتَاجَرَ (nutājara) /nu.taː.d͡ʒa.ra/: first-person plu",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nutājiru", "tājara", "nutājaru"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "يتاجرا",
-        "u": "يتاجرا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتاجرا (form III)\n# يُتَاجِرَا (yutājirā) /ju.taː.d͡ʒi.raː/: third-person masculine dual non-past active subjunctive/jussive of تَاجَرَ (tājara)\n# يُتَاجَرَا (yutājarā) /ju.taː.d͡ʒa.raː/: third-person masculine dual non-past passive subjunctive/jussive of تَاجَرَ (tājara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yutājirā", "tājara", "yutājarā"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتاجرا",
-        "u": "تتاجرا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتاجرا (form III)\n# تُتَاجِرَا (tutājirā) /tu.taː.d͡ʒi.raː/: inflection of تَاجَرَ (tājara):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُتَاجَرَا (tutājarā) /tu.taː.d͡ʒa.raː/: inflection of تَاجَرَ (tājara):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive su",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tutājirā", "tājara", "tutājarā"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتاجري",
-        "u": "تتاجري",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتاجري (form III)\n# تُتَاجِرِي (tutājirī) /tu.taː.d͡ʒi.riː/: second-person feminine singular non-past active subjunctive/jussive of تَاجَرَ (tājara)\n# تُتَاجَرِي (tutājarī) /tu.taː.d͡ʒa.riː/: second-person feminine singular non-past passive subjunctive/jussive of تَاجَرَ (tājara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tutājirī", "tājara", "tutājarī"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "يتاجرون",
-        "u": "يتاجرون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتاجرون (form III)\n# يُتَاجِرُونَ (yutājirūna) /ju.taː.d͡ʒi.ruː.na/: third-person masculine plural non-past active indicative of تَاجَرَ (tājara)\n# يُتَاجَرُونَ (yutājarūna) /ju.taː.d͡ʒa.ruː.na/: third-person masculine plural non-past passive indicative of تَاجَرَ (tājara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yutājirūna", "tājara", "yutājarūna"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تاجري",
-        "u": "تاجري",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَاجِرِي • (tājirī) (form III) /taː.d͡ʒi.riː/\n# second-person feminine singular imperative of تَاجَرَ (tājara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tājirī", "tājara"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتاجروا",
-        "u": "تتاجروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتاجروا (form III)\n# تُتَاجِرُوا (tutājirū) /tu.taː.d͡ʒi.ruː/: second-person masculine plural non-past active subjunctive/jussive of تَاجَرَ (tājara)\n# تُتَاجَرُوا (tutājarū) /tu.taː.d͡ʒa.ruː/: second-person masculine plural non-past passive subjunctive/jussive of تَاجَرَ (tājara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tutājirū", "tājara", "tutājarū"],
-        "k": "تاجر",
-        "yol": "kök"
-      },
-      {
-        "w": "يتاجروا",
-        "u": "يتاجروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتاجروا (form III)\n# يُتَاجِرُوا (yutājirū) /ju.taː.d͡ʒi.ruː/: third-person masculine plural non-past active subjunctive/jussive of تَاجَرَ (tājara)\n# يُتَاجَرُوا (yutājarū) /ju.taː.d͡ʒa.ruː/: third-person masculine plural non-past passive subjunctive/jussive of تَاجَرَ (tājara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yutājirū", "tājara", "yutājarū"],
-        "k": "تاجر",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تج",
+  "ses": {
     "harf": "ت",
+    "fasil": "تج",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تاجرت",
+      "tur": "verb",
+      "baslik": "تاجرت (form III)\n# تَاجَرْتُ (tājartu) /taː.d͡ʒar.tu/: first-person singular past active of تَاجَرَ (tājara)\n# تَاجَرْتَ (tājarta) /taː.d͡ʒar.ta/: second-person masculine singular past active of تَاجَرَ (tājara)\n# تَاجَرْتِ (tājarti) /taː.d͡ʒar.ti/: second-person feminine singular past active of تَاجَرَ (tājara)\n# تَاجَرَتْ (tājarat) /taː.d͡ʒa.rat/: third-person feminine singular past active of تَ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tājartu", "tājara", "tājarta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تاجرتما",
+      "tur": "verb",
+      "baslik": "تَاجَرْتُمَا • (tājartumā) (form III) /taː.d͡ʒar.tu.maː/\n# second-person dual past active of تَاجَرَ (tājara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tājartumā", "tājara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تاجرا",
+      "tur": "verb",
+      "baslik": "تاجرا (form III)\n# تَاجَرَا (tājarā) /taː.d͡ʒa.raː/: third-person masculine dual past active of تَاجَرَ (tājara)\n# تَاجِرَا (tājirā) /taː.d͡ʒi.raː/: second-person dual imperative of تَاجَرَ (tājara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tājarā", "tājara", "tājirā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تاجرتا",
+      "tur": "verb",
+      "baslik": "تَاجَرَتَا • (tājaratā) (form III) /taː.d͡ʒa.ra.taː/\n# third-person feminine dual past active of تَاجَرَ (tājara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tājaratā", "tājara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تاجرنا",
+      "tur": "verb",
+      "baslik": "تَاجَرْنَا • (tājarnā) (form III) /taː.d͡ʒar.naː/\n# first-person plural past active of تَاجَرَ (tājara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tājarnā", "tājara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تاجرتن",
+      "tur": "verb",
+      "baslik": "تَاجَرْتُنَّ • (tājartunna) (form III) /taː.d͡ʒar.tun.na/\n# second-person feminine plural past active of تَاجَرَ (tājara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tājartunna", "tājara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تاجروا",
+      "tur": "verb",
+      "baslik": "تاجروا (form III)\n# تَاجَرُوا (tājarū) /taː.d͡ʒa.ruː/: third-person masculine plural past active of تَاجَرَ (tājara)\n# تَاجِرُوا (tājirū) /taː.d͡ʒi.ruː/: second-person masculine plural imperative of تَاجَرَ (tājara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tājarū", "tājara", "tājirū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تاجرن",
+      "tur": "verb",
+      "baslik": "تاجرن (form III)\n# تَاجَرْنَ (tājarna) /taː.d͡ʒar.na/: third-person feminine plural past active of تَاجَرَ (tājara)\n# تَاجِرْنَ (tājirna) /taː.d͡ʒir.na/: second-person feminine plural imperative of تَاجَرَ (tājara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tājarna", "tājara", "tājirna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "توجرت",
+      "tur": "verb",
+      "baslik": "توجرت (form III)\n# تُوجِرْتُ (tūjirtu) /tuː.d͡ʒir.tu/: first-person singular past passive of تَاجَرَ (tājara)\n# تُوجِرْتَ (tūjirta) /tuː.d͡ʒir.ta/: second-person masculine singular past passive of تَاجَرَ (tājara)\n# تُوجِرْتِ (tūjirti) /tuː.d͡ʒir.ti/: second-person feminine singular past passive of تَاجَرَ (tājara)\n# تُوجِرَتْ (tūjirat) /tuː.d͡ʒi.rat/: third-person feminine singular past passive o",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tūjirtu", "tājara", "tūjirta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "توجرتما",
+      "tur": "verb",
+      "baslik": "تُوجِرْتُمَا • (tūjirtumā) (form III) /tuː.d͡ʒir.tu.maː/\n# second-person dual past passive of تَاجَرَ (tājara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tūjirtumā", "tājara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "توجرتا",
+      "tur": "verb",
+      "baslik": "تُوجِرَتَا • (tūjiratā) (form III) /tuː.d͡ʒi.ra.taː/\n# third-person feminine dual past passive of تَاجَرَ (tājara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tūjiratā", "tājara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "توجرنا",
+      "tur": "verb",
+      "baslik": "تُوجِرْنَا • (tūjirnā) (form III) /tuː.d͡ʒir.naː/\n# first-person plural past passive of تَاجَرَ (tājara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tūjirnā", "tājara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "توجرا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُوجِرَا • (tūjirā) (form III) /tuː.d͡ʒi.raː/\n# third-person masculine dual past passive of تَاجَرَ (tājara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tūjirā", "tājara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "توجر",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُوجِرَ • (tūjira) (form III) /tuː.d͡ʒi.ra/\n# third-person masculine singular past passive of تَاجَرَ (tājara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tūjira", "tājara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "توجرتم",
+      "tur": "verb",
+      "baslik": "تُوجِرْتُمْ • (tūjirtum) (form III) /tuː.d͡ʒir.tum/\n# second-person masculine plural past passive of تَاجَرَ (tājara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tūjirtum", "tājara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تاجرتم",
+      "tur": "verb",
+      "baslik": "تَاجَرْتُمْ • (tājartum) (form III) /taː.d͡ʒar.tum/\n# second-person masculine plural past active of تَاجَرَ (tājara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tājartum", "tājara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "توجرتن",
+      "tur": "verb",
+      "baslik": "تُوجِرْتُنَّ • (tūjirtunna) (form III) /tuː.d͡ʒir.tun.na/\n# second-person feminine plural past passive of تَاجَرَ (tājara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tūjirtunna", "tājara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتاجر",
+      "tur": "verb",
+      "baslik": "تتاجر (form III)\n# تُتَاجِرُ (tutājiru) /tu.taː.d͡ʒi.ru/: inflection of تَاجَرَ (tājara):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُتَاجَرُ (tutājaru) /tu.taː.d͡ʒa.ru/: inflection of تَاجَرَ (tājara):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passiv",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tutājiru", "tājara", "tutājaru"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتاجران",
+      "tur": "verb",
+      "baslik": "تتاجران (form III)\n# تُتَاجِرَانِ (tutājirāni) /tu.taː.d͡ʒi.raː.ni/: inflection of تَاجَرَ (tājara):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُتَاجَرَانِ (tutājarāni) /tu.taː.d͡ʒa.raː.ni/: inflection of تَاجَرَ (tājara):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tutājirāni", "tājara", "tutājarāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتاجر",
+      "tur": "verb",
+      "baslik": "أتاجر (form III)\n# أُتَاجِرُ (ʔutājiru) /ʔu.taː.d͡ʒi.ru/: first-person singular non-past active indicative of تَاجَرَ (tājara)\n# أُتَاجَرُ (ʔutājaru) /ʔu.taː.d͡ʒa.ru/: first-person singular non-past passive indicative of تَاجَرَ (tājara)\n# أُتَاجِرَ (ʔutājira) /ʔu.taː.d͡ʒi.ra/: first-person singular non-past active subjunctive of تَاجَرَ (tājara)\n# أُتَاجَرَ (ʔutājara) /ʔu.taː.d͡ʒa.ra/: first-pers",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔutājiru", "tājara", "ʔutājaru"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "توجروا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُوجِرُوا • (tūjirū) (form III) /tuː.d͡ʒi.ruː/\n# third-person masculine plural past passive of تَاجَرَ (tājara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tūjirū", "tājara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتاجرين",
+      "tur": "verb",
+      "baslik": "تتاجرين (form III)\n# تُتَاجِرِينَ (tutājirīna) /tu.taː.d͡ʒi.riː.na/: second-person feminine singular non-past active indicative of تَاجَرَ (tājara)\n# تُتَاجَرِينَ (tutājarīna) /tu.taː.d͡ʒa.riː.na/: second-person feminine singular non-past passive indicative of تَاجَرَ (tājara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tutājirīna", "tājara", "tutājarīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتاجرون",
+      "tur": "verb",
+      "baslik": "تتاجرون (form III)\n# تُتَاجِرُونَ (tutājirūna) /tu.taː.d͡ʒi.ruː.na/: second-person masculine plural non-past active indicative of تَاجَرَ (tājara)\n# تُتَاجَرُونَ (tutājarūna) /tu.taː.d͡ʒa.ruː.na/: second-person masculine plural non-past passive indicative of تَاجَرَ (tājara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tutājirūna", "tājara", "tutājarūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتاجر",
+      "tur": "verb",
+      "baslik": "يتاجر (form III)\n# يُتَاجِرُ (yutājiru) /ju.taː.d͡ʒi.ru/: third-person masculine singular non-past active indicative of تَاجَرَ (tājara)\n# يُتَاجَرُ (yutājaru) /ju.taː.d͡ʒa.ru/: third-person masculine singular non-past passive indicative of تَاجَرَ (tājara)\n# يُتَاجِرَ (yutājira) /ju.taː.d͡ʒi.ra/: third-person masculine singular non-past active subjunctive of تَاجَرَ (tājara)\n# يُتَاجَرَ (yutājara",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yutājiru", "tājara", "yutājaru"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتاجرن",
+      "tur": "verb",
+      "baslik": "تتاجرن (form III)\n# تُتَاجِرْنَ (tutājirna) /tu.taː.d͡ʒir.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of تَاجَرَ (tājara)\n# تُتَاجَرْنَ (tutājarna) /tu.taː.d͡ʒar.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of تَاجَرَ (tājara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tutājirna", "tājara", "tutājarna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتاجرن",
+      "tur": "verb",
+      "baslik": "يتاجرن (form III)\n# يُتَاجِرْنَ (yutājirna) /ju.taː.d͡ʒir.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of تَاجَرَ (tājara)\n# يُتَاجَرْنَ (yutājarna) /ju.taː.d͡ʒar.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of تَاجَرَ (tājara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yutājirna", "tājara", "yutājarna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "توجرن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُوجِرْنَ • (tūjirna) (form III) /tuː.d͡ʒir.na/\n# third-person feminine plural past passive of تَاجَرَ (tājara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tūjirna", "tājara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتاجران",
+      "tur": "verb",
+      "baslik": "يتاجران (form III)\n# يُتَاجِرَانِ (yutājirāni) /ju.taː.d͡ʒi.raː.ni/: third-person masculine dual non-past active indicative of تَاجَرَ (tājara)\n# يُتَاجَرَانِ (yutājarāni) /ju.taː.d͡ʒa.raː.ni/: third-person masculine dual non-past passive indicative of تَاجَرَ (tājara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yutājirāni", "tājara", "yutājarāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتاجر",
+      "tur": "verb",
+      "baslik": "نتاجر (form III)\n# نُتَاجِرُ (nutājiru) /nu.taː.d͡ʒi.ru/: first-person plural non-past active indicative of تَاجَرَ (tājara)\n# نُتَاجَرُ (nutājaru) /nu.taː.d͡ʒa.ru/: first-person plural non-past passive indicative of تَاجَرَ (tājara)\n# نُتَاجِرَ (nutājira) /nu.taː.d͡ʒi.ra/: first-person plural non-past active subjunctive of تَاجَرَ (tājara)\n# نُتَاجَرَ (nutājara) /nu.taː.d͡ʒa.ra/: first-person plu",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nutājiru", "tājara", "nutājaru"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتاجرا",
+      "tur": "verb",
+      "baslik": "يتاجرا (form III)\n# يُتَاجِرَا (yutājirā) /ju.taː.d͡ʒi.raː/: third-person masculine dual non-past active subjunctive/jussive of تَاجَرَ (tājara)\n# يُتَاجَرَا (yutājarā) /ju.taː.d͡ʒa.raː/: third-person masculine dual non-past passive subjunctive/jussive of تَاجَرَ (tājara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yutājirā", "tājara", "yutājarā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتاجرا",
+      "tur": "verb",
+      "baslik": "تتاجرا (form III)\n# تُتَاجِرَا (tutājirā) /tu.taː.d͡ʒi.raː/: inflection of تَاجَرَ (tājara):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُتَاجَرَا (tutājarā) /tu.taː.d͡ʒa.raː/: inflection of تَاجَرَ (tājara):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive su",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tutājirā", "tājara", "tutājarā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتاجري",
+      "tur": "verb",
+      "baslik": "تتاجري (form III)\n# تُتَاجِرِي (tutājirī) /tu.taː.d͡ʒi.riː/: second-person feminine singular non-past active subjunctive/jussive of تَاجَرَ (tājara)\n# تُتَاجَرِي (tutājarī) /tu.taː.d͡ʒa.riː/: second-person feminine singular non-past passive subjunctive/jussive of تَاجَرَ (tājara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tutājirī", "tājara", "tutājarī"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتاجرون",
+      "tur": "verb",
+      "baslik": "يتاجرون (form III)\n# يُتَاجِرُونَ (yutājirūna) /ju.taː.d͡ʒi.ruː.na/: third-person masculine plural non-past active indicative of تَاجَرَ (tājara)\n# يُتَاجَرُونَ (yutājarūna) /ju.taː.d͡ʒa.ruː.na/: third-person masculine plural non-past passive indicative of تَاجَرَ (tājara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yutājirūna", "tājara", "yutājarūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تاجري",
+      "tur": "verb",
+      "baslik": "تَاجِرِي • (tājirī) (form III) /taː.d͡ʒi.riː/\n# second-person feminine singular imperative of تَاجَرَ (tājara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tājirī", "tājara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتاجروا",
+      "tur": "verb",
+      "baslik": "تتاجروا (form III)\n# تُتَاجِرُوا (tutājirū) /tu.taː.d͡ʒi.ruː/: second-person masculine plural non-past active subjunctive/jussive of تَاجَرَ (tājara)\n# تُتَاجَرُوا (tutājarū) /tu.taː.d͡ʒa.ruː/: second-person masculine plural non-past passive subjunctive/jussive of تَاجَرَ (tājara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tutājirū", "tājara", "tutājarū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتاجروا",
+      "tur": "verb",
+      "baslik": "يتاجروا (form III)\n# يُتَاجِرُوا (yutājirū) /ju.taː.d͡ʒi.ruː/: third-person masculine plural non-past active subjunctive/jussive of تَاجَرَ (tājara)\n# يُتَاجَرُوا (yutājarū) /ju.taː.d͡ʒa.ruː/: third-person masculine plural non-past passive subjunctive/jussive of تَاجَرَ (tājara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yutājirū", "tājara", "yutājarū"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تاجر", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

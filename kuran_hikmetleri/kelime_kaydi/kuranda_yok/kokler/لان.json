@@ -1,447 +1,324 @@
 {
   "kok": "لان",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "لان", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "لن",
-        "u": "لن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "لن (form I)\n# لِنَّ (linna) /lin.na/: inflection of لَانَ (lāna):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# لِنْ (lin) /lin/: second-person masculine singular imperative of لَانَ (lāna)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["linna", "lāna", "lin"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "لنا",
-        "u": "لنا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "لِنَّا • (linnā) (form I) /lin.naː/\n# first-person plural past active of لَانَ (lāna)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["linnā", "lāna"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "لين",
-        "u": "لين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "لِينَ • (līna) (form I) /liː.na/\n# third-person masculine singular past passive of لَانَ (lāna)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["līna", "lāna"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "ألين",
-        "u": "ألين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ألين (form I)\n# أَلِينُ (ʔalīnu) /ʔa.liː.nu/: first-person singular non-past active indicative of لَانَ (lāna)\n# أَلِينَ (ʔalīna) /ʔa.liː.na/: first-person singular non-past active subjunctive of لَانَ (lāna)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔalīnu", "lāna", "ʔalīna"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "تلين",
-        "u": "تلين",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تلين (form I)\n# تَلِينُ (talīnu) /ta.liː.nu/: inflection of لَانَ (lāna):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَلِينَ (talīna) /ta.liː.na/: inflection of لَانَ (lāna):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["talīnu", "lāna", "talīna"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "تلينا",
-        "u": "تلينا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَلِينَا • (talīnā) (form I) /ta.liː.naː/\n# inflection of لَانَ (lāna):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["talīnā", "lāna"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "يلين",
-        "u": "يلين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يلين (form I)\n# يَلِينُ (yalīnu) /ja.liː.nu/: third-person masculine singular non-past active indicative of لَانَ (lāna)\n# يَلِينَ (yalīna) /ja.liː.na/: third-person masculine singular non-past active subjunctive of لَانَ (lāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yalīnu", "lāna", "yalīna"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "لنت",
-        "u": "لنت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لنت (form I)\n# لِنْتُ (lintu) /lin.tu/: first-person singular past active of لَانَ (lāna)\n# لِنْتَ (linta) /lin.ta/: second-person masculine singular past active of لَانَ (lāna)\n# لِنْتِ (linti) /lin.ti/: second-person feminine singular past active of لَانَ (lāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["lintu", "lāna", "linta"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "يلن",
-        "u": "يلن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يلن (form I)\n# يَلِنَّ (yalinna) /ja.lin.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of لَانَ (lāna)\n# يَلِنْ (yalin) /ja.lin/: third-person masculine singular non-past active jussive of لَانَ (lāna)\n# يُلَنْ (yulan) /ju.lan/: third-person masculine singular non-past passive jussive of لَانَ (lāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yalinna", "lāna", "yalin"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "لانا",
-        "u": "لانا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لَانَا • (lānā) (form I) /laː.naː/\n# third-person masculine dual past active of لَانَ (lāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["lānā", "lāna"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "ألن",
-        "u": "ألن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَلِنْ • (ʔalin) (form I) /ʔa.lin/\n# first-person singular non-past active jussive of لَانَ (lāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔalin", "lāna"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "لانت",
-        "u": "لانت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لَانَتْ • (lānat) (form I) /laː.nat/\n# third-person feminine singular past active of لَانَ (lāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["lānat", "lāna"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "لنتما",
-        "u": "لنتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لِنْتُمَا • (lintumā) (form I) /lin.tu.maː/\n# second-person dual past active of لَانَ (lāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["lintumā", "lāna"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "لانتا",
-        "u": "لانتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لَانَتَا • (lānatā) (form I) /laː.na.taː/\n# third-person feminine dual past active of لَانَ (lāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["lānatā", "lāna"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "تلينان",
-        "u": "تلينان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَلِينَانِ • (talīnāni) (form I) /ta.liː.naː.ni/\n# inflection of لَانَ (lāna):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["talīnāni", "lāna"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "لانوا",
-        "u": "لانوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لَانُوا • (lānū) (form I) /laː.nuː/\n# third-person masculine plural past active of لَانَ (lāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["lānū", "lāna"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "لنتن",
-        "u": "لنتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لِنْتُنَّ • (lintunna) (form I) /lin.tun.na/\n# second-person feminine plural past active of لَانَ (lāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["lintunna", "lāna"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "تلينين",
-        "u": "تلينين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَلِينِينَ • (talīnīna) (form I) /ta.liː.niː.na/\n# second-person feminine singular non-past active indicative of لَانَ (lāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["talīnīna", "lāna"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "تلينون",
-        "u": "تلينون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَلِينُونَ • (talīnūna) (form I) /ta.liː.nuː.na/\n# second-person masculine plural non-past active indicative of لَانَ (lāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["talīnūna", "lāna"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "يلينان",
-        "u": "يلينان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَلِينَانِ • (yalīnāni) (form I) /ja.liː.naː.ni/\n# third-person masculine dual non-past active indicative of لَانَ (lāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yalīnāni", "lāna"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "نلين",
-        "u": "نلين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نلين (form I)\n# نَلِينُ (nalīnu) /na.liː.nu/: first-person plural non-past active indicative of لَانَ (lāna)\n# نَلِينَ (nalīna) /na.liː.na/: first-person plural non-past active subjunctive of لَانَ (lāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nalīnu", "lāna", "nalīna"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "لنتم",
-        "u": "لنتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لِنْتُمْ • (lintum) (form I) /lin.tum/\n# second-person masculine plural past active of لَانَ (lāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["lintum", "lāna"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "تلن",
-        "u": "تلن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تلن (form I)\n# تَلِنَّ (talinna) /ta.lin.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of لَانَ (lāna)\n# تَلِنْ (talin) /ta.lin/: inflection of لَانَ (lāna):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["talinna", "lāna", "talin"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "يلينون",
-        "u": "يلينون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَلِينُونَ • (yalīnūna) (form I) /ja.liː.nuː.na/\n# third-person masculine plural non-past active indicative of لَانَ (lāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yalīnūna", "lāna"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "تلينوا",
-        "u": "تلينوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَلِينُوا • (talīnū) (form I) /ta.liː.nuː/\n# second-person masculine plural non-past active subjunctive/jussive of لَانَ (lāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["talīnū", "lāna"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "يلان",
-        "u": "يلان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يلان (form I)\n# يُلَانُ (yulānu) /ju.laː.nu/: third-person masculine singular non-past passive indicative of لَانَ (lāna)\n# يُلَانَ (yulāna) /ju.laː.na/: third-person masculine singular non-past passive subjunctive of لَانَ (lāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yulānu", "lāna", "yulāna"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "ليني",
-        "u": "ليني",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "لِينِي • (līnī) (form I) /liː.niː/\n# second-person feminine singular imperative of لَانَ (lāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["līnī", "lāna"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "نلن",
-        "u": "نلن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نَلِنْ • (nalin) (form I) /na.lin/\n# first-person plural non-past active jussive of لَانَ (lāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nalin", "lāna"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "لينوا",
-        "u": "لينوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "لِينُوا • (līnū) (form I) /liː.nuː/\n# second-person masculine plural imperative of لَانَ (lāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["līnū", "lāna"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "لينا",
-        "u": "لينا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "لِينَا • (līnā) (form I) /liː.naː/\n# second-person dual imperative of لَانَ (lāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["līnā", "lāna"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "يلينا",
-        "u": "يلينا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَلِينَا • (yalīnā) (form I) /ja.liː.naː/\n# third-person masculine dual non-past active subjunctive/jussive of لَانَ (lāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yalīnā", "lāna"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "تليني",
-        "u": "تليني",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَلِينِي • (talīnī) (form I) /ta.liː.niː/\n# second-person feminine singular non-past active subjunctive/jussive of لَانَ (lāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["talīnī", "lāna"],
-        "k": "لان",
-        "yol": "kök"
-      },
-      {
-        "w": "يلينوا",
-        "u": "يلينوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَلِينُوا • (yalīnū) (form I) /ja.liː.nuː/\n# third-person masculine plural non-past active subjunctive/jussive of لَانَ (lāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yalīnū", "lāna"],
-        "k": "لان",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "لن",
+  "ses": {
     "harf": "ل",
+    "fasil": "لن",
     "mahrec": "zelakiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "لن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "لن (form I)\n# لِنَّ (linna) /lin.na/: inflection of لَانَ (lāna):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# لِنْ (lin) /lin/: second-person masculine singular imperative of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["linna", "lāna", "lin"]
+    },
+    {
+      "madde": "لنا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "لِنَّا • (linnā) (form I) /lin.naː/\n# first-person plural past active of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["linnā", "lāna"]
+    },
+    {
+      "madde": "لين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "لِينَ • (līna) (form I) /liː.na/\n# third-person masculine singular past passive of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["līna", "lāna"]
+    },
+    {
+      "madde": "ألين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ألين (form I)\n# أَلِينُ (ʔalīnu) /ʔa.liː.nu/: first-person singular non-past active indicative of لَانَ (lāna)\n# أَلِينَ (ʔalīna) /ʔa.liː.na/: first-person singular non-past active subjunctive of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔalīnu", "lāna", "ʔalīna"]
+    },
+    {
+      "madde": "تلين",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تلين (form I)\n# تَلِينُ (talīnu) /ta.liː.nu/: inflection of لَانَ (lāna):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَلِينَ (talīna) /ta.liː.na/: inflection of لَانَ (lāna):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["talīnu", "lāna", "talīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلينا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَلِينَا • (talīnā) (form I) /ta.liː.naː/\n# inflection of لَانَ (lāna):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["talīnā", "lāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يلين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يلين (form I)\n# يَلِينُ (yalīnu) /ja.liː.nu/: third-person masculine singular non-past active indicative of لَانَ (lāna)\n# يَلِينَ (yalīna) /ja.liː.na/: third-person masculine singular non-past active subjunctive of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yalīnu", "lāna", "yalīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لنت",
+      "tur": "verb",
+      "baslik": "لنت (form I)\n# لِنْتُ (lintu) /lin.tu/: first-person singular past active of لَانَ (lāna)\n# لِنْتَ (linta) /lin.ta/: second-person masculine singular past active of لَانَ (lāna)\n# لِنْتِ (linti) /lin.ti/: second-person feminine singular past active of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["lintu", "lāna", "linta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يلن",
+      "tur": "verb",
+      "baslik": "يلن (form I)\n# يَلِنَّ (yalinna) /ja.lin.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of لَانَ (lāna)\n# يَلِنْ (yalin) /ja.lin/: third-person masculine singular non-past active jussive of لَانَ (lāna)\n# يُلَنْ (yulan) /ju.lan/: third-person masculine singular non-past passive jussive of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yalinna", "lāna", "yalin"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لانا",
+      "tur": "verb",
+      "baslik": "لَانَا • (lānā) (form I) /laː.naː/\n# third-person masculine dual past active of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["lānā", "lāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ألن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَلِنْ • (ʔalin) (form I) /ʔa.lin/\n# first-person singular non-past active jussive of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔalin", "lāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لانت",
+      "tur": "verb",
+      "baslik": "لَانَتْ • (lānat) (form I) /laː.nat/\n# third-person feminine singular past active of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["lānat", "lāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لنتما",
+      "tur": "verb",
+      "baslik": "لِنْتُمَا • (lintumā) (form I) /lin.tu.maː/\n# second-person dual past active of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["lintumā", "lāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لانتا",
+      "tur": "verb",
+      "baslik": "لَانَتَا • (lānatā) (form I) /laː.na.taː/\n# third-person feminine dual past active of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["lānatā", "lāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلينان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَلِينَانِ • (talīnāni) (form I) /ta.liː.naː.ni/\n# inflection of لَانَ (lāna):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["talīnāni", "lāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لانوا",
+      "tur": "verb",
+      "baslik": "لَانُوا • (lānū) (form I) /laː.nuː/\n# third-person masculine plural past active of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["lānū", "lāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لنتن",
+      "tur": "verb",
+      "baslik": "لِنْتُنَّ • (lintunna) (form I) /lin.tun.na/\n# second-person feminine plural past active of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["lintunna", "lāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلينين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَلِينِينَ • (talīnīna) (form I) /ta.liː.niː.na/\n# second-person feminine singular non-past active indicative of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["talīnīna", "lāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلينون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَلِينُونَ • (talīnūna) (form I) /ta.liː.nuː.na/\n# second-person masculine plural non-past active indicative of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["talīnūna", "lāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يلينان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَلِينَانِ • (yalīnāni) (form I) /ja.liː.naː.ni/\n# third-person masculine dual non-past active indicative of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yalīnāni", "lāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نلين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نلين (form I)\n# نَلِينُ (nalīnu) /na.liː.nu/: first-person plural non-past active indicative of لَانَ (lāna)\n# نَلِينَ (nalīna) /na.liː.na/: first-person plural non-past active subjunctive of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nalīnu", "lāna", "nalīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لنتم",
+      "tur": "verb",
+      "baslik": "لِنْتُمْ • (lintum) (form I) /lin.tum/\n# second-person masculine plural past active of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["lintum", "lāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلن",
+      "tur": "verb",
+      "baslik": "تلن (form I)\n# تَلِنَّ (talinna) /ta.lin.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of لَانَ (lāna)\n# تَلِنْ (talin) /ta.lin/: inflection of لَانَ (lāna):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["talinna", "lāna", "talin"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يلينون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَلِينُونَ • (yalīnūna) (form I) /ja.liː.nuː.na/\n# third-person masculine plural non-past active indicative of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yalīnūna", "lāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلينوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَلِينُوا • (talīnū) (form I) /ta.liː.nuː/\n# second-person masculine plural non-past active subjunctive/jussive of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["talīnū", "lāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يلان",
+      "tur": "verb",
+      "baslik": "يلان (form I)\n# يُلَانُ (yulānu) /ju.laː.nu/: third-person masculine singular non-past passive indicative of لَانَ (lāna)\n# يُلَانَ (yulāna) /ju.laː.na/: third-person masculine singular non-past passive subjunctive of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yulānu", "lāna", "yulāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ليني",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "لِينِي • (līnī) (form I) /liː.niː/\n# second-person feminine singular imperative of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["līnī", "lāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نلن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نَلِنْ • (nalin) (form I) /na.lin/\n# first-person plural non-past active jussive of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nalin", "lāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لينوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "لِينُوا • (līnū) (form I) /liː.nuː/\n# second-person masculine plural imperative of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["līnū", "lāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لينا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "لِينَا • (līnā) (form I) /liː.naː/\n# second-person dual imperative of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["līnā", "lāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يلينا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَلِينَا • (yalīnā) (form I) /ja.liː.naː/\n# third-person masculine dual non-past active subjunctive/jussive of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yalīnā", "lāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تليني",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَلِينِي • (talīnī) (form I) /ta.liː.niː/\n# second-person feminine singular non-past active subjunctive/jussive of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["talīnī", "lāna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يلينوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَلِينُوا • (yalīnū) (form I) /ja.liː.nuː/\n# third-person masculine plural non-past active subjunctive/jussive of لَانَ (lāna)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yalīnū", "lāna"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "لان", "r7"]
+  ],
+  "mana": {
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
@@ -449,22 +326,15 @@
     "dayanak_tanim": "lightening a penalty or excusing from a chore by judges or parents or teachers",
     "synset_sayisi": 5
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["act.n.02", "consistency.n.01", "control.v.02", "group_action.n.01", "soft.a.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["act.n.02", "consistency.n.01", "control.v.02", "group_action.n.01", "soft.a.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

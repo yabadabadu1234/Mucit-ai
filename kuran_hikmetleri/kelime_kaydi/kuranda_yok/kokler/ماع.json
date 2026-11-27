@@ -1,462 +1,335 @@
 {
   "kok": "ماع",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ماع", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "مع",
-        "u": "مع",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "مِعْ • (miʕ) (form I) /miʕ/\n# second-person masculine singular imperative of مَاعَ (māʕa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["miʕ", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "تميع",
-        "u": "تميع",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تميع (form I)\n# تَمِيعُ (tamīʕu) /ta.miː.ʕu/: inflection of مَاعَ (māʕa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَمِيعَ (tamīʕa) /ta.miː.ʕa/: inflection of مَاعَ (māʕa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamīʕu", "māʕa", "tamīʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "معنا",
-        "u": "معنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مِعْنَا • (miʕnā) (form I) /miʕ.naː/\n# first-person plural past active of مَاعَ (māʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["miʕnā", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "تمعن",
-        "u": "تمعن",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تَمِعْنَ • (tamiʕna) (form I) /ta.miʕ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of مَاعَ (māʕa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamiʕna", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "أميع",
-        "u": "أميع",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أميع (form I)\n# أَمِيعُ (ʔamīʕu) /ʔa.miː.ʕu/: first-person singular non-past active indicative of مَاعَ (māʕa)\n# أَمِيعَ (ʔamīʕa) /ʔa.miː.ʕa/: first-person singular non-past active subjunctive of مَاعَ (māʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔamīʕu", "māʕa", "ʔamīʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "تميعين",
-        "u": "تميعين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَمِيعِينَ • (tamīʕīna) (form I) /ta.miː.ʕiː.na/\n# second-person feminine singular non-past active indicative of مَاعَ (māʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamīʕīna", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "يميع",
-        "u": "يميع",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يميع (form I)\n# يَمِيعُ (yamīʕu) /ja.miː.ʕu/: third-person masculine singular non-past active indicative of مَاعَ (māʕa)\n# يَمِيعَ (yamīʕa) /ja.miː.ʕa/: third-person masculine singular non-past active subjunctive of مَاعَ (māʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamīʕu", "māʕa", "yamīʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "تميعان",
-        "u": "تميعان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَمِيعَانِ • (tamīʕāni) (form I) /ta.miː.ʕaː.ni/\n# inflection of مَاعَ (māʕa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamīʕāni", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "تميعون",
-        "u": "تميعون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَمِيعُونَ • (tamīʕūna) (form I) /ta.miː.ʕuː.na/\n# second-person masculine plural non-past active indicative of مَاعَ (māʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamīʕūna", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "يمعن",
-        "u": "يمعن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يَمِعْنَ • (yamiʕna) (form I) /ja.miʕ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of مَاعَ (māʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamiʕna", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "يميعون",
-        "u": "يميعون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَمِيعُونَ • (yamīʕūna) (form I) /ja.miː.ʕuː.na/\n# third-person masculine plural non-past active indicative of مَاعَ (māʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamīʕūna", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "يميعان",
-        "u": "يميعان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَمِيعَانِ • (yamīʕāni) (form I) /ja.miː.ʕaː.ni/\n# third-person masculine dual non-past active indicative of مَاعَ (māʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamīʕāni", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "تميعي",
-        "u": "تميعي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَمِيعِي • (tamīʕī) (form I) /ta.miː.ʕiː/\n# second-person feminine singular non-past active subjunctive/jussive of مَاعَ (māʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamīʕī", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "تميعا",
-        "u": "تميعا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَمِيعَا • (tamīʕā) (form I) /ta.miː.ʕaː/\n# inflection of مَاعَ (māʕa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamīʕā", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "تميعوا",
-        "u": "تميعوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَمِيعُوا • (tamīʕū) (form I) /ta.miː.ʕuː/\n# second-person masculine plural non-past active subjunctive/jussive of مَاعَ (māʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamīʕū", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "يميعوا",
-        "u": "يميعوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَمِيعُوا • (yamīʕū) (form I) /ja.miː.ʕuː/\n# third-person masculine plural non-past active subjunctive/jussive of مَاعَ (māʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamīʕū", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "نميع",
-        "u": "نميع",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نميع (form I)\n# نَمِيعُ (namīʕu) /na.miː.ʕu/: first-person plural non-past active indicative of مَاعَ (māʕa)\n# نَمِيعَ (namīʕa) /na.miː.ʕa/: first-person plural non-past active subjunctive of مَاعَ (māʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["namīʕu", "māʕa", "namīʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "يميعا",
-        "u": "يميعا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَمِيعَا • (yamīʕā) (form I) /ja.miː.ʕaː/\n# third-person masculine dual non-past active subjunctive/jussive of مَاعَ (māʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamīʕā", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "تمع",
-        "u": "تمع",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَمِعْ • (tamiʕ) (form I) /ta.miʕ/\n# inflection of مَاعَ (māʕa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamiʕ", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "أمع",
-        "u": "أمع",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَمِعْ • (ʔamiʕ) (form I) /ʔa.miʕ/\n# first-person singular non-past active jussive of مَاعَ (māʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔamiʕ", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "نمع",
-        "u": "نمع",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نَمِعْ • (namiʕ) (form I) /na.miʕ/\n# first-person plural non-past active jussive of مَاعَ (māʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["namiʕ", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "يمع",
-        "u": "يمع",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَمِعْ • (yamiʕ) (form I) /ja.miʕ/\n# third-person masculine singular non-past active jussive of مَاعَ (māʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamiʕ", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "معتما",
-        "u": "معتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مِعْتُمَا • (miʕtumā) (form I) /miʕ.tu.maː/\n# second-person dual past active of مَاعَ (māʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["miʕtumā", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "ماعت",
-        "u": "ماعت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَاعَتْ • (māʕat) (form I) /maː.ʕat/\n# third-person feminine singular past active of مَاعَ (māʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["māʕat", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "معت",
-        "u": "معت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "معت (form I)\n# مِعْتُ (miʕtu) /miʕ.tu/: first-person singular past active of مَاعَ (māʕa)\n# مِعْتَ (miʕta) /miʕ.ta/: second-person masculine singular past active of مَاعَ (māʕa)\n# مِعْتِ (miʕti) /miʕ.ti/: second-person feminine singular past active of مَاعَ (māʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["miʕtu", "māʕa", "miʕta"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "ماعا",
-        "u": "ماعا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَاعَا • (māʕā) (form I) /maː.ʕaː/\n# third-person masculine dual past active of مَاعَ (māʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["māʕā", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "ماعتا",
-        "u": "ماعتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَاعَتَا • (māʕatā) (form I) /maː.ʕa.taː/\n# third-person feminine dual past active of مَاعَ (māʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["māʕatā", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "معتم",
-        "u": "معتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مِعْتُمْ • (miʕtum) (form I) /miʕ.tum/\n# second-person masculine plural past active of مَاعَ (māʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["miʕtum", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "ماعوا",
-        "u": "ماعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَاعُوا • (māʕū) (form I) /maː.ʕuː/\n# third-person masculine plural past active of مَاعَ (māʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["māʕū", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "معتن",
-        "u": "معتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مِعْتُنَّ • (miʕtunna) (form I) /miʕ.tun.na/\n# second-person feminine plural past active of مَاعَ (māʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["miʕtunna", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "معن",
-        "u": "معن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مِعْنَ • (miʕna) (form I) /miʕ.na/\n# inflection of مَاعَ (māʕa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["miʕna", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "ميعي",
-        "u": "ميعي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "مِيعِي • (mīʕī) (form I) /miː.ʕiː/\n# second-person feminine singular imperative of مَاعَ (māʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["mīʕī", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "ميعا",
-        "u": "ميعا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "مِيعَا • (mīʕā) (form I) /miː.ʕaː/\n# second-person dual imperative of مَاعَ (māʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["mīʕā", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      },
-      {
-        "w": "ميعوا",
-        "u": "ميعوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "مِيعُوا • (mīʕū) (form I) /miː.ʕuː/\n# second-person masculine plural imperative of مَاعَ (māʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["mīʕū", "māʕa"],
-        "k": "ماع",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "مع",
+  "ses": {
     "harf": "م",
+    "fasil": "مع",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "مع",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "مِعْ • (miʕ) (form I) /miʕ/\n# second-person masculine singular imperative of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["miʕ", "māʕa"]
+    },
+    {
+      "madde": "تميع",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تميع (form I)\n# تَمِيعُ (tamīʕu) /ta.miː.ʕu/: inflection of مَاعَ (māʕa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَمِيعَ (tamīʕa) /ta.miː.ʕa/: inflection of مَاعَ (māʕa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamīʕu", "māʕa", "tamīʕa"]
+    },
+    {
+      "madde": "معنا",
+      "tur": "verb",
+      "baslik": "مِعْنَا • (miʕnā) (form I) /miʕ.naː/\n# first-person plural past active of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["miʕnā", "māʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمعن",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تَمِعْنَ • (tamiʕna) (form I) /ta.miʕ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamiʕna", "māʕa"]
+    },
+    {
+      "madde": "أميع",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أميع (form I)\n# أَمِيعُ (ʔamīʕu) /ʔa.miː.ʕu/: first-person singular non-past active indicative of مَاعَ (māʕa)\n# أَمِيعَ (ʔamīʕa) /ʔa.miː.ʕa/: first-person singular non-past active subjunctive of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔamīʕu", "māʕa", "ʔamīʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تميعين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَمِيعِينَ • (tamīʕīna) (form I) /ta.miː.ʕiː.na/\n# second-person feminine singular non-past active indicative of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamīʕīna", "māʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يميع",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يميع (form I)\n# يَمِيعُ (yamīʕu) /ja.miː.ʕu/: third-person masculine singular non-past active indicative of مَاعَ (māʕa)\n# يَمِيعَ (yamīʕa) /ja.miː.ʕa/: third-person masculine singular non-past active subjunctive of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamīʕu", "māʕa", "yamīʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تميعان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَمِيعَانِ • (tamīʕāni) (form I) /ta.miː.ʕaː.ni/\n# inflection of مَاعَ (māʕa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamīʕāni", "māʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تميعون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَمِيعُونَ • (tamīʕūna) (form I) /ta.miː.ʕuː.na/\n# second-person masculine plural non-past active indicative of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamīʕūna", "māʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يمعن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يَمِعْنَ • (yamiʕna) (form I) /ja.miʕ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamiʕna", "māʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يميعون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَمِيعُونَ • (yamīʕūna) (form I) /ja.miː.ʕuː.na/\n# third-person masculine plural non-past active indicative of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamīʕūna", "māʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يميعان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَمِيعَانِ • (yamīʕāni) (form I) /ja.miː.ʕaː.ni/\n# third-person masculine dual non-past active indicative of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamīʕāni", "māʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تميعي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَمِيعِي • (tamīʕī) (form I) /ta.miː.ʕiː/\n# second-person feminine singular non-past active subjunctive/jussive of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamīʕī", "māʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تميعا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَمِيعَا • (tamīʕā) (form I) /ta.miː.ʕaː/\n# inflection of مَاعَ (māʕa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamīʕā", "māʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تميعوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَمِيعُوا • (tamīʕū) (form I) /ta.miː.ʕuː/\n# second-person masculine plural non-past active subjunctive/jussive of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamīʕū", "māʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يميعوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَمِيعُوا • (yamīʕū) (form I) /ja.miː.ʕuː/\n# third-person masculine plural non-past active subjunctive/jussive of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamīʕū", "māʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نميع",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نميع (form I)\n# نَمِيعُ (namīʕu) /na.miː.ʕu/: first-person plural non-past active indicative of مَاعَ (māʕa)\n# نَمِيعَ (namīʕa) /na.miː.ʕa/: first-person plural non-past active subjunctive of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["namīʕu", "māʕa", "namīʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يميعا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَمِيعَا • (yamīʕā) (form I) /ja.miː.ʕaː/\n# third-person masculine dual non-past active subjunctive/jussive of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamīʕā", "māʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمع",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَمِعْ • (tamiʕ) (form I) /ta.miʕ/\n# inflection of مَاعَ (māʕa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamiʕ", "māʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أمع",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَمِعْ • (ʔamiʕ) (form I) /ʔa.miʕ/\n# first-person singular non-past active jussive of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔamiʕ", "māʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نمع",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نَمِعْ • (namiʕ) (form I) /na.miʕ/\n# first-person plural non-past active jussive of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["namiʕ", "māʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يمع",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَمِعْ • (yamiʕ) (form I) /ja.miʕ/\n# third-person masculine singular non-past active jussive of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamiʕ", "māʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "معتما",
+      "tur": "verb",
+      "baslik": "مِعْتُمَا • (miʕtumā) (form I) /miʕ.tu.maː/\n# second-person dual past active of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["miʕtumā", "māʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ماعت",
+      "tur": "verb",
+      "baslik": "مَاعَتْ • (māʕat) (form I) /maː.ʕat/\n# third-person feminine singular past active of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["māʕat", "māʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "معت",
+      "tur": "verb",
+      "baslik": "معت (form I)\n# مِعْتُ (miʕtu) /miʕ.tu/: first-person singular past active of مَاعَ (māʕa)\n# مِعْتَ (miʕta) /miʕ.ta/: second-person masculine singular past active of مَاعَ (māʕa)\n# مِعْتِ (miʕti) /miʕ.ti/: second-person feminine singular past active of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["miʕtu", "māʕa", "miʕta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ماعا",
+      "tur": "verb",
+      "baslik": "مَاعَا • (māʕā) (form I) /maː.ʕaː/\n# third-person masculine dual past active of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["māʕā", "māʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ماعتا",
+      "tur": "verb",
+      "baslik": "مَاعَتَا • (māʕatā) (form I) /maː.ʕa.taː/\n# third-person feminine dual past active of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["māʕatā", "māʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "معتم",
+      "tur": "verb",
+      "baslik": "مِعْتُمْ • (miʕtum) (form I) /miʕ.tum/\n# second-person masculine plural past active of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["miʕtum", "māʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ماعوا",
+      "tur": "verb",
+      "baslik": "مَاعُوا • (māʕū) (form I) /maː.ʕuː/\n# third-person masculine plural past active of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["māʕū", "māʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "معتن",
+      "tur": "verb",
+      "baslik": "مِعْتُنَّ • (miʕtunna) (form I) /miʕ.tun.na/\n# second-person feminine plural past active of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["miʕtunna", "māʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "معن",
+      "tur": "verb",
+      "baslik": "مِعْنَ • (miʕna) (form I) /miʕ.na/\n# inflection of مَاعَ (māʕa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["miʕna", "māʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ميعي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "مِيعِي • (mīʕī) (form I) /miː.ʕiː/\n# second-person feminine singular imperative of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["mīʕī", "māʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ميعا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "مِيعَا • (mīʕā) (form I) /miː.ʕaː/\n# second-person dual imperative of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["mīʕā", "māʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ميعوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "مِيعُوا • (mīʕū) (form I) /miː.ʕuː/\n# second-person masculine plural imperative of مَاعَ (māʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["mīʕū", "māʕa"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ماع", "r7"]
+  ],
+  "mana": {
     "ince": "liquefy.v.03",
     "orta": "verb.change",
     "ust": "fiil ve hadise",
@@ -464,22 +337,15 @@
     "dayanak_tanim": "become liquid or fluid when heated",
     "synset_sayisi": 3
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["chew_over.v.01", "dark.a.02", "liquefy.v.03"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["chew_over.v.01", "dark.a.02", "liquefy.v.03"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

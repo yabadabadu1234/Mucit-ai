@@ -1,997 +1,708 @@
 {
   "kok": "عزى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "عزى", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "العين والزاي",
-      "baslik": "عزو - عزى",
-      "mihveri": "رَبْطُ الشيء شديدًا بآخر كالعَزْو المذكور. (وقد أخذنا الوصف) (بالشدة) من علاقة النسب = القرابة - كالأبوة والأخوة لأنها أقوى العلائق. والنسب ليس هو المصاهرة). ولوحظ في العِزَة أنها حَلْقة وجماعة متصلة متماسكة متميزة عن غيرها. {عَنِ الْيَمِينِ وَعَنِ الشِّمَالِ عِزِينَ} ومنه \"العَزَاء؛ الصبر عند المصائب. عَزِىَ (كرضى) وعَزّاه - ض - فتعزّى \". وحقيقة ذلك فيما أرى أخذًا من الأصل: التماسك والتقَوِّى كما يقال تَجَلَّد واشْتَدّ وكأنها محولة من (عزز) كتقضي. وقد رُدَّتْ في [ل والمقاييس] إلى اتخاذ الأُسْوَة فيقول حالي مثل حال فلان.",
-      "sesler": "",
-      "tam_metin": "{عَنِ الْيَمِينِ وَعَنِ الشِّمَالِ عِزِينَ} [المعارج: 37]\n\"العِزَةُ - كرئة: الجماعةُ والفرقة من الناس. عَزَا فلانٌ نفسَه إلى بني فلان يعزُوها ويَعزيها عَزْوًا وعَزْيًا: نَسَبها، واعْتَزَى وتعزَّي: انتَسب صِدْقًا أو كذبًا. وعزا الحديثَ إلى فلان: نَمَاه وأَسْنده \".\n(3/1455)\n° المعنى المحوري\nرَبْطُ الشيء شديدًا بآخر كالعَزْو المذكور. (وقد أخذنا الوصف) (بالشدة) من علاقة النسب = القرابة - كالأبوة والأخوة لأنها أقوى العلائق. والنسب ليس هو المصاهرة). ولوحظ في العِزَة أنها حَلْقة وجماعة متصلة متماسكة متميزة عن غيرها. {عَنِ الْيَمِينِ وَعَنِ الشِّمَالِ عِزِينَ} ومنه \"العَزَاء؛ الصبر عند المصائب. عَزِىَ (كرضى) وعَزّاه - ض - فتعزّى \". وحقيقة ذلك فيما أرى أخذًا من الأصل: التماسك والتقَوِّى كما يقال تَجَلَّد واشْتَدّ وكأنها محولة من (عزز) كتقضي. وقد رُدَّتْ في [ل والمقاييس] إلى اتخاذ الأُسْوَة فيقول حالي مثل حال فلان.",
-      "fasil_ozeti": "° معنى الفصل المعجمي (عز) : هو تماسك الأثناء والاشتداد كما يتمثل في العزَاز: ما صلُب من الأرض واشتد وخشن -في (عزز)، وكما في الاعتزاء الانتساب"
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "عزت",
-        "u": "عزت",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "عَزَتْ • (ʕazat) (form I) /ʕa.zat/\n# third-person feminine singular past active of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕazat", "ʕazā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "عزت",
-        "u": "عزت",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "عَزَّتْ • (ʕazzat) (form II) /ʕaz.zat/\n# third-person feminine singular past active of عَزَّى (ʕazzā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʕazzat", "ʕazzā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "أعز",
-        "u": "أعز",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "أعز (form I)\n# أَعْزِ (ʔaʕzi) /ʔaʕ.zi/: first-person singular non-past active jussive of عَزَى (ʕazā)\n# أُعْزَ (ʔuʕza) /ʔuʕ.za/: first-person singular non-past passive jussive of عَزَى (ʕazā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaʕzi", "ʕazā", "ʔuʕza"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "أعز",
-        "u": "أعز",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "أعز (form II)\n# أُعَزِّ (ʔuʕazzi) /ʔu.ʕaz.zi/: first-person singular non-past active jussive of عَزَّى (ʕazzā)\n# أُعَزَّ (ʔuʕazza) /ʔu.ʕaz.za/: first-person singular non-past passive jussive of عَزَّى (ʕazzā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuʕazzi", "ʕazzā", "ʔuʕazza"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "عز",
-        "u": "عز",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "عَزِّ • (ʕazzi) (form II) /ʕaz.zi/\n# second-person masculine singular imperative of عَزَّى (ʕazzā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʕazzi", "ʕazzā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "عزي",
-        "u": "عزي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "عُزِيَ • (ʕuziya) (form I) /ʕu.zi.ja/\n# third-person masculine singular past passive of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕuziya", "ʕazā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "عزي",
-        "u": "عزي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "عزي (form II)\n# عُزِّيَ (ʕuzziya) /ʕuz.zi.ja/: third-person masculine singular past passive of عَزَّى (ʕazzā)\n# عَزِّي (ʕazzī) /ʕaz.ziː/: second-person feminine singular imperative of عَزَّى (ʕazzā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʕuzziya", "ʕazzā", "ʕazzī"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعز",
-        "u": "تعز",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تعز (form I)\n# تَعْزِ (taʕzi) /taʕ.zi/: inflection of عَزَى (ʕazā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُعْزَ (tuʕza) /tuʕ.za/: inflection of عَزَى (ʕazā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʕzi", "ʕazā", "tuʕza"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعز",
-        "u": "تعز",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "تعز (form II)\n# تُعَزِّ (tuʕazzi) /tu.ʕaz.zi/: inflection of عَزَّى (ʕazzā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُعَزَّ (tuʕazza) /tu.ʕaz.za/: inflection of عَزَّى (ʕazzā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuʕazzi", "ʕazzā", "tuʕazza"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعزين",
-        "u": "تعزين",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تعزين (form I)\n# تَعْزِينَ (taʕzīna) /taʕ.ziː.na/: inflection of عَزَى (ʕazā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُعْزَيْنَ (tuʕzayna) /tuʕ.zaj.na/: inflection of عَزَى (ʕazā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passi",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʕzīna", "ʕazā", "tuʕzayna"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعزين",
-        "u": "تعزين",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تعزين (form II)\n# تُعَزِّينَ (tuʕazzīna) /tu.ʕaz.ziː.na/: inflection of عَزَّى (ʕazzā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُعَزَّيْنَ (tuʕazzayna) /tu.ʕaz.zaj.na/: inflection of عَزَّى (ʕazzā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plur",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuʕazzīna", "ʕazzā", "tuʕazzayna"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعز",
-        "u": "يعز",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يعز (form I)\n# يَعْزِ (yaʕzi) /jaʕ.zi/: third-person masculine singular non-past active jussive of عَزَى (ʕazā)\n# يُعْزَ (yuʕza) /juʕ.za/: third-person masculine singular non-past passive jussive of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʕzi", "ʕazā", "yuʕza"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعز",
-        "u": "يعز",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "يعز (form II)\n# يُعَزِّ (yuʕazzi) /ju.ʕaz.zi/: third-person masculine singular non-past active jussive of عَزَّى (ʕazzā)\n# يُعَزَّ (yuʕazza) /ju.ʕaz.za/: third-person masculine singular non-past passive jussive of عَزَّى (ʕazzā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuʕazzi", "ʕazzā", "yuʕazza"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "نعز",
-        "u": "نعز",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "نعز (form I)\n# نَعْزِ (naʕzi) /naʕ.zi/: first-person plural non-past active jussive of عَزَى (ʕazā)\n# نُعْزَ (nuʕza) /nuʕ.za/: first-person plural non-past passive jussive of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naʕzi", "ʕazā", "nuʕza"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "نعز",
-        "u": "نعز",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "نعز (form II)\n# نُعَزِّ (nuʕazzi) /nu.ʕaz.zi/: first-person plural non-past active jussive of عَزَّى (ʕazzā)\n# نُعَزَّ (nuʕazza) /nu.ʕaz.za/: first-person plural non-past passive jussive of عَزَّى (ʕazzā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuʕazzi", "ʕazzā", "nuʕazza"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعزون",
-        "u": "يعزون",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يعزون (form I)\n# يَعْزُونَ (yaʕzūna) /jaʕ.zuː.na/: third-person masculine plural non-past active indicative of عَزَى (ʕazā)\n# يُعْزَوْنَ (yuʕzawna) /juʕ.zaw.na/: third-person masculine plural non-past passive indicative of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʕzūna", "ʕazā", "yuʕzawna"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعزون",
-        "u": "يعزون",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "يعزون (form II)\n# يُعَزُّونَ (yuʕazzūna) /ju.ʕaz.zuː.na/: third-person masculine plural non-past active indicative of عَزَّى (ʕazzā)\n# يُعَزَّوْنَ (yuʕazzawna) /ju.ʕaz.zaw.na/: third-person masculine plural non-past passive indicative of عَزَّى (ʕazzā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuʕazzūna", "ʕazzā", "yuʕazzawna"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعزون",
-        "u": "تعزون",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تعزون (form I)\n# تَعْزُونَ (taʕzūna) /taʕ.zuː.na/: second-person masculine plural non-past active indicative of عَزَى (ʕazā)\n# تُعْزَوْنَ (tuʕzawna) /tuʕ.zaw.na/: second-person masculine plural non-past passive indicative of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʕzūna", "ʕazā", "tuʕzawna"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعزون",
-        "u": "تعزون",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تعزون (form II)\n# تُعَزُّونَ (tuʕazzūna) /tu.ʕaz.zuː.na/: second-person masculine plural non-past active indicative of عَزَّى (ʕazzā)\n# تُعَزَّوْنَ (tuʕazzawna) /tu.ʕaz.zaw.na/: second-person masculine plural non-past passive indicative of عَزَّى (ʕazzā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuʕazzūna", "ʕazzā", "tuʕazzawna"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعزي",
-        "u": "تعزي",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تعزي (form I)\n# تَعْزِي (taʕzī) /taʕ.ziː/: inflection of عَزَى (ʕazā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَعْزِيَ (taʕziya) /taʕ.zi.ja/: inflection of عَزَى (ʕazā):\n## second-person masculine singular non-past active subjunctive\n## third",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʕzī", "ʕazā", "taʕziya"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعزي",
-        "u": "تعزي",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تعزي (form II)\n# تُعَزِّي (tuʕazzī) /tu.ʕaz.ziː/: inflection of عَزَّى (ʕazzā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُعَزِّيَ (tuʕazziya) /tu.ʕaz.zi.ja/: inflection of عَزَّى (ʕazzā):\n## second-person masculine singular non-past active sub",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuʕazzī", "ʕazzā", "tuʕazziya"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعزوا",
-        "u": "يعزوا",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يعزوا (form I)\n# يَعْزُوا (yaʕzū) /jaʕ.zuː/: third-person masculine plural non-past active subjunctive/jussive of عَزَى (ʕazā)\n# يُعْزَوْا (yuʕzaw) /juʕ.zaw/: third-person masculine plural non-past passive subjunctive/jussive of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʕzū", "ʕazā", "yuʕzaw"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعزوا",
-        "u": "يعزوا",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "يعزوا (form II)\n# يُعَزُّوا (yuʕazzū) /ju.ʕaz.zuː/: third-person masculine plural non-past active subjunctive/jussive of عَزَّى (ʕazzā)\n# يُعَزَّوْا (yuʕazzaw) /ju.ʕaz.zaw/: third-person masculine plural non-past passive subjunctive/jussive of عَزَّى (ʕazzā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuʕazzū", "ʕazzā", "yuʕazzaw"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعزوا",
-        "u": "تعزوا",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تعزوا (form I)\n# تَعْزُوا (taʕzū) /taʕ.zuː/: second-person masculine plural non-past active subjunctive/jussive of عَزَى (ʕazā)\n# تُعْزَوْا (tuʕzaw) /tuʕ.zaw/: second-person masculine plural non-past passive subjunctive/jussive of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʕzū", "ʕazā", "tuʕzaw"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعزوا",
-        "u": "تعزوا",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تعزوا (form II)\n# تُعَزُّوا (tuʕazzū) /tu.ʕaz.zuː/: second-person masculine plural non-past active subjunctive/jussive of عَزَّى (ʕazzā)\n# تُعَزَّوْا (tuʕazzaw) /tu.ʕaz.zaw/: second-person masculine plural non-past passive subjunctive/jussive of عَزَّى (ʕazzā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuʕazzū", "ʕazzā", "tuʕazzaw"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "أعزي",
-        "u": "أعزي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أعزي (form I)\n# أَعْزِي (ʔaʕzī) /ʔaʕ.ziː/: first-person singular non-past active indicative of عَزَى (ʕazā)\n# أَعْزِيَ (ʔaʕziya) /ʔaʕ.zi.ja/: first-person singular non-past active subjunctive of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaʕzī", "ʕazā", "ʔaʕziya"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "أعزي",
-        "u": "أعزي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أعزي (form II)\n# أُعَزِّي (ʔuʕazzī) /ʔu.ʕaz.ziː/: first-person singular non-past active indicative of عَزَّى (ʕazzā)\n# أُعَزِّيَ (ʔuʕazziya) /ʔu.ʕaz.zi.ja/: first-person singular non-past active subjunctive of عَزَّى (ʕazzā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuʕazzī", "ʕazzā", "ʔuʕazziya"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "عزتا",
-        "u": "عزتا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "عَزَتَا • (ʕazatā) (form I) /ʕa.za.taː/\n# third-person feminine dual past active of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕazatā", "ʕazā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "عزتا",
-        "u": "عزتا",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "عَزَّتَا • (ʕazzatā) (form II) /ʕaz.za.taː/\n# third-person feminine dual past active of عَزَّى (ʕazzā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʕazzatā", "ʕazzā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "عزوا",
-        "u": "عزوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "عزوا (form I)\n# عَزَوْا (ʕazaw) /ʕa.zaw/: third-person masculine plural past active of عَزَى (ʕazā)\n# عُزُوا (ʕuzū) /ʕu.zuː/: third-person masculine plural past passive of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕazaw", "ʕazā", "ʕuzū"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "عزوا",
-        "u": "عزوا",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "عزوا (form II)\n# عَزَّوْا (ʕazzaw) /ʕaz.zaw/: third-person masculine plural past active of عَزَّى (ʕazzā)\n# عُزُّوا (ʕuzzū) /ʕuz.zuː/: third-person masculine plural past passive of عَزَّى (ʕazzā)\n# عَزُّوا (ʕazzū) /ʕaz.zuː/: second-person masculine plural imperative of عَزَّى (ʕazzā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʕazzaw", "ʕazzā", "ʕuzzū"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "اعز",
-        "u": "اعز",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "اِعْزِ • (iʕzi) (form I) /iʕ.zi/\n# second-person masculine singular imperative of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iʕzi", "ʕazā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "اعزي",
-        "u": "اعزي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "اِعْزِي • (iʕzī) (form I) /iʕ.ziː/\n# second-person feminine singular imperative of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iʕzī", "ʕazā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "اعزوا",
-        "u": "اعزوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "اِعْزُوا • (iʕzū) (form I) /iʕ.zuː/\n# second-person masculine plural imperative of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iʕzū", "ʕazā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "عزيتما",
-        "u": "عزيتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "عزيتما (form I)\n# عَزَيْتُمَا (ʕazaytumā) /ʕa.zaj.tu.maː/: second-person dual past active of عَزَى (ʕazā)\n# عُزِيتُمَا (ʕuzītumā) /ʕu.ziː.tu.maː/: second-person dual past passive of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕazaytumā", "ʕazā", "ʕuzītumā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "عزيتما",
-        "u": "عزيتما",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "عزيتما (form II)\n# عَزَّيْتُمَا (ʕazzaytumā) /ʕaz.zaj.tu.maː/: second-person dual past active of عَزَّى (ʕazzā)\n# عُزِّيتُمَا (ʕuzzītumā) /ʕuz.ziː.tu.maː/: second-person dual past passive of عَزَّى (ʕazzā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʕazzaytumā", "ʕazzā", "ʕuzzītumā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "عزيت",
-        "u": "عزيت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "عزيت (form I)\n# عَزَيْتُ (ʕazaytu) /ʕa.zaj.tu/: first-person singular past active of عَزَى (ʕazā)\n# عَزَيْتَ (ʕazayta) /ʕa.zaj.ta/: second-person masculine singular past active of عَزَى (ʕazā)\n# عَزَيْتِ (ʕazayti) /ʕa.zaj.ti/: second-person feminine singular past active of عَزَى (ʕazā)\n# عُزِيتُ (ʕuzītu) /ʕu.ziː.tu/: first-person singular past passive of عَزَى (ʕazā)\n# عُزِيتَ (ʕuzīta) /ʕu.ziː.ta/",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕazaytu", "ʕazā", "ʕazayta"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "عزيت",
-        "u": "عزيت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "عزيت (form II)\n# عَزَّيْتُ (ʕazzaytu) /ʕaz.zaj.tu/: first-person singular past active of عَزَّى (ʕazzā)\n# عَزَّيْتَ (ʕazzayta) /ʕaz.zaj.ta/: second-person masculine singular past active of عَزَّى (ʕazzā)\n# عَزَّيْتِ (ʕazzayti) /ʕaz.zaj.ti/: second-person feminine singular past active of عَزَّى (ʕazzā)\n# عُزِّيتُ (ʕuzzītu) /ʕuz.ziː.tu/: first-person singular past passive of عَزَّى (ʕazzā)\n# عُزِّيت",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʕazzaytu", "ʕazzā", "ʕazzayta"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "عزيا",
-        "u": "عزيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "عزيا (form I)\n# عَزَيَا (ʕazayā) /ʕa.za.jaː/: third-person masculine dual past active of عَزَى (ʕazā)\n# عُزِيَا (ʕuziyā) /ʕu.zi.jaː/: third-person masculine dual past passive of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕazayā", "ʕazā", "ʕuziyā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "عزيا",
-        "u": "عزيا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "عزيا (form II)\n# عَزَّيَا (ʕazzayā) /ʕaz.za.jaː/: third-person masculine dual past active of عَزَّى (ʕazzā)\n# عُزِّيَا (ʕuzziyā) /ʕuz.zi.jaː/: third-person masculine dual past passive of عَزَّى (ʕazzā)\n# عَزِّيَا (ʕazziyā) /ʕaz.zi.jaː/: second-person dual imperative of عَزَّى (ʕazzā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʕazzayā", "ʕazzā", "ʕuzziyā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "عزيتم",
-        "u": "عزيتم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "عزيتم (form I)\n# عَزَيْتُمْ (ʕazaytum) /ʕa.zaj.tum/: second-person masculine plural past active of عَزَى (ʕazā)\n# عُزِيتُمْ (ʕuzītum) /ʕu.ziː.tum/: second-person masculine plural past passive of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕazaytum", "ʕazā", "ʕuzītum"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "عزيتم",
-        "u": "عزيتم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "عزيتم (form II)\n# عَزَّيْتُمْ (ʕazzaytum) /ʕaz.zaj.tum/: second-person masculine plural past active of عَزَّى (ʕazzā)\n# عُزِّيتُمْ (ʕuzzītum) /ʕuz.ziː.tum/: second-person masculine plural past passive of عَزَّى (ʕazzā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʕazzaytum", "ʕazzā", "ʕuzzītum"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "عزيتن",
-        "u": "عزيتن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "عزيتن (form I)\n# عَزَيْتُنَّ (ʕazaytunna) /ʕa.zaj.tun.na/: second-person feminine plural past active of عَزَى (ʕazā)\n# عُزِيتُنَّ (ʕuzītunna) /ʕu.ziː.tun.na/: second-person feminine plural past passive of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕazaytunna", "ʕazā", "ʕuzītunna"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "عزيتن",
-        "u": "عزيتن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "عزيتن (form II)\n# عَزَّيْتُنَّ (ʕazzaytunna) /ʕaz.zaj.tun.na/: second-person feminine plural past active of عَزَّى (ʕazzā)\n# عُزِّيتُنَّ (ʕuzzītunna) /ʕuz.ziː.tun.na/: second-person feminine plural past passive of عَزَّى (ʕazzā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʕazzaytunna", "ʕazzā", "ʕuzzītunna"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "عزينا",
-        "u": "عزينا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "عزينا (form I)\n# عَزَيْنَا (ʕazaynā) /ʕa.zaj.naː/: first-person plural past active of عَزَى (ʕazā)\n# عُزِينَا (ʕuzīnā) /ʕu.ziː.naː/: first-person plural past passive of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕazaynā", "ʕazā", "ʕuzīnā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "عزينا",
-        "u": "عزينا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "عزينا (form II)\n# عَزَّيْنَا (ʕazzaynā) /ʕaz.zaj.naː/: first-person plural past active of عَزَّى (ʕazzā)\n# عُزِّينَا (ʕuzzīnā) /ʕuz.ziː.naː/: first-person plural past passive of عَزَّى (ʕazzā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʕazzaynā", "ʕazzā", "ʕuzzīnā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "عزيتا",
-        "u": "عزيتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "عُزِيَتَا • (ʕuziyatā) (form I) /ʕu.zi.ja.taː/\n# third-person feminine dual past passive of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕuziyatā", "ʕazā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "عزيتا",
-        "u": "عزيتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "عُزِّيَتَا • (ʕuzziyatā) (form II) /ʕuz.zi.ja.taː/\n# third-person feminine dual past passive of عَزَّى (ʕazzā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʕuzziyatā", "ʕazzā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعزي",
-        "u": "يعزي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يعزي (form I)\n# يَعْزِي (yaʕzī) /jaʕ.ziː/: third-person masculine singular non-past active indicative of عَزَى (ʕazā)\n# يَعْزِيَ (yaʕziya) /jaʕ.zi.ja/: third-person masculine singular non-past active subjunctive of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʕzī", "ʕazā", "yaʕziya"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعزي",
-        "u": "يعزي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يعزي (form II)\n# يُعَزِّي (yuʕazzī) /ju.ʕaz.ziː/: third-person masculine singular non-past active indicative of عَزَّى (ʕazzā)\n# يُعَزِّيَ (yuʕazziya) /ju.ʕaz.zi.ja/: third-person masculine singular non-past active subjunctive of عَزَّى (ʕazzā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuʕazzī", "ʕazzā", "yuʕazziya"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "عزين",
-        "u": "عزين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "عزين (form I)\n# عَزَيْنَ (ʕazayna) /ʕa.zaj.na/: third-person feminine plural past active of عَزَى (ʕazā)\n# عُزِينَ (ʕuzīna) /ʕu.ziː.na/: third-person feminine plural past passive of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕazayna", "ʕazā", "ʕuzīna"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "عزين",
-        "u": "عزين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "عزين (form II)\n# عَزَّيْنَ (ʕazzayna) /ʕaz.zaj.na/: third-person feminine plural past active of عَزَّى (ʕazzā)\n# عُزِّينَ (ʕuzzīna) /ʕuz.ziː.na/: third-person feminine plural past passive of عَزَّى (ʕazzā)\n# عَزِّينَ (ʕazzīna) /ʕaz.ziː.na/: second-person feminine plural imperative of عَزَّى (ʕazzā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʕazzayna", "ʕazzā", "ʕuzzīna"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعزيان",
-        "u": "تعزيان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تعزيان (form I)\n# تَعْزِيَانِ (taʕziyāni) /taʕ.zi.jaː.ni/: inflection of عَزَى (ʕazā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُعْزَيَانِ (tuʕzayāni) /tuʕ.za.jaː.ni/: inflection of عَزَى (ʕazā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʕziyāni", "ʕazā", "tuʕzayāni"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعزيان",
-        "u": "تعزيان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تعزيان (form II)\n# تُعَزِّيَانِ (tuʕazziyāni) /tu.ʕaz.zi.jaː.ni/: inflection of عَزَّى (ʕazzā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُعَزَّيَانِ (tuʕazzayāni) /tu.ʕaz.za.jaː.ni/: inflection of عَزَّى (ʕazzā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuʕazziyāni", "ʕazzā", "tuʕazzayāni"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "نعزي",
-        "u": "نعزي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نعزي (form I)\n# نَعْزِي (naʕzī) /naʕ.ziː/: first-person plural non-past active indicative of عَزَى (ʕazā)\n# نَعْزِيَ (naʕziya) /naʕ.zi.ja/: first-person plural non-past active subjunctive of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naʕzī", "ʕazā", "naʕziya"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "نعزي",
-        "u": "نعزي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نعزي (form II)\n# نُعَزِّي (nuʕazzī) /nu.ʕaz.ziː/: first-person plural non-past active indicative of عَزَّى (ʕazzā)\n# نُعَزِّيَ (nuʕazziya) /nu.ʕaz.zi.ja/: first-person plural non-past active subjunctive of عَزَّى (ʕazzā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuʕazzī", "ʕazzā", "nuʕazziya"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعزيان",
-        "u": "يعزيان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يعزيان (form I)\n# يَعْزِيَانِ (yaʕziyāni) /jaʕ.zi.jaː.ni/: third-person masculine dual non-past active indicative of عَزَى (ʕazā)\n# يُعْزَيَانِ (yuʕzayāni) /juʕ.za.jaː.ni/: third-person masculine dual non-past passive indicative of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʕziyāni", "ʕazā", "yuʕzayāni"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعزيان",
-        "u": "يعزيان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يعزيان (form II)\n# يُعَزِّيَانِ (yuʕazziyāni) /ju.ʕaz.zi.jaː.ni/: third-person masculine dual non-past active indicative of عَزَّى (ʕazzā)\n# يُعَزَّيَانِ (yuʕazzayāni) /ju.ʕaz.za.jaː.ni/: third-person masculine dual non-past passive indicative of عَزَّى (ʕazzā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuʕazziyāni", "ʕazzā", "yuʕazzayāni"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعزى",
-        "u": "يعزى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُعْزَى • (yuʕzā) (form I) /juʕ.zaː/\n# third-person masculine singular non-past passive indicative/subjunctive of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuʕzā", "ʕazā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعزى",
-        "u": "يعزى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُعَزَّى • (yuʕazzā) (form II) /ju.ʕaz.zaː/\n# third-person masculine singular non-past passive indicative/subjunctive of عَزَّى (ʕazzā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuʕazzā", "ʕazzā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "أعزى",
-        "u": "أعزى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أُعْزَى • (ʔuʕzā) (form I) /ʔuʕ.zaː/\n# first-person singular non-past passive indicative/subjunctive of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔuʕzā", "ʕazā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "أعزى",
-        "u": "أعزى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أُعَزَّى • (ʔuʕazzā) (form II) /ʔu.ʕaz.zaː/\n# first-person singular non-past passive indicative/subjunctive of عَزَّى (ʕazzā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuʕazzā", "ʕazzā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "نعزى",
-        "u": "نعزى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نُعْزَى • (nuʕzā) (form I) /nuʕ.zaː/\n# first-person plural non-past passive indicative/subjunctive of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuʕzā", "ʕazā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "نعزى",
-        "u": "نعزى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نُعَزَّى • (nuʕazzā) (form II) /nu.ʕaz.zaː/\n# first-person plural non-past passive indicative/subjunctive of عَزَّى (ʕazzā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuʕazzā", "ʕazzā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعزين",
-        "u": "يعزين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يعزين (form I)\n# يَعْزِينَ (yaʕzīna) /jaʕ.ziː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of عَزَى (ʕazā)\n# يُعْزَيْنَ (yuʕzayna) /juʕ.zaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʕzīna", "ʕazā", "yuʕzayna"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعزين",
-        "u": "يعزين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يعزين (form II)\n# يُعَزِّينَ (yuʕazzīna) /ju.ʕaz.ziː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of عَزَّى (ʕazzā)\n# يُعَزَّيْنَ (yuʕazzayna) /ju.ʕaz.zaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of عَزَّى (ʕazzā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuʕazzīna", "ʕazzā", "yuʕazzayna"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعزى",
-        "u": "تعزى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُعْزَى • (tuʕzā) (form I) /tuʕ.zaː/\n# inflection of عَزَى (ʕazā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuʕzā", "ʕazā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعزى",
-        "u": "تعزى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُعَزَّى • (tuʕazzā) (form II) /tu.ʕaz.zaː/\n# inflection of عَزَّى (ʕazzā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuʕazzā", "ʕazzā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعزيا",
-        "u": "تعزيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تعزيا (form I)\n# تَعْزِيَا (taʕziyā) /taʕ.zi.jaː/: inflection of عَزَى (ʕazā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُعْزَيَا (tuʕzayā) /tuʕ.za.jaː/: inflection of عَزَى (ʕazā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʕziyā", "ʕazā", "tuʕzayā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعزيا",
-        "u": "تعزيا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تعزيا (form II)\n# تُعَزِّيَا (tuʕazziyā) /tu.ʕaz.zi.jaː/: inflection of عَزَّى (ʕazzā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُعَزَّيَا (tuʕazzayā) /tu.ʕaz.za.jaː/: inflection of عَزَّى (ʕazzā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctiv",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuʕazziyā", "ʕazzā", "tuʕazzayā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "اعزيا",
-        "u": "اعزيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِعْزِيَا • (iʕziyā) (form I) /iʕ.zi.jaː/\n# second-person dual imperative of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iʕziyā", "ʕazā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "اعزين",
-        "u": "اعزين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِعْزِينَ • (iʕzīna) (form I) /iʕ.ziː.na/\n# second-person feminine plural imperative of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iʕzīna", "ʕazā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعزيا",
-        "u": "يعزيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يعزيا (form I)\n# يَعْزِيَا (yaʕziyā) /jaʕ.zi.jaː/: third-person masculine dual non-past active subjunctive/jussive of عَزَى (ʕazā)\n# يُعْزَيَا (yuʕzayā) /juʕ.za.jaː/: third-person masculine dual non-past passive subjunctive/jussive of عَزَى (ʕazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʕziyā", "ʕazā", "yuʕzayā"],
-        "k": "عزى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعزيا",
-        "u": "يعزيا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يعزيا (form II)\n# يُعَزِّيَا (yuʕazziyā) /ju.ʕaz.zi.jaː/: third-person masculine dual non-past active subjunctive/jussive of عَزَّى (ʕazzā)\n# يُعَزَّيَا (yuʕazzayā) /ju.ʕaz.za.jaː/: third-person masculine dual non-past passive subjunctive/jussive of عَزَّى (ʕazzā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuʕazziyā", "ʕazzā", "yuʕazzayā"],
-        "k": "عزى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "عز",
+  "ses": {
     "harf": "ع",
+    "fasil": "عز",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "cebel": {
+    "fasil": "العين والزاي",
+    "baslik": "عزو - عزى",
+    "mihveri": "رَبْطُ الشيء شديدًا بآخر كالعَزْو المذكور. (وقد أخذنا الوصف) (بالشدة) من علاقة النسب = القرابة - كالأبوة والأخوة لأنها أقوى العلائق. والنسب ليس هو المصاهرة). ولوحظ في العِزَة أنها حَلْقة وجماعة متصلة متماسكة متميزة عن غيرها. {عَنِ الْيَمِينِ وَعَنِ الشِّمَالِ عِزِينَ} ومنه \"العَزَاء؛ الصبر عند المصائب. عَزِىَ (كرضى) وعَزّاه - ض - فتعزّى \". وحقيقة ذلك فيما أرى أخذًا من الأصل: التماسك والتقَوِّى كما يقال تَجَلَّد واشْتَدّ وكأنها محولة من (عزز) كتقضي. وقد رُدَّتْ في [ل والمقاييس] إلى اتخاذ الأُسْوَة فيقول حالي مثل حال فلان.",
+    "tam_metin": "{عَنِ الْيَمِينِ وَعَنِ الشِّمَالِ عِزِينَ} [المعارج: 37]\n\"العِزَةُ - كرئة: الجماعةُ والفرقة من الناس. عَزَا فلانٌ نفسَه إلى بني فلان يعزُوها ويَعزيها عَزْوًا وعَزْيًا: نَسَبها، واعْتَزَى وتعزَّي: انتَسب صِدْقًا أو كذبًا. وعزا الحديثَ إلى فلان: نَمَاه وأَسْنده \".\n(3/1455)\n° المعنى المحوري\nرَبْطُ الشيء شديدًا بآخر كالعَزْو المذكور. (وقد أخذنا الوصف) (بالشدة) من علاقة النسب = القرابة - كالأبوة والأخوة لأنها أقوى العلائق. والنسب ليس هو المصاهرة). ولوحظ في العِزَة أنها حَلْقة وجماعة متصلة متماسكة متميزة عن غيرها. {عَنِ الْيَمِينِ وَعَنِ الشِّمَالِ عِزِينَ} ومنه \"العَزَاء؛ الصبر عند المصائب. عَزِىَ (كرضى) وعَزّاه - ض - فتعزّى \". وحقيقة ذلك فيما أرى أخذًا من الأصل: التماسك والتقَوِّى كما يقال تَجَلَّد واشْتَدّ وكأنها محولة من (عزز) كتقضي. وقد رُدَّتْ في [ل والمقاييس] إلى اتخاذ الأُسْوَة فيقول حالي مثل حال فلان.",
+    "fasil_ozeti": "° معنى الفصل المعجمي (عز) : هو تماسك الأثناء والاشتداد كما يتمثل في العزَاز: ما صلُب من الأرض واشتد وخشن -في (عزز)، وكما في الاعتزاء الانتساب"
+  },
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "عزت",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "عَزَتْ • (ʕazat) (form I) /ʕa.zat/\n# third-person feminine singular past active of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕazat", "ʕazā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عزت",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "عَزَّتْ • (ʕazzat) (form II) /ʕaz.zat/\n# third-person feminine singular past active of عَزَّى (ʕazzā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʕazzat", "ʕazzā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعز",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "أعز (form I)\n# أَعْزِ (ʔaʕzi) /ʔaʕ.zi/: first-person singular non-past active jussive of عَزَى (ʕazā)\n# أُعْزَ (ʔuʕza) /ʔuʕ.za/: first-person singular non-past passive jussive of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaʕzi", "ʕazā", "ʔuʕza"]
+    },
+    {
+      "madde": "أعز",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "أعز (form II)\n# أُعَزِّ (ʔuʕazzi) /ʔu.ʕaz.zi/: first-person singular non-past active jussive of عَزَّى (ʕazzā)\n# أُعَزَّ (ʔuʕazza) /ʔu.ʕaz.za/: first-person singular non-past passive jussive of عَزَّى (ʕazzā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuʕazzi", "ʕazzā", "ʔuʕazza"]
+    },
+    {
+      "madde": "عز",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "عَزِّ • (ʕazzi) (form II) /ʕaz.zi/\n# second-person masculine singular imperative of عَزَّى (ʕazzā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʕazzi", "ʕazzā"]
+    },
+    {
+      "madde": "عزي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "عُزِيَ • (ʕuziya) (form I) /ʕu.zi.ja/\n# third-person masculine singular past passive of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕuziya", "ʕazā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عزي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "عزي (form II)\n# عُزِّيَ (ʕuzziya) /ʕuz.zi.ja/: third-person masculine singular past passive of عَزَّى (ʕazzā)\n# عَزِّي (ʕazzī) /ʕaz.ziː/: second-person feminine singular imperative of عَزَّى (ʕazzā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʕuzziya", "ʕazzā", "ʕazzī"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعز",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تعز (form I)\n# تَعْزِ (taʕzi) /taʕ.zi/: inflection of عَزَى (ʕazā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُعْزَ (tuʕza) /tuʕ.za/: inflection of عَزَى (ʕazā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʕzi", "ʕazā", "tuʕza"]
+    },
+    {
+      "madde": "تعز",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "تعز (form II)\n# تُعَزِّ (tuʕazzi) /tu.ʕaz.zi/: inflection of عَزَّى (ʕazzā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُعَزَّ (tuʕazza) /tu.ʕaz.za/: inflection of عَزَّى (ʕazzā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuʕazzi", "ʕazzā", "tuʕazza"]
+    },
+    {
+      "madde": "تعزين",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تعزين (form I)\n# تَعْزِينَ (taʕzīna) /taʕ.ziː.na/: inflection of عَزَى (ʕazā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُعْزَيْنَ (tuʕzayna) /tuʕ.zaj.na/: inflection of عَزَى (ʕazā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passi",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʕzīna", "ʕazā", "tuʕzayna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعزين",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تعزين (form II)\n# تُعَزِّينَ (tuʕazzīna) /tu.ʕaz.ziː.na/: inflection of عَزَّى (ʕazzā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُعَزَّيْنَ (tuʕazzayna) /tu.ʕaz.zaj.na/: inflection of عَزَّى (ʕazzā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plur",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuʕazzīna", "ʕazzā", "tuʕazzayna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعز",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يعز (form I)\n# يَعْزِ (yaʕzi) /jaʕ.zi/: third-person masculine singular non-past active jussive of عَزَى (ʕazā)\n# يُعْزَ (yuʕza) /juʕ.za/: third-person masculine singular non-past passive jussive of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʕzi", "ʕazā", "yuʕza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعز",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "يعز (form II)\n# يُعَزِّ (yuʕazzi) /ju.ʕaz.zi/: third-person masculine singular non-past active jussive of عَزَّى (ʕazzā)\n# يُعَزَّ (yuʕazza) /ju.ʕaz.za/: third-person masculine singular non-past passive jussive of عَزَّى (ʕazzā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuʕazzi", "ʕazzā", "yuʕazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نعز",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "نعز (form I)\n# نَعْزِ (naʕzi) /naʕ.zi/: first-person plural non-past active jussive of عَزَى (ʕazā)\n# نُعْزَ (nuʕza) /nuʕ.za/: first-person plural non-past passive jussive of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naʕzi", "ʕazā", "nuʕza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نعز",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "نعز (form II)\n# نُعَزِّ (nuʕazzi) /nu.ʕaz.zi/: first-person plural non-past active jussive of عَزَّى (ʕazzā)\n# نُعَزَّ (nuʕazza) /nu.ʕaz.za/: first-person plural non-past passive jussive of عَزَّى (ʕazzā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuʕazzi", "ʕazzā", "nuʕazza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعزون",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يعزون (form I)\n# يَعْزُونَ (yaʕzūna) /jaʕ.zuː.na/: third-person masculine plural non-past active indicative of عَزَى (ʕazā)\n# يُعْزَوْنَ (yuʕzawna) /juʕ.zaw.na/: third-person masculine plural non-past passive indicative of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʕzūna", "ʕazā", "yuʕzawna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعزون",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "يعزون (form II)\n# يُعَزُّونَ (yuʕazzūna) /ju.ʕaz.zuː.na/: third-person masculine plural non-past active indicative of عَزَّى (ʕazzā)\n# يُعَزَّوْنَ (yuʕazzawna) /ju.ʕaz.zaw.na/: third-person masculine plural non-past passive indicative of عَزَّى (ʕazzā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuʕazzūna", "ʕazzā", "yuʕazzawna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعزون",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تعزون (form I)\n# تَعْزُونَ (taʕzūna) /taʕ.zuː.na/: second-person masculine plural non-past active indicative of عَزَى (ʕazā)\n# تُعْزَوْنَ (tuʕzawna) /tuʕ.zaw.na/: second-person masculine plural non-past passive indicative of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʕzūna", "ʕazā", "tuʕzawna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعزون",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تعزون (form II)\n# تُعَزُّونَ (tuʕazzūna) /tu.ʕaz.zuː.na/: second-person masculine plural non-past active indicative of عَزَّى (ʕazzā)\n# تُعَزَّوْنَ (tuʕazzawna) /tu.ʕaz.zaw.na/: second-person masculine plural non-past passive indicative of عَزَّى (ʕazzā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuʕazzūna", "ʕazzā", "tuʕazzawna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعزي",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تعزي (form I)\n# تَعْزِي (taʕzī) /taʕ.ziː/: inflection of عَزَى (ʕazā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَعْزِيَ (taʕziya) /taʕ.zi.ja/: inflection of عَزَى (ʕazā):\n## second-person masculine singular non-past active subjunctive\n## third",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʕzī", "ʕazā", "taʕziya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعزي",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تعزي (form II)\n# تُعَزِّي (tuʕazzī) /tu.ʕaz.ziː/: inflection of عَزَّى (ʕazzā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُعَزِّيَ (tuʕazziya) /tu.ʕaz.zi.ja/: inflection of عَزَّى (ʕazzā):\n## second-person masculine singular non-past active sub",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuʕazzī", "ʕazzā", "tuʕazziya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعزوا",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يعزوا (form I)\n# يَعْزُوا (yaʕzū) /jaʕ.zuː/: third-person masculine plural non-past active subjunctive/jussive of عَزَى (ʕazā)\n# يُعْزَوْا (yuʕzaw) /juʕ.zaw/: third-person masculine plural non-past passive subjunctive/jussive of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʕzū", "ʕazā", "yuʕzaw"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعزوا",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "يعزوا (form II)\n# يُعَزُّوا (yuʕazzū) /ju.ʕaz.zuː/: third-person masculine plural non-past active subjunctive/jussive of عَزَّى (ʕazzā)\n# يُعَزَّوْا (yuʕazzaw) /ju.ʕaz.zaw/: third-person masculine plural non-past passive subjunctive/jussive of عَزَّى (ʕazzā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuʕazzū", "ʕazzā", "yuʕazzaw"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعزوا",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تعزوا (form I)\n# تَعْزُوا (taʕzū) /taʕ.zuː/: second-person masculine plural non-past active subjunctive/jussive of عَزَى (ʕazā)\n# تُعْزَوْا (tuʕzaw) /tuʕ.zaw/: second-person masculine plural non-past passive subjunctive/jussive of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʕzū", "ʕazā", "tuʕzaw"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعزوا",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تعزوا (form II)\n# تُعَزُّوا (tuʕazzū) /tu.ʕaz.zuː/: second-person masculine plural non-past active subjunctive/jussive of عَزَّى (ʕazzā)\n# تُعَزَّوْا (tuʕazzaw) /tu.ʕaz.zaw/: second-person masculine plural non-past passive subjunctive/jussive of عَزَّى (ʕazzā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuʕazzū", "ʕazzā", "tuʕazzaw"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعزي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أعزي (form I)\n# أَعْزِي (ʔaʕzī) /ʔaʕ.ziː/: first-person singular non-past active indicative of عَزَى (ʕazā)\n# أَعْزِيَ (ʔaʕziya) /ʔaʕ.zi.ja/: first-person singular non-past active subjunctive of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaʕzī", "ʕazā", "ʔaʕziya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعزي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أعزي (form II)\n# أُعَزِّي (ʔuʕazzī) /ʔu.ʕaz.ziː/: first-person singular non-past active indicative of عَزَّى (ʕazzā)\n# أُعَزِّيَ (ʔuʕazziya) /ʔu.ʕaz.zi.ja/: first-person singular non-past active subjunctive of عَزَّى (ʕazzā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuʕazzī", "ʕazzā", "ʔuʕazziya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عزتا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "عَزَتَا • (ʕazatā) (form I) /ʕa.za.taː/\n# third-person feminine dual past active of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕazatā", "ʕazā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عزتا",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "عَزَّتَا • (ʕazzatā) (form II) /ʕaz.za.taː/\n# third-person feminine dual past active of عَزَّى (ʕazzā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʕazzatā", "ʕazzā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عزوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "عزوا (form I)\n# عَزَوْا (ʕazaw) /ʕa.zaw/: third-person masculine plural past active of عَزَى (ʕazā)\n# عُزُوا (ʕuzū) /ʕu.zuː/: third-person masculine plural past passive of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕazaw", "ʕazā", "ʕuzū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عزوا",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "عزوا (form II)\n# عَزَّوْا (ʕazzaw) /ʕaz.zaw/: third-person masculine plural past active of عَزَّى (ʕazzā)\n# عُزُّوا (ʕuzzū) /ʕuz.zuː/: third-person masculine plural past passive of عَزَّى (ʕazzā)\n# عَزُّوا (ʕazzū) /ʕaz.zuː/: second-person masculine plural imperative of عَزَّى (ʕazzā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʕazzaw", "ʕazzā", "ʕuzzū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اعز",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "اِعْزِ • (iʕzi) (form I) /iʕ.zi/\n# second-person masculine singular imperative of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iʕzi", "ʕazā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اعزي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "اِعْزِي • (iʕzī) (form I) /iʕ.ziː/\n# second-person feminine singular imperative of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iʕzī", "ʕazā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اعزوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "اِعْزُوا • (iʕzū) (form I) /iʕ.zuː/\n# second-person masculine plural imperative of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iʕzū", "ʕazā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عزيتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "عزيتما (form I)\n# عَزَيْتُمَا (ʕazaytumā) /ʕa.zaj.tu.maː/: second-person dual past active of عَزَى (ʕazā)\n# عُزِيتُمَا (ʕuzītumā) /ʕu.ziː.tu.maː/: second-person dual past passive of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕazaytumā", "ʕazā", "ʕuzītumā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عزيتما",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "عزيتما (form II)\n# عَزَّيْتُمَا (ʕazzaytumā) /ʕaz.zaj.tu.maː/: second-person dual past active of عَزَّى (ʕazzā)\n# عُزِّيتُمَا (ʕuzzītumā) /ʕuz.ziː.tu.maː/: second-person dual past passive of عَزَّى (ʕazzā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʕazzaytumā", "ʕazzā", "ʕuzzītumā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عزيت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "عزيت (form I)\n# عَزَيْتُ (ʕazaytu) /ʕa.zaj.tu/: first-person singular past active of عَزَى (ʕazā)\n# عَزَيْتَ (ʕazayta) /ʕa.zaj.ta/: second-person masculine singular past active of عَزَى (ʕazā)\n# عَزَيْتِ (ʕazayti) /ʕa.zaj.ti/: second-person feminine singular past active of عَزَى (ʕazā)\n# عُزِيتُ (ʕuzītu) /ʕu.ziː.tu/: first-person singular past passive of عَزَى (ʕazā)\n# عُزِيتَ (ʕuzīta) /ʕu.ziː.ta/",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕazaytu", "ʕazā", "ʕazayta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عزيت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "عزيت (form II)\n# عَزَّيْتُ (ʕazzaytu) /ʕaz.zaj.tu/: first-person singular past active of عَزَّى (ʕazzā)\n# عَزَّيْتَ (ʕazzayta) /ʕaz.zaj.ta/: second-person masculine singular past active of عَزَّى (ʕazzā)\n# عَزَّيْتِ (ʕazzayti) /ʕaz.zaj.ti/: second-person feminine singular past active of عَزَّى (ʕazzā)\n# عُزِّيتُ (ʕuzzītu) /ʕuz.ziː.tu/: first-person singular past passive of عَزَّى (ʕazzā)\n# عُزِّيت",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʕazzaytu", "ʕazzā", "ʕazzayta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عزيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "عزيا (form I)\n# عَزَيَا (ʕazayā) /ʕa.za.jaː/: third-person masculine dual past active of عَزَى (ʕazā)\n# عُزِيَا (ʕuziyā) /ʕu.zi.jaː/: third-person masculine dual past passive of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕazayā", "ʕazā", "ʕuziyā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عزيا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "عزيا (form II)\n# عَزَّيَا (ʕazzayā) /ʕaz.za.jaː/: third-person masculine dual past active of عَزَّى (ʕazzā)\n# عُزِّيَا (ʕuzziyā) /ʕuz.zi.jaː/: third-person masculine dual past passive of عَزَّى (ʕazzā)\n# عَزِّيَا (ʕazziyā) /ʕaz.zi.jaː/: second-person dual imperative of عَزَّى (ʕazzā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʕazzayā", "ʕazzā", "ʕuzziyā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عزيتم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "عزيتم (form I)\n# عَزَيْتُمْ (ʕazaytum) /ʕa.zaj.tum/: second-person masculine plural past active of عَزَى (ʕazā)\n# عُزِيتُمْ (ʕuzītum) /ʕu.ziː.tum/: second-person masculine plural past passive of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕazaytum", "ʕazā", "ʕuzītum"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عزيتم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "عزيتم (form II)\n# عَزَّيْتُمْ (ʕazzaytum) /ʕaz.zaj.tum/: second-person masculine plural past active of عَزَّى (ʕazzā)\n# عُزِّيتُمْ (ʕuzzītum) /ʕuz.ziː.tum/: second-person masculine plural past passive of عَزَّى (ʕazzā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʕazzaytum", "ʕazzā", "ʕuzzītum"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عزيتن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "عزيتن (form I)\n# عَزَيْتُنَّ (ʕazaytunna) /ʕa.zaj.tun.na/: second-person feminine plural past active of عَزَى (ʕazā)\n# عُزِيتُنَّ (ʕuzītunna) /ʕu.ziː.tun.na/: second-person feminine plural past passive of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕazaytunna", "ʕazā", "ʕuzītunna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عزيتن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "عزيتن (form II)\n# عَزَّيْتُنَّ (ʕazzaytunna) /ʕaz.zaj.tun.na/: second-person feminine plural past active of عَزَّى (ʕazzā)\n# عُزِّيتُنَّ (ʕuzzītunna) /ʕuz.ziː.tun.na/: second-person feminine plural past passive of عَزَّى (ʕazzā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʕazzaytunna", "ʕazzā", "ʕuzzītunna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عزينا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "عزينا (form I)\n# عَزَيْنَا (ʕazaynā) /ʕa.zaj.naː/: first-person plural past active of عَزَى (ʕazā)\n# عُزِينَا (ʕuzīnā) /ʕu.ziː.naː/: first-person plural past passive of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕazaynā", "ʕazā", "ʕuzīnā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عزينا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "عزينا (form II)\n# عَزَّيْنَا (ʕazzaynā) /ʕaz.zaj.naː/: first-person plural past active of عَزَّى (ʕazzā)\n# عُزِّينَا (ʕuzzīnā) /ʕuz.ziː.naː/: first-person plural past passive of عَزَّى (ʕazzā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʕazzaynā", "ʕazzā", "ʕuzzīnā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عزيتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "عُزِيَتَا • (ʕuziyatā) (form I) /ʕu.zi.ja.taː/\n# third-person feminine dual past passive of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕuziyatā", "ʕazā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عزيتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "عُزِّيَتَا • (ʕuzziyatā) (form II) /ʕuz.zi.ja.taː/\n# third-person feminine dual past passive of عَزَّى (ʕazzā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʕuzziyatā", "ʕazzā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعزي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يعزي (form I)\n# يَعْزِي (yaʕzī) /jaʕ.ziː/: third-person masculine singular non-past active indicative of عَزَى (ʕazā)\n# يَعْزِيَ (yaʕziya) /jaʕ.zi.ja/: third-person masculine singular non-past active subjunctive of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʕzī", "ʕazā", "yaʕziya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعزي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يعزي (form II)\n# يُعَزِّي (yuʕazzī) /ju.ʕaz.ziː/: third-person masculine singular non-past active indicative of عَزَّى (ʕazzā)\n# يُعَزِّيَ (yuʕazziya) /ju.ʕaz.zi.ja/: third-person masculine singular non-past active subjunctive of عَزَّى (ʕazzā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuʕazzī", "ʕazzā", "yuʕazziya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عزين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "عزين (form I)\n# عَزَيْنَ (ʕazayna) /ʕa.zaj.na/: third-person feminine plural past active of عَزَى (ʕazā)\n# عُزِينَ (ʕuzīna) /ʕu.ziː.na/: third-person feminine plural past passive of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕazayna", "ʕazā", "ʕuzīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عزين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "عزين (form II)\n# عَزَّيْنَ (ʕazzayna) /ʕaz.zaj.na/: third-person feminine plural past active of عَزَّى (ʕazzā)\n# عُزِّينَ (ʕuzzīna) /ʕuz.ziː.na/: third-person feminine plural past passive of عَزَّى (ʕazzā)\n# عَزِّينَ (ʕazzīna) /ʕaz.ziː.na/: second-person feminine plural imperative of عَزَّى (ʕazzā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʕazzayna", "ʕazzā", "ʕuzzīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعزيان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تعزيان (form I)\n# تَعْزِيَانِ (taʕziyāni) /taʕ.zi.jaː.ni/: inflection of عَزَى (ʕazā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُعْزَيَانِ (tuʕzayāni) /tuʕ.za.jaː.ni/: inflection of عَزَى (ʕazā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʕziyāni", "ʕazā", "tuʕzayāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعزيان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تعزيان (form II)\n# تُعَزِّيَانِ (tuʕazziyāni) /tu.ʕaz.zi.jaː.ni/: inflection of عَزَّى (ʕazzā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُعَزَّيَانِ (tuʕazzayāni) /tu.ʕaz.za.jaː.ni/: inflection of عَزَّى (ʕazzā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuʕazziyāni", "ʕazzā", "tuʕazzayāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نعزي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نعزي (form I)\n# نَعْزِي (naʕzī) /naʕ.ziː/: first-person plural non-past active indicative of عَزَى (ʕazā)\n# نَعْزِيَ (naʕziya) /naʕ.zi.ja/: first-person plural non-past active subjunctive of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naʕzī", "ʕazā", "naʕziya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نعزي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نعزي (form II)\n# نُعَزِّي (nuʕazzī) /nu.ʕaz.ziː/: first-person plural non-past active indicative of عَزَّى (ʕazzā)\n# نُعَزِّيَ (nuʕazziya) /nu.ʕaz.zi.ja/: first-person plural non-past active subjunctive of عَزَّى (ʕazzā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuʕazzī", "ʕazzā", "nuʕazziya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعزيان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يعزيان (form I)\n# يَعْزِيَانِ (yaʕziyāni) /jaʕ.zi.jaː.ni/: third-person masculine dual non-past active indicative of عَزَى (ʕazā)\n# يُعْزَيَانِ (yuʕzayāni) /juʕ.za.jaː.ni/: third-person masculine dual non-past passive indicative of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʕziyāni", "ʕazā", "yuʕzayāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعزيان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يعزيان (form II)\n# يُعَزِّيَانِ (yuʕazziyāni) /ju.ʕaz.zi.jaː.ni/: third-person masculine dual non-past active indicative of عَزَّى (ʕazzā)\n# يُعَزَّيَانِ (yuʕazzayāni) /ju.ʕaz.za.jaː.ni/: third-person masculine dual non-past passive indicative of عَزَّى (ʕazzā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuʕazziyāni", "ʕazzā", "yuʕazzayāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعزى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُعْزَى • (yuʕzā) (form I) /juʕ.zaː/\n# third-person masculine singular non-past passive indicative/subjunctive of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuʕzā", "ʕazā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعزى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُعَزَّى • (yuʕazzā) (form II) /ju.ʕaz.zaː/\n# third-person masculine singular non-past passive indicative/subjunctive of عَزَّى (ʕazzā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuʕazzā", "ʕazzā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعزى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أُعْزَى • (ʔuʕzā) (form I) /ʔuʕ.zaː/\n# first-person singular non-past passive indicative/subjunctive of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔuʕzā", "ʕazā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعزى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أُعَزَّى • (ʔuʕazzā) (form II) /ʔu.ʕaz.zaː/\n# first-person singular non-past passive indicative/subjunctive of عَزَّى (ʕazzā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuʕazzā", "ʕazzā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نعزى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نُعْزَى • (nuʕzā) (form I) /nuʕ.zaː/\n# first-person plural non-past passive indicative/subjunctive of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuʕzā", "ʕazā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نعزى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نُعَزَّى • (nuʕazzā) (form II) /nu.ʕaz.zaː/\n# first-person plural non-past passive indicative/subjunctive of عَزَّى (ʕazzā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuʕazzā", "ʕazzā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعزين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يعزين (form I)\n# يَعْزِينَ (yaʕzīna) /jaʕ.ziː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of عَزَى (ʕazā)\n# يُعْزَيْنَ (yuʕzayna) /juʕ.zaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʕzīna", "ʕazā", "yuʕzayna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعزين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يعزين (form II)\n# يُعَزِّينَ (yuʕazzīna) /ju.ʕaz.ziː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of عَزَّى (ʕazzā)\n# يُعَزَّيْنَ (yuʕazzayna) /ju.ʕaz.zaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of عَزَّى (ʕazzā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuʕazzīna", "ʕazzā", "yuʕazzayna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعزى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُعْزَى • (tuʕzā) (form I) /tuʕ.zaː/\n# inflection of عَزَى (ʕazā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuʕzā", "ʕazā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعزى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُعَزَّى • (tuʕazzā) (form II) /tu.ʕaz.zaː/\n# inflection of عَزَّى (ʕazzā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuʕazzā", "ʕazzā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعزيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تعزيا (form I)\n# تَعْزِيَا (taʕziyā) /taʕ.zi.jaː/: inflection of عَزَى (ʕazā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُعْزَيَا (tuʕzayā) /tuʕ.za.jaː/: inflection of عَزَى (ʕazā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʕziyā", "ʕazā", "tuʕzayā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعزيا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تعزيا (form II)\n# تُعَزِّيَا (tuʕazziyā) /tu.ʕaz.zi.jaː/: inflection of عَزَّى (ʕazzā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُعَزَّيَا (tuʕazzayā) /tu.ʕaz.za.jaː/: inflection of عَزَّى (ʕazzā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctiv",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuʕazziyā", "ʕazzā", "tuʕazzayā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اعزيا",
+      "tur": "verb",
+      "baslik": "اِعْزِيَا • (iʕziyā) (form I) /iʕ.zi.jaː/\n# second-person dual imperative of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iʕziyā", "ʕazā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اعزين",
+      "tur": "verb",
+      "baslik": "اِعْزِينَ • (iʕzīna) (form I) /iʕ.ziː.na/\n# second-person feminine plural imperative of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iʕzīna", "ʕazā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعزيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يعزيا (form I)\n# يَعْزِيَا (yaʕziyā) /jaʕ.zi.jaː/: third-person masculine dual non-past active subjunctive/jussive of عَزَى (ʕazā)\n# يُعْزَيَا (yuʕzayā) /juʕ.za.jaː/: third-person masculine dual non-past passive subjunctive/jussive of عَزَى (ʕazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʕziyā", "ʕazā", "yuʕzayā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعزيا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يعزيا (form II)\n# يُعَزِّيَا (yuʕazziyā) /ju.ʕaz.zi.jaː/: third-person masculine dual non-past active subjunctive/jussive of عَزَّى (ʕazzā)\n# يُعَزَّيَا (yuʕazzayā) /ju.ʕaz.za.jaː/: third-person masculine dual non-past passive subjunctive/jussive of عَزَّى (ʕazzā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuʕazziyā", "ʕazzā", "yuʕazzayā"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "عزى", "r7"]
+  ],
+  "mana": {
     "ince": "see.v.05",
     "orta": "verb.cognition",
     "ust": "zihin ve ilim",
@@ -999,25 +710,8 @@
     "dayanak_tanim": "regard highly; think much of",
     "synset_sayisi": 3
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "العين والزاي",
-    "mihveri": "رَبْطُ الشيء شديدًا بآخر كالعَزْو المذكور. (وقد أخذنا الوصف) (بالشدة) من علاقة النسب = القرابة - كالأبوة والأخوة لأنها أقوى العلائق. والنسب ليس هو المصاهرة). ولوحظ في العِزَة أنها حَلْقة وجماعة متصلة متماسكة متميزة عن غيرها. {عَنِ الْيَمِينِ وَعَنِ الشِّمَالِ عِزِينَ} ومنه \"العَزَاء؛ الصبر عند المصائب. عَزِىَ (كرضى) وعَزّاه - ض - فتعزّى \". وحقيقة ذلك فيما أرى أخذًا من الأصل: التماسك والتقَوِّى كما يقال تَجَلَّد واشْتَدّ وكأنها محولة من (عزز) كتقضي. وقد رُدَّتْ في [ل والمقاييس] إلى اتخاذ الأُسْوَة فيقول حالي مثل حال فلان.",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (عز) : هو تماسك الأثناء والاشتداد كما يتمثل في العزَاز: ما صلُب من الأرض واشتد وخشن -في (عزز)، وكما في الاعتزاء الانتساب",
-    "tam_metin": "{عَنِ الْيَمِينِ وَعَنِ الشِّمَالِ عِزِينَ} [المعارج: 37]\n\"العِزَةُ - كرئة: الجماعةُ والفرقة من الناس. عَزَا فلانٌ نفسَه إلى بني فلان يعزُوها ويَعزيها عَزْوًا وعَزْيًا: نَسَبها، واعْتَزَى وتعزَّي: انتَسب صِدْقًا أو كذبًا. وعزا الحديثَ إلى فلان: نَمَاه وأَسْنده \".\n(3/1455)\n° المعنى المحوري\nرَبْطُ الشيء شديدًا بآخر كالعَزْو المذكور. (وقد أخذنا الوصف) (بالشدة) من علاقة النسب = القرابة - كالأبوة والأخوة لأنها أقوى العلائق. والنسب ليس هو المصاهرة). ولوحظ في العِزَة أنها حَلْقة وجماعة متصلة متماسكة متميزة عن غيرها. {عَنِ الْيَمِينِ وَعَنِ الشِّمَالِ عِزِينَ} ومنه \"العَزَاء؛ الصبر عند المصائب. عَزِىَ (كرضى) وعَزّاه - ض - فتعزّى \". وحقيقة ذلك فيما أرى أخذًا من الأصل: التماسك والتقَوِّى كما يقال تَجَلَّد واشْتَدّ وكأنها محولة من (عزز) كتقضي. وقد رُدَّتْ في [ل والمقاييس] إلى اتخاذ الأُسْوَة فيقول حالي مثل حال فلان."
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["prize.v.01", "respect.v.01", "status.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 4,
       "merkez_kok": "درك",
@@ -1037,6 +731,11 @@
       "boy": 12
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["prize.v.01", "respect.v.01", "status.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

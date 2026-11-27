@@ -1,345 +1,246 @@
 {
   "kok": "كسكس",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "كسكس", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "كسكستا",
-        "u": "كسكستا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كسكستا (form Iq)\n# كَسْكَسَتَا (kaskasatā) /kas.ka.sa.taː/: third-person feminine dual past active of كَسْكَسَ (kaskasa)\n# كُسْكِسَتَا (kuskisatā) /kus.ki.sa.taː/: third-person feminine dual past passive of كَسْكَسَ (kaskasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["kaskasatā", "kaskasa", "kuskisatā"],
-        "k": "كسكس",
-        "yol": "kök"
-      },
-      {
-        "w": "كسكست",
-        "u": "كسكست",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كسكست (form Iq)\n# كَسْكَسْتُ (kaskastu) /kas.kas.tu/: first-person singular past active of كَسْكَسَ (kaskasa)\n# كَسْكَسْتَ (kaskasta) /kas.kas.ta/: second-person masculine singular past active of كَسْكَسَ (kaskasa)\n# كَسْكَسْتِ (kaskasti) /kas.kas.ti/: second-person feminine singular past active of كَسْكَسَ (kaskasa)\n# كَسْكَسَتْ (kaskasat) /kas.ka.sat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["kaskastu", "kaskasa", "kaskasta"],
-        "k": "كسكس",
-        "yol": "kök"
-      },
-      {
-        "w": "كسكسا",
-        "u": "كسكسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كسكسا (form Iq)\n# كَسْكَسَا (kaskasā) /kas.ka.saː/: third-person masculine dual past active of كَسْكَسَ (kaskasa)\n# كُسْكِسَا (kuskisā) /kus.ki.saː/: third-person masculine dual past passive of كَسْكَسَ (kaskasa)\n# كَسْكِسَا (kaskisā) /kas.ki.saː/: second-person dual imperative of كَسْكَسَ (kaskasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["kaskasā", "kaskasa", "kuskisā"],
-        "k": "كسكس",
-        "yol": "kök"
-      },
-      {
-        "w": "كسكستما",
-        "u": "كسكستما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كسكستما (form Iq)\n# كَسْكَسْتُمَا (kaskastumā) /kas.kas.tu.maː/: second-person dual past active of كَسْكَسَ (kaskasa)\n# كُسْكِسْتُمَا (kuskistumā) /kus.kis.tu.maː/: second-person dual past passive of كَسْكَسَ (kaskasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["kaskastumā", "kaskasa", "kuskistumā"],
-        "k": "كسكس",
-        "yol": "kök"
-      },
-      {
-        "w": "كسكسنا",
-        "u": "كسكسنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كسكسنا (form Iq)\n# كَسْكَسْنَا (kaskasnā) /kas.kas.naː/: first-person plural past active of كَسْكَسَ (kaskasa)\n# كُسْكِسْنَا (kuskisnā) /kus.kis.naː/: first-person plural past passive of كَسْكَسَ (kaskasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["kaskasnā", "kaskasa", "kuskisnā"],
-        "k": "كسكس",
-        "yol": "kök"
-      },
-      {
-        "w": "كسكستم",
-        "u": "كسكستم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كسكستم (form Iq)\n# كَسْكَسْتُمْ (kaskastum) /kas.kas.tum/: second-person masculine plural past active of كَسْكَسَ (kaskasa)\n# كُسْكِسْتُمْ (kuskistum) /kus.kis.tum/: second-person masculine plural past passive of كَسْكَسَ (kaskasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["kaskastum", "kaskasa", "kuskistum"],
-        "k": "كسكس",
-        "yol": "kök"
-      },
-      {
-        "w": "كسكسوا",
-        "u": "كسكسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كسكسوا (form Iq)\n# كَسْكَسُوا (kaskasū) /kas.ka.suː/: third-person masculine plural past active of كَسْكَسَ (kaskasa)\n# كُسْكِسُوا (kuskisū) /kus.ki.suː/: third-person masculine plural past passive of كَسْكَسَ (kaskasa)\n# كَسْكِسُوا (kaskisū) /kas.ki.suː/: second-person masculine plural imperative of كَسْكَسَ (kaskasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["kaskasū", "kaskasa", "kuskisū"],
-        "k": "كسكس",
-        "yol": "kök"
-      },
-      {
-        "w": "كسكسن",
-        "u": "كسكسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كسكسن (form Iq)\n# كَسْكَسْنَ (kaskasna) /kas.kas.na/: third-person feminine plural past active of كَسْكَسَ (kaskasa)\n# كُسْكِسْنَ (kuskisna) /kus.kis.na/: third-person feminine plural past passive of كَسْكَسَ (kaskasa)\n# كَسْكِسْنَ (kaskisna) /kas.kis.na/: second-person feminine plural imperative of كَسْكَسَ (kaskasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["kaskasna", "kaskasa", "kuskisna"],
-        "k": "كسكس",
-        "yol": "kök"
-      },
-      {
-        "w": "كسكستن",
-        "u": "كسكستن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كسكستن (form Iq)\n# كَسْكَسْتُنَّ (kaskastunna) /kas.kas.tun.na/: second-person feminine plural past active of كَسْكَسَ (kaskasa)\n# كُسْكِسْتُنَّ (kuskistunna) /kus.kis.tun.na/: second-person feminine plural past passive of كَسْكَسَ (kaskasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["kaskastunna", "kaskasa", "kuskistunna"],
-        "k": "كسكس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكسكس",
-        "u": "تكسكس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تكسكس (form Iq)\n# تُكَسْكِسُ (tukaskisu) /tu.kas.ki.su/: inflection of كَسْكَسَ (kaskasa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُكَسْكَسُ (tukaskasu) /tu.kas.ka.su/: inflection of كَسْكَسَ (kaskasa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past pas",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tukaskisu", "kaskasa", "tukaskasu"],
-        "k": "كسكس",
-        "yol": "kök"
-      },
-      {
-        "w": "أكسكس",
-        "u": "أكسكس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أكسكس (form Iq)\n# أُكَسْكِسُ (ʔukaskisu) /ʔu.kas.ki.su/: first-person singular non-past active indicative of كَسْكَسَ (kaskasa)\n# أُكَسْكَسُ (ʔukaskasu) /ʔu.kas.ka.su/: first-person singular non-past passive indicative of كَسْكَسَ (kaskasa)\n# أُكَسْكِسَ (ʔukaskisa) /ʔu.kas.ki.sa/: first-person singular non-past active subjunctive of كَسْكَسَ (kaskasa)\n# أُكَسْكَسَ (ʔukaskasa) /ʔu.kas.ka.sa/: first",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʔukaskisu", "kaskasa", "ʔukaskasu"],
-        "k": "كسكس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكسكسين",
-        "u": "تكسكسين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تكسكسين (form Iq)\n# تُكَسْكِسِينَ (tukaskisīna) /tu.kas.ki.siː.na/: second-person feminine singular non-past active indicative of كَسْكَسَ (kaskasa)\n# تُكَسْكَسِينَ (tukaskasīna) /tu.kas.ka.siː.na/: second-person feminine singular non-past passive indicative of كَسْكَسَ (kaskasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tukaskisīna", "kaskasa", "tukaskasīna"],
-        "k": "كسكس",
-        "yol": "kök"
-      },
-      {
-        "w": "يكسكس",
-        "u": "يكسكس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يكسكس (form Iq)\n# يُكَسْكِسُ (yukaskisu) /ju.kas.ki.su/: third-person masculine singular non-past active indicative of كَسْكَسَ (kaskasa)\n# يُكَسْكَسُ (yukaskasu) /ju.kas.ka.su/: third-person masculine singular non-past passive indicative of كَسْكَسَ (kaskasa)\n# يُكَسْكِسَ (yukaskisa) /ju.kas.ki.sa/: third-person masculine singular non-past active subjunctive of كَسْكَسَ (kaskasa)\n# يُكَسْكَسَ (yu",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yukaskisu", "kaskasa", "yukaskasu"],
-        "k": "كسكس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكسكسان",
-        "u": "تكسكسان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تكسكسان (form Iq)\n# تُكَسْكِسَانِ (tukaskisāni) /tu.kas.ki.saː.ni/: inflection of كَسْكَسَ (kaskasa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُكَسْكَسَانِ (tukaskasāni) /tu.kas.ka.saː.ni/: inflection of كَسْكَسَ (kaskasa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tukaskisāni", "kaskasa", "tukaskasāni"],
-        "k": "كسكس",
-        "yol": "kök"
-      },
-      {
-        "w": "يكسكسان",
-        "u": "يكسكسان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يكسكسان (form Iq)\n# يُكَسْكِسَانِ (yukaskisāni) /ju.kas.ki.saː.ni/: third-person masculine dual non-past active indicative of كَسْكَسَ (kaskasa)\n# يُكَسْكَسَانِ (yukaskasāni) /ju.kas.ka.saː.ni/: third-person masculine dual non-past passive indicative of كَسْكَسَ (kaskasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yukaskisāni", "kaskasa", "yukaskasāni"],
-        "k": "كسكس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكسكسون",
-        "u": "تكسكسون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تكسكسون (form Iq)\n# تُكَسْكِسُونَ (tukaskisūna) /tu.kas.ki.suː.na/: second-person masculine plural non-past active indicative of كَسْكَسَ (kaskasa)\n# تُكَسْكَسُونَ (tukaskasūna) /tu.kas.ka.suː.na/: second-person masculine plural non-past passive indicative of كَسْكَسَ (kaskasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tukaskisūna", "kaskasa", "tukaskasūna"],
-        "k": "كسكس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكسكسن",
-        "u": "تكسكسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تكسكسن (form Iq)\n# تُكَسْكِسْنَ (tukaskisna) /tu.kas.kis.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of كَسْكَسَ (kaskasa)\n# تُكَسْكَسْنَ (tukaskasna) /tu.kas.kas.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of كَسْكَسَ (kaskasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tukaskisna", "kaskasa", "tukaskasna"],
-        "k": "كسكس",
-        "yol": "kök"
-      },
-      {
-        "w": "يكسكسون",
-        "u": "يكسكسون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يكسكسون (form Iq)\n# يُكَسْكِسُونَ (yukaskisūna) /ju.kas.ki.suː.na/: third-person masculine plural non-past active indicative of كَسْكَسَ (kaskasa)\n# يُكَسْكَسُونَ (yukaskasūna) /ju.kas.ka.suː.na/: third-person masculine plural non-past passive indicative of كَسْكَسَ (kaskasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yukaskisūna", "kaskasa", "yukaskasūna"],
-        "k": "كسكس",
-        "yol": "kök"
-      },
-      {
-        "w": "يكسكسن",
-        "u": "يكسكسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يكسكسن (form Iq)\n# يُكَسْكِسْنَ (yukaskisna) /ju.kas.kis.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of كَسْكَسَ (kaskasa)\n# يُكَسْكَسْنَ (yukaskasna) /ju.kas.kas.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of كَسْكَسَ (kaskasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yukaskisna", "kaskasa", "yukaskasna"],
-        "k": "كسكس",
-        "yol": "kök"
-      },
-      {
-        "w": "نكسكس",
-        "u": "نكسكس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نكسكس (form Iq)\n# نُكَسْكِسُ (nukaskisu) /nu.kas.ki.su/: first-person plural non-past active indicative of كَسْكَسَ (kaskasa)\n# نُكَسْكَسُ (nukaskasu) /nu.kas.ka.su/: first-person plural non-past passive indicative of كَسْكَسَ (kaskasa)\n# نُكَسْكِسَ (nukaskisa) /nu.kas.ki.sa/: first-person plural non-past active subjunctive of كَسْكَسَ (kaskasa)\n# نُكَسْكَسَ (nukaskasa) /nu.kas.ka.sa/: first-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["nukaskisu", "kaskasa", "nukaskasu"],
-        "k": "كسكس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكسكسوا",
-        "u": "تكسكسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تكسكسوا (form Iq)\n# تُكَسْكِسُوا (tukaskisū) /tu.kas.ki.suː/: second-person masculine plural non-past active subjunctive/jussive of كَسْكَسَ (kaskasa)\n# تُكَسْكَسُوا (tukaskasū) /tu.kas.ka.suː/: second-person masculine plural non-past passive subjunctive/jussive of كَسْكَسَ (kaskasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tukaskisū", "kaskasa", "tukaskasū"],
-        "k": "كسكس",
-        "yol": "kök"
-      },
-      {
-        "w": "يكسكسا",
-        "u": "يكسكسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يكسكسا (form Iq)\n# يُكَسْكِسَا (yukaskisā) /ju.kas.ki.saː/: third-person masculine dual non-past active subjunctive/jussive of كَسْكَسَ (kaskasa)\n# يُكَسْكَسَا (yukaskasā) /ju.kas.ka.saː/: third-person masculine dual non-past passive subjunctive/jussive of كَسْكَسَ (kaskasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yukaskisā", "kaskasa", "yukaskasā"],
-        "k": "كسكس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكسكسا",
-        "u": "تكسكسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تكسكسا (form Iq)\n# تُكَسْكِسَا (tukaskisā) /tu.kas.ki.saː/: inflection of كَسْكَسَ (kaskasa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُكَسْكَسَا (tukaskasā) /tu.kas.ka.saː/: inflection of كَسْكَسَ (kaskasa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tukaskisā", "kaskasa", "tukaskasā"],
-        "k": "كسكس",
-        "yol": "kök"
-      },
-      {
-        "w": "كسكسي",
-        "u": "كسكسي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كَسْكِسِي • (kaskisī) (form Iq) /kas.ki.siː/\n# second-person feminine singular imperative of كَسْكَسَ (kaskasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["kaskisī", "kaskasa"],
-        "k": "كسكس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكسكسي",
-        "u": "تكسكسي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تكسكسي (form Iq)\n# تُكَسْكِسِي (tukaskisī) /tu.kas.ki.siː/: second-person feminine singular non-past active subjunctive/jussive of كَسْكَسَ (kaskasa)\n# تُكَسْكَسِي (tukaskasī) /tu.kas.ka.siː/: second-person feminine singular non-past passive subjunctive/jussive of كَسْكَسَ (kaskasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tukaskisī", "kaskasa", "tukaskasī"],
-        "k": "كسكس",
-        "yol": "kök"
-      },
-      {
-        "w": "يكسكسوا",
-        "u": "يكسكسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يكسكسوا (form Iq)\n# يُكَسْكِسُوا (yukaskisū) /ju.kas.ki.suː/: third-person masculine plural non-past active subjunctive/jussive of كَسْكَسَ (kaskasa)\n# يُكَسْكَسُوا (yukaskasū) /ju.kas.ka.suː/: third-person masculine plural non-past passive subjunctive/jussive of كَسْكَسَ (kaskasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yukaskisū", "kaskasa", "yukaskasū"],
-        "k": "كسكس",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "كس",
+  "ses": {
     "harf": "ك",
+    "fasil": "كس",
     "mahrec": "lehaviyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "كسكستا",
+      "tur": "verb",
+      "baslik": "كسكستا (form Iq)\n# كَسْكَسَتَا (kaskasatā) /kas.ka.sa.taː/: third-person feminine dual past active of كَسْكَسَ (kaskasa)\n# كُسْكِسَتَا (kuskisatā) /kus.ki.sa.taː/: third-person feminine dual past passive of كَسْكَسَ (kaskasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["kaskasatā", "kaskasa", "kuskisatā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "كسكست",
+      "tur": "verb",
+      "baslik": "كسكست (form Iq)\n# كَسْكَسْتُ (kaskastu) /kas.kas.tu/: first-person singular past active of كَسْكَسَ (kaskasa)\n# كَسْكَسْتَ (kaskasta) /kas.kas.ta/: second-person masculine singular past active of كَسْكَسَ (kaskasa)\n# كَسْكَسْتِ (kaskasti) /kas.kas.ti/: second-person feminine singular past active of كَسْكَسَ (kaskasa)\n# كَسْكَسَتْ (kaskasat) /kas.ka.sat/: third-person feminine singular past active ",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["kaskastu", "kaskasa", "kaskasta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "كسكسا",
+      "tur": "verb",
+      "baslik": "كسكسا (form Iq)\n# كَسْكَسَا (kaskasā) /kas.ka.saː/: third-person masculine dual past active of كَسْكَسَ (kaskasa)\n# كُسْكِسَا (kuskisā) /kus.ki.saː/: third-person masculine dual past passive of كَسْكَسَ (kaskasa)\n# كَسْكِسَا (kaskisā) /kas.ki.saː/: second-person dual imperative of كَسْكَسَ (kaskasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["kaskasā", "kaskasa", "kuskisā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "كسكستما",
+      "tur": "verb",
+      "baslik": "كسكستما (form Iq)\n# كَسْكَسْتُمَا (kaskastumā) /kas.kas.tu.maː/: second-person dual past active of كَسْكَسَ (kaskasa)\n# كُسْكِسْتُمَا (kuskistumā) /kus.kis.tu.maː/: second-person dual past passive of كَسْكَسَ (kaskasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["kaskastumā", "kaskasa", "kuskistumā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "كسكسنا",
+      "tur": "verb",
+      "baslik": "كسكسنا (form Iq)\n# كَسْكَسْنَا (kaskasnā) /kas.kas.naː/: first-person plural past active of كَسْكَسَ (kaskasa)\n# كُسْكِسْنَا (kuskisnā) /kus.kis.naː/: first-person plural past passive of كَسْكَسَ (kaskasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["kaskasnā", "kaskasa", "kuskisnā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "كسكستم",
+      "tur": "verb",
+      "baslik": "كسكستم (form Iq)\n# كَسْكَسْتُمْ (kaskastum) /kas.kas.tum/: second-person masculine plural past active of كَسْكَسَ (kaskasa)\n# كُسْكِسْتُمْ (kuskistum) /kus.kis.tum/: second-person masculine plural past passive of كَسْكَسَ (kaskasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["kaskastum", "kaskasa", "kuskistum"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "كسكسوا",
+      "tur": "verb",
+      "baslik": "كسكسوا (form Iq)\n# كَسْكَسُوا (kaskasū) /kas.ka.suː/: third-person masculine plural past active of كَسْكَسَ (kaskasa)\n# كُسْكِسُوا (kuskisū) /kus.ki.suː/: third-person masculine plural past passive of كَسْكَسَ (kaskasa)\n# كَسْكِسُوا (kaskisū) /kas.ki.suː/: second-person masculine plural imperative of كَسْكَسَ (kaskasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["kaskasū", "kaskasa", "kuskisū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "كسكسن",
+      "tur": "verb",
+      "baslik": "كسكسن (form Iq)\n# كَسْكَسْنَ (kaskasna) /kas.kas.na/: third-person feminine plural past active of كَسْكَسَ (kaskasa)\n# كُسْكِسْنَ (kuskisna) /kus.kis.na/: third-person feminine plural past passive of كَسْكَسَ (kaskasa)\n# كَسْكِسْنَ (kaskisna) /kas.kis.na/: second-person feminine plural imperative of كَسْكَسَ (kaskasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["kaskasna", "kaskasa", "kuskisna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "كسكستن",
+      "tur": "verb",
+      "baslik": "كسكستن (form Iq)\n# كَسْكَسْتُنَّ (kaskastunna) /kas.kas.tun.na/: second-person feminine plural past active of كَسْكَسَ (kaskasa)\n# كُسْكِسْتُنَّ (kuskistunna) /kus.kis.tun.na/: second-person feminine plural past passive of كَسْكَسَ (kaskasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["kaskastunna", "kaskasa", "kuskistunna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكسكس",
+      "tur": "verb",
+      "baslik": "تكسكس (form Iq)\n# تُكَسْكِسُ (tukaskisu) /tu.kas.ki.su/: inflection of كَسْكَسَ (kaskasa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُكَسْكَسُ (tukaskasu) /tu.kas.ka.su/: inflection of كَسْكَسَ (kaskasa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past pas",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tukaskisu", "kaskasa", "tukaskasu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أكسكس",
+      "tur": "verb",
+      "baslik": "أكسكس (form Iq)\n# أُكَسْكِسُ (ʔukaskisu) /ʔu.kas.ki.su/: first-person singular non-past active indicative of كَسْكَسَ (kaskasa)\n# أُكَسْكَسُ (ʔukaskasu) /ʔu.kas.ka.su/: first-person singular non-past passive indicative of كَسْكَسَ (kaskasa)\n# أُكَسْكِسَ (ʔukaskisa) /ʔu.kas.ki.sa/: first-person singular non-past active subjunctive of كَسْكَسَ (kaskasa)\n# أُكَسْكَسَ (ʔukaskasa) /ʔu.kas.ka.sa/: first",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʔukaskisu", "kaskasa", "ʔukaskasu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكسكسين",
+      "tur": "verb",
+      "baslik": "تكسكسين (form Iq)\n# تُكَسْكِسِينَ (tukaskisīna) /tu.kas.ki.siː.na/: second-person feminine singular non-past active indicative of كَسْكَسَ (kaskasa)\n# تُكَسْكَسِينَ (tukaskasīna) /tu.kas.ka.siː.na/: second-person feminine singular non-past passive indicative of كَسْكَسَ (kaskasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tukaskisīna", "kaskasa", "tukaskasīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يكسكس",
+      "tur": "verb",
+      "baslik": "يكسكس (form Iq)\n# يُكَسْكِسُ (yukaskisu) /ju.kas.ki.su/: third-person masculine singular non-past active indicative of كَسْكَسَ (kaskasa)\n# يُكَسْكَسُ (yukaskasu) /ju.kas.ka.su/: third-person masculine singular non-past passive indicative of كَسْكَسَ (kaskasa)\n# يُكَسْكِسَ (yukaskisa) /ju.kas.ki.sa/: third-person masculine singular non-past active subjunctive of كَسْكَسَ (kaskasa)\n# يُكَسْكَسَ (yu",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yukaskisu", "kaskasa", "yukaskasu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكسكسان",
+      "tur": "verb",
+      "baslik": "تكسكسان (form Iq)\n# تُكَسْكِسَانِ (tukaskisāni) /tu.kas.ki.saː.ni/: inflection of كَسْكَسَ (kaskasa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُكَسْكَسَانِ (tukaskasāni) /tu.kas.ka.saː.ni/: inflection of كَسْكَسَ (kaskasa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tukaskisāni", "kaskasa", "tukaskasāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يكسكسان",
+      "tur": "verb",
+      "baslik": "يكسكسان (form Iq)\n# يُكَسْكِسَانِ (yukaskisāni) /ju.kas.ki.saː.ni/: third-person masculine dual non-past active indicative of كَسْكَسَ (kaskasa)\n# يُكَسْكَسَانِ (yukaskasāni) /ju.kas.ka.saː.ni/: third-person masculine dual non-past passive indicative of كَسْكَسَ (kaskasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yukaskisāni", "kaskasa", "yukaskasāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكسكسون",
+      "tur": "verb",
+      "baslik": "تكسكسون (form Iq)\n# تُكَسْكِسُونَ (tukaskisūna) /tu.kas.ki.suː.na/: second-person masculine plural non-past active indicative of كَسْكَسَ (kaskasa)\n# تُكَسْكَسُونَ (tukaskasūna) /tu.kas.ka.suː.na/: second-person masculine plural non-past passive indicative of كَسْكَسَ (kaskasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tukaskisūna", "kaskasa", "tukaskasūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكسكسن",
+      "tur": "verb",
+      "baslik": "تكسكسن (form Iq)\n# تُكَسْكِسْنَ (tukaskisna) /tu.kas.kis.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of كَسْكَسَ (kaskasa)\n# تُكَسْكَسْنَ (tukaskasna) /tu.kas.kas.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of كَسْكَسَ (kaskasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tukaskisna", "kaskasa", "tukaskasna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يكسكسون",
+      "tur": "verb",
+      "baslik": "يكسكسون (form Iq)\n# يُكَسْكِسُونَ (yukaskisūna) /ju.kas.ki.suː.na/: third-person masculine plural non-past active indicative of كَسْكَسَ (kaskasa)\n# يُكَسْكَسُونَ (yukaskasūna) /ju.kas.ka.suː.na/: third-person masculine plural non-past passive indicative of كَسْكَسَ (kaskasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yukaskisūna", "kaskasa", "yukaskasūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يكسكسن",
+      "tur": "verb",
+      "baslik": "يكسكسن (form Iq)\n# يُكَسْكِسْنَ (yukaskisna) /ju.kas.kis.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of كَسْكَسَ (kaskasa)\n# يُكَسْكَسْنَ (yukaskasna) /ju.kas.kas.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of كَسْكَسَ (kaskasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yukaskisna", "kaskasa", "yukaskasna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نكسكس",
+      "tur": "verb",
+      "baslik": "نكسكس (form Iq)\n# نُكَسْكِسُ (nukaskisu) /nu.kas.ki.su/: first-person plural non-past active indicative of كَسْكَسَ (kaskasa)\n# نُكَسْكَسُ (nukaskasu) /nu.kas.ka.su/: first-person plural non-past passive indicative of كَسْكَسَ (kaskasa)\n# نُكَسْكِسَ (nukaskisa) /nu.kas.ki.sa/: first-person plural non-past active subjunctive of كَسْكَسَ (kaskasa)\n# نُكَسْكَسَ (nukaskasa) /nu.kas.ka.sa/: first-perso",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["nukaskisu", "kaskasa", "nukaskasu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكسكسوا",
+      "tur": "verb",
+      "baslik": "تكسكسوا (form Iq)\n# تُكَسْكِسُوا (tukaskisū) /tu.kas.ki.suː/: second-person masculine plural non-past active subjunctive/jussive of كَسْكَسَ (kaskasa)\n# تُكَسْكَسُوا (tukaskasū) /tu.kas.ka.suː/: second-person masculine plural non-past passive subjunctive/jussive of كَسْكَسَ (kaskasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tukaskisū", "kaskasa", "tukaskasū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يكسكسا",
+      "tur": "verb",
+      "baslik": "يكسكسا (form Iq)\n# يُكَسْكِسَا (yukaskisā) /ju.kas.ki.saː/: third-person masculine dual non-past active subjunctive/jussive of كَسْكَسَ (kaskasa)\n# يُكَسْكَسَا (yukaskasā) /ju.kas.ka.saː/: third-person masculine dual non-past passive subjunctive/jussive of كَسْكَسَ (kaskasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yukaskisā", "kaskasa", "yukaskasā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكسكسا",
+      "tur": "verb",
+      "baslik": "تكسكسا (form Iq)\n# تُكَسْكِسَا (tukaskisā) /tu.kas.ki.saː/: inflection of كَسْكَسَ (kaskasa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُكَسْكَسَا (tukaskasā) /tu.kas.ka.saː/: inflection of كَسْكَسَ (kaskasa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tukaskisā", "kaskasa", "tukaskasā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "كسكسي",
+      "tur": "verb",
+      "baslik": "كَسْكِسِي • (kaskisī) (form Iq) /kas.ki.siː/\n# second-person feminine singular imperative of كَسْكَسَ (kaskasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["kaskisī", "kaskasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكسكسي",
+      "tur": "verb",
+      "baslik": "تكسكسي (form Iq)\n# تُكَسْكِسِي (tukaskisī) /tu.kas.ki.siː/: second-person feminine singular non-past active subjunctive/jussive of كَسْكَسَ (kaskasa)\n# تُكَسْكَسِي (tukaskasī) /tu.kas.ka.siː/: second-person feminine singular non-past passive subjunctive/jussive of كَسْكَسَ (kaskasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tukaskisī", "kaskasa", "tukaskasī"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يكسكسوا",
+      "tur": "verb",
+      "baslik": "يكسكسوا (form Iq)\n# يُكَسْكِسُوا (yukaskisū) /ju.kas.ki.suː/: third-person masculine plural non-past active subjunctive/jussive of كَسْكَسَ (kaskasa)\n# يُكَسْكَسُوا (yukaskasū) /ju.kas.ka.suː/: third-person masculine plural non-past passive subjunctive/jussive of كَسْكَسَ (kaskasa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yukaskisū", "kaskasa", "yukaskasū"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "كسكس", "r6"]
+  ],
+  "mana": {
     "ince": "substance.n.07",
     "orta": "noun.food",
     "ust": "canlı ve beden",
@@ -347,22 +248,15 @@
     "dayanak_tanim": "a spicy dish that originated in northern Africa; consists of pasta steamed with a meat and vegetable stew",
     "synset_sayisi": 2
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["food.n.01", "food.n.02"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["food.n.01", "food.n.02"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

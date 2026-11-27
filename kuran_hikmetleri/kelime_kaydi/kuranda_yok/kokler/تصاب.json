@@ -1,437 +1,306 @@
 {
   "kok": "تصاب",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تصاب", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تصابي",
-        "u": "تصابي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَصَابِّي • (taṣābbī) (form VI) /ta.sˤaːb.biː/\n# second-person feminine singular imperative of تَصَابَّ (taṣābba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["taṣābbī", "taṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تصابوا",
-        "u": "تصابوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَصَابُّوا • (taṣābbū) (form VI) /ta.sˤaːb.buː/\n# inflection of تَصَابَّ (taṣābba):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["taṣābbū", "taṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تصابا",
-        "u": "تصابا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَصَابَّا • (taṣābbā) (form VI) /ta.sˤaːb.baː/\n# inflection of تَصَابَّ (taṣābba):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["taṣābbā", "taṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تصاببت",
-        "u": "تصاببت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تصاببت (form VI)\n# تَصَابَبْتُ (taṣābabtu) /ta.sˤaː.bab.tu/: first-person singular past active of تَصَابَّ (taṣābba)\n# تَصَابَبْتَ (taṣābabta) /ta.sˤaː.bab.ta/: second-person masculine singular past active of تَصَابَّ (taṣābba)\n# تَصَابَبْتِ (taṣābabti) /ta.sˤaː.bab.ti/: second-person feminine singular past active of تَصَابَّ (taṣābba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["taṣābabtu", "taṣābba", "taṣābabta"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تصابت",
-        "u": "تصابت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَصَابَّتْ • (taṣābbat) (form VI) /ta.sˤaːb.bat/\n# third-person feminine singular past active of تَصَابَّ (taṣābba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["taṣābbat", "taṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تصاببتما",
-        "u": "تصاببتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَصَابَبْتُمَا • (taṣābabtumā) (form VI) /ta.sˤaː.bab.tu.maː/\n# second-person dual past active of تَصَابَّ (taṣābba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["taṣābabtumā", "taṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تصابتا",
-        "u": "تصابتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَصَابَّتَا • (taṣābbatā) (form VI) /ta.sˤaːb.ba.taː/\n# third-person feminine dual past active of تَصَابَّ (taṣābba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["taṣābbatā", "taṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تصاببنا",
-        "u": "تصاببنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَصَابَبْنَا • (taṣābabnā) (form VI) /ta.sˤaː.bab.naː/\n# first-person plural past active of تَصَابَّ (taṣābba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["taṣābabnā", "taṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تصاببتن",
-        "u": "تصاببتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَصَابَبْتُنَّ • (taṣābabtunna) (form VI) /ta.sˤaː.bab.tun.na/\n# second-person feminine plural past active of تَصَابَّ (taṣābba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["taṣābabtunna", "taṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "أتصاب",
-        "u": "أتصاب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتصاب (form VI)\n# أَتَصَابُّ (ʔataṣābbu) /ʔa.ta.sˤaːb.bu/: first-person singular non-past active indicative of تَصَابَّ (taṣābba)\n# أَتَصَابَّ (ʔataṣābba) /ʔa.ta.sˤaːb.ba/: first-person singular non-past active subjunctive/jussive of تَصَابَّ (taṣābba)\n# أَتَصَابِّ (ʔataṣābbi) /ʔa.ta.sˤaːb.bi/: first-person singular non-past active jussive of تَصَابَّ (taṣābba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["ʔataṣābbu", "taṣābba", "ʔataṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تصاببتم",
-        "u": "تصاببتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَصَابَبْتُمْ • (taṣābabtum) (form VI) /ta.sˤaː.bab.tum/\n# second-person masculine plural past active of تَصَابَّ (taṣābba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["taṣābabtum", "taṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تصاببن",
-        "u": "تصاببن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَصَابَبْنَ • (taṣābabna) (form VI) /ta.sˤaː.bab.na/\n# inflection of تَصَابَّ (taṣābba):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["taṣābabna", "taṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصاب",
-        "u": "تتصاب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتصاب (form VI)\n# تَتَصَابُّ (tataṣābbu) /ta.ta.sˤaːb.bu/: inflection of تَصَابَّ (taṣābba):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَصَابَّ (tataṣābba) /ta.ta.sˤaːb.ba/: inflection of تَصَابَّ (taṣābba):\n## second-person masculine singular non-past active subjunctive/jussive\n## third-person feminine singular ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tataṣābbu", "taṣābba", "tataṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يتصاب",
-        "u": "يتصاب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتصاب (form VI)\n# يَتَصَابُّ (yataṣābbu) /ja.ta.sˤaːb.bu/: third-person masculine singular non-past active indicative of تَصَابَّ (taṣābba)\n# يُتَصَابُّ (yutaṣābbu) /ju.ta.sˤaːb.bu/: third-person masculine singular non-past passive indicative of تَصَابَّ (taṣābba)\n# يَتَصَابَّ (yataṣābba) /ja.ta.sˤaːb.ba/: third-person masculine singular non-past active subjunctive/jussive of تَصَابَّ (taṣābba)\n# ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["yataṣābbu", "taṣābba", "yutaṣābbu"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصابان",
-        "u": "تتصابان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَصَابَّانِ • (tataṣābbāni) (form VI) /ta.ta.sˤaːb.baː.ni/\n# inflection of تَصَابَّ (taṣābba):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tataṣābbāni", "taṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصابين",
-        "u": "تتصابين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَصَابِّينَ • (tataṣābbīna) (form VI) /ta.ta.sˤaːb.biː.na/\n# second-person feminine singular non-past active indicative of تَصَابَّ (taṣābba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tataṣābbīna", "taṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يتصابان",
-        "u": "يتصابان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَصَابَّانِ • (yataṣābbāni) (form VI) /ja.ta.sˤaːb.baː.ni/\n# third-person masculine dual non-past active indicative of تَصَابَّ (taṣābba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["yataṣābbāni", "taṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصابون",
-        "u": "تتصابون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَصَابُّونَ • (tataṣābbūna) (form VI) /ta.ta.sˤaːb.buː.na/\n# second-person masculine plural non-past active indicative of تَصَابَّ (taṣābba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tataṣābbūna", "taṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصاببن",
-        "u": "تتصاببن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَصَابَبْنَ • (tataṣābabna) (form VI) /ta.ta.sˤaː.bab.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَصَابَّ (taṣābba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tataṣābabna", "taṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يتصابون",
-        "u": "يتصابون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَصَابُّونَ • (yataṣābbūna) (form VI) /ja.ta.sˤaːb.buː.na/\n# third-person masculine plural non-past active indicative of تَصَابَّ (taṣābba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["yataṣābbūna", "taṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يتصاببن",
-        "u": "يتصاببن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَصَابَبْنَ • (yataṣābabna) (form VI) /ja.ta.sˤaː.bab.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَصَابَّ (taṣābba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["yataṣābabna", "taṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصابا",
-        "u": "تتصابا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَصَابَّا • (tataṣābbā) (form VI) /ta.ta.sˤaːb.baː/\n# inflection of تَصَابَّ (taṣābba):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tataṣābbā", "taṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "نتصاب",
-        "u": "نتصاب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتصاب (form VI)\n# نَتَصَابُّ (nataṣābbu) /na.ta.sˤaːb.bu/: first-person plural non-past active indicative of تَصَابَّ (taṣābba)\n# نَتَصَابَّ (nataṣābba) /na.ta.sˤaːb.ba/: first-person plural non-past active subjunctive/jussive of تَصَابَّ (taṣābba)\n# نَتَصَابِّ (nataṣābbi) /na.ta.sˤaːb.bi/: first-person plural non-past active jussive of تَصَابَّ (taṣābba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["nataṣābbu", "taṣābba", "nataṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصابي",
-        "u": "تتصابي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَصَابِّي • (tataṣābbī) (form VI) /ta.ta.sˤaːb.biː/\n# second-person feminine singular non-past active subjunctive/jussive of تَصَابَّ (taṣābba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tataṣābbī", "taṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصابوا",
-        "u": "تتصابوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَصَابُّوا • (tataṣābbū) (form VI) /ta.ta.sˤaːb.buː/\n# second-person masculine plural non-past active subjunctive/jussive of تَصَابَّ (taṣābba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tataṣābbū", "taṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يتصابوا",
-        "u": "يتصابوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَصَابُّوا • (yataṣābbū) (form VI) /ja.ta.sˤaːb.buː/\n# third-person masculine plural non-past active subjunctive/jussive of تَصَابَّ (taṣābba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["yataṣābbū", "taṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يتصابا",
-        "u": "يتصابا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَصَابَّا • (yataṣābbā) (form VI) /ja.ta.sˤaːb.baː/\n# third-person masculine dual non-past active subjunctive/jussive of تَصَابَّ (taṣābba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["yataṣābbā", "taṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "أتصابب",
-        "u": "أتصابب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَتَصَابَبْ • (ʔataṣābab) (form VI) /ʔa.ta.sˤaː.bab/\n# first-person singular non-past active jussive of تَصَابَّ (taṣābba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["ʔataṣābab", "taṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصابب",
-        "u": "تتصابب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَصَابَبْ • (tataṣābab) (form VI) /ta.ta.sˤaː.bab/\n# inflection of تَصَابَّ (taṣābba):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tataṣābab", "taṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يتصابب",
-        "u": "يتصابب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتصابب (form VI)\n# يَتَصَابَبْ (yataṣābab) /ja.ta.sˤaː.bab/: third-person masculine singular non-past active jussive of تَصَابَّ (taṣābba)\n# يُتَصَابَبْ (yutaṣābab) /ju.ta.sˤaː.bab/: third-person masculine singular non-past passive jussive of تَصَابَّ (taṣābba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["yataṣābab", "taṣābba", "yutaṣābab"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "نتصابب",
-        "u": "نتصابب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَتَصَابَبْ • (nataṣābab) (form VI) /na.ta.sˤaː.bab/\n# first-person plural non-past active jussive of تَصَابَّ (taṣābba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["nataṣābab", "taṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تصابب",
-        "u": "تصابب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَصَابَبْ • (taṣābab) (form VI) /ta.sˤaː.bab/\n# second-person masculine singular imperative of تَصَابَّ (taṣābba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["taṣābab", "taṣābba"],
-        "k": "تصاب",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تص",
+  "ses": {
     "harf": "ت",
+    "fasil": "تص",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تصابي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَصَابِّي • (taṣābbī) (form VI) /ta.sˤaːb.biː/\n# second-person feminine singular imperative of تَصَابَّ (taṣābba)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["taṣābbī", "taṣābba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصابوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَصَابُّوا • (taṣābbū) (form VI) /ta.sˤaːb.buː/\n# inflection of تَصَابَّ (taṣābba):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["taṣābbū", "taṣābba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصابا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَصَابَّا • (taṣābbā) (form VI) /ta.sˤaːb.baː/\n# inflection of تَصَابَّ (taṣābba):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["taṣābbā", "taṣābba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصاببت",
+      "tur": "verb",
+      "baslik": "تصاببت (form VI)\n# تَصَابَبْتُ (taṣābabtu) /ta.sˤaː.bab.tu/: first-person singular past active of تَصَابَّ (taṣābba)\n# تَصَابَبْتَ (taṣābabta) /ta.sˤaː.bab.ta/: second-person masculine singular past active of تَصَابَّ (taṣābba)\n# تَصَابَبْتِ (taṣābabti) /ta.sˤaː.bab.ti/: second-person feminine singular past active of تَصَابَّ (taṣābba)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["taṣābabtu", "taṣābba", "taṣābabta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصابت",
+      "tur": "verb",
+      "baslik": "تَصَابَّتْ • (taṣābbat) (form VI) /ta.sˤaːb.bat/\n# third-person feminine singular past active of تَصَابَّ (taṣābba)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["taṣābbat", "taṣābba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصاببتما",
+      "tur": "verb",
+      "baslik": "تَصَابَبْتُمَا • (taṣābabtumā) (form VI) /ta.sˤaː.bab.tu.maː/\n# second-person dual past active of تَصَابَّ (taṣābba)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["taṣābabtumā", "taṣābba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصابتا",
+      "tur": "verb",
+      "baslik": "تَصَابَّتَا • (taṣābbatā) (form VI) /ta.sˤaːb.ba.taː/\n# third-person feminine dual past active of تَصَابَّ (taṣābba)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["taṣābbatā", "taṣābba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصاببنا",
+      "tur": "verb",
+      "baslik": "تَصَابَبْنَا • (taṣābabnā) (form VI) /ta.sˤaː.bab.naː/\n# first-person plural past active of تَصَابَّ (taṣābba)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["taṣābabnā", "taṣābba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصاببتن",
+      "tur": "verb",
+      "baslik": "تَصَابَبْتُنَّ • (taṣābabtunna) (form VI) /ta.sˤaː.bab.tun.na/\n# second-person feminine plural past active of تَصَابَّ (taṣābba)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["taṣābabtunna", "taṣābba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتصاب",
+      "tur": "verb",
+      "baslik": "أتصاب (form VI)\n# أَتَصَابُّ (ʔataṣābbu) /ʔa.ta.sˤaːb.bu/: first-person singular non-past active indicative of تَصَابَّ (taṣābba)\n# أَتَصَابَّ (ʔataṣābba) /ʔa.ta.sˤaːb.ba/: first-person singular non-past active subjunctive/jussive of تَصَابَّ (taṣābba)\n# أَتَصَابِّ (ʔataṣābbi) /ʔa.ta.sˤaːb.bi/: first-person singular non-past active jussive of تَصَابَّ (taṣābba)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["ʔataṣābbu", "taṣābba", "ʔataṣābba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصاببتم",
+      "tur": "verb",
+      "baslik": "تَصَابَبْتُمْ • (taṣābabtum) (form VI) /ta.sˤaː.bab.tum/\n# second-person masculine plural past active of تَصَابَّ (taṣābba)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["taṣābabtum", "taṣābba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصاببن",
+      "tur": "verb",
+      "baslik": "تَصَابَبْنَ • (taṣābabna) (form VI) /ta.sˤaː.bab.na/\n# inflection of تَصَابَّ (taṣābba):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["taṣābabna", "taṣābba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصاب",
+      "tur": "verb",
+      "baslik": "تتصاب (form VI)\n# تَتَصَابُّ (tataṣābbu) /ta.ta.sˤaːb.bu/: inflection of تَصَابَّ (taṣābba):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَصَابَّ (tataṣābba) /ta.ta.sˤaːb.ba/: inflection of تَصَابَّ (taṣābba):\n## second-person masculine singular non-past active subjunctive/jussive\n## third-person feminine singular ",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tataṣābbu", "taṣābba", "tataṣābba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتصاب",
+      "tur": "verb",
+      "baslik": "يتصاب (form VI)\n# يَتَصَابُّ (yataṣābbu) /ja.ta.sˤaːb.bu/: third-person masculine singular non-past active indicative of تَصَابَّ (taṣābba)\n# يُتَصَابُّ (yutaṣābbu) /ju.ta.sˤaːb.bu/: third-person masculine singular non-past passive indicative of تَصَابَّ (taṣābba)\n# يَتَصَابَّ (yataṣābba) /ja.ta.sˤaːb.ba/: third-person masculine singular non-past active subjunctive/jussive of تَصَابَّ (taṣābba)\n# ",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["yataṣābbu", "taṣābba", "yutaṣābbu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصابان",
+      "tur": "verb",
+      "baslik": "تَتَصَابَّانِ • (tataṣābbāni) (form VI) /ta.ta.sˤaːb.baː.ni/\n# inflection of تَصَابَّ (taṣābba):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tataṣābbāni", "taṣābba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصابين",
+      "tur": "verb",
+      "baslik": "تَتَصَابِّينَ • (tataṣābbīna) (form VI) /ta.ta.sˤaːb.biː.na/\n# second-person feminine singular non-past active indicative of تَصَابَّ (taṣābba)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tataṣābbīna", "taṣābba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتصابان",
+      "tur": "verb",
+      "baslik": "يَتَصَابَّانِ • (yataṣābbāni) (form VI) /ja.ta.sˤaːb.baː.ni/\n# third-person masculine dual non-past active indicative of تَصَابَّ (taṣābba)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["yataṣābbāni", "taṣābba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصابون",
+      "tur": "verb",
+      "baslik": "تَتَصَابُّونَ • (tataṣābbūna) (form VI) /ta.ta.sˤaːb.buː.na/\n# second-person masculine plural non-past active indicative of تَصَابَّ (taṣābba)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tataṣābbūna", "taṣābba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصاببن",
+      "tur": "verb",
+      "baslik": "تَتَصَابَبْنَ • (tataṣābabna) (form VI) /ta.ta.sˤaː.bab.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَصَابَّ (taṣābba)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tataṣābabna", "taṣābba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتصابون",
+      "tur": "verb",
+      "baslik": "يَتَصَابُّونَ • (yataṣābbūna) (form VI) /ja.ta.sˤaːb.buː.na/\n# third-person masculine plural non-past active indicative of تَصَابَّ (taṣābba)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["yataṣābbūna", "taṣābba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتصاببن",
+      "tur": "verb",
+      "baslik": "يَتَصَابَبْنَ • (yataṣābabna) (form VI) /ja.ta.sˤaː.bab.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَصَابَّ (taṣābba)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["yataṣābabna", "taṣābba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصابا",
+      "tur": "verb",
+      "baslik": "تَتَصَابَّا • (tataṣābbā) (form VI) /ta.ta.sˤaːb.baː/\n# inflection of تَصَابَّ (taṣābba):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tataṣābbā", "taṣābba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتصاب",
+      "tur": "verb",
+      "baslik": "نتصاب (form VI)\n# نَتَصَابُّ (nataṣābbu) /na.ta.sˤaːb.bu/: first-person plural non-past active indicative of تَصَابَّ (taṣābba)\n# نَتَصَابَّ (nataṣābba) /na.ta.sˤaːb.ba/: first-person plural non-past active subjunctive/jussive of تَصَابَّ (taṣābba)\n# نَتَصَابِّ (nataṣābbi) /na.ta.sˤaːb.bi/: first-person plural non-past active jussive of تَصَابَّ (taṣābba)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["nataṣābbu", "taṣābba", "nataṣābba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصابي",
+      "tur": "verb",
+      "baslik": "تَتَصَابِّي • (tataṣābbī) (form VI) /ta.ta.sˤaːb.biː/\n# second-person feminine singular non-past active subjunctive/jussive of تَصَابَّ (taṣābba)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tataṣābbī", "taṣābba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصابوا",
+      "tur": "verb",
+      "baslik": "تَتَصَابُّوا • (tataṣābbū) (form VI) /ta.ta.sˤaːb.buː/\n# second-person masculine plural non-past active subjunctive/jussive of تَصَابَّ (taṣābba)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tataṣābbū", "taṣābba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتصابوا",
+      "tur": "verb",
+      "baslik": "يَتَصَابُّوا • (yataṣābbū) (form VI) /ja.ta.sˤaːb.buː/\n# third-person masculine plural non-past active subjunctive/jussive of تَصَابَّ (taṣābba)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["yataṣābbū", "taṣābba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتصابا",
+      "tur": "verb",
+      "baslik": "يَتَصَابَّا • (yataṣābbā) (form VI) /ja.ta.sˤaːb.baː/\n# third-person masculine dual non-past active subjunctive/jussive of تَصَابَّ (taṣābba)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["yataṣābbā", "taṣābba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتصابب",
+      "tur": "verb",
+      "baslik": "أَتَصَابَبْ • (ʔataṣābab) (form VI) /ʔa.ta.sˤaː.bab/\n# first-person singular non-past active jussive of تَصَابَّ (taṣābba)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["ʔataṣābab", "taṣābba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصابب",
+      "tur": "verb",
+      "baslik": "تَتَصَابَبْ • (tataṣābab) (form VI) /ta.ta.sˤaː.bab/\n# inflection of تَصَابَّ (taṣābba):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tataṣābab", "taṣābba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتصابب",
+      "tur": "verb",
+      "baslik": "يتصابب (form VI)\n# يَتَصَابَبْ (yataṣābab) /ja.ta.sˤaː.bab/: third-person masculine singular non-past active jussive of تَصَابَّ (taṣābba)\n# يُتَصَابَبْ (yutaṣābab) /ju.ta.sˤaː.bab/: third-person masculine singular non-past passive jussive of تَصَابَّ (taṣābba)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["yataṣābab", "taṣābba", "yutaṣābab"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتصابب",
+      "tur": "verb",
+      "baslik": "نَتَصَابَبْ • (nataṣābab) (form VI) /na.ta.sˤaː.bab/\n# first-person plural non-past active jussive of تَصَابَّ (taṣābba)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["nataṣābab", "taṣābba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصابب",
+      "tur": "verb",
+      "baslik": "تَصَابَبْ • (taṣābab) (form VI) /ta.sˤaː.bab/\n# second-person masculine singular imperative of تَصَابَّ (taṣābba)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["taṣābab", "taṣābba"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تصاب", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

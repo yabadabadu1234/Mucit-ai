@@ -1,887 +1,624 @@
 {
   "kok": "كاس",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "كاس", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "كس",
-        "u": "كس",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "كس (form I)\n# كِسْ (kis) /kis/: second-person masculine singular imperative of كَاسَ (kāsa)\n# كُسْ (kus) /kus/: second-person masculine singular imperative of كَاسَ (kāsa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kis", "kāsa", "kus"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "كوسا",
-        "u": "كوسا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "كُوسَا • (kūsā) (form I) /kuː.saː/\n# second-person dual imperative of كَاسَ (kāsa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kūsā", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "نكس",
-        "u": "نكس",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نكس (form I)\n# نَكِسْ (nakis) /na.kis/: first-person plural non-past active jussive of كَاسَ (kāsa)\n# نُكَسْ (nukas) /nu.kas/: first-person plural non-past passive jussive of كَاسَ (kāsa)\n# نَكُسْ (nakus) /na.kus/: first-person plural non-past active jussive of كَاسَ (kāsa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nakis", "kāsa", "nukas"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "كيس",
-        "u": "كيس",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "كِيسَ • (kīsa) (form I) /kiː.sa/\n# third-person masculine singular past passive of كَاسَ (kāsa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kīsa", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "أكوس",
-        "u": "أكوس",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أكوس (form I)\n# أَكُوسُ (ʔakūsu) /ʔa.kuː.su/: first-person singular non-past active indicative of كَاسَ (kāsa)\n# أَكُوسَ (ʔakūsa) /ʔa.kuː.sa/: first-person singular non-past active subjunctive of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔakūsu", "kāsa", "ʔakūsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "أكيس",
-        "u": "أكيس",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أكيس (form I)\n# أَكِيسُ (ʔakīsu) /ʔa.kiː.su/: first-person singular non-past active indicative of كَاسَ (kāsa)\n# أَكِيسَ (ʔakīsa) /ʔa.kiː.sa/: first-person singular non-past active subjunctive of كَاسَ (kāsa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔakīsu", "kāsa", "ʔakīsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "كاسا",
-        "u": "كاسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كَاسَا • (kāsā) (form I) /kaː.saː/\n# third-person masculine dual past active of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kāsā", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكيسين",
-        "u": "تكيسين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَكِيسِينَ • (takīsīna) (form I) /ta.kiː.siː.na/\n# second-person feminine singular non-past active indicative of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takīsīna", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "يكيس",
-        "u": "يكيس",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يكيس (form I)\n# يَكِيسُ (yakīsu) /ja.kiː.su/: third-person masculine singular non-past active indicative of كَاسَ (kāsa)\n# يَكِيسَ (yakīsa) /ja.kiː.sa/: third-person masculine singular non-past active subjunctive of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yakīsu", "kāsa", "yakīsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكيسان",
-        "u": "تكيسان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَكِيسَانِ • (takīsāni) (form I) /ta.kiː.saː.ni/\n# inflection of كَاسَ (kāsa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takīsāni", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكيسون",
-        "u": "تكيسون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَكِيسُونَ • (takīsūna) (form I) /ta.kiː.suː.na/\n# second-person masculine plural non-past active indicative of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takīsūna", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكيس",
-        "u": "تكيس",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تكيس (form I)\n# تَكِيسُ (takīsu) /ta.kiː.su/: inflection of كَاسَ (kāsa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَكِيسَ (takīsa) /ta.kiː.sa/: inflection of كَاسَ (kāsa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takīsu", "kāsa", "takīsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكيسي",
-        "u": "تكيسي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَكِيسِي • (takīsī) (form I) /ta.kiː.siː/\n# second-person feminine singular non-past active subjunctive/jussive of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takīsī", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "يكيسان",
-        "u": "يكيسان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَكِيسَانِ • (yakīsāni) (form I) /ja.kiː.saː.ni/\n# third-person masculine dual non-past active indicative of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yakīsāni", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "نكيس",
-        "u": "نكيس",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نكيس (form I)\n# نَكِيسُ (nakīsu) /na.kiː.su/: first-person plural non-past active indicative of كَاسَ (kāsa)\n# نَكِيسَ (nakīsa) /na.kiː.sa/: first-person plural non-past active subjunctive of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nakīsu", "kāsa", "nakīsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "يكيسا",
-        "u": "يكيسا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَكِيسَا • (yakīsā) (form I) /ja.kiː.saː/\n# third-person masculine dual non-past active subjunctive/jussive of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yakīsā", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "يكيسون",
-        "u": "يكيسون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَكِيسُونَ • (yakīsūna) (form I) /ja.kiː.suː.na/\n# third-person masculine plural non-past active indicative of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yakīsūna", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكيسا",
-        "u": "تكيسا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَكِيسَا • (takīsā) (form I) /ta.kiː.saː/\n# inflection of كَاسَ (kāsa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takīsā", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "يكيسوا",
-        "u": "يكيسوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَكِيسُوا • (yakīsū) (form I) /ja.kiː.suː/\n# third-person masculine plural non-past active subjunctive/jussive of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yakīsū", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكيسوا",
-        "u": "تكيسوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَكِيسُوا • (takīsū) (form I) /ta.kiː.suː/\n# second-person masculine plural non-past active subjunctive/jussive of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takīsū", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "كست",
-        "u": "كست",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "كست (form I)\n# كِسْتُ (kistu) /kis.tu/: first-person singular past active/passive of كَاسَ (kāsa)\n# كِسْتَ (kista) /kis.ta/: second-person masculine singular past active/passive of كَاسَ (kāsa)\n# كِسْتِ (kisti) /kis.ti/: second-person feminine singular past active/passive of كَاسَ (kāsa)\n# كُسْتُ (kustu) /kus.tu/: first-person singular past active of كَاسَ (kāsa)\n# كُسْتَ (kusta) /kus.ta/: second-",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kistu", "kāsa", "kista"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "كستما",
-        "u": "كستما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كستما (form I)\n# كِسْتُمَا (kistumā) /kis.tu.maː/: second-person dual past active/passive of كَاسَ (kāsa)\n# كُسْتُمَا (kustumā) /kus.tu.maː/: second-person dual past active of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kistumā", "kāsa", "kustumā"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "كاست",
-        "u": "كاست",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كَاسَتْ • (kāsat) (form I) /kaː.sat/\n# third-person feminine singular past active of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kāsat", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "كاستا",
-        "u": "كاستا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كَاسَتَا • (kāsatā) (form I) /kaː.sa.taː/\n# third-person feminine dual past active of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kāsatā", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "كسنا",
-        "u": "كسنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كسنا (form I)\n# كِسْنَا (kisnā) /kis.naː/: first-person plural past active/passive of كَاسَ (kāsa)\n# كُسْنَا (kusnā) /kus.naː/: first-person plural past active of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kisnā", "kāsa", "kusnā"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "كاسوا",
-        "u": "كاسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كَاسُوا • (kāsū) (form I) /kaː.suː/\n# third-person masculine plural past active of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kāsū", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "كستم",
-        "u": "كستم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كستم (form I)\n# كِسْتُمْ (kistum) /kis.tum/: second-person masculine plural past active/passive of كَاسَ (kāsa)\n# كُسْتُمْ (kustum) /kus.tum/: second-person masculine plural past active of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kistum", "kāsa", "kustum"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "كسن",
-        "u": "كسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كسن (form I)\n# كِسْنَ (kisna) /kis.na/: inflection of كَاسَ (kāsa):\n## third-person feminine plural past active/passive\n## second-person feminine plural imperative\n# كُسْنَ (kusna) /kus.na/: inflection of كَاسَ (kāsa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kisna", "kāsa", "kusna"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "كستن",
-        "u": "كستن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كستن (form I)\n# كِسْتُنَّ (kistunna) /kis.tun.na/: second-person feminine plural past active/passive of كَاسَ (kāsa)\n# كُسْتُنَّ (kustunna) /kus.tun.na/: second-person feminine plural past active of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kistunna", "kāsa", "kustunna"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "أكس",
-        "u": "أكس",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أكس (form I)\n# أَكِسْ (ʔakis) /ʔa.kis/: first-person singular non-past active jussive of كَاسَ (kāsa)\n# أُكَسْ (ʔukas) /ʔu.kas/: first-person singular non-past passive jussive of كَاسَ (kāsa)\n# أَكُسْ (ʔakus) /ʔa.kus/: first-person singular non-past active jussive of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔakis", "kāsa", "ʔukas"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "يكسن",
-        "u": "يكسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يكسن (form I)\n# يَكِسْنَ (yakisna) /ja.kis.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of كَاسَ (kāsa)\n# يُكَسْنَ (yukasna) /ju.kas.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of كَاسَ (kāsa)\n# يَكُسْنَ (yakusna) /ja.kus.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yakisna", "kāsa", "yukasna"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكسن",
-        "u": "تكسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تكسن (form I)\n# تَكِسْنَ (takisna) /ta.kis.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of كَاسَ (kāsa)\n# تُكَسْنَ (tukasna) /tu.kas.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of كَاسَ (kāsa)\n# تَكُسْنَ (takusna) /ta.kus.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takisna", "kāsa", "tukasna"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "كيسي",
-        "u": "كيسي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "كِيسِي • (kīsī) (form I) /kiː.siː/\n# second-person feminine singular imperative of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kīsī", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكس",
-        "u": "تكس",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تكس (form I)\n# تَكِسْ (takis) /ta.kis/: inflection of كَاسَ (kāsa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُكَسْ (tukas) /tu.kas/: inflection of كَاسَ (kāsa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive\n# تَكُسْ (takus) /ta.kus/: inflection o",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takis", "kāsa", "tukas"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "يكس",
-        "u": "يكس",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يكس (form I)\n# يَكِسْ (yakis) /ja.kis/: third-person masculine singular non-past active jussive of كَاسَ (kāsa)\n# يُكَسْ (yukas) /ju.kas/: third-person masculine singular non-past passive jussive of كَاسَ (kāsa)\n# يَكُسْ (yakus) /ja.kus/: third-person masculine singular non-past active jussive of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yakis", "kāsa", "yukas"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "كيسا",
-        "u": "كيسا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "كِيسَا • (kīsā) (form I) /kiː.saː/\n# inflection of كَاسَ (kāsa):\n## third-person masculine dual past passive\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kīsā", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "كيستا",
-        "u": "كيستا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "كِيسَتَا • (kīsatā) (form I) /kiː.sa.taː/\n# third-person feminine dual past passive of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kīsatā", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "كيست",
-        "u": "كيست",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "كِيسَتْ • (kīsat) (form I) /kiː.sat/\n# third-person feminine singular past passive of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kīsat", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "كيسوا",
-        "u": "كيسوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "كِيسُوا • (kīsū) (form I) /kiː.suː/\n# inflection of كَاسَ (kāsa):\n## third-person masculine plural past passive\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kīsū", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكوسين",
-        "u": "تكوسين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَكُوسِينَ • (takūsīna) (form I) /ta.kuː.siː.na/\n# second-person feminine singular non-past active indicative of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takūsīna", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكوس",
-        "u": "تكوس",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تكوس (form I)\n# تَكُوسُ (takūsu) /ta.kuː.su/: inflection of كَاسَ (kāsa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَكُوسَ (takūsa) /ta.kuː.sa/: inflection of كَاسَ (kāsa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takūsu", "kāsa", "takūsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "يكوس",
-        "u": "يكوس",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يكوس (form I)\n# يَكُوسُ (yakūsu) /ja.kuː.su/: third-person masculine singular non-past active indicative of كَاسَ (kāsa)\n# يَكُوسَ (yakūsa) /ja.kuː.sa/: third-person masculine singular non-past active subjunctive of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yakūsu", "kāsa", "yakūsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكوسان",
-        "u": "تكوسان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَكُوسَانِ • (takūsāni) (form I) /ta.kuː.saː.ni/\n# inflection of كَاسَ (kāsa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takūsāni", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكوسون",
-        "u": "تكوسون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَكُوسُونَ • (takūsūna) (form I) /ta.kuː.suː.na/\n# second-person masculine plural non-past active indicative of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takūsūna", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "أكاس",
-        "u": "أكاس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أكاس (form I)\n# أُكَاسُ (ʔukāsu) /ʔu.kaː.su/: first-person singular non-past passive indicative of كَاسَ (kāsa)\n# أُكَاسَ (ʔukāsa) /ʔu.kaː.sa/: first-person singular non-past passive subjunctive of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔukāsu", "kāsa", "ʔukāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "يكوسان",
-        "u": "يكوسان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَكُوسَانِ • (yakūsāni) (form I) /ja.kuː.saː.ni/\n# third-person masculine dual non-past active indicative of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yakūsāni", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "نكوس",
-        "u": "نكوس",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نكوس (form I)\n# نَكُوسُ (nakūsu) /na.kuː.su/: first-person plural non-past active indicative of كَاسَ (kāsa)\n# نَكُوسَ (nakūsa) /na.kuː.sa/: first-person plural non-past active subjunctive of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nakūsu", "kāsa", "nakūsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "يكوسون",
-        "u": "يكوسون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَكُوسُونَ • (yakūsūna) (form I) /ja.kuː.suː.na/\n# third-person masculine plural non-past active indicative of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yakūsūna", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكاس",
-        "u": "تكاس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تكاس (form I)\n# تُكَاسُ (tukāsu) /tu.kaː.su/: inflection of كَاسَ (kāsa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُكَاسَ (tukāsa) /tu.kaː.sa/: inflection of كَاسَ (kāsa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tukāsu", "kāsa", "tukāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكاسان",
-        "u": "تكاسان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُكَاسَانِ • (tukāsāni) (form I) /tu.kaː.saː.ni/\n# inflection of كَاسَ (kāsa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tukāsāni", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "يكاس",
-        "u": "يكاس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يكاس (form I)\n# يُكَاسُ (yukāsu) /ju.kaː.su/: third-person masculine singular non-past passive indicative of كَاسَ (kāsa)\n# يُكَاسَ (yukāsa) /ju.kaː.sa/: third-person masculine singular non-past passive subjunctive of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yukāsu", "kāsa", "yukāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكاسين",
-        "u": "تكاسين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُكَاسِينَ • (tukāsīna) (form I) /tu.kaː.siː.na/\n# second-person feminine singular non-past passive indicative of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tukāsīna", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "يكاسان",
-        "u": "يكاسان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُكَاسَانِ • (yukāsāni) (form I) /ju.kaː.saː.ni/\n# third-person masculine dual non-past passive indicative of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yukāsāni", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "يكاسون",
-        "u": "يكاسون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُكَاسُونَ • (yukāsūna) (form I) /ju.kaː.suː.na/\n# third-person masculine plural non-past passive indicative of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yukāsūna", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "نكاس",
-        "u": "نكاس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نكاس (form I)\n# نُكَاسُ (nukāsu) /nu.kaː.su/: first-person plural non-past passive indicative of كَاسَ (kāsa)\n# نُكَاسَ (nukāsa) /nu.kaː.sa/: first-person plural non-past passive subjunctive of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nukāsu", "kāsa", "nukāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "يكوسا",
-        "u": "يكوسا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَكُوسَا • (yakūsā) (form I) /ja.kuː.saː/\n# third-person masculine dual non-past active subjunctive/jussive of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yakūsā", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكاسون",
-        "u": "تكاسون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُكَاسُونَ • (tukāsūna) (form I) /tu.kaː.suː.na/\n# second-person masculine plural non-past passive indicative of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tukāsūna", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكوسي",
-        "u": "تكوسي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَكُوسِي • (takūsī) (form I) /ta.kuː.siː/\n# second-person feminine singular non-past active subjunctive/jussive of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takūsī", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكاسي",
-        "u": "تكاسي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُكَاسِي • (tukāsī) (form I) /tu.kaː.siː/\n# second-person feminine singular non-past passive subjunctive/jussive of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tukāsī", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكوسوا",
-        "u": "تكوسوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَكُوسُوا • (takūsū) (form I) /ta.kuː.suː/\n# second-person masculine plural non-past active subjunctive/jussive of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takūsū", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكوسا",
-        "u": "تكوسا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَكُوسَا • (takūsā) (form I) /ta.kuː.saː/\n# inflection of كَاسَ (kāsa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takūsā", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكاسا",
-        "u": "تكاسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُكَاسَا • (tukāsā) (form I) /tu.kaː.saː/\n# inflection of كَاسَ (kāsa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tukāsā", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "يكوسوا",
-        "u": "يكوسوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَكُوسُوا • (yakūsū) (form I) /ja.kuː.suː/\n# third-person masculine plural non-past active subjunctive/jussive of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yakūsū", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تكاسوا",
-        "u": "تكاسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُكَاسُوا • (tukāsū) (form I) /tu.kaː.suː/\n# second-person masculine plural non-past passive subjunctive/jussive of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tukāsū", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "يكاسا",
-        "u": "يكاسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُكَاسَا • (yukāsā) (form I) /ju.kaː.saː/\n# third-person masculine dual non-past passive subjunctive/jussive of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yukāsā", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "يكاسوا",
-        "u": "يكاسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُكَاسُوا • (yukāsū) (form I) /ju.kaː.suː/\n# third-person masculine plural non-past passive subjunctive/jussive of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yukāsū", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "كوسي",
-        "u": "كوسي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "كُوسِي • (kūsī) (form I) /kuː.siː/\n# second-person feminine singular imperative of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kūsī", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      },
-      {
-        "w": "كوسوا",
-        "u": "كوسوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "كُوسُوا • (kūsū) (form I) /kuː.suː/\n# second-person masculine plural imperative of كَاسَ (kāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kūsū", "kāsa"],
-        "k": "كاس",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "كس",
+  "ses": {
     "harf": "ك",
+    "fasil": "كس",
     "mahrec": "lehaviyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "كس",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "كس (form I)\n# كِسْ (kis) /kis/: second-person masculine singular imperative of كَاسَ (kāsa)\n# كُسْ (kus) /kus/: second-person masculine singular imperative of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kis", "kāsa", "kus"]
+    },
+    {
+      "madde": "كوسا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "كُوسَا • (kūsā) (form I) /kuː.saː/\n# second-person dual imperative of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kūsā", "kāsa"]
+    },
+    {
+      "madde": "نكس",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نكس (form I)\n# نَكِسْ (nakis) /na.kis/: first-person plural non-past active jussive of كَاسَ (kāsa)\n# نُكَسْ (nukas) /nu.kas/: first-person plural non-past passive jussive of كَاسَ (kāsa)\n# نَكُسْ (nakus) /na.kus/: first-person plural non-past active jussive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nakis", "kāsa", "nukas"]
+    },
+    {
+      "madde": "كيس",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "كِيسَ • (kīsa) (form I) /kiː.sa/\n# third-person masculine singular past passive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kīsa", "kāsa"]
+    },
+    {
+      "madde": "أكوس",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أكوس (form I)\n# أَكُوسُ (ʔakūsu) /ʔa.kuː.su/: first-person singular non-past active indicative of كَاسَ (kāsa)\n# أَكُوسَ (ʔakūsa) /ʔa.kuː.sa/: first-person singular non-past active subjunctive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔakūsu", "kāsa", "ʔakūsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أكيس",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أكيس (form I)\n# أَكِيسُ (ʔakīsu) /ʔa.kiː.su/: first-person singular non-past active indicative of كَاسَ (kāsa)\n# أَكِيسَ (ʔakīsa) /ʔa.kiː.sa/: first-person singular non-past active subjunctive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔakīsu", "kāsa", "ʔakīsa"]
+    },
+    {
+      "madde": "كاسا",
+      "tur": "verb",
+      "baslik": "كَاسَا • (kāsā) (form I) /kaː.saː/\n# third-person masculine dual past active of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kāsā", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكيسين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَكِيسِينَ • (takīsīna) (form I) /ta.kiː.siː.na/\n# second-person feminine singular non-past active indicative of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takīsīna", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يكيس",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يكيس (form I)\n# يَكِيسُ (yakīsu) /ja.kiː.su/: third-person masculine singular non-past active indicative of كَاسَ (kāsa)\n# يَكِيسَ (yakīsa) /ja.kiː.sa/: third-person masculine singular non-past active subjunctive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yakīsu", "kāsa", "yakīsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكيسان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَكِيسَانِ • (takīsāni) (form I) /ta.kiː.saː.ni/\n# inflection of كَاسَ (kāsa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takīsāni", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكيسون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَكِيسُونَ • (takīsūna) (form I) /ta.kiː.suː.na/\n# second-person masculine plural non-past active indicative of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takīsūna", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكيس",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تكيس (form I)\n# تَكِيسُ (takīsu) /ta.kiː.su/: inflection of كَاسَ (kāsa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَكِيسَ (takīsa) /ta.kiː.sa/: inflection of كَاسَ (kāsa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takīsu", "kāsa", "takīsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكيسي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَكِيسِي • (takīsī) (form I) /ta.kiː.siː/\n# second-person feminine singular non-past active subjunctive/jussive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takīsī", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يكيسان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَكِيسَانِ • (yakīsāni) (form I) /ja.kiː.saː.ni/\n# third-person masculine dual non-past active indicative of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yakīsāni", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نكيس",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نكيس (form I)\n# نَكِيسُ (nakīsu) /na.kiː.su/: first-person plural non-past active indicative of كَاسَ (kāsa)\n# نَكِيسَ (nakīsa) /na.kiː.sa/: first-person plural non-past active subjunctive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nakīsu", "kāsa", "nakīsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يكيسا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَكِيسَا • (yakīsā) (form I) /ja.kiː.saː/\n# third-person masculine dual non-past active subjunctive/jussive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yakīsā", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يكيسون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَكِيسُونَ • (yakīsūna) (form I) /ja.kiː.suː.na/\n# third-person masculine plural non-past active indicative of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yakīsūna", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكيسا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَكِيسَا • (takīsā) (form I) /ta.kiː.saː/\n# inflection of كَاسَ (kāsa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takīsā", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يكيسوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَكِيسُوا • (yakīsū) (form I) /ja.kiː.suː/\n# third-person masculine plural non-past active subjunctive/jussive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yakīsū", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكيسوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَكِيسُوا • (takīsū) (form I) /ta.kiː.suː/\n# second-person masculine plural non-past active subjunctive/jussive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takīsū", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "كست",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "كست (form I)\n# كِسْتُ (kistu) /kis.tu/: first-person singular past active/passive of كَاسَ (kāsa)\n# كِسْتَ (kista) /kis.ta/: second-person masculine singular past active/passive of كَاسَ (kāsa)\n# كِسْتِ (kisti) /kis.ti/: second-person feminine singular past active/passive of كَاسَ (kāsa)\n# كُسْتُ (kustu) /kus.tu/: first-person singular past active of كَاسَ (kāsa)\n# كُسْتَ (kusta) /kus.ta/: second-",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kistu", "kāsa", "kista"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "كستما",
+      "tur": "verb",
+      "baslik": "كستما (form I)\n# كِسْتُمَا (kistumā) /kis.tu.maː/: second-person dual past active/passive of كَاسَ (kāsa)\n# كُسْتُمَا (kustumā) /kus.tu.maː/: second-person dual past active of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kistumā", "kāsa", "kustumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "كاست",
+      "tur": "verb",
+      "baslik": "كَاسَتْ • (kāsat) (form I) /kaː.sat/\n# third-person feminine singular past active of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kāsat", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "كاستا",
+      "tur": "verb",
+      "baslik": "كَاسَتَا • (kāsatā) (form I) /kaː.sa.taː/\n# third-person feminine dual past active of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kāsatā", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "كسنا",
+      "tur": "verb",
+      "baslik": "كسنا (form I)\n# كِسْنَا (kisnā) /kis.naː/: first-person plural past active/passive of كَاسَ (kāsa)\n# كُسْنَا (kusnā) /kus.naː/: first-person plural past active of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kisnā", "kāsa", "kusnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "كاسوا",
+      "tur": "verb",
+      "baslik": "كَاسُوا • (kāsū) (form I) /kaː.suː/\n# third-person masculine plural past active of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kāsū", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "كستم",
+      "tur": "verb",
+      "baslik": "كستم (form I)\n# كِسْتُمْ (kistum) /kis.tum/: second-person masculine plural past active/passive of كَاسَ (kāsa)\n# كُسْتُمْ (kustum) /kus.tum/: second-person masculine plural past active of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kistum", "kāsa", "kustum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "كسن",
+      "tur": "verb",
+      "baslik": "كسن (form I)\n# كِسْنَ (kisna) /kis.na/: inflection of كَاسَ (kāsa):\n## third-person feminine plural past active/passive\n## second-person feminine plural imperative\n# كُسْنَ (kusna) /kus.na/: inflection of كَاسَ (kāsa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kisna", "kāsa", "kusna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "كستن",
+      "tur": "verb",
+      "baslik": "كستن (form I)\n# كِسْتُنَّ (kistunna) /kis.tun.na/: second-person feminine plural past active/passive of كَاسَ (kāsa)\n# كُسْتُنَّ (kustunna) /kus.tun.na/: second-person feminine plural past active of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kistunna", "kāsa", "kustunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أكس",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أكس (form I)\n# أَكِسْ (ʔakis) /ʔa.kis/: first-person singular non-past active jussive of كَاسَ (kāsa)\n# أُكَسْ (ʔukas) /ʔu.kas/: first-person singular non-past passive jussive of كَاسَ (kāsa)\n# أَكُسْ (ʔakus) /ʔa.kus/: first-person singular non-past active jussive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔakis", "kāsa", "ʔukas"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يكسن",
+      "tur": "verb",
+      "baslik": "يكسن (form I)\n# يَكِسْنَ (yakisna) /ja.kis.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of كَاسَ (kāsa)\n# يُكَسْنَ (yukasna) /ju.kas.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of كَاسَ (kāsa)\n# يَكُسْنَ (yakusna) /ja.kus.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yakisna", "kāsa", "yukasna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكسن",
+      "tur": "verb",
+      "baslik": "تكسن (form I)\n# تَكِسْنَ (takisna) /ta.kis.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of كَاسَ (kāsa)\n# تُكَسْنَ (tukasna) /tu.kas.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of كَاسَ (kāsa)\n# تَكُسْنَ (takusna) /ta.kus.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takisna", "kāsa", "tukasna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "كيسي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "كِيسِي • (kīsī) (form I) /kiː.siː/\n# second-person feminine singular imperative of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kīsī", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكس",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تكس (form I)\n# تَكِسْ (takis) /ta.kis/: inflection of كَاسَ (kāsa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُكَسْ (tukas) /tu.kas/: inflection of كَاسَ (kāsa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive\n# تَكُسْ (takus) /ta.kus/: inflection o",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takis", "kāsa", "tukas"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يكس",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يكس (form I)\n# يَكِسْ (yakis) /ja.kis/: third-person masculine singular non-past active jussive of كَاسَ (kāsa)\n# يُكَسْ (yukas) /ju.kas/: third-person masculine singular non-past passive jussive of كَاسَ (kāsa)\n# يَكُسْ (yakus) /ja.kus/: third-person masculine singular non-past active jussive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yakis", "kāsa", "yukas"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "كيسا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "كِيسَا • (kīsā) (form I) /kiː.saː/\n# inflection of كَاسَ (kāsa):\n## third-person masculine dual past passive\n## second-person dual imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kīsā", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "كيستا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "كِيسَتَا • (kīsatā) (form I) /kiː.sa.taː/\n# third-person feminine dual past passive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kīsatā", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "كيست",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "كِيسَتْ • (kīsat) (form I) /kiː.sat/\n# third-person feminine singular past passive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kīsat", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "كيسوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "كِيسُوا • (kīsū) (form I) /kiː.suː/\n# inflection of كَاسَ (kāsa):\n## third-person masculine plural past passive\n## second-person masculine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kīsū", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكوسين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَكُوسِينَ • (takūsīna) (form I) /ta.kuː.siː.na/\n# second-person feminine singular non-past active indicative of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takūsīna", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكوس",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تكوس (form I)\n# تَكُوسُ (takūsu) /ta.kuː.su/: inflection of كَاسَ (kāsa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَكُوسَ (takūsa) /ta.kuː.sa/: inflection of كَاسَ (kāsa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takūsu", "kāsa", "takūsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يكوس",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يكوس (form I)\n# يَكُوسُ (yakūsu) /ja.kuː.su/: third-person masculine singular non-past active indicative of كَاسَ (kāsa)\n# يَكُوسَ (yakūsa) /ja.kuː.sa/: third-person masculine singular non-past active subjunctive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yakūsu", "kāsa", "yakūsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكوسان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَكُوسَانِ • (takūsāni) (form I) /ta.kuː.saː.ni/\n# inflection of كَاسَ (kāsa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takūsāni", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكوسون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَكُوسُونَ • (takūsūna) (form I) /ta.kuː.suː.na/\n# second-person masculine plural non-past active indicative of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takūsūna", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أكاس",
+      "tur": "verb",
+      "baslik": "أكاس (form I)\n# أُكَاسُ (ʔukāsu) /ʔu.kaː.su/: first-person singular non-past passive indicative of كَاسَ (kāsa)\n# أُكَاسَ (ʔukāsa) /ʔu.kaː.sa/: first-person singular non-past passive subjunctive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔukāsu", "kāsa", "ʔukāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يكوسان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَكُوسَانِ • (yakūsāni) (form I) /ja.kuː.saː.ni/\n# third-person masculine dual non-past active indicative of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yakūsāni", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نكوس",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نكوس (form I)\n# نَكُوسُ (nakūsu) /na.kuː.su/: first-person plural non-past active indicative of كَاسَ (kāsa)\n# نَكُوسَ (nakūsa) /na.kuː.sa/: first-person plural non-past active subjunctive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nakūsu", "kāsa", "nakūsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يكوسون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَكُوسُونَ • (yakūsūna) (form I) /ja.kuː.suː.na/\n# third-person masculine plural non-past active indicative of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yakūsūna", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكاس",
+      "tur": "verb",
+      "baslik": "تكاس (form I)\n# تُكَاسُ (tukāsu) /tu.kaː.su/: inflection of كَاسَ (kāsa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُكَاسَ (tukāsa) /tu.kaː.sa/: inflection of كَاسَ (kāsa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tukāsu", "kāsa", "tukāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكاسان",
+      "tur": "verb",
+      "baslik": "تُكَاسَانِ • (tukāsāni) (form I) /tu.kaː.saː.ni/\n# inflection of كَاسَ (kāsa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tukāsāni", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يكاس",
+      "tur": "verb",
+      "baslik": "يكاس (form I)\n# يُكَاسُ (yukāsu) /ju.kaː.su/: third-person masculine singular non-past passive indicative of كَاسَ (kāsa)\n# يُكَاسَ (yukāsa) /ju.kaː.sa/: third-person masculine singular non-past passive subjunctive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yukāsu", "kāsa", "yukāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكاسين",
+      "tur": "verb",
+      "baslik": "تُكَاسِينَ • (tukāsīna) (form I) /tu.kaː.siː.na/\n# second-person feminine singular non-past passive indicative of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tukāsīna", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يكاسان",
+      "tur": "verb",
+      "baslik": "يُكَاسَانِ • (yukāsāni) (form I) /ju.kaː.saː.ni/\n# third-person masculine dual non-past passive indicative of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yukāsāni", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يكاسون",
+      "tur": "verb",
+      "baslik": "يُكَاسُونَ • (yukāsūna) (form I) /ju.kaː.suː.na/\n# third-person masculine plural non-past passive indicative of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yukāsūna", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نكاس",
+      "tur": "verb",
+      "baslik": "نكاس (form I)\n# نُكَاسُ (nukāsu) /nu.kaː.su/: first-person plural non-past passive indicative of كَاسَ (kāsa)\n# نُكَاسَ (nukāsa) /nu.kaː.sa/: first-person plural non-past passive subjunctive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nukāsu", "kāsa", "nukāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يكوسا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَكُوسَا • (yakūsā) (form I) /ja.kuː.saː/\n# third-person masculine dual non-past active subjunctive/jussive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yakūsā", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكاسون",
+      "tur": "verb",
+      "baslik": "تُكَاسُونَ • (tukāsūna) (form I) /tu.kaː.suː.na/\n# second-person masculine plural non-past passive indicative of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tukāsūna", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكوسي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَكُوسِي • (takūsī) (form I) /ta.kuː.siː/\n# second-person feminine singular non-past active subjunctive/jussive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takūsī", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكاسي",
+      "tur": "verb",
+      "baslik": "تُكَاسِي • (tukāsī) (form I) /tu.kaː.siː/\n# second-person feminine singular non-past passive subjunctive/jussive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tukāsī", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكوسوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَكُوسُوا • (takūsū) (form I) /ta.kuː.suː/\n# second-person masculine plural non-past active subjunctive/jussive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takūsū", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكوسا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَكُوسَا • (takūsā) (form I) /ta.kuː.saː/\n# inflection of كَاسَ (kāsa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takūsā", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكاسا",
+      "tur": "verb",
+      "baslik": "تُكَاسَا • (tukāsā) (form I) /tu.kaː.saː/\n# inflection of كَاسَ (kāsa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tukāsā", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يكوسوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَكُوسُوا • (yakūsū) (form I) /ja.kuː.suː/\n# third-person masculine plural non-past active subjunctive/jussive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yakūsū", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكاسوا",
+      "tur": "verb",
+      "baslik": "تُكَاسُوا • (tukāsū) (form I) /tu.kaː.suː/\n# second-person masculine plural non-past passive subjunctive/jussive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tukāsū", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يكاسا",
+      "tur": "verb",
+      "baslik": "يُكَاسَا • (yukāsā) (form I) /ju.kaː.saː/\n# third-person masculine dual non-past passive subjunctive/jussive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yukāsā", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يكاسوا",
+      "tur": "verb",
+      "baslik": "يُكَاسُوا • (yukāsū) (form I) /ju.kaː.suː/\n# third-person masculine plural non-past passive subjunctive/jussive of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yukāsū", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "كوسي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "كُوسِي • (kūsī) (form I) /kuː.siː/\n# second-person feminine singular imperative of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kūsī", "kāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "كوسوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "كُوسُوا • (kūsū) (form I) /kuː.suː/\n# second-person masculine plural imperative of كَاسَ (kāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kūsū", "kāsa"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "كاس", "r7"]
+  ],
+  "mana": {
     "ince": "hang.v.02",
     "orta": "verb.contact",
     "ust": "fiil ve hadise",
@@ -889,22 +626,15 @@
     "dayanak_tanim": "cause to be hanging or suspended",
     "synset_sayisi": 6
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["artifact.n.01", "duck.v.01", "hang.v.01", "hang.v.02", "hang.v.12", "hang.v.14"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["artifact.n.01", "duck.v.01", "hang.v.01", "hang.v.02", "hang.v.12", "hang.v.14"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

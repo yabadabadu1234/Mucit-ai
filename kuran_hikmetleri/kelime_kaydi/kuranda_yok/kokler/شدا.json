@@ -1,609 +1,430 @@
 {
   "kok": "شدا",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "شدا", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أشد",
-        "u": "أشد",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "أشد (form I)\n# أَشْدُ (ʔašdu) /ʔaʃ.du/: first-person singular non-past active jussive of شَدَا (šadā)\n# أُشْدَ (ʔušda) /ʔuʃ.da/: first-person singular non-past passive jussive of شَدَا (šadā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔašdu", "šadā", "ʔušda"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "اشد",
-        "u": "اشد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُشْدُ • (ušdu) (form I) /uʃ.du/\n# second-person masculine singular imperative of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ušdu", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "يشد",
-        "u": "يشد",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يشد (form I)\n# يَشْدُ (yašdu) /jaʃ.du/: third-person masculine singular non-past active jussive of شَدَا (šadā)\n# يُشْدَ (yušda) /juʃ.da/: third-person masculine singular non-past passive jussive of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašdu", "šadā", "yušda"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "نشد",
-        "u": "نشد",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "نشد (form I)\n# نَشْدُ (našdu) /naʃ.du/: first-person plural non-past active jussive of شَدَا (šadā)\n# نُشْدَ (nušda) /nuʃ.da/: first-person plural non-past passive jussive of شَدَا (šadā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["našdu", "šadā", "nušda"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "شدت",
-        "u": "شدت",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "شَدَتْ • (šadat) (form I) /ʃa.dat/\n# third-person feminine singular past active of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šadat", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "تشد",
-        "u": "تشد",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تشد (form I)\n# تَشْدُ (tašdu) /taʃ.du/: inflection of شَدَا (šadā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُشْدَ (tušda) /tuʃ.da/: inflection of شَدَا (šadā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašdu", "šadā", "tušda"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "شدتا",
-        "u": "شدتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "شَدَتَا • (šadatā) (form I) /ʃa.da.taː/\n# third-person feminine dual past active of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šadatā", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "تشدين",
-        "u": "تشدين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تشدين (form I)\n# تَشْدِينَ (tašdīna) /taʃ.diː.na/: second-person feminine singular non-past active indicative of شَدَا (šadā)\n# تُشْدَيْنَ (tušdayna) /tuʃ.daj.na/: inflection of شَدَا (šadā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašdīna", "šadā", "tušdayna"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "تشدون",
-        "u": "تشدون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تشدون (form I)\n# تَشْدُونَ (tašdūna) /taʃ.duː.na/: inflection of شَدَا (šadā):\n## second-person masculine/feminine plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُشْدَوْنَ (tušdawna) /tuʃ.daw.na/: second-person masculine plural non-past passive indicative of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašdūna", "šadā", "tušdawna"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "شدوا",
-        "u": "شدوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "شدوا (form I)\n# شَدَوَا (šadawā) /ʃa.da.waː/: third-person masculine dual past active of شَدَا (šadā)\n# شَدَوْا (šadaw) /ʃa.daw/: third-person masculine plural past active of شَدَا (šadā)\n# شُدُوا (šudū) /ʃu.duː/: third-person masculine plural past passive of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šadawā", "šadā", "šadaw"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "يشدون",
-        "u": "يشدون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يشدون (form I)\n# يَشْدُونَ (yašdūna) /jaʃ.duː.na/: inflection of شَدَا (šadā):\n## third-person masculine/feminine plural non-past active indicative\n## third-person feminine plural non-past active subjunctive/jussive\n# يُشْدَوْنَ (yušdawna) /juʃ.daw.na/: third-person masculine plural non-past passive indicative of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašdūna", "šadā", "yušdawna"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "تشدي",
-        "u": "تشدي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تشدي (form I)\n# تَشْدِي (tašdī) /taʃ.diː/: second-person feminine singular non-past active subjunctive/jussive of شَدَا (šadā)\n# تُشْدَيْ (tušday) /tuʃ.daj/: second-person feminine singular non-past passive subjunctive/jussive of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašdī", "šadā", "tušday"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "تشدوا",
-        "u": "تشدوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تشدوا (form I)\n# تَشْدُوَا (tašduwā) /taʃ.du.waː/: inflection of شَدَا (šadā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تَشْدُوا (tašdū) /taʃ.duː/: second-person masculine plural non-past active subjunctive/jussive of شَدَا (šadā)\n# تُشْدَوْا (tušdaw) /tuʃ.daw/: second-person masculine plural non-past passive subj",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašduwā", "šadā", "tašdū"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "يشدوا",
-        "u": "يشدوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يشدوا (form I)\n# يَشْدُوَا (yašduwā) /jaʃ.du.waː/: third-person masculine dual non-past active subjunctive/jussive of شَدَا (šadā)\n# يَشْدُوا (yašdū) /jaʃ.duː/: third-person masculine plural non-past active subjunctive/jussive of شَدَا (šadā)\n# يُشْدَوْا (yušdaw) /juʃ.daw/: third-person masculine plural non-past passive subjunctive/jussive of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašduwā", "šadā", "yašdū"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "شدي",
-        "u": "شدي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "شُدِيَ • (šudiya) (form I) /ʃu.di.ja/\n# third-person masculine singular past passive of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šudiya", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "شدوت",
-        "u": "شدوت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "شدوت (form I)\n# شَدَوْتُ (šadawtu) /ʃa.daw.tu/: first-person singular past active of شَدَا (šadā)\n# شَدَوْتَ (šadawta) /ʃa.daw.ta/: second-person masculine singular past active of شَدَا (šadā)\n# شَدَوْتِ (šadawti) /ʃa.daw.ti/: second-person feminine singular past active of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šadawtu", "šadā", "šadawta"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "شدوتما",
-        "u": "شدوتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "شَدَوْتُمَا • (šadawtumā) (form I) /ʃa.daw.tu.maː/\n# second-person dual past active of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šadawtumā", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "شدونا",
-        "u": "شدونا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "شَدَوْنَا • (šadawnā) (form I) /ʃa.daw.naː/\n# first-person plural past active of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šadawnā", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "شدوتم",
-        "u": "شدوتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "شَدَوْتُمْ • (šadawtum) (form I) /ʃa.daw.tum/\n# second-person masculine plural past active of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šadawtum", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "شدوتن",
-        "u": "شدوتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "شَدَوْتُنَّ • (šadawtunna) (form I) /ʃa.daw.tun.na/\n# second-person feminine plural past active of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šadawtunna", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "شديت",
-        "u": "شديت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "شديت (form I)\n# شُدِيتُ (šudītu) /ʃu.diː.tu/: first-person singular past passive of شَدَا (šadā)\n# شُدِيتَ (šudīta) /ʃu.diː.ta/: second-person masculine singular past passive of شَدَا (šadā)\n# شُدِيتِ (šudīti) /ʃu.diː.ti/: second-person feminine singular past passive of شَدَا (šadā)\n# شُدِيَتْ (šudiyat) /ʃu.di.jat/: third-person feminine singular past passive of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šudītu", "šadā", "šudīta"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "شدون",
-        "u": "شدون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "شَدَوْنَ • (šadawna) (form I) /ʃa.daw.na/\n# third-person feminine plural past active of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šadawna", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "شدينا",
-        "u": "شدينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "شُدِينَا • (šudīnā) (form I) /ʃu.diː.naː/\n# first-person plural past passive of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šudīnā", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "شديتا",
-        "u": "شديتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "شُدِيَتَا • (šudiyatā) (form I) /ʃu.di.ja.taː/\n# third-person feminine dual past passive of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šudiyatā", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "شديا",
-        "u": "شديا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "شُدِيَا • (šudiyā) (form I) /ʃu.di.jaː/\n# third-person masculine dual past passive of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šudiyā", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "شديتم",
-        "u": "شديتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "شُدِيتُمْ • (šudītum) (form I) /ʃu.diː.tum/\n# second-person masculine plural past passive of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šudītum", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "شديتما",
-        "u": "شديتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "شُدِيتُمَا • (šudītumā) (form I) /ʃu.diː.tu.maː/\n# second-person dual past passive of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šudītumā", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "شدين",
-        "u": "شدين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "شُدِينَ • (šudīna) (form I) /ʃu.diː.na/\n# third-person feminine plural past passive of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šudīna", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "أشدو",
-        "u": "أشدو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أشدو (form I)\n# أَشْدُو (ʔašdū) /ʔaʃ.duː/: first-person singular non-past active indicative of شَدَا (šadā)\n# أَشْدُوَ (ʔašduwa) /ʔaʃ.du.wa/: first-person singular non-past active subjunctive of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔašdū", "šadā", "ʔašduwa"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "تشدو",
-        "u": "تشدو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تشدو (form I)\n# تَشْدُو (tašdū) /taʃ.duː/: inflection of شَدَا (šadā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَشْدُوَ (tašduwa) /taʃ.du.wa/: inflection of شَدَا (šadā):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašdū", "šadā", "tašduwa"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "شديتن",
-        "u": "شديتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "شُدِيتُنَّ • (šudītunna) (form I) /ʃu.diː.tun.na/\n# second-person feminine plural past passive of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šudītunna", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "يشدو",
-        "u": "يشدو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يشدو (form I)\n# يَشْدُو (yašdū) /jaʃ.duː/: third-person masculine singular non-past active indicative of شَدَا (šadā)\n# يَشْدُوَ (yašduwa) /jaʃ.du.wa/: third-person masculine singular non-past active subjunctive of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašdū", "šadā", "yašduwa"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "تشدوان",
-        "u": "تشدوان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَشْدُوَانِ • (tašduwāni) (form I) /taʃ.du.waː.ni/\n# inflection of شَدَا (šadā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašduwāni", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "نشدو",
-        "u": "نشدو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نشدو (form I)\n# نَشْدُو (našdū) /naʃ.duː/: first-person plural non-past active indicative of شَدَا (šadā)\n# نَشْدُوَ (našduwa) /naʃ.du.wa/: first-person plural non-past active subjunctive of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["našdū", "šadā", "našduwa"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "يشدوان",
-        "u": "يشدوان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَشْدُوَانِ • (yašduwāni) (form I) /jaʃ.du.waː.ni/\n# third-person masculine dual non-past active indicative of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašduwāni", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "أشدى",
-        "u": "أشدى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُشْدَى • (ʔušdā) (form I) /ʔuʃ.daː/\n# first-person singular non-past passive indicative/subjunctive of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔušdā", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "تشدى",
-        "u": "تشدى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُشْدَى • (tušdā) (form I) /tuʃ.daː/\n# inflection of شَدَا (šadā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tušdā", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "يشدى",
-        "u": "يشدى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُشْدَى • (yušdā) (form I) /juʃ.daː/\n# third-person masculine singular non-past passive indicative/subjunctive of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yušdā", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "تشديان",
-        "u": "تشديان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُشْدَيَانِ • (tušdayāni) (form I) /tuʃ.da.jaː.ni/\n# inflection of شَدَا (šadā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tušdayāni", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "يشديان",
-        "u": "يشديان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُشْدَيَانِ • (yušdayāni) (form I) /juʃ.da.jaː.ni/\n# third-person masculine dual non-past passive indicative of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yušdayāni", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "نشدى",
-        "u": "نشدى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُشْدَى • (nušdā) (form I) /nuʃ.daː/\n# first-person plural non-past passive indicative/subjunctive of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nušdā", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "يشدين",
-        "u": "يشدين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُشْدَيْنَ • (yušdayna) (form I) /juʃ.daj.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yušdayna", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "يشديا",
-        "u": "يشديا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُشْدَيَا • (yušdayā) (form I) /juʃ.da.jaː/\n# third-person masculine dual non-past passive subjunctive/jussive of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yušdayā", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "اشدوا",
-        "u": "اشدوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اشدوا (form I)\n# اُشْدُوَا (ušduwā) /uʃ.du.waː/: second-person dual imperative of شَدَا (šadā)\n# اُشْدُوا (ušdū) /uʃ.duː/: second-person masculine plural imperative of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ušduwā", "šadā", "ušdū"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "اشدي",
-        "u": "اشدي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُشْدِي • (ušdī) (form I) /uʃ.diː/\n# second-person feminine singular imperative of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ušdī", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "تشديا",
-        "u": "تشديا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُشْدَيَا • (tušdayā) (form I) /tuʃ.da.jaː/\n# inflection of شَدَا (šadā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tušdayā", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      },
-      {
-        "w": "اشدون",
-        "u": "اشدون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُشْدُونَ • (ušdūna) (form I) /uʃ.duː.na/\n# second-person feminine plural imperative of شَدَا (šadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ušdūna", "šadā"],
-        "k": "شدا",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "شد",
+  "ses": {
     "harf": "ش",
+    "fasil": "شد",
     "mahrec": "şeceriyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "أشد",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "أشد (form I)\n# أَشْدُ (ʔašdu) /ʔaʃ.du/: first-person singular non-past active jussive of شَدَا (šadā)\n# أُشْدَ (ʔušda) /ʔuʃ.da/: first-person singular non-past passive jussive of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔašdu", "šadā", "ʔušda"]
+    },
+    {
+      "madde": "اشد",
+      "tur": "verb",
+      "baslik": "اُشْدُ • (ušdu) (form I) /uʃ.du/\n# second-person masculine singular imperative of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ušdu", "šadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يشد",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يشد (form I)\n# يَشْدُ (yašdu) /jaʃ.du/: third-person masculine singular non-past active jussive of شَدَا (šadā)\n# يُشْدَ (yušda) /juʃ.da/: third-person masculine singular non-past passive jussive of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašdu", "šadā", "yušda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نشد",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "نشد (form I)\n# نَشْدُ (našdu) /naʃ.du/: first-person plural non-past active jussive of شَدَا (šadā)\n# نُشْدَ (nušda) /nuʃ.da/: first-person plural non-past passive jussive of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["našdu", "šadā", "nušda"]
+    },
+    {
+      "madde": "شدت",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "شَدَتْ • (šadat) (form I) /ʃa.dat/\n# third-person feminine singular past active of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šadat", "šadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تشد",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تشد (form I)\n# تَشْدُ (tašdu) /taʃ.du/: inflection of شَدَا (šadā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُشْدَ (tušda) /tuʃ.da/: inflection of شَدَا (šadā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašdu", "šadā", "tušda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شدتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "شَدَتَا • (šadatā) (form I) /ʃa.da.taː/\n# third-person feminine dual past active of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šadatā", "šadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تشدين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تشدين (form I)\n# تَشْدِينَ (tašdīna) /taʃ.diː.na/: second-person feminine singular non-past active indicative of شَدَا (šadā)\n# تُشْدَيْنَ (tušdayna) /tuʃ.daj.na/: inflection of شَدَا (šadā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašdīna", "šadā", "tušdayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تشدون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تشدون (form I)\n# تَشْدُونَ (tašdūna) /taʃ.duː.na/: inflection of شَدَا (šadā):\n## second-person masculine/feminine plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُشْدَوْنَ (tušdawna) /tuʃ.daw.na/: second-person masculine plural non-past passive indicative of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašdūna", "šadā", "tušdawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شدوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "شدوا (form I)\n# شَدَوَا (šadawā) /ʃa.da.waː/: third-person masculine dual past active of شَدَا (šadā)\n# شَدَوْا (šadaw) /ʃa.daw/: third-person masculine plural past active of شَدَا (šadā)\n# شُدُوا (šudū) /ʃu.duː/: third-person masculine plural past passive of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šadawā", "šadā", "šadaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يشدون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يشدون (form I)\n# يَشْدُونَ (yašdūna) /jaʃ.duː.na/: inflection of شَدَا (šadā):\n## third-person masculine/feminine plural non-past active indicative\n## third-person feminine plural non-past active subjunctive/jussive\n# يُشْدَوْنَ (yušdawna) /juʃ.daw.na/: third-person masculine plural non-past passive indicative of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašdūna", "šadā", "yušdawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تشدي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تشدي (form I)\n# تَشْدِي (tašdī) /taʃ.diː/: second-person feminine singular non-past active subjunctive/jussive of شَدَا (šadā)\n# تُشْدَيْ (tušday) /tuʃ.daj/: second-person feminine singular non-past passive subjunctive/jussive of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašdī", "šadā", "tušday"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تشدوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تشدوا (form I)\n# تَشْدُوَا (tašduwā) /taʃ.du.waː/: inflection of شَدَا (šadā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تَشْدُوا (tašdū) /taʃ.duː/: second-person masculine plural non-past active subjunctive/jussive of شَدَا (šadā)\n# تُشْدَوْا (tušdaw) /tuʃ.daw/: second-person masculine plural non-past passive subj",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašduwā", "šadā", "tašdū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يشدوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يشدوا (form I)\n# يَشْدُوَا (yašduwā) /jaʃ.du.waː/: third-person masculine dual non-past active subjunctive/jussive of شَدَا (šadā)\n# يَشْدُوا (yašdū) /jaʃ.duː/: third-person masculine plural non-past active subjunctive/jussive of شَدَا (šadā)\n# يُشْدَوْا (yušdaw) /juʃ.daw/: third-person masculine plural non-past passive subjunctive/jussive of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašduwā", "šadā", "yašdū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شدي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "شُدِيَ • (šudiya) (form I) /ʃu.di.ja/\n# third-person masculine singular past passive of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šudiya", "šadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شدوت",
+      "tur": "verb",
+      "baslik": "شدوت (form I)\n# شَدَوْتُ (šadawtu) /ʃa.daw.tu/: first-person singular past active of شَدَا (šadā)\n# شَدَوْتَ (šadawta) /ʃa.daw.ta/: second-person masculine singular past active of شَدَا (šadā)\n# شَدَوْتِ (šadawti) /ʃa.daw.ti/: second-person feminine singular past active of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šadawtu", "šadā", "šadawta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شدوتما",
+      "tur": "verb",
+      "baslik": "شَدَوْتُمَا • (šadawtumā) (form I) /ʃa.daw.tu.maː/\n# second-person dual past active of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šadawtumā", "šadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شدونا",
+      "tur": "verb",
+      "baslik": "شَدَوْنَا • (šadawnā) (form I) /ʃa.daw.naː/\n# first-person plural past active of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šadawnā", "šadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شدوتم",
+      "tur": "verb",
+      "baslik": "شَدَوْتُمْ • (šadawtum) (form I) /ʃa.daw.tum/\n# second-person masculine plural past active of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šadawtum", "šadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شدوتن",
+      "tur": "verb",
+      "baslik": "شَدَوْتُنَّ • (šadawtunna) (form I) /ʃa.daw.tun.na/\n# second-person feminine plural past active of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šadawtunna", "šadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شديت",
+      "tur": "verb",
+      "baslik": "شديت (form I)\n# شُدِيتُ (šudītu) /ʃu.diː.tu/: first-person singular past passive of شَدَا (šadā)\n# شُدِيتَ (šudīta) /ʃu.diː.ta/: second-person masculine singular past passive of شَدَا (šadā)\n# شُدِيتِ (šudīti) /ʃu.diː.ti/: second-person feminine singular past passive of شَدَا (šadā)\n# شُدِيَتْ (šudiyat) /ʃu.di.jat/: third-person feminine singular past passive of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šudītu", "šadā", "šudīta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شدون",
+      "tur": "verb",
+      "baslik": "شَدَوْنَ • (šadawna) (form I) /ʃa.daw.na/\n# third-person feminine plural past active of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šadawna", "šadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شدينا",
+      "tur": "verb",
+      "baslik": "شُدِينَا • (šudīnā) (form I) /ʃu.diː.naː/\n# first-person plural past passive of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šudīnā", "šadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شديتا",
+      "tur": "verb",
+      "baslik": "شُدِيَتَا • (šudiyatā) (form I) /ʃu.di.ja.taː/\n# third-person feminine dual past passive of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šudiyatā", "šadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شديا",
+      "tur": "verb",
+      "baslik": "شُدِيَا • (šudiyā) (form I) /ʃu.di.jaː/\n# third-person masculine dual past passive of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šudiyā", "šadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شديتم",
+      "tur": "verb",
+      "baslik": "شُدِيتُمْ • (šudītum) (form I) /ʃu.diː.tum/\n# second-person masculine plural past passive of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šudītum", "šadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شديتما",
+      "tur": "verb",
+      "baslik": "شُدِيتُمَا • (šudītumā) (form I) /ʃu.diː.tu.maː/\n# second-person dual past passive of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šudītumā", "šadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شدين",
+      "tur": "verb",
+      "baslik": "شُدِينَ • (šudīna) (form I) /ʃu.diː.na/\n# third-person feminine plural past passive of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šudīna", "šadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أشدو",
+      "tur": "verb",
+      "baslik": "أشدو (form I)\n# أَشْدُو (ʔašdū) /ʔaʃ.duː/: first-person singular non-past active indicative of شَدَا (šadā)\n# أَشْدُوَ (ʔašduwa) /ʔaʃ.du.wa/: first-person singular non-past active subjunctive of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔašdū", "šadā", "ʔašduwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تشدو",
+      "tur": "verb",
+      "baslik": "تشدو (form I)\n# تَشْدُو (tašdū) /taʃ.duː/: inflection of شَدَا (šadā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَشْدُوَ (tašduwa) /taʃ.du.wa/: inflection of شَدَا (šadā):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašdū", "šadā", "tašduwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شديتن",
+      "tur": "verb",
+      "baslik": "شُدِيتُنَّ • (šudītunna) (form I) /ʃu.diː.tun.na/\n# second-person feminine plural past passive of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šudītunna", "šadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يشدو",
+      "tur": "verb",
+      "baslik": "يشدو (form I)\n# يَشْدُو (yašdū) /jaʃ.duː/: third-person masculine singular non-past active indicative of شَدَا (šadā)\n# يَشْدُوَ (yašduwa) /jaʃ.du.wa/: third-person masculine singular non-past active subjunctive of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašdū", "šadā", "yašduwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تشدوان",
+      "tur": "verb",
+      "baslik": "تَشْدُوَانِ • (tašduwāni) (form I) /taʃ.du.waː.ni/\n# inflection of شَدَا (šadā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašduwāni", "šadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نشدو",
+      "tur": "verb",
+      "baslik": "نشدو (form I)\n# نَشْدُو (našdū) /naʃ.duː/: first-person plural non-past active indicative of شَدَا (šadā)\n# نَشْدُوَ (našduwa) /naʃ.du.wa/: first-person plural non-past active subjunctive of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["našdū", "šadā", "našduwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يشدوان",
+      "tur": "verb",
+      "baslik": "يَشْدُوَانِ • (yašduwāni) (form I) /jaʃ.du.waː.ni/\n# third-person masculine dual non-past active indicative of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašduwāni", "šadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أشدى",
+      "tur": "verb",
+      "baslik": "أُشْدَى • (ʔušdā) (form I) /ʔuʃ.daː/\n# first-person singular non-past passive indicative/subjunctive of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔušdā", "šadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تشدى",
+      "tur": "verb",
+      "baslik": "تُشْدَى • (tušdā) (form I) /tuʃ.daː/\n# inflection of شَدَا (šadā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tušdā", "šadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يشدى",
+      "tur": "verb",
+      "baslik": "يُشْدَى • (yušdā) (form I) /juʃ.daː/\n# third-person masculine singular non-past passive indicative/subjunctive of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yušdā", "šadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تشديان",
+      "tur": "verb",
+      "baslik": "تُشْدَيَانِ • (tušdayāni) (form I) /tuʃ.da.jaː.ni/\n# inflection of شَدَا (šadā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tušdayāni", "šadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يشديان",
+      "tur": "verb",
+      "baslik": "يُشْدَيَانِ • (yušdayāni) (form I) /juʃ.da.jaː.ni/\n# third-person masculine dual non-past passive indicative of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yušdayāni", "šadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نشدى",
+      "tur": "verb",
+      "baslik": "نُشْدَى • (nušdā) (form I) /nuʃ.daː/\n# first-person plural non-past passive indicative/subjunctive of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nušdā", "šadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يشدين",
+      "tur": "verb",
+      "baslik": "يُشْدَيْنَ • (yušdayna) (form I) /juʃ.daj.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yušdayna", "šadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يشديا",
+      "tur": "verb",
+      "baslik": "يُشْدَيَا • (yušdayā) (form I) /juʃ.da.jaː/\n# third-person masculine dual non-past passive subjunctive/jussive of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yušdayā", "šadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اشدوا",
+      "tur": "verb",
+      "baslik": "اشدوا (form I)\n# اُشْدُوَا (ušduwā) /uʃ.du.waː/: second-person dual imperative of شَدَا (šadā)\n# اُشْدُوا (ušdū) /uʃ.duː/: second-person masculine plural imperative of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ušduwā", "šadā", "ušdū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اشدي",
+      "tur": "verb",
+      "baslik": "اُشْدِي • (ušdī) (form I) /uʃ.diː/\n# second-person feminine singular imperative of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ušdī", "šadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تشديا",
+      "tur": "verb",
+      "baslik": "تُشْدَيَا • (tušdayā) (form I) /tuʃ.da.jaː/\n# inflection of شَدَا (šadā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tušdayā", "šadā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اشدون",
+      "tur": "verb",
+      "baslik": "اُشْدُونَ • (ušdūna) (form I) /uʃ.duː.na/\n# second-person feminine plural imperative of شَدَا (šadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ušdūna", "šadā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "شدا", "r7"]
+  ],
+  "mana": {
     "ince": "talk.v.02",
     "orta": "verb.creation",
     "ust": "fiil ve hadise",
@@ -611,22 +432,15 @@
     "dayanak_tanim": "deliver by singing",
     "synset_sayisi": 4
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["rant.v.01", "seek_out.v.01", "sing.v.02"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["rant.v.01", "seek_out.v.01", "sing.v.02"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

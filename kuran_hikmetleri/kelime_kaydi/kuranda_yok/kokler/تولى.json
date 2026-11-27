@@ -1,438 +1,311 @@
 {
   "kok": "تولى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تولى", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تولي",
-        "u": "تولي",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تولي (form V)\n# تُوُلِّيَ (tuwulliya) /tu.wul.li.ja/: third-person masculine singular past passive of تَوَلَّى (tawallā)\n# تَوَلَّيْ (tawallay) /ta.wal.laj/: second-person feminine singular imperative of تَوَلَّى (tawallā)",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tuwulliya", "tawallā", "tawallay"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "تولت",
-        "u": "تولت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَوَلَّتْ • (tawallat) (form V) /ta.wal.lat/\n# third-person feminine singular past active of تَوَلَّى (tawallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tawallat", "tawallā"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "تول",
-        "u": "تول",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تَوَلَّ • (tawalla) (form V) /ta.wal.la/\n# second-person masculine singular imperative of تَوَلَّى (tawallā)",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tawalla", "tawallā"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتولى",
-        "u": "يتولى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتولى (form V)\n# يَتَوَلَّى (yatawallā) /ja.ta.wal.laː/: third-person masculine singular non-past active indicative/subjunctive of تَوَلَّى (tawallā)\n# يُتَوَلَّى (yutawallā) /ju.ta.wal.laː/: third-person masculine singular non-past passive indicative/subjunctive of تَوَلَّى (tawallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatawallā", "tawallā", "yutawallā"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتول",
-        "u": "يتول",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتول (form V)\n# يَتَوَلَّ (yatawalla) /ja.ta.wal.la/: third-person masculine singular non-past active jussive of تَوَلَّى (tawallā)\n# يُتَوَلَّ (yutawalla) /ju.ta.wal.la/: third-person masculine singular non-past passive jussive of تَوَلَّى (tawallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatawalla", "tawallā", "yutawalla"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "تولين",
-        "u": "تولين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تولين (form V)\n# تَوَلَّيْنَ (tawallayna) /ta.wal.laj.na/: inflection of تَوَلَّى (tawallā):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# تُوُلِّينَ (tuwullīna) /tu.wul.liː.na/: third-person feminine plural past passive of تَوَلَّى (tawallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tawallayna", "tawallā", "tuwullīna"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتولى",
-        "u": "تتولى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتولى (form V)\n# تَتَوَلَّى (tatawallā) /ta.ta.wal.laː/: inflection of تَوَلَّى (tawallā):\n## second-person masculine singular non-past active indicative/subjunctive\n## third-person feminine singular non-past active indicative/subjunctive\n# تُتَوَلَّى (tutawallā) /tu.ta.wal.laː/: inflection of تَوَلَّى (tawallā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatawallā", "tawallā", "tutawallā"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتول",
-        "u": "تتول",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتول (form V)\n# تَتَوَلَّ (tatawalla) /ta.ta.wal.la/: inflection of تَوَلَّى (tawallā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُتَوَلَّ (tutawalla) /tu.ta.wal.la/: inflection of تَوَلَّى (tawallā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatawalla", "tawallā", "tutawalla"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "توليت",
-        "u": "توليت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "توليت (form V)\n# تَوَلَّيْتُ (tawallaytu) /ta.wal.laj.tu/: first-person singular past active of تَوَلَّى (tawallā)\n# تَوَلَّيْتَ (tawallayta) /ta.wal.laj.ta/: second-person masculine singular past active of تَوَلَّى (tawallā)\n# تَوَلَّيْتِ (tawallayti) /ta.wal.laj.ti/: second-person feminine singular past active of تَوَلَّى (tawallā)\n# تُوُلِّيتُ (tuwullītu) /tu.wul.liː.tu/: first-person singular ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tawallaytu", "tawallā", "tawallayta"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتولين",
-        "u": "تتولين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتولين (form V)\n# تَتَوَلَّيْنَ (tatawallayna) /ta.ta.wal.laj.na/: inflection of تَوَلَّى (tawallā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُتَوَلَّيْنَ (tutawallayna) /tu.ta.wal.laj.na/: inflection of تَوَلَّى (tawallā):\n## second-person feminine singular/plural non-past passive indicative\n## sec",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatawallayna", "tawallā", "tutawallayna"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتولي",
-        "u": "تتولي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تتولي (form V)\n# تَتَوَلَّيْ (tatawallay) /ta.ta.wal.laj/: second-person feminine singular non-past active subjunctive/jussive of تَوَلَّى (tawallā)\n# تُتَوَلَّيْ (tutawallay) /tu.ta.wal.laj/: second-person feminine singular non-past passive subjunctive/jussive of تَوَلَّى (tawallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatawallay", "tawallā", "tutawallay"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "أتولى",
-        "u": "أتولى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتولى (form V)\n# أَتَوَلَّى (ʔatawallā) /ʔa.ta.wal.laː/: first-person singular non-past active indicative/subjunctive of تَوَلَّى (tawallā)\n# أُتَوَلَّى (ʔutawallā) /ʔu.ta.wal.laː/: first-person singular non-past passive indicative/subjunctive of تَوَلَّى (tawallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔatawallā", "tawallā", "ʔutawallā"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "أتول",
-        "u": "أتول",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتول (form V)\n# أَتَوَلَّ (ʔatawalla) /ʔa.ta.wal.la/: first-person singular non-past active jussive of تَوَلَّى (tawallā)\n# أُتَوَلَّ (ʔutawalla) /ʔu.ta.wal.la/: first-person singular non-past passive jussive of تَوَلَّى (tawallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔatawalla", "tawallā", "ʔutawalla"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "تولينا",
-        "u": "تولينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تولينا (form V)\n# تَوَلَّيْنَا (tawallaynā) /ta.wal.laj.naː/: first-person plural past active of تَوَلَّى (tawallā)\n# تُوُلِّينَا (tuwullīnā) /tu.wul.liː.naː/: first-person plural past passive of تَوَلَّى (tawallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tawallaynā", "tawallā", "tuwullīnā"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "نتولى",
-        "u": "نتولى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتولى (form V)\n# نَتَوَلَّى (natawallā) /na.ta.wal.laː/: first-person plural non-past active indicative/subjunctive of تَوَلَّى (tawallā)\n# نُتَوَلَّى (nutawallā) /nu.ta.wal.laː/: first-person plural non-past passive indicative/subjunctive of تَوَلَّى (tawallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["natawallā", "tawallā", "nutawallā"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "نتول",
-        "u": "نتول",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتول (form V)\n# نَتَوَلَّ (natawalla) /na.ta.wal.la/: first-person plural non-past active jussive of تَوَلَّى (tawallā)\n# نُتَوَلَّ (nutawalla) /nu.ta.wal.la/: first-person plural non-past passive jussive of تَوَلَّى (tawallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["natawalla", "tawallā", "nutawalla"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "تولوا",
-        "u": "تولوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تولوا (form V)\n# تَوَلَّوْا (tawallaw) /ta.wal.law/: inflection of تَوَلَّى (tawallā):\n## third-person masculine plural past active\n## second-person masculine plural imperative\n# تُوُلُّوا (tuwullū) /tu.wul.luː/: third-person masculine plural past passive of تَوَلَّى (tawallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tawallaw", "tawallā", "tuwullū"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "توليتم",
-        "u": "توليتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "توليتم (form V)\n# تَوَلَّيْتُمْ (tawallaytum) /ta.wal.laj.tum/: second-person masculine plural past active of تَوَلَّى (tawallā)\n# تُوُلِّيتُمْ (tuwullītum) /tu.wul.liː.tum/: second-person masculine plural past passive of تَوَلَّى (tawallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tawallaytum", "tawallā", "tuwullītum"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتولون",
-        "u": "تتولون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتولون (form V)\n# تَتَوَلَّوْنَ (tatawallawna) /ta.ta.wal.law.na/: second-person masculine plural non-past active indicative of تَوَلَّى (tawallā)\n# تُتَوَلَّوْنَ (tutawallawna) /tu.ta.wal.law.na/: second-person masculine plural non-past passive indicative of تَوَلَّى (tawallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatawallawna", "tawallā", "tutawallawna"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتولوا",
-        "u": "تتولوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتولوا (form V)\n# تَتَوَلَّوْا (tatawallaw) /ta.ta.wal.law/: second-person masculine plural non-past active subjunctive/jussive of تَوَلَّى (tawallā)\n# تُتَوَلَّوْا (tutawallaw) /tu.ta.wal.law/: second-person masculine plural non-past passive subjunctive/jussive of تَوَلَّى (tawallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatawallaw", "tawallā", "tutawallaw"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتولون",
-        "u": "يتولون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتولون (form V)\n# يَتَوَلَّوْنَ (yatawallawna) /ja.ta.wal.law.na/: third-person masculine plural non-past active indicative of تَوَلَّى (tawallā)\n# يُتَوَلَّوْنَ (yutawallawna) /ju.ta.wal.law.na/: third-person masculine plural non-past passive indicative of تَوَلَّى (tawallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatawallawna", "tawallā", "yutawallawna"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتولوا",
-        "u": "يتولوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتولوا (form V)\n# يَتَوَلَّوْا (yatawallaw) /ja.ta.wal.law/: third-person masculine plural non-past active subjunctive/jussive of تَوَلَّى (tawallā)\n# يُتَوَلَّوْا (yutawallaw) /ju.ta.wal.law/: third-person masculine plural non-past passive subjunctive/jussive of تَوَلَّى (tawallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatawallaw", "tawallā", "yutawallaw"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "توليتن",
-        "u": "توليتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "توليتن (form V)\n# تَوَلَّيْتُنَّ (tawallaytunna) /ta.wal.laj.tun.na/: second-person feminine plural past active of تَوَلَّى (tawallā)\n# تُوُلِّيتُنَّ (tuwullītunna) /tu.wul.liː.tun.na/: second-person feminine plural past passive of تَوَلَّى (tawallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tawallaytunna", "tawallā", "tuwullītunna"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتولين",
-        "u": "يتولين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتولين (form V)\n# يَتَوَلَّيْنَ (yatawallayna) /ja.ta.wal.laj.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of تَوَلَّى (tawallā)\n# يُتَوَلَّيْنَ (yutawallayna) /ju.ta.wal.laj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of تَوَلَّى (tawallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatawallayna", "tawallā", "yutawallayna"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "توليا",
-        "u": "توليا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "توليا (form V)\n# تَوَلَّيَا (tawallayā) /ta.wal.la.jaː/: inflection of تَوَلَّى (tawallā):\n## third-person masculine dual past active\n## second-person dual imperative\n# تُوُلِّيَا (tuwulliyā) /tu.wul.li.jaː/: third-person masculine dual past passive of تَوَلَّى (tawallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tawallayā", "tawallā", "tuwulliyā"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "تولتا",
-        "u": "تولتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَوَلَّتَا • (tawallatā) (form V) /ta.wal.la.taː/\n# third-person feminine dual past active of تَوَلَّى (tawallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tawallatā", "tawallā"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "توليتما",
-        "u": "توليتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "توليتما (form V)\n# تَوَلَّيْتُمَا (tawallaytumā) /ta.wal.laj.tu.maː/: second-person dual past active of تَوَلَّى (tawallā)\n# تُوُلِّيتُمَا (tuwullītumā) /tu.wul.liː.tu.maː/: second-person dual past passive of تَوَلَّى (tawallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tawallaytumā", "tawallā", "tuwullītumā"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "توليتا",
-        "u": "توليتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُوُلِّيَتَا • (tuwulliyatā) (form V) /tu.wul.li.ja.taː/\n# third-person feminine dual past passive of تَوَلَّى (tawallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tuwulliyatā", "tawallā"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتوليان",
-        "u": "تتوليان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتوليان (form V)\n# تَتَوَلَّيَانِ (tatawallayāni) /ta.ta.wal.la.jaː.ni/: inflection of تَوَلَّى (tawallā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُتَوَلَّيَانِ (tutawallayāni) /tu.ta.wal.la.jaː.ni/: inflection of تَوَلَّى (tawallā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatawallayāni", "tawallā", "tutawallayāni"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتوليا",
-        "u": "تتوليا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتوليا (form V)\n# تَتَوَلَّيَا (tatawallayā) /ta.ta.wal.la.jaː/: inflection of تَوَلَّى (tawallā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُتَوَلَّيَا (tutawallayā) /tu.ta.wal.la.jaː/: inflection of تَوَلَّى (tawallā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-p",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatawallayā", "tawallā", "tutawallayā"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتوليان",
-        "u": "يتوليان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتوليان (form V)\n# يَتَوَلَّيَانِ (yatawallayāni) /ja.ta.wal.la.jaː.ni/: third-person masculine dual non-past active indicative of تَوَلَّى (tawallā)\n# يُتَوَلَّيَانِ (yutawallayāni) /ju.ta.wal.la.jaː.ni/: third-person masculine dual non-past passive indicative of تَوَلَّى (tawallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatawallayāni", "tawallā", "yutawallayāni"],
-        "k": "تولى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتوليا",
-        "u": "يتوليا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتوليا (form V)\n# يَتَوَلَّيَا (yatawallayā) /ja.ta.wal.la.jaː/: third-person masculine dual non-past active subjunctive/jussive of تَوَلَّى (tawallā)\n# يُتَوَلَّيَا (yutawallayā) /ju.ta.wal.la.jaː/: third-person masculine dual non-past passive subjunctive/jussive of تَوَلَّى (tawallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatawallayā", "tawallā", "yutawallayā"],
-        "k": "تولى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تل",
+  "ses": {
     "harf": "ت",
+    "fasil": "تل",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تولي",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تولي (form V)\n# تُوُلِّيَ (tuwulliya) /tu.wul.li.ja/: third-person masculine singular past passive of تَوَلَّى (tawallā)\n# تَوَلَّيْ (tawallay) /ta.wal.laj/: second-person feminine singular imperative of تَوَلَّى (tawallā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tuwulliya", "tawallā", "tawallay"]
+    },
+    {
+      "madde": "تولت",
+      "tur": "verb",
+      "baslik": "تَوَلَّتْ • (tawallat) (form V) /ta.wal.lat/\n# third-person feminine singular past active of تَوَلَّى (tawallā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tawallat", "tawallā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تول",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تَوَلَّ • (tawalla) (form V) /ta.wal.la/\n# second-person masculine singular imperative of تَوَلَّى (tawallā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tawalla", "tawallā"]
+    },
+    {
+      "madde": "يتولى",
+      "tur": "verb",
+      "baslik": "يتولى (form V)\n# يَتَوَلَّى (yatawallā) /ja.ta.wal.laː/: third-person masculine singular non-past active indicative/subjunctive of تَوَلَّى (tawallā)\n# يُتَوَلَّى (yutawallā) /ju.ta.wal.laː/: third-person masculine singular non-past passive indicative/subjunctive of تَوَلَّى (tawallā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatawallā", "tawallā", "yutawallā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتول",
+      "tur": "verb",
+      "baslik": "يتول (form V)\n# يَتَوَلَّ (yatawalla) /ja.ta.wal.la/: third-person masculine singular non-past active jussive of تَوَلَّى (tawallā)\n# يُتَوَلَّ (yutawalla) /ju.ta.wal.la/: third-person masculine singular non-past passive jussive of تَوَلَّى (tawallā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatawalla", "tawallā", "yutawalla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تولين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تولين (form V)\n# تَوَلَّيْنَ (tawallayna) /ta.wal.laj.na/: inflection of تَوَلَّى (tawallā):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# تُوُلِّينَ (tuwullīna) /tu.wul.liː.na/: third-person feminine plural past passive of تَوَلَّى (tawallā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tawallayna", "tawallā", "tuwullīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتولى",
+      "tur": "verb",
+      "baslik": "تتولى (form V)\n# تَتَوَلَّى (tatawallā) /ta.ta.wal.laː/: inflection of تَوَلَّى (tawallā):\n## second-person masculine singular non-past active indicative/subjunctive\n## third-person feminine singular non-past active indicative/subjunctive\n# تُتَوَلَّى (tutawallā) /tu.ta.wal.laː/: inflection of تَوَلَّى (tawallā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatawallā", "tawallā", "tutawallā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتول",
+      "tur": "verb",
+      "baslik": "تتول (form V)\n# تَتَوَلَّ (tatawalla) /ta.ta.wal.la/: inflection of تَوَلَّى (tawallā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُتَوَلَّ (tutawalla) /tu.ta.wal.la/: inflection of تَوَلَّى (tawallā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatawalla", "tawallā", "tutawalla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "توليت",
+      "tur": "verb",
+      "baslik": "توليت (form V)\n# تَوَلَّيْتُ (tawallaytu) /ta.wal.laj.tu/: first-person singular past active of تَوَلَّى (tawallā)\n# تَوَلَّيْتَ (tawallayta) /ta.wal.laj.ta/: second-person masculine singular past active of تَوَلَّى (tawallā)\n# تَوَلَّيْتِ (tawallayti) /ta.wal.laj.ti/: second-person feminine singular past active of تَوَلَّى (tawallā)\n# تُوُلِّيتُ (tuwullītu) /tu.wul.liː.tu/: first-person singular ",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tawallaytu", "tawallā", "tawallayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتولين",
+      "tur": "verb",
+      "baslik": "تتولين (form V)\n# تَتَوَلَّيْنَ (tatawallayna) /ta.ta.wal.laj.na/: inflection of تَوَلَّى (tawallā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُتَوَلَّيْنَ (tutawallayna) /tu.ta.wal.laj.na/: inflection of تَوَلَّى (tawallā):\n## second-person feminine singular/plural non-past passive indicative\n## sec",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatawallayna", "tawallā", "tutawallayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتولي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تتولي (form V)\n# تَتَوَلَّيْ (tatawallay) /ta.ta.wal.laj/: second-person feminine singular non-past active subjunctive/jussive of تَوَلَّى (tawallā)\n# تُتَوَلَّيْ (tutawallay) /tu.ta.wal.laj/: second-person feminine singular non-past passive subjunctive/jussive of تَوَلَّى (tawallā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatawallay", "tawallā", "tutawallay"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أتولى",
+      "tur": "verb",
+      "baslik": "أتولى (form V)\n# أَتَوَلَّى (ʔatawallā) /ʔa.ta.wal.laː/: first-person singular non-past active indicative/subjunctive of تَوَلَّى (tawallā)\n# أُتَوَلَّى (ʔutawallā) /ʔu.ta.wal.laː/: first-person singular non-past passive indicative/subjunctive of تَوَلَّى (tawallā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔatawallā", "tawallā", "ʔutawallā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أتول",
+      "tur": "verb",
+      "baslik": "أتول (form V)\n# أَتَوَلَّ (ʔatawalla) /ʔa.ta.wal.la/: first-person singular non-past active jussive of تَوَلَّى (tawallā)\n# أُتَوَلَّ (ʔutawalla) /ʔu.ta.wal.la/: first-person singular non-past passive jussive of تَوَلَّى (tawallā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔatawalla", "tawallā", "ʔutawalla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تولينا",
+      "tur": "verb",
+      "baslik": "تولينا (form V)\n# تَوَلَّيْنَا (tawallaynā) /ta.wal.laj.naː/: first-person plural past active of تَوَلَّى (tawallā)\n# تُوُلِّينَا (tuwullīnā) /tu.wul.liː.naː/: first-person plural past passive of تَوَلَّى (tawallā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tawallaynā", "tawallā", "tuwullīnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نتولى",
+      "tur": "verb",
+      "baslik": "نتولى (form V)\n# نَتَوَلَّى (natawallā) /na.ta.wal.laː/: first-person plural non-past active indicative/subjunctive of تَوَلَّى (tawallā)\n# نُتَوَلَّى (nutawallā) /nu.ta.wal.laː/: first-person plural non-past passive indicative/subjunctive of تَوَلَّى (tawallā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["natawallā", "tawallā", "nutawallā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نتول",
+      "tur": "verb",
+      "baslik": "نتول (form V)\n# نَتَوَلَّ (natawalla) /na.ta.wal.la/: first-person plural non-past active jussive of تَوَلَّى (tawallā)\n# نُتَوَلَّ (nutawalla) /nu.ta.wal.la/: first-person plural non-past passive jussive of تَوَلَّى (tawallā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["natawalla", "tawallā", "nutawalla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تولوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تولوا (form V)\n# تَوَلَّوْا (tawallaw) /ta.wal.law/: inflection of تَوَلَّى (tawallā):\n## third-person masculine plural past active\n## second-person masculine plural imperative\n# تُوُلُّوا (tuwullū) /tu.wul.luː/: third-person masculine plural past passive of تَوَلَّى (tawallā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tawallaw", "tawallā", "tuwullū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "توليتم",
+      "tur": "verb",
+      "baslik": "توليتم (form V)\n# تَوَلَّيْتُمْ (tawallaytum) /ta.wal.laj.tum/: second-person masculine plural past active of تَوَلَّى (tawallā)\n# تُوُلِّيتُمْ (tuwullītum) /tu.wul.liː.tum/: second-person masculine plural past passive of تَوَلَّى (tawallā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tawallaytum", "tawallā", "tuwullītum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتولون",
+      "tur": "verb",
+      "baslik": "تتولون (form V)\n# تَتَوَلَّوْنَ (tatawallawna) /ta.ta.wal.law.na/: second-person masculine plural non-past active indicative of تَوَلَّى (tawallā)\n# تُتَوَلَّوْنَ (tutawallawna) /tu.ta.wal.law.na/: second-person masculine plural non-past passive indicative of تَوَلَّى (tawallā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatawallawna", "tawallā", "tutawallawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتولوا",
+      "tur": "verb",
+      "baslik": "تتولوا (form V)\n# تَتَوَلَّوْا (tatawallaw) /ta.ta.wal.law/: second-person masculine plural non-past active subjunctive/jussive of تَوَلَّى (tawallā)\n# تُتَوَلَّوْا (tutawallaw) /tu.ta.wal.law/: second-person masculine plural non-past passive subjunctive/jussive of تَوَلَّى (tawallā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatawallaw", "tawallā", "tutawallaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتولون",
+      "tur": "verb",
+      "baslik": "يتولون (form V)\n# يَتَوَلَّوْنَ (yatawallawna) /ja.ta.wal.law.na/: third-person masculine plural non-past active indicative of تَوَلَّى (tawallā)\n# يُتَوَلَّوْنَ (yutawallawna) /ju.ta.wal.law.na/: third-person masculine plural non-past passive indicative of تَوَلَّى (tawallā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatawallawna", "tawallā", "yutawallawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتولوا",
+      "tur": "verb",
+      "baslik": "يتولوا (form V)\n# يَتَوَلَّوْا (yatawallaw) /ja.ta.wal.law/: third-person masculine plural non-past active subjunctive/jussive of تَوَلَّى (tawallā)\n# يُتَوَلَّوْا (yutawallaw) /ju.ta.wal.law/: third-person masculine plural non-past passive subjunctive/jussive of تَوَلَّى (tawallā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatawallaw", "tawallā", "yutawallaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "توليتن",
+      "tur": "verb",
+      "baslik": "توليتن (form V)\n# تَوَلَّيْتُنَّ (tawallaytunna) /ta.wal.laj.tun.na/: second-person feminine plural past active of تَوَلَّى (tawallā)\n# تُوُلِّيتُنَّ (tuwullītunna) /tu.wul.liː.tun.na/: second-person feminine plural past passive of تَوَلَّى (tawallā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tawallaytunna", "tawallā", "tuwullītunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتولين",
+      "tur": "verb",
+      "baslik": "يتولين (form V)\n# يَتَوَلَّيْنَ (yatawallayna) /ja.ta.wal.laj.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of تَوَلَّى (tawallā)\n# يُتَوَلَّيْنَ (yutawallayna) /ju.ta.wal.laj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of تَوَلَّى (tawallā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatawallayna", "tawallā", "yutawallayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "توليا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "توليا (form V)\n# تَوَلَّيَا (tawallayā) /ta.wal.la.jaː/: inflection of تَوَلَّى (tawallā):\n## third-person masculine dual past active\n## second-person dual imperative\n# تُوُلِّيَا (tuwulliyā) /tu.wul.li.jaː/: third-person masculine dual past passive of تَوَلَّى (tawallā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tawallayā", "tawallā", "tuwulliyā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تولتا",
+      "tur": "verb",
+      "baslik": "تَوَلَّتَا • (tawallatā) (form V) /ta.wal.la.taː/\n# third-person feminine dual past active of تَوَلَّى (tawallā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tawallatā", "tawallā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "توليتما",
+      "tur": "verb",
+      "baslik": "توليتما (form V)\n# تَوَلَّيْتُمَا (tawallaytumā) /ta.wal.laj.tu.maː/: second-person dual past active of تَوَلَّى (tawallā)\n# تُوُلِّيتُمَا (tuwullītumā) /tu.wul.liː.tu.maː/: second-person dual past passive of تَوَلَّى (tawallā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tawallaytumā", "tawallā", "tuwullītumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "توليتا",
+      "tur": "verb",
+      "baslik": "تُوُلِّيَتَا • (tuwulliyatā) (form V) /tu.wul.li.ja.taː/\n# third-person feminine dual past passive of تَوَلَّى (tawallā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tuwulliyatā", "tawallā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتوليان",
+      "tur": "verb",
+      "baslik": "تتوليان (form V)\n# تَتَوَلَّيَانِ (tatawallayāni) /ta.ta.wal.la.jaː.ni/: inflection of تَوَلَّى (tawallā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُتَوَلَّيَانِ (tutawallayāni) /tu.ta.wal.la.jaː.ni/: inflection of تَوَلَّى (tawallā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive ",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatawallayāni", "tawallā", "tutawallayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتوليا",
+      "tur": "verb",
+      "baslik": "تتوليا (form V)\n# تَتَوَلَّيَا (tatawallayā) /ta.ta.wal.la.jaː/: inflection of تَوَلَّى (tawallā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُتَوَلَّيَا (tutawallayā) /tu.ta.wal.la.jaː/: inflection of تَوَلَّى (tawallā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-p",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatawallayā", "tawallā", "tutawallayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتوليان",
+      "tur": "verb",
+      "baslik": "يتوليان (form V)\n# يَتَوَلَّيَانِ (yatawallayāni) /ja.ta.wal.la.jaː.ni/: third-person masculine dual non-past active indicative of تَوَلَّى (tawallā)\n# يُتَوَلَّيَانِ (yutawallayāni) /ju.ta.wal.la.jaː.ni/: third-person masculine dual non-past passive indicative of تَوَلَّى (tawallā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatawallayāni", "tawallā", "yutawallayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتوليا",
+      "tur": "verb",
+      "baslik": "يتوليا (form V)\n# يَتَوَلَّيَا (yatawallayā) /ja.ta.wal.la.jaː/: third-person masculine dual non-past active subjunctive/jussive of تَوَلَّى (tawallā)\n# يُتَوَلَّيَا (yutawallayā) /ju.ta.wal.la.jaː/: third-person masculine dual non-past passive subjunctive/jussive of تَوَلَّى (tawallā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatawallayā", "tawallā", "yutawallayā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تولى", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

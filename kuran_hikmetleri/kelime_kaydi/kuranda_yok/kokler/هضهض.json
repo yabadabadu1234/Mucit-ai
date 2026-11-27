@@ -1,60 +1,40 @@
 {
   "kok": "هضهض",
+  "tur": "isim",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["fiil-yok"],
+  "lugat_fiil": false,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "هضهض", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الهاء والضاد",
-      "baslik": "هضض - هضهض",
-      "mihveri": "دقّ الشيء الصُلْب الغَليِظ وكسْرهُ (1): كالحَجَر الخ.",
-      "sesler": "",
-      "tam_metin": "\"هَضَضتُ الحَجَر وغيرَه: كسَرته ودقَقْته، والشيءَ: كسَره ودقَّه. والهَضْهَضة كذلك إلَّا أنَّه في عَجَلة والهَضّ في مُهْلة. وهَضَّضَ - ض: دَقّ الأرضَ برجليه دَقًّا شَديدًا \".\n° المعنى المحوري\nدقّ الشيء الصُلْب الغَليِظ وكسْرهُ (1): كالحَجَر الخ.",
-      "fasil_ozeti": "° معنى الفصل المعجمي (هض) : كسر الشيء الغيظ ودقه كهض الحجر أي كسره ودقه - في (هضض)، وكما في هضم الطَّعام: نهكه - في (هضم)، وهو إذا لم يهضم يكون الإحساس به في المعدة كأنه كتلة حجرية."
-    }
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "هض",
+  "ses": {
     "harf": "ه",
+    "fasil": "هض",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+  "cebel": {
     "fasil": "الهاء والضاد",
+    "baslik": "هضض - هضهض",
     "mihveri": "دقّ الشيء الصُلْب الغَليِظ وكسْرهُ (1): كالحَجَر الخ.",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (هض) : كسر الشيء الغيظ ودقه كهض الحجر أي كسره ودقه - في (هضض)، وكما في هضم الطَّعام: نهكه - في (هضم)، وهو إذا لم يهضم يكون الإحساس به في المعدة كأنه كتلة حجرية.",
-    "tam_metin": "\"هَضَضتُ الحَجَر وغيرَه: كسَرته ودقَقْته، والشيءَ: كسَره ودقَّه. والهَضْهَضة كذلك إلَّا أنَّه في عَجَلة والهَضّ في مُهْلة. وهَضَّضَ - ض: دَقّ الأرضَ برجليه دَقًّا شَديدًا \".\n° المعنى المحوري\nدقّ الشيء الصُلْب الغَليِظ وكسْرهُ (1): كالحَجَر الخ."
+    "tam_metin": "\"هَضَضتُ الحَجَر وغيرَه: كسَرته ودقَقْته، والشيءَ: كسَره ودقَّه. والهَضْهَضة كذلك إلَّا أنَّه في عَجَلة والهَضّ في مُهْلة. وهَضَّضَ - ض: دَقّ الأرضَ برجليه دَقًّا شَديدًا \".\n° المعنى المحوري\nدقّ الشيء الصُلْب الغَليِظ وكسْرهُ (1): كالحَجَر الخ.",
+    "fasil_ozeti": "° معنى الفصل المعجمي (هض) : كسر الشيء الغيظ ودقه كهض الحجر أي كسره ودقه - في (هضض)، وكما في هضم الطَّعام: نهكه - في (هضم)، وهو إذا لم يهضم يكون الإحساس به في المعدة كأنه كتلة حجرية."
   },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "هضهض", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "ust": {
       "kume": 9,
       "merkez_kok": "سفك",
@@ -74,6 +54,10 @@
       "boy": 19
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

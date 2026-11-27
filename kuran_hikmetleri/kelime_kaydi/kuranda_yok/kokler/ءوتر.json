@@ -1,347 +1,281 @@
 {
   "kok": "ءوتر",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءوتر", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "نوتر",
-        "u": "نوتر",
-        "p": "verb",
-        "n": "1.3",
-        "h": "ar-verb form",
-        "e": "نوتر (form IV)\n# نُوتِرُ (nūtiru) /nuː.ti.ru/: first-person plural non-past active indicative of أَوْتَرَ (ʔawtara)\n# نُوتَرُ (nūtaru) /nuː.ta.ru/: first-person plural non-past passive indicative of أَوْتَرَ (ʔawtara)\n# نُوتِرَ (nūtira) /nuː.ti.ra/: first-person plural non-past active subjunctive of أَوْتَرَ (ʔawtara)\n# نُوتَرَ (nūtara) /nuː.ta.ra/: first-person plural non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nūtiru", "ʔawtara", "nūtaru"],
-        "k": "أوتر",
-        "yol": "kök"
-      },
-      {
-        "w": "توتر",
-        "u": "توتر",
-        "p": "verb",
-        "n": "1.5",
-        "h": "ar-verb form",
-        "e": "توتر (form IV)\n# تُوتِرُ (tūtiru) /tuː.ti.ru/: inflection of أَوْتَرَ (ʔawtara):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُوتَرُ (tūtaru) /tuː.ta.ru/: inflection of أَوْتَرَ (ʔawtara):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# ت",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūtiru", "ʔawtara", "tūtaru"],
-        "k": "أوتر",
-        "yol": "kök"
-      },
-      {
-        "w": "يوتر",
-        "u": "يوتر",
-        "p": "verb",
-        "n": "1.3",
-        "h": "ar-verb form",
-        "e": "يوتر (form IV)\n# يُوتِرُ (yūtiru) /juː.ti.ru/: third-person masculine singular non-past active indicative of أَوْتَرَ (ʔawtara)\n# يُوتَرُ (yūtaru) /juː.ta.ru/: third-person masculine singular non-past passive indicative of أَوْتَرَ (ʔawtara)\n# يُوتِرَ (yūtira) /juː.ti.ra/: third-person masculine singular non-past active subjunctive of أَوْتَرَ (ʔawtara)\n# يُوتَرَ (yūtara) /juː.ta.ra/: third-person",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūtiru", "ʔawtara", "yūtaru"],
-        "k": "أوتر",
-        "yol": "kök"
-      },
-      {
-        "w": "أوترت",
-        "u": "أوترت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوترت (form IV)\n# أَوْتَرْتُ (ʔawtartu) /ʔaw.tar.tu/: first-person singular past active of أَوْتَرَ (ʔawtara)\n# أَوْتَرْتَ (ʔawtarta) /ʔaw.tar.ta/: second-person masculine singular past active of أَوْتَرَ (ʔawtara)\n# أَوْتَرْتِ (ʔawtarti) /ʔaw.tar.ti/: second-person feminine singular past active of أَوْتَرَ (ʔawtara)\n# أَوْتَرَتْ (ʔawtarat) /ʔaw.ta.rat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawtartu", "ʔawtara", "ʔawtarta"],
-        "k": "أوتر",
-        "yol": "kök"
-      },
-      {
-        "w": "توترين",
-        "u": "توترين",
-        "p": "verb",
-        "n": "1.3",
-        "h": "ar-verb form",
-        "e": "توترين (form IV)\n# تُوتِرِينَ (tūtirīna) /tuː.ti.riː.na/: second-person feminine singular non-past active indicative of أَوْتَرَ (ʔawtara)\n# تُوتَرِينَ (tūtarīna) /tuː.ta.riː.na/: second-person feminine singular non-past passive indicative of أَوْتَرَ (ʔawtara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūtirīna", "ʔawtara", "tūtarīna"],
-        "k": "أوتر",
-        "yol": "kök"
-      },
-      {
-        "w": "توتري",
-        "u": "توتري",
-        "p": "verb",
-        "n": "1.3",
-        "h": "ar-verb form",
-        "e": "توتري (form IV)\n# تُوتِرِي (tūtirī) /tuː.ti.riː/: second-person feminine singular non-past active subjunctive/jussive of أَوْتَرَ (ʔawtara)\n# تُوتَرِي (tūtarī) /tuː.ta.riː/: second-person feminine singular non-past passive subjunctive/jussive of أَوْتَرَ (ʔawtara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūtirī", "ʔawtara", "tūtarī"],
-        "k": "أوتر",
-        "yol": "kök"
-      },
-      {
-        "w": "أوتري",
-        "u": "أوتري",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَوْتِرِي • (ʔawtirī) (form IV) /ʔaw.ti.riː/\n# second-person feminine singular imperative of أَوْتَرَ (ʔawtara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawtirī", "ʔawtara"],
-        "k": "أوتر",
-        "yol": "kök"
-      },
-      {
-        "w": "أوترنا",
-        "u": "أوترنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوترنا (form IV)\n# أَوْتَرْنَا (ʔawtarnā) /ʔaw.tar.naː/: first-person plural past active of أَوْتَرَ (ʔawtara)\n# أُوتِرْنَا (ʔūtirnā) /ʔuː.tir.naː/: first-person plural past passive of أَوْتَرَ (ʔawtara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawtarnā", "ʔawtara", "ʔūtirnā"],
-        "k": "أوتر",
-        "yol": "kök"
-      },
-      {
-        "w": "أوترتم",
-        "u": "أوترتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوترتم (form IV)\n# أَوْتَرْتُمْ (ʔawtartum) /ʔaw.tar.tum/: second-person masculine plural past active of أَوْتَرَ (ʔawtara)\n# أُوتِرْتُمْ (ʔūtirtum) /ʔuː.tir.tum/: second-person masculine plural past passive of أَوْتَرَ (ʔawtara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawtartum", "ʔawtara", "ʔūtirtum"],
-        "k": "أوتر",
-        "yol": "kök"
-      },
-      {
-        "w": "توترون",
-        "u": "توترون",
-        "p": "verb",
-        "n": "1.3",
-        "h": "ar-verb form",
-        "e": "توترون (form IV)\n# تُوتِرُونَ (tūtirūna) /tuː.ti.ruː.na/: second-person masculine plural non-past active indicative of أَوْتَرَ (ʔawtara)\n# تُوتَرُونَ (tūtarūna) /tuː.ta.ruː.na/: second-person masculine plural non-past passive indicative of أَوْتَرَ (ʔawtara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūtirūna", "ʔawtara", "tūtarūna"],
-        "k": "أوتر",
-        "yol": "kök"
-      },
-      {
-        "w": "أوتروا",
-        "u": "أوتروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوتروا (form IV)\n# أَوْتَرُوا (ʔawtarū) /ʔaw.ta.ruː/: third-person masculine plural past active of أَوْتَرَ (ʔawtara)\n# أُوتِرُوا (ʔūtirū) /ʔuː.ti.ruː/: third-person masculine plural past passive of أَوْتَرَ (ʔawtara)\n# أَوْتِرُوا (ʔawtirū) /ʔaw.ti.ruː/: second-person masculine plural imperative of أَوْتَرَ (ʔawtara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawtarū", "ʔawtara", "ʔūtirū"],
-        "k": "أوتر",
-        "yol": "kök"
-      },
-      {
-        "w": "يوترون",
-        "u": "يوترون",
-        "p": "verb",
-        "n": "1.3",
-        "h": "ar-verb form",
-        "e": "يوترون (form IV)\n# يُوتِرُونَ (yūtirūna) /juː.ti.ruː.na/: third-person masculine plural non-past active indicative of أَوْتَرَ (ʔawtara)\n# يُوتَرُونَ (yūtarūna) /juː.ta.ruː.na/: third-person masculine plural non-past passive indicative of أَوْتَرَ (ʔawtara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūtirūna", "ʔawtara", "yūtarūna"],
-        "k": "أوتر",
-        "yol": "kök"
-      },
-      {
-        "w": "يوتروا",
-        "u": "يوتروا",
-        "p": "verb",
-        "n": "1.3",
-        "h": "ar-verb form",
-        "e": "يوتروا (form IV)\n# يُوتِرُوا (yūtirū) /juː.ti.ruː/: third-person masculine plural non-past active subjunctive/jussive of أَوْتَرَ (ʔawtara)\n# يُوتَرُوا (yūtarū) /juː.ta.ruː/: third-person masculine plural non-past passive subjunctive/jussive of أَوْتَرَ (ʔawtara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūtirū", "ʔawtara", "yūtarū"],
-        "k": "أوتر",
-        "yol": "kök"
-      },
-      {
-        "w": "توتروا",
-        "u": "توتروا",
-        "p": "verb",
-        "n": "1.3",
-        "h": "ar-verb form",
-        "e": "توتروا (form IV)\n# تُوتِرُوا (tūtirū) /tuː.ti.ruː/: second-person masculine plural non-past active subjunctive/jussive of أَوْتَرَ (ʔawtara)\n# تُوتَرُوا (tūtarū) /tuː.ta.ruː/: second-person masculine plural non-past passive subjunctive/jussive of أَوْتَرَ (ʔawtara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūtirū", "ʔawtara", "tūtarū"],
-        "k": "أوتر",
-        "yol": "kök"
-      },
-      {
-        "w": "أوترتن",
-        "u": "أوترتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوترتن (form IV)\n# أَوْتَرْتُنَّ (ʔawtartunna) /ʔaw.tar.tun.na/: second-person feminine plural past active of أَوْتَرَ (ʔawtara)\n# أُوتِرْتُنَّ (ʔūtirtunna) /ʔuː.tir.tun.na/: second-person feminine plural past passive of أَوْتَرَ (ʔawtara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawtartunna", "ʔawtara", "ʔūtirtunna"],
-        "k": "أوتر",
-        "yol": "kök"
-      },
-      {
-        "w": "توترن",
-        "u": "توترن",
-        "p": "verb",
-        "n": "1.3",
-        "h": "ar-verb form",
-        "e": "توترن (form IV)\n# تُوتِرْنَ (tūtirna) /tuː.tir.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَوْتَرَ (ʔawtara)\n# تُوتَرْنَ (tūtarna) /tuː.tar.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَوْتَرَ (ʔawtara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūtirna", "ʔawtara", "tūtarna"],
-        "k": "أوتر",
-        "yol": "kök"
-      },
-      {
-        "w": "أوترن",
-        "u": "أوترن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوترن (form IV)\n# أَوْتَرْنَ (ʔawtarna) /ʔaw.tar.na/: third-person feminine plural past active of أَوْتَرَ (ʔawtara)\n# أُوتِرْنَ (ʔūtirna) /ʔuː.tir.na/: third-person feminine plural past passive of أَوْتَرَ (ʔawtara)\n# أَوْتِرْنَ (ʔawtirna) /ʔaw.tir.na/: second-person feminine plural imperative of أَوْتَرَ (ʔawtara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawtarna", "ʔawtara", "ʔūtirna"],
-        "k": "أوتر",
-        "yol": "kök"
-      },
-      {
-        "w": "يوترن",
-        "u": "يوترن",
-        "p": "verb",
-        "n": "1.3",
-        "h": "ar-verb form",
-        "e": "يوترن (form IV)\n# يُوتِرْنَ (yūtirna) /juː.tir.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَوْتَرَ (ʔawtara)\n# يُوتَرْنَ (yūtarna) /juː.tar.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَوْتَرَ (ʔawtara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūtirna", "ʔawtara", "yūtarna"],
-        "k": "أوتر",
-        "yol": "kök"
-      },
-      {
-        "w": "أوترتا",
-        "u": "أوترتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوترتا (form IV)\n# أَوْتَرَتَا (ʔawtaratā) /ʔaw.ta.ra.taː/: third-person feminine dual past active of أَوْتَرَ (ʔawtara)\n# أُوتِرَتَا (ʔūtiratā) /ʔuː.ti.ra.taː/: third-person feminine dual past passive of أَوْتَرَ (ʔawtara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawtaratā", "ʔawtara", "ʔūtiratā"],
-        "k": "أوتر",
-        "yol": "kök"
-      },
-      {
-        "w": "أوترتما",
-        "u": "أوترتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوترتما (form IV)\n# أَوْتَرْتُمَا (ʔawtartumā) /ʔaw.tar.tu.maː/: second-person dual past active of أَوْتَرَ (ʔawtara)\n# أُوتِرْتُمَا (ʔūtirtumā) /ʔuː.tir.tu.maː/: second-person dual past passive of أَوْتَرَ (ʔawtara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawtartumā", "ʔawtara", "ʔūtirtumā"],
-        "k": "أوتر",
-        "yol": "kök"
-      },
-      {
-        "w": "أوترا",
-        "u": "أوترا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوترا (form IV)\n# أَوْتَرَا (ʔawtarā) /ʔaw.ta.raː/: third-person masculine dual past active of أَوْتَرَ (ʔawtara)\n# أُوتِرَا (ʔūtirā) /ʔuː.ti.raː/: third-person masculine dual past passive of أَوْتَرَ (ʔawtara)\n# أَوْتِرَا (ʔawtirā) /ʔaw.ti.raː/: second-person dual imperative of أَوْتَرَ (ʔawtara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawtarā", "ʔawtara", "ʔūtirā"],
-        "k": "أوتر",
-        "yol": "kök"
-      },
-      {
-        "w": "توتران",
-        "u": "توتران",
-        "p": "verb",
-        "n": "1.3",
-        "h": "ar-verb form",
-        "e": "توتران (form IV)\n# تُوتِرَانِ (tūtirāni) /tuː.ti.raː.ni/: inflection of أَوْتَرَ (ʔawtara):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُوتَرَانِ (tūtarāni) /tuː.ta.raː.ni/: inflection of أَوْتَرَ (ʔawtara):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūtirāni", "ʔawtara", "tūtarāni"],
-        "k": "أوتر",
-        "yol": "kök"
-      },
-      {
-        "w": "توترا",
-        "u": "توترا",
-        "p": "verb",
-        "n": "1.3",
-        "h": "ar-verb form",
-        "e": "توترا (form IV)\n# تُوتِرَا (tūtirā) /tuː.ti.raː/: inflection of أَوْتَرَ (ʔawtara):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُوتَرَا (tūtarā) /tuː.ta.raː/: inflection of أَوْتَرَ (ʔawtara):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussiv",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūtirā", "ʔawtara", "tūtarā"],
-        "k": "أوتر",
-        "yol": "kök"
-      },
-      {
-        "w": "يوتران",
-        "u": "يوتران",
-        "p": "verb",
-        "n": "1.3",
-        "h": "ar-verb form",
-        "e": "يوتران (form IV)\n# يُوتِرَانِ (yūtirāni) /juː.ti.raː.ni/: third-person masculine dual non-past active indicative of أَوْتَرَ (ʔawtara)\n# يُوتَرَانِ (yūtarāni) /juː.ta.raː.ni/: third-person masculine dual non-past passive indicative of أَوْتَرَ (ʔawtara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūtirāni", "ʔawtara", "yūtarāni"],
-        "k": "أوتر",
-        "yol": "kök"
-      },
-      {
-        "w": "يوترا",
-        "u": "يوترا",
-        "p": "verb",
-        "n": "1.3",
-        "h": "ar-verb form",
-        "e": "يوترا (form IV)\n# يُوتِرَا (yūtirā) /juː.ti.raː/: third-person masculine dual non-past active subjunctive/jussive of أَوْتَرَ (ʔawtara)\n# يُوتَرَا (yūtarā) /juː.ta.raː/: third-person masculine dual non-past passive subjunctive/jussive of أَوْتَرَ (ʔawtara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūtirā", "ʔawtara", "yūtarā"],
-        "k": "أوتر",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تر",
+  "ses": {
     "harf": "ء",
+    "fasil": "تر",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "نوتر",
+      "tur": "verb",
+      "etim_no": "1.3",
+      "baslik": "نوتر (form IV)\n# نُوتِرُ (nūtiru) /nuː.ti.ru/: first-person plural non-past active indicative of أَوْتَرَ (ʔawtara)\n# نُوتَرُ (nūtaru) /nuː.ta.ru/: first-person plural non-past passive indicative of أَوْتَرَ (ʔawtara)\n# نُوتِرَ (nūtira) /nuː.ti.ra/: first-person plural non-past active subjunctive of أَوْتَرَ (ʔawtara)\n# نُوتَرَ (nūtara) /nuː.ta.ra/: first-person plural non-past passive subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nūtiru", "ʔawtara", "nūtaru"],
+      "kok_yazilis": "أوتر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توتر",
+      "tur": "verb",
+      "etim_no": "1.5",
+      "baslik": "توتر (form IV)\n# تُوتِرُ (tūtiru) /tuː.ti.ru/: inflection of أَوْتَرَ (ʔawtara):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُوتَرُ (tūtaru) /tuː.ta.ru/: inflection of أَوْتَرَ (ʔawtara):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# ت",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūtiru", "ʔawtara", "tūtaru"],
+      "kok_yazilis": "أوتر"
+    },
+    {
+      "madde": "يوتر",
+      "tur": "verb",
+      "etim_no": "1.3",
+      "baslik": "يوتر (form IV)\n# يُوتِرُ (yūtiru) /juː.ti.ru/: third-person masculine singular non-past active indicative of أَوْتَرَ (ʔawtara)\n# يُوتَرُ (yūtaru) /juː.ta.ru/: third-person masculine singular non-past passive indicative of أَوْتَرَ (ʔawtara)\n# يُوتِرَ (yūtira) /juː.ti.ra/: third-person masculine singular non-past active subjunctive of أَوْتَرَ (ʔawtara)\n# يُوتَرَ (yūtara) /juː.ta.ra/: third-person",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūtiru", "ʔawtara", "yūtaru"],
+      "kok_yazilis": "أوتر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوترت",
+      "tur": "verb",
+      "baslik": "أوترت (form IV)\n# أَوْتَرْتُ (ʔawtartu) /ʔaw.tar.tu/: first-person singular past active of أَوْتَرَ (ʔawtara)\n# أَوْتَرْتَ (ʔawtarta) /ʔaw.tar.ta/: second-person masculine singular past active of أَوْتَرَ (ʔawtara)\n# أَوْتَرْتِ (ʔawtarti) /ʔaw.tar.ti/: second-person feminine singular past active of أَوْتَرَ (ʔawtara)\n# أَوْتَرَتْ (ʔawtarat) /ʔaw.ta.rat/: third-person feminine singular past active ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawtartu", "ʔawtara", "ʔawtarta"],
+      "kok_yazilis": "أوتر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توترين",
+      "tur": "verb",
+      "etim_no": "1.3",
+      "baslik": "توترين (form IV)\n# تُوتِرِينَ (tūtirīna) /tuː.ti.riː.na/: second-person feminine singular non-past active indicative of أَوْتَرَ (ʔawtara)\n# تُوتَرِينَ (tūtarīna) /tuː.ta.riː.na/: second-person feminine singular non-past passive indicative of أَوْتَرَ (ʔawtara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūtirīna", "ʔawtara", "tūtarīna"],
+      "kok_yazilis": "أوتر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توتري",
+      "tur": "verb",
+      "etim_no": "1.3",
+      "baslik": "توتري (form IV)\n# تُوتِرِي (tūtirī) /tuː.ti.riː/: second-person feminine singular non-past active subjunctive/jussive of أَوْتَرَ (ʔawtara)\n# تُوتَرِي (tūtarī) /tuː.ta.riː/: second-person feminine singular non-past passive subjunctive/jussive of أَوْتَرَ (ʔawtara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūtirī", "ʔawtara", "tūtarī"],
+      "kok_yazilis": "أوتر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوتري",
+      "tur": "verb",
+      "baslik": "أَوْتِرِي • (ʔawtirī) (form IV) /ʔaw.ti.riː/\n# second-person feminine singular imperative of أَوْتَرَ (ʔawtara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawtirī", "ʔawtara"],
+      "kok_yazilis": "أوتر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوترنا",
+      "tur": "verb",
+      "baslik": "أوترنا (form IV)\n# أَوْتَرْنَا (ʔawtarnā) /ʔaw.tar.naː/: first-person plural past active of أَوْتَرَ (ʔawtara)\n# أُوتِرْنَا (ʔūtirnā) /ʔuː.tir.naː/: first-person plural past passive of أَوْتَرَ (ʔawtara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawtarnā", "ʔawtara", "ʔūtirnā"],
+      "kok_yazilis": "أوتر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوترتم",
+      "tur": "verb",
+      "baslik": "أوترتم (form IV)\n# أَوْتَرْتُمْ (ʔawtartum) /ʔaw.tar.tum/: second-person masculine plural past active of أَوْتَرَ (ʔawtara)\n# أُوتِرْتُمْ (ʔūtirtum) /ʔuː.tir.tum/: second-person masculine plural past passive of أَوْتَرَ (ʔawtara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawtartum", "ʔawtara", "ʔūtirtum"],
+      "kok_yazilis": "أوتر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توترون",
+      "tur": "verb",
+      "etim_no": "1.3",
+      "baslik": "توترون (form IV)\n# تُوتِرُونَ (tūtirūna) /tuː.ti.ruː.na/: second-person masculine plural non-past active indicative of أَوْتَرَ (ʔawtara)\n# تُوتَرُونَ (tūtarūna) /tuː.ta.ruː.na/: second-person masculine plural non-past passive indicative of أَوْتَرَ (ʔawtara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūtirūna", "ʔawtara", "tūtarūna"],
+      "kok_yazilis": "أوتر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوتروا",
+      "tur": "verb",
+      "baslik": "أوتروا (form IV)\n# أَوْتَرُوا (ʔawtarū) /ʔaw.ta.ruː/: third-person masculine plural past active of أَوْتَرَ (ʔawtara)\n# أُوتِرُوا (ʔūtirū) /ʔuː.ti.ruː/: third-person masculine plural past passive of أَوْتَرَ (ʔawtara)\n# أَوْتِرُوا (ʔawtirū) /ʔaw.ti.ruː/: second-person masculine plural imperative of أَوْتَرَ (ʔawtara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawtarū", "ʔawtara", "ʔūtirū"],
+      "kok_yazilis": "أوتر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوترون",
+      "tur": "verb",
+      "etim_no": "1.3",
+      "baslik": "يوترون (form IV)\n# يُوتِرُونَ (yūtirūna) /juː.ti.ruː.na/: third-person masculine plural non-past active indicative of أَوْتَرَ (ʔawtara)\n# يُوتَرُونَ (yūtarūna) /juː.ta.ruː.na/: third-person masculine plural non-past passive indicative of أَوْتَرَ (ʔawtara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūtirūna", "ʔawtara", "yūtarūna"],
+      "kok_yazilis": "أوتر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوتروا",
+      "tur": "verb",
+      "etim_no": "1.3",
+      "baslik": "يوتروا (form IV)\n# يُوتِرُوا (yūtirū) /juː.ti.ruː/: third-person masculine plural non-past active subjunctive/jussive of أَوْتَرَ (ʔawtara)\n# يُوتَرُوا (yūtarū) /juː.ta.ruː/: third-person masculine plural non-past passive subjunctive/jussive of أَوْتَرَ (ʔawtara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūtirū", "ʔawtara", "yūtarū"],
+      "kok_yazilis": "أوتر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توتروا",
+      "tur": "verb",
+      "etim_no": "1.3",
+      "baslik": "توتروا (form IV)\n# تُوتِرُوا (tūtirū) /tuː.ti.ruː/: second-person masculine plural non-past active subjunctive/jussive of أَوْتَرَ (ʔawtara)\n# تُوتَرُوا (tūtarū) /tuː.ta.ruː/: second-person masculine plural non-past passive subjunctive/jussive of أَوْتَرَ (ʔawtara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūtirū", "ʔawtara", "tūtarū"],
+      "kok_yazilis": "أوتر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوترتن",
+      "tur": "verb",
+      "baslik": "أوترتن (form IV)\n# أَوْتَرْتُنَّ (ʔawtartunna) /ʔaw.tar.tun.na/: second-person feminine plural past active of أَوْتَرَ (ʔawtara)\n# أُوتِرْتُنَّ (ʔūtirtunna) /ʔuː.tir.tun.na/: second-person feminine plural past passive of أَوْتَرَ (ʔawtara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawtartunna", "ʔawtara", "ʔūtirtunna"],
+      "kok_yazilis": "أوتر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توترن",
+      "tur": "verb",
+      "etim_no": "1.3",
+      "baslik": "توترن (form IV)\n# تُوتِرْنَ (tūtirna) /tuː.tir.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَوْتَرَ (ʔawtara)\n# تُوتَرْنَ (tūtarna) /tuː.tar.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَوْتَرَ (ʔawtara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūtirna", "ʔawtara", "tūtarna"],
+      "kok_yazilis": "أوتر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوترن",
+      "tur": "verb",
+      "baslik": "أوترن (form IV)\n# أَوْتَرْنَ (ʔawtarna) /ʔaw.tar.na/: third-person feminine plural past active of أَوْتَرَ (ʔawtara)\n# أُوتِرْنَ (ʔūtirna) /ʔuː.tir.na/: third-person feminine plural past passive of أَوْتَرَ (ʔawtara)\n# أَوْتِرْنَ (ʔawtirna) /ʔaw.tir.na/: second-person feminine plural imperative of أَوْتَرَ (ʔawtara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawtarna", "ʔawtara", "ʔūtirna"],
+      "kok_yazilis": "أوتر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوترن",
+      "tur": "verb",
+      "etim_no": "1.3",
+      "baslik": "يوترن (form IV)\n# يُوتِرْنَ (yūtirna) /juː.tir.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَوْتَرَ (ʔawtara)\n# يُوتَرْنَ (yūtarna) /juː.tar.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَوْتَرَ (ʔawtara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūtirna", "ʔawtara", "yūtarna"],
+      "kok_yazilis": "أوتر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوترتا",
+      "tur": "verb",
+      "baslik": "أوترتا (form IV)\n# أَوْتَرَتَا (ʔawtaratā) /ʔaw.ta.ra.taː/: third-person feminine dual past active of أَوْتَرَ (ʔawtara)\n# أُوتِرَتَا (ʔūtiratā) /ʔuː.ti.ra.taː/: third-person feminine dual past passive of أَوْتَرَ (ʔawtara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawtaratā", "ʔawtara", "ʔūtiratā"],
+      "kok_yazilis": "أوتر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوترتما",
+      "tur": "verb",
+      "baslik": "أوترتما (form IV)\n# أَوْتَرْتُمَا (ʔawtartumā) /ʔaw.tar.tu.maː/: second-person dual past active of أَوْتَرَ (ʔawtara)\n# أُوتِرْتُمَا (ʔūtirtumā) /ʔuː.tir.tu.maː/: second-person dual past passive of أَوْتَرَ (ʔawtara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawtartumā", "ʔawtara", "ʔūtirtumā"],
+      "kok_yazilis": "أوتر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوترا",
+      "tur": "verb",
+      "baslik": "أوترا (form IV)\n# أَوْتَرَا (ʔawtarā) /ʔaw.ta.raː/: third-person masculine dual past active of أَوْتَرَ (ʔawtara)\n# أُوتِرَا (ʔūtirā) /ʔuː.ti.raː/: third-person masculine dual past passive of أَوْتَرَ (ʔawtara)\n# أَوْتِرَا (ʔawtirā) /ʔaw.ti.raː/: second-person dual imperative of أَوْتَرَ (ʔawtara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawtarā", "ʔawtara", "ʔūtirā"],
+      "kok_yazilis": "أوتر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توتران",
+      "tur": "verb",
+      "etim_no": "1.3",
+      "baslik": "توتران (form IV)\n# تُوتِرَانِ (tūtirāni) /tuː.ti.raː.ni/: inflection of أَوْتَرَ (ʔawtara):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُوتَرَانِ (tūtarāni) /tuː.ta.raː.ni/: inflection of أَوْتَرَ (ʔawtara):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūtirāni", "ʔawtara", "tūtarāni"],
+      "kok_yazilis": "أوتر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توترا",
+      "tur": "verb",
+      "etim_no": "1.3",
+      "baslik": "توترا (form IV)\n# تُوتِرَا (tūtirā) /tuː.ti.raː/: inflection of أَوْتَرَ (ʔawtara):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُوتَرَا (tūtarā) /tuː.ta.raː/: inflection of أَوْتَرَ (ʔawtara):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussiv",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūtirā", "ʔawtara", "tūtarā"],
+      "kok_yazilis": "أوتر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوتران",
+      "tur": "verb",
+      "etim_no": "1.3",
+      "baslik": "يوتران (form IV)\n# يُوتِرَانِ (yūtirāni) /juː.ti.raː.ni/: third-person masculine dual non-past active indicative of أَوْتَرَ (ʔawtara)\n# يُوتَرَانِ (yūtarāni) /juː.ta.raː.ni/: third-person masculine dual non-past passive indicative of أَوْتَرَ (ʔawtara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūtirāni", "ʔawtara", "yūtarāni"],
+      "kok_yazilis": "أوتر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوترا",
+      "tur": "verb",
+      "etim_no": "1.3",
+      "baslik": "يوترا (form IV)\n# يُوتِرَا (yūtirā) /juː.ti.raː/: third-person masculine dual non-past active subjunctive/jussive of أَوْتَرَ (ʔawtara)\n# يُوتَرَا (yūtarā) /juː.ta.raː/: third-person masculine dual non-past passive subjunctive/jussive of أَوْتَرَ (ʔawtara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūtirā", "ʔawtara", "yūtarā"],
+      "kok_yazilis": "أوتر",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ءوتر", "r6"]
+  ],
+  "mana": {
     "ince": "state.n.02",
     "orta": "noun.state",
     "ust": "hâl ve vasıf",
@@ -349,16 +283,11 @@
     "dayanak_tanim": "(psychology) nervousness resulting from mental stress",
     "synset_sayisi": 8
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "abort.v.01",
     "condition.n.01",
     "feeling.n.01",
@@ -367,12 +296,10 @@
     "tighten.v.01",
     "tighten.v.02"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

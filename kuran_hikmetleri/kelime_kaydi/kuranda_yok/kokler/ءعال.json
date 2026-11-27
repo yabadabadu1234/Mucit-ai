@@ -1,644 +1,509 @@
 {
   "kok": "ءعال",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءعال", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "نعل",
-        "u": "نعل",
-        "p": "verb",
-        "n": "3.2",
-        "h": "ar-verb form",
-        "e": "نعل (form IV)\n# نُعِلْ (nuʕil) /nu.ʕil/: first-person plural non-past active jussive of أَعَالَ (ʔaʕāla)\n# نُعَلْ (nuʕal) /nu.ʕal/: first-person plural non-past passive jussive of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "s": [
-          ["nonlemma", "See the etymology of the corresponding lemma form."]
-        ],
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuʕil", "ʔaʕāla", "nuʕal"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "أعلن",
-        "u": "أعلن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أعلن (form IV)\n# أَعَلْنَ (ʔaʕalna) /ʔa.ʕal.na/: third-person feminine plural past active of أَعَالَ (ʔaʕāla)\n# أُعِلْنَ (ʔuʕilna) /ʔu.ʕil.na/: third-person feminine plural past passive of أَعَالَ (ʔaʕāla)\n# أَعِلْنَ (ʔaʕilna) /ʔa.ʕil.na/: second-person feminine plural imperative of أَعَالَ (ʔaʕāla)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕalna", "ʔaʕāla", "ʔuʕilna"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "تعال",
-        "u": "تعال",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تعال (form IV)\n# تُعَالُ (tuʕālu) /tu.ʕaː.lu/: inflection of أَعَالَ (ʔaʕāla):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُعَالَ (tuʕāla) /tu.ʕaː.la/: inflection of أَعَالَ (ʔaʕāla):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕālu", "ʔaʕāla", "tuʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "يعلن",
-        "u": "يعلن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يعلن (form IV)\n# يُعِلْنَ (yuʕilna) /ju.ʕil.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَعَالَ (ʔaʕāla)\n# يُعَلْنَ (yuʕalna) /ju.ʕal.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕilna", "ʔaʕāla", "yuʕalna"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "تعلن",
-        "u": "تعلن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تعلن (form IV)\n# تُعِلْنَ (tuʕilna) /tu.ʕil.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَعَالَ (ʔaʕāla)\n# تُعَلْنَ (tuʕalna) /tu.ʕal.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕilna", "ʔaʕāla", "tuʕalna"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "يعل",
-        "u": "يعل",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يعل (form IV)\n# يُعِلْ (yuʕil) /ju.ʕil/: third-person masculine singular non-past active jussive of أَعَالَ (ʔaʕāla)\n# يُعَلْ (yuʕal) /ju.ʕal/: third-person masculine singular non-past passive jussive of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕil", "ʔaʕāla", "yuʕal"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "تعل",
-        "u": "تعل",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تعل (form IV)\n# تُعِلْ (tuʕil) /tu.ʕil/: inflection of أَعَالَ (ʔaʕāla):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُعَلْ (tuʕal) /tu.ʕal/: inflection of أَعَالَ (ʔaʕāla):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕil", "ʔaʕāla", "tuʕal"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "تعالي",
-        "u": "تعالي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُعَالِي • (tuʕālī) (form IV) /tu.ʕaː.liː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَعَالَ (ʔaʕāla)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕālī", "ʔaʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "أعل",
-        "u": "أعل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أعل (form IV)\n# أُعِلْ (ʔuʕil) /ʔu.ʕil/: first-person singular non-past active jussive of أَعَالَ (ʔaʕāla)\n# أُعَلْ (ʔuʕal) /ʔu.ʕal/: first-person singular non-past passive jussive of أَعَالَ (ʔaʕāla)\n# أَعِلْ (ʔaʕil) /ʔa.ʕil/: second-person masculine singular imperative of أَعَالَ (ʔaʕāla)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuʕil", "ʔaʕāla", "ʔuʕal"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "أعلنا",
-        "u": "أعلنا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أعلنا (form IV)\n# أَعَلْنَا (ʔaʕalnā) /ʔa.ʕal.naː/: first-person plural past active of أَعَالَ (ʔaʕāla)\n# أُعِلْنَا (ʔuʕilnā) /ʔu.ʕil.naː/: first-person plural past passive of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕalnā", "ʔaʕāla", "ʔuʕilnā"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "تعالوا",
-        "u": "تعالوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُعَالُوا • (tuʕālū) (form IV) /tu.ʕaː.luː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕālū", "ʔaʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "تعالين",
-        "u": "تعالين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُعَالِينَ • (tuʕālīna) (form IV) /tu.ʕaː.liː.na/\n# second-person feminine singular non-past passive indicative of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕālīna", "ʔaʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "نعال",
-        "u": "نعال",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نعال (form IV)\n# نُعَالُ (nuʕālu) /nu.ʕaː.lu/: first-person plural non-past passive indicative of أَعَالَ (ʔaʕāla)\n# نُعَالَ (nuʕāla) /nu.ʕaː.la/: first-person plural non-past passive subjunctive of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuʕālu", "ʔaʕāla", "nuʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "أعالت",
-        "u": "أعالت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَعَالَتْ • (ʔaʕālat) (form IV) /ʔa.ʕaː.lat/\n# third-person feminine singular past active of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕālat", "ʔaʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "أعالا",
-        "u": "أعالا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَعَالَا • (ʔaʕālā) (form IV) /ʔa.ʕaː.laː/\n# third-person masculine dual past active of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕālā", "ʔaʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "أعلت",
-        "u": "أعلت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أعلت (form IV)\n# أَعَلْتُ (ʔaʕaltu) /ʔa.ʕal.tu/: first-person singular past active of أَعَالَ (ʔaʕāla)\n# أَعَلْتَ (ʔaʕalta) /ʔa.ʕal.ta/: second-person masculine singular past active of أَعَالَ (ʔaʕāla)\n# أَعَلْتِ (ʔaʕalti) /ʔa.ʕal.ti/: second-person feminine singular past active of أَعَالَ (ʔaʕāla)\n# أُعِلْتُ (ʔuʕiltu) /ʔu.ʕil.tu/: first-person singular past passive of أَعَالَ (ʔaʕāla)\n# أُعِلْتَ ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕaltu", "ʔaʕāla", "ʔaʕalta"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "أعالتا",
-        "u": "أعالتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَعَالَتَا • (ʔaʕālatā) (form IV) /ʔa.ʕaː.la.taː/\n# third-person feminine dual past active of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕālatā", "ʔaʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "أعلتما",
-        "u": "أعلتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعلتما (form IV)\n# أَعَلْتُمَا (ʔaʕaltumā) /ʔa.ʕal.tu.maː/: second-person dual past active of أَعَالَ (ʔaʕāla)\n# أُعِلْتُمَا (ʔuʕiltumā) /ʔu.ʕil.tu.maː/: second-person dual past passive of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕaltumā", "ʔaʕāla", "ʔuʕiltumā"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "أعلتم",
-        "u": "أعلتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعلتم (form IV)\n# أَعَلْتُمْ (ʔaʕaltum) /ʔa.ʕal.tum/: second-person masculine plural past active of أَعَالَ (ʔaʕāla)\n# أُعِلْتُمْ (ʔuʕiltum) /ʔu.ʕil.tum/: second-person masculine plural past passive of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕaltum", "ʔaʕāla", "ʔuʕiltum"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "أعلتن",
-        "u": "أعلتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعلتن (form IV)\n# أَعَلْتُنَّ (ʔaʕaltunna) /ʔa.ʕal.tun.na/: second-person feminine plural past active of أَعَالَ (ʔaʕāla)\n# أُعِلْتُنَّ (ʔuʕiltunna) /ʔu.ʕil.tun.na/: second-person feminine plural past passive of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕaltunna", "ʔaʕāla", "ʔuʕiltunna"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "أعيلت",
-        "u": "أعيلت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُعِيلَتْ • (ʔuʕīlat) (form IV) /ʔu.ʕiː.lat/\n# third-person feminine singular past passive of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuʕīlat", "ʔaʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "أعيلا",
-        "u": "أعيلا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعيلا (form IV)\n# أُعِيلَا (ʔuʕīlā) /ʔu.ʕiː.laː/: third-person masculine dual past passive of أَعَالَ (ʔaʕāla)\n# أَعِيلَا (ʔaʕīlā) /ʔa.ʕiː.laː/: second-person dual imperative of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuʕīlā", "ʔaʕāla", "ʔaʕīlā"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "أعيل",
-        "u": "أعيل",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أعيل (form IV)\n# أُعِيلَ (ʔuʕīla) /ʔu.ʕiː.la/: inflection of أَعَالَ (ʔaʕāla):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُعِيلُ (ʔuʕīlu) /ʔu.ʕiː.lu/: first-person singular non-past active indicative of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuʕīla", "ʔaʕāla", "ʔuʕīlu"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "أعالوا",
-        "u": "أعالوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَعَالُوا • (ʔaʕālū) (form IV) /ʔa.ʕaː.luː/\n# third-person masculine plural past active of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕālū", "ʔaʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "أعيلوا",
-        "u": "أعيلوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعيلوا (form IV)\n# أُعِيلُوا (ʔuʕīlū) /ʔu.ʕiː.luː/: third-person masculine plural past passive of أَعَالَ (ʔaʕāla)\n# أَعِيلُوا (ʔaʕīlū) /ʔa.ʕiː.luː/: second-person masculine plural imperative of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuʕīlū", "ʔaʕāla", "ʔaʕīlū"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "أعيلتا",
-        "u": "أعيلتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُعِيلَتَا • (ʔuʕīlatā) (form IV) /ʔu.ʕiː.la.taː/\n# third-person feminine dual past passive of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuʕīlatā", "ʔaʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "تعيل",
-        "u": "تعيل",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تعيل (form IV)\n# تُعِيلُ (tuʕīlu) /tu.ʕiː.lu/: inflection of أَعَالَ (ʔaʕāla):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُعِيلَ (tuʕīla) /tu.ʕiː.la/: inflection of أَعَالَ (ʔaʕāla):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕīlu", "ʔaʕāla", "tuʕīla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "تعيلين",
-        "u": "تعيلين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُعِيلِينَ • (tuʕīlīna) (form IV) /tu.ʕiː.liː.na/\n# second-person feminine singular non-past active indicative of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕīlīna", "ʔaʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "يعيل",
-        "u": "يعيل",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يعيل (form IV)\n# يُعِيلُ (yuʕīlu) /ju.ʕiː.lu/: third-person masculine singular non-past active indicative of أَعَالَ (ʔaʕāla)\n# يُعِيلَ (yuʕīla) /ju.ʕiː.la/: third-person masculine singular non-past active subjunctive of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕīlu", "ʔaʕāla", "yuʕīla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "تعيلان",
-        "u": "تعيلان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُعِيلَانِ • (tuʕīlāni) (form IV) /tu.ʕiː.laː.ni/\n# inflection of أَعَالَ (ʔaʕāla):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕīlāni", "ʔaʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "تعيلون",
-        "u": "تعيلون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُعِيلُونَ • (tuʕīlūna) (form IV) /tu.ʕiː.luː.na/\n# second-person masculine plural non-past active indicative of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕīlūna", "ʔaʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "نعيل",
-        "u": "نعيل",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نعيل (form IV)\n# نُعِيلُ (nuʕīlu) /nu.ʕiː.lu/: first-person plural non-past active indicative of أَعَالَ (ʔaʕāla)\n# نُعِيلَ (nuʕīla) /nu.ʕiː.la/: first-person plural non-past active subjunctive of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuʕīlu", "ʔaʕāla", "nuʕīla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "يعيلان",
-        "u": "يعيلان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُعِيلَانِ • (yuʕīlāni) (form IV) /ju.ʕiː.laː.ni/\n# third-person masculine dual non-past active indicative of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕīlāni", "ʔaʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "يعيلون",
-        "u": "يعيلون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُعِيلُونَ • (yuʕīlūna) (form IV) /ju.ʕiː.luː.na/\n# third-person masculine plural non-past active indicative of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕīlūna", "ʔaʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "يعالان",
-        "u": "يعالان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُعَالَانِ • (yuʕālāni) (form IV) /ju.ʕaː.laː.ni/\n# third-person masculine dual non-past passive indicative of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕālāni", "ʔaʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "تعالان",
-        "u": "تعالان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُعَالَانِ • (tuʕālāni) (form IV) /tu.ʕaː.laː.ni/\n# inflection of أَعَالَ (ʔaʕāla):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕālāni", "ʔaʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "يعالون",
-        "u": "يعالون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُعَالُونَ • (yuʕālūna) (form IV) /ju.ʕaː.luː.na/\n# third-person masculine plural non-past passive indicative of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕālūna", "ʔaʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "يعيلا",
-        "u": "يعيلا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُعِيلَا • (yuʕīlā) (form IV) /ju.ʕiː.laː/\n# third-person masculine dual non-past active subjunctive/jussive of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕīlā", "ʔaʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "تعيلا",
-        "u": "تعيلا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُعِيلَا • (tuʕīlā) (form IV) /tu.ʕiː.laː/\n# inflection of أَعَالَ (ʔaʕāla):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕīlā", "ʔaʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "يعال",
-        "u": "يعال",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يعال (form IV)\n# يُعَالُ (yuʕālu) /ju.ʕaː.lu/: third-person masculine singular non-past passive indicative of أَعَالَ (ʔaʕāla)\n# يُعَالَ (yuʕāla) /ju.ʕaː.la/: third-person masculine singular non-past passive subjunctive of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕālu", "ʔaʕāla", "yuʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "تعالون",
-        "u": "تعالون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُعَالُونَ • (tuʕālūna) (form IV) /tu.ʕaː.luː.na/\n# second-person masculine plural non-past passive indicative of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕālūna", "ʔaʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "تعيلوا",
-        "u": "تعيلوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُعِيلُوا • (tuʕīlū) (form IV) /tu.ʕiː.luː/\n# second-person masculine plural non-past active subjunctive/jussive of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕīlū", "ʔaʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "يعيلوا",
-        "u": "يعيلوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُعِيلُوا • (yuʕīlū) (form IV) /ju.ʕiː.luː/\n# third-person masculine plural non-past active subjunctive/jussive of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕīlū", "ʔaʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "تعيلي",
-        "u": "تعيلي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُعِيلِي • (tuʕīlī) (form IV) /tu.ʕiː.liː/\n# second-person feminine singular non-past active subjunctive/jussive of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕīlī", "ʔaʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "تعالا",
-        "u": "تعالا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُعَالَا • (tuʕālā) (form IV) /tu.ʕaː.laː/\n# inflection of أَعَالَ (ʔaʕāla):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕālā", "ʔaʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "يعالا",
-        "u": "يعالا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُعَالَا • (yuʕālā) (form IV) /ju.ʕaː.laː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕālā", "ʔaʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "يعالوا",
-        "u": "يعالوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُعَالُوا • (yuʕālū) (form IV) /ju.ʕaː.luː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕālū", "ʔaʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      },
-      {
-        "w": "أعيلي",
-        "u": "أعيلي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَعِيلِي • (ʔaʕīlī) (form IV) /ʔa.ʕiː.liː/\n# second-person feminine singular imperative of أَعَالَ (ʔaʕāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕīlī", "ʔaʕāla"],
-        "k": "أعال",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "عل",
+  "ses": {
     "harf": "ء",
+    "fasil": "عل",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "نعل",
+      "tur": "verb",
+      "etim_no": "3.2",
+      "baslik": "نعل (form IV)\n# نُعِلْ (nuʕil) /nu.ʕil/: first-person plural non-past active jussive of أَعَالَ (ʔaʕāla)\n# نُعَلْ (nuʕal) /nu.ʕal/: first-person plural non-past passive jussive of أَعَالَ (ʔaʕāla)",
+      "etim_sablon": [
+        ["nonlemma", "See the etymology of the corresponding lemma form."]
+      ],
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuʕil", "ʔaʕāla", "nuʕal"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعلن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أعلن (form IV)\n# أَعَلْنَ (ʔaʕalna) /ʔa.ʕal.na/: third-person feminine plural past active of أَعَالَ (ʔaʕāla)\n# أُعِلْنَ (ʔuʕilna) /ʔu.ʕil.na/: third-person feminine plural past passive of أَعَالَ (ʔaʕāla)\n# أَعِلْنَ (ʔaʕilna) /ʔa.ʕil.na/: second-person feminine plural imperative of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕalna", "ʔaʕāla", "ʔuʕilna"],
+      "kok_yazilis": "أعال"
+    },
+    {
+      "madde": "تعال",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تعال (form IV)\n# تُعَالُ (tuʕālu) /tu.ʕaː.lu/: inflection of أَعَالَ (ʔaʕāla):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُعَالَ (tuʕāla) /tu.ʕaː.la/: inflection of أَعَالَ (ʔaʕāla):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕālu", "ʔaʕāla", "tuʕāla"],
+      "kok_yazilis": "أعال"
+    },
+    {
+      "madde": "يعلن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يعلن (form IV)\n# يُعِلْنَ (yuʕilna) /ju.ʕil.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَعَالَ (ʔaʕāla)\n# يُعَلْنَ (yuʕalna) /ju.ʕal.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕilna", "ʔaʕāla", "yuʕalna"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعلن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تعلن (form IV)\n# تُعِلْنَ (tuʕilna) /tu.ʕil.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَعَالَ (ʔaʕāla)\n# تُعَلْنَ (tuʕalna) /tu.ʕal.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕilna", "ʔaʕāla", "tuʕalna"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعل",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يعل (form IV)\n# يُعِلْ (yuʕil) /ju.ʕil/: third-person masculine singular non-past active jussive of أَعَالَ (ʔaʕāla)\n# يُعَلْ (yuʕal) /ju.ʕal/: third-person masculine singular non-past passive jussive of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕil", "ʔaʕāla", "yuʕal"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعل",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تعل (form IV)\n# تُعِلْ (tuʕil) /tu.ʕil/: inflection of أَعَالَ (ʔaʕāla):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُعَلْ (tuʕal) /tu.ʕal/: inflection of أَعَالَ (ʔaʕāla):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕil", "ʔaʕāla", "tuʕal"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعالي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُعَالِي • (tuʕālī) (form IV) /tu.ʕaː.liː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕālī", "ʔaʕāla"],
+      "kok_yazilis": "أعال"
+    },
+    {
+      "madde": "أعل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أعل (form IV)\n# أُعِلْ (ʔuʕil) /ʔu.ʕil/: first-person singular non-past active jussive of أَعَالَ (ʔaʕāla)\n# أُعَلْ (ʔuʕal) /ʔu.ʕal/: first-person singular non-past passive jussive of أَعَالَ (ʔaʕāla)\n# أَعِلْ (ʔaʕil) /ʔa.ʕil/: second-person masculine singular imperative of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuʕil", "ʔaʕāla", "ʔuʕal"],
+      "kok_yazilis": "أعال"
+    },
+    {
+      "madde": "أعلنا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أعلنا (form IV)\n# أَعَلْنَا (ʔaʕalnā) /ʔa.ʕal.naː/: first-person plural past active of أَعَالَ (ʔaʕāla)\n# أُعِلْنَا (ʔuʕilnā) /ʔu.ʕil.naː/: first-person plural past passive of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕalnā", "ʔaʕāla", "ʔuʕilnā"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعالوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُعَالُوا • (tuʕālū) (form IV) /tu.ʕaː.luː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕālū", "ʔaʕāla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعالين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُعَالِينَ • (tuʕālīna) (form IV) /tu.ʕaː.liː.na/\n# second-person feminine singular non-past passive indicative of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕālīna", "ʔaʕāla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نعال",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نعال (form IV)\n# نُعَالُ (nuʕālu) /nu.ʕaː.lu/: first-person plural non-past passive indicative of أَعَالَ (ʔaʕāla)\n# نُعَالَ (nuʕāla) /nu.ʕaː.la/: first-person plural non-past passive subjunctive of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuʕālu", "ʔaʕāla", "nuʕāla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعالت",
+      "tur": "verb",
+      "baslik": "أَعَالَتْ • (ʔaʕālat) (form IV) /ʔa.ʕaː.lat/\n# third-person feminine singular past active of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕālat", "ʔaʕāla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعالا",
+      "tur": "verb",
+      "baslik": "أَعَالَا • (ʔaʕālā) (form IV) /ʔa.ʕaː.laː/\n# third-person masculine dual past active of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕālā", "ʔaʕāla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعلت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أعلت (form IV)\n# أَعَلْتُ (ʔaʕaltu) /ʔa.ʕal.tu/: first-person singular past active of أَعَالَ (ʔaʕāla)\n# أَعَلْتَ (ʔaʕalta) /ʔa.ʕal.ta/: second-person masculine singular past active of أَعَالَ (ʔaʕāla)\n# أَعَلْتِ (ʔaʕalti) /ʔa.ʕal.ti/: second-person feminine singular past active of أَعَالَ (ʔaʕāla)\n# أُعِلْتُ (ʔuʕiltu) /ʔu.ʕil.tu/: first-person singular past passive of أَعَالَ (ʔaʕāla)\n# أُعِلْتَ ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕaltu", "ʔaʕāla", "ʔaʕalta"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعالتا",
+      "tur": "verb",
+      "baslik": "أَعَالَتَا • (ʔaʕālatā) (form IV) /ʔa.ʕaː.la.taː/\n# third-person feminine dual past active of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕālatā", "ʔaʕāla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعلتما",
+      "tur": "verb",
+      "baslik": "أعلتما (form IV)\n# أَعَلْتُمَا (ʔaʕaltumā) /ʔa.ʕal.tu.maː/: second-person dual past active of أَعَالَ (ʔaʕāla)\n# أُعِلْتُمَا (ʔuʕiltumā) /ʔu.ʕil.tu.maː/: second-person dual past passive of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕaltumā", "ʔaʕāla", "ʔuʕiltumā"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعلتم",
+      "tur": "verb",
+      "baslik": "أعلتم (form IV)\n# أَعَلْتُمْ (ʔaʕaltum) /ʔa.ʕal.tum/: second-person masculine plural past active of أَعَالَ (ʔaʕāla)\n# أُعِلْتُمْ (ʔuʕiltum) /ʔu.ʕil.tum/: second-person masculine plural past passive of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕaltum", "ʔaʕāla", "ʔuʕiltum"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعلتن",
+      "tur": "verb",
+      "baslik": "أعلتن (form IV)\n# أَعَلْتُنَّ (ʔaʕaltunna) /ʔa.ʕal.tun.na/: second-person feminine plural past active of أَعَالَ (ʔaʕāla)\n# أُعِلْتُنَّ (ʔuʕiltunna) /ʔu.ʕil.tun.na/: second-person feminine plural past passive of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕaltunna", "ʔaʕāla", "ʔuʕiltunna"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعيلت",
+      "tur": "verb",
+      "baslik": "أُعِيلَتْ • (ʔuʕīlat) (form IV) /ʔu.ʕiː.lat/\n# third-person feminine singular past passive of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuʕīlat", "ʔaʕāla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعيلا",
+      "tur": "verb",
+      "baslik": "أعيلا (form IV)\n# أُعِيلَا (ʔuʕīlā) /ʔu.ʕiː.laː/: third-person masculine dual past passive of أَعَالَ (ʔaʕāla)\n# أَعِيلَا (ʔaʕīlā) /ʔa.ʕiː.laː/: second-person dual imperative of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuʕīlā", "ʔaʕāla", "ʔaʕīlā"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعيل",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أعيل (form IV)\n# أُعِيلَ (ʔuʕīla) /ʔu.ʕiː.la/: inflection of أَعَالَ (ʔaʕāla):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُعِيلُ (ʔuʕīlu) /ʔu.ʕiː.lu/: first-person singular non-past active indicative of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuʕīla", "ʔaʕāla", "ʔuʕīlu"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعالوا",
+      "tur": "verb",
+      "baslik": "أَعَالُوا • (ʔaʕālū) (form IV) /ʔa.ʕaː.luː/\n# third-person masculine plural past active of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕālū", "ʔaʕāla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعيلوا",
+      "tur": "verb",
+      "baslik": "أعيلوا (form IV)\n# أُعِيلُوا (ʔuʕīlū) /ʔu.ʕiː.luː/: third-person masculine plural past passive of أَعَالَ (ʔaʕāla)\n# أَعِيلُوا (ʔaʕīlū) /ʔa.ʕiː.luː/: second-person masculine plural imperative of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuʕīlū", "ʔaʕāla", "ʔaʕīlū"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعيلتا",
+      "tur": "verb",
+      "baslik": "أُعِيلَتَا • (ʔuʕīlatā) (form IV) /ʔu.ʕiː.la.taː/\n# third-person feminine dual past passive of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuʕīlatā", "ʔaʕāla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعيل",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تعيل (form IV)\n# تُعِيلُ (tuʕīlu) /tu.ʕiː.lu/: inflection of أَعَالَ (ʔaʕāla):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُعِيلَ (tuʕīla) /tu.ʕiː.la/: inflection of أَعَالَ (ʔaʕāla):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕīlu", "ʔaʕāla", "tuʕīla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعيلين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُعِيلِينَ • (tuʕīlīna) (form IV) /tu.ʕiː.liː.na/\n# second-person feminine singular non-past active indicative of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕīlīna", "ʔaʕāla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعيل",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يعيل (form IV)\n# يُعِيلُ (yuʕīlu) /ju.ʕiː.lu/: third-person masculine singular non-past active indicative of أَعَالَ (ʔaʕāla)\n# يُعِيلَ (yuʕīla) /ju.ʕiː.la/: third-person masculine singular non-past active subjunctive of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕīlu", "ʔaʕāla", "yuʕīla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعيلان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُعِيلَانِ • (tuʕīlāni) (form IV) /tu.ʕiː.laː.ni/\n# inflection of أَعَالَ (ʔaʕāla):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕīlāni", "ʔaʕāla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعيلون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُعِيلُونَ • (tuʕīlūna) (form IV) /tu.ʕiː.luː.na/\n# second-person masculine plural non-past active indicative of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕīlūna", "ʔaʕāla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نعيل",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نعيل (form IV)\n# نُعِيلُ (nuʕīlu) /nu.ʕiː.lu/: first-person plural non-past active indicative of أَعَالَ (ʔaʕāla)\n# نُعِيلَ (nuʕīla) /nu.ʕiː.la/: first-person plural non-past active subjunctive of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuʕīlu", "ʔaʕāla", "nuʕīla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعيلان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُعِيلَانِ • (yuʕīlāni) (form IV) /ju.ʕiː.laː.ni/\n# third-person masculine dual non-past active indicative of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕīlāni", "ʔaʕāla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعيلون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُعِيلُونَ • (yuʕīlūna) (form IV) /ju.ʕiː.luː.na/\n# third-person masculine plural non-past active indicative of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕīlūna", "ʔaʕāla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعالان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُعَالَانِ • (yuʕālāni) (form IV) /ju.ʕaː.laː.ni/\n# third-person masculine dual non-past passive indicative of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕālāni", "ʔaʕāla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعالان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُعَالَانِ • (tuʕālāni) (form IV) /tu.ʕaː.laː.ni/\n# inflection of أَعَالَ (ʔaʕāla):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕālāni", "ʔaʕāla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعالون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُعَالُونَ • (yuʕālūna) (form IV) /ju.ʕaː.luː.na/\n# third-person masculine plural non-past passive indicative of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕālūna", "ʔaʕāla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعيلا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُعِيلَا • (yuʕīlā) (form IV) /ju.ʕiː.laː/\n# third-person masculine dual non-past active subjunctive/jussive of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕīlā", "ʔaʕāla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعيلا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُعِيلَا • (tuʕīlā) (form IV) /tu.ʕiː.laː/\n# inflection of أَعَالَ (ʔaʕāla):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕīlā", "ʔaʕāla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعال",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يعال (form IV)\n# يُعَالُ (yuʕālu) /ju.ʕaː.lu/: third-person masculine singular non-past passive indicative of أَعَالَ (ʔaʕāla)\n# يُعَالَ (yuʕāla) /ju.ʕaː.la/: third-person masculine singular non-past passive subjunctive of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕālu", "ʔaʕāla", "yuʕāla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعالون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُعَالُونَ • (tuʕālūna) (form IV) /tu.ʕaː.luː.na/\n# second-person masculine plural non-past passive indicative of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕālūna", "ʔaʕāla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعيلوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُعِيلُوا • (tuʕīlū) (form IV) /tu.ʕiː.luː/\n# second-person masculine plural non-past active subjunctive/jussive of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕīlū", "ʔaʕāla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعيلوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُعِيلُوا • (yuʕīlū) (form IV) /ju.ʕiː.luː/\n# third-person masculine plural non-past active subjunctive/jussive of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕīlū", "ʔaʕāla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعيلي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُعِيلِي • (tuʕīlī) (form IV) /tu.ʕiː.liː/\n# second-person feminine singular non-past active subjunctive/jussive of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕīlī", "ʔaʕāla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعالا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُعَالَا • (tuʕālā) (form IV) /tu.ʕaː.laː/\n# inflection of أَعَالَ (ʔaʕāla):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕālā", "ʔaʕāla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعالا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُعَالَا • (yuʕālā) (form IV) /ju.ʕaː.laː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕālā", "ʔaʕāla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعالوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُعَالُوا • (yuʕālū) (form IV) /ju.ʕaː.luː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕālū", "ʔaʕāla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعيلي",
+      "tur": "verb",
+      "baslik": "أَعِيلِي • (ʔaʕīlī) (form IV) /ʔa.ʕiː.liː/\n# second-person feminine singular imperative of أَعَالَ (ʔaʕāla)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕīlī", "ʔaʕāla"],
+      "kok_yazilis": "أعال",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ءعال", "r6"]
+  ],
+  "mana": {
     "ince": "inform.v.01",
     "orta": "verb.communication",
     "ust": "söz ve haber",
@@ -646,16 +511,11 @@
     "dayanak_tanim": "foreshadow or presage",
     "synset_sayisi": 37
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "advertise.v.02",
     "affirm.v.02",
     "announce.v.01",
@@ -687,12 +547,10 @@
     "uncover.v.01",
     "vote.v.01"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

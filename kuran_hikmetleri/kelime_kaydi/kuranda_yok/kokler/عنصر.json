@@ -1,76 +1,78 @@
 {
   "kok": "عنصر",
+  "tur": "isim",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["fiil-yok"],
+  "lugat_fiil": false,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "عنصر", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "etymarab": {
-      "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
-      "latin": "ʕNṢR",
-      "dolu": false,
-      "kok_maddesi": "Back to library EtymArab ʕNṢR عنصر BP – • HDAL • © SG | 15Feb2021 √ʕNṢR “root” ▪ ʕNṢR_1 ‘…’ ↗ … ▪ ʕNṢR_2 ‘…’ ↗ … ▪ … – ▪ … ▪ … ▪ … ▪ … – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
-      "kelime_maddeleri": []
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "عنصر",
-        "u": "عنصر",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "عُنْصُر • (ʕunṣur) m (plural عَنَاصِر (ʕanāṣir))",
-        "synonyms": ["عِرْق", "جِنْس"],
-        "g": ["element", "race", "origin", "member(s) of a group, especially a criminal or militant one"],
-        "tag": ["also", "in-plural"],
-        "r": ["ʕunṣur"],
-        "ipa": ["/ʕun.sˤur/"],
-        "ds": [
-          ["az", "ünsür", ""],
-          ["fa-cls", "عُنْصُر", "unsur"],
-          ["ms", "unsur", ""],
-          ["ota", "عنصر", "ʿunsur"],
-          ["ug", "ئۇنسۇر", "unsur"],
-          ["uz", "unsur", ""]
-        ],
-        "dr": ["عُنْصُرِيّ", "عُنْصُرِيّة"],
-        "k": "عنصر",
-        "yol": "kök"
-      },
-      {
-        "w": "عناصر",
-        "u": "عناصر",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "عَنَاصِر • (ʕanāṣir) m pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of عُنْصُر (ʕunṣur)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["عُنْصُر"],
-        "r": ["ʕanāṣir"],
-        "yol": "asıl madde"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "عن",
+  "ses": {
     "harf": "ع",
+    "fasil": "عن",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "عنصر",
+      "tur": "noun",
+      "baslik": "عُنْصُر • (ʕunṣur) m (plural عَنَاصِر (ʕanāṣir))",
+      "esanlamli": ["عِرْق", "جِنْس"],
+      "anlam": ["element", "race", "origin", "member(s) of a group, especially a criminal or militant one"],
+      "etiket": ["also", "in-plural"],
+      "okunus": ["ʕunṣur"],
+      "ipa": ["/ʕun.sˤur/"],
+      "torunlar": [
+        ["az", "ünsür", ""],
+        ["fa-cls", "عُنْصُر", "unsur"],
+        ["ms", "unsur", ""],
+        ["ota", "عنصر", "ʿunsur"],
+        ["ug", "ئۇنسۇر", "unsur"],
+        ["uz", "unsur", ""]
+      ],
+      "dr": ["عُنْصُرِيّ", "عُنْصُرِيّة"]
+    },
+    {
+      "madde": "عناصر",
+      "tur": "noun",
+      "baslik": "عَنَاصِر • (ʕanāṣir) m pl",
+      "anlam": ["plural of عُنْصُر (ʕunṣur)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["عُنْصُر"],
+      "okunus": ["ʕanāṣir"],
+      "bag": "asıl madde",
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "etymarab": {
+    "latin": "ʕNṢR",
+    "kok_maddesi": "Back to library EtymArab ʕNṢR عنصر BP – • HDAL • © SG | 15Feb2021 √ʕNṢR “root” ▪ ʕNṢR_1 ‘…’ ↗ … ▪ ʕNṢR_2 ‘…’ ↗ … ▪ … – ▪ … ▪ … ▪ … ▪ … – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
+    "kelime_maddeleri": [],
+    "yer_tutucu": true
+  },
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "عنصر", "r6"]
+  ],
+  "mana": {
     "ince": "part.n.01",
     "orta": "noun.substance",
     "ust": "tabiat",
@@ -78,20 +80,8 @@
     "dayanak_tanim": "any of the more than 100 known substances (of which 92 occur naturally) that cannot be separated into simpler substances and that singly or in combination constitute all matter",
     "synset_sayisi": 7
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["advocate.n.01", "attitude.n.01", "component.n.03", "content.n.05", "elemental.a.01", "substance.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 7,
       "merkez_kok": "حدق",
@@ -111,6 +101,11 @@
       "boy": 6
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["advocate.n.01", "attitude.n.01", "component.n.03", "content.n.05", "elemental.a.01", "substance.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

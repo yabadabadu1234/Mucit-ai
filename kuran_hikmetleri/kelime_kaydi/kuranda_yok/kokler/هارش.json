@@ -1,483 +1,335 @@
 {
   "kok": "هارش",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "هارش", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "هارشت",
-        "u": "هارشت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هارشت (form III)\n# هَارَشْتُ (hāraštu) /haː.raʃ.tu/: first-person singular past active of هَارَشَ (hāraša)\n# هَارَشْتَ (hārašta) /haː.raʃ.ta/: second-person masculine singular past active of هَارَشَ (hāraša)\n# هَارَشْتِ (hārašti) /haː.raʃ.ti/: second-person feminine singular past active of هَارَشَ (hāraša)\n# هَارَشَتْ (hārašat) /haː.ra.ʃat/: third-person feminine singular past active of هَارَشَ (h",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["hāraštu", "hāraša", "hārašta"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "هارشتما",
-        "u": "هارشتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَارَشْتُمَا • (hāraštumā) (form III) /haː.raʃ.tu.maː/\n# second-person dual past active of هَارَشَ (hāraša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["hāraštumā", "hāraša"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "هارشا",
-        "u": "هارشا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هارشا (form III)\n# هَارَشَا (hārašā) /haː.ra.ʃaː/: third-person masculine dual past active of هَارَشَ (hāraša)\n# هَارِشَا (hārišā) /haː.ri.ʃaː/: second-person dual imperative of هَارَشَ (hāraša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["hārašā", "hāraša", "hārišā"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "هارشنا",
-        "u": "هارشنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَارَشْنَا • (hārašnā) (form III) /haː.raʃ.naː/\n# first-person plural past active of هَارَشَ (hāraša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["hārašnā", "hāraša"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "هارشتا",
-        "u": "هارشتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَارَشَتَا • (hārašatā) (form III) /haː.ra.ʃa.taː/\n# third-person feminine dual past active of هَارَشَ (hāraša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["hārašatā", "hāraša"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "هارشتن",
-        "u": "هارشتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَارَشْتُنَّ • (hāraštunna) (form III) /haː.raʃ.tun.na/\n# second-person feminine plural past active of هَارَشَ (hāraša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["hāraštunna", "hāraša"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "هارشوا",
-        "u": "هارشوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هارشوا (form III)\n# هَارَشُوا (hārašū) /haː.ra.ʃuː/: third-person masculine plural past active of هَارَشَ (hāraša)\n# هَارِشُوا (hārišū) /haː.ri.ʃuː/: second-person masculine plural imperative of هَارَشَ (hāraša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["hārašū", "hāraša", "hārišū"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "هارشتم",
-        "u": "هارشتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَارَشْتُمْ • (hāraštum) (form III) /haː.raʃ.tum/\n# second-person masculine plural past active of هَارَشَ (hāraša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["hāraštum", "hāraša"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "هارشن",
-        "u": "هارشن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هارشن (form III)\n# هَارَشْنَ (hārašna) /haː.raʃ.na/: third-person feminine plural past active of هَارَشَ (hāraša)\n# هَارِشْنَ (hārišna) /haː.riʃ.na/: second-person feminine plural imperative of هَارَشَ (hāraša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["hārašna", "hāraša", "hārišna"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "هورشت",
-        "u": "هورشت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هورشت (form III)\n# هُورِشْتُ (hūrištu) /huː.riʃ.tu/: first-person singular past passive of هَارَشَ (hāraša)\n# هُورِشْتَ (hūrišta) /huː.riʃ.ta/: second-person masculine singular past passive of هَارَشَ (hāraša)\n# هُورِشْتِ (hūrišti) /huː.riʃ.ti/: second-person feminine singular past passive of هَارَشَ (hāraša)\n# هُورِشَتْ (hūrišat) /huː.ri.ʃat/: third-person feminine singular past passive of هَارَش",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["hūrištu", "hāraša", "hūrišta"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "هورش",
-        "u": "هورش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هُورِشَ • (hūriša) (form III) /huː.ri.ʃa/\n# third-person masculine singular past passive of هَارَشَ (hāraša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["hūriša", "hāraša"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "هورشتما",
-        "u": "هورشتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هُورِشْتُمَا • (hūrištumā) (form III) /huː.riʃ.tu.maː/\n# second-person dual past passive of هَارَشَ (hāraša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["hūrištumā", "hāraša"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "هورشنا",
-        "u": "هورشنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هُورِشْنَا • (hūrišnā) (form III) /huː.riʃ.naː/\n# first-person plural past passive of هَارَشَ (hāraša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["hūrišnā", "hāraša"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "هورشتم",
-        "u": "هورشتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هُورِشْتُمْ • (hūrištum) (form III) /huː.riʃ.tum/\n# second-person masculine plural past passive of هَارَشَ (hāraša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["hūrištum", "hāraša"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "هورشا",
-        "u": "هورشا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هُورِشَا • (hūrišā) (form III) /huː.ri.ʃaː/\n# third-person masculine dual past passive of هَارَشَ (hāraša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["hūrišā", "hāraša"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "هورشتن",
-        "u": "هورشتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هُورِشْتُنَّ • (hūrištunna) (form III) /huː.riʃ.tun.na/\n# second-person feminine plural past passive of هَارَشَ (hāraša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["hūrištunna", "hāraša"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "هورشوا",
-        "u": "هورشوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هُورِشُوا • (hūrišū) (form III) /huː.ri.ʃuː/\n# third-person masculine plural past passive of هَارَشَ (hāraša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["hūrišū", "hāraša"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "هورشتا",
-        "u": "هورشتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هُورِشَتَا • (hūrišatā) (form III) /huː.ri.ʃa.taː/\n# third-person feminine dual past passive of هَارَشَ (hāraša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["hūrišatā", "hāraša"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "هورشن",
-        "u": "هورشن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هُورِشْنَ • (hūrišna) (form III) /huː.riʃ.na/\n# third-person feminine plural past passive of هَارَشَ (hāraša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["hūrišna", "hāraša"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "تهارش",
-        "u": "تهارش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهارش (form III)\n# تُهَارِشُ (tuhārišu) /tu.haː.ri.ʃu/: inflection of هَارَشَ (hāraša):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُهَارَشُ (tuhārašu) /tu.haː.ra.ʃu/: inflection of هَارَشَ (hāraša):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive in",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuhārišu", "hāraša", "tuhārašu"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "أهارش",
-        "u": "أهارش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أهارش (form III)\n# أُهَارِشُ (ʔuhārišu) /ʔu.haː.ri.ʃu/: first-person singular non-past active indicative of هَارَشَ (hāraša)\n# أُهَارَشُ (ʔuhārašu) /ʔu.haː.ra.ʃu/: first-person singular non-past passive indicative of هَارَشَ (hāraša)\n# أُهَارِشَ (ʔuhāriša) /ʔu.haː.ri.ʃa/: first-person singular non-past active subjunctive of هَارَشَ (hāraša)\n# أُهَارَشَ (ʔuhāraša) /ʔu.haː.ra.ʃa/: first-person singu",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔuhārišu", "hāraša", "ʔuhārašu"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "تهارشين",
-        "u": "تهارشين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهارشين (form III)\n# تُهَارِشِينَ (tuhārišīna) /tu.haː.ri.ʃiː.na/: second-person feminine singular non-past active indicative of هَارَشَ (hāraša)\n# تُهَارَشِينَ (tuhārašīna) /tu.haː.ra.ʃiː.na/: second-person feminine singular non-past passive indicative of هَارَشَ (hāraša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuhārišīna", "hāraša", "tuhārašīna"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "يهارش",
-        "u": "يهارش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهارش (form III)\n# يُهَارِشُ (yuhārišu) /ju.haː.ri.ʃu/: third-person masculine singular non-past active indicative of هَارَشَ (hāraša)\n# يُهَارَشُ (yuhārašu) /ju.haː.ra.ʃu/: third-person masculine singular non-past passive indicative of هَارَشَ (hāraša)\n# يُهَارِشَ (yuhāriša) /ju.haː.ri.ʃa/: third-person masculine singular non-past active subjunctive of هَارَشَ (hāraša)\n# يُهَارَشَ (yuhāraša) /ju.",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuhārišu", "hāraša", "yuhārašu"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "تهارشون",
-        "u": "تهارشون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهارشون (form III)\n# تُهَارِشُونَ (tuhārišūna) /tu.haː.ri.ʃuː.na/: second-person masculine plural non-past active indicative of هَارَشَ (hāraša)\n# تُهَارَشُونَ (tuhārašūna) /tu.haː.ra.ʃuː.na/: second-person masculine plural non-past passive indicative of هَارَشَ (hāraša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuhārišūna", "hāraša", "tuhārašūna"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "يهارشان",
-        "u": "يهارشان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهارشان (form III)\n# يُهَارِشَانِ (yuhārišāni) /ju.haː.ri.ʃaː.ni/: third-person masculine dual non-past active indicative of هَارَشَ (hāraša)\n# يُهَارَشَانِ (yuhārašāni) /ju.haː.ra.ʃaː.ni/: third-person masculine dual non-past passive indicative of هَارَشَ (hāraša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuhārišāni", "hāraša", "yuhārašāni"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "تهارشان",
-        "u": "تهارشان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهارشان (form III)\n# تُهَارِشَانِ (tuhārišāni) /tu.haː.ri.ʃaː.ni/: inflection of هَارَشَ (hāraša):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُهَارَشَانِ (tuhārašāni) /tu.haː.ra.ʃaː.ni/: inflection of هَارَشَ (hāraša):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuhārišāni", "hāraša", "tuhārašāni"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "نهارش",
-        "u": "نهارش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نهارش (form III)\n# نُهَارِشُ (nuhārišu) /nu.haː.ri.ʃu/: first-person plural non-past active indicative of هَارَشَ (hāraša)\n# نُهَارَشُ (nuhārašu) /nu.haː.ra.ʃu/: first-person plural non-past passive indicative of هَارَشَ (hāraša)\n# نُهَارِشَ (nuhāriša) /nu.haː.ri.ʃa/: first-person plural non-past active subjunctive of هَارَشَ (hāraša)\n# نُهَارَشَ (nuhāraša) /nu.haː.ra.ʃa/: first-person plural non-",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nuhārišu", "hāraša", "nuhārašu"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "يهارشون",
-        "u": "يهارشون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهارشون (form III)\n# يُهَارِشُونَ (yuhārišūna) /ju.haː.ri.ʃuː.na/: third-person masculine plural non-past active indicative of هَارَشَ (hāraša)\n# يُهَارَشُونَ (yuhārašūna) /ju.haː.ra.ʃuː.na/: third-person masculine plural non-past passive indicative of هَارَشَ (hāraša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuhārišūna", "hāraša", "yuhārašūna"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "يهارشن",
-        "u": "يهارشن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهارشن (form III)\n# يُهَارِشْنَ (yuhārišna) /ju.haː.riʃ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of هَارَشَ (hāraša)\n# يُهَارَشْنَ (yuhārašna) /ju.haː.raʃ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of هَارَشَ (hāraša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuhārišna", "hāraša", "yuhārašna"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "تهارشي",
-        "u": "تهارشي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهارشي (form III)\n# تُهَارِشِي (tuhārišī) /tu.haː.ri.ʃiː/: second-person feminine singular non-past active subjunctive/jussive of هَارَشَ (hāraša)\n# تُهَارَشِي (tuhārašī) /tu.haː.ra.ʃiː/: second-person feminine singular non-past passive subjunctive/jussive of هَارَشَ (hāraša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuhārišī", "hāraša", "tuhārašī"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "تهارشن",
-        "u": "تهارشن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهارشن (form III)\n# تُهَارِشْنَ (tuhārišna) /tu.haː.riʃ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of هَارَشَ (hāraša)\n# تُهَارَشْنَ (tuhārašna) /tu.haː.raʃ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of هَارَشَ (hāraša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuhārišna", "hāraša", "tuhārašna"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "يهارشوا",
-        "u": "يهارشوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهارشوا (form III)\n# يُهَارِشُوا (yuhārišū) /ju.haː.ri.ʃuː/: third-person masculine plural non-past active subjunctive/jussive of هَارَشَ (hāraša)\n# يُهَارَشُوا (yuhārašū) /ju.haː.ra.ʃuː/: third-person masculine plural non-past passive subjunctive/jussive of هَارَشَ (hāraša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuhārišū", "hāraša", "yuhārašū"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "تهارشا",
-        "u": "تهارشا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهارشا (form III)\n# تُهَارِشَا (tuhārišā) /tu.haː.ri.ʃaː/: inflection of هَارَشَ (hāraša):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُهَارَشَا (tuhārašā) /tu.haː.ra.ʃaː/: inflection of هَارَشَ (hāraša):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjun",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuhārišā", "hāraša", "tuhārašā"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "يهارشا",
-        "u": "يهارشا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهارشا (form III)\n# يُهَارِشَا (yuhārišā) /ju.haː.ri.ʃaː/: third-person masculine dual non-past active subjunctive/jussive of هَارَشَ (hāraša)\n# يُهَارَشَا (yuhārašā) /ju.haː.ra.ʃaː/: third-person masculine dual non-past passive subjunctive/jussive of هَارَشَ (hāraša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuhārišā", "hāraša", "yuhārašā"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "هارشي",
-        "u": "هارشي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَارِشِي • (hārišī) (form III) /haː.ri.ʃiː/\n# second-person feminine singular imperative of هَارَشَ (hāraša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["hārišī", "hāraša"],
-        "k": "هارش",
-        "yol": "kök"
-      },
-      {
-        "w": "تهارشوا",
-        "u": "تهارشوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهارشوا (form III)\n# تُهَارِشُوا (tuhārišū) /tu.haː.ri.ʃuː/: second-person masculine plural non-past active subjunctive/jussive of هَارَشَ (hāraša)\n# تُهَارَشُوا (tuhārašū) /tu.haː.ra.ʃuː/: second-person masculine plural non-past passive subjunctive/jussive of هَارَشَ (hāraša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuhārišū", "hāraša", "tuhārašū"],
-        "k": "هارش",
-        "yol": "kök"
-      }
-    ],
-    "tercume": {}
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "هر",
+  "ses": {
     "harf": "ه",
+    "fasil": "هر",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "هارشت",
+      "tur": "verb",
+      "baslik": "هارشت (form III)\n# هَارَشْتُ (hāraštu) /haː.raʃ.tu/: first-person singular past active of هَارَشَ (hāraša)\n# هَارَشْتَ (hārašta) /haː.raʃ.ta/: second-person masculine singular past active of هَارَشَ (hāraša)\n# هَارَشْتِ (hārašti) /haː.raʃ.ti/: second-person feminine singular past active of هَارَشَ (hāraša)\n# هَارَشَتْ (hārašat) /haː.ra.ʃat/: third-person feminine singular past active of هَارَشَ (h",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["hāraštu", "hāraša", "hārašta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هارشتما",
+      "tur": "verb",
+      "baslik": "هَارَشْتُمَا • (hāraštumā) (form III) /haː.raʃ.tu.maː/\n# second-person dual past active of هَارَشَ (hāraša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["hāraštumā", "hāraša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هارشا",
+      "tur": "verb",
+      "baslik": "هارشا (form III)\n# هَارَشَا (hārašā) /haː.ra.ʃaː/: third-person masculine dual past active of هَارَشَ (hāraša)\n# هَارِشَا (hārišā) /haː.ri.ʃaː/: second-person dual imperative of هَارَشَ (hāraša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["hārašā", "hāraša", "hārišā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هارشنا",
+      "tur": "verb",
+      "baslik": "هَارَشْنَا • (hārašnā) (form III) /haː.raʃ.naː/\n# first-person plural past active of هَارَشَ (hāraša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["hārašnā", "hāraša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هارشتا",
+      "tur": "verb",
+      "baslik": "هَارَشَتَا • (hārašatā) (form III) /haː.ra.ʃa.taː/\n# third-person feminine dual past active of هَارَشَ (hāraša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["hārašatā", "hāraša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هارشتن",
+      "tur": "verb",
+      "baslik": "هَارَشْتُنَّ • (hāraštunna) (form III) /haː.raʃ.tun.na/\n# second-person feminine plural past active of هَارَشَ (hāraša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["hāraštunna", "hāraša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هارشوا",
+      "tur": "verb",
+      "baslik": "هارشوا (form III)\n# هَارَشُوا (hārašū) /haː.ra.ʃuː/: third-person masculine plural past active of هَارَشَ (hāraša)\n# هَارِشُوا (hārišū) /haː.ri.ʃuː/: second-person masculine plural imperative of هَارَشَ (hāraša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["hārašū", "hāraša", "hārišū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هارشتم",
+      "tur": "verb",
+      "baslik": "هَارَشْتُمْ • (hāraštum) (form III) /haː.raʃ.tum/\n# second-person masculine plural past active of هَارَشَ (hāraša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["hāraštum", "hāraša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هارشن",
+      "tur": "verb",
+      "baslik": "هارشن (form III)\n# هَارَشْنَ (hārašna) /haː.raʃ.na/: third-person feminine plural past active of هَارَشَ (hāraša)\n# هَارِشْنَ (hārišna) /haː.riʃ.na/: second-person feminine plural imperative of هَارَشَ (hāraša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["hārašna", "hāraša", "hārišna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هورشت",
+      "tur": "verb",
+      "baslik": "هورشت (form III)\n# هُورِشْتُ (hūrištu) /huː.riʃ.tu/: first-person singular past passive of هَارَشَ (hāraša)\n# هُورِشْتَ (hūrišta) /huː.riʃ.ta/: second-person masculine singular past passive of هَارَشَ (hāraša)\n# هُورِشْتِ (hūrišti) /huː.riʃ.ti/: second-person feminine singular past passive of هَارَشَ (hāraša)\n# هُورِشَتْ (hūrišat) /huː.ri.ʃat/: third-person feminine singular past passive of هَارَش",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["hūrištu", "hāraša", "hūrišta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هورش",
+      "tur": "verb",
+      "baslik": "هُورِشَ • (hūriša) (form III) /huː.ri.ʃa/\n# third-person masculine singular past passive of هَارَشَ (hāraša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["hūriša", "hāraša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هورشتما",
+      "tur": "verb",
+      "baslik": "هُورِشْتُمَا • (hūrištumā) (form III) /huː.riʃ.tu.maː/\n# second-person dual past passive of هَارَشَ (hāraša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["hūrištumā", "hāraša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هورشنا",
+      "tur": "verb",
+      "baslik": "هُورِشْنَا • (hūrišnā) (form III) /huː.riʃ.naː/\n# first-person plural past passive of هَارَشَ (hāraša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["hūrišnā", "hāraša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هورشتم",
+      "tur": "verb",
+      "baslik": "هُورِشْتُمْ • (hūrištum) (form III) /huː.riʃ.tum/\n# second-person masculine plural past passive of هَارَشَ (hāraša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["hūrištum", "hāraša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هورشا",
+      "tur": "verb",
+      "baslik": "هُورِشَا • (hūrišā) (form III) /huː.ri.ʃaː/\n# third-person masculine dual past passive of هَارَشَ (hāraša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["hūrišā", "hāraša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هورشتن",
+      "tur": "verb",
+      "baslik": "هُورِشْتُنَّ • (hūrištunna) (form III) /huː.riʃ.tun.na/\n# second-person feminine plural past passive of هَارَشَ (hāraša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["hūrištunna", "hāraša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هورشوا",
+      "tur": "verb",
+      "baslik": "هُورِشُوا • (hūrišū) (form III) /huː.ri.ʃuː/\n# third-person masculine plural past passive of هَارَشَ (hāraša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["hūrišū", "hāraša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هورشتا",
+      "tur": "verb",
+      "baslik": "هُورِشَتَا • (hūrišatā) (form III) /huː.ri.ʃa.taː/\n# third-person feminine dual past passive of هَارَشَ (hāraša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["hūrišatā", "hāraša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هورشن",
+      "tur": "verb",
+      "baslik": "هُورِشْنَ • (hūrišna) (form III) /huː.riʃ.na/\n# third-person feminine plural past passive of هَارَشَ (hāraša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["hūrišna", "hāraša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهارش",
+      "tur": "verb",
+      "baslik": "تهارش (form III)\n# تُهَارِشُ (tuhārišu) /tu.haː.ri.ʃu/: inflection of هَارَشَ (hāraša):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُهَارَشُ (tuhārašu) /tu.haː.ra.ʃu/: inflection of هَارَشَ (hāraša):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive in",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuhārišu", "hāraša", "tuhārašu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أهارش",
+      "tur": "verb",
+      "baslik": "أهارش (form III)\n# أُهَارِشُ (ʔuhārišu) /ʔu.haː.ri.ʃu/: first-person singular non-past active indicative of هَارَشَ (hāraša)\n# أُهَارَشُ (ʔuhārašu) /ʔu.haː.ra.ʃu/: first-person singular non-past passive indicative of هَارَشَ (hāraša)\n# أُهَارِشَ (ʔuhāriša) /ʔu.haː.ri.ʃa/: first-person singular non-past active subjunctive of هَارَشَ (hāraša)\n# أُهَارَشَ (ʔuhāraša) /ʔu.haː.ra.ʃa/: first-person singu",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔuhārišu", "hāraša", "ʔuhārašu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهارشين",
+      "tur": "verb",
+      "baslik": "تهارشين (form III)\n# تُهَارِشِينَ (tuhārišīna) /tu.haː.ri.ʃiː.na/: second-person feminine singular non-past active indicative of هَارَشَ (hāraša)\n# تُهَارَشِينَ (tuhārašīna) /tu.haː.ra.ʃiː.na/: second-person feminine singular non-past passive indicative of هَارَشَ (hāraša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuhārišīna", "hāraša", "tuhārašīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهارش",
+      "tur": "verb",
+      "baslik": "يهارش (form III)\n# يُهَارِشُ (yuhārišu) /ju.haː.ri.ʃu/: third-person masculine singular non-past active indicative of هَارَشَ (hāraša)\n# يُهَارَشُ (yuhārašu) /ju.haː.ra.ʃu/: third-person masculine singular non-past passive indicative of هَارَشَ (hāraša)\n# يُهَارِشَ (yuhāriša) /ju.haː.ri.ʃa/: third-person masculine singular non-past active subjunctive of هَارَشَ (hāraša)\n# يُهَارَشَ (yuhāraša) /ju.",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuhārišu", "hāraša", "yuhārašu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهارشون",
+      "tur": "verb",
+      "baslik": "تهارشون (form III)\n# تُهَارِشُونَ (tuhārišūna) /tu.haː.ri.ʃuː.na/: second-person masculine plural non-past active indicative of هَارَشَ (hāraša)\n# تُهَارَشُونَ (tuhārašūna) /tu.haː.ra.ʃuː.na/: second-person masculine plural non-past passive indicative of هَارَشَ (hāraša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuhārišūna", "hāraša", "tuhārašūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهارشان",
+      "tur": "verb",
+      "baslik": "يهارشان (form III)\n# يُهَارِشَانِ (yuhārišāni) /ju.haː.ri.ʃaː.ni/: third-person masculine dual non-past active indicative of هَارَشَ (hāraša)\n# يُهَارَشَانِ (yuhārašāni) /ju.haː.ra.ʃaː.ni/: third-person masculine dual non-past passive indicative of هَارَشَ (hāraša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuhārišāni", "hāraša", "yuhārašāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهارشان",
+      "tur": "verb",
+      "baslik": "تهارشان (form III)\n# تُهَارِشَانِ (tuhārišāni) /tu.haː.ri.ʃaː.ni/: inflection of هَارَشَ (hāraša):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُهَارَشَانِ (tuhārašāni) /tu.haː.ra.ʃaː.ni/: inflection of هَارَشَ (hāraša):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuhārišāni", "hāraša", "tuhārašāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نهارش",
+      "tur": "verb",
+      "baslik": "نهارش (form III)\n# نُهَارِشُ (nuhārišu) /nu.haː.ri.ʃu/: first-person plural non-past active indicative of هَارَشَ (hāraša)\n# نُهَارَشُ (nuhārašu) /nu.haː.ra.ʃu/: first-person plural non-past passive indicative of هَارَشَ (hāraša)\n# نُهَارِشَ (nuhāriša) /nu.haː.ri.ʃa/: first-person plural non-past active subjunctive of هَارَشَ (hāraša)\n# نُهَارَشَ (nuhāraša) /nu.haː.ra.ʃa/: first-person plural non-",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nuhārišu", "hāraša", "nuhārašu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهارشون",
+      "tur": "verb",
+      "baslik": "يهارشون (form III)\n# يُهَارِشُونَ (yuhārišūna) /ju.haː.ri.ʃuː.na/: third-person masculine plural non-past active indicative of هَارَشَ (hāraša)\n# يُهَارَشُونَ (yuhārašūna) /ju.haː.ra.ʃuː.na/: third-person masculine plural non-past passive indicative of هَارَشَ (hāraša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuhārišūna", "hāraša", "yuhārašūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهارشن",
+      "tur": "verb",
+      "baslik": "يهارشن (form III)\n# يُهَارِشْنَ (yuhārišna) /ju.haː.riʃ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of هَارَشَ (hāraša)\n# يُهَارَشْنَ (yuhārašna) /ju.haː.raʃ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of هَارَشَ (hāraša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuhārišna", "hāraša", "yuhārašna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهارشي",
+      "tur": "verb",
+      "baslik": "تهارشي (form III)\n# تُهَارِشِي (tuhārišī) /tu.haː.ri.ʃiː/: second-person feminine singular non-past active subjunctive/jussive of هَارَشَ (hāraša)\n# تُهَارَشِي (tuhārašī) /tu.haː.ra.ʃiː/: second-person feminine singular non-past passive subjunctive/jussive of هَارَشَ (hāraša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuhārišī", "hāraša", "tuhārašī"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهارشن",
+      "tur": "verb",
+      "baslik": "تهارشن (form III)\n# تُهَارِشْنَ (tuhārišna) /tu.haː.riʃ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of هَارَشَ (hāraša)\n# تُهَارَشْنَ (tuhārašna) /tu.haː.raʃ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of هَارَشَ (hāraša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuhārišna", "hāraša", "tuhārašna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهارشوا",
+      "tur": "verb",
+      "baslik": "يهارشوا (form III)\n# يُهَارِشُوا (yuhārišū) /ju.haː.ri.ʃuː/: third-person masculine plural non-past active subjunctive/jussive of هَارَشَ (hāraša)\n# يُهَارَشُوا (yuhārašū) /ju.haː.ra.ʃuː/: third-person masculine plural non-past passive subjunctive/jussive of هَارَشَ (hāraša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuhārišū", "hāraša", "yuhārašū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهارشا",
+      "tur": "verb",
+      "baslik": "تهارشا (form III)\n# تُهَارِشَا (tuhārišā) /tu.haː.ri.ʃaː/: inflection of هَارَشَ (hāraša):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُهَارَشَا (tuhārašā) /tu.haː.ra.ʃaː/: inflection of هَارَشَ (hāraša):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjun",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuhārišā", "hāraša", "tuhārašā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهارشا",
+      "tur": "verb",
+      "baslik": "يهارشا (form III)\n# يُهَارِشَا (yuhārišā) /ju.haː.ri.ʃaː/: third-person masculine dual non-past active subjunctive/jussive of هَارَشَ (hāraša)\n# يُهَارَشَا (yuhārašā) /ju.haː.ra.ʃaː/: third-person masculine dual non-past passive subjunctive/jussive of هَارَشَ (hāraša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuhārišā", "hāraša", "yuhārašā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هارشي",
+      "tur": "verb",
+      "baslik": "هَارِشِي • (hārišī) (form III) /haː.ri.ʃiː/\n# second-person feminine singular imperative of هَارَشَ (hāraša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["hārišī", "hāraša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهارشوا",
+      "tur": "verb",
+      "baslik": "تهارشوا (form III)\n# تُهَارِشُوا (tuhārišū) /tu.haː.ri.ʃuː/: second-person masculine plural non-past active subjunctive/jussive of هَارَشَ (hāraša)\n# تُهَارَشُوا (tuhārašū) /tu.haː.ra.ʃuː/: second-person masculine plural non-past passive subjunctive/jussive of هَارَشَ (hāraša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuhārišū", "hāraša", "tuhārašū"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "هارش", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

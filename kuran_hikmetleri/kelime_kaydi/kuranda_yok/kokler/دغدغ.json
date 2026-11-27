@@ -1,376 +1,275 @@
 {
   "kok": "دغدغ",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "دغدغ", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "دغدغة",
-        "u": "دغدغة",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "دَغْدَغَة • (daḡdaḡa) f",
-        "g": ["verbal noun of دَغْدَغَ (daḡdaḡa) (form Iq)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["دَغْدَغَ"],
-        "r": ["daḡdaḡa"],
-        "ds": [
-          ["ota", "دغدغه", "dağdağa"],
-          ["fa", "دغدغه", "daġdaġe"]
-        ],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "دغدغ",
-        "u": "دغدغ",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "دَغْدَغَ • (daḡdaḡa) Iq (non-past يُدَغْدِغُ (yudaḡdiḡu), verbal noun دَغْدَغَة (daḡdaḡa))",
-        "g": ["to tickle"],
-        "r": ["daḡdaḡa"],
-        "ipa": ["/daɣ.da.ɣa/"],
-        "ds": [
-          ["he", "דִּגְדֵּג", "diḡdēḡ"]
-        ],
-        "k": "دغدغ",
-        "yol": "kök"
-      },
-      {
-        "w": "دغدغتما",
-        "u": "دغدغتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دغدغتما (form Iq)\n# دَغْدَغْتُمَا (daḡdaḡtumā) /daɣ.daɣ.tu.maː/: second-person dual past active of دَغْدَغَ (daḡdaḡa)\n# دُغْدِغْتُمَا (duḡdiḡtumā) /duɣ.diɣ.tu.maː/: second-person dual past passive of دَغْدَغَ (daḡdaḡa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["daḡdaḡtumā", "daḡdaḡa", "duḡdiḡtumā"],
-        "k": "دغدغ",
-        "yol": "kök"
-      },
-      {
-        "w": "دغدغا",
-        "u": "دغدغا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دغدغا (form Iq)\n# دَغْدَغَا (daḡdaḡā) /daɣ.da.ɣaː/: third-person masculine dual past active of دَغْدَغَ (daḡdaḡa)\n# دُغْدِغَا (duḡdiḡā) /duɣ.di.ɣaː/: third-person masculine dual past passive of دَغْدَغَ (daḡdaḡa)\n# دَغْدِغَا (daḡdiḡā) /daɣ.di.ɣaː/: second-person dual imperative of دَغْدَغَ (daḡdaḡa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["daḡdaḡā", "daḡdaḡa", "duḡdiḡā"],
-        "k": "دغدغ",
-        "yol": "kök"
-      },
-      {
-        "w": "دغدغت",
-        "u": "دغدغت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دغدغت (form Iq)\n# دَغْدَغْتُ (daḡdaḡtu) /daɣ.daɣ.tu/: first-person singular past active of دَغْدَغَ (daḡdaḡa)\n# دَغْدَغْتَ (daḡdaḡta) /daɣ.daɣ.ta/: second-person masculine singular past active of دَغْدَغَ (daḡdaḡa)\n# دَغْدَغْتِ (daḡdaḡti) /daɣ.daɣ.ti/: second-person feminine singular past active of دَغْدَغَ (daḡdaḡa)\n# دَغْدَغَتْ (daḡdaḡat) /daɣ.da.ɣat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["daḡdaḡtu", "daḡdaḡa", "daḡdaḡta"],
-        "k": "دغدغ",
-        "yol": "kök"
-      },
-      {
-        "w": "دغدغتم",
-        "u": "دغدغتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دغدغتم (form Iq)\n# دَغْدَغْتُمْ (daḡdaḡtum) /daɣ.daɣ.tum/: second-person masculine plural past active of دَغْدَغَ (daḡdaḡa)\n# دُغْدِغْتُمْ (duḡdiḡtum) /duɣ.diɣ.tum/: second-person masculine plural past passive of دَغْدَغَ (daḡdaḡa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["daḡdaḡtum", "daḡdaḡa", "duḡdiḡtum"],
-        "k": "دغدغ",
-        "yol": "kök"
-      },
-      {
-        "w": "دغدغتا",
-        "u": "دغدغتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دغدغتا (form Iq)\n# دَغْدَغَتَا (daḡdaḡatā) /daɣ.da.ɣa.taː/: third-person feminine dual past active of دَغْدَغَ (daḡdaḡa)\n# دُغْدِغَتَا (duḡdiḡatā) /duɣ.di.ɣa.taː/: third-person feminine dual past passive of دَغْدَغَ (daḡdaḡa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["daḡdaḡatā", "daḡdaḡa", "duḡdiḡatā"],
-        "k": "دغدغ",
-        "yol": "kök"
-      },
-      {
-        "w": "دغدغتن",
-        "u": "دغدغتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دغدغتن (form Iq)\n# دَغْدَغْتُنَّ (daḡdaḡtunna) /daɣ.daɣ.tun.na/: second-person feminine plural past active of دَغْدَغَ (daḡdaḡa)\n# دُغْدِغْتُنَّ (duḡdiḡtunna) /duɣ.diɣ.tun.na/: second-person feminine plural past passive of دَغْدَغَ (daḡdaḡa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["daḡdaḡtunna", "daḡdaḡa", "duḡdiḡtunna"],
-        "k": "دغدغ",
-        "yol": "kök"
-      },
-      {
-        "w": "دغدغوا",
-        "u": "دغدغوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دغدغوا (form Iq)\n# دَغْدَغُوا (daḡdaḡū) /daɣ.da.ɣuː/: third-person masculine plural past active of دَغْدَغَ (daḡdaḡa)\n# دُغْدِغُوا (duḡdiḡū) /duɣ.di.ɣuː/: third-person masculine plural past passive of دَغْدَغَ (daḡdaḡa)\n# دَغْدِغُوا (daḡdiḡū) /daɣ.di.ɣuː/: second-person masculine plural imperative of دَغْدَغَ (daḡdaḡa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["daḡdaḡū", "daḡdaḡa", "duḡdiḡū"],
-        "k": "دغدغ",
-        "yol": "kök"
-      },
-      {
-        "w": "دغدغنا",
-        "u": "دغدغنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دغدغنا (form Iq)\n# دَغْدَغْنَا (daḡdaḡnā) /daɣ.daɣ.naː/: first-person plural past active of دَغْدَغَ (daḡdaḡa)\n# دُغْدِغْنَا (duḡdiḡnā) /duɣ.diɣ.naː/: first-person plural past passive of دَغْدَغَ (daḡdaḡa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["daḡdaḡnā", "daḡdaḡa", "duḡdiḡnā"],
-        "k": "دغدغ",
-        "yol": "kök"
-      },
-      {
-        "w": "دغدغن",
-        "u": "دغدغن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دغدغن (form Iq)\n# دَغْدَغْنَ (daḡdaḡna) /daɣ.daɣ.na/: third-person feminine plural past active of دَغْدَغَ (daḡdaḡa)\n# دُغْدِغْنَ (duḡdiḡna) /duɣ.diɣ.na/: third-person feminine plural past passive of دَغْدَغَ (daḡdaḡa)\n# دَغْدِغْنَ (daḡdiḡna) /daɣ.diɣ.na/: second-person feminine plural imperative of دَغْدَغَ (daḡdaḡa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["daḡdaḡna", "daḡdaḡa", "duḡdiḡna"],
-        "k": "دغدغ",
-        "yol": "kök"
-      },
-      {
-        "w": "أدغدغ",
-        "u": "أدغدغ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أدغدغ (form Iq)\n# أُدَغْدِغُ (ʔudaḡdiḡu) /ʔu.daɣ.di.ɣu/: first-person singular non-past active indicative of دَغْدَغَ (daḡdaḡa)\n# أُدَغْدَغُ (ʔudaḡdaḡu) /ʔu.daɣ.da.ɣu/: first-person singular non-past passive indicative of دَغْدَغَ (daḡdaḡa)\n# أُدَغْدِغَ (ʔudaḡdiḡa) /ʔu.daɣ.di.ɣa/: first-person singular non-past active subjunctive of دَغْدَغَ (daḡdaḡa)\n# أُدَغْدَغَ (ʔudaḡdaḡa) /ʔu.daɣ.da.ɣa/: first",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʔudaḡdiḡu", "daḡdaḡa", "ʔudaḡdaḡu"],
-        "k": "دغدغ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدغدغ",
-        "u": "تدغدغ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تدغدغ (form Iq)\n# تُدَغْدِغُ (tudaḡdiḡu) /tu.daɣ.di.ɣu/: inflection of دَغْدَغَ (daḡdaḡa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُدَغْدَغُ (tudaḡdaḡu) /tu.daɣ.da.ɣu/: inflection of دَغْدَغَ (daḡdaḡa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past pas",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tudaḡdiḡu", "daḡdaḡa", "tudaḡdaḡu"],
-        "k": "دغدغ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدغدغين",
-        "u": "تدغدغين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تدغدغين (form Iq)\n# تُدَغْدِغِينَ (tudaḡdiḡīna) /tu.daɣ.di.ɣiː.na/: second-person feminine singular non-past active indicative of دَغْدَغَ (daḡdaḡa)\n# تُدَغْدَغِينَ (tudaḡdaḡīna) /tu.daɣ.da.ɣiː.na/: second-person feminine singular non-past passive indicative of دَغْدَغَ (daḡdaḡa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tudaḡdiḡīna", "daḡdaḡa", "tudaḡdaḡīna"],
-        "k": "دغدغ",
-        "yol": "kök"
-      },
-      {
-        "w": "ندغدغ",
-        "u": "ندغدغ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ندغدغ (form Iq)\n# نُدَغْدِغُ (nudaḡdiḡu) /nu.daɣ.di.ɣu/: first-person plural non-past active indicative of دَغْدَغَ (daḡdaḡa)\n# نُدَغْدَغُ (nudaḡdaḡu) /nu.daɣ.da.ɣu/: first-person plural non-past passive indicative of دَغْدَغَ (daḡdaḡa)\n# نُدَغْدِغَ (nudaḡdiḡa) /nu.daɣ.di.ɣa/: first-person plural non-past active subjunctive of دَغْدَغَ (daḡdaḡa)\n# نُدَغْدَغَ (nudaḡdaḡa) /nu.daɣ.da.ɣa/: first-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["nudaḡdiḡu", "daḡdaḡa", "nudaḡdaḡu"],
-        "k": "دغدغ",
-        "yol": "kök"
-      },
-      {
-        "w": "يدغدغان",
-        "u": "يدغدغان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يدغدغان (form Iq)\n# يُدَغْدِغَانِ (yudaḡdiḡāni) /ju.daɣ.di.ɣaː.ni/: third-person masculine dual non-past active indicative of دَغْدَغَ (daḡdaḡa)\n# يُدَغْدَغَانِ (yudaḡdaḡāni) /ju.daɣ.da.ɣaː.ni/: third-person masculine dual non-past passive indicative of دَغْدَغَ (daḡdaḡa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yudaḡdiḡāni", "daḡdaḡa", "yudaḡdaḡāni"],
-        "k": "دغدغ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدغدغون",
-        "u": "تدغدغون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تدغدغون (form Iq)\n# تُدَغْدِغُونَ (tudaḡdiḡūna) /tu.daɣ.di.ɣuː.na/: second-person masculine plural non-past active indicative of دَغْدَغَ (daḡdaḡa)\n# تُدَغْدَغُونَ (tudaḡdaḡūna) /tu.daɣ.da.ɣuː.na/: second-person masculine plural non-past passive indicative of دَغْدَغَ (daḡdaḡa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tudaḡdiḡūna", "daḡdaḡa", "tudaḡdaḡūna"],
-        "k": "دغدغ",
-        "yol": "kök"
-      },
-      {
-        "w": "يدغدغ",
-        "u": "يدغدغ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يدغدغ (form Iq)\n# يُدَغْدِغُ (yudaḡdiḡu) /ju.daɣ.di.ɣu/: third-person masculine singular non-past active indicative of دَغْدَغَ (daḡdaḡa)\n# يُدَغْدَغُ (yudaḡdaḡu) /ju.daɣ.da.ɣu/: third-person masculine singular non-past passive indicative of دَغْدَغَ (daḡdaḡa)\n# يُدَغْدِغَ (yudaḡdiḡa) /ju.daɣ.di.ɣa/: third-person masculine singular non-past active subjunctive of دَغْدَغَ (daḡdaḡa)\n# يُدَغْدَغَ (yu",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yudaḡdiḡu", "daḡdaḡa", "yudaḡdaḡu"],
-        "k": "دغدغ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدغدغن",
-        "u": "تدغدغن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تدغدغن (form Iq)\n# تُدَغْدِغْنَ (tudaḡdiḡna) /tu.daɣ.diɣ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of دَغْدَغَ (daḡdaḡa)\n# تُدَغْدَغْنَ (tudaḡdaḡna) /tu.daɣ.daɣ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of دَغْدَغَ (daḡdaḡa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tudaḡdiḡna", "daḡdaḡa", "tudaḡdaḡna"],
-        "k": "دغدغ",
-        "yol": "kök"
-      },
-      {
-        "w": "يدغدغون",
-        "u": "يدغدغون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يدغدغون (form Iq)\n# يُدَغْدِغُونَ (yudaḡdiḡūna) /ju.daɣ.di.ɣuː.na/: third-person masculine plural non-past active indicative of دَغْدَغَ (daḡdaḡa)\n# يُدَغْدَغُونَ (yudaḡdaḡūna) /ju.daɣ.da.ɣuː.na/: third-person masculine plural non-past passive indicative of دَغْدَغَ (daḡdaḡa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yudaḡdiḡūna", "daḡdaḡa", "yudaḡdaḡūna"],
-        "k": "دغدغ",
-        "yol": "kök"
-      },
-      {
-        "w": "يدغدغن",
-        "u": "يدغدغن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يدغدغن (form Iq)\n# يُدَغْدِغْنَ (yudaḡdiḡna) /ju.daɣ.diɣ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of دَغْدَغَ (daḡdaḡa)\n# يُدَغْدَغْنَ (yudaḡdaḡna) /ju.daɣ.daɣ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of دَغْدَغَ (daḡdaḡa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yudaḡdiḡna", "daḡdaḡa", "yudaḡdaḡna"],
-        "k": "دغدغ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدغدغا",
-        "u": "تدغدغا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تدغدغا (form Iq)\n# تُدَغْدِغَا (tudaḡdiḡā) /tu.daɣ.di.ɣaː/: inflection of دَغْدَغَ (daḡdaḡa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُدَغْدَغَا (tudaḡdaḡā) /tu.daɣ.da.ɣaː/: inflection of دَغْدَغَ (daḡdaḡa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tudaḡdiḡā", "daḡdaḡa", "tudaḡdaḡā"],
-        "k": "دغدغ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدغدغان",
-        "u": "تدغدغان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تدغدغان (form Iq)\n# تُدَغْدِغَانِ (tudaḡdiḡāni) /tu.daɣ.di.ɣaː.ni/: inflection of دَغْدَغَ (daḡdaḡa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُدَغْدَغَانِ (tudaḡdaḡāni) /tu.daɣ.da.ɣaː.ni/: inflection of دَغْدَغَ (daḡdaḡa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tudaḡdiḡāni", "daḡdaḡa", "tudaḡdaḡāni"],
-        "k": "دغدغ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدغدغي",
-        "u": "تدغدغي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تدغدغي (form Iq)\n# تُدَغْدِغِي (tudaḡdiḡī) /tu.daɣ.di.ɣiː/: second-person feminine singular non-past active subjunctive/jussive of دَغْدَغَ (daḡdaḡa)\n# تُدَغْدَغِي (tudaḡdaḡī) /tu.daɣ.da.ɣiː/: second-person feminine singular non-past passive subjunctive/jussive of دَغْدَغَ (daḡdaḡa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tudaḡdiḡī", "daḡdaḡa", "tudaḡdaḡī"],
-        "k": "دغدغ",
-        "yol": "kök"
-      },
-      {
-        "w": "يدغدغا",
-        "u": "يدغدغا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يدغدغا (form Iq)\n# يُدَغْدِغَا (yudaḡdiḡā) /ju.daɣ.di.ɣaː/: third-person masculine dual non-past active subjunctive/jussive of دَغْدَغَ (daḡdaḡa)\n# يُدَغْدَغَا (yudaḡdaḡā) /ju.daɣ.da.ɣaː/: third-person masculine dual non-past passive subjunctive/jussive of دَغْدَغَ (daḡdaḡa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yudaḡdiḡā", "daḡdaḡa", "yudaḡdaḡā"],
-        "k": "دغدغ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدغدغوا",
-        "u": "تدغدغوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تدغدغوا (form Iq)\n# تُدَغْدِغُوا (tudaḡdiḡū) /tu.daɣ.di.ɣuː/: second-person masculine plural non-past active subjunctive/jussive of دَغْدَغَ (daḡdaḡa)\n# تُدَغْدَغُوا (tudaḡdaḡū) /tu.daɣ.da.ɣuː/: second-person masculine plural non-past passive subjunctive/jussive of دَغْدَغَ (daḡdaḡa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tudaḡdiḡū", "daḡdaḡa", "tudaḡdaḡū"],
-        "k": "دغدغ",
-        "yol": "kök"
-      },
-      {
-        "w": "يدغدغوا",
-        "u": "يدغدغوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يدغدغوا (form Iq)\n# يُدَغْدِغُوا (yudaḡdiḡū) /ju.daɣ.di.ɣuː/: third-person masculine plural non-past active subjunctive/jussive of دَغْدَغَ (daḡdaḡa)\n# يُدَغْدَغُوا (yudaḡdaḡū) /ju.daɣ.da.ɣuː/: third-person masculine plural non-past passive subjunctive/jussive of دَغْدَغَ (daḡdaḡa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yudaḡdiḡū", "daḡdaḡa", "yudaḡdaḡū"],
-        "k": "دغدغ",
-        "yol": "kök"
-      },
-      {
-        "w": "دغدغي",
-        "u": "دغدغي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دَغْدِغِي • (daḡdiḡī) (form Iq) /daɣ.di.ɣiː/\n# second-person feminine singular imperative of دَغْدَغَ (daḡdaḡa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["daḡdiḡī", "daḡdaḡa"],
-        "k": "دغدغ",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "دغ",
+  "ses": {
     "harf": "د",
+    "fasil": "دغ",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "دغدغة",
+      "tur": "noun",
+      "baslik": "دَغْدَغَة • (daḡdaḡa) f",
+      "anlam": ["verbal noun of دَغْدَغَ (daḡdaḡa) (form Iq)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["دَغْدَغَ"],
+      "okunus": ["daḡdaḡa"],
+      "torunlar": [
+        ["ota", "دغدغه", "dağdağa"],
+        ["fa", "دغدغه", "daġdaġe"]
+      ],
+      "bag": "asıl madde"
+    },
+    {
+      "madde": "دغدغ",
+      "tur": "verb",
+      "baslik": "دَغْدَغَ • (daḡdaḡa) Iq (non-past يُدَغْدِغُ (yudaḡdiḡu), verbal noun دَغْدَغَة (daḡdaḡa))",
+      "anlam": ["to tickle"],
+      "okunus": ["daḡdaḡa"],
+      "ipa": ["/daɣ.da.ɣa/"],
+      "torunlar": [
+        ["he", "דִּגְדֵּג", "diḡdēḡ"]
+      ]
+    },
+    {
+      "madde": "دغدغتما",
+      "tur": "verb",
+      "baslik": "دغدغتما (form Iq)\n# دَغْدَغْتُمَا (daḡdaḡtumā) /daɣ.daɣ.tu.maː/: second-person dual past active of دَغْدَغَ (daḡdaḡa)\n# دُغْدِغْتُمَا (duḡdiḡtumā) /duɣ.diɣ.tu.maː/: second-person dual past passive of دَغْدَغَ (daḡdaḡa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["daḡdaḡtumā", "daḡdaḡa", "duḡdiḡtumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "دغدغا",
+      "tur": "verb",
+      "baslik": "دغدغا (form Iq)\n# دَغْدَغَا (daḡdaḡā) /daɣ.da.ɣaː/: third-person masculine dual past active of دَغْدَغَ (daḡdaḡa)\n# دُغْدِغَا (duḡdiḡā) /duɣ.di.ɣaː/: third-person masculine dual past passive of دَغْدَغَ (daḡdaḡa)\n# دَغْدِغَا (daḡdiḡā) /daɣ.di.ɣaː/: second-person dual imperative of دَغْدَغَ (daḡdaḡa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["daḡdaḡā", "daḡdaḡa", "duḡdiḡā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "دغدغت",
+      "tur": "verb",
+      "baslik": "دغدغت (form Iq)\n# دَغْدَغْتُ (daḡdaḡtu) /daɣ.daɣ.tu/: first-person singular past active of دَغْدَغَ (daḡdaḡa)\n# دَغْدَغْتَ (daḡdaḡta) /daɣ.daɣ.ta/: second-person masculine singular past active of دَغْدَغَ (daḡdaḡa)\n# دَغْدَغْتِ (daḡdaḡti) /daɣ.daɣ.ti/: second-person feminine singular past active of دَغْدَغَ (daḡdaḡa)\n# دَغْدَغَتْ (daḡdaḡat) /daɣ.da.ɣat/: third-person feminine singular past active ",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["daḡdaḡtu", "daḡdaḡa", "daḡdaḡta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "دغدغتم",
+      "tur": "verb",
+      "baslik": "دغدغتم (form Iq)\n# دَغْدَغْتُمْ (daḡdaḡtum) /daɣ.daɣ.tum/: second-person masculine plural past active of دَغْدَغَ (daḡdaḡa)\n# دُغْدِغْتُمْ (duḡdiḡtum) /duɣ.diɣ.tum/: second-person masculine plural past passive of دَغْدَغَ (daḡdaḡa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["daḡdaḡtum", "daḡdaḡa", "duḡdiḡtum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "دغدغتا",
+      "tur": "verb",
+      "baslik": "دغدغتا (form Iq)\n# دَغْدَغَتَا (daḡdaḡatā) /daɣ.da.ɣa.taː/: third-person feminine dual past active of دَغْدَغَ (daḡdaḡa)\n# دُغْدِغَتَا (duḡdiḡatā) /duɣ.di.ɣa.taː/: third-person feminine dual past passive of دَغْدَغَ (daḡdaḡa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["daḡdaḡatā", "daḡdaḡa", "duḡdiḡatā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "دغدغتن",
+      "tur": "verb",
+      "baslik": "دغدغتن (form Iq)\n# دَغْدَغْتُنَّ (daḡdaḡtunna) /daɣ.daɣ.tun.na/: second-person feminine plural past active of دَغْدَغَ (daḡdaḡa)\n# دُغْدِغْتُنَّ (duḡdiḡtunna) /duɣ.diɣ.tun.na/: second-person feminine plural past passive of دَغْدَغَ (daḡdaḡa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["daḡdaḡtunna", "daḡdaḡa", "duḡdiḡtunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "دغدغوا",
+      "tur": "verb",
+      "baslik": "دغدغوا (form Iq)\n# دَغْدَغُوا (daḡdaḡū) /daɣ.da.ɣuː/: third-person masculine plural past active of دَغْدَغَ (daḡdaḡa)\n# دُغْدِغُوا (duḡdiḡū) /duɣ.di.ɣuː/: third-person masculine plural past passive of دَغْدَغَ (daḡdaḡa)\n# دَغْدِغُوا (daḡdiḡū) /daɣ.di.ɣuː/: second-person masculine plural imperative of دَغْدَغَ (daḡdaḡa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["daḡdaḡū", "daḡdaḡa", "duḡdiḡū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "دغدغنا",
+      "tur": "verb",
+      "baslik": "دغدغنا (form Iq)\n# دَغْدَغْنَا (daḡdaḡnā) /daɣ.daɣ.naː/: first-person plural past active of دَغْدَغَ (daḡdaḡa)\n# دُغْدِغْنَا (duḡdiḡnā) /duɣ.diɣ.naː/: first-person plural past passive of دَغْدَغَ (daḡdaḡa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["daḡdaḡnā", "daḡdaḡa", "duḡdiḡnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "دغدغن",
+      "tur": "verb",
+      "baslik": "دغدغن (form Iq)\n# دَغْدَغْنَ (daḡdaḡna) /daɣ.daɣ.na/: third-person feminine plural past active of دَغْدَغَ (daḡdaḡa)\n# دُغْدِغْنَ (duḡdiḡna) /duɣ.diɣ.na/: third-person feminine plural past passive of دَغْدَغَ (daḡdaḡa)\n# دَغْدِغْنَ (daḡdiḡna) /daɣ.diɣ.na/: second-person feminine plural imperative of دَغْدَغَ (daḡdaḡa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["daḡdaḡna", "daḡdaḡa", "duḡdiḡna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أدغدغ",
+      "tur": "verb",
+      "baslik": "أدغدغ (form Iq)\n# أُدَغْدِغُ (ʔudaḡdiḡu) /ʔu.daɣ.di.ɣu/: first-person singular non-past active indicative of دَغْدَغَ (daḡdaḡa)\n# أُدَغْدَغُ (ʔudaḡdaḡu) /ʔu.daɣ.da.ɣu/: first-person singular non-past passive indicative of دَغْدَغَ (daḡdaḡa)\n# أُدَغْدِغَ (ʔudaḡdiḡa) /ʔu.daɣ.di.ɣa/: first-person singular non-past active subjunctive of دَغْدَغَ (daḡdaḡa)\n# أُدَغْدَغَ (ʔudaḡdaḡa) /ʔu.daɣ.da.ɣa/: first",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʔudaḡdiḡu", "daḡdaḡa", "ʔudaḡdaḡu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تدغدغ",
+      "tur": "verb",
+      "baslik": "تدغدغ (form Iq)\n# تُدَغْدِغُ (tudaḡdiḡu) /tu.daɣ.di.ɣu/: inflection of دَغْدَغَ (daḡdaḡa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُدَغْدَغُ (tudaḡdaḡu) /tu.daɣ.da.ɣu/: inflection of دَغْدَغَ (daḡdaḡa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past pas",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tudaḡdiḡu", "daḡdaḡa", "tudaḡdaḡu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تدغدغين",
+      "tur": "verb",
+      "baslik": "تدغدغين (form Iq)\n# تُدَغْدِغِينَ (tudaḡdiḡīna) /tu.daɣ.di.ɣiː.na/: second-person feminine singular non-past active indicative of دَغْدَغَ (daḡdaḡa)\n# تُدَغْدَغِينَ (tudaḡdaḡīna) /tu.daɣ.da.ɣiː.na/: second-person feminine singular non-past passive indicative of دَغْدَغَ (daḡdaḡa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tudaḡdiḡīna", "daḡdaḡa", "tudaḡdaḡīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ندغدغ",
+      "tur": "verb",
+      "baslik": "ندغدغ (form Iq)\n# نُدَغْدِغُ (nudaḡdiḡu) /nu.daɣ.di.ɣu/: first-person plural non-past active indicative of دَغْدَغَ (daḡdaḡa)\n# نُدَغْدَغُ (nudaḡdaḡu) /nu.daɣ.da.ɣu/: first-person plural non-past passive indicative of دَغْدَغَ (daḡdaḡa)\n# نُدَغْدِغَ (nudaḡdiḡa) /nu.daɣ.di.ɣa/: first-person plural non-past active subjunctive of دَغْدَغَ (daḡdaḡa)\n# نُدَغْدَغَ (nudaḡdaḡa) /nu.daɣ.da.ɣa/: first-perso",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["nudaḡdiḡu", "daḡdaḡa", "nudaḡdaḡu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يدغدغان",
+      "tur": "verb",
+      "baslik": "يدغدغان (form Iq)\n# يُدَغْدِغَانِ (yudaḡdiḡāni) /ju.daɣ.di.ɣaː.ni/: third-person masculine dual non-past active indicative of دَغْدَغَ (daḡdaḡa)\n# يُدَغْدَغَانِ (yudaḡdaḡāni) /ju.daɣ.da.ɣaː.ni/: third-person masculine dual non-past passive indicative of دَغْدَغَ (daḡdaḡa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yudaḡdiḡāni", "daḡdaḡa", "yudaḡdaḡāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تدغدغون",
+      "tur": "verb",
+      "baslik": "تدغدغون (form Iq)\n# تُدَغْدِغُونَ (tudaḡdiḡūna) /tu.daɣ.di.ɣuː.na/: second-person masculine plural non-past active indicative of دَغْدَغَ (daḡdaḡa)\n# تُدَغْدَغُونَ (tudaḡdaḡūna) /tu.daɣ.da.ɣuː.na/: second-person masculine plural non-past passive indicative of دَغْدَغَ (daḡdaḡa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tudaḡdiḡūna", "daḡdaḡa", "tudaḡdaḡūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يدغدغ",
+      "tur": "verb",
+      "baslik": "يدغدغ (form Iq)\n# يُدَغْدِغُ (yudaḡdiḡu) /ju.daɣ.di.ɣu/: third-person masculine singular non-past active indicative of دَغْدَغَ (daḡdaḡa)\n# يُدَغْدَغُ (yudaḡdaḡu) /ju.daɣ.da.ɣu/: third-person masculine singular non-past passive indicative of دَغْدَغَ (daḡdaḡa)\n# يُدَغْدِغَ (yudaḡdiḡa) /ju.daɣ.di.ɣa/: third-person masculine singular non-past active subjunctive of دَغْدَغَ (daḡdaḡa)\n# يُدَغْدَغَ (yu",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yudaḡdiḡu", "daḡdaḡa", "yudaḡdaḡu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تدغدغن",
+      "tur": "verb",
+      "baslik": "تدغدغن (form Iq)\n# تُدَغْدِغْنَ (tudaḡdiḡna) /tu.daɣ.diɣ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of دَغْدَغَ (daḡdaḡa)\n# تُدَغْدَغْنَ (tudaḡdaḡna) /tu.daɣ.daɣ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of دَغْدَغَ (daḡdaḡa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tudaḡdiḡna", "daḡdaḡa", "tudaḡdaḡna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يدغدغون",
+      "tur": "verb",
+      "baslik": "يدغدغون (form Iq)\n# يُدَغْدِغُونَ (yudaḡdiḡūna) /ju.daɣ.di.ɣuː.na/: third-person masculine plural non-past active indicative of دَغْدَغَ (daḡdaḡa)\n# يُدَغْدَغُونَ (yudaḡdaḡūna) /ju.daɣ.da.ɣuː.na/: third-person masculine plural non-past passive indicative of دَغْدَغَ (daḡdaḡa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yudaḡdiḡūna", "daḡdaḡa", "yudaḡdaḡūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يدغدغن",
+      "tur": "verb",
+      "baslik": "يدغدغن (form Iq)\n# يُدَغْدِغْنَ (yudaḡdiḡna) /ju.daɣ.diɣ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of دَغْدَغَ (daḡdaḡa)\n# يُدَغْدَغْنَ (yudaḡdaḡna) /ju.daɣ.daɣ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of دَغْدَغَ (daḡdaḡa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yudaḡdiḡna", "daḡdaḡa", "yudaḡdaḡna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تدغدغا",
+      "tur": "verb",
+      "baslik": "تدغدغا (form Iq)\n# تُدَغْدِغَا (tudaḡdiḡā) /tu.daɣ.di.ɣaː/: inflection of دَغْدَغَ (daḡdaḡa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُدَغْدَغَا (tudaḡdaḡā) /tu.daɣ.da.ɣaː/: inflection of دَغْدَغَ (daḡdaḡa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tudaḡdiḡā", "daḡdaḡa", "tudaḡdaḡā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تدغدغان",
+      "tur": "verb",
+      "baslik": "تدغدغان (form Iq)\n# تُدَغْدِغَانِ (tudaḡdiḡāni) /tu.daɣ.di.ɣaː.ni/: inflection of دَغْدَغَ (daḡdaḡa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُدَغْدَغَانِ (tudaḡdaḡāni) /tu.daɣ.da.ɣaː.ni/: inflection of دَغْدَغَ (daḡdaḡa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tudaḡdiḡāni", "daḡdaḡa", "tudaḡdaḡāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تدغدغي",
+      "tur": "verb",
+      "baslik": "تدغدغي (form Iq)\n# تُدَغْدِغِي (tudaḡdiḡī) /tu.daɣ.di.ɣiː/: second-person feminine singular non-past active subjunctive/jussive of دَغْدَغَ (daḡdaḡa)\n# تُدَغْدَغِي (tudaḡdaḡī) /tu.daɣ.da.ɣiː/: second-person feminine singular non-past passive subjunctive/jussive of دَغْدَغَ (daḡdaḡa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tudaḡdiḡī", "daḡdaḡa", "tudaḡdaḡī"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يدغدغا",
+      "tur": "verb",
+      "baslik": "يدغدغا (form Iq)\n# يُدَغْدِغَا (yudaḡdiḡā) /ju.daɣ.di.ɣaː/: third-person masculine dual non-past active subjunctive/jussive of دَغْدَغَ (daḡdaḡa)\n# يُدَغْدَغَا (yudaḡdaḡā) /ju.daɣ.da.ɣaː/: third-person masculine dual non-past passive subjunctive/jussive of دَغْدَغَ (daḡdaḡa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yudaḡdiḡā", "daḡdaḡa", "yudaḡdaḡā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تدغدغوا",
+      "tur": "verb",
+      "baslik": "تدغدغوا (form Iq)\n# تُدَغْدِغُوا (tudaḡdiḡū) /tu.daɣ.di.ɣuː/: second-person masculine plural non-past active subjunctive/jussive of دَغْدَغَ (daḡdaḡa)\n# تُدَغْدَغُوا (tudaḡdaḡū) /tu.daɣ.da.ɣuː/: second-person masculine plural non-past passive subjunctive/jussive of دَغْدَغَ (daḡdaḡa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tudaḡdiḡū", "daḡdaḡa", "tudaḡdaḡū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يدغدغوا",
+      "tur": "verb",
+      "baslik": "يدغدغوا (form Iq)\n# يُدَغْدِغُوا (yudaḡdiḡū) /ju.daɣ.di.ɣuː/: third-person masculine plural non-past active subjunctive/jussive of دَغْدَغَ (daḡdaḡa)\n# يُدَغْدَغُوا (yudaḡdaḡū) /ju.daɣ.da.ɣuː/: third-person masculine plural non-past passive subjunctive/jussive of دَغْدَغَ (daḡdaḡa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yudaḡdiḡū", "daḡdaḡa", "yudaḡdaḡū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "دغدغي",
+      "tur": "verb",
+      "baslik": "دَغْدِغِي • (daḡdiḡī) (form Iq) /daɣ.di.ɣiː/\n# second-person feminine singular imperative of دَغْدَغَ (daḡdaḡa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["daḡdiḡī", "daḡdaḡa"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "دغدغ", "r6"]
+  ],
+  "mana": {
     "ince": "tickle.v.03",
     "orta": "verb.contact",
     "ust": "fiil ve hadise",
@@ -378,20 +277,8 @@
     "dayanak_tanim": "touch or stroke lightly",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["tickle.v.03"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 8,
       "merkez_kok": "سير",
@@ -411,6 +298,11 @@
       "boy": 15
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["tickle.v.03"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

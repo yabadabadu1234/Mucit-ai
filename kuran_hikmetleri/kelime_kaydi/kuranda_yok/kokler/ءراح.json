@@ -1,629 +1,494 @@
 {
   "kok": "ءراح",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءراح", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أريحا",
-        "u": "أريحا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أريحا (form IV)\n# أُرِيحَا (ʔurīḥā) /ʔu.riː.ħaː/: third-person masculine dual past passive of أَرَاحَ (ʔarāḥa)\n# أَرِيحَا (ʔarīḥā) /ʔa.riː.ħaː/: second-person dual imperative of أَرَاحَ (ʔarāḥa)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔurīḥā", "ʔarāḥa", "ʔarīḥā"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "يريح",
-        "u": "يريح",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يريح (form IV)\n# يُرِيحُ (yurīḥu) /ju.riː.ħu/: third-person masculine singular non-past active indicative of أَرَاحَ (ʔarāḥa)\n# يُرِيحَ (yurīḥa) /ju.riː.ħa/: third-person masculine singular non-past active subjunctive of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurīḥu", "ʔarāḥa", "yurīḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "يراح",
-        "u": "يراح",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يراح (form IV)\n# يُرَاحُ (yurāḥu) /ju.raː.ħu/: third-person masculine singular non-past passive indicative of أَرَاحَ (ʔarāḥa)\n# يُرَاحَ (yurāḥa) /ju.raː.ħa/: third-person masculine singular non-past passive subjunctive of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurāḥu", "ʔarāḥa", "yurāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "يرح",
-        "u": "يرح",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يرح (form IV)\n# يُرِحْ (yuriḥ) /ju.riħ/: third-person masculine singular non-past active jussive of أَرَاحَ (ʔarāḥa)\n# يُرَحْ (yuraḥ) /ju.raħ/: third-person masculine singular non-past passive jussive of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuriḥ", "ʔarāḥa", "yuraḥ"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "أريح",
-        "u": "أريح",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أريح (form IV)\n# أُرِيحَ (ʔurīḥa) /ʔu.riː.ħa/: inflection of أَرَاحَ (ʔarāḥa):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُرِيحُ (ʔurīḥu) /ʔu.riː.ħu/: first-person singular non-past active indicative of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔurīḥa", "ʔarāḥa", "ʔurīḥu"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "أراحت",
-        "u": "أراحت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَرَاحَتْ • (ʔarāḥat) (form IV) /ʔa.raː.ħat/\n# third-person feminine singular past active of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔarāḥat", "ʔarāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "تريح",
-        "u": "تريح",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تريح (form IV)\n# تُرِيحُ (turīḥu) /tu.riː.ħu/: inflection of أَرَاحَ (ʔarāḥa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُرِيحَ (turīḥa) /tu.riː.ħa/: inflection of أَرَاحَ (ʔarāḥa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turīḥu", "ʔarāḥa", "turīḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "ترح",
-        "u": "ترح",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ترح (form IV)\n# تُرِحْ (turiḥ) /tu.riħ/: inflection of أَرَاحَ (ʔarāḥa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُرَحْ (turaḥ) /tu.raħ/: inflection of أَرَاحَ (ʔarāḥa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turiḥ", "ʔarāḥa", "turaḥ"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "أريحت",
-        "u": "أريحت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُرِيحَتْ • (ʔurīḥat) (form IV) /ʔu.riː.ħat/\n# third-person feminine singular past passive of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔurīḥat", "ʔarāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "تراح",
-        "u": "تراح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تراح (form IV)\n# تُرَاحُ (turāḥu) /tu.raː.ħu/: inflection of أَرَاحَ (ʔarāḥa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُرَاحَ (turāḥa) /tu.raː.ħa/: inflection of أَرَاحَ (ʔarāḥa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turāḥu", "ʔarāḥa", "turāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "أرحت",
-        "u": "أرحت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أرحت (form IV)\n# أَرَحْتُ (ʔaraḥtu) /ʔa.raħ.tu/: first-person singular past active of أَرَاحَ (ʔarāḥa)\n# أَرَحْتَ (ʔaraḥta) /ʔa.raħ.ta/: second-person masculine singular past active of أَرَاحَ (ʔarāḥa)\n# أَرَحْتِ (ʔaraḥti) /ʔa.raħ.ti/: second-person feminine singular past active of أَرَاحَ (ʔarāḥa)\n# أُرِحْتُ (ʔuriḥtu) /ʔu.riħ.tu/: first-person singular past passive of أَرَاحَ (ʔarāḥa)\n# أُرِحْتَ ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaraḥtu", "ʔarāḥa", "ʔaraḥta"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "أرح",
-        "u": "أرح",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أرح (form IV)\n# أُرِحْ (ʔuriḥ) /ʔu.riħ/: first-person singular non-past active jussive of أَرَاحَ (ʔarāḥa)\n# أُرَحْ (ʔuraḥ) /ʔu.raħ/: first-person singular non-past passive jussive of أَرَاحَ (ʔarāḥa)\n# أَرِحْ (ʔariḥ) /ʔa.riħ/: second-person masculine singular imperative of أَرَاحَ (ʔarāḥa)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuriḥ", "ʔarāḥa", "ʔuraḥ"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "تريحين",
-        "u": "تريحين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُرِيحِينَ • (turīḥīna) (form IV) /tu.riː.ħiː.na/\n# second-person feminine singular non-past active indicative of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turīḥīna", "ʔarāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "تريحي",
-        "u": "تريحي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُرِيحِي • (turīḥī) (form IV) /tu.riː.ħiː/\n# second-person feminine singular non-past active subjunctive/jussive of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turīḥī", "ʔarāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "أريحي",
-        "u": "أريحي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَرِيحِي • (ʔarīḥī) (form IV) /ʔa.riː.ħiː/\n# second-person feminine singular imperative of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔarīḥī", "ʔarāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "تراحين",
-        "u": "تراحين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُرَاحِينَ • (turāḥīna) (form IV) /tu.raː.ħiː.na/\n# second-person feminine singular non-past passive indicative of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turāḥīna", "ʔarāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "تراحي",
-        "u": "تراحي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُرَاحِي • (turāḥī) (form IV) /tu.raː.ħiː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turāḥī", "ʔarāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "أرحنا",
-        "u": "أرحنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أرحنا (form IV)\n# أَرَحْنَا (ʔaraḥnā) /ʔa.raħ.naː/: first-person plural past active of أَرَاحَ (ʔarāḥa)\n# أُرِحْنَا (ʔuriḥnā) /ʔu.riħ.naː/: first-person plural past passive of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaraḥnā", "ʔarāḥa", "ʔuriḥnā"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "نريح",
-        "u": "نريح",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نريح (form IV)\n# نُرِيحُ (nurīḥu) /nu.riː.ħu/: first-person plural non-past active indicative of أَرَاحَ (ʔarāḥa)\n# نُرِيحَ (nurīḥa) /nu.riː.ħa/: first-person plural non-past active subjunctive of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nurīḥu", "ʔarāḥa", "nurīḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "نرح",
-        "u": "نرح",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نرح (form IV)\n# نُرِحْ (nuriḥ) /nu.riħ/: first-person plural non-past active jussive of أَرَاحَ (ʔarāḥa)\n# نُرَحْ (nuraḥ) /nu.raħ/: first-person plural non-past passive jussive of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuriḥ", "ʔarāḥa", "nuraḥ"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "نراح",
-        "u": "نراح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نراح (form IV)\n# نُرَاحُ (nurāḥu) /nu.raː.ħu/: first-person plural non-past passive indicative of أَرَاحَ (ʔarāḥa)\n# نُرَاحَ (nurāḥa) /nu.raː.ħa/: first-person plural non-past passive subjunctive of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nurāḥu", "ʔarāḥa", "nurāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "أرحتم",
-        "u": "أرحتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أرحتم (form IV)\n# أَرَحْتُمْ (ʔaraḥtum) /ʔa.raħ.tum/: second-person masculine plural past active of أَرَاحَ (ʔarāḥa)\n# أُرِحْتُمْ (ʔuriḥtum) /ʔu.riħ.tum/: second-person masculine plural past passive of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaraḥtum", "ʔarāḥa", "ʔuriḥtum"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "تريحون",
-        "u": "تريحون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُرِيحُونَ • (turīḥūna) (form IV) /tu.riː.ħuː.na/\n# second-person masculine plural non-past active indicative of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turīḥūna", "ʔarāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "تريحوا",
-        "u": "تريحوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُرِيحُوا • (turīḥū) (form IV) /tu.riː.ħuː/\n# second-person masculine plural non-past active subjunctive/jussive of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turīḥū", "ʔarāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "تراحون",
-        "u": "تراحون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُرَاحُونَ • (turāḥūna) (form IV) /tu.raː.ħuː.na/\n# second-person masculine plural non-past passive indicative of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turāḥūna", "ʔarāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "تراحوا",
-        "u": "تراحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُرَاحُوا • (turāḥū) (form IV) /tu.raː.ħuː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turāḥū", "ʔarāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "أراحوا",
-        "u": "أراحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَرَاحُوا • (ʔarāḥū) (form IV) /ʔa.raː.ħuː/\n# third-person masculine plural past active of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔarāḥū", "ʔarāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "يريحون",
-        "u": "يريحون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُرِيحُونَ • (yurīḥūna) (form IV) /ju.riː.ħuː.na/\n# third-person masculine plural non-past active indicative of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurīḥūna", "ʔarāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "يريحوا",
-        "u": "يريحوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُرِيحُوا • (yurīḥū) (form IV) /ju.riː.ħuː/\n# third-person masculine plural non-past active subjunctive/jussive of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurīḥū", "ʔarāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "أريحوا",
-        "u": "أريحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أريحوا (form IV)\n# أُرِيحُوا (ʔurīḥū) /ʔu.riː.ħuː/: third-person masculine plural past passive of أَرَاحَ (ʔarāḥa)\n# أَرِيحُوا (ʔarīḥū) /ʔa.riː.ħuː/: second-person masculine plural imperative of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔurīḥū", "ʔarāḥa", "ʔarīḥū"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "يراحون",
-        "u": "يراحون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُرَاحُونَ • (yurāḥūna) (form IV) /ju.raː.ħuː.na/\n# third-person masculine plural non-past passive indicative of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurāḥūna", "ʔarāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "يراحوا",
-        "u": "يراحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُرَاحُوا • (yurāḥū) (form IV) /ju.raː.ħuː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurāḥū", "ʔarāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "أرحتن",
-        "u": "أرحتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أرحتن (form IV)\n# أَرَحْتُنَّ (ʔaraḥtunna) /ʔa.raħ.tun.na/: second-person feminine plural past active of أَرَاحَ (ʔarāḥa)\n# أُرِحْتُنَّ (ʔuriḥtunna) /ʔu.riħ.tun.na/: second-person feminine plural past passive of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaraḥtunna", "ʔarāḥa", "ʔuriḥtunna"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "ترحن",
-        "u": "ترحن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ترحن (form IV)\n# تُرِحْنَ (turiḥna) /tu.riħ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَرَاحَ (ʔarāḥa)\n# تُرَحْنَ (turaḥna) /tu.raħ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turiḥna", "ʔarāḥa", "turaḥna"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "أرحن",
-        "u": "أرحن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أرحن (form IV)\n# أَرَحْنَ (ʔaraḥna) /ʔa.raħ.na/: third-person feminine plural past active of أَرَاحَ (ʔarāḥa)\n# أُرِحْنَ (ʔuriḥna) /ʔu.riħ.na/: third-person feminine plural past passive of أَرَاحَ (ʔarāḥa)\n# أَرِحْنَ (ʔariḥna) /ʔa.riħ.na/: second-person feminine plural imperative of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaraḥna", "ʔarāḥa", "ʔuriḥna"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "يرحن",
-        "u": "يرحن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يرحن (form IV)\n# يُرِحْنَ (yuriḥna) /ju.riħ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَرَاحَ (ʔarāḥa)\n# يُرَحْنَ (yuraḥna) /ju.raħ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuriḥna", "ʔarāḥa", "yuraḥna"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "أرحتما",
-        "u": "أرحتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أرحتما (form IV)\n# أَرَحْتُمَا (ʔaraḥtumā) /ʔa.raħ.tu.maː/: second-person dual past active of أَرَاحَ (ʔarāḥa)\n# أُرِحْتُمَا (ʔuriḥtumā) /ʔu.riħ.tu.maː/: second-person dual past passive of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaraḥtumā", "ʔarāḥa", "ʔuriḥtumā"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "أراحا",
-        "u": "أراحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَرَاحَا • (ʔarāḥā) (form IV) /ʔa.raː.ħaː/\n# third-person masculine dual past active of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔarāḥā", "ʔarāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "أراحتا",
-        "u": "أراحتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَرَاحَتَا • (ʔarāḥatā) (form IV) /ʔa.raː.ħa.taː/\n# third-person feminine dual past active of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔarāḥatā", "ʔarāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "تريحان",
-        "u": "تريحان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُرِيحَانِ • (turīḥāni) (form IV) /tu.riː.ħaː.ni/\n# inflection of أَرَاحَ (ʔarāḥa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turīḥāni", "ʔarāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "يريحان",
-        "u": "يريحان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُرِيحَانِ • (yurīḥāni) (form IV) /ju.riː.ħaː.ni/\n# third-person masculine dual non-past active indicative of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurīḥāni", "ʔarāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "أريحتا",
-        "u": "أريحتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُرِيحَتَا • (ʔurīḥatā) (form IV) /ʔu.riː.ħa.taː/\n# third-person feminine dual past passive of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔurīḥatā", "ʔarāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "يراحان",
-        "u": "يراحان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُرَاحَانِ • (yurāḥāni) (form IV) /ju.raː.ħaː.ni/\n# third-person masculine dual non-past passive indicative of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurāḥāni", "ʔarāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "تراحان",
-        "u": "تراحان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُرَاحَانِ • (turāḥāni) (form IV) /tu.raː.ħaː.ni/\n# inflection of أَرَاحَ (ʔarāḥa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turāḥāni", "ʔarāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "يريحا",
-        "u": "يريحا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُرِيحَا • (yurīḥā) (form IV) /ju.riː.ħaː/\n# third-person masculine dual non-past active subjunctive/jussive of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurīḥā", "ʔarāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "تراحا",
-        "u": "تراحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُرَاحَا • (turāḥā) (form IV) /tu.raː.ħaː/\n# inflection of أَرَاحَ (ʔarāḥa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turāḥā", "ʔarāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "تريحا",
-        "u": "تريحا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُرِيحَا • (turīḥā) (form IV) /tu.riː.ħaː/\n# inflection of أَرَاحَ (ʔarāḥa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["turīḥā", "ʔarāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      },
-      {
-        "w": "يراحا",
-        "u": "يراحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُرَاحَا • (yurāḥā) (form IV) /ju.raː.ħaː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَرَاحَ (ʔarāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yurāḥā", "ʔarāḥa"],
-        "k": "أراح",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "رح",
+  "ses": {
     "harf": "ء",
+    "fasil": "رح",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "أريحا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أريحا (form IV)\n# أُرِيحَا (ʔurīḥā) /ʔu.riː.ħaː/: third-person masculine dual past passive of أَرَاحَ (ʔarāḥa)\n# أَرِيحَا (ʔarīḥā) /ʔa.riː.ħaː/: second-person dual imperative of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔurīḥā", "ʔarāḥa", "ʔarīḥā"],
+      "kok_yazilis": "أراح"
+    },
+    {
+      "madde": "يريح",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يريح (form IV)\n# يُرِيحُ (yurīḥu) /ju.riː.ħu/: third-person masculine singular non-past active indicative of أَرَاحَ (ʔarāḥa)\n# يُرِيحَ (yurīḥa) /ju.riː.ħa/: third-person masculine singular non-past active subjunctive of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurīḥu", "ʔarāḥa", "yurīḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يراح",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يراح (form IV)\n# يُرَاحُ (yurāḥu) /ju.raː.ħu/: third-person masculine singular non-past passive indicative of أَرَاحَ (ʔarāḥa)\n# يُرَاحَ (yurāḥa) /ju.raː.ħa/: third-person masculine singular non-past passive subjunctive of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurāḥu", "ʔarāḥa", "yurāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يرح",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يرح (form IV)\n# يُرِحْ (yuriḥ) /ju.riħ/: third-person masculine singular non-past active jussive of أَرَاحَ (ʔarāḥa)\n# يُرَحْ (yuraḥ) /ju.raħ/: third-person masculine singular non-past passive jussive of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuriḥ", "ʔarāḥa", "yuraḥ"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أريح",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أريح (form IV)\n# أُرِيحَ (ʔurīḥa) /ʔu.riː.ħa/: inflection of أَرَاحَ (ʔarāḥa):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُرِيحُ (ʔurīḥu) /ʔu.riː.ħu/: first-person singular non-past active indicative of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔurīḥa", "ʔarāḥa", "ʔurīḥu"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أراحت",
+      "tur": "verb",
+      "baslik": "أَرَاحَتْ • (ʔarāḥat) (form IV) /ʔa.raː.ħat/\n# third-person feminine singular past active of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔarāḥat", "ʔarāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تريح",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تريح (form IV)\n# تُرِيحُ (turīḥu) /tu.riː.ħu/: inflection of أَرَاحَ (ʔarāḥa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُرِيحَ (turīḥa) /tu.riː.ħa/: inflection of أَرَاحَ (ʔarāḥa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turīḥu", "ʔarāḥa", "turīḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ترح",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ترح (form IV)\n# تُرِحْ (turiḥ) /tu.riħ/: inflection of أَرَاحَ (ʔarāḥa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُرَحْ (turaḥ) /tu.raħ/: inflection of أَرَاحَ (ʔarāḥa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turiḥ", "ʔarāḥa", "turaḥ"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أريحت",
+      "tur": "verb",
+      "baslik": "أُرِيحَتْ • (ʔurīḥat) (form IV) /ʔu.riː.ħat/\n# third-person feminine singular past passive of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔurīḥat", "ʔarāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تراح",
+      "tur": "verb",
+      "baslik": "تراح (form IV)\n# تُرَاحُ (turāḥu) /tu.raː.ħu/: inflection of أَرَاحَ (ʔarāḥa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُرَاحَ (turāḥa) /tu.raː.ħa/: inflection of أَرَاحَ (ʔarāḥa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turāḥu", "ʔarāḥa", "turāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أرحت",
+      "tur": "verb",
+      "baslik": "أرحت (form IV)\n# أَرَحْتُ (ʔaraḥtu) /ʔa.raħ.tu/: first-person singular past active of أَرَاحَ (ʔarāḥa)\n# أَرَحْتَ (ʔaraḥta) /ʔa.raħ.ta/: second-person masculine singular past active of أَرَاحَ (ʔarāḥa)\n# أَرَحْتِ (ʔaraḥti) /ʔa.raħ.ti/: second-person feminine singular past active of أَرَاحَ (ʔarāḥa)\n# أُرِحْتُ (ʔuriḥtu) /ʔu.riħ.tu/: first-person singular past passive of أَرَاحَ (ʔarāḥa)\n# أُرِحْتَ ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaraḥtu", "ʔarāḥa", "ʔaraḥta"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أرح",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أرح (form IV)\n# أُرِحْ (ʔuriḥ) /ʔu.riħ/: first-person singular non-past active jussive of أَرَاحَ (ʔarāḥa)\n# أُرَحْ (ʔuraḥ) /ʔu.raħ/: first-person singular non-past passive jussive of أَرَاحَ (ʔarāḥa)\n# أَرِحْ (ʔariḥ) /ʔa.riħ/: second-person masculine singular imperative of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuriḥ", "ʔarāḥa", "ʔuraḥ"],
+      "kok_yazilis": "أراح"
+    },
+    {
+      "madde": "تريحين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُرِيحِينَ • (turīḥīna) (form IV) /tu.riː.ħiː.na/\n# second-person feminine singular non-past active indicative of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turīḥīna", "ʔarāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تريحي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُرِيحِي • (turīḥī) (form IV) /tu.riː.ħiː/\n# second-person feminine singular non-past active subjunctive/jussive of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turīḥī", "ʔarāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أريحي",
+      "tur": "verb",
+      "baslik": "أَرِيحِي • (ʔarīḥī) (form IV) /ʔa.riː.ħiː/\n# second-person feminine singular imperative of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔarīḥī", "ʔarāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تراحين",
+      "tur": "verb",
+      "baslik": "تُرَاحِينَ • (turāḥīna) (form IV) /tu.raː.ħiː.na/\n# second-person feminine singular non-past passive indicative of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turāḥīna", "ʔarāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تراحي",
+      "tur": "verb",
+      "baslik": "تُرَاحِي • (turāḥī) (form IV) /tu.raː.ħiː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turāḥī", "ʔarāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أرحنا",
+      "tur": "verb",
+      "baslik": "أرحنا (form IV)\n# أَرَحْنَا (ʔaraḥnā) /ʔa.raħ.naː/: first-person plural past active of أَرَاحَ (ʔarāḥa)\n# أُرِحْنَا (ʔuriḥnā) /ʔu.riħ.naː/: first-person plural past passive of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaraḥnā", "ʔarāḥa", "ʔuriḥnā"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نريح",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نريح (form IV)\n# نُرِيحُ (nurīḥu) /nu.riː.ħu/: first-person plural non-past active indicative of أَرَاحَ (ʔarāḥa)\n# نُرِيحَ (nurīḥa) /nu.riː.ħa/: first-person plural non-past active subjunctive of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nurīḥu", "ʔarāḥa", "nurīḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نرح",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نرح (form IV)\n# نُرِحْ (nuriḥ) /nu.riħ/: first-person plural non-past active jussive of أَرَاحَ (ʔarāḥa)\n# نُرَحْ (nuraḥ) /nu.raħ/: first-person plural non-past passive jussive of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuriḥ", "ʔarāḥa", "nuraḥ"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نراح",
+      "tur": "verb",
+      "baslik": "نراح (form IV)\n# نُرَاحُ (nurāḥu) /nu.raː.ħu/: first-person plural non-past passive indicative of أَرَاحَ (ʔarāḥa)\n# نُرَاحَ (nurāḥa) /nu.raː.ħa/: first-person plural non-past passive subjunctive of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nurāḥu", "ʔarāḥa", "nurāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أرحتم",
+      "tur": "verb",
+      "baslik": "أرحتم (form IV)\n# أَرَحْتُمْ (ʔaraḥtum) /ʔa.raħ.tum/: second-person masculine plural past active of أَرَاحَ (ʔarāḥa)\n# أُرِحْتُمْ (ʔuriḥtum) /ʔu.riħ.tum/: second-person masculine plural past passive of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaraḥtum", "ʔarāḥa", "ʔuriḥtum"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تريحون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُرِيحُونَ • (turīḥūna) (form IV) /tu.riː.ħuː.na/\n# second-person masculine plural non-past active indicative of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turīḥūna", "ʔarāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تريحوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُرِيحُوا • (turīḥū) (form IV) /tu.riː.ħuː/\n# second-person masculine plural non-past active subjunctive/jussive of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turīḥū", "ʔarāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تراحون",
+      "tur": "verb",
+      "baslik": "تُرَاحُونَ • (turāḥūna) (form IV) /tu.raː.ħuː.na/\n# second-person masculine plural non-past passive indicative of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turāḥūna", "ʔarāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تراحوا",
+      "tur": "verb",
+      "baslik": "تُرَاحُوا • (turāḥū) (form IV) /tu.raː.ħuː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turāḥū", "ʔarāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أراحوا",
+      "tur": "verb",
+      "baslik": "أَرَاحُوا • (ʔarāḥū) (form IV) /ʔa.raː.ħuː/\n# third-person masculine plural past active of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔarāḥū", "ʔarāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يريحون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُرِيحُونَ • (yurīḥūna) (form IV) /ju.riː.ħuː.na/\n# third-person masculine plural non-past active indicative of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurīḥūna", "ʔarāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يريحوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُرِيحُوا • (yurīḥū) (form IV) /ju.riː.ħuː/\n# third-person masculine plural non-past active subjunctive/jussive of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurīḥū", "ʔarāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أريحوا",
+      "tur": "verb",
+      "baslik": "أريحوا (form IV)\n# أُرِيحُوا (ʔurīḥū) /ʔu.riː.ħuː/: third-person masculine plural past passive of أَرَاحَ (ʔarāḥa)\n# أَرِيحُوا (ʔarīḥū) /ʔa.riː.ħuː/: second-person masculine plural imperative of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔurīḥū", "ʔarāḥa", "ʔarīḥū"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يراحون",
+      "tur": "verb",
+      "baslik": "يُرَاحُونَ • (yurāḥūna) (form IV) /ju.raː.ħuː.na/\n# third-person masculine plural non-past passive indicative of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurāḥūna", "ʔarāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يراحوا",
+      "tur": "verb",
+      "baslik": "يُرَاحُوا • (yurāḥū) (form IV) /ju.raː.ħuː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurāḥū", "ʔarāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أرحتن",
+      "tur": "verb",
+      "baslik": "أرحتن (form IV)\n# أَرَحْتُنَّ (ʔaraḥtunna) /ʔa.raħ.tun.na/: second-person feminine plural past active of أَرَاحَ (ʔarāḥa)\n# أُرِحْتُنَّ (ʔuriḥtunna) /ʔu.riħ.tun.na/: second-person feminine plural past passive of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaraḥtunna", "ʔarāḥa", "ʔuriḥtunna"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ترحن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ترحن (form IV)\n# تُرِحْنَ (turiḥna) /tu.riħ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَرَاحَ (ʔarāḥa)\n# تُرَحْنَ (turaḥna) /tu.raħ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turiḥna", "ʔarāḥa", "turaḥna"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أرحن",
+      "tur": "verb",
+      "baslik": "أرحن (form IV)\n# أَرَحْنَ (ʔaraḥna) /ʔa.raħ.na/: third-person feminine plural past active of أَرَاحَ (ʔarāḥa)\n# أُرِحْنَ (ʔuriḥna) /ʔu.riħ.na/: third-person feminine plural past passive of أَرَاحَ (ʔarāḥa)\n# أَرِحْنَ (ʔariḥna) /ʔa.riħ.na/: second-person feminine plural imperative of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaraḥna", "ʔarāḥa", "ʔuriḥna"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يرحن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يرحن (form IV)\n# يُرِحْنَ (yuriḥna) /ju.riħ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَرَاحَ (ʔarāḥa)\n# يُرَحْنَ (yuraḥna) /ju.raħ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuriḥna", "ʔarāḥa", "yuraḥna"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أرحتما",
+      "tur": "verb",
+      "baslik": "أرحتما (form IV)\n# أَرَحْتُمَا (ʔaraḥtumā) /ʔa.raħ.tu.maː/: second-person dual past active of أَرَاحَ (ʔarāḥa)\n# أُرِحْتُمَا (ʔuriḥtumā) /ʔu.riħ.tu.maː/: second-person dual past passive of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaraḥtumā", "ʔarāḥa", "ʔuriḥtumā"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أراحا",
+      "tur": "verb",
+      "baslik": "أَرَاحَا • (ʔarāḥā) (form IV) /ʔa.raː.ħaː/\n# third-person masculine dual past active of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔarāḥā", "ʔarāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أراحتا",
+      "tur": "verb",
+      "baslik": "أَرَاحَتَا • (ʔarāḥatā) (form IV) /ʔa.raː.ħa.taː/\n# third-person feminine dual past active of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔarāḥatā", "ʔarāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تريحان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُرِيحَانِ • (turīḥāni) (form IV) /tu.riː.ħaː.ni/\n# inflection of أَرَاحَ (ʔarāḥa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turīḥāni", "ʔarāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يريحان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُرِيحَانِ • (yurīḥāni) (form IV) /ju.riː.ħaː.ni/\n# third-person masculine dual non-past active indicative of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurīḥāni", "ʔarāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أريحتا",
+      "tur": "verb",
+      "baslik": "أُرِيحَتَا • (ʔurīḥatā) (form IV) /ʔu.riː.ħa.taː/\n# third-person feminine dual past passive of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔurīḥatā", "ʔarāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يراحان",
+      "tur": "verb",
+      "baslik": "يُرَاحَانِ • (yurāḥāni) (form IV) /ju.raː.ħaː.ni/\n# third-person masculine dual non-past passive indicative of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurāḥāni", "ʔarāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تراحان",
+      "tur": "verb",
+      "baslik": "تُرَاحَانِ • (turāḥāni) (form IV) /tu.raː.ħaː.ni/\n# inflection of أَرَاحَ (ʔarāḥa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turāḥāni", "ʔarāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يريحا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُرِيحَا • (yurīḥā) (form IV) /ju.riː.ħaː/\n# third-person masculine dual non-past active subjunctive/jussive of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurīḥā", "ʔarāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تراحا",
+      "tur": "verb",
+      "baslik": "تُرَاحَا • (turāḥā) (form IV) /tu.raː.ħaː/\n# inflection of أَرَاحَ (ʔarāḥa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turāḥā", "ʔarāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تريحا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُرِيحَا • (turīḥā) (form IV) /tu.riː.ħaː/\n# inflection of أَرَاحَ (ʔarāḥa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["turīḥā", "ʔarāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يراحا",
+      "tur": "verb",
+      "baslik": "يُرَاحَا • (yurāḥā) (form IV) /ju.raː.ħaː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَرَاحَ (ʔarāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yurāḥā", "ʔarāḥa"],
+      "kok_yazilis": "أراح",
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ءراح", "r6"]
+  ],
+  "mana": {
     "ince": "location.n.01",
     "orta": "noun.location",
     "ust": "ölçü, mekân ve zaman",
@@ -631,22 +496,15 @@
     "dayanak_tanim": "a village in Palestine near the north end of the Dead Sea; in the Old Testament it was the first place taken by the Israelites under Joshua as they entered the Promised Land",
     "synset_sayisi": 2
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["feeling.n.01", "region.n.03"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["feeling.n.01", "region.n.03"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

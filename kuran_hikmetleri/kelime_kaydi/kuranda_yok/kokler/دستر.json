@@ -1,310 +1,253 @@
 {
   "kok": "دستر",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "دستر", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "etymarab": {
-      "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
-      "latin": "DSTR",
-      "dolu": true,
-      "kok_maddesi": "Back to library EtymArab DSTR دستر BP – • HDAL • © SG | 15Feb2021 √DSTR “root” ▪ DSTR_1 ‘statute(s), constitution’ ↗ dustūr ▪ DSTR_2 ‘…’ ↗ … ▪ … – ▪ … ▪ … ▪ … ▪ … – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
-      "kelime_maddeleri": []
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "دستور",
-        "u": "دستور",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "دُسْتُور • (dustūr) m (plural دُسْتُورَات (dustūrāt) or دَسَاتِير (dasātīr))",
-        "t": "Etymology tree\nProto-Indo-European *ǵʰes-der.\nProto-Indo-Iranian *ȷ́ʰástas\nOld Persian 𐎭𐎿𐎫 (d-s-t)\nMiddle Persian 𐭩𐭣𐭤 (ydh)\nClassical Persian دَسْت (dast)?\nClassical Persian دَسْتُور (dastūr)bor.\nArabic دستور\nBorrowed from Classical Persian دَسْتُور (dastūr). First attested in 767.",
-        "s": [
-          ["ar-rootbox", ""],
-          [
-            "etymon",
-            "Etymology tree\nProto-Indo-European *ǵʰes-der.\nProto-Indo-Iranian *ȷ́ʰástas\nOld Persian 𐎭𐎿𐎫 (d-s-t)\nMiddle Persian 𐭩𐭣𐭤 (ydh)\nClassical Persian دَسْت (dast)?\nClassical Persian دَسْتُور (dastūr)bor.\nArab"
-          ],
-          [
-            "etymon",
-            "Etymology tree\nProto-Indo-European *ǵʰes-der.\nProto-Indo-Iranian *ȷ́ʰástas\nOld Persian 𐎭𐎿𐎫 (d-s-t)\nMiddle Persian 𐭩𐭣𐭤 (ydh)\nClassical Persian دَسْت (dast)?\nClassical Persian دَسْتُور (dastūr)bor.\nArab"
-          ]
-        ],
-        "g": ["constitution", "rule, guideline", "set of rules", "action rule", "model"],
-        "r": ["dustūr"],
-        "ipa": ["/dus.tuːr/", "/dɪsˈtuːr/", "/dɪsˈtoːr/"],
-        "ds": [
-          ["ota", "دستور", "düstur"],
-          ["sw", "desturi", ""]
-        ],
-        "el": [
-          ["*ǵʰes-", "Reconstruction:Proto-Indo-European/ǵʰes-#Proto-Indo-European:_hand"],
-          ["*ȷ́ʰástas", "Reconstruction:Proto-Indo-Iranian/ȷ́ʰástas#Proto-Indo-Iranian:_hand"],
-          ["𐎭𐎿𐎫", "𐎭𐎿𐎫#Old_Persian:_hand"],
-          ["𐭩𐭣𐭤", "𐭩𐭣𐭤#Middle_Persian:_hand"],
-          ["دَسْت", "دست#Persian:_hand"],
-          ["دَسْتُور", "دستور#Persian:_command"],
-          ["دَسْتُور", "دستور#Persian:_command"]
-        ],
-        "k": "دستر",
-        "yol": "kök"
-      },
-      {
-        "w": "دستوري",
-        "u": "دستوري",
-        "p": "adj",
-        "h": "ar-adj+",
-        "e": "دُسْتُورِيّ • (dustūriyy) (feminine دُسْتُورِيَّة (dustūriyya), masculine plural دُسْتُورِيُّون (dustūriyyūn), feminine plural دُسْتُورِيَّات (dustūriyyāt))",
-        "t": "Etymology tree\nProto-Indo-European *ǵʰes-der.\nProto-Indo-Iranian *ȷ́ʰástas\nOld Persian 𐎭𐎿𐎫 (d-s-t)\nMiddle Persian 𐭩𐭣𐭤 (ydh)\nClassical Persian دَسْت (dast)?\nClassical Persian دَسْتُور (dastūr)bor.\nArabic دُسْتُور (dustūr)\nProto-Afroasiatic\nProto-Semitic\nArabic ـِيّ (-iyy)\nArabic دستوري\nFrom دُسْتُور (dustūr, “constitution”) + ـِيّ (-iyy).",
-        "s": [
-          ["ar-rootbox", ""]
-        ],
-        "g": ["constitutional"],
-        "r": ["dustūriyy"],
-        "ipa": ["/dus.tuː.rijj/"],
-        "el": [
-          ["*ǵʰes-", "Reconstruction:Proto-Indo-European/ǵʰes-#Proto-Indo-European:_hand"],
-          ["*ȷ́ʰástas", "Reconstruction:Proto-Indo-Iranian/ȷ́ʰástas#Proto-Indo-Iranian:_hand"],
-          ["𐎭𐎿𐎫", "𐎭𐎿𐎫#Old_Persian:_hand"],
-          ["𐭩𐭣𐭤", "𐭩𐭣𐭤#Middle_Persian:_hand"],
-          ["دَسْت", "دست#Persian:_hand"],
-          ["دَسْتُور", "دستور#Persian:_command"],
-          ["دُسْتُور", "دستور#Arabic"],
-          ["ـِيّ", "ي#Arabic:_nisba"],
-          ["constitution", "constitution"],
-          ["دُسْتُور", "دستور#Arabic"],
-          ["constitution", "constitution"],
-          ["ـِيّ", "ي#Arabic:_nisba"]
-        ],
-        "k": "دستر",
-        "yol": "kök"
-      },
-      {
-        "w": "دستوري",
-        "u": "دستوري",
-        "p": "noun",
-        "h": "ar-noun+",
-        "e": "دُسْتُورِيّ • (dustūriyy) m (plural دُسْتُورِيُّون (dustūriyyūn), feminine دُسْتُورِيَّة (dustūriyya))",
-        "t": "Etymology tree\nProto-Indo-European *ǵʰes-der.\nProto-Indo-Iranian *ȷ́ʰástas\nOld Persian 𐎭𐎿𐎫 (d-s-t)\nMiddle Persian 𐭩𐭣𐭤 (ydh)\nClassical Persian دَسْت (dast)?\nClassical Persian دَسْتُور (dastūr)bor.\nArabic دُسْتُور (dustūr)\nProto-Afroasiatic\nProto-Semitic\nArabic ـِيّ (-iyy)\nArabic دستوري\nFrom دُسْتُور (dustūr, “constitution”) + ـِيّ (-iyy).",
-        "s": [
-          ["ar-rootbox", ""]
-        ],
-        "g": ["constitutionalist"],
-        "r": ["dustūriyy"],
-        "ipa": ["/dus.tuː.rijj/"],
-        "el": [
-          ["*ǵʰes-", "Reconstruction:Proto-Indo-European/ǵʰes-#Proto-Indo-European:_hand"],
-          ["*ȷ́ʰástas", "Reconstruction:Proto-Indo-Iranian/ȷ́ʰástas#Proto-Indo-Iranian:_hand"],
-          ["𐎭𐎿𐎫", "𐎭𐎿𐎫#Old_Persian:_hand"],
-          ["𐭩𐭣𐭤", "𐭩𐭣𐭤#Middle_Persian:_hand"],
-          ["دَسْت", "دست#Persian:_hand"],
-          ["دَسْتُور", "دستور#Persian:_command"],
-          ["دُسْتُور", "دستور#Arabic"],
-          ["ـِيّ", "ي#Arabic:_nisba"],
-          ["constitution", "constitution"],
-          ["دُسْتُور", "دستور#Arabic"],
-          ["constitution", "constitution"],
-          ["ـِيّ", "ي#Arabic:_nisba"]
-        ],
-        "k": "دستر",
-        "yol": "kök"
-      },
-      {
-        "w": "دساتير",
-        "u": "دساتير",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "دَسَاتِير • (dasātīr) m pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of دُسْتُور (dustūr)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["دُسْتُور"],
-        "r": ["dasātīr"],
-        "ipa": ["/da.saː.tiːr/"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "دستورية",
-        "u": "دستورية",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "دُسْتُورِيَّة • (dustūriyya) f",
-        "t": "Etymology tree\nArabic دُسْتُورِيّ (dustūriyy)\nProto-Afroasiatic *-t\nProto-Semitic *-at-\nArabic ـَة (-a)\nArabic دستورية\nRelative noun (nisba) composed of دُسْتُورِيّ (dustūriyy, “constitutional”) + ـَة (-a)",
-        "s": [
-          ["ar-rootbox", ""],
-          ["suffix", "دُسْتُورِيّ (dustūriyy, “constitutional”) + ـَة (-a)"],
-          ["ar-etym-nisba-a", "Relative noun (nisba) composed of دُسْتُورِيّ (dustūriyy, “constitutional”) + ـَة (-a)"]
-        ],
-        "g": ["constitutionality"],
-        "r": ["dustūriyya"],
-        "el": [
-          ["دُسْتُورِيّ", "دستوري#Arabic"],
-          ["*-t", "Reconstruction:Proto-Afroasiatic/-t#Proto-Afroasiatic:_feminine"],
-          ["*-at-", "Reconstruction:Proto-Semitic/-at-#Proto-Semitic:_feminine"],
-          ["ـَة", "ة#Arabic:_feminine"],
-          ["دُسْتُورِيّ", "دستوري#Arabic"],
-          ["constitutional", "constitutional"],
-          ["ـَة", "ة#Arabic"]
-        ],
-        "k": "دستر",
-        "yol": "kök"
-      },
-      {
-        "w": "دستورية",
-        "u": "دستورية",
-        "p": "noun",
-        "h": "ar-noun+",
-        "e": "دُسْتُورِيَّة • (dustūriyya) f (plural دُسْتُورِيَّات (dustūriyyāt), masculine دُسْتُورِيّ (dustūriyy))",
-        "t": "Etymology tree\nArabic دُسْتُورِيّ (dustūriyy)\nProto-Afroasiatic *-t\nProto-Semitic *-at-\nArabic ـَة (-a)\nArabic دستورية\nRelative noun (nisba) composed of دُسْتُورِيّ (dustūriyy, “constitutional”) + ـَة (-a)",
-        "s": [
-          ["ar-rootbox", ""],
-          ["suffix", "دُسْتُورِيّ (dustūriyy, “constitutional”) + ـَة (-a)"],
-          ["ar-etym-nisba-a", "Relative noun (nisba) composed of دُسْتُورِيّ (dustūriyy, “constitutional”) + ـَة (-a)"]
-        ],
-        "g": ["female equivalent of دُسْتُورِيّ m (dustūriyy, “constitutionalist”)"],
-        "tag": ["feminine", "form-of"],
-        "fo": ["دُسْتُورِيّ m"],
-        "r": ["dustūriyya"],
-        "el": [
-          ["دُسْتُورِيّ", "دستوري#Arabic"],
-          ["*-t", "Reconstruction:Proto-Afroasiatic/-t#Proto-Afroasiatic:_feminine"],
-          ["*-at-", "Reconstruction:Proto-Semitic/-at-#Proto-Semitic:_feminine"],
-          ["ـَة", "ة#Arabic:_feminine"],
-          ["دُسْتُورِيّ", "دستوري#Arabic"],
-          ["constitutional", "constitutional"],
-          ["ـَة", "ة#Arabic"]
-        ],
-        "k": "دستر",
-        "yol": "kök"
-      },
-      {
-        "w": "دستورية",
-        "u": "دستورية",
-        "p": "adj",
-        "h": "ar-head",
-        "e": "دُسْتُورِيَّة • (dustūriyya) f",
-        "t": "Etymology tree\nArabic دُسْتُورِيّ (dustūriyy)\nProto-Afroasiatic *-t\nProto-Semitic *-at-\nArabic ـَة (-a)\nArabic دستورية\nRelative noun (nisba) composed of دُسْتُورِيّ (dustūriyy, “constitutional”) + ـَة (-a)",
-        "s": [
-          ["ar-rootbox", ""],
-          ["suffix", "دُسْتُورِيّ (dustūriyy, “constitutional”) + ـَة (-a)"],
-          ["ar-etym-nisba-a", "Relative noun (nisba) composed of دُسْتُورِيّ (dustūriyy, “constitutional”) + ـَة (-a)"]
-        ],
-        "g": ["feminine singular of دُسْتُورِيّ m (dustūriyy, “constitutional”)"],
-        "tag": ["feminine", "form-of", "singular"],
-        "fo": ["دُسْتُورِيّ m"],
-        "r": ["dustūriyya"],
-        "el": [
-          ["دُسْتُورِيّ", "دستوري#Arabic"],
-          ["*-t", "Reconstruction:Proto-Afroasiatic/-t#Proto-Afroasiatic:_feminine"],
-          ["*-at-", "Reconstruction:Proto-Semitic/-at-#Proto-Semitic:_feminine"],
-          ["ـَة", "ة#Arabic:_feminine"],
-          ["دُسْتُورِيّ", "دستوري#Arabic"],
-          ["constitutional", "constitutional"],
-          ["ـَة", "ة#Arabic"]
-        ],
-        "k": "دستر",
-        "yol": "kök"
-      },
-      {
-        "w": "دستوريون",
-        "u": "دستوريون",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "دُسْتُورِيُّون • (dustūriyyūn) m pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of دُسْتُورِيّ (dustūriyy)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["دُسْتُورِيّ"],
-        "r": ["dustūriyyūn"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "دستوريون",
-        "u": "دستوريون",
-        "p": "adj",
-        "h": "ar-head",
-        "e": "دُسْتُورِيُّون • (dustūriyyūn)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["masculine plural of دُسْتُورِيّ (dustūriyy)"],
-        "tag": ["form-of", "masculine", "plural"],
-        "fo": ["دُسْتُورِيّ"],
-        "r": ["dustūriyyūn"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "دستوريات",
-        "u": "دستوريات",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "دُسْتُورِيَّات • (dustūriyyāt) f pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of دُسْتُورِيَّة (dustūriyya)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["دُسْتُورِيَّة"],
-        "r": ["dustūriyyāt"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "دستر",
-        "u": "دستر",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "دَسْتَرَ • (dastara) Iq (non-past يُدَسْتِرُ (yudastiru), verbal noun دَسْتَرَة (dastara))",
-        "t": "Etymology tree\nProto-Indo-European *ǵʰes-der.\nProto-Indo-Iranian *ȷ́ʰástas\nOld Persian 𐎭𐎿𐎫 (d-s-t)\nMiddle Persian 𐭩𐭣𐭤 (ydh)\nClassical Persian دَسْت (dast)?\nClassical Persian دَسْتُور (dastūr)bor.\nArabic دُسْتُور (dustūr)denom.\nArabic دستر\nDenominal verb from دُسْتُور (dustūr, “constitution”). First attested in 2016.",
-        "s": [
-          ["ar-rootbox", ""]
-        ],
-        "g": ["to constitutionalize"],
-        "r": ["dastara"],
-        "ipa": ["/das.ta.ra/"],
-        "el": [
-          ["*ǵʰes-", "Reconstruction:Proto-Indo-European/ǵʰes-#Proto-Indo-European:_hand"],
-          ["*ȷ́ʰástas", "Reconstruction:Proto-Indo-Iranian/ȷ́ʰástas#Proto-Indo-Iranian:_hand"],
-          ["𐎭𐎿𐎫", "𐎭𐎿𐎫#Old_Persian:_hand"],
-          ["𐭩𐭣𐭤", "𐭩𐭣𐭤#Middle_Persian:_hand"],
-          ["دَسْت", "دست#Persian:_hand"],
-          ["دَسْتُور", "دستور#Persian:_command"],
-          ["دُسْتُور", "دستور#Arabic:_command"],
-          ["دُسْتُور", "دستور#Arabic:_command"]
-        ],
-        "k": "دستر",
-        "yol": "kök"
-      },
-      {
-        "w": "يدستر",
-        "u": "يدستر",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يدستر (form Iq)\n# يُدَسْتِرُ (yudastiru) /ju.das.ti.ru/: third-person masculine singular non-past active indicative of دَسْتَرَ (dastara)\n# يُدَسْتَرُ (yudastaru) /ju.das.ta.ru/: third-person masculine singular non-past passive indicative of دَسْتَرَ (dastara)\n# يُدَسْتِرَ (yudastira) /ju.das.ti.ra/: third-person masculine singular non-past active subjunctive of دَسْتَرَ (dastara)\n# يُدَسْتَرَ (yu",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yudastiru", "dastara", "yudastaru"],
-        "k": "دستر",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "دس",
+  "ses": {
     "harf": "د",
+    "fasil": "دس",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "دستور",
+      "tur": "noun",
+      "baslik": "دُسْتُور • (dustūr) m (plural دُسْتُورَات (dustūrāt) or دَسَاتِير (dasātīr))",
+      "etim_sablon": [
+        ["ar-rootbox", ""],
+        [
+          "etymon",
+          "Etymology tree\nProto-Indo-European *ǵʰes-der.\nProto-Indo-Iranian *ȷ́ʰástas\nOld Persian 𐎭𐎿𐎫 (d-s-t)\nMiddle Persian 𐭩𐭣𐭤 (ydh)\nClassical Persian دَسْت (dast)?\nClassical Persian دَسْتُور (dastūr)bor.\nArab"
+        ],
+        [
+          "etymon",
+          "Etymology tree\nProto-Indo-European *ǵʰes-der.\nProto-Indo-Iranian *ȷ́ʰástas\nOld Persian 𐎭𐎿𐎫 (d-s-t)\nMiddle Persian 𐭩𐭣𐭤 (ydh)\nClassical Persian دَسْت (dast)?\nClassical Persian دَسْتُور (dastūr)bor.\nArab"
+        ]
+      ],
+      "anlam": ["constitution", "rule, guideline", "set of rules", "action rule", "model"],
+      "okunus": ["dustūr"],
+      "ipa": ["/dus.tuːr/", "/dɪsˈtuːr/", "/dɪsˈtoːr/"],
+      "torunlar": [
+        ["ota", "دستور", "düstur"],
+        ["sw", "desturi", ""]
+      ],
+      "etimoloji": 0
+    },
+    {
+      "madde": "دستوري",
+      "tur": "adj",
+      "baslik": "دُسْتُورِيّ • (dustūriyy) (feminine دُسْتُورِيَّة (dustūriyya), masculine plural دُسْتُورِيُّون (dustūriyyūn), feminine plural دُسْتُورِيَّات (dustūriyyāt))",
+      "etim_sablon": [
+        ["ar-rootbox", ""]
+      ],
+      "anlam": ["constitutional"],
+      "okunus": ["dustūriyy"],
+      "ipa": ["/dus.tuː.rijj/"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "دستوري",
+      "tur": "noun",
+      "baslik": "دُسْتُورِيّ • (dustūriyy) m (plural دُسْتُورِيُّون (dustūriyyūn), feminine دُسْتُورِيَّة (dustūriyya))",
+      "etim_sablon": [
+        ["ar-rootbox", ""]
+      ],
+      "anlam": ["constitutionalist"],
+      "okunus": ["dustūriyy"],
+      "ipa": ["/dus.tuː.rijj/"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "دساتير",
+      "tur": "noun",
+      "baslik": "دَسَاتِير • (dasātīr) m pl",
+      "anlam": ["plural of دُسْتُور (dustūr)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["دُسْتُور"],
+      "okunus": ["dasātīr"],
+      "ipa": ["/da.saː.tiːr/"],
+      "bag": "asıl madde",
+      "etimoloji": 2
+    },
+    {
+      "madde": "دستورية",
+      "tur": "noun",
+      "baslik": "دُسْتُورِيَّة • (dustūriyya) f",
+      "etim_sablon": [
+        ["ar-rootbox", ""],
+        ["suffix", "دُسْتُورِيّ (dustūriyy, “constitutional”) + ـَة (-a)"],
+        ["ar-etym-nisba-a", "Relative noun (nisba) composed of دُسْتُورِيّ (dustūriyy, “constitutional”) + ـَة (-a)"]
+      ],
+      "anlam": ["constitutionality"],
+      "okunus": ["dustūriyya"],
+      "etimoloji": 3
+    },
+    {
+      "madde": "دستورية",
+      "tur": "noun",
+      "baslik": "دُسْتُورِيَّة • (dustūriyya) f (plural دُسْتُورِيَّات (dustūriyyāt), masculine دُسْتُورِيّ (dustūriyy))",
+      "etim_sablon": [
+        ["ar-rootbox", ""],
+        ["suffix", "دُسْتُورِيّ (dustūriyy, “constitutional”) + ـَة (-a)"],
+        ["ar-etym-nisba-a", "Relative noun (nisba) composed of دُسْتُورِيّ (dustūriyy, “constitutional”) + ـَة (-a)"]
+      ],
+      "anlam": ["female equivalent of دُسْتُورِيّ m (dustūriyy, “constitutionalist”)"],
+      "etiket": ["feminine", "form-of"],
+      "form_of": ["دُسْتُورِيّ m"],
+      "okunus": ["dustūriyya"],
+      "etimoloji": 3
+    },
+    {
+      "madde": "دستورية",
+      "tur": "adj",
+      "baslik": "دُسْتُورِيَّة • (dustūriyya) f",
+      "etim_sablon": [
+        ["ar-rootbox", ""],
+        ["suffix", "دُسْتُورِيّ (dustūriyy, “constitutional”) + ـَة (-a)"],
+        ["ar-etym-nisba-a", "Relative noun (nisba) composed of دُسْتُورِيّ (dustūriyy, “constitutional”) + ـَة (-a)"]
+      ],
+      "anlam": ["feminine singular of دُسْتُورِيّ m (dustūriyy, “constitutional”)"],
+      "etiket": ["feminine", "form-of", "singular"],
+      "form_of": ["دُسْتُورِيّ m"],
+      "okunus": ["dustūriyya"],
+      "etimoloji": 3
+    },
+    {
+      "madde": "دستوريون",
+      "tur": "noun",
+      "baslik": "دُسْتُورِيُّون • (dustūriyyūn) m pl",
+      "anlam": ["plural of دُسْتُورِيّ (dustūriyy)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["دُسْتُورِيّ"],
+      "okunus": ["dustūriyyūn"],
+      "bag": "asıl madde",
+      "etimoloji": 2
+    },
+    {
+      "madde": "دستوريون",
+      "tur": "adj",
+      "baslik": "دُسْتُورِيُّون • (dustūriyyūn)",
+      "anlam": ["masculine plural of دُسْتُورِيّ (dustūriyy)"],
+      "etiket": ["form-of", "masculine", "plural"],
+      "form_of": ["دُسْتُورِيّ"],
+      "okunus": ["dustūriyyūn"],
+      "bag": "asıl madde",
+      "etimoloji": 2
+    },
+    {
+      "madde": "دستوريات",
+      "tur": "noun",
+      "baslik": "دُسْتُورِيَّات • (dustūriyyāt) f pl",
+      "anlam": ["plural of دُسْتُورِيَّة (dustūriyya)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["دُسْتُورِيَّة"],
+      "okunus": ["dustūriyyāt"],
+      "bag": "asıl madde",
+      "etimoloji": 2
+    },
+    {
+      "madde": "دستر",
+      "tur": "verb",
+      "baslik": "دَسْتَرَ • (dastara) Iq (non-past يُدَسْتِرُ (yudastiru), verbal noun دَسْتَرَة (dastara))",
+      "etim_sablon": [
+        ["ar-rootbox", ""]
+      ],
+      "anlam": ["to constitutionalize"],
+      "okunus": ["dastara"],
+      "ipa": ["/das.ta.ra/"],
+      "etimoloji": 4
+    },
+    {
+      "madde": "يدستر",
+      "tur": "verb",
+      "baslik": "يدستر (form Iq)\n# يُدَسْتِرُ (yudastiru) /ju.das.ti.ru/: third-person masculine singular non-past active indicative of دَسْتَرَ (dastara)\n# يُدَسْتَرُ (yudastaru) /ju.das.ta.ru/: third-person masculine singular non-past passive indicative of دَسْتَرَ (dastara)\n# يُدَسْتِرَ (yudastira) /ju.das.ti.ra/: third-person masculine singular non-past active subjunctive of دَسْتَرَ (dastara)\n# يُدَسْتَرَ (yu",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yudastiru", "dastara", "yudastaru"],
+      "etimoloji": 2
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "Etymology tree\nProto-Indo-European *ǵʰes-der.\nProto-Indo-Iranian *ȷ́ʰástas\nOld Persian 𐎭𐎿𐎫 (d-s-t)\nMiddle Persian 𐭩𐭣𐭤 (ydh)\nClassical Persian دَسْت (dast)?\nClassical Persian دَسْتُور (dastūr)bor.\nArabic دستور\nBorrowed from Classical Persian دَسْتُور (dastūr). First attested in 767.",
+      "kognatlar": [
+        ["*ǵʰes-", "Reconstruction:Proto-Indo-European/ǵʰes-#Proto-Indo-European:_hand"],
+        ["*ȷ́ʰástas", "Reconstruction:Proto-Indo-Iranian/ȷ́ʰástas#Proto-Indo-Iranian:_hand"],
+        ["𐎭𐎿𐎫", "𐎭𐎿𐎫#Old_Persian:_hand"],
+        ["𐭩𐭣𐭤", "𐭩𐭣𐭤#Middle_Persian:_hand"],
+        ["دَسْت", "دست#Persian:_hand"],
+        ["دَسْتُور", "دستور#Persian:_command"],
+        ["دَسْتُور", "دستور#Persian:_command"]
+      ]
+    },
+    {
+      "metin": "Etymology tree\nProto-Indo-European *ǵʰes-der.\nProto-Indo-Iranian *ȷ́ʰástas\nOld Persian 𐎭𐎿𐎫 (d-s-t)\nMiddle Persian 𐭩𐭣𐭤 (ydh)\nClassical Persian دَسْت (dast)?\nClassical Persian دَسْتُور (dastūr)bor.\nArabic دُسْتُور (dustūr)\nProto-Afroasiatic\nProto-Semitic\nArabic ـِيّ (-iyy)\nArabic دستوري\nFrom دُسْتُور (dustūr, “constitution”) + ـِيّ (-iyy).",
+      "kognatlar": [
+        ["*ǵʰes-", "Reconstruction:Proto-Indo-European/ǵʰes-#Proto-Indo-European:_hand"],
+        ["*ȷ́ʰástas", "Reconstruction:Proto-Indo-Iranian/ȷ́ʰástas#Proto-Indo-Iranian:_hand"],
+        ["𐎭𐎿𐎫", "𐎭𐎿𐎫#Old_Persian:_hand"],
+        ["𐭩𐭣𐭤", "𐭩𐭣𐭤#Middle_Persian:_hand"],
+        ["دَسْت", "دست#Persian:_hand"],
+        ["دَسْتُور", "دستور#Persian:_command"],
+        ["دُسْتُور", "دستور#Arabic"],
+        ["ـِيّ", "ي#Arabic:_nisba"],
+        ["constitution", "constitution"],
+        ["دُسْتُور", "دستور#Arabic"],
+        ["constitution", "constitution"],
+        ["ـِيّ", "ي#Arabic:_nisba"]
+      ]
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "Etymology tree\nArabic دُسْتُورِيّ (dustūriyy)\nProto-Afroasiatic *-t\nProto-Semitic *-at-\nArabic ـَة (-a)\nArabic دستورية\nRelative noun (nisba) composed of دُسْتُورِيّ (dustūriyy, “constitutional”) + ـَة (-a)",
+      "kognatlar": [
+        ["دُسْتُورِيّ", "دستوري#Arabic"],
+        ["*-t", "Reconstruction:Proto-Afroasiatic/-t#Proto-Afroasiatic:_feminine"],
+        ["*-at-", "Reconstruction:Proto-Semitic/-at-#Proto-Semitic:_feminine"],
+        ["ـَة", "ة#Arabic:_feminine"],
+        ["دُسْتُورِيّ", "دستوري#Arabic"],
+        ["constitutional", "constitutional"],
+        ["ـَة", "ة#Arabic"]
+      ]
+    },
+    {
+      "metin": "Etymology tree\nProto-Indo-European *ǵʰes-der.\nProto-Indo-Iranian *ȷ́ʰástas\nOld Persian 𐎭𐎿𐎫 (d-s-t)\nMiddle Persian 𐭩𐭣𐭤 (ydh)\nClassical Persian دَسْت (dast)?\nClassical Persian دَسْتُور (dastūr)bor.\nArabic دُسْتُور (dustūr)denom.\nArabic دستر\nDenominal verb from دُسْتُور (dustūr, “constitution”). First attested in 2016.",
+      "kognatlar": [
+        ["*ǵʰes-", "Reconstruction:Proto-Indo-European/ǵʰes-#Proto-Indo-European:_hand"],
+        ["*ȷ́ʰástas", "Reconstruction:Proto-Indo-Iranian/ȷ́ʰástas#Proto-Indo-Iranian:_hand"],
+        ["𐎭𐎿𐎫", "𐎭𐎿𐎫#Old_Persian:_hand"],
+        ["𐭩𐭣𐭤", "𐭩𐭣𐭤#Middle_Persian:_hand"],
+        ["دَسْت", "دست#Persian:_hand"],
+        ["دَسْتُور", "دستور#Persian:_command"],
+        ["دُسْتُور", "دستور#Arabic:_command"],
+        ["دُسْتُور", "دستور#Arabic:_command"]
+      ]
+    }
+  ],
+  "etymarab": {
+    "latin": "DSTR",
+    "kok_maddesi": "Back to library EtymArab DSTR دستر BP – • HDAL • © SG | 15Feb2021 √DSTR “root” ▪ DSTR_1 ‘statute(s), constitution’ ↗ dustūr ▪ DSTR_2 ‘…’ ↗ … ▪ … – ▪ … ▪ … ▪ … ▪ … – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
+    "kelime_maddeleri": []
+  },
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "دستر", "r6"]
+  ],
+  "mana": {
     "ince": "written_communication.n.01",
     "orta": "noun.communication",
     "ust": "söz ve haber",
@@ -312,20 +255,8 @@
     "dayanak_tanim": "law determining the fundamental political principles of a government",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["writing.n.02"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 8,
       "merkez_kok": "سير",
@@ -345,6 +276,11 @@
       "boy": 6
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["writing.n.02"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,959 +1,685 @@
 {
   "kok": "وفى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "وفى", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "mekayis": [
-      {
-        "baslik": "وَفَى",
-        "metin": "(وَفَى) الْوَاوُ وَالْفَاءُ وَالْحَرْفُ الْمُعْتَلُّ: كَلِمَةٌ تَدُلُّ عَلَى إِكْمَالٍ وَإِتْمَامٍ. مِنْهُ الْوَفَاءُ: إِتْمَامُ الْعَهْدِ وَإِكْمَالُ الشَّرْطِ. وَوَفَى: أَوْفَى، فَهُوَ وَفِيٌّ. وَيَقُولُونَ: أَوْفَيْتُكَ الشَّيْءَ، إِذَا قَضَيْتَهُ إِيَّاهُ وَافِيًا. وَتَوَفَّيْتُ الشَّيْءَ وَاسْتَوْفَيْتُهُ ; [إِذَا أَخَذْتَهُ كُلَّهُ] حَتَّى لَمْ تَتْرُكْ مِنْهُ شَيْئًا. وَمِنْهُ يُقَالُ لِلْمَيِّتِ: تَوَفَّاهُ اللَّهُ."
-      }
-    ],
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الغين والنون",
-      "baslik": "وفى",
-      "mihveri": "نمو أو زيادة يبلغ بها الشيء -أو يتأكد- تمام قوامه: كنتوء الشرف من الأرض (زيادة امتلاء)، وطبخُ الآجُرّ إنضاج يجعله صُلبا لا يذوب؛ فيكون البناء به قويا متينا وطبخ الخبز يصلحه للأكل ويبقيه أمدا. والميفاء آلته. ونمو الريش والشعر والشفاه زيادة للتمام، ووفاء الكيل امتلاء للتمام {وَأَوْفُوا الْكَيْلَ إِذَا كِلْتُمْ} [الإسراء: 35]، {الَّذِينَ إِذَا اكْتَالُوا عَلَى النَّاسِ يَسْتَوْفُونَ} [المطففين: 2]. والتمام المادي إلى حدّ الزيادة واضح في الاستعمالين، وهو متحقق بالصور المناسبة في غيرهما: (أ) كل (وفّى) ومضارعها للفاعل والمفعول، والصفة (مُوَفّوهم)، (الأوفى). {وَإِبْرَاهِيمَ الَّذِي وَفَّى} [النجم: 37] لم يذكر متعلق التوفية ليتناول كل ما يصلح أن يكون متعلقًا كتبليغ الرسالة والصبر على ذبح ولده. . [ينظر بحر 8/ 164] أي أن الوفاء هنا هو أداء ما يقتضيه حاله مع اللَّه تمامًا. {مَنْ كَانَ يُرِيدُ الْحَيَاةَ الدُّنْيَا وَزِينَتَهَا نُوَفِّ إِلَيْهِمْ أَعْمَالَهُمْ فِيهَا} [هود: 15]، أي أن اللَّه يجازيه على حسن أعماله/ يطعمه في الدنيا بحسناته [بحر 5/ 210]. {فَوَفَّاهُ حِسَابَهُ} [النور: 39] أي حساب عمله أي جازاه عليه [نفسه 6/ 423]. (3/1616) (ب) كل (أوفى) ماضيها ومضارعها، وطلبها، واسم الفاعل (المُوفون) والتفضيل (أوفى) وهنّ للكيل، وبالباء للعهد والنذر وما إليهما: {وَأَوْفُوا بِعَهْدِي أُوفِ بِعَهْدِكُمْ} [البقرة: 40] المعنى طلب الإيفاء بما التزموه للَّه تعالى، وترتيب إنجاز ما وعدهم به (سماه) عهدًا على سبيل المقابلة، أو إبرازًا لما تفضل به تعالى في صورة المشروط الملتزَم به، فتتوافر الدواعي على الإ",
-      "sesler": "",
-      "tam_metin": "{لِيُوَفِّيَهُمْ أُجُورَهُمْ وَيَزِيدَهُمْ مِنْ فَضْلِهِ} [فاطر: 30]\n\"الوَفْى -بالفتح، والوَفَى -بالقصر: الشَرَف من الأرض. والمِيفَاء: بيت يُطْبخ فيه الآجُرّ، وإرَةٌ (: موضع للنار) تُوَسَّع للخبز، وطَبَقُ التَنُّور [ق]. وقد وَفَى الشَعَرُ وكذا ربش الجناح: زَاد. وفي الحديث \"كلما قُرِضَتْ (شفاههم) وَفَتْ \"أي نَمَتْ وَطَالَت. ووَفَى الكيلُ: تَمَّ/ لم يَنْقص \".\n° المعنى المحوري\nنمو أو زيادة يبلغ بها الشيء -أو يتأكد- تمام قوامه: كنتوء الشرف من الأرض (زيادة امتلاء)، وطبخُ الآجُرّ إنضاج يجعله صُلبا لا يذوب؛ فيكون البناء به قويا متينا وطبخ الخبز يصلحه للأكل ويبقيه أمدا. والميفاء آلته. ونمو الريش والشعر والشفاه زيادة للتمام، ووفاء الكيل امتلاء للتمام {وَأَوْفُوا الْكَيْلَ إِذَا كِلْتُمْ} [الإسراء: 35]، {الَّذِينَ إِذَا اكْتَالُوا عَلَى النَّاسِ يَسْتَوْفُونَ} [المطففين: 2]. والتمام المادي إلى حدّ الزيادة واضح في الاستعمالين، وهو متحقق بالصور المناسبة في غيرهما:\n(أ) كل (وفّى) ومضارعها للفاعل والمفعول، والصفة (مُوَفّوهم)، (الأوفى). {وَإِبْرَاهِيمَ الَّذِي وَفَّى} [النجم: 37] لم يذكر متعلق التوفية ليتناول كل ما يصلح أن يكون متعلقًا كتبليغ الرسالة والصبر على ذبح ولده. . [ينظر بحر 8/ 164] أي أن الوفاء هنا هو أداء ما يقتضيه حاله مع اللَّه تمامًا. {مَنْ كَانَ يُرِيدُ الْحَيَاةَ الدُّنْيَا وَزِينَتَهَا نُوَفِّ إِلَيْهِمْ أَعْمَالَهُمْ فِيهَا} [هود: 15]، أي أن اللَّه يجازيه على حسن أعماله/ يطعمه في الدنيا بحسناته [بحر 5/ 210]. {فَوَفَّاهُ حِسَابَهُ} [النور: 39] أي حساب عمله أي جازاه عليه [نفسه 6/ 423].\n(3/1616)\n(ب) كل (أوفى) ماضيها ومضارعها، وطلبها، واسم الفاعل (المُوفون) والتفضيل (أوفى) وهنّ للكيل، وبالباء للعهد والنذر وما إليهما: {وَأَوْفُوا بِعَهْدِي أُوفِ بِعَهْدِكُمْ} [البقرة: 40] المعنى طلب الإيفاء بما التزموه للَّه تعالى، وترتيب إنجاز ما وعدهم به (سماه) عهدًا على سبيل المقابلة، أو إبرازًا لما تفضل به تعالى في صورة المشروط الملتزَم به، فتتوافر الدواعي على الإيفاء بعهد اللَّه [بحر 1/ 330].\n(ج) (تَوفى) ماضيا ومضارعا للفاعل والمفعول وطلبا واسم فاعل: {إِنَّ الَّذِينَ تَوَفَّاهُمُ الْمَلَائِكَةُ} [النساء: 97] (أصلها تتوفاهم) التوفي: استيفاء الأرواح أي استعادة اللَّه تعالى إياها [ينظر بحر 3/ 348]. {إِنِّي مُتَوَفِّيكَ وَرَافِعُكَ إِلَيَّ} [آل عمران: 55] هي وفاة يوم رَفَعه اللَّه في منامه، أو وفاة موت دائم، أو مؤقت، أو في آخر عمره المعتاد، أو في آخر أمره بعد نزوله وقتله الدجال [ينظر بحر 2/ 497]. {اللَّهُ يَتَوَفَّى الْأَنْفُسَ حِينَ مَوْتِهَا} [الزمر: 42].\nو\"الموافاة: أن توافي إنسانًا في موعد أو مكان \"- فهذا اجتماع به أي تجمع فهو من الزيادة أو بلوغ المكان.\nوقولهم \"أوفى على الشيء: أشرف عليه \"هو من النمو أي التقدم نحو التمام، أو من الصعود على وَفّى أي شرف كما قال: {أنادي إذا أُوفِى من الأرض مَرْبأ}\nأي إذا أُشرِفُ وأَصْعَد على مَرْبأ.",
-      "fasil_ozeti": "° معنى الفصل المعجمي (غن) : هو وجود لطيف في الحوزة: كما في الروضة الغنّاء سواء من الشجر والعشب، ومن النسيم العليل والمختلط بصوت حفيف الريح في الشجر -في (غنن)، وكوفرة المحتاج إليه من مال ومتاع، وما تتميز به حنجرة المغني من صوت رخيم -في (غنى)، وكالغُنْم والغَنَم في الحوزة مع ما ذكرنا من سعة جدواها مع يسر مئونتها -في (غنم). * * *"
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "في",
-        "u": "في",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "فِي • (fī) (form I) /fiː/\n# second-person feminine singular imperative of وَفَى (wafā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["fī", "wafā"],
-        "ipa": ["/fiː/"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "ف",
-        "u": "ف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فِ • (fi) (form I) /fi/\n# second-person masculine singular imperative of وَفَى (wafā)",
-        "t": "From the Nabataean letter 𐢘 (p, “pē”), derived from the Phoenician letter 𐤐 (p, “pē”), from the Egyptian hieroglyph 𓂋. See also Classical Syriac ܦ (p, “pē”), Hebrew פ (p, “pe”), Ancient Greek Π (P), Latin P.",
-        "s": [
-          ["der", "Phoenician"],
-          ["der", "Egyptian"],
-          ["m+", "Classical Syriac ܦ (p, “pē”)"],
-          ["m+", "Hebrew פ (p, “pe”)"],
-          ["m+", "Ancient Greek Π (P)"],
-          ["m+", "Latin P"]
-        ],
-        "tag": ["form-i", "no-gloss"],
-        "r": ["fi", "wafā"],
-        "ipa": ["/f/"],
-        "el": [
-          ["𐢘", "𐢘#Aramaic"],
-          ["𐤐", "𐤐#Phoenician"],
-          ["𓂋", "𓂋#Egyptian"],
-          ["ܦ", "ܦ#Classical_Syriac"],
-          ["פ", "פ#Hebrew"],
-          ["Π", "Π#Ancient_Greek"],
-          ["P", "P#Latin"]
-        ],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "فين",
-        "u": "فين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فِينَ • (fīna) (form I) /fiː.na/\n# second-person feminine plural imperative of وَفَى (wafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["fīna", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "تف",
-        "u": "تف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَفِ • (tafi) (form I) /ta.fi/\n# inflection of وَفَى (wafā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tafi", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "نفي",
-        "u": "نفي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نفي (form I)\n# نَفِي (nafī) /na.fiː/: first-person plural non-past active indicative of وَفَى (wafā)\n# نَفِيَ (nafiya) /na.fi.ja/: first-person plural non-past active subjunctive of وَفَى (wafā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nafī", "wafā", "nafiya"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "توفي",
-        "u": "توفي",
-        "p": "verb",
-        "n": "1.3",
-        "h": "ar-verb form",
-        "e": "توفي (form II)\n# تُوَفِّي (tuwaffī) /tu.waf.fiː/: inflection of وَفَّى (waffā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُوَفِّيَ (tuwaffiya) /tu.waf.fi.ja/: inflection of وَفَّى (waffā):\n## second-person masculine singular non-past active sub",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaffī", "waffā", "tuwaffiya"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "أوفى",
-        "u": "أوفى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أُوَفَّى • (ʔuwaffā) (form II) /ʔu.waf.faː/\n# first-person singular non-past passive indicative/subjunctive of وَفَّى (waffā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuwaffā", "waffā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "توفى",
-        "u": "توفى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُوَفَّى • (tuwaffā) (form II) /tu.waf.faː/\n# inflection of وَفَّى (waffā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaffā", "waffā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "توف",
-        "u": "توف",
-        "p": "verb",
-        "n": "1.2",
-        "h": "ar-verb form",
-        "e": "توف (form II)\n# تُوَفِّ (tuwaffi) /tu.waf.fi/: inflection of وَفَّى (waffā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُوَفَّ (tuwaffa) /tu.waf.fa/: inflection of وَفَّى (waffā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaffi", "waffā", "tuwaffa"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوفي",
-        "u": "يوفي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يوفي (form II)\n# يُوَفِّي (yuwaffī) /ju.waf.fiː/: third-person masculine singular non-past active indicative of وَفَّى (waffā)\n# يُوَفِّيَ (yuwaffiya) /ju.waf.fi.ja/: third-person masculine singular non-past active subjunctive of وَفَّى (waffā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaffī", "waffā", "yuwaffiya"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوفى",
-        "u": "يوفى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُوفَى • (yūfā) (form I) /juː.faː/\n# third-person masculine singular non-past passive indicative/subjunctive of وَفَى (wafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yūfā", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوفى",
-        "u": "يوفى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُوَفَّى • (yuwaffā) (form II) /ju.waf.faː/\n# third-person masculine singular non-past passive indicative/subjunctive of وَفَّى (waffā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaffā", "waffā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "يفي",
-        "u": "يفي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يفي (form I)\n# يَفِي (yafī) /ja.fiː/: third-person masculine singular non-past active indicative of وَفَى (wafā)\n# يَفِيَ (yafiya) /ja.fi.ja/: third-person masculine singular non-past active subjunctive of وَفَى (wafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yafī", "wafā", "yafiya"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوف",
-        "u": "يوف",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُوفَ • (yūfa) (form I) /juː.fa/\n# third-person masculine singular non-past passive jussive of وَفَى (wafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yūfa", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوف",
-        "u": "يوف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يوف (form II)\n# يُوَفِّ (yuwaffi) /ju.waf.fi/: third-person masculine singular non-past active jussive of وَفَّى (waffā)\n# يُوَفَّ (yuwaffa) /ju.waf.fa/: third-person masculine singular non-past passive jussive of وَفَّى (waffā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaffi", "waffā", "yuwaffa"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "أوفي",
-        "u": "أوفي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أوفي (form II)\n# أُوَفِّي (ʔuwaffī) /ʔu.waf.fiː/: first-person singular non-past active indicative of وَفَّى (waffā)\n# أُوَفِّيَ (ʔuwaffiya) /ʔu.waf.fi.ja/: first-person singular non-past active subjunctive of وَفَّى (waffā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuwaffī", "waffā", "ʔuwaffiya"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "يف",
-        "u": "يف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَفِ • (yafi) (form I) /ja.fi/\n# third-person masculine singular non-past active jussive of وَفَى (wafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yafi", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "وفي",
-        "u": "وفي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وُفِيَ • (wufiya) (form I) /wu.fi.ja/\n# third-person masculine singular past passive of وَفَى (wafā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wufiya", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "وفي",
-        "u": "وفي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "وفي (form II)\n# وُفِّيَ (wuffiya) /wuf.fi.ja/: third-person masculine singular past passive of وَفَّى (waffā)\n# وَفِّي (waffī) /waf.fiː/: second-person feminine singular imperative of وَفَّى (waffā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["wuffiya", "waffā", "waffī"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "أوف",
-        "u": "أوف",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أوف (form II)\n# أُوَفِّ (ʔuwaffi) /ʔu.waf.fi/: first-person singular non-past active jussive of وَفَّى (waffā)\n# أُوَفَّ (ʔuwaffa) /ʔu.waf.fa/: first-person singular non-past passive jussive of وَفَّى (waffā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuwaffi", "waffā", "ʔuwaffa"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "توفين",
-        "u": "توفين",
-        "p": "verb",
-        "n": "1.1",
-        "h": "ar-verb form",
-        "e": "توفين (form II)\n# تُوَفِّينَ (tuwaffīna) /tu.waf.fiː.na/: inflection of وَفَّى (waffā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُوَفَّيْنَ (tuwaffayna) /tu.waf.faj.na/: inflection of وَفَّى (waffā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plur",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaffīna", "waffā", "tuwaffayna"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "وفت",
-        "u": "وفت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وَفَتْ • (wafat) (form I) /wa.fat/\n# third-person feminine singular past active of وَفَى (wafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wafat", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "وفت",
-        "u": "وفت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وَفَّتْ • (waffat) (form II) /waf.fat/\n# third-person feminine singular past active of وَفَّى (waffā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waffat", "waffā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "تفي",
-        "u": "تفي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تفي (form I)\n# تَفِي (tafī) /ta.fiː/: inflection of وَفَى (wafā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَفِيَ (tafiya) /ta.fi.ja/: inflection of وَفَى (wafā):\n## second-person masculine singular non-past active subjunctive\n## third-person f",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tafī", "wafā", "tafiya"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "وفيت",
-        "u": "وفيت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وفيت (form I)\n# وَفَيْتُ (wafaytu) /wa.faj.tu/: first-person singular past active of وَفَى (wafā)\n# وَفَيْتَ (wafayta) /wa.faj.ta/: second-person masculine singular past active of وَفَى (wafā)\n# وَفَيْتِ (wafayti) /wa.faj.ti/: second-person feminine singular past active of وَفَى (wafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wafaytu", "wafā", "wafayta"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "وفيت",
-        "u": "وفيت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وفيت (form II)\n# وَفَّيْتُ (waffaytu) /waf.faj.tu/: first-person singular past active of وَفَّى (waffā)\n# وَفَّيْتَ (waffayta) /waf.faj.ta/: second-person masculine singular past active of وَفَّى (waffā)\n# وَفَّيْتِ (waffayti) /waf.faj.ti/: second-person feminine singular past active of وَفَّى (waffā)\n# وُفِّيتُ (wuffītu) /wuf.fiː.tu/: first-person singular past passive of وَفَّى (waffā)\n# وُفِّيت",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waffaytu", "waffā", "waffayta"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "وف",
-        "u": "وف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وَفِّ • (waffi) (form II) /waf.fi/\n# second-person masculine singular imperative of وَفَّى (waffā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waffi", "waffā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "تفين",
-        "u": "تفين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَفِينَ • (tafīna) (form I) /ta.fiː.na/\n# inflection of وَفَى (wafā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tafīna", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "أفي",
-        "u": "أفي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أفي (form I)\n# أَفِي (ʔafī) /ʔa.fiː/: first-person singular non-past active indicative of وَفَى (wafā)\n# أَفِيَ (ʔafiya) /ʔa.fi.ja/: first-person singular non-past active subjunctive of وَفَى (wafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔafī", "wafā", "ʔafiya"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "أف",
-        "u": "أف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَفِ • (ʔafi) (form I) /ʔa.fi/\n# first-person singular non-past active jussive of وَفَى (wafā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔafi", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوفي",
-        "u": "نوفي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نوفي (form II)\n# نُوَفِّي (nuwaffī) /nu.waf.fiː/: first-person plural non-past active indicative of وَفَّى (waffā)\n# نُوَفِّيَ (nuwaffiya) /nu.waf.fi.ja/: first-person plural non-past active subjunctive of وَفَّى (waffā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuwaffī", "waffā", "nuwaffiya"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوف",
-        "u": "نوف",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نوف (form II)\n# نُوَفِّ (nuwaffi) /nu.waf.fi/: first-person plural non-past active jussive of وَفَّى (waffā)\n# نُوَفَّ (nuwaffa) /nu.waf.fa/: first-person plural non-past passive jussive of وَفَّى (waffā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuwaffi", "waffā", "nuwaffa"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوفى",
-        "u": "نوفى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نُوَفَّى • (nuwaffā) (form II) /nu.waf.faː/\n# first-person plural non-past passive indicative/subjunctive of وَفَّى (waffā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuwaffā", "waffā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "وفينا",
-        "u": "وفينا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وَفَيْنَا • (wafaynā) (form I) /wa.faj.naː/\n# first-person plural past active of وَفَى (wafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wafaynā", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "وفينا",
-        "u": "وفينا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وفينا (form II)\n# وَفَّيْنَا (waffaynā) /waf.faj.naː/: first-person plural past active of وَفَّى (waffā)\n# وُفِّينَا (wuffīnā) /wuf.fiː.naː/: first-person plural past passive of وَفَّى (waffā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waffaynā", "waffā", "wuffīnā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "نف",
-        "u": "نف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نَفِ • (nafi) (form I) /na.fi/\n# first-person plural non-past active jussive of وَفَى (wafā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nafi", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "توفون",
-        "u": "توفون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "توفون (form II)\n# تُوَفُّونَ (tuwaffūna) /tu.waf.fuː.na/: second-person masculine plural non-past active indicative of وَفَّى (waffā)\n# تُوَفَّوْنَ (tuwaffawna) /tu.waf.faw.na/: second-person masculine plural non-past passive indicative of وَفَّى (waffā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaffūna", "waffā", "tuwaffawna"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "توفوا",
-        "u": "توفوا",
-        "p": "verb",
-        "n": "1.1",
-        "h": "ar-verb form",
-        "e": "توفوا (form II)\n# تُوَفُّوا (tuwaffū) /tu.waf.fuː/: second-person masculine plural non-past active subjunctive/jussive of وَفَّى (waffā)\n# تُوَفَّوْا (tuwaffaw) /tu.waf.faw/: second-person masculine plural non-past passive subjunctive/jussive of وَفَّى (waffā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaffū", "waffā", "tuwaffaw"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "وفيتم",
-        "u": "وفيتم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وَفَيْتُمْ • (wafaytum) (form I) /wa.faj.tum/\n# second-person masculine plural past active of وَفَى (wafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wafaytum", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "وفيتم",
-        "u": "وفيتم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وفيتم (form II)\n# وَفَّيْتُمْ (waffaytum) /waf.faj.tum/: second-person masculine plural past active of وَفَّى (waffā)\n# وُفِّيتُمْ (wuffītum) /wuf.fiː.tum/: second-person masculine plural past passive of وَفَّى (waffā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waffaytum", "waffā", "wuffītum"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "تفون",
-        "u": "تفون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَفُونَ • (tafūna) (form I) /ta.fuː.na/\n# second-person masculine plural non-past active indicative of وَفَى (wafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tafūna", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "تفوا",
-        "u": "تفوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَفُوا • (tafū) (form I) /ta.fuː/\n# second-person masculine plural non-past active subjunctive/jussive of وَفَى (wafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tafū", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "فوا",
-        "u": "فوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فُوا • (fū) (form I) /fuː/\n# second-person masculine plural imperative of وَفَى (wafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["fū", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "وفوا",
-        "u": "وفوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وَفَوْا • (wafaw) (form I) /wa.faw/\n# third-person masculine plural past active of وَفَى (wafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wafaw", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "وفوا",
-        "u": "وفوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وفوا (form II)\n# وَفَّوْا (waffaw) /waf.faw/: third-person masculine plural past active of وَفَّى (waffā)\n# وُفُّوا (wuffū) /wuf.fuː/: third-person masculine plural past passive of وَفَّى (waffā)\n# وَفُّوا (waffū) /waf.fuː/: second-person masculine plural imperative of وَفَّى (waffā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waffaw", "waffā", "wuffū"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوفون",
-        "u": "يوفون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يوفون (form II)\n# يُوَفُّونَ (yuwaffūna) /ju.waf.fuː.na/: third-person masculine plural non-past active indicative of وَفَّى (waffā)\n# يُوَفَّوْنَ (yuwaffawna) /ju.waf.faw.na/: third-person masculine plural non-past passive indicative of وَفَّى (waffā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaffūna", "waffā", "yuwaffawna"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوفوا",
-        "u": "يوفوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يوفوا (form II)\n# يُوَفُّوا (yuwaffū) /ju.waf.fuː/: third-person masculine plural non-past active subjunctive/jussive of وَفَّى (waffā)\n# يُوَفَّوْا (yuwaffaw) /ju.waf.faw/: third-person masculine plural non-past passive subjunctive/jussive of وَفَّى (waffā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaffū", "waffā", "yuwaffaw"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "يفون",
-        "u": "يفون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَفُونَ • (yafūna) (form I) /ja.fuː.na/\n# third-person masculine plural non-past active indicative of وَفَى (wafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yafūna", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "يفوا",
-        "u": "يفوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَفُوا • (yafū) (form I) /ja.fuː/\n# third-person masculine plural non-past active subjunctive/jussive of وَفَى (wafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yafū", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "وفيتن",
-        "u": "وفيتن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وَفَيْتُنَّ • (wafaytunna) (form I) /wa.faj.tun.na/\n# second-person feminine plural past active of وَفَى (wafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wafaytunna", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "وفيتن",
-        "u": "وفيتن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وفيتن (form II)\n# وَفَّيْتُنَّ (waffaytunna) /waf.faj.tun.na/: second-person feminine plural past active of وَفَّى (waffā)\n# وُفِّيتُنَّ (wuffītunna) /wuf.fiː.tun.na/: second-person feminine plural past passive of وَفَّى (waffā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waffaytunna", "waffā", "wuffītunna"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "وفين",
-        "u": "وفين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وَفَيْنَ • (wafayna) (form I) /wa.faj.na/\n# third-person feminine plural past active of وَفَى (wafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wafayna", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "وفين",
-        "u": "وفين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وفين (form II)\n# وَفَّيْنَ (waffayna) /waf.faj.na/: third-person feminine plural past active of وَفَّى (waffā)\n# وُفِّينَ (wuffīna) /wuf.fiː.na/: third-person feminine plural past passive of وَفَّى (waffā)\n# وَفِّينَ (waffīna) /waf.fiː.na/: second-person feminine plural imperative of وَفَّى (waffā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waffayna", "waffā", "wuffīna"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوفين",
-        "u": "يوفين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يوفين (form II)\n# يُوَفِّينَ (yuwaffīna) /ju.waf.fiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of وَفَّى (waffā)\n# يُوَفَّيْنَ (yuwaffayna) /ju.waf.faj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of وَفَّى (waffā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaffīna", "waffā", "yuwaffayna"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "يفين",
-        "u": "يفين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَفِينَ • (yafīna) (form I) /ja.fiː.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of وَفَى (wafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yafīna", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "توفيا",
-        "u": "توفيا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "توفيا (form II)\n# تُوَفِّيَا (tuwaffiyā) /tu.waf.fi.jaː/: inflection of وَفَّى (waffā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُوَفَّيَا (tuwaffayā) /tu.waf.fa.jaː/: inflection of وَفَّى (waffā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctiv",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaffiyā", "waffā", "tuwaffayā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوفيان",
-        "u": "يوفيان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يوفيان (form II)\n# يُوَفِّيَانِ (yuwaffiyāni) /ju.waf.fi.jaː.ni/: third-person masculine dual non-past active indicative of وَفَّى (waffā)\n# يُوَفَّيَانِ (yuwaffayāni) /ju.waf.fa.jaː.ni/: third-person masculine dual non-past passive indicative of وَفَّى (waffā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaffiyāni", "waffā", "yuwaffayāni"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "توفيان",
-        "u": "توفيان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "توفيان (form II)\n# تُوَفِّيَانِ (tuwaffiyāni) /tu.waf.fi.jaː.ni/: inflection of وَفَّى (waffā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُوَفَّيَانِ (tuwaffayāni) /tu.waf.fa.jaː.ni/: inflection of وَفَّى (waffā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaffiyāni", "waffā", "tuwaffayāni"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوفيا",
-        "u": "يوفيا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يوفيا (form II)\n# يُوَفِّيَا (yuwaffiyā) /ju.waf.fi.jaː/: third-person masculine dual non-past active subjunctive/jussive of وَفَّى (waffā)\n# يُوَفَّيَا (yuwaffayā) /ju.waf.fa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of وَفَّى (waffā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaffiyā", "waffā", "yuwaffayā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "وفيتما",
-        "u": "وفيتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وَفَيْتُمَا • (wafaytumā) (form I) /wa.faj.tu.maː/\n# second-person dual past active of وَفَى (wafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wafaytumā", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "وفيتما",
-        "u": "وفيتما",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وفيتما (form II)\n# وَفَّيْتُمَا (waffaytumā) /waf.faj.tu.maː/: second-person dual past active of وَفَّى (waffā)\n# وُفِّيتُمَا (wuffītumā) /wuf.fiː.tu.maː/: second-person dual past passive of وَفَّى (waffā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waffaytumā", "waffā", "wuffītumā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "وفيا",
-        "u": "وفيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وَفَيَا • (wafayā) (form I) /wa.fa.jaː/\n# third-person masculine dual past active of وَفَى (wafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wafayā", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "وفيا",
-        "u": "وفيا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وفيا (form II)\n# وَفَّيَا (waffayā) /waf.fa.jaː/: third-person masculine dual past active of وَفَّى (waffā)\n# وُفِّيَا (wuffiyā) /wuf.fi.jaː/: third-person masculine dual past passive of وَفَّى (waffā)\n# وَفِّيَا (waffiyā) /waf.fi.jaː/: second-person dual imperative of وَفَّى (waffā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waffayā", "waffā", "wuffiyā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "تفيان",
-        "u": "تفيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَفِيَانِ • (tafiyāni) (form I) /ta.fi.jaː.ni/\n# inflection of وَفَى (wafā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tafiyāni", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "يفيا",
-        "u": "يفيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَفِيَا • (yafiyā) (form I) /ja.fi.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of وَفَى (wafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yafiyā", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "يفيان",
-        "u": "يفيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَفِيَانِ • (yafiyāni) (form I) /ja.fi.jaː.ni/\n# third-person masculine dual non-past active indicative of وَفَى (wafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yafiyāni", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "وفتا",
-        "u": "وفتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وَفَتَا • (wafatā) (form I) /wa.fa.taː/\n# third-person feminine dual past active of وَفَى (wafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wafatā", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "وفتا",
-        "u": "وفتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وَفَّتَا • (waffatā) (form II) /waf.fa.taː/\n# third-person feminine dual past active of وَفَّى (waffā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waffatā", "waffā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "فيا",
-        "u": "فيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فِيَا • (fiyā) (form I) /fi.jaː/\n# second-person dual imperative of وَفَى (wafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["fiyā", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "وفيتا",
-        "u": "وفيتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وُفِّيَتَا • (wuffiyatā) (form II) /wuf.fi.ja.taː/\n# third-person feminine dual past passive of وَفَّى (waffā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["wuffiyatā", "waffā"],
-        "k": "وفى",
-        "yol": "kök"
-      },
-      {
-        "w": "تفيا",
-        "u": "تفيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَفِيَا • (tafiyā) (form I) /ta.fi.jaː/\n# inflection of وَفَى (wafā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tafiyā", "wafā"],
-        "k": "وفى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "فى",
+  "ses": {
     "harf": "و",
+    "fasil": "فى",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "mekayis": [
+    {
+      "baslik": "وَفَى",
+      "metin": "(وَفَى) الْوَاوُ وَالْفَاءُ وَالْحَرْفُ الْمُعْتَلُّ: كَلِمَةٌ تَدُلُّ عَلَى إِكْمَالٍ وَإِتْمَامٍ. مِنْهُ الْوَفَاءُ: إِتْمَامُ الْعَهْدِ وَإِكْمَالُ الشَّرْطِ. وَوَفَى: أَوْفَى، فَهُوَ وَفِيٌّ. وَيَقُولُونَ: أَوْفَيْتُكَ الشَّيْءَ، إِذَا قَضَيْتَهُ إِيَّاهُ وَافِيًا. وَتَوَفَّيْتُ الشَّيْءَ وَاسْتَوْفَيْتُهُ ; [إِذَا أَخَذْتَهُ كُلَّهُ] حَتَّى لَمْ تَتْرُكْ مِنْهُ شَيْئًا. وَمِنْهُ يُقَالُ لِلْمَيِّتِ: تَوَفَّاهُ اللَّهُ."
+    }
+  ],
+  "cebel": {
+    "fasil": "الغين والنون",
+    "baslik": "وفى",
+    "mihveri": "نمو أو زيادة يبلغ بها الشيء -أو يتأكد- تمام قوامه: كنتوء الشرف من الأرض (زيادة امتلاء)، وطبخُ الآجُرّ إنضاج يجعله صُلبا لا يذوب؛ فيكون البناء به قويا متينا وطبخ الخبز يصلحه للأكل ويبقيه أمدا. والميفاء آلته. ونمو الريش والشعر والشفاه زيادة للتمام، ووفاء الكيل امتلاء للتمام {وَأَوْفُوا الْكَيْلَ إِذَا كِلْتُمْ} [الإسراء: 35]، {الَّذِينَ إِذَا اكْتَالُوا عَلَى النَّاسِ يَسْتَوْفُونَ} [المطففين: 2]. والتمام المادي إلى حدّ الزيادة واضح في الاستعمالين، وهو متحقق بالصور المناسبة في غيرهما: (أ) كل (وفّى) ومضارعها للفاعل والمفعول، والصفة (مُوَفّوهم)، (الأوفى). {وَإِبْرَاهِيمَ الَّذِي وَفَّى} [النجم: 37] لم يذكر متعلق التوفية ليتناول كل ما يصلح أن يكون متعلقًا كتبليغ الرسالة والصبر على ذبح ولده. . [ينظر بحر 8/ 164] أي أن الوفاء هنا هو أداء ما يقتضيه حاله مع اللَّه تمامًا. {مَنْ كَانَ يُرِيدُ الْحَيَاةَ الدُّنْيَا وَزِينَتَهَا نُوَفِّ إِلَيْهِمْ أَعْمَالَهُمْ فِيهَا} [هود: 15]، أي أن اللَّه يجازيه على حسن أعماله/ يطعمه في الدنيا بحسناته [بحر 5/ 210]. {فَوَفَّاهُ حِسَابَهُ} [النور: 39] أي حساب عمله أي جازاه عليه [نفسه 6/ 423]. (3/1616) (ب) كل (أوفى) ماضيها ومضارعها، وطلبها، واسم الفاعل (المُوفون) والتفضيل (أوفى) وهنّ للكيل، وبالباء للعهد والنذر وما إليهما: {وَأَوْفُوا بِعَهْدِي أُوفِ بِعَهْدِكُمْ} [البقرة: 40] المعنى طلب الإيفاء بما التزموه للَّه تعالى، وترتيب إنجاز ما وعدهم به (سماه) عهدًا على سبيل المقابلة، أو إبرازًا لما تفضل به تعالى في صورة المشروط الملتزَم به، فتتوافر الدواعي على الإ",
+    "tam_metin": "{لِيُوَفِّيَهُمْ أُجُورَهُمْ وَيَزِيدَهُمْ مِنْ فَضْلِهِ} [فاطر: 30]\n\"الوَفْى -بالفتح، والوَفَى -بالقصر: الشَرَف من الأرض. والمِيفَاء: بيت يُطْبخ فيه الآجُرّ، وإرَةٌ (: موضع للنار) تُوَسَّع للخبز، وطَبَقُ التَنُّور [ق]. وقد وَفَى الشَعَرُ وكذا ربش الجناح: زَاد. وفي الحديث \"كلما قُرِضَتْ (شفاههم) وَفَتْ \"أي نَمَتْ وَطَالَت. ووَفَى الكيلُ: تَمَّ/ لم يَنْقص \".\n° المعنى المحوري\nنمو أو زيادة يبلغ بها الشيء -أو يتأكد- تمام قوامه: كنتوء الشرف من الأرض (زيادة امتلاء)، وطبخُ الآجُرّ إنضاج يجعله صُلبا لا يذوب؛ فيكون البناء به قويا متينا وطبخ الخبز يصلحه للأكل ويبقيه أمدا. والميفاء آلته. ونمو الريش والشعر والشفاه زيادة للتمام، ووفاء الكيل امتلاء للتمام {وَأَوْفُوا الْكَيْلَ إِذَا كِلْتُمْ} [الإسراء: 35]، {الَّذِينَ إِذَا اكْتَالُوا عَلَى النَّاسِ يَسْتَوْفُونَ} [المطففين: 2]. والتمام المادي إلى حدّ الزيادة واضح في الاستعمالين، وهو متحقق بالصور المناسبة في غيرهما:\n(أ) كل (وفّى) ومضارعها للفاعل والمفعول، والصفة (مُوَفّوهم)، (الأوفى). {وَإِبْرَاهِيمَ الَّذِي وَفَّى} [النجم: 37] لم يذكر متعلق التوفية ليتناول كل ما يصلح أن يكون متعلقًا كتبليغ الرسالة والصبر على ذبح ولده. . [ينظر بحر 8/ 164] أي أن الوفاء هنا هو أداء ما يقتضيه حاله مع اللَّه تمامًا. {مَنْ كَانَ يُرِيدُ الْحَيَاةَ الدُّنْيَا وَزِينَتَهَا نُوَفِّ إِلَيْهِمْ أَعْمَالَهُمْ فِيهَا} [هود: 15]، أي أن اللَّه يجازيه على حسن أعماله/ يطعمه في الدنيا بحسناته [بحر 5/ 210]. {فَوَفَّاهُ حِسَابَهُ} [النور: 39] أي حساب عمله أي جازاه عليه [نفسه 6/ 423].\n(3/1616)\n(ب) كل (أوفى) ماضيها ومضارعها، وطلبها، واسم الفاعل (المُوفون) والتفضيل (أوفى) وهنّ للكيل، وبالباء للعهد والنذر وما إليهما: {وَأَوْفُوا بِعَهْدِي أُوفِ بِعَهْدِكُمْ} [البقرة: 40] المعنى طلب الإيفاء بما التزموه للَّه تعالى، وترتيب إنجاز ما وعدهم به (سماه) عهدًا على سبيل المقابلة، أو إبرازًا لما تفضل به تعالى في صورة المشروط الملتزَم به، فتتوافر الدواعي على الإيفاء بعهد اللَّه [بحر 1/ 330].\n(ج) (تَوفى) ماضيا ومضارعا للفاعل والمفعول وطلبا واسم فاعل: {إِنَّ الَّذِينَ تَوَفَّاهُمُ الْمَلَائِكَةُ} [النساء: 97] (أصلها تتوفاهم) التوفي: استيفاء الأرواح أي استعادة اللَّه تعالى إياها [ينظر بحر 3/ 348]. {إِنِّي مُتَوَفِّيكَ وَرَافِعُكَ إِلَيَّ} [آل عمران: 55] هي وفاة يوم رَفَعه اللَّه في منامه، أو وفاة موت دائم، أو مؤقت، أو في آخر عمره المعتاد، أو في آخر أمره بعد نزوله وقتله الدجال [ينظر بحر 2/ 497]. {اللَّهُ يَتَوَفَّى الْأَنْفُسَ حِينَ مَوْتِهَا} [الزمر: 42].\nو\"الموافاة: أن توافي إنسانًا في موعد أو مكان \"- فهذا اجتماع به أي تجمع فهو من الزيادة أو بلوغ المكان.\nوقولهم \"أوفى على الشيء: أشرف عليه \"هو من النمو أي التقدم نحو التمام، أو من الصعود على وَفّى أي شرف كما قال: {أنادي إذا أُوفِى من الأرض مَرْبأ}\nأي إذا أُشرِفُ وأَصْعَد على مَرْبأ.",
+    "fasil_ozeti": "° معنى الفصل المعجمي (غن) : هو وجود لطيف في الحوزة: كما في الروضة الغنّاء سواء من الشجر والعشب، ومن النسيم العليل والمختلط بصوت حفيف الريح في الشجر -في (غنن)، وكوفرة المحتاج إليه من مال ومتاع، وما تتميز به حنجرة المغني من صوت رخيم -في (غنى)، وكالغُنْم والغَنَم في الحوزة مع ما ذكرنا من سعة جدواها مع يسر مئونتها -في (غنم). * * *"
+  },
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "في",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "فِي • (fī) (form I) /fiː/\n# second-person feminine singular imperative of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["fī", "wafā"],
+      "ipa": ["/fiː/"]
+    },
+    {
+      "madde": "ف",
+      "tur": "verb",
+      "baslik": "فِ • (fi) (form I) /fi/\n# second-person masculine singular imperative of وَفَى (wafā)",
+      "etim_sablon": [
+        ["der", "Phoenician"],
+        ["der", "Egyptian"],
+        ["m+", "Classical Syriac ܦ (p, “pē”)"],
+        ["m+", "Hebrew פ (p, “pe”)"],
+        ["m+", "Ancient Greek Π (P)"],
+        ["m+", "Latin P"]
+      ],
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["fi", "wafā"],
+      "ipa": ["/f/"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "فين",
+      "tur": "verb",
+      "baslik": "فِينَ • (fīna) (form I) /fiː.na/\n# second-person feminine plural imperative of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["fīna", "wafā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تف",
+      "tur": "verb",
+      "baslik": "تَفِ • (tafi) (form I) /ta.fi/\n# inflection of وَفَى (wafā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tafi", "wafā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "نفي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نفي (form I)\n# نَفِي (nafī) /na.fiː/: first-person plural non-past active indicative of وَفَى (wafā)\n# نَفِيَ (nafiya) /na.fi.ja/: first-person plural non-past active subjunctive of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nafī", "wafā", "nafiya"]
+    },
+    {
+      "madde": "توفي",
+      "tur": "verb",
+      "etim_no": "1.3",
+      "baslik": "توفي (form II)\n# تُوَفِّي (tuwaffī) /tu.waf.fiː/: inflection of وَفَّى (waffā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُوَفِّيَ (tuwaffiya) /tu.waf.fi.ja/: inflection of وَفَّى (waffā):\n## second-person masculine singular non-past active sub",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaffī", "waffā", "tuwaffiya"]
+    },
+    {
+      "madde": "أوفى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أُوَفَّى • (ʔuwaffā) (form II) /ʔu.waf.faː/\n# first-person singular non-past passive indicative/subjunctive of وَفَّى (waffā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuwaffā", "waffā"]
+    },
+    {
+      "madde": "توفى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُوَفَّى • (tuwaffā) (form II) /tu.waf.faː/\n# inflection of وَفَّى (waffā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaffā", "waffā"]
+    },
+    {
+      "madde": "توف",
+      "tur": "verb",
+      "etim_no": "1.2",
+      "baslik": "توف (form II)\n# تُوَفِّ (tuwaffi) /tu.waf.fi/: inflection of وَفَّى (waffā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُوَفَّ (tuwaffa) /tu.waf.fa/: inflection of وَفَّى (waffā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaffi", "waffā", "tuwaffa"]
+    },
+    {
+      "madde": "يوفي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يوفي (form II)\n# يُوَفِّي (yuwaffī) /ju.waf.fiː/: third-person masculine singular non-past active indicative of وَفَّى (waffā)\n# يُوَفِّيَ (yuwaffiya) /ju.waf.fi.ja/: third-person masculine singular non-past active subjunctive of وَفَّى (waffā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaffī", "waffā", "yuwaffiya"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يوفى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُوفَى • (yūfā) (form I) /juː.faː/\n# third-person masculine singular non-past passive indicative/subjunctive of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yūfā", "wafā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يوفى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُوَفَّى • (yuwaffā) (form II) /ju.waf.faː/\n# third-person masculine singular non-past passive indicative/subjunctive of وَفَّى (waffā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaffā", "waffā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يفي",
+      "tur": "verb",
+      "baslik": "يفي (form I)\n# يَفِي (yafī) /ja.fiː/: third-person masculine singular non-past active indicative of وَفَى (wafā)\n# يَفِيَ (yafiya) /ja.fi.ja/: third-person masculine singular non-past active subjunctive of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yafī", "wafā", "yafiya"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يوف",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُوفَ • (yūfa) (form I) /juː.fa/\n# third-person masculine singular non-past passive jussive of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yūfa", "wafā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يوف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يوف (form II)\n# يُوَفِّ (yuwaffi) /ju.waf.fi/: third-person masculine singular non-past active jussive of وَفَّى (waffā)\n# يُوَفَّ (yuwaffa) /ju.waf.fa/: third-person masculine singular non-past passive jussive of وَفَّى (waffā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaffi", "waffā", "yuwaffa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "أوفي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أوفي (form II)\n# أُوَفِّي (ʔuwaffī) /ʔu.waf.fiː/: first-person singular non-past active indicative of وَفَّى (waffā)\n# أُوَفِّيَ (ʔuwaffiya) /ʔu.waf.fi.ja/: first-person singular non-past active subjunctive of وَفَّى (waffā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuwaffī", "waffā", "ʔuwaffiya"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يف",
+      "tur": "verb",
+      "baslik": "يَفِ • (yafi) (form I) /ja.fi/\n# third-person masculine singular non-past active jussive of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yafi", "wafā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "وفي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وُفِيَ • (wufiya) (form I) /wu.fi.ja/\n# third-person masculine singular past passive of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wufiya", "wafā"]
+    },
+    {
+      "madde": "وفي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "وفي (form II)\n# وُفِّيَ (wuffiya) /wuf.fi.ja/: third-person masculine singular past passive of وَفَّى (waffā)\n# وَفِّي (waffī) /waf.fiː/: second-person feminine singular imperative of وَفَّى (waffā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["wuffiya", "waffā", "waffī"]
+    },
+    {
+      "madde": "أوف",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أوف (form II)\n# أُوَفِّ (ʔuwaffi) /ʔu.waf.fi/: first-person singular non-past active jussive of وَفَّى (waffā)\n# أُوَفَّ (ʔuwaffa) /ʔu.waf.fa/: first-person singular non-past passive jussive of وَفَّى (waffā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuwaffi", "waffā", "ʔuwaffa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "توفين",
+      "tur": "verb",
+      "etim_no": "1.1",
+      "baslik": "توفين (form II)\n# تُوَفِّينَ (tuwaffīna) /tu.waf.fiː.na/: inflection of وَفَّى (waffā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُوَفَّيْنَ (tuwaffayna) /tu.waf.faj.na/: inflection of وَفَّى (waffā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plur",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaffīna", "waffā", "tuwaffayna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "وفت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وَفَتْ • (wafat) (form I) /wa.fat/\n# third-person feminine singular past active of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wafat", "wafā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "وفت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وَفَّتْ • (waffat) (form II) /waf.fat/\n# third-person feminine singular past active of وَفَّى (waffā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waffat", "waffā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تفي",
+      "tur": "verb",
+      "baslik": "تفي (form I)\n# تَفِي (tafī) /ta.fiː/: inflection of وَفَى (wafā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَفِيَ (tafiya) /ta.fi.ja/: inflection of وَفَى (wafā):\n## second-person masculine singular non-past active subjunctive\n## third-person f",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tafī", "wafā", "tafiya"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "وفيت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وفيت (form I)\n# وَفَيْتُ (wafaytu) /wa.faj.tu/: first-person singular past active of وَفَى (wafā)\n# وَفَيْتَ (wafayta) /wa.faj.ta/: second-person masculine singular past active of وَفَى (wafā)\n# وَفَيْتِ (wafayti) /wa.faj.ti/: second-person feminine singular past active of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wafaytu", "wafā", "wafayta"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "وفيت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وفيت (form II)\n# وَفَّيْتُ (waffaytu) /waf.faj.tu/: first-person singular past active of وَفَّى (waffā)\n# وَفَّيْتَ (waffayta) /waf.faj.ta/: second-person masculine singular past active of وَفَّى (waffā)\n# وَفَّيْتِ (waffayti) /waf.faj.ti/: second-person feminine singular past active of وَفَّى (waffā)\n# وُفِّيتُ (wuffītu) /wuf.fiː.tu/: first-person singular past passive of وَفَّى (waffā)\n# وُفِّيت",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waffaytu", "waffā", "waffayta"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "وف",
+      "tur": "verb",
+      "baslik": "وَفِّ • (waffi) (form II) /waf.fi/\n# second-person masculine singular imperative of وَفَّى (waffā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waffi", "waffā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تفين",
+      "tur": "verb",
+      "baslik": "تَفِينَ • (tafīna) (form I) /ta.fiː.na/\n# inflection of وَفَى (wafā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tafīna", "wafā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "أفي",
+      "tur": "verb",
+      "baslik": "أفي (form I)\n# أَفِي (ʔafī) /ʔa.fiː/: first-person singular non-past active indicative of وَفَى (wafā)\n# أَفِيَ (ʔafiya) /ʔa.fi.ja/: first-person singular non-past active subjunctive of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔafī", "wafā", "ʔafiya"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "أف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَفِ • (ʔafi) (form I) /ʔa.fi/\n# first-person singular non-past active jussive of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔafi", "wafā"]
+    },
+    {
+      "madde": "نوفي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نوفي (form II)\n# نُوَفِّي (nuwaffī) /nu.waf.fiː/: first-person plural non-past active indicative of وَفَّى (waffā)\n# نُوَفِّيَ (nuwaffiya) /nu.waf.fi.ja/: first-person plural non-past active subjunctive of وَفَّى (waffā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuwaffī", "waffā", "nuwaffiya"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "نوف",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نوف (form II)\n# نُوَفِّ (nuwaffi) /nu.waf.fi/: first-person plural non-past active jussive of وَفَّى (waffā)\n# نُوَفَّ (nuwaffa) /nu.waf.fa/: first-person plural non-past passive jussive of وَفَّى (waffā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuwaffi", "waffā", "nuwaffa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "نوفى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نُوَفَّى • (nuwaffā) (form II) /nu.waf.faː/\n# first-person plural non-past passive indicative/subjunctive of وَفَّى (waffā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuwaffā", "waffā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "وفينا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وَفَيْنَا • (wafaynā) (form I) /wa.faj.naː/\n# first-person plural past active of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wafaynā", "wafā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "وفينا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وفينا (form II)\n# وَفَّيْنَا (waffaynā) /waf.faj.naː/: first-person plural past active of وَفَّى (waffā)\n# وُفِّينَا (wuffīnā) /wuf.fiː.naː/: first-person plural past passive of وَفَّى (waffā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waffaynā", "waffā", "wuffīnā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "نف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نَفِ • (nafi) (form I) /na.fi/\n# first-person plural non-past active jussive of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nafi", "wafā"]
+    },
+    {
+      "madde": "توفون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "توفون (form II)\n# تُوَفُّونَ (tuwaffūna) /tu.waf.fuː.na/: second-person masculine plural non-past active indicative of وَفَّى (waffā)\n# تُوَفَّوْنَ (tuwaffawna) /tu.waf.faw.na/: second-person masculine plural non-past passive indicative of وَفَّى (waffā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaffūna", "waffā", "tuwaffawna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "توفوا",
+      "tur": "verb",
+      "etim_no": "1.1",
+      "baslik": "توفوا (form II)\n# تُوَفُّوا (tuwaffū) /tu.waf.fuː/: second-person masculine plural non-past active subjunctive/jussive of وَفَّى (waffā)\n# تُوَفَّوْا (tuwaffaw) /tu.waf.faw/: second-person masculine plural non-past passive subjunctive/jussive of وَفَّى (waffā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaffū", "waffā", "tuwaffaw"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "وفيتم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وَفَيْتُمْ • (wafaytum) (form I) /wa.faj.tum/\n# second-person masculine plural past active of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wafaytum", "wafā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "وفيتم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وفيتم (form II)\n# وَفَّيْتُمْ (waffaytum) /waf.faj.tum/: second-person masculine plural past active of وَفَّى (waffā)\n# وُفِّيتُمْ (wuffītum) /wuf.fiː.tum/: second-person masculine plural past passive of وَفَّى (waffā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waffaytum", "waffā", "wuffītum"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تفون",
+      "tur": "verb",
+      "baslik": "تَفُونَ • (tafūna) (form I) /ta.fuː.na/\n# second-person masculine plural non-past active indicative of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tafūna", "wafā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تفوا",
+      "tur": "verb",
+      "baslik": "تَفُوا • (tafū) (form I) /ta.fuː/\n# second-person masculine plural non-past active subjunctive/jussive of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tafū", "wafā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "فوا",
+      "tur": "verb",
+      "baslik": "فُوا • (fū) (form I) /fuː/\n# second-person masculine plural imperative of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["fū", "wafā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "وفوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وَفَوْا • (wafaw) (form I) /wa.faw/\n# third-person masculine plural past active of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wafaw", "wafā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "وفوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وفوا (form II)\n# وَفَّوْا (waffaw) /waf.faw/: third-person masculine plural past active of وَفَّى (waffā)\n# وُفُّوا (wuffū) /wuf.fuː/: third-person masculine plural past passive of وَفَّى (waffā)\n# وَفُّوا (waffū) /waf.fuː/: second-person masculine plural imperative of وَفَّى (waffā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waffaw", "waffā", "wuffū"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يوفون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يوفون (form II)\n# يُوَفُّونَ (yuwaffūna) /ju.waf.fuː.na/: third-person masculine plural non-past active indicative of وَفَّى (waffā)\n# يُوَفَّوْنَ (yuwaffawna) /ju.waf.faw.na/: third-person masculine plural non-past passive indicative of وَفَّى (waffā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaffūna", "waffā", "yuwaffawna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يوفوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يوفوا (form II)\n# يُوَفُّوا (yuwaffū) /ju.waf.fuː/: third-person masculine plural non-past active subjunctive/jussive of وَفَّى (waffā)\n# يُوَفَّوْا (yuwaffaw) /ju.waf.faw/: third-person masculine plural non-past passive subjunctive/jussive of وَفَّى (waffā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaffū", "waffā", "yuwaffaw"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يفون",
+      "tur": "verb",
+      "baslik": "يَفُونَ • (yafūna) (form I) /ja.fuː.na/\n# third-person masculine plural non-past active indicative of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yafūna", "wafā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يفوا",
+      "tur": "verb",
+      "baslik": "يَفُوا • (yafū) (form I) /ja.fuː/\n# third-person masculine plural non-past active subjunctive/jussive of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yafū", "wafā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "وفيتن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وَفَيْتُنَّ • (wafaytunna) (form I) /wa.faj.tun.na/\n# second-person feminine plural past active of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wafaytunna", "wafā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "وفيتن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وفيتن (form II)\n# وَفَّيْتُنَّ (waffaytunna) /waf.faj.tun.na/: second-person feminine plural past active of وَفَّى (waffā)\n# وُفِّيتُنَّ (wuffītunna) /wuf.fiː.tun.na/: second-person feminine plural past passive of وَفَّى (waffā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waffaytunna", "waffā", "wuffītunna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "وفين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وَفَيْنَ • (wafayna) (form I) /wa.faj.na/\n# third-person feminine plural past active of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wafayna", "wafā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "وفين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وفين (form II)\n# وَفَّيْنَ (waffayna) /waf.faj.na/: third-person feminine plural past active of وَفَّى (waffā)\n# وُفِّينَ (wuffīna) /wuf.fiː.na/: third-person feminine plural past passive of وَفَّى (waffā)\n# وَفِّينَ (waffīna) /waf.fiː.na/: second-person feminine plural imperative of وَفَّى (waffā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waffayna", "waffā", "wuffīna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يوفين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يوفين (form II)\n# يُوَفِّينَ (yuwaffīna) /ju.waf.fiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of وَفَّى (waffā)\n# يُوَفَّيْنَ (yuwaffayna) /ju.waf.faj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of وَفَّى (waffā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaffīna", "waffā", "yuwaffayna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يفين",
+      "tur": "verb",
+      "baslik": "يَفِينَ • (yafīna) (form I) /ja.fiː.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yafīna", "wafā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "توفيا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "توفيا (form II)\n# تُوَفِّيَا (tuwaffiyā) /tu.waf.fi.jaː/: inflection of وَفَّى (waffā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُوَفَّيَا (tuwaffayā) /tu.waf.fa.jaː/: inflection of وَفَّى (waffā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctiv",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaffiyā", "waffā", "tuwaffayā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يوفيان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يوفيان (form II)\n# يُوَفِّيَانِ (yuwaffiyāni) /ju.waf.fi.jaː.ni/: third-person masculine dual non-past active indicative of وَفَّى (waffā)\n# يُوَفَّيَانِ (yuwaffayāni) /ju.waf.fa.jaː.ni/: third-person masculine dual non-past passive indicative of وَفَّى (waffā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaffiyāni", "waffā", "yuwaffayāni"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "توفيان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "توفيان (form II)\n# تُوَفِّيَانِ (tuwaffiyāni) /tu.waf.fi.jaː.ni/: inflection of وَفَّى (waffā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُوَفَّيَانِ (tuwaffayāni) /tu.waf.fa.jaː.ni/: inflection of وَفَّى (waffā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaffiyāni", "waffā", "tuwaffayāni"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يوفيا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يوفيا (form II)\n# يُوَفِّيَا (yuwaffiyā) /ju.waf.fi.jaː/: third-person masculine dual non-past active subjunctive/jussive of وَفَّى (waffā)\n# يُوَفَّيَا (yuwaffayā) /ju.waf.fa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of وَفَّى (waffā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaffiyā", "waffā", "yuwaffayā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "وفيتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وَفَيْتُمَا • (wafaytumā) (form I) /wa.faj.tu.maː/\n# second-person dual past active of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wafaytumā", "wafā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "وفيتما",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وفيتما (form II)\n# وَفَّيْتُمَا (waffaytumā) /waf.faj.tu.maː/: second-person dual past active of وَفَّى (waffā)\n# وُفِّيتُمَا (wuffītumā) /wuf.fiː.tu.maː/: second-person dual past passive of وَفَّى (waffā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waffaytumā", "waffā", "wuffītumā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "وفيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وَفَيَا • (wafayā) (form I) /wa.fa.jaː/\n# third-person masculine dual past active of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wafayā", "wafā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "وفيا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وفيا (form II)\n# وَفَّيَا (waffayā) /waf.fa.jaː/: third-person masculine dual past active of وَفَّى (waffā)\n# وُفِّيَا (wuffiyā) /wuf.fi.jaː/: third-person masculine dual past passive of وَفَّى (waffā)\n# وَفِّيَا (waffiyā) /waf.fi.jaː/: second-person dual imperative of وَفَّى (waffā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waffayā", "waffā", "wuffiyā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تفيان",
+      "tur": "verb",
+      "baslik": "تَفِيَانِ • (tafiyāni) (form I) /ta.fi.jaː.ni/\n# inflection of وَفَى (wafā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tafiyāni", "wafā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يفيا",
+      "tur": "verb",
+      "baslik": "يَفِيَا • (yafiyā) (form I) /ja.fi.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yafiyā", "wafā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يفيان",
+      "tur": "verb",
+      "baslik": "يَفِيَانِ • (yafiyāni) (form I) /ja.fi.jaː.ni/\n# third-person masculine dual non-past active indicative of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yafiyāni", "wafā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "وفتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وَفَتَا • (wafatā) (form I) /wa.fa.taː/\n# third-person feminine dual past active of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wafatā", "wafā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "وفتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وَفَّتَا • (waffatā) (form II) /waf.fa.taː/\n# third-person feminine dual past active of وَفَّى (waffā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waffatā", "waffā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "فيا",
+      "tur": "verb",
+      "baslik": "فِيَا • (fiyā) (form I) /fi.jaː/\n# second-person dual imperative of وَفَى (wafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["fiyā", "wafā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "وفيتا",
+      "tur": "verb",
+      "baslik": "وُفِّيَتَا • (wuffiyatā) (form II) /wuf.fi.ja.taː/\n# third-person feminine dual past passive of وَفَّى (waffā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["wuffiyatā", "waffā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تفيا",
+      "tur": "verb",
+      "baslik": "تَفِيَا • (tafiyā) (form I) /ta.fi.jaː/\n# inflection of وَفَى (wafā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tafiyā", "wafā"],
+      "etimoloji": 2
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "From the Nabataean letter 𐢘 (p, “pē”), derived from the Phoenician letter 𐤐 (p, “pē”), from the Egyptian hieroglyph 𓂋. See also Classical Syriac ܦ (p, “pē”), Hebrew פ (p, “pe”), Ancient Greek Π (P), Latin P.",
+      "kognatlar": [
+        ["𐢘", "𐢘#Aramaic"],
+        ["𐤐", "𐤐#Phoenician"],
+        ["𓂋", "𓂋#Egyptian"],
+        ["ܦ", "ܦ#Classical_Syriac"],
+        ["פ", "פ#Hebrew"],
+        ["Π", "Π#Ancient_Greek"],
+        ["P", "P#Latin"]
+      ]
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "وفى", "r7"]
+  ],
+  "mana": {
     "ince": "event.n.01",
     "orta": "noun.communication",
     "ust": "söz ve haber",
@@ -961,25 +687,8 @@
     "dayanak_tanim": "denial of any connection with or knowledge of",
     "synset_sayisi": 5
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "الغين والنون",
-    "mihveri": "نمو أو زيادة يبلغ بها الشيء -أو يتأكد- تمام قوامه: كنتوء الشرف من الأرض (زيادة امتلاء)، وطبخُ الآجُرّ إنضاج يجعله صُلبا لا يذوب؛ فيكون البناء به قويا متينا وطبخ الخبز يصلحه للأكل ويبقيه أمدا. والميفاء آلته. ونمو الريش والشعر والشفاه زيادة للتمام، ووفاء الكيل امتلاء للتمام {وَأَوْفُوا الْكَيْلَ إِذَا كِلْتُمْ} [الإسراء: 35]، {الَّذِينَ إِذَا اكْتَالُوا عَلَى النَّاسِ يَسْتَوْفُونَ} [المطففين: 2]. والتمام المادي إلى حدّ الزيادة واضح في الاستعمالين، وهو متحقق بالصور المناسبة في غيرهما: (أ) كل (وفّى) ومضارعها للفاعل والمفعول، والصفة (مُوَفّوهم)، (الأوفى). {وَإِبْرَاهِيمَ الَّذِي وَفَّى} [النجم: 37] لم يذكر متعلق التوفية ليتناول كل ما يصلح أن يكون متعلقًا كتبليغ الرسالة والصبر على ذبح ولده. . [ينظر بحر 8/ 164] أي أن الوفاء هنا هو أداء ما يقتضيه حاله مع اللَّه تمامًا. {مَنْ كَانَ يُرِيدُ الْحَيَاةَ الدُّنْيَا وَزِينَتَهَا نُوَفِّ إِلَيْهِمْ أَعْمَالَهُمْ فِيهَا} [هود: 15]، أي أن اللَّه يجازيه على حسن أعماله/ يطعمه في الدنيا بحسناته [بحر 5/ 210]. {فَوَفَّاهُ حِسَابَهُ} [النور: 39] أي حساب عمله أي جازاه عليه [نفسه 6/ 423]. (3/1616) (ب) كل (أوفى) ماضيها ومضارعها، وطلبها، واسم الفاعل (المُوفون) والتفضيل (أوفى) وهنّ للكيل، وبالباء للعهد والنذر وما إليهما: {وَأَوْفُوا بِعَهْدِي أُوفِ بِعَهْدِكُمْ} [البقرة: 40] المعنى طلب الإيفاء بما التزموه للَّه تعالى، وترتيب إنجاز ما وعدهم به (سماه) عهدًا على سبيل المقابلة، أو إبرازًا لما تفضل به تعالى في صورة المشروط الملتزَم به، فتتوافر الدواعي على الإ",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (غن) : هو وجود لطيف في الحوزة: كما في الروضة الغنّاء سواء من الشجر والعشب، ومن النسيم العليل والمختلط بصوت حفيف الريح في الشجر -في (غنن)، وكوفرة المحتاج إليه من مال ومتاع، وما تتميز به حنجرة المغني من صوت رخيم -في (غنى)، وكالغُنْم والغَنَم في الحوزة مع ما ذكرنا من سعة جدواها مع يسر مئونتها -في (غنم). * * *",
-    "tam_metin": "{لِيُوَفِّيَهُمْ أُجُورَهُمْ وَيَزِيدَهُمْ مِنْ فَضْلِهِ} [فاطر: 30]\n\"الوَفْى -بالفتح، والوَفَى -بالقصر: الشَرَف من الأرض. والمِيفَاء: بيت يُطْبخ فيه الآجُرّ، وإرَةٌ (: موضع للنار) تُوَسَّع للخبز، وطَبَقُ التَنُّور [ق]. وقد وَفَى الشَعَرُ وكذا ربش الجناح: زَاد. وفي الحديث \"كلما قُرِضَتْ (شفاههم) وَفَتْ \"أي نَمَتْ وَطَالَت. ووَفَى الكيلُ: تَمَّ/ لم يَنْقص \".\n° المعنى المحوري\nنمو أو زيادة يبلغ بها الشيء -أو يتأكد- تمام قوامه: كنتوء الشرف من الأرض (زيادة امتلاء)، وطبخُ الآجُرّ إنضاج يجعله صُلبا لا يذوب؛ فيكون البناء به قويا متينا وطبخ الخبز يصلحه للأكل ويبقيه أمدا. والميفاء آلته. ونمو الريش والشعر والشفاه زيادة للتمام، ووفاء الكيل امتلاء للتمام {وَأَوْفُوا الْكَيْلَ إِذَا كِلْتُمْ} [الإسراء: 35]، {الَّذِينَ إِذَا اكْتَالُوا عَلَى النَّاسِ يَسْتَوْفُونَ} [المطففين: 2]. والتمام المادي إلى حدّ الزيادة واضح في الاستعمالين، وهو متحقق بالصور المناسبة في غيرهما:\n(أ) كل (وفّى) ومضارعها للفاعل والمفعول، والصفة (مُوَفّوهم)، (الأوفى). {وَإِبْرَاهِيمَ الَّذِي وَفَّى} [النجم: 37] لم يذكر متعلق التوفية ليتناول كل ما يصلح أن يكون متعلقًا كتبليغ الرسالة والصبر على ذبح ولده. . [ينظر بحر 8/ 164] أي أن الوفاء هنا هو أداء ما يقتضيه حاله مع اللَّه تمامًا. {مَنْ كَانَ يُرِيدُ الْحَيَاةَ الدُّنْيَا وَزِينَتَهَا نُوَفِّ إِلَيْهِمْ أَعْمَالَهُمْ فِيهَا} [هود: 15]، أي أن اللَّه يجازيه على حسن أعماله/ يطعمه في الدنيا بحسناته [بحر 5/ 210]. {فَوَفَّاهُ حِسَابَهُ} [النور: 39] أي حساب عمله أي جازاه عليه [نفسه 6/ 423].\n(3/1616)\n(ب) كل (أوفى) ماضيها ومضارعها، وطلبها، واسم الفاعل (المُوفون) والتفضيل (أوفى) وهنّ للكيل، وبالباء للعهد والنذر وما إليهما: {وَأَوْفُوا بِعَهْدِي أُوفِ بِعَهْدِكُمْ} [البقرة: 40] المعنى طلب الإيفاء بما التزموه للَّه تعالى، وترتيب إنجاز ما وعدهم به (سماه) عهدًا على سبيل المقابلة، أو إبرازًا لما تفضل به تعالى في صورة المشروط الملتزَم به، فتتوافر الدواعي على الإيفاء بعهد اللَّه [بحر 1/ 330].\n(ج) (تَوفى) ماضيا ومضارعا للفاعل والمفعول وطلبا واسم فاعل: {إِنَّ الَّذِينَ تَوَفَّاهُمُ الْمَلَائِكَةُ} [النساء: 97] (أصلها تتوفاهم) التوفي: استيفاء الأرواح أي استعادة اللَّه تعالى إياها [ينظر بحر 3/ 348]. {إِنِّي مُتَوَفِّيكَ وَرَافِعُكَ إِلَيَّ} [آل عمران: 55] هي وفاة يوم رَفَعه اللَّه في منامه، أو وفاة موت دائم، أو مؤقت، أو في آخر عمره المعتاد، أو في آخر أمره بعد نزوله وقتله الدجال [ينظر بحر 2/ 497]. {اللَّهُ يَتَوَفَّى الْأَنْفُسَ حِينَ مَوْتِهَا} [الزمر: 42].\nو\"الموافاة: أن توافي إنسانًا في موعد أو مكان \"- فهذا اجتماع به أي تجمع فهو من الزيادة أو بلوغ المكان.\nوقولهم \"أوفى على الشيء: أشرف عليه \"هو من النمو أي التقدم نحو التمام، أو من الصعود على وَفّى أي شرف كما قال: {أنادي إذا أُوفِى من الأرض مَرْبأ}\nأي إذا أُشرِفُ وأَصْعَد على مَرْبأ."
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["act.n.02", "feeling.n.01", "observe.v.09", "statement.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 4,
       "merkez_kok": "درك",
@@ -999,6 +708,11 @@
       "boy": 53
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["act.n.02", "feeling.n.01", "observe.v.09", "statement.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

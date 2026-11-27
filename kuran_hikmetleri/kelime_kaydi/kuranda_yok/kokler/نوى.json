@@ -1,540 +1,374 @@
 {
   "kok": "نوى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "نوى", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "mekayis": [
-      {
-        "baslik": "نَوَى",
-        "metin": "(نَوَى) النُّونُ وَالْوَاوُ وَالْحَرْفُ الْمُعْتَلُّ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى مَعْنَيَيْنِ: أَحَدُهُمَا مَقْصِدٌ لِشَيْءٍ، وَالْآخَرُ عَجَمُ شَيْءٍ.\nفَالْأَوَّلُ النَّوَى. قَالَ أَهْلُ اللُّغَةِ: النَّوَى: التَّحَوُّلُ مِنْ دَارٍ إِلَى دَارٍ. هَذَا هُوَ الْأَصْلُ، ثُمَّ حُمِلَ عَلَيْهِ الْبَابُ كُلُّهُ فَقَالُوا: [نَوَى] الْأَمْرَ يَنْوِيهِ، إِذَا قَصَدَ لَهُ. وَمِمَّا يُصَحِّحُ هَذِهِ التَّآوِيلَ قَوْلُهُمْ: نَوَاهُ اللَّهُ، كَأَنَّهُ قَصَدَهُ بِالْحِفْظِ وَالْحِيَاطَةِ. قَالَ:\nيَا عَمْرُو أَحْسِنْ نَوَاكَ اللَّهُ بِالرَّشَدِ ... وَاقْرَأْ سَلَامًا عَلَى الذَّلْفَاءِ بِالثَّمَدِ\nأَيْ قَصَدَكَ بِالرَّشَدِ. وَالنِّيَّةُ: الْوَجْهُ الَّذِي تَنْوِيهِ. وَنَوِيُّكَ: صَاحِبُكَ نِيَّتُهُ نِيَّتُكَ.\nوَالْأَصْلُ الْآخَرُ النَّوَى: نَوَى التَّمْرِ. وَرُبَّمَا عَبَّرُوا بِهِ عَنْ بَعْضِ الْأَوْزَانِ. وَيُقَالُ إِنَّ النَّوَاةَ زِنَةُ خَمْسَةِ دَرَاهِمَ. وَتَزَوَّجَهَا عَلَى نَوَاةٍ مِنْ ذَهَبٍ، أَيْ وَزْنِ خَمْسَةِ دَرَاهِمَ مِنْهُ.\nوَبِالْهَمْزِ كَلِمَةٌ تَدُلُّ عَلَى النُّهُوضِ وَنَاءَ يَنُوءُ نَوْءًا: نَهَضَ. قَالَ:\nفَقُلْنَا لَهُمْ تِلْكُمْ إِذًا بَعْدَ كَرَّةٍ ... نُغَادِرُ صَرْعَى نَوْؤُهَا مُتَخَاذِلُ\nأَيْ نُهُوضُهَا ضَعِيفٌ وَالنَّوْءُ مِنْ أَنْوَاءِ الْمَطَرِ كَأَنَّهُ يَنْهَضُ بِالْمَطَرِ. وَكُلُّ نَاهِضٍ\nبِثِقْلٍ فَقَدْ نَاءَ. وَنَاءَ الْبَعِيرُ بِحِمْلِهِ. وَالْمَرْأَةُ تَنُوءُ بِهَا عَجِيزَتُهَا، وَهِيَ تَنُوءُ بِهَا. فَالْأُولَى تُثْقَلُ بِهَا، وَالثَّانِيَةُ تَنْهَضُ.\nوَمِنَ الْبَابِ الْمُنَاوَأَةُ تَكُونُ بَيْنَ الْقَوْمِ يُقَالُ: نَاوَأَهُ، إِذَا عَادَاهُ. وَهُوَ قِيَاسُ مَا ذَكَرْنَاهُ، لِأَنَّهَا الْمُنَاهَضَةُ، هَذَا يَنُوءُ إِلَى هَذَا وَهُوَ يَنُوءُ إِلَيْهِ أَيْ يَنْهَضُ."
-      }
-    ],
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الميم والهاء",
-      "baslik": "نوى",
-      "mihveri": "احتواء جوف الشيء على جِرم متجمع قوي يمتد فيه. كالنواة في التمرة والنَيّ في الناقة {إِنَّ اللَّهَ فَالِقُ الْحَبِّ وَالنَّوَى} ومنه \"نَوَاك الله: حفظك \" (أحاطك بحفظه. كالنواة في التمرة). و \"النِية: القَصْد والاعتقاد \"إذ هي شيء ينعقد في نفسك ويتجمع. ولذا يقولون: عَزم (: شَدّ) النيّة، وعَقد النية ونحو ذلك. ومن هذا قالوا: \"النِيَّة والنَوَى: الوَجْهُ الذي يَنْويه المسافر \"فكأنهما بمعنى المَنْويّ. ومن ملحظ الغياب في جوف شيء \"النَوَى: الدارُ \" (يكْتَنّ فيها ساكنها) \"والبُعْدُ \" (لغياب البعيد في غيابه المجهول).",
-      "sesler": "",
-      "tam_metin": "{إِنَّ اللَّهَ فَالِقُ الْحَبِّ وَالنَّوَى} [الأنعام: 95]\n\"النَواةُ: عَجَمة التَمْر والزَبيب وغيرهما. والنَيّ -كَحّي وسِيّ: الشَحْم. نَوَتْ الناقة وغيرها: سَمِنَتْ \".\n° المعنى المحوري\nاحتواء جوف الشيء على جِرم متجمع قوي يمتد فيه. كالنواة في التمرة والنَيّ في الناقة {إِنَّ اللَّهَ فَالِقُ الْحَبِّ وَالنَّوَى} ومنه \"نَوَاك الله: حفظك \" (أحاطك بحفظه. كالنواة في التمرة). و \"النِية: القَصْد والاعتقاد \"إذ هي شيء ينعقد في نفسك ويتجمع. ولذا يقولون: عَزم (: شَدّ) النيّة، وعَقد النية ونحو ذلك. ومن هذا قالوا: \"النِيَّة والنَوَى: الوَجْهُ الذي يَنْويه المسافر \"فكأنهما بمعنى المَنْويّ. ومن ملحظ الغياب في جوف شيء \"النَوَى: الدارُ \" (يكْتَنّ فيها ساكنها) \"والبُعْدُ \" (لغياب البعيد في غيابه المجهول).",
-      "fasil_ozeti": ""
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "تنوين",
-        "u": "تنوين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تنوين (form I)\n# تَنْوِينَ (tanwīna) /tan.wiː.na/: inflection of نَوَى (nawā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُنْوَيْنَ (tunwayna) /tun.waj.na/: inflection of نَوَى (nawā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passi",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanwīna", "nawā", "tunwayna"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوي",
-        "u": "نوي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوِيَ • (nuwiya) (form I) /nu.wi.ja/\n# third-person masculine singular past passive of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuwiya", "nawā"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "ينوي",
-        "u": "ينوي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ينوي (form I)\n# يَنْوِي (yanwī) /jan.wiː/: third-person masculine singular non-past active indicative of نَوَى (nawā)\n# يَنْوِيَ (yanwiya) /jan.wi.ja/: third-person masculine singular non-past active subjunctive of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanwī", "nawā", "yanwiya"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "ينوى",
-        "u": "ينوى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُنْوَى • (yunwā) (form I) /jun.waː/\n# third-person masculine singular non-past passive indicative/subjunctive of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yunwā", "nawā"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "ينو",
-        "u": "ينو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ينو (form I)\n# يَنْوِ (yanwi) /jan.wi/: third-person masculine singular non-past active jussive of نَوَى (nawā)\n# يُنْوَ (yunwa) /jun.wa/: third-person masculine singular non-past passive jussive of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanwi", "nawā", "yunwa"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوت",
-        "u": "نوت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَوَتْ • (nawat) (form I) /na.wat/\n# third-person feminine singular past active of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nawat", "nawā"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوي",
-        "u": "تنوي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنوي (form I)\n# تَنْوِي (tanwī) /tan.wiː/: inflection of نَوَى (nawā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَنْوِيَ (tanwiya) /tan.wi.ja/: inflection of نَوَى (nawā):\n## second-person masculine singular non-past active subjunctive\n## third",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanwī", "nawā", "tanwiya"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تنو",
-        "u": "تنو",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنو (form I)\n# تَنْوِ (tanwi) /tan.wi/: inflection of نَوَى (nawā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُنْوَ (tunwa) /tun.wa/: inflection of نَوَى (nawā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanwi", "nawā", "tunwa"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "نويت",
-        "u": "نويت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نويت (form I)\n# نَوَيْتُ (nawaytu) /na.waj.tu/: first-person singular past active of نَوَى (nawā)\n# نَوَيْتَ (nawayta) /na.waj.ta/: second-person masculine singular past active of نَوَى (nawā)\n# نَوَيْتِ (nawayti) /na.waj.ti/: second-person feminine singular past active of نَوَى (nawā)\n# نُوِيتُ (nuwītu) /nu.wiː.tu/: first-person singular past passive of نَوَى (nawā)\n# نُوِيتَ (nuwīta) /nu.wiː.ta/",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nawaytu", "nawā", "nawayta"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوى",
-        "u": "تنوى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُنْوَى • (tunwā) (form I) /tun.waː/\n# inflection of نَوَى (nawā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tunwā", "nawā"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "انو",
-        "u": "انو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِنْوِ • (inwi) (form I) /in.wi/\n# second-person masculine singular imperative of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["inwi", "nawā"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "انوي",
-        "u": "انوي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِنْوِي • (inwī) (form I) /in.wiː/\n# second-person feminine singular imperative of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["inwī", "nawā"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "أنوي",
-        "u": "أنوي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنوي (form I)\n# أَنْوِي (ʔanwī) /ʔan.wiː/: first-person singular non-past active indicative of نَوَى (nawā)\n# أَنْوِيَ (ʔanwiya) /ʔan.wi.ja/: first-person singular non-past active subjunctive of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔanwī", "nawā", "ʔanwiya"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "أنو",
-        "u": "أنو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنو (form I)\n# أَنْوِ (ʔanwi) /ʔan.wi/: first-person singular non-past active jussive of نَوَى (nawā)\n# أُنْوَ (ʔunwa) /ʔun.wa/: first-person singular non-past passive jussive of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔanwi", "nawā", "ʔunwa"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "أنوى",
-        "u": "أنوى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُنْوَى • (ʔunwā) (form I) /ʔun.waː/\n# first-person singular non-past passive indicative/subjunctive of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔunwā", "nawā"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوينا",
-        "u": "نوينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نوينا (form I)\n# نَوَيْنَا (nawaynā) /na.waj.naː/: first-person plural past active of نَوَى (nawā)\n# نُوِينَا (nuwīnā) /nu.wiː.naː/: first-person plural past passive of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nawaynā", "nawā", "nuwīnā"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "ننوي",
-        "u": "ننوي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ننوي (form I)\n# نَنْوِي (nanwī) /nan.wiː/: first-person plural non-past active indicative of نَوَى (nawā)\n# نَنْوِيَ (nanwiya) /nan.wi.ja/: first-person plural non-past active subjunctive of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nanwī", "nawā", "nanwiya"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "ننو",
-        "u": "ننو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ننو (form I)\n# نَنْوِ (nanwi) /nan.wi/: first-person plural non-past active jussive of نَوَى (nawā)\n# نُنْوَ (nunwa) /nun.wa/: first-person plural non-past passive jussive of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nanwi", "nawā", "nunwa"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "ننوى",
-        "u": "ننوى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُنْوَى • (nunwā) (form I) /nun.waː/\n# first-person plural non-past passive indicative/subjunctive of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nunwā", "nawā"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "نويتم",
-        "u": "نويتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نويتم (form I)\n# نَوَيْتُمْ (nawaytum) /na.waj.tum/: second-person masculine plural past active of نَوَى (nawā)\n# نُوِيتُمْ (nuwītum) /nu.wiː.tum/: second-person masculine plural past passive of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nawaytum", "nawā", "nuwītum"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوون",
-        "u": "تنوون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تنوون (form I)\n# تَنْوُونَ (tanwūna) /tan.wuː.na/: second-person masculine plural non-past active indicative of نَوَى (nawā)\n# تُنْوَوْنَ (tunwawna) /tun.waw.na/: second-person masculine plural non-past passive indicative of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanwūna", "nawā", "tunwawna"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تنووا",
-        "u": "تنووا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنووا (form I)\n# تَنْوُوا (tanwū) /tan.wuː/: second-person masculine plural non-past active subjunctive/jussive of نَوَى (nawā)\n# تُنْوَوْا (tunwaw) /tun.waw/: second-person masculine plural non-past passive subjunctive/jussive of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanwū", "nawā", "tunwaw"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "انووا",
-        "u": "انووا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِنْوُوا • (inwū) (form I) /in.wuː/\n# second-person masculine plural imperative of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["inwū", "nawā"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "نووا",
-        "u": "نووا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نووا (form I)\n# نَوَوْا (nawaw) /na.waw/: third-person masculine plural past active of نَوَى (nawā)\n# نُوُوا (nuwū) /nu.wuː/: third-person masculine plural past passive of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nawaw", "nawā", "nuwū"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "ينوون",
-        "u": "ينوون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ينوون (form I)\n# يَنْوُونَ (yanwūna) /jan.wuː.na/: third-person masculine plural non-past active indicative of نَوَى (nawā)\n# يُنْوَوْنَ (yunwawna) /jun.waw.na/: third-person masculine plural non-past passive indicative of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanwūna", "nawā", "yunwawna"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "ينووا",
-        "u": "ينووا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ينووا (form I)\n# يَنْوُوا (yanwū) /jan.wuː/: third-person masculine plural non-past active subjunctive/jussive of نَوَى (nawā)\n# يُنْوَوْا (yunwaw) /jun.waw/: third-person masculine plural non-past passive subjunctive/jussive of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanwū", "nawā", "yunwaw"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "نويتن",
-        "u": "نويتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نويتن (form I)\n# نَوَيْتُنَّ (nawaytunna) /na.waj.tun.na/: second-person feminine plural past active of نَوَى (nawā)\n# نُوِيتُنَّ (nuwītunna) /nu.wiː.tun.na/: second-person feminine plural past passive of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nawaytunna", "nawā", "nuwītunna"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "انوين",
-        "u": "انوين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِنْوِينَ • (inwīna) (form I) /in.wiː.na/\n# second-person feminine plural imperative of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["inwīna", "nawā"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوين",
-        "u": "نوين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نوين (form I)\n# نَوَيْنَ (nawayna) /na.waj.na/: third-person feminine plural past active of نَوَى (nawā)\n# نُوِينَ (nuwīna) /nu.wiː.na/: third-person feminine plural past passive of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nawayna", "nawā", "nuwīna"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "ينوين",
-        "u": "ينوين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ينوين (form I)\n# يَنْوِينَ (yanwīna) /jan.wiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of نَوَى (nawā)\n# يُنْوَيْنَ (yunwayna) /jun.waj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanwīna", "nawā", "yunwayna"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تنويا",
-        "u": "تنويا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تنويا (form I)\n# تَنْوِيَا (tanwiyā) /tan.wi.jaː/: inflection of نَوَى (nawā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُنْوَيَا (tunwayā) /tun.wa.jaː/: inflection of نَوَى (nawā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanwiyā", "nawā", "tunwayā"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "نويتما",
-        "u": "نويتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نويتما (form I)\n# نَوَيْتُمَا (nawaytumā) /na.waj.tu.maː/: second-person dual past active of نَوَى (nawā)\n# نُوِيتُمَا (nuwītumā) /nu.wiː.tu.maː/: second-person dual past passive of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nawaytumā", "nawā", "nuwītumā"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "نويا",
-        "u": "نويا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نويا (form I)\n# نَوَيَا (nawayā) /na.wa.jaː/: third-person masculine dual past active of نَوَى (nawā)\n# نُوِيَا (nuwiyā) /nu.wi.jaː/: third-person masculine dual past passive of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nawayā", "nawā", "nuwiyā"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوتا",
-        "u": "نوتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَوَتَا • (nawatā) (form I) /na.wa.taː/\n# third-person feminine dual past active of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nawatā", "nawā"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "نويتا",
-        "u": "نويتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوِيَتَا • (nuwiyatā) (form I) /nu.wi.ja.taː/\n# third-person feminine dual past passive of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuwiyatā", "nawā"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "ينويان",
-        "u": "ينويان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ينويان (form I)\n# يَنْوِيَانِ (yanwiyāni) /jan.wi.jaː.ni/: third-person masculine dual non-past active indicative of نَوَى (nawā)\n# يُنْوَيَانِ (yunwayāni) /jun.wa.jaː.ni/: third-person masculine dual non-past passive indicative of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanwiyāni", "nawā", "yunwayāni"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تنويان",
-        "u": "تنويان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تنويان (form I)\n# تَنْوِيَانِ (tanwiyāni) /tan.wi.jaː.ni/: inflection of نَوَى (nawā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُنْوَيَانِ (tunwayāni) /tun.wa.jaː.ni/: inflection of نَوَى (nawā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanwiyāni", "nawā", "tunwayāni"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "ينويا",
-        "u": "ينويا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ينويا (form I)\n# يَنْوِيَا (yanwiyā) /jan.wi.jaː/: third-person masculine dual non-past active subjunctive/jussive of نَوَى (nawā)\n# يُنْوَيَا (yunwayā) /jun.wa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanwiyā", "nawā", "yunwayā"],
-        "k": "نوى",
-        "yol": "kök"
-      },
-      {
-        "w": "انويا",
-        "u": "انويا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِنْوِيَا • (inwiyā) (form I) /in.wi.jaː/\n# second-person dual imperative of نَوَى (nawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["inwiyā", "nawā"],
-        "k": "نوى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "نى",
+  "ses": {
     "harf": "ن",
+    "fasil": "نى",
     "mahrec": "zelakiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+  "mekayis": [
+    {
+      "baslik": "نَوَى",
+      "metin": "(نَوَى) النُّونُ وَالْوَاوُ وَالْحَرْفُ الْمُعْتَلُّ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى مَعْنَيَيْنِ: أَحَدُهُمَا مَقْصِدٌ لِشَيْءٍ، وَالْآخَرُ عَجَمُ شَيْءٍ.\nفَالْأَوَّلُ النَّوَى. قَالَ أَهْلُ اللُّغَةِ: النَّوَى: التَّحَوُّلُ مِنْ دَارٍ إِلَى دَارٍ. هَذَا هُوَ الْأَصْلُ، ثُمَّ حُمِلَ عَلَيْهِ الْبَابُ كُلُّهُ فَقَالُوا: [نَوَى] الْأَمْرَ يَنْوِيهِ، إِذَا قَصَدَ لَهُ. وَمِمَّا يُصَحِّحُ هَذِهِ التَّآوِيلَ قَوْلُهُمْ: نَوَاهُ اللَّهُ، كَأَنَّهُ قَصَدَهُ بِالْحِفْظِ وَالْحِيَاطَةِ. قَالَ:\nيَا عَمْرُو أَحْسِنْ نَوَاكَ اللَّهُ بِالرَّشَدِ ... وَاقْرَأْ سَلَامًا عَلَى الذَّلْفَاءِ بِالثَّمَدِ\nأَيْ قَصَدَكَ بِالرَّشَدِ. وَالنِّيَّةُ: الْوَجْهُ الَّذِي تَنْوِيهِ. وَنَوِيُّكَ: صَاحِبُكَ نِيَّتُهُ نِيَّتُكَ.\nوَالْأَصْلُ الْآخَرُ النَّوَى: نَوَى التَّمْرِ. وَرُبَّمَا عَبَّرُوا بِهِ عَنْ بَعْضِ الْأَوْزَانِ. وَيُقَالُ إِنَّ النَّوَاةَ زِنَةُ خَمْسَةِ دَرَاهِمَ. وَتَزَوَّجَهَا عَلَى نَوَاةٍ مِنْ ذَهَبٍ، أَيْ وَزْنِ خَمْسَةِ دَرَاهِمَ مِنْهُ.\nوَبِالْهَمْزِ كَلِمَةٌ تَدُلُّ عَلَى النُّهُوضِ وَنَاءَ يَنُوءُ نَوْءًا: نَهَضَ. قَالَ:\nفَقُلْنَا لَهُمْ تِلْكُمْ إِذًا بَعْدَ كَرَّةٍ ... نُغَادِرُ صَرْعَى نَوْؤُهَا مُتَخَاذِلُ\nأَيْ نُهُوضُهَا ضَعِيفٌ وَالنَّوْءُ مِنْ أَنْوَاءِ الْمَطَرِ كَأَنَّهُ يَنْهَضُ بِالْمَطَرِ. وَكُلُّ نَاهِضٍ\nبِثِقْلٍ فَقَدْ نَاءَ. وَنَاءَ الْبَعِيرُ بِحِمْلِهِ. وَالْمَرْأَةُ تَنُوءُ بِهَا عَجِيزَتُهَا، وَهِيَ تَنُوءُ بِهَا. فَالْأُولَى تُثْقَلُ بِهَا، وَالثَّانِيَةُ تَنْهَضُ.\nوَمِنَ الْبَابِ الْمُنَاوَأَةُ تَكُونُ بَيْنَ الْقَوْمِ يُقَالُ: نَاوَأَهُ، إِذَا عَادَاهُ. وَهُوَ قِيَاسُ مَا ذَكَرْنَاهُ، لِأَنَّهَا الْمُنَاهَضَةُ، هَذَا يَنُوءُ إِلَى هَذَا وَهُوَ يَنُوءُ إِلَيْهِ أَيْ يَنْهَضُ."
+    }
+  ],
+  "cebel": {
     "fasil": "الميم والهاء",
+    "baslik": "نوى",
     "mihveri": "احتواء جوف الشيء على جِرم متجمع قوي يمتد فيه. كالنواة في التمرة والنَيّ في الناقة {إِنَّ اللَّهَ فَالِقُ الْحَبِّ وَالنَّوَى} ومنه \"نَوَاك الله: حفظك \" (أحاطك بحفظه. كالنواة في التمرة). و \"النِية: القَصْد والاعتقاد \"إذ هي شيء ينعقد في نفسك ويتجمع. ولذا يقولون: عَزم (: شَدّ) النيّة، وعَقد النية ونحو ذلك. ومن هذا قالوا: \"النِيَّة والنَوَى: الوَجْهُ الذي يَنْويه المسافر \"فكأنهما بمعنى المَنْويّ. ومن ملحظ الغياب في جوف شيء \"النَوَى: الدارُ \" (يكْتَنّ فيها ساكنها) \"والبُعْدُ \" (لغياب البعيد في غيابه المجهول).",
-    "sesler": "",
-    "fasil_ozeti": "",
-    "tam_metin": "{إِنَّ اللَّهَ فَالِقُ الْحَبِّ وَالنَّوَى} [الأنعام: 95]\n\"النَواةُ: عَجَمة التَمْر والزَبيب وغيرهما. والنَيّ -كَحّي وسِيّ: الشَحْم. نَوَتْ الناقة وغيرها: سَمِنَتْ \".\n° المعنى المحوري\nاحتواء جوف الشيء على جِرم متجمع قوي يمتد فيه. كالنواة في التمرة والنَيّ في الناقة {إِنَّ اللَّهَ فَالِقُ الْحَبِّ وَالنَّوَى} ومنه \"نَوَاك الله: حفظك \" (أحاطك بحفظه. كالنواة في التمرة). و \"النِية: القَصْد والاعتقاد \"إذ هي شيء ينعقد في نفسك ويتجمع. ولذا يقولون: عَزم (: شَدّ) النيّة، وعَقد النية ونحو ذلك. ومن هذا قالوا: \"النِيَّة والنَوَى: الوَجْهُ الذي يَنْويه المسافر \"فكأنهما بمعنى المَنْويّ. ومن ملحظ الغياب في جوف شيء \"النَوَى: الدارُ \" (يكْتَنّ فيها ساكنها) \"والبُعْدُ \" (لغياب البعيد في غيابه المجهول)."
+    "tam_metin": "{إِنَّ اللَّهَ فَالِقُ الْحَبِّ وَالنَّوَى} [الأنعام: 95]\n\"النَواةُ: عَجَمة التَمْر والزَبيب وغيرهما. والنَيّ -كَحّي وسِيّ: الشَحْم. نَوَتْ الناقة وغيرها: سَمِنَتْ \".\n° المعنى المحوري\nاحتواء جوف الشيء على جِرم متجمع قوي يمتد فيه. كالنواة في التمرة والنَيّ في الناقة {إِنَّ اللَّهَ فَالِقُ الْحَبِّ وَالنَّوَى} ومنه \"نَوَاك الله: حفظك \" (أحاطك بحفظه. كالنواة في التمرة). و \"النِية: القَصْد والاعتقاد \"إذ هي شيء ينعقد في نفسك ويتجمع. ولذا يقولون: عَزم (: شَدّ) النيّة، وعَقد النية ونحو ذلك. ومن هذا قالوا: \"النِيَّة والنَوَى: الوَجْهُ الذي يَنْويه المسافر \"فكأنهما بمعنى المَنْويّ. ومن ملحظ الغياب في جوف شيء \"النَوَى: الدارُ \" (يكْتَنّ فيها ساكنها) \"والبُعْدُ \" (لغياب البعيد في غيابه المجهول).",
+    "fasil_ozeti": ""
   },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تنوين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تنوين (form I)\n# تَنْوِينَ (tanwīna) /tan.wiː.na/: inflection of نَوَى (nawā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُنْوَيْنَ (tunwayna) /tun.waj.na/: inflection of نَوَى (nawā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passi",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanwīna", "nawā", "tunwayna"]
+    },
+    {
+      "madde": "نوي",
+      "tur": "verb",
+      "baslik": "نُوِيَ • (nuwiya) (form I) /nu.wi.ja/\n# third-person masculine singular past passive of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuwiya", "nawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينوي",
+      "tur": "verb",
+      "baslik": "ينوي (form I)\n# يَنْوِي (yanwī) /jan.wiː/: third-person masculine singular non-past active indicative of نَوَى (nawā)\n# يَنْوِيَ (yanwiya) /jan.wi.ja/: third-person masculine singular non-past active subjunctive of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanwī", "nawā", "yanwiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينوى",
+      "tur": "verb",
+      "baslik": "يُنْوَى • (yunwā) (form I) /jun.waː/\n# third-person masculine singular non-past passive indicative/subjunctive of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yunwā", "nawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينو",
+      "tur": "verb",
+      "baslik": "ينو (form I)\n# يَنْوِ (yanwi) /jan.wi/: third-person masculine singular non-past active jussive of نَوَى (nawā)\n# يُنْوَ (yunwa) /jun.wa/: third-person masculine singular non-past passive jussive of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanwi", "nawā", "yunwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوت",
+      "tur": "verb",
+      "baslik": "نَوَتْ • (nawat) (form I) /na.wat/\n# third-person feminine singular past active of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nawat", "nawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنوي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنوي (form I)\n# تَنْوِي (tanwī) /tan.wiː/: inflection of نَوَى (nawā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَنْوِيَ (tanwiya) /tan.wi.ja/: inflection of نَوَى (nawā):\n## second-person masculine singular non-past active subjunctive\n## third",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanwī", "nawā", "tanwiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنو",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنو (form I)\n# تَنْوِ (tanwi) /tan.wi/: inflection of نَوَى (nawā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُنْوَ (tunwa) /tun.wa/: inflection of نَوَى (nawā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanwi", "nawā", "tunwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نويت",
+      "tur": "verb",
+      "baslik": "نويت (form I)\n# نَوَيْتُ (nawaytu) /na.waj.tu/: first-person singular past active of نَوَى (nawā)\n# نَوَيْتَ (nawayta) /na.waj.ta/: second-person masculine singular past active of نَوَى (nawā)\n# نَوَيْتِ (nawayti) /na.waj.ti/: second-person feminine singular past active of نَوَى (nawā)\n# نُوِيتُ (nuwītu) /nu.wiː.tu/: first-person singular past passive of نَوَى (nawā)\n# نُوِيتَ (nuwīta) /nu.wiː.ta/",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nawaytu", "nawā", "nawayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنوى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُنْوَى • (tunwā) (form I) /tun.waː/\n# inflection of نَوَى (nawā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tunwā", "nawā"]
+    },
+    {
+      "madde": "انو",
+      "tur": "verb",
+      "baslik": "اِنْوِ • (inwi) (form I) /in.wi/\n# second-person masculine singular imperative of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["inwi", "nawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "انوي",
+      "tur": "verb",
+      "baslik": "اِنْوِي • (inwī) (form I) /in.wiː/\n# second-person feminine singular imperative of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["inwī", "nawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أنوي",
+      "tur": "verb",
+      "baslik": "أنوي (form I)\n# أَنْوِي (ʔanwī) /ʔan.wiː/: first-person singular non-past active indicative of نَوَى (nawā)\n# أَنْوِيَ (ʔanwiya) /ʔan.wi.ja/: first-person singular non-past active subjunctive of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔanwī", "nawā", "ʔanwiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أنو",
+      "tur": "verb",
+      "baslik": "أنو (form I)\n# أَنْوِ (ʔanwi) /ʔan.wi/: first-person singular non-past active jussive of نَوَى (nawā)\n# أُنْوَ (ʔunwa) /ʔun.wa/: first-person singular non-past passive jussive of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔanwi", "nawā", "ʔunwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أنوى",
+      "tur": "verb",
+      "baslik": "أُنْوَى • (ʔunwā) (form I) /ʔun.waː/\n# first-person singular non-past passive indicative/subjunctive of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔunwā", "nawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوينا",
+      "tur": "verb",
+      "baslik": "نوينا (form I)\n# نَوَيْنَا (nawaynā) /na.waj.naː/: first-person plural past active of نَوَى (nawā)\n# نُوِينَا (nuwīnā) /nu.wiː.naː/: first-person plural past passive of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nawaynā", "nawā", "nuwīnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ننوي",
+      "tur": "verb",
+      "baslik": "ننوي (form I)\n# نَنْوِي (nanwī) /nan.wiː/: first-person plural non-past active indicative of نَوَى (nawā)\n# نَنْوِيَ (nanwiya) /nan.wi.ja/: first-person plural non-past active subjunctive of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nanwī", "nawā", "nanwiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ننو",
+      "tur": "verb",
+      "baslik": "ننو (form I)\n# نَنْوِ (nanwi) /nan.wi/: first-person plural non-past active jussive of نَوَى (nawā)\n# نُنْوَ (nunwa) /nun.wa/: first-person plural non-past passive jussive of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nanwi", "nawā", "nunwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ننوى",
+      "tur": "verb",
+      "baslik": "نُنْوَى • (nunwā) (form I) /nun.waː/\n# first-person plural non-past passive indicative/subjunctive of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nunwā", "nawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نويتم",
+      "tur": "verb",
+      "baslik": "نويتم (form I)\n# نَوَيْتُمْ (nawaytum) /na.waj.tum/: second-person masculine plural past active of نَوَى (nawā)\n# نُوِيتُمْ (nuwītum) /nu.wiː.tum/: second-person masculine plural past passive of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nawaytum", "nawā", "nuwītum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنوون",
+      "tur": "verb",
+      "baslik": "تنوون (form I)\n# تَنْوُونَ (tanwūna) /tan.wuː.na/: second-person masculine plural non-past active indicative of نَوَى (nawā)\n# تُنْوَوْنَ (tunwawna) /tun.waw.na/: second-person masculine plural non-past passive indicative of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanwūna", "nawā", "tunwawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنووا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنووا (form I)\n# تَنْوُوا (tanwū) /tan.wuː/: second-person masculine plural non-past active subjunctive/jussive of نَوَى (nawā)\n# تُنْوَوْا (tunwaw) /tun.waw/: second-person masculine plural non-past passive subjunctive/jussive of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanwū", "nawā", "tunwaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "انووا",
+      "tur": "verb",
+      "baslik": "اِنْوُوا • (inwū) (form I) /in.wuː/\n# second-person masculine plural imperative of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["inwū", "nawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نووا",
+      "tur": "verb",
+      "baslik": "نووا (form I)\n# نَوَوْا (nawaw) /na.waw/: third-person masculine plural past active of نَوَى (nawā)\n# نُوُوا (nuwū) /nu.wuː/: third-person masculine plural past passive of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nawaw", "nawā", "nuwū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينوون",
+      "tur": "verb",
+      "baslik": "ينوون (form I)\n# يَنْوُونَ (yanwūna) /jan.wuː.na/: third-person masculine plural non-past active indicative of نَوَى (nawā)\n# يُنْوَوْنَ (yunwawna) /jun.waw.na/: third-person masculine plural non-past passive indicative of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanwūna", "nawā", "yunwawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينووا",
+      "tur": "verb",
+      "baslik": "ينووا (form I)\n# يَنْوُوا (yanwū) /jan.wuː/: third-person masculine plural non-past active subjunctive/jussive of نَوَى (nawā)\n# يُنْوَوْا (yunwaw) /jun.waw/: third-person masculine plural non-past passive subjunctive/jussive of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanwū", "nawā", "yunwaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نويتن",
+      "tur": "verb",
+      "baslik": "نويتن (form I)\n# نَوَيْتُنَّ (nawaytunna) /na.waj.tun.na/: second-person feminine plural past active of نَوَى (nawā)\n# نُوِيتُنَّ (nuwītunna) /nu.wiː.tun.na/: second-person feminine plural past passive of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nawaytunna", "nawā", "nuwītunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "انوين",
+      "tur": "verb",
+      "baslik": "اِنْوِينَ • (inwīna) (form I) /in.wiː.na/\n# second-person feminine plural imperative of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["inwīna", "nawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوين",
+      "tur": "verb",
+      "baslik": "نوين (form I)\n# نَوَيْنَ (nawayna) /na.waj.na/: third-person feminine plural past active of نَوَى (nawā)\n# نُوِينَ (nuwīna) /nu.wiː.na/: third-person feminine plural past passive of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nawayna", "nawā", "nuwīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينوين",
+      "tur": "verb",
+      "baslik": "ينوين (form I)\n# يَنْوِينَ (yanwīna) /jan.wiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of نَوَى (nawā)\n# يُنْوَيْنَ (yunwayna) /jun.waj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanwīna", "nawā", "yunwayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنويا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تنويا (form I)\n# تَنْوِيَا (tanwiyā) /tan.wi.jaː/: inflection of نَوَى (nawā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُنْوَيَا (tunwayā) /tun.wa.jaː/: inflection of نَوَى (nawā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanwiyā", "nawā", "tunwayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نويتما",
+      "tur": "verb",
+      "baslik": "نويتما (form I)\n# نَوَيْتُمَا (nawaytumā) /na.waj.tu.maː/: second-person dual past active of نَوَى (nawā)\n# نُوِيتُمَا (nuwītumā) /nu.wiː.tu.maː/: second-person dual past passive of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nawaytumā", "nawā", "nuwītumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نويا",
+      "tur": "verb",
+      "baslik": "نويا (form I)\n# نَوَيَا (nawayā) /na.wa.jaː/: third-person masculine dual past active of نَوَى (nawā)\n# نُوِيَا (nuwiyā) /nu.wi.jaː/: third-person masculine dual past passive of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nawayā", "nawā", "nuwiyā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوتا",
+      "tur": "verb",
+      "baslik": "نَوَتَا • (nawatā) (form I) /na.wa.taː/\n# third-person feminine dual past active of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nawatā", "nawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نويتا",
+      "tur": "verb",
+      "baslik": "نُوِيَتَا • (nuwiyatā) (form I) /nu.wi.ja.taː/\n# third-person feminine dual past passive of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuwiyatā", "nawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينويان",
+      "tur": "verb",
+      "baslik": "ينويان (form I)\n# يَنْوِيَانِ (yanwiyāni) /jan.wi.jaː.ni/: third-person masculine dual non-past active indicative of نَوَى (nawā)\n# يُنْوَيَانِ (yunwayāni) /jun.wa.jaː.ni/: third-person masculine dual non-past passive indicative of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanwiyāni", "nawā", "yunwayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنويان",
+      "tur": "verb",
+      "baslik": "تنويان (form I)\n# تَنْوِيَانِ (tanwiyāni) /tan.wi.jaː.ni/: inflection of نَوَى (nawā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُنْوَيَانِ (tunwayāni) /tun.wa.jaː.ni/: inflection of نَوَى (nawā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanwiyāni", "nawā", "tunwayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينويا",
+      "tur": "verb",
+      "baslik": "ينويا (form I)\n# يَنْوِيَا (yanwiyā) /jan.wi.jaː/: third-person masculine dual non-past active subjunctive/jussive of نَوَى (nawā)\n# يُنْوَيَا (yunwayā) /jun.wa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanwiyā", "nawā", "yunwayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "انويا",
+      "tur": "verb",
+      "baslik": "اِنْوِيَا • (inwiyā) (form I) /in.wi.jaː/\n# second-person dual imperative of نَوَى (nawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["inwiyā", "nawā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "نوى", "r7"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "ust": {
       "kume": 3,
       "merkez_kok": "فقص",
@@ -554,6 +388,10 @@
       "boy": 75
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

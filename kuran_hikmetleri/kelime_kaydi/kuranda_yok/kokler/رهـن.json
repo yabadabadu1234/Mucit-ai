@@ -1,49 +1,41 @@
 {
   "kok": "رهـن",
-  "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "رهـن", "üç harfli değil"]
-  ],
-  "sozlukler": {},
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
+  "tur": "isim",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["fiil-yok"],
+  "lugat_fiil": false,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
   },
-  "tasnif": {
-    "fasil": "ره",
+  "sinif": "reddedildi",
+  "ses": {
     "harf": "ر",
+    "fasil": "ره",
     "mahrec": "zelakiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+  "zemahseri": {
     "hakikat": "قبض الرهن والرهون والرهان والرهن، واسترهنني فرهنته ضيعتي، ورهنتها عنده، ورهنتها إياه فارتهنها مني، وراهنته على كذا رهاناً ومراهنة، وتراهنا عليه إذا تواضعا الرهون، وسبق يوم الرهان.",
     "mecaz": "جاءا فرسي رهان: متساويين. وإني لك رهن بكذا ورهينة به أي أنا ضامن له. وأنشد أبو زيد:\nإني ودلويّ لها وصاحبي ... وحوضها الأفيح ذا النضائب\nرهن لها بالرّيّ غير الكاذب\nوقال:\nإن كفّي لك رهن بالرضا\nورجله رهينة أي مقيّدة. قال السمهريّ بن أسد العكليّ:\nلقد طرقت ليلي ورجلي رهينة ... فما راعني في السجن إلا سلامها\nوفلان رهن بكذا ورهين ورهينة، ومرتهن به: مأخوذ به \" كل امريء بما كسب رهين \" \" كل نفس بما كسبت رهينة \" والإنسان رهن عمله. والخلق رهائن الموت. قال:\nأبعد الذي بالنعف نعف كويكب ... رهينة رمس ذي تراب وجندل\nورهن يده المنية إذا استمات. قال الأخطل:\nولقد رهنت يدي المنية معلما ... وحملت حين تواكل الحمال\nونعمة الله راهنة: دائمة. وهذا الشيء راهن لك: معدّ. وطعام راهن، وكأس راهنة: دائمة لا تنقطع، وأرهن لضيفه الطعام والشراب: أجامهما. ورهن بالمكان: ثبت وأقام. وأرهن الميت القبر ضمنه إياه وألزمه.",
-    "kinaye": "",
     "mecaz_var": true
   },
-  "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
-    "prototipler": [
-      {
-        "kaynak": "Zemahşerî hakîkat kolu",
-        "metin": "قبض الرهن والرهون والرهان والرهن، واسترهنني فرهنته ضيعتي، ورهنتها عنده، ورهنتها إياه فارتهنها مني، وراهنته على كذا رهاناً ومراهنة، وتراهنا عليه إذا تواضعا الرهون، وسبق يوم الرهان."
-      }
-    ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "رهـن", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
+  },
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
     "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
@@ -119,16 +111,6 @@
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.544,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
-  },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+    "ortalama_benzerlik": 0.544
+  }
 }

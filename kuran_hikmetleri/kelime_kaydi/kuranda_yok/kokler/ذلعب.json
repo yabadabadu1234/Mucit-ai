@@ -1,56 +1,55 @@
 {
   "kok": "ذلعب",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ذلعب", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "اذلعب",
-        "u": "اذلعب",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "اِذْلَعَبَّ • (iḏlaʕabba) IVq (non-past يَذْلَعِبُّ (yaḏlaʕibbu), verbal noun اِذْلِعْبَاب (iḏliʕbāb))",
-        "g": ["to hasten away, to scamper away", "to lie on one's side"],
-        "r": ["iḏlaʕabba"],
-        "k": "ذلعب",
-        "yol": "kök"
-      },
-      {
-        "w": "اذلعباب",
-        "u": "اذلعباب",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "اِذْلِعْبَاب • (iḏliʕbāb) m",
-        "g": ["verbal noun of اِذْلَعَبَّ (iḏlaʕabba) (form IVq)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["اِذْلَعَبَّ"],
-        "r": ["iḏliʕbāb"],
-        "yol": "asıl madde"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "ذل",
+  "ses": {
     "harf": "ذ",
+    "fasil": "ذل",
     "mahrec": "lessiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "اذلعب",
+      "tur": "verb",
+      "baslik": "اِذْلَعَبَّ • (iḏlaʕabba) IVq (non-past يَذْلَعِبُّ (yaḏlaʕibbu), verbal noun اِذْلِعْبَاب (iḏliʕbāb))",
+      "anlam": ["to hasten away, to scamper away", "to lie on one's side"],
+      "okunus": ["iḏlaʕabba"]
+    },
+    {
+      "madde": "اذلعباب",
+      "tur": "noun",
+      "baslik": "اِذْلِعْبَاب • (iḏliʕbāb) m",
+      "anlam": ["verbal noun of اِذْلَعَبَّ (iḏlaʕabba) (form IVq)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["اِذْلَعَبَّ"],
+      "okunus": ["iḏliʕbāb"],
+      "bag": "asıl madde"
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ذلعب", "r6"]
+  ],
+  "mana": {
     "ince": "align.v.03",
     "orta": "verb.competition",
     "ust": "insan ve toplum",
@@ -58,20 +57,8 @@
     "dayanak_tanim": "take sides for or against; ; m siding against the current candidate\"",
     "dayanak_karsilik": "lie on one's side"
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m2",
+  "gomme": {
     "ust": {
       "kume": 8,
       "merkez_kok": "سير",
@@ -91,6 +78,10 @@
       "boy": 15
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

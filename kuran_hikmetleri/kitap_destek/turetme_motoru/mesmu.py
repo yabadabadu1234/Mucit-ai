@@ -1,14 +1,52 @@
 """Müştakları üç sınıfa ayırır: mesmû' (lügatte/Kur'ân'da geçer), kıyâsî (görülmez ama kaideye uygun), aykırı (kaideye aykırı uydurma).
 Kaideler: sülâsî masdarda bâbın gâlib kaidesi (fe'ale geçişli fa'l, geçişsiz fu'ûl; fe'ile fa'al; fe'ule fa'âle/fu'ûle),
 mezîd müştaklarda bâbın lügatte kullanılması, sıfat-ı müşebbehe ve mübalağada kıyâsî sîgalar, mekânda muzâri harekesi."""
+import collections
 import re
+import istikak as I
 import turkce as T
+import wikt
 HAREKE = re.compile('[ً-ْٰ]')
 ROMA = {'I': '', 'II': 'II', 'III': 'III', 'IV': 'IV', 'V': 'V', 'VI': 'VI', 'VII': 'VII', 'VIII': 'VIII', 'IX': 'IX', 'X': 'X', 'XI': 'XI', 'XII': 'XII', 'XIII': 'XIII'}
 KURAN_BAB = {"fe'ale": '', "af'ale": 'IV', "fe''ale": 'II', "ifte'ale": 'VIII', 'fâale': 'III', "istef'ale": 'X', "tefe''ale": 'V', 'tefâale': 'VI', "infe'ale": 'VII', "if'alle": 'IX'}
 MUBALAGA_KIYASI = {"fa''āl", "mif'āl", "fa'ūl", "fa'īl", "fa'il"}
 MEZID_MASDAR = {"taf'īl", "mufā'ale", "fi'āl", "if'āl", "tafa''ul", "tafā'ul", "infi'āl", "ifti'āl", "if'ilāl", "istif'āl", "if'īlāl", "if'iv'āl", "if'ivvāl"}
 KIYASI_GRUP = ('ism-i merre', "ism-i hey'et", 'masdar-ı mîmî', 'tafdîl', 'tasğîr')
+
+
+def motor_satirlari(kok):
+    sinif, satir, red = I.tablo(kok)
+    T.isle(kok, satir)
+    wikt.isle(kok, satir)
+    gruplar = collections.OrderedDict()
+    for x in satir:
+        gruplar.setdefault(x['grup'], []).append([x['ad'], x['etiket'], x['ar'], x['lat'], x.get('tr', ''), x.get('guven', ''), x.get('tanik', '')])
+    return gruplar
+
+
+def mustak_tam(d):
+    if 'mustak' in d:
+        return d['mustak']
+    if 'mustak_kanit' not in d:
+        return {}
+    gruplar = motor_satirlari(d['kok'])
+    for g, j, *satir in d['mustak_kanit']:
+        gruplar[g][j] = satir
+    return gruplar
+
+
+def genislet(d):
+    if 'mustak_kanit' not in d:
+        return dict(d)
+    tam = mustak_tam(d)
+    return collections.OrderedDict(('mustak', tam) if k == 'mustak_kanit' else (k, v) for k, v in d.items())
+
+
+def kanit_ayir(kok, mustak):
+    gruplar = motor_satirlari(kok)
+    if list(gruplar) != list(mustak) or any(len(gruplar[g]) != len(rows) for g, rows in mustak.items()):
+        return None
+    return [[g, j] + r for g, rows in mustak.items() for j, r in enumerate(rows) if r != gruplar[g][j]]
 
 
 def sade(s):
@@ -36,7 +74,7 @@ def bilgi(d):
         for w in [g.get('lemma')] + [b.get('kelime') for b in g.get('bicimler', [])]:
             if w: mesmu.add(w); mesmu.add(re.sub('^ٱل', '', w))
         if g.get('bab') in KURAN_BAB: bablar.add(KURAN_BAB[g['bab']])
-    for L in (d.get('mustak') or {}).values():
+    for L in mustak_tam(d).values():
         for x in L:
             if (x[6] and x[6].startswith('Vikisözlük')) or x[5] in ('lugat', 'kuran'): mesmu.add(x[2])
     return mesmu, bablar, harekeler
@@ -68,7 +106,7 @@ def siniflar(d):
     galib = galib_masdar(harekeler, gecisli)
     muzari = {z for _, z in harekeler}
     out = {}
-    for g, L in (d.get('mustak') or {}).items():
+    for g, L in mustak_tam(d).items():
         for j, x in enumerate(L):
             bm = re.search(r'bâb ([IVX]+)', g)
             grup, ad, etiket, bab = g, x[0], x[1], bm.group(1) if bm else ''

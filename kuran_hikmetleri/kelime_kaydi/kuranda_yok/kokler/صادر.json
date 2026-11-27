@@ -1,500 +1,355 @@
 {
   "kok": "صادر",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "صادر", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تصادر",
-        "u": "تصادر",
-        "p": "noun",
-        "n": "1.2",
-        "h": "ar-noun",
-        "e": "تَصَادُر • (taṣādur) m",
-        "g": ["verbal noun of تَصَادَرَ (taṣādara) (form VI)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["تَصَادَرَ"],
-        "r": ["taṣādur"],
-        "ipa": ["/ta.sˤaː.dur/"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "تصادر",
-        "u": "تصادر",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تصادر (form III)\n# تُصَادِرُ (tuṣādiru) /tu.sˤaː.di.ru/: inflection of صَادَرَ (ṣādara):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُصَادَرُ (tuṣādaru) /tu.sˤaː.da.ru/: inflection of صَادَرَ (ṣādara):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive ",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṣādiru", "ṣādara", "tuṣādaru"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "يصادر",
-        "u": "يصادر",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يصادر (form III)\n# يُصَادِرُ (yuṣādiru) /ju.sˤaː.di.ru/: third-person masculine singular non-past active indicative of صَادَرَ (ṣādara)\n# يُصَادَرُ (yuṣādaru) /ju.sˤaː.da.ru/: third-person masculine singular non-past passive indicative of صَادَرَ (ṣādara)\n# يُصَادِرَ (yuṣādira) /ju.sˤaː.di.ra/: third-person masculine singular non-past active subjunctive of صَادَرَ (ṣādara)\n# يُصَادَرَ (yuṣādara) /",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṣādiru", "ṣādara", "yuṣādaru"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "صودر",
-        "u": "صودر",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صُودِرَ • (ṣūdira) (form III) /sˤuː.di.ra/\n# third-person masculine singular past passive of صَادَرَ (ṣādara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣūdira", "ṣādara"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "صادرت",
-        "u": "صادرت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صادرت (form III)\n# صَادَرْتُ (ṣādartu) /sˤaː.dar.tu/: first-person singular past active of صَادَرَ (ṣādara)\n# صَادَرْتَ (ṣādarta) /sˤaː.dar.ta/: second-person masculine singular past active of صَادَرَ (ṣādara)\n# صَادَرْتِ (ṣādarti) /sˤaː.dar.ti/: second-person feminine singular past active of صَادَرَ (ṣādara)\n# صَادَرَتْ (ṣādarat) /sˤaː.da.rat/: third-person feminine singular past active of صَادَر",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣādartu", "ṣādara", "ṣādarta"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "صودرت",
-        "u": "صودرت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صودرت (form III)\n# صُودِرْتُ (ṣūdirtu) /sˤuː.dir.tu/: first-person singular past passive of صَادَرَ (ṣādara)\n# صُودِرْتَ (ṣūdirta) /sˤuː.dir.ta/: second-person masculine singular past passive of صَادَرَ (ṣādara)\n# صُودِرْتِ (ṣūdirti) /sˤuː.dir.ti/: second-person feminine singular past passive of صَادَرَ (ṣādara)\n# صُودِرَتْ (ṣūdirat) /sˤuː.di.rat/: third-person feminine singular past passive of صَ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣūdirtu", "ṣādara", "ṣūdirta"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "تصادري",
-        "u": "تصادري",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تصادري (form III)\n# تُصَادِرِي (tuṣādirī) /tu.sˤaː.di.riː/: second-person feminine singular non-past active subjunctive/jussive of صَادَرَ (ṣādara)\n# تُصَادَرِي (tuṣādarī) /tu.sˤaː.da.riː/: second-person feminine singular non-past passive subjunctive/jussive of صَادَرَ (ṣādara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṣādirī", "ṣādara", "tuṣādarī"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "تصادرين",
-        "u": "تصادرين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تصادرين (form III)\n# تُصَادِرِينَ (tuṣādirīna) /tu.sˤaː.di.riː.na/: second-person feminine singular non-past active indicative of صَادَرَ (ṣādara)\n# تُصَادَرِينَ (tuṣādarīna) /tu.sˤaː.da.riː.na/: second-person feminine singular non-past passive indicative of صَادَرَ (ṣādara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṣādirīna", "ṣādara", "tuṣādarīna"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "صادري",
-        "u": "صادري",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَادِرِي • (ṣādirī) (form III) /sˤaː.di.riː/\n# second-person feminine singular imperative of صَادَرَ (ṣādara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣādirī", "ṣādara"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "أصادر",
-        "u": "أصادر",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أصادر (form III)\n# أُصَادِرُ (ʔuṣādiru) /ʔu.sˤaː.di.ru/: first-person singular non-past active indicative of صَادَرَ (ṣādara)\n# أُصَادَرُ (ʔuṣādaru) /ʔu.sˤaː.da.ru/: first-person singular non-past passive indicative of صَادَرَ (ṣādara)\n# أُصَادِرَ (ʔuṣādira) /ʔu.sˤaː.di.ra/: first-person singular non-past active subjunctive of صَادَرَ (ṣādara)\n# أُصَادَرَ (ʔuṣādara) /ʔu.sˤaː.da.ra/: first-person s",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔuṣādiru", "ṣādara", "ʔuṣādaru"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "صادرنا",
-        "u": "صادرنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَادَرْنَا • (ṣādarnā) (form III) /sˤaː.dar.naː/\n# first-person plural past active of صَادَرَ (ṣādara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣādarnā", "ṣādara"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "نصادر",
-        "u": "نصادر",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نصادر (form III)\n# نُصَادِرُ (nuṣādiru) /nu.sˤaː.di.ru/: first-person plural non-past active indicative of صَادَرَ (ṣādara)\n# نُصَادَرُ (nuṣādaru) /nu.sˤaː.da.ru/: first-person plural non-past passive indicative of صَادَرَ (ṣādara)\n# نُصَادِرَ (nuṣādira) /nu.sˤaː.di.ra/: first-person plural non-past active subjunctive of صَادَرَ (ṣādara)\n# نُصَادَرَ (nuṣādara) /nu.sˤaː.da.ra/: first-person plural ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nuṣādiru", "ṣādara", "nuṣādaru"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "صودرنا",
-        "u": "صودرنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صُودِرْنَا • (ṣūdirnā) (form III) /sˤuː.dir.naː/\n# first-person plural past passive of صَادَرَ (ṣādara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣūdirnā", "ṣādara"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "صادرتم",
-        "u": "صادرتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَادَرْتُمْ • (ṣādartum) (form III) /sˤaː.dar.tum/\n# second-person masculine plural past active of صَادَرَ (ṣādara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣādartum", "ṣādara"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "تصادرون",
-        "u": "تصادرون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تصادرون (form III)\n# تُصَادِرُونَ (tuṣādirūna) /tu.sˤaː.di.ruː.na/: second-person masculine plural non-past active indicative of صَادَرَ (ṣādara)\n# تُصَادَرُونَ (tuṣādarūna) /tu.sˤaː.da.ruː.na/: second-person masculine plural non-past passive indicative of صَادَرَ (ṣādara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṣādirūna", "ṣādara", "tuṣādarūna"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "صودرتم",
-        "u": "صودرتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صُودِرْتُمْ • (ṣūdirtum) (form III) /sˤuː.dir.tum/\n# second-person masculine plural past passive of صَادَرَ (ṣādara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣūdirtum", "ṣādara"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "تصادروا",
-        "u": "تصادروا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تصادروا (form III)\n# تُصَادِرُوا (tuṣādirū) /tu.sˤaː.di.ruː/: second-person masculine plural non-past active subjunctive/jussive of صَادَرَ (ṣādara)\n# تُصَادَرُوا (tuṣādarū) /tu.sˤaː.da.ruː/: second-person masculine plural non-past passive subjunctive/jussive of صَادَرَ (ṣādara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṣādirū", "ṣādara", "tuṣādarū"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "صادروا",
-        "u": "صادروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صادروا (form III)\n# صَادَرُوا (ṣādarū) /sˤaː.da.ruː/: third-person masculine plural past active of صَادَرَ (ṣādara)\n# صَادِرُوا (ṣādirū) /sˤaː.di.ruː/: second-person masculine plural imperative of صَادَرَ (ṣādara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣādarū", "ṣādara", "ṣādirū"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "يصادرون",
-        "u": "يصادرون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يصادرون (form III)\n# يُصَادِرُونَ (yuṣādirūna) /ju.sˤaː.di.ruː.na/: third-person masculine plural non-past active indicative of صَادَرَ (ṣādara)\n# يُصَادَرُونَ (yuṣādarūna) /ju.sˤaː.da.ruː.na/: third-person masculine plural non-past passive indicative of صَادَرَ (ṣādara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṣādirūna", "ṣādara", "yuṣādarūna"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "يصادروا",
-        "u": "يصادروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يصادروا (form III)\n# يُصَادِرُوا (yuṣādirū) /ju.sˤaː.di.ruː/: third-person masculine plural non-past active subjunctive/jussive of صَادَرَ (ṣādara)\n# يُصَادَرُوا (yuṣādarū) /ju.sˤaː.da.ruː/: third-person masculine plural non-past passive subjunctive/jussive of صَادَرَ (ṣādara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṣādirū", "ṣādara", "yuṣādarū"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "صودروا",
-        "u": "صودروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صُودِرُوا • (ṣūdirū) (form III) /sˤuː.di.ruː/\n# third-person masculine plural past passive of صَادَرَ (ṣādara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣūdirū", "ṣādara"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "تصادرن",
-        "u": "تصادرن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تصادرن (form III)\n# تُصَادِرْنَ (tuṣādirna) /tu.sˤaː.dir.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of صَادَرَ (ṣādara)\n# تُصَادَرْنَ (tuṣādarna) /tu.sˤaː.dar.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of صَادَرَ (ṣādara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṣādirna", "ṣādara", "tuṣādarna"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "صادرتن",
-        "u": "صادرتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَادَرْتُنَّ • (ṣādartunna) (form III) /sˤaː.dar.tun.na/\n# second-person feminine plural past active of صَادَرَ (ṣādara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣādartunna", "ṣādara"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "صادرن",
-        "u": "صادرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صادرن (form III)\n# صَادَرْنَ (ṣādarna) /sˤaː.dar.na/: third-person feminine plural past active of صَادَرَ (ṣādara)\n# صَادِرْنَ (ṣādirna) /sˤaː.dir.na/: second-person feminine plural imperative of صَادَرَ (ṣādara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣādarna", "ṣādara", "ṣādirna"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "صودرتن",
-        "u": "صودرتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صُودِرْتُنَّ • (ṣūdirtunna) (form III) /sˤuː.dir.tun.na/\n# second-person feminine plural past passive of صَادَرَ (ṣādara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣūdirtunna", "ṣādara"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "يصادرن",
-        "u": "يصادرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يصادرن (form III)\n# يُصَادِرْنَ (yuṣādirna) /ju.sˤaː.dir.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of صَادَرَ (ṣādara)\n# يُصَادَرْنَ (yuṣādarna) /ju.sˤaː.dar.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of صَادَرَ (ṣādara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṣādirna", "ṣādara", "yuṣādarna"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "صودرن",
-        "u": "صودرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صُودِرْنَ • (ṣūdirna) (form III) /sˤuː.dir.na/\n# third-person feminine plural past passive of صَادَرَ (ṣādara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣūdirna", "ṣādara"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "تصادرا",
-        "u": "تصادرا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تصادرا (form III)\n# تُصَادِرَا (tuṣādirā) /tu.sˤaː.di.raː/: inflection of صَادَرَ (ṣādara):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُصَادَرَا (tuṣādarā) /tu.sˤaː.da.raː/: inflection of صَادَرَ (ṣādara):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subj",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṣādirā", "ṣādara", "tuṣādarā"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "صادرتما",
-        "u": "صادرتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَادَرْتُمَا • (ṣādartumā) (form III) /sˤaː.dar.tu.maː/\n# second-person dual past active of صَادَرَ (ṣādara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣādartumā", "ṣādara"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "صادرتا",
-        "u": "صادرتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَادَرَتَا • (ṣādaratā) (form III) /sˤaː.da.ra.taː/\n# third-person feminine dual past active of صَادَرَ (ṣādara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣādaratā", "ṣādara"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "صادرا",
-        "u": "صادرا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صادرا (form III)\n# صَادَرَا (ṣādarā) /sˤaː.da.raː/: third-person masculine dual past active of صَادَرَ (ṣādara)\n# صَادِرَا (ṣādirā) /sˤaː.di.raː/: second-person dual imperative of صَادَرَ (ṣādara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣādarā", "ṣādara", "ṣādirā"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "صودرتما",
-        "u": "صودرتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صُودِرْتُمَا • (ṣūdirtumā) (form III) /sˤuː.dir.tu.maː/\n# second-person dual past passive of صَادَرَ (ṣādara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣūdirtumā", "ṣādara"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "صودرتا",
-        "u": "صودرتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صُودِرَتَا • (ṣūdiratā) (form III) /sˤuː.di.ra.taː/\n# third-person feminine dual past passive of صَادَرَ (ṣādara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣūdiratā", "ṣādara"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "صودرا",
-        "u": "صودرا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صُودِرَا • (ṣūdirā) (form III) /sˤuː.di.raː/\n# third-person masculine dual past passive of صَادَرَ (ṣādara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṣūdirā", "ṣādara"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "تصادران",
-        "u": "تصادران",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تصادران (form III)\n# تُصَادِرَانِ (tuṣādirāni) /tu.sˤaː.di.raː.ni/: inflection of صَادَرَ (ṣādara):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُصَادَرَانِ (tuṣādarāni) /tu.sˤaː.da.raː.ni/: inflection of صَادَرَ (ṣādara):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṣādirāni", "ṣādara", "tuṣādarāni"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "يصادران",
-        "u": "يصادران",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يصادران (form III)\n# يُصَادِرَانِ (yuṣādirāni) /ju.sˤaː.di.raː.ni/: third-person masculine dual non-past active indicative of صَادَرَ (ṣādara)\n# يُصَادَرَانِ (yuṣādarāni) /ju.sˤaː.da.raː.ni/: third-person masculine dual non-past passive indicative of صَادَرَ (ṣādara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṣādirāni", "ṣādara", "yuṣādarāni"],
-        "k": "صادر",
-        "yol": "kök"
-      },
-      {
-        "w": "يصادرا",
-        "u": "يصادرا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يصادرا (form III)\n# يُصَادِرَا (yuṣādirā) /ju.sˤaː.di.raː/: third-person masculine dual non-past active subjunctive/jussive of صَادَرَ (ṣādara)\n# يُصَادَرَا (yuṣādarā) /ju.sˤaː.da.raː/: third-person masculine dual non-past passive subjunctive/jussive of صَادَرَ (ṣādara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṣādirā", "ṣādara", "yuṣādarā"],
-        "k": "صادر",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "صد",
+  "ses": {
     "harf": "ص",
+    "fasil": "صد",
     "mahrec": "esaliyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تصادر",
+      "tur": "noun",
+      "etim_no": "1.2",
+      "baslik": "تَصَادُر • (taṣādur) m",
+      "anlam": ["verbal noun of تَصَادَرَ (taṣādara) (form VI)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["تَصَادَرَ"],
+      "okunus": ["taṣādur"],
+      "ipa": ["/ta.sˤaː.dur/"],
+      "bag": "asıl madde"
+    },
+    {
+      "madde": "تصادر",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تصادر (form III)\n# تُصَادِرُ (tuṣādiru) /tu.sˤaː.di.ru/: inflection of صَادَرَ (ṣādara):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُصَادَرُ (tuṣādaru) /tu.sˤaː.da.ru/: inflection of صَادَرَ (ṣādara):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṣādiru", "ṣādara", "tuṣādaru"]
+    },
+    {
+      "madde": "يصادر",
+      "tur": "verb",
+      "baslik": "يصادر (form III)\n# يُصَادِرُ (yuṣādiru) /ju.sˤaː.di.ru/: third-person masculine singular non-past active indicative of صَادَرَ (ṣādara)\n# يُصَادَرُ (yuṣādaru) /ju.sˤaː.da.ru/: third-person masculine singular non-past passive indicative of صَادَرَ (ṣādara)\n# يُصَادِرَ (yuṣādira) /ju.sˤaː.di.ra/: third-person masculine singular non-past active subjunctive of صَادَرَ (ṣādara)\n# يُصَادَرَ (yuṣādara) /",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṣādiru", "ṣādara", "yuṣādaru"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صودر",
+      "tur": "verb",
+      "baslik": "صُودِرَ • (ṣūdira) (form III) /sˤuː.di.ra/\n# third-person masculine singular past passive of صَادَرَ (ṣādara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣūdira", "ṣādara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صادرت",
+      "tur": "verb",
+      "baslik": "صادرت (form III)\n# صَادَرْتُ (ṣādartu) /sˤaː.dar.tu/: first-person singular past active of صَادَرَ (ṣādara)\n# صَادَرْتَ (ṣādarta) /sˤaː.dar.ta/: second-person masculine singular past active of صَادَرَ (ṣādara)\n# صَادَرْتِ (ṣādarti) /sˤaː.dar.ti/: second-person feminine singular past active of صَادَرَ (ṣādara)\n# صَادَرَتْ (ṣādarat) /sˤaː.da.rat/: third-person feminine singular past active of صَادَر",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣādartu", "ṣādara", "ṣādarta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صودرت",
+      "tur": "verb",
+      "baslik": "صودرت (form III)\n# صُودِرْتُ (ṣūdirtu) /sˤuː.dir.tu/: first-person singular past passive of صَادَرَ (ṣādara)\n# صُودِرْتَ (ṣūdirta) /sˤuː.dir.ta/: second-person masculine singular past passive of صَادَرَ (ṣādara)\n# صُودِرْتِ (ṣūdirti) /sˤuː.dir.ti/: second-person feminine singular past passive of صَادَرَ (ṣādara)\n# صُودِرَتْ (ṣūdirat) /sˤuː.di.rat/: third-person feminine singular past passive of صَ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣūdirtu", "ṣādara", "ṣūdirta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصادري",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تصادري (form III)\n# تُصَادِرِي (tuṣādirī) /tu.sˤaː.di.riː/: second-person feminine singular non-past active subjunctive/jussive of صَادَرَ (ṣādara)\n# تُصَادَرِي (tuṣādarī) /tu.sˤaː.da.riː/: second-person feminine singular non-past passive subjunctive/jussive of صَادَرَ (ṣādara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṣādirī", "ṣādara", "tuṣādarī"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصادرين",
+      "tur": "verb",
+      "baslik": "تصادرين (form III)\n# تُصَادِرِينَ (tuṣādirīna) /tu.sˤaː.di.riː.na/: second-person feminine singular non-past active indicative of صَادَرَ (ṣādara)\n# تُصَادَرِينَ (tuṣādarīna) /tu.sˤaː.da.riː.na/: second-person feminine singular non-past passive indicative of صَادَرَ (ṣādara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṣādirīna", "ṣādara", "tuṣādarīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صادري",
+      "tur": "verb",
+      "baslik": "صَادِرِي • (ṣādirī) (form III) /sˤaː.di.riː/\n# second-person feminine singular imperative of صَادَرَ (ṣādara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣādirī", "ṣādara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أصادر",
+      "tur": "verb",
+      "baslik": "أصادر (form III)\n# أُصَادِرُ (ʔuṣādiru) /ʔu.sˤaː.di.ru/: first-person singular non-past active indicative of صَادَرَ (ṣādara)\n# أُصَادَرُ (ʔuṣādaru) /ʔu.sˤaː.da.ru/: first-person singular non-past passive indicative of صَادَرَ (ṣādara)\n# أُصَادِرَ (ʔuṣādira) /ʔu.sˤaː.di.ra/: first-person singular non-past active subjunctive of صَادَرَ (ṣādara)\n# أُصَادَرَ (ʔuṣādara) /ʔu.sˤaː.da.ra/: first-person s",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔuṣādiru", "ṣādara", "ʔuṣādaru"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صادرنا",
+      "tur": "verb",
+      "baslik": "صَادَرْنَا • (ṣādarnā) (form III) /sˤaː.dar.naː/\n# first-person plural past active of صَادَرَ (ṣādara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣādarnā", "ṣādara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نصادر",
+      "tur": "verb",
+      "baslik": "نصادر (form III)\n# نُصَادِرُ (nuṣādiru) /nu.sˤaː.di.ru/: first-person plural non-past active indicative of صَادَرَ (ṣādara)\n# نُصَادَرُ (nuṣādaru) /nu.sˤaː.da.ru/: first-person plural non-past passive indicative of صَادَرَ (ṣādara)\n# نُصَادِرَ (nuṣādira) /nu.sˤaː.di.ra/: first-person plural non-past active subjunctive of صَادَرَ (ṣādara)\n# نُصَادَرَ (nuṣādara) /nu.sˤaː.da.ra/: first-person plural ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nuṣādiru", "ṣādara", "nuṣādaru"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صودرنا",
+      "tur": "verb",
+      "baslik": "صُودِرْنَا • (ṣūdirnā) (form III) /sˤuː.dir.naː/\n# first-person plural past passive of صَادَرَ (ṣādara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣūdirnā", "ṣādara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صادرتم",
+      "tur": "verb",
+      "baslik": "صَادَرْتُمْ • (ṣādartum) (form III) /sˤaː.dar.tum/\n# second-person masculine plural past active of صَادَرَ (ṣādara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣādartum", "ṣādara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصادرون",
+      "tur": "verb",
+      "baslik": "تصادرون (form III)\n# تُصَادِرُونَ (tuṣādirūna) /tu.sˤaː.di.ruː.na/: second-person masculine plural non-past active indicative of صَادَرَ (ṣādara)\n# تُصَادَرُونَ (tuṣādarūna) /tu.sˤaː.da.ruː.na/: second-person masculine plural non-past passive indicative of صَادَرَ (ṣādara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṣādirūna", "ṣādara", "tuṣādarūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صودرتم",
+      "tur": "verb",
+      "baslik": "صُودِرْتُمْ • (ṣūdirtum) (form III) /sˤuː.dir.tum/\n# second-person masculine plural past passive of صَادَرَ (ṣādara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣūdirtum", "ṣādara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصادروا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تصادروا (form III)\n# تُصَادِرُوا (tuṣādirū) /tu.sˤaː.di.ruː/: second-person masculine plural non-past active subjunctive/jussive of صَادَرَ (ṣādara)\n# تُصَادَرُوا (tuṣādarū) /tu.sˤaː.da.ruː/: second-person masculine plural non-past passive subjunctive/jussive of صَادَرَ (ṣādara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṣādirū", "ṣādara", "tuṣādarū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صادروا",
+      "tur": "verb",
+      "baslik": "صادروا (form III)\n# صَادَرُوا (ṣādarū) /sˤaː.da.ruː/: third-person masculine plural past active of صَادَرَ (ṣādara)\n# صَادِرُوا (ṣādirū) /sˤaː.di.ruː/: second-person masculine plural imperative of صَادَرَ (ṣādara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣādarū", "ṣādara", "ṣādirū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يصادرون",
+      "tur": "verb",
+      "baslik": "يصادرون (form III)\n# يُصَادِرُونَ (yuṣādirūna) /ju.sˤaː.di.ruː.na/: third-person masculine plural non-past active indicative of صَادَرَ (ṣādara)\n# يُصَادَرُونَ (yuṣādarūna) /ju.sˤaː.da.ruː.na/: third-person masculine plural non-past passive indicative of صَادَرَ (ṣādara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṣādirūna", "ṣādara", "yuṣādarūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يصادروا",
+      "tur": "verb",
+      "baslik": "يصادروا (form III)\n# يُصَادِرُوا (yuṣādirū) /ju.sˤaː.di.ruː/: third-person masculine plural non-past active subjunctive/jussive of صَادَرَ (ṣādara)\n# يُصَادَرُوا (yuṣādarū) /ju.sˤaː.da.ruː/: third-person masculine plural non-past passive subjunctive/jussive of صَادَرَ (ṣādara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṣādirū", "ṣādara", "yuṣādarū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صودروا",
+      "tur": "verb",
+      "baslik": "صُودِرُوا • (ṣūdirū) (form III) /sˤuː.di.ruː/\n# third-person masculine plural past passive of صَادَرَ (ṣādara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣūdirū", "ṣādara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصادرن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تصادرن (form III)\n# تُصَادِرْنَ (tuṣādirna) /tu.sˤaː.dir.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of صَادَرَ (ṣādara)\n# تُصَادَرْنَ (tuṣādarna) /tu.sˤaː.dar.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of صَادَرَ (ṣādara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṣādirna", "ṣādara", "tuṣādarna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صادرتن",
+      "tur": "verb",
+      "baslik": "صَادَرْتُنَّ • (ṣādartunna) (form III) /sˤaː.dar.tun.na/\n# second-person feminine plural past active of صَادَرَ (ṣādara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣādartunna", "ṣādara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صادرن",
+      "tur": "verb",
+      "baslik": "صادرن (form III)\n# صَادَرْنَ (ṣādarna) /sˤaː.dar.na/: third-person feminine plural past active of صَادَرَ (ṣādara)\n# صَادِرْنَ (ṣādirna) /sˤaː.dir.na/: second-person feminine plural imperative of صَادَرَ (ṣādara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣādarna", "ṣādara", "ṣādirna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صودرتن",
+      "tur": "verb",
+      "baslik": "صُودِرْتُنَّ • (ṣūdirtunna) (form III) /sˤuː.dir.tun.na/\n# second-person feminine plural past passive of صَادَرَ (ṣādara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣūdirtunna", "ṣādara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يصادرن",
+      "tur": "verb",
+      "baslik": "يصادرن (form III)\n# يُصَادِرْنَ (yuṣādirna) /ju.sˤaː.dir.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of صَادَرَ (ṣādara)\n# يُصَادَرْنَ (yuṣādarna) /ju.sˤaː.dar.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of صَادَرَ (ṣādara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṣādirna", "ṣādara", "yuṣādarna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صودرن",
+      "tur": "verb",
+      "baslik": "صُودِرْنَ • (ṣūdirna) (form III) /sˤuː.dir.na/\n# third-person feminine plural past passive of صَادَرَ (ṣādara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣūdirna", "ṣādara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصادرا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تصادرا (form III)\n# تُصَادِرَا (tuṣādirā) /tu.sˤaː.di.raː/: inflection of صَادَرَ (ṣādara):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُصَادَرَا (tuṣādarā) /tu.sˤaː.da.raː/: inflection of صَادَرَ (ṣādara):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subj",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṣādirā", "ṣādara", "tuṣādarā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صادرتما",
+      "tur": "verb",
+      "baslik": "صَادَرْتُمَا • (ṣādartumā) (form III) /sˤaː.dar.tu.maː/\n# second-person dual past active of صَادَرَ (ṣādara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣādartumā", "ṣādara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صادرتا",
+      "tur": "verb",
+      "baslik": "صَادَرَتَا • (ṣādaratā) (form III) /sˤaː.da.ra.taː/\n# third-person feminine dual past active of صَادَرَ (ṣādara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣādaratā", "ṣādara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صادرا",
+      "tur": "verb",
+      "baslik": "صادرا (form III)\n# صَادَرَا (ṣādarā) /sˤaː.da.raː/: third-person masculine dual past active of صَادَرَ (ṣādara)\n# صَادِرَا (ṣādirā) /sˤaː.di.raː/: second-person dual imperative of صَادَرَ (ṣādara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣādarā", "ṣādara", "ṣādirā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صودرتما",
+      "tur": "verb",
+      "baslik": "صُودِرْتُمَا • (ṣūdirtumā) (form III) /sˤuː.dir.tu.maː/\n# second-person dual past passive of صَادَرَ (ṣādara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣūdirtumā", "ṣādara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صودرتا",
+      "tur": "verb",
+      "baslik": "صُودِرَتَا • (ṣūdiratā) (form III) /sˤuː.di.ra.taː/\n# third-person feminine dual past passive of صَادَرَ (ṣādara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣūdiratā", "ṣādara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صودرا",
+      "tur": "verb",
+      "baslik": "صُودِرَا • (ṣūdirā) (form III) /sˤuː.di.raː/\n# third-person masculine dual past passive of صَادَرَ (ṣādara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṣūdirā", "ṣādara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصادران",
+      "tur": "verb",
+      "baslik": "تصادران (form III)\n# تُصَادِرَانِ (tuṣādirāni) /tu.sˤaː.di.raː.ni/: inflection of صَادَرَ (ṣādara):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُصَادَرَانِ (tuṣādarāni) /tu.sˤaː.da.raː.ni/: inflection of صَادَرَ (ṣādara):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṣādirāni", "ṣādara", "tuṣādarāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يصادران",
+      "tur": "verb",
+      "baslik": "يصادران (form III)\n# يُصَادِرَانِ (yuṣādirāni) /ju.sˤaː.di.raː.ni/: third-person masculine dual non-past active indicative of صَادَرَ (ṣādara)\n# يُصَادَرَانِ (yuṣādarāni) /ju.sˤaː.da.raː.ni/: third-person masculine dual non-past passive indicative of صَادَرَ (ṣādara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṣādirāni", "ṣādara", "yuṣādarāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يصادرا",
+      "tur": "verb",
+      "baslik": "يصادرا (form III)\n# يُصَادِرَا (yuṣādirā) /ju.sˤaː.di.raː/: third-person masculine dual non-past active subjunctive/jussive of صَادَرَ (ṣādara)\n# يُصَادَرَا (yuṣādarā) /ju.sˤaː.da.raː/: third-person masculine dual non-past passive subjunctive/jussive of صَادَرَ (ṣādara)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṣādirā", "ṣādara", "yuṣādarā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "صادر", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

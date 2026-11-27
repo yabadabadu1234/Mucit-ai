@@ -1,412 +1,289 @@
 {
   "kok": "عاين",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "عاين", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "عوين",
-        "u": "عوين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "عوين (form III)\n# عُويِنَ (ʕūyina) /ʕuː.ji.na/: third-person masculine singular past passive of عَايَنَ (ʕāyana)\n# عُويِنَّ (ʕūyinna) /ʕuː.jin.na/: third-person feminine plural past passive of عَايَنَ (ʕāyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕūyina", "ʕāyana", "ʕūyinna"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "عاينت",
-        "u": "عاينت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عاينت (form III)\n# عَايَنْتُ (ʕāyantu) /ʕaː.jan.tu/: first-person singular past active of عَايَنَ (ʕāyana)\n# عَايَنْتَ (ʕāyanta) /ʕaː.jan.ta/: second-person masculine singular past active of عَايَنَ (ʕāyana)\n# عَايَنْتِ (ʕāyanti) /ʕaː.jan.ti/: second-person feminine singular past active of عَايَنَ (ʕāyana)\n# عَايَنَتْ (ʕāyanat) /ʕaː.ja.nat/: third-person feminine singular past active of عَايَنَ (ʕ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕāyantu", "ʕāyana", "ʕāyanta"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "عاينا",
-        "u": "عاينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عاينا (form III)\n# عَايَنَا (ʕāyanā) /ʕaː.ja.naː/: third-person masculine dual past active of عَايَنَ (ʕāyana)\n# عَايَنَّا (ʕāyannā) /ʕaː.jan.naː/: first-person plural past active of عَايَنَ (ʕāyana)\n# عَايِنَا (ʕāyinā) /ʕaː.ji.naː/: second-person dual imperative of عَايَنَ (ʕāyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕāyanā", "ʕāyana", "ʕāyannā"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "عاينتما",
-        "u": "عاينتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عَايَنْتُمَا • (ʕāyantumā) (form III) /ʕaː.jan.tu.maː/\n# second-person dual past active of عَايَنَ (ʕāyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕāyantumā", "ʕāyana"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "عاينتا",
-        "u": "عاينتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عَايَنَتَا • (ʕāyanatā) (form III) /ʕaː.ja.na.taː/\n# third-person feminine dual past active of عَايَنَ (ʕāyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕāyanatā", "ʕāyana"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "عاينتم",
-        "u": "عاينتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عَايَنْتُمْ • (ʕāyantum) (form III) /ʕaː.jan.tum/\n# second-person masculine plural past active of عَايَنَ (ʕāyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕāyantum", "ʕāyana"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "عاينوا",
-        "u": "عاينوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عاينوا (form III)\n# عَايَنُوا (ʕāyanū) /ʕaː.ja.nuː/: third-person masculine plural past active of عَايَنَ (ʕāyana)\n# عَايِنُوا (ʕāyinū) /ʕaː.ji.nuː/: second-person masculine plural imperative of عَايَنَ (ʕāyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕāyanū", "ʕāyana", "ʕāyinū"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "عوينت",
-        "u": "عوينت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عوينت (form III)\n# عُويِنْتُ (ʕūyintu) /ʕuː.jin.tu/: first-person singular past passive of عَايَنَ (ʕāyana)\n# عُويِنْتَ (ʕūyinta) /ʕuː.jin.ta/: second-person masculine singular past passive of عَايَنَ (ʕāyana)\n# عُويِنْتِ (ʕūyinti) /ʕuː.jin.ti/: second-person feminine singular past passive of عَايَنَ (ʕāyana)\n# عُويِنَتْ (ʕūyinat) /ʕuː.ji.nat/: third-person feminine singular past passive of عَايَن",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕūyintu", "ʕāyana", "ʕūyinta"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "عوينتما",
-        "u": "عوينتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عُويِنْتُمَا • (ʕūyintumā) (form III) /ʕuː.jin.tu.maː/\n# second-person dual past passive of عَايَنَ (ʕāyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕūyintumā", "ʕāyana"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "عوينا",
-        "u": "عوينا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "عوينا (form III)\n# عُويِنَا (ʕūyinā) /ʕuː.ji.naː/: third-person masculine dual past passive of عَايَنَ (ʕāyana)\n# عُويِنَّا (ʕūyinnā) /ʕuː.jin.naː/: first-person plural past passive of عَايَنَ (ʕāyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕūyinā", "ʕāyana", "ʕūyinnā"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "عوينتن",
-        "u": "عوينتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عُويِنْتُنَّ • (ʕūyintunna) (form III) /ʕuː.jin.tun.na/\n# second-person feminine plural past passive of عَايَنَ (ʕāyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕūyintunna", "ʕāyana"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "عوينتم",
-        "u": "عوينتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عُويِنْتُمْ • (ʕūyintum) (form III) /ʕuː.jin.tum/\n# second-person masculine plural past passive of عَايَنَ (ʕāyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕūyintum", "ʕāyana"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "عوينتا",
-        "u": "عوينتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عُويِنَتَا • (ʕūyinatā) (form III) /ʕuː.ji.na.taː/\n# third-person feminine dual past passive of عَايَنَ (ʕāyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕūyinatā", "ʕāyana"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "عوينوا",
-        "u": "عوينوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عُويِنُوا • (ʕūyinū) (form III) /ʕuː.ji.nuː/\n# third-person masculine plural past passive of عَايَنَ (ʕāyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕūyinū", "ʕāyana"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "أعاين",
-        "u": "أعاين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعاين (form III)\n# أُعَايِنُ (ʔuʕāyinu) /ʔu.ʕaː.ji.nu/: first-person singular non-past active indicative of عَايَنَ (ʕāyana)\n# أُعَايَنُ (ʔuʕāyanu) /ʔu.ʕaː.ja.nu/: first-person singular non-past passive indicative of عَايَنَ (ʕāyana)\n# أُعَايِنَ (ʔuʕāyina) /ʔu.ʕaː.ji.na/: first-person singular non-past active subjunctive of عَايَنَ (ʕāyana)\n# أُعَايَنَ (ʔuʕāyana) /ʔu.ʕaː.ja.na/: first-person singu",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔuʕāyinu", "ʕāyana", "ʔuʕāyanu"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "عاينتن",
-        "u": "عاينتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عَايَنْتُنَّ • (ʕāyantunna) (form III) /ʕaː.jan.tun.na/\n# second-person feminine plural past active of عَايَنَ (ʕāyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕāyantunna", "ʕāyana"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "تعاينان",
-        "u": "تعاينان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تعاينان (form III)\n# تُعَايِنَانِ (tuʕāyināni) /tu.ʕaː.ji.naː.ni/: inflection of عَايَنَ (ʕāyana):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُعَايَنَانِ (tuʕāyanāni) /tu.ʕaː.ja.naː.ni/: inflection of عَايَنَ (ʕāyana):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuʕāyināni", "ʕāyana", "tuʕāyanāni"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "تعاين",
-        "u": "تعاين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تعاين (form III)\n# تُعَايِنُ (tuʕāyinu) /tu.ʕaː.ji.nu/: inflection of عَايَنَ (ʕāyana):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُعَايِنَّ (tuʕāyinna) /tu.ʕaː.jin.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of عَايَنَ (ʕāyana)\n# تُعَايَنُ (tuʕāyanu) /tu.ʕaː.ja.nu/: inflection",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuʕāyinu", "ʕāyana", "tuʕāyinna"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "تعاينين",
-        "u": "تعاينين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تعاينين (form III)\n# تُعَايِنِينَ (tuʕāyinīna) /tu.ʕaː.ji.niː.na/: second-person feminine singular non-past active indicative of عَايَنَ (ʕāyana)\n# تُعَايَنِينَ (tuʕāyanīna) /tu.ʕaː.ja.niː.na/: second-person feminine singular non-past passive indicative of عَايَنَ (ʕāyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuʕāyinīna", "ʕāyana", "tuʕāyanīna"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "يعاينان",
-        "u": "يعاينان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يعاينان (form III)\n# يُعَايِنَانِ (yuʕāyināni) /ju.ʕaː.ji.naː.ni/: third-person masculine dual non-past active indicative of عَايَنَ (ʕāyana)\n# يُعَايَنَانِ (yuʕāyanāni) /ju.ʕaː.ja.naː.ni/: third-person masculine dual non-past passive indicative of عَايَنَ (ʕāyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuʕāyināni", "ʕāyana", "yuʕāyanāni"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "نعاين",
-        "u": "نعاين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نعاين (form III)\n# نُعَايِنُ (nuʕāyinu) /nu.ʕaː.ji.nu/: first-person plural non-past active indicative of عَايَنَ (ʕāyana)\n# نُعَايَنُ (nuʕāyanu) /nu.ʕaː.ja.nu/: first-person plural non-past passive indicative of عَايَنَ (ʕāyana)\n# نُعَايِنَ (nuʕāyina) /nu.ʕaː.ji.na/: first-person plural non-past active subjunctive of عَايَنَ (ʕāyana)\n# نُعَايَنَ (nuʕāyana) /nu.ʕaː.ja.na/: first-person plural non-",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nuʕāyinu", "ʕāyana", "nuʕāyanu"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "تعاينون",
-        "u": "تعاينون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تعاينون (form III)\n# تُعَايِنُونَ (tuʕāyinūna) /tu.ʕaː.ji.nuː.na/: second-person masculine plural non-past active indicative of عَايَنَ (ʕāyana)\n# تُعَايَنُونَ (tuʕāyanūna) /tu.ʕaː.ja.nuː.na/: second-person masculine plural non-past passive indicative of عَايَنَ (ʕāyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuʕāyinūna", "ʕāyana", "tuʕāyanūna"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "يعاين",
-        "u": "يعاين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يعاين (form III)\n# يُعَايِنُ (yuʕāyinu) /ju.ʕaː.ji.nu/: third-person masculine singular non-past active indicative of عَايَنَ (ʕāyana)\n# يُعَايِنَّ (yuʕāyinna) /ju.ʕaː.jin.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of عَايَنَ (ʕāyana)\n# يُعَايَنُ (yuʕāyanu) /ju.ʕaː.ja.nu/: third-person masculine singular non-past passive indicative of عَايَنَ (ʕāyana)\n# يُعَاي",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuʕāyinu", "ʕāyana", "yuʕāyinna"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "يعاينون",
-        "u": "يعاينون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يعاينون (form III)\n# يُعَايِنُونَ (yuʕāyinūna) /ju.ʕaː.ji.nuː.na/: third-person masculine plural non-past active indicative of عَايَنَ (ʕāyana)\n# يُعَايَنُونَ (yuʕāyanūna) /ju.ʕaː.ja.nuː.na/: third-person masculine plural non-past passive indicative of عَايَنَ (ʕāyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuʕāyinūna", "ʕāyana", "yuʕāyanūna"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "تعاينا",
-        "u": "تعاينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تعاينا (form III)\n# تُعَايِنَا (tuʕāyinā) /tu.ʕaː.ji.naː/: inflection of عَايَنَ (ʕāyana):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُعَايَنَا (tuʕāyanā) /tu.ʕaː.ja.naː/: inflection of عَايَنَ (ʕāyana):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjun",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuʕāyinā", "ʕāyana", "tuʕāyanā"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "تعايني",
-        "u": "تعايني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تعايني (form III)\n# تُعَايِنِي (tuʕāyinī) /tu.ʕaː.ji.niː/: second-person feminine singular non-past active subjunctive/jussive of عَايَنَ (ʕāyana)\n# تُعَايَنِي (tuʕāyanī) /tu.ʕaː.ja.niː/: second-person feminine singular non-past passive subjunctive/jussive of عَايَنَ (ʕāyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuʕāyinī", "ʕāyana", "tuʕāyanī"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "يعاينا",
-        "u": "يعاينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يعاينا (form III)\n# يُعَايِنَا (yuʕāyinā) /ju.ʕaː.ji.naː/: third-person masculine dual non-past active subjunctive/jussive of عَايَنَ (ʕāyana)\n# يُعَايَنَا (yuʕāyanā) /ju.ʕaː.ja.naː/: third-person masculine dual non-past passive subjunctive/jussive of عَايَنَ (ʕāyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuʕāyinā", "ʕāyana", "yuʕāyanā"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "عايني",
-        "u": "عايني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عَايِنِي • (ʕāyinī) (form III) /ʕaː.ji.niː/\n# second-person feminine singular imperative of عَايَنَ (ʕāyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕāyinī", "ʕāyana"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "تعاينوا",
-        "u": "تعاينوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تعاينوا (form III)\n# تُعَايِنُوا (tuʕāyinū) /tu.ʕaː.ji.nuː/: second-person masculine plural non-past active subjunctive/jussive of عَايَنَ (ʕāyana)\n# تُعَايَنُوا (tuʕāyanū) /tu.ʕaː.ja.nuː/: second-person masculine plural non-past passive subjunctive/jussive of عَايَنَ (ʕāyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuʕāyinū", "ʕāyana", "tuʕāyanū"],
-        "k": "عاين",
-        "yol": "kök"
-      },
-      {
-        "w": "يعاينوا",
-        "u": "يعاينوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يعاينوا (form III)\n# يُعَايِنُوا (yuʕāyinū) /ju.ʕaː.ji.nuː/: third-person masculine plural non-past active subjunctive/jussive of عَايَنَ (ʕāyana)\n# يُعَايَنُوا (yuʕāyanū) /ju.ʕaː.ja.nuː/: third-person masculine plural non-past passive subjunctive/jussive of عَايَنَ (ʕāyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuʕāyinū", "ʕāyana", "yuʕāyanū"],
-        "k": "عاين",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "عن",
+  "ses": {
     "harf": "ع",
+    "fasil": "عن",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "عوين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "عوين (form III)\n# عُويِنَ (ʕūyina) /ʕuː.ji.na/: third-person masculine singular past passive of عَايَنَ (ʕāyana)\n# عُويِنَّ (ʕūyinna) /ʕuː.jin.na/: third-person feminine plural past passive of عَايَنَ (ʕāyana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕūyina", "ʕāyana", "ʕūyinna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عاينت",
+      "tur": "verb",
+      "baslik": "عاينت (form III)\n# عَايَنْتُ (ʕāyantu) /ʕaː.jan.tu/: first-person singular past active of عَايَنَ (ʕāyana)\n# عَايَنْتَ (ʕāyanta) /ʕaː.jan.ta/: second-person masculine singular past active of عَايَنَ (ʕāyana)\n# عَايَنْتِ (ʕāyanti) /ʕaː.jan.ti/: second-person feminine singular past active of عَايَنَ (ʕāyana)\n# عَايَنَتْ (ʕāyanat) /ʕaː.ja.nat/: third-person feminine singular past active of عَايَنَ (ʕ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕāyantu", "ʕāyana", "ʕāyanta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عاينا",
+      "tur": "verb",
+      "baslik": "عاينا (form III)\n# عَايَنَا (ʕāyanā) /ʕaː.ja.naː/: third-person masculine dual past active of عَايَنَ (ʕāyana)\n# عَايَنَّا (ʕāyannā) /ʕaː.jan.naː/: first-person plural past active of عَايَنَ (ʕāyana)\n# عَايِنَا (ʕāyinā) /ʕaː.ji.naː/: second-person dual imperative of عَايَنَ (ʕāyana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕāyanā", "ʕāyana", "ʕāyannā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عاينتما",
+      "tur": "verb",
+      "baslik": "عَايَنْتُمَا • (ʕāyantumā) (form III) /ʕaː.jan.tu.maː/\n# second-person dual past active of عَايَنَ (ʕāyana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕāyantumā", "ʕāyana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عاينتا",
+      "tur": "verb",
+      "baslik": "عَايَنَتَا • (ʕāyanatā) (form III) /ʕaː.ja.na.taː/\n# third-person feminine dual past active of عَايَنَ (ʕāyana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕāyanatā", "ʕāyana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عاينتم",
+      "tur": "verb",
+      "baslik": "عَايَنْتُمْ • (ʕāyantum) (form III) /ʕaː.jan.tum/\n# second-person masculine plural past active of عَايَنَ (ʕāyana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕāyantum", "ʕāyana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عاينوا",
+      "tur": "verb",
+      "baslik": "عاينوا (form III)\n# عَايَنُوا (ʕāyanū) /ʕaː.ja.nuː/: third-person masculine plural past active of عَايَنَ (ʕāyana)\n# عَايِنُوا (ʕāyinū) /ʕaː.ji.nuː/: second-person masculine plural imperative of عَايَنَ (ʕāyana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕāyanū", "ʕāyana", "ʕāyinū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عوينت",
+      "tur": "verb",
+      "baslik": "عوينت (form III)\n# عُويِنْتُ (ʕūyintu) /ʕuː.jin.tu/: first-person singular past passive of عَايَنَ (ʕāyana)\n# عُويِنْتَ (ʕūyinta) /ʕuː.jin.ta/: second-person masculine singular past passive of عَايَنَ (ʕāyana)\n# عُويِنْتِ (ʕūyinti) /ʕuː.jin.ti/: second-person feminine singular past passive of عَايَنَ (ʕāyana)\n# عُويِنَتْ (ʕūyinat) /ʕuː.ji.nat/: third-person feminine singular past passive of عَايَن",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕūyintu", "ʕāyana", "ʕūyinta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عوينتما",
+      "tur": "verb",
+      "baslik": "عُويِنْتُمَا • (ʕūyintumā) (form III) /ʕuː.jin.tu.maː/\n# second-person dual past passive of عَايَنَ (ʕāyana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕūyintumā", "ʕāyana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عوينا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "عوينا (form III)\n# عُويِنَا (ʕūyinā) /ʕuː.ji.naː/: third-person masculine dual past passive of عَايَنَ (ʕāyana)\n# عُويِنَّا (ʕūyinnā) /ʕuː.jin.naː/: first-person plural past passive of عَايَنَ (ʕāyana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕūyinā", "ʕāyana", "ʕūyinnā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عوينتن",
+      "tur": "verb",
+      "baslik": "عُويِنْتُنَّ • (ʕūyintunna) (form III) /ʕuː.jin.tun.na/\n# second-person feminine plural past passive of عَايَنَ (ʕāyana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕūyintunna", "ʕāyana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عوينتم",
+      "tur": "verb",
+      "baslik": "عُويِنْتُمْ • (ʕūyintum) (form III) /ʕuː.jin.tum/\n# second-person masculine plural past passive of عَايَنَ (ʕāyana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕūyintum", "ʕāyana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عوينتا",
+      "tur": "verb",
+      "baslik": "عُويِنَتَا • (ʕūyinatā) (form III) /ʕuː.ji.na.taː/\n# third-person feminine dual past passive of عَايَنَ (ʕāyana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕūyinatā", "ʕāyana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عوينوا",
+      "tur": "verb",
+      "baslik": "عُويِنُوا • (ʕūyinū) (form III) /ʕuː.ji.nuː/\n# third-person masculine plural past passive of عَايَنَ (ʕāyana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕūyinū", "ʕāyana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعاين",
+      "tur": "verb",
+      "baslik": "أعاين (form III)\n# أُعَايِنُ (ʔuʕāyinu) /ʔu.ʕaː.ji.nu/: first-person singular non-past active indicative of عَايَنَ (ʕāyana)\n# أُعَايَنُ (ʔuʕāyanu) /ʔu.ʕaː.ja.nu/: first-person singular non-past passive indicative of عَايَنَ (ʕāyana)\n# أُعَايِنَ (ʔuʕāyina) /ʔu.ʕaː.ji.na/: first-person singular non-past active subjunctive of عَايَنَ (ʕāyana)\n# أُعَايَنَ (ʔuʕāyana) /ʔu.ʕaː.ja.na/: first-person singu",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔuʕāyinu", "ʕāyana", "ʔuʕāyanu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عاينتن",
+      "tur": "verb",
+      "baslik": "عَايَنْتُنَّ • (ʕāyantunna) (form III) /ʕaː.jan.tun.na/\n# second-person feminine plural past active of عَايَنَ (ʕāyana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕāyantunna", "ʕāyana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعاينان",
+      "tur": "verb",
+      "baslik": "تعاينان (form III)\n# تُعَايِنَانِ (tuʕāyināni) /tu.ʕaː.ji.naː.ni/: inflection of عَايَنَ (ʕāyana):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُعَايَنَانِ (tuʕāyanāni) /tu.ʕaː.ja.naː.ni/: inflection of عَايَنَ (ʕāyana):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuʕāyināni", "ʕāyana", "tuʕāyanāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعاين",
+      "tur": "verb",
+      "baslik": "تعاين (form III)\n# تُعَايِنُ (tuʕāyinu) /tu.ʕaː.ji.nu/: inflection of عَايَنَ (ʕāyana):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُعَايِنَّ (tuʕāyinna) /tu.ʕaː.jin.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of عَايَنَ (ʕāyana)\n# تُعَايَنُ (tuʕāyanu) /tu.ʕaː.ja.nu/: inflection",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuʕāyinu", "ʕāyana", "tuʕāyinna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعاينين",
+      "tur": "verb",
+      "baslik": "تعاينين (form III)\n# تُعَايِنِينَ (tuʕāyinīna) /tu.ʕaː.ji.niː.na/: second-person feminine singular non-past active indicative of عَايَنَ (ʕāyana)\n# تُعَايَنِينَ (tuʕāyanīna) /tu.ʕaː.ja.niː.na/: second-person feminine singular non-past passive indicative of عَايَنَ (ʕāyana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuʕāyinīna", "ʕāyana", "tuʕāyanīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعاينان",
+      "tur": "verb",
+      "baslik": "يعاينان (form III)\n# يُعَايِنَانِ (yuʕāyināni) /ju.ʕaː.ji.naː.ni/: third-person masculine dual non-past active indicative of عَايَنَ (ʕāyana)\n# يُعَايَنَانِ (yuʕāyanāni) /ju.ʕaː.ja.naː.ni/: third-person masculine dual non-past passive indicative of عَايَنَ (ʕāyana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuʕāyināni", "ʕāyana", "yuʕāyanāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نعاين",
+      "tur": "verb",
+      "baslik": "نعاين (form III)\n# نُعَايِنُ (nuʕāyinu) /nu.ʕaː.ji.nu/: first-person plural non-past active indicative of عَايَنَ (ʕāyana)\n# نُعَايَنُ (nuʕāyanu) /nu.ʕaː.ja.nu/: first-person plural non-past passive indicative of عَايَنَ (ʕāyana)\n# نُعَايِنَ (nuʕāyina) /nu.ʕaː.ji.na/: first-person plural non-past active subjunctive of عَايَنَ (ʕāyana)\n# نُعَايَنَ (nuʕāyana) /nu.ʕaː.ja.na/: first-person plural non-",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nuʕāyinu", "ʕāyana", "nuʕāyanu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعاينون",
+      "tur": "verb",
+      "baslik": "تعاينون (form III)\n# تُعَايِنُونَ (tuʕāyinūna) /tu.ʕaː.ji.nuː.na/: second-person masculine plural non-past active indicative of عَايَنَ (ʕāyana)\n# تُعَايَنُونَ (tuʕāyanūna) /tu.ʕaː.ja.nuː.na/: second-person masculine plural non-past passive indicative of عَايَنَ (ʕāyana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuʕāyinūna", "ʕāyana", "tuʕāyanūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعاين",
+      "tur": "verb",
+      "baslik": "يعاين (form III)\n# يُعَايِنُ (yuʕāyinu) /ju.ʕaː.ji.nu/: third-person masculine singular non-past active indicative of عَايَنَ (ʕāyana)\n# يُعَايِنَّ (yuʕāyinna) /ju.ʕaː.jin.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of عَايَنَ (ʕāyana)\n# يُعَايَنُ (yuʕāyanu) /ju.ʕaː.ja.nu/: third-person masculine singular non-past passive indicative of عَايَنَ (ʕāyana)\n# يُعَاي",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuʕāyinu", "ʕāyana", "yuʕāyinna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعاينون",
+      "tur": "verb",
+      "baslik": "يعاينون (form III)\n# يُعَايِنُونَ (yuʕāyinūna) /ju.ʕaː.ji.nuː.na/: third-person masculine plural non-past active indicative of عَايَنَ (ʕāyana)\n# يُعَايَنُونَ (yuʕāyanūna) /ju.ʕaː.ja.nuː.na/: third-person masculine plural non-past passive indicative of عَايَنَ (ʕāyana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuʕāyinūna", "ʕāyana", "yuʕāyanūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعاينا",
+      "tur": "verb",
+      "baslik": "تعاينا (form III)\n# تُعَايِنَا (tuʕāyinā) /tu.ʕaː.ji.naː/: inflection of عَايَنَ (ʕāyana):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُعَايَنَا (tuʕāyanā) /tu.ʕaː.ja.naː/: inflection of عَايَنَ (ʕāyana):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjun",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuʕāyinā", "ʕāyana", "tuʕāyanā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعايني",
+      "tur": "verb",
+      "baslik": "تعايني (form III)\n# تُعَايِنِي (tuʕāyinī) /tu.ʕaː.ji.niː/: second-person feminine singular non-past active subjunctive/jussive of عَايَنَ (ʕāyana)\n# تُعَايَنِي (tuʕāyanī) /tu.ʕaː.ja.niː/: second-person feminine singular non-past passive subjunctive/jussive of عَايَنَ (ʕāyana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuʕāyinī", "ʕāyana", "tuʕāyanī"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعاينا",
+      "tur": "verb",
+      "baslik": "يعاينا (form III)\n# يُعَايِنَا (yuʕāyinā) /ju.ʕaː.ji.naː/: third-person masculine dual non-past active subjunctive/jussive of عَايَنَ (ʕāyana)\n# يُعَايَنَا (yuʕāyanā) /ju.ʕaː.ja.naː/: third-person masculine dual non-past passive subjunctive/jussive of عَايَنَ (ʕāyana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuʕāyinā", "ʕāyana", "yuʕāyanā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عايني",
+      "tur": "verb",
+      "baslik": "عَايِنِي • (ʕāyinī) (form III) /ʕaː.ji.niː/\n# second-person feminine singular imperative of عَايَنَ (ʕāyana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕāyinī", "ʕāyana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعاينوا",
+      "tur": "verb",
+      "baslik": "تعاينوا (form III)\n# تُعَايِنُوا (tuʕāyinū) /tu.ʕaː.ji.nuː/: second-person masculine plural non-past active subjunctive/jussive of عَايَنَ (ʕāyana)\n# تُعَايَنُوا (tuʕāyanū) /tu.ʕaː.ja.nuː/: second-person masculine plural non-past passive subjunctive/jussive of عَايَنَ (ʕāyana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuʕāyinū", "ʕāyana", "tuʕāyanū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعاينوا",
+      "tur": "verb",
+      "baslik": "يعاينوا (form III)\n# يُعَايِنُوا (yuʕāyinū) /ju.ʕaː.ji.nuː/: third-person masculine plural non-past active subjunctive/jussive of عَايَنَ (ʕāyana)\n# يُعَايَنُوا (yuʕāyanū) /ju.ʕaː.ja.nuː/: third-person masculine plural non-past passive subjunctive/jussive of عَايَنَ (ʕāyana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuʕāyinū", "ʕāyana", "yuʕāyanū"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "عاين", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

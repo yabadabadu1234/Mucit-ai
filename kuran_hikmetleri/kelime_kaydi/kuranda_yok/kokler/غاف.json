@@ -1,463 +1,328 @@
 {
   "kok": "غاف",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "غاف", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "غافت",
-        "u": "غافت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "غَافَتْ • (ḡāfat) (form I) /ɣaː.fat/\n# third-person feminine singular past active of غَافَ (ḡāfa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡāfat", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "نغف",
-        "u": "نغف",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نَغِفْ • (naḡif) (form I) /na.ɣif/\n# first-person plural non-past active jussive of غَافَ (ḡāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḡif", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "غفتما",
-        "u": "غفتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غِفْتُمَا • (ḡiftumā) (form I) /ɣif.tu.maː/\n# second-person dual past active of غَافَ (ḡāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡiftumā", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "غفت",
-        "u": "غفت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "غفت (form I)\n# غِفْتُ (ḡiftu) /ɣif.tu/: first-person singular past active of غَافَ (ḡāfa)\n# غِفْتَ (ḡifta) /ɣif.ta/: second-person masculine singular past active of غَافَ (ḡāfa)\n# غِفْتِ (ḡifti) /ɣif.ti/: second-person feminine singular past active of غَافَ (ḡāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡiftu", "ḡāfa", "ḡifta"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "غافتا",
-        "u": "غافتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غَافَتَا • (ḡāfatā) (form I) /ɣaː.fa.taː/\n# third-person feminine dual past active of غَافَ (ḡāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡāfatā", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "غافا",
-        "u": "غافا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غَافَا • (ḡāfā) (form I) /ɣaː.faː/\n# third-person masculine dual past active of غَافَ (ḡāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡāfā", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "غفنا",
-        "u": "غفنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غِفْنَا • (ḡifnā) (form I) /ɣif.naː/\n# first-person plural past active of غَافَ (ḡāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡifnā", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "غفتم",
-        "u": "غفتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غِفْتُمْ • (ḡiftum) (form I) /ɣif.tum/\n# second-person masculine plural past active of غَافَ (ḡāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡiftum", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "غفتن",
-        "u": "غفتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غِفْتُنَّ • (ḡiftunna) (form I) /ɣif.tun.na/\n# second-person feminine plural past active of غَافَ (ḡāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡiftunna", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "غفن",
-        "u": "غفن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غِفْنَ • (ḡifna) (form I) /ɣif.na/\n# inflection of غَافَ (ḡāfa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡifna", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "أغيف",
-        "u": "أغيف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أغيف (form I)\n# أَغِيفُ (ʔaḡīfu) /ʔa.ɣiː.fu/: first-person singular non-past active indicative of غَافَ (ḡāfa)\n# أَغِيفَ (ʔaḡīfa) /ʔa.ɣiː.fa/: first-person singular non-past active subjunctive of غَافَ (ḡāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḡīfu", "ḡāfa", "ʔaḡīfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يغيف",
-        "u": "يغيف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يغيف (form I)\n# يَغِيفُ (yaḡīfu) /ja.ɣiː.fu/: third-person masculine singular non-past active indicative of غَافَ (ḡāfa)\n# يَغِيفَ (yaḡīfa) /ja.ɣiː.fa/: third-person masculine singular non-past active subjunctive of غَافَ (ḡāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡīfu", "ḡāfa", "yaḡīfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تغيف",
-        "u": "تغيف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تغيف (form I)\n# تَغِيفُ (taḡīfu) /ta.ɣiː.fu/: inflection of غَافَ (ḡāfa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَغِيفَ (taḡīfa) /ta.ɣiː.fa/: inflection of غَافَ (ḡāfa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡīfu", "ḡāfa", "taḡīfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "غافوا",
-        "u": "غافوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غَافُوا • (ḡāfū) (form I) /ɣaː.fuː/\n# third-person masculine plural past active of غَافَ (ḡāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡāfū", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تغيفين",
-        "u": "تغيفين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغِيفِينَ • (taḡīfīna) (form I) /ta.ɣiː.fiː.na/\n# second-person feminine singular non-past active indicative of غَافَ (ḡāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡīfīna", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تغيفان",
-        "u": "تغيفان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغِيفَانِ • (taḡīfāni) (form I) /ta.ɣiː.faː.ni/\n# inflection of غَافَ (ḡāfa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡīfāni", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يغيفان",
-        "u": "يغيفان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَغِيفَانِ • (yaḡīfāni) (form I) /ja.ɣiː.faː.ni/\n# third-person masculine dual non-past active indicative of غَافَ (ḡāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡīfāni", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "نغيف",
-        "u": "نغيف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نغيف (form I)\n# نَغِيفُ (naḡīfu) /na.ɣiː.fu/: first-person plural non-past active indicative of غَافَ (ḡāfa)\n# نَغِيفَ (naḡīfa) /na.ɣiː.fa/: first-person plural non-past active subjunctive of غَافَ (ḡāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḡīfu", "ḡāfa", "naḡīfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تغفن",
-        "u": "تغفن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغِفْنَ • (taḡifna) (form I) /ta.ɣif.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of غَافَ (ḡāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡifna", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يغيفون",
-        "u": "يغيفون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَغِيفُونَ • (yaḡīfūna) (form I) /ja.ɣiː.fuː.na/\n# third-person masculine plural non-past active indicative of غَافَ (ḡāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡīfūna", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تغيفون",
-        "u": "تغيفون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغِيفُونَ • (taḡīfūna) (form I) /ta.ɣiː.fuː.na/\n# second-person masculine plural non-past active indicative of غَافَ (ḡāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡīfūna", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يغفن",
-        "u": "يغفن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَغِفْنَ • (yaḡifna) (form I) /ja.ɣif.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of غَافَ (ḡāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡifna", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تغيفا",
-        "u": "تغيفا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغِيفَا • (taḡīfā) (form I) /ta.ɣiː.faː/\n# inflection of غَافَ (ḡāfa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡīfā", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تغيفوا",
-        "u": "تغيفوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغِيفُوا • (taḡīfū) (form I) /ta.ɣiː.fuː/\n# second-person masculine plural non-past active subjunctive/jussive of غَافَ (ḡāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡīfū", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يغيفا",
-        "u": "يغيفا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَغِيفَا • (yaḡīfā) (form I) /ja.ɣiː.faː/\n# third-person masculine dual non-past active subjunctive/jussive of غَافَ (ḡāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡīfā", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تغيفي",
-        "u": "تغيفي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغِيفِي • (taḡīfī) (form I) /ta.ɣiː.fiː/\n# second-person feminine singular non-past active subjunctive/jussive of غَافَ (ḡāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡīfī", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "غف",
-        "u": "غف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غِفْ • (ḡif) (form I) /ɣif/\n# second-person masculine singular imperative of غَافَ (ḡāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡif", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يغيفوا",
-        "u": "يغيفوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَغِيفُوا • (yaḡīfū) (form I) /ja.ɣiː.fuː/\n# third-person masculine plural non-past active subjunctive/jussive of غَافَ (ḡāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡīfū", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يغف",
-        "u": "يغف",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَغِفْ • (yaḡif) (form I) /ja.ɣif/\n# third-person masculine singular non-past active jussive of غَافَ (ḡāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡif", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "أغف",
-        "u": "أغف",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أَغِفْ • (ʔaḡif) (form I) /ʔa.ɣif/\n# first-person singular non-past active jussive of غَافَ (ḡāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḡif", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "غيفي",
-        "u": "غيفي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غِيفِي • (ḡīfī) (form I) /ɣiː.fiː/\n# second-person feminine singular imperative of غَافَ (ḡāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡīfī", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "غيفا",
-        "u": "غيفا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غِيفَا • (ḡīfā) (form I) /ɣiː.faː/\n# second-person dual imperative of غَافَ (ḡāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡīfā", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "غيفوا",
-        "u": "غيفوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غِيفُوا • (ḡīfū) (form I) /ɣiː.fuː/\n# second-person masculine plural imperative of غَافَ (ḡāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡīfū", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تغف",
-        "u": "تغف",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَغِفْ • (taḡif) (form I) /ta.ɣif/\n# inflection of غَافَ (ḡāfa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡif", "ḡāfa"],
-        "k": "غاف",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "غف",
+  "ses": {
     "harf": "غ",
+    "fasil": "غف",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "غافت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "غَافَتْ • (ḡāfat) (form I) /ɣaː.fat/\n# third-person feminine singular past active of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡāfat", "ḡāfa"]
+    },
+    {
+      "madde": "نغف",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نَغِفْ • (naḡif) (form I) /na.ɣif/\n# first-person plural non-past active jussive of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḡif", "ḡāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غفتما",
+      "tur": "verb",
+      "baslik": "غِفْتُمَا • (ḡiftumā) (form I) /ɣif.tu.maː/\n# second-person dual past active of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡiftumā", "ḡāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غفت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "غفت (form I)\n# غِفْتُ (ḡiftu) /ɣif.tu/: first-person singular past active of غَافَ (ḡāfa)\n# غِفْتَ (ḡifta) /ɣif.ta/: second-person masculine singular past active of غَافَ (ḡāfa)\n# غِفْتِ (ḡifti) /ɣif.ti/: second-person feminine singular past active of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡiftu", "ḡāfa", "ḡifta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غافتا",
+      "tur": "verb",
+      "baslik": "غَافَتَا • (ḡāfatā) (form I) /ɣaː.fa.taː/\n# third-person feminine dual past active of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡāfatā", "ḡāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غافا",
+      "tur": "verb",
+      "baslik": "غَافَا • (ḡāfā) (form I) /ɣaː.faː/\n# third-person masculine dual past active of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡāfā", "ḡāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غفنا",
+      "tur": "verb",
+      "baslik": "غِفْنَا • (ḡifnā) (form I) /ɣif.naː/\n# first-person plural past active of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡifnā", "ḡāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غفتم",
+      "tur": "verb",
+      "baslik": "غِفْتُمْ • (ḡiftum) (form I) /ɣif.tum/\n# second-person masculine plural past active of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡiftum", "ḡāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غفتن",
+      "tur": "verb",
+      "baslik": "غِفْتُنَّ • (ḡiftunna) (form I) /ɣif.tun.na/\n# second-person feminine plural past active of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡiftunna", "ḡāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غفن",
+      "tur": "verb",
+      "baslik": "غِفْنَ • (ḡifna) (form I) /ɣif.na/\n# inflection of غَافَ (ḡāfa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡifna", "ḡāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أغيف",
+      "tur": "verb",
+      "baslik": "أغيف (form I)\n# أَغِيفُ (ʔaḡīfu) /ʔa.ɣiː.fu/: first-person singular non-past active indicative of غَافَ (ḡāfa)\n# أَغِيفَ (ʔaḡīfa) /ʔa.ɣiː.fa/: first-person singular non-past active subjunctive of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḡīfu", "ḡāfa", "ʔaḡīfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغيف",
+      "tur": "verb",
+      "baslik": "يغيف (form I)\n# يَغِيفُ (yaḡīfu) /ja.ɣiː.fu/: third-person masculine singular non-past active indicative of غَافَ (ḡāfa)\n# يَغِيفَ (yaḡīfa) /ja.ɣiː.fa/: third-person masculine singular non-past active subjunctive of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡīfu", "ḡāfa", "yaḡīfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغيف",
+      "tur": "verb",
+      "baslik": "تغيف (form I)\n# تَغِيفُ (taḡīfu) /ta.ɣiː.fu/: inflection of غَافَ (ḡāfa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَغِيفَ (taḡīfa) /ta.ɣiː.fa/: inflection of غَافَ (ḡāfa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡīfu", "ḡāfa", "taḡīfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غافوا",
+      "tur": "verb",
+      "baslik": "غَافُوا • (ḡāfū) (form I) /ɣaː.fuː/\n# third-person masculine plural past active of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡāfū", "ḡāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغيفين",
+      "tur": "verb",
+      "baslik": "تَغِيفِينَ • (taḡīfīna) (form I) /ta.ɣiː.fiː.na/\n# second-person feminine singular non-past active indicative of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡīfīna", "ḡāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغيفان",
+      "tur": "verb",
+      "baslik": "تَغِيفَانِ • (taḡīfāni) (form I) /ta.ɣiː.faː.ni/\n# inflection of غَافَ (ḡāfa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡīfāni", "ḡāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغيفان",
+      "tur": "verb",
+      "baslik": "يَغِيفَانِ • (yaḡīfāni) (form I) /ja.ɣiː.faː.ni/\n# third-person masculine dual non-past active indicative of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡīfāni", "ḡāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نغيف",
+      "tur": "verb",
+      "baslik": "نغيف (form I)\n# نَغِيفُ (naḡīfu) /na.ɣiː.fu/: first-person plural non-past active indicative of غَافَ (ḡāfa)\n# نَغِيفَ (naḡīfa) /na.ɣiː.fa/: first-person plural non-past active subjunctive of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḡīfu", "ḡāfa", "naḡīfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغفن",
+      "tur": "verb",
+      "baslik": "تَغِفْنَ • (taḡifna) (form I) /ta.ɣif.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡifna", "ḡāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغيفون",
+      "tur": "verb",
+      "baslik": "يَغِيفُونَ • (yaḡīfūna) (form I) /ja.ɣiː.fuː.na/\n# third-person masculine plural non-past active indicative of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡīfūna", "ḡāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغيفون",
+      "tur": "verb",
+      "baslik": "تَغِيفُونَ • (taḡīfūna) (form I) /ta.ɣiː.fuː.na/\n# second-person masculine plural non-past active indicative of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡīfūna", "ḡāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغفن",
+      "tur": "verb",
+      "baslik": "يَغِفْنَ • (yaḡifna) (form I) /ja.ɣif.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡifna", "ḡāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغيفا",
+      "tur": "verb",
+      "baslik": "تَغِيفَا • (taḡīfā) (form I) /ta.ɣiː.faː/\n# inflection of غَافَ (ḡāfa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡīfā", "ḡāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغيفوا",
+      "tur": "verb",
+      "baslik": "تَغِيفُوا • (taḡīfū) (form I) /ta.ɣiː.fuː/\n# second-person masculine plural non-past active subjunctive/jussive of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡīfū", "ḡāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغيفا",
+      "tur": "verb",
+      "baslik": "يَغِيفَا • (yaḡīfā) (form I) /ja.ɣiː.faː/\n# third-person masculine dual non-past active subjunctive/jussive of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡīfā", "ḡāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغيفي",
+      "tur": "verb",
+      "baslik": "تَغِيفِي • (taḡīfī) (form I) /ta.ɣiː.fiː/\n# second-person feminine singular non-past active subjunctive/jussive of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡīfī", "ḡāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غف",
+      "tur": "verb",
+      "baslik": "غِفْ • (ḡif) (form I) /ɣif/\n# second-person masculine singular imperative of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡif", "ḡāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغيفوا",
+      "tur": "verb",
+      "baslik": "يَغِيفُوا • (yaḡīfū) (form I) /ja.ɣiː.fuː/\n# third-person masculine plural non-past active subjunctive/jussive of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡīfū", "ḡāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغف",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَغِفْ • (yaḡif) (form I) /ja.ɣif/\n# third-person masculine singular non-past active jussive of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡif", "ḡāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أغف",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أَغِفْ • (ʔaḡif) (form I) /ʔa.ɣif/\n# first-person singular non-past active jussive of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḡif", "ḡāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غيفي",
+      "tur": "verb",
+      "baslik": "غِيفِي • (ḡīfī) (form I) /ɣiː.fiː/\n# second-person feminine singular imperative of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡīfī", "ḡāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غيفا",
+      "tur": "verb",
+      "baslik": "غِيفَا • (ḡīfā) (form I) /ɣiː.faː/\n# second-person dual imperative of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡīfā", "ḡāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غيفوا",
+      "tur": "verb",
+      "baslik": "غِيفُوا • (ḡīfū) (form I) /ɣiː.fuː/\n# second-person masculine plural imperative of غَافَ (ḡāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡīfū", "ḡāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغف",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَغِفْ • (taḡif) (form I) /ta.ɣif/\n# inflection of غَافَ (ḡāfa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡif", "ḡāfa"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "غاف", "r7"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

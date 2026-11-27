@@ -1,575 +1,408 @@
 {
   "kok": "عادى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "عادى", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "عادي",
-        "u": "عادي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "عَادِي • (ʕādī) (form III) /ʕaː.diː/\n# second-person feminine singular imperative of عَادَى (ʕādā)",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕādī", "ʕādā"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "عادت",
-        "u": "عادت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "عَادَتْ • (ʕādat) (form III) /ʕaː.dat/\n# third-person feminine singular past active of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕādat", "ʕādā"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "عاد",
-        "u": "عاد",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "عَادِ • (ʕādi) (form III) /ʕaː.di/\n# second-person masculine singular imperative of عَادَى (ʕādā)",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕādi", "ʕādā"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعاد",
-        "u": "يعاد",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يعاد (form III)\n# يُعَادِ (yuʕādi) /ju.ʕaː.di/: third-person masculine singular non-past active jussive of عَادَى (ʕādā)\n# يُعَادَ (yuʕāda) /ju.ʕaː.da/: third-person masculine singular non-past passive jussive of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuʕādi", "ʕādā", "yuʕāda"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "أعاد",
-        "u": "أعاد",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أعاد (form III)\n# أُعَادِ (ʔuʕādi) /ʔu.ʕaː.di/: first-person singular non-past active jussive of عَادَى (ʕādā)\n# أُعَادَ (ʔuʕāda) /ʔu.ʕaː.da/: first-person singular non-past passive jussive of عَادَى (ʕādā)",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔuʕādi", "ʕādā", "ʔuʕāda"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعاد",
-        "u": "تعاد",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تعاد (form III)\n# تُعَادِ (tuʕādi) /tu.ʕaː.di/: inflection of عَادَى (ʕādā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُعَادَ (tuʕāda) /tu.ʕaː.da/: inflection of عَادَى (ʕādā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuʕādi", "ʕādā", "tuʕāda"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعادين",
-        "u": "تعادين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تعادين (form III)\n# تُعَادِينَ (tuʕādīna) /tu.ʕaː.diː.na/: inflection of عَادَى (ʕādā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُعَادَيْنَ (tuʕādayna) /tu.ʕaː.daj.na/: inflection of عَادَى (ʕādā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuʕādīna", "ʕādā", "tuʕādayna"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعادي",
-        "u": "تعادي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تعادي (form III)\n# تُعَادِي (tuʕādī) /tu.ʕaː.diː/: inflection of عَادَى (ʕādā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُعَادِيَ (tuʕādiya) /tu.ʕaː.di.ja/: inflection of عَادَى (ʕādā):\n## second-person masculine singular non-past active subju",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuʕādī", "ʕādā", "tuʕādiya"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "عودي",
-        "u": "عودي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "عُودِيَ • (ʕūdiya) (form III) /ʕuː.di.ja/\n# third-person masculine singular past passive of عَادَى (ʕādā)",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕūdiya", "ʕādā"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "نعاد",
-        "u": "نعاد",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نعاد (form III)\n# نُعَادِ (nuʕādi) /nu.ʕaː.di/: first-person plural non-past active jussive of عَادَى (ʕādā)\n# نُعَادَ (nuʕāda) /nu.ʕaː.da/: first-person plural non-past passive jussive of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nuʕādi", "ʕādā", "nuʕāda"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعادون",
-        "u": "تعادون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تعادون (form III)\n# تُعَادُونَ (tuʕādūna) /tu.ʕaː.duː.na/: second-person masculine plural non-past active indicative of عَادَى (ʕādā)\n# تُعَادَوْنَ (tuʕādawna) /tu.ʕaː.daw.na/: second-person masculine plural non-past passive indicative of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuʕādūna", "ʕādā", "tuʕādawna"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعادوا",
-        "u": "تعادوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تعادوا (form III)\n# تُعَادُوا (tuʕādū) /tu.ʕaː.duː/: second-person masculine plural non-past active subjunctive/jussive of عَادَى (ʕādā)\n# تُعَادَوْا (tuʕādaw) /tu.ʕaː.daw/: second-person masculine plural non-past passive subjunctive/jussive of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuʕādū", "ʕādā", "tuʕādaw"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "عودوا",
-        "u": "عودوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "عُودُوا • (ʕūdū) (form III) /ʕuː.duː/\n# third-person masculine plural past passive of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕūdū", "ʕādā"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعادون",
-        "u": "يعادون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يعادون (form III)\n# يُعَادُونَ (yuʕādūna) /ju.ʕaː.duː.na/: third-person masculine plural non-past active indicative of عَادَى (ʕādā)\n# يُعَادَوْنَ (yuʕādawna) /ju.ʕaː.daw.na/: third-person masculine plural non-past passive indicative of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuʕādūna", "ʕādā", "yuʕādawna"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعادوا",
-        "u": "يعادوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يعادوا (form III)\n# يُعَادُوا (yuʕādū) /ju.ʕaː.duː/: third-person masculine plural non-past active subjunctive/jussive of عَادَى (ʕādā)\n# يُعَادَوْا (yuʕādaw) /ju.ʕaː.daw/: third-person masculine plural non-past passive subjunctive/jussive of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuʕādū", "ʕādā", "yuʕādaw"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "عادوا",
-        "u": "عادوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "عادوا (form III)\n# عَادَوْا (ʕādaw) /ʕaː.daw/: third-person masculine plural past active of عَادَى (ʕādā)\n# عَادُوا (ʕādū) /ʕaː.duː/: second-person masculine plural imperative of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕādaw", "ʕādā", "ʕādū"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعادى",
-        "u": "تعادى",
-        "p": "verb",
-        "n": "1.2",
-        "h": "ar-verb form",
-        "e": "تُعَادَى • (tuʕādā) (form III) /tu.ʕaː.daː/\n# inflection of عَادَى (ʕādā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuʕādā", "ʕādā"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "عادتا",
-        "u": "عادتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "عَادَتَا • (ʕādatā) (form III) /ʕaː.da.taː/\n# third-person feminine dual past active of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕādatā", "ʕādā"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "عاديت",
-        "u": "عاديت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عاديت (form III)\n# عَادَيْتُ (ʕādaytu) /ʕaː.daj.tu/: first-person singular past active of عَادَى (ʕādā)\n# عَادَيْتَ (ʕādayta) /ʕaː.daj.ta/: second-person masculine singular past active of عَادَى (ʕādā)\n# عَادَيْتِ (ʕādayti) /ʕaː.daj.ti/: second-person feminine singular past active of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕādaytu", "ʕādā", "ʕādayta"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "أعادي",
-        "u": "أعادي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعادي (form III)\n# أُعَادِي (ʔuʕādī) /ʔu.ʕaː.diː/: first-person singular non-past active indicative of عَادَى (ʕādā)\n# أُعَادِيَ (ʔuʕādiya) /ʔu.ʕaː.di.ja/: first-person singular non-past active subjunctive of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔuʕādī", "ʕādā", "ʔuʕādiya"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعادي",
-        "u": "يعادي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يعادي (form III)\n# يُعَادِي (yuʕādī) /ju.ʕaː.diː/: third-person masculine singular non-past active indicative of عَادَى (ʕādā)\n# يُعَادِيَ (yuʕādiya) /ju.ʕaː.di.ja/: third-person masculine singular non-past active subjunctive of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuʕādī", "ʕādā", "yuʕādiya"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "عاديتما",
-        "u": "عاديتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عَادَيْتُمَا • (ʕādaytumā) (form III) /ʕaː.daj.tu.maː/\n# second-person dual past active of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕādaytumā", "ʕādā"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "عاديا",
-        "u": "عاديا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عاديا (form III)\n# عَادَيَا (ʕādayā) /ʕaː.da.jaː/: third-person masculine dual past active of عَادَى (ʕādā)\n# عَادِيَا (ʕādiyā) /ʕaː.di.jaː/: second-person dual imperative of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕādayā", "ʕādā", "ʕādiyā"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعاديان",
-        "u": "تعاديان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تعاديان (form III)\n# تُعَادِيَانِ (tuʕādiyāni) /tu.ʕaː.di.jaː.ni/: inflection of عَادَى (ʕādā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُعَادَيَانِ (tuʕādayāni) /tu.ʕaː.da.jaː.ni/: inflection of عَادَى (ʕādā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuʕādiyāni", "ʕādā", "tuʕādayāni"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعاديان",
-        "u": "يعاديان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يعاديان (form III)\n# يُعَادِيَانِ (yuʕādiyāni) /ju.ʕaː.di.jaː.ni/: third-person masculine dual non-past active indicative of عَادَى (ʕādā)\n# يُعَادَيَانِ (yuʕādayāni) /ju.ʕaː.da.jaː.ni/: third-person masculine dual non-past passive indicative of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuʕādiyāni", "ʕādā", "yuʕādayāni"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعاديا",
-        "u": "تعاديا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تعاديا (form III)\n# تُعَادِيَا (tuʕādiyā) /tu.ʕaː.di.jaː/: inflection of عَادَى (ʕādā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُعَادَيَا (tuʕādayā) /tu.ʕaː.da.jaː/: inflection of عَادَى (ʕādā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuʕādiyā", "ʕādā", "tuʕādayā"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعاديا",
-        "u": "يعاديا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يعاديا (form III)\n# يُعَادِيَا (yuʕādiyā) /ju.ʕaː.di.jaː/: third-person masculine dual non-past active subjunctive/jussive of عَادَى (ʕādā)\n# يُعَادَيَا (yuʕādayā) /ju.ʕaː.da.jaː/: third-person masculine dual non-past passive subjunctive/jussive of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuʕādiyā", "ʕādā", "yuʕādayā"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "عادينا",
-        "u": "عادينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عَادَيْنَا • (ʕādaynā) (form III) /ʕaː.daj.naː/\n# first-person plural past active of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕādaynā", "ʕādā"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "عاديتم",
-        "u": "عاديتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عَادَيْتُمْ • (ʕādaytum) (form III) /ʕaː.daj.tum/\n# second-person masculine plural past active of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕādaytum", "ʕādā"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "عاديتن",
-        "u": "عاديتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عَادَيْتُنَّ • (ʕādaytunna) (form III) /ʕaː.daj.tun.na/\n# second-person feminine plural past active of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕādaytunna", "ʕādā"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "عادين",
-        "u": "عادين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عادين (form III)\n# عَادَيْنَ (ʕādayna) /ʕaː.daj.na/: third-person feminine plural past active of عَادَى (ʕādā)\n# عَادِينَ (ʕādīna) /ʕaː.diː.na/: second-person feminine plural imperative of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕādayna", "ʕādā", "ʕādīna"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "نعادي",
-        "u": "نعادي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نعادي (form III)\n# نُعَادِي (nuʕādī) /nu.ʕaː.diː/: first-person plural non-past active indicative of عَادَى (ʕādā)\n# نُعَادِيَ (nuʕādiya) /nu.ʕaː.di.ja/: first-person plural non-past active subjunctive of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nuʕādī", "ʕādā", "nuʕādiya"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعادين",
-        "u": "يعادين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يعادين (form III)\n# يُعَادِينَ (yuʕādīna) /ju.ʕaː.diː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of عَادَى (ʕādā)\n# يُعَادَيْنَ (yuʕādayna) /ju.ʕaː.daj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuʕādīna", "ʕādā", "yuʕādayna"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "عوديت",
-        "u": "عوديت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عوديت (form III)\n# عُودِيتُ (ʕūdītu) /ʕuː.diː.tu/: first-person singular past passive of عَادَى (ʕādā)\n# عُودِيتَ (ʕūdīta) /ʕuː.diː.ta/: second-person masculine singular past passive of عَادَى (ʕādā)\n# عُودِيتِ (ʕūdīti) /ʕuː.diː.ti/: second-person feminine singular past passive of عَادَى (ʕādā)\n# عُودِيَتْ (ʕūdiyat) /ʕuː.di.jat/: third-person feminine singular past passive of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕūdītu", "ʕādā", "ʕūdīta"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "أعادى",
-        "u": "أعادى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُعَادَى • (ʔuʕādā) (form III) /ʔu.ʕaː.daː/\n# first-person singular non-past passive indicative/subjunctive of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔuʕādā", "ʕādā"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعادى",
-        "u": "يعادى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُعَادَى • (yuʕādā) (form III) /ju.ʕaː.daː/\n# third-person masculine singular non-past passive indicative/subjunctive of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuʕādā", "ʕādā"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "عوديتما",
-        "u": "عوديتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عُودِيتُمَا • (ʕūdītumā) (form III) /ʕuː.diː.tu.maː/\n# second-person dual past passive of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕūdītumā", "ʕādā"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "عوديا",
-        "u": "عوديا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عُودِيَا • (ʕūdiyā) (form III) /ʕuː.di.jaː/\n# third-person masculine dual past passive of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕūdiyā", "ʕādā"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "عوديتا",
-        "u": "عوديتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عُودِيَتَا • (ʕūdiyatā) (form III) /ʕuː.di.ja.taː/\n# third-person feminine dual past passive of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕūdiyatā", "ʕādā"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "عودينا",
-        "u": "عودينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عُودِينَا • (ʕūdīnā) (form III) /ʕuː.diː.naː/\n# first-person plural past passive of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕūdīnā", "ʕādā"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "عوديتم",
-        "u": "عوديتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عُودِيتُمْ • (ʕūdītum) (form III) /ʕuː.diː.tum/\n# second-person masculine plural past passive of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕūdītum", "ʕādā"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "عوديتن",
-        "u": "عوديتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عُودِيتُنَّ • (ʕūdītunna) (form III) /ʕuː.diː.tun.na/\n# second-person feminine plural past passive of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕūdītunna", "ʕādā"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "عودين",
-        "u": "عودين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عُودِينَ • (ʕūdīna) (form III) /ʕuː.diː.na/\n# third-person feminine plural past passive of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕūdīna", "ʕādā"],
-        "k": "عادى",
-        "yol": "kök"
-      },
-      {
-        "w": "نعادى",
-        "u": "نعادى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُعَادَى • (nuʕādā) (form III) /nu.ʕaː.daː/\n# first-person plural non-past passive indicative/subjunctive of عَادَى (ʕādā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nuʕādā", "ʕādā"],
-        "k": "عادى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "عد",
+  "ses": {
     "harf": "ع",
+    "fasil": "عد",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "عادي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "عَادِي • (ʕādī) (form III) /ʕaː.diː/\n# second-person feminine singular imperative of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕādī", "ʕādā"]
+    },
+    {
+      "madde": "عادت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "عَادَتْ • (ʕādat) (form III) /ʕaː.dat/\n# third-person feminine singular past active of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕādat", "ʕādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عاد",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "عَادِ • (ʕādi) (form III) /ʕaː.di/\n# second-person masculine singular imperative of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕādi", "ʕādā"]
+    },
+    {
+      "madde": "يعاد",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يعاد (form III)\n# يُعَادِ (yuʕādi) /ju.ʕaː.di/: third-person masculine singular non-past active jussive of عَادَى (ʕādā)\n# يُعَادَ (yuʕāda) /ju.ʕaː.da/: third-person masculine singular non-past passive jussive of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuʕādi", "ʕādā", "yuʕāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعاد",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أعاد (form III)\n# أُعَادِ (ʔuʕādi) /ʔu.ʕaː.di/: first-person singular non-past active jussive of عَادَى (ʕādā)\n# أُعَادَ (ʔuʕāda) /ʔu.ʕaː.da/: first-person singular non-past passive jussive of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔuʕādi", "ʕādā", "ʔuʕāda"]
+    },
+    {
+      "madde": "تعاد",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تعاد (form III)\n# تُعَادِ (tuʕādi) /tu.ʕaː.di/: inflection of عَادَى (ʕādā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُعَادَ (tuʕāda) /tu.ʕaː.da/: inflection of عَادَى (ʕādā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuʕādi", "ʕādā", "tuʕāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعادين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تعادين (form III)\n# تُعَادِينَ (tuʕādīna) /tu.ʕaː.diː.na/: inflection of عَادَى (ʕādā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُعَادَيْنَ (tuʕādayna) /tu.ʕaː.daj.na/: inflection of عَادَى (ʕādā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuʕādīna", "ʕādā", "tuʕādayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعادي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تعادي (form III)\n# تُعَادِي (tuʕādī) /tu.ʕaː.diː/: inflection of عَادَى (ʕādā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُعَادِيَ (tuʕādiya) /tu.ʕaː.di.ja/: inflection of عَادَى (ʕādā):\n## second-person masculine singular non-past active subju",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuʕādī", "ʕādā", "tuʕādiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عودي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "عُودِيَ • (ʕūdiya) (form III) /ʕuː.di.ja/\n# third-person masculine singular past passive of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕūdiya", "ʕādā"]
+    },
+    {
+      "madde": "نعاد",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نعاد (form III)\n# نُعَادِ (nuʕādi) /nu.ʕaː.di/: first-person plural non-past active jussive of عَادَى (ʕādā)\n# نُعَادَ (nuʕāda) /nu.ʕaː.da/: first-person plural non-past passive jussive of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nuʕādi", "ʕādā", "nuʕāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعادون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تعادون (form III)\n# تُعَادُونَ (tuʕādūna) /tu.ʕaː.duː.na/: second-person masculine plural non-past active indicative of عَادَى (ʕādā)\n# تُعَادَوْنَ (tuʕādawna) /tu.ʕaː.daw.na/: second-person masculine plural non-past passive indicative of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuʕādūna", "ʕādā", "tuʕādawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعادوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تعادوا (form III)\n# تُعَادُوا (tuʕādū) /tu.ʕaː.duː/: second-person masculine plural non-past active subjunctive/jussive of عَادَى (ʕādā)\n# تُعَادَوْا (tuʕādaw) /tu.ʕaː.daw/: second-person masculine plural non-past passive subjunctive/jussive of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuʕādū", "ʕādā", "tuʕādaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عودوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "عُودُوا • (ʕūdū) (form III) /ʕuː.duː/\n# third-person masculine plural past passive of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕūdū", "ʕādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعادون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يعادون (form III)\n# يُعَادُونَ (yuʕādūna) /ju.ʕaː.duː.na/: third-person masculine plural non-past active indicative of عَادَى (ʕādā)\n# يُعَادَوْنَ (yuʕādawna) /ju.ʕaː.daw.na/: third-person masculine plural non-past passive indicative of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuʕādūna", "ʕādā", "yuʕādawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعادوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يعادوا (form III)\n# يُعَادُوا (yuʕādū) /ju.ʕaː.duː/: third-person masculine plural non-past active subjunctive/jussive of عَادَى (ʕādā)\n# يُعَادَوْا (yuʕādaw) /ju.ʕaː.daw/: third-person masculine plural non-past passive subjunctive/jussive of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuʕādū", "ʕādā", "yuʕādaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عادوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "عادوا (form III)\n# عَادَوْا (ʕādaw) /ʕaː.daw/: third-person masculine plural past active of عَادَى (ʕādā)\n# عَادُوا (ʕādū) /ʕaː.duː/: second-person masculine plural imperative of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕādaw", "ʕādā", "ʕādū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعادى",
+      "tur": "verb",
+      "etim_no": "1.2",
+      "baslik": "تُعَادَى • (tuʕādā) (form III) /tu.ʕaː.daː/\n# inflection of عَادَى (ʕādā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuʕādā", "ʕādā"]
+    },
+    {
+      "madde": "عادتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "عَادَتَا • (ʕādatā) (form III) /ʕaː.da.taː/\n# third-person feminine dual past active of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕādatā", "ʕādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عاديت",
+      "tur": "verb",
+      "baslik": "عاديت (form III)\n# عَادَيْتُ (ʕādaytu) /ʕaː.daj.tu/: first-person singular past active of عَادَى (ʕādā)\n# عَادَيْتَ (ʕādayta) /ʕaː.daj.ta/: second-person masculine singular past active of عَادَى (ʕādā)\n# عَادَيْتِ (ʕādayti) /ʕaː.daj.ti/: second-person feminine singular past active of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕādaytu", "ʕādā", "ʕādayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعادي",
+      "tur": "verb",
+      "baslik": "أعادي (form III)\n# أُعَادِي (ʔuʕādī) /ʔu.ʕaː.diː/: first-person singular non-past active indicative of عَادَى (ʕādā)\n# أُعَادِيَ (ʔuʕādiya) /ʔu.ʕaː.di.ja/: first-person singular non-past active subjunctive of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔuʕādī", "ʕādā", "ʔuʕādiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعادي",
+      "tur": "verb",
+      "baslik": "يعادي (form III)\n# يُعَادِي (yuʕādī) /ju.ʕaː.diː/: third-person masculine singular non-past active indicative of عَادَى (ʕādā)\n# يُعَادِيَ (yuʕādiya) /ju.ʕaː.di.ja/: third-person masculine singular non-past active subjunctive of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuʕādī", "ʕādā", "yuʕādiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عاديتما",
+      "tur": "verb",
+      "baslik": "عَادَيْتُمَا • (ʕādaytumā) (form III) /ʕaː.daj.tu.maː/\n# second-person dual past active of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕādaytumā", "ʕādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عاديا",
+      "tur": "verb",
+      "baslik": "عاديا (form III)\n# عَادَيَا (ʕādayā) /ʕaː.da.jaː/: third-person masculine dual past active of عَادَى (ʕādā)\n# عَادِيَا (ʕādiyā) /ʕaː.di.jaː/: second-person dual imperative of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕādayā", "ʕādā", "ʕādiyā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعاديان",
+      "tur": "verb",
+      "baslik": "تعاديان (form III)\n# تُعَادِيَانِ (tuʕādiyāni) /tu.ʕaː.di.jaː.ni/: inflection of عَادَى (ʕādā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُعَادَيَانِ (tuʕādayāni) /tu.ʕaː.da.jaː.ni/: inflection of عَادَى (ʕādā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuʕādiyāni", "ʕādā", "tuʕādayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعاديان",
+      "tur": "verb",
+      "baslik": "يعاديان (form III)\n# يُعَادِيَانِ (yuʕādiyāni) /ju.ʕaː.di.jaː.ni/: third-person masculine dual non-past active indicative of عَادَى (ʕādā)\n# يُعَادَيَانِ (yuʕādayāni) /ju.ʕaː.da.jaː.ni/: third-person masculine dual non-past passive indicative of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuʕādiyāni", "ʕādā", "yuʕādayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعاديا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تعاديا (form III)\n# تُعَادِيَا (tuʕādiyā) /tu.ʕaː.di.jaː/: inflection of عَادَى (ʕādā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُعَادَيَا (tuʕādayā) /tu.ʕaː.da.jaː/: inflection of عَادَى (ʕādā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuʕādiyā", "ʕādā", "tuʕādayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعاديا",
+      "tur": "verb",
+      "baslik": "يعاديا (form III)\n# يُعَادِيَا (yuʕādiyā) /ju.ʕaː.di.jaː/: third-person masculine dual non-past active subjunctive/jussive of عَادَى (ʕādā)\n# يُعَادَيَا (yuʕādayā) /ju.ʕaː.da.jaː/: third-person masculine dual non-past passive subjunctive/jussive of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuʕādiyā", "ʕādā", "yuʕādayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عادينا",
+      "tur": "verb",
+      "baslik": "عَادَيْنَا • (ʕādaynā) (form III) /ʕaː.daj.naː/\n# first-person plural past active of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕādaynā", "ʕādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عاديتم",
+      "tur": "verb",
+      "baslik": "عَادَيْتُمْ • (ʕādaytum) (form III) /ʕaː.daj.tum/\n# second-person masculine plural past active of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕādaytum", "ʕādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عاديتن",
+      "tur": "verb",
+      "baslik": "عَادَيْتُنَّ • (ʕādaytunna) (form III) /ʕaː.daj.tun.na/\n# second-person feminine plural past active of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕādaytunna", "ʕādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عادين",
+      "tur": "verb",
+      "baslik": "عادين (form III)\n# عَادَيْنَ (ʕādayna) /ʕaː.daj.na/: third-person feminine plural past active of عَادَى (ʕādā)\n# عَادِينَ (ʕādīna) /ʕaː.diː.na/: second-person feminine plural imperative of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕādayna", "ʕādā", "ʕādīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نعادي",
+      "tur": "verb",
+      "baslik": "نعادي (form III)\n# نُعَادِي (nuʕādī) /nu.ʕaː.diː/: first-person plural non-past active indicative of عَادَى (ʕādā)\n# نُعَادِيَ (nuʕādiya) /nu.ʕaː.di.ja/: first-person plural non-past active subjunctive of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nuʕādī", "ʕādā", "nuʕādiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعادين",
+      "tur": "verb",
+      "baslik": "يعادين (form III)\n# يُعَادِينَ (yuʕādīna) /ju.ʕaː.diː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of عَادَى (ʕādā)\n# يُعَادَيْنَ (yuʕādayna) /ju.ʕaː.daj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuʕādīna", "ʕādā", "yuʕādayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عوديت",
+      "tur": "verb",
+      "baslik": "عوديت (form III)\n# عُودِيتُ (ʕūdītu) /ʕuː.diː.tu/: first-person singular past passive of عَادَى (ʕādā)\n# عُودِيتَ (ʕūdīta) /ʕuː.diː.ta/: second-person masculine singular past passive of عَادَى (ʕādā)\n# عُودِيتِ (ʕūdīti) /ʕuː.diː.ti/: second-person feminine singular past passive of عَادَى (ʕādā)\n# عُودِيَتْ (ʕūdiyat) /ʕuː.di.jat/: third-person feminine singular past passive of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕūdītu", "ʕādā", "ʕūdīta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعادى",
+      "tur": "verb",
+      "baslik": "أُعَادَى • (ʔuʕādā) (form III) /ʔu.ʕaː.daː/\n# first-person singular non-past passive indicative/subjunctive of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔuʕādā", "ʕādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعادى",
+      "tur": "verb",
+      "baslik": "يُعَادَى • (yuʕādā) (form III) /ju.ʕaː.daː/\n# third-person masculine singular non-past passive indicative/subjunctive of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuʕādā", "ʕādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عوديتما",
+      "tur": "verb",
+      "baslik": "عُودِيتُمَا • (ʕūdītumā) (form III) /ʕuː.diː.tu.maː/\n# second-person dual past passive of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕūdītumā", "ʕādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عوديا",
+      "tur": "verb",
+      "baslik": "عُودِيَا • (ʕūdiyā) (form III) /ʕuː.di.jaː/\n# third-person masculine dual past passive of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕūdiyā", "ʕādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عوديتا",
+      "tur": "verb",
+      "baslik": "عُودِيَتَا • (ʕūdiyatā) (form III) /ʕuː.di.ja.taː/\n# third-person feminine dual past passive of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕūdiyatā", "ʕādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عودينا",
+      "tur": "verb",
+      "baslik": "عُودِينَا • (ʕūdīnā) (form III) /ʕuː.diː.naː/\n# first-person plural past passive of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕūdīnā", "ʕādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عوديتم",
+      "tur": "verb",
+      "baslik": "عُودِيتُمْ • (ʕūdītum) (form III) /ʕuː.diː.tum/\n# second-person masculine plural past passive of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕūdītum", "ʕādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عوديتن",
+      "tur": "verb",
+      "baslik": "عُودِيتُنَّ • (ʕūdītunna) (form III) /ʕuː.diː.tun.na/\n# second-person feminine plural past passive of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕūdītunna", "ʕādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عودين",
+      "tur": "verb",
+      "baslik": "عُودِينَ • (ʕūdīna) (form III) /ʕuː.diː.na/\n# third-person feminine plural past passive of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕūdīna", "ʕādā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نعادى",
+      "tur": "verb",
+      "baslik": "نُعَادَى • (nuʕādā) (form III) /nu.ʕaː.daː/\n# first-person plural non-past passive indicative/subjunctive of عَادَى (ʕādā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nuʕādā", "ʕādā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "عادى", "r6"]
+  ],
+  "mana": {
     "ince": "restore.v.01",
     "orta": "verb.social",
     "ust": "insan ve toplum",
@@ -577,16 +410,11 @@
     "dayanak_tanim": "restore to the previous state or rank",
     "synset_sayisi": 25
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "belong.v.03",
     "find.v.03",
     "keep.v.01",
@@ -613,12 +441,10 @@
     "sustain.v.04",
     "tell.v.02"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

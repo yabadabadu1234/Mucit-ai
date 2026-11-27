@@ -1,360 +1,261 @@
 {
   "kok": "مرجح",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "مرجح", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "مرجح",
-        "u": "مرجح",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb",
-        "e": "مَرْجَحَ • (marjaḥa) Iq (non-past يُمَرْجِحُ (yumarjiḥu), verbal noun مَرْجَحَة (marjaḥa))",
-        "s": [
-          ["ar-rootbox", ""]
-        ],
-        "g": ["to shake, to swing"],
-        "r": ["marjaḥa"],
-        "k": "مرجح",
-        "yol": "kök"
-      },
-      {
-        "w": "مرجحتم",
-        "u": "مرجحتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مرجحتم (form Iq)\n# مَرْجَحْتُمْ (marjaḥtum) /mar.d͡ʒaħ.tum/: second-person masculine plural past active of مَرْجَحَ (marjaḥa)\n# مُرْجِحْتُمْ (murjiḥtum) /mur.d͡ʒiħ.tum/: second-person masculine plural past passive of مَرْجَحَ (marjaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["marjaḥtum", "marjaḥa", "murjiḥtum"],
-        "k": "مرجح",
-        "yol": "kök"
-      },
-      {
-        "w": "مرجحنا",
-        "u": "مرجحنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مرجحنا (form Iq)\n# مَرْجَحْنَا (marjaḥnā) /mar.d͡ʒaħ.naː/: first-person plural past active of مَرْجَحَ (marjaḥa)\n# مُرْجِحْنَا (murjiḥnā) /mur.d͡ʒiħ.naː/: first-person plural past passive of مَرْجَحَ (marjaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["marjaḥnā", "marjaḥa", "murjiḥnā"],
-        "k": "مرجح",
-        "yol": "kök"
-      },
-      {
-        "w": "مرجحتا",
-        "u": "مرجحتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مرجحتا (form Iq)\n# مَرْجَحَتَا (marjaḥatā) /mar.d͡ʒa.ħa.taː/: third-person feminine dual past active of مَرْجَحَ (marjaḥa)\n# مُرْجِحَتَا (murjiḥatā) /mur.d͡ʒi.ħa.taː/: third-person feminine dual past passive of مَرْجَحَ (marjaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["marjaḥatā", "marjaḥa", "murjiḥatā"],
-        "k": "مرجح",
-        "yol": "kök"
-      },
-      {
-        "w": "مرجحت",
-        "u": "مرجحت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مرجحت (form Iq)\n# مَرْجَحْتُ (marjaḥtu) /mar.d͡ʒaħ.tu/: first-person singular past active of مَرْجَحَ (marjaḥa)\n# مَرْجَحْتَ (marjaḥta) /mar.d͡ʒaħ.ta/: second-person masculine singular past active of مَرْجَحَ (marjaḥa)\n# مَرْجَحْتِ (marjaḥti) /mar.d͡ʒaħ.ti/: second-person feminine singular past active of مَرْجَحَ (marjaḥa)\n# مَرْجَحَتْ (marjaḥat) /mar.d͡ʒa.ħat/: third-person feminine singular past",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["marjaḥtu", "marjaḥa", "marjaḥta"],
-        "k": "مرجح",
-        "yol": "kök"
-      },
-      {
-        "w": "مرجحتن",
-        "u": "مرجحتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مرجحتن (form Iq)\n# مَرْجَحْتُنَّ (marjaḥtunna) /mar.d͡ʒaħ.tun.na/: second-person feminine plural past active of مَرْجَحَ (marjaḥa)\n# مُرْجِحْتُنَّ (murjiḥtunna) /mur.d͡ʒiħ.tun.na/: second-person feminine plural past passive of مَرْجَحَ (marjaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["marjaḥtunna", "marjaḥa", "murjiḥtunna"],
-        "k": "مرجح",
-        "yol": "kök"
-      },
-      {
-        "w": "مرجحتما",
-        "u": "مرجحتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مرجحتما (form Iq)\n# مَرْجَحْتُمَا (marjaḥtumā) /mar.d͡ʒaħ.tu.maː/: second-person dual past active of مَرْجَحَ (marjaḥa)\n# مُرْجِحْتُمَا (murjiḥtumā) /mur.d͡ʒiħ.tu.maː/: second-person dual past passive of مَرْجَحَ (marjaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["marjaḥtumā", "marjaḥa", "murjiḥtumā"],
-        "k": "مرجح",
-        "yol": "kök"
-      },
-      {
-        "w": "مرجحوا",
-        "u": "مرجحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مرجحوا (form Iq)\n# مَرْجَحُوا (marjaḥū) /mar.d͡ʒa.ħuː/: third-person masculine plural past active of مَرْجَحَ (marjaḥa)\n# مُرْجِحُوا (murjiḥū) /mur.d͡ʒi.ħuː/: third-person masculine plural past passive of مَرْجَحَ (marjaḥa)\n# مَرْجِحُوا (marjiḥū) /mar.d͡ʒi.ħuː/: second-person masculine plural imperative of مَرْجَحَ (marjaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["marjaḥū", "marjaḥa", "murjiḥū"],
-        "k": "مرجح",
-        "yol": "kök"
-      },
-      {
-        "w": "مرجحا",
-        "u": "مرجحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مرجحا (form Iq)\n# مَرْجَحَا (marjaḥā) /mar.d͡ʒa.ħaː/: third-person masculine dual past active of مَرْجَحَ (marjaḥa)\n# مُرْجِحَا (murjiḥā) /mur.d͡ʒi.ħaː/: third-person masculine dual past passive of مَرْجَحَ (marjaḥa)\n# مَرْجِحَا (marjiḥā) /mar.d͡ʒi.ħaː/: second-person dual imperative of مَرْجَحَ (marjaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["marjaḥā", "marjaḥa", "murjiḥā"],
-        "k": "مرجح",
-        "yol": "kök"
-      },
-      {
-        "w": "مرجحن",
-        "u": "مرجحن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مرجحن (form Iq)\n# مَرْجَحْنَ (marjaḥna) /mar.d͡ʒaħ.na/: third-person feminine plural past active of مَرْجَحَ (marjaḥa)\n# مُرْجِحْنَ (murjiḥna) /mur.d͡ʒiħ.na/: third-person feminine plural past passive of مَرْجَحَ (marjaḥa)\n# مَرْجِحْنَ (marjiḥna) /mar.d͡ʒiħ.na/: second-person feminine plural imperative of مَرْجَحَ (marjaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["marjaḥna", "marjaḥa", "murjiḥna"],
-        "k": "مرجح",
-        "yol": "kök"
-      },
-      {
-        "w": "أمرجح",
-        "u": "أمرجح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أمرجح (form Iq)\n# أُمَرْجِحُ (ʔumarjiḥu) /ʔu.mar.d͡ʒi.ħu/: first-person singular non-past active indicative of مَرْجَحَ (marjaḥa)\n# أُمَرْجَحُ (ʔumarjaḥu) /ʔu.mar.d͡ʒa.ħu/: first-person singular non-past passive indicative of مَرْجَحَ (marjaḥa)\n# أُمَرْجِحَ (ʔumarjiḥa) /ʔu.mar.d͡ʒi.ħa/: first-person singular non-past active subjunctive of مَرْجَحَ (marjaḥa)\n# أُمَرْجَحَ (ʔumarjaḥa) /ʔu.mar.d͡ʒa.ħa",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʔumarjiḥu", "marjaḥa", "ʔumarjaḥu"],
-        "k": "مرجح",
-        "yol": "kök"
-      },
-      {
-        "w": "تمرجحين",
-        "u": "تمرجحين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تمرجحين (form Iq)\n# تُمَرْجِحِينَ (tumarjiḥīna) /tu.mar.d͡ʒi.ħiː.na/: second-person feminine singular non-past active indicative of مَرْجَحَ (marjaḥa)\n# تُمَرْجَحِينَ (tumarjaḥīna) /tu.mar.d͡ʒa.ħiː.na/: second-person feminine singular non-past passive indicative of مَرْجَحَ (marjaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tumarjiḥīna", "marjaḥa", "tumarjaḥīna"],
-        "k": "مرجح",
-        "yol": "kök"
-      },
-      {
-        "w": "تمرجح",
-        "u": "تمرجح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تمرجح (form Iq)\n# تُمَرْجِحُ (tumarjiḥu) /tu.mar.d͡ʒi.ħu/: inflection of مَرْجَحَ (marjaḥa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُمَرْجَحُ (tumarjaḥu) /tu.mar.d͡ʒa.ħu/: inflection of مَرْجَحَ (marjaḥa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tumarjiḥu", "marjaḥa", "tumarjaḥu"],
-        "k": "مرجح",
-        "yol": "kök"
-      },
-      {
-        "w": "يمرجحان",
-        "u": "يمرجحان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يمرجحان (form Iq)\n# يُمَرْجِحَانِ (yumarjiḥāni) /ju.mar.d͡ʒi.ħaː.ni/: third-person masculine dual non-past active indicative of مَرْجَحَ (marjaḥa)\n# يُمَرْجَحَانِ (yumarjaḥāni) /ju.mar.d͡ʒa.ħaː.ni/: third-person masculine dual non-past passive indicative of مَرْجَحَ (marjaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yumarjiḥāni", "marjaḥa", "yumarjaḥāni"],
-        "k": "مرجح",
-        "yol": "kök"
-      },
-      {
-        "w": "تمرجحون",
-        "u": "تمرجحون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تمرجحون (form Iq)\n# تُمَرْجِحُونَ (tumarjiḥūna) /tu.mar.d͡ʒi.ħuː.na/: second-person masculine plural non-past active indicative of مَرْجَحَ (marjaḥa)\n# تُمَرْجَحُونَ (tumarjaḥūna) /tu.mar.d͡ʒa.ħuː.na/: second-person masculine plural non-past passive indicative of مَرْجَحَ (marjaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tumarjiḥūna", "marjaḥa", "tumarjaḥūna"],
-        "k": "مرجح",
-        "yol": "kök"
-      },
-      {
-        "w": "يمرجح",
-        "u": "يمرجح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يمرجح (form Iq)\n# يُمَرْجِحُ (yumarjiḥu) /ju.mar.d͡ʒi.ħu/: third-person masculine singular non-past active indicative of مَرْجَحَ (marjaḥa)\n# يُمَرْجَحُ (yumarjaḥu) /ju.mar.d͡ʒa.ħu/: third-person masculine singular non-past passive indicative of مَرْجَحَ (marjaḥa)\n# يُمَرْجِحَ (yumarjiḥa) /ju.mar.d͡ʒi.ħa/: third-person masculine singular non-past active subjunctive of مَرْجَحَ (marjaḥa)\n# يُمَرْجَ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yumarjiḥu", "marjaḥa", "yumarjaḥu"],
-        "k": "مرجح",
-        "yol": "kök"
-      },
-      {
-        "w": "يمرجحن",
-        "u": "يمرجحن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يمرجحن (form Iq)\n# يُمَرْجِحْنَ (yumarjiḥna) /ju.mar.d͡ʒiħ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of مَرْجَحَ (marjaḥa)\n# يُمَرْجَحْنَ (yumarjaḥna) /ju.mar.d͡ʒaħ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of مَرْجَحَ (marjaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yumarjiḥna", "marjaḥa", "yumarjaḥna"],
-        "k": "مرجح",
-        "yol": "kök"
-      },
-      {
-        "w": "نمرجح",
-        "u": "نمرجح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نمرجح (form Iq)\n# نُمَرْجِحُ (numarjiḥu) /nu.mar.d͡ʒi.ħu/: first-person plural non-past active indicative of مَرْجَحَ (marjaḥa)\n# نُمَرْجَحُ (numarjaḥu) /nu.mar.d͡ʒa.ħu/: first-person plural non-past passive indicative of مَرْجَحَ (marjaḥa)\n# نُمَرْجِحَ (numarjiḥa) /nu.mar.d͡ʒi.ħa/: first-person plural non-past active subjunctive of مَرْجَحَ (marjaḥa)\n# نُمَرْجَحَ (numarjaḥa) /nu.mar.d͡ʒa.ħa/: fir",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["numarjiḥu", "marjaḥa", "numarjaḥu"],
-        "k": "مرجح",
-        "yol": "kök"
-      },
-      {
-        "w": "تمرجحن",
-        "u": "تمرجحن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تمرجحن (form Iq)\n# تُمَرْجِحْنَ (tumarjiḥna) /tu.mar.d͡ʒiħ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of مَرْجَحَ (marjaḥa)\n# تُمَرْجَحْنَ (tumarjaḥna) /tu.mar.d͡ʒaħ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of مَرْجَحَ (marjaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tumarjiḥna", "marjaḥa", "tumarjaḥna"],
-        "k": "مرجح",
-        "yol": "kök"
-      },
-      {
-        "w": "يمرجحون",
-        "u": "يمرجحون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يمرجحون (form Iq)\n# يُمَرْجِحُونَ (yumarjiḥūna) /ju.mar.d͡ʒi.ħuː.na/: third-person masculine plural non-past active indicative of مَرْجَحَ (marjaḥa)\n# يُمَرْجَحُونَ (yumarjaḥūna) /ju.mar.d͡ʒa.ħuː.na/: third-person masculine plural non-past passive indicative of مَرْجَحَ (marjaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yumarjiḥūna", "marjaḥa", "yumarjaḥūna"],
-        "k": "مرجح",
-        "yol": "kök"
-      },
-      {
-        "w": "تمرجحا",
-        "u": "تمرجحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تمرجحا (form Iq)\n# تُمَرْجِحَا (tumarjiḥā) /tu.mar.d͡ʒi.ħaː/: inflection of مَرْجَحَ (marjaḥa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُمَرْجَحَا (tumarjaḥā) /tu.mar.d͡ʒa.ħaː/: inflection of مَرْجَحَ (marjaḥa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past pas",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tumarjiḥā", "marjaḥa", "tumarjaḥā"],
-        "k": "مرجح",
-        "yol": "kök"
-      },
-      {
-        "w": "تمرجحان",
-        "u": "تمرجحان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تمرجحان (form Iq)\n# تُمَرْجِحَانِ (tumarjiḥāni) /tu.mar.d͡ʒi.ħaː.ni/: inflection of مَرْجَحَ (marjaḥa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُمَرْجَحَانِ (tumarjaḥāni) /tu.mar.d͡ʒa.ħaː.ni/: inflection of مَرْجَحَ (marjaḥa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicat",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tumarjiḥāni", "marjaḥa", "tumarjaḥāni"],
-        "k": "مرجح",
-        "yol": "kök"
-      },
-      {
-        "w": "تمرجحي",
-        "u": "تمرجحي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تمرجحي (form Iq)\n# تُمَرْجِحِي (tumarjiḥī) /tu.mar.d͡ʒi.ħiː/: second-person feminine singular non-past active subjunctive/jussive of مَرْجَحَ (marjaḥa)\n# تُمَرْجَحِي (tumarjaḥī) /tu.mar.d͡ʒa.ħiː/: second-person feminine singular non-past passive subjunctive/jussive of مَرْجَحَ (marjaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tumarjiḥī", "marjaḥa", "tumarjaḥī"],
-        "k": "مرجح",
-        "yol": "kök"
-      },
-      {
-        "w": "يمرجحوا",
-        "u": "يمرجحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يمرجحوا (form Iq)\n# يُمَرْجِحُوا (yumarjiḥū) /ju.mar.d͡ʒi.ħuː/: third-person masculine plural non-past active subjunctive/jussive of مَرْجَحَ (marjaḥa)\n# يُمَرْجَحُوا (yumarjaḥū) /ju.mar.d͡ʒa.ħuː/: third-person masculine plural non-past passive subjunctive/jussive of مَرْجَحَ (marjaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yumarjiḥū", "marjaḥa", "yumarjaḥū"],
-        "k": "مرجح",
-        "yol": "kök"
-      },
-      {
-        "w": "تمرجحوا",
-        "u": "تمرجحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تمرجحوا (form Iq)\n# تُمَرْجِحُوا (tumarjiḥū) /tu.mar.d͡ʒi.ħuː/: second-person masculine plural non-past active subjunctive/jussive of مَرْجَحَ (marjaḥa)\n# تُمَرْجَحُوا (tumarjaḥū) /tu.mar.d͡ʒa.ħuː/: second-person masculine plural non-past passive subjunctive/jussive of مَرْجَحَ (marjaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tumarjiḥū", "marjaḥa", "tumarjaḥū"],
-        "k": "مرجح",
-        "yol": "kök"
-      },
-      {
-        "w": "مرجحي",
-        "u": "مرجحي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَرْجِحِي • (marjiḥī) (form Iq) /mar.d͡ʒi.ħiː/\n# second-person feminine singular imperative of مَرْجَحَ (marjaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["marjiḥī", "marjaḥa"],
-        "k": "مرجح",
-        "yol": "kök"
-      },
-      {
-        "w": "يمرجحا",
-        "u": "يمرجحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يمرجحا (form Iq)\n# يُمَرْجِحَا (yumarjiḥā) /ju.mar.d͡ʒi.ħaː/: third-person masculine dual non-past active subjunctive/jussive of مَرْجَحَ (marjaḥa)\n# يُمَرْجَحَا (yumarjaḥā) /ju.mar.d͡ʒa.ħaː/: third-person masculine dual non-past passive subjunctive/jussive of مَرْجَحَ (marjaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yumarjiḥā", "marjaḥa", "yumarjaḥā"],
-        "k": "مرجح",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "مر",
+  "ses": {
     "harf": "م",
+    "fasil": "مر",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "مرجح",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "مَرْجَحَ • (marjaḥa) Iq (non-past يُمَرْجِحُ (yumarjiḥu), verbal noun مَرْجَحَة (marjaḥa))",
+      "etim_sablon": [
+        ["ar-rootbox", ""]
+      ],
+      "anlam": ["to shake, to swing"],
+      "okunus": ["marjaḥa"]
+    },
+    {
+      "madde": "مرجحتم",
+      "tur": "verb",
+      "baslik": "مرجحتم (form Iq)\n# مَرْجَحْتُمْ (marjaḥtum) /mar.d͡ʒaħ.tum/: second-person masculine plural past active of مَرْجَحَ (marjaḥa)\n# مُرْجِحْتُمْ (murjiḥtum) /mur.d͡ʒiħ.tum/: second-person masculine plural past passive of مَرْجَحَ (marjaḥa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["marjaḥtum", "marjaḥa", "murjiḥtum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مرجحنا",
+      "tur": "verb",
+      "baslik": "مرجحنا (form Iq)\n# مَرْجَحْنَا (marjaḥnā) /mar.d͡ʒaħ.naː/: first-person plural past active of مَرْجَحَ (marjaḥa)\n# مُرْجِحْنَا (murjiḥnā) /mur.d͡ʒiħ.naː/: first-person plural past passive of مَرْجَحَ (marjaḥa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["marjaḥnā", "marjaḥa", "murjiḥnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مرجحتا",
+      "tur": "verb",
+      "baslik": "مرجحتا (form Iq)\n# مَرْجَحَتَا (marjaḥatā) /mar.d͡ʒa.ħa.taː/: third-person feminine dual past active of مَرْجَحَ (marjaḥa)\n# مُرْجِحَتَا (murjiḥatā) /mur.d͡ʒi.ħa.taː/: third-person feminine dual past passive of مَرْجَحَ (marjaḥa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["marjaḥatā", "marjaḥa", "murjiḥatā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مرجحت",
+      "tur": "verb",
+      "baslik": "مرجحت (form Iq)\n# مَرْجَحْتُ (marjaḥtu) /mar.d͡ʒaħ.tu/: first-person singular past active of مَرْجَحَ (marjaḥa)\n# مَرْجَحْتَ (marjaḥta) /mar.d͡ʒaħ.ta/: second-person masculine singular past active of مَرْجَحَ (marjaḥa)\n# مَرْجَحْتِ (marjaḥti) /mar.d͡ʒaħ.ti/: second-person feminine singular past active of مَرْجَحَ (marjaḥa)\n# مَرْجَحَتْ (marjaḥat) /mar.d͡ʒa.ħat/: third-person feminine singular past",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["marjaḥtu", "marjaḥa", "marjaḥta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مرجحتن",
+      "tur": "verb",
+      "baslik": "مرجحتن (form Iq)\n# مَرْجَحْتُنَّ (marjaḥtunna) /mar.d͡ʒaħ.tun.na/: second-person feminine plural past active of مَرْجَحَ (marjaḥa)\n# مُرْجِحْتُنَّ (murjiḥtunna) /mur.d͡ʒiħ.tun.na/: second-person feminine plural past passive of مَرْجَحَ (marjaḥa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["marjaḥtunna", "marjaḥa", "murjiḥtunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مرجحتما",
+      "tur": "verb",
+      "baslik": "مرجحتما (form Iq)\n# مَرْجَحْتُمَا (marjaḥtumā) /mar.d͡ʒaħ.tu.maː/: second-person dual past active of مَرْجَحَ (marjaḥa)\n# مُرْجِحْتُمَا (murjiḥtumā) /mur.d͡ʒiħ.tu.maː/: second-person dual past passive of مَرْجَحَ (marjaḥa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["marjaḥtumā", "marjaḥa", "murjiḥtumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مرجحوا",
+      "tur": "verb",
+      "baslik": "مرجحوا (form Iq)\n# مَرْجَحُوا (marjaḥū) /mar.d͡ʒa.ħuː/: third-person masculine plural past active of مَرْجَحَ (marjaḥa)\n# مُرْجِحُوا (murjiḥū) /mur.d͡ʒi.ħuː/: third-person masculine plural past passive of مَرْجَحَ (marjaḥa)\n# مَرْجِحُوا (marjiḥū) /mar.d͡ʒi.ħuː/: second-person masculine plural imperative of مَرْجَحَ (marjaḥa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["marjaḥū", "marjaḥa", "murjiḥū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مرجحا",
+      "tur": "verb",
+      "baslik": "مرجحا (form Iq)\n# مَرْجَحَا (marjaḥā) /mar.d͡ʒa.ħaː/: third-person masculine dual past active of مَرْجَحَ (marjaḥa)\n# مُرْجِحَا (murjiḥā) /mur.d͡ʒi.ħaː/: third-person masculine dual past passive of مَرْجَحَ (marjaḥa)\n# مَرْجِحَا (marjiḥā) /mar.d͡ʒi.ħaː/: second-person dual imperative of مَرْجَحَ (marjaḥa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["marjaḥā", "marjaḥa", "murjiḥā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مرجحن",
+      "tur": "verb",
+      "baslik": "مرجحن (form Iq)\n# مَرْجَحْنَ (marjaḥna) /mar.d͡ʒaħ.na/: third-person feminine plural past active of مَرْجَحَ (marjaḥa)\n# مُرْجِحْنَ (murjiḥna) /mur.d͡ʒiħ.na/: third-person feminine plural past passive of مَرْجَحَ (marjaḥa)\n# مَرْجِحْنَ (marjiḥna) /mar.d͡ʒiħ.na/: second-person feminine plural imperative of مَرْجَحَ (marjaḥa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["marjaḥna", "marjaḥa", "murjiḥna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أمرجح",
+      "tur": "verb",
+      "baslik": "أمرجح (form Iq)\n# أُمَرْجِحُ (ʔumarjiḥu) /ʔu.mar.d͡ʒi.ħu/: first-person singular non-past active indicative of مَرْجَحَ (marjaḥa)\n# أُمَرْجَحُ (ʔumarjaḥu) /ʔu.mar.d͡ʒa.ħu/: first-person singular non-past passive indicative of مَرْجَحَ (marjaḥa)\n# أُمَرْجِحَ (ʔumarjiḥa) /ʔu.mar.d͡ʒi.ħa/: first-person singular non-past active subjunctive of مَرْجَحَ (marjaḥa)\n# أُمَرْجَحَ (ʔumarjaḥa) /ʔu.mar.d͡ʒa.ħa",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʔumarjiḥu", "marjaḥa", "ʔumarjaḥu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمرجحين",
+      "tur": "verb",
+      "baslik": "تمرجحين (form Iq)\n# تُمَرْجِحِينَ (tumarjiḥīna) /tu.mar.d͡ʒi.ħiː.na/: second-person feminine singular non-past active indicative of مَرْجَحَ (marjaḥa)\n# تُمَرْجَحِينَ (tumarjaḥīna) /tu.mar.d͡ʒa.ħiː.na/: second-person feminine singular non-past passive indicative of مَرْجَحَ (marjaḥa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tumarjiḥīna", "marjaḥa", "tumarjaḥīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمرجح",
+      "tur": "verb",
+      "baslik": "تمرجح (form Iq)\n# تُمَرْجِحُ (tumarjiḥu) /tu.mar.d͡ʒi.ħu/: inflection of مَرْجَحَ (marjaḥa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُمَرْجَحُ (tumarjaḥu) /tu.mar.d͡ʒa.ħu/: inflection of مَرْجَحَ (marjaḥa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tumarjiḥu", "marjaḥa", "tumarjaḥu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يمرجحان",
+      "tur": "verb",
+      "baslik": "يمرجحان (form Iq)\n# يُمَرْجِحَانِ (yumarjiḥāni) /ju.mar.d͡ʒi.ħaː.ni/: third-person masculine dual non-past active indicative of مَرْجَحَ (marjaḥa)\n# يُمَرْجَحَانِ (yumarjaḥāni) /ju.mar.d͡ʒa.ħaː.ni/: third-person masculine dual non-past passive indicative of مَرْجَحَ (marjaḥa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yumarjiḥāni", "marjaḥa", "yumarjaḥāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمرجحون",
+      "tur": "verb",
+      "baslik": "تمرجحون (form Iq)\n# تُمَرْجِحُونَ (tumarjiḥūna) /tu.mar.d͡ʒi.ħuː.na/: second-person masculine plural non-past active indicative of مَرْجَحَ (marjaḥa)\n# تُمَرْجَحُونَ (tumarjaḥūna) /tu.mar.d͡ʒa.ħuː.na/: second-person masculine plural non-past passive indicative of مَرْجَحَ (marjaḥa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tumarjiḥūna", "marjaḥa", "tumarjaḥūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يمرجح",
+      "tur": "verb",
+      "baslik": "يمرجح (form Iq)\n# يُمَرْجِحُ (yumarjiḥu) /ju.mar.d͡ʒi.ħu/: third-person masculine singular non-past active indicative of مَرْجَحَ (marjaḥa)\n# يُمَرْجَحُ (yumarjaḥu) /ju.mar.d͡ʒa.ħu/: third-person masculine singular non-past passive indicative of مَرْجَحَ (marjaḥa)\n# يُمَرْجِحَ (yumarjiḥa) /ju.mar.d͡ʒi.ħa/: third-person masculine singular non-past active subjunctive of مَرْجَحَ (marjaḥa)\n# يُمَرْجَ",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yumarjiḥu", "marjaḥa", "yumarjaḥu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يمرجحن",
+      "tur": "verb",
+      "baslik": "يمرجحن (form Iq)\n# يُمَرْجِحْنَ (yumarjiḥna) /ju.mar.d͡ʒiħ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of مَرْجَحَ (marjaḥa)\n# يُمَرْجَحْنَ (yumarjaḥna) /ju.mar.d͡ʒaħ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of مَرْجَحَ (marjaḥa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yumarjiḥna", "marjaḥa", "yumarjaḥna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نمرجح",
+      "tur": "verb",
+      "baslik": "نمرجح (form Iq)\n# نُمَرْجِحُ (numarjiḥu) /nu.mar.d͡ʒi.ħu/: first-person plural non-past active indicative of مَرْجَحَ (marjaḥa)\n# نُمَرْجَحُ (numarjaḥu) /nu.mar.d͡ʒa.ħu/: first-person plural non-past passive indicative of مَرْجَحَ (marjaḥa)\n# نُمَرْجِحَ (numarjiḥa) /nu.mar.d͡ʒi.ħa/: first-person plural non-past active subjunctive of مَرْجَحَ (marjaḥa)\n# نُمَرْجَحَ (numarjaḥa) /nu.mar.d͡ʒa.ħa/: fir",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["numarjiḥu", "marjaḥa", "numarjaḥu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمرجحن",
+      "tur": "verb",
+      "baslik": "تمرجحن (form Iq)\n# تُمَرْجِحْنَ (tumarjiḥna) /tu.mar.d͡ʒiħ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of مَرْجَحَ (marjaḥa)\n# تُمَرْجَحْنَ (tumarjaḥna) /tu.mar.d͡ʒaħ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of مَرْجَحَ (marjaḥa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tumarjiḥna", "marjaḥa", "tumarjaḥna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يمرجحون",
+      "tur": "verb",
+      "baslik": "يمرجحون (form Iq)\n# يُمَرْجِحُونَ (yumarjiḥūna) /ju.mar.d͡ʒi.ħuː.na/: third-person masculine plural non-past active indicative of مَرْجَحَ (marjaḥa)\n# يُمَرْجَحُونَ (yumarjaḥūna) /ju.mar.d͡ʒa.ħuː.na/: third-person masculine plural non-past passive indicative of مَرْجَحَ (marjaḥa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yumarjiḥūna", "marjaḥa", "yumarjaḥūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمرجحا",
+      "tur": "verb",
+      "baslik": "تمرجحا (form Iq)\n# تُمَرْجِحَا (tumarjiḥā) /tu.mar.d͡ʒi.ħaː/: inflection of مَرْجَحَ (marjaḥa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُمَرْجَحَا (tumarjaḥā) /tu.mar.d͡ʒa.ħaː/: inflection of مَرْجَحَ (marjaḥa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past pas",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tumarjiḥā", "marjaḥa", "tumarjaḥā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمرجحان",
+      "tur": "verb",
+      "baslik": "تمرجحان (form Iq)\n# تُمَرْجِحَانِ (tumarjiḥāni) /tu.mar.d͡ʒi.ħaː.ni/: inflection of مَرْجَحَ (marjaḥa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُمَرْجَحَانِ (tumarjaḥāni) /tu.mar.d͡ʒa.ħaː.ni/: inflection of مَرْجَحَ (marjaḥa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicat",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tumarjiḥāni", "marjaḥa", "tumarjaḥāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمرجحي",
+      "tur": "verb",
+      "baslik": "تمرجحي (form Iq)\n# تُمَرْجِحِي (tumarjiḥī) /tu.mar.d͡ʒi.ħiː/: second-person feminine singular non-past active subjunctive/jussive of مَرْجَحَ (marjaḥa)\n# تُمَرْجَحِي (tumarjaḥī) /tu.mar.d͡ʒa.ħiː/: second-person feminine singular non-past passive subjunctive/jussive of مَرْجَحَ (marjaḥa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tumarjiḥī", "marjaḥa", "tumarjaḥī"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يمرجحوا",
+      "tur": "verb",
+      "baslik": "يمرجحوا (form Iq)\n# يُمَرْجِحُوا (yumarjiḥū) /ju.mar.d͡ʒi.ħuː/: third-person masculine plural non-past active subjunctive/jussive of مَرْجَحَ (marjaḥa)\n# يُمَرْجَحُوا (yumarjaḥū) /ju.mar.d͡ʒa.ħuː/: third-person masculine plural non-past passive subjunctive/jussive of مَرْجَحَ (marjaḥa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yumarjiḥū", "marjaḥa", "yumarjaḥū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمرجحوا",
+      "tur": "verb",
+      "baslik": "تمرجحوا (form Iq)\n# تُمَرْجِحُوا (tumarjiḥū) /tu.mar.d͡ʒi.ħuː/: second-person masculine plural non-past active subjunctive/jussive of مَرْجَحَ (marjaḥa)\n# تُمَرْجَحُوا (tumarjaḥū) /tu.mar.d͡ʒa.ħuː/: second-person masculine plural non-past passive subjunctive/jussive of مَرْجَحَ (marjaḥa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tumarjiḥū", "marjaḥa", "tumarjaḥū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مرجحي",
+      "tur": "verb",
+      "baslik": "مَرْجِحِي • (marjiḥī) (form Iq) /mar.d͡ʒi.ħiː/\n# second-person feminine singular imperative of مَرْجَحَ (marjaḥa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["marjiḥī", "marjaḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يمرجحا",
+      "tur": "verb",
+      "baslik": "يمرجحا (form Iq)\n# يُمَرْجِحَا (yumarjiḥā) /ju.mar.d͡ʒi.ħaː/: third-person masculine dual non-past active subjunctive/jussive of مَرْجَحَ (marjaḥa)\n# يُمَرْجَحَا (yumarjaḥā) /ju.mar.d͡ʒa.ħaː/: third-person masculine dual non-past passive subjunctive/jussive of مَرْجَحَ (marjaḥa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yumarjiḥā", "marjaḥa", "yumarjaḥā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "مرجح", "r6"]
+  ],
+  "mana": {
     "ince": "shake.v.01",
     "orta": "verb.motion",
     "ust": "fiil ve hadise",
@@ -362,20 +263,8 @@
     "dayanak_tanim": "move or cause to move back and forth",
     "dayanak_karsilik": "shake"
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m2",
+  "gomme": {
     "ust": {
       "kume": 8,
       "merkez_kok": "سير",
@@ -395,6 +284,10 @@
       "boy": 6
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

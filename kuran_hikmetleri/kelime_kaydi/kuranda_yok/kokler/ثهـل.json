@@ -1,49 +1,41 @@
 {
   "kok": "ثهـل",
-  "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ثهـل", "üç harfli değil"]
-  ],
-  "sozlukler": {},
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
+  "tur": "isim",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["fiil-yok"],
+  "lugat_fiil": false,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
   },
-  "tasnif": {
-    "fasil": "ثه",
+  "sinif": "reddedildi",
+  "ses": {
     "harf": "ث",
+    "fasil": "ثه",
     "mahrec": "lessiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+  "zemahseri": {
     "hakikat": "ثهلان ذو الهضبات ما يتحلحل مثل للوقور. وكان كهلان بن سبأ، أرزن من ثهلان وأجاز.\nث\nوب\nتفرّق عنه اصحابه ثم ثابوا إليه، والبيت مثابة للناس. والخطّاب يراسلونها ويثاوبونها أي يعاودونها. وثوب في الدعاء، وثوب بركعتين: تطوع بهما بعد كل صلاة. وأثابه الله وثوبه \" هل ثوب الكفار \" وجزاك الله المثوبة الحسنى.",
     "mecaz": "ثاب إليه عقله وحلمه. وجمت مثابة البئر وهي مجتمع مائها، وهذه بئر لها ثائب أي ماء يعود بعد الترح. وقو لهم ثائب إذا وفدوا جماعة إثر جماعة. قال الجعدي:\nترى المعشر الكلف الوجوه إذا انتدوا ... لهم ثائب كالبحر لم يتصرم\nومنه ثاب له مال إذا كثر واجتمع. وثاب الغبار إذا سطع وثكر. وثوب فلان بعد خصاصة. وثاب الحوض: امتلأ. وثاب إليه جسمه بعد الهزال إذا سمن، وأثاب الله جسمه، وقد أثاب فلان إذا ثاب إليه جسمه. وجمت مثابة جهله إذا استحكم جهله. ونشأت مستثابات الرياح، وهي ذوات اليمن والبركة التي يرجى خيرها. قال كثير:\nإذا مستثابات الرياح تنسمت ... ومر بسفساف التراب عقيمها\nسميّ خير الرياح ثواباً، كما سمي خير النحل وهو العسل ثواباً، يقال: أحلى من الثواب. وذهب مال فلان فاستثاب مالاً أي استرجع، ويقول الرجل لصاحبه: استثبت بمالك، أي ذهب مالي فاسترجعته بما أعطيتني. وفلان نقي الثوب، بريّ من العيب؛ وعكسه دنس الثياب. ولله ثوبا فلان، كما تقول: لله بلاده تريد نفسه. قال الراعي:\nفأومأت إيماء خفياً لحبتر ... فلله ثوبا حبتر أيما فتى\nوقالت ليلى الأخيلية:\nرموها بأثواب خفاف فلا ترى ... لها شبهاً إلا النعام المنفّرا\nواسلل ثيابك من ثيابي أي اعتزلني وفارقني قال امرؤ القيس:\nوإن كنت قد ساءتك مني خليقة ... فسل ثيابي من ثيابك تنسل\nوتعلق بثياب الله أي بأستار الكعبة.\nث\nور\nثار العسكر من مركزه، وثار القطا من مجاثمه، والتقوا فثار هؤلاء في وجوه هؤلاء. ويقال: كيف الدبا فتقول: ثائر ونافر. وأثرت الصيد والأسد، واستثرته: هيجته. قال:\nأثار الليث في رعيس غيل ... له الويلات مما يستثير\nوأثار الأرض، وثور السفر. وثاوره وساوره: واثبه. وهو ثور القوم: لسيدهم، وبه كني عمرو ابن معد يكرب.\nومن المجاز: ثارت بينهم الفتنة والشر، وثارت به الحصبة، وثور عليه شراً. وسقط ثور الشفق، وهو ما ظهر منه وانتشر. وثار بالمحموم الثور وهو ما يخرج بفيه من البثر. ورأيته ثائر الرأس: شعثاً. وثارت نفسه: جاشت، وثار ثائره، وفار فائره إذا اشتعل غضباً، وثار الدم في وجهه، ورأيته ثائراً فريص رقبته. وثار الدخان والغبار.",
-    "kinaye": "",
     "mecaz_var": true
   },
-  "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
-    "prototipler": [
-      {
-        "kaynak": "Zemahşerî hakîkat kolu",
-        "metin": "ثهلان ذو الهضبات ما يتحلحل مثل للوقور. وكان كهلان بن سبأ، أرزن من ثهلان وأجاز.\nث\nوب\nتفرّق عنه اصحابه ثم ثابوا إليه، والبيت مثابة للناس. والخطّاب يراسلونها ويثاوبونها أي يعاودونها. وثوب في الدعاء، وثوب بركعتين: تطوع بهما بعد كل صلاة. وأثابه الله وثوبه \" هل ثوب الكفار \" وجزاك الله المثوبة الحسنى."
-      }
-    ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ثهـل", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
+  },
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
     "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
@@ -149,16 +141,6 @@
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.385,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
-  },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+    "ortalama_benzerlik": 0.385
+  }
 }

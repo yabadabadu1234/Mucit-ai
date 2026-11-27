@@ -1,365 +1,287 @@
 {
   "kok": "ءضعف",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءضعف", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يضعف",
-        "u": "يضعف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يضعف (form IV)\n# يُضْعِفُ (yuḍʕifu) /judˤ.ʕi.fu/: third-person masculine singular non-past active indicative of أَضْعَفَ (ʔaḍʕafa)\n# يُضْعَفُ (yuḍʕafu) /judˤ.ʕa.fu/: third-person masculine singular non-past passive indicative of أَضْعَفَ (ʔaḍʕafa)\n# يُضْعِفَ (yuḍʕifa) /judˤ.ʕi.fa/: third-person masculine singular non-past active subjunctive of أَضْعَفَ (ʔaḍʕafa)\n# يُضْعَفَ (yuḍʕafa) /judˤ.ʕa.fa/: ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḍʕifu", "ʔaḍʕafa", "yuḍʕafu"],
-        "k": "أضعف",
-        "yol": "kök"
-      },
-      {
-        "w": "تضعف",
-        "u": "تضعف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تضعف (form IV)\n# تُضْعِفُ (tuḍʕifu) /tudˤ.ʕi.fu/: inflection of أَضْعَفَ (ʔaḍʕafa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُضْعَفُ (tuḍʕafu) /tudˤ.ʕa.fu/: inflection of أَضْعَفَ (ʔaḍʕafa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicati",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḍʕifu", "ʔaḍʕafa", "tuḍʕafu"],
-        "k": "أضعف",
-        "yol": "kök"
-      },
-      {
-        "w": "تضعفين",
-        "u": "تضعفين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تضعفين (form IV)\n# تُضْعِفِينَ (tuḍʕifīna) /tudˤ.ʕi.fiː.na/: second-person feminine singular non-past active indicative of أَضْعَفَ (ʔaḍʕafa)\n# تُضْعَفِينَ (tuḍʕafīna) /tudˤ.ʕa.fiː.na/: second-person feminine singular non-past passive indicative of أَضْعَفَ (ʔaḍʕafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḍʕifīna", "ʔaḍʕafa", "tuḍʕafīna"],
-        "k": "أضعف",
-        "yol": "kök"
-      },
-      {
-        "w": "تضعفي",
-        "u": "تضعفي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تضعفي (form IV)\n# تُضْعِفِي (tuḍʕifī) /tudˤ.ʕi.fiː/: second-person feminine singular non-past active subjunctive/jussive of أَضْعَفَ (ʔaḍʕafa)\n# تُضْعَفِي (tuḍʕafī) /tudˤ.ʕa.fiː/: second-person feminine singular non-past passive subjunctive/jussive of أَضْعَفَ (ʔaḍʕafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḍʕifī", "ʔaḍʕafa", "tuḍʕafī"],
-        "k": "أضعف",
-        "yol": "kök"
-      },
-      {
-        "w": "نضعف",
-        "u": "نضعف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نضعف (form IV)\n# نُضْعِفُ (nuḍʕifu) /nudˤ.ʕi.fu/: first-person plural non-past active indicative of أَضْعَفَ (ʔaḍʕafa)\n# نُضْعَفُ (nuḍʕafu) /nudˤ.ʕa.fu/: first-person plural non-past passive indicative of أَضْعَفَ (ʔaḍʕafa)\n# نُضْعِفَ (nuḍʕifa) /nudˤ.ʕi.fa/: first-person plural non-past active subjunctive of أَضْعَفَ (ʔaḍʕafa)\n# نُضْعَفَ (nuḍʕafa) /nudˤ.ʕa.fa/: first-person plural non-past passive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuḍʕifu", "ʔaḍʕafa", "nuḍʕafu"],
-        "k": "أضعف",
-        "yol": "kök"
-      },
-      {
-        "w": "تضعفون",
-        "u": "تضعفون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تضعفون (form IV)\n# تُضْعِفُونَ (tuḍʕifūna) /tudˤ.ʕi.fuː.na/: second-person masculine plural non-past active indicative of أَضْعَفَ (ʔaḍʕafa)\n# تُضْعَفُونَ (tuḍʕafūna) /tudˤ.ʕa.fuː.na/: second-person masculine plural non-past passive indicative of أَضْعَفَ (ʔaḍʕafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḍʕifūna", "ʔaḍʕafa", "tuḍʕafūna"],
-        "k": "أضعف",
-        "yol": "kök"
-      },
-      {
-        "w": "تضعفوا",
-        "u": "تضعفوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تضعفوا (form IV)\n# تُضْعِفُوا (tuḍʕifū) /tudˤ.ʕi.fuː/: second-person masculine plural non-past active subjunctive/jussive of أَضْعَفَ (ʔaḍʕafa)\n# تُضْعَفُوا (tuḍʕafū) /tudˤ.ʕa.fuː/: second-person masculine plural non-past passive subjunctive/jussive of أَضْعَفَ (ʔaḍʕafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḍʕifū", "ʔaḍʕafa", "tuḍʕafū"],
-        "k": "أضعف",
-        "yol": "kök"
-      },
-      {
-        "w": "يضعفون",
-        "u": "يضعفون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يضعفون (form IV)\n# يُضْعِفُونَ (yuḍʕifūna) /judˤ.ʕi.fuː.na/: third-person masculine plural non-past active indicative of أَضْعَفَ (ʔaḍʕafa)\n# يُضْعَفُونَ (yuḍʕafūna) /judˤ.ʕa.fuː.na/: third-person masculine plural non-past passive indicative of أَضْعَفَ (ʔaḍʕafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḍʕifūna", "ʔaḍʕafa", "yuḍʕafūna"],
-        "k": "أضعف",
-        "yol": "kök"
-      },
-      {
-        "w": "يضعفوا",
-        "u": "يضعفوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يضعفوا (form IV)\n# يُضْعِفُوا (yuḍʕifū) /judˤ.ʕi.fuː/: third-person masculine plural non-past active subjunctive/jussive of أَضْعَفَ (ʔaḍʕafa)\n# يُضْعَفُوا (yuḍʕafū) /judˤ.ʕa.fuː/: third-person masculine plural non-past passive subjunctive/jussive of أَضْعَفَ (ʔaḍʕafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḍʕifū", "ʔaḍʕafa", "yuḍʕafū"],
-        "k": "أضعف",
-        "yol": "kök"
-      },
-      {
-        "w": "تضعفن",
-        "u": "تضعفن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تضعفن (form IV)\n# تُضْعِفْنَ (tuḍʕifna) /tudˤ.ʕif.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَضْعَفَ (ʔaḍʕafa)\n# تُضْعَفْنَ (tuḍʕafna) /tudˤ.ʕaf.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَضْعَفَ (ʔaḍʕafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḍʕifna", "ʔaḍʕafa", "tuḍʕafna"],
-        "k": "أضعف",
-        "yol": "kök"
-      },
-      {
-        "w": "يضعفن",
-        "u": "يضعفن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يضعفن (form IV)\n# يُضْعِفْنَ (yuḍʕifna) /judˤ.ʕif.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَضْعَفَ (ʔaḍʕafa)\n# يُضْعَفْنَ (yuḍʕafna) /judˤ.ʕaf.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَضْعَفَ (ʔaḍʕafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḍʕifna", "ʔaḍʕafa", "yuḍʕafna"],
-        "k": "أضعف",
-        "yol": "kök"
-      },
-      {
-        "w": "أضعفا",
-        "u": "أضعفا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أضعفا (form IV)\n# أَضْعَفَا (ʔaḍʕafā) /ʔadˤ.ʕa.faː/: third-person masculine dual past active of أَضْعَفَ (ʔaḍʕafa)\n# أُضْعِفَا (ʔuḍʕifā) /ʔudˤ.ʕi.faː/: third-person masculine dual past passive of أَضْعَفَ (ʔaḍʕafa)\n# أَضْعِفَا (ʔaḍʕifā) /ʔadˤ.ʕi.faː/: second-person dual imperative of أَضْعَفَ (ʔaḍʕafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḍʕafā", "ʔaḍʕafa", "ʔuḍʕifā"],
-        "k": "أضعف",
-        "yol": "kök"
-      },
-      {
-        "w": "أضعفتا",
-        "u": "أضعفتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أضعفتا (form IV)\n# أَضْعَفَتَا (ʔaḍʕafatā) /ʔadˤ.ʕa.fa.taː/: third-person feminine dual past active of أَضْعَفَ (ʔaḍʕafa)\n# أُضْعِفَتَا (ʔuḍʕifatā) /ʔudˤ.ʕi.fa.taː/: third-person feminine dual past passive of أَضْعَفَ (ʔaḍʕafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḍʕafatā", "ʔaḍʕafa", "ʔuḍʕifatā"],
-        "k": "أضعف",
-        "yol": "kök"
-      },
-      {
-        "w": "أضعفت",
-        "u": "أضعفت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أضعفت (form IV)\n# أَضْعَفْتُ (ʔaḍʕaftu) /ʔadˤ.ʕaf.tu/: first-person singular past active of أَضْعَفَ (ʔaḍʕafa)\n# أَضْعَفْتَ (ʔaḍʕafta) /ʔadˤ.ʕaf.ta/: second-person masculine singular past active of أَضْعَفَ (ʔaḍʕafa)\n# أَضْعَفْتِ (ʔaḍʕafti) /ʔadˤ.ʕaf.ti/: second-person feminine singular past active of أَضْعَفَ (ʔaḍʕafa)\n# أَضْعَفَتْ (ʔaḍʕafat) /ʔadˤ.ʕa.fat/: third-person feminine singular past act",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḍʕaftu", "ʔaḍʕafa", "ʔaḍʕafta"],
-        "k": "أضعف",
-        "yol": "kök"
-      },
-      {
-        "w": "أضعفتما",
-        "u": "أضعفتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أضعفتما (form IV)\n# أَضْعَفْتُمَا (ʔaḍʕaftumā) /ʔadˤ.ʕaf.tu.maː/: second-person dual past active of أَضْعَفَ (ʔaḍʕafa)\n# أُضْعِفْتُمَا (ʔuḍʕiftumā) /ʔudˤ.ʕif.tu.maː/: second-person dual past passive of أَضْعَفَ (ʔaḍʕafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḍʕaftumā", "ʔaḍʕafa", "ʔuḍʕiftumā"],
-        "k": "أضعف",
-        "yol": "kök"
-      },
-      {
-        "w": "أضعفنا",
-        "u": "أضعفنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أضعفنا (form IV)\n# أَضْعَفْنَا (ʔaḍʕafnā) /ʔadˤ.ʕaf.naː/: first-person plural past active of أَضْعَفَ (ʔaḍʕafa)\n# أُضْعِفْنَا (ʔuḍʕifnā) /ʔudˤ.ʕif.naː/: first-person plural past passive of أَضْعَفَ (ʔaḍʕafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḍʕafnā", "ʔaḍʕafa", "ʔuḍʕifnā"],
-        "k": "أضعف",
-        "yol": "kök"
-      },
-      {
-        "w": "أضعفتم",
-        "u": "أضعفتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أضعفتم (form IV)\n# أَضْعَفْتُمْ (ʔaḍʕaftum) /ʔadˤ.ʕaf.tum/: second-person masculine plural past active of أَضْعَفَ (ʔaḍʕafa)\n# أُضْعِفْتُمْ (ʔuḍʕiftum) /ʔudˤ.ʕif.tum/: second-person masculine plural past passive of أَضْعَفَ (ʔaḍʕafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḍʕaftum", "ʔaḍʕafa", "ʔuḍʕiftum"],
-        "k": "أضعف",
-        "yol": "kök"
-      },
-      {
-        "w": "أضعفتن",
-        "u": "أضعفتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أضعفتن (form IV)\n# أَضْعَفْتُنَّ (ʔaḍʕaftunna) /ʔadˤ.ʕaf.tun.na/: second-person feminine plural past active of أَضْعَفَ (ʔaḍʕafa)\n# أُضْعِفْتُنَّ (ʔuḍʕiftunna) /ʔudˤ.ʕif.tun.na/: second-person feminine plural past passive of أَضْعَفَ (ʔaḍʕafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḍʕaftunna", "ʔaḍʕafa", "ʔuḍʕiftunna"],
-        "k": "أضعف",
-        "yol": "kök"
-      },
-      {
-        "w": "أضعفوا",
-        "u": "أضعفوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أضعفوا (form IV)\n# أَضْعَفُوا (ʔaḍʕafū) /ʔadˤ.ʕa.fuː/: third-person masculine plural past active of أَضْعَفَ (ʔaḍʕafa)\n# أُضْعِفُوا (ʔuḍʕifū) /ʔudˤ.ʕi.fuː/: third-person masculine plural past passive of أَضْعَفَ (ʔaḍʕafa)\n# أَضْعِفُوا (ʔaḍʕifū) /ʔadˤ.ʕi.fuː/: second-person masculine plural imperative of أَضْعَفَ (ʔaḍʕafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḍʕafū", "ʔaḍʕafa", "ʔuḍʕifū"],
-        "k": "أضعف",
-        "yol": "kök"
-      },
-      {
-        "w": "تضعفان",
-        "u": "تضعفان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تضعفان (form IV)\n# تُضْعِفَانِ (tuḍʕifāni) /tudˤ.ʕi.faː.ni/: inflection of أَضْعَفَ (ʔaḍʕafa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُضْعَفَانِ (tuḍʕafāni) /tudˤ.ʕa.faː.ni/: inflection of أَضْعَفَ (ʔaḍʕafa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḍʕifāni", "ʔaḍʕafa", "tuḍʕafāni"],
-        "k": "أضعف",
-        "yol": "kök"
-      },
-      {
-        "w": "أضعفن",
-        "u": "أضعفن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أضعفن (form IV)\n# أَضْعَفْنَ (ʔaḍʕafna) /ʔadˤ.ʕaf.na/: third-person feminine plural past active of أَضْعَفَ (ʔaḍʕafa)\n# أُضْعِفْنَ (ʔuḍʕifna) /ʔudˤ.ʕif.na/: third-person feminine plural past passive of أَضْعَفَ (ʔaḍʕafa)\n# أَضْعِفْنَ (ʔaḍʕifna) /ʔadˤ.ʕif.na/: second-person feminine plural imperative of أَضْعَفَ (ʔaḍʕafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḍʕafna", "ʔaḍʕafa", "ʔuḍʕifna"],
-        "k": "أضعف",
-        "yol": "kök"
-      },
-      {
-        "w": "يضعفان",
-        "u": "يضعفان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يضعفان (form IV)\n# يُضْعِفَانِ (yuḍʕifāni) /judˤ.ʕi.faː.ni/: third-person masculine dual non-past active indicative of أَضْعَفَ (ʔaḍʕafa)\n# يُضْعَفَانِ (yuḍʕafāni) /judˤ.ʕa.faː.ni/: third-person masculine dual non-past passive indicative of أَضْعَفَ (ʔaḍʕafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḍʕifāni", "ʔaḍʕafa", "yuḍʕafāni"],
-        "k": "أضعف",
-        "yol": "kök"
-      },
-      {
-        "w": "يضعفا",
-        "u": "يضعفا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يضعفا (form IV)\n# يُضْعِفَا (yuḍʕifā) /judˤ.ʕi.faː/: third-person masculine dual non-past active subjunctive/jussive of أَضْعَفَ (ʔaḍʕafa)\n# يُضْعَفَا (yuḍʕafā) /judˤ.ʕa.faː/: third-person masculine dual non-past passive subjunctive/jussive of أَضْعَفَ (ʔaḍʕafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḍʕifā", "ʔaḍʕafa", "yuḍʕafā"],
-        "k": "أضعف",
-        "yol": "kök"
-      },
-      {
-        "w": "أضعفي",
-        "u": "أضعفي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَضْعِفِي • (ʔaḍʕifī) (form IV) /ʔadˤ.ʕi.fiː/\n# second-person feminine singular imperative of أَضْعَفَ (ʔaḍʕafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḍʕifī", "ʔaḍʕafa"],
-        "k": "أضعف",
-        "yol": "kök"
-      },
-      {
-        "w": "تضعفا",
-        "u": "تضعفا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تضعفا (form IV)\n# تُضْعِفَا (tuḍʕifā) /tudˤ.ʕi.faː/: inflection of أَضْعَفَ (ʔaḍʕafa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُضْعَفَا (tuḍʕafā) /tudˤ.ʕa.faː/: inflection of أَضْعَفَ (ʔaḍʕafa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḍʕifā", "ʔaḍʕafa", "tuḍʕafā"],
-        "k": "أضعف",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "ضع",
+  "ses": {
     "harf": "ء",
+    "fasil": "ضع",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يضعف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يضعف (form IV)\n# يُضْعِفُ (yuḍʕifu) /judˤ.ʕi.fu/: third-person masculine singular non-past active indicative of أَضْعَفَ (ʔaḍʕafa)\n# يُضْعَفُ (yuḍʕafu) /judˤ.ʕa.fu/: third-person masculine singular non-past passive indicative of أَضْعَفَ (ʔaḍʕafa)\n# يُضْعِفَ (yuḍʕifa) /judˤ.ʕi.fa/: third-person masculine singular non-past active subjunctive of أَضْعَفَ (ʔaḍʕafa)\n# يُضْعَفَ (yuḍʕafa) /judˤ.ʕa.fa/: ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḍʕifu", "ʔaḍʕafa", "yuḍʕafu"],
+      "kok_yazilis": "أضعف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضعف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تضعف (form IV)\n# تُضْعِفُ (tuḍʕifu) /tudˤ.ʕi.fu/: inflection of أَضْعَفَ (ʔaḍʕafa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُضْعَفُ (tuḍʕafu) /tudˤ.ʕa.fu/: inflection of أَضْعَفَ (ʔaḍʕafa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicati",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḍʕifu", "ʔaḍʕafa", "tuḍʕafu"],
+      "kok_yazilis": "أضعف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضعفين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تضعفين (form IV)\n# تُضْعِفِينَ (tuḍʕifīna) /tudˤ.ʕi.fiː.na/: second-person feminine singular non-past active indicative of أَضْعَفَ (ʔaḍʕafa)\n# تُضْعَفِينَ (tuḍʕafīna) /tudˤ.ʕa.fiː.na/: second-person feminine singular non-past passive indicative of أَضْعَفَ (ʔaḍʕafa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḍʕifīna", "ʔaḍʕafa", "tuḍʕafīna"],
+      "kok_yazilis": "أضعف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضعفي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تضعفي (form IV)\n# تُضْعِفِي (tuḍʕifī) /tudˤ.ʕi.fiː/: second-person feminine singular non-past active subjunctive/jussive of أَضْعَفَ (ʔaḍʕafa)\n# تُضْعَفِي (tuḍʕafī) /tudˤ.ʕa.fiː/: second-person feminine singular non-past passive subjunctive/jussive of أَضْعَفَ (ʔaḍʕafa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḍʕifī", "ʔaḍʕafa", "tuḍʕafī"],
+      "kok_yazilis": "أضعف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نضعف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نضعف (form IV)\n# نُضْعِفُ (nuḍʕifu) /nudˤ.ʕi.fu/: first-person plural non-past active indicative of أَضْعَفَ (ʔaḍʕafa)\n# نُضْعَفُ (nuḍʕafu) /nudˤ.ʕa.fu/: first-person plural non-past passive indicative of أَضْعَفَ (ʔaḍʕafa)\n# نُضْعِفَ (nuḍʕifa) /nudˤ.ʕi.fa/: first-person plural non-past active subjunctive of أَضْعَفَ (ʔaḍʕafa)\n# نُضْعَفَ (nuḍʕafa) /nudˤ.ʕa.fa/: first-person plural non-past passive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuḍʕifu", "ʔaḍʕafa", "nuḍʕafu"],
+      "kok_yazilis": "أضعف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضعفون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تضعفون (form IV)\n# تُضْعِفُونَ (tuḍʕifūna) /tudˤ.ʕi.fuː.na/: second-person masculine plural non-past active indicative of أَضْعَفَ (ʔaḍʕafa)\n# تُضْعَفُونَ (tuḍʕafūna) /tudˤ.ʕa.fuː.na/: second-person masculine plural non-past passive indicative of أَضْعَفَ (ʔaḍʕafa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḍʕifūna", "ʔaḍʕafa", "tuḍʕafūna"],
+      "kok_yazilis": "أضعف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضعفوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تضعفوا (form IV)\n# تُضْعِفُوا (tuḍʕifū) /tudˤ.ʕi.fuː/: second-person masculine plural non-past active subjunctive/jussive of أَضْعَفَ (ʔaḍʕafa)\n# تُضْعَفُوا (tuḍʕafū) /tudˤ.ʕa.fuː/: second-person masculine plural non-past passive subjunctive/jussive of أَضْعَفَ (ʔaḍʕafa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḍʕifū", "ʔaḍʕafa", "tuḍʕafū"],
+      "kok_yazilis": "أضعف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يضعفون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يضعفون (form IV)\n# يُضْعِفُونَ (yuḍʕifūna) /judˤ.ʕi.fuː.na/: third-person masculine plural non-past active indicative of أَضْعَفَ (ʔaḍʕafa)\n# يُضْعَفُونَ (yuḍʕafūna) /judˤ.ʕa.fuː.na/: third-person masculine plural non-past passive indicative of أَضْعَفَ (ʔaḍʕafa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḍʕifūna", "ʔaḍʕafa", "yuḍʕafūna"],
+      "kok_yazilis": "أضعف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يضعفوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يضعفوا (form IV)\n# يُضْعِفُوا (yuḍʕifū) /judˤ.ʕi.fuː/: third-person masculine plural non-past active subjunctive/jussive of أَضْعَفَ (ʔaḍʕafa)\n# يُضْعَفُوا (yuḍʕafū) /judˤ.ʕa.fuː/: third-person masculine plural non-past passive subjunctive/jussive of أَضْعَفَ (ʔaḍʕafa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḍʕifū", "ʔaḍʕafa", "yuḍʕafū"],
+      "kok_yazilis": "أضعف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضعفن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تضعفن (form IV)\n# تُضْعِفْنَ (tuḍʕifna) /tudˤ.ʕif.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَضْعَفَ (ʔaḍʕafa)\n# تُضْعَفْنَ (tuḍʕafna) /tudˤ.ʕaf.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَضْعَفَ (ʔaḍʕafa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḍʕifna", "ʔaḍʕafa", "tuḍʕafna"],
+      "kok_yazilis": "أضعف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يضعفن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يضعفن (form IV)\n# يُضْعِفْنَ (yuḍʕifna) /judˤ.ʕif.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَضْعَفَ (ʔaḍʕafa)\n# يُضْعَفْنَ (yuḍʕafna) /judˤ.ʕaf.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَضْعَفَ (ʔaḍʕafa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḍʕifna", "ʔaḍʕafa", "yuḍʕafna"],
+      "kok_yazilis": "أضعف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أضعفا",
+      "tur": "verb",
+      "baslik": "أضعفا (form IV)\n# أَضْعَفَا (ʔaḍʕafā) /ʔadˤ.ʕa.faː/: third-person masculine dual past active of أَضْعَفَ (ʔaḍʕafa)\n# أُضْعِفَا (ʔuḍʕifā) /ʔudˤ.ʕi.faː/: third-person masculine dual past passive of أَضْعَفَ (ʔaḍʕafa)\n# أَضْعِفَا (ʔaḍʕifā) /ʔadˤ.ʕi.faː/: second-person dual imperative of أَضْعَفَ (ʔaḍʕafa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḍʕafā", "ʔaḍʕafa", "ʔuḍʕifā"],
+      "kok_yazilis": "أضعف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أضعفتا",
+      "tur": "verb",
+      "baslik": "أضعفتا (form IV)\n# أَضْعَفَتَا (ʔaḍʕafatā) /ʔadˤ.ʕa.fa.taː/: third-person feminine dual past active of أَضْعَفَ (ʔaḍʕafa)\n# أُضْعِفَتَا (ʔuḍʕifatā) /ʔudˤ.ʕi.fa.taː/: third-person feminine dual past passive of أَضْعَفَ (ʔaḍʕafa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḍʕafatā", "ʔaḍʕafa", "ʔuḍʕifatā"],
+      "kok_yazilis": "أضعف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أضعفت",
+      "tur": "verb",
+      "baslik": "أضعفت (form IV)\n# أَضْعَفْتُ (ʔaḍʕaftu) /ʔadˤ.ʕaf.tu/: first-person singular past active of أَضْعَفَ (ʔaḍʕafa)\n# أَضْعَفْتَ (ʔaḍʕafta) /ʔadˤ.ʕaf.ta/: second-person masculine singular past active of أَضْعَفَ (ʔaḍʕafa)\n# أَضْعَفْتِ (ʔaḍʕafti) /ʔadˤ.ʕaf.ti/: second-person feminine singular past active of أَضْعَفَ (ʔaḍʕafa)\n# أَضْعَفَتْ (ʔaḍʕafat) /ʔadˤ.ʕa.fat/: third-person feminine singular past act",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḍʕaftu", "ʔaḍʕafa", "ʔaḍʕafta"],
+      "kok_yazilis": "أضعف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أضعفتما",
+      "tur": "verb",
+      "baslik": "أضعفتما (form IV)\n# أَضْعَفْتُمَا (ʔaḍʕaftumā) /ʔadˤ.ʕaf.tu.maː/: second-person dual past active of أَضْعَفَ (ʔaḍʕafa)\n# أُضْعِفْتُمَا (ʔuḍʕiftumā) /ʔudˤ.ʕif.tu.maː/: second-person dual past passive of أَضْعَفَ (ʔaḍʕafa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḍʕaftumā", "ʔaḍʕafa", "ʔuḍʕiftumā"],
+      "kok_yazilis": "أضعف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أضعفنا",
+      "tur": "verb",
+      "baslik": "أضعفنا (form IV)\n# أَضْعَفْنَا (ʔaḍʕafnā) /ʔadˤ.ʕaf.naː/: first-person plural past active of أَضْعَفَ (ʔaḍʕafa)\n# أُضْعِفْنَا (ʔuḍʕifnā) /ʔudˤ.ʕif.naː/: first-person plural past passive of أَضْعَفَ (ʔaḍʕafa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḍʕafnā", "ʔaḍʕafa", "ʔuḍʕifnā"],
+      "kok_yazilis": "أضعف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أضعفتم",
+      "tur": "verb",
+      "baslik": "أضعفتم (form IV)\n# أَضْعَفْتُمْ (ʔaḍʕaftum) /ʔadˤ.ʕaf.tum/: second-person masculine plural past active of أَضْعَفَ (ʔaḍʕafa)\n# أُضْعِفْتُمْ (ʔuḍʕiftum) /ʔudˤ.ʕif.tum/: second-person masculine plural past passive of أَضْعَفَ (ʔaḍʕafa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḍʕaftum", "ʔaḍʕafa", "ʔuḍʕiftum"],
+      "kok_yazilis": "أضعف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أضعفتن",
+      "tur": "verb",
+      "baslik": "أضعفتن (form IV)\n# أَضْعَفْتُنَّ (ʔaḍʕaftunna) /ʔadˤ.ʕaf.tun.na/: second-person feminine plural past active of أَضْعَفَ (ʔaḍʕafa)\n# أُضْعِفْتُنَّ (ʔuḍʕiftunna) /ʔudˤ.ʕif.tun.na/: second-person feminine plural past passive of أَضْعَفَ (ʔaḍʕafa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḍʕaftunna", "ʔaḍʕafa", "ʔuḍʕiftunna"],
+      "kok_yazilis": "أضعف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أضعفوا",
+      "tur": "verb",
+      "baslik": "أضعفوا (form IV)\n# أَضْعَفُوا (ʔaḍʕafū) /ʔadˤ.ʕa.fuː/: third-person masculine plural past active of أَضْعَفَ (ʔaḍʕafa)\n# أُضْعِفُوا (ʔuḍʕifū) /ʔudˤ.ʕi.fuː/: third-person masculine plural past passive of أَضْعَفَ (ʔaḍʕafa)\n# أَضْعِفُوا (ʔaḍʕifū) /ʔadˤ.ʕi.fuː/: second-person masculine plural imperative of أَضْعَفَ (ʔaḍʕafa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḍʕafū", "ʔaḍʕafa", "ʔuḍʕifū"],
+      "kok_yazilis": "أضعف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضعفان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تضعفان (form IV)\n# تُضْعِفَانِ (tuḍʕifāni) /tudˤ.ʕi.faː.ni/: inflection of أَضْعَفَ (ʔaḍʕafa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُضْعَفَانِ (tuḍʕafāni) /tudˤ.ʕa.faː.ni/: inflection of أَضْعَفَ (ʔaḍʕafa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḍʕifāni", "ʔaḍʕafa", "tuḍʕafāni"],
+      "kok_yazilis": "أضعف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أضعفن",
+      "tur": "verb",
+      "baslik": "أضعفن (form IV)\n# أَضْعَفْنَ (ʔaḍʕafna) /ʔadˤ.ʕaf.na/: third-person feminine plural past active of أَضْعَفَ (ʔaḍʕafa)\n# أُضْعِفْنَ (ʔuḍʕifna) /ʔudˤ.ʕif.na/: third-person feminine plural past passive of أَضْعَفَ (ʔaḍʕafa)\n# أَضْعِفْنَ (ʔaḍʕifna) /ʔadˤ.ʕif.na/: second-person feminine plural imperative of أَضْعَفَ (ʔaḍʕafa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḍʕafna", "ʔaḍʕafa", "ʔuḍʕifna"],
+      "kok_yazilis": "أضعف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يضعفان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يضعفان (form IV)\n# يُضْعِفَانِ (yuḍʕifāni) /judˤ.ʕi.faː.ni/: third-person masculine dual non-past active indicative of أَضْعَفَ (ʔaḍʕafa)\n# يُضْعَفَانِ (yuḍʕafāni) /judˤ.ʕa.faː.ni/: third-person masculine dual non-past passive indicative of أَضْعَفَ (ʔaḍʕafa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḍʕifāni", "ʔaḍʕafa", "yuḍʕafāni"],
+      "kok_yazilis": "أضعف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يضعفا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يضعفا (form IV)\n# يُضْعِفَا (yuḍʕifā) /judˤ.ʕi.faː/: third-person masculine dual non-past active subjunctive/jussive of أَضْعَفَ (ʔaḍʕafa)\n# يُضْعَفَا (yuḍʕafā) /judˤ.ʕa.faː/: third-person masculine dual non-past passive subjunctive/jussive of أَضْعَفَ (ʔaḍʕafa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḍʕifā", "ʔaḍʕafa", "yuḍʕafā"],
+      "kok_yazilis": "أضعف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أضعفي",
+      "tur": "verb",
+      "baslik": "أَضْعِفِي • (ʔaḍʕifī) (form IV) /ʔadˤ.ʕi.fiː/\n# second-person feminine singular imperative of أَضْعَفَ (ʔaḍʕafa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḍʕifī", "ʔaḍʕafa"],
+      "kok_yazilis": "أضعف",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضعفا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تضعفا (form IV)\n# تُضْعِفَا (tuḍʕifā) /tudˤ.ʕi.faː/: inflection of أَضْعَفَ (ʔaḍʕafa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُضْعَفَا (tuḍʕafā) /tudˤ.ʕa.faː/: inflection of أَضْعَفَ (ʔaḍʕafa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḍʕifā", "ʔaḍʕafa", "tuḍʕafā"],
+      "kok_yazilis": "أضعف",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءضعف", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

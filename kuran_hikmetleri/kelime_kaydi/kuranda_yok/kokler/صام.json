@@ -1,696 +1,493 @@
 {
   "kok": "صام",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "صام", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "صمت",
-        "u": "صمت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "صمت (form I)\n# صُمْتُ (ṣumtu) /sˤum.tu/: first-person singular past active of صَامَ (ṣāma)\n# صُمْتَ (ṣumta) /sˤum.ta/: second-person masculine singular past active of صَامَ (ṣāma)\n# صُمْتِ (ṣumti) /sˤum.ti/: second-person feminine singular past active of صَامَ (ṣāma)\n# صِمْتُ (ṣimtu) /sˤim.tu/: first-person singular past passive of صَامَ (ṣāma)\n# صِمْتَ (ṣimta) /sˤim.ta/: second-person masculine s",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣumtu", "ṣāma", "ṣumta"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "صامت",
-        "u": "صامت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "صَامَتْ • (ṣāmat) (form I) /sˤaː.mat/\n# third-person feminine singular past active of صَامَ (ṣāma)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣāmat", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "يصوم",
-        "u": "يصوم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يصوم (form I)\n# يَصُومُ (yaṣūmu) /ja.sˤuː.mu/: third-person masculine singular non-past active indicative of صَامَ (ṣāma)\n# يَصُومَ (yaṣūma) /ja.sˤuː.ma/: third-person masculine singular non-past active subjunctive of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṣūmu", "ṣāma", "yaṣūma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "يصام",
-        "u": "يصام",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يصام (form I)\n# يُصَامُ (yuṣāmu) /ju.sˤaː.mu/: third-person masculine singular non-past passive indicative of صَامَ (ṣāma)\n# يُصَامَ (yuṣāma) /ju.sˤaː.ma/: third-person masculine singular non-past passive subjunctive of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuṣāmu", "ṣāma", "yuṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "يصم",
-        "u": "يصم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يصم (form I)\n# يَصُمْ (yaṣum) /ja.sˤum/: third-person masculine singular non-past active jussive of صَامَ (ṣāma)\n# يُصَمْ (yuṣam) /ju.sˤam/: third-person masculine singular non-past passive jussive of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṣum", "ṣāma", "yuṣam"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "صيم",
-        "u": "صيم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صِيمَ • (ṣīma) (form I) /sˤiː.ma/\n# third-person masculine singular past passive of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣīma", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "تصوم",
-        "u": "تصوم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تصوم (form I)\n# تَصُومُ (taṣūmu) /ta.sˤuː.mu/: inflection of صَامَ (ṣāma):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَصُومَ (taṣūma) /ta.sˤuː.ma/: inflection of صَامَ (ṣāma):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣūmu", "ṣāma", "taṣūma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "تصم",
-        "u": "تصم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تصم (form I)\n# تَصُمْ (taṣum) /ta.sˤum/: inflection of صَامَ (ṣāma):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُصَمْ (tuṣam) /tu.sˤam/: inflection of صَامَ (ṣāma):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣum", "ṣāma", "tuṣam"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "صم",
-        "u": "صم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صُمْ • (ṣum) (form I) /sˤum/\n# second-person masculine singular imperative of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣum", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "تصومين",
-        "u": "تصومين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَصُومِينَ • (taṣūmīna) (form I) /ta.sˤuː.miː.na/\n# second-person feminine singular non-past active indicative of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣūmīna", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "تصومي",
-        "u": "تصومي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَصُومِي • (taṣūmī) (form I) /ta.sˤuː.miː/\n# second-person feminine singular non-past active subjunctive/jussive of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣūmī", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "صومي",
-        "u": "صومي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صُومِي • (ṣūmī) (form I) /sˤuː.miː/\n# second-person feminine singular imperative of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣūmī", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "أصوم",
-        "u": "أصوم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أصوم (form I)\n# أَصُومُ (ʔaṣūmu) /ʔa.sˤuː.mu/: first-person singular non-past active indicative of صَامَ (ṣāma)\n# أَصُومَ (ʔaṣūma) /ʔa.sˤuː.ma/: first-person singular non-past active subjunctive of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaṣūmu", "ṣāma", "ʔaṣūma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "أصم",
-        "u": "أصم",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أصم (form I)\n# أَصُمْ (ʔaṣum) /ʔa.sˤum/: first-person singular non-past active jussive of صَامَ (ṣāma)\n# أُصَمْ (ʔuṣam) /ʔu.sˤam/: first-person singular non-past passive jussive of صَامَ (ṣāma)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaṣum", "ṣāma", "ʔuṣam"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "صمنا",
-        "u": "صمنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صمنا (form I)\n# صُمْنَا (ṣumnā) /sˤum.naː/: first-person plural past active of صَامَ (ṣāma)\n# صِمْنَا (ṣimnā) /sˤim.naː/: first-person plural past passive of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣumnā", "ṣāma", "ṣimnā"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "نصوم",
-        "u": "نصوم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نصوم (form I)\n# نَصُومُ (naṣūmu) /na.sˤuː.mu/: first-person plural non-past active indicative of صَامَ (ṣāma)\n# نَصُومَ (naṣūma) /na.sˤuː.ma/: first-person plural non-past active subjunctive of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naṣūmu", "ṣāma", "naṣūma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "نصم",
-        "u": "نصم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نصم (form I)\n# نَصُمْ (naṣum) /na.sˤum/: first-person plural non-past active jussive of صَامَ (ṣāma)\n# نُصَمْ (nuṣam) /nu.sˤam/: first-person plural non-past passive jussive of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naṣum", "ṣāma", "nuṣam"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "صمتم",
-        "u": "صمتم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صمتم (form I)\n# صُمْتُمْ (ṣumtum) /sˤum.tum/: second-person masculine plural past active of صَامَ (ṣāma)\n# صِمْتُمْ (ṣimtum) /sˤim.tum/: second-person masculine plural past passive of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣumtum", "ṣāma", "ṣimtum"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "تصومون",
-        "u": "تصومون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَصُومُونَ • (taṣūmūna) (form I) /ta.sˤuː.muː.na/\n# second-person masculine plural non-past active indicative of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣūmūna", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "تصوموا",
-        "u": "تصوموا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَصُومُوا • (taṣūmū) (form I) /ta.sˤuː.muː/\n# second-person masculine plural non-past active subjunctive/jussive of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣūmū", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "صوموا",
-        "u": "صوموا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صُومُوا • (ṣūmū) (form I) /sˤuː.muː/\n# second-person masculine plural imperative of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣūmū", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "صاموا",
-        "u": "صاموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَامُوا • (ṣāmū) (form I) /sˤaː.muː/\n# third-person masculine plural past active of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣāmū", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "يصومون",
-        "u": "يصومون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَصُومُونَ • (yaṣūmūna) (form I) /ja.sˤuː.muː.na/\n# third-person masculine plural non-past active indicative of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṣūmūna", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "يصوموا",
-        "u": "يصوموا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَصُومُوا • (yaṣūmū) (form I) /ja.sˤuː.muː/\n# third-person masculine plural non-past active subjunctive/jussive of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṣūmū", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "صمتن",
-        "u": "صمتن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صمتن (form I)\n# صُمْتُنَّ (ṣumtunna) /sˤum.tun.na/: second-person feminine plural past active of صَامَ (ṣāma)\n# صِمْتُنَّ (ṣimtunna) /sˤim.tun.na/: second-person feminine plural past passive of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣumtunna", "ṣāma", "ṣimtunna"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "تصمن",
-        "u": "تصمن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تصمن (form I)\n# تَصُمْنَ (taṣumna) /ta.sˤum.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of صَامَ (ṣāma)\n# تُصَمْنَ (tuṣamna) /tu.sˤam.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣumna", "ṣāma", "tuṣamna"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "صمن",
-        "u": "صمن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صمن (form I)\n# صُمْنَ (ṣumna) /sˤum.na/: inflection of صَامَ (ṣāma):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# صِمْنَ (ṣimna) /sˤim.na/: third-person feminine plural past passive of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣumna", "ṣāma", "ṣimna"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "يصمن",
-        "u": "يصمن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يصمن (form I)\n# يَصُمْنَ (yaṣumna) /ja.sˤum.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of صَامَ (ṣāma)\n# يُصَمْنَ (yuṣamna) /ju.sˤam.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṣumna", "ṣāma", "yuṣamna"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "صوما",
-        "u": "صوما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صُومَا • (ṣūmā) (form I) /sˤuː.maː/\n# second-person dual imperative of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣūmā", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "صامتا",
-        "u": "صامتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَامَتَا • (ṣāmatā) (form I) /sˤaː.ma.taː/\n# third-person feminine dual past active of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣāmatā", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "صيمت",
-        "u": "صيمت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صِيمَتْ • (ṣīmat) (form I) /sˤiː.mat/\n# third-person feminine singular past passive of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣīmat", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "صاما",
-        "u": "صاما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَامَا • (ṣāmā) (form I) /sˤaː.maː/\n# third-person masculine dual past active of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣāmā", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "صمتما",
-        "u": "صمتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صمتما (form I)\n# صُمْتُمَا (ṣumtumā) /sˤum.tu.maː/: second-person dual past active of صَامَ (ṣāma)\n# صِمْتُمَا (ṣimtumā) /sˤim.tu.maː/: second-person dual past passive of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣumtumā", "ṣāma", "ṣimtumā"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "صيما",
-        "u": "صيما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صِيمَا • (ṣīmā) (form I) /sˤiː.maː/\n# third-person masculine dual past passive of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣīmā", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "صيمتا",
-        "u": "صيمتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صِيمَتَا • (ṣīmatā) (form I) /sˤiː.ma.taː/\n# third-person feminine dual past passive of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣīmatā", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "تصومان",
-        "u": "تصومان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَصُومَانِ • (taṣūmāni) (form I) /ta.sˤuː.maː.ni/\n# inflection of صَامَ (ṣāma):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣūmāni", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "صيموا",
-        "u": "صيموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صِيمُوا • (ṣīmū) (form I) /sˤiː.muː/\n# third-person masculine plural past passive of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣīmū", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "أصام",
-        "u": "أصام",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أصام (form I)\n# أُصَامُ (ʔuṣāmu) /ʔu.sˤaː.mu/: first-person singular non-past passive indicative of صَامَ (ṣāma)\n# أُصَامَ (ʔuṣāma) /ʔu.sˤaː.ma/: first-person singular non-past passive subjunctive of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔuṣāmu", "ṣāma", "ʔuṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "يصومان",
-        "u": "يصومان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَصُومَانِ • (yaṣūmāni) (form I) /ja.sˤuː.maː.ni/\n# third-person masculine dual non-past active indicative of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṣūmāni", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "تصامين",
-        "u": "تصامين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُصَامِينَ • (tuṣāmīna) (form I) /tu.sˤaː.miː.na/\n# second-person feminine singular non-past passive indicative of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṣāmīna", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "تصام",
-        "u": "تصام",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تصام (form I)\n# تُصَامُ (tuṣāmu) /tu.sˤaː.mu/: inflection of صَامَ (ṣāma):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُصَامَ (tuṣāma) /tu.sˤaː.ma/: inflection of صَامَ (ṣāma):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṣāmu", "ṣāma", "tuṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "يصامان",
-        "u": "يصامان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُصَامَانِ • (yuṣāmāni) (form I) /ju.sˤaː.maː.ni/\n# third-person masculine dual non-past passive indicative of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuṣāmāni", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "نصام",
-        "u": "نصام",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نصام (form I)\n# نُصَامُ (nuṣāmu) /nu.sˤaː.mu/: first-person plural non-past passive indicative of صَامَ (ṣāma)\n# نُصَامَ (nuṣāma) /nu.sˤaː.ma/: first-person plural non-past passive subjunctive of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuṣāmu", "ṣāma", "nuṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "يصامون",
-        "u": "يصامون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُصَامُونَ • (yuṣāmūna) (form I) /ju.sˤaː.muː.na/\n# third-person masculine plural non-past passive indicative of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuṣāmūna", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "يصوما",
-        "u": "يصوما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَصُومَا • (yaṣūmā) (form I) /ja.sˤuː.maː/\n# third-person masculine dual non-past active subjunctive/jussive of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṣūmā", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "تصامان",
-        "u": "تصامان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُصَامَانِ • (tuṣāmāni) (form I) /tu.sˤaː.maː.ni/\n# inflection of صَامَ (ṣāma):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṣāmāni", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "تصوما",
-        "u": "تصوما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَصُومَا • (taṣūmā) (form I) /ta.sˤuː.maː/\n# inflection of صَامَ (ṣāma):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣūmā", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "تصامون",
-        "u": "تصامون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُصَامُونَ • (tuṣāmūna) (form I) /tu.sˤaː.muː.na/\n# second-person masculine plural non-past passive indicative of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṣāmūna", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "تصامي",
-        "u": "تصامي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُصَامِي • (tuṣāmī) (form I) /tu.sˤaː.miː/\n# second-person feminine singular non-past passive subjunctive/jussive of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṣāmī", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "تصاما",
-        "u": "تصاما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُصَامَا • (tuṣāmā) (form I) /tu.sˤaː.maː/\n# inflection of صَامَ (ṣāma):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṣāmā", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "يصاما",
-        "u": "يصاما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُصَامَا • (yuṣāmā) (form I) /ju.sˤaː.maː/\n# third-person masculine dual non-past passive subjunctive/jussive of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuṣāmā", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "تصاموا",
-        "u": "تصاموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُصَامُوا • (tuṣāmū) (form I) /tu.sˤaː.muː/\n# second-person masculine plural non-past passive subjunctive/jussive of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṣāmū", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      },
-      {
-        "w": "يصاموا",
-        "u": "يصاموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُصَامُوا • (yuṣāmū) (form I) /ju.sˤaː.muː/\n# third-person masculine plural non-past passive subjunctive/jussive of صَامَ (ṣāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuṣāmū", "ṣāma"],
-        "k": "صام",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "صم",
+  "ses": {
     "harf": "ص",
+    "fasil": "صم",
     "mahrec": "esaliyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "صمت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "صمت (form I)\n# صُمْتُ (ṣumtu) /sˤum.tu/: first-person singular past active of صَامَ (ṣāma)\n# صُمْتَ (ṣumta) /sˤum.ta/: second-person masculine singular past active of صَامَ (ṣāma)\n# صُمْتِ (ṣumti) /sˤum.ti/: second-person feminine singular past active of صَامَ (ṣāma)\n# صِمْتُ (ṣimtu) /sˤim.tu/: first-person singular past passive of صَامَ (ṣāma)\n# صِمْتَ (ṣimta) /sˤim.ta/: second-person masculine s",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣumtu", "ṣāma", "ṣumta"]
+    },
+    {
+      "madde": "صامت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "صَامَتْ • (ṣāmat) (form I) /sˤaː.mat/\n# third-person feminine singular past active of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣāmat", "ṣāma"]
+    },
+    {
+      "madde": "يصوم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يصوم (form I)\n# يَصُومُ (yaṣūmu) /ja.sˤuː.mu/: third-person masculine singular non-past active indicative of صَامَ (ṣāma)\n# يَصُومَ (yaṣūma) /ja.sˤuː.ma/: third-person masculine singular non-past active subjunctive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṣūmu", "ṣāma", "yaṣūma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يصام",
+      "tur": "verb",
+      "baslik": "يصام (form I)\n# يُصَامُ (yuṣāmu) /ju.sˤaː.mu/: third-person masculine singular non-past passive indicative of صَامَ (ṣāma)\n# يُصَامَ (yuṣāma) /ju.sˤaː.ma/: third-person masculine singular non-past passive subjunctive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuṣāmu", "ṣāma", "yuṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يصم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يصم (form I)\n# يَصُمْ (yaṣum) /ja.sˤum/: third-person masculine singular non-past active jussive of صَامَ (ṣāma)\n# يُصَمْ (yuṣam) /ju.sˤam/: third-person masculine singular non-past passive jussive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṣum", "ṣāma", "yuṣam"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صيم",
+      "tur": "verb",
+      "baslik": "صِيمَ • (ṣīma) (form I) /sˤiː.ma/\n# third-person masculine singular past passive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣīma", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصوم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تصوم (form I)\n# تَصُومُ (taṣūmu) /ta.sˤuː.mu/: inflection of صَامَ (ṣāma):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَصُومَ (taṣūma) /ta.sˤuː.ma/: inflection of صَامَ (ṣāma):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣūmu", "ṣāma", "taṣūma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تصم (form I)\n# تَصُمْ (taṣum) /ta.sˤum/: inflection of صَامَ (ṣāma):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُصَمْ (tuṣam) /tu.sˤam/: inflection of صَامَ (ṣāma):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣum", "ṣāma", "tuṣam"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صُمْ • (ṣum) (form I) /sˤum/\n# second-person masculine singular imperative of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣum", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصومين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَصُومِينَ • (taṣūmīna) (form I) /ta.sˤuː.miː.na/\n# second-person feminine singular non-past active indicative of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣūmīna", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصومي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَصُومِي • (taṣūmī) (form I) /ta.sˤuː.miː/\n# second-person feminine singular non-past active subjunctive/jussive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣūmī", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صومي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صُومِي • (ṣūmī) (form I) /sˤuː.miː/\n# second-person feminine singular imperative of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣūmī", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أصوم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أصوم (form I)\n# أَصُومُ (ʔaṣūmu) /ʔa.sˤuː.mu/: first-person singular non-past active indicative of صَامَ (ṣāma)\n# أَصُومَ (ʔaṣūma) /ʔa.sˤuː.ma/: first-person singular non-past active subjunctive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaṣūmu", "ṣāma", "ʔaṣūma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أصم",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أصم (form I)\n# أَصُمْ (ʔaṣum) /ʔa.sˤum/: first-person singular non-past active jussive of صَامَ (ṣāma)\n# أُصَمْ (ʔuṣam) /ʔu.sˤam/: first-person singular non-past passive jussive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaṣum", "ṣāma", "ʔuṣam"]
+    },
+    {
+      "madde": "صمنا",
+      "tur": "verb",
+      "baslik": "صمنا (form I)\n# صُمْنَا (ṣumnā) /sˤum.naː/: first-person plural past active of صَامَ (ṣāma)\n# صِمْنَا (ṣimnā) /sˤim.naː/: first-person plural past passive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣumnā", "ṣāma", "ṣimnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نصوم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نصوم (form I)\n# نَصُومُ (naṣūmu) /na.sˤuː.mu/: first-person plural non-past active indicative of صَامَ (ṣāma)\n# نَصُومَ (naṣūma) /na.sˤuː.ma/: first-person plural non-past active subjunctive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naṣūmu", "ṣāma", "naṣūma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نصم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نصم (form I)\n# نَصُمْ (naṣum) /na.sˤum/: first-person plural non-past active jussive of صَامَ (ṣāma)\n# نُصَمْ (nuṣam) /nu.sˤam/: first-person plural non-past passive jussive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naṣum", "ṣāma", "nuṣam"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صمتم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صمتم (form I)\n# صُمْتُمْ (ṣumtum) /sˤum.tum/: second-person masculine plural past active of صَامَ (ṣāma)\n# صِمْتُمْ (ṣimtum) /sˤim.tum/: second-person masculine plural past passive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣumtum", "ṣāma", "ṣimtum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصومون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَصُومُونَ • (taṣūmūna) (form I) /ta.sˤuː.muː.na/\n# second-person masculine plural non-past active indicative of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣūmūna", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصوموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَصُومُوا • (taṣūmū) (form I) /ta.sˤuː.muː/\n# second-person masculine plural non-past active subjunctive/jussive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣūmū", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صوموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صُومُوا • (ṣūmū) (form I) /sˤuː.muː/\n# second-person masculine plural imperative of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣūmū", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صاموا",
+      "tur": "verb",
+      "baslik": "صَامُوا • (ṣāmū) (form I) /sˤaː.muː/\n# third-person masculine plural past active of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣāmū", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يصومون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَصُومُونَ • (yaṣūmūna) (form I) /ja.sˤuː.muː.na/\n# third-person masculine plural non-past active indicative of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṣūmūna", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يصوموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَصُومُوا • (yaṣūmū) (form I) /ja.sˤuː.muː/\n# third-person masculine plural non-past active subjunctive/jussive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṣūmū", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صمتن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صمتن (form I)\n# صُمْتُنَّ (ṣumtunna) /sˤum.tun.na/: second-person feminine plural past active of صَامَ (ṣāma)\n# صِمْتُنَّ (ṣimtunna) /sˤim.tun.na/: second-person feminine plural past passive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣumtunna", "ṣāma", "ṣimtunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصمن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تصمن (form I)\n# تَصُمْنَ (taṣumna) /ta.sˤum.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of صَامَ (ṣāma)\n# تُصَمْنَ (tuṣamna) /tu.sˤam.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣumna", "ṣāma", "tuṣamna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صمن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صمن (form I)\n# صُمْنَ (ṣumna) /sˤum.na/: inflection of صَامَ (ṣāma):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# صِمْنَ (ṣimna) /sˤim.na/: third-person feminine plural past passive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣumna", "ṣāma", "ṣimna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يصمن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يصمن (form I)\n# يَصُمْنَ (yaṣumna) /ja.sˤum.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of صَامَ (ṣāma)\n# يُصَمْنَ (yuṣamna) /ju.sˤam.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṣumna", "ṣāma", "yuṣamna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صوما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صُومَا • (ṣūmā) (form I) /sˤuː.maː/\n# second-person dual imperative of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣūmā", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صامتا",
+      "tur": "verb",
+      "baslik": "صَامَتَا • (ṣāmatā) (form I) /sˤaː.ma.taː/\n# third-person feminine dual past active of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣāmatā", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صيمت",
+      "tur": "verb",
+      "baslik": "صِيمَتْ • (ṣīmat) (form I) /sˤiː.mat/\n# third-person feminine singular past passive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣīmat", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صاما",
+      "tur": "verb",
+      "baslik": "صَامَا • (ṣāmā) (form I) /sˤaː.maː/\n# third-person masculine dual past active of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣāmā", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صمتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صمتما (form I)\n# صُمْتُمَا (ṣumtumā) /sˤum.tu.maː/: second-person dual past active of صَامَ (ṣāma)\n# صِمْتُمَا (ṣimtumā) /sˤim.tu.maː/: second-person dual past passive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣumtumā", "ṣāma", "ṣimtumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صيما",
+      "tur": "verb",
+      "baslik": "صِيمَا • (ṣīmā) (form I) /sˤiː.maː/\n# third-person masculine dual past passive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣīmā", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صيمتا",
+      "tur": "verb",
+      "baslik": "صِيمَتَا • (ṣīmatā) (form I) /sˤiː.ma.taː/\n# third-person feminine dual past passive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣīmatā", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصومان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَصُومَانِ • (taṣūmāni) (form I) /ta.sˤuː.maː.ni/\n# inflection of صَامَ (ṣāma):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣūmāni", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صيموا",
+      "tur": "verb",
+      "baslik": "صِيمُوا • (ṣīmū) (form I) /sˤiː.muː/\n# third-person masculine plural past passive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣīmū", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أصام",
+      "tur": "verb",
+      "baslik": "أصام (form I)\n# أُصَامُ (ʔuṣāmu) /ʔu.sˤaː.mu/: first-person singular non-past passive indicative of صَامَ (ṣāma)\n# أُصَامَ (ʔuṣāma) /ʔu.sˤaː.ma/: first-person singular non-past passive subjunctive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔuṣāmu", "ṣāma", "ʔuṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يصومان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَصُومَانِ • (yaṣūmāni) (form I) /ja.sˤuː.maː.ni/\n# third-person masculine dual non-past active indicative of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṣūmāni", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصامين",
+      "tur": "verb",
+      "baslik": "تُصَامِينَ • (tuṣāmīna) (form I) /tu.sˤaː.miː.na/\n# second-person feminine singular non-past passive indicative of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṣāmīna", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصام",
+      "tur": "verb",
+      "baslik": "تصام (form I)\n# تُصَامُ (tuṣāmu) /tu.sˤaː.mu/: inflection of صَامَ (ṣāma):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُصَامَ (tuṣāma) /tu.sˤaː.ma/: inflection of صَامَ (ṣāma):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṣāmu", "ṣāma", "tuṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يصامان",
+      "tur": "verb",
+      "baslik": "يُصَامَانِ • (yuṣāmāni) (form I) /ju.sˤaː.maː.ni/\n# third-person masculine dual non-past passive indicative of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuṣāmāni", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نصام",
+      "tur": "verb",
+      "baslik": "نصام (form I)\n# نُصَامُ (nuṣāmu) /nu.sˤaː.mu/: first-person plural non-past passive indicative of صَامَ (ṣāma)\n# نُصَامَ (nuṣāma) /nu.sˤaː.ma/: first-person plural non-past passive subjunctive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuṣāmu", "ṣāma", "nuṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يصامون",
+      "tur": "verb",
+      "baslik": "يُصَامُونَ • (yuṣāmūna) (form I) /ju.sˤaː.muː.na/\n# third-person masculine plural non-past passive indicative of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuṣāmūna", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يصوما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَصُومَا • (yaṣūmā) (form I) /ja.sˤuː.maː/\n# third-person masculine dual non-past active subjunctive/jussive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṣūmā", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصامان",
+      "tur": "verb",
+      "baslik": "تُصَامَانِ • (tuṣāmāni) (form I) /tu.sˤaː.maː.ni/\n# inflection of صَامَ (ṣāma):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṣāmāni", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصوما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَصُومَا • (taṣūmā) (form I) /ta.sˤuː.maː/\n# inflection of صَامَ (ṣāma):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣūmā", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصامون",
+      "tur": "verb",
+      "baslik": "تُصَامُونَ • (tuṣāmūna) (form I) /tu.sˤaː.muː.na/\n# second-person masculine plural non-past passive indicative of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṣāmūna", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصامي",
+      "tur": "verb",
+      "baslik": "تُصَامِي • (tuṣāmī) (form I) /tu.sˤaː.miː/\n# second-person feminine singular non-past passive subjunctive/jussive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṣāmī", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصاما",
+      "tur": "verb",
+      "baslik": "تُصَامَا • (tuṣāmā) (form I) /tu.sˤaː.maː/\n# inflection of صَامَ (ṣāma):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṣāmā", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يصاما",
+      "tur": "verb",
+      "baslik": "يُصَامَا • (yuṣāmā) (form I) /ju.sˤaː.maː/\n# third-person masculine dual non-past passive subjunctive/jussive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuṣāmā", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصاموا",
+      "tur": "verb",
+      "baslik": "تُصَامُوا • (tuṣāmū) (form I) /tu.sˤaː.muː/\n# second-person masculine plural non-past passive subjunctive/jussive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṣāmū", "ṣāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يصاموا",
+      "tur": "verb",
+      "baslik": "يُصَامُوا • (yuṣāmū) (form I) /ju.sˤaː.muː/\n# third-person masculine plural non-past passive subjunctive/jussive of صَامَ (ṣāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuṣāmū", "ṣāma"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "صام", "r7"]
+  ],
+  "mana": {
     "ince": "trait.n.01",
     "orta": "noun.attribute",
     "ust": "hâl ve vasıf",
@@ -698,22 +495,15 @@
     "dayanak_tanim": "the trait of being uncommunicative; not volunteering anything more than necessary",
     "synset_sayisi": 4
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["close_up.v.04", "deaf.n.01", "uncommunicativeness.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["close_up.v.04", "deaf.n.01", "uncommunicativeness.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

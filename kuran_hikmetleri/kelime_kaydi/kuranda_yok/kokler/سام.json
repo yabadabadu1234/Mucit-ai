@@ -1,466 +1,339 @@
 {
   "kok": "سام",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "سام", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "سم",
-        "u": "سم",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "سُمْ • (sum) (form I) /sum/\n# second-person masculine singular imperative of سَامَ (sāma)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sum", "sāma"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "سمن",
-        "u": "سمن",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "سمن (form I)\n# سُمْنَ (sumna) /sum.na/: inflection of سَامَ (sāma):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# سِمْنَ (simna) /sim.na/: third-person feminine plural past passive of سَامَ (sāma)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sumna", "sāma", "simna"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "تسم",
-        "u": "تسم",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تسم (form I)\n# تَسُمْ (tasum) /ta.sum/: inflection of سَامَ (sāma):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُسَمْ (tusam) /tu.sam/: inflection of سَامَ (sāma):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasum", "sāma", "tusam"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "يسم",
-        "u": "يسم",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "يسم (form I)\n# يَسُمْ (yasum) /ja.sum/: third-person masculine singular non-past active jussive of سَامَ (sāma)\n# يُسَمْ (yusam) /ju.sam/: third-person masculine singular non-past passive jussive of سَامَ (sāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasum", "sāma", "yusam"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "يسمن",
-        "u": "يسمن",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "يسمن (form I)\n# يَسُمْنَ (yasumna) /ja.sum.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of سَامَ (sāma)\n# يُسَمْنَ (yusamna) /ju.sam.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of سَامَ (sāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasumna", "sāma", "yusamna"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "سمت",
-        "u": "سمت",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "سمت (form I)\n# سُمْتُ (sumtu) /sum.tu/: first-person singular past active of سَامَ (sāma)\n# سُمْتَ (sumta) /sum.ta/: second-person masculine singular past active of سَامَ (sāma)\n# سُمْتِ (sumti) /sum.ti/: second-person feminine singular past active of سَامَ (sāma)\n# سِمْتُ (simtu) /sim.tu/: first-person singular past passive of سَامَ (sāma)\n# سِمْتَ (simta) /sim.ta/: second-person masculine singul",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sumtu", "sāma", "sumta"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "أسم",
-        "u": "أسم",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "أسم (form I)\n# أَسُمْ (ʔasum) /ʔa.sum/: first-person singular non-past active jussive of سَامَ (sāma)\n# أُسَمْ (ʔusam) /ʔu.sam/: first-person singular non-past passive jussive of سَامَ (sāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔasum", "sāma", "ʔusam"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "تسمن",
-        "u": "تسمن",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تسمن (form I)\n# تَسُمْنَ (tasumna) /ta.sum.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of سَامَ (sāma)\n# تُسَمْنَ (tusamna) /tu.sam.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of سَامَ (sāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasumna", "sāma", "tusamna"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "نسم",
-        "u": "نسم",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "نسم (form I)\n# نَسُمْ (nasum) /na.sum/: first-person plural non-past active jussive of سَامَ (sāma)\n# نُسَمْ (nusam) /nu.sam/: first-person plural non-past passive jussive of سَامَ (sāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nasum", "sāma", "nusam"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "سمنا",
-        "u": "سمنا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "سمنا (form I)\n# سُمْنَا (sumnā) /sum.naː/: first-person plural past active of سَامَ (sāma)\n# سِمْنَا (simnā) /sim.naː/: first-person plural past passive of سَامَ (sāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sumnā", "sāma", "simnā"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "ساما",
-        "u": "ساما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سَامَا • (sāmā) (form I) /saː.maː/\n# third-person masculine dual past active of سَامَ (sāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sāmā", "sāma"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "سوما",
-        "u": "سوما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "سُومَا • (sūmā) (form I) /suː.maː/\n# second-person dual imperative of سَامَ (sāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sūmā", "sāma"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "ساموا",
-        "u": "ساموا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "سَامُوا • (sāmū) (form I) /saː.muː/\n# third-person masculine plural past active of سَامَ (sāma)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sāmū", "sāma"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "تسومي",
-        "u": "تسومي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَسُومِي • (tasūmī) (form I) /ta.suː.miː/\n# second-person feminine singular non-past active subjunctive/jussive of سَامَ (sāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasūmī", "sāma"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "سمتما",
-        "u": "سمتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سمتما (form I)\n# سُمْتُمَا (sumtumā) /sum.tu.maː/: second-person dual past active of سَامَ (sāma)\n# سِمْتُمَا (simtumā) /sim.tu.maː/: second-person dual past passive of سَامَ (sāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sumtumā", "sāma", "simtumā"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "سامت",
-        "u": "سامت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "سَامَتْ • (sāmat) (form I) /saː.mat/\n# third-person feminine singular past active of سَامَ (sāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sāmat", "sāma"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "سامتا",
-        "u": "سامتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "سَامَتَا • (sāmatā) (form I) /saː.ma.taː/\n# third-person feminine dual past active of سَامَ (sāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sāmatā", "sāma"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "سمتن",
-        "u": "سمتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سمتن (form I)\n# سُمْتُنَّ (sumtunna) /sum.tun.na/: second-person feminine plural past active of سَامَ (sāma)\n# سِمْتُنَّ (simtunna) /sim.tun.na/: second-person feminine plural past passive of سَامَ (sāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sumtunna", "sāma", "simtunna"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "سمتم",
-        "u": "سمتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سمتم (form I)\n# سُمْتُمْ (sumtum) /sum.tum/: second-person masculine plural past active of سَامَ (sāma)\n# سِمْتُمْ (simtum) /sim.tum/: second-person masculine plural past passive of سَامَ (sāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sumtum", "sāma", "simtum"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "أسوم",
-        "u": "أسوم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أسوم (form I)\n# أَسُومُ (ʔasūmu) /ʔa.suː.mu/: first-person singular non-past active indicative of سَامَ (sāma)\n# أَسُومَ (ʔasūma) /ʔa.suː.ma/: first-person singular non-past active subjunctive of سَامَ (sāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔasūmu", "sāma", "ʔasūma"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "تسوم",
-        "u": "تسوم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تسوم (form I)\n# تَسُومُ (tasūmu) /ta.suː.mu/: inflection of سَامَ (sāma):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَسُومَ (tasūma) /ta.suː.ma/: inflection of سَامَ (sāma):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasūmu", "sāma", "tasūma"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "تسومين",
-        "u": "تسومين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَسُومِينَ • (tasūmīna) (form I) /ta.suː.miː.na/\n# second-person feminine singular non-past active indicative of سَامَ (sāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasūmīna", "sāma"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "يسومان",
-        "u": "يسومان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَسُومَانِ • (yasūmāni) (form I) /ja.suː.maː.ni/\n# third-person masculine dual non-past active indicative of سَامَ (sāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasūmāni", "sāma"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "يسوم",
-        "u": "يسوم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يسوم (form I)\n# يَسُومُ (yasūmu) /ja.suː.mu/: third-person masculine singular non-past active indicative of سَامَ (sāma)\n# يَسُومَ (yasūma) /ja.suː.ma/: third-person masculine singular non-past active subjunctive of سَامَ (sāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasūmu", "sāma", "yasūma"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "تسومان",
-        "u": "تسومان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَسُومَانِ • (tasūmāni) (form I) /ta.suː.maː.ni/\n# inflection of سَامَ (sāma):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasūmāni", "sāma"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "تسومون",
-        "u": "تسومون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَسُومُونَ • (tasūmūna) (form I) /ta.suː.muː.na/\n# second-person masculine plural non-past active indicative of سَامَ (sāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasūmūna", "sāma"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "تسوما",
-        "u": "تسوما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَسُومَا • (tasūmā) (form I) /ta.suː.maː/\n# inflection of سَامَ (sāma):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasūmā", "sāma"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "نسوم",
-        "u": "نسوم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نسوم (form I)\n# نَسُومُ (nasūmu) /na.suː.mu/: first-person plural non-past active indicative of سَامَ (sāma)\n# نَسُومَ (nasūma) /na.suː.ma/: first-person plural non-past active subjunctive of سَامَ (sāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nasūmu", "sāma", "nasūma"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "يسومون",
-        "u": "يسومون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَسُومُونَ • (yasūmūna) (form I) /ja.suː.muː.na/\n# third-person masculine plural non-past active indicative of سَامَ (sāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasūmūna", "sāma"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "يسوما",
-        "u": "يسوما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَسُومَا • (yasūmā) (form I) /ja.suː.maː/\n# third-person masculine dual non-past active subjunctive/jussive of سَامَ (sāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasūmā", "sāma"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "تسوموا",
-        "u": "تسوموا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَسُومُوا • (tasūmū) (form I) /ta.suː.muː/\n# second-person masculine plural non-past active subjunctive/jussive of سَامَ (sāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasūmū", "sāma"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "يسوموا",
-        "u": "يسوموا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَسُومُوا • (yasūmū) (form I) /ja.suː.muː/\n# third-person masculine plural non-past active subjunctive/jussive of سَامَ (sāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasūmū", "sāma"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "سومي",
-        "u": "سومي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "سُومِي • (sūmī) (form I) /suː.miː/\n# second-person feminine singular imperative of سَامَ (sāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sūmī", "sāma"],
-        "k": "سام",
-        "yol": "kök"
-      },
-      {
-        "w": "سوموا",
-        "u": "سوموا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "سُومُوا • (sūmū) (form I) /suː.muː/\n# second-person masculine plural imperative of سَامَ (sāma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sūmū", "sāma"],
-        "k": "سام",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "سم",
+  "ses": {
     "harf": "س",
+    "fasil": "سم",
     "mahrec": "esaliyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "سم",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "سُمْ • (sum) (form I) /sum/\n# second-person masculine singular imperative of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sum", "sāma"]
+    },
+    {
+      "madde": "سمن",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "سمن (form I)\n# سُمْنَ (sumna) /sum.na/: inflection of سَامَ (sāma):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# سِمْنَ (simna) /sim.na/: third-person feminine plural past passive of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sumna", "sāma", "simna"]
+    },
+    {
+      "madde": "تسم",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تسم (form I)\n# تَسُمْ (tasum) /ta.sum/: inflection of سَامَ (sāma):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُسَمْ (tusam) /tu.sam/: inflection of سَامَ (sāma):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasum", "sāma", "tusam"]
+    },
+    {
+      "madde": "يسم",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "يسم (form I)\n# يَسُمْ (yasum) /ja.sum/: third-person masculine singular non-past active jussive of سَامَ (sāma)\n# يُسَمْ (yusam) /ju.sam/: third-person masculine singular non-past passive jussive of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasum", "sāma", "yusam"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسمن",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "يسمن (form I)\n# يَسُمْنَ (yasumna) /ja.sum.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of سَامَ (sāma)\n# يُسَمْنَ (yusamna) /ju.sam.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasumna", "sāma", "yusamna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سمت",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "سمت (form I)\n# سُمْتُ (sumtu) /sum.tu/: first-person singular past active of سَامَ (sāma)\n# سُمْتَ (sumta) /sum.ta/: second-person masculine singular past active of سَامَ (sāma)\n# سُمْتِ (sumti) /sum.ti/: second-person feminine singular past active of سَامَ (sāma)\n# سِمْتُ (simtu) /sim.tu/: first-person singular past passive of سَامَ (sāma)\n# سِمْتَ (simta) /sim.ta/: second-person masculine singul",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sumtu", "sāma", "sumta"]
+    },
+    {
+      "madde": "أسم",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "أسم (form I)\n# أَسُمْ (ʔasum) /ʔa.sum/: first-person singular non-past active jussive of سَامَ (sāma)\n# أُسَمْ (ʔusam) /ʔu.sam/: first-person singular non-past passive jussive of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔasum", "sāma", "ʔusam"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسمن",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تسمن (form I)\n# تَسُمْنَ (tasumna) /ta.sum.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of سَامَ (sāma)\n# تُسَمْنَ (tusamna) /tu.sam.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasumna", "sāma", "tusamna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نسم",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "نسم (form I)\n# نَسُمْ (nasum) /na.sum/: first-person plural non-past active jussive of سَامَ (sāma)\n# نُسَمْ (nusam) /nu.sam/: first-person plural non-past passive jussive of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nasum", "sāma", "nusam"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سمنا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "سمنا (form I)\n# سُمْنَا (sumnā) /sum.naː/: first-person plural past active of سَامَ (sāma)\n# سِمْنَا (simnā) /sim.naː/: first-person plural past passive of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sumnā", "sāma", "simnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ساما",
+      "tur": "verb",
+      "baslik": "سَامَا • (sāmā) (form I) /saː.maː/\n# third-person masculine dual past active of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sāmā", "sāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سوما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "سُومَا • (sūmā) (form I) /suː.maː/\n# second-person dual imperative of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sūmā", "sāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ساموا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "سَامُوا • (sāmū) (form I) /saː.muː/\n# third-person masculine plural past active of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sāmū", "sāma"]
+    },
+    {
+      "madde": "تسومي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَسُومِي • (tasūmī) (form I) /ta.suː.miː/\n# second-person feminine singular non-past active subjunctive/jussive of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasūmī", "sāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سمتما",
+      "tur": "verb",
+      "baslik": "سمتما (form I)\n# سُمْتُمَا (sumtumā) /sum.tu.maː/: second-person dual past active of سَامَ (sāma)\n# سِمْتُمَا (simtumā) /sim.tu.maː/: second-person dual past passive of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sumtumā", "sāma", "simtumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سامت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "سَامَتْ • (sāmat) (form I) /saː.mat/\n# third-person feminine singular past active of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sāmat", "sāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سامتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "سَامَتَا • (sāmatā) (form I) /saː.ma.taː/\n# third-person feminine dual past active of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sāmatā", "sāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سمتن",
+      "tur": "verb",
+      "baslik": "سمتن (form I)\n# سُمْتُنَّ (sumtunna) /sum.tun.na/: second-person feminine plural past active of سَامَ (sāma)\n# سِمْتُنَّ (simtunna) /sim.tun.na/: second-person feminine plural past passive of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sumtunna", "sāma", "simtunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سمتم",
+      "tur": "verb",
+      "baslik": "سمتم (form I)\n# سُمْتُمْ (sumtum) /sum.tum/: second-person masculine plural past active of سَامَ (sāma)\n# سِمْتُمْ (simtum) /sim.tum/: second-person masculine plural past passive of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sumtum", "sāma", "simtum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسوم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أسوم (form I)\n# أَسُومُ (ʔasūmu) /ʔa.suː.mu/: first-person singular non-past active indicative of سَامَ (sāma)\n# أَسُومَ (ʔasūma) /ʔa.suː.ma/: first-person singular non-past active subjunctive of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔasūmu", "sāma", "ʔasūma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسوم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تسوم (form I)\n# تَسُومُ (tasūmu) /ta.suː.mu/: inflection of سَامَ (sāma):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَسُومَ (tasūma) /ta.suː.ma/: inflection of سَامَ (sāma):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasūmu", "sāma", "tasūma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسومين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَسُومِينَ • (tasūmīna) (form I) /ta.suː.miː.na/\n# second-person feminine singular non-past active indicative of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasūmīna", "sāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسومان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَسُومَانِ • (yasūmāni) (form I) /ja.suː.maː.ni/\n# third-person masculine dual non-past active indicative of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasūmāni", "sāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسوم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يسوم (form I)\n# يَسُومُ (yasūmu) /ja.suː.mu/: third-person masculine singular non-past active indicative of سَامَ (sāma)\n# يَسُومَ (yasūma) /ja.suː.ma/: third-person masculine singular non-past active subjunctive of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasūmu", "sāma", "yasūma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسومان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَسُومَانِ • (tasūmāni) (form I) /ta.suː.maː.ni/\n# inflection of سَامَ (sāma):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasūmāni", "sāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسومون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَسُومُونَ • (tasūmūna) (form I) /ta.suː.muː.na/\n# second-person masculine plural non-past active indicative of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasūmūna", "sāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسوما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَسُومَا • (tasūmā) (form I) /ta.suː.maː/\n# inflection of سَامَ (sāma):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasūmā", "sāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نسوم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نسوم (form I)\n# نَسُومُ (nasūmu) /na.suː.mu/: first-person plural non-past active indicative of سَامَ (sāma)\n# نَسُومَ (nasūma) /na.suː.ma/: first-person plural non-past active subjunctive of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nasūmu", "sāma", "nasūma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسومون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَسُومُونَ • (yasūmūna) (form I) /ja.suː.muː.na/\n# third-person masculine plural non-past active indicative of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasūmūna", "sāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسوما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَسُومَا • (yasūmā) (form I) /ja.suː.maː/\n# third-person masculine dual non-past active subjunctive/jussive of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasūmā", "sāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسوموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَسُومُوا • (tasūmū) (form I) /ta.suː.muː/\n# second-person masculine plural non-past active subjunctive/jussive of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasūmū", "sāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسوموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَسُومُوا • (yasūmū) (form I) /ja.suː.muː/\n# third-person masculine plural non-past active subjunctive/jussive of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasūmū", "sāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سومي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "سُومِي • (sūmī) (form I) /suː.miː/\n# second-person feminine singular imperative of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sūmī", "sāma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سوموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "سُومُوا • (sūmū) (form I) /suː.muː/\n# second-person masculine plural imperative of سَامَ (sāma)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sūmū", "sāma"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "سام", "r7"]
+  ],
+  "mana": {
     "ince": "substance.n.07",
     "orta": "noun.substance",
     "ust": "tabiat",
@@ -468,22 +341,15 @@
     "dayanak_tanim": "any substance that causes injury or illness or death of a living organism",
     "synset_sayisi": 8
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["body_part.n.01", "design.v.03", "fatten.v.01", "gain.v.09", "poison.n.01", "poison.v.03", "region.n.03"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["body_part.n.01", "design.v.03", "fatten.v.01", "gain.v.09", "poison.n.01", "poison.v.03", "region.n.03"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

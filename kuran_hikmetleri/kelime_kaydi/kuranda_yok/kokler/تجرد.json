@@ -1,366 +1,259 @@
 {
   "kok": "تجرد",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تجرد", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تجردت",
-        "u": "تجردت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجردت (form V)\n# تَجَرَّدْتُ (tajarradtu) /ta.d͡ʒar.rad.tu/: first-person singular past active of تَجَرَّدَ (tajarrada)\n# تَجَرَّدْتَ (tajarradta) /ta.d͡ʒar.rad.ta/: second-person masculine singular past active of تَجَرَّدَ (tajarrada)\n# تَجَرَّدْتِ (tajarradti) /ta.d͡ʒar.rad.ti/: second-person feminine singular past active of تَجَرَّدَ (tajarrada)\n# تَجَرَّدَتْ (tajarradat) /ta.d͡ʒar.ra.dat/: thi",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tajarradtu", "tajarrada", "tajarradta"],
-        "k": "تجرد",
-        "yol": "kök"
-      },
-      {
-        "w": "تجردتما",
-        "u": "تجردتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَجَرَّدْتُمَا • (tajarradtumā) (form V) /ta.d͡ʒar.rad.tu.maː/\n# second-person dual past active of تَجَرَّدَ (tajarrada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tajarradtumā", "tajarrada"],
-        "k": "تجرد",
-        "yol": "kök"
-      },
-      {
-        "w": "تجردتا",
-        "u": "تجردتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَجَرَّدَتَا • (tajarradatā) (form V) /ta.d͡ʒar.ra.da.taː/\n# third-person feminine dual past active of تَجَرَّدَ (tajarrada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tajarradatā", "tajarrada"],
-        "k": "تجرد",
-        "yol": "kök"
-      },
-      {
-        "w": "تجردا",
-        "u": "تجردا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَجَرَّدَا • (tajarradā) (form V) /ta.d͡ʒar.ra.daː/\n# inflection of تَجَرَّدَ (tajarrada):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tajarradā", "tajarrada"],
-        "k": "تجرد",
-        "yol": "kök"
-      },
-      {
-        "w": "تجردنا",
-        "u": "تجردنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَجَرَّدْنَا • (tajarradnā) (form V) /ta.d͡ʒar.rad.naː/\n# first-person plural past active of تَجَرَّدَ (tajarrada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tajarradnā", "tajarrada"],
-        "k": "تجرد",
-        "yol": "kök"
-      },
-      {
-        "w": "تجردتم",
-        "u": "تجردتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَجَرَّدْتُمْ • (tajarradtum) (form V) /ta.d͡ʒar.rad.tum/\n# second-person masculine plural past active of تَجَرَّدَ (tajarrada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tajarradtum", "tajarrada"],
-        "k": "تجرد",
-        "yol": "kök"
-      },
-      {
-        "w": "تجردتن",
-        "u": "تجردتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَجَرَّدْتُنَّ • (tajarradtunna) (form V) /ta.d͡ʒar.rad.tun.na/\n# second-person feminine plural past active of تَجَرَّدَ (tajarrada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tajarradtunna", "tajarrada"],
-        "k": "تجرد",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجرد",
-        "u": "تتجرد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتجرد (form V)\n# تَتَجَرَّدُ (tatajarradu) /ta.ta.d͡ʒar.ra.du/: inflection of تَجَرَّدَ (tajarrada):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَجَرَّدَ (tatajarrada) /ta.ta.d͡ʒar.ra.da/: inflection of تَجَرَّدَ (tajarrada):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatajarradu", "tajarrada", "tatajarrada"],
-        "k": "تجرد",
-        "yol": "kök"
-      },
-      {
-        "w": "أتجرد",
-        "u": "أتجرد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتجرد (form V)\n# أَتَجَرَّدُ (ʔatajarradu) /ʔa.ta.d͡ʒar.ra.du/: first-person singular non-past active indicative of تَجَرَّدَ (tajarrada)\n# أَتَجَرَّدَ (ʔatajarrada) /ʔa.ta.d͡ʒar.ra.da/: first-person singular non-past active subjunctive of تَجَرَّدَ (tajarrada)\n# أَتَجَرَّدْ (ʔatajarrad) /ʔa.ta.d͡ʒar.rad/: first-person singular non-past active jussive of تَجَرَّدَ (tajarrada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔatajarradu", "tajarrada", "ʔatajarrada"],
-        "k": "تجرد",
-        "yol": "kök"
-      },
-      {
-        "w": "تجردوا",
-        "u": "تجردوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَجَرَّدُوا • (tajarradū) (form V) /ta.d͡ʒar.ra.duː/\n# inflection of تَجَرَّدَ (tajarrada):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tajarradū", "tajarrada"],
-        "k": "تجرد",
-        "yol": "kök"
-      },
-      {
-        "w": "تجردن",
-        "u": "تجردن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَجَرَّدْنَ • (tajarradna) (form V) /ta.d͡ʒar.rad.na/\n# inflection of تَجَرَّدَ (tajarrada):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tajarradna", "tajarrada"],
-        "k": "تجرد",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجردين",
-        "u": "تتجردين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَجَرَّدِينَ • (tatajarradīna) (form V) /ta.ta.d͡ʒar.ra.diː.na/\n# second-person feminine singular non-past active indicative of تَجَرَّدَ (tajarrada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatajarradīna", "tajarrada"],
-        "k": "تجرد",
-        "yol": "kök"
-      },
-      {
-        "w": "يتجردان",
-        "u": "يتجردان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَجَرَّدَانِ • (yatajarradāni) (form V) /ja.ta.d͡ʒar.ra.daː.ni/\n# third-person masculine dual non-past active indicative of تَجَرَّدَ (tajarrada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatajarradāni", "tajarrada"],
-        "k": "تجرد",
-        "yol": "kök"
-      },
-      {
-        "w": "يتجرد",
-        "u": "يتجرد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتجرد (form V)\n# يَتَجَرَّدُ (yatajarradu) /ja.ta.d͡ʒar.ra.du/: third-person masculine singular non-past active indicative of تَجَرَّدَ (tajarrada)\n# يُتَجَرَّدُ (yutajarradu) /ju.ta.d͡ʒar.ra.du/: third-person masculine singular non-past passive indicative of تَجَرَّدَ (tajarrada)\n# يَتَجَرَّدَ (yatajarrada) /ja.ta.d͡ʒar.ra.da/: third-person masculine singular non-past active subjunctive of تَجَرَ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatajarradu", "tajarrada", "yutajarradu"],
-        "k": "تجرد",
-        "yol": "kök"
-      },
-      {
-        "w": "يتجردون",
-        "u": "يتجردون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَجَرَّدُونَ • (yatajarradūna) (form V) /ja.ta.d͡ʒar.ra.duː.na/\n# third-person masculine plural non-past active indicative of تَجَرَّدَ (tajarrada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatajarradūna", "tajarrada"],
-        "k": "تجرد",
-        "yol": "kök"
-      },
-      {
-        "w": "نتجرد",
-        "u": "نتجرد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتجرد (form V)\n# نَتَجَرَّدُ (natajarradu) /na.ta.d͡ʒar.ra.du/: first-person plural non-past active indicative of تَجَرَّدَ (tajarrada)\n# نَتَجَرَّدَ (natajarrada) /na.ta.d͡ʒar.ra.da/: first-person plural non-past active subjunctive of تَجَرَّدَ (tajarrada)\n# نَتَجَرَّدْ (natajarrad) /na.ta.d͡ʒar.rad/: first-person plural non-past active jussive of تَجَرَّدَ (tajarrada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["natajarradu", "tajarrada", "natajarrada"],
-        "k": "تجرد",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجردن",
-        "u": "تتجردن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَجَرَّدْنَ • (tatajarradna) (form V) /ta.ta.d͡ʒar.rad.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَجَرَّدَ (tajarrada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatajarradna", "tajarrada"],
-        "k": "تجرد",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجردون",
-        "u": "تتجردون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَجَرَّدُونَ • (tatajarradūna) (form V) /ta.ta.d͡ʒar.ra.duː.na/\n# second-person masculine plural non-past active indicative of تَجَرَّدَ (tajarrada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatajarradūna", "tajarrada"],
-        "k": "تجرد",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجردان",
-        "u": "تتجردان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَجَرَّدَانِ • (tatajarradāni) (form V) /ta.ta.d͡ʒar.ra.daː.ni/\n# inflection of تَجَرَّدَ (tajarrada):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatajarradāni", "tajarrada"],
-        "k": "تجرد",
-        "yol": "kök"
-      },
-      {
-        "w": "يتجردن",
-        "u": "يتجردن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَجَرَّدْنَ • (yatajarradna) (form V) /ja.ta.d͡ʒar.rad.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَجَرَّدَ (tajarrada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatajarradna", "tajarrada"],
-        "k": "تجرد",
-        "yol": "kök"
-      },
-      {
-        "w": "يتجردا",
-        "u": "يتجردا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَجَرَّدَا • (yatajarradā) (form V) /ja.ta.d͡ʒar.ra.daː/\n# third-person masculine dual non-past active subjunctive/jussive of تَجَرَّدَ (tajarrada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatajarradā", "tajarrada"],
-        "k": "تجرد",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجردي",
-        "u": "تتجردي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَجَرَّدِي • (tatajarradī) (form V) /ta.ta.d͡ʒar.ra.diː/\n# second-person feminine singular non-past active subjunctive/jussive of تَجَرَّدَ (tajarrada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatajarradī", "tajarrada"],
-        "k": "تجرد",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجردا",
-        "u": "تتجردا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَجَرَّدَا • (tatajarradā) (form V) /ta.ta.d͡ʒar.ra.daː/\n# inflection of تَجَرَّدَ (tajarrada):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatajarradā", "tajarrada"],
-        "k": "تجرد",
-        "yol": "kök"
-      },
-      {
-        "w": "يتجردوا",
-        "u": "يتجردوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَجَرَّدُوا • (yatajarradū) (form V) /ja.ta.d͡ʒar.ra.duː/\n# third-person masculine plural non-past active subjunctive/jussive of تَجَرَّدَ (tajarrada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatajarradū", "tajarrada"],
-        "k": "تجرد",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجردوا",
-        "u": "تتجردوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَجَرَّدُوا • (tatajarradū) (form V) /ta.ta.d͡ʒar.ra.duː/\n# second-person masculine plural non-past active subjunctive/jussive of تَجَرَّدَ (tajarrada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatajarradū", "tajarrada"],
-        "k": "تجرد",
-        "yol": "kök"
-      },
-      {
-        "w": "تجردي",
-        "u": "تجردي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَجَرَّدِي • (tajarradī) (form V) /ta.d͡ʒar.ra.diː/\n# second-person feminine singular imperative of تَجَرَّدَ (tajarrada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tajarradī", "tajarrada"],
-        "k": "تجرد",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تج",
+  "ses": {
     "harf": "ت",
+    "fasil": "تج",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تجردت",
+      "tur": "verb",
+      "baslik": "تجردت (form V)\n# تَجَرَّدْتُ (tajarradtu) /ta.d͡ʒar.rad.tu/: first-person singular past active of تَجَرَّدَ (tajarrada)\n# تَجَرَّدْتَ (tajarradta) /ta.d͡ʒar.rad.ta/: second-person masculine singular past active of تَجَرَّدَ (tajarrada)\n# تَجَرَّدْتِ (tajarradti) /ta.d͡ʒar.rad.ti/: second-person feminine singular past active of تَجَرَّدَ (tajarrada)\n# تَجَرَّدَتْ (tajarradat) /ta.d͡ʒar.ra.dat/: thi",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tajarradtu", "tajarrada", "tajarradta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجردتما",
+      "tur": "verb",
+      "baslik": "تَجَرَّدْتُمَا • (tajarradtumā) (form V) /ta.d͡ʒar.rad.tu.maː/\n# second-person dual past active of تَجَرَّدَ (tajarrada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tajarradtumā", "tajarrada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجردتا",
+      "tur": "verb",
+      "baslik": "تَجَرَّدَتَا • (tajarradatā) (form V) /ta.d͡ʒar.ra.da.taː/\n# third-person feminine dual past active of تَجَرَّدَ (tajarrada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tajarradatā", "tajarrada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجردا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَجَرَّدَا • (tajarradā) (form V) /ta.d͡ʒar.ra.daː/\n# inflection of تَجَرَّدَ (tajarrada):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tajarradā", "tajarrada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجردنا",
+      "tur": "verb",
+      "baslik": "تَجَرَّدْنَا • (tajarradnā) (form V) /ta.d͡ʒar.rad.naː/\n# first-person plural past active of تَجَرَّدَ (tajarrada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tajarradnā", "tajarrada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجردتم",
+      "tur": "verb",
+      "baslik": "تَجَرَّدْتُمْ • (tajarradtum) (form V) /ta.d͡ʒar.rad.tum/\n# second-person masculine plural past active of تَجَرَّدَ (tajarrada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tajarradtum", "tajarrada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجردتن",
+      "tur": "verb",
+      "baslik": "تَجَرَّدْتُنَّ • (tajarradtunna) (form V) /ta.d͡ʒar.rad.tun.na/\n# second-person feminine plural past active of تَجَرَّدَ (tajarrada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tajarradtunna", "tajarrada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجرد",
+      "tur": "verb",
+      "baslik": "تتجرد (form V)\n# تَتَجَرَّدُ (tatajarradu) /ta.ta.d͡ʒar.ra.du/: inflection of تَجَرَّدَ (tajarrada):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَجَرَّدَ (tatajarrada) /ta.ta.d͡ʒar.ra.da/: inflection of تَجَرَّدَ (tajarrada):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine ",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatajarradu", "tajarrada", "tatajarrada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتجرد",
+      "tur": "verb",
+      "baslik": "أتجرد (form V)\n# أَتَجَرَّدُ (ʔatajarradu) /ʔa.ta.d͡ʒar.ra.du/: first-person singular non-past active indicative of تَجَرَّدَ (tajarrada)\n# أَتَجَرَّدَ (ʔatajarrada) /ʔa.ta.d͡ʒar.ra.da/: first-person singular non-past active subjunctive of تَجَرَّدَ (tajarrada)\n# أَتَجَرَّدْ (ʔatajarrad) /ʔa.ta.d͡ʒar.rad/: first-person singular non-past active jussive of تَجَرَّدَ (tajarrada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔatajarradu", "tajarrada", "ʔatajarrada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجردوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَجَرَّدُوا • (tajarradū) (form V) /ta.d͡ʒar.ra.duː/\n# inflection of تَجَرَّدَ (tajarrada):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tajarradū", "tajarrada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجردن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَجَرَّدْنَ • (tajarradna) (form V) /ta.d͡ʒar.rad.na/\n# inflection of تَجَرَّدَ (tajarrada):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tajarradna", "tajarrada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجردين",
+      "tur": "verb",
+      "baslik": "تَتَجَرَّدِينَ • (tatajarradīna) (form V) /ta.ta.d͡ʒar.ra.diː.na/\n# second-person feminine singular non-past active indicative of تَجَرَّدَ (tajarrada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatajarradīna", "tajarrada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتجردان",
+      "tur": "verb",
+      "baslik": "يَتَجَرَّدَانِ • (yatajarradāni) (form V) /ja.ta.d͡ʒar.ra.daː.ni/\n# third-person masculine dual non-past active indicative of تَجَرَّدَ (tajarrada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatajarradāni", "tajarrada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتجرد",
+      "tur": "verb",
+      "baslik": "يتجرد (form V)\n# يَتَجَرَّدُ (yatajarradu) /ja.ta.d͡ʒar.ra.du/: third-person masculine singular non-past active indicative of تَجَرَّدَ (tajarrada)\n# يُتَجَرَّدُ (yutajarradu) /ju.ta.d͡ʒar.ra.du/: third-person masculine singular non-past passive indicative of تَجَرَّدَ (tajarrada)\n# يَتَجَرَّدَ (yatajarrada) /ja.ta.d͡ʒar.ra.da/: third-person masculine singular non-past active subjunctive of تَجَرَ",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatajarradu", "tajarrada", "yutajarradu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتجردون",
+      "tur": "verb",
+      "baslik": "يَتَجَرَّدُونَ • (yatajarradūna) (form V) /ja.ta.d͡ʒar.ra.duː.na/\n# third-person masculine plural non-past active indicative of تَجَرَّدَ (tajarrada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatajarradūna", "tajarrada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتجرد",
+      "tur": "verb",
+      "baslik": "نتجرد (form V)\n# نَتَجَرَّدُ (natajarradu) /na.ta.d͡ʒar.ra.du/: first-person plural non-past active indicative of تَجَرَّدَ (tajarrada)\n# نَتَجَرَّدَ (natajarrada) /na.ta.d͡ʒar.ra.da/: first-person plural non-past active subjunctive of تَجَرَّدَ (tajarrada)\n# نَتَجَرَّدْ (natajarrad) /na.ta.d͡ʒar.rad/: first-person plural non-past active jussive of تَجَرَّدَ (tajarrada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["natajarradu", "tajarrada", "natajarrada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجردن",
+      "tur": "verb",
+      "baslik": "تَتَجَرَّدْنَ • (tatajarradna) (form V) /ta.ta.d͡ʒar.rad.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَجَرَّدَ (tajarrada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatajarradna", "tajarrada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجردون",
+      "tur": "verb",
+      "baslik": "تَتَجَرَّدُونَ • (tatajarradūna) (form V) /ta.ta.d͡ʒar.ra.duː.na/\n# second-person masculine plural non-past active indicative of تَجَرَّدَ (tajarrada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatajarradūna", "tajarrada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجردان",
+      "tur": "verb",
+      "baslik": "تَتَجَرَّدَانِ • (tatajarradāni) (form V) /ta.ta.d͡ʒar.ra.daː.ni/\n# inflection of تَجَرَّدَ (tajarrada):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatajarradāni", "tajarrada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتجردن",
+      "tur": "verb",
+      "baslik": "يَتَجَرَّدْنَ • (yatajarradna) (form V) /ja.ta.d͡ʒar.rad.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَجَرَّدَ (tajarrada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatajarradna", "tajarrada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتجردا",
+      "tur": "verb",
+      "baslik": "يَتَجَرَّدَا • (yatajarradā) (form V) /ja.ta.d͡ʒar.ra.daː/\n# third-person masculine dual non-past active subjunctive/jussive of تَجَرَّدَ (tajarrada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatajarradā", "tajarrada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجردي",
+      "tur": "verb",
+      "baslik": "تَتَجَرَّدِي • (tatajarradī) (form V) /ta.ta.d͡ʒar.ra.diː/\n# second-person feminine singular non-past active subjunctive/jussive of تَجَرَّدَ (tajarrada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatajarradī", "tajarrada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجردا",
+      "tur": "verb",
+      "baslik": "تَتَجَرَّدَا • (tatajarradā) (form V) /ta.ta.d͡ʒar.ra.daː/\n# inflection of تَجَرَّدَ (tajarrada):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatajarradā", "tajarrada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتجردوا",
+      "tur": "verb",
+      "baslik": "يَتَجَرَّدُوا • (yatajarradū) (form V) /ja.ta.d͡ʒar.ra.duː/\n# third-person masculine plural non-past active subjunctive/jussive of تَجَرَّدَ (tajarrada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatajarradū", "tajarrada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجردوا",
+      "tur": "verb",
+      "baslik": "تَتَجَرَّدُوا • (tatajarradū) (form V) /ta.ta.d͡ʒar.ra.duː/\n# second-person masculine plural non-past active subjunctive/jussive of تَجَرَّدَ (tajarrada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatajarradū", "tajarrada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجردي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَجَرَّدِي • (tajarradī) (form V) /ta.d͡ʒar.ra.diː/\n# second-person feminine singular imperative of تَجَرَّدَ (tajarrada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tajarradī", "tajarrada"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تجرد", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

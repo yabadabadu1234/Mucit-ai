@@ -1,421 +1,306 @@
 {
   "kok": "سما",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "سما", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "اسم",
-        "u": "اسم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "اُسْمُ • (usmu) (form I) /us.mu/\n# second-person masculine singular imperative of سَمَا (samā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "s": [
-          ["nonlemma", "See the etymology of the corresponding lemma form."]
-        ],
-        "tag": ["form-i", "no-gloss"],
-        "r": ["usmu", "samā"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "اسمي",
-        "u": "اسمي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "اُسْمِي • (usmī) (form I) /us.miː/\n# second-person feminine singular imperative of سَمَا (samā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["usmī", "samā"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "سموا",
-        "u": "سموا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "سموا (form I)\n# سَمَوَا (samawā) /sa.ma.waː/: third-person masculine dual past active of سَمَا (samā)\n# سَمَوْا (samaw) /sa.maw/: third-person masculine plural past active of سَمَا (samā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["samawā", "samā", "samaw"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "سمي",
-        "u": "سمي",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "سُمِيَ • (sumiya) (form I) /su.mi.ja/\n# third-person masculine singular past passive of سَمَا (samā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sumiya", "samā"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "سمون",
-        "u": "سمون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "سَمَوْنَ • (samawna) (form I) /sa.maw.na/\n# third-person feminine plural past active of سَمَا (samā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["samawna", "samā"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "تسم",
-        "u": "تسم",
-        "p": "verb",
-        "n": "3.1",
-        "h": "ar-verb form",
-        "e": "تَسْمُ • (tasmu) (form I) /tas.mu/\n# inflection of سَمَا (samā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasmu", "samā"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "يسمى",
-        "u": "يسمى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُسْمَى • (yusmā) (form I) /jus.maː/\n# third-person masculine singular non-past passive indicative/subjunctive of سَمَا (samā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yusmā", "samā"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "تسمين",
-        "u": "تسمين",
-        "p": "verb",
-        "n": "5.1",
-        "h": "ar-verb form",
-        "e": "تَسْمِينَ • (tasmīna) (form I) /tas.miː.na/\n# second-person feminine singular non-past active indicative of سَمَا (samā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasmīna", "samā"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "يسم",
-        "u": "يسم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يسم (form I)\n# يَسْمُ (yasmu) /jas.mu/: third-person masculine singular non-past active jussive of سَمَا (samā)\n# يُسْمَ (yusma) /jus.ma/: third-person masculine singular non-past passive jussive of سَمَا (samā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasmu", "samā", "yusma"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "يسمو",
-        "u": "يسمو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يسمو (form I)\n# يَسْمُو (yasmū) /jas.muː/: third-person masculine singular non-past active indicative of سَمَا (samā)\n# يَسْمُوَ (yasmuwa) /jas.mu.wa/: third-person masculine singular non-past active subjunctive of سَمَا (samā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasmū", "samā", "yasmuwa"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "سمت",
-        "u": "سمت",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "سَمَتْ • (samat) (form I) /sa.mat/\n# third-person feminine singular past active of سَمَا (samā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["samat", "samā"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "سموت",
-        "u": "سموت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "سموت (form I)\n# سَمَوْتُ (samawtu) /sa.maw.tu/: first-person singular past active of سَمَا (samā)\n# سَمَوْتَ (samawta) /sa.maw.ta/: second-person masculine singular past active of سَمَا (samā)\n# سَمَوْتِ (samawti) /sa.maw.ti/: second-person feminine singular past active of سَمَا (samā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["samawtu", "samā", "samawta"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "تسمي",
-        "u": "تسمي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَسْمِي • (tasmī) (form I) /tas.miː/\n# second-person feminine singular non-past active subjunctive/jussive of سَمَا (samā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasmī", "samā"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "أسم",
-        "u": "أسم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَسْمُ • (ʔasmu) (form I) /ʔas.mu/\n# first-person singular non-past active jussive of سَمَا (samā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔasmu", "samā"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "تسمو",
-        "u": "تسمو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تسمو (form I)\n# تَسْمُو (tasmū) /tas.muː/: inflection of سَمَا (samā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَسْمُوَ (tasmuwa) /tas.mu.wa/: inflection of سَمَا (samā):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasmū", "samā", "tasmuwa"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "أسمو",
-        "u": "أسمو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أسمو (form I)\n# أَسْمُو (ʔasmū) /ʔas.muː/: first-person singular non-past active indicative of سَمَا (samā)\n# أَسْمُوَ (ʔasmuwa) /ʔas.mu.wa/: first-person singular non-past active subjunctive of سَمَا (samā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔasmū", "samā", "ʔasmuwa"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "نسم",
-        "u": "نسم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نَسْمُ • (nasmu) (form I) /nas.mu/\n# first-person plural non-past active jussive of سَمَا (samā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nasmu", "samā"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "سمونا",
-        "u": "سمونا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سَمَوْنَا • (samawnā) (form I) /sa.maw.naː/\n# first-person plural past active of سَمَا (samā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["samawnā", "samā"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "نسمو",
-        "u": "نسمو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نسمو (form I)\n# نَسْمُو (nasmū) /nas.muː/: first-person plural non-past active indicative of سَمَا (samā)\n# نَسْمُوَ (nasmuwa) /nas.mu.wa/: first-person plural non-past active subjunctive of سَمَا (samā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nasmū", "samā", "nasmuwa"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "تسمون",
-        "u": "تسمون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَسْمُونَ • (tasmūna) (form I) /tas.muː.na/\n# inflection of سَمَا (samā):\n## second-person masculine/feminine plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasmūna", "samā"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "تسموا",
-        "u": "تسموا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تسموا (form I)\n# تَسْمُوَا (tasmuwā) /tas.mu.waː/: inflection of سَمَا (samā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تَسْمُوا (tasmū) /tas.muː/: second-person masculine plural non-past active subjunctive/jussive of سَمَا (samā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasmuwā", "samā", "tasmū"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "سموتم",
-        "u": "سموتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سَمَوْتُمْ • (samawtum) (form I) /sa.maw.tum/\n# second-person masculine plural past active of سَمَا (samā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["samawtum", "samā"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "اسموا",
-        "u": "اسموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اسموا (form I)\n# اُسْمُوَا (usmuwā) /us.mu.waː/: second-person dual imperative of سَمَا (samā)\n# اُسْمُوا (usmū) /us.muː/: second-person masculine plural imperative of سَمَا (samā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["usmuwā", "samā", "usmū"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "يسمون",
-        "u": "يسمون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَسْمُونَ • (yasmūna) (form I) /jas.muː.na/\n# inflection of سَمَا (samā):\n## third-person masculine/feminine plural non-past active indicative\n## third-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasmūna", "samā"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "يسموا",
-        "u": "يسموا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يسموا (form I)\n# يَسْمُوَا (yasmuwā) /jas.mu.waː/: third-person masculine dual non-past active subjunctive/jussive of سَمَا (samā)\n# يَسْمُوا (yasmū) /jas.muː/: third-person masculine plural non-past active subjunctive/jussive of سَمَا (samā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasmuwā", "samā", "yasmū"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "سموتن",
-        "u": "سموتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سَمَوْتُنَّ • (samawtunna) (form I) /sa.maw.tun.na/\n# second-person feminine plural past active of سَمَا (samā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["samawtunna", "samā"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "اسمون",
-        "u": "اسمون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُسْمُونَ • (usmūna) (form I) /us.muː.na/\n# second-person feminine plural imperative of سَمَا (samā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["usmūna", "samā"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "سمتا",
-        "u": "سمتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "سَمَتَا • (samatā) (form I) /sa.ma.taː/\n# third-person feminine dual past active of سَمَا (samā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["samatā", "samā"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "سموتما",
-        "u": "سموتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سَمَوْتُمَا • (samawtumā) (form I) /sa.maw.tu.maː/\n# second-person dual past active of سَمَا (samā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["samawtumā", "samā"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "يسموان",
-        "u": "يسموان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَسْمُوَانِ • (yasmuwāni) (form I) /jas.mu.waː.ni/\n# third-person masculine dual non-past active indicative of سَمَا (samā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasmuwāni", "samā"],
-        "k": "سما",
-        "yol": "kök"
-      },
-      {
-        "w": "تسموان",
-        "u": "تسموان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَسْمُوَانِ • (tasmuwāni) (form I) /tas.mu.waː.ni/\n# inflection of سَمَا (samā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasmuwāni", "samā"],
-        "k": "سما",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "سم",
+  "ses": {
     "harf": "س",
+    "fasil": "سم",
     "mahrec": "esaliyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "اسم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "اُسْمُ • (usmu) (form I) /us.mu/\n# second-person masculine singular imperative of سَمَا (samā)",
+      "etim_sablon": [
+        ["nonlemma", "See the etymology of the corresponding lemma form."]
+      ],
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["usmu", "samā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اسمي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "اُسْمِي • (usmī) (form I) /us.miː/\n# second-person feminine singular imperative of سَمَا (samā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["usmī", "samā"]
+    },
+    {
+      "madde": "سموا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "سموا (form I)\n# سَمَوَا (samawā) /sa.ma.waː/: third-person masculine dual past active of سَمَا (samā)\n# سَمَوْا (samaw) /sa.maw/: third-person masculine plural past active of سَمَا (samā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["samawā", "samā", "samaw"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "سمي",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "سُمِيَ • (sumiya) (form I) /su.mi.ja/\n# third-person masculine singular past passive of سَمَا (samā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sumiya", "samā"]
+    },
+    {
+      "madde": "سمون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "سَمَوْنَ • (samawna) (form I) /sa.maw.na/\n# third-person feminine plural past active of سَمَا (samā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["samawna", "samā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسم",
+      "tur": "verb",
+      "etim_no": "3.1",
+      "baslik": "تَسْمُ • (tasmu) (form I) /tas.mu/\n# inflection of سَمَا (samā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasmu", "samā"]
+    },
+    {
+      "madde": "يسمى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُسْمَى • (yusmā) (form I) /jus.maː/\n# third-person masculine singular non-past passive indicative/subjunctive of سَمَا (samā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yusmā", "samā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسمين",
+      "tur": "verb",
+      "etim_no": "5.1",
+      "baslik": "تَسْمِينَ • (tasmīna) (form I) /tas.miː.na/\n# second-person feminine singular non-past active indicative of سَمَا (samā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasmīna", "samā"]
+    },
+    {
+      "madde": "يسم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يسم (form I)\n# يَسْمُ (yasmu) /jas.mu/: third-person masculine singular non-past active jussive of سَمَا (samā)\n# يُسْمَ (yusma) /jus.ma/: third-person masculine singular non-past passive jussive of سَمَا (samā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasmu", "samā", "yusma"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يسمو",
+      "tur": "verb",
+      "baslik": "يسمو (form I)\n# يَسْمُو (yasmū) /jas.muː/: third-person masculine singular non-past active indicative of سَمَا (samā)\n# يَسْمُوَ (yasmuwa) /jas.mu.wa/: third-person masculine singular non-past active subjunctive of سَمَا (samā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasmū", "samā", "yasmuwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "سمت",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "سَمَتْ • (samat) (form I) /sa.mat/\n# third-person feminine singular past active of سَمَا (samā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["samat", "samā"]
+    },
+    {
+      "madde": "سموت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "سموت (form I)\n# سَمَوْتُ (samawtu) /sa.maw.tu/: first-person singular past active of سَمَا (samā)\n# سَمَوْتَ (samawta) /sa.maw.ta/: second-person masculine singular past active of سَمَا (samā)\n# سَمَوْتِ (samawti) /sa.maw.ti/: second-person feminine singular past active of سَمَا (samā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["samawtu", "samā", "samawta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسمي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَسْمِي • (tasmī) (form I) /tas.miː/\n# second-person feminine singular non-past active subjunctive/jussive of سَمَا (samā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasmī", "samā"]
+    },
+    {
+      "madde": "أسم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَسْمُ • (ʔasmu) (form I) /ʔas.mu/\n# first-person singular non-past active jussive of سَمَا (samā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔasmu", "samā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسمو",
+      "tur": "verb",
+      "baslik": "تسمو (form I)\n# تَسْمُو (tasmū) /tas.muː/: inflection of سَمَا (samā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَسْمُوَ (tasmuwa) /tas.mu.wa/: inflection of سَمَا (samā):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasmū", "samā", "tasmuwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أسمو",
+      "tur": "verb",
+      "baslik": "أسمو (form I)\n# أَسْمُو (ʔasmū) /ʔas.muː/: first-person singular non-past active indicative of سَمَا (samā)\n# أَسْمُوَ (ʔasmuwa) /ʔas.mu.wa/: first-person singular non-past active subjunctive of سَمَا (samā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔasmū", "samā", "ʔasmuwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نسم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نَسْمُ • (nasmu) (form I) /nas.mu/\n# first-person plural non-past active jussive of سَمَا (samā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nasmu", "samā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "سمونا",
+      "tur": "verb",
+      "baslik": "سَمَوْنَا • (samawnā) (form I) /sa.maw.naː/\n# first-person plural past active of سَمَا (samā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["samawnā", "samā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نسمو",
+      "tur": "verb",
+      "baslik": "نسمو (form I)\n# نَسْمُو (nasmū) /nas.muː/: first-person plural non-past active indicative of سَمَا (samā)\n# نَسْمُوَ (nasmuwa) /nas.mu.wa/: first-person plural non-past active subjunctive of سَمَا (samā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nasmū", "samā", "nasmuwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسمون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَسْمُونَ • (tasmūna) (form I) /tas.muː.na/\n# inflection of سَمَا (samā):\n## second-person masculine/feminine plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasmūna", "samā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تسموا (form I)\n# تَسْمُوَا (tasmuwā) /tas.mu.waː/: inflection of سَمَا (samā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تَسْمُوا (tasmū) /tas.muː/: second-person masculine plural non-past active subjunctive/jussive of سَمَا (samā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasmuwā", "samā", "tasmū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "سموتم",
+      "tur": "verb",
+      "baslik": "سَمَوْتُمْ • (samawtum) (form I) /sa.maw.tum/\n# second-person masculine plural past active of سَمَا (samā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["samawtum", "samā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اسموا",
+      "tur": "verb",
+      "baslik": "اسموا (form I)\n# اُسْمُوَا (usmuwā) /us.mu.waː/: second-person dual imperative of سَمَا (samā)\n# اُسْمُوا (usmū) /us.muː/: second-person masculine plural imperative of سَمَا (samā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["usmuwā", "samā", "usmū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يسمون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَسْمُونَ • (yasmūna) (form I) /jas.muː.na/\n# inflection of سَمَا (samā):\n## third-person masculine/feminine plural non-past active indicative\n## third-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasmūna", "samā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يسموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يسموا (form I)\n# يَسْمُوَا (yasmuwā) /jas.mu.waː/: third-person masculine dual non-past active subjunctive/jussive of سَمَا (samā)\n# يَسْمُوا (yasmū) /jas.muː/: third-person masculine plural non-past active subjunctive/jussive of سَمَا (samā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasmuwā", "samā", "yasmū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "سموتن",
+      "tur": "verb",
+      "baslik": "سَمَوْتُنَّ • (samawtunna) (form I) /sa.maw.tun.na/\n# second-person feminine plural past active of سَمَا (samā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["samawtunna", "samā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اسمون",
+      "tur": "verb",
+      "baslik": "اُسْمُونَ • (usmūna) (form I) /us.muː.na/\n# second-person feminine plural imperative of سَمَا (samā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["usmūna", "samā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "سمتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "سَمَتَا • (samatā) (form I) /sa.ma.taː/\n# third-person feminine dual past active of سَمَا (samā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["samatā", "samā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "سموتما",
+      "tur": "verb",
+      "baslik": "سَمَوْتُمَا • (samawtumā) (form I) /sa.maw.tu.maː/\n# second-person dual past active of سَمَا (samā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["samawtumā", "samā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يسموان",
+      "tur": "verb",
+      "baslik": "يَسْمُوَانِ • (yasmuwāni) (form I) /jas.mu.waː.ni/\n# third-person masculine dual non-past active indicative of سَمَا (samā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasmuwāni", "samā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسموان",
+      "tur": "verb",
+      "baslik": "تَسْمُوَانِ • (tasmuwāni) (form I) /tas.mu.waː.ni/\n# inflection of سَمَا (samā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasmuwāni", "samā"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "سما", "r7"]
+  ],
+  "mana": {
     "ince": "part.n.01",
     "orta": "noun.communication",
     "ust": "söz ve haber",
@@ -423,22 +308,15 @@
     "dayanak_tanim": "a content word that can be used to refer to a person, place, thing, quality, or action",
     "synset_sayisi": 8
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["act.n.02", "adult.n.01", "class.n.01", "language_unit.n.01", "status.n.01", "substantival.a.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["act.n.02", "adult.n.01", "class.n.01", "language_unit.n.01", "status.n.01", "substantival.a.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,646 +1,499 @@
 {
   "kok": "ءناط",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءناط", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أنطت",
-        "u": "أنطت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أنطت (form IV)\n# أَنَطْتُ (ʔanaṭtu) /ʔa.natˤ.tu/: first-person singular past active of أَنَاطَ (ʔanāṭa)\n# أَنَطْتَ (ʔanaṭta) /ʔa.natˤ.ta/: second-person masculine singular past active of أَنَاطَ (ʔanāṭa)\n# أَنَطْتِ (ʔanaṭti) /ʔa.natˤ.ti/: second-person feminine singular past active of أَنَاطَ (ʔanāṭa)\n# أُنِطْتُ (ʔuniṭtu) /ʔu.nitˤ.tu/: first-person singular past passive of أَنَاطَ (ʔanāṭa)\n# أُنِط",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanaṭtu", "ʔanāṭa", "ʔanaṭta"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "أناطا",
-        "u": "أناطا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَنَاطَا • (ʔanāṭā) (form IV) /ʔa.naː.tˤaː/\n# third-person masculine dual past active of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanāṭā", "ʔanāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "أناطت",
-        "u": "أناطت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَنَاطَتْ • (ʔanāṭat) (form IV) /ʔa.naː.tˤat/\n# third-person feminine singular past active of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanāṭat", "ʔanāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "أناطتا",
-        "u": "أناطتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَنَاطَتَا • (ʔanāṭatā) (form IV) /ʔa.naː.tˤa.taː/\n# third-person feminine dual past active of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanāṭatā", "ʔanāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "أنطتما",
-        "u": "أنطتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنطتما (form IV)\n# أَنَطْتُمَا (ʔanaṭtumā) /ʔa.natˤ.tu.maː/: second-person dual past active of أَنَاطَ (ʔanāṭa)\n# أُنِطْتُمَا (ʔuniṭtumā) /ʔu.nitˤ.tu.maː/: second-person dual past passive of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanaṭtumā", "ʔanāṭa", "ʔuniṭtumā"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "أنطتم",
-        "u": "أنطتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنطتم (form IV)\n# أَنَطْتُمْ (ʔanaṭtum) /ʔa.natˤ.tum/: second-person masculine plural past active of أَنَاطَ (ʔanāṭa)\n# أُنِطْتُمْ (ʔuniṭtum) /ʔu.nitˤ.tum/: second-person masculine plural past passive of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanaṭtum", "ʔanāṭa", "ʔuniṭtum"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "أنطتن",
-        "u": "أنطتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنطتن (form IV)\n# أَنَطْتُنَّ (ʔanaṭtunna) /ʔa.natˤ.tun.na/: second-person feminine plural past active of أَنَاطَ (ʔanāṭa)\n# أُنِطْتُنَّ (ʔuniṭtunna) /ʔu.nitˤ.tun.na/: second-person feminine plural past passive of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanaṭtunna", "ʔanāṭa", "ʔuniṭtunna"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "أنطن",
-        "u": "أنطن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنطن (form IV)\n# أَنَطْنَ (ʔanaṭna) /ʔa.natˤ.na/: third-person feminine plural past active of أَنَاطَ (ʔanāṭa)\n# أُنِطْنَ (ʔuniṭna) /ʔu.nitˤ.na/: third-person feminine plural past passive of أَنَاطَ (ʔanāṭa)\n# أَنِطْنَ (ʔaniṭna) /ʔa.nitˤ.na/: second-person feminine plural imperative of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanaṭna", "ʔanāṭa", "ʔuniṭna"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "أناطوا",
-        "u": "أناطوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَنَاطُوا • (ʔanāṭū) (form IV) /ʔa.naː.tˤuː/\n# third-person masculine plural past active of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanāṭū", "ʔanāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "أنيط",
-        "u": "أنيط",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنيط (form IV)\n# أُنِيطَ (ʔunīṭa) /ʔu.niː.tˤa/: inflection of أَنَاطَ (ʔanāṭa):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُنِيطُ (ʔunīṭu) /ʔu.niː.tˤu/: first-person singular non-past active indicative of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔunīṭa", "ʔanāṭa", "ʔunīṭu"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "أنطنا",
-        "u": "أنطنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنطنا (form IV)\n# أَنَطْنَا (ʔanaṭnā) /ʔa.natˤ.naː/: first-person plural past active of أَنَاطَ (ʔanāṭa)\n# أُنِطْنَا (ʔuniṭnā) /ʔu.nitˤ.naː/: first-person plural past passive of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanaṭnā", "ʔanāṭa", "ʔuniṭnā"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "أنيطت",
-        "u": "أنيطت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُنِيطَتْ • (ʔunīṭat) (form IV) /ʔu.niː.tˤat/\n# third-person feminine singular past passive of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔunīṭat", "ʔanāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "أنيطا",
-        "u": "أنيطا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنيطا (form IV)\n# أُنِيطَا (ʔunīṭā) /ʔu.niː.tˤaː/: third-person masculine dual past passive of أَنَاطَ (ʔanāṭa)\n# أَنِيطَا (ʔanīṭā) /ʔa.niː.tˤaː/: second-person dual imperative of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔunīṭā", "ʔanāṭa", "ʔanīṭā"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "أنيطتا",
-        "u": "أنيطتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُنِيطَتَا • (ʔunīṭatā) (form IV) /ʔu.niː.tˤa.taː/\n# third-person feminine dual past passive of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔunīṭatā", "ʔanāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تنيط",
-        "u": "تنيط",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تنيط (form IV)\n# تُنِيطُ (tunīṭu) /tu.niː.tˤu/: inflection of أَنَاطَ (ʔanāṭa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُنِيطَ (tunīṭa) /tu.niː.tˤa/: inflection of أَنَاطَ (ʔanāṭa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunīṭu", "ʔanāṭa", "tunīṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "أنيطوا",
-        "u": "أنيطوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنيطوا (form IV)\n# أُنِيطُوا (ʔunīṭū) /ʔu.niː.tˤuː/: third-person masculine plural past passive of أَنَاطَ (ʔanāṭa)\n# أَنِيطُوا (ʔanīṭū) /ʔa.niː.tˤuː/: second-person masculine plural imperative of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔunīṭū", "ʔanāṭa", "ʔanīṭū"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تنيطين",
-        "u": "تنيطين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُنِيطِينَ • (tunīṭīna) (form IV) /tu.niː.tˤiː.na/\n# second-person feminine singular non-past active indicative of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunīṭīna", "ʔanāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تنيطان",
-        "u": "تنيطان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُنِيطَانِ • (tunīṭāni) (form IV) /tu.niː.tˤaː.ni/\n# inflection of أَنَاطَ (ʔanāṭa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunīṭāni", "ʔanāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "ينيطان",
-        "u": "ينيطان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُنِيطَانِ • (yunīṭāni) (form IV) /ju.niː.tˤaː.ni/\n# third-person masculine dual non-past active indicative of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunīṭāni", "ʔanāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "ننيط",
-        "u": "ننيط",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ننيط (form IV)\n# نُنِيطُ (nunīṭu) /nu.niː.tˤu/: first-person plural non-past active indicative of أَنَاطَ (ʔanāṭa)\n# نُنِيطَ (nunīṭa) /nu.niː.tˤa/: first-person plural non-past active subjunctive of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nunīṭu", "ʔanāṭa", "nunīṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تنيطون",
-        "u": "تنيطون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُنِيطُونَ • (tunīṭūna) (form IV) /tu.niː.tˤuː.na/\n# second-person masculine plural non-past active indicative of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunīṭūna", "ʔanāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تنطن",
-        "u": "تنطن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنطن (form IV)\n# تُنِطْنَ (tuniṭna) /tu.nitˤ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَنَاطَ (ʔanāṭa)\n# تُنَطْنَ (tunaṭna) /tu.natˤ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuniṭna", "ʔanāṭa", "tunaṭna"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "ينيط",
-        "u": "ينيط",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ينيط (form IV)\n# يُنِيطُ (yunīṭu) /ju.niː.tˤu/: third-person masculine singular non-past active indicative of أَنَاطَ (ʔanāṭa)\n# يُنِيطَ (yunīṭa) /ju.niː.tˤa/: third-person masculine singular non-past active subjunctive of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunīṭu", "ʔanāṭa", "yunīṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "ينيطون",
-        "u": "ينيطون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُنِيطُونَ • (yunīṭūna) (form IV) /ju.niː.tˤuː.na/\n# third-person masculine plural non-past active indicative of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunīṭūna", "ʔanāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تناطين",
-        "u": "تناطين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُنَاطِينَ • (tunāṭīna) (form IV) /tu.naː.tˤiː.na/\n# second-person feminine singular non-past passive indicative of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunāṭīna", "ʔanāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تناط",
-        "u": "تناط",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تناط (form IV)\n# تُنَاطُ (tunāṭu) /tu.naː.tˤu/: inflection of أَنَاطَ (ʔanāṭa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُنَاطَ (tunāṭa) /tu.naː.tˤa/: inflection of أَنَاطَ (ʔanāṭa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunāṭu", "ʔanāṭa", "tunāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "ينطن",
-        "u": "ينطن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ينطن (form IV)\n# يُنِطْنَ (yuniṭna) /ju.nitˤ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَنَاطَ (ʔanāṭa)\n# يُنَطْنَ (yunaṭna) /ju.natˤ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuniṭna", "ʔanāṭa", "yunaṭna"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تناطان",
-        "u": "تناطان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُنَاطَانِ • (tunāṭāni) (form IV) /tu.naː.tˤaː.ni/\n# inflection of أَنَاطَ (ʔanāṭa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunāṭāni", "ʔanāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "يناطان",
-        "u": "يناطان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُنَاطَانِ • (yunāṭāni) (form IV) /ju.naː.tˤaː.ni/\n# third-person masculine dual non-past passive indicative of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunāṭāni", "ʔanāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "نناط",
-        "u": "نناط",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نناط (form IV)\n# نُنَاطُ (nunāṭu) /nu.naː.tˤu/: first-person plural non-past passive indicative of أَنَاطَ (ʔanāṭa)\n# نُنَاطَ (nunāṭa) /nu.naː.tˤa/: first-person plural non-past passive subjunctive of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nunāṭu", "ʔanāṭa", "nunāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "يناطون",
-        "u": "يناطون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُنَاطُونَ • (yunāṭūna) (form IV) /ju.naː.tˤuː.na/\n# third-person masculine plural non-past passive indicative of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunāṭūna", "ʔanāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تناطون",
-        "u": "تناطون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُنَاطُونَ • (tunāṭūna) (form IV) /tu.naː.tˤuː.na/\n# second-person masculine plural non-past passive indicative of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunāṭūna", "ʔanāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تنيطي",
-        "u": "تنيطي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُنِيطِي • (tunīṭī) (form IV) /tu.niː.tˤiː/\n# second-person feminine singular non-past active subjunctive/jussive of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunīṭī", "ʔanāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "يناط",
-        "u": "يناط",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يناط (form IV)\n# يُنَاطُ (yunāṭu) /ju.naː.tˤu/: third-person masculine singular non-past passive indicative of أَنَاطَ (ʔanāṭa)\n# يُنَاطَ (yunāṭa) /ju.naː.tˤa/: third-person masculine singular non-past passive subjunctive of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunāṭu", "ʔanāṭa", "yunāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "ينيطوا",
-        "u": "ينيطوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُنِيطُوا • (yunīṭū) (form IV) /ju.niː.tˤuː/\n# third-person masculine plural non-past active subjunctive/jussive of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunīṭū", "ʔanāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "ينيطا",
-        "u": "ينيطا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُنِيطَا • (yunīṭā) (form IV) /ju.niː.tˤaː/\n# third-person masculine dual non-past active subjunctive/jussive of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunīṭā", "ʔanāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تنيطا",
-        "u": "تنيطا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُنِيطَا • (tunīṭā) (form IV) /tu.niː.tˤaː/\n# inflection of أَنَاطَ (ʔanāṭa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunīṭā", "ʔanāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تنيطوا",
-        "u": "تنيطوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُنِيطُوا • (tunīṭū) (form IV) /tu.niː.tˤuː/\n# second-person masculine plural non-past active subjunctive/jussive of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunīṭū", "ʔanāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تناطا",
-        "u": "تناطا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُنَاطَا • (tunāṭā) (form IV) /tu.naː.tˤaː/\n# inflection of أَنَاطَ (ʔanāṭa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunāṭā", "ʔanāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "يناطا",
-        "u": "يناطا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُنَاطَا • (yunāṭā) (form IV) /ju.naː.tˤaː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunāṭā", "ʔanāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "يناطوا",
-        "u": "يناطوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُنَاطُوا • (yunāṭū) (form IV) /ju.naː.tˤuː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunāṭū", "ʔanāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "أنط",
-        "u": "أنط",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أنط (form IV)\n# أُنِطْ (ʔuniṭ) /ʔu.nitˤ/: first-person singular non-past active jussive of أَنَاطَ (ʔanāṭa)\n# أُنَطْ (ʔunaṭ) /ʔu.natˤ/: first-person singular non-past passive jussive of أَنَاطَ (ʔanāṭa)\n# أَنِطْ (ʔaniṭ) /ʔa.nitˤ/: second-person masculine singular imperative of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuniṭ", "ʔanāṭa", "ʔunaṭ"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تناطي",
-        "u": "تناطي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُنَاطِي • (tunāṭī) (form IV) /tu.naː.tˤiː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunāṭī", "ʔanāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تناطوا",
-        "u": "تناطوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُنَاطُوا • (tunāṭū) (form IV) /tu.naː.tˤuː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunāṭū", "ʔanāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "أنيطي",
-        "u": "أنيطي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَنِيطِي • (ʔanīṭī) (form IV) /ʔa.niː.tˤiː/\n# second-person feminine singular imperative of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanīṭī", "ʔanāṭa"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "ننط",
-        "u": "ننط",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ننط (form IV)\n# نُنِطْ (nuniṭ) /nu.nitˤ/: first-person plural non-past active jussive of أَنَاطَ (ʔanāṭa)\n# نُنَطْ (nunaṭ) /nu.natˤ/: first-person plural non-past passive jussive of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuniṭ", "ʔanāṭa", "nunaṭ"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "ينط",
-        "u": "ينط",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ينط (form IV)\n# يُنِطْ (yuniṭ) /ju.nitˤ/: third-person masculine singular non-past active jussive of أَنَاطَ (ʔanāṭa)\n# يُنَطْ (yunaṭ) /ju.natˤ/: third-person masculine singular non-past passive jussive of أَنَاطَ (ʔanāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuniṭ", "ʔanāṭa", "yunaṭ"],
-        "k": "أناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تنط",
-        "u": "تنط",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنط (form IV)\n# تُنِطْ (tuniṭ) /tu.nitˤ/: inflection of أَنَاطَ (ʔanāṭa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُنَطْ (tunaṭ) /tu.natˤ/: inflection of أَنَاطَ (ʔanāṭa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuniṭ", "ʔanāṭa", "tunaṭ"],
-        "k": "أناط",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "نط",
+  "ses": {
     "harf": "ء",
+    "fasil": "نط",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "أنطت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أنطت (form IV)\n# أَنَطْتُ (ʔanaṭtu) /ʔa.natˤ.tu/: first-person singular past active of أَنَاطَ (ʔanāṭa)\n# أَنَطْتَ (ʔanaṭta) /ʔa.natˤ.ta/: second-person masculine singular past active of أَنَاطَ (ʔanāṭa)\n# أَنَطْتِ (ʔanaṭti) /ʔa.natˤ.ti/: second-person feminine singular past active of أَنَاطَ (ʔanāṭa)\n# أُنِطْتُ (ʔuniṭtu) /ʔu.nitˤ.tu/: first-person singular past passive of أَنَاطَ (ʔanāṭa)\n# أُنِط",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanaṭtu", "ʔanāṭa", "ʔanaṭta"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أناطا",
+      "tur": "verb",
+      "baslik": "أَنَاطَا • (ʔanāṭā) (form IV) /ʔa.naː.tˤaː/\n# third-person masculine dual past active of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanāṭā", "ʔanāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أناطت",
+      "tur": "verb",
+      "baslik": "أَنَاطَتْ • (ʔanāṭat) (form IV) /ʔa.naː.tˤat/\n# third-person feminine singular past active of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanāṭat", "ʔanāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أناطتا",
+      "tur": "verb",
+      "baslik": "أَنَاطَتَا • (ʔanāṭatā) (form IV) /ʔa.naː.tˤa.taː/\n# third-person feminine dual past active of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanāṭatā", "ʔanāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنطتما",
+      "tur": "verb",
+      "baslik": "أنطتما (form IV)\n# أَنَطْتُمَا (ʔanaṭtumā) /ʔa.natˤ.tu.maː/: second-person dual past active of أَنَاطَ (ʔanāṭa)\n# أُنِطْتُمَا (ʔuniṭtumā) /ʔu.nitˤ.tu.maː/: second-person dual past passive of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanaṭtumā", "ʔanāṭa", "ʔuniṭtumā"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنطتم",
+      "tur": "verb",
+      "baslik": "أنطتم (form IV)\n# أَنَطْتُمْ (ʔanaṭtum) /ʔa.natˤ.tum/: second-person masculine plural past active of أَنَاطَ (ʔanāṭa)\n# أُنِطْتُمْ (ʔuniṭtum) /ʔu.nitˤ.tum/: second-person masculine plural past passive of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanaṭtum", "ʔanāṭa", "ʔuniṭtum"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنطتن",
+      "tur": "verb",
+      "baslik": "أنطتن (form IV)\n# أَنَطْتُنَّ (ʔanaṭtunna) /ʔa.natˤ.tun.na/: second-person feminine plural past active of أَنَاطَ (ʔanāṭa)\n# أُنِطْتُنَّ (ʔuniṭtunna) /ʔu.nitˤ.tun.na/: second-person feminine plural past passive of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanaṭtunna", "ʔanāṭa", "ʔuniṭtunna"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنطن",
+      "tur": "verb",
+      "baslik": "أنطن (form IV)\n# أَنَطْنَ (ʔanaṭna) /ʔa.natˤ.na/: third-person feminine plural past active of أَنَاطَ (ʔanāṭa)\n# أُنِطْنَ (ʔuniṭna) /ʔu.nitˤ.na/: third-person feminine plural past passive of أَنَاطَ (ʔanāṭa)\n# أَنِطْنَ (ʔaniṭna) /ʔa.nitˤ.na/: second-person feminine plural imperative of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanaṭna", "ʔanāṭa", "ʔuniṭna"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أناطوا",
+      "tur": "verb",
+      "baslik": "أَنَاطُوا • (ʔanāṭū) (form IV) /ʔa.naː.tˤuː/\n# third-person masculine plural past active of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanāṭū", "ʔanāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنيط",
+      "tur": "verb",
+      "baslik": "أنيط (form IV)\n# أُنِيطَ (ʔunīṭa) /ʔu.niː.tˤa/: inflection of أَنَاطَ (ʔanāṭa):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُنِيطُ (ʔunīṭu) /ʔu.niː.tˤu/: first-person singular non-past active indicative of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔunīṭa", "ʔanāṭa", "ʔunīṭu"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنطنا",
+      "tur": "verb",
+      "baslik": "أنطنا (form IV)\n# أَنَطْنَا (ʔanaṭnā) /ʔa.natˤ.naː/: first-person plural past active of أَنَاطَ (ʔanāṭa)\n# أُنِطْنَا (ʔuniṭnā) /ʔu.nitˤ.naː/: first-person plural past passive of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanaṭnā", "ʔanāṭa", "ʔuniṭnā"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنيطت",
+      "tur": "verb",
+      "baslik": "أُنِيطَتْ • (ʔunīṭat) (form IV) /ʔu.niː.tˤat/\n# third-person feminine singular past passive of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔunīṭat", "ʔanāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنيطا",
+      "tur": "verb",
+      "baslik": "أنيطا (form IV)\n# أُنِيطَا (ʔunīṭā) /ʔu.niː.tˤaː/: third-person masculine dual past passive of أَنَاطَ (ʔanāṭa)\n# أَنِيطَا (ʔanīṭā) /ʔa.niː.tˤaː/: second-person dual imperative of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔunīṭā", "ʔanāṭa", "ʔanīṭā"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنيطتا",
+      "tur": "verb",
+      "baslik": "أُنِيطَتَا • (ʔunīṭatā) (form IV) /ʔu.niː.tˤa.taː/\n# third-person feminine dual past passive of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔunīṭatā", "ʔanāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنيط",
+      "tur": "verb",
+      "baslik": "تنيط (form IV)\n# تُنِيطُ (tunīṭu) /tu.niː.tˤu/: inflection of أَنَاطَ (ʔanāṭa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُنِيطَ (tunīṭa) /tu.niː.tˤa/: inflection of أَنَاطَ (ʔanāṭa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunīṭu", "ʔanāṭa", "tunīṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنيطوا",
+      "tur": "verb",
+      "baslik": "أنيطوا (form IV)\n# أُنِيطُوا (ʔunīṭū) /ʔu.niː.tˤuː/: third-person masculine plural past passive of أَنَاطَ (ʔanāṭa)\n# أَنِيطُوا (ʔanīṭū) /ʔa.niː.tˤuː/: second-person masculine plural imperative of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔunīṭū", "ʔanāṭa", "ʔanīṭū"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنيطين",
+      "tur": "verb",
+      "baslik": "تُنِيطِينَ • (tunīṭīna) (form IV) /tu.niː.tˤiː.na/\n# second-person feminine singular non-past active indicative of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunīṭīna", "ʔanāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنيطان",
+      "tur": "verb",
+      "baslik": "تُنِيطَانِ • (tunīṭāni) (form IV) /tu.niː.tˤaː.ni/\n# inflection of أَنَاطَ (ʔanāṭa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunīṭāni", "ʔanāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينيطان",
+      "tur": "verb",
+      "baslik": "يُنِيطَانِ • (yunīṭāni) (form IV) /ju.niː.tˤaː.ni/\n# third-person masculine dual non-past active indicative of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunīṭāni", "ʔanāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ننيط",
+      "tur": "verb",
+      "baslik": "ننيط (form IV)\n# نُنِيطُ (nunīṭu) /nu.niː.tˤu/: first-person plural non-past active indicative of أَنَاطَ (ʔanāṭa)\n# نُنِيطَ (nunīṭa) /nu.niː.tˤa/: first-person plural non-past active subjunctive of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nunīṭu", "ʔanāṭa", "nunīṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنيطون",
+      "tur": "verb",
+      "baslik": "تُنِيطُونَ • (tunīṭūna) (form IV) /tu.niː.tˤuː.na/\n# second-person masculine plural non-past active indicative of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunīṭūna", "ʔanāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنطن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنطن (form IV)\n# تُنِطْنَ (tuniṭna) /tu.nitˤ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَنَاطَ (ʔanāṭa)\n# تُنَطْنَ (tunaṭna) /tu.natˤ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuniṭna", "ʔanāṭa", "tunaṭna"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينيط",
+      "tur": "verb",
+      "baslik": "ينيط (form IV)\n# يُنِيطُ (yunīṭu) /ju.niː.tˤu/: third-person masculine singular non-past active indicative of أَنَاطَ (ʔanāṭa)\n# يُنِيطَ (yunīṭa) /ju.niː.tˤa/: third-person masculine singular non-past active subjunctive of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunīṭu", "ʔanāṭa", "yunīṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينيطون",
+      "tur": "verb",
+      "baslik": "يُنِيطُونَ • (yunīṭūna) (form IV) /ju.niː.tˤuː.na/\n# third-person masculine plural non-past active indicative of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunīṭūna", "ʔanāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تناطين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُنَاطِينَ • (tunāṭīna) (form IV) /tu.naː.tˤiː.na/\n# second-person feminine singular non-past passive indicative of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunāṭīna", "ʔanāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تناط",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تناط (form IV)\n# تُنَاطُ (tunāṭu) /tu.naː.tˤu/: inflection of أَنَاطَ (ʔanāṭa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُنَاطَ (tunāṭa) /tu.naː.tˤa/: inflection of أَنَاطَ (ʔanāṭa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunāṭu", "ʔanāṭa", "tunāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينطن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ينطن (form IV)\n# يُنِطْنَ (yuniṭna) /ju.nitˤ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَنَاطَ (ʔanāṭa)\n# يُنَطْنَ (yunaṭna) /ju.natˤ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuniṭna", "ʔanāṭa", "yunaṭna"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تناطان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُنَاطَانِ • (tunāṭāni) (form IV) /tu.naː.tˤaː.ni/\n# inflection of أَنَاطَ (ʔanāṭa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunāṭāni", "ʔanāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يناطان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُنَاطَانِ • (yunāṭāni) (form IV) /ju.naː.tˤaː.ni/\n# third-person masculine dual non-past passive indicative of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunāṭāni", "ʔanāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نناط",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نناط (form IV)\n# نُنَاطُ (nunāṭu) /nu.naː.tˤu/: first-person plural non-past passive indicative of أَنَاطَ (ʔanāṭa)\n# نُنَاطَ (nunāṭa) /nu.naː.tˤa/: first-person plural non-past passive subjunctive of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nunāṭu", "ʔanāṭa", "nunāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يناطون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُنَاطُونَ • (yunāṭūna) (form IV) /ju.naː.tˤuː.na/\n# third-person masculine plural non-past passive indicative of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunāṭūna", "ʔanāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تناطون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُنَاطُونَ • (tunāṭūna) (form IV) /tu.naː.tˤuː.na/\n# second-person masculine plural non-past passive indicative of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunāṭūna", "ʔanāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنيطي",
+      "tur": "verb",
+      "baslik": "تُنِيطِي • (tunīṭī) (form IV) /tu.niː.tˤiː/\n# second-person feminine singular non-past active subjunctive/jussive of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunīṭī", "ʔanāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يناط",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يناط (form IV)\n# يُنَاطُ (yunāṭu) /ju.naː.tˤu/: third-person masculine singular non-past passive indicative of أَنَاطَ (ʔanāṭa)\n# يُنَاطَ (yunāṭa) /ju.naː.tˤa/: third-person masculine singular non-past passive subjunctive of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunāṭu", "ʔanāṭa", "yunāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينيطوا",
+      "tur": "verb",
+      "baslik": "يُنِيطُوا • (yunīṭū) (form IV) /ju.niː.tˤuː/\n# third-person masculine plural non-past active subjunctive/jussive of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunīṭū", "ʔanāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينيطا",
+      "tur": "verb",
+      "baslik": "يُنِيطَا • (yunīṭā) (form IV) /ju.niː.tˤaː/\n# third-person masculine dual non-past active subjunctive/jussive of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunīṭā", "ʔanāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنيطا",
+      "tur": "verb",
+      "baslik": "تُنِيطَا • (tunīṭā) (form IV) /tu.niː.tˤaː/\n# inflection of أَنَاطَ (ʔanāṭa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunīṭā", "ʔanāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنيطوا",
+      "tur": "verb",
+      "baslik": "تُنِيطُوا • (tunīṭū) (form IV) /tu.niː.tˤuː/\n# second-person masculine plural non-past active subjunctive/jussive of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunīṭū", "ʔanāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تناطا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُنَاطَا • (tunāṭā) (form IV) /tu.naː.tˤaː/\n# inflection of أَنَاطَ (ʔanāṭa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunāṭā", "ʔanāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يناطا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُنَاطَا • (yunāṭā) (form IV) /ju.naː.tˤaː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunāṭā", "ʔanāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يناطوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُنَاطُوا • (yunāṭū) (form IV) /ju.naː.tˤuː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunāṭū", "ʔanāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنط",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أنط (form IV)\n# أُنِطْ (ʔuniṭ) /ʔu.nitˤ/: first-person singular non-past active jussive of أَنَاطَ (ʔanāṭa)\n# أُنَطْ (ʔunaṭ) /ʔu.natˤ/: first-person singular non-past passive jussive of أَنَاطَ (ʔanāṭa)\n# أَنِطْ (ʔaniṭ) /ʔa.nitˤ/: second-person masculine singular imperative of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuniṭ", "ʔanāṭa", "ʔunaṭ"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تناطي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُنَاطِي • (tunāṭī) (form IV) /tu.naː.tˤiː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunāṭī", "ʔanāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تناطوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُنَاطُوا • (tunāṭū) (form IV) /tu.naː.tˤuː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunāṭū", "ʔanāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنيطي",
+      "tur": "verb",
+      "baslik": "أَنِيطِي • (ʔanīṭī) (form IV) /ʔa.niː.tˤiː/\n# second-person feminine singular imperative of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanīṭī", "ʔanāṭa"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ننط",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ننط (form IV)\n# نُنِطْ (nuniṭ) /nu.nitˤ/: first-person plural non-past active jussive of أَنَاطَ (ʔanāṭa)\n# نُنَطْ (nunaṭ) /nu.natˤ/: first-person plural non-past passive jussive of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuniṭ", "ʔanāṭa", "nunaṭ"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينط",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ينط (form IV)\n# يُنِطْ (yuniṭ) /ju.nitˤ/: third-person masculine singular non-past active jussive of أَنَاطَ (ʔanāṭa)\n# يُنَطْ (yunaṭ) /ju.natˤ/: third-person masculine singular non-past passive jussive of أَنَاطَ (ʔanāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuniṭ", "ʔanāṭa", "yunaṭ"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنط",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنط (form IV)\n# تُنِطْ (tuniṭ) /tu.nitˤ/: inflection of أَنَاطَ (ʔanāṭa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُنَطْ (tunaṭ) /tu.natˤ/: inflection of أَنَاطَ (ʔanāṭa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuniṭ", "ʔanāṭa", "tunaṭ"],
+      "kok_yazilis": "أناط",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءناط", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

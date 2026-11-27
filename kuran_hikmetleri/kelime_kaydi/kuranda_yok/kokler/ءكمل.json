@@ -1,365 +1,287 @@
 {
   "kok": "ءكمل",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءكمل", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يكمل",
-        "u": "يكمل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يكمل (form IV)\n# يُكْمِلُ (yukmilu) /juk.mi.lu/: third-person masculine singular non-past active indicative of أَكْمَلَ (ʔakmala)\n# يُكْمَلُ (yukmalu) /juk.ma.lu/: third-person masculine singular non-past passive indicative of أَكْمَلَ (ʔakmala)\n# يُكْمِلَ (yukmila) /juk.mi.la/: third-person masculine singular non-past active subjunctive of أَكْمَلَ (ʔakmala)\n# يُكْمَلَ (yukmala) /juk.ma.la/: thir",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yukmilu", "ʔakmala", "yukmalu"],
-        "k": "أكمل",
-        "yol": "kök"
-      },
-      {
-        "w": "تكمل",
-        "u": "تكمل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تكمل (form IV)\n# تُكْمِلُ (tukmilu) /tuk.mi.lu/: inflection of أَكْمَلَ (ʔakmala):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُكْمَلُ (tukmalu) /tuk.ma.lu/: inflection of أَكْمَلَ (ʔakmala):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tukmilu", "ʔakmala", "tukmalu"],
-        "k": "أكمل",
-        "yol": "kök"
-      },
-      {
-        "w": "تكملين",
-        "u": "تكملين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تكملين (form IV)\n# تُكْمِلِينَ (tukmilīna) /tuk.mi.liː.na/: second-person feminine singular non-past active indicative of أَكْمَلَ (ʔakmala)\n# تُكْمَلِينَ (tukmalīna) /tuk.ma.liː.na/: second-person feminine singular non-past passive indicative of أَكْمَلَ (ʔakmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tukmilīna", "ʔakmala", "tukmalīna"],
-        "k": "أكمل",
-        "yol": "kök"
-      },
-      {
-        "w": "تكملي",
-        "u": "تكملي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تكملي (form IV)\n# تُكْمِلِي (tukmilī) /tuk.mi.liː/: second-person feminine singular non-past active subjunctive/jussive of أَكْمَلَ (ʔakmala)\n# تُكْمَلِي (tukmalī) /tuk.ma.liː/: second-person feminine singular non-past passive subjunctive/jussive of أَكْمَلَ (ʔakmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tukmilī", "ʔakmala", "tukmalī"],
-        "k": "أكمل",
-        "yol": "kök"
-      },
-      {
-        "w": "نكمل",
-        "u": "نكمل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نكمل (form IV)\n# نُكْمِلُ (nukmilu) /nuk.mi.lu/: first-person plural non-past active indicative of أَكْمَلَ (ʔakmala)\n# نُكْمَلُ (nukmalu) /nuk.ma.lu/: first-person plural non-past passive indicative of أَكْمَلَ (ʔakmala)\n# نُكْمِلَ (nukmila) /nuk.mi.la/: first-person plural non-past active subjunctive of أَكْمَلَ (ʔakmala)\n# نُكْمَلَ (nukmala) /nuk.ma.la/: first-person plural non-past passive sub",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nukmilu", "ʔakmala", "nukmalu"],
-        "k": "أكمل",
-        "yol": "kök"
-      },
-      {
-        "w": "تكملون",
-        "u": "تكملون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تكملون (form IV)\n# تُكْمِلُونَ (tukmilūna) /tuk.mi.luː.na/: second-person masculine plural non-past active indicative of أَكْمَلَ (ʔakmala)\n# تُكْمَلُونَ (tukmalūna) /tuk.ma.luː.na/: second-person masculine plural non-past passive indicative of أَكْمَلَ (ʔakmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tukmilūna", "ʔakmala", "tukmalūna"],
-        "k": "أكمل",
-        "yol": "kök"
-      },
-      {
-        "w": "تكملوا",
-        "u": "تكملوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تكملوا (form IV)\n# تُكْمِلُوا (tukmilū) /tuk.mi.luː/: second-person masculine plural non-past active subjunctive/jussive of أَكْمَلَ (ʔakmala)\n# تُكْمَلُوا (tukmalū) /tuk.ma.luː/: second-person masculine plural non-past passive subjunctive/jussive of أَكْمَلَ (ʔakmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tukmilū", "ʔakmala", "tukmalū"],
-        "k": "أكمل",
-        "yol": "kök"
-      },
-      {
-        "w": "يكملون",
-        "u": "يكملون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يكملون (form IV)\n# يُكْمِلُونَ (yukmilūna) /juk.mi.luː.na/: third-person masculine plural non-past active indicative of أَكْمَلَ (ʔakmala)\n# يُكْمَلُونَ (yukmalūna) /juk.ma.luː.na/: third-person masculine plural non-past passive indicative of أَكْمَلَ (ʔakmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yukmilūna", "ʔakmala", "yukmalūna"],
-        "k": "أكمل",
-        "yol": "kök"
-      },
-      {
-        "w": "يكملوا",
-        "u": "يكملوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يكملوا (form IV)\n# يُكْمِلُوا (yukmilū) /juk.mi.luː/: third-person masculine plural non-past active subjunctive/jussive of أَكْمَلَ (ʔakmala)\n# يُكْمَلُوا (yukmalū) /juk.ma.luː/: third-person masculine plural non-past passive subjunctive/jussive of أَكْمَلَ (ʔakmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yukmilū", "ʔakmala", "yukmalū"],
-        "k": "أكمل",
-        "yol": "kök"
-      },
-      {
-        "w": "تكملن",
-        "u": "تكملن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تكملن (form IV)\n# تُكْمِلْنَ (tukmilna) /tuk.mil.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَكْمَلَ (ʔakmala)\n# تُكْمَلْنَ (tukmalna) /tuk.mal.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَكْمَلَ (ʔakmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tukmilna", "ʔakmala", "tukmalna"],
-        "k": "أكمل",
-        "yol": "kök"
-      },
-      {
-        "w": "يكملن",
-        "u": "يكملن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يكملن (form IV)\n# يُكْمِلْنَ (yukmilna) /juk.mil.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَكْمَلَ (ʔakmala)\n# يُكْمَلْنَ (yukmalna) /juk.mal.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَكْمَلَ (ʔakmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yukmilna", "ʔakmala", "yukmalna"],
-        "k": "أكمل",
-        "yol": "kök"
-      },
-      {
-        "w": "أكملتما",
-        "u": "أكملتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أكملتما (form IV)\n# أَكْمَلْتُمَا (ʔakmaltumā) /ʔak.mal.tu.maː/: second-person dual past active of أَكْمَلَ (ʔakmala)\n# أُكْمِلْتُمَا (ʔukmiltumā) /ʔuk.mil.tu.maː/: second-person dual past passive of أَكْمَلَ (ʔakmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔakmaltumā", "ʔakmala", "ʔukmiltumā"],
-        "k": "أكمل",
-        "yol": "kök"
-      },
-      {
-        "w": "أكملت",
-        "u": "أكملت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أكملت (form IV)\n# أَكْمَلْتُ (ʔakmaltu) /ʔak.mal.tu/: first-person singular past active of أَكْمَلَ (ʔakmala)\n# أَكْمَلْتَ (ʔakmalta) /ʔak.mal.ta/: second-person masculine singular past active of أَكْمَلَ (ʔakmala)\n# أَكْمَلْتِ (ʔakmalti) /ʔak.mal.ti/: second-person feminine singular past active of أَكْمَلَ (ʔakmala)\n# أَكْمَلَتْ (ʔakmalat) /ʔak.ma.lat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔakmaltu", "ʔakmala", "ʔakmalta"],
-        "k": "أكمل",
-        "yol": "kök"
-      },
-      {
-        "w": "أكملا",
-        "u": "أكملا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أكملا (form IV)\n# أَكْمَلَا (ʔakmalā) /ʔak.ma.laː/: third-person masculine dual past active of أَكْمَلَ (ʔakmala)\n# أُكْمِلَا (ʔukmilā) /ʔuk.mi.laː/: third-person masculine dual past passive of أَكْمَلَ (ʔakmala)\n# أَكْمِلَا (ʔakmilā) /ʔak.mi.laː/: second-person dual imperative of أَكْمَلَ (ʔakmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔakmalā", "ʔakmala", "ʔukmilā"],
-        "k": "أكمل",
-        "yol": "kök"
-      },
-      {
-        "w": "أكملتا",
-        "u": "أكملتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أكملتا (form IV)\n# أَكْمَلَتَا (ʔakmalatā) /ʔak.ma.la.taː/: third-person feminine dual past active of أَكْمَلَ (ʔakmala)\n# أُكْمِلَتَا (ʔukmilatā) /ʔuk.mi.la.taː/: third-person feminine dual past passive of أَكْمَلَ (ʔakmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔakmalatā", "ʔakmala", "ʔukmilatā"],
-        "k": "أكمل",
-        "yol": "kök"
-      },
-      {
-        "w": "أكملنا",
-        "u": "أكملنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أكملنا (form IV)\n# أَكْمَلْنَا (ʔakmalnā) /ʔak.mal.naː/: first-person plural past active of أَكْمَلَ (ʔakmala)\n# أُكْمِلْنَا (ʔukmilnā) /ʔuk.mil.naː/: first-person plural past passive of أَكْمَلَ (ʔakmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔakmalnā", "ʔakmala", "ʔukmilnā"],
-        "k": "أكمل",
-        "yol": "kök"
-      },
-      {
-        "w": "أكملتن",
-        "u": "أكملتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أكملتن (form IV)\n# أَكْمَلْتُنَّ (ʔakmaltunna) /ʔak.mal.tun.na/: second-person feminine plural past active of أَكْمَلَ (ʔakmala)\n# أُكْمِلْتُنَّ (ʔukmiltunna) /ʔuk.mil.tun.na/: second-person feminine plural past passive of أَكْمَلَ (ʔakmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔakmaltunna", "ʔakmala", "ʔukmiltunna"],
-        "k": "أكمل",
-        "yol": "kök"
-      },
-      {
-        "w": "أكملتم",
-        "u": "أكملتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أكملتم (form IV)\n# أَكْمَلْتُمْ (ʔakmaltum) /ʔak.mal.tum/: second-person masculine plural past active of أَكْمَلَ (ʔakmala)\n# أُكْمِلْتُمْ (ʔukmiltum) /ʔuk.mil.tum/: second-person masculine plural past passive of أَكْمَلَ (ʔakmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔakmaltum", "ʔakmala", "ʔukmiltum"],
-        "k": "أكمل",
-        "yol": "kök"
-      },
-      {
-        "w": "أكملن",
-        "u": "أكملن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أكملن (form IV)\n# أَكْمَلْنَ (ʔakmalna) /ʔak.mal.na/: third-person feminine plural past active of أَكْمَلَ (ʔakmala)\n# أُكْمِلْنَ (ʔukmilna) /ʔuk.mil.na/: third-person feminine plural past passive of أَكْمَلَ (ʔakmala)\n# أَكْمِلْنَ (ʔakmilna) /ʔak.mil.na/: second-person feminine plural imperative of أَكْمَلَ (ʔakmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔakmalna", "ʔakmala", "ʔukmilna"],
-        "k": "أكمل",
-        "yol": "kök"
-      },
-      {
-        "w": "تكملان",
-        "u": "تكملان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تكملان (form IV)\n# تُكْمِلَانِ (tukmilāni) /tuk.mi.laː.ni/: inflection of أَكْمَلَ (ʔakmala):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُكْمَلَانِ (tukmalāni) /tuk.ma.laː.ni/: inflection of أَكْمَلَ (ʔakmala):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tukmilāni", "ʔakmala", "tukmalāni"],
-        "k": "أكمل",
-        "yol": "kök"
-      },
-      {
-        "w": "أكملوا",
-        "u": "أكملوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أكملوا (form IV)\n# أَكْمَلُوا (ʔakmalū) /ʔak.ma.luː/: third-person masculine plural past active of أَكْمَلَ (ʔakmala)\n# أُكْمِلُوا (ʔukmilū) /ʔuk.mi.luː/: third-person masculine plural past passive of أَكْمَلَ (ʔakmala)\n# أَكْمِلُوا (ʔakmilū) /ʔak.mi.luː/: second-person masculine plural imperative of أَكْمَلَ (ʔakmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔakmalū", "ʔakmala", "ʔukmilū"],
-        "k": "أكمل",
-        "yol": "kök"
-      },
-      {
-        "w": "تكملا",
-        "u": "تكملا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تكملا (form IV)\n# تُكْمِلَا (tukmilā) /tuk.mi.laː/: inflection of أَكْمَلَ (ʔakmala):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُكْمَلَا (tukmalā) /tuk.ma.laː/: inflection of أَكْمَلَ (ʔakmala):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/ju",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tukmilā", "ʔakmala", "tukmalā"],
-        "k": "أكمل",
-        "yol": "kök"
-      },
-      {
-        "w": "يكملان",
-        "u": "يكملان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يكملان (form IV)\n# يُكْمِلَانِ (yukmilāni) /juk.mi.laː.ni/: third-person masculine dual non-past active indicative of أَكْمَلَ (ʔakmala)\n# يُكْمَلَانِ (yukmalāni) /juk.ma.laː.ni/: third-person masculine dual non-past passive indicative of أَكْمَلَ (ʔakmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yukmilāni", "ʔakmala", "yukmalāni"],
-        "k": "أكمل",
-        "yol": "kök"
-      },
-      {
-        "w": "يكملا",
-        "u": "يكملا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يكملا (form IV)\n# يُكْمِلَا (yukmilā) /juk.mi.laː/: third-person masculine dual non-past active subjunctive/jussive of أَكْمَلَ (ʔakmala)\n# يُكْمَلَا (yukmalā) /juk.ma.laː/: third-person masculine dual non-past passive subjunctive/jussive of أَكْمَلَ (ʔakmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yukmilā", "ʔakmala", "yukmalā"],
-        "k": "أكمل",
-        "yol": "kök"
-      },
-      {
-        "w": "أكملي",
-        "u": "أكملي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَكْمِلِي • (ʔakmilī) (form IV) /ʔak.mi.liː/\n# second-person feminine singular imperative of أَكْمَلَ (ʔakmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔakmilī", "ʔakmala"],
-        "k": "أكمل",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "كم",
+  "ses": {
     "harf": "ء",
+    "fasil": "كم",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يكمل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يكمل (form IV)\n# يُكْمِلُ (yukmilu) /juk.mi.lu/: third-person masculine singular non-past active indicative of أَكْمَلَ (ʔakmala)\n# يُكْمَلُ (yukmalu) /juk.ma.lu/: third-person masculine singular non-past passive indicative of أَكْمَلَ (ʔakmala)\n# يُكْمِلَ (yukmila) /juk.mi.la/: third-person masculine singular non-past active subjunctive of أَكْمَلَ (ʔakmala)\n# يُكْمَلَ (yukmala) /juk.ma.la/: thir",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yukmilu", "ʔakmala", "yukmalu"],
+      "kok_yazilis": "أكمل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكمل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تكمل (form IV)\n# تُكْمِلُ (tukmilu) /tuk.mi.lu/: inflection of أَكْمَلَ (ʔakmala):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُكْمَلُ (tukmalu) /tuk.ma.lu/: inflection of أَكْمَلَ (ʔakmala):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tukmilu", "ʔakmala", "tukmalu"],
+      "kok_yazilis": "أكمل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكملين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تكملين (form IV)\n# تُكْمِلِينَ (tukmilīna) /tuk.mi.liː.na/: second-person feminine singular non-past active indicative of أَكْمَلَ (ʔakmala)\n# تُكْمَلِينَ (tukmalīna) /tuk.ma.liː.na/: second-person feminine singular non-past passive indicative of أَكْمَلَ (ʔakmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tukmilīna", "ʔakmala", "tukmalīna"],
+      "kok_yazilis": "أكمل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكملي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تكملي (form IV)\n# تُكْمِلِي (tukmilī) /tuk.mi.liː/: second-person feminine singular non-past active subjunctive/jussive of أَكْمَلَ (ʔakmala)\n# تُكْمَلِي (tukmalī) /tuk.ma.liː/: second-person feminine singular non-past passive subjunctive/jussive of أَكْمَلَ (ʔakmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tukmilī", "ʔakmala", "tukmalī"],
+      "kok_yazilis": "أكمل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نكمل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نكمل (form IV)\n# نُكْمِلُ (nukmilu) /nuk.mi.lu/: first-person plural non-past active indicative of أَكْمَلَ (ʔakmala)\n# نُكْمَلُ (nukmalu) /nuk.ma.lu/: first-person plural non-past passive indicative of أَكْمَلَ (ʔakmala)\n# نُكْمِلَ (nukmila) /nuk.mi.la/: first-person plural non-past active subjunctive of أَكْمَلَ (ʔakmala)\n# نُكْمَلَ (nukmala) /nuk.ma.la/: first-person plural non-past passive sub",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nukmilu", "ʔakmala", "nukmalu"],
+      "kok_yazilis": "أكمل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكملون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تكملون (form IV)\n# تُكْمِلُونَ (tukmilūna) /tuk.mi.luː.na/: second-person masculine plural non-past active indicative of أَكْمَلَ (ʔakmala)\n# تُكْمَلُونَ (tukmalūna) /tuk.ma.luː.na/: second-person masculine plural non-past passive indicative of أَكْمَلَ (ʔakmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tukmilūna", "ʔakmala", "tukmalūna"],
+      "kok_yazilis": "أكمل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكملوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تكملوا (form IV)\n# تُكْمِلُوا (tukmilū) /tuk.mi.luː/: second-person masculine plural non-past active subjunctive/jussive of أَكْمَلَ (ʔakmala)\n# تُكْمَلُوا (tukmalū) /tuk.ma.luː/: second-person masculine plural non-past passive subjunctive/jussive of أَكْمَلَ (ʔakmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tukmilū", "ʔakmala", "tukmalū"],
+      "kok_yazilis": "أكمل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يكملون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يكملون (form IV)\n# يُكْمِلُونَ (yukmilūna) /juk.mi.luː.na/: third-person masculine plural non-past active indicative of أَكْمَلَ (ʔakmala)\n# يُكْمَلُونَ (yukmalūna) /juk.ma.luː.na/: third-person masculine plural non-past passive indicative of أَكْمَلَ (ʔakmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yukmilūna", "ʔakmala", "yukmalūna"],
+      "kok_yazilis": "أكمل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يكملوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يكملوا (form IV)\n# يُكْمِلُوا (yukmilū) /juk.mi.luː/: third-person masculine plural non-past active subjunctive/jussive of أَكْمَلَ (ʔakmala)\n# يُكْمَلُوا (yukmalū) /juk.ma.luː/: third-person masculine plural non-past passive subjunctive/jussive of أَكْمَلَ (ʔakmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yukmilū", "ʔakmala", "yukmalū"],
+      "kok_yazilis": "أكمل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكملن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تكملن (form IV)\n# تُكْمِلْنَ (tukmilna) /tuk.mil.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَكْمَلَ (ʔakmala)\n# تُكْمَلْنَ (tukmalna) /tuk.mal.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَكْمَلَ (ʔakmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tukmilna", "ʔakmala", "tukmalna"],
+      "kok_yazilis": "أكمل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يكملن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يكملن (form IV)\n# يُكْمِلْنَ (yukmilna) /juk.mil.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَكْمَلَ (ʔakmala)\n# يُكْمَلْنَ (yukmalna) /juk.mal.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَكْمَلَ (ʔakmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yukmilna", "ʔakmala", "yukmalna"],
+      "kok_yazilis": "أكمل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أكملتما",
+      "tur": "verb",
+      "baslik": "أكملتما (form IV)\n# أَكْمَلْتُمَا (ʔakmaltumā) /ʔak.mal.tu.maː/: second-person dual past active of أَكْمَلَ (ʔakmala)\n# أُكْمِلْتُمَا (ʔukmiltumā) /ʔuk.mil.tu.maː/: second-person dual past passive of أَكْمَلَ (ʔakmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔakmaltumā", "ʔakmala", "ʔukmiltumā"],
+      "kok_yazilis": "أكمل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أكملت",
+      "tur": "verb",
+      "baslik": "أكملت (form IV)\n# أَكْمَلْتُ (ʔakmaltu) /ʔak.mal.tu/: first-person singular past active of أَكْمَلَ (ʔakmala)\n# أَكْمَلْتَ (ʔakmalta) /ʔak.mal.ta/: second-person masculine singular past active of أَكْمَلَ (ʔakmala)\n# أَكْمَلْتِ (ʔakmalti) /ʔak.mal.ti/: second-person feminine singular past active of أَكْمَلَ (ʔakmala)\n# أَكْمَلَتْ (ʔakmalat) /ʔak.ma.lat/: third-person feminine singular past active ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔakmaltu", "ʔakmala", "ʔakmalta"],
+      "kok_yazilis": "أكمل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أكملا",
+      "tur": "verb",
+      "baslik": "أكملا (form IV)\n# أَكْمَلَا (ʔakmalā) /ʔak.ma.laː/: third-person masculine dual past active of أَكْمَلَ (ʔakmala)\n# أُكْمِلَا (ʔukmilā) /ʔuk.mi.laː/: third-person masculine dual past passive of أَكْمَلَ (ʔakmala)\n# أَكْمِلَا (ʔakmilā) /ʔak.mi.laː/: second-person dual imperative of أَكْمَلَ (ʔakmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔakmalā", "ʔakmala", "ʔukmilā"],
+      "kok_yazilis": "أكمل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أكملتا",
+      "tur": "verb",
+      "baslik": "أكملتا (form IV)\n# أَكْمَلَتَا (ʔakmalatā) /ʔak.ma.la.taː/: third-person feminine dual past active of أَكْمَلَ (ʔakmala)\n# أُكْمِلَتَا (ʔukmilatā) /ʔuk.mi.la.taː/: third-person feminine dual past passive of أَكْمَلَ (ʔakmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔakmalatā", "ʔakmala", "ʔukmilatā"],
+      "kok_yazilis": "أكمل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أكملنا",
+      "tur": "verb",
+      "baslik": "أكملنا (form IV)\n# أَكْمَلْنَا (ʔakmalnā) /ʔak.mal.naː/: first-person plural past active of أَكْمَلَ (ʔakmala)\n# أُكْمِلْنَا (ʔukmilnā) /ʔuk.mil.naː/: first-person plural past passive of أَكْمَلَ (ʔakmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔakmalnā", "ʔakmala", "ʔukmilnā"],
+      "kok_yazilis": "أكمل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أكملتن",
+      "tur": "verb",
+      "baslik": "أكملتن (form IV)\n# أَكْمَلْتُنَّ (ʔakmaltunna) /ʔak.mal.tun.na/: second-person feminine plural past active of أَكْمَلَ (ʔakmala)\n# أُكْمِلْتُنَّ (ʔukmiltunna) /ʔuk.mil.tun.na/: second-person feminine plural past passive of أَكْمَلَ (ʔakmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔakmaltunna", "ʔakmala", "ʔukmiltunna"],
+      "kok_yazilis": "أكمل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أكملتم",
+      "tur": "verb",
+      "baslik": "أكملتم (form IV)\n# أَكْمَلْتُمْ (ʔakmaltum) /ʔak.mal.tum/: second-person masculine plural past active of أَكْمَلَ (ʔakmala)\n# أُكْمِلْتُمْ (ʔukmiltum) /ʔuk.mil.tum/: second-person masculine plural past passive of أَكْمَلَ (ʔakmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔakmaltum", "ʔakmala", "ʔukmiltum"],
+      "kok_yazilis": "أكمل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أكملن",
+      "tur": "verb",
+      "baslik": "أكملن (form IV)\n# أَكْمَلْنَ (ʔakmalna) /ʔak.mal.na/: third-person feminine plural past active of أَكْمَلَ (ʔakmala)\n# أُكْمِلْنَ (ʔukmilna) /ʔuk.mil.na/: third-person feminine plural past passive of أَكْمَلَ (ʔakmala)\n# أَكْمِلْنَ (ʔakmilna) /ʔak.mil.na/: second-person feminine plural imperative of أَكْمَلَ (ʔakmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔakmalna", "ʔakmala", "ʔukmilna"],
+      "kok_yazilis": "أكمل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكملان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تكملان (form IV)\n# تُكْمِلَانِ (tukmilāni) /tuk.mi.laː.ni/: inflection of أَكْمَلَ (ʔakmala):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُكْمَلَانِ (tukmalāni) /tuk.ma.laː.ni/: inflection of أَكْمَلَ (ʔakmala):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tukmilāni", "ʔakmala", "tukmalāni"],
+      "kok_yazilis": "أكمل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أكملوا",
+      "tur": "verb",
+      "baslik": "أكملوا (form IV)\n# أَكْمَلُوا (ʔakmalū) /ʔak.ma.luː/: third-person masculine plural past active of أَكْمَلَ (ʔakmala)\n# أُكْمِلُوا (ʔukmilū) /ʔuk.mi.luː/: third-person masculine plural past passive of أَكْمَلَ (ʔakmala)\n# أَكْمِلُوا (ʔakmilū) /ʔak.mi.luː/: second-person masculine plural imperative of أَكْمَلَ (ʔakmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔakmalū", "ʔakmala", "ʔukmilū"],
+      "kok_yazilis": "أكمل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكملا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تكملا (form IV)\n# تُكْمِلَا (tukmilā) /tuk.mi.laː/: inflection of أَكْمَلَ (ʔakmala):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُكْمَلَا (tukmalā) /tuk.ma.laː/: inflection of أَكْمَلَ (ʔakmala):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/ju",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tukmilā", "ʔakmala", "tukmalā"],
+      "kok_yazilis": "أكمل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يكملان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يكملان (form IV)\n# يُكْمِلَانِ (yukmilāni) /juk.mi.laː.ni/: third-person masculine dual non-past active indicative of أَكْمَلَ (ʔakmala)\n# يُكْمَلَانِ (yukmalāni) /juk.ma.laː.ni/: third-person masculine dual non-past passive indicative of أَكْمَلَ (ʔakmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yukmilāni", "ʔakmala", "yukmalāni"],
+      "kok_yazilis": "أكمل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يكملا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يكملا (form IV)\n# يُكْمِلَا (yukmilā) /juk.mi.laː/: third-person masculine dual non-past active subjunctive/jussive of أَكْمَلَ (ʔakmala)\n# يُكْمَلَا (yukmalā) /juk.ma.laː/: third-person masculine dual non-past passive subjunctive/jussive of أَكْمَلَ (ʔakmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yukmilā", "ʔakmala", "yukmalā"],
+      "kok_yazilis": "أكمل",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أكملي",
+      "tur": "verb",
+      "baslik": "أَكْمِلِي • (ʔakmilī) (form IV) /ʔak.mi.liː/\n# second-person feminine singular imperative of أَكْمَلَ (ʔakmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔakmilī", "ʔakmala"],
+      "kok_yazilis": "أكمل",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءكمل", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

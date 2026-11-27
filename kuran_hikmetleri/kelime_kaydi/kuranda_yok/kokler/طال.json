@@ -1,702 +1,499 @@
 {
   "kok": "طال",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "طال", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أطال",
-        "u": "أطال",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أطال (form I)\n# أُطَالُ (ʔuṭālu) /ʔu.tˤaː.lu/: first-person singular non-past passive indicative of طَالَ (ṭāla)\n# أُطَالَ (ʔuṭāla) /ʔu.tˤaː.la/: first-person singular non-past passive subjunctive of طَالَ (ṭāla)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔuṭālu", "ṭāla", "ʔuṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "يطال",
-        "u": "يطال",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يطال (form I)\n# يُطَالُ (yuṭālu) /ju.tˤaː.lu/: third-person masculine singular non-past passive indicative of طَالَ (ṭāla)\n# يُطَالَ (yuṭāla) /ju.tˤaː.la/: third-person masculine singular non-past passive subjunctive of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuṭālu", "ṭāla", "yuṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "تطول",
-        "u": "تطول",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تطول (form I)\n# تَطُولُ (taṭūlu) /ta.tˤuː.lu/: inflection of طَالَ (ṭāla):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَطُولَ (taṭūla) /ta.tˤuː.la/: inflection of طَالَ (ṭāla):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭūlu", "ṭāla", "taṭūla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "أطول",
-        "u": "أطول",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أطول (form I)\n# أَطُولُ (ʔaṭūlu) /ʔa.tˤuː.lu/: first-person singular non-past active indicative of طَالَ (ṭāla)\n# أَطُولَ (ʔaṭūla) /ʔa.tˤuː.la/: first-person singular non-past active subjunctive of طَالَ (ṭāla)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaṭūlu", "ṭāla", "ʔaṭūla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "يطول",
-        "u": "يطول",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يطول (form I)\n# يَطُولُ (yaṭūlu) /ja.tˤuː.lu/: third-person masculine singular non-past active indicative of طَالَ (ṭāla)\n# يَطُولَ (yaṭūla) /ja.tˤuː.la/: third-person masculine singular non-past active subjunctive of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭūlu", "ṭāla", "yaṭūla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "يطل",
-        "u": "يطل",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يطل (form I)\n# يَطُلْ (yaṭul) /ja.tˤul/: third-person masculine singular non-past active jussive of طَالَ (ṭāla)\n# يُطَلْ (yuṭal) /ju.tˤal/: third-person masculine singular non-past passive jussive of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭul", "ṭāla", "yuṭal"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "تطل",
-        "u": "تطل",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تطل (form I)\n# تَطُلْ (taṭul) /ta.tˤul/: inflection of طَالَ (ṭāla):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُطَلْ (tuṭal) /tu.tˤal/: inflection of طَالَ (ṭāla):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭul", "ṭāla", "tuṭal"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "تطال",
-        "u": "تطال",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تطال (form I)\n# تُطَالُ (tuṭālu) /tu.tˤaː.lu/: inflection of طَالَ (ṭāla):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُطَالَ (tuṭāla) /tu.tˤaː.la/: inflection of طَالَ (ṭāla):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṭālu", "ṭāla", "tuṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "طيل",
-        "u": "طيل",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِيلَ • (ṭīla) (form I) /tˤiː.la/\n# third-person masculine singular past passive of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭīla", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "أطل",
-        "u": "أطل",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أطل (form I)\n# أَطُلْ (ʔaṭul) /ʔa.tˤul/: first-person singular non-past active jussive of طَالَ (ṭāla)\n# أُطَلْ (ʔuṭal) /ʔu.tˤal/: first-person singular non-past passive jussive of طَالَ (ṭāla)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaṭul", "ṭāla", "ʔuṭal"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "تطالين",
-        "u": "تطالين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُطَالِينَ • (tuṭālīna) (form I) /tu.tˤaː.liː.na/\n# second-person feminine singular non-past passive indicative of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṭālīna", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "تطالي",
-        "u": "تطالي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُطَالِي • (tuṭālī) (form I) /tu.tˤaː.liː/\n# second-person feminine singular non-past passive subjunctive/jussive of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṭālī", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "طالت",
-        "u": "طالت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَالَتْ • (ṭālat) (form I) /tˤaː.lat/\n# third-person feminine singular past active of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭālat", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "طيلت",
-        "u": "طيلت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِيلَتْ • (ṭīlat) (form I) /tˤiː.lat/\n# third-person feminine singular past passive of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭīlat", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "طلت",
-        "u": "طلت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "طلت (form I)\n# طُلْتُ (ṭultu) /tˤul.tu/: first-person singular past active of طَالَ (ṭāla)\n# طُلْتَ (ṭulta) /tˤul.ta/: second-person masculine singular past active of طَالَ (ṭāla)\n# طُلْتِ (ṭulti) /tˤul.ti/: second-person feminine singular past active of طَالَ (ṭāla)\n# طِلْتُ (ṭiltu) /tˤil.tu/: first-person singular past passive of طَالَ (ṭāla)\n# طِلْتَ (ṭilta) /tˤil.ta/: second-person masculine s",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭultu", "ṭāla", "ṭulta"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "طل",
-        "u": "طل",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "طُلْ • (ṭul) (form I) /tˤul/\n# second-person masculine singular imperative of طَالَ (ṭāla)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭul", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "تطولي",
-        "u": "تطولي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَطُولِي • (taṭūlī) (form I) /ta.tˤuː.liː/\n# second-person feminine singular non-past active subjunctive/jussive of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭūlī", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "تطولين",
-        "u": "تطولين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَطُولِينَ • (taṭūlīna) (form I) /ta.tˤuː.liː.na/\n# second-person feminine singular non-past active indicative of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭūlīna", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "طولي",
-        "u": "طولي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "طُولِي • (ṭūlī) (form I) /tˤuː.liː/\n# second-person feminine singular imperative of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭūlī", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "نطل",
-        "u": "نطل",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نطل (form I)\n# نَطُلْ (naṭul) /na.tˤul/: first-person plural non-past active jussive of طَالَ (ṭāla)\n# نُطَلْ (nuṭal) /nu.tˤal/: first-person plural non-past passive jussive of طَالَ (ṭāla)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naṭul", "ṭāla", "nuṭal"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "نطال",
-        "u": "نطال",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نطال (form I)\n# نُطَالُ (nuṭālu) /nu.tˤaː.lu/: first-person plural non-past passive indicative of طَالَ (ṭāla)\n# نُطَالَ (nuṭāla) /nu.tˤaː.la/: first-person plural non-past passive subjunctive of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuṭālu", "ṭāla", "nuṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "طلنا",
-        "u": "طلنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طلنا (form I)\n# طُلْنَا (ṭulnā) /tˤul.naː/: first-person plural past active of طَالَ (ṭāla)\n# طِلْنَا (ṭilnā) /tˤil.naː/: first-person plural past passive of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭulnā", "ṭāla", "ṭilnā"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "نطول",
-        "u": "نطول",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نطول (form I)\n# نَطُولُ (naṭūlu) /na.tˤuː.lu/: first-person plural non-past active indicative of طَالَ (ṭāla)\n# نَطُولَ (naṭūla) /na.tˤuː.la/: first-person plural non-past active subjunctive of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naṭūlu", "ṭāla", "naṭūla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "تطالون",
-        "u": "تطالون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُطَالُونَ • (tuṭālūna) (form I) /tu.tˤaː.luː.na/\n# second-person masculine plural non-past passive indicative of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṭālūna", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "تطالوا",
-        "u": "تطالوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُطَالُوا • (tuṭālū) (form I) /tu.tˤaː.luː/\n# second-person masculine plural non-past passive subjunctive/jussive of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṭālū", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "طلتم",
-        "u": "طلتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طلتم (form I)\n# طُلْتُمْ (ṭultum) /tˤul.tum/: second-person masculine plural past active of طَالَ (ṭāla)\n# طِلْتُمْ (ṭiltum) /tˤil.tum/: second-person masculine plural past passive of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭultum", "ṭāla", "ṭiltum"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "تطولون",
-        "u": "تطولون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَطُولُونَ • (taṭūlūna) (form I) /ta.tˤuː.luː.na/\n# second-person masculine plural non-past active indicative of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭūlūna", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "يطالون",
-        "u": "يطالون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُطَالُونَ • (yuṭālūna) (form I) /ju.tˤaː.luː.na/\n# third-person masculine plural non-past passive indicative of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuṭālūna", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "يطالوا",
-        "u": "يطالوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُطَالُوا • (yuṭālū) (form I) /ju.tˤaː.luː/\n# third-person masculine plural non-past passive subjunctive/jussive of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuṭālū", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "تطولوا",
-        "u": "تطولوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَطُولُوا • (taṭūlū) (form I) /ta.tˤuː.luː/\n# second-person masculine plural non-past active subjunctive/jussive of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭūlū", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "طالوا",
-        "u": "طالوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَالُوا • (ṭālū) (form I) /tˤaː.luː/\n# third-person masculine plural past active of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭālū", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "يطولون",
-        "u": "يطولون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَطُولُونَ • (yaṭūlūna) (form I) /ja.tˤuː.luː.na/\n# third-person masculine plural non-past active indicative of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭūlūna", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "يطولوا",
-        "u": "يطولوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَطُولُوا • (yaṭūlū) (form I) /ja.tˤuː.luː/\n# third-person masculine plural non-past active subjunctive/jussive of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭūlū", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "طيلوا",
-        "u": "طيلوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِيلُوا • (ṭīlū) (form I) /tˤiː.luː/\n# third-person masculine plural past passive of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭīlū", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "طولوا",
-        "u": "طولوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "طُولُوا • (ṭūlū) (form I) /tˤuː.luː/\n# second-person masculine plural imperative of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭūlū", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "تطلن",
-        "u": "تطلن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تطلن (form I)\n# تَطُلْنَ (taṭulna) /ta.tˤul.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of طَالَ (ṭāla)\n# تُطَلْنَ (tuṭalna) /tu.tˤal.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭulna", "ṭāla", "tuṭalna"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "طلتن",
-        "u": "طلتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طلتن (form I)\n# طُلْتُنَّ (ṭultunna) /tˤul.tun.na/: second-person feminine plural past active of طَالَ (ṭāla)\n# طِلْتُنَّ (ṭiltunna) /tˤil.tun.na/: second-person feminine plural past passive of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭultunna", "ṭāla", "ṭiltunna"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "طلن",
-        "u": "طلن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طلن (form I)\n# طُلْنَ (ṭulna) /tˤul.na/: inflection of طَالَ (ṭāla):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# طِلْنَ (ṭilna) /tˤil.na/: third-person feminine plural past passive of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭulna", "ṭāla", "ṭilna"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "يطلن",
-        "u": "يطلن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يطلن (form I)\n# يَطُلْنَ (yaṭulna) /ja.tˤul.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of طَالَ (ṭāla)\n# يُطَلْنَ (yuṭalna) /ju.tˤal.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭulna", "ṭāla", "yuṭalna"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "تطالا",
-        "u": "تطالا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُطَالَا • (tuṭālā) (form I) /tu.tˤaː.laː/\n# inflection of طَالَ (ṭāla):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṭālā", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "يطالان",
-        "u": "يطالان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُطَالَانِ • (yuṭālāni) (form I) /ju.tˤaː.laː.ni/\n# third-person masculine dual non-past passive indicative of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuṭālāni", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "تطالان",
-        "u": "تطالان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُطَالَانِ • (tuṭālāni) (form I) /tu.tˤaː.laː.ni/\n# inflection of طَالَ (ṭāla):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṭālāni", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "يطالا",
-        "u": "يطالا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُطَالَا • (yuṭālā) (form I) /ju.tˤaː.laː/\n# third-person masculine dual non-past passive subjunctive/jussive of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuṭālā", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "تطولا",
-        "u": "تطولا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَطُولَا • (taṭūlā) (form I) /ta.tˤuː.laː/\n# inflection of طَالَ (ṭāla):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭūlā", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "طلتما",
-        "u": "طلتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طلتما (form I)\n# طُلْتُمَا (ṭultumā) /tˤul.tu.maː/: second-person dual past active of طَالَ (ṭāla)\n# طِلْتُمَا (ṭiltumā) /tˤil.tu.maː/: second-person dual past passive of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭultumā", "ṭāla", "ṭiltumā"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "طالتا",
-        "u": "طالتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَالَتَا • (ṭālatā) (form I) /tˤaː.la.taː/\n# third-person feminine dual past active of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭālatā", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "طالا",
-        "u": "طالا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَالَا • (ṭālā) (form I) /tˤaː.laː/\n# third-person masculine dual past active of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭālā", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "يطولان",
-        "u": "يطولان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَطُولَانِ • (yaṭūlāni) (form I) /ja.tˤuː.laː.ni/\n# third-person masculine dual non-past active indicative of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭūlāni", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "تطولان",
-        "u": "تطولان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَطُولَانِ • (taṭūlāni) (form I) /ta.tˤuː.laː.ni/\n# inflection of طَالَ (ṭāla):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭūlāni", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "طيلا",
-        "u": "طيلا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِيلَا • (ṭīlā) (form I) /tˤiː.laː/\n# third-person masculine dual past passive of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭīlā", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "يطولا",
-        "u": "يطولا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَطُولَا • (yaṭūlā) (form I) /ja.tˤuː.laː/\n# third-person masculine dual non-past active subjunctive/jussive of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭūlā", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "طيلتا",
-        "u": "طيلتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِيلَتَا • (ṭīlatā) (form I) /tˤiː.la.taː/\n# third-person feminine dual past passive of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭīlatā", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      },
-      {
-        "w": "طولا",
-        "u": "طولا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "طُولَا • (ṭūlā) (form I) /tˤuː.laː/\n# second-person dual imperative of طَالَ (ṭāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭūlā", "ṭāla"],
-        "k": "طال",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "طل",
+  "ses": {
     "harf": "ط",
+    "fasil": "طل",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "أطال",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أطال (form I)\n# أُطَالُ (ʔuṭālu) /ʔu.tˤaː.lu/: first-person singular non-past passive indicative of طَالَ (ṭāla)\n# أُطَالَ (ʔuṭāla) /ʔu.tˤaː.la/: first-person singular non-past passive subjunctive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔuṭālu", "ṭāla", "ʔuṭāla"]
+    },
+    {
+      "madde": "يطال",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يطال (form I)\n# يُطَالُ (yuṭālu) /ju.tˤaː.lu/: third-person masculine singular non-past passive indicative of طَالَ (ṭāla)\n# يُطَالَ (yuṭāla) /ju.tˤaː.la/: third-person masculine singular non-past passive subjunctive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuṭālu", "ṭāla", "yuṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطول",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تطول (form I)\n# تَطُولُ (taṭūlu) /ta.tˤuː.lu/: inflection of طَالَ (ṭāla):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَطُولَ (taṭūla) /ta.tˤuː.la/: inflection of طَالَ (ṭāla):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭūlu", "ṭāla", "taṭūla"]
+    },
+    {
+      "madde": "أطول",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أطول (form I)\n# أَطُولُ (ʔaṭūlu) /ʔa.tˤuː.lu/: first-person singular non-past active indicative of طَالَ (ṭāla)\n# أَطُولَ (ʔaṭūla) /ʔa.tˤuː.la/: first-person singular non-past active subjunctive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaṭūlu", "ṭāla", "ʔaṭūla"]
+    },
+    {
+      "madde": "يطول",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يطول (form I)\n# يَطُولُ (yaṭūlu) /ja.tˤuː.lu/: third-person masculine singular non-past active indicative of طَالَ (ṭāla)\n# يَطُولَ (yaṭūla) /ja.tˤuː.la/: third-person masculine singular non-past active subjunctive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭūlu", "ṭāla", "yaṭūla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطل",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يطل (form I)\n# يَطُلْ (yaṭul) /ja.tˤul/: third-person masculine singular non-past active jussive of طَالَ (ṭāla)\n# يُطَلْ (yuṭal) /ju.tˤal/: third-person masculine singular non-past passive jussive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭul", "ṭāla", "yuṭal"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطل",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تطل (form I)\n# تَطُلْ (taṭul) /ta.tˤul/: inflection of طَالَ (ṭāla):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُطَلْ (tuṭal) /tu.tˤal/: inflection of طَالَ (ṭāla):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭul", "ṭāla", "tuṭal"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطال",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تطال (form I)\n# تُطَالُ (tuṭālu) /tu.tˤaː.lu/: inflection of طَالَ (ṭāla):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُطَالَ (tuṭāla) /tu.tˤaː.la/: inflection of طَالَ (ṭāla):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṭālu", "ṭāla", "tuṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طيل",
+      "tur": "verb",
+      "baslik": "طِيلَ • (ṭīla) (form I) /tˤiː.la/\n# third-person masculine singular past passive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭīla", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أطل",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أطل (form I)\n# أَطُلْ (ʔaṭul) /ʔa.tˤul/: first-person singular non-past active jussive of طَالَ (ṭāla)\n# أُطَلْ (ʔuṭal) /ʔu.tˤal/: first-person singular non-past passive jussive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaṭul", "ṭāla", "ʔuṭal"]
+    },
+    {
+      "madde": "تطالين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُطَالِينَ • (tuṭālīna) (form I) /tu.tˤaː.liː.na/\n# second-person feminine singular non-past passive indicative of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṭālīna", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطالي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُطَالِي • (tuṭālī) (form I) /tu.tˤaː.liː/\n# second-person feminine singular non-past passive subjunctive/jussive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṭālī", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طالت",
+      "tur": "verb",
+      "baslik": "طَالَتْ • (ṭālat) (form I) /tˤaː.lat/\n# third-person feminine singular past active of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭālat", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طيلت",
+      "tur": "verb",
+      "baslik": "طِيلَتْ • (ṭīlat) (form I) /tˤiː.lat/\n# third-person feminine singular past passive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭīlat", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طلت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "طلت (form I)\n# طُلْتُ (ṭultu) /tˤul.tu/: first-person singular past active of طَالَ (ṭāla)\n# طُلْتَ (ṭulta) /tˤul.ta/: second-person masculine singular past active of طَالَ (ṭāla)\n# طُلْتِ (ṭulti) /tˤul.ti/: second-person feminine singular past active of طَالَ (ṭāla)\n# طِلْتُ (ṭiltu) /tˤil.tu/: first-person singular past passive of طَالَ (ṭāla)\n# طِلْتَ (ṭilta) /tˤil.ta/: second-person masculine s",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭultu", "ṭāla", "ṭulta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طل",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "طُلْ • (ṭul) (form I) /tˤul/\n# second-person masculine singular imperative of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭul", "ṭāla"]
+    },
+    {
+      "madde": "تطولي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَطُولِي • (taṭūlī) (form I) /ta.tˤuː.liː/\n# second-person feminine singular non-past active subjunctive/jussive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭūlī", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطولين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَطُولِينَ • (taṭūlīna) (form I) /ta.tˤuː.liː.na/\n# second-person feminine singular non-past active indicative of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭūlīna", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طولي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "طُولِي • (ṭūlī) (form I) /tˤuː.liː/\n# second-person feminine singular imperative of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭūlī", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نطل",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نطل (form I)\n# نَطُلْ (naṭul) /na.tˤul/: first-person plural non-past active jussive of طَالَ (ṭāla)\n# نُطَلْ (nuṭal) /nu.tˤal/: first-person plural non-past passive jussive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naṭul", "ṭāla", "nuṭal"]
+    },
+    {
+      "madde": "نطال",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نطال (form I)\n# نُطَالُ (nuṭālu) /nu.tˤaː.lu/: first-person plural non-past passive indicative of طَالَ (ṭāla)\n# نُطَالَ (nuṭāla) /nu.tˤaː.la/: first-person plural non-past passive subjunctive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuṭālu", "ṭāla", "nuṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طلنا",
+      "tur": "verb",
+      "baslik": "طلنا (form I)\n# طُلْنَا (ṭulnā) /tˤul.naː/: first-person plural past active of طَالَ (ṭāla)\n# طِلْنَا (ṭilnā) /tˤil.naː/: first-person plural past passive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭulnā", "ṭāla", "ṭilnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نطول",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نطول (form I)\n# نَطُولُ (naṭūlu) /na.tˤuː.lu/: first-person plural non-past active indicative of طَالَ (ṭāla)\n# نَطُولَ (naṭūla) /na.tˤuː.la/: first-person plural non-past active subjunctive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naṭūlu", "ṭāla", "naṭūla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطالون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُطَالُونَ • (tuṭālūna) (form I) /tu.tˤaː.luː.na/\n# second-person masculine plural non-past passive indicative of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṭālūna", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطالوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُطَالُوا • (tuṭālū) (form I) /tu.tˤaː.luː/\n# second-person masculine plural non-past passive subjunctive/jussive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṭālū", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طلتم",
+      "tur": "verb",
+      "baslik": "طلتم (form I)\n# طُلْتُمْ (ṭultum) /tˤul.tum/: second-person masculine plural past active of طَالَ (ṭāla)\n# طِلْتُمْ (ṭiltum) /tˤil.tum/: second-person masculine plural past passive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭultum", "ṭāla", "ṭiltum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطولون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَطُولُونَ • (taṭūlūna) (form I) /ta.tˤuː.luː.na/\n# second-person masculine plural non-past active indicative of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭūlūna", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطالون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُطَالُونَ • (yuṭālūna) (form I) /ju.tˤaː.luː.na/\n# third-person masculine plural non-past passive indicative of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuṭālūna", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطالوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُطَالُوا • (yuṭālū) (form I) /ju.tˤaː.luː/\n# third-person masculine plural non-past passive subjunctive/jussive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuṭālū", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطولوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَطُولُوا • (taṭūlū) (form I) /ta.tˤuː.luː/\n# second-person masculine plural non-past active subjunctive/jussive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭūlū", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طالوا",
+      "tur": "verb",
+      "baslik": "طَالُوا • (ṭālū) (form I) /tˤaː.luː/\n# third-person masculine plural past active of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭālū", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطولون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَطُولُونَ • (yaṭūlūna) (form I) /ja.tˤuː.luː.na/\n# third-person masculine plural non-past active indicative of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭūlūna", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطولوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَطُولُوا • (yaṭūlū) (form I) /ja.tˤuː.luː/\n# third-person masculine plural non-past active subjunctive/jussive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭūlū", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طيلوا",
+      "tur": "verb",
+      "baslik": "طِيلُوا • (ṭīlū) (form I) /tˤiː.luː/\n# third-person masculine plural past passive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭīlū", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طولوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "طُولُوا • (ṭūlū) (form I) /tˤuː.luː/\n# second-person masculine plural imperative of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭūlū", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطلن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تطلن (form I)\n# تَطُلْنَ (taṭulna) /ta.tˤul.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of طَالَ (ṭāla)\n# تُطَلْنَ (tuṭalna) /tu.tˤal.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭulna", "ṭāla", "tuṭalna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طلتن",
+      "tur": "verb",
+      "baslik": "طلتن (form I)\n# طُلْتُنَّ (ṭultunna) /tˤul.tun.na/: second-person feminine plural past active of طَالَ (ṭāla)\n# طِلْتُنَّ (ṭiltunna) /tˤil.tun.na/: second-person feminine plural past passive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭultunna", "ṭāla", "ṭiltunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طلن",
+      "tur": "verb",
+      "baslik": "طلن (form I)\n# طُلْنَ (ṭulna) /tˤul.na/: inflection of طَالَ (ṭāla):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# طِلْنَ (ṭilna) /tˤil.na/: third-person feminine plural past passive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭulna", "ṭāla", "ṭilna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطلن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يطلن (form I)\n# يَطُلْنَ (yaṭulna) /ja.tˤul.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of طَالَ (ṭāla)\n# يُطَلْنَ (yuṭalna) /ju.tˤal.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭulna", "ṭāla", "yuṭalna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطالا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُطَالَا • (tuṭālā) (form I) /tu.tˤaː.laː/\n# inflection of طَالَ (ṭāla):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṭālā", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطالان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُطَالَانِ • (yuṭālāni) (form I) /ju.tˤaː.laː.ni/\n# third-person masculine dual non-past passive indicative of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuṭālāni", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطالان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُطَالَانِ • (tuṭālāni) (form I) /tu.tˤaː.laː.ni/\n# inflection of طَالَ (ṭāla):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṭālāni", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطالا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُطَالَا • (yuṭālā) (form I) /ju.tˤaː.laː/\n# third-person masculine dual non-past passive subjunctive/jussive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuṭālā", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطولا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَطُولَا • (taṭūlā) (form I) /ta.tˤuː.laː/\n# inflection of طَالَ (ṭāla):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭūlā", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طلتما",
+      "tur": "verb",
+      "baslik": "طلتما (form I)\n# طُلْتُمَا (ṭultumā) /tˤul.tu.maː/: second-person dual past active of طَالَ (ṭāla)\n# طِلْتُمَا (ṭiltumā) /tˤil.tu.maː/: second-person dual past passive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭultumā", "ṭāla", "ṭiltumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طالتا",
+      "tur": "verb",
+      "baslik": "طَالَتَا • (ṭālatā) (form I) /tˤaː.la.taː/\n# third-person feminine dual past active of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭālatā", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طالا",
+      "tur": "verb",
+      "baslik": "طَالَا • (ṭālā) (form I) /tˤaː.laː/\n# third-person masculine dual past active of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭālā", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطولان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَطُولَانِ • (yaṭūlāni) (form I) /ja.tˤuː.laː.ni/\n# third-person masculine dual non-past active indicative of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭūlāni", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطولان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَطُولَانِ • (taṭūlāni) (form I) /ta.tˤuː.laː.ni/\n# inflection of طَالَ (ṭāla):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭūlāni", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طيلا",
+      "tur": "verb",
+      "baslik": "طِيلَا • (ṭīlā) (form I) /tˤiː.laː/\n# third-person masculine dual past passive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭīlā", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطولا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَطُولَا • (yaṭūlā) (form I) /ja.tˤuː.laː/\n# third-person masculine dual non-past active subjunctive/jussive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭūlā", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طيلتا",
+      "tur": "verb",
+      "baslik": "طِيلَتَا • (ṭīlatā) (form I) /tˤiː.la.taː/\n# third-person feminine dual past passive of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭīlatā", "ṭāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طولا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "طُولَا • (ṭūlā) (form I) /tˤuː.laː/\n# second-person dual imperative of طَالَ (ṭāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭūlā", "ṭāla"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "طال", "r7"]
+  ],
+  "mana": {
     "ince": "stretch.v.02",
     "orta": "verb.body",
     "ust": "canlı ve beden",
@@ -704,22 +501,15 @@
     "dayanak_tanim": "extend one's limbs or muscles, or the entire body",
     "synset_sayisi": 6
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["cover.v.03", "elongate.v.01", "emerge.v.01", "prolong.v.01", "rise.v.04", "stretch.v.02"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["cover.v.03", "elongate.v.01", "emerge.v.01", "prolong.v.01", "rise.v.04", "stretch.v.02"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

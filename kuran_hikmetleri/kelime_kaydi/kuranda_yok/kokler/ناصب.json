@@ -1,483 +1,339 @@
 {
   "kok": "ناصب",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ناصب", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "ناصبي",
-        "u": "ناصبي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نَاصِبِي • (nāṣibī) (form III) /naː.sˤi.biː/\n# second-person feminine singular imperative of نَاصَبَ (nāṣaba)",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nāṣibī", "nāṣaba"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "ناصبا",
-        "u": "ناصبا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ناصبا (form III)\n# نَاصَبَا (nāṣabā) /naː.sˤa.baː/: third-person masculine dual past active of نَاصَبَ (nāṣaba)\n# نَاصِبَا (nāṣibā) /naː.sˤi.baː/: second-person dual imperative of نَاصَبَ (nāṣaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nāṣabā", "nāṣaba", "nāṣibā"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "ناصبتا",
-        "u": "ناصبتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَاصَبَتَا • (nāṣabatā) (form III) /naː.sˤa.ba.taː/\n# third-person feminine dual past active of نَاصَبَ (nāṣaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nāṣabatā", "nāṣaba"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "ناصبت",
-        "u": "ناصبت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ناصبت (form III)\n# نَاصَبْتُ (nāṣabtu) /naː.sˤab.tu/: first-person singular past active of نَاصَبَ (nāṣaba)\n# نَاصَبْتَ (nāṣabta) /naː.sˤab.ta/: second-person masculine singular past active of نَاصَبَ (nāṣaba)\n# نَاصَبْتِ (nāṣabti) /naː.sˤab.ti/: second-person feminine singular past active of نَاصَبَ (nāṣaba)\n# نَاصَبَتْ (nāṣabat) /naː.sˤa.bat/: third-person feminine singular past active of نَاصَب",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nāṣabtu", "nāṣaba", "nāṣabta"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "ناصبنا",
-        "u": "ناصبنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَاصَبْنَا • (nāṣabnā) (form III) /naː.sˤab.naː/\n# first-person plural past active of نَاصَبَ (nāṣaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nāṣabnā", "nāṣaba"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "ناصبتما",
-        "u": "ناصبتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَاصَبْتُمَا • (nāṣabtumā) (form III) /naː.sˤab.tu.maː/\n# second-person dual past active of نَاصَبَ (nāṣaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nāṣabtumā", "nāṣaba"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "نوصبا",
-        "u": "نوصبا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوصِبَا • (nūṣibā) (form III) /nuː.sˤi.baː/\n# third-person masculine dual past passive of نَاصَبَ (nāṣaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūṣibā", "nāṣaba"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "ناصبتم",
-        "u": "ناصبتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَاصَبْتُمْ • (nāṣabtum) (form III) /naː.sˤab.tum/\n# second-person masculine plural past active of نَاصَبَ (nāṣaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nāṣabtum", "nāṣaba"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "نوصبتم",
-        "u": "نوصبتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوصِبْتُمْ • (nūṣibtum) (form III) /nuː.sˤib.tum/\n# second-person masculine plural past passive of نَاصَبَ (nāṣaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūṣibtum", "nāṣaba"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "نوصبتا",
-        "u": "نوصبتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوصِبَتَا • (nūṣibatā) (form III) /nuː.sˤi.ba.taː/\n# third-person feminine dual past passive of نَاصَبَ (nāṣaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūṣibatā", "nāṣaba"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "نوصبنا",
-        "u": "نوصبنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوصِبْنَا • (nūṣibnā) (form III) /nuː.sˤib.naː/\n# first-person plural past passive of نَاصَبَ (nāṣaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūṣibnā", "nāṣaba"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "نوصبوا",
-        "u": "نوصبوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوصِبُوا • (nūṣibū) (form III) /nuː.sˤi.buː/\n# third-person masculine plural past passive of نَاصَبَ (nāṣaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūṣibū", "nāṣaba"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "نوصبتن",
-        "u": "نوصبتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوصِبْتُنَّ • (nūṣibtunna) (form III) /nuː.sˤib.tun.na/\n# second-person feminine plural past passive of نَاصَبَ (nāṣaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūṣibtunna", "nāṣaba"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "نوصب",
-        "u": "نوصب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوصِبَ • (nūṣiba) (form III) /nuː.sˤi.ba/\n# third-person masculine singular past passive of نَاصَبَ (nāṣaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūṣiba", "nāṣaba"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "أناصب",
-        "u": "أناصب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أناصب (form III)\n# أُنَاصِبُ (ʔunāṣibu) /ʔu.naː.sˤi.bu/: first-person singular non-past active indicative of نَاصَبَ (nāṣaba)\n# أُنَاصَبُ (ʔunāṣabu) /ʔu.naː.sˤa.bu/: first-person singular non-past passive indicative of نَاصَبَ (nāṣaba)\n# أُنَاصِبَ (ʔunāṣiba) /ʔu.naː.sˤi.ba/: first-person singular non-past active subjunctive of نَاصَبَ (nāṣaba)\n# أُنَاصَبَ (ʔunāṣaba) /ʔu.naː.sˤa.ba/: first-person s",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔunāṣibu", "nāṣaba", "ʔunāṣabu"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "ناصبن",
-        "u": "ناصبن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ناصبن (form III)\n# نَاصَبْنَ (nāṣabna) /naː.sˤab.na/: third-person feminine plural past active of نَاصَبَ (nāṣaba)\n# نَاصِبْنَ (nāṣibna) /naː.sˤib.na/: second-person feminine plural imperative of نَاصَبَ (nāṣaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nāṣabna", "nāṣaba", "nāṣibna"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "نوصبتما",
-        "u": "نوصبتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوصِبْتُمَا • (nūṣibtumā) (form III) /nuː.sˤib.tu.maː/\n# second-person dual past passive of نَاصَبَ (nāṣaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūṣibtumā", "nāṣaba"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "نوصبن",
-        "u": "نوصبن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوصِبْنَ • (nūṣibna) (form III) /nuː.sˤib.na/\n# third-person feminine plural past passive of نَاصَبَ (nāṣaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūṣibna", "nāṣaba"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "نوصبت",
-        "u": "نوصبت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نوصبت (form III)\n# نُوصِبْتُ (nūṣibtu) /nuː.sˤib.tu/: first-person singular past passive of نَاصَبَ (nāṣaba)\n# نُوصِبْتَ (nūṣibta) /nuː.sˤib.ta/: second-person masculine singular past passive of نَاصَبَ (nāṣaba)\n# نُوصِبْتِ (nūṣibti) /nuː.sˤib.ti/: second-person feminine singular past passive of نَاصَبَ (nāṣaba)\n# نُوصِبَتْ (nūṣibat) /nuː.sˤi.bat/: third-person feminine singular past passive of نَ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūṣibtu", "nāṣaba", "nūṣibta"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "تناصب",
-        "u": "تناصب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تناصب (form III)\n# تُنَاصِبُ (tunāṣibu) /tu.naː.sˤi.bu/: inflection of نَاصَبَ (nāṣaba):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُنَاصَبُ (tunāṣabu) /tu.naː.sˤa.bu/: inflection of نَاصَبَ (nāṣaba):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunāṣibu", "nāṣaba", "tunāṣabu"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "يناصبان",
-        "u": "يناصبان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يناصبان (form III)\n# يُنَاصِبَانِ (yunāṣibāni) /ju.naː.sˤi.baː.ni/: third-person masculine dual non-past active indicative of نَاصَبَ (nāṣaba)\n# يُنَاصَبَانِ (yunāṣabāni) /ju.naː.sˤa.baː.ni/: third-person masculine dual non-past passive indicative of نَاصَبَ (nāṣaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yunāṣibāni", "nāṣaba", "yunāṣabāni"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "تناصبان",
-        "u": "تناصبان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تناصبان (form III)\n# تُنَاصِبَانِ (tunāṣibāni) /tu.naː.sˤi.baː.ni/: inflection of نَاصَبَ (nāṣaba):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُنَاصَبَانِ (tunāṣabāni) /tu.naː.sˤa.baː.ni/: inflection of نَاصَبَ (nāṣaba):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunāṣibāni", "nāṣaba", "tunāṣabāni"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "نناصب",
-        "u": "نناصب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نناصب (form III)\n# نُنَاصِبُ (nunāṣibu) /nu.naː.sˤi.bu/: first-person plural non-past active indicative of نَاصَبَ (nāṣaba)\n# نُنَاصَبُ (nunāṣabu) /nu.naː.sˤa.bu/: first-person plural non-past passive indicative of نَاصَبَ (nāṣaba)\n# نُنَاصِبَ (nunāṣiba) /nu.naː.sˤi.ba/: first-person plural non-past active subjunctive of نَاصَبَ (nāṣaba)\n# نُنَاصَبَ (nunāṣaba) /nu.naː.sˤa.ba/: first-person plural ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nunāṣibu", "nāṣaba", "nunāṣabu"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "تناصبين",
-        "u": "تناصبين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تناصبين (form III)\n# تُنَاصِبِينَ (tunāṣibīna) /tu.naː.sˤi.biː.na/: second-person feminine singular non-past active indicative of نَاصَبَ (nāṣaba)\n# تُنَاصَبِينَ (tunāṣabīna) /tu.naː.sˤa.biː.na/: second-person feminine singular non-past passive indicative of نَاصَبَ (nāṣaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunāṣibīna", "nāṣaba", "tunāṣabīna"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "يناصب",
-        "u": "يناصب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يناصب (form III)\n# يُنَاصِبُ (yunāṣibu) /ju.naː.sˤi.bu/: third-person masculine singular non-past active indicative of نَاصَبَ (nāṣaba)\n# يُنَاصَبُ (yunāṣabu) /ju.naː.sˤa.bu/: third-person masculine singular non-past passive indicative of نَاصَبَ (nāṣaba)\n# يُنَاصِبَ (yunāṣiba) /ju.naː.sˤi.ba/: third-person masculine singular non-past active subjunctive of نَاصَبَ (nāṣaba)\n# يُنَاصَبَ (yunāṣaba) /",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yunāṣibu", "nāṣaba", "yunāṣabu"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "تناصبون",
-        "u": "تناصبون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تناصبون (form III)\n# تُنَاصِبُونَ (tunāṣibūna) /tu.naː.sˤi.buː.na/: second-person masculine plural non-past active indicative of نَاصَبَ (nāṣaba)\n# تُنَاصَبُونَ (tunāṣabūna) /tu.naː.sˤa.buː.na/: second-person masculine plural non-past passive indicative of نَاصَبَ (nāṣaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunāṣibūna", "nāṣaba", "tunāṣabūna"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "تناصبا",
-        "u": "تناصبا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تناصبا (form III)\n# تُنَاصِبَا (tunāṣibā) /tu.naː.sˤi.baː/: inflection of نَاصَبَ (nāṣaba):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُنَاصَبَا (tunāṣabā) /tu.naː.sˤa.baː/: inflection of نَاصَبَ (nāṣaba):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subj",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunāṣibā", "nāṣaba", "tunāṣabā"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "يناصبون",
-        "u": "يناصبون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يناصبون (form III)\n# يُنَاصِبُونَ (yunāṣibūna) /ju.naː.sˤi.buː.na/: third-person masculine plural non-past active indicative of نَاصَبَ (nāṣaba)\n# يُنَاصَبُونَ (yunāṣabūna) /ju.naː.sˤa.buː.na/: third-person masculine plural non-past passive indicative of نَاصَبَ (nāṣaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yunāṣibūna", "nāṣaba", "yunāṣabūna"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "يناصبن",
-        "u": "يناصبن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يناصبن (form III)\n# يُنَاصِبْنَ (yunāṣibna) /ju.naː.sˤib.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of نَاصَبَ (nāṣaba)\n# يُنَاصَبْنَ (yunāṣabna) /ju.naː.sˤab.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of نَاصَبَ (nāṣaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yunāṣibna", "nāṣaba", "yunāṣabna"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "يناصبوا",
-        "u": "يناصبوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يناصبوا (form III)\n# يُنَاصِبُوا (yunāṣibū) /ju.naː.sˤi.buː/: third-person masculine plural non-past active subjunctive/jussive of نَاصَبَ (nāṣaba)\n# يُنَاصَبُوا (yunāṣabū) /ju.naː.sˤa.buː/: third-person masculine plural non-past passive subjunctive/jussive of نَاصَبَ (nāṣaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yunāṣibū", "nāṣaba", "yunāṣabū"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "تناصبي",
-        "u": "تناصبي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تناصبي (form III)\n# تُنَاصِبِي (tunāṣibī) /tu.naː.sˤi.biː/: second-person feminine singular non-past active subjunctive/jussive of نَاصَبَ (nāṣaba)\n# تُنَاصَبِي (tunāṣabī) /tu.naː.sˤa.biː/: second-person feminine singular non-past passive subjunctive/jussive of نَاصَبَ (nāṣaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunāṣibī", "nāṣaba", "tunāṣabī"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "تناصبوا",
-        "u": "تناصبوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تناصبوا (form III)\n# تُنَاصِبُوا (tunāṣibū) /tu.naː.sˤi.buː/: second-person masculine plural non-past active subjunctive/jussive of نَاصَبَ (nāṣaba)\n# تُنَاصَبُوا (tunāṣabū) /tu.naː.sˤa.buː/: second-person masculine plural non-past passive subjunctive/jussive of نَاصَبَ (nāṣaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunāṣibū", "nāṣaba", "tunāṣabū"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "يناصبا",
-        "u": "يناصبا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يناصبا (form III)\n# يُنَاصِبَا (yunāṣibā) /ju.naː.sˤi.baː/: third-person masculine dual non-past active subjunctive/jussive of نَاصَبَ (nāṣaba)\n# يُنَاصَبَا (yunāṣabā) /ju.naː.sˤa.baː/: third-person masculine dual non-past passive subjunctive/jussive of نَاصَبَ (nāṣaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yunāṣibā", "nāṣaba", "yunāṣabā"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "ناصبوا",
-        "u": "ناصبوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ناصبوا (form III)\n# نَاصَبُوا (nāṣabū) /naː.sˤa.buː/: third-person masculine plural past active of نَاصَبَ (nāṣaba)\n# نَاصِبُوا (nāṣibū) /naː.sˤi.buː/: second-person masculine plural imperative of نَاصَبَ (nāṣaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nāṣabū", "nāṣaba", "nāṣibū"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "ناصبتن",
-        "u": "ناصبتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَاصَبْتُنَّ • (nāṣabtunna) (form III) /naː.sˤab.tun.na/\n# second-person feminine plural past active of نَاصَبَ (nāṣaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nāṣabtunna", "nāṣaba"],
-        "k": "ناصب",
-        "yol": "kök"
-      },
-      {
-        "w": "تناصبن",
-        "u": "تناصبن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تناصبن (form III)\n# تُنَاصِبْنَ (tunāṣibna) /tu.naː.sˤib.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of نَاصَبَ (nāṣaba)\n# تُنَاصَبْنَ (tunāṣabna) /tu.naː.sˤab.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of نَاصَبَ (nāṣaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunāṣibna", "nāṣaba", "tunāṣabna"],
-        "k": "ناصب",
-        "yol": "kök"
-      }
-    ],
-    "tercume": {}
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "نص",
+  "ses": {
     "harf": "ن",
+    "fasil": "نص",
     "mahrec": "zelakiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "ناصبي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نَاصِبِي • (nāṣibī) (form III) /naː.sˤi.biː/\n# second-person feminine singular imperative of نَاصَبَ (nāṣaba)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nāṣibī", "nāṣaba"]
+    },
+    {
+      "madde": "ناصبا",
+      "tur": "verb",
+      "baslik": "ناصبا (form III)\n# نَاصَبَا (nāṣabā) /naː.sˤa.baː/: third-person masculine dual past active of نَاصَبَ (nāṣaba)\n# نَاصِبَا (nāṣibā) /naː.sˤi.baː/: second-person dual imperative of نَاصَبَ (nāṣaba)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nāṣabā", "nāṣaba", "nāṣibā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ناصبتا",
+      "tur": "verb",
+      "baslik": "نَاصَبَتَا • (nāṣabatā) (form III) /naː.sˤa.ba.taː/\n# third-person feminine dual past active of نَاصَبَ (nāṣaba)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nāṣabatā", "nāṣaba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ناصبت",
+      "tur": "verb",
+      "baslik": "ناصبت (form III)\n# نَاصَبْتُ (nāṣabtu) /naː.sˤab.tu/: first-person singular past active of نَاصَبَ (nāṣaba)\n# نَاصَبْتَ (nāṣabta) /naː.sˤab.ta/: second-person masculine singular past active of نَاصَبَ (nāṣaba)\n# نَاصَبْتِ (nāṣabti) /naː.sˤab.ti/: second-person feminine singular past active of نَاصَبَ (nāṣaba)\n# نَاصَبَتْ (nāṣabat) /naː.sˤa.bat/: third-person feminine singular past active of نَاصَب",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nāṣabtu", "nāṣaba", "nāṣabta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ناصبنا",
+      "tur": "verb",
+      "baslik": "نَاصَبْنَا • (nāṣabnā) (form III) /naː.sˤab.naː/\n# first-person plural past active of نَاصَبَ (nāṣaba)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nāṣabnā", "nāṣaba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ناصبتما",
+      "tur": "verb",
+      "baslik": "نَاصَبْتُمَا • (nāṣabtumā) (form III) /naː.sˤab.tu.maː/\n# second-person dual past active of نَاصَبَ (nāṣaba)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nāṣabtumā", "nāṣaba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوصبا",
+      "tur": "verb",
+      "baslik": "نُوصِبَا • (nūṣibā) (form III) /nuː.sˤi.baː/\n# third-person masculine dual past passive of نَاصَبَ (nāṣaba)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūṣibā", "nāṣaba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ناصبتم",
+      "tur": "verb",
+      "baslik": "نَاصَبْتُمْ • (nāṣabtum) (form III) /naː.sˤab.tum/\n# second-person masculine plural past active of نَاصَبَ (nāṣaba)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nāṣabtum", "nāṣaba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوصبتم",
+      "tur": "verb",
+      "baslik": "نُوصِبْتُمْ • (nūṣibtum) (form III) /nuː.sˤib.tum/\n# second-person masculine plural past passive of نَاصَبَ (nāṣaba)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūṣibtum", "nāṣaba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوصبتا",
+      "tur": "verb",
+      "baslik": "نُوصِبَتَا • (nūṣibatā) (form III) /nuː.sˤi.ba.taː/\n# third-person feminine dual past passive of نَاصَبَ (nāṣaba)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūṣibatā", "nāṣaba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوصبنا",
+      "tur": "verb",
+      "baslik": "نُوصِبْنَا • (nūṣibnā) (form III) /nuː.sˤib.naː/\n# first-person plural past passive of نَاصَبَ (nāṣaba)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūṣibnā", "nāṣaba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوصبوا",
+      "tur": "verb",
+      "baslik": "نُوصِبُوا • (nūṣibū) (form III) /nuː.sˤi.buː/\n# third-person masculine plural past passive of نَاصَبَ (nāṣaba)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūṣibū", "nāṣaba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوصبتن",
+      "tur": "verb",
+      "baslik": "نُوصِبْتُنَّ • (nūṣibtunna) (form III) /nuː.sˤib.tun.na/\n# second-person feminine plural past passive of نَاصَبَ (nāṣaba)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūṣibtunna", "nāṣaba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوصب",
+      "tur": "verb",
+      "baslik": "نُوصِبَ • (nūṣiba) (form III) /nuː.sˤi.ba/\n# third-person masculine singular past passive of نَاصَبَ (nāṣaba)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūṣiba", "nāṣaba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أناصب",
+      "tur": "verb",
+      "baslik": "أناصب (form III)\n# أُنَاصِبُ (ʔunāṣibu) /ʔu.naː.sˤi.bu/: first-person singular non-past active indicative of نَاصَبَ (nāṣaba)\n# أُنَاصَبُ (ʔunāṣabu) /ʔu.naː.sˤa.bu/: first-person singular non-past passive indicative of نَاصَبَ (nāṣaba)\n# أُنَاصِبَ (ʔunāṣiba) /ʔu.naː.sˤi.ba/: first-person singular non-past active subjunctive of نَاصَبَ (nāṣaba)\n# أُنَاصَبَ (ʔunāṣaba) /ʔu.naː.sˤa.ba/: first-person s",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔunāṣibu", "nāṣaba", "ʔunāṣabu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ناصبن",
+      "tur": "verb",
+      "baslik": "ناصبن (form III)\n# نَاصَبْنَ (nāṣabna) /naː.sˤab.na/: third-person feminine plural past active of نَاصَبَ (nāṣaba)\n# نَاصِبْنَ (nāṣibna) /naː.sˤib.na/: second-person feminine plural imperative of نَاصَبَ (nāṣaba)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nāṣabna", "nāṣaba", "nāṣibna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوصبتما",
+      "tur": "verb",
+      "baslik": "نُوصِبْتُمَا • (nūṣibtumā) (form III) /nuː.sˤib.tu.maː/\n# second-person dual past passive of نَاصَبَ (nāṣaba)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūṣibtumā", "nāṣaba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوصبن",
+      "tur": "verb",
+      "baslik": "نُوصِبْنَ • (nūṣibna) (form III) /nuː.sˤib.na/\n# third-person feminine plural past passive of نَاصَبَ (nāṣaba)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūṣibna", "nāṣaba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوصبت",
+      "tur": "verb",
+      "baslik": "نوصبت (form III)\n# نُوصِبْتُ (nūṣibtu) /nuː.sˤib.tu/: first-person singular past passive of نَاصَبَ (nāṣaba)\n# نُوصِبْتَ (nūṣibta) /nuː.sˤib.ta/: second-person masculine singular past passive of نَاصَبَ (nāṣaba)\n# نُوصِبْتِ (nūṣibti) /nuː.sˤib.ti/: second-person feminine singular past passive of نَاصَبَ (nāṣaba)\n# نُوصِبَتْ (nūṣibat) /nuː.sˤi.bat/: third-person feminine singular past passive of نَ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūṣibtu", "nāṣaba", "nūṣibta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تناصب",
+      "tur": "verb",
+      "baslik": "تناصب (form III)\n# تُنَاصِبُ (tunāṣibu) /tu.naː.sˤi.bu/: inflection of نَاصَبَ (nāṣaba):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُنَاصَبُ (tunāṣabu) /tu.naː.sˤa.bu/: inflection of نَاصَبَ (nāṣaba):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunāṣibu", "nāṣaba", "tunāṣabu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يناصبان",
+      "tur": "verb",
+      "baslik": "يناصبان (form III)\n# يُنَاصِبَانِ (yunāṣibāni) /ju.naː.sˤi.baː.ni/: third-person masculine dual non-past active indicative of نَاصَبَ (nāṣaba)\n# يُنَاصَبَانِ (yunāṣabāni) /ju.naː.sˤa.baː.ni/: third-person masculine dual non-past passive indicative of نَاصَبَ (nāṣaba)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yunāṣibāni", "nāṣaba", "yunāṣabāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تناصبان",
+      "tur": "verb",
+      "baslik": "تناصبان (form III)\n# تُنَاصِبَانِ (tunāṣibāni) /tu.naː.sˤi.baː.ni/: inflection of نَاصَبَ (nāṣaba):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُنَاصَبَانِ (tunāṣabāni) /tu.naː.sˤa.baː.ni/: inflection of نَاصَبَ (nāṣaba):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunāṣibāni", "nāṣaba", "tunāṣabāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نناصب",
+      "tur": "verb",
+      "baslik": "نناصب (form III)\n# نُنَاصِبُ (nunāṣibu) /nu.naː.sˤi.bu/: first-person plural non-past active indicative of نَاصَبَ (nāṣaba)\n# نُنَاصَبُ (nunāṣabu) /nu.naː.sˤa.bu/: first-person plural non-past passive indicative of نَاصَبَ (nāṣaba)\n# نُنَاصِبَ (nunāṣiba) /nu.naː.sˤi.ba/: first-person plural non-past active subjunctive of نَاصَبَ (nāṣaba)\n# نُنَاصَبَ (nunāṣaba) /nu.naː.sˤa.ba/: first-person plural ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nunāṣibu", "nāṣaba", "nunāṣabu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تناصبين",
+      "tur": "verb",
+      "baslik": "تناصبين (form III)\n# تُنَاصِبِينَ (tunāṣibīna) /tu.naː.sˤi.biː.na/: second-person feminine singular non-past active indicative of نَاصَبَ (nāṣaba)\n# تُنَاصَبِينَ (tunāṣabīna) /tu.naː.sˤa.biː.na/: second-person feminine singular non-past passive indicative of نَاصَبَ (nāṣaba)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunāṣibīna", "nāṣaba", "tunāṣabīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يناصب",
+      "tur": "verb",
+      "baslik": "يناصب (form III)\n# يُنَاصِبُ (yunāṣibu) /ju.naː.sˤi.bu/: third-person masculine singular non-past active indicative of نَاصَبَ (nāṣaba)\n# يُنَاصَبُ (yunāṣabu) /ju.naː.sˤa.bu/: third-person masculine singular non-past passive indicative of نَاصَبَ (nāṣaba)\n# يُنَاصِبَ (yunāṣiba) /ju.naː.sˤi.ba/: third-person masculine singular non-past active subjunctive of نَاصَبَ (nāṣaba)\n# يُنَاصَبَ (yunāṣaba) /",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yunāṣibu", "nāṣaba", "yunāṣabu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تناصبون",
+      "tur": "verb",
+      "baslik": "تناصبون (form III)\n# تُنَاصِبُونَ (tunāṣibūna) /tu.naː.sˤi.buː.na/: second-person masculine plural non-past active indicative of نَاصَبَ (nāṣaba)\n# تُنَاصَبُونَ (tunāṣabūna) /tu.naː.sˤa.buː.na/: second-person masculine plural non-past passive indicative of نَاصَبَ (nāṣaba)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunāṣibūna", "nāṣaba", "tunāṣabūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تناصبا",
+      "tur": "verb",
+      "baslik": "تناصبا (form III)\n# تُنَاصِبَا (tunāṣibā) /tu.naː.sˤi.baː/: inflection of نَاصَبَ (nāṣaba):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُنَاصَبَا (tunāṣabā) /tu.naː.sˤa.baː/: inflection of نَاصَبَ (nāṣaba):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subj",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunāṣibā", "nāṣaba", "tunāṣabā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يناصبون",
+      "tur": "verb",
+      "baslik": "يناصبون (form III)\n# يُنَاصِبُونَ (yunāṣibūna) /ju.naː.sˤi.buː.na/: third-person masculine plural non-past active indicative of نَاصَبَ (nāṣaba)\n# يُنَاصَبُونَ (yunāṣabūna) /ju.naː.sˤa.buː.na/: third-person masculine plural non-past passive indicative of نَاصَبَ (nāṣaba)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yunāṣibūna", "nāṣaba", "yunāṣabūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يناصبن",
+      "tur": "verb",
+      "baslik": "يناصبن (form III)\n# يُنَاصِبْنَ (yunāṣibna) /ju.naː.sˤib.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of نَاصَبَ (nāṣaba)\n# يُنَاصَبْنَ (yunāṣabna) /ju.naː.sˤab.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of نَاصَبَ (nāṣaba)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yunāṣibna", "nāṣaba", "yunāṣabna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يناصبوا",
+      "tur": "verb",
+      "baslik": "يناصبوا (form III)\n# يُنَاصِبُوا (yunāṣibū) /ju.naː.sˤi.buː/: third-person masculine plural non-past active subjunctive/jussive of نَاصَبَ (nāṣaba)\n# يُنَاصَبُوا (yunāṣabū) /ju.naː.sˤa.buː/: third-person masculine plural non-past passive subjunctive/jussive of نَاصَبَ (nāṣaba)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yunāṣibū", "nāṣaba", "yunāṣabū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تناصبي",
+      "tur": "verb",
+      "baslik": "تناصبي (form III)\n# تُنَاصِبِي (tunāṣibī) /tu.naː.sˤi.biː/: second-person feminine singular non-past active subjunctive/jussive of نَاصَبَ (nāṣaba)\n# تُنَاصَبِي (tunāṣabī) /tu.naː.sˤa.biː/: second-person feminine singular non-past passive subjunctive/jussive of نَاصَبَ (nāṣaba)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunāṣibī", "nāṣaba", "tunāṣabī"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تناصبوا",
+      "tur": "verb",
+      "baslik": "تناصبوا (form III)\n# تُنَاصِبُوا (tunāṣibū) /tu.naː.sˤi.buː/: second-person masculine plural non-past active subjunctive/jussive of نَاصَبَ (nāṣaba)\n# تُنَاصَبُوا (tunāṣabū) /tu.naː.sˤa.buː/: second-person masculine plural non-past passive subjunctive/jussive of نَاصَبَ (nāṣaba)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunāṣibū", "nāṣaba", "tunāṣabū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يناصبا",
+      "tur": "verb",
+      "baslik": "يناصبا (form III)\n# يُنَاصِبَا (yunāṣibā) /ju.naː.sˤi.baː/: third-person masculine dual non-past active subjunctive/jussive of نَاصَبَ (nāṣaba)\n# يُنَاصَبَا (yunāṣabā) /ju.naː.sˤa.baː/: third-person masculine dual non-past passive subjunctive/jussive of نَاصَبَ (nāṣaba)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yunāṣibā", "nāṣaba", "yunāṣabā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ناصبوا",
+      "tur": "verb",
+      "baslik": "ناصبوا (form III)\n# نَاصَبُوا (nāṣabū) /naː.sˤa.buː/: third-person masculine plural past active of نَاصَبَ (nāṣaba)\n# نَاصِبُوا (nāṣibū) /naː.sˤi.buː/: second-person masculine plural imperative of نَاصَبَ (nāṣaba)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nāṣabū", "nāṣaba", "nāṣibū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ناصبتن",
+      "tur": "verb",
+      "baslik": "نَاصَبْتُنَّ • (nāṣabtunna) (form III) /naː.sˤab.tun.na/\n# second-person feminine plural past active of نَاصَبَ (nāṣaba)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nāṣabtunna", "nāṣaba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تناصبن",
+      "tur": "verb",
+      "baslik": "تناصبن (form III)\n# تُنَاصِبْنَ (tunāṣibna) /tu.naː.sˤib.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of نَاصَبَ (nāṣaba)\n# تُنَاصَبْنَ (tunāṣabna) /tu.naː.sˤab.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of نَاصَبَ (nāṣaba)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunāṣibna", "nāṣaba", "tunāṣabna"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ناصب", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

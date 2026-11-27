@@ -1,455 +1,331 @@
 {
   "kok": "وهى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "وهى", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "نه",
-        "u": "نه",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نَهِ • (nahi) (form I) /na.hi/\n# first-person plural non-past active jussive of وَهَى (wahā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nahi", "wahā"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "ه",
-        "u": "ه",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "هِ • (hi) (form I) /hi/\n# second-person masculine singular imperative of وَهَى (wahā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hi", "wahā"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "هوا",
-        "u": "هوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "هُوا • (hū) (form I) /huː/\n# second-person masculine plural imperative of وَهَى (wahā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hū", "wahā"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "ته",
-        "u": "ته",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَهِ • (tahi) (form I) /ta.hi/\n# inflection of وَهَى (wahā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahi", "wahā"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "هي",
-        "u": "هي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "هِي • (hī) (form I) /hiː/\n# second-person feminine singular imperative of وَهَى (wahā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hī", "wahā"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "يهين",
-        "u": "يهين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَهِينَ • (yahīna) (form I) /ja.hiː.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of وَهَى (wahā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahīna", "wahā"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "تهين",
-        "u": "تهين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَهِينَ • (tahīna) (form I) /ta.hiː.na/\n# inflection of وَهَى (wahā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahīna", "wahā"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "هيا",
-        "u": "هيا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "هِيَا • (hiyā) (form I) /hi.jaː/\n# second-person dual imperative of وَهَى (wahā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hiyā", "wahā"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "هين",
-        "u": "هين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "هِينَ • (hīna) (form I) /hiː.na/\n# second-person feminine plural imperative of وَهَى (wahā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hīna", "wahā"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "يهون",
-        "u": "يهون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يَهُونَ • (yahūna) (form I) /ja.huː.na/\n# third-person masculine plural non-past active indicative of وَهَى (wahā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahūna", "wahā"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "نهي",
-        "u": "نهي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نهي (form I)\n# نَهِي (nahī) /na.hiː/: first-person plural non-past active indicative of وَهَى (wahā)\n# نَهِيَ (nahiya) /na.hi.ja/: first-person plural non-past active subjunctive of وَهَى (wahā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nahī", "wahā", "nahiya"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "يه",
-        "u": "يه",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَهِ • (yahi) (form I) /ja.hi/\n# third-person masculine singular non-past active jussive of وَهَى (wahā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahi", "wahā"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "أه",
-        "u": "أه",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَهِ • (ʔahi) (form I) /ʔa.hi/\n# first-person singular non-past active jussive of وَهَى (wahā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔahi", "wahā"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "تهون",
-        "u": "تهون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَهُونَ • (tahūna) (form I) /ta.huː.na/\n# second-person masculine plural non-past active indicative of وَهَى (wahā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahūna", "wahā"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "وهت",
-        "u": "وهت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وَهَتْ • (wahat) (form I) /wa.hat/\n# third-person feminine singular past active of وَهَى (wahā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wahat", "wahā"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "وهيت",
-        "u": "وهيت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وهيت (form I)\n# وَهَيْتُ (wahaytu) /wa.haj.tu/: first-person singular past active of وَهَى (wahā)\n# وَهَيْتَ (wahayta) /wa.haj.ta/: second-person masculine singular past active of وَهَى (wahā)\n# وَهَيْتِ (wahayti) /wa.haj.ti/: second-person feminine singular past active of وَهَى (wahā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wahaytu", "wahā", "wahayta"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "وهيتما",
-        "u": "وهيتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وَهَيْتُمَا • (wahaytumā) (form I) /wa.haj.tu.maː/\n# second-person dual past active of وَهَى (wahā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wahaytumā", "wahā"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "وهيا",
-        "u": "وهيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وَهَيَا • (wahayā) (form I) /wa.ha.jaː/\n# third-person masculine dual past active of وَهَى (wahā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wahayā", "wahā"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "وهتا",
-        "u": "وهتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وَهَتَا • (wahatā) (form I) /wa.ha.taː/\n# third-person feminine dual past active of وَهَى (wahā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wahatā", "wahā"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "وهيتم",
-        "u": "وهيتم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وَهَيْتُمْ • (wahaytum) (form I) /wa.haj.tum/\n# second-person masculine plural past active of وَهَى (wahā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wahaytum", "wahā"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "وهينا",
-        "u": "وهينا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وَهَيْنَا • (wahaynā) (form I) /wa.haj.naː/\n# first-person plural past active of وَهَى (wahā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wahaynā", "wahā"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "وهيتن",
-        "u": "وهيتن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وَهَيْتُنَّ • (wahaytunna) (form I) /wa.haj.tun.na/\n# second-person feminine plural past active of وَهَى (wahā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wahaytunna", "wahā"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "وهين",
-        "u": "وهين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وَهَيْنَ • (wahayna) (form I) /wa.haj.na/\n# third-person feminine plural past active of وَهَى (wahā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wahayna", "wahā"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "أهي",
-        "u": "أهي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أهي (form I)\n# أَهِي (ʔahī) /ʔa.hiː/: first-person singular non-past active indicative of وَهَى (wahā)\n# أَهِيَ (ʔahiya) /ʔa.hi.ja/: first-person singular non-past active subjunctive of وَهَى (wahā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔahī", "wahā", "ʔahiya"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "يهي",
-        "u": "يهي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يهي (form I)\n# يَهِي (yahī) /ja.hiː/: third-person masculine singular non-past active indicative of وَهَى (wahā)\n# يَهِيَ (yahiya) /ja.hi.ja/: third-person masculine singular non-past active subjunctive of وَهَى (wahā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahī", "wahā", "yahiya"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "تهي",
-        "u": "تهي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تهي (form I)\n# تَهِي (tahī) /ta.hiː/: inflection of وَهَى (wahā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَهِيَ (tahiya) /ta.hi.ja/: inflection of وَهَى (wahā):\n## second-person masculine singular non-past active subjunctive\n## third-person f",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahī", "wahā", "tahiya"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "يهيا",
-        "u": "يهيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَهِيَا • (yahiyā) (form I) /ja.hi.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of وَهَى (wahā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahiyā", "wahā"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "تهيا",
-        "u": "تهيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهِيَا • (tahiyā) (form I) /ta.hi.jaː/\n# inflection of وَهَى (wahā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahiyā", "wahā"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "يهيان",
-        "u": "يهيان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَهِيَانِ • (yahiyāni) (form I) /ja.hi.jaː.ni/\n# third-person masculine dual non-past active indicative of وَهَى (wahā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahiyāni", "wahā"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "تهيان",
-        "u": "تهيان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهِيَانِ • (tahiyāni) (form I) /ta.hi.jaː.ni/\n# inflection of وَهَى (wahā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahiyāni", "wahā"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "يهوا",
-        "u": "يهوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَهُوا • (yahū) (form I) /ja.huː/\n# third-person masculine plural non-past active subjunctive/jussive of وَهَى (wahā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahū", "wahā"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "تهوا",
-        "u": "تهوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهُوا • (tahū) (form I) /ta.huː/\n# second-person masculine plural non-past active subjunctive/jussive of وَهَى (wahā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahū", "wahā"],
-        "k": "وهى",
-        "yol": "kök"
-      },
-      {
-        "w": "وهوا",
-        "u": "وهوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وَهَوْا • (wahaw) (form I) /wa.haw/\n# third-person masculine plural past active of وَهَى (wahā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wahaw", "wahā"],
-        "k": "وهى",
-        "yol": "kök"
-      }
-    ],
-    "tercume": {}
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "هى",
+  "ses": {
     "harf": "و",
+    "fasil": "هى",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "نه",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نَهِ • (nahi) (form I) /na.hi/\n# first-person plural non-past active jussive of وَهَى (wahā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nahi", "wahā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ه",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "هِ • (hi) (form I) /hi/\n# second-person masculine singular imperative of وَهَى (wahā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hi", "wahā"]
+    },
+    {
+      "madde": "هوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "هُوا • (hū) (form I) /huː/\n# second-person masculine plural imperative of وَهَى (wahā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hū", "wahā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ته",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَهِ • (tahi) (form I) /ta.hi/\n# inflection of وَهَى (wahā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahi", "wahā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "هِي • (hī) (form I) /hiː/\n# second-person feminine singular imperative of وَهَى (wahā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hī", "wahā"]
+    },
+    {
+      "madde": "يهين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَهِينَ • (yahīna) (form I) /ja.hiː.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of وَهَى (wahā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahīna", "wahā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَهِينَ • (tahīna) (form I) /ta.hiː.na/\n# inflection of وَهَى (wahā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahīna", "wahā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هيا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "هِيَا • (hiyā) (form I) /hi.jaː/\n# second-person dual imperative of وَهَى (wahā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hiyā", "wahā"]
+    },
+    {
+      "madde": "هين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "هِينَ • (hīna) (form I) /hiː.na/\n# second-person feminine plural imperative of وَهَى (wahā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hīna", "wahā"]
+    },
+    {
+      "madde": "يهون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يَهُونَ • (yahūna) (form I) /ja.huː.na/\n# third-person masculine plural non-past active indicative of وَهَى (wahā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahūna", "wahā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نهي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نهي (form I)\n# نَهِي (nahī) /na.hiː/: first-person plural non-past active indicative of وَهَى (wahā)\n# نَهِيَ (nahiya) /na.hi.ja/: first-person plural non-past active subjunctive of وَهَى (wahā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nahī", "wahā", "nahiya"]
+    },
+    {
+      "madde": "يه",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَهِ • (yahi) (form I) /ja.hi/\n# third-person masculine singular non-past active jussive of وَهَى (wahā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahi", "wahā"]
+    },
+    {
+      "madde": "أه",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَهِ • (ʔahi) (form I) /ʔa.hi/\n# first-person singular non-past active jussive of وَهَى (wahā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔahi", "wahā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَهُونَ • (tahūna) (form I) /ta.huː.na/\n# second-person masculine plural non-past active indicative of وَهَى (wahā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahūna", "wahā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "وهت",
+      "tur": "verb",
+      "baslik": "وَهَتْ • (wahat) (form I) /wa.hat/\n# third-person feminine singular past active of وَهَى (wahā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wahat", "wahā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "وهيت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وهيت (form I)\n# وَهَيْتُ (wahaytu) /wa.haj.tu/: first-person singular past active of وَهَى (wahā)\n# وَهَيْتَ (wahayta) /wa.haj.ta/: second-person masculine singular past active of وَهَى (wahā)\n# وَهَيْتِ (wahayti) /wa.haj.ti/: second-person feminine singular past active of وَهَى (wahā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wahaytu", "wahā", "wahayta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "وهيتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وَهَيْتُمَا • (wahaytumā) (form I) /wa.haj.tu.maː/\n# second-person dual past active of وَهَى (wahā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wahaytumā", "wahā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "وهيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وَهَيَا • (wahayā) (form I) /wa.ha.jaː/\n# third-person masculine dual past active of وَهَى (wahā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wahayā", "wahā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "وهتا",
+      "tur": "verb",
+      "baslik": "وَهَتَا • (wahatā) (form I) /wa.ha.taː/\n# third-person feminine dual past active of وَهَى (wahā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wahatā", "wahā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "وهيتم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وَهَيْتُمْ • (wahaytum) (form I) /wa.haj.tum/\n# second-person masculine plural past active of وَهَى (wahā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wahaytum", "wahā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "وهينا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وَهَيْنَا • (wahaynā) (form I) /wa.haj.naː/\n# first-person plural past active of وَهَى (wahā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wahaynā", "wahā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "وهيتن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وَهَيْتُنَّ • (wahaytunna) (form I) /wa.haj.tun.na/\n# second-person feminine plural past active of وَهَى (wahā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wahaytunna", "wahā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "وهين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وَهَيْنَ • (wahayna) (form I) /wa.haj.na/\n# third-person feminine plural past active of وَهَى (wahā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wahayna", "wahā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أهي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أهي (form I)\n# أَهِي (ʔahī) /ʔa.hiː/: first-person singular non-past active indicative of وَهَى (wahā)\n# أَهِيَ (ʔahiya) /ʔa.hi.ja/: first-person singular non-past active subjunctive of وَهَى (wahā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔahī", "wahā", "ʔahiya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يهي (form I)\n# يَهِي (yahī) /ja.hiː/: third-person masculine singular non-past active indicative of وَهَى (wahā)\n# يَهِيَ (yahiya) /ja.hi.ja/: third-person masculine singular non-past active subjunctive of وَهَى (wahā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahī", "wahā", "yahiya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تهي (form I)\n# تَهِي (tahī) /ta.hiː/: inflection of وَهَى (wahā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَهِيَ (tahiya) /ta.hi.ja/: inflection of وَهَى (wahā):\n## second-person masculine singular non-past active subjunctive\n## third-person f",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahī", "wahā", "tahiya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَهِيَا • (yahiyā) (form I) /ja.hi.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of وَهَى (wahā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahiyā", "wahā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهِيَا • (tahiyā) (form I) /ta.hi.jaː/\n# inflection of وَهَى (wahā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahiyā", "wahā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهيان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَهِيَانِ • (yahiyāni) (form I) /ja.hi.jaː.ni/\n# third-person masculine dual non-past active indicative of وَهَى (wahā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahiyāni", "wahā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهيان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهِيَانِ • (tahiyāni) (form I) /ta.hi.jaː.ni/\n# inflection of وَهَى (wahā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahiyāni", "wahā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَهُوا • (yahū) (form I) /ja.huː/\n# third-person masculine plural non-past active subjunctive/jussive of وَهَى (wahā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahū", "wahā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهُوا • (tahū) (form I) /ta.huː/\n# second-person masculine plural non-past active subjunctive/jussive of وَهَى (wahā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahū", "wahā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "وهوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وَهَوْا • (wahaw) (form I) /wa.haw/\n# third-person masculine plural past active of وَهَى (wahā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wahaw", "wahā"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "وهى", "r7"]
+  ],
+  "mana": {
     "ince": "fluid.n.02",
     "orta": "noun.substance",
     "ust": "tabiat",
@@ -457,22 +333,15 @@
     "dayanak_tanim": "a very light colorless element that is one of the six inert gasses; the most difficult gas to liquefy; occurs in economically extractable amounts in certain natural gases (as those found in Texas and Kansas)",
     "synset_sayisi": 2
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["act.n.02", "gas.n.02"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["act.n.02", "gas.n.02"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

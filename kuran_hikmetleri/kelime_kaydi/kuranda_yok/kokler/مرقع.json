@@ -1,64 +1,64 @@
 {
   "kok": "مرقع",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "مرقع", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "مرقعان",
-        "u": "مرقعان",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "مَرْقَعَان • (marqaʕān) m",
-        "t": "From مَرْقَعَ (marqaʕa) of the root م ر ق ع (m r q ʕ).",
-        "s": [
-          ["ar-root", "م ر ق ع (m r q ʕ)"]
-        ],
-        "synonyms": ["أَرْقَع"],
-        "g": ["silly, stupid, reckless"],
-        "r": ["marqaʕān"],
-        "el": [
-          ["مَرْقَعَ", "مرقع#Arabic"],
-          ["م ر ق ع", "Appendix:Arabic roots/م ر ق ع"]
-        ],
-        "k": "مرقع",
-        "yol": "kök"
-      },
-      {
-        "w": "تمرقع",
-        "u": "تمرقع",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "تَمَرْقَعَ • (tamarqaʕa) IIq (non-past يَتَمَرْقَعُ (yatamarqaʕu), verbal noun تَمَرْقُع (tamarquʕ))",
-        "g": ["to party hearty, to do reckless things"],
-        "r": ["tamarqaʕa"],
-        "k": "مرقع",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "مر",
+  "ses": {
     "harf": "م",
+    "fasil": "مر",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "مرقعان",
+      "tur": "noun",
+      "baslik": "مَرْقَعَان • (marqaʕān) m",
+      "etim_sablon": [
+        ["ar-root", "م ر ق ع (m r q ʕ)"]
+      ],
+      "esanlamli": ["أَرْقَع"],
+      "anlam": ["silly, stupid, reckless"],
+      "okunus": ["marqaʕān"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تمرقع",
+      "tur": "verb",
+      "baslik": "تَمَرْقَعَ • (tamarqaʕa) IIq (non-past يَتَمَرْقَعُ (yatamarqaʕu), verbal noun تَمَرْقُع (tamarquʕ))",
+      "anlam": ["to party hearty, to do reckless things"],
+      "okunus": ["tamarqaʕa"]
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "From مَرْقَعَ (marqaʕa) of the root م ر ق ع (m r q ʕ).",
+      "kognatlar": [
+        ["مَرْقَعَ", "مرقع#Arabic"],
+        ["م ر ق ع", "Appendix:Arabic roots/م ر ق ع"]
+      ]
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "مرقع", "r6"]
+  ],
+  "mana": {
     "ince": "person.n.01",
     "orta": "noun.person",
     "ust": "insan ve toplum",
@@ -66,20 +66,8 @@
     "dayanak_tanim": "a word used for misbehaving children",
     "dayanak_karsilik": "silly"
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m2",
+  "gomme": {
     "ust": {
       "kume": 8,
       "merkez_kok": "سير",
@@ -99,6 +87,10 @@
       "boy": 4
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

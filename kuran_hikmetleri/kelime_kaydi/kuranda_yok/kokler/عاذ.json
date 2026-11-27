@@ -1,482 +1,335 @@
 {
   "kok": "عاذ",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "عاذ", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "عاذت",
-        "u": "عاذت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عَاذَتْ • (ʕāḏat) (form I) /ʕaː.ðat/\n# third-person feminine singular past active of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕāḏat", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "عاذتا",
-        "u": "عاذتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عَاذَتَا • (ʕāḏatā) (form I) /ʕaː.ða.taː/\n# third-person feminine dual past active of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕāḏatā", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "عذت",
-        "u": "عذت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عذت (form I)\n# عُذْتُ (ʕuḏtu) /ʕuð.tu/: first-person singular past active of عَاذَ (ʕāḏa)\n# عُذْتَ (ʕuḏta) /ʕuð.ta/: second-person masculine singular past active of عَاذَ (ʕāḏa)\n# عُذْتِ (ʕuḏti) /ʕuð.ti/: second-person feminine singular past active of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕuḏtu", "ʕāḏa", "ʕuḏta"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "عاذا",
-        "u": "عاذا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عَاذَا • (ʕāḏā) (form I) /ʕaː.ðaː/\n# third-person masculine dual past active of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕāḏā", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "عذتما",
-        "u": "عذتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عُذْتُمَا • (ʕuḏtumā) (form I) /ʕuð.tu.maː/\n# second-person dual past active of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕuḏtumā", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "عذنا",
-        "u": "عذنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عُذْنَا • (ʕuḏnā) (form I) /ʕuð.naː/\n# first-person plural past active of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕuḏnā", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "عذتن",
-        "u": "عذتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عُذْتُنَّ • (ʕuḏtunna) (form I) /ʕuð.tun.na/\n# second-person feminine plural past active of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕuḏtunna", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "عاذوا",
-        "u": "عاذوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عَاذُوا • (ʕāḏū) (form I) /ʕaː.ðuː/\n# third-person masculine plural past active of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕāḏū", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "عذن",
-        "u": "عذن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عُذْنَ • (ʕuḏna) (form I) /ʕuð.na/\n# inflection of عَاذَ (ʕāḏa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕuḏna", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "تعوذ",
-        "u": "تعوذ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تعوذ (form I)\n# تَعُوذُ (taʕūḏu) /ta.ʕuː.ðu/: inflection of عَاذَ (ʕāḏa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَعُوذَ (taʕūḏa) /ta.ʕuː.ða/: inflection of عَاذَ (ʕāḏa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʕūḏu", "ʕāḏa", "taʕūḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "عذتم",
-        "u": "عذتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عُذْتُمْ • (ʕuḏtum) (form I) /ʕuð.tum/\n# second-person masculine plural past active of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕuḏtum", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "عيذ",
-        "u": "عيذ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عِيذَ • (ʕīḏa) (form I) /ʕiː.ða/\n# third-person masculine singular past passive of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕīḏa", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "أعوذ",
-        "u": "أعوذ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعوذ (form I)\n# أَعُوذُ (ʔaʕūḏu) /ʔa.ʕuː.ðu/: first-person singular non-past active indicative of عَاذَ (ʕāḏa)\n# أَعُوذَ (ʔaʕūḏa) /ʔa.ʕuː.ða/: first-person singular non-past active subjunctive of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaʕūḏu", "ʕāḏa", "ʔaʕūḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "تعوذين",
-        "u": "تعوذين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَعُوذِينَ • (taʕūḏīna) (form I) /ta.ʕuː.ðiː.na/\n# second-person feminine singular non-past active indicative of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʕūḏīna", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "يعوذ",
-        "u": "يعوذ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يعوذ (form I)\n# يَعُوذُ (yaʕūḏu) /ja.ʕuː.ðu/: third-person masculine singular non-past active indicative of عَاذَ (ʕāḏa)\n# يَعُوذَ (yaʕūḏa) /ja.ʕuː.ða/: third-person masculine singular non-past active subjunctive of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʕūḏu", "ʕāḏa", "yaʕūḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "تعوذون",
-        "u": "تعوذون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَعُوذُونَ • (taʕūḏūna) (form I) /ta.ʕuː.ðuː.na/\n# second-person masculine plural non-past active indicative of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʕūḏūna", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "يعوذان",
-        "u": "يعوذان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَعُوذَانِ • (yaʕūḏāni) (form I) /ja.ʕuː.ðaː.ni/\n# third-person masculine dual non-past active indicative of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʕūḏāni", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "نعوذ",
-        "u": "نعوذ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نعوذ (form I)\n# نَعُوذُ (naʕūḏu) /na.ʕuː.ðu/: first-person plural non-past active indicative of عَاذَ (ʕāḏa)\n# نَعُوذَ (naʕūḏa) /na.ʕuː.ða/: first-person plural non-past active subjunctive of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naʕūḏu", "ʕāḏa", "naʕūḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "تعوذان",
-        "u": "تعوذان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَعُوذَانِ • (taʕūḏāni) (form I) /ta.ʕuː.ðaː.ni/\n# inflection of عَاذَ (ʕāḏa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʕūḏāni", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "يعوذون",
-        "u": "يعوذون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَعُوذُونَ • (yaʕūḏūna) (form I) /ja.ʕuː.ðuː.na/\n# third-person masculine plural non-past active indicative of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʕūḏūna", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "يعاذ",
-        "u": "يعاذ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يعاذ (form I)\n# يُعَاذُ (yuʕāḏu) /ju.ʕaː.ðu/: third-person masculine singular non-past passive indicative of عَاذَ (ʕāḏa)\n# يُعَاذَ (yuʕāḏa) /ju.ʕaː.ða/: third-person masculine singular non-past passive subjunctive of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuʕāḏu", "ʕāḏa", "yuʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "تعوذي",
-        "u": "تعوذي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَعُوذِي • (taʕūḏī) (form I) /ta.ʕuː.ðiː/\n# second-person feminine singular non-past active subjunctive/jussive of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʕūḏī", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "تعذن",
-        "u": "تعذن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَعُذْنَ • (taʕuḏna) (form I) /ta.ʕuð.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʕuḏna", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "يعوذا",
-        "u": "يعوذا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَعُوذَا • (yaʕūḏā) (form I) /ja.ʕuː.ðaː/\n# third-person masculine dual non-past active subjunctive/jussive of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʕūḏā", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "تعوذا",
-        "u": "تعوذا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَعُوذَا • (taʕūḏā) (form I) /ta.ʕuː.ðaː/\n# inflection of عَاذَ (ʕāḏa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʕūḏā", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "يعوذوا",
-        "u": "يعوذوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَعُوذُوا • (yaʕūḏū) (form I) /ja.ʕuː.ðuː/\n# third-person masculine plural non-past active subjunctive/jussive of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʕūḏū", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "يعذ",
-        "u": "يعذ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يعذ (form I)\n# يَعُذْ (yaʕuḏ) /ja.ʕuð/: third-person masculine singular non-past active jussive of عَاذَ (ʕāḏa)\n# يُعَذْ (yuʕaḏ) /ju.ʕað/: third-person masculine singular non-past passive jussive of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʕuḏ", "ʕāḏa", "yuʕaḏ"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "تعوذوا",
-        "u": "تعوذوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَعُوذُوا • (taʕūḏū) (form I) /ta.ʕuː.ðuː/\n# second-person masculine plural non-past active subjunctive/jussive of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʕūḏū", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "تعذ",
-        "u": "تعذ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَعُذْ • (taʕuḏ) (form I) /ta.ʕuð/\n# inflection of عَاذَ (ʕāḏa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʕuḏ", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "أعذ",
-        "u": "أعذ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَعُذْ • (ʔaʕuḏ) (form I) /ʔa.ʕuð/\n# first-person singular non-past active jussive of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaʕuḏ", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "نعذ",
-        "u": "نعذ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَعُذْ • (naʕuḏ) (form I) /na.ʕuð/\n# first-person plural non-past active jussive of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naʕuḏ", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "عذ",
-        "u": "عذ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عُذْ • (ʕuḏ) (form I) /ʕuð/\n# second-person masculine singular imperative of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕuḏ", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "عوذا",
-        "u": "عوذا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عُوذَا • (ʕūḏā) (form I) /ʕuː.ðaː/\n# second-person dual imperative of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕūḏā", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "عوذي",
-        "u": "عوذي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عُوذِي • (ʕūḏī) (form I) /ʕuː.ðiː/\n# second-person feminine singular imperative of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕūḏī", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "يعذن",
-        "u": "يعذن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَعُذْنَ • (yaʕuḏna) (form I) /ja.ʕuð.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʕuḏna", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      },
-      {
-        "w": "عوذوا",
-        "u": "عوذوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عُوذُوا • (ʕūḏū) (form I) /ʕuː.ðuː/\n# second-person masculine plural imperative of عَاذَ (ʕāḏa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕūḏū", "ʕāḏa"],
-        "k": "عاذ",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "عذ",
+  "ses": {
     "harf": "ع",
+    "fasil": "عذ",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "عاذت",
+      "tur": "verb",
+      "baslik": "عَاذَتْ • (ʕāḏat) (form I) /ʕaː.ðat/\n# third-person feminine singular past active of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕāḏat", "ʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عاذتا",
+      "tur": "verb",
+      "baslik": "عَاذَتَا • (ʕāḏatā) (form I) /ʕaː.ða.taː/\n# third-person feminine dual past active of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕāḏatā", "ʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عذت",
+      "tur": "verb",
+      "baslik": "عذت (form I)\n# عُذْتُ (ʕuḏtu) /ʕuð.tu/: first-person singular past active of عَاذَ (ʕāḏa)\n# عُذْتَ (ʕuḏta) /ʕuð.ta/: second-person masculine singular past active of عَاذَ (ʕāḏa)\n# عُذْتِ (ʕuḏti) /ʕuð.ti/: second-person feminine singular past active of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕuḏtu", "ʕāḏa", "ʕuḏta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عاذا",
+      "tur": "verb",
+      "baslik": "عَاذَا • (ʕāḏā) (form I) /ʕaː.ðaː/\n# third-person masculine dual past active of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕāḏā", "ʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عذتما",
+      "tur": "verb",
+      "baslik": "عُذْتُمَا • (ʕuḏtumā) (form I) /ʕuð.tu.maː/\n# second-person dual past active of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕuḏtumā", "ʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عذنا",
+      "tur": "verb",
+      "baslik": "عُذْنَا • (ʕuḏnā) (form I) /ʕuð.naː/\n# first-person plural past active of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕuḏnā", "ʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عذتن",
+      "tur": "verb",
+      "baslik": "عُذْتُنَّ • (ʕuḏtunna) (form I) /ʕuð.tun.na/\n# second-person feminine plural past active of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕuḏtunna", "ʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عاذوا",
+      "tur": "verb",
+      "baslik": "عَاذُوا • (ʕāḏū) (form I) /ʕaː.ðuː/\n# third-person masculine plural past active of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕāḏū", "ʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عذن",
+      "tur": "verb",
+      "baslik": "عُذْنَ • (ʕuḏna) (form I) /ʕuð.na/\n# inflection of عَاذَ (ʕāḏa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕuḏna", "ʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعوذ",
+      "tur": "verb",
+      "baslik": "تعوذ (form I)\n# تَعُوذُ (taʕūḏu) /ta.ʕuː.ðu/: inflection of عَاذَ (ʕāḏa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَعُوذَ (taʕūḏa) /ta.ʕuː.ða/: inflection of عَاذَ (ʕāḏa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʕūḏu", "ʕāḏa", "taʕūḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عذتم",
+      "tur": "verb",
+      "baslik": "عُذْتُمْ • (ʕuḏtum) (form I) /ʕuð.tum/\n# second-person masculine plural past active of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕuḏtum", "ʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عيذ",
+      "tur": "verb",
+      "baslik": "عِيذَ • (ʕīḏa) (form I) /ʕiː.ða/\n# third-person masculine singular past passive of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕīḏa", "ʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعوذ",
+      "tur": "verb",
+      "baslik": "أعوذ (form I)\n# أَعُوذُ (ʔaʕūḏu) /ʔa.ʕuː.ðu/: first-person singular non-past active indicative of عَاذَ (ʕāḏa)\n# أَعُوذَ (ʔaʕūḏa) /ʔa.ʕuː.ða/: first-person singular non-past active subjunctive of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaʕūḏu", "ʕāḏa", "ʔaʕūḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعوذين",
+      "tur": "verb",
+      "baslik": "تَعُوذِينَ • (taʕūḏīna) (form I) /ta.ʕuː.ðiː.na/\n# second-person feminine singular non-past active indicative of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʕūḏīna", "ʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعوذ",
+      "tur": "verb",
+      "baslik": "يعوذ (form I)\n# يَعُوذُ (yaʕūḏu) /ja.ʕuː.ðu/: third-person masculine singular non-past active indicative of عَاذَ (ʕāḏa)\n# يَعُوذَ (yaʕūḏa) /ja.ʕuː.ða/: third-person masculine singular non-past active subjunctive of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʕūḏu", "ʕāḏa", "yaʕūḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعوذون",
+      "tur": "verb",
+      "baslik": "تَعُوذُونَ • (taʕūḏūna) (form I) /ta.ʕuː.ðuː.na/\n# second-person masculine plural non-past active indicative of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʕūḏūna", "ʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعوذان",
+      "tur": "verb",
+      "baslik": "يَعُوذَانِ • (yaʕūḏāni) (form I) /ja.ʕuː.ðaː.ni/\n# third-person masculine dual non-past active indicative of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʕūḏāni", "ʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نعوذ",
+      "tur": "verb",
+      "baslik": "نعوذ (form I)\n# نَعُوذُ (naʕūḏu) /na.ʕuː.ðu/: first-person plural non-past active indicative of عَاذَ (ʕāḏa)\n# نَعُوذَ (naʕūḏa) /na.ʕuː.ða/: first-person plural non-past active subjunctive of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naʕūḏu", "ʕāḏa", "naʕūḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعوذان",
+      "tur": "verb",
+      "baslik": "تَعُوذَانِ • (taʕūḏāni) (form I) /ta.ʕuː.ðaː.ni/\n# inflection of عَاذَ (ʕāḏa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʕūḏāni", "ʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعوذون",
+      "tur": "verb",
+      "baslik": "يَعُوذُونَ • (yaʕūḏūna) (form I) /ja.ʕuː.ðuː.na/\n# third-person masculine plural non-past active indicative of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʕūḏūna", "ʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعاذ",
+      "tur": "verb",
+      "baslik": "يعاذ (form I)\n# يُعَاذُ (yuʕāḏu) /ju.ʕaː.ðu/: third-person masculine singular non-past passive indicative of عَاذَ (ʕāḏa)\n# يُعَاذَ (yuʕāḏa) /ju.ʕaː.ða/: third-person masculine singular non-past passive subjunctive of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuʕāḏu", "ʕāḏa", "yuʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعوذي",
+      "tur": "verb",
+      "baslik": "تَعُوذِي • (taʕūḏī) (form I) /ta.ʕuː.ðiː/\n# second-person feminine singular non-past active subjunctive/jussive of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʕūḏī", "ʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعذن",
+      "tur": "verb",
+      "baslik": "تَعُذْنَ • (taʕuḏna) (form I) /ta.ʕuð.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʕuḏna", "ʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعوذا",
+      "tur": "verb",
+      "baslik": "يَعُوذَا • (yaʕūḏā) (form I) /ja.ʕuː.ðaː/\n# third-person masculine dual non-past active subjunctive/jussive of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʕūḏā", "ʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعوذا",
+      "tur": "verb",
+      "baslik": "تَعُوذَا • (taʕūḏā) (form I) /ta.ʕuː.ðaː/\n# inflection of عَاذَ (ʕāḏa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʕūḏā", "ʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعوذوا",
+      "tur": "verb",
+      "baslik": "يَعُوذُوا • (yaʕūḏū) (form I) /ja.ʕuː.ðuː/\n# third-person masculine plural non-past active subjunctive/jussive of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʕūḏū", "ʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعذ",
+      "tur": "verb",
+      "baslik": "يعذ (form I)\n# يَعُذْ (yaʕuḏ) /ja.ʕuð/: third-person masculine singular non-past active jussive of عَاذَ (ʕāḏa)\n# يُعَذْ (yuʕaḏ) /ju.ʕað/: third-person masculine singular non-past passive jussive of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʕuḏ", "ʕāḏa", "yuʕaḏ"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعوذوا",
+      "tur": "verb",
+      "baslik": "تَعُوذُوا • (taʕūḏū) (form I) /ta.ʕuː.ðuː/\n# second-person masculine plural non-past active subjunctive/jussive of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʕūḏū", "ʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعذ",
+      "tur": "verb",
+      "baslik": "تَعُذْ • (taʕuḏ) (form I) /ta.ʕuð/\n# inflection of عَاذَ (ʕāḏa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʕuḏ", "ʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعذ",
+      "tur": "verb",
+      "baslik": "أَعُذْ • (ʔaʕuḏ) (form I) /ʔa.ʕuð/\n# first-person singular non-past active jussive of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaʕuḏ", "ʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نعذ",
+      "tur": "verb",
+      "baslik": "نَعُذْ • (naʕuḏ) (form I) /na.ʕuð/\n# first-person plural non-past active jussive of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naʕuḏ", "ʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عذ",
+      "tur": "verb",
+      "baslik": "عُذْ • (ʕuḏ) (form I) /ʕuð/\n# second-person masculine singular imperative of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕuḏ", "ʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عوذا",
+      "tur": "verb",
+      "baslik": "عُوذَا • (ʕūḏā) (form I) /ʕuː.ðaː/\n# second-person dual imperative of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕūḏā", "ʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عوذي",
+      "tur": "verb",
+      "baslik": "عُوذِي • (ʕūḏī) (form I) /ʕuː.ðiː/\n# second-person feminine singular imperative of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕūḏī", "ʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعذن",
+      "tur": "verb",
+      "baslik": "يَعُذْنَ • (yaʕuḏna) (form I) /ja.ʕuð.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʕuḏna", "ʕāḏa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عوذوا",
+      "tur": "verb",
+      "baslik": "عُوذُوا • (ʕūḏū) (form I) /ʕuː.ðuː/\n# second-person masculine plural imperative of عَاذَ (ʕāḏa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕūḏū", "ʕāḏa"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "عاذ", "r7"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

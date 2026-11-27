@@ -1,490 +1,359 @@
 {
   "kok": "ساف",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ساف", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "سفن",
-        "u": "سفن",
-        "p": "noun",
-        "n": "1.3",
-        "h": "ar-noun",
-        "e": "سَفْن • (safn) m",
-        "g": ["verbal noun of سَفَنَ (safana)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["سَفَنَ"],
-        "r": ["safn"],
-        "ipa": ["/safn/"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "سفن",
-        "u": "سفن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "سفن (form I)\n# سُفْنَ (sufna) /suf.na/: inflection of سَافَ (sāfa):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# سِفْنَ (sifna) /sif.na/: third-person feminine plural past passive of سَافَ (sāfa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sufna", "sāfa", "sifna"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "يسوف",
-        "u": "يسوف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يسوف (form I)\n# يَسُوفُ (yasūfu) /ja.suː.fu/: third-person masculine singular non-past active indicative of سَافَ (sāfa)\n# يَسُوفَ (yasūfa) /ja.suː.fa/: third-person masculine singular non-past active subjunctive of سَافَ (sāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasūfu", "sāfa", "yasūfa"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "تسوف",
-        "u": "تسوف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تسوف (form I)\n# تَسُوفُ (tasūfu) /ta.suː.fu/: inflection of سَافَ (sāfa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَسُوفَ (tasūfa) /ta.suː.fa/: inflection of سَافَ (sāfa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasūfu", "sāfa", "tasūfa"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "تسوفين",
-        "u": "تسوفين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَسُوفِينَ • (tasūfīna) (form I) /ta.suː.fiː.na/\n# second-person feminine singular non-past active indicative of سَافَ (sāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasūfīna", "sāfa"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "تسوفي",
-        "u": "تسوفي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَسُوفِي • (tasūfī) (form I) /ta.suː.fiː/\n# second-person feminine singular non-past active subjunctive/jussive of سَافَ (sāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasūfī", "sāfa"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "سوفي",
-        "u": "سوفي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "سُوفِي • (sūfī) (form I) /suː.fiː/\n# second-person feminine singular imperative of سَافَ (sāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sūfī", "sāfa"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "أسوف",
-        "u": "أسوف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أسوف (form I)\n# أَسُوفُ (ʔasūfu) /ʔa.suː.fu/: first-person singular non-past active indicative of سَافَ (sāfa)\n# أَسُوفَ (ʔasūfa) /ʔa.suː.fa/: first-person singular non-past active subjunctive of سَافَ (sāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔasūfu", "sāfa", "ʔasūfa"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "نسوف",
-        "u": "نسوف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نسوف (form I)\n# نَسُوفُ (nasūfu) /na.suː.fu/: first-person plural non-past active indicative of سَافَ (sāfa)\n# نَسُوفَ (nasūfa) /na.suː.fa/: first-person plural non-past active subjunctive of سَافَ (sāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nasūfu", "sāfa", "nasūfa"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "تسوفون",
-        "u": "تسوفون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَسُوفُونَ • (tasūfūna) (form I) /ta.suː.fuː.na/\n# second-person masculine plural non-past active indicative of سَافَ (sāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasūfūna", "sāfa"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "تسوفوا",
-        "u": "تسوفوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَسُوفُوا • (tasūfū) (form I) /ta.suː.fuː/\n# second-person masculine plural non-past active subjunctive/jussive of سَافَ (sāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasūfū", "sāfa"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "سوفوا",
-        "u": "سوفوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "سُوفُوا • (sūfū) (form I) /suː.fuː/\n# second-person masculine plural imperative of سَافَ (sāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sūfū", "sāfa"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "يسوفون",
-        "u": "يسوفون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَسُوفُونَ • (yasūfūna) (form I) /ja.suː.fuː.na/\n# third-person masculine plural non-past active indicative of سَافَ (sāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasūfūna", "sāfa"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "يسوفوا",
-        "u": "يسوفوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَسُوفُوا • (yasūfū) (form I) /ja.suː.fuː/\n# third-person masculine plural non-past active subjunctive/jussive of سَافَ (sāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasūfū", "sāfa"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "سفت",
-        "u": "سفت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سفت (form I)\n# سُفْتُ (suftu) /suf.tu/: first-person singular past active of سَافَ (sāfa)\n# سُفْتَ (sufta) /suf.ta/: second-person masculine singular past active of سَافَ (sāfa)\n# سُفْتِ (sufti) /suf.ti/: second-person feminine singular past active of سَافَ (sāfa)\n# سِفْتُ (siftu) /sif.tu/: first-person singular past passive of سَافَ (sāfa)\n# سِفْتَ (sifta) /sif.ta/: second-person masculine singul",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["suftu", "sāfa", "sufta"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "نسف",
-        "u": "نسف",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نسف (form I)\n# نَسُفْ (nasuf) /na.suf/: first-person plural non-past active jussive of سَافَ (sāfa)\n# نُسَفْ (nusaf) /nu.saf/: first-person plural non-past passive jussive of سَافَ (sāfa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nasuf", "sāfa", "nusaf"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "السفن",
-        "u": "السفن",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "السُّفُن • (as-sufun) pl",
-        "g": ["definite of سُفٌن (sufunn, “ships”)"],
-        "tag": ["definite", "form-of"],
-        "fo": ["سُفٌن"],
-        "r": ["as-sufun"],
-        "ipa": ["/as.su.fun/"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "أسف",
-        "u": "أسف",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أسف (form I)\n# أَسُفْ (ʔasuf) /ʔa.suf/: first-person singular non-past active jussive of سَافَ (sāfa)\n# أُسَفْ (ʔusaf) /ʔu.saf/: first-person singular non-past passive jussive of سَافَ (sāfa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔasuf", "sāfa", "ʔusaf"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "سفتن",
-        "u": "سفتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سفتن (form I)\n# سُفْتُنَّ (suftunna) /suf.tun.na/: second-person feminine plural past active of سَافَ (sāfa)\n# سِفْتُنَّ (siftunna) /sif.tun.na/: second-person feminine plural past passive of سَافَ (sāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["suftunna", "sāfa", "siftunna"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "سافا",
-        "u": "سافا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سَافَا • (sāfā) (form I) /saː.faː/\n# third-person masculine dual past active of سَافَ (sāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sāfā", "sāfa"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "تسفن",
-        "u": "تسفن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تسفن (form I)\n# تَسُفْنَ (tasufna) /ta.suf.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of سَافَ (sāfa)\n# تُسَفْنَ (tusafna) /tu.saf.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of سَافَ (sāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasufna", "sāfa", "tusafna"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "يسفن",
-        "u": "يسفن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يسفن (form I)\n# يَسُفْنَ (yasufna) /ja.suf.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of سَافَ (sāfa)\n# يُسَفْنَ (yusafna) /ju.saf.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of سَافَ (sāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasufna", "sāfa", "yusafna"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "سفنا",
-        "u": "سفنا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "سفنا (form I)\n# سُفْنَا (sufnā) /suf.naː/: first-person plural past active of سَافَ (sāfa)\n# سِفْنَا (sifnā) /sif.naː/: first-person plural past passive of سَافَ (sāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sufnā", "sāfa", "sifnā"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "تسف",
-        "u": "تسف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تسف (form I)\n# تَسُفْ (tasuf) /ta.suf/: inflection of سَافَ (sāfa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُسَفْ (tusaf) /tu.saf/: inflection of سَافَ (sāfa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasuf", "sāfa", "tusaf"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "يسف",
-        "u": "يسف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يسف (form I)\n# يَسُفْ (yasuf) /ja.suf/: third-person masculine singular non-past active jussive of سَافَ (sāfa)\n# يُسَفْ (yusaf) /ju.saf/: third-person masculine singular non-past passive jussive of سَافَ (sāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasuf", "sāfa", "yusaf"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "سافت",
-        "u": "سافت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سَافَتْ • (sāfat) (form I) /saː.fat/\n# third-person feminine singular past active of سَافَ (sāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sāfat", "sāfa"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "سفتما",
-        "u": "سفتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سفتما (form I)\n# سُفْتُمَا (suftumā) /suf.tu.maː/: second-person dual past active of سَافَ (sāfa)\n# سِفْتُمَا (siftumā) /sif.tu.maː/: second-person dual past passive of سَافَ (sāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["suftumā", "sāfa", "siftumā"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "سافتا",
-        "u": "سافتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سَافَتَا • (sāfatā) (form I) /saː.fa.taː/\n# third-person feminine dual past active of سَافَ (sāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sāfatā", "sāfa"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "سفتم",
-        "u": "سفتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سفتم (form I)\n# سُفْتُمْ (suftum) /suf.tum/: second-person masculine plural past active of سَافَ (sāfa)\n# سِفْتُمْ (siftum) /sif.tum/: second-person masculine plural past passive of سَافَ (sāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["suftum", "sāfa", "siftum"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "سافوا",
-        "u": "سافوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سَافُوا • (sāfū) (form I) /saː.fuː/\n# third-person masculine plural past active of سَافَ (sāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sāfū", "sāfa"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "تسوفان",
-        "u": "تسوفان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَسُوفَانِ • (tasūfāni) (form I) /ta.suː.faː.ni/\n# inflection of سَافَ (sāfa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasūfāni", "sāfa"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "تسوفا",
-        "u": "تسوفا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَسُوفَا • (tasūfā) (form I) /ta.suː.faː/\n# inflection of سَافَ (sāfa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasūfā", "sāfa"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "يسوفا",
-        "u": "يسوفا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَسُوفَا • (yasūfā) (form I) /ja.suː.faː/\n# third-person masculine dual non-past active subjunctive/jussive of سَافَ (sāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasūfā", "sāfa"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "سف",
-        "u": "سف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سُفْ • (suf) (form I) /suf/\n# second-person masculine singular imperative of سَافَ (sāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["suf", "sāfa"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "يسوفان",
-        "u": "يسوفان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَسُوفَانِ • (yasūfāni) (form I) /ja.suː.faː.ni/\n# third-person masculine dual non-past active indicative of سَافَ (sāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasūfāni", "sāfa"],
-        "k": "ساف",
-        "yol": "kök"
-      },
-      {
-        "w": "سوفا",
-        "u": "سوفا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "سُوفَا • (sūfā) (form I) /suː.faː/\n# second-person dual imperative of سَافَ (sāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sūfā", "sāfa"],
-        "k": "ساف",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "سف",
+  "ses": {
     "harf": "س",
+    "fasil": "سف",
     "mahrec": "esaliyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "سفن",
+      "tur": "noun",
+      "etim_no": "1.3",
+      "baslik": "سَفْن • (safn) m",
+      "anlam": ["verbal noun of سَفَنَ (safana)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["سَفَنَ"],
+      "okunus": ["safn"],
+      "ipa": ["/safn/"],
+      "bag": "asıl madde"
+    },
+    {
+      "madde": "سفن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "سفن (form I)\n# سُفْنَ (sufna) /suf.na/: inflection of سَافَ (sāfa):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# سِفْنَ (sifna) /sif.na/: third-person feminine plural past passive of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sufna", "sāfa", "sifna"]
+    },
+    {
+      "madde": "يسوف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يسوف (form I)\n# يَسُوفُ (yasūfu) /ja.suː.fu/: third-person masculine singular non-past active indicative of سَافَ (sāfa)\n# يَسُوفَ (yasūfa) /ja.suː.fa/: third-person masculine singular non-past active subjunctive of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasūfu", "sāfa", "yasūfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسوف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تسوف (form I)\n# تَسُوفُ (tasūfu) /ta.suː.fu/: inflection of سَافَ (sāfa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَسُوفَ (tasūfa) /ta.suː.fa/: inflection of سَافَ (sāfa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasūfu", "sāfa", "tasūfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسوفين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَسُوفِينَ • (tasūfīna) (form I) /ta.suː.fiː.na/\n# second-person feminine singular non-past active indicative of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasūfīna", "sāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسوفي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَسُوفِي • (tasūfī) (form I) /ta.suː.fiː/\n# second-person feminine singular non-past active subjunctive/jussive of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasūfī", "sāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سوفي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "سُوفِي • (sūfī) (form I) /suː.fiː/\n# second-person feminine singular imperative of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sūfī", "sāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسوف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أسوف (form I)\n# أَسُوفُ (ʔasūfu) /ʔa.suː.fu/: first-person singular non-past active indicative of سَافَ (sāfa)\n# أَسُوفَ (ʔasūfa) /ʔa.suː.fa/: first-person singular non-past active subjunctive of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔasūfu", "sāfa", "ʔasūfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نسوف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نسوف (form I)\n# نَسُوفُ (nasūfu) /na.suː.fu/: first-person plural non-past active indicative of سَافَ (sāfa)\n# نَسُوفَ (nasūfa) /na.suː.fa/: first-person plural non-past active subjunctive of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nasūfu", "sāfa", "nasūfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسوفون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَسُوفُونَ • (tasūfūna) (form I) /ta.suː.fuː.na/\n# second-person masculine plural non-past active indicative of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasūfūna", "sāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسوفوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَسُوفُوا • (tasūfū) (form I) /ta.suː.fuː/\n# second-person masculine plural non-past active subjunctive/jussive of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasūfū", "sāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سوفوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "سُوفُوا • (sūfū) (form I) /suː.fuː/\n# second-person masculine plural imperative of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sūfū", "sāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسوفون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَسُوفُونَ • (yasūfūna) (form I) /ja.suː.fuː.na/\n# third-person masculine plural non-past active indicative of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasūfūna", "sāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسوفوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَسُوفُوا • (yasūfū) (form I) /ja.suː.fuː/\n# third-person masculine plural non-past active subjunctive/jussive of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasūfū", "sāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سفت",
+      "tur": "verb",
+      "baslik": "سفت (form I)\n# سُفْتُ (suftu) /suf.tu/: first-person singular past active of سَافَ (sāfa)\n# سُفْتَ (sufta) /suf.ta/: second-person masculine singular past active of سَافَ (sāfa)\n# سُفْتِ (sufti) /suf.ti/: second-person feminine singular past active of سَافَ (sāfa)\n# سِفْتُ (siftu) /sif.tu/: first-person singular past passive of سَافَ (sāfa)\n# سِفْتَ (sifta) /sif.ta/: second-person masculine singul",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["suftu", "sāfa", "sufta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نسف",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نسف (form I)\n# نَسُفْ (nasuf) /na.suf/: first-person plural non-past active jussive of سَافَ (sāfa)\n# نُسَفْ (nusaf) /nu.saf/: first-person plural non-past passive jussive of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nasuf", "sāfa", "nusaf"]
+    },
+    {
+      "madde": "السفن",
+      "tur": "noun",
+      "baslik": "السُّفُن • (as-sufun) pl",
+      "anlam": ["definite of سُفٌن (sufunn, “ships”)"],
+      "etiket": ["definite", "form-of"],
+      "form_of": ["سُفٌن"],
+      "okunus": ["as-sufun"],
+      "ipa": ["/as.su.fun/"],
+      "bag": "asıl madde"
+    },
+    {
+      "madde": "أسف",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أسف (form I)\n# أَسُفْ (ʔasuf) /ʔa.suf/: first-person singular non-past active jussive of سَافَ (sāfa)\n# أُسَفْ (ʔusaf) /ʔu.saf/: first-person singular non-past passive jussive of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔasuf", "sāfa", "ʔusaf"]
+    },
+    {
+      "madde": "سفتن",
+      "tur": "verb",
+      "baslik": "سفتن (form I)\n# سُفْتُنَّ (suftunna) /suf.tun.na/: second-person feminine plural past active of سَافَ (sāfa)\n# سِفْتُنَّ (siftunna) /sif.tun.na/: second-person feminine plural past passive of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["suftunna", "sāfa", "siftunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سافا",
+      "tur": "verb",
+      "baslik": "سَافَا • (sāfā) (form I) /saː.faː/\n# third-person masculine dual past active of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sāfā", "sāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسفن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تسفن (form I)\n# تَسُفْنَ (tasufna) /ta.suf.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of سَافَ (sāfa)\n# تُسَفْنَ (tusafna) /tu.saf.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasufna", "sāfa", "tusafna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسفن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يسفن (form I)\n# يَسُفْنَ (yasufna) /ja.suf.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of سَافَ (sāfa)\n# يُسَفْنَ (yusafna) /ju.saf.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasufna", "sāfa", "yusafna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سفنا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "سفنا (form I)\n# سُفْنَا (sufnā) /suf.naː/: first-person plural past active of سَافَ (sāfa)\n# سِفْنَا (sifnā) /sif.naː/: first-person plural past passive of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sufnā", "sāfa", "sifnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تسف (form I)\n# تَسُفْ (tasuf) /ta.suf/: inflection of سَافَ (sāfa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُسَفْ (tusaf) /tu.saf/: inflection of سَافَ (sāfa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasuf", "sāfa", "tusaf"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يسف (form I)\n# يَسُفْ (yasuf) /ja.suf/: third-person masculine singular non-past active jussive of سَافَ (sāfa)\n# يُسَفْ (yusaf) /ju.saf/: third-person masculine singular non-past passive jussive of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasuf", "sāfa", "yusaf"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سافت",
+      "tur": "verb",
+      "baslik": "سَافَتْ • (sāfat) (form I) /saː.fat/\n# third-person feminine singular past active of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sāfat", "sāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سفتما",
+      "tur": "verb",
+      "baslik": "سفتما (form I)\n# سُفْتُمَا (suftumā) /suf.tu.maː/: second-person dual past active of سَافَ (sāfa)\n# سِفْتُمَا (siftumā) /sif.tu.maː/: second-person dual past passive of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["suftumā", "sāfa", "siftumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سافتا",
+      "tur": "verb",
+      "baslik": "سَافَتَا • (sāfatā) (form I) /saː.fa.taː/\n# third-person feminine dual past active of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sāfatā", "sāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سفتم",
+      "tur": "verb",
+      "baslik": "سفتم (form I)\n# سُفْتُمْ (suftum) /suf.tum/: second-person masculine plural past active of سَافَ (sāfa)\n# سِفْتُمْ (siftum) /sif.tum/: second-person masculine plural past passive of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["suftum", "sāfa", "siftum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سافوا",
+      "tur": "verb",
+      "baslik": "سَافُوا • (sāfū) (form I) /saː.fuː/\n# third-person masculine plural past active of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sāfū", "sāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسوفان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَسُوفَانِ • (tasūfāni) (form I) /ta.suː.faː.ni/\n# inflection of سَافَ (sāfa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasūfāni", "sāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسوفا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَسُوفَا • (tasūfā) (form I) /ta.suː.faː/\n# inflection of سَافَ (sāfa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasūfā", "sāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسوفا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَسُوفَا • (yasūfā) (form I) /ja.suː.faː/\n# third-person masculine dual non-past active subjunctive/jussive of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasūfā", "sāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سف",
+      "tur": "verb",
+      "baslik": "سُفْ • (suf) (form I) /suf/\n# second-person masculine singular imperative of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["suf", "sāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسوفان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَسُوفَانِ • (yasūfāni) (form I) /ja.suː.faː.ni/\n# third-person masculine dual non-past active indicative of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasūfāni", "sāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سوفا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "سُوفَا • (sūfā) (form I) /suː.faː/\n# second-person dual imperative of سَافَ (sāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sūfā", "sāfa"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ساف", "r7"]
+  ],
+  "mana": {
     "ince": "repent.v.02",
     "orta": "verb.emotion",
     "ust": "his ve nefis",
@@ -492,22 +361,15 @@
     "dayanak_tanim": "feel remorse for; feel sorry for; be contrite about",
     "synset_sayisi": 3
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["explode.v.01", "feeling.n.01", "repent.v.02"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["explode.v.01", "feeling.n.01", "repent.v.02"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

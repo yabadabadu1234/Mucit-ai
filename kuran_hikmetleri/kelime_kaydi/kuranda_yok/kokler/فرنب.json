@@ -1,54 +1,54 @@
 {
   "kok": "فرنب",
+  "tur": "isim",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["fiil-yok"],
+  "lugat_fiil": false,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "فرنب", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "فرنب",
-        "u": "فرنب",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "فِرْنِب • (firnib) m (plural فَرَانِب (farānib))",
-        "t": "First attested in 791. Dialect variation of قَرْنَب (qarnab) with the same meaning.",
-        "s": [
-          ["ar-rootbox", ""],
-          ["etydate", "First attested in 791"]
-        ],
-        "synonyms": ["فَأْر", "جُرَذ", "قَرْنَب"],
-        "g": ["mouse"],
-        "r": ["firnib"],
-        "ipa": ["/fir.nib/"],
-        "el": [
-          ["قَرْنَب", "قرنب#Arabic"]
-        ],
-        "k": "فرنب",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "فر",
+  "ses": {
     "harf": "ف",
+    "fasil": "فر",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "فرنب",
+      "tur": "noun",
+      "baslik": "فِرْنِب • (firnib) m (plural فَرَانِب (farānib))",
+      "etim_sablon": [
+        ["ar-rootbox", ""],
+        ["etydate", "First attested in 791"]
+      ],
+      "esanlamli": ["فَأْر", "جُرَذ", "قَرْنَب"],
+      "anlam": ["mouse"],
+      "okunus": ["firnib"],
+      "ipa": ["/fir.nib/"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "First attested in 791. Dialect variation of قَرْنَب (qarnab) with the same meaning.",
+      "kognatlar": [
+        ["قَرْنَب", "قرنب#Arabic"]
+      ]
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "فرنب", "r6"]
+  ],
+  "mana": {
     "ince": "whole.n.02",
     "orta": "noun.animal",
     "ust": "canlı ve beden",
@@ -56,20 +56,8 @@
     "dayanak_tanim": "any of numerous small rodents typically resembling diminutive rats having pointed snouts and small ears on elongated bodies with slender usually hairless tails",
     "dayanak_karsilik": "mouse"
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m2",
+  "gomme": {
     "ust": {
       "kume": 7,
       "merkez_kok": "حدق",
@@ -89,6 +77,10 @@
       "boy": 4
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

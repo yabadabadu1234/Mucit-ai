@@ -1,363 +1,268 @@
 {
   "kok": "ادبر",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ادبر", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أدبر",
-        "u": "أدبر",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أدبر (form V)\n# أَدَّبَّرُ (ʔaddabbaru) /ʔad.dab.ba.ru/: first-person singular non-past active indicative of اِدَّبَّرَ (iddabbara)\n# أَدَّبَّرَ (ʔaddabbara) /ʔad.dab.ba.ra/: first-person singular non-past active subjunctive of اِدَّبَّرَ (iddabbara)\n# أَدَّبَّرْ (ʔaddabbar) /ʔad.dab.bar/: first-person singular non-past active jussive of اِدَّبَّرَ (iddabbara)",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔaddabbaru", "iddabbara", "ʔaddabbara"],
-        "k": "ادبر",
-        "yol": "kök"
-      },
-      {
-        "w": "يدبر",
-        "u": "يدبر",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يدبر (form V)\n# يَدَّبَّرُ (yaddabbaru) /jad.dab.ba.ru/: third-person masculine singular non-past active indicative of اِدَّبَّرَ (iddabbara)\n# يُدَّبَّرُ (yuddabbaru) /jud.dab.ba.ru/: third-person masculine singular non-past passive indicative of اِدَّبَّرَ (iddabbara)\n# يَدَّبَّرَ (yaddabbara) /jad.dab.ba.ra/: third-person masculine singular non-past active subjunctive of اِدَّبَّرَ (iddabbara)\n",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yaddabbaru", "iddabbara", "yuddabbaru"],
-        "k": "ادبر",
-        "yol": "kök"
-      },
-      {
-        "w": "تدبر",
-        "u": "تدبر",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تدبر (form V)\n# تَدَّبَّرُ (taddabbaru) /tad.dab.ba.ru/: inflection of اِدَّبَّرَ (iddabbara):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَدَّبَّرَ (taddabbara) /tad.dab.ba.ra/: inflection of اِدَّبَّرَ (iddabbara):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular no",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taddabbaru", "iddabbara", "taddabbara"],
-        "k": "ادبر",
-        "yol": "kök"
-      },
-      {
-        "w": "تدبرين",
-        "u": "تدبرين",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تَدَّبَّرِينَ • (taddabbarīna) (form V) /tad.dab.ba.riː.na/\n# second-person feminine singular non-past active indicative of اِدَّبَّرَ (iddabbara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taddabbarīna", "iddabbara"],
-        "k": "ادبر",
-        "yol": "kök"
-      },
-      {
-        "w": "تدبري",
-        "u": "تدبري",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تَدَّبَّرِي • (taddabbarī) (form V) /tad.dab.ba.riː/\n# second-person feminine singular non-past active subjunctive/jussive of اِدَّبَّرَ (iddabbara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taddabbarī", "iddabbara"],
-        "k": "ادبر",
-        "yol": "kök"
-      },
-      {
-        "w": "ادبري",
-        "u": "ادبري",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "اِدَّبَّرِي • (iddabbarī) (form V) /id.dab.ba.riː/\n# second-person feminine singular imperative of اِدَّبَّرَ (iddabbara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["iddabbarī", "iddabbara"],
-        "k": "ادبر",
-        "yol": "kök"
-      },
-      {
-        "w": "ندبر",
-        "u": "ندبر",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "ندبر (form V)\n# نَدَّبَّرُ (naddabbaru) /nad.dab.ba.ru/: first-person plural non-past active indicative of اِدَّبَّرَ (iddabbara)\n# نَدَّبَّرَ (naddabbara) /nad.dab.ba.ra/: first-person plural non-past active subjunctive of اِدَّبَّرَ (iddabbara)\n# نَدَّبَّرْ (naddabbar) /nad.dab.bar/: first-person plural non-past active jussive of اِدَّبَّرَ (iddabbara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["naddabbaru", "iddabbara", "naddabbara"],
-        "k": "ادبر",
-        "yol": "kök"
-      },
-      {
-        "w": "تدبرون",
-        "u": "تدبرون",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تَدَّبَّرُونَ • (taddabbarūna) (form V) /tad.dab.ba.ruː.na/\n# second-person masculine plural non-past active indicative of اِدَّبَّرَ (iddabbara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taddabbarūna", "iddabbara"],
-        "k": "ادبر",
-        "yol": "kök"
-      },
-      {
-        "w": "تدبروا",
-        "u": "تدبروا",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تَدَّبَّرُوا • (taddabbarū) (form V) /tad.dab.ba.ruː/\n# second-person masculine plural non-past active subjunctive/jussive of اِدَّبَّرَ (iddabbara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taddabbarū", "iddabbara"],
-        "k": "ادبر",
-        "yol": "kök"
-      },
-      {
-        "w": "ادبروا",
-        "u": "ادبروا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "اِدَّبَّرُوا • (iddabbarū) (form V) /id.dab.ba.ruː/\n# inflection of اِدَّبَّرَ (iddabbara):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["iddabbarū", "iddabbara"],
-        "k": "ادبر",
-        "yol": "kök"
-      },
-      {
-        "w": "يدبرون",
-        "u": "يدبرون",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يَدَّبَّرُونَ • (yaddabbarūna) (form V) /jad.dab.ba.ruː.na/\n# third-person masculine plural non-past active indicative of اِدَّبَّرَ (iddabbara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yaddabbarūna", "iddabbara"],
-        "k": "ادبر",
-        "yol": "kök"
-      },
-      {
-        "w": "يدبروا",
-        "u": "يدبروا",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يَدَّبَّرُوا • (yaddabbarū) (form V) /jad.dab.ba.ruː/\n# third-person masculine plural non-past active subjunctive/jussive of اِدَّبَّرَ (iddabbara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yaddabbarū", "iddabbara"],
-        "k": "ادبر",
-        "yol": "kök"
-      },
-      {
-        "w": "تدبرن",
-        "u": "تدبرن",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تَدَّبَّرْنَ • (taddabbarna) (form V) /tad.dab.bar.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِدَّبَّرَ (iddabbara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taddabbarna", "iddabbara"],
-        "k": "ادبر",
-        "yol": "kök"
-      },
-      {
-        "w": "ادبرن",
-        "u": "ادبرن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "اِدَّبَّرْنَ • (iddabbarna) (form V) /id.dab.bar.na/\n# inflection of اِدَّبَّرَ (iddabbara):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["iddabbarna", "iddabbara"],
-        "k": "ادبر",
-        "yol": "kök"
-      },
-      {
-        "w": "يدبرن",
-        "u": "يدبرن",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يَدَّبَّرْنَ • (yaddabbarna) (form V) /jad.dab.bar.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِدَّبَّرَ (iddabbara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yaddabbarna", "iddabbara"],
-        "k": "ادبر",
-        "yol": "kök"
-      },
-      {
-        "w": "تدبران",
-        "u": "تدبران",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَدَّبَّرَانِ • (taddabbarāni) (form V) /tad.dab.ba.raː.ni/\n# inflection of اِدَّبَّرَ (iddabbara):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taddabbarāni", "iddabbara"],
-        "k": "ادبر",
-        "yol": "kök"
-      },
-      {
-        "w": "يدبران",
-        "u": "يدبران",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَدَّبَّرَانِ • (yaddabbarāni) (form V) /jad.dab.ba.raː.ni/\n# third-person masculine dual non-past active indicative of اِدَّبَّرَ (iddabbara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yaddabbarāni", "iddabbara"],
-        "k": "ادبر",
-        "yol": "kök"
-      },
-      {
-        "w": "تدبرا",
-        "u": "تدبرا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَدَّبَّرَا • (taddabbarā) (form V) /tad.dab.ba.raː/\n# inflection of اِدَّبَّرَ (iddabbara):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taddabbarā", "iddabbara"],
-        "k": "ادبر",
-        "yol": "kök"
-      },
-      {
-        "w": "يدبرا",
-        "u": "يدبرا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَدَّبَّرَا • (yaddabbarā) (form V) /jad.dab.ba.raː/\n# third-person masculine dual non-past active subjunctive/jussive of اِدَّبَّرَ (iddabbara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yaddabbarā", "iddabbara"],
-        "k": "ادبر",
-        "yol": "kök"
-      },
-      {
-        "w": "ادبرت",
-        "u": "ادبرت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ادبرت (form V)\n# اِدَّبَّرْتُ (iddabbartu) /id.dab.bar.tu/: first-person singular past active of اِدَّبَّرَ (iddabbara)\n# اِدَّبَّرْتَ (iddabbarta) /id.dab.bar.ta/: second-person masculine singular past active of اِدَّبَّرَ (iddabbara)\n# اِدَّبَّرْتِ (iddabbarti) /id.dab.bar.ti/: second-person feminine singular past active of اِدَّبَّرَ (iddabbara)\n# اِدَّبَّرَتْ (iddabbarat) /id.dab.ba.rat/: thir",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["iddabbartu", "iddabbara", "iddabbarta"],
-        "k": "ادبر",
-        "yol": "kök"
-      },
-      {
-        "w": "ادبرنا",
-        "u": "ادبرنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِدَّبَّرْنَا • (iddabbarnā) (form V) /id.dab.bar.naː/\n# first-person plural past active of اِدَّبَّرَ (iddabbara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["iddabbarnā", "iddabbara"],
-        "k": "ادبر",
-        "yol": "kök"
-      },
-      {
-        "w": "ادبرا",
-        "u": "ادبرا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِدَّبَّرَا • (iddabbarā) (form V) /id.dab.ba.raː/\n# inflection of اِدَّبَّرَ (iddabbara):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["iddabbarā", "iddabbara"],
-        "k": "ادبر",
-        "yol": "kök"
-      },
-      {
-        "w": "ادبرتما",
-        "u": "ادبرتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِدَّبَّرْتُمَا • (iddabbartumā) (form V) /id.dab.bar.tu.maː/\n# second-person dual past active of اِدَّبَّرَ (iddabbara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["iddabbartumā", "iddabbara"],
-        "k": "ادبر",
-        "yol": "kök"
-      },
-      {
-        "w": "ادبرتا",
-        "u": "ادبرتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِدَّبَّرَتَا • (iddabbaratā) (form V) /id.dab.ba.ra.taː/\n# third-person feminine dual past active of اِدَّبَّرَ (iddabbara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["iddabbaratā", "iddabbara"],
-        "k": "ادبر",
-        "yol": "kök"
-      },
-      {
-        "w": "ادبرتم",
-        "u": "ادبرتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِدَّبَّرْتُمْ • (iddabbartum) (form V) /id.dab.bar.tum/\n# second-person masculine plural past active of اِدَّبَّرَ (iddabbara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["iddabbartum", "iddabbara"],
-        "k": "ادبر",
-        "yol": "kök"
-      },
-      {
-        "w": "ادبرتن",
-        "u": "ادبرتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِدَّبَّرْتُنَّ • (iddabbartunna) (form V) /id.dab.bar.tun.na/\n# second-person feminine plural past active of اِدَّبَّرَ (iddabbara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["iddabbartunna", "iddabbara"],
-        "k": "ادبر",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "دب",
+  "ses": {
     "harf": "ا",
+    "fasil": "دب",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "أدبر",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أدبر (form V)\n# أَدَّبَّرُ (ʔaddabbaru) /ʔad.dab.ba.ru/: first-person singular non-past active indicative of اِدَّبَّرَ (iddabbara)\n# أَدَّبَّرَ (ʔaddabbara) /ʔad.dab.ba.ra/: first-person singular non-past active subjunctive of اِدَّبَّرَ (iddabbara)\n# أَدَّبَّرْ (ʔaddabbar) /ʔad.dab.bar/: first-person singular non-past active jussive of اِدَّبَّرَ (iddabbara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔaddabbaru", "iddabbara", "ʔaddabbara"]
+    },
+    {
+      "madde": "يدبر",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يدبر (form V)\n# يَدَّبَّرُ (yaddabbaru) /jad.dab.ba.ru/: third-person masculine singular non-past active indicative of اِدَّبَّرَ (iddabbara)\n# يُدَّبَّرُ (yuddabbaru) /jud.dab.ba.ru/: third-person masculine singular non-past passive indicative of اِدَّبَّرَ (iddabbara)\n# يَدَّبَّرَ (yaddabbara) /jad.dab.ba.ra/: third-person masculine singular non-past active subjunctive of اِدَّبَّرَ (iddabbara)\n",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yaddabbaru", "iddabbara", "yuddabbaru"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تدبر",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تدبر (form V)\n# تَدَّبَّرُ (taddabbaru) /tad.dab.ba.ru/: inflection of اِدَّبَّرَ (iddabbara):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَدَّبَّرَ (taddabbara) /tad.dab.ba.ra/: inflection of اِدَّبَّرَ (iddabbara):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular no",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taddabbaru", "iddabbara", "taddabbara"]
+    },
+    {
+      "madde": "تدبرين",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تَدَّبَّرِينَ • (taddabbarīna) (form V) /tad.dab.ba.riː.na/\n# second-person feminine singular non-past active indicative of اِدَّبَّرَ (iddabbara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taddabbarīna", "iddabbara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تدبري",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تَدَّبَّرِي • (taddabbarī) (form V) /tad.dab.ba.riː/\n# second-person feminine singular non-past active subjunctive/jussive of اِدَّبَّرَ (iddabbara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taddabbarī", "iddabbara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ادبري",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "اِدَّبَّرِي • (iddabbarī) (form V) /id.dab.ba.riː/\n# second-person feminine singular imperative of اِدَّبَّرَ (iddabbara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["iddabbarī", "iddabbara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ندبر",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "ندبر (form V)\n# نَدَّبَّرُ (naddabbaru) /nad.dab.ba.ru/: first-person plural non-past active indicative of اِدَّبَّرَ (iddabbara)\n# نَدَّبَّرَ (naddabbara) /nad.dab.ba.ra/: first-person plural non-past active subjunctive of اِدَّبَّرَ (iddabbara)\n# نَدَّبَّرْ (naddabbar) /nad.dab.bar/: first-person plural non-past active jussive of اِدَّبَّرَ (iddabbara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["naddabbaru", "iddabbara", "naddabbara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تدبرون",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تَدَّبَّرُونَ • (taddabbarūna) (form V) /tad.dab.ba.ruː.na/\n# second-person masculine plural non-past active indicative of اِدَّبَّرَ (iddabbara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taddabbarūna", "iddabbara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تدبروا",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تَدَّبَّرُوا • (taddabbarū) (form V) /tad.dab.ba.ruː/\n# second-person masculine plural non-past active subjunctive/jussive of اِدَّبَّرَ (iddabbara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taddabbarū", "iddabbara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ادبروا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "اِدَّبَّرُوا • (iddabbarū) (form V) /id.dab.ba.ruː/\n# inflection of اِدَّبَّرَ (iddabbara):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["iddabbarū", "iddabbara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يدبرون",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يَدَّبَّرُونَ • (yaddabbarūna) (form V) /jad.dab.ba.ruː.na/\n# third-person masculine plural non-past active indicative of اِدَّبَّرَ (iddabbara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yaddabbarūna", "iddabbara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يدبروا",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يَدَّبَّرُوا • (yaddabbarū) (form V) /jad.dab.ba.ruː/\n# third-person masculine plural non-past active subjunctive/jussive of اِدَّبَّرَ (iddabbara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yaddabbarū", "iddabbara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تدبرن",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تَدَّبَّرْنَ • (taddabbarna) (form V) /tad.dab.bar.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِدَّبَّرَ (iddabbara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taddabbarna", "iddabbara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ادبرن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "اِدَّبَّرْنَ • (iddabbarna) (form V) /id.dab.bar.na/\n# inflection of اِدَّبَّرَ (iddabbara):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["iddabbarna", "iddabbara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يدبرن",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يَدَّبَّرْنَ • (yaddabbarna) (form V) /jad.dab.bar.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِدَّبَّرَ (iddabbara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yaddabbarna", "iddabbara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تدبران",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَدَّبَّرَانِ • (taddabbarāni) (form V) /tad.dab.ba.raː.ni/\n# inflection of اِدَّبَّرَ (iddabbara):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taddabbarāni", "iddabbara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يدبران",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَدَّبَّرَانِ • (yaddabbarāni) (form V) /jad.dab.ba.raː.ni/\n# third-person masculine dual non-past active indicative of اِدَّبَّرَ (iddabbara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yaddabbarāni", "iddabbara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تدبرا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَدَّبَّرَا • (taddabbarā) (form V) /tad.dab.ba.raː/\n# inflection of اِدَّبَّرَ (iddabbara):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taddabbarā", "iddabbara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يدبرا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَدَّبَّرَا • (yaddabbarā) (form V) /jad.dab.ba.raː/\n# third-person masculine dual non-past active subjunctive/jussive of اِدَّبَّرَ (iddabbara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yaddabbarā", "iddabbara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ادبرت",
+      "tur": "verb",
+      "baslik": "ادبرت (form V)\n# اِدَّبَّرْتُ (iddabbartu) /id.dab.bar.tu/: first-person singular past active of اِدَّبَّرَ (iddabbara)\n# اِدَّبَّرْتَ (iddabbarta) /id.dab.bar.ta/: second-person masculine singular past active of اِدَّبَّرَ (iddabbara)\n# اِدَّبَّرْتِ (iddabbarti) /id.dab.bar.ti/: second-person feminine singular past active of اِدَّبَّرَ (iddabbara)\n# اِدَّبَّرَتْ (iddabbarat) /id.dab.ba.rat/: thir",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["iddabbartu", "iddabbara", "iddabbarta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ادبرنا",
+      "tur": "verb",
+      "baslik": "اِدَّبَّرْنَا • (iddabbarnā) (form V) /id.dab.bar.naː/\n# first-person plural past active of اِدَّبَّرَ (iddabbara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["iddabbarnā", "iddabbara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ادبرا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِدَّبَّرَا • (iddabbarā) (form V) /id.dab.ba.raː/\n# inflection of اِدَّبَّرَ (iddabbara):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["iddabbarā", "iddabbara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ادبرتما",
+      "tur": "verb",
+      "baslik": "اِدَّبَّرْتُمَا • (iddabbartumā) (form V) /id.dab.bar.tu.maː/\n# second-person dual past active of اِدَّبَّرَ (iddabbara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["iddabbartumā", "iddabbara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ادبرتا",
+      "tur": "verb",
+      "baslik": "اِدَّبَّرَتَا • (iddabbaratā) (form V) /id.dab.ba.ra.taː/\n# third-person feminine dual past active of اِدَّبَّرَ (iddabbara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["iddabbaratā", "iddabbara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ادبرتم",
+      "tur": "verb",
+      "baslik": "اِدَّبَّرْتُمْ • (iddabbartum) (form V) /id.dab.bar.tum/\n# second-person masculine plural past active of اِدَّبَّرَ (iddabbara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["iddabbartum", "iddabbara"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ادبرتن",
+      "tur": "verb",
+      "baslik": "اِدَّبَّرْتُنَّ • (iddabbartunna) (form V) /id.dab.bar.tun.na/\n# second-person feminine plural past active of اِدَّبَّرَ (iddabbara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["iddabbartunna", "iddabbara"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ادبر", "r6"]
+  ],
+  "mana": {
     "ince": "experience.v.01",
     "orta": "verb.perception",
     "ust": "zihin ve ilim",
@@ -365,16 +270,11 @@
     "dayanak_tanim": "go or live through",
     "synset_sayisi": 11
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "chew_over.v.01",
     "examine.v.02",
     "experience.v.01",
@@ -387,12 +287,10 @@
     "visit.v.01",
     "visualize.v.01"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

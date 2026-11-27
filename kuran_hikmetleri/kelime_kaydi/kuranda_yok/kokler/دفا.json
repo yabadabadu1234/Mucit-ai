@@ -1,52 +1,39 @@
 {
   "kok": "دفا",
+  "tur": "isim",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["fiil-yok"],
+  "lugat_fiil": false,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "دفا", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "mekayis": [
-      {
-        "baslik": "دَفَا",
-        "metin": "(دَفَا) الدَّالُ وَالْفَاءُ وَالْحَرْفُ الْمُعْتَلُّ أَصْلٌ يَدُلُّ عَلَى طُولٍ فِي انْحِنَاءٍ قَلِيلٍ فَالدَّفَا: طُولُ جَنَاحِ الطَّائِرِ. يُقَالُ طَائِرٌ أَدْفَى. وَهُوَ مِنَ الْوُعُولِ: مَا طَالَ\nقَرْنَاهُ. وَيُقَالُ لِلنَّجِيبَةِ الطَّوِيلَةِ الْعُنُقِ: دَفْوَاءُ. وَالدَّفْوَاءُ: الشَّجَرَةُ الْعَظِيمَةُ الطَّوِيلَةُ. وَمِنْهُ الْحَدِيثُ: &quot; «أَنَّهُ أَبْصَرَ شَجَرَةً دَفْوَاءَ تُسَمَّى ذَاتَ أَنْوَاطٍ» &quot;. وَيُقَالُ لِلْعُقَابِ دَفْوَاءُ، وَذَلِكَ لِطُولِ مِنْقَارِهَا وَعِوَجِهِ. وَيُقَالُ تَدَافَى الْبَعِيرُ تَدَافِيًا، إِذَا سَارَ سَيْرًا مُتَجَافِيًا."
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "دف",
+  "ses": {
     "harf": "د",
+    "fasil": "دف",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "mekayis": [
+    {
+      "baslik": "دَفَا",
+      "metin": "(دَفَا) الدَّالُ وَالْفَاءُ وَالْحَرْفُ الْمُعْتَلُّ أَصْلٌ يَدُلُّ عَلَى طُولٍ فِي انْحِنَاءٍ قَلِيلٍ فَالدَّفَا: طُولُ جَنَاحِ الطَّائِرِ. يُقَالُ طَائِرٌ أَدْفَى. وَهُوَ مِنَ الْوُعُولِ: مَا طَالَ\nقَرْنَاهُ. وَيُقَالُ لِلنَّجِيبَةِ الطَّوِيلَةِ الْعُنُقِ: دَفْوَاءُ. وَالدَّفْوَاءُ: الشَّجَرَةُ الْعَظِيمَةُ الطَّوِيلَةُ. وَمِنْهُ الْحَدِيثُ: &quot; «أَنَّهُ أَبْصَرَ شَجَرَةً دَفْوَاءَ تُسَمَّى ذَاتَ أَنْوَاطٍ» &quot;. وَيُقَالُ لِلْعُقَابِ دَفْوَاءُ، وَذَلِكَ لِطُولِ مِنْقَارِهَا وَعِوَجِهِ. وَيُقَالُ تَدَافَى الْبَعِيرُ تَدَافِيًا، إِذَا سَارَ سَيْرًا مُتَجَافِيًا."
+    }
+  ],
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "دفا", "r7"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "ust": {
       "kume": 1,
       "merkez_kok": "قره",
@@ -66,6 +53,10 @@
       "boy": 265
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

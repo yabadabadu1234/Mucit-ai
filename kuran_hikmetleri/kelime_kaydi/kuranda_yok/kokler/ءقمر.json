@@ -1,365 +1,287 @@
 {
   "kok": "ءقمر",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءقمر", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يقمر",
-        "u": "يقمر",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يقمر (form IV)\n# يُقْمِرُ (yuqmiru) /juq.mi.ru/: third-person masculine singular non-past active indicative of أَقْمَرَ (ʔaqmara)\n# يُقْمِرَ (yuqmira) /juq.mi.ra/: third-person masculine singular non-past active subjunctive of أَقْمَرَ (ʔaqmara)\n# يُقْمِرْ (yuqmir) /juq.mir/: third-person masculine singular non-past active jussive of أَقْمَرَ (ʔaqmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuqmiru", "ʔaqmara", "yuqmira"],
-        "k": "أقمر",
-        "yol": "kök"
-      },
-      {
-        "w": "أقمرت",
-        "u": "أقمرت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أقمرت (form IV)\n# أَقْمَرْتُ (ʔaqmartu) /ʔaq.mar.tu/: first-person singular past active of أَقْمَرَ (ʔaqmara)\n# أَقْمَرْتَ (ʔaqmarta) /ʔaq.mar.ta/: second-person masculine singular past active of أَقْمَرَ (ʔaqmara)\n# أَقْمَرْتِ (ʔaqmarti) /ʔaq.mar.ti/: second-person feminine singular past active of أَقْمَرَ (ʔaqmara)\n# أَقْمَرَتْ (ʔaqmarat) /ʔaq.ma.rat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqmartu", "ʔaqmara", "ʔaqmarta"],
-        "k": "أقمر",
-        "yol": "kök"
-      },
-      {
-        "w": "تقمر",
-        "u": "تقمر",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تقمر (form IV)\n# تُقْمِرُ (tuqmiru) /tuq.mi.ru/: inflection of أَقْمَرَ (ʔaqmara):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُقْمِرَ (tuqmira) /tuq.mi.ra/: inflection of أَقْمَرَ (ʔaqmara):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqmiru", "ʔaqmara", "tuqmira"],
-        "k": "أقمر",
-        "yol": "kök"
-      },
-      {
-        "w": "تقمرين",
-        "u": "تقمرين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُقْمِرِينَ • (tuqmirīna) (form IV) /tuq.mi.riː.na/\n# second-person feminine singular non-past active indicative of أَقْمَرَ (ʔaqmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqmirīna", "ʔaqmara"],
-        "k": "أقمر",
-        "yol": "kök"
-      },
-      {
-        "w": "تقمري",
-        "u": "تقمري",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُقْمِرِي • (tuqmirī) (form IV) /tuq.mi.riː/\n# second-person feminine singular non-past active subjunctive/jussive of أَقْمَرَ (ʔaqmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqmirī", "ʔaqmara"],
-        "k": "أقمر",
-        "yol": "kök"
-      },
-      {
-        "w": "أقمري",
-        "u": "أقمري",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَقْمِرِي • (ʔaqmirī) (form IV) /ʔaq.mi.riː/\n# second-person feminine singular imperative of أَقْمَرَ (ʔaqmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqmirī", "ʔaqmara"],
-        "k": "أقمر",
-        "yol": "kök"
-      },
-      {
-        "w": "أقمرنا",
-        "u": "أقمرنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَقْمَرْنَا • (ʔaqmarnā) (form IV) /ʔaq.mar.naː/\n# first-person plural past active of أَقْمَرَ (ʔaqmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqmarnā", "ʔaqmara"],
-        "k": "أقمر",
-        "yol": "kök"
-      },
-      {
-        "w": "نقمر",
-        "u": "نقمر",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نقمر (form IV)\n# نُقْمِرُ (nuqmiru) /nuq.mi.ru/: first-person plural non-past active indicative of أَقْمَرَ (ʔaqmara)\n# نُقْمِرَ (nuqmira) /nuq.mi.ra/: first-person plural non-past active subjunctive of أَقْمَرَ (ʔaqmara)\n# نُقْمِرْ (nuqmir) /nuq.mir/: first-person plural non-past active jussive of أَقْمَرَ (ʔaqmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuqmiru", "ʔaqmara", "nuqmira"],
-        "k": "أقمر",
-        "yol": "kök"
-      },
-      {
-        "w": "أقمرتم",
-        "u": "أقمرتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَقْمَرْتُمْ • (ʔaqmartum) (form IV) /ʔaq.mar.tum/\n# second-person masculine plural past active of أَقْمَرَ (ʔaqmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqmartum", "ʔaqmara"],
-        "k": "أقمر",
-        "yol": "kök"
-      },
-      {
-        "w": "تقمرون",
-        "u": "تقمرون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُقْمِرُونَ • (tuqmirūna) (form IV) /tuq.mi.ruː.na/\n# second-person masculine plural non-past active indicative of أَقْمَرَ (ʔaqmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqmirūna", "ʔaqmara"],
-        "k": "أقمر",
-        "yol": "kök"
-      },
-      {
-        "w": "تقمروا",
-        "u": "تقمروا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُقْمِرُوا • (tuqmirū) (form IV) /tuq.mi.ruː/\n# second-person masculine plural non-past active subjunctive/jussive of أَقْمَرَ (ʔaqmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqmirū", "ʔaqmara"],
-        "k": "أقمر",
-        "yol": "kök"
-      },
-      {
-        "w": "أقمروا",
-        "u": "أقمروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أقمروا (form IV)\n# أَقْمَرُوا (ʔaqmarū) /ʔaq.ma.ruː/: third-person masculine plural past active of أَقْمَرَ (ʔaqmara)\n# أَقْمِرُوا (ʔaqmirū) /ʔaq.mi.ruː/: second-person masculine plural imperative of أَقْمَرَ (ʔaqmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqmarū", "ʔaqmara", "ʔaqmirū"],
-        "k": "أقمر",
-        "yol": "kök"
-      },
-      {
-        "w": "يقمرون",
-        "u": "يقمرون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يُقْمِرُونَ • (yuqmirūna) (form IV) /juq.mi.ruː.na/\n# third-person masculine plural non-past active indicative of أَقْمَرَ (ʔaqmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuqmirūna", "ʔaqmara"],
-        "k": "أقمر",
-        "yol": "kök"
-      },
-      {
-        "w": "يقمروا",
-        "u": "يقمروا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يُقْمِرُوا • (yuqmirū) (form IV) /juq.mi.ruː/\n# third-person masculine plural non-past active subjunctive/jussive of أَقْمَرَ (ʔaqmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuqmirū", "ʔaqmara"],
-        "k": "أقمر",
-        "yol": "kök"
-      },
-      {
-        "w": "أقمرتن",
-        "u": "أقمرتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَقْمَرْتُنَّ • (ʔaqmartunna) (form IV) /ʔaq.mar.tun.na/\n# second-person feminine plural past active of أَقْمَرَ (ʔaqmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqmartunna", "ʔaqmara"],
-        "k": "أقمر",
-        "yol": "kök"
-      },
-      {
-        "w": "تقمرن",
-        "u": "تقمرن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُقْمِرْنَ • (tuqmirna) (form IV) /tuq.mir.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of أَقْمَرَ (ʔaqmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqmirna", "ʔaqmara"],
-        "k": "أقمر",
-        "yol": "kök"
-      },
-      {
-        "w": "أقمرن",
-        "u": "أقمرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أقمرن (form IV)\n# أَقْمَرْنَ (ʔaqmarna) /ʔaq.mar.na/: third-person feminine plural past active of أَقْمَرَ (ʔaqmara)\n# أَقْمِرْنَ (ʔaqmirna) /ʔaq.mir.na/: second-person feminine plural imperative of أَقْمَرَ (ʔaqmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqmarna", "ʔaqmara", "ʔaqmirna"],
-        "k": "أقمر",
-        "yol": "kök"
-      },
-      {
-        "w": "يقمرن",
-        "u": "يقمرن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يُقْمِرْنَ • (yuqmirna) (form IV) /juq.mir.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of أَقْمَرَ (ʔaqmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuqmirna", "ʔaqmara"],
-        "k": "أقمر",
-        "yol": "kök"
-      },
-      {
-        "w": "أقمرتا",
-        "u": "أقمرتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَقْمَرَتَا • (ʔaqmaratā) (form IV) /ʔaq.ma.ra.taː/\n# third-person feminine dual past active of أَقْمَرَ (ʔaqmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqmaratā", "ʔaqmara"],
-        "k": "أقمر",
-        "yol": "kök"
-      },
-      {
-        "w": "أقمرتما",
-        "u": "أقمرتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَقْمَرْتُمَا • (ʔaqmartumā) (form IV) /ʔaq.mar.tu.maː/\n# second-person dual past active of أَقْمَرَ (ʔaqmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqmartumā", "ʔaqmara"],
-        "k": "أقمر",
-        "yol": "kök"
-      },
-      {
-        "w": "أقمرا",
-        "u": "أقمرا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أقمرا (form IV)\n# أَقْمَرَا (ʔaqmarā) /ʔaq.ma.raː/: third-person masculine dual past active of أَقْمَرَ (ʔaqmara)\n# أَقْمِرَا (ʔaqmirā) /ʔaq.mi.raː/: second-person dual imperative of أَقْمَرَ (ʔaqmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaqmarā", "ʔaqmara", "ʔaqmirā"],
-        "k": "أقمر",
-        "yol": "kök"
-      },
-      {
-        "w": "تقمران",
-        "u": "تقمران",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُقْمِرَانِ • (tuqmirāni) (form IV) /tuq.mi.raː.ni/\n# inflection of أَقْمَرَ (ʔaqmara):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqmirāni", "ʔaqmara"],
-        "k": "أقمر",
-        "yol": "kök"
-      },
-      {
-        "w": "يقمران",
-        "u": "يقمران",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُقْمِرَانِ • (yuqmirāni) (form IV) /juq.mi.raː.ni/\n# third-person masculine dual non-past active indicative of أَقْمَرَ (ʔaqmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuqmirāni", "ʔaqmara"],
-        "k": "أقمر",
-        "yol": "kök"
-      },
-      {
-        "w": "تقمرا",
-        "u": "تقمرا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُقْمِرَا • (tuqmirā) (form IV) /tuq.mi.raː/\n# inflection of أَقْمَرَ (ʔaqmara):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuqmirā", "ʔaqmara"],
-        "k": "أقمر",
-        "yol": "kök"
-      },
-      {
-        "w": "يقمرا",
-        "u": "يقمرا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُقْمِرَا • (yuqmirā) (form IV) /juq.mi.raː/\n# third-person masculine dual non-past active subjunctive/jussive of أَقْمَرَ (ʔaqmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuqmirā", "ʔaqmara"],
-        "k": "أقمر",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "قم",
+  "ses": {
     "harf": "ء",
+    "fasil": "قم",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يقمر",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يقمر (form IV)\n# يُقْمِرُ (yuqmiru) /juq.mi.ru/: third-person masculine singular non-past active indicative of أَقْمَرَ (ʔaqmara)\n# يُقْمِرَ (yuqmira) /juq.mi.ra/: third-person masculine singular non-past active subjunctive of أَقْمَرَ (ʔaqmara)\n# يُقْمِرْ (yuqmir) /juq.mir/: third-person masculine singular non-past active jussive of أَقْمَرَ (ʔaqmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuqmiru", "ʔaqmara", "yuqmira"],
+      "kok_yazilis": "أقمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقمرت",
+      "tur": "verb",
+      "baslik": "أقمرت (form IV)\n# أَقْمَرْتُ (ʔaqmartu) /ʔaq.mar.tu/: first-person singular past active of أَقْمَرَ (ʔaqmara)\n# أَقْمَرْتَ (ʔaqmarta) /ʔaq.mar.ta/: second-person masculine singular past active of أَقْمَرَ (ʔaqmara)\n# أَقْمَرْتِ (ʔaqmarti) /ʔaq.mar.ti/: second-person feminine singular past active of أَقْمَرَ (ʔaqmara)\n# أَقْمَرَتْ (ʔaqmarat) /ʔaq.ma.rat/: third-person feminine singular past active ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqmartu", "ʔaqmara", "ʔaqmarta"],
+      "kok_yazilis": "أقمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقمر",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تقمر (form IV)\n# تُقْمِرُ (tuqmiru) /tuq.mi.ru/: inflection of أَقْمَرَ (ʔaqmara):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُقْمِرَ (tuqmira) /tuq.mi.ra/: inflection of أَقْمَرَ (ʔaqmara):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqmiru", "ʔaqmara", "tuqmira"],
+      "kok_yazilis": "أقمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقمرين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُقْمِرِينَ • (tuqmirīna) (form IV) /tuq.mi.riː.na/\n# second-person feminine singular non-past active indicative of أَقْمَرَ (ʔaqmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqmirīna", "ʔaqmara"],
+      "kok_yazilis": "أقمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقمري",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُقْمِرِي • (tuqmirī) (form IV) /tuq.mi.riː/\n# second-person feminine singular non-past active subjunctive/jussive of أَقْمَرَ (ʔaqmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqmirī", "ʔaqmara"],
+      "kok_yazilis": "أقمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقمري",
+      "tur": "verb",
+      "baslik": "أَقْمِرِي • (ʔaqmirī) (form IV) /ʔaq.mi.riː/\n# second-person feminine singular imperative of أَقْمَرَ (ʔaqmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqmirī", "ʔaqmara"],
+      "kok_yazilis": "أقمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقمرنا",
+      "tur": "verb",
+      "baslik": "أَقْمَرْنَا • (ʔaqmarnā) (form IV) /ʔaq.mar.naː/\n# first-person plural past active of أَقْمَرَ (ʔaqmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqmarnā", "ʔaqmara"],
+      "kok_yazilis": "أقمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نقمر",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نقمر (form IV)\n# نُقْمِرُ (nuqmiru) /nuq.mi.ru/: first-person plural non-past active indicative of أَقْمَرَ (ʔaqmara)\n# نُقْمِرَ (nuqmira) /nuq.mi.ra/: first-person plural non-past active subjunctive of أَقْمَرَ (ʔaqmara)\n# نُقْمِرْ (nuqmir) /nuq.mir/: first-person plural non-past active jussive of أَقْمَرَ (ʔaqmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuqmiru", "ʔaqmara", "nuqmira"],
+      "kok_yazilis": "أقمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقمرتم",
+      "tur": "verb",
+      "baslik": "أَقْمَرْتُمْ • (ʔaqmartum) (form IV) /ʔaq.mar.tum/\n# second-person masculine plural past active of أَقْمَرَ (ʔaqmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqmartum", "ʔaqmara"],
+      "kok_yazilis": "أقمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقمرون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُقْمِرُونَ • (tuqmirūna) (form IV) /tuq.mi.ruː.na/\n# second-person masculine plural non-past active indicative of أَقْمَرَ (ʔaqmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqmirūna", "ʔaqmara"],
+      "kok_yazilis": "أقمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقمروا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُقْمِرُوا • (tuqmirū) (form IV) /tuq.mi.ruː/\n# second-person masculine plural non-past active subjunctive/jussive of أَقْمَرَ (ʔaqmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqmirū", "ʔaqmara"],
+      "kok_yazilis": "أقمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقمروا",
+      "tur": "verb",
+      "baslik": "أقمروا (form IV)\n# أَقْمَرُوا (ʔaqmarū) /ʔaq.ma.ruː/: third-person masculine plural past active of أَقْمَرَ (ʔaqmara)\n# أَقْمِرُوا (ʔaqmirū) /ʔaq.mi.ruː/: second-person masculine plural imperative of أَقْمَرَ (ʔaqmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqmarū", "ʔaqmara", "ʔaqmirū"],
+      "kok_yazilis": "أقمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقمرون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يُقْمِرُونَ • (yuqmirūna) (form IV) /juq.mi.ruː.na/\n# third-person masculine plural non-past active indicative of أَقْمَرَ (ʔaqmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuqmirūna", "ʔaqmara"],
+      "kok_yazilis": "أقمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقمروا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يُقْمِرُوا • (yuqmirū) (form IV) /juq.mi.ruː/\n# third-person masculine plural non-past active subjunctive/jussive of أَقْمَرَ (ʔaqmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuqmirū", "ʔaqmara"],
+      "kok_yazilis": "أقمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقمرتن",
+      "tur": "verb",
+      "baslik": "أَقْمَرْتُنَّ • (ʔaqmartunna) (form IV) /ʔaq.mar.tun.na/\n# second-person feminine plural past active of أَقْمَرَ (ʔaqmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqmartunna", "ʔaqmara"],
+      "kok_yazilis": "أقمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقمرن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُقْمِرْنَ • (tuqmirna) (form IV) /tuq.mir.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of أَقْمَرَ (ʔaqmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqmirna", "ʔaqmara"],
+      "kok_yazilis": "أقمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقمرن",
+      "tur": "verb",
+      "baslik": "أقمرن (form IV)\n# أَقْمَرْنَ (ʔaqmarna) /ʔaq.mar.na/: third-person feminine plural past active of أَقْمَرَ (ʔaqmara)\n# أَقْمِرْنَ (ʔaqmirna) /ʔaq.mir.na/: second-person feminine plural imperative of أَقْمَرَ (ʔaqmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqmarna", "ʔaqmara", "ʔaqmirna"],
+      "kok_yazilis": "أقمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقمرن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يُقْمِرْنَ • (yuqmirna) (form IV) /juq.mir.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of أَقْمَرَ (ʔaqmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuqmirna", "ʔaqmara"],
+      "kok_yazilis": "أقمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقمرتا",
+      "tur": "verb",
+      "baslik": "أَقْمَرَتَا • (ʔaqmaratā) (form IV) /ʔaq.ma.ra.taː/\n# third-person feminine dual past active of أَقْمَرَ (ʔaqmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqmaratā", "ʔaqmara"],
+      "kok_yazilis": "أقمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقمرتما",
+      "tur": "verb",
+      "baslik": "أَقْمَرْتُمَا • (ʔaqmartumā) (form IV) /ʔaq.mar.tu.maː/\n# second-person dual past active of أَقْمَرَ (ʔaqmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqmartumā", "ʔaqmara"],
+      "kok_yazilis": "أقمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقمرا",
+      "tur": "verb",
+      "baslik": "أقمرا (form IV)\n# أَقْمَرَا (ʔaqmarā) /ʔaq.ma.raː/: third-person masculine dual past active of أَقْمَرَ (ʔaqmara)\n# أَقْمِرَا (ʔaqmirā) /ʔaq.mi.raː/: second-person dual imperative of أَقْمَرَ (ʔaqmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaqmarā", "ʔaqmara", "ʔaqmirā"],
+      "kok_yazilis": "أقمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقمران",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُقْمِرَانِ • (tuqmirāni) (form IV) /tuq.mi.raː.ni/\n# inflection of أَقْمَرَ (ʔaqmara):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqmirāni", "ʔaqmara"],
+      "kok_yazilis": "أقمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقمران",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُقْمِرَانِ • (yuqmirāni) (form IV) /juq.mi.raː.ni/\n# third-person masculine dual non-past active indicative of أَقْمَرَ (ʔaqmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuqmirāni", "ʔaqmara"],
+      "kok_yazilis": "أقمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقمرا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُقْمِرَا • (tuqmirā) (form IV) /tuq.mi.raː/\n# inflection of أَقْمَرَ (ʔaqmara):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuqmirā", "ʔaqmara"],
+      "kok_yazilis": "أقمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقمرا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُقْمِرَا • (yuqmirā) (form IV) /juq.mi.raː/\n# third-person masculine dual non-past active subjunctive/jussive of أَقْمَرَ (ʔaqmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuqmirā", "ʔaqmara"],
+      "kok_yazilis": "أقمر",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءقمر", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,326 +1,231 @@
 {
   "kok": "راهن",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "راهن", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تراهن",
-        "u": "تراهن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تراهن (form III)\n# تُرَاهِنُ (turāhinu) /tu.raː.hi.nu/: inflection of رَاهَنَ (rāhana):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُرَاهِنَّ (turāhinna) /tu.raː.hin.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of رَاهَنَ (rāhana)\n# تُرَاهِنَ (turāhina) /tu.raː.hi.na/: inflection",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turāhinu", "rāhana", "turāhinna"],
-        "k": "راهن",
-        "yol": "kök"
-      },
-      {
-        "w": "راهنا",
-        "u": "راهنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "راهنا (form III)\n# رَاهَنَا (rāhanā) /raː.ha.naː/: third-person masculine dual past active of رَاهَنَ (rāhana)\n# رَاهَنَّا (rāhannā) /raː.han.naː/: first-person plural past active of رَاهَنَ (rāhana)\n# رَاهِنَا (rāhinā) /raː.hi.naː/: second-person dual imperative of رَاهَنَ (rāhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rāhanā", "rāhana", "rāhannā"],
-        "k": "راهن",
-        "yol": "kök"
-      },
-      {
-        "w": "راهنت",
-        "u": "راهنت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "راهنت (form III)\n# رَاهَنْتُ (rāhantu) /raː.han.tu/: first-person singular past active of رَاهَنَ (rāhana)\n# رَاهَنْتَ (rāhanta) /raː.han.ta/: second-person masculine singular past active of رَاهَنَ (rāhana)\n# رَاهَنْتِ (rāhanti) /raː.han.ti/: second-person feminine singular past active of رَاهَنَ (rāhana)\n# رَاهَنَتْ (rāhanat) /raː.ha.nat/: third-person feminine singular past active of رَاهَنَ (r",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rāhantu", "rāhana", "rāhanta"],
-        "k": "راهن",
-        "yol": "kök"
-      },
-      {
-        "w": "راهنتا",
-        "u": "راهنتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاهَنَتَا • (rāhanatā) (form III) /raː.ha.na.taː/\n# third-person feminine dual past active of رَاهَنَ (rāhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rāhanatā", "rāhana"],
-        "k": "راهن",
-        "yol": "kök"
-      },
-      {
-        "w": "راهنتما",
-        "u": "راهنتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاهَنْتُمَا • (rāhantumā) (form III) /raː.han.tu.maː/\n# second-person dual past active of رَاهَنَ (rāhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rāhantumā", "rāhana"],
-        "k": "راهن",
-        "yol": "kök"
-      },
-      {
-        "w": "راهنتم",
-        "u": "راهنتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاهَنْتُمْ • (rāhantum) (form III) /raː.han.tum/\n# second-person masculine plural past active of رَاهَنَ (rāhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rāhantum", "rāhana"],
-        "k": "راهن",
-        "yol": "kök"
-      },
-      {
-        "w": "راهنتن",
-        "u": "راهنتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاهَنْتُنَّ • (rāhantunna) (form III) /raː.han.tun.na/\n# second-person feminine plural past active of رَاهَنَ (rāhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rāhantunna", "rāhana"],
-        "k": "راهن",
-        "yol": "kök"
-      },
-      {
-        "w": "راهنوا",
-        "u": "راهنوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "راهنوا (form III)\n# رَاهَنُوا (rāhanū) /raː.ha.nuː/: third-person masculine plural past active of رَاهَنَ (rāhana)\n# رَاهِنُوا (rāhinū) /raː.hi.nuː/: second-person masculine plural imperative of رَاهَنَ (rāhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rāhanū", "rāhana", "rāhinū"],
-        "k": "راهن",
-        "yol": "kök"
-      },
-      {
-        "w": "أراهن",
-        "u": "أراهن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أراهن (form III)\n# أُرَاهِنُ (ʔurāhinu) /ʔu.raː.hi.nu/: first-person singular non-past active indicative of رَاهَنَ (rāhana)\n# أُرَاهِنَ (ʔurāhina) /ʔu.raː.hi.na/: first-person singular non-past active subjunctive of رَاهَنَ (rāhana)\n# أُرَاهِنْ (ʔurāhin) /ʔu.raː.hin/: first-person singular non-past active jussive of رَاهَنَ (rāhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔurāhinu", "rāhana", "ʔurāhina"],
-        "k": "راهن",
-        "yol": "kök"
-      },
-      {
-        "w": "روهن",
-        "u": "روهن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُوهِنَ • (rūhina) (form III) /ruː.hi.na/\n# third-person masculine singular past passive of رَاهَنَ (rāhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rūhina", "rāhana"],
-        "k": "راهن",
-        "yol": "kök"
-      },
-      {
-        "w": "تراهنين",
-        "u": "تراهنين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُرَاهِنِينَ • (turāhinīna) (form III) /tu.raː.hi.niː.na/\n# second-person feminine singular non-past active indicative of رَاهَنَ (rāhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turāhinīna", "rāhana"],
-        "k": "راهن",
-        "yol": "kök"
-      },
-      {
-        "w": "تراهنان",
-        "u": "تراهنان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُرَاهِنَانِ • (turāhināni) (form III) /tu.raː.hi.naː.ni/\n# inflection of رَاهَنَ (rāhana):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turāhināni", "rāhana"],
-        "k": "راهن",
-        "yol": "kök"
-      },
-      {
-        "w": "يراهن",
-        "u": "يراهن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يراهن (form III)\n# يُرَاهِنُ (yurāhinu) /ju.raː.hi.nu/: third-person masculine singular non-past active indicative of رَاهَنَ (rāhana)\n# يُرَاهِنَّ (yurāhinna) /ju.raː.hin.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of رَاهَنَ (rāhana)\n# يُرَاهَنُ (yurāhanu) /ju.raː.ha.nu/: third-person masculine singular non-past passive indicative of رَاهَنَ (rāhana)\n# يُرَاه",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yurāhinu", "rāhana", "yurāhinna"],
-        "k": "راهن",
-        "yol": "kök"
-      },
-      {
-        "w": "تراهنون",
-        "u": "تراهنون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُرَاهِنُونَ • (turāhinūna) (form III) /tu.raː.hi.nuː.na/\n# second-person masculine plural non-past active indicative of رَاهَنَ (rāhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turāhinūna", "rāhana"],
-        "k": "راهن",
-        "yol": "kök"
-      },
-      {
-        "w": "يراهنان",
-        "u": "يراهنان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُرَاهِنَانِ • (yurāhināni) (form III) /ju.raː.hi.naː.ni/\n# third-person masculine dual non-past active indicative of رَاهَنَ (rāhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yurāhināni", "rāhana"],
-        "k": "راهن",
-        "yol": "kök"
-      },
-      {
-        "w": "يراهنون",
-        "u": "يراهنون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُرَاهِنُونَ • (yurāhinūna) (form III) /ju.raː.hi.nuː.na/\n# third-person masculine plural non-past active indicative of رَاهَنَ (rāhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yurāhinūna", "rāhana"],
-        "k": "راهن",
-        "yol": "kök"
-      },
-      {
-        "w": "نراهن",
-        "u": "نراهن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نراهن (form III)\n# نُرَاهِنُ (nurāhinu) /nu.raː.hi.nu/: first-person plural non-past active indicative of رَاهَنَ (rāhana)\n# نُرَاهِنَ (nurāhina) /nu.raː.hi.na/: first-person plural non-past active subjunctive of رَاهَنَ (rāhana)\n# نُرَاهِنْ (nurāhin) /nu.raː.hin/: first-person plural non-past active jussive of رَاهَنَ (rāhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nurāhinu", "rāhana", "nurāhina"],
-        "k": "راهن",
-        "yol": "kök"
-      },
-      {
-        "w": "تراهنا",
-        "u": "تراهنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُرَاهِنَا • (turāhinā) (form III) /tu.raː.hi.naː/\n# inflection of رَاهَنَ (rāhana):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turāhinā", "rāhana"],
-        "k": "راهن",
-        "yol": "kök"
-      },
-      {
-        "w": "يراهنا",
-        "u": "يراهنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُرَاهِنَا • (yurāhinā) (form III) /ju.raː.hi.naː/\n# third-person masculine dual non-past active subjunctive/jussive of رَاهَنَ (rāhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yurāhinā", "rāhana"],
-        "k": "راهن",
-        "yol": "kök"
-      },
-      {
-        "w": "تراهني",
-        "u": "تراهني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُرَاهِنِي • (turāhinī) (form III) /tu.raː.hi.niː/\n# second-person feminine singular non-past active subjunctive/jussive of رَاهَنَ (rāhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turāhinī", "rāhana"],
-        "k": "راهن",
-        "yol": "kök"
-      },
-      {
-        "w": "راهني",
-        "u": "راهني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاهِنِي • (rāhinī) (form III) /raː.hi.niː/\n# second-person feminine singular imperative of رَاهَنَ (rāhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rāhinī", "rāhana"],
-        "k": "راهن",
-        "yol": "kök"
-      },
-      {
-        "w": "يراهنوا",
-        "u": "يراهنوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُرَاهِنُوا • (yurāhinū) (form III) /ju.raː.hi.nuː/\n# third-person masculine plural non-past active subjunctive/jussive of رَاهَنَ (rāhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yurāhinū", "rāhana"],
-        "k": "راهن",
-        "yol": "kök"
-      },
-      {
-        "w": "تراهنوا",
-        "u": "تراهنوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُرَاهِنُوا • (turāhinū) (form III) /tu.raː.hi.nuː/\n# second-person masculine plural non-past active subjunctive/jussive of رَاهَنَ (rāhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turāhinū", "rāhana"],
-        "k": "راهن",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "ره",
+  "ses": {
     "harf": "ر",
+    "fasil": "ره",
     "mahrec": "zelakiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تراهن",
+      "tur": "verb",
+      "baslik": "تراهن (form III)\n# تُرَاهِنُ (turāhinu) /tu.raː.hi.nu/: inflection of رَاهَنَ (rāhana):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُرَاهِنَّ (turāhinna) /tu.raː.hin.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of رَاهَنَ (rāhana)\n# تُرَاهِنَ (turāhina) /tu.raː.hi.na/: inflection",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turāhinu", "rāhana", "turāhinna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "راهنا",
+      "tur": "verb",
+      "baslik": "راهنا (form III)\n# رَاهَنَا (rāhanā) /raː.ha.naː/: third-person masculine dual past active of رَاهَنَ (rāhana)\n# رَاهَنَّا (rāhannā) /raː.han.naː/: first-person plural past active of رَاهَنَ (rāhana)\n# رَاهِنَا (rāhinā) /raː.hi.naː/: second-person dual imperative of رَاهَنَ (rāhana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rāhanā", "rāhana", "rāhannā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "راهنت",
+      "tur": "verb",
+      "baslik": "راهنت (form III)\n# رَاهَنْتُ (rāhantu) /raː.han.tu/: first-person singular past active of رَاهَنَ (rāhana)\n# رَاهَنْتَ (rāhanta) /raː.han.ta/: second-person masculine singular past active of رَاهَنَ (rāhana)\n# رَاهَنْتِ (rāhanti) /raː.han.ti/: second-person feminine singular past active of رَاهَنَ (rāhana)\n# رَاهَنَتْ (rāhanat) /raː.ha.nat/: third-person feminine singular past active of رَاهَنَ (r",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rāhantu", "rāhana", "rāhanta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "راهنتا",
+      "tur": "verb",
+      "baslik": "رَاهَنَتَا • (rāhanatā) (form III) /raː.ha.na.taː/\n# third-person feminine dual past active of رَاهَنَ (rāhana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rāhanatā", "rāhana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "راهنتما",
+      "tur": "verb",
+      "baslik": "رَاهَنْتُمَا • (rāhantumā) (form III) /raː.han.tu.maː/\n# second-person dual past active of رَاهَنَ (rāhana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rāhantumā", "rāhana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "راهنتم",
+      "tur": "verb",
+      "baslik": "رَاهَنْتُمْ • (rāhantum) (form III) /raː.han.tum/\n# second-person masculine plural past active of رَاهَنَ (rāhana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rāhantum", "rāhana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "راهنتن",
+      "tur": "verb",
+      "baslik": "رَاهَنْتُنَّ • (rāhantunna) (form III) /raː.han.tun.na/\n# second-person feminine plural past active of رَاهَنَ (rāhana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rāhantunna", "rāhana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "راهنوا",
+      "tur": "verb",
+      "baslik": "راهنوا (form III)\n# رَاهَنُوا (rāhanū) /raː.ha.nuː/: third-person masculine plural past active of رَاهَنَ (rāhana)\n# رَاهِنُوا (rāhinū) /raː.hi.nuː/: second-person masculine plural imperative of رَاهَنَ (rāhana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rāhanū", "rāhana", "rāhinū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أراهن",
+      "tur": "verb",
+      "baslik": "أراهن (form III)\n# أُرَاهِنُ (ʔurāhinu) /ʔu.raː.hi.nu/: first-person singular non-past active indicative of رَاهَنَ (rāhana)\n# أُرَاهِنَ (ʔurāhina) /ʔu.raː.hi.na/: first-person singular non-past active subjunctive of رَاهَنَ (rāhana)\n# أُرَاهِنْ (ʔurāhin) /ʔu.raː.hin/: first-person singular non-past active jussive of رَاهَنَ (rāhana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔurāhinu", "rāhana", "ʔurāhina"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "روهن",
+      "tur": "verb",
+      "baslik": "رُوهِنَ • (rūhina) (form III) /ruː.hi.na/\n# third-person masculine singular past passive of رَاهَنَ (rāhana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rūhina", "rāhana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تراهنين",
+      "tur": "verb",
+      "baslik": "تُرَاهِنِينَ • (turāhinīna) (form III) /tu.raː.hi.niː.na/\n# second-person feminine singular non-past active indicative of رَاهَنَ (rāhana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turāhinīna", "rāhana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تراهنان",
+      "tur": "verb",
+      "baslik": "تُرَاهِنَانِ • (turāhināni) (form III) /tu.raː.hi.naː.ni/\n# inflection of رَاهَنَ (rāhana):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turāhināni", "rāhana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يراهن",
+      "tur": "verb",
+      "baslik": "يراهن (form III)\n# يُرَاهِنُ (yurāhinu) /ju.raː.hi.nu/: third-person masculine singular non-past active indicative of رَاهَنَ (rāhana)\n# يُرَاهِنَّ (yurāhinna) /ju.raː.hin.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of رَاهَنَ (rāhana)\n# يُرَاهَنُ (yurāhanu) /ju.raː.ha.nu/: third-person masculine singular non-past passive indicative of رَاهَنَ (rāhana)\n# يُرَاه",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yurāhinu", "rāhana", "yurāhinna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تراهنون",
+      "tur": "verb",
+      "baslik": "تُرَاهِنُونَ • (turāhinūna) (form III) /tu.raː.hi.nuː.na/\n# second-person masculine plural non-past active indicative of رَاهَنَ (rāhana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turāhinūna", "rāhana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يراهنان",
+      "tur": "verb",
+      "baslik": "يُرَاهِنَانِ • (yurāhināni) (form III) /ju.raː.hi.naː.ni/\n# third-person masculine dual non-past active indicative of رَاهَنَ (rāhana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yurāhināni", "rāhana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يراهنون",
+      "tur": "verb",
+      "baslik": "يُرَاهِنُونَ • (yurāhinūna) (form III) /ju.raː.hi.nuː.na/\n# third-person masculine plural non-past active indicative of رَاهَنَ (rāhana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yurāhinūna", "rāhana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نراهن",
+      "tur": "verb",
+      "baslik": "نراهن (form III)\n# نُرَاهِنُ (nurāhinu) /nu.raː.hi.nu/: first-person plural non-past active indicative of رَاهَنَ (rāhana)\n# نُرَاهِنَ (nurāhina) /nu.raː.hi.na/: first-person plural non-past active subjunctive of رَاهَنَ (rāhana)\n# نُرَاهِنْ (nurāhin) /nu.raː.hin/: first-person plural non-past active jussive of رَاهَنَ (rāhana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nurāhinu", "rāhana", "nurāhina"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تراهنا",
+      "tur": "verb",
+      "baslik": "تُرَاهِنَا • (turāhinā) (form III) /tu.raː.hi.naː/\n# inflection of رَاهَنَ (rāhana):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turāhinā", "rāhana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يراهنا",
+      "tur": "verb",
+      "baslik": "يُرَاهِنَا • (yurāhinā) (form III) /ju.raː.hi.naː/\n# third-person masculine dual non-past active subjunctive/jussive of رَاهَنَ (rāhana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yurāhinā", "rāhana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تراهني",
+      "tur": "verb",
+      "baslik": "تُرَاهِنِي • (turāhinī) (form III) /tu.raː.hi.niː/\n# second-person feminine singular non-past active subjunctive/jussive of رَاهَنَ (rāhana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turāhinī", "rāhana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "راهني",
+      "tur": "verb",
+      "baslik": "رَاهِنِي • (rāhinī) (form III) /raː.hi.niː/\n# second-person feminine singular imperative of رَاهَنَ (rāhana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rāhinī", "rāhana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يراهنوا",
+      "tur": "verb",
+      "baslik": "يُرَاهِنُوا • (yurāhinū) (form III) /ju.raː.hi.nuː/\n# third-person masculine plural non-past active subjunctive/jussive of رَاهَنَ (rāhana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yurāhinū", "rāhana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تراهنوا",
+      "tur": "verb",
+      "baslik": "تُرَاهِنُوا • (turāhinū) (form III) /tu.raː.hi.nuː/\n# second-person masculine plural non-past active subjunctive/jussive of رَاهَنَ (rāhana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turāhinū", "rāhana"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "راهن", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,705 +1,490 @@
 {
   "kok": "لاءم",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "لاءم", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "لائم",
-        "u": "لائم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "لَائِمْ • (lāʔim) (form III) /laː.ʔim/\n# second-person masculine singular imperative of لَاءَمَ (lāʔama)",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lāʔim", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "لاءمت",
-        "u": "لاءمت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لاءمت (form III)\n# لَاءَمْتُ (lāʔamtu) /laː.ʔam.tu/: first-person singular past active of لَاءَمَ (lāʔama)\n# لَاءَمْتَ (lāʔamta) /laː.ʔam.ta/: second-person masculine singular past active of لَاءَمَ (lāʔama)\n# لَاءَمْتِ (lāʔamti) /laː.ʔam.ti/: second-person feminine singular past active of لَاءَمَ (lāʔama)\n# لَاءَمَتْ (lāʔamat) /laː.ʔa.mat/: third-person feminine singular past active of لَاءَمَ (l",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lāʔamtu", "lāʔama", "lāʔamta"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "لاءمتما",
-        "u": "لاءمتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لَاءَمْتُمَا • (lāʔamtumā) (form III) /laː.ʔam.tu.maː/\n# second-person dual past active of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lāʔamtumā", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "لاءما",
-        "u": "لاءما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لَاءَمَا • (lāʔamā) (form III) /laː.ʔa.maː/\n# third-person masculine dual past active of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lāʔamā", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "لاءمتا",
-        "u": "لاءمتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لَاءَمَتَا • (lāʔamatā) (form III) /laː.ʔa.ma.taː/\n# third-person feminine dual past active of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lāʔamatā", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "لاءمنا",
-        "u": "لاءمنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لَاءَمْنَا • (lāʔamnā) (form III) /laː.ʔam.naː/\n# first-person plural past active of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lāʔamnā", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "لاءمتم",
-        "u": "لاءمتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لَاءَمْتُمْ • (lāʔamtum) (form III) /laː.ʔam.tum/\n# second-person masculine plural past active of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lāʔamtum", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "لاءمتن",
-        "u": "لاءمتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لَاءَمْتُنَّ • (lāʔamtunna) (form III) /laː.ʔam.tun.na/\n# second-person feminine plural past active of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lāʔamtunna", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "لاءموا",
-        "u": "لاءموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لَاءَمُوا • (lāʔamū) (form III) /laː.ʔa.muː/\n# third-person masculine plural past active of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lāʔamū", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "لوئمت",
-        "u": "لوئمت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لوئمت (form III)\n# لُوئِمْتُ (lūʔimtu) /luː.ʔim.tu/: first-person singular past passive of لَاءَمَ (lāʔama)\n# لُوئِمْتَ (lūʔimta) /luː.ʔim.ta/: second-person masculine singular past passive of لَاءَمَ (lāʔama)\n# لُوئِمْتِ (lūʔimti) /luː.ʔim.ti/: second-person feminine singular past passive of لَاءَمَ (lāʔama)\n# لُوئِمَتْ (lūʔimat) /luː.ʔi.mat/: third-person feminine singular past passive of لَاءَم",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lūʔimtu", "lāʔama", "lūʔimta"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "لاءمن",
-        "u": "لاءمن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لَاءَمْنَ • (lāʔamna) (form III) /laː.ʔam.na/\n# third-person feminine plural past active of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lāʔamna", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "لوئما",
-        "u": "لوئما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لُوئِمَا • (lūʔimā) (form III) /luː.ʔi.maː/\n# third-person masculine dual past passive of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lūʔimā", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "لوئم",
-        "u": "لوئم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لُوئِمَ • (lūʔima) (form III) /luː.ʔi.ma/\n# third-person masculine singular past passive of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lūʔima", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "لوئمتما",
-        "u": "لوئمتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لُوئِمْتُمَا • (lūʔimtumā) (form III) /luː.ʔim.tu.maː/\n# second-person dual past passive of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lūʔimtumā", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "لوئمتا",
-        "u": "لوئمتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لُوئِمَتَا • (lūʔimatā) (form III) /luː.ʔi.ma.taː/\n# third-person feminine dual past passive of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lūʔimatā", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "لوئمنا",
-        "u": "لوئمنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لُوئِمْنَا • (lūʔimnā) (form III) /luː.ʔim.naː/\n# first-person plural past passive of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lūʔimnā", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "لوئمتم",
-        "u": "لوئمتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لُوئِمْتُمْ • (lūʔimtum) (form III) /luː.ʔim.tum/\n# second-person masculine plural past passive of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lūʔimtum", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "لوئمتن",
-        "u": "لوئمتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لُوئِمْتُنَّ • (lūʔimtunna) (form III) /luː.ʔim.tun.na/\n# second-person feminine plural past passive of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lūʔimtunna", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "لوئموا",
-        "u": "لوئموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لُوئِمُوا • (lūʔimū) (form III) /luː.ʔi.muː/\n# third-person masculine plural past passive of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lūʔimū", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "لوئمن",
-        "u": "لوئمن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لُوئِمْنَ • (lūʔimna) (form III) /luː.ʔim.na/\n# third-person feminine plural past passive of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lūʔimna", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "تلائمين",
-        "u": "تلائمين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُلَائِمِينَ • (tulāʔimīna) (form III) /tu.laː.ʔi.miː.na/\n# second-person feminine singular non-past active indicative of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tulāʔimīna", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "ألائم",
-        "u": "ألائم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ألائم (form III)\n# أُلَائِمُ (ʔulāʔimu) /ʔu.laː.ʔi.mu/: first-person singular non-past active indicative of لَاءَمَ (lāʔama)\n# أُلَائِمَ (ʔulāʔima) /ʔu.laː.ʔi.ma/: first-person singular non-past active subjunctive of لَاءَمَ (lāʔama)\n# أُلَائِمْ (ʔulāʔim) /ʔu.laː.ʔim/: first-person singular non-past active jussive of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔulāʔimu", "lāʔama", "ʔulāʔima"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "يلائم",
-        "u": "يلائم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يلائم (form III)\n# يُلَائِمُ (yulāʔimu) /ju.laː.ʔi.mu/: third-person masculine singular non-past active indicative of لَاءَمَ (lāʔama)\n# يُلَائِمَ (yulāʔima) /ju.laː.ʔi.ma/: third-person masculine singular non-past active subjunctive of لَاءَمَ (lāʔama)\n# يُلَائِمْ (yulāʔim) /ju.laː.ʔim/: third-person masculine singular non-past active jussive of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yulāʔimu", "lāʔama", "yulāʔima"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "تلائم",
-        "u": "تلائم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تلائم (form III)\n# تُلَائِمُ (tulāʔimu) /tu.laː.ʔi.mu/: inflection of لَاءَمَ (lāʔama):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُلَائِمَ (tulāʔima) /tu.laː.ʔi.ma/: inflection of لَاءَمَ (lāʔama):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active sub",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tulāʔimu", "lāʔama", "tulāʔima"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "نلائم",
-        "u": "نلائم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نلائم (form III)\n# نُلَائِمُ (nulāʔimu) /nu.laː.ʔi.mu/: first-person plural non-past active indicative of لَاءَمَ (lāʔama)\n# نُلَائِمَ (nulāʔima) /nu.laː.ʔi.ma/: first-person plural non-past active subjunctive of لَاءَمَ (lāʔama)\n# نُلَائِمْ (nulāʔim) /nu.laː.ʔim/: first-person plural non-past active jussive of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nulāʔimu", "lāʔama", "nulāʔima"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "تلائمون",
-        "u": "تلائمون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُلَائِمُونَ • (tulāʔimūna) (form III) /tu.laː.ʔi.muː.na/\n# second-person masculine plural non-past active indicative of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tulāʔimūna", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "يلائمان",
-        "u": "يلائمان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُلَائِمَانِ • (yulāʔimāni) (form III) /ju.laː.ʔi.maː.ni/\n# third-person masculine dual non-past active indicative of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yulāʔimāni", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "تلائمان",
-        "u": "تلائمان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُلَائِمَانِ • (tulāʔimāni) (form III) /tu.laː.ʔi.maː.ni/\n# inflection of لَاءَمَ (lāʔama):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tulāʔimāni", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "تلائمن",
-        "u": "تلائمن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُلَائِمْنَ • (tulāʔimna) (form III) /tu.laː.ʔim.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tulāʔimna", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "يلائمن",
-        "u": "يلائمن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُلَائِمْنَ • (yulāʔimna) (form III) /ju.laː.ʔim.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yulāʔimna", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "ألاءم",
-        "u": "ألاءم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ألاءم (form III)\n# أُلَاءَمُ (ʔulāʔamu) /ʔu.laː.ʔa.mu/: first-person singular non-past passive indicative of لَاءَمَ (lāʔama)\n# أُلَاءَمَ (ʔulāʔama) /ʔu.laː.ʔa.ma/: first-person singular non-past passive subjunctive of لَاءَمَ (lāʔama)\n# أُلَاءَمْ (ʔulāʔam) /ʔu.laː.ʔam/: first-person singular non-past passive jussive of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔulāʔamu", "lāʔama", "ʔulāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "يلائمون",
-        "u": "يلائمون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُلَائِمُونَ • (yulāʔimūna) (form III) /ju.laː.ʔi.muː.na/\n# third-person masculine plural non-past active indicative of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yulāʔimūna", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "تلاءم",
-        "u": "تلاءم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تلاءم (form III)\n# تُلَاءَمُ (tulāʔamu) /tu.laː.ʔa.mu/: inflection of لَاءَمَ (lāʔama):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُلَاءَمَ (tulāʔama) /tu.laː.ʔa.ma/: inflection of لَاءَمَ (lāʔama):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tulāʔamu", "lāʔama", "tulāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "يلاءم",
-        "u": "يلاءم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يلاءم (form III)\n# يُلَاءَمُ (yulāʔamu) /ju.laː.ʔa.mu/: third-person masculine singular non-past passive indicative of لَاءَمَ (lāʔama)\n# يُلَاءَمَ (yulāʔama) /ju.laː.ʔa.ma/: third-person masculine singular non-past passive subjunctive of لَاءَمَ (lāʔama)\n# يُلَاءَمْ (yulāʔam) /ju.laː.ʔam/: third-person masculine singular non-past passive jussive of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yulāʔamu", "lāʔama", "yulāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "تلاءمين",
-        "u": "تلاءمين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُلَاءَمِينَ • (tulāʔamīna) (form III) /tu.laː.ʔa.miː.na/\n# second-person feminine singular non-past passive indicative of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tulāʔamīna", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "تلاءمان",
-        "u": "تلاءمان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُلَاءَمَانِ • (tulāʔamāni) (form III) /tu.laː.ʔa.maː.ni/\n# inflection of لَاءَمَ (lāʔama):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tulāʔamāni", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "يلاءمان",
-        "u": "يلاءمان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُلَاءَمَانِ • (yulāʔamāni) (form III) /ju.laː.ʔa.maː.ni/\n# third-person masculine dual non-past passive indicative of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yulāʔamāni", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "تلاءمون",
-        "u": "تلاءمون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُلَاءَمُونَ • (tulāʔamūna) (form III) /tu.laː.ʔa.muː.na/\n# second-person masculine plural non-past passive indicative of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tulāʔamūna", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "تلاءمن",
-        "u": "تلاءمن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُلَاءَمْنَ • (tulāʔamna) (form III) /tu.laː.ʔam.na/\n# second-person feminine plural non-past passive indicative/subjunctive/jussive of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tulāʔamna", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "نلاءم",
-        "u": "نلاءم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نلاءم (form III)\n# نُلَاءَمُ (nulāʔamu) /nu.laː.ʔa.mu/: first-person plural non-past passive indicative of لَاءَمَ (lāʔama)\n# نُلَاءَمَ (nulāʔama) /nu.laː.ʔa.ma/: first-person plural non-past passive subjunctive of لَاءَمَ (lāʔama)\n# نُلَاءَمْ (nulāʔam) /nu.laː.ʔam/: first-person plural non-past passive jussive of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nulāʔamu", "lāʔama", "nulāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "يلاءمون",
-        "u": "يلاءمون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُلَاءَمُونَ • (yulāʔamūna) (form III) /ju.laː.ʔa.muː.na/\n# third-person masculine plural non-past passive indicative of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yulāʔamūna", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "يلاءمن",
-        "u": "يلاءمن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُلَاءَمْنَ • (yulāʔamna) (form III) /ju.laː.ʔam.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yulāʔamna", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "تلائما",
-        "u": "تلائما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُلَائِمَا • (tulāʔimā) (form III) /tu.laː.ʔi.maː/\n# inflection of لَاءَمَ (lāʔama):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tulāʔimā", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "يلائما",
-        "u": "يلائما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُلَائِمَا • (yulāʔimā) (form III) /ju.laː.ʔi.maː/\n# third-person masculine dual non-past active subjunctive/jussive of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yulāʔimā", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "تلاءمي",
-        "u": "تلاءمي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُلَاءَمِي • (tulāʔamī) (form III) /tu.laː.ʔa.miː/\n# second-person feminine singular non-past passive subjunctive/jussive of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tulāʔamī", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "يلائموا",
-        "u": "يلائموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُلَائِمُوا • (yulāʔimū) (form III) /ju.laː.ʔi.muː/\n# third-person masculine plural non-past active subjunctive/jussive of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yulāʔimū", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "تلائموا",
-        "u": "تلائموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُلَائِمُوا • (tulāʔimū) (form III) /tu.laː.ʔi.muː/\n# second-person masculine plural non-past active subjunctive/jussive of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tulāʔimū", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "تلاءما",
-        "u": "تلاءما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُلَاءَمَا • (tulāʔamā) (form III) /tu.laː.ʔa.maː/\n# inflection of لَاءَمَ (lāʔama):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tulāʔamā", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "يلاءما",
-        "u": "يلاءما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُلَاءَمَا • (yulāʔamā) (form III) /ju.laː.ʔa.maː/\n# third-person masculine dual non-past passive subjunctive/jussive of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yulāʔamā", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "تلاءموا",
-        "u": "تلاءموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُلَاءَمُوا • (tulāʔamū) (form III) /tu.laː.ʔa.muː/\n# second-person masculine plural non-past passive subjunctive/jussive of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tulāʔamū", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "تلائمي",
-        "u": "تلائمي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُلَائِمِي • (tulāʔimī) (form III) /tu.laː.ʔi.miː/\n# second-person feminine singular non-past active subjunctive/jussive of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tulāʔimī", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "لائمي",
-        "u": "لائمي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لَائِمِي • (lāʔimī) (form III) /laː.ʔi.miː/\n# second-person feminine singular imperative of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lāʔimī", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "لائما",
-        "u": "لائما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لَائِمَا • (lāʔimā) (form III) /laː.ʔi.maː/\n# second-person dual imperative of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lāʔimā", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "يلاءموا",
-        "u": "يلاءموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُلَاءَمُوا • (yulāʔamū) (form III) /ju.laː.ʔa.muː/\n# third-person masculine plural non-past passive subjunctive/jussive of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yulāʔamū", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "لائموا",
-        "u": "لائموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لَائِمُوا • (lāʔimū) (form III) /laː.ʔi.muː/\n# second-person masculine plural imperative of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lāʔimū", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      },
-      {
-        "w": "لائمن",
-        "u": "لائمن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لَائِمْنَ • (lāʔimna) (form III) /laː.ʔim.na/\n# second-person feminine plural imperative of لَاءَمَ (lāʔama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lāʔimna", "lāʔama"],
-        "k": "لاءم",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "لم",
+  "ses": {
     "harf": "ل",
+    "fasil": "لم",
     "mahrec": "zelakiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "لائم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "لَائِمْ • (lāʔim) (form III) /laː.ʔim/\n# second-person masculine singular imperative of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lāʔim", "lāʔama"]
+    },
+    {
+      "madde": "لاءمت",
+      "tur": "verb",
+      "baslik": "لاءمت (form III)\n# لَاءَمْتُ (lāʔamtu) /laː.ʔam.tu/: first-person singular past active of لَاءَمَ (lāʔama)\n# لَاءَمْتَ (lāʔamta) /laː.ʔam.ta/: second-person masculine singular past active of لَاءَمَ (lāʔama)\n# لَاءَمْتِ (lāʔamti) /laː.ʔam.ti/: second-person feminine singular past active of لَاءَمَ (lāʔama)\n# لَاءَمَتْ (lāʔamat) /laː.ʔa.mat/: third-person feminine singular past active of لَاءَمَ (l",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lāʔamtu", "lāʔama", "lāʔamta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لاءمتما",
+      "tur": "verb",
+      "baslik": "لَاءَمْتُمَا • (lāʔamtumā) (form III) /laː.ʔam.tu.maː/\n# second-person dual past active of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lāʔamtumā", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لاءما",
+      "tur": "verb",
+      "baslik": "لَاءَمَا • (lāʔamā) (form III) /laː.ʔa.maː/\n# third-person masculine dual past active of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lāʔamā", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لاءمتا",
+      "tur": "verb",
+      "baslik": "لَاءَمَتَا • (lāʔamatā) (form III) /laː.ʔa.ma.taː/\n# third-person feminine dual past active of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lāʔamatā", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لاءمنا",
+      "tur": "verb",
+      "baslik": "لَاءَمْنَا • (lāʔamnā) (form III) /laː.ʔam.naː/\n# first-person plural past active of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lāʔamnā", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لاءمتم",
+      "tur": "verb",
+      "baslik": "لَاءَمْتُمْ • (lāʔamtum) (form III) /laː.ʔam.tum/\n# second-person masculine plural past active of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lāʔamtum", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لاءمتن",
+      "tur": "verb",
+      "baslik": "لَاءَمْتُنَّ • (lāʔamtunna) (form III) /laː.ʔam.tun.na/\n# second-person feminine plural past active of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lāʔamtunna", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لاءموا",
+      "tur": "verb",
+      "baslik": "لَاءَمُوا • (lāʔamū) (form III) /laː.ʔa.muː/\n# third-person masculine plural past active of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lāʔamū", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لوئمت",
+      "tur": "verb",
+      "baslik": "لوئمت (form III)\n# لُوئِمْتُ (lūʔimtu) /luː.ʔim.tu/: first-person singular past passive of لَاءَمَ (lāʔama)\n# لُوئِمْتَ (lūʔimta) /luː.ʔim.ta/: second-person masculine singular past passive of لَاءَمَ (lāʔama)\n# لُوئِمْتِ (lūʔimti) /luː.ʔim.ti/: second-person feminine singular past passive of لَاءَمَ (lāʔama)\n# لُوئِمَتْ (lūʔimat) /luː.ʔi.mat/: third-person feminine singular past passive of لَاءَم",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lūʔimtu", "lāʔama", "lūʔimta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لاءمن",
+      "tur": "verb",
+      "baslik": "لَاءَمْنَ • (lāʔamna) (form III) /laː.ʔam.na/\n# third-person feminine plural past active of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lāʔamna", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لوئما",
+      "tur": "verb",
+      "baslik": "لُوئِمَا • (lūʔimā) (form III) /luː.ʔi.maː/\n# third-person masculine dual past passive of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lūʔimā", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لوئم",
+      "tur": "verb",
+      "baslik": "لُوئِمَ • (lūʔima) (form III) /luː.ʔi.ma/\n# third-person masculine singular past passive of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lūʔima", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لوئمتما",
+      "tur": "verb",
+      "baslik": "لُوئِمْتُمَا • (lūʔimtumā) (form III) /luː.ʔim.tu.maː/\n# second-person dual past passive of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lūʔimtumā", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لوئمتا",
+      "tur": "verb",
+      "baslik": "لُوئِمَتَا • (lūʔimatā) (form III) /luː.ʔi.ma.taː/\n# third-person feminine dual past passive of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lūʔimatā", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لوئمنا",
+      "tur": "verb",
+      "baslik": "لُوئِمْنَا • (lūʔimnā) (form III) /luː.ʔim.naː/\n# first-person plural past passive of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lūʔimnā", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لوئمتم",
+      "tur": "verb",
+      "baslik": "لُوئِمْتُمْ • (lūʔimtum) (form III) /luː.ʔim.tum/\n# second-person masculine plural past passive of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lūʔimtum", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لوئمتن",
+      "tur": "verb",
+      "baslik": "لُوئِمْتُنَّ • (lūʔimtunna) (form III) /luː.ʔim.tun.na/\n# second-person feminine plural past passive of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lūʔimtunna", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لوئموا",
+      "tur": "verb",
+      "baslik": "لُوئِمُوا • (lūʔimū) (form III) /luː.ʔi.muː/\n# third-person masculine plural past passive of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lūʔimū", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لوئمن",
+      "tur": "verb",
+      "baslik": "لُوئِمْنَ • (lūʔimna) (form III) /luː.ʔim.na/\n# third-person feminine plural past passive of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lūʔimna", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلائمين",
+      "tur": "verb",
+      "baslik": "تُلَائِمِينَ • (tulāʔimīna) (form III) /tu.laː.ʔi.miː.na/\n# second-person feminine singular non-past active indicative of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tulāʔimīna", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ألائم",
+      "tur": "verb",
+      "baslik": "ألائم (form III)\n# أُلَائِمُ (ʔulāʔimu) /ʔu.laː.ʔi.mu/: first-person singular non-past active indicative of لَاءَمَ (lāʔama)\n# أُلَائِمَ (ʔulāʔima) /ʔu.laː.ʔi.ma/: first-person singular non-past active subjunctive of لَاءَمَ (lāʔama)\n# أُلَائِمْ (ʔulāʔim) /ʔu.laː.ʔim/: first-person singular non-past active jussive of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔulāʔimu", "lāʔama", "ʔulāʔima"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يلائم",
+      "tur": "verb",
+      "baslik": "يلائم (form III)\n# يُلَائِمُ (yulāʔimu) /ju.laː.ʔi.mu/: third-person masculine singular non-past active indicative of لَاءَمَ (lāʔama)\n# يُلَائِمَ (yulāʔima) /ju.laː.ʔi.ma/: third-person masculine singular non-past active subjunctive of لَاءَمَ (lāʔama)\n# يُلَائِمْ (yulāʔim) /ju.laː.ʔim/: third-person masculine singular non-past active jussive of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yulāʔimu", "lāʔama", "yulāʔima"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلائم",
+      "tur": "verb",
+      "baslik": "تلائم (form III)\n# تُلَائِمُ (tulāʔimu) /tu.laː.ʔi.mu/: inflection of لَاءَمَ (lāʔama):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُلَائِمَ (tulāʔima) /tu.laː.ʔi.ma/: inflection of لَاءَمَ (lāʔama):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active sub",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tulāʔimu", "lāʔama", "tulāʔima"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نلائم",
+      "tur": "verb",
+      "baslik": "نلائم (form III)\n# نُلَائِمُ (nulāʔimu) /nu.laː.ʔi.mu/: first-person plural non-past active indicative of لَاءَمَ (lāʔama)\n# نُلَائِمَ (nulāʔima) /nu.laː.ʔi.ma/: first-person plural non-past active subjunctive of لَاءَمَ (lāʔama)\n# نُلَائِمْ (nulāʔim) /nu.laː.ʔim/: first-person plural non-past active jussive of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nulāʔimu", "lāʔama", "nulāʔima"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلائمون",
+      "tur": "verb",
+      "baslik": "تُلَائِمُونَ • (tulāʔimūna) (form III) /tu.laː.ʔi.muː.na/\n# second-person masculine plural non-past active indicative of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tulāʔimūna", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يلائمان",
+      "tur": "verb",
+      "baslik": "يُلَائِمَانِ • (yulāʔimāni) (form III) /ju.laː.ʔi.maː.ni/\n# third-person masculine dual non-past active indicative of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yulāʔimāni", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلائمان",
+      "tur": "verb",
+      "baslik": "تُلَائِمَانِ • (tulāʔimāni) (form III) /tu.laː.ʔi.maː.ni/\n# inflection of لَاءَمَ (lāʔama):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tulāʔimāni", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلائمن",
+      "tur": "verb",
+      "baslik": "تُلَائِمْنَ • (tulāʔimna) (form III) /tu.laː.ʔim.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tulāʔimna", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يلائمن",
+      "tur": "verb",
+      "baslik": "يُلَائِمْنَ • (yulāʔimna) (form III) /ju.laː.ʔim.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yulāʔimna", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ألاءم",
+      "tur": "verb",
+      "baslik": "ألاءم (form III)\n# أُلَاءَمُ (ʔulāʔamu) /ʔu.laː.ʔa.mu/: first-person singular non-past passive indicative of لَاءَمَ (lāʔama)\n# أُلَاءَمَ (ʔulāʔama) /ʔu.laː.ʔa.ma/: first-person singular non-past passive subjunctive of لَاءَمَ (lāʔama)\n# أُلَاءَمْ (ʔulāʔam) /ʔu.laː.ʔam/: first-person singular non-past passive jussive of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔulāʔamu", "lāʔama", "ʔulāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يلائمون",
+      "tur": "verb",
+      "baslik": "يُلَائِمُونَ • (yulāʔimūna) (form III) /ju.laː.ʔi.muː.na/\n# third-person masculine plural non-past active indicative of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yulāʔimūna", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلاءم",
+      "tur": "verb",
+      "baslik": "تلاءم (form III)\n# تُلَاءَمُ (tulāʔamu) /tu.laː.ʔa.mu/: inflection of لَاءَمَ (lāʔama):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُلَاءَمَ (tulāʔama) /tu.laː.ʔa.ma/: inflection of لَاءَمَ (lāʔama):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tulāʔamu", "lāʔama", "tulāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يلاءم",
+      "tur": "verb",
+      "baslik": "يلاءم (form III)\n# يُلَاءَمُ (yulāʔamu) /ju.laː.ʔa.mu/: third-person masculine singular non-past passive indicative of لَاءَمَ (lāʔama)\n# يُلَاءَمَ (yulāʔama) /ju.laː.ʔa.ma/: third-person masculine singular non-past passive subjunctive of لَاءَمَ (lāʔama)\n# يُلَاءَمْ (yulāʔam) /ju.laː.ʔam/: third-person masculine singular non-past passive jussive of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yulāʔamu", "lāʔama", "yulāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلاءمين",
+      "tur": "verb",
+      "baslik": "تُلَاءَمِينَ • (tulāʔamīna) (form III) /tu.laː.ʔa.miː.na/\n# second-person feminine singular non-past passive indicative of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tulāʔamīna", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلاءمان",
+      "tur": "verb",
+      "baslik": "تُلَاءَمَانِ • (tulāʔamāni) (form III) /tu.laː.ʔa.maː.ni/\n# inflection of لَاءَمَ (lāʔama):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tulāʔamāni", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يلاءمان",
+      "tur": "verb",
+      "baslik": "يُلَاءَمَانِ • (yulāʔamāni) (form III) /ju.laː.ʔa.maː.ni/\n# third-person masculine dual non-past passive indicative of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yulāʔamāni", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلاءمون",
+      "tur": "verb",
+      "baslik": "تُلَاءَمُونَ • (tulāʔamūna) (form III) /tu.laː.ʔa.muː.na/\n# second-person masculine plural non-past passive indicative of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tulāʔamūna", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلاءمن",
+      "tur": "verb",
+      "baslik": "تُلَاءَمْنَ • (tulāʔamna) (form III) /tu.laː.ʔam.na/\n# second-person feminine plural non-past passive indicative/subjunctive/jussive of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tulāʔamna", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نلاءم",
+      "tur": "verb",
+      "baslik": "نلاءم (form III)\n# نُلَاءَمُ (nulāʔamu) /nu.laː.ʔa.mu/: first-person plural non-past passive indicative of لَاءَمَ (lāʔama)\n# نُلَاءَمَ (nulāʔama) /nu.laː.ʔa.ma/: first-person plural non-past passive subjunctive of لَاءَمَ (lāʔama)\n# نُلَاءَمْ (nulāʔam) /nu.laː.ʔam/: first-person plural non-past passive jussive of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nulāʔamu", "lāʔama", "nulāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يلاءمون",
+      "tur": "verb",
+      "baslik": "يُلَاءَمُونَ • (yulāʔamūna) (form III) /ju.laː.ʔa.muː.na/\n# third-person masculine plural non-past passive indicative of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yulāʔamūna", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يلاءمن",
+      "tur": "verb",
+      "baslik": "يُلَاءَمْنَ • (yulāʔamna) (form III) /ju.laː.ʔam.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yulāʔamna", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلائما",
+      "tur": "verb",
+      "baslik": "تُلَائِمَا • (tulāʔimā) (form III) /tu.laː.ʔi.maː/\n# inflection of لَاءَمَ (lāʔama):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tulāʔimā", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يلائما",
+      "tur": "verb",
+      "baslik": "يُلَائِمَا • (yulāʔimā) (form III) /ju.laː.ʔi.maː/\n# third-person masculine dual non-past active subjunctive/jussive of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yulāʔimā", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلاءمي",
+      "tur": "verb",
+      "baslik": "تُلَاءَمِي • (tulāʔamī) (form III) /tu.laː.ʔa.miː/\n# second-person feminine singular non-past passive subjunctive/jussive of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tulāʔamī", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يلائموا",
+      "tur": "verb",
+      "baslik": "يُلَائِمُوا • (yulāʔimū) (form III) /ju.laː.ʔi.muː/\n# third-person masculine plural non-past active subjunctive/jussive of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yulāʔimū", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلائموا",
+      "tur": "verb",
+      "baslik": "تُلَائِمُوا • (tulāʔimū) (form III) /tu.laː.ʔi.muː/\n# second-person masculine plural non-past active subjunctive/jussive of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tulāʔimū", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلاءما",
+      "tur": "verb",
+      "baslik": "تُلَاءَمَا • (tulāʔamā) (form III) /tu.laː.ʔa.maː/\n# inflection of لَاءَمَ (lāʔama):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tulāʔamā", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يلاءما",
+      "tur": "verb",
+      "baslik": "يُلَاءَمَا • (yulāʔamā) (form III) /ju.laː.ʔa.maː/\n# third-person masculine dual non-past passive subjunctive/jussive of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yulāʔamā", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلاءموا",
+      "tur": "verb",
+      "baslik": "تُلَاءَمُوا • (tulāʔamū) (form III) /tu.laː.ʔa.muː/\n# second-person masculine plural non-past passive subjunctive/jussive of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tulāʔamū", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلائمي",
+      "tur": "verb",
+      "baslik": "تُلَائِمِي • (tulāʔimī) (form III) /tu.laː.ʔi.miː/\n# second-person feminine singular non-past active subjunctive/jussive of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tulāʔimī", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لائمي",
+      "tur": "verb",
+      "baslik": "لَائِمِي • (lāʔimī) (form III) /laː.ʔi.miː/\n# second-person feminine singular imperative of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lāʔimī", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لائما",
+      "tur": "verb",
+      "baslik": "لَائِمَا • (lāʔimā) (form III) /laː.ʔi.maː/\n# second-person dual imperative of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lāʔimā", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يلاءموا",
+      "tur": "verb",
+      "baslik": "يُلَاءَمُوا • (yulāʔamū) (form III) /ju.laː.ʔa.muː/\n# third-person masculine plural non-past passive subjunctive/jussive of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yulāʔamū", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لائموا",
+      "tur": "verb",
+      "baslik": "لَائِمُوا • (lāʔimū) (form III) /laː.ʔi.muː/\n# second-person masculine plural imperative of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lāʔimū", "lāʔama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "لائمن",
+      "tur": "verb",
+      "baslik": "لَائِمْنَ • (lāʔimna) (form III) /laː.ʔim.na/\n# second-person feminine plural imperative of لَاءَمَ (lāʔama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lāʔimna", "lāʔama"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "لاءم", "r6"]
+  ],
+  "mana": {
     "ince": "match.v.05",
     "orta": "verb.change",
     "ust": "fiil ve hadise",
@@ -707,22 +492,15 @@
     "dayanak_tanim": "make correspond or harmonize",
     "synset_sayisi": 8
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["adjust.v.01", "equip.v.01", "fix.v.12", "match.v.01", "match.v.05", "meet.v.05", "plant.v.01", "put.v.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["adjust.v.01", "equip.v.01", "fix.v.12", "match.v.01", "match.v.05", "meet.v.05", "plant.v.01", "put.v.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

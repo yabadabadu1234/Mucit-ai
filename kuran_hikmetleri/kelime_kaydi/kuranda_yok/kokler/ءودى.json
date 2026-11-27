@@ -1,447 +1,360 @@
 {
   "kok": "ءودى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءودى", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "نود",
-        "u": "نود",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نود (form IV)\n# نُودِ (nūdi) /nuː.di/: first-person plural non-past active jussive of أَوْدَى (ʔawdā)\n# نُودَ (nūda) /nuː.da/: first-person plural non-past passive jussive of أَوْدَى (ʔawdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nūdi", "ʔawdā", "nūda"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "تود",
-        "u": "تود",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تود (form IV)\n# تُودِ (tūdi) /tuː.di/: inflection of أَوْدَى (ʔawdā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُودَ (tūda) /tuː.da/: inflection of أَوْدَى (ʔawdā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūdi", "ʔawdā", "tūda"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "يود",
-        "u": "يود",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يود (form IV)\n# يُودِ (yūdi) /juː.di/: third-person masculine singular non-past active jussive of أَوْدَى (ʔawdā)\n# يُودَ (yūda) /juː.da/: third-person masculine singular non-past passive jussive of أَوْدَى (ʔawdā)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūdi", "ʔawdā", "yūda"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "نودي",
-        "u": "نودي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نودي (form IV)\n# نُودِي (nūdī) /nuː.diː/: first-person plural non-past active indicative of أَوْدَى (ʔawdā)\n# نُودِيَ (nūdiya) /nuː.di.ja/: first-person plural non-past active subjunctive of أَوْدَى (ʔawdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nūdī", "ʔawdā", "nūdiya"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "تودين",
-        "u": "تودين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تودين (form IV)\n# تُودِينَ (tūdīna) /tuː.diː.na/: inflection of أَوْدَى (ʔawdā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُودَيْنَ (tūdayna) /tuː.daj.na/: inflection of أَوْدَى (ʔawdā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past pa",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūdīna", "ʔawdā", "tūdayna"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "تودي",
-        "u": "تودي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تودي (form IV)\n# تُودِي (tūdī) /tuː.diː/: inflection of أَوْدَى (ʔawdā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُودِيَ (tūdiya) /tuː.di.ja/: inflection of أَوْدَى (ʔawdā):\n## second-person masculine singular non-past active subjunctive\n## th",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūdī", "ʔawdā", "tūdiya"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "أود",
-        "u": "أود",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أود (form IV)\n# أُودِ (ʔūdi) /ʔuː.di/: first-person singular non-past active jussive of أَوْدَى (ʔawdā)\n# أُودَ (ʔūda) /ʔuː.da/: first-person singular non-past passive jussive of أَوْدَى (ʔawdā)\n# أَوْدِ (ʔawdi) /ʔaw.di/: second-person masculine singular imperative of أَوْدَى (ʔawdā)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔūdi", "ʔawdā", "ʔūda"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "تودون",
-        "u": "تودون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تودون (form IV)\n# تُودُونَ (tūdūna) /tuː.duː.na/: second-person masculine plural non-past active indicative of أَوْدَى (ʔawdā)\n# تُودَوْنَ (tūdawna) /tuː.daw.na/: second-person masculine plural non-past passive indicative of أَوْدَى (ʔawdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūdūna", "ʔawdā", "tūdawna"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "تودوا",
-        "u": "تودوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تودوا (form IV)\n# تُودُوا (tūdū) /tuː.duː/: second-person masculine plural non-past active subjunctive/jussive of أَوْدَى (ʔawdā)\n# تُودَوْا (tūdaw) /tuː.daw/: second-person masculine plural non-past passive subjunctive/jussive of أَوْدَى (ʔawdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūdū", "ʔawdā", "tūdaw"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "يودون",
-        "u": "يودون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يودون (form IV)\n# يُودُونَ (yūdūna) /juː.duː.na/: third-person masculine plural non-past active indicative of أَوْدَى (ʔawdā)\n# يُودَوْنَ (yūdawna) /juː.daw.na/: third-person masculine plural non-past passive indicative of أَوْدَى (ʔawdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūdūna", "ʔawdā", "yūdawna"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "يودوا",
-        "u": "يودوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يودوا (form IV)\n# يُودُوا (yūdū) /juː.duː/: third-person masculine plural non-past active subjunctive/jussive of أَوْدَى (ʔawdā)\n# يُودَوْا (yūdaw) /juː.daw/: third-person masculine plural non-past passive subjunctive/jussive of أَوْدَى (ʔawdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūdū", "ʔawdā", "yūdaw"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "أودوا",
-        "u": "أودوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أودوا (form IV)\n# أَوْدَوْا (ʔawdaw) /ʔaw.daw/: third-person masculine plural past active of أَوْدَى (ʔawdā)\n# أُودُوا (ʔūdū) /ʔuː.duː/: third-person masculine plural past passive of أَوْدَى (ʔawdā)\n# أَوْدُوا (ʔawdū) /ʔaw.duː/: second-person masculine plural imperative of أَوْدَى (ʔawdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawdaw", "ʔawdā", "ʔūdū"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "أودي",
-        "u": "أودي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أودي (form IV)\n# أُودِيَ (ʔūdiya) /ʔuː.di.ja/: inflection of أَوْدَى (ʔawdā):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُودِي (ʔūdī) /ʔuː.diː/: first-person singular non-past active indicative of أَوْدَى (ʔawdā)\n# أَوْدِي (ʔawdī) /ʔaw.diː/: second-person feminine singular imperative of أَوْدَى (ʔawdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔūdiya", "ʔawdā", "ʔūdī"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "أودت",
-        "u": "أودت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَوْدَتْ • (ʔawdat) (form IV) /ʔaw.dat/\n# third-person feminine singular past active of أَوْدَى (ʔawdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawdat", "ʔawdā"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "أودتا",
-        "u": "أودتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَوْدَتَا • (ʔawdatā) (form IV) /ʔaw.da.taː/\n# third-person feminine dual past active of أَوْدَى (ʔawdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawdatā", "ʔawdā"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "أوديت",
-        "u": "أوديت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أوديت (form IV)\n# أَوْدَيْتُ (ʔawdaytu) /ʔaw.daj.tu/: first-person singular past active of أَوْدَى (ʔawdā)\n# أَوْدَيْتَ (ʔawdayta) /ʔaw.daj.ta/: second-person masculine singular past active of أَوْدَى (ʔawdā)\n# أَوْدَيْتِ (ʔawdayti) /ʔaw.daj.ti/: second-person feminine singular past active of أَوْدَى (ʔawdā)\n# أُودِيتُ (ʔūdītu) /ʔuː.diː.tu/: first-person singular past passive of أَوْدَى (ʔawdā)\n# ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawdaytu", "ʔawdā", "ʔawdayta"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "أوديتم",
-        "u": "أوديتم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أوديتم (form IV)\n# أَوْدَيْتُمْ (ʔawdaytum) /ʔaw.daj.tum/: second-person masculine plural past active of أَوْدَى (ʔawdā)\n# أُودِيتُمْ (ʔūdītum) /ʔuː.diː.tum/: second-person masculine plural past passive of أَوْدَى (ʔawdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawdaytum", "ʔawdā", "ʔūdītum"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "أوديتما",
-        "u": "أوديتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أوديتما (form IV)\n# أَوْدَيْتُمَا (ʔawdaytumā) /ʔaw.daj.tu.maː/: second-person dual past active of أَوْدَى (ʔawdā)\n# أُودِيتُمَا (ʔūdītumā) /ʔuː.diː.tu.maː/: second-person dual past passive of أَوْدَى (ʔawdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawdaytumā", "ʔawdā", "ʔūdītumā"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "أوديا",
-        "u": "أوديا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أوديا (form IV)\n# أَوْدَيَا (ʔawdayā) /ʔaw.da.jaː/: third-person masculine dual past active of أَوْدَى (ʔawdā)\n# أُودِيَا (ʔūdiyā) /ʔuː.di.jaː/: third-person masculine dual past passive of أَوْدَى (ʔawdā)\n# أَوْدِيَا (ʔawdiyā) /ʔaw.di.jaː/: second-person dual imperative of أَوْدَى (ʔawdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawdayā", "ʔawdā", "ʔūdiyā"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "أودينا",
-        "u": "أودينا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أودينا (form IV)\n# أَوْدَيْنَا (ʔawdaynā) /ʔaw.daj.naː/: first-person plural past active of أَوْدَى (ʔawdā)\n# أُودِينَا (ʔūdīnā) /ʔuː.diː.naː/: first-person plural past passive of أَوْدَى (ʔawdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawdaynā", "ʔawdā", "ʔūdīnā"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "أوديتن",
-        "u": "أوديتن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أوديتن (form IV)\n# أَوْدَيْتُنَّ (ʔawdaytunna) /ʔaw.daj.tun.na/: second-person feminine plural past active of أَوْدَى (ʔawdā)\n# أُودِيتُنَّ (ʔūdītunna) /ʔuː.diː.tun.na/: second-person feminine plural past passive of أَوْدَى (ʔawdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawdaytunna", "ʔawdā", "ʔūdītunna"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "أودين",
-        "u": "أودين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أودين (form IV)\n# أَوْدَيْنَ (ʔawdayna) /ʔaw.daj.na/: third-person feminine plural past active of أَوْدَى (ʔawdā)\n# أُودِينَ (ʔūdīna) /ʔuː.diː.na/: third-person feminine plural past passive of أَوْدَى (ʔawdā)\n# أَوْدِينَ (ʔawdīna) /ʔaw.diː.na/: second-person feminine plural imperative of أَوْدَى (ʔawdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawdayna", "ʔawdā", "ʔūdīna"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "يودي",
-        "u": "يودي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يودي (form IV)\n# يُودِي (yūdī) /juː.diː/: third-person masculine singular non-past active indicative of أَوْدَى (ʔawdā)\n# يُودِيَ (yūdiya) /juː.di.ja/: third-person masculine singular non-past active subjunctive of أَوْدَى (ʔawdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūdī", "ʔawdā", "yūdiya"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "أوديتا",
-        "u": "أوديتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أُودِيَتَا • (ʔūdiyatā) (form IV) /ʔuː.di.ja.taː/\n# third-person feminine dual past passive of أَوْدَى (ʔawdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔūdiyatā", "ʔawdā"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "توديان",
-        "u": "توديان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "توديان (form IV)\n# تُودِيَانِ (tūdiyāni) /tuː.di.jaː.ni/: inflection of أَوْدَى (ʔawdā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُودَيَانِ (tūdayāni) /tuː.da.jaː.ni/: inflection of أَوْدَى (ʔawdā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūdiyāni", "ʔawdā", "tūdayāni"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوديان",
-        "u": "يوديان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يوديان (form IV)\n# يُودِيَانِ (yūdiyāni) /juː.di.jaː.ni/: third-person masculine dual non-past active indicative of أَوْدَى (ʔawdā)\n# يُودَيَانِ (yūdayāni) /juː.da.jaː.ni/: third-person masculine dual non-past passive indicative of أَوْدَى (ʔawdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūdiyāni", "ʔawdā", "yūdayāni"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "تودى",
-        "u": "تودى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُودَى • (tūdā) (form IV) /tuː.daː/\n# inflection of أَوْدَى (ʔawdā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūdā", "ʔawdā"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "يودى",
-        "u": "يودى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُودَى • (yūdā) (form IV) /juː.daː/\n# third-person masculine singular non-past passive indicative/subjunctive of أَوْدَى (ʔawdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūdā", "ʔawdā"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "يودين",
-        "u": "يودين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يودين (form IV)\n# يُودِينَ (yūdīna) /juː.diː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَوْدَى (ʔawdā)\n# يُودَيْنَ (yūdayna) /juː.daj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَوْدَى (ʔawdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūdīna", "ʔawdā", "yūdayna"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "توديا",
-        "u": "توديا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "توديا (form IV)\n# تُودِيَا (tūdiyā) /tuː.di.jaː/: inflection of أَوْدَى (ʔawdā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُودَيَا (tūdayā) /tuː.da.jaː/: inflection of أَوْدَى (ʔawdā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūdiyā", "ʔawdā", "tūdayā"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوديا",
-        "u": "يوديا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يوديا (form IV)\n# يُودِيَا (yūdiyā) /juː.di.jaː/: third-person masculine dual non-past active subjunctive/jussive of أَوْدَى (ʔawdā)\n# يُودَيَا (yūdayā) /juː.da.jaː/: third-person masculine dual non-past passive subjunctive/jussive of أَوْدَى (ʔawdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūdiyā", "ʔawdā", "yūdayā"],
-        "k": "أودى",
-        "yol": "kök"
-      },
-      {
-        "w": "نودى",
-        "u": "نودى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نُودَى • (nūdā) (form IV) /nuː.daː/\n# first-person plural non-past passive indicative/subjunctive of أَوْدَى (ʔawdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nūdā", "ʔawdā"],
-        "k": "أودى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "دى",
+  "ses": {
     "harf": "ء",
+    "fasil": "دى",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "نود",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نود (form IV)\n# نُودِ (nūdi) /nuː.di/: first-person plural non-past active jussive of أَوْدَى (ʔawdā)\n# نُودَ (nūda) /nuː.da/: first-person plural non-past passive jussive of أَوْدَى (ʔawdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nūdi", "ʔawdā", "nūda"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تود",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تود (form IV)\n# تُودِ (tūdi) /tuː.di/: inflection of أَوْدَى (ʔawdā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُودَ (tūda) /tuː.da/: inflection of أَوْدَى (ʔawdā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūdi", "ʔawdā", "tūda"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يود",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يود (form IV)\n# يُودِ (yūdi) /juː.di/: third-person masculine singular non-past active jussive of أَوْدَى (ʔawdā)\n# يُودَ (yūda) /juː.da/: third-person masculine singular non-past passive jussive of أَوْدَى (ʔawdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūdi", "ʔawdā", "yūda"],
+      "kok_yazilis": "أودى"
+    },
+    {
+      "madde": "نودي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نودي (form IV)\n# نُودِي (nūdī) /nuː.diː/: first-person plural non-past active indicative of أَوْدَى (ʔawdā)\n# نُودِيَ (nūdiya) /nuː.di.ja/: first-person plural non-past active subjunctive of أَوْدَى (ʔawdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nūdī", "ʔawdā", "nūdiya"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تودين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تودين (form IV)\n# تُودِينَ (tūdīna) /tuː.diː.na/: inflection of أَوْدَى (ʔawdā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُودَيْنَ (tūdayna) /tuː.daj.na/: inflection of أَوْدَى (ʔawdā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past pa",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūdīna", "ʔawdā", "tūdayna"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تودي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تودي (form IV)\n# تُودِي (tūdī) /tuː.diː/: inflection of أَوْدَى (ʔawdā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُودِيَ (tūdiya) /tuː.di.ja/: inflection of أَوْدَى (ʔawdā):\n## second-person masculine singular non-past active subjunctive\n## th",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūdī", "ʔawdā", "tūdiya"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أود",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أود (form IV)\n# أُودِ (ʔūdi) /ʔuː.di/: first-person singular non-past active jussive of أَوْدَى (ʔawdā)\n# أُودَ (ʔūda) /ʔuː.da/: first-person singular non-past passive jussive of أَوْدَى (ʔawdā)\n# أَوْدِ (ʔawdi) /ʔaw.di/: second-person masculine singular imperative of أَوْدَى (ʔawdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔūdi", "ʔawdā", "ʔūda"],
+      "kok_yazilis": "أودى"
+    },
+    {
+      "madde": "تودون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تودون (form IV)\n# تُودُونَ (tūdūna) /tuː.duː.na/: second-person masculine plural non-past active indicative of أَوْدَى (ʔawdā)\n# تُودَوْنَ (tūdawna) /tuː.daw.na/: second-person masculine plural non-past passive indicative of أَوْدَى (ʔawdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūdūna", "ʔawdā", "tūdawna"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تودوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تودوا (form IV)\n# تُودُوا (tūdū) /tuː.duː/: second-person masculine plural non-past active subjunctive/jussive of أَوْدَى (ʔawdā)\n# تُودَوْا (tūdaw) /tuː.daw/: second-person masculine plural non-past passive subjunctive/jussive of أَوْدَى (ʔawdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūdū", "ʔawdā", "tūdaw"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يودون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يودون (form IV)\n# يُودُونَ (yūdūna) /juː.duː.na/: third-person masculine plural non-past active indicative of أَوْدَى (ʔawdā)\n# يُودَوْنَ (yūdawna) /juː.daw.na/: third-person masculine plural non-past passive indicative of أَوْدَى (ʔawdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūdūna", "ʔawdā", "yūdawna"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يودوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يودوا (form IV)\n# يُودُوا (yūdū) /juː.duː/: third-person masculine plural non-past active subjunctive/jussive of أَوْدَى (ʔawdā)\n# يُودَوْا (yūdaw) /juː.daw/: third-person masculine plural non-past passive subjunctive/jussive of أَوْدَى (ʔawdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūdū", "ʔawdā", "yūdaw"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أودوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أودوا (form IV)\n# أَوْدَوْا (ʔawdaw) /ʔaw.daw/: third-person masculine plural past active of أَوْدَى (ʔawdā)\n# أُودُوا (ʔūdū) /ʔuː.duː/: third-person masculine plural past passive of أَوْدَى (ʔawdā)\n# أَوْدُوا (ʔawdū) /ʔaw.duː/: second-person masculine plural imperative of أَوْدَى (ʔawdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawdaw", "ʔawdā", "ʔūdū"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أودي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أودي (form IV)\n# أُودِيَ (ʔūdiya) /ʔuː.di.ja/: inflection of أَوْدَى (ʔawdā):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُودِي (ʔūdī) /ʔuː.diː/: first-person singular non-past active indicative of أَوْدَى (ʔawdā)\n# أَوْدِي (ʔawdī) /ʔaw.diː/: second-person feminine singular imperative of أَوْدَى (ʔawdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔūdiya", "ʔawdā", "ʔūdī"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أودت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَوْدَتْ • (ʔawdat) (form IV) /ʔaw.dat/\n# third-person feminine singular past active of أَوْدَى (ʔawdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawdat", "ʔawdā"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أودتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَوْدَتَا • (ʔawdatā) (form IV) /ʔaw.da.taː/\n# third-person feminine dual past active of أَوْدَى (ʔawdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawdatā", "ʔawdā"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوديت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أوديت (form IV)\n# أَوْدَيْتُ (ʔawdaytu) /ʔaw.daj.tu/: first-person singular past active of أَوْدَى (ʔawdā)\n# أَوْدَيْتَ (ʔawdayta) /ʔaw.daj.ta/: second-person masculine singular past active of أَوْدَى (ʔawdā)\n# أَوْدَيْتِ (ʔawdayti) /ʔaw.daj.ti/: second-person feminine singular past active of أَوْدَى (ʔawdā)\n# أُودِيتُ (ʔūdītu) /ʔuː.diː.tu/: first-person singular past passive of أَوْدَى (ʔawdā)\n# ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawdaytu", "ʔawdā", "ʔawdayta"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوديتم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أوديتم (form IV)\n# أَوْدَيْتُمْ (ʔawdaytum) /ʔaw.daj.tum/: second-person masculine plural past active of أَوْدَى (ʔawdā)\n# أُودِيتُمْ (ʔūdītum) /ʔuː.diː.tum/: second-person masculine plural past passive of أَوْدَى (ʔawdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawdaytum", "ʔawdā", "ʔūdītum"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوديتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أوديتما (form IV)\n# أَوْدَيْتُمَا (ʔawdaytumā) /ʔaw.daj.tu.maː/: second-person dual past active of أَوْدَى (ʔawdā)\n# أُودِيتُمَا (ʔūdītumā) /ʔuː.diː.tu.maː/: second-person dual past passive of أَوْدَى (ʔawdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawdaytumā", "ʔawdā", "ʔūdītumā"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوديا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أوديا (form IV)\n# أَوْدَيَا (ʔawdayā) /ʔaw.da.jaː/: third-person masculine dual past active of أَوْدَى (ʔawdā)\n# أُودِيَا (ʔūdiyā) /ʔuː.di.jaː/: third-person masculine dual past passive of أَوْدَى (ʔawdā)\n# أَوْدِيَا (ʔawdiyā) /ʔaw.di.jaː/: second-person dual imperative of أَوْدَى (ʔawdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawdayā", "ʔawdā", "ʔūdiyā"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أودينا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أودينا (form IV)\n# أَوْدَيْنَا (ʔawdaynā) /ʔaw.daj.naː/: first-person plural past active of أَوْدَى (ʔawdā)\n# أُودِينَا (ʔūdīnā) /ʔuː.diː.naː/: first-person plural past passive of أَوْدَى (ʔawdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawdaynā", "ʔawdā", "ʔūdīnā"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوديتن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أوديتن (form IV)\n# أَوْدَيْتُنَّ (ʔawdaytunna) /ʔaw.daj.tun.na/: second-person feminine plural past active of أَوْدَى (ʔawdā)\n# أُودِيتُنَّ (ʔūdītunna) /ʔuː.diː.tun.na/: second-person feminine plural past passive of أَوْدَى (ʔawdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawdaytunna", "ʔawdā", "ʔūdītunna"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أودين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أودين (form IV)\n# أَوْدَيْنَ (ʔawdayna) /ʔaw.daj.na/: third-person feminine plural past active of أَوْدَى (ʔawdā)\n# أُودِينَ (ʔūdīna) /ʔuː.diː.na/: third-person feminine plural past passive of أَوْدَى (ʔawdā)\n# أَوْدِينَ (ʔawdīna) /ʔaw.diː.na/: second-person feminine plural imperative of أَوْدَى (ʔawdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawdayna", "ʔawdā", "ʔūdīna"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يودي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يودي (form IV)\n# يُودِي (yūdī) /juː.diː/: third-person masculine singular non-past active indicative of أَوْدَى (ʔawdā)\n# يُودِيَ (yūdiya) /juː.di.ja/: third-person masculine singular non-past active subjunctive of أَوْدَى (ʔawdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūdī", "ʔawdā", "yūdiya"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوديتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أُودِيَتَا • (ʔūdiyatā) (form IV) /ʔuː.di.ja.taː/\n# third-person feminine dual past passive of أَوْدَى (ʔawdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔūdiyatā", "ʔawdā"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توديان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "توديان (form IV)\n# تُودِيَانِ (tūdiyāni) /tuː.di.jaː.ni/: inflection of أَوْدَى (ʔawdā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُودَيَانِ (tūdayāni) /tuː.da.jaː.ni/: inflection of أَوْدَى (ʔawdā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūdiyāni", "ʔawdā", "tūdayāni"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوديان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يوديان (form IV)\n# يُودِيَانِ (yūdiyāni) /juː.di.jaː.ni/: third-person masculine dual non-past active indicative of أَوْدَى (ʔawdā)\n# يُودَيَانِ (yūdayāni) /juː.da.jaː.ni/: third-person masculine dual non-past passive indicative of أَوْدَى (ʔawdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūdiyāni", "ʔawdā", "yūdayāni"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تودى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُودَى • (tūdā) (form IV) /tuː.daː/\n# inflection of أَوْدَى (ʔawdā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūdā", "ʔawdā"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يودى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُودَى • (yūdā) (form IV) /juː.daː/\n# third-person masculine singular non-past passive indicative/subjunctive of أَوْدَى (ʔawdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūdā", "ʔawdā"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يودين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يودين (form IV)\n# يُودِينَ (yūdīna) /juː.diː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَوْدَى (ʔawdā)\n# يُودَيْنَ (yūdayna) /juː.daj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَوْدَى (ʔawdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūdīna", "ʔawdā", "yūdayna"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توديا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "توديا (form IV)\n# تُودِيَا (tūdiyā) /tuː.di.jaː/: inflection of أَوْدَى (ʔawdā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُودَيَا (tūdayā) /tuː.da.jaː/: inflection of أَوْدَى (ʔawdā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūdiyā", "ʔawdā", "tūdayā"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوديا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يوديا (form IV)\n# يُودِيَا (yūdiyā) /juː.di.jaː/: third-person masculine dual non-past active subjunctive/jussive of أَوْدَى (ʔawdā)\n# يُودَيَا (yūdayā) /juː.da.jaː/: third-person masculine dual non-past passive subjunctive/jussive of أَوْدَى (ʔawdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūdiyā", "ʔawdā", "yūdayā"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نودى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نُودَى • (nūdā) (form IV) /nuː.daː/\n# first-person plural non-past passive indicative/subjunctive of أَوْدَى (ʔawdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nūdā", "ʔawdā"],
+      "kok_yazilis": "أودى",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ءودى", "r6"]
+  ],
+  "mana": {
     "ince": "halogen.n.01",
     "orta": "noun.substance",
     "ust": "tabiat",
@@ -449,22 +362,15 @@
     "dayanak_tanim": "a nonmetallic element belonging to the halogens; used especially in medicine and photography and in dyes; occurs naturally only in combination in small quantities (as in sea water or rocks)",
     "synset_sayisi": 2
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["iodine.n.01", "spatial_property.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["iodine.n.01", "spatial_property.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

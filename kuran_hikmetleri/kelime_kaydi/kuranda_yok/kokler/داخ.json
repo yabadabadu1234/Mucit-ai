@@ -1,444 +1,317 @@
 {
   "kok": "داخ",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "داخ", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "دخت",
-        "u": "دخت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دخت (form I)\n# دُخْتُ (duḵtu) /dux.tu/: first-person singular past active of دَاخَ (dāḵa)\n# دُخْتَ (duḵta) /dux.ta/: second-person masculine singular past active of دَاخَ (dāḵa)\n# دُخْتِ (duḵti) /dux.ti/: second-person feminine singular past active of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["duḵtu", "dāḵa", "duḵta"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "دخن",
-        "u": "دخن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "دُخْنَ • (duḵna) (form I) /dux.na/\n# inflection of دَاخَ (dāḵa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["duḵna", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "دختن",
-        "u": "دختن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دُخْتُنَّ • (duḵtunna) (form I) /dux.tun.na/\n# second-person feminine plural past active of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["duḵtunna", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "داخت",
-        "u": "داخت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دَاخَتْ • (dāḵat) (form I) /daː.xat/\n# third-person feminine singular past active of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["dāḵat", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "داخا",
-        "u": "داخا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دَاخَا • (dāḵā) (form I) /daː.xaː/\n# third-person masculine dual past active of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["dāḵā", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "دختما",
-        "u": "دختما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دُخْتُمَا • (duḵtumā) (form I) /dux.tu.maː/\n# second-person dual past active of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["duḵtumā", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "أدوخ",
-        "u": "أدوخ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أدوخ (form I)\n# أَدُوخُ (ʔadūḵu) /ʔa.duː.xu/: first-person singular non-past active indicative of دَاخَ (dāḵa)\n# أَدُوخَ (ʔadūḵa) /ʔa.duː.xa/: first-person singular non-past active subjunctive of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔadūḵu", "dāḵa", "ʔadūḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "داختا",
-        "u": "داختا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دَاخَتَا • (dāḵatā) (form I) /daː.xa.taː/\n# third-person feminine dual past active of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["dāḵatā", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "داخوا",
-        "u": "داخوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دَاخُوا • (dāḵū) (form I) /daː.xuː/\n# third-person masculine plural past active of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["dāḵū", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدوخ",
-        "u": "تدوخ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تدوخ (form I)\n# تَدُوخُ (tadūḵu) /ta.duː.xu/: inflection of دَاخَ (dāḵa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَدُوخَ (tadūḵa) /ta.duː.xa/: inflection of دَاخَ (dāḵa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tadūḵu", "dāḵa", "tadūḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "دختم",
-        "u": "دختم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دُخْتُمْ • (duḵtum) (form I) /dux.tum/\n# second-person masculine plural past active of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["duḵtum", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "يدوخ",
-        "u": "يدوخ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يدوخ (form I)\n# يَدُوخُ (yadūḵu) /ja.duː.xu/: third-person masculine singular non-past active indicative of دَاخَ (dāḵa)\n# يَدُوخَ (yadūḵa) /ja.duː.xa/: third-person masculine singular non-past active subjunctive of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yadūḵu", "dāḵa", "yadūḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "ندوخ",
-        "u": "ندوخ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ندوخ (form I)\n# نَدُوخُ (nadūḵu) /na.duː.xu/: first-person plural non-past active indicative of دَاخَ (dāḵa)\n# نَدُوخَ (nadūḵa) /na.duː.xa/: first-person plural non-past active subjunctive of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nadūḵu", "dāḵa", "nadūḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "دخنا",
-        "u": "دخنا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "دُخْنَا • (duḵnā) (form I) /dux.naː/\n# first-person plural past active of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["duḵnā", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "يدوخان",
-        "u": "يدوخان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَدُوخَانِ • (yadūḵāni) (form I) /ja.duː.xaː.ni/\n# third-person masculine dual non-past active indicative of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yadūḵāni", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدوخين",
-        "u": "تدوخين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَدُوخِينَ • (tadūḵīna) (form I) /ta.duː.xiː.na/\n# second-person feminine singular non-past active indicative of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tadūḵīna", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "يدوخون",
-        "u": "يدوخون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَدُوخُونَ • (yadūḵūna) (form I) /ja.duː.xuː.na/\n# third-person masculine plural non-past active indicative of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yadūḵūna", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدوخان",
-        "u": "تدوخان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَدُوخَانِ • (tadūḵāni) (form I) /ta.duː.xaː.ni/\n# inflection of دَاخَ (dāḵa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tadūḵāni", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدوخون",
-        "u": "تدوخون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَدُوخُونَ • (tadūḵūna) (form I) /ta.duː.xuː.na/\n# second-person masculine plural non-past active indicative of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tadūḵūna", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدخن",
-        "u": "تدخن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَدُخْنَ • (taduḵna) (form I) /ta.dux.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taduḵna", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدوخا",
-        "u": "تدوخا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَدُوخَا • (tadūḵā) (form I) /ta.duː.xaː/\n# inflection of دَاخَ (dāḵa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tadūḵā", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "يدوخا",
-        "u": "يدوخا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَدُوخَا • (yadūḵā) (form I) /ja.duː.xaː/\n# third-person masculine dual non-past active subjunctive/jussive of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yadūḵā", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدوخي",
-        "u": "تدوخي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَدُوخِي • (tadūḵī) (form I) /ta.duː.xiː/\n# second-person feminine singular non-past active subjunctive/jussive of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tadūḵī", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "أدخ",
-        "u": "أدخ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَدُخْ • (ʔaduḵ) (form I) /ʔa.dux/\n# first-person singular non-past active jussive of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaduḵ", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "يدخن",
-        "u": "يدخن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَدُخْنَ • (yaduḵna) (form I) /ja.dux.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaduḵna", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدوخوا",
-        "u": "تدوخوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَدُوخُوا • (tadūḵū) (form I) /ta.duː.xuː/\n# second-person masculine plural non-past active subjunctive/jussive of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tadūḵū", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "تدخ",
-        "u": "تدخ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَدُخْ • (taduḵ) (form I) /ta.dux/\n# inflection of دَاخَ (dāḵa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taduḵ", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "يدوخوا",
-        "u": "يدوخوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَدُوخُوا • (yadūḵū) (form I) /ja.duː.xuː/\n# third-person masculine plural non-past active subjunctive/jussive of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yadūḵū", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "دخ",
-        "u": "دخ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دُخْ • (duḵ) (form I) /dux/\n# second-person masculine singular imperative of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["duḵ", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "يدخ",
-        "u": "يدخ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَدُخْ • (yaduḵ) (form I) /ja.dux/\n# third-person masculine singular non-past active jussive of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaduḵ", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "ندخ",
-        "u": "ندخ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَدُخْ • (naduḵ) (form I) /na.dux/\n# first-person plural non-past active jussive of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naduḵ", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "دوخي",
-        "u": "دوخي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دُوخِي • (dūḵī) (form I) /duː.xiː/\n# second-person feminine singular imperative of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["dūḵī", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "دوخوا",
-        "u": "دوخوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دُوخُوا • (dūḵū) (form I) /duː.xuː/\n# second-person masculine plural imperative of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["dūḵū", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      },
-      {
-        "w": "دوخا",
-        "u": "دوخا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "دُوخَا • (dūḵā) (form I) /duː.xaː/\n# second-person dual imperative of دَاخَ (dāḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["dūḵā", "dāḵa"],
-        "k": "داخ",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "دخ",
+  "ses": {
     "harf": "د",
+    "fasil": "دخ",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "دخت",
+      "tur": "verb",
+      "baslik": "دخت (form I)\n# دُخْتُ (duḵtu) /dux.tu/: first-person singular past active of دَاخَ (dāḵa)\n# دُخْتَ (duḵta) /dux.ta/: second-person masculine singular past active of دَاخَ (dāḵa)\n# دُخْتِ (duḵti) /dux.ti/: second-person feminine singular past active of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["duḵtu", "dāḵa", "duḵta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "دخن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "دُخْنَ • (duḵna) (form I) /dux.na/\n# inflection of دَاخَ (dāḵa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["duḵna", "dāḵa"]
+    },
+    {
+      "madde": "دختن",
+      "tur": "verb",
+      "baslik": "دُخْتُنَّ • (duḵtunna) (form I) /dux.tun.na/\n# second-person feminine plural past active of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["duḵtunna", "dāḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "داخت",
+      "tur": "verb",
+      "baslik": "دَاخَتْ • (dāḵat) (form I) /daː.xat/\n# third-person feminine singular past active of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["dāḵat", "dāḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "داخا",
+      "tur": "verb",
+      "baslik": "دَاخَا • (dāḵā) (form I) /daː.xaː/\n# third-person masculine dual past active of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["dāḵā", "dāḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "دختما",
+      "tur": "verb",
+      "baslik": "دُخْتُمَا • (duḵtumā) (form I) /dux.tu.maː/\n# second-person dual past active of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["duḵtumā", "dāḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدوخ",
+      "tur": "verb",
+      "baslik": "أدوخ (form I)\n# أَدُوخُ (ʔadūḵu) /ʔa.duː.xu/: first-person singular non-past active indicative of دَاخَ (dāḵa)\n# أَدُوخَ (ʔadūḵa) /ʔa.duː.xa/: first-person singular non-past active subjunctive of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔadūḵu", "dāḵa", "ʔadūḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "داختا",
+      "tur": "verb",
+      "baslik": "دَاخَتَا • (dāḵatā) (form I) /daː.xa.taː/\n# third-person feminine dual past active of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["dāḵatā", "dāḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "داخوا",
+      "tur": "verb",
+      "baslik": "دَاخُوا • (dāḵū) (form I) /daː.xuː/\n# third-person masculine plural past active of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["dāḵū", "dāḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدوخ",
+      "tur": "verb",
+      "baslik": "تدوخ (form I)\n# تَدُوخُ (tadūḵu) /ta.duː.xu/: inflection of دَاخَ (dāḵa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَدُوخَ (tadūḵa) /ta.duː.xa/: inflection of دَاخَ (dāḵa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tadūḵu", "dāḵa", "tadūḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "دختم",
+      "tur": "verb",
+      "baslik": "دُخْتُمْ • (duḵtum) (form I) /dux.tum/\n# second-person masculine plural past active of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["duḵtum", "dāḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدوخ",
+      "tur": "verb",
+      "baslik": "يدوخ (form I)\n# يَدُوخُ (yadūḵu) /ja.duː.xu/: third-person masculine singular non-past active indicative of دَاخَ (dāḵa)\n# يَدُوخَ (yadūḵa) /ja.duː.xa/: third-person masculine singular non-past active subjunctive of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yadūḵu", "dāḵa", "yadūḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ندوخ",
+      "tur": "verb",
+      "baslik": "ندوخ (form I)\n# نَدُوخُ (nadūḵu) /na.duː.xu/: first-person plural non-past active indicative of دَاخَ (dāḵa)\n# نَدُوخَ (nadūḵa) /na.duː.xa/: first-person plural non-past active subjunctive of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nadūḵu", "dāḵa", "nadūḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "دخنا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "دُخْنَا • (duḵnā) (form I) /dux.naː/\n# first-person plural past active of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["duḵnā", "dāḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدوخان",
+      "tur": "verb",
+      "baslik": "يَدُوخَانِ • (yadūḵāni) (form I) /ja.duː.xaː.ni/\n# third-person masculine dual non-past active indicative of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yadūḵāni", "dāḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدوخين",
+      "tur": "verb",
+      "baslik": "تَدُوخِينَ • (tadūḵīna) (form I) /ta.duː.xiː.na/\n# second-person feminine singular non-past active indicative of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tadūḵīna", "dāḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدوخون",
+      "tur": "verb",
+      "baslik": "يَدُوخُونَ • (yadūḵūna) (form I) /ja.duː.xuː.na/\n# third-person masculine plural non-past active indicative of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yadūḵūna", "dāḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدوخان",
+      "tur": "verb",
+      "baslik": "تَدُوخَانِ • (tadūḵāni) (form I) /ta.duː.xaː.ni/\n# inflection of دَاخَ (dāḵa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tadūḵāni", "dāḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدوخون",
+      "tur": "verb",
+      "baslik": "تَدُوخُونَ • (tadūḵūna) (form I) /ta.duː.xuː.na/\n# second-person masculine plural non-past active indicative of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tadūḵūna", "dāḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدخن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَدُخْنَ • (taduḵna) (form I) /ta.dux.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taduḵna", "dāḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدوخا",
+      "tur": "verb",
+      "baslik": "تَدُوخَا • (tadūḵā) (form I) /ta.duː.xaː/\n# inflection of دَاخَ (dāḵa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tadūḵā", "dāḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدوخا",
+      "tur": "verb",
+      "baslik": "يَدُوخَا • (yadūḵā) (form I) /ja.duː.xaː/\n# third-person masculine dual non-past active subjunctive/jussive of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yadūḵā", "dāḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدوخي",
+      "tur": "verb",
+      "baslik": "تَدُوخِي • (tadūḵī) (form I) /ta.duː.xiː/\n# second-person feminine singular non-past active subjunctive/jussive of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tadūḵī", "dāḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أدخ",
+      "tur": "verb",
+      "baslik": "أَدُخْ • (ʔaduḵ) (form I) /ʔa.dux/\n# first-person singular non-past active jussive of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaduḵ", "dāḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدخن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَدُخْنَ • (yaduḵna) (form I) /ja.dux.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaduḵna", "dāḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدوخوا",
+      "tur": "verb",
+      "baslik": "تَدُوخُوا • (tadūḵū) (form I) /ta.duː.xuː/\n# second-person masculine plural non-past active subjunctive/jussive of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tadūḵū", "dāḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تدخ",
+      "tur": "verb",
+      "baslik": "تَدُخْ • (taduḵ) (form I) /ta.dux/\n# inflection of دَاخَ (dāḵa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taduḵ", "dāḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدوخوا",
+      "tur": "verb",
+      "baslik": "يَدُوخُوا • (yadūḵū) (form I) /ja.duː.xuː/\n# third-person masculine plural non-past active subjunctive/jussive of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yadūḵū", "dāḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "دخ",
+      "tur": "verb",
+      "baslik": "دُخْ • (duḵ) (form I) /dux/\n# second-person masculine singular imperative of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["duḵ", "dāḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدخ",
+      "tur": "verb",
+      "baslik": "يَدُخْ • (yaduḵ) (form I) /ja.dux/\n# third-person masculine singular non-past active jussive of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaduḵ", "dāḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ندخ",
+      "tur": "verb",
+      "baslik": "نَدُخْ • (naduḵ) (form I) /na.dux/\n# first-person plural non-past active jussive of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naduḵ", "dāḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "دوخي",
+      "tur": "verb",
+      "baslik": "دُوخِي • (dūḵī) (form I) /duː.xiː/\n# second-person feminine singular imperative of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["dūḵī", "dāḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "دوخوا",
+      "tur": "verb",
+      "baslik": "دُوخُوا • (dūḵū) (form I) /duː.xuː/\n# second-person masculine plural imperative of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["dūḵū", "dāḵa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "دوخا",
+      "tur": "verb",
+      "baslik": "دُوخَا • (dūḵā) (form I) /duː.xaː/\n# second-person dual imperative of دَاخَ (dāḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["dūḵā", "dāḵa"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "داخ", "r7"]
+  ],
+  "mana": {
     "ince": "smoke.v.01",
     "orta": "verb.consumption",
     "ust": "canlı ve beden",
@@ -446,22 +319,15 @@
     "dayanak_tanim": "inhale and exhale smoke from cigarettes, cigars, pipes",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["smoke.v.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["smoke.v.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,464 +1,336 @@
 {
   "kok": "هاج",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "هاج", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "نهج",
-        "u": "نهج",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نَهِجْ • (nahij) (form I) /na.hid͡ʒ/\n# first-person plural non-past active jussive of هَاجَ (hāja)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nahij", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "هيجا",
-        "u": "هيجا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "هِيجَا • (hījā) (form I) /hiː.d͡ʒaː/\n# second-person dual imperative of هَاجَ (hāja)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hījā", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "تهيج",
-        "u": "تهيج",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تهيج (form I)\n# تَهِيجُ (tahīju) /ta.hiː.d͡ʒu/: inflection of هَاجَ (hāja):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَهِيجَ (tahīja) /ta.hiː.d͡ʒa/: inflection of هَاجَ (hāja):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahīju", "hāja", "tahīja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "هجن",
-        "u": "هجن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "هِجْنَ • (hijna) (form I) /hid͡ʒ.na/\n# inflection of هَاجَ (hāja):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hijna", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "تهج",
-        "u": "تهج",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تَهِجْ • (tahij) (form I) /ta.hid͡ʒ/\n# inflection of هَاجَ (hāja):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahij", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "أهيج",
-        "u": "أهيج",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أهيج (form I)\n# أَهِيجُ (ʔahīju) /ʔa.hiː.d͡ʒu/: first-person singular non-past active indicative of هَاجَ (hāja)\n# أَهِيجَ (ʔahīja) /ʔa.hiː.d͡ʒa/: first-person singular non-past active subjunctive of هَاجَ (hāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔahīju", "hāja", "ʔahīja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "تهيجين",
-        "u": "تهيجين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَهِيجِينَ • (tahījīna) (form I) /ta.hiː.d͡ʒiː.na/\n# second-person feminine singular non-past active indicative of هَاجَ (hāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahījīna", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "يهيج",
-        "u": "يهيج",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يهيج (form I)\n# يَهِيجُ (yahīju) /ja.hiː.d͡ʒu/: third-person masculine singular non-past active indicative of هَاجَ (hāja)\n# يَهِيجَ (yahīja) /ja.hiː.d͡ʒa/: third-person masculine singular non-past active subjunctive of هَاجَ (hāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahīju", "hāja", "yahīja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "تهيجان",
-        "u": "تهيجان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَهِيجَانِ • (tahījāni) (form I) /ta.hiː.d͡ʒaː.ni/\n# inflection of هَاجَ (hāja):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahījāni", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "نهيج",
-        "u": "نهيج",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نهيج (form I)\n# نَهِيجُ (nahīju) /na.hiː.d͡ʒu/: first-person plural non-past active indicative of هَاجَ (hāja)\n# نَهِيجَ (nahīja) /na.hiː.d͡ʒa/: first-person plural non-past active subjunctive of هَاجَ (hāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nahīju", "hāja", "nahīja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "يهيجان",
-        "u": "يهيجان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَهِيجَانِ • (yahījāni) (form I) /ja.hiː.d͡ʒaː.ni/\n# third-person masculine dual non-past active indicative of هَاجَ (hāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahījāni", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "تهيجون",
-        "u": "تهيجون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَهِيجُونَ • (tahījūna) (form I) /ta.hiː.d͡ʒuː.na/\n# second-person masculine plural non-past active indicative of هَاجَ (hāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahījūna", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "يهيجون",
-        "u": "يهيجون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَهِيجُونَ • (yahījūna) (form I) /ja.hiː.d͡ʒuː.na/\n# third-person masculine plural non-past active indicative of هَاجَ (hāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahījūna", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "تهجن",
-        "u": "تهجن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَهِجْنَ • (tahijna) (form I) /ta.hid͡ʒ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of هَاجَ (hāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahijna", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "يهجن",
-        "u": "يهجن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَهِجْنَ • (yahijna) (form I) /ja.hid͡ʒ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of هَاجَ (hāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahijna", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "تهيجا",
-        "u": "تهيجا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَهِيجَا • (tahījā) (form I) /ta.hiː.d͡ʒaː/\n# inflection of هَاجَ (hāja):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahījā", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "يهيجا",
-        "u": "يهيجا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَهِيجَا • (yahījā) (form I) /ja.hiː.d͡ʒaː/\n# third-person masculine dual non-past active subjunctive/jussive of هَاجَ (hāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahījā", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "تهيجي",
-        "u": "تهيجي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَهِيجِي • (tahījī) (form I) /ta.hiː.d͡ʒiː/\n# second-person feminine singular non-past active subjunctive/jussive of هَاجَ (hāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahījī", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "تهيجوا",
-        "u": "تهيجوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَهِيجُوا • (tahījū) (form I) /ta.hiː.d͡ʒuː/\n# second-person masculine plural non-past active subjunctive/jussive of هَاجَ (hāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahījū", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "يهيجوا",
-        "u": "يهيجوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَهِيجُوا • (yahījū) (form I) /ja.hiː.d͡ʒuː/\n# third-person masculine plural non-past active subjunctive/jussive of هَاجَ (hāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahījū", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "يهج",
-        "u": "يهج",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَهِجْ • (yahij) (form I) /ja.hid͡ʒ/\n# third-person masculine singular non-past active jussive of هَاجَ (hāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahij", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "أهج",
-        "u": "أهج",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَهِجْ • (ʔahij) (form I) /ʔa.hid͡ʒ/\n# first-person singular non-past active jussive of هَاجَ (hāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔahij", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "هجت",
-        "u": "هجت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "هجت (form I)\n# هِجْتُ (hijtu) /hid͡ʒ.tu/: first-person singular past active of هَاجَ (hāja)\n# هِجْتَ (hijta) /hid͡ʒ.ta/: second-person masculine singular past active of هَاجَ (hāja)\n# هِجْتِ (hijti) /hid͡ʒ.ti/: second-person feminine singular past active of هَاجَ (hāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hijtu", "hāja", "hijta"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "هاجتا",
-        "u": "هاجتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَاجَتَا • (hājatā) (form I) /haː.d͡ʒa.taː/\n# third-person feminine dual past active of هَاجَ (hāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hājatā", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "هاجت",
-        "u": "هاجت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَاجَتْ • (hājat) (form I) /haː.d͡ʒat/\n# third-person feminine singular past active of هَاجَ (hāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hājat", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "هجتما",
-        "u": "هجتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هِجْتُمَا • (hijtumā) (form I) /hid͡ʒ.tu.maː/\n# second-person dual past active of هَاجَ (hāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hijtumā", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "هاجا",
-        "u": "هاجا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَاجَا • (hājā) (form I) /haː.d͡ʒaː/\n# third-person masculine dual past active of هَاجَ (hāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hājā", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "هجنا",
-        "u": "هجنا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "هِجْنَا • (hijnā) (form I) /hid͡ʒ.naː/\n# first-person plural past active of هَاجَ (hāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hijnā", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "هجتم",
-        "u": "هجتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هِجْتُمْ • (hijtum) (form I) /hid͡ʒ.tum/\n# second-person masculine plural past active of هَاجَ (hāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hijtum", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "هجتن",
-        "u": "هجتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هِجْتُنَّ • (hijtunna) (form I) /hid͡ʒ.tun.na/\n# second-person feminine plural past active of هَاجَ (hāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hijtunna", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "هيجي",
-        "u": "هيجي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "هِيجِي • (hījī) (form I) /hiː.d͡ʒiː/\n# second-person feminine singular imperative of هَاجَ (hāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hījī", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "هاجوا",
-        "u": "هاجوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَاجُوا • (hājū) (form I) /haː.d͡ʒuː/\n# third-person masculine plural past active of هَاجَ (hāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hājū", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "هيجوا",
-        "u": "هيجوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "هِيجُوا • (hījū) (form I) /hiː.d͡ʒuː/\n# second-person masculine plural imperative of هَاجَ (hāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hījū", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      },
-      {
-        "w": "هج",
-        "u": "هج",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "هِجْ • (hij) (form I) /hid͡ʒ/\n# second-person masculine singular imperative of هَاجَ (hāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hij", "hāja"],
-        "k": "هاج",
-        "yol": "kök"
-      }
-    ],
-    "tercume": {}
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "هج",
+  "ses": {
     "harf": "ه",
+    "fasil": "هج",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "نهج",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نَهِجْ • (nahij) (form I) /na.hid͡ʒ/\n# first-person plural non-past active jussive of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nahij", "hāja"]
+    },
+    {
+      "madde": "هيجا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "هِيجَا • (hījā) (form I) /hiː.d͡ʒaː/\n# second-person dual imperative of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hījā", "hāja"]
+    },
+    {
+      "madde": "تهيج",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تهيج (form I)\n# تَهِيجُ (tahīju) /ta.hiː.d͡ʒu/: inflection of هَاجَ (hāja):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَهِيجَ (tahīja) /ta.hiː.d͡ʒa/: inflection of هَاجَ (hāja):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahīju", "hāja", "tahīja"]
+    },
+    {
+      "madde": "هجن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "هِجْنَ • (hijna) (form I) /hid͡ʒ.na/\n# inflection of هَاجَ (hāja):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hijna", "hāja"]
+    },
+    {
+      "madde": "تهج",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تَهِجْ • (tahij) (form I) /ta.hid͡ʒ/\n# inflection of هَاجَ (hāja):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahij", "hāja"]
+    },
+    {
+      "madde": "أهيج",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أهيج (form I)\n# أَهِيجُ (ʔahīju) /ʔa.hiː.d͡ʒu/: first-person singular non-past active indicative of هَاجَ (hāja)\n# أَهِيجَ (ʔahīja) /ʔa.hiː.d͡ʒa/: first-person singular non-past active subjunctive of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔahīju", "hāja", "ʔahīja"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهيجين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَهِيجِينَ • (tahījīna) (form I) /ta.hiː.d͡ʒiː.na/\n# second-person feminine singular non-past active indicative of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahījīna", "hāja"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهيج",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يهيج (form I)\n# يَهِيجُ (yahīju) /ja.hiː.d͡ʒu/: third-person masculine singular non-past active indicative of هَاجَ (hāja)\n# يَهِيجَ (yahīja) /ja.hiː.d͡ʒa/: third-person masculine singular non-past active subjunctive of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahīju", "hāja", "yahīja"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهيجان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَهِيجَانِ • (tahījāni) (form I) /ta.hiː.d͡ʒaː.ni/\n# inflection of هَاجَ (hāja):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahījāni", "hāja"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نهيج",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نهيج (form I)\n# نَهِيجُ (nahīju) /na.hiː.d͡ʒu/: first-person plural non-past active indicative of هَاجَ (hāja)\n# نَهِيجَ (nahīja) /na.hiː.d͡ʒa/: first-person plural non-past active subjunctive of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nahīju", "hāja", "nahīja"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهيجان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَهِيجَانِ • (yahījāni) (form I) /ja.hiː.d͡ʒaː.ni/\n# third-person masculine dual non-past active indicative of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahījāni", "hāja"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهيجون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَهِيجُونَ • (tahījūna) (form I) /ta.hiː.d͡ʒuː.na/\n# second-person masculine plural non-past active indicative of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahījūna", "hāja"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهيجون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَهِيجُونَ • (yahījūna) (form I) /ja.hiː.d͡ʒuː.na/\n# third-person masculine plural non-past active indicative of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahījūna", "hāja"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهجن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَهِجْنَ • (tahijna) (form I) /ta.hid͡ʒ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahijna", "hāja"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهجن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَهِجْنَ • (yahijna) (form I) /ja.hid͡ʒ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahijna", "hāja"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهيجا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَهِيجَا • (tahījā) (form I) /ta.hiː.d͡ʒaː/\n# inflection of هَاجَ (hāja):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahījā", "hāja"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهيجا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَهِيجَا • (yahījā) (form I) /ja.hiː.d͡ʒaː/\n# third-person masculine dual non-past active subjunctive/jussive of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahījā", "hāja"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهيجي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَهِيجِي • (tahījī) (form I) /ta.hiː.d͡ʒiː/\n# second-person feminine singular non-past active subjunctive/jussive of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahījī", "hāja"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهيجوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَهِيجُوا • (tahījū) (form I) /ta.hiː.d͡ʒuː/\n# second-person masculine plural non-past active subjunctive/jussive of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahījū", "hāja"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهيجوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَهِيجُوا • (yahījū) (form I) /ja.hiː.d͡ʒuː/\n# third-person masculine plural non-past active subjunctive/jussive of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahījū", "hāja"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهج",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَهِجْ • (yahij) (form I) /ja.hid͡ʒ/\n# third-person masculine singular non-past active jussive of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahij", "hāja"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أهج",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَهِجْ • (ʔahij) (form I) /ʔa.hid͡ʒ/\n# first-person singular non-past active jussive of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔahij", "hāja"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هجت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "هجت (form I)\n# هِجْتُ (hijtu) /hid͡ʒ.tu/: first-person singular past active of هَاجَ (hāja)\n# هِجْتَ (hijta) /hid͡ʒ.ta/: second-person masculine singular past active of هَاجَ (hāja)\n# هِجْتِ (hijti) /hid͡ʒ.ti/: second-person feminine singular past active of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hijtu", "hāja", "hijta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هاجتا",
+      "tur": "verb",
+      "baslik": "هَاجَتَا • (hājatā) (form I) /haː.d͡ʒa.taː/\n# third-person feminine dual past active of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hājatā", "hāja"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هاجت",
+      "tur": "verb",
+      "baslik": "هَاجَتْ • (hājat) (form I) /haː.d͡ʒat/\n# third-person feminine singular past active of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hājat", "hāja"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هجتما",
+      "tur": "verb",
+      "baslik": "هِجْتُمَا • (hijtumā) (form I) /hid͡ʒ.tu.maː/\n# second-person dual past active of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hijtumā", "hāja"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هاجا",
+      "tur": "verb",
+      "baslik": "هَاجَا • (hājā) (form I) /haː.d͡ʒaː/\n# third-person masculine dual past active of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hājā", "hāja"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هجنا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "هِجْنَا • (hijnā) (form I) /hid͡ʒ.naː/\n# first-person plural past active of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hijnā", "hāja"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هجتم",
+      "tur": "verb",
+      "baslik": "هِجْتُمْ • (hijtum) (form I) /hid͡ʒ.tum/\n# second-person masculine plural past active of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hijtum", "hāja"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هجتن",
+      "tur": "verb",
+      "baslik": "هِجْتُنَّ • (hijtunna) (form I) /hid͡ʒ.tun.na/\n# second-person feminine plural past active of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hijtunna", "hāja"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هيجي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "هِيجِي • (hījī) (form I) /hiː.d͡ʒiː/\n# second-person feminine singular imperative of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hījī", "hāja"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هاجوا",
+      "tur": "verb",
+      "baslik": "هَاجُوا • (hājū) (form I) /haː.d͡ʒuː/\n# third-person masculine plural past active of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hājū", "hāja"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هيجوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "هِيجُوا • (hījū) (form I) /hiː.d͡ʒuː/\n# second-person masculine plural imperative of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hījū", "hāja"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هج",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "هِجْ • (hij) (form I) /hid͡ʒ/\n# second-person masculine singular imperative of هَاجَ (hāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hij", "hāja"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "هاج", "r7"]
+  ],
+  "mana": {
     "ince": "crossbreed.v.01",
     "orta": "verb.contact",
     "ust": "fiil ve hadise",
@@ -466,22 +338,15 @@
     "dayanak_tanim": "breed animals or plants using parents of different races and varieties",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["crossbreed.v.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["crossbreed.v.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

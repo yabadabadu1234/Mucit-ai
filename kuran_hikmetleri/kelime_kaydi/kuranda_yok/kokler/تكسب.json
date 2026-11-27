@@ -1,366 +1,259 @@
 {
   "kok": "تكسب",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تكسب", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تكسبي",
-        "u": "تكسبي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَكَسَّبِي • (takassabī) (form V) /ta.kas.sa.biː/\n# second-person feminine singular imperative of تَكَسَّبَ (takassaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["takassabī", "takassaba"],
-        "k": "تكسب",
-        "yol": "kök"
-      },
-      {
-        "w": "تكسبوا",
-        "u": "تكسبوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تكسبوا (form V)\n# تَكَسَّبُوا (takassabū) /ta.kas.sa.buː/: inflection of تَكَسَّبَ (takassaba):\n## third-person masculine plural past active\n## second-person masculine plural imperative\n# تُكُسِّبُوا (tukussibū) /tu.kus.si.buː/: third-person masculine plural past passive of تَكَسَّبَ (takassaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["takassabū", "takassaba", "tukussibū"],
-        "k": "تكسب",
-        "yol": "kök"
-      },
-      {
-        "w": "تكسبن",
-        "u": "تكسبن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تكسبن (form V)\n# تَكَسَّبْنَ (takassabna) /ta.kas.sab.na/: inflection of تَكَسَّبَ (takassaba):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# تُكُسِّبْنَ (tukussibna) /tu.kus.sib.na/: third-person feminine plural past passive of تَكَسَّبَ (takassaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["takassabna", "takassaba", "tukussibna"],
-        "k": "تكسب",
-        "yol": "kök"
-      },
-      {
-        "w": "تكسبتما",
-        "u": "تكسبتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تكسبتما (form V)\n# تَكَسَّبْتُمَا (takassabtumā) /ta.kas.sab.tu.maː/: second-person dual past active of تَكَسَّبَ (takassaba)\n# تُكُسِّبْتُمَا (tukussibtumā) /tu.kus.sib.tu.maː/: second-person dual past passive of تَكَسَّبَ (takassaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["takassabtumā", "takassaba", "tukussibtumā"],
-        "k": "تكسب",
-        "yol": "kök"
-      },
-      {
-        "w": "تكسبت",
-        "u": "تكسبت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تكسبت (form V)\n# تَكَسَّبْتُ (takassabtu) /ta.kas.sab.tu/: first-person singular past active of تَكَسَّبَ (takassaba)\n# تَكَسَّبْتَ (takassabta) /ta.kas.sab.ta/: second-person masculine singular past active of تَكَسَّبَ (takassaba)\n# تَكَسَّبْتِ (takassabti) /ta.kas.sab.ti/: second-person feminine singular past active of تَكَسَّبَ (takassaba)\n# تَكَسَّبَتْ (takassabat) /ta.kas.sa.bat/: third-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["takassabtu", "takassaba", "takassabta"],
-        "k": "تكسب",
-        "yol": "kök"
-      },
-      {
-        "w": "تكسبتا",
-        "u": "تكسبتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تكسبتا (form V)\n# تَكَسَّبَتَا (takassabatā) /ta.kas.sa.ba.taː/: third-person feminine dual past active of تَكَسَّبَ (takassaba)\n# تُكُسِّبَتَا (tukussibatā) /tu.kus.si.ba.taː/: third-person feminine dual past passive of تَكَسَّبَ (takassaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["takassabatā", "takassaba", "tukussibatā"],
-        "k": "تكسب",
-        "yol": "kök"
-      },
-      {
-        "w": "تكسبا",
-        "u": "تكسبا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تكسبا (form V)\n# تَكَسَّبَا (takassabā) /ta.kas.sa.baː/: inflection of تَكَسَّبَ (takassaba):\n## third-person masculine dual past active\n## second-person dual imperative\n# تُكُسِّبَا (tukussibā) /tu.kus.si.baː/: third-person masculine dual past passive of تَكَسَّبَ (takassaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["takassabā", "takassaba", "tukussibā"],
-        "k": "تكسب",
-        "yol": "kök"
-      },
-      {
-        "w": "تكسبتم",
-        "u": "تكسبتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تكسبتم (form V)\n# تَكَسَّبْتُمْ (takassabtum) /ta.kas.sab.tum/: second-person masculine plural past active of تَكَسَّبَ (takassaba)\n# تُكُسِّبْتُمْ (tukussibtum) /tu.kus.sib.tum/: second-person masculine plural past passive of تَكَسَّبَ (takassaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["takassabtum", "takassaba", "tukussibtum"],
-        "k": "تكسب",
-        "yol": "kök"
-      },
-      {
-        "w": "أتكسب",
-        "u": "أتكسب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتكسب (form V)\n# أَتَكَسَّبُ (ʔatakassabu) /ʔa.ta.kas.sa.bu/: first-person singular non-past active indicative of تَكَسَّبَ (takassaba)\n# أُتَكَسَّبُ (ʔutakassabu) /ʔu.ta.kas.sa.bu/: first-person singular non-past passive indicative of تَكَسَّبَ (takassaba)\n# أَتَكَسَّبَ (ʔatakassaba) /ʔa.ta.kas.sa.ba/: first-person singular non-past active subjunctive of تَكَسَّبَ (takassaba)\n# أُتَكَسَّبَ (ʔutak",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔatakassabu", "takassaba", "ʔutakassabu"],
-        "k": "تكسب",
-        "yol": "kök"
-      },
-      {
-        "w": "تكسبنا",
-        "u": "تكسبنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تكسبنا (form V)\n# تَكَسَّبْنَا (takassabnā) /ta.kas.sab.naː/: first-person plural past active of تَكَسَّبَ (takassaba)\n# تُكُسِّبْنَا (tukussibnā) /tu.kus.sib.naː/: first-person plural past passive of تَكَسَّبَ (takassaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["takassabnā", "takassaba", "tukussibnā"],
-        "k": "تكسب",
-        "yol": "kök"
-      },
-      {
-        "w": "تكسبتن",
-        "u": "تكسبتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تكسبتن (form V)\n# تَكَسَّبْتُنَّ (takassabtunna) /ta.kas.sab.tun.na/: second-person feminine plural past active of تَكَسَّبَ (takassaba)\n# تُكُسِّبْتُنَّ (tukussibtunna) /tu.kus.sib.tun.na/: second-person feminine plural past passive of تَكَسَّبَ (takassaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["takassabtunna", "takassaba", "tukussibtunna"],
-        "k": "تكسب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتكسب",
-        "u": "تتكسب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتكسب (form V)\n# تَتَكَسَّبُ (tatakassabu) /ta.ta.kas.sa.bu/: inflection of تَكَسَّبَ (takassaba):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُتَكَسَّبُ (tutakassabu) /tu.ta.kas.sa.bu/: inflection of تَكَسَّبَ (takassaba):\n## second-person masculine singular non-past passive indicative\n## third-person feminine sing",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatakassabu", "takassaba", "tutakassabu"],
-        "k": "تكسب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتكسبين",
-        "u": "تتكسبين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتكسبين (form V)\n# تَتَكَسَّبِينَ (tatakassabīna) /ta.ta.kas.sa.biː.na/: second-person feminine singular non-past active indicative of تَكَسَّبَ (takassaba)\n# تُتَكَسَّبِينَ (tutakassabīna) /tu.ta.kas.sa.biː.na/: second-person feminine singular non-past passive indicative of تَكَسَّبَ (takassaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatakassabīna", "takassaba", "tutakassabīna"],
-        "k": "تكسب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتكسبان",
-        "u": "تتكسبان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتكسبان (form V)\n# تَتَكَسَّبَانِ (tatakassabāni) /ta.ta.kas.sa.baː.ni/: inflection of تَكَسَّبَ (takassaba):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُتَكَسَّبَانِ (tutakassabāni) /tu.ta.kas.sa.baː.ni/: inflection of تَكَسَّبَ (takassaba):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past pa",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatakassabāni", "takassaba", "tutakassabāni"],
-        "k": "تكسب",
-        "yol": "kök"
-      },
-      {
-        "w": "يتكسب",
-        "u": "يتكسب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتكسب (form V)\n# يَتَكَسَّبُ (yatakassabu) /ja.ta.kas.sa.bu/: third-person masculine singular non-past active indicative of تَكَسَّبَ (takassaba)\n# يُتَكَسَّبُ (yutakassabu) /ju.ta.kas.sa.bu/: third-person masculine singular non-past passive indicative of تَكَسَّبَ (takassaba)\n# يَتَكَسَّبَ (yatakassaba) /ja.ta.kas.sa.ba/: third-person masculine singular non-past active subjunctive of تَكَسَّبَ (t",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatakassabu", "takassaba", "yutakassabu"],
-        "k": "تكسب",
-        "yol": "kök"
-      },
-      {
-        "w": "يتكسبان",
-        "u": "يتكسبان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتكسبان (form V)\n# يَتَكَسَّبَانِ (yatakassabāni) /ja.ta.kas.sa.baː.ni/: third-person masculine dual non-past active indicative of تَكَسَّبَ (takassaba)\n# يُتَكَسَّبَانِ (yutakassabāni) /ju.ta.kas.sa.baː.ni/: third-person masculine dual non-past passive indicative of تَكَسَّبَ (takassaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatakassabāni", "takassaba", "yutakassabāni"],
-        "k": "تكسب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتكسبون",
-        "u": "تتكسبون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتكسبون (form V)\n# تَتَكَسَّبُونَ (tatakassabūna) /ta.ta.kas.sa.buː.na/: second-person masculine plural non-past active indicative of تَكَسَّبَ (takassaba)\n# تُتَكَسَّبُونَ (tutakassabūna) /tu.ta.kas.sa.buː.na/: second-person masculine plural non-past passive indicative of تَكَسَّبَ (takassaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatakassabūna", "takassaba", "tutakassabūna"],
-        "k": "تكسب",
-        "yol": "kök"
-      },
-      {
-        "w": "نتكسب",
-        "u": "نتكسب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتكسب (form V)\n# نَتَكَسَّبُ (natakassabu) /na.ta.kas.sa.bu/: first-person plural non-past active indicative of تَكَسَّبَ (takassaba)\n# نُتَكَسَّبُ (nutakassabu) /nu.ta.kas.sa.bu/: first-person plural non-past passive indicative of تَكَسَّبَ (takassaba)\n# نَتَكَسَّبَ (natakassaba) /na.ta.kas.sa.ba/: first-person plural non-past active subjunctive of تَكَسَّبَ (takassaba)\n# نُتَكَسَّبَ (nutakassaba",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["natakassabu", "takassaba", "nutakassabu"],
-        "k": "تكسب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتكسبن",
-        "u": "تتكسبن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتكسبن (form V)\n# تَتَكَسَّبْنَ (tatakassabna) /ta.ta.kas.sab.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of تَكَسَّبَ (takassaba)\n# تُتَكَسَّبْنَ (tutakassabna) /tu.ta.kas.sab.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of تَكَسَّبَ (takassaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatakassabna", "takassaba", "tutakassabna"],
-        "k": "تكسب",
-        "yol": "kök"
-      },
-      {
-        "w": "يتكسبون",
-        "u": "يتكسبون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتكسبون (form V)\n# يَتَكَسَّبُونَ (yatakassabūna) /ja.ta.kas.sa.buː.na/: third-person masculine plural non-past active indicative of تَكَسَّبَ (takassaba)\n# يُتَكَسَّبُونَ (yutakassabūna) /ju.ta.kas.sa.buː.na/: third-person masculine plural non-past passive indicative of تَكَسَّبَ (takassaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatakassabūna", "takassaba", "yutakassabūna"],
-        "k": "تكسب",
-        "yol": "kök"
-      },
-      {
-        "w": "يتكسبن",
-        "u": "يتكسبن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتكسبن (form V)\n# يَتَكَسَّبْنَ (yatakassabna) /ja.ta.kas.sab.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of تَكَسَّبَ (takassaba)\n# يُتَكَسَّبْنَ (yutakassabna) /ju.ta.kas.sab.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of تَكَسَّبَ (takassaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatakassabna", "takassaba", "yutakassabna"],
-        "k": "تكسب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتكسبي",
-        "u": "تتكسبي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتكسبي (form V)\n# تَتَكَسَّبِي (tatakassabī) /ta.ta.kas.sa.biː/: second-person feminine singular non-past active subjunctive/jussive of تَكَسَّبَ (takassaba)\n# تُتَكَسَّبِي (tutakassabī) /tu.ta.kas.sa.biː/: second-person feminine singular non-past passive subjunctive/jussive of تَكَسَّبَ (takassaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatakassabī", "takassaba", "tutakassabī"],
-        "k": "تكسب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتكسبوا",
-        "u": "تتكسبوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتكسبوا (form V)\n# تَتَكَسَّبُوا (tatakassabū) /ta.ta.kas.sa.buː/: second-person masculine plural non-past active subjunctive/jussive of تَكَسَّبَ (takassaba)\n# تُتَكَسَّبُوا (tutakassabū) /tu.ta.kas.sa.buː/: second-person masculine plural non-past passive subjunctive/jussive of تَكَسَّبَ (takassaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatakassabū", "takassaba", "tutakassabū"],
-        "k": "تكسب",
-        "yol": "kök"
-      },
-      {
-        "w": "يتكسبا",
-        "u": "يتكسبا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتكسبا (form V)\n# يَتَكَسَّبَا (yatakassabā) /ja.ta.kas.sa.baː/: third-person masculine dual non-past active subjunctive/jussive of تَكَسَّبَ (takassaba)\n# يُتَكَسَّبَا (yutakassabā) /ju.ta.kas.sa.baː/: third-person masculine dual non-past passive subjunctive/jussive of تَكَسَّبَ (takassaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatakassabā", "takassaba", "yutakassabā"],
-        "k": "تكسب",
-        "yol": "kök"
-      },
-      {
-        "w": "يتكسبوا",
-        "u": "يتكسبوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتكسبوا (form V)\n# يَتَكَسَّبُوا (yatakassabū) /ja.ta.kas.sa.buː/: third-person masculine plural non-past active subjunctive/jussive of تَكَسَّبَ (takassaba)\n# يُتَكَسَّبُوا (yutakassabū) /ju.ta.kas.sa.buː/: third-person masculine plural non-past passive subjunctive/jussive of تَكَسَّبَ (takassaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatakassabū", "takassaba", "yutakassabū"],
-        "k": "تكسب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتكسبا",
-        "u": "تتكسبا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتكسبا (form V)\n# تَتَكَسَّبَا (tatakassabā) /ta.ta.kas.sa.baː/: inflection of تَكَسَّبَ (takassaba):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُتَكَسَّبَا (tutakassabā) /tu.ta.kas.sa.baː/: inflection of تَكَسَّبَ (takassaba):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatakassabā", "takassaba", "tutakassabā"],
-        "k": "تكسب",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تك",
+  "ses": {
     "harf": "ت",
+    "fasil": "تك",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تكسبي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَكَسَّبِي • (takassabī) (form V) /ta.kas.sa.biː/\n# second-person feminine singular imperative of تَكَسَّبَ (takassaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["takassabī", "takassaba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكسبوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تكسبوا (form V)\n# تَكَسَّبُوا (takassabū) /ta.kas.sa.buː/: inflection of تَكَسَّبَ (takassaba):\n## third-person masculine plural past active\n## second-person masculine plural imperative\n# تُكُسِّبُوا (tukussibū) /tu.kus.si.buː/: third-person masculine plural past passive of تَكَسَّبَ (takassaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["takassabū", "takassaba", "tukussibū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكسبن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تكسبن (form V)\n# تَكَسَّبْنَ (takassabna) /ta.kas.sab.na/: inflection of تَكَسَّبَ (takassaba):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# تُكُسِّبْنَ (tukussibna) /tu.kus.sib.na/: third-person feminine plural past passive of تَكَسَّبَ (takassaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["takassabna", "takassaba", "tukussibna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكسبتما",
+      "tur": "verb",
+      "baslik": "تكسبتما (form V)\n# تَكَسَّبْتُمَا (takassabtumā) /ta.kas.sab.tu.maː/: second-person dual past active of تَكَسَّبَ (takassaba)\n# تُكُسِّبْتُمَا (tukussibtumā) /tu.kus.sib.tu.maː/: second-person dual past passive of تَكَسَّبَ (takassaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["takassabtumā", "takassaba", "tukussibtumā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكسبت",
+      "tur": "verb",
+      "baslik": "تكسبت (form V)\n# تَكَسَّبْتُ (takassabtu) /ta.kas.sab.tu/: first-person singular past active of تَكَسَّبَ (takassaba)\n# تَكَسَّبْتَ (takassabta) /ta.kas.sab.ta/: second-person masculine singular past active of تَكَسَّبَ (takassaba)\n# تَكَسَّبْتِ (takassabti) /ta.kas.sab.ti/: second-person feminine singular past active of تَكَسَّبَ (takassaba)\n# تَكَسَّبَتْ (takassabat) /ta.kas.sa.bat/: third-perso",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["takassabtu", "takassaba", "takassabta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكسبتا",
+      "tur": "verb",
+      "baslik": "تكسبتا (form V)\n# تَكَسَّبَتَا (takassabatā) /ta.kas.sa.ba.taː/: third-person feminine dual past active of تَكَسَّبَ (takassaba)\n# تُكُسِّبَتَا (tukussibatā) /tu.kus.si.ba.taː/: third-person feminine dual past passive of تَكَسَّبَ (takassaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["takassabatā", "takassaba", "tukussibatā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكسبا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تكسبا (form V)\n# تَكَسَّبَا (takassabā) /ta.kas.sa.baː/: inflection of تَكَسَّبَ (takassaba):\n## third-person masculine dual past active\n## second-person dual imperative\n# تُكُسِّبَا (tukussibā) /tu.kus.si.baː/: third-person masculine dual past passive of تَكَسَّبَ (takassaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["takassabā", "takassaba", "tukussibā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكسبتم",
+      "tur": "verb",
+      "baslik": "تكسبتم (form V)\n# تَكَسَّبْتُمْ (takassabtum) /ta.kas.sab.tum/: second-person masculine plural past active of تَكَسَّبَ (takassaba)\n# تُكُسِّبْتُمْ (tukussibtum) /tu.kus.sib.tum/: second-person masculine plural past passive of تَكَسَّبَ (takassaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["takassabtum", "takassaba", "tukussibtum"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتكسب",
+      "tur": "verb",
+      "baslik": "أتكسب (form V)\n# أَتَكَسَّبُ (ʔatakassabu) /ʔa.ta.kas.sa.bu/: first-person singular non-past active indicative of تَكَسَّبَ (takassaba)\n# أُتَكَسَّبُ (ʔutakassabu) /ʔu.ta.kas.sa.bu/: first-person singular non-past passive indicative of تَكَسَّبَ (takassaba)\n# أَتَكَسَّبَ (ʔatakassaba) /ʔa.ta.kas.sa.ba/: first-person singular non-past active subjunctive of تَكَسَّبَ (takassaba)\n# أُتَكَسَّبَ (ʔutak",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔatakassabu", "takassaba", "ʔutakassabu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكسبنا",
+      "tur": "verb",
+      "baslik": "تكسبنا (form V)\n# تَكَسَّبْنَا (takassabnā) /ta.kas.sab.naː/: first-person plural past active of تَكَسَّبَ (takassaba)\n# تُكُسِّبْنَا (tukussibnā) /tu.kus.sib.naː/: first-person plural past passive of تَكَسَّبَ (takassaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["takassabnā", "takassaba", "tukussibnā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكسبتن",
+      "tur": "verb",
+      "baslik": "تكسبتن (form V)\n# تَكَسَّبْتُنَّ (takassabtunna) /ta.kas.sab.tun.na/: second-person feminine plural past active of تَكَسَّبَ (takassaba)\n# تُكُسِّبْتُنَّ (tukussibtunna) /tu.kus.sib.tun.na/: second-person feminine plural past passive of تَكَسَّبَ (takassaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["takassabtunna", "takassaba", "tukussibtunna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتكسب",
+      "tur": "verb",
+      "baslik": "تتكسب (form V)\n# تَتَكَسَّبُ (tatakassabu) /ta.ta.kas.sa.bu/: inflection of تَكَسَّبَ (takassaba):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُتَكَسَّبُ (tutakassabu) /tu.ta.kas.sa.bu/: inflection of تَكَسَّبَ (takassaba):\n## second-person masculine singular non-past passive indicative\n## third-person feminine sing",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatakassabu", "takassaba", "tutakassabu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتكسبين",
+      "tur": "verb",
+      "baslik": "تتكسبين (form V)\n# تَتَكَسَّبِينَ (tatakassabīna) /ta.ta.kas.sa.biː.na/: second-person feminine singular non-past active indicative of تَكَسَّبَ (takassaba)\n# تُتَكَسَّبِينَ (tutakassabīna) /tu.ta.kas.sa.biː.na/: second-person feminine singular non-past passive indicative of تَكَسَّبَ (takassaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatakassabīna", "takassaba", "tutakassabīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتكسبان",
+      "tur": "verb",
+      "baslik": "تتكسبان (form V)\n# تَتَكَسَّبَانِ (tatakassabāni) /ta.ta.kas.sa.baː.ni/: inflection of تَكَسَّبَ (takassaba):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُتَكَسَّبَانِ (tutakassabāni) /tu.ta.kas.sa.baː.ni/: inflection of تَكَسَّبَ (takassaba):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past pa",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatakassabāni", "takassaba", "tutakassabāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتكسب",
+      "tur": "verb",
+      "baslik": "يتكسب (form V)\n# يَتَكَسَّبُ (yatakassabu) /ja.ta.kas.sa.bu/: third-person masculine singular non-past active indicative of تَكَسَّبَ (takassaba)\n# يُتَكَسَّبُ (yutakassabu) /ju.ta.kas.sa.bu/: third-person masculine singular non-past passive indicative of تَكَسَّبَ (takassaba)\n# يَتَكَسَّبَ (yatakassaba) /ja.ta.kas.sa.ba/: third-person masculine singular non-past active subjunctive of تَكَسَّبَ (t",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatakassabu", "takassaba", "yutakassabu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتكسبان",
+      "tur": "verb",
+      "baslik": "يتكسبان (form V)\n# يَتَكَسَّبَانِ (yatakassabāni) /ja.ta.kas.sa.baː.ni/: third-person masculine dual non-past active indicative of تَكَسَّبَ (takassaba)\n# يُتَكَسَّبَانِ (yutakassabāni) /ju.ta.kas.sa.baː.ni/: third-person masculine dual non-past passive indicative of تَكَسَّبَ (takassaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatakassabāni", "takassaba", "yutakassabāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتكسبون",
+      "tur": "verb",
+      "baslik": "تتكسبون (form V)\n# تَتَكَسَّبُونَ (tatakassabūna) /ta.ta.kas.sa.buː.na/: second-person masculine plural non-past active indicative of تَكَسَّبَ (takassaba)\n# تُتَكَسَّبُونَ (tutakassabūna) /tu.ta.kas.sa.buː.na/: second-person masculine plural non-past passive indicative of تَكَسَّبَ (takassaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatakassabūna", "takassaba", "tutakassabūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتكسب",
+      "tur": "verb",
+      "baslik": "نتكسب (form V)\n# نَتَكَسَّبُ (natakassabu) /na.ta.kas.sa.bu/: first-person plural non-past active indicative of تَكَسَّبَ (takassaba)\n# نُتَكَسَّبُ (nutakassabu) /nu.ta.kas.sa.bu/: first-person plural non-past passive indicative of تَكَسَّبَ (takassaba)\n# نَتَكَسَّبَ (natakassaba) /na.ta.kas.sa.ba/: first-person plural non-past active subjunctive of تَكَسَّبَ (takassaba)\n# نُتَكَسَّبَ (nutakassaba",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["natakassabu", "takassaba", "nutakassabu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتكسبن",
+      "tur": "verb",
+      "baslik": "تتكسبن (form V)\n# تَتَكَسَّبْنَ (tatakassabna) /ta.ta.kas.sab.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of تَكَسَّبَ (takassaba)\n# تُتَكَسَّبْنَ (tutakassabna) /tu.ta.kas.sab.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of تَكَسَّبَ (takassaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatakassabna", "takassaba", "tutakassabna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتكسبون",
+      "tur": "verb",
+      "baslik": "يتكسبون (form V)\n# يَتَكَسَّبُونَ (yatakassabūna) /ja.ta.kas.sa.buː.na/: third-person masculine plural non-past active indicative of تَكَسَّبَ (takassaba)\n# يُتَكَسَّبُونَ (yutakassabūna) /ju.ta.kas.sa.buː.na/: third-person masculine plural non-past passive indicative of تَكَسَّبَ (takassaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatakassabūna", "takassaba", "yutakassabūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتكسبن",
+      "tur": "verb",
+      "baslik": "يتكسبن (form V)\n# يَتَكَسَّبْنَ (yatakassabna) /ja.ta.kas.sab.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of تَكَسَّبَ (takassaba)\n# يُتَكَسَّبْنَ (yutakassabna) /ju.ta.kas.sab.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of تَكَسَّبَ (takassaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatakassabna", "takassaba", "yutakassabna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتكسبي",
+      "tur": "verb",
+      "baslik": "تتكسبي (form V)\n# تَتَكَسَّبِي (tatakassabī) /ta.ta.kas.sa.biː/: second-person feminine singular non-past active subjunctive/jussive of تَكَسَّبَ (takassaba)\n# تُتَكَسَّبِي (tutakassabī) /tu.ta.kas.sa.biː/: second-person feminine singular non-past passive subjunctive/jussive of تَكَسَّبَ (takassaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatakassabī", "takassaba", "tutakassabī"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتكسبوا",
+      "tur": "verb",
+      "baslik": "تتكسبوا (form V)\n# تَتَكَسَّبُوا (tatakassabū) /ta.ta.kas.sa.buː/: second-person masculine plural non-past active subjunctive/jussive of تَكَسَّبَ (takassaba)\n# تُتَكَسَّبُوا (tutakassabū) /tu.ta.kas.sa.buː/: second-person masculine plural non-past passive subjunctive/jussive of تَكَسَّبَ (takassaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatakassabū", "takassaba", "tutakassabū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتكسبا",
+      "tur": "verb",
+      "baslik": "يتكسبا (form V)\n# يَتَكَسَّبَا (yatakassabā) /ja.ta.kas.sa.baː/: third-person masculine dual non-past active subjunctive/jussive of تَكَسَّبَ (takassaba)\n# يُتَكَسَّبَا (yutakassabā) /ju.ta.kas.sa.baː/: third-person masculine dual non-past passive subjunctive/jussive of تَكَسَّبَ (takassaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatakassabā", "takassaba", "yutakassabā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتكسبوا",
+      "tur": "verb",
+      "baslik": "يتكسبوا (form V)\n# يَتَكَسَّبُوا (yatakassabū) /ja.ta.kas.sa.buː/: third-person masculine plural non-past active subjunctive/jussive of تَكَسَّبَ (takassaba)\n# يُتَكَسَّبُوا (yutakassabū) /ju.ta.kas.sa.buː/: third-person masculine plural non-past passive subjunctive/jussive of تَكَسَّبَ (takassaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatakassabū", "takassaba", "yutakassabū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتكسبا",
+      "tur": "verb",
+      "baslik": "تتكسبا (form V)\n# تَتَكَسَّبَا (tatakassabā) /ta.ta.kas.sa.baː/: inflection of تَكَسَّبَ (takassaba):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُتَكَسَّبَا (tutakassabā) /tu.ta.kas.sa.baː/: inflection of تَكَسَّبَ (takassaba):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatakassabā", "takassaba", "tutakassabā"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تكسب", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

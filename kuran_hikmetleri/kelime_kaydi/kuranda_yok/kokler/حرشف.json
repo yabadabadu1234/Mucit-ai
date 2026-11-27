@@ -1,65 +1,67 @@
 {
   "kok": "حرشف",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "حرشف", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "احرنشف",
-        "u": "احرنشف",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "اِحْرَنْشَفَ • (iḥranšafa) IIIq (non-past يَحْرَنْشِفُ (yaḥranšifu), verbal noun اِحْرِنْشَاف (iḥrinšāf))",
-        "t": "Compare حَرْشَف (ḥaršaf, “troop, crowd”).",
-        "s": [
-          ["ar-rootbox", ""]
-        ],
-        "g": ["to be ready to anger", "to do evil"],
-        "r": ["iḥranšafa"],
-        "el": [
-          ["حَرْشَف", "حرشف#Arabic"],
-          ["troop", "troop"],
-          ["crowd", "crowd"]
-        ],
-        "k": "حرشف",
-        "yol": "kök"
-      },
-      {
-        "w": "احرنشاف",
-        "u": "احرنشاف",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "اِحْرِنْشَاف • (iḥrinšāf) m",
-        "g": ["verbal noun of اِحْرَنْشَفَ (iḥranšafa) (form IIIq)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["اِحْرَنْشَفَ"],
-        "r": ["iḥrinšāf"],
-        "yol": "asıl madde"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "حر",
+  "ses": {
     "harf": "ح",
+    "fasil": "حر",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "احرنشف",
+      "tur": "verb",
+      "baslik": "اِحْرَنْشَفَ • (iḥranšafa) IIIq (non-past يَحْرَنْشِفُ (yaḥranšifu), verbal noun اِحْرِنْشَاف (iḥrinšāf))",
+      "etim_sablon": [
+        ["ar-rootbox", ""]
+      ],
+      "anlam": ["to be ready to anger", "to do evil"],
+      "okunus": ["iḥranšafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "احرنشاف",
+      "tur": "noun",
+      "baslik": "اِحْرِنْشَاف • (iḥrinšāf) m",
+      "anlam": ["verbal noun of اِحْرَنْشَفَ (iḥranšafa) (form IIIq)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["اِحْرَنْشَفَ"],
+      "okunus": ["iḥrinšāf"],
+      "bag": "asıl madde"
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "Compare حَرْشَف (ḥaršaf, “troop, crowd”).",
+      "kognatlar": [
+        ["حَرْشَف", "حرشف#Arabic"],
+        ["troop", "troop"],
+        ["crowd", "crowd"]
+      ]
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "حرشف", "r6"]
+  ],
+  "mana": {
     "ince": "whole.n.02",
     "orta": "noun.animal",
     "ust": "canlı ve beden",
@@ -67,20 +69,8 @@
     "dayanak_tanim": "a flattened rigid plate forming part of the body covering of many animals",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["natural_object.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 5,
       "merkez_kok": "خون",
@@ -100,6 +90,11 @@
       "boy": 19
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["natural_object.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,438 +1,351 @@
 {
   "kok": "ءعمى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءعمى", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "نعم",
-        "u": "نعم",
-        "p": "verb",
-        "n": "4.3",
-        "h": "ar-verb form",
-        "e": "نعم (form IV)\n# نُعْمِ (nuʕmi) /nuʕ.mi/: first-person plural non-past active jussive of أَعْمَى (ʔaʕmā)\n# نُعْمَ (nuʕma) /nuʕ.ma/: first-person plural non-past passive jussive of أَعْمَى (ʔaʕmā)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuʕmi", "ʔaʕmā", "nuʕma"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعمي",
-        "u": "يعمي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يعمي (form IV)\n# يُعْمِي (yuʕmī) /juʕ.miː/: third-person masculine singular non-past active indicative of أَعْمَى (ʔaʕmā)\n# يُعْمِيَ (yuʕmiya) /juʕ.mi.ja/: third-person masculine singular non-past active subjunctive of أَعْمَى (ʔaʕmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕmī", "ʔaʕmā", "yuʕmiya"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعمى",
-        "u": "يعمى",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يُعْمَى • (yuʕmā) (form IV) /juʕ.maː/\n# third-person masculine singular non-past passive indicative/subjunctive of أَعْمَى (ʔaʕmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕmā", "ʔaʕmā"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أعم",
-        "u": "أعم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أعم (form IV)\n# أُعْمِ (ʔuʕmi) /ʔuʕ.mi/: first-person singular non-past active jussive of أَعْمَى (ʔaʕmā)\n# أُعْمَ (ʔuʕma) /ʔuʕ.ma/: first-person singular non-past passive jussive of أَعْمَى (ʔaʕmā)\n# أَعْمِ (ʔaʕmi) /ʔaʕ.mi/: second-person masculine singular imperative of أَعْمَى (ʔaʕmā)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuʕmi", "ʔaʕmā", "ʔuʕma"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعم",
-        "u": "يعم",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "يعم (form IV)\n# يُعْمِ (yuʕmi) /juʕ.mi/: third-person masculine singular non-past active jussive of أَعْمَى (ʔaʕmā)\n# يُعْمَ (yuʕma) /juʕ.ma/: third-person masculine singular non-past passive jussive of أَعْمَى (ʔaʕmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕmi", "ʔaʕmā", "yuʕma"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعم",
-        "u": "تعم",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تعم (form IV)\n# تُعْمِ (tuʕmi) /tuʕ.mi/: inflection of أَعْمَى (ʔaʕmā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُعْمَ (tuʕma) /tuʕ.ma/: inflection of أَعْمَى (ʔaʕmā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕmi", "ʔaʕmā", "tuʕma"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعمي",
-        "u": "تعمي",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تعمي (form IV)\n# تُعْمِي (tuʕmī) /tuʕ.miː/: inflection of أَعْمَى (ʔaʕmā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُعْمِيَ (tuʕmiya) /tuʕ.mi.ja/: inflection of أَعْمَى (ʔaʕmā):\n## second-person masculine singular non-past active subjunctive\n#",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕmī", "ʔaʕmā", "tuʕmiya"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعمى",
-        "u": "تعمى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُعْمَى • (tuʕmā) (form IV) /tuʕ.maː/\n# inflection of أَعْمَى (ʔaʕmā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕmā", "ʔaʕmā"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعمين",
-        "u": "تعمين",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تعمين (form IV)\n# تُعْمِينَ (tuʕmīna) /tuʕ.miː.na/: inflection of أَعْمَى (ʔaʕmā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُعْمَيْنَ (tuʕmayna) /tuʕ.maj.na/: inflection of أَعْمَى (ʔaʕmā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-pas",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕmīna", "ʔaʕmā", "tuʕmayna"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أعمي",
-        "u": "أعمي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أعمي (form IV)\n# أُعْمِيَ (ʔuʕmiya) /ʔuʕ.mi.ja/: inflection of أَعْمَى (ʔaʕmā):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُعْمِي (ʔuʕmī) /ʔuʕ.miː/: first-person singular non-past active indicative of أَعْمَى (ʔaʕmā)\n# أَعْمِي (ʔaʕmī) /ʔaʕ.miː/: second-person feminine singular imperative of أَعْمَى (ʔaʕmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuʕmiya", "ʔaʕmā", "ʔuʕmī"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "نعمي",
-        "u": "نعمي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نعمي (form IV)\n# نُعْمِي (nuʕmī) /nuʕ.miː/: first-person plural non-past active indicative of أَعْمَى (ʔaʕmā)\n# نُعْمِيَ (nuʕmiya) /nuʕ.mi.ja/: first-person plural non-past active subjunctive of أَعْمَى (ʔaʕmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuʕmī", "ʔaʕmā", "nuʕmiya"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "نعمى",
-        "u": "نعمى",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نُعْمَى • (nuʕmā) (form IV) /nuʕ.maː/\n# first-person plural non-past passive indicative/subjunctive of أَعْمَى (ʔaʕmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuʕmā", "ʔaʕmā"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعمون",
-        "u": "تعمون",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تعمون (form IV)\n# تُعْمُونَ (tuʕmūna) /tuʕ.muː.na/: second-person masculine plural non-past active indicative of أَعْمَى (ʔaʕmā)\n# تُعْمَوْنَ (tuʕmawna) /tuʕ.maw.na/: second-person masculine plural non-past passive indicative of أَعْمَى (ʔaʕmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕmūna", "ʔaʕmā", "tuʕmawna"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعموا",
-        "u": "تعموا",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تعموا (form IV)\n# تُعْمُوا (tuʕmū) /tuʕ.muː/: second-person masculine plural non-past active subjunctive/jussive of أَعْمَى (ʔaʕmā)\n# تُعْمَوْا (tuʕmaw) /tuʕ.maw/: second-person masculine plural non-past passive subjunctive/jussive of أَعْمَى (ʔaʕmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕmū", "ʔaʕmā", "tuʕmaw"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعمون",
-        "u": "يعمون",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "يعمون (form IV)\n# يُعْمُونَ (yuʕmūna) /juʕ.muː.na/: third-person masculine plural non-past active indicative of أَعْمَى (ʔaʕmā)\n# يُعْمَوْنَ (yuʕmawna) /juʕ.maw.na/: third-person masculine plural non-past passive indicative of أَعْمَى (ʔaʕmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕmūna", "ʔaʕmā", "yuʕmawna"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعموا",
-        "u": "يعموا",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يعموا (form IV)\n# يُعْمُوا (yuʕmū) /juʕ.muː/: third-person masculine plural non-past active subjunctive/jussive of أَعْمَى (ʔaʕmā)\n# يُعْمَوْا (yuʕmaw) /juʕ.maw/: third-person masculine plural non-past passive subjunctive/jussive of أَعْمَى (ʔaʕmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕmū", "ʔaʕmā", "yuʕmaw"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعمين",
-        "u": "يعمين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يعمين (form IV)\n# يُعْمِينَ (yuʕmīna) /juʕ.miː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَعْمَى (ʔaʕmā)\n# يُعْمَيْنَ (yuʕmayna) /juʕ.maj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَعْمَى (ʔaʕmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕmīna", "ʔaʕmā", "yuʕmayna"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أعمتا",
-        "u": "أعمتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَعْمَتَا • (ʔaʕmatā) (form IV) /ʔaʕ.ma.taː/\n# third-person feminine dual past active of أَعْمَى (ʔaʕmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕmatā", "ʔaʕmā"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أعموا",
-        "u": "أعموا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أعموا (form IV)\n# أَعْمَوْا (ʔaʕmaw) /ʔaʕ.maw/: third-person masculine plural past active of أَعْمَى (ʔaʕmā)\n# أُعْمُوا (ʔuʕmū) /ʔuʕ.muː/: third-person masculine plural past passive of أَعْمَى (ʔaʕmā)\n# أَعْمُوا (ʔaʕmū) /ʔaʕ.muː/: second-person masculine plural imperative of أَعْمَى (ʔaʕmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕmaw", "ʔaʕmā", "ʔuʕmū"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أعمت",
-        "u": "أعمت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَعْمَتْ • (ʔaʕmat) (form IV) /ʔaʕ.mat/\n# third-person feminine singular past active of أَعْمَى (ʔaʕmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕmat", "ʔaʕmā"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أعميتما",
-        "u": "أعميتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعميتما (form IV)\n# أَعْمَيْتُمَا (ʔaʕmaytumā) /ʔaʕ.maj.tu.maː/: second-person dual past active of أَعْمَى (ʔaʕmā)\n# أُعْمِيتُمَا (ʔuʕmītumā) /ʔuʕ.miː.tu.maː/: second-person dual past passive of أَعْمَى (ʔaʕmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕmaytumā", "ʔaʕmā", "ʔuʕmītumā"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أعميت",
-        "u": "أعميت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعميت (form IV)\n# أَعْمَيْتُ (ʔaʕmaytu) /ʔaʕ.maj.tu/: first-person singular past active of أَعْمَى (ʔaʕmā)\n# أَعْمَيْتَ (ʔaʕmayta) /ʔaʕ.maj.ta/: second-person masculine singular past active of أَعْمَى (ʔaʕmā)\n# أَعْمَيْتِ (ʔaʕmayti) /ʔaʕ.maj.ti/: second-person feminine singular past active of أَعْمَى (ʔaʕmā)\n# أُعْمِيتُ (ʔuʕmītu) /ʔuʕ.miː.tu/: first-person singular past passive of أَعْمَى (ʔaʕmā)\n",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕmaytu", "ʔaʕmā", "ʔaʕmayta"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أعميا",
-        "u": "أعميا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعميا (form IV)\n# أَعْمَيَا (ʔaʕmayā) /ʔaʕ.ma.jaː/: third-person masculine dual past active of أَعْمَى (ʔaʕmā)\n# أُعْمِيَا (ʔuʕmiyā) /ʔuʕ.mi.jaː/: third-person masculine dual past passive of أَعْمَى (ʔaʕmā)\n# أَعْمِيَا (ʔaʕmiyā) /ʔaʕ.mi.jaː/: second-person dual imperative of أَعْمَى (ʔaʕmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕmayā", "ʔaʕmā", "ʔuʕmiyā"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أعمينا",
-        "u": "أعمينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعمينا (form IV)\n# أَعْمَيْنَا (ʔaʕmaynā) /ʔaʕ.maj.naː/: first-person plural past active of أَعْمَى (ʔaʕmā)\n# أُعْمِينَا (ʔuʕmīnā) /ʔuʕ.miː.naː/: first-person plural past passive of أَعْمَى (ʔaʕmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕmaynā", "ʔaʕmā", "ʔuʕmīnā"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أعميتم",
-        "u": "أعميتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعميتم (form IV)\n# أَعْمَيْتُمْ (ʔaʕmaytum) /ʔaʕ.maj.tum/: second-person masculine plural past active of أَعْمَى (ʔaʕmā)\n# أُعْمِيتُمْ (ʔuʕmītum) /ʔuʕ.miː.tum/: second-person masculine plural past passive of أَعْمَى (ʔaʕmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕmaytum", "ʔaʕmā", "ʔuʕmītum"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أعميتن",
-        "u": "أعميتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعميتن (form IV)\n# أَعْمَيْتُنَّ (ʔaʕmaytunna) /ʔaʕ.maj.tun.na/: second-person feminine plural past active of أَعْمَى (ʔaʕmā)\n# أُعْمِيتُنَّ (ʔuʕmītunna) /ʔuʕ.miː.tun.na/: second-person feminine plural past passive of أَعْمَى (ʔaʕmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕmaytunna", "ʔaʕmā", "ʔuʕmītunna"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أعميتا",
-        "u": "أعميتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُعْمِيَتَا • (ʔuʕmiyatā) (form IV) /ʔuʕ.mi.ja.taː/\n# third-person feminine dual past passive of أَعْمَى (ʔaʕmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuʕmiyatā", "ʔaʕmā"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أعمين",
-        "u": "أعمين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعمين (form IV)\n# أَعْمَيْنَ (ʔaʕmayna) /ʔaʕ.maj.na/: third-person feminine plural past active of أَعْمَى (ʔaʕmā)\n# أُعْمِينَ (ʔuʕmīna) /ʔuʕ.miː.na/: third-person feminine plural past passive of أَعْمَى (ʔaʕmā)\n# أَعْمِينَ (ʔaʕmīna) /ʔaʕ.miː.na/: second-person feminine plural imperative of أَعْمَى (ʔaʕmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕmayna", "ʔaʕmā", "ʔuʕmīna"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعميان",
-        "u": "تعميان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تعميان (form IV)\n# تُعْمِيَانِ (tuʕmiyāni) /tuʕ.mi.jaː.ni/: inflection of أَعْمَى (ʔaʕmā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُعْمَيَانِ (tuʕmayāni) /tuʕ.ma.jaː.ni/: inflection of أَعْمَى (ʔaʕmā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕmiyāni", "ʔaʕmā", "tuʕmayāni"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعميا",
-        "u": "تعميا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تعميا (form IV)\n# تُعْمِيَا (tuʕmiyā) /tuʕ.mi.jaː/: inflection of أَعْمَى (ʔaʕmā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُعْمَيَا (tuʕmayā) /tuʕ.ma.jaː/: inflection of أَعْمَى (ʔaʕmā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕmiyā", "ʔaʕmā", "tuʕmayā"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعميا",
-        "u": "يعميا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يعميا (form IV)\n# يُعْمِيَا (yuʕmiyā) /juʕ.mi.jaː/: third-person masculine dual non-past active subjunctive/jussive of أَعْمَى (ʔaʕmā)\n# يُعْمَيَا (yuʕmayā) /juʕ.ma.jaː/: third-person masculine dual non-past passive subjunctive/jussive of أَعْمَى (ʔaʕmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕmiyā", "ʔaʕmā", "yuʕmayā"],
-        "k": "أعمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يعميان",
-        "u": "يعميان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يعميان (form IV)\n# يُعْمِيَانِ (yuʕmiyāni) /juʕ.mi.jaː.ni/: third-person masculine dual non-past active indicative of أَعْمَى (ʔaʕmā)\n# يُعْمَيَانِ (yuʕmayāni) /juʕ.ma.jaː.ni/: third-person masculine dual non-past passive indicative of أَعْمَى (ʔaʕmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕmiyāni", "ʔaʕmā", "yuʕmayāni"],
-        "k": "أعمى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "عم",
+  "ses": {
     "harf": "ء",
+    "fasil": "عم",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "نعم",
+      "tur": "verb",
+      "etim_no": "4.3",
+      "baslik": "نعم (form IV)\n# نُعْمِ (nuʕmi) /nuʕ.mi/: first-person plural non-past active jussive of أَعْمَى (ʔaʕmā)\n# نُعْمَ (nuʕma) /nuʕ.ma/: first-person plural non-past passive jussive of أَعْمَى (ʔaʕmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuʕmi", "ʔaʕmā", "nuʕma"],
+      "kok_yazilis": "أعمى"
+    },
+    {
+      "madde": "يعمي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يعمي (form IV)\n# يُعْمِي (yuʕmī) /juʕ.miː/: third-person masculine singular non-past active indicative of أَعْمَى (ʔaʕmā)\n# يُعْمِيَ (yuʕmiya) /juʕ.mi.ja/: third-person masculine singular non-past active subjunctive of أَعْمَى (ʔaʕmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕmī", "ʔaʕmā", "yuʕmiya"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعمى",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يُعْمَى • (yuʕmā) (form IV) /juʕ.maː/\n# third-person masculine singular non-past passive indicative/subjunctive of أَعْمَى (ʔaʕmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕmā", "ʔaʕmā"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أعم (form IV)\n# أُعْمِ (ʔuʕmi) /ʔuʕ.mi/: first-person singular non-past active jussive of أَعْمَى (ʔaʕmā)\n# أُعْمَ (ʔuʕma) /ʔuʕ.ma/: first-person singular non-past passive jussive of أَعْمَى (ʔaʕmā)\n# أَعْمِ (ʔaʕmi) /ʔaʕ.mi/: second-person masculine singular imperative of أَعْمَى (ʔaʕmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuʕmi", "ʔaʕmā", "ʔuʕma"],
+      "kok_yazilis": "أعمى"
+    },
+    {
+      "madde": "يعم",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "يعم (form IV)\n# يُعْمِ (yuʕmi) /juʕ.mi/: third-person masculine singular non-past active jussive of أَعْمَى (ʔaʕmā)\n# يُعْمَ (yuʕma) /juʕ.ma/: third-person masculine singular non-past passive jussive of أَعْمَى (ʔaʕmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕmi", "ʔaʕmā", "yuʕma"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعم",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تعم (form IV)\n# تُعْمِ (tuʕmi) /tuʕ.mi/: inflection of أَعْمَى (ʔaʕmā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُعْمَ (tuʕma) /tuʕ.ma/: inflection of أَعْمَى (ʔaʕmā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕmi", "ʔaʕmā", "tuʕma"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعمي",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تعمي (form IV)\n# تُعْمِي (tuʕmī) /tuʕ.miː/: inflection of أَعْمَى (ʔaʕmā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُعْمِيَ (tuʕmiya) /tuʕ.mi.ja/: inflection of أَعْمَى (ʔaʕmā):\n## second-person masculine singular non-past active subjunctive\n#",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕmī", "ʔaʕmā", "tuʕmiya"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعمى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُعْمَى • (tuʕmā) (form IV) /tuʕ.maː/\n# inflection of أَعْمَى (ʔaʕmā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕmā", "ʔaʕmā"],
+      "kok_yazilis": "أعمى"
+    },
+    {
+      "madde": "تعمين",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تعمين (form IV)\n# تُعْمِينَ (tuʕmīna) /tuʕ.miː.na/: inflection of أَعْمَى (ʔaʕmā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُعْمَيْنَ (tuʕmayna) /tuʕ.maj.na/: inflection of أَعْمَى (ʔaʕmā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-pas",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕmīna", "ʔaʕmā", "tuʕmayna"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعمي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أعمي (form IV)\n# أُعْمِيَ (ʔuʕmiya) /ʔuʕ.mi.ja/: inflection of أَعْمَى (ʔaʕmā):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُعْمِي (ʔuʕmī) /ʔuʕ.miː/: first-person singular non-past active indicative of أَعْمَى (ʔaʕmā)\n# أَعْمِي (ʔaʕmī) /ʔaʕ.miː/: second-person feminine singular imperative of أَعْمَى (ʔaʕmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuʕmiya", "ʔaʕmā", "ʔuʕmī"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نعمي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نعمي (form IV)\n# نُعْمِي (nuʕmī) /nuʕ.miː/: first-person plural non-past active indicative of أَعْمَى (ʔaʕmā)\n# نُعْمِيَ (nuʕmiya) /nuʕ.mi.ja/: first-person plural non-past active subjunctive of أَعْمَى (ʔaʕmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuʕmī", "ʔaʕmā", "nuʕmiya"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نعمى",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نُعْمَى • (nuʕmā) (form IV) /nuʕ.maː/\n# first-person plural non-past passive indicative/subjunctive of أَعْمَى (ʔaʕmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuʕmā", "ʔaʕmā"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعمون",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تعمون (form IV)\n# تُعْمُونَ (tuʕmūna) /tuʕ.muː.na/: second-person masculine plural non-past active indicative of أَعْمَى (ʔaʕmā)\n# تُعْمَوْنَ (tuʕmawna) /tuʕ.maw.na/: second-person masculine plural non-past passive indicative of أَعْمَى (ʔaʕmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕmūna", "ʔaʕmā", "tuʕmawna"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعموا",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تعموا (form IV)\n# تُعْمُوا (tuʕmū) /tuʕ.muː/: second-person masculine plural non-past active subjunctive/jussive of أَعْمَى (ʔaʕmā)\n# تُعْمَوْا (tuʕmaw) /tuʕ.maw/: second-person masculine plural non-past passive subjunctive/jussive of أَعْمَى (ʔaʕmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕmū", "ʔaʕmā", "tuʕmaw"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعمون",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "يعمون (form IV)\n# يُعْمُونَ (yuʕmūna) /juʕ.muː.na/: third-person masculine plural non-past active indicative of أَعْمَى (ʔaʕmā)\n# يُعْمَوْنَ (yuʕmawna) /juʕ.maw.na/: third-person masculine plural non-past passive indicative of أَعْمَى (ʔaʕmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕmūna", "ʔaʕmā", "yuʕmawna"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعموا",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يعموا (form IV)\n# يُعْمُوا (yuʕmū) /juʕ.muː/: third-person masculine plural non-past active subjunctive/jussive of أَعْمَى (ʔaʕmā)\n# يُعْمَوْا (yuʕmaw) /juʕ.maw/: third-person masculine plural non-past passive subjunctive/jussive of أَعْمَى (ʔaʕmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕmū", "ʔaʕmā", "yuʕmaw"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعمين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يعمين (form IV)\n# يُعْمِينَ (yuʕmīna) /juʕ.miː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَعْمَى (ʔaʕmā)\n# يُعْمَيْنَ (yuʕmayna) /juʕ.maj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَعْمَى (ʔaʕmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕmīna", "ʔaʕmā", "yuʕmayna"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعمتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَعْمَتَا • (ʔaʕmatā) (form IV) /ʔaʕ.ma.taː/\n# third-person feminine dual past active of أَعْمَى (ʔaʕmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕmatā", "ʔaʕmā"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعموا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أعموا (form IV)\n# أَعْمَوْا (ʔaʕmaw) /ʔaʕ.maw/: third-person masculine plural past active of أَعْمَى (ʔaʕmā)\n# أُعْمُوا (ʔuʕmū) /ʔuʕ.muː/: third-person masculine plural past passive of أَعْمَى (ʔaʕmā)\n# أَعْمُوا (ʔaʕmū) /ʔaʕ.muː/: second-person masculine plural imperative of أَعْمَى (ʔaʕmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕmaw", "ʔaʕmā", "ʔuʕmū"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعمت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَعْمَتْ • (ʔaʕmat) (form IV) /ʔaʕ.mat/\n# third-person feminine singular past active of أَعْمَى (ʔaʕmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕmat", "ʔaʕmā"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعميتما",
+      "tur": "verb",
+      "baslik": "أعميتما (form IV)\n# أَعْمَيْتُمَا (ʔaʕmaytumā) /ʔaʕ.maj.tu.maː/: second-person dual past active of أَعْمَى (ʔaʕmā)\n# أُعْمِيتُمَا (ʔuʕmītumā) /ʔuʕ.miː.tu.maː/: second-person dual past passive of أَعْمَى (ʔaʕmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕmaytumā", "ʔaʕmā", "ʔuʕmītumā"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعميت",
+      "tur": "verb",
+      "baslik": "أعميت (form IV)\n# أَعْمَيْتُ (ʔaʕmaytu) /ʔaʕ.maj.tu/: first-person singular past active of أَعْمَى (ʔaʕmā)\n# أَعْمَيْتَ (ʔaʕmayta) /ʔaʕ.maj.ta/: second-person masculine singular past active of أَعْمَى (ʔaʕmā)\n# أَعْمَيْتِ (ʔaʕmayti) /ʔaʕ.maj.ti/: second-person feminine singular past active of أَعْمَى (ʔaʕmā)\n# أُعْمِيتُ (ʔuʕmītu) /ʔuʕ.miː.tu/: first-person singular past passive of أَعْمَى (ʔaʕmā)\n",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕmaytu", "ʔaʕmā", "ʔaʕmayta"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعميا",
+      "tur": "verb",
+      "baslik": "أعميا (form IV)\n# أَعْمَيَا (ʔaʕmayā) /ʔaʕ.ma.jaː/: third-person masculine dual past active of أَعْمَى (ʔaʕmā)\n# أُعْمِيَا (ʔuʕmiyā) /ʔuʕ.mi.jaː/: third-person masculine dual past passive of أَعْمَى (ʔaʕmā)\n# أَعْمِيَا (ʔaʕmiyā) /ʔaʕ.mi.jaː/: second-person dual imperative of أَعْمَى (ʔaʕmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕmayā", "ʔaʕmā", "ʔuʕmiyā"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعمينا",
+      "tur": "verb",
+      "baslik": "أعمينا (form IV)\n# أَعْمَيْنَا (ʔaʕmaynā) /ʔaʕ.maj.naː/: first-person plural past active of أَعْمَى (ʔaʕmā)\n# أُعْمِينَا (ʔuʕmīnā) /ʔuʕ.miː.naː/: first-person plural past passive of أَعْمَى (ʔaʕmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕmaynā", "ʔaʕmā", "ʔuʕmīnā"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعميتم",
+      "tur": "verb",
+      "baslik": "أعميتم (form IV)\n# أَعْمَيْتُمْ (ʔaʕmaytum) /ʔaʕ.maj.tum/: second-person masculine plural past active of أَعْمَى (ʔaʕmā)\n# أُعْمِيتُمْ (ʔuʕmītum) /ʔuʕ.miː.tum/: second-person masculine plural past passive of أَعْمَى (ʔaʕmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕmaytum", "ʔaʕmā", "ʔuʕmītum"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعميتن",
+      "tur": "verb",
+      "baslik": "أعميتن (form IV)\n# أَعْمَيْتُنَّ (ʔaʕmaytunna) /ʔaʕ.maj.tun.na/: second-person feminine plural past active of أَعْمَى (ʔaʕmā)\n# أُعْمِيتُنَّ (ʔuʕmītunna) /ʔuʕ.miː.tun.na/: second-person feminine plural past passive of أَعْمَى (ʔaʕmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕmaytunna", "ʔaʕmā", "ʔuʕmītunna"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعميتا",
+      "tur": "verb",
+      "baslik": "أُعْمِيَتَا • (ʔuʕmiyatā) (form IV) /ʔuʕ.mi.ja.taː/\n# third-person feminine dual past passive of أَعْمَى (ʔaʕmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuʕmiyatā", "ʔaʕmā"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعمين",
+      "tur": "verb",
+      "baslik": "أعمين (form IV)\n# أَعْمَيْنَ (ʔaʕmayna) /ʔaʕ.maj.na/: third-person feminine plural past active of أَعْمَى (ʔaʕmā)\n# أُعْمِينَ (ʔuʕmīna) /ʔuʕ.miː.na/: third-person feminine plural past passive of أَعْمَى (ʔaʕmā)\n# أَعْمِينَ (ʔaʕmīna) /ʔaʕ.miː.na/: second-person feminine plural imperative of أَعْمَى (ʔaʕmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕmayna", "ʔaʕmā", "ʔuʕmīna"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعميان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تعميان (form IV)\n# تُعْمِيَانِ (tuʕmiyāni) /tuʕ.mi.jaː.ni/: inflection of أَعْمَى (ʔaʕmā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُعْمَيَانِ (tuʕmayāni) /tuʕ.ma.jaː.ni/: inflection of أَعْمَى (ʔaʕmā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕmiyāni", "ʔaʕmā", "tuʕmayāni"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعميا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تعميا (form IV)\n# تُعْمِيَا (tuʕmiyā) /tuʕ.mi.jaː/: inflection of أَعْمَى (ʔaʕmā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُعْمَيَا (tuʕmayā) /tuʕ.ma.jaː/: inflection of أَعْمَى (ʔaʕmā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕmiyā", "ʔaʕmā", "tuʕmayā"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعميا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يعميا (form IV)\n# يُعْمِيَا (yuʕmiyā) /juʕ.mi.jaː/: third-person masculine dual non-past active subjunctive/jussive of أَعْمَى (ʔaʕmā)\n# يُعْمَيَا (yuʕmayā) /juʕ.ma.jaː/: third-person masculine dual non-past passive subjunctive/jussive of أَعْمَى (ʔaʕmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕmiyā", "ʔaʕmā", "yuʕmayā"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعميان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يعميان (form IV)\n# يُعْمِيَانِ (yuʕmiyāni) /juʕ.mi.jaː.ni/: third-person masculine dual non-past active indicative of أَعْمَى (ʔaʕmā)\n# يُعْمَيَانِ (yuʕmayāni) /juʕ.ma.jaː.ni/: third-person masculine dual non-past passive indicative of أَعْمَى (ʔaʕmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕmiyāni", "ʔaʕmā", "yuʕmayāni"],
+      "kok_yazilis": "أعمى",
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ءعمى", "r6"]
+  ],
+  "mana": {
     "ince": "polish.v.02",
     "orta": "verb.change",
     "ust": "fiil ve hadise",
@@ -440,22 +353,15 @@
     "dayanak_tanim": "improve or perfect by pruning or polishing",
     "synset_sayisi": 3
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["polish.v.01", "polish.v.02", "smooth.v.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["polish.v.01", "polish.v.02", "smooth.v.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

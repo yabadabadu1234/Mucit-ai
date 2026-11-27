@@ -1,447 +1,320 @@
 {
   "kok": "اغتم",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "اغتم", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أغتم",
-        "u": "أغتم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أغتم (form VIII)\n# أَغْتَمُّ (ʔaḡtammu) /ʔaɣ.tam.mu/: first-person singular non-past active indicative of اِغْتَمَّ (iḡtamma)\n# أَغْتَمَّ (ʔaḡtamma) /ʔaɣ.tam.ma/: first-person singular non-past active subjunctive/jussive of اِغْتَمَّ (iḡtamma)\n# أَغْتَمِّ (ʔaḡtammi) /ʔaɣ.tam.mi/: first-person singular non-past active jussive of اِغْتَمَّ (iḡtamma)",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ʔaḡtammu", "iḡtamma", "ʔaḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تغتمين",
-        "u": "تغتمين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَغْتَمِّينَ • (taḡtammīna) (form VIII) /taɣ.tam.miː.na/\n# second-person feminine singular non-past active indicative of اِغْتَمَّ (iḡtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["taḡtammīna", "iḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "يغتمان",
-        "u": "يغتمان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَغْتَمَّانِ • (yaḡtammāni) (form VIII) /jaɣ.tam.maː.ni/\n# third-person masculine dual non-past active indicative of اِغْتَمَّ (iḡtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yaḡtammāni", "iḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تغتم",
-        "u": "تغتم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تغتم (form VIII)\n# تَغْتَمُّ (taḡtammu) /taɣ.tam.mu/: inflection of اِغْتَمَّ (iḡtamma):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَغْتَمَّ (taḡtamma) /taɣ.tam.ma/: inflection of اِغْتَمَّ (iḡtamma):\n## second-person masculine singular non-past active subjunctive/jussive\n## third-person feminine singular non-past ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["taḡtammu", "iḡtamma", "taḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "نغتم",
-        "u": "نغتم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نغتم (form VIII)\n# نَغْتَمُّ (naḡtammu) /naɣ.tam.mu/: first-person plural non-past active indicative of اِغْتَمَّ (iḡtamma)\n# نَغْتَمَّ (naḡtamma) /naɣ.tam.ma/: first-person plural non-past active subjunctive/jussive of اِغْتَمَّ (iḡtamma)\n# نَغْتَمِّ (naḡtammi) /naɣ.tam.mi/: first-person plural non-past active jussive of اِغْتَمَّ (iḡtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["naḡtammu", "iḡtamma", "naḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تغتمان",
-        "u": "تغتمان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَغْتَمَّانِ • (taḡtammāni) (form VIII) /taɣ.tam.maː.ni/\n# inflection of اِغْتَمَّ (iḡtamma):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["taḡtammāni", "iḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تغتمون",
-        "u": "تغتمون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَغْتَمُّونَ • (taḡtammūna) (form VIII) /taɣ.tam.muː.na/\n# second-person masculine plural non-past active indicative of اِغْتَمَّ (iḡtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["taḡtammūna", "iḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تغتما",
-        "u": "تغتما",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَغْتَمَّا • (taḡtammā) (form VIII) /taɣ.tam.maː/\n# inflection of اِغْتَمَّ (iḡtamma):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["taḡtammā", "iḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "يغتمون",
-        "u": "يغتمون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَغْتَمُّونَ • (yaḡtammūna) (form VIII) /jaɣ.tam.muː.na/\n# third-person masculine plural non-past active indicative of اِغْتَمَّ (iḡtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yaḡtammūna", "iḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "يغتم",
-        "u": "يغتم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يغتم (form VIII)\n# يَغْتَمُّ (yaḡtammu) /jaɣ.tam.mu/: third-person masculine singular non-past active indicative of اِغْتَمَّ (iḡtamma)\n# يَغْتَمَّ (yaḡtamma) /jaɣ.tam.ma/: third-person masculine singular non-past active subjunctive/jussive of اِغْتَمَّ (iḡtamma)\n# يَغْتَمِّ (yaḡtammi) /jaɣ.tam.mi/: third-person masculine singular non-past active jussive of اِغْتَمَّ (iḡtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yaḡtammu", "iḡtamma", "yaḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تغتمي",
-        "u": "تغتمي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَغْتَمِّي • (taḡtammī) (form VIII) /taɣ.tam.miː/\n# second-person feminine singular non-past active subjunctive/jussive of اِغْتَمَّ (iḡtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["taḡtammī", "iḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "يغتما",
-        "u": "يغتما",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَغْتَمَّا • (yaḡtammā) (form VIII) /jaɣ.tam.maː/\n# third-person masculine dual non-past active subjunctive/jussive of اِغْتَمَّ (iḡtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yaḡtammā", "iḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "يغتموا",
-        "u": "يغتموا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَغْتَمُّوا • (yaḡtammū) (form VIII) /jaɣ.tam.muː/\n# third-person masculine plural non-past active subjunctive/jussive of اِغْتَمَّ (iḡtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yaḡtammū", "iḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تغتموا",
-        "u": "تغتموا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَغْتَمُّوا • (taḡtammū) (form VIII) /taɣ.tam.muː/\n# second-person masculine plural non-past active subjunctive/jussive of اِغْتَمَّ (iḡtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["taḡtammū", "iḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "اغتمت",
-        "u": "اغتمت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِغْتَمَّتْ • (iḡtammat) (form VIII) /iɣ.tam.mat/\n# third-person feminine singular past active of اِغْتَمَّ (iḡtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḡtammat", "iḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "اغتممت",
-        "u": "اغتممت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اغتممت (form VIII)\n# اِغْتَمَمْتُ (iḡtamamtu) /iɣ.ta.mam.tu/: first-person singular past active of اِغْتَمَّ (iḡtamma)\n# اِغْتَمَمْتَ (iḡtamamta) /iɣ.ta.mam.ta/: second-person masculine singular past active of اِغْتَمَّ (iḡtamma)\n# اِغْتَمَمْتِ (iḡtamamti) /iɣ.ta.mam.ti/: second-person feminine singular past active of اِغْتَمَّ (iḡtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḡtamamtu", "iḡtamma", "iḡtamamta"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "اغتممتما",
-        "u": "اغتممتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِغْتَمَمْتُمَا • (iḡtamamtumā) (form VIII) /iɣ.ta.mam.tu.maː/\n# second-person dual past active of اِغْتَمَّ (iḡtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḡtamamtumā", "iḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "اغتممتم",
-        "u": "اغتممتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِغْتَمَمْتُمْ • (iḡtamamtum) (form VIII) /iɣ.ta.mam.tum/\n# second-person masculine plural past active of اِغْتَمَّ (iḡtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḡtamamtum", "iḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "اغتما",
-        "u": "اغتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِغْتَمَّا • (iḡtammā) (form VIII) /iɣ.tam.maː/\n# inflection of اِغْتَمَّ (iḡtamma):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḡtammā", "iḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "اغتممتن",
-        "u": "اغتممتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِغْتَمَمْتُنَّ • (iḡtamamtunna) (form VIII) /iɣ.ta.mam.tun.na/\n# second-person feminine plural past active of اِغْتَمَّ (iḡtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḡtamamtunna", "iḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "اغتمتا",
-        "u": "اغتمتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِغْتَمَّتَا • (iḡtammatā) (form VIII) /iɣ.tam.ma.taː/\n# third-person feminine dual past active of اِغْتَمَّ (iḡtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḡtammatā", "iḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "اغتموا",
-        "u": "اغتموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِغْتَمُّوا • (iḡtammū) (form VIII) /iɣ.tam.muː/\n# inflection of اِغْتَمَّ (iḡtamma):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḡtammū", "iḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "اغتممنا",
-        "u": "اغتممنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِغْتَمَمْنَا • (iḡtamamnā) (form VIII) /iɣ.ta.mam.naː/\n# first-person plural past active of اِغْتَمَّ (iḡtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḡtamamnā", "iḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "اغتممن",
-        "u": "اغتممن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اغتممن (form VIII)\n# اِغْتَمَمْنَ (iḡtamamna) /iɣ.ta.mam.na/: third-person feminine plural past active of اِغْتَمَّ (iḡtamma)\n# اِغْتَمِمْنَ (iḡtamimna) /iɣ.ta.mim.na/: second-person feminine plural imperative of اِغْتَمَّ (iḡtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḡtamamna", "iḡtamma", "iḡtamimna"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "يغتممن",
-        "u": "يغتممن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَغْتَمِمْنَ • (yaḡtamimna) (form VIII) /jaɣ.ta.mim.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِغْتَمَّ (iḡtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yaḡtamimna", "iḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "أغتمم",
-        "u": "أغتمم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَغْتَمِمْ • (ʔaḡtamim) (form VIII) /ʔaɣ.ta.mim/\n# first-person singular non-past active jussive of اِغْتَمَّ (iḡtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ʔaḡtamim", "iḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تغتممن",
-        "u": "تغتممن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغْتَمِمْنَ • (taḡtamimna) (form VIII) /taɣ.ta.mim.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِغْتَمَّ (iḡtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["taḡtamimna", "iḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "نغتمم",
-        "u": "نغتمم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَغْتَمِمْ • (naḡtamim) (form VIII) /naɣ.ta.mim/\n# first-person plural non-past active jussive of اِغْتَمَّ (iḡtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["naḡtamim", "iḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تغتمم",
-        "u": "تغتمم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغْتَمِمْ • (taḡtamim) (form VIII) /taɣ.ta.mim/\n# inflection of اِغْتَمَّ (iḡtamma):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["taḡtamim", "iḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "يغتمم",
-        "u": "يغتمم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَغْتَمِمْ • (yaḡtamim) (form VIII) /jaɣ.ta.mim/\n# third-person masculine singular non-past active jussive of اِغْتَمَّ (iḡtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yaḡtamim", "iḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "اغتمم",
-        "u": "اغتمم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِغْتَمِمْ • (iḡtamim) (form VIII) /iɣ.ta.mim/\n# second-person masculine singular imperative of اِغْتَمَّ (iḡtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḡtamim", "iḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      },
-      {
-        "w": "اغتمي",
-        "u": "اغتمي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِغْتَمِّي • (iḡtammī) (form VIII) /iɣ.tam.miː/\n# second-person feminine singular imperative of اِغْتَمَّ (iḡtamma)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḡtammī", "iḡtamma"],
-        "k": "اغتم",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "غت",
+  "ses": {
     "harf": "ا",
+    "fasil": "غت",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "أغتم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أغتم (form VIII)\n# أَغْتَمُّ (ʔaḡtammu) /ʔaɣ.tam.mu/: first-person singular non-past active indicative of اِغْتَمَّ (iḡtamma)\n# أَغْتَمَّ (ʔaḡtamma) /ʔaɣ.tam.ma/: first-person singular non-past active subjunctive/jussive of اِغْتَمَّ (iḡtamma)\n# أَغْتَمِّ (ʔaḡtammi) /ʔaɣ.tam.mi/: first-person singular non-past active jussive of اِغْتَمَّ (iḡtamma)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ʔaḡtammu", "iḡtamma", "ʔaḡtamma"]
+    },
+    {
+      "madde": "تغتمين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَغْتَمِّينَ • (taḡtammīna) (form VIII) /taɣ.tam.miː.na/\n# second-person feminine singular non-past active indicative of اِغْتَمَّ (iḡtamma)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["taḡtammīna", "iḡtamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغتمان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَغْتَمَّانِ • (yaḡtammāni) (form VIII) /jaɣ.tam.maː.ni/\n# third-person masculine dual non-past active indicative of اِغْتَمَّ (iḡtamma)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yaḡtammāni", "iḡtamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغتم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تغتم (form VIII)\n# تَغْتَمُّ (taḡtammu) /taɣ.tam.mu/: inflection of اِغْتَمَّ (iḡtamma):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَغْتَمَّ (taḡtamma) /taɣ.tam.ma/: inflection of اِغْتَمَّ (iḡtamma):\n## second-person masculine singular non-past active subjunctive/jussive\n## third-person feminine singular non-past ",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["taḡtammu", "iḡtamma", "taḡtamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نغتم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نغتم (form VIII)\n# نَغْتَمُّ (naḡtammu) /naɣ.tam.mu/: first-person plural non-past active indicative of اِغْتَمَّ (iḡtamma)\n# نَغْتَمَّ (naḡtamma) /naɣ.tam.ma/: first-person plural non-past active subjunctive/jussive of اِغْتَمَّ (iḡtamma)\n# نَغْتَمِّ (naḡtammi) /naɣ.tam.mi/: first-person plural non-past active jussive of اِغْتَمَّ (iḡtamma)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["naḡtammu", "iḡtamma", "naḡtamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغتمان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَغْتَمَّانِ • (taḡtammāni) (form VIII) /taɣ.tam.maː.ni/\n# inflection of اِغْتَمَّ (iḡtamma):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["taḡtammāni", "iḡtamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغتمون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَغْتَمُّونَ • (taḡtammūna) (form VIII) /taɣ.tam.muː.na/\n# second-person masculine plural non-past active indicative of اِغْتَمَّ (iḡtamma)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["taḡtammūna", "iḡtamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغتما",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَغْتَمَّا • (taḡtammā) (form VIII) /taɣ.tam.maː/\n# inflection of اِغْتَمَّ (iḡtamma):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["taḡtammā", "iḡtamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغتمون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَغْتَمُّونَ • (yaḡtammūna) (form VIII) /jaɣ.tam.muː.na/\n# third-person masculine plural non-past active indicative of اِغْتَمَّ (iḡtamma)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yaḡtammūna", "iḡtamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغتم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يغتم (form VIII)\n# يَغْتَمُّ (yaḡtammu) /jaɣ.tam.mu/: third-person masculine singular non-past active indicative of اِغْتَمَّ (iḡtamma)\n# يَغْتَمَّ (yaḡtamma) /jaɣ.tam.ma/: third-person masculine singular non-past active subjunctive/jussive of اِغْتَمَّ (iḡtamma)\n# يَغْتَمِّ (yaḡtammi) /jaɣ.tam.mi/: third-person masculine singular non-past active jussive of اِغْتَمَّ (iḡtamma)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yaḡtammu", "iḡtamma", "yaḡtamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغتمي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَغْتَمِّي • (taḡtammī) (form VIII) /taɣ.tam.miː/\n# second-person feminine singular non-past active subjunctive/jussive of اِغْتَمَّ (iḡtamma)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["taḡtammī", "iḡtamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغتما",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَغْتَمَّا • (yaḡtammā) (form VIII) /jaɣ.tam.maː/\n# third-person masculine dual non-past active subjunctive/jussive of اِغْتَمَّ (iḡtamma)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yaḡtammā", "iḡtamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغتموا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَغْتَمُّوا • (yaḡtammū) (form VIII) /jaɣ.tam.muː/\n# third-person masculine plural non-past active subjunctive/jussive of اِغْتَمَّ (iḡtamma)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yaḡtammū", "iḡtamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغتموا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَغْتَمُّوا • (taḡtammū) (form VIII) /taɣ.tam.muː/\n# second-person masculine plural non-past active subjunctive/jussive of اِغْتَمَّ (iḡtamma)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["taḡtammū", "iḡtamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اغتمت",
+      "tur": "verb",
+      "baslik": "اِغْتَمَّتْ • (iḡtammat) (form VIII) /iɣ.tam.mat/\n# third-person feminine singular past active of اِغْتَمَّ (iḡtamma)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḡtammat", "iḡtamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اغتممت",
+      "tur": "verb",
+      "baslik": "اغتممت (form VIII)\n# اِغْتَمَمْتُ (iḡtamamtu) /iɣ.ta.mam.tu/: first-person singular past active of اِغْتَمَّ (iḡtamma)\n# اِغْتَمَمْتَ (iḡtamamta) /iɣ.ta.mam.ta/: second-person masculine singular past active of اِغْتَمَّ (iḡtamma)\n# اِغْتَمَمْتِ (iḡtamamti) /iɣ.ta.mam.ti/: second-person feminine singular past active of اِغْتَمَّ (iḡtamma)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḡtamamtu", "iḡtamma", "iḡtamamta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اغتممتما",
+      "tur": "verb",
+      "baslik": "اِغْتَمَمْتُمَا • (iḡtamamtumā) (form VIII) /iɣ.ta.mam.tu.maː/\n# second-person dual past active of اِغْتَمَّ (iḡtamma)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḡtamamtumā", "iḡtamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اغتممتم",
+      "tur": "verb",
+      "baslik": "اِغْتَمَمْتُمْ • (iḡtamamtum) (form VIII) /iɣ.ta.mam.tum/\n# second-person masculine plural past active of اِغْتَمَّ (iḡtamma)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḡtamamtum", "iḡtamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اغتما",
+      "tur": "verb",
+      "baslik": "اِغْتَمَّا • (iḡtammā) (form VIII) /iɣ.tam.maː/\n# inflection of اِغْتَمَّ (iḡtamma):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḡtammā", "iḡtamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اغتممتن",
+      "tur": "verb",
+      "baslik": "اِغْتَمَمْتُنَّ • (iḡtamamtunna) (form VIII) /iɣ.ta.mam.tun.na/\n# second-person feminine plural past active of اِغْتَمَّ (iḡtamma)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḡtamamtunna", "iḡtamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اغتمتا",
+      "tur": "verb",
+      "baslik": "اِغْتَمَّتَا • (iḡtammatā) (form VIII) /iɣ.tam.ma.taː/\n# third-person feminine dual past active of اِغْتَمَّ (iḡtamma)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḡtammatā", "iḡtamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اغتموا",
+      "tur": "verb",
+      "baslik": "اِغْتَمُّوا • (iḡtammū) (form VIII) /iɣ.tam.muː/\n# inflection of اِغْتَمَّ (iḡtamma):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḡtammū", "iḡtamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اغتممنا",
+      "tur": "verb",
+      "baslik": "اِغْتَمَمْنَا • (iḡtamamnā) (form VIII) /iɣ.ta.mam.naː/\n# first-person plural past active of اِغْتَمَّ (iḡtamma)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḡtamamnā", "iḡtamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اغتممن",
+      "tur": "verb",
+      "baslik": "اغتممن (form VIII)\n# اِغْتَمَمْنَ (iḡtamamna) /iɣ.ta.mam.na/: third-person feminine plural past active of اِغْتَمَّ (iḡtamma)\n# اِغْتَمِمْنَ (iḡtamimna) /iɣ.ta.mim.na/: second-person feminine plural imperative of اِغْتَمَّ (iḡtamma)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḡtamamna", "iḡtamma", "iḡtamimna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغتممن",
+      "tur": "verb",
+      "baslik": "يَغْتَمِمْنَ • (yaḡtamimna) (form VIII) /jaɣ.ta.mim.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِغْتَمَّ (iḡtamma)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yaḡtamimna", "iḡtamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أغتمم",
+      "tur": "verb",
+      "baslik": "أَغْتَمِمْ • (ʔaḡtamim) (form VIII) /ʔaɣ.ta.mim/\n# first-person singular non-past active jussive of اِغْتَمَّ (iḡtamma)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ʔaḡtamim", "iḡtamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغتممن",
+      "tur": "verb",
+      "baslik": "تَغْتَمِمْنَ • (taḡtamimna) (form VIII) /taɣ.ta.mim.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِغْتَمَّ (iḡtamma)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["taḡtamimna", "iḡtamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نغتمم",
+      "tur": "verb",
+      "baslik": "نَغْتَمِمْ • (naḡtamim) (form VIII) /naɣ.ta.mim/\n# first-person plural non-past active jussive of اِغْتَمَّ (iḡtamma)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["naḡtamim", "iḡtamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغتمم",
+      "tur": "verb",
+      "baslik": "تَغْتَمِمْ • (taḡtamim) (form VIII) /taɣ.ta.mim/\n# inflection of اِغْتَمَّ (iḡtamma):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["taḡtamim", "iḡtamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغتمم",
+      "tur": "verb",
+      "baslik": "يَغْتَمِمْ • (yaḡtamim) (form VIII) /jaɣ.ta.mim/\n# third-person masculine singular non-past active jussive of اِغْتَمَّ (iḡtamma)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yaḡtamim", "iḡtamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اغتمم",
+      "tur": "verb",
+      "baslik": "اِغْتَمِمْ • (iḡtamim) (form VIII) /iɣ.ta.mim/\n# second-person masculine singular imperative of اِغْتَمَّ (iḡtamma)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḡtamim", "iḡtamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اغتمي",
+      "tur": "verb",
+      "baslik": "اِغْتَمِّي • (iḡtammī) (form VIII) /iɣ.tam.miː/\n# second-person feminine singular imperative of اِغْتَمَّ (iḡtamma)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḡtammī", "iḡtamma"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "اغتم", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

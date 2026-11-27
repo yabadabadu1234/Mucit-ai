@@ -1,434 +1,303 @@
 {
   "kok": "اكمد",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "اكمد", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "اكمددت",
-        "u": "اكمددت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اكمددت (form IX)\n# اِكْمَدَدْتُ (ikmadadtu) /ik.ma.dad.tu/: first-person singular past active of اِكْمَدَّ (ikmadda)\n# اِكْمَدَدْتَ (ikmadadta) /ik.ma.dad.ta/: second-person masculine singular past active of اِكْمَدَّ (ikmadda)\n# اِكْمَدَدْتِ (ikmadadti) /ik.ma.dad.ti/: second-person feminine singular past active of اِكْمَدَّ (ikmadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["ikmadadtu", "ikmadda", "ikmadadta"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "اكمددتما",
-        "u": "اكمددتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِكْمَدَدْتُمَا • (ikmadadtumā) (form IX) /ik.ma.dad.tu.maː/\n# second-person dual past active of اِكْمَدَّ (ikmadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["ikmadadtumā", "ikmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "اكمدا",
-        "u": "اكمدا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِكْمَدَّا • (ikmaddā) (form IX) /ik.mad.daː/\n# inflection of اِكْمَدَّ (ikmadda):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["ikmaddā", "ikmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "اكمدتا",
-        "u": "اكمدتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِكْمَدَّتَا • (ikmaddatā) (form IX) /ik.mad.da.taː/\n# third-person feminine dual past active of اِكْمَدَّ (ikmadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["ikmaddatā", "ikmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "اكمددنا",
-        "u": "اكمددنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِكْمَدَدْنَا • (ikmadadnā) (form IX) /ik.ma.dad.naː/\n# first-person plural past active of اِكْمَدَّ (ikmadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["ikmadadnā", "ikmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "اكمددتم",
-        "u": "اكمددتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِكْمَدَدْتُمْ • (ikmadadtum) (form IX) /ik.ma.dad.tum/\n# second-person masculine plural past active of اِكْمَدَّ (ikmadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["ikmadadtum", "ikmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "اكمدت",
-        "u": "اكمدت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِكْمَدَّتْ • (ikmaddat) (form IX) /ik.mad.dat/\n# third-person feminine singular past active of اِكْمَدَّ (ikmadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["ikmaddat", "ikmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "اكمددتن",
-        "u": "اكمددتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِكْمَدَدْتُنَّ • (ikmadadtunna) (form IX) /ik.ma.dad.tun.na/\n# second-person feminine plural past active of اِكْمَدَّ (ikmadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["ikmadadtunna", "ikmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "اكمددن",
-        "u": "اكمددن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اكمددن (form IX)\n# اِكْمَدَدْنَ (ikmadadna) /ik.ma.dad.na/: third-person feminine plural past active of اِكْمَدَّ (ikmadda)\n# اِكْمَدِدْنَ (ikmadidna) /ik.ma.did.na/: second-person feminine plural imperative of اِكْمَدَّ (ikmadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["ikmadadna", "ikmadda", "ikmadidna"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "اكمدوا",
-        "u": "اكمدوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِكْمَدُّوا • (ikmaddū) (form IX) /ik.mad.duː/\n# inflection of اِكْمَدَّ (ikmadda):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["ikmaddū", "ikmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "أكمد",
-        "u": "أكمد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أكمد (form IX)\n# أَكْمَدُّ (ʔakmaddu) /ʔak.mad.du/: first-person singular non-past active indicative of اِكْمَدَّ (ikmadda)\n# أَكْمَدَّ (ʔakmadda) /ʔak.mad.da/: first-person singular non-past active subjunctive/jussive of اِكْمَدَّ (ikmadda)\n# أَكْمَدِّ (ʔakmaddi) /ʔak.mad.di/: first-person singular non-past active jussive of اِكْمَدَّ (ikmadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["ʔakmaddu", "ikmadda", "ʔakmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "يكمد",
-        "u": "يكمد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يكمد (form IX)\n# يَكْمَدُّ (yakmaddu) /jak.mad.du/: third-person masculine singular non-past active indicative of اِكْمَدَّ (ikmadda)\n# يَكْمَدَّ (yakmadda) /jak.mad.da/: third-person masculine singular non-past active subjunctive/jussive of اِكْمَدَّ (ikmadda)\n# يَكْمَدِّ (yakmaddi) /jak.mad.di/: third-person masculine singular non-past active jussive of اِكْمَدَّ (ikmadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["yakmaddu", "ikmadda", "yakmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "تكمدين",
-        "u": "تكمدين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَكْمَدِّينَ • (takmaddīna) (form IX) /tak.mad.diː.na/\n# second-person feminine singular non-past active indicative of اِكْمَدَّ (ikmadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["takmaddīna", "ikmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "تكمد",
-        "u": "تكمد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تكمد (form IX)\n# تَكْمَدُّ (takmaddu) /tak.mad.du/: inflection of اِكْمَدَّ (ikmadda):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَكْمَدَّ (takmadda) /tak.mad.da/: inflection of اِكْمَدَّ (ikmadda):\n## second-person masculine singular non-past active subjunctive/jussive\n## third-person feminine singular non-past ac",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["takmaddu", "ikmadda", "takmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "يكمدان",
-        "u": "يكمدان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَكْمَدَّانِ • (yakmaddāni) (form IX) /jak.mad.daː.ni/\n# third-person masculine dual non-past active indicative of اِكْمَدَّ (ikmadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["yakmaddāni", "ikmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "تكمدان",
-        "u": "تكمدان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَكْمَدَّانِ • (takmaddāni) (form IX) /tak.mad.daː.ni/\n# inflection of اِكْمَدَّ (ikmadda):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["takmaddāni", "ikmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "نكمد",
-        "u": "نكمد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نكمد (form IX)\n# نَكْمَدُّ (nakmaddu) /nak.mad.du/: first-person plural non-past active indicative of اِكْمَدَّ (ikmadda)\n# نَكْمَدَّ (nakmadda) /nak.mad.da/: first-person plural non-past active subjunctive/jussive of اِكْمَدَّ (ikmadda)\n# نَكْمَدِّ (nakmaddi) /nak.mad.di/: first-person plural non-past active jussive of اِكْمَدَّ (ikmadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["nakmaddu", "ikmadda", "nakmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "يكمدون",
-        "u": "يكمدون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَكْمَدُّونَ • (yakmaddūna) (form IX) /jak.mad.duː.na/\n# third-person masculine plural non-past active indicative of اِكْمَدَّ (ikmadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["yakmaddūna", "ikmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "تكمدون",
-        "u": "تكمدون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَكْمَدُّونَ • (takmaddūna) (form IX) /tak.mad.duː.na/\n# second-person masculine plural non-past active indicative of اِكْمَدَّ (ikmadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["takmaddūna", "ikmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "تكمددن",
-        "u": "تكمددن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَكْمَدِدْنَ • (takmadidna) (form IX) /tak.ma.did.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِكْمَدَّ (ikmadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["takmadidna", "ikmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "تكمدي",
-        "u": "تكمدي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَكْمَدِّي • (takmaddī) (form IX) /tak.mad.diː/\n# second-person feminine singular non-past active subjunctive/jussive of اِكْمَدَّ (ikmadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["takmaddī", "ikmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "يكمددن",
-        "u": "يكمددن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَكْمَدِدْنَ • (yakmadidna) (form IX) /jak.ma.did.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِكْمَدَّ (ikmadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["yakmadidna", "ikmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "تكمدا",
-        "u": "تكمدا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَكْمَدَّا • (takmaddā) (form IX) /tak.mad.daː/\n# inflection of اِكْمَدَّ (ikmadda):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["takmaddā", "ikmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "تكمدوا",
-        "u": "تكمدوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَكْمَدُّوا • (takmaddū) (form IX) /tak.mad.duː/\n# second-person masculine plural non-past active subjunctive/jussive of اِكْمَدَّ (ikmadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["takmaddū", "ikmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "يكمدا",
-        "u": "يكمدا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَكْمَدَّا • (yakmaddā) (form IX) /jak.mad.daː/\n# third-person masculine dual non-past active subjunctive/jussive of اِكْمَدَّ (ikmadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["yakmaddā", "ikmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "أكمدد",
-        "u": "أكمدد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَكْمَدِدْ • (ʔakmadid) (form IX) /ʔak.ma.did/\n# first-person singular non-past active jussive of اِكْمَدَّ (ikmadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["ʔakmadid", "ikmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "يكمدوا",
-        "u": "يكمدوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَكْمَدُّوا • (yakmaddū) (form IX) /jak.mad.duː/\n# third-person masculine plural non-past active subjunctive/jussive of اِكْمَدَّ (ikmadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["yakmaddū", "ikmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "تكمدد",
-        "u": "تكمدد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَكْمَدِدْ • (takmadid) (form IX) /tak.ma.did/\n# inflection of اِكْمَدَّ (ikmadda):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["takmadid", "ikmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "نكمدد",
-        "u": "نكمدد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَكْمَدِدْ • (nakmadid) (form IX) /nak.ma.did/\n# first-person plural non-past active jussive of اِكْمَدَّ (ikmadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["nakmadid", "ikmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "يكمدد",
-        "u": "يكمدد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَكْمَدِدْ • (yakmadid) (form IX) /jak.ma.did/\n# third-person masculine singular non-past active jussive of اِكْمَدَّ (ikmadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["yakmadid", "ikmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "اكمدي",
-        "u": "اكمدي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِكْمَدِّي • (ikmaddī) (form IX) /ik.mad.diː/\n# second-person feminine singular imperative of اِكْمَدَّ (ikmadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["ikmaddī", "ikmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      },
-      {
-        "w": "اكمدد",
-        "u": "اكمدد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِكْمَدِدْ • (ikmadid) (form IX) /ik.ma.did/\n# second-person masculine singular imperative of اِكْمَدَّ (ikmadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["ikmadid", "ikmadda"],
-        "k": "اكمد",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "كم",
+  "ses": {
     "harf": "ا",
+    "fasil": "كم",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "اكمددت",
+      "tur": "verb",
+      "baslik": "اكمددت (form IX)\n# اِكْمَدَدْتُ (ikmadadtu) /ik.ma.dad.tu/: first-person singular past active of اِكْمَدَّ (ikmadda)\n# اِكْمَدَدْتَ (ikmadadta) /ik.ma.dad.ta/: second-person masculine singular past active of اِكْمَدَّ (ikmadda)\n# اِكْمَدَدْتِ (ikmadadti) /ik.ma.dad.ti/: second-person feminine singular past active of اِكْمَدَّ (ikmadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["ikmadadtu", "ikmadda", "ikmadadta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اكمددتما",
+      "tur": "verb",
+      "baslik": "اِكْمَدَدْتُمَا • (ikmadadtumā) (form IX) /ik.ma.dad.tu.maː/\n# second-person dual past active of اِكْمَدَّ (ikmadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["ikmadadtumā", "ikmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اكمدا",
+      "tur": "verb",
+      "baslik": "اِكْمَدَّا • (ikmaddā) (form IX) /ik.mad.daː/\n# inflection of اِكْمَدَّ (ikmadda):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["ikmaddā", "ikmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اكمدتا",
+      "tur": "verb",
+      "baslik": "اِكْمَدَّتَا • (ikmaddatā) (form IX) /ik.mad.da.taː/\n# third-person feminine dual past active of اِكْمَدَّ (ikmadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["ikmaddatā", "ikmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اكمددنا",
+      "tur": "verb",
+      "baslik": "اِكْمَدَدْنَا • (ikmadadnā) (form IX) /ik.ma.dad.naː/\n# first-person plural past active of اِكْمَدَّ (ikmadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["ikmadadnā", "ikmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اكمددتم",
+      "tur": "verb",
+      "baslik": "اِكْمَدَدْتُمْ • (ikmadadtum) (form IX) /ik.ma.dad.tum/\n# second-person masculine plural past active of اِكْمَدَّ (ikmadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["ikmadadtum", "ikmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اكمدت",
+      "tur": "verb",
+      "baslik": "اِكْمَدَّتْ • (ikmaddat) (form IX) /ik.mad.dat/\n# third-person feminine singular past active of اِكْمَدَّ (ikmadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["ikmaddat", "ikmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اكمددتن",
+      "tur": "verb",
+      "baslik": "اِكْمَدَدْتُنَّ • (ikmadadtunna) (form IX) /ik.ma.dad.tun.na/\n# second-person feminine plural past active of اِكْمَدَّ (ikmadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["ikmadadtunna", "ikmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اكمددن",
+      "tur": "verb",
+      "baslik": "اكمددن (form IX)\n# اِكْمَدَدْنَ (ikmadadna) /ik.ma.dad.na/: third-person feminine plural past active of اِكْمَدَّ (ikmadda)\n# اِكْمَدِدْنَ (ikmadidna) /ik.ma.did.na/: second-person feminine plural imperative of اِكْمَدَّ (ikmadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["ikmadadna", "ikmadda", "ikmadidna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اكمدوا",
+      "tur": "verb",
+      "baslik": "اِكْمَدُّوا • (ikmaddū) (form IX) /ik.mad.duː/\n# inflection of اِكْمَدَّ (ikmadda):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["ikmaddū", "ikmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أكمد",
+      "tur": "verb",
+      "baslik": "أكمد (form IX)\n# أَكْمَدُّ (ʔakmaddu) /ʔak.mad.du/: first-person singular non-past active indicative of اِكْمَدَّ (ikmadda)\n# أَكْمَدَّ (ʔakmadda) /ʔak.mad.da/: first-person singular non-past active subjunctive/jussive of اِكْمَدَّ (ikmadda)\n# أَكْمَدِّ (ʔakmaddi) /ʔak.mad.di/: first-person singular non-past active jussive of اِكْمَدَّ (ikmadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["ʔakmaddu", "ikmadda", "ʔakmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يكمد",
+      "tur": "verb",
+      "baslik": "يكمد (form IX)\n# يَكْمَدُّ (yakmaddu) /jak.mad.du/: third-person masculine singular non-past active indicative of اِكْمَدَّ (ikmadda)\n# يَكْمَدَّ (yakmadda) /jak.mad.da/: third-person masculine singular non-past active subjunctive/jussive of اِكْمَدَّ (ikmadda)\n# يَكْمَدِّ (yakmaddi) /jak.mad.di/: third-person masculine singular non-past active jussive of اِكْمَدَّ (ikmadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["yakmaddu", "ikmadda", "yakmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكمدين",
+      "tur": "verb",
+      "baslik": "تَكْمَدِّينَ • (takmaddīna) (form IX) /tak.mad.diː.na/\n# second-person feminine singular non-past active indicative of اِكْمَدَّ (ikmadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["takmaddīna", "ikmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكمد",
+      "tur": "verb",
+      "baslik": "تكمد (form IX)\n# تَكْمَدُّ (takmaddu) /tak.mad.du/: inflection of اِكْمَدَّ (ikmadda):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَكْمَدَّ (takmadda) /tak.mad.da/: inflection of اِكْمَدَّ (ikmadda):\n## second-person masculine singular non-past active subjunctive/jussive\n## third-person feminine singular non-past ac",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["takmaddu", "ikmadda", "takmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يكمدان",
+      "tur": "verb",
+      "baslik": "يَكْمَدَّانِ • (yakmaddāni) (form IX) /jak.mad.daː.ni/\n# third-person masculine dual non-past active indicative of اِكْمَدَّ (ikmadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["yakmaddāni", "ikmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكمدان",
+      "tur": "verb",
+      "baslik": "تَكْمَدَّانِ • (takmaddāni) (form IX) /tak.mad.daː.ni/\n# inflection of اِكْمَدَّ (ikmadda):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["takmaddāni", "ikmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نكمد",
+      "tur": "verb",
+      "baslik": "نكمد (form IX)\n# نَكْمَدُّ (nakmaddu) /nak.mad.du/: first-person plural non-past active indicative of اِكْمَدَّ (ikmadda)\n# نَكْمَدَّ (nakmadda) /nak.mad.da/: first-person plural non-past active subjunctive/jussive of اِكْمَدَّ (ikmadda)\n# نَكْمَدِّ (nakmaddi) /nak.mad.di/: first-person plural non-past active jussive of اِكْمَدَّ (ikmadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["nakmaddu", "ikmadda", "nakmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يكمدون",
+      "tur": "verb",
+      "baslik": "يَكْمَدُّونَ • (yakmaddūna) (form IX) /jak.mad.duː.na/\n# third-person masculine plural non-past active indicative of اِكْمَدَّ (ikmadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["yakmaddūna", "ikmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكمدون",
+      "tur": "verb",
+      "baslik": "تَكْمَدُّونَ • (takmaddūna) (form IX) /tak.mad.duː.na/\n# second-person masculine plural non-past active indicative of اِكْمَدَّ (ikmadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["takmaddūna", "ikmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكمددن",
+      "tur": "verb",
+      "baslik": "تَكْمَدِدْنَ • (takmadidna) (form IX) /tak.ma.did.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِكْمَدَّ (ikmadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["takmadidna", "ikmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكمدي",
+      "tur": "verb",
+      "baslik": "تَكْمَدِّي • (takmaddī) (form IX) /tak.mad.diː/\n# second-person feminine singular non-past active subjunctive/jussive of اِكْمَدَّ (ikmadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["takmaddī", "ikmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يكمددن",
+      "tur": "verb",
+      "baslik": "يَكْمَدِدْنَ • (yakmadidna) (form IX) /jak.ma.did.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِكْمَدَّ (ikmadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["yakmadidna", "ikmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكمدا",
+      "tur": "verb",
+      "baslik": "تَكْمَدَّا • (takmaddā) (form IX) /tak.mad.daː/\n# inflection of اِكْمَدَّ (ikmadda):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["takmaddā", "ikmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكمدوا",
+      "tur": "verb",
+      "baslik": "تَكْمَدُّوا • (takmaddū) (form IX) /tak.mad.duː/\n# second-person masculine plural non-past active subjunctive/jussive of اِكْمَدَّ (ikmadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["takmaddū", "ikmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يكمدا",
+      "tur": "verb",
+      "baslik": "يَكْمَدَّا • (yakmaddā) (form IX) /jak.mad.daː/\n# third-person masculine dual non-past active subjunctive/jussive of اِكْمَدَّ (ikmadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["yakmaddā", "ikmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أكمدد",
+      "tur": "verb",
+      "baslik": "أَكْمَدِدْ • (ʔakmadid) (form IX) /ʔak.ma.did/\n# first-person singular non-past active jussive of اِكْمَدَّ (ikmadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["ʔakmadid", "ikmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يكمدوا",
+      "tur": "verb",
+      "baslik": "يَكْمَدُّوا • (yakmaddū) (form IX) /jak.mad.duː/\n# third-person masculine plural non-past active subjunctive/jussive of اِكْمَدَّ (ikmadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["yakmaddū", "ikmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكمدد",
+      "tur": "verb",
+      "baslik": "تَكْمَدِدْ • (takmadid) (form IX) /tak.ma.did/\n# inflection of اِكْمَدَّ (ikmadda):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["takmadid", "ikmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نكمدد",
+      "tur": "verb",
+      "baslik": "نَكْمَدِدْ • (nakmadid) (form IX) /nak.ma.did/\n# first-person plural non-past active jussive of اِكْمَدَّ (ikmadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["nakmadid", "ikmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يكمدد",
+      "tur": "verb",
+      "baslik": "يَكْمَدِدْ • (yakmadid) (form IX) /jak.ma.did/\n# third-person masculine singular non-past active jussive of اِكْمَدَّ (ikmadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["yakmadid", "ikmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اكمدي",
+      "tur": "verb",
+      "baslik": "اِكْمَدِّي • (ikmaddī) (form IX) /ik.mad.diː/\n# second-person feminine singular imperative of اِكْمَدَّ (ikmadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["ikmaddī", "ikmadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اكمدد",
+      "tur": "verb",
+      "baslik": "اِكْمَدِدْ • (ikmadid) (form IX) /ik.ma.did/\n# second-person masculine singular imperative of اِكْمَدَّ (ikmadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["ikmadid", "ikmadda"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "اكمد", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

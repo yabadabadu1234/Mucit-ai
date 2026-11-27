@@ -1,461 +1,334 @@
 {
   "kok": "كال",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "كال", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أكل",
-        "u": "أكل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أكل (form I)\n# أَكِلْ (ʔakil) /ʔa.kil/: first-person singular non-past active jussive of كَالَ (kāla)\n# أُكَلْ (ʔukal) /ʔu.kal/: first-person singular non-past passive jussive of كَالَ (kāla)",
-        "tag": ["form-i", "no-gloss", "transitive"],
-        "r": ["ʔakil", "kāla", "ʔukal"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "كل",
-        "u": "كل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "كِلْ • (kil) (form I) /kil/\n# second-person masculine singular imperative of كَالَ (kāla)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kil", "kāla"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "كلن",
-        "u": "كلن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "كِلْنَ • (kilna) (form I) /kil.na/\n# inflection of كَالَ (kāla):\n## third-person feminine plural past active/passive\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kilna", "kāla"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "أكيل",
-        "u": "أكيل",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أكيل (form I)\n# أَكِيلُ (ʔakīlu) /ʔa.kiː.lu/: first-person singular non-past active indicative of كَالَ (kāla)\n# أَكِيلَ (ʔakīla) /ʔa.kiː.la/: first-person singular non-past active subjunctive of كَالَ (kāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔakīlu", "kāla", "ʔakīla"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "كالا",
-        "u": "كالا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كَالَا • (kālā) (form I) /kaː.laː/\n# third-person masculine dual past active of كَالَ (kāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kālā", "kāla"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "نكل",
-        "u": "نكل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نكل (form I)\n# نَكِلْ (nakil) /na.kil/: first-person plural non-past active jussive of كَالَ (kāla)\n# نُكَلْ (nukal) /nu.kal/: first-person plural non-past passive jussive of كَالَ (kāla)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nakil", "kāla", "nukal"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "تكل",
-        "u": "تكل",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تكل (form I)\n# تَكِلْ (takil) /ta.kil/: inflection of كَالَ (kāla):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُكَلْ (tukal) /tu.kal/: inflection of كَالَ (kāla):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takil", "kāla", "tukal"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "يكل",
-        "u": "يكل",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يكل (form I)\n# يَكِلْ (yakil) /ja.kil/: third-person masculine singular non-past active jussive of كَالَ (kāla)\n# يُكَلْ (yukal) /ju.kal/: third-person masculine singular non-past passive jussive of كَالَ (kāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yakil", "kāla", "yukal"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "كلت",
-        "u": "كلت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كلت (form I)\n# كِلْتُ (kiltu) /kil.tu/: first-person singular past active/passive of كَالَ (kāla)\n# كِلْتَ (kilta) /kil.ta/: second-person masculine singular past active/passive of كَالَ (kāla)\n# كِلْتِ (kilti) /kil.ti/: second-person feminine singular past active/passive of كَالَ (kāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kiltu", "kāla", "kilta"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "كالت",
-        "u": "كالت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كَالَتْ • (kālat) (form I) /kaː.lat/\n# third-person feminine singular past active of كَالَ (kāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kālat", "kāla"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "كلتما",
-        "u": "كلتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كِلْتُمَا • (kiltumā) (form I) /kil.tu.maː/\n# second-person dual past active/passive of كَالَ (kāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kiltumā", "kāla"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "كلتم",
-        "u": "كلتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كِلْتُمْ • (kiltum) (form I) /kil.tum/\n# second-person masculine plural past active/passive of كَالَ (kāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kiltum", "kāla"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "كلتن",
-        "u": "كلتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كِلْتُنَّ • (kiltunna) (form I) /kil.tun.na/\n# second-person feminine plural past active/passive of كَالَ (kāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kiltunna", "kāla"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "كالتا",
-        "u": "كالتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كَالَتَا • (kālatā) (form I) /kaː.la.taː/\n# third-person feminine dual past active of كَالَ (kāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kālatā", "kāla"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "تكيل",
-        "u": "تكيل",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تكيل (form I)\n# تَكِيلُ (takīlu) /ta.kiː.lu/: inflection of كَالَ (kāla):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَكِيلَ (takīla) /ta.kiː.la/: inflection of كَالَ (kāla):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takīlu", "kāla", "takīla"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "كالوا",
-        "u": "كالوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كَالُوا • (kālū) (form I) /kaː.luː/\n# third-person masculine plural past active of كَالَ (kāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kālū", "kāla"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "كلنا",
-        "u": "كلنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كِلْنَا • (kilnā) (form I) /kil.naː/\n# first-person plural past active/passive of كَالَ (kāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kilnā", "kāla"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "تكيلين",
-        "u": "تكيلين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَكِيلِينَ • (takīlīna) (form I) /ta.kiː.liː.na/\n# second-person feminine singular non-past active indicative of كَالَ (kāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takīlīna", "kāla"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "تكلن",
-        "u": "تكلن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تكلن (form I)\n# تَكِلْنَ (takilna) /ta.kil.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of كَالَ (kāla)\n# تُكَلْنَ (tukalna) /tu.kal.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of كَالَ (kāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takilna", "kāla", "tukalna"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "يكيلان",
-        "u": "يكيلان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَكِيلَانِ • (yakīlāni) (form I) /ja.kiː.laː.ni/\n# third-person masculine dual non-past active indicative of كَالَ (kāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yakīlāni", "kāla"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "يكيل",
-        "u": "يكيل",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يكيل (form I)\n# يَكِيلُ (yakīlu) /ja.kiː.lu/: third-person masculine singular non-past active indicative of كَالَ (kāla)\n# يَكِيلَ (yakīla) /ja.kiː.la/: third-person masculine singular non-past active subjunctive of كَالَ (kāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yakīlu", "kāla", "yakīla"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "تكيلان",
-        "u": "تكيلان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَكِيلَانِ • (takīlāni) (form I) /ta.kiː.laː.ni/\n# inflection of كَالَ (kāla):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takīlāni", "kāla"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "يكيلون",
-        "u": "يكيلون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَكِيلُونَ • (yakīlūna) (form I) /ja.kiː.luː.na/\n# third-person masculine plural non-past active indicative of كَالَ (kāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yakīlūna", "kāla"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "تكيلي",
-        "u": "تكيلي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَكِيلِي • (takīlī) (form I) /ta.kiː.liː/\n# second-person feminine singular non-past active subjunctive/jussive of كَالَ (kāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takīlī", "kāla"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "نكيل",
-        "u": "نكيل",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نكيل (form I)\n# نَكِيلُ (nakīlu) /na.kiː.lu/: first-person plural non-past active indicative of كَالَ (kāla)\n# نَكِيلَ (nakīla) /na.kiː.la/: first-person plural non-past active subjunctive of كَالَ (kāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nakīlu", "kāla", "nakīla"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "تكيلون",
-        "u": "تكيلون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَكِيلُونَ • (takīlūna) (form I) /ta.kiː.luː.na/\n# second-person masculine plural non-past active indicative of كَالَ (kāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takīlūna", "kāla"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "يكلن",
-        "u": "يكلن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يكلن (form I)\n# يَكِلْنَ (yakilna) /ja.kil.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of كَالَ (kāla)\n# يُكَلْنَ (yukalna) /ju.kal.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of كَالَ (kāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yakilna", "kāla", "yukalna"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "تكيلا",
-        "u": "تكيلا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَكِيلَا • (takīlā) (form I) /ta.kiː.laː/\n# inflection of كَالَ (kāla):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takīlā", "kāla"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "يكيلا",
-        "u": "يكيلا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَكِيلَا • (yakīlā) (form I) /ja.kiː.laː/\n# third-person masculine dual non-past active subjunctive/jussive of كَالَ (kāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yakīlā", "kāla"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "يكيلوا",
-        "u": "يكيلوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَكِيلُوا • (yakīlū) (form I) /ja.kiː.luː/\n# third-person masculine plural non-past active subjunctive/jussive of كَالَ (kāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yakīlū", "kāla"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "كيلي",
-        "u": "كيلي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "كِيلِي • (kīlī) (form I) /kiː.liː/\n# second-person feminine singular imperative of كَالَ (kāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kīlī", "kāla"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "كيلوا",
-        "u": "كيلوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "كِيلُوا • (kīlū) (form I) /kiː.luː/\n# inflection of كَالَ (kāla):\n## third-person masculine plural past passive\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kīlū", "kāla"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "تكيلوا",
-        "u": "تكيلوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَكِيلُوا • (takīlū) (form I) /ta.kiː.luː/\n# second-person masculine plural non-past active subjunctive/jussive of كَالَ (kāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takīlū", "kāla"],
-        "k": "كال",
-        "yol": "kök"
-      },
-      {
-        "w": "كيلا",
-        "u": "كيلا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "كِيلَا • (kīlā) (form I) /kiː.laː/\n# inflection of كَالَ (kāla):\n## third-person masculine dual past passive\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kīlā", "kāla"],
-        "k": "كال",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "كل",
+  "ses": {
     "harf": "ك",
+    "fasil": "كل",
     "mahrec": "lehaviyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "أكل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أكل (form I)\n# أَكِلْ (ʔakil) /ʔa.kil/: first-person singular non-past active jussive of كَالَ (kāla)\n# أُكَلْ (ʔukal) /ʔu.kal/: first-person singular non-past passive jussive of كَالَ (kāla)",
+      "etiket": ["form-i", "no-gloss", "transitive"],
+      "okunus": ["ʔakil", "kāla", "ʔukal"]
+    },
+    {
+      "madde": "كل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "كِلْ • (kil) (form I) /kil/\n# second-person masculine singular imperative of كَالَ (kāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kil", "kāla"]
+    },
+    {
+      "madde": "كلن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "كِلْنَ • (kilna) (form I) /kil.na/\n# inflection of كَالَ (kāla):\n## third-person feminine plural past active/passive\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kilna", "kāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أكيل",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أكيل (form I)\n# أَكِيلُ (ʔakīlu) /ʔa.kiː.lu/: first-person singular non-past active indicative of كَالَ (kāla)\n# أَكِيلَ (ʔakīla) /ʔa.kiː.la/: first-person singular non-past active subjunctive of كَالَ (kāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔakīlu", "kāla", "ʔakīla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "كالا",
+      "tur": "verb",
+      "baslik": "كَالَا • (kālā) (form I) /kaː.laː/\n# third-person masculine dual past active of كَالَ (kāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kālā", "kāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نكل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نكل (form I)\n# نَكِلْ (nakil) /na.kil/: first-person plural non-past active jussive of كَالَ (kāla)\n# نُكَلْ (nukal) /nu.kal/: first-person plural non-past passive jussive of كَالَ (kāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nakil", "kāla", "nukal"]
+    },
+    {
+      "madde": "تكل",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تكل (form I)\n# تَكِلْ (takil) /ta.kil/: inflection of كَالَ (kāla):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُكَلْ (tukal) /tu.kal/: inflection of كَالَ (kāla):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takil", "kāla", "tukal"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يكل",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يكل (form I)\n# يَكِلْ (yakil) /ja.kil/: third-person masculine singular non-past active jussive of كَالَ (kāla)\n# يُكَلْ (yukal) /ju.kal/: third-person masculine singular non-past passive jussive of كَالَ (kāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yakil", "kāla", "yukal"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "كلت",
+      "tur": "verb",
+      "baslik": "كلت (form I)\n# كِلْتُ (kiltu) /kil.tu/: first-person singular past active/passive of كَالَ (kāla)\n# كِلْتَ (kilta) /kil.ta/: second-person masculine singular past active/passive of كَالَ (kāla)\n# كِلْتِ (kilti) /kil.ti/: second-person feminine singular past active/passive of كَالَ (kāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kiltu", "kāla", "kilta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "كالت",
+      "tur": "verb",
+      "baslik": "كَالَتْ • (kālat) (form I) /kaː.lat/\n# third-person feminine singular past active of كَالَ (kāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kālat", "kāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "كلتما",
+      "tur": "verb",
+      "baslik": "كِلْتُمَا • (kiltumā) (form I) /kil.tu.maː/\n# second-person dual past active/passive of كَالَ (kāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kiltumā", "kāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "كلتم",
+      "tur": "verb",
+      "baslik": "كِلْتُمْ • (kiltum) (form I) /kil.tum/\n# second-person masculine plural past active/passive of كَالَ (kāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kiltum", "kāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "كلتن",
+      "tur": "verb",
+      "baslik": "كِلْتُنَّ • (kiltunna) (form I) /kil.tun.na/\n# second-person feminine plural past active/passive of كَالَ (kāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kiltunna", "kāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "كالتا",
+      "tur": "verb",
+      "baslik": "كَالَتَا • (kālatā) (form I) /kaː.la.taː/\n# third-person feminine dual past active of كَالَ (kāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kālatā", "kāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكيل",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تكيل (form I)\n# تَكِيلُ (takīlu) /ta.kiː.lu/: inflection of كَالَ (kāla):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَكِيلَ (takīla) /ta.kiː.la/: inflection of كَالَ (kāla):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takīlu", "kāla", "takīla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "كالوا",
+      "tur": "verb",
+      "baslik": "كَالُوا • (kālū) (form I) /kaː.luː/\n# third-person masculine plural past active of كَالَ (kāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kālū", "kāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "كلنا",
+      "tur": "verb",
+      "baslik": "كِلْنَا • (kilnā) (form I) /kil.naː/\n# first-person plural past active/passive of كَالَ (kāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kilnā", "kāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكيلين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَكِيلِينَ • (takīlīna) (form I) /ta.kiː.liː.na/\n# second-person feminine singular non-past active indicative of كَالَ (kāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takīlīna", "kāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكلن",
+      "tur": "verb",
+      "baslik": "تكلن (form I)\n# تَكِلْنَ (takilna) /ta.kil.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of كَالَ (kāla)\n# تُكَلْنَ (tukalna) /tu.kal.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of كَالَ (kāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takilna", "kāla", "tukalna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يكيلان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَكِيلَانِ • (yakīlāni) (form I) /ja.kiː.laː.ni/\n# third-person masculine dual non-past active indicative of كَالَ (kāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yakīlāni", "kāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يكيل",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يكيل (form I)\n# يَكِيلُ (yakīlu) /ja.kiː.lu/: third-person masculine singular non-past active indicative of كَالَ (kāla)\n# يَكِيلَ (yakīla) /ja.kiː.la/: third-person masculine singular non-past active subjunctive of كَالَ (kāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yakīlu", "kāla", "yakīla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكيلان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَكِيلَانِ • (takīlāni) (form I) /ta.kiː.laː.ni/\n# inflection of كَالَ (kāla):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takīlāni", "kāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يكيلون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَكِيلُونَ • (yakīlūna) (form I) /ja.kiː.luː.na/\n# third-person masculine plural non-past active indicative of كَالَ (kāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yakīlūna", "kāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكيلي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَكِيلِي • (takīlī) (form I) /ta.kiː.liː/\n# second-person feminine singular non-past active subjunctive/jussive of كَالَ (kāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takīlī", "kāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نكيل",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نكيل (form I)\n# نَكِيلُ (nakīlu) /na.kiː.lu/: first-person plural non-past active indicative of كَالَ (kāla)\n# نَكِيلَ (nakīla) /na.kiː.la/: first-person plural non-past active subjunctive of كَالَ (kāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nakīlu", "kāla", "nakīla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكيلون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَكِيلُونَ • (takīlūna) (form I) /ta.kiː.luː.na/\n# second-person masculine plural non-past active indicative of كَالَ (kāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takīlūna", "kāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يكلن",
+      "tur": "verb",
+      "baslik": "يكلن (form I)\n# يَكِلْنَ (yakilna) /ja.kil.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of كَالَ (kāla)\n# يُكَلْنَ (yukalna) /ju.kal.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of كَالَ (kāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yakilna", "kāla", "yukalna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكيلا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَكِيلَا • (takīlā) (form I) /ta.kiː.laː/\n# inflection of كَالَ (kāla):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takīlā", "kāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يكيلا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَكِيلَا • (yakīlā) (form I) /ja.kiː.laː/\n# third-person masculine dual non-past active subjunctive/jussive of كَالَ (kāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yakīlā", "kāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يكيلوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَكِيلُوا • (yakīlū) (form I) /ja.kiː.luː/\n# third-person masculine plural non-past active subjunctive/jussive of كَالَ (kāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yakīlū", "kāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "كيلي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "كِيلِي • (kīlī) (form I) /kiː.liː/\n# second-person feminine singular imperative of كَالَ (kāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kīlī", "kāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "كيلوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "كِيلُوا • (kīlū) (form I) /kiː.luː/\n# inflection of كَالَ (kāla):\n## third-person masculine plural past passive\n## second-person masculine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kīlū", "kāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تكيلوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَكِيلُوا • (takīlū) (form I) /ta.kiː.luː/\n# second-person masculine plural non-past active subjunctive/jussive of كَالَ (kāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takīlū", "kāla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "كيلا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "كِيلَا • (kīlā) (form I) /kiː.laː/\n# inflection of كَالَ (kāla):\n## third-person masculine dual past passive\n## second-person dual imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kīlā", "kāla"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "كال", "r7"]
+  ],
+  "mana": {
     "ince": "substance.n.07",
     "orta": "noun.food",
     "ust": "canlı ve beden",
@@ -463,16 +336,11 @@
     "dayanak_tanim": "a stock or supply of foods",
     "synset_sayisi": 12
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "bodily_process.n.01",
     "content.n.05",
     "corrode.v.01",
@@ -485,12 +353,10 @@
     "tire.v.02",
     "whole.n.02"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

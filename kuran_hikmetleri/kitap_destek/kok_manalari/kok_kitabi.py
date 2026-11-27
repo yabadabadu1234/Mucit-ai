@@ -13,6 +13,8 @@ import mushaf_dizgi as MD
 import lugat_sayfa as LS
 import edat_manalari as EM
 import morfo as MF
+sys.path.insert(0, str(HERE.parent / 'turetme_motoru'))
+import mesmu as MS
 CIKTI = HERE / 'kok_kitabi'
 YAZI = HERE / 'yazi'
 SERIF = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf', 100)
@@ -398,7 +400,7 @@ def kok_json(k):
 
 def mustak_satirlari(k):
     """Sabit sıralı çeşit listesi: her çeşit için [(biçim, ‘●’ Kur’ân’da | ‘○’ kıyâsî, Türkçe, ilk yer)]; olmayan çeşit boş liste."""
-    d = kok_json(k); G = d['mustak'] if d and d.get('mustak') else {}
+    d = kok_json(k); G = MS.mustak_tam(d) if d else {}
     G = sorted(G.items(), key=lambda kv: ('bâb' in kv[0] or 'Rubâ' in kv[0], list(G).index(kv[0])))      # sülâsî önce
     kur = KOK_ISIM.get(k, {}); sat = [[] for _ in CESIT_AD]
     motor = collections.defaultdict(list)                       # iskelet -> [(çeşit indeksi, biçim, Türkçe)]

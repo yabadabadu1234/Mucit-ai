@@ -1,626 +1,489 @@
 {
   "kok": "ءماط",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءماط", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "نمط",
-        "u": "نمط",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نمط (form IV)\n# نُمِطْ (numiṭ) /nu.mitˤ/: first-person plural non-past active jussive of أَمَاطَ (ʔamāṭa)\n# نُمَطْ (numaṭ) /nu.matˤ/: first-person plural non-past passive jussive of أَمَاطَ (ʔamāṭa)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["numiṭ", "ʔamāṭa", "numaṭ"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "أنماط",
-        "u": "أنماط",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "أَنْمَاط • (ʔanmāṭ) m pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of نَمَط (namaṭ)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["نَمَط"],
-        "r": ["ʔanmāṭ"],
-        "ipa": ["/ʔan.maːtˤ/"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "أماطت",
-        "u": "أماطت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَمَاطَتْ • (ʔamāṭat) (form IV) /ʔa.maː.tˤat/\n# third-person feminine singular past active of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔamāṭat", "ʔamāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "أمطت",
-        "u": "أمطت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أمطت (form IV)\n# أَمَطْتُ (ʔamaṭtu) /ʔa.matˤ.tu/: first-person singular past active of أَمَاطَ (ʔamāṭa)\n# أَمَطْتَ (ʔamaṭta) /ʔa.matˤ.ta/: second-person masculine singular past active of أَمَاطَ (ʔamāṭa)\n# أَمَطْتِ (ʔamaṭti) /ʔa.matˤ.ti/: second-person feminine singular past active of أَمَاطَ (ʔamāṭa)\n# أُمِطْتُ (ʔumiṭtu) /ʔu.mitˤ.tu/: first-person singular past passive of أَمَاطَ (ʔamāṭa)\n# أُمِط",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔamaṭtu", "ʔamāṭa", "ʔamaṭta"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "أمطتما",
-        "u": "أمطتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أمطتما (form IV)\n# أَمَطْتُمَا (ʔamaṭtumā) /ʔa.matˤ.tu.maː/: second-person dual past active of أَمَاطَ (ʔamāṭa)\n# أُمِطْتُمَا (ʔumiṭtumā) /ʔu.mitˤ.tu.maː/: second-person dual past passive of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔamaṭtumā", "ʔamāṭa", "ʔumiṭtumā"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "أماطا",
-        "u": "أماطا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَمَاطَا • (ʔamāṭā) (form IV) /ʔa.maː.tˤaː/\n# third-person masculine dual past active of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔamāṭā", "ʔamāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "أماطتا",
-        "u": "أماطتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَمَاطَتَا • (ʔamāṭatā) (form IV) /ʔa.maː.tˤa.taː/\n# third-person feminine dual past active of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔamāṭatā", "ʔamāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "أمطنا",
-        "u": "أمطنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أمطنا (form IV)\n# أَمَطْنَا (ʔamaṭnā) /ʔa.matˤ.naː/: first-person plural past active of أَمَاطَ (ʔamāṭa)\n# أُمِطْنَا (ʔumiṭnā) /ʔu.mitˤ.naː/: first-person plural past passive of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔamaṭnā", "ʔamāṭa", "ʔumiṭnā"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "أمطتن",
-        "u": "أمطتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أمطتن (form IV)\n# أَمَطْتُنَّ (ʔamaṭtunna) /ʔa.matˤ.tun.na/: second-person feminine plural past active of أَمَاطَ (ʔamāṭa)\n# أُمِطْتُنَّ (ʔumiṭtunna) /ʔu.mitˤ.tun.na/: second-person feminine plural past passive of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔamaṭtunna", "ʔamāṭa", "ʔumiṭtunna"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "أمطتم",
-        "u": "أمطتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أمطتم (form IV)\n# أَمَطْتُمْ (ʔamaṭtum) /ʔa.matˤ.tum/: second-person masculine plural past active of أَمَاطَ (ʔamāṭa)\n# أُمِطْتُمْ (ʔumiṭtum) /ʔu.mitˤ.tum/: second-person masculine plural past passive of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔamaṭtum", "ʔamāṭa", "ʔumiṭtum"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "أمطن",
-        "u": "أمطن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أمطن (form IV)\n# أَمَطْنَ (ʔamaṭna) /ʔa.matˤ.na/: third-person feminine plural past active of أَمَاطَ (ʔamāṭa)\n# أُمِطْنَ (ʔumiṭna) /ʔu.mitˤ.na/: third-person feminine plural past passive of أَمَاطَ (ʔamāṭa)\n# أَمِطْنَ (ʔamiṭna) /ʔa.mitˤ.na/: second-person feminine plural imperative of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔamaṭna", "ʔamāṭa", "ʔumiṭna"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "أماطوا",
-        "u": "أماطوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَمَاطُوا • (ʔamāṭū) (form IV) /ʔa.maː.tˤuː/\n# third-person masculine plural past active of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔamāṭū", "ʔamāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "أميط",
-        "u": "أميط",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أميط (form IV)\n# أُمِيطَ (ʔumīṭa) /ʔu.miː.tˤa/: inflection of أَمَاطَ (ʔamāṭa):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُمِيطُ (ʔumīṭu) /ʔu.miː.tˤu/: first-person singular non-past active indicative of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔumīṭa", "ʔamāṭa", "ʔumīṭu"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "أميطت",
-        "u": "أميطت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُمِيطَتْ • (ʔumīṭat) (form IV) /ʔu.miː.tˤat/\n# third-person feminine singular past passive of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔumīṭat", "ʔamāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "أميطا",
-        "u": "أميطا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أميطا (form IV)\n# أُمِيطَا (ʔumīṭā) /ʔu.miː.tˤaː/: third-person masculine dual past passive of أَمَاطَ (ʔamāṭa)\n# أَمِيطَا (ʔamīṭā) /ʔa.miː.tˤaː/: second-person dual imperative of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔumīṭā", "ʔamāṭa", "ʔamīṭā"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "أميطوا",
-        "u": "أميطوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أميطوا (form IV)\n# أُمِيطُوا (ʔumīṭū) /ʔu.miː.tˤuː/: third-person masculine plural past passive of أَمَاطَ (ʔamāṭa)\n# أَمِيطُوا (ʔamīṭū) /ʔa.miː.tˤuː/: second-person masculine plural imperative of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔumīṭū", "ʔamāṭa", "ʔamīṭū"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "تميط",
-        "u": "تميط",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تميط (form IV)\n# تُمِيطُ (tumīṭu) /tu.miː.tˤu/: inflection of أَمَاطَ (ʔamāṭa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُمِيطَ (tumīṭa) /tu.miː.tˤa/: inflection of أَمَاطَ (ʔamāṭa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tumīṭu", "ʔamāṭa", "tumīṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "أميطتا",
-        "u": "أميطتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُمِيطَتَا • (ʔumīṭatā) (form IV) /ʔu.miː.tˤa.taː/\n# third-person feminine dual past passive of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔumīṭatā", "ʔamāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "يميطان",
-        "u": "يميطان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُمِيطَانِ • (yumīṭāni) (form IV) /ju.miː.tˤaː.ni/\n# third-person masculine dual non-past active indicative of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yumīṭāni", "ʔamāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "تميطين",
-        "u": "تميطين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُمِيطِينَ • (tumīṭīna) (form IV) /tu.miː.tˤiː.na/\n# second-person feminine singular non-past active indicative of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tumīṭīna", "ʔamāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "يميط",
-        "u": "يميط",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يميط (form IV)\n# يُمِيطُ (yumīṭu) /ju.miː.tˤu/: third-person masculine singular non-past active indicative of أَمَاطَ (ʔamāṭa)\n# يُمِيطَ (yumīṭa) /ju.miː.tˤa/: third-person masculine singular non-past active subjunctive of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yumīṭu", "ʔamāṭa", "yumīṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "نميط",
-        "u": "نميط",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نميط (form IV)\n# نُمِيطُ (numīṭu) /nu.miː.tˤu/: first-person plural non-past active indicative of أَمَاطَ (ʔamāṭa)\n# نُمِيطَ (numīṭa) /nu.miː.tˤa/: first-person plural non-past active subjunctive of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["numīṭu", "ʔamāṭa", "numīṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "تميطون",
-        "u": "تميطون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُمِيطُونَ • (tumīṭūna) (form IV) /tu.miː.tˤuː.na/\n# second-person masculine plural non-past active indicative of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tumīṭūna", "ʔamāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "تميطان",
-        "u": "تميطان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُمِيطَانِ • (tumīṭāni) (form IV) /tu.miː.tˤaː.ni/\n# inflection of أَمَاطَ (ʔamāṭa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tumīṭāni", "ʔamāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "يميطون",
-        "u": "يميطون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُمِيطُونَ • (yumīṭūna) (form IV) /ju.miː.tˤuː.na/\n# third-person masculine plural non-past active indicative of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yumīṭūna", "ʔamāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "تمطن",
-        "u": "تمطن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تمطن (form IV)\n# تُمِطْنَ (tumiṭna) /tu.mitˤ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَمَاطَ (ʔamāṭa)\n# تُمَطْنَ (tumaṭna) /tu.matˤ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tumiṭna", "ʔamāṭa", "tumaṭna"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "يمطن",
-        "u": "يمطن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يمطن (form IV)\n# يُمِطْنَ (yumiṭna) /ju.mitˤ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَمَاطَ (ʔamāṭa)\n# يُمَطْنَ (yumaṭna) /ju.matˤ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yumiṭna", "ʔamāṭa", "yumaṭna"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "تماط",
-        "u": "تماط",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تماط (form IV)\n# تُمَاطُ (tumāṭu) /tu.maː.tˤu/: inflection of أَمَاطَ (ʔamāṭa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُمَاطَ (tumāṭa) /tu.maː.tˤa/: inflection of أَمَاطَ (ʔamāṭa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tumāṭu", "ʔamāṭa", "tumāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "تماطين",
-        "u": "تماطين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُمَاطِينَ • (tumāṭīna) (form IV) /tu.maː.tˤiː.na/\n# second-person feminine singular non-past passive indicative of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tumāṭīna", "ʔamāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "يماط",
-        "u": "يماط",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يماط (form IV)\n# يُمَاطُ (yumāṭu) /ju.maː.tˤu/: third-person masculine singular non-past passive indicative of أَمَاطَ (ʔamāṭa)\n# يُمَاطَ (yumāṭa) /ju.maː.tˤa/: third-person masculine singular non-past passive subjunctive of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yumāṭu", "ʔamāṭa", "yumāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "نماط",
-        "u": "نماط",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نماط (form IV)\n# نُمَاطُ (numāṭu) /nu.maː.tˤu/: first-person plural non-past passive indicative of أَمَاطَ (ʔamāṭa)\n# نُمَاطَ (numāṭa) /nu.maː.tˤa/: first-person plural non-past passive subjunctive of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["numāṭu", "ʔamāṭa", "numāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "تماطان",
-        "u": "تماطان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُمَاطَانِ • (tumāṭāni) (form IV) /tu.maː.tˤaː.ni/\n# inflection of أَمَاطَ (ʔamāṭa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tumāṭāni", "ʔamāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "يماطون",
-        "u": "يماطون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُمَاطُونَ • (yumāṭūna) (form IV) /ju.maː.tˤuː.na/\n# third-person masculine plural non-past passive indicative of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yumāṭūna", "ʔamāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "تميطا",
-        "u": "تميطا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُمِيطَا • (tumīṭā) (form IV) /tu.miː.tˤaː/\n# inflection of أَمَاطَ (ʔamāṭa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tumīṭā", "ʔamāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "تماطون",
-        "u": "تماطون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُمَاطُونَ • (tumāṭūna) (form IV) /tu.maː.tˤuː.na/\n# second-person masculine plural non-past passive indicative of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tumāṭūna", "ʔamāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "يماطان",
-        "u": "يماطان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُمَاطَانِ • (yumāṭāni) (form IV) /ju.maː.tˤaː.ni/\n# third-person masculine dual non-past passive indicative of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yumāṭāni", "ʔamāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "تميطي",
-        "u": "تميطي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُمِيطِي • (tumīṭī) (form IV) /tu.miː.tˤiː/\n# second-person feminine singular non-past active subjunctive/jussive of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tumīṭī", "ʔamāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "يميطوا",
-        "u": "يميطوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُمِيطُوا • (yumīṭū) (form IV) /ju.miː.tˤuː/\n# third-person masculine plural non-past active subjunctive/jussive of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yumīṭū", "ʔamāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "يميطا",
-        "u": "يميطا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُمِيطَا • (yumīṭā) (form IV) /ju.miː.tˤaː/\n# third-person masculine dual non-past active subjunctive/jussive of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yumīṭā", "ʔamāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "تماطي",
-        "u": "تماطي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُمَاطِي • (tumāṭī) (form IV) /tu.maː.tˤiː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tumāṭī", "ʔamāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "تماطوا",
-        "u": "تماطوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُمَاطُوا • (tumāṭū) (form IV) /tu.maː.tˤuː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tumāṭū", "ʔamāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "يماطا",
-        "u": "يماطا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُمَاطَا • (yumāṭā) (form IV) /ju.maː.tˤaː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yumāṭā", "ʔamāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "تماطا",
-        "u": "تماطا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُمَاطَا • (tumāṭā) (form IV) /tu.maː.tˤaː/\n# inflection of أَمَاطَ (ʔamāṭa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tumāṭā", "ʔamāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "يماطوا",
-        "u": "يماطوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُمَاطُوا • (yumāṭū) (form IV) /ju.maː.tˤuː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yumāṭū", "ʔamāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "تمط",
-        "u": "تمط",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تمط (form IV)\n# تُمِطْ (tumiṭ) /tu.mitˤ/: inflection of أَمَاطَ (ʔamāṭa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُمَطْ (tumaṭ) /tu.matˤ/: inflection of أَمَاطَ (ʔamāṭa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tumiṭ", "ʔamāṭa", "tumaṭ"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "أمط",
-        "u": "أمط",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أمط (form IV)\n# أُمِطْ (ʔumiṭ) /ʔu.mitˤ/: first-person singular non-past active jussive of أَمَاطَ (ʔamāṭa)\n# أُمَطْ (ʔumaṭ) /ʔu.matˤ/: first-person singular non-past passive jussive of أَمَاطَ (ʔamāṭa)\n# أَمِطْ (ʔamiṭ) /ʔa.mitˤ/: second-person masculine singular imperative of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔumiṭ", "ʔamāṭa", "ʔumaṭ"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "أميطي",
-        "u": "أميطي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَمِيطِي • (ʔamīṭī) (form IV) /ʔa.miː.tˤiː/\n# second-person feminine singular imperative of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔamīṭī", "ʔamāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "يمط",
-        "u": "يمط",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يمط (form IV)\n# يُمِطْ (yumiṭ) /ju.mitˤ/: third-person masculine singular non-past active jussive of أَمَاطَ (ʔamāṭa)\n# يُمَطْ (yumaṭ) /ju.matˤ/: third-person masculine singular non-past passive jussive of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yumiṭ", "ʔamāṭa", "yumaṭ"],
-        "k": "أماط",
-        "yol": "kök"
-      },
-      {
-        "w": "تميطوا",
-        "u": "تميطوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُمِيطُوا • (tumīṭū) (form IV) /tu.miː.tˤuː/\n# second-person masculine plural non-past active subjunctive/jussive of أَمَاطَ (ʔamāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tumīṭū", "ʔamāṭa"],
-        "k": "أماط",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "مط",
+  "ses": {
     "harf": "ء",
+    "fasil": "مط",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "نمط",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نمط (form IV)\n# نُمِطْ (numiṭ) /nu.mitˤ/: first-person plural non-past active jussive of أَمَاطَ (ʔamāṭa)\n# نُمَطْ (numaṭ) /nu.matˤ/: first-person plural non-past passive jussive of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["numiṭ", "ʔamāṭa", "numaṭ"],
+      "kok_yazilis": "أماط"
+    },
+    {
+      "madde": "أنماط",
+      "tur": "noun",
+      "baslik": "أَنْمَاط • (ʔanmāṭ) m pl",
+      "anlam": ["plural of نَمَط (namaṭ)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["نَمَط"],
+      "okunus": ["ʔanmāṭ"],
+      "ipa": ["/ʔan.maːtˤ/"],
+      "bag": "asıl madde",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أماطت",
+      "tur": "verb",
+      "baslik": "أَمَاطَتْ • (ʔamāṭat) (form IV) /ʔa.maː.tˤat/\n# third-person feminine singular past active of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔamāṭat", "ʔamāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أمطت",
+      "tur": "verb",
+      "baslik": "أمطت (form IV)\n# أَمَطْتُ (ʔamaṭtu) /ʔa.matˤ.tu/: first-person singular past active of أَمَاطَ (ʔamāṭa)\n# أَمَطْتَ (ʔamaṭta) /ʔa.matˤ.ta/: second-person masculine singular past active of أَمَاطَ (ʔamāṭa)\n# أَمَطْتِ (ʔamaṭti) /ʔa.matˤ.ti/: second-person feminine singular past active of أَمَاطَ (ʔamāṭa)\n# أُمِطْتُ (ʔumiṭtu) /ʔu.mitˤ.tu/: first-person singular past passive of أَمَاطَ (ʔamāṭa)\n# أُمِط",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔamaṭtu", "ʔamāṭa", "ʔamaṭta"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أمطتما",
+      "tur": "verb",
+      "baslik": "أمطتما (form IV)\n# أَمَطْتُمَا (ʔamaṭtumā) /ʔa.matˤ.tu.maː/: second-person dual past active of أَمَاطَ (ʔamāṭa)\n# أُمِطْتُمَا (ʔumiṭtumā) /ʔu.mitˤ.tu.maː/: second-person dual past passive of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔamaṭtumā", "ʔamāṭa", "ʔumiṭtumā"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أماطا",
+      "tur": "verb",
+      "baslik": "أَمَاطَا • (ʔamāṭā) (form IV) /ʔa.maː.tˤaː/\n# third-person masculine dual past active of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔamāṭā", "ʔamāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أماطتا",
+      "tur": "verb",
+      "baslik": "أَمَاطَتَا • (ʔamāṭatā) (form IV) /ʔa.maː.tˤa.taː/\n# third-person feminine dual past active of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔamāṭatā", "ʔamāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أمطنا",
+      "tur": "verb",
+      "baslik": "أمطنا (form IV)\n# أَمَطْنَا (ʔamaṭnā) /ʔa.matˤ.naː/: first-person plural past active of أَمَاطَ (ʔamāṭa)\n# أُمِطْنَا (ʔumiṭnā) /ʔu.mitˤ.naː/: first-person plural past passive of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔamaṭnā", "ʔamāṭa", "ʔumiṭnā"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أمطتن",
+      "tur": "verb",
+      "baslik": "أمطتن (form IV)\n# أَمَطْتُنَّ (ʔamaṭtunna) /ʔa.matˤ.tun.na/: second-person feminine plural past active of أَمَاطَ (ʔamāṭa)\n# أُمِطْتُنَّ (ʔumiṭtunna) /ʔu.mitˤ.tun.na/: second-person feminine plural past passive of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔamaṭtunna", "ʔamāṭa", "ʔumiṭtunna"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أمطتم",
+      "tur": "verb",
+      "baslik": "أمطتم (form IV)\n# أَمَطْتُمْ (ʔamaṭtum) /ʔa.matˤ.tum/: second-person masculine plural past active of أَمَاطَ (ʔamāṭa)\n# أُمِطْتُمْ (ʔumiṭtum) /ʔu.mitˤ.tum/: second-person masculine plural past passive of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔamaṭtum", "ʔamāṭa", "ʔumiṭtum"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أمطن",
+      "tur": "verb",
+      "baslik": "أمطن (form IV)\n# أَمَطْنَ (ʔamaṭna) /ʔa.matˤ.na/: third-person feminine plural past active of أَمَاطَ (ʔamāṭa)\n# أُمِطْنَ (ʔumiṭna) /ʔu.mitˤ.na/: third-person feminine plural past passive of أَمَاطَ (ʔamāṭa)\n# أَمِطْنَ (ʔamiṭna) /ʔa.mitˤ.na/: second-person feminine plural imperative of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔamaṭna", "ʔamāṭa", "ʔumiṭna"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أماطوا",
+      "tur": "verb",
+      "baslik": "أَمَاطُوا • (ʔamāṭū) (form IV) /ʔa.maː.tˤuː/\n# third-person masculine plural past active of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔamāṭū", "ʔamāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أميط",
+      "tur": "verb",
+      "baslik": "أميط (form IV)\n# أُمِيطَ (ʔumīṭa) /ʔu.miː.tˤa/: inflection of أَمَاطَ (ʔamāṭa):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُمِيطُ (ʔumīṭu) /ʔu.miː.tˤu/: first-person singular non-past active indicative of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔumīṭa", "ʔamāṭa", "ʔumīṭu"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أميطت",
+      "tur": "verb",
+      "baslik": "أُمِيطَتْ • (ʔumīṭat) (form IV) /ʔu.miː.tˤat/\n# third-person feminine singular past passive of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔumīṭat", "ʔamāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أميطا",
+      "tur": "verb",
+      "baslik": "أميطا (form IV)\n# أُمِيطَا (ʔumīṭā) /ʔu.miː.tˤaː/: third-person masculine dual past passive of أَمَاطَ (ʔamāṭa)\n# أَمِيطَا (ʔamīṭā) /ʔa.miː.tˤaː/: second-person dual imperative of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔumīṭā", "ʔamāṭa", "ʔamīṭā"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أميطوا",
+      "tur": "verb",
+      "baslik": "أميطوا (form IV)\n# أُمِيطُوا (ʔumīṭū) /ʔu.miː.tˤuː/: third-person masculine plural past passive of أَمَاطَ (ʔamāṭa)\n# أَمِيطُوا (ʔamīṭū) /ʔa.miː.tˤuː/: second-person masculine plural imperative of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔumīṭū", "ʔamāṭa", "ʔamīṭū"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تميط",
+      "tur": "verb",
+      "baslik": "تميط (form IV)\n# تُمِيطُ (tumīṭu) /tu.miː.tˤu/: inflection of أَمَاطَ (ʔamāṭa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُمِيطَ (tumīṭa) /tu.miː.tˤa/: inflection of أَمَاطَ (ʔamāṭa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tumīṭu", "ʔamāṭa", "tumīṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أميطتا",
+      "tur": "verb",
+      "baslik": "أُمِيطَتَا • (ʔumīṭatā) (form IV) /ʔu.miː.tˤa.taː/\n# third-person feminine dual past passive of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔumīṭatā", "ʔamāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يميطان",
+      "tur": "verb",
+      "baslik": "يُمِيطَانِ • (yumīṭāni) (form IV) /ju.miː.tˤaː.ni/\n# third-person masculine dual non-past active indicative of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yumīṭāni", "ʔamāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تميطين",
+      "tur": "verb",
+      "baslik": "تُمِيطِينَ • (tumīṭīna) (form IV) /tu.miː.tˤiː.na/\n# second-person feminine singular non-past active indicative of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tumīṭīna", "ʔamāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يميط",
+      "tur": "verb",
+      "baslik": "يميط (form IV)\n# يُمِيطُ (yumīṭu) /ju.miː.tˤu/: third-person masculine singular non-past active indicative of أَمَاطَ (ʔamāṭa)\n# يُمِيطَ (yumīṭa) /ju.miː.tˤa/: third-person masculine singular non-past active subjunctive of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yumīṭu", "ʔamāṭa", "yumīṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نميط",
+      "tur": "verb",
+      "baslik": "نميط (form IV)\n# نُمِيطُ (numīṭu) /nu.miː.tˤu/: first-person plural non-past active indicative of أَمَاطَ (ʔamāṭa)\n# نُمِيطَ (numīṭa) /nu.miː.tˤa/: first-person plural non-past active subjunctive of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["numīṭu", "ʔamāṭa", "numīṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تميطون",
+      "tur": "verb",
+      "baslik": "تُمِيطُونَ • (tumīṭūna) (form IV) /tu.miː.tˤuː.na/\n# second-person masculine plural non-past active indicative of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tumīṭūna", "ʔamāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تميطان",
+      "tur": "verb",
+      "baslik": "تُمِيطَانِ • (tumīṭāni) (form IV) /tu.miː.tˤaː.ni/\n# inflection of أَمَاطَ (ʔamāṭa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tumīṭāni", "ʔamāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يميطون",
+      "tur": "verb",
+      "baslik": "يُمِيطُونَ • (yumīṭūna) (form IV) /ju.miː.tˤuː.na/\n# third-person masculine plural non-past active indicative of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yumīṭūna", "ʔamāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمطن",
+      "tur": "verb",
+      "baslik": "تمطن (form IV)\n# تُمِطْنَ (tumiṭna) /tu.mitˤ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَمَاطَ (ʔamāṭa)\n# تُمَطْنَ (tumaṭna) /tu.matˤ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tumiṭna", "ʔamāṭa", "tumaṭna"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يمطن",
+      "tur": "verb",
+      "baslik": "يمطن (form IV)\n# يُمِطْنَ (yumiṭna) /ju.mitˤ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَمَاطَ (ʔamāṭa)\n# يُمَطْنَ (yumaṭna) /ju.matˤ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yumiṭna", "ʔamāṭa", "yumaṭna"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تماط",
+      "tur": "verb",
+      "baslik": "تماط (form IV)\n# تُمَاطُ (tumāṭu) /tu.maː.tˤu/: inflection of أَمَاطَ (ʔamāṭa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُمَاطَ (tumāṭa) /tu.maː.tˤa/: inflection of أَمَاطَ (ʔamāṭa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tumāṭu", "ʔamāṭa", "tumāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تماطين",
+      "tur": "verb",
+      "baslik": "تُمَاطِينَ • (tumāṭīna) (form IV) /tu.maː.tˤiː.na/\n# second-person feminine singular non-past passive indicative of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tumāṭīna", "ʔamāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يماط",
+      "tur": "verb",
+      "baslik": "يماط (form IV)\n# يُمَاطُ (yumāṭu) /ju.maː.tˤu/: third-person masculine singular non-past passive indicative of أَمَاطَ (ʔamāṭa)\n# يُمَاطَ (yumāṭa) /ju.maː.tˤa/: third-person masculine singular non-past passive subjunctive of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yumāṭu", "ʔamāṭa", "yumāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نماط",
+      "tur": "verb",
+      "baslik": "نماط (form IV)\n# نُمَاطُ (numāṭu) /nu.maː.tˤu/: first-person plural non-past passive indicative of أَمَاطَ (ʔamāṭa)\n# نُمَاطَ (numāṭa) /nu.maː.tˤa/: first-person plural non-past passive subjunctive of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["numāṭu", "ʔamāṭa", "numāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تماطان",
+      "tur": "verb",
+      "baslik": "تُمَاطَانِ • (tumāṭāni) (form IV) /tu.maː.tˤaː.ni/\n# inflection of أَمَاطَ (ʔamāṭa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tumāṭāni", "ʔamāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يماطون",
+      "tur": "verb",
+      "baslik": "يُمَاطُونَ • (yumāṭūna) (form IV) /ju.maː.tˤuː.na/\n# third-person masculine plural non-past passive indicative of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yumāṭūna", "ʔamāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تميطا",
+      "tur": "verb",
+      "baslik": "تُمِيطَا • (tumīṭā) (form IV) /tu.miː.tˤaː/\n# inflection of أَمَاطَ (ʔamāṭa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tumīṭā", "ʔamāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تماطون",
+      "tur": "verb",
+      "baslik": "تُمَاطُونَ • (tumāṭūna) (form IV) /tu.maː.tˤuː.na/\n# second-person masculine plural non-past passive indicative of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tumāṭūna", "ʔamāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يماطان",
+      "tur": "verb",
+      "baslik": "يُمَاطَانِ • (yumāṭāni) (form IV) /ju.maː.tˤaː.ni/\n# third-person masculine dual non-past passive indicative of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yumāṭāni", "ʔamāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تميطي",
+      "tur": "verb",
+      "baslik": "تُمِيطِي • (tumīṭī) (form IV) /tu.miː.tˤiː/\n# second-person feminine singular non-past active subjunctive/jussive of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tumīṭī", "ʔamāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يميطوا",
+      "tur": "verb",
+      "baslik": "يُمِيطُوا • (yumīṭū) (form IV) /ju.miː.tˤuː/\n# third-person masculine plural non-past active subjunctive/jussive of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yumīṭū", "ʔamāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يميطا",
+      "tur": "verb",
+      "baslik": "يُمِيطَا • (yumīṭā) (form IV) /ju.miː.tˤaː/\n# third-person masculine dual non-past active subjunctive/jussive of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yumīṭā", "ʔamāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تماطي",
+      "tur": "verb",
+      "baslik": "تُمَاطِي • (tumāṭī) (form IV) /tu.maː.tˤiː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tumāṭī", "ʔamāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تماطوا",
+      "tur": "verb",
+      "baslik": "تُمَاطُوا • (tumāṭū) (form IV) /tu.maː.tˤuː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tumāṭū", "ʔamāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يماطا",
+      "tur": "verb",
+      "baslik": "يُمَاطَا • (yumāṭā) (form IV) /ju.maː.tˤaː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yumāṭā", "ʔamāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تماطا",
+      "tur": "verb",
+      "baslik": "تُمَاطَا • (tumāṭā) (form IV) /tu.maː.tˤaː/\n# inflection of أَمَاطَ (ʔamāṭa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tumāṭā", "ʔamāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يماطوا",
+      "tur": "verb",
+      "baslik": "يُمَاطُوا • (yumāṭū) (form IV) /ju.maː.tˤuː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yumāṭū", "ʔamāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمط",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تمط (form IV)\n# تُمِطْ (tumiṭ) /tu.mitˤ/: inflection of أَمَاطَ (ʔamāṭa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُمَطْ (tumaṭ) /tu.matˤ/: inflection of أَمَاطَ (ʔamāṭa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tumiṭ", "ʔamāṭa", "tumaṭ"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أمط",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أمط (form IV)\n# أُمِطْ (ʔumiṭ) /ʔu.mitˤ/: first-person singular non-past active jussive of أَمَاطَ (ʔamāṭa)\n# أُمَطْ (ʔumaṭ) /ʔu.matˤ/: first-person singular non-past passive jussive of أَمَاطَ (ʔamāṭa)\n# أَمِطْ (ʔamiṭ) /ʔa.mitˤ/: second-person masculine singular imperative of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔumiṭ", "ʔamāṭa", "ʔumaṭ"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أميطي",
+      "tur": "verb",
+      "baslik": "أَمِيطِي • (ʔamīṭī) (form IV) /ʔa.miː.tˤiː/\n# second-person feminine singular imperative of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔamīṭī", "ʔamāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يمط",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يمط (form IV)\n# يُمِطْ (yumiṭ) /ju.mitˤ/: third-person masculine singular non-past active jussive of أَمَاطَ (ʔamāṭa)\n# يُمَطْ (yumaṭ) /ju.matˤ/: third-person masculine singular non-past passive jussive of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yumiṭ", "ʔamāṭa", "yumaṭ"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تميطوا",
+      "tur": "verb",
+      "baslik": "تُمِيطُوا • (tumīṭū) (form IV) /tu.miː.tˤuː/\n# second-person masculine plural non-past active subjunctive/jussive of أَمَاطَ (ʔamāṭa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tumīṭū", "ʔamāṭa"],
+      "kok_yazilis": "أماط",
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ءماط", "r6"]
+  ],
+  "mana": {
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
@@ -628,22 +491,15 @@
     "dayanak_tanim": "a customary way of operation or behavior",
     "synset_sayisi": 5
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["act.n.02", "content.n.05", "manner.n.01", "structure.n.03"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["act.n.02", "content.n.05", "manner.n.01", "structure.n.03"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

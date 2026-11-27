@@ -1,434 +1,303 @@
 {
   "kok": "احتد",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "احتد", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "احتدت",
-        "u": "احتدت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِحْتَدَّتْ • (iḥtaddat) (form VIII) /iħ.tad.dat/\n# third-person feminine singular past active of اِحْتَدَّ (iḥtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḥtaddat", "iḥtadda"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "احتددتما",
-        "u": "احتددتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِحْتَدَدْتُمَا • (iḥtadadtumā) (form VIII) /iħ.ta.dad.tu.maː/\n# second-person dual past active of اِحْتَدَّ (iḥtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḥtadadtumā", "iḥtadda"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "احتدا",
-        "u": "احتدا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِحْتَدَّا • (iḥtaddā) (form VIII) /iħ.tad.daː/\n# inflection of اِحْتَدَّ (iḥtadda):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḥtaddā", "iḥtadda"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "احتدتا",
-        "u": "احتدتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِحْتَدَّتَا • (iḥtaddatā) (form VIII) /iħ.tad.da.taː/\n# third-person feminine dual past active of اِحْتَدَّ (iḥtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḥtaddatā", "iḥtadda"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "احتددت",
-        "u": "احتددت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "احتددت (form VIII)\n# اِحْتَدَدْتُ (iḥtadadtu) /iħ.ta.dad.tu/: first-person singular past active of اِحْتَدَّ (iḥtadda)\n# اِحْتَدَدْتَ (iḥtadadta) /iħ.ta.dad.ta/: second-person masculine singular past active of اِحْتَدَّ (iḥtadda)\n# اِحْتَدَدْتِ (iḥtadadti) /iħ.ta.dad.ti/: second-person feminine singular past active of اِحْتَدَّ (iḥtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḥtadadtu", "iḥtadda", "iḥtadadta"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "احتددنا",
-        "u": "احتددنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِحْتَدَدْنَا • (iḥtadadnā) (form VIII) /iħ.ta.dad.naː/\n# first-person plural past active of اِحْتَدَّ (iḥtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḥtadadnā", "iḥtadda"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "احتدوا",
-        "u": "احتدوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِحْتَدُّوا • (iḥtaddū) (form VIII) /iħ.tad.duː/\n# inflection of اِحْتَدَّ (iḥtadda):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḥtaddū", "iḥtadda"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "احتددتم",
-        "u": "احتددتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِحْتَدَدْتُمْ • (iḥtadadtum) (form VIII) /iħ.ta.dad.tum/\n# second-person masculine plural past active of اِحْتَدَّ (iḥtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḥtadadtum", "iḥtadda"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "احتددن",
-        "u": "احتددن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "احتددن (form VIII)\n# اِحْتَدَدْنَ (iḥtadadna) /iħ.ta.dad.na/: third-person feminine plural past active of اِحْتَدَّ (iḥtadda)\n# اِحْتَدِدْنَ (iḥtadidna) /iħ.ta.did.na/: second-person feminine plural imperative of اِحْتَدَّ (iḥtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḥtadadna", "iḥtadda", "iḥtadidna"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "احتددتن",
-        "u": "احتددتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِحْتَدَدْتُنَّ • (iḥtadadtunna) (form VIII) /iħ.ta.dad.tun.na/\n# second-person feminine plural past active of اِحْتَدَّ (iḥtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḥtadadtunna", "iḥtadda"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "تحتد",
-        "u": "تحتد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تحتد (form VIII)\n# تَحْتَدُّ (taḥtaddu) /taħ.tad.du/: inflection of اِحْتَدَّ (iḥtadda):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَحْتَدَّ (taḥtadda) /taħ.tad.da/: inflection of اِحْتَدَّ (iḥtadda):\n## second-person masculine singular non-past active subjunctive/jussive\n## third-person feminine singular non-past ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["taḥtaddu", "iḥtadda", "taḥtadda"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "تحتدين",
-        "u": "تحتدين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحْتَدِّينَ • (taḥtaddīna) (form VIII) /taħ.tad.diː.na/\n# second-person feminine singular non-past active indicative of اِحْتَدَّ (iḥtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["taḥtaddīna", "iḥtadda"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "يحتد",
-        "u": "يحتد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يحتد (form VIII)\n# يَحْتَدُّ (yaḥtaddu) /jaħ.tad.du/: third-person masculine singular non-past active indicative of اِحْتَدَّ (iḥtadda)\n# يُحْتَدُّ (yuḥtaddu) /juħ.tad.du/: third-person masculine singular non-past passive indicative of اِحْتَدَّ (iḥtadda)\n# يَحْتَدَّ (yaḥtadda) /jaħ.tad.da/: third-person masculine singular non-past active subjunctive/jussive of اِحْتَدَّ (iḥtadda)\n# يُحْتَدَّ (yuḥ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yaḥtaddu", "iḥtadda", "yuḥtaddu"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "أحتد",
-        "u": "أحتد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أحتد (form VIII)\n# أَحْتَدُّ (ʔaḥtaddu) /ʔaħ.tad.du/: first-person singular non-past active indicative of اِحْتَدَّ (iḥtadda)\n# أَحْتَدَّ (ʔaḥtadda) /ʔaħ.tad.da/: first-person singular non-past active subjunctive/jussive of اِحْتَدَّ (iḥtadda)\n# أَحْتَدِّ (ʔaḥtaddi) /ʔaħ.tad.di/: first-person singular non-past active jussive of اِحْتَدَّ (iḥtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ʔaḥtaddu", "iḥtadda", "ʔaḥtadda"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "تحتدون",
-        "u": "تحتدون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحْتَدُّونَ • (taḥtaddūna) (form VIII) /taħ.tad.duː.na/\n# second-person masculine plural non-past active indicative of اِحْتَدَّ (iḥtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["taḥtaddūna", "iḥtadda"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "تحتدان",
-        "u": "تحتدان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحْتَدَّانِ • (taḥtaddāni) (form VIII) /taħ.tad.daː.ni/\n# inflection of اِحْتَدَّ (iḥtadda):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["taḥtaddāni", "iḥtadda"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "تحتددن",
-        "u": "تحتددن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحْتَدِدْنَ • (taḥtadidna) (form VIII) /taħ.ta.did.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِحْتَدَّ (iḥtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["taḥtadidna", "iḥtadda"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "يحتدان",
-        "u": "يحتدان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَحْتَدَّانِ • (yaḥtaddāni) (form VIII) /jaħ.tad.daː.ni/\n# third-person masculine dual non-past active indicative of اِحْتَدَّ (iḥtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yaḥtaddāni", "iḥtadda"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "نحتد",
-        "u": "نحتد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نحتد (form VIII)\n# نَحْتَدُّ (naḥtaddu) /naħ.tad.du/: first-person plural non-past active indicative of اِحْتَدَّ (iḥtadda)\n# نَحْتَدَّ (naḥtadda) /naħ.tad.da/: first-person plural non-past active subjunctive/jussive of اِحْتَدَّ (iḥtadda)\n# نَحْتَدِّ (naḥtaddi) /naħ.tad.di/: first-person plural non-past active jussive of اِحْتَدَّ (iḥtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["naḥtaddu", "iḥtadda", "naḥtadda"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "يحتدون",
-        "u": "يحتدون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَحْتَدُّونَ • (yaḥtaddūna) (form VIII) /jaħ.tad.duː.na/\n# third-person masculine plural non-past active indicative of اِحْتَدَّ (iḥtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yaḥtaddūna", "iḥtadda"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "تحتدي",
-        "u": "تحتدي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحْتَدِّي • (taḥtaddī) (form VIII) /taħ.tad.diː/\n# second-person feminine singular non-past active subjunctive/jussive of اِحْتَدَّ (iḥtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["taḥtaddī", "iḥtadda"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "يحتدا",
-        "u": "يحتدا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَحْتَدَّا • (yaḥtaddā) (form VIII) /jaħ.tad.daː/\n# third-person masculine dual non-past active subjunctive/jussive of اِحْتَدَّ (iḥtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yaḥtaddā", "iḥtadda"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "تحتدا",
-        "u": "تحتدا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحْتَدَّا • (taḥtaddā) (form VIII) /taħ.tad.daː/\n# inflection of اِحْتَدَّ (iḥtadda):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["taḥtaddā", "iḥtadda"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "يحتدوا",
-        "u": "يحتدوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَحْتَدُّوا • (yaḥtaddū) (form VIII) /jaħ.tad.duː/\n# third-person masculine plural non-past active subjunctive/jussive of اِحْتَدَّ (iḥtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yaḥtaddū", "iḥtadda"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "أحتدد",
-        "u": "أحتدد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَحْتَدِدْ • (ʔaḥtadid) (form VIII) /ʔaħ.ta.did/\n# first-person singular non-past active jussive of اِحْتَدَّ (iḥtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ʔaḥtadid", "iḥtadda"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "يحتددن",
-        "u": "يحتددن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَحْتَدِدْنَ • (yaḥtadidna) (form VIII) /jaħ.ta.did.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِحْتَدَّ (iḥtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yaḥtadidna", "iḥtadda"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "تحتدوا",
-        "u": "تحتدوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحْتَدُّوا • (taḥtaddū) (form VIII) /taħ.tad.duː/\n# second-person masculine plural non-past active subjunctive/jussive of اِحْتَدَّ (iḥtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["taḥtaddū", "iḥtadda"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "تحتدد",
-        "u": "تحتدد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحْتَدِدْ • (taḥtadid) (form VIII) /taħ.ta.did/\n# inflection of اِحْتَدَّ (iḥtadda):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["taḥtadid", "iḥtadda"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "يحتدد",
-        "u": "يحتدد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يحتدد (form VIII)\n# يَحْتَدِدْ (yaḥtadid) /jaħ.ta.did/: third-person masculine singular non-past active jussive of اِحْتَدَّ (iḥtadda)\n# يُحْتَدَدْ (yuḥtadad) /juħ.ta.dad/: third-person masculine singular non-past passive jussive of اِحْتَدَّ (iḥtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yaḥtadid", "iḥtadda", "yuḥtadad"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "نحتدد",
-        "u": "نحتدد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَحْتَدِدْ • (naḥtadid) (form VIII) /naħ.ta.did/\n# first-person plural non-past active jussive of اِحْتَدَّ (iḥtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["naḥtadid", "iḥtadda"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "احتدي",
-        "u": "احتدي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِحْتَدِّي • (iḥtaddī) (form VIII) /iħ.tad.diː/\n# second-person feminine singular imperative of اِحْتَدَّ (iḥtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḥtaddī", "iḥtadda"],
-        "k": "احتد",
-        "yol": "kök"
-      },
-      {
-        "w": "احتدد",
-        "u": "احتدد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِحْتَدِدْ • (iḥtadid) (form VIII) /iħ.ta.did/\n# second-person masculine singular imperative of اِحْتَدَّ (iḥtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["iḥtadid", "iḥtadda"],
-        "k": "احتد",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "حت",
+  "ses": {
     "harf": "ا",
+    "fasil": "حت",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "احتدت",
+      "tur": "verb",
+      "baslik": "اِحْتَدَّتْ • (iḥtaddat) (form VIII) /iħ.tad.dat/\n# third-person feminine singular past active of اِحْتَدَّ (iḥtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḥtaddat", "iḥtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "احتددتما",
+      "tur": "verb",
+      "baslik": "اِحْتَدَدْتُمَا • (iḥtadadtumā) (form VIII) /iħ.ta.dad.tu.maː/\n# second-person dual past active of اِحْتَدَّ (iḥtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḥtadadtumā", "iḥtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "احتدا",
+      "tur": "verb",
+      "baslik": "اِحْتَدَّا • (iḥtaddā) (form VIII) /iħ.tad.daː/\n# inflection of اِحْتَدَّ (iḥtadda):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḥtaddā", "iḥtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "احتدتا",
+      "tur": "verb",
+      "baslik": "اِحْتَدَّتَا • (iḥtaddatā) (form VIII) /iħ.tad.da.taː/\n# third-person feminine dual past active of اِحْتَدَّ (iḥtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḥtaddatā", "iḥtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "احتددت",
+      "tur": "verb",
+      "baslik": "احتددت (form VIII)\n# اِحْتَدَدْتُ (iḥtadadtu) /iħ.ta.dad.tu/: first-person singular past active of اِحْتَدَّ (iḥtadda)\n# اِحْتَدَدْتَ (iḥtadadta) /iħ.ta.dad.ta/: second-person masculine singular past active of اِحْتَدَّ (iḥtadda)\n# اِحْتَدَدْتِ (iḥtadadti) /iħ.ta.dad.ti/: second-person feminine singular past active of اِحْتَدَّ (iḥtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḥtadadtu", "iḥtadda", "iḥtadadta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "احتددنا",
+      "tur": "verb",
+      "baslik": "اِحْتَدَدْنَا • (iḥtadadnā) (form VIII) /iħ.ta.dad.naː/\n# first-person plural past active of اِحْتَدَّ (iḥtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḥtadadnā", "iḥtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "احتدوا",
+      "tur": "verb",
+      "baslik": "اِحْتَدُّوا • (iḥtaddū) (form VIII) /iħ.tad.duː/\n# inflection of اِحْتَدَّ (iḥtadda):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḥtaddū", "iḥtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "احتددتم",
+      "tur": "verb",
+      "baslik": "اِحْتَدَدْتُمْ • (iḥtadadtum) (form VIII) /iħ.ta.dad.tum/\n# second-person masculine plural past active of اِحْتَدَّ (iḥtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḥtadadtum", "iḥtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "احتددن",
+      "tur": "verb",
+      "baslik": "احتددن (form VIII)\n# اِحْتَدَدْنَ (iḥtadadna) /iħ.ta.dad.na/: third-person feminine plural past active of اِحْتَدَّ (iḥtadda)\n# اِحْتَدِدْنَ (iḥtadidna) /iħ.ta.did.na/: second-person feminine plural imperative of اِحْتَدَّ (iḥtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḥtadadna", "iḥtadda", "iḥtadidna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "احتددتن",
+      "tur": "verb",
+      "baslik": "اِحْتَدَدْتُنَّ • (iḥtadadtunna) (form VIII) /iħ.ta.dad.tun.na/\n# second-person feminine plural past active of اِحْتَدَّ (iḥtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḥtadadtunna", "iḥtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحتد",
+      "tur": "verb",
+      "baslik": "تحتد (form VIII)\n# تَحْتَدُّ (taḥtaddu) /taħ.tad.du/: inflection of اِحْتَدَّ (iḥtadda):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَحْتَدَّ (taḥtadda) /taħ.tad.da/: inflection of اِحْتَدَّ (iḥtadda):\n## second-person masculine singular non-past active subjunctive/jussive\n## third-person feminine singular non-past ",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["taḥtaddu", "iḥtadda", "taḥtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحتدين",
+      "tur": "verb",
+      "baslik": "تَحْتَدِّينَ • (taḥtaddīna) (form VIII) /taħ.tad.diː.na/\n# second-person feminine singular non-past active indicative of اِحْتَدَّ (iḥtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["taḥtaddīna", "iḥtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يحتد",
+      "tur": "verb",
+      "baslik": "يحتد (form VIII)\n# يَحْتَدُّ (yaḥtaddu) /jaħ.tad.du/: third-person masculine singular non-past active indicative of اِحْتَدَّ (iḥtadda)\n# يُحْتَدُّ (yuḥtaddu) /juħ.tad.du/: third-person masculine singular non-past passive indicative of اِحْتَدَّ (iḥtadda)\n# يَحْتَدَّ (yaḥtadda) /jaħ.tad.da/: third-person masculine singular non-past active subjunctive/jussive of اِحْتَدَّ (iḥtadda)\n# يُحْتَدَّ (yuḥ",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yaḥtaddu", "iḥtadda", "yuḥtaddu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أحتد",
+      "tur": "verb",
+      "baslik": "أحتد (form VIII)\n# أَحْتَدُّ (ʔaḥtaddu) /ʔaħ.tad.du/: first-person singular non-past active indicative of اِحْتَدَّ (iḥtadda)\n# أَحْتَدَّ (ʔaḥtadda) /ʔaħ.tad.da/: first-person singular non-past active subjunctive/jussive of اِحْتَدَّ (iḥtadda)\n# أَحْتَدِّ (ʔaḥtaddi) /ʔaħ.tad.di/: first-person singular non-past active jussive of اِحْتَدَّ (iḥtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ʔaḥtaddu", "iḥtadda", "ʔaḥtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحتدون",
+      "tur": "verb",
+      "baslik": "تَحْتَدُّونَ • (taḥtaddūna) (form VIII) /taħ.tad.duː.na/\n# second-person masculine plural non-past active indicative of اِحْتَدَّ (iḥtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["taḥtaddūna", "iḥtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحتدان",
+      "tur": "verb",
+      "baslik": "تَحْتَدَّانِ • (taḥtaddāni) (form VIII) /taħ.tad.daː.ni/\n# inflection of اِحْتَدَّ (iḥtadda):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["taḥtaddāni", "iḥtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحتددن",
+      "tur": "verb",
+      "baslik": "تَحْتَدِدْنَ • (taḥtadidna) (form VIII) /taħ.ta.did.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِحْتَدَّ (iḥtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["taḥtadidna", "iḥtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يحتدان",
+      "tur": "verb",
+      "baslik": "يَحْتَدَّانِ • (yaḥtaddāni) (form VIII) /jaħ.tad.daː.ni/\n# third-person masculine dual non-past active indicative of اِحْتَدَّ (iḥtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yaḥtaddāni", "iḥtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نحتد",
+      "tur": "verb",
+      "baslik": "نحتد (form VIII)\n# نَحْتَدُّ (naḥtaddu) /naħ.tad.du/: first-person plural non-past active indicative of اِحْتَدَّ (iḥtadda)\n# نَحْتَدَّ (naḥtadda) /naħ.tad.da/: first-person plural non-past active subjunctive/jussive of اِحْتَدَّ (iḥtadda)\n# نَحْتَدِّ (naḥtaddi) /naħ.tad.di/: first-person plural non-past active jussive of اِحْتَدَّ (iḥtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["naḥtaddu", "iḥtadda", "naḥtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يحتدون",
+      "tur": "verb",
+      "baslik": "يَحْتَدُّونَ • (yaḥtaddūna) (form VIII) /jaħ.tad.duː.na/\n# third-person masculine plural non-past active indicative of اِحْتَدَّ (iḥtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yaḥtaddūna", "iḥtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحتدي",
+      "tur": "verb",
+      "baslik": "تَحْتَدِّي • (taḥtaddī) (form VIII) /taħ.tad.diː/\n# second-person feminine singular non-past active subjunctive/jussive of اِحْتَدَّ (iḥtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["taḥtaddī", "iḥtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يحتدا",
+      "tur": "verb",
+      "baslik": "يَحْتَدَّا • (yaḥtaddā) (form VIII) /jaħ.tad.daː/\n# third-person masculine dual non-past active subjunctive/jussive of اِحْتَدَّ (iḥtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yaḥtaddā", "iḥtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحتدا",
+      "tur": "verb",
+      "baslik": "تَحْتَدَّا • (taḥtaddā) (form VIII) /taħ.tad.daː/\n# inflection of اِحْتَدَّ (iḥtadda):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["taḥtaddā", "iḥtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يحتدوا",
+      "tur": "verb",
+      "baslik": "يَحْتَدُّوا • (yaḥtaddū) (form VIII) /jaħ.tad.duː/\n# third-person masculine plural non-past active subjunctive/jussive of اِحْتَدَّ (iḥtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yaḥtaddū", "iḥtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أحتدد",
+      "tur": "verb",
+      "baslik": "أَحْتَدِدْ • (ʔaḥtadid) (form VIII) /ʔaħ.ta.did/\n# first-person singular non-past active jussive of اِحْتَدَّ (iḥtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ʔaḥtadid", "iḥtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يحتددن",
+      "tur": "verb",
+      "baslik": "يَحْتَدِدْنَ • (yaḥtadidna) (form VIII) /jaħ.ta.did.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِحْتَدَّ (iḥtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yaḥtadidna", "iḥtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحتدوا",
+      "tur": "verb",
+      "baslik": "تَحْتَدُّوا • (taḥtaddū) (form VIII) /taħ.tad.duː/\n# second-person masculine plural non-past active subjunctive/jussive of اِحْتَدَّ (iḥtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["taḥtaddū", "iḥtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحتدد",
+      "tur": "verb",
+      "baslik": "تَحْتَدِدْ • (taḥtadid) (form VIII) /taħ.ta.did/\n# inflection of اِحْتَدَّ (iḥtadda):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["taḥtadid", "iḥtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يحتدد",
+      "tur": "verb",
+      "baslik": "يحتدد (form VIII)\n# يَحْتَدِدْ (yaḥtadid) /jaħ.ta.did/: third-person masculine singular non-past active jussive of اِحْتَدَّ (iḥtadda)\n# يُحْتَدَدْ (yuḥtadad) /juħ.ta.dad/: third-person masculine singular non-past passive jussive of اِحْتَدَّ (iḥtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yaḥtadid", "iḥtadda", "yuḥtadad"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نحتدد",
+      "tur": "verb",
+      "baslik": "نَحْتَدِدْ • (naḥtadid) (form VIII) /naħ.ta.did/\n# first-person plural non-past active jussive of اِحْتَدَّ (iḥtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["naḥtadid", "iḥtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "احتدي",
+      "tur": "verb",
+      "baslik": "اِحْتَدِّي • (iḥtaddī) (form VIII) /iħ.tad.diː/\n# second-person feminine singular imperative of اِحْتَدَّ (iḥtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḥtaddī", "iḥtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "احتدد",
+      "tur": "verb",
+      "baslik": "اِحْتَدِدْ • (iḥtadid) (form VIII) /iħ.ta.did/\n# second-person masculine singular imperative of اِحْتَدَّ (iḥtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["iḥtadid", "iḥtadda"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "احتد", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

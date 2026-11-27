@@ -1,458 +1,334 @@
 {
   "kok": "يدى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "يدى", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "ايد",
-        "u": "ايد",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِيدِ • (īdi) (form I) /iː.di/\n# second-person masculine singular imperative of يَدَى (yadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["īdi", "yadā"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "أيد",
-        "u": "أيد",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "أَيْدِ • (ʔaydi) (form I) /ʔaj.di/\n# first-person singular non-past active jussive of يَدَى (yadā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaydi", "yadā"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يدين",
-        "u": "يدين",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "يدين (form I)\n# يَدَيْنَ (yadayna) /ja.daj.na/: third-person feminine plural past active of يَدَى (yadā)\n# يُدِينَ (yudīna) /ju.diː.na/: third-person feminine plural past passive of يَدَى (yadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yadayna", "yadā", "yudīna"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "ايديا",
-        "u": "ايديا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِيدِيَا • (īdiyā) (form I) /iː.di.jaː/\n# second-person dual imperative of يَدَى (yadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["īdiyā", "yadā"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تيدي",
-        "u": "تيدي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تيدي (form I)\n# تَيْدِي (taydī) /taj.diː/: inflection of يَدَى (yadā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَيْدِيَ (taydiya) /taj.di.ja/: inflection of يَدَى (yadā):\n## second-person masculine singular non-past active subjunctive\n## third",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taydī", "yadā", "taydiya"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يدينا",
-        "u": "يدينا",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يدينا (form I)\n# يَدَيْنَا (yadaynā) /ja.daj.naː/: first-person plural past active of يَدَى (yadā)\n# يُدِينَا (yudīnā) /ju.diː.naː/: first-person plural past passive of يَدَى (yadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yadaynā", "yadā", "yudīnā"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "أيدي",
-        "u": "أيدي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أيدي (form I)\n# أَيْدِي (ʔaydī) /ʔaj.diː/: first-person singular non-past active indicative of يَدَى (yadā)\n# أَيْدِيَ (ʔaydiya) /ʔaj.di.ja/: first-person singular non-past active subjunctive of يَدَى (yadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaydī", "yadā", "ʔaydiya"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يديا",
-        "u": "يديا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يديا (form I)\n# يَدَيَا (yadayā) /ja.da.jaː/: third-person masculine dual past active of يَدَى (yadā)\n# يُدِيَا (yudiyā) /ju.di.jaː/: third-person masculine dual past passive of يَدَى (yadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yadayā", "yadā", "yudiyā"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يدوا",
-        "u": "يدوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يدوا (form I)\n# يَدَوْا (yadaw) /ja.daw/: third-person masculine plural past active of يَدَى (yadā)\n# يُدُوا (yudū) /ju.duː/: third-person masculine plural past passive of يَدَى (yadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yadaw", "yadā", "yudū"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يديت",
-        "u": "يديت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يديت (form I)\n# يَدَيْتُ (yadaytu) /ja.daj.tu/: first-person singular past active of يَدَى (yadā)\n# يَدَيْتَ (yadayta) /ja.daj.ta/: second-person masculine singular past active of يَدَى (yadā)\n# يَدَيْتِ (yadayti) /ja.daj.ti/: second-person feminine singular past active of يَدَى (yadā)\n# يُدِيتُ (yudītu) /ju.diː.tu/: first-person singular past passive of يَدَى (yadā)\n# يُدِيتَ (yudīta) /ju.diː.ta/",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yadaytu", "yadā", "yadayta"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يدت",
-        "u": "يدت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَدَتْ • (yadat) (form I) /ja.dat/\n# third-person feminine singular past active of يَدَى (yadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yadat", "yadā"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يدتا",
-        "u": "يدتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَدَتَا • (yadatā) (form I) /ja.da.taː/\n# third-person feminine dual past active of يَدَى (yadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yadatā", "yadā"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يديتم",
-        "u": "يديتم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يديتم (form I)\n# يَدَيْتُمْ (yadaytum) /ja.daj.tum/: second-person masculine plural past active of يَدَى (yadā)\n# يُدِيتُمْ (yudītum) /ju.diː.tum/: second-person masculine plural past passive of يَدَى (yadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yadaytum", "yadā", "yudītum"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يديتما",
-        "u": "يديتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يديتما (form I)\n# يَدَيْتُمَا (yadaytumā) /ja.daj.tu.maː/: second-person dual past active of يَدَى (yadā)\n# يُدِيتُمَا (yudītumā) /ju.diː.tu.maː/: second-person dual past passive of يَدَى (yadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yadaytumā", "yadā", "yudītumā"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تيديان",
-        "u": "تيديان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَيْدِيَانِ • (taydiyāni) (form I) /taj.di.jaː.ni/\n# inflection of يَدَى (yadā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taydiyāni", "yadā"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يديتن",
-        "u": "يديتن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يديتن (form I)\n# يَدَيْتُنَّ (yadaytunna) /ja.daj.tun.na/: second-person feminine plural past active of يَدَى (yadā)\n# يُدِيتُنَّ (yudītunna) /ju.diː.tun.na/: second-person feminine plural past passive of يَدَى (yadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yadaytunna", "yadā", "yudītunna"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "ييديان",
-        "u": "ييديان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَيْدِيَانِ • (yaydiyāni) (form I) /jaj.di.jaː.ni/\n# third-person masculine dual non-past active indicative of يَدَى (yadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaydiyāni", "yadā"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تيدين",
-        "u": "تيدين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَيْدِينَ • (taydīna) (form I) /taj.diː.na/\n# inflection of يَدَى (yadā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taydīna", "yadā"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "نيدي",
-        "u": "نيدي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نيدي (form I)\n# نَيْدِي (naydī) /naj.diː/: first-person plural non-past active indicative of يَدَى (yadā)\n# نَيْدِيَ (naydiya) /naj.di.ja/: first-person plural non-past active subjunctive of يَدَى (yadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naydī", "yadā", "naydiya"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "ييدي",
-        "u": "ييدي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ييدي (form I)\n# يَيْدِي (yaydī) /jaj.diː/: third-person masculine singular non-past active indicative of يَدَى (yadā)\n# يَيْدِيَ (yaydiya) /jaj.di.ja/: third-person masculine singular non-past active subjunctive of يَدَى (yadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaydī", "yadā", "yaydiya"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تيدون",
-        "u": "تيدون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَيْدُونَ • (taydūna) (form I) /taj.duː.na/\n# second-person masculine plural non-past active indicative of يَدَى (yadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taydūna", "yadā"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "ييدون",
-        "u": "ييدون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَيْدُونَ • (yaydūna) (form I) /jaj.duː.na/\n# third-person masculine plural non-past active indicative of يَدَى (yadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaydūna", "yadā"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "ييدين",
-        "u": "ييدين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَيْدِينَ • (yaydīna) (form I) /jaj.diː.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of يَدَى (yadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaydīna", "yadā"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تيديا",
-        "u": "تيديا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَيْدِيَا • (taydiyā) (form I) /taj.di.jaː/\n# inflection of يَدَى (yadā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taydiyā", "yadā"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "ييدوا",
-        "u": "ييدوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَيْدُوا • (yaydū) (form I) /jaj.duː/\n# third-person masculine plural non-past active subjunctive/jussive of يَدَى (yadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaydū", "yadā"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تيدوا",
-        "u": "تيدوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَيْدُوا • (taydū) (form I) /taj.duː/\n# second-person masculine plural non-past active subjunctive/jussive of يَدَى (yadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taydū", "yadā"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "ييديا",
-        "u": "ييديا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَيْدِيَا • (yaydiyā) (form I) /jaj.di.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of يَدَى (yadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaydiyā", "yadā"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "ييد",
-        "u": "ييد",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَيْدِ • (yaydi) (form I) /jaj.di/\n# third-person masculine singular non-past active jussive of يَدَى (yadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaydi", "yadā"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "ايدي",
-        "u": "ايدي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِيدِي • (īdī) (form I) /iː.diː/\n# second-person feminine singular imperative of يَدَى (yadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["īdī", "yadā"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "نيد",
-        "u": "نيد",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نَيْدِ • (naydi) (form I) /naj.di/\n# first-person plural non-past active jussive of يَدَى (yadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naydi", "yadā"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "ايدوا",
-        "u": "ايدوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِيدُوا • (īdū) (form I) /iː.duː/\n# second-person masculine plural imperative of يَدَى (yadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["īdū", "yadā"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "ايدين",
-        "u": "ايدين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِيدِينَ • (īdīna) (form I) /iː.diː.na/\n# second-person feminine plural imperative of يَدَى (yadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["īdīna", "yadā"],
-        "k": "يدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تيد",
-        "u": "تيد",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَيْدِ • (taydi) (form I) /taj.di/\n# inflection of يَدَى (yadā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taydi", "yadā"],
-        "k": "يدى",
-        "yol": "kök"
-      }
-    ],
-    "tercume": {}
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "دى",
+  "ses": {
     "harf": "ي",
+    "fasil": "دى",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "ايد",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِيدِ • (īdi) (form I) /iː.di/\n# second-person masculine singular imperative of يَدَى (yadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["īdi", "yadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أيد",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "أَيْدِ • (ʔaydi) (form I) /ʔaj.di/\n# first-person singular non-past active jussive of يَدَى (yadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaydi", "yadā"]
+    },
+    {
+      "madde": "يدين",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "يدين (form I)\n# يَدَيْنَ (yadayna) /ja.daj.na/: third-person feminine plural past active of يَدَى (yadā)\n# يُدِينَ (yudīna) /ju.diː.na/: third-person feminine plural past passive of يَدَى (yadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yadayna", "yadā", "yudīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ايديا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِيدِيَا • (īdiyā) (form I) /iː.di.jaː/\n# second-person dual imperative of يَدَى (yadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["īdiyā", "yadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تيدي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تيدي (form I)\n# تَيْدِي (taydī) /taj.diː/: inflection of يَدَى (yadā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَيْدِيَ (taydiya) /taj.di.ja/: inflection of يَدَى (yadā):\n## second-person masculine singular non-past active subjunctive\n## third",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taydī", "yadā", "taydiya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدينا",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يدينا (form I)\n# يَدَيْنَا (yadaynā) /ja.daj.naː/: first-person plural past active of يَدَى (yadā)\n# يُدِينَا (yudīnā) /ju.diː.naː/: first-person plural past passive of يَدَى (yadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yadaynā", "yadā", "yudīnā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أيدي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أيدي (form I)\n# أَيْدِي (ʔaydī) /ʔaj.diː/: first-person singular non-past active indicative of يَدَى (yadā)\n# أَيْدِيَ (ʔaydiya) /ʔaj.di.ja/: first-person singular non-past active subjunctive of يَدَى (yadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaydī", "yadā", "ʔaydiya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يديا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يديا (form I)\n# يَدَيَا (yadayā) /ja.da.jaː/: third-person masculine dual past active of يَدَى (yadā)\n# يُدِيَا (yudiyā) /ju.di.jaː/: third-person masculine dual past passive of يَدَى (yadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yadayā", "yadā", "yudiyā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يدوا (form I)\n# يَدَوْا (yadaw) /ja.daw/: third-person masculine plural past active of يَدَى (yadā)\n# يُدُوا (yudū) /ju.duː/: third-person masculine plural past passive of يَدَى (yadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yadaw", "yadā", "yudū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يديت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يديت (form I)\n# يَدَيْتُ (yadaytu) /ja.daj.tu/: first-person singular past active of يَدَى (yadā)\n# يَدَيْتَ (yadayta) /ja.daj.ta/: second-person masculine singular past active of يَدَى (yadā)\n# يَدَيْتِ (yadayti) /ja.daj.ti/: second-person feminine singular past active of يَدَى (yadā)\n# يُدِيتُ (yudītu) /ju.diː.tu/: first-person singular past passive of يَدَى (yadā)\n# يُدِيتَ (yudīta) /ju.diː.ta/",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yadaytu", "yadā", "yadayta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدت",
+      "tur": "verb",
+      "baslik": "يَدَتْ • (yadat) (form I) /ja.dat/\n# third-person feminine singular past active of يَدَى (yadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yadat", "yadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يدتا",
+      "tur": "verb",
+      "baslik": "يَدَتَا • (yadatā) (form I) /ja.da.taː/\n# third-person feminine dual past active of يَدَى (yadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yadatā", "yadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يديتم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يديتم (form I)\n# يَدَيْتُمْ (yadaytum) /ja.daj.tum/: second-person masculine plural past active of يَدَى (yadā)\n# يُدِيتُمْ (yudītum) /ju.diː.tum/: second-person masculine plural past passive of يَدَى (yadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yadaytum", "yadā", "yudītum"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يديتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يديتما (form I)\n# يَدَيْتُمَا (yadaytumā) /ja.daj.tu.maː/: second-person dual past active of يَدَى (yadā)\n# يُدِيتُمَا (yudītumā) /ju.diː.tu.maː/: second-person dual past passive of يَدَى (yadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yadaytumā", "yadā", "yudītumā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تيديان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَيْدِيَانِ • (taydiyāni) (form I) /taj.di.jaː.ni/\n# inflection of يَدَى (yadā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taydiyāni", "yadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يديتن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يديتن (form I)\n# يَدَيْتُنَّ (yadaytunna) /ja.daj.tun.na/: second-person feminine plural past active of يَدَى (yadā)\n# يُدِيتُنَّ (yudītunna) /ju.diː.tun.na/: second-person feminine plural past passive of يَدَى (yadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yadaytunna", "yadā", "yudītunna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ييديان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَيْدِيَانِ • (yaydiyāni) (form I) /jaj.di.jaː.ni/\n# third-person masculine dual non-past active indicative of يَدَى (yadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaydiyāni", "yadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تيدين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَيْدِينَ • (taydīna) (form I) /taj.diː.na/\n# inflection of يَدَى (yadā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taydīna", "yadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نيدي",
+      "tur": "verb",
+      "baslik": "نيدي (form I)\n# نَيْدِي (naydī) /naj.diː/: first-person plural non-past active indicative of يَدَى (yadā)\n# نَيْدِيَ (naydiya) /naj.di.ja/: first-person plural non-past active subjunctive of يَدَى (yadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naydī", "yadā", "naydiya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ييدي",
+      "tur": "verb",
+      "baslik": "ييدي (form I)\n# يَيْدِي (yaydī) /jaj.diː/: third-person masculine singular non-past active indicative of يَدَى (yadā)\n# يَيْدِيَ (yaydiya) /jaj.di.ja/: third-person masculine singular non-past active subjunctive of يَدَى (yadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaydī", "yadā", "yaydiya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تيدون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَيْدُونَ • (taydūna) (form I) /taj.duː.na/\n# second-person masculine plural non-past active indicative of يَدَى (yadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taydūna", "yadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ييدون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَيْدُونَ • (yaydūna) (form I) /jaj.duː.na/\n# third-person masculine plural non-past active indicative of يَدَى (yadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaydūna", "yadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ييدين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَيْدِينَ • (yaydīna) (form I) /jaj.diː.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of يَدَى (yadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaydīna", "yadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تيديا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَيْدِيَا • (taydiyā) (form I) /taj.di.jaː/\n# inflection of يَدَى (yadā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taydiyā", "yadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ييدوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَيْدُوا • (yaydū) (form I) /jaj.duː/\n# third-person masculine plural non-past active subjunctive/jussive of يَدَى (yadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaydū", "yadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تيدوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَيْدُوا • (taydū) (form I) /taj.duː/\n# second-person masculine plural non-past active subjunctive/jussive of يَدَى (yadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taydū", "yadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ييديا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَيْدِيَا • (yaydiyā) (form I) /jaj.di.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of يَدَى (yadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaydiyā", "yadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ييد",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَيْدِ • (yaydi) (form I) /jaj.di/\n# third-person masculine singular non-past active jussive of يَدَى (yadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaydi", "yadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ايدي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِيدِي • (īdī) (form I) /iː.diː/\n# second-person feminine singular imperative of يَدَى (yadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["īdī", "yadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نيد",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نَيْدِ • (naydi) (form I) /naj.di/\n# first-person plural non-past active jussive of يَدَى (yadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naydi", "yadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ايدوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِيدُوا • (īdū) (form I) /iː.duː/\n# second-person masculine plural imperative of يَدَى (yadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["īdū", "yadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ايدين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِيدِينَ • (īdīna) (form I) /iː.diː.na/\n# second-person feminine plural imperative of يَدَى (yadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["īdīna", "yadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تيد",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَيْدِ • (taydi) (form I) /taj.di/\n# inflection of يَدَى (yadā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taydi", "yadā"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "يدى", "r7"]
+  ],
+  "mana": {
     "ince": "reason.v.01",
     "orta": "verb.cognition",
     "ust": "zihin ve ilim",
@@ -460,16 +336,11 @@
     "dayanak_tanim": "decide by reasoning; draw or come to a conclusion",
     "synset_sayisi": 16
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "affirm.v.02",
     "affirm.v.03",
     "assist.v.02",
@@ -487,12 +358,10 @@
     "support.v.01",
     "sustain.v.04"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

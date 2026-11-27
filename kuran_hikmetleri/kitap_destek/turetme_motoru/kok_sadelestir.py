@@ -14,6 +14,7 @@ AJAN = os.path.join(K, 'kitap_destek', 'lugat_ajan')
 ETIM = os.path.join(K, 'kaynak', 'lugat', 'etimoloji')
 sys.path.insert(0, HERE)
 import baz_fiil as BF
+import mesmu as MS
 
 ESER = {'Kubbe Altı': 'Kubbealtı Lügati', 'Kubbealtı': 'Kubbealtı Lügati'}
 TAS = re.compile(r'^(.*?)\s+maddesi\.\s*Sayfa:\s*(\d+)\s*$')
@@ -300,7 +301,7 @@ def donustur(d, esas, ek_lugat, etim):
     y['vikisozluk_tr'] = vk_ayri
     y['vikisozluk_etimolojiler'] = etl
     ea = s.get('etymarab') or {}
-    if ea.get('dolu') or tc.get('etymarab'):
+    if ea or tc.get('etymarab'):
         y['etymarab'] = tercume_birles(dict({k: v for k, v in ea.items() if k not in ('kaynak', 'dolu')}, **({} if ea.get('dolu') else {'yer_tutucu': True})), tc.get('etymarab'), 'kok_maddesi')
     y['etimoloji'] = s.get('etimoloji')
     y['ek_lugat'] = ek_lugat.get(d['kok'])
@@ -312,7 +313,14 @@ def donustur(d, esas, ek_lugat, etim):
     for w in d['kelimeler']:
         ys[BF.norm(w['kelime'])].append((w.get('turkce') or {}).get('yuzey'))
     y['tr_ek'] = {k: v for k, v in (s.get('renk_sozluk') or {}).items() if v not in ys.get(BF.norm(k), [])}
-    y['mustak'] = mustak(d)
+    mk = mustak(d)
+    if mk:
+        kanit = MS.kanit_ayir(d['kok'], mk)
+        if kanit is None:
+            y['mustak'] = mk
+        else:
+            y['mustak_kanit'] = kanit
+            assert MS.mustak_tam(y) == mk, d['kok']
     y['reddedilen'] = red(d)
     mt = d.get('mana_tasnif') or {}
     y['mana'] = bos_at({k: v for k, v in mt.items() if k != 'yontem'})
@@ -325,7 +333,7 @@ def donustur(d, esas, ek_lugat, etim):
     pr = d.get('prototip_yayilim_tasnif') or {}
     y['prototip'] = bos_at({k: v for k, v in pr.items() if k not in ('kaynak', 'prototipler', 'halka_esikleri')})
     y['pilot'] = s.get('pilot')
-    return bos_at(y)
+    return {k: v for k, v in y.items() if v not in (None, '', [], {}) or k == 'mustak_kanit'}
 
 
 ATILAN = {'sema', 'kaynak', 'kunye', 'sorgular', 's', 'h', 'yol', 'u', 'k', 'n', 'w', 'halka_esikleri', 'ses_mana_tasnif', 'kuranda_var', 'kaliplar', 'reddedilen', 'turetim', 'prototipler', 'id', 'dolu', 'kok'}
@@ -348,13 +356,51 @@ def dogrula(d, y):
     eski = []
     dizgiler(d, eski)
     yeni = []
-    dizgiler(y, yeni, False)
+    dizgiler(MS.genislet(y), yeni, False)
     havuz = '\n'.join(yeni)
     return [x for x in dict.fromkeys(eski) if x not in havuz and not TAS.match(x) and x not in ESER_ADLARI and x != VARSAYILAN_DURUM and ' := ' not in x and x not in YONTEM and x not in SABIT_METIN]
 
 
-def calis(yaz=False, kaynak=None):
+def tohum():
+    yol = os.path.join(KD, 'FIHRIST.json')
+    if not os.path.exists(yol):
+        return
+    f = json.load(open(yol, encoding='utf-8'))
+    for k, v in (f.get('red_sebepleri') or {}).items():
+        SEBEP[v] = k
+    for k, v in (f.get('mana_yontemleri') or {}).items():
+        YONTEM[v] = k
+
+
+def kirp(hedef=None, yaz=False):
+    dosyalar = sorted(glob.glob(os.path.join(hedef or KOK, '*.json')))
+    sayac = collections.Counter()
+    for f in dosyalar:
+        d = json.load(open(f, encoding='utf-8'))
+        if 'mustak' not in d:
+            sayac['mustaksiz'] += 1
+            continue
+        kanit = MS.kanit_ayir(d['kok'], d['mustak'])
+        if kanit is None:
+            sayac['kirpilamadi'] += 1
+            continue
+        y = collections.OrderedDict()
+        for k, v in d.items():
+            if k == 'mustak':
+                y['mustak_kanit'] = kanit
+            else:
+                y[k] = v
+        assert MS.mustak_tam(y) == d['mustak'], f
+        sayac['kirpildi'] += 1
+        if yaz:
+            open(f, 'w', encoding='utf-8').write(okunur(y) + '\n')
+    return sayac
+
+
+def calis(yaz=False, kaynak=None, hedef=None):
+    tohum()
     esas, ek_lugat, etim = ekler()
+    hedef = hedef or kaynak or KOK
     dosyalar = sorted(glob.glob(os.path.join(kaynak or KOK, '*.json')))
     kayip = {}
     eski_bayt = yeni_bayt = atlanan = 0
@@ -372,12 +418,12 @@ def calis(yaz=False, kaynak=None):
         eski_bayt += len(ham.encode('utf-8'))
         yeni_bayt += len(cikti.encode('utf-8'))
         if yaz and not k:
-            open(os.path.join(KOK, os.path.basename(f)), 'w', encoding='utf-8').write(cikti)
+            open(os.path.join(hedef, os.path.basename(f)), 'w', encoding='utf-8').write(cikti)
     return len(dosyalar), atlanan, eski_bayt, yeni_bayt, kayip
 
 
-def fihrist():
-    yol = os.path.join(KD, 'FIHRIST.json')
+def fihrist(kd=None):
+    yol = os.path.join(kd or KD, 'FIHRIST.json')
     f = json.load(open(yol, encoding='utf-8'))
     f['sema'] = {
         'kok_dosyasi': 'kokler/<kök>.json: köke ait bütün malumat tek dosyada, her bilgi bir kez',
@@ -386,7 +432,7 @@ def fihrist():
             'fiil': 'Türkçe fiil sapı', 'anlam': 'kökün Türkçe manası', 'lugat': 'eser adına göre madde listesi; kelime = maddenin bağlandığı Kur\'ân kelimeleri',
             'mekayis': 'İbn Fâris', 'cebel': 'Cebel', 'zemahseri': 'hakîkat ve mecâz', 'ontoloji': 'Arabic Ontology; _tr tercüme',
             'vikisozluk': 'Vikisözlük maddeleri; etimoloji = vikisozluk_etimolojiler dizinindeki sıra', 'kuran': 'Kur\'ân korpusu sayımları',
-            'kelimeler': 'lemma, hal ve bâba göre gruplu Kur\'ân kelimeleri; bicimler yüzey biçimleridir', 'mustak': 'müştak grupları: [vezin, durum, ...]',
+            'kelimeler': 'lemma, hal ve bâba göre gruplu Kur\'ân kelimeleri; bicimler yüzey biçimleridir', 'mustak_kanit': 'müştak tablosunda motorun (mesmu.mustak_tam) kendiliğinden ürettiğinden farklı satırlar: [grup, sıra, vezin, durum, arapça, latin, türkçe, güven, tanık]; tam tablo mesmu.mustak_tam(kök dosyası) ile üretilir',
             'reddedilen': 'motorun reddettiği [grup, vezin, sebep kodu]; kodlar red_sebepleri\'nde'},
         'tr_durum': 'yazılmadıysa: ' + VARSAYILAN_DURUM}
     f['red_sebepleri'] = {v: k for k, v in SEBEP.items()}
@@ -404,11 +450,22 @@ def fihrist():
     open(yol, 'w', encoding='utf-8').write(okunur(f) + '\n')
 
 
-if __name__ == '__main__':
+if __name__ == '__main__' and '--fihrist' in sys.argv:
+    tohum()
+    for ad in ('kuranda_var', 'kuranda_yok'):
+        fihrist(os.path.join(K, 'kelime_kaydi', ad))
+elif __name__ == '__main__' and '--kirp' in sys.argv:
+    print(kirp(os.path.join(K, 'kelime_kaydi', 'kuranda_yok' if '--yok' in sys.argv else 'kuranda_var', 'kokler'), '--yaz' in sys.argv))
+elif __name__ == '__main__':
     kay = sys.argv[sys.argv.index('--kaynak') + 1] if '--kaynak' in sys.argv else None
-    n, a, e, y, k = calis('--yaz' in sys.argv, kay)
+    hed = None
+    yok = '--yok' in sys.argv
+    if yok:
+        kay = kay or os.path.join(K, 'kelime_kaydi', 'kuranda_yok', 'kokler')
+        hed = os.path.join(K, 'kelime_kaydi', 'kuranda_yok', 'kokler')
+    n, a, e, y, k = calis('--yaz' in sys.argv, kay, hed)
     if '--yaz' in sys.argv and not k:
-        fihrist()
+        fihrist(os.path.join(K, 'kelime_kaydi', 'kuranda_yok') if yok else None)
     print(n, a, e, y, len(k))
     for ad, L in list(k.items())[:5]:
         print(ad, L[:2])

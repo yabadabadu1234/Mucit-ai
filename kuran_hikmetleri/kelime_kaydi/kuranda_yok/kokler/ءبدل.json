@@ -1,347 +1,281 @@
 {
   "kok": "ءبدل",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءبدل", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تبدل",
-        "u": "تبدل",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تبدل (form IV)\n# تُبْدِلُ (tubdilu) /tub.di.lu/: inflection of أَبْدَلَ (ʔabdala):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُبْدَلُ (tubdalu) /tub.da.lu/: inflection of أَبْدَلَ (ʔabdala):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubdilu", "ʔabdala", "tubdalu"],
-        "k": "أبدل",
-        "yol": "kök"
-      },
-      {
-        "w": "يبدل",
-        "u": "يبدل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يبدل (form IV)\n# يُبْدِلُ (yubdilu) /jub.di.lu/: third-person masculine singular non-past active indicative of أَبْدَلَ (ʔabdala)\n# يُبْدَلُ (yubdalu) /jub.da.lu/: third-person masculine singular non-past passive indicative of أَبْدَلَ (ʔabdala)\n# يُبْدِلَ (yubdila) /jub.di.la/: third-person masculine singular non-past active subjunctive of أَبْدَلَ (ʔabdala)\n# يُبْدَلَ (yubdala) /jub.da.la/: thir",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubdilu", "ʔabdala", "yubdalu"],
-        "k": "أبدل",
-        "yol": "kök"
-      },
-      {
-        "w": "أبدلت",
-        "u": "أبدلت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبدلت (form IV)\n# أَبْدَلْتُ (ʔabdaltu) /ʔab.dal.tu/: first-person singular past active of أَبْدَلَ (ʔabdala)\n# أَبْدَلْتَ (ʔabdalta) /ʔab.dal.ta/: second-person masculine singular past active of أَبْدَلَ (ʔabdala)\n# أَبْدَلْتِ (ʔabdalti) /ʔab.dal.ti/: second-person feminine singular past active of أَبْدَلَ (ʔabdala)\n# أَبْدَلَتْ (ʔabdalat) /ʔab.da.lat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabdaltu", "ʔabdala", "ʔabdalta"],
-        "k": "أبدل",
-        "yol": "kök"
-      },
-      {
-        "w": "تبدلين",
-        "u": "تبدلين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تبدلين (form IV)\n# تُبْدِلِينَ (tubdilīna) /tub.di.liː.na/: second-person feminine singular non-past active indicative of أَبْدَلَ (ʔabdala)\n# تُبْدَلِينَ (tubdalīna) /tub.da.liː.na/: second-person feminine singular non-past passive indicative of أَبْدَلَ (ʔabdala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubdilīna", "ʔabdala", "tubdalīna"],
-        "k": "أبدل",
-        "yol": "kök"
-      },
-      {
-        "w": "تبدلي",
-        "u": "تبدلي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تبدلي (form IV)\n# تُبْدِلِي (tubdilī) /tub.di.liː/: second-person feminine singular non-past active subjunctive/jussive of أَبْدَلَ (ʔabdala)\n# تُبْدَلِي (tubdalī) /tub.da.liː/: second-person feminine singular non-past passive subjunctive/jussive of أَبْدَلَ (ʔabdala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubdilī", "ʔabdala", "tubdalī"],
-        "k": "أبدل",
-        "yol": "kök"
-      },
-      {
-        "w": "أبدلي",
-        "u": "أبدلي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَبْدِلِي • (ʔabdilī) (form IV) /ʔab.di.liː/\n# second-person feminine singular imperative of أَبْدَلَ (ʔabdala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabdilī", "ʔabdala"],
-        "k": "أبدل",
-        "yol": "kök"
-      },
-      {
-        "w": "أبدلنا",
-        "u": "أبدلنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبدلنا (form IV)\n# أَبْدَلْنَا (ʔabdalnā) /ʔab.dal.naː/: first-person plural past active of أَبْدَلَ (ʔabdala)\n# أُبْدِلْنَا (ʔubdilnā) /ʔub.dil.naː/: first-person plural past passive of أَبْدَلَ (ʔabdala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabdalnā", "ʔabdala", "ʔubdilnā"],
-        "k": "أبدل",
-        "yol": "kök"
-      },
-      {
-        "w": "نبدل",
-        "u": "نبدل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نبدل (form IV)\n# نُبْدِلُ (nubdilu) /nub.di.lu/: first-person plural non-past active indicative of أَبْدَلَ (ʔabdala)\n# نُبْدَلُ (nubdalu) /nub.da.lu/: first-person plural non-past passive indicative of أَبْدَلَ (ʔabdala)\n# نُبْدِلَ (nubdila) /nub.di.la/: first-person plural non-past active subjunctive of أَبْدَلَ (ʔabdala)\n# نُبْدَلَ (nubdala) /nub.da.la/: first-person plural non-past passive sub",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nubdilu", "ʔabdala", "nubdalu"],
-        "k": "أبدل",
-        "yol": "kök"
-      },
-      {
-        "w": "أبدلتم",
-        "u": "أبدلتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبدلتم (form IV)\n# أَبْدَلْتُمْ (ʔabdaltum) /ʔab.dal.tum/: second-person masculine plural past active of أَبْدَلَ (ʔabdala)\n# أُبْدِلْتُمْ (ʔubdiltum) /ʔub.dil.tum/: second-person masculine plural past passive of أَبْدَلَ (ʔabdala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabdaltum", "ʔabdala", "ʔubdiltum"],
-        "k": "أبدل",
-        "yol": "kök"
-      },
-      {
-        "w": "تبدلون",
-        "u": "تبدلون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تبدلون (form IV)\n# تُبْدِلُونَ (tubdilūna) /tub.di.luː.na/: second-person masculine plural non-past active indicative of أَبْدَلَ (ʔabdala)\n# تُبْدَلُونَ (tubdalūna) /tub.da.luː.na/: second-person masculine plural non-past passive indicative of أَبْدَلَ (ʔabdala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubdilūna", "ʔabdala", "tubdalūna"],
-        "k": "أبدل",
-        "yol": "kök"
-      },
-      {
-        "w": "أبدلوا",
-        "u": "أبدلوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبدلوا (form IV)\n# أَبْدَلُوا (ʔabdalū) /ʔab.da.luː/: third-person masculine plural past active of أَبْدَلَ (ʔabdala)\n# أُبْدِلُوا (ʔubdilū) /ʔub.di.luː/: third-person masculine plural past passive of أَبْدَلَ (ʔabdala)\n# أَبْدِلُوا (ʔabdilū) /ʔab.di.luː/: second-person masculine plural imperative of أَبْدَلَ (ʔabdala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabdalū", "ʔabdala", "ʔubdilū"],
-        "k": "أبدل",
-        "yol": "kök"
-      },
-      {
-        "w": "يبدلون",
-        "u": "يبدلون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يبدلون (form IV)\n# يُبْدِلُونَ (yubdilūna) /jub.di.luː.na/: third-person masculine plural non-past active indicative of أَبْدَلَ (ʔabdala)\n# يُبْدَلُونَ (yubdalūna) /jub.da.luː.na/: third-person masculine plural non-past passive indicative of أَبْدَلَ (ʔabdala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubdilūna", "ʔabdala", "yubdalūna"],
-        "k": "أبدل",
-        "yol": "kök"
-      },
-      {
-        "w": "يبدلوا",
-        "u": "يبدلوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يبدلوا (form IV)\n# يُبْدِلُوا (yubdilū) /jub.di.luː/: third-person masculine plural non-past active subjunctive/jussive of أَبْدَلَ (ʔabdala)\n# يُبْدَلُوا (yubdalū) /jub.da.luː/: third-person masculine plural non-past passive subjunctive/jussive of أَبْدَلَ (ʔabdala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubdilū", "ʔabdala", "yubdalū"],
-        "k": "أبدل",
-        "yol": "kök"
-      },
-      {
-        "w": "تبدلوا",
-        "u": "تبدلوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تبدلوا (form IV)\n# تُبْدِلُوا (tubdilū) /tub.di.luː/: second-person masculine plural non-past active subjunctive/jussive of أَبْدَلَ (ʔabdala)\n# تُبْدَلُوا (tubdalū) /tub.da.luː/: second-person masculine plural non-past passive subjunctive/jussive of أَبْدَلَ (ʔabdala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubdilū", "ʔabdala", "tubdalū"],
-        "k": "أبدل",
-        "yol": "kök"
-      },
-      {
-        "w": "أبدلتن",
-        "u": "أبدلتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبدلتن (form IV)\n# أَبْدَلْتُنَّ (ʔabdaltunna) /ʔab.dal.tun.na/: second-person feminine plural past active of أَبْدَلَ (ʔabdala)\n# أُبْدِلْتُنَّ (ʔubdiltunna) /ʔub.dil.tun.na/: second-person feminine plural past passive of أَبْدَلَ (ʔabdala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabdaltunna", "ʔabdala", "ʔubdiltunna"],
-        "k": "أبدل",
-        "yol": "kök"
-      },
-      {
-        "w": "تبدلن",
-        "u": "تبدلن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تبدلن (form IV)\n# تُبْدِلْنَ (tubdilna) /tub.dil.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَبْدَلَ (ʔabdala)\n# تُبْدَلْنَ (tubdalna) /tub.dal.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَبْدَلَ (ʔabdala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubdilna", "ʔabdala", "tubdalna"],
-        "k": "أبدل",
-        "yol": "kök"
-      },
-      {
-        "w": "أبدلن",
-        "u": "أبدلن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبدلن (form IV)\n# أَبْدَلْنَ (ʔabdalna) /ʔab.dal.na/: third-person feminine plural past active of أَبْدَلَ (ʔabdala)\n# أُبْدِلْنَ (ʔubdilna) /ʔub.dil.na/: third-person feminine plural past passive of أَبْدَلَ (ʔabdala)\n# أَبْدِلْنَ (ʔabdilna) /ʔab.dil.na/: second-person feminine plural imperative of أَبْدَلَ (ʔabdala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabdalna", "ʔabdala", "ʔubdilna"],
-        "k": "أبدل",
-        "yol": "kök"
-      },
-      {
-        "w": "يبدلن",
-        "u": "يبدلن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يبدلن (form IV)\n# يُبْدِلْنَ (yubdilna) /jub.dil.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَبْدَلَ (ʔabdala)\n# يُبْدَلْنَ (yubdalna) /jub.dal.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَبْدَلَ (ʔabdala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubdilna", "ʔabdala", "yubdalna"],
-        "k": "أبدل",
-        "yol": "kök"
-      },
-      {
-        "w": "أبدلتما",
-        "u": "أبدلتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبدلتما (form IV)\n# أَبْدَلْتُمَا (ʔabdaltumā) /ʔab.dal.tu.maː/: second-person dual past active of أَبْدَلَ (ʔabdala)\n# أُبْدِلْتُمَا (ʔubdiltumā) /ʔub.dil.tu.maː/: second-person dual past passive of أَبْدَلَ (ʔabdala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabdaltumā", "ʔabdala", "ʔubdiltumā"],
-        "k": "أبدل",
-        "yol": "kök"
-      },
-      {
-        "w": "أبدلتا",
-        "u": "أبدلتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبدلتا (form IV)\n# أَبْدَلَتَا (ʔabdalatā) /ʔab.da.la.taː/: third-person feminine dual past active of أَبْدَلَ (ʔabdala)\n# أُبْدِلَتَا (ʔubdilatā) /ʔub.di.la.taː/: third-person feminine dual past passive of أَبْدَلَ (ʔabdala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabdalatā", "ʔabdala", "ʔubdilatā"],
-        "k": "أبدل",
-        "yol": "kök"
-      },
-      {
-        "w": "تبدلان",
-        "u": "تبدلان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تبدلان (form IV)\n# تُبْدِلَانِ (tubdilāni) /tub.di.laː.ni/: inflection of أَبْدَلَ (ʔabdala):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُبْدَلَانِ (tubdalāni) /tub.da.laː.ni/: inflection of أَبْدَلَ (ʔabdala):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubdilāni", "ʔabdala", "tubdalāni"],
-        "k": "أبدل",
-        "yol": "kök"
-      },
-      {
-        "w": "أبدلا",
-        "u": "أبدلا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبدلا (form IV)\n# أَبْدَلَا (ʔabdalā) /ʔab.da.laː/: third-person masculine dual past active of أَبْدَلَ (ʔabdala)\n# أُبْدِلَا (ʔubdilā) /ʔub.di.laː/: third-person masculine dual past passive of أَبْدَلَ (ʔabdala)\n# أَبْدِلَا (ʔabdilā) /ʔab.di.laː/: second-person dual imperative of أَبْدَلَ (ʔabdala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabdalā", "ʔabdala", "ʔubdilā"],
-        "k": "أبدل",
-        "yol": "kök"
-      },
-      {
-        "w": "يبدلان",
-        "u": "يبدلان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يبدلان (form IV)\n# يُبْدِلَانِ (yubdilāni) /jub.di.laː.ni/: third-person masculine dual non-past active indicative of أَبْدَلَ (ʔabdala)\n# يُبْدَلَانِ (yubdalāni) /jub.da.laː.ni/: third-person masculine dual non-past passive indicative of أَبْدَلَ (ʔabdala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubdilāni", "ʔabdala", "yubdalāni"],
-        "k": "أبدل",
-        "yol": "kök"
-      },
-      {
-        "w": "يبدلا",
-        "u": "يبدلا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يبدلا (form IV)\n# يُبْدِلَا (yubdilā) /jub.di.laː/: third-person masculine dual non-past active subjunctive/jussive of أَبْدَلَ (ʔabdala)\n# يُبْدَلَا (yubdalā) /jub.da.laː/: third-person masculine dual non-past passive subjunctive/jussive of أَبْدَلَ (ʔabdala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubdilā", "ʔabdala", "yubdalā"],
-        "k": "أبدل",
-        "yol": "kök"
-      },
-      {
-        "w": "تبدلا",
-        "u": "تبدلا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تبدلا (form IV)\n# تُبْدِلَا (tubdilā) /tub.di.laː/: inflection of أَبْدَلَ (ʔabdala):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُبْدَلَا (tubdalā) /tub.da.laː/: inflection of أَبْدَلَ (ʔabdala):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/ju",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubdilā", "ʔabdala", "tubdalā"],
-        "k": "أبدل",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "بد",
+  "ses": {
     "harf": "ء",
+    "fasil": "بد",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "تبدل",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تبدل (form IV)\n# تُبْدِلُ (tubdilu) /tub.di.lu/: inflection of أَبْدَلَ (ʔabdala):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُبْدَلُ (tubdalu) /tub.da.lu/: inflection of أَبْدَلَ (ʔabdala):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubdilu", "ʔabdala", "tubdalu"],
+      "kok_yazilis": "أبدل"
+    },
+    {
+      "madde": "يبدل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يبدل (form IV)\n# يُبْدِلُ (yubdilu) /jub.di.lu/: third-person masculine singular non-past active indicative of أَبْدَلَ (ʔabdala)\n# يُبْدَلُ (yubdalu) /jub.da.lu/: third-person masculine singular non-past passive indicative of أَبْدَلَ (ʔabdala)\n# يُبْدِلَ (yubdila) /jub.di.la/: third-person masculine singular non-past active subjunctive of أَبْدَلَ (ʔabdala)\n# يُبْدَلَ (yubdala) /jub.da.la/: thir",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubdilu", "ʔabdala", "yubdalu"],
+      "kok_yazilis": "أبدل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبدلت",
+      "tur": "verb",
+      "baslik": "أبدلت (form IV)\n# أَبْدَلْتُ (ʔabdaltu) /ʔab.dal.tu/: first-person singular past active of أَبْدَلَ (ʔabdala)\n# أَبْدَلْتَ (ʔabdalta) /ʔab.dal.ta/: second-person masculine singular past active of أَبْدَلَ (ʔabdala)\n# أَبْدَلْتِ (ʔabdalti) /ʔab.dal.ti/: second-person feminine singular past active of أَبْدَلَ (ʔabdala)\n# أَبْدَلَتْ (ʔabdalat) /ʔab.da.lat/: third-person feminine singular past active ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabdaltu", "ʔabdala", "ʔabdalta"],
+      "kok_yazilis": "أبدل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبدلين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تبدلين (form IV)\n# تُبْدِلِينَ (tubdilīna) /tub.di.liː.na/: second-person feminine singular non-past active indicative of أَبْدَلَ (ʔabdala)\n# تُبْدَلِينَ (tubdalīna) /tub.da.liː.na/: second-person feminine singular non-past passive indicative of أَبْدَلَ (ʔabdala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubdilīna", "ʔabdala", "tubdalīna"],
+      "kok_yazilis": "أبدل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبدلي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تبدلي (form IV)\n# تُبْدِلِي (tubdilī) /tub.di.liː/: second-person feminine singular non-past active subjunctive/jussive of أَبْدَلَ (ʔabdala)\n# تُبْدَلِي (tubdalī) /tub.da.liː/: second-person feminine singular non-past passive subjunctive/jussive of أَبْدَلَ (ʔabdala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubdilī", "ʔabdala", "tubdalī"],
+      "kok_yazilis": "أبدل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبدلي",
+      "tur": "verb",
+      "baslik": "أَبْدِلِي • (ʔabdilī) (form IV) /ʔab.di.liː/\n# second-person feminine singular imperative of أَبْدَلَ (ʔabdala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabdilī", "ʔabdala"],
+      "kok_yazilis": "أبدل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبدلنا",
+      "tur": "verb",
+      "baslik": "أبدلنا (form IV)\n# أَبْدَلْنَا (ʔabdalnā) /ʔab.dal.naː/: first-person plural past active of أَبْدَلَ (ʔabdala)\n# أُبْدِلْنَا (ʔubdilnā) /ʔub.dil.naː/: first-person plural past passive of أَبْدَلَ (ʔabdala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabdalnā", "ʔabdala", "ʔubdilnā"],
+      "kok_yazilis": "أبدل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نبدل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نبدل (form IV)\n# نُبْدِلُ (nubdilu) /nub.di.lu/: first-person plural non-past active indicative of أَبْدَلَ (ʔabdala)\n# نُبْدَلُ (nubdalu) /nub.da.lu/: first-person plural non-past passive indicative of أَبْدَلَ (ʔabdala)\n# نُبْدِلَ (nubdila) /nub.di.la/: first-person plural non-past active subjunctive of أَبْدَلَ (ʔabdala)\n# نُبْدَلَ (nubdala) /nub.da.la/: first-person plural non-past passive sub",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nubdilu", "ʔabdala", "nubdalu"],
+      "kok_yazilis": "أبدل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبدلتم",
+      "tur": "verb",
+      "baslik": "أبدلتم (form IV)\n# أَبْدَلْتُمْ (ʔabdaltum) /ʔab.dal.tum/: second-person masculine plural past active of أَبْدَلَ (ʔabdala)\n# أُبْدِلْتُمْ (ʔubdiltum) /ʔub.dil.tum/: second-person masculine plural past passive of أَبْدَلَ (ʔabdala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabdaltum", "ʔabdala", "ʔubdiltum"],
+      "kok_yazilis": "أبدل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبدلون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تبدلون (form IV)\n# تُبْدِلُونَ (tubdilūna) /tub.di.luː.na/: second-person masculine plural non-past active indicative of أَبْدَلَ (ʔabdala)\n# تُبْدَلُونَ (tubdalūna) /tub.da.luː.na/: second-person masculine plural non-past passive indicative of أَبْدَلَ (ʔabdala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubdilūna", "ʔabdala", "tubdalūna"],
+      "kok_yazilis": "أبدل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبدلوا",
+      "tur": "verb",
+      "baslik": "أبدلوا (form IV)\n# أَبْدَلُوا (ʔabdalū) /ʔab.da.luː/: third-person masculine plural past active of أَبْدَلَ (ʔabdala)\n# أُبْدِلُوا (ʔubdilū) /ʔub.di.luː/: third-person masculine plural past passive of أَبْدَلَ (ʔabdala)\n# أَبْدِلُوا (ʔabdilū) /ʔab.di.luː/: second-person masculine plural imperative of أَبْدَلَ (ʔabdala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabdalū", "ʔabdala", "ʔubdilū"],
+      "kok_yazilis": "أبدل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبدلون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يبدلون (form IV)\n# يُبْدِلُونَ (yubdilūna) /jub.di.luː.na/: third-person masculine plural non-past active indicative of أَبْدَلَ (ʔabdala)\n# يُبْدَلُونَ (yubdalūna) /jub.da.luː.na/: third-person masculine plural non-past passive indicative of أَبْدَلَ (ʔabdala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubdilūna", "ʔabdala", "yubdalūna"],
+      "kok_yazilis": "أبدل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبدلوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يبدلوا (form IV)\n# يُبْدِلُوا (yubdilū) /jub.di.luː/: third-person masculine plural non-past active subjunctive/jussive of أَبْدَلَ (ʔabdala)\n# يُبْدَلُوا (yubdalū) /jub.da.luː/: third-person masculine plural non-past passive subjunctive/jussive of أَبْدَلَ (ʔabdala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubdilū", "ʔabdala", "yubdalū"],
+      "kok_yazilis": "أبدل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبدلوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تبدلوا (form IV)\n# تُبْدِلُوا (tubdilū) /tub.di.luː/: second-person masculine plural non-past active subjunctive/jussive of أَبْدَلَ (ʔabdala)\n# تُبْدَلُوا (tubdalū) /tub.da.luː/: second-person masculine plural non-past passive subjunctive/jussive of أَبْدَلَ (ʔabdala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubdilū", "ʔabdala", "tubdalū"],
+      "kok_yazilis": "أبدل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبدلتن",
+      "tur": "verb",
+      "baslik": "أبدلتن (form IV)\n# أَبْدَلْتُنَّ (ʔabdaltunna) /ʔab.dal.tun.na/: second-person feminine plural past active of أَبْدَلَ (ʔabdala)\n# أُبْدِلْتُنَّ (ʔubdiltunna) /ʔub.dil.tun.na/: second-person feminine plural past passive of أَبْدَلَ (ʔabdala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabdaltunna", "ʔabdala", "ʔubdiltunna"],
+      "kok_yazilis": "أبدل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبدلن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تبدلن (form IV)\n# تُبْدِلْنَ (tubdilna) /tub.dil.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَبْدَلَ (ʔabdala)\n# تُبْدَلْنَ (tubdalna) /tub.dal.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَبْدَلَ (ʔabdala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubdilna", "ʔabdala", "tubdalna"],
+      "kok_yazilis": "أبدل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبدلن",
+      "tur": "verb",
+      "baslik": "أبدلن (form IV)\n# أَبْدَلْنَ (ʔabdalna) /ʔab.dal.na/: third-person feminine plural past active of أَبْدَلَ (ʔabdala)\n# أُبْدِلْنَ (ʔubdilna) /ʔub.dil.na/: third-person feminine plural past passive of أَبْدَلَ (ʔabdala)\n# أَبْدِلْنَ (ʔabdilna) /ʔab.dil.na/: second-person feminine plural imperative of أَبْدَلَ (ʔabdala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabdalna", "ʔabdala", "ʔubdilna"],
+      "kok_yazilis": "أبدل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبدلن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يبدلن (form IV)\n# يُبْدِلْنَ (yubdilna) /jub.dil.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَبْدَلَ (ʔabdala)\n# يُبْدَلْنَ (yubdalna) /jub.dal.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَبْدَلَ (ʔabdala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubdilna", "ʔabdala", "yubdalna"],
+      "kok_yazilis": "أبدل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبدلتما",
+      "tur": "verb",
+      "baslik": "أبدلتما (form IV)\n# أَبْدَلْتُمَا (ʔabdaltumā) /ʔab.dal.tu.maː/: second-person dual past active of أَبْدَلَ (ʔabdala)\n# أُبْدِلْتُمَا (ʔubdiltumā) /ʔub.dil.tu.maː/: second-person dual past passive of أَبْدَلَ (ʔabdala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabdaltumā", "ʔabdala", "ʔubdiltumā"],
+      "kok_yazilis": "أبدل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبدلتا",
+      "tur": "verb",
+      "baslik": "أبدلتا (form IV)\n# أَبْدَلَتَا (ʔabdalatā) /ʔab.da.la.taː/: third-person feminine dual past active of أَبْدَلَ (ʔabdala)\n# أُبْدِلَتَا (ʔubdilatā) /ʔub.di.la.taː/: third-person feminine dual past passive of أَبْدَلَ (ʔabdala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabdalatā", "ʔabdala", "ʔubdilatā"],
+      "kok_yazilis": "أبدل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبدلان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تبدلان (form IV)\n# تُبْدِلَانِ (tubdilāni) /tub.di.laː.ni/: inflection of أَبْدَلَ (ʔabdala):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُبْدَلَانِ (tubdalāni) /tub.da.laː.ni/: inflection of أَبْدَلَ (ʔabdala):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubdilāni", "ʔabdala", "tubdalāni"],
+      "kok_yazilis": "أبدل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبدلا",
+      "tur": "verb",
+      "baslik": "أبدلا (form IV)\n# أَبْدَلَا (ʔabdalā) /ʔab.da.laː/: third-person masculine dual past active of أَبْدَلَ (ʔabdala)\n# أُبْدِلَا (ʔubdilā) /ʔub.di.laː/: third-person masculine dual past passive of أَبْدَلَ (ʔabdala)\n# أَبْدِلَا (ʔabdilā) /ʔab.di.laː/: second-person dual imperative of أَبْدَلَ (ʔabdala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabdalā", "ʔabdala", "ʔubdilā"],
+      "kok_yazilis": "أبدل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبدلان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يبدلان (form IV)\n# يُبْدِلَانِ (yubdilāni) /jub.di.laː.ni/: third-person masculine dual non-past active indicative of أَبْدَلَ (ʔabdala)\n# يُبْدَلَانِ (yubdalāni) /jub.da.laː.ni/: third-person masculine dual non-past passive indicative of أَبْدَلَ (ʔabdala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubdilāni", "ʔabdala", "yubdalāni"],
+      "kok_yazilis": "أبدل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبدلا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يبدلا (form IV)\n# يُبْدِلَا (yubdilā) /jub.di.laː/: third-person masculine dual non-past active subjunctive/jussive of أَبْدَلَ (ʔabdala)\n# يُبْدَلَا (yubdalā) /jub.da.laː/: third-person masculine dual non-past passive subjunctive/jussive of أَبْدَلَ (ʔabdala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubdilā", "ʔabdala", "yubdalā"],
+      "kok_yazilis": "أبدل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبدلا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تبدلا (form IV)\n# تُبْدِلَا (tubdilā) /tub.di.laː/: inflection of أَبْدَلَ (ʔabdala):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُبْدَلَا (tubdalā) /tub.da.laː/: inflection of أَبْدَلَ (ʔabdala):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/ju",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubdilā", "ʔabdala", "tubdalā"],
+      "kok_yazilis": "أبدل",
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ءبدل", "r6"]
+  ],
+  "mana": {
     "ince": "change_shape.v.01",
     "orta": "verb.change",
     "ust": "fiil ve hadise",
@@ -349,16 +283,11 @@
     "dayanak_tanim": "assume a different shape or form",
     "synset_sayisi": 14
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "change.v.01",
     "change.v.02",
     "change.v.03",
@@ -374,12 +303,10 @@
     "translate.v.02",
     "turn.v.07"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

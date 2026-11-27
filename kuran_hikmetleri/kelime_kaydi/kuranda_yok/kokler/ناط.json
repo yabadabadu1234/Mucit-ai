@@ -1,707 +1,503 @@
 {
   "kok": "ناط",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ناط", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "نط",
-        "u": "نط",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نُطْ • (nuṭ) (form I) /nutˤ/\n# second-person masculine singular imperative of نَاطَ (nāṭa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuṭ", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "أناط",
-        "u": "أناط",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أناط (form I)\n# أُنَاطُ (ʔunāṭu) /ʔu.naː.tˤu/: first-person singular non-past passive indicative of نَاطَ (nāṭa)\n# أُنَاطَ (ʔunāṭa) /ʔu.naː.tˤa/: first-person singular non-past passive subjunctive of نَاطَ (nāṭa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔunāṭu", "nāṭa", "ʔunāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوط",
-        "u": "تنوط",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تنوط (form I)\n# تَنُوطُ (tanūṭu) /ta.nuː.tˤu/: inflection of نَاطَ (nāṭa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَنُوطَ (tanūṭa) /ta.nuː.tˤa/: inflection of نَاطَ (nāṭa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūṭu", "nāṭa", "tanūṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تنطن",
-        "u": "تنطن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تنطن (form I)\n# تَنُطْنَ (tanuṭna) /ta.nutˤ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of نَاطَ (nāṭa)\n# تُنَطْنَ (tunaṭna) /tu.natˤ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanuṭna", "nāṭa", "tunaṭna"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تناطين",
-        "u": "تناطين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُنَاطِينَ • (tunāṭīna) (form I) /tu.naː.tˤiː.na/\n# second-person feminine singular non-past passive indicative of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tunāṭīna", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تناط",
-        "u": "تناط",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تناط (form I)\n# تُنَاطُ (tunāṭu) /tu.naː.tˤu/: inflection of نَاطَ (nāṭa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُنَاطَ (tunāṭa) /tu.naː.tˤa/: inflection of نَاطَ (nāṭa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tunāṭu", "nāṭa", "tunāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "ينطن",
-        "u": "ينطن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ينطن (form I)\n# يَنُطْنَ (yanuṭna) /ja.nutˤ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of نَاطَ (nāṭa)\n# يُنَطْنَ (yunaṭna) /ju.natˤ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanuṭna", "nāṭa", "yunaṭna"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تناطان",
-        "u": "تناطان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُنَاطَانِ • (tunāṭāni) (form I) /tu.naː.tˤaː.ni/\n# inflection of نَاطَ (nāṭa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tunāṭāni", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "يناطان",
-        "u": "يناطان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُنَاطَانِ • (yunāṭāni) (form I) /ju.naː.tˤaː.ni/\n# third-person masculine dual non-past passive indicative of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yunāṭāni", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "نناط",
-        "u": "نناط",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نناط (form I)\n# نُنَاطُ (nunāṭu) /nu.naː.tˤu/: first-person plural non-past passive indicative of نَاطَ (nāṭa)\n# نُنَاطَ (nunāṭa) /nu.naː.tˤa/: first-person plural non-past passive subjunctive of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nunāṭu", "nāṭa", "nunāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "يناطون",
-        "u": "يناطون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُنَاطُونَ • (yunāṭūna) (form I) /ju.naː.tˤuː.na/\n# third-person masculine plural non-past passive indicative of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yunāṭūna", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تناطون",
-        "u": "تناطون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُنَاطُونَ • (tunāṭūna) (form I) /tu.naː.tˤuː.na/\n# second-person masculine plural non-past passive indicative of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tunāṭūna", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "يناط",
-        "u": "يناط",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يناط (form I)\n# يُنَاطُ (yunāṭu) /ju.naː.tˤu/: third-person masculine singular non-past passive indicative of نَاطَ (nāṭa)\n# يُنَاطَ (yunāṭa) /ju.naː.tˤa/: third-person masculine singular non-past passive subjunctive of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yunāṭu", "nāṭa", "yunāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تناطا",
-        "u": "تناطا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُنَاطَا • (tunāṭā) (form I) /tu.naː.tˤaː/\n# inflection of نَاطَ (nāṭa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tunāṭā", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "يناطا",
-        "u": "يناطا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُنَاطَا • (yunāṭā) (form I) /ju.naː.tˤaː/\n# third-person masculine dual non-past passive subjunctive/jussive of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yunāṭā", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "يناطوا",
-        "u": "يناطوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُنَاطُوا • (yunāṭū) (form I) /ju.naː.tˤuː/\n# third-person masculine plural non-past passive subjunctive/jussive of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yunāṭū", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "أنط",
-        "u": "أنط",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أنط (form I)\n# أَنُطْ (ʔanuṭ) /ʔa.nutˤ/: first-person singular non-past active jussive of نَاطَ (nāṭa)\n# أُنَطْ (ʔunaṭ) /ʔu.natˤ/: first-person singular non-past passive jussive of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔanuṭ", "nāṭa", "ʔunaṭ"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تناطي",
-        "u": "تناطي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُنَاطِي • (tunāṭī) (form I) /tu.naː.tˤiː/\n# second-person feminine singular non-past passive subjunctive/jussive of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tunāṭī", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تناطوا",
-        "u": "تناطوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُنَاطُوا • (tunāṭū) (form I) /tu.naː.tˤuː/\n# second-person masculine plural non-past passive subjunctive/jussive of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tunāṭū", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "ننط",
-        "u": "ننط",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "ننط (form I)\n# نَنُطْ (nanuṭ) /na.nutˤ/: first-person plural non-past active jussive of نَاطَ (nāṭa)\n# نُنَطْ (nunaṭ) /nu.natˤ/: first-person plural non-past passive jussive of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nanuṭ", "nāṭa", "nunaṭ"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "ينط",
-        "u": "ينط",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "ينط (form I)\n# يَنُطْ (yanuṭ) /ja.nutˤ/: third-person masculine singular non-past active jussive of نَاطَ (nāṭa)\n# يُنَطْ (yunaṭ) /ju.natˤ/: third-person masculine singular non-past passive jussive of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanuṭ", "nāṭa", "yunaṭ"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تنط",
-        "u": "تنط",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تنط (form I)\n# تَنُطْ (tanuṭ) /ta.nutˤ/: inflection of نَاطَ (nāṭa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُنَطْ (tunaṭ) /tu.natˤ/: inflection of نَاطَ (nāṭa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanuṭ", "nāṭa", "tunaṭ"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "نطن",
-        "u": "نطن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نطن (form I)\n# نُطْنَ (nuṭna) /nutˤ.na/: inflection of نَاطَ (nāṭa):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# نِطْنَ (niṭna) /nitˤ.na/: third-person feminine plural past passive of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuṭna", "nāṭa", "niṭna"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "نطتما",
-        "u": "نطتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نطتما (form I)\n# نُطْتُمَا (nuṭtumā) /nutˤ.tu.maː/: second-person dual past active of نَاطَ (nāṭa)\n# نِطْتُمَا (niṭtumā) /nitˤ.tu.maː/: second-person dual past passive of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuṭtumā", "nāṭa", "niṭtumā"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "ناطت",
-        "u": "ناطت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَاطَتْ • (nāṭat) (form I) /naː.tˤat/\n# third-person feminine singular past active of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nāṭat", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "ناطا",
-        "u": "ناطا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَاطَا • (nāṭā) (form I) /naː.tˤaː/\n# third-person masculine dual past active of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nāṭā", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "ناطتا",
-        "u": "ناطتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَاطَتَا • (nāṭatā) (form I) /naː.tˤa.taː/\n# third-person feminine dual past active of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nāṭatā", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "نطنا",
-        "u": "نطنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نطنا (form I)\n# نُطْنَا (nuṭnā) /nutˤ.naː/: first-person plural past active of نَاطَ (nāṭa)\n# نِطْنَا (niṭnā) /nitˤ.naː/: first-person plural past passive of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuṭnā", "nāṭa", "niṭnā"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "ناطوا",
-        "u": "ناطوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَاطُوا • (nāṭū) (form I) /naː.tˤuː/\n# third-person masculine plural past active of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nāṭū", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "نطتن",
-        "u": "نطتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نطتن (form I)\n# نُطْتُنَّ (nuṭtunna) /nutˤ.tun.na/: second-person feminine plural past active of نَاطَ (nāṭa)\n# نِطْتُنَّ (niṭtunna) /nitˤ.tun.na/: second-person feminine plural past passive of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuṭtunna", "nāṭa", "niṭtunna"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "نيط",
-        "u": "نيط",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نِيطَ • (nīṭa) (form I) /niː.tˤa/\n# third-person masculine singular past passive of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nīṭa", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "نيطت",
-        "u": "نيطت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نِيطَتْ • (nīṭat) (form I) /niː.tˤat/\n# third-person feminine singular past passive of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nīṭat", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "نيطا",
-        "u": "نيطا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نِيطَا • (nīṭā) (form I) /niː.tˤaː/\n# third-person masculine dual past passive of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nīṭā", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "نيطتا",
-        "u": "نيطتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نِيطَتَا • (nīṭatā) (form I) /niː.tˤa.taː/\n# third-person feminine dual past passive of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nīṭatā", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "نطت",
-        "u": "نطت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نطت (form I)\n# نُطْتُ (nuṭtu) /nutˤ.tu/: first-person singular past active of نَاطَ (nāṭa)\n# نُطْتَ (nuṭta) /nutˤ.ta/: second-person masculine singular past active of نَاطَ (nāṭa)\n# نُطْتِ (nuṭti) /nutˤ.ti/: second-person feminine singular past active of نَاطَ (nāṭa)\n# نِطْتُ (niṭtu) /nitˤ.tu/: first-person singular past passive of نَاطَ (nāṭa)\n# نِطْتَ (niṭta) /nitˤ.ta/: second-person masculine s",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuṭtu", "nāṭa", "nuṭta"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "نطتم",
-        "u": "نطتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نطتم (form I)\n# نُطْتُمْ (nuṭtum) /nutˤ.tum/: second-person masculine plural past active of نَاطَ (nāṭa)\n# نِطْتُمْ (niṭtum) /nitˤ.tum/: second-person masculine plural past passive of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuṭtum", "nāṭa", "niṭtum"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "نيطوا",
-        "u": "نيطوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نِيطُوا • (nīṭū) (form I) /niː.tˤuː/\n# third-person masculine plural past passive of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nīṭū", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "ينوطان",
-        "u": "ينوطان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَنُوطَانِ • (yanūṭāni) (form I) /ja.nuː.tˤaː.ni/\n# third-person masculine dual non-past active indicative of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanūṭāni", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوطان",
-        "u": "تنوطان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَنُوطَانِ • (tanūṭāni) (form I) /ta.nuː.tˤaː.ni/\n# inflection of نَاطَ (nāṭa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūṭāni", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "ينوط",
-        "u": "ينوط",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ينوط (form I)\n# يَنُوطُ (yanūṭu) /ja.nuː.tˤu/: third-person masculine singular non-past active indicative of نَاطَ (nāṭa)\n# يَنُوطَ (yanūṭa) /ja.nuː.tˤa/: third-person masculine singular non-past active subjunctive of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanūṭu", "nāṭa", "yanūṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "أنوط",
-        "u": "أنوط",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أنوط (form I)\n# أَنُوطُ (ʔanūṭu) /ʔa.nuː.tˤu/: first-person singular non-past active indicative of نَاطَ (nāṭa)\n# أَنُوطَ (ʔanūṭa) /ʔa.nuː.tˤa/: first-person singular non-past active subjunctive of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔanūṭu", "nāṭa", "ʔanūṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوطين",
-        "u": "تنوطين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَنُوطِينَ • (tanūṭīna) (form I) /ta.nuː.tˤiː.na/\n# second-person feminine singular non-past active indicative of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūṭīna", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "ننوط",
-        "u": "ننوط",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ننوط (form I)\n# نَنُوطُ (nanūṭu) /na.nuː.tˤu/: first-person plural non-past active indicative of نَاطَ (nāṭa)\n# نَنُوطَ (nanūṭa) /na.nuː.tˤa/: first-person plural non-past active subjunctive of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nanūṭu", "nāṭa", "nanūṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوطون",
-        "u": "تنوطون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَنُوطُونَ • (tanūṭūna) (form I) /ta.nuː.tˤuː.na/\n# second-person masculine plural non-past active indicative of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūṭūna", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوطا",
-        "u": "تنوطا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَنُوطَا • (tanūṭā) (form I) /ta.nuː.tˤaː/\n# inflection of نَاطَ (nāṭa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūṭā", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "ينوطا",
-        "u": "ينوطا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَنُوطَا • (yanūṭā) (form I) /ja.nuː.tˤaː/\n# third-person masculine dual non-past active subjunctive/jussive of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanūṭā", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوطوا",
-        "u": "تنوطوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَنُوطُوا • (tanūṭū) (form I) /ta.nuː.tˤuː/\n# second-person masculine plural non-past active subjunctive/jussive of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūṭū", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوطي",
-        "u": "تنوطي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَنُوطِي • (tanūṭī) (form I) /ta.nuː.tˤiː/\n# second-person feminine singular non-past active subjunctive/jussive of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūṭī", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "ينوطوا",
-        "u": "ينوطوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَنُوطُوا • (yanūṭū) (form I) /ja.nuː.tˤuː/\n# third-person masculine plural non-past active subjunctive/jussive of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanūṭū", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "نوطي",
-        "u": "نوطي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نُوطِي • (nūṭī) (form I) /nuː.tˤiː/\n# second-person feminine singular imperative of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nūṭī", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "نوطا",
-        "u": "نوطا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نُوطَا • (nūṭā) (form I) /nuː.tˤaː/\n# second-person dual imperative of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nūṭā", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "نوطوا",
-        "u": "نوطوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نُوطُوا • (nūṭū) (form I) /nuː.tˤuː/\n# second-person masculine plural imperative of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nūṭū", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      },
-      {
-        "w": "ينوطون",
-        "u": "ينوطون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَنُوطُونَ • (yanūṭūna) (form I) /ja.nuː.tˤuː.na/\n# third-person masculine plural non-past active indicative of نَاطَ (nāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanūṭūna", "nāṭa"],
-        "k": "ناط",
-        "yol": "kök"
-      }
-    ],
-    "tercume": {}
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "نط",
+  "ses": {
     "harf": "ن",
+    "fasil": "نط",
     "mahrec": "zelakiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "نط",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نُطْ • (nuṭ) (form I) /nutˤ/\n# second-person masculine singular imperative of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuṭ", "nāṭa"]
+    },
+    {
+      "madde": "أناط",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أناط (form I)\n# أُنَاطُ (ʔunāṭu) /ʔu.naː.tˤu/: first-person singular non-past passive indicative of نَاطَ (nāṭa)\n# أُنَاطَ (ʔunāṭa) /ʔu.naː.tˤa/: first-person singular non-past passive subjunctive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔunāṭu", "nāṭa", "ʔunāṭa"]
+    },
+    {
+      "madde": "تنوط",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تنوط (form I)\n# تَنُوطُ (tanūṭu) /ta.nuː.tˤu/: inflection of نَاطَ (nāṭa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَنُوطَ (tanūṭa) /ta.nuː.tˤa/: inflection of نَاطَ (nāṭa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūṭu", "nāṭa", "tanūṭa"]
+    },
+    {
+      "madde": "تنطن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تنطن (form I)\n# تَنُطْنَ (tanuṭna) /ta.nutˤ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of نَاطَ (nāṭa)\n# تُنَطْنَ (tunaṭna) /tu.natˤ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanuṭna", "nāṭa", "tunaṭna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تناطين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُنَاطِينَ • (tunāṭīna) (form I) /tu.naː.tˤiː.na/\n# second-person feminine singular non-past passive indicative of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tunāṭīna", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تناط",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تناط (form I)\n# تُنَاطُ (tunāṭu) /tu.naː.tˤu/: inflection of نَاطَ (nāṭa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُنَاطَ (tunāṭa) /tu.naː.tˤa/: inflection of نَاطَ (nāṭa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tunāṭu", "nāṭa", "tunāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينطن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ينطن (form I)\n# يَنُطْنَ (yanuṭna) /ja.nutˤ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of نَاطَ (nāṭa)\n# يُنَطْنَ (yunaṭna) /ju.natˤ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanuṭna", "nāṭa", "yunaṭna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تناطان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُنَاطَانِ • (tunāṭāni) (form I) /tu.naː.tˤaː.ni/\n# inflection of نَاطَ (nāṭa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tunāṭāni", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يناطان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُنَاطَانِ • (yunāṭāni) (form I) /ju.naː.tˤaː.ni/\n# third-person masculine dual non-past passive indicative of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yunāṭāni", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نناط",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نناط (form I)\n# نُنَاطُ (nunāṭu) /nu.naː.tˤu/: first-person plural non-past passive indicative of نَاطَ (nāṭa)\n# نُنَاطَ (nunāṭa) /nu.naː.tˤa/: first-person plural non-past passive subjunctive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nunāṭu", "nāṭa", "nunāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يناطون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُنَاطُونَ • (yunāṭūna) (form I) /ju.naː.tˤuː.na/\n# third-person masculine plural non-past passive indicative of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yunāṭūna", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تناطون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُنَاطُونَ • (tunāṭūna) (form I) /tu.naː.tˤuː.na/\n# second-person masculine plural non-past passive indicative of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tunāṭūna", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يناط",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يناط (form I)\n# يُنَاطُ (yunāṭu) /ju.naː.tˤu/: third-person masculine singular non-past passive indicative of نَاطَ (nāṭa)\n# يُنَاطَ (yunāṭa) /ju.naː.tˤa/: third-person masculine singular non-past passive subjunctive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yunāṭu", "nāṭa", "yunāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تناطا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُنَاطَا • (tunāṭā) (form I) /tu.naː.tˤaː/\n# inflection of نَاطَ (nāṭa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tunāṭā", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يناطا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُنَاطَا • (yunāṭā) (form I) /ju.naː.tˤaː/\n# third-person masculine dual non-past passive subjunctive/jussive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yunāṭā", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يناطوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُنَاطُوا • (yunāṭū) (form I) /ju.naː.tˤuː/\n# third-person masculine plural non-past passive subjunctive/jussive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yunāṭū", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أنط",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أنط (form I)\n# أَنُطْ (ʔanuṭ) /ʔa.nutˤ/: first-person singular non-past active jussive of نَاطَ (nāṭa)\n# أُنَطْ (ʔunaṭ) /ʔu.natˤ/: first-person singular non-past passive jussive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔanuṭ", "nāṭa", "ʔunaṭ"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تناطي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُنَاطِي • (tunāṭī) (form I) /tu.naː.tˤiː/\n# second-person feminine singular non-past passive subjunctive/jussive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tunāṭī", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تناطوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُنَاطُوا • (tunāṭū) (form I) /tu.naː.tˤuː/\n# second-person masculine plural non-past passive subjunctive/jussive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tunāṭū", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ننط",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "ننط (form I)\n# نَنُطْ (nanuṭ) /na.nutˤ/: first-person plural non-past active jussive of نَاطَ (nāṭa)\n# نُنَطْ (nunaṭ) /nu.natˤ/: first-person plural non-past passive jussive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nanuṭ", "nāṭa", "nunaṭ"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينط",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "ينط (form I)\n# يَنُطْ (yanuṭ) /ja.nutˤ/: third-person masculine singular non-past active jussive of نَاطَ (nāṭa)\n# يُنَطْ (yunaṭ) /ju.natˤ/: third-person masculine singular non-past passive jussive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanuṭ", "nāṭa", "yunaṭ"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنط",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تنط (form I)\n# تَنُطْ (tanuṭ) /ta.nutˤ/: inflection of نَاطَ (nāṭa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُنَطْ (tunaṭ) /tu.natˤ/: inflection of نَاطَ (nāṭa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanuṭ", "nāṭa", "tunaṭ"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نطن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نطن (form I)\n# نُطْنَ (nuṭna) /nutˤ.na/: inflection of نَاطَ (nāṭa):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# نِطْنَ (niṭna) /nitˤ.na/: third-person feminine plural past passive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuṭna", "nāṭa", "niṭna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نطتما",
+      "tur": "verb",
+      "baslik": "نطتما (form I)\n# نُطْتُمَا (nuṭtumā) /nutˤ.tu.maː/: second-person dual past active of نَاطَ (nāṭa)\n# نِطْتُمَا (niṭtumā) /nitˤ.tu.maː/: second-person dual past passive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuṭtumā", "nāṭa", "niṭtumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ناطت",
+      "tur": "verb",
+      "baslik": "نَاطَتْ • (nāṭat) (form I) /naː.tˤat/\n# third-person feminine singular past active of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nāṭat", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ناطا",
+      "tur": "verb",
+      "baslik": "نَاطَا • (nāṭā) (form I) /naː.tˤaː/\n# third-person masculine dual past active of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nāṭā", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ناطتا",
+      "tur": "verb",
+      "baslik": "نَاطَتَا • (nāṭatā) (form I) /naː.tˤa.taː/\n# third-person feminine dual past active of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nāṭatā", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نطنا",
+      "tur": "verb",
+      "baslik": "نطنا (form I)\n# نُطْنَا (nuṭnā) /nutˤ.naː/: first-person plural past active of نَاطَ (nāṭa)\n# نِطْنَا (niṭnā) /nitˤ.naː/: first-person plural past passive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuṭnā", "nāṭa", "niṭnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ناطوا",
+      "tur": "verb",
+      "baslik": "نَاطُوا • (nāṭū) (form I) /naː.tˤuː/\n# third-person masculine plural past active of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nāṭū", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نطتن",
+      "tur": "verb",
+      "baslik": "نطتن (form I)\n# نُطْتُنَّ (nuṭtunna) /nutˤ.tun.na/: second-person feminine plural past active of نَاطَ (nāṭa)\n# نِطْتُنَّ (niṭtunna) /nitˤ.tun.na/: second-person feminine plural past passive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuṭtunna", "nāṭa", "niṭtunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نيط",
+      "tur": "verb",
+      "baslik": "نِيطَ • (nīṭa) (form I) /niː.tˤa/\n# third-person masculine singular past passive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nīṭa", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نيطت",
+      "tur": "verb",
+      "baslik": "نِيطَتْ • (nīṭat) (form I) /niː.tˤat/\n# third-person feminine singular past passive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nīṭat", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نيطا",
+      "tur": "verb",
+      "baslik": "نِيطَا • (nīṭā) (form I) /niː.tˤaː/\n# third-person masculine dual past passive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nīṭā", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نيطتا",
+      "tur": "verb",
+      "baslik": "نِيطَتَا • (nīṭatā) (form I) /niː.tˤa.taː/\n# third-person feminine dual past passive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nīṭatā", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نطت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نطت (form I)\n# نُطْتُ (nuṭtu) /nutˤ.tu/: first-person singular past active of نَاطَ (nāṭa)\n# نُطْتَ (nuṭta) /nutˤ.ta/: second-person masculine singular past active of نَاطَ (nāṭa)\n# نُطْتِ (nuṭti) /nutˤ.ti/: second-person feminine singular past active of نَاطَ (nāṭa)\n# نِطْتُ (niṭtu) /nitˤ.tu/: first-person singular past passive of نَاطَ (nāṭa)\n# نِطْتَ (niṭta) /nitˤ.ta/: second-person masculine s",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuṭtu", "nāṭa", "nuṭta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نطتم",
+      "tur": "verb",
+      "baslik": "نطتم (form I)\n# نُطْتُمْ (nuṭtum) /nutˤ.tum/: second-person masculine plural past active of نَاطَ (nāṭa)\n# نِطْتُمْ (niṭtum) /nitˤ.tum/: second-person masculine plural past passive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuṭtum", "nāṭa", "niṭtum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نيطوا",
+      "tur": "verb",
+      "baslik": "نِيطُوا • (nīṭū) (form I) /niː.tˤuː/\n# third-person masculine plural past passive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nīṭū", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينوطان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَنُوطَانِ • (yanūṭāni) (form I) /ja.nuː.tˤaː.ni/\n# third-person masculine dual non-past active indicative of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanūṭāni", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنوطان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَنُوطَانِ • (tanūṭāni) (form I) /ta.nuː.tˤaː.ni/\n# inflection of نَاطَ (nāṭa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūṭāni", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينوط",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ينوط (form I)\n# يَنُوطُ (yanūṭu) /ja.nuː.tˤu/: third-person masculine singular non-past active indicative of نَاطَ (nāṭa)\n# يَنُوطَ (yanūṭa) /ja.nuː.tˤa/: third-person masculine singular non-past active subjunctive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanūṭu", "nāṭa", "yanūṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أنوط",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أنوط (form I)\n# أَنُوطُ (ʔanūṭu) /ʔa.nuː.tˤu/: first-person singular non-past active indicative of نَاطَ (nāṭa)\n# أَنُوطَ (ʔanūṭa) /ʔa.nuː.tˤa/: first-person singular non-past active subjunctive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔanūṭu", "nāṭa", "ʔanūṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنوطين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَنُوطِينَ • (tanūṭīna) (form I) /ta.nuː.tˤiː.na/\n# second-person feminine singular non-past active indicative of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūṭīna", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ننوط",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ننوط (form I)\n# نَنُوطُ (nanūṭu) /na.nuː.tˤu/: first-person plural non-past active indicative of نَاطَ (nāṭa)\n# نَنُوطَ (nanūṭa) /na.nuː.tˤa/: first-person plural non-past active subjunctive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nanūṭu", "nāṭa", "nanūṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنوطون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَنُوطُونَ • (tanūṭūna) (form I) /ta.nuː.tˤuː.na/\n# second-person masculine plural non-past active indicative of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūṭūna", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنوطا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَنُوطَا • (tanūṭā) (form I) /ta.nuː.tˤaː/\n# inflection of نَاطَ (nāṭa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūṭā", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينوطا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَنُوطَا • (yanūṭā) (form I) /ja.nuː.tˤaː/\n# third-person masculine dual non-past active subjunctive/jussive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanūṭā", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنوطوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَنُوطُوا • (tanūṭū) (form I) /ta.nuː.tˤuː/\n# second-person masculine plural non-past active subjunctive/jussive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūṭū", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنوطي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَنُوطِي • (tanūṭī) (form I) /ta.nuː.tˤiː/\n# second-person feminine singular non-past active subjunctive/jussive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūṭī", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينوطوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَنُوطُوا • (yanūṭū) (form I) /ja.nuː.tˤuː/\n# third-person masculine plural non-past active subjunctive/jussive of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanūṭū", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوطي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نُوطِي • (nūṭī) (form I) /nuː.tˤiː/\n# second-person feminine singular imperative of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nūṭī", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوطا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نُوطَا • (nūṭā) (form I) /nuː.tˤaː/\n# second-person dual imperative of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nūṭā", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوطوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نُوطُوا • (nūṭū) (form I) /nuː.tˤuː/\n# second-person masculine plural imperative of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nūṭū", "nāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينوطون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَنُوطُونَ • (yanūṭūna) (form I) /ja.nuː.tˤuː.na/\n# third-person masculine plural non-past active indicative of نَاطَ (nāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanūṭūna", "nāṭa"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ناط", "r7"]
+  ],
+  "mana": {
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
@@ -709,22 +505,15 @@
     "dayanak_tanim": "the act of jumping; propelling yourself off the ground",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["act.n.02"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["act.n.02"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

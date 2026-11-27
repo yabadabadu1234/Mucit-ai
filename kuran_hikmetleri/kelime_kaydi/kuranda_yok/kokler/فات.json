@@ -1,441 +1,322 @@
 {
   "kok": "فات",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "فات", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "نفت",
-        "u": "نفت",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نفت (form I)\n# نَفُتْ (nafut) /na.fut/: first-person plural non-past active jussive of فَاتَ (fāta)\n# نُفَتْ (nufat) /nu.fat/: first-person plural non-past passive jussive of فَاتَ (fāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nafut", "fāta", "nufat"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "تفت",
-        "u": "تفت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تفت (form I)\n# تَفُتْ (tafut) /ta.fut/: inflection of فَاتَ (fāta):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُفَتْ (tufat) /tu.fat/: inflection of فَاتَ (fāta):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tafut", "fāta", "tufat"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "فتن",
-        "u": "فتن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "فتن (form I)\n# فُتُّنَّ (futtunna) /fut.tun.na/: second-person feminine plural past active of فَاتَ (fāta)\n# فُتْنَ (futna) /fut.na/: inflection of فَاتَ (fāta):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# فِتُّنَّ (fittunna) /fit.tun.na/: second-person feminine plural past passive of فَاتَ (fāta)\n# فِتْنَ (fitna) /fit.na/: third-person feminine plural",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["futtunna", "fāta", "futna"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "نفوت",
-        "u": "نفوت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نفوت (form I)\n# نَفُوتُ (nafūtu) /na.fuː.tu/: first-person plural non-past active indicative of فَاتَ (fāta)\n# نَفُوتَ (nafūta) /na.fuː.ta/: first-person plural non-past active subjunctive of فَاتَ (fāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nafūtu", "fāta", "nafūta"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "فت",
-        "u": "فت",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "فت (form I)\n# فُتُّ (futtu) /fut.tu/: first-person singular past active of فَاتَ (fāta)\n# فُتَّ (futta) /fut.ta/: second-person masculine singular past active of فَاتَ (fāta)\n# فُتِّ (futti) /fut.ti/: second-person feminine singular past active of فَاتَ (fāta)\n# فِتُّ (fittu) /fit.tu/: first-person singular past passive of فَاتَ (fāta)\n# فِتَّ (fitta) /fit.ta/: second-person masculine singular pas",
-        "tag": ["form-i", "no-gloss", "transitive"],
-        "r": ["futtu", "fāta", "futta"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "يفوت",
-        "u": "يفوت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يفوت (form I)\n# يَفُوتُ (yafūtu) /ja.fuː.tu/: third-person masculine singular non-past active indicative of فَاتَ (fāta)\n# يَفُوتَ (yafūta) /ja.fuː.ta/: third-person masculine singular non-past active subjunctive of فَاتَ (fāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yafūtu", "fāta", "yafūta"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "تفوت",
-        "u": "تفوت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تفوت (form I)\n# تَفُوتُ (tafūtu) /ta.fuː.tu/: inflection of فَاتَ (fāta):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَفُوتَ (tafūta) /ta.fuː.ta/: inflection of فَاتَ (fāta):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tafūtu", "fāta", "tafūta"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "تفتن",
-        "u": "تفتن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تفتن (form I)\n# تَفُتْنَ (tafutna) /ta.fut.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of فَاتَ (fāta)\n# تُفَتْنَ (tufatna) /tu.fat.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of فَاتَ (fāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tafutna", "fāta", "tufatna"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "أفت",
-        "u": "أفت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أفت (form I)\n# أَفُتْ (ʔafut) /ʔa.fut/: first-person singular non-past active jussive of فَاتَ (fāta)\n# أُفَتْ (ʔufat) /ʔu.fat/: first-person singular non-past passive jussive of فَاتَ (fāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔafut", "fāta", "ʔufat"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "يفت",
-        "u": "يفت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يفت (form I)\n# يَفُتْ (yafut) /ja.fut/: third-person masculine singular non-past active jussive of فَاتَ (fāta)\n# يُفَتْ (yufat) /ju.fat/: third-person masculine singular non-past passive jussive of فَاتَ (fāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yafut", "fāta", "yufat"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "فاتتا",
-        "u": "فاتتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فَاتَتَا • (fātatā) (form I) /faː.ta.taː/\n# third-person feminine dual past active of فَاتَ (fāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["fātatā", "fāta"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "فاتت",
-        "u": "فاتت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فَاتَتْ • (fātat) (form I) /faː.tat/\n# third-person feminine singular past active of فَاتَ (fāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["fātat", "fāta"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "فتما",
-        "u": "فتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فتما (form I)\n# فُتُّمَا (futtumā) /fut.tu.maː/: second-person dual past active of فَاتَ (fāta)\n# فِتُّمَا (fittumā) /fit.tu.maː/: second-person dual past passive of فَاتَ (fāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["futtumā", "fāta", "fittumā"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "فاتا",
-        "u": "فاتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فَاتَا • (fātā) (form I) /faː.taː/\n# third-person masculine dual past active of فَاتَ (fāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["fātā", "fāta"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "فتم",
-        "u": "فتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فتم (form I)\n# فُتُّمْ (futtum) /fut.tum/: second-person masculine plural past active of فَاتَ (fāta)\n# فِتُّمْ (fittum) /fit.tum/: second-person masculine plural past passive of فَاتَ (fāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["futtum", "fāta", "fittum"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "فاتوا",
-        "u": "فاتوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فَاتُوا • (fātū) (form I) /faː.tuː/\n# third-person masculine plural past active of فَاتَ (fāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["fātū", "fāta"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "تفوتين",
-        "u": "تفوتين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَفُوتِينَ • (tafūtīna) (form I) /ta.fuː.tiː.na/\n# second-person feminine singular non-past active indicative of فَاتَ (fāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tafūtīna", "fāta"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "فتنا",
-        "u": "فتنا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "فتنا (form I)\n# فُتْنَا (futnā) /fut.naː/: first-person plural past active of فَاتَ (fāta)\n# فِتْنَا (fitnā) /fit.naː/: first-person plural past passive of فَاتَ (fāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["futnā", "fāta", "fitnā"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "أفوت",
-        "u": "أفوت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أفوت (form I)\n# أَفُوتُ (ʔafūtu) /ʔa.fuː.tu/: first-person singular non-past active indicative of فَاتَ (fāta)\n# أَفُوتَ (ʔafūta) /ʔa.fuː.ta/: first-person singular non-past active subjunctive of فَاتَ (fāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔafūtu", "fāta", "ʔafūta"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "تفوتان",
-        "u": "تفوتان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَفُوتَانِ • (tafūtāni) (form I) /ta.fuː.taː.ni/\n# inflection of فَاتَ (fāta):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tafūtāni", "fāta"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "يفوتان",
-        "u": "يفوتان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَفُوتَانِ • (yafūtāni) (form I) /ja.fuː.taː.ni/\n# third-person masculine dual non-past active indicative of فَاتَ (fāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yafūtāni", "fāta"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "يفتن",
-        "u": "يفتن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يفتن (form I)\n# يَفُتْنَ (yafutna) /ja.fut.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of فَاتَ (fāta)\n# يُفَتْنَ (yufatna) /ju.fat.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of فَاتَ (fāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yafutna", "fāta", "yufatna"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "تفوتون",
-        "u": "تفوتون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَفُوتُونَ • (tafūtūna) (form I) /ta.fuː.tuː.na/\n# second-person masculine plural non-past active indicative of فَاتَ (fāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tafūtūna", "fāta"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "يفوتون",
-        "u": "يفوتون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَفُوتُونَ • (yafūtūna) (form I) /ja.fuː.tuː.na/\n# third-person masculine plural non-past active indicative of فَاتَ (fāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yafūtūna", "fāta"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "تفوتا",
-        "u": "تفوتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَفُوتَا • (tafūtā) (form I) /ta.fuː.taː/\n# inflection of فَاتَ (fāta):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tafūtā", "fāta"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "تفوتي",
-        "u": "تفوتي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَفُوتِي • (tafūtī) (form I) /ta.fuː.tiː/\n# second-person feminine singular non-past active subjunctive/jussive of فَاتَ (fāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tafūtī", "fāta"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "يفوتا",
-        "u": "يفوتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَفُوتَا • (yafūtā) (form I) /ja.fuː.taː/\n# third-person masculine dual non-past active subjunctive/jussive of فَاتَ (fāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yafūtā", "fāta"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "تفوتوا",
-        "u": "تفوتوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَفُوتُوا • (tafūtū) (form I) /ta.fuː.tuː/\n# second-person masculine plural non-past active subjunctive/jussive of فَاتَ (fāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tafūtū", "fāta"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "يفوتوا",
-        "u": "يفوتوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَفُوتُوا • (yafūtū) (form I) /ja.fuː.tuː/\n# third-person masculine plural non-past active subjunctive/jussive of فَاتَ (fāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yafūtū", "fāta"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "فوتي",
-        "u": "فوتي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "فُوتِي • (fūtī) (form I) /fuː.tiː/\n# second-person feminine singular imperative of فَاتَ (fāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["fūtī", "fāta"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "فوتوا",
-        "u": "فوتوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "فُوتُوا • (fūtū) (form I) /fuː.tuː/\n# second-person masculine plural imperative of فَاتَ (fāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["fūtū", "fāta"],
-        "k": "فات",
-        "yol": "kök"
-      },
-      {
-        "w": "فوتا",
-        "u": "فوتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "فُوتَا • (fūtā) (form I) /fuː.taː/\n# second-person dual imperative of فَاتَ (fāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["fūtā", "fāta"],
-        "k": "فات",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "فت",
+  "ses": {
     "harf": "ف",
+    "fasil": "فت",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "نفت",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نفت (form I)\n# نَفُتْ (nafut) /na.fut/: first-person plural non-past active jussive of فَاتَ (fāta)\n# نُفَتْ (nufat) /nu.fat/: first-person plural non-past passive jussive of فَاتَ (fāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nafut", "fāta", "nufat"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تفت (form I)\n# تَفُتْ (tafut) /ta.fut/: inflection of فَاتَ (fāta):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُفَتْ (tufat) /tu.fat/: inflection of فَاتَ (fāta):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tafut", "fāta", "tufat"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "فتن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "فتن (form I)\n# فُتُّنَّ (futtunna) /fut.tun.na/: second-person feminine plural past active of فَاتَ (fāta)\n# فُتْنَ (futna) /fut.na/: inflection of فَاتَ (fāta):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# فِتُّنَّ (fittunna) /fit.tun.na/: second-person feminine plural past passive of فَاتَ (fāta)\n# فِتْنَ (fitna) /fit.na/: third-person feminine plural",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["futtunna", "fāta", "futna"]
+    },
+    {
+      "madde": "نفوت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نفوت (form I)\n# نَفُوتُ (nafūtu) /na.fuː.tu/: first-person plural non-past active indicative of فَاتَ (fāta)\n# نَفُوتَ (nafūta) /na.fuː.ta/: first-person plural non-past active subjunctive of فَاتَ (fāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nafūtu", "fāta", "nafūta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "فت",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "فت (form I)\n# فُتُّ (futtu) /fut.tu/: first-person singular past active of فَاتَ (fāta)\n# فُتَّ (futta) /fut.ta/: second-person masculine singular past active of فَاتَ (fāta)\n# فُتِّ (futti) /fut.ti/: second-person feminine singular past active of فَاتَ (fāta)\n# فِتُّ (fittu) /fit.tu/: first-person singular past passive of فَاتَ (fāta)\n# فِتَّ (fitta) /fit.ta/: second-person masculine singular pas",
+      "etiket": ["form-i", "no-gloss", "transitive"],
+      "okunus": ["futtu", "fāta", "futta"]
+    },
+    {
+      "madde": "يفوت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يفوت (form I)\n# يَفُوتُ (yafūtu) /ja.fuː.tu/: third-person masculine singular non-past active indicative of فَاتَ (fāta)\n# يَفُوتَ (yafūta) /ja.fuː.ta/: third-person masculine singular non-past active subjunctive of فَاتَ (fāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yafūtu", "fāta", "yafūta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفوت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تفوت (form I)\n# تَفُوتُ (tafūtu) /ta.fuː.tu/: inflection of فَاتَ (fāta):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَفُوتَ (tafūta) /ta.fuː.ta/: inflection of فَاتَ (fāta):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tafūtu", "fāta", "tafūta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفتن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تفتن (form I)\n# تَفُتْنَ (tafutna) /ta.fut.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of فَاتَ (fāta)\n# تُفَتْنَ (tufatna) /tu.fat.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of فَاتَ (fāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tafutna", "fāta", "tufatna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أفت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أفت (form I)\n# أَفُتْ (ʔafut) /ʔa.fut/: first-person singular non-past active jussive of فَاتَ (fāta)\n# أُفَتْ (ʔufat) /ʔu.fat/: first-person singular non-past passive jussive of فَاتَ (fāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔafut", "fāta", "ʔufat"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يفت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يفت (form I)\n# يَفُتْ (yafut) /ja.fut/: third-person masculine singular non-past active jussive of فَاتَ (fāta)\n# يُفَتْ (yufat) /ju.fat/: third-person masculine singular non-past passive jussive of فَاتَ (fāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yafut", "fāta", "yufat"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "فاتتا",
+      "tur": "verb",
+      "baslik": "فَاتَتَا • (fātatā) (form I) /faː.ta.taː/\n# third-person feminine dual past active of فَاتَ (fāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["fātatā", "fāta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "فاتت",
+      "tur": "verb",
+      "baslik": "فَاتَتْ • (fātat) (form I) /faː.tat/\n# third-person feminine singular past active of فَاتَ (fāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["fātat", "fāta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "فتما",
+      "tur": "verb",
+      "baslik": "فتما (form I)\n# فُتُّمَا (futtumā) /fut.tu.maː/: second-person dual past active of فَاتَ (fāta)\n# فِتُّمَا (fittumā) /fit.tu.maː/: second-person dual past passive of فَاتَ (fāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["futtumā", "fāta", "fittumā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "فاتا",
+      "tur": "verb",
+      "baslik": "فَاتَا • (fātā) (form I) /faː.taː/\n# third-person masculine dual past active of فَاتَ (fāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["fātā", "fāta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "فتم",
+      "tur": "verb",
+      "baslik": "فتم (form I)\n# فُتُّمْ (futtum) /fut.tum/: second-person masculine plural past active of فَاتَ (fāta)\n# فِتُّمْ (fittum) /fit.tum/: second-person masculine plural past passive of فَاتَ (fāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["futtum", "fāta", "fittum"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "فاتوا",
+      "tur": "verb",
+      "baslik": "فَاتُوا • (fātū) (form I) /faː.tuː/\n# third-person masculine plural past active of فَاتَ (fāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["fātū", "fāta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفوتين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَفُوتِينَ • (tafūtīna) (form I) /ta.fuː.tiː.na/\n# second-person feminine singular non-past active indicative of فَاتَ (fāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tafūtīna", "fāta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "فتنا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "فتنا (form I)\n# فُتْنَا (futnā) /fut.naː/: first-person plural past active of فَاتَ (fāta)\n# فِتْنَا (fitnā) /fit.naː/: first-person plural past passive of فَاتَ (fāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["futnā", "fāta", "fitnā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أفوت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أفوت (form I)\n# أَفُوتُ (ʔafūtu) /ʔa.fuː.tu/: first-person singular non-past active indicative of فَاتَ (fāta)\n# أَفُوتَ (ʔafūta) /ʔa.fuː.ta/: first-person singular non-past active subjunctive of فَاتَ (fāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔafūtu", "fāta", "ʔafūta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفوتان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَفُوتَانِ • (tafūtāni) (form I) /ta.fuː.taː.ni/\n# inflection of فَاتَ (fāta):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tafūtāni", "fāta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يفوتان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَفُوتَانِ • (yafūtāni) (form I) /ja.fuː.taː.ni/\n# third-person masculine dual non-past active indicative of فَاتَ (fāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yafūtāni", "fāta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يفتن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يفتن (form I)\n# يَفُتْنَ (yafutna) /ja.fut.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of فَاتَ (fāta)\n# يُفَتْنَ (yufatna) /ju.fat.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of فَاتَ (fāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yafutna", "fāta", "yufatna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفوتون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَفُوتُونَ • (tafūtūna) (form I) /ta.fuː.tuː.na/\n# second-person masculine plural non-past active indicative of فَاتَ (fāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tafūtūna", "fāta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يفوتون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَفُوتُونَ • (yafūtūna) (form I) /ja.fuː.tuː.na/\n# third-person masculine plural non-past active indicative of فَاتَ (fāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yafūtūna", "fāta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفوتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَفُوتَا • (tafūtā) (form I) /ta.fuː.taː/\n# inflection of فَاتَ (fāta):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tafūtā", "fāta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفوتي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَفُوتِي • (tafūtī) (form I) /ta.fuː.tiː/\n# second-person feminine singular non-past active subjunctive/jussive of فَاتَ (fāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tafūtī", "fāta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يفوتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَفُوتَا • (yafūtā) (form I) /ja.fuː.taː/\n# third-person masculine dual non-past active subjunctive/jussive of فَاتَ (fāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yafūtā", "fāta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفوتوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَفُوتُوا • (tafūtū) (form I) /ta.fuː.tuː/\n# second-person masculine plural non-past active subjunctive/jussive of فَاتَ (fāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tafūtū", "fāta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يفوتوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَفُوتُوا • (yafūtū) (form I) /ja.fuː.tuː/\n# third-person masculine plural non-past active subjunctive/jussive of فَاتَ (fāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yafūtū", "fāta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "فوتي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "فُوتِي • (fūtī) (form I) /fuː.tiː/\n# second-person feminine singular imperative of فَاتَ (fāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["fūtī", "fāta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "فوتوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "فُوتُوا • (fūtū) (form I) /fuː.tuː/\n# second-person masculine plural imperative of فَاتَ (fāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["fūtū", "fāta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "فوتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "فُوتَا • (fūtā) (form I) /fuː.taː/\n# second-person dual imperative of فَاتَ (fāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["fūtā", "fāta"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "فات", "r7"]
+  ],
+  "mana": {
     "ince": "exuberate.v.01",
     "orta": "verb.communication",
     "ust": "söz ve haber",
@@ -443,22 +324,15 @@
     "dayanak_tanim": "to express great joy",
     "synset_sayisi": 6
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["capture.v.02", "enchant.v.01", "exuberate.v.01", "love.v.01", "sleep_together.v.01", "tempt.v.03"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["capture.v.02", "enchant.v.01", "exuberate.v.01", "love.v.01", "sleep_together.v.01", "tempt.v.03"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

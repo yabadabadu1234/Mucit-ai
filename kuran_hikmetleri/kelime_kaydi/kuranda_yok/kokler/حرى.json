@@ -1,529 +1,380 @@
 {
   "kok": "حرى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "حرى", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الحاء والدال",
-      "baslik": "حرو- حرى",
-      "mihveri": "انتقاص من (ظاهر) جرم الشيء مع حوز لمهم فيه. كنقص جسم الأفعى مع بقاء سمها، وكموضع البض وكناس الظبي فكل منها فجوة تحوز، والحرافة كالقَشْر) ومنه \"مازال جسمه يَحْرِي \"أي ينقض، والقمر يَحْرِي (رمى) أي بَعْدَ أن يَتِمّ): يَنْقص الأولُ منه فالأول. ومنه الحراة -كفتاة: الساحة والعَقْوة (خالية كالفجوة بين البيوت) ومنه \"الحَرَا: جَناب الرجل وما حوله \". ومن ذلك تحرّي فلان بالمكان: تلبث \" (كأنه وَجَد حراة أي فجوة تحيز فيها). ومن المعنوى \"تحرَّى الأمرَ: قَصَدَه وتوخّاه. التحري: القصْد والاجتهاد فى الطلب والعزم على تخصيص الشيء بالفعل والقول \" (كتحري القِبلة، وتحري طلوع الشمس فهو اجتهاد فى طلب الشئ كأنما يَنْبُثُ عنه والنبث انتقَاص من ظاهر جرم الشيء كالبحث). {فَأُولَئِكَ تَحَرَّوْا رَشَدًا} قَصَدُوه وتَوَخَّوْه [قر 19/ 17] (اجتهدوا في طلبه والوصول إليه. ومنه تحرى الشرطة الآن) وقولهم \"فلان حَرِىّ بكذا: خليق به وحَرَى أن يكون كذا أي عسى للرجاء (كأنما فُحِص له موضع وهُيِّئ) أي تهيّأ له وتمهد. (1/398)",
-      "sesler": "",
-      "tam_metin": "{فَمَنْ أَسْلَمَ فَأُولَئِكَ تَحَرَّوْا رَشَدًا} [الجن: 14]\n\"الحَرا، كفتى: موضع البَيْض، وكِناسُ الظبْي. والحارَبةُ -كبادية: الأَفْعَى التي قد كَبِرت ونَقَص جسمُها من الكبر ولم يبق منها إلا رأسُها ونَفَسها وسُمُّها. والحَروة -بالفتح وكسحابة: حرافة في طعم نحو الخردل \" (والفلفل وكالإحساس بحرقة الكحل).\n° المعنى المحوري\nانتقاص من (ظاهر) جرم الشيء مع حوز لمهم فيه. كنقص جسم الأفعى مع بقاء سمها، وكموضع البض وكناس الظبي فكل منها فجوة تحوز، والحرافة كالقَشْر) ومنه \"مازال جسمه يَحْرِي \"أي ينقض، والقمر يَحْرِي (رمى) أي بَعْدَ أن يَتِمّ): يَنْقص الأولُ منه فالأول. ومنه الحراة -كفتاة: الساحة والعَقْوة (خالية كالفجوة بين البيوت) ومنه \"الحَرَا: جَناب الرجل وما حوله \". ومن ذلك تحرّي فلان بالمكان: تلبث \" (كأنه وَجَد حراة أي فجوة تحيز فيها).\nومن المعنوى \"تحرَّى الأمرَ: قَصَدَه وتوخّاه. التحري: القصْد والاجتهاد فى الطلب والعزم على تخصيص الشيء بالفعل والقول \" (كتحري القِبلة، وتحري طلوع الشمس فهو اجتهاد فى طلب الشئ كأنما يَنْبُثُ عنه والنبث انتقَاص من ظاهر جرم الشيء كالبحث). {فَأُولَئِكَ تَحَرَّوْا رَشَدًا} قَصَدُوه وتَوَخَّوْه [قر 19/ 17] (اجتهدوا في طلبه والوصول إليه. ومنه تحرى الشرطة الآن) وقولهم \"فلان حَرِىّ بكذا: خليق به وحَرَى أن يكون كذا أي عسى للرجاء (كأنما فُحِص له موضع وهُيِّئ) أي تهيّأ له وتمهد.\n(1/398)",
-      "fasil_ozeti": "° معنى الفصل المعجمي (حر) : الخلوص من الغلظ (أي أنه نوع من النقص) كما يتمثل في حر الأرض -في (حرر)، وفي إذهاب غلظ الشيء (جلادة سطحه) باللذع- في (حرو)، وبتجويفه -في (حرى)، وكما فِي الانتقاص من الظاهر .. مع الاستدارة- في (حور)، وكما في التجوف الذي يتحير فيه الماء- في (حير)، وكما في دقة سن الحربة مع زيادة عِرَض أصلها عن المعتاد -في (حرب)، وكما في شَق وجه"
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "أحر",
-        "u": "أحر",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "أحر (form I)\n# أَحْرِ (ʔaḥri) /ʔaħ.ri/: first-person singular non-past active jussive of حَرَى (ḥarā)\n# أُحْرَ (ʔuḥra) /ʔuħ.ra/: first-person singular non-past passive jussive of حَرَى (ḥarā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḥri", "ḥarā", "ʔuḥra"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "نحر",
-        "u": "نحر",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "نحر (form I)\n# نَحْرِ (naḥri) /naħ.ri/: first-person plural non-past active jussive of حَرَى (ḥarā)\n# نُحْرَ (nuḥra) /nuħ.ra/: first-person plural non-past passive jussive of حَرَى (ḥarā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḥri", "ḥarā", "nuḥra"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحرى",
-        "u": "تحرى",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُحْرَى • (tuḥrā) (form I) /tuħ.raː/\n# inflection of حَرَى (ḥarā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuḥrā", "ḥarā"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "أحرى",
-        "u": "أحرى",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أُحْرَى • (ʔuḥrā) (form I) /ʔuħ.raː/\n# first-person singular non-past passive indicative/subjunctive of حَرَى (ḥarā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔuḥrā", "ḥarā"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "أحري",
-        "u": "أحري",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أحري (form I)\n# أَحْرِي (ʔaḥrī) /ʔaħ.riː/: first-person singular non-past active indicative of حَرَى (ḥarā)\n# أَحْرِيَ (ʔaḥriya) /ʔaħ.ri.ja/: first-person singular non-past active subjunctive of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḥrī", "ḥarā", "ʔaḥriya"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحري",
-        "u": "يحري",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يحري (form I)\n# يَحْرِي (yaḥrī) /jaħ.riː/: third-person masculine singular non-past active indicative of حَرَى (ḥarā)\n# يَحْرِيَ (yaḥriya) /jaħ.ri.ja/: third-person masculine singular non-past active subjunctive of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥrī", "ḥarā", "yaḥriya"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحري",
-        "u": "تحري",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تحري (form I)\n# تَحْرِي (taḥrī) /taħ.riː/: inflection of حَرَى (ḥarā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَحْرِيَ (taḥriya) /taħ.ri.ja/: inflection of حَرَى (ḥarā):\n## second-person masculine singular non-past active subjunctive\n## third",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥrī", "ḥarā", "taḥriya"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحريان",
-        "u": "تحريان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تحريان (form I)\n# تَحْرِيَانِ (taḥriyāni) /taħ.ri.jaː.ni/: inflection of حَرَى (ḥarā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُحْرَيَانِ (tuḥrayāni) /tuħ.ra.jaː.ni/: inflection of حَرَى (ḥarā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥriyāni", "ḥarā", "tuḥrayāni"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحرون",
-        "u": "تحرون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تحرون (form I)\n# تَحْرُونَ (taḥrūna) /taħ.ruː.na/: second-person masculine plural non-past active indicative of حَرَى (ḥarā)\n# تُحْرَوْنَ (tuḥrawna) /tuħ.raw.na/: second-person masculine plural non-past passive indicative of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥrūna", "ḥarā", "tuḥrawna"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحرين",
-        "u": "تحرين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تحرين (form I)\n# تَحْرِينَ (taḥrīna) /taħ.riː.na/: inflection of حَرَى (ḥarā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُحْرَيْنَ (tuḥrayna) /tuħ.raj.na/: inflection of حَرَى (ḥarā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passi",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥrīna", "ḥarā", "tuḥrayna"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "نحري",
-        "u": "نحري",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نحري (form I)\n# نَحْرِي (naḥrī) /naħ.riː/: first-person plural non-past active indicative of حَرَى (ḥarā)\n# نَحْرِيَ (naḥriya) /naħ.ri.ja/: first-person plural non-past active subjunctive of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḥrī", "ḥarā", "naḥriya"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحريان",
-        "u": "يحريان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يحريان (form I)\n# يَحْرِيَانِ (yaḥriyāni) /jaħ.ri.jaː.ni/: third-person masculine dual non-past active indicative of حَرَى (ḥarā)\n# يُحْرَيَانِ (yuḥrayāni) /juħ.ra.jaː.ni/: third-person masculine dual non-past passive indicative of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥriyāni", "ḥarā", "yuḥrayāni"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحرين",
-        "u": "يحرين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يحرين (form I)\n# يَحْرِينَ (yaḥrīna) /jaħ.riː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of حَرَى (ḥarā)\n# يُحْرَيْنَ (yuḥrayna) /juħ.raj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥrīna", "ḥarā", "yuḥrayna"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحرى",
-        "u": "يحرى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُحْرَى • (yuḥrā) (form I) /juħ.raː/\n# third-person masculine singular non-past passive indicative/subjunctive of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuḥrā", "ḥarā"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "نحرى",
-        "u": "نحرى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نُحْرَى • (nuḥrā) (form I) /nuħ.raː/\n# first-person plural non-past passive indicative/subjunctive of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuḥrā", "ḥarā"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحرون",
-        "u": "يحرون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يحرون (form I)\n# يَحْرُونَ (yaḥrūna) /jaħ.ruː.na/: third-person masculine plural non-past active indicative of حَرَى (ḥarā)\n# يُحْرَوْنَ (yuḥrawna) /juħ.raw.na/: third-person masculine plural non-past passive indicative of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥrūna", "ḥarā", "yuḥrawna"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحريا",
-        "u": "تحريا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تحريا (form I)\n# تَحْرِيَا (taḥriyā) /taħ.ri.jaː/: inflection of حَرَى (ḥarā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُحْرَيَا (tuḥrayā) /tuħ.ra.jaː/: inflection of حَرَى (ḥarā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥriyā", "ḥarā", "tuḥrayā"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحروا",
-        "u": "تحروا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تحروا (form I)\n# تَحْرُوا (taḥrū) /taħ.ruː/: second-person masculine plural non-past active subjunctive/jussive of حَرَى (ḥarā)\n# تُحْرَوْا (tuḥraw) /tuħ.raw/: second-person masculine plural non-past passive subjunctive/jussive of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥrū", "ḥarā", "tuḥraw"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحروا",
-        "u": "يحروا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يحروا (form I)\n# يَحْرُوا (yaḥrū) /jaħ.ruː/: third-person masculine plural non-past active subjunctive/jussive of حَرَى (ḥarā)\n# يُحْرَوْا (yuḥraw) /juħ.raw/: third-person masculine plural non-past passive subjunctive/jussive of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥrū", "ḥarā", "yuḥraw"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحريا",
-        "u": "يحريا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يحريا (form I)\n# يَحْرِيَا (yaḥriyā) /jaħ.ri.jaː/: third-person masculine dual non-past active subjunctive/jussive of حَرَى (ḥarā)\n# يُحْرَيَا (yuḥrayā) /juħ.ra.jaː/: third-person masculine dual non-past passive subjunctive/jussive of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥriyā", "ḥarā", "yuḥrayā"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحر",
-        "u": "تحر",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تحر (form I)\n# تَحْرِ (taḥri) /taħ.ri/: inflection of حَرَى (ḥarā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُحْرَ (tuḥra) /tuħ.ra/: inflection of حَرَى (ḥarā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥri", "ḥarā", "tuḥra"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحر",
-        "u": "يحر",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يحر (form I)\n# يَحْرِ (yaḥri) /jaħ.ri/: third-person masculine singular non-past active jussive of حَرَى (ḥarā)\n# يُحْرَ (yuḥra) /juħ.ra/: third-person masculine singular non-past passive jussive of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥri", "ḥarā", "yuḥra"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "حرت",
-        "u": "حرت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "حَرَتْ • (ḥarat) (form I) /ħa.rat/\n# third-person feminine singular past active of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥarat", "ḥarā"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "حريتما",
-        "u": "حريتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حريتما (form I)\n# حَرَيْتُمَا (ḥaraytumā) /ħa.raj.tu.maː/: second-person dual past active of حَرَى (ḥarā)\n# حُرِيتُمَا (ḥurītumā) /ħu.riː.tu.maː/: second-person dual past passive of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥaraytumā", "ḥarā", "ḥurītumā"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "حريا",
-        "u": "حريا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حريا (form I)\n# حَرَيَا (ḥarayā) /ħa.ra.jaː/: third-person masculine dual past active of حَرَى (ḥarā)\n# حُرِيَا (ḥuriyā) /ħu.ri.jaː/: third-person masculine dual past passive of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥarayā", "ḥarā", "ḥuriyā"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "حريت",
-        "u": "حريت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حريت (form I)\n# حَرَيْتُ (ḥaraytu) /ħa.raj.tu/: first-person singular past active of حَرَى (ḥarā)\n# حَرَيْتَ (ḥarayta) /ħa.raj.ta/: second-person masculine singular past active of حَرَى (ḥarā)\n# حَرَيْتِ (ḥarayti) /ħa.raj.ti/: second-person feminine singular past active of حَرَى (ḥarā)\n# حُرِيتُ (ḥurītu) /ħu.riː.tu/: first-person singular past passive of حَرَى (ḥarā)\n# حُرِيتَ (ḥurīta) /ħu.riː.ta/",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥaraytu", "ḥarā", "ḥarayta"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "حريتن",
-        "u": "حريتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حريتن (form I)\n# حَرَيْتُنَّ (ḥaraytunna) /ħa.raj.tun.na/: second-person feminine plural past active of حَرَى (ḥarā)\n# حُرِيتُنَّ (ḥurītunna) /ħu.riː.tun.na/: second-person feminine plural past passive of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥaraytunna", "ḥarā", "ḥurītunna"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "حرتا",
-        "u": "حرتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حَرَتَا • (ḥaratā) (form I) /ħa.ra.taː/\n# third-person feminine dual past active of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥaratā", "ḥarā"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "حرينا",
-        "u": "حرينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حرينا (form I)\n# حَرَيْنَا (ḥaraynā) /ħa.raj.naː/: first-person plural past active of حَرَى (ḥarā)\n# حُرِينَا (ḥurīnā) /ħu.riː.naː/: first-person plural past passive of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥaraynā", "ḥarā", "ḥurīnā"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "حريتم",
-        "u": "حريتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حريتم (form I)\n# حَرَيْتُمْ (ḥaraytum) /ħa.raj.tum/: second-person masculine plural past active of حَرَى (ḥarā)\n# حُرِيتُمْ (ḥurītum) /ħu.riː.tum/: second-person masculine plural past passive of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥaraytum", "ḥarā", "ḥurītum"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "حروا",
-        "u": "حروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حروا (form I)\n# حَرَوْا (ḥaraw) /ħa.raw/: third-person masculine plural past active of حَرَى (ḥarā)\n# حُرُوا (ḥurū) /ħu.ruː/: third-person masculine plural past passive of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥaraw", "ḥarā", "ḥurū"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "حري",
-        "u": "حري",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حُرِيَ • (ḥuriya) (form I) /ħu.ri.ja/\n# third-person masculine singular past passive of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥuriya", "ḥarā"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "حرين",
-        "u": "حرين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حرين (form I)\n# حَرَيْنَ (ḥarayna) /ħa.raj.na/: third-person feminine plural past active of حَرَى (ḥarā)\n# حُرِينَ (ḥurīna) /ħu.riː.na/: third-person feminine plural past passive of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥarayna", "ḥarā", "ḥurīna"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "حريتا",
-        "u": "حريتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حُرِيَتَا • (ḥuriyatā) (form I) /ħu.ri.ja.taː/\n# third-person feminine dual past passive of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥuriyatā", "ḥarā"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "احر",
-        "u": "احر",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِحْرِ • (iḥri) (form I) /iħ.ri/\n# second-person masculine singular imperative of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iḥri", "ḥarā"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "احري",
-        "u": "احري",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِحْرِي • (iḥrī) (form I) /iħ.riː/\n# second-person feminine singular imperative of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iḥrī", "ḥarā"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "احريا",
-        "u": "احريا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِحْرِيَا • (iḥriyā) (form I) /iħ.ri.jaː/\n# second-person dual imperative of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iḥriyā", "ḥarā"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "احرين",
-        "u": "احرين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِحْرِينَ • (iḥrīna) (form I) /iħ.riː.na/\n# second-person feminine plural imperative of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iḥrīna", "ḥarā"],
-        "k": "حرى",
-        "yol": "kök"
-      },
-      {
-        "w": "احروا",
-        "u": "احروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِحْرُوا • (iḥrū) (form I) /iħ.ruː/\n# second-person masculine plural imperative of حَرَى (ḥarā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iḥrū", "ḥarā"],
-        "k": "حرى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "حر",
+  "ses": {
     "harf": "ح",
+    "fasil": "حر",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "cebel": {
+    "fasil": "الحاء والدال",
+    "baslik": "حرو- حرى",
+    "mihveri": "انتقاص من (ظاهر) جرم الشيء مع حوز لمهم فيه. كنقص جسم الأفعى مع بقاء سمها، وكموضع البض وكناس الظبي فكل منها فجوة تحوز، والحرافة كالقَشْر) ومنه \"مازال جسمه يَحْرِي \"أي ينقض، والقمر يَحْرِي (رمى) أي بَعْدَ أن يَتِمّ): يَنْقص الأولُ منه فالأول. ومنه الحراة -كفتاة: الساحة والعَقْوة (خالية كالفجوة بين البيوت) ومنه \"الحَرَا: جَناب الرجل وما حوله \". ومن ذلك تحرّي فلان بالمكان: تلبث \" (كأنه وَجَد حراة أي فجوة تحيز فيها). ومن المعنوى \"تحرَّى الأمرَ: قَصَدَه وتوخّاه. التحري: القصْد والاجتهاد فى الطلب والعزم على تخصيص الشيء بالفعل والقول \" (كتحري القِبلة، وتحري طلوع الشمس فهو اجتهاد فى طلب الشئ كأنما يَنْبُثُ عنه والنبث انتقَاص من ظاهر جرم الشيء كالبحث). {فَأُولَئِكَ تَحَرَّوْا رَشَدًا} قَصَدُوه وتَوَخَّوْه [قر 19/ 17] (اجتهدوا في طلبه والوصول إليه. ومنه تحرى الشرطة الآن) وقولهم \"فلان حَرِىّ بكذا: خليق به وحَرَى أن يكون كذا أي عسى للرجاء (كأنما فُحِص له موضع وهُيِّئ) أي تهيّأ له وتمهد. (1/398)",
+    "tam_metin": "{فَمَنْ أَسْلَمَ فَأُولَئِكَ تَحَرَّوْا رَشَدًا} [الجن: 14]\n\"الحَرا، كفتى: موضع البَيْض، وكِناسُ الظبْي. والحارَبةُ -كبادية: الأَفْعَى التي قد كَبِرت ونَقَص جسمُها من الكبر ولم يبق منها إلا رأسُها ونَفَسها وسُمُّها. والحَروة -بالفتح وكسحابة: حرافة في طعم نحو الخردل \" (والفلفل وكالإحساس بحرقة الكحل).\n° المعنى المحوري\nانتقاص من (ظاهر) جرم الشيء مع حوز لمهم فيه. كنقص جسم الأفعى مع بقاء سمها، وكموضع البض وكناس الظبي فكل منها فجوة تحوز، والحرافة كالقَشْر) ومنه \"مازال جسمه يَحْرِي \"أي ينقض، والقمر يَحْرِي (رمى) أي بَعْدَ أن يَتِمّ): يَنْقص الأولُ منه فالأول. ومنه الحراة -كفتاة: الساحة والعَقْوة (خالية كالفجوة بين البيوت) ومنه \"الحَرَا: جَناب الرجل وما حوله \". ومن ذلك تحرّي فلان بالمكان: تلبث \" (كأنه وَجَد حراة أي فجوة تحيز فيها).\nومن المعنوى \"تحرَّى الأمرَ: قَصَدَه وتوخّاه. التحري: القصْد والاجتهاد فى الطلب والعزم على تخصيص الشيء بالفعل والقول \" (كتحري القِبلة، وتحري طلوع الشمس فهو اجتهاد فى طلب الشئ كأنما يَنْبُثُ عنه والنبث انتقَاص من ظاهر جرم الشيء كالبحث). {فَأُولَئِكَ تَحَرَّوْا رَشَدًا} قَصَدُوه وتَوَخَّوْه [قر 19/ 17] (اجتهدوا في طلبه والوصول إليه. ومنه تحرى الشرطة الآن) وقولهم \"فلان حَرِىّ بكذا: خليق به وحَرَى أن يكون كذا أي عسى للرجاء (كأنما فُحِص له موضع وهُيِّئ) أي تهيّأ له وتمهد.\n(1/398)",
+    "fasil_ozeti": "° معنى الفصل المعجمي (حر) : الخلوص من الغلظ (أي أنه نوع من النقص) كما يتمثل في حر الأرض -في (حرر)، وفي إذهاب غلظ الشيء (جلادة سطحه) باللذع- في (حرو)، وبتجويفه -في (حرى)، وكما فِي الانتقاص من الظاهر .. مع الاستدارة- في (حور)، وكما في التجوف الذي يتحير فيه الماء- في (حير)، وكما في دقة سن الحربة مع زيادة عِرَض أصلها عن المعتاد -في (حرب)، وكما في شَق وجه"
+  },
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "أحر",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "أحر (form I)\n# أَحْرِ (ʔaḥri) /ʔaħ.ri/: first-person singular non-past active jussive of حَرَى (ḥarā)\n# أُحْرَ (ʔuḥra) /ʔuħ.ra/: first-person singular non-past passive jussive of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḥri", "ḥarā", "ʔuḥra"]
+    },
+    {
+      "madde": "نحر",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "نحر (form I)\n# نَحْرِ (naḥri) /naħ.ri/: first-person plural non-past active jussive of حَرَى (ḥarā)\n# نُحْرَ (nuḥra) /nuħ.ra/: first-person plural non-past passive jussive of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḥri", "ḥarā", "nuḥra"]
+    },
+    {
+      "madde": "تحرى",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُحْرَى • (tuḥrā) (form I) /tuħ.raː/\n# inflection of حَرَى (ḥarā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuḥrā", "ḥarā"]
+    },
+    {
+      "madde": "أحرى",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أُحْرَى • (ʔuḥrā) (form I) /ʔuħ.raː/\n# first-person singular non-past passive indicative/subjunctive of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔuḥrā", "ḥarā"]
+    },
+    {
+      "madde": "أحري",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أحري (form I)\n# أَحْرِي (ʔaḥrī) /ʔaħ.riː/: first-person singular non-past active indicative of حَرَى (ḥarā)\n# أَحْرِيَ (ʔaḥriya) /ʔaħ.ri.ja/: first-person singular non-past active subjunctive of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḥrī", "ḥarā", "ʔaḥriya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحري",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يحري (form I)\n# يَحْرِي (yaḥrī) /jaħ.riː/: third-person masculine singular non-past active indicative of حَرَى (ḥarā)\n# يَحْرِيَ (yaḥriya) /jaħ.ri.ja/: third-person masculine singular non-past active subjunctive of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥrī", "ḥarā", "yaḥriya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحري",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تحري (form I)\n# تَحْرِي (taḥrī) /taħ.riː/: inflection of حَرَى (ḥarā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَحْرِيَ (taḥriya) /taħ.ri.ja/: inflection of حَرَى (ḥarā):\n## second-person masculine singular non-past active subjunctive\n## third",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥrī", "ḥarā", "taḥriya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحريان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تحريان (form I)\n# تَحْرِيَانِ (taḥriyāni) /taħ.ri.jaː.ni/: inflection of حَرَى (ḥarā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُحْرَيَانِ (tuḥrayāni) /tuħ.ra.jaː.ni/: inflection of حَرَى (ḥarā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥriyāni", "ḥarā", "tuḥrayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحرون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تحرون (form I)\n# تَحْرُونَ (taḥrūna) /taħ.ruː.na/: second-person masculine plural non-past active indicative of حَرَى (ḥarā)\n# تُحْرَوْنَ (tuḥrawna) /tuħ.raw.na/: second-person masculine plural non-past passive indicative of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥrūna", "ḥarā", "tuḥrawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحرين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تحرين (form I)\n# تَحْرِينَ (taḥrīna) /taħ.riː.na/: inflection of حَرَى (ḥarā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُحْرَيْنَ (tuḥrayna) /tuħ.raj.na/: inflection of حَرَى (ḥarā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passi",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥrīna", "ḥarā", "tuḥrayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نحري",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نحري (form I)\n# نَحْرِي (naḥrī) /naħ.riː/: first-person plural non-past active indicative of حَرَى (ḥarā)\n# نَحْرِيَ (naḥriya) /naħ.ri.ja/: first-person plural non-past active subjunctive of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḥrī", "ḥarā", "naḥriya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحريان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يحريان (form I)\n# يَحْرِيَانِ (yaḥriyāni) /jaħ.ri.jaː.ni/: third-person masculine dual non-past active indicative of حَرَى (ḥarā)\n# يُحْرَيَانِ (yuḥrayāni) /juħ.ra.jaː.ni/: third-person masculine dual non-past passive indicative of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥriyāni", "ḥarā", "yuḥrayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحرين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يحرين (form I)\n# يَحْرِينَ (yaḥrīna) /jaħ.riː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of حَرَى (ḥarā)\n# يُحْرَيْنَ (yuḥrayna) /juħ.raj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥrīna", "ḥarā", "yuḥrayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحرى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُحْرَى • (yuḥrā) (form I) /juħ.raː/\n# third-person masculine singular non-past passive indicative/subjunctive of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuḥrā", "ḥarā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نحرى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نُحْرَى • (nuḥrā) (form I) /nuħ.raː/\n# first-person plural non-past passive indicative/subjunctive of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuḥrā", "ḥarā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحرون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يحرون (form I)\n# يَحْرُونَ (yaḥrūna) /jaħ.ruː.na/: third-person masculine plural non-past active indicative of حَرَى (ḥarā)\n# يُحْرَوْنَ (yuḥrawna) /juħ.raw.na/: third-person masculine plural non-past passive indicative of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥrūna", "ḥarā", "yuḥrawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحريا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تحريا (form I)\n# تَحْرِيَا (taḥriyā) /taħ.ri.jaː/: inflection of حَرَى (ḥarā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُحْرَيَا (tuḥrayā) /tuħ.ra.jaː/: inflection of حَرَى (ḥarā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥriyā", "ḥarā", "tuḥrayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحروا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تحروا (form I)\n# تَحْرُوا (taḥrū) /taħ.ruː/: second-person masculine plural non-past active subjunctive/jussive of حَرَى (ḥarā)\n# تُحْرَوْا (tuḥraw) /tuħ.raw/: second-person masculine plural non-past passive subjunctive/jussive of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥrū", "ḥarā", "tuḥraw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحروا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يحروا (form I)\n# يَحْرُوا (yaḥrū) /jaħ.ruː/: third-person masculine plural non-past active subjunctive/jussive of حَرَى (ḥarā)\n# يُحْرَوْا (yuḥraw) /juħ.raw/: third-person masculine plural non-past passive subjunctive/jussive of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥrū", "ḥarā", "yuḥraw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحريا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يحريا (form I)\n# يَحْرِيَا (yaḥriyā) /jaħ.ri.jaː/: third-person masculine dual non-past active subjunctive/jussive of حَرَى (ḥarā)\n# يُحْرَيَا (yuḥrayā) /juħ.ra.jaː/: third-person masculine dual non-past passive subjunctive/jussive of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥriyā", "ḥarā", "yuḥrayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحر",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تحر (form I)\n# تَحْرِ (taḥri) /taħ.ri/: inflection of حَرَى (ḥarā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُحْرَ (tuḥra) /tuħ.ra/: inflection of حَرَى (ḥarā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥri", "ḥarā", "tuḥra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحر",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يحر (form I)\n# يَحْرِ (yaḥri) /jaħ.ri/: third-person masculine singular non-past active jussive of حَرَى (ḥarā)\n# يُحْرَ (yuḥra) /juħ.ra/: third-person masculine singular non-past passive jussive of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥri", "ḥarā", "yuḥra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حرت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "حَرَتْ • (ḥarat) (form I) /ħa.rat/\n# third-person feminine singular past active of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥarat", "ḥarā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حريتما",
+      "tur": "verb",
+      "baslik": "حريتما (form I)\n# حَرَيْتُمَا (ḥaraytumā) /ħa.raj.tu.maː/: second-person dual past active of حَرَى (ḥarā)\n# حُرِيتُمَا (ḥurītumā) /ħu.riː.tu.maː/: second-person dual past passive of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥaraytumā", "ḥarā", "ḥurītumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حريا",
+      "tur": "verb",
+      "baslik": "حريا (form I)\n# حَرَيَا (ḥarayā) /ħa.ra.jaː/: third-person masculine dual past active of حَرَى (ḥarā)\n# حُرِيَا (ḥuriyā) /ħu.ri.jaː/: third-person masculine dual past passive of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥarayā", "ḥarā", "ḥuriyā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حريت",
+      "tur": "verb",
+      "baslik": "حريت (form I)\n# حَرَيْتُ (ḥaraytu) /ħa.raj.tu/: first-person singular past active of حَرَى (ḥarā)\n# حَرَيْتَ (ḥarayta) /ħa.raj.ta/: second-person masculine singular past active of حَرَى (ḥarā)\n# حَرَيْتِ (ḥarayti) /ħa.raj.ti/: second-person feminine singular past active of حَرَى (ḥarā)\n# حُرِيتُ (ḥurītu) /ħu.riː.tu/: first-person singular past passive of حَرَى (ḥarā)\n# حُرِيتَ (ḥurīta) /ħu.riː.ta/",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥaraytu", "ḥarā", "ḥarayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حريتن",
+      "tur": "verb",
+      "baslik": "حريتن (form I)\n# حَرَيْتُنَّ (ḥaraytunna) /ħa.raj.tun.na/: second-person feminine plural past active of حَرَى (ḥarā)\n# حُرِيتُنَّ (ḥurītunna) /ħu.riː.tun.na/: second-person feminine plural past passive of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥaraytunna", "ḥarā", "ḥurītunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حرتا",
+      "tur": "verb",
+      "baslik": "حَرَتَا • (ḥaratā) (form I) /ħa.ra.taː/\n# third-person feminine dual past active of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥaratā", "ḥarā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حرينا",
+      "tur": "verb",
+      "baslik": "حرينا (form I)\n# حَرَيْنَا (ḥaraynā) /ħa.raj.naː/: first-person plural past active of حَرَى (ḥarā)\n# حُرِينَا (ḥurīnā) /ħu.riː.naː/: first-person plural past passive of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥaraynā", "ḥarā", "ḥurīnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حريتم",
+      "tur": "verb",
+      "baslik": "حريتم (form I)\n# حَرَيْتُمْ (ḥaraytum) /ħa.raj.tum/: second-person masculine plural past active of حَرَى (ḥarā)\n# حُرِيتُمْ (ḥurītum) /ħu.riː.tum/: second-person masculine plural past passive of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥaraytum", "ḥarā", "ḥurītum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حروا",
+      "tur": "verb",
+      "baslik": "حروا (form I)\n# حَرَوْا (ḥaraw) /ħa.raw/: third-person masculine plural past active of حَرَى (ḥarā)\n# حُرُوا (ḥurū) /ħu.ruː/: third-person masculine plural past passive of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥaraw", "ḥarā", "ḥurū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حري",
+      "tur": "verb",
+      "baslik": "حُرِيَ • (ḥuriya) (form I) /ħu.ri.ja/\n# third-person masculine singular past passive of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥuriya", "ḥarā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حرين",
+      "tur": "verb",
+      "baslik": "حرين (form I)\n# حَرَيْنَ (ḥarayna) /ħa.raj.na/: third-person feminine plural past active of حَرَى (ḥarā)\n# حُرِينَ (ḥurīna) /ħu.riː.na/: third-person feminine plural past passive of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥarayna", "ḥarā", "ḥurīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حريتا",
+      "tur": "verb",
+      "baslik": "حُرِيَتَا • (ḥuriyatā) (form I) /ħu.ri.ja.taː/\n# third-person feminine dual past passive of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥuriyatā", "ḥarā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "احر",
+      "tur": "verb",
+      "baslik": "اِحْرِ • (iḥri) (form I) /iħ.ri/\n# second-person masculine singular imperative of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iḥri", "ḥarā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "احري",
+      "tur": "verb",
+      "baslik": "اِحْرِي • (iḥrī) (form I) /iħ.riː/\n# second-person feminine singular imperative of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iḥrī", "ḥarā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "احريا",
+      "tur": "verb",
+      "baslik": "اِحْرِيَا • (iḥriyā) (form I) /iħ.ri.jaː/\n# second-person dual imperative of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iḥriyā", "ḥarā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "احرين",
+      "tur": "verb",
+      "baslik": "اِحْرِينَ • (iḥrīna) (form I) /iħ.riː.na/\n# second-person feminine plural imperative of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iḥrīna", "ḥarā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "احروا",
+      "tur": "verb",
+      "baslik": "اِحْرُوا • (iḥrū) (form I) /iħ.ruː/\n# second-person masculine plural imperative of حَرَى (ḥarā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iḥrū", "ḥarā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "حرى", "r7"]
+  ],
+  "mana": {
     "ince": "discover.v.04",
     "orta": "verb.cognition",
     "ust": "zihin ve ilim",
@@ -531,25 +382,8 @@
     "dayanak_tanim": "make a discovery",
     "synset_sayisi": 6
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "الحاء والدال",
-    "mihveri": "انتقاص من (ظاهر) جرم الشيء مع حوز لمهم فيه. كنقص جسم الأفعى مع بقاء سمها، وكموضع البض وكناس الظبي فكل منها فجوة تحوز، والحرافة كالقَشْر) ومنه \"مازال جسمه يَحْرِي \"أي ينقض، والقمر يَحْرِي (رمى) أي بَعْدَ أن يَتِمّ): يَنْقص الأولُ منه فالأول. ومنه الحراة -كفتاة: الساحة والعَقْوة (خالية كالفجوة بين البيوت) ومنه \"الحَرَا: جَناب الرجل وما حوله \". ومن ذلك تحرّي فلان بالمكان: تلبث \" (كأنه وَجَد حراة أي فجوة تحيز فيها). ومن المعنوى \"تحرَّى الأمرَ: قَصَدَه وتوخّاه. التحري: القصْد والاجتهاد فى الطلب والعزم على تخصيص الشيء بالفعل والقول \" (كتحري القِبلة، وتحري طلوع الشمس فهو اجتهاد فى طلب الشئ كأنما يَنْبُثُ عنه والنبث انتقَاص من ظاهر جرم الشيء كالبحث). {فَأُولَئِكَ تَحَرَّوْا رَشَدًا} قَصَدُوه وتَوَخَّوْه [قر 19/ 17] (اجتهدوا في طلبه والوصول إليه. ومنه تحرى الشرطة الآن) وقولهم \"فلان حَرِىّ بكذا: خليق به وحَرَى أن يكون كذا أي عسى للرجاء (كأنما فُحِص له موضع وهُيِّئ) أي تهيّأ له وتمهد. (1/398)",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (حر) : الخلوص من الغلظ (أي أنه نوع من النقص) كما يتمثل في حر الأرض -في (حرر)، وفي إذهاب غلظ الشيء (جلادة سطحه) باللذع- في (حرو)، وبتجويفه -في (حرى)، وكما فِي الانتقاص من الظاهر .. مع الاستدارة- في (حور)، وكما في التجوف الذي يتحير فيه الماء- في (حير)، وكما في دقة سن الحربة مع زيادة عِرَض أصلها عن المعتاد -في (حرب)، وكما في شَق وجه",
-    "tam_metin": "{فَمَنْ أَسْلَمَ فَأُولَئِكَ تَحَرَّوْا رَشَدًا} [الجن: 14]\n\"الحَرا، كفتى: موضع البَيْض، وكِناسُ الظبْي. والحارَبةُ -كبادية: الأَفْعَى التي قد كَبِرت ونَقَص جسمُها من الكبر ولم يبق منها إلا رأسُها ونَفَسها وسُمُّها. والحَروة -بالفتح وكسحابة: حرافة في طعم نحو الخردل \" (والفلفل وكالإحساس بحرقة الكحل).\n° المعنى المحوري\nانتقاص من (ظاهر) جرم الشيء مع حوز لمهم فيه. كنقص جسم الأفعى مع بقاء سمها، وكموضع البض وكناس الظبي فكل منها فجوة تحوز، والحرافة كالقَشْر) ومنه \"مازال جسمه يَحْرِي \"أي ينقض، والقمر يَحْرِي (رمى) أي بَعْدَ أن يَتِمّ): يَنْقص الأولُ منه فالأول. ومنه الحراة -كفتاة: الساحة والعَقْوة (خالية كالفجوة بين البيوت) ومنه \"الحَرَا: جَناب الرجل وما حوله \". ومن ذلك تحرّي فلان بالمكان: تلبث \" (كأنه وَجَد حراة أي فجوة تحيز فيها).\nومن المعنوى \"تحرَّى الأمرَ: قَصَدَه وتوخّاه. التحري: القصْد والاجتهاد فى الطلب والعزم على تخصيص الشيء بالفعل والقول \" (كتحري القِبلة، وتحري طلوع الشمس فهو اجتهاد فى طلب الشئ كأنما يَنْبُثُ عنه والنبث انتقَاص من ظاهر جرم الشيء كالبحث). {فَأُولَئِكَ تَحَرَّوْا رَشَدًا} قَصَدُوه وتَوَخَّوْه [قر 19/ 17] (اجتهدوا في طلبه والوصول إليه. ومنه تحرى الشرطة الآن) وقولهم \"فلان حَرِىّ بكذا: خليق به وحَرَى أن يكون كذا أي عسى للرجاء (كأنما فُحِص له موضع وهُيِّئ) أي تهيّأ له وتمهد.\n(1/398)"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["act.n.02", "butcher.v.01", "check.v.01", "determine.v.01", "discover.v.04", "find.v.03"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 7,
       "merkez_kok": "حدق",
@@ -569,6 +403,11 @@
       "boy": 22
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["act.n.02", "butcher.v.01", "check.v.01", "determine.v.01", "discover.v.04", "find.v.03"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

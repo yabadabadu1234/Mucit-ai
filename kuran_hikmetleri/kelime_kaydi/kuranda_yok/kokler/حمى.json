@@ -1,1003 +1,714 @@
 {
   "kok": "حمى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "حمى", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الحاء والميم",
-      "baslik": "حمو- حمى",
-      "mihveri": "حدّة بالغة في الشيء تمنع الاقتراب منه: كالحرارة للشمس والنار {نَارٌ حَامِيَةٌ} [القارعة: 11] وكذا ما في الغاشية 4]، {يَوْمَ يُحْمَى عَلَيْهَا فِي نَارِ جَهَنَّمَ} [التوبة: 35] وكسُمِّ العقرب وغيرها يؤلم وَيضُرّ ويخيف منها. ثم استعملت الحمة في إبرة العقرب للمجاورة، لأن السُم منها يخرج \" [التاج]. ومن تلك الحدة البالغة \"حَمِىَ من الشيء وعنه -كرضى: أَنِف وغضب واغتاظ. وهو ذو حَميّة -فعيلة: غَضَبٍ وأنَفة {الْحَمِيَّةَ حَمِيَّةَ الْجَاهِلِيَّةِ} [الفتح: 26] وحُميّا الكأس: سَوْرتها وشِدَّتُها. يقال سارت فيه حُمَيّا الكأس أي ارتفعت إلى رأسه \". ومن تلك الحدة المانعة من الاقتراب: \"حَمَى الشيءَ (رمى): مَنَعَه ودفع عنه. وحَمَاه الناسَ يحْمِيه إياهم: مَنَعه \" (منهم) ومن ذلك \"الحِمَى: موضع فيه كلأ يُحمَى من الناس أن يُرْعَى لا يُقْرَب \". ومنه أيضًا \"حَمَى المريضَ الطعامَ الذي يضره: مَنَعَه إياه، وهي الحِمْية -بالكسر \". ومن الحدّة المانعة من الاقتراب أُخِذَ معنى الحفظ. \"الحامية: الرجلُ يحمِى أصحابه في الحرب. الحَوامي: صَخْر عِظام تُجْعل في مآخير طيّ البئر (حتى لا) ينقلع قُدُمًا، يحفرون له نِقارًا فيغمزونه فيها، فلا يدع ترابًا، ولا يدنو من الطيّ فيدفعه \". ومن هذا أيضًا \"حَمُو المرأة وحمَاها: أبو زوجها وأخوه وكل من كان من قِبَله \" .. فهذا من الحماية والحمُوّ أي أنهما يحمَيان لها. \"والحامي: الفحل من الإبل يَضْرِب الضِرابَ المعدود (عشرة أبطن -أو يُلقِح ولدُ ولدِه) فيقال قد حَمَى ظهرَه (أي منعه) فلا يُرْكب ولا يمنع من ماء ولا مرعى {مَا جَعَلَ اللَّهُ مِنْ بَحِيرَةٍ وَلَا (1/491) سَائِبَةٍ وَلَا وَص",
-      "sesler": "",
-      "tam_metin": "{مَا جَعَلَ اللَّهُ مِنْ بَحِيرَةٍ وَلَا سَائِبَةٍ وَلَا وَصِيلَةٍ وَلَا حَامٍ} [المائدة: 103]\n\"حَمْوُ الشمس وحَميُها -بالفتح فيهما: حَرُّها. وقد حَميت الشمسُ، والنارُ، والتنورُ -كرَضِى: اشتدَّ كُلٌّ منها. وحَمِى المسمارُ وغيره في النار: سَخُن. وحُمة العقرب والحَيّة والزُنْبُور ونَحْو ذلك (كقُلَة وأصلها حُمَوٌ أو حُمَىٌ والهاء عوض): شمُّها.\n__________\n(1) عليه الجوهري وابن سيده وغيرهما ينظر ل.\n(2) ينظر عن فوائده الطبية القاموس وتاج العروس، وتذكره داود 1/ 118.\n(1/490)\n° المعنى المحوري\nحدّة بالغة في الشيء تمنع الاقتراب منه: كالحرارة للشمس والنار {نَارٌ حَامِيَةٌ} [القارعة: 11] وكذا ما في الغاشية 4]، {يَوْمَ يُحْمَى عَلَيْهَا فِي نَارِ جَهَنَّمَ} [التوبة: 35] وكسُمِّ العقرب وغيرها يؤلم وَيضُرّ ويخيف منها. ثم استعملت الحمة في إبرة العقرب للمجاورة، لأن السُم منها يخرج \" [التاج].\nومن تلك الحدة البالغة \"حَمِىَ من الشيء وعنه -كرضى: أَنِف وغضب واغتاظ. وهو ذو حَميّة -فعيلة: غَضَبٍ وأنَفة {الْحَمِيَّةَ حَمِيَّةَ الْجَاهِلِيَّةِ} [الفتح: 26] وحُميّا الكأس: سَوْرتها وشِدَّتُها. يقال سارت فيه حُمَيّا الكأس أي ارتفعت إلى رأسه \".\nومن تلك الحدة المانعة من الاقتراب: \"حَمَى الشيءَ (رمى): مَنَعَه ودفع عنه. وحَمَاه الناسَ يحْمِيه إياهم: مَنَعه \" (منهم) ومن ذلك \"الحِمَى: موضع فيه كلأ يُحمَى من الناس أن يُرْعَى لا يُقْرَب \". ومنه أيضًا \"حَمَى المريضَ الطعامَ الذي يضره: مَنَعَه إياه، وهي الحِمْية -بالكسر \".\nومن الحدّة المانعة من الاقتراب أُخِذَ معنى الحفظ. \"الحامية: الرجلُ يحمِى أصحابه في الحرب. الحَوامي: صَخْر عِظام تُجْعل في مآخير طيّ البئر (حتى لا) ينقلع قُدُمًا، يحفرون له نِقارًا فيغمزونه فيها، فلا يدع ترابًا، ولا يدنو من الطيّ فيدفعه \". ومن هذا أيضًا \"حَمُو المرأة وحمَاها: أبو زوجها وأخوه وكل من كان من قِبَله \" .. فهذا من الحماية والحمُوّ أي أنهما يحمَيان لها. \"والحامي: الفحل من الإبل يَضْرِب الضِرابَ المعدود (عشرة أبطن -أو يُلقِح ولدُ ولدِه) فيقال قد حَمَى ظهرَه (أي منعه) فلا يُرْكب ولا يمنع من ماء ولا مرعى {مَا جَعَلَ اللَّهُ مِنْ بَحِيرَةٍ وَلَا\n(1/491)\nسَائِبَةٍ وَلَا وَصِيلَةٍ وَلَا حَامٍ} [المائدة: 103].\nوأما \"احْمَوْمَى السحابُ: تراكمَ واسْودّ. والليلُ: اسودّ \"فقد مرّ في (حمم) أن السواد لازم للاحتراق من الحرارة \".",
-      "fasil_ozeti": "° معنى الفصل المعجمي (حم): الحدة السارية في أثناء شيء كلما يتمثل ذلك في حَمّ الماء والشحم -في (حمم)، وفي الحرارة التي تشمل عليها الشمس والنار -في (حمو/ حمى)، وفي نتن الحمأة -في (حمأ)، وفي الغذاء الذي يَقُوت ويُنَمِّي -في (حمد)، وفي الحدّة التي تقشر الظاهر -في (حمر)، وفي الشدة والقوة التي تمكن من الحمل في (حمل)."
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "حم",
-        "u": "حم",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "حَمِّ • (ḥammi) (form II) /ħam.mi/\n# second-person masculine singular imperative of حَمَّى (ḥammā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ḥammi", "ḥammā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "حمي",
-        "u": "حمي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "حُمِيَ • (ḥumiya) (form I) /ħu.mi.ja/\n# third-person masculine singular past passive of حَمَى (ḥamā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥumiya", "ḥamā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "حمي",
-        "u": "حمي",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "حمي (form II)\n# حُمِّيَ (ḥummiya) /ħum.mi.ja/: third-person masculine singular past passive of حَمَّى (ḥammā)\n# حَمِّي (ḥammī) /ħam.miː/: second-person feminine singular imperative of حَمَّى (ḥammā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ḥummiya", "ḥammā", "ḥammī"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحمي",
-        "u": "يحمي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يحمي (form I)\n# يَحْمِي (yaḥmī) /jaħ.miː/: third-person masculine singular non-past active indicative of حَمَى (ḥamā)\n# يَحْمِيَ (yaḥmiya) /jaħ.mi.ja/: third-person masculine singular non-past active subjunctive of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥmī", "ḥamā", "yaḥmiya"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحمي",
-        "u": "يحمي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يحمي (form II)\n# يُحَمِّي (yuḥammī) /ju.ħam.miː/: third-person masculine singular non-past active indicative of حَمَّى (ḥammā)\n# يُحَمِّيَ (yuḥammiya) /ju.ħam.mi.ja/: third-person masculine singular non-past active subjunctive of حَمَّى (ḥammā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuḥammī", "ḥammā", "yuḥammiya"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحمى",
-        "u": "يحمى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُحْمَى • (yuḥmā) (form I) /juħ.maː/\n# third-person masculine singular non-past passive indicative/subjunctive of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuḥmā", "ḥamā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحمى",
-        "u": "يحمى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُحَمَّى • (yuḥammā) (form II) /ju.ħam.maː/\n# third-person masculine singular non-past passive indicative/subjunctive of حَمَّى (ḥammā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuḥammā", "ḥammā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحم",
-        "u": "يحم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يحم (form I)\n# يَحْمِ (yaḥmi) /jaħ.mi/: third-person masculine singular non-past active jussive of حَمَى (ḥamā)\n# يُحْمَ (yuḥma) /juħ.ma/: third-person masculine singular non-past passive jussive of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥmi", "ḥamā", "yuḥma"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحم",
-        "u": "يحم",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يحم (form II)\n# يُحَمِّ (yuḥammi) /ju.ħam.mi/: third-person masculine singular non-past active jussive of حَمَّى (ḥammā)\n# يُحَمَّ (yuḥamma) /ju.ħam.ma/: third-person masculine singular non-past passive jussive of حَمَّى (ḥammā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuḥammi", "ḥammā", "yuḥamma"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "حمت",
-        "u": "حمت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "حَمَتْ • (ḥamat) (form I) /ħa.mat/\n# third-person feminine singular past active of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥamat", "ḥamā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "حمت",
-        "u": "حمت",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "حَمَّتْ • (ḥammat) (form II) /ħam.mat/\n# third-person feminine singular past active of حَمَّى (ḥammā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ḥammat", "ḥammā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحمي",
-        "u": "تحمي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تحمي (form I)\n# تَحْمِي (taḥmī) /taħ.miː/: inflection of حَمَى (ḥamā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَحْمِيَ (taḥmiya) /taħ.mi.ja/: inflection of حَمَى (ḥamā):\n## second-person masculine singular non-past active subjunctive\n## third",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥmī", "ḥamā", "taḥmiya"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحمي",
-        "u": "تحمي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تحمي (form II)\n# تُحَمِّي (tuḥammī) /tu.ħam.miː/: inflection of حَمَّى (ḥammā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُحَمِّيَ (tuḥammiya) /tu.ħam.mi.ja/: inflection of حَمَّى (ḥammā):\n## second-person masculine singular non-past active sub",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuḥammī", "ḥammā", "tuḥammiya"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحم",
-        "u": "تحم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تحم (form I)\n# تَحْمِ (taḥmi) /taħ.mi/: inflection of حَمَى (ḥamā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُحْمَ (tuḥma) /tuħ.ma/: inflection of حَمَى (ḥamā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥmi", "ḥamā", "tuḥma"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحم",
-        "u": "تحم",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تحم (form II)\n# تُحَمِّ (tuḥammi) /tu.ħam.mi/: inflection of حَمَّى (ḥammā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُحَمَّ (tuḥamma) /tu.ħam.ma/: inflection of حَمَّى (ḥammā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuḥammi", "ḥammā", "tuḥamma"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "حميت",
-        "u": "حميت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "حميت (form I)\n# حَمَيْتُ (ḥamaytu) /ħa.maj.tu/: first-person singular past active of حَمَى (ḥamā)\n# حَمَيْتَ (ḥamayta) /ħa.maj.ta/: second-person masculine singular past active of حَمَى (ḥamā)\n# حَمَيْتِ (ḥamayti) /ħa.maj.ti/: second-person feminine singular past active of حَمَى (ḥamā)\n# حُمِيتُ (ḥumītu) /ħu.miː.tu/: first-person singular past passive of حَمَى (ḥamā)\n# حُمِيتَ (ḥumīta) /ħu.miː.ta/",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥamaytu", "ḥamā", "ḥamayta"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "حميت",
-        "u": "حميت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "حميت (form II)\n# حَمَّيْتُ (ḥammaytu) /ħam.maj.tu/: first-person singular past active of حَمَّى (ḥammā)\n# حَمَّيْتَ (ḥammayta) /ħam.maj.ta/: second-person masculine singular past active of حَمَّى (ḥammā)\n# حَمَّيْتِ (ḥammayti) /ħam.maj.ti/: second-person feminine singular past active of حَمَّى (ḥammā)\n# حُمِّيتُ (ḥummītu) /ħum.miː.tu/: first-person singular past passive of حَمَّى (ḥammā)\n# حُمِّيت",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ḥammaytu", "ḥammā", "ḥammayta"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحمى",
-        "u": "تحمى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُحْمَى • (tuḥmā) (form I) /tuħ.maː/\n# inflection of حَمَى (ḥamā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuḥmā", "ḥamā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحمى",
-        "u": "تحمى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُحَمَّى • (tuḥammā) (form II) /tu.ħam.maː/\n# inflection of حَمَّى (ḥammā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuḥammā", "ḥammā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "احم",
-        "u": "احم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِحْمِ • (iḥmi) (form I) /iħ.mi/\n# second-person masculine singular imperative of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iḥmi", "ḥamā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحمين",
-        "u": "تحمين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تحمين (form I)\n# تَحْمِينَ (taḥmīna) /taħ.miː.na/: inflection of حَمَى (ḥamā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُحْمَيْنَ (tuḥmayna) /tuħ.maj.na/: inflection of حَمَى (ḥamā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passi",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥmīna", "ḥamā", "tuḥmayna"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحمين",
-        "u": "تحمين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تحمين (form II)\n# تُحَمِّينَ (tuḥammīna) /tu.ħam.miː.na/: inflection of حَمَّى (ḥammā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُحَمَّيْنَ (tuḥammayna) /tu.ħam.maj.na/: inflection of حَمَّى (ḥammā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plur",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuḥammīna", "ḥammā", "tuḥammayna"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "احمي",
-        "u": "احمي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِحْمِي • (iḥmī) (form I) /iħ.miː/\n# second-person feminine singular imperative of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iḥmī", "ḥamā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أحمي",
-        "u": "أحمي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أحمي (form I)\n# أَحْمِي (ʔaḥmī) /ʔaħ.miː/: first-person singular non-past active indicative of حَمَى (ḥamā)\n# أَحْمِيَ (ʔaḥmiya) /ʔaħ.mi.ja/: first-person singular non-past active subjunctive of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḥmī", "ḥamā", "ʔaḥmiya"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أحمي",
-        "u": "أحمي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أحمي (form II)\n# أُحَمِّي (ʔuḥammī) /ʔu.ħam.miː/: first-person singular non-past active indicative of حَمَّى (ḥammā)\n# أُحَمِّيَ (ʔuḥammiya) /ʔu.ħam.mi.ja/: first-person singular non-past active subjunctive of حَمَّى (ḥammā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuḥammī", "ḥammā", "ʔuḥammiya"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أحم",
-        "u": "أحم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أحم (form I)\n# أَحْمِ (ʔaḥmi) /ʔaħ.mi/: first-person singular non-past active jussive of حَمَى (ḥamā)\n# أُحْمَ (ʔuḥma) /ʔuħ.ma/: first-person singular non-past passive jussive of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "s": [
-          ["nonlemma", "See the etymology of the corresponding lemma form."]
-        ],
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḥmi", "ḥamā", "ʔuḥma"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أحم",
-        "u": "أحم",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "أحم (form II)\n# أُحَمِّ (ʔuḥammi) /ʔu.ħam.mi/: first-person singular non-past active jussive of حَمَّى (ḥammā)\n# أُحَمَّ (ʔuḥamma) /ʔu.ħam.ma/: first-person singular non-past passive jussive of حَمَّى (ḥammā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuḥammi", "ḥammā", "ʔuḥamma"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أحمى",
-        "u": "أحمى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أُحْمَى • (ʔuḥmā) (form I) /ʔuħ.maː/\n# first-person singular non-past passive indicative/subjunctive of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔuḥmā", "ḥamā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أحمى",
-        "u": "أحمى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أُحَمَّى • (ʔuḥammā) (form II) /ʔu.ħam.maː/\n# first-person singular non-past passive indicative/subjunctive of حَمَّى (ḥammā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuḥammā", "ḥammā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "حمينا",
-        "u": "حمينا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "حمينا (form I)\n# حَمَيْنَا (ḥamaynā) /ħa.maj.naː/: first-person plural past active of حَمَى (ḥamā)\n# حُمِينَا (ḥumīnā) /ħu.miː.naː/: first-person plural past passive of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥamaynā", "ḥamā", "ḥumīnā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "حمينا",
-        "u": "حمينا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "حمينا (form II)\n# حَمَّيْنَا (ḥammaynā) /ħam.maj.naː/: first-person plural past active of حَمَّى (ḥammā)\n# حُمِّينَا (ḥummīnā) /ħum.miː.naː/: first-person plural past passive of حَمَّى (ḥammā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ḥammaynā", "ḥammā", "ḥummīnā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "نحمي",
-        "u": "نحمي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نحمي (form I)\n# نَحْمِي (naḥmī) /naħ.miː/: first-person plural non-past active indicative of حَمَى (ḥamā)\n# نَحْمِيَ (naḥmiya) /naħ.mi.ja/: first-person plural non-past active subjunctive of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḥmī", "ḥamā", "naḥmiya"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "نحمي",
-        "u": "نحمي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نحمي (form II)\n# نُحَمِّي (nuḥammī) /nu.ħam.miː/: first-person plural non-past active indicative of حَمَّى (ḥammā)\n# نُحَمِّيَ (nuḥammiya) /nu.ħam.mi.ja/: first-person plural non-past active subjunctive of حَمَّى (ḥammā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuḥammī", "ḥammā", "nuḥammiya"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "نحم",
-        "u": "نحم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نحم (form I)\n# نَحْمِ (naḥmi) /naħ.mi/: first-person plural non-past active jussive of حَمَى (ḥamā)\n# نُحْمَ (nuḥma) /nuħ.ma/: first-person plural non-past passive jussive of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḥmi", "ḥamā", "nuḥma"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "نحم",
-        "u": "نحم",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "نحم (form II)\n# نُحَمِّ (nuḥammi) /nu.ħam.mi/: first-person plural non-past active jussive of حَمَّى (ḥammā)\n# نُحَمَّ (nuḥamma) /nu.ħam.ma/: first-person plural non-past passive jussive of حَمَّى (ḥammā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuḥammi", "ḥammā", "nuḥamma"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "نحمى",
-        "u": "نحمى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نُحْمَى • (nuḥmā) (form I) /nuħ.maː/\n# first-person plural non-past passive indicative/subjunctive of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuḥmā", "ḥamā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "نحمى",
-        "u": "نحمى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نُحَمَّى • (nuḥammā) (form II) /nu.ħam.maː/\n# first-person plural non-past passive indicative/subjunctive of حَمَّى (ḥammā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuḥammā", "ḥammā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "حميتم",
-        "u": "حميتم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "حميتم (form I)\n# حَمَيْتُمْ (ḥamaytum) /ħa.maj.tum/: second-person masculine plural past active of حَمَى (ḥamā)\n# حُمِيتُمْ (ḥumītum) /ħu.miː.tum/: second-person masculine plural past passive of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥamaytum", "ḥamā", "ḥumītum"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "حميتم",
-        "u": "حميتم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "حميتم (form II)\n# حَمَّيْتُمْ (ḥammaytum) /ħam.maj.tum/: second-person masculine plural past active of حَمَّى (ḥammā)\n# حُمِّيتُمْ (ḥummītum) /ħum.miː.tum/: second-person masculine plural past passive of حَمَّى (ḥammā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ḥammaytum", "ḥammā", "ḥummītum"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحمون",
-        "u": "تحمون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تحمون (form I)\n# تَحْمُونَ (taḥmūna) /taħ.muː.na/: second-person masculine plural non-past active indicative of حَمَى (ḥamā)\n# تُحْمَوْنَ (tuḥmawna) /tuħ.maw.na/: second-person masculine plural non-past passive indicative of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥmūna", "ḥamā", "tuḥmawna"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحمون",
-        "u": "تحمون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تحمون (form II)\n# تُحَمُّونَ (tuḥammūna) /tu.ħam.muː.na/: second-person masculine plural non-past active indicative of حَمَّى (ḥammā)\n# تُحَمَّوْنَ (tuḥammawna) /tu.ħam.maw.na/: second-person masculine plural non-past passive indicative of حَمَّى (ḥammā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuḥammūna", "ḥammā", "tuḥammawna"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحموا",
-        "u": "تحموا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تحموا (form I)\n# تَحْمُوا (taḥmū) /taħ.muː/: second-person masculine plural non-past active subjunctive/jussive of حَمَى (ḥamā)\n# تُحْمَوْا (tuḥmaw) /tuħ.maw/: second-person masculine plural non-past passive subjunctive/jussive of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥmū", "ḥamā", "tuḥmaw"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحموا",
-        "u": "تحموا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تحموا (form II)\n# تُحَمُّوا (tuḥammū) /tu.ħam.muː/: second-person masculine plural non-past active subjunctive/jussive of حَمَّى (ḥammā)\n# تُحَمَّوْا (tuḥammaw) /tu.ħam.maw/: second-person masculine plural non-past passive subjunctive/jussive of حَمَّى (ḥammā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuḥammū", "ḥammā", "tuḥammaw"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "احموا",
-        "u": "احموا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِحْمُوا • (iḥmū) (form I) /iħ.muː/\n# second-person masculine plural imperative of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iḥmū", "ḥamā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "حموا",
-        "u": "حموا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "حموا (form I)\n# حَمَوْا (ḥamaw) /ħa.maw/: third-person masculine plural past active of حَمَى (ḥamā)\n# حُمُوا (ḥumū) /ħu.muː/: third-person masculine plural past passive of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥamaw", "ḥamā", "ḥumū"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "حموا",
-        "u": "حموا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "حموا (form II)\n# حَمَّوْا (ḥammaw) /ħam.maw/: third-person masculine plural past active of حَمَّى (ḥammā)\n# حُمُّوا (ḥummū) /ħum.muː/: third-person masculine plural past passive of حَمَّى (ḥammā)\n# حَمُّوا (ḥammū) /ħam.muː/: second-person masculine plural imperative of حَمَّى (ḥammā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ḥammaw", "ḥammā", "ḥummū"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحمون",
-        "u": "يحمون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يحمون (form I)\n# يَحْمُونَ (yaḥmūna) /jaħ.muː.na/: third-person masculine plural non-past active indicative of حَمَى (ḥamā)\n# يُحْمَوْنَ (yuḥmawna) /juħ.maw.na/: third-person masculine plural non-past passive indicative of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥmūna", "ḥamā", "yuḥmawna"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحمون",
-        "u": "يحمون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يحمون (form II)\n# يُحَمُّونَ (yuḥammūna) /ju.ħam.muː.na/: third-person masculine plural non-past active indicative of حَمَّى (ḥammā)\n# يُحَمَّوْنَ (yuḥammawna) /ju.ħam.maw.na/: third-person masculine plural non-past passive indicative of حَمَّى (ḥammā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuḥammūna", "ḥammā", "yuḥammawna"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحموا",
-        "u": "يحموا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يحموا (form I)\n# يَحْمُوا (yaḥmū) /jaħ.muː/: third-person masculine plural non-past active subjunctive/jussive of حَمَى (ḥamā)\n# يُحْمَوْا (yuḥmaw) /juħ.maw/: third-person masculine plural non-past passive subjunctive/jussive of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥmū", "ḥamā", "yuḥmaw"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحموا",
-        "u": "يحموا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يحموا (form II)\n# يُحَمُّوا (yuḥammū) /ju.ħam.muː/: third-person masculine plural non-past active subjunctive/jussive of حَمَّى (ḥammā)\n# يُحَمَّوْا (yuḥammaw) /ju.ħam.maw/: third-person masculine plural non-past passive subjunctive/jussive of حَمَّى (ḥammā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuḥammū", "ḥammā", "yuḥammaw"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "حميتن",
-        "u": "حميتن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "حميتن (form I)\n# حَمَيْتُنَّ (ḥamaytunna) /ħa.maj.tun.na/: second-person feminine plural past active of حَمَى (ḥamā)\n# حُمِيتُنَّ (ḥumītunna) /ħu.miː.tun.na/: second-person feminine plural past passive of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥamaytunna", "ḥamā", "ḥumītunna"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "حميتن",
-        "u": "حميتن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "حميتن (form II)\n# حَمَّيْتُنَّ (ḥammaytunna) /ħam.maj.tun.na/: second-person feminine plural past active of حَمَّى (ḥammā)\n# حُمِّيتُنَّ (ḥummītunna) /ħum.miː.tun.na/: second-person feminine plural past passive of حَمَّى (ḥammā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ḥammaytunna", "ḥammā", "ḥummītunna"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "احمين",
-        "u": "احمين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِحْمِينَ • (iḥmīna) (form I) /iħ.miː.na/\n# second-person feminine plural imperative of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iḥmīna", "ḥamā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "حمين",
-        "u": "حمين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "حمين (form I)\n# حَمَيْنَ (ḥamayna) /ħa.maj.na/: third-person feminine plural past active of حَمَى (ḥamā)\n# حُمِينَ (ḥumīna) /ħu.miː.na/: third-person feminine plural past passive of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥamayna", "ḥamā", "ḥumīna"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "حمين",
-        "u": "حمين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "حمين (form II)\n# حَمَّيْنَ (ḥammayna) /ħam.maj.na/: third-person feminine plural past active of حَمَّى (ḥammā)\n# حُمِّينَ (ḥummīna) /ħum.miː.na/: third-person feminine plural past passive of حَمَّى (ḥammā)\n# حَمِّينَ (ḥammīna) /ħam.miː.na/: second-person feminine plural imperative of حَمَّى (ḥammā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ḥammayna", "ḥammā", "ḥummīna"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحمين",
-        "u": "يحمين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يحمين (form I)\n# يَحْمِينَ (yaḥmīna) /jaħ.miː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of حَمَى (ḥamā)\n# يُحْمَيْنَ (yuḥmayna) /juħ.maj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥmīna", "ḥamā", "yuḥmayna"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحمين",
-        "u": "يحمين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يحمين (form II)\n# يُحَمِّينَ (yuḥammīna) /ju.ħam.miː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of حَمَّى (ḥammā)\n# يُحَمَّيْنَ (yuḥammayna) /ju.ħam.maj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of حَمَّى (ḥammā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuḥammīna", "ḥammā", "yuḥammayna"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "حمتا",
-        "u": "حمتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "حَمَتَا • (ḥamatā) (form I) /ħa.ma.taː/\n# third-person feminine dual past active of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥamatā", "ḥamā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "حمتا",
-        "u": "حمتا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "حَمَّتَا • (ḥammatā) (form II) /ħam.ma.taː/\n# third-person feminine dual past active of حَمَّى (ḥammā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ḥammatā", "ḥammā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "حميتما",
-        "u": "حميتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "حميتما (form I)\n# حَمَيْتُمَا (ḥamaytumā) /ħa.maj.tu.maː/: second-person dual past active of حَمَى (ḥamā)\n# حُمِيتُمَا (ḥumītumā) /ħu.miː.tu.maː/: second-person dual past passive of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥamaytumā", "ḥamā", "ḥumītumā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "حميتما",
-        "u": "حميتما",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "حميتما (form II)\n# حَمَّيْتُمَا (ḥammaytumā) /ħam.maj.tu.maː/: second-person dual past active of حَمَّى (ḥammā)\n# حُمِّيتُمَا (ḥummītumā) /ħum.miː.tu.maː/: second-person dual past passive of حَمَّى (ḥammā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ḥammaytumā", "ḥammā", "ḥummītumā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "حميتا",
-        "u": "حميتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "حُمِيَتَا • (ḥumiyatā) (form I) /ħu.mi.ja.taː/\n# third-person feminine dual past passive of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥumiyatā", "ḥamā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "حميتا",
-        "u": "حميتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "حُمِّيَتَا • (ḥummiyatā) (form II) /ħum.mi.ja.taː/\n# third-person feminine dual past passive of حَمَّى (ḥammā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ḥummiyatā", "ḥammā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحميان",
-        "u": "يحميان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يحميان (form I)\n# يَحْمِيَانِ (yaḥmiyāni) /jaħ.mi.jaː.ni/: third-person masculine dual non-past active indicative of حَمَى (ḥamā)\n# يُحْمَيَانِ (yuḥmayāni) /juħ.ma.jaː.ni/: third-person masculine dual non-past passive indicative of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥmiyāni", "ḥamā", "yuḥmayāni"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحميان",
-        "u": "يحميان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يحميان (form II)\n# يُحَمِّيَانِ (yuḥammiyāni) /ju.ħam.mi.jaː.ni/: third-person masculine dual non-past active indicative of حَمَّى (ḥammā)\n# يُحَمَّيَانِ (yuḥammayāni) /ju.ħam.ma.jaː.ni/: third-person masculine dual non-past passive indicative of حَمَّى (ḥammā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuḥammiyāni", "ḥammā", "yuḥammayāni"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "حميا",
-        "u": "حميا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "حميا (form I)\n# حَمَيَا (ḥamayā) /ħa.ma.jaː/: third-person masculine dual past active of حَمَى (ḥamā)\n# حُمِيَا (ḥumiyā) /ħu.mi.jaː/: third-person masculine dual past passive of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥamayā", "ḥamā", "ḥumiyā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "حميا",
-        "u": "حميا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "حميا (form II)\n# حَمَّيَا (ḥammayā) /ħam.ma.jaː/: third-person masculine dual past active of حَمَّى (ḥammā)\n# حُمِّيَا (ḥummiyā) /ħum.mi.jaː/: third-person masculine dual past passive of حَمَّى (ḥammā)\n# حَمِّيَا (ḥammiyā) /ħam.mi.jaː/: second-person dual imperative of حَمَّى (ḥammā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ḥammayā", "ḥammā", "ḥummiyā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحميان",
-        "u": "تحميان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تحميان (form I)\n# تَحْمِيَانِ (taḥmiyāni) /taħ.mi.jaː.ni/: inflection of حَمَى (ḥamā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُحْمَيَانِ (tuḥmayāni) /tuħ.ma.jaː.ni/: inflection of حَمَى (ḥamā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥmiyāni", "ḥamā", "tuḥmayāni"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحميان",
-        "u": "تحميان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تحميان (form II)\n# تُحَمِّيَانِ (tuḥammiyāni) /tu.ħam.mi.jaː.ni/: inflection of حَمَّى (ḥammā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُحَمَّيَانِ (tuḥammayāni) /tu.ħam.ma.jaː.ni/: inflection of حَمَّى (ḥammā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuḥammiyāni", "ḥammā", "tuḥammayāni"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحميا",
-        "u": "تحميا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تحميا (form I)\n# تَحْمِيَا (taḥmiyā) /taħ.mi.jaː/: inflection of حَمَى (ḥamā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُحْمَيَا (tuḥmayā) /tuħ.ma.jaː/: inflection of حَمَى (ḥamā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥmiyā", "ḥamā", "tuḥmayā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحميا",
-        "u": "تحميا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تحميا (form II)\n# تُحَمِّيَا (tuḥammiyā) /tu.ħam.mi.jaː/: inflection of حَمَّى (ḥammā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُحَمَّيَا (tuḥammayā) /tu.ħam.ma.jaː/: inflection of حَمَّى (ḥammā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctiv",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuḥammiyā", "ḥammā", "tuḥammayā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "احميا",
-        "u": "احميا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِحْمِيَا • (iḥmiyā) (form I) /iħ.mi.jaː/\n# second-person dual imperative of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iḥmiyā", "ḥamā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحميا",
-        "u": "يحميا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يحميا (form I)\n# يَحْمِيَا (yaḥmiyā) /jaħ.mi.jaː/: third-person masculine dual non-past active subjunctive/jussive of حَمَى (ḥamā)\n# يُحْمَيَا (yuḥmayā) /juħ.ma.jaː/: third-person masculine dual non-past passive subjunctive/jussive of حَمَى (ḥamā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥmiyā", "ḥamā", "yuḥmayā"],
-        "k": "حمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحميا",
-        "u": "يحميا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يحميا (form II)\n# يُحَمِّيَا (yuḥammiyā) /ju.ħam.mi.jaː/: third-person masculine dual non-past active subjunctive/jussive of حَمَّى (ḥammā)\n# يُحَمَّيَا (yuḥammayā) /ju.ħam.ma.jaː/: third-person masculine dual non-past passive subjunctive/jussive of حَمَّى (ḥammā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuḥammiyā", "ḥammā", "yuḥammayā"],
-        "k": "حمى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "حم",
+  "ses": {
     "harf": "ح",
+    "fasil": "حم",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "cebel": {
+    "fasil": "الحاء والميم",
+    "baslik": "حمو- حمى",
+    "mihveri": "حدّة بالغة في الشيء تمنع الاقتراب منه: كالحرارة للشمس والنار {نَارٌ حَامِيَةٌ} [القارعة: 11] وكذا ما في الغاشية 4]، {يَوْمَ يُحْمَى عَلَيْهَا فِي نَارِ جَهَنَّمَ} [التوبة: 35] وكسُمِّ العقرب وغيرها يؤلم وَيضُرّ ويخيف منها. ثم استعملت الحمة في إبرة العقرب للمجاورة، لأن السُم منها يخرج \" [التاج]. ومن تلك الحدة البالغة \"حَمِىَ من الشيء وعنه -كرضى: أَنِف وغضب واغتاظ. وهو ذو حَميّة -فعيلة: غَضَبٍ وأنَفة {الْحَمِيَّةَ حَمِيَّةَ الْجَاهِلِيَّةِ} [الفتح: 26] وحُميّا الكأس: سَوْرتها وشِدَّتُها. يقال سارت فيه حُمَيّا الكأس أي ارتفعت إلى رأسه \". ومن تلك الحدة المانعة من الاقتراب: \"حَمَى الشيءَ (رمى): مَنَعَه ودفع عنه. وحَمَاه الناسَ يحْمِيه إياهم: مَنَعه \" (منهم) ومن ذلك \"الحِمَى: موضع فيه كلأ يُحمَى من الناس أن يُرْعَى لا يُقْرَب \". ومنه أيضًا \"حَمَى المريضَ الطعامَ الذي يضره: مَنَعَه إياه، وهي الحِمْية -بالكسر \". ومن الحدّة المانعة من الاقتراب أُخِذَ معنى الحفظ. \"الحامية: الرجلُ يحمِى أصحابه في الحرب. الحَوامي: صَخْر عِظام تُجْعل في مآخير طيّ البئر (حتى لا) ينقلع قُدُمًا، يحفرون له نِقارًا فيغمزونه فيها، فلا يدع ترابًا، ولا يدنو من الطيّ فيدفعه \". ومن هذا أيضًا \"حَمُو المرأة وحمَاها: أبو زوجها وأخوه وكل من كان من قِبَله \" .. فهذا من الحماية والحمُوّ أي أنهما يحمَيان لها. \"والحامي: الفحل من الإبل يَضْرِب الضِرابَ المعدود (عشرة أبطن -أو يُلقِح ولدُ ولدِه) فيقال قد حَمَى ظهرَه (أي منعه) فلا يُرْكب ولا يمنع من ماء ولا مرعى {مَا جَعَلَ اللَّهُ مِنْ بَحِيرَةٍ وَلَا (1/491) سَائِبَةٍ وَلَا وَص",
+    "tam_metin": "{مَا جَعَلَ اللَّهُ مِنْ بَحِيرَةٍ وَلَا سَائِبَةٍ وَلَا وَصِيلَةٍ وَلَا حَامٍ} [المائدة: 103]\n\"حَمْوُ الشمس وحَميُها -بالفتح فيهما: حَرُّها. وقد حَميت الشمسُ، والنارُ، والتنورُ -كرَضِى: اشتدَّ كُلٌّ منها. وحَمِى المسمارُ وغيره في النار: سَخُن. وحُمة العقرب والحَيّة والزُنْبُور ونَحْو ذلك (كقُلَة وأصلها حُمَوٌ أو حُمَىٌ والهاء عوض): شمُّها.\n__________\n(1) عليه الجوهري وابن سيده وغيرهما ينظر ل.\n(2) ينظر عن فوائده الطبية القاموس وتاج العروس، وتذكره داود 1/ 118.\n(1/490)\n° المعنى المحوري\nحدّة بالغة في الشيء تمنع الاقتراب منه: كالحرارة للشمس والنار {نَارٌ حَامِيَةٌ} [القارعة: 11] وكذا ما في الغاشية 4]، {يَوْمَ يُحْمَى عَلَيْهَا فِي نَارِ جَهَنَّمَ} [التوبة: 35] وكسُمِّ العقرب وغيرها يؤلم وَيضُرّ ويخيف منها. ثم استعملت الحمة في إبرة العقرب للمجاورة، لأن السُم منها يخرج \" [التاج].\nومن تلك الحدة البالغة \"حَمِىَ من الشيء وعنه -كرضى: أَنِف وغضب واغتاظ. وهو ذو حَميّة -فعيلة: غَضَبٍ وأنَفة {الْحَمِيَّةَ حَمِيَّةَ الْجَاهِلِيَّةِ} [الفتح: 26] وحُميّا الكأس: سَوْرتها وشِدَّتُها. يقال سارت فيه حُمَيّا الكأس أي ارتفعت إلى رأسه \".\nومن تلك الحدة المانعة من الاقتراب: \"حَمَى الشيءَ (رمى): مَنَعَه ودفع عنه. وحَمَاه الناسَ يحْمِيه إياهم: مَنَعه \" (منهم) ومن ذلك \"الحِمَى: موضع فيه كلأ يُحمَى من الناس أن يُرْعَى لا يُقْرَب \". ومنه أيضًا \"حَمَى المريضَ الطعامَ الذي يضره: مَنَعَه إياه، وهي الحِمْية -بالكسر \".\nومن الحدّة المانعة من الاقتراب أُخِذَ معنى الحفظ. \"الحامية: الرجلُ يحمِى أصحابه في الحرب. الحَوامي: صَخْر عِظام تُجْعل في مآخير طيّ البئر (حتى لا) ينقلع قُدُمًا، يحفرون له نِقارًا فيغمزونه فيها، فلا يدع ترابًا، ولا يدنو من الطيّ فيدفعه \". ومن هذا أيضًا \"حَمُو المرأة وحمَاها: أبو زوجها وأخوه وكل من كان من قِبَله \" .. فهذا من الحماية والحمُوّ أي أنهما يحمَيان لها. \"والحامي: الفحل من الإبل يَضْرِب الضِرابَ المعدود (عشرة أبطن -أو يُلقِح ولدُ ولدِه) فيقال قد حَمَى ظهرَه (أي منعه) فلا يُرْكب ولا يمنع من ماء ولا مرعى {مَا جَعَلَ اللَّهُ مِنْ بَحِيرَةٍ وَلَا\n(1/491)\nسَائِبَةٍ وَلَا وَصِيلَةٍ وَلَا حَامٍ} [المائدة: 103].\nوأما \"احْمَوْمَى السحابُ: تراكمَ واسْودّ. والليلُ: اسودّ \"فقد مرّ في (حمم) أن السواد لازم للاحتراق من الحرارة \".",
+    "fasil_ozeti": "° معنى الفصل المعجمي (حم): الحدة السارية في أثناء شيء كلما يتمثل ذلك في حَمّ الماء والشحم -في (حمم)، وفي الحرارة التي تشمل عليها الشمس والنار -في (حمو/ حمى)، وفي نتن الحمأة -في (حمأ)، وفي الغذاء الذي يَقُوت ويُنَمِّي -في (حمد)، وفي الحدّة التي تقشر الظاهر -في (حمر)، وفي الشدة والقوة التي تمكن من الحمل في (حمل)."
+  },
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "حم",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "حَمِّ • (ḥammi) (form II) /ħam.mi/\n# second-person masculine singular imperative of حَمَّى (ḥammā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ḥammi", "ḥammā"]
+    },
+    {
+      "madde": "حمي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "حُمِيَ • (ḥumiya) (form I) /ħu.mi.ja/\n# third-person masculine singular past passive of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥumiya", "ḥamā"]
+    },
+    {
+      "madde": "حمي",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "حمي (form II)\n# حُمِّيَ (ḥummiya) /ħum.mi.ja/: third-person masculine singular past passive of حَمَّى (ḥammā)\n# حَمِّي (ḥammī) /ħam.miː/: second-person feminine singular imperative of حَمَّى (ḥammā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ḥummiya", "ḥammā", "ḥammī"]
+    },
+    {
+      "madde": "يحمي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يحمي (form I)\n# يَحْمِي (yaḥmī) /jaħ.miː/: third-person masculine singular non-past active indicative of حَمَى (ḥamā)\n# يَحْمِيَ (yaḥmiya) /jaħ.mi.ja/: third-person masculine singular non-past active subjunctive of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥmī", "ḥamā", "yaḥmiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحمي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يحمي (form II)\n# يُحَمِّي (yuḥammī) /ju.ħam.miː/: third-person masculine singular non-past active indicative of حَمَّى (ḥammā)\n# يُحَمِّيَ (yuḥammiya) /ju.ħam.mi.ja/: third-person masculine singular non-past active subjunctive of حَمَّى (ḥammā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuḥammī", "ḥammā", "yuḥammiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحمى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُحْمَى • (yuḥmā) (form I) /juħ.maː/\n# third-person masculine singular non-past passive indicative/subjunctive of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuḥmā", "ḥamā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحمى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُحَمَّى • (yuḥammā) (form II) /ju.ħam.maː/\n# third-person masculine singular non-past passive indicative/subjunctive of حَمَّى (ḥammā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuḥammā", "ḥammā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يحم (form I)\n# يَحْمِ (yaḥmi) /jaħ.mi/: third-person masculine singular non-past active jussive of حَمَى (ḥamā)\n# يُحْمَ (yuḥma) /juħ.ma/: third-person masculine singular non-past passive jussive of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥmi", "ḥamā", "yuḥma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحم",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يحم (form II)\n# يُحَمِّ (yuḥammi) /ju.ħam.mi/: third-person masculine singular non-past active jussive of حَمَّى (ḥammā)\n# يُحَمَّ (yuḥamma) /ju.ħam.ma/: third-person masculine singular non-past passive jussive of حَمَّى (ḥammā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuḥammi", "ḥammā", "yuḥamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حمت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "حَمَتْ • (ḥamat) (form I) /ħa.mat/\n# third-person feminine singular past active of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥamat", "ḥamā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حمت",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "حَمَّتْ • (ḥammat) (form II) /ħam.mat/\n# third-person feminine singular past active of حَمَّى (ḥammā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ḥammat", "ḥammā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحمي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تحمي (form I)\n# تَحْمِي (taḥmī) /taħ.miː/: inflection of حَمَى (ḥamā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَحْمِيَ (taḥmiya) /taħ.mi.ja/: inflection of حَمَى (ḥamā):\n## second-person masculine singular non-past active subjunctive\n## third",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥmī", "ḥamā", "taḥmiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحمي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تحمي (form II)\n# تُحَمِّي (tuḥammī) /tu.ħam.miː/: inflection of حَمَّى (ḥammā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُحَمِّيَ (tuḥammiya) /tu.ħam.mi.ja/: inflection of حَمَّى (ḥammā):\n## second-person masculine singular non-past active sub",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuḥammī", "ḥammā", "tuḥammiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تحم (form I)\n# تَحْمِ (taḥmi) /taħ.mi/: inflection of حَمَى (ḥamā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُحْمَ (tuḥma) /tuħ.ma/: inflection of حَمَى (ḥamā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥmi", "ḥamā", "tuḥma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحم",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تحم (form II)\n# تُحَمِّ (tuḥammi) /tu.ħam.mi/: inflection of حَمَّى (ḥammā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُحَمَّ (tuḥamma) /tu.ħam.ma/: inflection of حَمَّى (ḥammā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuḥammi", "ḥammā", "tuḥamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حميت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "حميت (form I)\n# حَمَيْتُ (ḥamaytu) /ħa.maj.tu/: first-person singular past active of حَمَى (ḥamā)\n# حَمَيْتَ (ḥamayta) /ħa.maj.ta/: second-person masculine singular past active of حَمَى (ḥamā)\n# حَمَيْتِ (ḥamayti) /ħa.maj.ti/: second-person feminine singular past active of حَمَى (ḥamā)\n# حُمِيتُ (ḥumītu) /ħu.miː.tu/: first-person singular past passive of حَمَى (ḥamā)\n# حُمِيتَ (ḥumīta) /ħu.miː.ta/",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥamaytu", "ḥamā", "ḥamayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حميت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "حميت (form II)\n# حَمَّيْتُ (ḥammaytu) /ħam.maj.tu/: first-person singular past active of حَمَّى (ḥammā)\n# حَمَّيْتَ (ḥammayta) /ħam.maj.ta/: second-person masculine singular past active of حَمَّى (ḥammā)\n# حَمَّيْتِ (ḥammayti) /ħam.maj.ti/: second-person feminine singular past active of حَمَّى (ḥammā)\n# حُمِّيتُ (ḥummītu) /ħum.miː.tu/: first-person singular past passive of حَمَّى (ḥammā)\n# حُمِّيت",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ḥammaytu", "ḥammā", "ḥammayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحمى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُحْمَى • (tuḥmā) (form I) /tuħ.maː/\n# inflection of حَمَى (ḥamā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuḥmā", "ḥamā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحمى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُحَمَّى • (tuḥammā) (form II) /tu.ħam.maː/\n# inflection of حَمَّى (ḥammā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuḥammā", "ḥammā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "احم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِحْمِ • (iḥmi) (form I) /iħ.mi/\n# second-person masculine singular imperative of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iḥmi", "ḥamā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحمين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تحمين (form I)\n# تَحْمِينَ (taḥmīna) /taħ.miː.na/: inflection of حَمَى (ḥamā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُحْمَيْنَ (tuḥmayna) /tuħ.maj.na/: inflection of حَمَى (ḥamā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passi",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥmīna", "ḥamā", "tuḥmayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحمين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تحمين (form II)\n# تُحَمِّينَ (tuḥammīna) /tu.ħam.miː.na/: inflection of حَمَّى (ḥammā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُحَمَّيْنَ (tuḥammayna) /tu.ħam.maj.na/: inflection of حَمَّى (ḥammā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plur",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuḥammīna", "ḥammā", "tuḥammayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "احمي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِحْمِي • (iḥmī) (form I) /iħ.miː/\n# second-person feminine singular imperative of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iḥmī", "ḥamā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أحمي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أحمي (form I)\n# أَحْمِي (ʔaḥmī) /ʔaħ.miː/: first-person singular non-past active indicative of حَمَى (ḥamā)\n# أَحْمِيَ (ʔaḥmiya) /ʔaħ.mi.ja/: first-person singular non-past active subjunctive of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḥmī", "ḥamā", "ʔaḥmiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أحمي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أحمي (form II)\n# أُحَمِّي (ʔuḥammī) /ʔu.ħam.miː/: first-person singular non-past active indicative of حَمَّى (ḥammā)\n# أُحَمِّيَ (ʔuḥammiya) /ʔu.ħam.mi.ja/: first-person singular non-past active subjunctive of حَمَّى (ḥammā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuḥammī", "ḥammā", "ʔuḥammiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أحم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أحم (form I)\n# أَحْمِ (ʔaḥmi) /ʔaħ.mi/: first-person singular non-past active jussive of حَمَى (ḥamā)\n# أُحْمَ (ʔuḥma) /ʔuħ.ma/: first-person singular non-past passive jussive of حَمَى (ḥamā)",
+      "etim_sablon": [
+        ["nonlemma", "See the etymology of the corresponding lemma form."]
+      ],
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḥmi", "ḥamā", "ʔuḥma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أحم",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "أحم (form II)\n# أُحَمِّ (ʔuḥammi) /ʔu.ħam.mi/: first-person singular non-past active jussive of حَمَّى (ḥammā)\n# أُحَمَّ (ʔuḥamma) /ʔu.ħam.ma/: first-person singular non-past passive jussive of حَمَّى (ḥammā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuḥammi", "ḥammā", "ʔuḥamma"]
+    },
+    {
+      "madde": "أحمى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أُحْمَى • (ʔuḥmā) (form I) /ʔuħ.maː/\n# first-person singular non-past passive indicative/subjunctive of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔuḥmā", "ḥamā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أحمى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أُحَمَّى • (ʔuḥammā) (form II) /ʔu.ħam.maː/\n# first-person singular non-past passive indicative/subjunctive of حَمَّى (ḥammā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuḥammā", "ḥammā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حمينا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "حمينا (form I)\n# حَمَيْنَا (ḥamaynā) /ħa.maj.naː/: first-person plural past active of حَمَى (ḥamā)\n# حُمِينَا (ḥumīnā) /ħu.miː.naː/: first-person plural past passive of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥamaynā", "ḥamā", "ḥumīnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حمينا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "حمينا (form II)\n# حَمَّيْنَا (ḥammaynā) /ħam.maj.naː/: first-person plural past active of حَمَّى (ḥammā)\n# حُمِّينَا (ḥummīnā) /ħum.miː.naː/: first-person plural past passive of حَمَّى (ḥammā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ḥammaynā", "ḥammā", "ḥummīnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نحمي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نحمي (form I)\n# نَحْمِي (naḥmī) /naħ.miː/: first-person plural non-past active indicative of حَمَى (ḥamā)\n# نَحْمِيَ (naḥmiya) /naħ.mi.ja/: first-person plural non-past active subjunctive of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḥmī", "ḥamā", "naḥmiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نحمي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نحمي (form II)\n# نُحَمِّي (nuḥammī) /nu.ħam.miː/: first-person plural non-past active indicative of حَمَّى (ḥammā)\n# نُحَمِّيَ (nuḥammiya) /nu.ħam.mi.ja/: first-person plural non-past active subjunctive of حَمَّى (ḥammā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuḥammī", "ḥammā", "nuḥammiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نحم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نحم (form I)\n# نَحْمِ (naḥmi) /naħ.mi/: first-person plural non-past active jussive of حَمَى (ḥamā)\n# نُحْمَ (nuḥma) /nuħ.ma/: first-person plural non-past passive jussive of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḥmi", "ḥamā", "nuḥma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نحم",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "نحم (form II)\n# نُحَمِّ (nuḥammi) /nu.ħam.mi/: first-person plural non-past active jussive of حَمَّى (ḥammā)\n# نُحَمَّ (nuḥamma) /nu.ħam.ma/: first-person plural non-past passive jussive of حَمَّى (ḥammā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuḥammi", "ḥammā", "nuḥamma"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نحمى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نُحْمَى • (nuḥmā) (form I) /nuħ.maː/\n# first-person plural non-past passive indicative/subjunctive of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuḥmā", "ḥamā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نحمى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نُحَمَّى • (nuḥammā) (form II) /nu.ħam.maː/\n# first-person plural non-past passive indicative/subjunctive of حَمَّى (ḥammā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuḥammā", "ḥammā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حميتم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "حميتم (form I)\n# حَمَيْتُمْ (ḥamaytum) /ħa.maj.tum/: second-person masculine plural past active of حَمَى (ḥamā)\n# حُمِيتُمْ (ḥumītum) /ħu.miː.tum/: second-person masculine plural past passive of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥamaytum", "ḥamā", "ḥumītum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حميتم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "حميتم (form II)\n# حَمَّيْتُمْ (ḥammaytum) /ħam.maj.tum/: second-person masculine plural past active of حَمَّى (ḥammā)\n# حُمِّيتُمْ (ḥummītum) /ħum.miː.tum/: second-person masculine plural past passive of حَمَّى (ḥammā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ḥammaytum", "ḥammā", "ḥummītum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحمون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تحمون (form I)\n# تَحْمُونَ (taḥmūna) /taħ.muː.na/: second-person masculine plural non-past active indicative of حَمَى (ḥamā)\n# تُحْمَوْنَ (tuḥmawna) /tuħ.maw.na/: second-person masculine plural non-past passive indicative of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥmūna", "ḥamā", "tuḥmawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحمون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تحمون (form II)\n# تُحَمُّونَ (tuḥammūna) /tu.ħam.muː.na/: second-person masculine plural non-past active indicative of حَمَّى (ḥammā)\n# تُحَمَّوْنَ (tuḥammawna) /tu.ħam.maw.na/: second-person masculine plural non-past passive indicative of حَمَّى (ḥammā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuḥammūna", "ḥammā", "tuḥammawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تحموا (form I)\n# تَحْمُوا (taḥmū) /taħ.muː/: second-person masculine plural non-past active subjunctive/jussive of حَمَى (ḥamā)\n# تُحْمَوْا (tuḥmaw) /tuħ.maw/: second-person masculine plural non-past passive subjunctive/jussive of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥmū", "ḥamā", "tuḥmaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحموا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تحموا (form II)\n# تُحَمُّوا (tuḥammū) /tu.ħam.muː/: second-person masculine plural non-past active subjunctive/jussive of حَمَّى (ḥammā)\n# تُحَمَّوْا (tuḥammaw) /tu.ħam.maw/: second-person masculine plural non-past passive subjunctive/jussive of حَمَّى (ḥammā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuḥammū", "ḥammā", "tuḥammaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "احموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِحْمُوا • (iḥmū) (form I) /iħ.muː/\n# second-person masculine plural imperative of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iḥmū", "ḥamā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "حموا (form I)\n# حَمَوْا (ḥamaw) /ħa.maw/: third-person masculine plural past active of حَمَى (ḥamā)\n# حُمُوا (ḥumū) /ħu.muː/: third-person masculine plural past passive of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥamaw", "ḥamā", "ḥumū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حموا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "حموا (form II)\n# حَمَّوْا (ḥammaw) /ħam.maw/: third-person masculine plural past active of حَمَّى (ḥammā)\n# حُمُّوا (ḥummū) /ħum.muː/: third-person masculine plural past passive of حَمَّى (ḥammā)\n# حَمُّوا (ḥammū) /ħam.muː/: second-person masculine plural imperative of حَمَّى (ḥammā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ḥammaw", "ḥammā", "ḥummū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحمون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يحمون (form I)\n# يَحْمُونَ (yaḥmūna) /jaħ.muː.na/: third-person masculine plural non-past active indicative of حَمَى (ḥamā)\n# يُحْمَوْنَ (yuḥmawna) /juħ.maw.na/: third-person masculine plural non-past passive indicative of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥmūna", "ḥamā", "yuḥmawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحمون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يحمون (form II)\n# يُحَمُّونَ (yuḥammūna) /ju.ħam.muː.na/: third-person masculine plural non-past active indicative of حَمَّى (ḥammā)\n# يُحَمَّوْنَ (yuḥammawna) /ju.ħam.maw.na/: third-person masculine plural non-past passive indicative of حَمَّى (ḥammā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuḥammūna", "ḥammā", "yuḥammawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يحموا (form I)\n# يَحْمُوا (yaḥmū) /jaħ.muː/: third-person masculine plural non-past active subjunctive/jussive of حَمَى (ḥamā)\n# يُحْمَوْا (yuḥmaw) /juħ.maw/: third-person masculine plural non-past passive subjunctive/jussive of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥmū", "ḥamā", "yuḥmaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحموا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يحموا (form II)\n# يُحَمُّوا (yuḥammū) /ju.ħam.muː/: third-person masculine plural non-past active subjunctive/jussive of حَمَّى (ḥammā)\n# يُحَمَّوْا (yuḥammaw) /ju.ħam.maw/: third-person masculine plural non-past passive subjunctive/jussive of حَمَّى (ḥammā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuḥammū", "ḥammā", "yuḥammaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حميتن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "حميتن (form I)\n# حَمَيْتُنَّ (ḥamaytunna) /ħa.maj.tun.na/: second-person feminine plural past active of حَمَى (ḥamā)\n# حُمِيتُنَّ (ḥumītunna) /ħu.miː.tun.na/: second-person feminine plural past passive of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥamaytunna", "ḥamā", "ḥumītunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حميتن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "حميتن (form II)\n# حَمَّيْتُنَّ (ḥammaytunna) /ħam.maj.tun.na/: second-person feminine plural past active of حَمَّى (ḥammā)\n# حُمِّيتُنَّ (ḥummītunna) /ħum.miː.tun.na/: second-person feminine plural past passive of حَمَّى (ḥammā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ḥammaytunna", "ḥammā", "ḥummītunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "احمين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِحْمِينَ • (iḥmīna) (form I) /iħ.miː.na/\n# second-person feminine plural imperative of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iḥmīna", "ḥamā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حمين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "حمين (form I)\n# حَمَيْنَ (ḥamayna) /ħa.maj.na/: third-person feminine plural past active of حَمَى (ḥamā)\n# حُمِينَ (ḥumīna) /ħu.miː.na/: third-person feminine plural past passive of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥamayna", "ḥamā", "ḥumīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حمين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "حمين (form II)\n# حَمَّيْنَ (ḥammayna) /ħam.maj.na/: third-person feminine plural past active of حَمَّى (ḥammā)\n# حُمِّينَ (ḥummīna) /ħum.miː.na/: third-person feminine plural past passive of حَمَّى (ḥammā)\n# حَمِّينَ (ḥammīna) /ħam.miː.na/: second-person feminine plural imperative of حَمَّى (ḥammā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ḥammayna", "ḥammā", "ḥummīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحمين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يحمين (form I)\n# يَحْمِينَ (yaḥmīna) /jaħ.miː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of حَمَى (ḥamā)\n# يُحْمَيْنَ (yuḥmayna) /juħ.maj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥmīna", "ḥamā", "yuḥmayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحمين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يحمين (form II)\n# يُحَمِّينَ (yuḥammīna) /ju.ħam.miː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of حَمَّى (ḥammā)\n# يُحَمَّيْنَ (yuḥammayna) /ju.ħam.maj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of حَمَّى (ḥammā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuḥammīna", "ḥammā", "yuḥammayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حمتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "حَمَتَا • (ḥamatā) (form I) /ħa.ma.taː/\n# third-person feminine dual past active of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥamatā", "ḥamā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حمتا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "حَمَّتَا • (ḥammatā) (form II) /ħam.ma.taː/\n# third-person feminine dual past active of حَمَّى (ḥammā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ḥammatā", "ḥammā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حميتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "حميتما (form I)\n# حَمَيْتُمَا (ḥamaytumā) /ħa.maj.tu.maː/: second-person dual past active of حَمَى (ḥamā)\n# حُمِيتُمَا (ḥumītumā) /ħu.miː.tu.maː/: second-person dual past passive of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥamaytumā", "ḥamā", "ḥumītumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حميتما",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "حميتما (form II)\n# حَمَّيْتُمَا (ḥammaytumā) /ħam.maj.tu.maː/: second-person dual past active of حَمَّى (ḥammā)\n# حُمِّيتُمَا (ḥummītumā) /ħum.miː.tu.maː/: second-person dual past passive of حَمَّى (ḥammā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ḥammaytumā", "ḥammā", "ḥummītumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حميتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "حُمِيَتَا • (ḥumiyatā) (form I) /ħu.mi.ja.taː/\n# third-person feminine dual past passive of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥumiyatā", "ḥamā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حميتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "حُمِّيَتَا • (ḥummiyatā) (form II) /ħum.mi.ja.taː/\n# third-person feminine dual past passive of حَمَّى (ḥammā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ḥummiyatā", "ḥammā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحميان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يحميان (form I)\n# يَحْمِيَانِ (yaḥmiyāni) /jaħ.mi.jaː.ni/: third-person masculine dual non-past active indicative of حَمَى (ḥamā)\n# يُحْمَيَانِ (yuḥmayāni) /juħ.ma.jaː.ni/: third-person masculine dual non-past passive indicative of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥmiyāni", "ḥamā", "yuḥmayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحميان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يحميان (form II)\n# يُحَمِّيَانِ (yuḥammiyāni) /ju.ħam.mi.jaː.ni/: third-person masculine dual non-past active indicative of حَمَّى (ḥammā)\n# يُحَمَّيَانِ (yuḥammayāni) /ju.ħam.ma.jaː.ni/: third-person masculine dual non-past passive indicative of حَمَّى (ḥammā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuḥammiyāni", "ḥammā", "yuḥammayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حميا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "حميا (form I)\n# حَمَيَا (ḥamayā) /ħa.ma.jaː/: third-person masculine dual past active of حَمَى (ḥamā)\n# حُمِيَا (ḥumiyā) /ħu.mi.jaː/: third-person masculine dual past passive of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥamayā", "ḥamā", "ḥumiyā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حميا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "حميا (form II)\n# حَمَّيَا (ḥammayā) /ħam.ma.jaː/: third-person masculine dual past active of حَمَّى (ḥammā)\n# حُمِّيَا (ḥummiyā) /ħum.mi.jaː/: third-person masculine dual past passive of حَمَّى (ḥammā)\n# حَمِّيَا (ḥammiyā) /ħam.mi.jaː/: second-person dual imperative of حَمَّى (ḥammā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ḥammayā", "ḥammā", "ḥummiyā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحميان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تحميان (form I)\n# تَحْمِيَانِ (taḥmiyāni) /taħ.mi.jaː.ni/: inflection of حَمَى (ḥamā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُحْمَيَانِ (tuḥmayāni) /tuħ.ma.jaː.ni/: inflection of حَمَى (ḥamā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥmiyāni", "ḥamā", "tuḥmayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحميان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تحميان (form II)\n# تُحَمِّيَانِ (tuḥammiyāni) /tu.ħam.mi.jaː.ni/: inflection of حَمَّى (ḥammā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُحَمَّيَانِ (tuḥammayāni) /tu.ħam.ma.jaː.ni/: inflection of حَمَّى (ḥammā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuḥammiyāni", "ḥammā", "tuḥammayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحميا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تحميا (form I)\n# تَحْمِيَا (taḥmiyā) /taħ.mi.jaː/: inflection of حَمَى (ḥamā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُحْمَيَا (tuḥmayā) /tuħ.ma.jaː/: inflection of حَمَى (ḥamā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥmiyā", "ḥamā", "tuḥmayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحميا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تحميا (form II)\n# تُحَمِّيَا (tuḥammiyā) /tu.ħam.mi.jaː/: inflection of حَمَّى (ḥammā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُحَمَّيَا (tuḥammayā) /tu.ħam.ma.jaː/: inflection of حَمَّى (ḥammā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctiv",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuḥammiyā", "ḥammā", "tuḥammayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "احميا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِحْمِيَا • (iḥmiyā) (form I) /iħ.mi.jaː/\n# second-person dual imperative of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iḥmiyā", "ḥamā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحميا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يحميا (form I)\n# يَحْمِيَا (yaḥmiyā) /jaħ.mi.jaː/: third-person masculine dual non-past active subjunctive/jussive of حَمَى (ḥamā)\n# يُحْمَيَا (yuḥmayā) /juħ.ma.jaː/: third-person masculine dual non-past passive subjunctive/jussive of حَمَى (ḥamā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥmiyā", "ḥamā", "yuḥmayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحميا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يحميا (form II)\n# يُحَمِّيَا (yuḥammiyā) /ju.ħam.mi.jaː/: third-person masculine dual non-past active subjunctive/jussive of حَمَّى (ḥammā)\n# يُحَمَّيَا (yuḥammayā) /ju.ħam.ma.jaː/: third-person masculine dual non-past passive subjunctive/jussive of حَمَّى (ḥammā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuḥammiyā", "ḥammā", "yuḥammayā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "حمى", "r7"]
+  ],
+  "mana": {
     "ince": "warm.v.01",
     "orta": "verb.change",
     "ust": "fiil ve hadise",
@@ -1005,25 +716,8 @@
     "dayanak_tanim": "get warm or warmer",
     "synset_sayisi": 2
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "الحاء والميم",
-    "mihveri": "حدّة بالغة في الشيء تمنع الاقتراب منه: كالحرارة للشمس والنار {نَارٌ حَامِيَةٌ} [القارعة: 11] وكذا ما في الغاشية 4]، {يَوْمَ يُحْمَى عَلَيْهَا فِي نَارِ جَهَنَّمَ} [التوبة: 35] وكسُمِّ العقرب وغيرها يؤلم وَيضُرّ ويخيف منها. ثم استعملت الحمة في إبرة العقرب للمجاورة، لأن السُم منها يخرج \" [التاج]. ومن تلك الحدة البالغة \"حَمِىَ من الشيء وعنه -كرضى: أَنِف وغضب واغتاظ. وهو ذو حَميّة -فعيلة: غَضَبٍ وأنَفة {الْحَمِيَّةَ حَمِيَّةَ الْجَاهِلِيَّةِ} [الفتح: 26] وحُميّا الكأس: سَوْرتها وشِدَّتُها. يقال سارت فيه حُمَيّا الكأس أي ارتفعت إلى رأسه \". ومن تلك الحدة المانعة من الاقتراب: \"حَمَى الشيءَ (رمى): مَنَعَه ودفع عنه. وحَمَاه الناسَ يحْمِيه إياهم: مَنَعه \" (منهم) ومن ذلك \"الحِمَى: موضع فيه كلأ يُحمَى من الناس أن يُرْعَى لا يُقْرَب \". ومنه أيضًا \"حَمَى المريضَ الطعامَ الذي يضره: مَنَعَه إياه، وهي الحِمْية -بالكسر \". ومن الحدّة المانعة من الاقتراب أُخِذَ معنى الحفظ. \"الحامية: الرجلُ يحمِى أصحابه في الحرب. الحَوامي: صَخْر عِظام تُجْعل في مآخير طيّ البئر (حتى لا) ينقلع قُدُمًا، يحفرون له نِقارًا فيغمزونه فيها، فلا يدع ترابًا، ولا يدنو من الطيّ فيدفعه \". ومن هذا أيضًا \"حَمُو المرأة وحمَاها: أبو زوجها وأخوه وكل من كان من قِبَله \" .. فهذا من الحماية والحمُوّ أي أنهما يحمَيان لها. \"والحامي: الفحل من الإبل يَضْرِب الضِرابَ المعدود (عشرة أبطن -أو يُلقِح ولدُ ولدِه) فيقال قد حَمَى ظهرَه (أي منعه) فلا يُرْكب ولا يمنع من ماء ولا مرعى {مَا جَعَلَ اللَّهُ مِنْ بَحِيرَةٍ وَلَا (1/491) سَائِبَةٍ وَلَا وَص",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (حم): الحدة السارية في أثناء شيء كلما يتمثل ذلك في حَمّ الماء والشحم -في (حمم)، وفي الحرارة التي تشمل عليها الشمس والنار -في (حمو/ حمى)، وفي نتن الحمأة -في (حمأ)، وفي الغذاء الذي يَقُوت ويُنَمِّي -في (حمد)، وفي الحدّة التي تقشر الظاهر -في (حمر)، وفي الشدة والقوة التي تمكن من الحمل في (حمل).",
-    "tam_metin": "{مَا جَعَلَ اللَّهُ مِنْ بَحِيرَةٍ وَلَا سَائِبَةٍ وَلَا وَصِيلَةٍ وَلَا حَامٍ} [المائدة: 103]\n\"حَمْوُ الشمس وحَميُها -بالفتح فيهما: حَرُّها. وقد حَميت الشمسُ، والنارُ، والتنورُ -كرَضِى: اشتدَّ كُلٌّ منها. وحَمِى المسمارُ وغيره في النار: سَخُن. وحُمة العقرب والحَيّة والزُنْبُور ونَحْو ذلك (كقُلَة وأصلها حُمَوٌ أو حُمَىٌ والهاء عوض): شمُّها.\n__________\n(1) عليه الجوهري وابن سيده وغيرهما ينظر ل.\n(2) ينظر عن فوائده الطبية القاموس وتاج العروس، وتذكره داود 1/ 118.\n(1/490)\n° المعنى المحوري\nحدّة بالغة في الشيء تمنع الاقتراب منه: كالحرارة للشمس والنار {نَارٌ حَامِيَةٌ} [القارعة: 11] وكذا ما في الغاشية 4]، {يَوْمَ يُحْمَى عَلَيْهَا فِي نَارِ جَهَنَّمَ} [التوبة: 35] وكسُمِّ العقرب وغيرها يؤلم وَيضُرّ ويخيف منها. ثم استعملت الحمة في إبرة العقرب للمجاورة، لأن السُم منها يخرج \" [التاج].\nومن تلك الحدة البالغة \"حَمِىَ من الشيء وعنه -كرضى: أَنِف وغضب واغتاظ. وهو ذو حَميّة -فعيلة: غَضَبٍ وأنَفة {الْحَمِيَّةَ حَمِيَّةَ الْجَاهِلِيَّةِ} [الفتح: 26] وحُميّا الكأس: سَوْرتها وشِدَّتُها. يقال سارت فيه حُمَيّا الكأس أي ارتفعت إلى رأسه \".\nومن تلك الحدة المانعة من الاقتراب: \"حَمَى الشيءَ (رمى): مَنَعَه ودفع عنه. وحَمَاه الناسَ يحْمِيه إياهم: مَنَعه \" (منهم) ومن ذلك \"الحِمَى: موضع فيه كلأ يُحمَى من الناس أن يُرْعَى لا يُقْرَب \". ومنه أيضًا \"حَمَى المريضَ الطعامَ الذي يضره: مَنَعَه إياه، وهي الحِمْية -بالكسر \".\nومن الحدّة المانعة من الاقتراب أُخِذَ معنى الحفظ. \"الحامية: الرجلُ يحمِى أصحابه في الحرب. الحَوامي: صَخْر عِظام تُجْعل في مآخير طيّ البئر (حتى لا) ينقلع قُدُمًا، يحفرون له نِقارًا فيغمزونه فيها، فلا يدع ترابًا، ولا يدنو من الطيّ فيدفعه \". ومن هذا أيضًا \"حَمُو المرأة وحمَاها: أبو زوجها وأخوه وكل من كان من قِبَله \" .. فهذا من الحماية والحمُوّ أي أنهما يحمَيان لها. \"والحامي: الفحل من الإبل يَضْرِب الضِرابَ المعدود (عشرة أبطن -أو يُلقِح ولدُ ولدِه) فيقال قد حَمَى ظهرَه (أي منعه) فلا يُرْكب ولا يمنع من ماء ولا مرعى {مَا جَعَلَ اللَّهُ مِنْ بَحِيرَةٍ وَلَا\n(1/491)\nسَائِبَةٍ وَلَا وَصِيلَةٍ وَلَا حَامٍ} [المائدة: 103].\nوأما \"احْمَوْمَى السحابُ: تراكمَ واسْودّ. والليلُ: اسودّ \"فقد مرّ في (حمم) أن السواد لازم للاحتراق من الحرارة \"."
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["heat.v.01", "warm.v.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 1,
       "merkez_kok": "قره",
@@ -1043,6 +737,11 @@
       "boy": 183
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["heat.v.01", "warm.v.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

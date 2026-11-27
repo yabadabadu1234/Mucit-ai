@@ -1,463 +1,336 @@
 {
   "kok": "راج",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "راج", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "راجا",
-        "u": "راجا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاجَا • (rājā) (form I) /raː.d͡ʒaː/\n# third-person masculine dual past active of رَاجَ (rāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["rājā", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "يرج",
-        "u": "يرج",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يَرُجْ • (yaruj) (form I) /ja.rud͡ʒ/\n# third-person masculine singular non-past active jussive of رَاجَ (rāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaruj", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "رجت",
-        "u": "رجت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "رجت (form I)\n# رُجْتُ (rujtu) /rud͡ʒ.tu/: first-person singular past active of رَاجَ (rāja)\n# رُجْتَ (rujta) /rud͡ʒ.ta/: second-person masculine singular past active of رَاجَ (rāja)\n# رُجْتِ (rujti) /rud͡ʒ.ti/: second-person feminine singular past active of رَاجَ (rāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["rujtu", "rāja", "rujta"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "ترج",
-        "u": "ترج",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تَرُجْ • (taruj) (form I) /ta.rud͡ʒ/\n# inflection of رَاجَ (rāja):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taruj", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "أرج",
-        "u": "أرج",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أَرُجْ • (ʔaruj) (form I) /ʔa.rud͡ʒ/\n# first-person singular non-past active jussive of رَاجَ (rāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaruj", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "نرج",
-        "u": "نرج",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نَرُجْ • (naruj) (form I) /na.rud͡ʒ/\n# first-person plural non-past active jussive of رَاجَ (rāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naruj", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "رج",
-        "u": "رج",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "رُجْ • (ruj) (form I) /rud͡ʒ/\n# second-person masculine singular imperative of رَاجَ (rāja)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ruj", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "روجا",
-        "u": "روجا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "رُوجَا • (rūjā) (form I) /ruː.d͡ʒaː/\n# second-person dual imperative of رَاجَ (rāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["rūjā", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "راجت",
-        "u": "راجت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاجَتْ • (rājat) (form I) /raː.d͡ʒat/\n# third-person feminine singular past active of رَاجَ (rāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["rājat", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "رجتما",
-        "u": "رجتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُجْتُمَا • (rujtumā) (form I) /rud͡ʒ.tu.maː/\n# second-person dual past active of رَاجَ (rāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["rujtumā", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "رجنا",
-        "u": "رجنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُجْنَا • (rujnā) (form I) /rud͡ʒ.naː/\n# first-person plural past active of رَاجَ (rāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["rujnā", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "راجتا",
-        "u": "راجتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاجَتَا • (rājatā) (form I) /raː.d͡ʒa.taː/\n# third-person feminine dual past active of رَاجَ (rāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["rājatā", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "رجتم",
-        "u": "رجتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُجْتُمْ • (rujtum) (form I) /rud͡ʒ.tum/\n# second-person masculine plural past active of رَاجَ (rāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["rujtum", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "رجن",
-        "u": "رجن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُجْنَ • (rujna) (form I) /rud͡ʒ.na/\n# inflection of رَاجَ (rāja):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["rujna", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "راجوا",
-        "u": "راجوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاجُوا • (rājū) (form I) /raː.d͡ʒuː/\n# third-person masculine plural past active of رَاجَ (rāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["rājū", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "رجتن",
-        "u": "رجتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُجْتُنَّ • (rujtunna) (form I) /rud͡ʒ.tun.na/\n# second-person feminine plural past active of رَاجَ (rāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["rujtunna", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "أروج",
-        "u": "أروج",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أروج (form I)\n# أَرُوجُ (ʔarūju) /ʔa.ruː.d͡ʒu/: first-person singular non-past active indicative of رَاجَ (rāja)\n# أَرُوجَ (ʔarūja) /ʔa.ruː.d͡ʒa/: first-person singular non-past active subjunctive of رَاجَ (rāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔarūju", "rāja", "ʔarūja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "تروج",
-        "u": "تروج",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تروج (form I)\n# تَرُوجُ (tarūju) /ta.ruː.d͡ʒu/: inflection of رَاجَ (rāja):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَرُوجَ (tarūja) /ta.ruː.d͡ʒa/: inflection of رَاجَ (rāja):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tarūju", "rāja", "tarūja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "تروجين",
-        "u": "تروجين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَرُوجِينَ • (tarūjīna) (form I) /ta.ruː.d͡ʒiː.na/\n# second-person feminine singular non-past active indicative of رَاجَ (rāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tarūjīna", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "يروج",
-        "u": "يروج",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يروج (form I)\n# يَرُوجُ (yarūju) /ja.ruː.d͡ʒu/: third-person masculine singular non-past active indicative of رَاجَ (rāja)\n# يَرُوجَ (yarūja) /ja.ruː.d͡ʒa/: third-person masculine singular non-past active subjunctive of رَاجَ (rāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yarūju", "rāja", "yarūja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "تروجان",
-        "u": "تروجان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَرُوجَانِ • (tarūjāni) (form I) /ta.ruː.d͡ʒaː.ni/\n# inflection of رَاجَ (rāja):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tarūjāni", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "نروج",
-        "u": "نروج",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نروج (form I)\n# نَرُوجُ (narūju) /na.ruː.d͡ʒu/: first-person plural non-past active indicative of رَاجَ (rāja)\n# نَرُوجَ (narūja) /na.ruː.d͡ʒa/: first-person plural non-past active subjunctive of رَاجَ (rāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["narūju", "rāja", "narūja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "يروجان",
-        "u": "يروجان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَرُوجَانِ • (yarūjāni) (form I) /ja.ruː.d͡ʒaː.ni/\n# third-person masculine dual non-past active indicative of رَاجَ (rāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yarūjāni", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "تروجون",
-        "u": "تروجون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَرُوجُونَ • (tarūjūna) (form I) /ta.ruː.d͡ʒuː.na/\n# second-person masculine plural non-past active indicative of رَاجَ (rāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tarūjūna", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "يرجن",
-        "u": "يرجن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَرُجْنَ • (yarujna) (form I) /ja.rud͡ʒ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of رَاجَ (rāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yarujna", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "ترجن",
-        "u": "ترجن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَرُجْنَ • (tarujna) (form I) /ta.rud͡ʒ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of رَاجَ (rāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tarujna", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "تروجي",
-        "u": "تروجي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَرُوجِي • (tarūjī) (form I) /ta.ruː.d͡ʒiː/\n# second-person feminine singular non-past active subjunctive/jussive of رَاجَ (rāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tarūjī", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "يروجون",
-        "u": "يروجون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَرُوجُونَ • (yarūjūna) (form I) /ja.ruː.d͡ʒuː.na/\n# third-person masculine plural non-past active indicative of رَاجَ (rāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yarūjūna", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "يروجا",
-        "u": "يروجا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَرُوجَا • (yarūjā) (form I) /ja.ruː.d͡ʒaː/\n# third-person masculine dual non-past active subjunctive/jussive of رَاجَ (rāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yarūjā", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "تروجا",
-        "u": "تروجا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَرُوجَا • (tarūjā) (form I) /ta.ruː.d͡ʒaː/\n# inflection of رَاجَ (rāja):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tarūjā", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "يروجوا",
-        "u": "يروجوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَرُوجُوا • (yarūjū) (form I) /ja.ruː.d͡ʒuː/\n# third-person masculine plural non-past active subjunctive/jussive of رَاجَ (rāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yarūjū", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "تروجوا",
-        "u": "تروجوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَرُوجُوا • (tarūjū) (form I) /ta.ruː.d͡ʒuː/\n# second-person masculine plural non-past active subjunctive/jussive of رَاجَ (rāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tarūjū", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "روجي",
-        "u": "روجي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "رُوجِي • (rūjī) (form I) /ruː.d͡ʒiː/\n# second-person feminine singular imperative of رَاجَ (rāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["rūjī", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      },
-      {
-        "w": "روجوا",
-        "u": "روجوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "رُوجُوا • (rūjū) (form I) /ruː.d͡ʒuː/\n# second-person masculine plural imperative of رَاجَ (rāja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["rūjū", "rāja"],
-        "k": "راج",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "رج",
+  "ses": {
     "harf": "ر",
+    "fasil": "رج",
     "mahrec": "zelakiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "راجا",
+      "tur": "verb",
+      "baslik": "رَاجَا • (rājā) (form I) /raː.d͡ʒaː/\n# third-person masculine dual past active of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rājā", "rāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يرج",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يَرُجْ • (yaruj) (form I) /ja.rud͡ʒ/\n# third-person masculine singular non-past active jussive of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaruj", "rāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "رجت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "رجت (form I)\n# رُجْتُ (rujtu) /rud͡ʒ.tu/: first-person singular past active of رَاجَ (rāja)\n# رُجْتَ (rujta) /rud͡ʒ.ta/: second-person masculine singular past active of رَاجَ (rāja)\n# رُجْتِ (rujti) /rud͡ʒ.ti/: second-person feminine singular past active of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rujtu", "rāja", "rujta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ترج",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تَرُجْ • (taruj) (form I) /ta.rud͡ʒ/\n# inflection of رَاجَ (rāja):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taruj", "rāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أرج",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أَرُجْ • (ʔaruj) (form I) /ʔa.rud͡ʒ/\n# first-person singular non-past active jussive of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaruj", "rāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نرج",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نَرُجْ • (naruj) (form I) /na.rud͡ʒ/\n# first-person plural non-past active jussive of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naruj", "rāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "رج",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "رُجْ • (ruj) (form I) /rud͡ʒ/\n# second-person masculine singular imperative of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ruj", "rāja"]
+    },
+    {
+      "madde": "روجا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "رُوجَا • (rūjā) (form I) /ruː.d͡ʒaː/\n# second-person dual imperative of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rūjā", "rāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "راجت",
+      "tur": "verb",
+      "baslik": "رَاجَتْ • (rājat) (form I) /raː.d͡ʒat/\n# third-person feminine singular past active of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rājat", "rāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "رجتما",
+      "tur": "verb",
+      "baslik": "رُجْتُمَا • (rujtumā) (form I) /rud͡ʒ.tu.maː/\n# second-person dual past active of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rujtumā", "rāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "رجنا",
+      "tur": "verb",
+      "baslik": "رُجْنَا • (rujnā) (form I) /rud͡ʒ.naː/\n# first-person plural past active of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rujnā", "rāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "راجتا",
+      "tur": "verb",
+      "baslik": "رَاجَتَا • (rājatā) (form I) /raː.d͡ʒa.taː/\n# third-person feminine dual past active of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rājatā", "rāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "رجتم",
+      "tur": "verb",
+      "baslik": "رُجْتُمْ • (rujtum) (form I) /rud͡ʒ.tum/\n# second-person masculine plural past active of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rujtum", "rāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "رجن",
+      "tur": "verb",
+      "baslik": "رُجْنَ • (rujna) (form I) /rud͡ʒ.na/\n# inflection of رَاجَ (rāja):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rujna", "rāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "راجوا",
+      "tur": "verb",
+      "baslik": "رَاجُوا • (rājū) (form I) /raː.d͡ʒuː/\n# third-person masculine plural past active of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rājū", "rāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "رجتن",
+      "tur": "verb",
+      "baslik": "رُجْتُنَّ • (rujtunna) (form I) /rud͡ʒ.tun.na/\n# second-person feminine plural past active of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rujtunna", "rāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أروج",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أروج (form I)\n# أَرُوجُ (ʔarūju) /ʔa.ruː.d͡ʒu/: first-person singular non-past active indicative of رَاجَ (rāja)\n# أَرُوجَ (ʔarūja) /ʔa.ruː.d͡ʒa/: first-person singular non-past active subjunctive of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔarūju", "rāja", "ʔarūja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تروج",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تروج (form I)\n# تَرُوجُ (tarūju) /ta.ruː.d͡ʒu/: inflection of رَاجَ (rāja):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَرُوجَ (tarūja) /ta.ruː.d͡ʒa/: inflection of رَاجَ (rāja):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tarūju", "rāja", "tarūja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تروجين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَرُوجِينَ • (tarūjīna) (form I) /ta.ruː.d͡ʒiː.na/\n# second-person feminine singular non-past active indicative of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tarūjīna", "rāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يروج",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يروج (form I)\n# يَرُوجُ (yarūju) /ja.ruː.d͡ʒu/: third-person masculine singular non-past active indicative of رَاجَ (rāja)\n# يَرُوجَ (yarūja) /ja.ruː.d͡ʒa/: third-person masculine singular non-past active subjunctive of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yarūju", "rāja", "yarūja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تروجان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَرُوجَانِ • (tarūjāni) (form I) /ta.ruː.d͡ʒaː.ni/\n# inflection of رَاجَ (rāja):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tarūjāni", "rāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نروج",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نروج (form I)\n# نَرُوجُ (narūju) /na.ruː.d͡ʒu/: first-person plural non-past active indicative of رَاجَ (rāja)\n# نَرُوجَ (narūja) /na.ruː.d͡ʒa/: first-person plural non-past active subjunctive of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["narūju", "rāja", "narūja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يروجان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَرُوجَانِ • (yarūjāni) (form I) /ja.ruː.d͡ʒaː.ni/\n# third-person masculine dual non-past active indicative of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yarūjāni", "rāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تروجون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَرُوجُونَ • (tarūjūna) (form I) /ta.ruː.d͡ʒuː.na/\n# second-person masculine plural non-past active indicative of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tarūjūna", "rāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يرجن",
+      "tur": "verb",
+      "baslik": "يَرُجْنَ • (yarujna) (form I) /ja.rud͡ʒ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yarujna", "rāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ترجن",
+      "tur": "verb",
+      "baslik": "تَرُجْنَ • (tarujna) (form I) /ta.rud͡ʒ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tarujna", "rāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تروجي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَرُوجِي • (tarūjī) (form I) /ta.ruː.d͡ʒiː/\n# second-person feminine singular non-past active subjunctive/jussive of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tarūjī", "rāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يروجون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَرُوجُونَ • (yarūjūna) (form I) /ja.ruː.d͡ʒuː.na/\n# third-person masculine plural non-past active indicative of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yarūjūna", "rāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يروجا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَرُوجَا • (yarūjā) (form I) /ja.ruː.d͡ʒaː/\n# third-person masculine dual non-past active subjunctive/jussive of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yarūjā", "rāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تروجا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَرُوجَا • (tarūjā) (form I) /ta.ruː.d͡ʒaː/\n# inflection of رَاجَ (rāja):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tarūjā", "rāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يروجوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَرُوجُوا • (yarūjū) (form I) /ja.ruː.d͡ʒuː/\n# third-person masculine plural non-past active subjunctive/jussive of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yarūjū", "rāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تروجوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَرُوجُوا • (tarūjū) (form I) /ta.ruː.d͡ʒuː/\n# second-person masculine plural non-past active subjunctive/jussive of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tarūjū", "rāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "روجي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "رُوجِي • (rūjī) (form I) /ruː.d͡ʒiː/\n# second-person feminine singular imperative of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rūjī", "rāja"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "روجوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "رُوجُوا • (rūjū) (form I) /ruː.d͡ʒuː/\n# second-person masculine plural imperative of رَاجَ (rāja)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["rūjū", "rāja"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "راج", "r7"]
+  ],
+  "mana": {
     "ince": "stimulate.v.03",
     "orta": "verb.emotion",
     "ust": "his ve nefis",
@@ -465,22 +338,15 @@
     "dayanak_tanim": "stir the feelings, emotions, or peace of",
     "synset_sayisi": 6
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["act.n.02", "olfactory_property.n.01", "rattle.v.01", "shake.v.01", "shake.v.02", "stimulate.v.03"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["act.n.02", "olfactory_property.n.01", "rattle.v.01", "shake.v.01", "shake.v.02", "stimulate.v.03"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,316 +1,247 @@
 {
   "kok": "ءيمن",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءيمن", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أومن",
-        "u": "أومن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أومن (form IV)\n# أُومِنُ (ʔūminu) /ʔuː.mi.nu/: first-person singular non-past active indicative of أَيْمَنَ (ʔaymana)\n# أُومِنَ (ʔūmina) /ʔuː.mi.na/: first-person singular non-past active subjunctive of أَيْمَنَ (ʔaymana)\n# أُومِنْ (ʔūmin) /ʔuː.min/: first-person singular non-past active jussive of أَيْمَنَ (ʔaymana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔūminu", "ʔaymana", "ʔūmina"],
-        "k": "أيمن",
-        "yol": "kök"
-      },
-      {
-        "w": "نومن",
-        "u": "نومن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نومن (form IV)\n# نُومِنُ (nūminu) /nuː.mi.nu/: first-person plural non-past active indicative of أَيْمَنَ (ʔaymana)\n# نُومِنَ (nūmina) /nuː.mi.na/: first-person plural non-past active subjunctive of أَيْمَنَ (ʔaymana)\n# نُومِنْ (nūmin) /nuː.min/: first-person plural non-past active jussive of أَيْمَنَ (ʔaymana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nūminu", "ʔaymana", "nūmina"],
-        "k": "أيمن",
-        "yol": "kök"
-      },
-      {
-        "w": "أيمنت",
-        "u": "أيمنت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أيمنت (form IV)\n# أَيْمَنْتُ (ʔaymantu) /ʔaj.man.tu/: first-person singular past active of أَيْمَنَ (ʔaymana)\n# أَيْمَنْتَ (ʔaymanta) /ʔaj.man.ta/: second-person masculine singular past active of أَيْمَنَ (ʔaymana)\n# أَيْمَنْتِ (ʔaymanti) /ʔaj.man.ti/: second-person feminine singular past active of أَيْمَنَ (ʔaymana)\n# أَيْمَنَتْ (ʔaymanat) /ʔaj.ma.nat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaymantu", "ʔaymana", "ʔaymanta"],
-        "k": "أيمن",
-        "yol": "kök"
-      },
-      {
-        "w": "أيمنتما",
-        "u": "أيمنتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَيْمَنْتُمَا • (ʔaymantumā) (form IV) /ʔaj.man.tu.maː/\n# second-person dual past active of أَيْمَنَ (ʔaymana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaymantumā", "ʔaymana"],
-        "k": "أيمن",
-        "yol": "kök"
-      },
-      {
-        "w": "أيمنتم",
-        "u": "أيمنتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَيْمَنْتُمْ • (ʔaymantum) (form IV) /ʔaj.man.tum/\n# second-person masculine plural past active of أَيْمَنَ (ʔaymana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaymantum", "ʔaymana"],
-        "k": "أيمن",
-        "yol": "kök"
-      },
-      {
-        "w": "أيمنتا",
-        "u": "أيمنتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَيْمَنَتَا • (ʔaymanatā) (form IV) /ʔaj.ma.na.taː/\n# third-person feminine dual past active of أَيْمَنَ (ʔaymana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaymanatā", "ʔaymana"],
-        "k": "أيمن",
-        "yol": "kök"
-      },
-      {
-        "w": "أيمنا",
-        "u": "أيمنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أيمنا (form IV)\n# أَيْمَنَا (ʔaymanā) /ʔaj.ma.naː/: third-person masculine dual past active of أَيْمَنَ (ʔaymana)\n# أَيْمَنَّا (ʔaymannā) /ʔaj.man.naː/: first-person plural past active of أَيْمَنَ (ʔaymana)\n# أَيْمِنَا (ʔayminā) /ʔaj.mi.naː/: second-person dual imperative of أَيْمَنَ (ʔaymana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaymanā", "ʔaymana", "ʔaymannā"],
-        "k": "أيمن",
-        "yol": "kök"
-      },
-      {
-        "w": "أيمنتن",
-        "u": "أيمنتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَيْمَنْتُنَّ • (ʔaymantunna) (form IV) /ʔaj.man.tun.na/\n# second-person feminine plural past active of أَيْمَنَ (ʔaymana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaymantunna", "ʔaymana"],
-        "k": "أيمن",
-        "yol": "kök"
-      },
-      {
-        "w": "أيمنوا",
-        "u": "أيمنوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أيمنوا (form IV)\n# أَيْمَنُوا (ʔaymanū) /ʔaj.ma.nuː/: third-person masculine plural past active of أَيْمَنَ (ʔaymana)\n# أَيْمِنُوا (ʔayminū) /ʔaj.mi.nuː/: second-person masculine plural imperative of أَيْمَنَ (ʔaymana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaymanū", "ʔaymana", "ʔayminū"],
-        "k": "أيمن",
-        "yol": "kök"
-      },
-      {
-        "w": "تومن",
-        "u": "تومن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تومن (form IV)\n# تُومِنُ (tūminu) /tuː.mi.nu/: inflection of أَيْمَنَ (ʔaymana):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُومِنَّ (tūminna) /tuː.min.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَيْمَنَ (ʔaymana)\n# تُومِنَ (tūmina) /tuː.mi.na/: inflection of أَيْمَنَ (ʔayma",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūminu", "ʔaymana", "tūminna"],
-        "k": "أيمن",
-        "yol": "kök"
-      },
-      {
-        "w": "يومن",
-        "u": "يومن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يومن (form IV)\n# يُومِنُ (yūminu) /juː.mi.nu/: third-person masculine singular non-past active indicative of أَيْمَنَ (ʔaymana)\n# يُومِنَّ (yūminna) /juː.min.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَيْمَنَ (ʔaymana)\n# يُومِنَ (yūmina) /juː.mi.na/: third-person masculine singular non-past active subjunctive of أَيْمَنَ (ʔaymana)\n# يُومِنْ (yūmin) /juː.mi",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūminu", "ʔaymana", "yūminna"],
-        "k": "أيمن",
-        "yol": "kök"
-      },
-      {
-        "w": "تومنين",
-        "u": "تومنين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُومِنِينَ • (tūminīna) (form IV) /tuː.mi.niː.na/\n# second-person feminine singular non-past active indicative of أَيْمَنَ (ʔaymana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūminīna", "ʔaymana"],
-        "k": "أيمن",
-        "yol": "kök"
-      },
-      {
-        "w": "تومنان",
-        "u": "تومنان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُومِنَانِ • (tūmināni) (form IV) /tuː.mi.naː.ni/\n# inflection of أَيْمَنَ (ʔaymana):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūmināni", "ʔaymana"],
-        "k": "أيمن",
-        "yol": "kök"
-      },
-      {
-        "w": "يومنان",
-        "u": "يومنان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُومِنَانِ • (yūmināni) (form IV) /juː.mi.naː.ni/\n# third-person masculine dual non-past active indicative of أَيْمَنَ (ʔaymana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūmināni", "ʔaymana"],
-        "k": "أيمن",
-        "yol": "kök"
-      },
-      {
-        "w": "تومنون",
-        "u": "تومنون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُومِنُونَ • (tūminūna) (form IV) /tuː.mi.nuː.na/\n# second-person masculine plural non-past active indicative of أَيْمَنَ (ʔaymana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūminūna", "ʔaymana"],
-        "k": "أيمن",
-        "yol": "kök"
-      },
-      {
-        "w": "تومني",
-        "u": "تومني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُومِنِي • (tūminī) (form IV) /tuː.mi.niː/\n# second-person feminine singular non-past active subjunctive/jussive of أَيْمَنَ (ʔaymana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūminī", "ʔaymana"],
-        "k": "أيمن",
-        "yol": "kök"
-      },
-      {
-        "w": "يومنون",
-        "u": "يومنون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُومِنُونَ • (yūminūna) (form IV) /juː.mi.nuː.na/\n# third-person masculine plural non-past active indicative of أَيْمَنَ (ʔaymana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūminūna", "ʔaymana"],
-        "k": "أيمن",
-        "yol": "kök"
-      },
-      {
-        "w": "أيمني",
-        "u": "أيمني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَيْمِنِي • (ʔayminī) (form IV) /ʔaj.mi.niː/\n# second-person feminine singular imperative of أَيْمَنَ (ʔaymana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔayminī", "ʔaymana"],
-        "k": "أيمن",
-        "yol": "kök"
-      },
-      {
-        "w": "تومنا",
-        "u": "تومنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُومِنَا • (tūminā) (form IV) /tuː.mi.naː/\n# inflection of أَيْمَنَ (ʔaymana):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūminā", "ʔaymana"],
-        "k": "أيمن",
-        "yol": "kök"
-      },
-      {
-        "w": "يومنوا",
-        "u": "يومنوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُومِنُوا • (yūminū) (form IV) /juː.mi.nuː/\n# third-person masculine plural non-past active subjunctive/jussive of أَيْمَنَ (ʔaymana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūminū", "ʔaymana"],
-        "k": "أيمن",
-        "yol": "kök"
-      },
-      {
-        "w": "تومنوا",
-        "u": "تومنوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُومِنُوا • (tūminū) (form IV) /tuː.mi.nuː/\n# second-person masculine plural non-past active subjunctive/jussive of أَيْمَنَ (ʔaymana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūminū", "ʔaymana"],
-        "k": "أيمن",
-        "yol": "kök"
-      },
-      {
-        "w": "يومنا",
-        "u": "يومنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُومِنَا • (yūminā) (form IV) /juː.mi.naː/\n# third-person masculine dual non-past active subjunctive/jussive of أَيْمَنَ (ʔaymana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūminā", "ʔaymana"],
-        "k": "أيمن",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "من",
+  "ses": {
     "harf": "ء",
+    "fasil": "من",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "أومن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أومن (form IV)\n# أُومِنُ (ʔūminu) /ʔuː.mi.nu/: first-person singular non-past active indicative of أَيْمَنَ (ʔaymana)\n# أُومِنَ (ʔūmina) /ʔuː.mi.na/: first-person singular non-past active subjunctive of أَيْمَنَ (ʔaymana)\n# أُومِنْ (ʔūmin) /ʔuː.min/: first-person singular non-past active jussive of أَيْمَنَ (ʔaymana)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔūminu", "ʔaymana", "ʔūmina"],
+      "kok_yazilis": "أيمن",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نومن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نومن (form IV)\n# نُومِنُ (nūminu) /nuː.mi.nu/: first-person plural non-past active indicative of أَيْمَنَ (ʔaymana)\n# نُومِنَ (nūmina) /nuː.mi.na/: first-person plural non-past active subjunctive of أَيْمَنَ (ʔaymana)\n# نُومِنْ (nūmin) /nuː.min/: first-person plural non-past active jussive of أَيْمَنَ (ʔaymana)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nūminu", "ʔaymana", "nūmina"],
+      "kok_yazilis": "أيمن",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أيمنت",
+      "tur": "verb",
+      "baslik": "أيمنت (form IV)\n# أَيْمَنْتُ (ʔaymantu) /ʔaj.man.tu/: first-person singular past active of أَيْمَنَ (ʔaymana)\n# أَيْمَنْتَ (ʔaymanta) /ʔaj.man.ta/: second-person masculine singular past active of أَيْمَنَ (ʔaymana)\n# أَيْمَنْتِ (ʔaymanti) /ʔaj.man.ti/: second-person feminine singular past active of أَيْمَنَ (ʔaymana)\n# أَيْمَنَتْ (ʔaymanat) /ʔaj.ma.nat/: third-person feminine singular past active ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaymantu", "ʔaymana", "ʔaymanta"],
+      "kok_yazilis": "أيمن",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أيمنتما",
+      "tur": "verb",
+      "baslik": "أَيْمَنْتُمَا • (ʔaymantumā) (form IV) /ʔaj.man.tu.maː/\n# second-person dual past active of أَيْمَنَ (ʔaymana)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaymantumā", "ʔaymana"],
+      "kok_yazilis": "أيمن",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أيمنتم",
+      "tur": "verb",
+      "baslik": "أَيْمَنْتُمْ • (ʔaymantum) (form IV) /ʔaj.man.tum/\n# second-person masculine plural past active of أَيْمَنَ (ʔaymana)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaymantum", "ʔaymana"],
+      "kok_yazilis": "أيمن",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أيمنتا",
+      "tur": "verb",
+      "baslik": "أَيْمَنَتَا • (ʔaymanatā) (form IV) /ʔaj.ma.na.taː/\n# third-person feminine dual past active of أَيْمَنَ (ʔaymana)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaymanatā", "ʔaymana"],
+      "kok_yazilis": "أيمن",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أيمنا",
+      "tur": "verb",
+      "baslik": "أيمنا (form IV)\n# أَيْمَنَا (ʔaymanā) /ʔaj.ma.naː/: third-person masculine dual past active of أَيْمَنَ (ʔaymana)\n# أَيْمَنَّا (ʔaymannā) /ʔaj.man.naː/: first-person plural past active of أَيْمَنَ (ʔaymana)\n# أَيْمِنَا (ʔayminā) /ʔaj.mi.naː/: second-person dual imperative of أَيْمَنَ (ʔaymana)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaymanā", "ʔaymana", "ʔaymannā"],
+      "kok_yazilis": "أيمن",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أيمنتن",
+      "tur": "verb",
+      "baslik": "أَيْمَنْتُنَّ • (ʔaymantunna) (form IV) /ʔaj.man.tun.na/\n# second-person feminine plural past active of أَيْمَنَ (ʔaymana)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaymantunna", "ʔaymana"],
+      "kok_yazilis": "أيمن",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أيمنوا",
+      "tur": "verb",
+      "baslik": "أيمنوا (form IV)\n# أَيْمَنُوا (ʔaymanū) /ʔaj.ma.nuː/: third-person masculine plural past active of أَيْمَنَ (ʔaymana)\n# أَيْمِنُوا (ʔayminū) /ʔaj.mi.nuː/: second-person masculine plural imperative of أَيْمَنَ (ʔaymana)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaymanū", "ʔaymana", "ʔayminū"],
+      "kok_yazilis": "أيمن",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تومن",
+      "tur": "verb",
+      "baslik": "تومن (form IV)\n# تُومِنُ (tūminu) /tuː.mi.nu/: inflection of أَيْمَنَ (ʔaymana):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُومِنَّ (tūminna) /tuː.min.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَيْمَنَ (ʔaymana)\n# تُومِنَ (tūmina) /tuː.mi.na/: inflection of أَيْمَنَ (ʔayma",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūminu", "ʔaymana", "tūminna"],
+      "kok_yazilis": "أيمن",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يومن",
+      "tur": "verb",
+      "baslik": "يومن (form IV)\n# يُومِنُ (yūminu) /juː.mi.nu/: third-person masculine singular non-past active indicative of أَيْمَنَ (ʔaymana)\n# يُومِنَّ (yūminna) /juː.min.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَيْمَنَ (ʔaymana)\n# يُومِنَ (yūmina) /juː.mi.na/: third-person masculine singular non-past active subjunctive of أَيْمَنَ (ʔaymana)\n# يُومِنْ (yūmin) /juː.mi",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūminu", "ʔaymana", "yūminna"],
+      "kok_yazilis": "أيمن",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تومنين",
+      "tur": "verb",
+      "baslik": "تُومِنِينَ • (tūminīna) (form IV) /tuː.mi.niː.na/\n# second-person feminine singular non-past active indicative of أَيْمَنَ (ʔaymana)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūminīna", "ʔaymana"],
+      "kok_yazilis": "أيمن",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تومنان",
+      "tur": "verb",
+      "baslik": "تُومِنَانِ • (tūmināni) (form IV) /tuː.mi.naː.ni/\n# inflection of أَيْمَنَ (ʔaymana):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūmināni", "ʔaymana"],
+      "kok_yazilis": "أيمن",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يومنان",
+      "tur": "verb",
+      "baslik": "يُومِنَانِ • (yūmināni) (form IV) /juː.mi.naː.ni/\n# third-person masculine dual non-past active indicative of أَيْمَنَ (ʔaymana)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūmināni", "ʔaymana"],
+      "kok_yazilis": "أيمن",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تومنون",
+      "tur": "verb",
+      "baslik": "تُومِنُونَ • (tūminūna) (form IV) /tuː.mi.nuː.na/\n# second-person masculine plural non-past active indicative of أَيْمَنَ (ʔaymana)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūminūna", "ʔaymana"],
+      "kok_yazilis": "أيمن",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تومني",
+      "tur": "verb",
+      "baslik": "تُومِنِي • (tūminī) (form IV) /tuː.mi.niː/\n# second-person feminine singular non-past active subjunctive/jussive of أَيْمَنَ (ʔaymana)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūminī", "ʔaymana"],
+      "kok_yazilis": "أيمن",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يومنون",
+      "tur": "verb",
+      "baslik": "يُومِنُونَ • (yūminūna) (form IV) /juː.mi.nuː.na/\n# third-person masculine plural non-past active indicative of أَيْمَنَ (ʔaymana)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūminūna", "ʔaymana"],
+      "kok_yazilis": "أيمن",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أيمني",
+      "tur": "verb",
+      "baslik": "أَيْمِنِي • (ʔayminī) (form IV) /ʔaj.mi.niː/\n# second-person feminine singular imperative of أَيْمَنَ (ʔaymana)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔayminī", "ʔaymana"],
+      "kok_yazilis": "أيمن",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تومنا",
+      "tur": "verb",
+      "baslik": "تُومِنَا • (tūminā) (form IV) /tuː.mi.naː/\n# inflection of أَيْمَنَ (ʔaymana):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūminā", "ʔaymana"],
+      "kok_yazilis": "أيمن",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يومنوا",
+      "tur": "verb",
+      "baslik": "يُومِنُوا • (yūminū) (form IV) /juː.mi.nuː/\n# third-person masculine plural non-past active subjunctive/jussive of أَيْمَنَ (ʔaymana)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūminū", "ʔaymana"],
+      "kok_yazilis": "أيمن",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تومنوا",
+      "tur": "verb",
+      "baslik": "تُومِنُوا • (tūminū) (form IV) /tuː.mi.nuː/\n# second-person masculine plural non-past active subjunctive/jussive of أَيْمَنَ (ʔaymana)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūminū", "ʔaymana"],
+      "kok_yazilis": "أيمن",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يومنا",
+      "tur": "verb",
+      "baslik": "يُومِنَا • (yūminā) (form IV) /juː.mi.naː/\n# third-person masculine dual non-past active subjunctive/jussive of أَيْمَنَ (ʔaymana)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūminā", "ʔaymana"],
+      "kok_yazilis": "أيمن",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءيمن", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

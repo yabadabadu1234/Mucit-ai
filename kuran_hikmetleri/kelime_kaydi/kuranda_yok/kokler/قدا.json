@@ -1,400 +1,289 @@
 {
   "kok": "قدا",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "قدا", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يقد",
-        "u": "يقد",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يَقْدُ • (yaqdu) (form I) /jaq.du/\n# third-person masculine singular non-past active jussive of قَدَا (qadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaqdu", "qadā"],
-        "k": "قدا",
-        "yol": "kök"
-      },
-      {
-        "w": "نقد",
-        "u": "نقد",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "نقد (form I)\n# نَقْدُ (naqdu) /naq.du/: first-person plural non-past active jussive of قَدَا (qadā)\n# نَقْدَ (naqda) /naq.da/: first-person plural non-past active jussive of قَدِيَ (qadiya)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "s": [
-          ["nonlemma", "See the etymology of the corresponding lemma form."]
-        ],
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naqdu", "qadā", "naqda"],
-        "k": "قدا",
-        "yol": "kök"
-      },
-      {
-        "w": "أقد",
-        "u": "أقد",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "أَقْدُ • (ʔaqdu) (form I) /ʔaq.du/\n# first-person singular non-past active jussive of قَدَا (qadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaqdu", "qadā"],
-        "k": "قدا",
-        "yol": "kök"
-      },
-      {
-        "w": "تقد",
-        "u": "تقد",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تَقْدُ • (taqdu) (form I) /taq.du/\n# inflection of قَدَا (qadā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taqdu", "qadā"],
-        "k": "قدا",
-        "yol": "kök"
-      },
-      {
-        "w": "قدت",
-        "u": "قدت",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "قَدَتْ • (qadat) (form I) /qa.dat/\n# third-person feminine singular past active of قَدَا (qadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qadat", "qadā"],
-        "k": "قدا",
-        "yol": "kök"
-      },
-      {
-        "w": "تقدين",
-        "u": "تقدين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَقْدِينَ • (taqdīna) (form I) /taq.diː.na/\n# second-person feminine singular non-past active indicative of قَدَا (qadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taqdīna", "qadā"],
-        "k": "قدا",
-        "yol": "kök"
-      },
-      {
-        "w": "تقدي",
-        "u": "تقدي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَقْدِي • (taqdī) (form I) /taq.diː/\n# second-person feminine singular non-past active subjunctive/jussive of قَدَا (qadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taqdī", "qadā"],
-        "k": "قدا",
-        "yol": "kök"
-      },
-      {
-        "w": "تقدون",
-        "u": "تقدون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَقْدُونَ • (taqdūna) (form I) /taq.duː.na/\n# inflection of قَدَا (qadā):\n## second-person masculine/feminine plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taqdūna", "qadā"],
-        "k": "قدا",
-        "yol": "kök"
-      },
-      {
-        "w": "تقدوا",
-        "u": "تقدوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تقدوا (form I)\n# تَقْدُوَا (taqduwā) /taq.du.waː/: inflection of قَدَا (qadā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تَقْدُوا (taqdū) /taq.duː/: second-person masculine plural non-past active subjunctive/jussive of قَدَا (qadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taqduwā", "qadā", "taqdū"],
-        "k": "قدا",
-        "yol": "kök"
-      },
-      {
-        "w": "قدوا",
-        "u": "قدوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "قدوا (form I)\n# قَدَوَا (qadawā) /qa.da.waː/: third-person masculine dual past active of قَدَا (qadā)\n# قَدَوْا (qadaw) /qa.daw/: third-person masculine plural past active of قَدَا (qadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qadawā", "qadā", "qadaw"],
-        "k": "قدا",
-        "yol": "kök"
-      },
-      {
-        "w": "يقدون",
-        "u": "يقدون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَقْدُونَ • (yaqdūna) (form I) /jaq.duː.na/\n# inflection of قَدَا (qadā):\n## third-person masculine/feminine plural non-past active indicative\n## third-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaqdūna", "qadā"],
-        "k": "قدا",
-        "yol": "kök"
-      },
-      {
-        "w": "يقدوا",
-        "u": "يقدوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يقدوا (form I)\n# يَقْدُوَا (yaqduwā) /jaq.du.waː/: third-person masculine dual non-past active subjunctive/jussive of قَدَا (qadā)\n# يَقْدُوا (yaqdū) /jaq.duː/: third-person masculine plural non-past active subjunctive/jussive of قَدَا (qadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaqduwā", "qadā", "yaqdū"],
-        "k": "قدا",
-        "yol": "kök"
-      },
-      {
-        "w": "قدتا",
-        "u": "قدتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "قَدَتَا • (qadatā) (form I) /qa.da.taː/\n# third-person feminine dual past active of قَدَا (qadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qadatā", "qadā"],
-        "k": "قدا",
-        "yol": "kök"
-      },
-      {
-        "w": "قدوت",
-        "u": "قدوت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قدوت (form I)\n# قَدَوْتُ (qadawtu) /qa.daw.tu/: first-person singular past active of قَدَا (qadā)\n# قَدَوْتَ (qadawta) /qa.daw.ta/: second-person masculine singular past active of قَدَا (qadā)\n# قَدَوْتِ (qadawti) /qa.daw.ti/: second-person feminine singular past active of قَدَا (qadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qadawtu", "qadā", "qadawta"],
-        "k": "قدا",
-        "yol": "kök"
-      },
-      {
-        "w": "قدوتما",
-        "u": "قدوتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قَدَوْتُمَا • (qadawtumā) (form I) /qa.daw.tu.maː/\n# second-person dual past active of قَدَا (qadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qadawtumā", "qadā"],
-        "k": "قدا",
-        "yol": "kök"
-      },
-      {
-        "w": "قدونا",
-        "u": "قدونا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قَدَوْنَا • (qadawnā) (form I) /qa.daw.naː/\n# first-person plural past active of قَدَا (qadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qadawnā", "qadā"],
-        "k": "قدا",
-        "yol": "kök"
-      },
-      {
-        "w": "قدوتم",
-        "u": "قدوتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قَدَوْتُمْ • (qadawtum) (form I) /qa.daw.tum/\n# second-person masculine plural past active of قَدَا (qadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qadawtum", "qadā"],
-        "k": "قدا",
-        "yol": "kök"
-      },
-      {
-        "w": "أقدو",
-        "u": "أقدو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أقدو (form I)\n# أَقْدُو (ʔaqdū) /ʔaq.duː/: first-person singular non-past active indicative of قَدَا (qadā)\n# أَقْدُوَ (ʔaqduwa) /ʔaq.du.wa/: first-person singular non-past active subjunctive of قَدَا (qadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaqdū", "qadā", "ʔaqduwa"],
-        "k": "قدا",
-        "yol": "kök"
-      },
-      {
-        "w": "تقدو",
-        "u": "تقدو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تقدو (form I)\n# تَقْدُو (taqdū) /taq.duː/: inflection of قَدَا (qadā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَقْدُوَ (taqduwa) /taq.du.wa/: inflection of قَدَا (qadā):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taqdū", "qadā", "taqduwa"],
-        "k": "قدا",
-        "yol": "kök"
-      },
-      {
-        "w": "قدون",
-        "u": "قدون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قَدَوْنَ • (qadawna) (form I) /qa.daw.na/\n# third-person feminine plural past active of قَدَا (qadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qadawna", "qadā"],
-        "k": "قدا",
-        "yol": "kök"
-      },
-      {
-        "w": "يقدو",
-        "u": "يقدو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يقدو (form I)\n# يَقْدُو (yaqdū) /jaq.duː/: third-person masculine singular non-past active indicative of قَدَا (qadā)\n# يَقْدُوَ (yaqduwa) /jaq.du.wa/: third-person masculine singular non-past active subjunctive of قَدَا (qadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaqdū", "qadā", "yaqduwa"],
-        "k": "قدا",
-        "yol": "kök"
-      },
-      {
-        "w": "تقدوان",
-        "u": "تقدوان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَقْدُوَانِ • (taqduwāni) (form I) /taq.du.waː.ni/\n# inflection of قَدَا (qadā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taqduwāni", "qadā"],
-        "k": "قدا",
-        "yol": "kök"
-      },
-      {
-        "w": "يقدوان",
-        "u": "يقدوان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَقْدُوَانِ • (yaqduwāni) (form I) /jaq.du.waː.ni/\n# third-person masculine dual non-past active indicative of قَدَا (qadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaqduwāni", "qadā"],
-        "k": "قدا",
-        "yol": "kök"
-      },
-      {
-        "w": "قدوتن",
-        "u": "قدوتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قَدَوْتُنَّ • (qadawtunna) (form I) /qa.daw.tun.na/\n# second-person feminine plural past active of قَدَا (qadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qadawtunna", "qadā"],
-        "k": "قدا",
-        "yol": "kök"
-      },
-      {
-        "w": "اقد",
-        "u": "اقد",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اُقْدُ • (uqdu) (form I) /uq.du/\n# second-person masculine singular imperative of قَدَا (qadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uqdu", "qadā"],
-        "k": "قدا",
-        "yol": "kök"
-      },
-      {
-        "w": "اقدون",
-        "u": "اقدون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُقْدُونَ • (uqdūna) (form I) /uq.duː.na/\n# second-person feminine plural imperative of قَدَا (qadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uqdūna", "qadā"],
-        "k": "قدا",
-        "yol": "kök"
-      },
-      {
-        "w": "اقدوا",
-        "u": "اقدوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اقدوا (form I)\n# اُقْدُوَا (uqduwā) /uq.du.waː/: second-person dual imperative of قَدَا (qadā)\n# اُقْدُوا (uqdū) /uq.duː/: second-person masculine plural imperative of قَدَا (qadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uqduwā", "qadā", "uqdū"],
-        "k": "قدا",
-        "yol": "kök"
-      },
-      {
-        "w": "اقدي",
-        "u": "اقدي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اُقْدِي • (uqdī) (form I) /uq.diː/\n# second-person feminine singular imperative of قَدَا (qadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uqdī", "qadā"],
-        "k": "قدا",
-        "yol": "kök"
-      },
-      {
-        "w": "نقدو",
-        "u": "نقدو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نقدو (form I)\n# نَقْدُو (naqdū) /naq.duː/: first-person plural non-past active indicative of قَدَا (qadā)\n# نَقْدُوَ (naqduwa) /naq.du.wa/: first-person plural non-past active subjunctive of قَدَا (qadā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naqdū", "qadā", "naqduwa"],
-        "k": "قدا",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "قد",
+  "ses": {
     "harf": "ق",
+    "fasil": "قد",
     "mahrec": "lehaviyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "يقد",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يَقْدُ • (yaqdu) (form I) /jaq.du/\n# third-person masculine singular non-past active jussive of قَدَا (qadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaqdu", "qadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نقد",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "نقد (form I)\n# نَقْدُ (naqdu) /naq.du/: first-person plural non-past active jussive of قَدَا (qadā)\n# نَقْدَ (naqda) /naq.da/: first-person plural non-past active jussive of قَدِيَ (qadiya)",
+      "etim_sablon": [
+        ["nonlemma", "See the etymology of the corresponding lemma form."]
+      ],
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naqdu", "qadā", "naqda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقد",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "أَقْدُ • (ʔaqdu) (form I) /ʔaq.du/\n# first-person singular non-past active jussive of قَدَا (qadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaqdu", "qadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقد",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تَقْدُ • (taqdu) (form I) /taq.du/\n# inflection of قَدَا (qadā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taqdu", "qadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قدت",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "قَدَتْ • (qadat) (form I) /qa.dat/\n# third-person feminine singular past active of قَدَا (qadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qadat", "qadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقدين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَقْدِينَ • (taqdīna) (form I) /taq.diː.na/\n# second-person feminine singular non-past active indicative of قَدَا (qadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taqdīna", "qadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقدي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَقْدِي • (taqdī) (form I) /taq.diː/\n# second-person feminine singular non-past active subjunctive/jussive of قَدَا (qadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taqdī", "qadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقدون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَقْدُونَ • (taqdūna) (form I) /taq.duː.na/\n# inflection of قَدَا (qadā):\n## second-person masculine/feminine plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taqdūna", "qadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقدوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تقدوا (form I)\n# تَقْدُوَا (taqduwā) /taq.du.waː/: inflection of قَدَا (qadā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تَقْدُوا (taqdū) /taq.duː/: second-person masculine plural non-past active subjunctive/jussive of قَدَا (qadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taqduwā", "qadā", "taqdū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قدوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "قدوا (form I)\n# قَدَوَا (qadawā) /qa.da.waː/: third-person masculine dual past active of قَدَا (qadā)\n# قَدَوْا (qadaw) /qa.daw/: third-person masculine plural past active of قَدَا (qadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qadawā", "qadā", "qadaw"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقدون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَقْدُونَ • (yaqdūna) (form I) /jaq.duː.na/\n# inflection of قَدَا (qadā):\n## third-person masculine/feminine plural non-past active indicative\n## third-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaqdūna", "qadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقدوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يقدوا (form I)\n# يَقْدُوَا (yaqduwā) /jaq.du.waː/: third-person masculine dual non-past active subjunctive/jussive of قَدَا (qadā)\n# يَقْدُوا (yaqdū) /jaq.duː/: third-person masculine plural non-past active subjunctive/jussive of قَدَا (qadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaqduwā", "qadā", "yaqdū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قدتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "قَدَتَا • (qadatā) (form I) /qa.da.taː/\n# third-person feminine dual past active of قَدَا (qadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qadatā", "qadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قدوت",
+      "tur": "verb",
+      "baslik": "قدوت (form I)\n# قَدَوْتُ (qadawtu) /qa.daw.tu/: first-person singular past active of قَدَا (qadā)\n# قَدَوْتَ (qadawta) /qa.daw.ta/: second-person masculine singular past active of قَدَا (qadā)\n# قَدَوْتِ (qadawti) /qa.daw.ti/: second-person feminine singular past active of قَدَا (qadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qadawtu", "qadā", "qadawta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قدوتما",
+      "tur": "verb",
+      "baslik": "قَدَوْتُمَا • (qadawtumā) (form I) /qa.daw.tu.maː/\n# second-person dual past active of قَدَا (qadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qadawtumā", "qadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قدونا",
+      "tur": "verb",
+      "baslik": "قَدَوْنَا • (qadawnā) (form I) /qa.daw.naː/\n# first-person plural past active of قَدَا (qadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qadawnā", "qadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قدوتم",
+      "tur": "verb",
+      "baslik": "قَدَوْتُمْ • (qadawtum) (form I) /qa.daw.tum/\n# second-person masculine plural past active of قَدَا (qadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qadawtum", "qadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقدو",
+      "tur": "verb",
+      "baslik": "أقدو (form I)\n# أَقْدُو (ʔaqdū) /ʔaq.duː/: first-person singular non-past active indicative of قَدَا (qadā)\n# أَقْدُوَ (ʔaqduwa) /ʔaq.du.wa/: first-person singular non-past active subjunctive of قَدَا (qadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaqdū", "qadā", "ʔaqduwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقدو",
+      "tur": "verb",
+      "baslik": "تقدو (form I)\n# تَقْدُو (taqdū) /taq.duː/: inflection of قَدَا (qadā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَقْدُوَ (taqduwa) /taq.du.wa/: inflection of قَدَا (qadā):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taqdū", "qadā", "taqduwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قدون",
+      "tur": "verb",
+      "baslik": "قَدَوْنَ • (qadawna) (form I) /qa.daw.na/\n# third-person feminine plural past active of قَدَا (qadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qadawna", "qadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقدو",
+      "tur": "verb",
+      "baslik": "يقدو (form I)\n# يَقْدُو (yaqdū) /jaq.duː/: third-person masculine singular non-past active indicative of قَدَا (qadā)\n# يَقْدُوَ (yaqduwa) /jaq.du.wa/: third-person masculine singular non-past active subjunctive of قَدَا (qadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaqdū", "qadā", "yaqduwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقدوان",
+      "tur": "verb",
+      "baslik": "تَقْدُوَانِ • (taqduwāni) (form I) /taq.du.waː.ni/\n# inflection of قَدَا (qadā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taqduwāni", "qadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقدوان",
+      "tur": "verb",
+      "baslik": "يَقْدُوَانِ • (yaqduwāni) (form I) /jaq.du.waː.ni/\n# third-person masculine dual non-past active indicative of قَدَا (qadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaqduwāni", "qadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قدوتن",
+      "tur": "verb",
+      "baslik": "قَدَوْتُنَّ • (qadawtunna) (form I) /qa.daw.tun.na/\n# second-person feminine plural past active of قَدَا (qadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qadawtunna", "qadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اقد",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اُقْدُ • (uqdu) (form I) /uq.du/\n# second-person masculine singular imperative of قَدَا (qadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uqdu", "qadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اقدون",
+      "tur": "verb",
+      "baslik": "اُقْدُونَ • (uqdūna) (form I) /uq.duː.na/\n# second-person feminine plural imperative of قَدَا (qadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uqdūna", "qadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اقدوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اقدوا (form I)\n# اُقْدُوَا (uqduwā) /uq.du.waː/: second-person dual imperative of قَدَا (qadā)\n# اُقْدُوا (uqdū) /uq.duː/: second-person masculine plural imperative of قَدَا (qadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uqduwā", "qadā", "uqdū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اقدي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اُقْدِي • (uqdī) (form I) /uq.diː/\n# second-person feminine singular imperative of قَدَا (qadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uqdī", "qadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نقدو",
+      "tur": "verb",
+      "baslik": "نقدو (form I)\n# نَقْدُو (naqdū) /naq.duː/: first-person plural non-past active indicative of قَدَا (qadā)\n# نَقْدُوَ (naqduwa) /naq.du.wa/: first-person plural non-past active subjunctive of قَدَا (qadā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naqdū", "qadā", "naqduwa"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "قدا", "r7"]
+  ],
+  "mana": {
     "ince": "system_of_measurement.n.01",
     "orta": "noun.possession",
     "ust": "insan ve toplum",
@@ -402,22 +291,15 @@
     "dayanak_tanim": "money in the form of bills or coins",
     "synset_sayisi": 4
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["disapproval.n.02", "knock.v.06", "standard.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["disapproval.n.02", "knock.v.06", "standard.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

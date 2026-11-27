@@ -1,496 +1,363 @@
 {
   "kok": "ردى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ردى", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "mekayis": [
-      {
-        "baslik": "رَدَى",
-        "metin": "(رَدَى) الرَّاءُ وَالدَّالُ وَالْيَاءُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى رَمْيٍ أَوْ تَرَامٍ وَمَا أَشْبَهَ ذَلِكَ. يُقَالُ رَدَيْتُهُ بِالْحِجَارَةِ أَرْدِيهِ: رَمَيْتُهُ. وَالْحَجَرُ مِرْدَاةٌ. وَالرَّدْيُ ثَلَاثَةُ مَوَاضِعَ تَرْجِعُ إِلَى قِيَاسِ [مَا] قَدْ ذَكَرْنَاهُ. فَالْأَوَّلُ رَدَى الْحَجَرَ. وَالثَّانِي رَدَى الْفَرَسُ: أَسْرَعَ. وَرَدَتِ الْجَارِيَةُ، إِذَا رَفَعَتْ إِحْدَى رِجْلَيْهَا وَقَفَزَتْ بِوَاحِدَةٍ، وَهُوَ الثَّالِثُ. وَكُلُّ ذَلِكَ يَرْجِعُ إِلَى التَّرَامِي. وَالرَّدَيَانُ: عَدْوُ الْحِمَارِ بَيْنَ آرِيِّهِ وَمُتَمَعَّكِهِ. وَمِنَ الْبَابِ الرَّدَى، وَهُوَ الْهَلَاكُ; يُقَالُ رَدِيَ يَرْدَى، إِذَا هَلَكَ. وَأَرْدَاهُ اللَّهُ: أَهْلَكَهُ. وَالتَّرَدِّي: التَّهَوُّرُ فِي الْمَهْوَى. يُقَالُ رَدِيَ فِي الْبِئْرِ كَمَا يُقَالُ\nتَرَدَّى. قَالَهَا أَبُو زَيْدٍ. وَيُقَالُ: مَا أَدْرِي أَيْنَ رَدَى، أَيْ أَيْنَ ذَهَبَ. وَهُوَ مِنَ الْبَابِ، مَعْنَاهُ مَا أَدْرِي أَيْنَ رَمَى بِنَفْسِهِ. وَمِنَ الْبَابِ الرَّدَاةُ: الصَّخْرَةُ، وَجَمْعُهَا الرَّدَى. قَالَ:\nفَحْلُ مَخَاضٍ كَالرَّدَى الْمُنْقَضِّ\nوَإِذَا قَالُوا لِلنَّاقَةِ مِرْدَاةٌ، فَإِنَّمَا شَبَّهُوهَا بِالصَّخْرَةِ. وَيُقَالُ رَادَيْتُ عَنِ الْقَوْمِ، إِذَا رَامَيْتَ عَنْهُمْ. فَأَمَّا قَوْلُ طُفَيْلٍ:\nيُرَادَى عَلَى فَأْسِ اللِّجَامِ كَأَنَّمَا ... يُرَادَى عَلَى مِرْقَاةِ جِذْعٍ مُشَذَّبِ\nفَلَيْسَ هَذَا مِنَ الْبَابِ; لِأَنَّ هَذَا مَقْلُوبٌ. وَمَعْنَاهُ يُرَاوَدُ. وَقَدْ ذُكِرَ فِي مَوْضِعِهِ. وَمِمَّا شَذَّ عَنِ الْبَابِ الرِّدَاءُ الَّذِي يُلْبَسُ، مَا أَدْرِي مِمَّ اشْتِقَاقُهُ، وَفِي أَيِّ شَيْءٍ قِيَاسُهُ. يُقَالُ فُلَانٌ حَسَنُ الرِّدْيَةِ، مِنْ لُبْسِ الرِّدَاءِ. وَمِمَّا شَذَّ أَيْضًا قَوْلُهُمْ: أَرْدَى عَلَى الْخَمْسِينَ، إِذَا زَادَ عَلَيْهَا.\nفَأَمَّا الْمَهْمُوزُ فَكَلِمَتَانِ مُتَبَايِنَتَانِ جِدًّا. يُقَالُ أَرْدَأْتُ: أَفْسَدْتُ. وَرَدُؤَ الشَّيْءُ فَهُوَ رَدِيءٌ. وَالْكَلِمَةُ الْأُخْرَى أَرْدَأْتُ، إِذَا أَعَنْتَ. وَفُلَانٌ رِدْءُ فُلَانٍ، أَيْ مُعِينُهُ. قَالَ اللَّهُ جَلَّ جَلَالُهُ فِي قِصَّةِ مُوسَى: {فَأَرْسِلْهُ مَعِيَ رِدْءًا يُصَدِّقُنِي} [القصص: 34] ."
-      }
-    ],
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الراء والدال",
-      "baslik": "ردى",
-      "mihveri": "صدم بشدة وثقل عظيمين: كما يُرْدَى الجُحْرُ والمكانُ الغليظُ بالحَجَر الموصوف أو الصَخْرة العظيمة فيتصدع كالصخرة المذكورة. والمِرْداة أداة ذلك. ومن مادى الأصل: \"المَرادِى: قوائمُ الإبل والفِيَلة (لثِقَلها فكأن الرِجْل مِرْدَاةٌ إذ هي تضغط بثقل عظيم له أثر الصدم بالمرداة) ورَدَى الفرس يَرْدِى (رَمَى): عدا فرَجَم الأرضَ رَجْمًا (دَقَّها بشَّدةِ وَطْئه). وكذا رَدَى (2/782) الغلامُ: رَفَع إحدى رجليه وقفز بالأخرى \" (فيهبط على الأرض بشدة لتركز ثقل جسمه في هبوطه على رِجْل واحدة). ومنه \"رَدِىَ في الهُوَّة (= بئر أو نهر أو مَهواة) - من جَبَل أو مُرْتَفعْ (تعب) وتردَّى: تَهَوَّر في مَهْواة (سقط بثقله حتى اصطدم بالقاع) {وَالْمَوْقُوذَةُ وَالْمُتَرَدِّيَةُ} [المائدة: 3]: هي التي تَقَع من جَبل أو تَطِيح في بئر. وأرداه وردّاه فتَرَدَّى: قَلَبه فانقلب \". ومن معنويه ولازمه (مع أثر الصيغة) \"رَدِى (تعب): هَلَك (كالساقط يُدَكُّ فيَهْلِك) وتَرَدَّى. وأرْداه: أهلكه \"، {فَلَا يَصُدَّنَّكَ عَنْهَا مَنْ لَا يُؤْمِنُ بِهَا وَاتَّبَعَ هَوَاهُ فَتَرْدَى} [طه: 16]، {وَذَلِكُمْ ظَنُّكُمُ الَّذِي ظَنَنْتُمْ بِرَبِّكُمْ أَرْدَاكُمْ} [فصلت: 23]. وكل ما في القرآن من التركيب هو من (الردى) الهلاك هذا -عدا التردي فهو سقوطٌ ماديٌّ يلزمه الهلاك. والصدْم بشدة وثِقَلٍ هو ضَغط شديد يقع على المصدوم فيزيح جِرمه، وبهذا يتأتى معنى الدفع، أو يزحم بعضه بعضًا فيتأتى معنى التراكم ثم الزيادة. فمن الدفع \"المُرْدِىّ -كالكُرْسِيّ: خَشَبَة تُدفع بها السفينةُ تكون في يد الملّاح \". ومن الزيادة \"رَدَى على المائة (كرمى) وأردى: زاد \" (أ",
-      "sesler": "",
-      "tam_metin": "{فَلَا يَصُدَّنَّكَ عَنْهَا مَنْ لَا يُؤْمِنُ بِهَا وَاتَّبَعَ هَوَاهُ فَتَرْدَى} [طه: 16]\n\"الرَداة -كفتاة: الصَخْرة. المِرْداة: الحجَر الذي لا يكاد الرجل الضابط يَرْفَعه بيده يُرْدَى به الحَجَرُ والمكانُ الغليظ يحفرونه فيضربونه يُليّنونه، ويُردَى به جُحْر الضبّ إذا كان في قلعة فيُليّن القَلْعة ويهدِمُها، ورَدَيْت الحَجَر بصخرة أو بمعْوَل (رمن): ضربته بها لتكسره \".\n° المعنى المحوري\nصدم بشدة وثقل عظيمين: كما يُرْدَى الجُحْرُ والمكانُ الغليظُ بالحَجَر الموصوف أو الصَخْرة العظيمة فيتصدع كالصخرة المذكورة. والمِرْداة أداة ذلك. ومن مادى الأصل: \"المَرادِى: قوائمُ الإبل والفِيَلة (لثِقَلها فكأن الرِجْل مِرْدَاةٌ إذ هي تضغط بثقل عظيم له أثر الصدم بالمرداة) ورَدَى الفرس يَرْدِى (رَمَى): عدا فرَجَم الأرضَ رَجْمًا (دَقَّها بشَّدةِ وَطْئه). وكذا رَدَى\n(2/782)\nالغلامُ: رَفَع إحدى رجليه وقفز بالأخرى \" (فيهبط على الأرض بشدة لتركز ثقل جسمه في هبوطه على رِجْل واحدة). ومنه \"رَدِىَ في الهُوَّة (= بئر أو نهر أو مَهواة) - من جَبَل أو مُرْتَفعْ (تعب) وتردَّى: تَهَوَّر في مَهْواة (سقط بثقله حتى اصطدم بالقاع) {وَالْمَوْقُوذَةُ وَالْمُتَرَدِّيَةُ} [المائدة: 3]: هي التي تَقَع من جَبل أو تَطِيح في بئر. وأرداه وردّاه فتَرَدَّى: قَلَبه فانقلب \".\nومن معنويه ولازمه (مع أثر الصيغة) \"رَدِى (تعب): هَلَك (كالساقط يُدَكُّ فيَهْلِك) وتَرَدَّى. وأرْداه: أهلكه \"، {فَلَا يَصُدَّنَّكَ عَنْهَا مَنْ لَا يُؤْمِنُ بِهَا وَاتَّبَعَ هَوَاهُ فَتَرْدَى} [طه: 16]، {وَذَلِكُمْ ظَنُّكُمُ الَّذِي ظَنَنْتُمْ بِرَبِّكُمْ أَرْدَاكُمْ} [فصلت: 23]. وكل ما في القرآن من التركيب هو من (الردى) الهلاك هذا -عدا التردي فهو سقوطٌ ماديٌّ يلزمه الهلاك.\nوالصدْم بشدة وثِقَلٍ هو ضَغط شديد يقع على المصدوم فيزيح جِرمه، وبهذا يتأتى معنى الدفع، أو يزحم بعضه بعضًا فيتأتى معنى التراكم ثم الزيادة. فمن الدفع \"المُرْدِىّ -كالكُرْسِيّ: خَشَبَة تُدفع بها السفينةُ تكون في يد الملّاح \".\nومن الزيادة \"رَدَى على المائة (كرمى) وأردى: زاد \" (أي في سنّه).\nو\"الرِدَاء: الغِطاء الكبير/ المِلْحَفَة. (هو من معنى الرَمْى والإلقاء الذي هو صورة من رَدْى القَلْعةِ بالحجَرِ العظيم أي إلقائه عليه. لأنه) كساء يلقى على المَنكِبين والكَتِفين والعاتق/ مُجْتَمَعِ العنق \"، وسمي بهذا الملحظ لأنه لا يُتَأنّق في التلفع به. ثم لهذا الإلقاء على الكتف .. سمَّوا السيف رداء والقوس رداء. [انظر تعليق شارحَىْ المفضليات ص 67 في شرح جو قصيدة متمم في أخيه مالك بن نويرة رقم 67] قال ابن سيده \"تشبيهًا بالرداء الملبوس في التعلق بالجسم \"اه. ولتعلق\n(2/783)\nالرداء بالرقبة سموًا الدَين رِدَاء، كما جعلوا كُلًّا من العقْل، والجهْل، والشباب رداءً لمن يتصف بأي منهن. وذلك لكثرة استعمالهم الرداء وملازمته إياهم، فهو كالسّمة لصاحبه.",
-      "fasil_ozeti": "° معنى الفصل المعجمي (رد) : التراكم المترتب على صدّ الشيء المسترسل كما يتمثل في القصير المتردد أي البالغ القصر -في (ردد)، وفي الضغط العظيم في رَدْى الحجر بالمرداة -في (ردى)، وفي كثافة الحركة جيئة وذهابًا -في (رود)، وفي تراكم البناء الداعم للحائط في (ردأ)، وفي التثني من الطراءة -في (رأد)، وفي الاجتماع بالشيء المورود أي بلوغه والكون معه في حيز واحد -في (ورد)، وفي التجمع خلف الشيء -في (ردف)، وفي حشو فراغ وسط الشيء أو ما بين الأشياء -في (ردم)."
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "نرد",
-        "u": "نرد",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "نرد (form II)\n# نُرَدِّ (nuraddi) /nu.rad.di/: first-person plural non-past active jussive of رَدَّى (raddā)\n# نُرَدَّ (nuradda) /nu.rad.da/: first-person plural non-past passive jussive of رَدَّى (raddā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuraddi", "raddā", "nuradda"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "رد",
-        "u": "رد",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "رَدِّ • (raddi) (form II) /rad.di/\n# second-person masculine singular imperative of رَدَّى (raddā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["raddi", "raddā"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "ترد",
-        "u": "ترد",
-        "p": "verb",
-        "n": "7",
-        "h": "ar-verb form",
-        "e": "ترد (form II)\n# تُرَدِّ (turaddi) /tu.rad.di/: inflection of رَدَّى (raddā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُرَدَّ (turadda) /tu.rad.da/: inflection of رَدَّى (raddā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["turaddi", "raddā", "turadda"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "يرد",
-        "u": "يرد",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "يرد (form II)\n# يُرَدِّ (yuraddi) /ju.rad.di/: third-person masculine singular non-past active jussive of رَدَّى (raddā)\n# يُرَدَّ (yuradda) /ju.rad.da/: third-person masculine singular non-past passive jussive of رَدَّى (raddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuraddi", "raddā", "yuradda"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "أرد",
-        "u": "أرد",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "أرد (form II)\n# أُرَدِّ (ʔuraddi) /ʔu.rad.di/: first-person singular non-past active jussive of رَدَّى (raddā)\n# أُرَدَّ (ʔuradda) /ʔu.rad.da/: first-person singular non-past passive jussive of رَدَّى (raddā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuraddi", "raddā", "ʔuradda"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "ردت",
-        "u": "ردت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "رَدَّتْ • (raddat) (form II) /rad.dat/\n# third-person feminine singular past active of رَدَّى (raddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["raddat", "raddā"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "تردين",
-        "u": "تردين",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تردين (form II)\n# تُرَدِّينَ (turaddīna) /tu.rad.diː.na/: inflection of رَدَّى (raddā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُرَدَّيْنَ (turaddayna) /tu.rad.daj.na/: inflection of رَدَّى (raddā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plur",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["turaddīna", "raddā", "turaddayna"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "تردي",
-        "u": "تردي",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تردي (form II)\n# تُرَدِّي (turaddī) /tu.rad.diː/: inflection of رَدَّى (raddā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُرَدِّيَ (turaddiya) /tu.rad.di.ja/: inflection of رَدَّى (raddā):\n## second-person masculine singular non-past active sub",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["turaddī", "raddā", "turaddiya"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "ردي",
-        "u": "ردي",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "ردي (form II)\n# رُدِّيَ (ruddiya) /rud.di.ja/: third-person masculine singular past passive of رَدَّى (raddā)\n# رَدِّي (raddī) /rad.diː/: second-person feminine singular imperative of رَدَّى (raddā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ruddiya", "raddā", "raddī"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "تردون",
-        "u": "تردون",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تردون (form II)\n# تُرَدُّونَ (turaddūna) /tu.rad.duː.na/: second-person masculine plural non-past active indicative of رَدَّى (raddā)\n# تُرَدَّوْنَ (turaddawna) /tu.rad.daw.na/: second-person masculine plural non-past passive indicative of رَدَّى (raddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["turaddūna", "raddā", "turaddawna"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "تردوا",
-        "u": "تردوا",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تردوا (form II)\n# تُرَدُّوا (turaddū) /tu.rad.duː/: second-person masculine plural non-past active subjunctive/jussive of رَدَّى (raddā)\n# تُرَدَّوْا (turaddaw) /tu.rad.daw/: second-person masculine plural non-past passive subjunctive/jussive of رَدَّى (raddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["turaddū", "raddā", "turaddaw"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "ردوا",
-        "u": "ردوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ردوا (form II)\n# رَدَّوْا (raddaw) /rad.daw/: third-person masculine plural past active of رَدَّى (raddā)\n# رُدُّوا (ruddū) /rud.duː/: third-person masculine plural past passive of رَدَّى (raddā)\n# رَدُّوا (raddū) /rad.duː/: second-person masculine plural imperative of رَدَّى (raddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["raddaw", "raddā", "ruddū"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "يردون",
-        "u": "يردون",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يردون (form II)\n# يُرَدُّونَ (yuraddūna) /ju.rad.duː.na/: third-person masculine plural non-past active indicative of رَدَّى (raddā)\n# يُرَدَّوْنَ (yuraddawna) /ju.rad.daw.na/: third-person masculine plural non-past passive indicative of رَدَّى (raddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuraddūna", "raddā", "yuraddawna"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "يردوا",
-        "u": "يردوا",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يردوا (form II)\n# يُرَدُّوا (yuraddū) /ju.rad.duː/: third-person masculine plural non-past active subjunctive/jussive of رَدَّى (raddā)\n# يُرَدَّوْا (yuraddaw) /ju.rad.daw/: third-person masculine plural non-past passive subjunctive/jussive of رَدَّى (raddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuraddū", "raddā", "yuraddaw"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "تردى",
-        "u": "تردى",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُرَدَّى • (turaddā) (form II) /tu.rad.daː/\n# inflection of رَدَّى (raddā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["turaddā", "raddā"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "أردى",
-        "u": "أردى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أُرَدَّى • (ʔuraddā) (form II) /ʔu.rad.daː/\n# first-person singular non-past passive indicative/subjunctive of رَدَّى (raddā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuraddā", "raddā"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "أردي",
-        "u": "أردي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أردي (form II)\n# أُرَدِّي (ʔuraddī) /ʔu.rad.diː/: first-person singular non-past active indicative of رَدَّى (raddā)\n# أُرَدِّيَ (ʔuraddiya) /ʔu.rad.di.ja/: first-person singular non-past active subjunctive of رَدَّى (raddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuraddī", "raddā", "ʔuraddiya"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "يردي",
-        "u": "يردي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يردي (form II)\n# يُرَدِّي (yuraddī) /ju.rad.diː/: third-person masculine singular non-past active indicative of رَدَّى (raddā)\n# يُرَدِّيَ (yuraddiya) /ju.rad.di.ja/: third-person masculine singular non-past active subjunctive of رَدَّى (raddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuraddī", "raddā", "yuraddiya"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "ترديان",
-        "u": "ترديان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ترديان (form II)\n# تُرَدِّيَانِ (turaddiyāni) /tu.rad.di.jaː.ni/: inflection of رَدَّى (raddā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُرَدَّيَانِ (turaddayāni) /tu.rad.da.jaː.ni/: inflection of رَدَّى (raddā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["turaddiyāni", "raddā", "turaddayāni"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "يرديان",
-        "u": "يرديان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يرديان (form II)\n# يُرَدِّيَانِ (yuraddiyāni) /ju.rad.di.jaː.ni/: third-person masculine dual non-past active indicative of رَدَّى (raddā)\n# يُرَدَّيَانِ (yuraddayāni) /ju.rad.da.jaː.ni/: third-person masculine dual non-past passive indicative of رَدَّى (raddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuraddiyāni", "raddā", "yuraddayāni"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "يردين",
-        "u": "يردين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يردين (form II)\n# يُرَدِّينَ (yuraddīna) /ju.rad.diː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of رَدَّى (raddā)\n# يُرَدَّيْنَ (yuraddayna) /ju.rad.daj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of رَدَّى (raddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuraddīna", "raddā", "yuraddayna"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "نردي",
-        "u": "نردي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نردي (form II)\n# نُرَدِّي (nuraddī) /nu.rad.diː/: first-person plural non-past active indicative of رَدَّى (raddā)\n# نُرَدِّيَ (nuraddiya) /nu.rad.di.ja/: first-person plural non-past active subjunctive of رَدَّى (raddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuraddī", "raddā", "nuraddiya"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "نردى",
-        "u": "نردى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نُرَدَّى • (nuraddā) (form II) /nu.rad.daː/\n# first-person plural non-past passive indicative/subjunctive of رَدَّى (raddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuraddā", "raddā"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "يردى",
-        "u": "يردى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُرَدَّى • (yuraddā) (form II) /ju.rad.daː/\n# third-person masculine singular non-past passive indicative/subjunctive of رَدَّى (raddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuraddā", "raddā"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "ترديا",
-        "u": "ترديا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "ترديا (form II)\n# تُرَدِّيَا (turaddiyā) /tu.rad.di.jaː/: inflection of رَدَّى (raddā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُرَدَّيَا (turaddayā) /tu.rad.da.jaː/: inflection of رَدَّى (raddā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctiv",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["turaddiyā", "raddā", "turaddayā"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "يرديا",
-        "u": "يرديا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يرديا (form II)\n# يُرَدِّيَا (yuraddiyā) /ju.rad.di.jaː/: third-person masculine dual non-past active subjunctive/jussive of رَدَّى (raddā)\n# يُرَدَّيَا (yuraddayā) /ju.rad.da.jaː/: third-person masculine dual non-past passive subjunctive/jussive of رَدَّى (raddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuraddiyā", "raddā", "yuraddayā"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "ردتا",
-        "u": "ردتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "رَدَّتَا • (raddatā) (form II) /rad.da.taː/\n# third-person feminine dual past active of رَدَّى (raddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["raddatā", "raddā"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "رديتما",
-        "u": "رديتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "رديتما (form II)\n# رَدَّيْتُمَا (raddaytumā) /rad.daj.tu.maː/: second-person dual past active of رَدَّى (raddā)\n# رُدِّيتُمَا (ruddītumā) /rud.diː.tu.maː/: second-person dual past passive of رَدَّى (raddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["raddaytumā", "raddā", "ruddītumā"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "رديت",
-        "u": "رديت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "رديت (form II)\n# رَدَّيْتُ (raddaytu) /rad.daj.tu/: first-person singular past active of رَدَّى (raddā)\n# رَدَّيْتَ (raddayta) /rad.daj.ta/: second-person masculine singular past active of رَدَّى (raddā)\n# رَدَّيْتِ (raddayti) /rad.daj.ti/: second-person feminine singular past active of رَدَّى (raddā)\n# رُدِّيتُ (ruddītu) /rud.diː.tu/: first-person singular past passive of رَدَّى (raddā)\n# رُدِّيت",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["raddaytu", "raddā", "raddayta"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "رديتم",
-        "u": "رديتم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "رديتم (form II)\n# رَدَّيْتُمْ (raddaytum) /rad.daj.tum/: second-person masculine plural past active of رَدَّى (raddā)\n# رُدِّيتُمْ (ruddītum) /rud.diː.tum/: second-person masculine plural past passive of رَدَّى (raddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["raddaytum", "raddā", "ruddītum"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "ردينا",
-        "u": "ردينا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ردينا (form II)\n# رَدَّيْنَا (raddaynā) /rad.daj.naː/: first-person plural past active of رَدَّى (raddā)\n# رُدِّينَا (ruddīnā) /rud.diː.naː/: first-person plural past passive of رَدَّى (raddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["raddaynā", "raddā", "ruddīnā"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "رديتا",
-        "u": "رديتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "رُدِّيَتَا • (ruddiyatā) (form II) /rud.di.ja.taː/\n# third-person feminine dual past passive of رَدَّى (raddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ruddiyatā", "raddā"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "رديتن",
-        "u": "رديتن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "رديتن (form II)\n# رَدَّيْتُنَّ (raddaytunna) /rad.daj.tun.na/: second-person feminine plural past active of رَدَّى (raddā)\n# رُدِّيتُنَّ (ruddītunna) /rud.diː.tun.na/: second-person feminine plural past passive of رَدَّى (raddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["raddaytunna", "raddā", "ruddītunna"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "ردين",
-        "u": "ردين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ردين (form II)\n# رَدَّيْنَ (raddayna) /rad.daj.na/: third-person feminine plural past active of رَدَّى (raddā)\n# رُدِّينَ (ruddīna) /rud.diː.na/: third-person feminine plural past passive of رَدَّى (raddā)\n# رَدِّينَ (raddīna) /rad.diː.na/: second-person feminine plural imperative of رَدَّى (raddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["raddayna", "raddā", "ruddīna"],
-        "k": "ردى",
-        "yol": "kök"
-      },
-      {
-        "w": "رديا",
-        "u": "رديا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "رديا (form II)\n# رَدَّيَا (raddayā) /rad.da.jaː/: third-person masculine dual past active of رَدَّى (raddā)\n# رُدِّيَا (ruddiyā) /rud.di.jaː/: third-person masculine dual past passive of رَدَّى (raddā)\n# رَدِّيَا (raddiyā) /rad.di.jaː/: second-person dual imperative of رَدَّى (raddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["raddayā", "raddā", "ruddiyā"],
-        "k": "ردى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "رد",
+  "ses": {
     "harf": "ر",
+    "fasil": "رد",
     "mahrec": "zelakiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "mekayis": [
+    {
+      "baslik": "رَدَى",
+      "metin": "(رَدَى) الرَّاءُ وَالدَّالُ وَالْيَاءُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى رَمْيٍ أَوْ تَرَامٍ وَمَا أَشْبَهَ ذَلِكَ. يُقَالُ رَدَيْتُهُ بِالْحِجَارَةِ أَرْدِيهِ: رَمَيْتُهُ. وَالْحَجَرُ مِرْدَاةٌ. وَالرَّدْيُ ثَلَاثَةُ مَوَاضِعَ تَرْجِعُ إِلَى قِيَاسِ [مَا] قَدْ ذَكَرْنَاهُ. فَالْأَوَّلُ رَدَى الْحَجَرَ. وَالثَّانِي رَدَى الْفَرَسُ: أَسْرَعَ. وَرَدَتِ الْجَارِيَةُ، إِذَا رَفَعَتْ إِحْدَى رِجْلَيْهَا وَقَفَزَتْ بِوَاحِدَةٍ، وَهُوَ الثَّالِثُ. وَكُلُّ ذَلِكَ يَرْجِعُ إِلَى التَّرَامِي. وَالرَّدَيَانُ: عَدْوُ الْحِمَارِ بَيْنَ آرِيِّهِ وَمُتَمَعَّكِهِ. وَمِنَ الْبَابِ الرَّدَى، وَهُوَ الْهَلَاكُ; يُقَالُ رَدِيَ يَرْدَى، إِذَا هَلَكَ. وَأَرْدَاهُ اللَّهُ: أَهْلَكَهُ. وَالتَّرَدِّي: التَّهَوُّرُ فِي الْمَهْوَى. يُقَالُ رَدِيَ فِي الْبِئْرِ كَمَا يُقَالُ\nتَرَدَّى. قَالَهَا أَبُو زَيْدٍ. وَيُقَالُ: مَا أَدْرِي أَيْنَ رَدَى، أَيْ أَيْنَ ذَهَبَ. وَهُوَ مِنَ الْبَابِ، مَعْنَاهُ مَا أَدْرِي أَيْنَ رَمَى بِنَفْسِهِ. وَمِنَ الْبَابِ الرَّدَاةُ: الصَّخْرَةُ، وَجَمْعُهَا الرَّدَى. قَالَ:\nفَحْلُ مَخَاضٍ كَالرَّدَى الْمُنْقَضِّ\nوَإِذَا قَالُوا لِلنَّاقَةِ مِرْدَاةٌ، فَإِنَّمَا شَبَّهُوهَا بِالصَّخْرَةِ. وَيُقَالُ رَادَيْتُ عَنِ الْقَوْمِ، إِذَا رَامَيْتَ عَنْهُمْ. فَأَمَّا قَوْلُ طُفَيْلٍ:\nيُرَادَى عَلَى فَأْسِ اللِّجَامِ كَأَنَّمَا ... يُرَادَى عَلَى مِرْقَاةِ جِذْعٍ مُشَذَّبِ\nفَلَيْسَ هَذَا مِنَ الْبَابِ; لِأَنَّ هَذَا مَقْلُوبٌ. وَمَعْنَاهُ يُرَاوَدُ. وَقَدْ ذُكِرَ فِي مَوْضِعِهِ. وَمِمَّا شَذَّ عَنِ الْبَابِ الرِّدَاءُ الَّذِي يُلْبَسُ، مَا أَدْرِي مِمَّ اشْتِقَاقُهُ، وَفِي أَيِّ شَيْءٍ قِيَاسُهُ. يُقَالُ فُلَانٌ حَسَنُ الرِّدْيَةِ، مِنْ لُبْسِ الرِّدَاءِ. وَمِمَّا شَذَّ أَيْضًا قَوْلُهُمْ: أَرْدَى عَلَى الْخَمْسِينَ، إِذَا زَادَ عَلَيْهَا.\nفَأَمَّا الْمَهْمُوزُ فَكَلِمَتَانِ مُتَبَايِنَتَانِ جِدًّا. يُقَالُ أَرْدَأْتُ: أَفْسَدْتُ. وَرَدُؤَ الشَّيْءُ فَهُوَ رَدِيءٌ. وَالْكَلِمَةُ الْأُخْرَى أَرْدَأْتُ، إِذَا أَعَنْتَ. وَفُلَانٌ رِدْءُ فُلَانٍ، أَيْ مُعِينُهُ. قَالَ اللَّهُ جَلَّ جَلَالُهُ فِي قِصَّةِ مُوسَى: {فَأَرْسِلْهُ مَعِيَ رِدْءًا يُصَدِّقُنِي} [القصص: 34] ."
+    }
+  ],
+  "cebel": {
+    "fasil": "الراء والدال",
+    "baslik": "ردى",
+    "mihveri": "صدم بشدة وثقل عظيمين: كما يُرْدَى الجُحْرُ والمكانُ الغليظُ بالحَجَر الموصوف أو الصَخْرة العظيمة فيتصدع كالصخرة المذكورة. والمِرْداة أداة ذلك. ومن مادى الأصل: \"المَرادِى: قوائمُ الإبل والفِيَلة (لثِقَلها فكأن الرِجْل مِرْدَاةٌ إذ هي تضغط بثقل عظيم له أثر الصدم بالمرداة) ورَدَى الفرس يَرْدِى (رَمَى): عدا فرَجَم الأرضَ رَجْمًا (دَقَّها بشَّدةِ وَطْئه). وكذا رَدَى (2/782) الغلامُ: رَفَع إحدى رجليه وقفز بالأخرى \" (فيهبط على الأرض بشدة لتركز ثقل جسمه في هبوطه على رِجْل واحدة). ومنه \"رَدِىَ في الهُوَّة (= بئر أو نهر أو مَهواة) - من جَبَل أو مُرْتَفعْ (تعب) وتردَّى: تَهَوَّر في مَهْواة (سقط بثقله حتى اصطدم بالقاع) {وَالْمَوْقُوذَةُ وَالْمُتَرَدِّيَةُ} [المائدة: 3]: هي التي تَقَع من جَبل أو تَطِيح في بئر. وأرداه وردّاه فتَرَدَّى: قَلَبه فانقلب \". ومن معنويه ولازمه (مع أثر الصيغة) \"رَدِى (تعب): هَلَك (كالساقط يُدَكُّ فيَهْلِك) وتَرَدَّى. وأرْداه: أهلكه \"، {فَلَا يَصُدَّنَّكَ عَنْهَا مَنْ لَا يُؤْمِنُ بِهَا وَاتَّبَعَ هَوَاهُ فَتَرْدَى} [طه: 16]، {وَذَلِكُمْ ظَنُّكُمُ الَّذِي ظَنَنْتُمْ بِرَبِّكُمْ أَرْدَاكُمْ} [فصلت: 23]. وكل ما في القرآن من التركيب هو من (الردى) الهلاك هذا -عدا التردي فهو سقوطٌ ماديٌّ يلزمه الهلاك. والصدْم بشدة وثِقَلٍ هو ضَغط شديد يقع على المصدوم فيزيح جِرمه، وبهذا يتأتى معنى الدفع، أو يزحم بعضه بعضًا فيتأتى معنى التراكم ثم الزيادة. فمن الدفع \"المُرْدِىّ -كالكُرْسِيّ: خَشَبَة تُدفع بها السفينةُ تكون في يد الملّاح \". ومن الزيادة \"رَدَى على المائة (كرمى) وأردى: زاد \" (أ",
+    "tam_metin": "{فَلَا يَصُدَّنَّكَ عَنْهَا مَنْ لَا يُؤْمِنُ بِهَا وَاتَّبَعَ هَوَاهُ فَتَرْدَى} [طه: 16]\n\"الرَداة -كفتاة: الصَخْرة. المِرْداة: الحجَر الذي لا يكاد الرجل الضابط يَرْفَعه بيده يُرْدَى به الحَجَرُ والمكانُ الغليظ يحفرونه فيضربونه يُليّنونه، ويُردَى به جُحْر الضبّ إذا كان في قلعة فيُليّن القَلْعة ويهدِمُها، ورَدَيْت الحَجَر بصخرة أو بمعْوَل (رمن): ضربته بها لتكسره \".\n° المعنى المحوري\nصدم بشدة وثقل عظيمين: كما يُرْدَى الجُحْرُ والمكانُ الغليظُ بالحَجَر الموصوف أو الصَخْرة العظيمة فيتصدع كالصخرة المذكورة. والمِرْداة أداة ذلك. ومن مادى الأصل: \"المَرادِى: قوائمُ الإبل والفِيَلة (لثِقَلها فكأن الرِجْل مِرْدَاةٌ إذ هي تضغط بثقل عظيم له أثر الصدم بالمرداة) ورَدَى الفرس يَرْدِى (رَمَى): عدا فرَجَم الأرضَ رَجْمًا (دَقَّها بشَّدةِ وَطْئه). وكذا رَدَى\n(2/782)\nالغلامُ: رَفَع إحدى رجليه وقفز بالأخرى \" (فيهبط على الأرض بشدة لتركز ثقل جسمه في هبوطه على رِجْل واحدة). ومنه \"رَدِىَ في الهُوَّة (= بئر أو نهر أو مَهواة) - من جَبَل أو مُرْتَفعْ (تعب) وتردَّى: تَهَوَّر في مَهْواة (سقط بثقله حتى اصطدم بالقاع) {وَالْمَوْقُوذَةُ وَالْمُتَرَدِّيَةُ} [المائدة: 3]: هي التي تَقَع من جَبل أو تَطِيح في بئر. وأرداه وردّاه فتَرَدَّى: قَلَبه فانقلب \".\nومن معنويه ولازمه (مع أثر الصيغة) \"رَدِى (تعب): هَلَك (كالساقط يُدَكُّ فيَهْلِك) وتَرَدَّى. وأرْداه: أهلكه \"، {فَلَا يَصُدَّنَّكَ عَنْهَا مَنْ لَا يُؤْمِنُ بِهَا وَاتَّبَعَ هَوَاهُ فَتَرْدَى} [طه: 16]، {وَذَلِكُمْ ظَنُّكُمُ الَّذِي ظَنَنْتُمْ بِرَبِّكُمْ أَرْدَاكُمْ} [فصلت: 23]. وكل ما في القرآن من التركيب هو من (الردى) الهلاك هذا -عدا التردي فهو سقوطٌ ماديٌّ يلزمه الهلاك.\nوالصدْم بشدة وثِقَلٍ هو ضَغط شديد يقع على المصدوم فيزيح جِرمه، وبهذا يتأتى معنى الدفع، أو يزحم بعضه بعضًا فيتأتى معنى التراكم ثم الزيادة. فمن الدفع \"المُرْدِىّ -كالكُرْسِيّ: خَشَبَة تُدفع بها السفينةُ تكون في يد الملّاح \".\nومن الزيادة \"رَدَى على المائة (كرمى) وأردى: زاد \" (أي في سنّه).\nو\"الرِدَاء: الغِطاء الكبير/ المِلْحَفَة. (هو من معنى الرَمْى والإلقاء الذي هو صورة من رَدْى القَلْعةِ بالحجَرِ العظيم أي إلقائه عليه. لأنه) كساء يلقى على المَنكِبين والكَتِفين والعاتق/ مُجْتَمَعِ العنق \"، وسمي بهذا الملحظ لأنه لا يُتَأنّق في التلفع به. ثم لهذا الإلقاء على الكتف .. سمَّوا السيف رداء والقوس رداء. [انظر تعليق شارحَىْ المفضليات ص 67 في شرح جو قصيدة متمم في أخيه مالك بن نويرة رقم 67] قال ابن سيده \"تشبيهًا بالرداء الملبوس في التعلق بالجسم \"اه. ولتعلق\n(2/783)\nالرداء بالرقبة سموًا الدَين رِدَاء، كما جعلوا كُلًّا من العقْل، والجهْل، والشباب رداءً لمن يتصف بأي منهن. وذلك لكثرة استعمالهم الرداء وملازمته إياهم، فهو كالسّمة لصاحبه.",
+    "fasil_ozeti": "° معنى الفصل المعجمي (رد) : التراكم المترتب على صدّ الشيء المسترسل كما يتمثل في القصير المتردد أي البالغ القصر -في (ردد)، وفي الضغط العظيم في رَدْى الحجر بالمرداة -في (ردى)، وفي كثافة الحركة جيئة وذهابًا -في (رود)، وفي تراكم البناء الداعم للحائط في (ردأ)، وفي التثني من الطراءة -في (رأد)، وفي الاجتماع بالشيء المورود أي بلوغه والكون معه في حيز واحد -في (ورد)، وفي التجمع خلف الشيء -في (ردف)، وفي حشو فراغ وسط الشيء أو ما بين الأشياء -في (ردم)."
+  },
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "نرد",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "نرد (form II)\n# نُرَدِّ (nuraddi) /nu.rad.di/: first-person plural non-past active jussive of رَدَّى (raddā)\n# نُرَدَّ (nuradda) /nu.rad.da/: first-person plural non-past passive jussive of رَدَّى (raddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuraddi", "raddā", "nuradda"]
+    },
+    {
+      "madde": "رد",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "رَدِّ • (raddi) (form II) /rad.di/\n# second-person masculine singular imperative of رَدَّى (raddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["raddi", "raddā"]
+    },
+    {
+      "madde": "ترد",
+      "tur": "verb",
+      "etim_no": "7",
+      "baslik": "ترد (form II)\n# تُرَدِّ (turaddi) /tu.rad.di/: inflection of رَدَّى (raddā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُرَدَّ (turadda) /tu.rad.da/: inflection of رَدَّى (raddā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["turaddi", "raddā", "turadda"]
+    },
+    {
+      "madde": "يرد",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "يرد (form II)\n# يُرَدِّ (yuraddi) /ju.rad.di/: third-person masculine singular non-past active jussive of رَدَّى (raddā)\n# يُرَدَّ (yuradda) /ju.rad.da/: third-person masculine singular non-past passive jussive of رَدَّى (raddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuraddi", "raddā", "yuradda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أرد",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "أرد (form II)\n# أُرَدِّ (ʔuraddi) /ʔu.rad.di/: first-person singular non-past active jussive of رَدَّى (raddā)\n# أُرَدَّ (ʔuradda) /ʔu.rad.da/: first-person singular non-past passive jussive of رَدَّى (raddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuraddi", "raddā", "ʔuradda"]
+    },
+    {
+      "madde": "ردت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "رَدَّتْ • (raddat) (form II) /rad.dat/\n# third-person feminine singular past active of رَدَّى (raddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["raddat", "raddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تردين",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تردين (form II)\n# تُرَدِّينَ (turaddīna) /tu.rad.diː.na/: inflection of رَدَّى (raddā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُرَدَّيْنَ (turaddayna) /tu.rad.daj.na/: inflection of رَدَّى (raddā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plur",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["turaddīna", "raddā", "turaddayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تردي",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تردي (form II)\n# تُرَدِّي (turaddī) /tu.rad.diː/: inflection of رَدَّى (raddā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُرَدِّيَ (turaddiya) /tu.rad.di.ja/: inflection of رَدَّى (raddā):\n## second-person masculine singular non-past active sub",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["turaddī", "raddā", "turaddiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ردي",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "ردي (form II)\n# رُدِّيَ (ruddiya) /rud.di.ja/: third-person masculine singular past passive of رَدَّى (raddā)\n# رَدِّي (raddī) /rad.diː/: second-person feminine singular imperative of رَدَّى (raddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ruddiya", "raddā", "raddī"]
+    },
+    {
+      "madde": "تردون",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تردون (form II)\n# تُرَدُّونَ (turaddūna) /tu.rad.duː.na/: second-person masculine plural non-past active indicative of رَدَّى (raddā)\n# تُرَدَّوْنَ (turaddawna) /tu.rad.daw.na/: second-person masculine plural non-past passive indicative of رَدَّى (raddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["turaddūna", "raddā", "turaddawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تردوا",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تردوا (form II)\n# تُرَدُّوا (turaddū) /tu.rad.duː/: second-person masculine plural non-past active subjunctive/jussive of رَدَّى (raddā)\n# تُرَدَّوْا (turaddaw) /tu.rad.daw/: second-person masculine plural non-past passive subjunctive/jussive of رَدَّى (raddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["turaddū", "raddā", "turaddaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ردوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ردوا (form II)\n# رَدَّوْا (raddaw) /rad.daw/: third-person masculine plural past active of رَدَّى (raddā)\n# رُدُّوا (ruddū) /rud.duː/: third-person masculine plural past passive of رَدَّى (raddā)\n# رَدُّوا (raddū) /rad.duː/: second-person masculine plural imperative of رَدَّى (raddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["raddaw", "raddā", "ruddū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يردون",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يردون (form II)\n# يُرَدُّونَ (yuraddūna) /ju.rad.duː.na/: third-person masculine plural non-past active indicative of رَدَّى (raddā)\n# يُرَدَّوْنَ (yuraddawna) /ju.rad.daw.na/: third-person masculine plural non-past passive indicative of رَدَّى (raddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuraddūna", "raddā", "yuraddawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يردوا",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يردوا (form II)\n# يُرَدُّوا (yuraddū) /ju.rad.duː/: third-person masculine plural non-past active subjunctive/jussive of رَدَّى (raddā)\n# يُرَدَّوْا (yuraddaw) /ju.rad.daw/: third-person masculine plural non-past passive subjunctive/jussive of رَدَّى (raddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuraddū", "raddā", "yuraddaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تردى",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُرَدَّى • (turaddā) (form II) /tu.rad.daː/\n# inflection of رَدَّى (raddā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["turaddā", "raddā"]
+    },
+    {
+      "madde": "أردى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أُرَدَّى • (ʔuraddā) (form II) /ʔu.rad.daː/\n# first-person singular non-past passive indicative/subjunctive of رَدَّى (raddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuraddā", "raddā"]
+    },
+    {
+      "madde": "أردي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أردي (form II)\n# أُرَدِّي (ʔuraddī) /ʔu.rad.diː/: first-person singular non-past active indicative of رَدَّى (raddā)\n# أُرَدِّيَ (ʔuraddiya) /ʔu.rad.di.ja/: first-person singular non-past active subjunctive of رَدَّى (raddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuraddī", "raddā", "ʔuraddiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يردي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يردي (form II)\n# يُرَدِّي (yuraddī) /ju.rad.diː/: third-person masculine singular non-past active indicative of رَدَّى (raddā)\n# يُرَدِّيَ (yuraddiya) /ju.rad.di.ja/: third-person masculine singular non-past active subjunctive of رَدَّى (raddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuraddī", "raddā", "yuraddiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ترديان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ترديان (form II)\n# تُرَدِّيَانِ (turaddiyāni) /tu.rad.di.jaː.ni/: inflection of رَدَّى (raddā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُرَدَّيَانِ (turaddayāni) /tu.rad.da.jaː.ni/: inflection of رَدَّى (raddā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["turaddiyāni", "raddā", "turaddayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يرديان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يرديان (form II)\n# يُرَدِّيَانِ (yuraddiyāni) /ju.rad.di.jaː.ni/: third-person masculine dual non-past active indicative of رَدَّى (raddā)\n# يُرَدَّيَانِ (yuraddayāni) /ju.rad.da.jaː.ni/: third-person masculine dual non-past passive indicative of رَدَّى (raddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuraddiyāni", "raddā", "yuraddayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يردين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يردين (form II)\n# يُرَدِّينَ (yuraddīna) /ju.rad.diː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of رَدَّى (raddā)\n# يُرَدَّيْنَ (yuraddayna) /ju.rad.daj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of رَدَّى (raddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuraddīna", "raddā", "yuraddayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نردي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نردي (form II)\n# نُرَدِّي (nuraddī) /nu.rad.diː/: first-person plural non-past active indicative of رَدَّى (raddā)\n# نُرَدِّيَ (nuraddiya) /nu.rad.di.ja/: first-person plural non-past active subjunctive of رَدَّى (raddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuraddī", "raddā", "nuraddiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نردى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نُرَدَّى • (nuraddā) (form II) /nu.rad.daː/\n# first-person plural non-past passive indicative/subjunctive of رَدَّى (raddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuraddā", "raddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يردى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُرَدَّى • (yuraddā) (form II) /ju.rad.daː/\n# third-person masculine singular non-past passive indicative/subjunctive of رَدَّى (raddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuraddā", "raddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ترديا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "ترديا (form II)\n# تُرَدِّيَا (turaddiyā) /tu.rad.di.jaː/: inflection of رَدَّى (raddā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُرَدَّيَا (turaddayā) /tu.rad.da.jaː/: inflection of رَدَّى (raddā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctiv",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["turaddiyā", "raddā", "turaddayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يرديا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يرديا (form II)\n# يُرَدِّيَا (yuraddiyā) /ju.rad.di.jaː/: third-person masculine dual non-past active subjunctive/jussive of رَدَّى (raddā)\n# يُرَدَّيَا (yuraddayā) /ju.rad.da.jaː/: third-person masculine dual non-past passive subjunctive/jussive of رَدَّى (raddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuraddiyā", "raddā", "yuraddayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ردتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "رَدَّتَا • (raddatā) (form II) /rad.da.taː/\n# third-person feminine dual past active of رَدَّى (raddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["raddatā", "raddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "رديتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "رديتما (form II)\n# رَدَّيْتُمَا (raddaytumā) /rad.daj.tu.maː/: second-person dual past active of رَدَّى (raddā)\n# رُدِّيتُمَا (ruddītumā) /rud.diː.tu.maː/: second-person dual past passive of رَدَّى (raddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["raddaytumā", "raddā", "ruddītumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "رديت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "رديت (form II)\n# رَدَّيْتُ (raddaytu) /rad.daj.tu/: first-person singular past active of رَدَّى (raddā)\n# رَدَّيْتَ (raddayta) /rad.daj.ta/: second-person masculine singular past active of رَدَّى (raddā)\n# رَدَّيْتِ (raddayti) /rad.daj.ti/: second-person feminine singular past active of رَدَّى (raddā)\n# رُدِّيتُ (ruddītu) /rud.diː.tu/: first-person singular past passive of رَدَّى (raddā)\n# رُدِّيت",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["raddaytu", "raddā", "raddayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "رديتم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "رديتم (form II)\n# رَدَّيْتُمْ (raddaytum) /rad.daj.tum/: second-person masculine plural past active of رَدَّى (raddā)\n# رُدِّيتُمْ (ruddītum) /rud.diː.tum/: second-person masculine plural past passive of رَدَّى (raddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["raddaytum", "raddā", "ruddītum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ردينا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ردينا (form II)\n# رَدَّيْنَا (raddaynā) /rad.daj.naː/: first-person plural past active of رَدَّى (raddā)\n# رُدِّينَا (ruddīnā) /rud.diː.naː/: first-person plural past passive of رَدَّى (raddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["raddaynā", "raddā", "ruddīnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "رديتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "رُدِّيَتَا • (ruddiyatā) (form II) /rud.di.ja.taː/\n# third-person feminine dual past passive of رَدَّى (raddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ruddiyatā", "raddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "رديتن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "رديتن (form II)\n# رَدَّيْتُنَّ (raddaytunna) /rad.daj.tun.na/: second-person feminine plural past active of رَدَّى (raddā)\n# رُدِّيتُنَّ (ruddītunna) /rud.diː.tun.na/: second-person feminine plural past passive of رَدَّى (raddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["raddaytunna", "raddā", "ruddītunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ردين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ردين (form II)\n# رَدَّيْنَ (raddayna) /rad.daj.na/: third-person feminine plural past active of رَدَّى (raddā)\n# رُدِّينَ (ruddīna) /rud.diː.na/: third-person feminine plural past passive of رَدَّى (raddā)\n# رَدِّينَ (raddīna) /rad.diː.na/: second-person feminine plural imperative of رَدَّى (raddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["raddayna", "raddā", "ruddīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "رديا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "رديا (form II)\n# رَدَّيَا (raddayā) /rad.da.jaː/: third-person masculine dual past active of رَدَّى (raddā)\n# رُدِّيَا (ruddiyā) /rud.di.jaː/: third-person masculine dual past passive of رَدَّى (raddā)\n# رَدِّيَا (raddiyā) /rad.di.jaː/: second-person dual imperative of رَدَّى (raddā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["raddayā", "raddā", "ruddiyā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ردى", "r7"]
+  ],
+  "mana": {
     "ince": "event.n.01",
     "orta": "noun.communication",
     "ust": "söz ve haber",
@@ -498,21 +365,28 @@
     "dayanak_tanim": "the speech act of continuing a conversational exchange",
     "synset_sayisi": 20
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "الراء والدال",
-    "mihveri": "صدم بشدة وثقل عظيمين: كما يُرْدَى الجُحْرُ والمكانُ الغليظُ بالحَجَر الموصوف أو الصَخْرة العظيمة فيتصدع كالصخرة المذكورة. والمِرْداة أداة ذلك. ومن مادى الأصل: \"المَرادِى: قوائمُ الإبل والفِيَلة (لثِقَلها فكأن الرِجْل مِرْدَاةٌ إذ هي تضغط بثقل عظيم له أثر الصدم بالمرداة) ورَدَى الفرس يَرْدِى (رَمَى): عدا فرَجَم الأرضَ رَجْمًا (دَقَّها بشَّدةِ وَطْئه). وكذا رَدَى (2/782) الغلامُ: رَفَع إحدى رجليه وقفز بالأخرى \" (فيهبط على الأرض بشدة لتركز ثقل جسمه في هبوطه على رِجْل واحدة). ومنه \"رَدِىَ في الهُوَّة (= بئر أو نهر أو مَهواة) - من جَبَل أو مُرْتَفعْ (تعب) وتردَّى: تَهَوَّر في مَهْواة (سقط بثقله حتى اصطدم بالقاع) {وَالْمَوْقُوذَةُ وَالْمُتَرَدِّيَةُ} [المائدة: 3]: هي التي تَقَع من جَبل أو تَطِيح في بئر. وأرداه وردّاه فتَرَدَّى: قَلَبه فانقلب \". ومن معنويه ولازمه (مع أثر الصيغة) \"رَدِى (تعب): هَلَك (كالساقط يُدَكُّ فيَهْلِك) وتَرَدَّى. وأرْداه: أهلكه \"، {فَلَا يَصُدَّنَّكَ عَنْهَا مَنْ لَا يُؤْمِنُ بِهَا وَاتَّبَعَ هَوَاهُ فَتَرْدَى} [طه: 16]، {وَذَلِكُمْ ظَنُّكُمُ الَّذِي ظَنَنْتُمْ بِرَبِّكُمْ أَرْدَاكُمْ} [فصلت: 23]. وكل ما في القرآن من التركيب هو من (الردى) الهلاك هذا -عدا التردي فهو سقوطٌ ماديٌّ يلزمه الهلاك. والصدْم بشدة وثِقَلٍ هو ضَغط شديد يقع على المصدوم فيزيح جِرمه، وبهذا يتأتى معنى الدفع، أو يزحم بعضه بعضًا فيتأتى معنى التراكم ثم الزيادة. فمن الدفع \"المُرْدِىّ -كالكُرْسِيّ: خَشَبَة تُدفع بها السفينةُ تكون في يد الملّاح \". ومن الزيادة \"رَدَى على المائة (كرمى) وأردى: زاد \" (أ",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (رد) : التراكم المترتب على صدّ الشيء المسترسل كما يتمثل في القصير المتردد أي البالغ القصر -في (ردد)، وفي الضغط العظيم في رَدْى الحجر بالمرداة -في (ردى)، وفي كثافة الحركة جيئة وذهابًا -في (رود)، وفي تراكم البناء الداعم للحائط في (ردأ)، وفي التثني من الطراءة -في (رأد)، وفي الاجتماع بالشيء المورود أي بلوغه والكون معه في حيز واحد -في (ورد)، وفي التجمع خلف الشيء -في (ردف)، وفي حشو فراغ وسط الشيء أو ما بين الأشياء -في (ردم).",
-    "tam_metin": "{فَلَا يَصُدَّنَّكَ عَنْهَا مَنْ لَا يُؤْمِنُ بِهَا وَاتَّبَعَ هَوَاهُ فَتَرْدَى} [طه: 16]\n\"الرَداة -كفتاة: الصَخْرة. المِرْداة: الحجَر الذي لا يكاد الرجل الضابط يَرْفَعه بيده يُرْدَى به الحَجَرُ والمكانُ الغليظ يحفرونه فيضربونه يُليّنونه، ويُردَى به جُحْر الضبّ إذا كان في قلعة فيُليّن القَلْعة ويهدِمُها، ورَدَيْت الحَجَر بصخرة أو بمعْوَل (رمن): ضربته بها لتكسره \".\n° المعنى المحوري\nصدم بشدة وثقل عظيمين: كما يُرْدَى الجُحْرُ والمكانُ الغليظُ بالحَجَر الموصوف أو الصَخْرة العظيمة فيتصدع كالصخرة المذكورة. والمِرْداة أداة ذلك. ومن مادى الأصل: \"المَرادِى: قوائمُ الإبل والفِيَلة (لثِقَلها فكأن الرِجْل مِرْدَاةٌ إذ هي تضغط بثقل عظيم له أثر الصدم بالمرداة) ورَدَى الفرس يَرْدِى (رَمَى): عدا فرَجَم الأرضَ رَجْمًا (دَقَّها بشَّدةِ وَطْئه). وكذا رَدَى\n(2/782)\nالغلامُ: رَفَع إحدى رجليه وقفز بالأخرى \" (فيهبط على الأرض بشدة لتركز ثقل جسمه في هبوطه على رِجْل واحدة). ومنه \"رَدِىَ في الهُوَّة (= بئر أو نهر أو مَهواة) - من جَبَل أو مُرْتَفعْ (تعب) وتردَّى: تَهَوَّر في مَهْواة (سقط بثقله حتى اصطدم بالقاع) {وَالْمَوْقُوذَةُ وَالْمُتَرَدِّيَةُ} [المائدة: 3]: هي التي تَقَع من جَبل أو تَطِيح في بئر. وأرداه وردّاه فتَرَدَّى: قَلَبه فانقلب \".\nومن معنويه ولازمه (مع أثر الصيغة) \"رَدِى (تعب): هَلَك (كالساقط يُدَكُّ فيَهْلِك) وتَرَدَّى. وأرْداه: أهلكه \"، {فَلَا يَصُدَّنَّكَ عَنْهَا مَنْ لَا يُؤْمِنُ بِهَا وَاتَّبَعَ هَوَاهُ فَتَرْدَى} [طه: 16]، {وَذَلِكُمْ ظَنُّكُمُ الَّذِي ظَنَنْتُمْ بِرَبِّكُمْ أَرْدَاكُمْ} [فصلت: 23]. وكل ما في القرآن من التركيب هو من (الردى) الهلاك هذا -عدا التردي فهو سقوطٌ ماديٌّ يلزمه الهلاك.\nوالصدْم بشدة وثِقَلٍ هو ضَغط شديد يقع على المصدوم فيزيح جِرمه، وبهذا يتأتى معنى الدفع، أو يزحم بعضه بعضًا فيتأتى معنى التراكم ثم الزيادة. فمن الدفع \"المُرْدِىّ -كالكُرْسِيّ: خَشَبَة تُدفع بها السفينةُ تكون في يد الملّاح \".\nومن الزيادة \"رَدَى على المائة (كرمى) وأردى: زاد \" (أي في سنّه).\nو\"الرِدَاء: الغِطاء الكبير/ المِلْحَفَة. (هو من معنى الرَمْى والإلقاء الذي هو صورة من رَدْى القَلْعةِ بالحجَرِ العظيم أي إلقائه عليه. لأنه) كساء يلقى على المَنكِبين والكَتِفين والعاتق/ مُجْتَمَعِ العنق \"، وسمي بهذا الملحظ لأنه لا يُتَأنّق في التلفع به. ثم لهذا الإلقاء على الكتف .. سمَّوا السيف رداء والقوس رداء. [انظر تعليق شارحَىْ المفضليات ص 67 في شرح جو قصيدة متمم في أخيه مالك بن نويرة رقم 67] قال ابن سيده \"تشبيهًا بالرداء الملبوس في التعلق بالجسم \"اه. ولتعلق\n(2/783)\nالرداء بالرقبة سموًا الدَين رِدَاء، كما جعلوا كُلًّا من العقْل، والجهْل، والشباب رداءً لمن يتصف بأي منهن. وذلك لكثرة استعمالهم الرداء وملازمته إياهم، فهو كالسّمة لصاحبه."
+  "mana_yontem": "m1",
+  "gomme": {
+    "ust": {
+      "kume": 2,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 452
+    },
+    "orta": {
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 393
+    },
+    "ince": {
+      "kume": 14,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 43
+    }
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "act.n.02",
     "answer.v.01",
     "artifact.n.01",
@@ -533,29 +407,10 @@
     "traumatize.v.01",
     "yield.v.10"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "ust": {
-      "kume": 2,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 452
-    },
-    "orta": {
-      "kume": 4,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 393
-    },
-    "ince": {
-      "kume": 14,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 43
-    }
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

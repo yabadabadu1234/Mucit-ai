@@ -1,386 +1,285 @@
 {
   "kok": "جدول",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "جدول", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "جدول",
-        "u": "جدول",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb",
-        "e": "جَدْوَلَ • (jadwala) Iq (non-past يُجَدْوِلُ (yujadwilu), verbal noun جَدْوَلَة (jadwala))",
-        "t": "Denominal verb from جَدْوَل (jadwal).",
-        "s": [
-          ["ar-rootbox", ""]
-        ],
-        "g": ["to arrange in tabular form", "to schedule"],
-        "r": ["jadwala"],
-        "el": [
-          ["جَدْوَل", "جدول#Arabic"]
-        ],
-        "k": "جدول",
-        "yol": "kök"
-      },
-      {
-        "w": "يجدول",
-        "u": "يجدول",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يجدول (form Iq)\n# يُجَدْوِلُ (yujadwilu) /ju.d͡ʒad.wi.lu/: third-person masculine singular non-past active indicative of جَدْوَلَ (jadwala)\n# يُجَدْوَلُ (yujadwalu) /ju.d͡ʒad.wa.lu/: third-person masculine singular non-past passive indicative of جَدْوَلَ (jadwala)\n# يُجَدْوِلَ (yujadwila) /ju.d͡ʒad.wi.la/: third-person masculine singular non-past active subjunctive of جَدْوَلَ (jadwala)\n# يُجَدْوَ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yujadwilu", "jadwala", "yujadwalu"],
-        "k": "جدول",
-        "yol": "kök"
-      },
-      {
-        "w": "مجدول",
-        "u": "مجدول",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "مُجَدْوِل • (mujadwil) m (plural مُجَدْوِلَات (mujadwilāt))",
-        "t": "Derived from the active participle of جَدْوَلَ (jadwala, “to schedule”)",
-        "s": [
-          ["ar-rootbox", ""],
-          ["if-ar-lect", ""],
-          ["ar-active participle", "Derived from the active participle"]
-        ],
-        "g": ["scheduler"],
-        "r": ["mujadwil"],
-        "ipa": ["/mu.d͡ʒad.wil/"],
-        "el": [
-          ["جَدْوَلَ", "جدول#Arabic"],
-          ["schedule", "schedule#English"]
-        ],
-        "k": "جدول",
-        "yol": "kök"
-      },
-      {
-        "w": "جدولت",
-        "u": "جدولت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جدولت (form Iq)\n# جَدْوَلْتُ (jadwaltu) /d͡ʒad.wal.tu/: first-person singular past active of جَدْوَلَ (jadwala)\n# جَدْوَلْتَ (jadwalta) /d͡ʒad.wal.ta/: second-person masculine singular past active of جَدْوَلَ (jadwala)\n# جَدْوَلْتِ (jadwalti) /d͡ʒad.wal.ti/: second-person feminine singular past active of جَدْوَلَ (jadwala)\n# جَدْوَلَتْ (jadwalat) /d͡ʒad.wa.lat/: third-person feminine singular past",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["jadwaltu", "jadwala", "jadwalta"],
-        "k": "جدول",
-        "yol": "kök"
-      },
-      {
-        "w": "جدولتما",
-        "u": "جدولتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جدولتما (form Iq)\n# جَدْوَلْتُمَا (jadwaltumā) /d͡ʒad.wal.tu.maː/: second-person dual past active of جَدْوَلَ (jadwala)\n# جُدْوِلْتُمَا (judwiltumā) /d͡ʒud.wil.tu.maː/: second-person dual past passive of جَدْوَلَ (jadwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["jadwaltumā", "jadwala", "judwiltumā"],
-        "k": "جدول",
-        "yol": "kök"
-      },
-      {
-        "w": "جدولنا",
-        "u": "جدولنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جدولنا (form Iq)\n# جَدْوَلْنَا (jadwalnā) /d͡ʒad.wal.naː/: first-person plural past active of جَدْوَلَ (jadwala)\n# جُدْوِلْنَا (judwilnā) /d͡ʒud.wil.naː/: first-person plural past passive of جَدْوَلَ (jadwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["jadwalnā", "jadwala", "judwilnā"],
-        "k": "جدول",
-        "yol": "kök"
-      },
-      {
-        "w": "جدولوا",
-        "u": "جدولوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جدولوا (form Iq)\n# جَدْوَلُوا (jadwalū) /d͡ʒad.wa.luː/: third-person masculine plural past active of جَدْوَلَ (jadwala)\n# جُدْوِلُوا (judwilū) /d͡ʒud.wi.luː/: third-person masculine plural past passive of جَدْوَلَ (jadwala)\n# جَدْوِلُوا (jadwilū) /d͡ʒad.wi.luː/: second-person masculine plural imperative of جَدْوَلَ (jadwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["jadwalū", "jadwala", "judwilū"],
-        "k": "جدول",
-        "yol": "kök"
-      },
-      {
-        "w": "جدولتن",
-        "u": "جدولتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جدولتن (form Iq)\n# جَدْوَلْتُنَّ (jadwaltunna) /d͡ʒad.wal.tun.na/: second-person feminine plural past active of جَدْوَلَ (jadwala)\n# جُدْوِلْتُنَّ (judwiltunna) /d͡ʒud.wil.tun.na/: second-person feminine plural past passive of جَدْوَلَ (jadwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["jadwaltunna", "jadwala", "judwiltunna"],
-        "k": "جدول",
-        "yol": "kök"
-      },
-      {
-        "w": "جدولتم",
-        "u": "جدولتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جدولتم (form Iq)\n# جَدْوَلْتُمْ (jadwaltum) /d͡ʒad.wal.tum/: second-person masculine plural past active of جَدْوَلَ (jadwala)\n# جُدْوِلْتُمْ (judwiltum) /d͡ʒud.wil.tum/: second-person masculine plural past passive of جَدْوَلَ (jadwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["jadwaltum", "jadwala", "judwiltum"],
-        "k": "جدول",
-        "yol": "kök"
-      },
-      {
-        "w": "جدولن",
-        "u": "جدولن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جدولن (form Iq)\n# جَدْوَلْنَ (jadwalna) /d͡ʒad.wal.na/: third-person feminine plural past active of جَدْوَلَ (jadwala)\n# جُدْوِلْنَ (judwilna) /d͡ʒud.wil.na/: third-person feminine plural past passive of جَدْوَلَ (jadwala)\n# جَدْوِلْنَ (jadwilna) /d͡ʒad.wil.na/: second-person feminine plural imperative of جَدْوَلَ (jadwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["jadwalna", "jadwala", "judwilna"],
-        "k": "جدول",
-        "yol": "kök"
-      },
-      {
-        "w": "أجدول",
-        "u": "أجدول",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجدول (form Iq)\n# أُجَدْوِلُ (ʔujadwilu) /ʔu.d͡ʒad.wi.lu/: first-person singular non-past active indicative of جَدْوَلَ (jadwala)\n# أُجَدْوَلُ (ʔujadwalu) /ʔu.d͡ʒad.wa.lu/: first-person singular non-past passive indicative of جَدْوَلَ (jadwala)\n# أُجَدْوِلَ (ʔujadwila) /ʔu.d͡ʒad.wi.la/: first-person singular non-past active subjunctive of جَدْوَلَ (jadwala)\n# أُجَدْوَلَ (ʔujadwala) /ʔu.d͡ʒad.wa.la",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʔujadwilu", "jadwala", "ʔujadwalu"],
-        "k": "جدول",
-        "yol": "kök"
-      },
-      {
-        "w": "نجدول",
-        "u": "نجدول",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نجدول (form Iq)\n# نُجَدْوِلُ (nujadwilu) /nu.d͡ʒad.wi.lu/: first-person plural non-past active indicative of جَدْوَلَ (jadwala)\n# نُجَدْوَلُ (nujadwalu) /nu.d͡ʒad.wa.lu/: first-person plural non-past passive indicative of جَدْوَلَ (jadwala)\n# نُجَدْوِلَ (nujadwila) /nu.d͡ʒad.wi.la/: first-person plural non-past active subjunctive of جَدْوَلَ (jadwala)\n# نُجَدْوَلَ (nujadwala) /nu.d͡ʒad.wa.la/: fir",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["nujadwilu", "jadwala", "nujadwalu"],
-        "k": "جدول",
-        "yol": "kök"
-      },
-      {
-        "w": "تجدول",
-        "u": "تجدول",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجدول (form Iq)\n# تُجَدْوِلُ (tujadwilu) /tu.d͡ʒad.wi.lu/: inflection of جَدْوَلَ (jadwala):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُجَدْوَلُ (tujadwalu) /tu.d͡ʒad.wa.lu/: inflection of جَدْوَلَ (jadwala):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tujadwilu", "jadwala", "tujadwalu"],
-        "k": "جدول",
-        "yol": "kök"
-      },
-      {
-        "w": "تجدولان",
-        "u": "تجدولان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجدولان (form Iq)\n# تُجَدْوِلَانِ (tujadwilāni) /tu.d͡ʒad.wi.laː.ni/: inflection of جَدْوَلَ (jadwala):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُجَدْوَلَانِ (tujadwalāni) /tu.d͡ʒad.wa.laː.ni/: inflection of جَدْوَلَ (jadwala):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicat",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tujadwilāni", "jadwala", "tujadwalāni"],
-        "k": "جدول",
-        "yol": "kök"
-      },
-      {
-        "w": "تجدولون",
-        "u": "تجدولون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجدولون (form Iq)\n# تُجَدْوِلُونَ (tujadwilūna) /tu.d͡ʒad.wi.luː.na/: second-person masculine plural non-past active indicative of جَدْوَلَ (jadwala)\n# تُجَدْوَلُونَ (tujadwalūna) /tu.d͡ʒad.wa.luː.na/: second-person masculine plural non-past passive indicative of جَدْوَلَ (jadwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tujadwilūna", "jadwala", "tujadwalūna"],
-        "k": "جدول",
-        "yol": "kök"
-      },
-      {
-        "w": "يجدولان",
-        "u": "يجدولان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يجدولان (form Iq)\n# يُجَدْوِلَانِ (yujadwilāni) /ju.d͡ʒad.wi.laː.ni/: third-person masculine dual non-past active indicative of جَدْوَلَ (jadwala)\n# يُجَدْوَلَانِ (yujadwalāni) /ju.d͡ʒad.wa.laː.ni/: third-person masculine dual non-past passive indicative of جَدْوَلَ (jadwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yujadwilāni", "jadwala", "yujadwalāni"],
-        "k": "جدول",
-        "yol": "kök"
-      },
-      {
-        "w": "تجدولين",
-        "u": "تجدولين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجدولين (form Iq)\n# تُجَدْوِلِينَ (tujadwilīna) /tu.d͡ʒad.wi.liː.na/: second-person feminine singular non-past active indicative of جَدْوَلَ (jadwala)\n# تُجَدْوَلِينَ (tujadwalīna) /tu.d͡ʒad.wa.liː.na/: second-person feminine singular non-past passive indicative of جَدْوَلَ (jadwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tujadwilīna", "jadwala", "tujadwalīna"],
-        "k": "جدول",
-        "yol": "kök"
-      },
-      {
-        "w": "تجدولن",
-        "u": "تجدولن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجدولن (form Iq)\n# تُجَدْوِلْنَ (tujadwilna) /tu.d͡ʒad.wil.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of جَدْوَلَ (jadwala)\n# تُجَدْوَلْنَ (tujadwalna) /tu.d͡ʒad.wal.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of جَدْوَلَ (jadwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tujadwilna", "jadwala", "tujadwalna"],
-        "k": "جدول",
-        "yol": "kök"
-      },
-      {
-        "w": "يجدولون",
-        "u": "يجدولون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يجدولون (form Iq)\n# يُجَدْوِلُونَ (yujadwilūna) /ju.d͡ʒad.wi.luː.na/: third-person masculine plural non-past active indicative of جَدْوَلَ (jadwala)\n# يُجَدْوَلُونَ (yujadwalūna) /ju.d͡ʒad.wa.luː.na/: third-person masculine plural non-past passive indicative of جَدْوَلَ (jadwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yujadwilūna", "jadwala", "yujadwalūna"],
-        "k": "جدول",
-        "yol": "kök"
-      },
-      {
-        "w": "تجدولا",
-        "u": "تجدولا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجدولا (form Iq)\n# تُجَدْوِلَا (tujadwilā) /tu.d͡ʒad.wi.laː/: inflection of جَدْوَلَ (jadwala):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُجَدْوَلَا (tujadwalā) /tu.d͡ʒad.wa.laː/: inflection of جَدْوَلَ (jadwala):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past pas",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tujadwilā", "jadwala", "tujadwalā"],
-        "k": "جدول",
-        "yol": "kök"
-      },
-      {
-        "w": "يجدولا",
-        "u": "يجدولا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يجدولا (form Iq)\n# يُجَدْوِلَا (yujadwilā) /ju.d͡ʒad.wi.laː/: third-person masculine dual non-past active subjunctive/jussive of جَدْوَلَ (jadwala)\n# يُجَدْوَلَا (yujadwalā) /ju.d͡ʒad.wa.laː/: third-person masculine dual non-past passive subjunctive/jussive of جَدْوَلَ (jadwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yujadwilā", "jadwala", "yujadwalā"],
-        "k": "جدول",
-        "yol": "kök"
-      },
-      {
-        "w": "تجدولي",
-        "u": "تجدولي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجدولي (form Iq)\n# تُجَدْوِلِي (tujadwilī) /tu.d͡ʒad.wi.liː/: second-person feminine singular non-past active subjunctive/jussive of جَدْوَلَ (jadwala)\n# تُجَدْوَلِي (tujadwalī) /tu.d͡ʒad.wa.liː/: second-person feminine singular non-past passive subjunctive/jussive of جَدْوَلَ (jadwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tujadwilī", "jadwala", "tujadwalī"],
-        "k": "جدول",
-        "yol": "kök"
-      },
-      {
-        "w": "يجدولن",
-        "u": "يجدولن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يجدولن (form Iq)\n# يُجَدْوِلْنَ (yujadwilna) /ju.d͡ʒad.wil.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of جَدْوَلَ (jadwala)\n# يُجَدْوَلْنَ (yujadwalna) /ju.d͡ʒad.wal.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of جَدْوَلَ (jadwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yujadwilna", "jadwala", "yujadwalna"],
-        "k": "جدول",
-        "yol": "kök"
-      },
-      {
-        "w": "تجدولوا",
-        "u": "تجدولوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجدولوا (form Iq)\n# تُجَدْوِلُوا (tujadwilū) /tu.d͡ʒad.wi.luː/: second-person masculine plural non-past active subjunctive/jussive of جَدْوَلَ (jadwala)\n# تُجَدْوَلُوا (tujadwalū) /tu.d͡ʒad.wa.luː/: second-person masculine plural non-past passive subjunctive/jussive of جَدْوَلَ (jadwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tujadwilū", "jadwala", "tujadwalū"],
-        "k": "جدول",
-        "yol": "kök"
-      },
-      {
-        "w": "يجدولوا",
-        "u": "يجدولوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يجدولوا (form Iq)\n# يُجَدْوِلُوا (yujadwilū) /ju.d͡ʒad.wi.luː/: third-person masculine plural non-past active subjunctive/jussive of جَدْوَلَ (jadwala)\n# يُجَدْوَلُوا (yujadwalū) /ju.d͡ʒad.wa.luː/: third-person masculine plural non-past passive subjunctive/jussive of جَدْوَلَ (jadwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yujadwilū", "jadwala", "yujadwalū"],
-        "k": "جدول",
-        "yol": "kök"
-      },
-      {
-        "w": "جدولي",
-        "u": "جدولي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جَدْوِلِي • (jadwilī) (form Iq) /d͡ʒad.wi.liː/\n# second-person feminine singular imperative of جَدْوَلَ (jadwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["jadwilī", "jadwala"],
-        "k": "جدول",
-        "yol": "kök"
-      },
-      {
-        "w": "جدولتا",
-        "u": "جدولتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جدولتا (form Iq)\n# جَدْوَلَتَا (jadwalatā) /d͡ʒad.wa.la.taː/: third-person feminine dual past active of جَدْوَلَ (jadwala)\n# جُدْوِلَتَا (judwilatā) /d͡ʒud.wi.la.taː/: third-person feminine dual past passive of جَدْوَلَ (jadwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["jadwalatā", "jadwala", "judwilatā"],
-        "k": "جدول",
-        "yol": "kök"
-      },
-      {
-        "w": "جدولا",
-        "u": "جدولا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جدولا (form Iq)\n# جَدْوَلَا (jadwalā) /d͡ʒad.wa.laː/: third-person masculine dual past active of جَدْوَلَ (jadwala)\n# جُدْوِلَا (judwilā) /d͡ʒud.wi.laː/: third-person masculine dual past passive of جَدْوَلَ (jadwala)\n# جَدْوِلَا (jadwilā) /d͡ʒad.wi.laː/: second-person dual imperative of جَدْوَلَ (jadwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["jadwalā", "jadwala", "judwilā"],
-        "k": "جدول",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "جد",
+  "ses": {
     "harf": "ج",
+    "fasil": "جد",
     "mahrec": "şeceriyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "جدول",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "جَدْوَلَ • (jadwala) Iq (non-past يُجَدْوِلُ (yujadwilu), verbal noun جَدْوَلَة (jadwala))",
+      "etim_sablon": [
+        ["ar-rootbox", ""]
+      ],
+      "anlam": ["to arrange in tabular form", "to schedule"],
+      "okunus": ["jadwala"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجدول",
+      "tur": "verb",
+      "baslik": "يجدول (form Iq)\n# يُجَدْوِلُ (yujadwilu) /ju.d͡ʒad.wi.lu/: third-person masculine singular non-past active indicative of جَدْوَلَ (jadwala)\n# يُجَدْوَلُ (yujadwalu) /ju.d͡ʒad.wa.lu/: third-person masculine singular non-past passive indicative of جَدْوَلَ (jadwala)\n# يُجَدْوِلَ (yujadwila) /ju.d͡ʒad.wi.la/: third-person masculine singular non-past active subjunctive of جَدْوَلَ (jadwala)\n# يُجَدْوَ",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yujadwilu", "jadwala", "yujadwalu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مجدول",
+      "tur": "noun",
+      "baslik": "مُجَدْوِل • (mujadwil) m (plural مُجَدْوِلَات (mujadwilāt))",
+      "etim_sablon": [
+        ["ar-rootbox", ""],
+        ["if-ar-lect", ""],
+        ["ar-active participle", "Derived from the active participle"]
+      ],
+      "anlam": ["scheduler"],
+      "okunus": ["mujadwil"],
+      "ipa": ["/mu.d͡ʒad.wil/"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "جدولت",
+      "tur": "verb",
+      "baslik": "جدولت (form Iq)\n# جَدْوَلْتُ (jadwaltu) /d͡ʒad.wal.tu/: first-person singular past active of جَدْوَلَ (jadwala)\n# جَدْوَلْتَ (jadwalta) /d͡ʒad.wal.ta/: second-person masculine singular past active of جَدْوَلَ (jadwala)\n# جَدْوَلْتِ (jadwalti) /d͡ʒad.wal.ti/: second-person feminine singular past active of جَدْوَلَ (jadwala)\n# جَدْوَلَتْ (jadwalat) /d͡ʒad.wa.lat/: third-person feminine singular past",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["jadwaltu", "jadwala", "jadwalta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "جدولتما",
+      "tur": "verb",
+      "baslik": "جدولتما (form Iq)\n# جَدْوَلْتُمَا (jadwaltumā) /d͡ʒad.wal.tu.maː/: second-person dual past active of جَدْوَلَ (jadwala)\n# جُدْوِلْتُمَا (judwiltumā) /d͡ʒud.wil.tu.maː/: second-person dual past passive of جَدْوَلَ (jadwala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["jadwaltumā", "jadwala", "judwiltumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "جدولنا",
+      "tur": "verb",
+      "baslik": "جدولنا (form Iq)\n# جَدْوَلْنَا (jadwalnā) /d͡ʒad.wal.naː/: first-person plural past active of جَدْوَلَ (jadwala)\n# جُدْوِلْنَا (judwilnā) /d͡ʒud.wil.naː/: first-person plural past passive of جَدْوَلَ (jadwala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["jadwalnā", "jadwala", "judwilnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "جدولوا",
+      "tur": "verb",
+      "baslik": "جدولوا (form Iq)\n# جَدْوَلُوا (jadwalū) /d͡ʒad.wa.luː/: third-person masculine plural past active of جَدْوَلَ (jadwala)\n# جُدْوِلُوا (judwilū) /d͡ʒud.wi.luː/: third-person masculine plural past passive of جَدْوَلَ (jadwala)\n# جَدْوِلُوا (jadwilū) /d͡ʒad.wi.luː/: second-person masculine plural imperative of جَدْوَلَ (jadwala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["jadwalū", "jadwala", "judwilū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "جدولتن",
+      "tur": "verb",
+      "baslik": "جدولتن (form Iq)\n# جَدْوَلْتُنَّ (jadwaltunna) /d͡ʒad.wal.tun.na/: second-person feminine plural past active of جَدْوَلَ (jadwala)\n# جُدْوِلْتُنَّ (judwiltunna) /d͡ʒud.wil.tun.na/: second-person feminine plural past passive of جَدْوَلَ (jadwala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["jadwaltunna", "jadwala", "judwiltunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "جدولتم",
+      "tur": "verb",
+      "baslik": "جدولتم (form Iq)\n# جَدْوَلْتُمْ (jadwaltum) /d͡ʒad.wal.tum/: second-person masculine plural past active of جَدْوَلَ (jadwala)\n# جُدْوِلْتُمْ (judwiltum) /d͡ʒud.wil.tum/: second-person masculine plural past passive of جَدْوَلَ (jadwala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["jadwaltum", "jadwala", "judwiltum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "جدولن",
+      "tur": "verb",
+      "baslik": "جدولن (form Iq)\n# جَدْوَلْنَ (jadwalna) /d͡ʒad.wal.na/: third-person feminine plural past active of جَدْوَلَ (jadwala)\n# جُدْوِلْنَ (judwilna) /d͡ʒud.wil.na/: third-person feminine plural past passive of جَدْوَلَ (jadwala)\n# جَدْوِلْنَ (jadwilna) /d͡ʒad.wil.na/: second-person feminine plural imperative of جَدْوَلَ (jadwala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["jadwalna", "jadwala", "judwilna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أجدول",
+      "tur": "verb",
+      "baslik": "أجدول (form Iq)\n# أُجَدْوِلُ (ʔujadwilu) /ʔu.d͡ʒad.wi.lu/: first-person singular non-past active indicative of جَدْوَلَ (jadwala)\n# أُجَدْوَلُ (ʔujadwalu) /ʔu.d͡ʒad.wa.lu/: first-person singular non-past passive indicative of جَدْوَلَ (jadwala)\n# أُجَدْوِلَ (ʔujadwila) /ʔu.d͡ʒad.wi.la/: first-person singular non-past active subjunctive of جَدْوَلَ (jadwala)\n# أُجَدْوَلَ (ʔujadwala) /ʔu.d͡ʒad.wa.la",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʔujadwilu", "jadwala", "ʔujadwalu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نجدول",
+      "tur": "verb",
+      "baslik": "نجدول (form Iq)\n# نُجَدْوِلُ (nujadwilu) /nu.d͡ʒad.wi.lu/: first-person plural non-past active indicative of جَدْوَلَ (jadwala)\n# نُجَدْوَلُ (nujadwalu) /nu.d͡ʒad.wa.lu/: first-person plural non-past passive indicative of جَدْوَلَ (jadwala)\n# نُجَدْوِلَ (nujadwila) /nu.d͡ʒad.wi.la/: first-person plural non-past active subjunctive of جَدْوَلَ (jadwala)\n# نُجَدْوَلَ (nujadwala) /nu.d͡ʒad.wa.la/: fir",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["nujadwilu", "jadwala", "nujadwalu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجدول",
+      "tur": "verb",
+      "baslik": "تجدول (form Iq)\n# تُجَدْوِلُ (tujadwilu) /tu.d͡ʒad.wi.lu/: inflection of جَدْوَلَ (jadwala):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُجَدْوَلُ (tujadwalu) /tu.d͡ʒad.wa.lu/: inflection of جَدْوَلَ (jadwala):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tujadwilu", "jadwala", "tujadwalu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجدولان",
+      "tur": "verb",
+      "baslik": "تجدولان (form Iq)\n# تُجَدْوِلَانِ (tujadwilāni) /tu.d͡ʒad.wi.laː.ni/: inflection of جَدْوَلَ (jadwala):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُجَدْوَلَانِ (tujadwalāni) /tu.d͡ʒad.wa.laː.ni/: inflection of جَدْوَلَ (jadwala):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicat",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tujadwilāni", "jadwala", "tujadwalāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجدولون",
+      "tur": "verb",
+      "baslik": "تجدولون (form Iq)\n# تُجَدْوِلُونَ (tujadwilūna) /tu.d͡ʒad.wi.luː.na/: second-person masculine plural non-past active indicative of جَدْوَلَ (jadwala)\n# تُجَدْوَلُونَ (tujadwalūna) /tu.d͡ʒad.wa.luː.na/: second-person masculine plural non-past passive indicative of جَدْوَلَ (jadwala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tujadwilūna", "jadwala", "tujadwalūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يجدولان",
+      "tur": "verb",
+      "baslik": "يجدولان (form Iq)\n# يُجَدْوِلَانِ (yujadwilāni) /ju.d͡ʒad.wi.laː.ni/: third-person masculine dual non-past active indicative of جَدْوَلَ (jadwala)\n# يُجَدْوَلَانِ (yujadwalāni) /ju.d͡ʒad.wa.laː.ni/: third-person masculine dual non-past passive indicative of جَدْوَلَ (jadwala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yujadwilāni", "jadwala", "yujadwalāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجدولين",
+      "tur": "verb",
+      "baslik": "تجدولين (form Iq)\n# تُجَدْوِلِينَ (tujadwilīna) /tu.d͡ʒad.wi.liː.na/: second-person feminine singular non-past active indicative of جَدْوَلَ (jadwala)\n# تُجَدْوَلِينَ (tujadwalīna) /tu.d͡ʒad.wa.liː.na/: second-person feminine singular non-past passive indicative of جَدْوَلَ (jadwala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tujadwilīna", "jadwala", "tujadwalīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجدولن",
+      "tur": "verb",
+      "baslik": "تجدولن (form Iq)\n# تُجَدْوِلْنَ (tujadwilna) /tu.d͡ʒad.wil.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of جَدْوَلَ (jadwala)\n# تُجَدْوَلْنَ (tujadwalna) /tu.d͡ʒad.wal.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of جَدْوَلَ (jadwala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tujadwilna", "jadwala", "tujadwalna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يجدولون",
+      "tur": "verb",
+      "baslik": "يجدولون (form Iq)\n# يُجَدْوِلُونَ (yujadwilūna) /ju.d͡ʒad.wi.luː.na/: third-person masculine plural non-past active indicative of جَدْوَلَ (jadwala)\n# يُجَدْوَلُونَ (yujadwalūna) /ju.d͡ʒad.wa.luː.na/: third-person masculine plural non-past passive indicative of جَدْوَلَ (jadwala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yujadwilūna", "jadwala", "yujadwalūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجدولا",
+      "tur": "verb",
+      "baslik": "تجدولا (form Iq)\n# تُجَدْوِلَا (tujadwilā) /tu.d͡ʒad.wi.laː/: inflection of جَدْوَلَ (jadwala):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُجَدْوَلَا (tujadwalā) /tu.d͡ʒad.wa.laː/: inflection of جَدْوَلَ (jadwala):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past pas",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tujadwilā", "jadwala", "tujadwalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يجدولا",
+      "tur": "verb",
+      "baslik": "يجدولا (form Iq)\n# يُجَدْوِلَا (yujadwilā) /ju.d͡ʒad.wi.laː/: third-person masculine dual non-past active subjunctive/jussive of جَدْوَلَ (jadwala)\n# يُجَدْوَلَا (yujadwalā) /ju.d͡ʒad.wa.laː/: third-person masculine dual non-past passive subjunctive/jussive of جَدْوَلَ (jadwala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yujadwilā", "jadwala", "yujadwalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجدولي",
+      "tur": "verb",
+      "baslik": "تجدولي (form Iq)\n# تُجَدْوِلِي (tujadwilī) /tu.d͡ʒad.wi.liː/: second-person feminine singular non-past active subjunctive/jussive of جَدْوَلَ (jadwala)\n# تُجَدْوَلِي (tujadwalī) /tu.d͡ʒad.wa.liː/: second-person feminine singular non-past passive subjunctive/jussive of جَدْوَلَ (jadwala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tujadwilī", "jadwala", "tujadwalī"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يجدولن",
+      "tur": "verb",
+      "baslik": "يجدولن (form Iq)\n# يُجَدْوِلْنَ (yujadwilna) /ju.d͡ʒad.wil.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of جَدْوَلَ (jadwala)\n# يُجَدْوَلْنَ (yujadwalna) /ju.d͡ʒad.wal.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of جَدْوَلَ (jadwala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yujadwilna", "jadwala", "yujadwalna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجدولوا",
+      "tur": "verb",
+      "baslik": "تجدولوا (form Iq)\n# تُجَدْوِلُوا (tujadwilū) /tu.d͡ʒad.wi.luː/: second-person masculine plural non-past active subjunctive/jussive of جَدْوَلَ (jadwala)\n# تُجَدْوَلُوا (tujadwalū) /tu.d͡ʒad.wa.luː/: second-person masculine plural non-past passive subjunctive/jussive of جَدْوَلَ (jadwala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tujadwilū", "jadwala", "tujadwalū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يجدولوا",
+      "tur": "verb",
+      "baslik": "يجدولوا (form Iq)\n# يُجَدْوِلُوا (yujadwilū) /ju.d͡ʒad.wi.luː/: third-person masculine plural non-past active subjunctive/jussive of جَدْوَلَ (jadwala)\n# يُجَدْوَلُوا (yujadwalū) /ju.d͡ʒad.wa.luː/: third-person masculine plural non-past passive subjunctive/jussive of جَدْوَلَ (jadwala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yujadwilū", "jadwala", "yujadwalū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "جدولي",
+      "tur": "verb",
+      "baslik": "جَدْوِلِي • (jadwilī) (form Iq) /d͡ʒad.wi.liː/\n# second-person feminine singular imperative of جَدْوَلَ (jadwala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["jadwilī", "jadwala"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "جدولتا",
+      "tur": "verb",
+      "baslik": "جدولتا (form Iq)\n# جَدْوَلَتَا (jadwalatā) /d͡ʒad.wa.la.taː/: third-person feminine dual past active of جَدْوَلَ (jadwala)\n# جُدْوِلَتَا (judwilatā) /d͡ʒud.wi.la.taː/: third-person feminine dual past passive of جَدْوَلَ (jadwala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["jadwalatā", "jadwala", "judwilatā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "جدولا",
+      "tur": "verb",
+      "baslik": "جدولا (form Iq)\n# جَدْوَلَا (jadwalā) /d͡ʒad.wa.laː/: third-person masculine dual past active of جَدْوَلَ (jadwala)\n# جُدْوِلَا (judwilā) /d͡ʒud.wi.laː/: third-person masculine dual past passive of جَدْوَلَ (jadwala)\n# جَدْوِلَا (jadwilā) /d͡ʒad.wi.laː/: second-person dual imperative of جَدْوَلَ (jadwala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["jadwalā", "jadwala", "judwilā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "Denominal verb from جَدْوَل (jadwal).",
+      "kognatlar": [
+        ["جَدْوَل", "جدول#Arabic"]
+      ]
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "Derived from the active participle of جَدْوَلَ (jadwala, “to schedule”)",
+      "kognatlar": [
+        ["جَدْوَلَ", "جدول#Arabic"],
+        ["schedule", "schedule#English"]
+      ]
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "جدول", "r6"]
+  ],
+  "mana": {
     "ince": "message.n.02",
     "orta": "noun.communication",
     "ust": "söz ve haber",
@@ -388,20 +287,8 @@
     "dayanak_tanim": "a database containing an ordered array of items (names or topics)",
     "synset_sayisi": 7
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["array.n.01", "content.n.05", "information.n.01", "match.v.01", "schedule.v.02", "score.v.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 8,
       "merkez_kok": "سير",
@@ -421,6 +308,11 @@
       "boy": 4
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["array.n.01", "content.n.05", "information.n.01", "match.v.01", "schedule.v.02", "score.v.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

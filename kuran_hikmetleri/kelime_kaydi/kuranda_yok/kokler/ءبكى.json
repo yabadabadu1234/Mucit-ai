@@ -1,455 +1,356 @@
 {
   "kok": "ءبكى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءبكى", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يبكي",
-        "u": "يبكي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يبكي (form IV)\n# يُبْكِي (yubkī) /jub.kiː/: third-person masculine singular non-past active indicative of أَبْكَى (ʔabkā)\n# يُبْكِيَ (yubkiya) /jub.ki.ja/: third-person masculine singular non-past active subjunctive of أَبْكَى (ʔabkā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubkī", "ʔabkā", "yubkiya"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "يبكى",
-        "u": "يبكى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُبْكَى • (yubkā) (form IV) /jub.kaː/\n# third-person masculine singular non-past passive indicative/subjunctive of أَبْكَى (ʔabkā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubkā", "ʔabkā"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "يبك",
-        "u": "يبك",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يبك (form IV)\n# يُبْكِ (yubki) /jub.ki/: third-person masculine singular non-past active jussive of أَبْكَى (ʔabkā)\n# يُبْكَ (yubka) /jub.ka/: third-person masculine singular non-past passive jussive of أَبْكَى (ʔabkā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubki", "ʔabkā", "yubka"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبكي",
-        "u": "تبكي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تبكي (form IV)\n# تُبْكِي (tubkī) /tub.kiː/: inflection of أَبْكَى (ʔabkā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُبْكِيَ (tubkiya) /tub.ki.ja/: inflection of أَبْكَى (ʔabkā):\n## second-person masculine singular non-past active subjunctive\n#",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubkī", "ʔabkā", "tubkiya"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبك",
-        "u": "تبك",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تبك (form IV)\n# تُبْكِ (tubki) /tub.ki/: inflection of أَبْكَى (ʔabkā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُبْكَ (tubka) /tub.ka/: inflection of أَبْكَى (ʔabkā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubki", "ʔabkā", "tubka"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبكى",
-        "u": "تبكى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُبْكَى • (tubkā) (form IV) /tub.kaː/\n# inflection of أَبْكَى (ʔabkā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubkā", "ʔabkā"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبكين",
-        "u": "تبكين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تبكين (form IV)\n# تُبْكِينَ (tubkīna) /tub.kiː.na/: inflection of أَبْكَى (ʔabkā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُبْكَيْنَ (tubkayna) /tub.kaj.na/: inflection of أَبْكَى (ʔabkā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-pas",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubkīna", "ʔabkā", "tubkayna"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبكي",
-        "u": "أبكي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أبكي (form IV)\n# أُبْكِيَ (ʔubkiya) /ʔub.ki.ja/: inflection of أَبْكَى (ʔabkā):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُبْكِي (ʔubkī) /ʔub.kiː/: first-person singular non-past active indicative of أَبْكَى (ʔabkā)\n# أَبْكِي (ʔabkī) /ʔab.kiː/: second-person feminine singular imperative of أَبْكَى (ʔabkā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔubkiya", "ʔabkā", "ʔubkī"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبك",
-        "u": "أبك",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أبك (form IV)\n# أُبْكِ (ʔubki) /ʔub.ki/: first-person singular non-past active jussive of أَبْكَى (ʔabkā)\n# أُبْكَ (ʔubka) /ʔub.ka/: first-person singular non-past passive jussive of أَبْكَى (ʔabkā)\n# أَبْكِ (ʔabki) /ʔab.ki/: second-person masculine singular imperative of أَبْكَى (ʔabkā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔubki", "ʔabkā", "ʔubka"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "نبكي",
-        "u": "نبكي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نبكي (form IV)\n# نُبْكِي (nubkī) /nub.kiː/: first-person plural non-past active indicative of أَبْكَى (ʔabkā)\n# نُبْكِيَ (nubkiya) /nub.ki.ja/: first-person plural non-past active subjunctive of أَبْكَى (ʔabkā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nubkī", "ʔabkā", "nubkiya"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "نبك",
-        "u": "نبك",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نبك (form IV)\n# نُبْكِ (nubki) /nub.ki/: first-person plural non-past active jussive of أَبْكَى (ʔabkā)\n# نُبْكَ (nubka) /nub.ka/: first-person plural non-past passive jussive of أَبْكَى (ʔabkā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nubki", "ʔabkā", "nubka"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "نبكى",
-        "u": "نبكى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نُبْكَى • (nubkā) (form IV) /nub.kaː/\n# first-person plural non-past passive indicative/subjunctive of أَبْكَى (ʔabkā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nubkā", "ʔabkā"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبكون",
-        "u": "تبكون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تبكون (form IV)\n# تُبْكُونَ (tubkūna) /tub.kuː.na/: second-person masculine plural non-past active indicative of أَبْكَى (ʔabkā)\n# تُبْكَوْنَ (tubkawna) /tub.kaw.na/: second-person masculine plural non-past passive indicative of أَبْكَى (ʔabkā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubkūna", "ʔabkā", "tubkawna"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبكوا",
-        "u": "تبكوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تبكوا (form IV)\n# تُبْكُوا (tubkū) /tub.kuː/: second-person masculine plural non-past active subjunctive/jussive of أَبْكَى (ʔabkā)\n# تُبْكَوْا (tubkaw) /tub.kaw/: second-person masculine plural non-past passive subjunctive/jussive of أَبْكَى (ʔabkā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubkū", "ʔabkā", "tubkaw"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "يبكون",
-        "u": "يبكون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يبكون (form IV)\n# يُبْكُونَ (yubkūna) /jub.kuː.na/: third-person masculine plural non-past active indicative of أَبْكَى (ʔabkā)\n# يُبْكَوْنَ (yubkawna) /jub.kaw.na/: third-person masculine plural non-past passive indicative of أَبْكَى (ʔabkā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubkūna", "ʔabkā", "yubkawna"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "يبكوا",
-        "u": "يبكوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يبكوا (form IV)\n# يُبْكُوا (yubkū) /jub.kuː/: third-person masculine plural non-past active subjunctive/jussive of أَبْكَى (ʔabkā)\n# يُبْكَوْا (yubkaw) /jub.kaw/: third-person masculine plural non-past passive subjunctive/jussive of أَبْكَى (ʔabkā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubkū", "ʔabkā", "yubkaw"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "يبكين",
-        "u": "يبكين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يبكين (form IV)\n# يُبْكِينَ (yubkīna) /jub.kiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَبْكَى (ʔabkā)\n# يُبْكَيْنَ (yubkayna) /jub.kaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَبْكَى (ʔabkā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubkīna", "ʔabkā", "yubkayna"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبكيت",
-        "u": "أبكيت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبكيت (form IV)\n# أَبْكَيْتُ (ʔabkaytu) /ʔab.kaj.tu/: first-person singular past active of أَبْكَى (ʔabkā)\n# أَبْكَيْتَ (ʔabkayta) /ʔab.kaj.ta/: second-person masculine singular past active of أَبْكَى (ʔabkā)\n# أَبْكَيْتِ (ʔabkayti) /ʔab.kaj.ti/: second-person feminine singular past active of أَبْكَى (ʔabkā)\n# أُبْكِيتُ (ʔubkītu) /ʔub.kiː.tu/: first-person singular past passive of أَبْكَى (ʔabkā)\n",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabkaytu", "ʔabkā", "ʔabkayta"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبكيتما",
-        "u": "أبكيتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبكيتما (form IV)\n# أَبْكَيْتُمَا (ʔabkaytumā) /ʔab.kaj.tu.maː/: second-person dual past active of أَبْكَى (ʔabkā)\n# أُبْكِيتُمَا (ʔubkītumā) /ʔub.kiː.tu.maː/: second-person dual past passive of أَبْكَى (ʔabkā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabkaytumā", "ʔabkā", "ʔubkītumā"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبكت",
-        "u": "أبكت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَبْكَتْ • (ʔabkat) (form IV) /ʔab.kat/\n# third-person feminine singular past active of أَبْكَى (ʔabkā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabkat", "ʔabkā"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبكيا",
-        "u": "أبكيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبكيا (form IV)\n# أَبْكَيَا (ʔabkayā) /ʔab.ka.jaː/: third-person masculine dual past active of أَبْكَى (ʔabkā)\n# أُبْكِيَا (ʔubkiyā) /ʔub.ki.jaː/: third-person masculine dual past passive of أَبْكَى (ʔabkā)\n# أَبْكِيَا (ʔabkiyā) /ʔab.ki.jaː/: second-person dual imperative of أَبْكَى (ʔabkā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabkayā", "ʔabkā", "ʔubkiyā"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبكتا",
-        "u": "أبكتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَبْكَتَا • (ʔabkatā) (form IV) /ʔab.ka.taː/\n# third-person feminine dual past active of أَبْكَى (ʔabkā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabkatā", "ʔabkā"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبكينا",
-        "u": "أبكينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبكينا (form IV)\n# أَبْكَيْنَا (ʔabkaynā) /ʔab.kaj.naː/: first-person plural past active of أَبْكَى (ʔabkā)\n# أُبْكِينَا (ʔubkīnā) /ʔub.kiː.naː/: first-person plural past passive of أَبْكَى (ʔabkā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabkaynā", "ʔabkā", "ʔubkīnā"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبكيتم",
-        "u": "أبكيتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبكيتم (form IV)\n# أَبْكَيْتُمْ (ʔabkaytum) /ʔab.kaj.tum/: second-person masculine plural past active of أَبْكَى (ʔabkā)\n# أُبْكِيتُمْ (ʔubkītum) /ʔub.kiː.tum/: second-person masculine plural past passive of أَبْكَى (ʔabkā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabkaytum", "ʔabkā", "ʔubkītum"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبكيتن",
-        "u": "أبكيتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبكيتن (form IV)\n# أَبْكَيْتُنَّ (ʔabkaytunna) /ʔab.kaj.tun.na/: second-person feminine plural past active of أَبْكَى (ʔabkā)\n# أُبْكِيتُنَّ (ʔubkītunna) /ʔub.kiː.tun.na/: second-person feminine plural past passive of أَبْكَى (ʔabkā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabkaytunna", "ʔabkā", "ʔubkītunna"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبكوا",
-        "u": "أبكوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبكوا (form IV)\n# أَبْكَوْا (ʔabkaw) /ʔab.kaw/: third-person masculine plural past active of أَبْكَى (ʔabkā)\n# أُبْكُوا (ʔubkū) /ʔub.kuː/: third-person masculine plural past passive of أَبْكَى (ʔabkā)\n# أَبْكُوا (ʔabkū) /ʔab.kuː/: second-person masculine plural imperative of أَبْكَى (ʔabkā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabkaw", "ʔabkā", "ʔubkū"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبكين",
-        "u": "أبكين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبكين (form IV)\n# أَبْكَيْنَ (ʔabkayna) /ʔab.kaj.na/: third-person feminine plural past active of أَبْكَى (ʔabkā)\n# أُبْكِينَ (ʔubkīna) /ʔub.kiː.na/: third-person feminine plural past passive of أَبْكَى (ʔabkā)\n# أَبْكِينَ (ʔabkīna) /ʔab.kiː.na/: second-person feminine plural imperative of أَبْكَى (ʔabkā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabkayna", "ʔabkā", "ʔubkīna"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبكيتا",
-        "u": "أبكيتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُبْكِيَتَا • (ʔubkiyatā) (form IV) /ʔub.ki.ja.taː/\n# third-person feminine dual past passive of أَبْكَى (ʔabkā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔubkiyatā", "ʔabkā"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "يبكيان",
-        "u": "يبكيان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يبكيان (form IV)\n# يُبْكِيَانِ (yubkiyāni) /jub.ki.jaː.ni/: third-person masculine dual non-past active indicative of أَبْكَى (ʔabkā)\n# يُبْكَيَانِ (yubkayāni) /jub.ka.jaː.ni/: third-person masculine dual non-past passive indicative of أَبْكَى (ʔabkā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubkiyāni", "ʔabkā", "yubkayāni"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبكيان",
-        "u": "تبكيان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تبكيان (form IV)\n# تُبْكِيَانِ (tubkiyāni) /tub.ki.jaː.ni/: inflection of أَبْكَى (ʔabkā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُبْكَيَانِ (tubkayāni) /tub.ka.jaː.ni/: inflection of أَبْكَى (ʔabkā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubkiyāni", "ʔabkā", "tubkayāni"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبكيا",
-        "u": "تبكيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تبكيا (form IV)\n# تُبْكِيَا (tubkiyā) /tub.ki.jaː/: inflection of أَبْكَى (ʔabkā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُبْكَيَا (tubkayā) /tub.ka.jaː/: inflection of أَبْكَى (ʔabkā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubkiyā", "ʔabkā", "tubkayā"],
-        "k": "أبكى",
-        "yol": "kök"
-      },
-      {
-        "w": "يبكيا",
-        "u": "يبكيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يبكيا (form IV)\n# يُبْكِيَا (yubkiyā) /jub.ki.jaː/: third-person masculine dual non-past active subjunctive/jussive of أَبْكَى (ʔabkā)\n# يُبْكَيَا (yubkayā) /jub.ka.jaː/: third-person masculine dual non-past passive subjunctive/jussive of أَبْكَى (ʔabkā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubkiyā", "ʔabkā", "yubkayā"],
-        "k": "أبكى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "بك",
+  "ses": {
     "harf": "ء",
+    "fasil": "بك",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يبكي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يبكي (form IV)\n# يُبْكِي (yubkī) /jub.kiː/: third-person masculine singular non-past active indicative of أَبْكَى (ʔabkā)\n# يُبْكِيَ (yubkiya) /jub.ki.ja/: third-person masculine singular non-past active subjunctive of أَبْكَى (ʔabkā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubkī", "ʔabkā", "yubkiya"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبكى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُبْكَى • (yubkā) (form IV) /jub.kaː/\n# third-person masculine singular non-past passive indicative/subjunctive of أَبْكَى (ʔabkā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubkā", "ʔabkā"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبك",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يبك (form IV)\n# يُبْكِ (yubki) /jub.ki/: third-person masculine singular non-past active jussive of أَبْكَى (ʔabkā)\n# يُبْكَ (yubka) /jub.ka/: third-person masculine singular non-past passive jussive of أَبْكَى (ʔabkā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubki", "ʔabkā", "yubka"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبكي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تبكي (form IV)\n# تُبْكِي (tubkī) /tub.kiː/: inflection of أَبْكَى (ʔabkā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُبْكِيَ (tubkiya) /tub.ki.ja/: inflection of أَبْكَى (ʔabkā):\n## second-person masculine singular non-past active subjunctive\n#",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubkī", "ʔabkā", "tubkiya"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبك",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تبك (form IV)\n# تُبْكِ (tubki) /tub.ki/: inflection of أَبْكَى (ʔabkā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُبْكَ (tubka) /tub.ka/: inflection of أَبْكَى (ʔabkā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubki", "ʔabkā", "tubka"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبكى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُبْكَى • (tubkā) (form IV) /tub.kaː/\n# inflection of أَبْكَى (ʔabkā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubkā", "ʔabkā"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبكين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تبكين (form IV)\n# تُبْكِينَ (tubkīna) /tub.kiː.na/: inflection of أَبْكَى (ʔabkā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُبْكَيْنَ (tubkayna) /tub.kaj.na/: inflection of أَبْكَى (ʔabkā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-pas",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubkīna", "ʔabkā", "tubkayna"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبكي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أبكي (form IV)\n# أُبْكِيَ (ʔubkiya) /ʔub.ki.ja/: inflection of أَبْكَى (ʔabkā):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُبْكِي (ʔubkī) /ʔub.kiː/: first-person singular non-past active indicative of أَبْكَى (ʔabkā)\n# أَبْكِي (ʔabkī) /ʔab.kiː/: second-person feminine singular imperative of أَبْكَى (ʔabkā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔubkiya", "ʔabkā", "ʔubkī"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبك",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أبك (form IV)\n# أُبْكِ (ʔubki) /ʔub.ki/: first-person singular non-past active jussive of أَبْكَى (ʔabkā)\n# أُبْكَ (ʔubka) /ʔub.ka/: first-person singular non-past passive jussive of أَبْكَى (ʔabkā)\n# أَبْكِ (ʔabki) /ʔab.ki/: second-person masculine singular imperative of أَبْكَى (ʔabkā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔubki", "ʔabkā", "ʔubka"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نبكي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نبكي (form IV)\n# نُبْكِي (nubkī) /nub.kiː/: first-person plural non-past active indicative of أَبْكَى (ʔabkā)\n# نُبْكِيَ (nubkiya) /nub.ki.ja/: first-person plural non-past active subjunctive of أَبْكَى (ʔabkā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nubkī", "ʔabkā", "nubkiya"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نبك",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نبك (form IV)\n# نُبْكِ (nubki) /nub.ki/: first-person plural non-past active jussive of أَبْكَى (ʔabkā)\n# نُبْكَ (nubka) /nub.ka/: first-person plural non-past passive jussive of أَبْكَى (ʔabkā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nubki", "ʔabkā", "nubka"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نبكى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نُبْكَى • (nubkā) (form IV) /nub.kaː/\n# first-person plural non-past passive indicative/subjunctive of أَبْكَى (ʔabkā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nubkā", "ʔabkā"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبكون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تبكون (form IV)\n# تُبْكُونَ (tubkūna) /tub.kuː.na/: second-person masculine plural non-past active indicative of أَبْكَى (ʔabkā)\n# تُبْكَوْنَ (tubkawna) /tub.kaw.na/: second-person masculine plural non-past passive indicative of أَبْكَى (ʔabkā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubkūna", "ʔabkā", "tubkawna"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبكوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تبكوا (form IV)\n# تُبْكُوا (tubkū) /tub.kuː/: second-person masculine plural non-past active subjunctive/jussive of أَبْكَى (ʔabkā)\n# تُبْكَوْا (tubkaw) /tub.kaw/: second-person masculine plural non-past passive subjunctive/jussive of أَبْكَى (ʔabkā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubkū", "ʔabkā", "tubkaw"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبكون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يبكون (form IV)\n# يُبْكُونَ (yubkūna) /jub.kuː.na/: third-person masculine plural non-past active indicative of أَبْكَى (ʔabkā)\n# يُبْكَوْنَ (yubkawna) /jub.kaw.na/: third-person masculine plural non-past passive indicative of أَبْكَى (ʔabkā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubkūna", "ʔabkā", "yubkawna"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبكوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يبكوا (form IV)\n# يُبْكُوا (yubkū) /jub.kuː/: third-person masculine plural non-past active subjunctive/jussive of أَبْكَى (ʔabkā)\n# يُبْكَوْا (yubkaw) /jub.kaw/: third-person masculine plural non-past passive subjunctive/jussive of أَبْكَى (ʔabkā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubkū", "ʔabkā", "yubkaw"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبكين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يبكين (form IV)\n# يُبْكِينَ (yubkīna) /jub.kiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَبْكَى (ʔabkā)\n# يُبْكَيْنَ (yubkayna) /jub.kaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَبْكَى (ʔabkā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubkīna", "ʔabkā", "yubkayna"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبكيت",
+      "tur": "verb",
+      "baslik": "أبكيت (form IV)\n# أَبْكَيْتُ (ʔabkaytu) /ʔab.kaj.tu/: first-person singular past active of أَبْكَى (ʔabkā)\n# أَبْكَيْتَ (ʔabkayta) /ʔab.kaj.ta/: second-person masculine singular past active of أَبْكَى (ʔabkā)\n# أَبْكَيْتِ (ʔabkayti) /ʔab.kaj.ti/: second-person feminine singular past active of أَبْكَى (ʔabkā)\n# أُبْكِيتُ (ʔubkītu) /ʔub.kiː.tu/: first-person singular past passive of أَبْكَى (ʔabkā)\n",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabkaytu", "ʔabkā", "ʔabkayta"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبكيتما",
+      "tur": "verb",
+      "baslik": "أبكيتما (form IV)\n# أَبْكَيْتُمَا (ʔabkaytumā) /ʔab.kaj.tu.maː/: second-person dual past active of أَبْكَى (ʔabkā)\n# أُبْكِيتُمَا (ʔubkītumā) /ʔub.kiː.tu.maː/: second-person dual past passive of أَبْكَى (ʔabkā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabkaytumā", "ʔabkā", "ʔubkītumā"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبكت",
+      "tur": "verb",
+      "baslik": "أَبْكَتْ • (ʔabkat) (form IV) /ʔab.kat/\n# third-person feminine singular past active of أَبْكَى (ʔabkā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabkat", "ʔabkā"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبكيا",
+      "tur": "verb",
+      "baslik": "أبكيا (form IV)\n# أَبْكَيَا (ʔabkayā) /ʔab.ka.jaː/: third-person masculine dual past active of أَبْكَى (ʔabkā)\n# أُبْكِيَا (ʔubkiyā) /ʔub.ki.jaː/: third-person masculine dual past passive of أَبْكَى (ʔabkā)\n# أَبْكِيَا (ʔabkiyā) /ʔab.ki.jaː/: second-person dual imperative of أَبْكَى (ʔabkā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabkayā", "ʔabkā", "ʔubkiyā"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبكتا",
+      "tur": "verb",
+      "baslik": "أَبْكَتَا • (ʔabkatā) (form IV) /ʔab.ka.taː/\n# third-person feminine dual past active of أَبْكَى (ʔabkā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabkatā", "ʔabkā"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبكينا",
+      "tur": "verb",
+      "baslik": "أبكينا (form IV)\n# أَبْكَيْنَا (ʔabkaynā) /ʔab.kaj.naː/: first-person plural past active of أَبْكَى (ʔabkā)\n# أُبْكِينَا (ʔubkīnā) /ʔub.kiː.naː/: first-person plural past passive of أَبْكَى (ʔabkā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabkaynā", "ʔabkā", "ʔubkīnā"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبكيتم",
+      "tur": "verb",
+      "baslik": "أبكيتم (form IV)\n# أَبْكَيْتُمْ (ʔabkaytum) /ʔab.kaj.tum/: second-person masculine plural past active of أَبْكَى (ʔabkā)\n# أُبْكِيتُمْ (ʔubkītum) /ʔub.kiː.tum/: second-person masculine plural past passive of أَبْكَى (ʔabkā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabkaytum", "ʔabkā", "ʔubkītum"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبكيتن",
+      "tur": "verb",
+      "baslik": "أبكيتن (form IV)\n# أَبْكَيْتُنَّ (ʔabkaytunna) /ʔab.kaj.tun.na/: second-person feminine plural past active of أَبْكَى (ʔabkā)\n# أُبْكِيتُنَّ (ʔubkītunna) /ʔub.kiː.tun.na/: second-person feminine plural past passive of أَبْكَى (ʔabkā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabkaytunna", "ʔabkā", "ʔubkītunna"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبكوا",
+      "tur": "verb",
+      "baslik": "أبكوا (form IV)\n# أَبْكَوْا (ʔabkaw) /ʔab.kaw/: third-person masculine plural past active of أَبْكَى (ʔabkā)\n# أُبْكُوا (ʔubkū) /ʔub.kuː/: third-person masculine plural past passive of أَبْكَى (ʔabkā)\n# أَبْكُوا (ʔabkū) /ʔab.kuː/: second-person masculine plural imperative of أَبْكَى (ʔabkā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabkaw", "ʔabkā", "ʔubkū"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبكين",
+      "tur": "verb",
+      "baslik": "أبكين (form IV)\n# أَبْكَيْنَ (ʔabkayna) /ʔab.kaj.na/: third-person feminine plural past active of أَبْكَى (ʔabkā)\n# أُبْكِينَ (ʔubkīna) /ʔub.kiː.na/: third-person feminine plural past passive of أَبْكَى (ʔabkā)\n# أَبْكِينَ (ʔabkīna) /ʔab.kiː.na/: second-person feminine plural imperative of أَبْكَى (ʔabkā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabkayna", "ʔabkā", "ʔubkīna"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبكيتا",
+      "tur": "verb",
+      "baslik": "أُبْكِيَتَا • (ʔubkiyatā) (form IV) /ʔub.ki.ja.taː/\n# third-person feminine dual past passive of أَبْكَى (ʔabkā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔubkiyatā", "ʔabkā"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبكيان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يبكيان (form IV)\n# يُبْكِيَانِ (yubkiyāni) /jub.ki.jaː.ni/: third-person masculine dual non-past active indicative of أَبْكَى (ʔabkā)\n# يُبْكَيَانِ (yubkayāni) /jub.ka.jaː.ni/: third-person masculine dual non-past passive indicative of أَبْكَى (ʔabkā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubkiyāni", "ʔabkā", "yubkayāni"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبكيان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تبكيان (form IV)\n# تُبْكِيَانِ (tubkiyāni) /tub.ki.jaː.ni/: inflection of أَبْكَى (ʔabkā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُبْكَيَانِ (tubkayāni) /tub.ka.jaː.ni/: inflection of أَبْكَى (ʔabkā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubkiyāni", "ʔabkā", "tubkayāni"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبكيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تبكيا (form IV)\n# تُبْكِيَا (tubkiyā) /tub.ki.jaː/: inflection of أَبْكَى (ʔabkā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُبْكَيَا (tubkayā) /tub.ka.jaː/: inflection of أَبْكَى (ʔabkā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubkiyā", "ʔabkā", "tubkayā"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبكيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يبكيا (form IV)\n# يُبْكِيَا (yubkiyā) /jub.ki.jaː/: third-person masculine dual non-past active subjunctive/jussive of أَبْكَى (ʔabkā)\n# يُبْكَيَا (yubkayā) /jub.ka.jaː/: third-person masculine dual non-past passive subjunctive/jussive of أَبْكَى (ʔabkā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubkiyā", "ʔabkā", "yubkayā"],
+      "kok_yazilis": "أبكى",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءبكى", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

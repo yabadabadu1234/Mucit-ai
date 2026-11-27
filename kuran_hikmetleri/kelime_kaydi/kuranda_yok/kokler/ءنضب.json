@@ -1,365 +1,287 @@
 {
   "kok": "ءنضب",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءنضب", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أنضبتما",
-        "u": "أنضبتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنضبتما (form IV)\n# أَنْضَبْتُمَا (ʔanḍabtumā) /ʔan.dˤab.tu.maː/: second-person dual past active of أَنْضَبَ (ʔanḍaba)\n# أُنْضِبْتُمَا (ʔunḍibtumā) /ʔun.dˤib.tu.maː/: second-person dual past passive of أَنْضَبَ (ʔanḍaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanḍabtumā", "ʔanḍaba", "ʔunḍibtumā"],
-        "k": "أنضب",
-        "yol": "kök"
-      },
-      {
-        "w": "أنضبت",
-        "u": "أنضبت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنضبت (form IV)\n# أَنْضَبْتُ (ʔanḍabtu) /ʔan.dˤab.tu/: first-person singular past active of أَنْضَبَ (ʔanḍaba)\n# أَنْضَبْتَ (ʔanḍabta) /ʔan.dˤab.ta/: second-person masculine singular past active of أَنْضَبَ (ʔanḍaba)\n# أَنْضَبْتِ (ʔanḍabti) /ʔan.dˤab.ti/: second-person feminine singular past active of أَنْضَبَ (ʔanḍaba)\n# أَنْضَبَتْ (ʔanḍabat) /ʔan.dˤa.bat/: third-person feminine singular past act",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanḍabtu", "ʔanḍaba", "ʔanḍabta"],
-        "k": "أنضب",
-        "yol": "kök"
-      },
-      {
-        "w": "أنضبتا",
-        "u": "أنضبتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنضبتا (form IV)\n# أَنْضَبَتَا (ʔanḍabatā) /ʔan.dˤa.ba.taː/: third-person feminine dual past active of أَنْضَبَ (ʔanḍaba)\n# أُنْضِبَتَا (ʔunḍibatā) /ʔun.dˤi.ba.taː/: third-person feminine dual past passive of أَنْضَبَ (ʔanḍaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanḍabatā", "ʔanḍaba", "ʔunḍibatā"],
-        "k": "أنضب",
-        "yol": "kök"
-      },
-      {
-        "w": "أنضبا",
-        "u": "أنضبا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنضبا (form IV)\n# أَنْضَبَا (ʔanḍabā) /ʔan.dˤa.baː/: third-person masculine dual past active of أَنْضَبَ (ʔanḍaba)\n# أُنْضِبَا (ʔunḍibā) /ʔun.dˤi.baː/: third-person masculine dual past passive of أَنْضَبَ (ʔanḍaba)\n# أَنْضِبَا (ʔanḍibā) /ʔan.dˤi.baː/: second-person dual imperative of أَنْضَبَ (ʔanḍaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanḍabā", "ʔanḍaba", "ʔunḍibā"],
-        "k": "أنضب",
-        "yol": "kök"
-      },
-      {
-        "w": "أنضبتم",
-        "u": "أنضبتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنضبتم (form IV)\n# أَنْضَبْتُمْ (ʔanḍabtum) /ʔan.dˤab.tum/: second-person masculine plural past active of أَنْضَبَ (ʔanḍaba)\n# أُنْضِبْتُمْ (ʔunḍibtum) /ʔun.dˤib.tum/: second-person masculine plural past passive of أَنْضَبَ (ʔanḍaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanḍabtum", "ʔanḍaba", "ʔunḍibtum"],
-        "k": "أنضب",
-        "yol": "kök"
-      },
-      {
-        "w": "أنضبنا",
-        "u": "أنضبنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنضبنا (form IV)\n# أَنْضَبْنَا (ʔanḍabnā) /ʔan.dˤab.naː/: first-person plural past active of أَنْضَبَ (ʔanḍaba)\n# أُنْضِبْنَا (ʔunḍibnā) /ʔun.dˤib.naː/: first-person plural past passive of أَنْضَبَ (ʔanḍaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanḍabnā", "ʔanḍaba", "ʔunḍibnā"],
-        "k": "أنضب",
-        "yol": "kök"
-      },
-      {
-        "w": "أنضبوا",
-        "u": "أنضبوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنضبوا (form IV)\n# أَنْضَبُوا (ʔanḍabū) /ʔan.dˤa.buː/: third-person masculine plural past active of أَنْضَبَ (ʔanḍaba)\n# أُنْضِبُوا (ʔunḍibū) /ʔun.dˤi.buː/: third-person masculine plural past passive of أَنْضَبَ (ʔanḍaba)\n# أَنْضِبُوا (ʔanḍibū) /ʔan.dˤi.buː/: second-person masculine plural imperative of أَنْضَبَ (ʔanḍaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanḍabū", "ʔanḍaba", "ʔunḍibū"],
-        "k": "أنضب",
-        "yol": "kök"
-      },
-      {
-        "w": "أنضبتن",
-        "u": "أنضبتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنضبتن (form IV)\n# أَنْضَبْتُنَّ (ʔanḍabtunna) /ʔan.dˤab.tun.na/: second-person feminine plural past active of أَنْضَبَ (ʔanḍaba)\n# أُنْضِبْتُنَّ (ʔunḍibtunna) /ʔun.dˤib.tun.na/: second-person feminine plural past passive of أَنْضَبَ (ʔanḍaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanḍabtunna", "ʔanḍaba", "ʔunḍibtunna"],
-        "k": "أنضب",
-        "yol": "kök"
-      },
-      {
-        "w": "أنضبن",
-        "u": "أنضبن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنضبن (form IV)\n# أَنْضَبْنَ (ʔanḍabna) /ʔan.dˤab.na/: third-person feminine plural past active of أَنْضَبَ (ʔanḍaba)\n# أُنْضِبْنَ (ʔunḍibna) /ʔun.dˤib.na/: third-person feminine plural past passive of أَنْضَبَ (ʔanḍaba)\n# أَنْضِبْنَ (ʔanḍibna) /ʔan.dˤib.na/: second-person feminine plural imperative of أَنْضَبَ (ʔanḍaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanḍabna", "ʔanḍaba", "ʔunḍibna"],
-        "k": "أنضب",
-        "yol": "kök"
-      },
-      {
-        "w": "تنضب",
-        "u": "تنضب",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنضب (form IV)\n# تُنْضِبُ (tunḍibu) /tun.dˤi.bu/: inflection of أَنْضَبَ (ʔanḍaba):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُنْضَبُ (tunḍabu) /tun.dˤa.bu/: inflection of أَنْضَبَ (ʔanḍaba):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicati",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunḍibu", "ʔanḍaba", "tunḍabu"],
-        "k": "أنضب",
-        "yol": "kök"
-      },
-      {
-        "w": "تنضبين",
-        "u": "تنضبين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنضبين (form IV)\n# تُنْضِبِينَ (tunḍibīna) /tun.dˤi.biː.na/: second-person feminine singular non-past active indicative of أَنْضَبَ (ʔanḍaba)\n# تُنْضَبِينَ (tunḍabīna) /tun.dˤa.biː.na/: second-person feminine singular non-past passive indicative of أَنْضَبَ (ʔanḍaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunḍibīna", "ʔanḍaba", "tunḍabīna"],
-        "k": "أنضب",
-        "yol": "kök"
-      },
-      {
-        "w": "ينضب",
-        "u": "ينضب",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ينضب (form IV)\n# يُنْضِبُ (yunḍibu) /jun.dˤi.bu/: third-person masculine singular non-past active indicative of أَنْضَبَ (ʔanḍaba)\n# يُنْضَبُ (yunḍabu) /jun.dˤa.bu/: third-person masculine singular non-past passive indicative of أَنْضَبَ (ʔanḍaba)\n# يُنْضِبَ (yunḍiba) /jun.dˤi.ba/: third-person masculine singular non-past active subjunctive of أَنْضَبَ (ʔanḍaba)\n# يُنْضَبَ (yunḍaba) /jun.dˤa.ba/: ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunḍibu", "ʔanḍaba", "yunḍabu"],
-        "k": "أنضب",
-        "yol": "kök"
-      },
-      {
-        "w": "تنضبان",
-        "u": "تنضبان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنضبان (form IV)\n# تُنْضِبَانِ (tunḍibāni) /tun.dˤi.baː.ni/: inflection of أَنْضَبَ (ʔanḍaba):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُنْضَبَانِ (tunḍabāni) /tun.dˤa.baː.ni/: inflection of أَنْضَبَ (ʔanḍaba):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunḍibāni", "ʔanḍaba", "tunḍabāni"],
-        "k": "أنضب",
-        "yol": "kök"
-      },
-      {
-        "w": "ينضبان",
-        "u": "ينضبان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ينضبان (form IV)\n# يُنْضِبَانِ (yunḍibāni) /jun.dˤi.baː.ni/: third-person masculine dual non-past active indicative of أَنْضَبَ (ʔanḍaba)\n# يُنْضَبَانِ (yunḍabāni) /jun.dˤa.baː.ni/: third-person masculine dual non-past passive indicative of أَنْضَبَ (ʔanḍaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunḍibāni", "ʔanḍaba", "yunḍabāni"],
-        "k": "أنضب",
-        "yol": "kök"
-      },
-      {
-        "w": "ننضب",
-        "u": "ننضب",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ننضب (form IV)\n# نُنْضِبُ (nunḍibu) /nun.dˤi.bu/: first-person plural non-past active indicative of أَنْضَبَ (ʔanḍaba)\n# نُنْضَبُ (nunḍabu) /nun.dˤa.bu/: first-person plural non-past passive indicative of أَنْضَبَ (ʔanḍaba)\n# نُنْضِبَ (nunḍiba) /nun.dˤi.ba/: first-person plural non-past active subjunctive of أَنْضَبَ (ʔanḍaba)\n# نُنْضَبَ (nunḍaba) /nun.dˤa.ba/: first-person plural non-past passive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nunḍibu", "ʔanḍaba", "nunḍabu"],
-        "k": "أنضب",
-        "yol": "kök"
-      },
-      {
-        "w": "تنضبن",
-        "u": "تنضبن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنضبن (form IV)\n# تُنْضِبْنَ (tunḍibna) /tun.dˤib.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَنْضَبَ (ʔanḍaba)\n# تُنْضَبْنَ (tunḍabna) /tun.dˤab.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَنْضَبَ (ʔanḍaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunḍibna", "ʔanḍaba", "tunḍabna"],
-        "k": "أنضب",
-        "yol": "kök"
-      },
-      {
-        "w": "تنضبون",
-        "u": "تنضبون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنضبون (form IV)\n# تُنْضِبُونَ (tunḍibūna) /tun.dˤi.buː.na/: second-person masculine plural non-past active indicative of أَنْضَبَ (ʔanḍaba)\n# تُنْضَبُونَ (tunḍabūna) /tun.dˤa.buː.na/: second-person masculine plural non-past passive indicative of أَنْضَبَ (ʔanḍaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunḍibūna", "ʔanḍaba", "tunḍabūna"],
-        "k": "أنضب",
-        "yol": "kök"
-      },
-      {
-        "w": "ينضبون",
-        "u": "ينضبون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ينضبون (form IV)\n# يُنْضِبُونَ (yunḍibūna) /jun.dˤi.buː.na/: third-person masculine plural non-past active indicative of أَنْضَبَ (ʔanḍaba)\n# يُنْضَبُونَ (yunḍabūna) /jun.dˤa.buː.na/: third-person masculine plural non-past passive indicative of أَنْضَبَ (ʔanḍaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunḍibūna", "ʔanḍaba", "yunḍabūna"],
-        "k": "أنضب",
-        "yol": "kök"
-      },
-      {
-        "w": "ينضبن",
-        "u": "ينضبن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ينضبن (form IV)\n# يُنْضِبْنَ (yunḍibna) /jun.dˤib.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَنْضَبَ (ʔanḍaba)\n# يُنْضَبْنَ (yunḍabna) /jun.dˤab.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَنْضَبَ (ʔanḍaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunḍibna", "ʔanḍaba", "yunḍabna"],
-        "k": "أنضب",
-        "yol": "kök"
-      },
-      {
-        "w": "تنضبا",
-        "u": "تنضبا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنضبا (form IV)\n# تُنْضِبَا (tunḍibā) /tun.dˤi.baː/: inflection of أَنْضَبَ (ʔanḍaba):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُنْضَبَا (tunḍabā) /tun.dˤa.baː/: inflection of أَنْضَبَ (ʔanḍaba):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunḍibā", "ʔanḍaba", "tunḍabā"],
-        "k": "أنضب",
-        "yol": "kök"
-      },
-      {
-        "w": "تنضبي",
-        "u": "تنضبي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنضبي (form IV)\n# تُنْضِبِي (tunḍibī) /tun.dˤi.biː/: second-person feminine singular non-past active subjunctive/jussive of أَنْضَبَ (ʔanḍaba)\n# تُنْضَبِي (tunḍabī) /tun.dˤa.biː/: second-person feminine singular non-past passive subjunctive/jussive of أَنْضَبَ (ʔanḍaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunḍibī", "ʔanḍaba", "tunḍabī"],
-        "k": "أنضب",
-        "yol": "kök"
-      },
-      {
-        "w": "ينضبا",
-        "u": "ينضبا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ينضبا (form IV)\n# يُنْضِبَا (yunḍibā) /jun.dˤi.baː/: third-person masculine dual non-past active subjunctive/jussive of أَنْضَبَ (ʔanḍaba)\n# يُنْضَبَا (yunḍabā) /jun.dˤa.baː/: third-person masculine dual non-past passive subjunctive/jussive of أَنْضَبَ (ʔanḍaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunḍibā", "ʔanḍaba", "yunḍabā"],
-        "k": "أنضب",
-        "yol": "kök"
-      },
-      {
-        "w": "تنضبوا",
-        "u": "تنضبوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنضبوا (form IV)\n# تُنْضِبُوا (tunḍibū) /tun.dˤi.buː/: second-person masculine plural non-past active subjunctive/jussive of أَنْضَبَ (ʔanḍaba)\n# تُنْضَبُوا (tunḍabū) /tun.dˤa.buː/: second-person masculine plural non-past passive subjunctive/jussive of أَنْضَبَ (ʔanḍaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunḍibū", "ʔanḍaba", "tunḍabū"],
-        "k": "أنضب",
-        "yol": "kök"
-      },
-      {
-        "w": "أنضبي",
-        "u": "أنضبي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَنْضِبِي • (ʔanḍibī) (form IV) /ʔan.dˤi.biː/\n# second-person feminine singular imperative of أَنْضَبَ (ʔanḍaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanḍibī", "ʔanḍaba"],
-        "k": "أنضب",
-        "yol": "kök"
-      },
-      {
-        "w": "ينضبوا",
-        "u": "ينضبوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ينضبوا (form IV)\n# يُنْضِبُوا (yunḍibū) /jun.dˤi.buː/: third-person masculine plural non-past active subjunctive/jussive of أَنْضَبَ (ʔanḍaba)\n# يُنْضَبُوا (yunḍabū) /jun.dˤa.buː/: third-person masculine plural non-past passive subjunctive/jussive of أَنْضَبَ (ʔanḍaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunḍibū", "ʔanḍaba", "yunḍabū"],
-        "k": "أنضب",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "نض",
+  "ses": {
     "harf": "ء",
+    "fasil": "نض",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "أنضبتما",
+      "tur": "verb",
+      "baslik": "أنضبتما (form IV)\n# أَنْضَبْتُمَا (ʔanḍabtumā) /ʔan.dˤab.tu.maː/: second-person dual past active of أَنْضَبَ (ʔanḍaba)\n# أُنْضِبْتُمَا (ʔunḍibtumā) /ʔun.dˤib.tu.maː/: second-person dual past passive of أَنْضَبَ (ʔanḍaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanḍabtumā", "ʔanḍaba", "ʔunḍibtumā"],
+      "kok_yazilis": "أنضب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنضبت",
+      "tur": "verb",
+      "baslik": "أنضبت (form IV)\n# أَنْضَبْتُ (ʔanḍabtu) /ʔan.dˤab.tu/: first-person singular past active of أَنْضَبَ (ʔanḍaba)\n# أَنْضَبْتَ (ʔanḍabta) /ʔan.dˤab.ta/: second-person masculine singular past active of أَنْضَبَ (ʔanḍaba)\n# أَنْضَبْتِ (ʔanḍabti) /ʔan.dˤab.ti/: second-person feminine singular past active of أَنْضَبَ (ʔanḍaba)\n# أَنْضَبَتْ (ʔanḍabat) /ʔan.dˤa.bat/: third-person feminine singular past act",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanḍabtu", "ʔanḍaba", "ʔanḍabta"],
+      "kok_yazilis": "أنضب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنضبتا",
+      "tur": "verb",
+      "baslik": "أنضبتا (form IV)\n# أَنْضَبَتَا (ʔanḍabatā) /ʔan.dˤa.ba.taː/: third-person feminine dual past active of أَنْضَبَ (ʔanḍaba)\n# أُنْضِبَتَا (ʔunḍibatā) /ʔun.dˤi.ba.taː/: third-person feminine dual past passive of أَنْضَبَ (ʔanḍaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanḍabatā", "ʔanḍaba", "ʔunḍibatā"],
+      "kok_yazilis": "أنضب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنضبا",
+      "tur": "verb",
+      "baslik": "أنضبا (form IV)\n# أَنْضَبَا (ʔanḍabā) /ʔan.dˤa.baː/: third-person masculine dual past active of أَنْضَبَ (ʔanḍaba)\n# أُنْضِبَا (ʔunḍibā) /ʔun.dˤi.baː/: third-person masculine dual past passive of أَنْضَبَ (ʔanḍaba)\n# أَنْضِبَا (ʔanḍibā) /ʔan.dˤi.baː/: second-person dual imperative of أَنْضَبَ (ʔanḍaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanḍabā", "ʔanḍaba", "ʔunḍibā"],
+      "kok_yazilis": "أنضب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنضبتم",
+      "tur": "verb",
+      "baslik": "أنضبتم (form IV)\n# أَنْضَبْتُمْ (ʔanḍabtum) /ʔan.dˤab.tum/: second-person masculine plural past active of أَنْضَبَ (ʔanḍaba)\n# أُنْضِبْتُمْ (ʔunḍibtum) /ʔun.dˤib.tum/: second-person masculine plural past passive of أَنْضَبَ (ʔanḍaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanḍabtum", "ʔanḍaba", "ʔunḍibtum"],
+      "kok_yazilis": "أنضب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنضبنا",
+      "tur": "verb",
+      "baslik": "أنضبنا (form IV)\n# أَنْضَبْنَا (ʔanḍabnā) /ʔan.dˤab.naː/: first-person plural past active of أَنْضَبَ (ʔanḍaba)\n# أُنْضِبْنَا (ʔunḍibnā) /ʔun.dˤib.naː/: first-person plural past passive of أَنْضَبَ (ʔanḍaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanḍabnā", "ʔanḍaba", "ʔunḍibnā"],
+      "kok_yazilis": "أنضب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنضبوا",
+      "tur": "verb",
+      "baslik": "أنضبوا (form IV)\n# أَنْضَبُوا (ʔanḍabū) /ʔan.dˤa.buː/: third-person masculine plural past active of أَنْضَبَ (ʔanḍaba)\n# أُنْضِبُوا (ʔunḍibū) /ʔun.dˤi.buː/: third-person masculine plural past passive of أَنْضَبَ (ʔanḍaba)\n# أَنْضِبُوا (ʔanḍibū) /ʔan.dˤi.buː/: second-person masculine plural imperative of أَنْضَبَ (ʔanḍaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanḍabū", "ʔanḍaba", "ʔunḍibū"],
+      "kok_yazilis": "أنضب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنضبتن",
+      "tur": "verb",
+      "baslik": "أنضبتن (form IV)\n# أَنْضَبْتُنَّ (ʔanḍabtunna) /ʔan.dˤab.tun.na/: second-person feminine plural past active of أَنْضَبَ (ʔanḍaba)\n# أُنْضِبْتُنَّ (ʔunḍibtunna) /ʔun.dˤib.tun.na/: second-person feminine plural past passive of أَنْضَبَ (ʔanḍaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanḍabtunna", "ʔanḍaba", "ʔunḍibtunna"],
+      "kok_yazilis": "أنضب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنضبن",
+      "tur": "verb",
+      "baslik": "أنضبن (form IV)\n# أَنْضَبْنَ (ʔanḍabna) /ʔan.dˤab.na/: third-person feminine plural past active of أَنْضَبَ (ʔanḍaba)\n# أُنْضِبْنَ (ʔunḍibna) /ʔun.dˤib.na/: third-person feminine plural past passive of أَنْضَبَ (ʔanḍaba)\n# أَنْضِبْنَ (ʔanḍibna) /ʔan.dˤib.na/: second-person feminine plural imperative of أَنْضَبَ (ʔanḍaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanḍabna", "ʔanḍaba", "ʔunḍibna"],
+      "kok_yazilis": "أنضب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنضب",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنضب (form IV)\n# تُنْضِبُ (tunḍibu) /tun.dˤi.bu/: inflection of أَنْضَبَ (ʔanḍaba):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُنْضَبُ (tunḍabu) /tun.dˤa.bu/: inflection of أَنْضَبَ (ʔanḍaba):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicati",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunḍibu", "ʔanḍaba", "tunḍabu"],
+      "kok_yazilis": "أنضب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنضبين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنضبين (form IV)\n# تُنْضِبِينَ (tunḍibīna) /tun.dˤi.biː.na/: second-person feminine singular non-past active indicative of أَنْضَبَ (ʔanḍaba)\n# تُنْضَبِينَ (tunḍabīna) /tun.dˤa.biː.na/: second-person feminine singular non-past passive indicative of أَنْضَبَ (ʔanḍaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunḍibīna", "ʔanḍaba", "tunḍabīna"],
+      "kok_yazilis": "أنضب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينضب",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ينضب (form IV)\n# يُنْضِبُ (yunḍibu) /jun.dˤi.bu/: third-person masculine singular non-past active indicative of أَنْضَبَ (ʔanḍaba)\n# يُنْضَبُ (yunḍabu) /jun.dˤa.bu/: third-person masculine singular non-past passive indicative of أَنْضَبَ (ʔanḍaba)\n# يُنْضِبَ (yunḍiba) /jun.dˤi.ba/: third-person masculine singular non-past active subjunctive of أَنْضَبَ (ʔanḍaba)\n# يُنْضَبَ (yunḍaba) /jun.dˤa.ba/: ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunḍibu", "ʔanḍaba", "yunḍabu"],
+      "kok_yazilis": "أنضب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنضبان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنضبان (form IV)\n# تُنْضِبَانِ (tunḍibāni) /tun.dˤi.baː.ni/: inflection of أَنْضَبَ (ʔanḍaba):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُنْضَبَانِ (tunḍabāni) /tun.dˤa.baː.ni/: inflection of أَنْضَبَ (ʔanḍaba):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunḍibāni", "ʔanḍaba", "tunḍabāni"],
+      "kok_yazilis": "أنضب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينضبان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ينضبان (form IV)\n# يُنْضِبَانِ (yunḍibāni) /jun.dˤi.baː.ni/: third-person masculine dual non-past active indicative of أَنْضَبَ (ʔanḍaba)\n# يُنْضَبَانِ (yunḍabāni) /jun.dˤa.baː.ni/: third-person masculine dual non-past passive indicative of أَنْضَبَ (ʔanḍaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunḍibāni", "ʔanḍaba", "yunḍabāni"],
+      "kok_yazilis": "أنضب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ننضب",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ننضب (form IV)\n# نُنْضِبُ (nunḍibu) /nun.dˤi.bu/: first-person plural non-past active indicative of أَنْضَبَ (ʔanḍaba)\n# نُنْضَبُ (nunḍabu) /nun.dˤa.bu/: first-person plural non-past passive indicative of أَنْضَبَ (ʔanḍaba)\n# نُنْضِبَ (nunḍiba) /nun.dˤi.ba/: first-person plural non-past active subjunctive of أَنْضَبَ (ʔanḍaba)\n# نُنْضَبَ (nunḍaba) /nun.dˤa.ba/: first-person plural non-past passive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nunḍibu", "ʔanḍaba", "nunḍabu"],
+      "kok_yazilis": "أنضب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنضبن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنضبن (form IV)\n# تُنْضِبْنَ (tunḍibna) /tun.dˤib.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَنْضَبَ (ʔanḍaba)\n# تُنْضَبْنَ (tunḍabna) /tun.dˤab.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَنْضَبَ (ʔanḍaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunḍibna", "ʔanḍaba", "tunḍabna"],
+      "kok_yazilis": "أنضب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنضبون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنضبون (form IV)\n# تُنْضِبُونَ (tunḍibūna) /tun.dˤi.buː.na/: second-person masculine plural non-past active indicative of أَنْضَبَ (ʔanḍaba)\n# تُنْضَبُونَ (tunḍabūna) /tun.dˤa.buː.na/: second-person masculine plural non-past passive indicative of أَنْضَبَ (ʔanḍaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunḍibūna", "ʔanḍaba", "tunḍabūna"],
+      "kok_yazilis": "أنضب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينضبون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ينضبون (form IV)\n# يُنْضِبُونَ (yunḍibūna) /jun.dˤi.buː.na/: third-person masculine plural non-past active indicative of أَنْضَبَ (ʔanḍaba)\n# يُنْضَبُونَ (yunḍabūna) /jun.dˤa.buː.na/: third-person masculine plural non-past passive indicative of أَنْضَبَ (ʔanḍaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunḍibūna", "ʔanḍaba", "yunḍabūna"],
+      "kok_yazilis": "أنضب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينضبن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ينضبن (form IV)\n# يُنْضِبْنَ (yunḍibna) /jun.dˤib.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَنْضَبَ (ʔanḍaba)\n# يُنْضَبْنَ (yunḍabna) /jun.dˤab.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَنْضَبَ (ʔanḍaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunḍibna", "ʔanḍaba", "yunḍabna"],
+      "kok_yazilis": "أنضب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنضبا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنضبا (form IV)\n# تُنْضِبَا (tunḍibā) /tun.dˤi.baː/: inflection of أَنْضَبَ (ʔanḍaba):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُنْضَبَا (tunḍabā) /tun.dˤa.baː/: inflection of أَنْضَبَ (ʔanḍaba):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunḍibā", "ʔanḍaba", "tunḍabā"],
+      "kok_yazilis": "أنضب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنضبي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنضبي (form IV)\n# تُنْضِبِي (tunḍibī) /tun.dˤi.biː/: second-person feminine singular non-past active subjunctive/jussive of أَنْضَبَ (ʔanḍaba)\n# تُنْضَبِي (tunḍabī) /tun.dˤa.biː/: second-person feminine singular non-past passive subjunctive/jussive of أَنْضَبَ (ʔanḍaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunḍibī", "ʔanḍaba", "tunḍabī"],
+      "kok_yazilis": "أنضب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينضبا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ينضبا (form IV)\n# يُنْضِبَا (yunḍibā) /jun.dˤi.baː/: third-person masculine dual non-past active subjunctive/jussive of أَنْضَبَ (ʔanḍaba)\n# يُنْضَبَا (yunḍabā) /jun.dˤa.baː/: third-person masculine dual non-past passive subjunctive/jussive of أَنْضَبَ (ʔanḍaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunḍibā", "ʔanḍaba", "yunḍabā"],
+      "kok_yazilis": "أنضب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنضبوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنضبوا (form IV)\n# تُنْضِبُوا (tunḍibū) /tun.dˤi.buː/: second-person masculine plural non-past active subjunctive/jussive of أَنْضَبَ (ʔanḍaba)\n# تُنْضَبُوا (tunḍabū) /tun.dˤa.buː/: second-person masculine plural non-past passive subjunctive/jussive of أَنْضَبَ (ʔanḍaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunḍibū", "ʔanḍaba", "tunḍabū"],
+      "kok_yazilis": "أنضب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنضبي",
+      "tur": "verb",
+      "baslik": "أَنْضِبِي • (ʔanḍibī) (form IV) /ʔan.dˤi.biː/\n# second-person feminine singular imperative of أَنْضَبَ (ʔanḍaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanḍibī", "ʔanḍaba"],
+      "kok_yazilis": "أنضب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينضبوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ينضبوا (form IV)\n# يُنْضِبُوا (yunḍibū) /jun.dˤi.buː/: third-person masculine plural non-past active subjunctive/jussive of أَنْضَبَ (ʔanḍaba)\n# يُنْضَبُوا (yunḍabū) /jun.dˤa.buː/: third-person masculine plural non-past passive subjunctive/jussive of أَنْضَبَ (ʔanḍaba)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunḍibū", "ʔanḍaba", "yunḍabū"],
+      "kok_yazilis": "أنضب",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءنضب", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

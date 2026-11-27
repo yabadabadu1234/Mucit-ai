@@ -1,411 +1,332 @@
 {
   "kok": "ءمنى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءمنى", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تمنين",
-        "u": "تمنين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُمْنِينَ • (tumnīna) (form IV) /tum.niː.na/\n# inflection of أَمْنَى (ʔamnā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tumnīna", "ʔamnā"],
-        "k": "أمنى",
-        "yol": "kök"
-      },
-      {
-        "w": "يمني",
-        "u": "يمني",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يمني (form IV)\n# يُمْنِي (yumnī) /jum.niː/: third-person masculine singular non-past active indicative of أَمْنَى (ʔamnā)\n# يُمْنِيَ (yumniya) /jum.ni.ja/: third-person masculine singular non-past active subjunctive of أَمْنَى (ʔamnā)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yumnī", "ʔamnā", "yumniya"],
-        "k": "أمنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تمن",
-        "u": "تمن",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تُمْنِ • (tumni) (form IV) /tum.ni/\n# inflection of أَمْنَى (ʔamnā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tumni", "ʔamnā"],
-        "k": "أمنى",
-        "yol": "kök"
-      },
-      {
-        "w": "يمن",
-        "u": "يمن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يُمْنِ • (yumni) (form IV) /jum.ni/\n# third-person masculine singular non-past active jussive of أَمْنَى (ʔamnā)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yumni", "ʔamnā"],
-        "k": "أمنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أمن",
-        "u": "أمن",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "أمن (form IV)\n# أُمْنِ (ʔumni) /ʔum.ni/: first-person singular non-past active jussive of أَمْنَى (ʔamnā)\n# أَمْنِ (ʔamni) /ʔam.ni/: second-person masculine singular imperative of أَمْنَى (ʔamnā)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔumni", "ʔamnā", "ʔamni"],
-        "k": "أمنى",
-        "yol": "kök"
-      },
-      {
-        "w": "يمنية",
-        "u": "يمنية",
-        "p": "adj",
-        "h": "ar-head",
-        "e": "يَمَنِيَّة • (yamaniyya)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["feminine singular of يَمَنِيّ (yamaniyy)"],
-        "tag": ["feminine", "form-of", "singular"],
-        "fo": ["يَمَنِيّ"],
-        "r": ["yamaniyya"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "يمنيون",
-        "u": "يمنيون",
-        "p": "adj",
-        "h": "ar-head",
-        "e": "يَمَنِيُّون • (yamaniyyūn)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["masculine plural of يَمَنِيّ (yamaniyy)"],
-        "tag": ["form-of", "masculine", "plural"],
-        "fo": ["يَمَنِيّ"],
-        "r": ["yamaniyyūn"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "تمني",
-        "u": "تمني",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تمني (form IV)\n# تُمْنِي (tumnī) /tum.niː/: inflection of أَمْنَى (ʔamnā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُمْنِيَ (tumniya) /tum.ni.ja/: inflection of أَمْنَى (ʔamnā):\n## second-person masculine singular non-past active subjunctive\n#",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tumnī", "ʔamnā", "tumniya"],
-        "k": "أمنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أمنت",
-        "u": "أمنت",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أَمْنَتْ • (ʔamnat) (form IV) /ʔam.nat/\n# third-person feminine singular past active of أَمْنَى (ʔamnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔamnat", "ʔamnā"],
-        "k": "أمنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أمني",
-        "u": "أمني",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أمني (form IV)\n# أُمْنِي (ʔumnī) /ʔum.niː/: first-person singular non-past active indicative of أَمْنَى (ʔamnā)\n# أُمْنِيَ (ʔumniya) /ʔum.ni.ja/: first-person singular non-past active subjunctive of أَمْنَى (ʔamnā)\n# أَمْنِي (ʔamnī) /ʔam.niː/: second-person feminine singular imperative of أَمْنَى (ʔamnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔumnī", "ʔamnā", "ʔumniya"],
-        "k": "أمنى",
-        "yol": "kök"
-      },
-      {
-        "w": "نمن",
-        "u": "نمن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نُمْنِ • (numni) (form IV) /num.ni/\n# first-person plural non-past active jussive of أَمْنَى (ʔamnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["numni", "ʔamnā"],
-        "k": "أمنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تمنوا",
-        "u": "تمنوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُمْنُوا • (tumnū) (form IV) /tum.nuː/\n# second-person masculine plural non-past active subjunctive/jussive of أَمْنَى (ʔamnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tumnū", "ʔamnā"],
-        "k": "أمنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تمنون",
-        "u": "تمنون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُمْنُونَ • (tumnūna) (form IV) /tum.nuː.na/\n# second-person masculine plural non-past active indicative of أَمْنَى (ʔamnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tumnūna", "ʔamnā"],
-        "k": "أمنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أمنوا",
-        "u": "أمنوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أمنوا (form IV)\n# أَمْنَوْا (ʔamnaw) /ʔam.naw/: third-person masculine plural past active of أَمْنَى (ʔamnā)\n# أَمْنُوا (ʔamnū) /ʔam.nuː/: second-person masculine plural imperative of أَمْنَى (ʔamnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔamnaw", "ʔamnā", "ʔamnū"],
-        "k": "أمنى",
-        "yol": "kök"
-      },
-      {
-        "w": "يمنون",
-        "u": "يمنون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُمْنُونَ • (yumnūna) (form IV) /jum.nuː.na/\n# third-person masculine plural non-past active indicative of أَمْنَى (ʔamnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yumnūna", "ʔamnā"],
-        "k": "أمنى",
-        "yol": "kök"
-      },
-      {
-        "w": "يمنوا",
-        "u": "يمنوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُمْنُوا • (yumnū) (form IV) /jum.nuː/\n# third-person masculine plural non-past active subjunctive/jussive of أَمْنَى (ʔamnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yumnū", "ʔamnā"],
-        "k": "أمنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أمنتا",
-        "u": "أمنتا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أَمْنَتَا • (ʔamnatā) (form IV) /ʔam.na.taː/\n# third-person feminine dual past active of أَمْنَى (ʔamnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔamnatā", "ʔamnā"],
-        "k": "أمنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أمنيت",
-        "u": "أمنيت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أمنيت (form IV)\n# أَمْنَيْتُ (ʔamnaytu) /ʔam.naj.tu/: first-person singular past active of أَمْنَى (ʔamnā)\n# أَمْنَيْتَ (ʔamnayta) /ʔam.naj.ta/: second-person masculine singular past active of أَمْنَى (ʔamnā)\n# أَمْنَيْتِ (ʔamnayti) /ʔam.naj.ti/: second-person feminine singular past active of أَمْنَى (ʔamnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔamnaytu", "ʔamnā", "ʔamnayta"],
-        "k": "أمنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أمنيتما",
-        "u": "أمنيتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَمْنَيْتُمَا • (ʔamnaytumā) (form IV) /ʔam.naj.tu.maː/\n# second-person dual past active of أَمْنَى (ʔamnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔamnaytumā", "ʔamnā"],
-        "k": "أمنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أمنين",
-        "u": "أمنين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أمنين (form IV)\n# أَمْنَيْنَ (ʔamnayna) /ʔam.naj.na/: third-person feminine plural past active of أَمْنَى (ʔamnā)\n# أَمْنِينَ (ʔamnīna) /ʔam.niː.na/: second-person feminine plural imperative of أَمْنَى (ʔamnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔamnayna", "ʔamnā", "ʔamnīna"],
-        "k": "أمنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أمنيا",
-        "u": "أمنيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أمنيا (form IV)\n# أَمْنَيَا (ʔamnayā) /ʔam.na.jaː/: third-person masculine dual past active of أَمْنَى (ʔamnā)\n# أَمْنِيَا (ʔamniyā) /ʔam.ni.jaː/: second-person dual imperative of أَمْنَى (ʔamnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔamnayā", "ʔamnā", "ʔamniyā"],
-        "k": "أمنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أمنينا",
-        "u": "أمنينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَمْنَيْنَا • (ʔamnaynā) (form IV) /ʔam.naj.naː/\n# first-person plural past active of أَمْنَى (ʔamnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔamnaynā", "ʔamnā"],
-        "k": "أمنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تمنيان",
-        "u": "تمنيان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُمْنِيَانِ • (tumniyāni) (form IV) /tum.ni.jaː.ni/\n# inflection of أَمْنَى (ʔamnā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tumniyāni", "ʔamnā"],
-        "k": "أمنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أمنيتن",
-        "u": "أمنيتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَمْنَيْتُنَّ • (ʔamnaytunna) (form IV) /ʔam.naj.tun.na/\n# second-person feminine plural past active of أَمْنَى (ʔamnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔamnaytunna", "ʔamnā"],
-        "k": "أمنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أمنيتم",
-        "u": "أمنيتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَمْنَيْتُمْ • (ʔamnaytum) (form IV) /ʔam.naj.tum/\n# second-person masculine plural past active of أَمْنَى (ʔamnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔamnaytum", "ʔamnā"],
-        "k": "أمنى",
-        "yol": "kök"
-      },
-      {
-        "w": "يمنين",
-        "u": "يمنين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُمْنِينَ • (yumnīna) (form IV) /jum.niː.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of أَمْنَى (ʔamnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yumnīna", "ʔamnā"],
-        "k": "أمنى",
-        "yol": "kök"
-      },
-      {
-        "w": "يمنيان",
-        "u": "يمنيان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُمْنِيَانِ • (yumniyāni) (form IV) /jum.ni.jaː.ni/\n# third-person masculine dual non-past active indicative of أَمْنَى (ʔamnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yumniyāni", "ʔamnā"],
-        "k": "أمنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تمنيا",
-        "u": "تمنيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُمْنِيَا • (tumniyā) (form IV) /tum.ni.jaː/\n# inflection of أَمْنَى (ʔamnā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tumniyā", "ʔamnā"],
-        "k": "أمنى",
-        "yol": "kök"
-      },
-      {
-        "w": "نمني",
-        "u": "نمني",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نمني (form IV)\n# نُمْنِي (numnī) /num.niː/: first-person plural non-past active indicative of أَمْنَى (ʔamnā)\n# نُمْنِيَ (numniya) /num.ni.ja/: first-person plural non-past active subjunctive of أَمْنَى (ʔamnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["numnī", "ʔamnā", "numniya"],
-        "k": "أمنى",
-        "yol": "kök"
-      },
-      {
-        "w": "يمنيا",
-        "u": "يمنيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُمْنِيَا • (yumniyā) (form IV) /jum.ni.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of أَمْنَى (ʔamnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yumniyā", "ʔamnā"],
-        "k": "أمنى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "من",
+  "ses": {
     "harf": "ء",
+    "fasil": "من",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "تمنين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُمْنِينَ • (tumnīna) (form IV) /tum.niː.na/\n# inflection of أَمْنَى (ʔamnā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tumnīna", "ʔamnā"],
+      "kok_yazilis": "أمنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يمني",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يمني (form IV)\n# يُمْنِي (yumnī) /jum.niː/: third-person masculine singular non-past active indicative of أَمْنَى (ʔamnā)\n# يُمْنِيَ (yumniya) /jum.ni.ja/: third-person masculine singular non-past active subjunctive of أَمْنَى (ʔamnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yumnī", "ʔamnā", "yumniya"],
+      "kok_yazilis": "أمنى"
+    },
+    {
+      "madde": "تمن",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تُمْنِ • (tumni) (form IV) /tum.ni/\n# inflection of أَمْنَى (ʔamnā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tumni", "ʔamnā"],
+      "kok_yazilis": "أمنى"
+    },
+    {
+      "madde": "يمن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يُمْنِ • (yumni) (form IV) /jum.ni/\n# third-person masculine singular non-past active jussive of أَمْنَى (ʔamnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yumni", "ʔamnā"],
+      "kok_yazilis": "أمنى"
+    },
+    {
+      "madde": "أمن",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "أمن (form IV)\n# أُمْنِ (ʔumni) /ʔum.ni/: first-person singular non-past active jussive of أَمْنَى (ʔamnā)\n# أَمْنِ (ʔamni) /ʔam.ni/: second-person masculine singular imperative of أَمْنَى (ʔamnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔumni", "ʔamnā", "ʔamni"],
+      "kok_yazilis": "أمنى"
+    },
+    {
+      "madde": "يمنية",
+      "tur": "adj",
+      "baslik": "يَمَنِيَّة • (yamaniyya)",
+      "anlam": ["feminine singular of يَمَنِيّ (yamaniyy)"],
+      "etiket": ["feminine", "form-of", "singular"],
+      "form_of": ["يَمَنِيّ"],
+      "okunus": ["yamaniyya"],
+      "bag": "asıl madde",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يمنيون",
+      "tur": "adj",
+      "baslik": "يَمَنِيُّون • (yamaniyyūn)",
+      "anlam": ["masculine plural of يَمَنِيّ (yamaniyy)"],
+      "etiket": ["form-of", "masculine", "plural"],
+      "form_of": ["يَمَنِيّ"],
+      "okunus": ["yamaniyyūn"],
+      "bag": "asıl madde",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تمني",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تمني (form IV)\n# تُمْنِي (tumnī) /tum.niː/: inflection of أَمْنَى (ʔamnā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُمْنِيَ (tumniya) /tum.ni.ja/: inflection of أَمْنَى (ʔamnā):\n## second-person masculine singular non-past active subjunctive\n#",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tumnī", "ʔamnā", "tumniya"],
+      "kok_yazilis": "أمنى"
+    },
+    {
+      "madde": "أمنت",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أَمْنَتْ • (ʔamnat) (form IV) /ʔam.nat/\n# third-person feminine singular past active of أَمْنَى (ʔamnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔamnat", "ʔamnā"],
+      "kok_yazilis": "أمنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أمني",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أمني (form IV)\n# أُمْنِي (ʔumnī) /ʔum.niː/: first-person singular non-past active indicative of أَمْنَى (ʔamnā)\n# أُمْنِيَ (ʔumniya) /ʔum.ni.ja/: first-person singular non-past active subjunctive of أَمْنَى (ʔamnā)\n# أَمْنِي (ʔamnī) /ʔam.niː/: second-person feminine singular imperative of أَمْنَى (ʔamnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔumnī", "ʔamnā", "ʔumniya"],
+      "kok_yazilis": "أمنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نمن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نُمْنِ • (numni) (form IV) /num.ni/\n# first-person plural non-past active jussive of أَمْنَى (ʔamnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["numni", "ʔamnā"],
+      "kok_yazilis": "أمنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تمنوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُمْنُوا • (tumnū) (form IV) /tum.nuː/\n# second-person masculine plural non-past active subjunctive/jussive of أَمْنَى (ʔamnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tumnū", "ʔamnā"],
+      "kok_yazilis": "أمنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تمنون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُمْنُونَ • (tumnūna) (form IV) /tum.nuː.na/\n# second-person masculine plural non-past active indicative of أَمْنَى (ʔamnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tumnūna", "ʔamnā"],
+      "kok_yazilis": "أمنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أمنوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أمنوا (form IV)\n# أَمْنَوْا (ʔamnaw) /ʔam.naw/: third-person masculine plural past active of أَمْنَى (ʔamnā)\n# أَمْنُوا (ʔamnū) /ʔam.nuː/: second-person masculine plural imperative of أَمْنَى (ʔamnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔamnaw", "ʔamnā", "ʔamnū"],
+      "kok_yazilis": "أمنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يمنون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُمْنُونَ • (yumnūna) (form IV) /jum.nuː.na/\n# third-person masculine plural non-past active indicative of أَمْنَى (ʔamnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yumnūna", "ʔamnā"],
+      "kok_yazilis": "أمنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يمنوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُمْنُوا • (yumnū) (form IV) /jum.nuː/\n# third-person masculine plural non-past active subjunctive/jussive of أَمْنَى (ʔamnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yumnū", "ʔamnā"],
+      "kok_yazilis": "أمنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أمنتا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أَمْنَتَا • (ʔamnatā) (form IV) /ʔam.na.taː/\n# third-person feminine dual past active of أَمْنَى (ʔamnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔamnatā", "ʔamnā"],
+      "kok_yazilis": "أمنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أمنيت",
+      "tur": "verb",
+      "baslik": "أمنيت (form IV)\n# أَمْنَيْتُ (ʔamnaytu) /ʔam.naj.tu/: first-person singular past active of أَمْنَى (ʔamnā)\n# أَمْنَيْتَ (ʔamnayta) /ʔam.naj.ta/: second-person masculine singular past active of أَمْنَى (ʔamnā)\n# أَمْنَيْتِ (ʔamnayti) /ʔam.naj.ti/: second-person feminine singular past active of أَمْنَى (ʔamnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔamnaytu", "ʔamnā", "ʔamnayta"],
+      "kok_yazilis": "أمنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أمنيتما",
+      "tur": "verb",
+      "baslik": "أَمْنَيْتُمَا • (ʔamnaytumā) (form IV) /ʔam.naj.tu.maː/\n# second-person dual past active of أَمْنَى (ʔamnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔamnaytumā", "ʔamnā"],
+      "kok_yazilis": "أمنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أمنين",
+      "tur": "verb",
+      "baslik": "أمنين (form IV)\n# أَمْنَيْنَ (ʔamnayna) /ʔam.naj.na/: third-person feminine plural past active of أَمْنَى (ʔamnā)\n# أَمْنِينَ (ʔamnīna) /ʔam.niː.na/: second-person feminine plural imperative of أَمْنَى (ʔamnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔamnayna", "ʔamnā", "ʔamnīna"],
+      "kok_yazilis": "أمنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أمنيا",
+      "tur": "verb",
+      "baslik": "أمنيا (form IV)\n# أَمْنَيَا (ʔamnayā) /ʔam.na.jaː/: third-person masculine dual past active of أَمْنَى (ʔamnā)\n# أَمْنِيَا (ʔamniyā) /ʔam.ni.jaː/: second-person dual imperative of أَمْنَى (ʔamnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔamnayā", "ʔamnā", "ʔamniyā"],
+      "kok_yazilis": "أمنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أمنينا",
+      "tur": "verb",
+      "baslik": "أَمْنَيْنَا • (ʔamnaynā) (form IV) /ʔam.naj.naː/\n# first-person plural past active of أَمْنَى (ʔamnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔamnaynā", "ʔamnā"],
+      "kok_yazilis": "أمنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تمنيان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُمْنِيَانِ • (tumniyāni) (form IV) /tum.ni.jaː.ni/\n# inflection of أَمْنَى (ʔamnā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tumniyāni", "ʔamnā"],
+      "kok_yazilis": "أمنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أمنيتن",
+      "tur": "verb",
+      "baslik": "أَمْنَيْتُنَّ • (ʔamnaytunna) (form IV) /ʔam.naj.tun.na/\n# second-person feminine plural past active of أَمْنَى (ʔamnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔamnaytunna", "ʔamnā"],
+      "kok_yazilis": "أمنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أمنيتم",
+      "tur": "verb",
+      "baslik": "أَمْنَيْتُمْ • (ʔamnaytum) (form IV) /ʔam.naj.tum/\n# second-person masculine plural past active of أَمْنَى (ʔamnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔamnaytum", "ʔamnā"],
+      "kok_yazilis": "أمنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يمنين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُمْنِينَ • (yumnīna) (form IV) /jum.niː.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of أَمْنَى (ʔamnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yumnīna", "ʔamnā"],
+      "kok_yazilis": "أمنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يمنيان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُمْنِيَانِ • (yumniyāni) (form IV) /jum.ni.jaː.ni/\n# third-person masculine dual non-past active indicative of أَمْنَى (ʔamnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yumniyāni", "ʔamnā"],
+      "kok_yazilis": "أمنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تمنيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُمْنِيَا • (tumniyā) (form IV) /tum.ni.jaː/\n# inflection of أَمْنَى (ʔamnā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tumniyā", "ʔamnā"],
+      "kok_yazilis": "أمنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نمني",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نمني (form IV)\n# نُمْنِي (numnī) /num.niː/: first-person plural non-past active indicative of أَمْنَى (ʔamnā)\n# نُمْنِيَ (numniya) /num.ni.ja/: first-person plural non-past active subjunctive of أَمْنَى (ʔamnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["numnī", "ʔamnā", "numniya"],
+      "kok_yazilis": "أمنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يمنيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُمْنِيَا • (yumniyā) (form IV) /jum.ni.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of أَمْنَى (ʔamnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yumniyā", "ʔamnā"],
+      "kok_yazilis": "أمنى",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ءمنى", "r6"]
+  ],
+  "mana": {
     "ince": "state.n.02",
     "orta": "noun.state",
     "ust": "hâl ve vasıf",
@@ -413,16 +334,11 @@
     "dayanak_tanim": "an auspicious state resulting from favorable outcomes",
     "synset_sayisi": 14
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "authorize.v.01",
     "condition.n.01",
     "condition.n.03",
@@ -437,12 +353,10 @@
     "organization.n.01",
     "region.n.03"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

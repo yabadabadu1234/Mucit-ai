@@ -1,482 +1,345 @@
 {
   "kok": "تابع",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تابع", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يتابع",
-        "u": "يتابع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتابع (form III)\n# يُتَابِعُ (yutābiʕu) /ju.taː.bi.ʕu/: third-person masculine singular non-past active indicative of تَابَعَ (tābaʕa)\n# يُتَابَعُ (yutābaʕu) /ju.taː.ba.ʕu/: third-person masculine singular non-past passive indicative of تَابَعَ (tābaʕa)\n# يُتَابِعَ (yutābiʕa) /ju.taː.bi.ʕa/: third-person masculine singular non-past active subjunctive of تَابَعَ (tābaʕa)\n# يُتَابَعَ (yutābaʕa) /ju.",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yutābiʕu", "tābaʕa", "yutābaʕu"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "توبع",
-        "u": "توبع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُوبِعَ • (tūbiʕa) (form III) /tuː.bi.ʕa/\n# third-person masculine singular past passive of تَابَعَ (tābaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tūbiʕa", "tābaʕa"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "تابعت",
-        "u": "تابعت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تابعت (form III)\n# تَابَعْتُ (tābaʕtu) /taː.baʕ.tu/: first-person singular past active of تَابَعَ (tābaʕa)\n# تَابَعْتَ (tābaʕta) /taː.baʕ.ta/: second-person masculine singular past active of تَابَعَ (tābaʕa)\n# تَابَعْتِ (tābaʕti) /taː.baʕ.ti/: second-person feminine singular past active of تَابَعَ (tābaʕa)\n# تَابَعَتْ (tābaʕat) /taː.ba.ʕat/: third-person feminine singular past active of تَابَعَ (t",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tābaʕtu", "tābaʕa", "tābaʕta"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "تتابع",
-        "u": "تتابع",
-        "p": "noun",
-        "n": "1.2",
-        "h": "ar-noun",
-        "e": "تَتَابُع • (tatābuʕ) m",
-        "g": ["verbal noun of تَتَابَعَ (tatābaʕa)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["تَتَابَعَ"],
-        "r": ["tatābuʕ"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "تتابع",
-        "u": "تتابع",
-        "p": "verb",
-        "n": "1.3",
-        "h": "ar-verb form",
-        "e": "تتابع (form III)\n# تُتَابِعُ (tutābiʕu) /tu.taː.bi.ʕu/: inflection of تَابَعَ (tābaʕa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُتَابَعُ (tutābaʕu) /tu.taː.ba.ʕu/: inflection of تَابَعَ (tābaʕa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive in",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tutābiʕu", "tābaʕa", "tutābaʕu"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "توبعت",
-        "u": "توبعت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "توبعت (form III)\n# تُوبِعْتُ (tūbiʕtu) /tuː.biʕ.tu/: first-person singular past passive of تَابَعَ (tābaʕa)\n# تُوبِعْتَ (tūbiʕta) /tuː.biʕ.ta/: second-person masculine singular past passive of تَابَعَ (tābaʕa)\n# تُوبِعْتِ (tūbiʕti) /tuː.biʕ.ti/: second-person feminine singular past passive of تَابَعَ (tābaʕa)\n# تُوبِعَتْ (tūbiʕat) /tuː.bi.ʕat/: third-person feminine singular past passive of تَابَع",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tūbiʕtu", "tābaʕa", "tūbiʕta"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "تتابعين",
-        "u": "تتابعين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتابعين (form III)\n# تُتَابِعِينَ (tutābiʕīna) /tu.taː.bi.ʕiː.na/: second-person feminine singular non-past active indicative of تَابَعَ (tābaʕa)\n# تُتَابَعِينَ (tutābaʕīna) /tu.taː.ba.ʕiː.na/: second-person feminine singular non-past passive indicative of تَابَعَ (tābaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tutābiʕīna", "tābaʕa", "tutābaʕīna"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "تتابعي",
-        "u": "تتابعي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تتابعي (form III)\n# تُتَابِعِي (tutābiʕī) /tu.taː.bi.ʕiː/: second-person feminine singular non-past active subjunctive/jussive of تَابَعَ (tābaʕa)\n# تُتَابَعِي (tutābaʕī) /tu.taː.ba.ʕiː/: second-person feminine singular non-past passive subjunctive/jussive of تَابَعَ (tābaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tutābiʕī", "tābaʕa", "tutābaʕī"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "تابعي",
-        "u": "تابعي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَابِعِي • (tābiʕī) (form III) /taː.bi.ʕiː/\n# second-person feminine singular imperative of تَابَعَ (tābaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tābiʕī", "tābaʕa"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "أتابع",
-        "u": "أتابع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتابع (form III)\n# أُتَابِعُ (ʔutābiʕu) /ʔu.taː.bi.ʕu/: first-person singular non-past active indicative of تَابَعَ (tābaʕa)\n# أُتَابَعُ (ʔutābaʕu) /ʔu.taː.ba.ʕu/: first-person singular non-past passive indicative of تَابَعَ (tābaʕa)\n# أُتَابِعَ (ʔutābiʕa) /ʔu.taː.bi.ʕa/: first-person singular non-past active subjunctive of تَابَعَ (tābaʕa)\n# أُتَابَعَ (ʔutābaʕa) /ʔu.taː.ba.ʕa/: first-person singu",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔutābiʕu", "tābaʕa", "ʔutābaʕu"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "تابعنا",
-        "u": "تابعنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَابَعْنَا • (tābaʕnā) (form III) /taː.baʕ.naː/\n# first-person plural past active of تَابَعَ (tābaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tābaʕnā", "tābaʕa"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "نتابع",
-        "u": "نتابع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتابع (form III)\n# نُتَابِعُ (nutābiʕu) /nu.taː.bi.ʕu/: first-person plural non-past active indicative of تَابَعَ (tābaʕa)\n# نُتَابَعُ (nutābaʕu) /nu.taː.ba.ʕu/: first-person plural non-past passive indicative of تَابَعَ (tābaʕa)\n# نُتَابِعَ (nutābiʕa) /nu.taː.bi.ʕa/: first-person plural non-past active subjunctive of تَابَعَ (tābaʕa)\n# نُتَابَعَ (nutābaʕa) /nu.taː.ba.ʕa/: first-person plural non-",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nutābiʕu", "tābaʕa", "nutābaʕu"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "توبعنا",
-        "u": "توبعنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُوبِعْنَا • (tūbiʕnā) (form III) /tuː.biʕ.naː/\n# first-person plural past passive of تَابَعَ (tābaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tūbiʕnā", "tābaʕa"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "تابعتم",
-        "u": "تابعتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَابَعْتُمْ • (tābaʕtum) (form III) /taː.baʕ.tum/\n# second-person masculine plural past active of تَابَعَ (tābaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tābaʕtum", "tābaʕa"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "تتابعون",
-        "u": "تتابعون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتابعون (form III)\n# تُتَابِعُونَ (tutābiʕūna) /tu.taː.bi.ʕuː.na/: second-person masculine plural non-past active indicative of تَابَعَ (tābaʕa)\n# تُتَابَعُونَ (tutābaʕūna) /tu.taː.ba.ʕuː.na/: second-person masculine plural non-past passive indicative of تَابَعَ (tābaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tutābiʕūna", "tābaʕa", "tutābaʕūna"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "تتابعوا",
-        "u": "تتابعوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تتابعوا (form III)\n# تُتَابِعُوا (tutābiʕū) /tu.taː.bi.ʕuː/: second-person masculine plural non-past active subjunctive/jussive of تَابَعَ (tābaʕa)\n# تُتَابَعُوا (tutābaʕū) /tu.taː.ba.ʕuː/: second-person masculine plural non-past passive subjunctive/jussive of تَابَعَ (tābaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tutābiʕū", "tābaʕa", "tutābaʕū"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "توبعتم",
-        "u": "توبعتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُوبِعْتُمْ • (tūbiʕtum) (form III) /tuː.biʕ.tum/\n# second-person masculine plural past passive of تَابَعَ (tābaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tūbiʕtum", "tābaʕa"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "تابعوا",
-        "u": "تابعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تابعوا (form III)\n# تَابَعُوا (tābaʕū) /taː.ba.ʕuː/: third-person masculine plural past active of تَابَعَ (tābaʕa)\n# تَابِعُوا (tābiʕū) /taː.bi.ʕuː/: second-person masculine plural imperative of تَابَعَ (tābaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tābaʕū", "tābaʕa", "tābiʕū"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "يتابعون",
-        "u": "يتابعون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتابعون (form III)\n# يُتَابِعُونَ (yutābiʕūna) /ju.taː.bi.ʕuː.na/: third-person masculine plural non-past active indicative of تَابَعَ (tābaʕa)\n# يُتَابَعُونَ (yutābaʕūna) /ju.taː.ba.ʕuː.na/: third-person masculine plural non-past passive indicative of تَابَعَ (tābaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yutābiʕūna", "tābaʕa", "yutābaʕūna"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "يتابعوا",
-        "u": "يتابعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتابعوا (form III)\n# يُتَابِعُوا (yutābiʕū) /ju.taː.bi.ʕuː/: third-person masculine plural non-past active subjunctive/jussive of تَابَعَ (tābaʕa)\n# يُتَابَعُوا (yutābaʕū) /ju.taː.ba.ʕuː/: third-person masculine plural non-past passive subjunctive/jussive of تَابَعَ (tābaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yutābiʕū", "tābaʕa", "yutābaʕū"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "توبعوا",
-        "u": "توبعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُوبِعُوا • (tūbiʕū) (form III) /tuː.bi.ʕuː/\n# third-person masculine plural past passive of تَابَعَ (tābaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tūbiʕū", "tābaʕa"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "تابعتن",
-        "u": "تابعتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَابَعْتُنَّ • (tābaʕtunna) (form III) /taː.baʕ.tun.na/\n# second-person feminine plural past active of تَابَعَ (tābaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tābaʕtunna", "tābaʕa"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "تتابعن",
-        "u": "تتابعن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تتابعن (form III)\n# تُتَابِعْنَ (tutābiʕna) /tu.taː.biʕ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of تَابَعَ (tābaʕa)\n# تُتَابَعْنَ (tutābaʕna) /tu.taː.baʕ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of تَابَعَ (tābaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tutābiʕna", "tābaʕa", "tutābaʕna"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "تابعن",
-        "u": "تابعن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تابعن (form III)\n# تَابَعْنَ (tābaʕna) /taː.baʕ.na/: third-person feminine plural past active of تَابَعَ (tābaʕa)\n# تَابِعْنَ (tābiʕna) /taː.biʕ.na/: second-person feminine plural imperative of تَابَعَ (tābaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tābaʕna", "tābaʕa", "tābiʕna"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "توبعتن",
-        "u": "توبعتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُوبِعْتُنَّ • (tūbiʕtunna) (form III) /tuː.biʕ.tun.na/\n# second-person feminine plural past passive of تَابَعَ (tābaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tūbiʕtunna", "tābaʕa"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "يتابعن",
-        "u": "يتابعن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتابعن (form III)\n# يُتَابِعْنَ (yutābiʕna) /ju.taː.biʕ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of تَابَعَ (tābaʕa)\n# يُتَابَعْنَ (yutābaʕna) /ju.taː.baʕ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of تَابَعَ (tābaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yutābiʕna", "tābaʕa", "yutābaʕna"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "توبعن",
-        "u": "توبعن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُوبِعْنَ • (tūbiʕna) (form III) /tuː.biʕ.na/\n# third-person feminine plural past passive of تَابَعَ (tābaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tūbiʕna", "tābaʕa"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "تابعا",
-        "u": "تابعا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تابعا (form III)\n# تَابَعَا (tābaʕā) /taː.ba.ʕaː/: third-person masculine dual past active of تَابَعَ (tābaʕa)\n# تَابِعَا (tābiʕā) /taː.bi.ʕaː/: second-person dual imperative of تَابَعَ (tābaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tābaʕā", "tābaʕa", "tābiʕā"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "تابعتما",
-        "u": "تابعتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَابَعْتُمَا • (tābaʕtumā) (form III) /taː.baʕ.tu.maː/\n# second-person dual past active of تَابَعَ (tābaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tābaʕtumā", "tābaʕa"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "تابعتا",
-        "u": "تابعتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَابَعَتَا • (tābaʕatā) (form III) /taː.ba.ʕa.taː/\n# third-person feminine dual past active of تَابَعَ (tābaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tābaʕatā", "tābaʕa"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "توبعا",
-        "u": "توبعا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُوبِعَا • (tūbiʕā) (form III) /tuː.bi.ʕaː/\n# third-person masculine dual past passive of تَابَعَ (tābaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tūbiʕā", "tābaʕa"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "توبعتما",
-        "u": "توبعتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُوبِعْتُمَا • (tūbiʕtumā) (form III) /tuː.biʕ.tu.maː/\n# second-person dual past passive of تَابَعَ (tābaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tūbiʕtumā", "tābaʕa"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "توبعتا",
-        "u": "توبعتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُوبِعَتَا • (tūbiʕatā) (form III) /tuː.bi.ʕa.taː/\n# third-person feminine dual past passive of تَابَعَ (tābaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tūbiʕatā", "tābaʕa"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "يتابعان",
-        "u": "يتابعان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتابعان (form III)\n# يُتَابِعَانِ (yutābiʕāni) /ju.taː.bi.ʕaː.ni/: third-person masculine dual non-past active indicative of تَابَعَ (tābaʕa)\n# يُتَابَعَانِ (yutābaʕāni) /ju.taː.ba.ʕaː.ni/: third-person masculine dual non-past passive indicative of تَابَعَ (tābaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yutābiʕāni", "tābaʕa", "yutābaʕāni"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "تتابعان",
-        "u": "تتابعان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتابعان (form III)\n# تُتَابِعَانِ (tutābiʕāni) /tu.taː.bi.ʕaː.ni/: inflection of تَابَعَ (tābaʕa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُتَابَعَانِ (tutābaʕāni) /tu.taː.ba.ʕaː.ni/: inflection of تَابَعَ (tābaʕa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tutābiʕāni", "tābaʕa", "tutābaʕāni"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "تتابعا",
-        "u": "تتابعا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تتابعا (form III)\n# تُتَابِعَا (tutābiʕā) /tu.taː.bi.ʕaː/: inflection of تَابَعَ (tābaʕa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُتَابَعَا (tutābaʕā) /tu.taː.ba.ʕaː/: inflection of تَابَعَ (tābaʕa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjun",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tutābiʕā", "tābaʕa", "tutābaʕā"],
-        "k": "تابع",
-        "yol": "kök"
-      },
-      {
-        "w": "يتابعا",
-        "u": "يتابعا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتابعا (form III)\n# يُتَابِعَا (yutābiʕā) /ju.taː.bi.ʕaː/: third-person masculine dual non-past active subjunctive/jussive of تَابَعَ (tābaʕa)\n# يُتَابَعَا (yutābaʕā) /ju.taː.ba.ʕaː/: third-person masculine dual non-past passive subjunctive/jussive of تَابَعَ (tābaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yutābiʕā", "tābaʕa", "yutābaʕā"],
-        "k": "تابع",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تب",
+  "ses": {
     "harf": "ت",
+    "fasil": "تب",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "يتابع",
+      "tur": "verb",
+      "baslik": "يتابع (form III)\n# يُتَابِعُ (yutābiʕu) /ju.taː.bi.ʕu/: third-person masculine singular non-past active indicative of تَابَعَ (tābaʕa)\n# يُتَابَعُ (yutābaʕu) /ju.taː.ba.ʕu/: third-person masculine singular non-past passive indicative of تَابَعَ (tābaʕa)\n# يُتَابِعَ (yutābiʕa) /ju.taː.bi.ʕa/: third-person masculine singular non-past active subjunctive of تَابَعَ (tābaʕa)\n# يُتَابَعَ (yutābaʕa) /ju.",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yutābiʕu", "tābaʕa", "yutābaʕu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "توبع",
+      "tur": "verb",
+      "baslik": "تُوبِعَ • (tūbiʕa) (form III) /tuː.bi.ʕa/\n# third-person masculine singular past passive of تَابَعَ (tābaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tūbiʕa", "tābaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تابعت",
+      "tur": "verb",
+      "baslik": "تابعت (form III)\n# تَابَعْتُ (tābaʕtu) /taː.baʕ.tu/: first-person singular past active of تَابَعَ (tābaʕa)\n# تَابَعْتَ (tābaʕta) /taː.baʕ.ta/: second-person masculine singular past active of تَابَعَ (tābaʕa)\n# تَابَعْتِ (tābaʕti) /taː.baʕ.ti/: second-person feminine singular past active of تَابَعَ (tābaʕa)\n# تَابَعَتْ (tābaʕat) /taː.ba.ʕat/: third-person feminine singular past active of تَابَعَ (t",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tābaʕtu", "tābaʕa", "tābaʕta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتابع",
+      "tur": "noun",
+      "etim_no": "1.2",
+      "baslik": "تَتَابُع • (tatābuʕ) m",
+      "anlam": ["verbal noun of تَتَابَعَ (tatābaʕa)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["تَتَابَعَ"],
+      "okunus": ["tatābuʕ"],
+      "bag": "asıl madde"
+    },
+    {
+      "madde": "تتابع",
+      "tur": "verb",
+      "etim_no": "1.3",
+      "baslik": "تتابع (form III)\n# تُتَابِعُ (tutābiʕu) /tu.taː.bi.ʕu/: inflection of تَابَعَ (tābaʕa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُتَابَعُ (tutābaʕu) /tu.taː.ba.ʕu/: inflection of تَابَعَ (tābaʕa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive in",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tutābiʕu", "tābaʕa", "tutābaʕu"]
+    },
+    {
+      "madde": "توبعت",
+      "tur": "verb",
+      "baslik": "توبعت (form III)\n# تُوبِعْتُ (tūbiʕtu) /tuː.biʕ.tu/: first-person singular past passive of تَابَعَ (tābaʕa)\n# تُوبِعْتَ (tūbiʕta) /tuː.biʕ.ta/: second-person masculine singular past passive of تَابَعَ (tābaʕa)\n# تُوبِعْتِ (tūbiʕti) /tuː.biʕ.ti/: second-person feminine singular past passive of تَابَعَ (tābaʕa)\n# تُوبِعَتْ (tūbiʕat) /tuː.bi.ʕat/: third-person feminine singular past passive of تَابَع",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tūbiʕtu", "tābaʕa", "tūbiʕta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتابعين",
+      "tur": "verb",
+      "baslik": "تتابعين (form III)\n# تُتَابِعِينَ (tutābiʕīna) /tu.taː.bi.ʕiː.na/: second-person feminine singular non-past active indicative of تَابَعَ (tābaʕa)\n# تُتَابَعِينَ (tutābaʕīna) /tu.taː.ba.ʕiː.na/: second-person feminine singular non-past passive indicative of تَابَعَ (tābaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tutābiʕīna", "tābaʕa", "tutābaʕīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتابعي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تتابعي (form III)\n# تُتَابِعِي (tutābiʕī) /tu.taː.bi.ʕiː/: second-person feminine singular non-past active subjunctive/jussive of تَابَعَ (tābaʕa)\n# تُتَابَعِي (tutābaʕī) /tu.taː.ba.ʕiː/: second-person feminine singular non-past passive subjunctive/jussive of تَابَعَ (tābaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tutābiʕī", "tābaʕa", "tutābaʕī"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تابعي",
+      "tur": "verb",
+      "baslik": "تَابِعِي • (tābiʕī) (form III) /taː.bi.ʕiː/\n# second-person feminine singular imperative of تَابَعَ (tābaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tābiʕī", "tābaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتابع",
+      "tur": "verb",
+      "baslik": "أتابع (form III)\n# أُتَابِعُ (ʔutābiʕu) /ʔu.taː.bi.ʕu/: first-person singular non-past active indicative of تَابَعَ (tābaʕa)\n# أُتَابَعُ (ʔutābaʕu) /ʔu.taː.ba.ʕu/: first-person singular non-past passive indicative of تَابَعَ (tābaʕa)\n# أُتَابِعَ (ʔutābiʕa) /ʔu.taː.bi.ʕa/: first-person singular non-past active subjunctive of تَابَعَ (tābaʕa)\n# أُتَابَعَ (ʔutābaʕa) /ʔu.taː.ba.ʕa/: first-person singu",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔutābiʕu", "tābaʕa", "ʔutābaʕu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تابعنا",
+      "tur": "verb",
+      "baslik": "تَابَعْنَا • (tābaʕnā) (form III) /taː.baʕ.naː/\n# first-person plural past active of تَابَعَ (tābaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tābaʕnā", "tābaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتابع",
+      "tur": "verb",
+      "baslik": "نتابع (form III)\n# نُتَابِعُ (nutābiʕu) /nu.taː.bi.ʕu/: first-person plural non-past active indicative of تَابَعَ (tābaʕa)\n# نُتَابَعُ (nutābaʕu) /nu.taː.ba.ʕu/: first-person plural non-past passive indicative of تَابَعَ (tābaʕa)\n# نُتَابِعَ (nutābiʕa) /nu.taː.bi.ʕa/: first-person plural non-past active subjunctive of تَابَعَ (tābaʕa)\n# نُتَابَعَ (nutābaʕa) /nu.taː.ba.ʕa/: first-person plural non-",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nutābiʕu", "tābaʕa", "nutābaʕu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "توبعنا",
+      "tur": "verb",
+      "baslik": "تُوبِعْنَا • (tūbiʕnā) (form III) /tuː.biʕ.naː/\n# first-person plural past passive of تَابَعَ (tābaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tūbiʕnā", "tābaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تابعتم",
+      "tur": "verb",
+      "baslik": "تَابَعْتُمْ • (tābaʕtum) (form III) /taː.baʕ.tum/\n# second-person masculine plural past active of تَابَعَ (tābaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tābaʕtum", "tābaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتابعون",
+      "tur": "verb",
+      "baslik": "تتابعون (form III)\n# تُتَابِعُونَ (tutābiʕūna) /tu.taː.bi.ʕuː.na/: second-person masculine plural non-past active indicative of تَابَعَ (tābaʕa)\n# تُتَابَعُونَ (tutābaʕūna) /tu.taː.ba.ʕuː.na/: second-person masculine plural non-past passive indicative of تَابَعَ (tābaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tutābiʕūna", "tābaʕa", "tutābaʕūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتابعوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تتابعوا (form III)\n# تُتَابِعُوا (tutābiʕū) /tu.taː.bi.ʕuː/: second-person masculine plural non-past active subjunctive/jussive of تَابَعَ (tābaʕa)\n# تُتَابَعُوا (tutābaʕū) /tu.taː.ba.ʕuː/: second-person masculine plural non-past passive subjunctive/jussive of تَابَعَ (tābaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tutābiʕū", "tābaʕa", "tutābaʕū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "توبعتم",
+      "tur": "verb",
+      "baslik": "تُوبِعْتُمْ • (tūbiʕtum) (form III) /tuː.biʕ.tum/\n# second-person masculine plural past passive of تَابَعَ (tābaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tūbiʕtum", "tābaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تابعوا",
+      "tur": "verb",
+      "baslik": "تابعوا (form III)\n# تَابَعُوا (tābaʕū) /taː.ba.ʕuː/: third-person masculine plural past active of تَابَعَ (tābaʕa)\n# تَابِعُوا (tābiʕū) /taː.bi.ʕuː/: second-person masculine plural imperative of تَابَعَ (tābaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tābaʕū", "tābaʕa", "tābiʕū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتابعون",
+      "tur": "verb",
+      "baslik": "يتابعون (form III)\n# يُتَابِعُونَ (yutābiʕūna) /ju.taː.bi.ʕuː.na/: third-person masculine plural non-past active indicative of تَابَعَ (tābaʕa)\n# يُتَابَعُونَ (yutābaʕūna) /ju.taː.ba.ʕuː.na/: third-person masculine plural non-past passive indicative of تَابَعَ (tābaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yutābiʕūna", "tābaʕa", "yutābaʕūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتابعوا",
+      "tur": "verb",
+      "baslik": "يتابعوا (form III)\n# يُتَابِعُوا (yutābiʕū) /ju.taː.bi.ʕuː/: third-person masculine plural non-past active subjunctive/jussive of تَابَعَ (tābaʕa)\n# يُتَابَعُوا (yutābaʕū) /ju.taː.ba.ʕuː/: third-person masculine plural non-past passive subjunctive/jussive of تَابَعَ (tābaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yutābiʕū", "tābaʕa", "yutābaʕū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "توبعوا",
+      "tur": "verb",
+      "baslik": "تُوبِعُوا • (tūbiʕū) (form III) /tuː.bi.ʕuː/\n# third-person masculine plural past passive of تَابَعَ (tābaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tūbiʕū", "tābaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تابعتن",
+      "tur": "verb",
+      "baslik": "تَابَعْتُنَّ • (tābaʕtunna) (form III) /taː.baʕ.tun.na/\n# second-person feminine plural past active of تَابَعَ (tābaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tābaʕtunna", "tābaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتابعن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تتابعن (form III)\n# تُتَابِعْنَ (tutābiʕna) /tu.taː.biʕ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of تَابَعَ (tābaʕa)\n# تُتَابَعْنَ (tutābaʕna) /tu.taː.baʕ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of تَابَعَ (tābaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tutābiʕna", "tābaʕa", "tutābaʕna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تابعن",
+      "tur": "verb",
+      "baslik": "تابعن (form III)\n# تَابَعْنَ (tābaʕna) /taː.baʕ.na/: third-person feminine plural past active of تَابَعَ (tābaʕa)\n# تَابِعْنَ (tābiʕna) /taː.biʕ.na/: second-person feminine plural imperative of تَابَعَ (tābaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tābaʕna", "tābaʕa", "tābiʕna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "توبعتن",
+      "tur": "verb",
+      "baslik": "تُوبِعْتُنَّ • (tūbiʕtunna) (form III) /tuː.biʕ.tun.na/\n# second-person feminine plural past passive of تَابَعَ (tābaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tūbiʕtunna", "tābaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتابعن",
+      "tur": "verb",
+      "baslik": "يتابعن (form III)\n# يُتَابِعْنَ (yutābiʕna) /ju.taː.biʕ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of تَابَعَ (tābaʕa)\n# يُتَابَعْنَ (yutābaʕna) /ju.taː.baʕ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of تَابَعَ (tābaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yutābiʕna", "tābaʕa", "yutābaʕna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "توبعن",
+      "tur": "verb",
+      "baslik": "تُوبِعْنَ • (tūbiʕna) (form III) /tuː.biʕ.na/\n# third-person feminine plural past passive of تَابَعَ (tābaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tūbiʕna", "tābaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تابعا",
+      "tur": "verb",
+      "baslik": "تابعا (form III)\n# تَابَعَا (tābaʕā) /taː.ba.ʕaː/: third-person masculine dual past active of تَابَعَ (tābaʕa)\n# تَابِعَا (tābiʕā) /taː.bi.ʕaː/: second-person dual imperative of تَابَعَ (tābaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tābaʕā", "tābaʕa", "tābiʕā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تابعتما",
+      "tur": "verb",
+      "baslik": "تَابَعْتُمَا • (tābaʕtumā) (form III) /taː.baʕ.tu.maː/\n# second-person dual past active of تَابَعَ (tābaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tābaʕtumā", "tābaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تابعتا",
+      "tur": "verb",
+      "baslik": "تَابَعَتَا • (tābaʕatā) (form III) /taː.ba.ʕa.taː/\n# third-person feminine dual past active of تَابَعَ (tābaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tābaʕatā", "tābaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "توبعا",
+      "tur": "verb",
+      "baslik": "تُوبِعَا • (tūbiʕā) (form III) /tuː.bi.ʕaː/\n# third-person masculine dual past passive of تَابَعَ (tābaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tūbiʕā", "tābaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "توبعتما",
+      "tur": "verb",
+      "baslik": "تُوبِعْتُمَا • (tūbiʕtumā) (form III) /tuː.biʕ.tu.maː/\n# second-person dual past passive of تَابَعَ (tābaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tūbiʕtumā", "tābaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "توبعتا",
+      "tur": "verb",
+      "baslik": "تُوبِعَتَا • (tūbiʕatā) (form III) /tuː.bi.ʕa.taː/\n# third-person feminine dual past passive of تَابَعَ (tābaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tūbiʕatā", "tābaʕa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتابعان",
+      "tur": "verb",
+      "baslik": "يتابعان (form III)\n# يُتَابِعَانِ (yutābiʕāni) /ju.taː.bi.ʕaː.ni/: third-person masculine dual non-past active indicative of تَابَعَ (tābaʕa)\n# يُتَابَعَانِ (yutābaʕāni) /ju.taː.ba.ʕaː.ni/: third-person masculine dual non-past passive indicative of تَابَعَ (tābaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yutābiʕāni", "tābaʕa", "yutābaʕāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتابعان",
+      "tur": "verb",
+      "baslik": "تتابعان (form III)\n# تُتَابِعَانِ (tutābiʕāni) /tu.taː.bi.ʕaː.ni/: inflection of تَابَعَ (tābaʕa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُتَابَعَانِ (tutābaʕāni) /tu.taː.ba.ʕaː.ni/: inflection of تَابَعَ (tābaʕa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tutābiʕāni", "tābaʕa", "tutābaʕāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتابعا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تتابعا (form III)\n# تُتَابِعَا (tutābiʕā) /tu.taː.bi.ʕaː/: inflection of تَابَعَ (tābaʕa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُتَابَعَا (tutābaʕā) /tu.taː.ba.ʕaː/: inflection of تَابَعَ (tābaʕa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjun",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tutābiʕā", "tābaʕa", "tutābaʕā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتابعا",
+      "tur": "verb",
+      "baslik": "يتابعا (form III)\n# يُتَابِعَا (yutābiʕā) /ju.taː.bi.ʕaː/: third-person masculine dual non-past active subjunctive/jussive of تَابَعَ (tābaʕa)\n# يُتَابَعَا (yutābaʕā) /ju.taː.ba.ʕaː/: third-person masculine dual non-past passive subjunctive/jussive of تَابَعَ (tābaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yutābiʕā", "tābaʕa", "yutābaʕā"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "تابع", "r6"]
+  ],
+  "mana": {
     "ince": "arrangement.n.02",
     "orta": "noun.group",
     "ust": "insan ve toplum",
@@ -484,22 +347,15 @@
     "dayanak_tanim": "serial arrangement in which things follow in logical order or a recurrent pattern",
     "synset_sayisi": 2
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["ordering.n.01", "temporal_property.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["ordering.n.01", "temporal_property.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

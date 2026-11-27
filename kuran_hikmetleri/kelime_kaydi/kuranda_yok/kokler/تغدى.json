@@ -1,424 +1,301 @@
 {
   "kok": "تغدى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تغدى", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تغد",
-        "u": "تغد",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَغَدَّ • (taḡadda) (form V) /ta.ɣad.da/\n# second-person masculine singular imperative of تَغَدَّى (taḡaddā)",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡadda", "taḡaddā"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتغدى",
-        "u": "يتغدى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتغدى (form V)\n# يَتَغَدَّى (yataḡaddā) /ja.ta.ɣad.daː/: third-person masculine singular non-past active indicative/subjunctive of تَغَدَّى (taḡaddā)\n# يُتَغَدَّى (yutaḡaddā) /ju.ta.ɣad.daː/: third-person masculine singular non-past passive indicative/subjunctive of تَغَدَّى (taḡaddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḡaddā", "taḡaddā", "yutaḡaddā"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتغد",
-        "u": "يتغد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتغد (form V)\n# يَتَغَدَّ (yataḡadda) /ja.ta.ɣad.da/: third-person masculine singular non-past active jussive of تَغَدَّى (taḡaddā)\n# يُتَغَدَّ (yutaḡadda) /ju.ta.ɣad.da/: third-person masculine singular non-past passive jussive of تَغَدَّى (taḡaddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḡadda", "taḡaddā", "yutaḡadda"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغدي",
-        "u": "تغدي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تغدي (form V)\n# تُغُدِّيَ (tuḡuddiya) /tu.ɣud.di.ja/: third-person masculine singular past passive of تَغَدَّى (taḡaddā)\n# تَغَدَّيْ (taḡadday) /ta.ɣad.daj/: second-person feminine singular imperative of تَغَدَّى (taḡaddā)",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tuḡuddiya", "taḡaddā", "taḡadday"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغدت",
-        "u": "تغدت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغَدَّتْ • (taḡaddat) (form V) /ta.ɣad.dat/\n# third-person feminine singular past active of تَغَدَّى (taḡaddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡaddat", "taḡaddā"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتغدى",
-        "u": "تتغدى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَغَدَّى • (tataḡaddā) (form V) /ta.ta.ɣad.daː/\n# inflection of تَغَدَّى (taḡaddā):\n## second-person masculine singular non-past active indicative/subjunctive\n## third-person feminine singular non-past active indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḡaddā", "taḡaddā"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتغد",
-        "u": "تتغد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَغَدَّ • (tataḡadda) (form V) /ta.ta.ɣad.da/\n# inflection of تَغَدَّى (taḡaddā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḡadda", "taḡaddā"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغديت",
-        "u": "تغديت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تغديت (form V)\n# تَغَدَّيْتُ (taḡaddaytu) /ta.ɣad.daj.tu/: first-person singular past active of تَغَدَّى (taḡaddā)\n# تَغَدَّيْتَ (taḡaddayta) /ta.ɣad.daj.ta/: second-person masculine singular past active of تَغَدَّى (taḡaddā)\n# تَغَدَّيْتِ (taḡaddayti) /ta.ɣad.daj.ti/: second-person feminine singular past active of تَغَدَّى (taḡaddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡaddaytu", "taḡaddā", "taḡaddayta"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتغدين",
-        "u": "تتغدين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَغَدَّيْنَ • (tataḡaddayna) (form V) /ta.ta.ɣad.daj.na/\n# inflection of تَغَدَّى (taḡaddā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḡaddayna", "taḡaddā"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتغدي",
-        "u": "تتغدي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَغَدَّيْ • (tataḡadday) (form V) /ta.ta.ɣad.daj/\n# second-person feminine singular non-past active subjunctive/jussive of تَغَدَّى (taḡaddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḡadday", "taḡaddā"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "أتغدى",
-        "u": "أتغدى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَتَغَدَّى • (ʔataḡaddā) (form V) /ʔa.ta.ɣad.daː/\n# first-person singular non-past active indicative/subjunctive of تَغَدَّى (taḡaddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔataḡaddā", "taḡaddā"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "أتغد",
-        "u": "أتغد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَتَغَدَّ • (ʔataḡadda) (form V) /ʔa.ta.ɣad.da/\n# first-person singular non-past active jussive of تَغَدَّى (taḡaddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔataḡadda", "taḡaddā"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغدينا",
-        "u": "تغدينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغَدَّيْنَا • (taḡaddaynā) (form V) /ta.ɣad.daj.naː/\n# first-person plural past active of تَغَدَّى (taḡaddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡaddaynā", "taḡaddā"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "نتغدى",
-        "u": "نتغدى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَتَغَدَّى • (nataḡaddā) (form V) /na.ta.ɣad.daː/\n# first-person plural non-past active indicative/subjunctive of تَغَدَّى (taḡaddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["nataḡaddā", "taḡaddā"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "نتغد",
-        "u": "نتغد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَتَغَدَّ • (nataḡadda) (form V) /na.ta.ɣad.da/\n# first-person plural non-past active jussive of تَغَدَّى (taḡaddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["nataḡadda", "taḡaddā"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغديتم",
-        "u": "تغديتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغَدَّيْتُمْ • (taḡaddaytum) (form V) /ta.ɣad.daj.tum/\n# second-person masculine plural past active of تَغَدَّى (taḡaddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡaddaytum", "taḡaddā"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتغدون",
-        "u": "تتغدون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَغَدَّوْنَ • (tataḡaddawna) (form V) /ta.ta.ɣad.daw.na/\n# second-person masculine plural non-past active indicative of تَغَدَّى (taḡaddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḡaddawna", "taḡaddā"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتغدوا",
-        "u": "تتغدوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَغَدَّوْا • (tataḡaddaw) (form V) /ta.ta.ɣad.daw/\n# second-person masculine plural non-past active subjunctive/jussive of تَغَدَّى (taḡaddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḡaddaw", "taḡaddā"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغدوا",
-        "u": "تغدوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَغَدَّوْا • (taḡaddaw) (form V) /ta.ɣad.daw/\n# inflection of تَغَدَّى (taḡaddā):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡaddaw", "taḡaddā"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتغدون",
-        "u": "يتغدون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَغَدَّوْنَ • (yataḡaddawna) (form V) /ja.ta.ɣad.daw.na/\n# third-person masculine plural non-past active indicative of تَغَدَّى (taḡaddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḡaddawna", "taḡaddā"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتغدوا",
-        "u": "يتغدوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَغَدَّوْا • (yataḡaddaw) (form V) /ja.ta.ɣad.daw/\n# third-person masculine plural non-past active subjunctive/jussive of تَغَدَّى (taḡaddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḡaddaw", "taḡaddā"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغديتن",
-        "u": "تغديتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغَدَّيْتُنَّ • (taḡaddaytunna) (form V) /ta.ɣad.daj.tun.na/\n# second-person feminine plural past active of تَغَدَّى (taḡaddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡaddaytunna", "taḡaddā"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغدين",
-        "u": "تغدين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَغَدَّيْنَ • (taḡaddayna) (form V) /ta.ɣad.daj.na/\n# inflection of تَغَدَّى (taḡaddā):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡaddayna", "taḡaddā"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتغدين",
-        "u": "يتغدين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَغَدَّيْنَ • (yataḡaddayna) (form V) /ja.ta.ɣad.daj.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَغَدَّى (taḡaddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḡaddayna", "taḡaddā"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغديا",
-        "u": "تغديا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغَدَّيَا • (taḡaddayā) (form V) /ta.ɣad.da.jaː/\n# inflection of تَغَدَّى (taḡaddā):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡaddayā", "taḡaddā"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغديتما",
-        "u": "تغديتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغَدَّيْتُمَا • (taḡaddaytumā) (form V) /ta.ɣad.daj.tu.maː/\n# second-person dual past active of تَغَدَّى (taḡaddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡaddaytumā", "taḡaddā"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغدتا",
-        "u": "تغدتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغَدَّتَا • (taḡaddatā) (form V) /ta.ɣad.da.taː/\n# third-person feminine dual past active of تَغَدَّى (taḡaddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡaddatā", "taḡaddā"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتغديان",
-        "u": "تتغديان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَغَدَّيَانِ • (tataḡaddayāni) (form V) /ta.ta.ɣad.da.jaː.ni/\n# inflection of تَغَدَّى (taḡaddā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḡaddayāni", "taḡaddā"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتغديان",
-        "u": "يتغديان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَغَدَّيَانِ • (yataḡaddayāni) (form V) /ja.ta.ɣad.da.jaː.ni/\n# third-person masculine dual non-past active indicative of تَغَدَّى (taḡaddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḡaddayāni", "taḡaddā"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتغديا",
-        "u": "تتغديا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَغَدَّيَا • (tataḡaddayā) (form V) /ta.ta.ɣad.da.jaː/\n# inflection of تَغَدَّى (taḡaddā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḡaddayā", "taḡaddā"],
-        "k": "تغدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتغديا",
-        "u": "يتغديا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَغَدَّيَا • (yataḡaddayā) (form V) /ja.ta.ɣad.da.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of تَغَدَّى (taḡaddā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḡaddayā", "taḡaddā"],
-        "k": "تغدى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تغ",
+  "ses": {
     "harf": "ت",
+    "fasil": "تغ",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تغد",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَغَدَّ • (taḡadda) (form V) /ta.ɣad.da/\n# second-person masculine singular imperative of تَغَدَّى (taḡaddā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡadda", "taḡaddā"]
+    },
+    {
+      "madde": "يتغدى",
+      "tur": "verb",
+      "baslik": "يتغدى (form V)\n# يَتَغَدَّى (yataḡaddā) /ja.ta.ɣad.daː/: third-person masculine singular non-past active indicative/subjunctive of تَغَدَّى (taḡaddā)\n# يُتَغَدَّى (yutaḡaddā) /ju.ta.ɣad.daː/: third-person masculine singular non-past passive indicative/subjunctive of تَغَدَّى (taḡaddā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḡaddā", "taḡaddā", "yutaḡaddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتغد",
+      "tur": "verb",
+      "baslik": "يتغد (form V)\n# يَتَغَدَّ (yataḡadda) /ja.ta.ɣad.da/: third-person masculine singular non-past active jussive of تَغَدَّى (taḡaddā)\n# يُتَغَدَّ (yutaḡadda) /ju.ta.ɣad.da/: third-person masculine singular non-past passive jussive of تَغَدَّى (taḡaddā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḡadda", "taḡaddā", "yutaḡadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغدي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تغدي (form V)\n# تُغُدِّيَ (tuḡuddiya) /tu.ɣud.di.ja/: third-person masculine singular past passive of تَغَدَّى (taḡaddā)\n# تَغَدَّيْ (taḡadday) /ta.ɣad.daj/: second-person feminine singular imperative of تَغَدَّى (taḡaddā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tuḡuddiya", "taḡaddā", "taḡadday"]
+    },
+    {
+      "madde": "تغدت",
+      "tur": "verb",
+      "baslik": "تَغَدَّتْ • (taḡaddat) (form V) /ta.ɣad.dat/\n# third-person feminine singular past active of تَغَدَّى (taḡaddā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡaddat", "taḡaddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتغدى",
+      "tur": "verb",
+      "baslik": "تَتَغَدَّى • (tataḡaddā) (form V) /ta.ta.ɣad.daː/\n# inflection of تَغَدَّى (taḡaddā):\n## second-person masculine singular non-past active indicative/subjunctive\n## third-person feminine singular non-past active indicative/subjunctive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḡaddā", "taḡaddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتغد",
+      "tur": "verb",
+      "baslik": "تَتَغَدَّ • (tataḡadda) (form V) /ta.ta.ɣad.da/\n# inflection of تَغَدَّى (taḡaddā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḡadda", "taḡaddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغديت",
+      "tur": "verb",
+      "baslik": "تغديت (form V)\n# تَغَدَّيْتُ (taḡaddaytu) /ta.ɣad.daj.tu/: first-person singular past active of تَغَدَّى (taḡaddā)\n# تَغَدَّيْتَ (taḡaddayta) /ta.ɣad.daj.ta/: second-person masculine singular past active of تَغَدَّى (taḡaddā)\n# تَغَدَّيْتِ (taḡaddayti) /ta.ɣad.daj.ti/: second-person feminine singular past active of تَغَدَّى (taḡaddā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡaddaytu", "taḡaddā", "taḡaddayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتغدين",
+      "tur": "verb",
+      "baslik": "تَتَغَدَّيْنَ • (tataḡaddayna) (form V) /ta.ta.ɣad.daj.na/\n# inflection of تَغَدَّى (taḡaddā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḡaddayna", "taḡaddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتغدي",
+      "tur": "verb",
+      "baslik": "تَتَغَدَّيْ • (tataḡadday) (form V) /ta.ta.ɣad.daj/\n# second-person feminine singular non-past active subjunctive/jussive of تَغَدَّى (taḡaddā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḡadday", "taḡaddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أتغدى",
+      "tur": "verb",
+      "baslik": "أَتَغَدَّى • (ʔataḡaddā) (form V) /ʔa.ta.ɣad.daː/\n# first-person singular non-past active indicative/subjunctive of تَغَدَّى (taḡaddā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔataḡaddā", "taḡaddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أتغد",
+      "tur": "verb",
+      "baslik": "أَتَغَدَّ • (ʔataḡadda) (form V) /ʔa.ta.ɣad.da/\n# first-person singular non-past active jussive of تَغَدَّى (taḡaddā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔataḡadda", "taḡaddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغدينا",
+      "tur": "verb",
+      "baslik": "تَغَدَّيْنَا • (taḡaddaynā) (form V) /ta.ɣad.daj.naː/\n# first-person plural past active of تَغَدَّى (taḡaddā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡaddaynā", "taḡaddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نتغدى",
+      "tur": "verb",
+      "baslik": "نَتَغَدَّى • (nataḡaddā) (form V) /na.ta.ɣad.daː/\n# first-person plural non-past active indicative/subjunctive of تَغَدَّى (taḡaddā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["nataḡaddā", "taḡaddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نتغد",
+      "tur": "verb",
+      "baslik": "نَتَغَدَّ • (nataḡadda) (form V) /na.ta.ɣad.da/\n# first-person plural non-past active jussive of تَغَدَّى (taḡaddā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["nataḡadda", "taḡaddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغديتم",
+      "tur": "verb",
+      "baslik": "تَغَدَّيْتُمْ • (taḡaddaytum) (form V) /ta.ɣad.daj.tum/\n# second-person masculine plural past active of تَغَدَّى (taḡaddā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡaddaytum", "taḡaddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتغدون",
+      "tur": "verb",
+      "baslik": "تَتَغَدَّوْنَ • (tataḡaddawna) (form V) /ta.ta.ɣad.daw.na/\n# second-person masculine plural non-past active indicative of تَغَدَّى (taḡaddā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḡaddawna", "taḡaddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتغدوا",
+      "tur": "verb",
+      "baslik": "تَتَغَدَّوْا • (tataḡaddaw) (form V) /ta.ta.ɣad.daw/\n# second-person masculine plural non-past active subjunctive/jussive of تَغَدَّى (taḡaddā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḡaddaw", "taḡaddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغدوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَغَدَّوْا • (taḡaddaw) (form V) /ta.ɣad.daw/\n# inflection of تَغَدَّى (taḡaddā):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡaddaw", "taḡaddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتغدون",
+      "tur": "verb",
+      "baslik": "يَتَغَدَّوْنَ • (yataḡaddawna) (form V) /ja.ta.ɣad.daw.na/\n# third-person masculine plural non-past active indicative of تَغَدَّى (taḡaddā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḡaddawna", "taḡaddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتغدوا",
+      "tur": "verb",
+      "baslik": "يَتَغَدَّوْا • (yataḡaddaw) (form V) /ja.ta.ɣad.daw/\n# third-person masculine plural non-past active subjunctive/jussive of تَغَدَّى (taḡaddā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḡaddaw", "taḡaddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغديتن",
+      "tur": "verb",
+      "baslik": "تَغَدَّيْتُنَّ • (taḡaddaytunna) (form V) /ta.ɣad.daj.tun.na/\n# second-person feminine plural past active of تَغَدَّى (taḡaddā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡaddaytunna", "taḡaddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغدين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَغَدَّيْنَ • (taḡaddayna) (form V) /ta.ɣad.daj.na/\n# inflection of تَغَدَّى (taḡaddā):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡaddayna", "taḡaddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتغدين",
+      "tur": "verb",
+      "baslik": "يَتَغَدَّيْنَ • (yataḡaddayna) (form V) /ja.ta.ɣad.daj.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَغَدَّى (taḡaddā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḡaddayna", "taḡaddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغديا",
+      "tur": "verb",
+      "baslik": "تَغَدَّيَا • (taḡaddayā) (form V) /ta.ɣad.da.jaː/\n# inflection of تَغَدَّى (taḡaddā):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡaddayā", "taḡaddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغديتما",
+      "tur": "verb",
+      "baslik": "تَغَدَّيْتُمَا • (taḡaddaytumā) (form V) /ta.ɣad.daj.tu.maː/\n# second-person dual past active of تَغَدَّى (taḡaddā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡaddaytumā", "taḡaddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغدتا",
+      "tur": "verb",
+      "baslik": "تَغَدَّتَا • (taḡaddatā) (form V) /ta.ɣad.da.taː/\n# third-person feminine dual past active of تَغَدَّى (taḡaddā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡaddatā", "taḡaddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتغديان",
+      "tur": "verb",
+      "baslik": "تَتَغَدَّيَانِ • (tataḡaddayāni) (form V) /ta.ta.ɣad.da.jaː.ni/\n# inflection of تَغَدَّى (taḡaddā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḡaddayāni", "taḡaddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتغديان",
+      "tur": "verb",
+      "baslik": "يَتَغَدَّيَانِ • (yataḡaddayāni) (form V) /ja.ta.ɣad.da.jaː.ni/\n# third-person masculine dual non-past active indicative of تَغَدَّى (taḡaddā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḡaddayāni", "taḡaddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتغديا",
+      "tur": "verb",
+      "baslik": "تَتَغَدَّيَا • (tataḡaddayā) (form V) /ta.ta.ɣad.da.jaː/\n# inflection of تَغَدَّى (taḡaddā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḡaddayā", "taḡaddā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتغديا",
+      "tur": "verb",
+      "baslik": "يَتَغَدَّيَا • (yataḡaddayā) (form V) /ja.ta.ɣad.da.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of تَغَدَّى (taḡaddā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḡaddayā", "taḡaddā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تغدى", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,482 +1,335 @@
 {
   "kok": "جالس",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "جالس", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "جالسا",
-        "u": "جالسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جالسا (form III)\n# جَالَسَا (jālasā) /d͡ʒaː.la.saː/: third-person masculine dual past active of جَالَسَ (jālasa)\n# جَالِسَا (jālisā) /d͡ʒaː.li.saː/: second-person dual imperative of جَالَسَ (jālasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["jālasā", "jālasa", "jālisā"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "جالستما",
-        "u": "جالستما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جَالَسْتُمَا • (jālastumā) (form III) /d͡ʒaː.las.tu.maː/\n# second-person dual past active of جَالَسَ (jālasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["jālastumā", "jālasa"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "جالست",
-        "u": "جالست",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جالست (form III)\n# جَالَسْتُ (jālastu) /d͡ʒaː.las.tu/: first-person singular past active of جَالَسَ (jālasa)\n# جَالَسْتَ (jālasta) /d͡ʒaː.las.ta/: second-person masculine singular past active of جَالَسَ (jālasa)\n# جَالَسْتِ (jālasti) /d͡ʒaː.las.ti/: second-person feminine singular past active of جَالَسَ (jālasa)\n# جَالَسَتْ (jālasat) /d͡ʒaː.la.sat/: third-person feminine singular past active of جَ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["jālastu", "jālasa", "jālasta"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "جالسنا",
-        "u": "جالسنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جَالَسْنَا • (jālasnā) (form III) /d͡ʒaː.las.naː/\n# first-person plural past active of جَالَسَ (jālasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["jālasnā", "jālasa"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "جالستا",
-        "u": "جالستا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جَالَسَتَا • (jālasatā) (form III) /d͡ʒaː.la.sa.taː/\n# third-person feminine dual past active of جَالَسَ (jālasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["jālasatā", "jālasa"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "جالستم",
-        "u": "جالستم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جَالَسْتُمْ • (jālastum) (form III) /d͡ʒaː.las.tum/\n# second-person masculine plural past active of جَالَسَ (jālasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["jālastum", "jālasa"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "جالستن",
-        "u": "جالستن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جَالَسْتُنَّ • (jālastunna) (form III) /d͡ʒaː.las.tun.na/\n# second-person feminine plural past active of جَالَسَ (jālasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["jālastunna", "jālasa"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "جولست",
-        "u": "جولست",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جولست (form III)\n# جُولِسْتُ (jūlistu) /d͡ʒuː.lis.tu/: first-person singular past passive of جَالَسَ (jālasa)\n# جُولِسْتَ (jūlista) /d͡ʒuː.lis.ta/: second-person masculine singular past passive of جَالَسَ (jālasa)\n# جُولِسْتِ (jūlisti) /d͡ʒuː.lis.ti/: second-person feminine singular past passive of جَالَسَ (jālasa)\n# جُولِسَتْ (jūlisat) /d͡ʒuː.li.sat/: third-person feminine singular past passive o",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["jūlistu", "jālasa", "jūlista"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "جالسن",
-        "u": "جالسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جالسن (form III)\n# جَالَسْنَ (jālasna) /d͡ʒaː.las.na/: third-person feminine plural past active of جَالَسَ (jālasa)\n# جَالِسْنَ (jālisna) /d͡ʒaː.lis.na/: second-person feminine plural imperative of جَالَسَ (jālasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["jālasna", "jālasa", "jālisna"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "جالسوا",
-        "u": "جالسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جالسوا (form III)\n# جَالَسُوا (jālasū) /d͡ʒaː.la.suː/: third-person masculine plural past active of جَالَسَ (jālasa)\n# جَالِسُوا (jālisū) /d͡ʒaː.li.suː/: second-person masculine plural imperative of جَالَسَ (jālasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["jālasū", "jālasa", "jālisū"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "جولس",
-        "u": "جولس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جُولِسَ • (jūlisa) (form III) /d͡ʒuː.li.sa/\n# third-person masculine singular past passive of جَالَسَ (jālasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["jūlisa", "jālasa"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "جولسا",
-        "u": "جولسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جُولِسَا • (jūlisā) (form III) /d͡ʒuː.li.saː/\n# third-person masculine dual past passive of جَالَسَ (jālasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["jūlisā", "jālasa"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "جولستا",
-        "u": "جولستا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جُولِسَتَا • (jūlisatā) (form III) /d͡ʒuː.li.sa.taː/\n# third-person feminine dual past passive of جَالَسَ (jālasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["jūlisatā", "jālasa"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "جولستما",
-        "u": "جولستما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جُولِسْتُمَا • (jūlistumā) (form III) /d͡ʒuː.lis.tu.maː/\n# second-person dual past passive of جَالَسَ (jālasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["jūlistumā", "jālasa"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "جولستم",
-        "u": "جولستم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جُولِسْتُمْ • (jūlistum) (form III) /d͡ʒuː.lis.tum/\n# second-person masculine plural past passive of جَالَسَ (jālasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["jūlistum", "jālasa"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "جولسنا",
-        "u": "جولسنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جُولِسْنَا • (jūlisnā) (form III) /d͡ʒuː.lis.naː/\n# first-person plural past passive of جَالَسَ (jālasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["jūlisnā", "jālasa"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "جولسوا",
-        "u": "جولسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جُولِسُوا • (jūlisū) (form III) /d͡ʒuː.li.suː/\n# third-person masculine plural past passive of جَالَسَ (jālasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["jūlisū", "jālasa"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "جولستن",
-        "u": "جولستن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جُولِسْتُنَّ • (jūlistunna) (form III) /d͡ʒuː.lis.tun.na/\n# second-person feminine plural past passive of جَالَسَ (jālasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["jūlistunna", "jālasa"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "جولسن",
-        "u": "جولسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جُولِسْنَ • (jūlisna) (form III) /d͡ʒuː.lis.na/\n# third-person feminine plural past passive of جَالَسَ (jālasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["jūlisna", "jālasa"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "أجالس",
-        "u": "أجالس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجالس (form III)\n# أُجَالِسُ (ʔujālisu) /ʔu.d͡ʒaː.li.su/: first-person singular non-past active indicative of جَالَسَ (jālasa)\n# أُجَالَسُ (ʔujālasu) /ʔu.d͡ʒaː.la.su/: first-person singular non-past passive indicative of جَالَسَ (jālasa)\n# أُجَالِسَ (ʔujālisa) /ʔu.d͡ʒaː.li.sa/: first-person singular non-past active subjunctive of جَالَسَ (jālasa)\n# أُجَالَسَ (ʔujālasa) /ʔu.d͡ʒaː.la.sa/: first-pers",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔujālisu", "jālasa", "ʔujālasu"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "تجالس",
-        "u": "تجالس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجالس (form III)\n# تُجَالِسُ (tujālisu) /tu.d͡ʒaː.li.su/: inflection of جَالَسَ (jālasa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُجَالَسُ (tujālasu) /tu.d͡ʒaː.la.su/: inflection of جَالَسَ (jālasa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passiv",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tujālisu", "jālasa", "tujālasu"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "تجالسين",
-        "u": "تجالسين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجالسين (form III)\n# تُجَالِسِينَ (tujālisīna) /tu.d͡ʒaː.li.siː.na/: second-person feminine singular non-past active indicative of جَالَسَ (jālasa)\n# تُجَالَسِينَ (tujālasīna) /tu.d͡ʒaː.la.siː.na/: second-person feminine singular non-past passive indicative of جَالَسَ (jālasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tujālisīna", "jālasa", "tujālasīna"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "يجالسان",
-        "u": "يجالسان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يجالسان (form III)\n# يُجَالِسَانِ (yujālisāni) /ju.d͡ʒaː.li.saː.ni/: third-person masculine dual non-past active indicative of جَالَسَ (jālasa)\n# يُجَالَسَانِ (yujālasāni) /ju.d͡ʒaː.la.saː.ni/: third-person masculine dual non-past passive indicative of جَالَسَ (jālasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yujālisāni", "jālasa", "yujālasāni"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "يجالس",
-        "u": "يجالس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يجالس (form III)\n# يُجَالِسُ (yujālisu) /ju.d͡ʒaː.li.su/: third-person masculine singular non-past active indicative of جَالَسَ (jālasa)\n# يُجَالَسُ (yujālasu) /ju.d͡ʒaː.la.su/: third-person masculine singular non-past passive indicative of جَالَسَ (jālasa)\n# يُجَالِسَ (yujālisa) /ju.d͡ʒaː.li.sa/: third-person masculine singular non-past active subjunctive of جَالَسَ (jālasa)\n# يُجَالَسَ (yujālasa",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yujālisu", "jālasa", "yujālasu"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "نجالس",
-        "u": "نجالس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نجالس (form III)\n# نُجَالِسُ (nujālisu) /nu.d͡ʒaː.li.su/: first-person plural non-past active indicative of جَالَسَ (jālasa)\n# نُجَالَسُ (nujālasu) /nu.d͡ʒaː.la.su/: first-person plural non-past passive indicative of جَالَسَ (jālasa)\n# نُجَالِسَ (nujālisa) /nu.d͡ʒaː.li.sa/: first-person plural non-past active subjunctive of جَالَسَ (jālasa)\n# نُجَالَسَ (nujālasa) /nu.d͡ʒaː.la.sa/: first-person plu",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nujālisu", "jālasa", "nujālasu"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "تجالسن",
-        "u": "تجالسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجالسن (form III)\n# تُجَالِسْنَ (tujālisna) /tu.d͡ʒaː.lis.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of جَالَسَ (jālasa)\n# تُجَالَسْنَ (tujālasna) /tu.d͡ʒaː.las.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of جَالَسَ (jālasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tujālisna", "jālasa", "tujālasna"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "تجالسان",
-        "u": "تجالسان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجالسان (form III)\n# تُجَالِسَانِ (tujālisāni) /tu.d͡ʒaː.li.saː.ni/: inflection of جَالَسَ (jālasa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُجَالَسَانِ (tujālasāni) /tu.d͡ʒaː.la.saː.ni/: inflection of جَالَسَ (jālasa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tujālisāni", "jālasa", "tujālasāni"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "تجالسون",
-        "u": "تجالسون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجالسون (form III)\n# تُجَالِسُونَ (tujālisūna) /tu.d͡ʒaː.li.suː.na/: second-person masculine plural non-past active indicative of جَالَسَ (jālasa)\n# تُجَالَسُونَ (tujālasūna) /tu.d͡ʒaː.la.suː.na/: second-person masculine plural non-past passive indicative of جَالَسَ (jālasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tujālisūna", "jālasa", "tujālasūna"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "يجالسن",
-        "u": "يجالسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يجالسن (form III)\n# يُجَالِسْنَ (yujālisna) /ju.d͡ʒaː.lis.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of جَالَسَ (jālasa)\n# يُجَالَسْنَ (yujālasna) /ju.d͡ʒaː.las.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of جَالَسَ (jālasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yujālisna", "jālasa", "yujālasna"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "تجالسا",
-        "u": "تجالسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجالسا (form III)\n# تُجَالِسَا (tujālisā) /tu.d͡ʒaː.li.saː/: inflection of جَالَسَ (jālasa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُجَالَسَا (tujālasā) /tu.d͡ʒaː.la.saː/: inflection of جَالَسَ (jālasa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive su",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tujālisā", "jālasa", "tujālasā"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "يجالسون",
-        "u": "يجالسون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يجالسون (form III)\n# يُجَالِسُونَ (yujālisūna) /ju.d͡ʒaː.li.suː.na/: third-person masculine plural non-past active indicative of جَالَسَ (jālasa)\n# يُجَالَسُونَ (yujālasūna) /ju.d͡ʒaː.la.suː.na/: third-person masculine plural non-past passive indicative of جَالَسَ (jālasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yujālisūna", "jālasa", "yujālasūna"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "تجالسي",
-        "u": "تجالسي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجالسي (form III)\n# تُجَالِسِي (tujālisī) /tu.d͡ʒaː.li.siː/: second-person feminine singular non-past active subjunctive/jussive of جَالَسَ (jālasa)\n# تُجَالَسِي (tujālasī) /tu.d͡ʒaː.la.siː/: second-person feminine singular non-past passive subjunctive/jussive of جَالَسَ (jālasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tujālisī", "jālasa", "tujālasī"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "يجالسا",
-        "u": "يجالسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يجالسا (form III)\n# يُجَالِسَا (yujālisā) /ju.d͡ʒaː.li.saː/: third-person masculine dual non-past active subjunctive/jussive of جَالَسَ (jālasa)\n# يُجَالَسَا (yujālasā) /ju.d͡ʒaː.la.saː/: third-person masculine dual non-past passive subjunctive/jussive of جَالَسَ (jālasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yujālisā", "jālasa", "yujālasā"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "تجالسوا",
-        "u": "تجالسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجالسوا (form III)\n# تُجَالِسُوا (tujālisū) /tu.d͡ʒaː.li.suː/: second-person masculine plural non-past active subjunctive/jussive of جَالَسَ (jālasa)\n# تُجَالَسُوا (tujālasū) /tu.d͡ʒaː.la.suː/: second-person masculine plural non-past passive subjunctive/jussive of جَالَسَ (jālasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tujālisū", "jālasa", "tujālasū"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "يجالسوا",
-        "u": "يجالسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يجالسوا (form III)\n# يُجَالِسُوا (yujālisū) /ju.d͡ʒaː.li.suː/: third-person masculine plural non-past active subjunctive/jussive of جَالَسَ (jālasa)\n# يُجَالَسُوا (yujālasū) /ju.d͡ʒaː.la.suː/: third-person masculine plural non-past passive subjunctive/jussive of جَالَسَ (jālasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yujālisū", "jālasa", "yujālasū"],
-        "k": "جالس",
-        "yol": "kök"
-      },
-      {
-        "w": "جالسي",
-        "u": "جالسي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جَالِسِي • (jālisī) (form III) /d͡ʒaː.li.siː/\n# second-person feminine singular imperative of جَالَسَ (jālasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["jālisī", "jālasa"],
-        "k": "جالس",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "جل",
+  "ses": {
     "harf": "ج",
+    "fasil": "جل",
     "mahrec": "şeceriyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "جالسا",
+      "tur": "verb",
+      "baslik": "جالسا (form III)\n# جَالَسَا (jālasā) /d͡ʒaː.la.saː/: third-person masculine dual past active of جَالَسَ (jālasa)\n# جَالِسَا (jālisā) /d͡ʒaː.li.saː/: second-person dual imperative of جَالَسَ (jālasa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["jālasā", "jālasa", "jālisā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جالستما",
+      "tur": "verb",
+      "baslik": "جَالَسْتُمَا • (jālastumā) (form III) /d͡ʒaː.las.tu.maː/\n# second-person dual past active of جَالَسَ (jālasa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["jālastumā", "jālasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جالست",
+      "tur": "verb",
+      "baslik": "جالست (form III)\n# جَالَسْتُ (jālastu) /d͡ʒaː.las.tu/: first-person singular past active of جَالَسَ (jālasa)\n# جَالَسْتَ (jālasta) /d͡ʒaː.las.ta/: second-person masculine singular past active of جَالَسَ (jālasa)\n# جَالَسْتِ (jālasti) /d͡ʒaː.las.ti/: second-person feminine singular past active of جَالَسَ (jālasa)\n# جَالَسَتْ (jālasat) /d͡ʒaː.la.sat/: third-person feminine singular past active of جَ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["jālastu", "jālasa", "jālasta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جالسنا",
+      "tur": "verb",
+      "baslik": "جَالَسْنَا • (jālasnā) (form III) /d͡ʒaː.las.naː/\n# first-person plural past active of جَالَسَ (jālasa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["jālasnā", "jālasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جالستا",
+      "tur": "verb",
+      "baslik": "جَالَسَتَا • (jālasatā) (form III) /d͡ʒaː.la.sa.taː/\n# third-person feminine dual past active of جَالَسَ (jālasa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["jālasatā", "jālasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جالستم",
+      "tur": "verb",
+      "baslik": "جَالَسْتُمْ • (jālastum) (form III) /d͡ʒaː.las.tum/\n# second-person masculine plural past active of جَالَسَ (jālasa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["jālastum", "jālasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جالستن",
+      "tur": "verb",
+      "baslik": "جَالَسْتُنَّ • (jālastunna) (form III) /d͡ʒaː.las.tun.na/\n# second-person feminine plural past active of جَالَسَ (jālasa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["jālastunna", "jālasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جولست",
+      "tur": "verb",
+      "baslik": "جولست (form III)\n# جُولِسْتُ (jūlistu) /d͡ʒuː.lis.tu/: first-person singular past passive of جَالَسَ (jālasa)\n# جُولِسْتَ (jūlista) /d͡ʒuː.lis.ta/: second-person masculine singular past passive of جَالَسَ (jālasa)\n# جُولِسْتِ (jūlisti) /d͡ʒuː.lis.ti/: second-person feminine singular past passive of جَالَسَ (jālasa)\n# جُولِسَتْ (jūlisat) /d͡ʒuː.li.sat/: third-person feminine singular past passive o",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["jūlistu", "jālasa", "jūlista"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جالسن",
+      "tur": "verb",
+      "baslik": "جالسن (form III)\n# جَالَسْنَ (jālasna) /d͡ʒaː.las.na/: third-person feminine plural past active of جَالَسَ (jālasa)\n# جَالِسْنَ (jālisna) /d͡ʒaː.lis.na/: second-person feminine plural imperative of جَالَسَ (jālasa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["jālasna", "jālasa", "jālisna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جالسوا",
+      "tur": "verb",
+      "baslik": "جالسوا (form III)\n# جَالَسُوا (jālasū) /d͡ʒaː.la.suː/: third-person masculine plural past active of جَالَسَ (jālasa)\n# جَالِسُوا (jālisū) /d͡ʒaː.li.suː/: second-person masculine plural imperative of جَالَسَ (jālasa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["jālasū", "jālasa", "jālisū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جولس",
+      "tur": "verb",
+      "baslik": "جُولِسَ • (jūlisa) (form III) /d͡ʒuː.li.sa/\n# third-person masculine singular past passive of جَالَسَ (jālasa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["jūlisa", "jālasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جولسا",
+      "tur": "verb",
+      "baslik": "جُولِسَا • (jūlisā) (form III) /d͡ʒuː.li.saː/\n# third-person masculine dual past passive of جَالَسَ (jālasa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["jūlisā", "jālasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جولستا",
+      "tur": "verb",
+      "baslik": "جُولِسَتَا • (jūlisatā) (form III) /d͡ʒuː.li.sa.taː/\n# third-person feminine dual past passive of جَالَسَ (jālasa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["jūlisatā", "jālasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جولستما",
+      "tur": "verb",
+      "baslik": "جُولِسْتُمَا • (jūlistumā) (form III) /d͡ʒuː.lis.tu.maː/\n# second-person dual past passive of جَالَسَ (jālasa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["jūlistumā", "jālasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جولستم",
+      "tur": "verb",
+      "baslik": "جُولِسْتُمْ • (jūlistum) (form III) /d͡ʒuː.lis.tum/\n# second-person masculine plural past passive of جَالَسَ (jālasa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["jūlistum", "jālasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جولسنا",
+      "tur": "verb",
+      "baslik": "جُولِسْنَا • (jūlisnā) (form III) /d͡ʒuː.lis.naː/\n# first-person plural past passive of جَالَسَ (jālasa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["jūlisnā", "jālasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جولسوا",
+      "tur": "verb",
+      "baslik": "جُولِسُوا • (jūlisū) (form III) /d͡ʒuː.li.suː/\n# third-person masculine plural past passive of جَالَسَ (jālasa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["jūlisū", "jālasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جولستن",
+      "tur": "verb",
+      "baslik": "جُولِسْتُنَّ • (jūlistunna) (form III) /d͡ʒuː.lis.tun.na/\n# second-person feminine plural past passive of جَالَسَ (jālasa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["jūlistunna", "jālasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جولسن",
+      "tur": "verb",
+      "baslik": "جُولِسْنَ • (jūlisna) (form III) /d͡ʒuː.lis.na/\n# third-person feminine plural past passive of جَالَسَ (jālasa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["jūlisna", "jālasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجالس",
+      "tur": "verb",
+      "baslik": "أجالس (form III)\n# أُجَالِسُ (ʔujālisu) /ʔu.d͡ʒaː.li.su/: first-person singular non-past active indicative of جَالَسَ (jālasa)\n# أُجَالَسُ (ʔujālasu) /ʔu.d͡ʒaː.la.su/: first-person singular non-past passive indicative of جَالَسَ (jālasa)\n# أُجَالِسَ (ʔujālisa) /ʔu.d͡ʒaː.li.sa/: first-person singular non-past active subjunctive of جَالَسَ (jālasa)\n# أُجَالَسَ (ʔujālasa) /ʔu.d͡ʒaː.la.sa/: first-pers",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔujālisu", "jālasa", "ʔujālasu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجالس",
+      "tur": "verb",
+      "baslik": "تجالس (form III)\n# تُجَالِسُ (tujālisu) /tu.d͡ʒaː.li.su/: inflection of جَالَسَ (jālasa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُجَالَسُ (tujālasu) /tu.d͡ʒaː.la.su/: inflection of جَالَسَ (jālasa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passiv",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tujālisu", "jālasa", "tujālasu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجالسين",
+      "tur": "verb",
+      "baslik": "تجالسين (form III)\n# تُجَالِسِينَ (tujālisīna) /tu.d͡ʒaː.li.siː.na/: second-person feminine singular non-past active indicative of جَالَسَ (jālasa)\n# تُجَالَسِينَ (tujālasīna) /tu.d͡ʒaː.la.siː.na/: second-person feminine singular non-past passive indicative of جَالَسَ (jālasa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tujālisīna", "jālasa", "tujālasīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجالسان",
+      "tur": "verb",
+      "baslik": "يجالسان (form III)\n# يُجَالِسَانِ (yujālisāni) /ju.d͡ʒaː.li.saː.ni/: third-person masculine dual non-past active indicative of جَالَسَ (jālasa)\n# يُجَالَسَانِ (yujālasāni) /ju.d͡ʒaː.la.saː.ni/: third-person masculine dual non-past passive indicative of جَالَسَ (jālasa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yujālisāni", "jālasa", "yujālasāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجالس",
+      "tur": "verb",
+      "baslik": "يجالس (form III)\n# يُجَالِسُ (yujālisu) /ju.d͡ʒaː.li.su/: third-person masculine singular non-past active indicative of جَالَسَ (jālasa)\n# يُجَالَسُ (yujālasu) /ju.d͡ʒaː.la.su/: third-person masculine singular non-past passive indicative of جَالَسَ (jālasa)\n# يُجَالِسَ (yujālisa) /ju.d͡ʒaː.li.sa/: third-person masculine singular non-past active subjunctive of جَالَسَ (jālasa)\n# يُجَالَسَ (yujālasa",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yujālisu", "jālasa", "yujālasu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نجالس",
+      "tur": "verb",
+      "baslik": "نجالس (form III)\n# نُجَالِسُ (nujālisu) /nu.d͡ʒaː.li.su/: first-person plural non-past active indicative of جَالَسَ (jālasa)\n# نُجَالَسُ (nujālasu) /nu.d͡ʒaː.la.su/: first-person plural non-past passive indicative of جَالَسَ (jālasa)\n# نُجَالِسَ (nujālisa) /nu.d͡ʒaː.li.sa/: first-person plural non-past active subjunctive of جَالَسَ (jālasa)\n# نُجَالَسَ (nujālasa) /nu.d͡ʒaː.la.sa/: first-person plu",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nujālisu", "jālasa", "nujālasu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجالسن",
+      "tur": "verb",
+      "baslik": "تجالسن (form III)\n# تُجَالِسْنَ (tujālisna) /tu.d͡ʒaː.lis.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of جَالَسَ (jālasa)\n# تُجَالَسْنَ (tujālasna) /tu.d͡ʒaː.las.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of جَالَسَ (jālasa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tujālisna", "jālasa", "tujālasna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجالسان",
+      "tur": "verb",
+      "baslik": "تجالسان (form III)\n# تُجَالِسَانِ (tujālisāni) /tu.d͡ʒaː.li.saː.ni/: inflection of جَالَسَ (jālasa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُجَالَسَانِ (tujālasāni) /tu.d͡ʒaː.la.saː.ni/: inflection of جَالَسَ (jālasa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tujālisāni", "jālasa", "tujālasāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجالسون",
+      "tur": "verb",
+      "baslik": "تجالسون (form III)\n# تُجَالِسُونَ (tujālisūna) /tu.d͡ʒaː.li.suː.na/: second-person masculine plural non-past active indicative of جَالَسَ (jālasa)\n# تُجَالَسُونَ (tujālasūna) /tu.d͡ʒaː.la.suː.na/: second-person masculine plural non-past passive indicative of جَالَسَ (jālasa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tujālisūna", "jālasa", "tujālasūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجالسن",
+      "tur": "verb",
+      "baslik": "يجالسن (form III)\n# يُجَالِسْنَ (yujālisna) /ju.d͡ʒaː.lis.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of جَالَسَ (jālasa)\n# يُجَالَسْنَ (yujālasna) /ju.d͡ʒaː.las.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of جَالَسَ (jālasa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yujālisna", "jālasa", "yujālasna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجالسا",
+      "tur": "verb",
+      "baslik": "تجالسا (form III)\n# تُجَالِسَا (tujālisā) /tu.d͡ʒaː.li.saː/: inflection of جَالَسَ (jālasa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُجَالَسَا (tujālasā) /tu.d͡ʒaː.la.saː/: inflection of جَالَسَ (jālasa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive su",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tujālisā", "jālasa", "tujālasā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجالسون",
+      "tur": "verb",
+      "baslik": "يجالسون (form III)\n# يُجَالِسُونَ (yujālisūna) /ju.d͡ʒaː.li.suː.na/: third-person masculine plural non-past active indicative of جَالَسَ (jālasa)\n# يُجَالَسُونَ (yujālasūna) /ju.d͡ʒaː.la.suː.na/: third-person masculine plural non-past passive indicative of جَالَسَ (jālasa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yujālisūna", "jālasa", "yujālasūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجالسي",
+      "tur": "verb",
+      "baslik": "تجالسي (form III)\n# تُجَالِسِي (tujālisī) /tu.d͡ʒaː.li.siː/: second-person feminine singular non-past active subjunctive/jussive of جَالَسَ (jālasa)\n# تُجَالَسِي (tujālasī) /tu.d͡ʒaː.la.siː/: second-person feminine singular non-past passive subjunctive/jussive of جَالَسَ (jālasa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tujālisī", "jālasa", "tujālasī"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجالسا",
+      "tur": "verb",
+      "baslik": "يجالسا (form III)\n# يُجَالِسَا (yujālisā) /ju.d͡ʒaː.li.saː/: third-person masculine dual non-past active subjunctive/jussive of جَالَسَ (jālasa)\n# يُجَالَسَا (yujālasā) /ju.d͡ʒaː.la.saː/: third-person masculine dual non-past passive subjunctive/jussive of جَالَسَ (jālasa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yujālisā", "jālasa", "yujālasā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجالسوا",
+      "tur": "verb",
+      "baslik": "تجالسوا (form III)\n# تُجَالِسُوا (tujālisū) /tu.d͡ʒaː.li.suː/: second-person masculine plural non-past active subjunctive/jussive of جَالَسَ (jālasa)\n# تُجَالَسُوا (tujālasū) /tu.d͡ʒaː.la.suː/: second-person masculine plural non-past passive subjunctive/jussive of جَالَسَ (jālasa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tujālisū", "jālasa", "tujālasū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجالسوا",
+      "tur": "verb",
+      "baslik": "يجالسوا (form III)\n# يُجَالِسُوا (yujālisū) /ju.d͡ʒaː.li.suː/: third-person masculine plural non-past active subjunctive/jussive of جَالَسَ (jālasa)\n# يُجَالَسُوا (yujālasū) /ju.d͡ʒaː.la.suː/: third-person masculine plural non-past passive subjunctive/jussive of جَالَسَ (jālasa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yujālisū", "jālasa", "yujālasū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جالسي",
+      "tur": "verb",
+      "baslik": "جَالِسِي • (jālisī) (form III) /d͡ʒaː.li.siː/\n# second-person feminine singular imperative of جَالَسَ (jālasa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["jālisī", "jālasa"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "جالس", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

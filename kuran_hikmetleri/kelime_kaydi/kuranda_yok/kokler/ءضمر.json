@@ -1,365 +1,287 @@
 {
   "kok": "ءضمر",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءضمر", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أضمرت",
-        "u": "أضمرت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أضمرت (form IV)\n# أَضْمَرْتُ (ʔaḍmartu) /ʔadˤ.mar.tu/: first-person singular past active of أَضْمَرَ (ʔaḍmara)\n# أَضْمَرْتَ (ʔaḍmarta) /ʔadˤ.mar.ta/: second-person masculine singular past active of أَضْمَرَ (ʔaḍmara)\n# أَضْمَرْتِ (ʔaḍmarti) /ʔadˤ.mar.ti/: second-person feminine singular past active of أَضْمَرَ (ʔaḍmara)\n# أَضْمَرَتْ (ʔaḍmarat) /ʔadˤ.ma.rat/: third-person feminine singular past act",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḍmartu", "ʔaḍmara", "ʔaḍmarta"],
-        "k": "أضمر",
-        "yol": "kök"
-      },
-      {
-        "w": "أضمرا",
-        "u": "أضمرا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أضمرا (form IV)\n# أَضْمَرَا (ʔaḍmarā) /ʔadˤ.ma.raː/: third-person masculine dual past active of أَضْمَرَ (ʔaḍmara)\n# أُضْمِرَا (ʔuḍmirā) /ʔudˤ.mi.raː/: third-person masculine dual past passive of أَضْمَرَ (ʔaḍmara)\n# أَضْمِرَا (ʔaḍmirā) /ʔadˤ.mi.raː/: second-person dual imperative of أَضْمَرَ (ʔaḍmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḍmarā", "ʔaḍmara", "ʔuḍmirā"],
-        "k": "أضمر",
-        "yol": "kök"
-      },
-      {
-        "w": "أضمرتما",
-        "u": "أضمرتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أضمرتما (form IV)\n# أَضْمَرْتُمَا (ʔaḍmartumā) /ʔadˤ.mar.tu.maː/: second-person dual past active of أَضْمَرَ (ʔaḍmara)\n# أُضْمِرْتُمَا (ʔuḍmirtumā) /ʔudˤ.mir.tu.maː/: second-person dual past passive of أَضْمَرَ (ʔaḍmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḍmartumā", "ʔaḍmara", "ʔuḍmirtumā"],
-        "k": "أضمر",
-        "yol": "kök"
-      },
-      {
-        "w": "أضمرنا",
-        "u": "أضمرنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أضمرنا (form IV)\n# أَضْمَرْنَا (ʔaḍmarnā) /ʔadˤ.mar.naː/: first-person plural past active of أَضْمَرَ (ʔaḍmara)\n# أُضْمِرْنَا (ʔuḍmirnā) /ʔudˤ.mir.naː/: first-person plural past passive of أَضْمَرَ (ʔaḍmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḍmarnā", "ʔaḍmara", "ʔuḍmirnā"],
-        "k": "أضمر",
-        "yol": "kök"
-      },
-      {
-        "w": "أضمرتا",
-        "u": "أضمرتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أضمرتا (form IV)\n# أَضْمَرَتَا (ʔaḍmaratā) /ʔadˤ.ma.ra.taː/: third-person feminine dual past active of أَضْمَرَ (ʔaḍmara)\n# أُضْمِرَتَا (ʔuḍmiratā) /ʔudˤ.mi.ra.taː/: third-person feminine dual past passive of أَضْمَرَ (ʔaḍmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḍmaratā", "ʔaḍmara", "ʔuḍmiratā"],
-        "k": "أضمر",
-        "yol": "kök"
-      },
-      {
-        "w": "أضمروا",
-        "u": "أضمروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أضمروا (form IV)\n# أَضْمَرُوا (ʔaḍmarū) /ʔadˤ.ma.ruː/: third-person masculine plural past active of أَضْمَرَ (ʔaḍmara)\n# أُضْمِرُوا (ʔuḍmirū) /ʔudˤ.mi.ruː/: third-person masculine plural past passive of أَضْمَرَ (ʔaḍmara)\n# أَضْمِرُوا (ʔaḍmirū) /ʔadˤ.mi.ruː/: second-person masculine plural imperative of أَضْمَرَ (ʔaḍmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḍmarū", "ʔaḍmara", "ʔuḍmirū"],
-        "k": "أضمر",
-        "yol": "kök"
-      },
-      {
-        "w": "أضمرتم",
-        "u": "أضمرتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أضمرتم (form IV)\n# أَضْمَرْتُمْ (ʔaḍmartum) /ʔadˤ.mar.tum/: second-person masculine plural past active of أَضْمَرَ (ʔaḍmara)\n# أُضْمِرْتُمْ (ʔuḍmirtum) /ʔudˤ.mir.tum/: second-person masculine plural past passive of أَضْمَرَ (ʔaḍmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḍmartum", "ʔaḍmara", "ʔuḍmirtum"],
-        "k": "أضمر",
-        "yol": "kök"
-      },
-      {
-        "w": "أضمرتن",
-        "u": "أضمرتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أضمرتن (form IV)\n# أَضْمَرْتُنَّ (ʔaḍmartunna) /ʔadˤ.mar.tun.na/: second-person feminine plural past active of أَضْمَرَ (ʔaḍmara)\n# أُضْمِرْتُنَّ (ʔuḍmirtunna) /ʔudˤ.mir.tun.na/: second-person feminine plural past passive of أَضْمَرَ (ʔaḍmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḍmartunna", "ʔaḍmara", "ʔuḍmirtunna"],
-        "k": "أضمر",
-        "yol": "kök"
-      },
-      {
-        "w": "تضمرين",
-        "u": "تضمرين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تضمرين (form IV)\n# تُضْمِرِينَ (tuḍmirīna) /tudˤ.mi.riː.na/: second-person feminine singular non-past active indicative of أَضْمَرَ (ʔaḍmara)\n# تُضْمَرِينَ (tuḍmarīna) /tudˤ.ma.riː.na/: second-person feminine singular non-past passive indicative of أَضْمَرَ (ʔaḍmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḍmirīna", "ʔaḍmara", "tuḍmarīna"],
-        "k": "أضمر",
-        "yol": "kök"
-      },
-      {
-        "w": "أضمرن",
-        "u": "أضمرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أضمرن (form IV)\n# أَضْمَرْنَ (ʔaḍmarna) /ʔadˤ.mar.na/: third-person feminine plural past active of أَضْمَرَ (ʔaḍmara)\n# أُضْمِرْنَ (ʔuḍmirna) /ʔudˤ.mir.na/: third-person feminine plural past passive of أَضْمَرَ (ʔaḍmara)\n# أَضْمِرْنَ (ʔaḍmirna) /ʔadˤ.mir.na/: second-person feminine plural imperative of أَضْمَرَ (ʔaḍmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḍmarna", "ʔaḍmara", "ʔuḍmirna"],
-        "k": "أضمر",
-        "yol": "kök"
-      },
-      {
-        "w": "تضمران",
-        "u": "تضمران",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تضمران (form IV)\n# تُضْمِرَانِ (tuḍmirāni) /tudˤ.mi.raː.ni/: inflection of أَضْمَرَ (ʔaḍmara):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُضْمَرَانِ (tuḍmarāni) /tudˤ.ma.raː.ni/: inflection of أَضْمَرَ (ʔaḍmara):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḍmirāni", "ʔaḍmara", "tuḍmarāni"],
-        "k": "أضمر",
-        "yol": "kök"
-      },
-      {
-        "w": "يضمر",
-        "u": "يضمر",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يضمر (form IV)\n# يُضْمِرُ (yuḍmiru) /judˤ.mi.ru/: third-person masculine singular non-past active indicative of أَضْمَرَ (ʔaḍmara)\n# يُضْمَرُ (yuḍmaru) /judˤ.ma.ru/: third-person masculine singular non-past passive indicative of أَضْمَرَ (ʔaḍmara)\n# يُضْمِرَ (yuḍmira) /judˤ.mi.ra/: third-person masculine singular non-past active subjunctive of أَضْمَرَ (ʔaḍmara)\n# يُضْمَرَ (yuḍmara) /judˤ.ma.ra/: ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḍmiru", "ʔaḍmara", "yuḍmaru"],
-        "k": "أضمر",
-        "yol": "kök"
-      },
-      {
-        "w": "يضمران",
-        "u": "يضمران",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يضمران (form IV)\n# يُضْمِرَانِ (yuḍmirāni) /judˤ.mi.raː.ni/: third-person masculine dual non-past active indicative of أَضْمَرَ (ʔaḍmara)\n# يُضْمَرَانِ (yuḍmarāni) /judˤ.ma.raː.ni/: third-person masculine dual non-past passive indicative of أَضْمَرَ (ʔaḍmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḍmirāni", "ʔaḍmara", "yuḍmarāni"],
-        "k": "أضمر",
-        "yol": "kök"
-      },
-      {
-        "w": "تضمرون",
-        "u": "تضمرون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تضمرون (form IV)\n# تُضْمِرُونَ (tuḍmirūna) /tudˤ.mi.ruː.na/: second-person masculine plural non-past active indicative of أَضْمَرَ (ʔaḍmara)\n# تُضْمَرُونَ (tuḍmarūna) /tudˤ.ma.ruː.na/: second-person masculine plural non-past passive indicative of أَضْمَرَ (ʔaḍmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḍmirūna", "ʔaḍmara", "tuḍmarūna"],
-        "k": "أضمر",
-        "yol": "kök"
-      },
-      {
-        "w": "يضمرون",
-        "u": "يضمرون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يضمرون (form IV)\n# يُضْمِرُونَ (yuḍmirūna) /judˤ.mi.ruː.na/: third-person masculine plural non-past active indicative of أَضْمَرَ (ʔaḍmara)\n# يُضْمَرُونَ (yuḍmarūna) /judˤ.ma.ruː.na/: third-person masculine plural non-past passive indicative of أَضْمَرَ (ʔaḍmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḍmirūna", "ʔaḍmara", "yuḍmarūna"],
-        "k": "أضمر",
-        "yol": "kök"
-      },
-      {
-        "w": "تضمرن",
-        "u": "تضمرن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تضمرن (form IV)\n# تُضْمِرْنَ (tuḍmirna) /tudˤ.mir.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَضْمَرَ (ʔaḍmara)\n# تُضْمَرْنَ (tuḍmarna) /tudˤ.mar.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَضْمَرَ (ʔaḍmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḍmirna", "ʔaḍmara", "tuḍmarna"],
-        "k": "أضمر",
-        "yol": "kök"
-      },
-      {
-        "w": "نضمر",
-        "u": "نضمر",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نضمر (form IV)\n# نُضْمِرُ (nuḍmiru) /nudˤ.mi.ru/: first-person plural non-past active indicative of أَضْمَرَ (ʔaḍmara)\n# نُضْمَرُ (nuḍmaru) /nudˤ.ma.ru/: first-person plural non-past passive indicative of أَضْمَرَ (ʔaḍmara)\n# نُضْمِرَ (nuḍmira) /nudˤ.mi.ra/: first-person plural non-past active subjunctive of أَضْمَرَ (ʔaḍmara)\n# نُضْمَرَ (nuḍmara) /nudˤ.ma.ra/: first-person plural non-past passive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuḍmiru", "ʔaḍmara", "nuḍmaru"],
-        "k": "أضمر",
-        "yol": "kök"
-      },
-      {
-        "w": "تضمر",
-        "u": "تضمر",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تضمر (form IV)\n# تُضْمِرُ (tuḍmiru) /tudˤ.mi.ru/: inflection of أَضْمَرَ (ʔaḍmara):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُضْمَرُ (tuḍmaru) /tudˤ.ma.ru/: inflection of أَضْمَرَ (ʔaḍmara):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicati",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḍmiru", "ʔaḍmara", "tuḍmaru"],
-        "k": "أضمر",
-        "yol": "kök"
-      },
-      {
-        "w": "يضمرن",
-        "u": "يضمرن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يضمرن (form IV)\n# يُضْمِرْنَ (yuḍmirna) /judˤ.mir.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَضْمَرَ (ʔaḍmara)\n# يُضْمَرْنَ (yuḍmarna) /judˤ.mar.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَضْمَرَ (ʔaḍmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḍmirna", "ʔaḍmara", "yuḍmarna"],
-        "k": "أضمر",
-        "yol": "kök"
-      },
-      {
-        "w": "تضمري",
-        "u": "تضمري",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تضمري (form IV)\n# تُضْمِرِي (tuḍmirī) /tudˤ.mi.riː/: second-person feminine singular non-past active subjunctive/jussive of أَضْمَرَ (ʔaḍmara)\n# تُضْمَرِي (tuḍmarī) /tudˤ.ma.riː/: second-person feminine singular non-past passive subjunctive/jussive of أَضْمَرَ (ʔaḍmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḍmirī", "ʔaḍmara", "tuḍmarī"],
-        "k": "أضمر",
-        "yol": "kök"
-      },
-      {
-        "w": "تضمرا",
-        "u": "تضمرا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تضمرا (form IV)\n# تُضْمِرَا (tuḍmirā) /tudˤ.mi.raː/: inflection of أَضْمَرَ (ʔaḍmara):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُضْمَرَا (tuḍmarā) /tudˤ.ma.raː/: inflection of أَضْمَرَ (ʔaḍmara):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḍmirā", "ʔaḍmara", "tuḍmarā"],
-        "k": "أضمر",
-        "yol": "kök"
-      },
-      {
-        "w": "أضمري",
-        "u": "أضمري",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَضْمِرِي • (ʔaḍmirī) (form IV) /ʔadˤ.mi.riː/\n# second-person feminine singular imperative of أَضْمَرَ (ʔaḍmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḍmirī", "ʔaḍmara"],
-        "k": "أضمر",
-        "yol": "kök"
-      },
-      {
-        "w": "يضمرا",
-        "u": "يضمرا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يضمرا (form IV)\n# يُضْمِرَا (yuḍmirā) /judˤ.mi.raː/: third-person masculine dual non-past active subjunctive/jussive of أَضْمَرَ (ʔaḍmara)\n# يُضْمَرَا (yuḍmarā) /judˤ.ma.raː/: third-person masculine dual non-past passive subjunctive/jussive of أَضْمَرَ (ʔaḍmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḍmirā", "ʔaḍmara", "yuḍmarā"],
-        "k": "أضمر",
-        "yol": "kök"
-      },
-      {
-        "w": "يضمروا",
-        "u": "يضمروا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يضمروا (form IV)\n# يُضْمِرُوا (yuḍmirū) /judˤ.mi.ruː/: third-person masculine plural non-past active subjunctive/jussive of أَضْمَرَ (ʔaḍmara)\n# يُضْمَرُوا (yuḍmarū) /judˤ.ma.ruː/: third-person masculine plural non-past passive subjunctive/jussive of أَضْمَرَ (ʔaḍmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḍmirū", "ʔaḍmara", "yuḍmarū"],
-        "k": "أضمر",
-        "yol": "kök"
-      },
-      {
-        "w": "تضمروا",
-        "u": "تضمروا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تضمروا (form IV)\n# تُضْمِرُوا (tuḍmirū) /tudˤ.mi.ruː/: second-person masculine plural non-past active subjunctive/jussive of أَضْمَرَ (ʔaḍmara)\n# تُضْمَرُوا (tuḍmarū) /tudˤ.ma.ruː/: second-person masculine plural non-past passive subjunctive/jussive of أَضْمَرَ (ʔaḍmara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḍmirū", "ʔaḍmara", "tuḍmarū"],
-        "k": "أضمر",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "ضم",
+  "ses": {
     "harf": "ء",
+    "fasil": "ضم",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "أضمرت",
+      "tur": "verb",
+      "baslik": "أضمرت (form IV)\n# أَضْمَرْتُ (ʔaḍmartu) /ʔadˤ.mar.tu/: first-person singular past active of أَضْمَرَ (ʔaḍmara)\n# أَضْمَرْتَ (ʔaḍmarta) /ʔadˤ.mar.ta/: second-person masculine singular past active of أَضْمَرَ (ʔaḍmara)\n# أَضْمَرْتِ (ʔaḍmarti) /ʔadˤ.mar.ti/: second-person feminine singular past active of أَضْمَرَ (ʔaḍmara)\n# أَضْمَرَتْ (ʔaḍmarat) /ʔadˤ.ma.rat/: third-person feminine singular past act",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḍmartu", "ʔaḍmara", "ʔaḍmarta"],
+      "kok_yazilis": "أضمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أضمرا",
+      "tur": "verb",
+      "baslik": "أضمرا (form IV)\n# أَضْمَرَا (ʔaḍmarā) /ʔadˤ.ma.raː/: third-person masculine dual past active of أَضْمَرَ (ʔaḍmara)\n# أُضْمِرَا (ʔuḍmirā) /ʔudˤ.mi.raː/: third-person masculine dual past passive of أَضْمَرَ (ʔaḍmara)\n# أَضْمِرَا (ʔaḍmirā) /ʔadˤ.mi.raː/: second-person dual imperative of أَضْمَرَ (ʔaḍmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḍmarā", "ʔaḍmara", "ʔuḍmirā"],
+      "kok_yazilis": "أضمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أضمرتما",
+      "tur": "verb",
+      "baslik": "أضمرتما (form IV)\n# أَضْمَرْتُمَا (ʔaḍmartumā) /ʔadˤ.mar.tu.maː/: second-person dual past active of أَضْمَرَ (ʔaḍmara)\n# أُضْمِرْتُمَا (ʔuḍmirtumā) /ʔudˤ.mir.tu.maː/: second-person dual past passive of أَضْمَرَ (ʔaḍmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḍmartumā", "ʔaḍmara", "ʔuḍmirtumā"],
+      "kok_yazilis": "أضمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أضمرنا",
+      "tur": "verb",
+      "baslik": "أضمرنا (form IV)\n# أَضْمَرْنَا (ʔaḍmarnā) /ʔadˤ.mar.naː/: first-person plural past active of أَضْمَرَ (ʔaḍmara)\n# أُضْمِرْنَا (ʔuḍmirnā) /ʔudˤ.mir.naː/: first-person plural past passive of أَضْمَرَ (ʔaḍmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḍmarnā", "ʔaḍmara", "ʔuḍmirnā"],
+      "kok_yazilis": "أضمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أضمرتا",
+      "tur": "verb",
+      "baslik": "أضمرتا (form IV)\n# أَضْمَرَتَا (ʔaḍmaratā) /ʔadˤ.ma.ra.taː/: third-person feminine dual past active of أَضْمَرَ (ʔaḍmara)\n# أُضْمِرَتَا (ʔuḍmiratā) /ʔudˤ.mi.ra.taː/: third-person feminine dual past passive of أَضْمَرَ (ʔaḍmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḍmaratā", "ʔaḍmara", "ʔuḍmiratā"],
+      "kok_yazilis": "أضمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أضمروا",
+      "tur": "verb",
+      "baslik": "أضمروا (form IV)\n# أَضْمَرُوا (ʔaḍmarū) /ʔadˤ.ma.ruː/: third-person masculine plural past active of أَضْمَرَ (ʔaḍmara)\n# أُضْمِرُوا (ʔuḍmirū) /ʔudˤ.mi.ruː/: third-person masculine plural past passive of أَضْمَرَ (ʔaḍmara)\n# أَضْمِرُوا (ʔaḍmirū) /ʔadˤ.mi.ruː/: second-person masculine plural imperative of أَضْمَرَ (ʔaḍmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḍmarū", "ʔaḍmara", "ʔuḍmirū"],
+      "kok_yazilis": "أضمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أضمرتم",
+      "tur": "verb",
+      "baslik": "أضمرتم (form IV)\n# أَضْمَرْتُمْ (ʔaḍmartum) /ʔadˤ.mar.tum/: second-person masculine plural past active of أَضْمَرَ (ʔaḍmara)\n# أُضْمِرْتُمْ (ʔuḍmirtum) /ʔudˤ.mir.tum/: second-person masculine plural past passive of أَضْمَرَ (ʔaḍmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḍmartum", "ʔaḍmara", "ʔuḍmirtum"],
+      "kok_yazilis": "أضمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أضمرتن",
+      "tur": "verb",
+      "baslik": "أضمرتن (form IV)\n# أَضْمَرْتُنَّ (ʔaḍmartunna) /ʔadˤ.mar.tun.na/: second-person feminine plural past active of أَضْمَرَ (ʔaḍmara)\n# أُضْمِرْتُنَّ (ʔuḍmirtunna) /ʔudˤ.mir.tun.na/: second-person feminine plural past passive of أَضْمَرَ (ʔaḍmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḍmartunna", "ʔaḍmara", "ʔuḍmirtunna"],
+      "kok_yazilis": "أضمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضمرين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تضمرين (form IV)\n# تُضْمِرِينَ (tuḍmirīna) /tudˤ.mi.riː.na/: second-person feminine singular non-past active indicative of أَضْمَرَ (ʔaḍmara)\n# تُضْمَرِينَ (tuḍmarīna) /tudˤ.ma.riː.na/: second-person feminine singular non-past passive indicative of أَضْمَرَ (ʔaḍmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḍmirīna", "ʔaḍmara", "tuḍmarīna"],
+      "kok_yazilis": "أضمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أضمرن",
+      "tur": "verb",
+      "baslik": "أضمرن (form IV)\n# أَضْمَرْنَ (ʔaḍmarna) /ʔadˤ.mar.na/: third-person feminine plural past active of أَضْمَرَ (ʔaḍmara)\n# أُضْمِرْنَ (ʔuḍmirna) /ʔudˤ.mir.na/: third-person feminine plural past passive of أَضْمَرَ (ʔaḍmara)\n# أَضْمِرْنَ (ʔaḍmirna) /ʔadˤ.mir.na/: second-person feminine plural imperative of أَضْمَرَ (ʔaḍmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḍmarna", "ʔaḍmara", "ʔuḍmirna"],
+      "kok_yazilis": "أضمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضمران",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تضمران (form IV)\n# تُضْمِرَانِ (tuḍmirāni) /tudˤ.mi.raː.ni/: inflection of أَضْمَرَ (ʔaḍmara):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُضْمَرَانِ (tuḍmarāni) /tudˤ.ma.raː.ni/: inflection of أَضْمَرَ (ʔaḍmara):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḍmirāni", "ʔaḍmara", "tuḍmarāni"],
+      "kok_yazilis": "أضمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يضمر",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يضمر (form IV)\n# يُضْمِرُ (yuḍmiru) /judˤ.mi.ru/: third-person masculine singular non-past active indicative of أَضْمَرَ (ʔaḍmara)\n# يُضْمَرُ (yuḍmaru) /judˤ.ma.ru/: third-person masculine singular non-past passive indicative of أَضْمَرَ (ʔaḍmara)\n# يُضْمِرَ (yuḍmira) /judˤ.mi.ra/: third-person masculine singular non-past active subjunctive of أَضْمَرَ (ʔaḍmara)\n# يُضْمَرَ (yuḍmara) /judˤ.ma.ra/: ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḍmiru", "ʔaḍmara", "yuḍmaru"],
+      "kok_yazilis": "أضمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يضمران",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يضمران (form IV)\n# يُضْمِرَانِ (yuḍmirāni) /judˤ.mi.raː.ni/: third-person masculine dual non-past active indicative of أَضْمَرَ (ʔaḍmara)\n# يُضْمَرَانِ (yuḍmarāni) /judˤ.ma.raː.ni/: third-person masculine dual non-past passive indicative of أَضْمَرَ (ʔaḍmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḍmirāni", "ʔaḍmara", "yuḍmarāni"],
+      "kok_yazilis": "أضمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضمرون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تضمرون (form IV)\n# تُضْمِرُونَ (tuḍmirūna) /tudˤ.mi.ruː.na/: second-person masculine plural non-past active indicative of أَضْمَرَ (ʔaḍmara)\n# تُضْمَرُونَ (tuḍmarūna) /tudˤ.ma.ruː.na/: second-person masculine plural non-past passive indicative of أَضْمَرَ (ʔaḍmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḍmirūna", "ʔaḍmara", "tuḍmarūna"],
+      "kok_yazilis": "أضمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يضمرون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يضمرون (form IV)\n# يُضْمِرُونَ (yuḍmirūna) /judˤ.mi.ruː.na/: third-person masculine plural non-past active indicative of أَضْمَرَ (ʔaḍmara)\n# يُضْمَرُونَ (yuḍmarūna) /judˤ.ma.ruː.na/: third-person masculine plural non-past passive indicative of أَضْمَرَ (ʔaḍmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḍmirūna", "ʔaḍmara", "yuḍmarūna"],
+      "kok_yazilis": "أضمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضمرن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تضمرن (form IV)\n# تُضْمِرْنَ (tuḍmirna) /tudˤ.mir.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَضْمَرَ (ʔaḍmara)\n# تُضْمَرْنَ (tuḍmarna) /tudˤ.mar.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَضْمَرَ (ʔaḍmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḍmirna", "ʔaḍmara", "tuḍmarna"],
+      "kok_yazilis": "أضمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نضمر",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نضمر (form IV)\n# نُضْمِرُ (nuḍmiru) /nudˤ.mi.ru/: first-person plural non-past active indicative of أَضْمَرَ (ʔaḍmara)\n# نُضْمَرُ (nuḍmaru) /nudˤ.ma.ru/: first-person plural non-past passive indicative of أَضْمَرَ (ʔaḍmara)\n# نُضْمِرَ (nuḍmira) /nudˤ.mi.ra/: first-person plural non-past active subjunctive of أَضْمَرَ (ʔaḍmara)\n# نُضْمَرَ (nuḍmara) /nudˤ.ma.ra/: first-person plural non-past passive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuḍmiru", "ʔaḍmara", "nuḍmaru"],
+      "kok_yazilis": "أضمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضمر",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تضمر (form IV)\n# تُضْمِرُ (tuḍmiru) /tudˤ.mi.ru/: inflection of أَضْمَرَ (ʔaḍmara):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُضْمَرُ (tuḍmaru) /tudˤ.ma.ru/: inflection of أَضْمَرَ (ʔaḍmara):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicati",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḍmiru", "ʔaḍmara", "tuḍmaru"],
+      "kok_yazilis": "أضمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يضمرن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يضمرن (form IV)\n# يُضْمِرْنَ (yuḍmirna) /judˤ.mir.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَضْمَرَ (ʔaḍmara)\n# يُضْمَرْنَ (yuḍmarna) /judˤ.mar.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَضْمَرَ (ʔaḍmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḍmirna", "ʔaḍmara", "yuḍmarna"],
+      "kok_yazilis": "أضمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضمري",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تضمري (form IV)\n# تُضْمِرِي (tuḍmirī) /tudˤ.mi.riː/: second-person feminine singular non-past active subjunctive/jussive of أَضْمَرَ (ʔaḍmara)\n# تُضْمَرِي (tuḍmarī) /tudˤ.ma.riː/: second-person feminine singular non-past passive subjunctive/jussive of أَضْمَرَ (ʔaḍmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḍmirī", "ʔaḍmara", "tuḍmarī"],
+      "kok_yazilis": "أضمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضمرا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تضمرا (form IV)\n# تُضْمِرَا (tuḍmirā) /tudˤ.mi.raː/: inflection of أَضْمَرَ (ʔaḍmara):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُضْمَرَا (tuḍmarā) /tudˤ.ma.raː/: inflection of أَضْمَرَ (ʔaḍmara):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḍmirā", "ʔaḍmara", "tuḍmarā"],
+      "kok_yazilis": "أضمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أضمري",
+      "tur": "verb",
+      "baslik": "أَضْمِرِي • (ʔaḍmirī) (form IV) /ʔadˤ.mi.riː/\n# second-person feminine singular imperative of أَضْمَرَ (ʔaḍmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḍmirī", "ʔaḍmara"],
+      "kok_yazilis": "أضمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يضمرا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يضمرا (form IV)\n# يُضْمِرَا (yuḍmirā) /judˤ.mi.raː/: third-person masculine dual non-past active subjunctive/jussive of أَضْمَرَ (ʔaḍmara)\n# يُضْمَرَا (yuḍmarā) /judˤ.ma.raː/: third-person masculine dual non-past passive subjunctive/jussive of أَضْمَرَ (ʔaḍmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḍmirā", "ʔaḍmara", "yuḍmarā"],
+      "kok_yazilis": "أضمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يضمروا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يضمروا (form IV)\n# يُضْمِرُوا (yuḍmirū) /judˤ.mi.ruː/: third-person masculine plural non-past active subjunctive/jussive of أَضْمَرَ (ʔaḍmara)\n# يُضْمَرُوا (yuḍmarū) /judˤ.ma.ruː/: third-person masculine plural non-past passive subjunctive/jussive of أَضْمَرَ (ʔaḍmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḍmirū", "ʔaḍmara", "yuḍmarū"],
+      "kok_yazilis": "أضمر",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضمروا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تضمروا (form IV)\n# تُضْمِرُوا (tuḍmirū) /tudˤ.mi.ruː/: second-person masculine plural non-past active subjunctive/jussive of أَضْمَرَ (ʔaḍmara)\n# تُضْمَرُوا (tuḍmarū) /tudˤ.ma.ruː/: second-person masculine plural non-past passive subjunctive/jussive of أَضْمَرَ (ʔaḍmara)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḍmirū", "ʔaḍmara", "tuḍmarū"],
+      "kok_yazilis": "أضمر",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءضمر", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

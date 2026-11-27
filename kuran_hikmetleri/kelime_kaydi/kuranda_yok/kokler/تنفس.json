@@ -1,349 +1,250 @@
 {
   "kok": "تنفس",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تنفس", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يتنفس",
-        "u": "يتنفس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتنفس (form V)\n# يَتَنَفَّسُ (yatanaffasu) /ja.ta.naf.fa.su/: third-person masculine singular non-past active indicative of تَنَفَّسَ (tanaffasa)\n# يُتَنَفَّسُ (yutanaffasu) /ju.ta.naf.fa.su/: third-person masculine singular non-past passive indicative of تَنَفَّسَ (tanaffasa)\n# يَتَنَفَّسَ (yatanaffasa) /ja.ta.naf.fa.sa/: third-person masculine singular non-past active subjunctive of تَنَفَّسَ (t",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatanaffasu", "tanaffasa", "yutanaffasu"],
-        "k": "تنفس",
-        "yol": "kök"
-      },
-      {
-        "w": "تنفست",
-        "u": "تنفست",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تنفست (form V)\n# تَنَفَّسْتُ (tanaffastu) /ta.naf.fas.tu/: first-person singular past active of تَنَفَّسَ (tanaffasa)\n# تَنَفَّسْتَ (tanaffasta) /ta.naf.fas.ta/: second-person masculine singular past active of تَنَفَّسَ (tanaffasa)\n# تَنَفَّسْتِ (tanaffasti) /ta.naf.fas.ti/: second-person feminine singular past active of تَنَفَّسَ (tanaffasa)\n# تَنَفَّسَتْ (tanaffasat) /ta.naf.fa.sat/: third-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tanaffastu", "tanaffasa", "tanaffasta"],
-        "k": "تنفس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتنفس",
-        "u": "تتنفس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتنفس (form V)\n# تَتَنَفَّسُ (tatanaffasu) /ta.ta.naf.fa.su/: inflection of تَنَفَّسَ (tanaffasa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَنَفَّسَ (tatanaffasa) /ta.ta.naf.fa.sa/: inflection of تَنَفَّسَ (tanaffasa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatanaffasu", "tanaffasa", "tatanaffasa"],
-        "k": "تنفس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتنفسين",
-        "u": "تتنفسين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَنَفَّسِينَ • (tatanaffasīna) (form V) /ta.ta.naf.fa.siː.na/\n# second-person feminine singular non-past active indicative of تَنَفَّسَ (tanaffasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatanaffasīna", "tanaffasa"],
-        "k": "تنفس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتنفسي",
-        "u": "تتنفسي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَنَفَّسِي • (tatanaffasī) (form V) /ta.ta.naf.fa.siː/\n# second-person feminine singular non-past active subjunctive/jussive of تَنَفَّسَ (tanaffasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatanaffasī", "tanaffasa"],
-        "k": "تنفس",
-        "yol": "kök"
-      },
-      {
-        "w": "تنفسي",
-        "u": "تنفسي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَنَفَّسِي • (tanaffasī) (form V) /ta.naf.fa.siː/\n# second-person feminine singular imperative of تَنَفَّسَ (tanaffasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tanaffasī", "tanaffasa"],
-        "k": "تنفس",
-        "yol": "kök"
-      },
-      {
-        "w": "أتنفس",
-        "u": "أتنفس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتنفس (form V)\n# أَتَنَفَّسُ (ʔatanaffasu) /ʔa.ta.naf.fa.su/: first-person singular non-past active indicative of تَنَفَّسَ (tanaffasa)\n# أَتَنَفَّسَ (ʔatanaffasa) /ʔa.ta.naf.fa.sa/: first-person singular non-past active subjunctive of تَنَفَّسَ (tanaffasa)\n# أَتَنَفَّسْ (ʔatanaffas) /ʔa.ta.naf.fas/: first-person singular non-past active jussive of تَنَفَّسَ (tanaffasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔatanaffasu", "tanaffasa", "ʔatanaffasa"],
-        "k": "تنفس",
-        "yol": "kök"
-      },
-      {
-        "w": "تنفسنا",
-        "u": "تنفسنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنَفَّسْنَا • (tanaffasnā) (form V) /ta.naf.fas.naː/\n# first-person plural past active of تَنَفَّسَ (tanaffasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tanaffasnā", "tanaffasa"],
-        "k": "تنفس",
-        "yol": "kök"
-      },
-      {
-        "w": "نتنفس",
-        "u": "نتنفس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتنفس (form V)\n# نَتَنَفَّسُ (natanaffasu) /na.ta.naf.fa.su/: first-person plural non-past active indicative of تَنَفَّسَ (tanaffasa)\n# نَتَنَفَّسَ (natanaffasa) /na.ta.naf.fa.sa/: first-person plural non-past active subjunctive of تَنَفَّسَ (tanaffasa)\n# نَتَنَفَّسْ (natanaffas) /na.ta.naf.fas/: first-person plural non-past active jussive of تَنَفَّسَ (tanaffasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["natanaffasu", "tanaffasa", "natanaffasa"],
-        "k": "تنفس",
-        "yol": "kök"
-      },
-      {
-        "w": "تنفستم",
-        "u": "تنفستم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنَفَّسْتُمْ • (tanaffastum) (form V) /ta.naf.fas.tum/\n# second-person masculine plural past active of تَنَفَّسَ (tanaffasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tanaffastum", "tanaffasa"],
-        "k": "تنفس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتنفسون",
-        "u": "تتنفسون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَنَفَّسُونَ • (tatanaffasūna) (form V) /ta.ta.naf.fa.suː.na/\n# second-person masculine plural non-past active indicative of تَنَفَّسَ (tanaffasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatanaffasūna", "tanaffasa"],
-        "k": "تنفس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتنفسوا",
-        "u": "تتنفسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَنَفَّسُوا • (tatanaffasū) (form V) /ta.ta.naf.fa.suː/\n# second-person masculine plural non-past active subjunctive/jussive of تَنَفَّسَ (tanaffasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatanaffasū", "tanaffasa"],
-        "k": "تنفس",
-        "yol": "kök"
-      },
-      {
-        "w": "تنفسوا",
-        "u": "تنفسوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَنَفَّسُوا • (tanaffasū) (form V) /ta.naf.fa.suː/\n# inflection of تَنَفَّسَ (tanaffasa):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tanaffasū", "tanaffasa"],
-        "k": "تنفس",
-        "yol": "kök"
-      },
-      {
-        "w": "يتنفسون",
-        "u": "يتنفسون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَنَفَّسُونَ • (yatanaffasūna) (form V) /ja.ta.naf.fa.suː.na/\n# third-person masculine plural non-past active indicative of تَنَفَّسَ (tanaffasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatanaffasūna", "tanaffasa"],
-        "k": "تنفس",
-        "yol": "kök"
-      },
-      {
-        "w": "يتنفسوا",
-        "u": "يتنفسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَنَفَّسُوا • (yatanaffasū) (form V) /ja.ta.naf.fa.suː/\n# third-person masculine plural non-past active subjunctive/jussive of تَنَفَّسَ (tanaffasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatanaffasū", "tanaffasa"],
-        "k": "تنفس",
-        "yol": "kök"
-      },
-      {
-        "w": "تنفستن",
-        "u": "تنفستن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنَفَّسْتُنَّ • (tanaffastunna) (form V) /ta.naf.fas.tun.na/\n# second-person feminine plural past active of تَنَفَّسَ (tanaffasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tanaffastunna", "tanaffasa"],
-        "k": "تنفس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتنفسن",
-        "u": "تتنفسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَنَفَّسْنَ • (tatanaffasna) (form V) /ta.ta.naf.fas.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَنَفَّسَ (tanaffasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatanaffasna", "tanaffasa"],
-        "k": "تنفس",
-        "yol": "kök"
-      },
-      {
-        "w": "تنفسن",
-        "u": "تنفسن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَنَفَّسْنَ • (tanaffasna) (form V) /ta.naf.fas.na/\n# inflection of تَنَفَّسَ (tanaffasa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tanaffasna", "tanaffasa"],
-        "k": "تنفس",
-        "yol": "kök"
-      },
-      {
-        "w": "يتنفسن",
-        "u": "يتنفسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَنَفَّسْنَ • (yatanaffasna) (form V) /ja.ta.naf.fas.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَنَفَّسَ (tanaffasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatanaffasna", "tanaffasa"],
-        "k": "تنفس",
-        "yol": "kök"
-      },
-      {
-        "w": "تنفستما",
-        "u": "تنفستما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنَفَّسْتُمَا • (tanaffastumā) (form V) /ta.naf.fas.tu.maː/\n# second-person dual past active of تَنَفَّسَ (tanaffasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tanaffastumā", "tanaffasa"],
-        "k": "تنفس",
-        "yol": "kök"
-      },
-      {
-        "w": "تنفستا",
-        "u": "تنفستا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنَفَّسَتَا • (tanaffasatā) (form V) /ta.naf.fa.sa.taː/\n# third-person feminine dual past active of تَنَفَّسَ (tanaffasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tanaffasatā", "tanaffasa"],
-        "k": "تنفس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتنفسان",
-        "u": "تتنفسان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَنَفَّسَانِ • (tatanaffasāni) (form V) /ta.ta.naf.fa.saː.ni/\n# inflection of تَنَفَّسَ (tanaffasa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatanaffasāni", "tanaffasa"],
-        "k": "تنفس",
-        "yol": "kök"
-      },
-      {
-        "w": "يتنفسان",
-        "u": "يتنفسان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَنَفَّسَانِ • (yatanaffasāni) (form V) /ja.ta.naf.fa.saː.ni/\n# third-person masculine dual non-past active indicative of تَنَفَّسَ (tanaffasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatanaffasāni", "tanaffasa"],
-        "k": "تنفس",
-        "yol": "kök"
-      },
-      {
-        "w": "يتنفسا",
-        "u": "يتنفسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَنَفَّسَا • (yatanaffasā) (form V) /ja.ta.naf.fa.saː/\n# third-person masculine dual non-past active subjunctive/jussive of تَنَفَّسَ (tanaffasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatanaffasā", "tanaffasa"],
-        "k": "تنفس",
-        "yol": "kök"
-      },
-      {
-        "w": "تنفسا",
-        "u": "تنفسا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَنَفَّسَا • (tanaffasā) (form V) /ta.naf.fa.saː/\n# inflection of تَنَفَّسَ (tanaffasa):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tanaffasā", "tanaffasa"],
-        "k": "تنفس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتنفسا",
-        "u": "تتنفسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَنَفَّسَا • (tatanaffasā) (form V) /ta.ta.naf.fa.saː/\n# inflection of تَنَفَّسَ (tanaffasa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatanaffasā", "tanaffasa"],
-        "k": "تنفس",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تن",
+  "ses": {
     "harf": "ت",
+    "fasil": "تن",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "يتنفس",
+      "tur": "verb",
+      "baslik": "يتنفس (form V)\n# يَتَنَفَّسُ (yatanaffasu) /ja.ta.naf.fa.su/: third-person masculine singular non-past active indicative of تَنَفَّسَ (tanaffasa)\n# يُتَنَفَّسُ (yutanaffasu) /ju.ta.naf.fa.su/: third-person masculine singular non-past passive indicative of تَنَفَّسَ (tanaffasa)\n# يَتَنَفَّسَ (yatanaffasa) /ja.ta.naf.fa.sa/: third-person masculine singular non-past active subjunctive of تَنَفَّسَ (t",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatanaffasu", "tanaffasa", "yutanaffasu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنفست",
+      "tur": "verb",
+      "baslik": "تنفست (form V)\n# تَنَفَّسْتُ (tanaffastu) /ta.naf.fas.tu/: first-person singular past active of تَنَفَّسَ (tanaffasa)\n# تَنَفَّسْتَ (tanaffasta) /ta.naf.fas.ta/: second-person masculine singular past active of تَنَفَّسَ (tanaffasa)\n# تَنَفَّسْتِ (tanaffasti) /ta.naf.fas.ti/: second-person feminine singular past active of تَنَفَّسَ (tanaffasa)\n# تَنَفَّسَتْ (tanaffasat) /ta.naf.fa.sat/: third-perso",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tanaffastu", "tanaffasa", "tanaffasta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتنفس",
+      "tur": "verb",
+      "baslik": "تتنفس (form V)\n# تَتَنَفَّسُ (tatanaffasu) /ta.ta.naf.fa.su/: inflection of تَنَفَّسَ (tanaffasa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَنَفَّسَ (tatanaffasa) /ta.ta.naf.fa.sa/: inflection of تَنَفَّسَ (tanaffasa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatanaffasu", "tanaffasa", "tatanaffasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتنفسين",
+      "tur": "verb",
+      "baslik": "تَتَنَفَّسِينَ • (tatanaffasīna) (form V) /ta.ta.naf.fa.siː.na/\n# second-person feminine singular non-past active indicative of تَنَفَّسَ (tanaffasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatanaffasīna", "tanaffasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتنفسي",
+      "tur": "verb",
+      "baslik": "تَتَنَفَّسِي • (tatanaffasī) (form V) /ta.ta.naf.fa.siː/\n# second-person feminine singular non-past active subjunctive/jussive of تَنَفَّسَ (tanaffasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatanaffasī", "tanaffasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنفسي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَنَفَّسِي • (tanaffasī) (form V) /ta.naf.fa.siː/\n# second-person feminine singular imperative of تَنَفَّسَ (tanaffasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tanaffasī", "tanaffasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتنفس",
+      "tur": "verb",
+      "baslik": "أتنفس (form V)\n# أَتَنَفَّسُ (ʔatanaffasu) /ʔa.ta.naf.fa.su/: first-person singular non-past active indicative of تَنَفَّسَ (tanaffasa)\n# أَتَنَفَّسَ (ʔatanaffasa) /ʔa.ta.naf.fa.sa/: first-person singular non-past active subjunctive of تَنَفَّسَ (tanaffasa)\n# أَتَنَفَّسْ (ʔatanaffas) /ʔa.ta.naf.fas/: first-person singular non-past active jussive of تَنَفَّسَ (tanaffasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔatanaffasu", "tanaffasa", "ʔatanaffasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنفسنا",
+      "tur": "verb",
+      "baslik": "تَنَفَّسْنَا • (tanaffasnā) (form V) /ta.naf.fas.naː/\n# first-person plural past active of تَنَفَّسَ (tanaffasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tanaffasnā", "tanaffasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتنفس",
+      "tur": "verb",
+      "baslik": "نتنفس (form V)\n# نَتَنَفَّسُ (natanaffasu) /na.ta.naf.fa.su/: first-person plural non-past active indicative of تَنَفَّسَ (tanaffasa)\n# نَتَنَفَّسَ (natanaffasa) /na.ta.naf.fa.sa/: first-person plural non-past active subjunctive of تَنَفَّسَ (tanaffasa)\n# نَتَنَفَّسْ (natanaffas) /na.ta.naf.fas/: first-person plural non-past active jussive of تَنَفَّسَ (tanaffasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["natanaffasu", "tanaffasa", "natanaffasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنفستم",
+      "tur": "verb",
+      "baslik": "تَنَفَّسْتُمْ • (tanaffastum) (form V) /ta.naf.fas.tum/\n# second-person masculine plural past active of تَنَفَّسَ (tanaffasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tanaffastum", "tanaffasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتنفسون",
+      "tur": "verb",
+      "baslik": "تَتَنَفَّسُونَ • (tatanaffasūna) (form V) /ta.ta.naf.fa.suː.na/\n# second-person masculine plural non-past active indicative of تَنَفَّسَ (tanaffasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatanaffasūna", "tanaffasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتنفسوا",
+      "tur": "verb",
+      "baslik": "تَتَنَفَّسُوا • (tatanaffasū) (form V) /ta.ta.naf.fa.suː/\n# second-person masculine plural non-past active subjunctive/jussive of تَنَفَّسَ (tanaffasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatanaffasū", "tanaffasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنفسوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَنَفَّسُوا • (tanaffasū) (form V) /ta.naf.fa.suː/\n# inflection of تَنَفَّسَ (tanaffasa):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tanaffasū", "tanaffasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتنفسون",
+      "tur": "verb",
+      "baslik": "يَتَنَفَّسُونَ • (yatanaffasūna) (form V) /ja.ta.naf.fa.suː.na/\n# third-person masculine plural non-past active indicative of تَنَفَّسَ (tanaffasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatanaffasūna", "tanaffasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتنفسوا",
+      "tur": "verb",
+      "baslik": "يَتَنَفَّسُوا • (yatanaffasū) (form V) /ja.ta.naf.fa.suː/\n# third-person masculine plural non-past active subjunctive/jussive of تَنَفَّسَ (tanaffasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatanaffasū", "tanaffasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنفستن",
+      "tur": "verb",
+      "baslik": "تَنَفَّسْتُنَّ • (tanaffastunna) (form V) /ta.naf.fas.tun.na/\n# second-person feminine plural past active of تَنَفَّسَ (tanaffasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tanaffastunna", "tanaffasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتنفسن",
+      "tur": "verb",
+      "baslik": "تَتَنَفَّسْنَ • (tatanaffasna) (form V) /ta.ta.naf.fas.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَنَفَّسَ (tanaffasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatanaffasna", "tanaffasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنفسن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَنَفَّسْنَ • (tanaffasna) (form V) /ta.naf.fas.na/\n# inflection of تَنَفَّسَ (tanaffasa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tanaffasna", "tanaffasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتنفسن",
+      "tur": "verb",
+      "baslik": "يَتَنَفَّسْنَ • (yatanaffasna) (form V) /ja.ta.naf.fas.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَنَفَّسَ (tanaffasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatanaffasna", "tanaffasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنفستما",
+      "tur": "verb",
+      "baslik": "تَنَفَّسْتُمَا • (tanaffastumā) (form V) /ta.naf.fas.tu.maː/\n# second-person dual past active of تَنَفَّسَ (tanaffasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tanaffastumā", "tanaffasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنفستا",
+      "tur": "verb",
+      "baslik": "تَنَفَّسَتَا • (tanaffasatā) (form V) /ta.naf.fa.sa.taː/\n# third-person feminine dual past active of تَنَفَّسَ (tanaffasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tanaffasatā", "tanaffasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتنفسان",
+      "tur": "verb",
+      "baslik": "تَتَنَفَّسَانِ • (tatanaffasāni) (form V) /ta.ta.naf.fa.saː.ni/\n# inflection of تَنَفَّسَ (tanaffasa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatanaffasāni", "tanaffasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتنفسان",
+      "tur": "verb",
+      "baslik": "يَتَنَفَّسَانِ • (yatanaffasāni) (form V) /ja.ta.naf.fa.saː.ni/\n# third-person masculine dual non-past active indicative of تَنَفَّسَ (tanaffasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatanaffasāni", "tanaffasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتنفسا",
+      "tur": "verb",
+      "baslik": "يَتَنَفَّسَا • (yatanaffasā) (form V) /ja.ta.naf.fa.saː/\n# third-person masculine dual non-past active subjunctive/jussive of تَنَفَّسَ (tanaffasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatanaffasā", "tanaffasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنفسا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَنَفَّسَا • (tanaffasā) (form V) /ta.naf.fa.saː/\n# inflection of تَنَفَّسَ (tanaffasa):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tanaffasā", "tanaffasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتنفسا",
+      "tur": "verb",
+      "baslik": "تَتَنَفَّسَا • (tatanaffasā) (form V) /ta.ta.naf.fa.saː/\n# inflection of تَنَفَّسَ (tanaffasa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatanaffasā", "tanaffasa"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "تنفس", "r6"]
+  ],
+  "mana": {
     "ince": "respiratory.a.01",
     "orta": "adj.pert",
     "ust": "hâl ve vasıf",
@@ -351,22 +252,15 @@
     "dayanak_tanim": "pertaining to respiration",
     "synset_sayisi": 2
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["breathing.a.01", "respiratory.a.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["breathing.a.01", "respiratory.a.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

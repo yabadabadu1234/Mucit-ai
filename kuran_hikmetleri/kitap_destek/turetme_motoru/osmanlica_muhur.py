@@ -9,6 +9,10 @@ import threading
 import time
 import urllib.request
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import kok_sadelestir as KS
+import mesmu as MS
+
 KOK = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 GIRDI = os.path.join(KOK, 'kelime_kaydi')
 CIKTI = os.path.join(GIRDI, 'osmanlica')
@@ -19,7 +23,7 @@ UC = {'evren': 'https://evren-llmapi.ssyz.org.tr/v1/chat/completions',
 ARAP = re.compile(r'[؀-ۿݐ-ݿﭐ-﷿ﹰ-﻿]')
 LATIN_KELIME = re.compile(r"[A-Za-zÇĞİÖŞÜçğıöşüÂÎÛâîû][A-Za-zÇĞİÖŞÜçğıöşüÂÎÛâîû'’‘\-]{2,}")
 TRANSLIT = re.compile(r'[ḍṣṭẓḥšġḫʔʕʿʾāīūēōṯḏǧŝñ]')
-ATLA_ANAHTAR = {'r', 'u', 'w', 'k', 'yol', 'kok', 'kelime', 'lemma', 'merkez_kok', 'ilk_gecis', 'dayanak_synset', 'ince', 'orta', 'zaman'}
+ATLA_ANAHTAR = {'r', 'u', 'w', 'k', 'yol', 'kok', 'kelime', 'lemma', 'merkez_kok', 'ilk_gecis', 'dayanak_synset', 'ince', 'orta', 'zaman', 'ilk', 'okunus', 'madde', 'tur', 'tur_guven', 'tur_dayanak', 'baz_fiil', 'baz_ayrim', 'fiil_kaynak', 'fiil_guven', 'sinif', 'hal', 'bab', 'bab_no', 'nasil', 'harf', 'fasil', 'mahrec', 'bolge', 'mana_yontem', 'kok_yazilis', 'bag', 'etim_no'}
 
 KORU = re.compile(r"(?:[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF\u200c\u200d](?:[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF\u200c\u200d\u0640 ]*[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF\u200c\u200d])?)"
                   r"|/[^/\n]{1,80}/|[A-Za-zÇĞİÖŞÜçğıöşüÂÎÛâîû'’‘\-]*[ḍṣṭẓḥšġḫʔʕʿʾāīūēōṯḏǧŝñḍṣṭẓḥ][A-Za-zÇĞİÖŞÜçğıöşüÂÎÛâîû'’‘\-ḍṣṭẓḥšġḫʔʕʿʾāīūēōṯḏǧŝñ]*")
@@ -62,7 +66,6 @@ def gez(d, cb):
     """cb(tur, metin, bağlam): 'A' bağlamsız metin; 'M' müştak satırı; 'K' kelime biçimi; 'S' fiil sapı; 'KA' kök anlamı.
     M, K, S, KA için metindeki makine üretimi Türkçe karşılık modele VERİLMEZ; çeviri Arapça ve İngilizce kaynaktan yapılır."""
     kok = d.get('kok', '')
-    ka = (d.get('sozlukler') or {}).get('kok_anlamlari') or {}
     k0 = {'kok': kok}
 
     def X(tur, m, **ek):
@@ -76,25 +79,31 @@ def gez(d, cb):
         if isinstance(o, str) and cevrilir(yol, o):
             return cb('A', o, None)
         return o
+
+    def zaman(x):
+        z = x.get('zaman') or ''
+        return z if isinstance(z, str) else ' '.join(z)
     cikti = {}
     for k, v in d.items():
-        if k == 'mustaklar':
-            cikti[k] = {kal: [[(X('M', x, kalip=kal, arapca=row[1] if len(row) > 1 else '', idx=row[0], tanik=row[5] if len(row) > 5 else '') if i == 3 else (r(x, ['mustaklar']) if isinstance(x, str) and i not in (2, 4) else x)) for i, x in enumerate(row)] for row in rows] for kal, rows in v.items()}
+        if k == 'mustak':
+            cikti[k] = {kal: [[(X('M', x, kalip=kal, arapca=row[2] if len(row) > 2 else '', idx=j, tanik=row[6] if len(row) > 6 else '') if i == 4 else (r(x, ['mustak']) if isinstance(x, str) and i not in (3, 5) else x)) for i, x in enumerate(row)] for j, row in enumerate(rows)] for kal, rows in v.items()}
         elif k == 'kelimeler':
             ks = []
-            for x in v:
+            for g in v:
                 y = {}
-                for kk, vv in x.items():
-                    if kk == 'turkce' and isinstance(vv, dict):
-                        y[kk] = {a: (X('K', b, tip=a, arapca=x.get('kelime', '') if a == 'yuzey' else x.get('lemma', ''), sozluk_turu=x.get('tur', ''), bab=x.get('bab', ''), zaman=x.get('zaman', '')) if a in ('yuzey', 'lemma') else r(b, ['kelimeler', 'turkce', a])) for a, b in vv.items()}
+                for kk, vv in g.items():
+                    if kk == 'tr':
+                        y[kk] = X('K', vv, tip='lemma', arapca=g.get('lemma', ''), sozluk_turu=g.get('hal', ''), bab=g.get('bab', ''), zaman='')
+                    elif kk == 'bicimler':
+                        y[kk] = [{a: (X('K', b, tip='yuzey', arapca=x.get('kelime', ''), sozluk_turu=g.get('hal', ''), bab=g.get('bab', ''), zaman=zaman(x)) if a == 'tr' else r(b, ['kelimeler', 'bicimler', a])) for a, b in x.items()} for x in vv]
                     else:
                         y[kk] = r(vv, ['kelimeler', kk])
                 ks.append(y)
             cikti[k] = ks
-        elif k == 'turkce_fiil' and isinstance(v, dict):
-            cikti[k] = {a: (X('S', b) if a == 'sap' else r(b, [k, a])) for a, b in v.items()}
-        elif k == 'sozlukler' and isinstance(v, dict):
-            cikti[k] = {a: ({c: (X('KA', e, adlar=[t.strip() for t in re.findall(r'(?:^|;\s*)([^:;]{1,30}):', e)]) if c == 'turkce' else r(e, [k, a, c])) for c, e in b.items()} if a == 'kok_anlamlari' and isinstance(b, dict) else r(b, [k, a])) for a, b in v.items()}
+        elif k == 'fiil':
+            cikti[k] = X('S', v)
+        elif k == 'anlam':
+            cikti[k] = X('KA', v, adlar=[t.strip() for t in re.findall(r'(?:^|;\s*)([^:;]{1,30}):', v)]) if isinstance(v, str) else v
         else:
             cikti[k] = r(v, [k])
     return cikti
@@ -223,21 +232,19 @@ def sor(anahtar, model, kimlik, ogeler):
     return None
 
 
-DOSSIER_HARIC = {'kok_anlamlari', 'etimoloji', 'eyupipler_kok_anlami'}
+DOSSIER_HARIC = {'anlam', 'anlam_ihtimal', 'anlam_varlik', 'anlam_eyup', 'etimoloji', 'esas_manalar'}
+KIMLIK_ANAHTAR = ('lugat', 'mekayis', 'cebel', 'ontoloji', 'vikisozluk', 'vikisozluk_etimolojiler', 'etymarab', 'ek_lugat', 'tr_ek', 'zemahseri', 'prototip')
 
 
 def kimlik_kur(d):
     """Dosyadaki BÜTÜN Arapça ve İngilizce içerik (sözlükler, Cebel, Zemahşerî, prototip, WordNet dayanağı). Yalnız bizim ürettiğimiz Türkçe karşılıklar ve Türkçe metinler hariçtir."""
-    s = {k: v for k, v in (d.get('sozlukler') or {}).items() if k not in DOSSIER_HARIC}
-    o = {'kok': d.get('kok', ''), 'sozlukler': s}
-    for k in ('ses_mana_tasnif', 'hakikat_mecaz_tasnif', 'prototip_yayilim_tasnif'):
-        o[k] = d.get(k)
-    o['wordnet_dayanak_tanimi'] = (d.get('mana_tasnif') or {}).get('dayanak_tanim', '')
+    o = {'kok': d.get('kok', ''), 'kaynaklar': {k: d[k] for k in KIMLIK_ANAHTAR if d.get(k)}}
+    o['wordnet_dayanak_tanimi'] = (d.get('mana') or {}).get('dayanak_tanim', '')
     return o
 
 
 def cevir_dosya(anahtar, model, f, dosya_h):
-    d = json.load(open(f, encoding='utf-8'))
+    d = MS.genislet(json.load(open(f, encoding='utf-8')))
     d.pop('osmanlica', None)
     A, U = toplama(d)
     kimlik = kimlik_kur(d)
@@ -248,8 +255,8 @@ def cevir_dosya(anahtar, model, f, dosya_h):
         if tur == 'K':
             o = {'t': 'kelime_formu', 'arapca': c['arapca'], 'tur': c['sozluk_turu'], 'bab': c['bab'], 'zaman': c['zaman'], 'lemma_mi': c['tip'] == 'lemma'}
         elif tur == 'M':
-            kl = (d.get('kaliplar') or {}).get(str(c['idx'])) or ['', '', '', '']
-            o = {'t': 'mustak_formu', 'arapca': c['arapca'], 'kalip': c['kalip'], 'vezin': kl[1], 'vezin_kaynagi': kl[2], 'ingilizce_tanik': c['tanik'], 'idx': c['idx']}
+            kl = d['mustak'][c['kalip']][c['idx']]
+            o = {'t': 'mustak_formu', 'arapca': c['arapca'], 'kalip': c['kalip'], 'vezin': kl[0], 'vezin_kaynagi': kl[1], 'ingilizce_tanik': c['tanik'], 'idx': c['idx']}
         elif tur == 'S':
             o = {'t': 'fiil_sapi', 'kok': c['kok']}
         else:
@@ -321,7 +328,7 @@ def tamam_mi(d):
 
 
 def yaz(f, kume):
-    d = json.load(open(f, encoding='utf-8'))
+    d = MS.genislet(json.load(open(f, encoding='utf-8')))
     d.pop('osmanlica', None)
     A, U = toplama(d)
     eksik = [m for m in A if m not in hafiza] + [k for k in U if k not in hafiza]
@@ -332,7 +339,7 @@ def yaz(f, kume):
     hedef = os.path.join(CIKTI, kume, 'kokler', os.path.basename(f))
     os.makedirs(os.path.dirname(hedef), exist_ok=True)
     tmp = hedef + '.yeni'
-    json.dump(guven_topla(donustur(d), d), open(tmp, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    open(tmp, 'w', encoding='utf-8').write(KS.okunur(guven_topla(donustur(d), d)) + '\n')
     os.replace(tmp, hedef)
     return True
 
@@ -340,26 +347,23 @@ def yaz(f, kume):
 def guven_topla(c, d):
     """Satır başına güven ve durum etiketleri dosya başına tek bölümde toplanır (padişah emri)."""
     say = collections.OrderedDict()
-    for kal, rows in d.get('mustaklar', {}).items():
+    for kal, rows in d.get('mustak', {}).items():
         for row in rows:
-            if len(row) > 4 and row[4]:
-                say.setdefault('müştak', collections.Counter())[row[4]] += 1
-    for x in d.get('kelimeler', []):
-        ld = (x.get('turkce') or {}).get('lemma_durum')
-        if ld:
-            say.setdefault('kelime', collections.Counter())[ld] += 1
-    fg = (d.get('turkce_fiil') or {}).get('guven')
-    if fg:
-        say['fiil sapı'] = collections.Counter({fg: 1})
-    for kal, rows in c.get('mustaklar', {}).items():
+            if len(row) > 5 and row[5]:
+                say.setdefault('müştak', collections.Counter())[row[5]] += 1
+    for g in d.get('kelimeler', []):
+        if g.get('tr'):
+            say.setdefault('kelime', collections.Counter())[g.get('tr_durum') or KS.VARSAYILAN_DURUM] += 1
+    if d.get('fiil_guven'):
+        say['fiil sapı'] = collections.Counter({d['fiil_guven']: 1})
+    for kal, rows in c.get('mustak', {}).items():
         for row in rows:
-            if len(row) > 4:
-                row[4] = ''
-    for x in c.get('kelimeler', []):
-        if isinstance(x.get('turkce'), dict) and 'lemma_durum' in x['turkce']:
-            x['turkce']['lemma_durum'] = ''
-    if isinstance(c.get('turkce_fiil'), dict) and 'guven' in c['turkce_fiil']:
-        c['turkce_fiil']['guven'] = ''
+            if len(row) > 5:
+                row[5] = ''
+    for g in c.get('kelimeler', []):
+        g.pop('tr_durum', None)
+    if 'fiil_guven' in c:
+        c['fiil_guven'] = ''
     c['guven_etiketi'] = {k: dict(v) for k, v in say.items()}
     return c
 
@@ -369,7 +373,7 @@ def kok_dosyalari(kume):
 
     def gecis(f):
         try:
-            return -json.load(open(f, encoding='utf-8')).get('kuran_gecisleri', 0)
+            return -(json.load(open(f, encoding='utf-8')).get('kuran') or {}).get('morfoloji_gecis', 0)
         except Exception:
             return 0
     return sorted(fs, key=lambda f: (gecis(f), f))
@@ -388,7 +392,7 @@ if __name__ == '__main__':
                 return f
             for _ in range(3):
                 cevir_dosya(anahtar, model, f, dosya_h)
-                if tamam_mi(json.load(open(f, encoding='utf-8'))):
+                if tamam_mi(MS.genislet(json.load(open(f, encoding='utf-8')))):
                     break
             yaz(f, kume)
             print('DOSYA', os.path.basename(f), sayac, flush=True)
@@ -401,7 +405,7 @@ if __name__ == '__main__':
         f = os.path.join(GIRDI, kume, 'kokler', sys.argv[4] + '.json')
         for _ in range(3):
             cevir_dosya(anahtar, model, f, dosya_h)
-            if tamam_mi(json.load(open(f, encoding='utf-8'))):
+            if tamam_mi(MS.genislet(json.load(open(f, encoding='utf-8')))):
                 break
         yaz(f, kume)
         print('tamam', f, sayac, flush=True)

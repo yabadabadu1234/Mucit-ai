@@ -1,594 +1,482 @@
 {
   "kok": "ترجم",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ترجم", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "etymarab": {
-      "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
-      "latin": "TRǦM",
-      "dolu": true,
-      "kok_maddesi": "Back to library EtymArab TRǦM ترجم BP – • HDAL • © SG | 15Feb2021 √TRǦM “root” ▪ TRǦM_1 ‘interpreter, dragoman; to interpret, translate’ ↗ turǧumān ▪ TRǦM_2 ‘’ ↗ Other values, now obsolete, include: TRǦM_ ‘’ : † ▪ Huehnergard2011#RGM: from Sem *RGM ‘to say, speak, call, shout, contest, lay claim to’; there may have been a t-stem *t-RGM ‘to speak to one another, translate’ already in protoSem times. ▪ The theory, summarized by Huehnergard in the prededing paragraph, is contested by a more recent one that argues (on account of the ending -annu ) that the Akk term is a borrowing from Luwian – Smelik2013:141 (referring to Starke1993, Rahim1963 and Von Soden1989). ▪ … ▪ BDB1906, Zimmern1914, CAD: Akk targumānu , turgumānu (CAD: targumannu ~ targamannu , turgumannu , targumjanu , from oAkk on) ‘interpreter, dragoman’, Aram targᵊmānā , turgᵊmānā , Ar tarǧamān ~ tarǧumān , turǧumān ; Hbr tirgēm , Aram Syr targem , Ar tarǧama ‘to interpret, translate’; pBiblHbr targūm ‘translation, Targum’. – Cf. perh. also Ar raǧama ‘to conjecture, opine’. ▪ Wellhausen1897 notes that Ar tarǧīm (vn. of D-stem raǧǧama ) has the same meaning as ḍarb bi’l-ḥaṣy , i.e. ‘[the art of prophesy from] throwing pebbles’. From this, the sense of ‘to assume, conjecture’ could be derived: ‘to throw stones > to interpret the results, try to give them a meaning > to assume’. »Vielleicht hängt damit auch [Hbr] trgm zusammen: ‘enträtseln’, dann ‘dolmetschen’« (207, fn. 4), i.e., tarǧama , too, may be dependent on the heathen practice: ‘to throw stones > to interpret the results, solve the riddle > to explain, interpret’; cf. raǧǧama , D-stem of ↗ raǧama (with Wellhausen1897:111-2 on ĭrtiǧām , ruǧmaẗ , raǧm ). ▪ BDB1906: (on Akk targumānu ‘interpreter’, Hbr tirgēm , Aram Syr targem , Ar tarǧama ‘to interpret, translate’): perh. from √RGM, cf. Ar raǧama ‘to conjecture, opine’. ▪ Zimmern1914: Ar tarǧamān ~ tarǧumān ~ turǧumān targᵊmānā ~ turgᵊmānā targumānu ~ turgumānu ‘interpreter’. ▪ Huehnergard2011#RGM: Ar tarǧumān ‘translator’ targᵊmānā targumannu ‘interpreter’, either from Akk ragāmu ‘to speak, call, contest’ or from an earlier Sem t-stem vb., * t-rgm ‘to speak to one another, translate’. ▪ Smelik2013:141: “Although most scholars still hold that [Akk] targumannu(m) is related to the root [Akk] ragāmu ‘to call out’, this connection—and the supposedly inherited meaning of ‘speaking out aloud’ of the root TRGM—is almost certainly wrong. The noun-formation of targumannu(m) is neither Akk nor Sem, but points to a Luwian loanword in Akk. Via Aram, targumannu(m) was adopted in Hbr and Ar, and later in many IE langs.” ▪ Huehnergard2011#RGM: Not from Ar tarǧumān , but akin to the latter’s source, is Engl targum , from Mishnaic Hbr targūm ‘translation’, from Aram targᵊmtā ( targᵊmā ), back-formation from targᵊmānā , from Akk targumannu ‘interpreter’. ↗ turǧumān . Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
-      "kelime_maddeleri": []
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "مترجم",
-        "u": "مترجم",
-        "p": "noun",
-        "n": "1",
-        "h": "ar-noun+",
-        "e": "مُتَرْجِم • (mutarjim) m (plural مُتَرْجِمُون (mutarjimūn), feminine مُتَرْجِمَة (mutarjima))",
-        "t": "Derived from the active participle of the verb تَرْجَمَ (tarjama, “to translate”).",
-        "s": [
-          ["if-ar-lect", ""],
-          ["ar-active participle", "Derived from the active participle"]
-        ],
-        "synonyms": ["تُرْجُمَان"],
-        "g": ["translator; interpreter", "biographer"],
-        "r": ["mutarjim"],
-        "ipa": ["/mu.tar.d͡ʒim/"],
-        "ds": [
-          ["az", "mütərcim", ""],
-          ["fa-cls", "مُتَرْجِم", "mutarjim"],
-          ["ota", "مترجم", ""]
-        ],
-        "el": [
-          ["تَرْجَمَ", "ترجم#Arabic"]
-        ],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "مترجم",
-        "u": "مترجم",
-        "p": "adj",
-        "n": "2",
-        "h": "ar-adj+",
-        "e": "مُتَرْجَم • (mutarjam) (feminine مُتَرْجَمَة (mutarjama), masculine plural مُتَرْجَمُون (mutarjamūn), feminine plural مُتَرْجَمَات (mutarjamāt))",
-        "t": "Derived from the passive participle of the verb تَرْجَمَ (tarjama, “to translate”), from the root ت ر ج م (t r j m).",
-        "s": [
-          ["ar-passive participle", "Derived from the passive participle"],
-          ["ar-root", "ت ر ج م (t r j m)"]
-        ],
-        "g": ["translated", "synchronized"],
-        "r": ["mutarjam"],
-        "ipa": ["/mu.tar.d͡ʒam/"],
-        "el": [
-          ["تَرْجَمَ", "ترجم#Arabic"],
-          ["translate", "translate"],
-          ["ت ر ج م", "Appendix:Arabic roots/ت ر ج م"]
-        ],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "ترجمة",
-        "u": "ترجمة",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "تَرْجَمَة • (tarjama) f (plural تَرَاجِم (tarājim) or تَرْجَمَات (tarjamāt))",
-        "t": "See the root ت ر ج م (t r j m) for more.\nCompare Classical Syriac ܬܘܪܓܡܐ (turgāmā), Hebrew תַּרְגּוּם (targúm), Amharic ትርጉም (tərgum).",
-        "s": [
-          [
-            "etymon",
-            "[Appendix:Glossary#derived_terms|Derived]] from\", \"terms\" : [ { \"is_uncertain\" : true, \"children\" : [ { \"keyword_abbrev\" : \"denom.\", \"keyword_label\" : \"Denominal verb from\", \"terms\" : [ { \"translitera"
-          ],
-          ["ar-root", "ت ر ج م (t r j m)"],
-          ["cog", "Classical Syriac ܬܘܪܓܡܐ (turgāmā)"],
-          ["cog", "Hebrew תַּרְגּוּם (targúm)"],
-          ["cog", "Amharic ትርጉም (tərgum)"],
-          ["etymon", ""]
-        ],
-        "g": [
-          "verbal noun of تَرْجَمَ (tarjama) (form Iq)",
-          "translation",
-          "interpretation",
-          "biography",
-          "introduction, preface, foreword",
-          "subtitle (“textual versions of the dialog in films”)"
-        ],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["تَرْجَمَ"],
-        "r": ["tarjama"],
-        "ipa": ["/tar.d͡ʒa.ma/"],
-        "ds": [
-          ["az", "tərcümə", ""],
-          ["ba", "тәржемә", "tärjimä"],
-          ["fa-cls", "تَرْجُمَه", "tarjuma"],
-          ["kk", "тәржіма", "tärjima"],
-          ["ms", "terjemah", ""],
-          ["ota", "ترجمه", ""],
-          ["sw", "tarijama", ""],
-          ["tt", "тәрҗемә", "tärcemä"],
-          ["tk", "terjime", ""]
-        ],
-        "el": [
-          ["ت ر ج م", "Appendix:Arabic roots/ت ر ج م"],
-          ["ܬܘܪܓܡܐ", "ܬܘܪܓܡܐ#Classical_Syriac"],
-          ["תַּרְגּוּם", "תרגום#Hebrew"],
-          ["ትርጉም", "ትርጉም#Amharic"]
-        ],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "ترجمان",
-        "u": "ترجمان",
-        "p": "noun",
-        "n": "1",
-        "h": "ar-noun",
-        "e": "تُرْجُمَان or تَرْجُمَان or تَرْجَمَان • (turjumān or tarjumān or tarjamān) m (plural تَرَاجِمَة (tarājima) or تَرَاجِيم (tarājīm) or تَرَاجِم (tarājim))",
-        "t": "From Classical Syriac ܬܰܪܓܡܳܢܳܐ (targmānā, “interpreter”), itself from Akkadian 𒅴𒁄 (targumannum, “interpreter”); see the root entry for further information.",
-        "s": [
-          ["ar-rootbox", ""],
-          ["bor", "Classical Syriac ܬܰܪܓܡܳܢܳܐ (targmānā, “interpreter”)"],
-          ["der", "Akkadian 𒅴𒁄 (targumannum, “interpreter”)"]
-        ],
-        "g": ["translator", "interpreter, dragoman", "cicerone", "guide"],
-        "r": ["turjumān", "tarjumān", "tarjamān"],
-        "ipa": ["/tur.d͡ʒu.maːn/", "/tar.d͡ʒu.maːn/", "/tar.d͡ʒa.maːn/"],
-        "ds": [
-          ["mt", "turċman", ""],
-          ["grk", "δραγομάνος", ""],
-          ["fa-cls", "ترجمان", "tarjumān"],
-          ["es", "dragomán", ""],
-          ["es", "truchimán", ""],
-          ["es", "trujimán", ""],
-          ["es", "trujamán", ""],
-          ["az", "tərcüman", ""],
-          ["ota", "ترجمان", ""],
-          ["ug", "تەرجىمان", "terjiman"],
-          ["uz", "tarjimon", ""]
-        ],
-        "el": [
-          ["ܬܰܪܓܡܳܢܳܐ", "ܬܪܓܡܢܐ#Classical_Syriac"],
-          ["𒅴𒁄", "targumannum#Akkadian"]
-        ],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "ترجم",
-        "u": "ترجم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb",
-        "e": "تَرْجَمَ • (tarjama) Iq (non-past يُتَرْجِمُ (yutarjimu), verbal noun تَرْجَمَة (tarjama))",
-        "t": "Possibly from Classical Syriac ܬܰܪܓܶܡ, or possibly a back-formation from تَرْجُمَان (tarjumān).",
-        "s": [
-          ["ar-rootbox", ""],
-          [
-            "etymon",
-            "[Appendix:Glossary#derived_terms|Derived]] from\", \"terms\" : [ { \"is_uncertain\" : true, \"children\" : [ ], \"lang_name\" : \"Classical Syriac\", \"term\" : \"ܬܰܪܓܶܡ\", \"status\" : \"missing\", \"lang\" : \"syc\" } ], "
-          ],
-          [
-            "etymon",
-            "Etymology tree\nAkkadian 𒅴𒁄 (targumannum)\nClassical Syriac ܬܪܓܡܢܐ (targmānā)denom.\nClassical Syriac ܬܰܪܓܶܡder.?\n▲\nClassical Syriac ܬܰܪܓܡܳܢܳܐ (targmānā)bor.\nArabic تَرْجُمَان (tarjumān)bf.?\nArabic ترجم\n"
-          ]
-        ],
-        "g": [
-          "to translate",
-          "to interpret",
-          "to expound, to treat by way of explanation",
-          "to give biographical information on"
-        ],
-        "r": ["tarjama"],
-        "ipa": ["/tar.d͡ʒa.ma/"],
-        "el": [
-          ["ܬܰܪܓܶܡ", "ܬܪܓܡ#Classical_Syriac"],
-          ["تَرْجُمَان", "ترجمان#Arabic"]
-        ],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "ترجمات",
-        "u": "ترجمات",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "تَرْجَمَات • (tarjamāt) f pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of تَرْجَمَة (tarjama): translations"],
-        "tag": ["form-of", "plural"],
-        "fo": ["تَرْجَمَة"],
-        "r": ["tarjamāt"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "تراجم",
-        "u": "تراجم",
-        "p": "noun",
-        "n": "2",
-        "h": "ar-head",
-        "e": "تَرَاجِم • (tarājim) f pl",
-        "g": ["plural of تَرْجَمَة (tarjama, “translations”)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["تَرْجَمَة"],
-        "r": ["tarājim"],
-        "ipa": ["/ta.raː.d͡ʒim/"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "مترجمون",
-        "u": "مترجمون",
-        "p": "noun",
-        "n": "1",
-        "h": "ar-head",
-        "e": "مُتَرْجِمُون • (mutarjimūn) m pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of مُتَرْجِم (mutarjim)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["مُتَرْجِم"],
-        "r": ["mutarjimūn"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "مترجمون",
-        "u": "مترجمون",
-        "p": "adj",
-        "n": "2",
-        "h": "ar-head",
-        "e": "مُتَرْجَمُون • (mutarjamūn)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["masculine plural of مُتَرْجَم (mutarjam)"],
-        "tag": ["form-of", "masculine", "plural"],
-        "fo": ["مُتَرْجَم"],
-        "r": ["mutarjamūn"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "يترجم",
-        "u": "يترجم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يترجم (form Iq)\n# يُتَرْجِمُ (yutarjimu) /ju.tar.d͡ʒi.mu/: third-person masculine singular non-past active indicative of تَرْجَمَ (tarjama)\n# يُتَرْجَمُ (yutarjamu) /ju.tar.d͡ʒa.mu/: third-person masculine singular non-past passive indicative of تَرْجَمَ (tarjama)\n# يُتَرْجِمَ (yutarjima) /ju.tar.d͡ʒi.ma/: third-person masculine singular non-past active subjunctive of تَرْجَمَ (tarjama)\n# يُتَرْجَ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yutarjimu", "tarjama", "yutarjamu"],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "مترجمة",
-        "u": "مترجمة",
-        "p": "adj",
-        "h": "ar-head",
-        "e": "مُتَرْجَمَة • (mutarjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["feminine singular of مُتَرْجَم (mutarjam)"],
-        "tag": ["feminine", "form-of", "singular"],
-        "fo": ["مُتَرْجَم"],
-        "r": ["mutarjama"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "ترجمت",
-        "u": "ترجمت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ترجمت (form Iq)\n# تَرْجَمْتُ (tarjamtu) /tar.d͡ʒam.tu/: first-person singular past active of تَرْجَمَ (tarjama)\n# تَرْجَمْتَ (tarjamta) /tar.d͡ʒam.ta/: second-person masculine singular past active of تَرْجَمَ (tarjama)\n# تَرْجَمْتِ (tarjamti) /tar.d͡ʒam.ti/: second-person feminine singular past active of تَرْجَمَ (tarjama)\n# تَرْجَمَتْ (tarjamat) /tar.d͡ʒa.mat/: third-person feminine singular past",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tarjamtu", "tarjama", "tarjamta"],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "تترجم",
-        "u": "تترجم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تترجم (form Iq)\n# تُتَرْجِمُ (tutarjimu) /tu.tar.d͡ʒi.mu/: inflection of تَرْجَمَ (tarjama):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُتَرْجَمُ (tutarjamu) /tu.tar.d͡ʒa.mu/: inflection of تَرْجَمَ (tarjama):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tutarjimu", "tarjama", "tutarjamu"],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "تترجمين",
-        "u": "تترجمين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تترجمين (form Iq)\n# تُتَرْجِمِينَ (tutarjimīna) /tu.tar.d͡ʒi.miː.na/: second-person feminine singular non-past active indicative of تَرْجَمَ (tarjama)\n# تُتَرْجَمِينَ (tutarjamīna) /tu.tar.d͡ʒa.miː.na/: second-person feminine singular non-past passive indicative of تَرْجَمَ (tarjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tutarjimīna", "tarjama", "tutarjamīna"],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "تترجمي",
-        "u": "تترجمي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تترجمي (form Iq)\n# تُتَرْجِمِي (tutarjimī) /tu.tar.d͡ʒi.miː/: second-person feminine singular non-past active subjunctive/jussive of تَرْجَمَ (tarjama)\n# تُتَرْجَمِي (tutarjamī) /tu.tar.d͡ʒa.miː/: second-person feminine singular non-past passive subjunctive/jussive of تَرْجَمَ (tarjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tutarjimī", "tarjama", "tutarjamī"],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "ترجمي",
-        "u": "ترجمي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَرْجِمِي • (tarjimī) (form Iq) /tar.d͡ʒi.miː/\n# second-person feminine singular imperative of تَرْجَمَ (tarjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tarjimī", "tarjama"],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "أترجم",
-        "u": "أترجم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أترجم (form Iq)\n# أُتَرْجِمُ (ʔutarjimu) /ʔu.tar.d͡ʒi.mu/: first-person singular non-past active indicative of تَرْجَمَ (tarjama)\n# أُتَرْجَمُ (ʔutarjamu) /ʔu.tar.d͡ʒa.mu/: first-person singular non-past passive indicative of تَرْجَمَ (tarjama)\n# أُتَرْجِمَ (ʔutarjima) /ʔu.tar.d͡ʒi.ma/: first-person singular non-past active subjunctive of تَرْجَمَ (tarjama)\n# أُتَرْجَمَ (ʔutarjama) /ʔu.tar.d͡ʒa.ma",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʔutarjimu", "tarjama", "ʔutarjamu"],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "ترجمنا",
-        "u": "ترجمنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ترجمنا (form Iq)\n# تَرْجَمْنَا (tarjamnā) /tar.d͡ʒam.naː/: first-person plural past active of تَرْجَمَ (tarjama)\n# تُرْجِمْنَا (turjimnā) /tur.d͡ʒim.naː/: first-person plural past passive of تَرْجَمَ (tarjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tarjamnā", "tarjama", "turjimnā"],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "نترجم",
-        "u": "نترجم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نترجم (form Iq)\n# نُتَرْجِمُ (nutarjimu) /nu.tar.d͡ʒi.mu/: first-person plural non-past active indicative of تَرْجَمَ (tarjama)\n# نُتَرْجَمُ (nutarjamu) /nu.tar.d͡ʒa.mu/: first-person plural non-past passive indicative of تَرْجَمَ (tarjama)\n# نُتَرْجِمَ (nutarjima) /nu.tar.d͡ʒi.ma/: first-person plural non-past active subjunctive of تَرْجَمَ (tarjama)\n# نُتَرْجَمَ (nutarjama) /nu.tar.d͡ʒa.ma/: fir",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["nutarjimu", "tarjama", "nutarjamu"],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "ترجمتم",
-        "u": "ترجمتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ترجمتم (form Iq)\n# تَرْجَمْتُمْ (tarjamtum) /tar.d͡ʒam.tum/: second-person masculine plural past active of تَرْجَمَ (tarjama)\n# تُرْجِمْتُمْ (turjimtum) /tur.d͡ʒim.tum/: second-person masculine plural past passive of تَرْجَمَ (tarjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tarjamtum", "tarjama", "turjimtum"],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "تترجمون",
-        "u": "تترجمون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تترجمون (form Iq)\n# تُتَرْجِمُونَ (tutarjimūna) /tu.tar.d͡ʒi.muː.na/: second-person masculine plural non-past active indicative of تَرْجَمَ (tarjama)\n# تُتَرْجَمُونَ (tutarjamūna) /tu.tar.d͡ʒa.muː.na/: second-person masculine plural non-past passive indicative of تَرْجَمَ (tarjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tutarjimūna", "tarjama", "tutarjamūna"],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "تترجموا",
-        "u": "تترجموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تترجموا (form Iq)\n# تُتَرْجِمُوا (tutarjimū) /tu.tar.d͡ʒi.muː/: second-person masculine plural non-past active subjunctive/jussive of تَرْجَمَ (tarjama)\n# تُتَرْجَمُوا (tutarjamū) /tu.tar.d͡ʒa.muː/: second-person masculine plural non-past passive subjunctive/jussive of تَرْجَمَ (tarjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tutarjimū", "tarjama", "tutarjamū"],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "ترجموا",
-        "u": "ترجموا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ترجموا (form Iq)\n# تَرْجَمُوا (tarjamū) /tar.d͡ʒa.muː/: third-person masculine plural past active of تَرْجَمَ (tarjama)\n# تُرْجِمُوا (turjimū) /tur.d͡ʒi.muː/: third-person masculine plural past passive of تَرْجَمَ (tarjama)\n# تَرْجِمُوا (tarjimū) /tar.d͡ʒi.muː/: second-person masculine plural imperative of تَرْجَمَ (tarjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tarjamū", "tarjama", "turjimū"],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "يترجمون",
-        "u": "يترجمون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يترجمون (form Iq)\n# يُتَرْجِمُونَ (yutarjimūna) /ju.tar.d͡ʒi.muː.na/: third-person masculine plural non-past active indicative of تَرْجَمَ (tarjama)\n# يُتَرْجَمُونَ (yutarjamūna) /ju.tar.d͡ʒa.muː.na/: third-person masculine plural non-past passive indicative of تَرْجَمَ (tarjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yutarjimūna", "tarjama", "yutarjamūna"],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "يترجموا",
-        "u": "يترجموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يترجموا (form Iq)\n# يُتَرْجِمُوا (yutarjimū) /ju.tar.d͡ʒi.muː/: third-person masculine plural non-past active subjunctive/jussive of تَرْجَمَ (tarjama)\n# يُتَرْجَمُوا (yutarjamū) /ju.tar.d͡ʒa.muː/: third-person masculine plural non-past passive subjunctive/jussive of تَرْجَمَ (tarjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yutarjimū", "tarjama", "yutarjamū"],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "ترجمتن",
-        "u": "ترجمتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ترجمتن (form Iq)\n# تَرْجَمْتُنَّ (tarjamtunna) /tar.d͡ʒam.tun.na/: second-person feminine plural past active of تَرْجَمَ (tarjama)\n# تُرْجِمْتُنَّ (turjimtunna) /tur.d͡ʒim.tun.na/: second-person feminine plural past passive of تَرْجَمَ (tarjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tarjamtunna", "tarjama", "turjimtunna"],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "تترجمن",
-        "u": "تترجمن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تترجمن (form Iq)\n# تُتَرْجِمْنَ (tutarjimna) /tu.tar.d͡ʒim.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of تَرْجَمَ (tarjama)\n# تُتَرْجَمْنَ (tutarjamna) /tu.tar.d͡ʒam.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of تَرْجَمَ (tarjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tutarjimna", "tarjama", "tutarjamna"],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "ترجمن",
-        "u": "ترجمن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ترجمن (form Iq)\n# تَرْجَمْنَ (tarjamna) /tar.d͡ʒam.na/: third-person feminine plural past active of تَرْجَمَ (tarjama)\n# تُرْجِمْنَ (turjimna) /tur.d͡ʒim.na/: third-person feminine plural past passive of تَرْجَمَ (tarjama)\n# تَرْجِمْنَ (tarjimna) /tar.d͡ʒim.na/: second-person feminine plural imperative of تَرْجَمَ (tarjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tarjamna", "tarjama", "turjimna"],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "يترجمن",
-        "u": "يترجمن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يترجمن (form Iq)\n# يُتَرْجِمْنَ (yutarjimna) /ju.tar.d͡ʒim.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of تَرْجَمَ (tarjama)\n# يُتَرْجَمْنَ (yutarjamna) /ju.tar.d͡ʒam.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of تَرْجَمَ (tarjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yutarjimna", "tarjama", "yutarjamna"],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "ترجما",
-        "u": "ترجما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ترجما (form Iq)\n# تَرْجَمَا (tarjamā) /tar.d͡ʒa.maː/: third-person masculine dual past active of تَرْجَمَ (tarjama)\n# تُرْجِمَا (turjimā) /tur.d͡ʒi.maː/: third-person masculine dual past passive of تَرْجَمَ (tarjama)\n# تَرْجِمَا (tarjimā) /tar.d͡ʒi.maː/: second-person dual imperative of تَرْجَمَ (tarjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tarjamā", "tarjama", "turjimā"],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "يترجمان",
-        "u": "يترجمان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يترجمان (form Iq)\n# يُتَرْجِمَانِ (yutarjimāni) /ju.tar.d͡ʒi.maː.ni/: third-person masculine dual non-past active indicative of تَرْجَمَ (tarjama)\n# يُتَرْجَمَانِ (yutarjamāni) /ju.tar.d͡ʒa.maː.ni/: third-person masculine dual non-past passive indicative of تَرْجَمَ (tarjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yutarjimāni", "tarjama", "yutarjamāni"],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "تترجمان",
-        "u": "تترجمان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تترجمان (form Iq)\n# تُتَرْجِمَانِ (tutarjimāni) /tu.tar.d͡ʒi.maː.ni/: inflection of تَرْجَمَ (tarjama):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُتَرْجَمَانِ (tutarjamāni) /tu.tar.d͡ʒa.maː.ni/: inflection of تَرْجَمَ (tarjama):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicat",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tutarjimāni", "tarjama", "tutarjamāni"],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "ترجمتما",
-        "u": "ترجمتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ترجمتما (form Iq)\n# تَرْجَمْتُمَا (tarjamtumā) /tar.d͡ʒam.tu.maː/: second-person dual past active of تَرْجَمَ (tarjama)\n# تُرْجِمْتُمَا (turjimtumā) /tur.d͡ʒim.tu.maː/: second-person dual past passive of تَرْجَمَ (tarjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tarjamtumā", "tarjama", "turjimtumā"],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "يترجما",
-        "u": "يترجما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يترجما (form Iq)\n# يُتَرْجِمَا (yutarjimā) /ju.tar.d͡ʒi.maː/: third-person masculine dual non-past active subjunctive/jussive of تَرْجَمَ (tarjama)\n# يُتَرْجَمَا (yutarjamā) /ju.tar.d͡ʒa.maː/: third-person masculine dual non-past passive subjunctive/jussive of تَرْجَمَ (tarjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yutarjimā", "tarjama", "yutarjamā"],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "ترجمتا",
-        "u": "ترجمتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ترجمتا (form Iq)\n# تَرْجَمَتَا (tarjamatā) /tar.d͡ʒa.ma.taː/: third-person feminine dual past active of تَرْجَمَ (tarjama)\n# تُرْجِمَتَا (turjimatā) /tur.d͡ʒi.ma.taː/: third-person feminine dual past passive of تَرْجَمَ (tarjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tarjamatā", "tarjama", "turjimatā"],
-        "k": "ترجم",
-        "yol": "kök"
-      },
-      {
-        "w": "تترجما",
-        "u": "تترجما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تترجما (form Iq)\n# تُتَرْجِمَا (tutarjimā) /tu.tar.d͡ʒi.maː/: inflection of تَرْجَمَ (tarjama):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُتَرْجَمَا (tutarjamā) /tu.tar.d͡ʒa.maː/: inflection of تَرْجَمَ (tarjama):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past pas",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tutarjimā", "tarjama", "tutarjamā"],
-        "k": "ترجم",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تر",
+  "ses": {
     "harf": "ت",
+    "fasil": "تر",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "مترجم",
+      "tur": "noun",
+      "etim_no": "1",
+      "baslik": "مُتَرْجِم • (mutarjim) m (plural مُتَرْجِمُون (mutarjimūn), feminine مُتَرْجِمَة (mutarjima))",
+      "etim_sablon": [
+        ["if-ar-lect", ""],
+        ["ar-active participle", "Derived from the active participle"]
+      ],
+      "esanlamli": ["تُرْجُمَان"],
+      "anlam": ["translator; interpreter", "biographer"],
+      "okunus": ["mutarjim"],
+      "ipa": ["/mu.tar.d͡ʒim/"],
+      "torunlar": [
+        ["az", "mütərcim", ""],
+        ["fa-cls", "مُتَرْجِم", "mutarjim"],
+        ["ota", "مترجم", ""]
+      ],
+      "etimoloji": 0
+    },
+    {
+      "madde": "مترجم",
+      "tur": "adj",
+      "etim_no": "2",
+      "baslik": "مُتَرْجَم • (mutarjam) (feminine مُتَرْجَمَة (mutarjama), masculine plural مُتَرْجَمُون (mutarjamūn), feminine plural مُتَرْجَمَات (mutarjamāt))",
+      "etim_sablon": [
+        ["ar-passive participle", "Derived from the passive participle"],
+        ["ar-root", "ت ر ج م (t r j m)"]
+      ],
+      "anlam": ["translated", "synchronized"],
+      "okunus": ["mutarjam"],
+      "ipa": ["/mu.tar.d͡ʒam/"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ترجمة",
+      "tur": "noun",
+      "baslik": "تَرْجَمَة • (tarjama) f (plural تَرَاجِم (tarājim) or تَرْجَمَات (tarjamāt))",
+      "etim_sablon": [
+        [
+          "etymon",
+          "[Appendix:Glossary#derived_terms|Derived]] from\", \"terms\" : [ { \"is_uncertain\" : true, \"children\" : [ { \"keyword_abbrev\" : \"denom.\", \"keyword_label\" : \"Denominal verb from\", \"terms\" : [ { \"translitera"
+        ],
+        ["ar-root", "ت ر ج م (t r j m)"],
+        ["cog", "Classical Syriac ܬܘܪܓܡܐ (turgāmā)"],
+        ["cog", "Hebrew תַּרְגּוּם (targúm)"],
+        ["cog", "Amharic ትርጉም (tərgum)"],
+        ["etymon", ""]
+      ],
+      "anlam": [
+        "verbal noun of تَرْجَمَ (tarjama) (form Iq)",
+        "translation",
+        "interpretation",
+        "biography",
+        "introduction, preface, foreword",
+        "subtitle (“textual versions of the dialog in films”)"
+      ],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["تَرْجَمَ"],
+      "okunus": ["tarjama"],
+      "ipa": ["/tar.d͡ʒa.ma/"],
+      "torunlar": [
+        ["az", "tərcümə", ""],
+        ["ba", "тәржемә", "tärjimä"],
+        ["fa-cls", "تَرْجُمَه", "tarjuma"],
+        ["kk", "тәржіма", "tärjima"],
+        ["ms", "terjemah", ""],
+        ["ota", "ترجمه", ""],
+        ["sw", "tarijama", ""],
+        ["tt", "тәрҗемә", "tärcemä"],
+        ["tk", "terjime", ""]
+      ],
+      "etimoloji": 2
+    },
+    {
+      "madde": "ترجمان",
+      "tur": "noun",
+      "etim_no": "1",
+      "baslik": "تُرْجُمَان or تَرْجُمَان or تَرْجَمَان • (turjumān or tarjumān or tarjamān) m (plural تَرَاجِمَة (tarājima) or تَرَاجِيم (tarājīm) or تَرَاجِم (tarājim))",
+      "etim_sablon": [
+        ["ar-rootbox", ""],
+        ["bor", "Classical Syriac ܬܰܪܓܡܳܢܳܐ (targmānā, “interpreter”)"],
+        ["der", "Akkadian 𒅴𒁄 (targumannum, “interpreter”)"]
+      ],
+      "anlam": ["translator", "interpreter, dragoman", "cicerone", "guide"],
+      "okunus": ["turjumān", "tarjumān", "tarjamān"],
+      "ipa": ["/tur.d͡ʒu.maːn/", "/tar.d͡ʒu.maːn/", "/tar.d͡ʒa.maːn/"],
+      "torunlar": [
+        ["mt", "turċman", ""],
+        ["grk", "δραγομάνος", ""],
+        ["fa-cls", "ترجمان", "tarjumān"],
+        ["es", "dragomán", ""],
+        ["es", "truchimán", ""],
+        ["es", "trujimán", ""],
+        ["es", "trujamán", ""],
+        ["az", "tərcüman", ""],
+        ["ota", "ترجمان", ""],
+        ["ug", "تەرجىمان", "terjiman"],
+        ["uz", "tarjimon", ""]
+      ],
+      "etimoloji": 3
+    },
+    {
+      "madde": "ترجم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَرْجَمَ • (tarjama) Iq (non-past يُتَرْجِمُ (yutarjimu), verbal noun تَرْجَمَة (tarjama))",
+      "etim_sablon": [
+        ["ar-rootbox", ""],
+        [
+          "etymon",
+          "[Appendix:Glossary#derived_terms|Derived]] from\", \"terms\" : [ { \"is_uncertain\" : true, \"children\" : [ ], \"lang_name\" : \"Classical Syriac\", \"term\" : \"ܬܰܪܓܶܡ\", \"status\" : \"missing\", \"lang\" : \"syc\" } ], "
+        ],
+        [
+          "etymon",
+          "Etymology tree\nAkkadian 𒅴𒁄 (targumannum)\nClassical Syriac ܬܪܓܡܢܐ (targmānā)denom.\nClassical Syriac ܬܰܪܓܶܡder.?\n▲\nClassical Syriac ܬܰܪܓܡܳܢܳܐ (targmānā)bor.\nArabic تَرْجُمَان (tarjumān)bf.?\nArabic ترجم\n"
+        ]
+      ],
+      "anlam": [
+        "to translate",
+        "to interpret",
+        "to expound, to treat by way of explanation",
+        "to give biographical information on"
+      ],
+      "okunus": ["tarjama"],
+      "ipa": ["/tar.d͡ʒa.ma/"],
+      "etimoloji": 4
+    },
+    {
+      "madde": "ترجمات",
+      "tur": "noun",
+      "baslik": "تَرْجَمَات • (tarjamāt) f pl",
+      "anlam": ["plural of تَرْجَمَة (tarjama): translations"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["تَرْجَمَة"],
+      "okunus": ["tarjamāt"],
+      "bag": "asıl madde",
+      "etimoloji": 5
+    },
+    {
+      "madde": "تراجم",
+      "tur": "noun",
+      "etim_no": "2",
+      "baslik": "تَرَاجِم • (tarājim) f pl",
+      "anlam": ["plural of تَرْجَمَة (tarjama, “translations”)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["تَرْجَمَة"],
+      "okunus": ["tarājim"],
+      "ipa": ["/ta.raː.d͡ʒim/"],
+      "bag": "asıl madde"
+    },
+    {
+      "madde": "مترجمون",
+      "tur": "noun",
+      "etim_no": "1",
+      "baslik": "مُتَرْجِمُون • (mutarjimūn) m pl",
+      "anlam": ["plural of مُتَرْجِم (mutarjim)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["مُتَرْجِم"],
+      "okunus": ["mutarjimūn"],
+      "bag": "asıl madde",
+      "etimoloji": 5
+    },
+    {
+      "madde": "مترجمون",
+      "tur": "adj",
+      "etim_no": "2",
+      "baslik": "مُتَرْجَمُون • (mutarjamūn)",
+      "anlam": ["masculine plural of مُتَرْجَم (mutarjam)"],
+      "etiket": ["form-of", "masculine", "plural"],
+      "form_of": ["مُتَرْجَم"],
+      "okunus": ["mutarjamūn"],
+      "bag": "asıl madde",
+      "etimoloji": 5
+    },
+    {
+      "madde": "يترجم",
+      "tur": "verb",
+      "baslik": "يترجم (form Iq)\n# يُتَرْجِمُ (yutarjimu) /ju.tar.d͡ʒi.mu/: third-person masculine singular non-past active indicative of تَرْجَمَ (tarjama)\n# يُتَرْجَمُ (yutarjamu) /ju.tar.d͡ʒa.mu/: third-person masculine singular non-past passive indicative of تَرْجَمَ (tarjama)\n# يُتَرْجِمَ (yutarjima) /ju.tar.d͡ʒi.ma/: third-person masculine singular non-past active subjunctive of تَرْجَمَ (tarjama)\n# يُتَرْجَ",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yutarjimu", "tarjama", "yutarjamu"],
+      "etimoloji": 5
+    },
+    {
+      "madde": "مترجمة",
+      "tur": "adj",
+      "baslik": "مُتَرْجَمَة • (mutarjama)",
+      "anlam": ["feminine singular of مُتَرْجَم (mutarjam)"],
+      "etiket": ["feminine", "form-of", "singular"],
+      "form_of": ["مُتَرْجَم"],
+      "okunus": ["mutarjama"],
+      "bag": "asıl madde",
+      "etimoloji": 5
+    },
+    {
+      "madde": "ترجمت",
+      "tur": "verb",
+      "baslik": "ترجمت (form Iq)\n# تَرْجَمْتُ (tarjamtu) /tar.d͡ʒam.tu/: first-person singular past active of تَرْجَمَ (tarjama)\n# تَرْجَمْتَ (tarjamta) /tar.d͡ʒam.ta/: second-person masculine singular past active of تَرْجَمَ (tarjama)\n# تَرْجَمْتِ (tarjamti) /tar.d͡ʒam.ti/: second-person feminine singular past active of تَرْجَمَ (tarjama)\n# تَرْجَمَتْ (tarjamat) /tar.d͡ʒa.mat/: third-person feminine singular past",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tarjamtu", "tarjama", "tarjamta"],
+      "etimoloji": 5
+    },
+    {
+      "madde": "تترجم",
+      "tur": "verb",
+      "baslik": "تترجم (form Iq)\n# تُتَرْجِمُ (tutarjimu) /tu.tar.d͡ʒi.mu/: inflection of تَرْجَمَ (tarjama):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُتَرْجَمُ (tutarjamu) /tu.tar.d͡ʒa.mu/: inflection of تَرْجَمَ (tarjama):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tutarjimu", "tarjama", "tutarjamu"],
+      "etimoloji": 5
+    },
+    {
+      "madde": "تترجمين",
+      "tur": "verb",
+      "baslik": "تترجمين (form Iq)\n# تُتَرْجِمِينَ (tutarjimīna) /tu.tar.d͡ʒi.miː.na/: second-person feminine singular non-past active indicative of تَرْجَمَ (tarjama)\n# تُتَرْجَمِينَ (tutarjamīna) /tu.tar.d͡ʒa.miː.na/: second-person feminine singular non-past passive indicative of تَرْجَمَ (tarjama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tutarjimīna", "tarjama", "tutarjamīna"],
+      "etimoloji": 5
+    },
+    {
+      "madde": "تترجمي",
+      "tur": "verb",
+      "baslik": "تترجمي (form Iq)\n# تُتَرْجِمِي (tutarjimī) /tu.tar.d͡ʒi.miː/: second-person feminine singular non-past active subjunctive/jussive of تَرْجَمَ (tarjama)\n# تُتَرْجَمِي (tutarjamī) /tu.tar.d͡ʒa.miː/: second-person feminine singular non-past passive subjunctive/jussive of تَرْجَمَ (tarjama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tutarjimī", "tarjama", "tutarjamī"],
+      "etimoloji": 5
+    },
+    {
+      "madde": "ترجمي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَرْجِمِي • (tarjimī) (form Iq) /tar.d͡ʒi.miː/\n# second-person feminine singular imperative of تَرْجَمَ (tarjama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tarjimī", "tarjama"],
+      "etimoloji": 5
+    },
+    {
+      "madde": "أترجم",
+      "tur": "verb",
+      "baslik": "أترجم (form Iq)\n# أُتَرْجِمُ (ʔutarjimu) /ʔu.tar.d͡ʒi.mu/: first-person singular non-past active indicative of تَرْجَمَ (tarjama)\n# أُتَرْجَمُ (ʔutarjamu) /ʔu.tar.d͡ʒa.mu/: first-person singular non-past passive indicative of تَرْجَمَ (tarjama)\n# أُتَرْجِمَ (ʔutarjima) /ʔu.tar.d͡ʒi.ma/: first-person singular non-past active subjunctive of تَرْجَمَ (tarjama)\n# أُتَرْجَمَ (ʔutarjama) /ʔu.tar.d͡ʒa.ma",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʔutarjimu", "tarjama", "ʔutarjamu"],
+      "etimoloji": 5
+    },
+    {
+      "madde": "ترجمنا",
+      "tur": "verb",
+      "baslik": "ترجمنا (form Iq)\n# تَرْجَمْنَا (tarjamnā) /tar.d͡ʒam.naː/: first-person plural past active of تَرْجَمَ (tarjama)\n# تُرْجِمْنَا (turjimnā) /tur.d͡ʒim.naː/: first-person plural past passive of تَرْجَمَ (tarjama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tarjamnā", "tarjama", "turjimnā"],
+      "etimoloji": 5
+    },
+    {
+      "madde": "نترجم",
+      "tur": "verb",
+      "baslik": "نترجم (form Iq)\n# نُتَرْجِمُ (nutarjimu) /nu.tar.d͡ʒi.mu/: first-person plural non-past active indicative of تَرْجَمَ (tarjama)\n# نُتَرْجَمُ (nutarjamu) /nu.tar.d͡ʒa.mu/: first-person plural non-past passive indicative of تَرْجَمَ (tarjama)\n# نُتَرْجِمَ (nutarjima) /nu.tar.d͡ʒi.ma/: first-person plural non-past active subjunctive of تَرْجَمَ (tarjama)\n# نُتَرْجَمَ (nutarjama) /nu.tar.d͡ʒa.ma/: fir",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["nutarjimu", "tarjama", "nutarjamu"],
+      "etimoloji": 5
+    },
+    {
+      "madde": "ترجمتم",
+      "tur": "verb",
+      "baslik": "ترجمتم (form Iq)\n# تَرْجَمْتُمْ (tarjamtum) /tar.d͡ʒam.tum/: second-person masculine plural past active of تَرْجَمَ (tarjama)\n# تُرْجِمْتُمْ (turjimtum) /tur.d͡ʒim.tum/: second-person masculine plural past passive of تَرْجَمَ (tarjama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tarjamtum", "tarjama", "turjimtum"],
+      "etimoloji": 5
+    },
+    {
+      "madde": "تترجمون",
+      "tur": "verb",
+      "baslik": "تترجمون (form Iq)\n# تُتَرْجِمُونَ (tutarjimūna) /tu.tar.d͡ʒi.muː.na/: second-person masculine plural non-past active indicative of تَرْجَمَ (tarjama)\n# تُتَرْجَمُونَ (tutarjamūna) /tu.tar.d͡ʒa.muː.na/: second-person masculine plural non-past passive indicative of تَرْجَمَ (tarjama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tutarjimūna", "tarjama", "tutarjamūna"],
+      "etimoloji": 5
+    },
+    {
+      "madde": "تترجموا",
+      "tur": "verb",
+      "baslik": "تترجموا (form Iq)\n# تُتَرْجِمُوا (tutarjimū) /tu.tar.d͡ʒi.muː/: second-person masculine plural non-past active subjunctive/jussive of تَرْجَمَ (tarjama)\n# تُتَرْجَمُوا (tutarjamū) /tu.tar.d͡ʒa.muː/: second-person masculine plural non-past passive subjunctive/jussive of تَرْجَمَ (tarjama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tutarjimū", "tarjama", "tutarjamū"],
+      "etimoloji": 5
+    },
+    {
+      "madde": "ترجموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ترجموا (form Iq)\n# تَرْجَمُوا (tarjamū) /tar.d͡ʒa.muː/: third-person masculine plural past active of تَرْجَمَ (tarjama)\n# تُرْجِمُوا (turjimū) /tur.d͡ʒi.muː/: third-person masculine plural past passive of تَرْجَمَ (tarjama)\n# تَرْجِمُوا (tarjimū) /tar.d͡ʒi.muː/: second-person masculine plural imperative of تَرْجَمَ (tarjama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tarjamū", "tarjama", "turjimū"],
+      "etimoloji": 5
+    },
+    {
+      "madde": "يترجمون",
+      "tur": "verb",
+      "baslik": "يترجمون (form Iq)\n# يُتَرْجِمُونَ (yutarjimūna) /ju.tar.d͡ʒi.muː.na/: third-person masculine plural non-past active indicative of تَرْجَمَ (tarjama)\n# يُتَرْجَمُونَ (yutarjamūna) /ju.tar.d͡ʒa.muː.na/: third-person masculine plural non-past passive indicative of تَرْجَمَ (tarjama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yutarjimūna", "tarjama", "yutarjamūna"],
+      "etimoloji": 5
+    },
+    {
+      "madde": "يترجموا",
+      "tur": "verb",
+      "baslik": "يترجموا (form Iq)\n# يُتَرْجِمُوا (yutarjimū) /ju.tar.d͡ʒi.muː/: third-person masculine plural non-past active subjunctive/jussive of تَرْجَمَ (tarjama)\n# يُتَرْجَمُوا (yutarjamū) /ju.tar.d͡ʒa.muː/: third-person masculine plural non-past passive subjunctive/jussive of تَرْجَمَ (tarjama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yutarjimū", "tarjama", "yutarjamū"],
+      "etimoloji": 5
+    },
+    {
+      "madde": "ترجمتن",
+      "tur": "verb",
+      "baslik": "ترجمتن (form Iq)\n# تَرْجَمْتُنَّ (tarjamtunna) /tar.d͡ʒam.tun.na/: second-person feminine plural past active of تَرْجَمَ (tarjama)\n# تُرْجِمْتُنَّ (turjimtunna) /tur.d͡ʒim.tun.na/: second-person feminine plural past passive of تَرْجَمَ (tarjama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tarjamtunna", "tarjama", "turjimtunna"],
+      "etimoloji": 5
+    },
+    {
+      "madde": "تترجمن",
+      "tur": "verb",
+      "baslik": "تترجمن (form Iq)\n# تُتَرْجِمْنَ (tutarjimna) /tu.tar.d͡ʒim.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of تَرْجَمَ (tarjama)\n# تُتَرْجَمْنَ (tutarjamna) /tu.tar.d͡ʒam.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of تَرْجَمَ (tarjama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tutarjimna", "tarjama", "tutarjamna"],
+      "etimoloji": 5
+    },
+    {
+      "madde": "ترجمن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ترجمن (form Iq)\n# تَرْجَمْنَ (tarjamna) /tar.d͡ʒam.na/: third-person feminine plural past active of تَرْجَمَ (tarjama)\n# تُرْجِمْنَ (turjimna) /tur.d͡ʒim.na/: third-person feminine plural past passive of تَرْجَمَ (tarjama)\n# تَرْجِمْنَ (tarjimna) /tar.d͡ʒim.na/: second-person feminine plural imperative of تَرْجَمَ (tarjama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tarjamna", "tarjama", "turjimna"],
+      "etimoloji": 5
+    },
+    {
+      "madde": "يترجمن",
+      "tur": "verb",
+      "baslik": "يترجمن (form Iq)\n# يُتَرْجِمْنَ (yutarjimna) /ju.tar.d͡ʒim.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of تَرْجَمَ (tarjama)\n# يُتَرْجَمْنَ (yutarjamna) /ju.tar.d͡ʒam.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of تَرْجَمَ (tarjama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yutarjimna", "tarjama", "yutarjamna"],
+      "etimoloji": 5
+    },
+    {
+      "madde": "ترجما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ترجما (form Iq)\n# تَرْجَمَا (tarjamā) /tar.d͡ʒa.maː/: third-person masculine dual past active of تَرْجَمَ (tarjama)\n# تُرْجِمَا (turjimā) /tur.d͡ʒi.maː/: third-person masculine dual past passive of تَرْجَمَ (tarjama)\n# تَرْجِمَا (tarjimā) /tar.d͡ʒi.maː/: second-person dual imperative of تَرْجَمَ (tarjama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tarjamā", "tarjama", "turjimā"],
+      "etimoloji": 5
+    },
+    {
+      "madde": "يترجمان",
+      "tur": "verb",
+      "baslik": "يترجمان (form Iq)\n# يُتَرْجِمَانِ (yutarjimāni) /ju.tar.d͡ʒi.maː.ni/: third-person masculine dual non-past active indicative of تَرْجَمَ (tarjama)\n# يُتَرْجَمَانِ (yutarjamāni) /ju.tar.d͡ʒa.maː.ni/: third-person masculine dual non-past passive indicative of تَرْجَمَ (tarjama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yutarjimāni", "tarjama", "yutarjamāni"],
+      "etimoloji": 5
+    },
+    {
+      "madde": "تترجمان",
+      "tur": "verb",
+      "baslik": "تترجمان (form Iq)\n# تُتَرْجِمَانِ (tutarjimāni) /tu.tar.d͡ʒi.maː.ni/: inflection of تَرْجَمَ (tarjama):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُتَرْجَمَانِ (tutarjamāni) /tu.tar.d͡ʒa.maː.ni/: inflection of تَرْجَمَ (tarjama):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicat",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tutarjimāni", "tarjama", "tutarjamāni"],
+      "etimoloji": 5
+    },
+    {
+      "madde": "ترجمتما",
+      "tur": "verb",
+      "baslik": "ترجمتما (form Iq)\n# تَرْجَمْتُمَا (tarjamtumā) /tar.d͡ʒam.tu.maː/: second-person dual past active of تَرْجَمَ (tarjama)\n# تُرْجِمْتُمَا (turjimtumā) /tur.d͡ʒim.tu.maː/: second-person dual past passive of تَرْجَمَ (tarjama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tarjamtumā", "tarjama", "turjimtumā"],
+      "etimoloji": 5
+    },
+    {
+      "madde": "يترجما",
+      "tur": "verb",
+      "baslik": "يترجما (form Iq)\n# يُتَرْجِمَا (yutarjimā) /ju.tar.d͡ʒi.maː/: third-person masculine dual non-past active subjunctive/jussive of تَرْجَمَ (tarjama)\n# يُتَرْجَمَا (yutarjamā) /ju.tar.d͡ʒa.maː/: third-person masculine dual non-past passive subjunctive/jussive of تَرْجَمَ (tarjama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yutarjimā", "tarjama", "yutarjamā"],
+      "etimoloji": 5
+    },
+    {
+      "madde": "ترجمتا",
+      "tur": "verb",
+      "baslik": "ترجمتا (form Iq)\n# تَرْجَمَتَا (tarjamatā) /tar.d͡ʒa.ma.taː/: third-person feminine dual past active of تَرْجَمَ (tarjama)\n# تُرْجِمَتَا (turjimatā) /tur.d͡ʒi.ma.taː/: third-person feminine dual past passive of تَرْجَمَ (tarjama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tarjamatā", "tarjama", "turjimatā"],
+      "etimoloji": 5
+    },
+    {
+      "madde": "تترجما",
+      "tur": "verb",
+      "baslik": "تترجما (form Iq)\n# تُتَرْجِمَا (tutarjimā) /tu.tar.d͡ʒi.maː/: inflection of تَرْجَمَ (tarjama):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُتَرْجَمَا (tutarjamā) /tu.tar.d͡ʒa.maː/: inflection of تَرْجَمَ (tarjama):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past pas",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tutarjimā", "tarjama", "tutarjamā"],
+      "etimoloji": 5
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "Derived from the active participle of the verb تَرْجَمَ (tarjama, “to translate”).",
+      "kognatlar": [
+        ["تَرْجَمَ", "ترجم#Arabic"]
+      ]
+    },
+    {
+      "metin": "Derived from the passive participle of the verb تَرْجَمَ (tarjama, “to translate”), from the root ت ر ج م (t r j m).",
+      "kognatlar": [
+        ["تَرْجَمَ", "ترجم#Arabic"],
+        ["translate", "translate"],
+        ["ت ر ج م", "Appendix:Arabic roots/ت ر ج م"]
+      ]
+    },
+    {
+      "metin": "See the root ت ر ج م (t r j m) for more.\nCompare Classical Syriac ܬܘܪܓܡܐ (turgāmā), Hebrew תַּרְגּוּם (targúm), Amharic ትርጉም (tərgum).",
+      "kognatlar": [
+        ["ت ر ج م", "Appendix:Arabic roots/ت ر ج م"],
+        ["ܬܘܪܓܡܐ", "ܬܘܪܓܡܐ#Classical_Syriac"],
+        ["תַּרְגּוּם", "תרגום#Hebrew"],
+        ["ትርጉም", "ትርጉም#Amharic"]
+      ]
+    },
+    {
+      "metin": "From Classical Syriac ܬܰܪܓܡܳܢܳܐ (targmānā, “interpreter”), itself from Akkadian 𒅴𒁄 (targumannum, “interpreter”); see the root entry for further information.",
+      "kognatlar": [
+        ["ܬܰܪܓܡܳܢܳܐ", "ܬܪܓܡܢܐ#Classical_Syriac"],
+        ["𒅴𒁄", "targumannum#Akkadian"]
+      ]
+    },
+    {
+      "metin": "Possibly from Classical Syriac ܬܰܪܓܶܡ, or possibly a back-formation from تَرْجُمَان (tarjumān).",
+      "kognatlar": [
+        ["ܬܰܪܓܶܡ", "ܬܪܓܡ#Classical_Syriac"],
+        ["تَرْجُمَان", "ترجمان#Arabic"]
+      ]
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "etymarab": {
+    "latin": "TRǦM",
+    "kok_maddesi": "Back to library EtymArab TRǦM ترجم BP – • HDAL • © SG | 15Feb2021 √TRǦM “root” ▪ TRǦM_1 ‘interpreter, dragoman; to interpret, translate’ ↗ turǧumān ▪ TRǦM_2 ‘’ ↗ Other values, now obsolete, include: TRǦM_ ‘’ : † ▪ Huehnergard2011#RGM: from Sem *RGM ‘to say, speak, call, shout, contest, lay claim to’; there may have been a t-stem *t-RGM ‘to speak to one another, translate’ already in protoSem times. ▪ The theory, summarized by Huehnergard in the prededing paragraph, is contested by a more recent one that argues (on account of the ending -annu ) that the Akk term is a borrowing from Luwian – Smelik2013:141 (referring to Starke1993, Rahim1963 and Von Soden1989). ▪ … ▪ BDB1906, Zimmern1914, CAD: Akk targumānu , turgumānu (CAD: targumannu ~ targamannu , turgumannu , targumjanu , from oAkk on) ‘interpreter, dragoman’, Aram targᵊmānā , turgᵊmānā , Ar tarǧamān ~ tarǧumān , turǧumān ; Hbr tirgēm , Aram Syr targem , Ar tarǧama ‘to interpret, translate’; pBiblHbr targūm ‘translation, Targum’. – Cf. perh. also Ar raǧama ‘to conjecture, opine’. ▪ Wellhausen1897 notes that Ar tarǧīm (vn. of D-stem raǧǧama ) has the same meaning as ḍarb bi’l-ḥaṣy , i.e. ‘[the art of prophesy from] throwing pebbles’. From this, the sense of ‘to assume, conjecture’ could be derived: ‘to throw stones > to interpret the results, try to give them a meaning > to assume’. »Vielleicht hängt damit auch [Hbr] trgm zusammen: ‘enträtseln’, dann ‘dolmetschen’« (207, fn. 4), i.e., tarǧama , too, may be dependent on the heathen practice: ‘to throw stones > to interpret the results, solve the riddle > to explain, interpret’; cf. raǧǧama , D-stem of ↗ raǧama (with Wellhausen1897:111-2 on ĭrtiǧām , ruǧmaẗ , raǧm ). ▪ BDB1906: (on Akk targumānu ‘interpreter’, Hbr tirgēm , Aram Syr targem , Ar tarǧama ‘to interpret, translate’): perh. from √RGM, cf. Ar raǧama ‘to conjecture, opine’. ▪ Zimmern1914: Ar tarǧamān ~ tarǧumān ~ turǧumān targᵊmānā ~ turgᵊmānā targumānu ~ turgumānu ‘interpreter’. ▪ Huehnergard2011#RGM: Ar tarǧumān ‘translator’ targᵊmānā targumannu ‘interpreter’, either from Akk ragāmu ‘to speak, call, contest’ or from an earlier Sem t-stem vb., * t-rgm ‘to speak to one another, translate’. ▪ Smelik2013:141: “Although most scholars still hold that [Akk] targumannu(m) is related to the root [Akk] ragāmu ‘to call out’, this connection—and the supposedly inherited meaning of ‘speaking out aloud’ of the root TRGM—is almost certainly wrong. The noun-formation of targumannu(m) is neither Akk nor Sem, but points to a Luwian loanword in Akk. Via Aram, targumannu(m) was adopted in Hbr and Ar, and later in many IE langs.” ▪ Huehnergard2011#RGM: Not from Ar tarǧumān , but akin to the latter’s source, is Engl targum , from Mishnaic Hbr targūm ‘translation’, from Aram targᵊmtā ( targᵊmā ), back-formation from targᵊmānā , from Akk targumannu ‘interpreter’. ↗ turǧumān . Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
+    "kelime_maddeleri": []
+  },
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ترجم", "r6"]
+  ],
+  "mana": {
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
@@ -596,30 +484,8 @@
     "dayanak_tanim": "the act of changing in form or shape or appearance",
     "synset_sayisi": 11
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
-    "act.n.02",
-    "communicator.n.01",
-    "evidence.n.02",
-    "explain.v.01",
-    "interpret.v.01",
-    "represent.v.09",
-    "tell.v.02",
-    "translate.v.02",
-    "understand.v.03"
-  ],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 8,
       "merkez_kok": "سير",
@@ -639,6 +505,21 @@
       "boy": 6
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": [
+    "act.n.02",
+    "communicator.n.01",
+    "evidence.n.02",
+    "explain.v.01",
+    "interpret.v.01",
+    "represent.v.09",
+    "tell.v.02",
+    "translate.v.02",
+    "understand.v.03"
+  ],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

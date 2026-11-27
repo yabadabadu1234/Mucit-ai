@@ -1,462 +1,335 @@
 {
   "kok": "باد",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "باد", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "بد",
-        "u": "بد",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "بِدْ • (bid) (form I) /bid/\n# second-person masculine singular imperative of بَادَ (bāda)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bid", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "بدن",
-        "u": "بدن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "بِدْنَ • (bidna) (form I) /bid.na/\n# inflection of بَادَ (bāda):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bidna", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "أبد",
-        "u": "أبد",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "أَبِدْ • (ʔabid) (form I) /ʔa.bid/\n# first-person singular non-past active jussive of بَادَ (bāda)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔabid", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "يبد",
-        "u": "يبد",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يَبِدْ • (yabid) (form I) /ja.bid/\n# third-person masculine singular non-past active jussive of بَادَ (bāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabid", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "بدت",
-        "u": "بدت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "بدت (form I)\n# بِدْتُ (bidtu) /bid.tu/: first-person singular past active of بَادَ (bāda)\n# بِدْتَ (bidta) /bid.ta/: second-person masculine singular past active of بَادَ (bāda)\n# بِدْتِ (bidti) /bid.ti/: second-person feminine singular past active of بَادَ (bāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bidtu", "bāda", "bidta"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "تبد",
-        "u": "تبد",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تَبِدْ • (tabid) (form I) /ta.bid/\n# inflection of بَادَ (bāda):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabid", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "نبد",
-        "u": "نبد",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "نَبِدْ • (nabid) (form I) /na.bid/\n# first-person plural non-past active jussive of بَادَ (bāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nabid", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "بدنا",
-        "u": "بدنا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "بِدْنَا • (bidnā) (form I) /bid.naː/\n# first-person plural past active of بَادَ (bāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bidnā", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "نبيد",
-        "u": "نبيد",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نبيد (form I)\n# نَبِيدُ (nabīdu) /na.biː.du/: first-person plural non-past active indicative of بَادَ (bāda)\n# نَبِيدَ (nabīda) /na.biː.da/: first-person plural non-past active subjunctive of بَادَ (bāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nabīdu", "bāda", "nabīda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "أبيد",
-        "u": "أبيد",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أبيد (form I)\n# أَبِيدُ (ʔabīdu) /ʔa.biː.du/: first-person singular non-past active indicative of بَادَ (bāda)\n# أَبِيدَ (ʔabīda) /ʔa.biː.da/: first-person singular non-past active subjunctive of بَادَ (bāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔabīdu", "bāda", "ʔabīda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيدين",
-        "u": "تبيدين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَبِيدِينَ • (tabīdīna) (form I) /ta.biː.diː.na/\n# second-person feminine singular non-past active indicative of بَادَ (bāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabīdīna", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيد",
-        "u": "تبيد",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تبيد (form I)\n# تَبِيدُ (tabīdu) /ta.biː.du/: inflection of بَادَ (bāda):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَبِيدَ (tabīda) /ta.biː.da/: inflection of بَادَ (bāda):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabīdu", "bāda", "tabīda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "يبيد",
-        "u": "يبيد",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يبيد (form I)\n# يَبِيدُ (yabīdu) /ja.biː.du/: third-person masculine singular non-past active indicative of بَادَ (bāda)\n# يَبِيدَ (yabīda) /ja.biː.da/: third-person masculine singular non-past active subjunctive of بَادَ (bāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabīdu", "bāda", "yabīda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيدان",
-        "u": "تبيدان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَبِيدَانِ • (tabīdāni) (form I) /ta.biː.daː.ni/\n# inflection of بَادَ (bāda):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabīdāni", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "يبيدان",
-        "u": "يبيدان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَبِيدَانِ • (yabīdāni) (form I) /ja.biː.daː.ni/\n# third-person masculine dual non-past active indicative of بَادَ (bāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabīdāni", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيدون",
-        "u": "تبيدون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَبِيدُونَ • (tabīdūna) (form I) /ta.biː.duː.na/\n# second-person masculine plural non-past active indicative of بَادَ (bāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabīdūna", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "يبيدون",
-        "u": "يبيدون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَبِيدُونَ • (yabīdūna) (form I) /ja.biː.duː.na/\n# third-person masculine plural non-past active indicative of بَادَ (bāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabīdūna", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "تبدن",
-        "u": "تبدن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَبِدْنَ • (tabidna) (form I) /ta.bid.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of بَادَ (bāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabidna", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "يبدن",
-        "u": "يبدن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَبِدْنَ • (yabidna) (form I) /ja.bid.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of بَادَ (bāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabidna", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيدا",
-        "u": "تبيدا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَبِيدَا • (tabīdā) (form I) /ta.biː.daː/\n# inflection of بَادَ (bāda):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabīdā", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيدي",
-        "u": "تبيدي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَبِيدِي • (tabīdī) (form I) /ta.biː.diː/\n# second-person feminine singular non-past active subjunctive/jussive of بَادَ (bāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabīdī", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيدوا",
-        "u": "تبيدوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَبِيدُوا • (tabīdū) (form I) /ta.biː.duː/\n# second-person masculine plural non-past active subjunctive/jussive of بَادَ (bāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabīdū", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "يبيدا",
-        "u": "يبيدا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَبِيدَا • (yabīdā) (form I) /ja.biː.daː/\n# third-person masculine dual non-past active subjunctive/jussive of بَادَ (bāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabīdā", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "يبيدوا",
-        "u": "يبيدوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَبِيدُوا • (yabīdū) (form I) /ja.biː.duː/\n# third-person masculine plural non-past active subjunctive/jussive of بَادَ (bāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabīdū", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "بادت",
-        "u": "بادت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَادَتْ • (bādat) (form I) /baː.dat/\n# third-person feminine singular past active of بَادَ (bāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bādat", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "بدتم",
-        "u": "بدتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بِدْتُمْ • (bidtum) (form I) /bid.tum/\n# second-person masculine plural past active of بَادَ (bāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bidtum", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "بادا",
-        "u": "بادا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَادَا • (bādā) (form I) /baː.daː/\n# third-person masculine dual past active of بَادَ (bāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bādā", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "بدتن",
-        "u": "بدتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بِدْتُنَّ • (bidtunna) (form I) /bid.tun.na/\n# second-person feminine plural past active of بَادَ (bāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bidtunna", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "بدتما",
-        "u": "بدتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بِدْتُمَا • (bidtumā) (form I) /bid.tu.maː/\n# second-person dual past active of بَادَ (bāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bidtumā", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "بيدي",
-        "u": "بيدي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بِيدِي • (bīdī) (form I) /biː.diː/\n# second-person feminine singular imperative of بَادَ (bāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bīdī", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "بادوا",
-        "u": "بادوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَادُوا • (bādū) (form I) /baː.duː/\n# third-person masculine plural past active of بَادَ (bāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bādū", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "بادتا",
-        "u": "بادتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَادَتَا • (bādatā) (form I) /baː.da.taː/\n# third-person feminine dual past active of بَادَ (bāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bādatā", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "بيدا",
-        "u": "بيدا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بِيدَا • (bīdā) (form I) /biː.daː/\n# second-person dual imperative of بَادَ (bāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bīdā", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      },
-      {
-        "w": "بيدوا",
-        "u": "بيدوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بِيدُوا • (bīdū) (form I) /biː.duː/\n# second-person masculine plural imperative of بَادَ (bāda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bīdū", "bāda"],
-        "k": "باد",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "بد",
+  "ses": {
     "harf": "ب",
+    "fasil": "بد",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "بد",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "بِدْ • (bid) (form I) /bid/\n# second-person masculine singular imperative of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bid", "bāda"]
+    },
+    {
+      "madde": "بدن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "بِدْنَ • (bidna) (form I) /bid.na/\n# inflection of بَادَ (bāda):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bidna", "bāda"]
+    },
+    {
+      "madde": "أبد",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "أَبِدْ • (ʔabid) (form I) /ʔa.bid/\n# first-person singular non-past active jussive of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔabid", "bāda"]
+    },
+    {
+      "madde": "يبد",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يَبِدْ • (yabid) (form I) /ja.bid/\n# third-person masculine singular non-past active jussive of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabid", "bāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بدت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "بدت (form I)\n# بِدْتُ (bidtu) /bid.tu/: first-person singular past active of بَادَ (bāda)\n# بِدْتَ (bidta) /bid.ta/: second-person masculine singular past active of بَادَ (bāda)\n# بِدْتِ (bidti) /bid.ti/: second-person feminine singular past active of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bidtu", "bāda", "bidta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبد",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تَبِدْ • (tabid) (form I) /ta.bid/\n# inflection of بَادَ (bāda):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabid", "bāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نبد",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "نَبِدْ • (nabid) (form I) /na.bid/\n# first-person plural non-past active jussive of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nabid", "bāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بدنا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "بِدْنَا • (bidnā) (form I) /bid.naː/\n# first-person plural past active of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bidnā", "bāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نبيد",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نبيد (form I)\n# نَبِيدُ (nabīdu) /na.biː.du/: first-person plural non-past active indicative of بَادَ (bāda)\n# نَبِيدَ (nabīda) /na.biː.da/: first-person plural non-past active subjunctive of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nabīdu", "bāda", "nabīda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبيد",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أبيد (form I)\n# أَبِيدُ (ʔabīdu) /ʔa.biː.du/: first-person singular non-past active indicative of بَادَ (bāda)\n# أَبِيدَ (ʔabīda) /ʔa.biː.da/: first-person singular non-past active subjunctive of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔabīdu", "bāda", "ʔabīda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبيدين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَبِيدِينَ • (tabīdīna) (form I) /ta.biː.diː.na/\n# second-person feminine singular non-past active indicative of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabīdīna", "bāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبيد",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تبيد (form I)\n# تَبِيدُ (tabīdu) /ta.biː.du/: inflection of بَادَ (bāda):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَبِيدَ (tabīda) /ta.biː.da/: inflection of بَادَ (bāda):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabīdu", "bāda", "tabīda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبيد",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يبيد (form I)\n# يَبِيدُ (yabīdu) /ja.biː.du/: third-person masculine singular non-past active indicative of بَادَ (bāda)\n# يَبِيدَ (yabīda) /ja.biː.da/: third-person masculine singular non-past active subjunctive of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabīdu", "bāda", "yabīda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبيدان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَبِيدَانِ • (tabīdāni) (form I) /ta.biː.daː.ni/\n# inflection of بَادَ (bāda):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabīdāni", "bāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبيدان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَبِيدَانِ • (yabīdāni) (form I) /ja.biː.daː.ni/\n# third-person masculine dual non-past active indicative of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabīdāni", "bāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبيدون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَبِيدُونَ • (tabīdūna) (form I) /ta.biː.duː.na/\n# second-person masculine plural non-past active indicative of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabīdūna", "bāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبيدون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَبِيدُونَ • (yabīdūna) (form I) /ja.biː.duː.na/\n# third-person masculine plural non-past active indicative of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabīdūna", "bāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبدن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَبِدْنَ • (tabidna) (form I) /ta.bid.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabidna", "bāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبدن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَبِدْنَ • (yabidna) (form I) /ja.bid.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabidna", "bāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبيدا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَبِيدَا • (tabīdā) (form I) /ta.biː.daː/\n# inflection of بَادَ (bāda):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabīdā", "bāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبيدي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَبِيدِي • (tabīdī) (form I) /ta.biː.diː/\n# second-person feminine singular non-past active subjunctive/jussive of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabīdī", "bāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبيدوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَبِيدُوا • (tabīdū) (form I) /ta.biː.duː/\n# second-person masculine plural non-past active subjunctive/jussive of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabīdū", "bāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبيدا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَبِيدَا • (yabīdā) (form I) /ja.biː.daː/\n# third-person masculine dual non-past active subjunctive/jussive of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabīdā", "bāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبيدوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَبِيدُوا • (yabīdū) (form I) /ja.biː.duː/\n# third-person masculine plural non-past active subjunctive/jussive of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabīdū", "bāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بادت",
+      "tur": "verb",
+      "baslik": "بَادَتْ • (bādat) (form I) /baː.dat/\n# third-person feminine singular past active of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bādat", "bāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بدتم",
+      "tur": "verb",
+      "baslik": "بِدْتُمْ • (bidtum) (form I) /bid.tum/\n# second-person masculine plural past active of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bidtum", "bāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بادا",
+      "tur": "verb",
+      "baslik": "بَادَا • (bādā) (form I) /baː.daː/\n# third-person masculine dual past active of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bādā", "bāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بدتن",
+      "tur": "verb",
+      "baslik": "بِدْتُنَّ • (bidtunna) (form I) /bid.tun.na/\n# second-person feminine plural past active of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bidtunna", "bāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بدتما",
+      "tur": "verb",
+      "baslik": "بِدْتُمَا • (bidtumā) (form I) /bid.tu.maː/\n# second-person dual past active of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bidtumā", "bāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بيدي",
+      "tur": "verb",
+      "baslik": "بِيدِي • (bīdī) (form I) /biː.diː/\n# second-person feminine singular imperative of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bīdī", "bāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بادوا",
+      "tur": "verb",
+      "baslik": "بَادُوا • (bādū) (form I) /baː.duː/\n# third-person masculine plural past active of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bādū", "bāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بادتا",
+      "tur": "verb",
+      "baslik": "بَادَتَا • (bādatā) (form I) /baː.da.taː/\n# third-person feminine dual past active of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bādatā", "bāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بيدا",
+      "tur": "verb",
+      "baslik": "بِيدَا • (bīdā) (form I) /biː.daː/\n# second-person dual imperative of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bīdā", "bāda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بيدوا",
+      "tur": "verb",
+      "baslik": "بِيدُوا • (bīdū) (form I) /biː.duː/\n# second-person masculine plural imperative of بَادَ (bāda)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bīdū", "bāda"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "باد", "r7"]
+  ],
+  "mana": {
     "ince": "whole.n.02",
     "orta": "noun.body",
     "ust": "canlı ve beden",
@@ -464,22 +337,15 @@
     "dayanak_tanim": "the entire structure of an organism (an animal, plant, or human being)",
     "synset_sayisi": 4
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["artifact.n.01", "body_part.n.01", "natural_object.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["artifact.n.01", "body_part.n.01", "natural_object.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

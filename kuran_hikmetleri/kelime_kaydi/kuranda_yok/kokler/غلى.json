@@ -1,943 +1,670 @@
 {
   "kok": "غلى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "غلى", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الغين واللام",
-      "baslik": "غلى",
-      "mihveri": "الغَلَيان، وهو بلوغ حرارة الشيء أعلاها وتقلُّبه وارتفاعه في وعائه لذلك: {كَالْمُهْلِ يَغْلِي فِي الْبُطُونِ (45) كَغَلْيِ الْحَمِيمِ}.",
-      "sesler": "",
-      "tam_metin": "{طَعَامُ الْأَثِيمِ (44) كَالْمُهْلِ يَغْلِي فِي الْبُطُونِ (45) كَغَلْيِ الْحَمِيمِ} [الدخان: 44 - 46]\n\"غلت القِدْر والجَرَّة تغِلي غَلَيانًا وأغْلاها وغَلّاها. . . \".\n° المعنى المحوري\nالغَلَيان، وهو بلوغ حرارة الشيء أعلاها وتقلُّبه وارتفاعه في وعائه لذلك: {كَالْمُهْلِ يَغْلِي فِي الْبُطُونِ (45) كَغَلْيِ الْحَمِيمِ}.",
-      "fasil_ozeti": "° معنى الفصل المعجمي (غل) : هو التخلل بحدة مع إحاطة أو تقييد أو ما بمعناهما. كالضم كتخلل الشيء المِصْفاة (وحجز بعضه تقييد) -في (غلل)، وكزيادة جسم الجارية والغلام والنبت (وهذا ضم فيه حدة تتخلل الأثناء) -في (غلو)، وكغَلَيان القِدْر (وهو حرارة تسري في أثنائها) -في (غلى)، وكتسرب ماء الحوض منه"
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "غل",
-        "u": "غل",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "غَلِّ • (ḡalli) (form II) /ɣal.li/\n# second-person masculine singular imperative of غَلَّى (ḡallā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ḡalli", "ḡallā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "غلي",
-        "u": "غلي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "غُلِيَ • (ḡuliya) (form I) /ɣu.li.ja/\n# third-person masculine singular past passive of غَلَى (ḡalā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡuliya", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "غلي",
-        "u": "غلي",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "غلي (form II)\n# غُلِّيَ (ḡulliya) /ɣul.li.ja/: third-person masculine singular past passive of غَلَّى (ḡallā)\n# غَلِّي (ḡallī) /ɣal.liː/: second-person feminine singular imperative of غَلَّى (ḡallā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ḡulliya", "ḡallā", "ḡallī"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يغل",
-        "u": "يغل",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يغل (form I)\n# يَغْلِ (yaḡli) /jaɣ.li/: third-person masculine singular non-past active jussive of غَلَى (ḡalā)\n# يُغْلَ (yuḡla) /juɣ.la/: third-person masculine singular non-past passive jussive of غَلَى (ḡalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡli", "ḡalā", "yuḡla"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يغل",
-        "u": "يغل",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "يغل (form II)\n# يُغَلِّ (yuḡalli) /ju.ɣal.li/: third-person masculine singular non-past active jussive of غَلَّى (ḡallā)\n# يُغَلَّ (yuḡalla) /ju.ɣal.la/: third-person masculine singular non-past passive jussive of غَلَّى (ḡallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuḡalli", "ḡallā", "yuḡalla"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يغلي",
-        "u": "يغلي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يغلي (form I)\n# يَغْلِي (yaḡlī) /jaɣ.liː/: third-person masculine singular non-past active indicative of غَلَى (ḡalā)\n# يَغْلِيَ (yaḡliya) /jaɣ.li.ja/: third-person masculine singular non-past active subjunctive of غَلَى (ḡalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡlī", "ḡalā", "yaḡliya"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يغلي",
-        "u": "يغلي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يغلي (form II)\n# يُغَلِّي (yuḡallī) /ju.ɣal.liː/: third-person masculine singular non-past active indicative of غَلَّى (ḡallā)\n# يُغَلِّيَ (yuḡalliya) /ju.ɣal.li.ja/: third-person masculine singular non-past active subjunctive of غَلَّى (ḡallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuḡallī", "ḡallā", "yuḡalliya"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يغلى",
-        "u": "يغلى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُغْلَى • (yuḡlā) (form I) /juɣ.laː/\n# third-person masculine singular non-past passive indicative/subjunctive of غَلَى (ḡalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuḡlā", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يغلى",
-        "u": "يغلى",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يُغَلَّى • (yuḡallā) (form II) /ju.ɣal.laː/\n# third-person masculine singular non-past passive indicative/subjunctive of غَلَّى (ḡallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuḡallā", "ḡallā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "أغلى",
-        "u": "أغلى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أُغَلَّى • (ʔuḡallā) (form II) /ʔu.ɣal.laː/\n# first-person singular non-past passive indicative/subjunctive of غَلَّى (ḡallā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuḡallā", "ḡallā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "غلت",
-        "u": "غلت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "غَلَتْ • (ḡalat) (form I) /ɣa.lat/\n# third-person feminine singular past active of غَلَى (ḡalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡalat", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "غلت",
-        "u": "غلت",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "غَلَّتْ • (ḡallat) (form II) /ɣal.lat/\n# third-person feminine singular past active of غَلَّى (ḡallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ḡallat", "ḡallā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغل",
-        "u": "تغل",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَغْلِ • (taḡli) (form I) /taɣ.li/\n# inflection of غَلَى (ḡalā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡli", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغل",
-        "u": "تغل",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تغل (form II)\n# تُغَلِّ (tuḡalli) /tu.ɣal.li/: inflection of غَلَّى (ḡallā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُغَلَّ (tuḡalla) /tu.ɣal.la/: inflection of غَلَّى (ḡallā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuḡalli", "ḡallā", "tuḡalla"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغلي",
-        "u": "تغلي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تغلي (form I)\n# تَغْلِي (taḡlī) /taɣ.liː/: inflection of غَلَى (ḡalā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَغْلِيَ (taḡliya) /taɣ.li.ja/: inflection of غَلَى (ḡalā):\n## second-person masculine singular non-past active subjunctive\n## third",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡlī", "ḡalā", "taḡliya"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغلي",
-        "u": "تغلي",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تغلي (form II)\n# تُغَلِّي (tuḡallī) /tu.ɣal.liː/: inflection of غَلَّى (ḡallā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُغَلِّيَ (tuḡalliya) /tu.ɣal.li.ja/: inflection of غَلَّى (ḡallā):\n## second-person masculine singular non-past active sub",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuḡallī", "ḡallā", "tuḡalliya"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "غليت",
-        "u": "غليت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "غليت (form I)\n# غَلَيْتُ (ḡalaytu) /ɣa.laj.tu/: first-person singular past active of غَلَى (ḡalā)\n# غَلَيْتَ (ḡalayta) /ɣa.laj.ta/: second-person masculine singular past active of غَلَى (ḡalā)\n# غَلَيْتِ (ḡalayti) /ɣa.laj.ti/: second-person feminine singular past active of غَلَى (ḡalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡalaytu", "ḡalā", "ḡalayta"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "غليت",
-        "u": "غليت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "غليت (form II)\n# غَلَّيْتُ (ḡallaytu) /ɣal.laj.tu/: first-person singular past active of غَلَّى (ḡallā)\n# غَلَّيْتَ (ḡallayta) /ɣal.laj.ta/: second-person masculine singular past active of غَلَّى (ḡallā)\n# غَلَّيْتِ (ḡallayti) /ɣal.laj.ti/: second-person feminine singular past active of غَلَّى (ḡallā)\n# غُلِّيتُ (ḡullītu) /ɣul.liː.tu/: first-person singular past passive of غَلَّى (ḡallā)\n# غُلِّيت",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ḡallaytu", "ḡallā", "ḡallayta"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "اغل",
-        "u": "اغل",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِغْلِ • (iḡli) (form I) /iɣ.li/\n# second-person masculine singular imperative of غَلَى (ḡalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iḡli", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغلين",
-        "u": "تغلين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَغْلِينَ • (taḡlīna) (form I) /taɣ.liː.na/\n# inflection of غَلَى (ḡalā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡlīna", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغلين",
-        "u": "تغلين",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تغلين (form II)\n# تُغَلِّينَ (tuḡallīna) /tu.ɣal.liː.na/: inflection of غَلَّى (ḡallā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُغَلَّيْنَ (tuḡallayna) /tu.ɣal.laj.na/: inflection of غَلَّى (ḡallā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plur",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuḡallīna", "ḡallā", "tuḡallayna"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "اغلي",
-        "u": "اغلي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِغْلِي • (iḡlī) (form I) /iɣ.liː/\n# second-person feminine singular imperative of غَلَى (ḡalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iḡlī", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "أغل",
-        "u": "أغل",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَغْلِ • (ʔaḡli) (form I) /ʔaɣ.li/\n# first-person singular non-past active jussive of غَلَى (ḡalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḡli", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "أغل",
-        "u": "أغل",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "أغل (form II)\n# أُغَلِّ (ʔuḡalli) /ʔu.ɣal.li/: first-person singular non-past active jussive of غَلَّى (ḡallā)\n# أُغَلَّ (ʔuḡalla) /ʔu.ɣal.la/: first-person singular non-past passive jussive of غَلَّى (ḡallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuḡalli", "ḡallā", "ʔuḡalla"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "أغلي",
-        "u": "أغلي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أغلي (form I)\n# أَغْلِي (ʔaḡlī) /ʔaɣ.liː/: first-person singular non-past active indicative of غَلَى (ḡalā)\n# أَغْلِيَ (ʔaḡliya) /ʔaɣ.li.ja/: first-person singular non-past active subjunctive of غَلَى (ḡalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḡlī", "ḡalā", "ʔaḡliya"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "أغلي",
-        "u": "أغلي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أغلي (form II)\n# أُغَلِّي (ʔuḡallī) /ʔu.ɣal.liː/: first-person singular non-past active indicative of غَلَّى (ḡallā)\n# أُغَلِّيَ (ʔuḡalliya) /ʔu.ɣal.li.ja/: first-person singular non-past active subjunctive of غَلَّى (ḡallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuḡallī", "ḡallā", "ʔuḡalliya"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "نغل",
-        "u": "نغل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نَغْلِ • (naḡli) (form I) /naɣ.li/\n# first-person plural non-past active jussive of غَلَى (ḡalā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḡli", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "نغل",
-        "u": "نغل",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "نغل (form II)\n# نُغَلِّ (nuḡalli) /nu.ɣal.li/: first-person plural non-past active jussive of غَلَّى (ḡallā)\n# نُغَلَّ (nuḡalla) /nu.ɣal.la/: first-person plural non-past passive jussive of غَلَّى (ḡallā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuḡalli", "ḡallā", "nuḡalla"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "غلينا",
-        "u": "غلينا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "غَلَيْنَا • (ḡalaynā) (form I) /ɣa.laj.naː/\n# first-person plural past active of غَلَى (ḡalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡalaynā", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "غلينا",
-        "u": "غلينا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "غلينا (form II)\n# غَلَّيْنَا (ḡallaynā) /ɣal.laj.naː/: first-person plural past active of غَلَّى (ḡallā)\n# غُلِّينَا (ḡullīnā) /ɣul.liː.naː/: first-person plural past passive of غَلَّى (ḡallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ḡallaynā", "ḡallā", "ḡullīnā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "نغلي",
-        "u": "نغلي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نغلي (form I)\n# نَغْلِي (naḡlī) /naɣ.liː/: first-person plural non-past active indicative of غَلَى (ḡalā)\n# نَغْلِيَ (naḡliya) /naɣ.li.ja/: first-person plural non-past active subjunctive of غَلَى (ḡalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḡlī", "ḡalā", "naḡliya"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "نغلي",
-        "u": "نغلي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نغلي (form II)\n# نُغَلِّي (nuḡallī) /nu.ɣal.liː/: first-person plural non-past active indicative of غَلَّى (ḡallā)\n# نُغَلِّيَ (nuḡalliya) /nu.ɣal.li.ja/: first-person plural non-past active subjunctive of غَلَّى (ḡallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuḡallī", "ḡallā", "nuḡalliya"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغلون",
-        "u": "تغلون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَغْلُونَ • (taḡlūna) (form I) /taɣ.luː.na/\n# second-person masculine plural non-past active indicative of غَلَى (ḡalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡlūna", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغلون",
-        "u": "تغلون",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تغلون (form II)\n# تُغَلُّونَ (tuḡallūna) /tu.ɣal.luː.na/: second-person masculine plural non-past active indicative of غَلَّى (ḡallā)\n# تُغَلَّوْنَ (tuḡallawna) /tu.ɣal.law.na/: second-person masculine plural non-past passive indicative of غَلَّى (ḡallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuḡallūna", "ḡallā", "tuḡallawna"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "غليتم",
-        "u": "غليتم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "غَلَيْتُمْ • (ḡalaytum) (form I) /ɣa.laj.tum/\n# second-person masculine plural past active of غَلَى (ḡalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡalaytum", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "غليتم",
-        "u": "غليتم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "غليتم (form II)\n# غَلَّيْتُمْ (ḡallaytum) /ɣal.laj.tum/: second-person masculine plural past active of غَلَّى (ḡallā)\n# غُلِّيتُمْ (ḡullītum) /ɣul.liː.tum/: second-person masculine plural past passive of غَلَّى (ḡallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ḡallaytum", "ḡallā", "ḡullītum"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغلوا",
-        "u": "تغلوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَغْلُوا • (taḡlū) (form I) /taɣ.luː/\n# second-person masculine plural non-past active subjunctive/jussive of غَلَى (ḡalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡlū", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغلوا",
-        "u": "تغلوا",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تغلوا (form II)\n# تُغَلُّوا (tuḡallū) /tu.ɣal.luː/: second-person masculine plural non-past active subjunctive/jussive of غَلَّى (ḡallā)\n# تُغَلَّوْا (tuḡallaw) /tu.ɣal.law/: second-person masculine plural non-past passive subjunctive/jussive of غَلَّى (ḡallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuḡallū", "ḡallā", "tuḡallaw"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "اغلوا",
-        "u": "اغلوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِغْلُوا • (iḡlū) (form I) /iɣ.luː/\n# second-person masculine plural imperative of غَلَى (ḡalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iḡlū", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "غلوا",
-        "u": "غلوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "غَلَوْا • (ḡalaw) (form I) /ɣa.law/\n# third-person masculine plural past active of غَلَى (ḡalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡalaw", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "غلوا",
-        "u": "غلوا",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "غلوا (form II)\n# غَلَّوْا (ḡallaw) /ɣal.law/: third-person masculine plural past active of غَلَّى (ḡallā)\n# غُلُّوا (ḡullū) /ɣul.luː/: third-person masculine plural past passive of غَلَّى (ḡallā)\n# غَلُّوا (ḡallū) /ɣal.luː/: second-person masculine plural imperative of غَلَّى (ḡallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ḡallaw", "ḡallā", "ḡullū"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يغلون",
-        "u": "يغلون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَغْلُونَ • (yaḡlūna) (form I) /jaɣ.luː.na/\n# third-person masculine plural non-past active indicative of غَلَى (ḡalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡlūna", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يغلون",
-        "u": "يغلون",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "يغلون (form II)\n# يُغَلُّونَ (yuḡallūna) /ju.ɣal.luː.na/: third-person masculine plural non-past active indicative of غَلَّى (ḡallā)\n# يُغَلَّوْنَ (yuḡallawna) /ju.ɣal.law.na/: third-person masculine plural non-past passive indicative of غَلَّى (ḡallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuḡallūna", "ḡallā", "yuḡallawna"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يغلوا",
-        "u": "يغلوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَغْلُوا • (yaḡlū) (form I) /jaɣ.luː/\n# third-person masculine plural non-past active subjunctive/jussive of غَلَى (ḡalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡlū", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يغلوا",
-        "u": "يغلوا",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "يغلوا (form II)\n# يُغَلُّوا (yuḡallū) /ju.ɣal.luː/: third-person masculine plural non-past active subjunctive/jussive of غَلَّى (ḡallā)\n# يُغَلَّوْا (yuḡallaw) /ju.ɣal.law/: third-person masculine plural non-past passive subjunctive/jussive of غَلَّى (ḡallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuḡallū", "ḡallā", "yuḡallaw"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "غليتن",
-        "u": "غليتن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "غَلَيْتُنَّ • (ḡalaytunna) (form I) /ɣa.laj.tun.na/\n# second-person feminine plural past active of غَلَى (ḡalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡalaytunna", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "غليتن",
-        "u": "غليتن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "غليتن (form II)\n# غَلَّيْتُنَّ (ḡallaytunna) /ɣal.laj.tun.na/: second-person feminine plural past active of غَلَّى (ḡallā)\n# غُلِّيتُنَّ (ḡullītunna) /ɣul.liː.tun.na/: second-person feminine plural past passive of غَلَّى (ḡallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ḡallaytunna", "ḡallā", "ḡullītunna"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "اغلين",
-        "u": "اغلين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِغْلِينَ • (iḡlīna) (form I) /iɣ.liː.na/\n# second-person feminine plural imperative of غَلَى (ḡalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iḡlīna", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "غلين",
-        "u": "غلين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "غَلَيْنَ • (ḡalayna) (form I) /ɣa.laj.na/\n# third-person feminine plural past active of غَلَى (ḡalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡalayna", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "غلين",
-        "u": "غلين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "غلين (form II)\n# غَلَّيْنَ (ḡallayna) /ɣal.laj.na/: third-person feminine plural past active of غَلَّى (ḡallā)\n# غُلِّينَ (ḡullīna) /ɣul.liː.na/: third-person feminine plural past passive of غَلَّى (ḡallā)\n# غَلِّينَ (ḡallīna) /ɣal.liː.na/: second-person feminine plural imperative of غَلَّى (ḡallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ḡallayna", "ḡallā", "ḡullīna"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يغلين",
-        "u": "يغلين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَغْلِينَ • (yaḡlīna) (form I) /jaɣ.liː.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of غَلَى (ḡalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡlīna", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يغلين",
-        "u": "يغلين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يغلين (form II)\n# يُغَلِّينَ (yuḡallīna) /ju.ɣal.liː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of غَلَّى (ḡallā)\n# يُغَلَّيْنَ (yuḡallayna) /ju.ɣal.laj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of غَلَّى (ḡallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuḡallīna", "ḡallā", "yuḡallayna"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغليان",
-        "u": "تغليان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَغْلِيَانِ • (taḡliyāni) (form I) /taɣ.li.jaː.ni/\n# inflection of غَلَى (ḡalā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡliyāni", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغليان",
-        "u": "تغليان",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تغليان (form II)\n# تُغَلِّيَانِ (tuḡalliyāni) /tu.ɣal.li.jaː.ni/: inflection of غَلَّى (ḡallā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُغَلَّيَانِ (tuḡallayāni) /tu.ɣal.la.jaː.ni/: inflection of غَلَّى (ḡallā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuḡalliyāni", "ḡallā", "tuḡallayāni"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يغليان",
-        "u": "يغليان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَغْلِيَانِ • (yaḡliyāni) (form I) /jaɣ.li.jaː.ni/\n# third-person masculine dual non-past active indicative of غَلَى (ḡalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡliyāni", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يغليان",
-        "u": "يغليان",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يغليان (form II)\n# يُغَلِّيَانِ (yuḡalliyāni) /ju.ɣal.li.jaː.ni/: third-person masculine dual non-past active indicative of غَلَّى (ḡallā)\n# يُغَلَّيَانِ (yuḡallayāni) /ju.ɣal.la.jaː.ni/: third-person masculine dual non-past passive indicative of غَلَّى (ḡallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuḡalliyāni", "ḡallā", "yuḡallayāni"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغلى",
-        "u": "تغلى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُغَلَّى • (tuḡallā) (form II) /tu.ɣal.laː/\n# inflection of غَلَّى (ḡallā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuḡallā", "ḡallā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "نغلى",
-        "u": "نغلى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نُغَلَّى • (nuḡallā) (form II) /nu.ɣal.laː/\n# first-person plural non-past passive indicative/subjunctive of غَلَّى (ḡallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuḡallā", "ḡallā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغليا",
-        "u": "تغليا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَغْلِيَا • (taḡliyā) (form I) /taɣ.li.jaː/\n# inflection of غَلَى (ḡalā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḡliyā", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغليا",
-        "u": "تغليا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تغليا (form II)\n# تُغَلِّيَا (tuḡalliyā) /tu.ɣal.li.jaː/: inflection of غَلَّى (ḡallā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُغَلَّيَا (tuḡallayā) /tu.ɣal.la.jaː/: inflection of غَلَّى (ḡallā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctiv",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuḡalliyā", "ḡallā", "tuḡallayā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يغليا",
-        "u": "يغليا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَغْلِيَا • (yaḡliyā) (form I) /jaɣ.li.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of غَلَى (ḡalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḡliyā", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يغليا",
-        "u": "يغليا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يغليا (form II)\n# يُغَلِّيَا (yuḡalliyā) /ju.ɣal.li.jaː/: third-person masculine dual non-past active subjunctive/jussive of غَلَّى (ḡallā)\n# يُغَلَّيَا (yuḡallayā) /ju.ɣal.la.jaː/: third-person masculine dual non-past passive subjunctive/jussive of غَلَّى (ḡallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuḡalliyā", "ḡallā", "yuḡallayā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "غلتا",
-        "u": "غلتا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "غَلَتَا • (ḡalatā) (form I) /ɣa.la.taː/\n# third-person feminine dual past active of غَلَى (ḡalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡalatā", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "غلتا",
-        "u": "غلتا",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "غَلَّتَا • (ḡallatā) (form II) /ɣal.la.taː/\n# third-person feminine dual past active of غَلَّى (ḡallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ḡallatā", "ḡallā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "غليتما",
-        "u": "غليتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "غَلَيْتُمَا • (ḡalaytumā) (form I) /ɣa.laj.tu.maː/\n# second-person dual past active of غَلَى (ḡalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡalaytumā", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "غليتما",
-        "u": "غليتما",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "غليتما (form II)\n# غَلَّيْتُمَا (ḡallaytumā) /ɣal.laj.tu.maː/: second-person dual past active of غَلَّى (ḡallā)\n# غُلِّيتُمَا (ḡullītumā) /ɣul.liː.tu.maː/: second-person dual past passive of غَلَّى (ḡallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ḡallaytumā", "ḡallā", "ḡullītumā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "اغليا",
-        "u": "اغليا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِغْلِيَا • (iḡliyā) (form I) /iɣ.li.jaː/\n# second-person dual imperative of غَلَى (ḡalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iḡliyā", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "غليا",
-        "u": "غليا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "غَلَيَا • (ḡalayā) (form I) /ɣa.la.jaː/\n# third-person masculine dual past active of غَلَى (ḡalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḡalayā", "ḡalā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "غليا",
-        "u": "غليا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "غليا (form II)\n# غَلَّيَا (ḡallayā) /ɣal.la.jaː/: third-person masculine dual past active of غَلَّى (ḡallā)\n# غُلِّيَا (ḡulliyā) /ɣul.li.jaː/: third-person masculine dual past passive of غَلَّى (ḡallā)\n# غَلِّيَا (ḡalliyā) /ɣal.li.jaː/: second-person dual imperative of غَلَّى (ḡallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ḡallayā", "ḡallā", "ḡulliyā"],
-        "k": "غلى",
-        "yol": "kök"
-      },
-      {
-        "w": "غليتا",
-        "u": "غليتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "غُلِّيَتَا • (ḡulliyatā) (form II) /ɣul.li.ja.taː/\n# third-person feminine dual past passive of غَلَّى (ḡallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ḡulliyatā", "ḡallā"],
-        "k": "غلى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "غل",
+  "ses": {
     "harf": "غ",
+    "fasil": "غل",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "cebel": {
+    "fasil": "الغين واللام",
+    "baslik": "غلى",
+    "mihveri": "الغَلَيان، وهو بلوغ حرارة الشيء أعلاها وتقلُّبه وارتفاعه في وعائه لذلك: {كَالْمُهْلِ يَغْلِي فِي الْبُطُونِ (45) كَغَلْيِ الْحَمِيمِ}.",
+    "tam_metin": "{طَعَامُ الْأَثِيمِ (44) كَالْمُهْلِ يَغْلِي فِي الْبُطُونِ (45) كَغَلْيِ الْحَمِيمِ} [الدخان: 44 - 46]\n\"غلت القِدْر والجَرَّة تغِلي غَلَيانًا وأغْلاها وغَلّاها. . . \".\n° المعنى المحوري\nالغَلَيان، وهو بلوغ حرارة الشيء أعلاها وتقلُّبه وارتفاعه في وعائه لذلك: {كَالْمُهْلِ يَغْلِي فِي الْبُطُونِ (45) كَغَلْيِ الْحَمِيمِ}.",
+    "fasil_ozeti": "° معنى الفصل المعجمي (غل) : هو التخلل بحدة مع إحاطة أو تقييد أو ما بمعناهما. كالضم كتخلل الشيء المِصْفاة (وحجز بعضه تقييد) -في (غلل)، وكزيادة جسم الجارية والغلام والنبت (وهذا ضم فيه حدة تتخلل الأثناء) -في (غلو)، وكغَلَيان القِدْر (وهو حرارة تسري في أثنائها) -في (غلى)، وكتسرب ماء الحوض منه"
+  },
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "غل",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "غَلِّ • (ḡalli) (form II) /ɣal.li/\n# second-person masculine singular imperative of غَلَّى (ḡallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ḡalli", "ḡallā"]
+    },
+    {
+      "madde": "غلي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "غُلِيَ • (ḡuliya) (form I) /ɣu.li.ja/\n# third-person masculine singular past passive of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡuliya", "ḡalā"]
+    },
+    {
+      "madde": "غلي",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "غلي (form II)\n# غُلِّيَ (ḡulliya) /ɣul.li.ja/: third-person masculine singular past passive of غَلَّى (ḡallā)\n# غَلِّي (ḡallī) /ɣal.liː/: second-person feminine singular imperative of غَلَّى (ḡallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ḡulliya", "ḡallā", "ḡallī"]
+    },
+    {
+      "madde": "يغل",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يغل (form I)\n# يَغْلِ (yaḡli) /jaɣ.li/: third-person masculine singular non-past active jussive of غَلَى (ḡalā)\n# يُغْلَ (yuḡla) /juɣ.la/: third-person masculine singular non-past passive jussive of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡli", "ḡalā", "yuḡla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغل",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "يغل (form II)\n# يُغَلِّ (yuḡalli) /ju.ɣal.li/: third-person masculine singular non-past active jussive of غَلَّى (ḡallā)\n# يُغَلَّ (yuḡalla) /ju.ɣal.la/: third-person masculine singular non-past passive jussive of غَلَّى (ḡallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuḡalli", "ḡallā", "yuḡalla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغلي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يغلي (form I)\n# يَغْلِي (yaḡlī) /jaɣ.liː/: third-person masculine singular non-past active indicative of غَلَى (ḡalā)\n# يَغْلِيَ (yaḡliya) /jaɣ.li.ja/: third-person masculine singular non-past active subjunctive of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡlī", "ḡalā", "yaḡliya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغلي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يغلي (form II)\n# يُغَلِّي (yuḡallī) /ju.ɣal.liː/: third-person masculine singular non-past active indicative of غَلَّى (ḡallā)\n# يُغَلِّيَ (yuḡalliya) /ju.ɣal.li.ja/: third-person masculine singular non-past active subjunctive of غَلَّى (ḡallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuḡallī", "ḡallā", "yuḡalliya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغلى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُغْلَى • (yuḡlā) (form I) /juɣ.laː/\n# third-person masculine singular non-past passive indicative/subjunctive of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuḡlā", "ḡalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغلى",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يُغَلَّى • (yuḡallā) (form II) /ju.ɣal.laː/\n# third-person masculine singular non-past passive indicative/subjunctive of غَلَّى (ḡallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuḡallā", "ḡallā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أغلى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أُغَلَّى • (ʔuḡallā) (form II) /ʔu.ɣal.laː/\n# first-person singular non-past passive indicative/subjunctive of غَلَّى (ḡallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuḡallā", "ḡallā"]
+    },
+    {
+      "madde": "غلت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "غَلَتْ • (ḡalat) (form I) /ɣa.lat/\n# third-person feminine singular past active of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡalat", "ḡalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غلت",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "غَلَّتْ • (ḡallat) (form II) /ɣal.lat/\n# third-person feminine singular past active of غَلَّى (ḡallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ḡallat", "ḡallā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغل",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَغْلِ • (taḡli) (form I) /taɣ.li/\n# inflection of غَلَى (ḡalā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡli", "ḡalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغل",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تغل (form II)\n# تُغَلِّ (tuḡalli) /tu.ɣal.li/: inflection of غَلَّى (ḡallā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُغَلَّ (tuḡalla) /tu.ɣal.la/: inflection of غَلَّى (ḡallā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuḡalli", "ḡallā", "tuḡalla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغلي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تغلي (form I)\n# تَغْلِي (taḡlī) /taɣ.liː/: inflection of غَلَى (ḡalā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَغْلِيَ (taḡliya) /taɣ.li.ja/: inflection of غَلَى (ḡalā):\n## second-person masculine singular non-past active subjunctive\n## third",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡlī", "ḡalā", "taḡliya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغلي",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تغلي (form II)\n# تُغَلِّي (tuḡallī) /tu.ɣal.liː/: inflection of غَلَّى (ḡallā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُغَلِّيَ (tuḡalliya) /tu.ɣal.li.ja/: inflection of غَلَّى (ḡallā):\n## second-person masculine singular non-past active sub",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuḡallī", "ḡallā", "tuḡalliya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غليت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "غليت (form I)\n# غَلَيْتُ (ḡalaytu) /ɣa.laj.tu/: first-person singular past active of غَلَى (ḡalā)\n# غَلَيْتَ (ḡalayta) /ɣa.laj.ta/: second-person masculine singular past active of غَلَى (ḡalā)\n# غَلَيْتِ (ḡalayti) /ɣa.laj.ti/: second-person feminine singular past active of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡalaytu", "ḡalā", "ḡalayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غليت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "غليت (form II)\n# غَلَّيْتُ (ḡallaytu) /ɣal.laj.tu/: first-person singular past active of غَلَّى (ḡallā)\n# غَلَّيْتَ (ḡallayta) /ɣal.laj.ta/: second-person masculine singular past active of غَلَّى (ḡallā)\n# غَلَّيْتِ (ḡallayti) /ɣal.laj.ti/: second-person feminine singular past active of غَلَّى (ḡallā)\n# غُلِّيتُ (ḡullītu) /ɣul.liː.tu/: first-person singular past passive of غَلَّى (ḡallā)\n# غُلِّيت",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ḡallaytu", "ḡallā", "ḡallayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اغل",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِغْلِ • (iḡli) (form I) /iɣ.li/\n# second-person masculine singular imperative of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iḡli", "ḡalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغلين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَغْلِينَ • (taḡlīna) (form I) /taɣ.liː.na/\n# inflection of غَلَى (ḡalā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡlīna", "ḡalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغلين",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تغلين (form II)\n# تُغَلِّينَ (tuḡallīna) /tu.ɣal.liː.na/: inflection of غَلَّى (ḡallā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُغَلَّيْنَ (tuḡallayna) /tu.ɣal.laj.na/: inflection of غَلَّى (ḡallā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plur",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuḡallīna", "ḡallā", "tuḡallayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اغلي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِغْلِي • (iḡlī) (form I) /iɣ.liː/\n# second-person feminine singular imperative of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iḡlī", "ḡalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أغل",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَغْلِ • (ʔaḡli) (form I) /ʔaɣ.li/\n# first-person singular non-past active jussive of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḡli", "ḡalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أغل",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "أغل (form II)\n# أُغَلِّ (ʔuḡalli) /ʔu.ɣal.li/: first-person singular non-past active jussive of غَلَّى (ḡallā)\n# أُغَلَّ (ʔuḡalla) /ʔu.ɣal.la/: first-person singular non-past passive jussive of غَلَّى (ḡallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuḡalli", "ḡallā", "ʔuḡalla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أغلي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أغلي (form I)\n# أَغْلِي (ʔaḡlī) /ʔaɣ.liː/: first-person singular non-past active indicative of غَلَى (ḡalā)\n# أَغْلِيَ (ʔaḡliya) /ʔaɣ.li.ja/: first-person singular non-past active subjunctive of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḡlī", "ḡalā", "ʔaḡliya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أغلي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أغلي (form II)\n# أُغَلِّي (ʔuḡallī) /ʔu.ɣal.liː/: first-person singular non-past active indicative of غَلَّى (ḡallā)\n# أُغَلِّيَ (ʔuḡalliya) /ʔu.ɣal.li.ja/: first-person singular non-past active subjunctive of غَلَّى (ḡallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuḡallī", "ḡallā", "ʔuḡalliya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نغل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نَغْلِ • (naḡli) (form I) /naɣ.li/\n# first-person plural non-past active jussive of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḡli", "ḡalā"]
+    },
+    {
+      "madde": "نغل",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "نغل (form II)\n# نُغَلِّ (nuḡalli) /nu.ɣal.li/: first-person plural non-past active jussive of غَلَّى (ḡallā)\n# نُغَلَّ (nuḡalla) /nu.ɣal.la/: first-person plural non-past passive jussive of غَلَّى (ḡallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuḡalli", "ḡallā", "nuḡalla"]
+    },
+    {
+      "madde": "غلينا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "غَلَيْنَا • (ḡalaynā) (form I) /ɣa.laj.naː/\n# first-person plural past active of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡalaynā", "ḡalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غلينا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "غلينا (form II)\n# غَلَّيْنَا (ḡallaynā) /ɣal.laj.naː/: first-person plural past active of غَلَّى (ḡallā)\n# غُلِّينَا (ḡullīnā) /ɣul.liː.naː/: first-person plural past passive of غَلَّى (ḡallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ḡallaynā", "ḡallā", "ḡullīnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نغلي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نغلي (form I)\n# نَغْلِي (naḡlī) /naɣ.liː/: first-person plural non-past active indicative of غَلَى (ḡalā)\n# نَغْلِيَ (naḡliya) /naɣ.li.ja/: first-person plural non-past active subjunctive of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḡlī", "ḡalā", "naḡliya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نغلي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نغلي (form II)\n# نُغَلِّي (nuḡallī) /nu.ɣal.liː/: first-person plural non-past active indicative of غَلَّى (ḡallā)\n# نُغَلِّيَ (nuḡalliya) /nu.ɣal.li.ja/: first-person plural non-past active subjunctive of غَلَّى (ḡallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuḡallī", "ḡallā", "nuḡalliya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغلون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَغْلُونَ • (taḡlūna) (form I) /taɣ.luː.na/\n# second-person masculine plural non-past active indicative of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡlūna", "ḡalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغلون",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تغلون (form II)\n# تُغَلُّونَ (tuḡallūna) /tu.ɣal.luː.na/: second-person masculine plural non-past active indicative of غَلَّى (ḡallā)\n# تُغَلَّوْنَ (tuḡallawna) /tu.ɣal.law.na/: second-person masculine plural non-past passive indicative of غَلَّى (ḡallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuḡallūna", "ḡallā", "tuḡallawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غليتم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "غَلَيْتُمْ • (ḡalaytum) (form I) /ɣa.laj.tum/\n# second-person masculine plural past active of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡalaytum", "ḡalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غليتم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "غليتم (form II)\n# غَلَّيْتُمْ (ḡallaytum) /ɣal.laj.tum/: second-person masculine plural past active of غَلَّى (ḡallā)\n# غُلِّيتُمْ (ḡullītum) /ɣul.liː.tum/: second-person masculine plural past passive of غَلَّى (ḡallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ḡallaytum", "ḡallā", "ḡullītum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغلوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَغْلُوا • (taḡlū) (form I) /taɣ.luː/\n# second-person masculine plural non-past active subjunctive/jussive of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡlū", "ḡalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغلوا",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تغلوا (form II)\n# تُغَلُّوا (tuḡallū) /tu.ɣal.luː/: second-person masculine plural non-past active subjunctive/jussive of غَلَّى (ḡallā)\n# تُغَلَّوْا (tuḡallaw) /tu.ɣal.law/: second-person masculine plural non-past passive subjunctive/jussive of غَلَّى (ḡallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuḡallū", "ḡallā", "tuḡallaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اغلوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِغْلُوا • (iḡlū) (form I) /iɣ.luː/\n# second-person masculine plural imperative of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iḡlū", "ḡalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غلوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "غَلَوْا • (ḡalaw) (form I) /ɣa.law/\n# third-person masculine plural past active of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡalaw", "ḡalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غلوا",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "غلوا (form II)\n# غَلَّوْا (ḡallaw) /ɣal.law/: third-person masculine plural past active of غَلَّى (ḡallā)\n# غُلُّوا (ḡullū) /ɣul.luː/: third-person masculine plural past passive of غَلَّى (ḡallā)\n# غَلُّوا (ḡallū) /ɣal.luː/: second-person masculine plural imperative of غَلَّى (ḡallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ḡallaw", "ḡallā", "ḡullū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغلون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَغْلُونَ • (yaḡlūna) (form I) /jaɣ.luː.na/\n# third-person masculine plural non-past active indicative of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡlūna", "ḡalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغلون",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "يغلون (form II)\n# يُغَلُّونَ (yuḡallūna) /ju.ɣal.luː.na/: third-person masculine plural non-past active indicative of غَلَّى (ḡallā)\n# يُغَلَّوْنَ (yuḡallawna) /ju.ɣal.law.na/: third-person masculine plural non-past passive indicative of غَلَّى (ḡallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuḡallūna", "ḡallā", "yuḡallawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغلوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَغْلُوا • (yaḡlū) (form I) /jaɣ.luː/\n# third-person masculine plural non-past active subjunctive/jussive of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡlū", "ḡalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغلوا",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "يغلوا (form II)\n# يُغَلُّوا (yuḡallū) /ju.ɣal.luː/: third-person masculine plural non-past active subjunctive/jussive of غَلَّى (ḡallā)\n# يُغَلَّوْا (yuḡallaw) /ju.ɣal.law/: third-person masculine plural non-past passive subjunctive/jussive of غَلَّى (ḡallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuḡallū", "ḡallā", "yuḡallaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غليتن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "غَلَيْتُنَّ • (ḡalaytunna) (form I) /ɣa.laj.tun.na/\n# second-person feminine plural past active of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡalaytunna", "ḡalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غليتن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "غليتن (form II)\n# غَلَّيْتُنَّ (ḡallaytunna) /ɣal.laj.tun.na/: second-person feminine plural past active of غَلَّى (ḡallā)\n# غُلِّيتُنَّ (ḡullītunna) /ɣul.liː.tun.na/: second-person feminine plural past passive of غَلَّى (ḡallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ḡallaytunna", "ḡallā", "ḡullītunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اغلين",
+      "tur": "verb",
+      "baslik": "اِغْلِينَ • (iḡlīna) (form I) /iɣ.liː.na/\n# second-person feminine plural imperative of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iḡlīna", "ḡalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غلين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "غَلَيْنَ • (ḡalayna) (form I) /ɣa.laj.na/\n# third-person feminine plural past active of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡalayna", "ḡalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غلين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "غلين (form II)\n# غَلَّيْنَ (ḡallayna) /ɣal.laj.na/: third-person feminine plural past active of غَلَّى (ḡallā)\n# غُلِّينَ (ḡullīna) /ɣul.liː.na/: third-person feminine plural past passive of غَلَّى (ḡallā)\n# غَلِّينَ (ḡallīna) /ɣal.liː.na/: second-person feminine plural imperative of غَلَّى (ḡallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ḡallayna", "ḡallā", "ḡullīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغلين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَغْلِينَ • (yaḡlīna) (form I) /jaɣ.liː.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡlīna", "ḡalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغلين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يغلين (form II)\n# يُغَلِّينَ (yuḡallīna) /ju.ɣal.liː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of غَلَّى (ḡallā)\n# يُغَلَّيْنَ (yuḡallayna) /ju.ɣal.laj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of غَلَّى (ḡallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuḡallīna", "ḡallā", "yuḡallayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغليان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَغْلِيَانِ • (taḡliyāni) (form I) /taɣ.li.jaː.ni/\n# inflection of غَلَى (ḡalā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡliyāni", "ḡalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغليان",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تغليان (form II)\n# تُغَلِّيَانِ (tuḡalliyāni) /tu.ɣal.li.jaː.ni/: inflection of غَلَّى (ḡallā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُغَلَّيَانِ (tuḡallayāni) /tu.ɣal.la.jaː.ni/: inflection of غَلَّى (ḡallā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuḡalliyāni", "ḡallā", "tuḡallayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغليان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَغْلِيَانِ • (yaḡliyāni) (form I) /jaɣ.li.jaː.ni/\n# third-person masculine dual non-past active indicative of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡliyāni", "ḡalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغليان",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يغليان (form II)\n# يُغَلِّيَانِ (yuḡalliyāni) /ju.ɣal.li.jaː.ni/: third-person masculine dual non-past active indicative of غَلَّى (ḡallā)\n# يُغَلَّيَانِ (yuḡallayāni) /ju.ɣal.la.jaː.ni/: third-person masculine dual non-past passive indicative of غَلَّى (ḡallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuḡalliyāni", "ḡallā", "yuḡallayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغلى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُغَلَّى • (tuḡallā) (form II) /tu.ɣal.laː/\n# inflection of غَلَّى (ḡallā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuḡallā", "ḡallā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نغلى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نُغَلَّى • (nuḡallā) (form II) /nu.ɣal.laː/\n# first-person plural non-past passive indicative/subjunctive of غَلَّى (ḡallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuḡallā", "ḡallā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغليا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَغْلِيَا • (taḡliyā) (form I) /taɣ.li.jaː/\n# inflection of غَلَى (ḡalā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḡliyā", "ḡalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تغليا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تغليا (form II)\n# تُغَلِّيَا (tuḡalliyā) /tu.ɣal.li.jaː/: inflection of غَلَّى (ḡallā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُغَلَّيَا (tuḡallayā) /tu.ɣal.la.jaː/: inflection of غَلَّى (ḡallā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctiv",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuḡalliyā", "ḡallā", "tuḡallayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغليا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَغْلِيَا • (yaḡliyā) (form I) /jaɣ.li.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḡliyā", "ḡalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يغليا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يغليا (form II)\n# يُغَلِّيَا (yuḡalliyā) /ju.ɣal.li.jaː/: third-person masculine dual non-past active subjunctive/jussive of غَلَّى (ḡallā)\n# يُغَلَّيَا (yuḡallayā) /ju.ɣal.la.jaː/: third-person masculine dual non-past passive subjunctive/jussive of غَلَّى (ḡallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuḡalliyā", "ḡallā", "yuḡallayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غلتا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "غَلَتَا • (ḡalatā) (form I) /ɣa.la.taː/\n# third-person feminine dual past active of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡalatā", "ḡalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غلتا",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "غَلَّتَا • (ḡallatā) (form II) /ɣal.la.taː/\n# third-person feminine dual past active of غَلَّى (ḡallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ḡallatā", "ḡallā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غليتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "غَلَيْتُمَا • (ḡalaytumā) (form I) /ɣa.laj.tu.maː/\n# second-person dual past active of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡalaytumā", "ḡalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غليتما",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "غليتما (form II)\n# غَلَّيْتُمَا (ḡallaytumā) /ɣal.laj.tu.maː/: second-person dual past active of غَلَّى (ḡallā)\n# غُلِّيتُمَا (ḡullītumā) /ɣul.liː.tu.maː/: second-person dual past passive of غَلَّى (ḡallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ḡallaytumā", "ḡallā", "ḡullītumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اغليا",
+      "tur": "verb",
+      "baslik": "اِغْلِيَا • (iḡliyā) (form I) /iɣ.li.jaː/\n# second-person dual imperative of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iḡliyā", "ḡalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غليا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "غَلَيَا • (ḡalayā) (form I) /ɣa.la.jaː/\n# third-person masculine dual past active of غَلَى (ḡalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḡalayā", "ḡalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غليا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "غليا (form II)\n# غَلَّيَا (ḡallayā) /ɣal.la.jaː/: third-person masculine dual past active of غَلَّى (ḡallā)\n# غُلِّيَا (ḡulliyā) /ɣul.li.jaː/: third-person masculine dual past passive of غَلَّى (ḡallā)\n# غَلِّيَا (ḡalliyā) /ɣal.li.jaː/: second-person dual imperative of غَلَّى (ḡallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ḡallayā", "ḡallā", "ḡulliyā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "غليتا",
+      "tur": "verb",
+      "baslik": "غُلِّيَتَا • (ḡulliyatā) (form II) /ɣul.li.ja.taː/\n# third-person feminine dual past passive of غَلَّى (ḡallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ḡulliyatā", "ḡallā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "غلى", "r7"]
+  ],
+  "mana": {
     "ince": "natural_process.n.01",
     "orta": "noun.process",
     "ust": "fiil ve hadise",
@@ -945,25 +672,8 @@
     "dayanak_tanim": "the application of heat to change something from a liquid to a gas",
     "synset_sayisi": 5
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "الغين واللام",
-    "mihveri": "الغَلَيان، وهو بلوغ حرارة الشيء أعلاها وتقلُّبه وارتفاعه في وعائه لذلك: {كَالْمُهْلِ يَغْلِي فِي الْبُطُونِ (45) كَغَلْيِ الْحَمِيمِ}.",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (غل) : هو التخلل بحدة مع إحاطة أو تقييد أو ما بمعناهما. كالضم كتخلل الشيء المِصْفاة (وحجز بعضه تقييد) -في (غلل)، وكزيادة جسم الجارية والغلام والنبت (وهذا ضم فيه حدة تتخلل الأثناء) -في (غلو)، وكغَلَيان القِدْر (وهو حرارة تسري في أثنائها) -في (غلى)، وكتسرب ماء الحوض منه",
-    "tam_metin": "{طَعَامُ الْأَثِيمِ (44) كَالْمُهْلِ يَغْلِي فِي الْبُطُونِ (45) كَغَلْيِ الْحَمِيمِ} [الدخان: 44 - 46]\n\"غلت القِدْر والجَرَّة تغِلي غَلَيانًا وأغْلاها وغَلّاها. . . \".\n° المعنى المحوري\nالغَلَيان، وهو بلوغ حرارة الشيء أعلاها وتقلُّبه وارتفاعه في وعائه لذلك: {كَالْمُهْلِ يَغْلِي فِي الْبُطُونِ (45) كَغَلْيِ الْحَمِيمِ}."
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["concede.v.02", "feeling.n.01", "phase_change.n.01", "yield.v.10", "yield.v.12"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 9,
       "merkez_kok": "سفك",
@@ -983,6 +693,11 @@
       "boy": 11
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["concede.v.02", "feeling.n.01", "phase_change.n.01", "yield.v.10", "yield.v.12"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

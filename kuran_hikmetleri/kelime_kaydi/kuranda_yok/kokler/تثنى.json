@@ -1,425 +1,302 @@
 {
   "kok": "تثنى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تثنى", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تثن",
-        "u": "تثن",
-        "p": "verb",
-        "n": "1.5",
-        "h": "ar-verb form",
-        "e": "تَثَنَّ • (taṯanna) (form V) /ta.θan.na/\n# second-person masculine singular imperative of تَثَنَّى (taṯannā)",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṯanna", "taṯannā"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتثنى",
-        "u": "يتثنى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتثنى (form V)\n# يَتَثَنَّى (yataṯannā) /ja.ta.θan.naː/: third-person masculine singular non-past active indicative/subjunctive of تَثَنَّى (taṯannā)\n# يُتَثَنَّى (yutaṯannā) /ju.ta.θan.naː/: third-person masculine singular non-past passive indicative/subjunctive of تَثَنَّى (taṯannā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataṯannā", "taṯannā", "yutaṯannā"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتثن",
-        "u": "يتثن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتثن (form V)\n# يَتَثَنَّ (yataṯanna) /ja.ta.θan.na/: third-person masculine singular non-past active jussive of تَثَنَّى (taṯannā)\n# يُتَثَنَّ (yutaṯanna) /ju.ta.θan.na/: third-person masculine singular non-past passive jussive of تَثَنَّى (taṯannā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataṯanna", "taṯannā", "yutaṯanna"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تثني",
-        "u": "تثني",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تثني (form V)\n# تُثُنِّيَ (tuṯunniya) /tu.θun.ni.ja/: third-person masculine singular past passive of تَثَنَّى (taṯannā)\n# تَثَنَّيْ (taṯannay) /ta.θan.naj/: second-person feminine singular imperative of تَثَنَّى (taṯannā)",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tuṯunniya", "taṯannā", "taṯannay"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تثنين",
-        "u": "تثنين",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تَثَنَّيْنَ • (taṯannayna) (form V) /ta.θan.naj.na/\n# inflection of تَثَنَّى (taṯannā):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṯannayna", "taṯannā"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تثنت",
-        "u": "تثنت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَثَنَّتْ • (taṯannat) (form V) /ta.θan.nat/\n# third-person feminine singular past active of تَثَنَّى (taṯannā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṯannat", "taṯannā"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتثنى",
-        "u": "تتثنى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَثَنَّى • (tataṯannā) (form V) /ta.ta.θan.naː/\n# inflection of تَثَنَّى (taṯannā):\n## second-person masculine singular non-past active indicative/subjunctive\n## third-person feminine singular non-past active indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṯannā", "taṯannā"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتثن",
-        "u": "تتثن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَثَنَّ • (tataṯanna) (form V) /ta.ta.θan.na/\n# inflection of تَثَنَّى (taṯannā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṯanna", "taṯannā"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تثنيت",
-        "u": "تثنيت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تثنيت (form V)\n# تَثَنَّيْتُ (taṯannaytu) /ta.θan.naj.tu/: first-person singular past active of تَثَنَّى (taṯannā)\n# تَثَنَّيْتَ (taṯannayta) /ta.θan.naj.ta/: second-person masculine singular past active of تَثَنَّى (taṯannā)\n# تَثَنَّيْتِ (taṯannayti) /ta.θan.naj.ti/: second-person feminine singular past active of تَثَنَّى (taṯannā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṯannaytu", "taṯannā", "taṯannayta"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتثنين",
-        "u": "تتثنين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَثَنَّيْنَ • (tataṯannayna) (form V) /ta.ta.θan.naj.na/\n# inflection of تَثَنَّى (taṯannā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṯannayna", "taṯannā"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتثني",
-        "u": "تتثني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَثَنَّيْ • (tataṯannay) (form V) /ta.ta.θan.naj/\n# second-person feminine singular non-past active subjunctive/jussive of تَثَنَّى (taṯannā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṯannay", "taṯannā"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أتثنى",
-        "u": "أتثنى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَتَثَنَّى • (ʔataṯannā) (form V) /ʔa.ta.θan.naː/\n# first-person singular non-past active indicative/subjunctive of تَثَنَّى (taṯannā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔataṯannā", "taṯannā"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أتثن",
-        "u": "أتثن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَتَثَنَّ • (ʔataṯanna) (form V) /ʔa.ta.θan.na/\n# first-person singular non-past active jussive of تَثَنَّى (taṯannā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔataṯanna", "taṯannā"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تثنينا",
-        "u": "تثنينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَثَنَّيْنَا • (taṯannaynā) (form V) /ta.θan.naj.naː/\n# first-person plural past active of تَثَنَّى (taṯannā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṯannaynā", "taṯannā"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "نتثنى",
-        "u": "نتثنى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَتَثَنَّى • (nataṯannā) (form V) /na.ta.θan.naː/\n# first-person plural non-past active indicative/subjunctive of تَثَنَّى (taṯannā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["nataṯannā", "taṯannā"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "نتثن",
-        "u": "نتثن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَتَثَنَّ • (nataṯanna) (form V) /na.ta.θan.na/\n# first-person plural non-past active jussive of تَثَنَّى (taṯannā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["nataṯanna", "taṯannā"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تثنوا",
-        "u": "تثنوا",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تَثَنَّوْا • (taṯannaw) (form V) /ta.θan.naw/\n# inflection of تَثَنَّى (taṯannā):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṯannaw", "taṯannā"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تثنيتم",
-        "u": "تثنيتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَثَنَّيْتُمْ • (taṯannaytum) (form V) /ta.θan.naj.tum/\n# second-person masculine plural past active of تَثَنَّى (taṯannā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṯannaytum", "taṯannā"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتثنون",
-        "u": "تتثنون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَثَنَّوْنَ • (tataṯannawna) (form V) /ta.ta.θan.naw.na/\n# second-person masculine plural non-past active indicative of تَثَنَّى (taṯannā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṯannawna", "taṯannā"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتثنوا",
-        "u": "تتثنوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَثَنَّوْا • (tataṯannaw) (form V) /ta.ta.θan.naw/\n# second-person masculine plural non-past active subjunctive/jussive of تَثَنَّى (taṯannā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṯannaw", "taṯannā"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتثنون",
-        "u": "يتثنون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَثَنَّوْنَ • (yataṯannawna) (form V) /ja.ta.θan.naw.na/\n# third-person masculine plural non-past active indicative of تَثَنَّى (taṯannā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataṯannawna", "taṯannā"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتثنوا",
-        "u": "يتثنوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَثَنَّوْا • (yataṯannaw) (form V) /ja.ta.θan.naw/\n# third-person masculine plural non-past active subjunctive/jussive of تَثَنَّى (taṯannā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataṯannaw", "taṯannā"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تثنيتن",
-        "u": "تثنيتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَثَنَّيْتُنَّ • (taṯannaytunna) (form V) /ta.θan.naj.tun.na/\n# second-person feminine plural past active of تَثَنَّى (taṯannā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṯannaytunna", "taṯannā"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتثنين",
-        "u": "يتثنين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَثَنَّيْنَ • (yataṯannayna) (form V) /ja.ta.θan.naj.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَثَنَّى (taṯannā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataṯannayna", "taṯannā"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تثنيا",
-        "u": "تثنيا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَثَنَّيَا • (taṯannayā) (form V) /ta.θan.na.jaː/\n# inflection of تَثَنَّى (taṯannā):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṯannayā", "taṯannā"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تثنيتما",
-        "u": "تثنيتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَثَنَّيْتُمَا • (taṯannaytumā) (form V) /ta.θan.naj.tu.maː/\n# second-person dual past active of تَثَنَّى (taṯannā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṯannaytumā", "taṯannā"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتثنيان",
-        "u": "تتثنيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَثَنَّيَانِ • (tataṯannayāni) (form V) /ta.ta.θan.na.jaː.ni/\n# inflection of تَثَنَّى (taṯannā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṯannayāni", "taṯannā"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تثنتا",
-        "u": "تثنتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَثَنَّتَا • (taṯannatā) (form V) /ta.θan.na.taː/\n# third-person feminine dual past active of تَثَنَّى (taṯannā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṯannatā", "taṯannā"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتثنيا",
-        "u": "يتثنيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَثَنَّيَا • (yataṯannayā) (form V) /ja.ta.θan.na.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of تَثَنَّى (taṯannā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataṯannayā", "taṯannā"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتثنيا",
-        "u": "تتثنيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَثَنَّيَا • (tataṯannayā) (form V) /ta.ta.θan.na.jaː/\n# inflection of تَثَنَّى (taṯannā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṯannayā", "taṯannā"],
-        "k": "تثنى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتثنيان",
-        "u": "يتثنيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَثَنَّيَانِ • (yataṯannayāni) (form V) /ja.ta.θan.na.jaː.ni/\n# third-person masculine dual non-past active indicative of تَثَنَّى (taṯannā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataṯannayāni", "taṯannā"],
-        "k": "تثنى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تث",
+  "ses": {
     "harf": "ت",
+    "fasil": "تث",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تثن",
+      "tur": "verb",
+      "etim_no": "1.5",
+      "baslik": "تَثَنَّ • (taṯanna) (form V) /ta.θan.na/\n# second-person masculine singular imperative of تَثَنَّى (taṯannā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṯanna", "taṯannā"]
+    },
+    {
+      "madde": "يتثنى",
+      "tur": "verb",
+      "baslik": "يتثنى (form V)\n# يَتَثَنَّى (yataṯannā) /ja.ta.θan.naː/: third-person masculine singular non-past active indicative/subjunctive of تَثَنَّى (taṯannā)\n# يُتَثَنَّى (yutaṯannā) /ju.ta.θan.naː/: third-person masculine singular non-past passive indicative/subjunctive of تَثَنَّى (taṯannā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataṯannā", "taṯannā", "yutaṯannā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتثن",
+      "tur": "verb",
+      "baslik": "يتثن (form V)\n# يَتَثَنَّ (yataṯanna) /ja.ta.θan.na/: third-person masculine singular non-past active jussive of تَثَنَّى (taṯannā)\n# يُتَثَنَّ (yutaṯanna) /ju.ta.θan.na/: third-person masculine singular non-past passive jussive of تَثَنَّى (taṯannā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataṯanna", "taṯannā", "yutaṯanna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تثني",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تثني (form V)\n# تُثُنِّيَ (tuṯunniya) /tu.θun.ni.ja/: third-person masculine singular past passive of تَثَنَّى (taṯannā)\n# تَثَنَّيْ (taṯannay) /ta.θan.naj/: second-person feminine singular imperative of تَثَنَّى (taṯannā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tuṯunniya", "taṯannā", "taṯannay"]
+    },
+    {
+      "madde": "تثنين",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تَثَنَّيْنَ • (taṯannayna) (form V) /ta.θan.naj.na/\n# inflection of تَثَنَّى (taṯannā):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṯannayna", "taṯannā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تثنت",
+      "tur": "verb",
+      "baslik": "تَثَنَّتْ • (taṯannat) (form V) /ta.θan.nat/\n# third-person feminine singular past active of تَثَنَّى (taṯannā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṯannat", "taṯannā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتثنى",
+      "tur": "verb",
+      "baslik": "تَتَثَنَّى • (tataṯannā) (form V) /ta.ta.θan.naː/\n# inflection of تَثَنَّى (taṯannā):\n## second-person masculine singular non-past active indicative/subjunctive\n## third-person feminine singular non-past active indicative/subjunctive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṯannā", "taṯannā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتثن",
+      "tur": "verb",
+      "baslik": "تَتَثَنَّ • (tataṯanna) (form V) /ta.ta.θan.na/\n# inflection of تَثَنَّى (taṯannā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṯanna", "taṯannā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تثنيت",
+      "tur": "verb",
+      "baslik": "تثنيت (form V)\n# تَثَنَّيْتُ (taṯannaytu) /ta.θan.naj.tu/: first-person singular past active of تَثَنَّى (taṯannā)\n# تَثَنَّيْتَ (taṯannayta) /ta.θan.naj.ta/: second-person masculine singular past active of تَثَنَّى (taṯannā)\n# تَثَنَّيْتِ (taṯannayti) /ta.θan.naj.ti/: second-person feminine singular past active of تَثَنَّى (taṯannā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṯannaytu", "taṯannā", "taṯannayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتثنين",
+      "tur": "verb",
+      "baslik": "تَتَثَنَّيْنَ • (tataṯannayna) (form V) /ta.ta.θan.naj.na/\n# inflection of تَثَنَّى (taṯannā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṯannayna", "taṯannā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتثني",
+      "tur": "verb",
+      "baslik": "تَتَثَنَّيْ • (tataṯannay) (form V) /ta.ta.θan.naj/\n# second-person feminine singular non-past active subjunctive/jussive of تَثَنَّى (taṯannā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṯannay", "taṯannā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أتثنى",
+      "tur": "verb",
+      "baslik": "أَتَثَنَّى • (ʔataṯannā) (form V) /ʔa.ta.θan.naː/\n# first-person singular non-past active indicative/subjunctive of تَثَنَّى (taṯannā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔataṯannā", "taṯannā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أتثن",
+      "tur": "verb",
+      "baslik": "أَتَثَنَّ • (ʔataṯanna) (form V) /ʔa.ta.θan.na/\n# first-person singular non-past active jussive of تَثَنَّى (taṯannā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔataṯanna", "taṯannā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تثنينا",
+      "tur": "verb",
+      "baslik": "تَثَنَّيْنَا • (taṯannaynā) (form V) /ta.θan.naj.naː/\n# first-person plural past active of تَثَنَّى (taṯannā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṯannaynā", "taṯannā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نتثنى",
+      "tur": "verb",
+      "baslik": "نَتَثَنَّى • (nataṯannā) (form V) /na.ta.θan.naː/\n# first-person plural non-past active indicative/subjunctive of تَثَنَّى (taṯannā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["nataṯannā", "taṯannā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نتثن",
+      "tur": "verb",
+      "baslik": "نَتَثَنَّ • (nataṯanna) (form V) /na.ta.θan.na/\n# first-person plural non-past active jussive of تَثَنَّى (taṯannā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["nataṯanna", "taṯannā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تثنوا",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تَثَنَّوْا • (taṯannaw) (form V) /ta.θan.naw/\n# inflection of تَثَنَّى (taṯannā):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṯannaw", "taṯannā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تثنيتم",
+      "tur": "verb",
+      "baslik": "تَثَنَّيْتُمْ • (taṯannaytum) (form V) /ta.θan.naj.tum/\n# second-person masculine plural past active of تَثَنَّى (taṯannā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṯannaytum", "taṯannā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتثنون",
+      "tur": "verb",
+      "baslik": "تَتَثَنَّوْنَ • (tataṯannawna) (form V) /ta.ta.θan.naw.na/\n# second-person masculine plural non-past active indicative of تَثَنَّى (taṯannā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṯannawna", "taṯannā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتثنوا",
+      "tur": "verb",
+      "baslik": "تَتَثَنَّوْا • (tataṯannaw) (form V) /ta.ta.θan.naw/\n# second-person masculine plural non-past active subjunctive/jussive of تَثَنَّى (taṯannā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṯannaw", "taṯannā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتثنون",
+      "tur": "verb",
+      "baslik": "يَتَثَنَّوْنَ • (yataṯannawna) (form V) /ja.ta.θan.naw.na/\n# third-person masculine plural non-past active indicative of تَثَنَّى (taṯannā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataṯannawna", "taṯannā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتثنوا",
+      "tur": "verb",
+      "baslik": "يَتَثَنَّوْا • (yataṯannaw) (form V) /ja.ta.θan.naw/\n# third-person masculine plural non-past active subjunctive/jussive of تَثَنَّى (taṯannā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataṯannaw", "taṯannā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تثنيتن",
+      "tur": "verb",
+      "baslik": "تَثَنَّيْتُنَّ • (taṯannaytunna) (form V) /ta.θan.naj.tun.na/\n# second-person feminine plural past active of تَثَنَّى (taṯannā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṯannaytunna", "taṯannā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتثنين",
+      "tur": "verb",
+      "baslik": "يَتَثَنَّيْنَ • (yataṯannayna) (form V) /ja.ta.θan.naj.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَثَنَّى (taṯannā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataṯannayna", "taṯannā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تثنيا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَثَنَّيَا • (taṯannayā) (form V) /ta.θan.na.jaː/\n# inflection of تَثَنَّى (taṯannā):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṯannayā", "taṯannā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تثنيتما",
+      "tur": "verb",
+      "baslik": "تَثَنَّيْتُمَا • (taṯannaytumā) (form V) /ta.θan.naj.tu.maː/\n# second-person dual past active of تَثَنَّى (taṯannā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṯannaytumā", "taṯannā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتثنيان",
+      "tur": "verb",
+      "baslik": "تَتَثَنَّيَانِ • (tataṯannayāni) (form V) /ta.ta.θan.na.jaː.ni/\n# inflection of تَثَنَّى (taṯannā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṯannayāni", "taṯannā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تثنتا",
+      "tur": "verb",
+      "baslik": "تَثَنَّتَا • (taṯannatā) (form V) /ta.θan.na.taː/\n# third-person feminine dual past active of تَثَنَّى (taṯannā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṯannatā", "taṯannā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتثنيا",
+      "tur": "verb",
+      "baslik": "يَتَثَنَّيَا • (yataṯannayā) (form V) /ja.ta.θan.na.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of تَثَنَّى (taṯannā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataṯannayā", "taṯannā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتثنيا",
+      "tur": "verb",
+      "baslik": "تَتَثَنَّيَا • (tataṯannayā) (form V) /ta.ta.θan.na.jaː/\n# inflection of تَثَنَّى (taṯannā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṯannayā", "taṯannā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتثنيان",
+      "tur": "verb",
+      "baslik": "يَتَثَنَّيَانِ • (yataṯannayāni) (form V) /ja.ta.θan.na.jaː.ni/\n# third-person masculine dual non-past active indicative of تَثَنَّى (taṯannā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataṯannayāni", "taṯannā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تثنى", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

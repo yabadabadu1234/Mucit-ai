@@ -1,364 +1,290 @@
 {
   "kok": "ءنعم",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءنعم", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تنعم",
-        "u": "تنعم",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تنعم (form IV)\n# تُنْعِمُ (tunʕimu) /tun.ʕi.mu/: inflection of أَنْعَمَ (ʔanʕama):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُنْعَمُ (tunʕamu) /tun.ʕa.mu/: inflection of أَنْعَمَ (ʔanʕama):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunʕimu", "ʔanʕama", "tunʕamu"],
-        "k": "أنعم",
-        "yol": "kök"
-      },
-      {
-        "w": "أنعمتا",
-        "u": "أنعمتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنعمتا (form IV)\n# أَنْعَمَتَا (ʔanʕamatā) /ʔan.ʕa.ma.taː/: third-person feminine dual past active of أَنْعَمَ (ʔanʕama)\n# أُنْعِمَتَا (ʔunʕimatā) /ʔun.ʕi.ma.taː/: third-person feminine dual past passive of أَنْعَمَ (ʔanʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanʕamatā", "ʔanʕama", "ʔunʕimatā"],
-        "k": "أنعم",
-        "yol": "kök"
-      },
-      {
-        "w": "أنعمتما",
-        "u": "أنعمتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنعمتما (form IV)\n# أَنْعَمْتُمَا (ʔanʕamtumā) /ʔan.ʕam.tu.maː/: second-person dual past active of أَنْعَمَ (ʔanʕama)\n# أُنْعِمْتُمَا (ʔunʕimtumā) /ʔun.ʕim.tu.maː/: second-person dual past passive of أَنْعَمَ (ʔanʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanʕamtumā", "ʔanʕama", "ʔunʕimtumā"],
-        "k": "أنعم",
-        "yol": "kök"
-      },
-      {
-        "w": "أنعمت",
-        "u": "أنعمت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنعمت (form IV)\n# أَنْعَمْتُ (ʔanʕamtu) /ʔan.ʕam.tu/: first-person singular past active of أَنْعَمَ (ʔanʕama)\n# أَنْعَمْتَ (ʔanʕamta) /ʔan.ʕam.ta/: second-person masculine singular past active of أَنْعَمَ (ʔanʕama)\n# أَنْعَمْتِ (ʔanʕamti) /ʔan.ʕam.ti/: second-person feminine singular past active of أَنْعَمَ (ʔanʕama)\n# أَنْعَمَتْ (ʔanʕamat) /ʔan.ʕa.mat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanʕamtu", "ʔanʕama", "ʔanʕamta"],
-        "k": "أنعم",
-        "yol": "kök"
-      },
-      {
-        "w": "أنعما",
-        "u": "أنعما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنعما (form IV)\n# أَنْعَمَا (ʔanʕamā) /ʔan.ʕa.maː/: third-person masculine dual past active of أَنْعَمَ (ʔanʕama)\n# أُنْعِمَا (ʔunʕimā) /ʔun.ʕi.maː/: third-person masculine dual past passive of أَنْعَمَ (ʔanʕama)\n# أَنْعِمَا (ʔanʕimā) /ʔan.ʕi.maː/: second-person dual imperative of أَنْعَمَ (ʔanʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanʕamā", "ʔanʕama", "ʔunʕimā"],
-        "k": "أنعم",
-        "yol": "kök"
-      },
-      {
-        "w": "أنعمتم",
-        "u": "أنعمتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنعمتم (form IV)\n# أَنْعَمْتُمْ (ʔanʕamtum) /ʔan.ʕam.tum/: second-person masculine plural past active of أَنْعَمَ (ʔanʕama)\n# أُنْعِمْتُمْ (ʔunʕimtum) /ʔun.ʕim.tum/: second-person masculine plural past passive of أَنْعَمَ (ʔanʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanʕamtum", "ʔanʕama", "ʔunʕimtum"],
-        "k": "أنعم",
-        "yol": "kök"
-      },
-      {
-        "w": "أنعمنا",
-        "u": "أنعمنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنعمنا (form IV)\n# أَنْعَمْنَا (ʔanʕamnā) /ʔan.ʕam.naː/: first-person plural past active of أَنْعَمَ (ʔanʕama)\n# أُنْعِمْنَا (ʔunʕimnā) /ʔun.ʕim.naː/: first-person plural past passive of أَنْعَمَ (ʔanʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanʕamnā", "ʔanʕama", "ʔunʕimnā"],
-        "k": "أنعم",
-        "yol": "kök"
-      },
-      {
-        "w": "أنعموا",
-        "u": "أنعموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنعموا (form IV)\n# أَنْعَمُوا (ʔanʕamū) /ʔan.ʕa.muː/: third-person masculine plural past active of أَنْعَمَ (ʔanʕama)\n# أُنْعِمُوا (ʔunʕimū) /ʔun.ʕi.muː/: third-person masculine plural past passive of أَنْعَمَ (ʔanʕama)\n# أَنْعِمُوا (ʔanʕimū) /ʔan.ʕi.muː/: second-person masculine plural imperative of أَنْعَمَ (ʔanʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanʕamū", "ʔanʕama", "ʔunʕimū"],
-        "k": "أنعم",
-        "yol": "kök"
-      },
-      {
-        "w": "أنعمتن",
-        "u": "أنعمتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنعمتن (form IV)\n# أَنْعَمْتُنَّ (ʔanʕamtunna) /ʔan.ʕam.tun.na/: second-person feminine plural past active of أَنْعَمَ (ʔanʕama)\n# أُنْعِمْتُنَّ (ʔunʕimtunna) /ʔun.ʕim.tun.na/: second-person feminine plural past passive of أَنْعَمَ (ʔanʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanʕamtunna", "ʔanʕama", "ʔunʕimtunna"],
-        "k": "أنعم",
-        "yol": "kök"
-      },
-      {
-        "w": "أنعمن",
-        "u": "أنعمن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنعمن (form IV)\n# أَنْعَمْنَ (ʔanʕamna) /ʔan.ʕam.na/: third-person feminine plural past active of أَنْعَمَ (ʔanʕama)\n# أُنْعِمْنَ (ʔunʕimna) /ʔun.ʕim.na/: third-person feminine plural past passive of أَنْعَمَ (ʔanʕama)\n# أَنْعِمْنَ (ʔanʕimna) /ʔan.ʕim.na/: second-person feminine plural imperative of أَنْعَمَ (ʔanʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanʕamna", "ʔanʕama", "ʔunʕimna"],
-        "k": "أنعم",
-        "yol": "kök"
-      },
-      {
-        "w": "تنعمين",
-        "u": "تنعمين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنعمين (form IV)\n# تُنْعِمِينَ (tunʕimīna) /tun.ʕi.miː.na/: second-person feminine singular non-past active indicative of أَنْعَمَ (ʔanʕama)\n# تُنْعَمِينَ (tunʕamīna) /tun.ʕa.miː.na/: second-person feminine singular non-past passive indicative of أَنْعَمَ (ʔanʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunʕimīna", "ʔanʕama", "tunʕamīna"],
-        "k": "أنعم",
-        "yol": "kök"
-      },
-      {
-        "w": "ينعم",
-        "u": "ينعم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ينعم (form IV)\n# يُنْعِمُ (yunʕimu) /jun.ʕi.mu/: third-person masculine singular non-past active indicative of أَنْعَمَ (ʔanʕama)\n# يُنْعَمُ (yunʕamu) /jun.ʕa.mu/: third-person masculine singular non-past passive indicative of أَنْعَمَ (ʔanʕama)\n# يُنْعِمَ (yunʕima) /jun.ʕi.ma/: third-person masculine singular non-past active subjunctive of أَنْعَمَ (ʔanʕama)\n# يُنْعَمَ (yunʕama) /jun.ʕa.ma/: thir",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunʕimu", "ʔanʕama", "yunʕamu"],
-        "k": "أنعم",
-        "yol": "kök"
-      },
-      {
-        "w": "ينعمان",
-        "u": "ينعمان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ينعمان (form IV)\n# يُنْعِمَانِ (yunʕimāni) /jun.ʕi.maː.ni/: third-person masculine dual non-past active indicative of أَنْعَمَ (ʔanʕama)\n# يُنْعَمَانِ (yunʕamāni) /jun.ʕa.maː.ni/: third-person masculine dual non-past passive indicative of أَنْعَمَ (ʔanʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunʕimāni", "ʔanʕama", "yunʕamāni"],
-        "k": "أنعم",
-        "yol": "kök"
-      },
-      {
-        "w": "تنعمان",
-        "u": "تنعمان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنعمان (form IV)\n# تُنْعِمَانِ (tunʕimāni) /tun.ʕi.maː.ni/: inflection of أَنْعَمَ (ʔanʕama):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُنْعَمَانِ (tunʕamāni) /tun.ʕa.maː.ni/: inflection of أَنْعَمَ (ʔanʕama):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunʕimāni", "ʔanʕama", "tunʕamāni"],
-        "k": "أنعم",
-        "yol": "kök"
-      },
-      {
-        "w": "ننعم",
-        "u": "ننعم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ننعم (form IV)\n# نُنْعِمُ (nunʕimu) /nun.ʕi.mu/: first-person plural non-past active indicative of أَنْعَمَ (ʔanʕama)\n# نُنْعَمُ (nunʕamu) /nun.ʕa.mu/: first-person plural non-past passive indicative of أَنْعَمَ (ʔanʕama)\n# نُنْعِمَ (nunʕima) /nun.ʕi.ma/: first-person plural non-past active subjunctive of أَنْعَمَ (ʔanʕama)\n# نُنْعَمَ (nunʕama) /nun.ʕa.ma/: first-person plural non-past passive sub",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nunʕimu", "ʔanʕama", "nunʕamu"],
-        "k": "أنعم",
-        "yol": "kök"
-      },
-      {
-        "w": "تنعمون",
-        "u": "تنعمون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنعمون (form IV)\n# تُنْعِمُونَ (tunʕimūna) /tun.ʕi.muː.na/: second-person masculine plural non-past active indicative of أَنْعَمَ (ʔanʕama)\n# تُنْعَمُونَ (tunʕamūna) /tun.ʕa.muː.na/: second-person masculine plural non-past passive indicative of أَنْعَمَ (ʔanʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunʕimūna", "ʔanʕama", "tunʕamūna"],
-        "k": "أنعم",
-        "yol": "kök"
-      },
-      {
-        "w": "ينعمون",
-        "u": "ينعمون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ينعمون (form IV)\n# يُنْعِمُونَ (yunʕimūna) /jun.ʕi.muː.na/: third-person masculine plural non-past active indicative of أَنْعَمَ (ʔanʕama)\n# يُنْعَمُونَ (yunʕamūna) /jun.ʕa.muː.na/: third-person masculine plural non-past passive indicative of أَنْعَمَ (ʔanʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunʕimūna", "ʔanʕama", "yunʕamūna"],
-        "k": "أنعم",
-        "yol": "kök"
-      },
-      {
-        "w": "ينعمن",
-        "u": "ينعمن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ينعمن (form IV)\n# يُنْعِمْنَ (yunʕimna) /jun.ʕim.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَنْعَمَ (ʔanʕama)\n# يُنْعَمْنَ (yunʕamna) /jun.ʕam.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَنْعَمَ (ʔanʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunʕimna", "ʔanʕama", "yunʕamna"],
-        "k": "أنعم",
-        "yol": "kök"
-      },
-      {
-        "w": "تنعما",
-        "u": "تنعما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنعما (form IV)\n# تُنْعِمَا (tunʕimā) /tun.ʕi.maː/: inflection of أَنْعَمَ (ʔanʕama):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُنْعَمَا (tunʕamā) /tun.ʕa.maː/: inflection of أَنْعَمَ (ʔanʕama):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/ju",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunʕimā", "ʔanʕama", "tunʕamā"],
-        "k": "أنعم",
-        "yol": "kök"
-      },
-      {
-        "w": "تنعمن",
-        "u": "تنعمن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنعمن (form IV)\n# تُنْعِمْنَ (tunʕimna) /tun.ʕim.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَنْعَمَ (ʔanʕama)\n# تُنْعَمْنَ (tunʕamna) /tun.ʕam.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَنْعَمَ (ʔanʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunʕimna", "ʔanʕama", "tunʕamna"],
-        "k": "أنعم",
-        "yol": "kök"
-      },
-      {
-        "w": "تنعموا",
-        "u": "تنعموا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنعموا (form IV)\n# تُنْعِمُوا (tunʕimū) /tun.ʕi.muː/: second-person masculine plural non-past active subjunctive/jussive of أَنْعَمَ (ʔanʕama)\n# تُنْعَمُوا (tunʕamū) /tun.ʕa.muː/: second-person masculine plural non-past passive subjunctive/jussive of أَنْعَمَ (ʔanʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunʕimū", "ʔanʕama", "tunʕamū"],
-        "k": "أنعم",
-        "yol": "kök"
-      },
-      {
-        "w": "ينعما",
-        "u": "ينعما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ينعما (form IV)\n# يُنْعِمَا (yunʕimā) /jun.ʕi.maː/: third-person masculine dual non-past active subjunctive/jussive of أَنْعَمَ (ʔanʕama)\n# يُنْعَمَا (yunʕamā) /jun.ʕa.maː/: third-person masculine dual non-past passive subjunctive/jussive of أَنْعَمَ (ʔanʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunʕimā", "ʔanʕama", "yunʕamā"],
-        "k": "أنعم",
-        "yol": "kök"
-      },
-      {
-        "w": "ينعموا",
-        "u": "ينعموا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ينعموا (form IV)\n# يُنْعِمُوا (yunʕimū) /jun.ʕi.muː/: third-person masculine plural non-past active subjunctive/jussive of أَنْعَمَ (ʔanʕama)\n# يُنْعَمُوا (yunʕamū) /jun.ʕa.muː/: third-person masculine plural non-past passive subjunctive/jussive of أَنْعَمَ (ʔanʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunʕimū", "ʔanʕama", "yunʕamū"],
-        "k": "أنعم",
-        "yol": "kök"
-      },
-      {
-        "w": "تنعمي",
-        "u": "تنعمي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنعمي (form IV)\n# تُنْعِمِي (tunʕimī) /tun.ʕi.miː/: second-person feminine singular non-past active subjunctive/jussive of أَنْعَمَ (ʔanʕama)\n# تُنْعَمِي (tunʕamī) /tun.ʕa.miː/: second-person feminine singular non-past passive subjunctive/jussive of أَنْعَمَ (ʔanʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunʕimī", "ʔanʕama", "tunʕamī"],
-        "k": "أنعم",
-        "yol": "kök"
-      },
-      {
-        "w": "أنعمي",
-        "u": "أنعمي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَنْعِمِي • (ʔanʕimī) (form IV) /ʔan.ʕi.miː/\n# second-person feminine singular imperative of أَنْعَمَ (ʔanʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanʕimī", "ʔanʕama"],
-        "k": "أنعم",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "نع",
+  "ses": {
     "harf": "ء",
+    "fasil": "نع",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تنعم",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تنعم (form IV)\n# تُنْعِمُ (tunʕimu) /tun.ʕi.mu/: inflection of أَنْعَمَ (ʔanʕama):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُنْعَمُ (tunʕamu) /tun.ʕa.mu/: inflection of أَنْعَمَ (ʔanʕama):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunʕimu", "ʔanʕama", "tunʕamu"],
+      "kok_yazilis": "أنعم"
+    },
+    {
+      "madde": "أنعمتا",
+      "tur": "verb",
+      "baslik": "أنعمتا (form IV)\n# أَنْعَمَتَا (ʔanʕamatā) /ʔan.ʕa.ma.taː/: third-person feminine dual past active of أَنْعَمَ (ʔanʕama)\n# أُنْعِمَتَا (ʔunʕimatā) /ʔun.ʕi.ma.taː/: third-person feminine dual past passive of أَنْعَمَ (ʔanʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanʕamatā", "ʔanʕama", "ʔunʕimatā"],
+      "kok_yazilis": "أنعم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أنعمتما",
+      "tur": "verb",
+      "baslik": "أنعمتما (form IV)\n# أَنْعَمْتُمَا (ʔanʕamtumā) /ʔan.ʕam.tu.maː/: second-person dual past active of أَنْعَمَ (ʔanʕama)\n# أُنْعِمْتُمَا (ʔunʕimtumā) /ʔun.ʕim.tu.maː/: second-person dual past passive of أَنْعَمَ (ʔanʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanʕamtumā", "ʔanʕama", "ʔunʕimtumā"],
+      "kok_yazilis": "أنعم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أنعمت",
+      "tur": "verb",
+      "baslik": "أنعمت (form IV)\n# أَنْعَمْتُ (ʔanʕamtu) /ʔan.ʕam.tu/: first-person singular past active of أَنْعَمَ (ʔanʕama)\n# أَنْعَمْتَ (ʔanʕamta) /ʔan.ʕam.ta/: second-person masculine singular past active of أَنْعَمَ (ʔanʕama)\n# أَنْعَمْتِ (ʔanʕamti) /ʔan.ʕam.ti/: second-person feminine singular past active of أَنْعَمَ (ʔanʕama)\n# أَنْعَمَتْ (ʔanʕamat) /ʔan.ʕa.mat/: third-person feminine singular past active ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanʕamtu", "ʔanʕama", "ʔanʕamta"],
+      "kok_yazilis": "أنعم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أنعما",
+      "tur": "verb",
+      "baslik": "أنعما (form IV)\n# أَنْعَمَا (ʔanʕamā) /ʔan.ʕa.maː/: third-person masculine dual past active of أَنْعَمَ (ʔanʕama)\n# أُنْعِمَا (ʔunʕimā) /ʔun.ʕi.maː/: third-person masculine dual past passive of أَنْعَمَ (ʔanʕama)\n# أَنْعِمَا (ʔanʕimā) /ʔan.ʕi.maː/: second-person dual imperative of أَنْعَمَ (ʔanʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanʕamā", "ʔanʕama", "ʔunʕimā"],
+      "kok_yazilis": "أنعم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أنعمتم",
+      "tur": "verb",
+      "baslik": "أنعمتم (form IV)\n# أَنْعَمْتُمْ (ʔanʕamtum) /ʔan.ʕam.tum/: second-person masculine plural past active of أَنْعَمَ (ʔanʕama)\n# أُنْعِمْتُمْ (ʔunʕimtum) /ʔun.ʕim.tum/: second-person masculine plural past passive of أَنْعَمَ (ʔanʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanʕamtum", "ʔanʕama", "ʔunʕimtum"],
+      "kok_yazilis": "أنعم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أنعمنا",
+      "tur": "verb",
+      "baslik": "أنعمنا (form IV)\n# أَنْعَمْنَا (ʔanʕamnā) /ʔan.ʕam.naː/: first-person plural past active of أَنْعَمَ (ʔanʕama)\n# أُنْعِمْنَا (ʔunʕimnā) /ʔun.ʕim.naː/: first-person plural past passive of أَنْعَمَ (ʔanʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanʕamnā", "ʔanʕama", "ʔunʕimnā"],
+      "kok_yazilis": "أنعم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أنعموا",
+      "tur": "verb",
+      "baslik": "أنعموا (form IV)\n# أَنْعَمُوا (ʔanʕamū) /ʔan.ʕa.muː/: third-person masculine plural past active of أَنْعَمَ (ʔanʕama)\n# أُنْعِمُوا (ʔunʕimū) /ʔun.ʕi.muː/: third-person masculine plural past passive of أَنْعَمَ (ʔanʕama)\n# أَنْعِمُوا (ʔanʕimū) /ʔan.ʕi.muː/: second-person masculine plural imperative of أَنْعَمَ (ʔanʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanʕamū", "ʔanʕama", "ʔunʕimū"],
+      "kok_yazilis": "أنعم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أنعمتن",
+      "tur": "verb",
+      "baslik": "أنعمتن (form IV)\n# أَنْعَمْتُنَّ (ʔanʕamtunna) /ʔan.ʕam.tun.na/: second-person feminine plural past active of أَنْعَمَ (ʔanʕama)\n# أُنْعِمْتُنَّ (ʔunʕimtunna) /ʔun.ʕim.tun.na/: second-person feminine plural past passive of أَنْعَمَ (ʔanʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanʕamtunna", "ʔanʕama", "ʔunʕimtunna"],
+      "kok_yazilis": "أنعم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أنعمن",
+      "tur": "verb",
+      "baslik": "أنعمن (form IV)\n# أَنْعَمْنَ (ʔanʕamna) /ʔan.ʕam.na/: third-person feminine plural past active of أَنْعَمَ (ʔanʕama)\n# أُنْعِمْنَ (ʔunʕimna) /ʔun.ʕim.na/: third-person feminine plural past passive of أَنْعَمَ (ʔanʕama)\n# أَنْعِمْنَ (ʔanʕimna) /ʔan.ʕim.na/: second-person feminine plural imperative of أَنْعَمَ (ʔanʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanʕamna", "ʔanʕama", "ʔunʕimna"],
+      "kok_yazilis": "أنعم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنعمين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنعمين (form IV)\n# تُنْعِمِينَ (tunʕimīna) /tun.ʕi.miː.na/: second-person feminine singular non-past active indicative of أَنْعَمَ (ʔanʕama)\n# تُنْعَمِينَ (tunʕamīna) /tun.ʕa.miː.na/: second-person feminine singular non-past passive indicative of أَنْعَمَ (ʔanʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunʕimīna", "ʔanʕama", "tunʕamīna"],
+      "kok_yazilis": "أنعم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينعم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ينعم (form IV)\n# يُنْعِمُ (yunʕimu) /jun.ʕi.mu/: third-person masculine singular non-past active indicative of أَنْعَمَ (ʔanʕama)\n# يُنْعَمُ (yunʕamu) /jun.ʕa.mu/: third-person masculine singular non-past passive indicative of أَنْعَمَ (ʔanʕama)\n# يُنْعِمَ (yunʕima) /jun.ʕi.ma/: third-person masculine singular non-past active subjunctive of أَنْعَمَ (ʔanʕama)\n# يُنْعَمَ (yunʕama) /jun.ʕa.ma/: thir",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunʕimu", "ʔanʕama", "yunʕamu"],
+      "kok_yazilis": "أنعم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينعمان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ينعمان (form IV)\n# يُنْعِمَانِ (yunʕimāni) /jun.ʕi.maː.ni/: third-person masculine dual non-past active indicative of أَنْعَمَ (ʔanʕama)\n# يُنْعَمَانِ (yunʕamāni) /jun.ʕa.maː.ni/: third-person masculine dual non-past passive indicative of أَنْعَمَ (ʔanʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunʕimāni", "ʔanʕama", "yunʕamāni"],
+      "kok_yazilis": "أنعم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنعمان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنعمان (form IV)\n# تُنْعِمَانِ (tunʕimāni) /tun.ʕi.maː.ni/: inflection of أَنْعَمَ (ʔanʕama):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُنْعَمَانِ (tunʕamāni) /tun.ʕa.maː.ni/: inflection of أَنْعَمَ (ʔanʕama):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunʕimāni", "ʔanʕama", "tunʕamāni"],
+      "kok_yazilis": "أنعم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ننعم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ننعم (form IV)\n# نُنْعِمُ (nunʕimu) /nun.ʕi.mu/: first-person plural non-past active indicative of أَنْعَمَ (ʔanʕama)\n# نُنْعَمُ (nunʕamu) /nun.ʕa.mu/: first-person plural non-past passive indicative of أَنْعَمَ (ʔanʕama)\n# نُنْعِمَ (nunʕima) /nun.ʕi.ma/: first-person plural non-past active subjunctive of أَنْعَمَ (ʔanʕama)\n# نُنْعَمَ (nunʕama) /nun.ʕa.ma/: first-person plural non-past passive sub",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nunʕimu", "ʔanʕama", "nunʕamu"],
+      "kok_yazilis": "أنعم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنعمون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنعمون (form IV)\n# تُنْعِمُونَ (tunʕimūna) /tun.ʕi.muː.na/: second-person masculine plural non-past active indicative of أَنْعَمَ (ʔanʕama)\n# تُنْعَمُونَ (tunʕamūna) /tun.ʕa.muː.na/: second-person masculine plural non-past passive indicative of أَنْعَمَ (ʔanʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunʕimūna", "ʔanʕama", "tunʕamūna"],
+      "kok_yazilis": "أنعم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينعمون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ينعمون (form IV)\n# يُنْعِمُونَ (yunʕimūna) /jun.ʕi.muː.na/: third-person masculine plural non-past active indicative of أَنْعَمَ (ʔanʕama)\n# يُنْعَمُونَ (yunʕamūna) /jun.ʕa.muː.na/: third-person masculine plural non-past passive indicative of أَنْعَمَ (ʔanʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunʕimūna", "ʔanʕama", "yunʕamūna"],
+      "kok_yazilis": "أنعم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينعمن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ينعمن (form IV)\n# يُنْعِمْنَ (yunʕimna) /jun.ʕim.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَنْعَمَ (ʔanʕama)\n# يُنْعَمْنَ (yunʕamna) /jun.ʕam.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَنْعَمَ (ʔanʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunʕimna", "ʔanʕama", "yunʕamna"],
+      "kok_yazilis": "أنعم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنعما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنعما (form IV)\n# تُنْعِمَا (tunʕimā) /tun.ʕi.maː/: inflection of أَنْعَمَ (ʔanʕama):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُنْعَمَا (tunʕamā) /tun.ʕa.maː/: inflection of أَنْعَمَ (ʔanʕama):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/ju",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunʕimā", "ʔanʕama", "tunʕamā"],
+      "kok_yazilis": "أنعم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنعمن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنعمن (form IV)\n# تُنْعِمْنَ (tunʕimna) /tun.ʕim.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَنْعَمَ (ʔanʕama)\n# تُنْعَمْنَ (tunʕamna) /tun.ʕam.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَنْعَمَ (ʔanʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunʕimna", "ʔanʕama", "tunʕamna"],
+      "kok_yazilis": "أنعم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنعموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنعموا (form IV)\n# تُنْعِمُوا (tunʕimū) /tun.ʕi.muː/: second-person masculine plural non-past active subjunctive/jussive of أَنْعَمَ (ʔanʕama)\n# تُنْعَمُوا (tunʕamū) /tun.ʕa.muː/: second-person masculine plural non-past passive subjunctive/jussive of أَنْعَمَ (ʔanʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunʕimū", "ʔanʕama", "tunʕamū"],
+      "kok_yazilis": "أنعم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينعما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ينعما (form IV)\n# يُنْعِمَا (yunʕimā) /jun.ʕi.maː/: third-person masculine dual non-past active subjunctive/jussive of أَنْعَمَ (ʔanʕama)\n# يُنْعَمَا (yunʕamā) /jun.ʕa.maː/: third-person masculine dual non-past passive subjunctive/jussive of أَنْعَمَ (ʔanʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunʕimā", "ʔanʕama", "yunʕamā"],
+      "kok_yazilis": "أنعم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينعموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ينعموا (form IV)\n# يُنْعِمُوا (yunʕimū) /jun.ʕi.muː/: third-person masculine plural non-past active subjunctive/jussive of أَنْعَمَ (ʔanʕama)\n# يُنْعَمُوا (yunʕamū) /jun.ʕa.muː/: third-person masculine plural non-past passive subjunctive/jussive of أَنْعَمَ (ʔanʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunʕimū", "ʔanʕama", "yunʕamū"],
+      "kok_yazilis": "أنعم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنعمي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنعمي (form IV)\n# تُنْعِمِي (tunʕimī) /tun.ʕi.miː/: second-person feminine singular non-past active subjunctive/jussive of أَنْعَمَ (ʔanʕama)\n# تُنْعَمِي (tunʕamī) /tun.ʕa.miː/: second-person feminine singular non-past passive subjunctive/jussive of أَنْعَمَ (ʔanʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunʕimī", "ʔanʕama", "tunʕamī"],
+      "kok_yazilis": "أنعم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أنعمي",
+      "tur": "verb",
+      "baslik": "أَنْعِمِي • (ʔanʕimī) (form IV) /ʔan.ʕi.miː/\n# second-person feminine singular imperative of أَنْعَمَ (ʔanʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanʕimī", "ʔanʕama"],
+      "kok_yazilis": "أنعم",
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءنعم", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

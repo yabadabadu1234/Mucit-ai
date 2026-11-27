@@ -1,474 +1,373 @@
 {
   "kok": "ءسمى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءسمى", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يسمين",
-        "u": "يسمين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يسمين (form IV)\n# يُسْمِينَ (yusmīna) /jus.miː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَسْمَى (ʔasmā)\n# يُسْمَيْنَ (yusmayna) /jus.maj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَسْمَى (ʔasmā)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yusmīna", "ʔasmā", "yusmayna"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسمى",
-        "u": "تسمى",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُسْمَى • (tusmā) (form IV) /tus.maː/\n# inflection of أَسْمَى (ʔasmā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tusmā", "ʔasmā"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسم",
-        "u": "تسم",
-        "p": "verb",
-        "n": "1.4",
-        "h": "ar-verb form",
-        "e": "تسم (form IV)\n# تُسْمِ (tusmi) /tus.mi/: inflection of أَسْمَى (ʔasmā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُسْمَ (tusma) /tus.ma/: inflection of أَسْمَى (ʔasmā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tusmi", "ʔasmā", "tusma"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسم",
-        "u": "تسم",
-        "p": "verb",
-        "n": "3.2",
-        "h": "ar-verb form",
-        "e": "تسم (form IV)\n# تُسْمِ (tusmi) /tus.mi/: inflection of أَسْمَى (ʔasmā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُسْمَ (tusma) /tus.ma/: inflection of أَسْمَى (ʔasmā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tusmi", "ʔasmā", "tusma"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسمي",
-        "u": "يسمي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يسمي (form IV)\n# يُسْمِي (yusmī) /jus.miː/: third-person masculine singular non-past active indicative of أَسْمَى (ʔasmā)\n# يُسْمِيَ (yusmiya) /jus.mi.ja/: third-person masculine singular non-past active subjunctive of أَسْمَى (ʔasmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yusmī", "ʔasmā", "yusmiya"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسمى",
-        "u": "يسمى",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يُسْمَى • (yusmā) (form IV) /jus.maː/\n# third-person masculine singular non-past passive indicative/subjunctive of أَسْمَى (ʔasmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yusmā", "ʔasmā"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسمين",
-        "u": "تسمين",
-        "p": "verb",
-        "n": "4.2",
-        "h": "ar-verb form",
-        "e": "تسمين (form IV)\n# تُسْمِينَ (tusmīna) /tus.miː.na/: inflection of أَسْمَى (ʔasmā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُسْمَيْنَ (tusmayna) /tus.maj.na/: inflection of أَسْمَى (ʔasmā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-pas",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tusmīna", "ʔasmā", "tusmayna"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسمين",
-        "u": "تسمين",
-        "p": "verb",
-        "n": "5.2",
-        "h": "ar-verb form",
-        "e": "تسمين (form IV)\n# تُسْمِينَ (tusmīna) /tus.miː.na/: inflection of أَسْمَى (ʔasmā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُسْمَيْنَ (tusmayna) /tus.maj.na/: inflection of أَسْمَى (ʔasmā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-pas",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tusmīna", "ʔasmā", "tusmayna"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسم",
-        "u": "يسم",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "يسم (form IV)\n# يُسْمِ (yusmi) /jus.mi/: third-person masculine singular non-past active jussive of أَسْمَى (ʔasmā)\n# يُسْمَ (yusma) /jus.ma/: third-person masculine singular non-past passive jussive of أَسْمَى (ʔasmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yusmi", "ʔasmā", "yusma"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسمي",
-        "u": "أسمي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أسمي (form IV)\n# أُسْمِيَ (ʔusmiya) /ʔus.mi.ja/: inflection of أَسْمَى (ʔasmā):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُسْمِي (ʔusmī) /ʔus.miː/: first-person singular non-past active indicative of أَسْمَى (ʔasmā)\n# أَسْمِي (ʔasmī) /ʔas.miː/: second-person feminine singular imperative of أَسْمَى (ʔasmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔusmiya", "ʔasmā", "ʔusmī"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسمت",
-        "u": "أسمت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَسْمَتْ • (ʔasmat) (form IV) /ʔas.mat/\n# third-person feminine singular past active of أَسْمَى (ʔasmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasmat", "ʔasmā"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسمي",
-        "u": "تسمي",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "تسمي (form IV)\n# تُسْمِي (tusmī) /tus.miː/: inflection of أَسْمَى (ʔasmā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُسْمِيَ (tusmiya) /tus.mi.ja/: inflection of أَسْمَى (ʔasmā):\n## second-person masculine singular non-past active subjunctive\n#",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tusmī", "ʔasmā", "tusmiya"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسميت",
-        "u": "أسميت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أسميت (form IV)\n# أَسْمَيْتُ (ʔasmaytu) /ʔas.maj.tu/: first-person singular past active of أَسْمَى (ʔasmā)\n# أَسْمَيْتَ (ʔasmayta) /ʔas.maj.ta/: second-person masculine singular past active of أَسْمَى (ʔasmā)\n# أَسْمَيْتِ (ʔasmayti) /ʔas.maj.ti/: second-person feminine singular past active of أَسْمَى (ʔasmā)\n# أُسْمِيتُ (ʔusmītu) /ʔus.miː.tu/: first-person singular past passive of أَسْمَى (ʔasmā)\n",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasmaytu", "ʔasmā", "ʔasmayta"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسم",
-        "u": "أسم",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "أسم (form IV)\n# أُسْمِ (ʔusmi) /ʔus.mi/: first-person singular non-past active jussive of أَسْمَى (ʔasmā)\n# أُسْمَ (ʔusma) /ʔus.ma/: first-person singular non-past passive jussive of أَسْمَى (ʔasmā)\n# أَسْمِ (ʔasmi) /ʔas.mi/: second-person masculine singular imperative of أَسْمَى (ʔasmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔusmi", "ʔasmā", "ʔusma"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسمينا",
-        "u": "أسمينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أسمينا (form IV)\n# أَسْمَيْنَا (ʔasmaynā) /ʔas.maj.naː/: first-person plural past active of أَسْمَى (ʔasmā)\n# أُسْمِينَا (ʔusmīnā) /ʔus.miː.naː/: first-person plural past passive of أَسْمَى (ʔasmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasmaynā", "ʔasmā", "ʔusmīnā"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "نسمي",
-        "u": "نسمي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نسمي (form IV)\n# نُسْمِي (nusmī) /nus.miː/: first-person plural non-past active indicative of أَسْمَى (ʔasmā)\n# نُسْمِيَ (nusmiya) /nus.mi.ja/: first-person plural non-past active subjunctive of أَسْمَى (ʔasmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nusmī", "ʔasmā", "nusmiya"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "نسم",
-        "u": "نسم",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "نسم (form IV)\n# نُسْمِ (nusmi) /nus.mi/: first-person plural non-past active jussive of أَسْمَى (ʔasmā)\n# نُسْمَ (nusma) /nus.ma/: first-person plural non-past passive jussive of أَسْمَى (ʔasmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nusmi", "ʔasmā", "nusma"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "نسمى",
-        "u": "نسمى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نُسْمَى • (nusmā) (form IV) /nus.maː/\n# first-person plural non-past passive indicative/subjunctive of أَسْمَى (ʔasmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nusmā", "ʔasmā"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسميتم",
-        "u": "أسميتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أسميتم (form IV)\n# أَسْمَيْتُمْ (ʔasmaytum) /ʔas.maj.tum/: second-person masculine plural past active of أَسْمَى (ʔasmā)\n# أُسْمِيتُمْ (ʔusmītum) /ʔus.miː.tum/: second-person masculine plural past passive of أَسْمَى (ʔasmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasmaytum", "ʔasmā", "ʔusmītum"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسمون",
-        "u": "تسمون",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تسمون (form IV)\n# تُسْمُونَ (tusmūna) /tus.muː.na/: second-person masculine plural non-past active indicative of أَسْمَى (ʔasmā)\n# تُسْمَوْنَ (tusmawna) /tus.maw.na/: second-person masculine plural non-past passive indicative of أَسْمَى (ʔasmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tusmūna", "ʔasmā", "tusmawna"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسموا",
-        "u": "تسموا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تسموا (form IV)\n# تُسْمُوا (tusmū) /tus.muː/: second-person masculine plural non-past active subjunctive/jussive of أَسْمَى (ʔasmā)\n# تُسْمَوْا (tusmaw) /tus.maw/: second-person masculine plural non-past passive subjunctive/jussive of أَسْمَى (ʔasmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tusmū", "ʔasmā", "tusmaw"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسموا",
-        "u": "أسموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أسموا (form IV)\n# أَسْمَوْا (ʔasmaw) /ʔas.maw/: third-person masculine plural past active of أَسْمَى (ʔasmā)\n# أُسْمُوا (ʔusmū) /ʔus.muː/: third-person masculine plural past passive of أَسْمَى (ʔasmā)\n# أَسْمُوا (ʔasmū) /ʔas.muː/: second-person masculine plural imperative of أَسْمَى (ʔasmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasmaw", "ʔasmā", "ʔusmū"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسمون",
-        "u": "يسمون",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "يسمون (form IV)\n# يُسْمُونَ (yusmūna) /jus.muː.na/: third-person masculine plural non-past active indicative of أَسْمَى (ʔasmā)\n# يُسْمَوْنَ (yusmawna) /jus.maw.na/: third-person masculine plural non-past passive indicative of أَسْمَى (ʔasmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yusmūna", "ʔasmā", "yusmawna"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسموا",
-        "u": "يسموا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يسموا (form IV)\n# يُسْمُوا (yusmū) /jus.muː/: third-person masculine plural non-past active subjunctive/jussive of أَسْمَى (ʔasmā)\n# يُسْمَوْا (yusmaw) /jus.maw/: third-person masculine plural non-past passive subjunctive/jussive of أَسْمَى (ʔasmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yusmū", "ʔasmā", "yusmaw"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسميتن",
-        "u": "أسميتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أسميتن (form IV)\n# أَسْمَيْتُنَّ (ʔasmaytunna) /ʔas.maj.tun.na/: second-person feminine plural past active of أَسْمَى (ʔasmā)\n# أُسْمِيتُنَّ (ʔusmītunna) /ʔus.miː.tun.na/: second-person feminine plural past passive of أَسْمَى (ʔasmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasmaytunna", "ʔasmā", "ʔusmītunna"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسمين",
-        "u": "أسمين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أسمين (form IV)\n# أَسْمَيْنَ (ʔasmayna) /ʔas.maj.na/: third-person feminine plural past active of أَسْمَى (ʔasmā)\n# أُسْمِينَ (ʔusmīna) /ʔus.miː.na/: third-person feminine plural past passive of أَسْمَى (ʔasmā)\n# أَسْمِينَ (ʔasmīna) /ʔas.miː.na/: second-person feminine plural imperative of أَسْمَى (ʔasmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasmayna", "ʔasmā", "ʔusmīna"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسميتما",
-        "u": "أسميتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أسميتما (form IV)\n# أَسْمَيْتُمَا (ʔasmaytumā) /ʔas.maj.tu.maː/: second-person dual past active of أَسْمَى (ʔasmā)\n# أُسْمِيتُمَا (ʔusmītumā) /ʔus.miː.tu.maː/: second-person dual past passive of أَسْمَى (ʔasmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasmaytumā", "ʔasmā", "ʔusmītumā"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسمتا",
-        "u": "أسمتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَسْمَتَا • (ʔasmatā) (form IV) /ʔas.ma.taː/\n# third-person feminine dual past active of أَسْمَى (ʔasmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasmatā", "ʔasmā"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسميان",
-        "u": "تسميان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تسميان (form IV)\n# تُسْمِيَانِ (tusmiyāni) /tus.mi.jaː.ni/: inflection of أَسْمَى (ʔasmā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُسْمَيَانِ (tusmayāni) /tus.ma.jaː.ni/: inflection of أَسْمَى (ʔasmā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tusmiyāni", "ʔasmā", "tusmayāni"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسميان",
-        "u": "يسميان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يسميان (form IV)\n# يُسْمِيَانِ (yusmiyāni) /jus.mi.jaː.ni/: third-person masculine dual non-past active indicative of أَسْمَى (ʔasmā)\n# يُسْمَيَانِ (yusmayāni) /jus.ma.jaː.ni/: third-person masculine dual non-past passive indicative of أَسْمَى (ʔasmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yusmiyāni", "ʔasmā", "yusmayāni"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسميا",
-        "u": "أسميا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أسميا (form IV)\n# أَسْمَيَا (ʔasmayā) /ʔas.ma.jaː/: third-person masculine dual past active of أَسْمَى (ʔasmā)\n# أُسْمِيَا (ʔusmiyā) /ʔus.mi.jaː/: third-person masculine dual past passive of أَسْمَى (ʔasmā)\n# أَسْمِيَا (ʔasmiyā) /ʔas.mi.jaː/: second-person dual imperative of أَسْمَى (ʔasmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasmayā", "ʔasmā", "ʔusmiyā"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسميا",
-        "u": "يسميا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يسميا (form IV)\n# يُسْمِيَا (yusmiyā) /jus.mi.jaː/: third-person masculine dual non-past active subjunctive/jussive of أَسْمَى (ʔasmā)\n# يُسْمَيَا (yusmayā) /jus.ma.jaː/: third-person masculine dual non-past passive subjunctive/jussive of أَسْمَى (ʔasmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yusmiyā", "ʔasmā", "yusmayā"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسميا",
-        "u": "تسميا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تسميا (form IV)\n# تُسْمِيَا (tusmiyā) /tus.mi.jaː/: inflection of أَسْمَى (ʔasmā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُسْمَيَا (tusmayā) /tus.ma.jaː/: inflection of أَسْمَى (ʔasmā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tusmiyā", "ʔasmā", "tusmayā"],
-        "k": "أسمى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسميتا",
-        "u": "أسميتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُسْمِيَتَا • (ʔusmiyatā) (form IV) /ʔus.mi.ja.taː/\n# third-person feminine dual past passive of أَسْمَى (ʔasmā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔusmiyatā", "ʔasmā"],
-        "k": "أسمى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "سم",
+  "ses": {
     "harf": "ء",
+    "fasil": "سم",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يسمين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يسمين (form IV)\n# يُسْمِينَ (yusmīna) /jus.miː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَسْمَى (ʔasmā)\n# يُسْمَيْنَ (yusmayna) /jus.maj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَسْمَى (ʔasmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yusmīna", "ʔasmā", "yusmayna"],
+      "kok_yazilis": "أسمى"
+    },
+    {
+      "madde": "تسمى",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُسْمَى • (tusmā) (form IV) /tus.maː/\n# inflection of أَسْمَى (ʔasmā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tusmā", "ʔasmā"],
+      "kok_yazilis": "أسمى"
+    },
+    {
+      "madde": "تسم",
+      "tur": "verb",
+      "etim_no": "1.4",
+      "baslik": "تسم (form IV)\n# تُسْمِ (tusmi) /tus.mi/: inflection of أَسْمَى (ʔasmā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُسْمَ (tusma) /tus.ma/: inflection of أَسْمَى (ʔasmā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tusmi", "ʔasmā", "tusma"],
+      "kok_yazilis": "أسمى"
+    },
+    {
+      "madde": "تسم",
+      "tur": "verb",
+      "etim_no": "3.2",
+      "baslik": "تسم (form IV)\n# تُسْمِ (tusmi) /tus.mi/: inflection of أَسْمَى (ʔasmā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُسْمَ (tusma) /tus.ma/: inflection of أَسْمَى (ʔasmā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tusmi", "ʔasmā", "tusma"],
+      "kok_yazilis": "أسمى"
+    },
+    {
+      "madde": "يسمي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يسمي (form IV)\n# يُسْمِي (yusmī) /jus.miː/: third-person masculine singular non-past active indicative of أَسْمَى (ʔasmā)\n# يُسْمِيَ (yusmiya) /jus.mi.ja/: third-person masculine singular non-past active subjunctive of أَسْمَى (ʔasmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yusmī", "ʔasmā", "yusmiya"],
+      "kok_yazilis": "أسمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسمى",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يُسْمَى • (yusmā) (form IV) /jus.maː/\n# third-person masculine singular non-past passive indicative/subjunctive of أَسْمَى (ʔasmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yusmā", "ʔasmā"],
+      "kok_yazilis": "أسمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسمين",
+      "tur": "verb",
+      "etim_no": "4.2",
+      "baslik": "تسمين (form IV)\n# تُسْمِينَ (tusmīna) /tus.miː.na/: inflection of أَسْمَى (ʔasmā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُسْمَيْنَ (tusmayna) /tus.maj.na/: inflection of أَسْمَى (ʔasmā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-pas",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tusmīna", "ʔasmā", "tusmayna"],
+      "kok_yazilis": "أسمى"
+    },
+    {
+      "madde": "تسمين",
+      "tur": "verb",
+      "etim_no": "5.2",
+      "baslik": "تسمين (form IV)\n# تُسْمِينَ (tusmīna) /tus.miː.na/: inflection of أَسْمَى (ʔasmā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُسْمَيْنَ (tusmayna) /tus.maj.na/: inflection of أَسْمَى (ʔasmā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-pas",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tusmīna", "ʔasmā", "tusmayna"],
+      "kok_yazilis": "أسمى"
+    },
+    {
+      "madde": "يسم",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "يسم (form IV)\n# يُسْمِ (yusmi) /jus.mi/: third-person masculine singular non-past active jussive of أَسْمَى (ʔasmā)\n# يُسْمَ (yusma) /jus.ma/: third-person masculine singular non-past passive jussive of أَسْمَى (ʔasmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yusmi", "ʔasmā", "yusma"],
+      "kok_yazilis": "أسمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسمي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أسمي (form IV)\n# أُسْمِيَ (ʔusmiya) /ʔus.mi.ja/: inflection of أَسْمَى (ʔasmā):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُسْمِي (ʔusmī) /ʔus.miː/: first-person singular non-past active indicative of أَسْمَى (ʔasmā)\n# أَسْمِي (ʔasmī) /ʔas.miː/: second-person feminine singular imperative of أَسْمَى (ʔasmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔusmiya", "ʔasmā", "ʔusmī"],
+      "kok_yazilis": "أسمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسمت",
+      "tur": "verb",
+      "baslik": "أَسْمَتْ • (ʔasmat) (form IV) /ʔas.mat/\n# third-person feminine singular past active of أَسْمَى (ʔasmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasmat", "ʔasmā"],
+      "kok_yazilis": "أسمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسمي",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "تسمي (form IV)\n# تُسْمِي (tusmī) /tus.miː/: inflection of أَسْمَى (ʔasmā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُسْمِيَ (tusmiya) /tus.mi.ja/: inflection of أَسْمَى (ʔasmā):\n## second-person masculine singular non-past active subjunctive\n#",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tusmī", "ʔasmā", "tusmiya"],
+      "kok_yazilis": "أسمى"
+    },
+    {
+      "madde": "أسميت",
+      "tur": "verb",
+      "baslik": "أسميت (form IV)\n# أَسْمَيْتُ (ʔasmaytu) /ʔas.maj.tu/: first-person singular past active of أَسْمَى (ʔasmā)\n# أَسْمَيْتَ (ʔasmayta) /ʔas.maj.ta/: second-person masculine singular past active of أَسْمَى (ʔasmā)\n# أَسْمَيْتِ (ʔasmayti) /ʔas.maj.ti/: second-person feminine singular past active of أَسْمَى (ʔasmā)\n# أُسْمِيتُ (ʔusmītu) /ʔus.miː.tu/: first-person singular past passive of أَسْمَى (ʔasmā)\n",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasmaytu", "ʔasmā", "ʔasmayta"],
+      "kok_yazilis": "أسمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسم",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "أسم (form IV)\n# أُسْمِ (ʔusmi) /ʔus.mi/: first-person singular non-past active jussive of أَسْمَى (ʔasmā)\n# أُسْمَ (ʔusma) /ʔus.ma/: first-person singular non-past passive jussive of أَسْمَى (ʔasmā)\n# أَسْمِ (ʔasmi) /ʔas.mi/: second-person masculine singular imperative of أَسْمَى (ʔasmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔusmi", "ʔasmā", "ʔusma"],
+      "kok_yazilis": "أسمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسمينا",
+      "tur": "verb",
+      "baslik": "أسمينا (form IV)\n# أَسْمَيْنَا (ʔasmaynā) /ʔas.maj.naː/: first-person plural past active of أَسْمَى (ʔasmā)\n# أُسْمِينَا (ʔusmīnā) /ʔus.miː.naː/: first-person plural past passive of أَسْمَى (ʔasmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasmaynā", "ʔasmā", "ʔusmīnā"],
+      "kok_yazilis": "أسمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نسمي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نسمي (form IV)\n# نُسْمِي (nusmī) /nus.miː/: first-person plural non-past active indicative of أَسْمَى (ʔasmā)\n# نُسْمِيَ (nusmiya) /nus.mi.ja/: first-person plural non-past active subjunctive of أَسْمَى (ʔasmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nusmī", "ʔasmā", "nusmiya"],
+      "kok_yazilis": "أسمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نسم",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "نسم (form IV)\n# نُسْمِ (nusmi) /nus.mi/: first-person plural non-past active jussive of أَسْمَى (ʔasmā)\n# نُسْمَ (nusma) /nus.ma/: first-person plural non-past passive jussive of أَسْمَى (ʔasmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nusmi", "ʔasmā", "nusma"],
+      "kok_yazilis": "أسمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نسمى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نُسْمَى • (nusmā) (form IV) /nus.maː/\n# first-person plural non-past passive indicative/subjunctive of أَسْمَى (ʔasmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nusmā", "ʔasmā"],
+      "kok_yazilis": "أسمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسميتم",
+      "tur": "verb",
+      "baslik": "أسميتم (form IV)\n# أَسْمَيْتُمْ (ʔasmaytum) /ʔas.maj.tum/: second-person masculine plural past active of أَسْمَى (ʔasmā)\n# أُسْمِيتُمْ (ʔusmītum) /ʔus.miː.tum/: second-person masculine plural past passive of أَسْمَى (ʔasmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasmaytum", "ʔasmā", "ʔusmītum"],
+      "kok_yazilis": "أسمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسمون",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تسمون (form IV)\n# تُسْمُونَ (tusmūna) /tus.muː.na/: second-person masculine plural non-past active indicative of أَسْمَى (ʔasmā)\n# تُسْمَوْنَ (tusmawna) /tus.maw.na/: second-person masculine plural non-past passive indicative of أَسْمَى (ʔasmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tusmūna", "ʔasmā", "tusmawna"],
+      "kok_yazilis": "أسمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسموا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تسموا (form IV)\n# تُسْمُوا (tusmū) /tus.muː/: second-person masculine plural non-past active subjunctive/jussive of أَسْمَى (ʔasmā)\n# تُسْمَوْا (tusmaw) /tus.maw/: second-person masculine plural non-past passive subjunctive/jussive of أَسْمَى (ʔasmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tusmū", "ʔasmā", "tusmaw"],
+      "kok_yazilis": "أسمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسموا",
+      "tur": "verb",
+      "baslik": "أسموا (form IV)\n# أَسْمَوْا (ʔasmaw) /ʔas.maw/: third-person masculine plural past active of أَسْمَى (ʔasmā)\n# أُسْمُوا (ʔusmū) /ʔus.muː/: third-person masculine plural past passive of أَسْمَى (ʔasmā)\n# أَسْمُوا (ʔasmū) /ʔas.muː/: second-person masculine plural imperative of أَسْمَى (ʔasmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasmaw", "ʔasmā", "ʔusmū"],
+      "kok_yazilis": "أسمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسمون",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "يسمون (form IV)\n# يُسْمُونَ (yusmūna) /jus.muː.na/: third-person masculine plural non-past active indicative of أَسْمَى (ʔasmā)\n# يُسْمَوْنَ (yusmawna) /jus.maw.na/: third-person masculine plural non-past passive indicative of أَسْمَى (ʔasmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yusmūna", "ʔasmā", "yusmawna"],
+      "kok_yazilis": "أسمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسموا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يسموا (form IV)\n# يُسْمُوا (yusmū) /jus.muː/: third-person masculine plural non-past active subjunctive/jussive of أَسْمَى (ʔasmā)\n# يُسْمَوْا (yusmaw) /jus.maw/: third-person masculine plural non-past passive subjunctive/jussive of أَسْمَى (ʔasmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yusmū", "ʔasmā", "yusmaw"],
+      "kok_yazilis": "أسمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسميتن",
+      "tur": "verb",
+      "baslik": "أسميتن (form IV)\n# أَسْمَيْتُنَّ (ʔasmaytunna) /ʔas.maj.tun.na/: second-person feminine plural past active of أَسْمَى (ʔasmā)\n# أُسْمِيتُنَّ (ʔusmītunna) /ʔus.miː.tun.na/: second-person feminine plural past passive of أَسْمَى (ʔasmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasmaytunna", "ʔasmā", "ʔusmītunna"],
+      "kok_yazilis": "أسمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسمين",
+      "tur": "verb",
+      "baslik": "أسمين (form IV)\n# أَسْمَيْنَ (ʔasmayna) /ʔas.maj.na/: third-person feminine plural past active of أَسْمَى (ʔasmā)\n# أُسْمِينَ (ʔusmīna) /ʔus.miː.na/: third-person feminine plural past passive of أَسْمَى (ʔasmā)\n# أَسْمِينَ (ʔasmīna) /ʔas.miː.na/: second-person feminine plural imperative of أَسْمَى (ʔasmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasmayna", "ʔasmā", "ʔusmīna"],
+      "kok_yazilis": "أسمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسميتما",
+      "tur": "verb",
+      "baslik": "أسميتما (form IV)\n# أَسْمَيْتُمَا (ʔasmaytumā) /ʔas.maj.tu.maː/: second-person dual past active of أَسْمَى (ʔasmā)\n# أُسْمِيتُمَا (ʔusmītumā) /ʔus.miː.tu.maː/: second-person dual past passive of أَسْمَى (ʔasmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasmaytumā", "ʔasmā", "ʔusmītumā"],
+      "kok_yazilis": "أسمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسمتا",
+      "tur": "verb",
+      "baslik": "أَسْمَتَا • (ʔasmatā) (form IV) /ʔas.ma.taː/\n# third-person feminine dual past active of أَسْمَى (ʔasmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasmatā", "ʔasmā"],
+      "kok_yazilis": "أسمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسميان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تسميان (form IV)\n# تُسْمِيَانِ (tusmiyāni) /tus.mi.jaː.ni/: inflection of أَسْمَى (ʔasmā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُسْمَيَانِ (tusmayāni) /tus.ma.jaː.ni/: inflection of أَسْمَى (ʔasmā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tusmiyāni", "ʔasmā", "tusmayāni"],
+      "kok_yazilis": "أسمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسميان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يسميان (form IV)\n# يُسْمِيَانِ (yusmiyāni) /jus.mi.jaː.ni/: third-person masculine dual non-past active indicative of أَسْمَى (ʔasmā)\n# يُسْمَيَانِ (yusmayāni) /jus.ma.jaː.ni/: third-person masculine dual non-past passive indicative of أَسْمَى (ʔasmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yusmiyāni", "ʔasmā", "yusmayāni"],
+      "kok_yazilis": "أسمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسميا",
+      "tur": "verb",
+      "baslik": "أسميا (form IV)\n# أَسْمَيَا (ʔasmayā) /ʔas.ma.jaː/: third-person masculine dual past active of أَسْمَى (ʔasmā)\n# أُسْمِيَا (ʔusmiyā) /ʔus.mi.jaː/: third-person masculine dual past passive of أَسْمَى (ʔasmā)\n# أَسْمِيَا (ʔasmiyā) /ʔas.mi.jaː/: second-person dual imperative of أَسْمَى (ʔasmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasmayā", "ʔasmā", "ʔusmiyā"],
+      "kok_yazilis": "أسمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسميا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يسميا (form IV)\n# يُسْمِيَا (yusmiyā) /jus.mi.jaː/: third-person masculine dual non-past active subjunctive/jussive of أَسْمَى (ʔasmā)\n# يُسْمَيَا (yusmayā) /jus.ma.jaː/: third-person masculine dual non-past passive subjunctive/jussive of أَسْمَى (ʔasmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yusmiyā", "ʔasmā", "yusmayā"],
+      "kok_yazilis": "أسمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسميا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تسميا (form IV)\n# تُسْمِيَا (tusmiyā) /tus.mi.jaː/: inflection of أَسْمَى (ʔasmā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُسْمَيَا (tusmayā) /tus.ma.jaː/: inflection of أَسْمَى (ʔasmā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tusmiyā", "ʔasmā", "tusmayā"],
+      "kok_yazilis": "أسمى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسميتا",
+      "tur": "verb",
+      "baslik": "أُسْمِيَتَا • (ʔusmiyatā) (form IV) /ʔus.mi.ja.taː/\n# third-person feminine dual past passive of أَسْمَى (ʔasmā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔusmiyatā", "ʔasmā"],
+      "kok_yazilis": "أسمى",
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءسمى", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,631 +1,488 @@
 {
   "kok": "ءجاع",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءجاع", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يجع",
-        "u": "يجع",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يجع (form IV)\n# يُجِعْ (yujiʕ) /ju.d͡ʒiʕ/: third-person masculine singular non-past active jussive of أَجَاعَ (ʔajāʕa)\n# يُجَعْ (yujaʕ) /ju.d͡ʒaʕ/: third-person masculine singular non-past passive jussive of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yujiʕ", "ʔajāʕa", "yujaʕ"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تجع",
-        "u": "تجع",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تجع (form IV)\n# تُجِعْ (tujiʕ) /tu.d͡ʒiʕ/: inflection of أَجَاعَ (ʔajāʕa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُجَعْ (tujaʕ) /tu.d͡ʒaʕ/: inflection of أَجَاعَ (ʔajāʕa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujiʕ", "ʔajāʕa", "tujaʕ"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "أجع",
-        "u": "أجع",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أجع (form IV)\n# أُجِعْ (ʔujiʕ) /ʔu.d͡ʒiʕ/: first-person singular non-past active jussive of أَجَاعَ (ʔajāʕa)\n# أُجَعْ (ʔujaʕ) /ʔu.d͡ʒaʕ/: first-person singular non-past passive jussive of أَجَاعَ (ʔajāʕa)\n# أَجِعْ (ʔajiʕ) /ʔa.d͡ʒiʕ/: second-person masculine singular imperative of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔujiʕ", "ʔajāʕa", "ʔujaʕ"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "نجع",
-        "u": "نجع",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نجع (form IV)\n# نُجِعْ (nujiʕ) /nu.d͡ʒiʕ/: first-person plural non-past active jussive of أَجَاعَ (ʔajāʕa)\n# نُجَعْ (nujaʕ) /nu.d͡ʒaʕ/: first-person plural non-past passive jussive of أَجَاعَ (ʔajāʕa)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nujiʕ", "ʔajāʕa", "nujaʕ"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "نجاع",
-        "u": "نجاع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نجاع (form IV)\n# نُجَاعُ (nujāʕu) /nu.d͡ʒaː.ʕu/: first-person plural non-past passive indicative of أَجَاعَ (ʔajāʕa)\n# نُجَاعَ (nujāʕa) /nu.d͡ʒaː.ʕa/: first-person plural non-past passive subjunctive of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nujāʕu", "ʔajāʕa", "nujāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تجعن",
-        "u": "تجعن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تجعن (form IV)\n# تُجِعْنَ (tujiʕna) /tu.d͡ʒiʕ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَجَاعَ (ʔajāʕa)\n# تُجَعْنَ (tujaʕna) /tu.d͡ʒaʕ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujiʕna", "ʔajāʕa", "tujaʕna"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يجعن",
-        "u": "يجعن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يجعن (form IV)\n# يُجِعْنَ (yujiʕna) /ju.d͡ʒiʕ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَجَاعَ (ʔajāʕa)\n# يُجَعْنَ (yujaʕna) /ju.d͡ʒaʕ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yujiʕna", "ʔajāʕa", "yujaʕna"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تجاع",
-        "u": "تجاع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجاع (form IV)\n# تُجَاعُ (tujāʕu) /tu.d͡ʒaː.ʕu/: inflection of أَجَاعَ (ʔajāʕa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُجَاعَ (tujāʕa) /tu.d͡ʒaː.ʕa/: inflection of أَجَاعَ (ʔajāʕa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujāʕu", "ʔajāʕa", "tujāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يجاع",
-        "u": "يجاع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يجاع (form IV)\n# يُجَاعُ (yujāʕu) /ju.d͡ʒaː.ʕu/: third-person masculine singular non-past passive indicative of أَجَاعَ (ʔajāʕa)\n# يُجَاعَ (yujāʕa) /ju.d͡ʒaː.ʕa/: third-person masculine singular non-past passive subjunctive of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yujāʕu", "ʔajāʕa", "yujāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تجاعين",
-        "u": "تجاعين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُجَاعِينَ • (tujāʕīna) (form IV) /tu.d͡ʒaː.ʕiː.na/\n# second-person feminine singular non-past passive indicative of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujāʕīna", "ʔajāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "أجعت",
-        "u": "أجعت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجعت (form IV)\n# أَجَعْتُ (ʔajaʕtu) /ʔa.d͡ʒaʕ.tu/: first-person singular past active of أَجَاعَ (ʔajāʕa)\n# أَجَعْتَ (ʔajaʕta) /ʔa.d͡ʒaʕ.ta/: second-person masculine singular past active of أَجَاعَ (ʔajāʕa)\n# أَجَعْتِ (ʔajaʕti) /ʔa.d͡ʒaʕ.ti/: second-person feminine singular past active of أَجَاعَ (ʔajāʕa)\n# أُجِعْتُ (ʔujiʕtu) /ʔu.d͡ʒiʕ.tu/: first-person singular past passive of أَجَاعَ (ʔajāʕa)\n# أ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajaʕtu", "ʔajāʕa", "ʔajaʕta"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "أجعتما",
-        "u": "أجعتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجعتما (form IV)\n# أَجَعْتُمَا (ʔajaʕtumā) /ʔa.d͡ʒaʕ.tu.maː/: second-person dual past active of أَجَاعَ (ʔajāʕa)\n# أُجِعْتُمَا (ʔujiʕtumā) /ʔu.d͡ʒiʕ.tu.maː/: second-person dual past passive of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajaʕtumā", "ʔajāʕa", "ʔujiʕtumā"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "أجاعت",
-        "u": "أجاعت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَجَاعَتْ • (ʔajāʕat) (form IV) /ʔa.d͡ʒaː.ʕat/\n# third-person feminine singular past active of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajāʕat", "ʔajāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "أجاعا",
-        "u": "أجاعا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَجَاعَا • (ʔajāʕā) (form IV) /ʔa.d͡ʒaː.ʕaː/\n# third-person masculine dual past active of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajāʕā", "ʔajāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "أجاعتا",
-        "u": "أجاعتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَجَاعَتَا • (ʔajāʕatā) (form IV) /ʔa.d͡ʒaː.ʕa.taː/\n# third-person feminine dual past active of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajāʕatā", "ʔajāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "أجعنا",
-        "u": "أجعنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجعنا (form IV)\n# أَجَعْنَا (ʔajaʕnā) /ʔa.d͡ʒaʕ.naː/: first-person plural past active of أَجَاعَ (ʔajāʕa)\n# أُجِعْنَا (ʔujiʕnā) /ʔu.d͡ʒiʕ.naː/: first-person plural past passive of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajaʕnā", "ʔajāʕa", "ʔujiʕnā"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "أجعتم",
-        "u": "أجعتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجعتم (form IV)\n# أَجَعْتُمْ (ʔajaʕtum) /ʔa.d͡ʒaʕ.tum/: second-person masculine plural past active of أَجَاعَ (ʔajāʕa)\n# أُجِعْتُمْ (ʔujiʕtum) /ʔu.d͡ʒiʕ.tum/: second-person masculine plural past passive of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajaʕtum", "ʔajāʕa", "ʔujiʕtum"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "أجاعوا",
-        "u": "أجاعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَجَاعُوا • (ʔajāʕū) (form IV) /ʔa.d͡ʒaː.ʕuː/\n# third-person masculine plural past active of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajāʕū", "ʔajāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "أجعتن",
-        "u": "أجعتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجعتن (form IV)\n# أَجَعْتُنَّ (ʔajaʕtunna) /ʔa.d͡ʒaʕ.tun.na/: second-person feminine plural past active of أَجَاعَ (ʔajāʕa)\n# أُجِعْتُنَّ (ʔujiʕtunna) /ʔu.d͡ʒiʕ.tun.na/: second-person feminine plural past passive of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajaʕtunna", "ʔajāʕa", "ʔujiʕtunna"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "أجيع",
-        "u": "أجيع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجيع (form IV)\n# أُجِيعَ (ʔujīʕa) /ʔu.d͡ʒiː.ʕa/: inflection of أَجَاعَ (ʔajāʕa):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُجِيعُ (ʔujīʕu) /ʔu.d͡ʒiː.ʕu/: first-person singular non-past active indicative of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔujīʕa", "ʔajāʕa", "ʔujīʕu"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "أجيعتا",
-        "u": "أجيعتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُجِيعَتَا • (ʔujīʕatā) (form IV) /ʔu.d͡ʒiː.ʕa.taː/\n# third-person feminine dual past passive of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔujīʕatā", "ʔajāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "أجعن",
-        "u": "أجعن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجعن (form IV)\n# أَجَعْنَ (ʔajaʕna) /ʔa.d͡ʒaʕ.na/: third-person feminine plural past active of أَجَاعَ (ʔajāʕa)\n# أُجِعْنَ (ʔujiʕna) /ʔu.d͡ʒiʕ.na/: third-person feminine plural past passive of أَجَاعَ (ʔajāʕa)\n# أَجِعْنَ (ʔajiʕna) /ʔa.d͡ʒiʕ.na/: second-person feminine plural imperative of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajaʕna", "ʔajāʕa", "ʔujiʕna"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "أجيعا",
-        "u": "أجيعا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجيعا (form IV)\n# أُجِيعَا (ʔujīʕā) /ʔu.d͡ʒiː.ʕaː/: third-person masculine dual past passive of أَجَاعَ (ʔajāʕa)\n# أَجِيعَا (ʔajīʕā) /ʔa.d͡ʒiː.ʕaː/: second-person dual imperative of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔujīʕā", "ʔajāʕa", "ʔajīʕā"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "أجيعت",
-        "u": "أجيعت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُجِيعَتْ • (ʔujīʕat) (form IV) /ʔu.d͡ʒiː.ʕat/\n# third-person feminine singular past passive of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔujīʕat", "ʔajāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تجيع",
-        "u": "تجيع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجيع (form IV)\n# تُجِيعُ (tujīʕu) /tu.d͡ʒiː.ʕu/: inflection of أَجَاعَ (ʔajāʕa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُجِيعَ (tujīʕa) /tu.d͡ʒiː.ʕa/: inflection of أَجَاعَ (ʔajāʕa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujīʕu", "ʔajāʕa", "tujīʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تجيعين",
-        "u": "تجيعين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُجِيعِينَ • (tujīʕīna) (form IV) /tu.d͡ʒiː.ʕiː.na/\n# second-person feminine singular non-past active indicative of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujīʕīna", "ʔajāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "أجيعوا",
-        "u": "أجيعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجيعوا (form IV)\n# أُجِيعُوا (ʔujīʕū) /ʔu.d͡ʒiː.ʕuː/: third-person masculine plural past passive of أَجَاعَ (ʔajāʕa)\n# أَجِيعُوا (ʔajīʕū) /ʔa.d͡ʒiː.ʕuː/: second-person masculine plural imperative of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔujīʕū", "ʔajāʕa", "ʔajīʕū"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يجيع",
-        "u": "يجيع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يجيع (form IV)\n# يُجِيعُ (yujīʕu) /ju.d͡ʒiː.ʕu/: third-person masculine singular non-past active indicative of أَجَاعَ (ʔajāʕa)\n# يُجِيعَ (yujīʕa) /ju.d͡ʒiː.ʕa/: third-person masculine singular non-past active subjunctive of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yujīʕu", "ʔajāʕa", "yujīʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "نجيع",
-        "u": "نجيع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نجيع (form IV)\n# نُجِيعُ (nujīʕu) /nu.d͡ʒiː.ʕu/: first-person plural non-past active indicative of أَجَاعَ (ʔajāʕa)\n# نُجِيعَ (nujīʕa) /nu.d͡ʒiː.ʕa/: first-person plural non-past active subjunctive of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nujīʕu", "ʔajāʕa", "nujīʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تجيعان",
-        "u": "تجيعان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُجِيعَانِ • (tujīʕāni) (form IV) /tu.d͡ʒiː.ʕaː.ni/\n# inflection of أَجَاعَ (ʔajāʕa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujīʕāni", "ʔajāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يجيعان",
-        "u": "يجيعان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُجِيعَانِ • (yujīʕāni) (form IV) /ju.d͡ʒiː.ʕaː.ni/\n# third-person masculine dual non-past active indicative of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yujīʕāni", "ʔajāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تجيعون",
-        "u": "تجيعون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُجِيعُونَ • (tujīʕūna) (form IV) /tu.d͡ʒiː.ʕuː.na/\n# second-person masculine plural non-past active indicative of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujīʕūna", "ʔajāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تجاعان",
-        "u": "تجاعان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُجَاعَانِ • (tujāʕāni) (form IV) /tu.d͡ʒaː.ʕaː.ni/\n# inflection of أَجَاعَ (ʔajāʕa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujāʕāni", "ʔajāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يجيعون",
-        "u": "يجيعون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُجِيعُونَ • (yujīʕūna) (form IV) /ju.d͡ʒiː.ʕuː.na/\n# third-person masculine plural non-past active indicative of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yujīʕūna", "ʔajāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يجاعان",
-        "u": "يجاعان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُجَاعَانِ • (yujāʕāni) (form IV) /ju.d͡ʒaː.ʕaː.ni/\n# third-person masculine dual non-past passive indicative of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yujāʕāni", "ʔajāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تجيعي",
-        "u": "تجيعي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُجِيعِي • (tujīʕī) (form IV) /tu.d͡ʒiː.ʕiː/\n# second-person feminine singular non-past active subjunctive/jussive of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujīʕī", "ʔajāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تجيعوا",
-        "u": "تجيعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُجِيعُوا • (tujīʕū) (form IV) /tu.d͡ʒiː.ʕuː/\n# second-person masculine plural non-past active subjunctive/jussive of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujīʕū", "ʔajāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يجيعا",
-        "u": "يجيعا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُجِيعَا • (yujīʕā) (form IV) /ju.d͡ʒiː.ʕaː/\n# third-person masculine dual non-past active subjunctive/jussive of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yujīʕā", "ʔajāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تجيعا",
-        "u": "تجيعا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُجِيعَا • (tujīʕā) (form IV) /tu.d͡ʒiː.ʕaː/\n# inflection of أَجَاعَ (ʔajāʕa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujīʕā", "ʔajāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يجيعوا",
-        "u": "يجيعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُجِيعُوا • (yujīʕū) (form IV) /ju.d͡ʒiː.ʕuː/\n# third-person masculine plural non-past active subjunctive/jussive of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yujīʕū", "ʔajāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تجاعا",
-        "u": "تجاعا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُجَاعَا • (tujāʕā) (form IV) /tu.d͡ʒaː.ʕaː/\n# inflection of أَجَاعَ (ʔajāʕa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujāʕā", "ʔajāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "أجيعي",
-        "u": "أجيعي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَجِيعِي • (ʔajīʕī) (form IV) /ʔa.d͡ʒiː.ʕiː/\n# second-person feminine singular imperative of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajīʕī", "ʔajāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يجاعا",
-        "u": "يجاعا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُجَاعَا • (yujāʕā) (form IV) /ju.d͡ʒaː.ʕaː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yujāʕā", "ʔajāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يجاعوا",
-        "u": "يجاعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُجَاعُوا • (yujāʕū) (form IV) /ju.d͡ʒaː.ʕuː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yujāʕū", "ʔajāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تجاعوا",
-        "u": "تجاعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُجَاعُوا • (tujāʕū) (form IV) /tu.d͡ʒaː.ʕuː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujāʕū", "ʔajāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تجاعون",
-        "u": "تجاعون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُجَاعُونَ • (tujāʕūna) (form IV) /tu.d͡ʒaː.ʕuː.na/\n# second-person masculine plural non-past passive indicative of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujāʕūna", "ʔajāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "تجاعي",
-        "u": "تجاعي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُجَاعِي • (tujāʕī) (form IV) /tu.d͡ʒaː.ʕiː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujāʕī", "ʔajāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      },
-      {
-        "w": "يجاعون",
-        "u": "يجاعون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُجَاعُونَ • (yujāʕūna) (form IV) /ju.d͡ʒaː.ʕuː.na/\n# third-person masculine plural non-past passive indicative of أَجَاعَ (ʔajāʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yujāʕūna", "ʔajāʕa"],
-        "k": "أجاع",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "جع",
+  "ses": {
     "harf": "ء",
+    "fasil": "جع",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يجع",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يجع (form IV)\n# يُجِعْ (yujiʕ) /ju.d͡ʒiʕ/: third-person masculine singular non-past active jussive of أَجَاعَ (ʔajāʕa)\n# يُجَعْ (yujaʕ) /ju.d͡ʒaʕ/: third-person masculine singular non-past passive jussive of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yujiʕ", "ʔajāʕa", "yujaʕ"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجع",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تجع (form IV)\n# تُجِعْ (tujiʕ) /tu.d͡ʒiʕ/: inflection of أَجَاعَ (ʔajāʕa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُجَعْ (tujaʕ) /tu.d͡ʒaʕ/: inflection of أَجَاعَ (ʔajāʕa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujiʕ", "ʔajāʕa", "tujaʕ"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجع",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أجع (form IV)\n# أُجِعْ (ʔujiʕ) /ʔu.d͡ʒiʕ/: first-person singular non-past active jussive of أَجَاعَ (ʔajāʕa)\n# أُجَعْ (ʔujaʕ) /ʔu.d͡ʒaʕ/: first-person singular non-past passive jussive of أَجَاعَ (ʔajāʕa)\n# أَجِعْ (ʔajiʕ) /ʔa.d͡ʒiʕ/: second-person masculine singular imperative of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔujiʕ", "ʔajāʕa", "ʔujaʕ"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نجع",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نجع (form IV)\n# نُجِعْ (nujiʕ) /nu.d͡ʒiʕ/: first-person plural non-past active jussive of أَجَاعَ (ʔajāʕa)\n# نُجَعْ (nujaʕ) /nu.d͡ʒaʕ/: first-person plural non-past passive jussive of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nujiʕ", "ʔajāʕa", "nujaʕ"],
+      "kok_yazilis": "أجاع"
+    },
+    {
+      "madde": "نجاع",
+      "tur": "verb",
+      "baslik": "نجاع (form IV)\n# نُجَاعُ (nujāʕu) /nu.d͡ʒaː.ʕu/: first-person plural non-past passive indicative of أَجَاعَ (ʔajāʕa)\n# نُجَاعَ (nujāʕa) /nu.d͡ʒaː.ʕa/: first-person plural non-past passive subjunctive of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nujāʕu", "ʔajāʕa", "nujāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجعن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تجعن (form IV)\n# تُجِعْنَ (tujiʕna) /tu.d͡ʒiʕ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَجَاعَ (ʔajāʕa)\n# تُجَعْنَ (tujaʕna) /tu.d͡ʒaʕ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujiʕna", "ʔajāʕa", "tujaʕna"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجعن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يجعن (form IV)\n# يُجِعْنَ (yujiʕna) /ju.d͡ʒiʕ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَجَاعَ (ʔajāʕa)\n# يُجَعْنَ (yujaʕna) /ju.d͡ʒaʕ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yujiʕna", "ʔajāʕa", "yujaʕna"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجاع",
+      "tur": "verb",
+      "baslik": "تجاع (form IV)\n# تُجَاعُ (tujāʕu) /tu.d͡ʒaː.ʕu/: inflection of أَجَاعَ (ʔajāʕa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُجَاعَ (tujāʕa) /tu.d͡ʒaː.ʕa/: inflection of أَجَاعَ (ʔajāʕa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujāʕu", "ʔajāʕa", "tujāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجاع",
+      "tur": "verb",
+      "baslik": "يجاع (form IV)\n# يُجَاعُ (yujāʕu) /ju.d͡ʒaː.ʕu/: third-person masculine singular non-past passive indicative of أَجَاعَ (ʔajāʕa)\n# يُجَاعَ (yujāʕa) /ju.d͡ʒaː.ʕa/: third-person masculine singular non-past passive subjunctive of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yujāʕu", "ʔajāʕa", "yujāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجاعين",
+      "tur": "verb",
+      "baslik": "تُجَاعِينَ • (tujāʕīna) (form IV) /tu.d͡ʒaː.ʕiː.na/\n# second-person feminine singular non-past passive indicative of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujāʕīna", "ʔajāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجعت",
+      "tur": "verb",
+      "baslik": "أجعت (form IV)\n# أَجَعْتُ (ʔajaʕtu) /ʔa.d͡ʒaʕ.tu/: first-person singular past active of أَجَاعَ (ʔajāʕa)\n# أَجَعْتَ (ʔajaʕta) /ʔa.d͡ʒaʕ.ta/: second-person masculine singular past active of أَجَاعَ (ʔajāʕa)\n# أَجَعْتِ (ʔajaʕti) /ʔa.d͡ʒaʕ.ti/: second-person feminine singular past active of أَجَاعَ (ʔajāʕa)\n# أُجِعْتُ (ʔujiʕtu) /ʔu.d͡ʒiʕ.tu/: first-person singular past passive of أَجَاعَ (ʔajāʕa)\n# أ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajaʕtu", "ʔajāʕa", "ʔajaʕta"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجعتما",
+      "tur": "verb",
+      "baslik": "أجعتما (form IV)\n# أَجَعْتُمَا (ʔajaʕtumā) /ʔa.d͡ʒaʕ.tu.maː/: second-person dual past active of أَجَاعَ (ʔajāʕa)\n# أُجِعْتُمَا (ʔujiʕtumā) /ʔu.d͡ʒiʕ.tu.maː/: second-person dual past passive of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajaʕtumā", "ʔajāʕa", "ʔujiʕtumā"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجاعت",
+      "tur": "verb",
+      "baslik": "أَجَاعَتْ • (ʔajāʕat) (form IV) /ʔa.d͡ʒaː.ʕat/\n# third-person feminine singular past active of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajāʕat", "ʔajāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجاعا",
+      "tur": "verb",
+      "baslik": "أَجَاعَا • (ʔajāʕā) (form IV) /ʔa.d͡ʒaː.ʕaː/\n# third-person masculine dual past active of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajāʕā", "ʔajāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجاعتا",
+      "tur": "verb",
+      "baslik": "أَجَاعَتَا • (ʔajāʕatā) (form IV) /ʔa.d͡ʒaː.ʕa.taː/\n# third-person feminine dual past active of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajāʕatā", "ʔajāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجعنا",
+      "tur": "verb",
+      "baslik": "أجعنا (form IV)\n# أَجَعْنَا (ʔajaʕnā) /ʔa.d͡ʒaʕ.naː/: first-person plural past active of أَجَاعَ (ʔajāʕa)\n# أُجِعْنَا (ʔujiʕnā) /ʔu.d͡ʒiʕ.naː/: first-person plural past passive of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajaʕnā", "ʔajāʕa", "ʔujiʕnā"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجعتم",
+      "tur": "verb",
+      "baslik": "أجعتم (form IV)\n# أَجَعْتُمْ (ʔajaʕtum) /ʔa.d͡ʒaʕ.tum/: second-person masculine plural past active of أَجَاعَ (ʔajāʕa)\n# أُجِعْتُمْ (ʔujiʕtum) /ʔu.d͡ʒiʕ.tum/: second-person masculine plural past passive of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajaʕtum", "ʔajāʕa", "ʔujiʕtum"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجاعوا",
+      "tur": "verb",
+      "baslik": "أَجَاعُوا • (ʔajāʕū) (form IV) /ʔa.d͡ʒaː.ʕuː/\n# third-person masculine plural past active of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajāʕū", "ʔajāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجعتن",
+      "tur": "verb",
+      "baslik": "أجعتن (form IV)\n# أَجَعْتُنَّ (ʔajaʕtunna) /ʔa.d͡ʒaʕ.tun.na/: second-person feminine plural past active of أَجَاعَ (ʔajāʕa)\n# أُجِعْتُنَّ (ʔujiʕtunna) /ʔu.d͡ʒiʕ.tun.na/: second-person feminine plural past passive of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajaʕtunna", "ʔajāʕa", "ʔujiʕtunna"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجيع",
+      "tur": "verb",
+      "baslik": "أجيع (form IV)\n# أُجِيعَ (ʔujīʕa) /ʔu.d͡ʒiː.ʕa/: inflection of أَجَاعَ (ʔajāʕa):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُجِيعُ (ʔujīʕu) /ʔu.d͡ʒiː.ʕu/: first-person singular non-past active indicative of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔujīʕa", "ʔajāʕa", "ʔujīʕu"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجيعتا",
+      "tur": "verb",
+      "baslik": "أُجِيعَتَا • (ʔujīʕatā) (form IV) /ʔu.d͡ʒiː.ʕa.taː/\n# third-person feminine dual past passive of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔujīʕatā", "ʔajāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجعن",
+      "tur": "verb",
+      "baslik": "أجعن (form IV)\n# أَجَعْنَ (ʔajaʕna) /ʔa.d͡ʒaʕ.na/: third-person feminine plural past active of أَجَاعَ (ʔajāʕa)\n# أُجِعْنَ (ʔujiʕna) /ʔu.d͡ʒiʕ.na/: third-person feminine plural past passive of أَجَاعَ (ʔajāʕa)\n# أَجِعْنَ (ʔajiʕna) /ʔa.d͡ʒiʕ.na/: second-person feminine plural imperative of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajaʕna", "ʔajāʕa", "ʔujiʕna"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجيعا",
+      "tur": "verb",
+      "baslik": "أجيعا (form IV)\n# أُجِيعَا (ʔujīʕā) /ʔu.d͡ʒiː.ʕaː/: third-person masculine dual past passive of أَجَاعَ (ʔajāʕa)\n# أَجِيعَا (ʔajīʕā) /ʔa.d͡ʒiː.ʕaː/: second-person dual imperative of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔujīʕā", "ʔajāʕa", "ʔajīʕā"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجيعت",
+      "tur": "verb",
+      "baslik": "أُجِيعَتْ • (ʔujīʕat) (form IV) /ʔu.d͡ʒiː.ʕat/\n# third-person feminine singular past passive of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔujīʕat", "ʔajāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجيع",
+      "tur": "verb",
+      "baslik": "تجيع (form IV)\n# تُجِيعُ (tujīʕu) /tu.d͡ʒiː.ʕu/: inflection of أَجَاعَ (ʔajāʕa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُجِيعَ (tujīʕa) /tu.d͡ʒiː.ʕa/: inflection of أَجَاعَ (ʔajāʕa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujīʕu", "ʔajāʕa", "tujīʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجيعين",
+      "tur": "verb",
+      "baslik": "تُجِيعِينَ • (tujīʕīna) (form IV) /tu.d͡ʒiː.ʕiː.na/\n# second-person feminine singular non-past active indicative of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujīʕīna", "ʔajāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجيعوا",
+      "tur": "verb",
+      "baslik": "أجيعوا (form IV)\n# أُجِيعُوا (ʔujīʕū) /ʔu.d͡ʒiː.ʕuː/: third-person masculine plural past passive of أَجَاعَ (ʔajāʕa)\n# أَجِيعُوا (ʔajīʕū) /ʔa.d͡ʒiː.ʕuː/: second-person masculine plural imperative of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔujīʕū", "ʔajāʕa", "ʔajīʕū"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجيع",
+      "tur": "verb",
+      "baslik": "يجيع (form IV)\n# يُجِيعُ (yujīʕu) /ju.d͡ʒiː.ʕu/: third-person masculine singular non-past active indicative of أَجَاعَ (ʔajāʕa)\n# يُجِيعَ (yujīʕa) /ju.d͡ʒiː.ʕa/: third-person masculine singular non-past active subjunctive of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yujīʕu", "ʔajāʕa", "yujīʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نجيع",
+      "tur": "verb",
+      "baslik": "نجيع (form IV)\n# نُجِيعُ (nujīʕu) /nu.d͡ʒiː.ʕu/: first-person plural non-past active indicative of أَجَاعَ (ʔajāʕa)\n# نُجِيعَ (nujīʕa) /nu.d͡ʒiː.ʕa/: first-person plural non-past active subjunctive of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nujīʕu", "ʔajāʕa", "nujīʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجيعان",
+      "tur": "verb",
+      "baslik": "تُجِيعَانِ • (tujīʕāni) (form IV) /tu.d͡ʒiː.ʕaː.ni/\n# inflection of أَجَاعَ (ʔajāʕa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujīʕāni", "ʔajāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجيعان",
+      "tur": "verb",
+      "baslik": "يُجِيعَانِ • (yujīʕāni) (form IV) /ju.d͡ʒiː.ʕaː.ni/\n# third-person masculine dual non-past active indicative of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yujīʕāni", "ʔajāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجيعون",
+      "tur": "verb",
+      "baslik": "تُجِيعُونَ • (tujīʕūna) (form IV) /tu.d͡ʒiː.ʕuː.na/\n# second-person masculine plural non-past active indicative of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujīʕūna", "ʔajāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجاعان",
+      "tur": "verb",
+      "baslik": "تُجَاعَانِ • (tujāʕāni) (form IV) /tu.d͡ʒaː.ʕaː.ni/\n# inflection of أَجَاعَ (ʔajāʕa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujāʕāni", "ʔajāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجيعون",
+      "tur": "verb",
+      "baslik": "يُجِيعُونَ • (yujīʕūna) (form IV) /ju.d͡ʒiː.ʕuː.na/\n# third-person masculine plural non-past active indicative of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yujīʕūna", "ʔajāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجاعان",
+      "tur": "verb",
+      "baslik": "يُجَاعَانِ • (yujāʕāni) (form IV) /ju.d͡ʒaː.ʕaː.ni/\n# third-person masculine dual non-past passive indicative of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yujāʕāni", "ʔajāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجيعي",
+      "tur": "verb",
+      "baslik": "تُجِيعِي • (tujīʕī) (form IV) /tu.d͡ʒiː.ʕiː/\n# second-person feminine singular non-past active subjunctive/jussive of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujīʕī", "ʔajāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجيعوا",
+      "tur": "verb",
+      "baslik": "تُجِيعُوا • (tujīʕū) (form IV) /tu.d͡ʒiː.ʕuː/\n# second-person masculine plural non-past active subjunctive/jussive of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujīʕū", "ʔajāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجيعا",
+      "tur": "verb",
+      "baslik": "يُجِيعَا • (yujīʕā) (form IV) /ju.d͡ʒiː.ʕaː/\n# third-person masculine dual non-past active subjunctive/jussive of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yujīʕā", "ʔajāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجيعا",
+      "tur": "verb",
+      "baslik": "تُجِيعَا • (tujīʕā) (form IV) /tu.d͡ʒiː.ʕaː/\n# inflection of أَجَاعَ (ʔajāʕa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujīʕā", "ʔajāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجيعوا",
+      "tur": "verb",
+      "baslik": "يُجِيعُوا • (yujīʕū) (form IV) /ju.d͡ʒiː.ʕuː/\n# third-person masculine plural non-past active subjunctive/jussive of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yujīʕū", "ʔajāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجاعا",
+      "tur": "verb",
+      "baslik": "تُجَاعَا • (tujāʕā) (form IV) /tu.d͡ʒaː.ʕaː/\n# inflection of أَجَاعَ (ʔajāʕa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujāʕā", "ʔajāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجيعي",
+      "tur": "verb",
+      "baslik": "أَجِيعِي • (ʔajīʕī) (form IV) /ʔa.d͡ʒiː.ʕiː/\n# second-person feminine singular imperative of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajīʕī", "ʔajāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجاعا",
+      "tur": "verb",
+      "baslik": "يُجَاعَا • (yujāʕā) (form IV) /ju.d͡ʒaː.ʕaː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yujāʕā", "ʔajāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجاعوا",
+      "tur": "verb",
+      "baslik": "يُجَاعُوا • (yujāʕū) (form IV) /ju.d͡ʒaː.ʕuː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yujāʕū", "ʔajāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجاعوا",
+      "tur": "verb",
+      "baslik": "تُجَاعُوا • (tujāʕū) (form IV) /tu.d͡ʒaː.ʕuː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujāʕū", "ʔajāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجاعون",
+      "tur": "verb",
+      "baslik": "تُجَاعُونَ • (tujāʕūna) (form IV) /tu.d͡ʒaː.ʕuː.na/\n# second-person masculine plural non-past passive indicative of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujāʕūna", "ʔajāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجاعي",
+      "tur": "verb",
+      "baslik": "تُجَاعِي • (tujāʕī) (form IV) /tu.d͡ʒaː.ʕiː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujāʕī", "ʔajāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجاعون",
+      "tur": "verb",
+      "baslik": "يُجَاعُونَ • (yujāʕūna) (form IV) /ju.d͡ʒaː.ʕuː.na/\n# third-person masculine plural non-past passive indicative of أَجَاعَ (ʔajāʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yujāʕūna", "ʔajāʕa"],
+      "kok_yazilis": "أجاع",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءجاع", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

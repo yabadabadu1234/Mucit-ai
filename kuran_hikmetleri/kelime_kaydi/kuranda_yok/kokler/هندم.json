@@ -1,381 +1,281 @@
 {
   "kok": "هندم",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "هندم", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "هندام",
-        "u": "هندام",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "هِنْدَام • (hindām) m",
-        "t": "From Middle Persian [Book Pahlavi needed] (hndʾm /⁠handām⁠/, “member, limb”) or Persian هندام (handâm). Compare Persian اندام (andâm).",
-        "s": [
-          ["ar-rootbox", ""],
-          ["bor", "Middle Persian [Book Pahlavi needed] (hndʾm /⁠handām⁠/, “member, limb”)"],
-          ["bor", "Persian هندام (handâm)"],
-          ["cog", "Persian اندام (andâm)"]
-        ],
-        "g": ["a kind of simple machine doubling the physical power of a man", "symmetry", "tidiness"],
-        "tag": ["obsolete"],
-        "r": ["hindām"],
-        "ipa": ["/hin.daːm/"],
-        "el": [
-          ["هندام", "هندام#Persian"],
-          ["اندام", "اندام#Persian"]
-        ],
-        "k": "هندم",
-        "yol": "kök"
-      },
-      {
-        "w": "هندم",
-        "u": "هندم",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "هَنْدَمَ • (handama) Iq (non-past يُهَنْدِمُ (yuhandimu), verbal noun هَنْدَمَة (handama))",
-        "g": ["to groom, to adjust, to fix up, to make tidy"],
-        "r": ["handama"],
-        "ipa": ["/han.da.ma/"],
-        "k": "هندم",
-        "yol": "kök"
-      },
-      {
-        "w": "هندمت",
-        "u": "هندمت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هندمت (form Iq)\n# هَنْدَمْتُ (handamtu) /han.dam.tu/: first-person singular past active of هَنْدَمَ (handama)\n# هَنْدَمْتَ (handamta) /han.dam.ta/: second-person masculine singular past active of هَنْدَمَ (handama)\n# هَنْدَمْتِ (handamti) /han.dam.ti/: second-person feminine singular past active of هَنْدَمَ (handama)\n# هَنْدَمَتْ (handamat) /han.da.mat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["handamtu", "handama", "handamta"],
-        "k": "هندم",
-        "yol": "kök"
-      },
-      {
-        "w": "هندمتما",
-        "u": "هندمتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هندمتما (form Iq)\n# هَنْدَمْتُمَا (handamtumā) /han.dam.tu.maː/: second-person dual past active of هَنْدَمَ (handama)\n# هُنْدِمْتُمَا (hundimtumā) /hun.dim.tu.maː/: second-person dual past passive of هَنْدَمَ (handama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["handamtumā", "handama", "hundimtumā"],
-        "k": "هندم",
-        "yol": "kök"
-      },
-      {
-        "w": "هندمتا",
-        "u": "هندمتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هندمتا (form Iq)\n# هَنْدَمَتَا (handamatā) /han.da.ma.taː/: third-person feminine dual past active of هَنْدَمَ (handama)\n# هُنْدِمَتَا (hundimatā) /hun.di.ma.taː/: third-person feminine dual past passive of هَنْدَمَ (handama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["handamatā", "handama", "hundimatā"],
-        "k": "هندم",
-        "yol": "kök"
-      },
-      {
-        "w": "هندما",
-        "u": "هندما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هندما (form Iq)\n# هَنْدَمَا (handamā) /han.da.maː/: third-person masculine dual past active of هَنْدَمَ (handama)\n# هُنْدِمَا (hundimā) /hun.di.maː/: third-person masculine dual past passive of هَنْدَمَ (handama)\n# هَنْدِمَا (handimā) /han.di.maː/: second-person dual imperative of هَنْدَمَ (handama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["handamā", "handama", "hundimā"],
-        "k": "هندم",
-        "yol": "kök"
-      },
-      {
-        "w": "هندمتم",
-        "u": "هندمتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هندمتم (form Iq)\n# هَنْدَمْتُمْ (handamtum) /han.dam.tum/: second-person masculine plural past active of هَنْدَمَ (handama)\n# هُنْدِمْتُمْ (hundimtum) /hun.dim.tum/: second-person masculine plural past passive of هَنْدَمَ (handama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["handamtum", "handama", "hundimtum"],
-        "k": "هندم",
-        "yol": "kök"
-      },
-      {
-        "w": "هندمتن",
-        "u": "هندمتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هندمتن (form Iq)\n# هَنْدَمْتُنَّ (handamtunna) /han.dam.tun.na/: second-person feminine plural past active of هَنْدَمَ (handama)\n# هُنْدِمْتُنَّ (hundimtunna) /hun.dim.tun.na/: second-person feminine plural past passive of هَنْدَمَ (handama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["handamtunna", "handama", "hundimtunna"],
-        "k": "هندم",
-        "yol": "kök"
-      },
-      {
-        "w": "هندمن",
-        "u": "هندمن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هندمن (form Iq)\n# هَنْدَمْنَ (handamna) /han.dam.na/: third-person feminine plural past active of هَنْدَمَ (handama)\n# هُنْدِمْنَ (hundimna) /hun.dim.na/: third-person feminine plural past passive of هَنْدَمَ (handama)\n# هَنْدِمْنَ (handimna) /han.dim.na/: second-person feminine plural imperative of هَنْدَمَ (handama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["handamna", "handama", "hundimna"],
-        "k": "هندم",
-        "yol": "kök"
-      },
-      {
-        "w": "أهندم",
-        "u": "أهندم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أهندم (form Iq)\n# أُهَنْدِمُ (ʔuhandimu) /ʔu.han.di.mu/: first-person singular non-past active indicative of هَنْدَمَ (handama)\n# أُهَنْدَمُ (ʔuhandamu) /ʔu.han.da.mu/: first-person singular non-past passive indicative of هَنْدَمَ (handama)\n# أُهَنْدِمَ (ʔuhandima) /ʔu.han.di.ma/: first-person singular non-past active subjunctive of هَنْدَمَ (handama)\n# أُهَنْدَمَ (ʔuhandama) /ʔu.han.da.ma/: first",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʔuhandimu", "handama", "ʔuhandamu"],
-        "k": "هندم",
-        "yol": "kök"
-      },
-      {
-        "w": "تهندمين",
-        "u": "تهندمين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهندمين (form Iq)\n# تُهَنْدِمِينَ (tuhandimīna) /tu.han.di.miː.na/: second-person feminine singular non-past active indicative of هَنْدَمَ (handama)\n# تُهَنْدَمِينَ (tuhandamīna) /tu.han.da.miː.na/: second-person feminine singular non-past passive indicative of هَنْدَمَ (handama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuhandimīna", "handama", "tuhandamīna"],
-        "k": "هندم",
-        "yol": "kök"
-      },
-      {
-        "w": "هندمنا",
-        "u": "هندمنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هندمنا (form Iq)\n# هَنْدَمْنَا (handamnā) /han.dam.naː/: first-person plural past active of هَنْدَمَ (handama)\n# هُنْدِمْنَا (hundimnā) /hun.dim.naː/: first-person plural past passive of هَنْدَمَ (handama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["handamnā", "handama", "hundimnā"],
-        "k": "هندم",
-        "yol": "kök"
-      },
-      {
-        "w": "هندموا",
-        "u": "هندموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هندموا (form Iq)\n# هَنْدَمُوا (handamū) /han.da.muː/: third-person masculine plural past active of هَنْدَمَ (handama)\n# هُنْدِمُوا (hundimū) /hun.di.muː/: third-person masculine plural past passive of هَنْدَمَ (handama)\n# هَنْدِمُوا (handimū) /han.di.muː/: second-person masculine plural imperative of هَنْدَمَ (handama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["handamū", "handama", "hundimū"],
-        "k": "هندم",
-        "yol": "kök"
-      },
-      {
-        "w": "يهندم",
-        "u": "يهندم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهندم (form Iq)\n# يُهَنْدِمُ (yuhandimu) /ju.han.di.mu/: third-person masculine singular non-past active indicative of هَنْدَمَ (handama)\n# يُهَنْدَمُ (yuhandamu) /ju.han.da.mu/: third-person masculine singular non-past passive indicative of هَنْدَمَ (handama)\n# يُهَنْدِمَ (yuhandima) /ju.han.di.ma/: third-person masculine singular non-past active subjunctive of هَنْدَمَ (handama)\n# يُهَنْدَمَ (yu",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuhandimu", "handama", "yuhandamu"],
-        "k": "هندم",
-        "yol": "kök"
-      },
-      {
-        "w": "يهندمان",
-        "u": "يهندمان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهندمان (form Iq)\n# يُهَنْدِمَانِ (yuhandimāni) /ju.han.di.maː.ni/: third-person masculine dual non-past active indicative of هَنْدَمَ (handama)\n# يُهَنْدَمَانِ (yuhandamāni) /ju.han.da.maː.ni/: third-person masculine dual non-past passive indicative of هَنْدَمَ (handama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuhandimāni", "handama", "yuhandamāni"],
-        "k": "هندم",
-        "yol": "kök"
-      },
-      {
-        "w": "تهندمون",
-        "u": "تهندمون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهندمون (form Iq)\n# تُهَنْدِمُونَ (tuhandimūna) /tu.han.di.muː.na/: second-person masculine plural non-past active indicative of هَنْدَمَ (handama)\n# تُهَنْدَمُونَ (tuhandamūna) /tu.han.da.muː.na/: second-person masculine plural non-past passive indicative of هَنْدَمَ (handama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuhandimūna", "handama", "tuhandamūna"],
-        "k": "هندم",
-        "yol": "kök"
-      },
-      {
-        "w": "تهندم",
-        "u": "تهندم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهندم (form Iq)\n# تُهَنْدِمُ (tuhandimu) /tu.han.di.mu/: inflection of هَنْدَمَ (handama):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُهَنْدَمُ (tuhandamu) /tu.han.da.mu/: inflection of هَنْدَمَ (handama):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past pas",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuhandimu", "handama", "tuhandamu"],
-        "k": "هندم",
-        "yol": "kök"
-      },
-      {
-        "w": "تهندمي",
-        "u": "تهندمي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهندمي (form Iq)\n# تُهَنْدِمِي (tuhandimī) /tu.han.di.miː/: second-person feminine singular non-past active subjunctive/jussive of هَنْدَمَ (handama)\n# تُهَنْدَمِي (tuhandamī) /tu.han.da.miː/: second-person feminine singular non-past passive subjunctive/jussive of هَنْدَمَ (handama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuhandimī", "handama", "tuhandamī"],
-        "k": "هندم",
-        "yol": "kök"
-      },
-      {
-        "w": "تهندمن",
-        "u": "تهندمن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهندمن (form Iq)\n# تُهَنْدِمْنَ (tuhandimna) /tu.han.dim.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of هَنْدَمَ (handama)\n# تُهَنْدَمْنَ (tuhandamna) /tu.han.dam.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of هَنْدَمَ (handama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuhandimna", "handama", "tuhandamna"],
-        "k": "هندم",
-        "yol": "kök"
-      },
-      {
-        "w": "نهندم",
-        "u": "نهندم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نهندم (form Iq)\n# نُهَنْدِمُ (nuhandimu) /nu.han.di.mu/: first-person plural non-past active indicative of هَنْدَمَ (handama)\n# نُهَنْدَمُ (nuhandamu) /nu.han.da.mu/: first-person plural non-past passive indicative of هَنْدَمَ (handama)\n# نُهَنْدِمَ (nuhandima) /nu.han.di.ma/: first-person plural non-past active subjunctive of هَنْدَمَ (handama)\n# نُهَنْدَمَ (nuhandama) /nu.han.da.ma/: first-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["nuhandimu", "handama", "nuhandamu"],
-        "k": "هندم",
-        "yol": "kök"
-      },
-      {
-        "w": "تهندمان",
-        "u": "تهندمان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهندمان (form Iq)\n# تُهَنْدِمَانِ (tuhandimāni) /tu.han.di.maː.ni/: inflection of هَنْدَمَ (handama):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُهَنْدَمَانِ (tuhandamāni) /tu.han.da.maː.ni/: inflection of هَنْدَمَ (handama):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuhandimāni", "handama", "tuhandamāni"],
-        "k": "هندم",
-        "yol": "kök"
-      },
-      {
-        "w": "يهندمون",
-        "u": "يهندمون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهندمون (form Iq)\n# يُهَنْدِمُونَ (yuhandimūna) /ju.han.di.muː.na/: third-person masculine plural non-past active indicative of هَنْدَمَ (handama)\n# يُهَنْدَمُونَ (yuhandamūna) /ju.han.da.muː.na/: third-person masculine plural non-past passive indicative of هَنْدَمَ (handama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuhandimūna", "handama", "yuhandamūna"],
-        "k": "هندم",
-        "yol": "kök"
-      },
-      {
-        "w": "يهندمن",
-        "u": "يهندمن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهندمن (form Iq)\n# يُهَنْدِمْنَ (yuhandimna) /ju.han.dim.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of هَنْدَمَ (handama)\n# يُهَنْدَمْنَ (yuhandamna) /ju.han.dam.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of هَنْدَمَ (handama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuhandimna", "handama", "yuhandamna"],
-        "k": "هندم",
-        "yol": "kök"
-      },
-      {
-        "w": "يهندموا",
-        "u": "يهندموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهندموا (form Iq)\n# يُهَنْدِمُوا (yuhandimū) /ju.han.di.muː/: third-person masculine plural non-past active subjunctive/jussive of هَنْدَمَ (handama)\n# يُهَنْدَمُوا (yuhandamū) /ju.han.da.muː/: third-person masculine plural non-past passive subjunctive/jussive of هَنْدَمَ (handama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuhandimū", "handama", "yuhandamū"],
-        "k": "هندم",
-        "yol": "kök"
-      },
-      {
-        "w": "يهندما",
-        "u": "يهندما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهندما (form Iq)\n# يُهَنْدِمَا (yuhandimā) /ju.han.di.maː/: third-person masculine dual non-past active subjunctive/jussive of هَنْدَمَ (handama)\n# يُهَنْدَمَا (yuhandamā) /ju.han.da.maː/: third-person masculine dual non-past passive subjunctive/jussive of هَنْدَمَ (handama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuhandimā", "handama", "yuhandamā"],
-        "k": "هندم",
-        "yol": "kök"
-      },
-      {
-        "w": "تهندموا",
-        "u": "تهندموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهندموا (form Iq)\n# تُهَنْدِمُوا (tuhandimū) /tu.han.di.muː/: second-person masculine plural non-past active subjunctive/jussive of هَنْدَمَ (handama)\n# تُهَنْدَمُوا (tuhandamū) /tu.han.da.muː/: second-person masculine plural non-past passive subjunctive/jussive of هَنْدَمَ (handama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuhandimū", "handama", "tuhandamū"],
-        "k": "هندم",
-        "yol": "kök"
-      },
-      {
-        "w": "تهندما",
-        "u": "تهندما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهندما (form Iq)\n# تُهَنْدِمَا (tuhandimā) /tu.han.di.maː/: inflection of هَنْدَمَ (handama):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُهَنْدَمَا (tuhandamā) /tu.han.da.maː/: inflection of هَنْدَمَ (handama):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuhandimā", "handama", "tuhandamā"],
-        "k": "هندم",
-        "yol": "kök"
-      },
-      {
-        "w": "هندمي",
-        "u": "هندمي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَنْدِمِي • (handimī) (form Iq) /han.di.miː/\n# second-person feminine singular imperative of هَنْدَمَ (handama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["handimī", "handama"],
-        "k": "هندم",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "هن",
+  "ses": {
     "harf": "ه",
+    "fasil": "هن",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "هندام",
+      "tur": "noun",
+      "baslik": "هِنْدَام • (hindām) m",
+      "etim_sablon": [
+        ["ar-rootbox", ""],
+        ["bor", "Middle Persian [Book Pahlavi needed] (hndʾm /⁠handām⁠/, “member, limb”)"],
+        ["bor", "Persian هندام (handâm)"],
+        ["cog", "Persian اندام (andâm)"]
+      ],
+      "anlam": ["a kind of simple machine doubling the physical power of a man", "symmetry", "tidiness"],
+      "etiket": ["obsolete"],
+      "okunus": ["hindām"],
+      "ipa": ["/hin.daːm/"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هندم",
+      "tur": "verb",
+      "baslik": "هَنْدَمَ • (handama) Iq (non-past يُهَنْدِمُ (yuhandimu), verbal noun هَنْدَمَة (handama))",
+      "anlam": ["to groom, to adjust, to fix up, to make tidy"],
+      "okunus": ["handama"],
+      "ipa": ["/han.da.ma/"]
+    },
+    {
+      "madde": "هندمت",
+      "tur": "verb",
+      "baslik": "هندمت (form Iq)\n# هَنْدَمْتُ (handamtu) /han.dam.tu/: first-person singular past active of هَنْدَمَ (handama)\n# هَنْدَمْتَ (handamta) /han.dam.ta/: second-person masculine singular past active of هَنْدَمَ (handama)\n# هَنْدَمْتِ (handamti) /han.dam.ti/: second-person feminine singular past active of هَنْدَمَ (handama)\n# هَنْدَمَتْ (handamat) /han.da.mat/: third-person feminine singular past active ",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["handamtu", "handama", "handamta"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "هندمتما",
+      "tur": "verb",
+      "baslik": "هندمتما (form Iq)\n# هَنْدَمْتُمَا (handamtumā) /han.dam.tu.maː/: second-person dual past active of هَنْدَمَ (handama)\n# هُنْدِمْتُمَا (hundimtumā) /hun.dim.tu.maː/: second-person dual past passive of هَنْدَمَ (handama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["handamtumā", "handama", "hundimtumā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "هندمتا",
+      "tur": "verb",
+      "baslik": "هندمتا (form Iq)\n# هَنْدَمَتَا (handamatā) /han.da.ma.taː/: third-person feminine dual past active of هَنْدَمَ (handama)\n# هُنْدِمَتَا (hundimatā) /hun.di.ma.taː/: third-person feminine dual past passive of هَنْدَمَ (handama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["handamatā", "handama", "hundimatā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "هندما",
+      "tur": "verb",
+      "baslik": "هندما (form Iq)\n# هَنْدَمَا (handamā) /han.da.maː/: third-person masculine dual past active of هَنْدَمَ (handama)\n# هُنْدِمَا (hundimā) /hun.di.maː/: third-person masculine dual past passive of هَنْدَمَ (handama)\n# هَنْدِمَا (handimā) /han.di.maː/: second-person dual imperative of هَنْدَمَ (handama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["handamā", "handama", "hundimā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "هندمتم",
+      "tur": "verb",
+      "baslik": "هندمتم (form Iq)\n# هَنْدَمْتُمْ (handamtum) /han.dam.tum/: second-person masculine plural past active of هَنْدَمَ (handama)\n# هُنْدِمْتُمْ (hundimtum) /hun.dim.tum/: second-person masculine plural past passive of هَنْدَمَ (handama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["handamtum", "handama", "hundimtum"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "هندمتن",
+      "tur": "verb",
+      "baslik": "هندمتن (form Iq)\n# هَنْدَمْتُنَّ (handamtunna) /han.dam.tun.na/: second-person feminine plural past active of هَنْدَمَ (handama)\n# هُنْدِمْتُنَّ (hundimtunna) /hun.dim.tun.na/: second-person feminine plural past passive of هَنْدَمَ (handama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["handamtunna", "handama", "hundimtunna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "هندمن",
+      "tur": "verb",
+      "baslik": "هندمن (form Iq)\n# هَنْدَمْنَ (handamna) /han.dam.na/: third-person feminine plural past active of هَنْدَمَ (handama)\n# هُنْدِمْنَ (hundimna) /hun.dim.na/: third-person feminine plural past passive of هَنْدَمَ (handama)\n# هَنْدِمْنَ (handimna) /han.dim.na/: second-person feminine plural imperative of هَنْدَمَ (handama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["handamna", "handama", "hundimna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "أهندم",
+      "tur": "verb",
+      "baslik": "أهندم (form Iq)\n# أُهَنْدِمُ (ʔuhandimu) /ʔu.han.di.mu/: first-person singular non-past active indicative of هَنْدَمَ (handama)\n# أُهَنْدَمُ (ʔuhandamu) /ʔu.han.da.mu/: first-person singular non-past passive indicative of هَنْدَمَ (handama)\n# أُهَنْدِمَ (ʔuhandima) /ʔu.han.di.ma/: first-person singular non-past active subjunctive of هَنْدَمَ (handama)\n# أُهَنْدَمَ (ʔuhandama) /ʔu.han.da.ma/: first",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʔuhandimu", "handama", "ʔuhandamu"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تهندمين",
+      "tur": "verb",
+      "baslik": "تهندمين (form Iq)\n# تُهَنْدِمِينَ (tuhandimīna) /tu.han.di.miː.na/: second-person feminine singular non-past active indicative of هَنْدَمَ (handama)\n# تُهَنْدَمِينَ (tuhandamīna) /tu.han.da.miː.na/: second-person feminine singular non-past passive indicative of هَنْدَمَ (handama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuhandimīna", "handama", "tuhandamīna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "هندمنا",
+      "tur": "verb",
+      "baslik": "هندمنا (form Iq)\n# هَنْدَمْنَا (handamnā) /han.dam.naː/: first-person plural past active of هَنْدَمَ (handama)\n# هُنْدِمْنَا (hundimnā) /hun.dim.naː/: first-person plural past passive of هَنْدَمَ (handama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["handamnā", "handama", "hundimnā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "هندموا",
+      "tur": "verb",
+      "baslik": "هندموا (form Iq)\n# هَنْدَمُوا (handamū) /han.da.muː/: third-person masculine plural past active of هَنْدَمَ (handama)\n# هُنْدِمُوا (hundimū) /hun.di.muː/: third-person masculine plural past passive of هَنْدَمَ (handama)\n# هَنْدِمُوا (handimū) /han.di.muː/: second-person masculine plural imperative of هَنْدَمَ (handama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["handamū", "handama", "hundimū"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يهندم",
+      "tur": "verb",
+      "baslik": "يهندم (form Iq)\n# يُهَنْدِمُ (yuhandimu) /ju.han.di.mu/: third-person masculine singular non-past active indicative of هَنْدَمَ (handama)\n# يُهَنْدَمُ (yuhandamu) /ju.han.da.mu/: third-person masculine singular non-past passive indicative of هَنْدَمَ (handama)\n# يُهَنْدِمَ (yuhandima) /ju.han.di.ma/: third-person masculine singular non-past active subjunctive of هَنْدَمَ (handama)\n# يُهَنْدَمَ (yu",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuhandimu", "handama", "yuhandamu"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يهندمان",
+      "tur": "verb",
+      "baslik": "يهندمان (form Iq)\n# يُهَنْدِمَانِ (yuhandimāni) /ju.han.di.maː.ni/: third-person masculine dual non-past active indicative of هَنْدَمَ (handama)\n# يُهَنْدَمَانِ (yuhandamāni) /ju.han.da.maː.ni/: third-person masculine dual non-past passive indicative of هَنْدَمَ (handama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuhandimāni", "handama", "yuhandamāni"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تهندمون",
+      "tur": "verb",
+      "baslik": "تهندمون (form Iq)\n# تُهَنْدِمُونَ (tuhandimūna) /tu.han.di.muː.na/: second-person masculine plural non-past active indicative of هَنْدَمَ (handama)\n# تُهَنْدَمُونَ (tuhandamūna) /tu.han.da.muː.na/: second-person masculine plural non-past passive indicative of هَنْدَمَ (handama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuhandimūna", "handama", "tuhandamūna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تهندم",
+      "tur": "verb",
+      "baslik": "تهندم (form Iq)\n# تُهَنْدِمُ (tuhandimu) /tu.han.di.mu/: inflection of هَنْدَمَ (handama):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُهَنْدَمُ (tuhandamu) /tu.han.da.mu/: inflection of هَنْدَمَ (handama):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past pas",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuhandimu", "handama", "tuhandamu"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تهندمي",
+      "tur": "verb",
+      "baslik": "تهندمي (form Iq)\n# تُهَنْدِمِي (tuhandimī) /tu.han.di.miː/: second-person feminine singular non-past active subjunctive/jussive of هَنْدَمَ (handama)\n# تُهَنْدَمِي (tuhandamī) /tu.han.da.miː/: second-person feminine singular non-past passive subjunctive/jussive of هَنْدَمَ (handama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuhandimī", "handama", "tuhandamī"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تهندمن",
+      "tur": "verb",
+      "baslik": "تهندمن (form Iq)\n# تُهَنْدِمْنَ (tuhandimna) /tu.han.dim.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of هَنْدَمَ (handama)\n# تُهَنْدَمْنَ (tuhandamna) /tu.han.dam.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of هَنْدَمَ (handama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuhandimna", "handama", "tuhandamna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "نهندم",
+      "tur": "verb",
+      "baslik": "نهندم (form Iq)\n# نُهَنْدِمُ (nuhandimu) /nu.han.di.mu/: first-person plural non-past active indicative of هَنْدَمَ (handama)\n# نُهَنْدَمُ (nuhandamu) /nu.han.da.mu/: first-person plural non-past passive indicative of هَنْدَمَ (handama)\n# نُهَنْدِمَ (nuhandima) /nu.han.di.ma/: first-person plural non-past active subjunctive of هَنْدَمَ (handama)\n# نُهَنْدَمَ (nuhandama) /nu.han.da.ma/: first-perso",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["nuhandimu", "handama", "nuhandamu"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تهندمان",
+      "tur": "verb",
+      "baslik": "تهندمان (form Iq)\n# تُهَنْدِمَانِ (tuhandimāni) /tu.han.di.maː.ni/: inflection of هَنْدَمَ (handama):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُهَنْدَمَانِ (tuhandamāni) /tu.han.da.maː.ni/: inflection of هَنْدَمَ (handama):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuhandimāni", "handama", "tuhandamāni"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يهندمون",
+      "tur": "verb",
+      "baslik": "يهندمون (form Iq)\n# يُهَنْدِمُونَ (yuhandimūna) /ju.han.di.muː.na/: third-person masculine plural non-past active indicative of هَنْدَمَ (handama)\n# يُهَنْدَمُونَ (yuhandamūna) /ju.han.da.muː.na/: third-person masculine plural non-past passive indicative of هَنْدَمَ (handama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuhandimūna", "handama", "yuhandamūna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يهندمن",
+      "tur": "verb",
+      "baslik": "يهندمن (form Iq)\n# يُهَنْدِمْنَ (yuhandimna) /ju.han.dim.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of هَنْدَمَ (handama)\n# يُهَنْدَمْنَ (yuhandamna) /ju.han.dam.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of هَنْدَمَ (handama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuhandimna", "handama", "yuhandamna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يهندموا",
+      "tur": "verb",
+      "baslik": "يهندموا (form Iq)\n# يُهَنْدِمُوا (yuhandimū) /ju.han.di.muː/: third-person masculine plural non-past active subjunctive/jussive of هَنْدَمَ (handama)\n# يُهَنْدَمُوا (yuhandamū) /ju.han.da.muː/: third-person masculine plural non-past passive subjunctive/jussive of هَنْدَمَ (handama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuhandimū", "handama", "yuhandamū"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يهندما",
+      "tur": "verb",
+      "baslik": "يهندما (form Iq)\n# يُهَنْدِمَا (yuhandimā) /ju.han.di.maː/: third-person masculine dual non-past active subjunctive/jussive of هَنْدَمَ (handama)\n# يُهَنْدَمَا (yuhandamā) /ju.han.da.maː/: third-person masculine dual non-past passive subjunctive/jussive of هَنْدَمَ (handama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuhandimā", "handama", "yuhandamā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تهندموا",
+      "tur": "verb",
+      "baslik": "تهندموا (form Iq)\n# تُهَنْدِمُوا (tuhandimū) /tu.han.di.muː/: second-person masculine plural non-past active subjunctive/jussive of هَنْدَمَ (handama)\n# تُهَنْدَمُوا (tuhandamū) /tu.han.da.muː/: second-person masculine plural non-past passive subjunctive/jussive of هَنْدَمَ (handama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuhandimū", "handama", "tuhandamū"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تهندما",
+      "tur": "verb",
+      "baslik": "تهندما (form Iq)\n# تُهَنْدِمَا (tuhandimā) /tu.han.di.maː/: inflection of هَنْدَمَ (handama):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُهَنْدَمَا (tuhandamā) /tu.han.da.maː/: inflection of هَنْدَمَ (handama):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuhandimā", "handama", "tuhandamā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "هندمي",
+      "tur": "verb",
+      "baslik": "هَنْدِمِي • (handimī) (form Iq) /han.di.miː/\n# second-person feminine singular imperative of هَنْدَمَ (handama)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["handimī", "handama"],
+      "etimoloji": 2
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "From Middle Persian [Book Pahlavi needed] (hndʾm /⁠handām⁠/, “member, limb”) or Persian هندام (handâm). Compare Persian اندام (andâm).",
+      "kognatlar": [
+        ["هندام", "هندام#Persian"],
+        ["اندام", "اندام#Persian"]
+      ]
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "هندم", "r6"]
+  ],
+  "mana": {
     "ince": "person.n.01",
     "orta": "noun.person",
     "ust": "insan ve toplum",
@@ -383,20 +283,8 @@
     "dayanak_tanim": "a man who is much concerned with his dress and appearance",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["adult.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 9,
       "merkez_kok": "سفك",
@@ -416,6 +304,11 @@
       "boy": 3
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["adult.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

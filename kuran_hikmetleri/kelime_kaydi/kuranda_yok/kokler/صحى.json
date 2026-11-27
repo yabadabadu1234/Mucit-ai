@@ -1,483 +1,352 @@
 {
   "kok": "صحى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "صحى", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "نصح",
-        "u": "نصح",
-        "p": "verb",
-        "n": "7",
-        "h": "ar-verb form",
-        "e": "نصح (form II)\n# نُصَحِّ (nuṣaḥḥi) /nu.sˤaħ.ħi/: first-person plural non-past active jussive of صَحَّى (ṣaḥḥā)\n# نُصَحَّ (nuṣaḥḥa) /nu.sˤaħ.ħa/: first-person plural non-past passive jussive of صَحَّى (ṣaḥḥā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuṣaḥḥi", "ṣaḥḥā", "nuṣaḥḥa"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "صحي",
-        "u": "صحي",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "صحي (form II)\n# صُحِّيَ (ṣuḥḥiya) /sˤuħ.ħi.ja/: third-person masculine singular past passive of صَحَّى (ṣaḥḥā)\n# صَحِّي (ṣaḥḥī) /sˤaħ.ħiː/: second-person feminine singular imperative of صَحَّى (ṣaḥḥā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ṣuḥḥiya", "ṣaḥḥā", "ṣaḥḥī"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "أصح",
-        "u": "أصح",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "أصح (form II)\n# أُصَحِّ (ʔuṣaḥḥi) /ʔu.sˤaħ.ħi/: first-person singular non-past active jussive of صَحَّى (ṣaḥḥā)\n# أُصَحَّ (ʔuṣaḥḥa) /ʔu.sˤaħ.ħa/: first-person singular non-past passive jussive of صَحَّى (ṣaḥḥā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuṣaḥḥi", "ṣaḥḥā", "ʔuṣaḥḥa"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "يصح",
-        "u": "يصح",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "يصح (form II)\n# يُصَحِّ (yuṣaḥḥi) /ju.sˤaħ.ħi/: third-person masculine singular non-past active jussive of صَحَّى (ṣaḥḥā)\n# يُصَحَّ (yuṣaḥḥa) /ju.sˤaħ.ħa/: third-person masculine singular non-past passive jussive of صَحَّى (ṣaḥḥā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuṣaḥḥi", "ṣaḥḥā", "yuṣaḥḥa"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "تصح",
-        "u": "تصح",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تصح (form II)\n# تُصَحِّ (tuṣaḥḥi) /tu.sˤaħ.ħi/: inflection of صَحَّى (ṣaḥḥā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُصَحَّ (tuṣaḥḥa) /tu.sˤaħ.ħa/: inflection of صَحَّى (ṣaḥḥā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuṣaḥḥi", "ṣaḥḥā", "tuṣaḥḥa"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "صحت",
-        "u": "صحت",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "صَحَّتْ • (ṣaḥḥat) (form II) /sˤaħ.ħat/\n# third-person feminine singular past active of صَحَّى (ṣaḥḥā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ṣaḥḥat", "ṣaḥḥā"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "صح",
-        "u": "صح",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "صَحِّ • (ṣaḥḥi) (form II) /sˤaħ.ħi/\n# second-person masculine singular imperative of صَحَّى (ṣaḥḥā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ṣaḥḥi", "ṣaḥḥā"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "أصحى",
-        "u": "أصحى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أُصَحَّى • (ʔuṣaḥḥā) (form II) /ʔu.sˤaħ.ħaː/\n# first-person singular non-past passive indicative/subjunctive of صَحَّى (ṣaḥḥā)",
-        "tag": ["Classical", "form-ii", "no-gloss"],
-        "r": ["ʔuṣaḥḥā", "ṣaḥḥā"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "أصحي",
-        "u": "أصحي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أصحي (form II)\n# أُصَحِّي (ʔuṣaḥḥī) /ʔu.sˤaħ.ħiː/: first-person singular non-past active indicative of صَحَّى (ṣaḥḥā)\n# أُصَحِّيَ (ʔuṣaḥḥiya) /ʔu.sˤaħ.ħi.ja/: first-person singular non-past active subjunctive of صَحَّى (ṣaḥḥā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuṣaḥḥī", "ṣaḥḥā", "ʔuṣaḥḥiya"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "يصحي",
-        "u": "يصحي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يصحي (form II)\n# يُصَحِّي (yuṣaḥḥī) /ju.sˤaħ.ħiː/: third-person masculine singular non-past active indicative of صَحَّى (ṣaḥḥā)\n# يُصَحِّيَ (yuṣaḥḥiya) /ju.sˤaħ.ħi.ja/: third-person masculine singular non-past active subjunctive of صَحَّى (ṣaḥḥā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuṣaḥḥī", "ṣaḥḥā", "yuṣaḥḥiya"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "تصحين",
-        "u": "تصحين",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تصحين (form II)\n# تُصَحِّينَ (tuṣaḥḥīna) /tu.sˤaħ.ħiː.na/: inflection of صَحَّى (ṣaḥḥā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُصَحَّيْنَ (tuṣaḥḥayna) /tu.sˤaħ.ħaj.na/: inflection of صَحَّى (ṣaḥḥā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuṣaḥḥīna", "ṣaḥḥā", "tuṣaḥḥayna"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "نصحي",
-        "u": "نصحي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نصحي (form II)\n# نُصَحِّي (nuṣaḥḥī) /nu.sˤaħ.ħiː/: first-person plural non-past active indicative of صَحَّى (ṣaḥḥā)\n# نُصَحِّيَ (nuṣaḥḥiya) /nu.sˤaħ.ħi.ja/: first-person plural non-past active subjunctive of صَحَّى (ṣaḥḥā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuṣaḥḥī", "ṣaḥḥā", "nuṣaḥḥiya"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "تصحيان",
-        "u": "تصحيان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تصحيان (form II)\n# تُصَحِّيَانِ (tuṣaḥḥiyāni) /tu.sˤaħ.ħi.jaː.ni/: inflection of صَحَّى (ṣaḥḥā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُصَحَّيَانِ (tuṣaḥḥayāni) /tu.sˤaħ.ħa.jaː.ni/: inflection of صَحَّى (ṣaḥḥā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuṣaḥḥiyāni", "ṣaḥḥā", "tuṣaḥḥayāni"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "تصحي",
-        "u": "تصحي",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تصحي (form II)\n# تُصَحِّي (tuṣaḥḥī) /tu.sˤaħ.ħiː/: inflection of صَحَّى (ṣaḥḥā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُصَحِّيَ (tuṣaḥḥiya) /tu.sˤaħ.ħi.ja/: inflection of صَحَّى (ṣaḥḥā):\n## second-person masculine singular non-past active s",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuṣaḥḥī", "ṣaḥḥā", "tuṣaḥḥiya"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "تصحون",
-        "u": "تصحون",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تصحون (form II)\n# تُصَحُّونَ (tuṣaḥḥūna) /tu.sˤaħ.ħuː.na/: second-person masculine plural non-past active indicative of صَحَّى (ṣaḥḥā)\n# تُصَحَّوْنَ (tuṣaḥḥawna) /tu.sˤaħ.ħaw.na/: second-person masculine plural non-past passive indicative of صَحَّى (ṣaḥḥā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuṣaḥḥūna", "ṣaḥḥā", "tuṣaḥḥawna"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "تصحى",
-        "u": "تصحى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُصَحَّى • (tuṣaḥḥā) (form II) /tu.sˤaħ.ħaː/\n# inflection of صَحَّى (ṣaḥḥā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuṣaḥḥā", "ṣaḥḥā"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "يصحين",
-        "u": "يصحين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يصحين (form II)\n# يُصَحِّينَ (yuṣaḥḥīna) /ju.sˤaħ.ħiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of صَحَّى (ṣaḥḥā)\n# يُصَحَّيْنَ (yuṣaḥḥayna) /ju.sˤaħ.ħaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of صَحَّى (ṣaḥḥā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuṣaḥḥīna", "ṣaḥḥā", "yuṣaḥḥayna"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "يصحيان",
-        "u": "يصحيان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يصحيان (form II)\n# يُصَحِّيَانِ (yuṣaḥḥiyāni) /ju.sˤaħ.ħi.jaː.ni/: third-person masculine dual non-past active indicative of صَحَّى (ṣaḥḥā)\n# يُصَحَّيَانِ (yuṣaḥḥayāni) /ju.sˤaħ.ħa.jaː.ni/: third-person masculine dual non-past passive indicative of صَحَّى (ṣaḥḥā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuṣaḥḥiyāni", "ṣaḥḥā", "yuṣaḥḥayāni"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "يصحون",
-        "u": "يصحون",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يصحون (form II)\n# يُصَحُّونَ (yuṣaḥḥūna) /ju.sˤaħ.ħuː.na/: third-person masculine plural non-past active indicative of صَحَّى (ṣaḥḥā)\n# يُصَحَّوْنَ (yuṣaḥḥawna) /ju.sˤaħ.ħaw.na/: third-person masculine plural non-past passive indicative of صَحَّى (ṣaḥḥā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuṣaḥḥūna", "ṣaḥḥā", "yuṣaḥḥawna"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "تصحيا",
-        "u": "تصحيا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تصحيا (form II)\n# تُصَحِّيَا (tuṣaḥḥiyā) /tu.sˤaħ.ħi.jaː/: inflection of صَحَّى (ṣaḥḥā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُصَحَّيَا (tuṣaḥḥayā) /tu.sˤaħ.ħa.jaː/: inflection of صَحَّى (ṣaḥḥā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunct",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuṣaḥḥiyā", "ṣaḥḥā", "tuṣaḥḥayā"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "يصحيا",
-        "u": "يصحيا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يصحيا (form II)\n# يُصَحِّيَا (yuṣaḥḥiyā) /ju.sˤaħ.ħi.jaː/: third-person masculine dual non-past active subjunctive/jussive of صَحَّى (ṣaḥḥā)\n# يُصَحَّيَا (yuṣaḥḥayā) /ju.sˤaħ.ħa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of صَحَّى (ṣaḥḥā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuṣaḥḥiyā", "ṣaḥḥā", "yuṣaḥḥayā"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "يصحوا",
-        "u": "يصحوا",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يصحوا (form II)\n# يُصَحُّوا (yuṣaḥḥū) /ju.sˤaħ.ħuː/: third-person masculine plural non-past active subjunctive/jussive of صَحَّى (ṣaḥḥā)\n# يُصَحَّوْا (yuṣaḥḥaw) /ju.sˤaħ.ħaw/: third-person masculine plural non-past passive subjunctive/jussive of صَحَّى (ṣaḥḥā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuṣaḥḥū", "ṣaḥḥā", "yuṣaḥḥaw"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "نصحى",
-        "u": "نصحى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نُصَحَّى • (nuṣaḥḥā) (form II) /nu.sˤaħ.ħaː/\n# first-person plural non-past passive indicative/subjunctive of صَحَّى (ṣaḥḥā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuṣaḥḥā", "ṣaḥḥā"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "يصحى",
-        "u": "يصحى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُصَحَّى • (yuṣaḥḥā) (form II) /ju.sˤaħ.ħaː/\n# third-person masculine singular non-past passive indicative/subjunctive of صَحَّى (ṣaḥḥā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuṣaḥḥā", "ṣaḥḥā"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "تصحوا",
-        "u": "تصحوا",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تصحوا (form II)\n# تُصَحُّوا (tuṣaḥḥū) /tu.sˤaħ.ħuː/: second-person masculine plural non-past active subjunctive/jussive of صَحَّى (ṣaḥḥā)\n# تُصَحَّوْا (tuṣaḥḥaw) /tu.sˤaħ.ħaw/: second-person masculine plural non-past passive subjunctive/jussive of صَحَّى (ṣaḥḥā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuṣaḥḥū", "ṣaḥḥā", "tuṣaḥḥaw"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "صحتا",
-        "u": "صحتا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "صَحَّتَا • (ṣaḥḥatā) (form II) /sˤaħ.ħa.taː/\n# third-person feminine dual past active of صَحَّى (ṣaḥḥā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ṣaḥḥatā", "ṣaḥḥā"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "صحوا",
-        "u": "صحوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "صحوا (form II)\n# صَحَّوْا (ṣaḥḥaw) /sˤaħ.ħaw/: third-person masculine plural past active of صَحَّى (ṣaḥḥā)\n# صُحُّوا (ṣuḥḥū) /sˤuħ.ħuː/: third-person masculine plural past passive of صَحَّى (ṣaḥḥā)\n# صَحُّوا (ṣaḥḥū) /sˤaħ.ħuː/: second-person masculine plural imperative of صَحَّى (ṣaḥḥā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ṣaḥḥaw", "ṣaḥḥā", "ṣuḥḥū"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "صحيت",
-        "u": "صحيت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صحيت (form II)\n# صَحَّيْتُ (ṣaḥḥaytu) /sˤaħ.ħaj.tu/: first-person singular past active of صَحَّى (ṣaḥḥā)\n# صَحَّيْتَ (ṣaḥḥayta) /sˤaħ.ħaj.ta/: second-person masculine singular past active of صَحَّى (ṣaḥḥā)\n# صَحَّيْتِ (ṣaḥḥayti) /sˤaħ.ħaj.ti/: second-person feminine singular past active of صَحَّى (ṣaḥḥā)\n# صُحِّيتُ (ṣuḥḥītu) /sˤuħ.ħiː.tu/: first-person singular past passive of صَحَّى (ṣaḥḥā)\n# صُح",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ṣaḥḥaytu", "ṣaḥḥā", "ṣaḥḥayta"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "صحيتما",
-        "u": "صحيتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صحيتما (form II)\n# صَحَّيْتُمَا (ṣaḥḥaytumā) /sˤaħ.ħaj.tu.maː/: second-person dual past active of صَحَّى (ṣaḥḥā)\n# صُحِّيتُمَا (ṣuḥḥītumā) /sˤuħ.ħiː.tu.maː/: second-person dual past passive of صَحَّى (ṣaḥḥā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ṣaḥḥaytumā", "ṣaḥḥā", "ṣuḥḥītumā"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "صحينا",
-        "u": "صحينا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صحينا (form II)\n# صَحَّيْنَا (ṣaḥḥaynā) /sˤaħ.ħaj.naː/: first-person plural past active of صَحَّى (ṣaḥḥā)\n# صُحِّينَا (ṣuḥḥīnā) /sˤuħ.ħiː.naː/: first-person plural past passive of صَحَّى (ṣaḥḥā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ṣaḥḥaynā", "ṣaḥḥā", "ṣuḥḥīnā"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "صحين",
-        "u": "صحين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صحين (form II)\n# صَحَّيْنَ (ṣaḥḥayna) /sˤaħ.ħaj.na/: third-person feminine plural past active of صَحَّى (ṣaḥḥā)\n# صُحِّينَ (ṣuḥḥīna) /sˤuħ.ħiː.na/: third-person feminine plural past passive of صَحَّى (ṣaḥḥā)\n# صَحِّينَ (ṣaḥḥīna) /sˤaħ.ħiː.na/: second-person feminine plural imperative of صَحَّى (ṣaḥḥā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ṣaḥḥayna", "ṣaḥḥā", "ṣuḥḥīna"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "صحيتم",
-        "u": "صحيتم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صحيتم (form II)\n# صَحَّيْتُمْ (ṣaḥḥaytum) /sˤaħ.ħaj.tum/: second-person masculine plural past active of صَحَّى (ṣaḥḥā)\n# صُحِّيتُمْ (ṣuḥḥītum) /sˤuħ.ħiː.tum/: second-person masculine plural past passive of صَحَّى (ṣaḥḥā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ṣaḥḥaytum", "ṣaḥḥā", "ṣuḥḥītum"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "صحيا",
-        "u": "صحيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صحيا (form II)\n# صَحَّيَا (ṣaḥḥayā) /sˤaħ.ħa.jaː/: third-person masculine dual past active of صَحَّى (ṣaḥḥā)\n# صُحِّيَا (ṣuḥḥiyā) /sˤuħ.ħi.jaː/: third-person masculine dual past passive of صَحَّى (ṣaḥḥā)\n# صَحِّيَا (ṣaḥḥiyā) /sˤaħ.ħi.jaː/: second-person dual imperative of صَحَّى (ṣaḥḥā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ṣaḥḥayā", "ṣaḥḥā", "ṣuḥḥiyā"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "صحيتا",
-        "u": "صحيتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صُحِّيَتَا • (ṣuḥḥiyatā) (form II) /sˤuħ.ħi.ja.taː/\n# third-person feminine dual past passive of صَحَّى (ṣaḥḥā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ṣuḥḥiyatā", "ṣaḥḥā"],
-        "k": "صحى",
-        "yol": "kök"
-      },
-      {
-        "w": "صحيتن",
-        "u": "صحيتن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صحيتن (form II)\n# صَحَّيْتُنَّ (ṣaḥḥaytunna) /sˤaħ.ħaj.tun.na/: second-person feminine plural past active of صَحَّى (ṣaḥḥā)\n# صُحِّيتُنَّ (ṣuḥḥītunna) /sˤuħ.ħiː.tun.na/: second-person feminine plural past passive of صَحَّى (ṣaḥḥā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ṣaḥḥaytunna", "ṣaḥḥā", "ṣuḥḥītunna"],
-        "k": "صحى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "صح",
+  "ses": {
     "harf": "ص",
+    "fasil": "صح",
     "mahrec": "esaliyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "نصح",
+      "tur": "verb",
+      "etim_no": "7",
+      "baslik": "نصح (form II)\n# نُصَحِّ (nuṣaḥḥi) /nu.sˤaħ.ħi/: first-person plural non-past active jussive of صَحَّى (ṣaḥḥā)\n# نُصَحَّ (nuṣaḥḥa) /nu.sˤaħ.ħa/: first-person plural non-past passive jussive of صَحَّى (ṣaḥḥā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuṣaḥḥi", "ṣaḥḥā", "nuṣaḥḥa"]
+    },
+    {
+      "madde": "صحي",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "صحي (form II)\n# صُحِّيَ (ṣuḥḥiya) /sˤuħ.ħi.ja/: third-person masculine singular past passive of صَحَّى (ṣaḥḥā)\n# صَحِّي (ṣaḥḥī) /sˤaħ.ħiː/: second-person feminine singular imperative of صَحَّى (ṣaḥḥā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ṣuḥḥiya", "ṣaḥḥā", "ṣaḥḥī"]
+    },
+    {
+      "madde": "أصح",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "أصح (form II)\n# أُصَحِّ (ʔuṣaḥḥi) /ʔu.sˤaħ.ħi/: first-person singular non-past active jussive of صَحَّى (ṣaḥḥā)\n# أُصَحَّ (ʔuṣaḥḥa) /ʔu.sˤaħ.ħa/: first-person singular non-past passive jussive of صَحَّى (ṣaḥḥā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuṣaḥḥi", "ṣaḥḥā", "ʔuṣaḥḥa"]
+    },
+    {
+      "madde": "يصح",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "يصح (form II)\n# يُصَحِّ (yuṣaḥḥi) /ju.sˤaħ.ħi/: third-person masculine singular non-past active jussive of صَحَّى (ṣaḥḥā)\n# يُصَحَّ (yuṣaḥḥa) /ju.sˤaħ.ħa/: third-person masculine singular non-past passive jussive of صَحَّى (ṣaḥḥā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuṣaḥḥi", "ṣaḥḥā", "yuṣaḥḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصح",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تصح (form II)\n# تُصَحِّ (tuṣaḥḥi) /tu.sˤaħ.ħi/: inflection of صَحَّى (ṣaḥḥā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُصَحَّ (tuṣaḥḥa) /tu.sˤaħ.ħa/: inflection of صَحَّى (ṣaḥḥā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuṣaḥḥi", "ṣaḥḥā", "tuṣaḥḥa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صحت",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "صَحَّتْ • (ṣaḥḥat) (form II) /sˤaħ.ħat/\n# third-person feminine singular past active of صَحَّى (ṣaḥḥā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ṣaḥḥat", "ṣaḥḥā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صح",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "صَحِّ • (ṣaḥḥi) (form II) /sˤaħ.ħi/\n# second-person masculine singular imperative of صَحَّى (ṣaḥḥā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ṣaḥḥi", "ṣaḥḥā"]
+    },
+    {
+      "madde": "أصحى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أُصَحَّى • (ʔuṣaḥḥā) (form II) /ʔu.sˤaħ.ħaː/\n# first-person singular non-past passive indicative/subjunctive of صَحَّى (ṣaḥḥā)",
+      "etiket": ["Classical", "form-ii", "no-gloss"],
+      "okunus": ["ʔuṣaḥḥā", "ṣaḥḥā"]
+    },
+    {
+      "madde": "أصحي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أصحي (form II)\n# أُصَحِّي (ʔuṣaḥḥī) /ʔu.sˤaħ.ħiː/: first-person singular non-past active indicative of صَحَّى (ṣaḥḥā)\n# أُصَحِّيَ (ʔuṣaḥḥiya) /ʔu.sˤaħ.ħi.ja/: first-person singular non-past active subjunctive of صَحَّى (ṣaḥḥā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuṣaḥḥī", "ṣaḥḥā", "ʔuṣaḥḥiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يصحي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يصحي (form II)\n# يُصَحِّي (yuṣaḥḥī) /ju.sˤaħ.ħiː/: third-person masculine singular non-past active indicative of صَحَّى (ṣaḥḥā)\n# يُصَحِّيَ (yuṣaḥḥiya) /ju.sˤaħ.ħi.ja/: third-person masculine singular non-past active subjunctive of صَحَّى (ṣaḥḥā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuṣaḥḥī", "ṣaḥḥā", "yuṣaḥḥiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصحين",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تصحين (form II)\n# تُصَحِّينَ (tuṣaḥḥīna) /tu.sˤaħ.ħiː.na/: inflection of صَحَّى (ṣaḥḥā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُصَحَّيْنَ (tuṣaḥḥayna) /tu.sˤaħ.ħaj.na/: inflection of صَحَّى (ṣaḥḥā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine pl",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuṣaḥḥīna", "ṣaḥḥā", "tuṣaḥḥayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نصحي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نصحي (form II)\n# نُصَحِّي (nuṣaḥḥī) /nu.sˤaħ.ħiː/: first-person plural non-past active indicative of صَحَّى (ṣaḥḥā)\n# نُصَحِّيَ (nuṣaḥḥiya) /nu.sˤaħ.ħi.ja/: first-person plural non-past active subjunctive of صَحَّى (ṣaḥḥā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuṣaḥḥī", "ṣaḥḥā", "nuṣaḥḥiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصحيان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تصحيان (form II)\n# تُصَحِّيَانِ (tuṣaḥḥiyāni) /tu.sˤaħ.ħi.jaː.ni/: inflection of صَحَّى (ṣaḥḥā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُصَحَّيَانِ (tuṣaḥḥayāni) /tu.sˤaħ.ħa.jaː.ni/: inflection of صَحَّى (ṣaḥḥā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuṣaḥḥiyāni", "ṣaḥḥā", "tuṣaḥḥayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصحي",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تصحي (form II)\n# تُصَحِّي (tuṣaḥḥī) /tu.sˤaħ.ħiː/: inflection of صَحَّى (ṣaḥḥā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُصَحِّيَ (tuṣaḥḥiya) /tu.sˤaħ.ħi.ja/: inflection of صَحَّى (ṣaḥḥā):\n## second-person masculine singular non-past active s",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuṣaḥḥī", "ṣaḥḥā", "tuṣaḥḥiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصحون",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تصحون (form II)\n# تُصَحُّونَ (tuṣaḥḥūna) /tu.sˤaħ.ħuː.na/: second-person masculine plural non-past active indicative of صَحَّى (ṣaḥḥā)\n# تُصَحَّوْنَ (tuṣaḥḥawna) /tu.sˤaħ.ħaw.na/: second-person masculine plural non-past passive indicative of صَحَّى (ṣaḥḥā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuṣaḥḥūna", "ṣaḥḥā", "tuṣaḥḥawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصحى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُصَحَّى • (tuṣaḥḥā) (form II) /tu.sˤaħ.ħaː/\n# inflection of صَحَّى (ṣaḥḥā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuṣaḥḥā", "ṣaḥḥā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يصحين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يصحين (form II)\n# يُصَحِّينَ (yuṣaḥḥīna) /ju.sˤaħ.ħiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of صَحَّى (ṣaḥḥā)\n# يُصَحَّيْنَ (yuṣaḥḥayna) /ju.sˤaħ.ħaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of صَحَّى (ṣaḥḥā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuṣaḥḥīna", "ṣaḥḥā", "yuṣaḥḥayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يصحيان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يصحيان (form II)\n# يُصَحِّيَانِ (yuṣaḥḥiyāni) /ju.sˤaħ.ħi.jaː.ni/: third-person masculine dual non-past active indicative of صَحَّى (ṣaḥḥā)\n# يُصَحَّيَانِ (yuṣaḥḥayāni) /ju.sˤaħ.ħa.jaː.ni/: third-person masculine dual non-past passive indicative of صَحَّى (ṣaḥḥā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuṣaḥḥiyāni", "ṣaḥḥā", "yuṣaḥḥayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يصحون",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يصحون (form II)\n# يُصَحُّونَ (yuṣaḥḥūna) /ju.sˤaħ.ħuː.na/: third-person masculine plural non-past active indicative of صَحَّى (ṣaḥḥā)\n# يُصَحَّوْنَ (yuṣaḥḥawna) /ju.sˤaħ.ħaw.na/: third-person masculine plural non-past passive indicative of صَحَّى (ṣaḥḥā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuṣaḥḥūna", "ṣaḥḥā", "yuṣaḥḥawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصحيا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تصحيا (form II)\n# تُصَحِّيَا (tuṣaḥḥiyā) /tu.sˤaħ.ħi.jaː/: inflection of صَحَّى (ṣaḥḥā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُصَحَّيَا (tuṣaḥḥayā) /tu.sˤaħ.ħa.jaː/: inflection of صَحَّى (ṣaḥḥā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunct",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuṣaḥḥiyā", "ṣaḥḥā", "tuṣaḥḥayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يصحيا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يصحيا (form II)\n# يُصَحِّيَا (yuṣaḥḥiyā) /ju.sˤaħ.ħi.jaː/: third-person masculine dual non-past active subjunctive/jussive of صَحَّى (ṣaḥḥā)\n# يُصَحَّيَا (yuṣaḥḥayā) /ju.sˤaħ.ħa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of صَحَّى (ṣaḥḥā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuṣaḥḥiyā", "ṣaḥḥā", "yuṣaḥḥayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يصحوا",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يصحوا (form II)\n# يُصَحُّوا (yuṣaḥḥū) /ju.sˤaħ.ħuː/: third-person masculine plural non-past active subjunctive/jussive of صَحَّى (ṣaḥḥā)\n# يُصَحَّوْا (yuṣaḥḥaw) /ju.sˤaħ.ħaw/: third-person masculine plural non-past passive subjunctive/jussive of صَحَّى (ṣaḥḥā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuṣaḥḥū", "ṣaḥḥā", "yuṣaḥḥaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نصحى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نُصَحَّى • (nuṣaḥḥā) (form II) /nu.sˤaħ.ħaː/\n# first-person plural non-past passive indicative/subjunctive of صَحَّى (ṣaḥḥā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuṣaḥḥā", "ṣaḥḥā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يصحى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُصَحَّى • (yuṣaḥḥā) (form II) /ju.sˤaħ.ħaː/\n# third-person masculine singular non-past passive indicative/subjunctive of صَحَّى (ṣaḥḥā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuṣaḥḥā", "ṣaḥḥā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تصحوا",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تصحوا (form II)\n# تُصَحُّوا (tuṣaḥḥū) /tu.sˤaħ.ħuː/: second-person masculine plural non-past active subjunctive/jussive of صَحَّى (ṣaḥḥā)\n# تُصَحَّوْا (tuṣaḥḥaw) /tu.sˤaħ.ħaw/: second-person masculine plural non-past passive subjunctive/jussive of صَحَّى (ṣaḥḥā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuṣaḥḥū", "ṣaḥḥā", "tuṣaḥḥaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صحتا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "صَحَّتَا • (ṣaḥḥatā) (form II) /sˤaħ.ħa.taː/\n# third-person feminine dual past active of صَحَّى (ṣaḥḥā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ṣaḥḥatā", "ṣaḥḥā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صحوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "صحوا (form II)\n# صَحَّوْا (ṣaḥḥaw) /sˤaħ.ħaw/: third-person masculine plural past active of صَحَّى (ṣaḥḥā)\n# صُحُّوا (ṣuḥḥū) /sˤuħ.ħuː/: third-person masculine plural past passive of صَحَّى (ṣaḥḥā)\n# صَحُّوا (ṣaḥḥū) /sˤaħ.ħuː/: second-person masculine plural imperative of صَحَّى (ṣaḥḥā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ṣaḥḥaw", "ṣaḥḥā", "ṣuḥḥū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صحيت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صحيت (form II)\n# صَحَّيْتُ (ṣaḥḥaytu) /sˤaħ.ħaj.tu/: first-person singular past active of صَحَّى (ṣaḥḥā)\n# صَحَّيْتَ (ṣaḥḥayta) /sˤaħ.ħaj.ta/: second-person masculine singular past active of صَحَّى (ṣaḥḥā)\n# صَحَّيْتِ (ṣaḥḥayti) /sˤaħ.ħaj.ti/: second-person feminine singular past active of صَحَّى (ṣaḥḥā)\n# صُحِّيتُ (ṣuḥḥītu) /sˤuħ.ħiː.tu/: first-person singular past passive of صَحَّى (ṣaḥḥā)\n# صُح",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ṣaḥḥaytu", "ṣaḥḥā", "ṣaḥḥayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صحيتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صحيتما (form II)\n# صَحَّيْتُمَا (ṣaḥḥaytumā) /sˤaħ.ħaj.tu.maː/: second-person dual past active of صَحَّى (ṣaḥḥā)\n# صُحِّيتُمَا (ṣuḥḥītumā) /sˤuħ.ħiː.tu.maː/: second-person dual past passive of صَحَّى (ṣaḥḥā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ṣaḥḥaytumā", "ṣaḥḥā", "ṣuḥḥītumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صحينا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صحينا (form II)\n# صَحَّيْنَا (ṣaḥḥaynā) /sˤaħ.ħaj.naː/: first-person plural past active of صَحَّى (ṣaḥḥā)\n# صُحِّينَا (ṣuḥḥīnā) /sˤuħ.ħiː.naː/: first-person plural past passive of صَحَّى (ṣaḥḥā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ṣaḥḥaynā", "ṣaḥḥā", "ṣuḥḥīnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صحين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صحين (form II)\n# صَحَّيْنَ (ṣaḥḥayna) /sˤaħ.ħaj.na/: third-person feminine plural past active of صَحَّى (ṣaḥḥā)\n# صُحِّينَ (ṣuḥḥīna) /sˤuħ.ħiː.na/: third-person feminine plural past passive of صَحَّى (ṣaḥḥā)\n# صَحِّينَ (ṣaḥḥīna) /sˤaħ.ħiː.na/: second-person feminine plural imperative of صَحَّى (ṣaḥḥā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ṣaḥḥayna", "ṣaḥḥā", "ṣuḥḥīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صحيتم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صحيتم (form II)\n# صَحَّيْتُمْ (ṣaḥḥaytum) /sˤaħ.ħaj.tum/: second-person masculine plural past active of صَحَّى (ṣaḥḥā)\n# صُحِّيتُمْ (ṣuḥḥītum) /sˤuħ.ħiː.tum/: second-person masculine plural past passive of صَحَّى (ṣaḥḥā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ṣaḥḥaytum", "ṣaḥḥā", "ṣuḥḥītum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صحيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صحيا (form II)\n# صَحَّيَا (ṣaḥḥayā) /sˤaħ.ħa.jaː/: third-person masculine dual past active of صَحَّى (ṣaḥḥā)\n# صُحِّيَا (ṣuḥḥiyā) /sˤuħ.ħi.jaː/: third-person masculine dual past passive of صَحَّى (ṣaḥḥā)\n# صَحِّيَا (ṣaḥḥiyā) /sˤaħ.ħi.jaː/: second-person dual imperative of صَحَّى (ṣaḥḥā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ṣaḥḥayā", "ṣaḥḥā", "ṣuḥḥiyā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صحيتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صُحِّيَتَا • (ṣuḥḥiyatā) (form II) /sˤuħ.ħi.ja.taː/\n# third-person feminine dual past passive of صَحَّى (ṣaḥḥā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ṣuḥḥiyatā", "ṣaḥḥā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "صحيتن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صحيتن (form II)\n# صَحَّيْتُنَّ (ṣaḥḥaytunna) /sˤaħ.ħaj.tun.na/: second-person feminine plural past active of صَحَّى (ṣaḥḥā)\n# صُحِّيتُنَّ (ṣuḥḥītunna) /sˤuħ.ħiː.tun.na/: second-person feminine plural past passive of صَحَّى (ṣaḥḥā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ṣaḥḥaytunna", "ṣaḥḥā", "ṣuḥḥītunna"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "صحى", "r7"]
+  ],
+  "mana": {
     "ince": "talk.v.02",
     "orta": "verb.communication",
     "ust": "söz ve haber",
@@ -485,16 +354,11 @@
     "dayanak_tanim": "give advice to",
     "synset_sayisi": 11
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "act.n.02",
     "break.v.02",
     "break.v.04",
@@ -506,12 +370,10 @@
     "teach.v.01",
     "tell.v.02"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

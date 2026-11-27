@@ -1,348 +1,278 @@
 {
   "kok": "ءسرع",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءسرع", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يسرع",
-        "u": "يسرع",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يسرع (form IV)\n# يُسْرِعُ (yusriʕu) /jus.ri.ʕu/: third-person masculine singular non-past active indicative of أَسْرَعَ (ʔasraʕa)\n# يُسْرَعُ (yusraʕu) /jus.ra.ʕu/: third-person masculine singular non-past passive indicative of أَسْرَعَ (ʔasraʕa)\n# يُسْرِعَ (yusriʕa) /jus.ri.ʕa/: third-person masculine singular non-past active subjunctive of أَسْرَعَ (ʔasraʕa)\n# يُسْرَعَ (yusraʕa) /jus.ra.ʕa/: thir",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yusriʕu", "ʔasraʕa", "yusraʕu"],
-        "k": "أسرع",
-        "yol": "kök"
-      },
-      {
-        "w": "أسرعت",
-        "u": "أسرعت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أسرعت (form IV)\n# أَسْرَعْتُ (ʔasraʕtu) /ʔas.raʕ.tu/: first-person singular past active of أَسْرَعَ (ʔasraʕa)\n# أَسْرَعْتَ (ʔasraʕta) /ʔas.raʕ.ta/: second-person masculine singular past active of أَسْرَعَ (ʔasraʕa)\n# أَسْرَعْتِ (ʔasraʕti) /ʔas.raʕ.ti/: second-person feminine singular past active of أَسْرَعَ (ʔasraʕa)\n# أَسْرَعَتْ (ʔasraʕat) /ʔas.ra.ʕat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasraʕtu", "ʔasraʕa", "ʔasraʕta"],
-        "k": "أسرع",
-        "yol": "kök"
-      },
-      {
-        "w": "تسرع",
-        "u": "تسرع",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تسرع (form IV)\n# تُسْرِعُ (tusriʕu) /tus.ri.ʕu/: inflection of أَسْرَعَ (ʔasraʕa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُسْرَعُ (tusraʕu) /tus.ra.ʕu/: inflection of أَسْرَعَ (ʔasraʕa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tusriʕu", "ʔasraʕa", "tusraʕu"],
-        "k": "أسرع",
-        "yol": "kök"
-      },
-      {
-        "w": "تسرعين",
-        "u": "تسرعين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تسرعين (form IV)\n# تُسْرِعِينَ (tusriʕīna) /tus.ri.ʕiː.na/: second-person feminine singular non-past active indicative of أَسْرَعَ (ʔasraʕa)\n# تُسْرَعِينَ (tusraʕīna) /tus.ra.ʕiː.na/: second-person feminine singular non-past passive indicative of أَسْرَعَ (ʔasraʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tusriʕīna", "ʔasraʕa", "tusraʕīna"],
-        "k": "أسرع",
-        "yol": "kök"
-      },
-      {
-        "w": "تسرعي",
-        "u": "تسرعي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تسرعي (form IV)\n# تُسْرِعِي (tusriʕī) /tus.ri.ʕiː/: second-person feminine singular non-past active subjunctive/jussive of أَسْرَعَ (ʔasraʕa)\n# تُسْرَعِي (tusraʕī) /tus.ra.ʕiː/: second-person feminine singular non-past passive subjunctive/jussive of أَسْرَعَ (ʔasraʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tusriʕī", "ʔasraʕa", "tusraʕī"],
-        "k": "أسرع",
-        "yol": "kök"
-      },
-      {
-        "w": "أسرعي",
-        "u": "أسرعي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَسْرِعِي • (ʔasriʕī) (form IV) /ʔas.ri.ʕiː/\n# second-person feminine singular imperative of أَسْرَعَ (ʔasraʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasriʕī", "ʔasraʕa"],
-        "k": "أسرع",
-        "yol": "kök"
-      },
-      {
-        "w": "أسرعنا",
-        "u": "أسرعنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أسرعنا (form IV)\n# أَسْرَعْنَا (ʔasraʕnā) /ʔas.raʕ.naː/: first-person plural past active of أَسْرَعَ (ʔasraʕa)\n# أُسْرِعْنَا (ʔusriʕnā) /ʔus.riʕ.naː/: first-person plural past passive of أَسْرَعَ (ʔasraʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasraʕnā", "ʔasraʕa", "ʔusriʕnā"],
-        "k": "أسرع",
-        "yol": "kök"
-      },
-      {
-        "w": "نسرع",
-        "u": "نسرع",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نسرع (form IV)\n# نُسْرِعُ (nusriʕu) /nus.ri.ʕu/: first-person plural non-past active indicative of أَسْرَعَ (ʔasraʕa)\n# نُسْرَعُ (nusraʕu) /nus.ra.ʕu/: first-person plural non-past passive indicative of أَسْرَعَ (ʔasraʕa)\n# نُسْرِعَ (nusriʕa) /nus.ri.ʕa/: first-person plural non-past active subjunctive of أَسْرَعَ (ʔasraʕa)\n# نُسْرَعَ (nusraʕa) /nus.ra.ʕa/: first-person plural non-past passive sub",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nusriʕu", "ʔasraʕa", "nusraʕu"],
-        "k": "أسرع",
-        "yol": "kök"
-      },
-      {
-        "w": "أسرعتم",
-        "u": "أسرعتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أسرعتم (form IV)\n# أَسْرَعْتُمْ (ʔasraʕtum) /ʔas.raʕ.tum/: second-person masculine plural past active of أَسْرَعَ (ʔasraʕa)\n# أُسْرِعْتُمْ (ʔusriʕtum) /ʔus.riʕ.tum/: second-person masculine plural past passive of أَسْرَعَ (ʔasraʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasraʕtum", "ʔasraʕa", "ʔusriʕtum"],
-        "k": "أسرع",
-        "yol": "kök"
-      },
-      {
-        "w": "تسرعون",
-        "u": "تسرعون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تسرعون (form IV)\n# تُسْرِعُونَ (tusriʕūna) /tus.ri.ʕuː.na/: second-person masculine plural non-past active indicative of أَسْرَعَ (ʔasraʕa)\n# تُسْرَعُونَ (tusraʕūna) /tus.ra.ʕuː.na/: second-person masculine plural non-past passive indicative of أَسْرَعَ (ʔasraʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tusriʕūna", "ʔasraʕa", "tusraʕūna"],
-        "k": "أسرع",
-        "yol": "kök"
-      },
-      {
-        "w": "تسرعوا",
-        "u": "تسرعوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تسرعوا (form IV)\n# تُسْرِعُوا (tusriʕū) /tus.ri.ʕuː/: second-person masculine plural non-past active subjunctive/jussive of أَسْرَعَ (ʔasraʕa)\n# تُسْرَعُوا (tusraʕū) /tus.ra.ʕuː/: second-person masculine plural non-past passive subjunctive/jussive of أَسْرَعَ (ʔasraʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tusriʕū", "ʔasraʕa", "tusraʕū"],
-        "k": "أسرع",
-        "yol": "kök"
-      },
-      {
-        "w": "أسرعوا",
-        "u": "أسرعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أسرعوا (form IV)\n# أَسْرَعُوا (ʔasraʕū) /ʔas.ra.ʕuː/: third-person masculine plural past active of أَسْرَعَ (ʔasraʕa)\n# أُسْرِعُوا (ʔusriʕū) /ʔus.ri.ʕuː/: third-person masculine plural past passive of أَسْرَعَ (ʔasraʕa)\n# أَسْرِعُوا (ʔasriʕū) /ʔas.ri.ʕuː/: second-person masculine plural imperative of أَسْرَعَ (ʔasraʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasraʕū", "ʔasraʕa", "ʔusriʕū"],
-        "k": "أسرع",
-        "yol": "kök"
-      },
-      {
-        "w": "يسرعون",
-        "u": "يسرعون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يسرعون (form IV)\n# يُسْرِعُونَ (yusriʕūna) /jus.ri.ʕuː.na/: third-person masculine plural non-past active indicative of أَسْرَعَ (ʔasraʕa)\n# يُسْرَعُونَ (yusraʕūna) /jus.ra.ʕuː.na/: third-person masculine plural non-past passive indicative of أَسْرَعَ (ʔasraʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yusriʕūna", "ʔasraʕa", "yusraʕūna"],
-        "k": "أسرع",
-        "yol": "kök"
-      },
-      {
-        "w": "يسرعوا",
-        "u": "يسرعوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يسرعوا (form IV)\n# يُسْرِعُوا (yusriʕū) /jus.ri.ʕuː/: third-person masculine plural non-past active subjunctive/jussive of أَسْرَعَ (ʔasraʕa)\n# يُسْرَعُوا (yusraʕū) /jus.ra.ʕuː/: third-person masculine plural non-past passive subjunctive/jussive of أَسْرَعَ (ʔasraʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yusriʕū", "ʔasraʕa", "yusraʕū"],
-        "k": "أسرع",
-        "yol": "kök"
-      },
-      {
-        "w": "أسرعتن",
-        "u": "أسرعتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أسرعتن (form IV)\n# أَسْرَعْتُنَّ (ʔasraʕtunna) /ʔas.raʕ.tun.na/: second-person feminine plural past active of أَسْرَعَ (ʔasraʕa)\n# أُسْرِعْتُنَّ (ʔusriʕtunna) /ʔus.riʕ.tun.na/: second-person feminine plural past passive of أَسْرَعَ (ʔasraʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasraʕtunna", "ʔasraʕa", "ʔusriʕtunna"],
-        "k": "أسرع",
-        "yol": "kök"
-      },
-      {
-        "w": "تسرعن",
-        "u": "تسرعن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تسرعن (form IV)\n# تُسْرِعْنَ (tusriʕna) /tus.riʕ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَسْرَعَ (ʔasraʕa)\n# تُسْرَعْنَ (tusraʕna) /tus.raʕ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَسْرَعَ (ʔasraʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tusriʕna", "ʔasraʕa", "tusraʕna"],
-        "k": "أسرع",
-        "yol": "kök"
-      },
-      {
-        "w": "أسرعن",
-        "u": "أسرعن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أسرعن (form IV)\n# أَسْرَعْنَ (ʔasraʕna) /ʔas.raʕ.na/: third-person feminine plural past active of أَسْرَعَ (ʔasraʕa)\n# أُسْرِعْنَ (ʔusriʕna) /ʔus.riʕ.na/: third-person feminine plural past passive of أَسْرَعَ (ʔasraʕa)\n# أَسْرِعْنَ (ʔasriʕna) /ʔas.riʕ.na/: second-person feminine plural imperative of أَسْرَعَ (ʔasraʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasraʕna", "ʔasraʕa", "ʔusriʕna"],
-        "k": "أسرع",
-        "yol": "kök"
-      },
-      {
-        "w": "يسرعن",
-        "u": "يسرعن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يسرعن (form IV)\n# يُسْرِعْنَ (yusriʕna) /jus.riʕ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَسْرَعَ (ʔasraʕa)\n# يُسْرَعْنَ (yusraʕna) /jus.raʕ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَسْرَعَ (ʔasraʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yusriʕna", "ʔasraʕa", "yusraʕna"],
-        "k": "أسرع",
-        "yol": "kök"
-      },
-      {
-        "w": "أسرعتما",
-        "u": "أسرعتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أسرعتما (form IV)\n# أَسْرَعْتُمَا (ʔasraʕtumā) /ʔas.raʕ.tu.maː/: second-person dual past active of أَسْرَعَ (ʔasraʕa)\n# أُسْرِعْتُمَا (ʔusriʕtumā) /ʔus.riʕ.tu.maː/: second-person dual past passive of أَسْرَعَ (ʔasraʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasraʕtumā", "ʔasraʕa", "ʔusriʕtumā"],
-        "k": "أسرع",
-        "yol": "kök"
-      },
-      {
-        "w": "أسرعتا",
-        "u": "أسرعتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أسرعتا (form IV)\n# أَسْرَعَتَا (ʔasraʕatā) /ʔas.ra.ʕa.taː/: third-person feminine dual past active of أَسْرَعَ (ʔasraʕa)\n# أُسْرِعَتَا (ʔusriʕatā) /ʔus.ri.ʕa.taː/: third-person feminine dual past passive of أَسْرَعَ (ʔasraʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasraʕatā", "ʔasraʕa", "ʔusriʕatā"],
-        "k": "أسرع",
-        "yol": "kök"
-      },
-      {
-        "w": "أسرعا",
-        "u": "أسرعا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أسرعا (form IV)\n# أَسْرَعَا (ʔasraʕā) /ʔas.ra.ʕaː/: third-person masculine dual past active of أَسْرَعَ (ʔasraʕa)\n# أُسْرِعَا (ʔusriʕā) /ʔus.ri.ʕaː/: third-person masculine dual past passive of أَسْرَعَ (ʔasraʕa)\n# أَسْرِعَا (ʔasriʕā) /ʔas.ri.ʕaː/: second-person dual imperative of أَسْرَعَ (ʔasraʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasraʕā", "ʔasraʕa", "ʔusriʕā"],
-        "k": "أسرع",
-        "yol": "kök"
-      },
-      {
-        "w": "يسرعان",
-        "u": "يسرعان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يسرعان (form IV)\n# يُسْرِعَانِ (yusriʕāni) /jus.ri.ʕaː.ni/: third-person masculine dual non-past active indicative of أَسْرَعَ (ʔasraʕa)\n# يُسْرَعَانِ (yusraʕāni) /jus.ra.ʕaː.ni/: third-person masculine dual non-past passive indicative of أَسْرَعَ (ʔasraʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yusriʕāni", "ʔasraʕa", "yusraʕāni"],
-        "k": "أسرع",
-        "yol": "kök"
-      },
-      {
-        "w": "تسرعان",
-        "u": "تسرعان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تسرعان (form IV)\n# تُسْرِعَانِ (tusriʕāni) /tus.ri.ʕaː.ni/: inflection of أَسْرَعَ (ʔasraʕa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُسْرَعَانِ (tusraʕāni) /tus.ra.ʕaː.ni/: inflection of أَسْرَعَ (ʔasraʕa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tusriʕāni", "ʔasraʕa", "tusraʕāni"],
-        "k": "أسرع",
-        "yol": "kök"
-      },
-      {
-        "w": "يسرعا",
-        "u": "يسرعا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يسرعا (form IV)\n# يُسْرِعَا (yusriʕā) /jus.ri.ʕaː/: third-person masculine dual non-past active subjunctive/jussive of أَسْرَعَ (ʔasraʕa)\n# يُسْرَعَا (yusraʕā) /jus.ra.ʕaː/: third-person masculine dual non-past passive subjunctive/jussive of أَسْرَعَ (ʔasraʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yusriʕā", "ʔasraʕa", "yusraʕā"],
-        "k": "أسرع",
-        "yol": "kök"
-      },
-      {
-        "w": "تسرعا",
-        "u": "تسرعا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تسرعا (form IV)\n# تُسْرِعَا (tusriʕā) /tus.ri.ʕaː/: inflection of أَسْرَعَ (ʔasraʕa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُسْرَعَا (tusraʕā) /tus.ra.ʕaː/: inflection of أَسْرَعَ (ʔasraʕa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/ju",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tusriʕā", "ʔasraʕa", "tusraʕā"],
-        "k": "أسرع",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "سر",
+  "ses": {
     "harf": "ء",
+    "fasil": "سر",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "يسرع",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يسرع (form IV)\n# يُسْرِعُ (yusriʕu) /jus.ri.ʕu/: third-person masculine singular non-past active indicative of أَسْرَعَ (ʔasraʕa)\n# يُسْرَعُ (yusraʕu) /jus.ra.ʕu/: third-person masculine singular non-past passive indicative of أَسْرَعَ (ʔasraʕa)\n# يُسْرِعَ (yusriʕa) /jus.ri.ʕa/: third-person masculine singular non-past active subjunctive of أَسْرَعَ (ʔasraʕa)\n# يُسْرَعَ (yusraʕa) /jus.ra.ʕa/: thir",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yusriʕu", "ʔasraʕa", "yusraʕu"],
+      "kok_yazilis": "أسرع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أسرعت",
+      "tur": "verb",
+      "baslik": "أسرعت (form IV)\n# أَسْرَعْتُ (ʔasraʕtu) /ʔas.raʕ.tu/: first-person singular past active of أَسْرَعَ (ʔasraʕa)\n# أَسْرَعْتَ (ʔasraʕta) /ʔas.raʕ.ta/: second-person masculine singular past active of أَسْرَعَ (ʔasraʕa)\n# أَسْرَعْتِ (ʔasraʕti) /ʔas.raʕ.ti/: second-person feminine singular past active of أَسْرَعَ (ʔasraʕa)\n# أَسْرَعَتْ (ʔasraʕat) /ʔas.ra.ʕat/: third-person feminine singular past active ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasraʕtu", "ʔasraʕa", "ʔasraʕta"],
+      "kok_yazilis": "أسرع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسرع",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تسرع (form IV)\n# تُسْرِعُ (tusriʕu) /tus.ri.ʕu/: inflection of أَسْرَعَ (ʔasraʕa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُسْرَعُ (tusraʕu) /tus.ra.ʕu/: inflection of أَسْرَعَ (ʔasraʕa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tusriʕu", "ʔasraʕa", "tusraʕu"],
+      "kok_yazilis": "أسرع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسرعين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تسرعين (form IV)\n# تُسْرِعِينَ (tusriʕīna) /tus.ri.ʕiː.na/: second-person feminine singular non-past active indicative of أَسْرَعَ (ʔasraʕa)\n# تُسْرَعِينَ (tusraʕīna) /tus.ra.ʕiː.na/: second-person feminine singular non-past passive indicative of أَسْرَعَ (ʔasraʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tusriʕīna", "ʔasraʕa", "tusraʕīna"],
+      "kok_yazilis": "أسرع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسرعي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تسرعي (form IV)\n# تُسْرِعِي (tusriʕī) /tus.ri.ʕiː/: second-person feminine singular non-past active subjunctive/jussive of أَسْرَعَ (ʔasraʕa)\n# تُسْرَعِي (tusraʕī) /tus.ra.ʕiː/: second-person feminine singular non-past passive subjunctive/jussive of أَسْرَعَ (ʔasraʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tusriʕī", "ʔasraʕa", "tusraʕī"],
+      "kok_yazilis": "أسرع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أسرعي",
+      "tur": "verb",
+      "baslik": "أَسْرِعِي • (ʔasriʕī) (form IV) /ʔas.ri.ʕiː/\n# second-person feminine singular imperative of أَسْرَعَ (ʔasraʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasriʕī", "ʔasraʕa"],
+      "kok_yazilis": "أسرع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أسرعنا",
+      "tur": "verb",
+      "baslik": "أسرعنا (form IV)\n# أَسْرَعْنَا (ʔasraʕnā) /ʔas.raʕ.naː/: first-person plural past active of أَسْرَعَ (ʔasraʕa)\n# أُسْرِعْنَا (ʔusriʕnā) /ʔus.riʕ.naː/: first-person plural past passive of أَسْرَعَ (ʔasraʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasraʕnā", "ʔasraʕa", "ʔusriʕnā"],
+      "kok_yazilis": "أسرع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نسرع",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نسرع (form IV)\n# نُسْرِعُ (nusriʕu) /nus.ri.ʕu/: first-person plural non-past active indicative of أَسْرَعَ (ʔasraʕa)\n# نُسْرَعُ (nusraʕu) /nus.ra.ʕu/: first-person plural non-past passive indicative of أَسْرَعَ (ʔasraʕa)\n# نُسْرِعَ (nusriʕa) /nus.ri.ʕa/: first-person plural non-past active subjunctive of أَسْرَعَ (ʔasraʕa)\n# نُسْرَعَ (nusraʕa) /nus.ra.ʕa/: first-person plural non-past passive sub",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nusriʕu", "ʔasraʕa", "nusraʕu"],
+      "kok_yazilis": "أسرع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أسرعتم",
+      "tur": "verb",
+      "baslik": "أسرعتم (form IV)\n# أَسْرَعْتُمْ (ʔasraʕtum) /ʔas.raʕ.tum/: second-person masculine plural past active of أَسْرَعَ (ʔasraʕa)\n# أُسْرِعْتُمْ (ʔusriʕtum) /ʔus.riʕ.tum/: second-person masculine plural past passive of أَسْرَعَ (ʔasraʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasraʕtum", "ʔasraʕa", "ʔusriʕtum"],
+      "kok_yazilis": "أسرع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسرعون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تسرعون (form IV)\n# تُسْرِعُونَ (tusriʕūna) /tus.ri.ʕuː.na/: second-person masculine plural non-past active indicative of أَسْرَعَ (ʔasraʕa)\n# تُسْرَعُونَ (tusraʕūna) /tus.ra.ʕuː.na/: second-person masculine plural non-past passive indicative of أَسْرَعَ (ʔasraʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tusriʕūna", "ʔasraʕa", "tusraʕūna"],
+      "kok_yazilis": "أسرع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسرعوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تسرعوا (form IV)\n# تُسْرِعُوا (tusriʕū) /tus.ri.ʕuː/: second-person masculine plural non-past active subjunctive/jussive of أَسْرَعَ (ʔasraʕa)\n# تُسْرَعُوا (tusraʕū) /tus.ra.ʕuː/: second-person masculine plural non-past passive subjunctive/jussive of أَسْرَعَ (ʔasraʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tusriʕū", "ʔasraʕa", "tusraʕū"],
+      "kok_yazilis": "أسرع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أسرعوا",
+      "tur": "verb",
+      "baslik": "أسرعوا (form IV)\n# أَسْرَعُوا (ʔasraʕū) /ʔas.ra.ʕuː/: third-person masculine plural past active of أَسْرَعَ (ʔasraʕa)\n# أُسْرِعُوا (ʔusriʕū) /ʔus.ri.ʕuː/: third-person masculine plural past passive of أَسْرَعَ (ʔasraʕa)\n# أَسْرِعُوا (ʔasriʕū) /ʔas.ri.ʕuː/: second-person masculine plural imperative of أَسْرَعَ (ʔasraʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasraʕū", "ʔasraʕa", "ʔusriʕū"],
+      "kok_yazilis": "أسرع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يسرعون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يسرعون (form IV)\n# يُسْرِعُونَ (yusriʕūna) /jus.ri.ʕuː.na/: third-person masculine plural non-past active indicative of أَسْرَعَ (ʔasraʕa)\n# يُسْرَعُونَ (yusraʕūna) /jus.ra.ʕuː.na/: third-person masculine plural non-past passive indicative of أَسْرَعَ (ʔasraʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yusriʕūna", "ʔasraʕa", "yusraʕūna"],
+      "kok_yazilis": "أسرع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يسرعوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يسرعوا (form IV)\n# يُسْرِعُوا (yusriʕū) /jus.ri.ʕuː/: third-person masculine plural non-past active subjunctive/jussive of أَسْرَعَ (ʔasraʕa)\n# يُسْرَعُوا (yusraʕū) /jus.ra.ʕuː/: third-person masculine plural non-past passive subjunctive/jussive of أَسْرَعَ (ʔasraʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yusriʕū", "ʔasraʕa", "yusraʕū"],
+      "kok_yazilis": "أسرع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أسرعتن",
+      "tur": "verb",
+      "baslik": "أسرعتن (form IV)\n# أَسْرَعْتُنَّ (ʔasraʕtunna) /ʔas.raʕ.tun.na/: second-person feminine plural past active of أَسْرَعَ (ʔasraʕa)\n# أُسْرِعْتُنَّ (ʔusriʕtunna) /ʔus.riʕ.tun.na/: second-person feminine plural past passive of أَسْرَعَ (ʔasraʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasraʕtunna", "ʔasraʕa", "ʔusriʕtunna"],
+      "kok_yazilis": "أسرع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسرعن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تسرعن (form IV)\n# تُسْرِعْنَ (tusriʕna) /tus.riʕ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَسْرَعَ (ʔasraʕa)\n# تُسْرَعْنَ (tusraʕna) /tus.raʕ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَسْرَعَ (ʔasraʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tusriʕna", "ʔasraʕa", "tusraʕna"],
+      "kok_yazilis": "أسرع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أسرعن",
+      "tur": "verb",
+      "baslik": "أسرعن (form IV)\n# أَسْرَعْنَ (ʔasraʕna) /ʔas.raʕ.na/: third-person feminine plural past active of أَسْرَعَ (ʔasraʕa)\n# أُسْرِعْنَ (ʔusriʕna) /ʔus.riʕ.na/: third-person feminine plural past passive of أَسْرَعَ (ʔasraʕa)\n# أَسْرِعْنَ (ʔasriʕna) /ʔas.riʕ.na/: second-person feminine plural imperative of أَسْرَعَ (ʔasraʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasraʕna", "ʔasraʕa", "ʔusriʕna"],
+      "kok_yazilis": "أسرع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يسرعن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يسرعن (form IV)\n# يُسْرِعْنَ (yusriʕna) /jus.riʕ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَسْرَعَ (ʔasraʕa)\n# يُسْرَعْنَ (yusraʕna) /jus.raʕ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَسْرَعَ (ʔasraʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yusriʕna", "ʔasraʕa", "yusraʕna"],
+      "kok_yazilis": "أسرع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أسرعتما",
+      "tur": "verb",
+      "baslik": "أسرعتما (form IV)\n# أَسْرَعْتُمَا (ʔasraʕtumā) /ʔas.raʕ.tu.maː/: second-person dual past active of أَسْرَعَ (ʔasraʕa)\n# أُسْرِعْتُمَا (ʔusriʕtumā) /ʔus.riʕ.tu.maː/: second-person dual past passive of أَسْرَعَ (ʔasraʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasraʕtumā", "ʔasraʕa", "ʔusriʕtumā"],
+      "kok_yazilis": "أسرع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أسرعتا",
+      "tur": "verb",
+      "baslik": "أسرعتا (form IV)\n# أَسْرَعَتَا (ʔasraʕatā) /ʔas.ra.ʕa.taː/: third-person feminine dual past active of أَسْرَعَ (ʔasraʕa)\n# أُسْرِعَتَا (ʔusriʕatā) /ʔus.ri.ʕa.taː/: third-person feminine dual past passive of أَسْرَعَ (ʔasraʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasraʕatā", "ʔasraʕa", "ʔusriʕatā"],
+      "kok_yazilis": "أسرع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أسرعا",
+      "tur": "verb",
+      "baslik": "أسرعا (form IV)\n# أَسْرَعَا (ʔasraʕā) /ʔas.ra.ʕaː/: third-person masculine dual past active of أَسْرَعَ (ʔasraʕa)\n# أُسْرِعَا (ʔusriʕā) /ʔus.ri.ʕaː/: third-person masculine dual past passive of أَسْرَعَ (ʔasraʕa)\n# أَسْرِعَا (ʔasriʕā) /ʔas.ri.ʕaː/: second-person dual imperative of أَسْرَعَ (ʔasraʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasraʕā", "ʔasraʕa", "ʔusriʕā"],
+      "kok_yazilis": "أسرع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يسرعان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يسرعان (form IV)\n# يُسْرِعَانِ (yusriʕāni) /jus.ri.ʕaː.ni/: third-person masculine dual non-past active indicative of أَسْرَعَ (ʔasraʕa)\n# يُسْرَعَانِ (yusraʕāni) /jus.ra.ʕaː.ni/: third-person masculine dual non-past passive indicative of أَسْرَعَ (ʔasraʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yusriʕāni", "ʔasraʕa", "yusraʕāni"],
+      "kok_yazilis": "أسرع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسرعان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تسرعان (form IV)\n# تُسْرِعَانِ (tusriʕāni) /tus.ri.ʕaː.ni/: inflection of أَسْرَعَ (ʔasraʕa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُسْرَعَانِ (tusraʕāni) /tus.ra.ʕaː.ni/: inflection of أَسْرَعَ (ʔasraʕa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tusriʕāni", "ʔasraʕa", "tusraʕāni"],
+      "kok_yazilis": "أسرع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يسرعا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يسرعا (form IV)\n# يُسْرِعَا (yusriʕā) /jus.ri.ʕaː/: third-person masculine dual non-past active subjunctive/jussive of أَسْرَعَ (ʔasraʕa)\n# يُسْرَعَا (yusraʕā) /jus.ra.ʕaː/: third-person masculine dual non-past passive subjunctive/jussive of أَسْرَعَ (ʔasraʕa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yusriʕā", "ʔasraʕa", "yusraʕā"],
+      "kok_yazilis": "أسرع",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسرعا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تسرعا (form IV)\n# تُسْرِعَا (tusriʕā) /tus.ri.ʕaː/: inflection of أَسْرَعَ (ʔasraʕa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُسْرَعَا (tusraʕā) /tus.ra.ʕaː/: inflection of أَسْرَعَ (ʔasraʕa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/ju",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tusriʕā", "ʔasraʕa", "tusraʕā"],
+      "kok_yazilis": "أسرع",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ءسرع", "r6"]
+  ],
+  "mana": {
     "ince": "scat.v.01",
     "orta": "verb.motion",
     "ust": "fiil ve hadise",
@@ -350,22 +280,15 @@
     "dayanak_tanim": "flee; take to one's heels; cut and run",
     "synset_sayisi": 6
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["melt.v.01", "precipitate.v.03", "run.v.01", "run.v.06", "rush.v.04", "scat.v.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["melt.v.01", "precipitate.v.03", "run.v.01", "run.v.06", "rush.v.04", "scat.v.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

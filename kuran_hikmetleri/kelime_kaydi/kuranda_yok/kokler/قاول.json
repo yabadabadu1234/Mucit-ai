@@ -1,482 +1,335 @@
 {
   "kok": "قاول",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "قاول", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "قوول",
-        "u": "قوول",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قُووِلَ • (qūwila) (form III) /quː.wi.la/\n# third-person masculine singular past passive of قَاوَلَ (qāwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["qūwila", "qāwala"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "قاولت",
-        "u": "قاولت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قاولت (form III)\n# قَاوَلْتُ (qāwaltu) /qaː.wal.tu/: first-person singular past active of قَاوَلَ (qāwala)\n# قَاوَلْتَ (qāwalta) /qaː.wal.ta/: second-person masculine singular past active of قَاوَلَ (qāwala)\n# قَاوَلْتِ (qāwalti) /qaː.wal.ti/: second-person feminine singular past active of قَاوَلَ (qāwala)\n# قَاوَلَتْ (qāwalat) /qaː.wa.lat/: third-person feminine singular past active of قَاوَلَ (q",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["qāwaltu", "qāwala", "qāwalta"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "قاولتن",
-        "u": "قاولتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قَاوَلْتُنَّ • (qāwaltunna) (form III) /qaː.wal.tun.na/\n# second-person feminine plural past active of قَاوَلَ (qāwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["qāwaltunna", "qāwala"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "قاولا",
-        "u": "قاولا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قاولا (form III)\n# قَاوَلَا (qāwalā) /qaː.wa.laː/: third-person masculine dual past active of قَاوَلَ (qāwala)\n# قَاوِلَا (qāwilā) /qaː.wi.laː/: second-person dual imperative of قَاوَلَ (qāwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["qāwalā", "qāwala", "qāwilā"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "قاولوا",
-        "u": "قاولوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قاولوا (form III)\n# قَاوَلُوا (qāwalū) /qaː.wa.luː/: third-person masculine plural past active of قَاوَلَ (qāwala)\n# قَاوِلُوا (qāwilū) /qaː.wi.luː/: second-person masculine plural imperative of قَاوَلَ (qāwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["qāwalū", "qāwala", "qāwilū"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "قاولنا",
-        "u": "قاولنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قَاوَلْنَا • (qāwalnā) (form III) /qaː.wal.naː/\n# first-person plural past active of قَاوَلَ (qāwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["qāwalnā", "qāwala"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "قاولتا",
-        "u": "قاولتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قَاوَلَتَا • (qāwalatā) (form III) /qaː.wa.la.taː/\n# third-person feminine dual past active of قَاوَلَ (qāwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["qāwalatā", "qāwala"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "قاولتم",
-        "u": "قاولتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قَاوَلْتُمْ • (qāwaltum) (form III) /qaː.wal.tum/\n# second-person masculine plural past active of قَاوَلَ (qāwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["qāwaltum", "qāwala"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "قاولتما",
-        "u": "قاولتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قَاوَلْتُمَا • (qāwaltumā) (form III) /qaː.wal.tu.maː/\n# second-person dual past active of قَاوَلَ (qāwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["qāwaltumā", "qāwala"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "قاولن",
-        "u": "قاولن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قاولن (form III)\n# قَاوَلْنَ (qāwalna) /qaː.wal.na/: third-person feminine plural past active of قَاوَلَ (qāwala)\n# قَاوِلْنَ (qāwilna) /qaː.wil.na/: second-person feminine plural imperative of قَاوَلَ (qāwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["qāwalna", "qāwala", "qāwilna"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "قوولتما",
-        "u": "قوولتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قُووِلْتُمَا • (qūwiltumā) (form III) /quː.wil.tu.maː/\n# second-person dual past passive of قَاوَلَ (qāwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["qūwiltumā", "qāwala"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "قوولتا",
-        "u": "قوولتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قُووِلَتَا • (qūwilatā) (form III) /quː.wi.la.taː/\n# third-person feminine dual past passive of قَاوَلَ (qāwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["qūwilatā", "qāwala"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "قوولا",
-        "u": "قوولا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قُووِلَا • (qūwilā) (form III) /quː.wi.laː/\n# third-person masculine dual past passive of قَاوَلَ (qāwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["qūwilā", "qāwala"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "قوولت",
-        "u": "قوولت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قوولت (form III)\n# قُووِلْتُ (qūwiltu) /quː.wil.tu/: first-person singular past passive of قَاوَلَ (qāwala)\n# قُووِلْتَ (qūwilta) /quː.wil.ta/: second-person masculine singular past passive of قَاوَلَ (qāwala)\n# قُووِلْتِ (qūwilti) /quː.wil.ti/: second-person feminine singular past passive of قَاوَلَ (qāwala)\n# قُووِلَتْ (qūwilat) /quː.wi.lat/: third-person feminine singular past passive of قَاوَل",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["qūwiltu", "qāwala", "qūwilta"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "قوولنا",
-        "u": "قوولنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قُووِلْنَا • (qūwilnā) (form III) /quː.wil.naː/\n# first-person plural past passive of قَاوَلَ (qāwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["qūwilnā", "qāwala"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "أقاول",
-        "u": "أقاول",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أقاول (form III)\n# أُقَاوِلُ (ʔuqāwilu) /ʔu.qaː.wi.lu/: first-person singular non-past active indicative of قَاوَلَ (qāwala)\n# أُقَاوَلُ (ʔuqāwalu) /ʔu.qaː.wa.lu/: first-person singular non-past passive indicative of قَاوَلَ (qāwala)\n# أُقَاوِلَ (ʔuqāwila) /ʔu.qaː.wi.la/: first-person singular non-past active subjunctive of قَاوَلَ (qāwala)\n# أُقَاوَلَ (ʔuqāwala) /ʔu.qaː.wa.la/: first-person singu",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔuqāwilu", "qāwala", "ʔuqāwalu"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "قوولوا",
-        "u": "قوولوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قُووِلُوا • (qūwilū) (form III) /quː.wi.luː/\n# third-person masculine plural past passive of قَاوَلَ (qāwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["qūwilū", "qāwala"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "قوولتن",
-        "u": "قوولتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قُووِلْتُنَّ • (qūwiltunna) (form III) /quː.wil.tun.na/\n# second-person feminine plural past passive of قَاوَلَ (qāwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["qūwiltunna", "qāwala"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "تقاولين",
-        "u": "تقاولين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تقاولين (form III)\n# تُقَاوِلِينَ (tuqāwilīna) /tu.qaː.wi.liː.na/: second-person feminine singular non-past active indicative of قَاوَلَ (qāwala)\n# تُقَاوَلِينَ (tuqāwalīna) /tu.qaː.wa.liː.na/: second-person feminine singular non-past passive indicative of قَاوَلَ (qāwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuqāwilīna", "qāwala", "tuqāwalīna"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "قوولن",
-        "u": "قوولن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قُووِلْنَ • (qūwilna) (form III) /quː.wil.na/\n# third-person feminine plural past passive of قَاوَلَ (qāwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["qūwilna", "qāwala"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "قوولتم",
-        "u": "قوولتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قُووِلْتُمْ • (qūwiltum) (form III) /quː.wil.tum/\n# second-person masculine plural past passive of قَاوَلَ (qāwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["qūwiltum", "qāwala"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "تقاول",
-        "u": "تقاول",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تقاول (form III)\n# تُقَاوِلُ (tuqāwilu) /tu.qaː.wi.lu/: inflection of قَاوَلَ (qāwala):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُقَاوَلُ (tuqāwalu) /tu.qaː.wa.lu/: inflection of قَاوَلَ (qāwala):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive in",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuqāwilu", "qāwala", "tuqāwalu"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "يقاول",
-        "u": "يقاول",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يقاول (form III)\n# يُقَاوِلُ (yuqāwilu) /ju.qaː.wi.lu/: third-person masculine singular non-past active indicative of قَاوَلَ (qāwala)\n# يُقَاوَلُ (yuqāwalu) /ju.qaː.wa.lu/: third-person masculine singular non-past passive indicative of قَاوَلَ (qāwala)\n# يُقَاوِلَ (yuqāwila) /ju.qaː.wi.la/: third-person masculine singular non-past active subjunctive of قَاوَلَ (qāwala)\n# يُقَاوَلَ (yuqāwala) /ju.",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuqāwilu", "qāwala", "yuqāwalu"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "تقاولان",
-        "u": "تقاولان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تقاولان (form III)\n# تُقَاوِلَانِ (tuqāwilāni) /tu.qaː.wi.laː.ni/: inflection of قَاوَلَ (qāwala):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُقَاوَلَانِ (tuqāwalāni) /tu.qaː.wa.laː.ni/: inflection of قَاوَلَ (qāwala):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuqāwilāni", "qāwala", "tuqāwalāni"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "نقاول",
-        "u": "نقاول",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نقاول (form III)\n# نُقَاوِلُ (nuqāwilu) /nu.qaː.wi.lu/: first-person plural non-past active indicative of قَاوَلَ (qāwala)\n# نُقَاوَلُ (nuqāwalu) /nu.qaː.wa.lu/: first-person plural non-past passive indicative of قَاوَلَ (qāwala)\n# نُقَاوِلَ (nuqāwila) /nu.qaː.wi.la/: first-person plural non-past active subjunctive of قَاوَلَ (qāwala)\n# نُقَاوَلَ (nuqāwala) /nu.qaː.wa.la/: first-person plural non-",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nuqāwilu", "qāwala", "nuqāwalu"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "تقاولن",
-        "u": "تقاولن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تقاولن (form III)\n# تُقَاوِلْنَ (tuqāwilna) /tu.qaː.wil.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of قَاوَلَ (qāwala)\n# تُقَاوَلْنَ (tuqāwalna) /tu.qaː.wal.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of قَاوَلَ (qāwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuqāwilna", "qāwala", "tuqāwalna"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "يقاولان",
-        "u": "يقاولان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يقاولان (form III)\n# يُقَاوِلَانِ (yuqāwilāni) /ju.qaː.wi.laː.ni/: third-person masculine dual non-past active indicative of قَاوَلَ (qāwala)\n# يُقَاوَلَانِ (yuqāwalāni) /ju.qaː.wa.laː.ni/: third-person masculine dual non-past passive indicative of قَاوَلَ (qāwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuqāwilāni", "qāwala", "yuqāwalāni"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "يقاولون",
-        "u": "يقاولون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يقاولون (form III)\n# يُقَاوِلُونَ (yuqāwilūna) /ju.qaː.wi.luː.na/: third-person masculine plural non-past active indicative of قَاوَلَ (qāwala)\n# يُقَاوَلُونَ (yuqāwalūna) /ju.qaː.wa.luː.na/: third-person masculine plural non-past passive indicative of قَاوَلَ (qāwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuqāwilūna", "qāwala", "yuqāwalūna"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "تقاولي",
-        "u": "تقاولي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تقاولي (form III)\n# تُقَاوِلِي (tuqāwilī) /tu.qaː.wi.liː/: second-person feminine singular non-past active subjunctive/jussive of قَاوَلَ (qāwala)\n# تُقَاوَلِي (tuqāwalī) /tu.qaː.wa.liː/: second-person feminine singular non-past passive subjunctive/jussive of قَاوَلَ (qāwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuqāwilī", "qāwala", "tuqāwalī"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "يقاولن",
-        "u": "يقاولن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يقاولن (form III)\n# يُقَاوِلْنَ (yuqāwilna) /ju.qaː.wil.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of قَاوَلَ (qāwala)\n# يُقَاوَلْنَ (yuqāwalna) /ju.qaː.wal.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of قَاوَلَ (qāwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuqāwilna", "qāwala", "yuqāwalna"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "تقاولا",
-        "u": "تقاولا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تقاولا (form III)\n# تُقَاوِلَا (tuqāwilā) /tu.qaː.wi.laː/: inflection of قَاوَلَ (qāwala):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُقَاوَلَا (tuqāwalā) /tu.qaː.wa.laː/: inflection of قَاوَلَ (qāwala):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjun",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuqāwilā", "qāwala", "tuqāwalā"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "تقاولون",
-        "u": "تقاولون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تقاولون (form III)\n# تُقَاوِلُونَ (tuqāwilūna) /tu.qaː.wi.luː.na/: second-person masculine plural non-past active indicative of قَاوَلَ (qāwala)\n# تُقَاوَلُونَ (tuqāwalūna) /tu.qaː.wa.luː.na/: second-person masculine plural non-past passive indicative of قَاوَلَ (qāwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuqāwilūna", "qāwala", "tuqāwalūna"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "قاولي",
-        "u": "قاولي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قَاوِلِي • (qāwilī) (form III) /qaː.wi.liː/\n# second-person feminine singular imperative of قَاوَلَ (qāwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["qāwilī", "qāwala"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "تقاولوا",
-        "u": "تقاولوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تقاولوا (form III)\n# تُقَاوِلُوا (tuqāwilū) /tu.qaː.wi.luː/: second-person masculine plural non-past active subjunctive/jussive of قَاوَلَ (qāwala)\n# تُقَاوَلُوا (tuqāwalū) /tu.qaː.wa.luː/: second-person masculine plural non-past passive subjunctive/jussive of قَاوَلَ (qāwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuqāwilū", "qāwala", "tuqāwalū"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "يقاولا",
-        "u": "يقاولا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يقاولا (form III)\n# يُقَاوِلَا (yuqāwilā) /ju.qaː.wi.laː/: third-person masculine dual non-past active subjunctive/jussive of قَاوَلَ (qāwala)\n# يُقَاوَلَا (yuqāwalā) /ju.qaː.wa.laː/: third-person masculine dual non-past passive subjunctive/jussive of قَاوَلَ (qāwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuqāwilā", "qāwala", "yuqāwalā"],
-        "k": "قاول",
-        "yol": "kök"
-      },
-      {
-        "w": "يقاولوا",
-        "u": "يقاولوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يقاولوا (form III)\n# يُقَاوِلُوا (yuqāwilū) /ju.qaː.wi.luː/: third-person masculine plural non-past active subjunctive/jussive of قَاوَلَ (qāwala)\n# يُقَاوَلُوا (yuqāwalū) /ju.qaː.wa.luː/: third-person masculine plural non-past passive subjunctive/jussive of قَاوَلَ (qāwala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuqāwilū", "qāwala", "yuqāwalū"],
-        "k": "قاول",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "قل",
+  "ses": {
     "harf": "ق",
+    "fasil": "قل",
     "mahrec": "lehaviyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "قوول",
+      "tur": "verb",
+      "baslik": "قُووِلَ • (qūwila) (form III) /quː.wi.la/\n# third-person masculine singular past passive of قَاوَلَ (qāwala)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["qūwila", "qāwala"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قاولت",
+      "tur": "verb",
+      "baslik": "قاولت (form III)\n# قَاوَلْتُ (qāwaltu) /qaː.wal.tu/: first-person singular past active of قَاوَلَ (qāwala)\n# قَاوَلْتَ (qāwalta) /qaː.wal.ta/: second-person masculine singular past active of قَاوَلَ (qāwala)\n# قَاوَلْتِ (qāwalti) /qaː.wal.ti/: second-person feminine singular past active of قَاوَلَ (qāwala)\n# قَاوَلَتْ (qāwalat) /qaː.wa.lat/: third-person feminine singular past active of قَاوَلَ (q",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["qāwaltu", "qāwala", "qāwalta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قاولتن",
+      "tur": "verb",
+      "baslik": "قَاوَلْتُنَّ • (qāwaltunna) (form III) /qaː.wal.tun.na/\n# second-person feminine plural past active of قَاوَلَ (qāwala)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["qāwaltunna", "qāwala"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قاولا",
+      "tur": "verb",
+      "baslik": "قاولا (form III)\n# قَاوَلَا (qāwalā) /qaː.wa.laː/: third-person masculine dual past active of قَاوَلَ (qāwala)\n# قَاوِلَا (qāwilā) /qaː.wi.laː/: second-person dual imperative of قَاوَلَ (qāwala)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["qāwalā", "qāwala", "qāwilā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قاولوا",
+      "tur": "verb",
+      "baslik": "قاولوا (form III)\n# قَاوَلُوا (qāwalū) /qaː.wa.luː/: third-person masculine plural past active of قَاوَلَ (qāwala)\n# قَاوِلُوا (qāwilū) /qaː.wi.luː/: second-person masculine plural imperative of قَاوَلَ (qāwala)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["qāwalū", "qāwala", "qāwilū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قاولنا",
+      "tur": "verb",
+      "baslik": "قَاوَلْنَا • (qāwalnā) (form III) /qaː.wal.naː/\n# first-person plural past active of قَاوَلَ (qāwala)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["qāwalnā", "qāwala"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قاولتا",
+      "tur": "verb",
+      "baslik": "قَاوَلَتَا • (qāwalatā) (form III) /qaː.wa.la.taː/\n# third-person feminine dual past active of قَاوَلَ (qāwala)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["qāwalatā", "qāwala"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قاولتم",
+      "tur": "verb",
+      "baslik": "قَاوَلْتُمْ • (qāwaltum) (form III) /qaː.wal.tum/\n# second-person masculine plural past active of قَاوَلَ (qāwala)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["qāwaltum", "qāwala"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قاولتما",
+      "tur": "verb",
+      "baslik": "قَاوَلْتُمَا • (qāwaltumā) (form III) /qaː.wal.tu.maː/\n# second-person dual past active of قَاوَلَ (qāwala)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["qāwaltumā", "qāwala"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قاولن",
+      "tur": "verb",
+      "baslik": "قاولن (form III)\n# قَاوَلْنَ (qāwalna) /qaː.wal.na/: third-person feminine plural past active of قَاوَلَ (qāwala)\n# قَاوِلْنَ (qāwilna) /qaː.wil.na/: second-person feminine plural imperative of قَاوَلَ (qāwala)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["qāwalna", "qāwala", "qāwilna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قوولتما",
+      "tur": "verb",
+      "baslik": "قُووِلْتُمَا • (qūwiltumā) (form III) /quː.wil.tu.maː/\n# second-person dual past passive of قَاوَلَ (qāwala)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["qūwiltumā", "qāwala"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قوولتا",
+      "tur": "verb",
+      "baslik": "قُووِلَتَا • (qūwilatā) (form III) /quː.wi.la.taː/\n# third-person feminine dual past passive of قَاوَلَ (qāwala)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["qūwilatā", "qāwala"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قوولا",
+      "tur": "verb",
+      "baslik": "قُووِلَا • (qūwilā) (form III) /quː.wi.laː/\n# third-person masculine dual past passive of قَاوَلَ (qāwala)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["qūwilā", "qāwala"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قوولت",
+      "tur": "verb",
+      "baslik": "قوولت (form III)\n# قُووِلْتُ (qūwiltu) /quː.wil.tu/: first-person singular past passive of قَاوَلَ (qāwala)\n# قُووِلْتَ (qūwilta) /quː.wil.ta/: second-person masculine singular past passive of قَاوَلَ (qāwala)\n# قُووِلْتِ (qūwilti) /quː.wil.ti/: second-person feminine singular past passive of قَاوَلَ (qāwala)\n# قُووِلَتْ (qūwilat) /quː.wi.lat/: third-person feminine singular past passive of قَاوَل",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["qūwiltu", "qāwala", "qūwilta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قوولنا",
+      "tur": "verb",
+      "baslik": "قُووِلْنَا • (qūwilnā) (form III) /quː.wil.naː/\n# first-person plural past passive of قَاوَلَ (qāwala)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["qūwilnā", "qāwala"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقاول",
+      "tur": "verb",
+      "baslik": "أقاول (form III)\n# أُقَاوِلُ (ʔuqāwilu) /ʔu.qaː.wi.lu/: first-person singular non-past active indicative of قَاوَلَ (qāwala)\n# أُقَاوَلُ (ʔuqāwalu) /ʔu.qaː.wa.lu/: first-person singular non-past passive indicative of قَاوَلَ (qāwala)\n# أُقَاوِلَ (ʔuqāwila) /ʔu.qaː.wi.la/: first-person singular non-past active subjunctive of قَاوَلَ (qāwala)\n# أُقَاوَلَ (ʔuqāwala) /ʔu.qaː.wa.la/: first-person singu",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔuqāwilu", "qāwala", "ʔuqāwalu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قوولوا",
+      "tur": "verb",
+      "baslik": "قُووِلُوا • (qūwilū) (form III) /quː.wi.luː/\n# third-person masculine plural past passive of قَاوَلَ (qāwala)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["qūwilū", "qāwala"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قوولتن",
+      "tur": "verb",
+      "baslik": "قُووِلْتُنَّ • (qūwiltunna) (form III) /quː.wil.tun.na/\n# second-person feminine plural past passive of قَاوَلَ (qāwala)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["qūwiltunna", "qāwala"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقاولين",
+      "tur": "verb",
+      "baslik": "تقاولين (form III)\n# تُقَاوِلِينَ (tuqāwilīna) /tu.qaː.wi.liː.na/: second-person feminine singular non-past active indicative of قَاوَلَ (qāwala)\n# تُقَاوَلِينَ (tuqāwalīna) /tu.qaː.wa.liː.na/: second-person feminine singular non-past passive indicative of قَاوَلَ (qāwala)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuqāwilīna", "qāwala", "tuqāwalīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قوولن",
+      "tur": "verb",
+      "baslik": "قُووِلْنَ • (qūwilna) (form III) /quː.wil.na/\n# third-person feminine plural past passive of قَاوَلَ (qāwala)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["qūwilna", "qāwala"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قوولتم",
+      "tur": "verb",
+      "baslik": "قُووِلْتُمْ • (qūwiltum) (form III) /quː.wil.tum/\n# second-person masculine plural past passive of قَاوَلَ (qāwala)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["qūwiltum", "qāwala"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقاول",
+      "tur": "verb",
+      "baslik": "تقاول (form III)\n# تُقَاوِلُ (tuqāwilu) /tu.qaː.wi.lu/: inflection of قَاوَلَ (qāwala):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُقَاوَلُ (tuqāwalu) /tu.qaː.wa.lu/: inflection of قَاوَلَ (qāwala):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive in",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuqāwilu", "qāwala", "tuqāwalu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقاول",
+      "tur": "verb",
+      "baslik": "يقاول (form III)\n# يُقَاوِلُ (yuqāwilu) /ju.qaː.wi.lu/: third-person masculine singular non-past active indicative of قَاوَلَ (qāwala)\n# يُقَاوَلُ (yuqāwalu) /ju.qaː.wa.lu/: third-person masculine singular non-past passive indicative of قَاوَلَ (qāwala)\n# يُقَاوِلَ (yuqāwila) /ju.qaː.wi.la/: third-person masculine singular non-past active subjunctive of قَاوَلَ (qāwala)\n# يُقَاوَلَ (yuqāwala) /ju.",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuqāwilu", "qāwala", "yuqāwalu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقاولان",
+      "tur": "verb",
+      "baslik": "تقاولان (form III)\n# تُقَاوِلَانِ (tuqāwilāni) /tu.qaː.wi.laː.ni/: inflection of قَاوَلَ (qāwala):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُقَاوَلَانِ (tuqāwalāni) /tu.qaː.wa.laː.ni/: inflection of قَاوَلَ (qāwala):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuqāwilāni", "qāwala", "tuqāwalāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نقاول",
+      "tur": "verb",
+      "baslik": "نقاول (form III)\n# نُقَاوِلُ (nuqāwilu) /nu.qaː.wi.lu/: first-person plural non-past active indicative of قَاوَلَ (qāwala)\n# نُقَاوَلُ (nuqāwalu) /nu.qaː.wa.lu/: first-person plural non-past passive indicative of قَاوَلَ (qāwala)\n# نُقَاوِلَ (nuqāwila) /nu.qaː.wi.la/: first-person plural non-past active subjunctive of قَاوَلَ (qāwala)\n# نُقَاوَلَ (nuqāwala) /nu.qaː.wa.la/: first-person plural non-",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nuqāwilu", "qāwala", "nuqāwalu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقاولن",
+      "tur": "verb",
+      "baslik": "تقاولن (form III)\n# تُقَاوِلْنَ (tuqāwilna) /tu.qaː.wil.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of قَاوَلَ (qāwala)\n# تُقَاوَلْنَ (tuqāwalna) /tu.qaː.wal.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of قَاوَلَ (qāwala)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuqāwilna", "qāwala", "tuqāwalna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقاولان",
+      "tur": "verb",
+      "baslik": "يقاولان (form III)\n# يُقَاوِلَانِ (yuqāwilāni) /ju.qaː.wi.laː.ni/: third-person masculine dual non-past active indicative of قَاوَلَ (qāwala)\n# يُقَاوَلَانِ (yuqāwalāni) /ju.qaː.wa.laː.ni/: third-person masculine dual non-past passive indicative of قَاوَلَ (qāwala)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuqāwilāni", "qāwala", "yuqāwalāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقاولون",
+      "tur": "verb",
+      "baslik": "يقاولون (form III)\n# يُقَاوِلُونَ (yuqāwilūna) /ju.qaː.wi.luː.na/: third-person masculine plural non-past active indicative of قَاوَلَ (qāwala)\n# يُقَاوَلُونَ (yuqāwalūna) /ju.qaː.wa.luː.na/: third-person masculine plural non-past passive indicative of قَاوَلَ (qāwala)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuqāwilūna", "qāwala", "yuqāwalūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقاولي",
+      "tur": "verb",
+      "baslik": "تقاولي (form III)\n# تُقَاوِلِي (tuqāwilī) /tu.qaː.wi.liː/: second-person feminine singular non-past active subjunctive/jussive of قَاوَلَ (qāwala)\n# تُقَاوَلِي (tuqāwalī) /tu.qaː.wa.liː/: second-person feminine singular non-past passive subjunctive/jussive of قَاوَلَ (qāwala)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuqāwilī", "qāwala", "tuqāwalī"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقاولن",
+      "tur": "verb",
+      "baslik": "يقاولن (form III)\n# يُقَاوِلْنَ (yuqāwilna) /ju.qaː.wil.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of قَاوَلَ (qāwala)\n# يُقَاوَلْنَ (yuqāwalna) /ju.qaː.wal.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of قَاوَلَ (qāwala)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuqāwilna", "qāwala", "yuqāwalna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقاولا",
+      "tur": "verb",
+      "baslik": "تقاولا (form III)\n# تُقَاوِلَا (tuqāwilā) /tu.qaː.wi.laː/: inflection of قَاوَلَ (qāwala):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُقَاوَلَا (tuqāwalā) /tu.qaː.wa.laː/: inflection of قَاوَلَ (qāwala):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjun",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuqāwilā", "qāwala", "tuqāwalā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقاولون",
+      "tur": "verb",
+      "baslik": "تقاولون (form III)\n# تُقَاوِلُونَ (tuqāwilūna) /tu.qaː.wi.luː.na/: second-person masculine plural non-past active indicative of قَاوَلَ (qāwala)\n# تُقَاوَلُونَ (tuqāwalūna) /tu.qaː.wa.luː.na/: second-person masculine plural non-past passive indicative of قَاوَلَ (qāwala)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuqāwilūna", "qāwala", "tuqāwalūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قاولي",
+      "tur": "verb",
+      "baslik": "قَاوِلِي • (qāwilī) (form III) /qaː.wi.liː/\n# second-person feminine singular imperative of قَاوَلَ (qāwala)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["qāwilī", "qāwala"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقاولوا",
+      "tur": "verb",
+      "baslik": "تقاولوا (form III)\n# تُقَاوِلُوا (tuqāwilū) /tu.qaː.wi.luː/: second-person masculine plural non-past active subjunctive/jussive of قَاوَلَ (qāwala)\n# تُقَاوَلُوا (tuqāwalū) /tu.qaː.wa.luː/: second-person masculine plural non-past passive subjunctive/jussive of قَاوَلَ (qāwala)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuqāwilū", "qāwala", "tuqāwalū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقاولا",
+      "tur": "verb",
+      "baslik": "يقاولا (form III)\n# يُقَاوِلَا (yuqāwilā) /ju.qaː.wi.laː/: third-person masculine dual non-past active subjunctive/jussive of قَاوَلَ (qāwala)\n# يُقَاوَلَا (yuqāwalā) /ju.qaː.wa.laː/: third-person masculine dual non-past passive subjunctive/jussive of قَاوَلَ (qāwala)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuqāwilā", "qāwala", "yuqāwalā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقاولوا",
+      "tur": "verb",
+      "baslik": "يقاولوا (form III)\n# يُقَاوِلُوا (yuqāwilū) /ju.qaː.wi.luː/: third-person masculine plural non-past active subjunctive/jussive of قَاوَلَ (qāwala)\n# يُقَاوَلُوا (yuqāwalū) /ju.qaː.wa.luː/: third-person masculine plural non-past passive subjunctive/jussive of قَاوَلَ (qāwala)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuqāwilū", "qāwala", "yuqāwalū"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "قاول", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,629 +1,494 @@
 {
   "kok": "ءفاض",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءفاض", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "نفض",
-        "u": "نفض",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نفض (form IV)\n# نُفِضْ (nufiḍ) /nu.fidˤ/: first-person plural non-past active jussive of أَفَاضَ (ʔafāḍa)\n# نُفَضْ (nufaḍ) /nu.fadˤ/: first-person plural non-past passive jussive of أَفَاضَ (ʔafāḍa)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nufiḍ", "ʔafāḍa", "nufaḍ"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "أفضت",
-        "u": "أفضت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أفضت (form IV)\n# أَفَضْتُ (ʔafaḍtu) /ʔa.fadˤ.tu/: first-person singular past active of أَفَاضَ (ʔafāḍa)\n# أَفَضْتَ (ʔafaḍta) /ʔa.fadˤ.ta/: second-person masculine singular past active of أَفَاضَ (ʔafāḍa)\n# أَفَضْتِ (ʔafaḍti) /ʔa.fadˤ.ti/: second-person feminine singular past active of أَفَاضَ (ʔafāḍa)\n# أُفِضْتُ (ʔufiḍtu) /ʔu.fidˤ.tu/: first-person singular past passive of أَفَاضَ (ʔafāḍa)\n# أُفِض",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔafaḍtu", "ʔafāḍa", "ʔafaḍta"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "أفاضت",
-        "u": "أفاضت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَفَاضَتْ • (ʔafāḍat) (form IV) /ʔa.faː.dˤat/\n# third-person feminine singular past active of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔafāḍat", "ʔafāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "أفضتما",
-        "u": "أفضتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أفضتما (form IV)\n# أَفَضْتُمَا (ʔafaḍtumā) /ʔa.fadˤ.tu.maː/: second-person dual past active of أَفَاضَ (ʔafāḍa)\n# أُفِضْتُمَا (ʔufiḍtumā) /ʔu.fidˤ.tu.maː/: second-person dual past passive of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔafaḍtumā", "ʔafāḍa", "ʔufiḍtumā"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "أفاضا",
-        "u": "أفاضا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَفَاضَا • (ʔafāḍā) (form IV) /ʔa.faː.dˤaː/\n# third-person masculine dual past active of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔafāḍā", "ʔafāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "أفضنا",
-        "u": "أفضنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أفضنا (form IV)\n# أَفَضْنَا (ʔafaḍnā) /ʔa.fadˤ.naː/: first-person plural past active of أَفَاضَ (ʔafāḍa)\n# أُفِضْنَا (ʔufiḍnā) /ʔu.fidˤ.naː/: first-person plural past passive of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔafaḍnā", "ʔafāḍa", "ʔufiḍnā"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "أفضتن",
-        "u": "أفضتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أفضتن (form IV)\n# أَفَضْتُنَّ (ʔafaḍtunna) /ʔa.fadˤ.tun.na/: second-person feminine plural past active of أَفَاضَ (ʔafāḍa)\n# أُفِضْتُنَّ (ʔufiḍtunna) /ʔu.fidˤ.tun.na/: second-person feminine plural past passive of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔafaḍtunna", "ʔafāḍa", "ʔufiḍtunna"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "أفضتم",
-        "u": "أفضتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أفضتم (form IV)\n# أَفَضْتُمْ (ʔafaḍtum) /ʔa.fadˤ.tum/: second-person masculine plural past active of أَفَاضَ (ʔafāḍa)\n# أُفِضْتُمْ (ʔufiḍtum) /ʔu.fidˤ.tum/: second-person masculine plural past passive of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔafaḍtum", "ʔafāḍa", "ʔufiḍtum"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "أفيضت",
-        "u": "أفيضت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُفِيضَتْ • (ʔufīḍat) (form IV) /ʔu.fiː.dˤat/\n# third-person feminine singular past passive of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔufīḍat", "ʔafāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "أفاضوا",
-        "u": "أفاضوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَفَاضُوا • (ʔafāḍū) (form IV) /ʔa.faː.dˤuː/\n# third-person masculine plural past active of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔafāḍū", "ʔafāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "أفاضتا",
-        "u": "أفاضتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَفَاضَتَا • (ʔafāḍatā) (form IV) /ʔa.faː.dˤa.taː/\n# third-person feminine dual past active of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔafāḍatā", "ʔafāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "أفيضا",
-        "u": "أفيضا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أفيضا (form IV)\n# أُفِيضَا (ʔufīḍā) /ʔu.fiː.dˤaː/: third-person masculine dual past passive of أَفَاضَ (ʔafāḍa)\n# أَفِيضَا (ʔafīḍā) /ʔa.fiː.dˤaː/: second-person dual imperative of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔufīḍā", "ʔafāḍa", "ʔafīḍā"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "أفيض",
-        "u": "أفيض",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أفيض (form IV)\n# أُفِيضَ (ʔufīḍa) /ʔu.fiː.dˤa/: inflection of أَفَاضَ (ʔafāḍa):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُفِيضُ (ʔufīḍu) /ʔu.fiː.dˤu/: first-person singular non-past active indicative of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔufīḍa", "ʔafāḍa", "ʔufīḍu"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "أفيضوا",
-        "u": "أفيضوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أفيضوا (form IV)\n# أُفِيضُوا (ʔufīḍū) /ʔu.fiː.dˤuː/: third-person masculine plural past passive of أَفَاضَ (ʔafāḍa)\n# أَفِيضُوا (ʔafīḍū) /ʔa.fiː.dˤuː/: second-person masculine plural imperative of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔufīḍū", "ʔafāḍa", "ʔafīḍū"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "أفيضتا",
-        "u": "أفيضتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُفِيضَتَا • (ʔufīḍatā) (form IV) /ʔu.fiː.dˤa.taː/\n# third-person feminine dual past passive of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔufīḍatā", "ʔafāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "يفيض",
-        "u": "يفيض",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يفيض (form IV)\n# يُفِيضُ (yufīḍu) /ju.fiː.dˤu/: third-person masculine singular non-past active indicative of أَفَاضَ (ʔafāḍa)\n# يُفِيضَ (yufīḍa) /ju.fiː.dˤa/: third-person masculine singular non-past active subjunctive of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yufīḍu", "ʔafāḍa", "yufīḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تفيض",
-        "u": "تفيض",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تفيض (form IV)\n# تُفِيضُ (tufīḍu) /tu.fiː.dˤu/: inflection of أَفَاضَ (ʔafāḍa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُفِيضَ (tufīḍa) /tu.fiː.dˤa/: inflection of أَفَاضَ (ʔafāḍa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tufīḍu", "ʔafāḍa", "tufīḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تفيضان",
-        "u": "تفيضان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُفِيضَانِ • (tufīḍāni) (form IV) /tu.fiː.dˤaː.ni/\n# inflection of أَفَاضَ (ʔafāḍa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tufīḍāni", "ʔafāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "نفيض",
-        "u": "نفيض",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نفيض (form IV)\n# نُفِيضُ (nufīḍu) /nu.fiː.dˤu/: first-person plural non-past active indicative of أَفَاضَ (ʔafāḍa)\n# نُفِيضَ (nufīḍa) /nu.fiː.dˤa/: first-person plural non-past active subjunctive of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nufīḍu", "ʔafāḍa", "nufīḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "يفضن",
-        "u": "يفضن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يفضن (form IV)\n# يُفِضْنَ (yufiḍna) /ju.fidˤ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَفَاضَ (ʔafāḍa)\n# يُفَضْنَ (yufaḍna) /ju.fadˤ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yufiḍna", "ʔafāḍa", "yufaḍna"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تفيضين",
-        "u": "تفيضين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُفِيضِينَ • (tufīḍīna) (form IV) /tu.fiː.dˤiː.na/\n# second-person feminine singular non-past active indicative of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tufīḍīna", "ʔafāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تفضن",
-        "u": "تفضن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تفضن (form IV)\n# تُفِضْنَ (tufiḍna) /tu.fidˤ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَفَاضَ (ʔafāḍa)\n# تُفَضْنَ (tufaḍna) /tu.fadˤ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tufiḍna", "ʔafāḍa", "tufaḍna"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تفاض",
-        "u": "تفاض",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تفاض (form IV)\n# تُفَاضُ (tufāḍu) /tu.faː.dˤu/: inflection of أَفَاضَ (ʔafāḍa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُفَاضَ (tufāḍa) /tu.faː.dˤa/: inflection of أَفَاضَ (ʔafāḍa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tufāḍu", "ʔafāḍa", "tufāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "يفاض",
-        "u": "يفاض",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يفاض (form IV)\n# يُفَاضُ (yufāḍu) /ju.faː.dˤu/: third-person masculine singular non-past passive indicative of أَفَاضَ (ʔafāḍa)\n# يُفَاضَ (yufāḍa) /ju.faː.dˤa/: third-person masculine singular non-past passive subjunctive of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yufāḍu", "ʔafāḍa", "yufāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "يفيضون",
-        "u": "يفيضون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُفِيضُونَ • (yufīḍūna) (form IV) /ju.fiː.dˤuː.na/\n# third-person masculine plural non-past active indicative of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yufīḍūna", "ʔafāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تفاضان",
-        "u": "تفاضان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُفَاضَانِ • (tufāḍāni) (form IV) /tu.faː.dˤaː.ni/\n# inflection of أَفَاضَ (ʔafāḍa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tufāḍāni", "ʔafāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "نفاض",
-        "u": "نفاض",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نفاض (form IV)\n# نُفَاضُ (nufāḍu) /nu.faː.dˤu/: first-person plural non-past passive indicative of أَفَاضَ (ʔafāḍa)\n# نُفَاضَ (nufāḍa) /nu.faː.dˤa/: first-person plural non-past passive subjunctive of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nufāḍu", "ʔafāḍa", "nufāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تفاضين",
-        "u": "تفاضين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُفَاضِينَ • (tufāḍīna) (form IV) /tu.faː.dˤiː.na/\n# second-person feminine singular non-past passive indicative of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tufāḍīna", "ʔafāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "يفيضان",
-        "u": "يفيضان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُفِيضَانِ • (yufīḍāni) (form IV) /ju.fiː.dˤaː.ni/\n# third-person masculine dual non-past active indicative of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yufīḍāni", "ʔafāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "يفاضان",
-        "u": "يفاضان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُفَاضَانِ • (yufāḍāni) (form IV) /ju.faː.dˤaː.ni/\n# third-person masculine dual non-past passive indicative of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yufāḍāni", "ʔafāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تفاضون",
-        "u": "تفاضون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُفَاضُونَ • (tufāḍūna) (form IV) /tu.faː.dˤuː.na/\n# second-person masculine plural non-past passive indicative of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tufāḍūna", "ʔafāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "يفاضون",
-        "u": "يفاضون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُفَاضُونَ • (yufāḍūna) (form IV) /ju.faː.dˤuː.na/\n# third-person masculine plural non-past passive indicative of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yufāḍūna", "ʔafāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تفيضي",
-        "u": "تفيضي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُفِيضِي • (tufīḍī) (form IV) /tu.fiː.dˤiː/\n# second-person feminine singular non-past active subjunctive/jussive of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tufīḍī", "ʔafāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تفيضا",
-        "u": "تفيضا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُفِيضَا • (tufīḍā) (form IV) /tu.fiː.dˤaː/\n# inflection of أَفَاضَ (ʔafāḍa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tufīḍā", "ʔafāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تفيضون",
-        "u": "تفيضون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُفِيضُونَ • (tufīḍūna) (form IV) /tu.fiː.dˤuː.na/\n# second-person masculine plural non-past active indicative of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tufīḍūna", "ʔafāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "يفيضا",
-        "u": "يفيضا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُفِيضَا • (yufīḍā) (form IV) /ju.fiː.dˤaː/\n# third-person masculine dual non-past active subjunctive/jussive of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yufīḍā", "ʔafāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تفيضوا",
-        "u": "تفيضوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُفِيضُوا • (tufīḍū) (form IV) /tu.fiː.dˤuː/\n# second-person masculine plural non-past active subjunctive/jussive of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tufīḍū", "ʔafāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "يفاضا",
-        "u": "يفاضا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُفَاضَا • (yufāḍā) (form IV) /ju.faː.dˤaː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yufāḍā", "ʔafāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تفاضي",
-        "u": "تفاضي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُفَاضِي • (tufāḍī) (form IV) /tu.faː.dˤiː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tufāḍī", "ʔafāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تفاضا",
-        "u": "تفاضا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُفَاضَا • (tufāḍā) (form IV) /tu.faː.dˤaː/\n# inflection of أَفَاضَ (ʔafāḍa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tufāḍā", "ʔafāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "أفضن",
-        "u": "أفضن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أفضن (form IV)\n# أَفَضْنَ (ʔafaḍna) /ʔa.fadˤ.na/: third-person feminine plural past active of أَفَاضَ (ʔafāḍa)\n# أُفِضْنَ (ʔufiḍna) /ʔu.fidˤ.na/: third-person feminine plural past passive of أَفَاضَ (ʔafāḍa)\n# أَفِضْنَ (ʔafiḍna) /ʔa.fidˤ.na/: second-person feminine plural imperative of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔafaḍna", "ʔafāḍa", "ʔufiḍna"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "يفيضوا",
-        "u": "يفيضوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُفِيضُوا • (yufīḍū) (form IV) /ju.fiː.dˤuː/\n# third-person masculine plural non-past active subjunctive/jussive of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yufīḍū", "ʔafāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تفاضوا",
-        "u": "تفاضوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُفَاضُوا • (tufāḍū) (form IV) /tu.faː.dˤuː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tufāḍū", "ʔafāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "يفاضوا",
-        "u": "يفاضوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُفَاضُوا • (yufāḍū) (form IV) /ju.faː.dˤuː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yufāḍū", "ʔafāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "أفيضي",
-        "u": "أفيضي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَفِيضِي • (ʔafīḍī) (form IV) /ʔa.fiː.dˤiː/\n# second-person feminine singular imperative of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔafīḍī", "ʔafāḍa"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "تفض",
-        "u": "تفض",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تفض (form IV)\n# تُفِضْ (tufiḍ) /tu.fidˤ/: inflection of أَفَاضَ (ʔafāḍa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُفَضْ (tufaḍ) /tu.fadˤ/: inflection of أَفَاضَ (ʔafāḍa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tufiḍ", "ʔafāḍa", "tufaḍ"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "يفض",
-        "u": "يفض",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يفض (form IV)\n# يُفِضْ (yufiḍ) /ju.fidˤ/: third-person masculine singular non-past active jussive of أَفَاضَ (ʔafāḍa)\n# يُفَضْ (yufaḍ) /ju.fadˤ/: third-person masculine singular non-past passive jussive of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yufiḍ", "ʔafāḍa", "yufaḍ"],
-        "k": "أفاض",
-        "yol": "kök"
-      },
-      {
-        "w": "أفض",
-        "u": "أفض",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أفض (form IV)\n# أُفِضْ (ʔufiḍ) /ʔu.fidˤ/: first-person singular non-past active jussive of أَفَاضَ (ʔafāḍa)\n# أُفَضْ (ʔufaḍ) /ʔu.fadˤ/: first-person singular non-past passive jussive of أَفَاضَ (ʔafāḍa)\n# أَفِضْ (ʔafiḍ) /ʔa.fidˤ/: second-person masculine singular imperative of أَفَاضَ (ʔafāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔufiḍ", "ʔafāḍa", "ʔufaḍ"],
-        "k": "أفاض",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "فض",
+  "ses": {
     "harf": "ء",
+    "fasil": "فض",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "نفض",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نفض (form IV)\n# نُفِضْ (nufiḍ) /nu.fidˤ/: first-person plural non-past active jussive of أَفَاضَ (ʔafāḍa)\n# نُفَضْ (nufaḍ) /nu.fadˤ/: first-person plural non-past passive jussive of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nufiḍ", "ʔafāḍa", "nufaḍ"],
+      "kok_yazilis": "أفاض"
+    },
+    {
+      "madde": "أفضت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أفضت (form IV)\n# أَفَضْتُ (ʔafaḍtu) /ʔa.fadˤ.tu/: first-person singular past active of أَفَاضَ (ʔafāḍa)\n# أَفَضْتَ (ʔafaḍta) /ʔa.fadˤ.ta/: second-person masculine singular past active of أَفَاضَ (ʔafāḍa)\n# أَفَضْتِ (ʔafaḍti) /ʔa.fadˤ.ti/: second-person feminine singular past active of أَفَاضَ (ʔafāḍa)\n# أُفِضْتُ (ʔufiḍtu) /ʔu.fidˤ.tu/: first-person singular past passive of أَفَاضَ (ʔafāḍa)\n# أُفِض",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔafaḍtu", "ʔafāḍa", "ʔafaḍta"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أفاضت",
+      "tur": "verb",
+      "baslik": "أَفَاضَتْ • (ʔafāḍat) (form IV) /ʔa.faː.dˤat/\n# third-person feminine singular past active of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔafāḍat", "ʔafāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أفضتما",
+      "tur": "verb",
+      "baslik": "أفضتما (form IV)\n# أَفَضْتُمَا (ʔafaḍtumā) /ʔa.fadˤ.tu.maː/: second-person dual past active of أَفَاضَ (ʔafāḍa)\n# أُفِضْتُمَا (ʔufiḍtumā) /ʔu.fidˤ.tu.maː/: second-person dual past passive of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔafaḍtumā", "ʔafāḍa", "ʔufiḍtumā"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أفاضا",
+      "tur": "verb",
+      "baslik": "أَفَاضَا • (ʔafāḍā) (form IV) /ʔa.faː.dˤaː/\n# third-person masculine dual past active of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔafāḍā", "ʔafāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أفضنا",
+      "tur": "verb",
+      "baslik": "أفضنا (form IV)\n# أَفَضْنَا (ʔafaḍnā) /ʔa.fadˤ.naː/: first-person plural past active of أَفَاضَ (ʔafāḍa)\n# أُفِضْنَا (ʔufiḍnā) /ʔu.fidˤ.naː/: first-person plural past passive of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔafaḍnā", "ʔafāḍa", "ʔufiḍnā"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أفضتن",
+      "tur": "verb",
+      "baslik": "أفضتن (form IV)\n# أَفَضْتُنَّ (ʔafaḍtunna) /ʔa.fadˤ.tun.na/: second-person feminine plural past active of أَفَاضَ (ʔafāḍa)\n# أُفِضْتُنَّ (ʔufiḍtunna) /ʔu.fidˤ.tun.na/: second-person feminine plural past passive of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔafaḍtunna", "ʔafāḍa", "ʔufiḍtunna"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أفضتم",
+      "tur": "verb",
+      "baslik": "أفضتم (form IV)\n# أَفَضْتُمْ (ʔafaḍtum) /ʔa.fadˤ.tum/: second-person masculine plural past active of أَفَاضَ (ʔafāḍa)\n# أُفِضْتُمْ (ʔufiḍtum) /ʔu.fidˤ.tum/: second-person masculine plural past passive of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔafaḍtum", "ʔafāḍa", "ʔufiḍtum"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أفيضت",
+      "tur": "verb",
+      "baslik": "أُفِيضَتْ • (ʔufīḍat) (form IV) /ʔu.fiː.dˤat/\n# third-person feminine singular past passive of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔufīḍat", "ʔafāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أفاضوا",
+      "tur": "verb",
+      "baslik": "أَفَاضُوا • (ʔafāḍū) (form IV) /ʔa.faː.dˤuː/\n# third-person masculine plural past active of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔafāḍū", "ʔafāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أفاضتا",
+      "tur": "verb",
+      "baslik": "أَفَاضَتَا • (ʔafāḍatā) (form IV) /ʔa.faː.dˤa.taː/\n# third-person feminine dual past active of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔafāḍatā", "ʔafāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أفيضا",
+      "tur": "verb",
+      "baslik": "أفيضا (form IV)\n# أُفِيضَا (ʔufīḍā) /ʔu.fiː.dˤaː/: third-person masculine dual past passive of أَفَاضَ (ʔafāḍa)\n# أَفِيضَا (ʔafīḍā) /ʔa.fiː.dˤaː/: second-person dual imperative of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔufīḍā", "ʔafāḍa", "ʔafīḍā"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أفيض",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أفيض (form IV)\n# أُفِيضَ (ʔufīḍa) /ʔu.fiː.dˤa/: inflection of أَفَاضَ (ʔafāḍa):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُفِيضُ (ʔufīḍu) /ʔu.fiː.dˤu/: first-person singular non-past active indicative of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔufīḍa", "ʔafāḍa", "ʔufīḍu"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أفيضوا",
+      "tur": "verb",
+      "baslik": "أفيضوا (form IV)\n# أُفِيضُوا (ʔufīḍū) /ʔu.fiː.dˤuː/: third-person masculine plural past passive of أَفَاضَ (ʔafāḍa)\n# أَفِيضُوا (ʔafīḍū) /ʔa.fiː.dˤuː/: second-person masculine plural imperative of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔufīḍū", "ʔafāḍa", "ʔafīḍū"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أفيضتا",
+      "tur": "verb",
+      "baslik": "أُفِيضَتَا • (ʔufīḍatā) (form IV) /ʔu.fiː.dˤa.taː/\n# third-person feminine dual past passive of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔufīḍatā", "ʔafāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يفيض",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يفيض (form IV)\n# يُفِيضُ (yufīḍu) /ju.fiː.dˤu/: third-person masculine singular non-past active indicative of أَفَاضَ (ʔafāḍa)\n# يُفِيضَ (yufīḍa) /ju.fiː.dˤa/: third-person masculine singular non-past active subjunctive of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yufīḍu", "ʔafāḍa", "yufīḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تفيض",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تفيض (form IV)\n# تُفِيضُ (tufīḍu) /tu.fiː.dˤu/: inflection of أَفَاضَ (ʔafāḍa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُفِيضَ (tufīḍa) /tu.fiː.dˤa/: inflection of أَفَاضَ (ʔafāḍa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tufīḍu", "ʔafāḍa", "tufīḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تفيضان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُفِيضَانِ • (tufīḍāni) (form IV) /tu.fiː.dˤaː.ni/\n# inflection of أَفَاضَ (ʔafāḍa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tufīḍāni", "ʔafāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نفيض",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نفيض (form IV)\n# نُفِيضُ (nufīḍu) /nu.fiː.dˤu/: first-person plural non-past active indicative of أَفَاضَ (ʔafāḍa)\n# نُفِيضَ (nufīḍa) /nu.fiː.dˤa/: first-person plural non-past active subjunctive of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nufīḍu", "ʔafāḍa", "nufīḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يفضن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يفضن (form IV)\n# يُفِضْنَ (yufiḍna) /ju.fidˤ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَفَاضَ (ʔafāḍa)\n# يُفَضْنَ (yufaḍna) /ju.fadˤ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yufiḍna", "ʔafāḍa", "yufaḍna"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تفيضين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُفِيضِينَ • (tufīḍīna) (form IV) /tu.fiː.dˤiː.na/\n# second-person feminine singular non-past active indicative of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tufīḍīna", "ʔafāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تفضن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تفضن (form IV)\n# تُفِضْنَ (tufiḍna) /tu.fidˤ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَفَاضَ (ʔafāḍa)\n# تُفَضْنَ (tufaḍna) /tu.fadˤ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tufiḍna", "ʔafāḍa", "tufaḍna"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تفاض",
+      "tur": "verb",
+      "baslik": "تفاض (form IV)\n# تُفَاضُ (tufāḍu) /tu.faː.dˤu/: inflection of أَفَاضَ (ʔafāḍa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُفَاضَ (tufāḍa) /tu.faː.dˤa/: inflection of أَفَاضَ (ʔafāḍa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tufāḍu", "ʔafāḍa", "tufāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يفاض",
+      "tur": "verb",
+      "baslik": "يفاض (form IV)\n# يُفَاضُ (yufāḍu) /ju.faː.dˤu/: third-person masculine singular non-past passive indicative of أَفَاضَ (ʔafāḍa)\n# يُفَاضَ (yufāḍa) /ju.faː.dˤa/: third-person masculine singular non-past passive subjunctive of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yufāḍu", "ʔafāḍa", "yufāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يفيضون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُفِيضُونَ • (yufīḍūna) (form IV) /ju.fiː.dˤuː.na/\n# third-person masculine plural non-past active indicative of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yufīḍūna", "ʔafāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تفاضان",
+      "tur": "verb",
+      "baslik": "تُفَاضَانِ • (tufāḍāni) (form IV) /tu.faː.dˤaː.ni/\n# inflection of أَفَاضَ (ʔafāḍa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tufāḍāni", "ʔafāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نفاض",
+      "tur": "verb",
+      "baslik": "نفاض (form IV)\n# نُفَاضُ (nufāḍu) /nu.faː.dˤu/: first-person plural non-past passive indicative of أَفَاضَ (ʔafāḍa)\n# نُفَاضَ (nufāḍa) /nu.faː.dˤa/: first-person plural non-past passive subjunctive of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nufāḍu", "ʔafāḍa", "nufāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تفاضين",
+      "tur": "verb",
+      "baslik": "تُفَاضِينَ • (tufāḍīna) (form IV) /tu.faː.dˤiː.na/\n# second-person feminine singular non-past passive indicative of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tufāḍīna", "ʔafāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يفيضان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُفِيضَانِ • (yufīḍāni) (form IV) /ju.fiː.dˤaː.ni/\n# third-person masculine dual non-past active indicative of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yufīḍāni", "ʔafāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يفاضان",
+      "tur": "verb",
+      "baslik": "يُفَاضَانِ • (yufāḍāni) (form IV) /ju.faː.dˤaː.ni/\n# third-person masculine dual non-past passive indicative of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yufāḍāni", "ʔafāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تفاضون",
+      "tur": "verb",
+      "baslik": "تُفَاضُونَ • (tufāḍūna) (form IV) /tu.faː.dˤuː.na/\n# second-person masculine plural non-past passive indicative of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tufāḍūna", "ʔafāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يفاضون",
+      "tur": "verb",
+      "baslik": "يُفَاضُونَ • (yufāḍūna) (form IV) /ju.faː.dˤuː.na/\n# third-person masculine plural non-past passive indicative of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yufāḍūna", "ʔafāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تفيضي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُفِيضِي • (tufīḍī) (form IV) /tu.fiː.dˤiː/\n# second-person feminine singular non-past active subjunctive/jussive of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tufīḍī", "ʔafāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تفيضا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُفِيضَا • (tufīḍā) (form IV) /tu.fiː.dˤaː/\n# inflection of أَفَاضَ (ʔafāḍa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tufīḍā", "ʔafāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تفيضون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُفِيضُونَ • (tufīḍūna) (form IV) /tu.fiː.dˤuː.na/\n# second-person masculine plural non-past active indicative of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tufīḍūna", "ʔafāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يفيضا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُفِيضَا • (yufīḍā) (form IV) /ju.fiː.dˤaː/\n# third-person masculine dual non-past active subjunctive/jussive of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yufīḍā", "ʔafāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تفيضوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُفِيضُوا • (tufīḍū) (form IV) /tu.fiː.dˤuː/\n# second-person masculine plural non-past active subjunctive/jussive of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tufīḍū", "ʔafāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يفاضا",
+      "tur": "verb",
+      "baslik": "يُفَاضَا • (yufāḍā) (form IV) /ju.faː.dˤaː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yufāḍā", "ʔafāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تفاضي",
+      "tur": "verb",
+      "baslik": "تُفَاضِي • (tufāḍī) (form IV) /tu.faː.dˤiː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tufāḍī", "ʔafāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تفاضا",
+      "tur": "verb",
+      "baslik": "تُفَاضَا • (tufāḍā) (form IV) /tu.faː.dˤaː/\n# inflection of أَفَاضَ (ʔafāḍa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tufāḍā", "ʔafāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أفضن",
+      "tur": "verb",
+      "baslik": "أفضن (form IV)\n# أَفَضْنَ (ʔafaḍna) /ʔa.fadˤ.na/: third-person feminine plural past active of أَفَاضَ (ʔafāḍa)\n# أُفِضْنَ (ʔufiḍna) /ʔu.fidˤ.na/: third-person feminine plural past passive of أَفَاضَ (ʔafāḍa)\n# أَفِضْنَ (ʔafiḍna) /ʔa.fidˤ.na/: second-person feminine plural imperative of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔafaḍna", "ʔafāḍa", "ʔufiḍna"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يفيضوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُفِيضُوا • (yufīḍū) (form IV) /ju.fiː.dˤuː/\n# third-person masculine plural non-past active subjunctive/jussive of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yufīḍū", "ʔafāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تفاضوا",
+      "tur": "verb",
+      "baslik": "تُفَاضُوا • (tufāḍū) (form IV) /tu.faː.dˤuː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tufāḍū", "ʔafāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يفاضوا",
+      "tur": "verb",
+      "baslik": "يُفَاضُوا • (yufāḍū) (form IV) /ju.faː.dˤuː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yufāḍū", "ʔafāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أفيضي",
+      "tur": "verb",
+      "baslik": "أَفِيضِي • (ʔafīḍī) (form IV) /ʔa.fiː.dˤiː/\n# second-person feminine singular imperative of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔafīḍī", "ʔafāḍa"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تفض",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تفض (form IV)\n# تُفِضْ (tufiḍ) /tu.fidˤ/: inflection of أَفَاضَ (ʔafāḍa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُفَضْ (tufaḍ) /tu.fadˤ/: inflection of أَفَاضَ (ʔafāḍa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tufiḍ", "ʔafāḍa", "tufaḍ"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يفض",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يفض (form IV)\n# يُفِضْ (yufiḍ) /ju.fidˤ/: third-person masculine singular non-past active jussive of أَفَاضَ (ʔafāḍa)\n# يُفَضْ (yufaḍ) /ju.fadˤ/: third-person masculine singular non-past passive jussive of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yufiḍ", "ʔafāḍa", "yufaḍ"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أفض",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أفض (form IV)\n# أُفِضْ (ʔufiḍ) /ʔu.fidˤ/: first-person singular non-past active jussive of أَفَاضَ (ʔafāḍa)\n# أُفَضْ (ʔufaḍ) /ʔu.fadˤ/: first-person singular non-past passive jussive of أَفَاضَ (ʔafāḍa)\n# أَفِضْ (ʔafiḍ) /ʔa.fidˤ/: second-person masculine singular imperative of أَفَاضَ (ʔafāḍa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔufiḍ", "ʔafāḍa", "ʔufaḍ"],
+      "kok_yazilis": "أفاض",
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ءفاض", "r6"]
+  ],
+  "mana": {
     "ince": "separate.v.09",
     "orta": "verb.motion",
     "ust": "fiil ve hadise",
@@ -631,22 +496,15 @@
     "dayanak_tanim": "go one's own way; move apart",
     "synset_sayisi": 5
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["burst.v.01", "separate.v.08", "separate.v.09", "shake.v.01", "stimulate.v.03"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["burst.v.01", "separate.v.08", "separate.v.09", "shake.v.01", "stimulate.v.03"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

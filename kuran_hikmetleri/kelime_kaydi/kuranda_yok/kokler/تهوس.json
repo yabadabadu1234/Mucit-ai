@@ -1,366 +1,259 @@
 {
   "kok": "تهوس",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تهوس", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تهوستما",
-        "u": "تهوستما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهَوَّسْتُمَا • (tahawwastumā) (form V) /ta.haw.was.tu.maː/\n# second-person dual past active of تَهَوَّسَ (tahawwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahawwastumā", "tahawwasa"],
-        "k": "تهوس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهوست",
-        "u": "تهوست",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهوست (form V)\n# تَهَوَّسْتُ (tahawwastu) /ta.haw.was.tu/: first-person singular past active of تَهَوَّسَ (tahawwasa)\n# تَهَوَّسْتَ (tahawwasta) /ta.haw.was.ta/: second-person masculine singular past active of تَهَوَّسَ (tahawwasa)\n# تَهَوَّسْتِ (tahawwasti) /ta.haw.was.ti/: second-person feminine singular past active of تَهَوَّسَ (tahawwasa)\n# تَهَوَّسَتْ (tahawwasat) /ta.haw.wa.sat/: third-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahawwastu", "tahawwasa", "tahawwasta"],
-        "k": "تهوس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهوسا",
-        "u": "تهوسا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهَوَّسَا • (tahawwasā) (form V) /ta.haw.wa.saː/\n# inflection of تَهَوَّسَ (tahawwasa):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahawwasā", "tahawwasa"],
-        "k": "تهوس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهوستا",
-        "u": "تهوستا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهَوَّسَتَا • (tahawwasatā) (form V) /ta.haw.wa.sa.taː/\n# third-person feminine dual past active of تَهَوَّسَ (tahawwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahawwasatā", "tahawwasa"],
-        "k": "تهوس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهوستم",
-        "u": "تهوستم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهَوَّسْتُمْ • (tahawwastum) (form V) /ta.haw.was.tum/\n# second-person masculine plural past active of تَهَوَّسَ (tahawwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahawwastum", "tahawwasa"],
-        "k": "تهوس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهوسنا",
-        "u": "تهوسنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهَوَّسْنَا • (tahawwasnā) (form V) /ta.haw.was.naː/\n# first-person plural past active of تَهَوَّسَ (tahawwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahawwasnā", "tahawwasa"],
-        "k": "تهوس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهوستن",
-        "u": "تهوستن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهَوَّسْتُنَّ • (tahawwastunna) (form V) /ta.haw.was.tun.na/\n# second-person feminine plural past active of تَهَوَّسَ (tahawwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahawwastunna", "tahawwasa"],
-        "k": "تهوس",
-        "yol": "kök"
-      },
-      {
-        "w": "أتهوس",
-        "u": "أتهوس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتهوس (form V)\n# أَتَهَوَّسُ (ʔatahawwasu) /ʔa.ta.haw.wa.su/: first-person singular non-past active indicative of تَهَوَّسَ (tahawwasa)\n# أَتَهَوَّسَ (ʔatahawwasa) /ʔa.ta.haw.wa.sa/: first-person singular non-past active subjunctive of تَهَوَّسَ (tahawwasa)\n# أَتَهَوَّسْ (ʔatahawwas) /ʔa.ta.haw.was/: first-person singular non-past active jussive of تَهَوَّسَ (tahawwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔatahawwasu", "tahawwasa", "ʔatahawwasa"],
-        "k": "تهوس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهوسن",
-        "u": "تهوسن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهَوَّسْنَ • (tahawwasna) (form V) /ta.haw.was.na/\n# inflection of تَهَوَّسَ (tahawwasa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahawwasna", "tahawwasa"],
-        "k": "تهوس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهوسوا",
-        "u": "تهوسوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهَوَّسُوا • (tahawwasū) (form V) /ta.haw.wa.suː/\n# inflection of تَهَوَّسَ (tahawwasa):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahawwasū", "tahawwasa"],
-        "k": "تهوس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهوس",
-        "u": "تتهوس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتهوس (form V)\n# تَتَهَوَّسُ (tatahawwasu) /ta.ta.haw.wa.su/: inflection of تَهَوَّسَ (tahawwasa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَهَوَّسَ (tatahawwasa) /ta.ta.haw.wa.sa/: inflection of تَهَوَّسَ (tahawwasa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatahawwasu", "tahawwasa", "tatahawwasa"],
-        "k": "تهوس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهوسين",
-        "u": "تتهوسين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَهَوَّسِينَ • (tatahawwasīna) (form V) /ta.ta.haw.wa.siː.na/\n# second-person feminine singular non-past active indicative of تَهَوَّسَ (tahawwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatahawwasīna", "tahawwasa"],
-        "k": "تهوس",
-        "yol": "kök"
-      },
-      {
-        "w": "يتهوس",
-        "u": "يتهوس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتهوس (form V)\n# يَتَهَوَّسُ (yatahawwasu) /ja.ta.haw.wa.su/: third-person masculine singular non-past active indicative of تَهَوَّسَ (tahawwasa)\n# يَتَهَوَّسَ (yatahawwasa) /ja.ta.haw.wa.sa/: third-person masculine singular non-past active subjunctive of تَهَوَّسَ (tahawwasa)\n# يَتَهَوَّسْ (yatahawwas) /ja.ta.haw.was/: third-person masculine singular non-past active jussive of تَهَوَّسَ (tahawwas",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatahawwasu", "tahawwasa", "yatahawwasa"],
-        "k": "تهوس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهوسان",
-        "u": "تتهوسان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَهَوَّسَانِ • (tatahawwasāni) (form V) /ta.ta.haw.wa.saː.ni/\n# inflection of تَهَوَّسَ (tahawwasa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatahawwasāni", "tahawwasa"],
-        "k": "تهوس",
-        "yol": "kök"
-      },
-      {
-        "w": "يتهوسون",
-        "u": "يتهوسون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَهَوَّسُونَ • (yatahawwasūna) (form V) /ja.ta.haw.wa.suː.na/\n# third-person masculine plural non-past active indicative of تَهَوَّسَ (tahawwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatahawwasūna", "tahawwasa"],
-        "k": "تهوس",
-        "yol": "kök"
-      },
-      {
-        "w": "يتهوسان",
-        "u": "يتهوسان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَهَوَّسَانِ • (yatahawwasāni) (form V) /ja.ta.haw.wa.saː.ni/\n# third-person masculine dual non-past active indicative of تَهَوَّسَ (tahawwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatahawwasāni", "tahawwasa"],
-        "k": "تهوس",
-        "yol": "kök"
-      },
-      {
-        "w": "نتهوس",
-        "u": "نتهوس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتهوس (form V)\n# نَتَهَوَّسُ (natahawwasu) /na.ta.haw.wa.su/: first-person plural non-past active indicative of تَهَوَّسَ (tahawwasa)\n# نَتَهَوَّسَ (natahawwasa) /na.ta.haw.wa.sa/: first-person plural non-past active subjunctive of تَهَوَّسَ (tahawwasa)\n# نَتَهَوَّسْ (natahawwas) /na.ta.haw.was/: first-person plural non-past active jussive of تَهَوَّسَ (tahawwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["natahawwasu", "tahawwasa", "natahawwasa"],
-        "k": "تهوس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهوسن",
-        "u": "تتهوسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَهَوَّسْنَ • (tatahawwasna) (form V) /ta.ta.haw.was.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَهَوَّسَ (tahawwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatahawwasna", "tahawwasa"],
-        "k": "تهوس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهوسون",
-        "u": "تتهوسون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَهَوَّسُونَ • (tatahawwasūna) (form V) /ta.ta.haw.wa.suː.na/\n# second-person masculine plural non-past active indicative of تَهَوَّسَ (tahawwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatahawwasūna", "tahawwasa"],
-        "k": "تهوس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهوسي",
-        "u": "تتهوسي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَهَوَّسِي • (tatahawwasī) (form V) /ta.ta.haw.wa.siː/\n# second-person feminine singular non-past active subjunctive/jussive of تَهَوَّسَ (tahawwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatahawwasī", "tahawwasa"],
-        "k": "تهوس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهوسا",
-        "u": "تتهوسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَهَوَّسَا • (tatahawwasā) (form V) /ta.ta.haw.wa.saː/\n# inflection of تَهَوَّسَ (tahawwasa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatahawwasā", "tahawwasa"],
-        "k": "تهوس",
-        "yol": "kök"
-      },
-      {
-        "w": "يتهوسا",
-        "u": "يتهوسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَهَوَّسَا • (yatahawwasā) (form V) /ja.ta.haw.wa.saː/\n# third-person masculine dual non-past active subjunctive/jussive of تَهَوَّسَ (tahawwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatahawwasā", "tahawwasa"],
-        "k": "تهوس",
-        "yol": "kök"
-      },
-      {
-        "w": "يتهوسن",
-        "u": "يتهوسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَهَوَّسْنَ • (yatahawwasna) (form V) /ja.ta.haw.was.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَهَوَّسَ (tahawwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatahawwasna", "tahawwasa"],
-        "k": "تهوس",
-        "yol": "kök"
-      },
-      {
-        "w": "يتهوسوا",
-        "u": "يتهوسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَهَوَّسُوا • (yatahawwasū) (form V) /ja.ta.haw.wa.suː/\n# third-person masculine plural non-past active subjunctive/jussive of تَهَوَّسَ (tahawwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatahawwasū", "tahawwasa"],
-        "k": "تهوس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهوسوا",
-        "u": "تتهوسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَهَوَّسُوا • (tatahawwasū) (form V) /ta.ta.haw.wa.suː/\n# second-person masculine plural non-past active subjunctive/jussive of تَهَوَّسَ (tahawwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatahawwasū", "tahawwasa"],
-        "k": "تهوس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهوسي",
-        "u": "تهوسي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهَوَّسِي • (tahawwasī) (form V) /ta.haw.wa.siː/\n# second-person feminine singular imperative of تَهَوَّسَ (tahawwasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahawwasī", "tahawwasa"],
-        "k": "تهوس",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "ته",
+  "ses": {
     "harf": "ت",
+    "fasil": "ته",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تهوستما",
+      "tur": "verb",
+      "baslik": "تَهَوَّسْتُمَا • (tahawwastumā) (form V) /ta.haw.was.tu.maː/\n# second-person dual past active of تَهَوَّسَ (tahawwasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahawwastumā", "tahawwasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهوست",
+      "tur": "verb",
+      "baslik": "تهوست (form V)\n# تَهَوَّسْتُ (tahawwastu) /ta.haw.was.tu/: first-person singular past active of تَهَوَّسَ (tahawwasa)\n# تَهَوَّسْتَ (tahawwasta) /ta.haw.was.ta/: second-person masculine singular past active of تَهَوَّسَ (tahawwasa)\n# تَهَوَّسْتِ (tahawwasti) /ta.haw.was.ti/: second-person feminine singular past active of تَهَوَّسَ (tahawwasa)\n# تَهَوَّسَتْ (tahawwasat) /ta.haw.wa.sat/: third-perso",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahawwastu", "tahawwasa", "tahawwasta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهوسا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهَوَّسَا • (tahawwasā) (form V) /ta.haw.wa.saː/\n# inflection of تَهَوَّسَ (tahawwasa):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahawwasā", "tahawwasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهوستا",
+      "tur": "verb",
+      "baslik": "تَهَوَّسَتَا • (tahawwasatā) (form V) /ta.haw.wa.sa.taː/\n# third-person feminine dual past active of تَهَوَّسَ (tahawwasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahawwasatā", "tahawwasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهوستم",
+      "tur": "verb",
+      "baslik": "تَهَوَّسْتُمْ • (tahawwastum) (form V) /ta.haw.was.tum/\n# second-person masculine plural past active of تَهَوَّسَ (tahawwasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahawwastum", "tahawwasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهوسنا",
+      "tur": "verb",
+      "baslik": "تَهَوَّسْنَا • (tahawwasnā) (form V) /ta.haw.was.naː/\n# first-person plural past active of تَهَوَّسَ (tahawwasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahawwasnā", "tahawwasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهوستن",
+      "tur": "verb",
+      "baslik": "تَهَوَّسْتُنَّ • (tahawwastunna) (form V) /ta.haw.was.tun.na/\n# second-person feminine plural past active of تَهَوَّسَ (tahawwasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahawwastunna", "tahawwasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتهوس",
+      "tur": "verb",
+      "baslik": "أتهوس (form V)\n# أَتَهَوَّسُ (ʔatahawwasu) /ʔa.ta.haw.wa.su/: first-person singular non-past active indicative of تَهَوَّسَ (tahawwasa)\n# أَتَهَوَّسَ (ʔatahawwasa) /ʔa.ta.haw.wa.sa/: first-person singular non-past active subjunctive of تَهَوَّسَ (tahawwasa)\n# أَتَهَوَّسْ (ʔatahawwas) /ʔa.ta.haw.was/: first-person singular non-past active jussive of تَهَوَّسَ (tahawwasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔatahawwasu", "tahawwasa", "ʔatahawwasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهوسن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهَوَّسْنَ • (tahawwasna) (form V) /ta.haw.was.na/\n# inflection of تَهَوَّسَ (tahawwasa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahawwasna", "tahawwasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهوسوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهَوَّسُوا • (tahawwasū) (form V) /ta.haw.wa.suː/\n# inflection of تَهَوَّسَ (tahawwasa):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahawwasū", "tahawwasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهوس",
+      "tur": "verb",
+      "baslik": "تتهوس (form V)\n# تَتَهَوَّسُ (tatahawwasu) /ta.ta.haw.wa.su/: inflection of تَهَوَّسَ (tahawwasa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَهَوَّسَ (tatahawwasa) /ta.ta.haw.wa.sa/: inflection of تَهَوَّسَ (tahawwasa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatahawwasu", "tahawwasa", "tatahawwasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهوسين",
+      "tur": "verb",
+      "baslik": "تَتَهَوَّسِينَ • (tatahawwasīna) (form V) /ta.ta.haw.wa.siː.na/\n# second-person feminine singular non-past active indicative of تَهَوَّسَ (tahawwasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatahawwasīna", "tahawwasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتهوس",
+      "tur": "verb",
+      "baslik": "يتهوس (form V)\n# يَتَهَوَّسُ (yatahawwasu) /ja.ta.haw.wa.su/: third-person masculine singular non-past active indicative of تَهَوَّسَ (tahawwasa)\n# يَتَهَوَّسَ (yatahawwasa) /ja.ta.haw.wa.sa/: third-person masculine singular non-past active subjunctive of تَهَوَّسَ (tahawwasa)\n# يَتَهَوَّسْ (yatahawwas) /ja.ta.haw.was/: third-person masculine singular non-past active jussive of تَهَوَّسَ (tahawwas",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatahawwasu", "tahawwasa", "yatahawwasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهوسان",
+      "tur": "verb",
+      "baslik": "تَتَهَوَّسَانِ • (tatahawwasāni) (form V) /ta.ta.haw.wa.saː.ni/\n# inflection of تَهَوَّسَ (tahawwasa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatahawwasāni", "tahawwasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتهوسون",
+      "tur": "verb",
+      "baslik": "يَتَهَوَّسُونَ • (yatahawwasūna) (form V) /ja.ta.haw.wa.suː.na/\n# third-person masculine plural non-past active indicative of تَهَوَّسَ (tahawwasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatahawwasūna", "tahawwasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتهوسان",
+      "tur": "verb",
+      "baslik": "يَتَهَوَّسَانِ • (yatahawwasāni) (form V) /ja.ta.haw.wa.saː.ni/\n# third-person masculine dual non-past active indicative of تَهَوَّسَ (tahawwasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatahawwasāni", "tahawwasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتهوس",
+      "tur": "verb",
+      "baslik": "نتهوس (form V)\n# نَتَهَوَّسُ (natahawwasu) /na.ta.haw.wa.su/: first-person plural non-past active indicative of تَهَوَّسَ (tahawwasa)\n# نَتَهَوَّسَ (natahawwasa) /na.ta.haw.wa.sa/: first-person plural non-past active subjunctive of تَهَوَّسَ (tahawwasa)\n# نَتَهَوَّسْ (natahawwas) /na.ta.haw.was/: first-person plural non-past active jussive of تَهَوَّسَ (tahawwasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["natahawwasu", "tahawwasa", "natahawwasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهوسن",
+      "tur": "verb",
+      "baslik": "تَتَهَوَّسْنَ • (tatahawwasna) (form V) /ta.ta.haw.was.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَهَوَّسَ (tahawwasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatahawwasna", "tahawwasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهوسون",
+      "tur": "verb",
+      "baslik": "تَتَهَوَّسُونَ • (tatahawwasūna) (form V) /ta.ta.haw.wa.suː.na/\n# second-person masculine plural non-past active indicative of تَهَوَّسَ (tahawwasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatahawwasūna", "tahawwasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهوسي",
+      "tur": "verb",
+      "baslik": "تَتَهَوَّسِي • (tatahawwasī) (form V) /ta.ta.haw.wa.siː/\n# second-person feminine singular non-past active subjunctive/jussive of تَهَوَّسَ (tahawwasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatahawwasī", "tahawwasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهوسا",
+      "tur": "verb",
+      "baslik": "تَتَهَوَّسَا • (tatahawwasā) (form V) /ta.ta.haw.wa.saː/\n# inflection of تَهَوَّسَ (tahawwasa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatahawwasā", "tahawwasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتهوسا",
+      "tur": "verb",
+      "baslik": "يَتَهَوَّسَا • (yatahawwasā) (form V) /ja.ta.haw.wa.saː/\n# third-person masculine dual non-past active subjunctive/jussive of تَهَوَّسَ (tahawwasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatahawwasā", "tahawwasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتهوسن",
+      "tur": "verb",
+      "baslik": "يَتَهَوَّسْنَ • (yatahawwasna) (form V) /ja.ta.haw.was.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَهَوَّسَ (tahawwasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatahawwasna", "tahawwasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتهوسوا",
+      "tur": "verb",
+      "baslik": "يَتَهَوَّسُوا • (yatahawwasū) (form V) /ja.ta.haw.wa.suː/\n# third-person masculine plural non-past active subjunctive/jussive of تَهَوَّسَ (tahawwasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatahawwasū", "tahawwasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهوسوا",
+      "tur": "verb",
+      "baslik": "تَتَهَوَّسُوا • (tatahawwasū) (form V) /ta.ta.haw.wa.suː/\n# second-person masculine plural non-past active subjunctive/jussive of تَهَوَّسَ (tahawwasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatahawwasū", "tahawwasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهوسي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهَوَّسِي • (tahawwasī) (form V) /ta.haw.wa.siː/\n# second-person feminine singular imperative of تَهَوَّسَ (tahawwasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahawwasī", "tahawwasa"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تهوس", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

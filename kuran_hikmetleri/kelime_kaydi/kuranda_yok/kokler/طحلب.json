@@ -1,345 +1,246 @@
 {
   "kok": "طحلب",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "طحلب", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "طحلبا",
-        "u": "طحلبا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طحلبا (form Iq)\n# طَحْلَبَا (ṭaḥlabā) /tˤaħ.la.baː/: third-person masculine dual past active of طَحْلَبَ (ṭaḥlaba)\n# طُحْلِبَا (ṭuḥlibā) /tˤuħ.li.baː/: third-person masculine dual past passive of طَحْلَبَ (ṭaḥlaba)\n# طَحْلِبَا (ṭaḥlibā) /tˤaħ.li.baː/: second-person dual imperative of طَحْلَبَ (ṭaḥlaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭaḥlabā", "ṭaḥlaba", "ṭuḥlibā"],
-        "k": "طحلب",
-        "yol": "kök"
-      },
-      {
-        "w": "طحلبت",
-        "u": "طحلبت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طحلبت (form Iq)\n# طَحْلَبْتُ (ṭaḥlabtu) /tˤaħ.lab.tu/: first-person singular past active of طَحْلَبَ (ṭaḥlaba)\n# طَحْلَبْتَ (ṭaḥlabta) /tˤaħ.lab.ta/: second-person masculine singular past active of طَحْلَبَ (ṭaḥlaba)\n# طَحْلَبْتِ (ṭaḥlabti) /tˤaħ.lab.ti/: second-person feminine singular past active of طَحْلَبَ (ṭaḥlaba)\n# طَحْلَبَتْ (ṭaḥlabat) /tˤaħ.la.bat/: third-person feminine singular past act",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭaḥlabtu", "ṭaḥlaba", "ṭaḥlabta"],
-        "k": "طحلب",
-        "yol": "kök"
-      },
-      {
-        "w": "طحلبتما",
-        "u": "طحلبتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طحلبتما (form Iq)\n# طَحْلَبْتُمَا (ṭaḥlabtumā) /tˤaħ.lab.tu.maː/: second-person dual past active of طَحْلَبَ (ṭaḥlaba)\n# طُحْلِبْتُمَا (ṭuḥlibtumā) /tˤuħ.lib.tu.maː/: second-person dual past passive of طَحْلَبَ (ṭaḥlaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭaḥlabtumā", "ṭaḥlaba", "ṭuḥlibtumā"],
-        "k": "طحلب",
-        "yol": "kök"
-      },
-      {
-        "w": "طحلبنا",
-        "u": "طحلبنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طحلبنا (form Iq)\n# طَحْلَبْنَا (ṭaḥlabnā) /tˤaħ.lab.naː/: first-person plural past active of طَحْلَبَ (ṭaḥlaba)\n# طُحْلِبْنَا (ṭuḥlibnā) /tˤuħ.lib.naː/: first-person plural past passive of طَحْلَبَ (ṭaḥlaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭaḥlabnā", "ṭaḥlaba", "ṭuḥlibnā"],
-        "k": "طحلب",
-        "yol": "kök"
-      },
-      {
-        "w": "طحلبتم",
-        "u": "طحلبتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طحلبتم (form Iq)\n# طَحْلَبْتُمْ (ṭaḥlabtum) /tˤaħ.lab.tum/: second-person masculine plural past active of طَحْلَبَ (ṭaḥlaba)\n# طُحْلِبْتُمْ (ṭuḥlibtum) /tˤuħ.lib.tum/: second-person masculine plural past passive of طَحْلَبَ (ṭaḥlaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭaḥlabtum", "ṭaḥlaba", "ṭuḥlibtum"],
-        "k": "طحلب",
-        "yol": "kök"
-      },
-      {
-        "w": "طحلبتا",
-        "u": "طحلبتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طحلبتا (form Iq)\n# طَحْلَبَتَا (ṭaḥlabatā) /tˤaħ.la.ba.taː/: third-person feminine dual past active of طَحْلَبَ (ṭaḥlaba)\n# طُحْلِبَتَا (ṭuḥlibatā) /tˤuħ.li.ba.taː/: third-person feminine dual past passive of طَحْلَبَ (ṭaḥlaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭaḥlabatā", "ṭaḥlaba", "ṭuḥlibatā"],
-        "k": "طحلب",
-        "yol": "kök"
-      },
-      {
-        "w": "طحلبتن",
-        "u": "طحلبتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طحلبتن (form Iq)\n# طَحْلَبْتُنَّ (ṭaḥlabtunna) /tˤaħ.lab.tun.na/: second-person feminine plural past active of طَحْلَبَ (ṭaḥlaba)\n# طُحْلِبْتُنَّ (ṭuḥlibtunna) /tˤuħ.lib.tun.na/: second-person feminine plural past passive of طَحْلَبَ (ṭaḥlaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭaḥlabtunna", "ṭaḥlaba", "ṭuḥlibtunna"],
-        "k": "طحلب",
-        "yol": "kök"
-      },
-      {
-        "w": "طحلبوا",
-        "u": "طحلبوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طحلبوا (form Iq)\n# طَحْلَبُوا (ṭaḥlabū) /tˤaħ.la.buː/: third-person masculine plural past active of طَحْلَبَ (ṭaḥlaba)\n# طُحْلِبُوا (ṭuḥlibū) /tˤuħ.li.buː/: third-person masculine plural past passive of طَحْلَبَ (ṭaḥlaba)\n# طَحْلِبُوا (ṭaḥlibū) /tˤaħ.li.buː/: second-person masculine plural imperative of طَحْلَبَ (ṭaḥlaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭaḥlabū", "ṭaḥlaba", "ṭuḥlibū"],
-        "k": "طحلب",
-        "yol": "kök"
-      },
-      {
-        "w": "طحلبن",
-        "u": "طحلبن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طحلبن (form Iq)\n# طَحْلَبْنَ (ṭaḥlabna) /tˤaħ.lab.na/: third-person feminine plural past active of طَحْلَبَ (ṭaḥlaba)\n# طُحْلِبْنَ (ṭuḥlibna) /tˤuħ.lib.na/: third-person feminine plural past passive of طَحْلَبَ (ṭaḥlaba)\n# طَحْلِبْنَ (ṭaḥlibna) /tˤaħ.lib.na/: second-person feminine plural imperative of طَحْلَبَ (ṭaḥlaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭaḥlabna", "ṭaḥlaba", "ṭuḥlibna"],
-        "k": "طحلب",
-        "yol": "kök"
-      },
-      {
-        "w": "أطحلب",
-        "u": "أطحلب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أطحلب (form Iq)\n# أُطَحْلِبُ (ʔuṭaḥlibu) /ʔu.tˤaħ.li.bu/: first-person singular non-past active indicative of طَحْلَبَ (ṭaḥlaba)\n# أُطَحْلَبُ (ʔuṭaḥlabu) /ʔu.tˤaħ.la.bu/: first-person singular non-past passive indicative of طَحْلَبَ (ṭaḥlaba)\n# أُطَحْلِبَ (ʔuṭaḥliba) /ʔu.tˤaħ.li.ba/: first-person singular non-past active subjunctive of طَحْلَبَ (ṭaḥlaba)\n# أُطَحْلَبَ (ʔuṭaḥlaba) /ʔu.tˤaħ.la.ba/: f",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʔuṭaḥlibu", "ṭaḥlaba", "ʔuṭaḥlabu"],
-        "k": "طحلب",
-        "yol": "kök"
-      },
-      {
-        "w": "تطحلب",
-        "u": "تطحلب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطحلب (form Iq)\n# تُطَحْلِبُ (tuṭaḥlibu) /tu.tˤaħ.li.bu/: inflection of طَحْلَبَ (ṭaḥlaba):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُطَحْلَبُ (tuṭaḥlabu) /tu.tˤaħ.la.bu/: inflection of طَحْلَبَ (ṭaḥlaba):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past p",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuṭaḥlibu", "ṭaḥlaba", "tuṭaḥlabu"],
-        "k": "طحلب",
-        "yol": "kök"
-      },
-      {
-        "w": "تطحلبان",
-        "u": "تطحلبان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطحلبان (form Iq)\n# تُطَحْلِبَانِ (tuṭaḥlibāni) /tu.tˤaħ.li.baː.ni/: inflection of طَحْلَبَ (ṭaḥlaba):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُطَحْلَبَانِ (tuṭaḥlabāni) /tu.tˤaħ.la.baː.ni/: inflection of طَحْلَبَ (ṭaḥlaba):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicativ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuṭaḥlibāni", "ṭaḥlaba", "tuṭaḥlabāni"],
-        "k": "طحلب",
-        "yol": "kök"
-      },
-      {
-        "w": "تطحلبين",
-        "u": "تطحلبين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطحلبين (form Iq)\n# تُطَحْلِبِينَ (tuṭaḥlibīna) /tu.tˤaħ.li.biː.na/: second-person feminine singular non-past active indicative of طَحْلَبَ (ṭaḥlaba)\n# تُطَحْلَبِينَ (tuṭaḥlabīna) /tu.tˤaħ.la.biː.na/: second-person feminine singular non-past passive indicative of طَحْلَبَ (ṭaḥlaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuṭaḥlibīna", "ṭaḥlaba", "tuṭaḥlabīna"],
-        "k": "طحلب",
-        "yol": "kök"
-      },
-      {
-        "w": "يطحلبان",
-        "u": "يطحلبان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطحلبان (form Iq)\n# يُطَحْلِبَانِ (yuṭaḥlibāni) /ju.tˤaħ.li.baː.ni/: third-person masculine dual non-past active indicative of طَحْلَبَ (ṭaḥlaba)\n# يُطَحْلَبَانِ (yuṭaḥlabāni) /ju.tˤaħ.la.baː.ni/: third-person masculine dual non-past passive indicative of طَحْلَبَ (ṭaḥlaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuṭaḥlibāni", "ṭaḥlaba", "yuṭaḥlabāni"],
-        "k": "طحلب",
-        "yol": "kök"
-      },
-      {
-        "w": "يطحلب",
-        "u": "يطحلب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطحلب (form Iq)\n# يُطَحْلِبُ (yuṭaḥlibu) /ju.tˤaħ.li.bu/: third-person masculine singular non-past active indicative of طَحْلَبَ (ṭaḥlaba)\n# يُطَحْلَبُ (yuṭaḥlabu) /ju.tˤaħ.la.bu/: third-person masculine singular non-past passive indicative of طَحْلَبَ (ṭaḥlaba)\n# يُطَحْلِبَ (yuṭaḥliba) /ju.tˤaħ.li.ba/: third-person masculine singular non-past active subjunctive of طَحْلَبَ (ṭaḥlaba)\n# يُطَحْلَبَ ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuṭaḥlibu", "ṭaḥlaba", "yuṭaḥlabu"],
-        "k": "طحلب",
-        "yol": "kök"
-      },
-      {
-        "w": "نطحلب",
-        "u": "نطحلب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نطحلب (form Iq)\n# نُطَحْلِبُ (nuṭaḥlibu) /nu.tˤaħ.li.bu/: first-person plural non-past active indicative of طَحْلَبَ (ṭaḥlaba)\n# نُطَحْلَبُ (nuṭaḥlabu) /nu.tˤaħ.la.bu/: first-person plural non-past passive indicative of طَحْلَبَ (ṭaḥlaba)\n# نُطَحْلِبَ (nuṭaḥliba) /nu.tˤaħ.li.ba/: first-person plural non-past active subjunctive of طَحْلَبَ (ṭaḥlaba)\n# نُطَحْلَبَ (nuṭaḥlaba) /nu.tˤaħ.la.ba/: first-p",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["nuṭaḥlibu", "ṭaḥlaba", "nuṭaḥlabu"],
-        "k": "طحلب",
-        "yol": "kök"
-      },
-      {
-        "w": "تطحلبون",
-        "u": "تطحلبون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطحلبون (form Iq)\n# تُطَحْلِبُونَ (tuṭaḥlibūna) /tu.tˤaħ.li.buː.na/: second-person masculine plural non-past active indicative of طَحْلَبَ (ṭaḥlaba)\n# تُطَحْلَبُونَ (tuṭaḥlabūna) /tu.tˤaħ.la.buː.na/: second-person masculine plural non-past passive indicative of طَحْلَبَ (ṭaḥlaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuṭaḥlibūna", "ṭaḥlaba", "tuṭaḥlabūna"],
-        "k": "طحلب",
-        "yol": "kök"
-      },
-      {
-        "w": "تطحلبن",
-        "u": "تطحلبن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطحلبن (form Iq)\n# تُطَحْلِبْنَ (tuṭaḥlibna) /tu.tˤaħ.lib.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of طَحْلَبَ (ṭaḥlaba)\n# تُطَحْلَبْنَ (tuṭaḥlabna) /tu.tˤaħ.lab.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of طَحْلَبَ (ṭaḥlaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuṭaḥlibna", "ṭaḥlaba", "tuṭaḥlabna"],
-        "k": "طحلب",
-        "yol": "kök"
-      },
-      {
-        "w": "يطحلبون",
-        "u": "يطحلبون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطحلبون (form Iq)\n# يُطَحْلِبُونَ (yuṭaḥlibūna) /ju.tˤaħ.li.buː.na/: third-person masculine plural non-past active indicative of طَحْلَبَ (ṭaḥlaba)\n# يُطَحْلَبُونَ (yuṭaḥlabūna) /ju.tˤaħ.la.buː.na/: third-person masculine plural non-past passive indicative of طَحْلَبَ (ṭaḥlaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuṭaḥlibūna", "ṭaḥlaba", "yuṭaḥlabūna"],
-        "k": "طحلب",
-        "yol": "kök"
-      },
-      {
-        "w": "تطحلبا",
-        "u": "تطحلبا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطحلبا (form Iq)\n# تُطَحْلِبَا (tuṭaḥlibā) /tu.tˤaħ.li.baː/: inflection of طَحْلَبَ (ṭaḥlaba):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُطَحْلَبَا (tuṭaḥlabā) /tu.tˤaħ.la.baː/: inflection of طَحْلَبَ (ṭaḥlaba):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passi",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuṭaḥlibā", "ṭaḥlaba", "tuṭaḥlabā"],
-        "k": "طحلب",
-        "yol": "kök"
-      },
-      {
-        "w": "تطحلبي",
-        "u": "تطحلبي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطحلبي (form Iq)\n# تُطَحْلِبِي (tuṭaḥlibī) /tu.tˤaħ.li.biː/: second-person feminine singular non-past active subjunctive/jussive of طَحْلَبَ (ṭaḥlaba)\n# تُطَحْلَبِي (tuṭaḥlabī) /tu.tˤaħ.la.biː/: second-person feminine singular non-past passive subjunctive/jussive of طَحْلَبَ (ṭaḥlaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuṭaḥlibī", "ṭaḥlaba", "tuṭaḥlabī"],
-        "k": "طحلب",
-        "yol": "kök"
-      },
-      {
-        "w": "يطحلبن",
-        "u": "يطحلبن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطحلبن (form Iq)\n# يُطَحْلِبْنَ (yuṭaḥlibna) /ju.tˤaħ.lib.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of طَحْلَبَ (ṭaḥlaba)\n# يُطَحْلَبْنَ (yuṭaḥlabna) /ju.tˤaħ.lab.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of طَحْلَبَ (ṭaḥlaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuṭaḥlibna", "ṭaḥlaba", "yuṭaḥlabna"],
-        "k": "طحلب",
-        "yol": "kök"
-      },
-      {
-        "w": "يطحلبا",
-        "u": "يطحلبا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطحلبا (form Iq)\n# يُطَحْلِبَا (yuṭaḥlibā) /ju.tˤaħ.li.baː/: third-person masculine dual non-past active subjunctive/jussive of طَحْلَبَ (ṭaḥlaba)\n# يُطَحْلَبَا (yuṭaḥlabā) /ju.tˤaħ.la.baː/: third-person masculine dual non-past passive subjunctive/jussive of طَحْلَبَ (ṭaḥlaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuṭaḥlibā", "ṭaḥlaba", "yuṭaḥlabā"],
-        "k": "طحلب",
-        "yol": "kök"
-      },
-      {
-        "w": "تطحلبوا",
-        "u": "تطحلبوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطحلبوا (form Iq)\n# تُطَحْلِبُوا (tuṭaḥlibū) /tu.tˤaħ.li.buː/: second-person masculine plural non-past active subjunctive/jussive of طَحْلَبَ (ṭaḥlaba)\n# تُطَحْلَبُوا (tuṭaḥlabū) /tu.tˤaħ.la.buː/: second-person masculine plural non-past passive subjunctive/jussive of طَحْلَبَ (ṭaḥlaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuṭaḥlibū", "ṭaḥlaba", "tuṭaḥlabū"],
-        "k": "طحلب",
-        "yol": "kök"
-      },
-      {
-        "w": "طحلبي",
-        "u": "طحلبي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَحْلِبِي • (ṭaḥlibī) (form Iq) /tˤaħ.li.biː/\n# second-person feminine singular imperative of طَحْلَبَ (ṭaḥlaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ṭaḥlibī", "ṭaḥlaba"],
-        "k": "طحلب",
-        "yol": "kök"
-      },
-      {
-        "w": "يطحلبوا",
-        "u": "يطحلبوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطحلبوا (form Iq)\n# يُطَحْلِبُوا (yuṭaḥlibū) /ju.tˤaħ.li.buː/: third-person masculine plural non-past active subjunctive/jussive of طَحْلَبَ (ṭaḥlaba)\n# يُطَحْلَبُوا (yuṭaḥlabū) /ju.tˤaħ.la.buː/: third-person masculine plural non-past passive subjunctive/jussive of طَحْلَبَ (ṭaḥlaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuṭaḥlibū", "ṭaḥlaba", "yuṭaḥlabū"],
-        "k": "طحلب",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "طح",
+  "ses": {
     "harf": "ط",
+    "fasil": "طح",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "طحلبا",
+      "tur": "verb",
+      "baslik": "طحلبا (form Iq)\n# طَحْلَبَا (ṭaḥlabā) /tˤaħ.la.baː/: third-person masculine dual past active of طَحْلَبَ (ṭaḥlaba)\n# طُحْلِبَا (ṭuḥlibā) /tˤuħ.li.baː/: third-person masculine dual past passive of طَحْلَبَ (ṭaḥlaba)\n# طَحْلِبَا (ṭaḥlibā) /tˤaħ.li.baː/: second-person dual imperative of طَحْلَبَ (ṭaḥlaba)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭaḥlabā", "ṭaḥlaba", "ṭuḥlibā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طحلبت",
+      "tur": "verb",
+      "baslik": "طحلبت (form Iq)\n# طَحْلَبْتُ (ṭaḥlabtu) /tˤaħ.lab.tu/: first-person singular past active of طَحْلَبَ (ṭaḥlaba)\n# طَحْلَبْتَ (ṭaḥlabta) /tˤaħ.lab.ta/: second-person masculine singular past active of طَحْلَبَ (ṭaḥlaba)\n# طَحْلَبْتِ (ṭaḥlabti) /tˤaħ.lab.ti/: second-person feminine singular past active of طَحْلَبَ (ṭaḥlaba)\n# طَحْلَبَتْ (ṭaḥlabat) /tˤaħ.la.bat/: third-person feminine singular past act",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭaḥlabtu", "ṭaḥlaba", "ṭaḥlabta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طحلبتما",
+      "tur": "verb",
+      "baslik": "طحلبتما (form Iq)\n# طَحْلَبْتُمَا (ṭaḥlabtumā) /tˤaħ.lab.tu.maː/: second-person dual past active of طَحْلَبَ (ṭaḥlaba)\n# طُحْلِبْتُمَا (ṭuḥlibtumā) /tˤuħ.lib.tu.maː/: second-person dual past passive of طَحْلَبَ (ṭaḥlaba)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭaḥlabtumā", "ṭaḥlaba", "ṭuḥlibtumā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طحلبنا",
+      "tur": "verb",
+      "baslik": "طحلبنا (form Iq)\n# طَحْلَبْنَا (ṭaḥlabnā) /tˤaħ.lab.naː/: first-person plural past active of طَحْلَبَ (ṭaḥlaba)\n# طُحْلِبْنَا (ṭuḥlibnā) /tˤuħ.lib.naː/: first-person plural past passive of طَحْلَبَ (ṭaḥlaba)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭaḥlabnā", "ṭaḥlaba", "ṭuḥlibnā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طحلبتم",
+      "tur": "verb",
+      "baslik": "طحلبتم (form Iq)\n# طَحْلَبْتُمْ (ṭaḥlabtum) /tˤaħ.lab.tum/: second-person masculine plural past active of طَحْلَبَ (ṭaḥlaba)\n# طُحْلِبْتُمْ (ṭuḥlibtum) /tˤuħ.lib.tum/: second-person masculine plural past passive of طَحْلَبَ (ṭaḥlaba)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭaḥlabtum", "ṭaḥlaba", "ṭuḥlibtum"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طحلبتا",
+      "tur": "verb",
+      "baslik": "طحلبتا (form Iq)\n# طَحْلَبَتَا (ṭaḥlabatā) /tˤaħ.la.ba.taː/: third-person feminine dual past active of طَحْلَبَ (ṭaḥlaba)\n# طُحْلِبَتَا (ṭuḥlibatā) /tˤuħ.li.ba.taː/: third-person feminine dual past passive of طَحْلَبَ (ṭaḥlaba)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭaḥlabatā", "ṭaḥlaba", "ṭuḥlibatā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طحلبتن",
+      "tur": "verb",
+      "baslik": "طحلبتن (form Iq)\n# طَحْلَبْتُنَّ (ṭaḥlabtunna) /tˤaħ.lab.tun.na/: second-person feminine plural past active of طَحْلَبَ (ṭaḥlaba)\n# طُحْلِبْتُنَّ (ṭuḥlibtunna) /tˤuħ.lib.tun.na/: second-person feminine plural past passive of طَحْلَبَ (ṭaḥlaba)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭaḥlabtunna", "ṭaḥlaba", "ṭuḥlibtunna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طحلبوا",
+      "tur": "verb",
+      "baslik": "طحلبوا (form Iq)\n# طَحْلَبُوا (ṭaḥlabū) /tˤaħ.la.buː/: third-person masculine plural past active of طَحْلَبَ (ṭaḥlaba)\n# طُحْلِبُوا (ṭuḥlibū) /tˤuħ.li.buː/: third-person masculine plural past passive of طَحْلَبَ (ṭaḥlaba)\n# طَحْلِبُوا (ṭaḥlibū) /tˤaħ.li.buː/: second-person masculine plural imperative of طَحْلَبَ (ṭaḥlaba)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭaḥlabū", "ṭaḥlaba", "ṭuḥlibū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طحلبن",
+      "tur": "verb",
+      "baslik": "طحلبن (form Iq)\n# طَحْلَبْنَ (ṭaḥlabna) /tˤaħ.lab.na/: third-person feminine plural past active of طَحْلَبَ (ṭaḥlaba)\n# طُحْلِبْنَ (ṭuḥlibna) /tˤuħ.lib.na/: third-person feminine plural past passive of طَحْلَبَ (ṭaḥlaba)\n# طَحْلِبْنَ (ṭaḥlibna) /tˤaħ.lib.na/: second-person feminine plural imperative of طَحْلَبَ (ṭaḥlaba)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭaḥlabna", "ṭaḥlaba", "ṭuḥlibna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أطحلب",
+      "tur": "verb",
+      "baslik": "أطحلب (form Iq)\n# أُطَحْلِبُ (ʔuṭaḥlibu) /ʔu.tˤaħ.li.bu/: first-person singular non-past active indicative of طَحْلَبَ (ṭaḥlaba)\n# أُطَحْلَبُ (ʔuṭaḥlabu) /ʔu.tˤaħ.la.bu/: first-person singular non-past passive indicative of طَحْلَبَ (ṭaḥlaba)\n# أُطَحْلِبَ (ʔuṭaḥliba) /ʔu.tˤaħ.li.ba/: first-person singular non-past active subjunctive of طَحْلَبَ (ṭaḥlaba)\n# أُطَحْلَبَ (ʔuṭaḥlaba) /ʔu.tˤaħ.la.ba/: f",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʔuṭaḥlibu", "ṭaḥlaba", "ʔuṭaḥlabu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطحلب",
+      "tur": "verb",
+      "baslik": "تطحلب (form Iq)\n# تُطَحْلِبُ (tuṭaḥlibu) /tu.tˤaħ.li.bu/: inflection of طَحْلَبَ (ṭaḥlaba):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُطَحْلَبُ (tuṭaḥlabu) /tu.tˤaħ.la.bu/: inflection of طَحْلَبَ (ṭaḥlaba):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past p",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuṭaḥlibu", "ṭaḥlaba", "tuṭaḥlabu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطحلبان",
+      "tur": "verb",
+      "baslik": "تطحلبان (form Iq)\n# تُطَحْلِبَانِ (tuṭaḥlibāni) /tu.tˤaħ.li.baː.ni/: inflection of طَحْلَبَ (ṭaḥlaba):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُطَحْلَبَانِ (tuṭaḥlabāni) /tu.tˤaħ.la.baː.ni/: inflection of طَحْلَبَ (ṭaḥlaba):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicativ",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuṭaḥlibāni", "ṭaḥlaba", "tuṭaḥlabāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطحلبين",
+      "tur": "verb",
+      "baslik": "تطحلبين (form Iq)\n# تُطَحْلِبِينَ (tuṭaḥlibīna) /tu.tˤaħ.li.biː.na/: second-person feminine singular non-past active indicative of طَحْلَبَ (ṭaḥlaba)\n# تُطَحْلَبِينَ (tuṭaḥlabīna) /tu.tˤaħ.la.biː.na/: second-person feminine singular non-past passive indicative of طَحْلَبَ (ṭaḥlaba)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuṭaḥlibīna", "ṭaḥlaba", "tuṭaḥlabīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطحلبان",
+      "tur": "verb",
+      "baslik": "يطحلبان (form Iq)\n# يُطَحْلِبَانِ (yuṭaḥlibāni) /ju.tˤaħ.li.baː.ni/: third-person masculine dual non-past active indicative of طَحْلَبَ (ṭaḥlaba)\n# يُطَحْلَبَانِ (yuṭaḥlabāni) /ju.tˤaħ.la.baː.ni/: third-person masculine dual non-past passive indicative of طَحْلَبَ (ṭaḥlaba)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuṭaḥlibāni", "ṭaḥlaba", "yuṭaḥlabāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطحلب",
+      "tur": "verb",
+      "baslik": "يطحلب (form Iq)\n# يُطَحْلِبُ (yuṭaḥlibu) /ju.tˤaħ.li.bu/: third-person masculine singular non-past active indicative of طَحْلَبَ (ṭaḥlaba)\n# يُطَحْلَبُ (yuṭaḥlabu) /ju.tˤaħ.la.bu/: third-person masculine singular non-past passive indicative of طَحْلَبَ (ṭaḥlaba)\n# يُطَحْلِبَ (yuṭaḥliba) /ju.tˤaħ.li.ba/: third-person masculine singular non-past active subjunctive of طَحْلَبَ (ṭaḥlaba)\n# يُطَحْلَبَ ",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuṭaḥlibu", "ṭaḥlaba", "yuṭaḥlabu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نطحلب",
+      "tur": "verb",
+      "baslik": "نطحلب (form Iq)\n# نُطَحْلِبُ (nuṭaḥlibu) /nu.tˤaħ.li.bu/: first-person plural non-past active indicative of طَحْلَبَ (ṭaḥlaba)\n# نُطَحْلَبُ (nuṭaḥlabu) /nu.tˤaħ.la.bu/: first-person plural non-past passive indicative of طَحْلَبَ (ṭaḥlaba)\n# نُطَحْلِبَ (nuṭaḥliba) /nu.tˤaħ.li.ba/: first-person plural non-past active subjunctive of طَحْلَبَ (ṭaḥlaba)\n# نُطَحْلَبَ (nuṭaḥlaba) /nu.tˤaħ.la.ba/: first-p",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["nuṭaḥlibu", "ṭaḥlaba", "nuṭaḥlabu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطحلبون",
+      "tur": "verb",
+      "baslik": "تطحلبون (form Iq)\n# تُطَحْلِبُونَ (tuṭaḥlibūna) /tu.tˤaħ.li.buː.na/: second-person masculine plural non-past active indicative of طَحْلَبَ (ṭaḥlaba)\n# تُطَحْلَبُونَ (tuṭaḥlabūna) /tu.tˤaħ.la.buː.na/: second-person masculine plural non-past passive indicative of طَحْلَبَ (ṭaḥlaba)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuṭaḥlibūna", "ṭaḥlaba", "tuṭaḥlabūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطحلبن",
+      "tur": "verb",
+      "baslik": "تطحلبن (form Iq)\n# تُطَحْلِبْنَ (tuṭaḥlibna) /tu.tˤaħ.lib.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of طَحْلَبَ (ṭaḥlaba)\n# تُطَحْلَبْنَ (tuṭaḥlabna) /tu.tˤaħ.lab.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of طَحْلَبَ (ṭaḥlaba)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuṭaḥlibna", "ṭaḥlaba", "tuṭaḥlabna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطحلبون",
+      "tur": "verb",
+      "baslik": "يطحلبون (form Iq)\n# يُطَحْلِبُونَ (yuṭaḥlibūna) /ju.tˤaħ.li.buː.na/: third-person masculine plural non-past active indicative of طَحْلَبَ (ṭaḥlaba)\n# يُطَحْلَبُونَ (yuṭaḥlabūna) /ju.tˤaħ.la.buː.na/: third-person masculine plural non-past passive indicative of طَحْلَبَ (ṭaḥlaba)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuṭaḥlibūna", "ṭaḥlaba", "yuṭaḥlabūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطحلبا",
+      "tur": "verb",
+      "baslik": "تطحلبا (form Iq)\n# تُطَحْلِبَا (tuṭaḥlibā) /tu.tˤaħ.li.baː/: inflection of طَحْلَبَ (ṭaḥlaba):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُطَحْلَبَا (tuṭaḥlabā) /tu.tˤaħ.la.baː/: inflection of طَحْلَبَ (ṭaḥlaba):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passi",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuṭaḥlibā", "ṭaḥlaba", "tuṭaḥlabā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطحلبي",
+      "tur": "verb",
+      "baslik": "تطحلبي (form Iq)\n# تُطَحْلِبِي (tuṭaḥlibī) /tu.tˤaħ.li.biː/: second-person feminine singular non-past active subjunctive/jussive of طَحْلَبَ (ṭaḥlaba)\n# تُطَحْلَبِي (tuṭaḥlabī) /tu.tˤaħ.la.biː/: second-person feminine singular non-past passive subjunctive/jussive of طَحْلَبَ (ṭaḥlaba)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuṭaḥlibī", "ṭaḥlaba", "tuṭaḥlabī"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطحلبن",
+      "tur": "verb",
+      "baslik": "يطحلبن (form Iq)\n# يُطَحْلِبْنَ (yuṭaḥlibna) /ju.tˤaħ.lib.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of طَحْلَبَ (ṭaḥlaba)\n# يُطَحْلَبْنَ (yuṭaḥlabna) /ju.tˤaħ.lab.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of طَحْلَبَ (ṭaḥlaba)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuṭaḥlibna", "ṭaḥlaba", "yuṭaḥlabna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطحلبا",
+      "tur": "verb",
+      "baslik": "يطحلبا (form Iq)\n# يُطَحْلِبَا (yuṭaḥlibā) /ju.tˤaħ.li.baː/: third-person masculine dual non-past active subjunctive/jussive of طَحْلَبَ (ṭaḥlaba)\n# يُطَحْلَبَا (yuṭaḥlabā) /ju.tˤaħ.la.baː/: third-person masculine dual non-past passive subjunctive/jussive of طَحْلَبَ (ṭaḥlaba)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuṭaḥlibā", "ṭaḥlaba", "yuṭaḥlabā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطحلبوا",
+      "tur": "verb",
+      "baslik": "تطحلبوا (form Iq)\n# تُطَحْلِبُوا (tuṭaḥlibū) /tu.tˤaħ.li.buː/: second-person masculine plural non-past active subjunctive/jussive of طَحْلَبَ (ṭaḥlaba)\n# تُطَحْلَبُوا (tuṭaḥlabū) /tu.tˤaħ.la.buː/: second-person masculine plural non-past passive subjunctive/jussive of طَحْلَبَ (ṭaḥlaba)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuṭaḥlibū", "ṭaḥlaba", "tuṭaḥlabū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طحلبي",
+      "tur": "verb",
+      "baslik": "طَحْلِبِي • (ṭaḥlibī) (form Iq) /tˤaħ.li.biː/\n# second-person feminine singular imperative of طَحْلَبَ (ṭaḥlaba)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ṭaḥlibī", "ṭaḥlaba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطحلبوا",
+      "tur": "verb",
+      "baslik": "يطحلبوا (form Iq)\n# يُطَحْلِبُوا (yuṭaḥlibū) /ju.tˤaħ.li.buː/: third-person masculine plural non-past active subjunctive/jussive of طَحْلَبَ (ṭaḥlaba)\n# يُطَحْلَبُوا (yuṭaḥlabū) /ju.tˤaħ.la.buː/: third-person masculine plural non-past passive subjunctive/jussive of طَحْلَبَ (ṭaḥlaba)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuṭaḥlibū", "ṭaḥlaba", "yuṭaḥlabū"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "طحلب", "r6"]
+  ],
+  "mana": {
     "ince": "whole.n.02",
     "orta": "noun.plant",
     "ust": "canlı ve beden",
@@ -347,22 +248,15 @@
     "dayanak_tanim": "tiny leafy-stemmed flowerless plants",
     "synset_sayisi": 5
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["algal.a.01", "algoid.a.01", "living_thing.n.01", "taxonomic_group.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["algal.a.01", "algoid.a.01", "living_thing.n.01", "taxonomic_group.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

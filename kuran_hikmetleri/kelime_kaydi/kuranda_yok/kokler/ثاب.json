@@ -1,477 +1,342 @@
 {
   "kok": "ثاب",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ثاب", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "ثبت",
-        "u": "ثبت",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "ثبت (form I)\n# ثُبْتُ (ṯubtu) /θub.tu/: first-person singular past active of ثَابَ (ṯāba)\n# ثُبْتَ (ṯubta) /θub.ta/: second-person masculine singular past active of ثَابَ (ṯāba)\n# ثُبْتِ (ṯubti) /θub.ti/: second-person feminine singular past active of ثَابَ (ṯāba)",
-        "tag": ["form-i", "intransitive", "no-gloss"],
-        "r": ["ṯubtu", "ṯāba", "ṯubta"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "ثابت",
-        "u": "ثابت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ثَابَتْ • (ṯābat) (form I) /θaː.bat/\n# third-person feminine singular past active of ثَابَ (ṯāba)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṯābat", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "ثبتم",
-        "u": "ثبتم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ثُبْتُمْ • (ṯubtum) (form I) /θub.tum/\n# second-person masculine plural past active of ثَابَ (ṯāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṯubtum", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "ثبتن",
-        "u": "ثبتن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ثُبْتُنَّ • (ṯubtunna) (form I) /θub.tun.na/\n# second-person feminine plural past active of ثَابَ (ṯāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṯubtunna", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "ثيب",
-        "u": "ثيب",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ثِيبَ • (ṯība) (form I) /θiː.ba/\n# third-person masculine singular past passive of ثَابَ (ṯāba)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṯība", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تثبن",
-        "u": "تثبن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَثُبْنَ • (taṯubna) (form I) /ta.θub.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of ثَابَ (ṯāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṯubna", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يثبن",
-        "u": "يثبن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَثُبْنَ • (yaṯubna) (form I) /ja.θub.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of ثَابَ (ṯāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṯubna", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يثاب",
-        "u": "يثاب",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يثاب (form I)\n# يُثَابُ (yuṯābu) /ju.θaː.bu/: third-person masculine singular non-past passive indicative of ثَابَ (ṯāba)\n# يُثَابَ (yuṯāba) /ju.θaː.ba/: third-person masculine singular non-past passive subjunctive of ثَابَ (ṯāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuṯābu", "ṯāba", "yuṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يثب",
-        "u": "يثب",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يثب (form I)\n# يَثُبْ (yaṯub) /ja.θub/: third-person masculine singular non-past active jussive of ثَابَ (ṯāba)\n# يُثَبْ (yuṯab) /ju.θab/: third-person masculine singular non-past passive jussive of ثَابَ (ṯāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṯub", "ṯāba", "yuṯab"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تثب",
-        "u": "تثب",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَثُبْ • (taṯub) (form I) /ta.θub/\n# inflection of ثَابَ (ṯāba):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṯub", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "أثب",
-        "u": "أثب",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَثُبْ • (ʔaṯub) (form I) /ʔa.θub/\n# first-person singular non-past active jussive of ثَابَ (ṯāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaṯub", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "نثب",
-        "u": "نثب",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نَثُبْ • (naṯub) (form I) /na.θub/\n# first-person plural non-past active jussive of ثَابَ (ṯāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naṯub", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "ثبنا",
-        "u": "ثبنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ثُبْنَا • (ṯubnā) (form I) /θub.naː/\n# first-person plural past active of ثَابَ (ṯāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṯubnā", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "ثابتا",
-        "u": "ثابتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ثَابَتَا • (ṯābatā) (form I) /θaː.ba.taː/\n# third-person feminine dual past active of ثَابَ (ṯāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṯābatā", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "ثابا",
-        "u": "ثابا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ثَابَا • (ṯābā) (form I) /θaː.baː/\n# third-person masculine dual past active of ثَابَ (ṯāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṯābā", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "ثابوا",
-        "u": "ثابوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ثَابُوا • (ṯābū) (form I) /θaː.buː/\n# third-person masculine plural past active of ثَابَ (ṯāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṯābū", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "ثبتما",
-        "u": "ثبتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ثُبْتُمَا • (ṯubtumā) (form I) /θub.tu.maː/\n# second-person dual past active of ثَابَ (ṯāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṯubtumā", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "أثوب",
-        "u": "أثوب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أثوب (form I)\n# أَثُوبُ (ʔaṯūbu) /ʔa.θuː.bu/: first-person singular non-past active indicative of ثَابَ (ṯāba)\n# أَثُوبَ (ʔaṯūba) /ʔa.θuː.ba/: first-person singular non-past active subjunctive of ثَابَ (ṯāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaṯūbu", "ṯāba", "ʔaṯūba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تثوبين",
-        "u": "تثوبين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَثُوبِينَ • (taṯūbīna) (form I) /ta.θuː.biː.na/\n# second-person feminine singular non-past active indicative of ثَابَ (ṯāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṯūbīna", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يثوبان",
-        "u": "يثوبان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَثُوبَانِ • (yaṯūbāni) (form I) /ja.θuː.baː.ni/\n# third-person masculine dual non-past active indicative of ثَابَ (ṯāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṯūbāni", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "نثوب",
-        "u": "نثوب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نثوب (form I)\n# نَثُوبُ (naṯūbu) /na.θuː.bu/: first-person plural non-past active indicative of ثَابَ (ṯāba)\n# نَثُوبَ (naṯūba) /na.θuː.ba/: first-person plural non-past active subjunctive of ثَابَ (ṯāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naṯūbu", "ṯāba", "naṯūba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "ثبن",
-        "u": "ثبن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ثُبْنَ • (ṯubna) (form I) /θub.na/\n# inflection of ثَابَ (ṯāba):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṯubna", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يثوبون",
-        "u": "يثوبون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَثُوبُونَ • (yaṯūbūna) (form I) /ja.θuː.buː.na/\n# third-person masculine plural non-past active indicative of ثَابَ (ṯāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṯūbūna", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يثوب",
-        "u": "يثوب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يثوب (form I)\n# يَثُوبُ (yaṯūbu) /ja.θuː.bu/: third-person masculine singular non-past active indicative of ثَابَ (ṯāba)\n# يَثُوبَ (yaṯūba) /ja.θuː.ba/: third-person masculine singular non-past active subjunctive of ثَابَ (ṯāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṯūbu", "ṯāba", "yaṯūba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تثوبي",
-        "u": "تثوبي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَثُوبِي • (taṯūbī) (form I) /ta.θuː.biː/\n# second-person feminine singular non-past active subjunctive/jussive of ثَابَ (ṯāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṯūbī", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يثوبا",
-        "u": "يثوبا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَثُوبَا • (yaṯūbā) (form I) /ja.θuː.baː/\n# third-person masculine dual non-past active subjunctive/jussive of ثَابَ (ṯāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṯūbā", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تثوبون",
-        "u": "تثوبون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَثُوبُونَ • (taṯūbūna) (form I) /ta.θuː.buː.na/\n# second-person masculine plural non-past active indicative of ثَابَ (ṯāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṯūbūna", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تثوبان",
-        "u": "تثوبان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَثُوبَانِ • (taṯūbāni) (form I) /ta.θuː.baː.ni/\n# inflection of ثَابَ (ṯāba):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṯūbāni", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يثوبوا",
-        "u": "يثوبوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَثُوبُوا • (yaṯūbū) (form I) /ja.θuː.buː/\n# third-person masculine plural non-past active subjunctive/jussive of ثَابَ (ṯāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṯūbū", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "ثوبي",
-        "u": "ثوبي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ثُوبِي • (ṯūbī) (form I) /θuː.biː/\n# second-person feminine singular imperative of ثَابَ (ṯāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṯūbī", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تثوب",
-        "u": "تثوب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تثوب (form I)\n# تَثُوبُ (taṯūbu) /ta.θuː.bu/: inflection of ثَابَ (ṯāba):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَثُوبَ (taṯūba) /ta.θuː.ba/: inflection of ثَابَ (ṯāba):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṯūbu", "ṯāba", "taṯūba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تثوبوا",
-        "u": "تثوبوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَثُوبُوا • (taṯūbū) (form I) /ta.θuː.buː/\n# second-person masculine plural non-past active subjunctive/jussive of ثَابَ (ṯāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṯūbū", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تثوبا",
-        "u": "تثوبا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَثُوبَا • (taṯūbā) (form I) /ta.θuː.baː/\n# inflection of ثَابَ (ṯāba):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṯūbā", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "ثوبا",
-        "u": "ثوبا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ثُوبَا • (ṯūbā) (form I) /θuː.baː/\n# second-person dual imperative of ثَابَ (ṯāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṯūbā", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "ثوبوا",
-        "u": "ثوبوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ثُوبُوا • (ṯūbū) (form I) /θuː.buː/\n# second-person masculine plural imperative of ثَابَ (ṯāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṯūbū", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      },
-      {
-        "w": "ثب",
-        "u": "ثب",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ثُبْ • (ṯub) (form I) /θub/\n# second-person masculine singular imperative of ثَابَ (ṯāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṯub", "ṯāba"],
-        "k": "ثاب",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "ثب",
+  "ses": {
     "harf": "ث",
+    "fasil": "ثب",
     "mahrec": "lessiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "ثبت",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "ثبت (form I)\n# ثُبْتُ (ṯubtu) /θub.tu/: first-person singular past active of ثَابَ (ṯāba)\n# ثُبْتَ (ṯubta) /θub.ta/: second-person masculine singular past active of ثَابَ (ṯāba)\n# ثُبْتِ (ṯubti) /θub.ti/: second-person feminine singular past active of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "intransitive", "no-gloss"],
+      "okunus": ["ṯubtu", "ṯāba", "ṯubta"]
+    },
+    {
+      "madde": "ثابت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ثَابَتْ • (ṯābat) (form I) /θaː.bat/\n# third-person feminine singular past active of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṯābat", "ṯāba"]
+    },
+    {
+      "madde": "ثبتم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ثُبْتُمْ • (ṯubtum) (form I) /θub.tum/\n# second-person masculine plural past active of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṯubtum", "ṯāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ثبتن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ثُبْتُنَّ • (ṯubtunna) (form I) /θub.tun.na/\n# second-person feminine plural past active of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṯubtunna", "ṯāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ثيب",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ثِيبَ • (ṯība) (form I) /θiː.ba/\n# third-person masculine singular past passive of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṯība", "ṯāba"]
+    },
+    {
+      "madde": "تثبن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَثُبْنَ • (taṯubna) (form I) /ta.θub.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṯubna", "ṯāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يثبن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَثُبْنَ • (yaṯubna) (form I) /ja.θub.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṯubna", "ṯāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يثاب",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يثاب (form I)\n# يُثَابُ (yuṯābu) /ju.θaː.bu/: third-person masculine singular non-past passive indicative of ثَابَ (ṯāba)\n# يُثَابَ (yuṯāba) /ju.θaː.ba/: third-person masculine singular non-past passive subjunctive of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuṯābu", "ṯāba", "yuṯāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يثب",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يثب (form I)\n# يَثُبْ (yaṯub) /ja.θub/: third-person masculine singular non-past active jussive of ثَابَ (ṯāba)\n# يُثَبْ (yuṯab) /ju.θab/: third-person masculine singular non-past passive jussive of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṯub", "ṯāba", "yuṯab"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تثب",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَثُبْ • (taṯub) (form I) /ta.θub/\n# inflection of ثَابَ (ṯāba):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṯub", "ṯāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أثب",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَثُبْ • (ʔaṯub) (form I) /ʔa.θub/\n# first-person singular non-past active jussive of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaṯub", "ṯāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نثب",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نَثُبْ • (naṯub) (form I) /na.θub/\n# first-person plural non-past active jussive of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naṯub", "ṯāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ثبنا",
+      "tur": "verb",
+      "baslik": "ثُبْنَا • (ṯubnā) (form I) /θub.naː/\n# first-person plural past active of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṯubnā", "ṯāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ثابتا",
+      "tur": "verb",
+      "baslik": "ثَابَتَا • (ṯābatā) (form I) /θaː.ba.taː/\n# third-person feminine dual past active of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṯābatā", "ṯāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ثابا",
+      "tur": "verb",
+      "baslik": "ثَابَا • (ṯābā) (form I) /θaː.baː/\n# third-person masculine dual past active of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṯābā", "ṯāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ثابوا",
+      "tur": "verb",
+      "baslik": "ثَابُوا • (ṯābū) (form I) /θaː.buː/\n# third-person masculine plural past active of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṯābū", "ṯāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ثبتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ثُبْتُمَا • (ṯubtumā) (form I) /θub.tu.maː/\n# second-person dual past active of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṯubtumā", "ṯāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أثوب",
+      "tur": "verb",
+      "baslik": "أثوب (form I)\n# أَثُوبُ (ʔaṯūbu) /ʔa.θuː.bu/: first-person singular non-past active indicative of ثَابَ (ṯāba)\n# أَثُوبَ (ʔaṯūba) /ʔa.θuː.ba/: first-person singular non-past active subjunctive of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaṯūbu", "ṯāba", "ʔaṯūba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تثوبين",
+      "tur": "verb",
+      "baslik": "تَثُوبِينَ • (taṯūbīna) (form I) /ta.θuː.biː.na/\n# second-person feminine singular non-past active indicative of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṯūbīna", "ṯāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يثوبان",
+      "tur": "verb",
+      "baslik": "يَثُوبَانِ • (yaṯūbāni) (form I) /ja.θuː.baː.ni/\n# third-person masculine dual non-past active indicative of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṯūbāni", "ṯāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نثوب",
+      "tur": "verb",
+      "baslik": "نثوب (form I)\n# نَثُوبُ (naṯūbu) /na.θuː.bu/: first-person plural non-past active indicative of ثَابَ (ṯāba)\n# نَثُوبَ (naṯūba) /na.θuː.ba/: first-person plural non-past active subjunctive of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naṯūbu", "ṯāba", "naṯūba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ثبن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ثُبْنَ • (ṯubna) (form I) /θub.na/\n# inflection of ثَابَ (ṯāba):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṯubna", "ṯāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يثوبون",
+      "tur": "verb",
+      "baslik": "يَثُوبُونَ • (yaṯūbūna) (form I) /ja.θuː.buː.na/\n# third-person masculine plural non-past active indicative of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṯūbūna", "ṯāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يثوب",
+      "tur": "verb",
+      "baslik": "يثوب (form I)\n# يَثُوبُ (yaṯūbu) /ja.θuː.bu/: third-person masculine singular non-past active indicative of ثَابَ (ṯāba)\n# يَثُوبَ (yaṯūba) /ja.θuː.ba/: third-person masculine singular non-past active subjunctive of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṯūbu", "ṯāba", "yaṯūba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تثوبي",
+      "tur": "verb",
+      "baslik": "تَثُوبِي • (taṯūbī) (form I) /ta.θuː.biː/\n# second-person feminine singular non-past active subjunctive/jussive of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṯūbī", "ṯāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يثوبا",
+      "tur": "verb",
+      "baslik": "يَثُوبَا • (yaṯūbā) (form I) /ja.θuː.baː/\n# third-person masculine dual non-past active subjunctive/jussive of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṯūbā", "ṯāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تثوبون",
+      "tur": "verb",
+      "baslik": "تَثُوبُونَ • (taṯūbūna) (form I) /ta.θuː.buː.na/\n# second-person masculine plural non-past active indicative of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṯūbūna", "ṯāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تثوبان",
+      "tur": "verb",
+      "baslik": "تَثُوبَانِ • (taṯūbāni) (form I) /ta.θuː.baː.ni/\n# inflection of ثَابَ (ṯāba):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṯūbāni", "ṯāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يثوبوا",
+      "tur": "verb",
+      "baslik": "يَثُوبُوا • (yaṯūbū) (form I) /ja.θuː.buː/\n# third-person masculine plural non-past active subjunctive/jussive of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṯūbū", "ṯāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ثوبي",
+      "tur": "verb",
+      "baslik": "ثُوبِي • (ṯūbī) (form I) /θuː.biː/\n# second-person feminine singular imperative of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṯūbī", "ṯāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تثوب",
+      "tur": "verb",
+      "baslik": "تثوب (form I)\n# تَثُوبُ (taṯūbu) /ta.θuː.bu/: inflection of ثَابَ (ṯāba):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَثُوبَ (taṯūba) /ta.θuː.ba/: inflection of ثَابَ (ṯāba):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṯūbu", "ṯāba", "taṯūba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تثوبوا",
+      "tur": "verb",
+      "baslik": "تَثُوبُوا • (taṯūbū) (form I) /ta.θuː.buː/\n# second-person masculine plural non-past active subjunctive/jussive of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṯūbū", "ṯāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تثوبا",
+      "tur": "verb",
+      "baslik": "تَثُوبَا • (taṯūbā) (form I) /ta.θuː.baː/\n# inflection of ثَابَ (ṯāba):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṯūbā", "ṯāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ثوبا",
+      "tur": "verb",
+      "baslik": "ثُوبَا • (ṯūbā) (form I) /θuː.baː/\n# second-person dual imperative of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṯūbā", "ṯāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ثوبوا",
+      "tur": "verb",
+      "baslik": "ثُوبُوا • (ṯūbū) (form I) /θuː.buː/\n# second-person masculine plural imperative of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṯūbū", "ṯāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ثب",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ثُبْ • (ṯub) (form I) /θub/\n# second-person masculine singular imperative of ثَابَ (ṯāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṯub", "ṯāba"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ثاب", "r7"]
+  ],
+  "mana": {
     "ince": "inform.v.01",
     "orta": "verb.communication",
     "ust": "söz ve haber",
@@ -479,16 +344,11 @@
     "dayanak_tanim": "give expression to",
     "synset_sayisi": 38
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "adjust.v.01",
     "affirm.v.02",
     "affirm.v.03",
@@ -528,12 +388,10 @@
     "trip_up.v.01",
     "verify.v.01"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

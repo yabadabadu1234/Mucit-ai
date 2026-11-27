@@ -1,697 +1,494 @@
 {
   "kok": "ساق",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ساق", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تسوق",
-        "u": "تسوق",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تسوق (form I)\n# تَسُوقُ (tasūqu) /ta.suː.qu/: inflection of سَاقَ (sāqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَسُوقَ (tasūqa) /ta.suː.qa/: inflection of سَاقَ (sāqa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasūqu", "sāqa", "tasūqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "يسوق",
-        "u": "يسوق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يسوق (form I)\n# يَسُوقُ (yasūqu) /ja.suː.qu/: third-person masculine singular non-past active indicative of سَاقَ (sāqa)\n# يَسُوقَ (yasūqa) /ja.suː.qa/: third-person masculine singular non-past active subjunctive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasūqu", "sāqa", "yasūqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "يساق",
-        "u": "يساق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يساق (form I)\n# يُسَاقُ (yusāqu) /ju.saː.qu/: third-person masculine singular non-past passive indicative of سَاقَ (sāqa)\n# يُسَاقَ (yusāqa) /ju.saː.qa/: third-person masculine singular non-past passive subjunctive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yusāqu", "sāqa", "yusāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "يسق",
-        "u": "يسق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يسق (form I)\n# يَسُقْ (yasuq) /ja.suq/: third-person masculine singular non-past active jussive of سَاقَ (sāqa)\n# يُسَقْ (yusaq) /ju.saq/: third-person masculine singular non-past passive jussive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasuq", "sāqa", "yusaq"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "سيق",
-        "u": "سيق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سِيقَ • (sīqa) (form I) /siː.qa/\n# third-person masculine singular past passive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sīqa", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "ساقت",
-        "u": "ساقت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سَاقَتْ • (sāqat) (form I) /saː.qat/\n# third-person feminine singular past active of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sāqat", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "تسق",
-        "u": "تسق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تسق (form I)\n# تَسُقْ (tasuq) /ta.suq/: inflection of سَاقَ (sāqa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُسَقْ (tusaq) /tu.saq/: inflection of سَاقَ (sāqa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasuq", "sāqa", "tusaq"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "سيقت",
-        "u": "سيقت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سِيقَتْ • (sīqat) (form I) /siː.qat/\n# third-person feminine singular past passive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sīqat", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "تساق",
-        "u": "تساق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تساق (form I)\n# تُسَاقُ (tusāqu) /tu.saː.qu/: inflection of سَاقَ (sāqa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُسَاقَ (tusāqa) /tu.saː.qa/: inflection of سَاقَ (sāqa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tusāqu", "sāqa", "tusāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "سقت",
-        "u": "سقت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "سقت (form I)\n# سُقْتُ (suqtu) /suq.tu/: first-person singular past active of سَاقَ (sāqa)\n# سُقْتَ (suqta) /suq.ta/: second-person masculine singular past active of سَاقَ (sāqa)\n# سُقْتِ (suqti) /suq.ti/: second-person feminine singular past active of سَاقَ (sāqa)\n# سِقْتُ (siqtu) /siq.tu/: first-person singular past passive of سَاقَ (sāqa)\n# سِقْتَ (siqta) /siq.ta/: second-person masculine singul",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["suqtu", "sāqa", "suqta"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "سق",
-        "u": "سق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "سُقْ • (suq) (form I) /suq/\n# second-person masculine singular imperative of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["suq", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "تسوقي",
-        "u": "تسوقي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَسُوقِي • (tasūqī) (form I) /ta.suː.qiː/\n# second-person feminine singular non-past active subjunctive/jussive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasūqī", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "تسوقين",
-        "u": "تسوقين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَسُوقِينَ • (tasūqīna) (form I) /ta.suː.qiː.na/\n# second-person feminine singular non-past active indicative of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasūqīna", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "سوقي",
-        "u": "سوقي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "سُوقِي • (sūqī) (form I) /suː.qiː/\n# second-person feminine singular imperative of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sūqī", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "تساقين",
-        "u": "تساقين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُسَاقِينَ • (tusāqīna) (form I) /tu.saː.qiː.na/\n# second-person feminine singular non-past passive indicative of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tusāqīna", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "تساقي",
-        "u": "تساقي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُسَاقِي • (tusāqī) (form I) /tu.saː.qiː/\n# second-person feminine singular non-past passive subjunctive/jussive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tusāqī", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "أسوق",
-        "u": "أسوق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أسوق (form I)\n# أَسُوقُ (ʔasūqu) /ʔa.suː.qu/: first-person singular non-past active indicative of سَاقَ (sāqa)\n# أَسُوقَ (ʔasūqa) /ʔa.suː.qa/: first-person singular non-past active subjunctive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔasūqu", "sāqa", "ʔasūqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "أسق",
-        "u": "أسق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أسق (form I)\n# أَسُقْ (ʔasuq) /ʔa.suq/: first-person singular non-past active jussive of سَاقَ (sāqa)\n# أُسَقْ (ʔusaq) /ʔu.saq/: first-person singular non-past passive jussive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔasuq", "sāqa", "ʔusaq"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "أساق",
-        "u": "أساق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أساق (form I)\n# أُسَاقُ (ʔusāqu) /ʔu.saː.qu/: first-person singular non-past passive indicative of سَاقَ (sāqa)\n# أُسَاقَ (ʔusāqa) /ʔu.saː.qa/: first-person singular non-past passive subjunctive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔusāqu", "sāqa", "ʔusāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "سقنا",
-        "u": "سقنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سقنا (form I)\n# سُقْنَا (suqnā) /suq.naː/: first-person plural past active of سَاقَ (sāqa)\n# سِقْنَا (siqnā) /siq.naː/: first-person plural past passive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["suqnā", "sāqa", "siqnā"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "نسوق",
-        "u": "نسوق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نسوق (form I)\n# نَسُوقُ (nasūqu) /na.suː.qu/: first-person plural non-past active indicative of سَاقَ (sāqa)\n# نَسُوقَ (nasūqa) /na.suː.qa/: first-person plural non-past active subjunctive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nasūqu", "sāqa", "nasūqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "نسق",
-        "u": "نسق",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نسق (form I)\n# نَسُقْ (nasuq) /na.suq/: first-person plural non-past active jussive of سَاقَ (sāqa)\n# نُسَقْ (nusaq) /nu.saq/: first-person plural non-past passive jussive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "s": [
-          ["nonlemma", "See the etymology of the corresponding lemma form."]
-        ],
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nasuq", "sāqa", "nusaq"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "نساق",
-        "u": "نساق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نساق (form I)\n# نُسَاقُ (nusāqu) /nu.saː.qu/: first-person plural non-past passive indicative of سَاقَ (sāqa)\n# نُسَاقَ (nusāqa) /nu.saː.qa/: first-person plural non-past passive subjunctive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nusāqu", "sāqa", "nusāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "سقتم",
-        "u": "سقتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سقتم (form I)\n# سُقْتُمْ (suqtum) /suq.tum/: second-person masculine plural past active of سَاقَ (sāqa)\n# سِقْتُمْ (siqtum) /siq.tum/: second-person masculine plural past passive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["suqtum", "sāqa", "siqtum"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "تسوقون",
-        "u": "تسوقون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَسُوقُونَ • (tasūqūna) (form I) /ta.suː.quː.na/\n# second-person masculine plural non-past active indicative of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasūqūna", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "تساقون",
-        "u": "تساقون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُسَاقُونَ • (tusāqūna) (form I) /tu.saː.quː.na/\n# second-person masculine plural non-past passive indicative of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tusāqūna", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "تساقوا",
-        "u": "تساقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُسَاقُوا • (tusāqū) (form I) /tu.saː.quː/\n# second-person masculine plural non-past passive subjunctive/jussive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tusāqū", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "تسوقوا",
-        "u": "تسوقوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَسُوقُوا • (tasūqū) (form I) /ta.suː.quː/\n# second-person masculine plural non-past active subjunctive/jussive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasūqū", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "ساقوا",
-        "u": "ساقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سَاقُوا • (sāqū) (form I) /saː.quː/\n# third-person masculine plural past active of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sāqū", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "يسوقون",
-        "u": "يسوقون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَسُوقُونَ • (yasūqūna) (form I) /ja.suː.quː.na/\n# third-person masculine plural non-past active indicative of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasūqūna", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "يسوقوا",
-        "u": "يسوقوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَسُوقُوا • (yasūqū) (form I) /ja.suː.quː/\n# third-person masculine plural non-past active subjunctive/jussive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasūqū", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "سيقوا",
-        "u": "سيقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سِيقُوا • (sīqū) (form I) /siː.quː/\n# third-person masculine plural past passive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sīqū", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "يساقون",
-        "u": "يساقون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُسَاقُونَ • (yusāqūna) (form I) /ju.saː.quː.na/\n# third-person masculine plural non-past passive indicative of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yusāqūna", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "يساقوا",
-        "u": "يساقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُسَاقُوا • (yusāqū) (form I) /ju.saː.quː/\n# third-person masculine plural non-past passive subjunctive/jussive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yusāqū", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "سوقوا",
-        "u": "سوقوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "سُوقُوا • (sūqū) (form I) /suː.quː/\n# second-person masculine plural imperative of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sūqū", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "سقتن",
-        "u": "سقتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سقتن (form I)\n# سُقْتُنَّ (suqtunna) /suq.tun.na/: second-person feminine plural past active of سَاقَ (sāqa)\n# سِقْتُنَّ (siqtunna) /siq.tun.na/: second-person feminine plural past passive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["suqtunna", "sāqa", "siqtunna"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "تسقن",
-        "u": "تسقن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تسقن (form I)\n# تَسُقْنَ (tasuqna) /ta.suq.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of سَاقَ (sāqa)\n# تُسَقْنَ (tusaqna) /tu.saq.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasuqna", "sāqa", "tusaqna"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "سقن",
-        "u": "سقن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "سقن (form I)\n# سُقْنَ (suqna) /suq.na/: inflection of سَاقَ (sāqa):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# سِقْنَ (siqna) /siq.na/: third-person feminine plural past passive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["suqna", "sāqa", "siqna"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "يسقن",
-        "u": "يسقن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يسقن (form I)\n# يَسُقْنَ (yasuqna) /ja.suq.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of سَاقَ (sāqa)\n# يُسَقْنَ (yusaqna) /ju.saq.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasuqna", "sāqa", "yusaqna"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "تسوقا",
-        "u": "تسوقا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَسُوقَا • (tasūqā) (form I) /ta.suː.qaː/\n# inflection of سَاقَ (sāqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasūqā", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "سقتما",
-        "u": "سقتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سقتما (form I)\n# سُقْتُمَا (suqtumā) /suq.tu.maː/: second-person dual past active of سَاقَ (sāqa)\n# سِقْتُمَا (siqtumā) /siq.tu.maː/: second-person dual past passive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["suqtumā", "sāqa", "siqtumā"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "ساقا",
-        "u": "ساقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سَاقَا • (sāqā) (form I) /saː.qaː/\n# third-person masculine dual past active of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sāqā", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "ساقتا",
-        "u": "ساقتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سَاقَتَا • (sāqatā) (form I) /saː.qa.taː/\n# third-person feminine dual past active of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sāqatā", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "سيقتا",
-        "u": "سيقتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سِيقَتَا • (sīqatā) (form I) /siː.qa.taː/\n# third-person feminine dual past passive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sīqatā", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "سيقا",
-        "u": "سيقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سِيقَا • (sīqā) (form I) /siː.qaː/\n# third-person masculine dual past passive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sīqā", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "تسوقان",
-        "u": "تسوقان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَسُوقَانِ • (tasūqāni) (form I) /ta.suː.qaː.ni/\n# inflection of سَاقَ (sāqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasūqāni", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "تساقان",
-        "u": "تساقان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُسَاقَانِ • (tusāqāni) (form I) /tu.saː.qaː.ni/\n# inflection of سَاقَ (sāqa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tusāqāni", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "يساقان",
-        "u": "يساقان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُسَاقَانِ • (yusāqāni) (form I) /ju.saː.qaː.ni/\n# third-person masculine dual non-past passive indicative of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yusāqāni", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "يسوقان",
-        "u": "يسوقان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَسُوقَانِ • (yasūqāni) (form I) /ja.suː.qaː.ni/\n# third-person masculine dual non-past active indicative of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasūqāni", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "يسوقا",
-        "u": "يسوقا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَسُوقَا • (yasūqā) (form I) /ja.suː.qaː/\n# third-person masculine dual non-past active subjunctive/jussive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasūqā", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "يساقا",
-        "u": "يساقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُسَاقَا • (yusāqā) (form I) /ju.saː.qaː/\n# third-person masculine dual non-past passive subjunctive/jussive of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yusāqā", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "تساقا",
-        "u": "تساقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُسَاقَا • (tusāqā) (form I) /tu.saː.qaː/\n# inflection of سَاقَ (sāqa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tusāqā", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      },
-      {
-        "w": "سوقا",
-        "u": "سوقا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "سُوقَا • (sūqā) (form I) /suː.qaː/\n# second-person dual imperative of سَاقَ (sāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["sūqā", "sāqa"],
-        "k": "ساق",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "سق",
+  "ses": {
     "harf": "س",
+    "fasil": "سق",
     "mahrec": "esaliyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "تسوق",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تسوق (form I)\n# تَسُوقُ (tasūqu) /ta.suː.qu/: inflection of سَاقَ (sāqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَسُوقَ (tasūqa) /ta.suː.qa/: inflection of سَاقَ (sāqa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasūqu", "sāqa", "tasūqa"]
+    },
+    {
+      "madde": "يسوق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يسوق (form I)\n# يَسُوقُ (yasūqu) /ja.suː.qu/: third-person masculine singular non-past active indicative of سَاقَ (sāqa)\n# يَسُوقَ (yasūqa) /ja.suː.qa/: third-person masculine singular non-past active subjunctive of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasūqu", "sāqa", "yasūqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يساق",
+      "tur": "verb",
+      "baslik": "يساق (form I)\n# يُسَاقُ (yusāqu) /ju.saː.qu/: third-person masculine singular non-past passive indicative of سَاقَ (sāqa)\n# يُسَاقَ (yusāqa) /ju.saː.qa/: third-person masculine singular non-past passive subjunctive of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yusāqu", "sāqa", "yusāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يسق (form I)\n# يَسُقْ (yasuq) /ja.suq/: third-person masculine singular non-past active jussive of سَاقَ (sāqa)\n# يُسَقْ (yusaq) /ju.saq/: third-person masculine singular non-past passive jussive of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasuq", "sāqa", "yusaq"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سيق",
+      "tur": "verb",
+      "baslik": "سِيقَ • (sīqa) (form I) /siː.qa/\n# third-person masculine singular past passive of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sīqa", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ساقت",
+      "tur": "verb",
+      "baslik": "سَاقَتْ • (sāqat) (form I) /saː.qat/\n# third-person feminine singular past active of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sāqat", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تسق (form I)\n# تَسُقْ (tasuq) /ta.suq/: inflection of سَاقَ (sāqa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُسَقْ (tusaq) /tu.saq/: inflection of سَاقَ (sāqa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasuq", "sāqa", "tusaq"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سيقت",
+      "tur": "verb",
+      "baslik": "سِيقَتْ • (sīqat) (form I) /siː.qat/\n# third-person feminine singular past passive of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sīqat", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تساق",
+      "tur": "verb",
+      "baslik": "تساق (form I)\n# تُسَاقُ (tusāqu) /tu.saː.qu/: inflection of سَاقَ (sāqa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُسَاقَ (tusāqa) /tu.saː.qa/: inflection of سَاقَ (sāqa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tusāqu", "sāqa", "tusāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سقت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "سقت (form I)\n# سُقْتُ (suqtu) /suq.tu/: first-person singular past active of سَاقَ (sāqa)\n# سُقْتَ (suqta) /suq.ta/: second-person masculine singular past active of سَاقَ (sāqa)\n# سُقْتِ (suqti) /suq.ti/: second-person feminine singular past active of سَاقَ (sāqa)\n# سِقْتُ (siqtu) /siq.tu/: first-person singular past passive of سَاقَ (sāqa)\n# سِقْتَ (siqta) /siq.ta/: second-person masculine singul",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["suqtu", "sāqa", "suqta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "سُقْ • (suq) (form I) /suq/\n# second-person masculine singular imperative of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["suq", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسوقي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَسُوقِي • (tasūqī) (form I) /ta.suː.qiː/\n# second-person feminine singular non-past active subjunctive/jussive of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasūqī", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسوقين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَسُوقِينَ • (tasūqīna) (form I) /ta.suː.qiː.na/\n# second-person feminine singular non-past active indicative of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasūqīna", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سوقي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "سُوقِي • (sūqī) (form I) /suː.qiː/\n# second-person feminine singular imperative of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sūqī", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تساقين",
+      "tur": "verb",
+      "baslik": "تُسَاقِينَ • (tusāqīna) (form I) /tu.saː.qiː.na/\n# second-person feminine singular non-past passive indicative of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tusāqīna", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تساقي",
+      "tur": "verb",
+      "baslik": "تُسَاقِي • (tusāqī) (form I) /tu.saː.qiː/\n# second-person feminine singular non-past passive subjunctive/jussive of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tusāqī", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسوق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أسوق (form I)\n# أَسُوقُ (ʔasūqu) /ʔa.suː.qu/: first-person singular non-past active indicative of سَاقَ (sāqa)\n# أَسُوقَ (ʔasūqa) /ʔa.suː.qa/: first-person singular non-past active subjunctive of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔasūqu", "sāqa", "ʔasūqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أسق (form I)\n# أَسُقْ (ʔasuq) /ʔa.suq/: first-person singular non-past active jussive of سَاقَ (sāqa)\n# أُسَقْ (ʔusaq) /ʔu.saq/: first-person singular non-past passive jussive of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔasuq", "sāqa", "ʔusaq"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أساق",
+      "tur": "verb",
+      "baslik": "أساق (form I)\n# أُسَاقُ (ʔusāqu) /ʔu.saː.qu/: first-person singular non-past passive indicative of سَاقَ (sāqa)\n# أُسَاقَ (ʔusāqa) /ʔu.saː.qa/: first-person singular non-past passive subjunctive of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔusāqu", "sāqa", "ʔusāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سقنا",
+      "tur": "verb",
+      "baslik": "سقنا (form I)\n# سُقْنَا (suqnā) /suq.naː/: first-person plural past active of سَاقَ (sāqa)\n# سِقْنَا (siqnā) /siq.naː/: first-person plural past passive of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["suqnā", "sāqa", "siqnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نسوق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نسوق (form I)\n# نَسُوقُ (nasūqu) /na.suː.qu/: first-person plural non-past active indicative of سَاقَ (sāqa)\n# نَسُوقَ (nasūqa) /na.suː.qa/: first-person plural non-past active subjunctive of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nasūqu", "sāqa", "nasūqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نسق",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نسق (form I)\n# نَسُقْ (nasuq) /na.suq/: first-person plural non-past active jussive of سَاقَ (sāqa)\n# نُسَقْ (nusaq) /nu.saq/: first-person plural non-past passive jussive of سَاقَ (sāqa)",
+      "etim_sablon": [
+        ["nonlemma", "See the etymology of the corresponding lemma form."]
+      ],
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nasuq", "sāqa", "nusaq"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نساق",
+      "tur": "verb",
+      "baslik": "نساق (form I)\n# نُسَاقُ (nusāqu) /nu.saː.qu/: first-person plural non-past passive indicative of سَاقَ (sāqa)\n# نُسَاقَ (nusāqa) /nu.saː.qa/: first-person plural non-past passive subjunctive of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nusāqu", "sāqa", "nusāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سقتم",
+      "tur": "verb",
+      "baslik": "سقتم (form I)\n# سُقْتُمْ (suqtum) /suq.tum/: second-person masculine plural past active of سَاقَ (sāqa)\n# سِقْتُمْ (siqtum) /siq.tum/: second-person masculine plural past passive of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["suqtum", "sāqa", "siqtum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسوقون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَسُوقُونَ • (tasūqūna) (form I) /ta.suː.quː.na/\n# second-person masculine plural non-past active indicative of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasūqūna", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تساقون",
+      "tur": "verb",
+      "baslik": "تُسَاقُونَ • (tusāqūna) (form I) /tu.saː.quː.na/\n# second-person masculine plural non-past passive indicative of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tusāqūna", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تساقوا",
+      "tur": "verb",
+      "baslik": "تُسَاقُوا • (tusāqū) (form I) /tu.saː.quː/\n# second-person masculine plural non-past passive subjunctive/jussive of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tusāqū", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسوقوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَسُوقُوا • (tasūqū) (form I) /ta.suː.quː/\n# second-person masculine plural non-past active subjunctive/jussive of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasūqū", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ساقوا",
+      "tur": "verb",
+      "baslik": "سَاقُوا • (sāqū) (form I) /saː.quː/\n# third-person masculine plural past active of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sāqū", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسوقون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَسُوقُونَ • (yasūqūna) (form I) /ja.suː.quː.na/\n# third-person masculine plural non-past active indicative of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasūqūna", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسوقوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَسُوقُوا • (yasūqū) (form I) /ja.suː.quː/\n# third-person masculine plural non-past active subjunctive/jussive of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasūqū", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سيقوا",
+      "tur": "verb",
+      "baslik": "سِيقُوا • (sīqū) (form I) /siː.quː/\n# third-person masculine plural past passive of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sīqū", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يساقون",
+      "tur": "verb",
+      "baslik": "يُسَاقُونَ • (yusāqūna) (form I) /ju.saː.quː.na/\n# third-person masculine plural non-past passive indicative of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yusāqūna", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يساقوا",
+      "tur": "verb",
+      "baslik": "يُسَاقُوا • (yusāqū) (form I) /ju.saː.quː/\n# third-person masculine plural non-past passive subjunctive/jussive of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yusāqū", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سوقوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "سُوقُوا • (sūqū) (form I) /suː.quː/\n# second-person masculine plural imperative of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sūqū", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سقتن",
+      "tur": "verb",
+      "baslik": "سقتن (form I)\n# سُقْتُنَّ (suqtunna) /suq.tun.na/: second-person feminine plural past active of سَاقَ (sāqa)\n# سِقْتُنَّ (siqtunna) /siq.tun.na/: second-person feminine plural past passive of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["suqtunna", "sāqa", "siqtunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسقن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تسقن (form I)\n# تَسُقْنَ (tasuqna) /ta.suq.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of سَاقَ (sāqa)\n# تُسَقْنَ (tusaqna) /tu.saq.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasuqna", "sāqa", "tusaqna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سقن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "سقن (form I)\n# سُقْنَ (suqna) /suq.na/: inflection of سَاقَ (sāqa):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# سِقْنَ (siqna) /siq.na/: third-person feminine plural past passive of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["suqna", "sāqa", "siqna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسقن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يسقن (form I)\n# يَسُقْنَ (yasuqna) /ja.suq.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of سَاقَ (sāqa)\n# يُسَقْنَ (yusaqna) /ju.saq.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasuqna", "sāqa", "yusaqna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسوقا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَسُوقَا • (tasūqā) (form I) /ta.suː.qaː/\n# inflection of سَاقَ (sāqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasūqā", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سقتما",
+      "tur": "verb",
+      "baslik": "سقتما (form I)\n# سُقْتُمَا (suqtumā) /suq.tu.maː/: second-person dual past active of سَاقَ (sāqa)\n# سِقْتُمَا (siqtumā) /siq.tu.maː/: second-person dual past passive of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["suqtumā", "sāqa", "siqtumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ساقا",
+      "tur": "verb",
+      "baslik": "سَاقَا • (sāqā) (form I) /saː.qaː/\n# third-person masculine dual past active of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sāqā", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ساقتا",
+      "tur": "verb",
+      "baslik": "سَاقَتَا • (sāqatā) (form I) /saː.qa.taː/\n# third-person feminine dual past active of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sāqatā", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سيقتا",
+      "tur": "verb",
+      "baslik": "سِيقَتَا • (sīqatā) (form I) /siː.qa.taː/\n# third-person feminine dual past passive of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sīqatā", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سيقا",
+      "tur": "verb",
+      "baslik": "سِيقَا • (sīqā) (form I) /siː.qaː/\n# third-person masculine dual past passive of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sīqā", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسوقان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَسُوقَانِ • (tasūqāni) (form I) /ta.suː.qaː.ni/\n# inflection of سَاقَ (sāqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasūqāni", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تساقان",
+      "tur": "verb",
+      "baslik": "تُسَاقَانِ • (tusāqāni) (form I) /tu.saː.qaː.ni/\n# inflection of سَاقَ (sāqa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tusāqāni", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يساقان",
+      "tur": "verb",
+      "baslik": "يُسَاقَانِ • (yusāqāni) (form I) /ju.saː.qaː.ni/\n# third-person masculine dual non-past passive indicative of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yusāqāni", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسوقان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَسُوقَانِ • (yasūqāni) (form I) /ja.suː.qaː.ni/\n# third-person masculine dual non-past active indicative of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasūqāni", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسوقا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَسُوقَا • (yasūqā) (form I) /ja.suː.qaː/\n# third-person masculine dual non-past active subjunctive/jussive of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasūqā", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يساقا",
+      "tur": "verb",
+      "baslik": "يُسَاقَا • (yusāqā) (form I) /ju.saː.qaː/\n# third-person masculine dual non-past passive subjunctive/jussive of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yusāqā", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تساقا",
+      "tur": "verb",
+      "baslik": "تُسَاقَا • (tusāqā) (form I) /tu.saː.qaː/\n# inflection of سَاقَ (sāqa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tusāqā", "sāqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سوقا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "سُوقَا • (sūqā) (form I) /suː.qaː/\n# second-person dual imperative of سَاقَ (sāqa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["sūqā", "sāqa"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ساق", "r7"]
+  ],
+  "mana": {
     "ince": "pit.v.01",
     "orta": "verb.competition",
     "ust": "insan ve toplum",
@@ -699,16 +496,11 @@
     "dayanak_tanim": "set into opposition or rivalry",
     "synset_sayisi": 13
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "act.n.02",
     "array.n.01",
     "assortment.n.01",
@@ -722,12 +514,10 @@
     "pit.v.01",
     "structure.n.03"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

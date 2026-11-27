@@ -1,365 +1,287 @@
 {
   "kok": "ءلحق",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءلحق", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يلحق",
-        "u": "يلحق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يلحق (form IV)\n# يُلْحِقُ (yulḥiqu) /jul.ħi.qu/: third-person masculine singular non-past active indicative of أَلْحَقَ (ʔalḥaqa)\n# يُلْحَقُ (yulḥaqu) /jul.ħa.qu/: third-person masculine singular non-past passive indicative of أَلْحَقَ (ʔalḥaqa)\n# يُلْحِقَ (yulḥiqa) /jul.ħi.qa/: third-person masculine singular non-past active subjunctive of أَلْحَقَ (ʔalḥaqa)\n# يُلْحَقَ (yulḥaqa) /jul.ħa.qa/: thir",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yulḥiqu", "ʔalḥaqa", "yulḥaqu"],
-        "k": "ألحق",
-        "yol": "kök"
-      },
-      {
-        "w": "ألحقت",
-        "u": "ألحقت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ألحقت (form IV)\n# أَلْحَقْتُ (ʔalḥaqtu) /ʔal.ħaq.tu/: first-person singular past active of أَلْحَقَ (ʔalḥaqa)\n# أَلْحَقْتَ (ʔalḥaqta) /ʔal.ħaq.ta/: second-person masculine singular past active of أَلْحَقَ (ʔalḥaqa)\n# أَلْحَقْتِ (ʔalḥaqti) /ʔal.ħaq.ti/: second-person feminine singular past active of أَلْحَقَ (ʔalḥaqa)\n# أَلْحَقَتْ (ʔalḥaqat) /ʔal.ħa.qat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔalḥaqtu", "ʔalḥaqa", "ʔalḥaqta"],
-        "k": "ألحق",
-        "yol": "kök"
-      },
-      {
-        "w": "تلحق",
-        "u": "تلحق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تلحق (form IV)\n# تُلْحِقُ (tulḥiqu) /tul.ħi.qu/: inflection of أَلْحَقَ (ʔalḥaqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُلْحَقُ (tulḥaqu) /tul.ħa.qu/: inflection of أَلْحَقَ (ʔalḥaqa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tulḥiqu", "ʔalḥaqa", "tulḥaqu"],
-        "k": "ألحق",
-        "yol": "kök"
-      },
-      {
-        "w": "تلحقين",
-        "u": "تلحقين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تلحقين (form IV)\n# تُلْحِقِينَ (tulḥiqīna) /tul.ħi.qiː.na/: second-person feminine singular non-past active indicative of أَلْحَقَ (ʔalḥaqa)\n# تُلْحَقِينَ (tulḥaqīna) /tul.ħa.qiː.na/: second-person feminine singular non-past passive indicative of أَلْحَقَ (ʔalḥaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tulḥiqīna", "ʔalḥaqa", "tulḥaqīna"],
-        "k": "ألحق",
-        "yol": "kök"
-      },
-      {
-        "w": "تلحقي",
-        "u": "تلحقي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تلحقي (form IV)\n# تُلْحِقِي (tulḥiqī) /tul.ħi.qiː/: second-person feminine singular non-past active subjunctive/jussive of أَلْحَقَ (ʔalḥaqa)\n# تُلْحَقِي (tulḥaqī) /tul.ħa.qiː/: second-person feminine singular non-past passive subjunctive/jussive of أَلْحَقَ (ʔalḥaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tulḥiqī", "ʔalḥaqa", "tulḥaqī"],
-        "k": "ألحق",
-        "yol": "kök"
-      },
-      {
-        "w": "ألحقي",
-        "u": "ألحقي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَلْحِقِي • (ʔalḥiqī) (form IV) /ʔal.ħi.qiː/\n# second-person feminine singular imperative of أَلْحَقَ (ʔalḥaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔalḥiqī", "ʔalḥaqa"],
-        "k": "ألحق",
-        "yol": "kök"
-      },
-      {
-        "w": "ألحقنا",
-        "u": "ألحقنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ألحقنا (form IV)\n# أَلْحَقْنَا (ʔalḥaqnā) /ʔal.ħaq.naː/: first-person plural past active of أَلْحَقَ (ʔalḥaqa)\n# أُلْحِقْنَا (ʔulḥiqnā) /ʔul.ħiq.naː/: first-person plural past passive of أَلْحَقَ (ʔalḥaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔalḥaqnā", "ʔalḥaqa", "ʔulḥiqnā"],
-        "k": "ألحق",
-        "yol": "kök"
-      },
-      {
-        "w": "نلحق",
-        "u": "نلحق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نلحق (form IV)\n# نُلْحِقُ (nulḥiqu) /nul.ħi.qu/: first-person plural non-past active indicative of أَلْحَقَ (ʔalḥaqa)\n# نُلْحَقُ (nulḥaqu) /nul.ħa.qu/: first-person plural non-past passive indicative of أَلْحَقَ (ʔalḥaqa)\n# نُلْحِقَ (nulḥiqa) /nul.ħi.qa/: first-person plural non-past active subjunctive of أَلْحَقَ (ʔalḥaqa)\n# نُلْحَقَ (nulḥaqa) /nul.ħa.qa/: first-person plural non-past passive sub",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nulḥiqu", "ʔalḥaqa", "nulḥaqu"],
-        "k": "ألحق",
-        "yol": "kök"
-      },
-      {
-        "w": "ألحقتم",
-        "u": "ألحقتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ألحقتم (form IV)\n# أَلْحَقْتُمْ (ʔalḥaqtum) /ʔal.ħaq.tum/: second-person masculine plural past active of أَلْحَقَ (ʔalḥaqa)\n# أُلْحِقْتُمْ (ʔulḥiqtum) /ʔul.ħiq.tum/: second-person masculine plural past passive of أَلْحَقَ (ʔalḥaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔalḥaqtum", "ʔalḥaqa", "ʔulḥiqtum"],
-        "k": "ألحق",
-        "yol": "kök"
-      },
-      {
-        "w": "تلحقون",
-        "u": "تلحقون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تلحقون (form IV)\n# تُلْحِقُونَ (tulḥiqūna) /tul.ħi.quː.na/: second-person masculine plural non-past active indicative of أَلْحَقَ (ʔalḥaqa)\n# تُلْحَقُونَ (tulḥaqūna) /tul.ħa.quː.na/: second-person masculine plural non-past passive indicative of أَلْحَقَ (ʔalḥaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tulḥiqūna", "ʔalḥaqa", "tulḥaqūna"],
-        "k": "ألحق",
-        "yol": "kök"
-      },
-      {
-        "w": "تلحقوا",
-        "u": "تلحقوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تلحقوا (form IV)\n# تُلْحِقُوا (tulḥiqū) /tul.ħi.quː/: second-person masculine plural non-past active subjunctive/jussive of أَلْحَقَ (ʔalḥaqa)\n# تُلْحَقُوا (tulḥaqū) /tul.ħa.quː/: second-person masculine plural non-past passive subjunctive/jussive of أَلْحَقَ (ʔalḥaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tulḥiqū", "ʔalḥaqa", "tulḥaqū"],
-        "k": "ألحق",
-        "yol": "kök"
-      },
-      {
-        "w": "ألحقوا",
-        "u": "ألحقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ألحقوا (form IV)\n# أَلْحَقُوا (ʔalḥaqū) /ʔal.ħa.quː/: third-person masculine plural past active of أَلْحَقَ (ʔalḥaqa)\n# أُلْحِقُوا (ʔulḥiqū) /ʔul.ħi.quː/: third-person masculine plural past passive of أَلْحَقَ (ʔalḥaqa)\n# أَلْحِقُوا (ʔalḥiqū) /ʔal.ħi.quː/: second-person masculine plural imperative of أَلْحَقَ (ʔalḥaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔalḥaqū", "ʔalḥaqa", "ʔulḥiqū"],
-        "k": "ألحق",
-        "yol": "kök"
-      },
-      {
-        "w": "يلحقون",
-        "u": "يلحقون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يلحقون (form IV)\n# يُلْحِقُونَ (yulḥiqūna) /jul.ħi.quː.na/: third-person masculine plural non-past active indicative of أَلْحَقَ (ʔalḥaqa)\n# يُلْحَقُونَ (yulḥaqūna) /jul.ħa.quː.na/: third-person masculine plural non-past passive indicative of أَلْحَقَ (ʔalḥaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yulḥiqūna", "ʔalḥaqa", "yulḥaqūna"],
-        "k": "ألحق",
-        "yol": "kök"
-      },
-      {
-        "w": "يلحقوا",
-        "u": "يلحقوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يلحقوا (form IV)\n# يُلْحِقُوا (yulḥiqū) /jul.ħi.quː/: third-person masculine plural non-past active subjunctive/jussive of أَلْحَقَ (ʔalḥaqa)\n# يُلْحَقُوا (yulḥaqū) /jul.ħa.quː/: third-person masculine plural non-past passive subjunctive/jussive of أَلْحَقَ (ʔalḥaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yulḥiqū", "ʔalḥaqa", "yulḥaqū"],
-        "k": "ألحق",
-        "yol": "kök"
-      },
-      {
-        "w": "ألحقتن",
-        "u": "ألحقتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ألحقتن (form IV)\n# أَلْحَقْتُنَّ (ʔalḥaqtunna) /ʔal.ħaq.tun.na/: second-person feminine plural past active of أَلْحَقَ (ʔalḥaqa)\n# أُلْحِقْتُنَّ (ʔulḥiqtunna) /ʔul.ħiq.tun.na/: second-person feminine plural past passive of أَلْحَقَ (ʔalḥaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔalḥaqtunna", "ʔalḥaqa", "ʔulḥiqtunna"],
-        "k": "ألحق",
-        "yol": "kök"
-      },
-      {
-        "w": "تلحقن",
-        "u": "تلحقن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تلحقن (form IV)\n# تُلْحِقْنَ (tulḥiqna) /tul.ħiq.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَلْحَقَ (ʔalḥaqa)\n# تُلْحَقْنَ (tulḥaqna) /tul.ħaq.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَلْحَقَ (ʔalḥaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tulḥiqna", "ʔalḥaqa", "tulḥaqna"],
-        "k": "ألحق",
-        "yol": "kök"
-      },
-      {
-        "w": "ألحقن",
-        "u": "ألحقن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ألحقن (form IV)\n# أَلْحَقْنَ (ʔalḥaqna) /ʔal.ħaq.na/: third-person feminine plural past active of أَلْحَقَ (ʔalḥaqa)\n# أُلْحِقْنَ (ʔulḥiqna) /ʔul.ħiq.na/: third-person feminine plural past passive of أَلْحَقَ (ʔalḥaqa)\n# أَلْحِقْنَ (ʔalḥiqna) /ʔal.ħiq.na/: second-person feminine plural imperative of أَلْحَقَ (ʔalḥaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔalḥaqna", "ʔalḥaqa", "ʔulḥiqna"],
-        "k": "ألحق",
-        "yol": "kök"
-      },
-      {
-        "w": "يلحقن",
-        "u": "يلحقن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يلحقن (form IV)\n# يُلْحِقْنَ (yulḥiqna) /jul.ħiq.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَلْحَقَ (ʔalḥaqa)\n# يُلْحَقْنَ (yulḥaqna) /jul.ħaq.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَلْحَقَ (ʔalḥaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yulḥiqna", "ʔalḥaqa", "yulḥaqna"],
-        "k": "ألحق",
-        "yol": "kök"
-      },
-      {
-        "w": "تلحقان",
-        "u": "تلحقان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تلحقان (form IV)\n# تُلْحِقَانِ (tulḥiqāni) /tul.ħi.qaː.ni/: inflection of أَلْحَقَ (ʔalḥaqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُلْحَقَانِ (tulḥaqāni) /tul.ħa.qaː.ni/: inflection of أَلْحَقَ (ʔalḥaqa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tulḥiqāni", "ʔalḥaqa", "tulḥaqāni"],
-        "k": "ألحق",
-        "yol": "kök"
-      },
-      {
-        "w": "ألحقا",
-        "u": "ألحقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ألحقا (form IV)\n# أَلْحَقَا (ʔalḥaqā) /ʔal.ħa.qaː/: third-person masculine dual past active of أَلْحَقَ (ʔalḥaqa)\n# أُلْحِقَا (ʔulḥiqā) /ʔul.ħi.qaː/: third-person masculine dual past passive of أَلْحَقَ (ʔalḥaqa)\n# أَلْحِقَا (ʔalḥiqā) /ʔal.ħi.qaː/: second-person dual imperative of أَلْحَقَ (ʔalḥaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔalḥaqā", "ʔalḥaqa", "ʔulḥiqā"],
-        "k": "ألحق",
-        "yol": "kök"
-      },
-      {
-        "w": "ألحقتما",
-        "u": "ألحقتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ألحقتما (form IV)\n# أَلْحَقْتُمَا (ʔalḥaqtumā) /ʔal.ħaq.tu.maː/: second-person dual past active of أَلْحَقَ (ʔalḥaqa)\n# أُلْحِقْتُمَا (ʔulḥiqtumā) /ʔul.ħiq.tu.maː/: second-person dual past passive of أَلْحَقَ (ʔalḥaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔalḥaqtumā", "ʔalḥaqa", "ʔulḥiqtumā"],
-        "k": "ألحق",
-        "yol": "kök"
-      },
-      {
-        "w": "ألحقتا",
-        "u": "ألحقتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ألحقتا (form IV)\n# أَلْحَقَتَا (ʔalḥaqatā) /ʔal.ħa.qa.taː/: third-person feminine dual past active of أَلْحَقَ (ʔalḥaqa)\n# أُلْحِقَتَا (ʔulḥiqatā) /ʔul.ħi.qa.taː/: third-person feminine dual past passive of أَلْحَقَ (ʔalḥaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔalḥaqatā", "ʔalḥaqa", "ʔulḥiqatā"],
-        "k": "ألحق",
-        "yol": "kök"
-      },
-      {
-        "w": "تلحقا",
-        "u": "تلحقا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تلحقا (form IV)\n# تُلْحِقَا (tulḥiqā) /tul.ħi.qaː/: inflection of أَلْحَقَ (ʔalḥaqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُلْحَقَا (tulḥaqā) /tul.ħa.qaː/: inflection of أَلْحَقَ (ʔalḥaqa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/ju",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tulḥiqā", "ʔalḥaqa", "tulḥaqā"],
-        "k": "ألحق",
-        "yol": "kök"
-      },
-      {
-        "w": "يلحقا",
-        "u": "يلحقا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يلحقا (form IV)\n# يُلْحِقَا (yulḥiqā) /jul.ħi.qaː/: third-person masculine dual non-past active subjunctive/jussive of أَلْحَقَ (ʔalḥaqa)\n# يُلْحَقَا (yulḥaqā) /jul.ħa.qaː/: third-person masculine dual non-past passive subjunctive/jussive of أَلْحَقَ (ʔalḥaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yulḥiqā", "ʔalḥaqa", "yulḥaqā"],
-        "k": "ألحق",
-        "yol": "kök"
-      },
-      {
-        "w": "يلحقان",
-        "u": "يلحقان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يلحقان (form IV)\n# يُلْحِقَانِ (yulḥiqāni) /jul.ħi.qaː.ni/: third-person masculine dual non-past active indicative of أَلْحَقَ (ʔalḥaqa)\n# يُلْحَقَانِ (yulḥaqāni) /jul.ħa.qaː.ni/: third-person masculine dual non-past passive indicative of أَلْحَقَ (ʔalḥaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yulḥiqāni", "ʔalḥaqa", "yulḥaqāni"],
-        "k": "ألحق",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "لح",
+  "ses": {
     "harf": "ء",
+    "fasil": "لح",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يلحق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يلحق (form IV)\n# يُلْحِقُ (yulḥiqu) /jul.ħi.qu/: third-person masculine singular non-past active indicative of أَلْحَقَ (ʔalḥaqa)\n# يُلْحَقُ (yulḥaqu) /jul.ħa.qu/: third-person masculine singular non-past passive indicative of أَلْحَقَ (ʔalḥaqa)\n# يُلْحِقَ (yulḥiqa) /jul.ħi.qa/: third-person masculine singular non-past active subjunctive of أَلْحَقَ (ʔalḥaqa)\n# يُلْحَقَ (yulḥaqa) /jul.ħa.qa/: thir",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yulḥiqu", "ʔalḥaqa", "yulḥaqu"],
+      "kok_yazilis": "ألحق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ألحقت",
+      "tur": "verb",
+      "baslik": "ألحقت (form IV)\n# أَلْحَقْتُ (ʔalḥaqtu) /ʔal.ħaq.tu/: first-person singular past active of أَلْحَقَ (ʔalḥaqa)\n# أَلْحَقْتَ (ʔalḥaqta) /ʔal.ħaq.ta/: second-person masculine singular past active of أَلْحَقَ (ʔalḥaqa)\n# أَلْحَقْتِ (ʔalḥaqti) /ʔal.ħaq.ti/: second-person feminine singular past active of أَلْحَقَ (ʔalḥaqa)\n# أَلْحَقَتْ (ʔalḥaqat) /ʔal.ħa.qat/: third-person feminine singular past active ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔalḥaqtu", "ʔalḥaqa", "ʔalḥaqta"],
+      "kok_yazilis": "ألحق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تلحق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تلحق (form IV)\n# تُلْحِقُ (tulḥiqu) /tul.ħi.qu/: inflection of أَلْحَقَ (ʔalḥaqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُلْحَقُ (tulḥaqu) /tul.ħa.qu/: inflection of أَلْحَقَ (ʔalḥaqa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tulḥiqu", "ʔalḥaqa", "tulḥaqu"],
+      "kok_yazilis": "ألحق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تلحقين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تلحقين (form IV)\n# تُلْحِقِينَ (tulḥiqīna) /tul.ħi.qiː.na/: second-person feminine singular non-past active indicative of أَلْحَقَ (ʔalḥaqa)\n# تُلْحَقِينَ (tulḥaqīna) /tul.ħa.qiː.na/: second-person feminine singular non-past passive indicative of أَلْحَقَ (ʔalḥaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tulḥiqīna", "ʔalḥaqa", "tulḥaqīna"],
+      "kok_yazilis": "ألحق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تلحقي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تلحقي (form IV)\n# تُلْحِقِي (tulḥiqī) /tul.ħi.qiː/: second-person feminine singular non-past active subjunctive/jussive of أَلْحَقَ (ʔalḥaqa)\n# تُلْحَقِي (tulḥaqī) /tul.ħa.qiː/: second-person feminine singular non-past passive subjunctive/jussive of أَلْحَقَ (ʔalḥaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tulḥiqī", "ʔalḥaqa", "tulḥaqī"],
+      "kok_yazilis": "ألحق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ألحقي",
+      "tur": "verb",
+      "baslik": "أَلْحِقِي • (ʔalḥiqī) (form IV) /ʔal.ħi.qiː/\n# second-person feminine singular imperative of أَلْحَقَ (ʔalḥaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔalḥiqī", "ʔalḥaqa"],
+      "kok_yazilis": "ألحق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ألحقنا",
+      "tur": "verb",
+      "baslik": "ألحقنا (form IV)\n# أَلْحَقْنَا (ʔalḥaqnā) /ʔal.ħaq.naː/: first-person plural past active of أَلْحَقَ (ʔalḥaqa)\n# أُلْحِقْنَا (ʔulḥiqnā) /ʔul.ħiq.naː/: first-person plural past passive of أَلْحَقَ (ʔalḥaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔalḥaqnā", "ʔalḥaqa", "ʔulḥiqnā"],
+      "kok_yazilis": "ألحق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نلحق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نلحق (form IV)\n# نُلْحِقُ (nulḥiqu) /nul.ħi.qu/: first-person plural non-past active indicative of أَلْحَقَ (ʔalḥaqa)\n# نُلْحَقُ (nulḥaqu) /nul.ħa.qu/: first-person plural non-past passive indicative of أَلْحَقَ (ʔalḥaqa)\n# نُلْحِقَ (nulḥiqa) /nul.ħi.qa/: first-person plural non-past active subjunctive of أَلْحَقَ (ʔalḥaqa)\n# نُلْحَقَ (nulḥaqa) /nul.ħa.qa/: first-person plural non-past passive sub",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nulḥiqu", "ʔalḥaqa", "nulḥaqu"],
+      "kok_yazilis": "ألحق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ألحقتم",
+      "tur": "verb",
+      "baslik": "ألحقتم (form IV)\n# أَلْحَقْتُمْ (ʔalḥaqtum) /ʔal.ħaq.tum/: second-person masculine plural past active of أَلْحَقَ (ʔalḥaqa)\n# أُلْحِقْتُمْ (ʔulḥiqtum) /ʔul.ħiq.tum/: second-person masculine plural past passive of أَلْحَقَ (ʔalḥaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔalḥaqtum", "ʔalḥaqa", "ʔulḥiqtum"],
+      "kok_yazilis": "ألحق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تلحقون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تلحقون (form IV)\n# تُلْحِقُونَ (tulḥiqūna) /tul.ħi.quː.na/: second-person masculine plural non-past active indicative of أَلْحَقَ (ʔalḥaqa)\n# تُلْحَقُونَ (tulḥaqūna) /tul.ħa.quː.na/: second-person masculine plural non-past passive indicative of أَلْحَقَ (ʔalḥaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tulḥiqūna", "ʔalḥaqa", "tulḥaqūna"],
+      "kok_yazilis": "ألحق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تلحقوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تلحقوا (form IV)\n# تُلْحِقُوا (tulḥiqū) /tul.ħi.quː/: second-person masculine plural non-past active subjunctive/jussive of أَلْحَقَ (ʔalḥaqa)\n# تُلْحَقُوا (tulḥaqū) /tul.ħa.quː/: second-person masculine plural non-past passive subjunctive/jussive of أَلْحَقَ (ʔalḥaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tulḥiqū", "ʔalḥaqa", "tulḥaqū"],
+      "kok_yazilis": "ألحق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ألحقوا",
+      "tur": "verb",
+      "baslik": "ألحقوا (form IV)\n# أَلْحَقُوا (ʔalḥaqū) /ʔal.ħa.quː/: third-person masculine plural past active of أَلْحَقَ (ʔalḥaqa)\n# أُلْحِقُوا (ʔulḥiqū) /ʔul.ħi.quː/: third-person masculine plural past passive of أَلْحَقَ (ʔalḥaqa)\n# أَلْحِقُوا (ʔalḥiqū) /ʔal.ħi.quː/: second-person masculine plural imperative of أَلْحَقَ (ʔalḥaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔalḥaqū", "ʔalḥaqa", "ʔulḥiqū"],
+      "kok_yazilis": "ألحق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يلحقون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يلحقون (form IV)\n# يُلْحِقُونَ (yulḥiqūna) /jul.ħi.quː.na/: third-person masculine plural non-past active indicative of أَلْحَقَ (ʔalḥaqa)\n# يُلْحَقُونَ (yulḥaqūna) /jul.ħa.quː.na/: third-person masculine plural non-past passive indicative of أَلْحَقَ (ʔalḥaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yulḥiqūna", "ʔalḥaqa", "yulḥaqūna"],
+      "kok_yazilis": "ألحق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يلحقوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يلحقوا (form IV)\n# يُلْحِقُوا (yulḥiqū) /jul.ħi.quː/: third-person masculine plural non-past active subjunctive/jussive of أَلْحَقَ (ʔalḥaqa)\n# يُلْحَقُوا (yulḥaqū) /jul.ħa.quː/: third-person masculine plural non-past passive subjunctive/jussive of أَلْحَقَ (ʔalḥaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yulḥiqū", "ʔalḥaqa", "yulḥaqū"],
+      "kok_yazilis": "ألحق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ألحقتن",
+      "tur": "verb",
+      "baslik": "ألحقتن (form IV)\n# أَلْحَقْتُنَّ (ʔalḥaqtunna) /ʔal.ħaq.tun.na/: second-person feminine plural past active of أَلْحَقَ (ʔalḥaqa)\n# أُلْحِقْتُنَّ (ʔulḥiqtunna) /ʔul.ħiq.tun.na/: second-person feminine plural past passive of أَلْحَقَ (ʔalḥaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔalḥaqtunna", "ʔalḥaqa", "ʔulḥiqtunna"],
+      "kok_yazilis": "ألحق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تلحقن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تلحقن (form IV)\n# تُلْحِقْنَ (tulḥiqna) /tul.ħiq.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَلْحَقَ (ʔalḥaqa)\n# تُلْحَقْنَ (tulḥaqna) /tul.ħaq.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَلْحَقَ (ʔalḥaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tulḥiqna", "ʔalḥaqa", "tulḥaqna"],
+      "kok_yazilis": "ألحق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ألحقن",
+      "tur": "verb",
+      "baslik": "ألحقن (form IV)\n# أَلْحَقْنَ (ʔalḥaqna) /ʔal.ħaq.na/: third-person feminine plural past active of أَلْحَقَ (ʔalḥaqa)\n# أُلْحِقْنَ (ʔulḥiqna) /ʔul.ħiq.na/: third-person feminine plural past passive of أَلْحَقَ (ʔalḥaqa)\n# أَلْحِقْنَ (ʔalḥiqna) /ʔal.ħiq.na/: second-person feminine plural imperative of أَلْحَقَ (ʔalḥaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔalḥaqna", "ʔalḥaqa", "ʔulḥiqna"],
+      "kok_yazilis": "ألحق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يلحقن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يلحقن (form IV)\n# يُلْحِقْنَ (yulḥiqna) /jul.ħiq.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَلْحَقَ (ʔalḥaqa)\n# يُلْحَقْنَ (yulḥaqna) /jul.ħaq.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَلْحَقَ (ʔalḥaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yulḥiqna", "ʔalḥaqa", "yulḥaqna"],
+      "kok_yazilis": "ألحق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تلحقان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تلحقان (form IV)\n# تُلْحِقَانِ (tulḥiqāni) /tul.ħi.qaː.ni/: inflection of أَلْحَقَ (ʔalḥaqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُلْحَقَانِ (tulḥaqāni) /tul.ħa.qaː.ni/: inflection of أَلْحَقَ (ʔalḥaqa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tulḥiqāni", "ʔalḥaqa", "tulḥaqāni"],
+      "kok_yazilis": "ألحق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ألحقا",
+      "tur": "verb",
+      "baslik": "ألحقا (form IV)\n# أَلْحَقَا (ʔalḥaqā) /ʔal.ħa.qaː/: third-person masculine dual past active of أَلْحَقَ (ʔalḥaqa)\n# أُلْحِقَا (ʔulḥiqā) /ʔul.ħi.qaː/: third-person masculine dual past passive of أَلْحَقَ (ʔalḥaqa)\n# أَلْحِقَا (ʔalḥiqā) /ʔal.ħi.qaː/: second-person dual imperative of أَلْحَقَ (ʔalḥaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔalḥaqā", "ʔalḥaqa", "ʔulḥiqā"],
+      "kok_yazilis": "ألحق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ألحقتما",
+      "tur": "verb",
+      "baslik": "ألحقتما (form IV)\n# أَلْحَقْتُمَا (ʔalḥaqtumā) /ʔal.ħaq.tu.maː/: second-person dual past active of أَلْحَقَ (ʔalḥaqa)\n# أُلْحِقْتُمَا (ʔulḥiqtumā) /ʔul.ħiq.tu.maː/: second-person dual past passive of أَلْحَقَ (ʔalḥaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔalḥaqtumā", "ʔalḥaqa", "ʔulḥiqtumā"],
+      "kok_yazilis": "ألحق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ألحقتا",
+      "tur": "verb",
+      "baslik": "ألحقتا (form IV)\n# أَلْحَقَتَا (ʔalḥaqatā) /ʔal.ħa.qa.taː/: third-person feminine dual past active of أَلْحَقَ (ʔalḥaqa)\n# أُلْحِقَتَا (ʔulḥiqatā) /ʔul.ħi.qa.taː/: third-person feminine dual past passive of أَلْحَقَ (ʔalḥaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔalḥaqatā", "ʔalḥaqa", "ʔulḥiqatā"],
+      "kok_yazilis": "ألحق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تلحقا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تلحقا (form IV)\n# تُلْحِقَا (tulḥiqā) /tul.ħi.qaː/: inflection of أَلْحَقَ (ʔalḥaqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُلْحَقَا (tulḥaqā) /tul.ħa.qaː/: inflection of أَلْحَقَ (ʔalḥaqa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/ju",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tulḥiqā", "ʔalḥaqa", "tulḥaqā"],
+      "kok_yazilis": "ألحق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يلحقا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يلحقا (form IV)\n# يُلْحِقَا (yulḥiqā) /jul.ħi.qaː/: third-person masculine dual non-past active subjunctive/jussive of أَلْحَقَ (ʔalḥaqa)\n# يُلْحَقَا (yulḥaqā) /jul.ħa.qaː/: third-person masculine dual non-past passive subjunctive/jussive of أَلْحَقَ (ʔalḥaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yulḥiqā", "ʔalḥaqa", "yulḥaqā"],
+      "kok_yazilis": "ألحق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يلحقان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يلحقان (form IV)\n# يُلْحِقَانِ (yulḥiqāni) /jul.ħi.qaː.ni/: third-person masculine dual non-past active indicative of أَلْحَقَ (ʔalḥaqa)\n# يُلْحَقَانِ (yulḥaqāni) /jul.ħa.qaː.ni/: third-person masculine dual non-past passive indicative of أَلْحَقَ (ʔalḥaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yulḥiqāni", "ʔalḥaqa", "yulḥaqāni"],
+      "kok_yazilis": "ألحق",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءلحق", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,430 +1,313 @@
 {
   "kok": "خلا",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "خلا", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "خلت",
-        "u": "خلت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "خَلَتْ • (ḵalat) (form I) /xa.lat/\n# third-person feminine singular past active of خَلَا (ḵalā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵalat", "ḵalā"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "يخلو",
-        "u": "يخلو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يخلو (form I)\n# يَخْلُو (yaḵlū) /jax.luː/: third-person masculine singular non-past active indicative of خَلَا (ḵalā)\n# يَخْلُوَ (yaḵluwa) /jax.lu.wa/: third-person masculine singular non-past active subjunctive of خَلَا (ḵalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḵlū", "ḵalā", "yaḵluwa"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "أخل",
-        "u": "أخل",
-        "p": "verb",
-        "n": "4.1",
-        "h": "ar-verb form",
-        "e": "أَخْلُ • (ʔaḵlu) (form I) /ʔax.lu/\n# first-person singular non-past active jussive of خَلَا (ḵalā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḵlu", "ḵalā"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "يخلى",
-        "u": "يخلى",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يُخْلَى • (yuḵlā) (form I) /jux.laː/\n# third-person masculine singular non-past passive indicative/subjunctive of خَلَا (ḵalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuḵlā", "ḵalā"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "يخل",
-        "u": "يخل",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يخل (form I)\n# يَخْلُ (yaḵlu) /jax.lu/: third-person masculine singular non-past active jussive of خَلَا (ḵalā)\n# يُخْلَ (yuḵla) /jux.la/: third-person masculine singular non-past passive jussive of خَلَا (ḵalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḵlu", "ḵalā", "yuḵla"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "خلي",
-        "u": "خلي",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "خُلِيَ • (ḵuliya) (form I) /xu.li.ja/\n# third-person masculine singular past passive of خَلَا (ḵalā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵuliya", "ḵalā"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "تخلو",
-        "u": "تخلو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تخلو (form I)\n# تَخْلُو (taḵlū) /tax.luː/: inflection of خَلَا (ḵalā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَخْلُوَ (taḵluwa) /tax.lu.wa/: inflection of خَلَا (ḵalā):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḵlū", "ḵalā", "taḵluwa"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "تخل",
-        "u": "تخل",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَخْلُ • (taḵlu) (form I) /tax.lu/\n# inflection of خَلَا (ḵalā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḵlu", "ḵalā"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "تخلي",
-        "u": "تخلي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَخْلِي • (taḵlī) (form I) /tax.liː/\n# second-person feminine singular non-past active subjunctive/jussive of خَلَا (ḵalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḵlī", "ḵalā"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "خلوت",
-        "u": "خلوت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "خلوت (form I)\n# خَلَوْتُ (ḵalawtu) /xa.law.tu/: first-person singular past active of خَلَا (ḵalā)\n# خَلَوْتَ (ḵalawta) /xa.law.ta/: second-person masculine singular past active of خَلَا (ḵalā)\n# خَلَوْتِ (ḵalawti) /xa.law.ti/: second-person feminine singular past active of خَلَا (ḵalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵalawtu", "ḵalā", "ḵalawta"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "اخل",
-        "u": "اخل",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُخْلُ • (uḵlu) (form I) /ux.lu/\n# second-person masculine singular imperative of خَلَا (ḵalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uḵlu", "ḵalā"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "تخلين",
-        "u": "تخلين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَخْلِينَ • (taḵlīna) (form I) /tax.liː.na/\n# second-person feminine singular non-past active indicative of خَلَا (ḵalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḵlīna", "ḵalā"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "اخلي",
-        "u": "اخلي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُخْلِي • (uḵlī) (form I) /ux.liː/\n# second-person feminine singular imperative of خَلَا (ḵalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uḵlī", "ḵalā"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "أخلو",
-        "u": "أخلو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أخلو (form I)\n# أَخْلُو (ʔaḵlū) /ʔax.luː/: first-person singular non-past active indicative of خَلَا (ḵalā)\n# أَخْلُوَ (ʔaḵluwa) /ʔax.lu.wa/: first-person singular non-past active subjunctive of خَلَا (ḵalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḵlū", "ḵalā", "ʔaḵluwa"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "خلونا",
-        "u": "خلونا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "خَلَوْنَا • (ḵalawnā) (form I) /xa.law.naː/\n# first-person plural past active of خَلَا (ḵalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵalawnā", "ḵalā"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "نخلو",
-        "u": "نخلو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نخلو (form I)\n# نَخْلُو (naḵlū) /nax.luː/: first-person plural non-past active indicative of خَلَا (ḵalā)\n# نَخْلُوَ (naḵluwa) /nax.lu.wa/: first-person plural non-past active subjunctive of خَلَا (ḵalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḵlū", "ḵalā", "naḵluwa"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "نخل",
-        "u": "نخل",
-        "p": "noun",
-        "n": "2.3",
-        "h": "ar-noun",
-        "e": "نَخْل • (naḵl) m",
-        "g": ["verbal noun of نَخَلَ (naḵala) (form I)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["نَخَلَ"],
-        "r": ["naḵl"],
-        "ipa": ["/naxl/"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "نخل",
-        "u": "نخل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نَخْلُ • (naḵlu) (form I) /nax.lu/\n# first-person plural non-past active jussive of خَلَا (ḵalā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḵlu", "ḵalā"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "خلوتم",
-        "u": "خلوتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "خَلَوْتُمْ • (ḵalawtum) (form I) /xa.law.tum/\n# second-person masculine plural past active of خَلَا (ḵalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵalawtum", "ḵalā"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "تخلون",
-        "u": "تخلون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَخْلُونَ • (taḵlūna) (form I) /tax.luː.na/\n# inflection of خَلَا (ḵalā):\n## second-person masculine/feminine plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḵlūna", "ḵalā"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "تخلوا",
-        "u": "تخلوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تخلوا (form I)\n# تَخْلُوَا (taḵluwā) /tax.lu.waː/: inflection of خَلَا (ḵalā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تَخْلُوا (taḵlū) /tax.luː/: second-person masculine plural non-past active subjunctive/jussive of خَلَا (ḵalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḵluwā", "ḵalā", "taḵlū"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "اخلوا",
-        "u": "اخلوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اخلوا (form I)\n# اُخْلُوَا (uḵluwā) /ux.lu.waː/: second-person dual imperative of خَلَا (ḵalā)\n# اُخْلُوا (uḵlū) /ux.luː/: second-person masculine plural imperative of خَلَا (ḵalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uḵluwā", "ḵalā", "uḵlū"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "خلوا",
-        "u": "خلوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "خلوا (form I)\n# خَلَوَا (ḵalawā) /xa.la.waː/: third-person masculine dual past active of خَلَا (ḵalā)\n# خَلَوْا (ḵalaw) /xa.law/: third-person masculine plural past active of خَلَا (ḵalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵalawā", "ḵalā", "ḵalaw"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "يخلون",
-        "u": "يخلون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَخْلُونَ • (yaḵlūna) (form I) /jax.luː.na/\n# inflection of خَلَا (ḵalā):\n## third-person masculine/feminine plural non-past active indicative\n## third-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḵlūna", "ḵalā"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "يخلوا",
-        "u": "يخلوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يخلوا (form I)\n# يَخْلُوَا (yaḵluwā) /jax.lu.waː/: third-person masculine dual non-past active subjunctive/jussive of خَلَا (ḵalā)\n# يَخْلُوا (yaḵlū) /jax.luː/: third-person masculine plural non-past active subjunctive/jussive of خَلَا (ḵalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḵluwā", "ḵalā", "yaḵlū"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "خلوتن",
-        "u": "خلوتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "خَلَوْتُنَّ • (ḵalawtunna) (form I) /xa.law.tun.na/\n# second-person feminine plural past active of خَلَا (ḵalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵalawtunna", "ḵalā"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "اخلون",
-        "u": "اخلون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُخْلُونَ • (uḵlūna) (form I) /ux.luː.na/\n# second-person feminine plural imperative of خَلَا (ḵalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uḵlūna", "ḵalā"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "خلون",
-        "u": "خلون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "خَلَوْنَ • (ḵalawna) (form I) /xa.law.na/\n# third-person feminine plural past active of خَلَا (ḵalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵalawna", "ḵalā"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "خلتا",
-        "u": "خلتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "خَلَتَا • (ḵalatā) (form I) /xa.la.taː/\n# third-person feminine dual past active of خَلَا (ḵalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵalatā", "ḵalā"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "يخلوان",
-        "u": "يخلوان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَخْلُوَانِ • (yaḵluwāni) (form I) /jax.lu.waː.ni/\n# third-person masculine dual non-past active indicative of خَلَا (ḵalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḵluwāni", "ḵalā"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "تخلوان",
-        "u": "تخلوان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَخْلُوَانِ • (taḵluwāni) (form I) /tax.lu.waː.ni/\n# inflection of خَلَا (ḵalā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḵluwāni", "ḵalā"],
-        "k": "خلا",
-        "yol": "kök"
-      },
-      {
-        "w": "خلوتما",
-        "u": "خلوتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "خَلَوْتُمَا • (ḵalawtumā) (form I) /xa.law.tu.maː/\n# second-person dual past active of خَلَا (ḵalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵalawtumā", "ḵalā"],
-        "k": "خلا",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "خل",
+  "ses": {
     "harf": "خ",
+    "fasil": "خل",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "خلت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "خَلَتْ • (ḵalat) (form I) /xa.lat/\n# third-person feminine singular past active of خَلَا (ḵalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵalat", "ḵalā"]
+    },
+    {
+      "madde": "يخلو",
+      "tur": "verb",
+      "baslik": "يخلو (form I)\n# يَخْلُو (yaḵlū) /jax.luː/: third-person masculine singular non-past active indicative of خَلَا (ḵalā)\n# يَخْلُوَ (yaḵluwa) /jax.lu.wa/: third-person masculine singular non-past active subjunctive of خَلَا (ḵalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḵlū", "ḵalā", "yaḵluwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أخل",
+      "tur": "verb",
+      "etim_no": "4.1",
+      "baslik": "أَخْلُ • (ʔaḵlu) (form I) /ʔax.lu/\n# first-person singular non-past active jussive of خَلَا (ḵalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḵlu", "ḵalā"]
+    },
+    {
+      "madde": "يخلى",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يُخْلَى • (yuḵlā) (form I) /jux.laː/\n# third-person masculine singular non-past passive indicative/subjunctive of خَلَا (ḵalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuḵlā", "ḵalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يخل",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يخل (form I)\n# يَخْلُ (yaḵlu) /jax.lu/: third-person masculine singular non-past active jussive of خَلَا (ḵalā)\n# يُخْلَ (yuḵla) /jux.la/: third-person masculine singular non-past passive jussive of خَلَا (ḵalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḵlu", "ḵalā", "yuḵla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "خلي",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "خُلِيَ • (ḵuliya) (form I) /xu.li.ja/\n# third-person masculine singular past passive of خَلَا (ḵalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵuliya", "ḵalā"]
+    },
+    {
+      "madde": "تخلو",
+      "tur": "verb",
+      "baslik": "تخلو (form I)\n# تَخْلُو (taḵlū) /tax.luː/: inflection of خَلَا (ḵalā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَخْلُوَ (taḵluwa) /tax.lu.wa/: inflection of خَلَا (ḵalā):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḵlū", "ḵalā", "taḵluwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تخل",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَخْلُ • (taḵlu) (form I) /tax.lu/\n# inflection of خَلَا (ḵalā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḵlu", "ḵalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تخلي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَخْلِي • (taḵlī) (form I) /tax.liː/\n# second-person feminine singular non-past active subjunctive/jussive of خَلَا (ḵalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḵlī", "ḵalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "خلوت",
+      "tur": "verb",
+      "baslik": "خلوت (form I)\n# خَلَوْتُ (ḵalawtu) /xa.law.tu/: first-person singular past active of خَلَا (ḵalā)\n# خَلَوْتَ (ḵalawta) /xa.law.ta/: second-person masculine singular past active of خَلَا (ḵalā)\n# خَلَوْتِ (ḵalawti) /xa.law.ti/: second-person feminine singular past active of خَلَا (ḵalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵalawtu", "ḵalā", "ḵalawta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اخل",
+      "tur": "verb",
+      "baslik": "اُخْلُ • (uḵlu) (form I) /ux.lu/\n# second-person masculine singular imperative of خَلَا (ḵalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uḵlu", "ḵalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تخلين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَخْلِينَ • (taḵlīna) (form I) /tax.liː.na/\n# second-person feminine singular non-past active indicative of خَلَا (ḵalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḵlīna", "ḵalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اخلي",
+      "tur": "verb",
+      "baslik": "اُخْلِي • (uḵlī) (form I) /ux.liː/\n# second-person feminine singular imperative of خَلَا (ḵalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uḵlī", "ḵalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أخلو",
+      "tur": "verb",
+      "baslik": "أخلو (form I)\n# أَخْلُو (ʔaḵlū) /ʔax.luː/: first-person singular non-past active indicative of خَلَا (ḵalā)\n# أَخْلُوَ (ʔaḵluwa) /ʔax.lu.wa/: first-person singular non-past active subjunctive of خَلَا (ḵalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḵlū", "ḵalā", "ʔaḵluwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "خلونا",
+      "tur": "verb",
+      "baslik": "خَلَوْنَا • (ḵalawnā) (form I) /xa.law.naː/\n# first-person plural past active of خَلَا (ḵalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵalawnā", "ḵalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نخلو",
+      "tur": "verb",
+      "baslik": "نخلو (form I)\n# نَخْلُو (naḵlū) /nax.luː/: first-person plural non-past active indicative of خَلَا (ḵalā)\n# نَخْلُوَ (naḵluwa) /nax.lu.wa/: first-person plural non-past active subjunctive of خَلَا (ḵalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḵlū", "ḵalā", "naḵluwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نخل",
+      "tur": "noun",
+      "etim_no": "2.3",
+      "baslik": "نَخْل • (naḵl) m",
+      "anlam": ["verbal noun of نَخَلَ (naḵala) (form I)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["نَخَلَ"],
+      "okunus": ["naḵl"],
+      "ipa": ["/naxl/"],
+      "bag": "asıl madde"
+    },
+    {
+      "madde": "نخل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نَخْلُ • (naḵlu) (form I) /nax.lu/\n# first-person plural non-past active jussive of خَلَا (ḵalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḵlu", "ḵalā"]
+    },
+    {
+      "madde": "خلوتم",
+      "tur": "verb",
+      "baslik": "خَلَوْتُمْ • (ḵalawtum) (form I) /xa.law.tum/\n# second-person masculine plural past active of خَلَا (ḵalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵalawtum", "ḵalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تخلون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَخْلُونَ • (taḵlūna) (form I) /tax.luː.na/\n# inflection of خَلَا (ḵalā):\n## second-person masculine/feminine plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḵlūna", "ḵalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تخلوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تخلوا (form I)\n# تَخْلُوَا (taḵluwā) /tax.lu.waː/: inflection of خَلَا (ḵalā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تَخْلُوا (taḵlū) /tax.luː/: second-person masculine plural non-past active subjunctive/jussive of خَلَا (ḵalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḵluwā", "ḵalā", "taḵlū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اخلوا",
+      "tur": "verb",
+      "baslik": "اخلوا (form I)\n# اُخْلُوَا (uḵluwā) /ux.lu.waː/: second-person dual imperative of خَلَا (ḵalā)\n# اُخْلُوا (uḵlū) /ux.luː/: second-person masculine plural imperative of خَلَا (ḵalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uḵluwā", "ḵalā", "uḵlū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "خلوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "خلوا (form I)\n# خَلَوَا (ḵalawā) /xa.la.waː/: third-person masculine dual past active of خَلَا (ḵalā)\n# خَلَوْا (ḵalaw) /xa.law/: third-person masculine plural past active of خَلَا (ḵalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵalawā", "ḵalā", "ḵalaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يخلون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَخْلُونَ • (yaḵlūna) (form I) /jax.luː.na/\n# inflection of خَلَا (ḵalā):\n## third-person masculine/feminine plural non-past active indicative\n## third-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḵlūna", "ḵalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يخلوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يخلوا (form I)\n# يَخْلُوَا (yaḵluwā) /jax.lu.waː/: third-person masculine dual non-past active subjunctive/jussive of خَلَا (ḵalā)\n# يَخْلُوا (yaḵlū) /jax.luː/: third-person masculine plural non-past active subjunctive/jussive of خَلَا (ḵalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḵluwā", "ḵalā", "yaḵlū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "خلوتن",
+      "tur": "verb",
+      "baslik": "خَلَوْتُنَّ • (ḵalawtunna) (form I) /xa.law.tun.na/\n# second-person feminine plural past active of خَلَا (ḵalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵalawtunna", "ḵalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اخلون",
+      "tur": "verb",
+      "baslik": "اُخْلُونَ • (uḵlūna) (form I) /ux.luː.na/\n# second-person feminine plural imperative of خَلَا (ḵalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uḵlūna", "ḵalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "خلون",
+      "tur": "verb",
+      "baslik": "خَلَوْنَ • (ḵalawna) (form I) /xa.law.na/\n# third-person feminine plural past active of خَلَا (ḵalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵalawna", "ḵalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "خلتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "خَلَتَا • (ḵalatā) (form I) /xa.la.taː/\n# third-person feminine dual past active of خَلَا (ḵalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵalatā", "ḵalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يخلوان",
+      "tur": "verb",
+      "baslik": "يَخْلُوَانِ • (yaḵluwāni) (form I) /jax.lu.waː.ni/\n# third-person masculine dual non-past active indicative of خَلَا (ḵalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḵluwāni", "ḵalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تخلوان",
+      "tur": "verb",
+      "baslik": "تَخْلُوَانِ • (taḵluwāni) (form I) /tax.lu.waː.ni/\n# inflection of خَلَا (ḵalā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḵluwāni", "ḵalā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "خلوتما",
+      "tur": "verb",
+      "baslik": "خَلَوْتُمَا • (ḵalawtumā) (form I) /xa.law.tu.maː/\n# second-person dual past active of خَلَا (ḵalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵalawtumā", "ḵalā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "خلا", "r7"]
+  ],
+  "mana": {
     "ince": "abandon.v.04",
     "orta": "verb.cognition",
     "ust": "zihin ve ilim",
@@ -432,22 +315,15 @@
     "dayanak_tanim": "stop maintaining or insisting on; of ideas or claims",
     "synset_sayisi": 2
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["abandon.v.04", "living_thing.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["abandon.v.04", "living_thing.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

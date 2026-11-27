@@ -1,62 +1,59 @@
 {
   "kok": "ضمحل",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ضمحل", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "اضمحل",
-        "u": "اضمحل",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "اِضْمَحَلَّ • (iḍmaḥalla) IVq (non-past يَضْمَحِلُّ (yaḍmaḥillu), verbal noun اِضْمِحْلَال (iḍmiḥlāl))",
-        "g": ["to disappear, to vanish", "to decay, to decrease", "to dwindle, to fade away"],
-        "r": ["iḍmaḥalla"],
-        "k": "ضمحل",
-        "yol": "kök"
-      },
-      {
-        "w": "اضمحلال",
-        "u": "اضمحلال",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "اِضْمِحْلَال • (iḍmiḥlāl) m",
-        "g": ["verbal noun of اِضْمَحَلَّ (iḍmaḥalla) (form IVq)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["اِضْمَحَلَّ"],
-        "r": ["iḍmiḥlāl"],
-        "ds": [
-          ["az", "izmehlal", ""],
-          ["ota", "اضمحلال", "izmihlâl"],
-          ["fa", "اضمحلال", "ezmehlâl"]
-        ],
-        "k": "ضمحل",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "ضم",
+  "ses": {
     "harf": "ض",
+    "fasil": "ضم",
     "mahrec": "şeceriyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "اضمحل",
+      "tur": "verb",
+      "baslik": "اِضْمَحَلَّ • (iḍmaḥalla) IVq (non-past يَضْمَحِلُّ (yaḍmaḥillu), verbal noun اِضْمِحْلَال (iḍmiḥlāl))",
+      "anlam": ["to disappear, to vanish", "to decay, to decrease", "to dwindle, to fade away"],
+      "okunus": ["iḍmaḥalla"]
+    },
+    {
+      "madde": "اضمحلال",
+      "tur": "noun",
+      "baslik": "اِضْمِحْلَال • (iḍmiḥlāl) m",
+      "anlam": ["verbal noun of اِضْمَحَلَّ (iḍmaḥalla) (form IVq)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["اِضْمَحَلَّ"],
+      "okunus": ["iḍmiḥlāl"],
+      "torunlar": [
+        ["az", "izmehlal", ""],
+        ["ota", "اضمحلال", "izmihlâl"],
+        ["fa", "اضمحلال", "ezmehlâl"]
+      ]
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ضمحل", "r6"]
+  ],
+  "mana": {
     "ince": "decline.v.04",
     "orta": "verb.change",
     "ust": "fiil ve hadise",
@@ -64,20 +61,8 @@
     "dayanak_tanim": "grow smaller",
     "synset_sayisi": 2
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["decay.v.02", "decline.v.04"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 8,
       "merkez_kok": "سير",
@@ -97,6 +82,11 @@
       "boy": 5
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["decay.v.02", "decline.v.04"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

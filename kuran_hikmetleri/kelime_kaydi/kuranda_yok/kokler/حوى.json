@@ -1,591 +1,436 @@
 {
   "kok": "حوى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "حوى", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "mekayis": [
-      {
-        "baslik": "حَوَى",
-        "metin": "(حَوَى) الْحَاءُ وَالْوَاوُ وَمَا بَعْدَهُ مُعْتَلٌّ أَصْلٌ وَاحِدٌ، وَهُوَ الْجَمْعُ يُقَالُ حَوَيْتُ الشَّيْءَ أَحْوِيهِ حَيًّا، إِذَا جَمَعْتَهُ. وَالْحَوِيَّةُ: الْوَاحِدَةُ مِنَ الْحَوَايَا، وَهِيَ الْأَمْعَاءُ، وَهِيَ مِنَ الْجَمْعِ. وَيَقُولُونَ لِلْوَاحِدَةِ حَاوِيَاءُ. قَالَ:\nكَأَنَّ نَقِيضَ الْحَبِّ فِي حَاوِيَائِهِ ... فَحِيحُ الْأَفَاعِي أَوْ نَقِيضُ الْعَقَارِبِ\nوَالْحَوِيَّةُ: كِسَاءٌ يُحَوَّى حَوْلَ سَنَامِ الْبَعِيرِ ثُمَّ يُرْكَبُ. وَالْحَيُّ مِنْ أَحْيَاءِ الْعَرَبِ. وَالْحِوَاءُ: الْبَيْتُ الْوَاحِدُ، وَكُلُّهُ مِنْ قِيَاسِ الْبَابِ."
-      }
-    ],
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الجيم والهاء",
-      "baslik": "حوى",
-      "mihveri": "الانعطافُ على الشيء في الأثناء وحوزُه فيها بقوة كالحوِيّة حولَ السنام، والأمعاءِ بتحوِّيها في نفسها ولما فيها، وحُوّة الوادي ترُدُّ ماءَه فيه فيَحْويه، وحَوِى البعير يَحْوي الماء. ومنه الحوايا: حفائر للماء في القيعان. أما في قوله تعالى: {إِلَّا مَا حَمَلَتْ ظُهُورُهُمَا} [الأنعام: 146] فهي جمع حَوِيّة: الأمعاء. ومنه \"الحِوَاء -ككتاب: أخبية للناس تجمعهم، وهم يجتمعون على ماء. وتحوّي: تجمع واستدار. والحَوّة -بالفتح: الكلمة من الحق (ليست فارغة) .. وقالت الأم عن ابنها \"كان بطني له حِواء \"- ككتاب أي مكانًا يجمعه ويضمه \". ومن هذا فيما أرى تسمية أمنا حواء زوج أبينا آدم عليهما وعلى نبينا أفضل الصلاة والسلام -لحملها الأولاد في بطنها (وهذا- صحيح علميًّا. وما ذكر في [قر 1/ 300] نقلًا عن العهد القديم= لا يوثق به). ومن الأصل \"الحُوّة- (1/355) بالضم: لَوْنُ سواد بظهر مع لون آخر خُضْرة أو حُمْرة \" (لون معتم، فهما لونان مختلطان كأن السواد محتوى في أثناء الخضرة أو الحمرة فالأحوى الأسود من شدة الخضرة أو من القِدَم والعِتْق) {وَالَّذِي أَخْرَجَ الْمَرْعَى (4) فَجَعَلَهُ غُثَاءً أَحْوَى} يمكن في ضوء الآيات السابقة التي تبين نعمة الله في إبلاغه ما خلق إلى كمال حاله .. {الَّذِي خَلَقَ فَسَوَّى (2) وَالَّذِي قَدَّرَ فَهَدَى} أن نفر الغُثَاء الأحوى بالنبات الشديد الخضرة حتى يَسْوَدّ قوله تعالى: {مُدْهَامَّتَانِ} [الرحمن: 64] واللغة لا تمنع أن يراد بالغثاء المرعى نفسه، إذ هو خَضِر غضٌّ ليس أشجارًا ولا أعوادًا صُلْبة ولا هو مُحَمَّل بحب يُؤْكَل كالقمح والشعير، وهو يؤكل غضًا وجافًا. ثم قد جاء تسمية النبتة",
-      "sesler": "",
-      "tam_metin": "{وَالَّذِي أَخْرَجَ الْمَرْعَى (4) فَجَعَلَهُ غُثَاءً أَحْوَى} [الأعلى: 5].\n\"الحَوِيّة -كغنية: كساءٌ محشو حول سَنام البعير، وما تحوَّي من الأمعاء أي الدُوَّارَة التي في بطن الشاة وهي بنات اللبن- كالحاوية والحاوياء. وحُوّة الوادي بالضم: جانبه، وكغَنِىّ: الحَوْض الصغير يُسَوّيه الرجل للبعير يسقيه فيه. حَوَى الشيء يَحْوِيه: جَمَعَه وأحرزه، واحتوى عليه: أَلمْاَ عليه \".\n° المعنى المحوري\nالانعطافُ على الشيء في الأثناء وحوزُه فيها بقوة كالحوِيّة حولَ السنام، والأمعاءِ بتحوِّيها في نفسها ولما فيها، وحُوّة الوادي ترُدُّ ماءَه فيه فيَحْويه، وحَوِى البعير يَحْوي الماء. ومنه الحوايا: حفائر للماء في القيعان. أما في قوله تعالى: {إِلَّا مَا حَمَلَتْ ظُهُورُهُمَا} [الأنعام: 146] فهي جمع حَوِيّة: الأمعاء. ومنه \"الحِوَاء -ككتاب: أخبية للناس تجمعهم، وهم يجتمعون على ماء. وتحوّي: تجمع واستدار. والحَوّة -بالفتح: الكلمة من الحق (ليست فارغة) .. وقالت الأم عن ابنها \"كان بطني له حِواء \"- ككتاب أي مكانًا يجمعه ويضمه \". ومن هذا فيما أرى تسمية أمنا حواء زوج أبينا آدم عليهما وعلى نبينا أفضل الصلاة والسلام -لحملها الأولاد في بطنها (وهذا- صحيح علميًّا. وما ذكر في [قر 1/ 300] نقلًا عن العهد القديم= لا يوثق به). ومن الأصل \"الحُوّة-\n(1/355)\nبالضم: لَوْنُ سواد بظهر مع لون آخر خُضْرة أو حُمْرة \" (لون معتم، فهما لونان مختلطان كأن السواد محتوى في أثناء الخضرة أو الحمرة فالأحوى الأسود من شدة الخضرة أو من القِدَم والعِتْق) {وَالَّذِي أَخْرَجَ الْمَرْعَى (4) فَجَعَلَهُ غُثَاءً أَحْوَى} يمكن في ضوء الآيات السابقة التي تبين نعمة الله في إبلاغه ما خلق إلى كمال حاله .. {الَّذِي خَلَقَ فَسَوَّى (2) وَالَّذِي قَدَّرَ فَهَدَى} أن نفر الغُثَاء الأحوى بالنبات الشديد الخضرة حتى يَسْوَدّ قوله تعالى: {مُدْهَامَّتَانِ} [الرحمن: 64] واللغة لا تمنع أن يراد بالغثاء المرعى نفسه، إذ هو خَضِر غضٌّ ليس أشجارًا ولا أعوادًا صُلْبة ولا هو مُحَمَّل بحب يُؤْكَل كالقمح والشعير، وهو يؤكل غضًا وجافًا. ثم قد جاء تسمية النبتة الضعيفة غُثَاء في حديث القيامة \"كما تَنْبُتُ الحِبَّة في غُثَاء السيل. ثم جاء في مسلم \"كما تنبت الغُثاءة \"يريد ما احتمله السيل من البزورات \" [ل غثا] وفي رواية \"كما ينبت البقل [التاج الجامع للأصول في أحاديث الرسول 5/ 329] فهذه تفسر تلك. وفي [ق] يقال \"غَثِيت الأرض بالنبات -كرضى: كثُر فيها \"اه فسمي النبات الكثير غثاء. ومما يشبه ذلك ويؤيده قولهم للضبع: غَثْواء- لكثرة شعرها [ل] والشَعَر من الجِلْد كالبَقْل من الأرض. وعلى ذلك يكون المعنى أخرج المرعى فأبلغه كمال حاله بأن جعله طبقة كثيفة غَضَّة حَوّاء وهذا كماله حال المرعى. {سَنُقْرِئُكَ فَلَا تَنْسَى (6)} أي لا تخف ألا نصل بنعمتا عليك إلى كمالها بأن تنسى بل سنقرئك فلا تنسى أبدًا. فهذا كمال هذه النعمة.\nويجوز غيرُ هذا: أن تكون أحوى بمعنى أسود أي من البِلَى وصفًا للغثاء الذي يصير إليه المرعى بعد تجاوز مرحلة التمام، والكلام على ترتيبه مع طيّ المرحلة الوسطى لأنها معلومة، وأخيرًا مجوز أَن تكون (أَحْوىَ) حالًا من المرعى بتقدير تقديمه على {فَجَعَلَهُ غُثَاءً}.\n(1/356)",
-      "fasil_ozeti": "° معنى الفصل المعجمي (جه) : الفراغ وما يلزمه من انكشاف كما يتمثل في حرمان السائل حرمانًا تامًا -في (جهه)، وفي انكشاف ما يواجَه ويظهر في أعلى الشيء ومقدَّمه- في (وجه)، وفي إفراغ أقصى القوة -في (جهد) وفي كشف الشيء وتنقيته- في (جهر)، وفي خروج المندفن وخلوصه مما يغطيه -في (جهز) وفي فراغ قلب الجاهل- في (جهل) ثم في فراغ (جهنم) وإعدادها للإطباق على أهلها والعياذ بالله."
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "حوت",
-        "u": "حوت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "حَوَتْ • (ḥawat) (form I) /ħa.wat/\n# third-person feminine singular past active of حَوَى (ḥawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "s": [
-          ["nonlemma", "See the etymology of the corresponding lemma form."]
-        ],
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥawat", "ḥawā"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "نحو",
-        "u": "نحو",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نحو (form I)\n# نَحْوِ (naḥwi) /naħ.wi/: first-person plural non-past active jussive of حَوَى (ḥawā)\n# نُحْوَ (nuḥwa) /nuħ.wa/: first-person plural non-past passive jussive of حَوَى (ḥawā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḥwi", "ḥawā", "nuḥwa"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "حيتان",
-        "u": "حيتان",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "حِيتَان • (ḥītān) m pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of حُوت (ḥūt)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["حُوت"],
-        "r": ["ḥītān"],
-        "ipa": ["/ħiːtaːn/"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "أحوات",
-        "u": "أحوات",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "أَحْوَات • (ʔaḥwāt) m pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of حُوت (ḥūt)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["حُوت"],
-        "r": ["ʔaḥwāt"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "تحوى",
-        "u": "تحوى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُحْوَى • (tuḥwā) (form I) /tuħ.waː/\n# inflection of حَوَى (ḥawā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuḥwā", "ḥawā"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحو",
-        "u": "تحو",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تحو (form I)\n# تَحْوِ (taḥwi) /taħ.wi/: inflection of حَوَى (ḥawā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُحْوَ (tuḥwa) /tuħ.wa/: inflection of حَوَى (ḥawā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥwi", "ḥawā", "tuḥwa"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحوي",
-        "u": "يحوي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يحوي (form I)\n# يَحْوِي (yaḥwī) /jaħ.wiː/: third-person masculine singular non-past active indicative of حَوَى (ḥawā)\n# يَحْوِيَ (yaḥwiya) /jaħ.wi.ja/: third-person masculine singular non-past active subjunctive of حَوَى (ḥawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥwī", "ḥawā", "yaḥwiya"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحوى",
-        "u": "يحوى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُحْوَى • (yuḥwā) (form I) /juħ.waː/\n# third-person masculine singular non-past passive indicative/subjunctive of حَوَى (ḥawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuḥwā", "ḥawā"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحوي",
-        "u": "تحوي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تحوي (form I)\n# تَحْوِي (taḥwī) /taħ.wiː/: inflection of حَوَى (ḥawā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَحْوِيَ (taḥwiya) /taħ.wi.ja/: inflection of حَوَى (ḥawā):\n## second-person masculine singular non-past active subjunctive\n## third",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥwī", "ḥawā", "taḥwiya"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحو",
-        "u": "يحو",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يحو (form I)\n# يَحْوِ (yaḥwi) /jaħ.wi/: third-person masculine singular non-past active jussive of حَوَى (ḥawā)\n# يُحْوَ (yuḥwa) /juħ.wa/: third-person masculine singular non-past passive jussive of حَوَى (ḥawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥwi", "ḥawā", "yuḥwa"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "حوي",
-        "u": "حوي",
-        "p": "verb",
-        "n": "1.2",
-        "h": "ar-verb form",
-        "e": "حُوِيَ • (ḥuwiya) (form I) /ħu.wi.ja/\n# third-person masculine singular past passive of حَوَى (ḥawā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥuwiya", "ḥawā"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "حويت",
-        "u": "حويت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "حويت (form I)\n# حَوَيْتُ (ḥawaytu) /ħa.waj.tu/: first-person singular past active of حَوَى (ḥawā)\n# حَوَيْتَ (ḥawayta) /ħa.waj.ta/: second-person masculine singular past active of حَوَى (ḥawā)\n# حَوَيْتِ (ḥawayti) /ħa.waj.ti/: second-person feminine singular past active of حَوَى (ḥawā)\n# حُوِيتُ (ḥuwītu) /ħu.wiː.tu/: first-person singular past passive of حَوَى (ḥawā)\n# حُوِيتَ (ḥuwīta) /ħu.wiː.ta/",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥawaytu", "ḥawā", "ḥawayta"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "احو",
-        "u": "احو",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِحْوِ • (iḥwi) (form I) /iħ.wi/\n# second-person masculine singular imperative of حَوَى (ḥawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iḥwi", "ḥawā"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحوين",
-        "u": "تحوين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تحوين (form I)\n# تَحْوِينَ (taḥwīna) /taħ.wiː.na/: inflection of حَوَى (ḥawā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُحْوَيْنَ (tuḥwayna) /tuħ.waj.na/: inflection of حَوَى (ḥawā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passi",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥwīna", "ḥawā", "tuḥwayna"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "احوي",
-        "u": "احوي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِحْوِي • (iḥwī) (form I) /iħ.wiː/\n# second-person feminine singular imperative of حَوَى (ḥawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iḥwī", "ḥawā"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "أحوي",
-        "u": "أحوي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أحوي (form I)\n# أَحْوِي (ʔaḥwī) /ʔaħ.wiː/: first-person singular non-past active indicative of حَوَى (ḥawā)\n# أَحْوِيَ (ʔaḥwiya) /ʔaħ.wi.ja/: first-person singular non-past active subjunctive of حَوَى (ḥawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḥwī", "ḥawā", "ʔaḥwiya"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "أحو",
-        "u": "أحو",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أحو (form I)\n# أَحْوِ (ʔaḥwi) /ʔaħ.wi/: first-person singular non-past active jussive of حَوَى (ḥawā)\n# أُحْوَ (ʔuḥwa) /ʔuħ.wa/: first-person singular non-past passive jussive of حَوَى (ḥawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḥwi", "ḥawā", "ʔuḥwa"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "أحوى",
-        "u": "أحوى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أُحْوَى • (ʔuḥwā) (form I) /ʔuħ.waː/\n# first-person singular non-past passive indicative/subjunctive of حَوَى (ḥawā)",
-        "tag": ["form-i", "no-gloss", "obsolete"],
-        "r": ["ʔuḥwā", "ḥawā"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "حوينا",
-        "u": "حوينا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "حوينا (form I)\n# حَوَيْنَا (ḥawaynā) /ħa.waj.naː/: first-person plural past active of حَوَى (ḥawā)\n# حُوِينَا (ḥuwīnā) /ħu.wiː.naː/: first-person plural past passive of حَوَى (ḥawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥawaynā", "ḥawā", "ḥuwīnā"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "نحوي",
-        "u": "نحوي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نحوي (form I)\n# نَحْوِي (naḥwī) /naħ.wiː/: first-person plural non-past active indicative of حَوَى (ḥawā)\n# نَحْوِيَ (naḥwiya) /naħ.wi.ja/: first-person plural non-past active subjunctive of حَوَى (ḥawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "s": [
-          ["nonlemma", "See the etymology of the corresponding lemma form."]
-        ],
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḥwī", "ḥawā", "naḥwiya"],
-        "ipa": ["/naħ.wijj/"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "نحوى",
-        "u": "نحوى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نُحْوَى • (nuḥwā) (form I) /nuħ.waː/\n# first-person plural non-past passive indicative/subjunctive of حَوَى (ḥawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuḥwā", "ḥawā"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحووا",
-        "u": "تحووا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تحووا (form I)\n# تَحْوُوا (taḥwū) /taħ.wuː/: second-person masculine plural non-past active subjunctive/jussive of حَوَى (ḥawā)\n# تُحْوَوْا (tuḥwaw) /tuħ.waw/: second-person masculine plural non-past passive subjunctive/jussive of حَوَى (ḥawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥwū", "ḥawā", "tuḥwaw"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "حويتم",
-        "u": "حويتم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "حويتم (form I)\n# حَوَيْتُمْ (ḥawaytum) /ħa.waj.tum/: second-person masculine plural past active of حَوَى (ḥawā)\n# حُوِيتُمْ (ḥuwītum) /ħu.wiː.tum/: second-person masculine plural past passive of حَوَى (ḥawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥawaytum", "ḥawā", "ḥuwītum"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحوون",
-        "u": "تحوون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تحوون (form I)\n# تَحْوُونَ (taḥwūna) /taħ.wuː.na/: second-person masculine plural non-past active indicative of حَوَى (ḥawā)\n# تُحْوَوْنَ (tuḥwawna) /tuħ.waw.na/: second-person masculine plural non-past passive indicative of حَوَى (ḥawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥwūna", "ḥawā", "tuḥwawna"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "احووا",
-        "u": "احووا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِحْوُوا • (iḥwū) (form I) /iħ.wuː/\n# second-person masculine plural imperative of حَوَى (ḥawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iḥwū", "ḥawā"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "حووا",
-        "u": "حووا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "حووا (form I)\n# حَوَوْا (ḥawaw) /ħa.waw/: third-person masculine plural past active of حَوَى (ḥawā)\n# حُوُوا (ḥuwū) /ħu.wuː/: third-person masculine plural past passive of حَوَى (ḥawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥawaw", "ḥawā", "ḥuwū"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحوون",
-        "u": "يحوون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يحوون (form I)\n# يَحْوُونَ (yaḥwūna) /jaħ.wuː.na/: third-person masculine plural non-past active indicative of حَوَى (ḥawā)\n# يُحْوَوْنَ (yuḥwawna) /juħ.waw.na/: third-person masculine plural non-past passive indicative of حَوَى (ḥawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥwūna", "ḥawā", "yuḥwawna"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحووا",
-        "u": "يحووا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يحووا (form I)\n# يَحْوُوا (yaḥwū) /jaħ.wuː/: third-person masculine plural non-past active subjunctive/jussive of حَوَى (ḥawā)\n# يُحْوَوْا (yuḥwaw) /juħ.waw/: third-person masculine plural non-past passive subjunctive/jussive of حَوَى (ḥawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥwū", "ḥawā", "yuḥwaw"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "حويتن",
-        "u": "حويتن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "حويتن (form I)\n# حَوَيْتُنَّ (ḥawaytunna) /ħa.waj.tun.na/: second-person feminine plural past active of حَوَى (ḥawā)\n# حُوِيتُنَّ (ḥuwītunna) /ħu.wiː.tun.na/: second-person feminine plural past passive of حَوَى (ḥawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥawaytunna", "ḥawā", "ḥuwītunna"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "احوين",
-        "u": "احوين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِحْوِينَ • (iḥwīna) (form I) /iħ.wiː.na/\n# second-person feminine plural imperative of حَوَى (ḥawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iḥwīna", "ḥawā"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "حوين",
-        "u": "حوين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "حوين (form I)\n# حَوَيْنَ (ḥawayna) /ħa.waj.na/: third-person feminine plural past active of حَوَى (ḥawā)\n# حُوِينَ (ḥuwīna) /ħu.wiː.na/: third-person feminine plural past passive of حَوَى (ḥawā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥawayna", "ḥawā", "ḥuwīna"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحوين",
-        "u": "يحوين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يحوين (form I)\n# يَحْوِينَ (yaḥwīna) /jaħ.wiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of حَوَى (ḥawā)\n# يُحْوَيْنَ (yuḥwayna) /juħ.waj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of حَوَى (ḥawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥwīna", "ḥawā", "yuḥwayna"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "الحوت",
-        "u": "الحوت",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "اَلْحُوت • (al-ḥūt) ?",
-        "g": ["definite singular of حُوت (ḥūt)"],
-        "tag": ["definite", "form-of", "singular"],
-        "fo": ["حُوت"],
-        "r": ["al-ḥūt"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "تحويا",
-        "u": "تحويا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تحويا (form I)\n# تَحْوِيَا (taḥwiyā) /taħ.wi.jaː/: inflection of حَوَى (ḥawā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُحْوَيَا (tuḥwayā) /tuħ.wa.jaː/: inflection of حَوَى (ḥawā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥwiyā", "ḥawā", "tuḥwayā"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "حويتما",
-        "u": "حويتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "حويتما (form I)\n# حَوَيْتُمَا (ḥawaytumā) /ħa.waj.tu.maː/: second-person dual past active of حَوَى (ḥawā)\n# حُوِيتُمَا (ḥuwītumā) /ħu.wiː.tu.maː/: second-person dual past passive of حَوَى (ḥawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥawaytumā", "ḥawā", "ḥuwītumā"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "حويا",
-        "u": "حويا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "حويا (form I)\n# حَوَيَا (ḥawayā) /ħa.wa.jaː/: third-person masculine dual past active of حَوَى (ḥawā)\n# حُوِيَا (ḥuwiyā) /ħu.wi.jaː/: third-person masculine dual past passive of حَوَى (ḥawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥawayā", "ḥawā", "ḥuwiyā"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "حويتا",
-        "u": "حويتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "حُوِيَتَا • (ḥuwiyatā) (form I) /ħu.wi.ja.taː/\n# third-person feminine dual past passive of حَوَى (ḥawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥuwiyatā", "ḥawā"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "حوتا",
-        "u": "حوتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حَوَتَا • (ḥawatā) (form I) /ħa.wa.taː/\n# third-person feminine dual past active of حَوَى (ḥawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥawatā", "ḥawā"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحويان",
-        "u": "تحويان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تحويان (form I)\n# تَحْوِيَانِ (taḥwiyāni) /taħ.wi.jaː.ni/: inflection of حَوَى (ḥawā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُحْوَيَانِ (tuḥwayāni) /tuħ.wa.jaː.ni/: inflection of حَوَى (ḥawā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥwiyāni", "ḥawā", "tuḥwayāni"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحويان",
-        "u": "يحويان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يحويان (form I)\n# يَحْوِيَانِ (yaḥwiyāni) /jaħ.wi.jaː.ni/: third-person masculine dual non-past active indicative of حَوَى (ḥawā)\n# يُحْوَيَانِ (yuḥwayāni) /juħ.wa.jaː.ni/: third-person masculine dual non-past passive indicative of حَوَى (ḥawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥwiyāni", "ḥawā", "yuḥwayāni"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يحويا",
-        "u": "يحويا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يحويا (form I)\n# يَحْوِيَا (yaḥwiyā) /jaħ.wi.jaː/: third-person masculine dual non-past active subjunctive/jussive of حَوَى (ḥawā)\n# يُحْوَيَا (yuḥwayā) /juħ.wa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of حَوَى (ḥawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥwiyā", "ḥawā", "yuḥwayā"],
-        "k": "حوى",
-        "yol": "kök"
-      },
-      {
-        "w": "احويا",
-        "u": "احويا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِحْوِيَا • (iḥwiyā) (form I) /iħ.wi.jaː/\n# second-person dual imperative of حَوَى (ḥawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iḥwiyā", "ḥawā"],
-        "k": "حوى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "حى",
+  "ses": {
     "harf": "ح",
+    "fasil": "حى",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "mekayis": [
+    {
+      "baslik": "حَوَى",
+      "metin": "(حَوَى) الْحَاءُ وَالْوَاوُ وَمَا بَعْدَهُ مُعْتَلٌّ أَصْلٌ وَاحِدٌ، وَهُوَ الْجَمْعُ يُقَالُ حَوَيْتُ الشَّيْءَ أَحْوِيهِ حَيًّا، إِذَا جَمَعْتَهُ. وَالْحَوِيَّةُ: الْوَاحِدَةُ مِنَ الْحَوَايَا، وَهِيَ الْأَمْعَاءُ، وَهِيَ مِنَ الْجَمْعِ. وَيَقُولُونَ لِلْوَاحِدَةِ حَاوِيَاءُ. قَالَ:\nكَأَنَّ نَقِيضَ الْحَبِّ فِي حَاوِيَائِهِ ... فَحِيحُ الْأَفَاعِي أَوْ نَقِيضُ الْعَقَارِبِ\nوَالْحَوِيَّةُ: كِسَاءٌ يُحَوَّى حَوْلَ سَنَامِ الْبَعِيرِ ثُمَّ يُرْكَبُ. وَالْحَيُّ مِنْ أَحْيَاءِ الْعَرَبِ. وَالْحِوَاءُ: الْبَيْتُ الْوَاحِدُ، وَكُلُّهُ مِنْ قِيَاسِ الْبَابِ."
+    }
+  ],
+  "cebel": {
+    "fasil": "الجيم والهاء",
+    "baslik": "حوى",
+    "mihveri": "الانعطافُ على الشيء في الأثناء وحوزُه فيها بقوة كالحوِيّة حولَ السنام، والأمعاءِ بتحوِّيها في نفسها ولما فيها، وحُوّة الوادي ترُدُّ ماءَه فيه فيَحْويه، وحَوِى البعير يَحْوي الماء. ومنه الحوايا: حفائر للماء في القيعان. أما في قوله تعالى: {إِلَّا مَا حَمَلَتْ ظُهُورُهُمَا} [الأنعام: 146] فهي جمع حَوِيّة: الأمعاء. ومنه \"الحِوَاء -ككتاب: أخبية للناس تجمعهم، وهم يجتمعون على ماء. وتحوّي: تجمع واستدار. والحَوّة -بالفتح: الكلمة من الحق (ليست فارغة) .. وقالت الأم عن ابنها \"كان بطني له حِواء \"- ككتاب أي مكانًا يجمعه ويضمه \". ومن هذا فيما أرى تسمية أمنا حواء زوج أبينا آدم عليهما وعلى نبينا أفضل الصلاة والسلام -لحملها الأولاد في بطنها (وهذا- صحيح علميًّا. وما ذكر في [قر 1/ 300] نقلًا عن العهد القديم= لا يوثق به). ومن الأصل \"الحُوّة- (1/355) بالضم: لَوْنُ سواد بظهر مع لون آخر خُضْرة أو حُمْرة \" (لون معتم، فهما لونان مختلطان كأن السواد محتوى في أثناء الخضرة أو الحمرة فالأحوى الأسود من شدة الخضرة أو من القِدَم والعِتْق) {وَالَّذِي أَخْرَجَ الْمَرْعَى (4) فَجَعَلَهُ غُثَاءً أَحْوَى} يمكن في ضوء الآيات السابقة التي تبين نعمة الله في إبلاغه ما خلق إلى كمال حاله .. {الَّذِي خَلَقَ فَسَوَّى (2) وَالَّذِي قَدَّرَ فَهَدَى} أن نفر الغُثَاء الأحوى بالنبات الشديد الخضرة حتى يَسْوَدّ قوله تعالى: {مُدْهَامَّتَانِ} [الرحمن: 64] واللغة لا تمنع أن يراد بالغثاء المرعى نفسه، إذ هو خَضِر غضٌّ ليس أشجارًا ولا أعوادًا صُلْبة ولا هو مُحَمَّل بحب يُؤْكَل كالقمح والشعير، وهو يؤكل غضًا وجافًا. ثم قد جاء تسمية النبتة",
+    "tam_metin": "{وَالَّذِي أَخْرَجَ الْمَرْعَى (4) فَجَعَلَهُ غُثَاءً أَحْوَى} [الأعلى: 5].\n\"الحَوِيّة -كغنية: كساءٌ محشو حول سَنام البعير، وما تحوَّي من الأمعاء أي الدُوَّارَة التي في بطن الشاة وهي بنات اللبن- كالحاوية والحاوياء. وحُوّة الوادي بالضم: جانبه، وكغَنِىّ: الحَوْض الصغير يُسَوّيه الرجل للبعير يسقيه فيه. حَوَى الشيء يَحْوِيه: جَمَعَه وأحرزه، واحتوى عليه: أَلمْاَ عليه \".\n° المعنى المحوري\nالانعطافُ على الشيء في الأثناء وحوزُه فيها بقوة كالحوِيّة حولَ السنام، والأمعاءِ بتحوِّيها في نفسها ولما فيها، وحُوّة الوادي ترُدُّ ماءَه فيه فيَحْويه، وحَوِى البعير يَحْوي الماء. ومنه الحوايا: حفائر للماء في القيعان. أما في قوله تعالى: {إِلَّا مَا حَمَلَتْ ظُهُورُهُمَا} [الأنعام: 146] فهي جمع حَوِيّة: الأمعاء. ومنه \"الحِوَاء -ككتاب: أخبية للناس تجمعهم، وهم يجتمعون على ماء. وتحوّي: تجمع واستدار. والحَوّة -بالفتح: الكلمة من الحق (ليست فارغة) .. وقالت الأم عن ابنها \"كان بطني له حِواء \"- ككتاب أي مكانًا يجمعه ويضمه \". ومن هذا فيما أرى تسمية أمنا حواء زوج أبينا آدم عليهما وعلى نبينا أفضل الصلاة والسلام -لحملها الأولاد في بطنها (وهذا- صحيح علميًّا. وما ذكر في [قر 1/ 300] نقلًا عن العهد القديم= لا يوثق به). ومن الأصل \"الحُوّة-\n(1/355)\nبالضم: لَوْنُ سواد بظهر مع لون آخر خُضْرة أو حُمْرة \" (لون معتم، فهما لونان مختلطان كأن السواد محتوى في أثناء الخضرة أو الحمرة فالأحوى الأسود من شدة الخضرة أو من القِدَم والعِتْق) {وَالَّذِي أَخْرَجَ الْمَرْعَى (4) فَجَعَلَهُ غُثَاءً أَحْوَى} يمكن في ضوء الآيات السابقة التي تبين نعمة الله في إبلاغه ما خلق إلى كمال حاله .. {الَّذِي خَلَقَ فَسَوَّى (2) وَالَّذِي قَدَّرَ فَهَدَى} أن نفر الغُثَاء الأحوى بالنبات الشديد الخضرة حتى يَسْوَدّ قوله تعالى: {مُدْهَامَّتَانِ} [الرحمن: 64] واللغة لا تمنع أن يراد بالغثاء المرعى نفسه، إذ هو خَضِر غضٌّ ليس أشجارًا ولا أعوادًا صُلْبة ولا هو مُحَمَّل بحب يُؤْكَل كالقمح والشعير، وهو يؤكل غضًا وجافًا. ثم قد جاء تسمية النبتة الضعيفة غُثَاء في حديث القيامة \"كما تَنْبُتُ الحِبَّة في غُثَاء السيل. ثم جاء في مسلم \"كما تنبت الغُثاءة \"يريد ما احتمله السيل من البزورات \" [ل غثا] وفي رواية \"كما ينبت البقل [التاج الجامع للأصول في أحاديث الرسول 5/ 329] فهذه تفسر تلك. وفي [ق] يقال \"غَثِيت الأرض بالنبات -كرضى: كثُر فيها \"اه فسمي النبات الكثير غثاء. ومما يشبه ذلك ويؤيده قولهم للضبع: غَثْواء- لكثرة شعرها [ل] والشَعَر من الجِلْد كالبَقْل من الأرض. وعلى ذلك يكون المعنى أخرج المرعى فأبلغه كمال حاله بأن جعله طبقة كثيفة غَضَّة حَوّاء وهذا كماله حال المرعى. {سَنُقْرِئُكَ فَلَا تَنْسَى (6)} أي لا تخف ألا نصل بنعمتا عليك إلى كمالها بأن تنسى بل سنقرئك فلا تنسى أبدًا. فهذا كمال هذه النعمة.\nويجوز غيرُ هذا: أن تكون أحوى بمعنى أسود أي من البِلَى وصفًا للغثاء الذي يصير إليه المرعى بعد تجاوز مرحلة التمام، والكلام على ترتيبه مع طيّ المرحلة الوسطى لأنها معلومة، وأخيرًا مجوز أَن تكون (أَحْوىَ) حالًا من المرعى بتقدير تقديمه على {فَجَعَلَهُ غُثَاءً}.\n(1/356)",
+    "fasil_ozeti": "° معنى الفصل المعجمي (جه) : الفراغ وما يلزمه من انكشاف كما يتمثل في حرمان السائل حرمانًا تامًا -في (جهه)، وفي انكشاف ما يواجَه ويظهر في أعلى الشيء ومقدَّمه- في (وجه)، وفي إفراغ أقصى القوة -في (جهد) وفي كشف الشيء وتنقيته- في (جهر)، وفي خروج المندفن وخلوصه مما يغطيه -في (جهز) وفي فراغ قلب الجاهل- في (جهل) ثم في فراغ (جهنم) وإعدادها للإطباق على أهلها والعياذ بالله."
+  },
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "حوت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "حَوَتْ • (ḥawat) (form I) /ħa.wat/\n# third-person feminine singular past active of حَوَى (ḥawā)",
+      "etim_sablon": [
+        ["nonlemma", "See the etymology of the corresponding lemma form."]
+      ],
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥawat", "ḥawā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نحو",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نحو (form I)\n# نَحْوِ (naḥwi) /naħ.wi/: first-person plural non-past active jussive of حَوَى (ḥawā)\n# نُحْوَ (nuḥwa) /nuħ.wa/: first-person plural non-past passive jussive of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḥwi", "ḥawā", "nuḥwa"]
+    },
+    {
+      "madde": "حيتان",
+      "tur": "noun",
+      "baslik": "حِيتَان • (ḥītān) m pl",
+      "anlam": ["plural of حُوت (ḥūt)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["حُوت"],
+      "okunus": ["ḥītān"],
+      "ipa": ["/ħiːtaːn/"],
+      "bag": "asıl madde",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أحوات",
+      "tur": "noun",
+      "baslik": "أَحْوَات • (ʔaḥwāt) m pl",
+      "anlam": ["plural of حُوت (ḥūt)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["حُوت"],
+      "okunus": ["ʔaḥwāt"],
+      "bag": "asıl madde",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحوى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُحْوَى • (tuḥwā) (form I) /tuħ.waː/\n# inflection of حَوَى (ḥawā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuḥwā", "ḥawā"]
+    },
+    {
+      "madde": "تحو",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تحو (form I)\n# تَحْوِ (taḥwi) /taħ.wi/: inflection of حَوَى (ḥawā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُحْوَ (tuḥwa) /tuħ.wa/: inflection of حَوَى (ḥawā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥwi", "ḥawā", "tuḥwa"]
+    },
+    {
+      "madde": "يحوي",
+      "tur": "verb",
+      "baslik": "يحوي (form I)\n# يَحْوِي (yaḥwī) /jaħ.wiː/: third-person masculine singular non-past active indicative of حَوَى (ḥawā)\n# يَحْوِيَ (yaḥwiya) /jaħ.wi.ja/: third-person masculine singular non-past active subjunctive of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥwī", "ḥawā", "yaḥwiya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يحوى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُحْوَى • (yuḥwā) (form I) /juħ.waː/\n# third-person masculine singular non-past passive indicative/subjunctive of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuḥwā", "ḥawā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحوي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تحوي (form I)\n# تَحْوِي (taḥwī) /taħ.wiː/: inflection of حَوَى (ḥawā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَحْوِيَ (taḥwiya) /taħ.wi.ja/: inflection of حَوَى (ḥawā):\n## second-person masculine singular non-past active subjunctive\n## third",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥwī", "ḥawā", "taḥwiya"]
+    },
+    {
+      "madde": "يحو",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يحو (form I)\n# يَحْوِ (yaḥwi) /jaħ.wi/: third-person masculine singular non-past active jussive of حَوَى (ḥawā)\n# يُحْوَ (yuḥwa) /juħ.wa/: third-person masculine singular non-past passive jussive of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥwi", "ḥawā", "yuḥwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حوي",
+      "tur": "verb",
+      "etim_no": "1.2",
+      "baslik": "حُوِيَ • (ḥuwiya) (form I) /ħu.wi.ja/\n# third-person masculine singular past passive of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥuwiya", "ḥawā"]
+    },
+    {
+      "madde": "حويت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "حويت (form I)\n# حَوَيْتُ (ḥawaytu) /ħa.waj.tu/: first-person singular past active of حَوَى (ḥawā)\n# حَوَيْتَ (ḥawayta) /ħa.waj.ta/: second-person masculine singular past active of حَوَى (ḥawā)\n# حَوَيْتِ (ḥawayti) /ħa.waj.ti/: second-person feminine singular past active of حَوَى (ḥawā)\n# حُوِيتُ (ḥuwītu) /ħu.wiː.tu/: first-person singular past passive of حَوَى (ḥawā)\n# حُوِيتَ (ḥuwīta) /ħu.wiː.ta/",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥawaytu", "ḥawā", "ḥawayta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "احو",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِحْوِ • (iḥwi) (form I) /iħ.wi/\n# second-person masculine singular imperative of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iḥwi", "ḥawā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحوين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تحوين (form I)\n# تَحْوِينَ (taḥwīna) /taħ.wiː.na/: inflection of حَوَى (ḥawā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُحْوَيْنَ (tuḥwayna) /tuħ.waj.na/: inflection of حَوَى (ḥawā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passi",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥwīna", "ḥawā", "tuḥwayna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "احوي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِحْوِي • (iḥwī) (form I) /iħ.wiː/\n# second-person feminine singular imperative of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iḥwī", "ḥawā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أحوي",
+      "tur": "verb",
+      "baslik": "أحوي (form I)\n# أَحْوِي (ʔaḥwī) /ʔaħ.wiː/: first-person singular non-past active indicative of حَوَى (ḥawā)\n# أَحْوِيَ (ʔaḥwiya) /ʔaħ.wi.ja/: first-person singular non-past active subjunctive of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḥwī", "ḥawā", "ʔaḥwiya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أحو",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أحو (form I)\n# أَحْوِ (ʔaḥwi) /ʔaħ.wi/: first-person singular non-past active jussive of حَوَى (ḥawā)\n# أُحْوَ (ʔuḥwa) /ʔuħ.wa/: first-person singular non-past passive jussive of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḥwi", "ḥawā", "ʔuḥwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أحوى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أُحْوَى • (ʔuḥwā) (form I) /ʔuħ.waː/\n# first-person singular non-past passive indicative/subjunctive of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss", "obsolete"],
+      "okunus": ["ʔuḥwā", "ḥawā"]
+    },
+    {
+      "madde": "حوينا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "حوينا (form I)\n# حَوَيْنَا (ḥawaynā) /ħa.waj.naː/: first-person plural past active of حَوَى (ḥawā)\n# حُوِينَا (ḥuwīnā) /ħu.wiː.naː/: first-person plural past passive of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥawaynā", "ḥawā", "ḥuwīnā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نحوي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نحوي (form I)\n# نَحْوِي (naḥwī) /naħ.wiː/: first-person plural non-past active indicative of حَوَى (ḥawā)\n# نَحْوِيَ (naḥwiya) /naħ.wi.ja/: first-person plural non-past active subjunctive of حَوَى (ḥawā)",
+      "etim_sablon": [
+        ["nonlemma", "See the etymology of the corresponding lemma form."]
+      ],
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḥwī", "ḥawā", "naḥwiya"],
+      "ipa": ["/naħ.wijj/"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نحوى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نُحْوَى • (nuḥwā) (form I) /nuħ.waː/\n# first-person plural non-past passive indicative/subjunctive of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuḥwā", "ḥawā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحووا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تحووا (form I)\n# تَحْوُوا (taḥwū) /taħ.wuː/: second-person masculine plural non-past active subjunctive/jussive of حَوَى (ḥawā)\n# تُحْوَوْا (tuḥwaw) /tuħ.waw/: second-person masculine plural non-past passive subjunctive/jussive of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥwū", "ḥawā", "tuḥwaw"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حويتم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "حويتم (form I)\n# حَوَيْتُمْ (ḥawaytum) /ħa.waj.tum/: second-person masculine plural past active of حَوَى (ḥawā)\n# حُوِيتُمْ (ḥuwītum) /ħu.wiː.tum/: second-person masculine plural past passive of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥawaytum", "ḥawā", "ḥuwītum"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحوون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تحوون (form I)\n# تَحْوُونَ (taḥwūna) /taħ.wuː.na/: second-person masculine plural non-past active indicative of حَوَى (ḥawā)\n# تُحْوَوْنَ (tuḥwawna) /tuħ.waw.na/: second-person masculine plural non-past passive indicative of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥwūna", "ḥawā", "tuḥwawna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "احووا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِحْوُوا • (iḥwū) (form I) /iħ.wuː/\n# second-person masculine plural imperative of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iḥwū", "ḥawā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حووا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "حووا (form I)\n# حَوَوْا (ḥawaw) /ħa.waw/: third-person masculine plural past active of حَوَى (ḥawā)\n# حُوُوا (ḥuwū) /ħu.wuː/: third-person masculine plural past passive of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥawaw", "ḥawā", "ḥuwū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يحوون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يحوون (form I)\n# يَحْوُونَ (yaḥwūna) /jaħ.wuː.na/: third-person masculine plural non-past active indicative of حَوَى (ḥawā)\n# يُحْوَوْنَ (yuḥwawna) /juħ.waw.na/: third-person masculine plural non-past passive indicative of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥwūna", "ḥawā", "yuḥwawna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يحووا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يحووا (form I)\n# يَحْوُوا (yaḥwū) /jaħ.wuː/: third-person masculine plural non-past active subjunctive/jussive of حَوَى (ḥawā)\n# يُحْوَوْا (yuḥwaw) /juħ.waw/: third-person masculine plural non-past passive subjunctive/jussive of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥwū", "ḥawā", "yuḥwaw"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حويتن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "حويتن (form I)\n# حَوَيْتُنَّ (ḥawaytunna) /ħa.waj.tun.na/: second-person feminine plural past active of حَوَى (ḥawā)\n# حُوِيتُنَّ (ḥuwītunna) /ħu.wiː.tun.na/: second-person feminine plural past passive of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥawaytunna", "ḥawā", "ḥuwītunna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "احوين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِحْوِينَ • (iḥwīna) (form I) /iħ.wiː.na/\n# second-person feminine plural imperative of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iḥwīna", "ḥawā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حوين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "حوين (form I)\n# حَوَيْنَ (ḥawayna) /ħa.waj.na/: third-person feminine plural past active of حَوَى (ḥawā)\n# حُوِينَ (ḥuwīna) /ħu.wiː.na/: third-person feminine plural past passive of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥawayna", "ḥawā", "ḥuwīna"]
+    },
+    {
+      "madde": "يحوين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يحوين (form I)\n# يَحْوِينَ (yaḥwīna) /jaħ.wiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of حَوَى (ḥawā)\n# يُحْوَيْنَ (yuḥwayna) /juħ.waj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥwīna", "ḥawā", "yuḥwayna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "الحوت",
+      "tur": "noun",
+      "baslik": "اَلْحُوت • (al-ḥūt) ?",
+      "anlam": ["definite singular of حُوت (ḥūt)"],
+      "etiket": ["definite", "form-of", "singular"],
+      "form_of": ["حُوت"],
+      "okunus": ["al-ḥūt"],
+      "bag": "asıl madde"
+    },
+    {
+      "madde": "تحويا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تحويا (form I)\n# تَحْوِيَا (taḥwiyā) /taħ.wi.jaː/: inflection of حَوَى (ḥawā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُحْوَيَا (tuḥwayā) /tuħ.wa.jaː/: inflection of حَوَى (ḥawā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥwiyā", "ḥawā", "tuḥwayā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حويتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "حويتما (form I)\n# حَوَيْتُمَا (ḥawaytumā) /ħa.waj.tu.maː/: second-person dual past active of حَوَى (ḥawā)\n# حُوِيتُمَا (ḥuwītumā) /ħu.wiː.tu.maː/: second-person dual past passive of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥawaytumā", "ḥawā", "ḥuwītumā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حويا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "حويا (form I)\n# حَوَيَا (ḥawayā) /ħa.wa.jaː/: third-person masculine dual past active of حَوَى (ḥawā)\n# حُوِيَا (ḥuwiyā) /ħu.wi.jaː/: third-person masculine dual past passive of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥawayā", "ḥawā", "ḥuwiyā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حويتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "حُوِيَتَا • (ḥuwiyatā) (form I) /ħu.wi.ja.taː/\n# third-person feminine dual past passive of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥuwiyatā", "ḥawā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "حوتا",
+      "tur": "verb",
+      "baslik": "حَوَتَا • (ḥawatā) (form I) /ħa.wa.taː/\n# third-person feminine dual past active of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥawatā", "ḥawā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحويان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تحويان (form I)\n# تَحْوِيَانِ (taḥwiyāni) /taħ.wi.jaː.ni/: inflection of حَوَى (ḥawā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُحْوَيَانِ (tuḥwayāni) /tuħ.wa.jaː.ni/: inflection of حَوَى (ḥawā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥwiyāni", "ḥawā", "tuḥwayāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يحويان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يحويان (form I)\n# يَحْوِيَانِ (yaḥwiyāni) /jaħ.wi.jaː.ni/: third-person masculine dual non-past active indicative of حَوَى (ḥawā)\n# يُحْوَيَانِ (yuḥwayāni) /juħ.wa.jaː.ni/: third-person masculine dual non-past passive indicative of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥwiyāni", "ḥawā", "yuḥwayāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يحويا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يحويا (form I)\n# يَحْوِيَا (yaḥwiyā) /jaħ.wi.jaː/: third-person masculine dual non-past active subjunctive/jussive of حَوَى (ḥawā)\n# يُحْوَيَا (yuḥwayā) /juħ.wa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥwiyā", "ḥawā", "yuḥwayā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "احويا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِحْوِيَا • (iḥwiyā) (form I) /iħ.wi.jaː/\n# second-person dual imperative of حَوَى (ḥawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iḥwiyā", "ḥawā"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "حوى", "r7"]
+  ],
+  "mana": {
     "ince": "whole.n.02",
     "orta": "noun.animal",
     "ust": "canlı ve beden",
@@ -593,25 +438,8 @@
     "dayanak_tanim": "microscopic organism such as an amoeba or paramecium",
     "synset_sayisi": 3
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "الجيم والهاء",
-    "mihveri": "الانعطافُ على الشيء في الأثناء وحوزُه فيها بقوة كالحوِيّة حولَ السنام، والأمعاءِ بتحوِّيها في نفسها ولما فيها، وحُوّة الوادي ترُدُّ ماءَه فيه فيَحْويه، وحَوِى البعير يَحْوي الماء. ومنه الحوايا: حفائر للماء في القيعان. أما في قوله تعالى: {إِلَّا مَا حَمَلَتْ ظُهُورُهُمَا} [الأنعام: 146] فهي جمع حَوِيّة: الأمعاء. ومنه \"الحِوَاء -ككتاب: أخبية للناس تجمعهم، وهم يجتمعون على ماء. وتحوّي: تجمع واستدار. والحَوّة -بالفتح: الكلمة من الحق (ليست فارغة) .. وقالت الأم عن ابنها \"كان بطني له حِواء \"- ككتاب أي مكانًا يجمعه ويضمه \". ومن هذا فيما أرى تسمية أمنا حواء زوج أبينا آدم عليهما وعلى نبينا أفضل الصلاة والسلام -لحملها الأولاد في بطنها (وهذا- صحيح علميًّا. وما ذكر في [قر 1/ 300] نقلًا عن العهد القديم= لا يوثق به). ومن الأصل \"الحُوّة- (1/355) بالضم: لَوْنُ سواد بظهر مع لون آخر خُضْرة أو حُمْرة \" (لون معتم، فهما لونان مختلطان كأن السواد محتوى في أثناء الخضرة أو الحمرة فالأحوى الأسود من شدة الخضرة أو من القِدَم والعِتْق) {وَالَّذِي أَخْرَجَ الْمَرْعَى (4) فَجَعَلَهُ غُثَاءً أَحْوَى} يمكن في ضوء الآيات السابقة التي تبين نعمة الله في إبلاغه ما خلق إلى كمال حاله .. {الَّذِي خَلَقَ فَسَوَّى (2) وَالَّذِي قَدَّرَ فَهَدَى} أن نفر الغُثَاء الأحوى بالنبات الشديد الخضرة حتى يَسْوَدّ قوله تعالى: {مُدْهَامَّتَانِ} [الرحمن: 64] واللغة لا تمنع أن يراد بالغثاء المرعى نفسه، إذ هو خَضِر غضٌّ ليس أشجارًا ولا أعوادًا صُلْبة ولا هو مُحَمَّل بحب يُؤْكَل كالقمح والشعير، وهو يؤكل غضًا وجافًا. ثم قد جاء تسمية النبتة",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (جه) : الفراغ وما يلزمه من انكشاف كما يتمثل في حرمان السائل حرمانًا تامًا -في (جهه)، وفي انكشاف ما يواجَه ويظهر في أعلى الشيء ومقدَّمه- في (وجه)، وفي إفراغ أقصى القوة -في (جهد) وفي كشف الشيء وتنقيته- في (جهر)، وفي خروج المندفن وخلوصه مما يغطيه -في (جهز) وفي فراغ قلب الجاهل- في (جهل) ثم في فراغ (جهنم) وإعدادها للإطباق على أهلها والعياذ بالله.",
-    "tam_metin": "{وَالَّذِي أَخْرَجَ الْمَرْعَى (4) فَجَعَلَهُ غُثَاءً أَحْوَى} [الأعلى: 5].\n\"الحَوِيّة -كغنية: كساءٌ محشو حول سَنام البعير، وما تحوَّي من الأمعاء أي الدُوَّارَة التي في بطن الشاة وهي بنات اللبن- كالحاوية والحاوياء. وحُوّة الوادي بالضم: جانبه، وكغَنِىّ: الحَوْض الصغير يُسَوّيه الرجل للبعير يسقيه فيه. حَوَى الشيء يَحْوِيه: جَمَعَه وأحرزه، واحتوى عليه: أَلمْاَ عليه \".\n° المعنى المحوري\nالانعطافُ على الشيء في الأثناء وحوزُه فيها بقوة كالحوِيّة حولَ السنام، والأمعاءِ بتحوِّيها في نفسها ولما فيها، وحُوّة الوادي ترُدُّ ماءَه فيه فيَحْويه، وحَوِى البعير يَحْوي الماء. ومنه الحوايا: حفائر للماء في القيعان. أما في قوله تعالى: {إِلَّا مَا حَمَلَتْ ظُهُورُهُمَا} [الأنعام: 146] فهي جمع حَوِيّة: الأمعاء. ومنه \"الحِوَاء -ككتاب: أخبية للناس تجمعهم، وهم يجتمعون على ماء. وتحوّي: تجمع واستدار. والحَوّة -بالفتح: الكلمة من الحق (ليست فارغة) .. وقالت الأم عن ابنها \"كان بطني له حِواء \"- ككتاب أي مكانًا يجمعه ويضمه \". ومن هذا فيما أرى تسمية أمنا حواء زوج أبينا آدم عليهما وعلى نبينا أفضل الصلاة والسلام -لحملها الأولاد في بطنها (وهذا- صحيح علميًّا. وما ذكر في [قر 1/ 300] نقلًا عن العهد القديم= لا يوثق به). ومن الأصل \"الحُوّة-\n(1/355)\nبالضم: لَوْنُ سواد بظهر مع لون آخر خُضْرة أو حُمْرة \" (لون معتم، فهما لونان مختلطان كأن السواد محتوى في أثناء الخضرة أو الحمرة فالأحوى الأسود من شدة الخضرة أو من القِدَم والعِتْق) {وَالَّذِي أَخْرَجَ الْمَرْعَى (4) فَجَعَلَهُ غُثَاءً أَحْوَى} يمكن في ضوء الآيات السابقة التي تبين نعمة الله في إبلاغه ما خلق إلى كمال حاله .. {الَّذِي خَلَقَ فَسَوَّى (2) وَالَّذِي قَدَّرَ فَهَدَى} أن نفر الغُثَاء الأحوى بالنبات الشديد الخضرة حتى يَسْوَدّ قوله تعالى: {مُدْهَامَّتَانِ} [الرحمن: 64] واللغة لا تمنع أن يراد بالغثاء المرعى نفسه، إذ هو خَضِر غضٌّ ليس أشجارًا ولا أعوادًا صُلْبة ولا هو مُحَمَّل بحب يُؤْكَل كالقمح والشعير، وهو يؤكل غضًا وجافًا. ثم قد جاء تسمية النبتة الضعيفة غُثَاء في حديث القيامة \"كما تَنْبُتُ الحِبَّة في غُثَاء السيل. ثم جاء في مسلم \"كما تنبت الغُثاءة \"يريد ما احتمله السيل من البزورات \" [ل غثا] وفي رواية \"كما ينبت البقل [التاج الجامع للأصول في أحاديث الرسول 5/ 329] فهذه تفسر تلك. وفي [ق] يقال \"غَثِيت الأرض بالنبات -كرضى: كثُر فيها \"اه فسمي النبات الكثير غثاء. ومما يشبه ذلك ويؤيده قولهم للضبع: غَثْواء- لكثرة شعرها [ل] والشَعَر من الجِلْد كالبَقْل من الأرض. وعلى ذلك يكون المعنى أخرج المرعى فأبلغه كمال حاله بأن جعله طبقة كثيفة غَضَّة حَوّاء وهذا كماله حال المرعى. {سَنُقْرِئُكَ فَلَا تَنْسَى (6)} أي لا تخف ألا نصل بنعمتا عليك إلى كمالها بأن تنسى بل سنقرئك فلا تنسى أبدًا. فهذا كمال هذه النعمة.\nويجوز غيرُ هذا: أن تكون أحوى بمعنى أسود أي من البِلَى وصفًا للغثاء الذي يصير إليه المرعى بعد تجاوز مرحلة التمام، والكلام على ترتيبه مع طيّ المرحلة الوسطى لأنها معلومة، وأخيرًا مجوز أَن تكون (أَحْوىَ) حالًا من المرعى بتقدير تقديمه على {فَجَعَلَهُ غُثَاءً}.\n(1/356)"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["living_thing.n.01", "natural_object.n.01", "region.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 2,
       "merkez_kok": "حنج",
@@ -631,6 +459,11 @@
       "boy": 43
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["living_thing.n.01", "natural_object.n.01", "region.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

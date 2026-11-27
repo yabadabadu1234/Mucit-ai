@@ -1,365 +1,287 @@
 {
   "kok": "ءوجز",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءوجز", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أوجزا",
-        "u": "أوجزا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوجزا (form IV)\n# أَوْجَزَا (ʔawjazā) /ʔaw.d͡ʒa.zaː/: third-person masculine dual past active of أَوْجَزَ (ʔawjaza)\n# أُوجِزَا (ʔūjizā) /ʔuː.d͡ʒi.zaː/: third-person masculine dual past passive of أَوْجَزَ (ʔawjaza)\n# أَوْجِزَا (ʔawjizā) /ʔaw.d͡ʒi.zaː/: second-person dual imperative of أَوْجَزَ (ʔawjaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawjazā", "ʔawjaza", "ʔūjizā"],
-        "k": "أوجز",
-        "yol": "kök"
-      },
-      {
-        "w": "أوجزت",
-        "u": "أوجزت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوجزت (form IV)\n# أَوْجَزْتُ (ʔawjaztu) /ʔaw.d͡ʒaz.tu/: first-person singular past active of أَوْجَزَ (ʔawjaza)\n# أَوْجَزْتَ (ʔawjazta) /ʔaw.d͡ʒaz.ta/: second-person masculine singular past active of أَوْجَزَ (ʔawjaza)\n# أَوْجَزْتِ (ʔawjazti) /ʔaw.d͡ʒaz.ti/: second-person feminine singular past active of أَوْجَزَ (ʔawjaza)\n# أَوْجَزَتْ (ʔawjazat) /ʔaw.d͡ʒa.zat/: third-person feminine singular past",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawjaztu", "ʔawjaza", "ʔawjazta"],
-        "k": "أوجز",
-        "yol": "kök"
-      },
-      {
-        "w": "أوجزتا",
-        "u": "أوجزتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوجزتا (form IV)\n# أَوْجَزَتَا (ʔawjazatā) /ʔaw.d͡ʒa.za.taː/: third-person feminine dual past active of أَوْجَزَ (ʔawjaza)\n# أُوجِزَتَا (ʔūjizatā) /ʔuː.d͡ʒi.za.taː/: third-person feminine dual past passive of أَوْجَزَ (ʔawjaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawjazatā", "ʔawjaza", "ʔūjizatā"],
-        "k": "أوجز",
-        "yol": "kök"
-      },
-      {
-        "w": "أوجزتما",
-        "u": "أوجزتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوجزتما (form IV)\n# أَوْجَزْتُمَا (ʔawjaztumā) /ʔaw.d͡ʒaz.tu.maː/: second-person dual past active of أَوْجَزَ (ʔawjaza)\n# أُوجِزْتُمَا (ʔūjiztumā) /ʔuː.d͡ʒiz.tu.maː/: second-person dual past passive of أَوْجَزَ (ʔawjaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawjaztumā", "ʔawjaza", "ʔūjiztumā"],
-        "k": "أوجز",
-        "yol": "kök"
-      },
-      {
-        "w": "أوجزنا",
-        "u": "أوجزنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوجزنا (form IV)\n# أَوْجَزْنَا (ʔawjaznā) /ʔaw.d͡ʒaz.naː/: first-person plural past active of أَوْجَزَ (ʔawjaza)\n# أُوجِزْنَا (ʔūjiznā) /ʔuː.d͡ʒiz.naː/: first-person plural past passive of أَوْجَزَ (ʔawjaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawjaznā", "ʔawjaza", "ʔūjiznā"],
-        "k": "أوجز",
-        "yol": "kök"
-      },
-      {
-        "w": "أوجزتم",
-        "u": "أوجزتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوجزتم (form IV)\n# أَوْجَزْتُمْ (ʔawjaztum) /ʔaw.d͡ʒaz.tum/: second-person masculine plural past active of أَوْجَزَ (ʔawjaza)\n# أُوجِزْتُمْ (ʔūjiztum) /ʔuː.d͡ʒiz.tum/: second-person masculine plural past passive of أَوْجَزَ (ʔawjaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawjaztum", "ʔawjaza", "ʔūjiztum"],
-        "k": "أوجز",
-        "yol": "kök"
-      },
-      {
-        "w": "أوجزوا",
-        "u": "أوجزوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوجزوا (form IV)\n# أَوْجَزُوا (ʔawjazū) /ʔaw.d͡ʒa.zuː/: third-person masculine plural past active of أَوْجَزَ (ʔawjaza)\n# أُوجِزُوا (ʔūjizū) /ʔuː.d͡ʒi.zuː/: third-person masculine plural past passive of أَوْجَزَ (ʔawjaza)\n# أَوْجِزُوا (ʔawjizū) /ʔaw.d͡ʒi.zuː/: second-person masculine plural imperative of أَوْجَزَ (ʔawjaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawjazū", "ʔawjaza", "ʔūjizū"],
-        "k": "أوجز",
-        "yol": "kök"
-      },
-      {
-        "w": "أوجزتن",
-        "u": "أوجزتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوجزتن (form IV)\n# أَوْجَزْتُنَّ (ʔawjaztunna) /ʔaw.d͡ʒaz.tun.na/: second-person feminine plural past active of أَوْجَزَ (ʔawjaza)\n# أُوجِزْتُنَّ (ʔūjiztunna) /ʔuː.d͡ʒiz.tun.na/: second-person feminine plural past passive of أَوْجَزَ (ʔawjaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawjaztunna", "ʔawjaza", "ʔūjiztunna"],
-        "k": "أوجز",
-        "yol": "kök"
-      },
-      {
-        "w": "أوجزن",
-        "u": "أوجزن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوجزن (form IV)\n# أَوْجَزْنَ (ʔawjazna) /ʔaw.d͡ʒaz.na/: third-person feminine plural past active of أَوْجَزَ (ʔawjaza)\n# أُوجِزْنَ (ʔūjizna) /ʔuː.d͡ʒiz.na/: third-person feminine plural past passive of أَوْجَزَ (ʔawjaza)\n# أَوْجِزْنَ (ʔawjizna) /ʔaw.d͡ʒiz.na/: second-person feminine plural imperative of أَوْجَزَ (ʔawjaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawjazna", "ʔawjaza", "ʔūjizna"],
-        "k": "أوجز",
-        "yol": "kök"
-      },
-      {
-        "w": "يوجز",
-        "u": "يوجز",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يوجز (form IV)\n# يُوجِزُ (yūjizu) /juː.d͡ʒi.zu/: third-person masculine singular non-past active indicative of أَوْجَزَ (ʔawjaza)\n# يُوجَزُ (yūjazu) /juː.d͡ʒa.zu/: third-person masculine singular non-past passive indicative of أَوْجَزَ (ʔawjaza)\n# يُوجِزَ (yūjiza) /juː.d͡ʒi.za/: third-person masculine singular non-past active subjunctive of أَوْجَزَ (ʔawjaza)\n# يُوجَزَ (yūjaza) /juː.d͡ʒa.za/: thir",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūjizu", "ʔawjaza", "yūjazu"],
-        "k": "أوجز",
-        "yol": "kök"
-      },
-      {
-        "w": "توجزين",
-        "u": "توجزين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "توجزين (form IV)\n# تُوجِزِينَ (tūjizīna) /tuː.d͡ʒi.ziː.na/: second-person feminine singular non-past active indicative of أَوْجَزَ (ʔawjaza)\n# تُوجَزِينَ (tūjazīna) /tuː.d͡ʒa.ziː.na/: second-person feminine singular non-past passive indicative of أَوْجَزَ (ʔawjaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūjizīna", "ʔawjaza", "tūjazīna"],
-        "k": "أوجز",
-        "yol": "kök"
-      },
-      {
-        "w": "توجز",
-        "u": "توجز",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "توجز (form IV)\n# تُوجِزُ (tūjizu) /tuː.d͡ʒi.zu/: inflection of أَوْجَزَ (ʔawjaza):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُوجَزُ (tūjazu) /tuː.d͡ʒa.zu/: inflection of أَوْجَزَ (ʔawjaza):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūjizu", "ʔawjaza", "tūjazu"],
-        "k": "أوجز",
-        "yol": "kök"
-      },
-      {
-        "w": "نوجز",
-        "u": "نوجز",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نوجز (form IV)\n# نُوجِزُ (nūjizu) /nuː.d͡ʒi.zu/: first-person plural non-past active indicative of أَوْجَزَ (ʔawjaza)\n# نُوجَزُ (nūjazu) /nuː.d͡ʒa.zu/: first-person plural non-past passive indicative of أَوْجَزَ (ʔawjaza)\n# نُوجِزَ (nūjiza) /nuː.d͡ʒi.za/: first-person plural non-past active subjunctive of أَوْجَزَ (ʔawjaza)\n# نُوجَزَ (nūjaza) /nuː.d͡ʒa.za/: first-person plural non-past passive sub",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nūjizu", "ʔawjaza", "nūjazu"],
-        "k": "أوجز",
-        "yol": "kök"
-      },
-      {
-        "w": "يوجزان",
-        "u": "يوجزان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يوجزان (form IV)\n# يُوجِزَانِ (yūjizāni) /juː.d͡ʒi.zaː.ni/: third-person masculine dual non-past active indicative of أَوْجَزَ (ʔawjaza)\n# يُوجَزَانِ (yūjazāni) /juː.d͡ʒa.zaː.ni/: third-person masculine dual non-past passive indicative of أَوْجَزَ (ʔawjaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūjizāni", "ʔawjaza", "yūjazāni"],
-        "k": "أوجز",
-        "yol": "kök"
-      },
-      {
-        "w": "توجزان",
-        "u": "توجزان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "توجزان (form IV)\n# تُوجِزَانِ (tūjizāni) /tuː.d͡ʒi.zaː.ni/: inflection of أَوْجَزَ (ʔawjaza):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُوجَزَانِ (tūjazāni) /tuː.d͡ʒa.zaː.ni/: inflection of أَوْجَزَ (ʔawjaza):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūjizāni", "ʔawjaza", "tūjazāni"],
-        "k": "أوجز",
-        "yol": "kök"
-      },
-      {
-        "w": "توجزون",
-        "u": "توجزون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "توجزون (form IV)\n# تُوجِزُونَ (tūjizūna) /tuː.d͡ʒi.zuː.na/: second-person masculine plural non-past active indicative of أَوْجَزَ (ʔawjaza)\n# تُوجَزُونَ (tūjazūna) /tuː.d͡ʒa.zuː.na/: second-person masculine plural non-past passive indicative of أَوْجَزَ (ʔawjaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūjizūna", "ʔawjaza", "tūjazūna"],
-        "k": "أوجز",
-        "yol": "kök"
-      },
-      {
-        "w": "توجزن",
-        "u": "توجزن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "توجزن (form IV)\n# تُوجِزْنَ (tūjizna) /tuː.d͡ʒiz.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَوْجَزَ (ʔawjaza)\n# تُوجَزْنَ (tūjazna) /tuː.d͡ʒaz.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَوْجَزَ (ʔawjaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūjizna", "ʔawjaza", "tūjazna"],
-        "k": "أوجز",
-        "yol": "kök"
-      },
-      {
-        "w": "يوجزون",
-        "u": "يوجزون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يوجزون (form IV)\n# يُوجِزُونَ (yūjizūna) /juː.d͡ʒi.zuː.na/: third-person masculine plural non-past active indicative of أَوْجَزَ (ʔawjaza)\n# يُوجَزُونَ (yūjazūna) /juː.d͡ʒa.zuː.na/: third-person masculine plural non-past passive indicative of أَوْجَزَ (ʔawjaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūjizūna", "ʔawjaza", "yūjazūna"],
-        "k": "أوجز",
-        "yol": "kök"
-      },
-      {
-        "w": "يوجزن",
-        "u": "يوجزن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يوجزن (form IV)\n# يُوجِزْنَ (yūjizna) /juː.d͡ʒiz.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَوْجَزَ (ʔawjaza)\n# يُوجَزْنَ (yūjazna) /juː.d͡ʒaz.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَوْجَزَ (ʔawjaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūjizna", "ʔawjaza", "yūjazna"],
-        "k": "أوجز",
-        "yol": "kök"
-      },
-      {
-        "w": "توجزي",
-        "u": "توجزي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "توجزي (form IV)\n# تُوجِزِي (tūjizī) /tuː.d͡ʒi.ziː/: second-person feminine singular non-past active subjunctive/jussive of أَوْجَزَ (ʔawjaza)\n# تُوجَزِي (tūjazī) /tuː.d͡ʒa.ziː/: second-person feminine singular non-past passive subjunctive/jussive of أَوْجَزَ (ʔawjaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūjizī", "ʔawjaza", "tūjazī"],
-        "k": "أوجز",
-        "yol": "kök"
-      },
-      {
-        "w": "توجزا",
-        "u": "توجزا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "توجزا (form IV)\n# تُوجِزَا (tūjizā) /tuː.d͡ʒi.zaː/: inflection of أَوْجَزَ (ʔawjaza):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُوجَزَا (tūjazā) /tuː.d͡ʒa.zaː/: inflection of أَوْجَزَ (ʔawjaza):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/ju",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūjizā", "ʔawjaza", "tūjazā"],
-        "k": "أوجز",
-        "yol": "kök"
-      },
-      {
-        "w": "توجزوا",
-        "u": "توجزوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "توجزوا (form IV)\n# تُوجِزُوا (tūjizū) /tuː.d͡ʒi.zuː/: second-person masculine plural non-past active subjunctive/jussive of أَوْجَزَ (ʔawjaza)\n# تُوجَزُوا (tūjazū) /tuː.d͡ʒa.zuː/: second-person masculine plural non-past passive subjunctive/jussive of أَوْجَزَ (ʔawjaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūjizū", "ʔawjaza", "tūjazū"],
-        "k": "أوجز",
-        "yol": "kök"
-      },
-      {
-        "w": "يوجزا",
-        "u": "يوجزا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يوجزا (form IV)\n# يُوجِزَا (yūjizā) /juː.d͡ʒi.zaː/: third-person masculine dual non-past active subjunctive/jussive of أَوْجَزَ (ʔawjaza)\n# يُوجَزَا (yūjazā) /juː.d͡ʒa.zaː/: third-person masculine dual non-past passive subjunctive/jussive of أَوْجَزَ (ʔawjaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūjizā", "ʔawjaza", "yūjazā"],
-        "k": "أوجز",
-        "yol": "kök"
-      },
-      {
-        "w": "يوجزوا",
-        "u": "يوجزوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يوجزوا (form IV)\n# يُوجِزُوا (yūjizū) /juː.d͡ʒi.zuː/: third-person masculine plural non-past active subjunctive/jussive of أَوْجَزَ (ʔawjaza)\n# يُوجَزُوا (yūjazū) /juː.d͡ʒa.zuː/: third-person masculine plural non-past passive subjunctive/jussive of أَوْجَزَ (ʔawjaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūjizū", "ʔawjaza", "yūjazū"],
-        "k": "أوجز",
-        "yol": "kök"
-      },
-      {
-        "w": "أوجزي",
-        "u": "أوجزي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَوْجِزِي • (ʔawjizī) (form IV) /ʔaw.d͡ʒi.ziː/\n# second-person feminine singular imperative of أَوْجَزَ (ʔawjaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawjizī", "ʔawjaza"],
-        "k": "أوجز",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "جز",
+  "ses": {
     "harf": "ء",
+    "fasil": "جز",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "أوجزا",
+      "tur": "verb",
+      "baslik": "أوجزا (form IV)\n# أَوْجَزَا (ʔawjazā) /ʔaw.d͡ʒa.zaː/: third-person masculine dual past active of أَوْجَزَ (ʔawjaza)\n# أُوجِزَا (ʔūjizā) /ʔuː.d͡ʒi.zaː/: third-person masculine dual past passive of أَوْجَزَ (ʔawjaza)\n# أَوْجِزَا (ʔawjizā) /ʔaw.d͡ʒi.zaː/: second-person dual imperative of أَوْجَزَ (ʔawjaza)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawjazā", "ʔawjaza", "ʔūjizā"],
+      "kok_yazilis": "أوجز",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوجزت",
+      "tur": "verb",
+      "baslik": "أوجزت (form IV)\n# أَوْجَزْتُ (ʔawjaztu) /ʔaw.d͡ʒaz.tu/: first-person singular past active of أَوْجَزَ (ʔawjaza)\n# أَوْجَزْتَ (ʔawjazta) /ʔaw.d͡ʒaz.ta/: second-person masculine singular past active of أَوْجَزَ (ʔawjaza)\n# أَوْجَزْتِ (ʔawjazti) /ʔaw.d͡ʒaz.ti/: second-person feminine singular past active of أَوْجَزَ (ʔawjaza)\n# أَوْجَزَتْ (ʔawjazat) /ʔaw.d͡ʒa.zat/: third-person feminine singular past",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawjaztu", "ʔawjaza", "ʔawjazta"],
+      "kok_yazilis": "أوجز",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوجزتا",
+      "tur": "verb",
+      "baslik": "أوجزتا (form IV)\n# أَوْجَزَتَا (ʔawjazatā) /ʔaw.d͡ʒa.za.taː/: third-person feminine dual past active of أَوْجَزَ (ʔawjaza)\n# أُوجِزَتَا (ʔūjizatā) /ʔuː.d͡ʒi.za.taː/: third-person feminine dual past passive of أَوْجَزَ (ʔawjaza)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawjazatā", "ʔawjaza", "ʔūjizatā"],
+      "kok_yazilis": "أوجز",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوجزتما",
+      "tur": "verb",
+      "baslik": "أوجزتما (form IV)\n# أَوْجَزْتُمَا (ʔawjaztumā) /ʔaw.d͡ʒaz.tu.maː/: second-person dual past active of أَوْجَزَ (ʔawjaza)\n# أُوجِزْتُمَا (ʔūjiztumā) /ʔuː.d͡ʒiz.tu.maː/: second-person dual past passive of أَوْجَزَ (ʔawjaza)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawjaztumā", "ʔawjaza", "ʔūjiztumā"],
+      "kok_yazilis": "أوجز",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوجزنا",
+      "tur": "verb",
+      "baslik": "أوجزنا (form IV)\n# أَوْجَزْنَا (ʔawjaznā) /ʔaw.d͡ʒaz.naː/: first-person plural past active of أَوْجَزَ (ʔawjaza)\n# أُوجِزْنَا (ʔūjiznā) /ʔuː.d͡ʒiz.naː/: first-person plural past passive of أَوْجَزَ (ʔawjaza)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawjaznā", "ʔawjaza", "ʔūjiznā"],
+      "kok_yazilis": "أوجز",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوجزتم",
+      "tur": "verb",
+      "baslik": "أوجزتم (form IV)\n# أَوْجَزْتُمْ (ʔawjaztum) /ʔaw.d͡ʒaz.tum/: second-person masculine plural past active of أَوْجَزَ (ʔawjaza)\n# أُوجِزْتُمْ (ʔūjiztum) /ʔuː.d͡ʒiz.tum/: second-person masculine plural past passive of أَوْجَزَ (ʔawjaza)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawjaztum", "ʔawjaza", "ʔūjiztum"],
+      "kok_yazilis": "أوجز",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوجزوا",
+      "tur": "verb",
+      "baslik": "أوجزوا (form IV)\n# أَوْجَزُوا (ʔawjazū) /ʔaw.d͡ʒa.zuː/: third-person masculine plural past active of أَوْجَزَ (ʔawjaza)\n# أُوجِزُوا (ʔūjizū) /ʔuː.d͡ʒi.zuː/: third-person masculine plural past passive of أَوْجَزَ (ʔawjaza)\n# أَوْجِزُوا (ʔawjizū) /ʔaw.d͡ʒi.zuː/: second-person masculine plural imperative of أَوْجَزَ (ʔawjaza)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawjazū", "ʔawjaza", "ʔūjizū"],
+      "kok_yazilis": "أوجز",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوجزتن",
+      "tur": "verb",
+      "baslik": "أوجزتن (form IV)\n# أَوْجَزْتُنَّ (ʔawjaztunna) /ʔaw.d͡ʒaz.tun.na/: second-person feminine plural past active of أَوْجَزَ (ʔawjaza)\n# أُوجِزْتُنَّ (ʔūjiztunna) /ʔuː.d͡ʒiz.tun.na/: second-person feminine plural past passive of أَوْجَزَ (ʔawjaza)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawjaztunna", "ʔawjaza", "ʔūjiztunna"],
+      "kok_yazilis": "أوجز",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوجزن",
+      "tur": "verb",
+      "baslik": "أوجزن (form IV)\n# أَوْجَزْنَ (ʔawjazna) /ʔaw.d͡ʒaz.na/: third-person feminine plural past active of أَوْجَزَ (ʔawjaza)\n# أُوجِزْنَ (ʔūjizna) /ʔuː.d͡ʒiz.na/: third-person feminine plural past passive of أَوْجَزَ (ʔawjaza)\n# أَوْجِزْنَ (ʔawjizna) /ʔaw.d͡ʒiz.na/: second-person feminine plural imperative of أَوْجَزَ (ʔawjaza)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawjazna", "ʔawjaza", "ʔūjizna"],
+      "kok_yazilis": "أوجز",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوجز",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يوجز (form IV)\n# يُوجِزُ (yūjizu) /juː.d͡ʒi.zu/: third-person masculine singular non-past active indicative of أَوْجَزَ (ʔawjaza)\n# يُوجَزُ (yūjazu) /juː.d͡ʒa.zu/: third-person masculine singular non-past passive indicative of أَوْجَزَ (ʔawjaza)\n# يُوجِزَ (yūjiza) /juː.d͡ʒi.za/: third-person masculine singular non-past active subjunctive of أَوْجَزَ (ʔawjaza)\n# يُوجَزَ (yūjaza) /juː.d͡ʒa.za/: thir",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūjizu", "ʔawjaza", "yūjazu"],
+      "kok_yazilis": "أوجز",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توجزين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "توجزين (form IV)\n# تُوجِزِينَ (tūjizīna) /tuː.d͡ʒi.ziː.na/: second-person feminine singular non-past active indicative of أَوْجَزَ (ʔawjaza)\n# تُوجَزِينَ (tūjazīna) /tuː.d͡ʒa.ziː.na/: second-person feminine singular non-past passive indicative of أَوْجَزَ (ʔawjaza)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūjizīna", "ʔawjaza", "tūjazīna"],
+      "kok_yazilis": "أوجز",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توجز",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "توجز (form IV)\n# تُوجِزُ (tūjizu) /tuː.d͡ʒi.zu/: inflection of أَوْجَزَ (ʔawjaza):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُوجَزُ (tūjazu) /tuː.d͡ʒa.zu/: inflection of أَوْجَزَ (ʔawjaza):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūjizu", "ʔawjaza", "tūjazu"],
+      "kok_yazilis": "أوجز",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نوجز",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نوجز (form IV)\n# نُوجِزُ (nūjizu) /nuː.d͡ʒi.zu/: first-person plural non-past active indicative of أَوْجَزَ (ʔawjaza)\n# نُوجَزُ (nūjazu) /nuː.d͡ʒa.zu/: first-person plural non-past passive indicative of أَوْجَزَ (ʔawjaza)\n# نُوجِزَ (nūjiza) /nuː.d͡ʒi.za/: first-person plural non-past active subjunctive of أَوْجَزَ (ʔawjaza)\n# نُوجَزَ (nūjaza) /nuː.d͡ʒa.za/: first-person plural non-past passive sub",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nūjizu", "ʔawjaza", "nūjazu"],
+      "kok_yazilis": "أوجز",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوجزان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يوجزان (form IV)\n# يُوجِزَانِ (yūjizāni) /juː.d͡ʒi.zaː.ni/: third-person masculine dual non-past active indicative of أَوْجَزَ (ʔawjaza)\n# يُوجَزَانِ (yūjazāni) /juː.d͡ʒa.zaː.ni/: third-person masculine dual non-past passive indicative of أَوْجَزَ (ʔawjaza)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūjizāni", "ʔawjaza", "yūjazāni"],
+      "kok_yazilis": "أوجز",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توجزان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "توجزان (form IV)\n# تُوجِزَانِ (tūjizāni) /tuː.d͡ʒi.zaː.ni/: inflection of أَوْجَزَ (ʔawjaza):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُوجَزَانِ (tūjazāni) /tuː.d͡ʒa.zaː.ni/: inflection of أَوْجَزَ (ʔawjaza):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūjizāni", "ʔawjaza", "tūjazāni"],
+      "kok_yazilis": "أوجز",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توجزون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "توجزون (form IV)\n# تُوجِزُونَ (tūjizūna) /tuː.d͡ʒi.zuː.na/: second-person masculine plural non-past active indicative of أَوْجَزَ (ʔawjaza)\n# تُوجَزُونَ (tūjazūna) /tuː.d͡ʒa.zuː.na/: second-person masculine plural non-past passive indicative of أَوْجَزَ (ʔawjaza)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūjizūna", "ʔawjaza", "tūjazūna"],
+      "kok_yazilis": "أوجز",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توجزن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "توجزن (form IV)\n# تُوجِزْنَ (tūjizna) /tuː.d͡ʒiz.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَوْجَزَ (ʔawjaza)\n# تُوجَزْنَ (tūjazna) /tuː.d͡ʒaz.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَوْجَزَ (ʔawjaza)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūjizna", "ʔawjaza", "tūjazna"],
+      "kok_yazilis": "أوجز",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوجزون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يوجزون (form IV)\n# يُوجِزُونَ (yūjizūna) /juː.d͡ʒi.zuː.na/: third-person masculine plural non-past active indicative of أَوْجَزَ (ʔawjaza)\n# يُوجَزُونَ (yūjazūna) /juː.d͡ʒa.zuː.na/: third-person masculine plural non-past passive indicative of أَوْجَزَ (ʔawjaza)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūjizūna", "ʔawjaza", "yūjazūna"],
+      "kok_yazilis": "أوجز",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوجزن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يوجزن (form IV)\n# يُوجِزْنَ (yūjizna) /juː.d͡ʒiz.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَوْجَزَ (ʔawjaza)\n# يُوجَزْنَ (yūjazna) /juː.d͡ʒaz.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَوْجَزَ (ʔawjaza)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūjizna", "ʔawjaza", "yūjazna"],
+      "kok_yazilis": "أوجز",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توجزي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "توجزي (form IV)\n# تُوجِزِي (tūjizī) /tuː.d͡ʒi.ziː/: second-person feminine singular non-past active subjunctive/jussive of أَوْجَزَ (ʔawjaza)\n# تُوجَزِي (tūjazī) /tuː.d͡ʒa.ziː/: second-person feminine singular non-past passive subjunctive/jussive of أَوْجَزَ (ʔawjaza)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūjizī", "ʔawjaza", "tūjazī"],
+      "kok_yazilis": "أوجز",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توجزا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "توجزا (form IV)\n# تُوجِزَا (tūjizā) /tuː.d͡ʒi.zaː/: inflection of أَوْجَزَ (ʔawjaza):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُوجَزَا (tūjazā) /tuː.d͡ʒa.zaː/: inflection of أَوْجَزَ (ʔawjaza):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/ju",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūjizā", "ʔawjaza", "tūjazā"],
+      "kok_yazilis": "أوجز",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توجزوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "توجزوا (form IV)\n# تُوجِزُوا (tūjizū) /tuː.d͡ʒi.zuː/: second-person masculine plural non-past active subjunctive/jussive of أَوْجَزَ (ʔawjaza)\n# تُوجَزُوا (tūjazū) /tuː.d͡ʒa.zuː/: second-person masculine plural non-past passive subjunctive/jussive of أَوْجَزَ (ʔawjaza)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūjizū", "ʔawjaza", "tūjazū"],
+      "kok_yazilis": "أوجز",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوجزا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يوجزا (form IV)\n# يُوجِزَا (yūjizā) /juː.d͡ʒi.zaː/: third-person masculine dual non-past active subjunctive/jussive of أَوْجَزَ (ʔawjaza)\n# يُوجَزَا (yūjazā) /juː.d͡ʒa.zaː/: third-person masculine dual non-past passive subjunctive/jussive of أَوْجَزَ (ʔawjaza)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūjizā", "ʔawjaza", "yūjazā"],
+      "kok_yazilis": "أوجز",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوجزوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يوجزوا (form IV)\n# يُوجِزُوا (yūjizū) /juː.d͡ʒi.zuː/: third-person masculine plural non-past active subjunctive/jussive of أَوْجَزَ (ʔawjaza)\n# يُوجَزُوا (yūjazū) /juː.d͡ʒa.zuː/: third-person masculine plural non-past passive subjunctive/jussive of أَوْجَزَ (ʔawjaza)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūjizū", "ʔawjaza", "yūjazū"],
+      "kok_yazilis": "أوجز",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوجزي",
+      "tur": "verb",
+      "baslik": "أَوْجِزِي • (ʔawjizī) (form IV) /ʔaw.d͡ʒi.ziː/\n# second-person feminine singular imperative of أَوْجَزَ (ʔawjaza)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawjizī", "ʔawjaza"],
+      "kok_yazilis": "أوجز",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءوجز", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

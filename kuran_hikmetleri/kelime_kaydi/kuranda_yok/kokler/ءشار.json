@@ -1,612 +1,477 @@
 {
   "kok": "ءشار",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءشار", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يشير",
-        "u": "يشير",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يشير (form IV)\n# يُشِيرُ (yušīru) /ju.ʃiː.ru/: third-person masculine singular non-past active indicative of أَشَارَ (ʔašāra)\n# يُشِيرَ (yušīra) /ju.ʃiː.ra/: third-person masculine singular non-past active subjunctive of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yušīru", "ʔašāra", "yušīra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "يشار",
-        "u": "يشار",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يشار (form IV)\n# يُشَارُ (yušāru) /ju.ʃaː.ru/: third-person masculine singular non-past passive indicative of أَشَارَ (ʔašāra)\n# يُشَارَ (yušāra) /ju.ʃaː.ra/: third-person masculine singular non-past passive subjunctive of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yušāru", "ʔašāra", "yušāra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "يشر",
-        "u": "يشر",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يشر (form IV)\n# يُشِرْ (yušir) /ju.ʃir/: third-person masculine singular non-past active jussive of أَشَارَ (ʔašāra)\n# يُشَرْ (yušar) /ju.ʃar/: third-person masculine singular non-past passive jussive of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yušir", "ʔašāra", "yušar"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "نشر",
-        "u": "نشر",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "نشر (form IV)\n# نُشِرْ (nušir) /nu.ʃir/: first-person plural non-past active jussive of أَشَارَ (ʔašāra)\n# نُشَرْ (nušar) /nu.ʃar/: first-person plural non-past passive jussive of أَشَارَ (ʔašāra)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nušir", "ʔašāra", "nušar"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "أشير",
-        "u": "أشير",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أشير (form IV)\n# أُشِيرَ (ʔušīra) /ʔu.ʃiː.ra/: inflection of أَشَارَ (ʔašāra):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُشِيرُ (ʔušīru) /ʔu.ʃiː.ru/: first-person singular non-past active indicative of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔušīra", "ʔašāra", "ʔušīru"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "أشارت",
-        "u": "أشارت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَشَارَتْ • (ʔašārat) (form IV) /ʔa.ʃaː.rat/\n# third-person feminine singular past active of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔašārat", "ʔašāra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "تشير",
-        "u": "تشير",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تشير (form IV)\n# تُشِيرُ (tušīru) /tu.ʃiː.ru/: inflection of أَشَارَ (ʔašāra):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُشِيرَ (tušīra) /tu.ʃiː.ra/: inflection of أَشَارَ (ʔašāra):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tušīru", "ʔašāra", "tušīra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "تشر",
-        "u": "تشر",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تشر (form IV)\n# تُشِرْ (tušir) /tu.ʃir/: inflection of أَشَارَ (ʔašāra):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُشَرْ (tušar) /tu.ʃar/: inflection of أَشَارَ (ʔašāra):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tušir", "ʔašāra", "tušar"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "أشيرت",
-        "u": "أشيرت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُشِيرَتْ • (ʔušīrat) (form IV) /ʔu.ʃiː.rat/\n# third-person feminine singular past passive of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔušīrat", "ʔašāra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "تشار",
-        "u": "تشار",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تشار (form IV)\n# تُشَارُ (tušāru) /tu.ʃaː.ru/: inflection of أَشَارَ (ʔašāra):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُشَارَ (tušāra) /tu.ʃaː.ra/: inflection of أَشَارَ (ʔašāra):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tušāru", "ʔašāra", "tušāra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "أشرت",
-        "u": "أشرت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أشرت (form IV)\n# أَشَرْتُ (ʔašartu) /ʔa.ʃar.tu/: first-person singular past active of أَشَارَ (ʔašāra)\n# أَشَرْتَ (ʔašarta) /ʔa.ʃar.ta/: second-person masculine singular past active of أَشَارَ (ʔašāra)\n# أَشَرْتِ (ʔašarti) /ʔa.ʃar.ti/: second-person feminine singular past active of أَشَارَ (ʔašāra)\n# أُشِرْتُ (ʔuširtu) /ʔu.ʃir.tu/: first-person singular past passive of أَشَارَ (ʔašāra)\n# أُشِرْتَ ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔašartu", "ʔašāra", "ʔašarta"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "أشر",
-        "u": "أشر",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أشر (form IV)\n# أُشِرْ (ʔušir) /ʔu.ʃir/: first-person singular non-past active jussive of أَشَارَ (ʔašāra)\n# أُشَرْ (ʔušar) /ʔu.ʃar/: first-person singular non-past passive jussive of أَشَارَ (ʔašāra)\n# أَشِرْ (ʔašir) /ʔa.ʃir/: second-person masculine singular imperative of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔušir", "ʔašāra", "ʔušar"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "تشيرين",
-        "u": "تشيرين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُشِيرِينَ • (tušīrīna) (form IV) /tu.ʃiː.riː.na/\n# second-person feminine singular non-past active indicative of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tušīrīna", "ʔašāra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "تشيري",
-        "u": "تشيري",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُشِيرِي • (tušīrī) (form IV) /tu.ʃiː.riː/\n# second-person feminine singular non-past active subjunctive/jussive of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tušīrī", "ʔašāra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "أشيري",
-        "u": "أشيري",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَشِيرِي • (ʔašīrī) (form IV) /ʔa.ʃiː.riː/\n# second-person feminine singular imperative of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔašīrī", "ʔašāra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "تشارين",
-        "u": "تشارين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُشَارِينَ • (tušārīna) (form IV) /tu.ʃaː.riː.na/\n# second-person feminine singular non-past passive indicative of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tušārīna", "ʔašāra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "تشاري",
-        "u": "تشاري",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُشَارِي • (tušārī) (form IV) /tu.ʃaː.riː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tušārī", "ʔašāra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "أشرنا",
-        "u": "أشرنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أشرنا (form IV)\n# أَشَرْنَا (ʔašarnā) /ʔa.ʃar.naː/: first-person plural past active of أَشَارَ (ʔašāra)\n# أُشِرْنَا (ʔuširnā) /ʔu.ʃir.naː/: first-person plural past passive of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔašarnā", "ʔašāra", "ʔuširnā"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "نشير",
-        "u": "نشير",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نشير (form IV)\n# نُشِيرُ (nušīru) /nu.ʃiː.ru/: first-person plural non-past active indicative of أَشَارَ (ʔašāra)\n# نُشِيرَ (nušīra) /nu.ʃiː.ra/: first-person plural non-past active subjunctive of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nušīru", "ʔašāra", "nušīra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "نشار",
-        "u": "نشار",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نشار (form IV)\n# نُشَارُ (nušāru) /nu.ʃaː.ru/: first-person plural non-past passive indicative of أَشَارَ (ʔašāra)\n# نُشَارَ (nušāra) /nu.ʃaː.ra/: first-person plural non-past passive subjunctive of أَشَارَ (ʔašāra)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nušāru", "ʔašāra", "nušāra"],
-        "ipa": ["/naʃ.ʃaːr/"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "أشرتم",
-        "u": "أشرتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أشرتم (form IV)\n# أَشَرْتُمْ (ʔašartum) /ʔa.ʃar.tum/: second-person masculine plural past active of أَشَارَ (ʔašāra)\n# أُشِرْتُمْ (ʔuširtum) /ʔu.ʃir.tum/: second-person masculine plural past passive of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔašartum", "ʔašāra", "ʔuširtum"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "تشيرون",
-        "u": "تشيرون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُشِيرُونَ • (tušīrūna) (form IV) /tu.ʃiː.ruː.na/\n# second-person masculine plural non-past active indicative of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tušīrūna", "ʔašāra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "تشيروا",
-        "u": "تشيروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُشِيرُوا • (tušīrū) (form IV) /tu.ʃiː.ruː/\n# second-person masculine plural non-past active subjunctive/jussive of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tušīrū", "ʔašāra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "تشارون",
-        "u": "تشارون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُشَارُونَ • (tušārūna) (form IV) /tu.ʃaː.ruː.na/\n# second-person masculine plural non-past passive indicative of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tušārūna", "ʔašāra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "تشاروا",
-        "u": "تشاروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُشَارُوا • (tušārū) (form IV) /tu.ʃaː.ruː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tušārū", "ʔašāra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "أشاروا",
-        "u": "أشاروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَشَارُوا • (ʔašārū) (form IV) /ʔa.ʃaː.ruː/\n# third-person masculine plural past active of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔašārū", "ʔašāra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "يشيرون",
-        "u": "يشيرون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُشِيرُونَ • (yušīrūna) (form IV) /ju.ʃiː.ruː.na/\n# third-person masculine plural non-past active indicative of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yušīrūna", "ʔašāra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "يشيروا",
-        "u": "يشيروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُشِيرُوا • (yušīrū) (form IV) /ju.ʃiː.ruː/\n# third-person masculine plural non-past active subjunctive/jussive of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yušīrū", "ʔašāra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "أشيروا",
-        "u": "أشيروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أشيروا (form IV)\n# أُشِيرُوا (ʔušīrū) /ʔu.ʃiː.ruː/: third-person masculine plural past passive of أَشَارَ (ʔašāra)\n# أَشِيرُوا (ʔašīrū) /ʔa.ʃiː.ruː/: second-person masculine plural imperative of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔušīrū", "ʔašāra", "ʔašīrū"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "يشارون",
-        "u": "يشارون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُشَارُونَ • (yušārūna) (form IV) /ju.ʃaː.ruː.na/\n# third-person masculine plural non-past passive indicative of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yušārūna", "ʔašāra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "يشاروا",
-        "u": "يشاروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُشَارُوا • (yušārū) (form IV) /ju.ʃaː.ruː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yušārū", "ʔašāra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "أشرتن",
-        "u": "أشرتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أشرتن (form IV)\n# أَشَرْتُنَّ (ʔašartunna) /ʔa.ʃar.tun.na/: second-person feminine plural past active of أَشَارَ (ʔašāra)\n# أُشِرْتُنَّ (ʔuširtunna) /ʔu.ʃir.tun.na/: second-person feminine plural past passive of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔašartunna", "ʔašāra", "ʔuširtunna"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "تشرن",
-        "u": "تشرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تشرن (form IV)\n# تُشِرْنَ (tuširna) /tu.ʃir.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَشَارَ (ʔašāra)\n# تُشَرْنَ (tušarna) /tu.ʃar.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuširna", "ʔašāra", "tušarna"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "أشرن",
-        "u": "أشرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أشرن (form IV)\n# أَشَرْنَ (ʔašarna) /ʔa.ʃar.na/: third-person feminine plural past active of أَشَارَ (ʔašāra)\n# أُشِرْنَ (ʔuširna) /ʔu.ʃir.na/: third-person feminine plural past passive of أَشَارَ (ʔašāra)\n# أَشِرْنَ (ʔaširna) /ʔa.ʃir.na/: second-person feminine plural imperative of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔašarna", "ʔašāra", "ʔuširna"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "يشرن",
-        "u": "يشرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يشرن (form IV)\n# يُشِرْنَ (yuširna) /ju.ʃir.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَشَارَ (ʔašāra)\n# يُشَرْنَ (yušarna) /ju.ʃar.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuširna", "ʔašāra", "yušarna"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "أشارا",
-        "u": "أشارا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَشَارَا • (ʔašārā) (form IV) /ʔa.ʃaː.raː/\n# third-person masculine dual past active of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔašārā", "ʔašāra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "أشرتما",
-        "u": "أشرتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أشرتما (form IV)\n# أَشَرْتُمَا (ʔašartumā) /ʔa.ʃar.tu.maː/: second-person dual past active of أَشَارَ (ʔašāra)\n# أُشِرْتُمَا (ʔuširtumā) /ʔu.ʃir.tu.maː/: second-person dual past passive of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔašartumā", "ʔašāra", "ʔuširtumā"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "أشيرتا",
-        "u": "أشيرتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُشِيرَتَا • (ʔušīratā) (form IV) /ʔu.ʃiː.ra.taː/\n# third-person feminine dual past passive of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔušīratā", "ʔašāra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "أشارتا",
-        "u": "أشارتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَشَارَتَا • (ʔašāratā) (form IV) /ʔa.ʃaː.ra.taː/\n# third-person feminine dual past active of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔašāratā", "ʔašāra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "يشيران",
-        "u": "يشيران",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُشِيرَانِ • (yušīrāni) (form IV) /ju.ʃiː.raː.ni/\n# third-person masculine dual non-past active indicative of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yušīrāni", "ʔašāra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "أشيرا",
-        "u": "أشيرا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أشيرا (form IV)\n# أُشِيرَا (ʔušīrā) /ʔu.ʃiː.raː/: third-person masculine dual past passive of أَشَارَ (ʔašāra)\n# أَشِيرَا (ʔašīrā) /ʔa.ʃiː.raː/: second-person dual imperative of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔušīrā", "ʔašāra", "ʔašīrā"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "تشيران",
-        "u": "تشيران",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُشِيرَانِ • (tušīrāni) (form IV) /tu.ʃiː.raː.ni/\n# inflection of أَشَارَ (ʔašāra):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tušīrāni", "ʔašāra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "تشاران",
-        "u": "تشاران",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُشَارَانِ • (tušārāni) (form IV) /tu.ʃaː.raː.ni/\n# inflection of أَشَارَ (ʔašāra):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tušārāni", "ʔašāra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "تشيرا",
-        "u": "تشيرا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُشِيرَا • (tušīrā) (form IV) /tu.ʃiː.raː/\n# inflection of أَشَارَ (ʔašāra):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tušīrā", "ʔašāra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "يشاران",
-        "u": "يشاران",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُشَارَانِ • (yušārāni) (form IV) /ju.ʃaː.raː.ni/\n# third-person masculine dual non-past passive indicative of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yušārāni", "ʔašāra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "يشيرا",
-        "u": "يشيرا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُشِيرَا • (yušīrā) (form IV) /ju.ʃiː.raː/\n# third-person masculine dual non-past active subjunctive/jussive of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yušīrā", "ʔašāra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "تشارا",
-        "u": "تشارا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُشَارَا • (tušārā) (form IV) /tu.ʃaː.raː/\n# inflection of أَشَارَ (ʔašāra):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tušārā", "ʔašāra"],
-        "k": "أشار",
-        "yol": "kök"
-      },
-      {
-        "w": "يشارا",
-        "u": "يشارا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُشَارَا • (yušārā) (form IV) /ju.ʃaː.raː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَشَارَ (ʔašāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yušārā", "ʔašāra"],
-        "k": "أشار",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "شر",
+  "ses": {
     "harf": "ء",
+    "fasil": "شر",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "يشير",
+      "tur": "verb",
+      "baslik": "يشير (form IV)\n# يُشِيرُ (yušīru) /ju.ʃiː.ru/: third-person masculine singular non-past active indicative of أَشَارَ (ʔašāra)\n# يُشِيرَ (yušīra) /ju.ʃiː.ra/: third-person masculine singular non-past active subjunctive of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yušīru", "ʔašāra", "yušīra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يشار",
+      "tur": "verb",
+      "baslik": "يشار (form IV)\n# يُشَارُ (yušāru) /ju.ʃaː.ru/: third-person masculine singular non-past passive indicative of أَشَارَ (ʔašāra)\n# يُشَارَ (yušāra) /ju.ʃaː.ra/: third-person masculine singular non-past passive subjunctive of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yušāru", "ʔašāra", "yušāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يشر",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يشر (form IV)\n# يُشِرْ (yušir) /ju.ʃir/: third-person masculine singular non-past active jussive of أَشَارَ (ʔašāra)\n# يُشَرْ (yušar) /ju.ʃar/: third-person masculine singular non-past passive jussive of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yušir", "ʔašāra", "yušar"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نشر",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "نشر (form IV)\n# نُشِرْ (nušir) /nu.ʃir/: first-person plural non-past active jussive of أَشَارَ (ʔašāra)\n# نُشَرْ (nušar) /nu.ʃar/: first-person plural non-past passive jussive of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nušir", "ʔašāra", "nušar"],
+      "kok_yazilis": "أشار"
+    },
+    {
+      "madde": "أشير",
+      "tur": "verb",
+      "baslik": "أشير (form IV)\n# أُشِيرَ (ʔušīra) /ʔu.ʃiː.ra/: inflection of أَشَارَ (ʔašāra):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُشِيرُ (ʔušīru) /ʔu.ʃiː.ru/: first-person singular non-past active indicative of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔušīra", "ʔašāra", "ʔušīru"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أشارت",
+      "tur": "verb",
+      "baslik": "أَشَارَتْ • (ʔašārat) (form IV) /ʔa.ʃaː.rat/\n# third-person feminine singular past active of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔašārat", "ʔašāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تشير",
+      "tur": "verb",
+      "baslik": "تشير (form IV)\n# تُشِيرُ (tušīru) /tu.ʃiː.ru/: inflection of أَشَارَ (ʔašāra):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُشِيرَ (tušīra) /tu.ʃiː.ra/: inflection of أَشَارَ (ʔašāra):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tušīru", "ʔašāra", "tušīra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تشر",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تشر (form IV)\n# تُشِرْ (tušir) /tu.ʃir/: inflection of أَشَارَ (ʔašāra):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُشَرْ (tušar) /tu.ʃar/: inflection of أَشَارَ (ʔašāra):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tušir", "ʔašāra", "tušar"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أشيرت",
+      "tur": "verb",
+      "baslik": "أُشِيرَتْ • (ʔušīrat) (form IV) /ʔu.ʃiː.rat/\n# third-person feminine singular past passive of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔušīrat", "ʔašāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تشار",
+      "tur": "verb",
+      "baslik": "تشار (form IV)\n# تُشَارُ (tušāru) /tu.ʃaː.ru/: inflection of أَشَارَ (ʔašāra):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُشَارَ (tušāra) /tu.ʃaː.ra/: inflection of أَشَارَ (ʔašāra):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tušāru", "ʔašāra", "tušāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أشرت",
+      "tur": "verb",
+      "baslik": "أشرت (form IV)\n# أَشَرْتُ (ʔašartu) /ʔa.ʃar.tu/: first-person singular past active of أَشَارَ (ʔašāra)\n# أَشَرْتَ (ʔašarta) /ʔa.ʃar.ta/: second-person masculine singular past active of أَشَارَ (ʔašāra)\n# أَشَرْتِ (ʔašarti) /ʔa.ʃar.ti/: second-person feminine singular past active of أَشَارَ (ʔašāra)\n# أُشِرْتُ (ʔuširtu) /ʔu.ʃir.tu/: first-person singular past passive of أَشَارَ (ʔašāra)\n# أُشِرْتَ ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔašartu", "ʔašāra", "ʔašarta"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أشر",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أشر (form IV)\n# أُشِرْ (ʔušir) /ʔu.ʃir/: first-person singular non-past active jussive of أَشَارَ (ʔašāra)\n# أُشَرْ (ʔušar) /ʔu.ʃar/: first-person singular non-past passive jussive of أَشَارَ (ʔašāra)\n# أَشِرْ (ʔašir) /ʔa.ʃir/: second-person masculine singular imperative of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔušir", "ʔašāra", "ʔušar"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تشيرين",
+      "tur": "verb",
+      "baslik": "تُشِيرِينَ • (tušīrīna) (form IV) /tu.ʃiː.riː.na/\n# second-person feminine singular non-past active indicative of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tušīrīna", "ʔašāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تشيري",
+      "tur": "verb",
+      "baslik": "تُشِيرِي • (tušīrī) (form IV) /tu.ʃiː.riː/\n# second-person feminine singular non-past active subjunctive/jussive of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tušīrī", "ʔašāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أشيري",
+      "tur": "verb",
+      "baslik": "أَشِيرِي • (ʔašīrī) (form IV) /ʔa.ʃiː.riː/\n# second-person feminine singular imperative of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔašīrī", "ʔašāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تشارين",
+      "tur": "verb",
+      "baslik": "تُشَارِينَ • (tušārīna) (form IV) /tu.ʃaː.riː.na/\n# second-person feminine singular non-past passive indicative of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tušārīna", "ʔašāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تشاري",
+      "tur": "verb",
+      "baslik": "تُشَارِي • (tušārī) (form IV) /tu.ʃaː.riː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tušārī", "ʔašāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أشرنا",
+      "tur": "verb",
+      "baslik": "أشرنا (form IV)\n# أَشَرْنَا (ʔašarnā) /ʔa.ʃar.naː/: first-person plural past active of أَشَارَ (ʔašāra)\n# أُشِرْنَا (ʔuširnā) /ʔu.ʃir.naː/: first-person plural past passive of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔašarnā", "ʔašāra", "ʔuširnā"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نشير",
+      "tur": "verb",
+      "baslik": "نشير (form IV)\n# نُشِيرُ (nušīru) /nu.ʃiː.ru/: first-person plural non-past active indicative of أَشَارَ (ʔašāra)\n# نُشِيرَ (nušīra) /nu.ʃiː.ra/: first-person plural non-past active subjunctive of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nušīru", "ʔašāra", "nušīra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نشار",
+      "tur": "verb",
+      "baslik": "نشار (form IV)\n# نُشَارُ (nušāru) /nu.ʃaː.ru/: first-person plural non-past passive indicative of أَشَارَ (ʔašāra)\n# نُشَارَ (nušāra) /nu.ʃaː.ra/: first-person plural non-past passive subjunctive of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nušāru", "ʔašāra", "nušāra"],
+      "ipa": ["/naʃ.ʃaːr/"],
+      "kok_yazilis": "أشار"
+    },
+    {
+      "madde": "أشرتم",
+      "tur": "verb",
+      "baslik": "أشرتم (form IV)\n# أَشَرْتُمْ (ʔašartum) /ʔa.ʃar.tum/: second-person masculine plural past active of أَشَارَ (ʔašāra)\n# أُشِرْتُمْ (ʔuširtum) /ʔu.ʃir.tum/: second-person masculine plural past passive of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔašartum", "ʔašāra", "ʔuširtum"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تشيرون",
+      "tur": "verb",
+      "baslik": "تُشِيرُونَ • (tušīrūna) (form IV) /tu.ʃiː.ruː.na/\n# second-person masculine plural non-past active indicative of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tušīrūna", "ʔašāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تشيروا",
+      "tur": "verb",
+      "baslik": "تُشِيرُوا • (tušīrū) (form IV) /tu.ʃiː.ruː/\n# second-person masculine plural non-past active subjunctive/jussive of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tušīrū", "ʔašāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تشارون",
+      "tur": "verb",
+      "baslik": "تُشَارُونَ • (tušārūna) (form IV) /tu.ʃaː.ruː.na/\n# second-person masculine plural non-past passive indicative of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tušārūna", "ʔašāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تشاروا",
+      "tur": "verb",
+      "baslik": "تُشَارُوا • (tušārū) (form IV) /tu.ʃaː.ruː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tušārū", "ʔašāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أشاروا",
+      "tur": "verb",
+      "baslik": "أَشَارُوا • (ʔašārū) (form IV) /ʔa.ʃaː.ruː/\n# third-person masculine plural past active of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔašārū", "ʔašāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يشيرون",
+      "tur": "verb",
+      "baslik": "يُشِيرُونَ • (yušīrūna) (form IV) /ju.ʃiː.ruː.na/\n# third-person masculine plural non-past active indicative of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yušīrūna", "ʔašāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يشيروا",
+      "tur": "verb",
+      "baslik": "يُشِيرُوا • (yušīrū) (form IV) /ju.ʃiː.ruː/\n# third-person masculine plural non-past active subjunctive/jussive of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yušīrū", "ʔašāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أشيروا",
+      "tur": "verb",
+      "baslik": "أشيروا (form IV)\n# أُشِيرُوا (ʔušīrū) /ʔu.ʃiː.ruː/: third-person masculine plural past passive of أَشَارَ (ʔašāra)\n# أَشِيرُوا (ʔašīrū) /ʔa.ʃiː.ruː/: second-person masculine plural imperative of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔušīrū", "ʔašāra", "ʔašīrū"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يشارون",
+      "tur": "verb",
+      "baslik": "يُشَارُونَ • (yušārūna) (form IV) /ju.ʃaː.ruː.na/\n# third-person masculine plural non-past passive indicative of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yušārūna", "ʔašāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يشاروا",
+      "tur": "verb",
+      "baslik": "يُشَارُوا • (yušārū) (form IV) /ju.ʃaː.ruː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yušārū", "ʔašāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أشرتن",
+      "tur": "verb",
+      "baslik": "أشرتن (form IV)\n# أَشَرْتُنَّ (ʔašartunna) /ʔa.ʃar.tun.na/: second-person feminine plural past active of أَشَارَ (ʔašāra)\n# أُشِرْتُنَّ (ʔuširtunna) /ʔu.ʃir.tun.na/: second-person feminine plural past passive of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔašartunna", "ʔašāra", "ʔuširtunna"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تشرن",
+      "tur": "verb",
+      "baslik": "تشرن (form IV)\n# تُشِرْنَ (tuširna) /tu.ʃir.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَشَارَ (ʔašāra)\n# تُشَرْنَ (tušarna) /tu.ʃar.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuširna", "ʔašāra", "tušarna"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أشرن",
+      "tur": "verb",
+      "baslik": "أشرن (form IV)\n# أَشَرْنَ (ʔašarna) /ʔa.ʃar.na/: third-person feminine plural past active of أَشَارَ (ʔašāra)\n# أُشِرْنَ (ʔuširna) /ʔu.ʃir.na/: third-person feminine plural past passive of أَشَارَ (ʔašāra)\n# أَشِرْنَ (ʔaširna) /ʔa.ʃir.na/: second-person feminine plural imperative of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔašarna", "ʔašāra", "ʔuširna"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يشرن",
+      "tur": "verb",
+      "baslik": "يشرن (form IV)\n# يُشِرْنَ (yuširna) /ju.ʃir.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَشَارَ (ʔašāra)\n# يُشَرْنَ (yušarna) /ju.ʃar.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuširna", "ʔašāra", "yušarna"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أشارا",
+      "tur": "verb",
+      "baslik": "أَشَارَا • (ʔašārā) (form IV) /ʔa.ʃaː.raː/\n# third-person masculine dual past active of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔašārā", "ʔašāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أشرتما",
+      "tur": "verb",
+      "baslik": "أشرتما (form IV)\n# أَشَرْتُمَا (ʔašartumā) /ʔa.ʃar.tu.maː/: second-person dual past active of أَشَارَ (ʔašāra)\n# أُشِرْتُمَا (ʔuširtumā) /ʔu.ʃir.tu.maː/: second-person dual past passive of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔašartumā", "ʔašāra", "ʔuširtumā"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أشيرتا",
+      "tur": "verb",
+      "baslik": "أُشِيرَتَا • (ʔušīratā) (form IV) /ʔu.ʃiː.ra.taː/\n# third-person feminine dual past passive of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔušīratā", "ʔašāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أشارتا",
+      "tur": "verb",
+      "baslik": "أَشَارَتَا • (ʔašāratā) (form IV) /ʔa.ʃaː.ra.taː/\n# third-person feminine dual past active of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔašāratā", "ʔašāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يشيران",
+      "tur": "verb",
+      "baslik": "يُشِيرَانِ • (yušīrāni) (form IV) /ju.ʃiː.raː.ni/\n# third-person masculine dual non-past active indicative of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yušīrāni", "ʔašāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أشيرا",
+      "tur": "verb",
+      "baslik": "أشيرا (form IV)\n# أُشِيرَا (ʔušīrā) /ʔu.ʃiː.raː/: third-person masculine dual past passive of أَشَارَ (ʔašāra)\n# أَشِيرَا (ʔašīrā) /ʔa.ʃiː.raː/: second-person dual imperative of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔušīrā", "ʔašāra", "ʔašīrā"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تشيران",
+      "tur": "verb",
+      "baslik": "تُشِيرَانِ • (tušīrāni) (form IV) /tu.ʃiː.raː.ni/\n# inflection of أَشَارَ (ʔašāra):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tušīrāni", "ʔašāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تشاران",
+      "tur": "verb",
+      "baslik": "تُشَارَانِ • (tušārāni) (form IV) /tu.ʃaː.raː.ni/\n# inflection of أَشَارَ (ʔašāra):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tušārāni", "ʔašāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تشيرا",
+      "tur": "verb",
+      "baslik": "تُشِيرَا • (tušīrā) (form IV) /tu.ʃiː.raː/\n# inflection of أَشَارَ (ʔašāra):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tušīrā", "ʔašāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يشاران",
+      "tur": "verb",
+      "baslik": "يُشَارَانِ • (yušārāni) (form IV) /ju.ʃaː.raː.ni/\n# third-person masculine dual non-past passive indicative of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yušārāni", "ʔašāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يشيرا",
+      "tur": "verb",
+      "baslik": "يُشِيرَا • (yušīrā) (form IV) /ju.ʃiː.raː/\n# third-person masculine dual non-past active subjunctive/jussive of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yušīrā", "ʔašāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تشارا",
+      "tur": "verb",
+      "baslik": "تُشَارَا • (tušārā) (form IV) /tu.ʃaː.raː/\n# inflection of أَشَارَ (ʔašāra):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tušārā", "ʔašāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يشارا",
+      "tur": "verb",
+      "baslik": "يُشَارَا • (yušārā) (form IV) /ju.ʃaː.raː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَشَارَ (ʔašāra)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yušārā", "ʔašāra"],
+      "kok_yazilis": "أشار",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ءشار", "r6"]
+  ],
+  "mana": {
     "ince": "inform.v.01",
     "orta": "verb.communication",
     "ust": "söz ve haber",
@@ -614,16 +479,11 @@
     "dayanak_tanim": "prepare and issue for public distribution or sale",
     "synset_sayisi": 44
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "announce.v.01",
     "bear.v.04",
     "bear.v.05",
@@ -666,12 +526,10 @@
     "use.v.01",
     "yield.v.10"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

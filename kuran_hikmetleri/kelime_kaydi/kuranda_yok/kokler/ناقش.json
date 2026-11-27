@@ -1,474 +1,334 @@
 {
   "kok": "ناقش",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ناقش", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يناقش",
-        "u": "يناقش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يناقش (form III)\n# يُنَاقِشُ (yunāqišu) /ju.naː.qi.ʃu/: third-person masculine singular non-past active indicative of نَاقَشَ (nāqaša)\n# يُنَاقَشُ (yunāqašu) /ju.naː.qa.ʃu/: third-person masculine singular non-past passive indicative of نَاقَشَ (nāqaša)\n# يُنَاقِشَ (yunāqiša) /ju.naː.qi.ʃa/: third-person masculine singular non-past active subjunctive of نَاقَشَ (nāqaša)\n# يُنَاقَشَ (yunāqaša) /ju.",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yunāqišu", "nāqaša", "yunāqašu"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "نوقش",
-        "u": "نوقش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوقِشَ • (nūqiša) (form III) /nuː.qi.ʃa/\n# third-person masculine singular past passive of نَاقَشَ (nāqaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūqiša", "nāqaša"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "ناقشت",
-        "u": "ناقشت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ناقشت (form III)\n# نَاقَشْتُ (nāqaštu) /naː.qaʃ.tu/: first-person singular past active of نَاقَشَ (nāqaša)\n# نَاقَشْتَ (nāqašta) /naː.qaʃ.ta/: second-person masculine singular past active of نَاقَشَ (nāqaša)\n# نَاقَشْتِ (nāqašti) /naː.qaʃ.ti/: second-person feminine singular past active of نَاقَشَ (nāqaša)\n# نَاقَشَتْ (nāqašat) /naː.qa.ʃat/: third-person feminine singular past active of نَاقَشَ (n",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nāqaštu", "nāqaša", "nāqašta"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "تناقش",
-        "u": "تناقش",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تناقش (form III)\n# تُنَاقِشُ (tunāqišu) /tu.naː.qi.ʃu/: inflection of نَاقَشَ (nāqaša):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُنَاقَشُ (tunāqašu) /tu.naː.qa.ʃu/: inflection of نَاقَشَ (nāqaša):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive in",
-        "t": "See the etymology of the corresponding lemma form.",
-        "s": [
-          ["nonlemma", "See the etymology of the corresponding lemma form."]
-        ],
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunāqišu", "nāqaša", "tunāqašu"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "نوقشت",
-        "u": "نوقشت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نوقشت (form III)\n# نُوقِشْتُ (nūqištu) /nuː.qiʃ.tu/: first-person singular past passive of نَاقَشَ (nāqaša)\n# نُوقِشْتَ (nūqišta) /nuː.qiʃ.ta/: second-person masculine singular past passive of نَاقَشَ (nāqaša)\n# نُوقِشْتِ (nūqišti) /nuː.qiʃ.ti/: second-person feminine singular past passive of نَاقَشَ (nāqaša)\n# نُوقِشَتْ (nūqišat) /nuː.qi.ʃat/: third-person feminine singular past passive of نَاقَش",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūqištu", "nāqaša", "nūqišta"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "تناقشين",
-        "u": "تناقشين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تناقشين (form III)\n# تُنَاقِشِينَ (tunāqišīna) /tu.naː.qi.ʃiː.na/: second-person feminine singular non-past active indicative of نَاقَشَ (nāqaša)\n# تُنَاقَشِينَ (tunāqašīna) /tu.naː.qa.ʃiː.na/: second-person feminine singular non-past passive indicative of نَاقَشَ (nāqaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunāqišīna", "nāqaša", "tunāqašīna"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "تناقشي",
-        "u": "تناقشي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تناقشي (form III)\n# تُنَاقِشِي (tunāqišī) /tu.naː.qi.ʃiː/: second-person feminine singular non-past active subjunctive/jussive of نَاقَشَ (nāqaša)\n# تُنَاقَشِي (tunāqašī) /tu.naː.qa.ʃiː/: second-person feminine singular non-past passive subjunctive/jussive of نَاقَشَ (nāqaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunāqišī", "nāqaša", "tunāqašī"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "ناقشي",
-        "u": "ناقشي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَاقِشِي • (nāqišī) (form III) /naː.qi.ʃiː/\n# second-person feminine singular imperative of نَاقَشَ (nāqaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nāqišī", "nāqaša"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "أناقش",
-        "u": "أناقش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أناقش (form III)\n# أُنَاقِشُ (ʔunāqišu) /ʔu.naː.qi.ʃu/: first-person singular non-past active indicative of نَاقَشَ (nāqaša)\n# أُنَاقَشُ (ʔunāqašu) /ʔu.naː.qa.ʃu/: first-person singular non-past passive indicative of نَاقَشَ (nāqaša)\n# أُنَاقِشَ (ʔunāqiša) /ʔu.naː.qi.ʃa/: first-person singular non-past active subjunctive of نَاقَشَ (nāqaša)\n# أُنَاقَشَ (ʔunāqaša) /ʔu.naː.qa.ʃa/: first-person singu",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔunāqišu", "nāqaša", "ʔunāqašu"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "ناقشنا",
-        "u": "ناقشنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَاقَشْنَا • (nāqašnā) (form III) /naː.qaʃ.naː/\n# first-person plural past active of نَاقَشَ (nāqaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nāqašnā", "nāqaša"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "نناقش",
-        "u": "نناقش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نناقش (form III)\n# نُنَاقِشُ (nunāqišu) /nu.naː.qi.ʃu/: first-person plural non-past active indicative of نَاقَشَ (nāqaša)\n# نُنَاقَشُ (nunāqašu) /nu.naː.qa.ʃu/: first-person plural non-past passive indicative of نَاقَشَ (nāqaša)\n# نُنَاقِشَ (nunāqiša) /nu.naː.qi.ʃa/: first-person plural non-past active subjunctive of نَاقَشَ (nāqaša)\n# نُنَاقَشَ (nunāqaša) /nu.naː.qa.ʃa/: first-person plural non-",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nunāqišu", "nāqaša", "nunāqašu"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "نوقشنا",
-        "u": "نوقشنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوقِشْنَا • (nūqišnā) (form III) /nuː.qiʃ.naː/\n# first-person plural past passive of نَاقَشَ (nāqaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūqišnā", "nāqaša"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "ناقشتم",
-        "u": "ناقشتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَاقَشْتُمْ • (nāqaštum) (form III) /naː.qaʃ.tum/\n# second-person masculine plural past active of نَاقَشَ (nāqaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nāqaštum", "nāqaša"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "تناقشون",
-        "u": "تناقشون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تناقشون (form III)\n# تُنَاقِشُونَ (tunāqišūna) /tu.naː.qi.ʃuː.na/: second-person masculine plural non-past active indicative of نَاقَشَ (nāqaša)\n# تُنَاقَشُونَ (tunāqašūna) /tu.naː.qa.ʃuː.na/: second-person masculine plural non-past passive indicative of نَاقَشَ (nāqaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunāqišūna", "nāqaša", "tunāqašūna"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "تناقشوا",
-        "u": "تناقشوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تناقشوا (form III)\n# تُنَاقِشُوا (tunāqišū) /tu.naː.qi.ʃuː/: second-person masculine plural non-past active subjunctive/jussive of نَاقَشَ (nāqaša)\n# تُنَاقَشُوا (tunāqašū) /tu.naː.qa.ʃuː/: second-person masculine plural non-past passive subjunctive/jussive of نَاقَشَ (nāqaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunāqišū", "nāqaša", "tunāqašū"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "نوقشتم",
-        "u": "نوقشتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوقِشْتُمْ • (nūqištum) (form III) /nuː.qiʃ.tum/\n# second-person masculine plural past passive of نَاقَشَ (nāqaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūqištum", "nāqaša"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "ناقشوا",
-        "u": "ناقشوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ناقشوا (form III)\n# نَاقَشُوا (nāqašū) /naː.qa.ʃuː/: third-person masculine plural past active of نَاقَشَ (nāqaša)\n# نَاقِشُوا (nāqišū) /naː.qi.ʃuː/: second-person masculine plural imperative of نَاقَشَ (nāqaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nāqašū", "nāqaša", "nāqišū"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "يناقشون",
-        "u": "يناقشون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يناقشون (form III)\n# يُنَاقِشُونَ (yunāqišūna) /ju.naː.qi.ʃuː.na/: third-person masculine plural non-past active indicative of نَاقَشَ (nāqaša)\n# يُنَاقَشُونَ (yunāqašūna) /ju.naː.qa.ʃuː.na/: third-person masculine plural non-past passive indicative of نَاقَشَ (nāqaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yunāqišūna", "nāqaša", "yunāqašūna"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "يناقشوا",
-        "u": "يناقشوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يناقشوا (form III)\n# يُنَاقِشُوا (yunāqišū) /ju.naː.qi.ʃuː/: third-person masculine plural non-past active subjunctive/jussive of نَاقَشَ (nāqaša)\n# يُنَاقَشُوا (yunāqašū) /ju.naː.qa.ʃuː/: third-person masculine plural non-past passive subjunctive/jussive of نَاقَشَ (nāqaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yunāqišū", "nāqaša", "yunāqašū"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "نوقشوا",
-        "u": "نوقشوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوقِشُوا • (nūqišū) (form III) /nuː.qi.ʃuː/\n# third-person masculine plural past passive of نَاقَشَ (nāqaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūqišū", "nāqaša"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "ناقشتن",
-        "u": "ناقشتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَاقَشْتُنَّ • (nāqaštunna) (form III) /naː.qaʃ.tun.na/\n# second-person feminine plural past active of نَاقَشَ (nāqaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nāqaštunna", "nāqaša"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "تناقشن",
-        "u": "تناقشن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تناقشن (form III)\n# تُنَاقِشْنَ (tunāqišna) /tu.naː.qiʃ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of نَاقَشَ (nāqaša)\n# تُنَاقَشْنَ (tunāqašna) /tu.naː.qaʃ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of نَاقَشَ (nāqaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunāqišna", "nāqaša", "tunāqašna"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "ناقشن",
-        "u": "ناقشن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ناقشن (form III)\n# نَاقَشْنَ (nāqašna) /naː.qaʃ.na/: third-person feminine plural past active of نَاقَشَ (nāqaša)\n# نَاقِشْنَ (nāqišna) /naː.qiʃ.na/: second-person feminine plural imperative of نَاقَشَ (nāqaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nāqašna", "nāqaša", "nāqišna"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "نوقشتن",
-        "u": "نوقشتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوقِشْتُنَّ • (nūqištunna) (form III) /nuː.qiʃ.tun.na/\n# second-person feminine plural past passive of نَاقَشَ (nāqaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūqištunna", "nāqaša"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "يناقشن",
-        "u": "يناقشن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يناقشن (form III)\n# يُنَاقِشْنَ (yunāqišna) /ju.naː.qiʃ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of نَاقَشَ (nāqaša)\n# يُنَاقَشْنَ (yunāqašna) /ju.naː.qaʃ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of نَاقَشَ (nāqaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yunāqišna", "nāqaša", "yunāqašna"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "نوقشن",
-        "u": "نوقشن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوقِشْنَ • (nūqišna) (form III) /nuː.qiʃ.na/\n# third-person feminine plural past passive of نَاقَشَ (nāqaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūqišna", "nāqaša"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "تناقشا",
-        "u": "تناقشا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تناقشا (form III)\n# تُنَاقِشَا (tunāqišā) /tu.naː.qi.ʃaː/: inflection of نَاقَشَ (nāqaša):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُنَاقَشَا (tunāqašā) /tu.naː.qa.ʃaː/: inflection of نَاقَشَ (nāqaša):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjun",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunāqišā", "nāqaša", "tunāqašā"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "ناقشتما",
-        "u": "ناقشتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَاقَشْتُمَا • (nāqaštumā) (form III) /naː.qaʃ.tu.maː/\n# second-person dual past active of نَاقَشَ (nāqaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nāqaštumā", "nāqaša"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "ناقشا",
-        "u": "ناقشا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ناقشا (form III)\n# نَاقَشَا (nāqašā) /naː.qa.ʃaː/: third-person masculine dual past active of نَاقَشَ (nāqaša)\n# نَاقِشَا (nāqišā) /naː.qi.ʃaː/: second-person dual imperative of نَاقَشَ (nāqaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nāqašā", "nāqaša", "nāqišā"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "ناقشتا",
-        "u": "ناقشتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَاقَشَتَا • (nāqašatā) (form III) /naː.qa.ʃa.taː/\n# third-person feminine dual past active of نَاقَشَ (nāqaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nāqašatā", "nāqaša"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "نوقشتما",
-        "u": "نوقشتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوقِشْتُمَا • (nūqištumā) (form III) /nuː.qiʃ.tu.maː/\n# second-person dual past passive of نَاقَشَ (nāqaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūqištumā", "nāqaša"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "نوقشتا",
-        "u": "نوقشتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوقِشَتَا • (nūqišatā) (form III) /nuː.qi.ʃa.taː/\n# third-person feminine dual past passive of نَاقَشَ (nāqaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūqišatā", "nāqaša"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "يناقشا",
-        "u": "يناقشا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يناقشا (form III)\n# يُنَاقِشَا (yunāqišā) /ju.naː.qi.ʃaː/: third-person masculine dual non-past active subjunctive/jussive of نَاقَشَ (nāqaša)\n# يُنَاقَشَا (yunāqašā) /ju.naː.qa.ʃaː/: third-person masculine dual non-past passive subjunctive/jussive of نَاقَشَ (nāqaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yunāqišā", "nāqaša", "yunāqašā"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "نوقشا",
-        "u": "نوقشا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوقِشَا • (nūqišā) (form III) /nuː.qi.ʃaː/\n# third-person masculine dual past passive of نَاقَشَ (nāqaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nūqišā", "nāqaša"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "يناقشان",
-        "u": "يناقشان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يناقشان (form III)\n# يُنَاقِشَانِ (yunāqišāni) /ju.naː.qi.ʃaː.ni/: third-person masculine dual non-past active indicative of نَاقَشَ (nāqaša)\n# يُنَاقَشَانِ (yunāqašāni) /ju.naː.qa.ʃaː.ni/: third-person masculine dual non-past passive indicative of نَاقَشَ (nāqaša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yunāqišāni", "nāqaša", "yunāqašāni"],
-        "k": "ناقش",
-        "yol": "kök"
-      },
-      {
-        "w": "تناقشان",
-        "u": "تناقشان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تناقشان (form III)\n# تُنَاقِشَانِ (tunāqišāni) /tu.naː.qi.ʃaː.ni/: inflection of نَاقَشَ (nāqaša):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُنَاقَشَانِ (tunāqašāni) /tu.naː.qa.ʃaː.ni/: inflection of نَاقَشَ (nāqaša):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tunāqišāni", "nāqaša", "tunāqašāni"],
-        "k": "ناقش",
-        "yol": "kök"
-      }
-    ],
-    "tercume": {}
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "نق",
+  "ses": {
     "harf": "ن",
+    "fasil": "نق",
     "mahrec": "zelakiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "يناقش",
+      "tur": "verb",
+      "baslik": "يناقش (form III)\n# يُنَاقِشُ (yunāqišu) /ju.naː.qi.ʃu/: third-person masculine singular non-past active indicative of نَاقَشَ (nāqaša)\n# يُنَاقَشُ (yunāqašu) /ju.naː.qa.ʃu/: third-person masculine singular non-past passive indicative of نَاقَشَ (nāqaša)\n# يُنَاقِشَ (yunāqiša) /ju.naː.qi.ʃa/: third-person masculine singular non-past active subjunctive of نَاقَشَ (nāqaša)\n# يُنَاقَشَ (yunāqaša) /ju.",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yunāqišu", "nāqaša", "yunāqašu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نوقش",
+      "tur": "verb",
+      "baslik": "نُوقِشَ • (nūqiša) (form III) /nuː.qi.ʃa/\n# third-person masculine singular past passive of نَاقَشَ (nāqaša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūqiša", "nāqaša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناقشت",
+      "tur": "verb",
+      "baslik": "ناقشت (form III)\n# نَاقَشْتُ (nāqaštu) /naː.qaʃ.tu/: first-person singular past active of نَاقَشَ (nāqaša)\n# نَاقَشْتَ (nāqašta) /naː.qaʃ.ta/: second-person masculine singular past active of نَاقَشَ (nāqaša)\n# نَاقَشْتِ (nāqašti) /naː.qaʃ.ti/: second-person feminine singular past active of نَاقَشَ (nāqaša)\n# نَاقَشَتْ (nāqašat) /naː.qa.ʃat/: third-person feminine singular past active of نَاقَشَ (n",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nāqaštu", "nāqaša", "nāqašta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تناقش",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تناقش (form III)\n# تُنَاقِشُ (tunāqišu) /tu.naː.qi.ʃu/: inflection of نَاقَشَ (nāqaša):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُنَاقَشُ (tunāqašu) /tu.naː.qa.ʃu/: inflection of نَاقَشَ (nāqaša):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive in",
+      "etim_sablon": [
+        ["nonlemma", "See the etymology of the corresponding lemma form."]
+      ],
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunāqišu", "nāqaša", "tunāqašu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نوقشت",
+      "tur": "verb",
+      "baslik": "نوقشت (form III)\n# نُوقِشْتُ (nūqištu) /nuː.qiʃ.tu/: first-person singular past passive of نَاقَشَ (nāqaša)\n# نُوقِشْتَ (nūqišta) /nuː.qiʃ.ta/: second-person masculine singular past passive of نَاقَشَ (nāqaša)\n# نُوقِشْتِ (nūqišti) /nuː.qiʃ.ti/: second-person feminine singular past passive of نَاقَشَ (nāqaša)\n# نُوقِشَتْ (nūqišat) /nuː.qi.ʃat/: third-person feminine singular past passive of نَاقَش",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūqištu", "nāqaša", "nūqišta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تناقشين",
+      "tur": "verb",
+      "baslik": "تناقشين (form III)\n# تُنَاقِشِينَ (tunāqišīna) /tu.naː.qi.ʃiː.na/: second-person feminine singular non-past active indicative of نَاقَشَ (nāqaša)\n# تُنَاقَشِينَ (tunāqašīna) /tu.naː.qa.ʃiː.na/: second-person feminine singular non-past passive indicative of نَاقَشَ (nāqaša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunāqišīna", "nāqaša", "tunāqašīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تناقشي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تناقشي (form III)\n# تُنَاقِشِي (tunāqišī) /tu.naː.qi.ʃiː/: second-person feminine singular non-past active subjunctive/jussive of نَاقَشَ (nāqaša)\n# تُنَاقَشِي (tunāqašī) /tu.naː.qa.ʃiː/: second-person feminine singular non-past passive subjunctive/jussive of نَاقَشَ (nāqaša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunāqišī", "nāqaša", "tunāqašī"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناقشي",
+      "tur": "verb",
+      "baslik": "نَاقِشِي • (nāqišī) (form III) /naː.qi.ʃiː/\n# second-person feminine singular imperative of نَاقَشَ (nāqaša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nāqišī", "nāqaša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أناقش",
+      "tur": "verb",
+      "baslik": "أناقش (form III)\n# أُنَاقِشُ (ʔunāqišu) /ʔu.naː.qi.ʃu/: first-person singular non-past active indicative of نَاقَشَ (nāqaša)\n# أُنَاقَشُ (ʔunāqašu) /ʔu.naː.qa.ʃu/: first-person singular non-past passive indicative of نَاقَشَ (nāqaša)\n# أُنَاقِشَ (ʔunāqiša) /ʔu.naː.qi.ʃa/: first-person singular non-past active subjunctive of نَاقَشَ (nāqaša)\n# أُنَاقَشَ (ʔunāqaša) /ʔu.naː.qa.ʃa/: first-person singu",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔunāqišu", "nāqaša", "ʔunāqašu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناقشنا",
+      "tur": "verb",
+      "baslik": "نَاقَشْنَا • (nāqašnā) (form III) /naː.qaʃ.naː/\n# first-person plural past active of نَاقَشَ (nāqaša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nāqašnā", "nāqaša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نناقش",
+      "tur": "verb",
+      "baslik": "نناقش (form III)\n# نُنَاقِشُ (nunāqišu) /nu.naː.qi.ʃu/: first-person plural non-past active indicative of نَاقَشَ (nāqaša)\n# نُنَاقَشُ (nunāqašu) /nu.naː.qa.ʃu/: first-person plural non-past passive indicative of نَاقَشَ (nāqaša)\n# نُنَاقِشَ (nunāqiša) /nu.naː.qi.ʃa/: first-person plural non-past active subjunctive of نَاقَشَ (nāqaša)\n# نُنَاقَشَ (nunāqaša) /nu.naː.qa.ʃa/: first-person plural non-",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nunāqišu", "nāqaša", "nunāqašu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نوقشنا",
+      "tur": "verb",
+      "baslik": "نُوقِشْنَا • (nūqišnā) (form III) /nuː.qiʃ.naː/\n# first-person plural past passive of نَاقَشَ (nāqaša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūqišnā", "nāqaša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناقشتم",
+      "tur": "verb",
+      "baslik": "نَاقَشْتُمْ • (nāqaštum) (form III) /naː.qaʃ.tum/\n# second-person masculine plural past active of نَاقَشَ (nāqaša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nāqaštum", "nāqaša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تناقشون",
+      "tur": "verb",
+      "baslik": "تناقشون (form III)\n# تُنَاقِشُونَ (tunāqišūna) /tu.naː.qi.ʃuː.na/: second-person masculine plural non-past active indicative of نَاقَشَ (nāqaša)\n# تُنَاقَشُونَ (tunāqašūna) /tu.naː.qa.ʃuː.na/: second-person masculine plural non-past passive indicative of نَاقَشَ (nāqaša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunāqišūna", "nāqaša", "tunāqašūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تناقشوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تناقشوا (form III)\n# تُنَاقِشُوا (tunāqišū) /tu.naː.qi.ʃuː/: second-person masculine plural non-past active subjunctive/jussive of نَاقَشَ (nāqaša)\n# تُنَاقَشُوا (tunāqašū) /tu.naː.qa.ʃuː/: second-person masculine plural non-past passive subjunctive/jussive of نَاقَشَ (nāqaša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunāqišū", "nāqaša", "tunāqašū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نوقشتم",
+      "tur": "verb",
+      "baslik": "نُوقِشْتُمْ • (nūqištum) (form III) /nuː.qiʃ.tum/\n# second-person masculine plural past passive of نَاقَشَ (nāqaša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūqištum", "nāqaša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناقشوا",
+      "tur": "verb",
+      "baslik": "ناقشوا (form III)\n# نَاقَشُوا (nāqašū) /naː.qa.ʃuː/: third-person masculine plural past active of نَاقَشَ (nāqaša)\n# نَاقِشُوا (nāqišū) /naː.qi.ʃuː/: second-person masculine plural imperative of نَاقَشَ (nāqaša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nāqašū", "nāqaša", "nāqišū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يناقشون",
+      "tur": "verb",
+      "baslik": "يناقشون (form III)\n# يُنَاقِشُونَ (yunāqišūna) /ju.naː.qi.ʃuː.na/: third-person masculine plural non-past active indicative of نَاقَشَ (nāqaša)\n# يُنَاقَشُونَ (yunāqašūna) /ju.naː.qa.ʃuː.na/: third-person masculine plural non-past passive indicative of نَاقَشَ (nāqaša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yunāqišūna", "nāqaša", "yunāqašūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يناقشوا",
+      "tur": "verb",
+      "baslik": "يناقشوا (form III)\n# يُنَاقِشُوا (yunāqišū) /ju.naː.qi.ʃuː/: third-person masculine plural non-past active subjunctive/jussive of نَاقَشَ (nāqaša)\n# يُنَاقَشُوا (yunāqašū) /ju.naː.qa.ʃuː/: third-person masculine plural non-past passive subjunctive/jussive of نَاقَشَ (nāqaša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yunāqišū", "nāqaša", "yunāqašū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نوقشوا",
+      "tur": "verb",
+      "baslik": "نُوقِشُوا • (nūqišū) (form III) /nuː.qi.ʃuː/\n# third-person masculine plural past passive of نَاقَشَ (nāqaša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūqišū", "nāqaša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناقشتن",
+      "tur": "verb",
+      "baslik": "نَاقَشْتُنَّ • (nāqaštunna) (form III) /naː.qaʃ.tun.na/\n# second-person feminine plural past active of نَاقَشَ (nāqaša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nāqaštunna", "nāqaša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تناقشن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تناقشن (form III)\n# تُنَاقِشْنَ (tunāqišna) /tu.naː.qiʃ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of نَاقَشَ (nāqaša)\n# تُنَاقَشْنَ (tunāqašna) /tu.naː.qaʃ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of نَاقَشَ (nāqaša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunāqišna", "nāqaša", "tunāqašna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناقشن",
+      "tur": "verb",
+      "baslik": "ناقشن (form III)\n# نَاقَشْنَ (nāqašna) /naː.qaʃ.na/: third-person feminine plural past active of نَاقَشَ (nāqaša)\n# نَاقِشْنَ (nāqišna) /naː.qiʃ.na/: second-person feminine plural imperative of نَاقَشَ (nāqaša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nāqašna", "nāqaša", "nāqišna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نوقشتن",
+      "tur": "verb",
+      "baslik": "نُوقِشْتُنَّ • (nūqištunna) (form III) /nuː.qiʃ.tun.na/\n# second-person feminine plural past passive of نَاقَشَ (nāqaša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūqištunna", "nāqaša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يناقشن",
+      "tur": "verb",
+      "baslik": "يناقشن (form III)\n# يُنَاقِشْنَ (yunāqišna) /ju.naː.qiʃ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of نَاقَشَ (nāqaša)\n# يُنَاقَشْنَ (yunāqašna) /ju.naː.qaʃ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of نَاقَشَ (nāqaša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yunāqišna", "nāqaša", "yunāqašna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نوقشن",
+      "tur": "verb",
+      "baslik": "نُوقِشْنَ • (nūqišna) (form III) /nuː.qiʃ.na/\n# third-person feminine plural past passive of نَاقَشَ (nāqaša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūqišna", "nāqaša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تناقشا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تناقشا (form III)\n# تُنَاقِشَا (tunāqišā) /tu.naː.qi.ʃaː/: inflection of نَاقَشَ (nāqaša):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُنَاقَشَا (tunāqašā) /tu.naː.qa.ʃaː/: inflection of نَاقَشَ (nāqaša):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjun",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunāqišā", "nāqaša", "tunāqašā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناقشتما",
+      "tur": "verb",
+      "baslik": "نَاقَشْتُمَا • (nāqaštumā) (form III) /naː.qaʃ.tu.maː/\n# second-person dual past active of نَاقَشَ (nāqaša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nāqaštumā", "nāqaša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناقشا",
+      "tur": "verb",
+      "baslik": "ناقشا (form III)\n# نَاقَشَا (nāqašā) /naː.qa.ʃaː/: third-person masculine dual past active of نَاقَشَ (nāqaša)\n# نَاقِشَا (nāqišā) /naː.qi.ʃaː/: second-person dual imperative of نَاقَشَ (nāqaša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nāqašā", "nāqaša", "nāqišā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ناقشتا",
+      "tur": "verb",
+      "baslik": "نَاقَشَتَا • (nāqašatā) (form III) /naː.qa.ʃa.taː/\n# third-person feminine dual past active of نَاقَشَ (nāqaša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nāqašatā", "nāqaša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نوقشتما",
+      "tur": "verb",
+      "baslik": "نُوقِشْتُمَا • (nūqištumā) (form III) /nuː.qiʃ.tu.maː/\n# second-person dual past passive of نَاقَشَ (nāqaša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūqištumā", "nāqaša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نوقشتا",
+      "tur": "verb",
+      "baslik": "نُوقِشَتَا • (nūqišatā) (form III) /nuː.qi.ʃa.taː/\n# third-person feminine dual past passive of نَاقَشَ (nāqaša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūqišatā", "nāqaša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يناقشا",
+      "tur": "verb",
+      "baslik": "يناقشا (form III)\n# يُنَاقِشَا (yunāqišā) /ju.naː.qi.ʃaː/: third-person masculine dual non-past active subjunctive/jussive of نَاقَشَ (nāqaša)\n# يُنَاقَشَا (yunāqašā) /ju.naː.qa.ʃaː/: third-person masculine dual non-past passive subjunctive/jussive of نَاقَشَ (nāqaša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yunāqišā", "nāqaša", "yunāqašā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نوقشا",
+      "tur": "verb",
+      "baslik": "نُوقِشَا • (nūqišā) (form III) /nuː.qi.ʃaː/\n# third-person masculine dual past passive of نَاقَشَ (nāqaša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nūqišā", "nāqaša"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يناقشان",
+      "tur": "verb",
+      "baslik": "يناقشان (form III)\n# يُنَاقِشَانِ (yunāqišāni) /ju.naː.qi.ʃaː.ni/: third-person masculine dual non-past active indicative of نَاقَشَ (nāqaša)\n# يُنَاقَشَانِ (yunāqašāni) /ju.naː.qa.ʃaː.ni/: third-person masculine dual non-past passive indicative of نَاقَشَ (nāqaša)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yunāqišāni", "nāqaša", "yunāqašāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تناقشان",
+      "tur": "verb",
+      "baslik": "تناقشان (form III)\n# تُنَاقِشَانِ (tunāqišāni) /tu.naː.qi.ʃaː.ni/: inflection of نَاقَشَ (nāqaša):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُنَاقَشَانِ (tunāqašāni) /tu.naː.qa.ʃaː.ni/: inflection of نَاقَشَ (nāqaša):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tunāqišāni", "nāqaša", "tunāqašāni"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ناقش", "r6"]
+  ],
+  "mana": {
     "ince": "talk.v.02",
     "orta": "verb.communication",
     "ust": "söz ve haber",
@@ -476,22 +336,15 @@
     "dayanak_tanim": "speak with others about (something); talk (something) over in detail; have a discussion",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["talk_of.v.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["talk_of.v.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,626 +1,491 @@
 {
   "kok": "ءطاق",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءطاق", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "نطق",
-        "u": "نطق",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "نطق (form IV)\n# نُطِقْ (nuṭiq) /nu.tˤiq/: first-person plural non-past active jussive of أَطَاقَ (ʔaṭāqa)\n# نُطَقْ (nuṭaq) /nu.tˤaq/: first-person plural non-past passive jussive of أَطَاقَ (ʔaṭāqa)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuṭiq", "ʔaṭāqa", "nuṭaq"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "نطاق",
-        "u": "نطاق",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نطاق (form IV)\n# نُطَاقُ (nuṭāqu) /nu.tˤaː.qu/: first-person plural non-past passive indicative of أَطَاقَ (ʔaṭāqa)\n# نُطَاقَ (nuṭāqa) /nu.tˤaː.qa/: first-person plural non-past passive subjunctive of أَطَاقَ (ʔaṭāqa)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuṭāqu", "ʔaṭāqa", "nuṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أطاقت",
-        "u": "أطاقت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَطَاقَتْ • (ʔaṭāqat) (form IV) /ʔa.tˤaː.qat/\n# third-person feminine singular past active of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaṭāqat", "ʔaṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أطقتما",
-        "u": "أطقتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أطقتما (form IV)\n# أَطَقْتُمَا (ʔaṭaqtumā) /ʔa.tˤaq.tu.maː/: second-person dual past active of أَطَاقَ (ʔaṭāqa)\n# أُطِقْتُمَا (ʔuṭiqtumā) /ʔu.tˤiq.tu.maː/: second-person dual past passive of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaṭaqtumā", "ʔaṭāqa", "ʔuṭiqtumā"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أطقت",
-        "u": "أطقت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أطقت (form IV)\n# أَطَقْتُ (ʔaṭaqtu) /ʔa.tˤaq.tu/: first-person singular past active of أَطَاقَ (ʔaṭāqa)\n# أَطَقْتَ (ʔaṭaqta) /ʔa.tˤaq.ta/: second-person masculine singular past active of أَطَاقَ (ʔaṭāqa)\n# أَطَقْتِ (ʔaṭaqti) /ʔa.tˤaq.ti/: second-person feminine singular past active of أَطَاقَ (ʔaṭāqa)\n# أُطِقْتُ (ʔuṭiqtu) /ʔu.tˤiq.tu/: first-person singular past passive of أَطَاقَ (ʔaṭāqa)\n# أُطِق",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaṭaqtu", "ʔaṭāqa", "ʔaṭaqta"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أطاقا",
-        "u": "أطاقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَطَاقَا • (ʔaṭāqā) (form IV) /ʔa.tˤaː.qaː/\n# third-person masculine dual past active of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaṭāqā", "ʔaṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أطاقتا",
-        "u": "أطاقتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَطَاقَتَا • (ʔaṭāqatā) (form IV) /ʔa.tˤaː.qa.taː/\n# third-person feminine dual past active of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaṭāqatā", "ʔaṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أطقتم",
-        "u": "أطقتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أطقتم (form IV)\n# أَطَقْتُمْ (ʔaṭaqtum) /ʔa.tˤaq.tum/: second-person masculine plural past active of أَطَاقَ (ʔaṭāqa)\n# أُطِقْتُمْ (ʔuṭiqtum) /ʔu.tˤiq.tum/: second-person masculine plural past passive of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaṭaqtum", "ʔaṭāqa", "ʔuṭiqtum"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أطقتن",
-        "u": "أطقتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أطقتن (form IV)\n# أَطَقْتُنَّ (ʔaṭaqtunna) /ʔa.tˤaq.tun.na/: second-person feminine plural past active of أَطَاقَ (ʔaṭāqa)\n# أُطِقْتُنَّ (ʔuṭiqtunna) /ʔu.tˤiq.tun.na/: second-person feminine plural past passive of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaṭaqtunna", "ʔaṭāqa", "ʔuṭiqtunna"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أطاقوا",
-        "u": "أطاقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَطَاقُوا • (ʔaṭāqū) (form IV) /ʔa.tˤaː.quː/\n# third-person masculine plural past active of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaṭāqū", "ʔaṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أطقنا",
-        "u": "أطقنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أطقنا (form IV)\n# أَطَقْنَا (ʔaṭaqnā) /ʔa.tˤaq.naː/: first-person plural past active of أَطَاقَ (ʔaṭāqa)\n# أُطِقْنَا (ʔuṭiqnā) /ʔu.tˤiq.naː/: first-person plural past passive of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaṭaqnā", "ʔaṭāqa", "ʔuṭiqnā"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أطقن",
-        "u": "أطقن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أطقن (form IV)\n# أَطَقْنَ (ʔaṭaqna) /ʔa.tˤaq.na/: third-person feminine plural past active of أَطَاقَ (ʔaṭāqa)\n# أُطِقْنَ (ʔuṭiqna) /ʔu.tˤiq.na/: third-person feminine plural past passive of أَطَاقَ (ʔaṭāqa)\n# أَطِقْنَ (ʔaṭiqna) /ʔa.tˤiq.na/: second-person feminine plural imperative of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaṭaqna", "ʔaṭāqa", "ʔuṭiqna"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أطيقتا",
-        "u": "أطيقتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُطِيقَتَا • (ʔuṭīqatā) (form IV) /ʔu.tˤiː.qa.taː/\n# third-person feminine dual past passive of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuṭīqatā", "ʔaṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أطيق",
-        "u": "أطيق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أطيق (form IV)\n# أُطِيقَ (ʔuṭīqa) /ʔu.tˤiː.qa/: inflection of أَطَاقَ (ʔaṭāqa):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُطِيقُ (ʔuṭīqu) /ʔu.tˤiː.qu/: first-person singular non-past active indicative of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuṭīqa", "ʔaṭāqa", "ʔuṭīqu"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أطيقا",
-        "u": "أطيقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أطيقا (form IV)\n# أُطِيقَا (ʔuṭīqā) /ʔu.tˤiː.qaː/: third-person masculine dual past passive of أَطَاقَ (ʔaṭāqa)\n# أَطِيقَا (ʔaṭīqā) /ʔa.tˤiː.qaː/: second-person dual imperative of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuṭīqā", "ʔaṭāqa", "ʔaṭīqā"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيق",
-        "u": "تطيق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطيق (form IV)\n# تُطِيقُ (tuṭīqu) /tu.tˤiː.qu/: inflection of أَطَاقَ (ʔaṭāqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُطِيقَ (tuṭīqa) /tu.tˤiː.qa/: inflection of أَطَاقَ (ʔaṭāqa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuṭīqu", "ʔaṭāqa", "tuṭīqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أطيقت",
-        "u": "أطيقت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُطِيقَتْ • (ʔuṭīqat) (form IV) /ʔu.tˤiː.qat/\n# third-person feminine singular past passive of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuṭīqat", "ʔaṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيقين",
-        "u": "تطيقين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُطِيقِينَ • (tuṭīqīna) (form IV) /tu.tˤiː.qiː.na/\n# second-person feminine singular non-past active indicative of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuṭīqīna", "ʔaṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أطيقوا",
-        "u": "أطيقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أطيقوا (form IV)\n# أُطِيقُوا (ʔuṭīqū) /ʔu.tˤiː.quː/: third-person masculine plural past passive of أَطَاقَ (ʔaṭāqa)\n# أَطِيقُوا (ʔaṭīqū) /ʔa.tˤiː.quː/: second-person masculine plural imperative of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuṭīqū", "ʔaṭāqa", "ʔaṭīqū"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطيق",
-        "u": "يطيق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطيق (form IV)\n# يُطِيقُ (yuṭīqu) /ju.tˤiː.qu/: third-person masculine singular non-past active indicative of أَطَاقَ (ʔaṭāqa)\n# يُطِيقَ (yuṭīqa) /ju.tˤiː.qa/: third-person masculine singular non-past active subjunctive of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuṭīqu", "ʔaṭāqa", "yuṭīqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيقان",
-        "u": "تطيقان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُطِيقَانِ • (tuṭīqāni) (form IV) /tu.tˤiː.qaː.ni/\n# inflection of أَطَاقَ (ʔaṭāqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuṭīqāni", "ʔaṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطيقان",
-        "u": "يطيقان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُطِيقَانِ • (yuṭīqāni) (form IV) /ju.tˤiː.qaː.ni/\n# third-person masculine dual non-past active indicative of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuṭīqāni", "ʔaṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيقون",
-        "u": "تطيقون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُطِيقُونَ • (tuṭīqūna) (form IV) /tu.tˤiː.quː.na/\n# second-person masculine plural non-past active indicative of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuṭīqūna", "ʔaṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "نطيق",
-        "u": "نطيق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نطيق (form IV)\n# نُطِيقُ (nuṭīqu) /nu.tˤiː.qu/: first-person plural non-past active indicative of أَطَاقَ (ʔaṭāqa)\n# نُطِيقَ (nuṭīqa) /nu.tˤiː.qa/: first-person plural non-past active subjunctive of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuṭīqu", "ʔaṭāqa", "nuṭīqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطيقون",
-        "u": "يطيقون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُطِيقُونَ • (yuṭīqūna) (form IV) /ju.tˤiː.quː.na/\n# third-person masculine plural non-past active indicative of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuṭīqūna", "ʔaṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطقن",
-        "u": "تطقن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تطقن (form IV)\n# تُطِقْنَ (tuṭiqna) /tu.tˤiq.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَطَاقَ (ʔaṭāqa)\n# تُطَقْنَ (tuṭaqna) /tu.tˤaq.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuṭiqna", "ʔaṭāqa", "tuṭaqna"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطقن",
-        "u": "يطقن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يطقن (form IV)\n# يُطِقْنَ (yuṭiqna) /ju.tˤiq.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَطَاقَ (ʔaṭāqa)\n# يُطَقْنَ (yuṭaqna) /ju.tˤaq.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuṭiqna", "ʔaṭāqa", "yuṭaqna"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطاق",
-        "u": "يطاق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يطاق (form IV)\n# يُطَاقُ (yuṭāqu) /ju.tˤaː.qu/: third-person masculine singular non-past passive indicative of أَطَاقَ (ʔaṭāqa)\n# يُطَاقَ (yuṭāqa) /ju.tˤaː.qa/: third-person masculine singular non-past passive subjunctive of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuṭāqu", "ʔaṭāqa", "yuṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطاقان",
-        "u": "تطاقان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُطَاقَانِ • (tuṭāqāni) (form IV) /tu.tˤaː.qaː.ni/\n# inflection of أَطَاقَ (ʔaṭāqa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuṭāqāni", "ʔaṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطاق",
-        "u": "تطاق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تطاق (form IV)\n# تُطَاقُ (tuṭāqu) /tu.tˤaː.qu/: inflection of أَطَاقَ (ʔaṭāqa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُطَاقَ (tuṭāqa) /tu.tˤaː.qa/: inflection of أَطَاقَ (ʔaṭāqa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuṭāqu", "ʔaṭāqa", "tuṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطاقون",
-        "u": "يطاقون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُطَاقُونَ • (yuṭāqūna) (form IV) /ju.tˤaː.quː.na/\n# third-person masculine plural non-past passive indicative of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuṭāqūna", "ʔaṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطاقان",
-        "u": "يطاقان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُطَاقَانِ • (yuṭāqāni) (form IV) /ju.tˤaː.qaː.ni/\n# third-person masculine dual non-past passive indicative of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuṭāqāni", "ʔaṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطاقون",
-        "u": "تطاقون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُطَاقُونَ • (tuṭāqūna) (form IV) /tu.tˤaː.quː.na/\n# second-person masculine plural non-past passive indicative of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuṭāqūna", "ʔaṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطيقا",
-        "u": "يطيقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُطِيقَا • (yuṭīqā) (form IV) /ju.tˤiː.qaː/\n# third-person masculine dual non-past active subjunctive/jussive of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuṭīqā", "ʔaṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيقا",
-        "u": "تطيقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُطِيقَا • (tuṭīqā) (form IV) /tu.tˤiː.qaː/\n# inflection of أَطَاقَ (ʔaṭāqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuṭīqā", "ʔaṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيقوا",
-        "u": "تطيقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُطِيقُوا • (tuṭīqū) (form IV) /tu.tˤiː.quː/\n# second-person masculine plural non-past active subjunctive/jussive of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuṭīqū", "ʔaṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيقي",
-        "u": "تطيقي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُطِيقِي • (tuṭīqī) (form IV) /tu.tˤiː.qiː/\n# second-person feminine singular non-past active subjunctive/jussive of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuṭīqī", "ʔaṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطاقين",
-        "u": "تطاقين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُطَاقِينَ • (tuṭāqīna) (form IV) /tu.tˤaː.qiː.na/\n# second-person feminine singular non-past passive indicative of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuṭāqīna", "ʔaṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطيقوا",
-        "u": "يطيقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُطِيقُوا • (yuṭīqū) (form IV) /ju.tˤiː.quː/\n# third-person masculine plural non-past active subjunctive/jussive of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuṭīqū", "ʔaṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطاقي",
-        "u": "تطاقي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُطَاقِي • (tuṭāqī) (form IV) /tu.tˤaː.qiː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuṭāqī", "ʔaṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطاقا",
-        "u": "تطاقا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُطَاقَا • (tuṭāqā) (form IV) /tu.tˤaː.qaː/\n# inflection of أَطَاقَ (ʔaṭāqa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuṭāqā", "ʔaṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطاقوا",
-        "u": "تطاقوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُطَاقُوا • (tuṭāqū) (form IV) /tu.tˤaː.quː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuṭāqū", "ʔaṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطاقا",
-        "u": "يطاقا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُطَاقَا • (yuṭāqā) (form IV) /ju.tˤaː.qaː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuṭāqā", "ʔaṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطاقوا",
-        "u": "يطاقوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُطَاقُوا • (yuṭāqū) (form IV) /ju.tˤaː.quː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuṭāqū", "ʔaṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطق",
-        "u": "تطق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تطق (form IV)\n# تُطِقْ (tuṭiq) /tu.tˤiq/: inflection of أَطَاقَ (ʔaṭāqa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُطَقْ (tuṭaq) /tu.tˤaq/: inflection of أَطَاقَ (ʔaṭāqa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuṭiq", "ʔaṭāqa", "tuṭaq"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أطق",
-        "u": "أطق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أطق (form IV)\n# أُطِقْ (ʔuṭiq) /ʔu.tˤiq/: first-person singular non-past active jussive of أَطَاقَ (ʔaṭāqa)\n# أُطَقْ (ʔuṭaq) /ʔu.tˤaq/: first-person singular non-past passive jussive of أَطَاقَ (ʔaṭāqa)\n# أَطِقْ (ʔaṭiq) /ʔa.tˤiq/: second-person masculine singular imperative of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuṭiq", "ʔaṭāqa", "ʔuṭaq"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أطيقي",
-        "u": "أطيقي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَطِيقِي • (ʔaṭīqī) (form IV) /ʔa.tˤiː.qiː/\n# second-person feminine singular imperative of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaṭīqī", "ʔaṭāqa"],
-        "k": "أطاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطق",
-        "u": "يطق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يطق (form IV)\n# يُطِقْ (yuṭiq) /ju.tˤiq/: third-person masculine singular non-past active jussive of أَطَاقَ (ʔaṭāqa)\n# يُطَقْ (yuṭaq) /ju.tˤaq/: third-person masculine singular non-past passive jussive of أَطَاقَ (ʔaṭāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuṭiq", "ʔaṭāqa", "yuṭaq"],
-        "k": "أطاق",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "طق",
+  "ses": {
     "harf": "ء",
+    "fasil": "طق",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "نطق",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "نطق (form IV)\n# نُطِقْ (nuṭiq) /nu.tˤiq/: first-person plural non-past active jussive of أَطَاقَ (ʔaṭāqa)\n# نُطَقْ (nuṭaq) /nu.tˤaq/: first-person plural non-past passive jussive of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuṭiq", "ʔaṭāqa", "nuṭaq"],
+      "kok_yazilis": "أطاق"
+    },
+    {
+      "madde": "نطاق",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نطاق (form IV)\n# نُطَاقُ (nuṭāqu) /nu.tˤaː.qu/: first-person plural non-past passive indicative of أَطَاقَ (ʔaṭāqa)\n# نُطَاقَ (nuṭāqa) /nu.tˤaː.qa/: first-person plural non-past passive subjunctive of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuṭāqu", "ʔaṭāqa", "nuṭāqa"],
+      "kok_yazilis": "أطاق"
+    },
+    {
+      "madde": "أطاقت",
+      "tur": "verb",
+      "baslik": "أَطَاقَتْ • (ʔaṭāqat) (form IV) /ʔa.tˤaː.qat/\n# third-person feminine singular past active of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaṭāqat", "ʔaṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أطقتما",
+      "tur": "verb",
+      "baslik": "أطقتما (form IV)\n# أَطَقْتُمَا (ʔaṭaqtumā) /ʔa.tˤaq.tu.maː/: second-person dual past active of أَطَاقَ (ʔaṭāqa)\n# أُطِقْتُمَا (ʔuṭiqtumā) /ʔu.tˤiq.tu.maː/: second-person dual past passive of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaṭaqtumā", "ʔaṭāqa", "ʔuṭiqtumā"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أطقت",
+      "tur": "verb",
+      "baslik": "أطقت (form IV)\n# أَطَقْتُ (ʔaṭaqtu) /ʔa.tˤaq.tu/: first-person singular past active of أَطَاقَ (ʔaṭāqa)\n# أَطَقْتَ (ʔaṭaqta) /ʔa.tˤaq.ta/: second-person masculine singular past active of أَطَاقَ (ʔaṭāqa)\n# أَطَقْتِ (ʔaṭaqti) /ʔa.tˤaq.ti/: second-person feminine singular past active of أَطَاقَ (ʔaṭāqa)\n# أُطِقْتُ (ʔuṭiqtu) /ʔu.tˤiq.tu/: first-person singular past passive of أَطَاقَ (ʔaṭāqa)\n# أُطِق",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaṭaqtu", "ʔaṭāqa", "ʔaṭaqta"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أطاقا",
+      "tur": "verb",
+      "baslik": "أَطَاقَا • (ʔaṭāqā) (form IV) /ʔa.tˤaː.qaː/\n# third-person masculine dual past active of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaṭāqā", "ʔaṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أطاقتا",
+      "tur": "verb",
+      "baslik": "أَطَاقَتَا • (ʔaṭāqatā) (form IV) /ʔa.tˤaː.qa.taː/\n# third-person feminine dual past active of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaṭāqatā", "ʔaṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أطقتم",
+      "tur": "verb",
+      "baslik": "أطقتم (form IV)\n# أَطَقْتُمْ (ʔaṭaqtum) /ʔa.tˤaq.tum/: second-person masculine plural past active of أَطَاقَ (ʔaṭāqa)\n# أُطِقْتُمْ (ʔuṭiqtum) /ʔu.tˤiq.tum/: second-person masculine plural past passive of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaṭaqtum", "ʔaṭāqa", "ʔuṭiqtum"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أطقتن",
+      "tur": "verb",
+      "baslik": "أطقتن (form IV)\n# أَطَقْتُنَّ (ʔaṭaqtunna) /ʔa.tˤaq.tun.na/: second-person feminine plural past active of أَطَاقَ (ʔaṭāqa)\n# أُطِقْتُنَّ (ʔuṭiqtunna) /ʔu.tˤiq.tun.na/: second-person feminine plural past passive of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaṭaqtunna", "ʔaṭāqa", "ʔuṭiqtunna"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أطاقوا",
+      "tur": "verb",
+      "baslik": "أَطَاقُوا • (ʔaṭāqū) (form IV) /ʔa.tˤaː.quː/\n# third-person masculine plural past active of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaṭāqū", "ʔaṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أطقنا",
+      "tur": "verb",
+      "baslik": "أطقنا (form IV)\n# أَطَقْنَا (ʔaṭaqnā) /ʔa.tˤaq.naː/: first-person plural past active of أَطَاقَ (ʔaṭāqa)\n# أُطِقْنَا (ʔuṭiqnā) /ʔu.tˤiq.naː/: first-person plural past passive of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaṭaqnā", "ʔaṭāqa", "ʔuṭiqnā"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أطقن",
+      "tur": "verb",
+      "baslik": "أطقن (form IV)\n# أَطَقْنَ (ʔaṭaqna) /ʔa.tˤaq.na/: third-person feminine plural past active of أَطَاقَ (ʔaṭāqa)\n# أُطِقْنَ (ʔuṭiqna) /ʔu.tˤiq.na/: third-person feminine plural past passive of أَطَاقَ (ʔaṭāqa)\n# أَطِقْنَ (ʔaṭiqna) /ʔa.tˤiq.na/: second-person feminine plural imperative of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaṭaqna", "ʔaṭāqa", "ʔuṭiqna"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أطيقتا",
+      "tur": "verb",
+      "baslik": "أُطِيقَتَا • (ʔuṭīqatā) (form IV) /ʔu.tˤiː.qa.taː/\n# third-person feminine dual past passive of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuṭīqatā", "ʔaṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أطيق",
+      "tur": "verb",
+      "baslik": "أطيق (form IV)\n# أُطِيقَ (ʔuṭīqa) /ʔu.tˤiː.qa/: inflection of أَطَاقَ (ʔaṭāqa):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُطِيقُ (ʔuṭīqu) /ʔu.tˤiː.qu/: first-person singular non-past active indicative of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuṭīqa", "ʔaṭāqa", "ʔuṭīqu"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أطيقا",
+      "tur": "verb",
+      "baslik": "أطيقا (form IV)\n# أُطِيقَا (ʔuṭīqā) /ʔu.tˤiː.qaː/: third-person masculine dual past passive of أَطَاقَ (ʔaṭāqa)\n# أَطِيقَا (ʔaṭīqā) /ʔa.tˤiː.qaː/: second-person dual imperative of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuṭīqā", "ʔaṭāqa", "ʔaṭīqā"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطيق",
+      "tur": "verb",
+      "baslik": "تطيق (form IV)\n# تُطِيقُ (tuṭīqu) /tu.tˤiː.qu/: inflection of أَطَاقَ (ʔaṭāqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُطِيقَ (tuṭīqa) /tu.tˤiː.qa/: inflection of أَطَاقَ (ʔaṭāqa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuṭīqu", "ʔaṭāqa", "tuṭīqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أطيقت",
+      "tur": "verb",
+      "baslik": "أُطِيقَتْ • (ʔuṭīqat) (form IV) /ʔu.tˤiː.qat/\n# third-person feminine singular past passive of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuṭīqat", "ʔaṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطيقين",
+      "tur": "verb",
+      "baslik": "تُطِيقِينَ • (tuṭīqīna) (form IV) /tu.tˤiː.qiː.na/\n# second-person feminine singular non-past active indicative of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuṭīqīna", "ʔaṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أطيقوا",
+      "tur": "verb",
+      "baslik": "أطيقوا (form IV)\n# أُطِيقُوا (ʔuṭīqū) /ʔu.tˤiː.quː/: third-person masculine plural past passive of أَطَاقَ (ʔaṭāqa)\n# أَطِيقُوا (ʔaṭīqū) /ʔa.tˤiː.quː/: second-person masculine plural imperative of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuṭīqū", "ʔaṭāqa", "ʔaṭīqū"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطيق",
+      "tur": "verb",
+      "baslik": "يطيق (form IV)\n# يُطِيقُ (yuṭīqu) /ju.tˤiː.qu/: third-person masculine singular non-past active indicative of أَطَاقَ (ʔaṭāqa)\n# يُطِيقَ (yuṭīqa) /ju.tˤiː.qa/: third-person masculine singular non-past active subjunctive of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuṭīqu", "ʔaṭāqa", "yuṭīqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطيقان",
+      "tur": "verb",
+      "baslik": "تُطِيقَانِ • (tuṭīqāni) (form IV) /tu.tˤiː.qaː.ni/\n# inflection of أَطَاقَ (ʔaṭāqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuṭīqāni", "ʔaṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطيقان",
+      "tur": "verb",
+      "baslik": "يُطِيقَانِ • (yuṭīqāni) (form IV) /ju.tˤiː.qaː.ni/\n# third-person masculine dual non-past active indicative of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuṭīqāni", "ʔaṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطيقون",
+      "tur": "verb",
+      "baslik": "تُطِيقُونَ • (tuṭīqūna) (form IV) /tu.tˤiː.quː.na/\n# second-person masculine plural non-past active indicative of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuṭīqūna", "ʔaṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نطيق",
+      "tur": "verb",
+      "baslik": "نطيق (form IV)\n# نُطِيقُ (nuṭīqu) /nu.tˤiː.qu/: first-person plural non-past active indicative of أَطَاقَ (ʔaṭāqa)\n# نُطِيقَ (nuṭīqa) /nu.tˤiː.qa/: first-person plural non-past active subjunctive of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuṭīqu", "ʔaṭāqa", "nuṭīqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطيقون",
+      "tur": "verb",
+      "baslik": "يُطِيقُونَ • (yuṭīqūna) (form IV) /ju.tˤiː.quː.na/\n# third-person masculine plural non-past active indicative of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuṭīqūna", "ʔaṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطقن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تطقن (form IV)\n# تُطِقْنَ (tuṭiqna) /tu.tˤiq.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَطَاقَ (ʔaṭāqa)\n# تُطَقْنَ (tuṭaqna) /tu.tˤaq.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuṭiqna", "ʔaṭāqa", "tuṭaqna"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطقن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يطقن (form IV)\n# يُطِقْنَ (yuṭiqna) /ju.tˤiq.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَطَاقَ (ʔaṭāqa)\n# يُطَقْنَ (yuṭaqna) /ju.tˤaq.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuṭiqna", "ʔaṭāqa", "yuṭaqna"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطاق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يطاق (form IV)\n# يُطَاقُ (yuṭāqu) /ju.tˤaː.qu/: third-person masculine singular non-past passive indicative of أَطَاقَ (ʔaṭāqa)\n# يُطَاقَ (yuṭāqa) /ju.tˤaː.qa/: third-person masculine singular non-past passive subjunctive of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuṭāqu", "ʔaṭāqa", "yuṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطاقان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُطَاقَانِ • (tuṭāqāni) (form IV) /tu.tˤaː.qaː.ni/\n# inflection of أَطَاقَ (ʔaṭāqa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuṭāqāni", "ʔaṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطاق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تطاق (form IV)\n# تُطَاقُ (tuṭāqu) /tu.tˤaː.qu/: inflection of أَطَاقَ (ʔaṭāqa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُطَاقَ (tuṭāqa) /tu.tˤaː.qa/: inflection of أَطَاقَ (ʔaṭāqa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuṭāqu", "ʔaṭāqa", "tuṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطاقون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُطَاقُونَ • (yuṭāqūna) (form IV) /ju.tˤaː.quː.na/\n# third-person masculine plural non-past passive indicative of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuṭāqūna", "ʔaṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطاقان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُطَاقَانِ • (yuṭāqāni) (form IV) /ju.tˤaː.qaː.ni/\n# third-person masculine dual non-past passive indicative of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuṭāqāni", "ʔaṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطاقون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُطَاقُونَ • (tuṭāqūna) (form IV) /tu.tˤaː.quː.na/\n# second-person masculine plural non-past passive indicative of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuṭāqūna", "ʔaṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطيقا",
+      "tur": "verb",
+      "baslik": "يُطِيقَا • (yuṭīqā) (form IV) /ju.tˤiː.qaː/\n# third-person masculine dual non-past active subjunctive/jussive of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuṭīqā", "ʔaṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطيقا",
+      "tur": "verb",
+      "baslik": "تُطِيقَا • (tuṭīqā) (form IV) /tu.tˤiː.qaː/\n# inflection of أَطَاقَ (ʔaṭāqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuṭīqā", "ʔaṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطيقوا",
+      "tur": "verb",
+      "baslik": "تُطِيقُوا • (tuṭīqū) (form IV) /tu.tˤiː.quː/\n# second-person masculine plural non-past active subjunctive/jussive of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuṭīqū", "ʔaṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطيقي",
+      "tur": "verb",
+      "baslik": "تُطِيقِي • (tuṭīqī) (form IV) /tu.tˤiː.qiː/\n# second-person feminine singular non-past active subjunctive/jussive of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuṭīqī", "ʔaṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطاقين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُطَاقِينَ • (tuṭāqīna) (form IV) /tu.tˤaː.qiː.na/\n# second-person feminine singular non-past passive indicative of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuṭāqīna", "ʔaṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطيقوا",
+      "tur": "verb",
+      "baslik": "يُطِيقُوا • (yuṭīqū) (form IV) /ju.tˤiː.quː/\n# third-person masculine plural non-past active subjunctive/jussive of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuṭīqū", "ʔaṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطاقي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُطَاقِي • (tuṭāqī) (form IV) /tu.tˤaː.qiː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuṭāqī", "ʔaṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطاقا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُطَاقَا • (tuṭāqā) (form IV) /tu.tˤaː.qaː/\n# inflection of أَطَاقَ (ʔaṭāqa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuṭāqā", "ʔaṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطاقوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُطَاقُوا • (tuṭāqū) (form IV) /tu.tˤaː.quː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuṭāqū", "ʔaṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطاقا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُطَاقَا • (yuṭāqā) (form IV) /ju.tˤaː.qaː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuṭāqā", "ʔaṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطاقوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُطَاقُوا • (yuṭāqū) (form IV) /ju.tˤaː.quː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuṭāqū", "ʔaṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تطق (form IV)\n# تُطِقْ (tuṭiq) /tu.tˤiq/: inflection of أَطَاقَ (ʔaṭāqa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُطَقْ (tuṭaq) /tu.tˤaq/: inflection of أَطَاقَ (ʔaṭāqa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuṭiq", "ʔaṭāqa", "tuṭaq"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أطق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أطق (form IV)\n# أُطِقْ (ʔuṭiq) /ʔu.tˤiq/: first-person singular non-past active jussive of أَطَاقَ (ʔaṭāqa)\n# أُطَقْ (ʔuṭaq) /ʔu.tˤaq/: first-person singular non-past passive jussive of أَطَاقَ (ʔaṭāqa)\n# أَطِقْ (ʔaṭiq) /ʔa.tˤiq/: second-person masculine singular imperative of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuṭiq", "ʔaṭāqa", "ʔuṭaq"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أطيقي",
+      "tur": "verb",
+      "baslik": "أَطِيقِي • (ʔaṭīqī) (form IV) /ʔa.tˤiː.qiː/\n# second-person feminine singular imperative of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaṭīqī", "ʔaṭāqa"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يطق (form IV)\n# يُطِقْ (yuṭiq) /ju.tˤiq/: third-person masculine singular non-past active jussive of أَطَاقَ (ʔaṭāqa)\n# يُطَقْ (yuṭaq) /ju.tˤaq/: third-person masculine singular non-past passive jussive of أَطَاقَ (ʔaṭāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuṭiq", "ʔaṭāqa", "yuṭaq"],
+      "kok_yazilis": "أطاق",
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ءطاق", "r6"]
+  ],
+  "mana": {
     "ince": "auditory_communication.n.01",
     "orta": "noun.communication",
     "ust": "söz ve haber",
@@ -628,16 +493,11 @@
     "dayanak_tanim": "the use of uttered sounds for auditory communication",
     "synset_sayisi": 13
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "artifact.n.01",
     "content.n.05",
     "magnitude.n.01",
@@ -649,12 +509,10 @@
     "utter.v.02",
     "utterance.n.01"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

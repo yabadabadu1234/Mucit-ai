@@ -1,364 +1,290 @@
 {
   "kok": "ءنجم",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءنجم", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تنجم",
-        "u": "تنجم",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تنجم (form IV)\n# تُنْجِمُ (tunjimu) /tun.d͡ʒi.mu/: inflection of أَنْجَمَ (ʔanjama):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُنْجِمَ (tunjima) /tun.d͡ʒi.ma/: inflection of أَنْجَمَ (ʔanjama):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunc",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunjimu", "ʔanjama", "tunjima"],
-        "k": "أنجم",
-        "yol": "kök"
-      },
-      {
-        "w": "ينجم",
-        "u": "ينجم",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "ينجم (form IV)\n# يُنْجِمُ (yunjimu) /jun.d͡ʒi.mu/: third-person masculine singular non-past active indicative of أَنْجَمَ (ʔanjama)\n# يُنْجَمُ (yunjamu) /jun.d͡ʒa.mu/: third-person masculine singular non-past passive indicative of أَنْجَمَ (ʔanjama)\n# يُنْجِمَ (yunjima) /jun.d͡ʒi.ma/: third-person masculine singular non-past active subjunctive of أَنْجَمَ (ʔanjama)\n# يُنْجَمَ (yunjama) /jun.d͡ʒa.m",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunjimu", "ʔanjama", "yunjamu"],
-        "k": "أنجم",
-        "yol": "kök"
-      },
-      {
-        "w": "تنجمي",
-        "u": "تنجمي",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تُنْجِمِي • (tunjimī) (form IV) /tun.d͡ʒi.miː/\n# second-person feminine singular non-past active subjunctive/jussive of أَنْجَمَ (ʔanjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunjimī", "ʔanjama"],
-        "k": "أنجم",
-        "yol": "kök"
-      },
-      {
-        "w": "تنجمين",
-        "u": "تنجمين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُنْجِمِينَ • (tunjimīna) (form IV) /tun.d͡ʒi.miː.na/\n# second-person feminine singular non-past active indicative of أَنْجَمَ (ʔanjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunjimīna", "ʔanjama"],
-        "k": "أنجم",
-        "yol": "kök"
-      },
-      {
-        "w": "ننجم",
-        "u": "ننجم",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "ننجم (form IV)\n# نُنْجِمُ (nunjimu) /nun.d͡ʒi.mu/: first-person plural non-past active indicative of أَنْجَمَ (ʔanjama)\n# نُنْجِمَ (nunjima) /nun.d͡ʒi.ma/: first-person plural non-past active subjunctive of أَنْجَمَ (ʔanjama)\n# نُنْجِمْ (nunjim) /nun.d͡ʒim/: first-person plural non-past active jussive of أَنْجَمَ (ʔanjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nunjimu", "ʔanjama", "nunjima"],
-        "k": "أنجم",
-        "yol": "kök"
-      },
-      {
-        "w": "تنجمون",
-        "u": "تنجمون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُنْجِمُونَ • (tunjimūna) (form IV) /tun.d͡ʒi.muː.na/\n# second-person masculine plural non-past active indicative of أَنْجَمَ (ʔanjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunjimūna", "ʔanjama"],
-        "k": "أنجم",
-        "yol": "kök"
-      },
-      {
-        "w": "تنجموا",
-        "u": "تنجموا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُنْجِمُوا • (tunjimū) (form IV) /tun.d͡ʒi.muː/\n# second-person masculine plural non-past active subjunctive/jussive of أَنْجَمَ (ʔanjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunjimū", "ʔanjama"],
-        "k": "أنجم",
-        "yol": "kök"
-      },
-      {
-        "w": "ينجمون",
-        "u": "ينجمون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يُنْجِمُونَ • (yunjimūna) (form IV) /jun.d͡ʒi.muː.na/\n# third-person masculine plural non-past active indicative of أَنْجَمَ (ʔanjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunjimūna", "ʔanjama"],
-        "k": "أنجم",
-        "yol": "kök"
-      },
-      {
-        "w": "ينجموا",
-        "u": "ينجموا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يُنْجِمُوا • (yunjimū) (form IV) /jun.d͡ʒi.muː/\n# third-person masculine plural non-past active subjunctive/jussive of أَنْجَمَ (ʔanjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunjimū", "ʔanjama"],
-        "k": "أنجم",
-        "yol": "kök"
-      },
-      {
-        "w": "تنجمن",
-        "u": "تنجمن",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تُنْجِمْنَ • (tunjimna) (form IV) /tun.d͡ʒim.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of أَنْجَمَ (ʔanjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunjimna", "ʔanjama"],
-        "k": "أنجم",
-        "yol": "kök"
-      },
-      {
-        "w": "ينجمن",
-        "u": "ينجمن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يُنْجِمْنَ • (yunjimna) (form IV) /jun.d͡ʒim.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of أَنْجَمَ (ʔanjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunjimna", "ʔanjama"],
-        "k": "أنجم",
-        "yol": "kök"
-      },
-      {
-        "w": "أنجمت",
-        "u": "أنجمت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنجمت (form IV)\n# أَنْجَمْتُ (ʔanjamtu) /ʔan.d͡ʒam.tu/: first-person singular past active of أَنْجَمَ (ʔanjama)\n# أَنْجَمْتَ (ʔanjamta) /ʔan.d͡ʒam.ta/: second-person masculine singular past active of أَنْجَمَ (ʔanjama)\n# أَنْجَمْتِ (ʔanjamti) /ʔan.d͡ʒam.ti/: second-person feminine singular past active of أَنْجَمَ (ʔanjama)\n# أَنْجَمَتْ (ʔanjamat) /ʔan.d͡ʒa.mat/: third-person feminine singular past",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanjamtu", "ʔanjama", "ʔanjamta"],
-        "k": "أنجم",
-        "yol": "kök"
-      },
-      {
-        "w": "أنجمتما",
-        "u": "أنجمتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَنْجَمْتُمَا • (ʔanjamtumā) (form IV) /ʔan.d͡ʒam.tu.maː/\n# second-person dual past active of أَنْجَمَ (ʔanjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanjamtumā", "ʔanjama"],
-        "k": "أنجم",
-        "yol": "kök"
-      },
-      {
-        "w": "أنجمتا",
-        "u": "أنجمتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَنْجَمَتَا • (ʔanjamatā) (form IV) /ʔan.d͡ʒa.ma.taː/\n# third-person feminine dual past active of أَنْجَمَ (ʔanjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanjamatā", "ʔanjama"],
-        "k": "أنجم",
-        "yol": "kök"
-      },
-      {
-        "w": "أنجمتم",
-        "u": "أنجمتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَنْجَمْتُمْ • (ʔanjamtum) (form IV) /ʔan.d͡ʒam.tum/\n# second-person masculine plural past active of أَنْجَمَ (ʔanjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanjamtum", "ʔanjama"],
-        "k": "أنجم",
-        "yol": "kök"
-      },
-      {
-        "w": "أنجمنا",
-        "u": "أنجمنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَنْجَمْنَا • (ʔanjamnā) (form IV) /ʔan.d͡ʒam.naː/\n# first-person plural past active of أَنْجَمَ (ʔanjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanjamnā", "ʔanjama"],
-        "k": "أنجم",
-        "yol": "kök"
-      },
-      {
-        "w": "أنجما",
-        "u": "أنجما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنجما (form IV)\n# أَنْجَمَا (ʔanjamā) /ʔan.d͡ʒa.maː/: third-person masculine dual past active of أَنْجَمَ (ʔanjama)\n# أَنْجِمَا (ʔanjimā) /ʔan.d͡ʒi.maː/: second-person dual imperative of أَنْجَمَ (ʔanjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanjamā", "ʔanjama", "ʔanjimā"],
-        "k": "أنجم",
-        "yol": "kök"
-      },
-      {
-        "w": "أنجموا",
-        "u": "أنجموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنجموا (form IV)\n# أَنْجَمُوا (ʔanjamū) /ʔan.d͡ʒa.muː/: third-person masculine plural past active of أَنْجَمَ (ʔanjama)\n# أَنْجِمُوا (ʔanjimū) /ʔan.d͡ʒi.muː/: second-person masculine plural imperative of أَنْجَمَ (ʔanjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanjamū", "ʔanjama", "ʔanjimū"],
-        "k": "أنجم",
-        "yol": "kök"
-      },
-      {
-        "w": "أنجمتن",
-        "u": "أنجمتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَنْجَمْتُنَّ • (ʔanjamtunna) (form IV) /ʔan.d͡ʒam.tun.na/\n# second-person feminine plural past active of أَنْجَمَ (ʔanjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanjamtunna", "ʔanjama"],
-        "k": "أنجم",
-        "yol": "kök"
-      },
-      {
-        "w": "أنجمن",
-        "u": "أنجمن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنجمن (form IV)\n# أَنْجَمْنَ (ʔanjamna) /ʔan.d͡ʒam.na/: third-person feminine plural past active of أَنْجَمَ (ʔanjama)\n# أَنْجِمْنَ (ʔanjimna) /ʔan.d͡ʒim.na/: second-person feminine plural imperative of أَنْجَمَ (ʔanjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanjamna", "ʔanjama", "ʔanjimna"],
-        "k": "أنجم",
-        "yol": "kök"
-      },
-      {
-        "w": "تنجمان",
-        "u": "تنجمان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُنْجِمَانِ • (tunjimāni) (form IV) /tun.d͡ʒi.maː.ni/\n# inflection of أَنْجَمَ (ʔanjama):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunjimāni", "ʔanjama"],
-        "k": "أنجم",
-        "yol": "kök"
-      },
-      {
-        "w": "تنجما",
-        "u": "تنجما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُنْجِمَا • (tunjimā) (form IV) /tun.d͡ʒi.maː/\n# inflection of أَنْجَمَ (ʔanjama):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunjimā", "ʔanjama"],
-        "k": "أنجم",
-        "yol": "kök"
-      },
-      {
-        "w": "ينجمان",
-        "u": "ينجمان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُنْجِمَانِ • (yunjimāni) (form IV) /jun.d͡ʒi.maː.ni/\n# third-person masculine dual non-past active indicative of أَنْجَمَ (ʔanjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunjimāni", "ʔanjama"],
-        "k": "أنجم",
-        "yol": "kök"
-      },
-      {
-        "w": "ينجما",
-        "u": "ينجما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُنْجِمَا • (yunjimā) (form IV) /jun.d͡ʒi.maː/\n# third-person masculine dual non-past active subjunctive/jussive of أَنْجَمَ (ʔanjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunjimā", "ʔanjama"],
-        "k": "أنجم",
-        "yol": "kök"
-      },
-      {
-        "w": "أنجمي",
-        "u": "أنجمي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَنْجِمِي • (ʔanjimī) (form IV) /ʔan.d͡ʒi.miː/\n# second-person feminine singular imperative of أَنْجَمَ (ʔanjama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanjimī", "ʔanjama"],
-        "k": "أنجم",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "نج",
+  "ses": {
     "harf": "ء",
+    "fasil": "نج",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تنجم",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تنجم (form IV)\n# تُنْجِمُ (tunjimu) /tun.d͡ʒi.mu/: inflection of أَنْجَمَ (ʔanjama):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُنْجِمَ (tunjima) /tun.d͡ʒi.ma/: inflection of أَنْجَمَ (ʔanjama):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunc",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunjimu", "ʔanjama", "tunjima"],
+      "kok_yazilis": "أنجم"
+    },
+    {
+      "madde": "ينجم",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "ينجم (form IV)\n# يُنْجِمُ (yunjimu) /jun.d͡ʒi.mu/: third-person masculine singular non-past active indicative of أَنْجَمَ (ʔanjama)\n# يُنْجَمُ (yunjamu) /jun.d͡ʒa.mu/: third-person masculine singular non-past passive indicative of أَنْجَمَ (ʔanjama)\n# يُنْجِمَ (yunjima) /jun.d͡ʒi.ma/: third-person masculine singular non-past active subjunctive of أَنْجَمَ (ʔanjama)\n# يُنْجَمَ (yunjama) /jun.d͡ʒa.m",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunjimu", "ʔanjama", "yunjamu"],
+      "kok_yazilis": "أنجم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنجمي",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تُنْجِمِي • (tunjimī) (form IV) /tun.d͡ʒi.miː/\n# second-person feminine singular non-past active subjunctive/jussive of أَنْجَمَ (ʔanjama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunjimī", "ʔanjama"],
+      "kok_yazilis": "أنجم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنجمين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُنْجِمِينَ • (tunjimīna) (form IV) /tun.d͡ʒi.miː.na/\n# second-person feminine singular non-past active indicative of أَنْجَمَ (ʔanjama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunjimīna", "ʔanjama"],
+      "kok_yazilis": "أنجم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ننجم",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "ننجم (form IV)\n# نُنْجِمُ (nunjimu) /nun.d͡ʒi.mu/: first-person plural non-past active indicative of أَنْجَمَ (ʔanjama)\n# نُنْجِمَ (nunjima) /nun.d͡ʒi.ma/: first-person plural non-past active subjunctive of أَنْجَمَ (ʔanjama)\n# نُنْجِمْ (nunjim) /nun.d͡ʒim/: first-person plural non-past active jussive of أَنْجَمَ (ʔanjama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nunjimu", "ʔanjama", "nunjima"],
+      "kok_yazilis": "أنجم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنجمون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُنْجِمُونَ • (tunjimūna) (form IV) /tun.d͡ʒi.muː.na/\n# second-person masculine plural non-past active indicative of أَنْجَمَ (ʔanjama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunjimūna", "ʔanjama"],
+      "kok_yazilis": "أنجم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنجموا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُنْجِمُوا • (tunjimū) (form IV) /tun.d͡ʒi.muː/\n# second-person masculine plural non-past active subjunctive/jussive of أَنْجَمَ (ʔanjama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunjimū", "ʔanjama"],
+      "kok_yazilis": "أنجم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينجمون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يُنْجِمُونَ • (yunjimūna) (form IV) /jun.d͡ʒi.muː.na/\n# third-person masculine plural non-past active indicative of أَنْجَمَ (ʔanjama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunjimūna", "ʔanjama"],
+      "kok_yazilis": "أنجم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينجموا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يُنْجِمُوا • (yunjimū) (form IV) /jun.d͡ʒi.muː/\n# third-person masculine plural non-past active subjunctive/jussive of أَنْجَمَ (ʔanjama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunjimū", "ʔanjama"],
+      "kok_yazilis": "أنجم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنجمن",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تُنْجِمْنَ • (tunjimna) (form IV) /tun.d͡ʒim.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of أَنْجَمَ (ʔanjama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunjimna", "ʔanjama"],
+      "kok_yazilis": "أنجم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينجمن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يُنْجِمْنَ • (yunjimna) (form IV) /jun.d͡ʒim.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of أَنْجَمَ (ʔanjama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunjimna", "ʔanjama"],
+      "kok_yazilis": "أنجم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أنجمت",
+      "tur": "verb",
+      "baslik": "أنجمت (form IV)\n# أَنْجَمْتُ (ʔanjamtu) /ʔan.d͡ʒam.tu/: first-person singular past active of أَنْجَمَ (ʔanjama)\n# أَنْجَمْتَ (ʔanjamta) /ʔan.d͡ʒam.ta/: second-person masculine singular past active of أَنْجَمَ (ʔanjama)\n# أَنْجَمْتِ (ʔanjamti) /ʔan.d͡ʒam.ti/: second-person feminine singular past active of أَنْجَمَ (ʔanjama)\n# أَنْجَمَتْ (ʔanjamat) /ʔan.d͡ʒa.mat/: third-person feminine singular past",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanjamtu", "ʔanjama", "ʔanjamta"],
+      "kok_yazilis": "أنجم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أنجمتما",
+      "tur": "verb",
+      "baslik": "أَنْجَمْتُمَا • (ʔanjamtumā) (form IV) /ʔan.d͡ʒam.tu.maː/\n# second-person dual past active of أَنْجَمَ (ʔanjama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanjamtumā", "ʔanjama"],
+      "kok_yazilis": "أنجم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أنجمتا",
+      "tur": "verb",
+      "baslik": "أَنْجَمَتَا • (ʔanjamatā) (form IV) /ʔan.d͡ʒa.ma.taː/\n# third-person feminine dual past active of أَنْجَمَ (ʔanjama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanjamatā", "ʔanjama"],
+      "kok_yazilis": "أنجم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أنجمتم",
+      "tur": "verb",
+      "baslik": "أَنْجَمْتُمْ • (ʔanjamtum) (form IV) /ʔan.d͡ʒam.tum/\n# second-person masculine plural past active of أَنْجَمَ (ʔanjama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanjamtum", "ʔanjama"],
+      "kok_yazilis": "أنجم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أنجمنا",
+      "tur": "verb",
+      "baslik": "أَنْجَمْنَا • (ʔanjamnā) (form IV) /ʔan.d͡ʒam.naː/\n# first-person plural past active of أَنْجَمَ (ʔanjama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanjamnā", "ʔanjama"],
+      "kok_yazilis": "أنجم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أنجما",
+      "tur": "verb",
+      "baslik": "أنجما (form IV)\n# أَنْجَمَا (ʔanjamā) /ʔan.d͡ʒa.maː/: third-person masculine dual past active of أَنْجَمَ (ʔanjama)\n# أَنْجِمَا (ʔanjimā) /ʔan.d͡ʒi.maː/: second-person dual imperative of أَنْجَمَ (ʔanjama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanjamā", "ʔanjama", "ʔanjimā"],
+      "kok_yazilis": "أنجم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أنجموا",
+      "tur": "verb",
+      "baslik": "أنجموا (form IV)\n# أَنْجَمُوا (ʔanjamū) /ʔan.d͡ʒa.muː/: third-person masculine plural past active of أَنْجَمَ (ʔanjama)\n# أَنْجِمُوا (ʔanjimū) /ʔan.d͡ʒi.muː/: second-person masculine plural imperative of أَنْجَمَ (ʔanjama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanjamū", "ʔanjama", "ʔanjimū"],
+      "kok_yazilis": "أنجم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أنجمتن",
+      "tur": "verb",
+      "baslik": "أَنْجَمْتُنَّ • (ʔanjamtunna) (form IV) /ʔan.d͡ʒam.tun.na/\n# second-person feminine plural past active of أَنْجَمَ (ʔanjama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanjamtunna", "ʔanjama"],
+      "kok_yazilis": "أنجم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أنجمن",
+      "tur": "verb",
+      "baslik": "أنجمن (form IV)\n# أَنْجَمْنَ (ʔanjamna) /ʔan.d͡ʒam.na/: third-person feminine plural past active of أَنْجَمَ (ʔanjama)\n# أَنْجِمْنَ (ʔanjimna) /ʔan.d͡ʒim.na/: second-person feminine plural imperative of أَنْجَمَ (ʔanjama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanjamna", "ʔanjama", "ʔanjimna"],
+      "kok_yazilis": "أنجم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنجمان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُنْجِمَانِ • (tunjimāni) (form IV) /tun.d͡ʒi.maː.ni/\n# inflection of أَنْجَمَ (ʔanjama):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunjimāni", "ʔanjama"],
+      "kok_yazilis": "أنجم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنجما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُنْجِمَا • (tunjimā) (form IV) /tun.d͡ʒi.maː/\n# inflection of أَنْجَمَ (ʔanjama):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunjimā", "ʔanjama"],
+      "kok_yazilis": "أنجم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينجمان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُنْجِمَانِ • (yunjimāni) (form IV) /jun.d͡ʒi.maː.ni/\n# third-person masculine dual non-past active indicative of أَنْجَمَ (ʔanjama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunjimāni", "ʔanjama"],
+      "kok_yazilis": "أنجم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينجما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُنْجِمَا • (yunjimā) (form IV) /jun.d͡ʒi.maː/\n# third-person masculine dual non-past active subjunctive/jussive of أَنْجَمَ (ʔanjama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunjimā", "ʔanjama"],
+      "kok_yazilis": "أنجم",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أنجمي",
+      "tur": "verb",
+      "baslik": "أَنْجِمِي • (ʔanjimī) (form IV) /ʔan.d͡ʒi.miː/\n# second-person feminine singular imperative of أَنْجَمَ (ʔanjama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanjimī", "ʔanjama"],
+      "kok_yazilis": "أنجم",
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءنجم", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

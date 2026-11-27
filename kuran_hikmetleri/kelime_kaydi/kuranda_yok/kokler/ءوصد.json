@@ -1,365 +1,287 @@
 {
   "kok": "ءوصد",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءوصد", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أوصدت",
-        "u": "أوصدت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوصدت (form IV)\n# أَوْصَدْتُ (ʔawṣadtu) /ʔaw.sˤad.tu/: first-person singular past active of أَوْصَدَ (ʔawṣada)\n# أَوْصَدْتَ (ʔawṣadta) /ʔaw.sˤad.ta/: second-person masculine singular past active of أَوْصَدَ (ʔawṣada)\n# أَوْصَدْتِ (ʔawṣadti) /ʔaw.sˤad.ti/: second-person feminine singular past active of أَوْصَدَ (ʔawṣada)\n# أَوْصَدَتْ (ʔawṣadat) /ʔaw.sˤa.dat/: third-person feminine singular past act",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawṣadtu", "ʔawṣada", "ʔawṣadta"],
-        "k": "أوصد",
-        "yol": "kök"
-      },
-      {
-        "w": "أوصدا",
-        "u": "أوصدا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوصدا (form IV)\n# أَوْصَدَا (ʔawṣadā) /ʔaw.sˤa.daː/: third-person masculine dual past active of أَوْصَدَ (ʔawṣada)\n# أُوصِدَا (ʔūṣidā) /ʔuː.sˤi.daː/: third-person masculine dual past passive of أَوْصَدَ (ʔawṣada)\n# أَوْصِدَا (ʔawṣidā) /ʔaw.sˤi.daː/: second-person dual imperative of أَوْصَدَ (ʔawṣada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawṣadā", "ʔawṣada", "ʔūṣidā"],
-        "k": "أوصد",
-        "yol": "kök"
-      },
-      {
-        "w": "أوصدتا",
-        "u": "أوصدتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوصدتا (form IV)\n# أَوْصَدَتَا (ʔawṣadatā) /ʔaw.sˤa.da.taː/: third-person feminine dual past active of أَوْصَدَ (ʔawṣada)\n# أُوصِدَتَا (ʔūṣidatā) /ʔuː.sˤi.da.taː/: third-person feminine dual past passive of أَوْصَدَ (ʔawṣada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawṣadatā", "ʔawṣada", "ʔūṣidatā"],
-        "k": "أوصد",
-        "yol": "kök"
-      },
-      {
-        "w": "أوصدتما",
-        "u": "أوصدتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوصدتما (form IV)\n# أَوْصَدْتُمَا (ʔawṣadtumā) /ʔaw.sˤad.tu.maː/: second-person dual past active of أَوْصَدَ (ʔawṣada)\n# أُوصِدْتُمَا (ʔūṣidtumā) /ʔuː.sˤid.tu.maː/: second-person dual past passive of أَوْصَدَ (ʔawṣada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawṣadtumā", "ʔawṣada", "ʔūṣidtumā"],
-        "k": "أوصد",
-        "yol": "kök"
-      },
-      {
-        "w": "أوصدتم",
-        "u": "أوصدتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوصدتم (form IV)\n# أَوْصَدْتُمْ (ʔawṣadtum) /ʔaw.sˤad.tum/: second-person masculine plural past active of أَوْصَدَ (ʔawṣada)\n# أُوصِدْتُمْ (ʔūṣidtum) /ʔuː.sˤid.tum/: second-person masculine plural past passive of أَوْصَدَ (ʔawṣada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawṣadtum", "ʔawṣada", "ʔūṣidtum"],
-        "k": "أوصد",
-        "yol": "kök"
-      },
-      {
-        "w": "أوصدنا",
-        "u": "أوصدنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوصدنا (form IV)\n# أَوْصَدْنَا (ʔawṣadnā) /ʔaw.sˤad.naː/: first-person plural past active of أَوْصَدَ (ʔawṣada)\n# أُوصِدْنَا (ʔūṣidnā) /ʔuː.sˤid.naː/: first-person plural past passive of أَوْصَدَ (ʔawṣada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawṣadnā", "ʔawṣada", "ʔūṣidnā"],
-        "k": "أوصد",
-        "yol": "kök"
-      },
-      {
-        "w": "أوصدتن",
-        "u": "أوصدتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوصدتن (form IV)\n# أَوْصَدْتُنَّ (ʔawṣadtunna) /ʔaw.sˤad.tun.na/: second-person feminine plural past active of أَوْصَدَ (ʔawṣada)\n# أُوصِدْتُنَّ (ʔūṣidtunna) /ʔuː.sˤid.tun.na/: second-person feminine plural past passive of أَوْصَدَ (ʔawṣada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawṣadtunna", "ʔawṣada", "ʔūṣidtunna"],
-        "k": "أوصد",
-        "yol": "kök"
-      },
-      {
-        "w": "أوصدوا",
-        "u": "أوصدوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوصدوا (form IV)\n# أَوْصَدُوا (ʔawṣadū) /ʔaw.sˤa.duː/: third-person masculine plural past active of أَوْصَدَ (ʔawṣada)\n# أُوصِدُوا (ʔūṣidū) /ʔuː.sˤi.duː/: third-person masculine plural past passive of أَوْصَدَ (ʔawṣada)\n# أَوْصِدُوا (ʔawṣidū) /ʔaw.sˤi.duː/: second-person masculine plural imperative of أَوْصَدَ (ʔawṣada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawṣadū", "ʔawṣada", "ʔūṣidū"],
-        "k": "أوصد",
-        "yol": "kök"
-      },
-      {
-        "w": "أوصدن",
-        "u": "أوصدن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوصدن (form IV)\n# أَوْصَدْنَ (ʔawṣadna) /ʔaw.sˤad.na/: third-person feminine plural past active of أَوْصَدَ (ʔawṣada)\n# أُوصِدْنَ (ʔūṣidna) /ʔuː.sˤid.na/: third-person feminine plural past passive of أَوْصَدَ (ʔawṣada)\n# أَوْصِدْنَ (ʔawṣidna) /ʔaw.sˤid.na/: second-person feminine plural imperative of أَوْصَدَ (ʔawṣada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawṣadna", "ʔawṣada", "ʔūṣidna"],
-        "k": "أوصد",
-        "yol": "kök"
-      },
-      {
-        "w": "توصدين",
-        "u": "توصدين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "توصدين (form IV)\n# تُوصِدِينَ (tūṣidīna) /tuː.sˤi.diː.na/: second-person feminine singular non-past active indicative of أَوْصَدَ (ʔawṣada)\n# تُوصَدِينَ (tūṣadīna) /tuː.sˤa.diː.na/: second-person feminine singular non-past passive indicative of أَوْصَدَ (ʔawṣada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūṣidīna", "ʔawṣada", "tūṣadīna"],
-        "k": "أوصد",
-        "yol": "kök"
-      },
-      {
-        "w": "توصد",
-        "u": "توصد",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "توصد (form IV)\n# تُوصِدُ (tūṣidu) /tuː.sˤi.du/: inflection of أَوْصَدَ (ʔawṣada):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُوصَدُ (tūṣadu) /tuː.sˤa.du/: inflection of أَوْصَدَ (ʔawṣada):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n#",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūṣidu", "ʔawṣada", "tūṣadu"],
-        "k": "أوصد",
-        "yol": "kök"
-      },
-      {
-        "w": "يوصد",
-        "u": "يوصد",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يوصد (form IV)\n# يُوصِدُ (yūṣidu) /juː.sˤi.du/: third-person masculine singular non-past active indicative of أَوْصَدَ (ʔawṣada)\n# يُوصَدُ (yūṣadu) /juː.sˤa.du/: third-person masculine singular non-past passive indicative of أَوْصَدَ (ʔawṣada)\n# يُوصِدَ (yūṣida) /juː.sˤi.da/: third-person masculine singular non-past active subjunctive of أَوْصَدَ (ʔawṣada)\n# يُوصَدَ (yūṣada) /juː.sˤa.da/: third-pe",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūṣidu", "ʔawṣada", "yūṣadu"],
-        "k": "أوصد",
-        "yol": "kök"
-      },
-      {
-        "w": "نوصد",
-        "u": "نوصد",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نوصد (form IV)\n# نُوصِدُ (nūṣidu) /nuː.sˤi.du/: first-person plural non-past active indicative of أَوْصَدَ (ʔawṣada)\n# نُوصَدُ (nūṣadu) /nuː.sˤa.du/: first-person plural non-past passive indicative of أَوْصَدَ (ʔawṣada)\n# نُوصِدَ (nūṣida) /nuː.sˤi.da/: first-person plural non-past active subjunctive of أَوْصَدَ (ʔawṣada)\n# نُوصَدَ (nūṣada) /nuː.sˤa.da/: first-person plural non-past passive subjunc",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nūṣidu", "ʔawṣada", "nūṣadu"],
-        "k": "أوصد",
-        "yol": "kök"
-      },
-      {
-        "w": "توصدان",
-        "u": "توصدان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "توصدان (form IV)\n# تُوصِدَانِ (tūṣidāni) /tuː.sˤi.daː.ni/: inflection of أَوْصَدَ (ʔawṣada):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُوصَدَانِ (tūṣadāni) /tuː.sˤa.daː.ni/: inflection of أَوْصَدَ (ʔawṣada):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūṣidāni", "ʔawṣada", "tūṣadāni"],
-        "k": "أوصد",
-        "yol": "kök"
-      },
-      {
-        "w": "يوصدان",
-        "u": "يوصدان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يوصدان (form IV)\n# يُوصِدَانِ (yūṣidāni) /juː.sˤi.daː.ni/: third-person masculine dual non-past active indicative of أَوْصَدَ (ʔawṣada)\n# يُوصَدَانِ (yūṣadāni) /juː.sˤa.daː.ni/: third-person masculine dual non-past passive indicative of أَوْصَدَ (ʔawṣada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūṣidāni", "ʔawṣada", "yūṣadāni"],
-        "k": "أوصد",
-        "yol": "kök"
-      },
-      {
-        "w": "توصدون",
-        "u": "توصدون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "توصدون (form IV)\n# تُوصِدُونَ (tūṣidūna) /tuː.sˤi.duː.na/: second-person masculine plural non-past active indicative of أَوْصَدَ (ʔawṣada)\n# تُوصَدُونَ (tūṣadūna) /tuː.sˤa.duː.na/: second-person masculine plural non-past passive indicative of أَوْصَدَ (ʔawṣada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūṣidūna", "ʔawṣada", "tūṣadūna"],
-        "k": "أوصد",
-        "yol": "kök"
-      },
-      {
-        "w": "توصدن",
-        "u": "توصدن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "توصدن (form IV)\n# تُوصِدْنَ (tūṣidna) /tuː.sˤid.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَوْصَدَ (ʔawṣada)\n# تُوصَدْنَ (tūṣadna) /tuː.sˤad.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَوْصَدَ (ʔawṣada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūṣidna", "ʔawṣada", "tūṣadna"],
-        "k": "أوصد",
-        "yol": "kök"
-      },
-      {
-        "w": "يوصدن",
-        "u": "يوصدن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يوصدن (form IV)\n# يُوصِدْنَ (yūṣidna) /juː.sˤid.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَوْصَدَ (ʔawṣada)\n# يُوصَدْنَ (yūṣadna) /juː.sˤad.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَوْصَدَ (ʔawṣada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūṣidna", "ʔawṣada", "yūṣadna"],
-        "k": "أوصد",
-        "yol": "kök"
-      },
-      {
-        "w": "توصدي",
-        "u": "توصدي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "توصدي (form IV)\n# تُوصِدِي (tūṣidī) /tuː.sˤi.diː/: second-person feminine singular non-past active subjunctive/jussive of أَوْصَدَ (ʔawṣada)\n# تُوصَدِي (tūṣadī) /tuː.sˤa.diː/: second-person feminine singular non-past passive subjunctive/jussive of أَوْصَدَ (ʔawṣada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūṣidī", "ʔawṣada", "tūṣadī"],
-        "k": "أوصد",
-        "yol": "kök"
-      },
-      {
-        "w": "يوصدون",
-        "u": "يوصدون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يوصدون (form IV)\n# يُوصِدُونَ (yūṣidūna) /juː.sˤi.duː.na/: third-person masculine plural non-past active indicative of أَوْصَدَ (ʔawṣada)\n# يُوصَدُونَ (yūṣadūna) /juː.sˤa.duː.na/: third-person masculine plural non-past passive indicative of أَوْصَدَ (ʔawṣada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūṣidūna", "ʔawṣada", "yūṣadūna"],
-        "k": "أوصد",
-        "yol": "kök"
-      },
-      {
-        "w": "يوصدا",
-        "u": "يوصدا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يوصدا (form IV)\n# يُوصِدَا (yūṣidā) /juː.sˤi.daː/: third-person masculine dual non-past active subjunctive/jussive of أَوْصَدَ (ʔawṣada)\n# يُوصَدَا (yūṣadā) /juː.sˤa.daː/: third-person masculine dual non-past passive subjunctive/jussive of أَوْصَدَ (ʔawṣada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūṣidā", "ʔawṣada", "yūṣadā"],
-        "k": "أوصد",
-        "yol": "kök"
-      },
-      {
-        "w": "توصدا",
-        "u": "توصدا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "توصدا (form IV)\n# تُوصِدَا (tūṣidā) /tuː.sˤi.daː/: inflection of أَوْصَدَ (ʔawṣada):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُوصَدَا (tūṣadā) /tuː.sˤa.daː/: inflection of أَوْصَدَ (ʔawṣada):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/juss",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūṣidā", "ʔawṣada", "tūṣadā"],
-        "k": "أوصد",
-        "yol": "kök"
-      },
-      {
-        "w": "يوصدوا",
-        "u": "يوصدوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يوصدوا (form IV)\n# يُوصِدُوا (yūṣidū) /juː.sˤi.duː/: third-person masculine plural non-past active subjunctive/jussive of أَوْصَدَ (ʔawṣada)\n# يُوصَدُوا (yūṣadū) /juː.sˤa.duː/: third-person masculine plural non-past passive subjunctive/jussive of أَوْصَدَ (ʔawṣada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūṣidū", "ʔawṣada", "yūṣadū"],
-        "k": "أوصد",
-        "yol": "kök"
-      },
-      {
-        "w": "توصدوا",
-        "u": "توصدوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "توصدوا (form IV)\n# تُوصِدُوا (tūṣidū) /tuː.sˤi.duː/: second-person masculine plural non-past active subjunctive/jussive of أَوْصَدَ (ʔawṣada)\n# تُوصَدُوا (tūṣadū) /tuː.sˤa.duː/: second-person masculine plural non-past passive subjunctive/jussive of أَوْصَدَ (ʔawṣada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūṣidū", "ʔawṣada", "tūṣadū"],
-        "k": "أوصد",
-        "yol": "kök"
-      },
-      {
-        "w": "أوصدي",
-        "u": "أوصدي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَوْصِدِي • (ʔawṣidī) (form IV) /ʔaw.sˤi.diː/\n# second-person feminine singular imperative of أَوْصَدَ (ʔawṣada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔawṣidī", "ʔawṣada"],
-        "k": "أوصد",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "صد",
+  "ses": {
     "harf": "ء",
+    "fasil": "صد",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "أوصدت",
+      "tur": "verb",
+      "baslik": "أوصدت (form IV)\n# أَوْصَدْتُ (ʔawṣadtu) /ʔaw.sˤad.tu/: first-person singular past active of أَوْصَدَ (ʔawṣada)\n# أَوْصَدْتَ (ʔawṣadta) /ʔaw.sˤad.ta/: second-person masculine singular past active of أَوْصَدَ (ʔawṣada)\n# أَوْصَدْتِ (ʔawṣadti) /ʔaw.sˤad.ti/: second-person feminine singular past active of أَوْصَدَ (ʔawṣada)\n# أَوْصَدَتْ (ʔawṣadat) /ʔaw.sˤa.dat/: third-person feminine singular past act",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawṣadtu", "ʔawṣada", "ʔawṣadta"],
+      "kok_yazilis": "أوصد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوصدا",
+      "tur": "verb",
+      "baslik": "أوصدا (form IV)\n# أَوْصَدَا (ʔawṣadā) /ʔaw.sˤa.daː/: third-person masculine dual past active of أَوْصَدَ (ʔawṣada)\n# أُوصِدَا (ʔūṣidā) /ʔuː.sˤi.daː/: third-person masculine dual past passive of أَوْصَدَ (ʔawṣada)\n# أَوْصِدَا (ʔawṣidā) /ʔaw.sˤi.daː/: second-person dual imperative of أَوْصَدَ (ʔawṣada)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawṣadā", "ʔawṣada", "ʔūṣidā"],
+      "kok_yazilis": "أوصد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوصدتا",
+      "tur": "verb",
+      "baslik": "أوصدتا (form IV)\n# أَوْصَدَتَا (ʔawṣadatā) /ʔaw.sˤa.da.taː/: third-person feminine dual past active of أَوْصَدَ (ʔawṣada)\n# أُوصِدَتَا (ʔūṣidatā) /ʔuː.sˤi.da.taː/: third-person feminine dual past passive of أَوْصَدَ (ʔawṣada)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawṣadatā", "ʔawṣada", "ʔūṣidatā"],
+      "kok_yazilis": "أوصد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوصدتما",
+      "tur": "verb",
+      "baslik": "أوصدتما (form IV)\n# أَوْصَدْتُمَا (ʔawṣadtumā) /ʔaw.sˤad.tu.maː/: second-person dual past active of أَوْصَدَ (ʔawṣada)\n# أُوصِدْتُمَا (ʔūṣidtumā) /ʔuː.sˤid.tu.maː/: second-person dual past passive of أَوْصَدَ (ʔawṣada)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawṣadtumā", "ʔawṣada", "ʔūṣidtumā"],
+      "kok_yazilis": "أوصد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوصدتم",
+      "tur": "verb",
+      "baslik": "أوصدتم (form IV)\n# أَوْصَدْتُمْ (ʔawṣadtum) /ʔaw.sˤad.tum/: second-person masculine plural past active of أَوْصَدَ (ʔawṣada)\n# أُوصِدْتُمْ (ʔūṣidtum) /ʔuː.sˤid.tum/: second-person masculine plural past passive of أَوْصَدَ (ʔawṣada)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawṣadtum", "ʔawṣada", "ʔūṣidtum"],
+      "kok_yazilis": "أوصد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوصدنا",
+      "tur": "verb",
+      "baslik": "أوصدنا (form IV)\n# أَوْصَدْنَا (ʔawṣadnā) /ʔaw.sˤad.naː/: first-person plural past active of أَوْصَدَ (ʔawṣada)\n# أُوصِدْنَا (ʔūṣidnā) /ʔuː.sˤid.naː/: first-person plural past passive of أَوْصَدَ (ʔawṣada)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawṣadnā", "ʔawṣada", "ʔūṣidnā"],
+      "kok_yazilis": "أوصد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوصدتن",
+      "tur": "verb",
+      "baslik": "أوصدتن (form IV)\n# أَوْصَدْتُنَّ (ʔawṣadtunna) /ʔaw.sˤad.tun.na/: second-person feminine plural past active of أَوْصَدَ (ʔawṣada)\n# أُوصِدْتُنَّ (ʔūṣidtunna) /ʔuː.sˤid.tun.na/: second-person feminine plural past passive of أَوْصَدَ (ʔawṣada)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawṣadtunna", "ʔawṣada", "ʔūṣidtunna"],
+      "kok_yazilis": "أوصد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوصدوا",
+      "tur": "verb",
+      "baslik": "أوصدوا (form IV)\n# أَوْصَدُوا (ʔawṣadū) /ʔaw.sˤa.duː/: third-person masculine plural past active of أَوْصَدَ (ʔawṣada)\n# أُوصِدُوا (ʔūṣidū) /ʔuː.sˤi.duː/: third-person masculine plural past passive of أَوْصَدَ (ʔawṣada)\n# أَوْصِدُوا (ʔawṣidū) /ʔaw.sˤi.duː/: second-person masculine plural imperative of أَوْصَدَ (ʔawṣada)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawṣadū", "ʔawṣada", "ʔūṣidū"],
+      "kok_yazilis": "أوصد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوصدن",
+      "tur": "verb",
+      "baslik": "أوصدن (form IV)\n# أَوْصَدْنَ (ʔawṣadna) /ʔaw.sˤad.na/: third-person feminine plural past active of أَوْصَدَ (ʔawṣada)\n# أُوصِدْنَ (ʔūṣidna) /ʔuː.sˤid.na/: third-person feminine plural past passive of أَوْصَدَ (ʔawṣada)\n# أَوْصِدْنَ (ʔawṣidna) /ʔaw.sˤid.na/: second-person feminine plural imperative of أَوْصَدَ (ʔawṣada)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawṣadna", "ʔawṣada", "ʔūṣidna"],
+      "kok_yazilis": "أوصد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توصدين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "توصدين (form IV)\n# تُوصِدِينَ (tūṣidīna) /tuː.sˤi.diː.na/: second-person feminine singular non-past active indicative of أَوْصَدَ (ʔawṣada)\n# تُوصَدِينَ (tūṣadīna) /tuː.sˤa.diː.na/: second-person feminine singular non-past passive indicative of أَوْصَدَ (ʔawṣada)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūṣidīna", "ʔawṣada", "tūṣadīna"],
+      "kok_yazilis": "أوصد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توصد",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "توصد (form IV)\n# تُوصِدُ (tūṣidu) /tuː.sˤi.du/: inflection of أَوْصَدَ (ʔawṣada):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُوصَدُ (tūṣadu) /tuː.sˤa.du/: inflection of أَوْصَدَ (ʔawṣada):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n#",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūṣidu", "ʔawṣada", "tūṣadu"],
+      "kok_yazilis": "أوصد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوصد",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يوصد (form IV)\n# يُوصِدُ (yūṣidu) /juː.sˤi.du/: third-person masculine singular non-past active indicative of أَوْصَدَ (ʔawṣada)\n# يُوصَدُ (yūṣadu) /juː.sˤa.du/: third-person masculine singular non-past passive indicative of أَوْصَدَ (ʔawṣada)\n# يُوصِدَ (yūṣida) /juː.sˤi.da/: third-person masculine singular non-past active subjunctive of أَوْصَدَ (ʔawṣada)\n# يُوصَدَ (yūṣada) /juː.sˤa.da/: third-pe",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūṣidu", "ʔawṣada", "yūṣadu"],
+      "kok_yazilis": "أوصد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نوصد",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نوصد (form IV)\n# نُوصِدُ (nūṣidu) /nuː.sˤi.du/: first-person plural non-past active indicative of أَوْصَدَ (ʔawṣada)\n# نُوصَدُ (nūṣadu) /nuː.sˤa.du/: first-person plural non-past passive indicative of أَوْصَدَ (ʔawṣada)\n# نُوصِدَ (nūṣida) /nuː.sˤi.da/: first-person plural non-past active subjunctive of أَوْصَدَ (ʔawṣada)\n# نُوصَدَ (nūṣada) /nuː.sˤa.da/: first-person plural non-past passive subjunc",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nūṣidu", "ʔawṣada", "nūṣadu"],
+      "kok_yazilis": "أوصد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توصدان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "توصدان (form IV)\n# تُوصِدَانِ (tūṣidāni) /tuː.sˤi.daː.ni/: inflection of أَوْصَدَ (ʔawṣada):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُوصَدَانِ (tūṣadāni) /tuː.sˤa.daː.ni/: inflection of أَوْصَدَ (ʔawṣada):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūṣidāni", "ʔawṣada", "tūṣadāni"],
+      "kok_yazilis": "أوصد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوصدان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يوصدان (form IV)\n# يُوصِدَانِ (yūṣidāni) /juː.sˤi.daː.ni/: third-person masculine dual non-past active indicative of أَوْصَدَ (ʔawṣada)\n# يُوصَدَانِ (yūṣadāni) /juː.sˤa.daː.ni/: third-person masculine dual non-past passive indicative of أَوْصَدَ (ʔawṣada)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūṣidāni", "ʔawṣada", "yūṣadāni"],
+      "kok_yazilis": "أوصد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توصدون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "توصدون (form IV)\n# تُوصِدُونَ (tūṣidūna) /tuː.sˤi.duː.na/: second-person masculine plural non-past active indicative of أَوْصَدَ (ʔawṣada)\n# تُوصَدُونَ (tūṣadūna) /tuː.sˤa.duː.na/: second-person masculine plural non-past passive indicative of أَوْصَدَ (ʔawṣada)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūṣidūna", "ʔawṣada", "tūṣadūna"],
+      "kok_yazilis": "أوصد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توصدن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "توصدن (form IV)\n# تُوصِدْنَ (tūṣidna) /tuː.sˤid.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَوْصَدَ (ʔawṣada)\n# تُوصَدْنَ (tūṣadna) /tuː.sˤad.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَوْصَدَ (ʔawṣada)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūṣidna", "ʔawṣada", "tūṣadna"],
+      "kok_yazilis": "أوصد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوصدن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يوصدن (form IV)\n# يُوصِدْنَ (yūṣidna) /juː.sˤid.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَوْصَدَ (ʔawṣada)\n# يُوصَدْنَ (yūṣadna) /juː.sˤad.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَوْصَدَ (ʔawṣada)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūṣidna", "ʔawṣada", "yūṣadna"],
+      "kok_yazilis": "أوصد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توصدي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "توصدي (form IV)\n# تُوصِدِي (tūṣidī) /tuː.sˤi.diː/: second-person feminine singular non-past active subjunctive/jussive of أَوْصَدَ (ʔawṣada)\n# تُوصَدِي (tūṣadī) /tuː.sˤa.diː/: second-person feminine singular non-past passive subjunctive/jussive of أَوْصَدَ (ʔawṣada)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūṣidī", "ʔawṣada", "tūṣadī"],
+      "kok_yazilis": "أوصد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوصدون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يوصدون (form IV)\n# يُوصِدُونَ (yūṣidūna) /juː.sˤi.duː.na/: third-person masculine plural non-past active indicative of أَوْصَدَ (ʔawṣada)\n# يُوصَدُونَ (yūṣadūna) /juː.sˤa.duː.na/: third-person masculine plural non-past passive indicative of أَوْصَدَ (ʔawṣada)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūṣidūna", "ʔawṣada", "yūṣadūna"],
+      "kok_yazilis": "أوصد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوصدا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يوصدا (form IV)\n# يُوصِدَا (yūṣidā) /juː.sˤi.daː/: third-person masculine dual non-past active subjunctive/jussive of أَوْصَدَ (ʔawṣada)\n# يُوصَدَا (yūṣadā) /juː.sˤa.daː/: third-person masculine dual non-past passive subjunctive/jussive of أَوْصَدَ (ʔawṣada)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūṣidā", "ʔawṣada", "yūṣadā"],
+      "kok_yazilis": "أوصد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توصدا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "توصدا (form IV)\n# تُوصِدَا (tūṣidā) /tuː.sˤi.daː/: inflection of أَوْصَدَ (ʔawṣada):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُوصَدَا (tūṣadā) /tuː.sˤa.daː/: inflection of أَوْصَدَ (ʔawṣada):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/juss",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūṣidā", "ʔawṣada", "tūṣadā"],
+      "kok_yazilis": "أوصد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوصدوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يوصدوا (form IV)\n# يُوصِدُوا (yūṣidū) /juː.sˤi.duː/: third-person masculine plural non-past active subjunctive/jussive of أَوْصَدَ (ʔawṣada)\n# يُوصَدُوا (yūṣadū) /juː.sˤa.duː/: third-person masculine plural non-past passive subjunctive/jussive of أَوْصَدَ (ʔawṣada)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūṣidū", "ʔawṣada", "yūṣadū"],
+      "kok_yazilis": "أوصد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توصدوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "توصدوا (form IV)\n# تُوصِدُوا (tūṣidū) /tuː.sˤi.duː/: second-person masculine plural non-past active subjunctive/jussive of أَوْصَدَ (ʔawṣada)\n# تُوصَدُوا (tūṣadū) /tuː.sˤa.duː/: second-person masculine plural non-past passive subjunctive/jussive of أَوْصَدَ (ʔawṣada)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūṣidū", "ʔawṣada", "tūṣadū"],
+      "kok_yazilis": "أوصد",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوصدي",
+      "tur": "verb",
+      "baslik": "أَوْصِدِي • (ʔawṣidī) (form IV) /ʔaw.sˤi.diː/\n# second-person feminine singular imperative of أَوْصَدَ (ʔawṣada)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔawṣidī", "ʔawṣada"],
+      "kok_yazilis": "أوصد",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءوصد", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

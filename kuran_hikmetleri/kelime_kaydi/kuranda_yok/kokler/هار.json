@@ -1,448 +1,320 @@
 {
   "kok": "هار",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "هار", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "هر",
-        "u": "هر",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "هُرْ • (hur) (form I) /hur/\n# second-person masculine singular imperative of هَارَ (hāra)",
-        "tag": ["form-i", "no-gloss", "obsolete"],
-        "r": ["hur", "hāra"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "نهر",
-        "u": "نهر",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "نهر (form I)\n# نَهُرْ (nahur) /na.hur/: first-person plural non-past active jussive of هَارَ (hāra)\n# نُهَرْ (nuhar) /nu.har/: first-person plural non-past passive jussive of هَارَ (hāra)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nahur", "hāra", "nuhar"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "هرن",
-        "u": "هرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هرن (form I)\n# هُرْنَ (hurna) /hur.na/: inflection of هَارَ (hāra):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# هِرْنَ (hirna) /hir.na/: third-person feminine plural past passive of هَارَ (hāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hurna", "hāra", "hirna"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "أهر",
-        "u": "أهر",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أهر (form I)\n# أَهُرْ (ʔahur) /ʔa.hur/: first-person singular non-past active jussive of هَارَ (hāra)\n# أُهَرْ (ʔuhar) /ʔu.har/: first-person singular non-past passive jussive of هَارَ (hāra)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔahur", "hāra", "ʔuhar"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "هوري",
-        "u": "هوري",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "هُورِي • (hūrī) (form I) /huː.riː/\n# second-person feminine singular imperative of هَارَ (hāra)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hūrī", "hāra"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "نهور",
-        "u": "نهور",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نهور (form I)\n# نَهُورُ (nahūru) /na.huː.ru/: first-person plural non-past active indicative of هَارَ (hāra)\n# نَهُورَ (nahūra) /na.huː.ra/: first-person plural non-past active subjunctive of هَارَ (hāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nahūru", "hāra", "nahūra"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "هارت",
-        "u": "هارت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَارَتْ • (hārat) (form I) /haː.rat/\n# third-person feminine singular past active of هَارَ (hāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hārat", "hāra"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "تهور",
-        "u": "تهور",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تهور (form I)\n# تَهُورُ (tahūru) /ta.huː.ru/: inflection of هَارَ (hāra):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَهُورَ (tahūra) /ta.huː.ra/: inflection of هَارَ (hāra):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahūru", "hāra", "tahūra"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "يهر",
-        "u": "يهر",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يهر (form I)\n# يَهُرْ (yahur) /ja.hur/: third-person masculine singular non-past active jussive of هَارَ (hāra)\n# يُهَرْ (yuhar) /ju.har/: third-person masculine singular non-past passive jussive of هَارَ (hāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahur", "hāra", "yuhar"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "تهر",
-        "u": "تهر",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تهر (form I)\n# تَهُرْ (tahur) /ta.hur/: inflection of هَارَ (hāra):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُهَرْ (tuhar) /tu.har/: inflection of هَارَ (hāra):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahur", "hāra", "tuhar"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "تهورا",
-        "u": "تهورا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَهُورَا • (tahūrā) (form I) /ta.huː.raː/\n# inflection of هَارَ (hāra):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahūrā", "hāra"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "تهوروا",
-        "u": "تهوروا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَهُورُوا • (tahūrū) (form I) /ta.huː.ruː/\n# second-person masculine plural non-past active subjunctive/jussive of هَارَ (hāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahūrū", "hāra"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "تهوري",
-        "u": "تهوري",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَهُورِي • (tahūrī) (form I) /ta.huː.riː/\n# second-person feminine singular non-past active subjunctive/jussive of هَارَ (hāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahūrī", "hāra"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "هارا",
-        "u": "هارا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَارَا • (hārā) (form I) /haː.raː/\n# third-person masculine dual past active of هَارَ (hāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hārā", "hāra"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "هرتما",
-        "u": "هرتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هرتما (form I)\n# هُرْتُمَا (hurtumā) /hur.tu.maː/: second-person dual past active of هَارَ (hāra)\n# هِرْتُمَا (hirtumā) /hir.tu.maː/: second-person dual past passive of هَارَ (hāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hurtumā", "hāra", "hirtumā"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "هرت",
-        "u": "هرت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "هرت (form I)\n# هُرْتُ (hurtu) /hur.tu/: first-person singular past active of هَارَ (hāra)\n# هُرْتَ (hurta) /hur.ta/: second-person masculine singular past active of هَارَ (hāra)\n# هُرْتِ (hurti) /hur.ti/: second-person feminine singular past active of هَارَ (hāra)\n# هِرْتُ (hirtu) /hir.tu/: first-person singular past passive of هَارَ (hāra)\n# هِرْتَ (hirta) /hir.ta/: second-person masculine singul",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hurtu", "hāra", "hurta"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "هرتن",
-        "u": "هرتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هرتن (form I)\n# هُرْتُنَّ (hurtunna) /hur.tun.na/: second-person feminine plural past active of هَارَ (hāra)\n# هِرْتُنَّ (hirtunna) /hir.tun.na/: second-person feminine plural past passive of هَارَ (hāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hurtunna", "hāra", "hirtunna"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "هارتا",
-        "u": "هارتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَارَتَا • (hāratā) (form I) /haː.ra.taː/\n# third-person feminine dual past active of هَارَ (hāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hāratā", "hāra"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "هرتم",
-        "u": "هرتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هرتم (form I)\n# هُرْتُمْ (hurtum) /hur.tum/: second-person masculine plural past active of هَارَ (hāra)\n# هِرْتُمْ (hirtum) /hir.tum/: second-person masculine plural past passive of هَارَ (hāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hurtum", "hāra", "hirtum"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "هرنا",
-        "u": "هرنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هرنا (form I)\n# هُرْنَا (hurnā) /hur.naː/: first-person plural past active of هَارَ (hāra)\n# هِرْنَا (hirnā) /hir.naː/: first-person plural past passive of هَارَ (hāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hurnā", "hāra", "hirnā"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "أهور",
-        "u": "أهور",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أهور (form I)\n# أَهُورُ (ʔahūru) /ʔa.huː.ru/: first-person singular non-past active indicative of هَارَ (hāra)\n# أَهُورَ (ʔahūra) /ʔa.huː.ra/: first-person singular non-past active subjunctive of هَارَ (hāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔahūru", "hāra", "ʔahūra"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "هاروا",
-        "u": "هاروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَارُوا • (hārū) (form I) /haː.ruː/\n# third-person masculine plural past active of هَارَ (hāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hārū", "hāra"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "تهوران",
-        "u": "تهوران",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهُورَانِ • (tahūrāni) (form I) /ta.huː.raː.ni/\n# inflection of هَارَ (hāra):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahūrāni", "hāra"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "تهورين",
-        "u": "تهورين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهُورِينَ • (tahūrīna) (form I) /ta.huː.riː.na/\n# second-person feminine singular non-past active indicative of هَارَ (hāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahūrīna", "hāra"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "يهور",
-        "u": "يهور",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهور (form I)\n# يَهُورُ (yahūru) /ja.huː.ru/: third-person masculine singular non-past active indicative of هَارَ (hāra)\n# يَهُورَ (yahūra) /ja.huː.ra/: third-person masculine singular non-past active subjunctive of هَارَ (hāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahūru", "hāra", "yahūra"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "يهوران",
-        "u": "يهوران",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَهُورَانِ • (yahūrāni) (form I) /ja.huː.raː.ni/\n# third-person masculine dual non-past active indicative of هَارَ (hāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahūrāni", "hāra"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "تهرن",
-        "u": "تهرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهرن (form I)\n# تَهُرْنَ (tahurna) /ta.hur.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of هَارَ (hāra)\n# تُهَرْنَ (tuharna) /tu.har.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of هَارَ (hāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahurna", "hāra", "tuharna"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "تهورون",
-        "u": "تهورون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهُورُونَ • (tahūrūna) (form I) /ta.huː.ruː.na/\n# second-person masculine plural non-past active indicative of هَارَ (hāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahūrūna", "hāra"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "يهورون",
-        "u": "يهورون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَهُورُونَ • (yahūrūna) (form I) /ja.huː.ruː.na/\n# third-person masculine plural non-past active indicative of هَارَ (hāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahūrūna", "hāra"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "يهرن",
-        "u": "يهرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهرن (form I)\n# يَهُرْنَ (yahurna) /ja.hur.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of هَارَ (hāra)\n# يُهَرْنَ (yuharna) /ju.har.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of هَارَ (hāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahurna", "hāra", "yuharna"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "يهورا",
-        "u": "يهورا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَهُورَا • (yahūrā) (form I) /ja.huː.raː/\n# third-person masculine dual non-past active subjunctive/jussive of هَارَ (hāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahūrā", "hāra"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "يهوروا",
-        "u": "يهوروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَهُورُوا • (yahūrū) (form I) /ja.huː.ruː/\n# third-person masculine plural non-past active subjunctive/jussive of هَارَ (hāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahūrū", "hāra"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "هورا",
-        "u": "هورا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هُورَا • (hūrā) (form I) /huː.raː/\n# second-person dual imperative of هَارَ (hāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hūrā", "hāra"],
-        "k": "هار",
-        "yol": "kök"
-      },
-      {
-        "w": "هوروا",
-        "u": "هوروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هُورُوا • (hūrū) (form I) /huː.ruː/\n# second-person masculine plural imperative of هَارَ (hāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hūrū", "hāra"],
-        "k": "هار",
-        "yol": "kök"
-      }
-    ],
-    "tercume": {}
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "هر",
+  "ses": {
     "harf": "ه",
+    "fasil": "هر",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "هر",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "هُرْ • (hur) (form I) /hur/\n# second-person masculine singular imperative of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss", "obsolete"],
+      "okunus": ["hur", "hāra"]
+    },
+    {
+      "madde": "نهر",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "نهر (form I)\n# نَهُرْ (nahur) /na.hur/: first-person plural non-past active jussive of هَارَ (hāra)\n# نُهَرْ (nuhar) /nu.har/: first-person plural non-past passive jussive of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nahur", "hāra", "nuhar"]
+    },
+    {
+      "madde": "هرن",
+      "tur": "verb",
+      "baslik": "هرن (form I)\n# هُرْنَ (hurna) /hur.na/: inflection of هَارَ (hāra):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# هِرْنَ (hirna) /hir.na/: third-person feminine plural past passive of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hurna", "hāra", "hirna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أهر",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أهر (form I)\n# أَهُرْ (ʔahur) /ʔa.hur/: first-person singular non-past active jussive of هَارَ (hāra)\n# أُهَرْ (ʔuhar) /ʔu.har/: first-person singular non-past passive jussive of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔahur", "hāra", "ʔuhar"]
+    },
+    {
+      "madde": "هوري",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "هُورِي • (hūrī) (form I) /huː.riː/\n# second-person feminine singular imperative of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hūrī", "hāra"]
+    },
+    {
+      "madde": "نهور",
+      "tur": "verb",
+      "baslik": "نهور (form I)\n# نَهُورُ (nahūru) /na.huː.ru/: first-person plural non-past active indicative of هَارَ (hāra)\n# نَهُورَ (nahūra) /na.huː.ra/: first-person plural non-past active subjunctive of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nahūru", "hāra", "nahūra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هارت",
+      "tur": "verb",
+      "baslik": "هَارَتْ • (hārat) (form I) /haː.rat/\n# third-person feminine singular past active of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hārat", "hāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهور",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تهور (form I)\n# تَهُورُ (tahūru) /ta.huː.ru/: inflection of هَارَ (hāra):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَهُورَ (tahūra) /ta.huː.ra/: inflection of هَارَ (hāra):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahūru", "hāra", "tahūra"]
+    },
+    {
+      "madde": "يهر",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يهر (form I)\n# يَهُرْ (yahur) /ja.hur/: third-person masculine singular non-past active jussive of هَارَ (hāra)\n# يُهَرْ (yuhar) /ju.har/: third-person masculine singular non-past passive jussive of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahur", "hāra", "yuhar"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهر",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تهر (form I)\n# تَهُرْ (tahur) /ta.hur/: inflection of هَارَ (hāra):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُهَرْ (tuhar) /tu.har/: inflection of هَارَ (hāra):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahur", "hāra", "tuhar"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهورا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَهُورَا • (tahūrā) (form I) /ta.huː.raː/\n# inflection of هَارَ (hāra):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahūrā", "hāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهوروا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَهُورُوا • (tahūrū) (form I) /ta.huː.ruː/\n# second-person masculine plural non-past active subjunctive/jussive of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahūrū", "hāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهوري",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَهُورِي • (tahūrī) (form I) /ta.huː.riː/\n# second-person feminine singular non-past active subjunctive/jussive of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahūrī", "hāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هارا",
+      "tur": "verb",
+      "baslik": "هَارَا • (hārā) (form I) /haː.raː/\n# third-person masculine dual past active of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hārā", "hāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هرتما",
+      "tur": "verb",
+      "baslik": "هرتما (form I)\n# هُرْتُمَا (hurtumā) /hur.tu.maː/: second-person dual past active of هَارَ (hāra)\n# هِرْتُمَا (hirtumā) /hir.tu.maː/: second-person dual past passive of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hurtumā", "hāra", "hirtumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هرت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "هرت (form I)\n# هُرْتُ (hurtu) /hur.tu/: first-person singular past active of هَارَ (hāra)\n# هُرْتَ (hurta) /hur.ta/: second-person masculine singular past active of هَارَ (hāra)\n# هُرْتِ (hurti) /hur.ti/: second-person feminine singular past active of هَارَ (hāra)\n# هِرْتُ (hirtu) /hir.tu/: first-person singular past passive of هَارَ (hāra)\n# هِرْتَ (hirta) /hir.ta/: second-person masculine singul",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hurtu", "hāra", "hurta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هرتن",
+      "tur": "verb",
+      "baslik": "هرتن (form I)\n# هُرْتُنَّ (hurtunna) /hur.tun.na/: second-person feminine plural past active of هَارَ (hāra)\n# هِرْتُنَّ (hirtunna) /hir.tun.na/: second-person feminine plural past passive of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hurtunna", "hāra", "hirtunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هارتا",
+      "tur": "verb",
+      "baslik": "هَارَتَا • (hāratā) (form I) /haː.ra.taː/\n# third-person feminine dual past active of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hāratā", "hāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هرتم",
+      "tur": "verb",
+      "baslik": "هرتم (form I)\n# هُرْتُمْ (hurtum) /hur.tum/: second-person masculine plural past active of هَارَ (hāra)\n# هِرْتُمْ (hirtum) /hir.tum/: second-person masculine plural past passive of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hurtum", "hāra", "hirtum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هرنا",
+      "tur": "verb",
+      "baslik": "هرنا (form I)\n# هُرْنَا (hurnā) /hur.naː/: first-person plural past active of هَارَ (hāra)\n# هِرْنَا (hirnā) /hir.naː/: first-person plural past passive of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hurnā", "hāra", "hirnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أهور",
+      "tur": "verb",
+      "baslik": "أهور (form I)\n# أَهُورُ (ʔahūru) /ʔa.huː.ru/: first-person singular non-past active indicative of هَارَ (hāra)\n# أَهُورَ (ʔahūra) /ʔa.huː.ra/: first-person singular non-past active subjunctive of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔahūru", "hāra", "ʔahūra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هاروا",
+      "tur": "verb",
+      "baslik": "هَارُوا • (hārū) (form I) /haː.ruː/\n# third-person masculine plural past active of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hārū", "hāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهوران",
+      "tur": "verb",
+      "baslik": "تَهُورَانِ • (tahūrāni) (form I) /ta.huː.raː.ni/\n# inflection of هَارَ (hāra):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahūrāni", "hāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهورين",
+      "tur": "verb",
+      "baslik": "تَهُورِينَ • (tahūrīna) (form I) /ta.huː.riː.na/\n# second-person feminine singular non-past active indicative of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahūrīna", "hāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهور",
+      "tur": "verb",
+      "baslik": "يهور (form I)\n# يَهُورُ (yahūru) /ja.huː.ru/: third-person masculine singular non-past active indicative of هَارَ (hāra)\n# يَهُورَ (yahūra) /ja.huː.ra/: third-person masculine singular non-past active subjunctive of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahūru", "hāra", "yahūra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهوران",
+      "tur": "verb",
+      "baslik": "يَهُورَانِ • (yahūrāni) (form I) /ja.huː.raː.ni/\n# third-person masculine dual non-past active indicative of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahūrāni", "hāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهرن",
+      "tur": "verb",
+      "baslik": "تهرن (form I)\n# تَهُرْنَ (tahurna) /ta.hur.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of هَارَ (hāra)\n# تُهَرْنَ (tuharna) /tu.har.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahurna", "hāra", "tuharna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهورون",
+      "tur": "verb",
+      "baslik": "تَهُورُونَ • (tahūrūna) (form I) /ta.huː.ruː.na/\n# second-person masculine plural non-past active indicative of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahūrūna", "hāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهورون",
+      "tur": "verb",
+      "baslik": "يَهُورُونَ • (yahūrūna) (form I) /ja.huː.ruː.na/\n# third-person masculine plural non-past active indicative of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahūrūna", "hāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهرن",
+      "tur": "verb",
+      "baslik": "يهرن (form I)\n# يَهُرْنَ (yahurna) /ja.hur.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of هَارَ (hāra)\n# يُهَرْنَ (yuharna) /ju.har.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahurna", "hāra", "yuharna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهورا",
+      "tur": "verb",
+      "baslik": "يَهُورَا • (yahūrā) (form I) /ja.huː.raː/\n# third-person masculine dual non-past active subjunctive/jussive of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahūrā", "hāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهوروا",
+      "tur": "verb",
+      "baslik": "يَهُورُوا • (yahūrū) (form I) /ja.huː.ruː/\n# third-person masculine plural non-past active subjunctive/jussive of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahūrū", "hāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هورا",
+      "tur": "verb",
+      "baslik": "هُورَا • (hūrā) (form I) /huː.raː/\n# second-person dual imperative of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hūrā", "hāra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هوروا",
+      "tur": "verb",
+      "baslik": "هُورُوا • (hūrū) (form I) /huː.ruː/\n# second-person masculine plural imperative of هَارَ (hāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hūrū", "hāra"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "هار", "r7"]
+  ],
+  "mana": {
     "ince": "whole.n.02",
     "orta": "noun.animal",
     "ust": "canlı ve beden",
@@ -450,22 +322,15 @@
     "dayanak_tanim": "any of various lithe-bodied roundheaded fissiped mammals, many with retractile claws",
     "synset_sayisi": 4
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["living_thing.n.01", "precipitate.v.03", "stream.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["living_thing.n.01", "precipitate.v.03", "stream.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

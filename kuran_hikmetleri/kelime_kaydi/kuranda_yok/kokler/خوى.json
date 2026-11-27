@@ -1,516 +1,366 @@
 {
   "kok": "خوى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "خوى", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "mekayis": [
-      {
-        "baslik": "خَوَى",
-        "metin": "(خَوَى) الْخَاءُ وَالْوَاوُ وَالْيَاءُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى الْخُلُوِّ وَالسُّقُوطِ. يُقَالُ خَوَتِ الدَّارُ تَخْوِي. وَخَوَى النَّجْمُ، إِذَا سَقَطَ وَلَمْ يَكُنْ عِنْدَ سُقُوطِهِ مَطَرٌ; وَأَخْوَى أَيْضًا. قَالَ:\nوَأَخْوَتْ نَجُومُ الْأَخْذِ إِلَّا أَنِضَّةً ... أَنِضَّةَ مَحْلٍ لَيْسَ قَاطِرُهَا يُثْرِي\nوَخَوَّتِ النُّجُومُ تَخْوِيَةً، إِذَا مَالَتْ لِلْمَغِيبِ. وَخَوَّتِ الْإِبِلُ تَخْوِيَةً، إِذَا خُمِصَتْ بُطُونُهَا. وَخَوِيَتِ الْمَرْأَةُ خَوًى، إِذَا لَمْ تَأْكُلْ عِنْدَ الْوِلَادَةِ. وَيُقَالُ خَوَّى الرَّجُلُ، إِذَا تَجَافَى فِي سُجُودِهِ، وَكَذَا الْبَعِيرُ إِذَا تَجَافَى فِي بُرُوكِهِ. وَهُوَ قِيَاسُ الْبَابِ ; لِأَنَّهُ إِذَا خَوَّى فِي سُجُودِهِ فَقَدْ أَخْلَى مَا بَيْنَ عَضُدِهِ وَجَنْبِهِ. وَخَوَّتِ الْمَرْأَةُ عِنْدَ جُلُوسِهَا عَلَى الْمِجْمَرِ. وَخَوَّى الطَّائِرُ، إِذَا أَرْسَلَ جَنَاحَيْهِ. فَأَمَّا الْخَوَاةُ فَالصَّوْتُ. وَقَدْ قُلْنَا إِنَّ أَكْثَرَ ذَلِكَ لَا يَنْقَاسُ، وَلَيْسَ بِأَصْلٍ."
-      }
-    ],
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الحاء والنون",
-      "baslik": "خوو - خوى",
-      "mihveri": "فراغ أثناءٍ مُكتنَفَةٍ مُحاطة: كالخَوَاء الموصوف، وكخَوَاية السِنان والرحْل، وكالوادي. والأرضُ المتطامنةُ والخاليةُ ظرف شأنها أن تشغل. ومنه خوّت الدار- بتضعيف الواو، وخَوِيَت (كرضى): أَقْوَتْ وخَلَتْ من أهلها. قال تعالى: {فَتِلْكَ بُيُوتُهُمْ خَاوِيَةً بِمَا ظَلَمُوا} أي خالية بعد بَوَارهم \" (هلاكهم) {وَهِيَ خَاوِيَةٌ عَلَى عُرُوشِهَا} [الكهف: 42]، {أَوْ كَالَّذِي مَرَّ عَلَى قَرْيَةٍ وَهِيَ خَاوِيَةٌ عَلَى عُرُوشِهَا} [البقرة: 259] وكذلك [ما في الحج: 45، والنمل: 52] (1/516) خالية من الناس والبيوتُ قائمة، أو استُعْمِل الخَواء في سقوط الحيطان نفسها (كأنما فَرَغت أثناؤها وما بين لبناتها) فسقطت العروشُ ثم انهارت الحيطان عليها [من قر 3/ 290 بتصرف] {كَأَنَّهُمْ أَعْجَازُ نَخْلٍ خَاوِيَةٍ} [الحاقة: 7] تفسر بخاوية الجوف، شأن جذوع النخل، وبالمنقلعة الساقطة. ومن الأصل \"خَوَى الزَنْدُ (كرمى) وأخْوَى: لم يُورِ (الزَند عُود شجر تتولد منه النار بالحكّ، فإذا لم يُورِ أي لم يولّدْ نارّا فكأنه فارغ). واختوى الشيءَ: اخْتطفه (أخذه في خَوَايته أي جَوفه وحَوْزته) وخَوِيَت المرأة -كرضى: وَلَدت. والخَوَى -كالفَتَى: الرُعاف (يَخْرجُ فَيَخِفُّ الضغط عن العِرْق كأنما خلا) وكذا الخَوّ: العسل الخارج من جوف النحل \" (شأنه أن يخرج فيخلو الجوف بعده).",
-      "sesler": "",
-      "tam_metin": "{فَتِلْكَ بُيُوتُهُمْ خَاوِيَةً بِمَا ظَلَمُوا} [النمل: 52]\n\"الخَوَاء -كسماء: الهَواَء بين الشيئين، والهَوَاء الذي بين الأرض والسماء. ودخل الفارس في خَوَاء فَرَسِه: يعني ما بين يديه ورجليه. (أي حال جريه به فلا يتمكن منه عَدُوه). خَوَاية الرحْل: متسع داخله (= تجويف البرذعة ونحوها الذي يلتقم ظهر الدابة) وخواية السِنان: جبته (السنان جِذْعُه أنبوبة حديدية هي الجبّة يدسُّ فيها طَرَفُ الرمح. ومُقَدّم السنان عريض كالسكين ذات الحدّين أو مذبَّب). الخَوّ -بالفتح: الوادي الواسع/ الأرض المتطامنة. الخُوة -بالضم: الأرض الخالية \" [الأخيران من تاج].\n° المعنى المحوري\nفراغ أثناءٍ مُكتنَفَةٍ مُحاطة: كالخَوَاء الموصوف، وكخَوَاية السِنان والرحْل، وكالوادي. والأرضُ المتطامنةُ والخاليةُ ظرف شأنها أن تشغل. ومنه خوّت الدار- بتضعيف الواو، وخَوِيَت (كرضى): أَقْوَتْ وخَلَتْ من أهلها. قال تعالى: {فَتِلْكَ بُيُوتُهُمْ خَاوِيَةً بِمَا ظَلَمُوا} أي خالية بعد بَوَارهم \" (هلاكهم) {وَهِيَ خَاوِيَةٌ عَلَى عُرُوشِهَا} [الكهف: 42]، {أَوْ كَالَّذِي مَرَّ عَلَى قَرْيَةٍ وَهِيَ خَاوِيَةٌ عَلَى عُرُوشِهَا} [البقرة: 259] وكذلك [ما في الحج: 45، والنمل: 52]\n(1/516)\nخالية من الناس والبيوتُ قائمة، أو استُعْمِل الخَواء في سقوط الحيطان نفسها (كأنما فَرَغت أثناؤها وما بين لبناتها) فسقطت العروشُ ثم انهارت الحيطان عليها [من قر 3/ 290 بتصرف] {كَأَنَّهُمْ أَعْجَازُ نَخْلٍ خَاوِيَةٍ} [الحاقة: 7] تفسر بخاوية الجوف، شأن جذوع النخل، وبالمنقلعة الساقطة.\nومن الأصل \"خَوَى الزَنْدُ (كرمى) وأخْوَى: لم يُورِ (الزَند عُود شجر تتولد منه النار بالحكّ، فإذا لم يُورِ أي لم يولّدْ نارّا فكأنه فارغ). واختوى الشيءَ: اخْتطفه (أخذه في خَوَايته أي جَوفه وحَوْزته) وخَوِيَت المرأة -كرضى: وَلَدت. والخَوَى -كالفَتَى: الرُعاف (يَخْرجُ فَيَخِفُّ الضغط عن العِرْق كأنما خلا) وكذا الخَوّ: العسل الخارج من جوف النحل \" (شأنه أن يخرج فيخلو الجوف بعده).",
-      "fasil_ozeti": "° معنى الفصل المعجمي (حن): تتعلق معاني التركيب بجوف الشيء القوي أو أثنائه -كما يتمثل في امتداد الصوت اللطيف من الناقة والقوس -في (حنن)، وفي جفاف ندى الحب الذي في الأثناء -في (حين)، وفي الثقل المترتب على اكتناز الأثناء بثقيل -في (حنث)، وفي التفاف الحبل والتواء الشيء فيكون له تجوف في موضع الانثناء -في (حنج)، وبزداد ذلك التجوف حتى يصير كالقناة الواسعة -في (حنجر)، ويتمثل كذلك في إخراج الغضوضة والطراءة التي في أثناء المحنوذ -في (حنذ)، وفي انصباب الانحراف عن الاتجاه على الخارج من الأثناء -في (حنف)، وفي كون الصلابة منصبة على التجوف الذي في باطن الحنك -في (حنك)."
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "تخوين",
-        "u": "تخوين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَخْوِينَ • (taḵwīna) (form I) /tax.wiː.na/\n# inflection of خَوَى (ḵawā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḵwīna", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "خوي",
-        "u": "خوي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "خُوِيَ • (ḵuwiya) (form I) /xu.wi.ja/\n# third-person masculine singular past passive of خَوَى (ḵawā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵuwiya", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "أخو",
-        "u": "أخو",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أَخْوِ • (ʔaḵwi) (form I) /ʔax.wi/\n# first-person singular non-past active jussive of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḵwi", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "خويت",
-        "u": "خويت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "خويت (form I)\n# خَوَيْتُ (ḵawaytu) /xa.waj.tu/: first-person singular past active of خَوَى (ḵawā)\n# خَوَيْتَ (ḵawayta) /xa.waj.ta/: second-person masculine singular past active of خَوَى (ḵawā)\n# خَوَيْتِ (ḵawayti) /xa.waj.ti/: second-person feminine singular past active of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵawaytu", "ḵawā", "ḵawayta"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "خوتا",
-        "u": "خوتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "خَوَتَا • (ḵawatā) (form I) /xa.wa.taː/\n# third-person feminine dual past active of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵawatā", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "خوت",
-        "u": "خوت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "خَوَتْ • (ḵawat) (form I) /xa.wat/\n# third-person feminine singular past active of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵawat", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "خويا",
-        "u": "خويا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "خَوَيَا • (ḵawayā) (form I) /xa.wa.jaː/\n# third-person masculine dual past active of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵawayā", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "خويتما",
-        "u": "خويتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "خَوَيْتُمَا • (ḵawaytumā) (form I) /xa.waj.tu.maː/\n# second-person dual past active of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵawaytumā", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "خوينا",
-        "u": "خوينا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "خَوَيْنَا • (ḵawaynā) (form I) /xa.waj.naː/\n# first-person plural past active of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵawaynā", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "خووا",
-        "u": "خووا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "خَوَوْا • (ḵawaw) (form I) /xa.waw/\n# third-person masculine plural past active of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵawaw", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "خويتن",
-        "u": "خويتن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "خَوَيْتُنَّ • (ḵawaytunna) (form I) /xa.waj.tun.na/\n# second-person feminine plural past active of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵawaytunna", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "خويتم",
-        "u": "خويتم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "خَوَيْتُمْ • (ḵawaytum) (form I) /xa.waj.tum/\n# second-person masculine plural past active of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵawaytum", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "خوين",
-        "u": "خوين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "خَوَيْنَ • (ḵawayna) (form I) /xa.waj.na/\n# third-person feminine plural past active of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵawayna", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تخوي",
-        "u": "تخوي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تخوي (form I)\n# تَخْوِي (taḵwī) /tax.wiː/: inflection of خَوَى (ḵawā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَخْوِيَ (taḵwiya) /tax.wi.ja/: inflection of خَوَى (ḵawā):\n## second-person masculine singular non-past active subjunctive\n## third",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḵwī", "ḵawā", "taḵwiya"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يخوي",
-        "u": "يخوي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يخوي (form I)\n# يَخْوِي (yaḵwī) /jax.wiː/: third-person masculine singular non-past active indicative of خَوَى (ḵawā)\n# يَخْوِيَ (yaḵwiya) /jax.wi.ja/: third-person masculine singular non-past active subjunctive of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḵwī", "ḵawā", "yaḵwiya"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "أخوي",
-        "u": "أخوي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أخوي (form I)\n# أَخْوِي (ʔaḵwī) /ʔax.wiː/: first-person singular non-past active indicative of خَوَى (ḵawā)\n# أَخْوِيَ (ʔaḵwiya) /ʔax.wi.ja/: first-person singular non-past active subjunctive of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḵwī", "ḵawā", "ʔaḵwiya"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تخويان",
-        "u": "تخويان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَخْوِيَانِ • (taḵwiyāni) (form I) /tax.wi.jaː.ni/\n# inflection of خَوَى (ḵawā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḵwiyāni", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "نخوي",
-        "u": "نخوي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نخوي (form I)\n# نَخْوِي (naḵwī) /nax.wiː/: first-person plural non-past active indicative of خَوَى (ḵawā)\n# نَخْوِيَ (naḵwiya) /nax.wi.ja/: first-person plural non-past active subjunctive of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḵwī", "ḵawā", "naḵwiya"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يخوون",
-        "u": "يخوون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَخْوُونَ • (yaḵwūna) (form I) /jax.wuː.na/\n# third-person masculine plural non-past active indicative of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḵwūna", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يخويان",
-        "u": "يخويان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَخْوِيَانِ • (yaḵwiyāni) (form I) /jax.wi.jaː.ni/\n# third-person masculine dual non-past active indicative of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḵwiyāni", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تخوون",
-        "u": "تخوون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَخْوُونَ • (taḵwūna) (form I) /tax.wuː.na/\n# second-person masculine plural non-past active indicative of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḵwūna", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يخوين",
-        "u": "يخوين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَخْوِينَ • (yaḵwīna) (form I) /jax.wiː.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḵwīna", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يخويا",
-        "u": "يخويا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَخْوِيَا • (yaḵwiyā) (form I) /jax.wi.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḵwiyā", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يخوى",
-        "u": "يخوى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُخْوَى • (yuḵwā) (form I) /jux.waː/\n# third-person masculine singular non-past passive indicative/subjunctive of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuḵwā", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يخووا",
-        "u": "يخووا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَخْوُوا • (yaḵwū) (form I) /jax.wuː/\n# third-person masculine plural non-past active subjunctive/jussive of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḵwū", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تخووا",
-        "u": "تخووا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَخْوُوا • (taḵwū) (form I) /tax.wuː/\n# second-person masculine plural non-past active subjunctive/jussive of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḵwū", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يخو",
-        "u": "يخو",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يخو (form I)\n# يَخْوِ (yaḵwi) /jax.wi/: third-person masculine singular non-past active jussive of خَوَى (ḵawā)\n# يُخْوَ (yuḵwa) /jux.wa/: third-person masculine singular non-past passive jussive of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḵwi", "ḵawā", "yuḵwa"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تخويا",
-        "u": "تخويا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَخْوِيَا • (taḵwiyā) (form I) /tax.wi.jaː/\n# inflection of خَوَى (ḵawā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḵwiyā", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "اخو",
-        "u": "اخو",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِخْوِ • (iḵwi) (form I) /ix.wi/\n# second-person masculine singular imperative of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iḵwi", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تخو",
-        "u": "تخو",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَخْوِ • (taḵwi) (form I) /tax.wi/\n# inflection of خَوَى (ḵawā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḵwi", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "اخوي",
-        "u": "اخوي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِخْوِي • (iḵwī) (form I) /ix.wiː/\n# second-person feminine singular imperative of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iḵwī", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "اخووا",
-        "u": "اخووا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِخْوُوا • (iḵwū) (form I) /ix.wuː/\n# second-person masculine plural imperative of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iḵwū", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "اخويا",
-        "u": "اخويا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِخْوِيَا • (iḵwiyā) (form I) /ix.wi.jaː/\n# second-person dual imperative of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iḵwiyā", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "اخوين",
-        "u": "اخوين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِخْوِينَ • (iḵwīna) (form I) /ix.wiː.na/\n# second-person feminine plural imperative of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iḵwīna", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      },
-      {
-        "w": "نخو",
-        "u": "نخو",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نَخْوِ • (naḵwi) (form I) /nax.wi/\n# first-person plural non-past active jussive of خَوَى (ḵawā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḵwi", "ḵawā"],
-        "k": "خوى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "خى",
+  "ses": {
     "harf": "خ",
+    "fasil": "خى",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+  "mekayis": [
+    {
+      "baslik": "خَوَى",
+      "metin": "(خَوَى) الْخَاءُ وَالْوَاوُ وَالْيَاءُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى الْخُلُوِّ وَالسُّقُوطِ. يُقَالُ خَوَتِ الدَّارُ تَخْوِي. وَخَوَى النَّجْمُ، إِذَا سَقَطَ وَلَمْ يَكُنْ عِنْدَ سُقُوطِهِ مَطَرٌ; وَأَخْوَى أَيْضًا. قَالَ:\nوَأَخْوَتْ نَجُومُ الْأَخْذِ إِلَّا أَنِضَّةً ... أَنِضَّةَ مَحْلٍ لَيْسَ قَاطِرُهَا يُثْرِي\nوَخَوَّتِ النُّجُومُ تَخْوِيَةً، إِذَا مَالَتْ لِلْمَغِيبِ. وَخَوَّتِ الْإِبِلُ تَخْوِيَةً، إِذَا خُمِصَتْ بُطُونُهَا. وَخَوِيَتِ الْمَرْأَةُ خَوًى، إِذَا لَمْ تَأْكُلْ عِنْدَ الْوِلَادَةِ. وَيُقَالُ خَوَّى الرَّجُلُ، إِذَا تَجَافَى فِي سُجُودِهِ، وَكَذَا الْبَعِيرُ إِذَا تَجَافَى فِي بُرُوكِهِ. وَهُوَ قِيَاسُ الْبَابِ ; لِأَنَّهُ إِذَا خَوَّى فِي سُجُودِهِ فَقَدْ أَخْلَى مَا بَيْنَ عَضُدِهِ وَجَنْبِهِ. وَخَوَّتِ الْمَرْأَةُ عِنْدَ جُلُوسِهَا عَلَى الْمِجْمَرِ. وَخَوَّى الطَّائِرُ، إِذَا أَرْسَلَ جَنَاحَيْهِ. فَأَمَّا الْخَوَاةُ فَالصَّوْتُ. وَقَدْ قُلْنَا إِنَّ أَكْثَرَ ذَلِكَ لَا يَنْقَاسُ، وَلَيْسَ بِأَصْلٍ."
+    }
+  ],
+  "cebel": {
     "fasil": "الحاء والنون",
+    "baslik": "خوو - خوى",
     "mihveri": "فراغ أثناءٍ مُكتنَفَةٍ مُحاطة: كالخَوَاء الموصوف، وكخَوَاية السِنان والرحْل، وكالوادي. والأرضُ المتطامنةُ والخاليةُ ظرف شأنها أن تشغل. ومنه خوّت الدار- بتضعيف الواو، وخَوِيَت (كرضى): أَقْوَتْ وخَلَتْ من أهلها. قال تعالى: {فَتِلْكَ بُيُوتُهُمْ خَاوِيَةً بِمَا ظَلَمُوا} أي خالية بعد بَوَارهم \" (هلاكهم) {وَهِيَ خَاوِيَةٌ عَلَى عُرُوشِهَا} [الكهف: 42]، {أَوْ كَالَّذِي مَرَّ عَلَى قَرْيَةٍ وَهِيَ خَاوِيَةٌ عَلَى عُرُوشِهَا} [البقرة: 259] وكذلك [ما في الحج: 45، والنمل: 52] (1/516) خالية من الناس والبيوتُ قائمة، أو استُعْمِل الخَواء في سقوط الحيطان نفسها (كأنما فَرَغت أثناؤها وما بين لبناتها) فسقطت العروشُ ثم انهارت الحيطان عليها [من قر 3/ 290 بتصرف] {كَأَنَّهُمْ أَعْجَازُ نَخْلٍ خَاوِيَةٍ} [الحاقة: 7] تفسر بخاوية الجوف، شأن جذوع النخل، وبالمنقلعة الساقطة. ومن الأصل \"خَوَى الزَنْدُ (كرمى) وأخْوَى: لم يُورِ (الزَند عُود شجر تتولد منه النار بالحكّ، فإذا لم يُورِ أي لم يولّدْ نارّا فكأنه فارغ). واختوى الشيءَ: اخْتطفه (أخذه في خَوَايته أي جَوفه وحَوْزته) وخَوِيَت المرأة -كرضى: وَلَدت. والخَوَى -كالفَتَى: الرُعاف (يَخْرجُ فَيَخِفُّ الضغط عن العِرْق كأنما خلا) وكذا الخَوّ: العسل الخارج من جوف النحل \" (شأنه أن يخرج فيخلو الجوف بعده).",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (حن): تتعلق معاني التركيب بجوف الشيء القوي أو أثنائه -كما يتمثل في امتداد الصوت اللطيف من الناقة والقوس -في (حنن)، وفي جفاف ندى الحب الذي في الأثناء -في (حين)، وفي الثقل المترتب على اكتناز الأثناء بثقيل -في (حنث)، وفي التفاف الحبل والتواء الشيء فيكون له تجوف في موضع الانثناء -في (حنج)، وبزداد ذلك التجوف حتى يصير كالقناة الواسعة -في (حنجر)، ويتمثل كذلك في إخراج الغضوضة والطراءة التي في أثناء المحنوذ -في (حنذ)، وفي انصباب الانحراف عن الاتجاه على الخارج من الأثناء -في (حنف)، وفي كون الصلابة منصبة على التجوف الذي في باطن الحنك -في (حنك).",
-    "tam_metin": "{فَتِلْكَ بُيُوتُهُمْ خَاوِيَةً بِمَا ظَلَمُوا} [النمل: 52]\n\"الخَوَاء -كسماء: الهَواَء بين الشيئين، والهَوَاء الذي بين الأرض والسماء. ودخل الفارس في خَوَاء فَرَسِه: يعني ما بين يديه ورجليه. (أي حال جريه به فلا يتمكن منه عَدُوه). خَوَاية الرحْل: متسع داخله (= تجويف البرذعة ونحوها الذي يلتقم ظهر الدابة) وخواية السِنان: جبته (السنان جِذْعُه أنبوبة حديدية هي الجبّة يدسُّ فيها طَرَفُ الرمح. ومُقَدّم السنان عريض كالسكين ذات الحدّين أو مذبَّب). الخَوّ -بالفتح: الوادي الواسع/ الأرض المتطامنة. الخُوة -بالضم: الأرض الخالية \" [الأخيران من تاج].\n° المعنى المحوري\nفراغ أثناءٍ مُكتنَفَةٍ مُحاطة: كالخَوَاء الموصوف، وكخَوَاية السِنان والرحْل، وكالوادي. والأرضُ المتطامنةُ والخاليةُ ظرف شأنها أن تشغل. ومنه خوّت الدار- بتضعيف الواو، وخَوِيَت (كرضى): أَقْوَتْ وخَلَتْ من أهلها. قال تعالى: {فَتِلْكَ بُيُوتُهُمْ خَاوِيَةً بِمَا ظَلَمُوا} أي خالية بعد بَوَارهم \" (هلاكهم) {وَهِيَ خَاوِيَةٌ عَلَى عُرُوشِهَا} [الكهف: 42]، {أَوْ كَالَّذِي مَرَّ عَلَى قَرْيَةٍ وَهِيَ خَاوِيَةٌ عَلَى عُرُوشِهَا} [البقرة: 259] وكذلك [ما في الحج: 45، والنمل: 52]\n(1/516)\nخالية من الناس والبيوتُ قائمة، أو استُعْمِل الخَواء في سقوط الحيطان نفسها (كأنما فَرَغت أثناؤها وما بين لبناتها) فسقطت العروشُ ثم انهارت الحيطان عليها [من قر 3/ 290 بتصرف] {كَأَنَّهُمْ أَعْجَازُ نَخْلٍ خَاوِيَةٍ} [الحاقة: 7] تفسر بخاوية الجوف، شأن جذوع النخل، وبالمنقلعة الساقطة.\nومن الأصل \"خَوَى الزَنْدُ (كرمى) وأخْوَى: لم يُورِ (الزَند عُود شجر تتولد منه النار بالحكّ، فإذا لم يُورِ أي لم يولّدْ نارّا فكأنه فارغ). واختوى الشيءَ: اخْتطفه (أخذه في خَوَايته أي جَوفه وحَوْزته) وخَوِيَت المرأة -كرضى: وَلَدت. والخَوَى -كالفَتَى: الرُعاف (يَخْرجُ فَيَخِفُّ الضغط عن العِرْق كأنما خلا) وكذا الخَوّ: العسل الخارج من جوف النحل \" (شأنه أن يخرج فيخلو الجوف بعده)."
+    "tam_metin": "{فَتِلْكَ بُيُوتُهُمْ خَاوِيَةً بِمَا ظَلَمُوا} [النمل: 52]\n\"الخَوَاء -كسماء: الهَواَء بين الشيئين، والهَوَاء الذي بين الأرض والسماء. ودخل الفارس في خَوَاء فَرَسِه: يعني ما بين يديه ورجليه. (أي حال جريه به فلا يتمكن منه عَدُوه). خَوَاية الرحْل: متسع داخله (= تجويف البرذعة ونحوها الذي يلتقم ظهر الدابة) وخواية السِنان: جبته (السنان جِذْعُه أنبوبة حديدية هي الجبّة يدسُّ فيها طَرَفُ الرمح. ومُقَدّم السنان عريض كالسكين ذات الحدّين أو مذبَّب). الخَوّ -بالفتح: الوادي الواسع/ الأرض المتطامنة. الخُوة -بالضم: الأرض الخالية \" [الأخيران من تاج].\n° المعنى المحوري\nفراغ أثناءٍ مُكتنَفَةٍ مُحاطة: كالخَوَاء الموصوف، وكخَوَاية السِنان والرحْل، وكالوادي. والأرضُ المتطامنةُ والخاليةُ ظرف شأنها أن تشغل. ومنه خوّت الدار- بتضعيف الواو، وخَوِيَت (كرضى): أَقْوَتْ وخَلَتْ من أهلها. قال تعالى: {فَتِلْكَ بُيُوتُهُمْ خَاوِيَةً بِمَا ظَلَمُوا} أي خالية بعد بَوَارهم \" (هلاكهم) {وَهِيَ خَاوِيَةٌ عَلَى عُرُوشِهَا} [الكهف: 42]، {أَوْ كَالَّذِي مَرَّ عَلَى قَرْيَةٍ وَهِيَ خَاوِيَةٌ عَلَى عُرُوشِهَا} [البقرة: 259] وكذلك [ما في الحج: 45، والنمل: 52]\n(1/516)\nخالية من الناس والبيوتُ قائمة، أو استُعْمِل الخَواء في سقوط الحيطان نفسها (كأنما فَرَغت أثناؤها وما بين لبناتها) فسقطت العروشُ ثم انهارت الحيطان عليها [من قر 3/ 290 بتصرف] {كَأَنَّهُمْ أَعْجَازُ نَخْلٍ خَاوِيَةٍ} [الحاقة: 7] تفسر بخاوية الجوف، شأن جذوع النخل، وبالمنقلعة الساقطة.\nومن الأصل \"خَوَى الزَنْدُ (كرمى) وأخْوَى: لم يُورِ (الزَند عُود شجر تتولد منه النار بالحكّ، فإذا لم يُورِ أي لم يولّدْ نارّا فكأنه فارغ). واختوى الشيءَ: اخْتطفه (أخذه في خَوَايته أي جَوفه وحَوْزته) وخَوِيَت المرأة -كرضى: وَلَدت. والخَوَى -كالفَتَى: الرُعاف (يَخْرجُ فَيَخِفُّ الضغط عن العِرْق كأنما خلا) وكذا الخَوّ: العسل الخارج من جوف النحل \" (شأنه أن يخرج فيخلو الجوف بعده).",
+    "fasil_ozeti": "° معنى الفصل المعجمي (حن): تتعلق معاني التركيب بجوف الشيء القوي أو أثنائه -كما يتمثل في امتداد الصوت اللطيف من الناقة والقوس -في (حنن)، وفي جفاف ندى الحب الذي في الأثناء -في (حين)، وفي الثقل المترتب على اكتناز الأثناء بثقيل -في (حنث)، وفي التفاف الحبل والتواء الشيء فيكون له تجوف في موضع الانثناء -في (حنج)، وبزداد ذلك التجوف حتى يصير كالقناة الواسعة -في (حنجر)، ويتمثل كذلك في إخراج الغضوضة والطراءة التي في أثناء المحنوذ -في (حنذ)، وفي انصباب الانحراف عن الاتجاه على الخارج من الأثناء -في (حنف)، وفي كون الصلابة منصبة على التجوف الذي في باطن الحنك -في (حنك)."
   },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تخوين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَخْوِينَ • (taḵwīna) (form I) /tax.wiː.na/\n# inflection of خَوَى (ḵawā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḵwīna", "ḵawā"]
+    },
+    {
+      "madde": "خوي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "خُوِيَ • (ḵuwiya) (form I) /xu.wi.ja/\n# third-person masculine singular past passive of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵuwiya", "ḵawā"]
+    },
+    {
+      "madde": "أخو",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أَخْوِ • (ʔaḵwi) (form I) /ʔax.wi/\n# first-person singular non-past active jussive of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḵwi", "ḵawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "خويت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "خويت (form I)\n# خَوَيْتُ (ḵawaytu) /xa.waj.tu/: first-person singular past active of خَوَى (ḵawā)\n# خَوَيْتَ (ḵawayta) /xa.waj.ta/: second-person masculine singular past active of خَوَى (ḵawā)\n# خَوَيْتِ (ḵawayti) /xa.waj.ti/: second-person feminine singular past active of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵawaytu", "ḵawā", "ḵawayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "خوتا",
+      "tur": "verb",
+      "baslik": "خَوَتَا • (ḵawatā) (form I) /xa.wa.taː/\n# third-person feminine dual past active of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵawatā", "ḵawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "خوت",
+      "tur": "verb",
+      "baslik": "خَوَتْ • (ḵawat) (form I) /xa.wat/\n# third-person feminine singular past active of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵawat", "ḵawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "خويا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "خَوَيَا • (ḵawayā) (form I) /xa.wa.jaː/\n# third-person masculine dual past active of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵawayā", "ḵawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "خويتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "خَوَيْتُمَا • (ḵawaytumā) (form I) /xa.waj.tu.maː/\n# second-person dual past active of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵawaytumā", "ḵawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "خوينا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "خَوَيْنَا • (ḵawaynā) (form I) /xa.waj.naː/\n# first-person plural past active of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵawaynā", "ḵawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "خووا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "خَوَوْا • (ḵawaw) (form I) /xa.waw/\n# third-person masculine plural past active of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵawaw", "ḵawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "خويتن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "خَوَيْتُنَّ • (ḵawaytunna) (form I) /xa.waj.tun.na/\n# second-person feminine plural past active of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵawaytunna", "ḵawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "خويتم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "خَوَيْتُمْ • (ḵawaytum) (form I) /xa.waj.tum/\n# second-person masculine plural past active of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵawaytum", "ḵawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "خوين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "خَوَيْنَ • (ḵawayna) (form I) /xa.waj.na/\n# third-person feminine plural past active of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵawayna", "ḵawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تخوي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تخوي (form I)\n# تَخْوِي (taḵwī) /tax.wiː/: inflection of خَوَى (ḵawā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَخْوِيَ (taḵwiya) /tax.wi.ja/: inflection of خَوَى (ḵawā):\n## second-person masculine singular non-past active subjunctive\n## third",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḵwī", "ḵawā", "taḵwiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يخوي",
+      "tur": "verb",
+      "baslik": "يخوي (form I)\n# يَخْوِي (yaḵwī) /jax.wiː/: third-person masculine singular non-past active indicative of خَوَى (ḵawā)\n# يَخْوِيَ (yaḵwiya) /jax.wi.ja/: third-person masculine singular non-past active subjunctive of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḵwī", "ḵawā", "yaḵwiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أخوي",
+      "tur": "verb",
+      "baslik": "أخوي (form I)\n# أَخْوِي (ʔaḵwī) /ʔax.wiː/: first-person singular non-past active indicative of خَوَى (ḵawā)\n# أَخْوِيَ (ʔaḵwiya) /ʔax.wi.ja/: first-person singular non-past active subjunctive of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḵwī", "ḵawā", "ʔaḵwiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تخويان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَخْوِيَانِ • (taḵwiyāni) (form I) /tax.wi.jaː.ni/\n# inflection of خَوَى (ḵawā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḵwiyāni", "ḵawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نخوي",
+      "tur": "verb",
+      "baslik": "نخوي (form I)\n# نَخْوِي (naḵwī) /nax.wiː/: first-person plural non-past active indicative of خَوَى (ḵawā)\n# نَخْوِيَ (naḵwiya) /nax.wi.ja/: first-person plural non-past active subjunctive of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḵwī", "ḵawā", "naḵwiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يخوون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَخْوُونَ • (yaḵwūna) (form I) /jax.wuː.na/\n# third-person masculine plural non-past active indicative of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḵwūna", "ḵawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يخويان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَخْوِيَانِ • (yaḵwiyāni) (form I) /jax.wi.jaː.ni/\n# third-person masculine dual non-past active indicative of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḵwiyāni", "ḵawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تخوون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَخْوُونَ • (taḵwūna) (form I) /tax.wuː.na/\n# second-person masculine plural non-past active indicative of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḵwūna", "ḵawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يخوين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَخْوِينَ • (yaḵwīna) (form I) /jax.wiː.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḵwīna", "ḵawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يخويا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَخْوِيَا • (yaḵwiyā) (form I) /jax.wi.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḵwiyā", "ḵawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يخوى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُخْوَى • (yuḵwā) (form I) /jux.waː/\n# third-person masculine singular non-past passive indicative/subjunctive of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuḵwā", "ḵawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يخووا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَخْوُوا • (yaḵwū) (form I) /jax.wuː/\n# third-person masculine plural non-past active subjunctive/jussive of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḵwū", "ḵawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تخووا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَخْوُوا • (taḵwū) (form I) /tax.wuː/\n# second-person masculine plural non-past active subjunctive/jussive of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḵwū", "ḵawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يخو",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يخو (form I)\n# يَخْوِ (yaḵwi) /jax.wi/: third-person masculine singular non-past active jussive of خَوَى (ḵawā)\n# يُخْوَ (yuḵwa) /jux.wa/: third-person masculine singular non-past passive jussive of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḵwi", "ḵawā", "yuḵwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تخويا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَخْوِيَا • (taḵwiyā) (form I) /tax.wi.jaː/\n# inflection of خَوَى (ḵawā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḵwiyā", "ḵawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اخو",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِخْوِ • (iḵwi) (form I) /ix.wi/\n# second-person masculine singular imperative of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iḵwi", "ḵawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تخو",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَخْوِ • (taḵwi) (form I) /tax.wi/\n# inflection of خَوَى (ḵawā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḵwi", "ḵawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اخوي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِخْوِي • (iḵwī) (form I) /ix.wiː/\n# second-person feminine singular imperative of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iḵwī", "ḵawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اخووا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِخْوُوا • (iḵwū) (form I) /ix.wuː/\n# second-person masculine plural imperative of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iḵwū", "ḵawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اخويا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِخْوِيَا • (iḵwiyā) (form I) /ix.wi.jaː/\n# second-person dual imperative of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iḵwiyā", "ḵawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اخوين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِخْوِينَ • (iḵwīna) (form I) /ix.wiː.na/\n# second-person feminine plural imperative of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iḵwīna", "ḵawā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نخو",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نَخْوِ • (naḵwi) (form I) /nax.wi/\n# first-person plural non-past active jussive of خَوَى (ḵawā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḵwi", "ḵawā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "خوى", "r7"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "ust": {
       "kume": 1,
       "merkez_kok": "قره",
@@ -530,6 +380,10 @@
       "boy": 241
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

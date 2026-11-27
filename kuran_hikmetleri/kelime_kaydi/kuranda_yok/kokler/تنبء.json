@@ -1,379 +1,295 @@
 {
   "kok": "تنبء",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تنبء", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يتنبأ",
-        "u": "يتنبأ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتنبأ (form V)\n# يَتَنَبَّأُ (yatanabbaʔu) /ja.ta.nab.ba.ʔu/: third-person masculine singular non-past active indicative of تَنَبَّأَ (tanabbaʔa)\n# يُتَنَبَّأُ (yutanabbaʔu) /ju.ta.nab.ba.ʔu/: third-person masculine singular non-past passive indicative of تَنَبَّأَ (tanabbaʔa)\n# يَتَنَبَّأَ (yatanabbaʔa) /ja.ta.nab.ba.ʔa/: third-person masculine singular non-past active subjunctive of تَنَبَّأَ (t",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatanabbaʔu", "tanabbaʔa", "yutanabbaʔu"],
-        "k": "تنبأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تنبئ",
-        "u": "تنبئ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُنُبِّئَ • (tunubbiʔa) (form V) /tu.nub.bi.ʔa/\n# third-person masculine singular past passive of تَنَبَّأَ (tanabbaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tunubbiʔa", "tanabbaʔa"],
-        "k": "تنبأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تنبئي",
-        "u": "تنبئي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَنَبَّئِي • (tanabbaʔī) (form V) /ta.nab.ba.ʔiː/\n# second-person feminine singular imperative of تَنَبَّأَ (tanabbaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tanabbaʔī", "tanabbaʔa"],
-        "k": "تنبأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تنبأت",
-        "u": "تنبأت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تنبأت (form V)\n# تَنَبَّأْتُ (tanabbaʔtu) /ta.nab.baʔ.tu/: first-person singular past active of تَنَبَّأَ (tanabbaʔa)\n# تَنَبَّأْتَ (tanabbaʔta) /ta.nab.baʔ.ta/: second-person masculine singular past active of تَنَبَّأَ (tanabbaʔa)\n# تَنَبَّأْتِ (tanabbaʔti) /ta.nab.baʔ.ti/: second-person feminine singular past active of تَنَبَّأَ (tanabbaʔa)\n# تَنَبَّأَتْ (tanabbaʔat) /ta.nab.ba.ʔat/: third-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tanabbaʔtu", "tanabbaʔa", "tanabbaʔta"],
-        "k": "تنبأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تتنبأ",
-        "u": "تتنبأ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتنبأ (form V)\n# تَتَنَبَّأُ (tatanabbaʔu) /ta.ta.nab.ba.ʔu/: inflection of تَنَبَّأَ (tanabbaʔa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَنَبَّأَ (tatanabbaʔa) /ta.ta.nab.ba.ʔa/: inflection of تَنَبَّأَ (tanabbaʔa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatanabbaʔu", "tanabbaʔa", "tatanabbaʔa"],
-        "k": "تنبأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تتنبئين",
-        "u": "تتنبئين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَنَبَّئِينَ • (tatanabbaʔīna) (form V) /ta.ta.nab.ba.ʔiː.na/\n# second-person feminine singular non-past active indicative of تَنَبَّأَ (tanabbaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatanabbaʔīna", "tanabbaʔa"],
-        "k": "تنبأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تتنبئي",
-        "u": "تتنبئي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَنَبَّئِي • (tatanabbaʔī) (form V) /ta.ta.nab.ba.ʔiː/\n# second-person feminine singular non-past active subjunctive/jussive of تَنَبَّأَ (tanabbaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatanabbaʔī", "tanabbaʔa"],
-        "k": "تنبأ",
-        "yol": "kök"
-      },
-      {
-        "w": "أتنبأ",
-        "u": "أتنبأ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتنبأ (form V)\n# أَتَنَبَّأُ (ʔatanabbaʔu) /ʔa.ta.nab.ba.ʔu/: first-person singular non-past active indicative of تَنَبَّأَ (tanabbaʔa)\n# أَتَنَبَّأَ (ʔatanabbaʔa) /ʔa.ta.nab.ba.ʔa/: first-person singular non-past active subjunctive of تَنَبَّأَ (tanabbaʔa)\n# أَتَنَبَّأْ (ʔatanabbaʔ) /ʔa.ta.nab.baʔ/: first-person singular non-past active jussive of تَنَبَّأَ (tanabbaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔatanabbaʔu", "tanabbaʔa", "ʔatanabbaʔa"],
-        "k": "تنبأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تنبأنا",
-        "u": "تنبأنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنَبَّأْنَا • (tanabbaʔnā) (form V) /ta.nab.baʔ.naː/\n# first-person plural past active of تَنَبَّأَ (tanabbaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tanabbaʔnā", "tanabbaʔa"],
-        "k": "تنبأ",
-        "yol": "kök"
-      },
-      {
-        "w": "نتنبأ",
-        "u": "نتنبأ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتنبأ (form V)\n# نَتَنَبَّأُ (natanabbaʔu) /na.ta.nab.ba.ʔu/: first-person plural non-past active indicative of تَنَبَّأَ (tanabbaʔa)\n# نَتَنَبَّأَ (natanabbaʔa) /na.ta.nab.ba.ʔa/: first-person plural non-past active subjunctive of تَنَبَّأَ (tanabbaʔa)\n# نَتَنَبَّأْ (natanabbaʔ) /na.ta.nab.baʔ/: first-person plural non-past active jussive of تَنَبَّأَ (tanabbaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["natanabbaʔu", "tanabbaʔa", "natanabbaʔa"],
-        "k": "تنبأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تنبأتم",
-        "u": "تنبأتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنَبَّأْتُمْ • (tanabbaʔtum) (form V) /ta.nab.baʔ.tum/\n# second-person masculine plural past active of تَنَبَّأَ (tanabbaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tanabbaʔtum", "tanabbaʔa"],
-        "k": "تنبأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تتنبؤون",
-        "u": "تتنبؤون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَنَبَّؤُونَ • (tatanabbaʔūna) (form V) /ta.ta.nab.ba.ʔuː.na/\n# second-person masculine plural non-past active indicative of تَنَبَّأَ (tanabbaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatanabbaʔūna", "tanabbaʔa"],
-        "k": "تنبأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تتنبؤوا",
-        "u": "تتنبؤوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَنَبَّؤُوا • (tatanabbaʔū) (form V) /ta.ta.nab.ba.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of تَنَبَّأَ (tanabbaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatanabbaʔū", "tanabbaʔa"],
-        "k": "تنبأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تنبؤوا",
-        "u": "تنبؤوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَنَبَّؤُوا • (tanabbaʔū) (form V) /ta.nab.ba.ʔuː/\n# inflection of تَنَبَّأَ (tanabbaʔa):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tanabbaʔū", "tanabbaʔa"],
-        "k": "تنبأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يتنبؤون",
-        "u": "يتنبؤون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَنَبَّؤُونَ • (yatanabbaʔūna) (form V) /ja.ta.nab.ba.ʔuː.na/\n# third-person masculine plural non-past active indicative of تَنَبَّأَ (tanabbaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatanabbaʔūna", "tanabbaʔa"],
-        "k": "تنبأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يتنبؤوا",
-        "u": "يتنبؤوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَنَبَّؤُوا • (yatanabbaʔū) (form V) /ja.ta.nab.ba.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of تَنَبَّأَ (tanabbaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatanabbaʔū", "tanabbaʔa"],
-        "k": "تنبأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تنبأن",
-        "u": "تنبأن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَنَبَّأْنَ • (tanabbaʔna) (form V) /ta.nab.baʔ.na/\n# inflection of تَنَبَّأَ (tanabbaʔa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tanabbaʔna", "tanabbaʔa"],
-        "k": "تنبأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تنبأتن",
-        "u": "تنبأتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنَبَّأْتُنَّ • (tanabbaʔtunna) (form V) /ta.nab.baʔ.tun.na/\n# second-person feminine plural past active of تَنَبَّأَ (tanabbaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tanabbaʔtunna", "tanabbaʔa"],
-        "k": "تنبأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تتنبأن",
-        "u": "تتنبأن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَنَبَّأْنَ • (tatanabbaʔna) (form V) /ta.ta.nab.baʔ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَنَبَّأَ (tanabbaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatanabbaʔna", "tanabbaʔa"],
-        "k": "تنبأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يتنبأن",
-        "u": "يتنبأن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَنَبَّأْنَ • (yatanabbaʔna) (form V) /ja.ta.nab.baʔ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَنَبَّأَ (tanabbaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatanabbaʔna", "tanabbaʔa"],
-        "k": "تنبأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تنبآ",
-        "u": "تنبآ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَنَبَّآ • (tanabbaʔā) (form V) /ta.nab.ba.ʔaː/\n# inflection of تَنَبَّأَ (tanabbaʔa):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tanabbaʔā", "tanabbaʔa"],
-        "k": "تنبأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تنبأتما",
-        "u": "تنبأتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنَبَّأْتُمَا • (tanabbaʔtumā) (form V) /ta.nab.baʔ.tu.maː/\n# second-person dual past active of تَنَبَّأَ (tanabbaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tanabbaʔtumā", "tanabbaʔa"],
-        "k": "تنبأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تنبأتا",
-        "u": "تنبأتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنَبَّأَتَا • (tanabbaʔatā) (form V) /ta.nab.ba.ʔa.taː/\n# third-person feminine dual past active of تَنَبَّأَ (tanabbaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tanabbaʔatā", "tanabbaʔa"],
-        "k": "تنبأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يتنبآن",
-        "u": "يتنبآن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَنَبَّآنِ • (yatanabbaʔāni) (form V) /ja.ta.nab.ba.ʔaː.ni/\n# third-person masculine dual non-past active indicative of تَنَبَّأَ (tanabbaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatanabbaʔāni", "tanabbaʔa"],
-        "k": "تنبأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يتنبآ",
-        "u": "يتنبآ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَنَبَّآ • (yatanabbaʔā) (form V) /ja.ta.nab.ba.ʔaː/\n# third-person masculine dual non-past active subjunctive/jussive of تَنَبَّأَ (tanabbaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatanabbaʔā", "tanabbaʔa"],
-        "k": "تنبأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تتنبآن",
-        "u": "تتنبآن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَنَبَّآنِ • (tatanabbaʔāni) (form V) /ta.ta.nab.ba.ʔaː.ni/\n# inflection of تَنَبَّأَ (tanabbaʔa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatanabbaʔāni", "tanabbaʔa"],
-        "k": "تنبأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تتنبآ",
-        "u": "تتنبآ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَنَبَّآ • (tatanabbaʔā) (form V) /ta.ta.nab.ba.ʔaː/\n# inflection of تَنَبَّأَ (tanabbaʔa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatanabbaʔā", "tanabbaʔa"],
-        "k": "تنبأ",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تن",
+  "ses": {
     "harf": "ت",
+    "fasil": "تن",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يتنبأ",
+      "tur": "verb",
+      "baslik": "يتنبأ (form V)\n# يَتَنَبَّأُ (yatanabbaʔu) /ja.ta.nab.ba.ʔu/: third-person masculine singular non-past active indicative of تَنَبَّأَ (tanabbaʔa)\n# يُتَنَبَّأُ (yutanabbaʔu) /ju.ta.nab.ba.ʔu/: third-person masculine singular non-past passive indicative of تَنَبَّأَ (tanabbaʔa)\n# يَتَنَبَّأَ (yatanabbaʔa) /ja.ta.nab.ba.ʔa/: third-person masculine singular non-past active subjunctive of تَنَبَّأَ (t",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatanabbaʔu", "tanabbaʔa", "yutanabbaʔu"],
+      "kok_yazilis": "تنبأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنبئ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُنُبِّئَ • (tunubbiʔa) (form V) /tu.nub.bi.ʔa/\n# third-person masculine singular past passive of تَنَبَّأَ (tanabbaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tunubbiʔa", "tanabbaʔa"],
+      "kok_yazilis": "تنبأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنبئي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَنَبَّئِي • (tanabbaʔī) (form V) /ta.nab.ba.ʔiː/\n# second-person feminine singular imperative of تَنَبَّأَ (tanabbaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tanabbaʔī", "tanabbaʔa"],
+      "kok_yazilis": "تنبأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنبأت",
+      "tur": "verb",
+      "baslik": "تنبأت (form V)\n# تَنَبَّأْتُ (tanabbaʔtu) /ta.nab.baʔ.tu/: first-person singular past active of تَنَبَّأَ (tanabbaʔa)\n# تَنَبَّأْتَ (tanabbaʔta) /ta.nab.baʔ.ta/: second-person masculine singular past active of تَنَبَّأَ (tanabbaʔa)\n# تَنَبَّأْتِ (tanabbaʔti) /ta.nab.baʔ.ti/: second-person feminine singular past active of تَنَبَّأَ (tanabbaʔa)\n# تَنَبَّأَتْ (tanabbaʔat) /ta.nab.ba.ʔat/: third-perso",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tanabbaʔtu", "tanabbaʔa", "tanabbaʔta"],
+      "kok_yazilis": "تنبأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتنبأ",
+      "tur": "verb",
+      "baslik": "تتنبأ (form V)\n# تَتَنَبَّأُ (tatanabbaʔu) /ta.ta.nab.ba.ʔu/: inflection of تَنَبَّأَ (tanabbaʔa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَنَبَّأَ (tatanabbaʔa) /ta.ta.nab.ba.ʔa/: inflection of تَنَبَّأَ (tanabbaʔa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatanabbaʔu", "tanabbaʔa", "tatanabbaʔa"],
+      "kok_yazilis": "تنبأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتنبئين",
+      "tur": "verb",
+      "baslik": "تَتَنَبَّئِينَ • (tatanabbaʔīna) (form V) /ta.ta.nab.ba.ʔiː.na/\n# second-person feminine singular non-past active indicative of تَنَبَّأَ (tanabbaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatanabbaʔīna", "tanabbaʔa"],
+      "kok_yazilis": "تنبأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتنبئي",
+      "tur": "verb",
+      "baslik": "تَتَنَبَّئِي • (tatanabbaʔī) (form V) /ta.ta.nab.ba.ʔiː/\n# second-person feminine singular non-past active subjunctive/jussive of تَنَبَّأَ (tanabbaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatanabbaʔī", "tanabbaʔa"],
+      "kok_yazilis": "تنبأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتنبأ",
+      "tur": "verb",
+      "baslik": "أتنبأ (form V)\n# أَتَنَبَّأُ (ʔatanabbaʔu) /ʔa.ta.nab.ba.ʔu/: first-person singular non-past active indicative of تَنَبَّأَ (tanabbaʔa)\n# أَتَنَبَّأَ (ʔatanabbaʔa) /ʔa.ta.nab.ba.ʔa/: first-person singular non-past active subjunctive of تَنَبَّأَ (tanabbaʔa)\n# أَتَنَبَّأْ (ʔatanabbaʔ) /ʔa.ta.nab.baʔ/: first-person singular non-past active jussive of تَنَبَّأَ (tanabbaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔatanabbaʔu", "tanabbaʔa", "ʔatanabbaʔa"],
+      "kok_yazilis": "تنبأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنبأنا",
+      "tur": "verb",
+      "baslik": "تَنَبَّأْنَا • (tanabbaʔnā) (form V) /ta.nab.baʔ.naː/\n# first-person plural past active of تَنَبَّأَ (tanabbaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tanabbaʔnā", "tanabbaʔa"],
+      "kok_yazilis": "تنبأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتنبأ",
+      "tur": "verb",
+      "baslik": "نتنبأ (form V)\n# نَتَنَبَّأُ (natanabbaʔu) /na.ta.nab.ba.ʔu/: first-person plural non-past active indicative of تَنَبَّأَ (tanabbaʔa)\n# نَتَنَبَّأَ (natanabbaʔa) /na.ta.nab.ba.ʔa/: first-person plural non-past active subjunctive of تَنَبَّأَ (tanabbaʔa)\n# نَتَنَبَّأْ (natanabbaʔ) /na.ta.nab.baʔ/: first-person plural non-past active jussive of تَنَبَّأَ (tanabbaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["natanabbaʔu", "tanabbaʔa", "natanabbaʔa"],
+      "kok_yazilis": "تنبأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنبأتم",
+      "tur": "verb",
+      "baslik": "تَنَبَّأْتُمْ • (tanabbaʔtum) (form V) /ta.nab.baʔ.tum/\n# second-person masculine plural past active of تَنَبَّأَ (tanabbaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tanabbaʔtum", "tanabbaʔa"],
+      "kok_yazilis": "تنبأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتنبؤون",
+      "tur": "verb",
+      "baslik": "تَتَنَبَّؤُونَ • (tatanabbaʔūna) (form V) /ta.ta.nab.ba.ʔuː.na/\n# second-person masculine plural non-past active indicative of تَنَبَّأَ (tanabbaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatanabbaʔūna", "tanabbaʔa"],
+      "kok_yazilis": "تنبأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتنبؤوا",
+      "tur": "verb",
+      "baslik": "تَتَنَبَّؤُوا • (tatanabbaʔū) (form V) /ta.ta.nab.ba.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of تَنَبَّأَ (tanabbaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatanabbaʔū", "tanabbaʔa"],
+      "kok_yazilis": "تنبأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنبؤوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَنَبَّؤُوا • (tanabbaʔū) (form V) /ta.nab.ba.ʔuː/\n# inflection of تَنَبَّأَ (tanabbaʔa):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tanabbaʔū", "tanabbaʔa"],
+      "kok_yazilis": "تنبأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتنبؤون",
+      "tur": "verb",
+      "baslik": "يَتَنَبَّؤُونَ • (yatanabbaʔūna) (form V) /ja.ta.nab.ba.ʔuː.na/\n# third-person masculine plural non-past active indicative of تَنَبَّأَ (tanabbaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatanabbaʔūna", "tanabbaʔa"],
+      "kok_yazilis": "تنبأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتنبؤوا",
+      "tur": "verb",
+      "baslik": "يَتَنَبَّؤُوا • (yatanabbaʔū) (form V) /ja.ta.nab.ba.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of تَنَبَّأَ (tanabbaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatanabbaʔū", "tanabbaʔa"],
+      "kok_yazilis": "تنبأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنبأن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَنَبَّأْنَ • (tanabbaʔna) (form V) /ta.nab.baʔ.na/\n# inflection of تَنَبَّأَ (tanabbaʔa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tanabbaʔna", "tanabbaʔa"],
+      "kok_yazilis": "تنبأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنبأتن",
+      "tur": "verb",
+      "baslik": "تَنَبَّأْتُنَّ • (tanabbaʔtunna) (form V) /ta.nab.baʔ.tun.na/\n# second-person feminine plural past active of تَنَبَّأَ (tanabbaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tanabbaʔtunna", "tanabbaʔa"],
+      "kok_yazilis": "تنبأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتنبأن",
+      "tur": "verb",
+      "baslik": "تَتَنَبَّأْنَ • (tatanabbaʔna) (form V) /ta.ta.nab.baʔ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَنَبَّأَ (tanabbaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatanabbaʔna", "tanabbaʔa"],
+      "kok_yazilis": "تنبأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتنبأن",
+      "tur": "verb",
+      "baslik": "يَتَنَبَّأْنَ • (yatanabbaʔna) (form V) /ja.ta.nab.baʔ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَنَبَّأَ (tanabbaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatanabbaʔna", "tanabbaʔa"],
+      "kok_yazilis": "تنبأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنبآ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَنَبَّآ • (tanabbaʔā) (form V) /ta.nab.ba.ʔaː/\n# inflection of تَنَبَّأَ (tanabbaʔa):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tanabbaʔā", "tanabbaʔa"],
+      "kok_yazilis": "تنبأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنبأتما",
+      "tur": "verb",
+      "baslik": "تَنَبَّأْتُمَا • (tanabbaʔtumā) (form V) /ta.nab.baʔ.tu.maː/\n# second-person dual past active of تَنَبَّأَ (tanabbaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tanabbaʔtumā", "tanabbaʔa"],
+      "kok_yazilis": "تنبأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنبأتا",
+      "tur": "verb",
+      "baslik": "تَنَبَّأَتَا • (tanabbaʔatā) (form V) /ta.nab.ba.ʔa.taː/\n# third-person feminine dual past active of تَنَبَّأَ (tanabbaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tanabbaʔatā", "tanabbaʔa"],
+      "kok_yazilis": "تنبأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتنبآن",
+      "tur": "verb",
+      "baslik": "يَتَنَبَّآنِ • (yatanabbaʔāni) (form V) /ja.ta.nab.ba.ʔaː.ni/\n# third-person masculine dual non-past active indicative of تَنَبَّأَ (tanabbaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatanabbaʔāni", "tanabbaʔa"],
+      "kok_yazilis": "تنبأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتنبآ",
+      "tur": "verb",
+      "baslik": "يَتَنَبَّآ • (yatanabbaʔā) (form V) /ja.ta.nab.ba.ʔaː/\n# third-person masculine dual non-past active subjunctive/jussive of تَنَبَّأَ (tanabbaʔa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatanabbaʔā", "tanabbaʔa"],
+      "kok_yazilis": "تنبأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتنبآن",
+      "tur": "verb",
+      "baslik": "تَتَنَبَّآنِ • (tatanabbaʔāni) (form V) /ta.ta.nab.ba.ʔaː.ni/\n# inflection of تَنَبَّأَ (tanabbaʔa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatanabbaʔāni", "tanabbaʔa"],
+      "kok_yazilis": "تنبأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتنبآ",
+      "tur": "verb",
+      "baslik": "تَتَنَبَّآ • (tatanabbaʔā) (form V) /ta.ta.nab.ba.ʔaː/\n# inflection of تَنَبَّأَ (tanabbaʔa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatanabbaʔā", "tanabbaʔa"],
+      "kok_yazilis": "تنبأ",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تنبء", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

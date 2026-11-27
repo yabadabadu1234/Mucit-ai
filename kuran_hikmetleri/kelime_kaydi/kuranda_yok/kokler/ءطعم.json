@@ -1,365 +1,287 @@
 {
   "kok": "ءطعم",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءطعم", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يطعم",
-        "u": "يطعم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يطعم (form IV)\n# يُطْعِمُ (yuṭʕimu) /jutˤ.ʕi.mu/: third-person masculine singular non-past active indicative of أَطْعَمَ (ʔaṭʕama)\n# يُطْعَمُ (yuṭʕamu) /jutˤ.ʕa.mu/: third-person masculine singular non-past passive indicative of أَطْعَمَ (ʔaṭʕama)\n# يُطْعِمَ (yuṭʕima) /jutˤ.ʕi.ma/: third-person masculine singular non-past active subjunctive of أَطْعَمَ (ʔaṭʕama)\n# يُطْعَمَ (yuṭʕama) /jutˤ.ʕa.ma/: ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuṭʕimu", "ʔaṭʕama", "yuṭʕamu"],
-        "k": "أطعم",
-        "yol": "kök"
-      },
-      {
-        "w": "أطعمت",
-        "u": "أطعمت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أطعمت (form IV)\n# أَطْعَمْتُ (ʔaṭʕamtu) /ʔatˤ.ʕam.tu/: first-person singular past active of أَطْعَمَ (ʔaṭʕama)\n# أَطْعَمْتَ (ʔaṭʕamta) /ʔatˤ.ʕam.ta/: second-person masculine singular past active of أَطْعَمَ (ʔaṭʕama)\n# أَطْعَمْتِ (ʔaṭʕamti) /ʔatˤ.ʕam.ti/: second-person feminine singular past active of أَطْعَمَ (ʔaṭʕama)\n# أَطْعَمَتْ (ʔaṭʕamat) /ʔatˤ.ʕa.mat/: third-person feminine singular past act",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaṭʕamtu", "ʔaṭʕama", "ʔaṭʕamta"],
-        "k": "أطعم",
-        "yol": "kök"
-      },
-      {
-        "w": "تطعم",
-        "u": "تطعم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تطعم (form IV)\n# تُطْعِمُ (tuṭʕimu) /tutˤ.ʕi.mu/: inflection of أَطْعَمَ (ʔaṭʕama):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُطْعَمُ (tuṭʕamu) /tutˤ.ʕa.mu/: inflection of أَطْعَمَ (ʔaṭʕama):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicati",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuṭʕimu", "ʔaṭʕama", "tuṭʕamu"],
-        "k": "أطعم",
-        "yol": "kök"
-      },
-      {
-        "w": "تطعمين",
-        "u": "تطعمين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تطعمين (form IV)\n# تُطْعِمِينَ (tuṭʕimīna) /tutˤ.ʕi.miː.na/: second-person feminine singular non-past active indicative of أَطْعَمَ (ʔaṭʕama)\n# تُطْعَمِينَ (tuṭʕamīna) /tutˤ.ʕa.miː.na/: second-person feminine singular non-past passive indicative of أَطْعَمَ (ʔaṭʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuṭʕimīna", "ʔaṭʕama", "tuṭʕamīna"],
-        "k": "أطعم",
-        "yol": "kök"
-      },
-      {
-        "w": "تطعمي",
-        "u": "تطعمي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تطعمي (form IV)\n# تُطْعِمِي (tuṭʕimī) /tutˤ.ʕi.miː/: second-person feminine singular non-past active subjunctive/jussive of أَطْعَمَ (ʔaṭʕama)\n# تُطْعَمِي (tuṭʕamī) /tutˤ.ʕa.miː/: second-person feminine singular non-past passive subjunctive/jussive of أَطْعَمَ (ʔaṭʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuṭʕimī", "ʔaṭʕama", "tuṭʕamī"],
-        "k": "أطعم",
-        "yol": "kök"
-      },
-      {
-        "w": "أطعمي",
-        "u": "أطعمي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَطْعِمِي • (ʔaṭʕimī) (form IV) /ʔatˤ.ʕi.miː/\n# second-person feminine singular imperative of أَطْعَمَ (ʔaṭʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaṭʕimī", "ʔaṭʕama"],
-        "k": "أطعم",
-        "yol": "kök"
-      },
-      {
-        "w": "أطعمنا",
-        "u": "أطعمنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أطعمنا (form IV)\n# أَطْعَمْنَا (ʔaṭʕamnā) /ʔatˤ.ʕam.naː/: first-person plural past active of أَطْعَمَ (ʔaṭʕama)\n# أُطْعِمْنَا (ʔuṭʕimnā) /ʔutˤ.ʕim.naː/: first-person plural past passive of أَطْعَمَ (ʔaṭʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaṭʕamnā", "ʔaṭʕama", "ʔuṭʕimnā"],
-        "k": "أطعم",
-        "yol": "kök"
-      },
-      {
-        "w": "نطعم",
-        "u": "نطعم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نطعم (form IV)\n# نُطْعِمُ (nuṭʕimu) /nutˤ.ʕi.mu/: first-person plural non-past active indicative of أَطْعَمَ (ʔaṭʕama)\n# نُطْعَمُ (nuṭʕamu) /nutˤ.ʕa.mu/: first-person plural non-past passive indicative of أَطْعَمَ (ʔaṭʕama)\n# نُطْعِمَ (nuṭʕima) /nutˤ.ʕi.ma/: first-person plural non-past active subjunctive of أَطْعَمَ (ʔaṭʕama)\n# نُطْعَمَ (nuṭʕama) /nutˤ.ʕa.ma/: first-person plural non-past passive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuṭʕimu", "ʔaṭʕama", "nuṭʕamu"],
-        "k": "أطعم",
-        "yol": "kök"
-      },
-      {
-        "w": "أطعمتم",
-        "u": "أطعمتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أطعمتم (form IV)\n# أَطْعَمْتُمْ (ʔaṭʕamtum) /ʔatˤ.ʕam.tum/: second-person masculine plural past active of أَطْعَمَ (ʔaṭʕama)\n# أُطْعِمْتُمْ (ʔuṭʕimtum) /ʔutˤ.ʕim.tum/: second-person masculine plural past passive of أَطْعَمَ (ʔaṭʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaṭʕamtum", "ʔaṭʕama", "ʔuṭʕimtum"],
-        "k": "أطعم",
-        "yol": "kök"
-      },
-      {
-        "w": "تطعمون",
-        "u": "تطعمون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تطعمون (form IV)\n# تُطْعِمُونَ (tuṭʕimūna) /tutˤ.ʕi.muː.na/: second-person masculine plural non-past active indicative of أَطْعَمَ (ʔaṭʕama)\n# تُطْعَمُونَ (tuṭʕamūna) /tutˤ.ʕa.muː.na/: second-person masculine plural non-past passive indicative of أَطْعَمَ (ʔaṭʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuṭʕimūna", "ʔaṭʕama", "tuṭʕamūna"],
-        "k": "أطعم",
-        "yol": "kök"
-      },
-      {
-        "w": "تطعموا",
-        "u": "تطعموا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تطعموا (form IV)\n# تُطْعِمُوا (tuṭʕimū) /tutˤ.ʕi.muː/: second-person masculine plural non-past active subjunctive/jussive of أَطْعَمَ (ʔaṭʕama)\n# تُطْعَمُوا (tuṭʕamū) /tutˤ.ʕa.muː/: second-person masculine plural non-past passive subjunctive/jussive of أَطْعَمَ (ʔaṭʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuṭʕimū", "ʔaṭʕama", "tuṭʕamū"],
-        "k": "أطعم",
-        "yol": "kök"
-      },
-      {
-        "w": "أطعموا",
-        "u": "أطعموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أطعموا (form IV)\n# أَطْعَمُوا (ʔaṭʕamū) /ʔatˤ.ʕa.muː/: third-person masculine plural past active of أَطْعَمَ (ʔaṭʕama)\n# أُطْعِمُوا (ʔuṭʕimū) /ʔutˤ.ʕi.muː/: third-person masculine plural past passive of أَطْعَمَ (ʔaṭʕama)\n# أَطْعِمُوا (ʔaṭʕimū) /ʔatˤ.ʕi.muː/: second-person masculine plural imperative of أَطْعَمَ (ʔaṭʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaṭʕamū", "ʔaṭʕama", "ʔuṭʕimū"],
-        "k": "أطعم",
-        "yol": "kök"
-      },
-      {
-        "w": "يطعمون",
-        "u": "يطعمون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يطعمون (form IV)\n# يُطْعِمُونَ (yuṭʕimūna) /jutˤ.ʕi.muː.na/: third-person masculine plural non-past active indicative of أَطْعَمَ (ʔaṭʕama)\n# يُطْعَمُونَ (yuṭʕamūna) /jutˤ.ʕa.muː.na/: third-person masculine plural non-past passive indicative of أَطْعَمَ (ʔaṭʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuṭʕimūna", "ʔaṭʕama", "yuṭʕamūna"],
-        "k": "أطعم",
-        "yol": "kök"
-      },
-      {
-        "w": "يطعموا",
-        "u": "يطعموا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يطعموا (form IV)\n# يُطْعِمُوا (yuṭʕimū) /jutˤ.ʕi.muː/: third-person masculine plural non-past active subjunctive/jussive of أَطْعَمَ (ʔaṭʕama)\n# يُطْعَمُوا (yuṭʕamū) /jutˤ.ʕa.muː/: third-person masculine plural non-past passive subjunctive/jussive of أَطْعَمَ (ʔaṭʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuṭʕimū", "ʔaṭʕama", "yuṭʕamū"],
-        "k": "أطعم",
-        "yol": "kök"
-      },
-      {
-        "w": "أطعمتن",
-        "u": "أطعمتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أطعمتن (form IV)\n# أَطْعَمْتُنَّ (ʔaṭʕamtunna) /ʔatˤ.ʕam.tun.na/: second-person feminine plural past active of أَطْعَمَ (ʔaṭʕama)\n# أُطْعِمْتُنَّ (ʔuṭʕimtunna) /ʔutˤ.ʕim.tun.na/: second-person feminine plural past passive of أَطْعَمَ (ʔaṭʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaṭʕamtunna", "ʔaṭʕama", "ʔuṭʕimtunna"],
-        "k": "أطعم",
-        "yol": "kök"
-      },
-      {
-        "w": "تطعمن",
-        "u": "تطعمن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تطعمن (form IV)\n# تُطْعِمْنَ (tuṭʕimna) /tutˤ.ʕim.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَطْعَمَ (ʔaṭʕama)\n# تُطْعَمْنَ (tuṭʕamna) /tutˤ.ʕam.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَطْعَمَ (ʔaṭʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuṭʕimna", "ʔaṭʕama", "tuṭʕamna"],
-        "k": "أطعم",
-        "yol": "kök"
-      },
-      {
-        "w": "أطعمن",
-        "u": "أطعمن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أطعمن (form IV)\n# أَطْعَمْنَ (ʔaṭʕamna) /ʔatˤ.ʕam.na/: third-person feminine plural past active of أَطْعَمَ (ʔaṭʕama)\n# أُطْعِمْنَ (ʔuṭʕimna) /ʔutˤ.ʕim.na/: third-person feminine plural past passive of أَطْعَمَ (ʔaṭʕama)\n# أَطْعِمْنَ (ʔaṭʕimna) /ʔatˤ.ʕim.na/: second-person feminine plural imperative of أَطْعَمَ (ʔaṭʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaṭʕamna", "ʔaṭʕama", "ʔuṭʕimna"],
-        "k": "أطعم",
-        "yol": "kök"
-      },
-      {
-        "w": "يطعمن",
-        "u": "يطعمن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يطعمن (form IV)\n# يُطْعِمْنَ (yuṭʕimna) /jutˤ.ʕim.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَطْعَمَ (ʔaṭʕama)\n# يُطْعَمْنَ (yuṭʕamna) /jutˤ.ʕam.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَطْعَمَ (ʔaṭʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuṭʕimna", "ʔaṭʕama", "yuṭʕamna"],
-        "k": "أطعم",
-        "yol": "kök"
-      },
-      {
-        "w": "أطعما",
-        "u": "أطعما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أطعما (form IV)\n# أَطْعَمَا (ʔaṭʕamā) /ʔatˤ.ʕa.maː/: third-person masculine dual past active of أَطْعَمَ (ʔaṭʕama)\n# أُطْعِمَا (ʔuṭʕimā) /ʔutˤ.ʕi.maː/: third-person masculine dual past passive of أَطْعَمَ (ʔaṭʕama)\n# أَطْعِمَا (ʔaṭʕimā) /ʔatˤ.ʕi.maː/: second-person dual imperative of أَطْعَمَ (ʔaṭʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaṭʕamā", "ʔaṭʕama", "ʔuṭʕimā"],
-        "k": "أطعم",
-        "yol": "kök"
-      },
-      {
-        "w": "أطعمتا",
-        "u": "أطعمتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أطعمتا (form IV)\n# أَطْعَمَتَا (ʔaṭʕamatā) /ʔatˤ.ʕa.ma.taː/: third-person feminine dual past active of أَطْعَمَ (ʔaṭʕama)\n# أُطْعِمَتَا (ʔuṭʕimatā) /ʔutˤ.ʕi.ma.taː/: third-person feminine dual past passive of أَطْعَمَ (ʔaṭʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaṭʕamatā", "ʔaṭʕama", "ʔuṭʕimatā"],
-        "k": "أطعم",
-        "yol": "kök"
-      },
-      {
-        "w": "أطعمتما",
-        "u": "أطعمتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أطعمتما (form IV)\n# أَطْعَمْتُمَا (ʔaṭʕamtumā) /ʔatˤ.ʕam.tu.maː/: second-person dual past active of أَطْعَمَ (ʔaṭʕama)\n# أُطْعِمْتُمَا (ʔuṭʕimtumā) /ʔutˤ.ʕim.tu.maː/: second-person dual past passive of أَطْعَمَ (ʔaṭʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaṭʕamtumā", "ʔaṭʕama", "ʔuṭʕimtumā"],
-        "k": "أطعم",
-        "yol": "kök"
-      },
-      {
-        "w": "يطعمان",
-        "u": "يطعمان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يطعمان (form IV)\n# يُطْعِمَانِ (yuṭʕimāni) /jutˤ.ʕi.maː.ni/: third-person masculine dual non-past active indicative of أَطْعَمَ (ʔaṭʕama)\n# يُطْعَمَانِ (yuṭʕamāni) /jutˤ.ʕa.maː.ni/: third-person masculine dual non-past passive indicative of أَطْعَمَ (ʔaṭʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuṭʕimāni", "ʔaṭʕama", "yuṭʕamāni"],
-        "k": "أطعم",
-        "yol": "kök"
-      },
-      {
-        "w": "تطعمان",
-        "u": "تطعمان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تطعمان (form IV)\n# تُطْعِمَانِ (tuṭʕimāni) /tutˤ.ʕi.maː.ni/: inflection of أَطْعَمَ (ʔaṭʕama):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُطْعَمَانِ (tuṭʕamāni) /tutˤ.ʕa.maː.ni/: inflection of أَطْعَمَ (ʔaṭʕama):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuṭʕimāni", "ʔaṭʕama", "tuṭʕamāni"],
-        "k": "أطعم",
-        "yol": "kök"
-      },
-      {
-        "w": "يطعما",
-        "u": "يطعما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يطعما (form IV)\n# يُطْعِمَا (yuṭʕimā) /jutˤ.ʕi.maː/: third-person masculine dual non-past active subjunctive/jussive of أَطْعَمَ (ʔaṭʕama)\n# يُطْعَمَا (yuṭʕamā) /jutˤ.ʕa.maː/: third-person masculine dual non-past passive subjunctive/jussive of أَطْعَمَ (ʔaṭʕama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuṭʕimā", "ʔaṭʕama", "yuṭʕamā"],
-        "k": "أطعم",
-        "yol": "kök"
-      },
-      {
-        "w": "تطعما",
-        "u": "تطعما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تطعما (form IV)\n# تُطْعِمَا (tuṭʕimā) /tutˤ.ʕi.maː/: inflection of أَطْعَمَ (ʔaṭʕama):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُطْعَمَا (tuṭʕamā) /tutˤ.ʕa.maː/: inflection of أَطْعَمَ (ʔaṭʕama):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuṭʕimā", "ʔaṭʕama", "tuṭʕamā"],
-        "k": "أطعم",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "طع",
+  "ses": {
     "harf": "ء",
+    "fasil": "طع",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يطعم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يطعم (form IV)\n# يُطْعِمُ (yuṭʕimu) /jutˤ.ʕi.mu/: third-person masculine singular non-past active indicative of أَطْعَمَ (ʔaṭʕama)\n# يُطْعَمُ (yuṭʕamu) /jutˤ.ʕa.mu/: third-person masculine singular non-past passive indicative of أَطْعَمَ (ʔaṭʕama)\n# يُطْعِمَ (yuṭʕima) /jutˤ.ʕi.ma/: third-person masculine singular non-past active subjunctive of أَطْعَمَ (ʔaṭʕama)\n# يُطْعَمَ (yuṭʕama) /jutˤ.ʕa.ma/: ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuṭʕimu", "ʔaṭʕama", "yuṭʕamu"],
+      "kok_yazilis": "أطعم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أطعمت",
+      "tur": "verb",
+      "baslik": "أطعمت (form IV)\n# أَطْعَمْتُ (ʔaṭʕamtu) /ʔatˤ.ʕam.tu/: first-person singular past active of أَطْعَمَ (ʔaṭʕama)\n# أَطْعَمْتَ (ʔaṭʕamta) /ʔatˤ.ʕam.ta/: second-person masculine singular past active of أَطْعَمَ (ʔaṭʕama)\n# أَطْعَمْتِ (ʔaṭʕamti) /ʔatˤ.ʕam.ti/: second-person feminine singular past active of أَطْعَمَ (ʔaṭʕama)\n# أَطْعَمَتْ (ʔaṭʕamat) /ʔatˤ.ʕa.mat/: third-person feminine singular past act",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaṭʕamtu", "ʔaṭʕama", "ʔaṭʕamta"],
+      "kok_yazilis": "أطعم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطعم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تطعم (form IV)\n# تُطْعِمُ (tuṭʕimu) /tutˤ.ʕi.mu/: inflection of أَطْعَمَ (ʔaṭʕama):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُطْعَمُ (tuṭʕamu) /tutˤ.ʕa.mu/: inflection of أَطْعَمَ (ʔaṭʕama):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicati",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuṭʕimu", "ʔaṭʕama", "tuṭʕamu"],
+      "kok_yazilis": "أطعم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطعمين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تطعمين (form IV)\n# تُطْعِمِينَ (tuṭʕimīna) /tutˤ.ʕi.miː.na/: second-person feminine singular non-past active indicative of أَطْعَمَ (ʔaṭʕama)\n# تُطْعَمِينَ (tuṭʕamīna) /tutˤ.ʕa.miː.na/: second-person feminine singular non-past passive indicative of أَطْعَمَ (ʔaṭʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuṭʕimīna", "ʔaṭʕama", "tuṭʕamīna"],
+      "kok_yazilis": "أطعم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطعمي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تطعمي (form IV)\n# تُطْعِمِي (tuṭʕimī) /tutˤ.ʕi.miː/: second-person feminine singular non-past active subjunctive/jussive of أَطْعَمَ (ʔaṭʕama)\n# تُطْعَمِي (tuṭʕamī) /tutˤ.ʕa.miː/: second-person feminine singular non-past passive subjunctive/jussive of أَطْعَمَ (ʔaṭʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuṭʕimī", "ʔaṭʕama", "tuṭʕamī"],
+      "kok_yazilis": "أطعم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أطعمي",
+      "tur": "verb",
+      "baslik": "أَطْعِمِي • (ʔaṭʕimī) (form IV) /ʔatˤ.ʕi.miː/\n# second-person feminine singular imperative of أَطْعَمَ (ʔaṭʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaṭʕimī", "ʔaṭʕama"],
+      "kok_yazilis": "أطعم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أطعمنا",
+      "tur": "verb",
+      "baslik": "أطعمنا (form IV)\n# أَطْعَمْنَا (ʔaṭʕamnā) /ʔatˤ.ʕam.naː/: first-person plural past active of أَطْعَمَ (ʔaṭʕama)\n# أُطْعِمْنَا (ʔuṭʕimnā) /ʔutˤ.ʕim.naː/: first-person plural past passive of أَطْعَمَ (ʔaṭʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaṭʕamnā", "ʔaṭʕama", "ʔuṭʕimnā"],
+      "kok_yazilis": "أطعم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نطعم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نطعم (form IV)\n# نُطْعِمُ (nuṭʕimu) /nutˤ.ʕi.mu/: first-person plural non-past active indicative of أَطْعَمَ (ʔaṭʕama)\n# نُطْعَمُ (nuṭʕamu) /nutˤ.ʕa.mu/: first-person plural non-past passive indicative of أَطْعَمَ (ʔaṭʕama)\n# نُطْعِمَ (nuṭʕima) /nutˤ.ʕi.ma/: first-person plural non-past active subjunctive of أَطْعَمَ (ʔaṭʕama)\n# نُطْعَمَ (nuṭʕama) /nutˤ.ʕa.ma/: first-person plural non-past passive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuṭʕimu", "ʔaṭʕama", "nuṭʕamu"],
+      "kok_yazilis": "أطعم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أطعمتم",
+      "tur": "verb",
+      "baslik": "أطعمتم (form IV)\n# أَطْعَمْتُمْ (ʔaṭʕamtum) /ʔatˤ.ʕam.tum/: second-person masculine plural past active of أَطْعَمَ (ʔaṭʕama)\n# أُطْعِمْتُمْ (ʔuṭʕimtum) /ʔutˤ.ʕim.tum/: second-person masculine plural past passive of أَطْعَمَ (ʔaṭʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaṭʕamtum", "ʔaṭʕama", "ʔuṭʕimtum"],
+      "kok_yazilis": "أطعم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطعمون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تطعمون (form IV)\n# تُطْعِمُونَ (tuṭʕimūna) /tutˤ.ʕi.muː.na/: second-person masculine plural non-past active indicative of أَطْعَمَ (ʔaṭʕama)\n# تُطْعَمُونَ (tuṭʕamūna) /tutˤ.ʕa.muː.na/: second-person masculine plural non-past passive indicative of أَطْعَمَ (ʔaṭʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuṭʕimūna", "ʔaṭʕama", "tuṭʕamūna"],
+      "kok_yazilis": "أطعم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطعموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تطعموا (form IV)\n# تُطْعِمُوا (tuṭʕimū) /tutˤ.ʕi.muː/: second-person masculine plural non-past active subjunctive/jussive of أَطْعَمَ (ʔaṭʕama)\n# تُطْعَمُوا (tuṭʕamū) /tutˤ.ʕa.muː/: second-person masculine plural non-past passive subjunctive/jussive of أَطْعَمَ (ʔaṭʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuṭʕimū", "ʔaṭʕama", "tuṭʕamū"],
+      "kok_yazilis": "أطعم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أطعموا",
+      "tur": "verb",
+      "baslik": "أطعموا (form IV)\n# أَطْعَمُوا (ʔaṭʕamū) /ʔatˤ.ʕa.muː/: third-person masculine plural past active of أَطْعَمَ (ʔaṭʕama)\n# أُطْعِمُوا (ʔuṭʕimū) /ʔutˤ.ʕi.muː/: third-person masculine plural past passive of أَطْعَمَ (ʔaṭʕama)\n# أَطْعِمُوا (ʔaṭʕimū) /ʔatˤ.ʕi.muː/: second-person masculine plural imperative of أَطْعَمَ (ʔaṭʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaṭʕamū", "ʔaṭʕama", "ʔuṭʕimū"],
+      "kok_yazilis": "أطعم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطعمون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يطعمون (form IV)\n# يُطْعِمُونَ (yuṭʕimūna) /jutˤ.ʕi.muː.na/: third-person masculine plural non-past active indicative of أَطْعَمَ (ʔaṭʕama)\n# يُطْعَمُونَ (yuṭʕamūna) /jutˤ.ʕa.muː.na/: third-person masculine plural non-past passive indicative of أَطْعَمَ (ʔaṭʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuṭʕimūna", "ʔaṭʕama", "yuṭʕamūna"],
+      "kok_yazilis": "أطعم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطعموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يطعموا (form IV)\n# يُطْعِمُوا (yuṭʕimū) /jutˤ.ʕi.muː/: third-person masculine plural non-past active subjunctive/jussive of أَطْعَمَ (ʔaṭʕama)\n# يُطْعَمُوا (yuṭʕamū) /jutˤ.ʕa.muː/: third-person masculine plural non-past passive subjunctive/jussive of أَطْعَمَ (ʔaṭʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuṭʕimū", "ʔaṭʕama", "yuṭʕamū"],
+      "kok_yazilis": "أطعم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أطعمتن",
+      "tur": "verb",
+      "baslik": "أطعمتن (form IV)\n# أَطْعَمْتُنَّ (ʔaṭʕamtunna) /ʔatˤ.ʕam.tun.na/: second-person feminine plural past active of أَطْعَمَ (ʔaṭʕama)\n# أُطْعِمْتُنَّ (ʔuṭʕimtunna) /ʔutˤ.ʕim.tun.na/: second-person feminine plural past passive of أَطْعَمَ (ʔaṭʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaṭʕamtunna", "ʔaṭʕama", "ʔuṭʕimtunna"],
+      "kok_yazilis": "أطعم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطعمن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تطعمن (form IV)\n# تُطْعِمْنَ (tuṭʕimna) /tutˤ.ʕim.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَطْعَمَ (ʔaṭʕama)\n# تُطْعَمْنَ (tuṭʕamna) /tutˤ.ʕam.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَطْعَمَ (ʔaṭʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuṭʕimna", "ʔaṭʕama", "tuṭʕamna"],
+      "kok_yazilis": "أطعم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أطعمن",
+      "tur": "verb",
+      "baslik": "أطعمن (form IV)\n# أَطْعَمْنَ (ʔaṭʕamna) /ʔatˤ.ʕam.na/: third-person feminine plural past active of أَطْعَمَ (ʔaṭʕama)\n# أُطْعِمْنَ (ʔuṭʕimna) /ʔutˤ.ʕim.na/: third-person feminine plural past passive of أَطْعَمَ (ʔaṭʕama)\n# أَطْعِمْنَ (ʔaṭʕimna) /ʔatˤ.ʕim.na/: second-person feminine plural imperative of أَطْعَمَ (ʔaṭʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaṭʕamna", "ʔaṭʕama", "ʔuṭʕimna"],
+      "kok_yazilis": "أطعم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطعمن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يطعمن (form IV)\n# يُطْعِمْنَ (yuṭʕimna) /jutˤ.ʕim.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَطْعَمَ (ʔaṭʕama)\n# يُطْعَمْنَ (yuṭʕamna) /jutˤ.ʕam.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَطْعَمَ (ʔaṭʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuṭʕimna", "ʔaṭʕama", "yuṭʕamna"],
+      "kok_yazilis": "أطعم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أطعما",
+      "tur": "verb",
+      "baslik": "أطعما (form IV)\n# أَطْعَمَا (ʔaṭʕamā) /ʔatˤ.ʕa.maː/: third-person masculine dual past active of أَطْعَمَ (ʔaṭʕama)\n# أُطْعِمَا (ʔuṭʕimā) /ʔutˤ.ʕi.maː/: third-person masculine dual past passive of أَطْعَمَ (ʔaṭʕama)\n# أَطْعِمَا (ʔaṭʕimā) /ʔatˤ.ʕi.maː/: second-person dual imperative of أَطْعَمَ (ʔaṭʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaṭʕamā", "ʔaṭʕama", "ʔuṭʕimā"],
+      "kok_yazilis": "أطعم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أطعمتا",
+      "tur": "verb",
+      "baslik": "أطعمتا (form IV)\n# أَطْعَمَتَا (ʔaṭʕamatā) /ʔatˤ.ʕa.ma.taː/: third-person feminine dual past active of أَطْعَمَ (ʔaṭʕama)\n# أُطْعِمَتَا (ʔuṭʕimatā) /ʔutˤ.ʕi.ma.taː/: third-person feminine dual past passive of أَطْعَمَ (ʔaṭʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaṭʕamatā", "ʔaṭʕama", "ʔuṭʕimatā"],
+      "kok_yazilis": "أطعم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أطعمتما",
+      "tur": "verb",
+      "baslik": "أطعمتما (form IV)\n# أَطْعَمْتُمَا (ʔaṭʕamtumā) /ʔatˤ.ʕam.tu.maː/: second-person dual past active of أَطْعَمَ (ʔaṭʕama)\n# أُطْعِمْتُمَا (ʔuṭʕimtumā) /ʔutˤ.ʕim.tu.maː/: second-person dual past passive of أَطْعَمَ (ʔaṭʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaṭʕamtumā", "ʔaṭʕama", "ʔuṭʕimtumā"],
+      "kok_yazilis": "أطعم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطعمان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يطعمان (form IV)\n# يُطْعِمَانِ (yuṭʕimāni) /jutˤ.ʕi.maː.ni/: third-person masculine dual non-past active indicative of أَطْعَمَ (ʔaṭʕama)\n# يُطْعَمَانِ (yuṭʕamāni) /jutˤ.ʕa.maː.ni/: third-person masculine dual non-past passive indicative of أَطْعَمَ (ʔaṭʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuṭʕimāni", "ʔaṭʕama", "yuṭʕamāni"],
+      "kok_yazilis": "أطعم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطعمان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تطعمان (form IV)\n# تُطْعِمَانِ (tuṭʕimāni) /tutˤ.ʕi.maː.ni/: inflection of أَطْعَمَ (ʔaṭʕama):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُطْعَمَانِ (tuṭʕamāni) /tutˤ.ʕa.maː.ni/: inflection of أَطْعَمَ (ʔaṭʕama):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuṭʕimāni", "ʔaṭʕama", "tuṭʕamāni"],
+      "kok_yazilis": "أطعم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطعما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يطعما (form IV)\n# يُطْعِمَا (yuṭʕimā) /jutˤ.ʕi.maː/: third-person masculine dual non-past active subjunctive/jussive of أَطْعَمَ (ʔaṭʕama)\n# يُطْعَمَا (yuṭʕamā) /jutˤ.ʕa.maː/: third-person masculine dual non-past passive subjunctive/jussive of أَطْعَمَ (ʔaṭʕama)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuṭʕimā", "ʔaṭʕama", "yuṭʕamā"],
+      "kok_yazilis": "أطعم",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطعما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تطعما (form IV)\n# تُطْعِمَا (tuṭʕimā) /tutˤ.ʕi.maː/: inflection of أَطْعَمَ (ʔaṭʕama):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُطْعَمَا (tuṭʕamā) /tutˤ.ʕa.maː/: inflection of أَطْعَمَ (ʔaṭʕama):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuṭʕimā", "ʔaṭʕama", "tuṭʕamā"],
+      "kok_yazilis": "أطعم",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءطعم", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,493 +1,360 @@
 {
   "kok": "تلى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تلى", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "التاء واللام",
-      "baslik": "تلو - تلى",
-      "mihveri": "هو: اتّباع الشيء ما يسبقه لحوقًا به من خلفه: كالأعجاز، وكولد الحمار والناقة يتبعان أميهما، وكالباقي بعد ما ذهب سَلَفُه في",
-      "sesler": "",
-      "tam_metin": "{الَّذِينَ آتَيْنَاهُمُ الْكِتَابَ يَتْلُونَهُ حَقَّ تِلَاوَتِهِ أُولَئِكَ يُؤْمِنُونَ بِهِ} [البقرة: 121].\n\"التَوالي: الأعجاز: التِلْوُ - بالكسر: ولدُ الحمار، وولدُ الناقةِ، يتبعان أميهما، وكذا الجَدْى. ويقال: تَلِيَ فلان بعدَ قومه (كرضي): أي بَقِي. والتُلاوة - كرُخامة وكبَليّة: بَقيةُ الشيء عامة \".\n° المعنى المحوري\nهو: اتّباع الشيء ما يسبقه لحوقًا به من خلفه: كالأعجاز، وكولد الحمار والناقة يتبعان أميهما، وكالباقي بعد ما ذهب سَلَفُه في\n__________\n= منهما يعبر عن تكديس الشيء بعضه فوق بعض حتى ينتبر جُثًّا رابيًا كتلّ التراب وغيره في (تلل). وفي (تلو - تلي) تعبر الواو عن الاشتمال، ويعبر التركيب عن لحاق الشيء الشيء من خلفه, كأن التابع مشمول ضمن المتبوع.\n(1/213)\nموضعه (كأنه خلفه). ومنه تَلَوته: تبعته، وفلان يتلو فلانًا: يحكيه ويتبع فعله: {وَالشَّمْسِ وَضُحَاهَا (1) وَالْقَمَرِ إِذَا تَلَاهَا} [الشمس: 1, 2]: تَبِعها. وتَتَلَّى الشيءَ: تتبّعه.\nومن ذلك التلو المكاني يؤخذ التلو العملي أي التنفيذ: {الَّذِينَ آتَيْنَاهُمُ الْكِتَابَ يَتْلُونَهُ حَقَّ تِلَاوَتِهِ} [البقرة: 102] قال [طب 2/ 566]: \"يتبعونه حق اتباعه ويأخذون به عملًا \". والذي يصلح فيه تفسير (تلا) بـ (اتبع) مما جاء في القرآن من التركيب هو - مع ما سبق {إِنَّ الَّذِينَ يَتْلُونَ كِتَابَ اللَّهِ وَأَقَامُوا الصَّلَاةَ} [فاطر: 29، وكذا ما في هود 17، ينظر قر 9/ 16 - 17]. وسائره من التلاوة القراءة.\nأما التلاوة بمعنى القراءة، كما في تلاوة القرآن والنشرات، فلعل أصل هذا من تتبع الكلام المكتوب عند القراءة أي اتباعه كلمة كلمة، فهذا يعني القراءة من مكتوب، وعليه: {وَمَا كُنْتَ تَتْلُو مِنْ قَبْلِهِ مِنْ كِتَابٍ وَلَا تَخُطُّهُ بِيَمِينِكَ} [العنكبوت: 48] فهذا كالصريح في معنى قراءة المكتوب. ثم عمم في القراءة عن ظهر القلب أي من غير مكتوب. وقد يكون هذا من القراءة اللاحقة، أي المتَّبِعة لما وُعِيَ قَبلا، كما قال تعالى: {فَإِذَا قَرَأْنَاهُ فَاتَّبِعْ قُرْآنَهُ} [القيامة: 18] أو من التلاحق: تلاحق المتلوّ أي امتداده هذا يتبع هذا. {وَإِذَا تُتْلَى عَلَيْهِمْ آيَاتُنَا قَالُوا قَدْ سَمِعْنَا لَوْ نَشَاءُ لَقُلْنَا مِثْلَ هَذَا} [الأنفال: 31]، {وَاتْلُ عَلَيْهِمْ نَبَأَ ابْنَيْ آدَمَ بِالْحَقِّ} [المائدة: 27]، {تَتْلُو الشَّيَاطِينُ عَلَى مُلْكِ سُلَيْمَانَ} [البقرة: 102] قال بعضهم: \"تتلو: تُحدِّثُ وتَرْوِى وتَتَكلم به وتخبر نحو تلاوة الرجل أيّ كتاب؛\n(1/214)\nلأن الشياطين هي التي عَلّمت الناسَ السحرَ ورَوَتْه لهم .. وقال آخرون: ما تَتْبعُه الشياطينُ وتعملُ به .. كما يقال: تَلَوْتُ فلانًا: إذا مَشَيْتَ خلْفه وتَبِعْتَ أَثَره، كما قال جل ثناؤه: {هُنَالِكَ تَبْلُو كُلُّ نَفْسٍ مَا أَسْلَفَتْ} [يونس: 30]- على إحدي القراءتين - يعني بذلك تتبع، {عَلَى مُلْكِ سُلَيْمَانَ} [البقرة: 102] أي في (عهد) ملكه \". اهـ[طبري 2/ 412].\nأما عن الفرق بين القراءة والتلاوة فهو حسب ما تكشفه الدراسة:\nأ) أن المعنى الأصلي الدقيق للقراءة هو وعي المادّة (المقروءة) في القلب تلقيًا بالسماع (ويدخل فيه الوحي)، أو من كتاب (بلا صوت). ويتفرع عن هذا لزوميا القراءةُ بمعنى إلقاء المحفوظ في القلب باللسان أي نطقه.\nوالتلاوة تستعمل في هذا أي في نطق الكلام وإلقائه دون مطالعة من صحيفة، كما قال تعالى: {تِلْكَ آيَاتُ اللَّهِ نَتْلُوهَا عَلَيْكَ بِالْحَقِّ} [البقرة: 252]؛ فتستوي في هذا مع (القراءة): إما تطورًا، وإما أصالة، كما مرّ في الفقرة السابقة. وتستعمل في القراءة من كتاب - وهذا أصل في التلاوة - وعليه جاء قوله تعالى: {وَمَا كُنْتَ تَتْلُو مِنْ قَبْلِهِ مِنْ كِتَابٍ} [العنكبوت: 48]- كما سبق. وامتداد الكلام كالقيد فيها.\nب) إذا استعمل الفعلان معديين فإن \"تلا \"لا تكون إلا قراءة بصوت، \"وقرأ \"تكون بصوت وبغير صوت. أما إذا عُدِّيا بالحرف \"على \"فإنهما تستويان في أنه لا بد فيهما من الإلقاء بصوت.\nالخلاصة في الفرق بين التلاوة والقراءة في الأصل: \"تلا \"تستعمل للقراءة من مكتوب بصوت، ويتسامح فيها فتكون من غير مكتوب لكن بصوت،\n(1/215)\nو \"قرأ \"تستعمل للقراءة من مكتوب ومن غير مكتوب، بصوت وبغير صوت. فإذا عُدّيا بـ (علي) فهما بصوت ولا بد. وقد أشار أبو هلال (1) إلى فرق آخر خلاصته أن التلاوة تكون في ما يطول أي يكثر من الكلام. ووجود عنصر التلاحق أخذًا من الاتباع واللحوق في استعمالات التركيب = يتيح ذلك.\nوقال الراغب: إن التلاوة أخص من القراءة لأن التلاوة تختص بما يُتْبع. وقال في هذا السياق: \"فكل تلاوة قراءة، وليس كل قراءة تلاوة [فإنه] لا يقال: تلوت رقعتك. وإنما يقال في القرآن في شيء إذا قرأته وجب عليك اتباعه \"اهـ. وأنا أكاد أقطع بأن الأمر التبس علي الإمام؛ فإن الذي منع \"تلوت رقعتك \"هو أن التلاوة لا تكون إلا بصوت، والرقعة المرسلة من شخص إلى شخص خاصة ليس الشأن فيها أن تقرأ علنًا، فهذا هو الذي منع، لا أن الرقعة ليست مما يتبع.\n° معنى الفصل المعجمي (تل): التكديس (ركما) كما يتمثل في التل المكبوس (ليس خلقة) في (تلل)، وفي معنى التراكم الذي في اللحاق - في (تلو)، بل إن معنى الضغط إلى أسفل متحقق في (تلو) أيضًا من حيث إن كون التلو من الخلف يناسب كون التكديس كبسًا إلى أسفل.",
-      "fasil_ozeti": "° معنى الفصل المعجمي (تل): التكديس (ركما) كما يتمثل في التل المكبوس (ليس خلقة) في (تلل)، وفي معنى التراكم الذي في اللحاق - في (تلو)، بل إن معنى الضغط إلى أسفل متحقق في (تلو) أيضًا من حيث إن كون التلو من الخلف يناسب كون التكديس كبسًا إلى أسفل."
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "تل",
-        "u": "تل",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تَلِّ • (talli) (form II) /tal.li/\n# second-person masculine singular imperative of تَلَّى (tallā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["talli", "tallā"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتل",
-        "u": "يتل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يتل (form II)\n# يُتَلِّ (yutalli) /ju.tal.li/: third-person masculine singular non-past active jussive of تَلَّى (tallā)\n# يُتَلَّ (yutalla) /ju.tal.la/: third-person masculine singular non-past passive jussive of تَلَّى (tallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yutalli", "tallā", "yutalla"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتلون",
-        "u": "يتلون",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يتلون (form II)\n# يُتَلُّونَ (yutallūna) /ju.tal.luː.na/: third-person masculine plural non-past active indicative of تَلَّى (tallā)\n# يُتَلَّوْنَ (yutallawna) /ju.tal.law.na/: third-person masculine plural non-past passive indicative of تَلَّى (tallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yutallūna", "tallā", "yutallawna"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "أتل",
-        "u": "أتل",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "أتل (form II)\n# أُتَلِّ (ʔutalli) /ʔu.tal.li/: first-person singular non-past active jussive of تَلَّى (tallā)\n# أُتَلَّ (ʔutalla) /ʔu.tal.la/: first-person singular non-past passive jussive of تَلَّى (tallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔutalli", "tallā", "ʔutalla"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتلى",
-        "u": "يتلى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُتَلَّى • (yutallā) (form II) /ju.tal.laː/\n# third-person masculine singular non-past passive indicative/subjunctive of تَلَّى (tallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yutallā", "tallā"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تلي",
-        "u": "تلي",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تلي (form II)\n# تُلِّيَ (tulliya) /tul.li.ja/: third-person masculine singular past passive of تَلَّى (tallā)\n# تَلِّي (tallī) /tal.liː/: second-person feminine singular imperative of تَلَّى (tallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tulliya", "tallā", "tallī"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تلت",
-        "u": "تلت",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَلَّتْ • (tallat) (form II) /tal.lat/\n# third-person feminine singular past active of تَلَّى (tallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tallat", "tallā"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتل",
-        "u": "تتل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تتل (form II)\n# تُتَلِّ (tutalli) /tu.tal.li/: inflection of تَلَّى (tallā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُتَلَّ (tutalla) /tu.tal.la/: inflection of تَلَّى (tallā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tutalli", "tallā", "tutalla"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تليت",
-        "u": "تليت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تليت (form II)\n# تَلَّيْتُ (tallaytu) /tal.laj.tu/: first-person singular past active of تَلَّى (tallā)\n# تَلَّيْتَ (tallayta) /tal.laj.ta/: second-person masculine singular past active of تَلَّى (tallā)\n# تَلَّيْتِ (tallayti) /tal.laj.ti/: second-person feminine singular past active of تَلَّى (tallā)\n# تُلِّيتُ (tullītu) /tul.liː.tu/: first-person singular past passive of تَلَّى (tallā)\n# تُلِّيت",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tallaytu", "tallā", "tallayta"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتلى",
-        "u": "تتلى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُتَلَّى • (tutallā) (form II) /tu.tal.laː/\n# inflection of تَلَّى (tallā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tutallā", "tallā"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتلون",
-        "u": "تتلون",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تتلون (form II)\n# تُتَلُّونَ (tutallūna) /tu.tal.luː.na/: second-person masculine plural non-past active indicative of تَلَّى (tallā)\n# تُتَلَّوْنَ (tutallawna) /tu.tal.law.na/: second-person masculine plural non-past passive indicative of تَلَّى (tallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tutallūna", "tallā", "tutallawna"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتلين",
-        "u": "تتلين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تتلين (form II)\n# تُتَلِّينَ (tutallīna) /tu.tal.liː.na/: inflection of تَلَّى (tallā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُتَلَّيْنَ (tutallayna) /tu.tal.laj.na/: inflection of تَلَّى (tallā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plur",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tutallīna", "tallā", "tutallayna"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتلي",
-        "u": "تتلي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تتلي (form II)\n# تُتَلِّي (tutallī) /tu.tal.liː/: inflection of تَلَّى (tallā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُتَلِّيَ (tutalliya) /tu.tal.li.ja/: inflection of تَلَّى (tallā):\n## second-person masculine singular non-past active sub",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tutallī", "tallā", "tutalliya"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تلين",
-        "u": "تلين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تلين (form II)\n# تَلَّيْنَ (tallayna) /tal.laj.na/: third-person feminine plural past active of تَلَّى (tallā)\n# تُلِّينَ (tullīna) /tul.liː.na/: third-person feminine plural past passive of تَلَّى (tallā)\n# تَلِّينَ (tallīna) /tal.liː.na/: second-person feminine plural imperative of تَلَّى (tallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tallayna", "tallā", "tullīna"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "أتلى",
-        "u": "أتلى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أُتَلَّى • (ʔutallā) (form II) /ʔu.tal.laː/\n# first-person singular non-past passive indicative/subjunctive of تَلَّى (tallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔutallā", "tallā"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "نتل",
-        "u": "نتل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نتل (form II)\n# نُتَلِّ (nutalli) /nu.tal.li/: first-person plural non-past active jussive of تَلَّى (tallā)\n# نُتَلَّ (nutalla) /nu.tal.la/: first-person plural non-past passive jussive of تَلَّى (tallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nutalli", "tallā", "nutalla"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تلينا",
-        "u": "تلينا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تلينا (form II)\n# تَلَّيْنَا (tallaynā) /tal.laj.naː/: first-person plural past active of تَلَّى (tallā)\n# تُلِّينَا (tullīnā) /tul.liː.naː/: first-person plural past passive of تَلَّى (tallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tallaynā", "tallā", "tullīnā"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "نتلى",
-        "u": "نتلى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نُتَلَّى • (nutallā) (form II) /nu.tal.laː/\n# first-person plural non-past passive indicative/subjunctive of تَلَّى (tallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nutallā", "tallā"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتلوا",
-        "u": "تتلوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تتلوا (form II)\n# تُتَلُّوا (tutallū) /tu.tal.luː/: second-person masculine plural non-past active subjunctive/jussive of تَلَّى (tallā)\n# تُتَلَّوْا (tutallaw) /tu.tal.law/: second-person masculine plural non-past passive subjunctive/jussive of تَلَّى (tallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tutallū", "tallā", "tutallaw"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تليتم",
-        "u": "تليتم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تليتم (form II)\n# تَلَّيْتُمْ (tallaytum) /tal.laj.tum/: second-person masculine plural past active of تَلَّى (tallā)\n# تُلِّيتُمْ (tullītum) /tul.liː.tum/: second-person masculine plural past passive of تَلَّى (tallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tallaytum", "tallā", "tullītum"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تلوا",
-        "u": "تلوا",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تلوا (form II)\n# تَلَّوْا (tallaw) /tal.law/: third-person masculine plural past active of تَلَّى (tallā)\n# تُلُّوا (tullū) /tul.luː/: third-person masculine plural past passive of تَلَّى (tallā)\n# تَلُّوا (tallū) /tal.luː/: second-person masculine plural imperative of تَلَّى (tallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tallaw", "tallā", "tullū"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتلوا",
-        "u": "يتلوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يتلوا (form II)\n# يُتَلُّوا (yutallū) /ju.tal.luː/: third-person masculine plural non-past active subjunctive/jussive of تَلَّى (tallā)\n# يُتَلَّوْا (yutallaw) /ju.tal.law/: third-person masculine plural non-past passive subjunctive/jussive of تَلَّى (tallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yutallū", "tallā", "yutallaw"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تليتن",
-        "u": "تليتن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تليتن (form II)\n# تَلَّيْتُنَّ (tallaytunna) /tal.laj.tun.na/: second-person feminine plural past active of تَلَّى (tallā)\n# تُلِّيتُنَّ (tullītunna) /tul.liː.tun.na/: second-person feminine plural past passive of تَلَّى (tallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tallaytunna", "tallā", "tullītunna"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتلين",
-        "u": "يتلين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يتلين (form II)\n# يُتَلِّينَ (yutallīna) /ju.tal.liː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of تَلَّى (tallā)\n# يُتَلَّيْنَ (yutallayna) /ju.tal.laj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of تَلَّى (tallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yutallīna", "tallā", "yutallayna"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تلتا",
-        "u": "تلتا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَلَّتَا • (tallatā) (form II) /tal.la.taː/\n# third-person feminine dual past active of تَلَّى (tallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tallatā", "tallā"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تليتما",
-        "u": "تليتما",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تليتما (form II)\n# تَلَّيْتُمَا (tallaytumā) /tal.laj.tu.maː/: second-person dual past active of تَلَّى (tallā)\n# تُلِّيتُمَا (tullītumā) /tul.liː.tu.maː/: second-person dual past passive of تَلَّى (tallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tallaytumā", "tallā", "tullītumā"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تليتا",
-        "u": "تليتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُلِّيَتَا • (tulliyatā) (form II) /tul.li.ja.taː/\n# third-person feminine dual past passive of تَلَّى (tallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tulliyatā", "tallā"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تليا",
-        "u": "تليا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تليا (form II)\n# تَلَّيَا (tallayā) /tal.la.jaː/: third-person masculine dual past active of تَلَّى (tallā)\n# تُلِّيَا (tulliyā) /tul.li.jaː/: third-person masculine dual past passive of تَلَّى (tallā)\n# تَلِّيَا (talliyā) /tal.li.jaː/: second-person dual imperative of تَلَّى (tallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tallayā", "tallā", "tulliyā"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتليان",
-        "u": "يتليان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يتليان (form II)\n# يُتَلِّيَانِ (yutalliyāni) /ju.tal.li.jaː.ni/: third-person masculine dual non-past active indicative of تَلَّى (tallā)\n# يُتَلَّيَانِ (yutallayāni) /ju.tal.la.jaː.ni/: third-person masculine dual non-past passive indicative of تَلَّى (tallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yutalliyāni", "tallā", "yutallayāni"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتليا",
-        "u": "تتليا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تتليا (form II)\n# تُتَلِّيَا (tutalliyā) /tu.tal.li.jaː/: inflection of تَلَّى (tallā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُتَلَّيَا (tutallayā) /tu.tal.la.jaː/: inflection of تَلَّى (tallā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctiv",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tutalliyā", "tallā", "tutallayā"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتليا",
-        "u": "يتليا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يتليا (form II)\n# يُتَلِّيَا (yutalliyā) /ju.tal.li.jaː/: third-person masculine dual non-past active subjunctive/jussive of تَلَّى (tallā)\n# يُتَلَّيَا (yutallayā) /ju.tal.la.jaː/: third-person masculine dual non-past passive subjunctive/jussive of تَلَّى (tallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yutalliyā", "tallā", "yutallayā"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتليان",
-        "u": "تتليان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تتليان (form II)\n# تُتَلِّيَانِ (tutalliyāni) /tu.tal.li.jaː.ni/: inflection of تَلَّى (tallā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُتَلَّيَانِ (tutallayāni) /tu.tal.la.jaː.ni/: inflection of تَلَّى (tallā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tutalliyāni", "tallā", "tutallayāni"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "أتلي",
-        "u": "أتلي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتلي (form II)\n# أُتَلِّي (ʔutallī) /ʔu.tal.liː/: first-person singular non-past active indicative of تَلَّى (tallā)\n# أُتَلِّيَ (ʔutalliya) /ʔu.tal.li.ja/: first-person singular non-past active subjunctive of تَلَّى (tallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔutallī", "tallā", "ʔutalliya"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتلي",
-        "u": "يتلي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتلي (form II)\n# يُتَلِّي (yutallī) /ju.tal.liː/: third-person masculine singular non-past active indicative of تَلَّى (tallā)\n# يُتَلِّيَ (yutalliya) /ju.tal.li.ja/: third-person masculine singular non-past active subjunctive of تَلَّى (tallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yutallī", "tallā", "yutalliya"],
-        "k": "تلى",
-        "yol": "kök"
-      },
-      {
-        "w": "نتلي",
-        "u": "نتلي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتلي (form II)\n# نُتَلِّي (nutallī) /nu.tal.liː/: first-person plural non-past active indicative of تَلَّى (tallā)\n# نُتَلِّيَ (nutalliya) /nu.tal.li.ja/: first-person plural non-past active subjunctive of تَلَّى (tallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nutallī", "tallā", "nutalliya"],
-        "k": "تلى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تل",
+  "ses": {
     "harf": "ت",
+    "fasil": "تل",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "cebel": {
+    "fasil": "التاء واللام",
+    "baslik": "تلو - تلى",
+    "mihveri": "هو: اتّباع الشيء ما يسبقه لحوقًا به من خلفه: كالأعجاز، وكولد الحمار والناقة يتبعان أميهما، وكالباقي بعد ما ذهب سَلَفُه في",
+    "tam_metin": "{الَّذِينَ آتَيْنَاهُمُ الْكِتَابَ يَتْلُونَهُ حَقَّ تِلَاوَتِهِ أُولَئِكَ يُؤْمِنُونَ بِهِ} [البقرة: 121].\n\"التَوالي: الأعجاز: التِلْوُ - بالكسر: ولدُ الحمار، وولدُ الناقةِ، يتبعان أميهما، وكذا الجَدْى. ويقال: تَلِيَ فلان بعدَ قومه (كرضي): أي بَقِي. والتُلاوة - كرُخامة وكبَليّة: بَقيةُ الشيء عامة \".\n° المعنى المحوري\nهو: اتّباع الشيء ما يسبقه لحوقًا به من خلفه: كالأعجاز، وكولد الحمار والناقة يتبعان أميهما، وكالباقي بعد ما ذهب سَلَفُه في\n__________\n= منهما يعبر عن تكديس الشيء بعضه فوق بعض حتى ينتبر جُثًّا رابيًا كتلّ التراب وغيره في (تلل). وفي (تلو - تلي) تعبر الواو عن الاشتمال، ويعبر التركيب عن لحاق الشيء الشيء من خلفه, كأن التابع مشمول ضمن المتبوع.\n(1/213)\nموضعه (كأنه خلفه). ومنه تَلَوته: تبعته، وفلان يتلو فلانًا: يحكيه ويتبع فعله: {وَالشَّمْسِ وَضُحَاهَا (1) وَالْقَمَرِ إِذَا تَلَاهَا} [الشمس: 1, 2]: تَبِعها. وتَتَلَّى الشيءَ: تتبّعه.\nومن ذلك التلو المكاني يؤخذ التلو العملي أي التنفيذ: {الَّذِينَ آتَيْنَاهُمُ الْكِتَابَ يَتْلُونَهُ حَقَّ تِلَاوَتِهِ} [البقرة: 102] قال [طب 2/ 566]: \"يتبعونه حق اتباعه ويأخذون به عملًا \". والذي يصلح فيه تفسير (تلا) بـ (اتبع) مما جاء في القرآن من التركيب هو - مع ما سبق {إِنَّ الَّذِينَ يَتْلُونَ كِتَابَ اللَّهِ وَأَقَامُوا الصَّلَاةَ} [فاطر: 29، وكذا ما في هود 17، ينظر قر 9/ 16 - 17]. وسائره من التلاوة القراءة.\nأما التلاوة بمعنى القراءة، كما في تلاوة القرآن والنشرات، فلعل أصل هذا من تتبع الكلام المكتوب عند القراءة أي اتباعه كلمة كلمة، فهذا يعني القراءة من مكتوب، وعليه: {وَمَا كُنْتَ تَتْلُو مِنْ قَبْلِهِ مِنْ كِتَابٍ وَلَا تَخُطُّهُ بِيَمِينِكَ} [العنكبوت: 48] فهذا كالصريح في معنى قراءة المكتوب. ثم عمم في القراءة عن ظهر القلب أي من غير مكتوب. وقد يكون هذا من القراءة اللاحقة، أي المتَّبِعة لما وُعِيَ قَبلا، كما قال تعالى: {فَإِذَا قَرَأْنَاهُ فَاتَّبِعْ قُرْآنَهُ} [القيامة: 18] أو من التلاحق: تلاحق المتلوّ أي امتداده هذا يتبع هذا. {وَإِذَا تُتْلَى عَلَيْهِمْ آيَاتُنَا قَالُوا قَدْ سَمِعْنَا لَوْ نَشَاءُ لَقُلْنَا مِثْلَ هَذَا} [الأنفال: 31]، {وَاتْلُ عَلَيْهِمْ نَبَأَ ابْنَيْ آدَمَ بِالْحَقِّ} [المائدة: 27]، {تَتْلُو الشَّيَاطِينُ عَلَى مُلْكِ سُلَيْمَانَ} [البقرة: 102] قال بعضهم: \"تتلو: تُحدِّثُ وتَرْوِى وتَتَكلم به وتخبر نحو تلاوة الرجل أيّ كتاب؛\n(1/214)\nلأن الشياطين هي التي عَلّمت الناسَ السحرَ ورَوَتْه لهم .. وقال آخرون: ما تَتْبعُه الشياطينُ وتعملُ به .. كما يقال: تَلَوْتُ فلانًا: إذا مَشَيْتَ خلْفه وتَبِعْتَ أَثَره، كما قال جل ثناؤه: {هُنَالِكَ تَبْلُو كُلُّ نَفْسٍ مَا أَسْلَفَتْ} [يونس: 30]- على إحدي القراءتين - يعني بذلك تتبع، {عَلَى مُلْكِ سُلَيْمَانَ} [البقرة: 102] أي في (عهد) ملكه \". اهـ[طبري 2/ 412].\nأما عن الفرق بين القراءة والتلاوة فهو حسب ما تكشفه الدراسة:\nأ) أن المعنى الأصلي الدقيق للقراءة هو وعي المادّة (المقروءة) في القلب تلقيًا بالسماع (ويدخل فيه الوحي)، أو من كتاب (بلا صوت). ويتفرع عن هذا لزوميا القراءةُ بمعنى إلقاء المحفوظ في القلب باللسان أي نطقه.\nوالتلاوة تستعمل في هذا أي في نطق الكلام وإلقائه دون مطالعة من صحيفة، كما قال تعالى: {تِلْكَ آيَاتُ اللَّهِ نَتْلُوهَا عَلَيْكَ بِالْحَقِّ} [البقرة: 252]؛ فتستوي في هذا مع (القراءة): إما تطورًا، وإما أصالة، كما مرّ في الفقرة السابقة. وتستعمل في القراءة من كتاب - وهذا أصل في التلاوة - وعليه جاء قوله تعالى: {وَمَا كُنْتَ تَتْلُو مِنْ قَبْلِهِ مِنْ كِتَابٍ} [العنكبوت: 48]- كما سبق. وامتداد الكلام كالقيد فيها.\nب) إذا استعمل الفعلان معديين فإن \"تلا \"لا تكون إلا قراءة بصوت، \"وقرأ \"تكون بصوت وبغير صوت. أما إذا عُدِّيا بالحرف \"على \"فإنهما تستويان في أنه لا بد فيهما من الإلقاء بصوت.\nالخلاصة في الفرق بين التلاوة والقراءة في الأصل: \"تلا \"تستعمل للقراءة من مكتوب بصوت، ويتسامح فيها فتكون من غير مكتوب لكن بصوت،\n(1/215)\nو \"قرأ \"تستعمل للقراءة من مكتوب ومن غير مكتوب، بصوت وبغير صوت. فإذا عُدّيا بـ (علي) فهما بصوت ولا بد. وقد أشار أبو هلال (1) إلى فرق آخر خلاصته أن التلاوة تكون في ما يطول أي يكثر من الكلام. ووجود عنصر التلاحق أخذًا من الاتباع واللحوق في استعمالات التركيب = يتيح ذلك.\nوقال الراغب: إن التلاوة أخص من القراءة لأن التلاوة تختص بما يُتْبع. وقال في هذا السياق: \"فكل تلاوة قراءة، وليس كل قراءة تلاوة [فإنه] لا يقال: تلوت رقعتك. وإنما يقال في القرآن في شيء إذا قرأته وجب عليك اتباعه \"اهـ. وأنا أكاد أقطع بأن الأمر التبس علي الإمام؛ فإن الذي منع \"تلوت رقعتك \"هو أن التلاوة لا تكون إلا بصوت، والرقعة المرسلة من شخص إلى شخص خاصة ليس الشأن فيها أن تقرأ علنًا، فهذا هو الذي منع، لا أن الرقعة ليست مما يتبع.\n° معنى الفصل المعجمي (تل): التكديس (ركما) كما يتمثل في التل المكبوس (ليس خلقة) في (تلل)، وفي معنى التراكم الذي في اللحاق - في (تلو)، بل إن معنى الضغط إلى أسفل متحقق في (تلو) أيضًا من حيث إن كون التلو من الخلف يناسب كون التكديس كبسًا إلى أسفل.",
+    "fasil_ozeti": "° معنى الفصل المعجمي (تل): التكديس (ركما) كما يتمثل في التل المكبوس (ليس خلقة) في (تلل)، وفي معنى التراكم الذي في اللحاق - في (تلو)، بل إن معنى الضغط إلى أسفل متحقق في (تلو) أيضًا من حيث إن كون التلو من الخلف يناسب كون التكديس كبسًا إلى أسفل."
+  },
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "تل",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تَلِّ • (talli) (form II) /tal.li/\n# second-person masculine singular imperative of تَلَّى (tallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["talli", "tallā"]
+    },
+    {
+      "madde": "يتل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يتل (form II)\n# يُتَلِّ (yutalli) /ju.tal.li/: third-person masculine singular non-past active jussive of تَلَّى (tallā)\n# يُتَلَّ (yutalla) /ju.tal.la/: third-person masculine singular non-past passive jussive of تَلَّى (tallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yutalli", "tallā", "yutalla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتلون",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يتلون (form II)\n# يُتَلُّونَ (yutallūna) /ju.tal.luː.na/: third-person masculine plural non-past active indicative of تَلَّى (tallā)\n# يُتَلَّوْنَ (yutallawna) /ju.tal.law.na/: third-person masculine plural non-past passive indicative of تَلَّى (tallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yutallūna", "tallā", "yutallawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أتل",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "أتل (form II)\n# أُتَلِّ (ʔutalli) /ʔu.tal.li/: first-person singular non-past active jussive of تَلَّى (tallā)\n# أُتَلَّ (ʔutalla) /ʔu.tal.la/: first-person singular non-past passive jussive of تَلَّى (tallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔutalli", "tallā", "ʔutalla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتلى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُتَلَّى • (yutallā) (form II) /ju.tal.laː/\n# third-person masculine singular non-past passive indicative/subjunctive of تَلَّى (tallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yutallā", "tallā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلي",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تلي (form II)\n# تُلِّيَ (tulliya) /tul.li.ja/: third-person masculine singular past passive of تَلَّى (tallā)\n# تَلِّي (tallī) /tal.liː/: second-person feminine singular imperative of تَلَّى (tallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tulliya", "tallā", "tallī"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلت",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَلَّتْ • (tallat) (form II) /tal.lat/\n# third-person feminine singular past active of تَلَّى (tallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tallat", "tallā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تتل (form II)\n# تُتَلِّ (tutalli) /tu.tal.li/: inflection of تَلَّى (tallā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُتَلَّ (tutalla) /tu.tal.la/: inflection of تَلَّى (tallā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tutalli", "tallā", "tutalla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تليت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تليت (form II)\n# تَلَّيْتُ (tallaytu) /tal.laj.tu/: first-person singular past active of تَلَّى (tallā)\n# تَلَّيْتَ (tallayta) /tal.laj.ta/: second-person masculine singular past active of تَلَّى (tallā)\n# تَلَّيْتِ (tallayti) /tal.laj.ti/: second-person feminine singular past active of تَلَّى (tallā)\n# تُلِّيتُ (tullītu) /tul.liː.tu/: first-person singular past passive of تَلَّى (tallā)\n# تُلِّيت",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tallaytu", "tallā", "tallayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتلى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُتَلَّى • (tutallā) (form II) /tu.tal.laː/\n# inflection of تَلَّى (tallā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tutallā", "tallā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتلون",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تتلون (form II)\n# تُتَلُّونَ (tutallūna) /tu.tal.luː.na/: second-person masculine plural non-past active indicative of تَلَّى (tallā)\n# تُتَلَّوْنَ (tutallawna) /tu.tal.law.na/: second-person masculine plural non-past passive indicative of تَلَّى (tallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tutallūna", "tallā", "tutallawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتلين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تتلين (form II)\n# تُتَلِّينَ (tutallīna) /tu.tal.liː.na/: inflection of تَلَّى (tallā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُتَلَّيْنَ (tutallayna) /tu.tal.laj.na/: inflection of تَلَّى (tallā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plur",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tutallīna", "tallā", "tutallayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتلي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تتلي (form II)\n# تُتَلِّي (tutallī) /tu.tal.liː/: inflection of تَلَّى (tallā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُتَلِّيَ (tutalliya) /tu.tal.li.ja/: inflection of تَلَّى (tallā):\n## second-person masculine singular non-past active sub",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tutallī", "tallā", "tutalliya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تلين (form II)\n# تَلَّيْنَ (tallayna) /tal.laj.na/: third-person feminine plural past active of تَلَّى (tallā)\n# تُلِّينَ (tullīna) /tul.liː.na/: third-person feminine plural past passive of تَلَّى (tallā)\n# تَلِّينَ (tallīna) /tal.liː.na/: second-person feminine plural imperative of تَلَّى (tallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tallayna", "tallā", "tullīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أتلى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أُتَلَّى • (ʔutallā) (form II) /ʔu.tal.laː/\n# first-person singular non-past passive indicative/subjunctive of تَلَّى (tallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔutallā", "tallā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نتل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نتل (form II)\n# نُتَلِّ (nutalli) /nu.tal.li/: first-person plural non-past active jussive of تَلَّى (tallā)\n# نُتَلَّ (nutalla) /nu.tal.la/: first-person plural non-past passive jussive of تَلَّى (tallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nutalli", "tallā", "nutalla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلينا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تلينا (form II)\n# تَلَّيْنَا (tallaynā) /tal.laj.naː/: first-person plural past active of تَلَّى (tallā)\n# تُلِّينَا (tullīnā) /tul.liː.naː/: first-person plural past passive of تَلَّى (tallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tallaynā", "tallā", "tullīnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نتلى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نُتَلَّى • (nutallā) (form II) /nu.tal.laː/\n# first-person plural non-past passive indicative/subjunctive of تَلَّى (tallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nutallā", "tallā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتلوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تتلوا (form II)\n# تُتَلُّوا (tutallū) /tu.tal.luː/: second-person masculine plural non-past active subjunctive/jussive of تَلَّى (tallā)\n# تُتَلَّوْا (tutallaw) /tu.tal.law/: second-person masculine plural non-past passive subjunctive/jussive of تَلَّى (tallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tutallū", "tallā", "tutallaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تليتم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تليتم (form II)\n# تَلَّيْتُمْ (tallaytum) /tal.laj.tum/: second-person masculine plural past active of تَلَّى (tallā)\n# تُلِّيتُمْ (tullītum) /tul.liː.tum/: second-person masculine plural past passive of تَلَّى (tallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tallaytum", "tallā", "tullītum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلوا",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تلوا (form II)\n# تَلَّوْا (tallaw) /tal.law/: third-person masculine plural past active of تَلَّى (tallā)\n# تُلُّوا (tullū) /tul.luː/: third-person masculine plural past passive of تَلَّى (tallā)\n# تَلُّوا (tallū) /tal.luː/: second-person masculine plural imperative of تَلَّى (tallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tallaw", "tallā", "tullū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتلوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يتلوا (form II)\n# يُتَلُّوا (yutallū) /ju.tal.luː/: third-person masculine plural non-past active subjunctive/jussive of تَلَّى (tallā)\n# يُتَلَّوْا (yutallaw) /ju.tal.law/: third-person masculine plural non-past passive subjunctive/jussive of تَلَّى (tallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yutallū", "tallā", "yutallaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تليتن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تليتن (form II)\n# تَلَّيْتُنَّ (tallaytunna) /tal.laj.tun.na/: second-person feminine plural past active of تَلَّى (tallā)\n# تُلِّيتُنَّ (tullītunna) /tul.liː.tun.na/: second-person feminine plural past passive of تَلَّى (tallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tallaytunna", "tallā", "tullītunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتلين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يتلين (form II)\n# يُتَلِّينَ (yutallīna) /ju.tal.liː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of تَلَّى (tallā)\n# يُتَلَّيْنَ (yutallayna) /ju.tal.laj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of تَلَّى (tallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yutallīna", "tallā", "yutallayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تلتا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَلَّتَا • (tallatā) (form II) /tal.la.taː/\n# third-person feminine dual past active of تَلَّى (tallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tallatā", "tallā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تليتما",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تليتما (form II)\n# تَلَّيْتُمَا (tallaytumā) /tal.laj.tu.maː/: second-person dual past active of تَلَّى (tallā)\n# تُلِّيتُمَا (tullītumā) /tul.liː.tu.maː/: second-person dual past passive of تَلَّى (tallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tallaytumā", "tallā", "tullītumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تليتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُلِّيَتَا • (tulliyatā) (form II) /tul.li.ja.taː/\n# third-person feminine dual past passive of تَلَّى (tallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tulliyatā", "tallā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تليا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تليا (form II)\n# تَلَّيَا (tallayā) /tal.la.jaː/: third-person masculine dual past active of تَلَّى (tallā)\n# تُلِّيَا (tulliyā) /tul.li.jaː/: third-person masculine dual past passive of تَلَّى (tallā)\n# تَلِّيَا (talliyā) /tal.li.jaː/: second-person dual imperative of تَلَّى (tallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tallayā", "tallā", "tulliyā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتليان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يتليان (form II)\n# يُتَلِّيَانِ (yutalliyāni) /ju.tal.li.jaː.ni/: third-person masculine dual non-past active indicative of تَلَّى (tallā)\n# يُتَلَّيَانِ (yutallayāni) /ju.tal.la.jaː.ni/: third-person masculine dual non-past passive indicative of تَلَّى (tallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yutalliyāni", "tallā", "yutallayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتليا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تتليا (form II)\n# تُتَلِّيَا (tutalliyā) /tu.tal.li.jaː/: inflection of تَلَّى (tallā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُتَلَّيَا (tutallayā) /tu.tal.la.jaː/: inflection of تَلَّى (tallā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctiv",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tutalliyā", "tallā", "tutallayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتليا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يتليا (form II)\n# يُتَلِّيَا (yutalliyā) /ju.tal.li.jaː/: third-person masculine dual non-past active subjunctive/jussive of تَلَّى (tallā)\n# يُتَلَّيَا (yutallayā) /ju.tal.la.jaː/: third-person masculine dual non-past passive subjunctive/jussive of تَلَّى (tallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yutalliyā", "tallā", "yutallayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتليان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تتليان (form II)\n# تُتَلِّيَانِ (tutalliyāni) /tu.tal.li.jaː.ni/: inflection of تَلَّى (tallā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُتَلَّيَانِ (tutallayāni) /tu.tal.la.jaː.ni/: inflection of تَلَّى (tallā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tutalliyāni", "tallā", "tutallayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أتلي",
+      "tur": "verb",
+      "baslik": "أتلي (form II)\n# أُتَلِّي (ʔutallī) /ʔu.tal.liː/: first-person singular non-past active indicative of تَلَّى (tallā)\n# أُتَلِّيَ (ʔutalliya) /ʔu.tal.li.ja/: first-person singular non-past active subjunctive of تَلَّى (tallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔutallī", "tallā", "ʔutalliya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتلي",
+      "tur": "verb",
+      "baslik": "يتلي (form II)\n# يُتَلِّي (yutallī) /ju.tal.liː/: third-person masculine singular non-past active indicative of تَلَّى (tallā)\n# يُتَلِّيَ (yutalliya) /ju.tal.li.ja/: third-person masculine singular non-past active subjunctive of تَلَّى (tallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yutallī", "tallā", "yutalliya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نتلي",
+      "tur": "verb",
+      "baslik": "نتلي (form II)\n# نُتَلِّي (nutallī) /nu.tal.liː/: first-person plural non-past active indicative of تَلَّى (tallā)\n# نُتَلِّيَ (nutalliya) /nu.tal.li.ja/: first-person plural non-past active subjunctive of تَلَّى (tallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nutallī", "tallā", "nutalliya"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "تلى", "r7"]
+  ],
+  "mana": {
     "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
@@ -495,25 +362,8 @@
     "dayanak_tanim": "structure consisting of an artificial heap or bank usually of earth or stones",
     "synset_sayisi": 2
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "التاء واللام",
-    "mihveri": "هو: اتّباع الشيء ما يسبقه لحوقًا به من خلفه: كالأعجاز، وكولد الحمار والناقة يتبعان أميهما، وكالباقي بعد ما ذهب سَلَفُه في",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (تل): التكديس (ركما) كما يتمثل في التل المكبوس (ليس خلقة) في (تلل)، وفي معنى التراكم الذي في اللحاق - في (تلو)، بل إن معنى الضغط إلى أسفل متحقق في (تلو) أيضًا من حيث إن كون التلو من الخلف يناسب كون التكديس كبسًا إلى أسفل.",
-    "tam_metin": "{الَّذِينَ آتَيْنَاهُمُ الْكِتَابَ يَتْلُونَهُ حَقَّ تِلَاوَتِهِ أُولَئِكَ يُؤْمِنُونَ بِهِ} [البقرة: 121].\n\"التَوالي: الأعجاز: التِلْوُ - بالكسر: ولدُ الحمار، وولدُ الناقةِ، يتبعان أميهما، وكذا الجَدْى. ويقال: تَلِيَ فلان بعدَ قومه (كرضي): أي بَقِي. والتُلاوة - كرُخامة وكبَليّة: بَقيةُ الشيء عامة \".\n° المعنى المحوري\nهو: اتّباع الشيء ما يسبقه لحوقًا به من خلفه: كالأعجاز، وكولد الحمار والناقة يتبعان أميهما، وكالباقي بعد ما ذهب سَلَفُه في\n__________\n= منهما يعبر عن تكديس الشيء بعضه فوق بعض حتى ينتبر جُثًّا رابيًا كتلّ التراب وغيره في (تلل). وفي (تلو - تلي) تعبر الواو عن الاشتمال، ويعبر التركيب عن لحاق الشيء الشيء من خلفه, كأن التابع مشمول ضمن المتبوع.\n(1/213)\nموضعه (كأنه خلفه). ومنه تَلَوته: تبعته، وفلان يتلو فلانًا: يحكيه ويتبع فعله: {وَالشَّمْسِ وَضُحَاهَا (1) وَالْقَمَرِ إِذَا تَلَاهَا} [الشمس: 1, 2]: تَبِعها. وتَتَلَّى الشيءَ: تتبّعه.\nومن ذلك التلو المكاني يؤخذ التلو العملي أي التنفيذ: {الَّذِينَ آتَيْنَاهُمُ الْكِتَابَ يَتْلُونَهُ حَقَّ تِلَاوَتِهِ} [البقرة: 102] قال [طب 2/ 566]: \"يتبعونه حق اتباعه ويأخذون به عملًا \". والذي يصلح فيه تفسير (تلا) بـ (اتبع) مما جاء في القرآن من التركيب هو - مع ما سبق {إِنَّ الَّذِينَ يَتْلُونَ كِتَابَ اللَّهِ وَأَقَامُوا الصَّلَاةَ} [فاطر: 29، وكذا ما في هود 17، ينظر قر 9/ 16 - 17]. وسائره من التلاوة القراءة.\nأما التلاوة بمعنى القراءة، كما في تلاوة القرآن والنشرات، فلعل أصل هذا من تتبع الكلام المكتوب عند القراءة أي اتباعه كلمة كلمة، فهذا يعني القراءة من مكتوب، وعليه: {وَمَا كُنْتَ تَتْلُو مِنْ قَبْلِهِ مِنْ كِتَابٍ وَلَا تَخُطُّهُ بِيَمِينِكَ} [العنكبوت: 48] فهذا كالصريح في معنى قراءة المكتوب. ثم عمم في القراءة عن ظهر القلب أي من غير مكتوب. وقد يكون هذا من القراءة اللاحقة، أي المتَّبِعة لما وُعِيَ قَبلا، كما قال تعالى: {فَإِذَا قَرَأْنَاهُ فَاتَّبِعْ قُرْآنَهُ} [القيامة: 18] أو من التلاحق: تلاحق المتلوّ أي امتداده هذا يتبع هذا. {وَإِذَا تُتْلَى عَلَيْهِمْ آيَاتُنَا قَالُوا قَدْ سَمِعْنَا لَوْ نَشَاءُ لَقُلْنَا مِثْلَ هَذَا} [الأنفال: 31]، {وَاتْلُ عَلَيْهِمْ نَبَأَ ابْنَيْ آدَمَ بِالْحَقِّ} [المائدة: 27]، {تَتْلُو الشَّيَاطِينُ عَلَى مُلْكِ سُلَيْمَانَ} [البقرة: 102] قال بعضهم: \"تتلو: تُحدِّثُ وتَرْوِى وتَتَكلم به وتخبر نحو تلاوة الرجل أيّ كتاب؛\n(1/214)\nلأن الشياطين هي التي عَلّمت الناسَ السحرَ ورَوَتْه لهم .. وقال آخرون: ما تَتْبعُه الشياطينُ وتعملُ به .. كما يقال: تَلَوْتُ فلانًا: إذا مَشَيْتَ خلْفه وتَبِعْتَ أَثَره، كما قال جل ثناؤه: {هُنَالِكَ تَبْلُو كُلُّ نَفْسٍ مَا أَسْلَفَتْ} [يونس: 30]- على إحدي القراءتين - يعني بذلك تتبع، {عَلَى مُلْكِ سُلَيْمَانَ} [البقرة: 102] أي في (عهد) ملكه \". اهـ[طبري 2/ 412].\nأما عن الفرق بين القراءة والتلاوة فهو حسب ما تكشفه الدراسة:\nأ) أن المعنى الأصلي الدقيق للقراءة هو وعي المادّة (المقروءة) في القلب تلقيًا بالسماع (ويدخل فيه الوحي)، أو من كتاب (بلا صوت). ويتفرع عن هذا لزوميا القراءةُ بمعنى إلقاء المحفوظ في القلب باللسان أي نطقه.\nوالتلاوة تستعمل في هذا أي في نطق الكلام وإلقائه دون مطالعة من صحيفة، كما قال تعالى: {تِلْكَ آيَاتُ اللَّهِ نَتْلُوهَا عَلَيْكَ بِالْحَقِّ} [البقرة: 252]؛ فتستوي في هذا مع (القراءة): إما تطورًا، وإما أصالة، كما مرّ في الفقرة السابقة. وتستعمل في القراءة من كتاب - وهذا أصل في التلاوة - وعليه جاء قوله تعالى: {وَمَا كُنْتَ تَتْلُو مِنْ قَبْلِهِ مِنْ كِتَابٍ} [العنكبوت: 48]- كما سبق. وامتداد الكلام كالقيد فيها.\nب) إذا استعمل الفعلان معديين فإن \"تلا \"لا تكون إلا قراءة بصوت، \"وقرأ \"تكون بصوت وبغير صوت. أما إذا عُدِّيا بالحرف \"على \"فإنهما تستويان في أنه لا بد فيهما من الإلقاء بصوت.\nالخلاصة في الفرق بين التلاوة والقراءة في الأصل: \"تلا \"تستعمل للقراءة من مكتوب بصوت، ويتسامح فيها فتكون من غير مكتوب لكن بصوت،\n(1/215)\nو \"قرأ \"تستعمل للقراءة من مكتوب ومن غير مكتوب، بصوت وبغير صوت. فإذا عُدّيا بـ (علي) فهما بصوت ولا بد. وقد أشار أبو هلال (1) إلى فرق آخر خلاصته أن التلاوة تكون في ما يطول أي يكثر من الكلام. ووجود عنصر التلاحق أخذًا من الاتباع واللحوق في استعمالات التركيب = يتيح ذلك.\nوقال الراغب: إن التلاوة أخص من القراءة لأن التلاوة تختص بما يُتْبع. وقال في هذا السياق: \"فكل تلاوة قراءة، وليس كل قراءة تلاوة [فإنه] لا يقال: تلوت رقعتك. وإنما يقال في القرآن في شيء إذا قرأته وجب عليك اتباعه \"اهـ. وأنا أكاد أقطع بأن الأمر التبس علي الإمام؛ فإن الذي منع \"تلوت رقعتك \"هو أن التلاوة لا تكون إلا بصوت، والرقعة المرسلة من شخص إلى شخص خاصة ليس الشأن فيها أن تقرأ علنًا، فهذا هو الذي منع، لا أن الرقعة ليست مما يتبع.\n° معنى الفصل المعجمي (تل): التكديس (ركما) كما يتمثل في التل المكبوس (ليس خلقة) في (تلل)، وفي معنى التراكم الذي في اللحاق - في (تلو)، بل إن معنى الضغط إلى أسفل متحقق في (تلو) أيضًا من حيث إن كون التلو من الخلف يناسب كون التكديس كبسًا إلى أسفل."
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["artifact.n.01", "pile.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 4,
       "merkez_kok": "درك",
@@ -533,6 +383,11 @@
       "boy": 12
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["artifact.n.01", "pile.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

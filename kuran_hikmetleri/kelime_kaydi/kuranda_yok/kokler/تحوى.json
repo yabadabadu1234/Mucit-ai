@@ -1,425 +1,302 @@
 {
   "kok": "تحوى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تحوى", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تحو",
-        "u": "تحو",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَحَوَّ • (taḥawwa) (form V) /ta.ħaw.wa/\n# second-person masculine singular imperative of تَحَوَّى (taḥawwā)",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥawwa", "taḥawwā"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتحوى",
-        "u": "يتحوى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتحوى (form V)\n# يَتَحَوَّى (yataḥawwā) /ja.ta.ħaw.waː/: third-person masculine singular non-past active indicative/subjunctive of تَحَوَّى (taḥawwā)\n# يُتَحَوَّى (yutaḥawwā) /ju.ta.ħaw.waː/: third-person masculine singular non-past passive indicative/subjunctive of تَحَوَّى (taḥawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḥawwā", "taḥawwā", "yutaḥawwā"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتحو",
-        "u": "يتحو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتحو (form V)\n# يَتَحَوَّ (yataḥawwa) /ja.ta.ħaw.wa/: third-person masculine singular non-past active jussive of تَحَوَّى (taḥawwā)\n# يُتَحَوَّ (yutaḥawwa) /ju.ta.ħaw.wa/: third-person masculine singular non-past passive jussive of تَحَوَّى (taḥawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḥawwa", "taḥawwā", "yutaḥawwa"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحوي",
-        "u": "تحوي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تحوي (form V)\n# تُحُوِّيَ (tuḥuwwiya) /tu.ħuw.wi.ja/: third-person masculine singular past passive of تَحَوَّى (taḥawwā)\n# تَحَوَّيْ (taḥawway) /ta.ħaw.waj/: second-person feminine singular imperative of تَحَوَّى (taḥawwā)",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tuḥuwwiya", "taḥawwā", "taḥawway"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحوت",
-        "u": "تحوت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحَوَّتْ • (taḥawwat) (form V) /ta.ħaw.wat/\n# third-person feminine singular past active of تَحَوَّى (taḥawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥawwat", "taḥawwā"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتحوى",
-        "u": "تتحوى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَحَوَّى • (tataḥawwā) (form V) /ta.ta.ħaw.waː/\n# inflection of تَحَوَّى (taḥawwā):\n## second-person masculine singular non-past active indicative/subjunctive\n## third-person feminine singular non-past active indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḥawwā", "taḥawwā"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتحو",
-        "u": "تتحو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَحَوَّ • (tataḥawwa) (form V) /ta.ta.ħaw.wa/\n# inflection of تَحَوَّى (taḥawwā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḥawwa", "taḥawwā"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحويت",
-        "u": "تحويت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تحويت (form V)\n# تَحَوَّيْتُ (taḥawwaytu) /ta.ħaw.waj.tu/: first-person singular past active of تَحَوَّى (taḥawwā)\n# تَحَوَّيْتَ (taḥawwayta) /ta.ħaw.waj.ta/: second-person masculine singular past active of تَحَوَّى (taḥawwā)\n# تَحَوَّيْتِ (taḥawwayti) /ta.ħaw.waj.ti/: second-person feminine singular past active of تَحَوَّى (taḥawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥawwaytu", "taḥawwā", "taḥawwayta"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتحوين",
-        "u": "تتحوين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَحَوَّيْنَ • (tataḥawwayna) (form V) /ta.ta.ħaw.waj.na/\n# inflection of تَحَوَّى (taḥawwā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḥawwayna", "taḥawwā"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتحوي",
-        "u": "تتحوي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَحَوَّيْ • (tataḥawway) (form V) /ta.ta.ħaw.waj/\n# second-person feminine singular non-past active subjunctive/jussive of تَحَوَّى (taḥawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḥawway", "taḥawwā"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحوين",
-        "u": "تحوين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَحَوَّيْنَ • (taḥawwayna) (form V) /ta.ħaw.waj.na/\n# inflection of تَحَوَّى (taḥawwā):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥawwayna", "taḥawwā"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "أتحوى",
-        "u": "أتحوى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَتَحَوَّى • (ʔataḥawwā) (form V) /ʔa.ta.ħaw.waː/\n# first-person singular non-past active indicative/subjunctive of تَحَوَّى (taḥawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔataḥawwā", "taḥawwā"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "أتحو",
-        "u": "أتحو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَتَحَوَّ • (ʔataḥawwa) (form V) /ʔa.ta.ħaw.wa/\n# first-person singular non-past active jussive of تَحَوَّى (taḥawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔataḥawwa", "taḥawwā"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحوينا",
-        "u": "تحوينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحَوَّيْنَا • (taḥawwaynā) (form V) /ta.ħaw.waj.naː/\n# first-person plural past active of تَحَوَّى (taḥawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥawwaynā", "taḥawwā"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "نتحوى",
-        "u": "نتحوى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَتَحَوَّى • (nataḥawwā) (form V) /na.ta.ħaw.waː/\n# first-person plural non-past active indicative/subjunctive of تَحَوَّى (taḥawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["nataḥawwā", "taḥawwā"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "نتحو",
-        "u": "نتحو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَتَحَوَّ • (nataḥawwa) (form V) /na.ta.ħaw.wa/\n# first-person plural non-past active jussive of تَحَوَّى (taḥawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["nataḥawwa", "taḥawwā"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحويتم",
-        "u": "تحويتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحَوَّيْتُمْ • (taḥawwaytum) (form V) /ta.ħaw.waj.tum/\n# second-person masculine plural past active of تَحَوَّى (taḥawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥawwaytum", "taḥawwā"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتحوون",
-        "u": "تتحوون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَحَوَّوْنَ • (tataḥawwawna) (form V) /ta.ta.ħaw.waw.na/\n# second-person masculine plural non-past active indicative of تَحَوَّى (taḥawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḥawwawna", "taḥawwā"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتحووا",
-        "u": "تتحووا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَحَوَّوْا • (tataḥawwaw) (form V) /ta.ta.ħaw.waw/\n# second-person masculine plural non-past active subjunctive/jussive of تَحَوَّى (taḥawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḥawwaw", "taḥawwā"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحووا",
-        "u": "تحووا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَحَوَّوْا • (taḥawwaw) (form V) /ta.ħaw.waw/\n# inflection of تَحَوَّى (taḥawwā):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥawwaw", "taḥawwā"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتحوون",
-        "u": "يتحوون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَحَوَّوْنَ • (yataḥawwawna) (form V) /ja.ta.ħaw.waw.na/\n# third-person masculine plural non-past active indicative of تَحَوَّى (taḥawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḥawwawna", "taḥawwā"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتحووا",
-        "u": "يتحووا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَحَوَّوْا • (yataḥawwaw) (form V) /ja.ta.ħaw.waw/\n# third-person masculine plural non-past active subjunctive/jussive of تَحَوَّى (taḥawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḥawwaw", "taḥawwā"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحويتن",
-        "u": "تحويتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحَوَّيْتُنَّ • (taḥawwaytunna) (form V) /ta.ħaw.waj.tun.na/\n# second-person feminine plural past active of تَحَوَّى (taḥawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥawwaytunna", "taḥawwā"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتحوين",
-        "u": "يتحوين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَحَوَّيْنَ • (yataḥawwayna) (form V) /ja.ta.ħaw.waj.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَحَوَّى (taḥawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḥawwayna", "taḥawwā"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحويتما",
-        "u": "تحويتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحَوَّيْتُمَا • (taḥawwaytumā) (form V) /ta.ħaw.waj.tu.maː/\n# second-person dual past active of تَحَوَّى (taḥawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥawwaytumā", "taḥawwā"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحوتا",
-        "u": "تحوتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحَوَّتَا • (taḥawwatā) (form V) /ta.ħaw.wa.taː/\n# third-person feminine dual past active of تَحَوَّى (taḥawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥawwatā", "taḥawwā"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تحويا",
-        "u": "تحويا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَحَوَّيَا • (taḥawwayā) (form V) /ta.ħaw.wa.jaː/\n# inflection of تَحَوَّى (taḥawwā):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥawwayā", "taḥawwā"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتحويان",
-        "u": "يتحويان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَحَوَّيَانِ • (yataḥawwayāni) (form V) /ja.ta.ħaw.wa.jaː.ni/\n# third-person masculine dual non-past active indicative of تَحَوَّى (taḥawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḥawwayāni", "taḥawwā"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتحويان",
-        "u": "تتحويان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَحَوَّيَانِ • (tataḥawwayāni) (form V) /ta.ta.ħaw.wa.jaː.ni/\n# inflection of تَحَوَّى (taḥawwā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḥawwayāni", "taḥawwā"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتحويا",
-        "u": "تتحويا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَحَوَّيَا • (tataḥawwayā) (form V) /ta.ta.ħaw.wa.jaː/\n# inflection of تَحَوَّى (taḥawwā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḥawwayā", "taḥawwā"],
-        "k": "تحوى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتحويا",
-        "u": "يتحويا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَحَوَّيَا • (yataḥawwayā) (form V) /ja.ta.ħaw.wa.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of تَحَوَّى (taḥawwā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḥawwayā", "taḥawwā"],
-        "k": "تحوى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تح",
+  "ses": {
     "harf": "ت",
+    "fasil": "تح",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تحو",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَحَوَّ • (taḥawwa) (form V) /ta.ħaw.wa/\n# second-person masculine singular imperative of تَحَوَّى (taḥawwā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥawwa", "taḥawwā"]
+    },
+    {
+      "madde": "يتحوى",
+      "tur": "verb",
+      "baslik": "يتحوى (form V)\n# يَتَحَوَّى (yataḥawwā) /ja.ta.ħaw.waː/: third-person masculine singular non-past active indicative/subjunctive of تَحَوَّى (taḥawwā)\n# يُتَحَوَّى (yutaḥawwā) /ju.ta.ħaw.waː/: third-person masculine singular non-past passive indicative/subjunctive of تَحَوَّى (taḥawwā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḥawwā", "taḥawwā", "yutaḥawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتحو",
+      "tur": "verb",
+      "baslik": "يتحو (form V)\n# يَتَحَوَّ (yataḥawwa) /ja.ta.ħaw.wa/: third-person masculine singular non-past active jussive of تَحَوَّى (taḥawwā)\n# يُتَحَوَّ (yutaḥawwa) /ju.ta.ħaw.wa/: third-person masculine singular non-past passive jussive of تَحَوَّى (taḥawwā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḥawwa", "taḥawwā", "yutaḥawwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحوي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تحوي (form V)\n# تُحُوِّيَ (tuḥuwwiya) /tu.ħuw.wi.ja/: third-person masculine singular past passive of تَحَوَّى (taḥawwā)\n# تَحَوَّيْ (taḥawway) /ta.ħaw.waj/: second-person feminine singular imperative of تَحَوَّى (taḥawwā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tuḥuwwiya", "taḥawwā", "taḥawway"]
+    },
+    {
+      "madde": "تحوت",
+      "tur": "verb",
+      "baslik": "تَحَوَّتْ • (taḥawwat) (form V) /ta.ħaw.wat/\n# third-person feminine singular past active of تَحَوَّى (taḥawwā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥawwat", "taḥawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتحوى",
+      "tur": "verb",
+      "baslik": "تَتَحَوَّى • (tataḥawwā) (form V) /ta.ta.ħaw.waː/\n# inflection of تَحَوَّى (taḥawwā):\n## second-person masculine singular non-past active indicative/subjunctive\n## third-person feminine singular non-past active indicative/subjunctive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḥawwā", "taḥawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتحو",
+      "tur": "verb",
+      "baslik": "تَتَحَوَّ • (tataḥawwa) (form V) /ta.ta.ħaw.wa/\n# inflection of تَحَوَّى (taḥawwā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḥawwa", "taḥawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحويت",
+      "tur": "verb",
+      "baslik": "تحويت (form V)\n# تَحَوَّيْتُ (taḥawwaytu) /ta.ħaw.waj.tu/: first-person singular past active of تَحَوَّى (taḥawwā)\n# تَحَوَّيْتَ (taḥawwayta) /ta.ħaw.waj.ta/: second-person masculine singular past active of تَحَوَّى (taḥawwā)\n# تَحَوَّيْتِ (taḥawwayti) /ta.ħaw.waj.ti/: second-person feminine singular past active of تَحَوَّى (taḥawwā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥawwaytu", "taḥawwā", "taḥawwayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتحوين",
+      "tur": "verb",
+      "baslik": "تَتَحَوَّيْنَ • (tataḥawwayna) (form V) /ta.ta.ħaw.waj.na/\n# inflection of تَحَوَّى (taḥawwā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḥawwayna", "taḥawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتحوي",
+      "tur": "verb",
+      "baslik": "تَتَحَوَّيْ • (tataḥawway) (form V) /ta.ta.ħaw.waj/\n# second-person feminine singular non-past active subjunctive/jussive of تَحَوَّى (taḥawwā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḥawway", "taḥawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحوين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَحَوَّيْنَ • (taḥawwayna) (form V) /ta.ħaw.waj.na/\n# inflection of تَحَوَّى (taḥawwā):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥawwayna", "taḥawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أتحوى",
+      "tur": "verb",
+      "baslik": "أَتَحَوَّى • (ʔataḥawwā) (form V) /ʔa.ta.ħaw.waː/\n# first-person singular non-past active indicative/subjunctive of تَحَوَّى (taḥawwā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔataḥawwā", "taḥawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أتحو",
+      "tur": "verb",
+      "baslik": "أَتَحَوَّ • (ʔataḥawwa) (form V) /ʔa.ta.ħaw.wa/\n# first-person singular non-past active jussive of تَحَوَّى (taḥawwā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔataḥawwa", "taḥawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحوينا",
+      "tur": "verb",
+      "baslik": "تَحَوَّيْنَا • (taḥawwaynā) (form V) /ta.ħaw.waj.naː/\n# first-person plural past active of تَحَوَّى (taḥawwā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥawwaynā", "taḥawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نتحوى",
+      "tur": "verb",
+      "baslik": "نَتَحَوَّى • (nataḥawwā) (form V) /na.ta.ħaw.waː/\n# first-person plural non-past active indicative/subjunctive of تَحَوَّى (taḥawwā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["nataḥawwā", "taḥawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نتحو",
+      "tur": "verb",
+      "baslik": "نَتَحَوَّ • (nataḥawwa) (form V) /na.ta.ħaw.wa/\n# first-person plural non-past active jussive of تَحَوَّى (taḥawwā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["nataḥawwa", "taḥawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحويتم",
+      "tur": "verb",
+      "baslik": "تَحَوَّيْتُمْ • (taḥawwaytum) (form V) /ta.ħaw.waj.tum/\n# second-person masculine plural past active of تَحَوَّى (taḥawwā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥawwaytum", "taḥawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتحوون",
+      "tur": "verb",
+      "baslik": "تَتَحَوَّوْنَ • (tataḥawwawna) (form V) /ta.ta.ħaw.waw.na/\n# second-person masculine plural non-past active indicative of تَحَوَّى (taḥawwā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḥawwawna", "taḥawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتحووا",
+      "tur": "verb",
+      "baslik": "تَتَحَوَّوْا • (tataḥawwaw) (form V) /ta.ta.ħaw.waw/\n# second-person masculine plural non-past active subjunctive/jussive of تَحَوَّى (taḥawwā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḥawwaw", "taḥawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحووا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَحَوَّوْا • (taḥawwaw) (form V) /ta.ħaw.waw/\n# inflection of تَحَوَّى (taḥawwā):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥawwaw", "taḥawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتحوون",
+      "tur": "verb",
+      "baslik": "يَتَحَوَّوْنَ • (yataḥawwawna) (form V) /ja.ta.ħaw.waw.na/\n# third-person masculine plural non-past active indicative of تَحَوَّى (taḥawwā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḥawwawna", "taḥawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتحووا",
+      "tur": "verb",
+      "baslik": "يَتَحَوَّوْا • (yataḥawwaw) (form V) /ja.ta.ħaw.waw/\n# third-person masculine plural non-past active subjunctive/jussive of تَحَوَّى (taḥawwā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḥawwaw", "taḥawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحويتن",
+      "tur": "verb",
+      "baslik": "تَحَوَّيْتُنَّ • (taḥawwaytunna) (form V) /ta.ħaw.waj.tun.na/\n# second-person feminine plural past active of تَحَوَّى (taḥawwā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥawwaytunna", "taḥawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتحوين",
+      "tur": "verb",
+      "baslik": "يَتَحَوَّيْنَ • (yataḥawwayna) (form V) /ja.ta.ħaw.waj.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَحَوَّى (taḥawwā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḥawwayna", "taḥawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحويتما",
+      "tur": "verb",
+      "baslik": "تَحَوَّيْتُمَا • (taḥawwaytumā) (form V) /ta.ħaw.waj.tu.maː/\n# second-person dual past active of تَحَوَّى (taḥawwā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥawwaytumā", "taḥawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحوتا",
+      "tur": "verb",
+      "baslik": "تَحَوَّتَا • (taḥawwatā) (form V) /ta.ħaw.wa.taː/\n# third-person feminine dual past active of تَحَوَّى (taḥawwā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥawwatā", "taḥawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحويا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَحَوَّيَا • (taḥawwayā) (form V) /ta.ħaw.wa.jaː/\n# inflection of تَحَوَّى (taḥawwā):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥawwayā", "taḥawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتحويان",
+      "tur": "verb",
+      "baslik": "يَتَحَوَّيَانِ • (yataḥawwayāni) (form V) /ja.ta.ħaw.wa.jaː.ni/\n# third-person masculine dual non-past active indicative of تَحَوَّى (taḥawwā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḥawwayāni", "taḥawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتحويان",
+      "tur": "verb",
+      "baslik": "تَتَحَوَّيَانِ • (tataḥawwayāni) (form V) /ta.ta.ħaw.wa.jaː.ni/\n# inflection of تَحَوَّى (taḥawwā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḥawwayāni", "taḥawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتحويا",
+      "tur": "verb",
+      "baslik": "تَتَحَوَّيَا • (tataḥawwayā) (form V) /ta.ta.ħaw.wa.jaː/\n# inflection of تَحَوَّى (taḥawwā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḥawwayā", "taḥawwā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتحويا",
+      "tur": "verb",
+      "baslik": "يَتَحَوَّيَا • (yataḥawwayā) (form V) /ja.ta.ħaw.wa.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of تَحَوَّى (taḥawwā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḥawwayā", "taḥawwā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تحوى", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

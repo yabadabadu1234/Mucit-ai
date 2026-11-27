@@ -1,465 +1,326 @@
 {
   "kok": "طابق",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "طابق", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تطابق",
-        "u": "تطابق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطابق (form III)\n# تُطَابِقُ (tuṭābiqu) /tu.tˤaː.bi.qu/: inflection of طَابَقَ (ṭābaqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُطَابَقُ (tuṭābaqu) /tu.tˤaː.ba.qu/: inflection of طَابَقَ (ṭābaqa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṭābiqu", "ṭābaqa", "tuṭābaqu"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "طابقت",
-        "u": "طابقت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طابقت (form III)\n# طَابَقْتُ (ṭābaqtu) /tˤaː.baq.tu/: first-person singular past active of طَابَقَ (ṭābaqa)\n# طَابَقْتَ (ṭābaqta) /tˤaː.baq.ta/: second-person masculine singular past active of طَابَقَ (ṭābaqa)\n# طَابَقْتِ (ṭābaqti) /tˤaː.baq.ti/: second-person feminine singular past active of طَابَقَ (ṭābaqa)\n# طَابَقَتْ (ṭābaqat) /tˤaː.ba.qat/: third-person feminine singular past active of طَابَق",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭābaqtu", "ṭābaqa", "ṭābaqta"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "طابقتما",
-        "u": "طابقتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَابَقْتُمَا • (ṭābaqtumā) (form III) /tˤaː.baq.tu.maː/\n# second-person dual past active of طَابَقَ (ṭābaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭābaqtumā", "ṭābaqa"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "طابقتا",
-        "u": "طابقتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَابَقَتَا • (ṭābaqatā) (form III) /tˤaː.ba.qa.taː/\n# third-person feminine dual past active of طَابَقَ (ṭābaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭābaqatā", "ṭābaqa"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "طابقا",
-        "u": "طابقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طابقا (form III)\n# طَابَقَا (ṭābaqā) /tˤaː.ba.qaː/: third-person masculine dual past active of طَابَقَ (ṭābaqa)\n# طَابِقَا (ṭābiqā) /tˤaː.bi.qaː/: second-person dual imperative of طَابَقَ (ṭābaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭābaqā", "ṭābaqa", "ṭābiqā"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "طابقنا",
-        "u": "طابقنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَابَقْنَا • (ṭābaqnā) (form III) /tˤaː.baq.naː/\n# first-person plural past active of طَابَقَ (ṭābaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭābaqnā", "ṭābaqa"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "طابقتم",
-        "u": "طابقتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَابَقْتُمْ • (ṭābaqtum) (form III) /tˤaː.baq.tum/\n# second-person masculine plural past active of طَابَقَ (ṭābaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭābaqtum", "ṭābaqa"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "طابقتن",
-        "u": "طابقتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَابَقْتُنَّ • (ṭābaqtunna) (form III) /tˤaː.baq.tun.na/\n# second-person feminine plural past active of طَابَقَ (ṭābaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭābaqtunna", "ṭābaqa"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "طابقوا",
-        "u": "طابقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طابقوا (form III)\n# طَابَقُوا (ṭābaqū) /tˤaː.ba.quː/: third-person masculine plural past active of طَابَقَ (ṭābaqa)\n# طَابِقُوا (ṭābiqū) /tˤaː.bi.quː/: second-person masculine plural imperative of طَابَقَ (ṭābaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭābaqū", "ṭābaqa", "ṭābiqū"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "طابقن",
-        "u": "طابقن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طابقن (form III)\n# طَابَقْنَ (ṭābaqna) /tˤaː.baq.na/: third-person feminine plural past active of طَابَقَ (ṭābaqa)\n# طَابِقْنَ (ṭābiqna) /tˤaː.biq.na/: second-person feminine plural imperative of طَابَقَ (ṭābaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭābaqna", "ṭābaqa", "ṭābiqna"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "طوبقت",
-        "u": "طوبقت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طوبقت (form III)\n# طُوبِقْتُ (ṭūbiqtu) /tˤuː.biq.tu/: first-person singular past passive of طَابَقَ (ṭābaqa)\n# طُوبِقْتَ (ṭūbiqta) /tˤuː.biq.ta/: second-person masculine singular past passive of طَابَقَ (ṭābaqa)\n# طُوبِقْتِ (ṭūbiqti) /tˤuː.biq.ti/: second-person feminine singular past passive of طَابَقَ (ṭābaqa)\n# طُوبِقَتْ (ṭūbiqat) /tˤuː.bi.qat/: third-person feminine singular past passive of طَ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūbiqtu", "ṭābaqa", "ṭūbiqta"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "طوبقتما",
-        "u": "طوبقتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُوبِقْتُمَا • (ṭūbiqtumā) (form III) /tˤuː.biq.tu.maː/\n# second-person dual past passive of طَابَقَ (ṭābaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūbiqtumā", "ṭābaqa"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "طوبق",
-        "u": "طوبق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُوبِقَ • (ṭūbiqa) (form III) /tˤuː.bi.qa/\n# third-person masculine singular past passive of طَابَقَ (ṭābaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūbiqa", "ṭābaqa"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "طوبقا",
-        "u": "طوبقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُوبِقَا • (ṭūbiqā) (form III) /tˤuː.bi.qaː/\n# third-person masculine dual past passive of طَابَقَ (ṭābaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūbiqā", "ṭābaqa"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "طوبقتا",
-        "u": "طوبقتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُوبِقَتَا • (ṭūbiqatā) (form III) /tˤuː.bi.qa.taː/\n# third-person feminine dual past passive of طَابَقَ (ṭābaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūbiqatā", "ṭābaqa"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "طوبقتن",
-        "u": "طوبقتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُوبِقْتُنَّ • (ṭūbiqtunna) (form III) /tˤuː.biq.tun.na/\n# second-person feminine plural past passive of طَابَقَ (ṭābaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūbiqtunna", "ṭābaqa"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "طوبقوا",
-        "u": "طوبقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُوبِقُوا • (ṭūbiqū) (form III) /tˤuː.bi.quː/\n# third-person masculine plural past passive of طَابَقَ (ṭābaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūbiqū", "ṭābaqa"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "طوبقتم",
-        "u": "طوبقتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُوبِقْتُمْ • (ṭūbiqtum) (form III) /tˤuː.biq.tum/\n# second-person masculine plural past passive of طَابَقَ (ṭābaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūbiqtum", "ṭābaqa"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "طوبقنا",
-        "u": "طوبقنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُوبِقْنَا • (ṭūbiqnā) (form III) /tˤuː.biq.naː/\n# first-person plural past passive of طَابَقَ (ṭābaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūbiqnā", "ṭābaqa"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "طوبقن",
-        "u": "طوبقن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُوبِقْنَ • (ṭūbiqna) (form III) /tˤuː.biq.na/\n# third-person feminine plural past passive of طَابَقَ (ṭābaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūbiqna", "ṭābaqa"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطابقين",
-        "u": "تطابقين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطابقين (form III)\n# تُطَابِقِينَ (tuṭābiqīna) /tu.tˤaː.bi.qiː.na/: second-person feminine singular non-past active indicative of طَابَقَ (ṭābaqa)\n# تُطَابَقِينَ (tuṭābaqīna) /tu.tˤaː.ba.qiː.na/: second-person feminine singular non-past passive indicative of طَابَقَ (ṭābaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṭābiqīna", "ṭābaqa", "tuṭābaqīna"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "أطابق",
-        "u": "أطابق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أطابق (form III)\n# أُطَابِقُ (ʔuṭābiqu) /ʔu.tˤaː.bi.qu/: first-person singular non-past active indicative of طَابَقَ (ṭābaqa)\n# أُطَابَقُ (ʔuṭābaqu) /ʔu.tˤaː.ba.qu/: first-person singular non-past passive indicative of طَابَقَ (ṭābaqa)\n# أُطَابِقَ (ʔuṭābiqa) /ʔu.tˤaː.bi.qa/: first-person singular non-past active subjunctive of طَابَقَ (ṭābaqa)\n# أُطَابَقَ (ʔuṭābaqa) /ʔu.tˤaː.ba.qa/: first-person s",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔuṭābiqu", "ṭābaqa", "ʔuṭābaqu"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطابق",
-        "u": "يطابق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطابق (form III)\n# يُطَابِقُ (yuṭābiqu) /ju.tˤaː.bi.qu/: third-person masculine singular non-past active indicative of طَابَقَ (ṭābaqa)\n# يُطَابَقُ (yuṭābaqu) /ju.tˤaː.ba.qu/: third-person masculine singular non-past passive indicative of طَابَقَ (ṭābaqa)\n# يُطَابِقَ (yuṭābiqa) /ju.tˤaː.bi.qa/: third-person masculine singular non-past active subjunctive of طَابَقَ (ṭābaqa)\n# يُطَابَقَ (yuṭābaqa) /",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṭābiqu", "ṭābaqa", "yuṭābaqu"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطابقان",
-        "u": "يطابقان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطابقان (form III)\n# يُطَابِقَانِ (yuṭābiqāni) /ju.tˤaː.bi.qaː.ni/: third-person masculine dual non-past active indicative of طَابَقَ (ṭābaqa)\n# يُطَابَقَانِ (yuṭābaqāni) /ju.tˤaː.ba.qaː.ni/: third-person masculine dual non-past passive indicative of طَابَقَ (ṭābaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṭābiqāni", "ṭābaqa", "yuṭābaqāni"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "نطابق",
-        "u": "نطابق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نطابق (form III)\n# نُطَابِقُ (nuṭābiqu) /nu.tˤaː.bi.qu/: first-person plural non-past active indicative of طَابَقَ (ṭābaqa)\n# نُطَابَقُ (nuṭābaqu) /nu.tˤaː.ba.qu/: first-person plural non-past passive indicative of طَابَقَ (ṭābaqa)\n# نُطَابِقَ (nuṭābiqa) /nu.tˤaː.bi.qa/: first-person plural non-past active subjunctive of طَابَقَ (ṭābaqa)\n# نُطَابَقَ (nuṭābaqa) /nu.tˤaː.ba.qa/: first-person plural ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nuṭābiqu", "ṭābaqa", "nuṭābaqu"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطابقان",
-        "u": "تطابقان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطابقان (form III)\n# تُطَابِقَانِ (tuṭābiqāni) /tu.tˤaː.bi.qaː.ni/: inflection of طَابَقَ (ṭābaqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُطَابَقَانِ (tuṭābaqāni) /tu.tˤaː.ba.qaː.ni/: inflection of طَابَقَ (ṭābaqa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṭābiqāni", "ṭābaqa", "tuṭābaqāni"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطابقن",
-        "u": "تطابقن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطابقن (form III)\n# تُطَابِقْنَ (tuṭābiqna) /tu.tˤaː.biq.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of طَابَقَ (ṭābaqa)\n# تُطَابَقْنَ (tuṭābaqna) /tu.tˤaː.baq.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of طَابَقَ (ṭābaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṭābiqna", "ṭābaqa", "tuṭābaqna"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطابقون",
-        "u": "تطابقون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطابقون (form III)\n# تُطَابِقُونَ (tuṭābiqūna) /tu.tˤaː.bi.quː.na/: second-person masculine plural non-past active indicative of طَابَقَ (ṭābaqa)\n# تُطَابَقُونَ (tuṭābaqūna) /tu.tˤaː.ba.quː.na/: second-person masculine plural non-past passive indicative of طَابَقَ (ṭābaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṭābiqūna", "ṭābaqa", "tuṭābaqūna"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطابقن",
-        "u": "يطابقن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطابقن (form III)\n# يُطَابِقْنَ (yuṭābiqna) /ju.tˤaː.biq.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of طَابَقَ (ṭābaqa)\n# يُطَابَقْنَ (yuṭābaqna) /ju.tˤaː.baq.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of طَابَقَ (ṭābaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṭābiqna", "ṭābaqa", "yuṭābaqna"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطابقون",
-        "u": "يطابقون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطابقون (form III)\n# يُطَابِقُونَ (yuṭābiqūna) /ju.tˤaː.bi.quː.na/: third-person masculine plural non-past active indicative of طَابَقَ (ṭābaqa)\n# يُطَابَقُونَ (yuṭābaqūna) /ju.tˤaː.ba.quː.na/: third-person masculine plural non-past passive indicative of طَابَقَ (ṭābaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṭābiqūna", "ṭābaqa", "yuṭābaqūna"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطابقي",
-        "u": "تطابقي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطابقي (form III)\n# تُطَابِقِي (tuṭābiqī) /tu.tˤaː.bi.qiː/: second-person feminine singular non-past active subjunctive/jussive of طَابَقَ (ṭābaqa)\n# تُطَابَقِي (tuṭābaqī) /tu.tˤaː.ba.qiː/: second-person feminine singular non-past passive subjunctive/jussive of طَابَقَ (ṭābaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṭābiqī", "ṭābaqa", "tuṭābaqī"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطابقا",
-        "u": "تطابقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطابقا (form III)\n# تُطَابِقَا (tuṭābiqā) /tu.tˤaː.bi.qaː/: inflection of طَابَقَ (ṭābaqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُطَابَقَا (tuṭābaqā) /tu.tˤaː.ba.qaː/: inflection of طَابَقَ (ṭābaqa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subj",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṭābiqā", "ṭābaqa", "tuṭābaqā"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "طابقي",
-        "u": "طابقي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَابِقِي • (ṭābiqī) (form III) /tˤaː.bi.qiː/\n# second-person feminine singular imperative of طَابَقَ (ṭābaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭābiqī", "ṭābaqa"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "تطابقوا",
-        "u": "تطابقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطابقوا (form III)\n# تُطَابِقُوا (tuṭābiqū) /tu.tˤaː.bi.quː/: second-person masculine plural non-past active subjunctive/jussive of طَابَقَ (ṭābaqa)\n# تُطَابَقُوا (tuṭābaqū) /tu.tˤaː.ba.quː/: second-person masculine plural non-past passive subjunctive/jussive of طَابَقَ (ṭābaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṭābiqū", "ṭābaqa", "tuṭābaqū"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطابقا",
-        "u": "يطابقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطابقا (form III)\n# يُطَابِقَا (yuṭābiqā) /ju.tˤaː.bi.qaː/: third-person masculine dual non-past active subjunctive/jussive of طَابَقَ (ṭābaqa)\n# يُطَابَقَا (yuṭābaqā) /ju.tˤaː.ba.qaː/: third-person masculine dual non-past passive subjunctive/jussive of طَابَقَ (ṭābaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṭābiqā", "ṭābaqa", "yuṭābaqā"],
-        "k": "طابق",
-        "yol": "kök"
-      },
-      {
-        "w": "يطابقوا",
-        "u": "يطابقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطابقوا (form III)\n# يُطَابِقُوا (yuṭābiqū) /ju.tˤaː.bi.quː/: third-person masculine plural non-past active subjunctive/jussive of طَابَقَ (ṭābaqa)\n# يُطَابَقُوا (yuṭābaqū) /ju.tˤaː.ba.quː/: third-person masculine plural non-past passive subjunctive/jussive of طَابَقَ (ṭābaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṭābiqū", "ṭābaqa", "yuṭābaqū"],
-        "k": "طابق",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "طب",
+  "ses": {
     "harf": "ط",
+    "fasil": "طب",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "تطابق",
+      "tur": "verb",
+      "baslik": "تطابق (form III)\n# تُطَابِقُ (tuṭābiqu) /tu.tˤaː.bi.qu/: inflection of طَابَقَ (ṭābaqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُطَابَقُ (tuṭābaqu) /tu.tˤaː.ba.qu/: inflection of طَابَقَ (ṭābaqa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṭābiqu", "ṭābaqa", "tuṭābaqu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طابقت",
+      "tur": "verb",
+      "baslik": "طابقت (form III)\n# طَابَقْتُ (ṭābaqtu) /tˤaː.baq.tu/: first-person singular past active of طَابَقَ (ṭābaqa)\n# طَابَقْتَ (ṭābaqta) /tˤaː.baq.ta/: second-person masculine singular past active of طَابَقَ (ṭābaqa)\n# طَابَقْتِ (ṭābaqti) /tˤaː.baq.ti/: second-person feminine singular past active of طَابَقَ (ṭābaqa)\n# طَابَقَتْ (ṭābaqat) /tˤaː.ba.qat/: third-person feminine singular past active of طَابَق",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭābaqtu", "ṭābaqa", "ṭābaqta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طابقتما",
+      "tur": "verb",
+      "baslik": "طَابَقْتُمَا • (ṭābaqtumā) (form III) /tˤaː.baq.tu.maː/\n# second-person dual past active of طَابَقَ (ṭābaqa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭābaqtumā", "ṭābaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طابقتا",
+      "tur": "verb",
+      "baslik": "طَابَقَتَا • (ṭābaqatā) (form III) /tˤaː.ba.qa.taː/\n# third-person feminine dual past active of طَابَقَ (ṭābaqa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭābaqatā", "ṭābaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طابقا",
+      "tur": "verb",
+      "baslik": "طابقا (form III)\n# طَابَقَا (ṭābaqā) /tˤaː.ba.qaː/: third-person masculine dual past active of طَابَقَ (ṭābaqa)\n# طَابِقَا (ṭābiqā) /tˤaː.bi.qaː/: second-person dual imperative of طَابَقَ (ṭābaqa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭābaqā", "ṭābaqa", "ṭābiqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طابقنا",
+      "tur": "verb",
+      "baslik": "طَابَقْنَا • (ṭābaqnā) (form III) /tˤaː.baq.naː/\n# first-person plural past active of طَابَقَ (ṭābaqa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭābaqnā", "ṭābaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طابقتم",
+      "tur": "verb",
+      "baslik": "طَابَقْتُمْ • (ṭābaqtum) (form III) /tˤaː.baq.tum/\n# second-person masculine plural past active of طَابَقَ (ṭābaqa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭābaqtum", "ṭābaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طابقتن",
+      "tur": "verb",
+      "baslik": "طَابَقْتُنَّ • (ṭābaqtunna) (form III) /tˤaː.baq.tun.na/\n# second-person feminine plural past active of طَابَقَ (ṭābaqa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭābaqtunna", "ṭābaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طابقوا",
+      "tur": "verb",
+      "baslik": "طابقوا (form III)\n# طَابَقُوا (ṭābaqū) /tˤaː.ba.quː/: third-person masculine plural past active of طَابَقَ (ṭābaqa)\n# طَابِقُوا (ṭābiqū) /tˤaː.bi.quː/: second-person masculine plural imperative of طَابَقَ (ṭābaqa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭābaqū", "ṭābaqa", "ṭābiqū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طابقن",
+      "tur": "verb",
+      "baslik": "طابقن (form III)\n# طَابَقْنَ (ṭābaqna) /tˤaː.baq.na/: third-person feminine plural past active of طَابَقَ (ṭābaqa)\n# طَابِقْنَ (ṭābiqna) /tˤaː.biq.na/: second-person feminine plural imperative of طَابَقَ (ṭābaqa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭābaqna", "ṭābaqa", "ṭābiqna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طوبقت",
+      "tur": "verb",
+      "baslik": "طوبقت (form III)\n# طُوبِقْتُ (ṭūbiqtu) /tˤuː.biq.tu/: first-person singular past passive of طَابَقَ (ṭābaqa)\n# طُوبِقْتَ (ṭūbiqta) /tˤuː.biq.ta/: second-person masculine singular past passive of طَابَقَ (ṭābaqa)\n# طُوبِقْتِ (ṭūbiqti) /tˤuː.biq.ti/: second-person feminine singular past passive of طَابَقَ (ṭābaqa)\n# طُوبِقَتْ (ṭūbiqat) /tˤuː.bi.qat/: third-person feminine singular past passive of طَ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūbiqtu", "ṭābaqa", "ṭūbiqta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طوبقتما",
+      "tur": "verb",
+      "baslik": "طُوبِقْتُمَا • (ṭūbiqtumā) (form III) /tˤuː.biq.tu.maː/\n# second-person dual past passive of طَابَقَ (ṭābaqa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūbiqtumā", "ṭābaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طوبق",
+      "tur": "verb",
+      "baslik": "طُوبِقَ • (ṭūbiqa) (form III) /tˤuː.bi.qa/\n# third-person masculine singular past passive of طَابَقَ (ṭābaqa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūbiqa", "ṭābaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طوبقا",
+      "tur": "verb",
+      "baslik": "طُوبِقَا • (ṭūbiqā) (form III) /tˤuː.bi.qaː/\n# third-person masculine dual past passive of طَابَقَ (ṭābaqa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūbiqā", "ṭābaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طوبقتا",
+      "tur": "verb",
+      "baslik": "طُوبِقَتَا • (ṭūbiqatā) (form III) /tˤuː.bi.qa.taː/\n# third-person feminine dual past passive of طَابَقَ (ṭābaqa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūbiqatā", "ṭābaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طوبقتن",
+      "tur": "verb",
+      "baslik": "طُوبِقْتُنَّ • (ṭūbiqtunna) (form III) /tˤuː.biq.tun.na/\n# second-person feminine plural past passive of طَابَقَ (ṭābaqa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūbiqtunna", "ṭābaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طوبقوا",
+      "tur": "verb",
+      "baslik": "طُوبِقُوا • (ṭūbiqū) (form III) /tˤuː.bi.quː/\n# third-person masculine plural past passive of طَابَقَ (ṭābaqa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūbiqū", "ṭābaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طوبقتم",
+      "tur": "verb",
+      "baslik": "طُوبِقْتُمْ • (ṭūbiqtum) (form III) /tˤuː.biq.tum/\n# second-person masculine plural past passive of طَابَقَ (ṭābaqa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūbiqtum", "ṭābaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طوبقنا",
+      "tur": "verb",
+      "baslik": "طُوبِقْنَا • (ṭūbiqnā) (form III) /tˤuː.biq.naː/\n# first-person plural past passive of طَابَقَ (ṭābaqa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūbiqnā", "ṭābaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طوبقن",
+      "tur": "verb",
+      "baslik": "طُوبِقْنَ • (ṭūbiqna) (form III) /tˤuː.biq.na/\n# third-person feminine plural past passive of طَابَقَ (ṭābaqa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūbiqna", "ṭābaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطابقين",
+      "tur": "verb",
+      "baslik": "تطابقين (form III)\n# تُطَابِقِينَ (tuṭābiqīna) /tu.tˤaː.bi.qiː.na/: second-person feminine singular non-past active indicative of طَابَقَ (ṭābaqa)\n# تُطَابَقِينَ (tuṭābaqīna) /tu.tˤaː.ba.qiː.na/: second-person feminine singular non-past passive indicative of طَابَقَ (ṭābaqa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṭābiqīna", "ṭābaqa", "tuṭābaqīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أطابق",
+      "tur": "verb",
+      "baslik": "أطابق (form III)\n# أُطَابِقُ (ʔuṭābiqu) /ʔu.tˤaː.bi.qu/: first-person singular non-past active indicative of طَابَقَ (ṭābaqa)\n# أُطَابَقُ (ʔuṭābaqu) /ʔu.tˤaː.ba.qu/: first-person singular non-past passive indicative of طَابَقَ (ṭābaqa)\n# أُطَابِقَ (ʔuṭābiqa) /ʔu.tˤaː.bi.qa/: first-person singular non-past active subjunctive of طَابَقَ (ṭābaqa)\n# أُطَابَقَ (ʔuṭābaqa) /ʔu.tˤaː.ba.qa/: first-person s",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔuṭābiqu", "ṭābaqa", "ʔuṭābaqu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطابق",
+      "tur": "verb",
+      "baslik": "يطابق (form III)\n# يُطَابِقُ (yuṭābiqu) /ju.tˤaː.bi.qu/: third-person masculine singular non-past active indicative of طَابَقَ (ṭābaqa)\n# يُطَابَقُ (yuṭābaqu) /ju.tˤaː.ba.qu/: third-person masculine singular non-past passive indicative of طَابَقَ (ṭābaqa)\n# يُطَابِقَ (yuṭābiqa) /ju.tˤaː.bi.qa/: third-person masculine singular non-past active subjunctive of طَابَقَ (ṭābaqa)\n# يُطَابَقَ (yuṭābaqa) /",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṭābiqu", "ṭābaqa", "yuṭābaqu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطابقان",
+      "tur": "verb",
+      "baslik": "يطابقان (form III)\n# يُطَابِقَانِ (yuṭābiqāni) /ju.tˤaː.bi.qaː.ni/: third-person masculine dual non-past active indicative of طَابَقَ (ṭābaqa)\n# يُطَابَقَانِ (yuṭābaqāni) /ju.tˤaː.ba.qaː.ni/: third-person masculine dual non-past passive indicative of طَابَقَ (ṭābaqa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṭābiqāni", "ṭābaqa", "yuṭābaqāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نطابق",
+      "tur": "verb",
+      "baslik": "نطابق (form III)\n# نُطَابِقُ (nuṭābiqu) /nu.tˤaː.bi.qu/: first-person plural non-past active indicative of طَابَقَ (ṭābaqa)\n# نُطَابَقُ (nuṭābaqu) /nu.tˤaː.ba.qu/: first-person plural non-past passive indicative of طَابَقَ (ṭābaqa)\n# نُطَابِقَ (nuṭābiqa) /nu.tˤaː.bi.qa/: first-person plural non-past active subjunctive of طَابَقَ (ṭābaqa)\n# نُطَابَقَ (nuṭābaqa) /nu.tˤaː.ba.qa/: first-person plural ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nuṭābiqu", "ṭābaqa", "nuṭābaqu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطابقان",
+      "tur": "verb",
+      "baslik": "تطابقان (form III)\n# تُطَابِقَانِ (tuṭābiqāni) /tu.tˤaː.bi.qaː.ni/: inflection of طَابَقَ (ṭābaqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُطَابَقَانِ (tuṭābaqāni) /tu.tˤaː.ba.qaː.ni/: inflection of طَابَقَ (ṭābaqa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṭābiqāni", "ṭābaqa", "tuṭābaqāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطابقن",
+      "tur": "verb",
+      "baslik": "تطابقن (form III)\n# تُطَابِقْنَ (tuṭābiqna) /tu.tˤaː.biq.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of طَابَقَ (ṭābaqa)\n# تُطَابَقْنَ (tuṭābaqna) /tu.tˤaː.baq.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of طَابَقَ (ṭābaqa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṭābiqna", "ṭābaqa", "tuṭābaqna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطابقون",
+      "tur": "verb",
+      "baslik": "تطابقون (form III)\n# تُطَابِقُونَ (tuṭābiqūna) /tu.tˤaː.bi.quː.na/: second-person masculine plural non-past active indicative of طَابَقَ (ṭābaqa)\n# تُطَابَقُونَ (tuṭābaqūna) /tu.tˤaː.ba.quː.na/: second-person masculine plural non-past passive indicative of طَابَقَ (ṭābaqa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṭābiqūna", "ṭābaqa", "tuṭābaqūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطابقن",
+      "tur": "verb",
+      "baslik": "يطابقن (form III)\n# يُطَابِقْنَ (yuṭābiqna) /ju.tˤaː.biq.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of طَابَقَ (ṭābaqa)\n# يُطَابَقْنَ (yuṭābaqna) /ju.tˤaː.baq.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of طَابَقَ (ṭābaqa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṭābiqna", "ṭābaqa", "yuṭābaqna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطابقون",
+      "tur": "verb",
+      "baslik": "يطابقون (form III)\n# يُطَابِقُونَ (yuṭābiqūna) /ju.tˤaː.bi.quː.na/: third-person masculine plural non-past active indicative of طَابَقَ (ṭābaqa)\n# يُطَابَقُونَ (yuṭābaqūna) /ju.tˤaː.ba.quː.na/: third-person masculine plural non-past passive indicative of طَابَقَ (ṭābaqa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṭābiqūna", "ṭābaqa", "yuṭābaqūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطابقي",
+      "tur": "verb",
+      "baslik": "تطابقي (form III)\n# تُطَابِقِي (tuṭābiqī) /tu.tˤaː.bi.qiː/: second-person feminine singular non-past active subjunctive/jussive of طَابَقَ (ṭābaqa)\n# تُطَابَقِي (tuṭābaqī) /tu.tˤaː.ba.qiː/: second-person feminine singular non-past passive subjunctive/jussive of طَابَقَ (ṭābaqa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṭābiqī", "ṭābaqa", "tuṭābaqī"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطابقا",
+      "tur": "verb",
+      "baslik": "تطابقا (form III)\n# تُطَابِقَا (tuṭābiqā) /tu.tˤaː.bi.qaː/: inflection of طَابَقَ (ṭābaqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُطَابَقَا (tuṭābaqā) /tu.tˤaː.ba.qaː/: inflection of طَابَقَ (ṭābaqa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subj",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṭābiqā", "ṭābaqa", "tuṭābaqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "طابقي",
+      "tur": "verb",
+      "baslik": "طَابِقِي • (ṭābiqī) (form III) /tˤaː.bi.qiː/\n# second-person feminine singular imperative of طَابَقَ (ṭābaqa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭābiqī", "ṭābaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تطابقوا",
+      "tur": "verb",
+      "baslik": "تطابقوا (form III)\n# تُطَابِقُوا (tuṭābiqū) /tu.tˤaː.bi.quː/: second-person masculine plural non-past active subjunctive/jussive of طَابَقَ (ṭābaqa)\n# تُطَابَقُوا (tuṭābaqū) /tu.tˤaː.ba.quː/: second-person masculine plural non-past passive subjunctive/jussive of طَابَقَ (ṭābaqa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṭābiqū", "ṭābaqa", "tuṭābaqū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطابقا",
+      "tur": "verb",
+      "baslik": "يطابقا (form III)\n# يُطَابِقَا (yuṭābiqā) /ju.tˤaː.bi.qaː/: third-person masculine dual non-past active subjunctive/jussive of طَابَقَ (ṭābaqa)\n# يُطَابَقَا (yuṭābaqā) /ju.tˤaː.ba.qaː/: third-person masculine dual non-past passive subjunctive/jussive of طَابَقَ (ṭābaqa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṭābiqā", "ṭābaqa", "yuṭābaqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يطابقوا",
+      "tur": "verb",
+      "baslik": "يطابقوا (form III)\n# يُطَابِقُوا (yuṭābiqū) /ju.tˤaː.bi.quː/: third-person masculine plural non-past active subjunctive/jussive of طَابَقَ (ṭābaqa)\n# يُطَابَقُوا (yuṭābaqū) /ju.tˤaː.ba.quː/: third-person masculine plural non-past passive subjunctive/jussive of طَابَقَ (ṭābaqa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṭābiqū", "ṭābaqa", "yuṭābaqū"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "طابق", "r6"]
+  ],
+  "mana": {
     "ince": "pit.v.01",
     "orta": "verb.competition",
     "ust": "insan ve toplum",
@@ -467,16 +328,11 @@
     "dayanak_tanim": "set into opposition or rivalry",
     "synset_sayisi": 11
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "agree.v.01",
     "confirm.v.01",
     "equal.v.03",
@@ -489,12 +345,10 @@
     "pit.v.01",
     "sameness.n.01"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

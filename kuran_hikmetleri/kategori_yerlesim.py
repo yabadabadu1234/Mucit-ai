@@ -70,12 +70,12 @@ def yollar(d, prototip_esik):
     return y
 
 
-def gorunum(d):
+def gorunum(d, var=True):
     if 'sozlukler' in d:
         return d
     kel = [{'lemma': g['lemma'], 'kelime': b['kelime'], 'turkce': {'yuzey': b.get('tr', '')}, 'adet': b.get('adet', 0)} for g in d.get('kelimeler', []) for b in g.get('bicimler', [])]
     kuran = d.get('kuran') or {}
-    return {'kok': d['kok'], 'kuranda_var': True, 'tasnif': d.get('ses') or {}, 'mana_tasnif': d.get('mana') or {}, 'mana_tasnif_gomme': d.get('gomme') or {},
+    return {'kok': d['kok'], 'kuranda_var': var, 'tasnif': d.get('ses') or {}, 'mana_tasnif': d.get('mana') or {}, 'mana_tasnif_gomme': d.get('gomme') or {},
             'muhassas_tasnif': d.get('muhassas') or {}, 'ses_mana_tasnif': {'fasil': (d.get('cebel') or {}).get('fasil')}, 'hakikat_mecaz_tasnif': d.get('zemahseri') or {},
             'prototip_yayilim_tasnif': d.get('prototip') or {}, 'kelimeler': kel,
             'sozlukler': {'kuran_korpusu': {k: v for k, v in kuran.items() if k in ('tur', 'bab', 'gecis')} if kuran else None, 'kok_anlamlari': {'turkce': d.get('anlam', '')},
@@ -92,7 +92,7 @@ def yukle():
     import awn_tasnif as AW
     kok_syn, lem_syn = AW.yukle()
     for f in sorted(glob.glob(os.path.join(KOK, 'kelime_kaydi', 'kuranda_*', 'kokler', '*.json'))):
-        d = gorunum(json.load(open(f, encoding='utf-8')))
+        d = gorunum(json.load(open(f, encoding='utf-8')), os.sep + 'kuranda_var' + os.sep in f)
         d['_syn'] = AW.synset_adlari(d, kok_syn, lem_syn)
         p = d.get('prototip_yayilim_tasnif') or {}
         ham.append((d, p.get('ortalama_benzerlik')))

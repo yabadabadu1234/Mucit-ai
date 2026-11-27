@@ -1,692 +1,493 @@
 {
   "kok": "حاط",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "حاط", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "حط",
-        "u": "حط",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "حُطْ • (ḥuṭ) (form I) /ħutˤ/\n# second-person masculine singular imperative of حَاطَ (ḥāṭa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥuṭ", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "تحوط",
-        "u": "تحوط",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تحوط (form I)\n# تَحُوطُ (taḥūṭu) /ta.ħuː.tˤu/: inflection of حَاطَ (ḥāṭa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَحُوطَ (taḥūṭa) /ta.ħuː.tˤa/: inflection of حَاطَ (ḥāṭa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥūṭu", "ḥāṭa", "taḥūṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "يحاط",
-        "u": "يحاط",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يحاط (form I)\n# يُحَاطُ (yuḥāṭu) /ju.ħaː.tˤu/: third-person masculine singular non-past passive indicative of حَاطَ (ḥāṭa)\n# يُحَاطَ (yuḥāṭa) /ju.ħaː.tˤa/: third-person masculine singular non-past passive subjunctive of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuḥāṭu", "ḥāṭa", "yuḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "يحوط",
-        "u": "يحوط",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يحوط (form I)\n# يَحُوطُ (yaḥūṭu) /ja.ħuː.tˤu/: third-person masculine singular non-past active indicative of حَاطَ (ḥāṭa)\n# يَحُوطَ (yaḥūṭa) /ja.ħuː.tˤa/: third-person masculine singular non-past active subjunctive of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥūṭu", "ḥāṭa", "yaḥūṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "يحط",
-        "u": "يحط",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يحط (form I)\n# يَحُطْ (yaḥuṭ) /ja.ħutˤ/: third-person masculine singular non-past active jussive of حَاطَ (ḥāṭa)\n# يُحَطْ (yuḥaṭ) /ju.ħatˤ/: third-person masculine singular non-past passive jussive of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥuṭ", "ḥāṭa", "yuḥaṭ"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "حيط",
-        "u": "حيط",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حِيطَ • (ḥīṭa) (form I) /ħiː.tˤa/\n# third-person masculine singular past passive of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥīṭa", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "تحط",
-        "u": "تحط",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تحط (form I)\n# تَحُطْ (taḥuṭ) /ta.ħutˤ/: inflection of حَاطَ (ḥāṭa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُحَطْ (tuḥaṭ) /tu.ħatˤ/: inflection of حَاطَ (ḥāṭa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥuṭ", "ḥāṭa", "tuḥaṭ"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "تحاط",
-        "u": "تحاط",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تحاط (form I)\n# تُحَاطُ (tuḥāṭu) /tu.ħaː.tˤu/: inflection of حَاطَ (ḥāṭa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُحَاطَ (tuḥāṭa) /tu.ħaː.tˤa/: inflection of حَاطَ (ḥāṭa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuḥāṭu", "ḥāṭa", "tuḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "أحط",
-        "u": "أحط",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أحط (form I)\n# أَحُطْ (ʔaḥuṭ) /ʔa.ħutˤ/: first-person singular non-past active jussive of حَاطَ (ḥāṭa)\n# أُحَطْ (ʔuḥaṭ) /ʔu.ħatˤ/: first-person singular non-past passive jussive of حَاطَ (ḥāṭa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḥuṭ", "ḥāṭa", "ʔuḥaṭ"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "تحاطين",
-        "u": "تحاطين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُحَاطِينَ • (tuḥāṭīna) (form I) /tu.ħaː.tˤiː.na/\n# second-person feminine singular non-past passive indicative of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuḥāṭīna", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "تحاطي",
-        "u": "تحاطي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُحَاطِي • (tuḥāṭī) (form I) /tu.ħaː.tˤiː/\n# second-person feminine singular non-past passive subjunctive/jussive of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuḥāṭī", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "حاطت",
-        "u": "حاطت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حَاطَتْ • (ḥāṭat) (form I) /ħaː.tˤat/\n# third-person feminine singular past active of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥāṭat", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "حيطت",
-        "u": "حيطت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حِيطَتْ • (ḥīṭat) (form I) /ħiː.tˤat/\n# third-person feminine singular past passive of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥīṭat", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "حطت",
-        "u": "حطت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "حطت (form I)\n# حُطْتُ (ḥuṭtu) /ħutˤ.tu/: first-person singular past active of حَاطَ (ḥāṭa)\n# حُطْتَ (ḥuṭta) /ħutˤ.ta/: second-person masculine singular past active of حَاطَ (ḥāṭa)\n# حُطْتِ (ḥuṭti) /ħutˤ.ti/: second-person feminine singular past active of حَاطَ (ḥāṭa)\n# حِطْتُ (ḥiṭtu) /ħitˤ.tu/: first-person singular past passive of حَاطَ (ḥāṭa)\n# حِطْتَ (ḥiṭta) /ħitˤ.ta/: second-person masculine s",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥuṭtu", "ḥāṭa", "ḥuṭta"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "تحوطي",
-        "u": "تحوطي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَحُوطِي • (taḥūṭī) (form I) /ta.ħuː.tˤiː/\n# second-person feminine singular non-past active subjunctive/jussive of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥūṭī", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "تحوطين",
-        "u": "تحوطين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَحُوطِينَ • (taḥūṭīna) (form I) /ta.ħuː.tˤiː.na/\n# second-person feminine singular non-past active indicative of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥūṭīna", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "حوطي",
-        "u": "حوطي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "حُوطِي • (ḥūṭī) (form I) /ħuː.tˤiː/\n# second-person feminine singular imperative of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥūṭī", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "أحوط",
-        "u": "أحوط",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أحوط (form I)\n# أَحُوطُ (ʔaḥūṭu) /ʔa.ħuː.tˤu/: first-person singular non-past active indicative of حَاطَ (ḥāṭa)\n# أَحُوطَ (ʔaḥūṭa) /ʔa.ħuː.tˤa/: first-person singular non-past active subjunctive of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḥūṭu", "ḥāṭa", "ʔaḥūṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "نحط",
-        "u": "نحط",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نحط (form I)\n# نَحُطْ (naḥuṭ) /na.ħutˤ/: first-person plural non-past active jussive of حَاطَ (ḥāṭa)\n# نُحَطْ (nuḥaṭ) /nu.ħatˤ/: first-person plural non-past passive jussive of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḥuṭ", "ḥāṭa", "nuḥaṭ"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "نحاط",
-        "u": "نحاط",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نحاط (form I)\n# نُحَاطُ (nuḥāṭu) /nu.ħaː.tˤu/: first-person plural non-past passive indicative of حَاطَ (ḥāṭa)\n# نُحَاطَ (nuḥāṭa) /nu.ħaː.tˤa/: first-person plural non-past passive subjunctive of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuḥāṭu", "ḥāṭa", "nuḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "حطنا",
-        "u": "حطنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حطنا (form I)\n# حُطْنَا (ḥuṭnā) /ħutˤ.naː/: first-person plural past active of حَاطَ (ḥāṭa)\n# حِطْنَا (ḥiṭnā) /ħitˤ.naː/: first-person plural past passive of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥuṭnā", "ḥāṭa", "ḥiṭnā"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "نحوط",
-        "u": "نحوط",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نحوط (form I)\n# نَحُوطُ (naḥūṭu) /na.ħuː.tˤu/: first-person plural non-past active indicative of حَاطَ (ḥāṭa)\n# نَحُوطَ (naḥūṭa) /na.ħuː.tˤa/: first-person plural non-past active subjunctive of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḥūṭu", "ḥāṭa", "naḥūṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "تحاطون",
-        "u": "تحاطون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُحَاطُونَ • (tuḥāṭūna) (form I) /tu.ħaː.tˤuː.na/\n# second-person masculine plural non-past passive indicative of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuḥāṭūna", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "تحاطوا",
-        "u": "تحاطوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُحَاطُوا • (tuḥāṭū) (form I) /tu.ħaː.tˤuː/\n# second-person masculine plural non-past passive subjunctive/jussive of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuḥāṭū", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "حطتم",
-        "u": "حطتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حطتم (form I)\n# حُطْتُمْ (ḥuṭtum) /ħutˤ.tum/: second-person masculine plural past active of حَاطَ (ḥāṭa)\n# حِطْتُمْ (ḥiṭtum) /ħitˤ.tum/: second-person masculine plural past passive of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥuṭtum", "ḥāṭa", "ḥiṭtum"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "تحوطون",
-        "u": "تحوطون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَحُوطُونَ • (taḥūṭūna) (form I) /ta.ħuː.tˤuː.na/\n# second-person masculine plural non-past active indicative of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥūṭūna", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "يحاطون",
-        "u": "يحاطون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُحَاطُونَ • (yuḥāṭūna) (form I) /ju.ħaː.tˤuː.na/\n# third-person masculine plural non-past passive indicative of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuḥāṭūna", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "يحاطوا",
-        "u": "يحاطوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُحَاطُوا • (yuḥāṭū) (form I) /ju.ħaː.tˤuː/\n# third-person masculine plural non-past passive subjunctive/jussive of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuḥāṭū", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "تحوطوا",
-        "u": "تحوطوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَحُوطُوا • (taḥūṭū) (form I) /ta.ħuː.tˤuː/\n# second-person masculine plural non-past active subjunctive/jussive of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥūṭū", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "حاطوا",
-        "u": "حاطوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حَاطُوا • (ḥāṭū) (form I) /ħaː.tˤuː/\n# third-person masculine plural past active of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥāṭū", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "يحوطون",
-        "u": "يحوطون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَحُوطُونَ • (yaḥūṭūna) (form I) /ja.ħuː.tˤuː.na/\n# third-person masculine plural non-past active indicative of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥūṭūna", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "يحوطوا",
-        "u": "يحوطوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَحُوطُوا • (yaḥūṭū) (form I) /ja.ħuː.tˤuː/\n# third-person masculine plural non-past active subjunctive/jussive of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥūṭū", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "حيطوا",
-        "u": "حيطوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حِيطُوا • (ḥīṭū) (form I) /ħiː.tˤuː/\n# third-person masculine plural past passive of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥīṭū", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "حوطوا",
-        "u": "حوطوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "حُوطُوا • (ḥūṭū) (form I) /ħuː.tˤuː/\n# second-person masculine plural imperative of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥūṭū", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "تحطن",
-        "u": "تحطن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تحطن (form I)\n# تَحُطْنَ (taḥuṭna) /ta.ħutˤ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of حَاطَ (ḥāṭa)\n# تُحَطْنَ (tuḥaṭna) /tu.ħatˤ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥuṭna", "ḥāṭa", "tuḥaṭna"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "حطتن",
-        "u": "حطتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حطتن (form I)\n# حُطْتُنَّ (ḥuṭtunna) /ħutˤ.tun.na/: second-person feminine plural past active of حَاطَ (ḥāṭa)\n# حِطْتُنَّ (ḥiṭtunna) /ħitˤ.tun.na/: second-person feminine plural past passive of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥuṭtunna", "ḥāṭa", "ḥiṭtunna"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "حطن",
-        "u": "حطن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حطن (form I)\n# حُطْنَ (ḥuṭna) /ħutˤ.na/: inflection of حَاطَ (ḥāṭa):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# حِطْنَ (ḥiṭna) /ħitˤ.na/: third-person feminine plural past passive of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥuṭna", "ḥāṭa", "ḥiṭna"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "يحطن",
-        "u": "يحطن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يحطن (form I)\n# يَحُطْنَ (yaḥuṭna) /ja.ħutˤ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of حَاطَ (ḥāṭa)\n# يُحَطْنَ (yuḥaṭna) /ju.ħatˤ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥuṭna", "ḥāṭa", "yuḥaṭna"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "يحاطان",
-        "u": "يحاطان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُحَاطَانِ • (yuḥāṭāni) (form I) /ju.ħaː.tˤaː.ni/\n# third-person masculine dual non-past passive indicative of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuḥāṭāni", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "تحاطان",
-        "u": "تحاطان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُحَاطَانِ • (tuḥāṭāni) (form I) /tu.ħaː.tˤaː.ni/\n# inflection of حَاطَ (ḥāṭa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuḥāṭāni", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "تحاطا",
-        "u": "تحاطا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُحَاطَا • (tuḥāṭā) (form I) /tu.ħaː.tˤaː/\n# inflection of حَاطَ (ḥāṭa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuḥāṭā", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "يحاطا",
-        "u": "يحاطا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُحَاطَا • (yuḥāṭā) (form I) /ju.ħaː.tˤaː/\n# third-person masculine dual non-past passive subjunctive/jussive of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuḥāṭā", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "تحوطا",
-        "u": "تحوطا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَحُوطَا • (taḥūṭā) (form I) /ta.ħuː.tˤaː/\n# inflection of حَاطَ (ḥāṭa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥūṭā", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "حاطتا",
-        "u": "حاطتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حَاطَتَا • (ḥāṭatā) (form I) /ħaː.tˤa.taː/\n# third-person feminine dual past active of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥāṭatā", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "حطتما",
-        "u": "حطتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حطتما (form I)\n# حُطْتُمَا (ḥuṭtumā) /ħutˤ.tu.maː/: second-person dual past active of حَاطَ (ḥāṭa)\n# حِطْتُمَا (ḥiṭtumā) /ħitˤ.tu.maː/: second-person dual past passive of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥuṭtumā", "ḥāṭa", "ḥiṭtumā"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "حاطا",
-        "u": "حاطا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حَاطَا • (ḥāṭā) (form I) /ħaː.tˤaː/\n# third-person masculine dual past active of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥāṭā", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "تحوطان",
-        "u": "تحوطان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَحُوطَانِ • (taḥūṭāni) (form I) /ta.ħuː.tˤaː.ni/\n# inflection of حَاطَ (ḥāṭa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥūṭāni", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "حيطا",
-        "u": "حيطا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حِيطَا • (ḥīṭā) (form I) /ħiː.tˤaː/\n# third-person masculine dual past passive of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥīṭā", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "حيطتا",
-        "u": "حيطتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حِيطَتَا • (ḥīṭatā) (form I) /ħiː.tˤa.taː/\n# third-person feminine dual past passive of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥīṭatā", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "حوطا",
-        "u": "حوطا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "حُوطَا • (ḥūṭā) (form I) /ħuː.tˤaː/\n# second-person dual imperative of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥūṭā", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "يحوطان",
-        "u": "يحوطان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَحُوطَانِ • (yaḥūṭāni) (form I) /ja.ħuː.tˤaː.ni/\n# third-person masculine dual non-past active indicative of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥūṭāni", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      },
-      {
-        "w": "يحوطا",
-        "u": "يحوطا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَحُوطَا • (yaḥūṭā) (form I) /ja.ħuː.tˤaː/\n# third-person masculine dual non-past active subjunctive/jussive of حَاطَ (ḥāṭa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥūṭā", "ḥāṭa"],
-        "k": "حاط",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "حط",
+  "ses": {
     "harf": "ح",
+    "fasil": "حط",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "حط",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "حُطْ • (ḥuṭ) (form I) /ħutˤ/\n# second-person masculine singular imperative of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥuṭ", "ḥāṭa"]
+    },
+    {
+      "madde": "تحوط",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تحوط (form I)\n# تَحُوطُ (taḥūṭu) /ta.ħuː.tˤu/: inflection of حَاطَ (ḥāṭa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَحُوطَ (taḥūṭa) /ta.ħuː.tˤa/: inflection of حَاطَ (ḥāṭa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥūṭu", "ḥāṭa", "taḥūṭa"]
+    },
+    {
+      "madde": "يحاط",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يحاط (form I)\n# يُحَاطُ (yuḥāṭu) /ju.ħaː.tˤu/: third-person masculine singular non-past passive indicative of حَاطَ (ḥāṭa)\n# يُحَاطَ (yuḥāṭa) /ju.ħaː.tˤa/: third-person masculine singular non-past passive subjunctive of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuḥāṭu", "ḥāṭa", "yuḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحوط",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يحوط (form I)\n# يَحُوطُ (yaḥūṭu) /ja.ħuː.tˤu/: third-person masculine singular non-past active indicative of حَاطَ (ḥāṭa)\n# يَحُوطَ (yaḥūṭa) /ja.ħuː.tˤa/: third-person masculine singular non-past active subjunctive of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥūṭu", "ḥāṭa", "yaḥūṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحط",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يحط (form I)\n# يَحُطْ (yaḥuṭ) /ja.ħutˤ/: third-person masculine singular non-past active jussive of حَاطَ (ḥāṭa)\n# يُحَطْ (yuḥaṭ) /ju.ħatˤ/: third-person masculine singular non-past passive jussive of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥuṭ", "ḥāṭa", "yuḥaṭ"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حيط",
+      "tur": "verb",
+      "baslik": "حِيطَ • (ḥīṭa) (form I) /ħiː.tˤa/\n# third-person masculine singular past passive of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥīṭa", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحط",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تحط (form I)\n# تَحُطْ (taḥuṭ) /ta.ħutˤ/: inflection of حَاطَ (ḥāṭa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُحَطْ (tuḥaṭ) /tu.ħatˤ/: inflection of حَاطَ (ḥāṭa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥuṭ", "ḥāṭa", "tuḥaṭ"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحاط",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تحاط (form I)\n# تُحَاطُ (tuḥāṭu) /tu.ħaː.tˤu/: inflection of حَاطَ (ḥāṭa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُحَاطَ (tuḥāṭa) /tu.ħaː.tˤa/: inflection of حَاطَ (ḥāṭa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuḥāṭu", "ḥāṭa", "tuḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أحط",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أحط (form I)\n# أَحُطْ (ʔaḥuṭ) /ʔa.ħutˤ/: first-person singular non-past active jussive of حَاطَ (ḥāṭa)\n# أُحَطْ (ʔuḥaṭ) /ʔu.ħatˤ/: first-person singular non-past passive jussive of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḥuṭ", "ḥāṭa", "ʔuḥaṭ"]
+    },
+    {
+      "madde": "تحاطين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُحَاطِينَ • (tuḥāṭīna) (form I) /tu.ħaː.tˤiː.na/\n# second-person feminine singular non-past passive indicative of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuḥāṭīna", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحاطي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُحَاطِي • (tuḥāṭī) (form I) /tu.ħaː.tˤiː/\n# second-person feminine singular non-past passive subjunctive/jussive of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuḥāṭī", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حاطت",
+      "tur": "verb",
+      "baslik": "حَاطَتْ • (ḥāṭat) (form I) /ħaː.tˤat/\n# third-person feminine singular past active of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥāṭat", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حيطت",
+      "tur": "verb",
+      "baslik": "حِيطَتْ • (ḥīṭat) (form I) /ħiː.tˤat/\n# third-person feminine singular past passive of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥīṭat", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حطت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "حطت (form I)\n# حُطْتُ (ḥuṭtu) /ħutˤ.tu/: first-person singular past active of حَاطَ (ḥāṭa)\n# حُطْتَ (ḥuṭta) /ħutˤ.ta/: second-person masculine singular past active of حَاطَ (ḥāṭa)\n# حُطْتِ (ḥuṭti) /ħutˤ.ti/: second-person feminine singular past active of حَاطَ (ḥāṭa)\n# حِطْتُ (ḥiṭtu) /ħitˤ.tu/: first-person singular past passive of حَاطَ (ḥāṭa)\n# حِطْتَ (ḥiṭta) /ħitˤ.ta/: second-person masculine s",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥuṭtu", "ḥāṭa", "ḥuṭta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحوطي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَحُوطِي • (taḥūṭī) (form I) /ta.ħuː.tˤiː/\n# second-person feminine singular non-past active subjunctive/jussive of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥūṭī", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحوطين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَحُوطِينَ • (taḥūṭīna) (form I) /ta.ħuː.tˤiː.na/\n# second-person feminine singular non-past active indicative of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥūṭīna", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حوطي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "حُوطِي • (ḥūṭī) (form I) /ħuː.tˤiː/\n# second-person feminine singular imperative of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥūṭī", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أحوط",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أحوط (form I)\n# أَحُوطُ (ʔaḥūṭu) /ʔa.ħuː.tˤu/: first-person singular non-past active indicative of حَاطَ (ḥāṭa)\n# أَحُوطَ (ʔaḥūṭa) /ʔa.ħuː.tˤa/: first-person singular non-past active subjunctive of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḥūṭu", "ḥāṭa", "ʔaḥūṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نحط",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نحط (form I)\n# نَحُطْ (naḥuṭ) /na.ħutˤ/: first-person plural non-past active jussive of حَاطَ (ḥāṭa)\n# نُحَطْ (nuḥaṭ) /nu.ħatˤ/: first-person plural non-past passive jussive of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḥuṭ", "ḥāṭa", "nuḥaṭ"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نحاط",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نحاط (form I)\n# نُحَاطُ (nuḥāṭu) /nu.ħaː.tˤu/: first-person plural non-past passive indicative of حَاطَ (ḥāṭa)\n# نُحَاطَ (nuḥāṭa) /nu.ħaː.tˤa/: first-person plural non-past passive subjunctive of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuḥāṭu", "ḥāṭa", "nuḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حطنا",
+      "tur": "verb",
+      "baslik": "حطنا (form I)\n# حُطْنَا (ḥuṭnā) /ħutˤ.naː/: first-person plural past active of حَاطَ (ḥāṭa)\n# حِطْنَا (ḥiṭnā) /ħitˤ.naː/: first-person plural past passive of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥuṭnā", "ḥāṭa", "ḥiṭnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نحوط",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نحوط (form I)\n# نَحُوطُ (naḥūṭu) /na.ħuː.tˤu/: first-person plural non-past active indicative of حَاطَ (ḥāṭa)\n# نَحُوطَ (naḥūṭa) /na.ħuː.tˤa/: first-person plural non-past active subjunctive of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḥūṭu", "ḥāṭa", "naḥūṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحاطون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُحَاطُونَ • (tuḥāṭūna) (form I) /tu.ħaː.tˤuː.na/\n# second-person masculine plural non-past passive indicative of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuḥāṭūna", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحاطوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُحَاطُوا • (tuḥāṭū) (form I) /tu.ħaː.tˤuː/\n# second-person masculine plural non-past passive subjunctive/jussive of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuḥāṭū", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حطتم",
+      "tur": "verb",
+      "baslik": "حطتم (form I)\n# حُطْتُمْ (ḥuṭtum) /ħutˤ.tum/: second-person masculine plural past active of حَاطَ (ḥāṭa)\n# حِطْتُمْ (ḥiṭtum) /ħitˤ.tum/: second-person masculine plural past passive of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥuṭtum", "ḥāṭa", "ḥiṭtum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحوطون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَحُوطُونَ • (taḥūṭūna) (form I) /ta.ħuː.tˤuː.na/\n# second-person masculine plural non-past active indicative of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥūṭūna", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحاطون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُحَاطُونَ • (yuḥāṭūna) (form I) /ju.ħaː.tˤuː.na/\n# third-person masculine plural non-past passive indicative of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuḥāṭūna", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحاطوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُحَاطُوا • (yuḥāṭū) (form I) /ju.ħaː.tˤuː/\n# third-person masculine plural non-past passive subjunctive/jussive of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuḥāṭū", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحوطوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَحُوطُوا • (taḥūṭū) (form I) /ta.ħuː.tˤuː/\n# second-person masculine plural non-past active subjunctive/jussive of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥūṭū", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حاطوا",
+      "tur": "verb",
+      "baslik": "حَاطُوا • (ḥāṭū) (form I) /ħaː.tˤuː/\n# third-person masculine plural past active of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥāṭū", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحوطون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَحُوطُونَ • (yaḥūṭūna) (form I) /ja.ħuː.tˤuː.na/\n# third-person masculine plural non-past active indicative of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥūṭūna", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحوطوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَحُوطُوا • (yaḥūṭū) (form I) /ja.ħuː.tˤuː/\n# third-person masculine plural non-past active subjunctive/jussive of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥūṭū", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حيطوا",
+      "tur": "verb",
+      "baslik": "حِيطُوا • (ḥīṭū) (form I) /ħiː.tˤuː/\n# third-person masculine plural past passive of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥīṭū", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حوطوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "حُوطُوا • (ḥūṭū) (form I) /ħuː.tˤuː/\n# second-person masculine plural imperative of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥūṭū", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحطن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تحطن (form I)\n# تَحُطْنَ (taḥuṭna) /ta.ħutˤ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of حَاطَ (ḥāṭa)\n# تُحَطْنَ (tuḥaṭna) /tu.ħatˤ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥuṭna", "ḥāṭa", "tuḥaṭna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حطتن",
+      "tur": "verb",
+      "baslik": "حطتن (form I)\n# حُطْتُنَّ (ḥuṭtunna) /ħutˤ.tun.na/: second-person feminine plural past active of حَاطَ (ḥāṭa)\n# حِطْتُنَّ (ḥiṭtunna) /ħitˤ.tun.na/: second-person feminine plural past passive of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥuṭtunna", "ḥāṭa", "ḥiṭtunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حطن",
+      "tur": "verb",
+      "baslik": "حطن (form I)\n# حُطْنَ (ḥuṭna) /ħutˤ.na/: inflection of حَاطَ (ḥāṭa):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# حِطْنَ (ḥiṭna) /ħitˤ.na/: third-person feminine plural past passive of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥuṭna", "ḥāṭa", "ḥiṭna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحطن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يحطن (form I)\n# يَحُطْنَ (yaḥuṭna) /ja.ħutˤ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of حَاطَ (ḥāṭa)\n# يُحَطْنَ (yuḥaṭna) /ju.ħatˤ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥuṭna", "ḥāṭa", "yuḥaṭna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحاطان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُحَاطَانِ • (yuḥāṭāni) (form I) /ju.ħaː.tˤaː.ni/\n# third-person masculine dual non-past passive indicative of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuḥāṭāni", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحاطان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُحَاطَانِ • (tuḥāṭāni) (form I) /tu.ħaː.tˤaː.ni/\n# inflection of حَاطَ (ḥāṭa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuḥāṭāni", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحاطا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُحَاطَا • (tuḥāṭā) (form I) /tu.ħaː.tˤaː/\n# inflection of حَاطَ (ḥāṭa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuḥāṭā", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحاطا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُحَاطَا • (yuḥāṭā) (form I) /ju.ħaː.tˤaː/\n# third-person masculine dual non-past passive subjunctive/jussive of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuḥāṭā", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحوطا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَحُوطَا • (taḥūṭā) (form I) /ta.ħuː.tˤaː/\n# inflection of حَاطَ (ḥāṭa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥūṭā", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حاطتا",
+      "tur": "verb",
+      "baslik": "حَاطَتَا • (ḥāṭatā) (form I) /ħaː.tˤa.taː/\n# third-person feminine dual past active of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥāṭatā", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حطتما",
+      "tur": "verb",
+      "baslik": "حطتما (form I)\n# حُطْتُمَا (ḥuṭtumā) /ħutˤ.tu.maː/: second-person dual past active of حَاطَ (ḥāṭa)\n# حِطْتُمَا (ḥiṭtumā) /ħitˤ.tu.maː/: second-person dual past passive of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥuṭtumā", "ḥāṭa", "ḥiṭtumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حاطا",
+      "tur": "verb",
+      "baslik": "حَاطَا • (ḥāṭā) (form I) /ħaː.tˤaː/\n# third-person masculine dual past active of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥāṭā", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحوطان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَحُوطَانِ • (taḥūṭāni) (form I) /ta.ħuː.tˤaː.ni/\n# inflection of حَاطَ (ḥāṭa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥūṭāni", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حيطا",
+      "tur": "verb",
+      "baslik": "حِيطَا • (ḥīṭā) (form I) /ħiː.tˤaː/\n# third-person masculine dual past passive of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥīṭā", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حيطتا",
+      "tur": "verb",
+      "baslik": "حِيطَتَا • (ḥīṭatā) (form I) /ħiː.tˤa.taː/\n# third-person feminine dual past passive of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥīṭatā", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حوطا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "حُوطَا • (ḥūṭā) (form I) /ħuː.tˤaː/\n# second-person dual imperative of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥūṭā", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحوطان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَحُوطَانِ • (yaḥūṭāni) (form I) /ja.ħuː.tˤaː.ni/\n# third-person masculine dual non-past active indicative of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥūṭāni", "ḥāṭa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحوطا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَحُوطَا • (yaḥūṭā) (form I) /ja.ħuː.tˤaː/\n# third-person masculine dual non-past active subjunctive/jussive of حَاطَ (ḥāṭa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥūṭā", "ḥāṭa"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "حاط", "r7"]
+  ],
+  "mana": {
     "ince": "settle.v.13",
     "orta": "verb.communication",
     "ust": "söz ve haber",
@@ -694,16 +495,11 @@
     "dayanak_tanim": "end a legal dispute by arriving at a settlement",
     "synset_sayisi": 10
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "degrade.v.03",
     "ensconce.v.01",
     "reconcile.v.03",
@@ -715,12 +511,10 @@
     "sit.v.01",
     "uncommunicativeness.n.01"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

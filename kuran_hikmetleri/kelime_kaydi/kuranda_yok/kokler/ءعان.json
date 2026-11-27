@@ -1,599 +1,473 @@
 {
   "kok": "ءعان",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءعان", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أعين",
-        "u": "أعين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أعين (form IV)\n# أُعِينَ (ʔuʕīna) /ʔu.ʕiː.na/: inflection of أَعَانَ (ʔaʕāna):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُعِينُ (ʔuʕīnu) /ʔu.ʕiː.nu/: first-person singular non-past active indicative of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuʕīna", "ʔaʕāna", "ʔuʕīnu"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "يعن",
-        "u": "يعن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يعن (form IV)\n# يُعِنَّ (yuʕinna) /ju.ʕin.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَعَانَ (ʔaʕāna)\n# يُعَنَّ (yuʕanna) /ju.ʕan.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَعَانَ (ʔaʕāna)\n# يُعِنْ (yuʕin) /ju.ʕin/: third-person masculine singular non-past active jussive of أَعَانَ (ʔaʕāna)\n# يُعَنْ (yuʕan) /ju.ʕan",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕinna", "ʔaʕāna", "yuʕanna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "يعين",
-        "u": "يعين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يعين (form IV)\n# يُعِينُ (yuʕīnu) /ju.ʕiː.nu/: third-person masculine singular non-past active indicative of أَعَانَ (ʔaʕāna)\n# يُعِينَ (yuʕīna) /ju.ʕiː.na/: third-person masculine singular non-past active subjunctive of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕīnu", "ʔaʕāna", "yuʕīna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "تعن",
-        "u": "تعن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تعن (form IV)\n# تُعِنَّ (tuʕinna) /tu.ʕin.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَعَانَ (ʔaʕāna)\n# تُعَنَّ (tuʕanna) /tu.ʕan.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَعَانَ (ʔaʕāna)\n# تُعِنْ (tuʕin) /tu.ʕin/: inflection of أَعَانَ (ʔaʕāna):\n## second-person masculine singular non-past active jussive\n## thi",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕinna", "ʔaʕāna", "tuʕanna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "تعين",
-        "u": "تعين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تعين (form IV)\n# تُعِينُ (tuʕīnu) /tu.ʕiː.nu/: inflection of أَعَانَ (ʔaʕāna):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُعِينَ (tuʕīna) /tu.ʕiː.na/: inflection of أَعَانَ (ʔaʕāna):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕīnu", "ʔaʕāna", "tuʕīna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "تعينين",
-        "u": "تعينين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُعِينِينَ • (tuʕīnīna) (form IV) /tu.ʕiː.niː.na/\n# second-person feminine singular non-past active indicative of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕīnīna", "ʔaʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "تعيني",
-        "u": "تعيني",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُعِينِي • (tuʕīnī) (form IV) /tu.ʕiː.niː/\n# second-person feminine singular non-past active subjunctive/jussive of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕīnī", "ʔaʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "أعن",
-        "u": "أعن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أعن (form IV)\n# أَعَنَّ (ʔaʕanna) /ʔa.ʕan.na/: third-person feminine plural past active of أَعَانَ (ʔaʕāna)\n# أُعِنَّ (ʔuʕinna) /ʔu.ʕin.na/: third-person feminine plural past passive of أَعَانَ (ʔaʕāna)\n# أُعِنْ (ʔuʕin) /ʔu.ʕin/: first-person singular non-past active jussive of أَعَانَ (ʔaʕāna)\n# أُعَنْ (ʔuʕan) /ʔu.ʕan/: first-person singular non-past passive jussive of أَعَانَ (ʔaʕāna)\n# أَعِنْ (",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕanna", "ʔaʕāna", "ʔuʕinna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "نعن",
-        "u": "نعن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نعن (form IV)\n# نُعِنْ (nuʕin) /nu.ʕin/: first-person plural non-past active jussive of أَعَانَ (ʔaʕāna)\n# نُعَنْ (nuʕan) /nu.ʕan/: first-person plural non-past passive jussive of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuʕin", "ʔaʕāna", "nuʕan"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "نعين",
-        "u": "نعين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نعين (form IV)\n# نُعِينُ (nuʕīnu) /nu.ʕiː.nu/: first-person plural non-past active indicative of أَعَانَ (ʔaʕāna)\n# نُعِينَ (nuʕīna) /nu.ʕiː.na/: first-person plural non-past active subjunctive of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuʕīnu", "ʔaʕāna", "nuʕīna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "تعينون",
-        "u": "تعينون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُعِينُونَ • (tuʕīnūna) (form IV) /tu.ʕiː.nuː.na/\n# second-person masculine plural non-past active indicative of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕīnūna", "ʔaʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "تعينوا",
-        "u": "تعينوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُعِينُوا • (tuʕīnū) (form IV) /tu.ʕiː.nuː/\n# second-person masculine plural non-past active subjunctive/jussive of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕīnū", "ʔaʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "يعينون",
-        "u": "يعينون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُعِينُونَ • (yuʕīnūna) (form IV) /ju.ʕiː.nuː.na/\n# third-person masculine plural non-past active indicative of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕīnūna", "ʔaʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "يعينوا",
-        "u": "يعينوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُعِينُوا • (yuʕīnū) (form IV) /ju.ʕiː.nuː/\n# third-person masculine plural non-past active subjunctive/jussive of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕīnū", "ʔaʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "أعانت",
-        "u": "أعانت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَعَانَتْ • (ʔaʕānat) (form IV) /ʔa.ʕaː.nat/\n# third-person feminine singular past active of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕānat", "ʔaʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "أعنت",
-        "u": "أعنت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعنت (form IV)\n# أَعَنْتُ (ʔaʕantu) /ʔa.ʕan.tu/: first-person singular past active of أَعَانَ (ʔaʕāna)\n# أَعَنْتَ (ʔaʕanta) /ʔa.ʕan.ta/: second-person masculine singular past active of أَعَانَ (ʔaʕāna)\n# أَعَنْتِ (ʔaʕanti) /ʔa.ʕan.ti/: second-person feminine singular past active of أَعَانَ (ʔaʕāna)\n# أُعِنْتُ (ʔuʕintu) /ʔu.ʕin.tu/: first-person singular past passive of أَعَانَ (ʔaʕāna)\n# أُعِنْتَ ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕantu", "ʔaʕāna", "ʔaʕanta"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "أعنتما",
-        "u": "أعنتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعنتما (form IV)\n# أَعَنْتُمَا (ʔaʕantumā) /ʔa.ʕan.tu.maː/: second-person dual past active of أَعَانَ (ʔaʕāna)\n# أُعِنْتُمَا (ʔuʕintumā) /ʔu.ʕin.tu.maː/: second-person dual past passive of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕantumā", "ʔaʕāna", "ʔuʕintumā"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "أعانا",
-        "u": "أعانا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَعَانَا • (ʔaʕānā) (form IV) /ʔa.ʕaː.naː/\n# third-person masculine dual past active of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕānā", "ʔaʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "أعنا",
-        "u": "أعنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعنا (form IV)\n# أَعَنَّا (ʔaʕannā) /ʔa.ʕan.naː/: first-person plural past active of أَعَانَ (ʔaʕāna)\n# أُعِنَّا (ʔuʕinnā) /ʔu.ʕin.naː/: first-person plural past passive of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕannā", "ʔaʕāna", "ʔuʕinnā"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "أعانتا",
-        "u": "أعانتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَعَانَتَا • (ʔaʕānatā) (form IV) /ʔa.ʕaː.na.taː/\n# third-person feminine dual past active of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕānatā", "ʔaʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "أعنتم",
-        "u": "أعنتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعنتم (form IV)\n# أَعَنْتُمْ (ʔaʕantum) /ʔa.ʕan.tum/: second-person masculine plural past active of أَعَانَ (ʔaʕāna)\n# أُعِنْتُمْ (ʔuʕintum) /ʔu.ʕin.tum/: second-person masculine plural past passive of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕantum", "ʔaʕāna", "ʔuʕintum"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "أعانوا",
-        "u": "أعانوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَعَانُوا • (ʔaʕānū) (form IV) /ʔa.ʕaː.nuː/\n# third-person masculine plural past active of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕānū", "ʔaʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "أعنتن",
-        "u": "أعنتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعنتن (form IV)\n# أَعَنْتُنَّ (ʔaʕantunna) /ʔa.ʕan.tun.na/: second-person feminine plural past active of أَعَانَ (ʔaʕāna)\n# أُعِنْتُنَّ (ʔuʕintunna) /ʔu.ʕin.tun.na/: second-person feminine plural past passive of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕantunna", "ʔaʕāna", "ʔuʕintunna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "أعينا",
-        "u": "أعينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعينا (form IV)\n# أُعِينَا (ʔuʕīnā) /ʔu.ʕiː.naː/: third-person masculine dual past passive of أَعَانَ (ʔaʕāna)\n# أَعِينَا (ʔaʕīnā) /ʔa.ʕiː.naː/: second-person dual imperative of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuʕīnā", "ʔaʕāna", "ʔaʕīnā"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "أعينت",
-        "u": "أعينت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُعِينَتْ • (ʔuʕīnat) (form IV) /ʔu.ʕiː.nat/\n# third-person feminine singular past passive of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuʕīnat", "ʔaʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "أعينوا",
-        "u": "أعينوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعينوا (form IV)\n# أُعِينُوا (ʔuʕīnū) /ʔu.ʕiː.nuː/: third-person masculine plural past passive of أَعَانَ (ʔaʕāna)\n# أَعِينُوا (ʔaʕīnū) /ʔa.ʕiː.nuː/: second-person masculine plural imperative of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuʕīnū", "ʔaʕāna", "ʔaʕīnū"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "أعينتا",
-        "u": "أعينتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُعِينَتَا • (ʔuʕīnatā) (form IV) /ʔu.ʕiː.na.taː/\n# third-person feminine dual past passive of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuʕīnatā", "ʔaʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "تعانان",
-        "u": "تعانان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُعَانَانِ • (tuʕānāni) (form IV) /tu.ʕaː.naː.ni/\n# inflection of أَعَانَ (ʔaʕāna):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕānāni", "ʔaʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "تعينان",
-        "u": "تعينان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُعِينَانِ • (tuʕīnāni) (form IV) /tu.ʕiː.naː.ni/\n# inflection of أَعَانَ (ʔaʕāna):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕīnāni", "ʔaʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "تعان",
-        "u": "تعان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تعان (form IV)\n# تُعَانُ (tuʕānu) /tu.ʕaː.nu/: inflection of أَعَانَ (ʔaʕāna):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُعَانَ (tuʕāna) /tu.ʕaː.na/: inflection of أَعَانَ (ʔaʕāna):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕānu", "ʔaʕāna", "tuʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "يعينان",
-        "u": "يعينان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُعِينَانِ • (yuʕīnāni) (form IV) /ju.ʕiː.naː.ni/\n# third-person masculine dual non-past active indicative of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕīnāni", "ʔaʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "تعانين",
-        "u": "تعانين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُعَانِينَ • (tuʕānīna) (form IV) /tu.ʕaː.niː.na/\n# second-person feminine singular non-past passive indicative of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕānīna", "ʔaʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "يعان",
-        "u": "يعان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يعان (form IV)\n# يُعَانُ (yuʕānu) /ju.ʕaː.nu/: third-person masculine singular non-past passive indicative of أَعَانَ (ʔaʕāna)\n# يُعَانَ (yuʕāna) /ju.ʕaː.na/: third-person masculine singular non-past passive subjunctive of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕānu", "ʔaʕāna", "yuʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "نعان",
-        "u": "نعان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نعان (form IV)\n# نُعَانُ (nuʕānu) /nu.ʕaː.nu/: first-person plural non-past passive indicative of أَعَانَ (ʔaʕāna)\n# نُعَانَ (nuʕāna) /nu.ʕaː.na/: first-person plural non-past passive subjunctive of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuʕānu", "ʔaʕāna", "nuʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "يعانون",
-        "u": "يعانون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُعَانُونَ • (yuʕānūna) (form IV) /ju.ʕaː.nuː.na/\n# third-person masculine plural non-past passive indicative of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕānūna", "ʔaʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "يعانان",
-        "u": "يعانان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُعَانَانِ • (yuʕānāni) (form IV) /ju.ʕaː.naː.ni/\n# third-person masculine dual non-past passive indicative of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕānāni", "ʔaʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "تعانون",
-        "u": "تعانون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُعَانُونَ • (tuʕānūna) (form IV) /tu.ʕaː.nuː.na/\n# second-person masculine plural non-past passive indicative of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕānūna", "ʔaʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "تعينا",
-        "u": "تعينا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُعِينَا • (tuʕīnā) (form IV) /tu.ʕiː.naː/\n# inflection of أَعَانَ (ʔaʕāna):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕīnā", "ʔaʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "تعاني",
-        "u": "تعاني",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُعَانِي • (tuʕānī) (form IV) /tu.ʕaː.niː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕānī", "ʔaʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "تعانا",
-        "u": "تعانا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُعَانَا • (tuʕānā) (form IV) /tu.ʕaː.naː/\n# inflection of أَعَانَ (ʔaʕāna):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕānā", "ʔaʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "يعينا",
-        "u": "يعينا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُعِينَا • (yuʕīnā) (form IV) /ju.ʕiː.naː/\n# third-person masculine dual non-past active subjunctive/jussive of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕīnā", "ʔaʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "تعانوا",
-        "u": "تعانوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُعَانُوا • (tuʕānū) (form IV) /tu.ʕaː.nuː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕānū", "ʔaʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "يعانا",
-        "u": "يعانا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُعَانَا • (yuʕānā) (form IV) /ju.ʕaː.naː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕānā", "ʔaʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "أعيني",
-        "u": "أعيني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَعِينِي • (ʔaʕīnī) (form IV) /ʔa.ʕiː.niː/\n# second-person feminine singular imperative of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕīnī", "ʔaʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      },
-      {
-        "w": "يعانوا",
-        "u": "يعانوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُعَانُوا • (yuʕānū) (form IV) /ju.ʕaː.nuː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَعَانَ (ʔaʕāna)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕānū", "ʔaʕāna"],
-        "k": "أعان",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "عن",
+  "ses": {
     "harf": "ء",
+    "fasil": "عن",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "أعين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أعين (form IV)\n# أُعِينَ (ʔuʕīna) /ʔu.ʕiː.na/: inflection of أَعَانَ (ʔaʕāna):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُعِينُ (ʔuʕīnu) /ʔu.ʕiː.nu/: first-person singular non-past active indicative of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuʕīna", "ʔaʕāna", "ʔuʕīnu"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يعن (form IV)\n# يُعِنَّ (yuʕinna) /ju.ʕin.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَعَانَ (ʔaʕāna)\n# يُعَنَّ (yuʕanna) /ju.ʕan.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَعَانَ (ʔaʕāna)\n# يُعِنْ (yuʕin) /ju.ʕin/: third-person masculine singular non-past active jussive of أَعَانَ (ʔaʕāna)\n# يُعَنْ (yuʕan) /ju.ʕan",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕinna", "ʔaʕāna", "yuʕanna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يعين (form IV)\n# يُعِينُ (yuʕīnu) /ju.ʕiː.nu/: third-person masculine singular non-past active indicative of أَعَانَ (ʔaʕāna)\n# يُعِينَ (yuʕīna) /ju.ʕiː.na/: third-person masculine singular non-past active subjunctive of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕīnu", "ʔaʕāna", "yuʕīna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تعن (form IV)\n# تُعِنَّ (tuʕinna) /tu.ʕin.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَعَانَ (ʔaʕāna)\n# تُعَنَّ (tuʕanna) /tu.ʕan.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَعَانَ (ʔaʕāna)\n# تُعِنْ (tuʕin) /tu.ʕin/: inflection of أَعَانَ (ʔaʕāna):\n## second-person masculine singular non-past active jussive\n## thi",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕinna", "ʔaʕāna", "tuʕanna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تعين (form IV)\n# تُعِينُ (tuʕīnu) /tu.ʕiː.nu/: inflection of أَعَانَ (ʔaʕāna):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُعِينَ (tuʕīna) /tu.ʕiː.na/: inflection of أَعَانَ (ʔaʕāna):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕīnu", "ʔaʕāna", "tuʕīna"],
+      "kok_yazilis": "أعان"
+    },
+    {
+      "madde": "تعينين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُعِينِينَ • (tuʕīnīna) (form IV) /tu.ʕiː.niː.na/\n# second-person feminine singular non-past active indicative of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕīnīna", "ʔaʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعيني",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُعِينِي • (tuʕīnī) (form IV) /tu.ʕiː.niː/\n# second-person feminine singular non-past active subjunctive/jussive of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕīnī", "ʔaʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أعن (form IV)\n# أَعَنَّ (ʔaʕanna) /ʔa.ʕan.na/: third-person feminine plural past active of أَعَانَ (ʔaʕāna)\n# أُعِنَّ (ʔuʕinna) /ʔu.ʕin.na/: third-person feminine plural past passive of أَعَانَ (ʔaʕāna)\n# أُعِنْ (ʔuʕin) /ʔu.ʕin/: first-person singular non-past active jussive of أَعَانَ (ʔaʕāna)\n# أُعَنْ (ʔuʕan) /ʔu.ʕan/: first-person singular non-past passive jussive of أَعَانَ (ʔaʕāna)\n# أَعِنْ (",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕanna", "ʔaʕāna", "ʔuʕinna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نعن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نعن (form IV)\n# نُعِنْ (nuʕin) /nu.ʕin/: first-person plural non-past active jussive of أَعَانَ (ʔaʕāna)\n# نُعَنْ (nuʕan) /nu.ʕan/: first-person plural non-past passive jussive of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuʕin", "ʔaʕāna", "nuʕan"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نعين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نعين (form IV)\n# نُعِينُ (nuʕīnu) /nu.ʕiː.nu/: first-person plural non-past active indicative of أَعَانَ (ʔaʕāna)\n# نُعِينَ (nuʕīna) /nu.ʕiː.na/: first-person plural non-past active subjunctive of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuʕīnu", "ʔaʕāna", "nuʕīna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعينون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُعِينُونَ • (tuʕīnūna) (form IV) /tu.ʕiː.nuː.na/\n# second-person masculine plural non-past active indicative of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕīnūna", "ʔaʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعينوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُعِينُوا • (tuʕīnū) (form IV) /tu.ʕiː.nuː/\n# second-person masculine plural non-past active subjunctive/jussive of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕīnū", "ʔaʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعينون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُعِينُونَ • (yuʕīnūna) (form IV) /ju.ʕiː.nuː.na/\n# third-person masculine plural non-past active indicative of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕīnūna", "ʔaʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعينوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُعِينُوا • (yuʕīnū) (form IV) /ju.ʕiː.nuː/\n# third-person masculine plural non-past active subjunctive/jussive of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕīnū", "ʔaʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعانت",
+      "tur": "verb",
+      "baslik": "أَعَانَتْ • (ʔaʕānat) (form IV) /ʔa.ʕaː.nat/\n# third-person feminine singular past active of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕānat", "ʔaʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعنت",
+      "tur": "verb",
+      "baslik": "أعنت (form IV)\n# أَعَنْتُ (ʔaʕantu) /ʔa.ʕan.tu/: first-person singular past active of أَعَانَ (ʔaʕāna)\n# أَعَنْتَ (ʔaʕanta) /ʔa.ʕan.ta/: second-person masculine singular past active of أَعَانَ (ʔaʕāna)\n# أَعَنْتِ (ʔaʕanti) /ʔa.ʕan.ti/: second-person feminine singular past active of أَعَانَ (ʔaʕāna)\n# أُعِنْتُ (ʔuʕintu) /ʔu.ʕin.tu/: first-person singular past passive of أَعَانَ (ʔaʕāna)\n# أُعِنْتَ ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕantu", "ʔaʕāna", "ʔaʕanta"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعنتما",
+      "tur": "verb",
+      "baslik": "أعنتما (form IV)\n# أَعَنْتُمَا (ʔaʕantumā) /ʔa.ʕan.tu.maː/: second-person dual past active of أَعَانَ (ʔaʕāna)\n# أُعِنْتُمَا (ʔuʕintumā) /ʔu.ʕin.tu.maː/: second-person dual past passive of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕantumā", "ʔaʕāna", "ʔuʕintumā"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعانا",
+      "tur": "verb",
+      "baslik": "أَعَانَا • (ʔaʕānā) (form IV) /ʔa.ʕaː.naː/\n# third-person masculine dual past active of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕānā", "ʔaʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعنا",
+      "tur": "verb",
+      "baslik": "أعنا (form IV)\n# أَعَنَّا (ʔaʕannā) /ʔa.ʕan.naː/: first-person plural past active of أَعَانَ (ʔaʕāna)\n# أُعِنَّا (ʔuʕinnā) /ʔu.ʕin.naː/: first-person plural past passive of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕannā", "ʔaʕāna", "ʔuʕinnā"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعانتا",
+      "tur": "verb",
+      "baslik": "أَعَانَتَا • (ʔaʕānatā) (form IV) /ʔa.ʕaː.na.taː/\n# third-person feminine dual past active of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕānatā", "ʔaʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعنتم",
+      "tur": "verb",
+      "baslik": "أعنتم (form IV)\n# أَعَنْتُمْ (ʔaʕantum) /ʔa.ʕan.tum/: second-person masculine plural past active of أَعَانَ (ʔaʕāna)\n# أُعِنْتُمْ (ʔuʕintum) /ʔu.ʕin.tum/: second-person masculine plural past passive of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕantum", "ʔaʕāna", "ʔuʕintum"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعانوا",
+      "tur": "verb",
+      "baslik": "أَعَانُوا • (ʔaʕānū) (form IV) /ʔa.ʕaː.nuː/\n# third-person masculine plural past active of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕānū", "ʔaʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعنتن",
+      "tur": "verb",
+      "baslik": "أعنتن (form IV)\n# أَعَنْتُنَّ (ʔaʕantunna) /ʔa.ʕan.tun.na/: second-person feminine plural past active of أَعَانَ (ʔaʕāna)\n# أُعِنْتُنَّ (ʔuʕintunna) /ʔu.ʕin.tun.na/: second-person feminine plural past passive of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕantunna", "ʔaʕāna", "ʔuʕintunna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعينا",
+      "tur": "verb",
+      "baslik": "أعينا (form IV)\n# أُعِينَا (ʔuʕīnā) /ʔu.ʕiː.naː/: third-person masculine dual past passive of أَعَانَ (ʔaʕāna)\n# أَعِينَا (ʔaʕīnā) /ʔa.ʕiː.naː/: second-person dual imperative of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuʕīnā", "ʔaʕāna", "ʔaʕīnā"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعينت",
+      "tur": "verb",
+      "baslik": "أُعِينَتْ • (ʔuʕīnat) (form IV) /ʔu.ʕiː.nat/\n# third-person feminine singular past passive of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuʕīnat", "ʔaʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعينوا",
+      "tur": "verb",
+      "baslik": "أعينوا (form IV)\n# أُعِينُوا (ʔuʕīnū) /ʔu.ʕiː.nuː/: third-person masculine plural past passive of أَعَانَ (ʔaʕāna)\n# أَعِينُوا (ʔaʕīnū) /ʔa.ʕiː.nuː/: second-person masculine plural imperative of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuʕīnū", "ʔaʕāna", "ʔaʕīnū"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعينتا",
+      "tur": "verb",
+      "baslik": "أُعِينَتَا • (ʔuʕīnatā) (form IV) /ʔu.ʕiː.na.taː/\n# third-person feminine dual past passive of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuʕīnatā", "ʔaʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعانان",
+      "tur": "verb",
+      "baslik": "تُعَانَانِ • (tuʕānāni) (form IV) /tu.ʕaː.naː.ni/\n# inflection of أَعَانَ (ʔaʕāna):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕānāni", "ʔaʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعينان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُعِينَانِ • (tuʕīnāni) (form IV) /tu.ʕiː.naː.ni/\n# inflection of أَعَانَ (ʔaʕāna):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕīnāni", "ʔaʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تعان (form IV)\n# تُعَانُ (tuʕānu) /tu.ʕaː.nu/: inflection of أَعَانَ (ʔaʕāna):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُعَانَ (tuʕāna) /tu.ʕaː.na/: inflection of أَعَانَ (ʔaʕāna):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕānu", "ʔaʕāna", "tuʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعينان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُعِينَانِ • (yuʕīnāni) (form IV) /ju.ʕiː.naː.ni/\n# third-person masculine dual non-past active indicative of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕīnāni", "ʔaʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعانين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُعَانِينَ • (tuʕānīna) (form IV) /tu.ʕaː.niː.na/\n# second-person feminine singular non-past passive indicative of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕānīna", "ʔaʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يعان (form IV)\n# يُعَانُ (yuʕānu) /ju.ʕaː.nu/: third-person masculine singular non-past passive indicative of أَعَانَ (ʔaʕāna)\n# يُعَانَ (yuʕāna) /ju.ʕaː.na/: third-person masculine singular non-past passive subjunctive of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕānu", "ʔaʕāna", "yuʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نعان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نعان (form IV)\n# نُعَانُ (nuʕānu) /nu.ʕaː.nu/: first-person plural non-past passive indicative of أَعَانَ (ʔaʕāna)\n# نُعَانَ (nuʕāna) /nu.ʕaː.na/: first-person plural non-past passive subjunctive of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuʕānu", "ʔaʕāna", "nuʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعانون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُعَانُونَ • (yuʕānūna) (form IV) /ju.ʕaː.nuː.na/\n# third-person masculine plural non-past passive indicative of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕānūna", "ʔaʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعانان",
+      "tur": "verb",
+      "baslik": "يُعَانَانِ • (yuʕānāni) (form IV) /ju.ʕaː.naː.ni/\n# third-person masculine dual non-past passive indicative of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕānāni", "ʔaʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعانون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُعَانُونَ • (tuʕānūna) (form IV) /tu.ʕaː.nuː.na/\n# second-person masculine plural non-past passive indicative of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕānūna", "ʔaʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعينا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُعِينَا • (tuʕīnā) (form IV) /tu.ʕiː.naː/\n# inflection of أَعَانَ (ʔaʕāna):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕīnā", "ʔaʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعاني",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُعَانِي • (tuʕānī) (form IV) /tu.ʕaː.niː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕānī", "ʔaʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعانا",
+      "tur": "verb",
+      "baslik": "تُعَانَا • (tuʕānā) (form IV) /tu.ʕaː.naː/\n# inflection of أَعَانَ (ʔaʕāna):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕānā", "ʔaʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعينا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُعِينَا • (yuʕīnā) (form IV) /ju.ʕiː.naː/\n# third-person masculine dual non-past active subjunctive/jussive of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕīnā", "ʔaʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعانوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُعَانُوا • (tuʕānū) (form IV) /tu.ʕaː.nuː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕānū", "ʔaʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعانا",
+      "tur": "verb",
+      "baslik": "يُعَانَا • (yuʕānā) (form IV) /ju.ʕaː.naː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕānā", "ʔaʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعيني",
+      "tur": "verb",
+      "baslik": "أَعِينِي • (ʔaʕīnī) (form IV) /ʔa.ʕiː.niː/\n# second-person feminine singular imperative of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕīnī", "ʔaʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعانوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُعَانُوا • (yuʕānū) (form IV) /ju.ʕaː.nuː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَعَانَ (ʔaʕāna)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕānū", "ʔaʕāna"],
+      "kok_yazilis": "أعان",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ءعان", "r6"]
+  ],
+  "mana": {
     "ince": "desire.v.01",
     "orta": "verb.emotion",
     "ust": "his ve nefis",
@@ -601,22 +475,15 @@
     "dayanak_tanim": "feel or have a desire for; want strongly",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["desire.v.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["desire.v.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

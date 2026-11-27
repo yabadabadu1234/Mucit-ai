@@ -1,365 +1,287 @@
 {
   "kok": "ءنتج",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءنتج", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أنتجتما",
-        "u": "أنتجتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنتجتما (form IV)\n# أَنْتَجْتُمَا (ʔantajtumā) /ʔan.tad͡ʒ.tu.maː/: second-person dual past active of أَنْتَجَ (ʔantaja)\n# أُنْتِجْتُمَا (ʔuntijtumā) /ʔun.tid͡ʒ.tu.maː/: second-person dual past passive of أَنْتَجَ (ʔantaja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔantajtumā", "ʔantaja", "ʔuntijtumā"],
-        "k": "أنتج",
-        "yol": "kök"
-      },
-      {
-        "w": "أنتجت",
-        "u": "أنتجت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنتجت (form IV)\n# أَنْتَجْتُ (ʔantajtu) /ʔan.tad͡ʒ.tu/: first-person singular past active of أَنْتَجَ (ʔantaja)\n# أَنْتَجْتَ (ʔantajta) /ʔan.tad͡ʒ.ta/: second-person masculine singular past active of أَنْتَجَ (ʔantaja)\n# أَنْتَجْتِ (ʔantajti) /ʔan.tad͡ʒ.ti/: second-person feminine singular past active of أَنْتَجَ (ʔantaja)\n# أَنْتَجَتْ (ʔantajat) /ʔan.ta.d͡ʒat/: third-person feminine singular past",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔantajtu", "ʔantaja", "ʔantajta"],
-        "k": "أنتج",
-        "yol": "kök"
-      },
-      {
-        "w": "أنتجا",
-        "u": "أنتجا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنتجا (form IV)\n# أَنْتَجَا (ʔantajā) /ʔan.ta.d͡ʒaː/: third-person masculine dual past active of أَنْتَجَ (ʔantaja)\n# أُنْتِجَا (ʔuntijā) /ʔun.ti.d͡ʒaː/: third-person masculine dual past passive of أَنْتَجَ (ʔantaja)\n# أَنْتِجَا (ʔantijā) /ʔan.ti.d͡ʒaː/: second-person dual imperative of أَنْتَجَ (ʔantaja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔantajā", "ʔantaja", "ʔuntijā"],
-        "k": "أنتج",
-        "yol": "kök"
-      },
-      {
-        "w": "أنتجتا",
-        "u": "أنتجتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنتجتا (form IV)\n# أَنْتَجَتَا (ʔantajatā) /ʔan.ta.d͡ʒa.taː/: third-person feminine dual past active of أَنْتَجَ (ʔantaja)\n# أُنْتِجَتَا (ʔuntijatā) /ʔun.ti.d͡ʒa.taː/: third-person feminine dual past passive of أَنْتَجَ (ʔantaja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔantajatā", "ʔantaja", "ʔuntijatā"],
-        "k": "أنتج",
-        "yol": "kök"
-      },
-      {
-        "w": "أنتجنا",
-        "u": "أنتجنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنتجنا (form IV)\n# أَنْتَجْنَا (ʔantajnā) /ʔan.tad͡ʒ.naː/: first-person plural past active of أَنْتَجَ (ʔantaja)\n# أُنْتِجْنَا (ʔuntijnā) /ʔun.tid͡ʒ.naː/: first-person plural past passive of أَنْتَجَ (ʔantaja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔantajnā", "ʔantaja", "ʔuntijnā"],
-        "k": "أنتج",
-        "yol": "kök"
-      },
-      {
-        "w": "أنتجن",
-        "u": "أنتجن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنتجن (form IV)\n# أَنْتَجْنَ (ʔantajna) /ʔan.tad͡ʒ.na/: third-person feminine plural past active of أَنْتَجَ (ʔantaja)\n# أُنْتِجْنَ (ʔuntijna) /ʔun.tid͡ʒ.na/: third-person feminine plural past passive of أَنْتَجَ (ʔantaja)\n# أَنْتِجْنَ (ʔantijna) /ʔan.tid͡ʒ.na/: second-person feminine plural imperative of أَنْتَجَ (ʔantaja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔantajna", "ʔantaja", "ʔuntijna"],
-        "k": "أنتج",
-        "yol": "kök"
-      },
-      {
-        "w": "أنتجتم",
-        "u": "أنتجتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنتجتم (form IV)\n# أَنْتَجْتُمْ (ʔantajtum) /ʔan.tad͡ʒ.tum/: second-person masculine plural past active of أَنْتَجَ (ʔantaja)\n# أُنْتِجْتُمْ (ʔuntijtum) /ʔun.tid͡ʒ.tum/: second-person masculine plural past passive of أَنْتَجَ (ʔantaja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔantajtum", "ʔantaja", "ʔuntijtum"],
-        "k": "أنتج",
-        "yol": "kök"
-      },
-      {
-        "w": "أنتجوا",
-        "u": "أنتجوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنتجوا (form IV)\n# أَنْتَجُوا (ʔantajū) /ʔan.ta.d͡ʒuː/: third-person masculine plural past active of أَنْتَجَ (ʔantaja)\n# أُنْتِجُوا (ʔuntijū) /ʔun.ti.d͡ʒuː/: third-person masculine plural past passive of أَنْتَجَ (ʔantaja)\n# أَنْتِجُوا (ʔantijū) /ʔan.ti.d͡ʒuː/: second-person masculine plural imperative of أَنْتَجَ (ʔantaja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔantajū", "ʔantaja", "ʔuntijū"],
-        "k": "أنتج",
-        "yol": "kök"
-      },
-      {
-        "w": "أنتجتن",
-        "u": "أنتجتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنتجتن (form IV)\n# أَنْتَجْتُنَّ (ʔantajtunna) /ʔan.tad͡ʒ.tun.na/: second-person feminine plural past active of أَنْتَجَ (ʔantaja)\n# أُنْتِجْتُنَّ (ʔuntijtunna) /ʔun.tid͡ʒ.tun.na/: second-person feminine plural past passive of أَنْتَجَ (ʔantaja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔantajtunna", "ʔantaja", "ʔuntijtunna"],
-        "k": "أنتج",
-        "yol": "kök"
-      },
-      {
-        "w": "تنتجين",
-        "u": "تنتجين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنتجين (form IV)\n# تُنْتِجِينَ (tuntijīna) /tun.ti.d͡ʒiː.na/: second-person feminine singular non-past active indicative of أَنْتَجَ (ʔantaja)\n# تُنْتَجِينَ (tuntajīna) /tun.ta.d͡ʒiː.na/: second-person feminine singular non-past passive indicative of أَنْتَجَ (ʔantaja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuntijīna", "ʔantaja", "tuntajīna"],
-        "k": "أنتج",
-        "yol": "kök"
-      },
-      {
-        "w": "تنتج",
-        "u": "تنتج",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنتج (form IV)\n# تُنْتِجُ (tuntiju) /tun.ti.d͡ʒu/: inflection of أَنْتَجَ (ʔantaja):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُنْتَجُ (tuntaju) /tun.ta.d͡ʒu/: inflection of أَنْتَجَ (ʔantaja):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indica",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuntiju", "ʔantaja", "tuntaju"],
-        "k": "أنتج",
-        "yol": "kök"
-      },
-      {
-        "w": "ينتج",
-        "u": "ينتج",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ينتج (form IV)\n# يُنْتِجُ (yuntiju) /jun.ti.d͡ʒu/: third-person masculine singular non-past active indicative of أَنْتَجَ (ʔantaja)\n# يُنْتَجُ (yuntaju) /jun.ta.d͡ʒu/: third-person masculine singular non-past passive indicative of أَنْتَجَ (ʔantaja)\n# يُنْتِجَ (yuntija) /jun.ti.d͡ʒa/: third-person masculine singular non-past active subjunctive of أَنْتَجَ (ʔantaja)\n# يُنْتَجَ (yuntaja) /jun.ta.d͡ʒ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuntiju", "ʔantaja", "yuntaju"],
-        "k": "أنتج",
-        "yol": "kök"
-      },
-      {
-        "w": "ينتجان",
-        "u": "ينتجان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ينتجان (form IV)\n# يُنْتِجَانِ (yuntijāni) /jun.ti.d͡ʒaː.ni/: third-person masculine dual non-past active indicative of أَنْتَجَ (ʔantaja)\n# يُنْتَجَانِ (yuntajāni) /jun.ta.d͡ʒaː.ni/: third-person masculine dual non-past passive indicative of أَنْتَجَ (ʔantaja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuntijāni", "ʔantaja", "yuntajāni"],
-        "k": "أنتج",
-        "yol": "kök"
-      },
-      {
-        "w": "تنتجن",
-        "u": "تنتجن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنتجن (form IV)\n# تُنْتِجْنَ (tuntijna) /tun.tid͡ʒ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَنْتَجَ (ʔantaja)\n# تُنْتَجْنَ (tuntajna) /tun.tad͡ʒ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَنْتَجَ (ʔantaja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuntijna", "ʔantaja", "tuntajna"],
-        "k": "أنتج",
-        "yol": "kök"
-      },
-      {
-        "w": "تنتجان",
-        "u": "تنتجان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنتجان (form IV)\n# تُنْتِجَانِ (tuntijāni) /tun.ti.d͡ʒaː.ni/: inflection of أَنْتَجَ (ʔantaja):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُنْتَجَانِ (tuntajāni) /tun.ta.d͡ʒaː.ni/: inflection of أَنْتَجَ (ʔantaja):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuntijāni", "ʔantaja", "tuntajāni"],
-        "k": "أنتج",
-        "yol": "kök"
-      },
-      {
-        "w": "تنتجون",
-        "u": "تنتجون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنتجون (form IV)\n# تُنْتِجُونَ (tuntijūna) /tun.ti.d͡ʒuː.na/: second-person masculine plural non-past active indicative of أَنْتَجَ (ʔantaja)\n# تُنْتَجُونَ (tuntajūna) /tun.ta.d͡ʒuː.na/: second-person masculine plural non-past passive indicative of أَنْتَجَ (ʔantaja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuntijūna", "ʔantaja", "tuntajūna"],
-        "k": "أنتج",
-        "yol": "kök"
-      },
-      {
-        "w": "ينتجون",
-        "u": "ينتجون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ينتجون (form IV)\n# يُنْتِجُونَ (yuntijūna) /jun.ti.d͡ʒuː.na/: third-person masculine plural non-past active indicative of أَنْتَجَ (ʔantaja)\n# يُنْتَجُونَ (yuntajūna) /jun.ta.d͡ʒuː.na/: third-person masculine plural non-past passive indicative of أَنْتَجَ (ʔantaja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuntijūna", "ʔantaja", "yuntajūna"],
-        "k": "أنتج",
-        "yol": "kök"
-      },
-      {
-        "w": "ننتج",
-        "u": "ننتج",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ننتج (form IV)\n# نُنْتِجُ (nuntiju) /nun.ti.d͡ʒu/: first-person plural non-past active indicative of أَنْتَجَ (ʔantaja)\n# نُنْتَجُ (nuntaju) /nun.ta.d͡ʒu/: first-person plural non-past passive indicative of أَنْتَجَ (ʔantaja)\n# نُنْتِجَ (nuntija) /nun.ti.d͡ʒa/: first-person plural non-past active subjunctive of أَنْتَجَ (ʔantaja)\n# نُنْتَجَ (nuntaja) /nun.ta.d͡ʒa/: first-person plural non-past pas",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuntiju", "ʔantaja", "nuntaju"],
-        "k": "أنتج",
-        "yol": "kök"
-      },
-      {
-        "w": "ينتجن",
-        "u": "ينتجن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ينتجن (form IV)\n# يُنْتِجْنَ (yuntijna) /jun.tid͡ʒ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَنْتَجَ (ʔantaja)\n# يُنْتَجْنَ (yuntajna) /jun.tad͡ʒ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَنْتَجَ (ʔantaja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuntijna", "ʔantaja", "yuntajna"],
-        "k": "أنتج",
-        "yol": "kök"
-      },
-      {
-        "w": "تنتجا",
-        "u": "تنتجا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنتجا (form IV)\n# تُنْتِجَا (tuntijā) /tun.ti.d͡ʒaː/: inflection of أَنْتَجَ (ʔantaja):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُنْتَجَا (tuntajā) /tun.ta.d͡ʒaː/: inflection of أَنْتَجَ (ʔantaja):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctiv",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuntijā", "ʔantaja", "tuntajā"],
-        "k": "أنتج",
-        "yol": "kök"
-      },
-      {
-        "w": "تنتجي",
-        "u": "تنتجي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنتجي (form IV)\n# تُنْتِجِي (tuntijī) /tun.ti.d͡ʒiː/: second-person feminine singular non-past active subjunctive/jussive of أَنْتَجَ (ʔantaja)\n# تُنْتَجِي (tuntajī) /tun.ta.d͡ʒiː/: second-person feminine singular non-past passive subjunctive/jussive of أَنْتَجَ (ʔantaja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuntijī", "ʔantaja", "tuntajī"],
-        "k": "أنتج",
-        "yol": "kök"
-      },
-      {
-        "w": "أنتجي",
-        "u": "أنتجي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَنْتِجِي • (ʔantijī) (form IV) /ʔan.ti.d͡ʒiː/\n# second-person feminine singular imperative of أَنْتَجَ (ʔantaja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔantijī", "ʔantaja"],
-        "k": "أنتج",
-        "yol": "kök"
-      },
-      {
-        "w": "تنتجوا",
-        "u": "تنتجوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنتجوا (form IV)\n# تُنْتِجُوا (tuntijū) /tun.ti.d͡ʒuː/: second-person masculine plural non-past active subjunctive/jussive of أَنْتَجَ (ʔantaja)\n# تُنْتَجُوا (tuntajū) /tun.ta.d͡ʒuː/: second-person masculine plural non-past passive subjunctive/jussive of أَنْتَجَ (ʔantaja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuntijū", "ʔantaja", "tuntajū"],
-        "k": "أنتج",
-        "yol": "kök"
-      },
-      {
-        "w": "ينتجا",
-        "u": "ينتجا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ينتجا (form IV)\n# يُنْتِجَا (yuntijā) /jun.ti.d͡ʒaː/: third-person masculine dual non-past active subjunctive/jussive of أَنْتَجَ (ʔantaja)\n# يُنْتَجَا (yuntajā) /jun.ta.d͡ʒaː/: third-person masculine dual non-past passive subjunctive/jussive of أَنْتَجَ (ʔantaja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuntijā", "ʔantaja", "yuntajā"],
-        "k": "أنتج",
-        "yol": "kök"
-      },
-      {
-        "w": "ينتجوا",
-        "u": "ينتجوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ينتجوا (form IV)\n# يُنْتِجُوا (yuntijū) /jun.ti.d͡ʒuː/: third-person masculine plural non-past active subjunctive/jussive of أَنْتَجَ (ʔantaja)\n# يُنْتَجُوا (yuntajū) /jun.ta.d͡ʒuː/: third-person masculine plural non-past passive subjunctive/jussive of أَنْتَجَ (ʔantaja)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuntijū", "ʔantaja", "yuntajū"],
-        "k": "أنتج",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "نت",
+  "ses": {
     "harf": "ء",
+    "fasil": "نت",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "أنتجتما",
+      "tur": "verb",
+      "baslik": "أنتجتما (form IV)\n# أَنْتَجْتُمَا (ʔantajtumā) /ʔan.tad͡ʒ.tu.maː/: second-person dual past active of أَنْتَجَ (ʔantaja)\n# أُنْتِجْتُمَا (ʔuntijtumā) /ʔun.tid͡ʒ.tu.maː/: second-person dual past passive of أَنْتَجَ (ʔantaja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔantajtumā", "ʔantaja", "ʔuntijtumā"],
+      "kok_yazilis": "أنتج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنتجت",
+      "tur": "verb",
+      "baslik": "أنتجت (form IV)\n# أَنْتَجْتُ (ʔantajtu) /ʔan.tad͡ʒ.tu/: first-person singular past active of أَنْتَجَ (ʔantaja)\n# أَنْتَجْتَ (ʔantajta) /ʔan.tad͡ʒ.ta/: second-person masculine singular past active of أَنْتَجَ (ʔantaja)\n# أَنْتَجْتِ (ʔantajti) /ʔan.tad͡ʒ.ti/: second-person feminine singular past active of أَنْتَجَ (ʔantaja)\n# أَنْتَجَتْ (ʔantajat) /ʔan.ta.d͡ʒat/: third-person feminine singular past",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔantajtu", "ʔantaja", "ʔantajta"],
+      "kok_yazilis": "أنتج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنتجا",
+      "tur": "verb",
+      "baslik": "أنتجا (form IV)\n# أَنْتَجَا (ʔantajā) /ʔan.ta.d͡ʒaː/: third-person masculine dual past active of أَنْتَجَ (ʔantaja)\n# أُنْتِجَا (ʔuntijā) /ʔun.ti.d͡ʒaː/: third-person masculine dual past passive of أَنْتَجَ (ʔantaja)\n# أَنْتِجَا (ʔantijā) /ʔan.ti.d͡ʒaː/: second-person dual imperative of أَنْتَجَ (ʔantaja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔantajā", "ʔantaja", "ʔuntijā"],
+      "kok_yazilis": "أنتج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنتجتا",
+      "tur": "verb",
+      "baslik": "أنتجتا (form IV)\n# أَنْتَجَتَا (ʔantajatā) /ʔan.ta.d͡ʒa.taː/: third-person feminine dual past active of أَنْتَجَ (ʔantaja)\n# أُنْتِجَتَا (ʔuntijatā) /ʔun.ti.d͡ʒa.taː/: third-person feminine dual past passive of أَنْتَجَ (ʔantaja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔantajatā", "ʔantaja", "ʔuntijatā"],
+      "kok_yazilis": "أنتج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنتجنا",
+      "tur": "verb",
+      "baslik": "أنتجنا (form IV)\n# أَنْتَجْنَا (ʔantajnā) /ʔan.tad͡ʒ.naː/: first-person plural past active of أَنْتَجَ (ʔantaja)\n# أُنْتِجْنَا (ʔuntijnā) /ʔun.tid͡ʒ.naː/: first-person plural past passive of أَنْتَجَ (ʔantaja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔantajnā", "ʔantaja", "ʔuntijnā"],
+      "kok_yazilis": "أنتج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنتجن",
+      "tur": "verb",
+      "baslik": "أنتجن (form IV)\n# أَنْتَجْنَ (ʔantajna) /ʔan.tad͡ʒ.na/: third-person feminine plural past active of أَنْتَجَ (ʔantaja)\n# أُنْتِجْنَ (ʔuntijna) /ʔun.tid͡ʒ.na/: third-person feminine plural past passive of أَنْتَجَ (ʔantaja)\n# أَنْتِجْنَ (ʔantijna) /ʔan.tid͡ʒ.na/: second-person feminine plural imperative of أَنْتَجَ (ʔantaja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔantajna", "ʔantaja", "ʔuntijna"],
+      "kok_yazilis": "أنتج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنتجتم",
+      "tur": "verb",
+      "baslik": "أنتجتم (form IV)\n# أَنْتَجْتُمْ (ʔantajtum) /ʔan.tad͡ʒ.tum/: second-person masculine plural past active of أَنْتَجَ (ʔantaja)\n# أُنْتِجْتُمْ (ʔuntijtum) /ʔun.tid͡ʒ.tum/: second-person masculine plural past passive of أَنْتَجَ (ʔantaja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔantajtum", "ʔantaja", "ʔuntijtum"],
+      "kok_yazilis": "أنتج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنتجوا",
+      "tur": "verb",
+      "baslik": "أنتجوا (form IV)\n# أَنْتَجُوا (ʔantajū) /ʔan.ta.d͡ʒuː/: third-person masculine plural past active of أَنْتَجَ (ʔantaja)\n# أُنْتِجُوا (ʔuntijū) /ʔun.ti.d͡ʒuː/: third-person masculine plural past passive of أَنْتَجَ (ʔantaja)\n# أَنْتِجُوا (ʔantijū) /ʔan.ti.d͡ʒuː/: second-person masculine plural imperative of أَنْتَجَ (ʔantaja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔantajū", "ʔantaja", "ʔuntijū"],
+      "kok_yazilis": "أنتج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنتجتن",
+      "tur": "verb",
+      "baslik": "أنتجتن (form IV)\n# أَنْتَجْتُنَّ (ʔantajtunna) /ʔan.tad͡ʒ.tun.na/: second-person feminine plural past active of أَنْتَجَ (ʔantaja)\n# أُنْتِجْتُنَّ (ʔuntijtunna) /ʔun.tid͡ʒ.tun.na/: second-person feminine plural past passive of أَنْتَجَ (ʔantaja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔantajtunna", "ʔantaja", "ʔuntijtunna"],
+      "kok_yazilis": "أنتج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنتجين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنتجين (form IV)\n# تُنْتِجِينَ (tuntijīna) /tun.ti.d͡ʒiː.na/: second-person feminine singular non-past active indicative of أَنْتَجَ (ʔantaja)\n# تُنْتَجِينَ (tuntajīna) /tun.ta.d͡ʒiː.na/: second-person feminine singular non-past passive indicative of أَنْتَجَ (ʔantaja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuntijīna", "ʔantaja", "tuntajīna"],
+      "kok_yazilis": "أنتج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنتج",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنتج (form IV)\n# تُنْتِجُ (tuntiju) /tun.ti.d͡ʒu/: inflection of أَنْتَجَ (ʔantaja):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُنْتَجُ (tuntaju) /tun.ta.d͡ʒu/: inflection of أَنْتَجَ (ʔantaja):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indica",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuntiju", "ʔantaja", "tuntaju"],
+      "kok_yazilis": "أنتج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينتج",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ينتج (form IV)\n# يُنْتِجُ (yuntiju) /jun.ti.d͡ʒu/: third-person masculine singular non-past active indicative of أَنْتَجَ (ʔantaja)\n# يُنْتَجُ (yuntaju) /jun.ta.d͡ʒu/: third-person masculine singular non-past passive indicative of أَنْتَجَ (ʔantaja)\n# يُنْتِجَ (yuntija) /jun.ti.d͡ʒa/: third-person masculine singular non-past active subjunctive of أَنْتَجَ (ʔantaja)\n# يُنْتَجَ (yuntaja) /jun.ta.d͡ʒ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuntiju", "ʔantaja", "yuntaju"],
+      "kok_yazilis": "أنتج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينتجان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ينتجان (form IV)\n# يُنْتِجَانِ (yuntijāni) /jun.ti.d͡ʒaː.ni/: third-person masculine dual non-past active indicative of أَنْتَجَ (ʔantaja)\n# يُنْتَجَانِ (yuntajāni) /jun.ta.d͡ʒaː.ni/: third-person masculine dual non-past passive indicative of أَنْتَجَ (ʔantaja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuntijāni", "ʔantaja", "yuntajāni"],
+      "kok_yazilis": "أنتج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنتجن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنتجن (form IV)\n# تُنْتِجْنَ (tuntijna) /tun.tid͡ʒ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَنْتَجَ (ʔantaja)\n# تُنْتَجْنَ (tuntajna) /tun.tad͡ʒ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَنْتَجَ (ʔantaja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuntijna", "ʔantaja", "tuntajna"],
+      "kok_yazilis": "أنتج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنتجان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنتجان (form IV)\n# تُنْتِجَانِ (tuntijāni) /tun.ti.d͡ʒaː.ni/: inflection of أَنْتَجَ (ʔantaja):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُنْتَجَانِ (tuntajāni) /tun.ta.d͡ʒaː.ni/: inflection of أَنْتَجَ (ʔantaja):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuntijāni", "ʔantaja", "tuntajāni"],
+      "kok_yazilis": "أنتج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنتجون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنتجون (form IV)\n# تُنْتِجُونَ (tuntijūna) /tun.ti.d͡ʒuː.na/: second-person masculine plural non-past active indicative of أَنْتَجَ (ʔantaja)\n# تُنْتَجُونَ (tuntajūna) /tun.ta.d͡ʒuː.na/: second-person masculine plural non-past passive indicative of أَنْتَجَ (ʔantaja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuntijūna", "ʔantaja", "tuntajūna"],
+      "kok_yazilis": "أنتج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينتجون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ينتجون (form IV)\n# يُنْتِجُونَ (yuntijūna) /jun.ti.d͡ʒuː.na/: third-person masculine plural non-past active indicative of أَنْتَجَ (ʔantaja)\n# يُنْتَجُونَ (yuntajūna) /jun.ta.d͡ʒuː.na/: third-person masculine plural non-past passive indicative of أَنْتَجَ (ʔantaja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuntijūna", "ʔantaja", "yuntajūna"],
+      "kok_yazilis": "أنتج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ننتج",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ننتج (form IV)\n# نُنْتِجُ (nuntiju) /nun.ti.d͡ʒu/: first-person plural non-past active indicative of أَنْتَجَ (ʔantaja)\n# نُنْتَجُ (nuntaju) /nun.ta.d͡ʒu/: first-person plural non-past passive indicative of أَنْتَجَ (ʔantaja)\n# نُنْتِجَ (nuntija) /nun.ti.d͡ʒa/: first-person plural non-past active subjunctive of أَنْتَجَ (ʔantaja)\n# نُنْتَجَ (nuntaja) /nun.ta.d͡ʒa/: first-person plural non-past pas",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuntiju", "ʔantaja", "nuntaju"],
+      "kok_yazilis": "أنتج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينتجن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ينتجن (form IV)\n# يُنْتِجْنَ (yuntijna) /jun.tid͡ʒ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَنْتَجَ (ʔantaja)\n# يُنْتَجْنَ (yuntajna) /jun.tad͡ʒ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَنْتَجَ (ʔantaja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuntijna", "ʔantaja", "yuntajna"],
+      "kok_yazilis": "أنتج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنتجا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنتجا (form IV)\n# تُنْتِجَا (tuntijā) /tun.ti.d͡ʒaː/: inflection of أَنْتَجَ (ʔantaja):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُنْتَجَا (tuntajā) /tun.ta.d͡ʒaː/: inflection of أَنْتَجَ (ʔantaja):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctiv",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuntijā", "ʔantaja", "tuntajā"],
+      "kok_yazilis": "أنتج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنتجي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنتجي (form IV)\n# تُنْتِجِي (tuntijī) /tun.ti.d͡ʒiː/: second-person feminine singular non-past active subjunctive/jussive of أَنْتَجَ (ʔantaja)\n# تُنْتَجِي (tuntajī) /tun.ta.d͡ʒiː/: second-person feminine singular non-past passive subjunctive/jussive of أَنْتَجَ (ʔantaja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuntijī", "ʔantaja", "tuntajī"],
+      "kok_yazilis": "أنتج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنتجي",
+      "tur": "verb",
+      "baslik": "أَنْتِجِي • (ʔantijī) (form IV) /ʔan.ti.d͡ʒiː/\n# second-person feminine singular imperative of أَنْتَجَ (ʔantaja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔantijī", "ʔantaja"],
+      "kok_yazilis": "أنتج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنتجوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنتجوا (form IV)\n# تُنْتِجُوا (tuntijū) /tun.ti.d͡ʒuː/: second-person masculine plural non-past active subjunctive/jussive of أَنْتَجَ (ʔantaja)\n# تُنْتَجُوا (tuntajū) /tun.ta.d͡ʒuː/: second-person masculine plural non-past passive subjunctive/jussive of أَنْتَجَ (ʔantaja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuntijū", "ʔantaja", "tuntajū"],
+      "kok_yazilis": "أنتج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينتجا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ينتجا (form IV)\n# يُنْتِجَا (yuntijā) /jun.ti.d͡ʒaː/: third-person masculine dual non-past active subjunctive/jussive of أَنْتَجَ (ʔantaja)\n# يُنْتَجَا (yuntajā) /jun.ta.d͡ʒaː/: third-person masculine dual non-past passive subjunctive/jussive of أَنْتَجَ (ʔantaja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuntijā", "ʔantaja", "yuntajā"],
+      "kok_yazilis": "أنتج",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينتجوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ينتجوا (form IV)\n# يُنْتِجُوا (yuntijū) /jun.ti.d͡ʒuː/: third-person masculine plural non-past active subjunctive/jussive of أَنْتَجَ (ʔantaja)\n# يُنْتَجُوا (yuntajū) /jun.ta.d͡ʒuː/: third-person masculine plural non-past passive subjunctive/jussive of أَنْتَجَ (ʔantaja)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuntijū", "ʔantaja", "yuntajū"],
+      "kok_yazilis": "أنتج",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءنتج", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,410 +1,295 @@
 {
   "kok": "خبا",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "خبا", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "نخب",
-        "u": "نخب",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "نَخْبُ • (naḵbu) (form I) /nax.bu/\n# first-person plural non-past active jussive of خَبَا (ḵabā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḵbu", "ḵabā"],
-        "k": "خبا",
-        "yol": "kök"
-      },
-      {
-        "w": "خبت",
-        "u": "خبت",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "خَبَتْ • (ḵabat) (form I) /xa.bat/\n# third-person feminine singular past active of خَبَا (ḵabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵabat", "ḵabā"],
-        "k": "خبا",
-        "yol": "kök"
-      },
-      {
-        "w": "أخب",
-        "u": "أخب",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أَخْبُ • (ʔaḵbu) (form I) /ʔax.bu/\n# first-person singular non-past active jussive of خَبَا (ḵabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḵbu", "ḵabā"],
-        "k": "خبا",
-        "yol": "kök"
-      },
-      {
-        "w": "تخب",
-        "u": "تخب",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَخْبُ • (taḵbu) (form I) /tax.bu/\n# inflection of خَبَا (ḵabā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḵbu", "ḵabā"],
-        "k": "خبا",
-        "yol": "kök"
-      },
-      {
-        "w": "يخب",
-        "u": "يخب",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يَخْبُ • (yaḵbu) (form I) /jax.bu/\n# third-person masculine singular non-past active jussive of خَبَا (ḵabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḵbu", "ḵabā"],
-        "k": "خبا",
-        "yol": "kök"
-      },
-      {
-        "w": "خبتا",
-        "u": "خبتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "خَبَتَا • (ḵabatā) (form I) /xa.ba.taː/\n# third-person feminine dual past active of خَبَا (ḵabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵabatā", "ḵabā"],
-        "k": "خبا",
-        "yol": "kök"
-      },
-      {
-        "w": "خبوا",
-        "u": "خبوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "خبوا (form I)\n# خَبَوَا (ḵabawā) /xa.ba.waː/: third-person masculine dual past active of خَبَا (ḵabā)\n# خَبَوْا (ḵabaw) /xa.baw/: third-person masculine plural past active of خَبَا (ḵabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵabawā", "ḵabā", "ḵabaw"],
-        "k": "خبا",
-        "yol": "kök"
-      },
-      {
-        "w": "تخبون",
-        "u": "تخبون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَخْبُونَ • (taḵbūna) (form I) /tax.buː.na/\n# inflection of خَبَا (ḵabā):\n## second-person masculine/feminine plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḵbūna", "ḵabā"],
-        "k": "خبا",
-        "yol": "kök"
-      },
-      {
-        "w": "يخبون",
-        "u": "يخبون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَخْبُونَ • (yaḵbūna) (form I) /jax.buː.na/\n# inflection of خَبَا (ḵabā):\n## third-person masculine/feminine plural non-past active indicative\n## third-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḵbūna", "ḵabā"],
-        "k": "خبا",
-        "yol": "kök"
-      },
-      {
-        "w": "تخبي",
-        "u": "تخبي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَخْبِي • (taḵbī) (form I) /tax.biː/\n# second-person feminine singular non-past active subjunctive/jussive of خَبَا (ḵabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḵbī", "ḵabā"],
-        "k": "خبا",
-        "yol": "kök"
-      },
-      {
-        "w": "تخبوا",
-        "u": "تخبوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تخبوا (form I)\n# تَخْبُوَا (taḵbuwā) /tax.bu.waː/: inflection of خَبَا (ḵabā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تَخْبُوا (taḵbū) /tax.buː/: second-person masculine plural non-past active subjunctive/jussive of خَبَا (ḵabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḵbuwā", "ḵabā", "taḵbū"],
-        "k": "خبا",
-        "yol": "kök"
-      },
-      {
-        "w": "يخبوا",
-        "u": "يخبوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يخبوا (form I)\n# يَخْبُوَا (yaḵbuwā) /jax.bu.waː/: third-person masculine dual non-past active subjunctive/jussive of خَبَا (ḵabā)\n# يَخْبُوا (yaḵbū) /jax.buː/: third-person masculine plural non-past active subjunctive/jussive of خَبَا (ḵabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḵbuwā", "ḵabā", "yaḵbū"],
-        "k": "خبا",
-        "yol": "kök"
-      },
-      {
-        "w": "تخبين",
-        "u": "تخبين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَخْبِينَ • (taḵbīna) (form I) /tax.biː.na/\n# second-person feminine singular non-past active indicative of خَبَا (ḵabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḵbīna", "ḵabā"],
-        "k": "خبا",
-        "yol": "kök"
-      },
-      {
-        "w": "خبوت",
-        "u": "خبوت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "خبوت (form I)\n# خَبَوْتُ (ḵabawtu) /xa.baw.tu/: first-person singular past active of خَبَا (ḵabā)\n# خَبَوْتَ (ḵabawta) /xa.baw.ta/: second-person masculine singular past active of خَبَا (ḵabā)\n# خَبَوْتِ (ḵabawti) /xa.baw.ti/: second-person feminine singular past active of خَبَا (ḵabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵabawtu", "ḵabā", "ḵabawta"],
-        "k": "خبا",
-        "yol": "kök"
-      },
-      {
-        "w": "خبونا",
-        "u": "خبونا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "خَبَوْنَا • (ḵabawnā) (form I) /xa.baw.naː/\n# first-person plural past active of خَبَا (ḵabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵabawnā", "ḵabā"],
-        "k": "خبا",
-        "yol": "kök"
-      },
-      {
-        "w": "خبوتما",
-        "u": "خبوتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "خَبَوْتُمَا • (ḵabawtumā) (form I) /xa.baw.tu.maː/\n# second-person dual past active of خَبَا (ḵabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵabawtumā", "ḵabā"],
-        "k": "خبا",
-        "yol": "kök"
-      },
-      {
-        "w": "خبوتم",
-        "u": "خبوتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "خَبَوْتُمْ • (ḵabawtum) (form I) /xa.baw.tum/\n# second-person masculine plural past active of خَبَا (ḵabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵabawtum", "ḵabā"],
-        "k": "خبا",
-        "yol": "kök"
-      },
-      {
-        "w": "أخبو",
-        "u": "أخبو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أخبو (form I)\n# أَخْبُو (ʔaḵbū) /ʔax.buː/: first-person singular non-past active indicative of خَبَا (ḵabā)\n# أَخْبُوَ (ʔaḵbuwa) /ʔax.bu.wa/: first-person singular non-past active subjunctive of خَبَا (ḵabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḵbū", "ḵabā", "ʔaḵbuwa"],
-        "k": "خبا",
-        "yol": "kök"
-      },
-      {
-        "w": "خبوتن",
-        "u": "خبوتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "خَبَوْتُنَّ • (ḵabawtunna) (form I) /xa.baw.tun.na/\n# second-person feminine plural past active of خَبَا (ḵabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵabawtunna", "ḵabā"],
-        "k": "خبا",
-        "yol": "kök"
-      },
-      {
-        "w": "تخبو",
-        "u": "تخبو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تخبو (form I)\n# تَخْبُو (taḵbū) /tax.buː/: inflection of خَبَا (ḵabā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَخْبُوَ (taḵbuwa) /tax.bu.wa/: inflection of خَبَا (ḵabā):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḵbū", "ḵabā", "taḵbuwa"],
-        "k": "خبا",
-        "yol": "kök"
-      },
-      {
-        "w": "تخبوان",
-        "u": "تخبوان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَخْبُوَانِ • (taḵbuwāni) (form I) /tax.bu.waː.ni/\n# inflection of خَبَا (ḵabā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḵbuwāni", "ḵabā"],
-        "k": "خبا",
-        "yol": "kök"
-      },
-      {
-        "w": "يخبوان",
-        "u": "يخبوان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَخْبُوَانِ • (yaḵbuwāni) (form I) /jax.bu.waː.ni/\n# third-person masculine dual non-past active indicative of خَبَا (ḵabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḵbuwāni", "ḵabā"],
-        "k": "خبا",
-        "yol": "kök"
-      },
-      {
-        "w": "يخبو",
-        "u": "يخبو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يخبو (form I)\n# يَخْبُو (yaḵbū) /jax.buː/: third-person masculine singular non-past active indicative of خَبَا (ḵabā)\n# يَخْبُوَ (yaḵbuwa) /jax.bu.wa/: third-person masculine singular non-past active subjunctive of خَبَا (ḵabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḵbū", "ḵabā", "yaḵbuwa"],
-        "k": "خبا",
-        "yol": "kök"
-      },
-      {
-        "w": "نخبو",
-        "u": "نخبو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نخبو (form I)\n# نَخْبُو (naḵbū) /nax.buː/: first-person plural non-past active indicative of خَبَا (ḵabā)\n# نَخْبُوَ (naḵbuwa) /nax.bu.wa/: first-person plural non-past active subjunctive of خَبَا (ḵabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḵbū", "ḵabā", "naḵbuwa"],
-        "k": "خبا",
-        "yol": "kök"
-      },
-      {
-        "w": "اخبون",
-        "u": "اخبون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُخْبُونَ • (uḵbūna) (form I) /ux.buː.na/\n# second-person feminine plural imperative of خَبَا (ḵabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uḵbūna", "ḵabā"],
-        "k": "خبا",
-        "yol": "kök"
-      },
-      {
-        "w": "اخبي",
-        "u": "اخبي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُخْبِي • (uḵbī) (form I) /ux.biː/\n# second-person feminine singular imperative of خَبَا (ḵabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uḵbī", "ḵabā"],
-        "k": "خبا",
-        "yol": "kök"
-      },
-      {
-        "w": "خبون",
-        "u": "خبون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "خَبَوْنَ • (ḵabawna) (form I) /xa.baw.na/\n# third-person feminine plural past active of خَبَا (ḵabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḵabawna", "ḵabā"],
-        "k": "خبا",
-        "yol": "kök"
-      },
-      {
-        "w": "اخبوا",
-        "u": "اخبوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اخبوا (form I)\n# اُخْبُوَا (uḵbuwā) /ux.bu.waː/: second-person dual imperative of خَبَا (ḵabā)\n# اُخْبُوا (uḵbū) /ux.buː/: second-person masculine plural imperative of خَبَا (ḵabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uḵbuwā", "ḵabā", "uḵbū"],
-        "k": "خبا",
-        "yol": "kök"
-      },
-      {
-        "w": "اخب",
-        "u": "اخب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُخْبُ • (uḵbu) (form I) /ux.bu/\n# second-person masculine singular imperative of خَبَا (ḵabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uḵbu", "ḵabā"],
-        "k": "خبا",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "خب",
+  "ses": {
     "harf": "خ",
+    "fasil": "خب",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "نخب",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "نَخْبُ • (naḵbu) (form I) /nax.bu/\n# first-person plural non-past active jussive of خَبَا (ḵabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḵbu", "ḵabā"]
+    },
+    {
+      "madde": "خبت",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "خَبَتْ • (ḵabat) (form I) /xa.bat/\n# third-person feminine singular past active of خَبَا (ḵabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵabat", "ḵabā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أخب",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أَخْبُ • (ʔaḵbu) (form I) /ʔax.bu/\n# first-person singular non-past active jussive of خَبَا (ḵabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḵbu", "ḵabā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تخب",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَخْبُ • (taḵbu) (form I) /tax.bu/\n# inflection of خَبَا (ḵabā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḵbu", "ḵabā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يخب",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يَخْبُ • (yaḵbu) (form I) /jax.bu/\n# third-person masculine singular non-past active jussive of خَبَا (ḵabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḵbu", "ḵabā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "خبتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "خَبَتَا • (ḵabatā) (form I) /xa.ba.taː/\n# third-person feminine dual past active of خَبَا (ḵabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵabatā", "ḵabā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "خبوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "خبوا (form I)\n# خَبَوَا (ḵabawā) /xa.ba.waː/: third-person masculine dual past active of خَبَا (ḵabā)\n# خَبَوْا (ḵabaw) /xa.baw/: third-person masculine plural past active of خَبَا (ḵabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵabawā", "ḵabā", "ḵabaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تخبون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَخْبُونَ • (taḵbūna) (form I) /tax.buː.na/\n# inflection of خَبَا (ḵabā):\n## second-person masculine/feminine plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḵbūna", "ḵabā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يخبون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَخْبُونَ • (yaḵbūna) (form I) /jax.buː.na/\n# inflection of خَبَا (ḵabā):\n## third-person masculine/feminine plural non-past active indicative\n## third-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḵbūna", "ḵabā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تخبي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَخْبِي • (taḵbī) (form I) /tax.biː/\n# second-person feminine singular non-past active subjunctive/jussive of خَبَا (ḵabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḵbī", "ḵabā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تخبوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تخبوا (form I)\n# تَخْبُوَا (taḵbuwā) /tax.bu.waː/: inflection of خَبَا (ḵabā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تَخْبُوا (taḵbū) /tax.buː/: second-person masculine plural non-past active subjunctive/jussive of خَبَا (ḵabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḵbuwā", "ḵabā", "taḵbū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يخبوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يخبوا (form I)\n# يَخْبُوَا (yaḵbuwā) /jax.bu.waː/: third-person masculine dual non-past active subjunctive/jussive of خَبَا (ḵabā)\n# يَخْبُوا (yaḵbū) /jax.buː/: third-person masculine plural non-past active subjunctive/jussive of خَبَا (ḵabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḵbuwā", "ḵabā", "yaḵbū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تخبين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَخْبِينَ • (taḵbīna) (form I) /tax.biː.na/\n# second-person feminine singular non-past active indicative of خَبَا (ḵabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḵbīna", "ḵabā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "خبوت",
+      "tur": "verb",
+      "baslik": "خبوت (form I)\n# خَبَوْتُ (ḵabawtu) /xa.baw.tu/: first-person singular past active of خَبَا (ḵabā)\n# خَبَوْتَ (ḵabawta) /xa.baw.ta/: second-person masculine singular past active of خَبَا (ḵabā)\n# خَبَوْتِ (ḵabawti) /xa.baw.ti/: second-person feminine singular past active of خَبَا (ḵabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵabawtu", "ḵabā", "ḵabawta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "خبونا",
+      "tur": "verb",
+      "baslik": "خَبَوْنَا • (ḵabawnā) (form I) /xa.baw.naː/\n# first-person plural past active of خَبَا (ḵabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵabawnā", "ḵabā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "خبوتما",
+      "tur": "verb",
+      "baslik": "خَبَوْتُمَا • (ḵabawtumā) (form I) /xa.baw.tu.maː/\n# second-person dual past active of خَبَا (ḵabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵabawtumā", "ḵabā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "خبوتم",
+      "tur": "verb",
+      "baslik": "خَبَوْتُمْ • (ḵabawtum) (form I) /xa.baw.tum/\n# second-person masculine plural past active of خَبَا (ḵabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵabawtum", "ḵabā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أخبو",
+      "tur": "verb",
+      "baslik": "أخبو (form I)\n# أَخْبُو (ʔaḵbū) /ʔax.buː/: first-person singular non-past active indicative of خَبَا (ḵabā)\n# أَخْبُوَ (ʔaḵbuwa) /ʔax.bu.wa/: first-person singular non-past active subjunctive of خَبَا (ḵabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḵbū", "ḵabā", "ʔaḵbuwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "خبوتن",
+      "tur": "verb",
+      "baslik": "خَبَوْتُنَّ • (ḵabawtunna) (form I) /xa.baw.tun.na/\n# second-person feminine plural past active of خَبَا (ḵabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵabawtunna", "ḵabā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تخبو",
+      "tur": "verb",
+      "baslik": "تخبو (form I)\n# تَخْبُو (taḵbū) /tax.buː/: inflection of خَبَا (ḵabā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَخْبُوَ (taḵbuwa) /tax.bu.wa/: inflection of خَبَا (ḵabā):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḵbū", "ḵabā", "taḵbuwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تخبوان",
+      "tur": "verb",
+      "baslik": "تَخْبُوَانِ • (taḵbuwāni) (form I) /tax.bu.waː.ni/\n# inflection of خَبَا (ḵabā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḵbuwāni", "ḵabā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يخبوان",
+      "tur": "verb",
+      "baslik": "يَخْبُوَانِ • (yaḵbuwāni) (form I) /jax.bu.waː.ni/\n# third-person masculine dual non-past active indicative of خَبَا (ḵabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḵbuwāni", "ḵabā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يخبو",
+      "tur": "verb",
+      "baslik": "يخبو (form I)\n# يَخْبُو (yaḵbū) /jax.buː/: third-person masculine singular non-past active indicative of خَبَا (ḵabā)\n# يَخْبُوَ (yaḵbuwa) /jax.bu.wa/: third-person masculine singular non-past active subjunctive of خَبَا (ḵabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḵbū", "ḵabā", "yaḵbuwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نخبو",
+      "tur": "verb",
+      "baslik": "نخبو (form I)\n# نَخْبُو (naḵbū) /nax.buː/: first-person plural non-past active indicative of خَبَا (ḵabā)\n# نَخْبُوَ (naḵbuwa) /nax.bu.wa/: first-person plural non-past active subjunctive of خَبَا (ḵabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḵbū", "ḵabā", "naḵbuwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اخبون",
+      "tur": "verb",
+      "baslik": "اُخْبُونَ • (uḵbūna) (form I) /ux.buː.na/\n# second-person feminine plural imperative of خَبَا (ḵabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uḵbūna", "ḵabā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اخبي",
+      "tur": "verb",
+      "baslik": "اُخْبِي • (uḵbī) (form I) /ux.biː/\n# second-person feminine singular imperative of خَبَا (ḵabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uḵbī", "ḵabā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "خبون",
+      "tur": "verb",
+      "baslik": "خَبَوْنَ • (ḵabawna) (form I) /xa.baw.na/\n# third-person feminine plural past active of خَبَا (ḵabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḵabawna", "ḵabā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اخبوا",
+      "tur": "verb",
+      "baslik": "اخبوا (form I)\n# اُخْبُوَا (uḵbuwā) /ux.bu.waː/: second-person dual imperative of خَبَا (ḵabā)\n# اُخْبُوا (uḵbū) /ux.buː/: second-person masculine plural imperative of خَبَا (ḵabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uḵbuwā", "ḵabā", "uḵbū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اخب",
+      "tur": "verb",
+      "baslik": "اُخْبُ • (uḵbu) (form I) /ux.bu/\n# second-person masculine singular imperative of خَبَا (ḵabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uḵbu", "ḵabā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "خبا", "r7"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

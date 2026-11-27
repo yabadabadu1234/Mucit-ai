@@ -1,81 +1,71 @@
 {
   "kok": "حرجم",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "حرجم", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "احرنجم",
-        "u": "احرنجم",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "اِحْرَنْجَمَ • (iḥranjama) IIIq (non-past يَحْرَنْجِمُ (yaḥranjimu), verbal noun اِحْرِنْجَام (iḥrinjām))",
-        "t": "Compare حَرْجَمَ (ḥarjama, “to drive back towards each other”).",
-        "s": [
-          ["ar-rootbox", ""]
-        ],
-        "g": ["to press one another, (intransitive) to crowd"],
-        "r": ["iḥranjama"],
-        "el": [
-          ["حَرْجَمَ", "حرجم#Arabic"],
-          ["drive", "drive"],
-          ["back", "back"],
-          ["each other", "each other"]
-        ],
-        "k": "حرجم",
-        "yol": "kök"
-      },
-      {
-        "w": "احرنجام",
-        "u": "احرنجام",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "اِحْرِنْجَام • (iḥrinjām) m",
-        "g": ["verbal noun of اِحْرَنْجَمَ (iḥranjama) (form IIIq)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["اِحْرَنْجَمَ"],
-        "r": ["iḥrinjām"],
-        "yol": "asıl madde"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "حر",
+  "ses": {
     "harf": "ح",
+    "fasil": "حر",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "احرنجم",
+      "tur": "verb",
+      "baslik": "اِحْرَنْجَمَ • (iḥranjama) IIIq (non-past يَحْرَنْجِمُ (yaḥranjimu), verbal noun اِحْرِنْجَام (iḥrinjām))",
+      "etim_sablon": [
+        ["ar-rootbox", ""]
+      ],
+      "anlam": ["to press one another, (intransitive) to crowd"],
+      "okunus": ["iḥranjama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "احرنجام",
+      "tur": "noun",
+      "baslik": "اِحْرِنْجَام • (iḥrinjām) m",
+      "anlam": ["verbal noun of اِحْرَنْجَمَ (iḥranjama) (form IIIq)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["اِحْرَنْجَمَ"],
+      "okunus": ["iḥrinjām"],
+      "bag": "asıl madde"
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "Compare حَرْجَمَ (ḥarjama, “to drive back towards each other”).",
+      "kognatlar": [
+        ["حَرْجَمَ", "حرجم#Arabic"],
+        ["drive", "drive"],
+        ["back", "back"],
+        ["each other", "each other"]
+      ]
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "حرجم", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "ust": {
       "kume": 4,
       "merkez_kok": "درك",
@@ -95,6 +85,10 @@
       "boy": 5
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

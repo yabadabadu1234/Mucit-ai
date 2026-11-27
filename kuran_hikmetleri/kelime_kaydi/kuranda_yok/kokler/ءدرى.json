@@ -1,457 +1,362 @@
 {
   "kok": "ءدرى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءدرى", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أدر",
-        "u": "أدر",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "أدر (form IV)\n# أُدْرِ (ʔudri) /ʔud.ri/: first-person singular non-past active jussive of أَدْرَى (ʔadrā)\n# أُدْرَ (ʔudra) /ʔud.ra/: first-person singular non-past passive jussive of أَدْرَى (ʔadrā)\n# أَدْرِ (ʔadri) /ʔad.ri/: second-person masculine singular imperative of أَدْرَى (ʔadrā)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔudri", "ʔadrā", "ʔudra"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "يدر",
-        "u": "يدر",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "يدر (form IV)\n# يُدْرِ (yudri) /jud.ri/: third-person masculine singular non-past active jussive of أَدْرَى (ʔadrā)\n# يُدْرَ (yudra) /jud.ra/: third-person masculine singular non-past passive jussive of أَدْرَى (ʔadrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudri", "ʔadrā", "yudra"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "يدري",
-        "u": "يدري",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يدري (form IV)\n# يُدْرِي (yudrī) /jud.riː/: third-person masculine singular non-past active indicative of أَدْرَى (ʔadrā)\n# يُدْرِيَ (yudriya) /jud.ri.ja/: third-person masculine singular non-past active subjunctive of أَدْرَى (ʔadrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudrī", "ʔadrā", "yudriya"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "يدرى",
-        "u": "يدرى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُدْرَى • (yudrā) (form IV) /jud.raː/\n# third-person masculine singular non-past passive indicative/subjunctive of أَدْرَى (ʔadrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudrā", "ʔadrā"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تدر",
-        "u": "تدر",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "تدر (form IV)\n# تُدْرِ (tudri) /tud.ri/: inflection of أَدْرَى (ʔadrā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُدْرَ (tudra) /tud.ra/: inflection of أَدْرَى (ʔadrā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudri", "ʔadrā", "tudra"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "أدرت",
-        "u": "أدرت",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أَدْرَتْ • (ʔadrat) (form IV) /ʔad.rat/\n# third-person feminine singular past active of أَدْرَى (ʔadrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadrat", "ʔadrā"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تدرين",
-        "u": "تدرين",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تدرين (form IV)\n# تُدْرِينَ (tudrīna) /tud.riː.na/: inflection of أَدْرَى (ʔadrā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُدْرَيْنَ (tudrayna) /tud.raj.na/: inflection of أَدْرَى (ʔadrā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-pas",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudrīna", "ʔadrā", "tudrayna"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تدري",
-        "u": "تدري",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تدري (form IV)\n# تُدْرِي (tudrī) /tud.riː/: inflection of أَدْرَى (ʔadrā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُدْرِيَ (tudriya) /tud.ri.ja/: inflection of أَدْرَى (ʔadrā):\n## second-person masculine singular non-past active subjunctive\n#",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudrī", "ʔadrā", "tudriya"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "أدري",
-        "u": "أدري",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أدري (form IV)\n# أُدْرِيَ (ʔudriya) /ʔud.ri.ja/: inflection of أَدْرَى (ʔadrā):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُدْرِي (ʔudrī) /ʔud.riː/: first-person singular non-past active indicative of أَدْرَى (ʔadrā)\n# أَدْرِي (ʔadrī) /ʔad.riː/: second-person feminine singular imperative of أَدْرَى (ʔadrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔudriya", "ʔadrā", "ʔudrī"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تدرى",
-        "u": "تدرى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُدْرَى • (tudrā) (form IV) /tud.raː/\n# inflection of أَدْرَى (ʔadrā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudrā", "ʔadrā"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "ندر",
-        "u": "ندر",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "ندر (form IV)\n# نُدْرِ (nudri) /nud.ri/: first-person plural non-past active jussive of أَدْرَى (ʔadrā)\n# نُدْرَ (nudra) /nud.ra/: first-person plural non-past passive jussive of أَدْرَى (ʔadrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nudri", "ʔadrā", "nudra"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "ندري",
-        "u": "ندري",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ندري (form IV)\n# نُدْرِي (nudrī) /nud.riː/: first-person plural non-past active indicative of أَدْرَى (ʔadrā)\n# نُدْرِيَ (nudriya) /nud.ri.ja/: first-person plural non-past active subjunctive of أَدْرَى (ʔadrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nudrī", "ʔadrā", "nudriya"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "ندرى",
-        "u": "ندرى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نُدْرَى • (nudrā) (form IV) /nud.raː/\n# first-person plural non-past passive indicative/subjunctive of أَدْرَى (ʔadrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nudrā", "ʔadrā"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تدرون",
-        "u": "تدرون",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تدرون (form IV)\n# تُدْرُونَ (tudrūna) /tud.ruː.na/: second-person masculine plural non-past active indicative of أَدْرَى (ʔadrā)\n# تُدْرَوْنَ (tudrawna) /tud.raw.na/: second-person masculine plural non-past passive indicative of أَدْرَى (ʔadrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudrūna", "ʔadrā", "tudrawna"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تدروا",
-        "u": "تدروا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تدروا (form IV)\n# تُدْرُوا (tudrū) /tud.ruː/: second-person masculine plural non-past active subjunctive/jussive of أَدْرَى (ʔadrā)\n# تُدْرَوْا (tudraw) /tud.raw/: second-person masculine plural non-past passive subjunctive/jussive of أَدْرَى (ʔadrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudrū", "ʔadrā", "tudraw"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "أدروا",
-        "u": "أدروا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أدروا (form IV)\n# أَدْرَوْا (ʔadraw) /ʔad.raw/: third-person masculine plural past active of أَدْرَى (ʔadrā)\n# أُدْرُوا (ʔudrū) /ʔud.ruː/: third-person masculine plural past passive of أَدْرَى (ʔadrā)\n# أَدْرُوا (ʔadrū) /ʔad.ruː/: second-person masculine plural imperative of أَدْرَى (ʔadrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadraw", "ʔadrā", "ʔudrū"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "يدرون",
-        "u": "يدرون",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يدرون (form IV)\n# يُدْرُونَ (yudrūna) /jud.ruː.na/: third-person masculine plural non-past active indicative of أَدْرَى (ʔadrā)\n# يُدْرَوْنَ (yudrawna) /jud.raw.na/: third-person masculine plural non-past passive indicative of أَدْرَى (ʔadrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudrūna", "ʔadrā", "yudrawna"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "يدروا",
-        "u": "يدروا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يدروا (form IV)\n# يُدْرُوا (yudrū) /jud.ruː/: third-person masculine plural non-past active subjunctive/jussive of أَدْرَى (ʔadrā)\n# يُدْرَوْا (yudraw) /jud.raw/: third-person masculine plural non-past passive subjunctive/jussive of أَدْرَى (ʔadrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudrū", "ʔadrā", "yudraw"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "يدرين",
-        "u": "يدرين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يدرين (form IV)\n# يُدْرِينَ (yudrīna) /jud.riː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَدْرَى (ʔadrā)\n# يُدْرَيْنَ (yudrayna) /jud.raj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَدْرَى (ʔadrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudrīna", "ʔadrā", "yudrayna"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "أدرتا",
-        "u": "أدرتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَدْرَتَا • (ʔadratā) (form IV) /ʔad.ra.taː/\n# third-person feminine dual past active of أَدْرَى (ʔadrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadratā", "ʔadrā"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "أدريت",
-        "u": "أدريت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أدريت (form IV)\n# أَدْرَيْتُ (ʔadraytu) /ʔad.raj.tu/: first-person singular past active of أَدْرَى (ʔadrā)\n# أَدْرَيْتَ (ʔadrayta) /ʔad.raj.ta/: second-person masculine singular past active of أَدْرَى (ʔadrā)\n# أَدْرَيْتِ (ʔadrayti) /ʔad.raj.ti/: second-person feminine singular past active of أَدْرَى (ʔadrā)\n# أُدْرِيتُ (ʔudrītu) /ʔud.riː.tu/: first-person singular past passive of أَدْرَى (ʔadrā)\n",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadraytu", "ʔadrā", "ʔadrayta"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "أدريا",
-        "u": "أدريا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أدريا (form IV)\n# أَدْرَيَا (ʔadrayā) /ʔad.ra.jaː/: third-person masculine dual past active of أَدْرَى (ʔadrā)\n# أُدْرِيَا (ʔudriyā) /ʔud.ri.jaː/: third-person masculine dual past passive of أَدْرَى (ʔadrā)\n# أَدْرِيَا (ʔadriyā) /ʔad.ri.jaː/: second-person dual imperative of أَدْرَى (ʔadrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadrayā", "ʔadrā", "ʔudriyā"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "أدريتما",
-        "u": "أدريتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أدريتما (form IV)\n# أَدْرَيْتُمَا (ʔadraytumā) /ʔad.raj.tu.maː/: second-person dual past active of أَدْرَى (ʔadrā)\n# أُدْرِيتُمَا (ʔudrītumā) /ʔud.riː.tu.maː/: second-person dual past passive of أَدْرَى (ʔadrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadraytumā", "ʔadrā", "ʔudrītumā"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "أدريتم",
-        "u": "أدريتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أدريتم (form IV)\n# أَدْرَيْتُمْ (ʔadraytum) /ʔad.raj.tum/: second-person masculine plural past active of أَدْرَى (ʔadrā)\n# أُدْرِيتُمْ (ʔudrītum) /ʔud.riː.tum/: second-person masculine plural past passive of أَدْرَى (ʔadrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadraytum", "ʔadrā", "ʔudrītum"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "أدرينا",
-        "u": "أدرينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أدرينا (form IV)\n# أَدْرَيْنَا (ʔadraynā) /ʔad.raj.naː/: first-person plural past active of أَدْرَى (ʔadrā)\n# أُدْرِينَا (ʔudrīnā) /ʔud.riː.naː/: first-person plural past passive of أَدْرَى (ʔadrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadraynā", "ʔadrā", "ʔudrīnā"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "أدرين",
-        "u": "أدرين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أدرين (form IV)\n# أَدْرَيْنَ (ʔadrayna) /ʔad.raj.na/: third-person feminine plural past active of أَدْرَى (ʔadrā)\n# أُدْرِينَ (ʔudrīna) /ʔud.riː.na/: third-person feminine plural past passive of أَدْرَى (ʔadrā)\n# أَدْرِينَ (ʔadrīna) /ʔad.riː.na/: second-person feminine plural imperative of أَدْرَى (ʔadrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadrayna", "ʔadrā", "ʔudrīna"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "أدريتن",
-        "u": "أدريتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أدريتن (form IV)\n# أَدْرَيْتُنَّ (ʔadraytunna) /ʔad.raj.tun.na/: second-person feminine plural past active of أَدْرَى (ʔadrā)\n# أُدْرِيتُنَّ (ʔudrītunna) /ʔud.riː.tun.na/: second-person feminine plural past passive of أَدْرَى (ʔadrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔadraytunna", "ʔadrā", "ʔudrītunna"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "أدريتا",
-        "u": "أدريتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُدْرِيَتَا • (ʔudriyatā) (form IV) /ʔud.ri.ja.taː/\n# third-person feminine dual past passive of أَدْرَى (ʔadrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔudriyatā", "ʔadrā"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "يدريان",
-        "u": "يدريان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يدريان (form IV)\n# يُدْرِيَانِ (yudriyāni) /jud.ri.jaː.ni/: third-person masculine dual non-past active indicative of أَدْرَى (ʔadrā)\n# يُدْرَيَانِ (yudrayāni) /jud.ra.jaː.ni/: third-person masculine dual non-past passive indicative of أَدْرَى (ʔadrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudriyāni", "ʔadrā", "yudrayāni"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تدريا",
-        "u": "تدريا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تدريا (form IV)\n# تُدْرِيَا (tudriyā) /tud.ri.jaː/: inflection of أَدْرَى (ʔadrā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُدْرَيَا (tudrayā) /tud.ra.jaː/: inflection of أَدْرَى (ʔadrā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudriyā", "ʔadrā", "tudrayā"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تدريان",
-        "u": "تدريان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تدريان (form IV)\n# تُدْرِيَانِ (tudriyāni) /tud.ri.jaː.ni/: inflection of أَدْرَى (ʔadrā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُدْرَيَانِ (tudrayāni) /tud.ra.jaː.ni/: inflection of أَدْرَى (ʔadrā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tudriyāni", "ʔadrā", "tudrayāni"],
-        "k": "أدرى",
-        "yol": "kök"
-      },
-      {
-        "w": "يدريا",
-        "u": "يدريا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يدريا (form IV)\n# يُدْرِيَا (yudriyā) /jud.ri.jaː/: third-person masculine dual non-past active subjunctive/jussive of أَدْرَى (ʔadrā)\n# يُدْرَيَا (yudrayā) /jud.ra.jaː/: third-person masculine dual non-past passive subjunctive/jussive of أَدْرَى (ʔadrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yudriyā", "ʔadrā", "yudrayā"],
-        "k": "أدرى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "در",
+  "ses": {
     "harf": "ء",
+    "fasil": "در",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "أدر",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "أدر (form IV)\n# أُدْرِ (ʔudri) /ʔud.ri/: first-person singular non-past active jussive of أَدْرَى (ʔadrā)\n# أُدْرَ (ʔudra) /ʔud.ra/: first-person singular non-past passive jussive of أَدْرَى (ʔadrā)\n# أَدْرِ (ʔadri) /ʔad.ri/: second-person masculine singular imperative of أَدْرَى (ʔadrā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔudri", "ʔadrā", "ʔudra"],
+      "kok_yazilis": "أدرى"
+    },
+    {
+      "madde": "يدر",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "يدر (form IV)\n# يُدْرِ (yudri) /jud.ri/: third-person masculine singular non-past active jussive of أَدْرَى (ʔadrā)\n# يُدْرَ (yudra) /jud.ra/: third-person masculine singular non-past passive jussive of أَدْرَى (ʔadrā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudri", "ʔadrā", "yudra"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يدري",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يدري (form IV)\n# يُدْرِي (yudrī) /jud.riː/: third-person masculine singular non-past active indicative of أَدْرَى (ʔadrā)\n# يُدْرِيَ (yudriya) /jud.ri.ja/: third-person masculine singular non-past active subjunctive of أَدْرَى (ʔadrā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudrī", "ʔadrā", "yudriya"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يدرى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُدْرَى • (yudrā) (form IV) /jud.raː/\n# third-person masculine singular non-past passive indicative/subjunctive of أَدْرَى (ʔadrā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudrā", "ʔadrā"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تدر",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "تدر (form IV)\n# تُدْرِ (tudri) /tud.ri/: inflection of أَدْرَى (ʔadrā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُدْرَ (tudra) /tud.ra/: inflection of أَدْرَى (ʔadrā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudri", "ʔadrā", "tudra"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أدرت",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أَدْرَتْ • (ʔadrat) (form IV) /ʔad.rat/\n# third-person feminine singular past active of أَدْرَى (ʔadrā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadrat", "ʔadrā"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تدرين",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تدرين (form IV)\n# تُدْرِينَ (tudrīna) /tud.riː.na/: inflection of أَدْرَى (ʔadrā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُدْرَيْنَ (tudrayna) /tud.raj.na/: inflection of أَدْرَى (ʔadrā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-pas",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudrīna", "ʔadrā", "tudrayna"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تدري",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تدري (form IV)\n# تُدْرِي (tudrī) /tud.riː/: inflection of أَدْرَى (ʔadrā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُدْرِيَ (tudriya) /tud.ri.ja/: inflection of أَدْرَى (ʔadrā):\n## second-person masculine singular non-past active subjunctive\n#",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudrī", "ʔadrā", "tudriya"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أدري",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أدري (form IV)\n# أُدْرِيَ (ʔudriya) /ʔud.ri.ja/: inflection of أَدْرَى (ʔadrā):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُدْرِي (ʔudrī) /ʔud.riː/: first-person singular non-past active indicative of أَدْرَى (ʔadrā)\n# أَدْرِي (ʔadrī) /ʔad.riː/: second-person feminine singular imperative of أَدْرَى (ʔadrā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔudriya", "ʔadrā", "ʔudrī"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تدرى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُدْرَى • (tudrā) (form IV) /tud.raː/\n# inflection of أَدْرَى (ʔadrā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudrā", "ʔadrā"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ندر",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "ندر (form IV)\n# نُدْرِ (nudri) /nud.ri/: first-person plural non-past active jussive of أَدْرَى (ʔadrā)\n# نُدْرَ (nudra) /nud.ra/: first-person plural non-past passive jussive of أَدْرَى (ʔadrā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nudri", "ʔadrā", "nudra"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ندري",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ندري (form IV)\n# نُدْرِي (nudrī) /nud.riː/: first-person plural non-past active indicative of أَدْرَى (ʔadrā)\n# نُدْرِيَ (nudriya) /nud.ri.ja/: first-person plural non-past active subjunctive of أَدْرَى (ʔadrā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nudrī", "ʔadrā", "nudriya"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "ندرى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نُدْرَى • (nudrā) (form IV) /nud.raː/\n# first-person plural non-past passive indicative/subjunctive of أَدْرَى (ʔadrā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nudrā", "ʔadrā"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تدرون",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تدرون (form IV)\n# تُدْرُونَ (tudrūna) /tud.ruː.na/: second-person masculine plural non-past active indicative of أَدْرَى (ʔadrā)\n# تُدْرَوْنَ (tudrawna) /tud.raw.na/: second-person masculine plural non-past passive indicative of أَدْرَى (ʔadrā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudrūna", "ʔadrā", "tudrawna"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تدروا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تدروا (form IV)\n# تُدْرُوا (tudrū) /tud.ruː/: second-person masculine plural non-past active subjunctive/jussive of أَدْرَى (ʔadrā)\n# تُدْرَوْا (tudraw) /tud.raw/: second-person masculine plural non-past passive subjunctive/jussive of أَدْرَى (ʔadrā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudrū", "ʔadrā", "tudraw"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أدروا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أدروا (form IV)\n# أَدْرَوْا (ʔadraw) /ʔad.raw/: third-person masculine plural past active of أَدْرَى (ʔadrā)\n# أُدْرُوا (ʔudrū) /ʔud.ruː/: third-person masculine plural past passive of أَدْرَى (ʔadrā)\n# أَدْرُوا (ʔadrū) /ʔad.ruː/: second-person masculine plural imperative of أَدْرَى (ʔadrā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadraw", "ʔadrā", "ʔudrū"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يدرون",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يدرون (form IV)\n# يُدْرُونَ (yudrūna) /jud.ruː.na/: third-person masculine plural non-past active indicative of أَدْرَى (ʔadrā)\n# يُدْرَوْنَ (yudrawna) /jud.raw.na/: third-person masculine plural non-past passive indicative of أَدْرَى (ʔadrā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudrūna", "ʔadrā", "yudrawna"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يدروا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يدروا (form IV)\n# يُدْرُوا (yudrū) /jud.ruː/: third-person masculine plural non-past active subjunctive/jussive of أَدْرَى (ʔadrā)\n# يُدْرَوْا (yudraw) /jud.raw/: third-person masculine plural non-past passive subjunctive/jussive of أَدْرَى (ʔadrā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudrū", "ʔadrā", "yudraw"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يدرين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يدرين (form IV)\n# يُدْرِينَ (yudrīna) /jud.riː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَدْرَى (ʔadrā)\n# يُدْرَيْنَ (yudrayna) /jud.raj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَدْرَى (ʔadrā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudrīna", "ʔadrā", "yudrayna"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أدرتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَدْرَتَا • (ʔadratā) (form IV) /ʔad.ra.taː/\n# third-person feminine dual past active of أَدْرَى (ʔadrā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadratā", "ʔadrā"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أدريت",
+      "tur": "verb",
+      "baslik": "أدريت (form IV)\n# أَدْرَيْتُ (ʔadraytu) /ʔad.raj.tu/: first-person singular past active of أَدْرَى (ʔadrā)\n# أَدْرَيْتَ (ʔadrayta) /ʔad.raj.ta/: second-person masculine singular past active of أَدْرَى (ʔadrā)\n# أَدْرَيْتِ (ʔadrayti) /ʔad.raj.ti/: second-person feminine singular past active of أَدْرَى (ʔadrā)\n# أُدْرِيتُ (ʔudrītu) /ʔud.riː.tu/: first-person singular past passive of أَدْرَى (ʔadrā)\n",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadraytu", "ʔadrā", "ʔadrayta"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أدريا",
+      "tur": "verb",
+      "baslik": "أدريا (form IV)\n# أَدْرَيَا (ʔadrayā) /ʔad.ra.jaː/: third-person masculine dual past active of أَدْرَى (ʔadrā)\n# أُدْرِيَا (ʔudriyā) /ʔud.ri.jaː/: third-person masculine dual past passive of أَدْرَى (ʔadrā)\n# أَدْرِيَا (ʔadriyā) /ʔad.ri.jaː/: second-person dual imperative of أَدْرَى (ʔadrā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadrayā", "ʔadrā", "ʔudriyā"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أدريتما",
+      "tur": "verb",
+      "baslik": "أدريتما (form IV)\n# أَدْرَيْتُمَا (ʔadraytumā) /ʔad.raj.tu.maː/: second-person dual past active of أَدْرَى (ʔadrā)\n# أُدْرِيتُمَا (ʔudrītumā) /ʔud.riː.tu.maː/: second-person dual past passive of أَدْرَى (ʔadrā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadraytumā", "ʔadrā", "ʔudrītumā"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أدريتم",
+      "tur": "verb",
+      "baslik": "أدريتم (form IV)\n# أَدْرَيْتُمْ (ʔadraytum) /ʔad.raj.tum/: second-person masculine plural past active of أَدْرَى (ʔadrā)\n# أُدْرِيتُمْ (ʔudrītum) /ʔud.riː.tum/: second-person masculine plural past passive of أَدْرَى (ʔadrā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadraytum", "ʔadrā", "ʔudrītum"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أدرينا",
+      "tur": "verb",
+      "baslik": "أدرينا (form IV)\n# أَدْرَيْنَا (ʔadraynā) /ʔad.raj.naː/: first-person plural past active of أَدْرَى (ʔadrā)\n# أُدْرِينَا (ʔudrīnā) /ʔud.riː.naː/: first-person plural past passive of أَدْرَى (ʔadrā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadraynā", "ʔadrā", "ʔudrīnā"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أدرين",
+      "tur": "verb",
+      "baslik": "أدرين (form IV)\n# أَدْرَيْنَ (ʔadrayna) /ʔad.raj.na/: third-person feminine plural past active of أَدْرَى (ʔadrā)\n# أُدْرِينَ (ʔudrīna) /ʔud.riː.na/: third-person feminine plural past passive of أَدْرَى (ʔadrā)\n# أَدْرِينَ (ʔadrīna) /ʔad.riː.na/: second-person feminine plural imperative of أَدْرَى (ʔadrā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadrayna", "ʔadrā", "ʔudrīna"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أدريتن",
+      "tur": "verb",
+      "baslik": "أدريتن (form IV)\n# أَدْرَيْتُنَّ (ʔadraytunna) /ʔad.raj.tun.na/: second-person feminine plural past active of أَدْرَى (ʔadrā)\n# أُدْرِيتُنَّ (ʔudrītunna) /ʔud.riː.tun.na/: second-person feminine plural past passive of أَدْرَى (ʔadrā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔadraytunna", "ʔadrā", "ʔudrītunna"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أدريتا",
+      "tur": "verb",
+      "baslik": "أُدْرِيَتَا • (ʔudriyatā) (form IV) /ʔud.ri.ja.taː/\n# third-person feminine dual past passive of أَدْرَى (ʔadrā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔudriyatā", "ʔadrā"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يدريان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يدريان (form IV)\n# يُدْرِيَانِ (yudriyāni) /jud.ri.jaː.ni/: third-person masculine dual non-past active indicative of أَدْرَى (ʔadrā)\n# يُدْرَيَانِ (yudrayāni) /jud.ra.jaː.ni/: third-person masculine dual non-past passive indicative of أَدْرَى (ʔadrā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudriyāni", "ʔadrā", "yudrayāni"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تدريا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تدريا (form IV)\n# تُدْرِيَا (tudriyā) /tud.ri.jaː/: inflection of أَدْرَى (ʔadrā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُدْرَيَا (tudrayā) /tud.ra.jaː/: inflection of أَدْرَى (ʔadrā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudriyā", "ʔadrā", "tudrayā"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تدريان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تدريان (form IV)\n# تُدْرِيَانِ (tudriyāni) /tud.ri.jaː.ni/: inflection of أَدْرَى (ʔadrā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُدْرَيَانِ (tudrayāni) /tud.ra.jaː.ni/: inflection of أَدْرَى (ʔadrā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tudriyāni", "ʔadrā", "tudrayāni"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يدريا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يدريا (form IV)\n# يُدْرِيَا (yudriyā) /jud.ri.jaː/: third-person masculine dual non-past active subjunctive/jussive of أَدْرَى (ʔadrā)\n# يُدْرَيَا (yudrayā) /jud.ra.jaː/: third-person masculine dual non-past passive subjunctive/jussive of أَدْرَى (ʔadrā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yudriyā", "ʔadrā", "yudrayā"],
+      "kok_yazilis": "أدرى",
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءدرى", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

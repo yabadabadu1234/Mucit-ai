@@ -1,393 +1,285 @@
 {
   "kok": "زقزق",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "زقزق", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الزاي والقاف",
-      "baslik": "زقق - زقزق",
-      "mihveri": "دفع بقوة إلى الازْدحام أو الاحتباس في الجوف أي عدم (2/905) النفاذ أو العبور (1) فالزِقّ الموصوف كالكيس الملتحم القاع، والوضع فيه كالحشو والدفع وذلك واضح في الإبل المزققة، والزُقَاق إما غيرُ نافذٍ أو ضيق كغير النافذ. ومنه \"زق الطائرُ الفرخَ وزقزقه: أطعمه بفيه (يدخل الطائر منقاره بالعلف في منقار فرخه كأنه يحشوه). وعن ذلك زَقَّ الطائر بسلحه: رَمَى بذَرْقه وكذا زقزق (هذا دفع فقط).",
-      "sesler": "",
-      "tam_metin": "\"الزِقّ - بالكسر: إهابٌ يُسْلَخ من قِبَل رأسه ويُتَّخَذ سِقاءً أو وَطْبا. الزُقاق - كغراب: الطريق الضيق (نافذًا أو غير نافذ) -[تاج]. والمزقَّقة من الإبل - كمعظمة: التي امتلأ جلدُها بعدَ لحمها شحمًا \".\n° المعنى المحوري\nدفع بقوة إلى الازْدحام أو الاحتباس في الجوف أي عدم\n(2/905)\nالنفاذ أو العبور (1) فالزِقّ الموصوف كالكيس الملتحم القاع، والوضع فيه كالحشو والدفع وذلك واضح في الإبل المزققة، والزُقَاق إما غيرُ نافذٍ أو ضيق كغير النافذ. ومنه \"زق الطائرُ الفرخَ وزقزقه: أطعمه بفيه (يدخل الطائر منقاره بالعلف في منقار فرخه كأنه يحشوه). وعن ذلك زَقَّ الطائر بسلحه: رَمَى بذَرْقه وكذا زقزق (هذا دفع فقط).",
-      "fasil_ozeti": "° معنى الفصل المعجمي (زق): الدفع بمعنى الحشو - كما يتمثل في الزِقّ الذي يُملأ بالماء أو اللبن، وفي المزقَّقَة من الإبل - في (زقق)، وفي الزَقْم اللقْم الشديد في (زقم). __________ (1) (صوتيًّا): الزاي تعبر عن اكتناز وازدحام، والقاف تعبر عن تعقد في العمق، والفصل منهما يعبر عما يشبه حشو العُمق. وفي (زقم) تعبر الميم عن استواء الظاهر، ويعبر التركيب عن قوة اللقم أو البلع بحيث يبدو استواء البدن على القدر الكبير في جوفه."
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "زقزق",
-        "u": "زقزق",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "زَقْزَقَ • (zaqzaqa) Iq (non-past يُزَقْزِقُ (yuzaqziqu), verbal noun زَقْزَقَة (zaqzaqa))",
-        "t": "From the reduplicated root ز ق ز ق (z q z q).",
-        "s": [
-          ["glossary", "reduplicated"],
-          ["ar-reduplicated", "reduplicated"],
-          ["ar-root", "ز ق ز ق (z q z q)"]
-        ],
-        "g": ["to chirp, to peep"],
-        "r": ["zaqzaqa"],
-        "el": [
-          ["ز ق ز ق", "Appendix:Arabic roots/ز ق ز ق"]
-        ],
-        "k": "زقزق",
-        "yol": "kök"
-      },
-      {
-        "w": "زقزق",
-        "u": "زقزق",
-        "p": "noun",
-        "t": "From the reduplicated root ز ق ز ق (z q z q).",
-        "s": [
-          ["glossary", "reduplicated"],
-          ["ar-reduplicated", "reduplicated"],
-          ["ar-root", "ز ق ز ق (z q z q)"]
-        ],
-        "g": ["pewit, lapwing"],
-        "tag": ["collective"],
-        "r": ["zaqzaq"],
-        "el": [
-          ["ز ق ز ق", "Appendix:Arabic roots/ز ق ز ق"]
-        ],
-        "k": "زقزق",
-        "yol": "kök"
-      },
-      {
-        "w": "زقزقت",
-        "u": "زقزقت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زقزقت (form Iq)\n# زَقْزَقْتُ (zaqzaqtu) /zaq.zaq.tu/: first-person singular past active of زَقْزَقَ (zaqzaqa)\n# زَقْزَقْتَ (zaqzaqta) /zaq.zaq.ta/: second-person masculine singular past active of زَقْزَقَ (zaqzaqa)\n# زَقْزَقْتِ (zaqzaqti) /zaq.zaq.ti/: second-person feminine singular past active of زَقْزَقَ (zaqzaqa)\n# زَقْزَقَتْ (zaqzaqat) /zaq.za.qat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaqzaqtu", "zaqzaqa", "zaqzaqta"],
-        "k": "زقزق",
-        "yol": "kök"
-      },
-      {
-        "w": "زقزقتما",
-        "u": "زقزقتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زَقْزَقْتُمَا • (zaqzaqtumā) (form Iq) /zaq.zaq.tu.maː/\n# second-person dual past active of زَقْزَقَ (zaqzaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaqzaqtumā", "zaqzaqa"],
-        "k": "زقزق",
-        "yol": "kök"
-      },
-      {
-        "w": "زقزقا",
-        "u": "زقزقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زقزقا (form Iq)\n# زَقْزَقَا (zaqzaqā) /zaq.za.qaː/: third-person masculine dual past active of زَقْزَقَ (zaqzaqa)\n# زَقْزِقَا (zaqziqā) /zaq.zi.qaː/: second-person dual imperative of زَقْزَقَ (zaqzaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaqzaqā", "zaqzaqa", "zaqziqā"],
-        "k": "زقزق",
-        "yol": "kök"
-      },
-      {
-        "w": "زقزقتا",
-        "u": "زقزقتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زَقْزَقَتَا • (zaqzaqatā) (form Iq) /zaq.za.qa.taː/\n# third-person feminine dual past active of زَقْزَقَ (zaqzaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaqzaqatā", "zaqzaqa"],
-        "k": "زقزق",
-        "yol": "kök"
-      },
-      {
-        "w": "زقزقنا",
-        "u": "زقزقنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زَقْزَقْنَا • (zaqzaqnā) (form Iq) /zaq.zaq.naː/\n# first-person plural past active of زَقْزَقَ (zaqzaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaqzaqnā", "zaqzaqa"],
-        "k": "زقزق",
-        "yol": "kök"
-      },
-      {
-        "w": "زقزقتن",
-        "u": "زقزقتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زَقْزَقْتُنَّ • (zaqzaqtunna) (form Iq) /zaq.zaq.tun.na/\n# second-person feminine plural past active of زَقْزَقَ (zaqzaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaqzaqtunna", "zaqzaqa"],
-        "k": "زقزق",
-        "yol": "kök"
-      },
-      {
-        "w": "زقزقتم",
-        "u": "زقزقتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زَقْزَقْتُمْ • (zaqzaqtum) (form Iq) /zaq.zaq.tum/\n# second-person masculine plural past active of زَقْزَقَ (zaqzaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaqzaqtum", "zaqzaqa"],
-        "k": "زقزق",
-        "yol": "kök"
-      },
-      {
-        "w": "زقزقن",
-        "u": "زقزقن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زقزقن (form Iq)\n# زَقْزَقْنَ (zaqzaqna) /zaq.zaq.na/: third-person feminine plural past active of زَقْزَقَ (zaqzaqa)\n# زَقْزِقْنَ (zaqziqna) /zaq.ziq.na/: second-person feminine plural imperative of زَقْزَقَ (zaqzaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaqzaqna", "zaqzaqa", "zaqziqna"],
-        "k": "زقزق",
-        "yol": "kök"
-      },
-      {
-        "w": "زقزقوا",
-        "u": "زقزقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زقزقوا (form Iq)\n# زَقْزَقُوا (zaqzaqū) /zaq.za.quː/: third-person masculine plural past active of زَقْزَقَ (zaqzaqa)\n# زَقْزِقُوا (zaqziqū) /zaq.zi.quː/: second-person masculine plural imperative of زَقْزَقَ (zaqzaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaqzaqū", "zaqzaqa", "zaqziqū"],
-        "k": "زقزق",
-        "yol": "kök"
-      },
-      {
-        "w": "أزقزق",
-        "u": "أزقزق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أزقزق (form Iq)\n# أُزَقْزِقُ (ʔuzaqziqu) /ʔu.zaq.zi.qu/: first-person singular non-past active indicative of زَقْزَقَ (zaqzaqa)\n# أُزَقْزِقَ (ʔuzaqziqa) /ʔu.zaq.zi.qa/: first-person singular non-past active subjunctive of زَقْزَقَ (zaqzaqa)\n# أُزَقْزِقْ (ʔuzaqziq) /ʔu.zaq.ziq/: first-person singular non-past active jussive of زَقْزَقَ (zaqzaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʔuzaqziqu", "zaqzaqa", "ʔuzaqziqa"],
-        "k": "زقزق",
-        "yol": "kök"
-      },
-      {
-        "w": "تزقزقين",
-        "u": "تزقزقين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزَقْزِقِينَ • (tuzaqziqīna) (form Iq) /tu.zaq.zi.qiː.na/\n# second-person feminine singular non-past active indicative of زَقْزَقَ (zaqzaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzaqziqīna", "zaqzaqa"],
-        "k": "زقزق",
-        "yol": "kök"
-      },
-      {
-        "w": "تزقزقان",
-        "u": "تزقزقان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزَقْزِقَانِ • (tuzaqziqāni) (form Iq) /tu.zaq.zi.qaː.ni/\n# inflection of زَقْزَقَ (zaqzaqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzaqziqāni", "zaqzaqa"],
-        "k": "زقزق",
-        "yol": "kök"
-      },
-      {
-        "w": "تزقزق",
-        "u": "تزقزق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تزقزق (form Iq)\n# تُزَقْزِقُ (tuzaqziqu) /tu.zaq.zi.qu/: inflection of زَقْزَقَ (zaqzaqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُزَقْزِقَ (tuzaqziqa) /tu.zaq.zi.qa/: inflection of زَقْزَقَ (zaqzaqa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past act",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzaqziqu", "zaqzaqa", "tuzaqziqa"],
-        "k": "زقزق",
-        "yol": "kök"
-      },
-      {
-        "w": "يزقزق",
-        "u": "يزقزق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يزقزق (form Iq)\n# يُزَقْزِقُ (yuzaqziqu) /ju.zaq.zi.qu/: third-person masculine singular non-past active indicative of زَقْزَقَ (zaqzaqa)\n# يُزَقْزِقَ (yuzaqziqa) /ju.zaq.zi.qa/: third-person masculine singular non-past active subjunctive of زَقْزَقَ (zaqzaqa)\n# يُزَقْزِقْ (yuzaqziq) /ju.zaq.ziq/: third-person masculine singular non-past active jussive of زَقْزَقَ (zaqzaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuzaqziqu", "zaqzaqa", "yuzaqziqa"],
-        "k": "زقزق",
-        "yol": "kök"
-      },
-      {
-        "w": "نزقزق",
-        "u": "نزقزق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نزقزق (form Iq)\n# نُزَقْزِقُ (nuzaqziqu) /nu.zaq.zi.qu/: first-person plural non-past active indicative of زَقْزَقَ (zaqzaqa)\n# نُزَقْزِقَ (nuzaqziqa) /nu.zaq.zi.qa/: first-person plural non-past active subjunctive of زَقْزَقَ (zaqzaqa)\n# نُزَقْزِقْ (nuzaqziq) /nu.zaq.ziq/: first-person plural non-past active jussive of زَقْزَقَ (zaqzaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["nuzaqziqu", "zaqzaqa", "nuzaqziqa"],
-        "k": "زقزق",
-        "yol": "kök"
-      },
-      {
-        "w": "يزقزقان",
-        "u": "يزقزقان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُزَقْزِقَانِ • (yuzaqziqāni) (form Iq) /ju.zaq.zi.qaː.ni/\n# third-person masculine dual non-past active indicative of زَقْزَقَ (zaqzaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuzaqziqāni", "zaqzaqa"],
-        "k": "زقزق",
-        "yol": "kök"
-      },
-      {
-        "w": "يزقزقون",
-        "u": "يزقزقون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُزَقْزِقُونَ • (yuzaqziqūna) (form Iq) /ju.zaq.zi.quː.na/\n# third-person masculine plural non-past active indicative of زَقْزَقَ (zaqzaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuzaqziqūna", "zaqzaqa"],
-        "k": "زقزق",
-        "yol": "kök"
-      },
-      {
-        "w": "تزقزقون",
-        "u": "تزقزقون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزَقْزِقُونَ • (tuzaqziqūna) (form Iq) /tu.zaq.zi.quː.na/\n# second-person masculine plural non-past active indicative of زَقْزَقَ (zaqzaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzaqziqūna", "zaqzaqa"],
-        "k": "زقزق",
-        "yol": "kök"
-      },
-      {
-        "w": "تزقزقن",
-        "u": "تزقزقن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزَقْزِقْنَ • (tuzaqziqna) (form Iq) /tu.zaq.ziq.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of زَقْزَقَ (zaqzaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzaqziqna", "zaqzaqa"],
-        "k": "زقزق",
-        "yol": "kök"
-      },
-      {
-        "w": "يزقزقن",
-        "u": "يزقزقن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُزَقْزِقْنَ • (yuzaqziqna) (form Iq) /ju.zaq.ziq.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of زَقْزَقَ (zaqzaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuzaqziqna", "zaqzaqa"],
-        "k": "زقزق",
-        "yol": "kök"
-      },
-      {
-        "w": "تزقزقي",
-        "u": "تزقزقي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزَقْزِقِي • (tuzaqziqī) (form Iq) /tu.zaq.zi.qiː/\n# second-person feminine singular non-past active subjunctive/jussive of زَقْزَقَ (zaqzaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzaqziqī", "zaqzaqa"],
-        "k": "زقزق",
-        "yol": "kök"
-      },
-      {
-        "w": "يزقزقا",
-        "u": "يزقزقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُزَقْزِقَا • (yuzaqziqā) (form Iq) /ju.zaq.zi.qaː/\n# third-person masculine dual non-past active subjunctive/jussive of زَقْزَقَ (zaqzaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuzaqziqā", "zaqzaqa"],
-        "k": "زقزق",
-        "yol": "kök"
-      },
-      {
-        "w": "تزقزقا",
-        "u": "تزقزقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزَقْزِقَا • (tuzaqziqā) (form Iq) /tu.zaq.zi.qaː/\n# inflection of زَقْزَقَ (zaqzaqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzaqziqā", "zaqzaqa"],
-        "k": "زقزق",
-        "yol": "kök"
-      },
-      {
-        "w": "تزقزقوا",
-        "u": "تزقزقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزَقْزِقُوا • (tuzaqziqū) (form Iq) /tu.zaq.zi.quː/\n# second-person masculine plural non-past active subjunctive/jussive of زَقْزَقَ (zaqzaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzaqziqū", "zaqzaqa"],
-        "k": "زقزق",
-        "yol": "kök"
-      },
-      {
-        "w": "يزقزقوا",
-        "u": "يزقزقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُزَقْزِقُوا • (yuzaqziqū) (form Iq) /ju.zaq.zi.quː/\n# third-person masculine plural non-past active subjunctive/jussive of زَقْزَقَ (zaqzaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuzaqziqū", "zaqzaqa"],
-        "k": "زقزق",
-        "yol": "kök"
-      },
-      {
-        "w": "زقزقي",
-        "u": "زقزقي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زَقْزِقِي • (zaqziqī) (form Iq) /zaq.zi.qiː/\n# second-person feminine singular imperative of زَقْزَقَ (zaqzaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaqziqī", "zaqzaqa"],
-        "k": "زقزق",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "زق",
+  "ses": {
     "harf": "ز",
+    "fasil": "زق",
     "mahrec": "esaliyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "cebel": {
+    "fasil": "الزاي والقاف",
+    "baslik": "زقق - زقزق",
+    "mihveri": "دفع بقوة إلى الازْدحام أو الاحتباس في الجوف أي عدم (2/905) النفاذ أو العبور (1) فالزِقّ الموصوف كالكيس الملتحم القاع، والوضع فيه كالحشو والدفع وذلك واضح في الإبل المزققة، والزُقَاق إما غيرُ نافذٍ أو ضيق كغير النافذ. ومنه \"زق الطائرُ الفرخَ وزقزقه: أطعمه بفيه (يدخل الطائر منقاره بالعلف في منقار فرخه كأنه يحشوه). وعن ذلك زَقَّ الطائر بسلحه: رَمَى بذَرْقه وكذا زقزق (هذا دفع فقط).",
+    "tam_metin": "\"الزِقّ - بالكسر: إهابٌ يُسْلَخ من قِبَل رأسه ويُتَّخَذ سِقاءً أو وَطْبا. الزُقاق - كغراب: الطريق الضيق (نافذًا أو غير نافذ) -[تاج]. والمزقَّقة من الإبل - كمعظمة: التي امتلأ جلدُها بعدَ لحمها شحمًا \".\n° المعنى المحوري\nدفع بقوة إلى الازْدحام أو الاحتباس في الجوف أي عدم\n(2/905)\nالنفاذ أو العبور (1) فالزِقّ الموصوف كالكيس الملتحم القاع، والوضع فيه كالحشو والدفع وذلك واضح في الإبل المزققة، والزُقَاق إما غيرُ نافذٍ أو ضيق كغير النافذ. ومنه \"زق الطائرُ الفرخَ وزقزقه: أطعمه بفيه (يدخل الطائر منقاره بالعلف في منقار فرخه كأنه يحشوه). وعن ذلك زَقَّ الطائر بسلحه: رَمَى بذَرْقه وكذا زقزق (هذا دفع فقط).",
+    "fasil_ozeti": "° معنى الفصل المعجمي (زق): الدفع بمعنى الحشو - كما يتمثل في الزِقّ الذي يُملأ بالماء أو اللبن، وفي المزقَّقَة من الإبل - في (زقق)، وفي الزَقْم اللقْم الشديد في (زقم). __________ (1) (صوتيًّا): الزاي تعبر عن اكتناز وازدحام، والقاف تعبر عن تعقد في العمق، والفصل منهما يعبر عما يشبه حشو العُمق. وفي (زقم) تعبر الميم عن استواء الظاهر، ويعبر التركيب عن قوة اللقم أو البلع بحيث يبدو استواء البدن على القدر الكبير في جوفه."
+  },
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "زقزق",
+      "tur": "verb",
+      "baslik": "زَقْزَقَ • (zaqzaqa) Iq (non-past يُزَقْزِقُ (yuzaqziqu), verbal noun زَقْزَقَة (zaqzaqa))",
+      "etim_sablon": [
+        ["glossary", "reduplicated"],
+        ["ar-reduplicated", "reduplicated"],
+        ["ar-root", "ز ق ز ق (z q z q)"]
+      ],
+      "anlam": ["to chirp, to peep"],
+      "okunus": ["zaqzaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زقزق",
+      "tur": "noun",
+      "etim_sablon": [
+        ["glossary", "reduplicated"],
+        ["ar-reduplicated", "reduplicated"],
+        ["ar-root", "ز ق ز ق (z q z q)"]
+      ],
+      "anlam": ["pewit, lapwing"],
+      "etiket": ["collective"],
+      "okunus": ["zaqzaq"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زقزقت",
+      "tur": "verb",
+      "baslik": "زقزقت (form Iq)\n# زَقْزَقْتُ (zaqzaqtu) /zaq.zaq.tu/: first-person singular past active of زَقْزَقَ (zaqzaqa)\n# زَقْزَقْتَ (zaqzaqta) /zaq.zaq.ta/: second-person masculine singular past active of زَقْزَقَ (zaqzaqa)\n# زَقْزَقْتِ (zaqzaqti) /zaq.zaq.ti/: second-person feminine singular past active of زَقْزَقَ (zaqzaqa)\n# زَقْزَقَتْ (zaqzaqat) /zaq.za.qat/: third-person feminine singular past active ",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zaqzaqtu", "zaqzaqa", "zaqzaqta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زقزقتما",
+      "tur": "verb",
+      "baslik": "زَقْزَقْتُمَا • (zaqzaqtumā) (form Iq) /zaq.zaq.tu.maː/\n# second-person dual past active of زَقْزَقَ (zaqzaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zaqzaqtumā", "zaqzaqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زقزقا",
+      "tur": "verb",
+      "baslik": "زقزقا (form Iq)\n# زَقْزَقَا (zaqzaqā) /zaq.za.qaː/: third-person masculine dual past active of زَقْزَقَ (zaqzaqa)\n# زَقْزِقَا (zaqziqā) /zaq.zi.qaː/: second-person dual imperative of زَقْزَقَ (zaqzaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zaqzaqā", "zaqzaqa", "zaqziqā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زقزقتا",
+      "tur": "verb",
+      "baslik": "زَقْزَقَتَا • (zaqzaqatā) (form Iq) /zaq.za.qa.taː/\n# third-person feminine dual past active of زَقْزَقَ (zaqzaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zaqzaqatā", "zaqzaqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زقزقنا",
+      "tur": "verb",
+      "baslik": "زَقْزَقْنَا • (zaqzaqnā) (form Iq) /zaq.zaq.naː/\n# first-person plural past active of زَقْزَقَ (zaqzaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zaqzaqnā", "zaqzaqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زقزقتن",
+      "tur": "verb",
+      "baslik": "زَقْزَقْتُنَّ • (zaqzaqtunna) (form Iq) /zaq.zaq.tun.na/\n# second-person feminine plural past active of زَقْزَقَ (zaqzaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zaqzaqtunna", "zaqzaqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زقزقتم",
+      "tur": "verb",
+      "baslik": "زَقْزَقْتُمْ • (zaqzaqtum) (form Iq) /zaq.zaq.tum/\n# second-person masculine plural past active of زَقْزَقَ (zaqzaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zaqzaqtum", "zaqzaqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زقزقن",
+      "tur": "verb",
+      "baslik": "زقزقن (form Iq)\n# زَقْزَقْنَ (zaqzaqna) /zaq.zaq.na/: third-person feminine plural past active of زَقْزَقَ (zaqzaqa)\n# زَقْزِقْنَ (zaqziqna) /zaq.ziq.na/: second-person feminine plural imperative of زَقْزَقَ (zaqzaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zaqzaqna", "zaqzaqa", "zaqziqna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زقزقوا",
+      "tur": "verb",
+      "baslik": "زقزقوا (form Iq)\n# زَقْزَقُوا (zaqzaqū) /zaq.za.quː/: third-person masculine plural past active of زَقْزَقَ (zaqzaqa)\n# زَقْزِقُوا (zaqziqū) /zaq.zi.quː/: second-person masculine plural imperative of زَقْزَقَ (zaqzaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zaqzaqū", "zaqzaqa", "zaqziqū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أزقزق",
+      "tur": "verb",
+      "baslik": "أزقزق (form Iq)\n# أُزَقْزِقُ (ʔuzaqziqu) /ʔu.zaq.zi.qu/: first-person singular non-past active indicative of زَقْزَقَ (zaqzaqa)\n# أُزَقْزِقَ (ʔuzaqziqa) /ʔu.zaq.zi.qa/: first-person singular non-past active subjunctive of زَقْزَقَ (zaqzaqa)\n# أُزَقْزِقْ (ʔuzaqziq) /ʔu.zaq.ziq/: first-person singular non-past active jussive of زَقْزَقَ (zaqzaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʔuzaqziqu", "zaqzaqa", "ʔuzaqziqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزقزقين",
+      "tur": "verb",
+      "baslik": "تُزَقْزِقِينَ • (tuzaqziqīna) (form Iq) /tu.zaq.zi.qiː.na/\n# second-person feminine singular non-past active indicative of زَقْزَقَ (zaqzaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuzaqziqīna", "zaqzaqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزقزقان",
+      "tur": "verb",
+      "baslik": "تُزَقْزِقَانِ • (tuzaqziqāni) (form Iq) /tu.zaq.zi.qaː.ni/\n# inflection of زَقْزَقَ (zaqzaqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuzaqziqāni", "zaqzaqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزقزق",
+      "tur": "verb",
+      "baslik": "تزقزق (form Iq)\n# تُزَقْزِقُ (tuzaqziqu) /tu.zaq.zi.qu/: inflection of زَقْزَقَ (zaqzaqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُزَقْزِقَ (tuzaqziqa) /tu.zaq.zi.qa/: inflection of زَقْزَقَ (zaqzaqa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past act",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuzaqziqu", "zaqzaqa", "tuzaqziqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزقزق",
+      "tur": "verb",
+      "baslik": "يزقزق (form Iq)\n# يُزَقْزِقُ (yuzaqziqu) /ju.zaq.zi.qu/: third-person masculine singular non-past active indicative of زَقْزَقَ (zaqzaqa)\n# يُزَقْزِقَ (yuzaqziqa) /ju.zaq.zi.qa/: third-person masculine singular non-past active subjunctive of زَقْزَقَ (zaqzaqa)\n# يُزَقْزِقْ (yuzaqziq) /ju.zaq.ziq/: third-person masculine singular non-past active jussive of زَقْزَقَ (zaqzaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuzaqziqu", "zaqzaqa", "yuzaqziqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نزقزق",
+      "tur": "verb",
+      "baslik": "نزقزق (form Iq)\n# نُزَقْزِقُ (nuzaqziqu) /nu.zaq.zi.qu/: first-person plural non-past active indicative of زَقْزَقَ (zaqzaqa)\n# نُزَقْزِقَ (nuzaqziqa) /nu.zaq.zi.qa/: first-person plural non-past active subjunctive of زَقْزَقَ (zaqzaqa)\n# نُزَقْزِقْ (nuzaqziq) /nu.zaq.ziq/: first-person plural non-past active jussive of زَقْزَقَ (zaqzaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["nuzaqziqu", "zaqzaqa", "nuzaqziqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزقزقان",
+      "tur": "verb",
+      "baslik": "يُزَقْزِقَانِ • (yuzaqziqāni) (form Iq) /ju.zaq.zi.qaː.ni/\n# third-person masculine dual non-past active indicative of زَقْزَقَ (zaqzaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuzaqziqāni", "zaqzaqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزقزقون",
+      "tur": "verb",
+      "baslik": "يُزَقْزِقُونَ • (yuzaqziqūna) (form Iq) /ju.zaq.zi.quː.na/\n# third-person masculine plural non-past active indicative of زَقْزَقَ (zaqzaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuzaqziqūna", "zaqzaqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزقزقون",
+      "tur": "verb",
+      "baslik": "تُزَقْزِقُونَ • (tuzaqziqūna) (form Iq) /tu.zaq.zi.quː.na/\n# second-person masculine plural non-past active indicative of زَقْزَقَ (zaqzaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuzaqziqūna", "zaqzaqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزقزقن",
+      "tur": "verb",
+      "baslik": "تُزَقْزِقْنَ • (tuzaqziqna) (form Iq) /tu.zaq.ziq.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of زَقْزَقَ (zaqzaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuzaqziqna", "zaqzaqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزقزقن",
+      "tur": "verb",
+      "baslik": "يُزَقْزِقْنَ • (yuzaqziqna) (form Iq) /ju.zaq.ziq.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of زَقْزَقَ (zaqzaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuzaqziqna", "zaqzaqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزقزقي",
+      "tur": "verb",
+      "baslik": "تُزَقْزِقِي • (tuzaqziqī) (form Iq) /tu.zaq.zi.qiː/\n# second-person feminine singular non-past active subjunctive/jussive of زَقْزَقَ (zaqzaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuzaqziqī", "zaqzaqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزقزقا",
+      "tur": "verb",
+      "baslik": "يُزَقْزِقَا • (yuzaqziqā) (form Iq) /ju.zaq.zi.qaː/\n# third-person masculine dual non-past active subjunctive/jussive of زَقْزَقَ (zaqzaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuzaqziqā", "zaqzaqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزقزقا",
+      "tur": "verb",
+      "baslik": "تُزَقْزِقَا • (tuzaqziqā) (form Iq) /tu.zaq.zi.qaː/\n# inflection of زَقْزَقَ (zaqzaqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuzaqziqā", "zaqzaqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزقزقوا",
+      "tur": "verb",
+      "baslik": "تُزَقْزِقُوا • (tuzaqziqū) (form Iq) /tu.zaq.zi.quː/\n# second-person masculine plural non-past active subjunctive/jussive of زَقْزَقَ (zaqzaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuzaqziqū", "zaqzaqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزقزقوا",
+      "tur": "verb",
+      "baslik": "يُزَقْزِقُوا • (yuzaqziqū) (form Iq) /ju.zaq.zi.quː/\n# third-person masculine plural non-past active subjunctive/jussive of زَقْزَقَ (zaqzaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuzaqziqū", "zaqzaqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زقزقي",
+      "tur": "verb",
+      "baslik": "زَقْزِقِي • (zaqziqī) (form Iq) /zaq.zi.qiː/\n# second-person feminine singular imperative of زَقْزَقَ (zaqzaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zaqziqī", "zaqzaqa"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "From the reduplicated root ز ق ز ق (z q z q).",
+      "kognatlar": [
+        ["ز ق ز ق", "Appendix:Arabic roots/ز ق ز ق"]
+      ]
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "زقزق", "r6"]
+  ],
+  "mana": {
     "ince": "talk.v.01",
     "orta": "verb.communication",
     "ust": "söz ve haber",
@@ -395,25 +287,8 @@
     "dayanak_tanim": "talk socially without exchanging too much information",
     "synset_sayisi": 3
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "الزاي والقاف",
-    "mihveri": "دفع بقوة إلى الازْدحام أو الاحتباس في الجوف أي عدم (2/905) النفاذ أو العبور (1) فالزِقّ الموصوف كالكيس الملتحم القاع، والوضع فيه كالحشو والدفع وذلك واضح في الإبل المزققة، والزُقَاق إما غيرُ نافذٍ أو ضيق كغير النافذ. ومنه \"زق الطائرُ الفرخَ وزقزقه: أطعمه بفيه (يدخل الطائر منقاره بالعلف في منقار فرخه كأنه يحشوه). وعن ذلك زَقَّ الطائر بسلحه: رَمَى بذَرْقه وكذا زقزق (هذا دفع فقط).",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (زق): الدفع بمعنى الحشو - كما يتمثل في الزِقّ الذي يُملأ بالماء أو اللبن، وفي المزقَّقَة من الإبل - في (زقق)، وفي الزَقْم اللقْم الشديد في (زقم). __________ (1) (صوتيًّا): الزاي تعبر عن اكتناز وازدحام، والقاف تعبر عن تعقد في العمق، والفصل منهما يعبر عما يشبه حشو العُمق. وفي (زقم) تعبر الميم عن استواء الظاهر، ويعبر التركيب عن قوة اللقم أو البلع بحيث يبدو استواء البدن على القدر الكبير في جوفه.",
-    "tam_metin": "\"الزِقّ - بالكسر: إهابٌ يُسْلَخ من قِبَل رأسه ويُتَّخَذ سِقاءً أو وَطْبا. الزُقاق - كغراب: الطريق الضيق (نافذًا أو غير نافذ) -[تاج]. والمزقَّقة من الإبل - كمعظمة: التي امتلأ جلدُها بعدَ لحمها شحمًا \".\n° المعنى المحوري\nدفع بقوة إلى الازْدحام أو الاحتباس في الجوف أي عدم\n(2/905)\nالنفاذ أو العبور (1) فالزِقّ الموصوف كالكيس الملتحم القاع، والوضع فيه كالحشو والدفع وذلك واضح في الإبل المزققة، والزُقَاق إما غيرُ نافذٍ أو ضيق كغير النافذ. ومنه \"زق الطائرُ الفرخَ وزقزقه: أطعمه بفيه (يدخل الطائر منقاره بالعلف في منقار فرخه كأنه يحشوه). وعن ذلك زَقَّ الطائر بسلحه: رَمَى بذَرْقه وكذا زقزق (هذا دفع فقط)."
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["chatter.v.04", "converse.v.01", "shriek.v.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 9,
       "merkez_kok": "سفك",
@@ -433,6 +308,11 @@
       "boy": 19
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["chatter.v.04", "converse.v.01", "shriek.v.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

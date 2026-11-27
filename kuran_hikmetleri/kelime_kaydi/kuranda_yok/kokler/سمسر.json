@@ -1,54 +1,54 @@
 {
   "kok": "سمسر",
+  "tur": "isim",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["fiil-yok"],
+  "lugat_fiil": false,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "سمسر", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "سمسار",
-        "u": "سمسار",
-        "p": "noun",
-        "h": "ar-noun+",
-        "e": "سِمْسَار • (simsār) m (plural سَمَاسِرَة (samāsira), feminine سِمْسَارَة (simsāra))",
-        "t": "Borrowed from Classical Persian سِپْسَار (sipsār).",
-        "g": ["broker, agent, middleman", "real estate agent"],
-        "r": ["simsār"],
-        "ipa": ["/sim.saːr/"],
-        "ds": [
-          ["az", "simsar", ""],
-          ["ota", "سمسار", "simsar"],
-          ["la", "sensālis", ""]
-        ],
-        "el": [
-          ["سِپْسَار", "سپسار#Persian"]
-        ],
-        "k": "سمسر",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "سم",
+  "ses": {
     "harf": "س",
+    "fasil": "سم",
     "mahrec": "esaliyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "سمسار",
+      "tur": "noun",
+      "baslik": "سِمْسَار • (simsār) m (plural سَمَاسِرَة (samāsira), feminine سِمْسَارَة (simsāra))",
+      "anlam": ["broker, agent, middleman", "real estate agent"],
+      "okunus": ["simsār"],
+      "ipa": ["/sim.saːr/"],
+      "torunlar": [
+        ["az", "simsar", ""],
+        ["ota", "سمسار", "simsar"],
+        ["la", "sensālis", ""]
+      ],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "Borrowed from Classical Persian سِپْسَار (sipsār).",
+      "kognatlar": [
+        ["سِپْسَار", "سپسار#Persian"]
+      ]
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "سمسر", "r6"]
+  ],
+  "mana": {
     "ince": "person.n.01",
     "orta": "noun.person",
     "ust": "insan ve toplum",
@@ -56,20 +56,8 @@
     "dayanak_tanim": "a businessman who buys or sells for another in exchange for a commission",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["capitalist.n.02"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 8,
       "merkez_kok": "سير",
@@ -89,6 +77,11 @@
       "boy": 6
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["capitalist.n.02"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

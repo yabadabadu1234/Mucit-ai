@@ -1,396 +1,289 @@
 {
   "kok": "صبا",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "صبا", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أصب",
-        "u": "أصب",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "أصب (form I)\n# أَصْبُ (ʔaṣbu) /ʔasˤ.bu/: first-person singular non-past active jussive of صَبَا (ṣabā)\n# أُصْبَ (ʔuṣba) /ʔusˤ.ba/: first-person singular non-past passive jussive of صَبَا (ṣabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaṣbu", "ṣabā", "ʔuṣba"],
-        "k": "صبا",
-        "yol": "kök"
-      },
-      {
-        "w": "يصب",
-        "u": "يصب",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يصب (form I)\n# يَصْبُ (yaṣbu) /jasˤ.bu/: third-person masculine singular non-past active jussive of صَبَا (ṣabā)\n# يُصْبَ (yuṣba) /jusˤ.ba/: third-person masculine singular non-past passive jussive of صَبَا (ṣabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṣbu", "ṣabā", "yuṣba"],
-        "k": "صبا",
-        "yol": "kök"
-      },
-      {
-        "w": "تصب",
-        "u": "تصب",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تصب (form I)\n# تَصْبُ (taṣbu) /tasˤ.bu/: inflection of صَبَا (ṣabā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُصْبَ (tuṣba) /tusˤ.ba/: inflection of صَبَا (ṣabā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣbu", "ṣabā", "tuṣba"],
-        "k": "صبا",
-        "yol": "kök"
-      },
-      {
-        "w": "صبت",
-        "u": "صبت",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "صَبَتْ • (ṣabat) (form I) /sˤa.bat/\n# third-person feminine singular past active of صَبَا (ṣabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣabat", "ṣabā"],
-        "k": "صبا",
-        "yol": "kök"
-      },
-      {
-        "w": "تصبين",
-        "u": "تصبين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تصبين (form I)\n# تَصْبِينَ (taṣbīna) /tasˤ.biː.na/: second-person feminine singular non-past active indicative of صَبَا (ṣabā)\n# تُصْبَيْنَ (tuṣbayna) /tusˤ.baj.na/: inflection of صَبَا (ṣabā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣbīna", "ṣabā", "tuṣbayna"],
-        "k": "صبا",
-        "yol": "kök"
-      },
-      {
-        "w": "تصبي",
-        "u": "تصبي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تصبي (form I)\n# تَصْبِي (taṣbī) /tasˤ.biː/: second-person feminine singular non-past active subjunctive/jussive of صَبَا (ṣabā)\n# تُصْبَيْ (tuṣbay) /tusˤ.baj/: second-person feminine singular non-past passive subjunctive/jussive of صَبَا (ṣabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣbī", "ṣabā", "tuṣbay"],
-        "k": "صبا",
-        "yol": "kök"
-      },
-      {
-        "w": "نصب",
-        "u": "نصب",
-        "p": "verb",
-        "n": "5.1",
-        "h": "ar-verb form",
-        "e": "نصب (form I)\n# نَصْبُ (naṣbu) /nasˤ.bu/: first-person plural non-past active jussive of صَبَا (ṣabā)\n# نُصْبَ (nuṣba) /nusˤ.ba/: first-person plural non-past passive jussive of صَبَا (ṣabā)\n# نَصْبَ (naṣba) /nasˤ.ba/: first-person plural non-past active jussive of صَبِيَ (ṣabiya)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naṣbu", "ṣabā", "nuṣba"],
-        "k": "صبا",
-        "yol": "kök"
-      },
-      {
-        "w": "تصبون",
-        "u": "تصبون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تصبون (form I)\n# تَصْبُونَ (taṣbūna) /tasˤ.buː.na/: inflection of صَبَا (ṣabā):\n## second-person masculine/feminine plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُصْبَوْنَ (tuṣbawna) /tusˤ.baw.na/: second-person masculine plural non-past passive indicative of صَبَا (ṣabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣbūna", "ṣabā", "tuṣbawna"],
-        "k": "صبا",
-        "yol": "kök"
-      },
-      {
-        "w": "تصبوا",
-        "u": "تصبوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تصبوا (form I)\n# تَصْبُوَا (taṣbuwā) /tasˤ.bu.waː/: inflection of صَبَا (ṣabā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تَصْبُوا (taṣbū) /tasˤ.buː/: second-person masculine plural non-past active subjunctive/jussive of صَبَا (ṣabā)\n# تُصْبَوْا (tuṣbaw) /tusˤ.baw/: second-person masculine plural non-past passive s",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣbuwā", "ṣabā", "taṣbū"],
-        "k": "صبا",
-        "yol": "kök"
-      },
-      {
-        "w": "صبوا",
-        "u": "صبوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "صبوا (form I)\n# صَبَوَا (ṣabawā) /sˤa.ba.waː/: third-person masculine dual past active of صَبَا (ṣabā)\n# صَبَوْا (ṣabaw) /sˤa.baw/: third-person masculine plural past active of صَبَا (ṣabā)\n# صُبُوا (ṣubū) /sˤu.buː/: third-person masculine plural past passive of صَبَا (ṣabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣabawā", "ṣabā", "ṣabaw"],
-        "k": "صبا",
-        "yol": "kök"
-      },
-      {
-        "w": "يصبون",
-        "u": "يصبون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يصبون (form I)\n# يَصْبُونَ (yaṣbūna) /jasˤ.buː.na/: inflection of صَبَا (ṣabā):\n## third-person masculine/feminine plural non-past active indicative\n## third-person feminine plural non-past active subjunctive/jussive\n# يُصْبَوْنَ (yuṣbawna) /jusˤ.baw.na/: third-person masculine plural non-past passive indicative of صَبَا (ṣabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṣbūna", "ṣabā", "yuṣbawna"],
-        "k": "صبا",
-        "yol": "kök"
-      },
-      {
-        "w": "يصبوا",
-        "u": "يصبوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يصبوا (form I)\n# يَصْبُوَا (yaṣbuwā) /jasˤ.bu.waː/: third-person masculine dual non-past active subjunctive/jussive of صَبَا (ṣabā)\n# يَصْبُوا (yaṣbū) /jasˤ.buː/: third-person masculine plural non-past active subjunctive/jussive of صَبَا (ṣabā)\n# يُصْبَوْا (yuṣbaw) /jusˤ.baw/: third-person masculine plural non-past passive subjunctive/jussive of صَبَا (ṣabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṣbuwā", "ṣabā", "yaṣbū"],
-        "k": "صبا",
-        "yol": "kök"
-      },
-      {
-        "w": "صبتا",
-        "u": "صبتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "صَبَتَا • (ṣabatā) (form I) /sˤa.ba.taː/\n# third-person feminine dual past active of صَبَا (ṣabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣabatā", "ṣabā"],
-        "k": "صبا",
-        "yol": "kök"
-      },
-      {
-        "w": "صبونا",
-        "u": "صبونا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَبَوْنَا • (ṣabawnā) (form I) /sˤa.baw.naː/\n# first-person plural past active of صَبَا (ṣabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣabawnā", "ṣabā"],
-        "k": "صبا",
-        "yol": "kök"
-      },
-      {
-        "w": "صبوتما",
-        "u": "صبوتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَبَوْتُمَا • (ṣabawtumā) (form I) /sˤa.baw.tu.maː/\n# second-person dual past active of صَبَا (ṣabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣabawtumā", "ṣabā"],
-        "k": "صبا",
-        "yol": "kök"
-      },
-      {
-        "w": "صبوتم",
-        "u": "صبوتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَبَوْتُمْ • (ṣabawtum) (form I) /sˤa.baw.tum/\n# second-person masculine plural past active of صَبَا (ṣabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣabawtum", "ṣabā"],
-        "k": "صبا",
-        "yol": "kök"
-      },
-      {
-        "w": "صبوتن",
-        "u": "صبوتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَبَوْتُنَّ • (ṣabawtunna) (form I) /sˤa.baw.tun.na/\n# second-person feminine plural past active of صَبَا (ṣabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣabawtunna", "ṣabā"],
-        "k": "صبا",
-        "yol": "kök"
-      },
-      {
-        "w": "أصبو",
-        "u": "أصبو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أصبو (form I)\n# أَصْبُو (ʔaṣbū) /ʔasˤ.buː/: first-person singular non-past active indicative of صَبَا (ṣabā)\n# أَصْبُوَ (ʔaṣbuwa) /ʔasˤ.bu.wa/: first-person singular non-past active subjunctive of صَبَا (ṣabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaṣbū", "ṣabā", "ʔaṣbuwa"],
-        "k": "صبا",
-        "yol": "kök"
-      },
-      {
-        "w": "صبون",
-        "u": "صبون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَبَوْنَ • (ṣabawna) (form I) /sˤa.baw.na/\n# third-person feminine plural past active of صَبَا (ṣabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣabawna", "ṣabā"],
-        "k": "صبا",
-        "yol": "kök"
-      },
-      {
-        "w": "تصبوان",
-        "u": "تصبوان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَصْبُوَانِ • (taṣbuwāni) (form I) /tasˤ.bu.waː.ni/\n# inflection of صَبَا (ṣabā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣbuwāni", "ṣabā"],
-        "k": "صبا",
-        "yol": "kök"
-      },
-      {
-        "w": "تصبو",
-        "u": "تصبو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تصبو (form I)\n# تَصْبُو (taṣbū) /tasˤ.buː/: inflection of صَبَا (ṣabā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَصْبُوَ (taṣbuwa) /tasˤ.bu.wa/: inflection of صَبَا (ṣabā):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣbū", "ṣabā", "taṣbuwa"],
-        "k": "صبا",
-        "yol": "kök"
-      },
-      {
-        "w": "يصبوان",
-        "u": "يصبوان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَصْبُوَانِ • (yaṣbuwāni) (form I) /jasˤ.bu.waː.ni/\n# third-person masculine dual non-past active indicative of صَبَا (ṣabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṣbuwāni", "ṣabā"],
-        "k": "صبا",
-        "yol": "kök"
-      },
-      {
-        "w": "يصبو",
-        "u": "يصبو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يصبو (form I)\n# يَصْبُو (yaṣbū) /jasˤ.buː/: third-person masculine singular non-past active indicative of صَبَا (ṣabā)\n# يَصْبُوَ (yaṣbuwa) /jasˤ.bu.wa/: third-person masculine singular non-past active subjunctive of صَبَا (ṣabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṣbū", "ṣabā", "yaṣbuwa"],
-        "k": "صبا",
-        "yol": "kök"
-      },
-      {
-        "w": "اصب",
-        "u": "اصب",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اُصْبُ • (uṣbu) (form I) /usˤ.bu/\n# second-person masculine singular imperative of صَبَا (ṣabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uṣbu", "ṣabā"],
-        "k": "صبا",
-        "yol": "kök"
-      },
-      {
-        "w": "نصبو",
-        "u": "نصبو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نصبو (form I)\n# نَصْبُو (naṣbū) /nasˤ.buː/: first-person plural non-past active indicative of صَبَا (ṣabā)\n# نَصْبُوَ (naṣbuwa) /nasˤ.bu.wa/: first-person plural non-past active subjunctive of صَبَا (ṣabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naṣbū", "ṣabā", "naṣbuwa"],
-        "k": "صبا",
-        "yol": "kök"
-      },
-      {
-        "w": "صبوت",
-        "u": "صبوت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صبوت (form I)\n# صَبَوْتُ (ṣabawtu) /sˤa.baw.tu/: first-person singular past active of صَبَا (ṣabā)\n# صَبَوْتَ (ṣabawta) /sˤa.baw.ta/: second-person masculine singular past active of صَبَا (ṣabā)\n# صَبَوْتِ (ṣabawti) /sˤa.baw.ti/: second-person feminine singular past active of صَبَا (ṣabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣabawtu", "ṣabā", "ṣabawta"],
-        "k": "صبا",
-        "yol": "kök"
-      },
-      {
-        "w": "اصبي",
-        "u": "اصبي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اُصْبِي • (uṣbī) (form I) /usˤ.biː/\n# second-person feminine singular imperative of صَبَا (ṣabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uṣbī", "ṣabā"],
-        "k": "صبا",
-        "yol": "kök"
-      },
-      {
-        "w": "اصبون",
-        "u": "اصبون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُصْبُونَ • (uṣbūna) (form I) /usˤ.buː.na/\n# second-person feminine plural imperative of صَبَا (ṣabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uṣbūna", "ṣabā"],
-        "k": "صبا",
-        "yol": "kök"
-      },
-      {
-        "w": "اصبوا",
-        "u": "اصبوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اصبوا (form I)\n# اُصْبُوَا (uṣbuwā) /usˤ.bu.waː/: second-person dual imperative of صَبَا (ṣabā)\n# اُصْبُوا (uṣbū) /usˤ.buː/: second-person masculine plural imperative of صَبَا (ṣabā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uṣbuwā", "ṣabā", "uṣbū"],
-        "k": "صبا",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "صب",
+  "ses": {
     "harf": "ص",
+    "fasil": "صب",
     "mahrec": "esaliyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "أصب",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "أصب (form I)\n# أَصْبُ (ʔaṣbu) /ʔasˤ.bu/: first-person singular non-past active jussive of صَبَا (ṣabā)\n# أُصْبَ (ʔuṣba) /ʔusˤ.ba/: first-person singular non-past passive jussive of صَبَا (ṣabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaṣbu", "ṣabā", "ʔuṣba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصب",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يصب (form I)\n# يَصْبُ (yaṣbu) /jasˤ.bu/: third-person masculine singular non-past active jussive of صَبَا (ṣabā)\n# يُصْبَ (yuṣba) /jusˤ.ba/: third-person masculine singular non-past passive jussive of صَبَا (ṣabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṣbu", "ṣabā", "yuṣba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصب",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تصب (form I)\n# تَصْبُ (taṣbu) /tasˤ.bu/: inflection of صَبَا (ṣabā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُصْبَ (tuṣba) /tusˤ.ba/: inflection of صَبَا (ṣabā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣbu", "ṣabā", "tuṣba"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صبت",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "صَبَتْ • (ṣabat) (form I) /sˤa.bat/\n# third-person feminine singular past active of صَبَا (ṣabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣabat", "ṣabā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصبين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تصبين (form I)\n# تَصْبِينَ (taṣbīna) /tasˤ.biː.na/: second-person feminine singular non-past active indicative of صَبَا (ṣabā)\n# تُصْبَيْنَ (tuṣbayna) /tusˤ.baj.na/: inflection of صَبَا (ṣabā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣbīna", "ṣabā", "tuṣbayna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصبي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تصبي (form I)\n# تَصْبِي (taṣbī) /tasˤ.biː/: second-person feminine singular non-past active subjunctive/jussive of صَبَا (ṣabā)\n# تُصْبَيْ (tuṣbay) /tusˤ.baj/: second-person feminine singular non-past passive subjunctive/jussive of صَبَا (ṣabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣbī", "ṣabā", "tuṣbay"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نصب",
+      "tur": "verb",
+      "etim_no": "5.1",
+      "baslik": "نصب (form I)\n# نَصْبُ (naṣbu) /nasˤ.bu/: first-person plural non-past active jussive of صَبَا (ṣabā)\n# نُصْبَ (nuṣba) /nusˤ.ba/: first-person plural non-past passive jussive of صَبَا (ṣabā)\n# نَصْبَ (naṣba) /nasˤ.ba/: first-person plural non-past active jussive of صَبِيَ (ṣabiya)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naṣbu", "ṣabā", "nuṣba"]
+    },
+    {
+      "madde": "تصبون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تصبون (form I)\n# تَصْبُونَ (taṣbūna) /tasˤ.buː.na/: inflection of صَبَا (ṣabā):\n## second-person masculine/feminine plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُصْبَوْنَ (tuṣbawna) /tusˤ.baw.na/: second-person masculine plural non-past passive indicative of صَبَا (ṣabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣbūna", "ṣabā", "tuṣbawna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصبوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تصبوا (form I)\n# تَصْبُوَا (taṣbuwā) /tasˤ.bu.waː/: inflection of صَبَا (ṣabā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تَصْبُوا (taṣbū) /tasˤ.buː/: second-person masculine plural non-past active subjunctive/jussive of صَبَا (ṣabā)\n# تُصْبَوْا (tuṣbaw) /tusˤ.baw/: second-person masculine plural non-past passive s",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣbuwā", "ṣabā", "taṣbū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صبوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "صبوا (form I)\n# صَبَوَا (ṣabawā) /sˤa.ba.waː/: third-person masculine dual past active of صَبَا (ṣabā)\n# صَبَوْا (ṣabaw) /sˤa.baw/: third-person masculine plural past active of صَبَا (ṣabā)\n# صُبُوا (ṣubū) /sˤu.buː/: third-person masculine plural past passive of صَبَا (ṣabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣabawā", "ṣabā", "ṣabaw"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصبون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يصبون (form I)\n# يَصْبُونَ (yaṣbūna) /jasˤ.buː.na/: inflection of صَبَا (ṣabā):\n## third-person masculine/feminine plural non-past active indicative\n## third-person feminine plural non-past active subjunctive/jussive\n# يُصْبَوْنَ (yuṣbawna) /jusˤ.baw.na/: third-person masculine plural non-past passive indicative of صَبَا (ṣabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṣbūna", "ṣabā", "yuṣbawna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصبوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يصبوا (form I)\n# يَصْبُوَا (yaṣbuwā) /jasˤ.bu.waː/: third-person masculine dual non-past active subjunctive/jussive of صَبَا (ṣabā)\n# يَصْبُوا (yaṣbū) /jasˤ.buː/: third-person masculine plural non-past active subjunctive/jussive of صَبَا (ṣabā)\n# يُصْبَوْا (yuṣbaw) /jusˤ.baw/: third-person masculine plural non-past passive subjunctive/jussive of صَبَا (ṣabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṣbuwā", "ṣabā", "yaṣbū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صبتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "صَبَتَا • (ṣabatā) (form I) /sˤa.ba.taː/\n# third-person feminine dual past active of صَبَا (ṣabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣabatā", "ṣabā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صبونا",
+      "tur": "verb",
+      "baslik": "صَبَوْنَا • (ṣabawnā) (form I) /sˤa.baw.naː/\n# first-person plural past active of صَبَا (ṣabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣabawnā", "ṣabā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صبوتما",
+      "tur": "verb",
+      "baslik": "صَبَوْتُمَا • (ṣabawtumā) (form I) /sˤa.baw.tu.maː/\n# second-person dual past active of صَبَا (ṣabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣabawtumā", "ṣabā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صبوتم",
+      "tur": "verb",
+      "baslik": "صَبَوْتُمْ • (ṣabawtum) (form I) /sˤa.baw.tum/\n# second-person masculine plural past active of صَبَا (ṣabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣabawtum", "ṣabā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صبوتن",
+      "tur": "verb",
+      "baslik": "صَبَوْتُنَّ • (ṣabawtunna) (form I) /sˤa.baw.tun.na/\n# second-person feminine plural past active of صَبَا (ṣabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣabawtunna", "ṣabā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أصبو",
+      "tur": "verb",
+      "baslik": "أصبو (form I)\n# أَصْبُو (ʔaṣbū) /ʔasˤ.buː/: first-person singular non-past active indicative of صَبَا (ṣabā)\n# أَصْبُوَ (ʔaṣbuwa) /ʔasˤ.bu.wa/: first-person singular non-past active subjunctive of صَبَا (ṣabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaṣbū", "ṣabā", "ʔaṣbuwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صبون",
+      "tur": "verb",
+      "baslik": "صَبَوْنَ • (ṣabawna) (form I) /sˤa.baw.na/\n# third-person feminine plural past active of صَبَا (ṣabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣabawna", "ṣabā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصبوان",
+      "tur": "verb",
+      "baslik": "تَصْبُوَانِ • (taṣbuwāni) (form I) /tasˤ.bu.waː.ni/\n# inflection of صَبَا (ṣabā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣbuwāni", "ṣabā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصبو",
+      "tur": "verb",
+      "baslik": "تصبو (form I)\n# تَصْبُو (taṣbū) /tasˤ.buː/: inflection of صَبَا (ṣabā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَصْبُوَ (taṣbuwa) /tasˤ.bu.wa/: inflection of صَبَا (ṣabā):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣbū", "ṣabā", "taṣbuwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصبوان",
+      "tur": "verb",
+      "baslik": "يَصْبُوَانِ • (yaṣbuwāni) (form I) /jasˤ.bu.waː.ni/\n# third-person masculine dual non-past active indicative of صَبَا (ṣabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṣbuwāni", "ṣabā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصبو",
+      "tur": "verb",
+      "baslik": "يصبو (form I)\n# يَصْبُو (yaṣbū) /jasˤ.buː/: third-person masculine singular non-past active indicative of صَبَا (ṣabā)\n# يَصْبُوَ (yaṣbuwa) /jasˤ.bu.wa/: third-person masculine singular non-past active subjunctive of صَبَا (ṣabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṣbū", "ṣabā", "yaṣbuwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اصب",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اُصْبُ • (uṣbu) (form I) /usˤ.bu/\n# second-person masculine singular imperative of صَبَا (ṣabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uṣbu", "ṣabā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نصبو",
+      "tur": "verb",
+      "baslik": "نصبو (form I)\n# نَصْبُو (naṣbū) /nasˤ.buː/: first-person plural non-past active indicative of صَبَا (ṣabā)\n# نَصْبُوَ (naṣbuwa) /nasˤ.bu.wa/: first-person plural non-past active subjunctive of صَبَا (ṣabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naṣbū", "ṣabā", "naṣbuwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صبوت",
+      "tur": "verb",
+      "baslik": "صبوت (form I)\n# صَبَوْتُ (ṣabawtu) /sˤa.baw.tu/: first-person singular past active of صَبَا (ṣabā)\n# صَبَوْتَ (ṣabawta) /sˤa.baw.ta/: second-person masculine singular past active of صَبَا (ṣabā)\n# صَبَوْتِ (ṣabawti) /sˤa.baw.ti/: second-person feminine singular past active of صَبَا (ṣabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣabawtu", "ṣabā", "ṣabawta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اصبي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اُصْبِي • (uṣbī) (form I) /usˤ.biː/\n# second-person feminine singular imperative of صَبَا (ṣabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uṣbī", "ṣabā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اصبون",
+      "tur": "verb",
+      "baslik": "اُصْبُونَ • (uṣbūna) (form I) /usˤ.buː.na/\n# second-person feminine plural imperative of صَبَا (ṣabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uṣbūna", "ṣabā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اصبوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اصبوا (form I)\n# اُصْبُوَا (uṣbuwā) /usˤ.bu.waː/: second-person dual imperative of صَبَا (ṣabā)\n# اُصْبُوا (uṣbū) /usˤ.buː/: second-person masculine plural imperative of صَبَا (ṣabā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uṣbuwā", "ṣabā", "uṣbū"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "صبا", "r7"]
+  ],
+  "mana": {
     "ince": "install.v.01",
     "orta": "verb.contact",
     "ust": "fiil ve hadise",
@@ -398,16 +291,11 @@
     "dayanak_tanim": "set up for use",
     "synset_sayisi": 8
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "constitute.v.01",
     "difficulty.n.04",
     "establish.v.02",
@@ -417,12 +305,10 @@
     "ordain.v.03",
     "stand.v.10"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

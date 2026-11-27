@@ -1,347 +1,281 @@
 {
   "kok": "ءجمل",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءجمل", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تجمل",
-        "u": "تجمل",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تجمل (form IV)\n# تُجْمِلُ (tujmilu) /tud͡ʒ.mi.lu/: inflection of أَجْمَلَ (ʔajmala):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُجْمَلُ (tujmalu) /tud͡ʒ.ma.lu/: inflection of أَجْمَلَ (ʔajmala):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indica",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujmilu", "ʔajmala", "tujmalu"],
-        "k": "أجمل",
-        "yol": "kök"
-      },
-      {
-        "w": "يجمل",
-        "u": "يجمل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يجمل (form IV)\n# يُجْمِلُ (yujmilu) /jud͡ʒ.mi.lu/: third-person masculine singular non-past active indicative of أَجْمَلَ (ʔajmala)\n# يُجْمَلُ (yujmalu) /jud͡ʒ.ma.lu/: third-person masculine singular non-past passive indicative of أَجْمَلَ (ʔajmala)\n# يُجْمِلَ (yujmila) /jud͡ʒ.mi.la/: third-person masculine singular non-past active subjunctive of أَجْمَلَ (ʔajmala)\n# يُجْمَلَ (yujmala) /jud͡ʒ.ma.l",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yujmilu", "ʔajmala", "yujmalu"],
-        "k": "أجمل",
-        "yol": "kök"
-      },
-      {
-        "w": "أجملت",
-        "u": "أجملت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجملت (form IV)\n# أَجْمَلْتُ (ʔajmaltu) /ʔad͡ʒ.mal.tu/: first-person singular past active of أَجْمَلَ (ʔajmala)\n# أَجْمَلْتَ (ʔajmalta) /ʔad͡ʒ.mal.ta/: second-person masculine singular past active of أَجْمَلَ (ʔajmala)\n# أَجْمَلْتِ (ʔajmalti) /ʔad͡ʒ.mal.ti/: second-person feminine singular past active of أَجْمَلَ (ʔajmala)\n# أَجْمَلَتْ (ʔajmalat) /ʔad͡ʒ.ma.lat/: third-person feminine singular past",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajmaltu", "ʔajmala", "ʔajmalta"],
-        "k": "أجمل",
-        "yol": "kök"
-      },
-      {
-        "w": "تجملين",
-        "u": "تجملين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تجملين (form IV)\n# تُجْمِلِينَ (tujmilīna) /tud͡ʒ.mi.liː.na/: second-person feminine singular non-past active indicative of أَجْمَلَ (ʔajmala)\n# تُجْمَلِينَ (tujmalīna) /tud͡ʒ.ma.liː.na/: second-person feminine singular non-past passive indicative of أَجْمَلَ (ʔajmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujmilīna", "ʔajmala", "tujmalīna"],
-        "k": "أجمل",
-        "yol": "kök"
-      },
-      {
-        "w": "تجملي",
-        "u": "تجملي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تجملي (form IV)\n# تُجْمِلِي (tujmilī) /tud͡ʒ.mi.liː/: second-person feminine singular non-past active subjunctive/jussive of أَجْمَلَ (ʔajmala)\n# تُجْمَلِي (tujmalī) /tud͡ʒ.ma.liː/: second-person feminine singular non-past passive subjunctive/jussive of أَجْمَلَ (ʔajmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujmilī", "ʔajmala", "tujmalī"],
-        "k": "أجمل",
-        "yol": "kök"
-      },
-      {
-        "w": "أجملي",
-        "u": "أجملي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَجْمِلِي • (ʔajmilī) (form IV) /ʔad͡ʒ.mi.liː/\n# second-person feminine singular imperative of أَجْمَلَ (ʔajmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajmilī", "ʔajmala"],
-        "k": "أجمل",
-        "yol": "kök"
-      },
-      {
-        "w": "أجملنا",
-        "u": "أجملنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجملنا (form IV)\n# أَجْمَلْنَا (ʔajmalnā) /ʔad͡ʒ.mal.naː/: first-person plural past active of أَجْمَلَ (ʔajmala)\n# أُجْمِلْنَا (ʔujmilnā) /ʔud͡ʒ.mil.naː/: first-person plural past passive of أَجْمَلَ (ʔajmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajmalnā", "ʔajmala", "ʔujmilnā"],
-        "k": "أجمل",
-        "yol": "kök"
-      },
-      {
-        "w": "نجمل",
-        "u": "نجمل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نجمل (form IV)\n# نُجْمِلُ (nujmilu) /nud͡ʒ.mi.lu/: first-person plural non-past active indicative of أَجْمَلَ (ʔajmala)\n# نُجْمَلُ (nujmalu) /nud͡ʒ.ma.lu/: first-person plural non-past passive indicative of أَجْمَلَ (ʔajmala)\n# نُجْمِلَ (nujmila) /nud͡ʒ.mi.la/: first-person plural non-past active subjunctive of أَجْمَلَ (ʔajmala)\n# نُجْمَلَ (nujmala) /nud͡ʒ.ma.la/: first-person plural non-past pas",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nujmilu", "ʔajmala", "nujmalu"],
-        "k": "أجمل",
-        "yol": "kök"
-      },
-      {
-        "w": "أجملتم",
-        "u": "أجملتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجملتم (form IV)\n# أَجْمَلْتُمْ (ʔajmaltum) /ʔad͡ʒ.mal.tum/: second-person masculine plural past active of أَجْمَلَ (ʔajmala)\n# أُجْمِلْتُمْ (ʔujmiltum) /ʔud͡ʒ.mil.tum/: second-person masculine plural past passive of أَجْمَلَ (ʔajmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajmaltum", "ʔajmala", "ʔujmiltum"],
-        "k": "أجمل",
-        "yol": "kök"
-      },
-      {
-        "w": "تجملون",
-        "u": "تجملون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تجملون (form IV)\n# تُجْمِلُونَ (tujmilūna) /tud͡ʒ.mi.luː.na/: second-person masculine plural non-past active indicative of أَجْمَلَ (ʔajmala)\n# تُجْمَلُونَ (tujmalūna) /tud͡ʒ.ma.luː.na/: second-person masculine plural non-past passive indicative of أَجْمَلَ (ʔajmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujmilūna", "ʔajmala", "tujmalūna"],
-        "k": "أجمل",
-        "yol": "kök"
-      },
-      {
-        "w": "أجملوا",
-        "u": "أجملوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجملوا (form IV)\n# أَجْمَلُوا (ʔajmalū) /ʔad͡ʒ.ma.luː/: third-person masculine plural past active of أَجْمَلَ (ʔajmala)\n# أُجْمِلُوا (ʔujmilū) /ʔud͡ʒ.mi.luː/: third-person masculine plural past passive of أَجْمَلَ (ʔajmala)\n# أَجْمِلُوا (ʔajmilū) /ʔad͡ʒ.mi.luː/: second-person masculine plural imperative of أَجْمَلَ (ʔajmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajmalū", "ʔajmala", "ʔujmilū"],
-        "k": "أجمل",
-        "yol": "kök"
-      },
-      {
-        "w": "يجملون",
-        "u": "يجملون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يجملون (form IV)\n# يُجْمِلُونَ (yujmilūna) /jud͡ʒ.mi.luː.na/: third-person masculine plural non-past active indicative of أَجْمَلَ (ʔajmala)\n# يُجْمَلُونَ (yujmalūna) /jud͡ʒ.ma.luː.na/: third-person masculine plural non-past passive indicative of أَجْمَلَ (ʔajmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yujmilūna", "ʔajmala", "yujmalūna"],
-        "k": "أجمل",
-        "yol": "kök"
-      },
-      {
-        "w": "يجملوا",
-        "u": "يجملوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يجملوا (form IV)\n# يُجْمِلُوا (yujmilū) /jud͡ʒ.mi.luː/: third-person masculine plural non-past active subjunctive/jussive of أَجْمَلَ (ʔajmala)\n# يُجْمَلُوا (yujmalū) /jud͡ʒ.ma.luː/: third-person masculine plural non-past passive subjunctive/jussive of أَجْمَلَ (ʔajmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yujmilū", "ʔajmala", "yujmalū"],
-        "k": "أجمل",
-        "yol": "kök"
-      },
-      {
-        "w": "تجملوا",
-        "u": "تجملوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تجملوا (form IV)\n# تُجْمِلُوا (tujmilū) /tud͡ʒ.mi.luː/: second-person masculine plural non-past active subjunctive/jussive of أَجْمَلَ (ʔajmala)\n# تُجْمَلُوا (tujmalū) /tud͡ʒ.ma.luː/: second-person masculine plural non-past passive subjunctive/jussive of أَجْمَلَ (ʔajmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujmilū", "ʔajmala", "tujmalū"],
-        "k": "أجمل",
-        "yol": "kök"
-      },
-      {
-        "w": "أجملتن",
-        "u": "أجملتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجملتن (form IV)\n# أَجْمَلْتُنَّ (ʔajmaltunna) /ʔad͡ʒ.mal.tun.na/: second-person feminine plural past active of أَجْمَلَ (ʔajmala)\n# أُجْمِلْتُنَّ (ʔujmiltunna) /ʔud͡ʒ.mil.tun.na/: second-person feminine plural past passive of أَجْمَلَ (ʔajmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajmaltunna", "ʔajmala", "ʔujmiltunna"],
-        "k": "أجمل",
-        "yol": "kök"
-      },
-      {
-        "w": "تجملن",
-        "u": "تجملن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تجملن (form IV)\n# تُجْمِلْنَ (tujmilna) /tud͡ʒ.mil.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَجْمَلَ (ʔajmala)\n# تُجْمَلْنَ (tujmalna) /tud͡ʒ.mal.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَجْمَلَ (ʔajmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujmilna", "ʔajmala", "tujmalna"],
-        "k": "أجمل",
-        "yol": "kök"
-      },
-      {
-        "w": "أجملن",
-        "u": "أجملن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجملن (form IV)\n# أَجْمَلْنَ (ʔajmalna) /ʔad͡ʒ.mal.na/: third-person feminine plural past active of أَجْمَلَ (ʔajmala)\n# أُجْمِلْنَ (ʔujmilna) /ʔud͡ʒ.mil.na/: third-person feminine plural past passive of أَجْمَلَ (ʔajmala)\n# أَجْمِلْنَ (ʔajmilna) /ʔad͡ʒ.mil.na/: second-person feminine plural imperative of أَجْمَلَ (ʔajmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajmalna", "ʔajmala", "ʔujmilna"],
-        "k": "أجمل",
-        "yol": "kök"
-      },
-      {
-        "w": "يجملن",
-        "u": "يجملن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يجملن (form IV)\n# يُجْمِلْنَ (yujmilna) /jud͡ʒ.mil.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَجْمَلَ (ʔajmala)\n# يُجْمَلْنَ (yujmalna) /jud͡ʒ.mal.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَجْمَلَ (ʔajmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yujmilna", "ʔajmala", "yujmalna"],
-        "k": "أجمل",
-        "yol": "kök"
-      },
-      {
-        "w": "أجملتما",
-        "u": "أجملتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجملتما (form IV)\n# أَجْمَلْتُمَا (ʔajmaltumā) /ʔad͡ʒ.mal.tu.maː/: second-person dual past active of أَجْمَلَ (ʔajmala)\n# أُجْمِلْتُمَا (ʔujmiltumā) /ʔud͡ʒ.mil.tu.maː/: second-person dual past passive of أَجْمَلَ (ʔajmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajmaltumā", "ʔajmala", "ʔujmiltumā"],
-        "k": "أجمل",
-        "yol": "kök"
-      },
-      {
-        "w": "أجملا",
-        "u": "أجملا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجملا (form IV)\n# أَجْمَلَا (ʔajmalā) /ʔad͡ʒ.ma.laː/: third-person masculine dual past active of أَجْمَلَ (ʔajmala)\n# أُجْمِلَا (ʔujmilā) /ʔud͡ʒ.mi.laː/: third-person masculine dual past passive of أَجْمَلَ (ʔajmala)\n# أَجْمِلَا (ʔajmilā) /ʔad͡ʒ.mi.laː/: second-person dual imperative of أَجْمَلَ (ʔajmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajmalā", "ʔajmala", "ʔujmilā"],
-        "k": "أجمل",
-        "yol": "kök"
-      },
-      {
-        "w": "يجملان",
-        "u": "يجملان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يجملان (form IV)\n# يُجْمِلَانِ (yujmilāni) /jud͡ʒ.mi.laː.ni/: third-person masculine dual non-past active indicative of أَجْمَلَ (ʔajmala)\n# يُجْمَلَانِ (yujmalāni) /jud͡ʒ.ma.laː.ni/: third-person masculine dual non-past passive indicative of أَجْمَلَ (ʔajmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yujmilāni", "ʔajmala", "yujmalāni"],
-        "k": "أجمل",
-        "yol": "kök"
-      },
-      {
-        "w": "تجملان",
-        "u": "تجملان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تجملان (form IV)\n# تُجْمِلَانِ (tujmilāni) /tud͡ʒ.mi.laː.ni/: inflection of أَجْمَلَ (ʔajmala):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُجْمَلَانِ (tujmalāni) /tud͡ʒ.ma.laː.ni/: inflection of أَجْمَلَ (ʔajmala):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujmilāni", "ʔajmala", "tujmalāni"],
-        "k": "أجمل",
-        "yol": "kök"
-      },
-      {
-        "w": "أجملتا",
-        "u": "أجملتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أجملتا (form IV)\n# أَجْمَلَتَا (ʔajmalatā) /ʔad͡ʒ.ma.la.taː/: third-person feminine dual past active of أَجْمَلَ (ʔajmala)\n# أُجْمِلَتَا (ʔujmilatā) /ʔud͡ʒ.mi.la.taː/: third-person feminine dual past passive of أَجْمَلَ (ʔajmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔajmalatā", "ʔajmala", "ʔujmilatā"],
-        "k": "أجمل",
-        "yol": "kök"
-      },
-      {
-        "w": "تجملا",
-        "u": "تجملا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تجملا (form IV)\n# تُجْمِلَا (tujmilā) /tud͡ʒ.mi.laː/: inflection of أَجْمَلَ (ʔajmala):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُجْمَلَا (tujmalā) /tud͡ʒ.ma.laː/: inflection of أَجْمَلَ (ʔajmala):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctiv",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tujmilā", "ʔajmala", "tujmalā"],
-        "k": "أجمل",
-        "yol": "kök"
-      },
-      {
-        "w": "يجملا",
-        "u": "يجملا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يجملا (form IV)\n# يُجْمِلَا (yujmilā) /jud͡ʒ.mi.laː/: third-person masculine dual non-past active subjunctive/jussive of أَجْمَلَ (ʔajmala)\n# يُجْمَلَا (yujmalā) /jud͡ʒ.ma.laː/: third-person masculine dual non-past passive subjunctive/jussive of أَجْمَلَ (ʔajmala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yujmilā", "ʔajmala", "yujmalā"],
-        "k": "أجمل",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "جم",
+  "ses": {
     "harf": "ء",
+    "fasil": "جم",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "تجمل",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تجمل (form IV)\n# تُجْمِلُ (tujmilu) /tud͡ʒ.mi.lu/: inflection of أَجْمَلَ (ʔajmala):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُجْمَلُ (tujmalu) /tud͡ʒ.ma.lu/: inflection of أَجْمَلَ (ʔajmala):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indica",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujmilu", "ʔajmala", "tujmalu"],
+      "kok_yazilis": "أجمل"
+    },
+    {
+      "madde": "يجمل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يجمل (form IV)\n# يُجْمِلُ (yujmilu) /jud͡ʒ.mi.lu/: third-person masculine singular non-past active indicative of أَجْمَلَ (ʔajmala)\n# يُجْمَلُ (yujmalu) /jud͡ʒ.ma.lu/: third-person masculine singular non-past passive indicative of أَجْمَلَ (ʔajmala)\n# يُجْمِلَ (yujmila) /jud͡ʒ.mi.la/: third-person masculine singular non-past active subjunctive of أَجْمَلَ (ʔajmala)\n# يُجْمَلَ (yujmala) /jud͡ʒ.ma.l",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yujmilu", "ʔajmala", "yujmalu"],
+      "kok_yazilis": "أجمل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أجملت",
+      "tur": "verb",
+      "baslik": "أجملت (form IV)\n# أَجْمَلْتُ (ʔajmaltu) /ʔad͡ʒ.mal.tu/: first-person singular past active of أَجْمَلَ (ʔajmala)\n# أَجْمَلْتَ (ʔajmalta) /ʔad͡ʒ.mal.ta/: second-person masculine singular past active of أَجْمَلَ (ʔajmala)\n# أَجْمَلْتِ (ʔajmalti) /ʔad͡ʒ.mal.ti/: second-person feminine singular past active of أَجْمَلَ (ʔajmala)\n# أَجْمَلَتْ (ʔajmalat) /ʔad͡ʒ.ma.lat/: third-person feminine singular past",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajmaltu", "ʔajmala", "ʔajmalta"],
+      "kok_yazilis": "أجمل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجملين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تجملين (form IV)\n# تُجْمِلِينَ (tujmilīna) /tud͡ʒ.mi.liː.na/: second-person feminine singular non-past active indicative of أَجْمَلَ (ʔajmala)\n# تُجْمَلِينَ (tujmalīna) /tud͡ʒ.ma.liː.na/: second-person feminine singular non-past passive indicative of أَجْمَلَ (ʔajmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujmilīna", "ʔajmala", "tujmalīna"],
+      "kok_yazilis": "أجمل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجملي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تجملي (form IV)\n# تُجْمِلِي (tujmilī) /tud͡ʒ.mi.liː/: second-person feminine singular non-past active subjunctive/jussive of أَجْمَلَ (ʔajmala)\n# تُجْمَلِي (tujmalī) /tud͡ʒ.ma.liː/: second-person feminine singular non-past passive subjunctive/jussive of أَجْمَلَ (ʔajmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujmilī", "ʔajmala", "tujmalī"],
+      "kok_yazilis": "أجمل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أجملي",
+      "tur": "verb",
+      "baslik": "أَجْمِلِي • (ʔajmilī) (form IV) /ʔad͡ʒ.mi.liː/\n# second-person feminine singular imperative of أَجْمَلَ (ʔajmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajmilī", "ʔajmala"],
+      "kok_yazilis": "أجمل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أجملنا",
+      "tur": "verb",
+      "baslik": "أجملنا (form IV)\n# أَجْمَلْنَا (ʔajmalnā) /ʔad͡ʒ.mal.naː/: first-person plural past active of أَجْمَلَ (ʔajmala)\n# أُجْمِلْنَا (ʔujmilnā) /ʔud͡ʒ.mil.naː/: first-person plural past passive of أَجْمَلَ (ʔajmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajmalnā", "ʔajmala", "ʔujmilnā"],
+      "kok_yazilis": "أجمل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نجمل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نجمل (form IV)\n# نُجْمِلُ (nujmilu) /nud͡ʒ.mi.lu/: first-person plural non-past active indicative of أَجْمَلَ (ʔajmala)\n# نُجْمَلُ (nujmalu) /nud͡ʒ.ma.lu/: first-person plural non-past passive indicative of أَجْمَلَ (ʔajmala)\n# نُجْمِلَ (nujmila) /nud͡ʒ.mi.la/: first-person plural non-past active subjunctive of أَجْمَلَ (ʔajmala)\n# نُجْمَلَ (nujmala) /nud͡ʒ.ma.la/: first-person plural non-past pas",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nujmilu", "ʔajmala", "nujmalu"],
+      "kok_yazilis": "أجمل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أجملتم",
+      "tur": "verb",
+      "baslik": "أجملتم (form IV)\n# أَجْمَلْتُمْ (ʔajmaltum) /ʔad͡ʒ.mal.tum/: second-person masculine plural past active of أَجْمَلَ (ʔajmala)\n# أُجْمِلْتُمْ (ʔujmiltum) /ʔud͡ʒ.mil.tum/: second-person masculine plural past passive of أَجْمَلَ (ʔajmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajmaltum", "ʔajmala", "ʔujmiltum"],
+      "kok_yazilis": "أجمل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجملون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تجملون (form IV)\n# تُجْمِلُونَ (tujmilūna) /tud͡ʒ.mi.luː.na/: second-person masculine plural non-past active indicative of أَجْمَلَ (ʔajmala)\n# تُجْمَلُونَ (tujmalūna) /tud͡ʒ.ma.luː.na/: second-person masculine plural non-past passive indicative of أَجْمَلَ (ʔajmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujmilūna", "ʔajmala", "tujmalūna"],
+      "kok_yazilis": "أجمل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أجملوا",
+      "tur": "verb",
+      "baslik": "أجملوا (form IV)\n# أَجْمَلُوا (ʔajmalū) /ʔad͡ʒ.ma.luː/: third-person masculine plural past active of أَجْمَلَ (ʔajmala)\n# أُجْمِلُوا (ʔujmilū) /ʔud͡ʒ.mi.luː/: third-person masculine plural past passive of أَجْمَلَ (ʔajmala)\n# أَجْمِلُوا (ʔajmilū) /ʔad͡ʒ.mi.luː/: second-person masculine plural imperative of أَجْمَلَ (ʔajmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajmalū", "ʔajmala", "ʔujmilū"],
+      "kok_yazilis": "أجمل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يجملون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يجملون (form IV)\n# يُجْمِلُونَ (yujmilūna) /jud͡ʒ.mi.luː.na/: third-person masculine plural non-past active indicative of أَجْمَلَ (ʔajmala)\n# يُجْمَلُونَ (yujmalūna) /jud͡ʒ.ma.luː.na/: third-person masculine plural non-past passive indicative of أَجْمَلَ (ʔajmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yujmilūna", "ʔajmala", "yujmalūna"],
+      "kok_yazilis": "أجمل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يجملوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يجملوا (form IV)\n# يُجْمِلُوا (yujmilū) /jud͡ʒ.mi.luː/: third-person masculine plural non-past active subjunctive/jussive of أَجْمَلَ (ʔajmala)\n# يُجْمَلُوا (yujmalū) /jud͡ʒ.ma.luː/: third-person masculine plural non-past passive subjunctive/jussive of أَجْمَلَ (ʔajmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yujmilū", "ʔajmala", "yujmalū"],
+      "kok_yazilis": "أجمل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجملوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تجملوا (form IV)\n# تُجْمِلُوا (tujmilū) /tud͡ʒ.mi.luː/: second-person masculine plural non-past active subjunctive/jussive of أَجْمَلَ (ʔajmala)\n# تُجْمَلُوا (tujmalū) /tud͡ʒ.ma.luː/: second-person masculine plural non-past passive subjunctive/jussive of أَجْمَلَ (ʔajmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujmilū", "ʔajmala", "tujmalū"],
+      "kok_yazilis": "أجمل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أجملتن",
+      "tur": "verb",
+      "baslik": "أجملتن (form IV)\n# أَجْمَلْتُنَّ (ʔajmaltunna) /ʔad͡ʒ.mal.tun.na/: second-person feminine plural past active of أَجْمَلَ (ʔajmala)\n# أُجْمِلْتُنَّ (ʔujmiltunna) /ʔud͡ʒ.mil.tun.na/: second-person feminine plural past passive of أَجْمَلَ (ʔajmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajmaltunna", "ʔajmala", "ʔujmiltunna"],
+      "kok_yazilis": "أجمل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجملن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تجملن (form IV)\n# تُجْمِلْنَ (tujmilna) /tud͡ʒ.mil.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَجْمَلَ (ʔajmala)\n# تُجْمَلْنَ (tujmalna) /tud͡ʒ.mal.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَجْمَلَ (ʔajmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujmilna", "ʔajmala", "tujmalna"],
+      "kok_yazilis": "أجمل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أجملن",
+      "tur": "verb",
+      "baslik": "أجملن (form IV)\n# أَجْمَلْنَ (ʔajmalna) /ʔad͡ʒ.mal.na/: third-person feminine plural past active of أَجْمَلَ (ʔajmala)\n# أُجْمِلْنَ (ʔujmilna) /ʔud͡ʒ.mil.na/: third-person feminine plural past passive of أَجْمَلَ (ʔajmala)\n# أَجْمِلْنَ (ʔajmilna) /ʔad͡ʒ.mil.na/: second-person feminine plural imperative of أَجْمَلَ (ʔajmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajmalna", "ʔajmala", "ʔujmilna"],
+      "kok_yazilis": "أجمل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يجملن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يجملن (form IV)\n# يُجْمِلْنَ (yujmilna) /jud͡ʒ.mil.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَجْمَلَ (ʔajmala)\n# يُجْمَلْنَ (yujmalna) /jud͡ʒ.mal.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَجْمَلَ (ʔajmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yujmilna", "ʔajmala", "yujmalna"],
+      "kok_yazilis": "أجمل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أجملتما",
+      "tur": "verb",
+      "baslik": "أجملتما (form IV)\n# أَجْمَلْتُمَا (ʔajmaltumā) /ʔad͡ʒ.mal.tu.maː/: second-person dual past active of أَجْمَلَ (ʔajmala)\n# أُجْمِلْتُمَا (ʔujmiltumā) /ʔud͡ʒ.mil.tu.maː/: second-person dual past passive of أَجْمَلَ (ʔajmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajmaltumā", "ʔajmala", "ʔujmiltumā"],
+      "kok_yazilis": "أجمل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أجملا",
+      "tur": "verb",
+      "baslik": "أجملا (form IV)\n# أَجْمَلَا (ʔajmalā) /ʔad͡ʒ.ma.laː/: third-person masculine dual past active of أَجْمَلَ (ʔajmala)\n# أُجْمِلَا (ʔujmilā) /ʔud͡ʒ.mi.laː/: third-person masculine dual past passive of أَجْمَلَ (ʔajmala)\n# أَجْمِلَا (ʔajmilā) /ʔad͡ʒ.mi.laː/: second-person dual imperative of أَجْمَلَ (ʔajmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajmalā", "ʔajmala", "ʔujmilā"],
+      "kok_yazilis": "أجمل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يجملان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يجملان (form IV)\n# يُجْمِلَانِ (yujmilāni) /jud͡ʒ.mi.laː.ni/: third-person masculine dual non-past active indicative of أَجْمَلَ (ʔajmala)\n# يُجْمَلَانِ (yujmalāni) /jud͡ʒ.ma.laː.ni/: third-person masculine dual non-past passive indicative of أَجْمَلَ (ʔajmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yujmilāni", "ʔajmala", "yujmalāni"],
+      "kok_yazilis": "أجمل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجملان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تجملان (form IV)\n# تُجْمِلَانِ (tujmilāni) /tud͡ʒ.mi.laː.ni/: inflection of أَجْمَلَ (ʔajmala):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُجْمَلَانِ (tujmalāni) /tud͡ʒ.ma.laː.ni/: inflection of أَجْمَلَ (ʔajmala):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujmilāni", "ʔajmala", "tujmalāni"],
+      "kok_yazilis": "أجمل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أجملتا",
+      "tur": "verb",
+      "baslik": "أجملتا (form IV)\n# أَجْمَلَتَا (ʔajmalatā) /ʔad͡ʒ.ma.la.taː/: third-person feminine dual past active of أَجْمَلَ (ʔajmala)\n# أُجْمِلَتَا (ʔujmilatā) /ʔud͡ʒ.mi.la.taː/: third-person feminine dual past passive of أَجْمَلَ (ʔajmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔajmalatā", "ʔajmala", "ʔujmilatā"],
+      "kok_yazilis": "أجمل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجملا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تجملا (form IV)\n# تُجْمِلَا (tujmilā) /tud͡ʒ.mi.laː/: inflection of أَجْمَلَ (ʔajmala):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُجْمَلَا (tujmalā) /tud͡ʒ.ma.laː/: inflection of أَجْمَلَ (ʔajmala):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctiv",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tujmilā", "ʔajmala", "tujmalā"],
+      "kok_yazilis": "أجمل",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يجملا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يجملا (form IV)\n# يُجْمِلَا (yujmilā) /jud͡ʒ.mi.laː/: third-person masculine dual non-past active subjunctive/jussive of أَجْمَلَ (ʔajmala)\n# يُجْمَلَا (yujmalā) /jud͡ʒ.ma.laː/: third-person masculine dual non-past passive subjunctive/jussive of أَجْمَلَ (ʔajmala)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yujmilā", "ʔajmala", "yujmalā"],
+      "kok_yazilis": "أجمل",
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ءجمل", "r6"]
+  ],
+  "mana": {
     "ince": "groom.v.03",
     "orta": "verb.body",
     "ust": "canlı ve beden",
@@ -349,22 +283,15 @@
     "dayanak_tanim": "apply make-up or cosmetics to one's face to appear prettier",
     "synset_sayisi": 2
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["make_up.v.09", "refrain.v.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["make_up.v.09", "refrain.v.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

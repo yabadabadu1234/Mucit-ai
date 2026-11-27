@@ -1,365 +1,287 @@
 {
   "kok": "ءهرق",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءهرق", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أهرقتما",
-        "u": "أهرقتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أهرقتما (form IV)\n# أَهْرَقْتُمَا (ʔahraqtumā) /ʔah.raq.tu.maː/: second-person dual past active of أَهْرَقَ (ʔahraqa)\n# أُهْرِقْتُمَا (ʔuhriqtumā) /ʔuh.riq.tu.maː/: second-person dual past passive of أَهْرَقَ (ʔahraqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔahraqtumā", "ʔahraqa", "ʔuhriqtumā"],
-        "k": "أهرق",
-        "yol": "kök"
-      },
-      {
-        "w": "أهرقا",
-        "u": "أهرقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أهرقا (form IV)\n# أَهْرَقَا (ʔahraqā) /ʔah.ra.qaː/: third-person masculine dual past active of أَهْرَقَ (ʔahraqa)\n# أُهْرِقَا (ʔuhriqā) /ʔuh.ri.qaː/: third-person masculine dual past passive of أَهْرَقَ (ʔahraqa)\n# أَهْرِقَا (ʔahriqā) /ʔah.ri.qaː/: second-person dual imperative of أَهْرَقَ (ʔahraqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔahraqā", "ʔahraqa", "ʔuhriqā"],
-        "k": "أهرق",
-        "yol": "kök"
-      },
-      {
-        "w": "أهرقت",
-        "u": "أهرقت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أهرقت (form IV)\n# أَهْرَقْتُ (ʔahraqtu) /ʔah.raq.tu/: first-person singular past active of أَهْرَقَ (ʔahraqa)\n# أَهْرَقْتَ (ʔahraqta) /ʔah.raq.ta/: second-person masculine singular past active of أَهْرَقَ (ʔahraqa)\n# أَهْرَقْتِ (ʔahraqti) /ʔah.raq.ti/: second-person feminine singular past active of أَهْرَقَ (ʔahraqa)\n# أَهْرَقَتْ (ʔahraqat) /ʔah.ra.qat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔahraqtu", "ʔahraqa", "ʔahraqta"],
-        "k": "أهرق",
-        "yol": "kök"
-      },
-      {
-        "w": "أهرقنا",
-        "u": "أهرقنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أهرقنا (form IV)\n# أَهْرَقْنَا (ʔahraqnā) /ʔah.raq.naː/: first-person plural past active of أَهْرَقَ (ʔahraqa)\n# أُهْرِقْنَا (ʔuhriqnā) /ʔuh.riq.naː/: first-person plural past passive of أَهْرَقَ (ʔahraqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔahraqnā", "ʔahraqa", "ʔuhriqnā"],
-        "k": "أهرق",
-        "yol": "kök"
-      },
-      {
-        "w": "أهرقتا",
-        "u": "أهرقتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أهرقتا (form IV)\n# أَهْرَقَتَا (ʔahraqatā) /ʔah.ra.qa.taː/: third-person feminine dual past active of أَهْرَقَ (ʔahraqa)\n# أُهْرِقَتَا (ʔuhriqatā) /ʔuh.ri.qa.taː/: third-person feminine dual past passive of أَهْرَقَ (ʔahraqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔahraqatā", "ʔahraqa", "ʔuhriqatā"],
-        "k": "أهرق",
-        "yol": "kök"
-      },
-      {
-        "w": "أهرقتم",
-        "u": "أهرقتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أهرقتم (form IV)\n# أَهْرَقْتُمْ (ʔahraqtum) /ʔah.raq.tum/: second-person masculine plural past active of أَهْرَقَ (ʔahraqa)\n# أُهْرِقْتُمْ (ʔuhriqtum) /ʔuh.riq.tum/: second-person masculine plural past passive of أَهْرَقَ (ʔahraqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔahraqtum", "ʔahraqa", "ʔuhriqtum"],
-        "k": "أهرق",
-        "yol": "kök"
-      },
-      {
-        "w": "أهرقتن",
-        "u": "أهرقتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أهرقتن (form IV)\n# أَهْرَقْتُنَّ (ʔahraqtunna) /ʔah.raq.tun.na/: second-person feminine plural past active of أَهْرَقَ (ʔahraqa)\n# أُهْرِقْتُنَّ (ʔuhriqtunna) /ʔuh.riq.tun.na/: second-person feminine plural past passive of أَهْرَقَ (ʔahraqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔahraqtunna", "ʔahraqa", "ʔuhriqtunna"],
-        "k": "أهرق",
-        "yol": "kök"
-      },
-      {
-        "w": "أهرقن",
-        "u": "أهرقن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أهرقن (form IV)\n# أَهْرَقْنَ (ʔahraqna) /ʔah.raq.na/: third-person feminine plural past active of أَهْرَقَ (ʔahraqa)\n# أُهْرِقْنَ (ʔuhriqna) /ʔuh.riq.na/: third-person feminine plural past passive of أَهْرَقَ (ʔahraqa)\n# أَهْرِقْنَ (ʔahriqna) /ʔah.riq.na/: second-person feminine plural imperative of أَهْرَقَ (ʔahraqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔahraqna", "ʔahraqa", "ʔuhriqna"],
-        "k": "أهرق",
-        "yol": "kök"
-      },
-      {
-        "w": "تهرق",
-        "u": "تهرق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تهرق (form IV)\n# تُهْرِقُ (tuhriqu) /tuh.ri.qu/: inflection of أَهْرَقَ (ʔahraqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُهْرَقُ (tuhraqu) /tuh.ra.qu/: inflection of أَهْرَقَ (ʔahraqa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuhriqu", "ʔahraqa", "tuhraqu"],
-        "k": "أهرق",
-        "yol": "kök"
-      },
-      {
-        "w": "أهرقوا",
-        "u": "أهرقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أهرقوا (form IV)\n# أَهْرَقُوا (ʔahraqū) /ʔah.ra.quː/: third-person masculine plural past active of أَهْرَقَ (ʔahraqa)\n# أُهْرِقُوا (ʔuhriqū) /ʔuh.ri.quː/: third-person masculine plural past passive of أَهْرَقَ (ʔahraqa)\n# أَهْرِقُوا (ʔahriqū) /ʔah.ri.quː/: second-person masculine plural imperative of أَهْرَقَ (ʔahraqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔahraqū", "ʔahraqa", "ʔuhriqū"],
-        "k": "أهرق",
-        "yol": "kök"
-      },
-      {
-        "w": "تهرقان",
-        "u": "تهرقان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تهرقان (form IV)\n# تُهْرِقَانِ (tuhriqāni) /tuh.ri.qaː.ni/: inflection of أَهْرَقَ (ʔahraqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُهْرَقَانِ (tuhraqāni) /tuh.ra.qaː.ni/: inflection of أَهْرَقَ (ʔahraqa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuhriqāni", "ʔahraqa", "tuhraqāni"],
-        "k": "أهرق",
-        "yol": "kök"
-      },
-      {
-        "w": "تهرقين",
-        "u": "تهرقين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تهرقين (form IV)\n# تُهْرِقِينَ (tuhriqīna) /tuh.ri.qiː.na/: second-person feminine singular non-past active indicative of أَهْرَقَ (ʔahraqa)\n# تُهْرَقِينَ (tuhraqīna) /tuh.ra.qiː.na/: second-person feminine singular non-past passive indicative of أَهْرَقَ (ʔahraqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuhriqīna", "ʔahraqa", "tuhraqīna"],
-        "k": "أهرق",
-        "yol": "kök"
-      },
-      {
-        "w": "يهرق",
-        "u": "يهرق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يهرق (form IV)\n# يُهْرِقُ (yuhriqu) /juh.ri.qu/: third-person masculine singular non-past active indicative of أَهْرَقَ (ʔahraqa)\n# يُهْرَقُ (yuhraqu) /juh.ra.qu/: third-person masculine singular non-past passive indicative of أَهْرَقَ (ʔahraqa)\n# يُهْرِقَ (yuhriqa) /juh.ri.qa/: third-person masculine singular non-past active subjunctive of أَهْرَقَ (ʔahraqa)\n# يُهْرَقَ (yuhraqa) /juh.ra.qa/: thir",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuhriqu", "ʔahraqa", "yuhraqu"],
-        "k": "أهرق",
-        "yol": "kök"
-      },
-      {
-        "w": "يهرقان",
-        "u": "يهرقان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يهرقان (form IV)\n# يُهْرِقَانِ (yuhriqāni) /juh.ri.qaː.ni/: third-person masculine dual non-past active indicative of أَهْرَقَ (ʔahraqa)\n# يُهْرَقَانِ (yuhraqāni) /juh.ra.qaː.ni/: third-person masculine dual non-past passive indicative of أَهْرَقَ (ʔahraqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuhriqāni", "ʔahraqa", "yuhraqāni"],
-        "k": "أهرق",
-        "yol": "kök"
-      },
-      {
-        "w": "نهرق",
-        "u": "نهرق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نهرق (form IV)\n# نُهْرِقُ (nuhriqu) /nuh.ri.qu/: first-person plural non-past active indicative of أَهْرَقَ (ʔahraqa)\n# نُهْرَقُ (nuhraqu) /nuh.ra.qu/: first-person plural non-past passive indicative of أَهْرَقَ (ʔahraqa)\n# نُهْرِقَ (nuhriqa) /nuh.ri.qa/: first-person plural non-past active subjunctive of أَهْرَقَ (ʔahraqa)\n# نُهْرَقَ (nuhraqa) /nuh.ra.qa/: first-person plural non-past passive sub",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuhriqu", "ʔahraqa", "nuhraqu"],
-        "k": "أهرق",
-        "yol": "kök"
-      },
-      {
-        "w": "يهرقون",
-        "u": "يهرقون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يهرقون (form IV)\n# يُهْرِقُونَ (yuhriqūna) /juh.ri.quː.na/: third-person masculine plural non-past active indicative of أَهْرَقَ (ʔahraqa)\n# يُهْرَقُونَ (yuhraqūna) /juh.ra.quː.na/: third-person masculine plural non-past passive indicative of أَهْرَقَ (ʔahraqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuhriqūna", "ʔahraqa", "yuhraqūna"],
-        "k": "أهرق",
-        "yol": "kök"
-      },
-      {
-        "w": "تهرقن",
-        "u": "تهرقن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تهرقن (form IV)\n# تُهْرِقْنَ (tuhriqna) /tuh.riq.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَهْرَقَ (ʔahraqa)\n# تُهْرَقْنَ (tuhraqna) /tuh.raq.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَهْرَقَ (ʔahraqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuhriqna", "ʔahraqa", "tuhraqna"],
-        "k": "أهرق",
-        "yol": "kök"
-      },
-      {
-        "w": "تهرقون",
-        "u": "تهرقون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تهرقون (form IV)\n# تُهْرِقُونَ (tuhriqūna) /tuh.ri.quː.na/: second-person masculine plural non-past active indicative of أَهْرَقَ (ʔahraqa)\n# تُهْرَقُونَ (tuhraqūna) /tuh.ra.quː.na/: second-person masculine plural non-past passive indicative of أَهْرَقَ (ʔahraqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuhriqūna", "ʔahraqa", "tuhraqūna"],
-        "k": "أهرق",
-        "yol": "kök"
-      },
-      {
-        "w": "يهرقن",
-        "u": "يهرقن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يهرقن (form IV)\n# يُهْرِقْنَ (yuhriqna) /juh.riq.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَهْرَقَ (ʔahraqa)\n# يُهْرَقْنَ (yuhraqna) /juh.raq.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَهْرَقَ (ʔahraqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuhriqna", "ʔahraqa", "yuhraqna"],
-        "k": "أهرق",
-        "yol": "kök"
-      },
-      {
-        "w": "تهرقي",
-        "u": "تهرقي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تهرقي (form IV)\n# تُهْرِقِي (tuhriqī) /tuh.ri.qiː/: second-person feminine singular non-past active subjunctive/jussive of أَهْرَقَ (ʔahraqa)\n# تُهْرَقِي (tuhraqī) /tuh.ra.qiː/: second-person feminine singular non-past passive subjunctive/jussive of أَهْرَقَ (ʔahraqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuhriqī", "ʔahraqa", "tuhraqī"],
-        "k": "أهرق",
-        "yol": "kök"
-      },
-      {
-        "w": "تهرقا",
-        "u": "تهرقا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تهرقا (form IV)\n# تُهْرِقَا (tuhriqā) /tuh.ri.qaː/: inflection of أَهْرَقَ (ʔahraqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُهْرَقَا (tuhraqā) /tuh.ra.qaː/: inflection of أَهْرَقَ (ʔahraqa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/ju",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuhriqā", "ʔahraqa", "tuhraqā"],
-        "k": "أهرق",
-        "yol": "kök"
-      },
-      {
-        "w": "تهرقوا",
-        "u": "تهرقوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تهرقوا (form IV)\n# تُهْرِقُوا (tuhriqū) /tuh.ri.quː/: second-person masculine plural non-past active subjunctive/jussive of أَهْرَقَ (ʔahraqa)\n# تُهْرَقُوا (tuhraqū) /tuh.ra.quː/: second-person masculine plural non-past passive subjunctive/jussive of أَهْرَقَ (ʔahraqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuhriqū", "ʔahraqa", "tuhraqū"],
-        "k": "أهرق",
-        "yol": "kök"
-      },
-      {
-        "w": "يهرقا",
-        "u": "يهرقا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يهرقا (form IV)\n# يُهْرِقَا (yuhriqā) /juh.ri.qaː/: third-person masculine dual non-past active subjunctive/jussive of أَهْرَقَ (ʔahraqa)\n# يُهْرَقَا (yuhraqā) /juh.ra.qaː/: third-person masculine dual non-past passive subjunctive/jussive of أَهْرَقَ (ʔahraqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuhriqā", "ʔahraqa", "yuhraqā"],
-        "k": "أهرق",
-        "yol": "kök"
-      },
-      {
-        "w": "يهرقوا",
-        "u": "يهرقوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يهرقوا (form IV)\n# يُهْرِقُوا (yuhriqū) /juh.ri.quː/: third-person masculine plural non-past active subjunctive/jussive of أَهْرَقَ (ʔahraqa)\n# يُهْرَقُوا (yuhraqū) /juh.ra.quː/: third-person masculine plural non-past passive subjunctive/jussive of أَهْرَقَ (ʔahraqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuhriqū", "ʔahraqa", "yuhraqū"],
-        "k": "أهرق",
-        "yol": "kök"
-      },
-      {
-        "w": "أهرقي",
-        "u": "أهرقي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَهْرِقِي • (ʔahriqī) (form IV) /ʔah.ri.qiː/\n# second-person feminine singular imperative of أَهْرَقَ (ʔahraqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔahriqī", "ʔahraqa"],
-        "k": "أهرق",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "هر",
+  "ses": {
     "harf": "ء",
+    "fasil": "هر",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "أهرقتما",
+      "tur": "verb",
+      "baslik": "أهرقتما (form IV)\n# أَهْرَقْتُمَا (ʔahraqtumā) /ʔah.raq.tu.maː/: second-person dual past active of أَهْرَقَ (ʔahraqa)\n# أُهْرِقْتُمَا (ʔuhriqtumā) /ʔuh.riq.tu.maː/: second-person dual past passive of أَهْرَقَ (ʔahraqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔahraqtumā", "ʔahraqa", "ʔuhriqtumā"],
+      "kok_yazilis": "أهرق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أهرقا",
+      "tur": "verb",
+      "baslik": "أهرقا (form IV)\n# أَهْرَقَا (ʔahraqā) /ʔah.ra.qaː/: third-person masculine dual past active of أَهْرَقَ (ʔahraqa)\n# أُهْرِقَا (ʔuhriqā) /ʔuh.ri.qaː/: third-person masculine dual past passive of أَهْرَقَ (ʔahraqa)\n# أَهْرِقَا (ʔahriqā) /ʔah.ri.qaː/: second-person dual imperative of أَهْرَقَ (ʔahraqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔahraqā", "ʔahraqa", "ʔuhriqā"],
+      "kok_yazilis": "أهرق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أهرقت",
+      "tur": "verb",
+      "baslik": "أهرقت (form IV)\n# أَهْرَقْتُ (ʔahraqtu) /ʔah.raq.tu/: first-person singular past active of أَهْرَقَ (ʔahraqa)\n# أَهْرَقْتَ (ʔahraqta) /ʔah.raq.ta/: second-person masculine singular past active of أَهْرَقَ (ʔahraqa)\n# أَهْرَقْتِ (ʔahraqti) /ʔah.raq.ti/: second-person feminine singular past active of أَهْرَقَ (ʔahraqa)\n# أَهْرَقَتْ (ʔahraqat) /ʔah.ra.qat/: third-person feminine singular past active ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔahraqtu", "ʔahraqa", "ʔahraqta"],
+      "kok_yazilis": "أهرق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أهرقنا",
+      "tur": "verb",
+      "baslik": "أهرقنا (form IV)\n# أَهْرَقْنَا (ʔahraqnā) /ʔah.raq.naː/: first-person plural past active of أَهْرَقَ (ʔahraqa)\n# أُهْرِقْنَا (ʔuhriqnā) /ʔuh.riq.naː/: first-person plural past passive of أَهْرَقَ (ʔahraqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔahraqnā", "ʔahraqa", "ʔuhriqnā"],
+      "kok_yazilis": "أهرق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أهرقتا",
+      "tur": "verb",
+      "baslik": "أهرقتا (form IV)\n# أَهْرَقَتَا (ʔahraqatā) /ʔah.ra.qa.taː/: third-person feminine dual past active of أَهْرَقَ (ʔahraqa)\n# أُهْرِقَتَا (ʔuhriqatā) /ʔuh.ri.qa.taː/: third-person feminine dual past passive of أَهْرَقَ (ʔahraqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔahraqatā", "ʔahraqa", "ʔuhriqatā"],
+      "kok_yazilis": "أهرق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أهرقتم",
+      "tur": "verb",
+      "baslik": "أهرقتم (form IV)\n# أَهْرَقْتُمْ (ʔahraqtum) /ʔah.raq.tum/: second-person masculine plural past active of أَهْرَقَ (ʔahraqa)\n# أُهْرِقْتُمْ (ʔuhriqtum) /ʔuh.riq.tum/: second-person masculine plural past passive of أَهْرَقَ (ʔahraqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔahraqtum", "ʔahraqa", "ʔuhriqtum"],
+      "kok_yazilis": "أهرق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أهرقتن",
+      "tur": "verb",
+      "baslik": "أهرقتن (form IV)\n# أَهْرَقْتُنَّ (ʔahraqtunna) /ʔah.raq.tun.na/: second-person feminine plural past active of أَهْرَقَ (ʔahraqa)\n# أُهْرِقْتُنَّ (ʔuhriqtunna) /ʔuh.riq.tun.na/: second-person feminine plural past passive of أَهْرَقَ (ʔahraqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔahraqtunna", "ʔahraqa", "ʔuhriqtunna"],
+      "kok_yazilis": "أهرق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أهرقن",
+      "tur": "verb",
+      "baslik": "أهرقن (form IV)\n# أَهْرَقْنَ (ʔahraqna) /ʔah.raq.na/: third-person feminine plural past active of أَهْرَقَ (ʔahraqa)\n# أُهْرِقْنَ (ʔuhriqna) /ʔuh.riq.na/: third-person feminine plural past passive of أَهْرَقَ (ʔahraqa)\n# أَهْرِقْنَ (ʔahriqna) /ʔah.riq.na/: second-person feminine plural imperative of أَهْرَقَ (ʔahraqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔahraqna", "ʔahraqa", "ʔuhriqna"],
+      "kok_yazilis": "أهرق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهرق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تهرق (form IV)\n# تُهْرِقُ (tuhriqu) /tuh.ri.qu/: inflection of أَهْرَقَ (ʔahraqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُهْرَقُ (tuhraqu) /tuh.ra.qu/: inflection of أَهْرَقَ (ʔahraqa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuhriqu", "ʔahraqa", "tuhraqu"],
+      "kok_yazilis": "أهرق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أهرقوا",
+      "tur": "verb",
+      "baslik": "أهرقوا (form IV)\n# أَهْرَقُوا (ʔahraqū) /ʔah.ra.quː/: third-person masculine plural past active of أَهْرَقَ (ʔahraqa)\n# أُهْرِقُوا (ʔuhriqū) /ʔuh.ri.quː/: third-person masculine plural past passive of أَهْرَقَ (ʔahraqa)\n# أَهْرِقُوا (ʔahriqū) /ʔah.ri.quː/: second-person masculine plural imperative of أَهْرَقَ (ʔahraqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔahraqū", "ʔahraqa", "ʔuhriqū"],
+      "kok_yazilis": "أهرق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهرقان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تهرقان (form IV)\n# تُهْرِقَانِ (tuhriqāni) /tuh.ri.qaː.ni/: inflection of أَهْرَقَ (ʔahraqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُهْرَقَانِ (tuhraqāni) /tuh.ra.qaː.ni/: inflection of أَهْرَقَ (ʔahraqa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuhriqāni", "ʔahraqa", "tuhraqāni"],
+      "kok_yazilis": "أهرق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهرقين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تهرقين (form IV)\n# تُهْرِقِينَ (tuhriqīna) /tuh.ri.qiː.na/: second-person feminine singular non-past active indicative of أَهْرَقَ (ʔahraqa)\n# تُهْرَقِينَ (tuhraqīna) /tuh.ra.qiː.na/: second-person feminine singular non-past passive indicative of أَهْرَقَ (ʔahraqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuhriqīna", "ʔahraqa", "tuhraqīna"],
+      "kok_yazilis": "أهرق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهرق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يهرق (form IV)\n# يُهْرِقُ (yuhriqu) /juh.ri.qu/: third-person masculine singular non-past active indicative of أَهْرَقَ (ʔahraqa)\n# يُهْرَقُ (yuhraqu) /juh.ra.qu/: third-person masculine singular non-past passive indicative of أَهْرَقَ (ʔahraqa)\n# يُهْرِقَ (yuhriqa) /juh.ri.qa/: third-person masculine singular non-past active subjunctive of أَهْرَقَ (ʔahraqa)\n# يُهْرَقَ (yuhraqa) /juh.ra.qa/: thir",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuhriqu", "ʔahraqa", "yuhraqu"],
+      "kok_yazilis": "أهرق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهرقان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يهرقان (form IV)\n# يُهْرِقَانِ (yuhriqāni) /juh.ri.qaː.ni/: third-person masculine dual non-past active indicative of أَهْرَقَ (ʔahraqa)\n# يُهْرَقَانِ (yuhraqāni) /juh.ra.qaː.ni/: third-person masculine dual non-past passive indicative of أَهْرَقَ (ʔahraqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuhriqāni", "ʔahraqa", "yuhraqāni"],
+      "kok_yazilis": "أهرق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نهرق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نهرق (form IV)\n# نُهْرِقُ (nuhriqu) /nuh.ri.qu/: first-person plural non-past active indicative of أَهْرَقَ (ʔahraqa)\n# نُهْرَقُ (nuhraqu) /nuh.ra.qu/: first-person plural non-past passive indicative of أَهْرَقَ (ʔahraqa)\n# نُهْرِقَ (nuhriqa) /nuh.ri.qa/: first-person plural non-past active subjunctive of أَهْرَقَ (ʔahraqa)\n# نُهْرَقَ (nuhraqa) /nuh.ra.qa/: first-person plural non-past passive sub",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuhriqu", "ʔahraqa", "nuhraqu"],
+      "kok_yazilis": "أهرق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهرقون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يهرقون (form IV)\n# يُهْرِقُونَ (yuhriqūna) /juh.ri.quː.na/: third-person masculine plural non-past active indicative of أَهْرَقَ (ʔahraqa)\n# يُهْرَقُونَ (yuhraqūna) /juh.ra.quː.na/: third-person masculine plural non-past passive indicative of أَهْرَقَ (ʔahraqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuhriqūna", "ʔahraqa", "yuhraqūna"],
+      "kok_yazilis": "أهرق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهرقن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تهرقن (form IV)\n# تُهْرِقْنَ (tuhriqna) /tuh.riq.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَهْرَقَ (ʔahraqa)\n# تُهْرَقْنَ (tuhraqna) /tuh.raq.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَهْرَقَ (ʔahraqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuhriqna", "ʔahraqa", "tuhraqna"],
+      "kok_yazilis": "أهرق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهرقون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تهرقون (form IV)\n# تُهْرِقُونَ (tuhriqūna) /tuh.ri.quː.na/: second-person masculine plural non-past active indicative of أَهْرَقَ (ʔahraqa)\n# تُهْرَقُونَ (tuhraqūna) /tuh.ra.quː.na/: second-person masculine plural non-past passive indicative of أَهْرَقَ (ʔahraqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuhriqūna", "ʔahraqa", "tuhraqūna"],
+      "kok_yazilis": "أهرق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهرقن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يهرقن (form IV)\n# يُهْرِقْنَ (yuhriqna) /juh.riq.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَهْرَقَ (ʔahraqa)\n# يُهْرَقْنَ (yuhraqna) /juh.raq.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَهْرَقَ (ʔahraqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuhriqna", "ʔahraqa", "yuhraqna"],
+      "kok_yazilis": "أهرق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهرقي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تهرقي (form IV)\n# تُهْرِقِي (tuhriqī) /tuh.ri.qiː/: second-person feminine singular non-past active subjunctive/jussive of أَهْرَقَ (ʔahraqa)\n# تُهْرَقِي (tuhraqī) /tuh.ra.qiː/: second-person feminine singular non-past passive subjunctive/jussive of أَهْرَقَ (ʔahraqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuhriqī", "ʔahraqa", "tuhraqī"],
+      "kok_yazilis": "أهرق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهرقا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تهرقا (form IV)\n# تُهْرِقَا (tuhriqā) /tuh.ri.qaː/: inflection of أَهْرَقَ (ʔahraqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُهْرَقَا (tuhraqā) /tuh.ra.qaː/: inflection of أَهْرَقَ (ʔahraqa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/ju",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuhriqā", "ʔahraqa", "tuhraqā"],
+      "kok_yazilis": "أهرق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهرقوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تهرقوا (form IV)\n# تُهْرِقُوا (tuhriqū) /tuh.ri.quː/: second-person masculine plural non-past active subjunctive/jussive of أَهْرَقَ (ʔahraqa)\n# تُهْرَقُوا (tuhraqū) /tuh.ra.quː/: second-person masculine plural non-past passive subjunctive/jussive of أَهْرَقَ (ʔahraqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuhriqū", "ʔahraqa", "tuhraqū"],
+      "kok_yazilis": "أهرق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهرقا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يهرقا (form IV)\n# يُهْرِقَا (yuhriqā) /juh.ri.qaː/: third-person masculine dual non-past active subjunctive/jussive of أَهْرَقَ (ʔahraqa)\n# يُهْرَقَا (yuhraqā) /juh.ra.qaː/: third-person masculine dual non-past passive subjunctive/jussive of أَهْرَقَ (ʔahraqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuhriqā", "ʔahraqa", "yuhraqā"],
+      "kok_yazilis": "أهرق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهرقوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يهرقوا (form IV)\n# يُهْرِقُوا (yuhriqū) /juh.ri.quː/: third-person masculine plural non-past active subjunctive/jussive of أَهْرَقَ (ʔahraqa)\n# يُهْرَقُوا (yuhraqū) /juh.ra.quː/: third-person masculine plural non-past passive subjunctive/jussive of أَهْرَقَ (ʔahraqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuhriqū", "ʔahraqa", "yuhraqū"],
+      "kok_yazilis": "أهرق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أهرقي",
+      "tur": "verb",
+      "baslik": "أَهْرِقِي • (ʔahriqī) (form IV) /ʔah.ri.qiː/\n# second-person feminine singular imperative of أَهْرَقَ (ʔahraqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔahriqī", "ʔahraqa"],
+      "kok_yazilis": "أهرق",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءهرق", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

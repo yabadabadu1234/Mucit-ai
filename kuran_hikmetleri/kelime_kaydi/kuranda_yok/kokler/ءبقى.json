@@ -1,438 +1,351 @@
 {
   "kok": "ءبقى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءبقى", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أبق",
-        "u": "أبق",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "أبق (form IV)\n# أُبْقِ (ʔubqi) /ʔub.qi/: first-person singular non-past active jussive of أَبْقَى (ʔabqā)\n# أُبْقَ (ʔubqa) /ʔub.qa/: first-person singular non-past passive jussive of أَبْقَى (ʔabqā)\n# أَبْقِ (ʔabqi) /ʔab.qi/: second-person masculine singular imperative of أَبْقَى (ʔabqā)",
-        "tag": ["form-iv", "no-gloss", "obsolete"],
-        "r": ["ʔubqi", "ʔabqā", "ʔubqa"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يبقى",
-        "u": "يبقى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُبْقَى • (yubqā) (form IV) /jub.qaː/\n# third-person masculine singular non-past passive indicative/subjunctive of أَبْقَى (ʔabqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubqā", "ʔabqā"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يبق",
-        "u": "يبق",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يبق (form IV)\n# يُبْقِ (yubqi) /jub.qi/: third-person masculine singular non-past active jussive of أَبْقَى (ʔabqā)\n# يُبْقَ (yubqa) /jub.qa/: third-person masculine singular non-past passive jussive of أَبْقَى (ʔabqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubqi", "ʔabqā", "yubqa"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبقت",
-        "u": "أبقت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَبْقَتْ • (ʔabqat) (form IV) /ʔab.qat/\n# third-person feminine singular past active of أَبْقَى (ʔabqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabqat", "ʔabqā"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبقى",
-        "u": "تبقى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُبْقَى • (tubqā) (form IV) /tub.qaː/\n# inflection of أَبْقَى (ʔabqā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubqā", "ʔabqā"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبق",
-        "u": "تبق",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تبق (form IV)\n# تُبْقِ (tubqi) /tub.qi/: inflection of أَبْقَى (ʔabqā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُبْقَ (tubqa) /tub.qa/: inflection of أَبْقَى (ʔabqā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubqi", "ʔabqā", "tubqa"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبقين",
-        "u": "تبقين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تبقين (form IV)\n# تُبْقِينَ (tubqīna) /tub.qiː.na/: inflection of أَبْقَى (ʔabqā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُبْقَيْنَ (tubqayna) /tub.qaj.na/: inflection of أَبْقَى (ʔabqā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-pas",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubqīna", "ʔabqā", "tubqayna"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبقي",
-        "u": "تبقي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تبقي (form IV)\n# تُبْقِي (tubqī) /tub.qiː/: inflection of أَبْقَى (ʔabqā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُبْقِيَ (tubqiya) /tub.qi.ja/: inflection of أَبْقَى (ʔabqā):\n## second-person masculine singular non-past active subjunctive\n#",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubqī", "ʔabqā", "tubqiya"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "نبقى",
-        "u": "نبقى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نُبْقَى • (nubqā) (form IV) /nub.qaː/\n# first-person plural non-past passive indicative/subjunctive of أَبْقَى (ʔabqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nubqā", "ʔabqā"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "نبق",
-        "u": "نبق",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نبق (form IV)\n# نُبْقِ (nubqi) /nub.qi/: first-person plural non-past active jussive of أَبْقَى (ʔabqā)\n# نُبْقَ (nubqa) /nub.qa/: first-person plural non-past passive jussive of أَبْقَى (ʔabqā)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nubqi", "ʔabqā", "nubqa"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبقون",
-        "u": "تبقون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تبقون (form IV)\n# تُبْقُونَ (tubqūna) /tub.quː.na/: second-person masculine plural non-past active indicative of أَبْقَى (ʔabqā)\n# تُبْقَوْنَ (tubqawna) /tub.qaw.na/: second-person masculine plural non-past passive indicative of أَبْقَى (ʔabqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubqūna", "ʔabqā", "tubqawna"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبقوا",
-        "u": "تبقوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تبقوا (form IV)\n# تُبْقُوا (tubqū) /tub.quː/: second-person masculine plural non-past active subjunctive/jussive of أَبْقَى (ʔabqā)\n# تُبْقَوْا (tubqaw) /tub.qaw/: second-person masculine plural non-past passive subjunctive/jussive of أَبْقَى (ʔabqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubqū", "ʔabqā", "tubqaw"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبقوا",
-        "u": "أبقوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أبقوا (form IV)\n# أَبْقَوْا (ʔabqaw) /ʔab.qaw/: third-person masculine plural past active of أَبْقَى (ʔabqā)\n# أُبْقُوا (ʔubqū) /ʔub.quː/: third-person masculine plural past passive of أَبْقَى (ʔabqā)\n# أَبْقُوا (ʔabqū) /ʔab.quː/: second-person masculine plural imperative of أَبْقَى (ʔabqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabqaw", "ʔabqā", "ʔubqū"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يبقون",
-        "u": "يبقون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يبقون (form IV)\n# يُبْقُونَ (yubqūna) /jub.quː.na/: third-person masculine plural non-past active indicative of أَبْقَى (ʔabqā)\n# يُبْقَوْنَ (yubqawna) /jub.qaw.na/: third-person masculine plural non-past passive indicative of أَبْقَى (ʔabqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubqūna", "ʔabqā", "yubqawna"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يبقوا",
-        "u": "يبقوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يبقوا (form IV)\n# يُبْقُوا (yubqū) /jub.quː/: third-person masculine plural non-past active subjunctive/jussive of أَبْقَى (ʔabqā)\n# يُبْقَوْا (yubqaw) /jub.qaw/: third-person masculine plural non-past passive subjunctive/jussive of أَبْقَى (ʔabqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubqū", "ʔabqā", "yubqaw"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يبقين",
-        "u": "يبقين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يبقين (form IV)\n# يُبْقِينَ (yubqīna) /jub.qiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَبْقَى (ʔabqā)\n# يُبْقَيْنَ (yubqayna) /jub.qaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَبْقَى (ʔabqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubqīna", "ʔabqā", "yubqayna"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبقتا",
-        "u": "أبقتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَبْقَتَا • (ʔabqatā) (form IV) /ʔab.qa.taː/\n# third-person feminine dual past active of أَبْقَى (ʔabqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabqatā", "ʔabqā"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبقيتما",
-        "u": "أبقيتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبقيتما (form IV)\n# أَبْقَيْتُمَا (ʔabqaytumā) /ʔab.qaj.tu.maː/: second-person dual past active of أَبْقَى (ʔabqā)\n# أُبْقِيتُمَا (ʔubqītumā) /ʔub.qiː.tu.maː/: second-person dual past passive of أَبْقَى (ʔabqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabqaytumā", "ʔabqā", "ʔubqītumā"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبقيت",
-        "u": "أبقيت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبقيت (form IV)\n# أَبْقَيْتُ (ʔabqaytu) /ʔab.qaj.tu/: first-person singular past active of أَبْقَى (ʔabqā)\n# أَبْقَيْتَ (ʔabqayta) /ʔab.qaj.ta/: second-person masculine singular past active of أَبْقَى (ʔabqā)\n# أَبْقَيْتِ (ʔabqayti) /ʔab.qaj.ti/: second-person feminine singular past active of أَبْقَى (ʔabqā)\n# أُبْقِيتُ (ʔubqītu) /ʔub.qiː.tu/: first-person singular past passive of أَبْقَى (ʔabqā)\n",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabqaytu", "ʔabqā", "ʔabqayta"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبقينا",
-        "u": "أبقينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبقينا (form IV)\n# أَبْقَيْنَا (ʔabqaynā) /ʔab.qaj.naː/: first-person plural past active of أَبْقَى (ʔabqā)\n# أُبْقِينَا (ʔubqīnā) /ʔub.qiː.naː/: first-person plural past passive of أَبْقَى (ʔabqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabqaynā", "ʔabqā", "ʔubqīnā"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبقيا",
-        "u": "أبقيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبقيا (form IV)\n# أَبْقَيَا (ʔabqayā) /ʔab.qa.jaː/: third-person masculine dual past active of أَبْقَى (ʔabqā)\n# أُبْقِيَا (ʔubqiyā) /ʔub.qi.jaː/: third-person masculine dual past passive of أَبْقَى (ʔabqā)\n# أَبْقِيَا (ʔabqiyā) /ʔab.qi.jaː/: second-person dual imperative of أَبْقَى (ʔabqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabqayā", "ʔabqā", "ʔubqiyā"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبقيتن",
-        "u": "أبقيتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبقيتن (form IV)\n# أَبْقَيْتُنَّ (ʔabqaytunna) /ʔab.qaj.tun.na/: second-person feminine plural past active of أَبْقَى (ʔabqā)\n# أُبْقِيتُنَّ (ʔubqītunna) /ʔub.qiː.tun.na/: second-person feminine plural past passive of أَبْقَى (ʔabqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabqaytunna", "ʔabqā", "ʔubqītunna"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبقين",
-        "u": "أبقين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبقين (form IV)\n# أَبْقَيْنَ (ʔabqayna) /ʔab.qaj.na/: third-person feminine plural past active of أَبْقَى (ʔabqā)\n# أُبْقِينَ (ʔubqīna) /ʔub.qiː.na/: third-person feminine plural past passive of أَبْقَى (ʔabqā)\n# أَبْقِينَ (ʔabqīna) /ʔab.qiː.na/: second-person feminine plural imperative of أَبْقَى (ʔabqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabqayna", "ʔabqā", "ʔubqīna"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبقيتم",
-        "u": "أبقيتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبقيتم (form IV)\n# أَبْقَيْتُمْ (ʔabqaytum) /ʔab.qaj.tum/: second-person masculine plural past active of أَبْقَى (ʔabqā)\n# أُبْقِيتُمْ (ʔubqītum) /ʔub.qiː.tum/: second-person masculine plural past passive of أَبْقَى (ʔabqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔabqaytum", "ʔabqā", "ʔubqītum"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبقي",
-        "u": "أبقي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أبقي (form IV)\n# أُبْقِيَ (ʔubqiya) /ʔub.qi.ja/: inflection of أَبْقَى (ʔabqā):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُبْقِي (ʔubqī) /ʔub.qiː/: first-person singular non-past active indicative of أَبْقَى (ʔabqā)\n# أَبْقِي (ʔabqī) /ʔab.qiː/: second-person feminine singular imperative of أَبْقَى (ʔabqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔubqiya", "ʔabqā", "ʔubqī"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبقيان",
-        "u": "تبقيان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تبقيان (form IV)\n# تُبْقِيَانِ (tubqiyāni) /tub.qi.jaː.ni/: inflection of أَبْقَى (ʔabqā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُبْقَيَانِ (tubqayāni) /tub.qa.jaː.ni/: inflection of أَبْقَى (ʔabqā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubqiyāni", "ʔabqā", "tubqayāni"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "أبقيتا",
-        "u": "أبقيتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُبْقِيَتَا • (ʔubqiyatā) (form IV) /ʔub.qi.ja.taː/\n# third-person feminine dual past passive of أَبْقَى (ʔabqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔubqiyatā", "ʔabqā"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يبقي",
-        "u": "يبقي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يبقي (form IV)\n# يُبْقِي (yubqī) /jub.qiː/: third-person masculine singular non-past active indicative of أَبْقَى (ʔabqā)\n# يُبْقِيَ (yubqiya) /jub.qi.ja/: third-person masculine singular non-past active subjunctive of أَبْقَى (ʔabqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubqī", "ʔabqā", "yubqiya"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "نبقي",
-        "u": "نبقي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نبقي (form IV)\n# نُبْقِي (nubqī) /nub.qiː/: first-person plural non-past active indicative of أَبْقَى (ʔabqā)\n# نُبْقِيَ (nubqiya) /nub.qi.ja/: first-person plural non-past active subjunctive of أَبْقَى (ʔabqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nubqī", "ʔabqā", "nubqiya"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يبقيان",
-        "u": "يبقيان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يبقيان (form IV)\n# يُبْقِيَانِ (yubqiyāni) /jub.qi.jaː.ni/: third-person masculine dual non-past active indicative of أَبْقَى (ʔabqā)\n# يُبْقَيَانِ (yubqayāni) /jub.qa.jaː.ni/: third-person masculine dual non-past passive indicative of أَبْقَى (ʔabqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubqiyāni", "ʔabqā", "yubqayāni"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "تبقيا",
-        "u": "تبقيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تبقيا (form IV)\n# تُبْقِيَا (tubqiyā) /tub.qi.jaː/: inflection of أَبْقَى (ʔabqā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُبْقَيَا (tubqayā) /tub.qa.jaː/: inflection of أَبْقَى (ʔabqā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tubqiyā", "ʔabqā", "tubqayā"],
-        "k": "أبقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يبقيا",
-        "u": "يبقيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يبقيا (form IV)\n# يُبْقِيَا (yubqiyā) /jub.qi.jaː/: third-person masculine dual non-past active subjunctive/jussive of أَبْقَى (ʔabqā)\n# يُبْقَيَا (yubqayā) /jub.qa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of أَبْقَى (ʔabqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yubqiyā", "ʔabqā", "yubqayā"],
-        "k": "أبقى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "بق",
+  "ses": {
     "harf": "ء",
+    "fasil": "بق",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "أبق",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "أبق (form IV)\n# أُبْقِ (ʔubqi) /ʔub.qi/: first-person singular non-past active jussive of أَبْقَى (ʔabqā)\n# أُبْقَ (ʔubqa) /ʔub.qa/: first-person singular non-past passive jussive of أَبْقَى (ʔabqā)\n# أَبْقِ (ʔabqi) /ʔab.qi/: second-person masculine singular imperative of أَبْقَى (ʔabqā)",
+      "etiket": ["form-iv", "no-gloss", "obsolete"],
+      "okunus": ["ʔubqi", "ʔabqā", "ʔubqa"],
+      "kok_yazilis": "أبقى"
+    },
+    {
+      "madde": "يبقى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُبْقَى • (yubqā) (form IV) /jub.qaː/\n# third-person masculine singular non-past passive indicative/subjunctive of أَبْقَى (ʔabqā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubqā", "ʔabqā"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبق",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يبق (form IV)\n# يُبْقِ (yubqi) /jub.qi/: third-person masculine singular non-past active jussive of أَبْقَى (ʔabqā)\n# يُبْقَ (yubqa) /jub.qa/: third-person masculine singular non-past passive jussive of أَبْقَى (ʔabqā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubqi", "ʔabqā", "yubqa"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبقت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَبْقَتْ • (ʔabqat) (form IV) /ʔab.qat/\n# third-person feminine singular past active of أَبْقَى (ʔabqā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabqat", "ʔabqā"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبقى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُبْقَى • (tubqā) (form IV) /tub.qaː/\n# inflection of أَبْقَى (ʔabqā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubqā", "ʔabqā"],
+      "kok_yazilis": "أبقى"
+    },
+    {
+      "madde": "تبق",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تبق (form IV)\n# تُبْقِ (tubqi) /tub.qi/: inflection of أَبْقَى (ʔabqā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُبْقَ (tubqa) /tub.qa/: inflection of أَبْقَى (ʔabqā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubqi", "ʔabqā", "tubqa"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبقين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تبقين (form IV)\n# تُبْقِينَ (tubqīna) /tub.qiː.na/: inflection of أَبْقَى (ʔabqā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُبْقَيْنَ (tubqayna) /tub.qaj.na/: inflection of أَبْقَى (ʔabqā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-pas",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubqīna", "ʔabqā", "tubqayna"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبقي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تبقي (form IV)\n# تُبْقِي (tubqī) /tub.qiː/: inflection of أَبْقَى (ʔabqā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُبْقِيَ (tubqiya) /tub.qi.ja/: inflection of أَبْقَى (ʔabqā):\n## second-person masculine singular non-past active subjunctive\n#",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubqī", "ʔabqā", "tubqiya"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نبقى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نُبْقَى • (nubqā) (form IV) /nub.qaː/\n# first-person plural non-past passive indicative/subjunctive of أَبْقَى (ʔabqā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nubqā", "ʔabqā"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نبق",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نبق (form IV)\n# نُبْقِ (nubqi) /nub.qi/: first-person plural non-past active jussive of أَبْقَى (ʔabqā)\n# نُبْقَ (nubqa) /nub.qa/: first-person plural non-past passive jussive of أَبْقَى (ʔabqā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nubqi", "ʔabqā", "nubqa"],
+      "kok_yazilis": "أبقى"
+    },
+    {
+      "madde": "تبقون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تبقون (form IV)\n# تُبْقُونَ (tubqūna) /tub.quː.na/: second-person masculine plural non-past active indicative of أَبْقَى (ʔabqā)\n# تُبْقَوْنَ (tubqawna) /tub.qaw.na/: second-person masculine plural non-past passive indicative of أَبْقَى (ʔabqā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubqūna", "ʔabqā", "tubqawna"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبقوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تبقوا (form IV)\n# تُبْقُوا (tubqū) /tub.quː/: second-person masculine plural non-past active subjunctive/jussive of أَبْقَى (ʔabqā)\n# تُبْقَوْا (tubqaw) /tub.qaw/: second-person masculine plural non-past passive subjunctive/jussive of أَبْقَى (ʔabqā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubqū", "ʔabqā", "tubqaw"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبقوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أبقوا (form IV)\n# أَبْقَوْا (ʔabqaw) /ʔab.qaw/: third-person masculine plural past active of أَبْقَى (ʔabqā)\n# أُبْقُوا (ʔubqū) /ʔub.quː/: third-person masculine plural past passive of أَبْقَى (ʔabqā)\n# أَبْقُوا (ʔabqū) /ʔab.quː/: second-person masculine plural imperative of أَبْقَى (ʔabqā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabqaw", "ʔabqā", "ʔubqū"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبقون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يبقون (form IV)\n# يُبْقُونَ (yubqūna) /jub.quː.na/: third-person masculine plural non-past active indicative of أَبْقَى (ʔabqā)\n# يُبْقَوْنَ (yubqawna) /jub.qaw.na/: third-person masculine plural non-past passive indicative of أَبْقَى (ʔabqā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubqūna", "ʔabqā", "yubqawna"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبقوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يبقوا (form IV)\n# يُبْقُوا (yubqū) /jub.quː/: third-person masculine plural non-past active subjunctive/jussive of أَبْقَى (ʔabqā)\n# يُبْقَوْا (yubqaw) /jub.qaw/: third-person masculine plural non-past passive subjunctive/jussive of أَبْقَى (ʔabqā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubqū", "ʔabqā", "yubqaw"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبقين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يبقين (form IV)\n# يُبْقِينَ (yubqīna) /jub.qiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَبْقَى (ʔabqā)\n# يُبْقَيْنَ (yubqayna) /jub.qaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَبْقَى (ʔabqā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubqīna", "ʔabqā", "yubqayna"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبقتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَبْقَتَا • (ʔabqatā) (form IV) /ʔab.qa.taː/\n# third-person feminine dual past active of أَبْقَى (ʔabqā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabqatā", "ʔabqā"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبقيتما",
+      "tur": "verb",
+      "baslik": "أبقيتما (form IV)\n# أَبْقَيْتُمَا (ʔabqaytumā) /ʔab.qaj.tu.maː/: second-person dual past active of أَبْقَى (ʔabqā)\n# أُبْقِيتُمَا (ʔubqītumā) /ʔub.qiː.tu.maː/: second-person dual past passive of أَبْقَى (ʔabqā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabqaytumā", "ʔabqā", "ʔubqītumā"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبقيت",
+      "tur": "verb",
+      "baslik": "أبقيت (form IV)\n# أَبْقَيْتُ (ʔabqaytu) /ʔab.qaj.tu/: first-person singular past active of أَبْقَى (ʔabqā)\n# أَبْقَيْتَ (ʔabqayta) /ʔab.qaj.ta/: second-person masculine singular past active of أَبْقَى (ʔabqā)\n# أَبْقَيْتِ (ʔabqayti) /ʔab.qaj.ti/: second-person feminine singular past active of أَبْقَى (ʔabqā)\n# أُبْقِيتُ (ʔubqītu) /ʔub.qiː.tu/: first-person singular past passive of أَبْقَى (ʔabqā)\n",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabqaytu", "ʔabqā", "ʔabqayta"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبقينا",
+      "tur": "verb",
+      "baslik": "أبقينا (form IV)\n# أَبْقَيْنَا (ʔabqaynā) /ʔab.qaj.naː/: first-person plural past active of أَبْقَى (ʔabqā)\n# أُبْقِينَا (ʔubqīnā) /ʔub.qiː.naː/: first-person plural past passive of أَبْقَى (ʔabqā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabqaynā", "ʔabqā", "ʔubqīnā"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبقيا",
+      "tur": "verb",
+      "baslik": "أبقيا (form IV)\n# أَبْقَيَا (ʔabqayā) /ʔab.qa.jaː/: third-person masculine dual past active of أَبْقَى (ʔabqā)\n# أُبْقِيَا (ʔubqiyā) /ʔub.qi.jaː/: third-person masculine dual past passive of أَبْقَى (ʔabqā)\n# أَبْقِيَا (ʔabqiyā) /ʔab.qi.jaː/: second-person dual imperative of أَبْقَى (ʔabqā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabqayā", "ʔabqā", "ʔubqiyā"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبقيتن",
+      "tur": "verb",
+      "baslik": "أبقيتن (form IV)\n# أَبْقَيْتُنَّ (ʔabqaytunna) /ʔab.qaj.tun.na/: second-person feminine plural past active of أَبْقَى (ʔabqā)\n# أُبْقِيتُنَّ (ʔubqītunna) /ʔub.qiː.tun.na/: second-person feminine plural past passive of أَبْقَى (ʔabqā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabqaytunna", "ʔabqā", "ʔubqītunna"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبقين",
+      "tur": "verb",
+      "baslik": "أبقين (form IV)\n# أَبْقَيْنَ (ʔabqayna) /ʔab.qaj.na/: third-person feminine plural past active of أَبْقَى (ʔabqā)\n# أُبْقِينَ (ʔubqīna) /ʔub.qiː.na/: third-person feminine plural past passive of أَبْقَى (ʔabqā)\n# أَبْقِينَ (ʔabqīna) /ʔab.qiː.na/: second-person feminine plural imperative of أَبْقَى (ʔabqā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabqayna", "ʔabqā", "ʔubqīna"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبقيتم",
+      "tur": "verb",
+      "baslik": "أبقيتم (form IV)\n# أَبْقَيْتُمْ (ʔabqaytum) /ʔab.qaj.tum/: second-person masculine plural past active of أَبْقَى (ʔabqā)\n# أُبْقِيتُمْ (ʔubqītum) /ʔub.qiː.tum/: second-person masculine plural past passive of أَبْقَى (ʔabqā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔabqaytum", "ʔabqā", "ʔubqītum"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبقي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أبقي (form IV)\n# أُبْقِيَ (ʔubqiya) /ʔub.qi.ja/: inflection of أَبْقَى (ʔabqā):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُبْقِي (ʔubqī) /ʔub.qiː/: first-person singular non-past active indicative of أَبْقَى (ʔabqā)\n# أَبْقِي (ʔabqī) /ʔab.qiː/: second-person feminine singular imperative of أَبْقَى (ʔabqā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔubqiya", "ʔabqā", "ʔubqī"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبقيان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تبقيان (form IV)\n# تُبْقِيَانِ (tubqiyāni) /tub.qi.jaː.ni/: inflection of أَبْقَى (ʔabqā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُبْقَيَانِ (tubqayāni) /tub.qa.jaː.ni/: inflection of أَبْقَى (ʔabqā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubqiyāni", "ʔabqā", "tubqayāni"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبقيتا",
+      "tur": "verb",
+      "baslik": "أُبْقِيَتَا • (ʔubqiyatā) (form IV) /ʔub.qi.ja.taː/\n# third-person feminine dual past passive of أَبْقَى (ʔabqā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔubqiyatā", "ʔabqā"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبقي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يبقي (form IV)\n# يُبْقِي (yubqī) /jub.qiː/: third-person masculine singular non-past active indicative of أَبْقَى (ʔabqā)\n# يُبْقِيَ (yubqiya) /jub.qi.ja/: third-person masculine singular non-past active subjunctive of أَبْقَى (ʔabqā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubqī", "ʔabqā", "yubqiya"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نبقي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نبقي (form IV)\n# نُبْقِي (nubqī) /nub.qiː/: first-person plural non-past active indicative of أَبْقَى (ʔabqā)\n# نُبْقِيَ (nubqiya) /nub.qi.ja/: first-person plural non-past active subjunctive of أَبْقَى (ʔabqā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nubqī", "ʔabqā", "nubqiya"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبقيان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يبقيان (form IV)\n# يُبْقِيَانِ (yubqiyāni) /jub.qi.jaː.ni/: third-person masculine dual non-past active indicative of أَبْقَى (ʔabqā)\n# يُبْقَيَانِ (yubqayāni) /jub.qa.jaː.ni/: third-person masculine dual non-past passive indicative of أَبْقَى (ʔabqā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubqiyāni", "ʔabqā", "yubqayāni"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبقيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تبقيا (form IV)\n# تُبْقِيَا (tubqiyā) /tub.qi.jaː/: inflection of أَبْقَى (ʔabqā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُبْقَيَا (tubqayā) /tub.qa.jaː/: inflection of أَبْقَى (ʔabqā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tubqiyā", "ʔabqā", "tubqayā"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبقيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يبقيا (form IV)\n# يُبْقِيَا (yubqiyā) /jub.qi.jaː/: third-person masculine dual non-past active subjunctive/jussive of أَبْقَى (ʔabqā)\n# يُبْقَيَا (yubqayā) /jub.qa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of أَبْقَى (ʔabqā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yubqiyā", "ʔabqā", "yubqayā"],
+      "kok_yazilis": "أبقى",
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ءبقى", "r6"]
+  ],
+  "mana": {
     "ince": "have.v.10",
     "orta": "verb.stative",
     "ust": "hâl ve vasıf",
@@ -440,22 +353,15 @@
     "dayanak_tanim": "be confronted with",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["have.v.10"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["have.v.10"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

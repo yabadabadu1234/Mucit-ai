@@ -1,466 +1,335 @@
 {
   "kok": "مدى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "مدى", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أمد",
-        "u": "أمد",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أَمْدِ • (ʔamdi) (form I) /ʔam.di/\n# first-person singular non-past active jussive of مَدَى (madā)",
-        "tag": ["form-i", "no-gloss", "obsolete"],
-        "r": ["ʔamdi", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يمد",
-        "u": "يمد",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يمد (form I)\n# يَمْدِ (yamdi) /jam.di/: third-person masculine singular non-past active jussive of مَدَى (madā)\n# يُمْدَ (yumda) /jum.da/: third-person masculine singular non-past passive jussive of مَدَى (madā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamdi", "madā", "yumda"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يمدي",
-        "u": "يمدي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يمدي (form I)\n# يَمْدِي (yamdī) /jam.diː/: third-person masculine singular non-past active indicative of مَدَى (madā)\n# يَمْدِيَ (yamdiya) /jam.di.ja/: third-person masculine singular non-past active subjunctive of مَدَى (madā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamdī", "madā", "yamdiya"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يمدى",
-        "u": "يمدى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُمْدَى • (yumdā) (form I) /jum.daː/\n# third-person masculine singular non-past passive indicative/subjunctive of مَدَى (madā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yumdā", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "مدي",
-        "u": "مدي",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "مُدِيَ • (mudiya) (form I) /mu.di.ja/\n# third-person masculine singular past passive of مَدَى (madā)",
-        "tag": ["form-i", "no-gloss", "obsolete"],
-        "r": ["mudiya", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تمد",
-        "u": "تمد",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَمْدِ • (tamdi) (form I) /tam.di/\n# inflection of مَدَى (madā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamdi", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تمدين",
-        "u": "تمدين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَمْدِينَ • (tamdīna) (form I) /tam.diː.na/\n# inflection of مَدَى (madā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamdīna", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تمدي",
-        "u": "تمدي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تمدي (form I)\n# تَمْدِي (tamdī) /tam.diː/: inflection of مَدَى (madā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَمْدِيَ (tamdiya) /tam.di.ja/: inflection of مَدَى (madā):\n## second-person masculine singular non-past active subjunctive\n## third",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamdī", "madā", "tamdiya"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "أمدي",
-        "u": "أمدي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أمدي (form I)\n# أَمْدِي (ʔamdī) /ʔam.diː/: first-person singular non-past active indicative of مَدَى (madā)\n# أَمْدِيَ (ʔamdiya) /ʔam.di.ja/: first-person singular non-past active subjunctive of مَدَى (madā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔamdī", "madā", "ʔamdiya"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "مدت",
-        "u": "مدت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "مَدَتْ • (madat) (form I) /ma.dat/\n# third-person feminine singular past active of مَدَى (madā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["madat", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "مديت",
-        "u": "مديت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مديت (form I)\n# مَدَيْتُ (madaytu) /ma.daj.tu/: first-person singular past active of مَدَى (madā)\n# مَدَيْتَ (madayta) /ma.daj.ta/: second-person masculine singular past active of مَدَى (madā)\n# مَدَيْتِ (madayti) /ma.daj.ti/: second-person feminine singular past active of مَدَى (madā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["madaytu", "madā", "madayta"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "امد",
-        "u": "امد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِمْدِ • (imdi) (form I) /im.di/\n# second-person masculine singular imperative of مَدَى (madā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["imdi", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "امدي",
-        "u": "امدي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِمْدِي • (imdī) (form I) /im.diː/\n# second-person feminine singular imperative of مَدَى (madā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["imdī", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "نمد",
-        "u": "نمد",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نَمْدِ • (namdi) (form I) /nam.di/\n# first-person plural non-past active jussive of مَدَى (madā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["namdi", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "مدينا",
-        "u": "مدينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَدَيْنَا • (madaynā) (form I) /ma.daj.naː/\n# first-person plural past active of مَدَى (madā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["madaynā", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "نمدي",
-        "u": "نمدي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نمدي (form I)\n# نَمْدِي (namdī) /nam.diː/: first-person plural non-past active indicative of مَدَى (madā)\n# نَمْدِيَ (namdiya) /nam.di.ja/: first-person plural non-past active subjunctive of مَدَى (madā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["namdī", "madā", "namdiya"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تمدون",
-        "u": "تمدون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَمْدُونَ • (tamdūna) (form I) /tam.duː.na/\n# second-person masculine plural non-past active indicative of مَدَى (madā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamdūna", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "مديتم",
-        "u": "مديتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَدَيْتُمْ • (madaytum) (form I) /ma.daj.tum/\n# second-person masculine plural past active of مَدَى (madā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["madaytum", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تمدوا",
-        "u": "تمدوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَمْدُوا • (tamdū) (form I) /tam.duː/\n# second-person masculine plural non-past active subjunctive/jussive of مَدَى (madā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamdū", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "امدوا",
-        "u": "امدوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِمْدُوا • (imdū) (form I) /im.duː/\n# second-person masculine plural imperative of مَدَى (madā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["imdū", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يمدون",
-        "u": "يمدون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَمْدُونَ • (yamdūna) (form I) /jam.duː.na/\n# third-person masculine plural non-past active indicative of مَدَى (madā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamdūna", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "مدوا",
-        "u": "مدوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "مَدَوْا • (madaw) (form I) /ma.daw/\n# third-person masculine plural past active of مَدَى (madā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["madaw", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يمدوا",
-        "u": "يمدوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَمْدُوا • (yamdū) (form I) /jam.duː/\n# third-person masculine plural non-past active subjunctive/jussive of مَدَى (madā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamdū", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "مديتن",
-        "u": "مديتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَدَيْتُنَّ • (madaytunna) (form I) /ma.daj.tun.na/\n# second-person feminine plural past active of مَدَى (madā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["madaytunna", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "امدين",
-        "u": "امدين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِمْدِينَ • (imdīna) (form I) /im.diː.na/\n# second-person feminine plural imperative of مَدَى (madā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["imdīna", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "مدين",
-        "u": "مدين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "مَدَيْنَ • (madayna) (form I) /ma.daj.na/\n# third-person feminine plural past active of مَدَى (madā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["madayna", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يمدين",
-        "u": "يمدين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَمْدِينَ • (yamdīna) (form I) /jam.diː.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of مَدَى (madā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamdīna", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "مدتا",
-        "u": "مدتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "مَدَتَا • (madatā) (form I) /ma.da.taː/\n# third-person feminine dual past active of مَدَى (madā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["madatā", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "مديا",
-        "u": "مديا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَدَيَا • (madayā) (form I) /ma.da.jaː/\n# third-person masculine dual past active of مَدَى (madā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["madayā", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "مديتما",
-        "u": "مديتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَدَيْتُمَا • (madaytumā) (form I) /ma.daj.tu.maː/\n# second-person dual past active of مَدَى (madā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["madaytumā", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يمديان",
-        "u": "يمديان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَمْدِيَانِ • (yamdiyāni) (form I) /jam.di.jaː.ni/\n# third-person masculine dual non-past active indicative of مَدَى (madā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamdiyāni", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تمديا",
-        "u": "تمديا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَمْدِيَا • (tamdiyā) (form I) /tam.di.jaː/\n# inflection of مَدَى (madā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamdiyā", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "امديا",
-        "u": "امديا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِمْدِيَا • (imdiyā) (form I) /im.di.jaː/\n# second-person dual imperative of مَدَى (madā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["imdiyā", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يمديا",
-        "u": "يمديا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَمْدِيَا • (yamdiyā) (form I) /jam.di.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of مَدَى (madā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamdiyā", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تمديان",
-        "u": "تمديان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَمْدِيَانِ • (tamdiyāni) (form I) /tam.di.jaː.ni/\n# inflection of مَدَى (madā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamdiyāni", "madā"],
-        "k": "مدى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "مد",
+  "ses": {
     "harf": "م",
+    "fasil": "مد",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "أمد",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أَمْدِ • (ʔamdi) (form I) /ʔam.di/\n# first-person singular non-past active jussive of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss", "obsolete"],
+      "okunus": ["ʔamdi", "madā"]
+    },
+    {
+      "madde": "يمد",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يمد (form I)\n# يَمْدِ (yamdi) /jam.di/: third-person masculine singular non-past active jussive of مَدَى (madā)\n# يُمْدَ (yumda) /jum.da/: third-person masculine singular non-past passive jussive of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamdi", "madā", "yumda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يمدي",
+      "tur": "verb",
+      "baslik": "يمدي (form I)\n# يَمْدِي (yamdī) /jam.diː/: third-person masculine singular non-past active indicative of مَدَى (madā)\n# يَمْدِيَ (yamdiya) /jam.di.ja/: third-person masculine singular non-past active subjunctive of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamdī", "madā", "yamdiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يمدى",
+      "tur": "verb",
+      "baslik": "يُمْدَى • (yumdā) (form I) /jum.daː/\n# third-person masculine singular non-past passive indicative/subjunctive of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yumdā", "madā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مدي",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "مُدِيَ • (mudiya) (form I) /mu.di.ja/\n# third-person masculine singular past passive of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss", "obsolete"],
+      "okunus": ["mudiya", "madā"]
+    },
+    {
+      "madde": "تمد",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَمْدِ • (tamdi) (form I) /tam.di/\n# inflection of مَدَى (madā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamdi", "madā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمدين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَمْدِينَ • (tamdīna) (form I) /tam.diː.na/\n# inflection of مَدَى (madā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamdīna", "madā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمدي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تمدي (form I)\n# تَمْدِي (tamdī) /tam.diː/: inflection of مَدَى (madā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَمْدِيَ (tamdiya) /tam.di.ja/: inflection of مَدَى (madā):\n## second-person masculine singular non-past active subjunctive\n## third",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamdī", "madā", "tamdiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أمدي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أمدي (form I)\n# أَمْدِي (ʔamdī) /ʔam.diː/: first-person singular non-past active indicative of مَدَى (madā)\n# أَمْدِيَ (ʔamdiya) /ʔam.di.ja/: first-person singular non-past active subjunctive of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔamdī", "madā", "ʔamdiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مدت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "مَدَتْ • (madat) (form I) /ma.dat/\n# third-person feminine singular past active of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["madat", "madā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مديت",
+      "tur": "verb",
+      "baslik": "مديت (form I)\n# مَدَيْتُ (madaytu) /ma.daj.tu/: first-person singular past active of مَدَى (madā)\n# مَدَيْتَ (madayta) /ma.daj.ta/: second-person masculine singular past active of مَدَى (madā)\n# مَدَيْتِ (madayti) /ma.daj.ti/: second-person feminine singular past active of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["madaytu", "madā", "madayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "امد",
+      "tur": "verb",
+      "baslik": "اِمْدِ • (imdi) (form I) /im.di/\n# second-person masculine singular imperative of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["imdi", "madā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "امدي",
+      "tur": "verb",
+      "baslik": "اِمْدِي • (imdī) (form I) /im.diː/\n# second-person feminine singular imperative of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["imdī", "madā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نمد",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نَمْدِ • (namdi) (form I) /nam.di/\n# first-person plural non-past active jussive of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["namdi", "madā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مدينا",
+      "tur": "verb",
+      "baslik": "مَدَيْنَا • (madaynā) (form I) /ma.daj.naː/\n# first-person plural past active of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["madaynā", "madā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نمدي",
+      "tur": "verb",
+      "baslik": "نمدي (form I)\n# نَمْدِي (namdī) /nam.diː/: first-person plural non-past active indicative of مَدَى (madā)\n# نَمْدِيَ (namdiya) /nam.di.ja/: first-person plural non-past active subjunctive of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["namdī", "madā", "namdiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمدون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَمْدُونَ • (tamdūna) (form I) /tam.duː.na/\n# second-person masculine plural non-past active indicative of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamdūna", "madā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مديتم",
+      "tur": "verb",
+      "baslik": "مَدَيْتُمْ • (madaytum) (form I) /ma.daj.tum/\n# second-person masculine plural past active of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["madaytum", "madā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمدوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَمْدُوا • (tamdū) (form I) /tam.duː/\n# second-person masculine plural non-past active subjunctive/jussive of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamdū", "madā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "امدوا",
+      "tur": "verb",
+      "baslik": "اِمْدُوا • (imdū) (form I) /im.duː/\n# second-person masculine plural imperative of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["imdū", "madā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يمدون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَمْدُونَ • (yamdūna) (form I) /jam.duː.na/\n# third-person masculine plural non-past active indicative of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamdūna", "madā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مدوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "مَدَوْا • (madaw) (form I) /ma.daw/\n# third-person masculine plural past active of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["madaw", "madā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يمدوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَمْدُوا • (yamdū) (form I) /jam.duː/\n# third-person masculine plural non-past active subjunctive/jussive of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamdū", "madā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مديتن",
+      "tur": "verb",
+      "baslik": "مَدَيْتُنَّ • (madaytunna) (form I) /ma.daj.tun.na/\n# second-person feminine plural past active of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["madaytunna", "madā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "امدين",
+      "tur": "verb",
+      "baslik": "اِمْدِينَ • (imdīna) (form I) /im.diː.na/\n# second-person feminine plural imperative of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["imdīna", "madā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مدين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "مَدَيْنَ • (madayna) (form I) /ma.daj.na/\n# third-person feminine plural past active of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["madayna", "madā"]
+    },
+    {
+      "madde": "يمدين",
+      "tur": "verb",
+      "baslik": "يَمْدِينَ • (yamdīna) (form I) /jam.diː.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamdīna", "madā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مدتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "مَدَتَا • (madatā) (form I) /ma.da.taː/\n# third-person feminine dual past active of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["madatā", "madā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مديا",
+      "tur": "verb",
+      "baslik": "مَدَيَا • (madayā) (form I) /ma.da.jaː/\n# third-person masculine dual past active of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["madayā", "madā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مديتما",
+      "tur": "verb",
+      "baslik": "مَدَيْتُمَا • (madaytumā) (form I) /ma.daj.tu.maː/\n# second-person dual past active of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["madaytumā", "madā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يمديان",
+      "tur": "verb",
+      "baslik": "يَمْدِيَانِ • (yamdiyāni) (form I) /jam.di.jaː.ni/\n# third-person masculine dual non-past active indicative of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamdiyāni", "madā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمديا",
+      "tur": "verb",
+      "baslik": "تَمْدِيَا • (tamdiyā) (form I) /tam.di.jaː/\n# inflection of مَدَى (madā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamdiyā", "madā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "امديا",
+      "tur": "verb",
+      "baslik": "اِمْدِيَا • (imdiyā) (form I) /im.di.jaː/\n# second-person dual imperative of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["imdiyā", "madā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يمديا",
+      "tur": "verb",
+      "baslik": "يَمْدِيَا • (yamdiyā) (form I) /jam.di.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of مَدَى (madā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamdiyā", "madā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمديان",
+      "tur": "verb",
+      "baslik": "تَمْدِيَانِ • (tamdiyāni) (form I) /tam.di.jaː.ni/\n# inflection of مَدَى (madā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamdiyāni", "madā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "مدى", "r7"]
+  ],
+  "mana": {
     "ince": "fundamental_quantity.n.01",
     "orta": "noun.time",
     "ust": "ölçü, mekân ve zaman",
@@ -468,22 +337,15 @@
     "dayanak_tanim": "the period of time during which something continues",
     "synset_sayisi": 5
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["debtor.n.01", "provide.v.02", "region.n.03", "temporal_property.n.01", "time_period.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["debtor.n.01", "provide.v.02", "region.n.03", "temporal_property.n.01", "time_period.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

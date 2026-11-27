@@ -1,366 +1,259 @@
 {
   "kok": "تصتم",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تصتم", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تصتمت",
-        "u": "تصتمت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تصتمت (form V)\n# تَصَتَّمْتُ (taṣattamtu) /ta.sˤat.tam.tu/: first-person singular past active of تَصَتَّمَ (taṣattama)\n# تَصَتَّمْتَ (taṣattamta) /ta.sˤat.tam.ta/: second-person masculine singular past active of تَصَتَّمَ (taṣattama)\n# تَصَتَّمْتِ (taṣattamti) /ta.sˤat.tam.ti/: second-person feminine singular past active of تَصَتَّمَ (taṣattama)\n# تَصَتَّمَتْ (taṣattamat) /ta.sˤat.ta.mat/: third-p",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṣattamtu", "taṣattama", "taṣattamta"],
-        "k": "تصتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تصتمتما",
-        "u": "تصتمتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَصَتَّمْتُمَا • (taṣattamtumā) (form V) /ta.sˤat.tam.tu.maː/\n# second-person dual past active of تَصَتَّمَ (taṣattama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṣattamtumā", "taṣattama"],
-        "k": "تصتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تصتمتا",
-        "u": "تصتمتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَصَتَّمَتَا • (taṣattamatā) (form V) /ta.sˤat.ta.ma.taː/\n# third-person feminine dual past active of تَصَتَّمَ (taṣattama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṣattamatā", "taṣattama"],
-        "k": "تصتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تصتمنا",
-        "u": "تصتمنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَصَتَّمْنَا • (taṣattamnā) (form V) /ta.sˤat.tam.naː/\n# first-person plural past active of تَصَتَّمَ (taṣattama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṣattamnā", "taṣattama"],
-        "k": "تصتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تصتما",
-        "u": "تصتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَصَتَّمَا • (taṣattamā) (form V) /ta.sˤat.ta.maː/\n# inflection of تَصَتَّمَ (taṣattama):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṣattamā", "taṣattama"],
-        "k": "تصتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تصتمتم",
-        "u": "تصتمتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَصَتَّمْتُمْ • (taṣattamtum) (form V) /ta.sˤat.tam.tum/\n# second-person masculine plural past active of تَصَتَّمَ (taṣattama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṣattamtum", "taṣattama"],
-        "k": "تصتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تصتمتن",
-        "u": "تصتمتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَصَتَّمْتُنَّ • (taṣattamtunna) (form V) /ta.sˤat.tam.tun.na/\n# second-person feminine plural past active of تَصَتَّمَ (taṣattama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṣattamtunna", "taṣattama"],
-        "k": "تصتم",
-        "yol": "kök"
-      },
-      {
-        "w": "أتصتم",
-        "u": "أتصتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتصتم (form V)\n# أَتَصَتَّمُ (ʔataṣattamu) /ʔa.ta.sˤat.ta.mu/: first-person singular non-past active indicative of تَصَتَّمَ (taṣattama)\n# أَتَصَتَّمَ (ʔataṣattama) /ʔa.ta.sˤat.ta.ma/: first-person singular non-past active subjunctive of تَصَتَّمَ (taṣattama)\n# أَتَصَتَّمْ (ʔataṣattam) /ʔa.ta.sˤat.tam/: first-person singular non-past active jussive of تَصَتَّمَ (taṣattama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔataṣattamu", "taṣattama", "ʔataṣattama"],
-        "k": "تصتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تصتمن",
-        "u": "تصتمن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَصَتَّمْنَ • (taṣattamna) (form V) /ta.sˤat.tam.na/\n# inflection of تَصَتَّمَ (taṣattama):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṣattamna", "taṣattama"],
-        "k": "تصتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصتم",
-        "u": "تتصتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتصتم (form V)\n# تَتَصَتَّمُ (tataṣattamu) /ta.ta.sˤat.ta.mu/: inflection of تَصَتَّمَ (taṣattama):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَصَتَّمَ (tataṣattama) /ta.ta.sˤat.ta.ma/: inflection of تَصَتَّمَ (taṣattama):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine si",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṣattamu", "taṣattama", "tataṣattama"],
-        "k": "تصتم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتصتم",
-        "u": "يتصتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتصتم (form V)\n# يَتَصَتَّمُ (yataṣattamu) /ja.ta.sˤat.ta.mu/: third-person masculine singular non-past active indicative of تَصَتَّمَ (taṣattama)\n# يُتَصَتَّمُ (yutaṣattamu) /ju.ta.sˤat.ta.mu/: third-person masculine singular non-past passive indicative of تَصَتَّمَ (taṣattama)\n# يَتَصَتَّمَ (yataṣattama) /ja.ta.sˤat.ta.ma/: third-person masculine singular non-past active subjunctive of تَصَتَّمَ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataṣattamu", "taṣattama", "yutaṣattamu"],
-        "k": "تصتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصتمين",
-        "u": "تتصتمين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَصَتَّمِينَ • (tataṣattamīna) (form V) /ta.ta.sˤat.ta.miː.na/\n# second-person feminine singular non-past active indicative of تَصَتَّمَ (taṣattama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṣattamīna", "taṣattama"],
-        "k": "تصتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصتمان",
-        "u": "تتصتمان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَصَتَّمَانِ • (tataṣattamāni) (form V) /ta.ta.sˤat.ta.maː.ni/\n# inflection of تَصَتَّمَ (taṣattama):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṣattamāni", "taṣattama"],
-        "k": "تصتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تصتموا",
-        "u": "تصتموا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَصَتَّمُوا • (taṣattamū) (form V) /ta.sˤat.ta.muː/\n# inflection of تَصَتَّمَ (taṣattama):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṣattamū", "taṣattama"],
-        "k": "تصتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصتمن",
-        "u": "تتصتمن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَصَتَّمْنَ • (tataṣattamna) (form V) /ta.ta.sˤat.tam.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَصَتَّمَ (taṣattama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṣattamna", "taṣattama"],
-        "k": "تصتم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتصتمان",
-        "u": "يتصتمان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَصَتَّمَانِ • (yataṣattamāni) (form V) /ja.ta.sˤat.ta.maː.ni/\n# third-person masculine dual non-past active indicative of تَصَتَّمَ (taṣattama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataṣattamāni", "taṣattama"],
-        "k": "تصتم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتصتمن",
-        "u": "يتصتمن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَصَتَّمْنَ • (yataṣattamna) (form V) /ja.ta.sˤat.tam.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَصَتَّمَ (taṣattama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataṣattamna", "taṣattama"],
-        "k": "تصتم",
-        "yol": "kök"
-      },
-      {
-        "w": "نتصتم",
-        "u": "نتصتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتصتم (form V)\n# نَتَصَتَّمُ (nataṣattamu) /na.ta.sˤat.ta.mu/: first-person plural non-past active indicative of تَصَتَّمَ (taṣattama)\n# نَتَصَتَّمَ (nataṣattama) /na.ta.sˤat.ta.ma/: first-person plural non-past active subjunctive of تَصَتَّمَ (taṣattama)\n# نَتَصَتَّمْ (nataṣattam) /na.ta.sˤat.tam/: first-person plural non-past active jussive of تَصَتَّمَ (taṣattama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["nataṣattamu", "taṣattama", "nataṣattama"],
-        "k": "تصتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصتما",
-        "u": "تتصتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَصَتَّمَا • (tataṣattamā) (form V) /ta.ta.sˤat.ta.maː/\n# inflection of تَصَتَّمَ (taṣattama):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṣattamā", "taṣattama"],
-        "k": "تصتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصتمون",
-        "u": "تتصتمون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَصَتَّمُونَ • (tataṣattamūna) (form V) /ta.ta.sˤat.ta.muː.na/\n# second-person masculine plural non-past active indicative of تَصَتَّمَ (taṣattama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṣattamūna", "taṣattama"],
-        "k": "تصتم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتصتمون",
-        "u": "يتصتمون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَصَتَّمُونَ • (yataṣattamūna) (form V) /ja.ta.sˤat.ta.muː.na/\n# third-person masculine plural non-past active indicative of تَصَتَّمَ (taṣattama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataṣattamūna", "taṣattama"],
-        "k": "تصتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصتمي",
-        "u": "تتصتمي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَصَتَّمِي • (tataṣattamī) (form V) /ta.ta.sˤat.ta.miː/\n# second-person feminine singular non-past active subjunctive/jussive of تَصَتَّمَ (taṣattama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṣattamī", "taṣattama"],
-        "k": "تصتم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتصتما",
-        "u": "يتصتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَصَتَّمَا • (yataṣattamā) (form V) /ja.ta.sˤat.ta.maː/\n# third-person masculine dual non-past active subjunctive/jussive of تَصَتَّمَ (taṣattama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataṣattamā", "taṣattama"],
-        "k": "تصتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصتموا",
-        "u": "تتصتموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَصَتَّمُوا • (tataṣattamū) (form V) /ta.ta.sˤat.ta.muː/\n# second-person masculine plural non-past active subjunctive/jussive of تَصَتَّمَ (taṣattama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataṣattamū", "taṣattama"],
-        "k": "تصتم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتصتموا",
-        "u": "يتصتموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَصَتَّمُوا • (yataṣattamū) (form V) /ja.ta.sˤat.ta.muː/\n# third-person masculine plural non-past active subjunctive/jussive of تَصَتَّمَ (taṣattama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataṣattamū", "taṣattama"],
-        "k": "تصتم",
-        "yol": "kök"
-      },
-      {
-        "w": "تصتمي",
-        "u": "تصتمي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَصَتَّمِي • (taṣattamī) (form V) /ta.sˤat.ta.miː/\n# second-person feminine singular imperative of تَصَتَّمَ (taṣattama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taṣattamī", "taṣattama"],
-        "k": "تصتم",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تص",
+  "ses": {
     "harf": "ت",
+    "fasil": "تص",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تصتمت",
+      "tur": "verb",
+      "baslik": "تصتمت (form V)\n# تَصَتَّمْتُ (taṣattamtu) /ta.sˤat.tam.tu/: first-person singular past active of تَصَتَّمَ (taṣattama)\n# تَصَتَّمْتَ (taṣattamta) /ta.sˤat.tam.ta/: second-person masculine singular past active of تَصَتَّمَ (taṣattama)\n# تَصَتَّمْتِ (taṣattamti) /ta.sˤat.tam.ti/: second-person feminine singular past active of تَصَتَّمَ (taṣattama)\n# تَصَتَّمَتْ (taṣattamat) /ta.sˤat.ta.mat/: third-p",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṣattamtu", "taṣattama", "taṣattamta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصتمتما",
+      "tur": "verb",
+      "baslik": "تَصَتَّمْتُمَا • (taṣattamtumā) (form V) /ta.sˤat.tam.tu.maː/\n# second-person dual past active of تَصَتَّمَ (taṣattama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṣattamtumā", "taṣattama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصتمتا",
+      "tur": "verb",
+      "baslik": "تَصَتَّمَتَا • (taṣattamatā) (form V) /ta.sˤat.ta.ma.taː/\n# third-person feminine dual past active of تَصَتَّمَ (taṣattama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṣattamatā", "taṣattama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصتمنا",
+      "tur": "verb",
+      "baslik": "تَصَتَّمْنَا • (taṣattamnā) (form V) /ta.sˤat.tam.naː/\n# first-person plural past active of تَصَتَّمَ (taṣattama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṣattamnā", "taṣattama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَصَتَّمَا • (taṣattamā) (form V) /ta.sˤat.ta.maː/\n# inflection of تَصَتَّمَ (taṣattama):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṣattamā", "taṣattama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصتمتم",
+      "tur": "verb",
+      "baslik": "تَصَتَّمْتُمْ • (taṣattamtum) (form V) /ta.sˤat.tam.tum/\n# second-person masculine plural past active of تَصَتَّمَ (taṣattama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṣattamtum", "taṣattama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصتمتن",
+      "tur": "verb",
+      "baslik": "تَصَتَّمْتُنَّ • (taṣattamtunna) (form V) /ta.sˤat.tam.tun.na/\n# second-person feminine plural past active of تَصَتَّمَ (taṣattama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṣattamtunna", "taṣattama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتصتم",
+      "tur": "verb",
+      "baslik": "أتصتم (form V)\n# أَتَصَتَّمُ (ʔataṣattamu) /ʔa.ta.sˤat.ta.mu/: first-person singular non-past active indicative of تَصَتَّمَ (taṣattama)\n# أَتَصَتَّمَ (ʔataṣattama) /ʔa.ta.sˤat.ta.ma/: first-person singular non-past active subjunctive of تَصَتَّمَ (taṣattama)\n# أَتَصَتَّمْ (ʔataṣattam) /ʔa.ta.sˤat.tam/: first-person singular non-past active jussive of تَصَتَّمَ (taṣattama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔataṣattamu", "taṣattama", "ʔataṣattama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصتمن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَصَتَّمْنَ • (taṣattamna) (form V) /ta.sˤat.tam.na/\n# inflection of تَصَتَّمَ (taṣattama):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṣattamna", "taṣattama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصتم",
+      "tur": "verb",
+      "baslik": "تتصتم (form V)\n# تَتَصَتَّمُ (tataṣattamu) /ta.ta.sˤat.ta.mu/: inflection of تَصَتَّمَ (taṣattama):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَصَتَّمَ (tataṣattama) /ta.ta.sˤat.ta.ma/: inflection of تَصَتَّمَ (taṣattama):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine si",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṣattamu", "taṣattama", "tataṣattama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتصتم",
+      "tur": "verb",
+      "baslik": "يتصتم (form V)\n# يَتَصَتَّمُ (yataṣattamu) /ja.ta.sˤat.ta.mu/: third-person masculine singular non-past active indicative of تَصَتَّمَ (taṣattama)\n# يُتَصَتَّمُ (yutaṣattamu) /ju.ta.sˤat.ta.mu/: third-person masculine singular non-past passive indicative of تَصَتَّمَ (taṣattama)\n# يَتَصَتَّمَ (yataṣattama) /ja.ta.sˤat.ta.ma/: third-person masculine singular non-past active subjunctive of تَصَتَّمَ",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataṣattamu", "taṣattama", "yutaṣattamu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصتمين",
+      "tur": "verb",
+      "baslik": "تَتَصَتَّمِينَ • (tataṣattamīna) (form V) /ta.ta.sˤat.ta.miː.na/\n# second-person feminine singular non-past active indicative of تَصَتَّمَ (taṣattama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṣattamīna", "taṣattama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصتمان",
+      "tur": "verb",
+      "baslik": "تَتَصَتَّمَانِ • (tataṣattamāni) (form V) /ta.ta.sˤat.ta.maː.ni/\n# inflection of تَصَتَّمَ (taṣattama):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṣattamāni", "taṣattama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصتموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَصَتَّمُوا • (taṣattamū) (form V) /ta.sˤat.ta.muː/\n# inflection of تَصَتَّمَ (taṣattama):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṣattamū", "taṣattama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصتمن",
+      "tur": "verb",
+      "baslik": "تَتَصَتَّمْنَ • (tataṣattamna) (form V) /ta.ta.sˤat.tam.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَصَتَّمَ (taṣattama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṣattamna", "taṣattama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتصتمان",
+      "tur": "verb",
+      "baslik": "يَتَصَتَّمَانِ • (yataṣattamāni) (form V) /ja.ta.sˤat.ta.maː.ni/\n# third-person masculine dual non-past active indicative of تَصَتَّمَ (taṣattama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataṣattamāni", "taṣattama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتصتمن",
+      "tur": "verb",
+      "baslik": "يَتَصَتَّمْنَ • (yataṣattamna) (form V) /ja.ta.sˤat.tam.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَصَتَّمَ (taṣattama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataṣattamna", "taṣattama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتصتم",
+      "tur": "verb",
+      "baslik": "نتصتم (form V)\n# نَتَصَتَّمُ (nataṣattamu) /na.ta.sˤat.ta.mu/: first-person plural non-past active indicative of تَصَتَّمَ (taṣattama)\n# نَتَصَتَّمَ (nataṣattama) /na.ta.sˤat.ta.ma/: first-person plural non-past active subjunctive of تَصَتَّمَ (taṣattama)\n# نَتَصَتَّمْ (nataṣattam) /na.ta.sˤat.tam/: first-person plural non-past active jussive of تَصَتَّمَ (taṣattama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["nataṣattamu", "taṣattama", "nataṣattama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصتما",
+      "tur": "verb",
+      "baslik": "تَتَصَتَّمَا • (tataṣattamā) (form V) /ta.ta.sˤat.ta.maː/\n# inflection of تَصَتَّمَ (taṣattama):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṣattamā", "taṣattama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصتمون",
+      "tur": "verb",
+      "baslik": "تَتَصَتَّمُونَ • (tataṣattamūna) (form V) /ta.ta.sˤat.ta.muː.na/\n# second-person masculine plural non-past active indicative of تَصَتَّمَ (taṣattama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṣattamūna", "taṣattama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتصتمون",
+      "tur": "verb",
+      "baslik": "يَتَصَتَّمُونَ • (yataṣattamūna) (form V) /ja.ta.sˤat.ta.muː.na/\n# third-person masculine plural non-past active indicative of تَصَتَّمَ (taṣattama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataṣattamūna", "taṣattama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصتمي",
+      "tur": "verb",
+      "baslik": "تَتَصَتَّمِي • (tataṣattamī) (form V) /ta.ta.sˤat.ta.miː/\n# second-person feminine singular non-past active subjunctive/jussive of تَصَتَّمَ (taṣattama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṣattamī", "taṣattama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتصتما",
+      "tur": "verb",
+      "baslik": "يَتَصَتَّمَا • (yataṣattamā) (form V) /ja.ta.sˤat.ta.maː/\n# third-person masculine dual non-past active subjunctive/jussive of تَصَتَّمَ (taṣattama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataṣattamā", "taṣattama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصتموا",
+      "tur": "verb",
+      "baslik": "تَتَصَتَّمُوا • (tataṣattamū) (form V) /ta.ta.sˤat.ta.muː/\n# second-person masculine plural non-past active subjunctive/jussive of تَصَتَّمَ (taṣattama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataṣattamū", "taṣattama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتصتموا",
+      "tur": "verb",
+      "baslik": "يَتَصَتَّمُوا • (yataṣattamū) (form V) /ja.ta.sˤat.ta.muː/\n# third-person masculine plural non-past active subjunctive/jussive of تَصَتَّمَ (taṣattama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataṣattamū", "taṣattama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصتمي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَصَتَّمِي • (taṣattamī) (form V) /ta.sˤat.ta.miː/\n# second-person feminine singular imperative of تَصَتَّمَ (taṣattama)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taṣattamī", "taṣattama"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تصتم", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

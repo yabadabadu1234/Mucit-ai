@@ -1,514 +1,381 @@
 {
   "kok": "طاب",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "طاب", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "طب",
-        "u": "طب",
-        "p": "noun",
-        "n": "1",
-        "h": "ar-noun",
-        "e": "طِبّ • (ṭibb) m",
-        "g": ["verbal noun of طَبَّ (ṭabba) (form I)", "medicine (field of study)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["طَبَّ"],
-        "r": ["ṭibb"],
-        "ipa": ["/tˤibː/"],
-        "ds": [
-          ["az", "tibb", ""],
-          ["chg", "طب", "ṭb"],
-          ["unknown", "", ""],
-          ["ota", "طب", "tıbb"],
-          ["ps", "طب", ""],
-          ["fa", "طب", "tebb"],
-          ["pa", "", ""],
-          ["sd", "طبو", "t̤bo"],
-          ["sw", "tiba", ""]
-        ],
-        "dr": ["طِبِّيّ"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "طب",
-        "u": "طب",
-        "p": "noun",
-        "n": "2",
-        "h": "ar-noun",
-        "e": "طَبّ • (ṭabb) m",
-        "g": ["verbal noun of طَبَّ (ṭabba) (form I)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["طَبَّ"],
-        "r": ["ṭabb"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "طب",
-        "u": "طب",
-        "p": "noun",
-        "n": "3",
-        "h": "ar-noun",
-        "e": "طُبّ • (ṭubb) m",
-        "g": ["verbal noun of طَبَّ (ṭabba) (form I)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["طَبَّ"],
-        "r": ["ṭubb"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "طب",
-        "u": "طب",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "طِبْ • (ṭib) (form I) /tˤib/\n# second-person masculine singular imperative of طَابَ (ṭāba)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭib", "ṭāba"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يطب",
-        "u": "يطب",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يطب (form I)\n# يَطِبْ (yaṭib) /ja.tˤib/: third-person masculine singular non-past active jussive of طَابَ (ṭāba)\n# يُطَبْ (yuṭab) /ju.tˤab/: third-person masculine singular non-past passive jussive of طَابَ (ṭāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭib", "ṭāba", "yuṭab"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يطيب",
-        "u": "يطيب",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يطيب (form I)\n# يَطِيبُ (yaṭību) /ja.tˤiː.bu/: third-person masculine singular non-past active indicative of طَابَ (ṭāba)\n# يَطِيبَ (yaṭība) /ja.tˤiː.ba/: third-person masculine singular non-past active subjunctive of طَابَ (ṭāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭību", "ṭāba", "yaṭība"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "أطيب",
-        "u": "أطيب",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أطيب (form I)\n# أَطِيبُ (ʔaṭību) /ʔa.tˤiː.bu/: first-person singular non-past active indicative of طَابَ (ṭāba)\n# أَطِيبَ (ʔaṭība) /ʔa.tˤiː.ba/: first-person singular non-past active subjunctive of طَابَ (ṭāba)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaṭību", "ṭāba", "ʔaṭība"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "طبت",
-        "u": "طبت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "طبت (form I)\n# طِبْتُ (ṭibtu) /tˤib.tu/: first-person singular past active/passive of طَابَ (ṭāba)\n# طِبْتَ (ṭibta) /tˤib.ta/: second-person masculine singular past active/passive of طَابَ (ṭāba)\n# طِبْتِ (ṭibti) /tˤib.ti/: second-person feminine singular past active/passive of طَابَ (ṭāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭibtu", "ṭāba", "ṭibta"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تطب",
-        "u": "تطب",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تطب (form I)\n# تَطِبْ (taṭib) /ta.tˤib/: inflection of طَابَ (ṭāba):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُطَبْ (tuṭab) /tu.tˤab/: inflection of طَابَ (ṭāba):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭib", "ṭāba", "tuṭab"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيب",
-        "u": "تطيب",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تطيب (form I)\n# تَطِيبُ (taṭību) /ta.tˤiː.bu/: inflection of طَابَ (ṭāba):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَطِيبَ (taṭība) /ta.tˤiː.ba/: inflection of طَابَ (ṭāba):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭību", "ṭāba", "taṭība"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيبين",
-        "u": "تطيبين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَطِيبِينَ • (taṭībīna) (form I) /ta.tˤiː.biː.na/\n# second-person feminine singular non-past active indicative of طَابَ (ṭāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭībīna", "ṭāba"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيبي",
-        "u": "تطيبي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَطِيبِي • (taṭībī) (form I) /ta.tˤiː.biː/\n# second-person feminine singular non-past active subjunctive/jussive of طَابَ (ṭāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭībī", "ṭāba"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "طيبي",
-        "u": "طيبي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "طِيبِي • (ṭībī) (form I) /tˤiː.biː/\n# second-person feminine singular imperative of طَابَ (ṭāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭībī", "ṭāba"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "أطب",
-        "u": "أطب",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أطب (form I)\n# أَطِبْ (ʔaṭib) /ʔa.tˤib/: first-person singular non-past active jussive of طَابَ (ṭāba)\n# أُطَبْ (ʔuṭab) /ʔu.tˤab/: first-person singular non-past passive jussive of طَابَ (ṭāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaṭib", "ṭāba", "ʔuṭab"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "نطب",
-        "u": "نطب",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نطب (form I)\n# نَطِبْ (naṭib) /na.tˤib/: first-person plural non-past active jussive of طَابَ (ṭāba)\n# نُطَبْ (nuṭab) /nu.tˤab/: first-person plural non-past passive jussive of طَابَ (ṭāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naṭib", "ṭāba", "nuṭab"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "نطيب",
-        "u": "نطيب",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نطيب (form I)\n# نَطِيبُ (naṭību) /na.tˤiː.bu/: first-person plural non-past active indicative of طَابَ (ṭāba)\n# نَطِيبَ (naṭība) /na.tˤiː.ba/: first-person plural non-past active subjunctive of طَابَ (ṭāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naṭību", "ṭāba", "naṭība"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيبون",
-        "u": "تطيبون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَطِيبُونَ • (taṭībūna) (form I) /ta.tˤiː.buː.na/\n# second-person masculine plural non-past active indicative of طَابَ (ṭāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭībūna", "ṭāba"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيبوا",
-        "u": "تطيبوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَطِيبُوا • (taṭībū) (form I) /ta.tˤiː.buː/\n# second-person masculine plural non-past active subjunctive/jussive of طَابَ (ṭāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭībū", "ṭāba"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "طيبوا",
-        "u": "طيبوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "طِيبُوا • (ṭībū) (form I) /tˤiː.buː/\n# inflection of طَابَ (ṭāba):\n## third-person masculine plural past passive\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭībū", "ṭāba"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يطيبون",
-        "u": "يطيبون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَطِيبُونَ • (yaṭībūna) (form I) /ja.tˤiː.buː.na/\n# third-person masculine plural non-past active indicative of طَابَ (ṭāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭībūna", "ṭāba"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يطيبوا",
-        "u": "يطيبوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَطِيبُوا • (yaṭībū) (form I) /ja.tˤiː.buː/\n# third-person masculine plural non-past active subjunctive/jussive of طَابَ (ṭāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭībū", "ṭāba"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "طابت",
-        "u": "طابت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَابَتْ • (ṭābat) (form I) /tˤaː.bat/\n# third-person feminine singular past active of طَابَ (ṭāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭābat", "ṭāba"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "طبتما",
-        "u": "طبتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِبْتُمَا • (ṭibtumā) (form I) /tˤib.tu.maː/\n# second-person dual past active/passive of طَابَ (ṭāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭibtumā", "ṭāba"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "طابا",
-        "u": "طابا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَابَا • (ṭābā) (form I) /tˤaː.baː/\n# third-person masculine dual past active of طَابَ (ṭāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭābā", "ṭāba"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "طابتا",
-        "u": "طابتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَابَتَا • (ṭābatā) (form I) /tˤaː.ba.taː/\n# third-person feminine dual past active of طَابَ (ṭāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭābatā", "ṭāba"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "طبنا",
-        "u": "طبنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِبْنَا • (ṭibnā) (form I) /tˤib.naː/\n# first-person plural past active/passive of طَابَ (ṭāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭibnā", "ṭāba"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "طبتم",
-        "u": "طبتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِبْتُمْ • (ṭibtum) (form I) /tˤib.tum/\n# second-person masculine plural past active/passive of طَابَ (ṭāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭibtum", "ṭāba"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "طابوا",
-        "u": "طابوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَابُوا • (ṭābū) (form I) /tˤaː.buː/\n# third-person masculine plural past active of طَابَ (ṭāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭābū", "ṭāba"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "طبتن",
-        "u": "طبتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِبْتُنَّ • (ṭibtunna) (form I) /tˤib.tun.na/\n# second-person feminine plural past active/passive of طَابَ (ṭāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭibtunna", "ṭāba"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيبان",
-        "u": "تطيبان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَطِيبَانِ • (taṭībāni) (form I) /ta.tˤiː.baː.ni/\n# inflection of طَابَ (ṭāba):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭībāni", "ṭāba"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "طبن",
-        "u": "طبن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طِبْنَ • (ṭibna) (form I) /tˤib.na/\n# inflection of طَابَ (ṭāba):\n## third-person feminine plural past active/passive\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭibna", "ṭāba"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يطيبان",
-        "u": "يطيبان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَطِيبَانِ • (yaṭībāni) (form I) /ja.tˤiː.baː.ni/\n# third-person masculine dual non-past active indicative of طَابَ (ṭāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭībāni", "ṭāba"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تطبن",
-        "u": "تطبن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطبن (form I)\n# تَطِبْنَ (taṭibna) /ta.tˤib.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of طَابَ (ṭāba)\n# تُطَبْنَ (tuṭabna) /tu.tˤab.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of طَابَ (ṭāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭibna", "ṭāba", "tuṭabna"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يطبن",
-        "u": "يطبن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطبن (form I)\n# يَطِبْنَ (yaṭibna) /ja.tˤib.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of طَابَ (ṭāba)\n# يُطَبْنَ (yuṭabna) /ju.tˤab.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of طَابَ (ṭāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭibna", "ṭāba", "yuṭabna"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "تطيبا",
-        "u": "تطيبا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَطِيبَا • (taṭībā) (form I) /ta.tˤiː.baː/\n# inflection of طَابَ (ṭāba):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṭībā", "ṭāba"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "يطيبا",
-        "u": "يطيبا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَطِيبَا • (yaṭībā) (form I) /ja.tˤiː.baː/\n# third-person masculine dual non-past active subjunctive/jussive of طَابَ (ṭāba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṭībā", "ṭāba"],
-        "k": "طاب",
-        "yol": "kök"
-      },
-      {
-        "w": "طيبا",
-        "u": "طيبا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "طِيبَا • (ṭībā) (form I) /tˤiː.baː/\n# inflection of طَابَ (ṭāba):\n## third-person masculine dual past passive\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṭībā", "ṭāba"],
-        "k": "طاب",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "طب",
+  "ses": {
     "harf": "ط",
+    "fasil": "طب",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "طب",
+      "tur": "noun",
+      "etim_no": "1",
+      "baslik": "طِبّ • (ṭibb) m",
+      "anlam": ["verbal noun of طَبَّ (ṭabba) (form I)", "medicine (field of study)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["طَبَّ"],
+      "okunus": ["ṭibb"],
+      "ipa": ["/tˤibː/"],
+      "torunlar": [
+        ["az", "tibb", ""],
+        ["chg", "طب", "ṭb"],
+        ["unknown", "", ""],
+        ["ota", "طب", "tıbb"],
+        ["ps", "طب", ""],
+        ["fa", "طب", "tebb"],
+        ["pa", "", ""],
+        ["sd", "طبو", "t̤bo"],
+        ["sw", "tiba", ""]
+      ],
+      "dr": ["طِبِّيّ"],
+      "bag": "asıl madde"
+    },
+    {
+      "madde": "طب",
+      "tur": "noun",
+      "etim_no": "2",
+      "baslik": "طَبّ • (ṭabb) m",
+      "anlam": ["verbal noun of طَبَّ (ṭabba) (form I)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["طَبَّ"],
+      "okunus": ["ṭabb"],
+      "bag": "asıl madde"
+    },
+    {
+      "madde": "طب",
+      "tur": "noun",
+      "etim_no": "3",
+      "baslik": "طُبّ • (ṭubb) m",
+      "anlam": ["verbal noun of طَبَّ (ṭabba) (form I)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["طَبَّ"],
+      "okunus": ["ṭubb"],
+      "bag": "asıl madde"
+    },
+    {
+      "madde": "طب",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "طِبْ • (ṭib) (form I) /tˤib/\n# second-person masculine singular imperative of طَابَ (ṭāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭib", "ṭāba"]
+    },
+    {
+      "madde": "يطب",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يطب (form I)\n# يَطِبْ (yaṭib) /ja.tˤib/: third-person masculine singular non-past active jussive of طَابَ (ṭāba)\n# يُطَبْ (yuṭab) /ju.tˤab/: third-person masculine singular non-past passive jussive of طَابَ (ṭāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭib", "ṭāba", "yuṭab"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطيب",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يطيب (form I)\n# يَطِيبُ (yaṭību) /ja.tˤiː.bu/: third-person masculine singular non-past active indicative of طَابَ (ṭāba)\n# يَطِيبَ (yaṭība) /ja.tˤiː.ba/: third-person masculine singular non-past active subjunctive of طَابَ (ṭāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭību", "ṭāba", "yaṭība"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أطيب",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أطيب (form I)\n# أَطِيبُ (ʔaṭību) /ʔa.tˤiː.bu/: first-person singular non-past active indicative of طَابَ (ṭāba)\n# أَطِيبَ (ʔaṭība) /ʔa.tˤiː.ba/: first-person singular non-past active subjunctive of طَابَ (ṭāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaṭību", "ṭāba", "ʔaṭība"]
+    },
+    {
+      "madde": "طبت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "طبت (form I)\n# طِبْتُ (ṭibtu) /tˤib.tu/: first-person singular past active/passive of طَابَ (ṭāba)\n# طِبْتَ (ṭibta) /tˤib.ta/: second-person masculine singular past active/passive of طَابَ (ṭāba)\n# طِبْتِ (ṭibti) /tˤib.ti/: second-person feminine singular past active/passive of طَابَ (ṭāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭibtu", "ṭāba", "ṭibta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطب",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تطب (form I)\n# تَطِبْ (taṭib) /ta.tˤib/: inflection of طَابَ (ṭāba):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُطَبْ (tuṭab) /tu.tˤab/: inflection of طَابَ (ṭāba):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭib", "ṭāba", "tuṭab"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطيب",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تطيب (form I)\n# تَطِيبُ (taṭību) /ta.tˤiː.bu/: inflection of طَابَ (ṭāba):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَطِيبَ (taṭība) /ta.tˤiː.ba/: inflection of طَابَ (ṭāba):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭību", "ṭāba", "taṭība"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطيبين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَطِيبِينَ • (taṭībīna) (form I) /ta.tˤiː.biː.na/\n# second-person feminine singular non-past active indicative of طَابَ (ṭāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭībīna", "ṭāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطيبي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَطِيبِي • (taṭībī) (form I) /ta.tˤiː.biː/\n# second-person feminine singular non-past active subjunctive/jussive of طَابَ (ṭāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭībī", "ṭāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طيبي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "طِيبِي • (ṭībī) (form I) /tˤiː.biː/\n# second-person feminine singular imperative of طَابَ (ṭāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭībī", "ṭāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أطب",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أطب (form I)\n# أَطِبْ (ʔaṭib) /ʔa.tˤib/: first-person singular non-past active jussive of طَابَ (ṭāba)\n# أُطَبْ (ʔuṭab) /ʔu.tˤab/: first-person singular non-past passive jussive of طَابَ (ṭāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaṭib", "ṭāba", "ʔuṭab"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نطب",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نطب (form I)\n# نَطِبْ (naṭib) /na.tˤib/: first-person plural non-past active jussive of طَابَ (ṭāba)\n# نُطَبْ (nuṭab) /nu.tˤab/: first-person plural non-past passive jussive of طَابَ (ṭāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naṭib", "ṭāba", "nuṭab"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نطيب",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نطيب (form I)\n# نَطِيبُ (naṭību) /na.tˤiː.bu/: first-person plural non-past active indicative of طَابَ (ṭāba)\n# نَطِيبَ (naṭība) /na.tˤiː.ba/: first-person plural non-past active subjunctive of طَابَ (ṭāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naṭību", "ṭāba", "naṭība"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطيبون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَطِيبُونَ • (taṭībūna) (form I) /ta.tˤiː.buː.na/\n# second-person masculine plural non-past active indicative of طَابَ (ṭāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭībūna", "ṭāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطيبوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَطِيبُوا • (taṭībū) (form I) /ta.tˤiː.buː/\n# second-person masculine plural non-past active subjunctive/jussive of طَابَ (ṭāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭībū", "ṭāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طيبوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "طِيبُوا • (ṭībū) (form I) /tˤiː.buː/\n# inflection of طَابَ (ṭāba):\n## third-person masculine plural past passive\n## second-person masculine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭībū", "ṭāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطيبون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَطِيبُونَ • (yaṭībūna) (form I) /ja.tˤiː.buː.na/\n# third-person masculine plural non-past active indicative of طَابَ (ṭāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭībūna", "ṭāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطيبوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَطِيبُوا • (yaṭībū) (form I) /ja.tˤiː.buː/\n# third-person masculine plural non-past active subjunctive/jussive of طَابَ (ṭāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭībū", "ṭāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طابت",
+      "tur": "verb",
+      "baslik": "طَابَتْ • (ṭābat) (form I) /tˤaː.bat/\n# third-person feminine singular past active of طَابَ (ṭāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭābat", "ṭāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طبتما",
+      "tur": "verb",
+      "baslik": "طِبْتُمَا • (ṭibtumā) (form I) /tˤib.tu.maː/\n# second-person dual past active/passive of طَابَ (ṭāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭibtumā", "ṭāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طابا",
+      "tur": "verb",
+      "baslik": "طَابَا • (ṭābā) (form I) /tˤaː.baː/\n# third-person masculine dual past active of طَابَ (ṭāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭābā", "ṭāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طابتا",
+      "tur": "verb",
+      "baslik": "طَابَتَا • (ṭābatā) (form I) /tˤaː.ba.taː/\n# third-person feminine dual past active of طَابَ (ṭāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭābatā", "ṭāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طبنا",
+      "tur": "verb",
+      "baslik": "طِبْنَا • (ṭibnā) (form I) /tˤib.naː/\n# first-person plural past active/passive of طَابَ (ṭāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭibnā", "ṭāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طبتم",
+      "tur": "verb",
+      "baslik": "طِبْتُمْ • (ṭibtum) (form I) /tˤib.tum/\n# second-person masculine plural past active/passive of طَابَ (ṭāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭibtum", "ṭāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طابوا",
+      "tur": "verb",
+      "baslik": "طَابُوا • (ṭābū) (form I) /tˤaː.buː/\n# third-person masculine plural past active of طَابَ (ṭāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭābū", "ṭāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طبتن",
+      "tur": "verb",
+      "baslik": "طِبْتُنَّ • (ṭibtunna) (form I) /tˤib.tun.na/\n# second-person feminine plural past active/passive of طَابَ (ṭāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭibtunna", "ṭāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطيبان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَطِيبَانِ • (taṭībāni) (form I) /ta.tˤiː.baː.ni/\n# inflection of طَابَ (ṭāba):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭībāni", "ṭāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طبن",
+      "tur": "verb",
+      "baslik": "طِبْنَ • (ṭibna) (form I) /tˤib.na/\n# inflection of طَابَ (ṭāba):\n## third-person feminine plural past active/passive\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭibna", "ṭāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطيبان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَطِيبَانِ • (yaṭībāni) (form I) /ja.tˤiː.baː.ni/\n# third-person masculine dual non-past active indicative of طَابَ (ṭāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭībāni", "ṭāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطبن",
+      "tur": "verb",
+      "baslik": "تطبن (form I)\n# تَطِبْنَ (taṭibna) /ta.tˤib.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of طَابَ (ṭāba)\n# تُطَبْنَ (tuṭabna) /tu.tˤab.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of طَابَ (ṭāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭibna", "ṭāba", "tuṭabna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطبن",
+      "tur": "verb",
+      "baslik": "يطبن (form I)\n# يَطِبْنَ (yaṭibna) /ja.tˤib.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of طَابَ (ṭāba)\n# يُطَبْنَ (yuṭabna) /ju.tˤab.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of طَابَ (ṭāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭibna", "ṭāba", "yuṭabna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطيبا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَطِيبَا • (taṭībā) (form I) /ta.tˤiː.baː/\n# inflection of طَابَ (ṭāba):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṭībā", "ṭāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطيبا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَطِيبَا • (yaṭībā) (form I) /ja.tˤiː.baː/\n# third-person masculine dual non-past active subjunctive/jussive of طَابَ (ṭāba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṭībā", "ṭāba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طيبا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "طِيبَا • (ṭībā) (form I) /tˤiː.baː/\n# inflection of طَابَ (ṭāba):\n## third-person masculine dual past passive\n## second-person dual imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṭībā", "ṭāba"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "طاب", "r7"]
+  ],
+  "mana": {
     "ince": "cognition.n.01",
     "orta": "noun.cognition",
     "ust": "zihin ve ilim",
@@ -516,20 +383,8 @@
     "dayanak_tanim": "the branches of medical science that deal with nonsurgical techniques",
     "dayanak_karsilik": "medicine"
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m2",
+  "gomme": {
     "ust": {
       "kume": 7,
       "merkez_kok": "حدق",
@@ -549,6 +404,10 @@
       "boy": 5
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

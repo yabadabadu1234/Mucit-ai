@@ -1,475 +1,342 @@
 {
   "kok": "ربى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ربى", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الراء والباء",
-      "baslik": "ربو- ربى",
-      "mihveri": "نمو الشيء مستغلظًا مرتفعًا. كالرابية ورَبْو الأرض {فَإِذَا أَنْزَلْنَا عَلَيْهَا الْمَاءَ اهْتَزَّتْ وَرَبَتْ} [الحج: 5، فصلت 39]، (انتفخت فارتفعت) {كَمَثَلِ جَنَّةٍ بِرَبْوَةٍ} [البقرة: 265] ومثلها ما في [المؤمنون: 50] {فَاحْتَمَلَ السَّيْلُ زَبَدًا رَابِيًا} [الرعد: 17] طالعا عاليا مرتفعًا فوق الماء {فَأَخَذَهُمْ أَخْذَةً رَابِيَةً} [الحاقة: 10] نامية شديدة يريد أنها زادت على (2/740) غيرها من الأَخَذات وهي الغزق وقلب المدائن [بحر 8/ 316]، ومنه \"ربَّى الصبيَّ: غَذَاه ونشّأه (فنما وكبِرَ) كربَّةُ وربَّبَهُ {كَمَا رَبَّيَانِي صَغِيرًا} ومثلها ما في [الشعراء: 18] والرَبْوَة: الجماعة الكثيرة نحو عشرة آلاف. (الكثرة زيادة تدخل في باب النمو). ومنه: \"ربا المال: زادَ \". ومنه الربا المعروف؛ لأنه زيادة على رأس المال، ولكنها زيادة تمحق: {وَأَحَلَّ اللَّهُ الْبَيْعَ وَحَرَّمَ الرِّبَا} [البقرة: 275]. وقوله تعالى: {وَمَا آتَيْتُمْ مِنْ رِبًا لِيَرْبُوَ فِي أَمْوَالِ النَّاسِ} [الروم: 39]، أي ليزيد بما يؤخذ من أموالهم استغلالًا لحاجتهم {فَلَا يَرْبُو عِنْدَ اللَّهِ} [الروم: 39] أي فإنه لا يزيد على الحقيقة بل ينقص؛ لأن هذه الزيادة تمحقه كله. ومن الزيادة الزمنية: \"أربى على الخمسين \"أي زاد سِنُّه عليها.",
-      "sesler": "",
-      "tam_metin": "{وَقُلْ رَبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا} [الإسراء: 24]\n\"الربْوة والرباوة -مثلثتين- والرابية والرَبَاة والرَبْو: كل ما ارتفع من الأرض. رَبَتْ الأرضُ: زادت واتتفخت \".\n° المعنى المحوري\nنمو الشيء مستغلظًا مرتفعًا. كالرابية ورَبْو الأرض {فَإِذَا أَنْزَلْنَا عَلَيْهَا الْمَاءَ اهْتَزَّتْ وَرَبَتْ} [الحج: 5، فصلت 39]، (انتفخت فارتفعت) {كَمَثَلِ جَنَّةٍ بِرَبْوَةٍ} [البقرة: 265] ومثلها ما في [المؤمنون: 50] {فَاحْتَمَلَ السَّيْلُ زَبَدًا رَابِيًا} [الرعد: 17] طالعا عاليا مرتفعًا فوق الماء {فَأَخَذَهُمْ أَخْذَةً رَابِيَةً} [الحاقة: 10] نامية شديدة يريد أنها زادت على\n(2/740)\nغيرها من الأَخَذات وهي الغزق وقلب المدائن [بحر 8/ 316]، ومنه \"ربَّى الصبيَّ: غَذَاه ونشّأه (فنما وكبِرَ) كربَّةُ وربَّبَهُ {كَمَا رَبَّيَانِي صَغِيرًا} ومثلها ما في [الشعراء: 18] والرَبْوَة: الجماعة الكثيرة نحو عشرة آلاف. (الكثرة زيادة تدخل في باب النمو).\nومنه: \"ربا المال: زادَ \". ومنه الربا المعروف؛ لأنه زيادة على رأس المال، ولكنها زيادة تمحق: {وَأَحَلَّ اللَّهُ الْبَيْعَ وَحَرَّمَ الرِّبَا} [البقرة: 275]. وقوله تعالى: {وَمَا آتَيْتُمْ مِنْ رِبًا لِيَرْبُوَ فِي أَمْوَالِ النَّاسِ} [الروم: 39]، أي ليزيد بما يؤخذ من أموالهم استغلالًا لحاجتهم {فَلَا يَرْبُو عِنْدَ اللَّهِ} [الروم: 39] أي فإنه لا يزيد على الحقيقة بل ينقص؛ لأن هذه الزيادة تمحقه كله.\nومن الزيادة الزمنية: \"أربى على الخمسين \"أي زاد سِنُّه عليها.",
-      "fasil_ozeti": "° معنى الفصل المعجمي (رب) : الاستغلاظ وما إليه من تماسك وتجمع كما يتمثل في استغلاظ الرُب وتماسكه -في (ريب)، وفي تجمع الربوة ونمو من يُرَبَّى -في (ربو)، وفي تخثر اللبن -في (روب)، وفي التباس الأمر وتداخله -في (ريب) (هل نظر العرب في لفظ الرب ومعناه إلى روب؟ مسألة تبحث في علم متن اللغة) وفي عقد طرفي الحبلين في الأُرْبة وتجمع العضو موفرًا -في (أرب)، وفي الأصل الذي تخرج منه الزيادة -في (ربح)، وفي الجثوم ولزوم المكان -في (ربص) وفي تجمع ما يربط كجراب التمر وتجمع الماء -في (ربط)، وفي تجمع جسم الرجل الرَبْعة، والرَبْع طرف الجبل -في (ربع)."
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "رب",
-        "u": "رب",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "رَبِّ • (rabbi) (form II) /rab.bi/\n# second-person masculine singular imperative of رَبَّى (rabbā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["rabbi", "rabbā"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "يرب",
-        "u": "يرب",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يرب (form II)\n# يُرَبِّ (yurabbi) /ju.rab.bi/: third-person masculine singular non-past active jussive of رَبَّى (rabbā)\n# يُرَبَّ (yurabba) /ju.rab.ba/: third-person masculine singular non-past passive jussive of رَبَّى (rabbā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yurabbi", "rabbā", "yurabba"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "يربى",
-        "u": "يربى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُرَبَّى • (yurabbā) (form II) /ju.rab.baː/\n# third-person masculine singular non-past passive indicative/subjunctive of رَبَّى (rabbā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yurabbā", "rabbā"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "يربي",
-        "u": "يربي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يربي (form II)\n# يُرَبِّي (yurabbī) /ju.rab.biː/: third-person masculine singular non-past active indicative of رَبَّى (rabbā)\n# يُرَبِّيَ (yurabbiya) /ju.rab.bi.ja/: third-person masculine singular non-past active subjunctive of رَبَّى (rabbā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yurabbī", "rabbā", "yurabbiya"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "ربي",
-        "u": "ربي",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "ربي (form II)\n# رُبِّيَ (rubbiya) /rub.bi.ja/: third-person masculine singular past passive of رَبَّى (rabbā)\n# رَبِّي (rabbī) /rab.biː/: second-person feminine singular imperative of رَبَّى (rabbā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["rubbiya", "rabbā", "rabbī"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "ربت",
-        "u": "ربت",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "رَبَّتْ • (rabbat) (form II) /rab.bat/\n# third-person feminine singular past active of رَبَّى (rabbā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["rabbat", "rabbā"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "ترب",
-        "u": "ترب",
-        "p": "verb",
-        "n": "3.2",
-        "h": "ar-verb form",
-        "e": "ترب (form II)\n# تُرَبِّ (turabbi) /tu.rab.bi/: inflection of رَبَّى (rabbā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُرَبَّ (turabba) /tu.rab.ba/: inflection of رَبَّى (rabbā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["turabbi", "rabbā", "turabba"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "تربي",
-        "u": "تربي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تربي (form II)\n# تُرَبِّي (turabbī) /tu.rab.biː/: inflection of رَبَّى (rabbā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُرَبِّيَ (turabbiya) /tu.rab.bi.ja/: inflection of رَبَّى (rabbā):\n## second-person masculine singular non-past active sub",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["turabbī", "rabbā", "turabbiya"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "ربيت",
-        "u": "ربيت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ربيت (form II)\n# رَبَّيْتُ (rabbaytu) /rab.baj.tu/: first-person singular past active of رَبَّى (rabbā)\n# رَبَّيْتَ (rabbayta) /rab.baj.ta/: second-person masculine singular past active of رَبَّى (rabbā)\n# رَبَّيْتِ (rabbayti) /rab.baj.ti/: second-person feminine singular past active of رَبَّى (rabbā)\n# رُبِّيتُ (rubbītu) /rub.biː.tu/: first-person singular past passive of رَبَّى (rabbā)\n# رُبِّيت",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["rabbaytu", "rabbā", "rabbayta"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "تربى",
-        "u": "تربى",
-        "p": "verb",
-        "n": "1.2",
-        "h": "ar-verb form",
-        "e": "تُرَبَّى • (turabbā) (form II) /tu.rab.baː/\n# inflection of رَبَّى (rabbā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["turabbā", "rabbā"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "تربين",
-        "u": "تربين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تربين (form II)\n# تُرَبِّينَ (turabbīna) /tu.rab.biː.na/: inflection of رَبَّى (rabbā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُرَبَّيْنَ (turabbayna) /tu.rab.baj.na/: inflection of رَبَّى (rabbā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plur",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["turabbīna", "rabbā", "turabbayna"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "أرب",
-        "u": "أرب",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أرب (form II)\n# أُرَبِّ (ʔurabbi) /ʔu.rab.bi/: first-person singular non-past active jussive of رَبَّى (rabbā)\n# أُرَبَّ (ʔurabba) /ʔu.rab.ba/: first-person singular non-past passive jussive of رَبَّى (rabbā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔurabbi", "rabbā", "ʔurabba"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "أربي",
-        "u": "أربي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أربي (form II)\n# أُرَبِّي (ʔurabbī) /ʔu.rab.biː/: first-person singular non-past active indicative of رَبَّى (rabbā)\n# أُرَبِّيَ (ʔurabbiya) /ʔu.rab.bi.ja/: first-person singular non-past active subjunctive of رَبَّى (rabbā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔurabbī", "rabbā", "ʔurabbiya"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "أربى",
-        "u": "أربى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُرَبَّى • (ʔurabbā) (form II) /ʔu.rab.baː/\n# first-person singular non-past passive indicative/subjunctive of رَبَّى (rabbā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔurabbā", "rabbā"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "نرب",
-        "u": "نرب",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نرب (form II)\n# نُرَبِّ (nurabbi) /nu.rab.bi/: first-person plural non-past active jussive of رَبَّى (rabbā)\n# نُرَبَّ (nurabba) /nu.rab.ba/: first-person plural non-past passive jussive of رَبَّى (rabbā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nurabbi", "rabbā", "nurabba"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "ربينا",
-        "u": "ربينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ربينا (form II)\n# رَبَّيْنَا (rabbaynā) /rab.baj.naː/: first-person plural past active of رَبَّى (rabbā)\n# رُبِّينَا (rubbīnā) /rub.biː.naː/: first-person plural past passive of رَبَّى (rabbā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["rabbaynā", "rabbā", "rubbīnā"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "نربي",
-        "u": "نربي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نربي (form II)\n# نُرَبِّي (nurabbī) /nu.rab.biː/: first-person plural non-past active indicative of رَبَّى (rabbā)\n# نُرَبِّيَ (nurabbiya) /nu.rab.bi.ja/: first-person plural non-past active subjunctive of رَبَّى (rabbā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nurabbī", "rabbā", "nurabbiya"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "نربى",
-        "u": "نربى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُرَبَّى • (nurabbā) (form II) /nu.rab.baː/\n# first-person plural non-past passive indicative/subjunctive of رَبَّى (rabbā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nurabbā", "rabbā"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "تربون",
-        "u": "تربون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تربون (form II)\n# تُرَبُّونَ (turabbūna) /tu.rab.buː.na/: second-person masculine plural non-past active indicative of رَبَّى (rabbā)\n# تُرَبَّوْنَ (turabbawna) /tu.rab.baw.na/: second-person masculine plural non-past passive indicative of رَبَّى (rabbā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["turabbūna", "rabbā", "turabbawna"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "تربوا",
-        "u": "تربوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تربوا (form II)\n# تُرَبُّوا (turabbū) /tu.rab.buː/: second-person masculine plural non-past active subjunctive/jussive of رَبَّى (rabbā)\n# تُرَبَّوْا (turabbaw) /tu.rab.baw/: second-person masculine plural non-past passive subjunctive/jussive of رَبَّى (rabbā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["turabbū", "rabbā", "turabbaw"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "ربيتم",
-        "u": "ربيتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ربيتم (form II)\n# رَبَّيْتُمْ (rabbaytum) /rab.baj.tum/: second-person masculine plural past active of رَبَّى (rabbā)\n# رُبِّيتُمْ (rubbītum) /rub.biː.tum/: second-person masculine plural past passive of رَبَّى (rabbā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["rabbaytum", "rabbā", "rubbītum"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "ربوا",
-        "u": "ربوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "ربوا (form II)\n# رَبَّوْا (rabbaw) /rab.baw/: third-person masculine plural past active of رَبَّى (rabbā)\n# رُبُّوا (rubbū) /rub.buː/: third-person masculine plural past passive of رَبَّى (rabbā)\n# رَبُّوا (rabbū) /rab.buː/: second-person masculine plural imperative of رَبَّى (rabbā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["rabbaw", "rabbā", "rubbū"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "يربون",
-        "u": "يربون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يربون (form II)\n# يُرَبُّونَ (yurabbūna) /ju.rab.buː.na/: third-person masculine plural non-past active indicative of رَبَّى (rabbā)\n# يُرَبَّوْنَ (yurabbawna) /ju.rab.baw.na/: third-person masculine plural non-past passive indicative of رَبَّى (rabbā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yurabbūna", "rabbā", "yurabbawna"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "يربوا",
-        "u": "يربوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يربوا (form II)\n# يُرَبُّوا (yurabbū) /ju.rab.buː/: third-person masculine plural non-past active subjunctive/jussive of رَبَّى (rabbā)\n# يُرَبَّوْا (yurabbaw) /ju.rab.baw/: third-person masculine plural non-past passive subjunctive/jussive of رَبَّى (rabbā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yurabbū", "rabbā", "yurabbaw"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "ربيتن",
-        "u": "ربيتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ربيتن (form II)\n# رَبَّيْتُنَّ (rabbaytunna) /rab.baj.tun.na/: second-person feminine plural past active of رَبَّى (rabbā)\n# رُبِّيتُنَّ (rubbītunna) /rub.biː.tun.na/: second-person feminine plural past passive of رَبَّى (rabbā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["rabbaytunna", "rabbā", "rubbītunna"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "ربين",
-        "u": "ربين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ربين (form II)\n# رَبَّيْنَ (rabbayna) /rab.baj.na/: third-person feminine plural past active of رَبَّى (rabbā)\n# رُبِّينَ (rubbīna) /rub.biː.na/: third-person feminine plural past passive of رَبَّى (rabbā)\n# رَبِّينَ (rabbīna) /rab.biː.na/: second-person feminine plural imperative of رَبَّى (rabbā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["rabbayna", "rabbā", "rubbīna"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "يربين",
-        "u": "يربين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يربين (form II)\n# يُرَبِّينَ (yurabbīna) /ju.rab.biː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of رَبَّى (rabbā)\n# يُرَبَّيْنَ (yurabbayna) /ju.rab.baj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of رَبَّى (rabbā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yurabbīna", "rabbā", "yurabbayna"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "تربيا",
-        "u": "تربيا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تربيا (form II)\n# تُرَبِّيَا (turabbiyā) /tu.rab.bi.jaː/: inflection of رَبَّى (rabbā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُرَبَّيَا (turabbayā) /tu.rab.ba.jaː/: inflection of رَبَّى (rabbā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctiv",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["turabbiyā", "rabbā", "turabbayā"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "ربتا",
-        "u": "ربتا",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "رَبَّتَا • (rabbatā) (form II) /rab.ba.taː/\n# third-person feminine dual past active of رَبَّى (rabbā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["rabbatā", "rabbā"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "ربيتما",
-        "u": "ربيتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ربيتما (form II)\n# رَبَّيْتُمَا (rabbaytumā) /rab.baj.tu.maː/: second-person dual past active of رَبَّى (rabbā)\n# رُبِّيتُمَا (rubbītumā) /rub.biː.tu.maː/: second-person dual past passive of رَبَّى (rabbā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["rabbaytumā", "rabbā", "rubbītumā"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "ربيا",
-        "u": "ربيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ربيا (form II)\n# رَبَّيَا (rabbayā) /rab.ba.jaː/: third-person masculine dual past active of رَبَّى (rabbā)\n# رُبِّيَا (rubbiyā) /rub.bi.jaː/: third-person masculine dual past passive of رَبَّى (rabbā)\n# رَبِّيَا (rabbiyā) /rab.bi.jaː/: second-person dual imperative of رَبَّى (rabbā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["rabbayā", "rabbā", "rubbiyā"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "تربيان",
-        "u": "تربيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تربيان (form II)\n# تُرَبِّيَانِ (turabbiyāni) /tu.rab.bi.jaː.ni/: inflection of رَبَّى (rabbā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُرَبَّيَانِ (turabbayāni) /tu.rab.ba.jaː.ni/: inflection of رَبَّى (rabbā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["turabbiyāni", "rabbā", "turabbayāni"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "يربيان",
-        "u": "يربيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يربيان (form II)\n# يُرَبِّيَانِ (yurabbiyāni) /ju.rab.bi.jaː.ni/: third-person masculine dual non-past active indicative of رَبَّى (rabbā)\n# يُرَبَّيَانِ (yurabbayāni) /ju.rab.ba.jaː.ni/: third-person masculine dual non-past passive indicative of رَبَّى (rabbā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yurabbiyāni", "rabbā", "yurabbayāni"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "ربيتا",
-        "u": "ربيتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُبِّيَتَا • (rubbiyatā) (form II) /rub.bi.ja.taː/\n# third-person feminine dual past passive of رَبَّى (rabbā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["rubbiyatā", "rabbā"],
-        "k": "ربى",
-        "yol": "kök"
-      },
-      {
-        "w": "يربيا",
-        "u": "يربيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يربيا (form II)\n# يُرَبِّيَا (yurabbiyā) /ju.rab.bi.jaː/: third-person masculine dual non-past active subjunctive/jussive of رَبَّى (rabbā)\n# يُرَبَّيَا (yurabbayā) /ju.rab.ba.jaː/: third-person masculine dual non-past passive subjunctive/jussive of رَبَّى (rabbā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yurabbiyā", "rabbā", "yurabbayā"],
-        "k": "ربى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "رب",
+  "ses": {
     "harf": "ر",
+    "fasil": "رب",
     "mahrec": "zelakiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "cebel": {
+    "fasil": "الراء والباء",
+    "baslik": "ربو- ربى",
+    "mihveri": "نمو الشيء مستغلظًا مرتفعًا. كالرابية ورَبْو الأرض {فَإِذَا أَنْزَلْنَا عَلَيْهَا الْمَاءَ اهْتَزَّتْ وَرَبَتْ} [الحج: 5، فصلت 39]، (انتفخت فارتفعت) {كَمَثَلِ جَنَّةٍ بِرَبْوَةٍ} [البقرة: 265] ومثلها ما في [المؤمنون: 50] {فَاحْتَمَلَ السَّيْلُ زَبَدًا رَابِيًا} [الرعد: 17] طالعا عاليا مرتفعًا فوق الماء {فَأَخَذَهُمْ أَخْذَةً رَابِيَةً} [الحاقة: 10] نامية شديدة يريد أنها زادت على (2/740) غيرها من الأَخَذات وهي الغزق وقلب المدائن [بحر 8/ 316]، ومنه \"ربَّى الصبيَّ: غَذَاه ونشّأه (فنما وكبِرَ) كربَّةُ وربَّبَهُ {كَمَا رَبَّيَانِي صَغِيرًا} ومثلها ما في [الشعراء: 18] والرَبْوَة: الجماعة الكثيرة نحو عشرة آلاف. (الكثرة زيادة تدخل في باب النمو). ومنه: \"ربا المال: زادَ \". ومنه الربا المعروف؛ لأنه زيادة على رأس المال، ولكنها زيادة تمحق: {وَأَحَلَّ اللَّهُ الْبَيْعَ وَحَرَّمَ الرِّبَا} [البقرة: 275]. وقوله تعالى: {وَمَا آتَيْتُمْ مِنْ رِبًا لِيَرْبُوَ فِي أَمْوَالِ النَّاسِ} [الروم: 39]، أي ليزيد بما يؤخذ من أموالهم استغلالًا لحاجتهم {فَلَا يَرْبُو عِنْدَ اللَّهِ} [الروم: 39] أي فإنه لا يزيد على الحقيقة بل ينقص؛ لأن هذه الزيادة تمحقه كله. ومن الزيادة الزمنية: \"أربى على الخمسين \"أي زاد سِنُّه عليها.",
+    "tam_metin": "{وَقُلْ رَبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا} [الإسراء: 24]\n\"الربْوة والرباوة -مثلثتين- والرابية والرَبَاة والرَبْو: كل ما ارتفع من الأرض. رَبَتْ الأرضُ: زادت واتتفخت \".\n° المعنى المحوري\nنمو الشيء مستغلظًا مرتفعًا. كالرابية ورَبْو الأرض {فَإِذَا أَنْزَلْنَا عَلَيْهَا الْمَاءَ اهْتَزَّتْ وَرَبَتْ} [الحج: 5، فصلت 39]، (انتفخت فارتفعت) {كَمَثَلِ جَنَّةٍ بِرَبْوَةٍ} [البقرة: 265] ومثلها ما في [المؤمنون: 50] {فَاحْتَمَلَ السَّيْلُ زَبَدًا رَابِيًا} [الرعد: 17] طالعا عاليا مرتفعًا فوق الماء {فَأَخَذَهُمْ أَخْذَةً رَابِيَةً} [الحاقة: 10] نامية شديدة يريد أنها زادت على\n(2/740)\nغيرها من الأَخَذات وهي الغزق وقلب المدائن [بحر 8/ 316]، ومنه \"ربَّى الصبيَّ: غَذَاه ونشّأه (فنما وكبِرَ) كربَّةُ وربَّبَهُ {كَمَا رَبَّيَانِي صَغِيرًا} ومثلها ما في [الشعراء: 18] والرَبْوَة: الجماعة الكثيرة نحو عشرة آلاف. (الكثرة زيادة تدخل في باب النمو).\nومنه: \"ربا المال: زادَ \". ومنه الربا المعروف؛ لأنه زيادة على رأس المال، ولكنها زيادة تمحق: {وَأَحَلَّ اللَّهُ الْبَيْعَ وَحَرَّمَ الرِّبَا} [البقرة: 275]. وقوله تعالى: {وَمَا آتَيْتُمْ مِنْ رِبًا لِيَرْبُوَ فِي أَمْوَالِ النَّاسِ} [الروم: 39]، أي ليزيد بما يؤخذ من أموالهم استغلالًا لحاجتهم {فَلَا يَرْبُو عِنْدَ اللَّهِ} [الروم: 39] أي فإنه لا يزيد على الحقيقة بل ينقص؛ لأن هذه الزيادة تمحقه كله.\nومن الزيادة الزمنية: \"أربى على الخمسين \"أي زاد سِنُّه عليها.",
+    "fasil_ozeti": "° معنى الفصل المعجمي (رب) : الاستغلاظ وما إليه من تماسك وتجمع كما يتمثل في استغلاظ الرُب وتماسكه -في (ريب)، وفي تجمع الربوة ونمو من يُرَبَّى -في (ربو)، وفي تخثر اللبن -في (روب)، وفي التباس الأمر وتداخله -في (ريب) (هل نظر العرب في لفظ الرب ومعناه إلى روب؟ مسألة تبحث في علم متن اللغة) وفي عقد طرفي الحبلين في الأُرْبة وتجمع العضو موفرًا -في (أرب)، وفي الأصل الذي تخرج منه الزيادة -في (ربح)، وفي الجثوم ولزوم المكان -في (ربص) وفي تجمع ما يربط كجراب التمر وتجمع الماء -في (ربط)، وفي تجمع جسم الرجل الرَبْعة، والرَبْع طرف الجبل -في (ربع)."
+  },
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "رب",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "رَبِّ • (rabbi) (form II) /rab.bi/\n# second-person masculine singular imperative of رَبَّى (rabbā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["rabbi", "rabbā"]
+    },
+    {
+      "madde": "يرب",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يرب (form II)\n# يُرَبِّ (yurabbi) /ju.rab.bi/: third-person masculine singular non-past active jussive of رَبَّى (rabbā)\n# يُرَبَّ (yurabba) /ju.rab.ba/: third-person masculine singular non-past passive jussive of رَبَّى (rabbā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yurabbi", "rabbā", "yurabba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يربى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُرَبَّى • (yurabbā) (form II) /ju.rab.baː/\n# third-person masculine singular non-past passive indicative/subjunctive of رَبَّى (rabbā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yurabbā", "rabbā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يربي",
+      "tur": "verb",
+      "baslik": "يربي (form II)\n# يُرَبِّي (yurabbī) /ju.rab.biː/: third-person masculine singular non-past active indicative of رَبَّى (rabbā)\n# يُرَبِّيَ (yurabbiya) /ju.rab.bi.ja/: third-person masculine singular non-past active subjunctive of رَبَّى (rabbā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yurabbī", "rabbā", "yurabbiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ربي",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "ربي (form II)\n# رُبِّيَ (rubbiya) /rub.bi.ja/: third-person masculine singular past passive of رَبَّى (rabbā)\n# رَبِّي (rabbī) /rab.biː/: second-person feminine singular imperative of رَبَّى (rabbā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["rubbiya", "rabbā", "rabbī"]
+    },
+    {
+      "madde": "ربت",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "رَبَّتْ • (rabbat) (form II) /rab.bat/\n# third-person feminine singular past active of رَبَّى (rabbā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["rabbat", "rabbā"]
+    },
+    {
+      "madde": "ترب",
+      "tur": "verb",
+      "etim_no": "3.2",
+      "baslik": "ترب (form II)\n# تُرَبِّ (turabbi) /tu.rab.bi/: inflection of رَبَّى (rabbā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُرَبَّ (turabba) /tu.rab.ba/: inflection of رَبَّى (rabbā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["turabbi", "rabbā", "turabba"]
+    },
+    {
+      "madde": "تربي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تربي (form II)\n# تُرَبِّي (turabbī) /tu.rab.biː/: inflection of رَبَّى (rabbā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُرَبِّيَ (turabbiya) /tu.rab.bi.ja/: inflection of رَبَّى (rabbā):\n## second-person masculine singular non-past active sub",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["turabbī", "rabbā", "turabbiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ربيت",
+      "tur": "verb",
+      "baslik": "ربيت (form II)\n# رَبَّيْتُ (rabbaytu) /rab.baj.tu/: first-person singular past active of رَبَّى (rabbā)\n# رَبَّيْتَ (rabbayta) /rab.baj.ta/: second-person masculine singular past active of رَبَّى (rabbā)\n# رَبَّيْتِ (rabbayti) /rab.baj.ti/: second-person feminine singular past active of رَبَّى (rabbā)\n# رُبِّيتُ (rubbītu) /rub.biː.tu/: first-person singular past passive of رَبَّى (rabbā)\n# رُبِّيت",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["rabbaytu", "rabbā", "rabbayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تربى",
+      "tur": "verb",
+      "etim_no": "1.2",
+      "baslik": "تُرَبَّى • (turabbā) (form II) /tu.rab.baː/\n# inflection of رَبَّى (rabbā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["turabbā", "rabbā"]
+    },
+    {
+      "madde": "تربين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تربين (form II)\n# تُرَبِّينَ (turabbīna) /tu.rab.biː.na/: inflection of رَبَّى (rabbā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُرَبَّيْنَ (turabbayna) /tu.rab.baj.na/: inflection of رَبَّى (rabbā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plur",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["turabbīna", "rabbā", "turabbayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أرب",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أرب (form II)\n# أُرَبِّ (ʔurabbi) /ʔu.rab.bi/: first-person singular non-past active jussive of رَبَّى (rabbā)\n# أُرَبَّ (ʔurabba) /ʔu.rab.ba/: first-person singular non-past passive jussive of رَبَّى (rabbā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔurabbi", "rabbā", "ʔurabba"]
+    },
+    {
+      "madde": "أربي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أربي (form II)\n# أُرَبِّي (ʔurabbī) /ʔu.rab.biː/: first-person singular non-past active indicative of رَبَّى (rabbā)\n# أُرَبِّيَ (ʔurabbiya) /ʔu.rab.bi.ja/: first-person singular non-past active subjunctive of رَبَّى (rabbā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔurabbī", "rabbā", "ʔurabbiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أربى",
+      "tur": "verb",
+      "baslik": "أُرَبَّى • (ʔurabbā) (form II) /ʔu.rab.baː/\n# first-person singular non-past passive indicative/subjunctive of رَبَّى (rabbā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔurabbā", "rabbā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نرب",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نرب (form II)\n# نُرَبِّ (nurabbi) /nu.rab.bi/: first-person plural non-past active jussive of رَبَّى (rabbā)\n# نُرَبَّ (nurabba) /nu.rab.ba/: first-person plural non-past passive jussive of رَبَّى (rabbā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nurabbi", "rabbā", "nurabba"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ربينا",
+      "tur": "verb",
+      "baslik": "ربينا (form II)\n# رَبَّيْنَا (rabbaynā) /rab.baj.naː/: first-person plural past active of رَبَّى (rabbā)\n# رُبِّينَا (rubbīnā) /rub.biː.naː/: first-person plural past passive of رَبَّى (rabbā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["rabbaynā", "rabbā", "rubbīnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نربي",
+      "tur": "verb",
+      "baslik": "نربي (form II)\n# نُرَبِّي (nurabbī) /nu.rab.biː/: first-person plural non-past active indicative of رَبَّى (rabbā)\n# نُرَبِّيَ (nurabbiya) /nu.rab.bi.ja/: first-person plural non-past active subjunctive of رَبَّى (rabbā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nurabbī", "rabbā", "nurabbiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نربى",
+      "tur": "verb",
+      "baslik": "نُرَبَّى • (nurabbā) (form II) /nu.rab.baː/\n# first-person plural non-past passive indicative/subjunctive of رَبَّى (rabbā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nurabbā", "rabbā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تربون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تربون (form II)\n# تُرَبُّونَ (turabbūna) /tu.rab.buː.na/: second-person masculine plural non-past active indicative of رَبَّى (rabbā)\n# تُرَبَّوْنَ (turabbawna) /tu.rab.baw.na/: second-person masculine plural non-past passive indicative of رَبَّى (rabbā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["turabbūna", "rabbā", "turabbawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تربوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تربوا (form II)\n# تُرَبُّوا (turabbū) /tu.rab.buː/: second-person masculine plural non-past active subjunctive/jussive of رَبَّى (rabbā)\n# تُرَبَّوْا (turabbaw) /tu.rab.baw/: second-person masculine plural non-past passive subjunctive/jussive of رَبَّى (rabbā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["turabbū", "rabbā", "turabbaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ربيتم",
+      "tur": "verb",
+      "baslik": "ربيتم (form II)\n# رَبَّيْتُمْ (rabbaytum) /rab.baj.tum/: second-person masculine plural past active of رَبَّى (rabbā)\n# رُبِّيتُمْ (rubbītum) /rub.biː.tum/: second-person masculine plural past passive of رَبَّى (rabbā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["rabbaytum", "rabbā", "rubbītum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ربوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "ربوا (form II)\n# رَبَّوْا (rabbaw) /rab.baw/: third-person masculine plural past active of رَبَّى (rabbā)\n# رُبُّوا (rubbū) /rub.buː/: third-person masculine plural past passive of رَبَّى (rabbā)\n# رَبُّوا (rabbū) /rab.buː/: second-person masculine plural imperative of رَبَّى (rabbā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["rabbaw", "rabbā", "rubbū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يربون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يربون (form II)\n# يُرَبُّونَ (yurabbūna) /ju.rab.buː.na/: third-person masculine plural non-past active indicative of رَبَّى (rabbā)\n# يُرَبَّوْنَ (yurabbawna) /ju.rab.baw.na/: third-person masculine plural non-past passive indicative of رَبَّى (rabbā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yurabbūna", "rabbā", "yurabbawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يربوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يربوا (form II)\n# يُرَبُّوا (yurabbū) /ju.rab.buː/: third-person masculine plural non-past active subjunctive/jussive of رَبَّى (rabbā)\n# يُرَبَّوْا (yurabbaw) /ju.rab.baw/: third-person masculine plural non-past passive subjunctive/jussive of رَبَّى (rabbā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yurabbū", "rabbā", "yurabbaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ربيتن",
+      "tur": "verb",
+      "baslik": "ربيتن (form II)\n# رَبَّيْتُنَّ (rabbaytunna) /rab.baj.tun.na/: second-person feminine plural past active of رَبَّى (rabbā)\n# رُبِّيتُنَّ (rubbītunna) /rub.biː.tun.na/: second-person feminine plural past passive of رَبَّى (rabbā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["rabbaytunna", "rabbā", "rubbītunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ربين",
+      "tur": "verb",
+      "baslik": "ربين (form II)\n# رَبَّيْنَ (rabbayna) /rab.baj.na/: third-person feminine plural past active of رَبَّى (rabbā)\n# رُبِّينَ (rubbīna) /rub.biː.na/: third-person feminine plural past passive of رَبَّى (rabbā)\n# رَبِّينَ (rabbīna) /rab.biː.na/: second-person feminine plural imperative of رَبَّى (rabbā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["rabbayna", "rabbā", "rubbīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يربين",
+      "tur": "verb",
+      "baslik": "يربين (form II)\n# يُرَبِّينَ (yurabbīna) /ju.rab.biː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of رَبَّى (rabbā)\n# يُرَبَّيْنَ (yurabbayna) /ju.rab.baj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of رَبَّى (rabbā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yurabbīna", "rabbā", "yurabbayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تربيا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تربيا (form II)\n# تُرَبِّيَا (turabbiyā) /tu.rab.bi.jaː/: inflection of رَبَّى (rabbā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُرَبَّيَا (turabbayā) /tu.rab.ba.jaː/: inflection of رَبَّى (rabbā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctiv",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["turabbiyā", "rabbā", "turabbayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ربتا",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "رَبَّتَا • (rabbatā) (form II) /rab.ba.taː/\n# third-person feminine dual past active of رَبَّى (rabbā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["rabbatā", "rabbā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ربيتما",
+      "tur": "verb",
+      "baslik": "ربيتما (form II)\n# رَبَّيْتُمَا (rabbaytumā) /rab.baj.tu.maː/: second-person dual past active of رَبَّى (rabbā)\n# رُبِّيتُمَا (rubbītumā) /rub.biː.tu.maː/: second-person dual past passive of رَبَّى (rabbā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["rabbaytumā", "rabbā", "rubbītumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ربيا",
+      "tur": "verb",
+      "baslik": "ربيا (form II)\n# رَبَّيَا (rabbayā) /rab.ba.jaː/: third-person masculine dual past active of رَبَّى (rabbā)\n# رُبِّيَا (rubbiyā) /rub.bi.jaː/: third-person masculine dual past passive of رَبَّى (rabbā)\n# رَبِّيَا (rabbiyā) /rab.bi.jaː/: second-person dual imperative of رَبَّى (rabbā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["rabbayā", "rabbā", "rubbiyā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تربيان",
+      "tur": "verb",
+      "baslik": "تربيان (form II)\n# تُرَبِّيَانِ (turabbiyāni) /tu.rab.bi.jaː.ni/: inflection of رَبَّى (rabbā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُرَبَّيَانِ (turabbayāni) /tu.rab.ba.jaː.ni/: inflection of رَبَّى (rabbā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["turabbiyāni", "rabbā", "turabbayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يربيان",
+      "tur": "verb",
+      "baslik": "يربيان (form II)\n# يُرَبِّيَانِ (yurabbiyāni) /ju.rab.bi.jaː.ni/: third-person masculine dual non-past active indicative of رَبَّى (rabbā)\n# يُرَبَّيَانِ (yurabbayāni) /ju.rab.ba.jaː.ni/: third-person masculine dual non-past passive indicative of رَبَّى (rabbā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yurabbiyāni", "rabbā", "yurabbayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ربيتا",
+      "tur": "verb",
+      "baslik": "رُبِّيَتَا • (rubbiyatā) (form II) /rub.bi.ja.taː/\n# third-person feminine dual past passive of رَبَّى (rabbā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["rubbiyatā", "rabbā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يربيا",
+      "tur": "verb",
+      "baslik": "يربيا (form II)\n# يُرَبِّيَا (yurabbiyā) /ju.rab.bi.jaː/: third-person masculine dual non-past active subjunctive/jussive of رَبَّى (rabbā)\n# يُرَبَّيَا (yurabbayā) /ju.rab.ba.jaː/: third-person masculine dual non-past passive subjunctive/jussive of رَبَّى (rabbā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yurabbiyā", "rabbā", "yurabbayā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ربى", "r7"]
+  ],
+  "mana": {
     "ince": "person.n.01",
     "orta": "noun.person",
     "ust": "insan ve toplum",
@@ -477,41 +344,8 @@
     "dayanak_tanim": "(law) someone who owns (is legal possessor of) a business",
     "synset_sayisi": 15
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "الراء والباء",
-    "mihveri": "نمو الشيء مستغلظًا مرتفعًا. كالرابية ورَبْو الأرض {فَإِذَا أَنْزَلْنَا عَلَيْهَا الْمَاءَ اهْتَزَّتْ وَرَبَتْ} [الحج: 5، فصلت 39]، (انتفخت فارتفعت) {كَمَثَلِ جَنَّةٍ بِرَبْوَةٍ} [البقرة: 265] ومثلها ما في [المؤمنون: 50] {فَاحْتَمَلَ السَّيْلُ زَبَدًا رَابِيًا} [الرعد: 17] طالعا عاليا مرتفعًا فوق الماء {فَأَخَذَهُمْ أَخْذَةً رَابِيَةً} [الحاقة: 10] نامية شديدة يريد أنها زادت على (2/740) غيرها من الأَخَذات وهي الغزق وقلب المدائن [بحر 8/ 316]، ومنه \"ربَّى الصبيَّ: غَذَاه ونشّأه (فنما وكبِرَ) كربَّةُ وربَّبَهُ {كَمَا رَبَّيَانِي صَغِيرًا} ومثلها ما في [الشعراء: 18] والرَبْوَة: الجماعة الكثيرة نحو عشرة آلاف. (الكثرة زيادة تدخل في باب النمو). ومنه: \"ربا المال: زادَ \". ومنه الربا المعروف؛ لأنه زيادة على رأس المال، ولكنها زيادة تمحق: {وَأَحَلَّ اللَّهُ الْبَيْعَ وَحَرَّمَ الرِّبَا} [البقرة: 275]. وقوله تعالى: {وَمَا آتَيْتُمْ مِنْ رِبًا لِيَرْبُوَ فِي أَمْوَالِ النَّاسِ} [الروم: 39]، أي ليزيد بما يؤخذ من أموالهم استغلالًا لحاجتهم {فَلَا يَرْبُو عِنْدَ اللَّهِ} [الروم: 39] أي فإنه لا يزيد على الحقيقة بل ينقص؛ لأن هذه الزيادة تمحقه كله. ومن الزيادة الزمنية: \"أربى على الخمسين \"أي زاد سِنُّه عليها.",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (رب) : الاستغلاظ وما إليه من تماسك وتجمع كما يتمثل في استغلاظ الرُب وتماسكه -في (ريب)، وفي تجمع الربوة ونمو من يُرَبَّى -في (ربو)، وفي تخثر اللبن -في (روب)، وفي التباس الأمر وتداخله -في (ريب) (هل نظر العرب في لفظ الرب ومعناه إلى روب؟ مسألة تبحث في علم متن اللغة) وفي عقد طرفي الحبلين في الأُرْبة وتجمع العضو موفرًا -في (أرب)، وفي الأصل الذي تخرج منه الزيادة -في (ربح)، وفي الجثوم ولزوم المكان -في (ربص) وفي تجمع ما يربط كجراب التمر وتجمع الماء -في (ربط)، وفي تجمع جسم الرجل الرَبْعة، والرَبْع طرف الجبل -في (ربع).",
-    "tam_metin": "{وَقُلْ رَبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا} [الإسراء: 24]\n\"الربْوة والرباوة -مثلثتين- والرابية والرَبَاة والرَبْو: كل ما ارتفع من الأرض. رَبَتْ الأرضُ: زادت واتتفخت \".\n° المعنى المحوري\nنمو الشيء مستغلظًا مرتفعًا. كالرابية ورَبْو الأرض {فَإِذَا أَنْزَلْنَا عَلَيْهَا الْمَاءَ اهْتَزَّتْ وَرَبَتْ} [الحج: 5، فصلت 39]، (انتفخت فارتفعت) {كَمَثَلِ جَنَّةٍ بِرَبْوَةٍ} [البقرة: 265] ومثلها ما في [المؤمنون: 50] {فَاحْتَمَلَ السَّيْلُ زَبَدًا رَابِيًا} [الرعد: 17] طالعا عاليا مرتفعًا فوق الماء {فَأَخَذَهُمْ أَخْذَةً رَابِيَةً} [الحاقة: 10] نامية شديدة يريد أنها زادت على\n(2/740)\nغيرها من الأَخَذات وهي الغزق وقلب المدائن [بحر 8/ 316]، ومنه \"ربَّى الصبيَّ: غَذَاه ونشّأه (فنما وكبِرَ) كربَّةُ وربَّبَهُ {كَمَا رَبَّيَانِي صَغِيرًا} ومثلها ما في [الشعراء: 18] والرَبْوَة: الجماعة الكثيرة نحو عشرة آلاف. (الكثرة زيادة تدخل في باب النمو).\nومنه: \"ربا المال: زادَ \". ومنه الربا المعروف؛ لأنه زيادة على رأس المال، ولكنها زيادة تمحق: {وَأَحَلَّ اللَّهُ الْبَيْعَ وَحَرَّمَ الرِّبَا} [البقرة: 275]. وقوله تعالى: {وَمَا آتَيْتُمْ مِنْ رِبًا لِيَرْبُوَ فِي أَمْوَالِ النَّاسِ} [الروم: 39]، أي ليزيد بما يؤخذ من أموالهم استغلالًا لحاجتهم {فَلَا يَرْبُو عِنْدَ اللَّهِ} [الروم: 39] أي فإنه لا يزيد على الحقيقة بل ينقص؛ لأن هذه الزيادة تمحقه كله.\nومن الزيادة الزمنية: \"أربى على الخمسين \"أي زاد سِنُّه عليها."
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
-    "arouse.v.01",
-    "bump.v.01",
-    "capitalist.n.02",
-    "caress.v.01",
-    "control.v.02",
-    "dab.v.02",
-    "friend.n.01",
-    "gather.v.01",
-    "knock.v.06",
-    "peer.n.01",
-    "promote.v.02",
-    "raise.v.02",
-    "raise.v.07",
-    "stroke.v.01",
-    "tap.v.07"
-  ],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 2,
       "merkez_kok": "حنج",
@@ -531,6 +365,27 @@
       "boy": 43
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": [
+    "arouse.v.01",
+    "bump.v.01",
+    "capitalist.n.02",
+    "caress.v.01",
+    "control.v.02",
+    "dab.v.02",
+    "friend.n.01",
+    "gather.v.01",
+    "knock.v.06",
+    "peer.n.01",
+    "promote.v.02",
+    "raise.v.02",
+    "raise.v.07",
+    "stroke.v.01",
+    "tap.v.07"
+  ],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

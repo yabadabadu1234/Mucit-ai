@@ -1,1018 +1,723 @@
 {
   "kok": "صلى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "صلى", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "mekayis": [
-      {
-        "baslik": "صَلَى",
-        "metin": "(صَلَى) الصَّادُ وَاللَّامُ وَالْحَرْفُ الْمُعْتَلُّ أَصْلَانِ: أَحَدُهُمَا النَّارُ وَمَا أَشْبَهَهَا مِنَ الْحُمَّى، وَالْآخِرُ جِنْسٌ مِنَ الْعِبَادَةِ.\nفَأَمَّا الْأَوَّلُ فَقَوْلُهُمْ: صَلَيْتُ الْعُودَ بِالنَّارِ. وَالصَّلَى صَلَى النَّارِ. وَاصْطَلَيْتُ بِالنَّارِ. وَالصِّلَاءُ: مَا يُصْطَلَى بِهِ وَمَا يُذْكَى بِهِ النَّارُ وَيُوقَدُ. وَقَالَ:\nتَجْعَلُ الْعَوْدَ وَالْيَلَنْجُوجَ وَالرَّنْ ... دَ صِلَاءً لَهَا عَلَى الْكَانُونِ\nوَأَمَّا الثَّانِي: فَالصَّلَاةُ وَهِيَ الدُّعَاءُ. وَقَالَ رَسُولُ اللَّهِ - صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ -: «إِذَا دُعِيَ أَحَدُكُمْ إِلَى طَعَامٍ فَلْيُجِبْ، فَإِنْ كَانَ مُفْطِرًا فَلْيَأْكُلْ، وَإِنْ كَانَ صَائِمًا فَلْيُصَلِّ» ، أَيْ فَلْيَدْعُ لَهُمْ بِالْخَيْرِ وَالْبَرَكَةِ. قَالَ الْأَعْشَى:\nتَقُولُ بِنْتِي وَقَدْ قَرَّبْتُ مُرْتَحِلًا ... يَا رَبِ جَنِّبْ أَبِي الْأَوْصَابَ وَالْوَجَعَا\nعَلَيْكِ مِثْلُ الَّذِي صَلَّيْتِ فَاغْتَمِضِي ... نَوْمًا فَإِنَّ لِجَنْبِ الْمَرْءِ مُضْطَجَعًا\nوَقَالَ فِي صِفَةِ الْخَمْرِ:\nوَقَابَلَهَا الرِّيحُ فِي دَنِّهَا ... وَصَلَّى عَلَى دَنِّهَا وَارْتَسَمْ\nوَالصَّلَاةِ هِيَ الَّتِي جَاءَ بِهَا الشَّرْعُ مِنَ الرُّكُوعِ وَالسُّجُودِ وَسَائِرِ حُدُودِ الصَّلَاةِ.\nفَأَمَّا الصَّلَاةُ مِنَ اللَّهِ تَعَالَى فَالرَّحْمَةُ، وَمِنْ ذَلِكَ الْحَدِيثُ: «اللَّهُمَّ صَلِّ عَلَى آلِ أَبِي أَوْفَى» . يُرِيدُ بِذَلِكَ الرَّحْمَةَ.\nوَمِمَّا شَذَّ عَنِ الْبَابِ كَلِمَةٌ جَاءَتْ فِي الْحَدِيثِ: «إِنَّ لِلشَّيْطَانِ فُخُوخًا وَمَصَالِيَ» ، قَالَ: هِيَ الْأَشْرَاكُ، وَاحِدَتُهَا مِصْلَاةٌ."
-      }
-    ],
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الصاد واللام",
-      "baslik": "صلو - صلى",
-      "mihveri": "لين أثناء الشيء أو رخاوتها من الداخل مع تماسك ما فيمكن التصرف فيه: كتليين العصا بتعريضها للنار فيمكن بذلك تقويمها إن كانت معوجّة، ويمكن أيضًا ثَنْي طرفها ليكون مَقْبِضًا لها. وكرخاوة الصَلَوين فيتيحان تحريك الناقة ونحوِها ذنبَها إلى الجانبين، وكالعجيزة التي تشبه حَدَبة الموجة بانتبارها مع رخاوتها (وأرى أن دقة تفسير \"أَصْلَت الفرسُ \"هو: صار لها صَلًا أي تجمع رخو ذو تماسكِ ما حول حيائها). والصلاية: الحجر العريض (الأملس) وسيلة لدَقّ الطيب على الحجر العريض، فيلين أي يَنْعُم ويمكن التطيب به. وقد جاء أن من معاني الصلاية: الجبهة. وجاء في [تاج] أن ذلك تشبيه -أي بالحجر العريض (الأملس). كما جاء أن من معاني الصلاية \"شريحة خشنة غيظة من القف \". وأقول إن هذا من الشبيه بالحجر العريض أيضًا، فإن الشريحة بين ما حولها تشبه الحجر العريض في الصلابة والغلظ مع العِرَض في كلٍّ. والملاسة نسبية تتحقق بالخلو من كتل الحجارة ونحوها. ومن رخاوة الأثناء: \"المِصلاة -بالكسر: شرك ينصب لصيد الطير وغيرها \"وذلك بأن يوضع داخل الشرك حبٌّ أو لحمٌ إلخ مما يحبه الصيد (وهذه هي الرخاوة في الأثناء) فيدخل الشرك فيصاد ومن هذا استعمل في إيقاع الشخص (3/1244) في هلكة بحيلة). وعبارة الأزهري \"صلَيت فلانًا: إذا عملت له في أمر تريد أن تَمْحَلَ به وتوقعه في هلكة \"وعبارة الزمخشري \"صلَيْتُ بفلان: إذا سوّيت عليه منصوبة لتوقعه \"وعبارة [تاج مع ق] \"ومن المجاز صَلَى فلانًا صَلْيًا: داراه أو خاتله، وقيل: خدعه \"اهـ. وبالعَوْد إلى التليين بالنار نجدهم قالوا \"صَلَى اللحم بالنار (رمى): شواه \"واللين هنا متمثل في طيب اللحم بالشيء وذهاب فجاجته الت",
-      "sesler": "",
-      "tam_metin": "{هُوَ الَّذِي يُصَلِّي عَلَيْكُمْ وَمَلَائِكَتُهُ لِيُخْرِجَكُمْ مِنَ الظُّلُمَاتِ إِلَى النُّورِ} [الأحزاب: 43]\nفي [تهذيب اللغة] \"صلَّيت العصا تصلية - ض: إذا أَدَرْتها على النار لتقوّمها \"وفي [الصحاح] \"صلى عصاه على النار - ض: ليّنها وقوّمها. وفي [ل] \"أَصْلَت الناقة: إذا وقع ولدها في صَلاها وقرب نِتاجها. أَصْلَت الفرس: إذا استرخى صَلَواها، وذلك إذا قرب نتاجها. وفي التهذيب عن الزجاج \"وقال أهل اللغة في الصلاة إنها من الصلوين وهما مكتنفا الذنب من الناقة وغيرها، وأول مَوْصل الفخذين من الإنسان فكأنهما في الحقيقة مكتنفَا العُصْعُص. وجاء في [ل حبب]\n(3/1243)\n\"أَنْشد الليث:\nكأن صلا جهيزة حين قامت ... حَبابُ الماء يتبع الحبابا\n(والحباب فُسِّر بالموج الذي كأنه دَرَجٌ في حَدَبة. والصلا: العجيزة. وينظر أصل العبارة في [تهذيب اللغة حبب، وفي [تاج]. والصَلاية: كل حجر عريض/ مُدُقً الطيب).\n° المعنى المحوري\nلين أثناء الشيء أو رخاوتها من الداخل مع تماسك ما فيمكن التصرف فيه: كتليين العصا بتعريضها للنار فيمكن بذلك تقويمها إن كانت معوجّة، ويمكن أيضًا ثَنْي طرفها ليكون مَقْبِضًا لها. وكرخاوة الصَلَوين فيتيحان تحريك الناقة ونحوِها ذنبَها إلى الجانبين، وكالعجيزة التي تشبه حَدَبة الموجة بانتبارها مع رخاوتها (وأرى أن دقة تفسير \"أَصْلَت الفرسُ \"هو: صار لها صَلًا أي تجمع رخو ذو تماسكِ ما حول حيائها). والصلاية: الحجر العريض (الأملس) وسيلة لدَقّ الطيب على الحجر العريض، فيلين أي يَنْعُم ويمكن التطيب به. وقد جاء أن من معاني الصلاية: الجبهة. وجاء في [تاج] أن ذلك تشبيه -أي بالحجر العريض (الأملس). كما جاء أن من معاني الصلاية \"شريحة خشنة غيظة من القف \". وأقول إن هذا من الشبيه بالحجر العريض أيضًا، فإن الشريحة بين ما حولها تشبه الحجر العريض في الصلابة والغلظ مع العِرَض في كلٍّ. والملاسة نسبية تتحقق بالخلو من كتل الحجارة ونحوها.\nومن رخاوة الأثناء: \"المِصلاة -بالكسر: شرك ينصب لصيد الطير وغيرها \"وذلك بأن يوضع داخل الشرك حبٌّ أو لحمٌ إلخ مما يحبه الصيد (وهذه هي الرخاوة في الأثناء) فيدخل الشرك فيصاد ومن هذا استعمل في إيقاع الشخص\n(3/1244)\nفي هلكة بحيلة). وعبارة الأزهري \"صلَيت فلانًا: إذا عملت له في أمر تريد أن تَمْحَلَ به وتوقعه في هلكة \"وعبارة الزمخشري \"صلَيْتُ بفلان: إذا سوّيت عليه منصوبة لتوقعه \"وعبارة [تاج مع ق] \"ومن المجاز صَلَى فلانًا صَلْيًا: داراه أو خاتله، وقيل: خدعه \"اهـ.\nوبالعَوْد إلى التليين بالنار نجدهم قالوا \"صَلَى اللحم بالنار (رمى): شواه \"واللين هنا متمثل في طيب اللحم بالشيء وذهاب فجاجته التي تمنع أكله نِيئًا. وكذا قالوا: \"صَلَى ظهره بالنار (رمى): أدفأه \"فهذا مجرد تقريب الظهر من النار ليدفأ ويلين. والاصطلاء الاستدفاء {لَعَلَّكُمْ تَصْطَلُونَ} [النمل: 7]. وكل ذلك طيب أثناء -أي من الرخاوة في المعنى الأصلي.\nوتخلصوا من قيد التطييب في تسليط النار على ظاهر الشيء إنضاجا أو تليينا فقالوا \"صَلَى اللحمَ في النار (رمى) وأصلاه وصَلّاه - ض: ألقاه للإحراق، وصَلىَ بالنار وصليها (تعب) صَليًا -بالفتح وصُلِيًّا- فُعول، واصطلى بها وتصلاها \": احترق بها/ قاسي حرها \" {سَوْفَ نُصْلِيهِمْ نَارًا} [النساء: 56]، {تَصْلَى نَارًا حَامِيَةً} [الغاشية: 4]، {ثُمَّ الْجَحِيمَ صَلُّوهُ} [الحاقة: 31]، {وَتَصْلِيَةُ جَحِيمٍ} [الواقعة: 94]. واحتمال التطييب بالإحراق يعلمه اللَّه تعالى.\nومن لين الأثناء والرخاوة مجازًا بمعنى خشوع الباطن استعملت في الدعاء الذي هو تضرع لاستنزال الرضا أو الفضل، وهذا هو الذي جعلوه الأصل في تسمية الصلاة ذات الركوع أعني: الدعاء. قال [طب 1/ 243]: إن المصلِّى متعرضٌ تعرّضَ الداعي. وقد استعمل اللفظ بمعنى الدعاء وحده كثيرًا، ومنه الحديث. \". . . وإن كان صائمًا فليصل \"أي فليدع أي لأرباب الطعام. وبمعنى الدعاء\n(3/1245)\nاستعملها الأعشى في صلاة الخمار على دن الخمر. {وصلّى على دَنّها وارْتسم}\nوكذا هي في قوله: {عليكِ مثلُ الذي صليت} أي دَعَوت (ولا يتأتى أن يقصد الأعشى بالصلاة الركوع ونحوه، لأنه لم يسلم)، وبهذا يفهم أن الصلاة من اللَّه عز وجل على عباده هي إنزال الرحمة والبركات -كما يُقصد بالدعاء {هُوَ الَّذِي يُصَلِّي عَلَيْكُمْ وَمَلَائِكَتُهُ لِيُخْرِجَكُمْ مِنَ الظُّلُمَاتِ إِلَى النُّورِ} في [قر 14/ 198]- فصلاة اللَّه على العبد هي رحمته له وبركته عليه. . وصلاة الملائكة دعاؤهم للمؤمنين واستغفارهم لهم، كما قال تعالى {وَيَسْتَغْفِرُونَ لِلَّذِينَ آمَنُوا} [غافر: 7] وأقول إن هذه الآية تعبر عن فضل ورعاية من اللَّه عز وجل لهذه الأمة لا يحاط به. وهو يفسّر كيف بقى الإسلام إلى الآن وإلى يوم القيامة إن شاء اللَّه برغم عداء الغرب ومحاربة كل حكومات العالم للإسلام. هذا مع عظيم شيوع حفظ القرآن وازدهار الجانب الروحي بالعلماء والأولياء، وانتشار الإسلام في شعوبٍ تحاربه، وغير هذا مما لا يفصّل إلا في كتب. وكل هذا بفضل صلاة اللَّه وملائكته على هذه الأمة، {إِنَّ اللَّهَ وَمَلَائِكَتَهُ يُصَلُّونَ عَلَى النَّبِيِّ يَاأَيُّهَا الَّذِينَ آمَنُوا صَلُّوا عَلَيْهِ وَسَلِّمُوا تَسْلِيمًا} [الأحزاب: 56]. -صلى اللَّه عليه وسلم-. وفي [تاج] فائدة نفيسة منها أن معنى صلاتنا على النبي -صلى اللَّه عليه وسلم-: اللهم عظّمه في الدنيا بإعلاء ذكره، وإظهار دعوته، وإبقاء شريعته، وفي الآخرة بتشفيعه في أمته، وتضعيف أجره ومثوبته \".\nفلمعنى الدعاء والضراعة استُعْملت في أهم صور التضرع والإخبات للَّه عز وجل وهي الصلاة ذات الركوع والسجود {إِنَّ الصَّلَاةَ كَانَتْ عَلَى الْمُؤْمِنِينَ كِتَابًا مَوْقُوتًا} [النساء: 103] وقد سبق الإمام ابن فارس بالقول باشتقاق الصلاة من صَلّيت العود: لّينته لأن المصلي يلين بالخشوع. ولكن لكثرة الاجتهادات في\n(3/1246)\nالمأخذ الاشتقاقي للصلاة (نحو سبعة أو أكثر في [تاج] وحده) وأن أكثرها فيه تكلف، ولإجمال كلام ابن فارس وانغماره، وأنه في المجمل لا المقاييس = غاب وجُهل، وقد هُديت له بشواهد أصّلَته دون تكلف. فهو الصحيح والحمد للَّه.\nومن الأصل \"الصلاةُ: المْعَبَدُ \" (سُمي المكان باسم ما يقع فيه) كما قالوا سميت مِنَي لما يُمْنَى فيها من الدماء أي يراق. فالكلمة عربية أصلًا وصيغة ولا معنى لزعم تعريبها الذي ورد في ل والمتوكلي/ وتوقف إزاءه الخولي {لَهُدِّمَتْ صَوَامِعُ وَبِيَعٌ وَصَلَوَاتٌ} [الحج: 40]. والذي جاء في القرآن من التركيب معنيان الصلاة الدعاء والعبادة المعروفة، وصُلِيّ النار وتصليتها والعياذ باللَّه. وسياق كل منهما متميز.\nأما \"المُصَلِّى من الخيل: الذي مجيء بعد السابق \"فأرى أنه من الرخاوة التي هي درجة من الضعف. فالسابق الصُلْب هو المجلّي، وهذا المتراخي عنه هو المصلي. وقد قالوا إنه وصف بذلك لأن رأسه يكون عند صلَوَىْ المُجَلِّي \".",
-      "fasil_ozeti": "° معنى الفصل المعجمي (صل) : هو التماسك الدقيق مع لُطفٍ ما في الأثناء كما يتمثل في تماسك الصلصال عند جفافه وكذلك صليله -في (صلل)، وكتماسك الأثناء مع رخاوتها (لا تسيبها) -في (صلو صلي)، وكما في اتصال الأرض والنبت من خصوبة الأثناء -في (وصل)، وكما يمتسك الأصل الشيء فيقيمه -في (أصل)، وكسريان التماسك في أثناء الشيء الصلب -في (صلب)، وكالتئام جسم الشئ مع امتساكه نفعه وخيره -في (صلح)، وكاشتداد أثناء الشيء لا ينفذ منها شيء في (صلد)."
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "اصل",
-        "u": "اصل",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِصْلِ • (iṣli) (form I) /isˤ.li/\n# second-person masculine singular imperative of صَلَى (ṣalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iṣli", "ṣalā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "أصل",
-        "u": "أصل",
-        "p": "verb",
-        "n": "4.1",
-        "h": "ar-verb form",
-        "e": "أصل (form I)\n# أَصْلِ (ʔaṣli) /ʔasˤ.li/: first-person singular non-past active jussive of صَلَى (ṣalā)\n# أُصْلَ (ʔuṣla) /ʔusˤ.la/: first-person singular non-past passive jussive of صَلَى (ṣalā) and صَلِيَ (ṣaliya)\n# أَصْلَ (ʔaṣla) /ʔasˤ.la/: first-person singular non-past active jussive of صَلِيَ (ṣaliya)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaṣli", "ṣalā", "ʔuṣla"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "أصل",
-        "u": "أصل",
-        "p": "verb",
-        "n": "4.2",
-        "h": "ar-verb form",
-        "e": "أصل (form II)\n# أُصَلِّ (ʔuṣalli) /ʔu.sˤal.li/: first-person singular non-past active jussive of صَلَّى (ṣallā)\n# أُصَلَّ (ʔuṣalla) /ʔu.sˤal.la/: first-person singular non-past passive jussive of صَلَّى (ṣallā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuṣalli", "ṣallā", "ʔuṣalla"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تصلى",
-        "u": "تصلى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُصْلَى • (tuṣlā) (form I) /tusˤ.laː/\n# inflection of صَلَى (ṣalā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṣlā", "ṣalā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تصلى",
-        "u": "تصلى",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُصَلَّى • (tuṣallā) (form II) /tu.sˤal.laː/\n# inflection of صَلَّى (ṣallā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuṣallā", "ṣallā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "أصلى",
-        "u": "أصلى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أُصْلَى • (ʔuṣlā) (form I) /ʔusˤ.laː/\n# first-person singular non-past passive indicative/subjunctive of صَلَى (ṣalā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔuṣlā", "ṣalā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "أصلى",
-        "u": "أصلى",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أُصَلَّى • (ʔuṣallā) (form II) /ʔu.sˤal.laː/\n# first-person singular non-past passive indicative/subjunctive of صَلَّى (ṣallā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuṣallā", "ṣallā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "أصلي",
-        "u": "أصلي",
-        "p": "verb",
-        "n": "2.1",
-        "h": "ar-verb form",
-        "e": "أصلي (form I)\n# أَصْلِي (ʔaṣlī) /ʔasˤ.liː/: first-person singular non-past active indicative of صَلَى (ṣalā)\n# أَصْلِيَ (ʔaṣliya) /ʔasˤ.li.ja/: first-person singular non-past active subjunctive of صَلَى (ṣalā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaṣlī", "ṣalā", "ʔaṣliya"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "أصلي",
-        "u": "أصلي",
-        "p": "verb",
-        "n": "2.2",
-        "h": "ar-verb form",
-        "e": "أصلي (form II)\n# أُصَلِّي (ʔuṣallī) /ʔu.sˤal.liː/: first-person singular non-past active indicative of صَلَّى (ṣallā)\n# أُصَلِّيَ (ʔuṣalliya) /ʔu.sˤal.li.ja/: first-person singular non-past active subjunctive of صَلَّى (ṣallā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuṣallī", "ṣallā", "ʔuṣalliya"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تصل",
-        "u": "تصل",
-        "p": "verb",
-        "n": "1.2",
-        "h": "ar-verb form",
-        "e": "تصل (form I)\n# تَصْلِ (taṣli) /tasˤ.li/: inflection of صَلَى (ṣalā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُصْلَ (tuṣla) /tusˤ.la/: inflection of صَلَى (ṣalā) and صَلِيَ (ṣaliya):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive\n# تَصْلَ (taṣla) ",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣli", "ṣalā", "tuṣla"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تصل",
-        "u": "تصل",
-        "p": "verb",
-        "n": "1.3",
-        "h": "ar-verb form",
-        "e": "تصل (form II)\n# تُصَلِّ (tuṣalli) /tu.sˤal.li/: inflection of صَلَّى (ṣallā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُصَلَّ (tuṣalla) /tu.sˤal.la/: inflection of صَلَّى (ṣallā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuṣalli", "ṣallā", "tuṣalla"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تصل",
-        "u": "تصل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تصل (form II)\n# تُصَلِّ (tuṣalli) /tu.sˤal.li/: inflection of صَلَّى (ṣallā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُصَلَّ (tuṣalla) /tu.sˤal.la/: inflection of صَلَّى (ṣallā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuṣalli", "ṣallā", "tuṣalla"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يصلي",
-        "u": "يصلي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يصلي (form I)\n# يَصْلِي (yaṣlī) /jasˤ.liː/: third-person masculine singular non-past active indicative of صَلَى (ṣalā)\n# يَصْلِيَ (yaṣliya) /jasˤ.li.ja/: third-person masculine singular non-past active subjunctive of صَلَى (ṣalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṣlī", "ṣalā", "yaṣliya"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يصلي",
-        "u": "يصلي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يصلي (form II)\n# يُصَلِّي (yuṣallī) /ju.sˤal.liː/: third-person masculine singular non-past active indicative of صَلَّى (ṣallā)\n# يُصَلِّيَ (yuṣalliya) /ju.sˤal.li.ja/: third-person masculine singular non-past active subjunctive of صَلَّى (ṣallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuṣallī", "ṣallā", "yuṣalliya"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يصلى",
-        "u": "يصلى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُصْلَى • (yuṣlā) (form I) /jusˤ.laː/\n# third-person masculine singular non-past passive indicative/subjunctive of صَلَى (ṣalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuṣlā", "ṣalā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يصلى",
-        "u": "يصلى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُصَلَّى • (yuṣallā) (form II) /ju.sˤal.laː/\n# third-person masculine singular non-past passive indicative/subjunctive of صَلَّى (ṣallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuṣallā", "ṣallā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "صلي",
-        "u": "صلي",
-        "p": "noun",
-        "n": "1.2",
-        "h": "ar-noun",
-        "e": "صُلِيّ or صِلِيّ • (ṣuliyy or ṣiliyy) m",
-        "g": ["verbal noun of صَلِيَ (ṣaliya) (form I)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["صَلِيَ"],
-        "r": ["ṣuliyy", "ṣiliyy"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "صلي",
-        "u": "صلي",
-        "p": "verb",
-        "n": "2.1",
-        "h": "ar-verb form",
-        "e": "صُلِيَ • (ṣuliya) (form I) /sˤu.li.ja/\n# third-person masculine singular past passive of صَلَى (ṣalā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣuliya", "ṣalā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "صلي",
-        "u": "صلي",
-        "p": "verb",
-        "n": "2.2",
-        "h": "ar-verb form",
-        "e": "صلي (form II)\n# صُلِّيَ (ṣulliya) /sˤul.li.ja/: third-person masculine singular past passive of صَلَّى (ṣallā)\n# صَلِّي (ṣallī) /sˤal.liː/: second-person feminine singular imperative of صَلَّى (ṣallā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ṣulliya", "ṣallā", "ṣallī"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يصل",
-        "u": "يصل",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يصل (form I)\n# يَصْلِ (yaṣli) /jasˤ.li/: third-person masculine singular non-past active jussive of صَلَى (ṣalā)\n# يُصْلَ (yuṣla) /jusˤ.la/: third-person masculine singular non-past passive jussive of صَلَى (ṣalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṣli", "ṣalā", "yuṣla"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يصل",
-        "u": "يصل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يصل (form II)\n# يُصَلِّ (yuṣalli) /ju.sˤal.li/: third-person masculine singular non-past active jussive of صَلَّى (ṣallā)\n# يُصَلَّ (yuṣalla) /ju.sˤal.la/: third-person masculine singular non-past passive jussive of صَلَّى (ṣallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuṣalli", "ṣallā", "yuṣalla"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تصلي",
-        "u": "تصلي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تصلي (form I)\n# تَصْلِي (taṣlī) /tasˤ.liː/: inflection of صَلَى (ṣalā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَصْلِيَ (taṣliya) /tasˤ.li.ja/: inflection of صَلَى (ṣalā):\n## second-person masculine singular non-past active subjunctive\n## thi",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣlī", "ṣalā", "taṣliya"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تصلي",
-        "u": "تصلي",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تصلي (form II)\n# تُصَلِّي (tuṣallī) /tu.sˤal.liː/: inflection of صَلَّى (ṣallā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُصَلِّيَ (tuṣalliya) /tu.sˤal.li.ja/: inflection of صَلَّى (ṣallā):\n## second-person masculine singular non-past active s",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuṣallī", "ṣallā", "tuṣalliya"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تصلين",
-        "u": "تصلين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تصلين (form I)\n# تَصْلِينَ (taṣlīna) /tasˤ.liː.na/: inflection of صَلَى (ṣalā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُصْلَيْنَ (tuṣlayna) /tusˤ.laj.na/: inflection of صَلَى (ṣalā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past pas",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣlīna", "ṣalā", "tuṣlayna"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تصلين",
-        "u": "تصلين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تصلين (form II)\n# تُصَلِّينَ (tuṣallīna) /tu.sˤal.liː.na/: inflection of صَلَّى (ṣallā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُصَلَّيْنَ (tuṣallayna) /tu.sˤal.laj.na/: inflection of صَلَّى (ṣallā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuṣallīna", "ṣallā", "tuṣallayna"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "صلت",
-        "u": "صلت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صَلَتْ • (ṣalat) (form I) /sˤa.lat/\n# third-person feminine singular past active of صَلَى (ṣalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣalat", "ṣalā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "صلت",
-        "u": "صلت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "صَلَّتْ • (ṣallat) (form II) /sˤal.lat/\n# third-person feminine singular past active of صَلَّى (ṣallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ṣallat", "ṣallā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "صليت",
-        "u": "صليت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صليت (form I)\n# صَلَيْتُ (ṣalaytu) /sˤa.laj.tu/: first-person singular past active of صَلَى (ṣalā)\n# صَلَيْتَ (ṣalayta) /sˤa.laj.ta/: second-person masculine singular past active of صَلَى (ṣalā)\n# صَلَيْتِ (ṣalayti) /sˤa.laj.ti/: second-person feminine singular past active of صَلَى (ṣalā)\n# صُلِيتُ (ṣulītu) /sˤu.liː.tu/: first-person singular past passive of صَلَى (ṣalā)\n# صُلِيتَ (ṣulīta) /sˤu.li",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣalaytu", "ṣalā", "ṣalayta"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "صليت",
-        "u": "صليت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "صليت (form II)\n# صَلَّيْتُ (ṣallaytu) /sˤal.laj.tu/: first-person singular past active of صَلَّى (ṣallā)\n# صَلَّيْتَ (ṣallayta) /sˤal.laj.ta/: second-person masculine singular past active of صَلَّى (ṣallā)\n# صَلَّيْتِ (ṣallayti) /sˤal.laj.ti/: second-person feminine singular past active of صَلَّى (ṣallā)\n# صُلِّيتُ (ṣullītu) /sˤul.liː.tu/: first-person singular past passive of صَلَّى (ṣallā)\n# صُل",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ṣallaytu", "ṣallā", "ṣallayta"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "صل",
-        "u": "صل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "صَلِّ • (ṣalli) (form II) /sˤal.li/\n# second-person masculine singular imperative of صَلَّى (ṣallā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ṣalli", "ṣallā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "اصلي",
-        "u": "اصلي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِصْلِي • (iṣlī) (form I) /isˤ.liː/\n# second-person feminine singular imperative of صَلَى (ṣalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iṣlī", "ṣalā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "نصلي",
-        "u": "نصلي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نصلي (form I)\n# نَصْلِي (naṣlī) /nasˤ.liː/: first-person plural non-past active indicative of صَلَى (ṣalā)\n# نَصْلِيَ (naṣliya) /nasˤ.li.ja/: first-person plural non-past active subjunctive of صَلَى (ṣalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naṣlī", "ṣalā", "naṣliya"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "نصلي",
-        "u": "نصلي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نصلي (form II)\n# نُصَلِّي (nuṣallī) /nu.sˤal.liː/: first-person plural non-past active indicative of صَلَّى (ṣallā)\n# نُصَلِّيَ (nuṣalliya) /nu.sˤal.li.ja/: first-person plural non-past active subjunctive of صَلَّى (ṣallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuṣallī", "ṣallā", "nuṣalliya"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "نصل",
-        "u": "نصل",
-        "p": "verb",
-        "n": "2.1",
-        "h": "ar-verb form",
-        "e": "نصل (form I)\n# نَصْلِ (naṣli) /nasˤ.li/: first-person plural non-past active jussive of صَلَى (ṣalā)\n# نُصْلَ (nuṣla) /nusˤ.la/: first-person plural non-past passive jussive of صَلَى (ṣalā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naṣli", "ṣalā", "nuṣla"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "نصل",
-        "u": "نصل",
-        "p": "verb",
-        "n": "2.2",
-        "h": "ar-verb form",
-        "e": "نصل (form II)\n# نُصَلِّ (nuṣalli) /nu.sˤal.li/: first-person plural non-past active jussive of صَلَّى (ṣallā)\n# نُصَلَّ (nuṣalla) /nu.sˤal.la/: first-person plural non-past passive jussive of صَلَّى (ṣallā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuṣalli", "ṣallā", "nuṣalla"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "نصلى",
-        "u": "نصلى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نُصْلَى • (nuṣlā) (form I) /nusˤ.laː/\n# first-person plural non-past passive indicative/subjunctive of صَلَى (ṣalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuṣlā", "ṣalā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "نصلى",
-        "u": "نصلى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نُصَلَّى • (nuṣallā) (form II) /nu.sˤal.laː/\n# first-person plural non-past passive indicative/subjunctive of صَلَّى (ṣallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuṣallā", "ṣallā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "صلينا",
-        "u": "صلينا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صلينا (form I)\n# صَلَيْنَا (ṣalaynā) /sˤa.laj.naː/: first-person plural past active of صَلَى (ṣalā)\n# صُلِينَا (ṣulīnā) /sˤu.liː.naː/: first-person plural past passive of صَلَى (ṣalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣalaynā", "ṣalā", "ṣulīnā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "صلينا",
-        "u": "صلينا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "صلينا (form II)\n# صَلَّيْنَا (ṣallaynā) /sˤal.laj.naː/: first-person plural past active of صَلَّى (ṣallā)\n# صُلِّينَا (ṣullīnā) /sˤul.liː.naː/: first-person plural past passive of صَلَّى (ṣallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ṣallaynā", "ṣallā", "ṣullīnā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تصلون",
-        "u": "تصلون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تصلون (form I)\n# تَصْلُونَ (taṣlūna) /tasˤ.luː.na/: second-person masculine plural non-past active indicative of صَلَى (ṣalā)\n# تُصْلَوْنَ (tuṣlawna) /tusˤ.law.na/: second-person masculine plural non-past passive indicative of صَلَى (ṣalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣlūna", "ṣalā", "tuṣlawna"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تصلون",
-        "u": "تصلون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تصلون (form II)\n# تُصَلُّونَ (tuṣallūna) /tu.sˤal.luː.na/: second-person masculine plural non-past active indicative of صَلَّى (ṣallā)\n# تُصَلَّوْنَ (tuṣallawna) /tu.sˤal.law.na/: second-person masculine plural non-past passive indicative of صَلَّى (ṣallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuṣallūna", "ṣallā", "tuṣallawna"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تصلوا",
-        "u": "تصلوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تصلوا (form I)\n# تَصْلُوا (taṣlū) /tasˤ.luː/: second-person masculine plural non-past active subjunctive/jussive of صَلَى (ṣalā)\n# تُصْلَوْا (tuṣlaw) /tusˤ.law/: second-person masculine plural non-past passive subjunctive/jussive of صَلَى (ṣalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣlū", "ṣalā", "tuṣlaw"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تصلوا",
-        "u": "تصلوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تصلوا (form II)\n# تُصَلُّوا (tuṣallū) /tu.sˤal.luː/: second-person masculine plural non-past active subjunctive/jussive of صَلَّى (ṣallā)\n# تُصَلَّوْا (tuṣallaw) /tu.sˤal.law/: second-person masculine plural non-past passive subjunctive/jussive of صَلَّى (ṣallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuṣallū", "ṣallā", "tuṣallaw"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "صليتم",
-        "u": "صليتم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صليتم (form I)\n# صَلَيْتُمْ (ṣalaytum) /sˤa.laj.tum/: second-person masculine plural past active of صَلَى (ṣalā)\n# صُلِيتُمْ (ṣulītum) /sˤu.liː.tum/: second-person masculine plural past passive of صَلَى (ṣalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣalaytum", "ṣalā", "ṣulītum"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "صليتم",
-        "u": "صليتم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "صليتم (form II)\n# صَلَّيْتُمْ (ṣallaytum) /sˤal.laj.tum/: second-person masculine plural past active of صَلَّى (ṣallā)\n# صُلِّيتُمْ (ṣullītum) /sˤul.liː.tum/: second-person masculine plural past passive of صَلَّى (ṣallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ṣallaytum", "ṣallā", "ṣullītum"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "صلوا",
-        "u": "صلوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صلوا (form I)\n# صَلَوْا (ṣalaw) /sˤa.law/: third-person masculine plural past active of صَلَى (ṣalā)\n# صُلُوا (ṣulū) /sˤu.luː/: third-person masculine plural past passive of صَلَى (ṣalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣalaw", "ṣalā", "ṣulū"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "صلوا",
-        "u": "صلوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "صلوا (form II)\n# صَلَّوْا (ṣallaw) /sˤal.law/: third-person masculine plural past active of صَلَّى (ṣallā)\n# صُلُّوا (ṣullū) /sˤul.luː/: third-person masculine plural past passive of صَلَّى (ṣallā)\n# صَلُّوا (ṣallū) /sˤal.luː/: second-person masculine plural imperative of صَلَّى (ṣallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ṣallaw", "ṣallā", "ṣullū"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "اصلوا",
-        "u": "اصلوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِصْلُوا • (iṣlū) (form I) /isˤ.luː/\n# second-person masculine plural imperative of صَلَى (ṣalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iṣlū", "ṣalā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يصلون",
-        "u": "يصلون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يصلون (form I)\n# يَصْلُونَ (yaṣlūna) /jasˤ.luː.na/: third-person masculine plural non-past active indicative of صَلَى (ṣalā)\n# يُصْلَوْنَ (yuṣlawna) /jusˤ.law.na/: third-person masculine plural non-past passive indicative of صَلَى (ṣalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṣlūna", "ṣalā", "yuṣlawna"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يصلون",
-        "u": "يصلون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يصلون (form II)\n# يُصَلُّونَ (yuṣallūna) /ju.sˤal.luː.na/: third-person masculine plural non-past active indicative of صَلَّى (ṣallā)\n# يُصَلَّوْنَ (yuṣallawna) /ju.sˤal.law.na/: third-person masculine plural non-past passive indicative of صَلَّى (ṣallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuṣallūna", "ṣallā", "yuṣallawna"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يصلوا",
-        "u": "يصلوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يصلوا (form I)\n# يَصْلُوا (yaṣlū) /jasˤ.luː/: third-person masculine plural non-past active subjunctive/jussive of صَلَى (ṣalā)\n# يُصْلَوْا (yuṣlaw) /jusˤ.law/: third-person masculine plural non-past passive subjunctive/jussive of صَلَى (ṣalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṣlū", "ṣalā", "yuṣlaw"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يصلوا",
-        "u": "يصلوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يصلوا (form II)\n# يُصَلُّوا (yuṣallū) /ju.sˤal.luː/: third-person masculine plural non-past active subjunctive/jussive of صَلَّى (ṣallā)\n# يُصَلَّوْا (yuṣallaw) /ju.sˤal.law/: third-person masculine plural non-past passive subjunctive/jussive of صَلَّى (ṣallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuṣallū", "ṣallā", "yuṣallaw"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "صليتن",
-        "u": "صليتن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صليتن (form I)\n# صَلَيْتُنَّ (ṣalaytunna) /sˤa.laj.tun.na/: second-person feminine plural past active of صَلَى (ṣalā)\n# صُلِيتُنَّ (ṣulītunna) /sˤu.liː.tun.na/: second-person feminine plural past passive of صَلَى (ṣalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣalaytunna", "ṣalā", "ṣulītunna"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "صليتن",
-        "u": "صليتن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "صليتن (form II)\n# صَلَّيْتُنَّ (ṣallaytunna) /sˤal.laj.tun.na/: second-person feminine plural past active of صَلَّى (ṣallā)\n# صُلِّيتُنَّ (ṣullītunna) /sˤul.liː.tun.na/: second-person feminine plural past passive of صَلَّى (ṣallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ṣallaytunna", "ṣallā", "ṣullītunna"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "صلين",
-        "u": "صلين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صلين (form I)\n# صَلَيْنَ (ṣalayna) /sˤa.laj.na/: third-person feminine plural past active of صَلَى (ṣalā)\n# صُلِينَ (ṣulīna) /sˤu.liː.na/: third-person feminine plural past passive of صَلَى (ṣalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣalayna", "ṣalā", "ṣulīna"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "صلين",
-        "u": "صلين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "صلين (form II)\n# صَلَّيْنَ (ṣallayna) /sˤal.laj.na/: third-person feminine plural past active of صَلَّى (ṣallā)\n# صُلِّينَ (ṣullīna) /sˤul.liː.na/: third-person feminine plural past passive of صَلَّى (ṣallā)\n# صَلِّينَ (ṣallīna) /sˤal.liː.na/: second-person feminine plural imperative of صَلَّى (ṣallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ṣallayna", "ṣallā", "ṣullīna"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "اصلين",
-        "u": "اصلين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِصْلِينَ • (iṣlīna) (form I) /isˤ.liː.na/\n# second-person feminine plural imperative of صَلَى (ṣalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iṣlīna", "ṣalā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يصلين",
-        "u": "يصلين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يصلين (form I)\n# يَصْلِينَ (yaṣlīna) /jasˤ.liː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of صَلَى (ṣalā)\n# يُصْلَيْنَ (yuṣlayna) /jusˤ.laj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of صَلَى (ṣalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṣlīna", "ṣalā", "yuṣlayna"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يصلين",
-        "u": "يصلين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يصلين (form II)\n# يُصَلِّينَ (yuṣallīna) /ju.sˤal.liː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of صَلَّى (ṣallā)\n# يُصَلَّيْنَ (yuṣallayna) /ju.sˤal.laj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of صَلَّى (ṣallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuṣallīna", "ṣallā", "yuṣallayna"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يصليان",
-        "u": "يصليان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يصليان (form II)\n# يُصَلِّيَانِ (yuṣalliyāni) /ju.sˤal.li.jaː.ni/: third-person masculine dual non-past active indicative of صَلَّى (ṣallā)\n# يُصَلَّيَانِ (yuṣallayāni) /ju.sˤal.la.jaː.ni/: third-person masculine dual non-past passive indicative of صَلَّى (ṣallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuṣalliyāni", "ṣallā", "yuṣallayāni"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يصليان",
-        "u": "يصليان",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يصليان (form I)\n# يَصْلِيَانِ (yaṣliyāni) /jasˤ.li.jaː.ni/: third-person masculine dual non-past active indicative of صَلَى (ṣalā)\n# يُصْلَيَانِ (yuṣlayāni) /jusˤ.la.jaː.ni/: third-person masculine dual non-past passive indicative of صَلَى (ṣalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṣliyāni", "ṣalā", "yuṣlayāni"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تصليان",
-        "u": "تصليان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تصليان (form II)\n# تُصَلِّيَانِ (tuṣalliyāni) /tu.sˤal.li.jaː.ni/: inflection of صَلَّى (ṣallā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُصَلَّيَانِ (tuṣallayāni) /tu.sˤal.la.jaː.ni/: inflection of صَلَّى (ṣallā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuṣalliyāni", "ṣallā", "tuṣallayāni"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تصليان",
-        "u": "تصليان",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تصليان (form I)\n# تَصْلِيَانِ (taṣliyāni) /tasˤ.li.jaː.ni/: inflection of صَلَى (ṣalā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُصْلَيَانِ (tuṣlayāni) /tusˤ.la.jaː.ni/: inflection of صَلَى (ṣalā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣliyāni", "ṣalā", "tuṣlayāni"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تصليا",
-        "u": "تصليا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تصليا (form II)\n# تُصَلِّيَا (tuṣalliyā) /tu.sˤal.li.jaː/: inflection of صَلَّى (ṣallā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُصَلَّيَا (tuṣallayā) /tu.sˤal.la.jaː/: inflection of صَلَّى (ṣallā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunct",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuṣalliyā", "ṣallā", "tuṣallayā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "تصليا",
-        "u": "تصليا",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تصليا (form I)\n# تَصْلِيَا (taṣliyā) /tasˤ.li.jaː/: inflection of صَلَى (ṣalā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُصْلَيَا (tuṣlayā) /tusˤ.la.jaː/: inflection of صَلَى (ṣalā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣliyā", "ṣalā", "tuṣlayā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يصليا",
-        "u": "يصليا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يصليا (form II)\n# يُصَلِّيَا (yuṣalliyā) /ju.sˤal.li.jaː/: third-person masculine dual non-past active subjunctive/jussive of صَلَّى (ṣallā)\n# يُصَلَّيَا (yuṣallayā) /ju.sˤal.la.jaː/: third-person masculine dual non-past passive subjunctive/jussive of صَلَّى (ṣallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuṣalliyā", "ṣallā", "yuṣallayā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "يصليا",
-        "u": "يصليا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يصليا (form I)\n# يَصْلِيَا (yaṣliyā) /jasˤ.li.jaː/: third-person masculine dual non-past active subjunctive/jussive of صَلَى (ṣalā)\n# يُصْلَيَا (yuṣlayā) /jusˤ.la.jaː/: third-person masculine dual non-past passive subjunctive/jussive of صَلَى (ṣalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṣliyā", "ṣalā", "yuṣlayā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "صلتا",
-        "u": "صلتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "صَلَّتَا • (ṣallatā) (form II) /sˤal.la.taː/\n# third-person feminine dual past active of صَلَّى (ṣallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ṣallatā", "ṣallā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "صلتا",
-        "u": "صلتا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "صَلَتَا • (ṣalatā) (form I) /sˤa.la.taː/\n# third-person feminine dual past active of صَلَى (ṣalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣalatā", "ṣalā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "صليتما",
-        "u": "صليتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صليتما (form II)\n# صَلَّيْتُمَا (ṣallaytumā) /sˤal.laj.tu.maː/: second-person dual past active of صَلَّى (ṣallā)\n# صُلِّيتُمَا (ṣullītumā) /sˤul.liː.tu.maː/: second-person dual past passive of صَلَّى (ṣallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ṣallaytumā", "ṣallā", "ṣullītumā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "صليتما",
-        "u": "صليتما",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "صليتما (form I)\n# صَلَيْتُمَا (ṣalaytumā) /sˤa.laj.tu.maː/: second-person dual past active of صَلَى (ṣalā)\n# صُلِيتُمَا (ṣulītumā) /sˤu.liː.tu.maː/: second-person dual past passive of صَلَى (ṣalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣalaytumā", "ṣalā", "ṣulītumā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "صليتا",
-        "u": "صليتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صُلِّيَتَا • (ṣulliyatā) (form II) /sˤul.li.ja.taː/\n# third-person feminine dual past passive of صَلَّى (ṣallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ṣulliyatā", "ṣallā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "صليتا",
-        "u": "صليتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "صُلِيَتَا • (ṣuliyatā) (form I) /sˤu.li.ja.taː/\n# third-person feminine dual past passive of صَلَى (ṣalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣuliyatā", "ṣalā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "صليا",
-        "u": "صليا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صليا (form II)\n# صَلَّيَا (ṣallayā) /sˤal.la.jaː/: third-person masculine dual past active of صَلَّى (ṣallā)\n# صُلِّيَا (ṣulliyā) /sˤul.li.jaː/: third-person masculine dual past passive of صَلَّى (ṣallā)\n# صَلِّيَا (ṣalliyā) /sˤal.li.jaː/: second-person dual imperative of صَلَّى (ṣallā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ṣallayā", "ṣallā", "ṣulliyā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "صليا",
-        "u": "صليا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "صليا (form I)\n# صَلَيَا (ṣalayā) /sˤa.la.jaː/: third-person masculine dual past active of صَلَى (ṣalā)\n# صُلِيَا (ṣuliyā) /sˤu.li.jaː/: third-person masculine dual past passive of صَلَى (ṣalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣalayā", "ṣalā", "ṣuliyā"],
-        "k": "صلى",
-        "yol": "kök"
-      },
-      {
-        "w": "اصليا",
-        "u": "اصليا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِصْلِيَا • (iṣliyā) (form I) /isˤ.li.jaː/\n# second-person dual imperative of صَلَى (ṣalā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iṣliyā", "ṣalā"],
-        "k": "صلى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "صل",
+  "ses": {
     "harf": "ص",
+    "fasil": "صل",
     "mahrec": "esaliyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "mekayis": [
+    {
+      "baslik": "صَلَى",
+      "metin": "(صَلَى) الصَّادُ وَاللَّامُ وَالْحَرْفُ الْمُعْتَلُّ أَصْلَانِ: أَحَدُهُمَا النَّارُ وَمَا أَشْبَهَهَا مِنَ الْحُمَّى، وَالْآخِرُ جِنْسٌ مِنَ الْعِبَادَةِ.\nفَأَمَّا الْأَوَّلُ فَقَوْلُهُمْ: صَلَيْتُ الْعُودَ بِالنَّارِ. وَالصَّلَى صَلَى النَّارِ. وَاصْطَلَيْتُ بِالنَّارِ. وَالصِّلَاءُ: مَا يُصْطَلَى بِهِ وَمَا يُذْكَى بِهِ النَّارُ وَيُوقَدُ. وَقَالَ:\nتَجْعَلُ الْعَوْدَ وَالْيَلَنْجُوجَ وَالرَّنْ ... دَ صِلَاءً لَهَا عَلَى الْكَانُونِ\nوَأَمَّا الثَّانِي: فَالصَّلَاةُ وَهِيَ الدُّعَاءُ. وَقَالَ رَسُولُ اللَّهِ - صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ -: «إِذَا دُعِيَ أَحَدُكُمْ إِلَى طَعَامٍ فَلْيُجِبْ، فَإِنْ كَانَ مُفْطِرًا فَلْيَأْكُلْ، وَإِنْ كَانَ صَائِمًا فَلْيُصَلِّ» ، أَيْ فَلْيَدْعُ لَهُمْ بِالْخَيْرِ وَالْبَرَكَةِ. قَالَ الْأَعْشَى:\nتَقُولُ بِنْتِي وَقَدْ قَرَّبْتُ مُرْتَحِلًا ... يَا رَبِ جَنِّبْ أَبِي الْأَوْصَابَ وَالْوَجَعَا\nعَلَيْكِ مِثْلُ الَّذِي صَلَّيْتِ فَاغْتَمِضِي ... نَوْمًا فَإِنَّ لِجَنْبِ الْمَرْءِ مُضْطَجَعًا\nوَقَالَ فِي صِفَةِ الْخَمْرِ:\nوَقَابَلَهَا الرِّيحُ فِي دَنِّهَا ... وَصَلَّى عَلَى دَنِّهَا وَارْتَسَمْ\nوَالصَّلَاةِ هِيَ الَّتِي جَاءَ بِهَا الشَّرْعُ مِنَ الرُّكُوعِ وَالسُّجُودِ وَسَائِرِ حُدُودِ الصَّلَاةِ.\nفَأَمَّا الصَّلَاةُ مِنَ اللَّهِ تَعَالَى فَالرَّحْمَةُ، وَمِنْ ذَلِكَ الْحَدِيثُ: «اللَّهُمَّ صَلِّ عَلَى آلِ أَبِي أَوْفَى» . يُرِيدُ بِذَلِكَ الرَّحْمَةَ.\nوَمِمَّا شَذَّ عَنِ الْبَابِ كَلِمَةٌ جَاءَتْ فِي الْحَدِيثِ: «إِنَّ لِلشَّيْطَانِ فُخُوخًا وَمَصَالِيَ» ، قَالَ: هِيَ الْأَشْرَاكُ، وَاحِدَتُهَا مِصْلَاةٌ."
+    }
+  ],
+  "cebel": {
+    "fasil": "الصاد واللام",
+    "baslik": "صلو - صلى",
+    "mihveri": "لين أثناء الشيء أو رخاوتها من الداخل مع تماسك ما فيمكن التصرف فيه: كتليين العصا بتعريضها للنار فيمكن بذلك تقويمها إن كانت معوجّة، ويمكن أيضًا ثَنْي طرفها ليكون مَقْبِضًا لها. وكرخاوة الصَلَوين فيتيحان تحريك الناقة ونحوِها ذنبَها إلى الجانبين، وكالعجيزة التي تشبه حَدَبة الموجة بانتبارها مع رخاوتها (وأرى أن دقة تفسير \"أَصْلَت الفرسُ \"هو: صار لها صَلًا أي تجمع رخو ذو تماسكِ ما حول حيائها). والصلاية: الحجر العريض (الأملس) وسيلة لدَقّ الطيب على الحجر العريض، فيلين أي يَنْعُم ويمكن التطيب به. وقد جاء أن من معاني الصلاية: الجبهة. وجاء في [تاج] أن ذلك تشبيه -أي بالحجر العريض (الأملس). كما جاء أن من معاني الصلاية \"شريحة خشنة غيظة من القف \". وأقول إن هذا من الشبيه بالحجر العريض أيضًا، فإن الشريحة بين ما حولها تشبه الحجر العريض في الصلابة والغلظ مع العِرَض في كلٍّ. والملاسة نسبية تتحقق بالخلو من كتل الحجارة ونحوها. ومن رخاوة الأثناء: \"المِصلاة -بالكسر: شرك ينصب لصيد الطير وغيرها \"وذلك بأن يوضع داخل الشرك حبٌّ أو لحمٌ إلخ مما يحبه الصيد (وهذه هي الرخاوة في الأثناء) فيدخل الشرك فيصاد ومن هذا استعمل في إيقاع الشخص (3/1244) في هلكة بحيلة). وعبارة الأزهري \"صلَيت فلانًا: إذا عملت له في أمر تريد أن تَمْحَلَ به وتوقعه في هلكة \"وعبارة الزمخشري \"صلَيْتُ بفلان: إذا سوّيت عليه منصوبة لتوقعه \"وعبارة [تاج مع ق] \"ومن المجاز صَلَى فلانًا صَلْيًا: داراه أو خاتله، وقيل: خدعه \"اهـ. وبالعَوْد إلى التليين بالنار نجدهم قالوا \"صَلَى اللحم بالنار (رمى): شواه \"واللين هنا متمثل في طيب اللحم بالشيء وذهاب فجاجته الت",
+    "tam_metin": "{هُوَ الَّذِي يُصَلِّي عَلَيْكُمْ وَمَلَائِكَتُهُ لِيُخْرِجَكُمْ مِنَ الظُّلُمَاتِ إِلَى النُّورِ} [الأحزاب: 43]\nفي [تهذيب اللغة] \"صلَّيت العصا تصلية - ض: إذا أَدَرْتها على النار لتقوّمها \"وفي [الصحاح] \"صلى عصاه على النار - ض: ليّنها وقوّمها. وفي [ل] \"أَصْلَت الناقة: إذا وقع ولدها في صَلاها وقرب نِتاجها. أَصْلَت الفرس: إذا استرخى صَلَواها، وذلك إذا قرب نتاجها. وفي التهذيب عن الزجاج \"وقال أهل اللغة في الصلاة إنها من الصلوين وهما مكتنفا الذنب من الناقة وغيرها، وأول مَوْصل الفخذين من الإنسان فكأنهما في الحقيقة مكتنفَا العُصْعُص. وجاء في [ل حبب]\n(3/1243)\n\"أَنْشد الليث:\nكأن صلا جهيزة حين قامت ... حَبابُ الماء يتبع الحبابا\n(والحباب فُسِّر بالموج الذي كأنه دَرَجٌ في حَدَبة. والصلا: العجيزة. وينظر أصل العبارة في [تهذيب اللغة حبب، وفي [تاج]. والصَلاية: كل حجر عريض/ مُدُقً الطيب).\n° المعنى المحوري\nلين أثناء الشيء أو رخاوتها من الداخل مع تماسك ما فيمكن التصرف فيه: كتليين العصا بتعريضها للنار فيمكن بذلك تقويمها إن كانت معوجّة، ويمكن أيضًا ثَنْي طرفها ليكون مَقْبِضًا لها. وكرخاوة الصَلَوين فيتيحان تحريك الناقة ونحوِها ذنبَها إلى الجانبين، وكالعجيزة التي تشبه حَدَبة الموجة بانتبارها مع رخاوتها (وأرى أن دقة تفسير \"أَصْلَت الفرسُ \"هو: صار لها صَلًا أي تجمع رخو ذو تماسكِ ما حول حيائها). والصلاية: الحجر العريض (الأملس) وسيلة لدَقّ الطيب على الحجر العريض، فيلين أي يَنْعُم ويمكن التطيب به. وقد جاء أن من معاني الصلاية: الجبهة. وجاء في [تاج] أن ذلك تشبيه -أي بالحجر العريض (الأملس). كما جاء أن من معاني الصلاية \"شريحة خشنة غيظة من القف \". وأقول إن هذا من الشبيه بالحجر العريض أيضًا، فإن الشريحة بين ما حولها تشبه الحجر العريض في الصلابة والغلظ مع العِرَض في كلٍّ. والملاسة نسبية تتحقق بالخلو من كتل الحجارة ونحوها.\nومن رخاوة الأثناء: \"المِصلاة -بالكسر: شرك ينصب لصيد الطير وغيرها \"وذلك بأن يوضع داخل الشرك حبٌّ أو لحمٌ إلخ مما يحبه الصيد (وهذه هي الرخاوة في الأثناء) فيدخل الشرك فيصاد ومن هذا استعمل في إيقاع الشخص\n(3/1244)\nفي هلكة بحيلة). وعبارة الأزهري \"صلَيت فلانًا: إذا عملت له في أمر تريد أن تَمْحَلَ به وتوقعه في هلكة \"وعبارة الزمخشري \"صلَيْتُ بفلان: إذا سوّيت عليه منصوبة لتوقعه \"وعبارة [تاج مع ق] \"ومن المجاز صَلَى فلانًا صَلْيًا: داراه أو خاتله، وقيل: خدعه \"اهـ.\nوبالعَوْد إلى التليين بالنار نجدهم قالوا \"صَلَى اللحم بالنار (رمى): شواه \"واللين هنا متمثل في طيب اللحم بالشيء وذهاب فجاجته التي تمنع أكله نِيئًا. وكذا قالوا: \"صَلَى ظهره بالنار (رمى): أدفأه \"فهذا مجرد تقريب الظهر من النار ليدفأ ويلين. والاصطلاء الاستدفاء {لَعَلَّكُمْ تَصْطَلُونَ} [النمل: 7]. وكل ذلك طيب أثناء -أي من الرخاوة في المعنى الأصلي.\nوتخلصوا من قيد التطييب في تسليط النار على ظاهر الشيء إنضاجا أو تليينا فقالوا \"صَلَى اللحمَ في النار (رمى) وأصلاه وصَلّاه - ض: ألقاه للإحراق، وصَلىَ بالنار وصليها (تعب) صَليًا -بالفتح وصُلِيًّا- فُعول، واصطلى بها وتصلاها \": احترق بها/ قاسي حرها \" {سَوْفَ نُصْلِيهِمْ نَارًا} [النساء: 56]، {تَصْلَى نَارًا حَامِيَةً} [الغاشية: 4]، {ثُمَّ الْجَحِيمَ صَلُّوهُ} [الحاقة: 31]، {وَتَصْلِيَةُ جَحِيمٍ} [الواقعة: 94]. واحتمال التطييب بالإحراق يعلمه اللَّه تعالى.\nومن لين الأثناء والرخاوة مجازًا بمعنى خشوع الباطن استعملت في الدعاء الذي هو تضرع لاستنزال الرضا أو الفضل، وهذا هو الذي جعلوه الأصل في تسمية الصلاة ذات الركوع أعني: الدعاء. قال [طب 1/ 243]: إن المصلِّى متعرضٌ تعرّضَ الداعي. وقد استعمل اللفظ بمعنى الدعاء وحده كثيرًا، ومنه الحديث. \". . . وإن كان صائمًا فليصل \"أي فليدع أي لأرباب الطعام. وبمعنى الدعاء\n(3/1245)\nاستعملها الأعشى في صلاة الخمار على دن الخمر. {وصلّى على دَنّها وارْتسم}\nوكذا هي في قوله: {عليكِ مثلُ الذي صليت} أي دَعَوت (ولا يتأتى أن يقصد الأعشى بالصلاة الركوع ونحوه، لأنه لم يسلم)، وبهذا يفهم أن الصلاة من اللَّه عز وجل على عباده هي إنزال الرحمة والبركات -كما يُقصد بالدعاء {هُوَ الَّذِي يُصَلِّي عَلَيْكُمْ وَمَلَائِكَتُهُ لِيُخْرِجَكُمْ مِنَ الظُّلُمَاتِ إِلَى النُّورِ} في [قر 14/ 198]- فصلاة اللَّه على العبد هي رحمته له وبركته عليه. . وصلاة الملائكة دعاؤهم للمؤمنين واستغفارهم لهم، كما قال تعالى {وَيَسْتَغْفِرُونَ لِلَّذِينَ آمَنُوا} [غافر: 7] وأقول إن هذه الآية تعبر عن فضل ورعاية من اللَّه عز وجل لهذه الأمة لا يحاط به. وهو يفسّر كيف بقى الإسلام إلى الآن وإلى يوم القيامة إن شاء اللَّه برغم عداء الغرب ومحاربة كل حكومات العالم للإسلام. هذا مع عظيم شيوع حفظ القرآن وازدهار الجانب الروحي بالعلماء والأولياء، وانتشار الإسلام في شعوبٍ تحاربه، وغير هذا مما لا يفصّل إلا في كتب. وكل هذا بفضل صلاة اللَّه وملائكته على هذه الأمة، {إِنَّ اللَّهَ وَمَلَائِكَتَهُ يُصَلُّونَ عَلَى النَّبِيِّ يَاأَيُّهَا الَّذِينَ آمَنُوا صَلُّوا عَلَيْهِ وَسَلِّمُوا تَسْلِيمًا} [الأحزاب: 56]. -صلى اللَّه عليه وسلم-. وفي [تاج] فائدة نفيسة منها أن معنى صلاتنا على النبي -صلى اللَّه عليه وسلم-: اللهم عظّمه في الدنيا بإعلاء ذكره، وإظهار دعوته، وإبقاء شريعته، وفي الآخرة بتشفيعه في أمته، وتضعيف أجره ومثوبته \".\nفلمعنى الدعاء والضراعة استُعْملت في أهم صور التضرع والإخبات للَّه عز وجل وهي الصلاة ذات الركوع والسجود {إِنَّ الصَّلَاةَ كَانَتْ عَلَى الْمُؤْمِنِينَ كِتَابًا مَوْقُوتًا} [النساء: 103] وقد سبق الإمام ابن فارس بالقول باشتقاق الصلاة من صَلّيت العود: لّينته لأن المصلي يلين بالخشوع. ولكن لكثرة الاجتهادات في\n(3/1246)\nالمأخذ الاشتقاقي للصلاة (نحو سبعة أو أكثر في [تاج] وحده) وأن أكثرها فيه تكلف، ولإجمال كلام ابن فارس وانغماره، وأنه في المجمل لا المقاييس = غاب وجُهل، وقد هُديت له بشواهد أصّلَته دون تكلف. فهو الصحيح والحمد للَّه.\nومن الأصل \"الصلاةُ: المْعَبَدُ \" (سُمي المكان باسم ما يقع فيه) كما قالوا سميت مِنَي لما يُمْنَى فيها من الدماء أي يراق. فالكلمة عربية أصلًا وصيغة ولا معنى لزعم تعريبها الذي ورد في ل والمتوكلي/ وتوقف إزاءه الخولي {لَهُدِّمَتْ صَوَامِعُ وَبِيَعٌ وَصَلَوَاتٌ} [الحج: 40]. والذي جاء في القرآن من التركيب معنيان الصلاة الدعاء والعبادة المعروفة، وصُلِيّ النار وتصليتها والعياذ باللَّه. وسياق كل منهما متميز.\nأما \"المُصَلِّى من الخيل: الذي مجيء بعد السابق \"فأرى أنه من الرخاوة التي هي درجة من الضعف. فالسابق الصُلْب هو المجلّي، وهذا المتراخي عنه هو المصلي. وقد قالوا إنه وصف بذلك لأن رأسه يكون عند صلَوَىْ المُجَلِّي \".",
+    "fasil_ozeti": "° معنى الفصل المعجمي (صل) : هو التماسك الدقيق مع لُطفٍ ما في الأثناء كما يتمثل في تماسك الصلصال عند جفافه وكذلك صليله -في (صلل)، وكتماسك الأثناء مع رخاوتها (لا تسيبها) -في (صلو صلي)، وكما في اتصال الأرض والنبت من خصوبة الأثناء -في (وصل)، وكما يمتسك الأصل الشيء فيقيمه -في (أصل)، وكسريان التماسك في أثناء الشيء الصلب -في (صلب)، وكالتئام جسم الشئ مع امتساكه نفعه وخيره -في (صلح)، وكاشتداد أثناء الشيء لا ينفذ منها شيء في (صلد)."
+  },
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "اصل",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِصْلِ • (iṣli) (form I) /isˤ.li/\n# second-person masculine singular imperative of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iṣli", "ṣalā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أصل",
+      "tur": "verb",
+      "etim_no": "4.1",
+      "baslik": "أصل (form I)\n# أَصْلِ (ʔaṣli) /ʔasˤ.li/: first-person singular non-past active jussive of صَلَى (ṣalā)\n# أُصْلَ (ʔuṣla) /ʔusˤ.la/: first-person singular non-past passive jussive of صَلَى (ṣalā) and صَلِيَ (ṣaliya)\n# أَصْلَ (ʔaṣla) /ʔasˤ.la/: first-person singular non-past active jussive of صَلِيَ (ṣaliya)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaṣli", "ṣalā", "ʔuṣla"]
+    },
+    {
+      "madde": "أصل",
+      "tur": "verb",
+      "etim_no": "4.2",
+      "baslik": "أصل (form II)\n# أُصَلِّ (ʔuṣalli) /ʔu.sˤal.li/: first-person singular non-past active jussive of صَلَّى (ṣallā)\n# أُصَلَّ (ʔuṣalla) /ʔu.sˤal.la/: first-person singular non-past passive jussive of صَلَّى (ṣallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuṣalli", "ṣallā", "ʔuṣalla"]
+    },
+    {
+      "madde": "تصلى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُصْلَى • (tuṣlā) (form I) /tusˤ.laː/\n# inflection of صَلَى (ṣalā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṣlā", "ṣalā"]
+    },
+    {
+      "madde": "تصلى",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُصَلَّى • (tuṣallā) (form II) /tu.sˤal.laː/\n# inflection of صَلَّى (ṣallā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuṣallā", "ṣallā"]
+    },
+    {
+      "madde": "أصلى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أُصْلَى • (ʔuṣlā) (form I) /ʔusˤ.laː/\n# first-person singular non-past passive indicative/subjunctive of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔuṣlā", "ṣalā"]
+    },
+    {
+      "madde": "أصلى",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أُصَلَّى • (ʔuṣallā) (form II) /ʔu.sˤal.laː/\n# first-person singular non-past passive indicative/subjunctive of صَلَّى (ṣallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuṣallā", "ṣallā"]
+    },
+    {
+      "madde": "أصلي",
+      "tur": "verb",
+      "etim_no": "2.1",
+      "baslik": "أصلي (form I)\n# أَصْلِي (ʔaṣlī) /ʔasˤ.liː/: first-person singular non-past active indicative of صَلَى (ṣalā)\n# أَصْلِيَ (ʔaṣliya) /ʔasˤ.li.ja/: first-person singular non-past active subjunctive of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaṣlī", "ṣalā", "ʔaṣliya"]
+    },
+    {
+      "madde": "أصلي",
+      "tur": "verb",
+      "etim_no": "2.2",
+      "baslik": "أصلي (form II)\n# أُصَلِّي (ʔuṣallī) /ʔu.sˤal.liː/: first-person singular non-past active indicative of صَلَّى (ṣallā)\n# أُصَلِّيَ (ʔuṣalliya) /ʔu.sˤal.li.ja/: first-person singular non-past active subjunctive of صَلَّى (ṣallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuṣallī", "ṣallā", "ʔuṣalliya"]
+    },
+    {
+      "madde": "تصل",
+      "tur": "verb",
+      "etim_no": "1.2",
+      "baslik": "تصل (form I)\n# تَصْلِ (taṣli) /tasˤ.li/: inflection of صَلَى (ṣalā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُصْلَ (tuṣla) /tusˤ.la/: inflection of صَلَى (ṣalā) and صَلِيَ (ṣaliya):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive\n# تَصْلَ (taṣla) ",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣli", "ṣalā", "tuṣla"]
+    },
+    {
+      "madde": "تصل",
+      "tur": "verb",
+      "etim_no": "1.3",
+      "baslik": "تصل (form II)\n# تُصَلِّ (tuṣalli) /tu.sˤal.li/: inflection of صَلَّى (ṣallā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُصَلَّ (tuṣalla) /tu.sˤal.la/: inflection of صَلَّى (ṣallā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuṣalli", "ṣallā", "tuṣalla"]
+    },
+    {
+      "madde": "تصل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تصل (form II)\n# تُصَلِّ (tuṣalli) /tu.sˤal.li/: inflection of صَلَّى (ṣallā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُصَلَّ (tuṣalla) /tu.sˤal.la/: inflection of صَلَّى (ṣallā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuṣalli", "ṣallā", "tuṣalla"]
+    },
+    {
+      "madde": "يصلي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يصلي (form I)\n# يَصْلِي (yaṣlī) /jasˤ.liː/: third-person masculine singular non-past active indicative of صَلَى (ṣalā)\n# يَصْلِيَ (yaṣliya) /jasˤ.li.ja/: third-person masculine singular non-past active subjunctive of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṣlī", "ṣalā", "yaṣliya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصلي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يصلي (form II)\n# يُصَلِّي (yuṣallī) /ju.sˤal.liː/: third-person masculine singular non-past active indicative of صَلَّى (ṣallā)\n# يُصَلِّيَ (yuṣalliya) /ju.sˤal.li.ja/: third-person masculine singular non-past active subjunctive of صَلَّى (ṣallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuṣallī", "ṣallā", "yuṣalliya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصلى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُصْلَى • (yuṣlā) (form I) /jusˤ.laː/\n# third-person masculine singular non-past passive indicative/subjunctive of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuṣlā", "ṣalā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصلى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُصَلَّى • (yuṣallā) (form II) /ju.sˤal.laː/\n# third-person masculine singular non-past passive indicative/subjunctive of صَلَّى (ṣallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuṣallā", "ṣallā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صلي",
+      "tur": "noun",
+      "etim_no": "1.2",
+      "baslik": "صُلِيّ or صِلِيّ • (ṣuliyy or ṣiliyy) m",
+      "anlam": ["verbal noun of صَلِيَ (ṣaliya) (form I)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["صَلِيَ"],
+      "okunus": ["ṣuliyy", "ṣiliyy"],
+      "bag": "asıl madde"
+    },
+    {
+      "madde": "صلي",
+      "tur": "verb",
+      "etim_no": "2.1",
+      "baslik": "صُلِيَ • (ṣuliya) (form I) /sˤu.li.ja/\n# third-person masculine singular past passive of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣuliya", "ṣalā"]
+    },
+    {
+      "madde": "صلي",
+      "tur": "verb",
+      "etim_no": "2.2",
+      "baslik": "صلي (form II)\n# صُلِّيَ (ṣulliya) /sˤul.li.ja/: third-person masculine singular past passive of صَلَّى (ṣallā)\n# صَلِّي (ṣallī) /sˤal.liː/: second-person feminine singular imperative of صَلَّى (ṣallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ṣulliya", "ṣallā", "ṣallī"]
+    },
+    {
+      "madde": "يصل",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يصل (form I)\n# يَصْلِ (yaṣli) /jasˤ.li/: third-person masculine singular non-past active jussive of صَلَى (ṣalā)\n# يُصْلَ (yuṣla) /jusˤ.la/: third-person masculine singular non-past passive jussive of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṣli", "ṣalā", "yuṣla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يصل (form II)\n# يُصَلِّ (yuṣalli) /ju.sˤal.li/: third-person masculine singular non-past active jussive of صَلَّى (ṣallā)\n# يُصَلَّ (yuṣalla) /ju.sˤal.la/: third-person masculine singular non-past passive jussive of صَلَّى (ṣallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuṣalli", "ṣallā", "yuṣalla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصلي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تصلي (form I)\n# تَصْلِي (taṣlī) /tasˤ.liː/: inflection of صَلَى (ṣalā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَصْلِيَ (taṣliya) /tasˤ.li.ja/: inflection of صَلَى (ṣalā):\n## second-person masculine singular non-past active subjunctive\n## thi",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣlī", "ṣalā", "taṣliya"]
+    },
+    {
+      "madde": "تصلي",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تصلي (form II)\n# تُصَلِّي (tuṣallī) /tu.sˤal.liː/: inflection of صَلَّى (ṣallā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُصَلِّيَ (tuṣalliya) /tu.sˤal.li.ja/: inflection of صَلَّى (ṣallā):\n## second-person masculine singular non-past active s",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuṣallī", "ṣallā", "tuṣalliya"]
+    },
+    {
+      "madde": "تصلين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تصلين (form I)\n# تَصْلِينَ (taṣlīna) /tasˤ.liː.na/: inflection of صَلَى (ṣalā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُصْلَيْنَ (tuṣlayna) /tusˤ.laj.na/: inflection of صَلَى (ṣalā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past pas",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣlīna", "ṣalā", "tuṣlayna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصلين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تصلين (form II)\n# تُصَلِّينَ (tuṣallīna) /tu.sˤal.liː.na/: inflection of صَلَّى (ṣallā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُصَلَّيْنَ (tuṣallayna) /tu.sˤal.laj.na/: inflection of صَلَّى (ṣallā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine pl",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuṣallīna", "ṣallā", "tuṣallayna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صلت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صَلَتْ • (ṣalat) (form I) /sˤa.lat/\n# third-person feminine singular past active of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣalat", "ṣalā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صلت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "صَلَّتْ • (ṣallat) (form II) /sˤal.lat/\n# third-person feminine singular past active of صَلَّى (ṣallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ṣallat", "ṣallā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صليت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صليت (form I)\n# صَلَيْتُ (ṣalaytu) /sˤa.laj.tu/: first-person singular past active of صَلَى (ṣalā)\n# صَلَيْتَ (ṣalayta) /sˤa.laj.ta/: second-person masculine singular past active of صَلَى (ṣalā)\n# صَلَيْتِ (ṣalayti) /sˤa.laj.ti/: second-person feminine singular past active of صَلَى (ṣalā)\n# صُلِيتُ (ṣulītu) /sˤu.liː.tu/: first-person singular past passive of صَلَى (ṣalā)\n# صُلِيتَ (ṣulīta) /sˤu.li",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣalaytu", "ṣalā", "ṣalayta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صليت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "صليت (form II)\n# صَلَّيْتُ (ṣallaytu) /sˤal.laj.tu/: first-person singular past active of صَلَّى (ṣallā)\n# صَلَّيْتَ (ṣallayta) /sˤal.laj.ta/: second-person masculine singular past active of صَلَّى (ṣallā)\n# صَلَّيْتِ (ṣallayti) /sˤal.laj.ti/: second-person feminine singular past active of صَلَّى (ṣallā)\n# صُلِّيتُ (ṣullītu) /sˤul.liː.tu/: first-person singular past passive of صَلَّى (ṣallā)\n# صُل",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ṣallaytu", "ṣallā", "ṣallayta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "صَلِّ • (ṣalli) (form II) /sˤal.li/\n# second-person masculine singular imperative of صَلَّى (ṣallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ṣalli", "ṣallā"]
+    },
+    {
+      "madde": "اصلي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِصْلِي • (iṣlī) (form I) /isˤ.liː/\n# second-person feminine singular imperative of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iṣlī", "ṣalā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نصلي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نصلي (form I)\n# نَصْلِي (naṣlī) /nasˤ.liː/: first-person plural non-past active indicative of صَلَى (ṣalā)\n# نَصْلِيَ (naṣliya) /nasˤ.li.ja/: first-person plural non-past active subjunctive of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naṣlī", "ṣalā", "naṣliya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نصلي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نصلي (form II)\n# نُصَلِّي (nuṣallī) /nu.sˤal.liː/: first-person plural non-past active indicative of صَلَّى (ṣallā)\n# نُصَلِّيَ (nuṣalliya) /nu.sˤal.li.ja/: first-person plural non-past active subjunctive of صَلَّى (ṣallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuṣallī", "ṣallā", "nuṣalliya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نصل",
+      "tur": "verb",
+      "etim_no": "2.1",
+      "baslik": "نصل (form I)\n# نَصْلِ (naṣli) /nasˤ.li/: first-person plural non-past active jussive of صَلَى (ṣalā)\n# نُصْلَ (nuṣla) /nusˤ.la/: first-person plural non-past passive jussive of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naṣli", "ṣalā", "nuṣla"]
+    },
+    {
+      "madde": "نصل",
+      "tur": "verb",
+      "etim_no": "2.2",
+      "baslik": "نصل (form II)\n# نُصَلِّ (nuṣalli) /nu.sˤal.li/: first-person plural non-past active jussive of صَلَّى (ṣallā)\n# نُصَلَّ (nuṣalla) /nu.sˤal.la/: first-person plural non-past passive jussive of صَلَّى (ṣallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuṣalli", "ṣallā", "nuṣalla"]
+    },
+    {
+      "madde": "نصلى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نُصْلَى • (nuṣlā) (form I) /nusˤ.laː/\n# first-person plural non-past passive indicative/subjunctive of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuṣlā", "ṣalā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نصلى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نُصَلَّى • (nuṣallā) (form II) /nu.sˤal.laː/\n# first-person plural non-past passive indicative/subjunctive of صَلَّى (ṣallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuṣallā", "ṣallā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صلينا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صلينا (form I)\n# صَلَيْنَا (ṣalaynā) /sˤa.laj.naː/: first-person plural past active of صَلَى (ṣalā)\n# صُلِينَا (ṣulīnā) /sˤu.liː.naː/: first-person plural past passive of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣalaynā", "ṣalā", "ṣulīnā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صلينا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "صلينا (form II)\n# صَلَّيْنَا (ṣallaynā) /sˤal.laj.naː/: first-person plural past active of صَلَّى (ṣallā)\n# صُلِّينَا (ṣullīnā) /sˤul.liː.naː/: first-person plural past passive of صَلَّى (ṣallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ṣallaynā", "ṣallā", "ṣullīnā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصلون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تصلون (form I)\n# تَصْلُونَ (taṣlūna) /tasˤ.luː.na/: second-person masculine plural non-past active indicative of صَلَى (ṣalā)\n# تُصْلَوْنَ (tuṣlawna) /tusˤ.law.na/: second-person masculine plural non-past passive indicative of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣlūna", "ṣalā", "tuṣlawna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصلون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تصلون (form II)\n# تُصَلُّونَ (tuṣallūna) /tu.sˤal.luː.na/: second-person masculine plural non-past active indicative of صَلَّى (ṣallā)\n# تُصَلَّوْنَ (tuṣallawna) /tu.sˤal.law.na/: second-person masculine plural non-past passive indicative of صَلَّى (ṣallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuṣallūna", "ṣallā", "tuṣallawna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصلوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تصلوا (form I)\n# تَصْلُوا (taṣlū) /tasˤ.luː/: second-person masculine plural non-past active subjunctive/jussive of صَلَى (ṣalā)\n# تُصْلَوْا (tuṣlaw) /tusˤ.law/: second-person masculine plural non-past passive subjunctive/jussive of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣlū", "ṣalā", "tuṣlaw"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصلوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تصلوا (form II)\n# تُصَلُّوا (tuṣallū) /tu.sˤal.luː/: second-person masculine plural non-past active subjunctive/jussive of صَلَّى (ṣallā)\n# تُصَلَّوْا (tuṣallaw) /tu.sˤal.law/: second-person masculine plural non-past passive subjunctive/jussive of صَلَّى (ṣallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuṣallū", "ṣallā", "tuṣallaw"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صليتم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صليتم (form I)\n# صَلَيْتُمْ (ṣalaytum) /sˤa.laj.tum/: second-person masculine plural past active of صَلَى (ṣalā)\n# صُلِيتُمْ (ṣulītum) /sˤu.liː.tum/: second-person masculine plural past passive of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣalaytum", "ṣalā", "ṣulītum"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صليتم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "صليتم (form II)\n# صَلَّيْتُمْ (ṣallaytum) /sˤal.laj.tum/: second-person masculine plural past active of صَلَّى (ṣallā)\n# صُلِّيتُمْ (ṣullītum) /sˤul.liː.tum/: second-person masculine plural past passive of صَلَّى (ṣallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ṣallaytum", "ṣallā", "ṣullītum"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صلوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صلوا (form I)\n# صَلَوْا (ṣalaw) /sˤa.law/: third-person masculine plural past active of صَلَى (ṣalā)\n# صُلُوا (ṣulū) /sˤu.luː/: third-person masculine plural past passive of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣalaw", "ṣalā", "ṣulū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صلوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "صلوا (form II)\n# صَلَّوْا (ṣallaw) /sˤal.law/: third-person masculine plural past active of صَلَّى (ṣallā)\n# صُلُّوا (ṣullū) /sˤul.luː/: third-person masculine plural past passive of صَلَّى (ṣallā)\n# صَلُّوا (ṣallū) /sˤal.luː/: second-person masculine plural imperative of صَلَّى (ṣallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ṣallaw", "ṣallā", "ṣullū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اصلوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِصْلُوا • (iṣlū) (form I) /isˤ.luː/\n# second-person masculine plural imperative of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iṣlū", "ṣalā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصلون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يصلون (form I)\n# يَصْلُونَ (yaṣlūna) /jasˤ.luː.na/: third-person masculine plural non-past active indicative of صَلَى (ṣalā)\n# يُصْلَوْنَ (yuṣlawna) /jusˤ.law.na/: third-person masculine plural non-past passive indicative of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṣlūna", "ṣalā", "yuṣlawna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصلون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يصلون (form II)\n# يُصَلُّونَ (yuṣallūna) /ju.sˤal.luː.na/: third-person masculine plural non-past active indicative of صَلَّى (ṣallā)\n# يُصَلَّوْنَ (yuṣallawna) /ju.sˤal.law.na/: third-person masculine plural non-past passive indicative of صَلَّى (ṣallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuṣallūna", "ṣallā", "yuṣallawna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصلوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يصلوا (form I)\n# يَصْلُوا (yaṣlū) /jasˤ.luː/: third-person masculine plural non-past active subjunctive/jussive of صَلَى (ṣalā)\n# يُصْلَوْا (yuṣlaw) /jusˤ.law/: third-person masculine plural non-past passive subjunctive/jussive of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṣlū", "ṣalā", "yuṣlaw"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصلوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يصلوا (form II)\n# يُصَلُّوا (yuṣallū) /ju.sˤal.luː/: third-person masculine plural non-past active subjunctive/jussive of صَلَّى (ṣallā)\n# يُصَلَّوْا (yuṣallaw) /ju.sˤal.law/: third-person masculine plural non-past passive subjunctive/jussive of صَلَّى (ṣallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuṣallū", "ṣallā", "yuṣallaw"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صليتن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صليتن (form I)\n# صَلَيْتُنَّ (ṣalaytunna) /sˤa.laj.tun.na/: second-person feminine plural past active of صَلَى (ṣalā)\n# صُلِيتُنَّ (ṣulītunna) /sˤu.liː.tun.na/: second-person feminine plural past passive of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣalaytunna", "ṣalā", "ṣulītunna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صليتن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "صليتن (form II)\n# صَلَّيْتُنَّ (ṣallaytunna) /sˤal.laj.tun.na/: second-person feminine plural past active of صَلَّى (ṣallā)\n# صُلِّيتُنَّ (ṣullītunna) /sˤul.liː.tun.na/: second-person feminine plural past passive of صَلَّى (ṣallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ṣallaytunna", "ṣallā", "ṣullītunna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صلين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صلين (form I)\n# صَلَيْنَ (ṣalayna) /sˤa.laj.na/: third-person feminine plural past active of صَلَى (ṣalā)\n# صُلِينَ (ṣulīna) /sˤu.liː.na/: third-person feminine plural past passive of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣalayna", "ṣalā", "ṣulīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صلين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "صلين (form II)\n# صَلَّيْنَ (ṣallayna) /sˤal.laj.na/: third-person feminine plural past active of صَلَّى (ṣallā)\n# صُلِّينَ (ṣullīna) /sˤul.liː.na/: third-person feminine plural past passive of صَلَّى (ṣallā)\n# صَلِّينَ (ṣallīna) /sˤal.liː.na/: second-person feminine plural imperative of صَلَّى (ṣallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ṣallayna", "ṣallā", "ṣullīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اصلين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِصْلِينَ • (iṣlīna) (form I) /isˤ.liː.na/\n# second-person feminine plural imperative of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iṣlīna", "ṣalā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصلين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يصلين (form I)\n# يَصْلِينَ (yaṣlīna) /jasˤ.liː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of صَلَى (ṣalā)\n# يُصْلَيْنَ (yuṣlayna) /jusˤ.laj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṣlīna", "ṣalā", "yuṣlayna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصلين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يصلين (form II)\n# يُصَلِّينَ (yuṣallīna) /ju.sˤal.liː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of صَلَّى (ṣallā)\n# يُصَلَّيْنَ (yuṣallayna) /ju.sˤal.laj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of صَلَّى (ṣallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuṣallīna", "ṣallā", "yuṣallayna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصليان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يصليان (form II)\n# يُصَلِّيَانِ (yuṣalliyāni) /ju.sˤal.li.jaː.ni/: third-person masculine dual non-past active indicative of صَلَّى (ṣallā)\n# يُصَلَّيَانِ (yuṣallayāni) /ju.sˤal.la.jaː.ni/: third-person masculine dual non-past passive indicative of صَلَّى (ṣallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuṣalliyāni", "ṣallā", "yuṣallayāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصليان",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يصليان (form I)\n# يَصْلِيَانِ (yaṣliyāni) /jasˤ.li.jaː.ni/: third-person masculine dual non-past active indicative of صَلَى (ṣalā)\n# يُصْلَيَانِ (yuṣlayāni) /jusˤ.la.jaː.ni/: third-person masculine dual non-past passive indicative of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṣliyāni", "ṣalā", "yuṣlayāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصليان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تصليان (form II)\n# تُصَلِّيَانِ (tuṣalliyāni) /tu.sˤal.li.jaː.ni/: inflection of صَلَّى (ṣallā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُصَلَّيَانِ (tuṣallayāni) /tu.sˤal.la.jaː.ni/: inflection of صَلَّى (ṣallā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuṣalliyāni", "ṣallā", "tuṣallayāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصليان",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تصليان (form I)\n# تَصْلِيَانِ (taṣliyāni) /tasˤ.li.jaː.ni/: inflection of صَلَى (ṣalā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُصْلَيَانِ (tuṣlayāni) /tusˤ.la.jaː.ni/: inflection of صَلَى (ṣalā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣliyāni", "ṣalā", "tuṣlayāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصليا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تصليا (form II)\n# تُصَلِّيَا (tuṣalliyā) /tu.sˤal.li.jaː/: inflection of صَلَّى (ṣallā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُصَلَّيَا (tuṣallayā) /tu.sˤal.la.jaː/: inflection of صَلَّى (ṣallā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunct",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuṣalliyā", "ṣallā", "tuṣallayā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصليا",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تصليا (form I)\n# تَصْلِيَا (taṣliyā) /tasˤ.li.jaː/: inflection of صَلَى (ṣalā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُصْلَيَا (tuṣlayā) /tusˤ.la.jaː/: inflection of صَلَى (ṣalā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣliyā", "ṣalā", "tuṣlayā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصليا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يصليا (form II)\n# يُصَلِّيَا (yuṣalliyā) /ju.sˤal.li.jaː/: third-person masculine dual non-past active subjunctive/jussive of صَلَّى (ṣallā)\n# يُصَلَّيَا (yuṣallayā) /ju.sˤal.la.jaː/: third-person masculine dual non-past passive subjunctive/jussive of صَلَّى (ṣallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuṣalliyā", "ṣallā", "yuṣallayā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصليا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يصليا (form I)\n# يَصْلِيَا (yaṣliyā) /jasˤ.li.jaː/: third-person masculine dual non-past active subjunctive/jussive of صَلَى (ṣalā)\n# يُصْلَيَا (yuṣlayā) /jusˤ.la.jaː/: third-person masculine dual non-past passive subjunctive/jussive of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṣliyā", "ṣalā", "yuṣlayā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صلتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "صَلَّتَا • (ṣallatā) (form II) /sˤal.la.taː/\n# third-person feminine dual past active of صَلَّى (ṣallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ṣallatā", "ṣallā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صلتا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "صَلَتَا • (ṣalatā) (form I) /sˤa.la.taː/\n# third-person feminine dual past active of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣalatā", "ṣalā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صليتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صليتما (form II)\n# صَلَّيْتُمَا (ṣallaytumā) /sˤal.laj.tu.maː/: second-person dual past active of صَلَّى (ṣallā)\n# صُلِّيتُمَا (ṣullītumā) /sˤul.liː.tu.maː/: second-person dual past passive of صَلَّى (ṣallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ṣallaytumā", "ṣallā", "ṣullītumā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صليتما",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "صليتما (form I)\n# صَلَيْتُمَا (ṣalaytumā) /sˤa.laj.tu.maː/: second-person dual past active of صَلَى (ṣalā)\n# صُلِيتُمَا (ṣulītumā) /sˤu.liː.tu.maː/: second-person dual past passive of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣalaytumā", "ṣalā", "ṣulītumā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صليتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صُلِّيَتَا • (ṣulliyatā) (form II) /sˤul.li.ja.taː/\n# third-person feminine dual past passive of صَلَّى (ṣallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ṣulliyatā", "ṣallā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صليتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "صُلِيَتَا • (ṣuliyatā) (form I) /sˤu.li.ja.taː/\n# third-person feminine dual past passive of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣuliyatā", "ṣalā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صليا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صليا (form II)\n# صَلَّيَا (ṣallayā) /sˤal.la.jaː/: third-person masculine dual past active of صَلَّى (ṣallā)\n# صُلِّيَا (ṣulliyā) /sˤul.li.jaː/: third-person masculine dual past passive of صَلَّى (ṣallā)\n# صَلِّيَا (ṣalliyā) /sˤal.li.jaː/: second-person dual imperative of صَلَّى (ṣallā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ṣallayā", "ṣallā", "ṣulliyā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صليا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "صليا (form I)\n# صَلَيَا (ṣalayā) /sˤa.la.jaː/: third-person masculine dual past active of صَلَى (ṣalā)\n# صُلِيَا (ṣuliyā) /sˤu.li.jaː/: third-person masculine dual past passive of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣalayā", "ṣalā", "ṣuliyā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اصليا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِصْلِيَا • (iṣliyā) (form I) /isˤ.li.jaː/\n# second-person dual imperative of صَلَى (ṣalā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iṣliyā", "ṣalā"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "صلى", "r7"]
+  ],
+  "mana": {
     "ince": "possession.n.02",
     "orta": "noun.possession",
     "ust": "insan ve toplum",
@@ -1020,34 +725,8 @@
     "dayanak_tanim": "anything of material value or usefulness that is owned by a person or company",
     "synset_sayisi": 10
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "الصاد واللام",
-    "mihveri": "لين أثناء الشيء أو رخاوتها من الداخل مع تماسك ما فيمكن التصرف فيه: كتليين العصا بتعريضها للنار فيمكن بذلك تقويمها إن كانت معوجّة، ويمكن أيضًا ثَنْي طرفها ليكون مَقْبِضًا لها. وكرخاوة الصَلَوين فيتيحان تحريك الناقة ونحوِها ذنبَها إلى الجانبين، وكالعجيزة التي تشبه حَدَبة الموجة بانتبارها مع رخاوتها (وأرى أن دقة تفسير \"أَصْلَت الفرسُ \"هو: صار لها صَلًا أي تجمع رخو ذو تماسكِ ما حول حيائها). والصلاية: الحجر العريض (الأملس) وسيلة لدَقّ الطيب على الحجر العريض، فيلين أي يَنْعُم ويمكن التطيب به. وقد جاء أن من معاني الصلاية: الجبهة. وجاء في [تاج] أن ذلك تشبيه -أي بالحجر العريض (الأملس). كما جاء أن من معاني الصلاية \"شريحة خشنة غيظة من القف \". وأقول إن هذا من الشبيه بالحجر العريض أيضًا، فإن الشريحة بين ما حولها تشبه الحجر العريض في الصلابة والغلظ مع العِرَض في كلٍّ. والملاسة نسبية تتحقق بالخلو من كتل الحجارة ونحوها. ومن رخاوة الأثناء: \"المِصلاة -بالكسر: شرك ينصب لصيد الطير وغيرها \"وذلك بأن يوضع داخل الشرك حبٌّ أو لحمٌ إلخ مما يحبه الصيد (وهذه هي الرخاوة في الأثناء) فيدخل الشرك فيصاد ومن هذا استعمل في إيقاع الشخص (3/1244) في هلكة بحيلة). وعبارة الأزهري \"صلَيت فلانًا: إذا عملت له في أمر تريد أن تَمْحَلَ به وتوقعه في هلكة \"وعبارة الزمخشري \"صلَيْتُ بفلان: إذا سوّيت عليه منصوبة لتوقعه \"وعبارة [تاج مع ق] \"ومن المجاز صَلَى فلانًا صَلْيًا: داراه أو خاتله، وقيل: خدعه \"اهـ. وبالعَوْد إلى التليين بالنار نجدهم قالوا \"صَلَى اللحم بالنار (رمى): شواه \"واللين هنا متمثل في طيب اللحم بالشيء وذهاب فجاجته الت",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (صل) : هو التماسك الدقيق مع لُطفٍ ما في الأثناء كما يتمثل في تماسك الصلصال عند جفافه وكذلك صليله -في (صلل)، وكتماسك الأثناء مع رخاوتها (لا تسيبها) -في (صلو صلي)، وكما في اتصال الأرض والنبت من خصوبة الأثناء -في (وصل)، وكما يمتسك الأصل الشيء فيقيمه -في (أصل)، وكسريان التماسك في أثناء الشيء الصلب -في (صلب)، وكالتئام جسم الشئ مع امتساكه نفعه وخيره -في (صلح)، وكاشتداد أثناء الشيء لا ينفذ منها شيء في (صلد).",
-    "tam_metin": "{هُوَ الَّذِي يُصَلِّي عَلَيْكُمْ وَمَلَائِكَتُهُ لِيُخْرِجَكُمْ مِنَ الظُّلُمَاتِ إِلَى النُّورِ} [الأحزاب: 43]\nفي [تهذيب اللغة] \"صلَّيت العصا تصلية - ض: إذا أَدَرْتها على النار لتقوّمها \"وفي [الصحاح] \"صلى عصاه على النار - ض: ليّنها وقوّمها. وفي [ل] \"أَصْلَت الناقة: إذا وقع ولدها في صَلاها وقرب نِتاجها. أَصْلَت الفرس: إذا استرخى صَلَواها، وذلك إذا قرب نتاجها. وفي التهذيب عن الزجاج \"وقال أهل اللغة في الصلاة إنها من الصلوين وهما مكتنفا الذنب من الناقة وغيرها، وأول مَوْصل الفخذين من الإنسان فكأنهما في الحقيقة مكتنفَا العُصْعُص. وجاء في [ل حبب]\n(3/1243)\n\"أَنْشد الليث:\nكأن صلا جهيزة حين قامت ... حَبابُ الماء يتبع الحبابا\n(والحباب فُسِّر بالموج الذي كأنه دَرَجٌ في حَدَبة. والصلا: العجيزة. وينظر أصل العبارة في [تهذيب اللغة حبب، وفي [تاج]. والصَلاية: كل حجر عريض/ مُدُقً الطيب).\n° المعنى المحوري\nلين أثناء الشيء أو رخاوتها من الداخل مع تماسك ما فيمكن التصرف فيه: كتليين العصا بتعريضها للنار فيمكن بذلك تقويمها إن كانت معوجّة، ويمكن أيضًا ثَنْي طرفها ليكون مَقْبِضًا لها. وكرخاوة الصَلَوين فيتيحان تحريك الناقة ونحوِها ذنبَها إلى الجانبين، وكالعجيزة التي تشبه حَدَبة الموجة بانتبارها مع رخاوتها (وأرى أن دقة تفسير \"أَصْلَت الفرسُ \"هو: صار لها صَلًا أي تجمع رخو ذو تماسكِ ما حول حيائها). والصلاية: الحجر العريض (الأملس) وسيلة لدَقّ الطيب على الحجر العريض، فيلين أي يَنْعُم ويمكن التطيب به. وقد جاء أن من معاني الصلاية: الجبهة. وجاء في [تاج] أن ذلك تشبيه -أي بالحجر العريض (الأملس). كما جاء أن من معاني الصلاية \"شريحة خشنة غيظة من القف \". وأقول إن هذا من الشبيه بالحجر العريض أيضًا، فإن الشريحة بين ما حولها تشبه الحجر العريض في الصلابة والغلظ مع العِرَض في كلٍّ. والملاسة نسبية تتحقق بالخلو من كتل الحجارة ونحوها.\nومن رخاوة الأثناء: \"المِصلاة -بالكسر: شرك ينصب لصيد الطير وغيرها \"وذلك بأن يوضع داخل الشرك حبٌّ أو لحمٌ إلخ مما يحبه الصيد (وهذه هي الرخاوة في الأثناء) فيدخل الشرك فيصاد ومن هذا استعمل في إيقاع الشخص\n(3/1244)\nفي هلكة بحيلة). وعبارة الأزهري \"صلَيت فلانًا: إذا عملت له في أمر تريد أن تَمْحَلَ به وتوقعه في هلكة \"وعبارة الزمخشري \"صلَيْتُ بفلان: إذا سوّيت عليه منصوبة لتوقعه \"وعبارة [تاج مع ق] \"ومن المجاز صَلَى فلانًا صَلْيًا: داراه أو خاتله، وقيل: خدعه \"اهـ.\nوبالعَوْد إلى التليين بالنار نجدهم قالوا \"صَلَى اللحم بالنار (رمى): شواه \"واللين هنا متمثل في طيب اللحم بالشيء وذهاب فجاجته التي تمنع أكله نِيئًا. وكذا قالوا: \"صَلَى ظهره بالنار (رمى): أدفأه \"فهذا مجرد تقريب الظهر من النار ليدفأ ويلين. والاصطلاء الاستدفاء {لَعَلَّكُمْ تَصْطَلُونَ} [النمل: 7]. وكل ذلك طيب أثناء -أي من الرخاوة في المعنى الأصلي.\nوتخلصوا من قيد التطييب في تسليط النار على ظاهر الشيء إنضاجا أو تليينا فقالوا \"صَلَى اللحمَ في النار (رمى) وأصلاه وصَلّاه - ض: ألقاه للإحراق، وصَلىَ بالنار وصليها (تعب) صَليًا -بالفتح وصُلِيًّا- فُعول، واصطلى بها وتصلاها \": احترق بها/ قاسي حرها \" {سَوْفَ نُصْلِيهِمْ نَارًا} [النساء: 56]، {تَصْلَى نَارًا حَامِيَةً} [الغاشية: 4]، {ثُمَّ الْجَحِيمَ صَلُّوهُ} [الحاقة: 31]، {وَتَصْلِيَةُ جَحِيمٍ} [الواقعة: 94]. واحتمال التطييب بالإحراق يعلمه اللَّه تعالى.\nومن لين الأثناء والرخاوة مجازًا بمعنى خشوع الباطن استعملت في الدعاء الذي هو تضرع لاستنزال الرضا أو الفضل، وهذا هو الذي جعلوه الأصل في تسمية الصلاة ذات الركوع أعني: الدعاء. قال [طب 1/ 243]: إن المصلِّى متعرضٌ تعرّضَ الداعي. وقد استعمل اللفظ بمعنى الدعاء وحده كثيرًا، ومنه الحديث. \". . . وإن كان صائمًا فليصل \"أي فليدع أي لأرباب الطعام. وبمعنى الدعاء\n(3/1245)\nاستعملها الأعشى في صلاة الخمار على دن الخمر. {وصلّى على دَنّها وارْتسم}\nوكذا هي في قوله: {عليكِ مثلُ الذي صليت} أي دَعَوت (ولا يتأتى أن يقصد الأعشى بالصلاة الركوع ونحوه، لأنه لم يسلم)، وبهذا يفهم أن الصلاة من اللَّه عز وجل على عباده هي إنزال الرحمة والبركات -كما يُقصد بالدعاء {هُوَ الَّذِي يُصَلِّي عَلَيْكُمْ وَمَلَائِكَتُهُ لِيُخْرِجَكُمْ مِنَ الظُّلُمَاتِ إِلَى النُّورِ} في [قر 14/ 198]- فصلاة اللَّه على العبد هي رحمته له وبركته عليه. . وصلاة الملائكة دعاؤهم للمؤمنين واستغفارهم لهم، كما قال تعالى {وَيَسْتَغْفِرُونَ لِلَّذِينَ آمَنُوا} [غافر: 7] وأقول إن هذه الآية تعبر عن فضل ورعاية من اللَّه عز وجل لهذه الأمة لا يحاط به. وهو يفسّر كيف بقى الإسلام إلى الآن وإلى يوم القيامة إن شاء اللَّه برغم عداء الغرب ومحاربة كل حكومات العالم للإسلام. هذا مع عظيم شيوع حفظ القرآن وازدهار الجانب الروحي بالعلماء والأولياء، وانتشار الإسلام في شعوبٍ تحاربه، وغير هذا مما لا يفصّل إلا في كتب. وكل هذا بفضل صلاة اللَّه وملائكته على هذه الأمة، {إِنَّ اللَّهَ وَمَلَائِكَتَهُ يُصَلُّونَ عَلَى النَّبِيِّ يَاأَيُّهَا الَّذِينَ آمَنُوا صَلُّوا عَلَيْهِ وَسَلِّمُوا تَسْلِيمًا} [الأحزاب: 56]. -صلى اللَّه عليه وسلم-. وفي [تاج] فائدة نفيسة منها أن معنى صلاتنا على النبي -صلى اللَّه عليه وسلم-: اللهم عظّمه في الدنيا بإعلاء ذكره، وإظهار دعوته، وإبقاء شريعته، وفي الآخرة بتشفيعه في أمته، وتضعيف أجره ومثوبته \".\nفلمعنى الدعاء والضراعة استُعْملت في أهم صور التضرع والإخبات للَّه عز وجل وهي الصلاة ذات الركوع والسجود {إِنَّ الصَّلَاةَ كَانَتْ عَلَى الْمُؤْمِنِينَ كِتَابًا مَوْقُوتًا} [النساء: 103] وقد سبق الإمام ابن فارس بالقول باشتقاق الصلاة من صَلّيت العود: لّينته لأن المصلي يلين بالخشوع. ولكن لكثرة الاجتهادات في\n(3/1246)\nالمأخذ الاشتقاقي للصلاة (نحو سبعة أو أكثر في [تاج] وحده) وأن أكثرها فيه تكلف، ولإجمال كلام ابن فارس وانغماره، وأنه في المجمل لا المقاييس = غاب وجُهل، وقد هُديت له بشواهد أصّلَته دون تكلف. فهو الصحيح والحمد للَّه.\nومن الأصل \"الصلاةُ: المْعَبَدُ \" (سُمي المكان باسم ما يقع فيه) كما قالوا سميت مِنَي لما يُمْنَى فيها من الدماء أي يراق. فالكلمة عربية أصلًا وصيغة ولا معنى لزعم تعريبها الذي ورد في ل والمتوكلي/ وتوقف إزاءه الخولي {لَهُدِّمَتْ صَوَامِعُ وَبِيَعٌ وَصَلَوَاتٌ} [الحج: 40]. والذي جاء في القرآن من التركيب معنيان الصلاة الدعاء والعبادة المعروفة، وصُلِيّ النار وتصليتها والعياذ باللَّه. وسياق كل منهما متميز.\nأما \"المُصَلِّى من الخيل: الذي مجيء بعد السابق \"فأرى أنه من الرخاوة التي هي درجة من الضعف. فالسابق الصُلْب هو المجلّي، وهذا المتراخي عنه هو المصلي. وقد قالوا إنه وصف بذلك لأن رأسه يكون عند صلَوَىْ المُجَلِّي \"."
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
-    "artifact.n.01",
-    "assets.n.01",
-    "content.n.05",
-    "direction.n.06",
-    "happening.n.01",
-    "heredity.n.02",
-    "original.a.03",
-    "point.n.02"
-  ],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 7,
       "merkez_kok": "حدق",
@@ -1067,6 +746,20 @@
       "boy": 57
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": [
+    "artifact.n.01",
+    "assets.n.01",
+    "content.n.05",
+    "direction.n.06",
+    "happening.n.01",
+    "heredity.n.02",
+    "original.a.03",
+    "point.n.02"
+  ],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

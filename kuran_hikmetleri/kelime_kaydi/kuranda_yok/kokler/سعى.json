@@ -1,484 +1,349 @@
 {
   "kok": "سعى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "سعى", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "السين والعين",
-      "baslik": "سعو - سعى",
-      "mihveri": "تسيُّبُ جِرم الشيء المجتمع وذهابه شيئًا بعد شيء: كما يذوب الشمع عند الاستصباح به، وكمرور ساعات الليل واحدة بعد أخرى.",
-      "sesler": "",
-      "tam_metin": "{يَوْمَ تَرَى الْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ يَسْعَى نُورُهُمْ بَيْنَ أَيْدِيهِمْ} [الحديد: 12].\n\"السَعْو - بالفتح: الشمع (في بعض اللغات) (الشمع - بالفتح والتحريك: هو مُوم العسل الذي يُستصبَح به) والسَعْوة - بالفتح: الشَمْعة. ويقال: مضى سِعْوٌ من الليل وسِعْوة - بالفتح والكسر فيهما - أي: قطعة \".\n° المعنى المحوري\nتسيُّبُ جِرم الشيء المجتمع وذهابه شيئًا بعد شيء: كما يذوب الشمع عند الاستصباح به، وكمرور ساعات الليل واحدة بعد أخرى.\n__________\n= الزوال كالشمع، و (سعى) عن زيادة الامتداد كالسعي: العدْو. وفي (سوع) يأتي الاشتمال في الأثناء، فيعبرّ التركيب عن تسيب مرورٍ في أثناء ضامة بلطف كالسوعاء: المَذْي وكالساعة زمن يمرّ. وفي (سيع) تعبر الياء عن الاتصال والامتداد، ويعبر التركيب عن مجرد امتداد الرقيق كالسيع: الماء الجاري على وجه الأرض. وفي (وسع) تسبق الواو بالتعبير عن الاشتمال، فيعبّر التركيب عن انبساط في حيز (الانحسارُ والزوالُ يُعْقِب فراغًا) بحيث يشتمل ويستوعب شيئًا، أي يتسع له، كما في السعة: نقيض الضيق. وفي (سعد) تعبر الدال عن ضغط ممتد ينشأ عنه احتباس، فيعبّر التركيب عن احتباس الرقيق الغض في أثناء شيء فيكون قوامَه كالساعد: مجرى المخ في العظام. وفي (سعر) تعبّر الراء عن الاسترسال؛ فيعبّر التركيب عن استرسال ذاك الملتحم الرقيق كسَعْر النار: تهييجها بالوقود الذي تأكله فيزداد انتشار لهبها.\n(2/1010)\nومن يائيِّهِ: \"السَعْى: عَدْو دون الشدّ (فيقطع مسافة ممتدة) {فَاسْعَوْا إِلَى ذِكْرِ اللَّهِ وَذَرُوا الْبَيْعَ} [الجمعة: 9] {فَأَلْقَاهَا فَإِذَا هِيَ حَيَّةٌ تَسْعَى} [طه: 20]. ومن هذا \": (السَعْي: الكسب (بالذهاب هنا وهنا) سَعَى لهم وعليهم: عَمِل لهم وكسَب (ثم استعمل في مجرد الكسب) \"وكل عمل من خير أو شر سَعْيٌ \" {فَلَمَّا بَلَغَ مَعَهُ السَّعْيَ} [الصافات: 102]، فُسِّرت بالاحتلام وبالعقل وبالكسب (والراجح أن المراد القدرة على العمل لكسب الرزق كما يعمل الناس) [وانظر: قر 15/ 99]. {وَأَنْ لَيْسَ لِلْإِنْسَانِ إِلَّا مَا سَعَى} [النجم: 39] أي عَمِل وحصّل {فَأُولَئِكَ كَانَ سَعْيُهُمْ مَشْكُورًا} [الإسراء: 19]، {إِنَّ سَعْيَكُمْ لَشَتَّى} [الليل: 4]، {يَوْمَ يَتَذَكَّرُ الْإِنْسَانُ مَا سَعَى} [النازعات: 35] كل هذا يفسَّر بالعمل الجادّ أخذًا من السَعْي: العدْو.\nومن السعي الذي هو العَدْو وقطعُ المسافة سمَّوا وُلَاةَ الصدقة وجامعيها سُعاة؛ لأنهم كانوا يذهبون إلى الأقاليم البعيدة لجمعها، ثم قالوا: \"كل من وَلِيَ أمر قوم فهو ساعٍ، وأكثر ما يقال في ولاة الصدقة \"اهـ. ومن هذا: \"ساعى اليهود والنصارى: رئيسهم \"وكانوا يسمون أصحاب الحمالات لحقن الدماء وإطفاء النائرة \"سُعاةً؛ لسعيهم هنا وهنا لجمع ما تكفّلوا به للمتقاتلين، ليتوقفوا، وتُحقن الدماء.\nوأُطْلِقت في العمل والجَهْد من أجل تحقيق شيء من هذا (العَدْو) كما يقال: مشى في أمر، أو من العمل ومحاولة (تحصيل) شيء {وَسَعَى فِي خَرَابِهَا} [البقرة: 114] , {وَالَّذِينَ سَعَوْا فِي آيَاتِنَا مُعَاجِزِينَ أُولَئِكَ أَصْحَابُ الْجَحِيمِ} [الحج: 51].\n(2/1011)\nأي في إبطال آياتنا مغالبين مشاقين [قر 12/ 78]. والذي في القرآن من التركيب معنيان: السعي العدْو أو السير الجادّ في [البقرة 260، طه 20، 69، القصص 20، يس 20، الحديد 12، الجمعة 9، التحريم 8، عبس 8] وما عدا ذلك فهو بمعنى الجهد والعمل الجادّ من أجل تحصيل شيء.",
-      "fasil_ozeti": "° معنى الفصل المعجمي (سع): الانحسار والذهاب من جِرم الشيء، وهذا المعنى يلزمه اتساع الحيز الذي يشغله الشيء نفسه. ويتمثل ذلك المعنى المشترك في تسعسع البدن هرمًا وتسعسع الفم بانحسار الشفة عن الأسنان - في (سعع)، وفي ذوبان الشمع - في (سعو)، والذهاب هنا وهناك - في (سعى)، وفي نفاذ المذي من مقره وذهاب الإبل في المرعى - في (سوع) وفي جريان الماء على وجه الأرض في (سيع)، وفي الاتساع وهو المعنى اللازم - في (وسع)، وفي جريان المخ في العظام واللبن في عرق الدرّة (ثم يحتبسان إلى أجل وتعبر الدال عن ذلك الاحتباس) - في (سعد)، وفي ذهاب اللحم والشحم من بدن (الأسعر) ومن المساعر، وانتشار لهب السعير - في (سعر)."
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "تسعون",
-        "u": "تسعون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَسْعَوْنَ • (tasʕawna) (form I) /tas.ʕaw.na/\n# second-person masculine plural non-past active indicative of سَعَى (saʕā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasʕawna", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسعين",
-        "u": "تسعين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَسْعَيْنَ • (tasʕayna) (form I) /tas.ʕaj.na/\n# inflection of سَعَى (saʕā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasʕayna", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "سعي",
-        "u": "سعي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "سُعِيَ • (suʕiya) (form I) /su.ʕi.ja/\n# third-person masculine singular past passive of سَعَى (saʕā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["suʕiya", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسعى",
-        "u": "يسعى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يسعى (form I)\n# يَسْعَى (yasʕā) /jas.ʕaː/: third-person masculine singular non-past active indicative/subjunctive of سَعَى (saʕā)\n# يُسْعَى (yusʕā) /jus.ʕaː/: third-person masculine singular non-past passive indicative/subjunctive of سَعَى (saʕā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasʕā", "saʕā", "yusʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسع",
-        "u": "تسع",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَسْعَ • (tasʕa) (form I) /tas.ʕa/\n# inflection of سَعَى (saʕā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasʕa", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "أتساع",
-        "u": "أتساع",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "أَتْسَاع • (ʔatsāʕ) m pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of تُسُع (tusuʕ)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["تُسُع"],
-        "r": ["ʔatsāʕ"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "يسع",
-        "u": "يسع",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يسع (form I)\n# يَسْعَ (yasʕa) /jas.ʕa/: third-person masculine singular non-past active jussive of سَعَى (saʕā)\n# يُسْعَ (yusʕa) /jus.ʕa/: third-person masculine singular non-past passive jussive of سَعَى (saʕā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasʕa", "saʕā", "yusʕa"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "سعت",
-        "u": "سعت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سَعَتْ • (saʕat) (form I) /sa.ʕat/\n# third-person feminine singular past active of سَعَى (saʕā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["saʕat", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسعى",
-        "u": "تسعى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَسْعَى • (tasʕā) (form I) /tas.ʕaː/\n# inflection of سَعَى (saʕā):\n## second-person masculine singular non-past active indicative/subjunctive\n## third-person feminine singular non-past active indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasʕā", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "سعيت",
-        "u": "سعيت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سعيت (form I)\n# سَعَيْتُ (saʕaytu) /sa.ʕaj.tu/: first-person singular past active of سَعَى (saʕā)\n# سَعَيْتَ (saʕayta) /sa.ʕaj.ta/: second-person masculine singular past active of سَعَى (saʕā)\n# سَعَيْتِ (saʕayti) /sa.ʕaj.ti/: second-person feminine singular past active of سَعَى (saʕā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["saʕaytu", "saʕā", "saʕayta"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "اسع",
-        "u": "اسع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِسْعَ • (isʕa) (form I) /is.ʕa/\n# second-person masculine singular imperative of سَعَى (saʕā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["isʕa", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسعي",
-        "u": "تسعي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَسْعَيْ • (tasʕay) (form I) /tas.ʕaj/\n# second-person feminine singular non-past active subjunctive/jussive of سَعَى (saʕā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasʕay", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "اسعي",
-        "u": "اسعي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِسْعَيْ • (isʕay) (form I) /is.ʕaj/\n# second-person feminine singular imperative of سَعَى (saʕā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["isʕay", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسعى",
-        "u": "أسعى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَسْعَى • (ʔasʕā) (form I) /ʔas.ʕaː/\n# first-person singular non-past active indicative/subjunctive of سَعَى (saʕā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔasʕā", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسع",
-        "u": "أسع",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أَسْعَ • (ʔasʕa) (form I) /ʔas.ʕa/\n# first-person singular non-past active jussive of سَعَى (saʕā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔasʕa", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "سعينا",
-        "u": "سعينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سَعَيْنَا • (saʕaynā) (form I) /sa.ʕaj.naː/\n# first-person plural past active of سَعَى (saʕā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["saʕaynā", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "نسعى",
-        "u": "نسعى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَسْعَى • (nasʕā) (form I) /nas.ʕaː/\n# first-person plural non-past active indicative/subjunctive of سَعَى (saʕā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nasʕā", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "نسع",
-        "u": "نسع",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نَسْعَ • (nasʕa) (form I) /nas.ʕa/\n# first-person plural non-past active jussive of سَعَى (saʕā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nasʕa", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "سعيتم",
-        "u": "سعيتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سَعَيْتُمْ • (saʕaytum) (form I) /sa.ʕaj.tum/\n# second-person masculine plural past active of سَعَى (saʕā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["saʕaytum", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسعوا",
-        "u": "تسعوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَسْعَوْا • (tasʕaw) (form I) /tas.ʕaw/\n# second-person masculine plural non-past active subjunctive/jussive of سَعَى (saʕā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasʕaw", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "اسعوا",
-        "u": "اسعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِسْعَوْا • (isʕaw) (form I) /is.ʕaw/\n# second-person masculine plural imperative of سَعَى (saʕā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["isʕaw", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "سعوا",
-        "u": "سعوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "سَعَوْا • (saʕaw) (form I) /sa.ʕaw/\n# third-person masculine plural past active of سَعَى (saʕā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["saʕaw", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسعون",
-        "u": "يسعون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَسْعَوْنَ • (yasʕawna) (form I) /jas.ʕaw.na/\n# third-person masculine plural non-past active indicative of سَعَى (saʕā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasʕawna", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسعوا",
-        "u": "يسعوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَسْعَوْا • (yasʕaw) (form I) /jas.ʕaw/\n# third-person masculine plural non-past active subjunctive/jussive of سَعَى (saʕā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasʕaw", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "سعيتن",
-        "u": "سعيتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سَعَيْتُنَّ • (saʕaytunna) (form I) /sa.ʕaj.tun.na/\n# second-person feminine plural past active of سَعَى (saʕā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["saʕaytunna", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "اسعين",
-        "u": "اسعين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِسْعَيْنَ • (isʕayna) (form I) /is.ʕaj.na/\n# second-person feminine plural imperative of سَعَى (saʕā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["isʕayna", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "سعين",
-        "u": "سعين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سَعَيْنَ • (saʕayna) (form I) /sa.ʕaj.na/\n# third-person feminine plural past active of سَعَى (saʕā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["saʕayna", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسعين",
-        "u": "يسعين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَسْعَيْنَ • (yasʕayna) (form I) /jas.ʕaj.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of سَعَى (saʕā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasʕayna", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "سعيتما",
-        "u": "سعيتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سَعَيْتُمَا • (saʕaytumā) (form I) /sa.ʕaj.tu.maː/\n# second-person dual past active of سَعَى (saʕā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["saʕaytumā", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "سعيا",
-        "u": "سعيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سَعَيَا • (saʕayā) (form I) /sa.ʕa.jaː/\n# third-person masculine dual past active of سَعَى (saʕā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["saʕayā", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "سعتا",
-        "u": "سعتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "سَعَتَا • (saʕatā) (form I) /sa.ʕa.taː/\n# third-person feminine dual past active of سَعَى (saʕā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["saʕatā", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسعيان",
-        "u": "يسعيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَسْعَيَانِ • (yasʕayāni) (form I) /jas.ʕa.jaː.ni/\n# third-person masculine dual non-past active indicative of سَعَى (saʕā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasʕayāni", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسعيان",
-        "u": "تسعيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَسْعَيَانِ • (tasʕayāni) (form I) /tas.ʕa.jaː.ni/\n# inflection of سَعَى (saʕā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasʕayāni", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "اسعيا",
-        "u": "اسعيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِسْعَيَا • (isʕayā) (form I) /is.ʕa.jaː/\n# second-person dual imperative of سَعَى (saʕā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["isʕayā", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسعيا",
-        "u": "تسعيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَسْعَيَا • (tasʕayā) (form I) /tas.ʕa.jaː/\n# inflection of سَعَى (saʕā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tasʕayā", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسعيا",
-        "u": "يسعيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَسْعَيَا • (yasʕayā) (form I) /jas.ʕa.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of سَعَى (saʕā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yasʕayā", "saʕā"],
-        "k": "سعى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "سع",
+  "ses": {
     "harf": "س",
+    "fasil": "سع",
     "mahrec": "esaliyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "cebel": {
+    "fasil": "السين والعين",
+    "baslik": "سعو - سعى",
+    "mihveri": "تسيُّبُ جِرم الشيء المجتمع وذهابه شيئًا بعد شيء: كما يذوب الشمع عند الاستصباح به، وكمرور ساعات الليل واحدة بعد أخرى.",
+    "tam_metin": "{يَوْمَ تَرَى الْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ يَسْعَى نُورُهُمْ بَيْنَ أَيْدِيهِمْ} [الحديد: 12].\n\"السَعْو - بالفتح: الشمع (في بعض اللغات) (الشمع - بالفتح والتحريك: هو مُوم العسل الذي يُستصبَح به) والسَعْوة - بالفتح: الشَمْعة. ويقال: مضى سِعْوٌ من الليل وسِعْوة - بالفتح والكسر فيهما - أي: قطعة \".\n° المعنى المحوري\nتسيُّبُ جِرم الشيء المجتمع وذهابه شيئًا بعد شيء: كما يذوب الشمع عند الاستصباح به، وكمرور ساعات الليل واحدة بعد أخرى.\n__________\n= الزوال كالشمع، و (سعى) عن زيادة الامتداد كالسعي: العدْو. وفي (سوع) يأتي الاشتمال في الأثناء، فيعبرّ التركيب عن تسيب مرورٍ في أثناء ضامة بلطف كالسوعاء: المَذْي وكالساعة زمن يمرّ. وفي (سيع) تعبر الياء عن الاتصال والامتداد، ويعبر التركيب عن مجرد امتداد الرقيق كالسيع: الماء الجاري على وجه الأرض. وفي (وسع) تسبق الواو بالتعبير عن الاشتمال، فيعبّر التركيب عن انبساط في حيز (الانحسارُ والزوالُ يُعْقِب فراغًا) بحيث يشتمل ويستوعب شيئًا، أي يتسع له، كما في السعة: نقيض الضيق. وفي (سعد) تعبر الدال عن ضغط ممتد ينشأ عنه احتباس، فيعبّر التركيب عن احتباس الرقيق الغض في أثناء شيء فيكون قوامَه كالساعد: مجرى المخ في العظام. وفي (سعر) تعبّر الراء عن الاسترسال؛ فيعبّر التركيب عن استرسال ذاك الملتحم الرقيق كسَعْر النار: تهييجها بالوقود الذي تأكله فيزداد انتشار لهبها.\n(2/1010)\nومن يائيِّهِ: \"السَعْى: عَدْو دون الشدّ (فيقطع مسافة ممتدة) {فَاسْعَوْا إِلَى ذِكْرِ اللَّهِ وَذَرُوا الْبَيْعَ} [الجمعة: 9] {فَأَلْقَاهَا فَإِذَا هِيَ حَيَّةٌ تَسْعَى} [طه: 20]. ومن هذا \": (السَعْي: الكسب (بالذهاب هنا وهنا) سَعَى لهم وعليهم: عَمِل لهم وكسَب (ثم استعمل في مجرد الكسب) \"وكل عمل من خير أو شر سَعْيٌ \" {فَلَمَّا بَلَغَ مَعَهُ السَّعْيَ} [الصافات: 102]، فُسِّرت بالاحتلام وبالعقل وبالكسب (والراجح أن المراد القدرة على العمل لكسب الرزق كما يعمل الناس) [وانظر: قر 15/ 99]. {وَأَنْ لَيْسَ لِلْإِنْسَانِ إِلَّا مَا سَعَى} [النجم: 39] أي عَمِل وحصّل {فَأُولَئِكَ كَانَ سَعْيُهُمْ مَشْكُورًا} [الإسراء: 19]، {إِنَّ سَعْيَكُمْ لَشَتَّى} [الليل: 4]، {يَوْمَ يَتَذَكَّرُ الْإِنْسَانُ مَا سَعَى} [النازعات: 35] كل هذا يفسَّر بالعمل الجادّ أخذًا من السَعْي: العدْو.\nومن السعي الذي هو العَدْو وقطعُ المسافة سمَّوا وُلَاةَ الصدقة وجامعيها سُعاة؛ لأنهم كانوا يذهبون إلى الأقاليم البعيدة لجمعها، ثم قالوا: \"كل من وَلِيَ أمر قوم فهو ساعٍ، وأكثر ما يقال في ولاة الصدقة \"اهـ. ومن هذا: \"ساعى اليهود والنصارى: رئيسهم \"وكانوا يسمون أصحاب الحمالات لحقن الدماء وإطفاء النائرة \"سُعاةً؛ لسعيهم هنا وهنا لجمع ما تكفّلوا به للمتقاتلين، ليتوقفوا، وتُحقن الدماء.\nوأُطْلِقت في العمل والجَهْد من أجل تحقيق شيء من هذا (العَدْو) كما يقال: مشى في أمر، أو من العمل ومحاولة (تحصيل) شيء {وَسَعَى فِي خَرَابِهَا} [البقرة: 114] , {وَالَّذِينَ سَعَوْا فِي آيَاتِنَا مُعَاجِزِينَ أُولَئِكَ أَصْحَابُ الْجَحِيمِ} [الحج: 51].\n(2/1011)\nأي في إبطال آياتنا مغالبين مشاقين [قر 12/ 78]. والذي في القرآن من التركيب معنيان: السعي العدْو أو السير الجادّ في [البقرة 260، طه 20، 69، القصص 20، يس 20، الحديد 12، الجمعة 9، التحريم 8، عبس 8] وما عدا ذلك فهو بمعنى الجهد والعمل الجادّ من أجل تحصيل شيء.",
+    "fasil_ozeti": "° معنى الفصل المعجمي (سع): الانحسار والذهاب من جِرم الشيء، وهذا المعنى يلزمه اتساع الحيز الذي يشغله الشيء نفسه. ويتمثل ذلك المعنى المشترك في تسعسع البدن هرمًا وتسعسع الفم بانحسار الشفة عن الأسنان - في (سعع)، وفي ذوبان الشمع - في (سعو)، والذهاب هنا وهناك - في (سعى)، وفي نفاذ المذي من مقره وذهاب الإبل في المرعى - في (سوع) وفي جريان الماء على وجه الأرض في (سيع)، وفي الاتساع وهو المعنى اللازم - في (وسع)، وفي جريان المخ في العظام واللبن في عرق الدرّة (ثم يحتبسان إلى أجل وتعبر الدال عن ذلك الاحتباس) - في (سعد)، وفي ذهاب اللحم والشحم من بدن (الأسعر) ومن المساعر، وانتشار لهب السعير - في (سعر)."
+  },
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "تسعون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَسْعَوْنَ • (tasʕawna) (form I) /tas.ʕaw.na/\n# second-person masculine plural non-past active indicative of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasʕawna", "saʕā"]
+    },
+    {
+      "madde": "تسعين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَسْعَيْنَ • (tasʕayna) (form I) /tas.ʕaj.na/\n# inflection of سَعَى (saʕā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasʕayna", "saʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سعي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "سُعِيَ • (suʕiya) (form I) /su.ʕi.ja/\n# third-person masculine singular past passive of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["suʕiya", "saʕā"]
+    },
+    {
+      "madde": "يسعى",
+      "tur": "verb",
+      "baslik": "يسعى (form I)\n# يَسْعَى (yasʕā) /jas.ʕaː/: third-person masculine singular non-past active indicative/subjunctive of سَعَى (saʕā)\n# يُسْعَى (yusʕā) /jus.ʕaː/: third-person masculine singular non-past passive indicative/subjunctive of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasʕā", "saʕā", "yusʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسع",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَسْعَ • (tasʕa) (form I) /tas.ʕa/\n# inflection of سَعَى (saʕā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasʕa", "saʕā"]
+    },
+    {
+      "madde": "أتساع",
+      "tur": "noun",
+      "baslik": "أَتْسَاع • (ʔatsāʕ) m pl",
+      "anlam": ["plural of تُسُع (tusuʕ)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["تُسُع"],
+      "okunus": ["ʔatsāʕ"],
+      "bag": "asıl madde",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسع",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يسع (form I)\n# يَسْعَ (yasʕa) /jas.ʕa/: third-person masculine singular non-past active jussive of سَعَى (saʕā)\n# يُسْعَ (yusʕa) /jus.ʕa/: third-person masculine singular non-past passive jussive of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasʕa", "saʕā", "yusʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سعت",
+      "tur": "verb",
+      "baslik": "سَعَتْ • (saʕat) (form I) /sa.ʕat/\n# third-person feminine singular past active of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["saʕat", "saʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسعى",
+      "tur": "verb",
+      "baslik": "تَسْعَى • (tasʕā) (form I) /tas.ʕaː/\n# inflection of سَعَى (saʕā):\n## second-person masculine singular non-past active indicative/subjunctive\n## third-person feminine singular non-past active indicative/subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasʕā", "saʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سعيت",
+      "tur": "verb",
+      "baslik": "سعيت (form I)\n# سَعَيْتُ (saʕaytu) /sa.ʕaj.tu/: first-person singular past active of سَعَى (saʕā)\n# سَعَيْتَ (saʕayta) /sa.ʕaj.ta/: second-person masculine singular past active of سَعَى (saʕā)\n# سَعَيْتِ (saʕayti) /sa.ʕaj.ti/: second-person feminine singular past active of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["saʕaytu", "saʕā", "saʕayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اسع",
+      "tur": "verb",
+      "baslik": "اِسْعَ • (isʕa) (form I) /is.ʕa/\n# second-person masculine singular imperative of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["isʕa", "saʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسعي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَسْعَيْ • (tasʕay) (form I) /tas.ʕaj/\n# second-person feminine singular non-past active subjunctive/jussive of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasʕay", "saʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اسعي",
+      "tur": "verb",
+      "baslik": "اِسْعَيْ • (isʕay) (form I) /is.ʕaj/\n# second-person feminine singular imperative of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["isʕay", "saʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسعى",
+      "tur": "verb",
+      "baslik": "أَسْعَى • (ʔasʕā) (form I) /ʔas.ʕaː/\n# first-person singular non-past active indicative/subjunctive of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔasʕā", "saʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسع",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أَسْعَ • (ʔasʕa) (form I) /ʔas.ʕa/\n# first-person singular non-past active jussive of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔasʕa", "saʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سعينا",
+      "tur": "verb",
+      "baslik": "سَعَيْنَا • (saʕaynā) (form I) /sa.ʕaj.naː/\n# first-person plural past active of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["saʕaynā", "saʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نسعى",
+      "tur": "verb",
+      "baslik": "نَسْعَى • (nasʕā) (form I) /nas.ʕaː/\n# first-person plural non-past active indicative/subjunctive of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nasʕā", "saʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نسع",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نَسْعَ • (nasʕa) (form I) /nas.ʕa/\n# first-person plural non-past active jussive of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nasʕa", "saʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سعيتم",
+      "tur": "verb",
+      "baslik": "سَعَيْتُمْ • (saʕaytum) (form I) /sa.ʕaj.tum/\n# second-person masculine plural past active of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["saʕaytum", "saʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسعوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَسْعَوْا • (tasʕaw) (form I) /tas.ʕaw/\n# second-person masculine plural non-past active subjunctive/jussive of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasʕaw", "saʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اسعوا",
+      "tur": "verb",
+      "baslik": "اِسْعَوْا • (isʕaw) (form I) /is.ʕaw/\n# second-person masculine plural imperative of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["isʕaw", "saʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سعوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "سَعَوْا • (saʕaw) (form I) /sa.ʕaw/\n# third-person masculine plural past active of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["saʕaw", "saʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسعون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَسْعَوْنَ • (yasʕawna) (form I) /jas.ʕaw.na/\n# third-person masculine plural non-past active indicative of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasʕawna", "saʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسعوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَسْعَوْا • (yasʕaw) (form I) /jas.ʕaw/\n# third-person masculine plural non-past active subjunctive/jussive of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasʕaw", "saʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سعيتن",
+      "tur": "verb",
+      "baslik": "سَعَيْتُنَّ • (saʕaytunna) (form I) /sa.ʕaj.tun.na/\n# second-person feminine plural past active of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["saʕaytunna", "saʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اسعين",
+      "tur": "verb",
+      "baslik": "اِسْعَيْنَ • (isʕayna) (form I) /is.ʕaj.na/\n# second-person feminine plural imperative of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["isʕayna", "saʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سعين",
+      "tur": "verb",
+      "baslik": "سَعَيْنَ • (saʕayna) (form I) /sa.ʕaj.na/\n# third-person feminine plural past active of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["saʕayna", "saʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسعين",
+      "tur": "verb",
+      "baslik": "يَسْعَيْنَ • (yasʕayna) (form I) /jas.ʕaj.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasʕayna", "saʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سعيتما",
+      "tur": "verb",
+      "baslik": "سَعَيْتُمَا • (saʕaytumā) (form I) /sa.ʕaj.tu.maː/\n# second-person dual past active of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["saʕaytumā", "saʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سعيا",
+      "tur": "verb",
+      "baslik": "سَعَيَا • (saʕayā) (form I) /sa.ʕa.jaː/\n# third-person masculine dual past active of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["saʕayā", "saʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "سعتا",
+      "tur": "verb",
+      "baslik": "سَعَتَا • (saʕatā) (form I) /sa.ʕa.taː/\n# third-person feminine dual past active of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["saʕatā", "saʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسعيان",
+      "tur": "verb",
+      "baslik": "يَسْعَيَانِ • (yasʕayāni) (form I) /jas.ʕa.jaː.ni/\n# third-person masculine dual non-past active indicative of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasʕayāni", "saʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسعيان",
+      "tur": "verb",
+      "baslik": "تَسْعَيَانِ • (tasʕayāni) (form I) /tas.ʕa.jaː.ni/\n# inflection of سَعَى (saʕā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasʕayāni", "saʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اسعيا",
+      "tur": "verb",
+      "baslik": "اِسْعَيَا • (isʕayā) (form I) /is.ʕa.jaː/\n# second-person dual imperative of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["isʕayā", "saʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسعيا",
+      "tur": "verb",
+      "baslik": "تَسْعَيَا • (tasʕayā) (form I) /tas.ʕa.jaː/\n# inflection of سَعَى (saʕā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tasʕayā", "saʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسعيا",
+      "tur": "verb",
+      "baslik": "يَسْعَيَا • (yasʕayā) (form I) /jas.ʕa.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of سَعَى (saʕā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yasʕayā", "saʕā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "سعى", "r7"]
+  ],
+  "mana": {
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
@@ -486,25 +351,8 @@
     "dayanak_tanim": "earnest and conscientious activity intended to do or accomplish something",
     "synset_sayisi": 2
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "السين والعين",
-    "mihveri": "تسيُّبُ جِرم الشيء المجتمع وذهابه شيئًا بعد شيء: كما يذوب الشمع عند الاستصباح به، وكمرور ساعات الليل واحدة بعد أخرى.",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (سع): الانحسار والذهاب من جِرم الشيء، وهذا المعنى يلزمه اتساع الحيز الذي يشغله الشيء نفسه. ويتمثل ذلك المعنى المشترك في تسعسع البدن هرمًا وتسعسع الفم بانحسار الشفة عن الأسنان - في (سعع)، وفي ذوبان الشمع - في (سعو)، والذهاب هنا وهناك - في (سعى)، وفي نفاذ المذي من مقره وذهاب الإبل في المرعى - في (سوع) وفي جريان الماء على وجه الأرض في (سيع)، وفي الاتساع وهو المعنى اللازم - في (وسع)، وفي جريان المخ في العظام واللبن في عرق الدرّة (ثم يحتبسان إلى أجل وتعبر الدال عن ذلك الاحتباس) - في (سعد)، وفي ذهاب اللحم والشحم من بدن (الأسعر) ومن المساعر، وانتشار لهب السعير - في (سعر).",
-    "tam_metin": "{يَوْمَ تَرَى الْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ يَسْعَى نُورُهُمْ بَيْنَ أَيْدِيهِمْ} [الحديد: 12].\n\"السَعْو - بالفتح: الشمع (في بعض اللغات) (الشمع - بالفتح والتحريك: هو مُوم العسل الذي يُستصبَح به) والسَعْوة - بالفتح: الشَمْعة. ويقال: مضى سِعْوٌ من الليل وسِعْوة - بالفتح والكسر فيهما - أي: قطعة \".\n° المعنى المحوري\nتسيُّبُ جِرم الشيء المجتمع وذهابه شيئًا بعد شيء: كما يذوب الشمع عند الاستصباح به، وكمرور ساعات الليل واحدة بعد أخرى.\n__________\n= الزوال كالشمع، و (سعى) عن زيادة الامتداد كالسعي: العدْو. وفي (سوع) يأتي الاشتمال في الأثناء، فيعبرّ التركيب عن تسيب مرورٍ في أثناء ضامة بلطف كالسوعاء: المَذْي وكالساعة زمن يمرّ. وفي (سيع) تعبر الياء عن الاتصال والامتداد، ويعبر التركيب عن مجرد امتداد الرقيق كالسيع: الماء الجاري على وجه الأرض. وفي (وسع) تسبق الواو بالتعبير عن الاشتمال، فيعبّر التركيب عن انبساط في حيز (الانحسارُ والزوالُ يُعْقِب فراغًا) بحيث يشتمل ويستوعب شيئًا، أي يتسع له، كما في السعة: نقيض الضيق. وفي (سعد) تعبر الدال عن ضغط ممتد ينشأ عنه احتباس، فيعبّر التركيب عن احتباس الرقيق الغض في أثناء شيء فيكون قوامَه كالساعد: مجرى المخ في العظام. وفي (سعر) تعبّر الراء عن الاسترسال؛ فيعبّر التركيب عن استرسال ذاك الملتحم الرقيق كسَعْر النار: تهييجها بالوقود الذي تأكله فيزداد انتشار لهبها.\n(2/1010)\nومن يائيِّهِ: \"السَعْى: عَدْو دون الشدّ (فيقطع مسافة ممتدة) {فَاسْعَوْا إِلَى ذِكْرِ اللَّهِ وَذَرُوا الْبَيْعَ} [الجمعة: 9] {فَأَلْقَاهَا فَإِذَا هِيَ حَيَّةٌ تَسْعَى} [طه: 20]. ومن هذا \": (السَعْي: الكسب (بالذهاب هنا وهنا) سَعَى لهم وعليهم: عَمِل لهم وكسَب (ثم استعمل في مجرد الكسب) \"وكل عمل من خير أو شر سَعْيٌ \" {فَلَمَّا بَلَغَ مَعَهُ السَّعْيَ} [الصافات: 102]، فُسِّرت بالاحتلام وبالعقل وبالكسب (والراجح أن المراد القدرة على العمل لكسب الرزق كما يعمل الناس) [وانظر: قر 15/ 99]. {وَأَنْ لَيْسَ لِلْإِنْسَانِ إِلَّا مَا سَعَى} [النجم: 39] أي عَمِل وحصّل {فَأُولَئِكَ كَانَ سَعْيُهُمْ مَشْكُورًا} [الإسراء: 19]، {إِنَّ سَعْيَكُمْ لَشَتَّى} [الليل: 4]، {يَوْمَ يَتَذَكَّرُ الْإِنْسَانُ مَا سَعَى} [النازعات: 35] كل هذا يفسَّر بالعمل الجادّ أخذًا من السَعْي: العدْو.\nومن السعي الذي هو العَدْو وقطعُ المسافة سمَّوا وُلَاةَ الصدقة وجامعيها سُعاة؛ لأنهم كانوا يذهبون إلى الأقاليم البعيدة لجمعها، ثم قالوا: \"كل من وَلِيَ أمر قوم فهو ساعٍ، وأكثر ما يقال في ولاة الصدقة \"اهـ. ومن هذا: \"ساعى اليهود والنصارى: رئيسهم \"وكانوا يسمون أصحاب الحمالات لحقن الدماء وإطفاء النائرة \"سُعاةً؛ لسعيهم هنا وهنا لجمع ما تكفّلوا به للمتقاتلين، ليتوقفوا، وتُحقن الدماء.\nوأُطْلِقت في العمل والجَهْد من أجل تحقيق شيء من هذا (العَدْو) كما يقال: مشى في أمر، أو من العمل ومحاولة (تحصيل) شيء {وَسَعَى فِي خَرَابِهَا} [البقرة: 114] , {وَالَّذِينَ سَعَوْا فِي آيَاتِنَا مُعَاجِزِينَ أُولَئِكَ أَصْحَابُ الْجَحِيمِ} [الحج: 51].\n(2/1011)\nأي في إبطال آياتنا مغالبين مشاقين [قر 12/ 78]. والذي في القرآن من التركيب معنيان: السعي العدْو أو السير الجادّ في [البقرة 260، طه 20، 69، القصص 20، يس 20، الحديد 12، الجمعة 9، التحريم 8، عبس 8] وما عدا ذلك فهو بمعنى الجهد والعمل الجادّ من أجل تحصيل شيء."
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["act.n.02"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 7,
       "merkez_kok": "حدق",
@@ -524,6 +372,11 @@
       "boy": 12
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["act.n.02"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

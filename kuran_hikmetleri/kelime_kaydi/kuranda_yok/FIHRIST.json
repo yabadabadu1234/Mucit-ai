@@ -1,11 +1,23 @@
 {
   "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
+    "kok_dosyasi": "kokler/<kök>.json: köke ait bütün malumat tek dosyada, her bilgi bir kez",
+    "alanlar": {
+      "tur": "isim veya fiil kökü; tur_guven ve tur_dayanak delili",
+      "baz_fiil": "köke tekabül eden on dört baz fiilden biri",
+      "fiil": "Türkçe fiil sapı",
+      "anlam": "kökün Türkçe manası",
+      "lugat": "eser adına göre madde listesi; kelime = maddenin bağlandığı Kur'ân kelimeleri",
+      "mekayis": "İbn Fâris",
+      "cebel": "Cebel",
+      "zemahseri": "hakîkat ve mecâz",
+      "ontoloji": "Arabic Ontology; _tr tercüme",
+      "vikisozluk": "Vikisözlük maddeleri; etimoloji = vikisozluk_etimolojiler dizinindeki sıra",
+      "kuran": "Kur'ân korpusu sayımları",
+      "kelimeler": "lemma, hal ve bâba göre gruplu Kur'ân kelimeleri; bicimler yüzey biçimleridir",
+      "mustak_kanit": "müştak tablosunda motorun (mesmu.mustak_tam) kendiliğinden ürettiğinden farklı satırlar: [grup, sıra, vezin, durum, arapça, latin, türkçe, güven, tanık]; tam tablo mesmu.mustak_tam(kök dosyası) ile üretilir",
+      "reddedilen": "motorun reddettiği [grup, vezin, sebep kodu]; kodlar red_sebepleri'nde"
+    },
+    "tr_durum": "yazılmadıysa: model-üretimi, doğrulanmadı"
   },
   "sayilar": {
     "kelime": 19017,
@@ -44425,5 +44437,35 @@
       "الهاء والنون": 39
     }
   },
-  "kelime_kok": {}
+  "kelime_kok": {},
+  "red_sebepleri": {
+    "r1": "YOK (kitap tablosunda işaretli, F 360; Wiktionary ek tablosunda IX için N/A; harf-i cerli mef‘ûl için tanık bulunamadı)",
+    "r2": "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)",
+    "r3": "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz",
+    "r4": "muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür",
+    "r5": "bu kök sınıfında bu kalıp yok",
+    "r6": "üç harfli değil",
+    "r7": "kök harfi elif veya elif-i maksûre"
+  },
+  "mana_yontemleri": {
+    "m1": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+    "m2": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)"
+  },
+  "sabitler": {
+    "baz_fiil_guven": "orta",
+    "baz_fiil_dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü",
+    "prototip_halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi",
+    "cebel_yok": "kökte cebel anahtarı yoksa: Cebel mu'cemlerinde kök yok",
+    "vikisozluk_bag": "yazılmadıysa: kökün kendi maddesi; kök dışı: asıl madde veya müştak"
+  },
+  "kaynaklar": {
+    "kuran_korpusu": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
+    "cebel": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+    "etymarab": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
+    "zemahseri": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "muhassas": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
+    "prototip": "prototip ve yayılım (radyal kategori usulü)",
+    "mana": "Arabic WordNet v2 → Princeton WordNet; AWN kaydı yoksa Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi)",
+    "ontoloji": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
+  }
 }

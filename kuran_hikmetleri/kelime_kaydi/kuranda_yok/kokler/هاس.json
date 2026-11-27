@@ -1,479 +1,343 @@
 {
   "kok": "هاس",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "هاس", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "هست",
-        "u": "هست",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "هست (form I)\n# هُسْتُ (hustu) /hus.tu/: first-person singular past active of هَاسَ (hāsa)\n# هُسْتَ (husta) /hus.ta/: second-person masculine singular past active of هَاسَ (hāsa)\n# هُسْتِ (husti) /hus.ti/: second-person feminine singular past active of هَاسَ (hāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hustu", "hāsa", "husta"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهوس",
-        "u": "تهوس",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تهوس (form I)\n# تَهُوسُ (tahūsu) /ta.huː.su/: inflection of هَاسَ (hāsa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَهُوسَ (tahūsa) /ta.huː.sa/: inflection of هَاسَ (hāsa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahūsu", "hāsa", "tahūsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "أهوس",
-        "u": "أهوس",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أهوس (form I)\n# أَهُوسُ (ʔahūsu) /ʔa.huː.su/: first-person singular non-past active indicative of هَاسَ (hāsa)\n# أَهُوسَ (ʔahūsa) /ʔa.huː.sa/: first-person singular non-past active subjunctive of هَاسَ (hāsa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔahūsu", "hāsa", "ʔahūsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "هستم",
-        "u": "هستم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هُسْتُمْ • (hustum) (form I) /hus.tum/\n# second-person masculine plural past active of هَاسَ (hāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hustum", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "هس",
-        "u": "هس",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "هُسْ • (hus) (form I) /hus/\n# second-person masculine singular imperative of هَاسَ (hāsa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hus", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "هستن",
-        "u": "هستن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هُسْتُنَّ • (hustunna) (form I) /hus.tun.na/\n# second-person feminine plural past active of هَاسَ (hāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hustunna", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهوسا",
-        "u": "تهوسا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَهُوسَا • (tahūsā) (form I) /ta.huː.saː/\n# inflection of هَاسَ (hāsa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahūsā", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهوسوا",
-        "u": "تهوسوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَهُوسُوا • (tahūsū) (form I) /ta.huː.suː/\n# second-person masculine plural non-past active subjunctive/jussive of هَاسَ (hāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahūsū", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهوسي",
-        "u": "تهوسي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَهُوسِي • (tahūsī) (form I) /ta.huː.siː/\n# second-person feminine singular non-past active subjunctive/jussive of هَاسَ (hāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahūsī", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "هستما",
-        "u": "هستما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هُسْتُمَا • (hustumā) (form I) /hus.tu.maː/\n# second-person dual past active of هَاسَ (hāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hustumā", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "هاست",
-        "u": "هاست",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَاسَتْ • (hāsat) (form I) /haː.sat/\n# third-person feminine singular past active of هَاسَ (hāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hāsat", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "هاسا",
-        "u": "هاسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَاسَا • (hāsā) (form I) /haː.saː/\n# third-person masculine dual past active of هَاسَ (hāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hāsā", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "هاستا",
-        "u": "هاستا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَاسَتَا • (hāsatā) (form I) /haː.sa.taː/\n# third-person feminine dual past active of هَاسَ (hāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hāsatā", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "هاسوا",
-        "u": "هاسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَاسُوا • (hāsū) (form I) /haː.suː/\n# third-person masculine plural past active of هَاسَ (hāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hāsū", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "هسنا",
-        "u": "هسنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هُسْنَا • (husnā) (form I) /hus.naː/\n# first-person plural past active of هَاسَ (hāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["husnā", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "هسن",
-        "u": "هسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هُسْنَ • (husna) (form I) /hus.na/\n# inflection of هَاسَ (hāsa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["husna", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهوسين",
-        "u": "تهوسين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهُوسِينَ • (tahūsīna) (form I) /ta.huː.siː.na/\n# second-person feminine singular non-past active indicative of هَاسَ (hāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahūsīna", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "يهوسان",
-        "u": "يهوسان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَهُوسَانِ • (yahūsāni) (form I) /ja.huː.saː.ni/\n# third-person masculine dual non-past active indicative of هَاسَ (hāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahūsāni", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "يهوس",
-        "u": "يهوس",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يهوس (form I)\n# يَهُوسُ (yahūsu) /ja.huː.su/: third-person masculine singular non-past active indicative of هَاسَ (hāsa)\n# يَهُوسَ (yahūsa) /ja.huː.sa/: third-person masculine singular non-past active subjunctive of هَاسَ (hāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahūsu", "hāsa", "yahūsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهوسان",
-        "u": "تهوسان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهُوسَانِ • (tahūsāni) (form I) /ta.huː.saː.ni/\n# inflection of هَاسَ (hāsa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahūsāni", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "نهوس",
-        "u": "نهوس",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نهوس (form I)\n# نَهُوسُ (nahūsu) /na.huː.su/: first-person plural non-past active indicative of هَاسَ (hāsa)\n# نَهُوسَ (nahūsa) /na.huː.sa/: first-person plural non-past active subjunctive of هَاسَ (hāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nahūsu", "hāsa", "nahūsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "يهوسون",
-        "u": "يهوسون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَهُوسُونَ • (yahūsūna) (form I) /ja.huː.suː.na/\n# third-person masculine plural non-past active indicative of هَاسَ (hāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahūsūna", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهسن",
-        "u": "تهسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهُسْنَ • (tahusna) (form I) /ta.hus.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of هَاسَ (hāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahusna", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهوسون",
-        "u": "تهوسون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهُوسُونَ • (tahūsūna) (form I) /ta.huː.suː.na/\n# second-person masculine plural non-past active indicative of هَاسَ (hāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahūsūna", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "يهسن",
-        "u": "يهسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَهُسْنَ • (yahusna) (form I) /ja.hus.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of هَاسَ (hāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahusna", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "يهوسوا",
-        "u": "يهوسوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَهُوسُوا • (yahūsū) (form I) /ja.huː.suː/\n# third-person masculine plural non-past active subjunctive/jussive of هَاسَ (hāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahūsū", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "أهس",
-        "u": "أهس",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أَهُسْ • (ʔahus) (form I) /ʔa.hus/\n# first-person singular non-past active jussive of هَاسَ (hāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔahus", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "تهس",
-        "u": "تهس",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهُسْ • (tahus) (form I) /ta.hus/\n# inflection of هَاسَ (hāsa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahus", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "يهوسا",
-        "u": "يهوسا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَهُوسَا • (yahūsā) (form I) /ja.huː.saː/\n# third-person masculine dual non-past active subjunctive/jussive of هَاسَ (hāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahūsā", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "يهس",
-        "u": "يهس",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَهُسْ • (yahus) (form I) /ja.hus/\n# third-person masculine singular non-past active jussive of هَاسَ (hāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahus", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "نهس",
-        "u": "نهس",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نَهُسْ • (nahus) (form I) /na.hus/\n# first-person plural non-past active jussive of هَاسَ (hāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nahus", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "هوسي",
-        "u": "هوسي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "هُوسِي • (hūsī) (form I) /huː.siː/\n# second-person feminine singular imperative of هَاسَ (hāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hūsī", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "هوسا",
-        "u": "هوسا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "هُوسَا • (hūsā) (form I) /huː.saː/\n# second-person dual imperative of هَاسَ (hāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hūsā", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      },
-      {
-        "w": "هوسوا",
-        "u": "هوسوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "هُوسُوا • (hūsū) (form I) /huː.suː/\n# second-person masculine plural imperative of هَاسَ (hāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hūsū", "hāsa"],
-        "k": "هاس",
-        "yol": "kök"
-      }
-    ],
-    "tercume": {}
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "هس",
+  "ses": {
     "harf": "ه",
+    "fasil": "هس",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "هست",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "هست (form I)\n# هُسْتُ (hustu) /hus.tu/: first-person singular past active of هَاسَ (hāsa)\n# هُسْتَ (husta) /hus.ta/: second-person masculine singular past active of هَاسَ (hāsa)\n# هُسْتِ (husti) /hus.ti/: second-person feminine singular past active of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hustu", "hāsa", "husta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهوس",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تهوس (form I)\n# تَهُوسُ (tahūsu) /ta.huː.su/: inflection of هَاسَ (hāsa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَهُوسَ (tahūsa) /ta.huː.sa/: inflection of هَاسَ (hāsa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahūsu", "hāsa", "tahūsa"]
+    },
+    {
+      "madde": "أهوس",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أهوس (form I)\n# أَهُوسُ (ʔahūsu) /ʔa.huː.su/: first-person singular non-past active indicative of هَاسَ (hāsa)\n# أَهُوسَ (ʔahūsa) /ʔa.huː.sa/: first-person singular non-past active subjunctive of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔahūsu", "hāsa", "ʔahūsa"]
+    },
+    {
+      "madde": "هستم",
+      "tur": "verb",
+      "baslik": "هُسْتُمْ • (hustum) (form I) /hus.tum/\n# second-person masculine plural past active of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hustum", "hāsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هس",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "هُسْ • (hus) (form I) /hus/\n# second-person masculine singular imperative of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hus", "hāsa"]
+    },
+    {
+      "madde": "هستن",
+      "tur": "verb",
+      "baslik": "هُسْتُنَّ • (hustunna) (form I) /hus.tun.na/\n# second-person feminine plural past active of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hustunna", "hāsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهوسا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَهُوسَا • (tahūsā) (form I) /ta.huː.saː/\n# inflection of هَاسَ (hāsa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahūsā", "hāsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهوسوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَهُوسُوا • (tahūsū) (form I) /ta.huː.suː/\n# second-person masculine plural non-past active subjunctive/jussive of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahūsū", "hāsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهوسي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَهُوسِي • (tahūsī) (form I) /ta.huː.siː/\n# second-person feminine singular non-past active subjunctive/jussive of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahūsī", "hāsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هستما",
+      "tur": "verb",
+      "baslik": "هُسْتُمَا • (hustumā) (form I) /hus.tu.maː/\n# second-person dual past active of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hustumā", "hāsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هاست",
+      "tur": "verb",
+      "baslik": "هَاسَتْ • (hāsat) (form I) /haː.sat/\n# third-person feminine singular past active of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hāsat", "hāsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هاسا",
+      "tur": "verb",
+      "baslik": "هَاسَا • (hāsā) (form I) /haː.saː/\n# third-person masculine dual past active of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hāsā", "hāsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هاستا",
+      "tur": "verb",
+      "baslik": "هَاسَتَا • (hāsatā) (form I) /haː.sa.taː/\n# third-person feminine dual past active of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hāsatā", "hāsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هاسوا",
+      "tur": "verb",
+      "baslik": "هَاسُوا • (hāsū) (form I) /haː.suː/\n# third-person masculine plural past active of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hāsū", "hāsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هسنا",
+      "tur": "verb",
+      "baslik": "هُسْنَا • (husnā) (form I) /hus.naː/\n# first-person plural past active of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["husnā", "hāsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هسن",
+      "tur": "verb",
+      "baslik": "هُسْنَ • (husna) (form I) /hus.na/\n# inflection of هَاسَ (hāsa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["husna", "hāsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهوسين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهُوسِينَ • (tahūsīna) (form I) /ta.huː.siː.na/\n# second-person feminine singular non-past active indicative of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahūsīna", "hāsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهوسان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَهُوسَانِ • (yahūsāni) (form I) /ja.huː.saː.ni/\n# third-person masculine dual non-past active indicative of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahūsāni", "hāsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهوس",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يهوس (form I)\n# يَهُوسُ (yahūsu) /ja.huː.su/: third-person masculine singular non-past active indicative of هَاسَ (hāsa)\n# يَهُوسَ (yahūsa) /ja.huː.sa/: third-person masculine singular non-past active subjunctive of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahūsu", "hāsa", "yahūsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهوسان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهُوسَانِ • (tahūsāni) (form I) /ta.huː.saː.ni/\n# inflection of هَاسَ (hāsa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahūsāni", "hāsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نهوس",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نهوس (form I)\n# نَهُوسُ (nahūsu) /na.huː.su/: first-person plural non-past active indicative of هَاسَ (hāsa)\n# نَهُوسَ (nahūsa) /na.huː.sa/: first-person plural non-past active subjunctive of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nahūsu", "hāsa", "nahūsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهوسون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَهُوسُونَ • (yahūsūna) (form I) /ja.huː.suː.na/\n# third-person masculine plural non-past active indicative of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahūsūna", "hāsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهسن",
+      "tur": "verb",
+      "baslik": "تَهُسْنَ • (tahusna) (form I) /ta.hus.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahusna", "hāsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهوسون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهُوسُونَ • (tahūsūna) (form I) /ta.huː.suː.na/\n# second-person masculine plural non-past active indicative of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahūsūna", "hāsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهسن",
+      "tur": "verb",
+      "baslik": "يَهُسْنَ • (yahusna) (form I) /ja.hus.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahusna", "hāsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهوسوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَهُوسُوا • (yahūsū) (form I) /ja.huː.suː/\n# third-person masculine plural non-past active subjunctive/jussive of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahūsū", "hāsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أهس",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أَهُسْ • (ʔahus) (form I) /ʔa.hus/\n# first-person singular non-past active jussive of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔahus", "hāsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهس",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهُسْ • (tahus) (form I) /ta.hus/\n# inflection of هَاسَ (hāsa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahus", "hāsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهوسا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَهُوسَا • (yahūsā) (form I) /ja.huː.saː/\n# third-person masculine dual non-past active subjunctive/jussive of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahūsā", "hāsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهس",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَهُسْ • (yahus) (form I) /ja.hus/\n# third-person masculine singular non-past active jussive of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahus", "hāsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نهس",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نَهُسْ • (nahus) (form I) /na.hus/\n# first-person plural non-past active jussive of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nahus", "hāsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هوسي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "هُوسِي • (hūsī) (form I) /huː.siː/\n# second-person feminine singular imperative of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hūsī", "hāsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هوسا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "هُوسَا • (hūsā) (form I) /huː.saː/\n# second-person dual imperative of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hūsā", "hāsa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هوسوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "هُوسُوا • (hūsū) (form I) /huː.suː/\n# second-person masculine plural imperative of هَاسَ (hāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hūsū", "hāsa"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "هاس", "r7"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

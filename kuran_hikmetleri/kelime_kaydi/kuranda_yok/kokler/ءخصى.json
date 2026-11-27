@@ -1,454 +1,359 @@
 {
   "kok": "ءخصى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءخصى", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يخصي",
-        "u": "يخصي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يخصي (form IV)\n# يُخْصِي (yuḵṣī) /jux.sˤiː/: third-person masculine singular non-past active indicative of أَخْصَى (ʔaḵṣā)\n# يُخْصِيَ (yuḵṣiya) /jux.sˤi.ja/: third-person masculine singular non-past active subjunctive of أَخْصَى (ʔaḵṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḵṣī", "ʔaḵṣā", "yuḵṣiya"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "يخصى",
-        "u": "يخصى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُخْصَى • (yuḵṣā) (form IV) /jux.sˤaː/\n# third-person masculine singular non-past passive indicative/subjunctive of أَخْصَى (ʔaḵṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḵṣā", "ʔaḵṣā"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "أخص",
-        "u": "أخص",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أخص (form IV)\n# أُخْصِ (ʔuḵṣi) /ʔux.sˤi/: first-person singular non-past active jussive of أَخْصَى (ʔaḵṣā)\n# أُخْصَ (ʔuḵṣa) /ʔux.sˤa/: first-person singular non-past passive jussive of أَخْصَى (ʔaḵṣā)\n# أَخْصِ (ʔaḵṣi) /ʔax.sˤi/: second-person masculine singular imperative of أَخْصَى (ʔaḵṣā)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuḵṣi", "ʔaḵṣā", "ʔuḵṣa"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "يخص",
-        "u": "يخص",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يخص (form IV)\n# يُخْصِ (yuḵṣi) /jux.sˤi/: third-person masculine singular non-past active jussive of أَخْصَى (ʔaḵṣā)\n# يُخْصَ (yuḵṣa) /jux.sˤa/: third-person masculine singular non-past passive jussive of أَخْصَى (ʔaḵṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḵṣi", "ʔaḵṣā", "yuḵṣa"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "تخصي",
-        "u": "تخصي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تخصي (form IV)\n# تُخْصِي (tuḵṣī) /tux.sˤiː/: inflection of أَخْصَى (ʔaḵṣā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُخْصِيَ (tuḵṣiya) /tux.sˤi.ja/: inflection of أَخْصَى (ʔaḵṣā):\n## second-person masculine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵṣī", "ʔaḵṣā", "tuḵṣiya"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "تخص",
-        "u": "تخص",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تخص (form IV)\n# تُخْصِ (tuḵṣi) /tux.sˤi/: inflection of أَخْصَى (ʔaḵṣā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُخْصَ (tuḵṣa) /tux.sˤa/: inflection of أَخْصَى (ʔaḵṣā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵṣi", "ʔaḵṣā", "tuḵṣa"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "تخصى",
-        "u": "تخصى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُخْصَى • (tuḵṣā) (form IV) /tux.sˤaː/\n# inflection of أَخْصَى (ʔaḵṣā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵṣā", "ʔaḵṣā"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "تخصين",
-        "u": "تخصين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تخصين (form IV)\n# تُخْصِينَ (tuḵṣīna) /tux.sˤiː.na/: inflection of أَخْصَى (ʔaḵṣā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُخْصَيْنَ (tuḵṣayna) /tux.sˤaj.na/: inflection of أَخْصَى (ʔaḵṣā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-p",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵṣīna", "ʔaḵṣā", "tuḵṣayna"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "أخصي",
-        "u": "أخصي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أخصي (form IV)\n# أُخْصِيَ (ʔuḵṣiya) /ʔux.sˤi.ja/: inflection of أَخْصَى (ʔaḵṣā):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُخْصِي (ʔuḵṣī) /ʔux.sˤiː/: first-person singular non-past active indicative of أَخْصَى (ʔaḵṣā)\n# أَخْصِي (ʔaḵṣī) /ʔax.sˤiː/: second-person feminine singular imperative of أَخْصَى (ʔaḵṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuḵṣiya", "ʔaḵṣā", "ʔuḵṣī"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "نخصي",
-        "u": "نخصي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نخصي (form IV)\n# نُخْصِي (nuḵṣī) /nux.sˤiː/: first-person plural non-past active indicative of أَخْصَى (ʔaḵṣā)\n# نُخْصِيَ (nuḵṣiya) /nux.sˤi.ja/: first-person plural non-past active subjunctive of أَخْصَى (ʔaḵṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuḵṣī", "ʔaḵṣā", "nuḵṣiya"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "نخص",
-        "u": "نخص",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نخص (form IV)\n# نُخْصِ (nuḵṣi) /nux.sˤi/: first-person plural non-past active jussive of أَخْصَى (ʔaḵṣā)\n# نُخْصَ (nuḵṣa) /nux.sˤa/: first-person plural non-past passive jussive of أَخْصَى (ʔaḵṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuḵṣi", "ʔaḵṣā", "nuḵṣa"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "نخصى",
-        "u": "نخصى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نُخْصَى • (nuḵṣā) (form IV) /nux.sˤaː/\n# first-person plural non-past passive indicative/subjunctive of أَخْصَى (ʔaḵṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuḵṣā", "ʔaḵṣā"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "تخصون",
-        "u": "تخصون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تخصون (form IV)\n# تُخْصُونَ (tuḵṣūna) /tux.sˤuː.na/: second-person masculine plural non-past active indicative of أَخْصَى (ʔaḵṣā)\n# تُخْصَوْنَ (tuḵṣawna) /tux.sˤaw.na/: second-person masculine plural non-past passive indicative of أَخْصَى (ʔaḵṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵṣūna", "ʔaḵṣā", "tuḵṣawna"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "تخصوا",
-        "u": "تخصوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تخصوا (form IV)\n# تُخْصُوا (tuḵṣū) /tux.sˤuː/: second-person masculine plural non-past active subjunctive/jussive of أَخْصَى (ʔaḵṣā)\n# تُخْصَوْا (tuḵṣaw) /tux.sˤaw/: second-person masculine plural non-past passive subjunctive/jussive of أَخْصَى (ʔaḵṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵṣū", "ʔaḵṣā", "tuḵṣaw"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "يخصون",
-        "u": "يخصون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يخصون (form IV)\n# يُخْصُونَ (yuḵṣūna) /jux.sˤuː.na/: third-person masculine plural non-past active indicative of أَخْصَى (ʔaḵṣā)\n# يُخْصَوْنَ (yuḵṣawna) /jux.sˤaw.na/: third-person masculine plural non-past passive indicative of أَخْصَى (ʔaḵṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḵṣūna", "ʔaḵṣā", "yuḵṣawna"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "يخصوا",
-        "u": "يخصوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يخصوا (form IV)\n# يُخْصُوا (yuḵṣū) /jux.sˤuː/: third-person masculine plural non-past active subjunctive/jussive of أَخْصَى (ʔaḵṣā)\n# يُخْصَوْا (yuḵṣaw) /jux.sˤaw/: third-person masculine plural non-past passive subjunctive/jussive of أَخْصَى (ʔaḵṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḵṣū", "ʔaḵṣā", "yuḵṣaw"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "يخصين",
-        "u": "يخصين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يخصين (form IV)\n# يُخْصِينَ (yuḵṣīna) /jux.sˤiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَخْصَى (ʔaḵṣā)\n# يُخْصَيْنَ (yuḵṣayna) /jux.sˤaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَخْصَى (ʔaḵṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḵṣīna", "ʔaḵṣā", "yuḵṣayna"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "أخصت",
-        "u": "أخصت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَخْصَتْ • (ʔaḵṣat) (form IV) /ʔax.sˤat/\n# third-person feminine singular past active of أَخْصَى (ʔaḵṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵṣat", "ʔaḵṣā"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "أخصيت",
-        "u": "أخصيت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أخصيت (form IV)\n# أَخْصَيْتُ (ʔaḵṣaytu) /ʔax.sˤaj.tu/: first-person singular past active of أَخْصَى (ʔaḵṣā)\n# أَخْصَيْتَ (ʔaḵṣayta) /ʔax.sˤaj.ta/: second-person masculine singular past active of أَخْصَى (ʔaḵṣā)\n# أَخْصَيْتِ (ʔaḵṣayti) /ʔax.sˤaj.ti/: second-person feminine singular past active of أَخْصَى (ʔaḵṣā)\n# أُخْصِيتُ (ʔuḵṣītu) /ʔux.sˤiː.tu/: first-person singular past passive of أَخْصَى (ʔaḵ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵṣaytu", "ʔaḵṣā", "ʔaḵṣayta"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "أخصيتما",
-        "u": "أخصيتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أخصيتما (form IV)\n# أَخْصَيْتُمَا (ʔaḵṣaytumā) /ʔax.sˤaj.tu.maː/: second-person dual past active of أَخْصَى (ʔaḵṣā)\n# أُخْصِيتُمَا (ʔuḵṣītumā) /ʔux.sˤiː.tu.maː/: second-person dual past passive of أَخْصَى (ʔaḵṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵṣaytumā", "ʔaḵṣā", "ʔuḵṣītumā"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "أخصتا",
-        "u": "أخصتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَخْصَتَا • (ʔaḵṣatā) (form IV) /ʔax.sˤa.taː/\n# third-person feminine dual past active of أَخْصَى (ʔaḵṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵṣatā", "ʔaḵṣā"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "أخصيا",
-        "u": "أخصيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أخصيا (form IV)\n# أَخْصَيَا (ʔaḵṣayā) /ʔax.sˤa.jaː/: third-person masculine dual past active of أَخْصَى (ʔaḵṣā)\n# أُخْصِيَا (ʔuḵṣiyā) /ʔux.sˤi.jaː/: third-person masculine dual past passive of أَخْصَى (ʔaḵṣā)\n# أَخْصِيَا (ʔaḵṣiyā) /ʔax.sˤi.jaː/: second-person dual imperative of أَخْصَى (ʔaḵṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵṣayā", "ʔaḵṣā", "ʔuḵṣiyā"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "أخصينا",
-        "u": "أخصينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أخصينا (form IV)\n# أَخْصَيْنَا (ʔaḵṣaynā) /ʔax.sˤaj.naː/: first-person plural past active of أَخْصَى (ʔaḵṣā)\n# أُخْصِينَا (ʔuḵṣīnā) /ʔux.sˤiː.naː/: first-person plural past passive of أَخْصَى (ʔaḵṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵṣaynā", "ʔaḵṣā", "ʔuḵṣīnā"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "أخصيتم",
-        "u": "أخصيتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أخصيتم (form IV)\n# أَخْصَيْتُمْ (ʔaḵṣaytum) /ʔax.sˤaj.tum/: second-person masculine plural past active of أَخْصَى (ʔaḵṣā)\n# أُخْصِيتُمْ (ʔuḵṣītum) /ʔux.sˤiː.tum/: second-person masculine plural past passive of أَخْصَى (ʔaḵṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵṣaytum", "ʔaḵṣā", "ʔuḵṣītum"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "أخصيتن",
-        "u": "أخصيتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أخصيتن (form IV)\n# أَخْصَيْتُنَّ (ʔaḵṣaytunna) /ʔax.sˤaj.tun.na/: second-person feminine plural past active of أَخْصَى (ʔaḵṣā)\n# أُخْصِيتُنَّ (ʔuḵṣītunna) /ʔux.sˤiː.tun.na/: second-person feminine plural past passive of أَخْصَى (ʔaḵṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵṣaytunna", "ʔaḵṣā", "ʔuḵṣītunna"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "أخصيتا",
-        "u": "أخصيتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُخْصِيَتَا • (ʔuḵṣiyatā) (form IV) /ʔux.sˤi.ja.taː/\n# third-person feminine dual past passive of أَخْصَى (ʔaḵṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuḵṣiyatā", "ʔaḵṣā"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "أخصوا",
-        "u": "أخصوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أخصوا (form IV)\n# أَخْصَوْا (ʔaḵṣaw) /ʔax.sˤaw/: third-person masculine plural past active of أَخْصَى (ʔaḵṣā)\n# أُخْصُوا (ʔuḵṣū) /ʔux.sˤuː/: third-person masculine plural past passive of أَخْصَى (ʔaḵṣā)\n# أَخْصُوا (ʔaḵṣū) /ʔax.sˤuː/: second-person masculine plural imperative of أَخْصَى (ʔaḵṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵṣaw", "ʔaḵṣā", "ʔuḵṣū"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "أخصين",
-        "u": "أخصين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أخصين (form IV)\n# أَخْصَيْنَ (ʔaḵṣayna) /ʔax.sˤaj.na/: third-person feminine plural past active of أَخْصَى (ʔaḵṣā)\n# أُخْصِينَ (ʔuḵṣīna) /ʔux.sˤiː.na/: third-person feminine plural past passive of أَخْصَى (ʔaḵṣā)\n# أَخْصِينَ (ʔaḵṣīna) /ʔax.sˤiː.na/: second-person feminine plural imperative of أَخْصَى (ʔaḵṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḵṣayna", "ʔaḵṣā", "ʔuḵṣīna"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "تخصيان",
-        "u": "تخصيان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تخصيان (form IV)\n# تُخْصِيَانِ (tuḵṣiyāni) /tux.sˤi.jaː.ni/: inflection of أَخْصَى (ʔaḵṣā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُخْصَيَانِ (tuḵṣayāni) /tux.sˤa.jaː.ni/: inflection of أَخْصَى (ʔaḵṣā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵṣiyāni", "ʔaḵṣā", "tuḵṣayāni"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "يخصيا",
-        "u": "يخصيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يخصيا (form IV)\n# يُخْصِيَا (yuḵṣiyā) /jux.sˤi.jaː/: third-person masculine dual non-past active subjunctive/jussive of أَخْصَى (ʔaḵṣā)\n# يُخْصَيَا (yuḵṣayā) /jux.sˤa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of أَخْصَى (ʔaḵṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḵṣiyā", "ʔaḵṣā", "yuḵṣayā"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "يخصيان",
-        "u": "يخصيان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يخصيان (form IV)\n# يُخْصِيَانِ (yuḵṣiyāni) /jux.sˤi.jaː.ni/: third-person masculine dual non-past active indicative of أَخْصَى (ʔaḵṣā)\n# يُخْصَيَانِ (yuḵṣayāni) /jux.sˤa.jaː.ni/: third-person masculine dual non-past passive indicative of أَخْصَى (ʔaḵṣā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḵṣiyāni", "ʔaḵṣā", "yuḵṣayāni"],
-        "k": "أخصى",
-        "yol": "kök"
-      },
-      {
-        "w": "تخصيا",
-        "u": "تخصيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تخصيا (form IV)\n# تُخْصِيَا (tuḵṣiyā) /tux.sˤi.jaː/: inflection of أَخْصَى (ʔaḵṣā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُخْصَيَا (tuḵṣayā) /tux.sˤa.jaː/: inflection of أَخْصَى (ʔaḵṣā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussiv",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḵṣiyā", "ʔaḵṣā", "tuḵṣayā"],
-        "k": "أخصى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "خص",
+  "ses": {
     "harf": "ء",
+    "fasil": "خص",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يخصي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يخصي (form IV)\n# يُخْصِي (yuḵṣī) /jux.sˤiː/: third-person masculine singular non-past active indicative of أَخْصَى (ʔaḵṣā)\n# يُخْصِيَ (yuḵṣiya) /jux.sˤi.ja/: third-person masculine singular non-past active subjunctive of أَخْصَى (ʔaḵṣā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḵṣī", "ʔaḵṣā", "yuḵṣiya"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يخصى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُخْصَى • (yuḵṣā) (form IV) /jux.sˤaː/\n# third-person masculine singular non-past passive indicative/subjunctive of أَخْصَى (ʔaḵṣā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḵṣā", "ʔaḵṣā"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخص",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أخص (form IV)\n# أُخْصِ (ʔuḵṣi) /ʔux.sˤi/: first-person singular non-past active jussive of أَخْصَى (ʔaḵṣā)\n# أُخْصَ (ʔuḵṣa) /ʔux.sˤa/: first-person singular non-past passive jussive of أَخْصَى (ʔaḵṣā)\n# أَخْصِ (ʔaḵṣi) /ʔax.sˤi/: second-person masculine singular imperative of أَخْصَى (ʔaḵṣā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuḵṣi", "ʔaḵṣā", "ʔuḵṣa"],
+      "kok_yazilis": "أخصى"
+    },
+    {
+      "madde": "يخص",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يخص (form IV)\n# يُخْصِ (yuḵṣi) /jux.sˤi/: third-person masculine singular non-past active jussive of أَخْصَى (ʔaḵṣā)\n# يُخْصَ (yuḵṣa) /jux.sˤa/: third-person masculine singular non-past passive jussive of أَخْصَى (ʔaḵṣā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḵṣi", "ʔaḵṣā", "yuḵṣa"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخصي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تخصي (form IV)\n# تُخْصِي (tuḵṣī) /tux.sˤiː/: inflection of أَخْصَى (ʔaḵṣā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُخْصِيَ (tuḵṣiya) /tux.sˤi.ja/: inflection of أَخْصَى (ʔaḵṣā):\n## second-person masculine singular non-past active subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵṣī", "ʔaḵṣā", "tuḵṣiya"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخص",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تخص (form IV)\n# تُخْصِ (tuḵṣi) /tux.sˤi/: inflection of أَخْصَى (ʔaḵṣā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُخْصَ (tuḵṣa) /tux.sˤa/: inflection of أَخْصَى (ʔaḵṣā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵṣi", "ʔaḵṣā", "tuḵṣa"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخصى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُخْصَى • (tuḵṣā) (form IV) /tux.sˤaː/\n# inflection of أَخْصَى (ʔaḵṣā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵṣā", "ʔaḵṣā"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخصين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تخصين (form IV)\n# تُخْصِينَ (tuḵṣīna) /tux.sˤiː.na/: inflection of أَخْصَى (ʔaḵṣā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُخْصَيْنَ (tuḵṣayna) /tux.sˤaj.na/: inflection of أَخْصَى (ʔaḵṣā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-p",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵṣīna", "ʔaḵṣā", "tuḵṣayna"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخصي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أخصي (form IV)\n# أُخْصِيَ (ʔuḵṣiya) /ʔux.sˤi.ja/: inflection of أَخْصَى (ʔaḵṣā):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُخْصِي (ʔuḵṣī) /ʔux.sˤiː/: first-person singular non-past active indicative of أَخْصَى (ʔaḵṣā)\n# أَخْصِي (ʔaḵṣī) /ʔax.sˤiː/: second-person feminine singular imperative of أَخْصَى (ʔaḵṣā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuḵṣiya", "ʔaḵṣā", "ʔuḵṣī"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نخصي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نخصي (form IV)\n# نُخْصِي (nuḵṣī) /nux.sˤiː/: first-person plural non-past active indicative of أَخْصَى (ʔaḵṣā)\n# نُخْصِيَ (nuḵṣiya) /nux.sˤi.ja/: first-person plural non-past active subjunctive of أَخْصَى (ʔaḵṣā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuḵṣī", "ʔaḵṣā", "nuḵṣiya"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نخص",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نخص (form IV)\n# نُخْصِ (nuḵṣi) /nux.sˤi/: first-person plural non-past active jussive of أَخْصَى (ʔaḵṣā)\n# نُخْصَ (nuḵṣa) /nux.sˤa/: first-person plural non-past passive jussive of أَخْصَى (ʔaḵṣā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuḵṣi", "ʔaḵṣā", "nuḵṣa"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نخصى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نُخْصَى • (nuḵṣā) (form IV) /nux.sˤaː/\n# first-person plural non-past passive indicative/subjunctive of أَخْصَى (ʔaḵṣā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuḵṣā", "ʔaḵṣā"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخصون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تخصون (form IV)\n# تُخْصُونَ (tuḵṣūna) /tux.sˤuː.na/: second-person masculine plural non-past active indicative of أَخْصَى (ʔaḵṣā)\n# تُخْصَوْنَ (tuḵṣawna) /tux.sˤaw.na/: second-person masculine plural non-past passive indicative of أَخْصَى (ʔaḵṣā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵṣūna", "ʔaḵṣā", "tuḵṣawna"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخصوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تخصوا (form IV)\n# تُخْصُوا (tuḵṣū) /tux.sˤuː/: second-person masculine plural non-past active subjunctive/jussive of أَخْصَى (ʔaḵṣā)\n# تُخْصَوْا (tuḵṣaw) /tux.sˤaw/: second-person masculine plural non-past passive subjunctive/jussive of أَخْصَى (ʔaḵṣā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵṣū", "ʔaḵṣā", "tuḵṣaw"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يخصون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يخصون (form IV)\n# يُخْصُونَ (yuḵṣūna) /jux.sˤuː.na/: third-person masculine plural non-past active indicative of أَخْصَى (ʔaḵṣā)\n# يُخْصَوْنَ (yuḵṣawna) /jux.sˤaw.na/: third-person masculine plural non-past passive indicative of أَخْصَى (ʔaḵṣā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḵṣūna", "ʔaḵṣā", "yuḵṣawna"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يخصوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يخصوا (form IV)\n# يُخْصُوا (yuḵṣū) /jux.sˤuː/: third-person masculine plural non-past active subjunctive/jussive of أَخْصَى (ʔaḵṣā)\n# يُخْصَوْا (yuḵṣaw) /jux.sˤaw/: third-person masculine plural non-past passive subjunctive/jussive of أَخْصَى (ʔaḵṣā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḵṣū", "ʔaḵṣā", "yuḵṣaw"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يخصين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يخصين (form IV)\n# يُخْصِينَ (yuḵṣīna) /jux.sˤiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَخْصَى (ʔaḵṣā)\n# يُخْصَيْنَ (yuḵṣayna) /jux.sˤaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَخْصَى (ʔaḵṣā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḵṣīna", "ʔaḵṣā", "yuḵṣayna"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخصت",
+      "tur": "verb",
+      "baslik": "أَخْصَتْ • (ʔaḵṣat) (form IV) /ʔax.sˤat/\n# third-person feminine singular past active of أَخْصَى (ʔaḵṣā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵṣat", "ʔaḵṣā"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخصيت",
+      "tur": "verb",
+      "baslik": "أخصيت (form IV)\n# أَخْصَيْتُ (ʔaḵṣaytu) /ʔax.sˤaj.tu/: first-person singular past active of أَخْصَى (ʔaḵṣā)\n# أَخْصَيْتَ (ʔaḵṣayta) /ʔax.sˤaj.ta/: second-person masculine singular past active of أَخْصَى (ʔaḵṣā)\n# أَخْصَيْتِ (ʔaḵṣayti) /ʔax.sˤaj.ti/: second-person feminine singular past active of أَخْصَى (ʔaḵṣā)\n# أُخْصِيتُ (ʔuḵṣītu) /ʔux.sˤiː.tu/: first-person singular past passive of أَخْصَى (ʔaḵ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵṣaytu", "ʔaḵṣā", "ʔaḵṣayta"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخصيتما",
+      "tur": "verb",
+      "baslik": "أخصيتما (form IV)\n# أَخْصَيْتُمَا (ʔaḵṣaytumā) /ʔax.sˤaj.tu.maː/: second-person dual past active of أَخْصَى (ʔaḵṣā)\n# أُخْصِيتُمَا (ʔuḵṣītumā) /ʔux.sˤiː.tu.maː/: second-person dual past passive of أَخْصَى (ʔaḵṣā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵṣaytumā", "ʔaḵṣā", "ʔuḵṣītumā"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخصتا",
+      "tur": "verb",
+      "baslik": "أَخْصَتَا • (ʔaḵṣatā) (form IV) /ʔax.sˤa.taː/\n# third-person feminine dual past active of أَخْصَى (ʔaḵṣā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵṣatā", "ʔaḵṣā"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخصيا",
+      "tur": "verb",
+      "baslik": "أخصيا (form IV)\n# أَخْصَيَا (ʔaḵṣayā) /ʔax.sˤa.jaː/: third-person masculine dual past active of أَخْصَى (ʔaḵṣā)\n# أُخْصِيَا (ʔuḵṣiyā) /ʔux.sˤi.jaː/: third-person masculine dual past passive of أَخْصَى (ʔaḵṣā)\n# أَخْصِيَا (ʔaḵṣiyā) /ʔax.sˤi.jaː/: second-person dual imperative of أَخْصَى (ʔaḵṣā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵṣayā", "ʔaḵṣā", "ʔuḵṣiyā"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخصينا",
+      "tur": "verb",
+      "baslik": "أخصينا (form IV)\n# أَخْصَيْنَا (ʔaḵṣaynā) /ʔax.sˤaj.naː/: first-person plural past active of أَخْصَى (ʔaḵṣā)\n# أُخْصِينَا (ʔuḵṣīnā) /ʔux.sˤiː.naː/: first-person plural past passive of أَخْصَى (ʔaḵṣā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵṣaynā", "ʔaḵṣā", "ʔuḵṣīnā"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخصيتم",
+      "tur": "verb",
+      "baslik": "أخصيتم (form IV)\n# أَخْصَيْتُمْ (ʔaḵṣaytum) /ʔax.sˤaj.tum/: second-person masculine plural past active of أَخْصَى (ʔaḵṣā)\n# أُخْصِيتُمْ (ʔuḵṣītum) /ʔux.sˤiː.tum/: second-person masculine plural past passive of أَخْصَى (ʔaḵṣā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵṣaytum", "ʔaḵṣā", "ʔuḵṣītum"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخصيتن",
+      "tur": "verb",
+      "baslik": "أخصيتن (form IV)\n# أَخْصَيْتُنَّ (ʔaḵṣaytunna) /ʔax.sˤaj.tun.na/: second-person feminine plural past active of أَخْصَى (ʔaḵṣā)\n# أُخْصِيتُنَّ (ʔuḵṣītunna) /ʔux.sˤiː.tun.na/: second-person feminine plural past passive of أَخْصَى (ʔaḵṣā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵṣaytunna", "ʔaḵṣā", "ʔuḵṣītunna"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخصيتا",
+      "tur": "verb",
+      "baslik": "أُخْصِيَتَا • (ʔuḵṣiyatā) (form IV) /ʔux.sˤi.ja.taː/\n# third-person feminine dual past passive of أَخْصَى (ʔaḵṣā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuḵṣiyatā", "ʔaḵṣā"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخصوا",
+      "tur": "verb",
+      "baslik": "أخصوا (form IV)\n# أَخْصَوْا (ʔaḵṣaw) /ʔax.sˤaw/: third-person masculine plural past active of أَخْصَى (ʔaḵṣā)\n# أُخْصُوا (ʔuḵṣū) /ʔux.sˤuː/: third-person masculine plural past passive of أَخْصَى (ʔaḵṣā)\n# أَخْصُوا (ʔaḵṣū) /ʔax.sˤuː/: second-person masculine plural imperative of أَخْصَى (ʔaḵṣā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵṣaw", "ʔaḵṣā", "ʔuḵṣū"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أخصين",
+      "tur": "verb",
+      "baslik": "أخصين (form IV)\n# أَخْصَيْنَ (ʔaḵṣayna) /ʔax.sˤaj.na/: third-person feminine plural past active of أَخْصَى (ʔaḵṣā)\n# أُخْصِينَ (ʔuḵṣīna) /ʔux.sˤiː.na/: third-person feminine plural past passive of أَخْصَى (ʔaḵṣā)\n# أَخْصِينَ (ʔaḵṣīna) /ʔax.sˤiː.na/: second-person feminine plural imperative of أَخْصَى (ʔaḵṣā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḵṣayna", "ʔaḵṣā", "ʔuḵṣīna"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخصيان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تخصيان (form IV)\n# تُخْصِيَانِ (tuḵṣiyāni) /tux.sˤi.jaː.ni/: inflection of أَخْصَى (ʔaḵṣā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُخْصَيَانِ (tuḵṣayāni) /tux.sˤa.jaː.ni/: inflection of أَخْصَى (ʔaḵṣā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵṣiyāni", "ʔaḵṣā", "tuḵṣayāni"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يخصيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يخصيا (form IV)\n# يُخْصِيَا (yuḵṣiyā) /jux.sˤi.jaː/: third-person masculine dual non-past active subjunctive/jussive of أَخْصَى (ʔaḵṣā)\n# يُخْصَيَا (yuḵṣayā) /jux.sˤa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of أَخْصَى (ʔaḵṣā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḵṣiyā", "ʔaḵṣā", "yuḵṣayā"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يخصيان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يخصيان (form IV)\n# يُخْصِيَانِ (yuḵṣiyāni) /jux.sˤi.jaː.ni/: third-person masculine dual non-past active indicative of أَخْصَى (ʔaḵṣā)\n# يُخْصَيَانِ (yuḵṣayāni) /jux.sˤa.jaː.ni/: third-person masculine dual non-past passive indicative of أَخْصَى (ʔaḵṣā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḵṣiyāni", "ʔaḵṣā", "yuḵṣayāni"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تخصيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تخصيا (form IV)\n# تُخْصِيَا (tuḵṣiyā) /tux.sˤi.jaː/: inflection of أَخْصَى (ʔaḵṣā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُخْصَيَا (tuḵṣayā) /tux.sˤa.jaː/: inflection of أَخْصَى (ʔaḵṣā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussiv",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḵṣiyā", "ʔaḵṣā", "tuḵṣayā"],
+      "kok_yazilis": "أخصى",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءخصى", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

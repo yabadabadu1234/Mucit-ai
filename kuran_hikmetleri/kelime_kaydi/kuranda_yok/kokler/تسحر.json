@@ -1,366 +1,259 @@
 {
   "kok": "تسحر",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تسحر", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تسحري",
-        "u": "تسحري",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَسَحَّرِي • (tasaḥḥarī) (form V) /ta.saħ.ħa.riː/\n# second-person feminine singular imperative of تَسَحَّرَ (tasaḥḥara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tasaḥḥarī", "tasaḥḥara"],
-        "k": "تسحر",
-        "yol": "kök"
-      },
-      {
-        "w": "تسحروا",
-        "u": "تسحروا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَسَحَّرُوا • (tasaḥḥarū) (form V) /ta.saħ.ħa.ruː/\n# inflection of تَسَحَّرَ (tasaḥḥara):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tasaḥḥarū", "tasaḥḥara"],
-        "k": "تسحر",
-        "yol": "kök"
-      },
-      {
-        "w": "تسحرن",
-        "u": "تسحرن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَسَحَّرْنَ • (tasaḥḥarna) (form V) /ta.saħ.ħar.na/\n# inflection of تَسَحَّرَ (tasaḥḥara):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tasaḥḥarna", "tasaḥḥara"],
-        "k": "تسحر",
-        "yol": "kök"
-      },
-      {
-        "w": "تسحرت",
-        "u": "تسحرت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تسحرت (form V)\n# تَسَحَّرْتُ (tasaḥḥartu) /ta.saħ.ħar.tu/: first-person singular past active of تَسَحَّرَ (tasaḥḥara)\n# تَسَحَّرْتَ (tasaḥḥarta) /ta.saħ.ħar.ta/: second-person masculine singular past active of تَسَحَّرَ (tasaḥḥara)\n# تَسَحَّرْتِ (tasaḥḥarti) /ta.saħ.ħar.ti/: second-person feminine singular past active of تَسَحَّرَ (tasaḥḥara)\n# تَسَحَّرَتْ (tasaḥḥarat) /ta.saħ.ħa.rat/: third-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tasaḥḥartu", "tasaḥḥara", "tasaḥḥarta"],
-        "k": "تسحر",
-        "yol": "kök"
-      },
-      {
-        "w": "تسحرتما",
-        "u": "تسحرتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَسَحَّرْتُمَا • (tasaḥḥartumā) (form V) /ta.saħ.ħar.tu.maː/\n# second-person dual past active of تَسَحَّرَ (tasaḥḥara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tasaḥḥartumā", "tasaḥḥara"],
-        "k": "تسحر",
-        "yol": "kök"
-      },
-      {
-        "w": "تسحرتا",
-        "u": "تسحرتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَسَحَّرَتَا • (tasaḥḥaratā) (form V) /ta.saħ.ħa.ra.taː/\n# third-person feminine dual past active of تَسَحَّرَ (tasaḥḥara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tasaḥḥaratā", "tasaḥḥara"],
-        "k": "تسحر",
-        "yol": "kök"
-      },
-      {
-        "w": "تسحرنا",
-        "u": "تسحرنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَسَحَّرْنَا • (tasaḥḥarnā) (form V) /ta.saħ.ħar.naː/\n# first-person plural past active of تَسَحَّرَ (tasaḥḥara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tasaḥḥarnā", "tasaḥḥara"],
-        "k": "تسحر",
-        "yol": "kök"
-      },
-      {
-        "w": "تسحرتم",
-        "u": "تسحرتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَسَحَّرْتُمْ • (tasaḥḥartum) (form V) /ta.saħ.ħar.tum/\n# second-person masculine plural past active of تَسَحَّرَ (tasaḥḥara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tasaḥḥartum", "tasaḥḥara"],
-        "k": "تسحر",
-        "yol": "kök"
-      },
-      {
-        "w": "تسحرا",
-        "u": "تسحرا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَسَحَّرَا • (tasaḥḥarā) (form V) /ta.saħ.ħa.raː/\n# inflection of تَسَحَّرَ (tasaḥḥara):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tasaḥḥarā", "tasaḥḥara"],
-        "k": "تسحر",
-        "yol": "kök"
-      },
-      {
-        "w": "تسحرتن",
-        "u": "تسحرتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَسَحَّرْتُنَّ • (tasaḥḥartunna) (form V) /ta.saħ.ħar.tun.na/\n# second-person feminine plural past active of تَسَحَّرَ (tasaḥḥara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tasaḥḥartunna", "tasaḥḥara"],
-        "k": "تسحر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسحر",
-        "u": "تتسحر",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتسحر (form V)\n# تَتَسَحَّرُ (tatasaḥḥaru) /ta.ta.saħ.ħa.ru/: inflection of تَسَحَّرَ (tasaḥḥara):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَسَحَّرَ (tatasaḥḥara) /ta.ta.saħ.ħa.ra/: inflection of تَسَحَّرَ (tasaḥḥara):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatasaḥḥaru", "tasaḥḥara", "tatasaḥḥara"],
-        "k": "تسحر",
-        "yol": "kök"
-      },
-      {
-        "w": "يتسحر",
-        "u": "يتسحر",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتسحر (form V)\n# يَتَسَحَّرُ (yatasaḥḥaru) /ja.ta.saħ.ħa.ru/: third-person masculine singular non-past active indicative of تَسَحَّرَ (tasaḥḥara)\n# يَتَسَحَّرَ (yatasaḥḥara) /ja.ta.saħ.ħa.ra/: third-person masculine singular non-past active subjunctive of تَسَحَّرَ (tasaḥḥara)\n# يَتَسَحَّرْ (yatasaḥḥar) /ja.ta.saħ.ħar/: third-person masculine singular non-past active jussive of تَسَحَّرَ (tasaḥḥar",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatasaḥḥaru", "tasaḥḥara", "yatasaḥḥara"],
-        "k": "تسحر",
-        "yol": "kök"
-      },
-      {
-        "w": "أتسحر",
-        "u": "أتسحر",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتسحر (form V)\n# أَتَسَحَّرُ (ʔatasaḥḥaru) /ʔa.ta.saħ.ħa.ru/: first-person singular non-past active indicative of تَسَحَّرَ (tasaḥḥara)\n# أَتَسَحَّرَ (ʔatasaḥḥara) /ʔa.ta.saħ.ħa.ra/: first-person singular non-past active subjunctive of تَسَحَّرَ (tasaḥḥara)\n# أَتَسَحَّرْ (ʔatasaḥḥar) /ʔa.ta.saħ.ħar/: first-person singular non-past active jussive of تَسَحَّرَ (tasaḥḥara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔatasaḥḥaru", "tasaḥḥara", "ʔatasaḥḥara"],
-        "k": "تسحر",
-        "yol": "kök"
-      },
-      {
-        "w": "يتسحران",
-        "u": "يتسحران",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَسَحَّرَانِ • (yatasaḥḥarāni) (form V) /ja.ta.saħ.ħa.raː.ni/\n# third-person masculine dual non-past active indicative of تَسَحَّرَ (tasaḥḥara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatasaḥḥarāni", "tasaḥḥara"],
-        "k": "تسحر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسحران",
-        "u": "تتسحران",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَسَحَّرَانِ • (tatasaḥḥarāni) (form V) /ta.ta.saħ.ħa.raː.ni/\n# inflection of تَسَحَّرَ (tasaḥḥara):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatasaḥḥarāni", "tasaḥḥara"],
-        "k": "تسحر",
-        "yol": "kök"
-      },
-      {
-        "w": "نتسحر",
-        "u": "نتسحر",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتسحر (form V)\n# نَتَسَحَّرُ (natasaḥḥaru) /na.ta.saħ.ħa.ru/: first-person plural non-past active indicative of تَسَحَّرَ (tasaḥḥara)\n# نَتَسَحَّرَ (natasaḥḥara) /na.ta.saħ.ħa.ra/: first-person plural non-past active subjunctive of تَسَحَّرَ (tasaḥḥara)\n# نَتَسَحَّرْ (natasaḥḥar) /na.ta.saħ.ħar/: first-person plural non-past active jussive of تَسَحَّرَ (tasaḥḥara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["natasaḥḥaru", "tasaḥḥara", "natasaḥḥara"],
-        "k": "تسحر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسحرون",
-        "u": "تتسحرون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَسَحَّرُونَ • (tatasaḥḥarūna) (form V) /ta.ta.saħ.ħa.ruː.na/\n# second-person masculine plural non-past active indicative of تَسَحَّرَ (tasaḥḥara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatasaḥḥarūna", "tasaḥḥara"],
-        "k": "تسحر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسحرن",
-        "u": "تتسحرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَسَحَّرْنَ • (tatasaḥḥarna) (form V) /ta.ta.saħ.ħar.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَسَحَّرَ (tasaḥḥara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatasaḥḥarna", "tasaḥḥara"],
-        "k": "تسحر",
-        "yol": "kök"
-      },
-      {
-        "w": "يتسحرون",
-        "u": "يتسحرون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَسَحَّرُونَ • (yatasaḥḥarūna) (form V) /ja.ta.saħ.ħa.ruː.na/\n# third-person masculine plural non-past active indicative of تَسَحَّرَ (tasaḥḥara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatasaḥḥarūna", "tasaḥḥara"],
-        "k": "تسحر",
-        "yol": "kök"
-      },
-      {
-        "w": "يتسحرن",
-        "u": "يتسحرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَسَحَّرْنَ • (yatasaḥḥarna) (form V) /ja.ta.saħ.ħar.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَسَحَّرَ (tasaḥḥara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatasaḥḥarna", "tasaḥḥara"],
-        "k": "تسحر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسحري",
-        "u": "تتسحري",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَسَحَّرِي • (tatasaḥḥarī) (form V) /ta.ta.saħ.ħa.riː/\n# second-person feminine singular non-past active subjunctive/jussive of تَسَحَّرَ (tasaḥḥara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatasaḥḥarī", "tasaḥḥara"],
-        "k": "تسحر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسحرين",
-        "u": "تتسحرين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَسَحَّرِينَ • (tatasaḥḥarīna) (form V) /ta.ta.saħ.ħa.riː.na/\n# second-person feminine singular non-past active indicative of تَسَحَّرَ (tasaḥḥara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatasaḥḥarīna", "tasaḥḥara"],
-        "k": "تسحر",
-        "yol": "kök"
-      },
-      {
-        "w": "يتسحرا",
-        "u": "يتسحرا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَسَحَّرَا • (yatasaḥḥarā) (form V) /ja.ta.saħ.ħa.raː/\n# third-person masculine dual non-past active subjunctive/jussive of تَسَحَّرَ (tasaḥḥara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatasaḥḥarā", "tasaḥḥara"],
-        "k": "تسحر",
-        "yol": "kök"
-      },
-      {
-        "w": "يتسحروا",
-        "u": "يتسحروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَسَحَّرُوا • (yatasaḥḥarū) (form V) /ja.ta.saħ.ħa.ruː/\n# third-person masculine plural non-past active subjunctive/jussive of تَسَحَّرَ (tasaḥḥara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatasaḥḥarū", "tasaḥḥara"],
-        "k": "تسحر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسحرا",
-        "u": "تتسحرا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَسَحَّرَا • (tatasaḥḥarā) (form V) /ta.ta.saħ.ħa.raː/\n# inflection of تَسَحَّرَ (tasaḥḥara):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatasaḥḥarā", "tasaḥḥara"],
-        "k": "تسحر",
-        "yol": "kök"
-      },
-      {
-        "w": "تتسحروا",
-        "u": "تتسحروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَسَحَّرُوا • (tatasaḥḥarū) (form V) /ta.ta.saħ.ħa.ruː/\n# second-person masculine plural non-past active subjunctive/jussive of تَسَحَّرَ (tasaḥḥara)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatasaḥḥarū", "tasaḥḥara"],
-        "k": "تسحر",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تس",
+  "ses": {
     "harf": "ت",
+    "fasil": "تس",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تسحري",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَسَحَّرِي • (tasaḥḥarī) (form V) /ta.saħ.ħa.riː/\n# second-person feminine singular imperative of تَسَحَّرَ (tasaḥḥara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tasaḥḥarī", "tasaḥḥara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسحروا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَسَحَّرُوا • (tasaḥḥarū) (form V) /ta.saħ.ħa.ruː/\n# inflection of تَسَحَّرَ (tasaḥḥara):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tasaḥḥarū", "tasaḥḥara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسحرن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَسَحَّرْنَ • (tasaḥḥarna) (form V) /ta.saħ.ħar.na/\n# inflection of تَسَحَّرَ (tasaḥḥara):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tasaḥḥarna", "tasaḥḥara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسحرت",
+      "tur": "verb",
+      "baslik": "تسحرت (form V)\n# تَسَحَّرْتُ (tasaḥḥartu) /ta.saħ.ħar.tu/: first-person singular past active of تَسَحَّرَ (tasaḥḥara)\n# تَسَحَّرْتَ (tasaḥḥarta) /ta.saħ.ħar.ta/: second-person masculine singular past active of تَسَحَّرَ (tasaḥḥara)\n# تَسَحَّرْتِ (tasaḥḥarti) /ta.saħ.ħar.ti/: second-person feminine singular past active of تَسَحَّرَ (tasaḥḥara)\n# تَسَحَّرَتْ (tasaḥḥarat) /ta.saħ.ħa.rat/: third-perso",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tasaḥḥartu", "tasaḥḥara", "tasaḥḥarta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسحرتما",
+      "tur": "verb",
+      "baslik": "تَسَحَّرْتُمَا • (tasaḥḥartumā) (form V) /ta.saħ.ħar.tu.maː/\n# second-person dual past active of تَسَحَّرَ (tasaḥḥara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tasaḥḥartumā", "tasaḥḥara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسحرتا",
+      "tur": "verb",
+      "baslik": "تَسَحَّرَتَا • (tasaḥḥaratā) (form V) /ta.saħ.ħa.ra.taː/\n# third-person feminine dual past active of تَسَحَّرَ (tasaḥḥara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tasaḥḥaratā", "tasaḥḥara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسحرنا",
+      "tur": "verb",
+      "baslik": "تَسَحَّرْنَا • (tasaḥḥarnā) (form V) /ta.saħ.ħar.naː/\n# first-person plural past active of تَسَحَّرَ (tasaḥḥara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tasaḥḥarnā", "tasaḥḥara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسحرتم",
+      "tur": "verb",
+      "baslik": "تَسَحَّرْتُمْ • (tasaḥḥartum) (form V) /ta.saħ.ħar.tum/\n# second-person masculine plural past active of تَسَحَّرَ (tasaḥḥara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tasaḥḥartum", "tasaḥḥara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسحرا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَسَحَّرَا • (tasaḥḥarā) (form V) /ta.saħ.ħa.raː/\n# inflection of تَسَحَّرَ (tasaḥḥara):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tasaḥḥarā", "tasaḥḥara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تسحرتن",
+      "tur": "verb",
+      "baslik": "تَسَحَّرْتُنَّ • (tasaḥḥartunna) (form V) /ta.saħ.ħar.tun.na/\n# second-person feminine plural past active of تَسَحَّرَ (tasaḥḥara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tasaḥḥartunna", "tasaḥḥara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسحر",
+      "tur": "verb",
+      "baslik": "تتسحر (form V)\n# تَتَسَحَّرُ (tatasaḥḥaru) /ta.ta.saħ.ħa.ru/: inflection of تَسَحَّرَ (tasaḥḥara):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَسَحَّرَ (tatasaḥḥara) /ta.ta.saħ.ħa.ra/: inflection of تَسَحَّرَ (tasaḥḥara):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatasaḥḥaru", "tasaḥḥara", "tatasaḥḥara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتسحر",
+      "tur": "verb",
+      "baslik": "يتسحر (form V)\n# يَتَسَحَّرُ (yatasaḥḥaru) /ja.ta.saħ.ħa.ru/: third-person masculine singular non-past active indicative of تَسَحَّرَ (tasaḥḥara)\n# يَتَسَحَّرَ (yatasaḥḥara) /ja.ta.saħ.ħa.ra/: third-person masculine singular non-past active subjunctive of تَسَحَّرَ (tasaḥḥara)\n# يَتَسَحَّرْ (yatasaḥḥar) /ja.ta.saħ.ħar/: third-person masculine singular non-past active jussive of تَسَحَّرَ (tasaḥḥar",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatasaḥḥaru", "tasaḥḥara", "yatasaḥḥara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتسحر",
+      "tur": "verb",
+      "baslik": "أتسحر (form V)\n# أَتَسَحَّرُ (ʔatasaḥḥaru) /ʔa.ta.saħ.ħa.ru/: first-person singular non-past active indicative of تَسَحَّرَ (tasaḥḥara)\n# أَتَسَحَّرَ (ʔatasaḥḥara) /ʔa.ta.saħ.ħa.ra/: first-person singular non-past active subjunctive of تَسَحَّرَ (tasaḥḥara)\n# أَتَسَحَّرْ (ʔatasaḥḥar) /ʔa.ta.saħ.ħar/: first-person singular non-past active jussive of تَسَحَّرَ (tasaḥḥara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔatasaḥḥaru", "tasaḥḥara", "ʔatasaḥḥara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتسحران",
+      "tur": "verb",
+      "baslik": "يَتَسَحَّرَانِ • (yatasaḥḥarāni) (form V) /ja.ta.saħ.ħa.raː.ni/\n# third-person masculine dual non-past active indicative of تَسَحَّرَ (tasaḥḥara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatasaḥḥarāni", "tasaḥḥara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسحران",
+      "tur": "verb",
+      "baslik": "تَتَسَحَّرَانِ • (tatasaḥḥarāni) (form V) /ta.ta.saħ.ħa.raː.ni/\n# inflection of تَسَحَّرَ (tasaḥḥara):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatasaḥḥarāni", "tasaḥḥara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتسحر",
+      "tur": "verb",
+      "baslik": "نتسحر (form V)\n# نَتَسَحَّرُ (natasaḥḥaru) /na.ta.saħ.ħa.ru/: first-person plural non-past active indicative of تَسَحَّرَ (tasaḥḥara)\n# نَتَسَحَّرَ (natasaḥḥara) /na.ta.saħ.ħa.ra/: first-person plural non-past active subjunctive of تَسَحَّرَ (tasaḥḥara)\n# نَتَسَحَّرْ (natasaḥḥar) /na.ta.saħ.ħar/: first-person plural non-past active jussive of تَسَحَّرَ (tasaḥḥara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["natasaḥḥaru", "tasaḥḥara", "natasaḥḥara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسحرون",
+      "tur": "verb",
+      "baslik": "تَتَسَحَّرُونَ • (tatasaḥḥarūna) (form V) /ta.ta.saħ.ħa.ruː.na/\n# second-person masculine plural non-past active indicative of تَسَحَّرَ (tasaḥḥara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatasaḥḥarūna", "tasaḥḥara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسحرن",
+      "tur": "verb",
+      "baslik": "تَتَسَحَّرْنَ • (tatasaḥḥarna) (form V) /ta.ta.saħ.ħar.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَسَحَّرَ (tasaḥḥara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatasaḥḥarna", "tasaḥḥara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتسحرون",
+      "tur": "verb",
+      "baslik": "يَتَسَحَّرُونَ • (yatasaḥḥarūna) (form V) /ja.ta.saħ.ħa.ruː.na/\n# third-person masculine plural non-past active indicative of تَسَحَّرَ (tasaḥḥara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatasaḥḥarūna", "tasaḥḥara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتسحرن",
+      "tur": "verb",
+      "baslik": "يَتَسَحَّرْنَ • (yatasaḥḥarna) (form V) /ja.ta.saħ.ħar.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَسَحَّرَ (tasaḥḥara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatasaḥḥarna", "tasaḥḥara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسحري",
+      "tur": "verb",
+      "baslik": "تَتَسَحَّرِي • (tatasaḥḥarī) (form V) /ta.ta.saħ.ħa.riː/\n# second-person feminine singular non-past active subjunctive/jussive of تَسَحَّرَ (tasaḥḥara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatasaḥḥarī", "tasaḥḥara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسحرين",
+      "tur": "verb",
+      "baslik": "تَتَسَحَّرِينَ • (tatasaḥḥarīna) (form V) /ta.ta.saħ.ħa.riː.na/\n# second-person feminine singular non-past active indicative of تَسَحَّرَ (tasaḥḥara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatasaḥḥarīna", "tasaḥḥara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتسحرا",
+      "tur": "verb",
+      "baslik": "يَتَسَحَّرَا • (yatasaḥḥarā) (form V) /ja.ta.saħ.ħa.raː/\n# third-person masculine dual non-past active subjunctive/jussive of تَسَحَّرَ (tasaḥḥara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatasaḥḥarā", "tasaḥḥara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتسحروا",
+      "tur": "verb",
+      "baslik": "يَتَسَحَّرُوا • (yatasaḥḥarū) (form V) /ja.ta.saħ.ħa.ruː/\n# third-person masculine plural non-past active subjunctive/jussive of تَسَحَّرَ (tasaḥḥara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatasaḥḥarū", "tasaḥḥara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسحرا",
+      "tur": "verb",
+      "baslik": "تَتَسَحَّرَا • (tatasaḥḥarā) (form V) /ta.ta.saħ.ħa.raː/\n# inflection of تَسَحَّرَ (tasaḥḥara):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatasaḥḥarā", "tasaḥḥara"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتسحروا",
+      "tur": "verb",
+      "baslik": "تَتَسَحَّرُوا • (tatasaḥḥarū) (form V) /ta.ta.saħ.ħa.ruː/\n# second-person masculine plural non-past active subjunctive/jussive of تَسَحَّرَ (tasaḥḥara)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatasaḥḥarū", "tasaḥḥara"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تسحر", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,314 +1,245 @@
 {
   "kok": "تءين",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تءين", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تأينت",
-        "u": "تأينت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تأينت (form V)\n# تَأَيَّنْتُ (taʔayyantu) /ta.ʔaj.jan.tu/: first-person singular past active of تَأَيَّنَ (taʔayyana)\n# تَأَيَّنْتَ (taʔayyanta) /ta.ʔaj.jan.ta/: second-person masculine singular past active of تَأَيَّنَ (taʔayyana)\n# تَأَيَّنْتِ (taʔayyanti) /ta.ʔaj.jan.ti/: second-person feminine singular past active of تَأَيَّنَ (taʔayyana)\n# تَأَيَّنَتْ (taʔayyanat) /ta.ʔaj.ja.nat/: third-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔayyantu", "taʔayyana", "taʔayyanta"],
-        "k": "تأين",
-        "yol": "kök"
-      },
-      {
-        "w": "تأينتا",
-        "u": "تأينتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَيَّنَتَا • (taʔayyanatā) (form V) /ta.ʔaj.ja.na.taː/\n# third-person feminine dual past active of تَأَيَّنَ (taʔayyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔayyanatā", "taʔayyana"],
-        "k": "تأين",
-        "yol": "kök"
-      },
-      {
-        "w": "تأينتما",
-        "u": "تأينتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَيَّنْتُمَا • (taʔayyantumā) (form V) /ta.ʔaj.jan.tu.maː/\n# second-person dual past active of تَأَيَّنَ (taʔayyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔayyantumā", "taʔayyana"],
-        "k": "تأين",
-        "yol": "kök"
-      },
-      {
-        "w": "تأينا",
-        "u": "تأينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تأينا (form V)\n# تَأَيَّنَا (taʔayyanā) /ta.ʔaj.ja.naː/: inflection of تَأَيَّنَ (taʔayyana):\n## third-person masculine dual past active\n## second-person dual imperative\n# تَأَيَّنَّا (taʔayyannā) /ta.ʔaj.jan.naː/: first-person plural past active of تَأَيَّنَ (taʔayyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔayyanā", "taʔayyana", "taʔayyannā"],
-        "k": "تأين",
-        "yol": "kök"
-      },
-      {
-        "w": "تأينتن",
-        "u": "تأينتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَيَّنْتُنَّ • (taʔayyantunna) (form V) /ta.ʔaj.jan.tun.na/\n# second-person feminine plural past active of تَأَيَّنَ (taʔayyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔayyantunna", "taʔayyana"],
-        "k": "تأين",
-        "yol": "kök"
-      },
-      {
-        "w": "أتأين",
-        "u": "أتأين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتأين (form V)\n# أَتَأَيَّنُ (ʔataʔayyanu) /ʔa.ta.ʔaj.ja.nu/: first-person singular non-past active indicative of تَأَيَّنَ (taʔayyana)\n# أَتَأَيَّنَ (ʔataʔayyana) /ʔa.ta.ʔaj.ja.na/: first-person singular non-past active subjunctive of تَأَيَّنَ (taʔayyana)\n# أَتَأَيَّنْ (ʔataʔayyan) /ʔa.ta.ʔaj.jan/: first-person singular non-past active jussive of تَأَيَّنَ (taʔayyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔataʔayyanu", "taʔayyana", "ʔataʔayyana"],
-        "k": "تأين",
-        "yol": "kök"
-      },
-      {
-        "w": "تأينتم",
-        "u": "تأينتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَيَّنْتُمْ • (taʔayyantum) (form V) /ta.ʔaj.jan.tum/\n# second-person masculine plural past active of تَأَيَّنَ (taʔayyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔayyantum", "taʔayyana"],
-        "k": "تأين",
-        "yol": "kök"
-      },
-      {
-        "w": "تأينوا",
-        "u": "تأينوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَيَّنُوا • (taʔayyanū) (form V) /ta.ʔaj.ja.nuː/\n# inflection of تَأَيَّنَ (taʔayyana):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔayyanū", "taʔayyana"],
-        "k": "تأين",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأين",
-        "u": "تتأين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتأين (form V)\n# تَتَأَيَّنُ (tataʔayyanu) /ta.ta.ʔaj.ja.nu/: inflection of تَأَيَّنَ (taʔayyana):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَأَيَّنَّ (tataʔayyanna) /ta.ta.ʔaj.jan.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of تَأَيَّنَ (taʔayyana)\n# تَتَأَيَّنَ (tataʔayyan",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔayyanu", "taʔayyana", "tataʔayyanna"],
-        "k": "تأين",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأينين",
-        "u": "تتأينين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَيَّنِينَ • (tataʔayyanīna) (form V) /ta.ta.ʔaj.ja.niː.na/\n# second-person feminine singular non-past active indicative of تَأَيَّنَ (taʔayyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔayyanīna", "taʔayyana"],
-        "k": "تأين",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأينان",
-        "u": "تتأينان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَيَّنَانِ • (tataʔayyanāni) (form V) /ta.ta.ʔaj.ja.naː.ni/\n# inflection of تَأَيَّنَ (taʔayyana):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔayyanāni", "taʔayyana"],
-        "k": "تأين",
-        "yol": "kök"
-      },
-      {
-        "w": "يتأين",
-        "u": "يتأين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتأين (form V)\n# يَتَأَيَّنُ (yataʔayyanu) /ja.ta.ʔaj.ja.nu/: third-person masculine singular non-past active indicative of تَأَيَّنَ (taʔayyana)\n# يَتَأَيَّنَّ (yataʔayyanna) /ja.ta.ʔaj.jan.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of تَأَيَّنَ (taʔayyana)\n# يَتَأَيَّنَ (yataʔayyana) /ja.ta.ʔaj.ja.na/: third-person masculine singular non-past active subjunct",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔayyanu", "taʔayyana", "yataʔayyanna"],
-        "k": "تأين",
-        "yol": "kök"
-      },
-      {
-        "w": "نتأين",
-        "u": "نتأين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتأين (form V)\n# نَتَأَيَّنُ (nataʔayyanu) /na.ta.ʔaj.ja.nu/: first-person plural non-past active indicative of تَأَيَّنَ (taʔayyana)\n# نَتَأَيَّنَ (nataʔayyana) /na.ta.ʔaj.ja.na/: first-person plural non-past active subjunctive of تَأَيَّنَ (taʔayyana)\n# نَتَأَيَّنْ (nataʔayyan) /na.ta.ʔaj.jan/: first-person plural non-past active jussive of تَأَيَّنَ (taʔayyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["nataʔayyanu", "taʔayyana", "nataʔayyana"],
-        "k": "تأين",
-        "yol": "kök"
-      },
-      {
-        "w": "يتأينان",
-        "u": "يتأينان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَأَيَّنَانِ • (yataʔayyanāni) (form V) /ja.ta.ʔaj.ja.naː.ni/\n# third-person masculine dual non-past active indicative of تَأَيَّنَ (taʔayyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔayyanāni", "taʔayyana"],
-        "k": "تأين",
-        "yol": "kök"
-      },
-      {
-        "w": "يتأينا",
-        "u": "يتأينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَأَيَّنَا • (yataʔayyanā) (form V) /ja.ta.ʔaj.ja.naː/\n# third-person masculine dual non-past active subjunctive/jussive of تَأَيَّنَ (taʔayyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔayyanā", "taʔayyana"],
-        "k": "تأين",
-        "yol": "kök"
-      },
-      {
-        "w": "يتأينون",
-        "u": "يتأينون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَأَيَّنُونَ • (yataʔayyanūna) (form V) /ja.ta.ʔaj.ja.nuː.na/\n# third-person masculine plural non-past active indicative of تَأَيَّنَ (taʔayyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔayyanūna", "taʔayyana"],
-        "k": "تأين",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأينا",
-        "u": "تتأينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَيَّنَا • (tataʔayyanā) (form V) /ta.ta.ʔaj.ja.naː/\n# inflection of تَأَيَّنَ (taʔayyana):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔayyanā", "taʔayyana"],
-        "k": "تأين",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأيني",
-        "u": "تتأيني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَيَّنِي • (tataʔayyanī) (form V) /ta.ta.ʔaj.ja.niː/\n# second-person feminine singular non-past active subjunctive/jussive of تَأَيَّنَ (taʔayyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔayyanī", "taʔayyana"],
-        "k": "تأين",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأينون",
-        "u": "تتأينون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَيَّنُونَ • (tataʔayyanūna) (form V) /ta.ta.ʔaj.ja.nuː.na/\n# second-person masculine plural non-past active indicative of تَأَيَّنَ (taʔayyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔayyanūna", "taʔayyana"],
-        "k": "تأين",
-        "yol": "kök"
-      },
-      {
-        "w": "يتأينوا",
-        "u": "يتأينوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَأَيَّنُوا • (yataʔayyanū) (form V) /ja.ta.ʔaj.ja.nuː/\n# third-person masculine plural non-past active subjunctive/jussive of تَأَيَّنَ (taʔayyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔayyanū", "taʔayyana"],
-        "k": "تأين",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأينوا",
-        "u": "تتأينوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَيَّنُوا • (tataʔayyanū) (form V) /ta.ta.ʔaj.ja.nuː/\n# second-person masculine plural non-past active subjunctive/jussive of تَأَيَّنَ (taʔayyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔayyanū", "taʔayyana"],
-        "k": "تأين",
-        "yol": "kök"
-      },
-      {
-        "w": "تأيني",
-        "u": "تأيني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَيَّنِي • (taʔayyanī) (form V) /ta.ʔaj.ja.niː/\n# second-person feminine singular imperative of تَأَيَّنَ (taʔayyana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔayyanī", "taʔayyana"],
-        "k": "تأين",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تن",
+  "ses": {
     "harf": "ت",
+    "fasil": "تن",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تأينت",
+      "tur": "verb",
+      "baslik": "تأينت (form V)\n# تَأَيَّنْتُ (taʔayyantu) /ta.ʔaj.jan.tu/: first-person singular past active of تَأَيَّنَ (taʔayyana)\n# تَأَيَّنْتَ (taʔayyanta) /ta.ʔaj.jan.ta/: second-person masculine singular past active of تَأَيَّنَ (taʔayyana)\n# تَأَيَّنْتِ (taʔayyanti) /ta.ʔaj.jan.ti/: second-person feminine singular past active of تَأَيَّنَ (taʔayyana)\n# تَأَيَّنَتْ (taʔayyanat) /ta.ʔaj.ja.nat/: third-perso",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔayyantu", "taʔayyana", "taʔayyanta"],
+      "kok_yazilis": "تأين",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأينتا",
+      "tur": "verb",
+      "baslik": "تَأَيَّنَتَا • (taʔayyanatā) (form V) /ta.ʔaj.ja.na.taː/\n# third-person feminine dual past active of تَأَيَّنَ (taʔayyana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔayyanatā", "taʔayyana"],
+      "kok_yazilis": "تأين",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأينتما",
+      "tur": "verb",
+      "baslik": "تَأَيَّنْتُمَا • (taʔayyantumā) (form V) /ta.ʔaj.jan.tu.maː/\n# second-person dual past active of تَأَيَّنَ (taʔayyana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔayyantumā", "taʔayyana"],
+      "kok_yazilis": "تأين",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأينا",
+      "tur": "verb",
+      "baslik": "تأينا (form V)\n# تَأَيَّنَا (taʔayyanā) /ta.ʔaj.ja.naː/: inflection of تَأَيَّنَ (taʔayyana):\n## third-person masculine dual past active\n## second-person dual imperative\n# تَأَيَّنَّا (taʔayyannā) /ta.ʔaj.jan.naː/: first-person plural past active of تَأَيَّنَ (taʔayyana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔayyanā", "taʔayyana", "taʔayyannā"],
+      "kok_yazilis": "تأين",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأينتن",
+      "tur": "verb",
+      "baslik": "تَأَيَّنْتُنَّ • (taʔayyantunna) (form V) /ta.ʔaj.jan.tun.na/\n# second-person feminine plural past active of تَأَيَّنَ (taʔayyana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔayyantunna", "taʔayyana"],
+      "kok_yazilis": "تأين",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتأين",
+      "tur": "verb",
+      "baslik": "أتأين (form V)\n# أَتَأَيَّنُ (ʔataʔayyanu) /ʔa.ta.ʔaj.ja.nu/: first-person singular non-past active indicative of تَأَيَّنَ (taʔayyana)\n# أَتَأَيَّنَ (ʔataʔayyana) /ʔa.ta.ʔaj.ja.na/: first-person singular non-past active subjunctive of تَأَيَّنَ (taʔayyana)\n# أَتَأَيَّنْ (ʔataʔayyan) /ʔa.ta.ʔaj.jan/: first-person singular non-past active jussive of تَأَيَّنَ (taʔayyana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔataʔayyanu", "taʔayyana", "ʔataʔayyana"],
+      "kok_yazilis": "تأين",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأينتم",
+      "tur": "verb",
+      "baslik": "تَأَيَّنْتُمْ • (taʔayyantum) (form V) /ta.ʔaj.jan.tum/\n# second-person masculine plural past active of تَأَيَّنَ (taʔayyana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔayyantum", "taʔayyana"],
+      "kok_yazilis": "تأين",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأينوا",
+      "tur": "verb",
+      "baslik": "تَأَيَّنُوا • (taʔayyanū) (form V) /ta.ʔaj.ja.nuː/\n# inflection of تَأَيَّنَ (taʔayyana):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔayyanū", "taʔayyana"],
+      "kok_yazilis": "تأين",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأين",
+      "tur": "verb",
+      "baslik": "تتأين (form V)\n# تَتَأَيَّنُ (tataʔayyanu) /ta.ta.ʔaj.ja.nu/: inflection of تَأَيَّنَ (taʔayyana):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَأَيَّنَّ (tataʔayyanna) /ta.ta.ʔaj.jan.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of تَأَيَّنَ (taʔayyana)\n# تَتَأَيَّنَ (tataʔayyan",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔayyanu", "taʔayyana", "tataʔayyanna"],
+      "kok_yazilis": "تأين",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأينين",
+      "tur": "verb",
+      "baslik": "تَتَأَيَّنِينَ • (tataʔayyanīna) (form V) /ta.ta.ʔaj.ja.niː.na/\n# second-person feminine singular non-past active indicative of تَأَيَّنَ (taʔayyana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔayyanīna", "taʔayyana"],
+      "kok_yazilis": "تأين",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأينان",
+      "tur": "verb",
+      "baslik": "تَتَأَيَّنَانِ • (tataʔayyanāni) (form V) /ta.ta.ʔaj.ja.naː.ni/\n# inflection of تَأَيَّنَ (taʔayyana):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔayyanāni", "taʔayyana"],
+      "kok_yazilis": "تأين",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتأين",
+      "tur": "verb",
+      "baslik": "يتأين (form V)\n# يَتَأَيَّنُ (yataʔayyanu) /ja.ta.ʔaj.ja.nu/: third-person masculine singular non-past active indicative of تَأَيَّنَ (taʔayyana)\n# يَتَأَيَّنَّ (yataʔayyanna) /ja.ta.ʔaj.jan.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of تَأَيَّنَ (taʔayyana)\n# يَتَأَيَّنَ (yataʔayyana) /ja.ta.ʔaj.ja.na/: third-person masculine singular non-past active subjunct",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔayyanu", "taʔayyana", "yataʔayyanna"],
+      "kok_yazilis": "تأين",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتأين",
+      "tur": "verb",
+      "baslik": "نتأين (form V)\n# نَتَأَيَّنُ (nataʔayyanu) /na.ta.ʔaj.ja.nu/: first-person plural non-past active indicative of تَأَيَّنَ (taʔayyana)\n# نَتَأَيَّنَ (nataʔayyana) /na.ta.ʔaj.ja.na/: first-person plural non-past active subjunctive of تَأَيَّنَ (taʔayyana)\n# نَتَأَيَّنْ (nataʔayyan) /na.ta.ʔaj.jan/: first-person plural non-past active jussive of تَأَيَّنَ (taʔayyana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["nataʔayyanu", "taʔayyana", "nataʔayyana"],
+      "kok_yazilis": "تأين",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتأينان",
+      "tur": "verb",
+      "baslik": "يَتَأَيَّنَانِ • (yataʔayyanāni) (form V) /ja.ta.ʔaj.ja.naː.ni/\n# third-person masculine dual non-past active indicative of تَأَيَّنَ (taʔayyana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔayyanāni", "taʔayyana"],
+      "kok_yazilis": "تأين",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتأينا",
+      "tur": "verb",
+      "baslik": "يَتَأَيَّنَا • (yataʔayyanā) (form V) /ja.ta.ʔaj.ja.naː/\n# third-person masculine dual non-past active subjunctive/jussive of تَأَيَّنَ (taʔayyana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔayyanā", "taʔayyana"],
+      "kok_yazilis": "تأين",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتأينون",
+      "tur": "verb",
+      "baslik": "يَتَأَيَّنُونَ • (yataʔayyanūna) (form V) /ja.ta.ʔaj.ja.nuː.na/\n# third-person masculine plural non-past active indicative of تَأَيَّنَ (taʔayyana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔayyanūna", "taʔayyana"],
+      "kok_yazilis": "تأين",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأينا",
+      "tur": "verb",
+      "baslik": "تَتَأَيَّنَا • (tataʔayyanā) (form V) /ta.ta.ʔaj.ja.naː/\n# inflection of تَأَيَّنَ (taʔayyana):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔayyanā", "taʔayyana"],
+      "kok_yazilis": "تأين",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأيني",
+      "tur": "verb",
+      "baslik": "تَتَأَيَّنِي • (tataʔayyanī) (form V) /ta.ta.ʔaj.ja.niː/\n# second-person feminine singular non-past active subjunctive/jussive of تَأَيَّنَ (taʔayyana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔayyanī", "taʔayyana"],
+      "kok_yazilis": "تأين",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأينون",
+      "tur": "verb",
+      "baslik": "تَتَأَيَّنُونَ • (tataʔayyanūna) (form V) /ta.ta.ʔaj.ja.nuː.na/\n# second-person masculine plural non-past active indicative of تَأَيَّنَ (taʔayyana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔayyanūna", "taʔayyana"],
+      "kok_yazilis": "تأين",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتأينوا",
+      "tur": "verb",
+      "baslik": "يَتَأَيَّنُوا • (yataʔayyanū) (form V) /ja.ta.ʔaj.ja.nuː/\n# third-person masculine plural non-past active subjunctive/jussive of تَأَيَّنَ (taʔayyana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔayyanū", "taʔayyana"],
+      "kok_yazilis": "تأين",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأينوا",
+      "tur": "verb",
+      "baslik": "تَتَأَيَّنُوا • (tataʔayyanū) (form V) /ta.ta.ʔaj.ja.nuː/\n# second-person masculine plural non-past active subjunctive/jussive of تَأَيَّنَ (taʔayyana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔayyanū", "taʔayyana"],
+      "kok_yazilis": "تأين",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأيني",
+      "tur": "verb",
+      "baslik": "تَأَيَّنِي • (taʔayyanī) (form V) /ta.ʔaj.ja.niː/\n# second-person feminine singular imperative of تَأَيَّنَ (taʔayyana)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔayyanī", "taʔayyana"],
+      "kok_yazilis": "تأين",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تءين", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

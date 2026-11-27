@@ -1,720 +1,513 @@
 {
   "kok": "زار",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "زار", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "etymarab": {
-      "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
-      "latin": "zār",
-      "dolu": true,
-      "kok_maddesi": "Back to library EtymArab zār زار BP … • HDAL • © SG | 15Feb2021 √ZāR, ZWR n. name for a popular cult of spirits found in northeastern Africa and such adjacent regions as the Arabian peninsula – art. »zār« (A. Rouaud, T. Battain), in EI² . ▪ »The zār ritual or practice seems to have originated in the Horn of Africa and, especially, in Ethiopia. According to E. Cerulli, the word (Ar zār , Amh zar , Som saar , etc.) may be said to derive from “the name of the supreme god of the pagan Cushitic peoples, the Sky-God called in Agaw (Bilen) ǧār , and in the Sidamo languages (Kaffa) yarō and (Buoro) darō ”. The Italian scholar further thought that, in the context of Ethiopian Christianity, this god must have been reduced to the role of an evil spirit, one which has been likewise retained among the Muslims and, probably, among the Falasha. These propositions do not provide answers to all the questions involved, but are still of value in so far as they have not been replaced by more information. Etymologies deriving zār from the Ar vb. zāra “to visit” seem fantastic, although current in Arab milieux« – art. »zār« (A. Rouaud, T. Battain), in EI² . ▪ »a religious custom apparently originating in the Horn of Africa during the 18th century and later spreading throughout East and North Africa. Zār custom involves the possession of an individual (usually female) by a spirit. It is also observed in Egypt, Sudan, Somalia, southern Iran and elsewhere in the Middle East. / […] / The zār cult served as a refuge for women and effeminate men in conservative, Muslim-dominated Sudan. / In Ethiopia, zār also refers to malevolent demons. [… M]ental illness is often attributed to zār possession« – en.wiki – ▪ DRS 8 (1999)#[ZAR]: Te Tña Amh Gur zar , Ar zār ‘esprit mauvais’, Soq zehereh ‘sorcière’. ▪ DRS 8 (1999)#[ZAR]: Ar – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
-      "kelime_maddeleri": []
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "زور",
-        "u": "زور",
-        "p": "noun",
-        "n": "1.2",
-        "h": "ar-head",
-        "e": "زُور • (zūr) pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "s": [
-          ["nonlemma", "See the etymology of the corresponding lemma form."]
-        ],
-        "g": ["plural of أَزْوَر (ʔazwar, “slanting; curved; cross-eyed”)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["أَزْوَر"],
-        "r": ["zūr"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "زر",
-        "u": "زر",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "زُرْ • (zur) (form I) /zur/\n# second-person masculine singular imperative of زَارَ (zāra)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zur", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "زرنا",
-        "u": "زرنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زرنا (form I)\n# زُرْنَا (zurnā) /zur.naː/: first-person plural past active of زَارَ (zāra)\n# زِرْنَا (zirnā) /zir.naː/: first-person plural past passive of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zurnā", "zāra", "zirnā"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "تزار",
-        "u": "تزار",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تزار (form I)\n# تُزَارُ (tuzāru) /tu.zaː.ru/: inflection of زَارَ (zāra):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُزَارَ (tuzāra) /tu.zaː.ra/: inflection of زَارَ (zāra):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzāru", "zāra", "tuzāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "يزور",
-        "u": "يزور",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يزور (form I)\n# يَزُورُ (yazūru) /ja.zuː.ru/: third-person masculine singular non-past active indicative of زَارَ (zāra)\n# يَزُورَ (yazūra) /ja.zuː.ra/: third-person masculine singular non-past active subjunctive of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazūru", "zāra", "yazūra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "يزار",
-        "u": "يزار",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يزار (form I)\n# يُزَارُ (yuzāru) /ju.zaː.ru/: third-person masculine singular non-past passive indicative of زَارَ (zāra)\n# يُزَارَ (yuzāra) /ju.zaː.ra/: third-person masculine singular non-past passive subjunctive of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuzāru", "zāra", "yuzāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "يزر",
-        "u": "يزر",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يزر (form I)\n# يَزُرْ (yazur) /ja.zur/: third-person masculine singular non-past active jussive of زَارَ (zāra)\n# يُزَرْ (yuzar) /ju.zar/: third-person masculine singular non-past passive jussive of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazur", "zāra", "yuzar"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "زير",
-        "u": "زير",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "زِيرَ • (zīra) (form I) /ziː.ra/\n# third-person masculine singular past passive of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "s": [
-          ["nonlemma", "See the etymology of the corresponding lemma form."]
-        ],
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zīra", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "زارت",
-        "u": "زارت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زَارَتْ • (zārat) (form I) /zaː.rat/\n# third-person feminine singular past active of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zārat", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "تزور",
-        "u": "تزور",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تزور (form I)\n# تَزُورُ (tazūru) /ta.zuː.ru/: inflection of زَارَ (zāra):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَزُورَ (tazūra) /ta.zuː.ra/: inflection of زَارَ (zāra):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazūru", "zāra", "tazūra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "تزر",
-        "u": "تزر",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تزر (form I)\n# تَزُرْ (tazur) /ta.zur/: inflection of زَارَ (zāra):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُزَرْ (tuzar) /tu.zar/: inflection of زَارَ (zāra):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazur", "zāra", "tuzar"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "زيرت",
-        "u": "زيرت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زِيرَتْ • (zīrat) (form I) /ziː.rat/\n# third-person feminine singular past passive of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zīrat", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "زرت",
-        "u": "زرت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زرت (form I)\n# زُرْتُ (zurtu) /zur.tu/: first-person singular past active of زَارَ (zāra)\n# زُرْتَ (zurta) /zur.ta/: second-person masculine singular past active of زَارَ (zāra)\n# زُرْتِ (zurti) /zur.ti/: second-person feminine singular past active of زَارَ (zāra)\n# زِرْتُ (zirtu) /zir.tu/: first-person singular past passive of زَارَ (zāra)\n# زِرْتَ (zirta) /zir.ta/: second-person masculine singul",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zurtu", "zāra", "zurta"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "تزورين",
-        "u": "تزورين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَزُورِينَ • (tazūrīna) (form I) /ta.zuː.riː.na/\n# second-person feminine singular non-past active indicative of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazūrīna", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "تزوري",
-        "u": "تزوري",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَزُورِي • (tazūrī) (form I) /ta.zuː.riː/\n# second-person feminine singular non-past active subjunctive/jussive of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazūrī", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "زوري",
-        "u": "زوري",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زُورِي • (zūrī) (form I) /zuː.riː/\n# second-person feminine singular imperative of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zūrī", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "تزارين",
-        "u": "تزارين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزَارِينَ • (tuzārīna) (form I) /tu.zaː.riː.na/\n# second-person feminine singular non-past passive indicative of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzārīna", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "تزاري",
-        "u": "تزاري",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزَارِي • (tuzārī) (form I) /tu.zaː.riː/\n# second-person feminine singular non-past passive subjunctive/jussive of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzārī", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "أزور",
-        "u": "أزور",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أزور (form I)\n# أَزُورُ (ʔazūru) /ʔa.zuː.ru/: first-person singular non-past active indicative of زَارَ (zāra)\n# أَزُورَ (ʔazūra) /ʔa.zuː.ra/: first-person singular non-past active subjunctive of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔazūru", "zāra", "ʔazūra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "أزر",
-        "u": "أزر",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أزر (form I)\n# أَزُرْ (ʔazur) /ʔa.zur/: first-person singular non-past active jussive of زَارَ (zāra)\n# أُزَرْ (ʔuzar) /ʔu.zar/: first-person singular non-past passive jussive of زَارَ (zāra)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔazur", "zāra", "ʔuzar"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "أزار",
-        "u": "أزار",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أزار (form I)\n# أُزَارُ (ʔuzāru) /ʔu.zaː.ru/: first-person singular non-past passive indicative of زَارَ (zāra)\n# أُزَارَ (ʔuzāra) /ʔu.zaː.ra/: first-person singular non-past passive subjunctive of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔuzāru", "zāra", "ʔuzāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "نزور",
-        "u": "نزور",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نزور (form I)\n# نَزُورُ (nazūru) /na.zuː.ru/: first-person plural non-past active indicative of زَارَ (zāra)\n# نَزُورَ (nazūra) /na.zuː.ra/: first-person plural non-past active subjunctive of زَارَ (zāra)",
-        "tag": ["form-i", "no-gloss", "obsolete"],
-        "r": ["nazūru", "zāra", "nazūra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "نزر",
-        "u": "نزر",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نزر (form I)\n# نَزُرْ (nazur) /na.zur/: first-person plural non-past active jussive of زَارَ (zāra)\n# نُزَرْ (nuzar) /nu.zar/: first-person plural non-past passive jussive of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "s": [
-          ["nonlemma", "See the etymology of the corresponding lemma form."]
-        ],
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nazur", "zāra", "nuzar"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "نزار",
-        "u": "نزار",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نزار (form I)\n# نُزَارُ (nuzāru) /nu.zaː.ru/: first-person plural non-past passive indicative of زَارَ (zāra)\n# نُزَارَ (nuzāra) /nu.zaː.ra/: first-person plural non-past passive subjunctive of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuzāru", "zāra", "nuzāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "زرتم",
-        "u": "زرتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زرتم (form I)\n# زُرْتُمْ (zurtum) /zur.tum/: second-person masculine plural past active of زَارَ (zāra)\n# زِرْتُمْ (zirtum) /zir.tum/: second-person masculine plural past passive of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zurtum", "zāra", "zirtum"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "تزورون",
-        "u": "تزورون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَزُورُونَ • (tazūrūna) (form I) /ta.zuː.ruː.na/\n# second-person masculine plural non-past active indicative of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazūrūna", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "تزوروا",
-        "u": "تزوروا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَزُورُوا • (tazūrū) (form I) /ta.zuː.ruː/\n# second-person masculine plural non-past active subjunctive/jussive of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazūrū", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "زوروا",
-        "u": "زوروا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زُورُوا • (zūrū) (form I) /zuː.ruː/\n# second-person masculine plural imperative of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zūrū", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "تزارون",
-        "u": "تزارون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزَارُونَ • (tuzārūna) (form I) /tu.zaː.ruː.na/\n# second-person masculine plural non-past passive indicative of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzārūna", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "تزاروا",
-        "u": "تزاروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزَارُوا • (tuzārū) (form I) /tu.zaː.ruː/\n# second-person masculine plural non-past passive subjunctive/jussive of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzārū", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "زاروا",
-        "u": "زاروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زَارُوا • (zārū) (form I) /zaː.ruː/\n# third-person masculine plural past active of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zārū", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "يزورون",
-        "u": "يزورون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَزُورُونَ • (yazūrūna) (form I) /ja.zuː.ruː.na/\n# third-person masculine plural non-past active indicative of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazūrūna", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "يزوروا",
-        "u": "يزوروا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَزُورُوا • (yazūrū) (form I) /ja.zuː.ruː/\n# third-person masculine plural non-past active subjunctive/jussive of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazūrū", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "زيروا",
-        "u": "زيروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زِيرُوا • (zīrū) (form I) /ziː.ruː/\n# third-person masculine plural past passive of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zīrū", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "يزارون",
-        "u": "يزارون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُزَارُونَ • (yuzārūna) (form I) /ju.zaː.ruː.na/\n# third-person masculine plural non-past passive indicative of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuzārūna", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "يزاروا",
-        "u": "يزاروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُزَارُوا • (yuzārū) (form I) /ju.zaː.ruː/\n# third-person masculine plural non-past passive subjunctive/jussive of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuzārū", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "زرتن",
-        "u": "زرتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زرتن (form I)\n# زُرْتُنَّ (zurtunna) /zur.tun.na/: second-person feminine plural past active of زَارَ (zāra)\n# زِرْتُنَّ (zirtunna) /zir.tun.na/: second-person feminine plural past passive of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zurtunna", "zāra", "zirtunna"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "تزرن",
-        "u": "تزرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تزرن (form I)\n# تَزُرْنَ (tazurna) /ta.zur.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of زَارَ (zāra)\n# تُزَرْنَ (tuzarna) /tu.zar.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazurna", "zāra", "tuzarna"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "زرن",
-        "u": "زرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زرن (form I)\n# زُرْنَ (zurna) /zur.na/: inflection of زَارَ (zāra):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# زِرْنَ (zirna) /zir.na/: third-person feminine plural past passive of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zurna", "zāra", "zirna"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "يزرن",
-        "u": "يزرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يزرن (form I)\n# يَزُرْنَ (yazurna) /ja.zur.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of زَارَ (zāra)\n# يُزَرْنَ (yuzarna) /ju.zar.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazurna", "zāra", "yuzarna"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "زورا",
-        "u": "زورا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "زُورَا • (zūrā) (form I) /zuː.raː/\n# second-person dual imperative of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zūrā", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "زرتما",
-        "u": "زرتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زرتما (form I)\n# زُرْتُمَا (zurtumā) /zur.tu.maː/: second-person dual past active of زَارَ (zāra)\n# زِرْتُمَا (zirtumā) /zir.tu.maː/: second-person dual past passive of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zurtumā", "zāra", "zirtumā"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "زارا",
-        "u": "زارا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زَارَا • (zārā) (form I) /zaː.raː/\n# third-person masculine dual past active of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zārā", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "زارتا",
-        "u": "زارتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زَارَتَا • (zāratā) (form I) /zaː.ra.taː/\n# third-person feminine dual past active of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zāratā", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "زيرا",
-        "u": "زيرا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زِيرَا • (zīrā) (form I) /ziː.raː/\n# third-person masculine dual past passive of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zīrā", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "زيرتا",
-        "u": "زيرتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زِيرَتَا • (zīratā) (form I) /ziː.ra.taː/\n# third-person feminine dual past passive of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["zīratā", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "يزوران",
-        "u": "يزوران",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَزُورَانِ • (yazūrāni) (form I) /ja.zuː.raː.ni/\n# third-person masculine dual non-past active indicative of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazūrāni", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "تزوران",
-        "u": "تزوران",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَزُورَانِ • (tazūrāni) (form I) /ta.zuː.raː.ni/\n# inflection of زَارَ (zāra):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazūrāni", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "يزاران",
-        "u": "يزاران",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُزَارَانِ • (yuzārāni) (form I) /ju.zaː.raː.ni/\n# third-person masculine dual non-past passive indicative of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuzārāni", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "تزورا",
-        "u": "تزورا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَزُورَا • (tazūrā) (form I) /ta.zuː.raː/\n# inflection of زَارَ (zāra):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazūrā", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "تزارا",
-        "u": "تزارا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزَارَا • (tuzārā) (form I) /tu.zaː.raː/\n# inflection of زَارَ (zāra):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzārā", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "يزارا",
-        "u": "يزارا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُزَارَا • (yuzārā) (form I) /ju.zaː.raː/\n# third-person masculine dual non-past passive subjunctive/jussive of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuzārā", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "يزورا",
-        "u": "يزورا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَزُورَا • (yazūrā) (form I) /ja.zuː.raː/\n# third-person masculine dual non-past active subjunctive/jussive of زَارَ (zāra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yazūrā", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      },
-      {
-        "w": "تزاران",
-        "u": "تزاران",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُزَارَانِ • (tuzārāni) (form I) /tu.zaː.raː.ni/\n# inflection of زَارَ (zāra):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuzārāni", "zāra"],
-        "k": "زار",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "زر",
+  "ses": {
     "harf": "ز",
+    "fasil": "زر",
     "mahrec": "esaliyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "زور",
+      "tur": "noun",
+      "etim_no": "1.2",
+      "baslik": "زُور • (zūr) pl",
+      "etim_sablon": [
+        ["nonlemma", "See the etymology of the corresponding lemma form."]
+      ],
+      "anlam": ["plural of أَزْوَر (ʔazwar, “slanting; curved; cross-eyed”)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["أَزْوَر"],
+      "okunus": ["zūr"],
+      "bag": "asıl madde",
+      "etimoloji": 0
+    },
+    {
+      "madde": "زر",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "زُرْ • (zur) (form I) /zur/\n# second-person masculine singular imperative of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zur", "zāra"]
+    },
+    {
+      "madde": "زرنا",
+      "tur": "verb",
+      "baslik": "زرنا (form I)\n# زُرْنَا (zurnā) /zur.naː/: first-person plural past active of زَارَ (zāra)\n# زِرْنَا (zirnā) /zir.naː/: first-person plural past passive of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zurnā", "zāra", "zirnā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزار",
+      "tur": "verb",
+      "baslik": "تزار (form I)\n# تُزَارُ (tuzāru) /tu.zaː.ru/: inflection of زَارَ (zāra):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُزَارَ (tuzāra) /tu.zaː.ra/: inflection of زَارَ (zāra):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzāru", "zāra", "tuzāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزور",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يزور (form I)\n# يَزُورُ (yazūru) /ja.zuː.ru/: third-person masculine singular non-past active indicative of زَارَ (zāra)\n# يَزُورَ (yazūra) /ja.zuː.ra/: third-person masculine singular non-past active subjunctive of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazūru", "zāra", "yazūra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزار",
+      "tur": "verb",
+      "baslik": "يزار (form I)\n# يُزَارُ (yuzāru) /ju.zaː.ru/: third-person masculine singular non-past passive indicative of زَارَ (zāra)\n# يُزَارَ (yuzāra) /ju.zaː.ra/: third-person masculine singular non-past passive subjunctive of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuzāru", "zāra", "yuzāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزر",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يزر (form I)\n# يَزُرْ (yazur) /ja.zur/: third-person masculine singular non-past active jussive of زَارَ (zāra)\n# يُزَرْ (yuzar) /ju.zar/: third-person masculine singular non-past passive jussive of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazur", "zāra", "yuzar"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زير",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "زِيرَ • (zīra) (form I) /ziː.ra/\n# third-person masculine singular past passive of زَارَ (zāra)",
+      "etim_sablon": [
+        ["nonlemma", "See the etymology of the corresponding lemma form."]
+      ],
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zīra", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زارت",
+      "tur": "verb",
+      "baslik": "زَارَتْ • (zārat) (form I) /zaː.rat/\n# third-person feminine singular past active of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zārat", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزور",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تزور (form I)\n# تَزُورُ (tazūru) /ta.zuː.ru/: inflection of زَارَ (zāra):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَزُورَ (tazūra) /ta.zuː.ra/: inflection of زَارَ (zāra):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazūru", "zāra", "tazūra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزر",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تزر (form I)\n# تَزُرْ (tazur) /ta.zur/: inflection of زَارَ (zāra):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُزَرْ (tuzar) /tu.zar/: inflection of زَارَ (zāra):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazur", "zāra", "tuzar"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زيرت",
+      "tur": "verb",
+      "baslik": "زِيرَتْ • (zīrat) (form I) /ziː.rat/\n# third-person feminine singular past passive of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zīrat", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زرت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زرت (form I)\n# زُرْتُ (zurtu) /zur.tu/: first-person singular past active of زَارَ (zāra)\n# زُرْتَ (zurta) /zur.ta/: second-person masculine singular past active of زَارَ (zāra)\n# زُرْتِ (zurti) /zur.ti/: second-person feminine singular past active of زَارَ (zāra)\n# زِرْتُ (zirtu) /zir.tu/: first-person singular past passive of زَارَ (zāra)\n# زِرْتَ (zirta) /zir.ta/: second-person masculine singul",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zurtu", "zāra", "zurta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزورين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَزُورِينَ • (tazūrīna) (form I) /ta.zuː.riː.na/\n# second-person feminine singular non-past active indicative of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazūrīna", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزوري",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَزُورِي • (tazūrī) (form I) /ta.zuː.riː/\n# second-person feminine singular non-past active subjunctive/jussive of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazūrī", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زوري",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زُورِي • (zūrī) (form I) /zuː.riː/\n# second-person feminine singular imperative of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zūrī", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزارين",
+      "tur": "verb",
+      "baslik": "تُزَارِينَ • (tuzārīna) (form I) /tu.zaː.riː.na/\n# second-person feminine singular non-past passive indicative of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzārīna", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزاري",
+      "tur": "verb",
+      "baslik": "تُزَارِي • (tuzārī) (form I) /tu.zaː.riː/\n# second-person feminine singular non-past passive subjunctive/jussive of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzārī", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أزور",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أزور (form I)\n# أَزُورُ (ʔazūru) /ʔa.zuː.ru/: first-person singular non-past active indicative of زَارَ (zāra)\n# أَزُورَ (ʔazūra) /ʔa.zuː.ra/: first-person singular non-past active subjunctive of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔazūru", "zāra", "ʔazūra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أزر",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أزر (form I)\n# أَزُرْ (ʔazur) /ʔa.zur/: first-person singular non-past active jussive of زَارَ (zāra)\n# أُزَرْ (ʔuzar) /ʔu.zar/: first-person singular non-past passive jussive of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔazur", "zāra", "ʔuzar"]
+    },
+    {
+      "madde": "أزار",
+      "tur": "verb",
+      "baslik": "أزار (form I)\n# أُزَارُ (ʔuzāru) /ʔu.zaː.ru/: first-person singular non-past passive indicative of زَارَ (zāra)\n# أُزَارَ (ʔuzāra) /ʔu.zaː.ra/: first-person singular non-past passive subjunctive of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔuzāru", "zāra", "ʔuzāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نزور",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نزور (form I)\n# نَزُورُ (nazūru) /na.zuː.ru/: first-person plural non-past active indicative of زَارَ (zāra)\n# نَزُورَ (nazūra) /na.zuː.ra/: first-person plural non-past active subjunctive of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss", "obsolete"],
+      "okunus": ["nazūru", "zāra", "nazūra"]
+    },
+    {
+      "madde": "نزر",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نزر (form I)\n# نَزُرْ (nazur) /na.zur/: first-person plural non-past active jussive of زَارَ (zāra)\n# نُزَرْ (nuzar) /nu.zar/: first-person plural non-past passive jussive of زَارَ (zāra)",
+      "etim_sablon": [
+        ["nonlemma", "See the etymology of the corresponding lemma form."]
+      ],
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nazur", "zāra", "nuzar"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نزار",
+      "tur": "verb",
+      "baslik": "نزار (form I)\n# نُزَارُ (nuzāru) /nu.zaː.ru/: first-person plural non-past passive indicative of زَارَ (zāra)\n# نُزَارَ (nuzāra) /nu.zaː.ra/: first-person plural non-past passive subjunctive of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuzāru", "zāra", "nuzāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زرتم",
+      "tur": "verb",
+      "baslik": "زرتم (form I)\n# زُرْتُمْ (zurtum) /zur.tum/: second-person masculine plural past active of زَارَ (zāra)\n# زِرْتُمْ (zirtum) /zir.tum/: second-person masculine plural past passive of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zurtum", "zāra", "zirtum"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزورون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَزُورُونَ • (tazūrūna) (form I) /ta.zuː.ruː.na/\n# second-person masculine plural non-past active indicative of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazūrūna", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزوروا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَزُورُوا • (tazūrū) (form I) /ta.zuː.ruː/\n# second-person masculine plural non-past active subjunctive/jussive of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazūrū", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زوروا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زُورُوا • (zūrū) (form I) /zuː.ruː/\n# second-person masculine plural imperative of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zūrū", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزارون",
+      "tur": "verb",
+      "baslik": "تُزَارُونَ • (tuzārūna) (form I) /tu.zaː.ruː.na/\n# second-person masculine plural non-past passive indicative of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzārūna", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزاروا",
+      "tur": "verb",
+      "baslik": "تُزَارُوا • (tuzārū) (form I) /tu.zaː.ruː/\n# second-person masculine plural non-past passive subjunctive/jussive of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzārū", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زاروا",
+      "tur": "verb",
+      "baslik": "زَارُوا • (zārū) (form I) /zaː.ruː/\n# third-person masculine plural past active of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zārū", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزورون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَزُورُونَ • (yazūrūna) (form I) /ja.zuː.ruː.na/\n# third-person masculine plural non-past active indicative of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazūrūna", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزوروا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَزُورُوا • (yazūrū) (form I) /ja.zuː.ruː/\n# third-person masculine plural non-past active subjunctive/jussive of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazūrū", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زيروا",
+      "tur": "verb",
+      "baslik": "زِيرُوا • (zīrū) (form I) /ziː.ruː/\n# third-person masculine plural past passive of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zīrū", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزارون",
+      "tur": "verb",
+      "baslik": "يُزَارُونَ • (yuzārūna) (form I) /ju.zaː.ruː.na/\n# third-person masculine plural non-past passive indicative of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuzārūna", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزاروا",
+      "tur": "verb",
+      "baslik": "يُزَارُوا • (yuzārū) (form I) /ju.zaː.ruː/\n# third-person masculine plural non-past passive subjunctive/jussive of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuzārū", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زرتن",
+      "tur": "verb",
+      "baslik": "زرتن (form I)\n# زُرْتُنَّ (zurtunna) /zur.tun.na/: second-person feminine plural past active of زَارَ (zāra)\n# زِرْتُنَّ (zirtunna) /zir.tun.na/: second-person feminine plural past passive of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zurtunna", "zāra", "zirtunna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزرن",
+      "tur": "verb",
+      "baslik": "تزرن (form I)\n# تَزُرْنَ (tazurna) /ta.zur.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of زَارَ (zāra)\n# تُزَرْنَ (tuzarna) /tu.zar.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazurna", "zāra", "tuzarna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زرن",
+      "tur": "verb",
+      "baslik": "زرن (form I)\n# زُرْنَ (zurna) /zur.na/: inflection of زَارَ (zāra):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# زِرْنَ (zirna) /zir.na/: third-person feminine plural past passive of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zurna", "zāra", "zirna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزرن",
+      "tur": "verb",
+      "baslik": "يزرن (form I)\n# يَزُرْنَ (yazurna) /ja.zur.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of زَارَ (zāra)\n# يُزَرْنَ (yuzarna) /ju.zar.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazurna", "zāra", "yuzarna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زورا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "زُورَا • (zūrā) (form I) /zuː.raː/\n# second-person dual imperative of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zūrā", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زرتما",
+      "tur": "verb",
+      "baslik": "زرتما (form I)\n# زُرْتُمَا (zurtumā) /zur.tu.maː/: second-person dual past active of زَارَ (zāra)\n# زِرْتُمَا (zirtumā) /zir.tu.maː/: second-person dual past passive of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zurtumā", "zāra", "zirtumā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زارا",
+      "tur": "verb",
+      "baslik": "زَارَا • (zārā) (form I) /zaː.raː/\n# third-person masculine dual past active of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zārā", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زارتا",
+      "tur": "verb",
+      "baslik": "زَارَتَا • (zāratā) (form I) /zaː.ra.taː/\n# third-person feminine dual past active of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zāratā", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زيرا",
+      "tur": "verb",
+      "baslik": "زِيرَا • (zīrā) (form I) /ziː.raː/\n# third-person masculine dual past passive of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zīrā", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "زيرتا",
+      "tur": "verb",
+      "baslik": "زِيرَتَا • (zīratā) (form I) /ziː.ra.taː/\n# third-person feminine dual past passive of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["zīratā", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزوران",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَزُورَانِ • (yazūrāni) (form I) /ja.zuː.raː.ni/\n# third-person masculine dual non-past active indicative of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazūrāni", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزوران",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَزُورَانِ • (tazūrāni) (form I) /ta.zuː.raː.ni/\n# inflection of زَارَ (zāra):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazūrāni", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزاران",
+      "tur": "verb",
+      "baslik": "يُزَارَانِ • (yuzārāni) (form I) /ju.zaː.raː.ni/\n# third-person masculine dual non-past passive indicative of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuzārāni", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزورا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَزُورَا • (tazūrā) (form I) /ta.zuː.raː/\n# inflection of زَارَ (zāra):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazūrā", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزارا",
+      "tur": "verb",
+      "baslik": "تُزَارَا • (tuzārā) (form I) /tu.zaː.raː/\n# inflection of زَارَ (zāra):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzārā", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزارا",
+      "tur": "verb",
+      "baslik": "يُزَارَا • (yuzārā) (form I) /ju.zaː.raː/\n# third-person masculine dual non-past passive subjunctive/jussive of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuzārā", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يزورا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَزُورَا • (yazūrā) (form I) /ja.zuː.raː/\n# third-person masculine dual non-past active subjunctive/jussive of زَارَ (zāra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yazūrā", "zāra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تزاران",
+      "tur": "verb",
+      "baslik": "تُزَارَانِ • (tuzārāni) (form I) /tu.zaː.raː.ni/\n# inflection of زَارَ (zāra):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuzārāni", "zāra"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "etymarab": {
+    "latin": "zār",
+    "kok_maddesi": "Back to library EtymArab zār زار BP … • HDAL • © SG | 15Feb2021 √ZāR, ZWR n. name for a popular cult of spirits found in northeastern Africa and such adjacent regions as the Arabian peninsula – art. »zār« (A. Rouaud, T. Battain), in EI² . ▪ »The zār ritual or practice seems to have originated in the Horn of Africa and, especially, in Ethiopia. According to E. Cerulli, the word (Ar zār , Amh zar , Som saar , etc.) may be said to derive from “the name of the supreme god of the pagan Cushitic peoples, the Sky-God called in Agaw (Bilen) ǧār , and in the Sidamo languages (Kaffa) yarō and (Buoro) darō ”. The Italian scholar further thought that, in the context of Ethiopian Christianity, this god must have been reduced to the role of an evil spirit, one which has been likewise retained among the Muslims and, probably, among the Falasha. These propositions do not provide answers to all the questions involved, but are still of value in so far as they have not been replaced by more information. Etymologies deriving zār from the Ar vb. zāra “to visit” seem fantastic, although current in Arab milieux« – art. »zār« (A. Rouaud, T. Battain), in EI² . ▪ »a religious custom apparently originating in the Horn of Africa during the 18th century and later spreading throughout East and North Africa. Zār custom involves the possession of an individual (usually female) by a spirit. It is also observed in Egypt, Sudan, Somalia, southern Iran and elsewhere in the Middle East. / […] / The zār cult served as a refuge for women and effeminate men in conservative, Muslim-dominated Sudan. / In Ethiopia, zār also refers to malevolent demons. [… M]ental illness is often attributed to zār possession« – en.wiki – ▪ DRS 8 (1999)#[ZAR]: Te Tña Amh Gur zar , Ar zār ‘esprit mauvais’, Soq zehereh ‘sorcière’. ▪ DRS 8 (1999)#[ZAR]: Ar – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
+    "kelime_maddeleri": []
+  },
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "زار", "r7"]
+  ],
+  "mana": {
     "ince": "falsely.r.02",
     "orta": "adv.all",
     "ust": "hâl ve vasıf",
@@ -722,16 +515,11 @@
     "dayanak_tanim": "in an incorrect manner",
     "synset_sayisi": 7
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "artifact.n.01",
     "falsely.r.02",
     "forge.v.02",
@@ -740,12 +528,10 @@
     "statement.n.01",
     "victimize.v.01"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

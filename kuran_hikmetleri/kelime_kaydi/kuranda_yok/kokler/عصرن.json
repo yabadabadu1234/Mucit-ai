@@ -1,341 +1,245 @@
 {
   "kok": "عصرن",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "عصرن", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "عصرنا",
-        "u": "عصرنا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "عصرنا (form Iq)\n# عَصْرَنَا (ʕaṣranā) /ʕasˤ.ra.naː/: third-person masculine dual past active of عَصْرَنَ (ʕaṣrana)\n# عَصْرَنَّا (ʕaṣrannā) /ʕasˤ.ran.naː/: first-person plural past active of عَصْرَنَ (ʕaṣrana)\n# عُصْرِنَا (ʕuṣrinā) /ʕusˤ.ri.naː/: third-person masculine dual past passive of عَصْرَنَ (ʕaṣrana)\n# عُصْرِنَّا (ʕuṣrinnā) /ʕusˤ.rin.naː/: first-person plural past passive of عَصْرَنَ (ʕaṣra",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʕaṣranā", "ʕaṣrana", "ʕaṣrannā"],
-        "k": "عصرن",
-        "yol": "kök"
-      },
-      {
-        "w": "تعصرن",
-        "u": "تعصرن",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تعصرن (form Iq)\n# تُعَصْرِنُ (tuʕaṣrinu) /tu.ʕasˤ.ri.nu/: inflection of عَصْرَنَ (ʕaṣrana):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُعَصْرِنَّ (tuʕaṣrinna) /tu.ʕasˤ.rin.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of عَصْرَنَ (ʕaṣrana)\n# تُعَصْرَنُ (tuʕaṣranu) /tu.ʕasˤ.ra.nu/",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuʕaṣrinu", "ʕaṣrana", "tuʕaṣrinna"],
-        "k": "عصرن",
-        "yol": "kök"
-      },
-      {
-        "w": "عصرن",
-        "u": "عصرن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb",
-        "e": "عَصْرَنَ • (ʕaṣrana) Iq (non-past يُعَصْرِنُ (yuʕaṣrinu), verbal noun عَصْرَنَة (ʕaṣrana))",
-        "t": "Denominal verb of عَصْر (ʕaṣr, “age, era, times”) with the addition of a nasal, forming the root ع ص ر ن (ʕ ṣ r n).",
-        "s": [
-          ["denominal verb", "Denominal verb of عَصْر (ʕaṣr, “age, era, times”)"],
-          ["ar-root", "ع ص ر ن (ʕ ṣ r n)"]
-        ],
-        "synonyms": ["عَصَّرَ", "حَدَّثَ"],
-        "g": ["to make modern, to modernize"],
-        "tag": ["transitive"],
-        "r": ["ʕaṣrana"],
-        "ipa": ["/ʕasˤ.ra.na/"],
-        "el": [
-          ["عَصْر", "عصر#Arabic"],
-          ["ع ص ر ن", "Appendix:Arabic roots/ع ص ر ن"]
-        ],
-        "k": "عصرن",
-        "yol": "kök"
-      },
-      {
-        "w": "يعصرن",
-        "u": "يعصرن",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يعصرن (form Iq)\n# يُعَصْرِنُ (yuʕaṣrinu) /ju.ʕasˤ.ri.nu/: third-person masculine singular non-past active indicative of عَصْرَنَ (ʕaṣrana)\n# يُعَصْرِنَّ (yuʕaṣrinna) /ju.ʕasˤ.rin.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of عَصْرَنَ (ʕaṣrana)\n# يُعَصْرَنُ (yuʕaṣranu) /ju.ʕasˤ.ra.nu/: third-person masculine singular non-past passive indicative of عَصْرَنَ (ʕaṣ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuʕaṣrinu", "ʕaṣrana", "yuʕaṣrinna"],
-        "k": "عصرن",
-        "yol": "kök"
-      },
-      {
-        "w": "أعصرن",
-        "u": "أعصرن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أعصرن (form Iq)\n# أُعَصْرِنُ (ʔuʕaṣrinu) /ʔu.ʕasˤ.ri.nu/: first-person singular non-past active indicative of عَصْرَنَ (ʕaṣrana)\n# أُعَصْرَنُ (ʔuʕaṣranu) /ʔu.ʕasˤ.ra.nu/: first-person singular non-past passive indicative of عَصْرَنَ (ʕaṣrana)\n# أُعَصْرِنَ (ʔuʕaṣrina) /ʔu.ʕasˤ.ri.na/: first-person singular non-past active subjunctive of عَصْرَنَ (ʕaṣrana)\n# أُعَصْرَنَ (ʔuʕaṣrana) /ʔu.ʕasˤ.ra.na/: f",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʔuʕaṣrinu", "ʕaṣrana", "ʔuʕaṣranu"],
-        "k": "عصرن",
-        "yol": "kök"
-      },
-      {
-        "w": "تعصرنا",
-        "u": "تعصرنا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تعصرنا (form Iq)\n# تُعَصْرِنَا (tuʕaṣrinā) /tu.ʕasˤ.ri.naː/: inflection of عَصْرَنَ (ʕaṣrana):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُعَصْرَنَا (tuʕaṣranā) /tu.ʕasˤ.ra.naː/: inflection of عَصْرَنَ (ʕaṣrana):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passi",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuʕaṣrinā", "ʕaṣrana", "tuʕaṣranā"],
-        "k": "عصرن",
-        "yol": "kök"
-      },
-      {
-        "w": "عصرنتا",
-        "u": "عصرنتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عصرنتا (form Iq)\n# عَصْرَنَتَا (ʕaṣranatā) /ʕasˤ.ra.na.taː/: third-person feminine dual past active of عَصْرَنَ (ʕaṣrana)\n# عُصْرِنَتَا (ʕuṣrinatā) /ʕusˤ.ri.na.taː/: third-person feminine dual past passive of عَصْرَنَ (ʕaṣrana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʕaṣranatā", "ʕaṣrana", "ʕuṣrinatā"],
-        "k": "عصرن",
-        "yol": "kök"
-      },
-      {
-        "w": "عصرنت",
-        "u": "عصرنت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عصرنت (form Iq)\n# عَصْرَنْتُ (ʕaṣrantu) /ʕasˤ.ran.tu/: first-person singular past active of عَصْرَنَ (ʕaṣrana)\n# عَصْرَنْتَ (ʕaṣranta) /ʕasˤ.ran.ta/: second-person masculine singular past active of عَصْرَنَ (ʕaṣrana)\n# عَصْرَنْتِ (ʕaṣranti) /ʕasˤ.ran.ti/: second-person feminine singular past active of عَصْرَنَ (ʕaṣrana)\n# عَصْرَنَتْ (ʕaṣranat) /ʕasˤ.ra.nat/: third-person feminine singular past act",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʕaṣrantu", "ʕaṣrana", "ʕaṣranta"],
-        "k": "عصرن",
-        "yol": "kök"
-      },
-      {
-        "w": "عصرنتم",
-        "u": "عصرنتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عصرنتم (form Iq)\n# عَصْرَنْتُمْ (ʕaṣrantum) /ʕasˤ.ran.tum/: second-person masculine plural past active of عَصْرَنَ (ʕaṣrana)\n# عُصْرِنْتُمْ (ʕuṣrintum) /ʕusˤ.rin.tum/: second-person masculine plural past passive of عَصْرَنَ (ʕaṣrana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʕaṣrantum", "ʕaṣrana", "ʕuṣrintum"],
-        "k": "عصرن",
-        "yol": "kök"
-      },
-      {
-        "w": "عصرنتما",
-        "u": "عصرنتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عصرنتما (form Iq)\n# عَصْرَنْتُمَا (ʕaṣrantumā) /ʕasˤ.ran.tu.maː/: second-person dual past active of عَصْرَنَ (ʕaṣrana)\n# عُصْرِنْتُمَا (ʕuṣrintumā) /ʕusˤ.rin.tu.maː/: second-person dual past passive of عَصْرَنَ (ʕaṣrana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʕaṣrantumā", "ʕaṣrana", "ʕuṣrintumā"],
-        "k": "عصرن",
-        "yol": "kök"
-      },
-      {
-        "w": "عصرنوا",
-        "u": "عصرنوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عصرنوا (form Iq)\n# عَصْرَنُوا (ʕaṣranū) /ʕasˤ.ra.nuː/: third-person masculine plural past active of عَصْرَنَ (ʕaṣrana)\n# عُصْرِنُوا (ʕuṣrinū) /ʕusˤ.ri.nuː/: third-person masculine plural past passive of عَصْرَنَ (ʕaṣrana)\n# عَصْرِنُوا (ʕaṣrinū) /ʕasˤ.ri.nuː/: second-person masculine plural imperative of عَصْرَنَ (ʕaṣrana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʕaṣranū", "ʕaṣrana", "ʕuṣrinū"],
-        "k": "عصرن",
-        "yol": "kök"
-      },
-      {
-        "w": "عصرنتن",
-        "u": "عصرنتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عصرنتن (form Iq)\n# عَصْرَنْتُنَّ (ʕaṣrantunna) /ʕasˤ.ran.tun.na/: second-person feminine plural past active of عَصْرَنَ (ʕaṣrana)\n# عُصْرِنْتُنَّ (ʕuṣrintunna) /ʕusˤ.rin.tun.na/: second-person feminine plural past passive of عَصْرَنَ (ʕaṣrana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʕaṣrantunna", "ʕaṣrana", "ʕuṣrintunna"],
-        "k": "عصرن",
-        "yol": "kök"
-      },
-      {
-        "w": "تعصرنين",
-        "u": "تعصرنين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تعصرنين (form Iq)\n# تُعَصْرِنِينَ (tuʕaṣrinīna) /tu.ʕasˤ.ri.niː.na/: second-person feminine singular non-past active indicative of عَصْرَنَ (ʕaṣrana)\n# تُعَصْرَنِينَ (tuʕaṣranīna) /tu.ʕasˤ.ra.niː.na/: second-person feminine singular non-past passive indicative of عَصْرَنَ (ʕaṣrana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuʕaṣrinīna", "ʕaṣrana", "tuʕaṣranīna"],
-        "k": "عصرن",
-        "yol": "kök"
-      },
-      {
-        "w": "يعصرنان",
-        "u": "يعصرنان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يعصرنان (form Iq)\n# يُعَصْرِنَانِ (yuʕaṣrināni) /ju.ʕasˤ.ri.naː.ni/: third-person masculine dual non-past active indicative of عَصْرَنَ (ʕaṣrana)\n# يُعَصْرَنَانِ (yuʕaṣranāni) /ju.ʕasˤ.ra.naː.ni/: third-person masculine dual non-past passive indicative of عَصْرَنَ (ʕaṣrana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuʕaṣrināni", "ʕaṣrana", "yuʕaṣranāni"],
-        "k": "عصرن",
-        "yol": "kök"
-      },
-      {
-        "w": "تعصرني",
-        "u": "تعصرني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تعصرني (form Iq)\n# تُعَصْرِنِي (tuʕaṣrinī) /tu.ʕasˤ.ri.niː/: second-person feminine singular non-past active subjunctive/jussive of عَصْرَنَ (ʕaṣrana)\n# تُعَصْرَنِي (tuʕaṣranī) /tu.ʕasˤ.ra.niː/: second-person feminine singular non-past passive subjunctive/jussive of عَصْرَنَ (ʕaṣrana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuʕaṣrinī", "ʕaṣrana", "tuʕaṣranī"],
-        "k": "عصرن",
-        "yol": "kök"
-      },
-      {
-        "w": "تعصرنان",
-        "u": "تعصرنان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تعصرنان (form Iq)\n# تُعَصْرِنَانِ (tuʕaṣrināni) /tu.ʕasˤ.ri.naː.ni/: inflection of عَصْرَنَ (ʕaṣrana):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُعَصْرَنَانِ (tuʕaṣranāni) /tu.ʕasˤ.ra.naː.ni/: inflection of عَصْرَنَ (ʕaṣrana):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicativ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuʕaṣrināni", "ʕaṣrana", "tuʕaṣranāni"],
-        "k": "عصرن",
-        "yol": "kök"
-      },
-      {
-        "w": "نعصرن",
-        "u": "نعصرن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نعصرن (form Iq)\n# نُعَصْرِنُ (nuʕaṣrinu) /nu.ʕasˤ.ri.nu/: first-person plural non-past active indicative of عَصْرَنَ (ʕaṣrana)\n# نُعَصْرَنُ (nuʕaṣranu) /nu.ʕasˤ.ra.nu/: first-person plural non-past passive indicative of عَصْرَنَ (ʕaṣrana)\n# نُعَصْرِنَ (nuʕaṣrina) /nu.ʕasˤ.ri.na/: first-person plural non-past active subjunctive of عَصْرَنَ (ʕaṣrana)\n# نُعَصْرَنَ (nuʕaṣrana) /nu.ʕasˤ.ra.na/: first-p",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["nuʕaṣrinu", "ʕaṣrana", "nuʕaṣranu"],
-        "k": "عصرن",
-        "yol": "kök"
-      },
-      {
-        "w": "تعصرنون",
-        "u": "تعصرنون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تعصرنون (form Iq)\n# تُعَصْرِنُونَ (tuʕaṣrinūna) /tu.ʕasˤ.ri.nuː.na/: second-person masculine plural non-past active indicative of عَصْرَنَ (ʕaṣrana)\n# تُعَصْرَنُونَ (tuʕaṣranūna) /tu.ʕasˤ.ra.nuː.na/: second-person masculine plural non-past passive indicative of عَصْرَنَ (ʕaṣrana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuʕaṣrinūna", "ʕaṣrana", "tuʕaṣranūna"],
-        "k": "عصرن",
-        "yol": "kök"
-      },
-      {
-        "w": "يعصرنا",
-        "u": "يعصرنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يعصرنا (form Iq)\n# يُعَصْرِنَا (yuʕaṣrinā) /ju.ʕasˤ.ri.naː/: third-person masculine dual non-past active subjunctive/jussive of عَصْرَنَ (ʕaṣrana)\n# يُعَصْرَنَا (yuʕaṣranā) /ju.ʕasˤ.ra.naː/: third-person masculine dual non-past passive subjunctive/jussive of عَصْرَنَ (ʕaṣrana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuʕaṣrinā", "ʕaṣrana", "yuʕaṣranā"],
-        "k": "عصرن",
-        "yol": "kök"
-      },
-      {
-        "w": "يعصرنوا",
-        "u": "يعصرنوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يعصرنوا (form Iq)\n# يُعَصْرِنُوا (yuʕaṣrinū) /ju.ʕasˤ.ri.nuː/: third-person masculine plural non-past active subjunctive/jussive of عَصْرَنَ (ʕaṣrana)\n# يُعَصْرَنُوا (yuʕaṣranū) /ju.ʕasˤ.ra.nuː/: third-person masculine plural non-past passive subjunctive/jussive of عَصْرَنَ (ʕaṣrana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuʕaṣrinū", "ʕaṣrana", "yuʕaṣranū"],
-        "k": "عصرن",
-        "yol": "kök"
-      },
-      {
-        "w": "تعصرنوا",
-        "u": "تعصرنوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تعصرنوا (form Iq)\n# تُعَصْرِنُوا (tuʕaṣrinū) /tu.ʕasˤ.ri.nuː/: second-person masculine plural non-past active subjunctive/jussive of عَصْرَنَ (ʕaṣrana)\n# تُعَصْرَنُوا (tuʕaṣranū) /tu.ʕasˤ.ra.nuː/: second-person masculine plural non-past passive subjunctive/jussive of عَصْرَنَ (ʕaṣrana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuʕaṣrinū", "ʕaṣrana", "tuʕaṣranū"],
-        "k": "عصرن",
-        "yol": "kök"
-      },
-      {
-        "w": "عصرني",
-        "u": "عصرني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عَصْرِنِي • (ʕaṣrinī) (form Iq) /ʕasˤ.ri.niː/\n# second-person feminine singular imperative of عَصْرَنَ (ʕaṣrana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʕaṣrinī", "ʕaṣrana"],
-        "k": "عصرن",
-        "yol": "kök"
-      },
-      {
-        "w": "يعصرنون",
-        "u": "يعصرنون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يعصرنون (form Iq)\n# يُعَصْرِنُونَ (yuʕaṣrinūna) /ju.ʕasˤ.ri.nuː.na/: third-person masculine plural non-past active indicative of عَصْرَنَ (ʕaṣrana)\n# يُعَصْرَنُونَ (yuʕaṣranūna) /ju.ʕasˤ.ra.nuː.na/: third-person masculine plural non-past passive indicative of عَصْرَنَ (ʕaṣrana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuʕaṣrinūna", "ʕaṣrana", "yuʕaṣranūna"],
-        "k": "عصرن",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "عص",
+  "ses": {
     "harf": "ع",
+    "fasil": "عص",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "عصرنا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "عصرنا (form Iq)\n# عَصْرَنَا (ʕaṣranā) /ʕasˤ.ra.naː/: third-person masculine dual past active of عَصْرَنَ (ʕaṣrana)\n# عَصْرَنَّا (ʕaṣrannā) /ʕasˤ.ran.naː/: first-person plural past active of عَصْرَنَ (ʕaṣrana)\n# عُصْرِنَا (ʕuṣrinā) /ʕusˤ.ri.naː/: third-person masculine dual past passive of عَصْرَنَ (ʕaṣrana)\n# عُصْرِنَّا (ʕuṣrinnā) /ʕusˤ.rin.naː/: first-person plural past passive of عَصْرَنَ (ʕaṣra",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʕaṣranā", "ʕaṣrana", "ʕaṣrannā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعصرن",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تعصرن (form Iq)\n# تُعَصْرِنُ (tuʕaṣrinu) /tu.ʕasˤ.ri.nu/: inflection of عَصْرَنَ (ʕaṣrana):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُعَصْرِنَّ (tuʕaṣrinna) /tu.ʕasˤ.rin.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of عَصْرَنَ (ʕaṣrana)\n# تُعَصْرَنُ (tuʕaṣranu) /tu.ʕasˤ.ra.nu/",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuʕaṣrinu", "ʕaṣrana", "tuʕaṣrinna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عصرن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "عَصْرَنَ • (ʕaṣrana) Iq (non-past يُعَصْرِنُ (yuʕaṣrinu), verbal noun عَصْرَنَة (ʕaṣrana))",
+      "etim_sablon": [
+        ["denominal verb", "Denominal verb of عَصْر (ʕaṣr, “age, era, times”)"],
+        ["ar-root", "ع ص ر ن (ʕ ṣ r n)"]
+      ],
+      "esanlamli": ["عَصَّرَ", "حَدَّثَ"],
+      "anlam": ["to make modern, to modernize"],
+      "etiket": ["transitive"],
+      "okunus": ["ʕaṣrana"],
+      "ipa": ["/ʕasˤ.ra.na/"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعصرن",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يعصرن (form Iq)\n# يُعَصْرِنُ (yuʕaṣrinu) /ju.ʕasˤ.ri.nu/: third-person masculine singular non-past active indicative of عَصْرَنَ (ʕaṣrana)\n# يُعَصْرِنَّ (yuʕaṣrinna) /ju.ʕasˤ.rin.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of عَصْرَنَ (ʕaṣrana)\n# يُعَصْرَنُ (yuʕaṣranu) /ju.ʕasˤ.ra.nu/: third-person masculine singular non-past passive indicative of عَصْرَنَ (ʕaṣ",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuʕaṣrinu", "ʕaṣrana", "yuʕaṣrinna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعصرن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أعصرن (form Iq)\n# أُعَصْرِنُ (ʔuʕaṣrinu) /ʔu.ʕasˤ.ri.nu/: first-person singular non-past active indicative of عَصْرَنَ (ʕaṣrana)\n# أُعَصْرَنُ (ʔuʕaṣranu) /ʔu.ʕasˤ.ra.nu/: first-person singular non-past passive indicative of عَصْرَنَ (ʕaṣrana)\n# أُعَصْرِنَ (ʔuʕaṣrina) /ʔu.ʕasˤ.ri.na/: first-person singular non-past active subjunctive of عَصْرَنَ (ʕaṣrana)\n# أُعَصْرَنَ (ʔuʕaṣrana) /ʔu.ʕasˤ.ra.na/: f",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʔuʕaṣrinu", "ʕaṣrana", "ʔuʕaṣranu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعصرنا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تعصرنا (form Iq)\n# تُعَصْرِنَا (tuʕaṣrinā) /tu.ʕasˤ.ri.naː/: inflection of عَصْرَنَ (ʕaṣrana):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُعَصْرَنَا (tuʕaṣranā) /tu.ʕasˤ.ra.naː/: inflection of عَصْرَنَ (ʕaṣrana):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passi",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuʕaṣrinā", "ʕaṣrana", "tuʕaṣranā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عصرنتا",
+      "tur": "verb",
+      "baslik": "عصرنتا (form Iq)\n# عَصْرَنَتَا (ʕaṣranatā) /ʕasˤ.ra.na.taː/: third-person feminine dual past active of عَصْرَنَ (ʕaṣrana)\n# عُصْرِنَتَا (ʕuṣrinatā) /ʕusˤ.ri.na.taː/: third-person feminine dual past passive of عَصْرَنَ (ʕaṣrana)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʕaṣranatā", "ʕaṣrana", "ʕuṣrinatā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عصرنت",
+      "tur": "verb",
+      "baslik": "عصرنت (form Iq)\n# عَصْرَنْتُ (ʕaṣrantu) /ʕasˤ.ran.tu/: first-person singular past active of عَصْرَنَ (ʕaṣrana)\n# عَصْرَنْتَ (ʕaṣranta) /ʕasˤ.ran.ta/: second-person masculine singular past active of عَصْرَنَ (ʕaṣrana)\n# عَصْرَنْتِ (ʕaṣranti) /ʕasˤ.ran.ti/: second-person feminine singular past active of عَصْرَنَ (ʕaṣrana)\n# عَصْرَنَتْ (ʕaṣranat) /ʕasˤ.ra.nat/: third-person feminine singular past act",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʕaṣrantu", "ʕaṣrana", "ʕaṣranta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عصرنتم",
+      "tur": "verb",
+      "baslik": "عصرنتم (form Iq)\n# عَصْرَنْتُمْ (ʕaṣrantum) /ʕasˤ.ran.tum/: second-person masculine plural past active of عَصْرَنَ (ʕaṣrana)\n# عُصْرِنْتُمْ (ʕuṣrintum) /ʕusˤ.rin.tum/: second-person masculine plural past passive of عَصْرَنَ (ʕaṣrana)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʕaṣrantum", "ʕaṣrana", "ʕuṣrintum"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عصرنتما",
+      "tur": "verb",
+      "baslik": "عصرنتما (form Iq)\n# عَصْرَنْتُمَا (ʕaṣrantumā) /ʕasˤ.ran.tu.maː/: second-person dual past active of عَصْرَنَ (ʕaṣrana)\n# عُصْرِنْتُمَا (ʕuṣrintumā) /ʕusˤ.rin.tu.maː/: second-person dual past passive of عَصْرَنَ (ʕaṣrana)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʕaṣrantumā", "ʕaṣrana", "ʕuṣrintumā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عصرنوا",
+      "tur": "verb",
+      "baslik": "عصرنوا (form Iq)\n# عَصْرَنُوا (ʕaṣranū) /ʕasˤ.ra.nuː/: third-person masculine plural past active of عَصْرَنَ (ʕaṣrana)\n# عُصْرِنُوا (ʕuṣrinū) /ʕusˤ.ri.nuː/: third-person masculine plural past passive of عَصْرَنَ (ʕaṣrana)\n# عَصْرِنُوا (ʕaṣrinū) /ʕasˤ.ri.nuː/: second-person masculine plural imperative of عَصْرَنَ (ʕaṣrana)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʕaṣranū", "ʕaṣrana", "ʕuṣrinū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عصرنتن",
+      "tur": "verb",
+      "baslik": "عصرنتن (form Iq)\n# عَصْرَنْتُنَّ (ʕaṣrantunna) /ʕasˤ.ran.tun.na/: second-person feminine plural past active of عَصْرَنَ (ʕaṣrana)\n# عُصْرِنْتُنَّ (ʕuṣrintunna) /ʕusˤ.rin.tun.na/: second-person feminine plural past passive of عَصْرَنَ (ʕaṣrana)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʕaṣrantunna", "ʕaṣrana", "ʕuṣrintunna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعصرنين",
+      "tur": "verb",
+      "baslik": "تعصرنين (form Iq)\n# تُعَصْرِنِينَ (tuʕaṣrinīna) /tu.ʕasˤ.ri.niː.na/: second-person feminine singular non-past active indicative of عَصْرَنَ (ʕaṣrana)\n# تُعَصْرَنِينَ (tuʕaṣranīna) /tu.ʕasˤ.ra.niː.na/: second-person feminine singular non-past passive indicative of عَصْرَنَ (ʕaṣrana)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuʕaṣrinīna", "ʕaṣrana", "tuʕaṣranīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعصرنان",
+      "tur": "verb",
+      "baslik": "يعصرنان (form Iq)\n# يُعَصْرِنَانِ (yuʕaṣrināni) /ju.ʕasˤ.ri.naː.ni/: third-person masculine dual non-past active indicative of عَصْرَنَ (ʕaṣrana)\n# يُعَصْرَنَانِ (yuʕaṣranāni) /ju.ʕasˤ.ra.naː.ni/: third-person masculine dual non-past passive indicative of عَصْرَنَ (ʕaṣrana)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuʕaṣrināni", "ʕaṣrana", "yuʕaṣranāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعصرني",
+      "tur": "verb",
+      "baslik": "تعصرني (form Iq)\n# تُعَصْرِنِي (tuʕaṣrinī) /tu.ʕasˤ.ri.niː/: second-person feminine singular non-past active subjunctive/jussive of عَصْرَنَ (ʕaṣrana)\n# تُعَصْرَنِي (tuʕaṣranī) /tu.ʕasˤ.ra.niː/: second-person feminine singular non-past passive subjunctive/jussive of عَصْرَنَ (ʕaṣrana)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuʕaṣrinī", "ʕaṣrana", "tuʕaṣranī"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعصرنان",
+      "tur": "verb",
+      "baslik": "تعصرنان (form Iq)\n# تُعَصْرِنَانِ (tuʕaṣrināni) /tu.ʕasˤ.ri.naː.ni/: inflection of عَصْرَنَ (ʕaṣrana):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُعَصْرَنَانِ (tuʕaṣranāni) /tu.ʕasˤ.ra.naː.ni/: inflection of عَصْرَنَ (ʕaṣrana):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicativ",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuʕaṣrināni", "ʕaṣrana", "tuʕaṣranāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نعصرن",
+      "tur": "verb",
+      "baslik": "نعصرن (form Iq)\n# نُعَصْرِنُ (nuʕaṣrinu) /nu.ʕasˤ.ri.nu/: first-person plural non-past active indicative of عَصْرَنَ (ʕaṣrana)\n# نُعَصْرَنُ (nuʕaṣranu) /nu.ʕasˤ.ra.nu/: first-person plural non-past passive indicative of عَصْرَنَ (ʕaṣrana)\n# نُعَصْرِنَ (nuʕaṣrina) /nu.ʕasˤ.ri.na/: first-person plural non-past active subjunctive of عَصْرَنَ (ʕaṣrana)\n# نُعَصْرَنَ (nuʕaṣrana) /nu.ʕasˤ.ra.na/: first-p",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["nuʕaṣrinu", "ʕaṣrana", "nuʕaṣranu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعصرنون",
+      "tur": "verb",
+      "baslik": "تعصرنون (form Iq)\n# تُعَصْرِنُونَ (tuʕaṣrinūna) /tu.ʕasˤ.ri.nuː.na/: second-person masculine plural non-past active indicative of عَصْرَنَ (ʕaṣrana)\n# تُعَصْرَنُونَ (tuʕaṣranūna) /tu.ʕasˤ.ra.nuː.na/: second-person masculine plural non-past passive indicative of عَصْرَنَ (ʕaṣrana)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuʕaṣrinūna", "ʕaṣrana", "tuʕaṣranūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعصرنا",
+      "tur": "verb",
+      "baslik": "يعصرنا (form Iq)\n# يُعَصْرِنَا (yuʕaṣrinā) /ju.ʕasˤ.ri.naː/: third-person masculine dual non-past active subjunctive/jussive of عَصْرَنَ (ʕaṣrana)\n# يُعَصْرَنَا (yuʕaṣranā) /ju.ʕasˤ.ra.naː/: third-person masculine dual non-past passive subjunctive/jussive of عَصْرَنَ (ʕaṣrana)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuʕaṣrinā", "ʕaṣrana", "yuʕaṣranā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعصرنوا",
+      "tur": "verb",
+      "baslik": "يعصرنوا (form Iq)\n# يُعَصْرِنُوا (yuʕaṣrinū) /ju.ʕasˤ.ri.nuː/: third-person masculine plural non-past active subjunctive/jussive of عَصْرَنَ (ʕaṣrana)\n# يُعَصْرَنُوا (yuʕaṣranū) /ju.ʕasˤ.ra.nuː/: third-person masculine plural non-past passive subjunctive/jussive of عَصْرَنَ (ʕaṣrana)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuʕaṣrinū", "ʕaṣrana", "yuʕaṣranū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعصرنوا",
+      "tur": "verb",
+      "baslik": "تعصرنوا (form Iq)\n# تُعَصْرِنُوا (tuʕaṣrinū) /tu.ʕasˤ.ri.nuː/: second-person masculine plural non-past active subjunctive/jussive of عَصْرَنَ (ʕaṣrana)\n# تُعَصْرَنُوا (tuʕaṣranū) /tu.ʕasˤ.ra.nuː/: second-person masculine plural non-past passive subjunctive/jussive of عَصْرَنَ (ʕaṣrana)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuʕaṣrinū", "ʕaṣrana", "tuʕaṣranū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عصرني",
+      "tur": "verb",
+      "baslik": "عَصْرِنِي • (ʕaṣrinī) (form Iq) /ʕasˤ.ri.niː/\n# second-person feminine singular imperative of عَصْرَنَ (ʕaṣrana)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʕaṣrinī", "ʕaṣrana"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعصرنون",
+      "tur": "verb",
+      "baslik": "يعصرنون (form Iq)\n# يُعَصْرِنُونَ (yuʕaṣrinūna) /ju.ʕasˤ.ri.nuː.na/: third-person masculine plural non-past active indicative of عَصْرَنَ (ʕaṣrana)\n# يُعَصْرَنُونَ (yuʕaṣranūna) /ju.ʕasˤ.ra.nuː.na/: third-person masculine plural non-past passive indicative of عَصْرَنَ (ʕaṣrana)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuʕaṣrinūna", "ʕaṣrana", "yuʕaṣranūna"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "Denominal verb of عَصْر (ʕaṣr, “age, era, times”) with the addition of a nasal, forming the root ع ص ر ن (ʕ ṣ r n).",
+      "kognatlar": [
+        ["عَصْر", "عصر#Arabic"],
+        ["ع ص ر ن", "Appendix:Arabic roots/ع ص ر ن"]
+      ]
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "عصرن", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "ust": {
       "kume": 8,
       "merkez_kok": "سير",
@@ -355,6 +259,10 @@
       "boy": 12
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

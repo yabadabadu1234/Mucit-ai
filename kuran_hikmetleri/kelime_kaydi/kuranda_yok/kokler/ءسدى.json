@@ -1,430 +1,343 @@
 {
   "kok": "ءسدى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءسدى", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أسد",
-        "u": "أسد",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "أسد (form IV)\n# أُسْدِ (ʔusdi) /ʔus.di/: first-person singular non-past active jussive of أَسْدَى (ʔasdā)\n# أُسْدَ (ʔusda) /ʔus.da/: first-person singular non-past passive jussive of أَسْدَى (ʔasdā)\n# أَسْدِ (ʔasdi) /ʔas.di/: second-person masculine singular imperative of أَسْدَى (ʔasdā)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔusdi", "ʔasdā", "ʔusda"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسد",
-        "u": "يسد",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يسد (form IV)\n# يُسْدِ (yusdi) /jus.di/: third-person masculine singular non-past active jussive of أَسْدَى (ʔasdā)\n# يُسْدَ (yusda) /jus.da/: third-person masculine singular non-past passive jussive of أَسْدَى (ʔasdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yusdi", "ʔasdā", "yusda"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسد",
-        "u": "تسد",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تسد (form IV)\n# تُسْدِ (tusdi) /tus.di/: inflection of أَسْدَى (ʔasdā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُسْدَ (tusda) /tus.da/: inflection of أَسْدَى (ʔasdā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tusdi", "ʔasdā", "tusda"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسدين",
-        "u": "تسدين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تسدين (form IV)\n# تُسْدِينَ (tusdīna) /tus.diː.na/: inflection of أَسْدَى (ʔasdā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُسْدَيْنَ (tusdayna) /tus.daj.na/: inflection of أَسْدَى (ʔasdā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-pas",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tusdīna", "ʔasdā", "tusdayna"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسدي",
-        "u": "تسدي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تسدي (form IV)\n# تُسْدِي (tusdī) /tus.diː/: inflection of أَسْدَى (ʔasdā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُسْدِيَ (tusdiya) /tus.di.ja/: inflection of أَسْدَى (ʔasdā):\n## second-person masculine singular non-past active subjunctive\n#",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tusdī", "ʔasdā", "tusdiya"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "نسد",
-        "u": "نسد",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نسد (form IV)\n# نُسْدِ (nusdi) /nus.di/: first-person plural non-past active jussive of أَسْدَى (ʔasdā)\n# نُسْدَ (nusda) /nus.da/: first-person plural non-past passive jussive of أَسْدَى (ʔasdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nusdi", "ʔasdā", "nusda"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسدون",
-        "u": "تسدون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تسدون (form IV)\n# تُسْدُونَ (tusdūna) /tus.duː.na/: second-person masculine plural non-past active indicative of أَسْدَى (ʔasdā)\n# تُسْدَوْنَ (tusdawna) /tus.daw.na/: second-person masculine plural non-past passive indicative of أَسْدَى (ʔasdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tusdūna", "ʔasdā", "tusdawna"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسدوا",
-        "u": "تسدوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تسدوا (form IV)\n# تُسْدُوا (tusdū) /tus.duː/: second-person masculine plural non-past active subjunctive/jussive of أَسْدَى (ʔasdā)\n# تُسْدَوْا (tusdaw) /tus.daw/: second-person masculine plural non-past passive subjunctive/jussive of أَسْدَى (ʔasdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tusdū", "ʔasdā", "tusdaw"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسدون",
-        "u": "يسدون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يسدون (form IV)\n# يُسْدُونَ (yusdūna) /jus.duː.na/: third-person masculine plural non-past active indicative of أَسْدَى (ʔasdā)\n# يُسْدَوْنَ (yusdawna) /jus.daw.na/: third-person masculine plural non-past passive indicative of أَسْدَى (ʔasdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yusdūna", "ʔasdā", "yusdawna"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسدوا",
-        "u": "يسدوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يسدوا (form IV)\n# يُسْدُوا (yusdū) /jus.duː/: third-person masculine plural non-past active subjunctive/jussive of أَسْدَى (ʔasdā)\n# يُسْدَوْا (yusdaw) /jus.daw/: third-person masculine plural non-past passive subjunctive/jussive of أَسْدَى (ʔasdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yusdū", "ʔasdā", "yusdaw"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسدت",
-        "u": "أسدت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَسْدَتْ • (ʔasdat) (form IV) /ʔas.dat/\n# third-person feminine singular past active of أَسْدَى (ʔasdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasdat", "ʔasdā"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسدوا",
-        "u": "أسدوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أسدوا (form IV)\n# أَسْدَوْا (ʔasdaw) /ʔas.daw/: third-person masculine plural past active of أَسْدَى (ʔasdā)\n# أُسْدُوا (ʔusdū) /ʔus.duː/: third-person masculine plural past passive of أَسْدَى (ʔasdā)\n# أَسْدُوا (ʔasdū) /ʔas.duː/: second-person masculine plural imperative of أَسْدَى (ʔasdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasdaw", "ʔasdā", "ʔusdū"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسدتا",
-        "u": "أسدتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَسْدَتَا • (ʔasdatā) (form IV) /ʔas.da.taː/\n# third-person feminine dual past active of أَسْدَى (ʔasdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasdatā", "ʔasdā"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسدي",
-        "u": "أسدي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أسدي (form IV)\n# أُسْدِيَ (ʔusdiya) /ʔus.di.ja/: inflection of أَسْدَى (ʔasdā):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُسْدِي (ʔusdī) /ʔus.diː/: first-person singular non-past active indicative of أَسْدَى (ʔasdā)\n# أَسْدِي (ʔasdī) /ʔas.diː/: second-person feminine singular imperative of أَسْدَى (ʔasdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔusdiya", "ʔasdā", "ʔusdī"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسديت",
-        "u": "أسديت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أسديت (form IV)\n# أَسْدَيْتُ (ʔasdaytu) /ʔas.daj.tu/: first-person singular past active of أَسْدَى (ʔasdā)\n# أَسْدَيْتَ (ʔasdayta) /ʔas.daj.ta/: second-person masculine singular past active of أَسْدَى (ʔasdā)\n# أَسْدَيْتِ (ʔasdayti) /ʔas.daj.ti/: second-person feminine singular past active of أَسْدَى (ʔasdā)\n# أُسْدِيتُ (ʔusdītu) /ʔus.diː.tu/: first-person singular past passive of أَسْدَى (ʔasdā)\n",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasdaytu", "ʔasdā", "ʔasdayta"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسديتما",
-        "u": "أسديتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أسديتما (form IV)\n# أَسْدَيْتُمَا (ʔasdaytumā) /ʔas.daj.tu.maː/: second-person dual past active of أَسْدَى (ʔasdā)\n# أُسْدِيتُمَا (ʔusdītumā) /ʔus.diː.tu.maː/: second-person dual past passive of أَسْدَى (ʔasdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasdaytumā", "ʔasdā", "ʔusdītumā"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسدينا",
-        "u": "أسدينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أسدينا (form IV)\n# أَسْدَيْنَا (ʔasdaynā) /ʔas.daj.naː/: first-person plural past active of أَسْدَى (ʔasdā)\n# أُسْدِينَا (ʔusdīnā) /ʔus.diː.naː/: first-person plural past passive of أَسْدَى (ʔasdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasdaynā", "ʔasdā", "ʔusdīnā"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسديا",
-        "u": "أسديا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أسديا (form IV)\n# أَسْدَيَا (ʔasdayā) /ʔas.da.jaː/: third-person masculine dual past active of أَسْدَى (ʔasdā)\n# أُسْدِيَا (ʔusdiyā) /ʔus.di.jaː/: third-person masculine dual past passive of أَسْدَى (ʔasdā)\n# أَسْدِيَا (ʔasdiyā) /ʔas.di.jaː/: second-person dual imperative of أَسْدَى (ʔasdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasdayā", "ʔasdā", "ʔusdiyā"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسديتم",
-        "u": "أسديتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أسديتم (form IV)\n# أَسْدَيْتُمْ (ʔasdaytum) /ʔas.daj.tum/: second-person masculine plural past active of أَسْدَى (ʔasdā)\n# أُسْدِيتُمْ (ʔusdītum) /ʔus.diː.tum/: second-person masculine plural past passive of أَسْدَى (ʔasdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasdaytum", "ʔasdā", "ʔusdītum"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسديتا",
-        "u": "أسديتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُسْدِيَتَا • (ʔusdiyatā) (form IV) /ʔus.di.ja.taː/\n# third-person feminine dual past passive of أَسْدَى (ʔasdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔusdiyatā", "ʔasdā"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسديان",
-        "u": "تسديان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تسديان (form IV)\n# تُسْدِيَانِ (tusdiyāni) /tus.di.jaː.ni/: inflection of أَسْدَى (ʔasdā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُسْدَيَانِ (tusdayāni) /tus.da.jaː.ni/: inflection of أَسْدَى (ʔasdā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tusdiyāni", "ʔasdā", "tusdayāni"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسدي",
-        "u": "يسدي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يسدي (form IV)\n# يُسْدِي (yusdī) /jus.diː/: third-person masculine singular non-past active indicative of أَسْدَى (ʔasdā)\n# يُسْدِيَ (yusdiya) /jus.di.ja/: third-person masculine singular non-past active subjunctive of أَسْدَى (ʔasdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yusdī", "ʔasdā", "yusdiya"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسديان",
-        "u": "يسديان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يسديان (form IV)\n# يُسْدِيَانِ (yusdiyāni) /jus.di.jaː.ni/: third-person masculine dual non-past active indicative of أَسْدَى (ʔasdā)\n# يُسْدَيَانِ (yusdayāni) /jus.da.jaː.ni/: third-person masculine dual non-past passive indicative of أَسْدَى (ʔasdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yusdiyāni", "ʔasdā", "yusdayāni"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "نسدي",
-        "u": "نسدي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نسدي (form IV)\n# نُسْدِي (nusdī) /nus.diː/: first-person plural non-past active indicative of أَسْدَى (ʔasdā)\n# نُسْدِيَ (nusdiya) /nus.di.ja/: first-person plural non-past active subjunctive of أَسْدَى (ʔasdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nusdī", "ʔasdā", "nusdiya"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسدين",
-        "u": "يسدين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يسدين (form IV)\n# يُسْدِينَ (yusdīna) /jus.diː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَسْدَى (ʔasdā)\n# يُسْدَيْنَ (yusdayna) /jus.daj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَسْدَى (ʔasdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yusdīna", "ʔasdā", "yusdayna"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسدى",
-        "u": "تسدى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُسْدَى • (tusdā) (form IV) /tus.daː/\n# inflection of أَسْدَى (ʔasdā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tusdā", "ʔasdā"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسدى",
-        "u": "يسدى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُسْدَى • (yusdā) (form IV) /jus.daː/\n# third-person masculine singular non-past passive indicative/subjunctive of أَسْدَى (ʔasdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yusdā", "ʔasdā"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "نسدى",
-        "u": "نسدى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُسْدَى • (nusdā) (form IV) /nus.daː/\n# first-person plural non-past passive indicative/subjunctive of أَسْدَى (ʔasdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nusdā", "ʔasdā"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "تسديا",
-        "u": "تسديا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تسديا (form IV)\n# تُسْدِيَا (tusdiyā) /tus.di.jaː/: inflection of أَسْدَى (ʔasdā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُسْدَيَا (tusdayā) /tus.da.jaː/: inflection of أَسْدَى (ʔasdā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tusdiyā", "ʔasdā", "tusdayā"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسديتن",
-        "u": "أسديتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أسديتن (form IV)\n# أَسْدَيْتُنَّ (ʔasdaytunna) /ʔas.daj.tun.na/: second-person feminine plural past active of أَسْدَى (ʔasdā)\n# أُسْدِيتُنَّ (ʔusdītunna) /ʔus.diː.tun.na/: second-person feminine plural past passive of أَسْدَى (ʔasdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasdaytunna", "ʔasdā", "ʔusdītunna"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "يسديا",
-        "u": "يسديا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يسديا (form IV)\n# يُسْدِيَا (yusdiyā) /jus.di.jaː/: third-person masculine dual non-past active subjunctive/jussive of أَسْدَى (ʔasdā)\n# يُسْدَيَا (yusdayā) /jus.da.jaː/: third-person masculine dual non-past passive subjunctive/jussive of أَسْدَى (ʔasdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yusdiyā", "ʔasdā", "yusdayā"],
-        "k": "أسدى",
-        "yol": "kök"
-      },
-      {
-        "w": "أسدين",
-        "u": "أسدين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أسدين (form IV)\n# أَسْدَيْنَ (ʔasdayna) /ʔas.daj.na/: third-person feminine plural past active of أَسْدَى (ʔasdā)\n# أُسْدِينَ (ʔusdīna) /ʔus.diː.na/: third-person feminine plural past passive of أَسْدَى (ʔasdā)\n# أَسْدِينَ (ʔasdīna) /ʔas.diː.na/: second-person feminine plural imperative of أَسْدَى (ʔasdā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔasdayna", "ʔasdā", "ʔusdīna"],
-        "k": "أسدى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "سد",
+  "ses": {
     "harf": "ء",
+    "fasil": "سد",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "أسد",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "أسد (form IV)\n# أُسْدِ (ʔusdi) /ʔus.di/: first-person singular non-past active jussive of أَسْدَى (ʔasdā)\n# أُسْدَ (ʔusda) /ʔus.da/: first-person singular non-past passive jussive of أَسْدَى (ʔasdā)\n# أَسْدِ (ʔasdi) /ʔas.di/: second-person masculine singular imperative of أَسْدَى (ʔasdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔusdi", "ʔasdā", "ʔusda"],
+      "kok_yazilis": "أسدى"
+    },
+    {
+      "madde": "يسد",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يسد (form IV)\n# يُسْدِ (yusdi) /jus.di/: third-person masculine singular non-past active jussive of أَسْدَى (ʔasdā)\n# يُسْدَ (yusda) /jus.da/: third-person masculine singular non-past passive jussive of أَسْدَى (ʔasdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yusdi", "ʔasdā", "yusda"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسد",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تسد (form IV)\n# تُسْدِ (tusdi) /tus.di/: inflection of أَسْدَى (ʔasdā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُسْدَ (tusda) /tus.da/: inflection of أَسْدَى (ʔasdā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tusdi", "ʔasdā", "tusda"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسدين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تسدين (form IV)\n# تُسْدِينَ (tusdīna) /tus.diː.na/: inflection of أَسْدَى (ʔasdā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُسْدَيْنَ (tusdayna) /tus.daj.na/: inflection of أَسْدَى (ʔasdā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-pas",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tusdīna", "ʔasdā", "tusdayna"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسدي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تسدي (form IV)\n# تُسْدِي (tusdī) /tus.diː/: inflection of أَسْدَى (ʔasdā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُسْدِيَ (tusdiya) /tus.di.ja/: inflection of أَسْدَى (ʔasdā):\n## second-person masculine singular non-past active subjunctive\n#",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tusdī", "ʔasdā", "tusdiya"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نسد",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نسد (form IV)\n# نُسْدِ (nusdi) /nus.di/: first-person plural non-past active jussive of أَسْدَى (ʔasdā)\n# نُسْدَ (nusda) /nus.da/: first-person plural non-past passive jussive of أَسْدَى (ʔasdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nusdi", "ʔasdā", "nusda"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسدون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تسدون (form IV)\n# تُسْدُونَ (tusdūna) /tus.duː.na/: second-person masculine plural non-past active indicative of أَسْدَى (ʔasdā)\n# تُسْدَوْنَ (tusdawna) /tus.daw.na/: second-person masculine plural non-past passive indicative of أَسْدَى (ʔasdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tusdūna", "ʔasdā", "tusdawna"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسدوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تسدوا (form IV)\n# تُسْدُوا (tusdū) /tus.duː/: second-person masculine plural non-past active subjunctive/jussive of أَسْدَى (ʔasdā)\n# تُسْدَوْا (tusdaw) /tus.daw/: second-person masculine plural non-past passive subjunctive/jussive of أَسْدَى (ʔasdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tusdū", "ʔasdā", "tusdaw"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسدون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يسدون (form IV)\n# يُسْدُونَ (yusdūna) /jus.duː.na/: third-person masculine plural non-past active indicative of أَسْدَى (ʔasdā)\n# يُسْدَوْنَ (yusdawna) /jus.daw.na/: third-person masculine plural non-past passive indicative of أَسْدَى (ʔasdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yusdūna", "ʔasdā", "yusdawna"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسدوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يسدوا (form IV)\n# يُسْدُوا (yusdū) /jus.duː/: third-person masculine plural non-past active subjunctive/jussive of أَسْدَى (ʔasdā)\n# يُسْدَوْا (yusdaw) /jus.daw/: third-person masculine plural non-past passive subjunctive/jussive of أَسْدَى (ʔasdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yusdū", "ʔasdā", "yusdaw"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسدت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَسْدَتْ • (ʔasdat) (form IV) /ʔas.dat/\n# third-person feminine singular past active of أَسْدَى (ʔasdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasdat", "ʔasdā"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسدوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أسدوا (form IV)\n# أَسْدَوْا (ʔasdaw) /ʔas.daw/: third-person masculine plural past active of أَسْدَى (ʔasdā)\n# أُسْدُوا (ʔusdū) /ʔus.duː/: third-person masculine plural past passive of أَسْدَى (ʔasdā)\n# أَسْدُوا (ʔasdū) /ʔas.duː/: second-person masculine plural imperative of أَسْدَى (ʔasdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasdaw", "ʔasdā", "ʔusdū"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسدتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَسْدَتَا • (ʔasdatā) (form IV) /ʔas.da.taː/\n# third-person feminine dual past active of أَسْدَى (ʔasdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasdatā", "ʔasdā"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسدي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أسدي (form IV)\n# أُسْدِيَ (ʔusdiya) /ʔus.di.ja/: inflection of أَسْدَى (ʔasdā):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُسْدِي (ʔusdī) /ʔus.diː/: first-person singular non-past active indicative of أَسْدَى (ʔasdā)\n# أَسْدِي (ʔasdī) /ʔas.diː/: second-person feminine singular imperative of أَسْدَى (ʔasdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔusdiya", "ʔasdā", "ʔusdī"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسديت",
+      "tur": "verb",
+      "baslik": "أسديت (form IV)\n# أَسْدَيْتُ (ʔasdaytu) /ʔas.daj.tu/: first-person singular past active of أَسْدَى (ʔasdā)\n# أَسْدَيْتَ (ʔasdayta) /ʔas.daj.ta/: second-person masculine singular past active of أَسْدَى (ʔasdā)\n# أَسْدَيْتِ (ʔasdayti) /ʔas.daj.ti/: second-person feminine singular past active of أَسْدَى (ʔasdā)\n# أُسْدِيتُ (ʔusdītu) /ʔus.diː.tu/: first-person singular past passive of أَسْدَى (ʔasdā)\n",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasdaytu", "ʔasdā", "ʔasdayta"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسديتما",
+      "tur": "verb",
+      "baslik": "أسديتما (form IV)\n# أَسْدَيْتُمَا (ʔasdaytumā) /ʔas.daj.tu.maː/: second-person dual past active of أَسْدَى (ʔasdā)\n# أُسْدِيتُمَا (ʔusdītumā) /ʔus.diː.tu.maː/: second-person dual past passive of أَسْدَى (ʔasdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasdaytumā", "ʔasdā", "ʔusdītumā"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسدينا",
+      "tur": "verb",
+      "baslik": "أسدينا (form IV)\n# أَسْدَيْنَا (ʔasdaynā) /ʔas.daj.naː/: first-person plural past active of أَسْدَى (ʔasdā)\n# أُسْدِينَا (ʔusdīnā) /ʔus.diː.naː/: first-person plural past passive of أَسْدَى (ʔasdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasdaynā", "ʔasdā", "ʔusdīnā"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسديا",
+      "tur": "verb",
+      "baslik": "أسديا (form IV)\n# أَسْدَيَا (ʔasdayā) /ʔas.da.jaː/: third-person masculine dual past active of أَسْدَى (ʔasdā)\n# أُسْدِيَا (ʔusdiyā) /ʔus.di.jaː/: third-person masculine dual past passive of أَسْدَى (ʔasdā)\n# أَسْدِيَا (ʔasdiyā) /ʔas.di.jaː/: second-person dual imperative of أَسْدَى (ʔasdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasdayā", "ʔasdā", "ʔusdiyā"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسديتم",
+      "tur": "verb",
+      "baslik": "أسديتم (form IV)\n# أَسْدَيْتُمْ (ʔasdaytum) /ʔas.daj.tum/: second-person masculine plural past active of أَسْدَى (ʔasdā)\n# أُسْدِيتُمْ (ʔusdītum) /ʔus.diː.tum/: second-person masculine plural past passive of أَسْدَى (ʔasdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasdaytum", "ʔasdā", "ʔusdītum"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسديتا",
+      "tur": "verb",
+      "baslik": "أُسْدِيَتَا • (ʔusdiyatā) (form IV) /ʔus.di.ja.taː/\n# third-person feminine dual past passive of أَسْدَى (ʔasdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔusdiyatā", "ʔasdā"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسديان",
+      "tur": "verb",
+      "baslik": "تسديان (form IV)\n# تُسْدِيَانِ (tusdiyāni) /tus.di.jaː.ni/: inflection of أَسْدَى (ʔasdā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُسْدَيَانِ (tusdayāni) /tus.da.jaː.ni/: inflection of أَسْدَى (ʔasdā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tusdiyāni", "ʔasdā", "tusdayāni"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسدي",
+      "tur": "verb",
+      "baslik": "يسدي (form IV)\n# يُسْدِي (yusdī) /jus.diː/: third-person masculine singular non-past active indicative of أَسْدَى (ʔasdā)\n# يُسْدِيَ (yusdiya) /jus.di.ja/: third-person masculine singular non-past active subjunctive of أَسْدَى (ʔasdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yusdī", "ʔasdā", "yusdiya"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسديان",
+      "tur": "verb",
+      "baslik": "يسديان (form IV)\n# يُسْدِيَانِ (yusdiyāni) /jus.di.jaː.ni/: third-person masculine dual non-past active indicative of أَسْدَى (ʔasdā)\n# يُسْدَيَانِ (yusdayāni) /jus.da.jaː.ni/: third-person masculine dual non-past passive indicative of أَسْدَى (ʔasdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yusdiyāni", "ʔasdā", "yusdayāni"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نسدي",
+      "tur": "verb",
+      "baslik": "نسدي (form IV)\n# نُسْدِي (nusdī) /nus.diː/: first-person plural non-past active indicative of أَسْدَى (ʔasdā)\n# نُسْدِيَ (nusdiya) /nus.di.ja/: first-person plural non-past active subjunctive of أَسْدَى (ʔasdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nusdī", "ʔasdā", "nusdiya"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسدين",
+      "tur": "verb",
+      "baslik": "يسدين (form IV)\n# يُسْدِينَ (yusdīna) /jus.diː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَسْدَى (ʔasdā)\n# يُسْدَيْنَ (yusdayna) /jus.daj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَسْدَى (ʔasdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yusdīna", "ʔasdā", "yusdayna"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسدى",
+      "tur": "verb",
+      "baslik": "تُسْدَى • (tusdā) (form IV) /tus.daː/\n# inflection of أَسْدَى (ʔasdā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tusdā", "ʔasdā"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسدى",
+      "tur": "verb",
+      "baslik": "يُسْدَى • (yusdā) (form IV) /jus.daː/\n# third-person masculine singular non-past passive indicative/subjunctive of أَسْدَى (ʔasdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yusdā", "ʔasdā"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نسدى",
+      "tur": "verb",
+      "baslik": "نُسْدَى • (nusdā) (form IV) /nus.daː/\n# first-person plural non-past passive indicative/subjunctive of أَسْدَى (ʔasdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nusdā", "ʔasdā"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسديا",
+      "tur": "verb",
+      "baslik": "تسديا (form IV)\n# تُسْدِيَا (tusdiyā) /tus.di.jaː/: inflection of أَسْدَى (ʔasdā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُسْدَيَا (tusdayā) /tus.da.jaː/: inflection of أَسْدَى (ʔasdā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tusdiyā", "ʔasdā", "tusdayā"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسديتن",
+      "tur": "verb",
+      "baslik": "أسديتن (form IV)\n# أَسْدَيْتُنَّ (ʔasdaytunna) /ʔas.daj.tun.na/: second-person feminine plural past active of أَسْدَى (ʔasdā)\n# أُسْدِيتُنَّ (ʔusdītunna) /ʔus.diː.tun.na/: second-person feminine plural past passive of أَسْدَى (ʔasdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasdaytunna", "ʔasdā", "ʔusdītunna"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسديا",
+      "tur": "verb",
+      "baslik": "يسديا (form IV)\n# يُسْدِيَا (yusdiyā) /jus.di.jaː/: third-person masculine dual non-past active subjunctive/jussive of أَسْدَى (ʔasdā)\n# يُسْدَيَا (yusdayā) /jus.da.jaː/: third-person masculine dual non-past passive subjunctive/jussive of أَسْدَى (ʔasdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yusdiyā", "ʔasdā", "yusdayā"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسدين",
+      "tur": "verb",
+      "baslik": "أسدين (form IV)\n# أَسْدَيْنَ (ʔasdayna) /ʔas.daj.na/: third-person feminine plural past active of أَسْدَى (ʔasdā)\n# أُسْدِينَ (ʔusdīna) /ʔus.diː.na/: third-person feminine plural past passive of أَسْدَى (ʔasdā)\n# أَسْدِينَ (ʔasdīna) /ʔas.diː.na/: second-person feminine plural imperative of أَسْدَى (ʔasdā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔasdayna", "ʔasdā", "ʔusdīna"],
+      "kok_yazilis": "أسدى",
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ءسدى", "r6"]
+  ],
+  "mana": {
     "ince": "whole.n.02",
     "orta": "noun.animal",
     "ust": "canlı ve beden",
@@ -432,22 +345,15 @@
     "dayanak_tanim": "large gregarious predatory feline of Africa and India having a tawny coat with a shaggy mane in the male",
     "synset_sayisi": 2
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["living_thing.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["living_thing.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

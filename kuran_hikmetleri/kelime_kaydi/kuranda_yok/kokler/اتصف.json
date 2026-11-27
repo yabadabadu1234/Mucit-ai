@@ -1,362 +1,255 @@
 {
   "kok": "اتصف",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "اتصف", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "اتصفت",
-        "u": "اتصفت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتصفت (form VIII)\n# اِتَّصَفْتُ (ittaṣaftu) /it.ta.sˤaf.tu/: first-person singular past active of اِتَّصَفَ (ittaṣafa)\n# اِتَّصَفْتَ (ittaṣafta) /it.ta.sˤaf.ta/: second-person masculine singular past active of اِتَّصَفَ (ittaṣafa)\n# اِتَّصَفْتِ (ittaṣafti) /it.ta.sˤaf.ti/: second-person feminine singular past active of اِتَّصَفَ (ittaṣafa)\n# اِتَّصَفَتْ (ittaṣafat) /it.ta.sˤa.fat/: third-person fe",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaṣaftu", "ittaṣafa", "ittaṣafta"],
-        "k": "اتصف",
-        "yol": "kök"
-      },
-      {
-        "w": "اتصفتا",
-        "u": "اتصفتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّصَفَتَا • (ittaṣafatā) (form VIII) /it.ta.sˤa.fa.taː/\n# third-person feminine dual past active of اِتَّصَفَ (ittaṣafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaṣafatā", "ittaṣafa"],
-        "k": "اتصف",
-        "yol": "kök"
-      },
-      {
-        "w": "اتصفتما",
-        "u": "اتصفتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّصَفْتُمَا • (ittaṣaftumā) (form VIII) /it.ta.sˤaf.tu.maː/\n# second-person dual past active of اِتَّصَفَ (ittaṣafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaṣaftumā", "ittaṣafa"],
-        "k": "اتصف",
-        "yol": "kök"
-      },
-      {
-        "w": "اتصفا",
-        "u": "اتصفا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتصفا (form VIII)\n# اِتَّصَفَا (ittaṣafā) /it.ta.sˤa.faː/: third-person masculine dual past active of اِتَّصَفَ (ittaṣafa)\n# اِتَّصِفَا (ittaṣifā) /it.ta.sˤi.faː/: second-person dual imperative of اِتَّصَفَ (ittaṣafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaṣafā", "ittaṣafa", "ittaṣifā"],
-        "k": "اتصف",
-        "yol": "kök"
-      },
-      {
-        "w": "اتصفنا",
-        "u": "اتصفنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّصَفْنَا • (ittaṣafnā) (form VIII) /it.ta.sˤaf.naː/\n# first-person plural past active of اِتَّصَفَ (ittaṣafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaṣafnā", "ittaṣafa"],
-        "k": "اتصف",
-        "yol": "kök"
-      },
-      {
-        "w": "اتصفتم",
-        "u": "اتصفتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّصَفْتُمْ • (ittaṣaftum) (form VIII) /it.ta.sˤaf.tum/\n# second-person masculine plural past active of اِتَّصَفَ (ittaṣafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaṣaftum", "ittaṣafa"],
-        "k": "اتصف",
-        "yol": "kök"
-      },
-      {
-        "w": "اتصفتن",
-        "u": "اتصفتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّصَفْتُنَّ • (ittaṣaftunna) (form VIII) /it.ta.sˤaf.tun.na/\n# second-person feminine plural past active of اِتَّصَفَ (ittaṣafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaṣaftunna", "ittaṣafa"],
-        "k": "اتصف",
-        "yol": "kök"
-      },
-      {
-        "w": "اتصفوا",
-        "u": "اتصفوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتصفوا (form VIII)\n# اِتَّصَفُوا (ittaṣafū) /it.ta.sˤa.fuː/: third-person masculine plural past active of اِتَّصَفَ (ittaṣafa)\n# اِتَّصِفُوا (ittaṣifū) /it.ta.sˤi.fuː/: second-person masculine plural imperative of اِتَّصَفَ (ittaṣafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaṣafū", "ittaṣafa", "ittaṣifū"],
-        "k": "اتصف",
-        "yol": "kök"
-      },
-      {
-        "w": "اتصفن",
-        "u": "اتصفن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتصفن (form VIII)\n# اِتَّصَفْنَ (ittaṣafna) /it.ta.sˤaf.na/: third-person feminine plural past active of اِتَّصَفَ (ittaṣafa)\n# اِتَّصِفْنَ (ittaṣifna) /it.ta.sˤif.na/: second-person feminine plural imperative of اِتَّصَفَ (ittaṣafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaṣafna", "ittaṣafa", "ittaṣifna"],
-        "k": "اتصف",
-        "yol": "kök"
-      },
-      {
-        "w": "أتصف",
-        "u": "أتصف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتصف (form VIII)\n# أَتَّصِفُ (ʔattaṣifu) /ʔat.ta.sˤi.fu/: first-person singular non-past active indicative of اِتَّصَفَ (ittaṣafa)\n# أَتَّصِفَ (ʔattaṣifa) /ʔat.ta.sˤi.fa/: first-person singular non-past active subjunctive of اِتَّصَفَ (ittaṣafa)\n# أَتَّصِفْ (ʔattaṣif) /ʔat.ta.sˤif/: first-person singular non-past active jussive of اِتَّصَفَ (ittaṣafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ʔattaṣifu", "ittaṣafa", "ʔattaṣifa"],
-        "k": "اتصف",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصفين",
-        "u": "تتصفين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَّصِفِينَ • (tattaṣifīna) (form VIII) /tat.ta.sˤi.fiː.na/\n# second-person feminine singular non-past active indicative of اِتَّصَفَ (ittaṣafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattaṣifīna", "ittaṣafa"],
-        "k": "اتصف",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصف",
-        "u": "تتصف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتصف (form VIII)\n# تَتَّصِفُ (tattaṣifu) /tat.ta.sˤi.fu/: inflection of اِتَّصَفَ (ittaṣafa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَّصِفَ (tattaṣifa) /tat.ta.sˤi.fa/: inflection of اِتَّصَفَ (ittaṣafa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-pas",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattaṣifu", "ittaṣafa", "tattaṣifa"],
-        "k": "اتصف",
-        "yol": "kök"
-      },
-      {
-        "w": "يتصف",
-        "u": "يتصف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتصف (form VIII)\n# يَتَّصِفُ (yattaṣifu) /jat.ta.sˤi.fu/: third-person masculine singular non-past active indicative of اِتَّصَفَ (ittaṣafa)\n# يُتَّصَفُ (yuttaṣafu) /jut.ta.sˤa.fu/: third-person masculine singular non-past passive indicative of اِتَّصَفَ (ittaṣafa)\n# يَتَّصِفَ (yattaṣifa) /jat.ta.sˤi.fa/: third-person masculine singular non-past active subjunctive of اِتَّصَفَ (ittaṣafa)\n# يُتَّصَ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattaṣifu", "ittaṣafa", "yuttaṣafu"],
-        "k": "اتصف",
-        "yol": "kök"
-      },
-      {
-        "w": "نتصف",
-        "u": "نتصف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتصف (form VIII)\n# نَتَّصِفُ (nattaṣifu) /nat.ta.sˤi.fu/: first-person plural non-past active indicative of اِتَّصَفَ (ittaṣafa)\n# نَتَّصِفَ (nattaṣifa) /nat.ta.sˤi.fa/: first-person plural non-past active subjunctive of اِتَّصَفَ (ittaṣafa)\n# نَتَّصِفْ (nattaṣif) /nat.ta.sˤif/: first-person plural non-past active jussive of اِتَّصَفَ (ittaṣafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["nattaṣifu", "ittaṣafa", "nattaṣifa"],
-        "k": "اتصف",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصفان",
-        "u": "تتصفان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَّصِفَانِ • (tattaṣifāni) (form VIII) /tat.ta.sˤi.faː.ni/\n# inflection of اِتَّصَفَ (ittaṣafa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattaṣifāni", "ittaṣafa"],
-        "k": "اتصف",
-        "yol": "kök"
-      },
-      {
-        "w": "يتصفان",
-        "u": "يتصفان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَّصِفَانِ • (yattaṣifāni) (form VIII) /jat.ta.sˤi.faː.ni/\n# third-person masculine dual non-past active indicative of اِتَّصَفَ (ittaṣafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattaṣifāni", "ittaṣafa"],
-        "k": "اتصف",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصفون",
-        "u": "تتصفون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَّصِفُونَ • (tattaṣifūna) (form VIII) /tat.ta.sˤi.fuː.na/\n# second-person masculine plural non-past active indicative of اِتَّصَفَ (ittaṣafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattaṣifūna", "ittaṣafa"],
-        "k": "اتصف",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصفن",
-        "u": "تتصفن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَّصِفْنَ • (tattaṣifna) (form VIII) /tat.ta.sˤif.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِتَّصَفَ (ittaṣafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattaṣifna", "ittaṣafa"],
-        "k": "اتصف",
-        "yol": "kök"
-      },
-      {
-        "w": "يتصفون",
-        "u": "يتصفون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَّصِفُونَ • (yattaṣifūna) (form VIII) /jat.ta.sˤi.fuː.na/\n# third-person masculine plural non-past active indicative of اِتَّصَفَ (ittaṣafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattaṣifūna", "ittaṣafa"],
-        "k": "اتصف",
-        "yol": "kök"
-      },
-      {
-        "w": "يتصفن",
-        "u": "يتصفن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَّصِفْنَ • (yattaṣifna) (form VIII) /jat.ta.sˤif.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِتَّصَفَ (ittaṣafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattaṣifna", "ittaṣafa"],
-        "k": "اتصف",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصفي",
-        "u": "تتصفي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَّصِفِي • (tattaṣifī) (form VIII) /tat.ta.sˤi.fiː/\n# second-person feminine singular non-past active subjunctive/jussive of اِتَّصَفَ (ittaṣafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattaṣifī", "ittaṣafa"],
-        "k": "اتصف",
-        "yol": "kök"
-      },
-      {
-        "w": "يتصفا",
-        "u": "يتصفا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَّصِفَا • (yattaṣifā) (form VIII) /jat.ta.sˤi.faː/\n# third-person masculine dual non-past active subjunctive/jussive of اِتَّصَفَ (ittaṣafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattaṣifā", "ittaṣafa"],
-        "k": "اتصف",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصفا",
-        "u": "تتصفا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَّصِفَا • (tattaṣifā) (form VIII) /tat.ta.sˤi.faː/\n# inflection of اِتَّصَفَ (ittaṣafa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattaṣifā", "ittaṣafa"],
-        "k": "اتصف",
-        "yol": "kök"
-      },
-      {
-        "w": "يتصفوا",
-        "u": "يتصفوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَّصِفُوا • (yattaṣifū) (form VIII) /jat.ta.sˤi.fuː/\n# third-person masculine plural non-past active subjunctive/jussive of اِتَّصَفَ (ittaṣafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattaṣifū", "ittaṣafa"],
-        "k": "اتصف",
-        "yol": "kök"
-      },
-      {
-        "w": "تتصفوا",
-        "u": "تتصفوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَّصِفُوا • (tattaṣifū) (form VIII) /tat.ta.sˤi.fuː/\n# second-person masculine plural non-past active subjunctive/jussive of اِتَّصَفَ (ittaṣafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattaṣifū", "ittaṣafa"],
-        "k": "اتصف",
-        "yol": "kök"
-      },
-      {
-        "w": "اتصفي",
-        "u": "اتصفي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّصِفِي • (ittaṣifī) (form VIII) /it.ta.sˤi.fiː/\n# second-person feminine singular imperative of اِتَّصَفَ (ittaṣafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaṣifī", "ittaṣafa"],
-        "k": "اتصف",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تص",
+  "ses": {
     "harf": "ا",
+    "fasil": "تص",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "اتصفت",
+      "tur": "verb",
+      "baslik": "اتصفت (form VIII)\n# اِتَّصَفْتُ (ittaṣaftu) /it.ta.sˤaf.tu/: first-person singular past active of اِتَّصَفَ (ittaṣafa)\n# اِتَّصَفْتَ (ittaṣafta) /it.ta.sˤaf.ta/: second-person masculine singular past active of اِتَّصَفَ (ittaṣafa)\n# اِتَّصَفْتِ (ittaṣafti) /it.ta.sˤaf.ti/: second-person feminine singular past active of اِتَّصَفَ (ittaṣafa)\n# اِتَّصَفَتْ (ittaṣafat) /it.ta.sˤa.fat/: third-person fe",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaṣaftu", "ittaṣafa", "ittaṣafta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتصفتا",
+      "tur": "verb",
+      "baslik": "اِتَّصَفَتَا • (ittaṣafatā) (form VIII) /it.ta.sˤa.fa.taː/\n# third-person feminine dual past active of اِتَّصَفَ (ittaṣafa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaṣafatā", "ittaṣafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتصفتما",
+      "tur": "verb",
+      "baslik": "اِتَّصَفْتُمَا • (ittaṣaftumā) (form VIII) /it.ta.sˤaf.tu.maː/\n# second-person dual past active of اِتَّصَفَ (ittaṣafa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaṣaftumā", "ittaṣafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتصفا",
+      "tur": "verb",
+      "baslik": "اتصفا (form VIII)\n# اِتَّصَفَا (ittaṣafā) /it.ta.sˤa.faː/: third-person masculine dual past active of اِتَّصَفَ (ittaṣafa)\n# اِتَّصِفَا (ittaṣifā) /it.ta.sˤi.faː/: second-person dual imperative of اِتَّصَفَ (ittaṣafa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaṣafā", "ittaṣafa", "ittaṣifā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتصفنا",
+      "tur": "verb",
+      "baslik": "اِتَّصَفْنَا • (ittaṣafnā) (form VIII) /it.ta.sˤaf.naː/\n# first-person plural past active of اِتَّصَفَ (ittaṣafa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaṣafnā", "ittaṣafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتصفتم",
+      "tur": "verb",
+      "baslik": "اِتَّصَفْتُمْ • (ittaṣaftum) (form VIII) /it.ta.sˤaf.tum/\n# second-person masculine plural past active of اِتَّصَفَ (ittaṣafa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaṣaftum", "ittaṣafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتصفتن",
+      "tur": "verb",
+      "baslik": "اِتَّصَفْتُنَّ • (ittaṣaftunna) (form VIII) /it.ta.sˤaf.tun.na/\n# second-person feminine plural past active of اِتَّصَفَ (ittaṣafa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaṣaftunna", "ittaṣafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتصفوا",
+      "tur": "verb",
+      "baslik": "اتصفوا (form VIII)\n# اِتَّصَفُوا (ittaṣafū) /it.ta.sˤa.fuː/: third-person masculine plural past active of اِتَّصَفَ (ittaṣafa)\n# اِتَّصِفُوا (ittaṣifū) /it.ta.sˤi.fuː/: second-person masculine plural imperative of اِتَّصَفَ (ittaṣafa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaṣafū", "ittaṣafa", "ittaṣifū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتصفن",
+      "tur": "verb",
+      "baslik": "اتصفن (form VIII)\n# اِتَّصَفْنَ (ittaṣafna) /it.ta.sˤaf.na/: third-person feminine plural past active of اِتَّصَفَ (ittaṣafa)\n# اِتَّصِفْنَ (ittaṣifna) /it.ta.sˤif.na/: second-person feminine plural imperative of اِتَّصَفَ (ittaṣafa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaṣafna", "ittaṣafa", "ittaṣifna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتصف",
+      "tur": "verb",
+      "baslik": "أتصف (form VIII)\n# أَتَّصِفُ (ʔattaṣifu) /ʔat.ta.sˤi.fu/: first-person singular non-past active indicative of اِتَّصَفَ (ittaṣafa)\n# أَتَّصِفَ (ʔattaṣifa) /ʔat.ta.sˤi.fa/: first-person singular non-past active subjunctive of اِتَّصَفَ (ittaṣafa)\n# أَتَّصِفْ (ʔattaṣif) /ʔat.ta.sˤif/: first-person singular non-past active jussive of اِتَّصَفَ (ittaṣafa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ʔattaṣifu", "ittaṣafa", "ʔattaṣifa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصفين",
+      "tur": "verb",
+      "baslik": "تَتَّصِفِينَ • (tattaṣifīna) (form VIII) /tat.ta.sˤi.fiː.na/\n# second-person feminine singular non-past active indicative of اِتَّصَفَ (ittaṣafa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattaṣifīna", "ittaṣafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصف",
+      "tur": "verb",
+      "baslik": "تتصف (form VIII)\n# تَتَّصِفُ (tattaṣifu) /tat.ta.sˤi.fu/: inflection of اِتَّصَفَ (ittaṣafa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَّصِفَ (tattaṣifa) /tat.ta.sˤi.fa/: inflection of اِتَّصَفَ (ittaṣafa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-pas",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattaṣifu", "ittaṣafa", "tattaṣifa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتصف",
+      "tur": "verb",
+      "baslik": "يتصف (form VIII)\n# يَتَّصِفُ (yattaṣifu) /jat.ta.sˤi.fu/: third-person masculine singular non-past active indicative of اِتَّصَفَ (ittaṣafa)\n# يُتَّصَفُ (yuttaṣafu) /jut.ta.sˤa.fu/: third-person masculine singular non-past passive indicative of اِتَّصَفَ (ittaṣafa)\n# يَتَّصِفَ (yattaṣifa) /jat.ta.sˤi.fa/: third-person masculine singular non-past active subjunctive of اِتَّصَفَ (ittaṣafa)\n# يُتَّصَ",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattaṣifu", "ittaṣafa", "yuttaṣafu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتصف",
+      "tur": "verb",
+      "baslik": "نتصف (form VIII)\n# نَتَّصِفُ (nattaṣifu) /nat.ta.sˤi.fu/: first-person plural non-past active indicative of اِتَّصَفَ (ittaṣafa)\n# نَتَّصِفَ (nattaṣifa) /nat.ta.sˤi.fa/: first-person plural non-past active subjunctive of اِتَّصَفَ (ittaṣafa)\n# نَتَّصِفْ (nattaṣif) /nat.ta.sˤif/: first-person plural non-past active jussive of اِتَّصَفَ (ittaṣafa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["nattaṣifu", "ittaṣafa", "nattaṣifa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصفان",
+      "tur": "verb",
+      "baslik": "تَتَّصِفَانِ • (tattaṣifāni) (form VIII) /tat.ta.sˤi.faː.ni/\n# inflection of اِتَّصَفَ (ittaṣafa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattaṣifāni", "ittaṣafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتصفان",
+      "tur": "verb",
+      "baslik": "يَتَّصِفَانِ • (yattaṣifāni) (form VIII) /jat.ta.sˤi.faː.ni/\n# third-person masculine dual non-past active indicative of اِتَّصَفَ (ittaṣafa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattaṣifāni", "ittaṣafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصفون",
+      "tur": "verb",
+      "baslik": "تَتَّصِفُونَ • (tattaṣifūna) (form VIII) /tat.ta.sˤi.fuː.na/\n# second-person masculine plural non-past active indicative of اِتَّصَفَ (ittaṣafa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattaṣifūna", "ittaṣafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصفن",
+      "tur": "verb",
+      "baslik": "تَتَّصِفْنَ • (tattaṣifna) (form VIII) /tat.ta.sˤif.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِتَّصَفَ (ittaṣafa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattaṣifna", "ittaṣafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتصفون",
+      "tur": "verb",
+      "baslik": "يَتَّصِفُونَ • (yattaṣifūna) (form VIII) /jat.ta.sˤi.fuː.na/\n# third-person masculine plural non-past active indicative of اِتَّصَفَ (ittaṣafa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattaṣifūna", "ittaṣafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتصفن",
+      "tur": "verb",
+      "baslik": "يَتَّصِفْنَ • (yattaṣifna) (form VIII) /jat.ta.sˤif.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِتَّصَفَ (ittaṣafa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattaṣifna", "ittaṣafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصفي",
+      "tur": "verb",
+      "baslik": "تَتَّصِفِي • (tattaṣifī) (form VIII) /tat.ta.sˤi.fiː/\n# second-person feminine singular non-past active subjunctive/jussive of اِتَّصَفَ (ittaṣafa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattaṣifī", "ittaṣafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتصفا",
+      "tur": "verb",
+      "baslik": "يَتَّصِفَا • (yattaṣifā) (form VIII) /jat.ta.sˤi.faː/\n# third-person masculine dual non-past active subjunctive/jussive of اِتَّصَفَ (ittaṣafa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattaṣifā", "ittaṣafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصفا",
+      "tur": "verb",
+      "baslik": "تَتَّصِفَا • (tattaṣifā) (form VIII) /tat.ta.sˤi.faː/\n# inflection of اِتَّصَفَ (ittaṣafa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattaṣifā", "ittaṣafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتصفوا",
+      "tur": "verb",
+      "baslik": "يَتَّصِفُوا • (yattaṣifū) (form VIII) /jat.ta.sˤi.fuː/\n# third-person masculine plural non-past active subjunctive/jussive of اِتَّصَفَ (ittaṣafa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattaṣifū", "ittaṣafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتصفوا",
+      "tur": "verb",
+      "baslik": "تَتَّصِفُوا • (tattaṣifū) (form VIII) /tat.ta.sˤi.fuː/\n# second-person masculine plural non-past active subjunctive/jussive of اِتَّصَفَ (ittaṣafa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattaṣifū", "ittaṣafa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتصفي",
+      "tur": "verb",
+      "baslik": "اِتَّصِفِي • (ittaṣifī) (form VIII) /it.ta.sˤi.fiː/\n# second-person feminine singular imperative of اِتَّصَفَ (ittaṣafa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaṣifī", "ittaṣafa"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "اتصف", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

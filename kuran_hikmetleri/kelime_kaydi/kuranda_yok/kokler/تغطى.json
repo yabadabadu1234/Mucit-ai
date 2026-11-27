@@ -1,427 +1,300 @@
 {
   "kok": "تغطى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تغطى", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تغطي",
-        "u": "تغطي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تغطي (form V)\n# تُغُطِّيَ (tuḡuṭṭiya) /tu.ɣutˤ.tˤi.ja/: third-person masculine singular past passive of تَغَطَّى (taḡaṭṭā)\n# تَغَطَّيْ (taḡaṭṭay) /ta.ɣatˤ.tˤaj/: second-person feminine singular imperative of تَغَطَّى (taḡaṭṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tuḡuṭṭiya", "taḡaṭṭā", "taḡaṭṭay"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغط",
-        "u": "تغط",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَغَطَّ • (taḡaṭṭa) (form V) /ta.ɣatˤ.tˤa/\n# second-person masculine singular imperative of تَغَطَّى (taḡaṭṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡaṭṭa", "taḡaṭṭā"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغطين",
-        "u": "تغطين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَغَطَّيْنَ • (taḡaṭṭayna) (form V) /ta.ɣatˤ.tˤaj.na/\n# inflection of تَغَطَّى (taḡaṭṭā):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡaṭṭayna", "taḡaṭṭā"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغطوا",
-        "u": "تغطوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَغَطَّوْا • (taḡaṭṭaw) (form V) /ta.ɣatˤ.tˤaw/\n# inflection of تَغَطَّى (taḡaṭṭā):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡaṭṭaw", "taḡaṭṭā"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغطيت",
-        "u": "تغطيت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تغطيت (form V)\n# تَغَطَّيْتُ (taḡaṭṭaytu) /ta.ɣatˤ.tˤaj.tu/: first-person singular past active of تَغَطَّى (taḡaṭṭā)\n# تَغَطَّيْتَ (taḡaṭṭayta) /ta.ɣatˤ.tˤaj.ta/: second-person masculine singular past active of تَغَطَّى (taḡaṭṭā)\n# تَغَطَّيْتِ (taḡaṭṭayti) /ta.ɣatˤ.tˤaj.ti/: second-person feminine singular past active of تَغَطَّى (taḡaṭṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡaṭṭaytu", "taḡaṭṭā", "taḡaṭṭayta"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغطيتما",
-        "u": "تغطيتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغَطَّيْتُمَا • (taḡaṭṭaytumā) (form V) /ta.ɣatˤ.tˤaj.tu.maː/\n# second-person dual past active of تَغَطَّى (taḡaṭṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡaṭṭaytumā", "taḡaṭṭā"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغطت",
-        "u": "تغطت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغَطَّتْ • (taḡaṭṭat) (form V) /ta.ɣatˤ.tˤat/\n# third-person feminine singular past active of تَغَطَّى (taḡaṭṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡaṭṭat", "taḡaṭṭā"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغطينا",
-        "u": "تغطينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغَطَّيْنَا • (taḡaṭṭaynā) (form V) /ta.ɣatˤ.tˤaj.naː/\n# first-person plural past active of تَغَطَّى (taḡaṭṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡaṭṭaynā", "taḡaṭṭā"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغطيا",
-        "u": "تغطيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَغَطَّيَا • (taḡaṭṭayā) (form V) /ta.ɣatˤ.tˤa.jaː/\n# inflection of تَغَطَّى (taḡaṭṭā):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡaṭṭayā", "taḡaṭṭā"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغطتا",
-        "u": "تغطتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغَطَّتَا • (taḡaṭṭatā) (form V) /ta.ɣatˤ.tˤa.taː/\n# third-person feminine dual past active of تَغَطَّى (taḡaṭṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡaṭṭatā", "taḡaṭṭā"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغطيتم",
-        "u": "تغطيتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغَطَّيْتُمْ • (taḡaṭṭaytum) (form V) /ta.ɣatˤ.tˤaj.tum/\n# second-person masculine plural past active of تَغَطَّى (taḡaṭṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡaṭṭaytum", "taḡaṭṭā"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتغطى",
-        "u": "تتغطى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَغَطَّى • (tataḡaṭṭā) (form V) /ta.ta.ɣatˤ.tˤaː/\n# inflection of تَغَطَّى (taḡaṭṭā):\n## second-person masculine singular non-past active indicative/subjunctive\n## third-person feminine singular non-past active indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḡaṭṭā", "taḡaṭṭā"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "أتغطى",
-        "u": "أتغطى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَتَغَطَّى • (ʔataḡaṭṭā) (form V) /ʔa.ta.ɣatˤ.tˤaː/\n# first-person singular non-past active indicative/subjunctive of تَغَطَّى (taḡaṭṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔataḡaṭṭā", "taḡaṭṭā"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتغطين",
-        "u": "تتغطين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَغَطَّيْنَ • (tataḡaṭṭayna) (form V) /ta.ta.ɣatˤ.tˤaj.na/\n# inflection of تَغَطَّى (taḡaṭṭā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḡaṭṭayna", "taḡaṭṭā"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغطيتن",
-        "u": "تغطيتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَغَطَّيْتُنَّ • (taḡaṭṭaytunna) (form V) /ta.ɣatˤ.tˤaj.tun.na/\n# second-person feminine plural past active of تَغَطَّى (taḡaṭṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḡaṭṭaytunna", "taḡaṭṭā"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتغطيان",
-        "u": "تتغطيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَغَطَّيَانِ • (tataḡaṭṭayāni) (form V) /ta.ta.ɣatˤ.tˤa.jaː.ni/\n# inflection of تَغَطَّى (taḡaṭṭā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḡaṭṭayāni", "taḡaṭṭā"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتغطى",
-        "u": "يتغطى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتغطى (form V)\n# يَتَغَطَّى (yataḡaṭṭā) /ja.ta.ɣatˤ.tˤaː/: third-person masculine singular non-past active indicative/subjunctive of تَغَطَّى (taḡaṭṭā)\n# يُتَغَطَّى (yutaḡaṭṭā) /ju.ta.ɣatˤ.tˤaː/: third-person masculine singular non-past passive indicative/subjunctive of تَغَطَّى (taḡaṭṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḡaṭṭā", "taḡaṭṭā", "yutaḡaṭṭā"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتغطون",
-        "u": "يتغطون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَغَطَّوْنَ • (yataḡaṭṭawna) (form V) /ja.ta.ɣatˤ.tˤaw.na/\n# third-person masculine plural non-past active indicative of تَغَطَّى (taḡaṭṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḡaṭṭawna", "taḡaṭṭā"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "نتغطى",
-        "u": "نتغطى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَتَغَطَّى • (nataḡaṭṭā) (form V) /na.ta.ɣatˤ.tˤaː/\n# first-person plural non-past active indicative/subjunctive of تَغَطَّى (taḡaṭṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["nataḡaṭṭā", "taḡaṭṭā"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتغطون",
-        "u": "تتغطون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَغَطَّوْنَ • (tataḡaṭṭawna) (form V) /ta.ta.ɣatˤ.tˤaw.na/\n# second-person masculine plural non-past active indicative of تَغَطَّى (taḡaṭṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḡaṭṭawna", "taḡaṭṭā"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتغطيان",
-        "u": "يتغطيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَغَطَّيَانِ • (yataḡaṭṭayāni) (form V) /ja.ta.ɣatˤ.tˤa.jaː.ni/\n# third-person masculine dual non-past active indicative of تَغَطَّى (taḡaṭṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḡaṭṭayāni", "taḡaṭṭā"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتغطيا",
-        "u": "تتغطيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَغَطَّيَا • (tataḡaṭṭayā) (form V) /ta.ta.ɣatˤ.tˤa.jaː/\n# inflection of تَغَطَّى (taḡaṭṭā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḡaṭṭayā", "taḡaṭṭā"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتغطين",
-        "u": "يتغطين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَغَطَّيْنَ • (yataḡaṭṭayna) (form V) /ja.ta.ɣatˤ.tˤaj.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَغَطَّى (taḡaṭṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḡaṭṭayna", "taḡaṭṭā"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتغطي",
-        "u": "تتغطي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَغَطَّيْ • (tataḡaṭṭay) (form V) /ta.ta.ɣatˤ.tˤaj/\n# second-person feminine singular non-past active subjunctive/jussive of تَغَطَّى (taḡaṭṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḡaṭṭay", "taḡaṭṭā"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتغطيا",
-        "u": "يتغطيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَغَطَّيَا • (yataḡaṭṭayā) (form V) /ja.ta.ɣatˤ.tˤa.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of تَغَطَّى (taḡaṭṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḡaṭṭayā", "taḡaṭṭā"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتغطوا",
-        "u": "يتغطوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَغَطَّوْا • (yataḡaṭṭaw) (form V) /ja.ta.ɣatˤ.tˤaw/\n# third-person masculine plural non-past active subjunctive/jussive of تَغَطَّى (taḡaṭṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḡaṭṭaw", "taḡaṭṭā"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "أتغط",
-        "u": "أتغط",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَتَغَطَّ • (ʔataḡaṭṭa) (form V) /ʔa.ta.ɣatˤ.tˤa/\n# first-person singular non-past active jussive of تَغَطَّى (taḡaṭṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔataḡaṭṭa", "taḡaṭṭā"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتغط",
-        "u": "يتغط",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتغط (form V)\n# يَتَغَطَّ (yataḡaṭṭa) /ja.ta.ɣatˤ.tˤa/: third-person masculine singular non-past active jussive of تَغَطَّى (taḡaṭṭā)\n# يُتَغَطَّ (yutaḡaṭṭa) /ju.ta.ɣatˤ.tˤa/: third-person masculine singular non-past passive jussive of تَغَطَّى (taḡaṭṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḡaṭṭa", "taḡaṭṭā", "yutaḡaṭṭa"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتغط",
-        "u": "تتغط",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَغَطَّ • (tataḡaṭṭa) (form V) /ta.ta.ɣatˤ.tˤa/\n# inflection of تَغَطَّى (taḡaṭṭā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḡaṭṭa", "taḡaṭṭā"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "نتغط",
-        "u": "نتغط",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَتَغَطَّ • (nataḡaṭṭa) (form V) /na.ta.ɣatˤ.tˤa/\n# first-person plural non-past active jussive of تَغَطَّى (taḡaṭṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["nataḡaṭṭa", "taḡaṭṭā"],
-        "k": "تغطى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتغطوا",
-        "u": "تتغطوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَغَطَّوْا • (tataḡaṭṭaw) (form V) /ta.ta.ɣatˤ.tˤaw/\n# second-person masculine plural non-past active subjunctive/jussive of تَغَطَّى (taḡaṭṭā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḡaṭṭaw", "taḡaṭṭā"],
-        "k": "تغطى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تغ",
+  "ses": {
     "harf": "ت",
+    "fasil": "تغ",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تغطي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تغطي (form V)\n# تُغُطِّيَ (tuḡuṭṭiya) /tu.ɣutˤ.tˤi.ja/: third-person masculine singular past passive of تَغَطَّى (taḡaṭṭā)\n# تَغَطَّيْ (taḡaṭṭay) /ta.ɣatˤ.tˤaj/: second-person feminine singular imperative of تَغَطَّى (taḡaṭṭā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tuḡuṭṭiya", "taḡaṭṭā", "taḡaṭṭay"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغط",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَغَطَّ • (taḡaṭṭa) (form V) /ta.ɣatˤ.tˤa/\n# second-person masculine singular imperative of تَغَطَّى (taḡaṭṭā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡaṭṭa", "taḡaṭṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغطين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَغَطَّيْنَ • (taḡaṭṭayna) (form V) /ta.ɣatˤ.tˤaj.na/\n# inflection of تَغَطَّى (taḡaṭṭā):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡaṭṭayna", "taḡaṭṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغطوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَغَطَّوْا • (taḡaṭṭaw) (form V) /ta.ɣatˤ.tˤaw/\n# inflection of تَغَطَّى (taḡaṭṭā):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡaṭṭaw", "taḡaṭṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغطيت",
+      "tur": "verb",
+      "baslik": "تغطيت (form V)\n# تَغَطَّيْتُ (taḡaṭṭaytu) /ta.ɣatˤ.tˤaj.tu/: first-person singular past active of تَغَطَّى (taḡaṭṭā)\n# تَغَطَّيْتَ (taḡaṭṭayta) /ta.ɣatˤ.tˤaj.ta/: second-person masculine singular past active of تَغَطَّى (taḡaṭṭā)\n# تَغَطَّيْتِ (taḡaṭṭayti) /ta.ɣatˤ.tˤaj.ti/: second-person feminine singular past active of تَغَطَّى (taḡaṭṭā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡaṭṭaytu", "taḡaṭṭā", "taḡaṭṭayta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغطيتما",
+      "tur": "verb",
+      "baslik": "تَغَطَّيْتُمَا • (taḡaṭṭaytumā) (form V) /ta.ɣatˤ.tˤaj.tu.maː/\n# second-person dual past active of تَغَطَّى (taḡaṭṭā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡaṭṭaytumā", "taḡaṭṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغطت",
+      "tur": "verb",
+      "baslik": "تَغَطَّتْ • (taḡaṭṭat) (form V) /ta.ɣatˤ.tˤat/\n# third-person feminine singular past active of تَغَطَّى (taḡaṭṭā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡaṭṭat", "taḡaṭṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغطينا",
+      "tur": "verb",
+      "baslik": "تَغَطَّيْنَا • (taḡaṭṭaynā) (form V) /ta.ɣatˤ.tˤaj.naː/\n# first-person plural past active of تَغَطَّى (taḡaṭṭā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡaṭṭaynā", "taḡaṭṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغطيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَغَطَّيَا • (taḡaṭṭayā) (form V) /ta.ɣatˤ.tˤa.jaː/\n# inflection of تَغَطَّى (taḡaṭṭā):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡaṭṭayā", "taḡaṭṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغطتا",
+      "tur": "verb",
+      "baslik": "تَغَطَّتَا • (taḡaṭṭatā) (form V) /ta.ɣatˤ.tˤa.taː/\n# third-person feminine dual past active of تَغَطَّى (taḡaṭṭā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡaṭṭatā", "taḡaṭṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغطيتم",
+      "tur": "verb",
+      "baslik": "تَغَطَّيْتُمْ • (taḡaṭṭaytum) (form V) /ta.ɣatˤ.tˤaj.tum/\n# second-person masculine plural past active of تَغَطَّى (taḡaṭṭā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡaṭṭaytum", "taḡaṭṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتغطى",
+      "tur": "verb",
+      "baslik": "تَتَغَطَّى • (tataḡaṭṭā) (form V) /ta.ta.ɣatˤ.tˤaː/\n# inflection of تَغَطَّى (taḡaṭṭā):\n## second-person masculine singular non-past active indicative/subjunctive\n## third-person feminine singular non-past active indicative/subjunctive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḡaṭṭā", "taḡaṭṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتغطى",
+      "tur": "verb",
+      "baslik": "أَتَغَطَّى • (ʔataḡaṭṭā) (form V) /ʔa.ta.ɣatˤ.tˤaː/\n# first-person singular non-past active indicative/subjunctive of تَغَطَّى (taḡaṭṭā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔataḡaṭṭā", "taḡaṭṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتغطين",
+      "tur": "verb",
+      "baslik": "تَتَغَطَّيْنَ • (tataḡaṭṭayna) (form V) /ta.ta.ɣatˤ.tˤaj.na/\n# inflection of تَغَطَّى (taḡaṭṭā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḡaṭṭayna", "taḡaṭṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغطيتن",
+      "tur": "verb",
+      "baslik": "تَغَطَّيْتُنَّ • (taḡaṭṭaytunna) (form V) /ta.ɣatˤ.tˤaj.tun.na/\n# second-person feminine plural past active of تَغَطَّى (taḡaṭṭā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḡaṭṭaytunna", "taḡaṭṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتغطيان",
+      "tur": "verb",
+      "baslik": "تَتَغَطَّيَانِ • (tataḡaṭṭayāni) (form V) /ta.ta.ɣatˤ.tˤa.jaː.ni/\n# inflection of تَغَطَّى (taḡaṭṭā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḡaṭṭayāni", "taḡaṭṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتغطى",
+      "tur": "verb",
+      "baslik": "يتغطى (form V)\n# يَتَغَطَّى (yataḡaṭṭā) /ja.ta.ɣatˤ.tˤaː/: third-person masculine singular non-past active indicative/subjunctive of تَغَطَّى (taḡaṭṭā)\n# يُتَغَطَّى (yutaḡaṭṭā) /ju.ta.ɣatˤ.tˤaː/: third-person masculine singular non-past passive indicative/subjunctive of تَغَطَّى (taḡaṭṭā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḡaṭṭā", "taḡaṭṭā", "yutaḡaṭṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتغطون",
+      "tur": "verb",
+      "baslik": "يَتَغَطَّوْنَ • (yataḡaṭṭawna) (form V) /ja.ta.ɣatˤ.tˤaw.na/\n# third-person masculine plural non-past active indicative of تَغَطَّى (taḡaṭṭā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḡaṭṭawna", "taḡaṭṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتغطى",
+      "tur": "verb",
+      "baslik": "نَتَغَطَّى • (nataḡaṭṭā) (form V) /na.ta.ɣatˤ.tˤaː/\n# first-person plural non-past active indicative/subjunctive of تَغَطَّى (taḡaṭṭā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["nataḡaṭṭā", "taḡaṭṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتغطون",
+      "tur": "verb",
+      "baslik": "تَتَغَطَّوْنَ • (tataḡaṭṭawna) (form V) /ta.ta.ɣatˤ.tˤaw.na/\n# second-person masculine plural non-past active indicative of تَغَطَّى (taḡaṭṭā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḡaṭṭawna", "taḡaṭṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتغطيان",
+      "tur": "verb",
+      "baslik": "يَتَغَطَّيَانِ • (yataḡaṭṭayāni) (form V) /ja.ta.ɣatˤ.tˤa.jaː.ni/\n# third-person masculine dual non-past active indicative of تَغَطَّى (taḡaṭṭā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḡaṭṭayāni", "taḡaṭṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتغطيا",
+      "tur": "verb",
+      "baslik": "تَتَغَطَّيَا • (tataḡaṭṭayā) (form V) /ta.ta.ɣatˤ.tˤa.jaː/\n# inflection of تَغَطَّى (taḡaṭṭā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḡaṭṭayā", "taḡaṭṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتغطين",
+      "tur": "verb",
+      "baslik": "يَتَغَطَّيْنَ • (yataḡaṭṭayna) (form V) /ja.ta.ɣatˤ.tˤaj.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَغَطَّى (taḡaṭṭā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḡaṭṭayna", "taḡaṭṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتغطي",
+      "tur": "verb",
+      "baslik": "تَتَغَطَّيْ • (tataḡaṭṭay) (form V) /ta.ta.ɣatˤ.tˤaj/\n# second-person feminine singular non-past active subjunctive/jussive of تَغَطَّى (taḡaṭṭā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḡaṭṭay", "taḡaṭṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتغطيا",
+      "tur": "verb",
+      "baslik": "يَتَغَطَّيَا • (yataḡaṭṭayā) (form V) /ja.ta.ɣatˤ.tˤa.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of تَغَطَّى (taḡaṭṭā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḡaṭṭayā", "taḡaṭṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتغطوا",
+      "tur": "verb",
+      "baslik": "يَتَغَطَّوْا • (yataḡaṭṭaw) (form V) /ja.ta.ɣatˤ.tˤaw/\n# third-person masculine plural non-past active subjunctive/jussive of تَغَطَّى (taḡaṭṭā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḡaṭṭaw", "taḡaṭṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتغط",
+      "tur": "verb",
+      "baslik": "أَتَغَطَّ • (ʔataḡaṭṭa) (form V) /ʔa.ta.ɣatˤ.tˤa/\n# first-person singular non-past active jussive of تَغَطَّى (taḡaṭṭā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔataḡaṭṭa", "taḡaṭṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتغط",
+      "tur": "verb",
+      "baslik": "يتغط (form V)\n# يَتَغَطَّ (yataḡaṭṭa) /ja.ta.ɣatˤ.tˤa/: third-person masculine singular non-past active jussive of تَغَطَّى (taḡaṭṭā)\n# يُتَغَطَّ (yutaḡaṭṭa) /ju.ta.ɣatˤ.tˤa/: third-person masculine singular non-past passive jussive of تَغَطَّى (taḡaṭṭā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḡaṭṭa", "taḡaṭṭā", "yutaḡaṭṭa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتغط",
+      "tur": "verb",
+      "baslik": "تَتَغَطَّ • (tataḡaṭṭa) (form V) /ta.ta.ɣatˤ.tˤa/\n# inflection of تَغَطَّى (taḡaṭṭā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḡaṭṭa", "taḡaṭṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتغط",
+      "tur": "verb",
+      "baslik": "نَتَغَطَّ • (nataḡaṭṭa) (form V) /na.ta.ɣatˤ.tˤa/\n# first-person plural non-past active jussive of تَغَطَّى (taḡaṭṭā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["nataḡaṭṭa", "taḡaṭṭā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتغطوا",
+      "tur": "verb",
+      "baslik": "تَتَغَطَّوْا • (tataḡaṭṭaw) (form V) /ta.ta.ɣatˤ.tˤaw/\n# second-person masculine plural non-past active subjunctive/jussive of تَغَطَّى (taḡaṭṭā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḡaṭṭaw", "taḡaṭṭā"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تغطى", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

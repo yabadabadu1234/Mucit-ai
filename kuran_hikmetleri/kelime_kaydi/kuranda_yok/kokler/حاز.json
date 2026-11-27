@@ -1,452 +1,325 @@
 {
   "kok": "حاز",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "حاز", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "حزن",
-        "u": "حزن",
-        "p": "verb",
-        "n": "8",
-        "h": "ar-verb form",
-        "e": "حزن (form I)\n# حُزْنَ (ḥuzna) /ħuz.na/: inflection of حَازَ (ḥāza):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# حِزْنَ (ḥizna) /ħiz.na/: third-person feminine plural past passive of حَازَ (ḥāza)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥuzna", "ḥāza", "ḥizna"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "يحزن",
-        "u": "يحزن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يحزن (form I)\n# يَحُزْنَ (yaḥuzna) /ja.ħuz.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of حَازَ (ḥāza)\n# يُحَزْنَ (yuḥazna) /ju.ħaz.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of حَازَ (ḥāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥuzna", "ḥāza", "yuḥazna"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "تحزن",
-        "u": "تحزن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تحزن (form I)\n# تَحُزْنَ (taḥuzna) /ta.ħuz.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of حَازَ (ḥāza)\n# تُحَزْنَ (tuḥazna) /tu.ħaz.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of حَازَ (ḥāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥuzna", "ḥāza", "tuḥazna"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "حزنا",
-        "u": "حزنا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "حزنا (form I)\n# حُزْنَا (ḥuznā) /ħuz.naː/: first-person plural past active of حَازَ (ḥāza)\n# حِزْنَا (ḥiznā) /ħiz.naː/: first-person plural past passive of حَازَ (ḥāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥuznā", "ḥāza", "ḥiznā"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "تحوز",
-        "u": "تحوز",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تحوز (form I)\n# تَحُوزُ (taḥūzu) /ta.ħuː.zu/: inflection of حَازَ (ḥāza):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَحُوزَ (taḥūza) /ta.ħuː.za/: inflection of حَازَ (ḥāza):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥūzu", "ḥāza", "taḥūza"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "حز",
-        "u": "حز",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "حُزْ • (ḥuz) (form I) /ħuz/\n# second-person masculine singular imperative of حَازَ (ḥāza)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥuz", "ḥāza"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "تحوزا",
-        "u": "تحوزا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَحُوزَا • (taḥūzā) (form I) /ta.ħuː.zaː/\n# inflection of حَازَ (ḥāza):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥūzā", "ḥāza"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "تحوزي",
-        "u": "تحوزي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَحُوزِي • (taḥūzī) (form I) /ta.ħuː.ziː/\n# second-person feminine singular non-past active subjunctive/jussive of حَازَ (ḥāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥūzī", "ḥāza"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "تحوزوا",
-        "u": "تحوزوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَحُوزُوا • (taḥūzū) (form I) /ta.ħuː.zuː/\n# second-person masculine plural non-past active subjunctive/jussive of حَازَ (ḥāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥūzū", "ḥāza"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "حزت",
-        "u": "حزت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "حزت (form I)\n# حُزْتُ (ḥuztu) /ħuz.tu/: first-person singular past active of حَازَ (ḥāza)\n# حُزْتَ (ḥuzta) /ħuz.ta/: second-person masculine singular past active of حَازَ (ḥāza)\n# حُزْتِ (ḥuzti) /ħuz.ti/: second-person feminine singular past active of حَازَ (ḥāza)\n# حِزْتُ (ḥiztu) /ħiz.tu/: first-person singular past passive of حَازَ (ḥāza)\n# حِزْتَ (ḥizta) /ħiz.ta/: second-person masculine singul",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥuztu", "ḥāza", "ḥuzta"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "حزتما",
-        "u": "حزتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حزتما (form I)\n# حُزْتُمَا (ḥuztumā) /ħuz.tu.maː/: second-person dual past active of حَازَ (ḥāza)\n# حِزْتُمَا (ḥiztumā) /ħiz.tu.maː/: second-person dual past passive of حَازَ (ḥāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥuztumā", "ḥāza", "ḥiztumā"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "حازت",
-        "u": "حازت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حَازَتْ • (ḥāzat) (form I) /ħaː.zat/\n# third-person feminine singular past active of حَازَ (ḥāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥāzat", "ḥāza"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "حازا",
-        "u": "حازا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حَازَا • (ḥāzā) (form I) /ħaː.zaː/\n# third-person masculine dual past active of حَازَ (ḥāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥāzā", "ḥāza"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "حازتا",
-        "u": "حازتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حَازَتَا • (ḥāzatā) (form I) /ħaː.za.taː/\n# third-person feminine dual past active of حَازَ (ḥāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥāzatā", "ḥāza"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "حزتم",
-        "u": "حزتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حزتم (form I)\n# حُزْتُمْ (ḥuztum) /ħuz.tum/: second-person masculine plural past active of حَازَ (ḥāza)\n# حِزْتُمْ (ḥiztum) /ħiz.tum/: second-person masculine plural past passive of حَازَ (ḥāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥuztum", "ḥāza", "ḥiztum"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "أحوز",
-        "u": "أحوز",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أحوز (form I)\n# أَحُوزُ (ʔaḥūzu) /ʔa.ħuː.zu/: first-person singular non-past active indicative of حَازَ (ḥāza)\n# أَحُوزَ (ʔaḥūza) /ʔa.ħuː.za/: first-person singular non-past active subjunctive of حَازَ (ḥāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḥūzu", "ḥāza", "ʔaḥūza"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "حزتن",
-        "u": "حزتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حزتن (form I)\n# حُزْتُنَّ (ḥuztunna) /ħuz.tun.na/: second-person feminine plural past active of حَازَ (ḥāza)\n# حِزْتُنَّ (ḥiztunna) /ħiz.tun.na/: second-person feminine plural past passive of حَازَ (ḥāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥuztunna", "ḥāza", "ḥiztunna"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "يحوز",
-        "u": "يحوز",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يحوز (form I)\n# يَحُوزُ (yaḥūzu) /ja.ħuː.zu/: third-person masculine singular non-past active indicative of حَازَ (ḥāza)\n# يَحُوزَ (yaḥūza) /ja.ħuː.za/: third-person masculine singular non-past active subjunctive of حَازَ (ḥāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥūzu", "ḥāza", "yaḥūza"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "حازوا",
-        "u": "حازوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حَازُوا • (ḥāzū) (form I) /ħaː.zuː/\n# third-person masculine plural past active of حَازَ (ḥāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥāzū", "ḥāza"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "تحوزين",
-        "u": "تحوزين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحُوزِينَ • (taḥūzīna) (form I) /ta.ħuː.ziː.na/\n# second-person feminine singular non-past active indicative of حَازَ (ḥāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥūzīna", "ḥāza"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "تحوزان",
-        "u": "تحوزان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحُوزَانِ • (taḥūzāni) (form I) /ta.ħuː.zaː.ni/\n# inflection of حَازَ (ḥāza):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥūzāni", "ḥāza"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "يحوزان",
-        "u": "يحوزان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَحُوزَانِ • (yaḥūzāni) (form I) /ja.ħuː.zaː.ni/\n# third-person masculine dual non-past active indicative of حَازَ (ḥāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥūzāni", "ḥāza"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "تحوزون",
-        "u": "تحوزون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحُوزُونَ • (taḥūzūna) (form I) /ta.ħuː.zuː.na/\n# second-person masculine plural non-past active indicative of حَازَ (ḥāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥūzūna", "ḥāza"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "نحوز",
-        "u": "نحوز",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نحوز (form I)\n# نَحُوزُ (naḥūzu) /na.ħuː.zu/: first-person plural non-past active indicative of حَازَ (ḥāza)\n# نَحُوزَ (naḥūza) /na.ħuː.za/: first-person plural non-past active subjunctive of حَازَ (ḥāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḥūzu", "ḥāza", "naḥūza"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "يحوزون",
-        "u": "يحوزون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَحُوزُونَ • (yaḥūzūna) (form I) /ja.ħuː.zuː.na/\n# third-person masculine plural non-past active indicative of حَازَ (ḥāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥūzūna", "ḥāza"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "أحز",
-        "u": "أحز",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أحز (form I)\n# أَحُزْ (ʔaḥuz) /ʔa.ħuz/: first-person singular non-past active jussive of حَازَ (ḥāza)\n# أُحَزْ (ʔuḥaz) /ʔu.ħaz/: first-person singular non-past passive jussive of حَازَ (ḥāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḥuz", "ḥāza", "ʔuḥaz"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "يحوزا",
-        "u": "يحوزا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَحُوزَا • (yaḥūzā) (form I) /ja.ħuː.zaː/\n# third-person masculine dual non-past active subjunctive/jussive of حَازَ (ḥāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥūzā", "ḥāza"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "نحز",
-        "u": "نحز",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نحز (form I)\n# نَحُزْ (naḥuz) /na.ħuz/: first-person plural non-past active jussive of حَازَ (ḥāza)\n# نُحَزْ (nuḥaz) /nu.ħaz/: first-person plural non-past passive jussive of حَازَ (ḥāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḥuz", "ḥāza", "nuḥaz"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "تحز",
-        "u": "تحز",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تحز (form I)\n# تَحُزْ (taḥuz) /ta.ħuz/: inflection of حَازَ (ḥāza):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُحَزْ (tuḥaz) /tu.ħaz/: inflection of حَازَ (ḥāza):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḥuz", "ḥāza", "tuḥaz"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "حوزا",
-        "u": "حوزا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حُوزَا • (ḥūzā) (form I) /ħuː.zaː/\n# second-person dual imperative of حَازَ (ḥāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥūzā", "ḥāza"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "حوزي",
-        "u": "حوزي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حُوزِي • (ḥūzī) (form I) /ħuː.ziː/\n# second-person feminine singular imperative of حَازَ (ḥāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥūzī", "ḥāza"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "يحوزوا",
-        "u": "يحوزوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَحُوزُوا • (yaḥūzū) (form I) /ja.ħuː.zuː/\n# third-person masculine plural non-past active subjunctive/jussive of حَازَ (ḥāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥūzū", "ḥāza"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "حوزوا",
-        "u": "حوزوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "حُوزُوا • (ḥūzū) (form I) /ħuː.zuː/\n# second-person masculine plural imperative of حَازَ (ḥāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḥūzū", "ḥāza"],
-        "k": "حاز",
-        "yol": "kök"
-      },
-      {
-        "w": "يحز",
-        "u": "يحز",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يحز (form I)\n# يَحُزْ (yaḥuz) /ja.ħuz/: third-person masculine singular non-past active jussive of حَازَ (ḥāza)\n# يُحَزْ (yuḥaz) /ju.ħaz/: third-person masculine singular non-past passive jussive of حَازَ (ḥāza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḥuz", "ḥāza", "yuḥaz"],
-        "k": "حاز",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "حز",
+  "ses": {
     "harf": "ح",
+    "fasil": "حز",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "حزن",
+      "tur": "verb",
+      "etim_no": "8",
+      "baslik": "حزن (form I)\n# حُزْنَ (ḥuzna) /ħuz.na/: inflection of حَازَ (ḥāza):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# حِزْنَ (ḥizna) /ħiz.na/: third-person feminine plural past passive of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥuzna", "ḥāza", "ḥizna"]
+    },
+    {
+      "madde": "يحزن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يحزن (form I)\n# يَحُزْنَ (yaḥuzna) /ja.ħuz.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of حَازَ (ḥāza)\n# يُحَزْنَ (yuḥazna) /ju.ħaz.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥuzna", "ḥāza", "yuḥazna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحزن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تحزن (form I)\n# تَحُزْنَ (taḥuzna) /ta.ħuz.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of حَازَ (ḥāza)\n# تُحَزْنَ (tuḥazna) /tu.ħaz.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥuzna", "ḥāza", "tuḥazna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حزنا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "حزنا (form I)\n# حُزْنَا (ḥuznā) /ħuz.naː/: first-person plural past active of حَازَ (ḥāza)\n# حِزْنَا (ḥiznā) /ħiz.naː/: first-person plural past passive of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥuznā", "ḥāza", "ḥiznā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحوز",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تحوز (form I)\n# تَحُوزُ (taḥūzu) /ta.ħuː.zu/: inflection of حَازَ (ḥāza):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَحُوزَ (taḥūza) /ta.ħuː.za/: inflection of حَازَ (ḥāza):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥūzu", "ḥāza", "taḥūza"]
+    },
+    {
+      "madde": "حز",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "حُزْ • (ḥuz) (form I) /ħuz/\n# second-person masculine singular imperative of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥuz", "ḥāza"]
+    },
+    {
+      "madde": "تحوزا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَحُوزَا • (taḥūzā) (form I) /ta.ħuː.zaː/\n# inflection of حَازَ (ḥāza):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥūzā", "ḥāza"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحوزي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَحُوزِي • (taḥūzī) (form I) /ta.ħuː.ziː/\n# second-person feminine singular non-past active subjunctive/jussive of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥūzī", "ḥāza"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحوزوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَحُوزُوا • (taḥūzū) (form I) /ta.ħuː.zuː/\n# second-person masculine plural non-past active subjunctive/jussive of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥūzū", "ḥāza"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حزت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "حزت (form I)\n# حُزْتُ (ḥuztu) /ħuz.tu/: first-person singular past active of حَازَ (ḥāza)\n# حُزْتَ (ḥuzta) /ħuz.ta/: second-person masculine singular past active of حَازَ (ḥāza)\n# حُزْتِ (ḥuzti) /ħuz.ti/: second-person feminine singular past active of حَازَ (ḥāza)\n# حِزْتُ (ḥiztu) /ħiz.tu/: first-person singular past passive of حَازَ (ḥāza)\n# حِزْتَ (ḥizta) /ħiz.ta/: second-person masculine singul",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥuztu", "ḥāza", "ḥuzta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حزتما",
+      "tur": "verb",
+      "baslik": "حزتما (form I)\n# حُزْتُمَا (ḥuztumā) /ħuz.tu.maː/: second-person dual past active of حَازَ (ḥāza)\n# حِزْتُمَا (ḥiztumā) /ħiz.tu.maː/: second-person dual past passive of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥuztumā", "ḥāza", "ḥiztumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حازت",
+      "tur": "verb",
+      "baslik": "حَازَتْ • (ḥāzat) (form I) /ħaː.zat/\n# third-person feminine singular past active of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥāzat", "ḥāza"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حازا",
+      "tur": "verb",
+      "baslik": "حَازَا • (ḥāzā) (form I) /ħaː.zaː/\n# third-person masculine dual past active of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥāzā", "ḥāza"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حازتا",
+      "tur": "verb",
+      "baslik": "حَازَتَا • (ḥāzatā) (form I) /ħaː.za.taː/\n# third-person feminine dual past active of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥāzatā", "ḥāza"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حزتم",
+      "tur": "verb",
+      "baslik": "حزتم (form I)\n# حُزْتُمْ (ḥuztum) /ħuz.tum/: second-person masculine plural past active of حَازَ (ḥāza)\n# حِزْتُمْ (ḥiztum) /ħiz.tum/: second-person masculine plural past passive of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥuztum", "ḥāza", "ḥiztum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أحوز",
+      "tur": "verb",
+      "baslik": "أحوز (form I)\n# أَحُوزُ (ʔaḥūzu) /ʔa.ħuː.zu/: first-person singular non-past active indicative of حَازَ (ḥāza)\n# أَحُوزَ (ʔaḥūza) /ʔa.ħuː.za/: first-person singular non-past active subjunctive of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḥūzu", "ḥāza", "ʔaḥūza"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حزتن",
+      "tur": "verb",
+      "baslik": "حزتن (form I)\n# حُزْتُنَّ (ḥuztunna) /ħuz.tun.na/: second-person feminine plural past active of حَازَ (ḥāza)\n# حِزْتُنَّ (ḥiztunna) /ħiz.tun.na/: second-person feminine plural past passive of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥuztunna", "ḥāza", "ḥiztunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحوز",
+      "tur": "verb",
+      "baslik": "يحوز (form I)\n# يَحُوزُ (yaḥūzu) /ja.ħuː.zu/: third-person masculine singular non-past active indicative of حَازَ (ḥāza)\n# يَحُوزَ (yaḥūza) /ja.ħuː.za/: third-person masculine singular non-past active subjunctive of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥūzu", "ḥāza", "yaḥūza"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حازوا",
+      "tur": "verb",
+      "baslik": "حَازُوا • (ḥāzū) (form I) /ħaː.zuː/\n# third-person masculine plural past active of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥāzū", "ḥāza"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحوزين",
+      "tur": "verb",
+      "baslik": "تَحُوزِينَ • (taḥūzīna) (form I) /ta.ħuː.ziː.na/\n# second-person feminine singular non-past active indicative of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥūzīna", "ḥāza"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحوزان",
+      "tur": "verb",
+      "baslik": "تَحُوزَانِ • (taḥūzāni) (form I) /ta.ħuː.zaː.ni/\n# inflection of حَازَ (ḥāza):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥūzāni", "ḥāza"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحوزان",
+      "tur": "verb",
+      "baslik": "يَحُوزَانِ • (yaḥūzāni) (form I) /ja.ħuː.zaː.ni/\n# third-person masculine dual non-past active indicative of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥūzāni", "ḥāza"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحوزون",
+      "tur": "verb",
+      "baslik": "تَحُوزُونَ • (taḥūzūna) (form I) /ta.ħuː.zuː.na/\n# second-person masculine plural non-past active indicative of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥūzūna", "ḥāza"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نحوز",
+      "tur": "verb",
+      "baslik": "نحوز (form I)\n# نَحُوزُ (naḥūzu) /na.ħuː.zu/: first-person plural non-past active indicative of حَازَ (ḥāza)\n# نَحُوزَ (naḥūza) /na.ħuː.za/: first-person plural non-past active subjunctive of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḥūzu", "ḥāza", "naḥūza"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحوزون",
+      "tur": "verb",
+      "baslik": "يَحُوزُونَ • (yaḥūzūna) (form I) /ja.ħuː.zuː.na/\n# third-person masculine plural non-past active indicative of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥūzūna", "ḥāza"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أحز",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أحز (form I)\n# أَحُزْ (ʔaḥuz) /ʔa.ħuz/: first-person singular non-past active jussive of حَازَ (ḥāza)\n# أُحَزْ (ʔuḥaz) /ʔu.ħaz/: first-person singular non-past passive jussive of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḥuz", "ḥāza", "ʔuḥaz"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحوزا",
+      "tur": "verb",
+      "baslik": "يَحُوزَا • (yaḥūzā) (form I) /ja.ħuː.zaː/\n# third-person masculine dual non-past active subjunctive/jussive of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥūzā", "ḥāza"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نحز",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نحز (form I)\n# نَحُزْ (naḥuz) /na.ħuz/: first-person plural non-past active jussive of حَازَ (ḥāza)\n# نُحَزْ (nuḥaz) /nu.ħaz/: first-person plural non-past passive jussive of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḥuz", "ḥāza", "nuḥaz"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تحز",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تحز (form I)\n# تَحُزْ (taḥuz) /ta.ħuz/: inflection of حَازَ (ḥāza):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُحَزْ (tuḥaz) /tu.ħaz/: inflection of حَازَ (ḥāza):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḥuz", "ḥāza", "tuḥaz"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حوزا",
+      "tur": "verb",
+      "baslik": "حُوزَا • (ḥūzā) (form I) /ħuː.zaː/\n# second-person dual imperative of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥūzā", "ḥāza"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حوزي",
+      "tur": "verb",
+      "baslik": "حُوزِي • (ḥūzī) (form I) /ħuː.ziː/\n# second-person feminine singular imperative of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥūzī", "ḥāza"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحوزوا",
+      "tur": "verb",
+      "baslik": "يَحُوزُوا • (yaḥūzū) (form I) /ja.ħuː.zuː/\n# third-person masculine plural non-past active subjunctive/jussive of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥūzū", "ḥāza"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "حوزوا",
+      "tur": "verb",
+      "baslik": "حُوزُوا • (ḥūzū) (form I) /ħuː.zuː/\n# second-person masculine plural imperative of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḥūzū", "ḥāza"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يحز",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يحز (form I)\n# يَحُزْ (yaḥuz) /ja.ħuz/: third-person masculine singular non-past active jussive of حَازَ (ḥāza)\n# يُحَزْ (yuḥaz) /ju.ħaz/: third-person masculine singular non-past passive jussive of حَازَ (ḥāza)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḥuz", "ḥāza", "yuḥaz"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "حاز", "r7"]
+  ],
+  "mana": {
     "ince": "state.n.02",
     "orta": "noun.feeling",
     "ust": "his ve nefis",
@@ -454,22 +327,15 @@
     "dayanak_tanim": "intense sorrow caused by loss of a loved one (especially by death)",
     "synset_sayisi": 11
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["act.n.02", "anger.v.01", "exploit.v.02", "feeling.n.01", "grieve.v.01", "incise.v.01", "invest.v.04"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["act.n.02", "anger.v.01", "exploit.v.02", "feeling.n.01", "grieve.v.01", "incise.v.01", "invest.v.04"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,362 +1,281 @@
 {
   "kok": "تءلب",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تءلب", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تألبت",
-        "u": "تألبت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تألبت (form V)\n# تَأَلَّبْتُ (taʔallabtu) /ta.ʔal.lab.tu/: first-person singular past active of تَأَلَّبَ (taʔallaba)\n# تَأَلَّبْتَ (taʔallabta) /ta.ʔal.lab.ta/: second-person masculine singular past active of تَأَلَّبَ (taʔallaba)\n# تَأَلَّبْتِ (taʔallabti) /ta.ʔal.lab.ti/: second-person feminine singular past active of تَأَلَّبَ (taʔallaba)\n# تَأَلَّبَتْ (taʔallabat) /ta.ʔal.la.bat/: third-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔallabtu", "taʔallaba", "taʔallabta"],
-        "k": "تألب",
-        "yol": "kök"
-      },
-      {
-        "w": "تألبا",
-        "u": "تألبا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَلَّبَا • (taʔallabā) (form V) /ta.ʔal.la.baː/\n# inflection of تَأَلَّبَ (taʔallaba):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔallabā", "taʔallaba"],
-        "k": "تألب",
-        "yol": "kök"
-      },
-      {
-        "w": "تألبتا",
-        "u": "تألبتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَلَّبَتَا • (taʔallabatā) (form V) /ta.ʔal.la.ba.taː/\n# third-person feminine dual past active of تَأَلَّبَ (taʔallaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔallabatā", "taʔallaba"],
-        "k": "تألب",
-        "yol": "kök"
-      },
-      {
-        "w": "تألبتما",
-        "u": "تألبتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَلَّبْتُمَا • (taʔallabtumā) (form V) /ta.ʔal.lab.tu.maː/\n# second-person dual past active of تَأَلَّبَ (taʔallaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔallabtumā", "taʔallaba"],
-        "k": "تألب",
-        "yol": "kök"
-      },
-      {
-        "w": "تألبوا",
-        "u": "تألبوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَلَّبُوا • (taʔallabū) (form V) /ta.ʔal.la.buː/\n# inflection of تَأَلَّبَ (taʔallaba):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔallabū", "taʔallaba"],
-        "k": "تألب",
-        "yol": "kök"
-      },
-      {
-        "w": "تألبتم",
-        "u": "تألبتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَلَّبْتُمْ • (taʔallabtum) (form V) /ta.ʔal.lab.tum/\n# second-person masculine plural past active of تَأَلَّبَ (taʔallaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔallabtum", "taʔallaba"],
-        "k": "تألب",
-        "yol": "kök"
-      },
-      {
-        "w": "تألبتن",
-        "u": "تألبتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَلَّبْتُنَّ • (taʔallabtunna) (form V) /ta.ʔal.lab.tun.na/\n# second-person feminine plural past active of تَأَلَّبَ (taʔallaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔallabtunna", "taʔallaba"],
-        "k": "تألب",
-        "yol": "kök"
-      },
-      {
-        "w": "أتألب",
-        "u": "أتألب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتألب (form V)\n# أَتَأَلَّبُ (ʔataʔallabu) /ʔa.ta.ʔal.la.bu/: first-person singular non-past active indicative of تَأَلَّبَ (taʔallaba)\n# أَتَأَلَّبَ (ʔataʔallaba) /ʔa.ta.ʔal.la.ba/: first-person singular non-past active subjunctive of تَأَلَّبَ (taʔallaba)\n# أَتَأَلَّبْ (ʔataʔallab) /ʔa.ta.ʔal.lab/: first-person singular non-past active jussive of تَأَلَّبَ (taʔallaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔataʔallabu", "taʔallaba", "ʔataʔallaba"],
-        "k": "تألب",
-        "yol": "kök"
-      },
-      {
-        "w": "تألبن",
-        "u": "تألبن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَلَّبْنَ • (taʔallabna) (form V) /ta.ʔal.lab.na/\n# inflection of تَأَلَّبَ (taʔallaba):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔallabna", "taʔallaba"],
-        "k": "تألب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتألبين",
-        "u": "تتألبين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَلَّبِينَ • (tataʔallabīna) (form V) /ta.ta.ʔal.la.biː.na/\n# second-person feminine singular non-past active indicative of تَأَلَّبَ (taʔallaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔallabīna", "taʔallaba"],
-        "k": "تألب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتألب",
-        "u": "تتألب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتألب (form V)\n# تَتَأَلَّبُ (tataʔallabu) /ta.ta.ʔal.la.bu/: inflection of تَأَلَّبَ (taʔallaba):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَأَلَّبَ (tataʔallaba) /ta.ta.ʔal.la.ba/: inflection of تَأَلَّبَ (taʔallaba):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔallabu", "taʔallaba", "tataʔallaba"],
-        "k": "تألب",
-        "yol": "kök"
-      },
-      {
-        "w": "يتألب",
-        "u": "يتألب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتألب (form V)\n# يَتَأَلَّبُ (yataʔallabu) /ja.ta.ʔal.la.bu/: third-person masculine singular non-past active indicative of تَأَلَّبَ (taʔallaba)\n# يَتَأَلَّبَ (yataʔallaba) /ja.ta.ʔal.la.ba/: third-person masculine singular non-past active subjunctive of تَأَلَّبَ (taʔallaba)\n# يَتَأَلَّبْ (yataʔallab) /ja.ta.ʔal.lab/: third-person masculine singular non-past active jussive of تَأَلَّبَ (taʔallab",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔallabu", "taʔallaba", "yataʔallaba"],
-        "k": "تألب",
-        "yol": "kök"
-      },
-      {
-        "w": "نتألب",
-        "u": "نتألب",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتألب (form V)\n# نَتَأَلَّبُ (nataʔallabu) /na.ta.ʔal.la.bu/: first-person plural non-past active indicative of تَأَلَّبَ (taʔallaba)\n# نَتَأَلَّبَ (nataʔallaba) /na.ta.ʔal.la.ba/: first-person plural non-past active subjunctive of تَأَلَّبَ (taʔallaba)\n# نَتَأَلَّبْ (nataʔallab) /na.ta.ʔal.lab/: first-person plural non-past active jussive of تَأَلَّبَ (taʔallaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["nataʔallabu", "taʔallaba", "nataʔallaba"],
-        "k": "تألب",
-        "yol": "kök"
-      },
-      {
-        "w": "يتألبان",
-        "u": "يتألبان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَأَلَّبَانِ • (yataʔallabāni) (form V) /ja.ta.ʔal.la.baː.ni/\n# third-person masculine dual non-past active indicative of تَأَلَّبَ (taʔallaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔallabāni", "taʔallaba"],
-        "k": "تألب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتألبان",
-        "u": "تتألبان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَلَّبَانِ • (tataʔallabāni) (form V) /ta.ta.ʔal.la.baː.ni/\n# inflection of تَأَلَّبَ (taʔallaba):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔallabāni", "taʔallaba"],
-        "k": "تألب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتألبون",
-        "u": "تتألبون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَلَّبُونَ • (tataʔallabūna) (form V) /ta.ta.ʔal.la.buː.na/\n# second-person masculine plural non-past active indicative of تَأَلَّبَ (taʔallaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔallabūna", "taʔallaba"],
-        "k": "تألب",
-        "yol": "kök"
-      },
-      {
-        "w": "يتألبن",
-        "u": "يتألبن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَأَلَّبْنَ • (yataʔallabna) (form V) /ja.ta.ʔal.lab.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَأَلَّبَ (taʔallaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔallabna", "taʔallaba"],
-        "k": "تألب",
-        "yol": "kök"
-      },
-      {
-        "w": "يتألبون",
-        "u": "يتألبون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَأَلَّبُونَ • (yataʔallabūna) (form V) /ja.ta.ʔal.la.buː.na/\n# third-person masculine plural non-past active indicative of تَأَلَّبَ (taʔallaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔallabūna", "taʔallaba"],
-        "k": "تألب",
-        "yol": "kök"
-      },
-      {
-        "w": "يتألبا",
-        "u": "يتألبا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَأَلَّبَا • (yataʔallabā) (form V) /ja.ta.ʔal.la.baː/\n# third-person masculine dual non-past active subjunctive/jussive of تَأَلَّبَ (taʔallaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔallabā", "taʔallaba"],
-        "k": "تألب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتألبن",
-        "u": "تتألبن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَلَّبْنَ • (tataʔallabna) (form V) /ta.ta.ʔal.lab.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَأَلَّبَ (taʔallaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔallabna", "taʔallaba"],
-        "k": "تألب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتألبوا",
-        "u": "تتألبوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَلَّبُوا • (tataʔallabū) (form V) /ta.ta.ʔal.la.buː/\n# second-person masculine plural non-past active subjunctive/jussive of تَأَلَّبَ (taʔallaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔallabū", "taʔallaba"],
-        "k": "تألب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتألبي",
-        "u": "تتألبي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَلَّبِي • (tataʔallabī) (form V) /ta.ta.ʔal.la.biː/\n# second-person feminine singular non-past active subjunctive/jussive of تَأَلَّبَ (taʔallaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔallabī", "taʔallaba"],
-        "k": "تألب",
-        "yol": "kök"
-      },
-      {
-        "w": "تتألبا",
-        "u": "تتألبا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَلَّبَا • (tataʔallabā) (form V) /ta.ta.ʔal.la.baː/\n# inflection of تَأَلَّبَ (taʔallaba):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔallabā", "taʔallaba"],
-        "k": "تألب",
-        "yol": "kök"
-      },
-      {
-        "w": "يتألبوا",
-        "u": "يتألبوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَأَلَّبُوا • (yataʔallabū) (form V) /ja.ta.ʔal.la.buː/\n# third-person masculine plural non-past active subjunctive/jussive of تَأَلَّبَ (taʔallaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔallabū", "taʔallaba"],
-        "k": "تألب",
-        "yol": "kök"
-      },
-      {
-        "w": "تألبي",
-        "u": "تألبي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَلَّبِي • (taʔallabī) (form V) /ta.ʔal.la.biː/\n# second-person feminine singular imperative of تَأَلَّبَ (taʔallaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔallabī", "taʔallaba"],
-        "k": "تألب",
-        "yol": "kök"
-      },
-      {
-        "w": "تألبنا",
-        "u": "تألبنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَلَّبْنَا • (taʔallabnā) (form V) /ta.ʔal.lab.naː/\n# first-person plural past active of تَأَلَّبَ (taʔallaba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔallabnā", "taʔallaba"],
-        "k": "تألب",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تل",
+  "ses": {
     "harf": "ت",
+    "fasil": "تل",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تألبت",
+      "tur": "verb",
+      "baslik": "تألبت (form V)\n# تَأَلَّبْتُ (taʔallabtu) /ta.ʔal.lab.tu/: first-person singular past active of تَأَلَّبَ (taʔallaba)\n# تَأَلَّبْتَ (taʔallabta) /ta.ʔal.lab.ta/: second-person masculine singular past active of تَأَلَّبَ (taʔallaba)\n# تَأَلَّبْتِ (taʔallabti) /ta.ʔal.lab.ti/: second-person feminine singular past active of تَأَلَّبَ (taʔallaba)\n# تَأَلَّبَتْ (taʔallabat) /ta.ʔal.la.bat/: third-perso",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔallabtu", "taʔallaba", "taʔallabta"],
+      "kok_yazilis": "تألب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تألبا",
+      "tur": "verb",
+      "baslik": "تَأَلَّبَا • (taʔallabā) (form V) /ta.ʔal.la.baː/\n# inflection of تَأَلَّبَ (taʔallaba):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔallabā", "taʔallaba"],
+      "kok_yazilis": "تألب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تألبتا",
+      "tur": "verb",
+      "baslik": "تَأَلَّبَتَا • (taʔallabatā) (form V) /ta.ʔal.la.ba.taː/\n# third-person feminine dual past active of تَأَلَّبَ (taʔallaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔallabatā", "taʔallaba"],
+      "kok_yazilis": "تألب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تألبتما",
+      "tur": "verb",
+      "baslik": "تَأَلَّبْتُمَا • (taʔallabtumā) (form V) /ta.ʔal.lab.tu.maː/\n# second-person dual past active of تَأَلَّبَ (taʔallaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔallabtumā", "taʔallaba"],
+      "kok_yazilis": "تألب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تألبوا",
+      "tur": "verb",
+      "baslik": "تَأَلَّبُوا • (taʔallabū) (form V) /ta.ʔal.la.buː/\n# inflection of تَأَلَّبَ (taʔallaba):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔallabū", "taʔallaba"],
+      "kok_yazilis": "تألب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تألبتم",
+      "tur": "verb",
+      "baslik": "تَأَلَّبْتُمْ • (taʔallabtum) (form V) /ta.ʔal.lab.tum/\n# second-person masculine plural past active of تَأَلَّبَ (taʔallaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔallabtum", "taʔallaba"],
+      "kok_yazilis": "تألب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تألبتن",
+      "tur": "verb",
+      "baslik": "تَأَلَّبْتُنَّ • (taʔallabtunna) (form V) /ta.ʔal.lab.tun.na/\n# second-person feminine plural past active of تَأَلَّبَ (taʔallaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔallabtunna", "taʔallaba"],
+      "kok_yazilis": "تألب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتألب",
+      "tur": "verb",
+      "baslik": "أتألب (form V)\n# أَتَأَلَّبُ (ʔataʔallabu) /ʔa.ta.ʔal.la.bu/: first-person singular non-past active indicative of تَأَلَّبَ (taʔallaba)\n# أَتَأَلَّبَ (ʔataʔallaba) /ʔa.ta.ʔal.la.ba/: first-person singular non-past active subjunctive of تَأَلَّبَ (taʔallaba)\n# أَتَأَلَّبْ (ʔataʔallab) /ʔa.ta.ʔal.lab/: first-person singular non-past active jussive of تَأَلَّبَ (taʔallaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔataʔallabu", "taʔallaba", "ʔataʔallaba"],
+      "kok_yazilis": "تألب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تألبن",
+      "tur": "verb",
+      "baslik": "تَأَلَّبْنَ • (taʔallabna) (form V) /ta.ʔal.lab.na/\n# inflection of تَأَلَّبَ (taʔallaba):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔallabna", "taʔallaba"],
+      "kok_yazilis": "تألب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتألبين",
+      "tur": "verb",
+      "baslik": "تَتَأَلَّبِينَ • (tataʔallabīna) (form V) /ta.ta.ʔal.la.biː.na/\n# second-person feminine singular non-past active indicative of تَأَلَّبَ (taʔallaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔallabīna", "taʔallaba"],
+      "kok_yazilis": "تألب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتألب",
+      "tur": "verb",
+      "baslik": "تتألب (form V)\n# تَتَأَلَّبُ (tataʔallabu) /ta.ta.ʔal.la.bu/: inflection of تَأَلَّبَ (taʔallaba):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَأَلَّبَ (tataʔallaba) /ta.ta.ʔal.la.ba/: inflection of تَأَلَّبَ (taʔallaba):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔallabu", "taʔallaba", "tataʔallaba"],
+      "kok_yazilis": "تألب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتألب",
+      "tur": "verb",
+      "baslik": "يتألب (form V)\n# يَتَأَلَّبُ (yataʔallabu) /ja.ta.ʔal.la.bu/: third-person masculine singular non-past active indicative of تَأَلَّبَ (taʔallaba)\n# يَتَأَلَّبَ (yataʔallaba) /ja.ta.ʔal.la.ba/: third-person masculine singular non-past active subjunctive of تَأَلَّبَ (taʔallaba)\n# يَتَأَلَّبْ (yataʔallab) /ja.ta.ʔal.lab/: third-person masculine singular non-past active jussive of تَأَلَّبَ (taʔallab",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔallabu", "taʔallaba", "yataʔallaba"],
+      "kok_yazilis": "تألب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتألب",
+      "tur": "verb",
+      "baslik": "نتألب (form V)\n# نَتَأَلَّبُ (nataʔallabu) /na.ta.ʔal.la.bu/: first-person plural non-past active indicative of تَأَلَّبَ (taʔallaba)\n# نَتَأَلَّبَ (nataʔallaba) /na.ta.ʔal.la.ba/: first-person plural non-past active subjunctive of تَأَلَّبَ (taʔallaba)\n# نَتَأَلَّبْ (nataʔallab) /na.ta.ʔal.lab/: first-person plural non-past active jussive of تَأَلَّبَ (taʔallaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["nataʔallabu", "taʔallaba", "nataʔallaba"],
+      "kok_yazilis": "تألب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتألبان",
+      "tur": "verb",
+      "baslik": "يَتَأَلَّبَانِ • (yataʔallabāni) (form V) /ja.ta.ʔal.la.baː.ni/\n# third-person masculine dual non-past active indicative of تَأَلَّبَ (taʔallaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔallabāni", "taʔallaba"],
+      "kok_yazilis": "تألب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتألبان",
+      "tur": "verb",
+      "baslik": "تَتَأَلَّبَانِ • (tataʔallabāni) (form V) /ta.ta.ʔal.la.baː.ni/\n# inflection of تَأَلَّبَ (taʔallaba):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔallabāni", "taʔallaba"],
+      "kok_yazilis": "تألب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتألبون",
+      "tur": "verb",
+      "baslik": "تَتَأَلَّبُونَ • (tataʔallabūna) (form V) /ta.ta.ʔal.la.buː.na/\n# second-person masculine plural non-past active indicative of تَأَلَّبَ (taʔallaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔallabūna", "taʔallaba"],
+      "kok_yazilis": "تألب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتألبن",
+      "tur": "verb",
+      "baslik": "يَتَأَلَّبْنَ • (yataʔallabna) (form V) /ja.ta.ʔal.lab.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَأَلَّبَ (taʔallaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔallabna", "taʔallaba"],
+      "kok_yazilis": "تألب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتألبون",
+      "tur": "verb",
+      "baslik": "يَتَأَلَّبُونَ • (yataʔallabūna) (form V) /ja.ta.ʔal.la.buː.na/\n# third-person masculine plural non-past active indicative of تَأَلَّبَ (taʔallaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔallabūna", "taʔallaba"],
+      "kok_yazilis": "تألب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتألبا",
+      "tur": "verb",
+      "baslik": "يَتَأَلَّبَا • (yataʔallabā) (form V) /ja.ta.ʔal.la.baː/\n# third-person masculine dual non-past active subjunctive/jussive of تَأَلَّبَ (taʔallaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔallabā", "taʔallaba"],
+      "kok_yazilis": "تألب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتألبن",
+      "tur": "verb",
+      "baslik": "تَتَأَلَّبْنَ • (tataʔallabna) (form V) /ta.ta.ʔal.lab.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَأَلَّبَ (taʔallaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔallabna", "taʔallaba"],
+      "kok_yazilis": "تألب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتألبوا",
+      "tur": "verb",
+      "baslik": "تَتَأَلَّبُوا • (tataʔallabū) (form V) /ta.ta.ʔal.la.buː/\n# second-person masculine plural non-past active subjunctive/jussive of تَأَلَّبَ (taʔallaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔallabū", "taʔallaba"],
+      "kok_yazilis": "تألب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتألبي",
+      "tur": "verb",
+      "baslik": "تَتَأَلَّبِي • (tataʔallabī) (form V) /ta.ta.ʔal.la.biː/\n# second-person feminine singular non-past active subjunctive/jussive of تَأَلَّبَ (taʔallaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔallabī", "taʔallaba"],
+      "kok_yazilis": "تألب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتألبا",
+      "tur": "verb",
+      "baslik": "تَتَأَلَّبَا • (tataʔallabā) (form V) /ta.ta.ʔal.la.baː/\n# inflection of تَأَلَّبَ (taʔallaba):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔallabā", "taʔallaba"],
+      "kok_yazilis": "تألب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتألبوا",
+      "tur": "verb",
+      "baslik": "يَتَأَلَّبُوا • (yataʔallabū) (form V) /ja.ta.ʔal.la.buː/\n# third-person masculine plural non-past active subjunctive/jussive of تَأَلَّبَ (taʔallaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔallabū", "taʔallaba"],
+      "kok_yazilis": "تألب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تألبي",
+      "tur": "verb",
+      "baslik": "تَأَلَّبِي • (taʔallabī) (form V) /ta.ʔal.la.biː/\n# second-person feminine singular imperative of تَأَلَّبَ (taʔallaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔallabī", "taʔallaba"],
+      "kok_yazilis": "تألب",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تألبنا",
+      "tur": "verb",
+      "baslik": "تَأَلَّبْنَا • (taʔallabnā) (form V) /ta.ʔal.lab.naː/\n# first-person plural past active of تَأَلَّبَ (taʔallaba)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔallabnā", "taʔallaba"],
+      "kok_yazilis": "تألب",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تءلب", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

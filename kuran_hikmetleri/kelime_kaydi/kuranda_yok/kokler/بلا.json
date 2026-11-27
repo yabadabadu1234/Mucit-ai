@@ -1,396 +1,289 @@
 {
   "kok": "بلا",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "بلا", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يبل",
-        "u": "يبل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يبل (form I)\n# يَبْلُ (yablu) /jab.lu/: third-person masculine singular non-past active jussive of بَلَا (balā)\n# يُبْلَ (yubla) /jub.la/: third-person masculine singular non-past passive jussive of بَلَا (balā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yablu", "balā", "yubla"],
-        "k": "بلا",
-        "yol": "kök"
-      },
-      {
-        "w": "بلت",
-        "u": "بلت",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "بَلَتْ • (balat) (form I) /ba.lat/\n# third-person feminine singular past active of بَلَا (balā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["balat", "balā"],
-        "k": "بلا",
-        "yol": "kök"
-      },
-      {
-        "w": "تبل",
-        "u": "تبل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تبل (form I)\n# تَبْلُ (tablu) /tab.lu/: inflection of بَلَا (balā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُبْلَ (tubla) /tub.la/: inflection of بَلَا (balā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tablu", "balā", "tubla"],
-        "k": "بلا",
-        "yol": "kök"
-      },
-      {
-        "w": "تبلين",
-        "u": "تبلين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تبلين (form I)\n# تَبْلِينَ (tablīna) /tab.liː.na/: second-person feminine singular non-past active indicative of بَلَا (balā)\n# تُبْلَيْنَ (tublayna) /tub.laj.na/: inflection of بَلَا (balā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tablīna", "balā", "tublayna"],
-        "k": "بلا",
-        "yol": "kök"
-      },
-      {
-        "w": "تبلي",
-        "u": "تبلي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تبلي (form I)\n# تَبْلِي (tablī) /tab.liː/: second-person feminine singular non-past active subjunctive/jussive of بَلَا (balā)\n# تُبْلَيْ (tublay) /tub.laj/: second-person feminine singular non-past passive subjunctive/jussive of بَلَا (balā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tablī", "balā", "tublay"],
-        "k": "بلا",
-        "yol": "kök"
-      },
-      {
-        "w": "أبل",
-        "u": "أبل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أبل (form I)\n# أَبْلُ (ʔablu) /ʔab.lu/: first-person singular non-past active jussive of بَلَا (balā)\n# أُبْلَ (ʔubla) /ʔub.la/: first-person singular non-past passive jussive of بَلَا (balā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔablu", "balā", "ʔubla"],
-        "k": "بلا",
-        "yol": "kök"
-      },
-      {
-        "w": "نبل",
-        "u": "نبل",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "نبل (form I)\n# نَبْلُ (nablu) /nab.lu/: first-person plural non-past active jussive of بَلَا (balā)\n# نُبْلَ (nubla) /nub.la/: first-person plural non-past passive jussive of بَلَا (balā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nablu", "balā", "nubla"],
-        "k": "بلا",
-        "yol": "kök"
-      },
-      {
-        "w": "تبلون",
-        "u": "تبلون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تبلون (form I)\n# تَبْلُونَ (tablūna) /tab.luː.na/: inflection of بَلَا (balā):\n## second-person masculine/feminine plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُبْلَوْنَ (tublawna) /tub.law.na/: second-person masculine plural non-past passive indicative of بَلَا (balā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tablūna", "balā", "tublawna"],
-        "k": "بلا",
-        "yol": "kök"
-      },
-      {
-        "w": "تبلوا",
-        "u": "تبلوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تبلوا (form I)\n# تَبْلُوَا (tabluwā) /tab.lu.waː/: inflection of بَلَا (balā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تَبْلُوا (tablū) /tab.luː/: second-person masculine plural non-past active subjunctive/jussive of بَلَا (balā)\n# تُبْلَوْا (tublaw) /tub.law/: second-person masculine plural non-past passive subj",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabluwā", "balā", "tablū"],
-        "k": "بلا",
-        "yol": "kök"
-      },
-      {
-        "w": "بلوا",
-        "u": "بلوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "بلوا (form I)\n# بَلَوَا (balawā) /ba.la.waː/: third-person masculine dual past active of بَلَا (balā)\n# بَلَوْا (balaw) /ba.law/: third-person masculine plural past active of بَلَا (balā)\n# بُلُوا (bulū) /bu.luː/: third-person masculine plural past passive of بَلَا (balā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["balawā", "balā", "balaw"],
-        "k": "بلا",
-        "yol": "kök"
-      },
-      {
-        "w": "يبلون",
-        "u": "يبلون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يبلون (form I)\n# يَبْلُونَ (yablūna) /jab.luː.na/: inflection of بَلَا (balā):\n## third-person masculine/feminine plural non-past active indicative\n## third-person feminine plural non-past active subjunctive/jussive\n# يُبْلَوْنَ (yublawna) /jub.law.na/: third-person masculine plural non-past passive indicative of بَلَا (balā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yablūna", "balā", "yublawna"],
-        "k": "بلا",
-        "yol": "kök"
-      },
-      {
-        "w": "يبلوا",
-        "u": "يبلوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يبلوا (form I)\n# يَبْلُوَا (yabluwā) /jab.lu.waː/: third-person masculine dual non-past active subjunctive/jussive of بَلَا (balā)\n# يَبْلُوا (yablū) /jab.luː/: third-person masculine plural non-past active subjunctive/jussive of بَلَا (balā)\n# يُبْلَوْا (yublaw) /jub.law/: third-person masculine plural non-past passive subjunctive/jussive of بَلَا (balā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabluwā", "balā", "yablū"],
-        "k": "بلا",
-        "yol": "kök"
-      },
-      {
-        "w": "بلوت",
-        "u": "بلوت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بلوت (form I)\n# بَلَوْتُ (balawtu) /ba.law.tu/: first-person singular past active of بَلَا (balā)\n# بَلَوْتَ (balawta) /ba.law.ta/: second-person masculine singular past active of بَلَا (balā)\n# بَلَوْتِ (balawti) /ba.law.ti/: second-person feminine singular past active of بَلَا (balā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["balawtu", "balā", "balawta"],
-        "k": "بلا",
-        "yol": "kök"
-      },
-      {
-        "w": "بلتا",
-        "u": "بلتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "بَلَتَا • (balatā) (form I) /ba.la.taː/\n# third-person feminine dual past active of بَلَا (balā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["balatā", "balā"],
-        "k": "بلا",
-        "yol": "kök"
-      },
-      {
-        "w": "بلوتن",
-        "u": "بلوتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَلَوْتُنَّ • (balawtunna) (form I) /ba.law.tun.na/\n# second-person feminine plural past active of بَلَا (balā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["balawtunna", "balā"],
-        "k": "بلا",
-        "yol": "kök"
-      },
-      {
-        "w": "بلون",
-        "u": "بلون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَلَوْنَ • (balawna) (form I) /ba.law.na/\n# third-person feminine plural past active of بَلَا (balā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["balawna", "balā"],
-        "k": "بلا",
-        "yol": "kök"
-      },
-      {
-        "w": "بلونا",
-        "u": "بلونا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَلَوْنَا • (balawnā) (form I) /ba.law.naː/\n# first-person plural past active of بَلَا (balā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["balawnā", "balā"],
-        "k": "بلا",
-        "yol": "kök"
-      },
-      {
-        "w": "بلوتم",
-        "u": "بلوتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَلَوْتُمْ • (balawtum) (form I) /ba.law.tum/\n# second-person masculine plural past active of بَلَا (balā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["balawtum", "balā"],
-        "k": "بلا",
-        "yol": "kök"
-      },
-      {
-        "w": "تبلو",
-        "u": "تبلو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبلو (form I)\n# تَبْلُو (tablū) /tab.luː/: inflection of بَلَا (balā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَبْلُوَ (tabluwa) /tab.lu.wa/: inflection of بَلَا (balā):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tablū", "balā", "tabluwa"],
-        "k": "بلا",
-        "yol": "kök"
-      },
-      {
-        "w": "يبلو",
-        "u": "يبلو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبلو (form I)\n# يَبْلُو (yablū) /jab.luː/: third-person masculine singular non-past active indicative of بَلَا (balā)\n# يَبْلُوَ (yabluwa) /jab.lu.wa/: third-person masculine singular non-past active subjunctive of بَلَا (balā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yablū", "balā", "yabluwa"],
-        "k": "بلا",
-        "yol": "kök"
-      },
-      {
-        "w": "أبلو",
-        "u": "أبلو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبلو (form I)\n# أَبْلُو (ʔablū) /ʔab.luː/: first-person singular non-past active indicative of بَلَا (balā)\n# أَبْلُوَ (ʔabluwa) /ʔab.lu.wa/: first-person singular non-past active subjunctive of بَلَا (balā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔablū", "balā", "ʔabluwa"],
-        "k": "بلا",
-        "yol": "kök"
-      },
-      {
-        "w": "ابل",
-        "u": "ابل",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اُبْلُ • (ublu) (form I) /ub.lu/\n# second-person masculine singular imperative of بَلَا (balā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ublu", "balā"],
-        "k": "بلا",
-        "yol": "kök"
-      },
-      {
-        "w": "يبلوان",
-        "u": "يبلوان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَبْلُوَانِ • (yabluwāni) (form I) /jab.lu.waː.ni/\n# third-person masculine dual non-past active indicative of بَلَا (balā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabluwāni", "balā"],
-        "k": "بلا",
-        "yol": "kök"
-      },
-      {
-        "w": "نبلو",
-        "u": "نبلو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نبلو (form I)\n# نَبْلُو (nablū) /nab.luː/: first-person plural non-past active indicative of بَلَا (balā)\n# نَبْلُوَ (nabluwa) /nab.lu.wa/: first-person plural non-past active subjunctive of بَلَا (balā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nablū", "balā", "nabluwa"],
-        "k": "بلا",
-        "yol": "kök"
-      },
-      {
-        "w": "تبلوان",
-        "u": "تبلوان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَبْلُوَانِ • (tabluwāni) (form I) /tab.lu.waː.ni/\n# inflection of بَلَا (balā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabluwāni", "balā"],
-        "k": "بلا",
-        "yol": "kök"
-      },
-      {
-        "w": "ابلي",
-        "u": "ابلي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اُبْلِي • (ublī) (form I) /ub.liː/\n# second-person feminine singular imperative of بَلَا (balā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ublī", "balā"],
-        "k": "بلا",
-        "yol": "kök"
-      },
-      {
-        "w": "ابلوا",
-        "u": "ابلوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ابلوا (form I)\n# اُبْلُوَا (ubluwā) /ub.lu.waː/: second-person dual imperative of بَلَا (balā)\n# اُبْلُوا (ublū) /ub.luː/: second-person masculine plural imperative of بَلَا (balā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ubluwā", "balā", "ublū"],
-        "k": "بلا",
-        "yol": "kök"
-      },
-      {
-        "w": "ابلون",
-        "u": "ابلون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُبْلُونَ • (ublūna) (form I) /ub.luː.na/\n# second-person feminine plural imperative of بَلَا (balā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ublūna", "balā"],
-        "k": "بلا",
-        "yol": "kök"
-      },
-      {
-        "w": "بلوتما",
-        "u": "بلوتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَلَوْتُمَا • (balawtumā) (form I) /ba.law.tu.maː/\n# second-person dual past active of بَلَا (balā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["balawtumā", "balā"],
-        "k": "بلا",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "بل",
+  "ses": {
     "harf": "ب",
+    "fasil": "بل",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "يبل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يبل (form I)\n# يَبْلُ (yablu) /jab.lu/: third-person masculine singular non-past active jussive of بَلَا (balā)\n# يُبْلَ (yubla) /jub.la/: third-person masculine singular non-past passive jussive of بَلَا (balā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yablu", "balā", "yubla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بلت",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "بَلَتْ • (balat) (form I) /ba.lat/\n# third-person feminine singular past active of بَلَا (balā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["balat", "balā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تبل (form I)\n# تَبْلُ (tablu) /tab.lu/: inflection of بَلَا (balā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُبْلَ (tubla) /tub.la/: inflection of بَلَا (balā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tablu", "balā", "tubla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبلين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تبلين (form I)\n# تَبْلِينَ (tablīna) /tab.liː.na/: second-person feminine singular non-past active indicative of بَلَا (balā)\n# تُبْلَيْنَ (tublayna) /tub.laj.na/: inflection of بَلَا (balā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tablīna", "balā", "tublayna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبلي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تبلي (form I)\n# تَبْلِي (tablī) /tab.liː/: second-person feminine singular non-past active subjunctive/jussive of بَلَا (balā)\n# تُبْلَيْ (tublay) /tub.laj/: second-person feminine singular non-past passive subjunctive/jussive of بَلَا (balā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tablī", "balā", "tublay"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أبل (form I)\n# أَبْلُ (ʔablu) /ʔab.lu/: first-person singular non-past active jussive of بَلَا (balā)\n# أُبْلَ (ʔubla) /ʔub.la/: first-person singular non-past passive jussive of بَلَا (balā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔablu", "balā", "ʔubla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نبل",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "نبل (form I)\n# نَبْلُ (nablu) /nab.lu/: first-person plural non-past active jussive of بَلَا (balā)\n# نُبْلَ (nubla) /nub.la/: first-person plural non-past passive jussive of بَلَا (balā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nablu", "balā", "nubla"]
+    },
+    {
+      "madde": "تبلون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تبلون (form I)\n# تَبْلُونَ (tablūna) /tab.luː.na/: inflection of بَلَا (balā):\n## second-person masculine/feminine plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُبْلَوْنَ (tublawna) /tub.law.na/: second-person masculine plural non-past passive indicative of بَلَا (balā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tablūna", "balā", "tublawna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبلوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تبلوا (form I)\n# تَبْلُوَا (tabluwā) /tab.lu.waː/: inflection of بَلَا (balā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تَبْلُوا (tablū) /tab.luː/: second-person masculine plural non-past active subjunctive/jussive of بَلَا (balā)\n# تُبْلَوْا (tublaw) /tub.law/: second-person masculine plural non-past passive subj",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabluwā", "balā", "tablū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بلوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "بلوا (form I)\n# بَلَوَا (balawā) /ba.la.waː/: third-person masculine dual past active of بَلَا (balā)\n# بَلَوْا (balaw) /ba.law/: third-person masculine plural past active of بَلَا (balā)\n# بُلُوا (bulū) /bu.luː/: third-person masculine plural past passive of بَلَا (balā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["balawā", "balā", "balaw"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبلون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يبلون (form I)\n# يَبْلُونَ (yablūna) /jab.luː.na/: inflection of بَلَا (balā):\n## third-person masculine/feminine plural non-past active indicative\n## third-person feminine plural non-past active subjunctive/jussive\n# يُبْلَوْنَ (yublawna) /jub.law.na/: third-person masculine plural non-past passive indicative of بَلَا (balā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yablūna", "balā", "yublawna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبلوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يبلوا (form I)\n# يَبْلُوَا (yabluwā) /jab.lu.waː/: third-person masculine dual non-past active subjunctive/jussive of بَلَا (balā)\n# يَبْلُوا (yablū) /jab.luː/: third-person masculine plural non-past active subjunctive/jussive of بَلَا (balā)\n# يُبْلَوْا (yublaw) /jub.law/: third-person masculine plural non-past passive subjunctive/jussive of بَلَا (balā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabluwā", "balā", "yablū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بلوت",
+      "tur": "verb",
+      "baslik": "بلوت (form I)\n# بَلَوْتُ (balawtu) /ba.law.tu/: first-person singular past active of بَلَا (balā)\n# بَلَوْتَ (balawta) /ba.law.ta/: second-person masculine singular past active of بَلَا (balā)\n# بَلَوْتِ (balawti) /ba.law.ti/: second-person feminine singular past active of بَلَا (balā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["balawtu", "balā", "balawta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بلتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "بَلَتَا • (balatā) (form I) /ba.la.taː/\n# third-person feminine dual past active of بَلَا (balā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["balatā", "balā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بلوتن",
+      "tur": "verb",
+      "baslik": "بَلَوْتُنَّ • (balawtunna) (form I) /ba.law.tun.na/\n# second-person feminine plural past active of بَلَا (balā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["balawtunna", "balā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بلون",
+      "tur": "verb",
+      "baslik": "بَلَوْنَ • (balawna) (form I) /ba.law.na/\n# third-person feminine plural past active of بَلَا (balā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["balawna", "balā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بلونا",
+      "tur": "verb",
+      "baslik": "بَلَوْنَا • (balawnā) (form I) /ba.law.naː/\n# first-person plural past active of بَلَا (balā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["balawnā", "balā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بلوتم",
+      "tur": "verb",
+      "baslik": "بَلَوْتُمْ • (balawtum) (form I) /ba.law.tum/\n# second-person masculine plural past active of بَلَا (balā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["balawtum", "balā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبلو",
+      "tur": "verb",
+      "baslik": "تبلو (form I)\n# تَبْلُو (tablū) /tab.luː/: inflection of بَلَا (balā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَبْلُوَ (tabluwa) /tab.lu.wa/: inflection of بَلَا (balā):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tablū", "balā", "tabluwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبلو",
+      "tur": "verb",
+      "baslik": "يبلو (form I)\n# يَبْلُو (yablū) /jab.luː/: third-person masculine singular non-past active indicative of بَلَا (balā)\n# يَبْلُوَ (yabluwa) /jab.lu.wa/: third-person masculine singular non-past active subjunctive of بَلَا (balā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yablū", "balā", "yabluwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبلو",
+      "tur": "verb",
+      "baslik": "أبلو (form I)\n# أَبْلُو (ʔablū) /ʔab.luː/: first-person singular non-past active indicative of بَلَا (balā)\n# أَبْلُوَ (ʔabluwa) /ʔab.lu.wa/: first-person singular non-past active subjunctive of بَلَا (balā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔablū", "balā", "ʔabluwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ابل",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اُبْلُ • (ublu) (form I) /ub.lu/\n# second-person masculine singular imperative of بَلَا (balā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ublu", "balā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبلوان",
+      "tur": "verb",
+      "baslik": "يَبْلُوَانِ • (yabluwāni) (form I) /jab.lu.waː.ni/\n# third-person masculine dual non-past active indicative of بَلَا (balā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabluwāni", "balā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نبلو",
+      "tur": "verb",
+      "baslik": "نبلو (form I)\n# نَبْلُو (nablū) /nab.luː/: first-person plural non-past active indicative of بَلَا (balā)\n# نَبْلُوَ (nabluwa) /nab.lu.wa/: first-person plural non-past active subjunctive of بَلَا (balā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nablū", "balā", "nabluwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبلوان",
+      "tur": "verb",
+      "baslik": "تَبْلُوَانِ • (tabluwāni) (form I) /tab.lu.waː.ni/\n# inflection of بَلَا (balā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabluwāni", "balā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ابلي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اُبْلِي • (ublī) (form I) /ub.liː/\n# second-person feminine singular imperative of بَلَا (balā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ublī", "balā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ابلوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ابلوا (form I)\n# اُبْلُوَا (ubluwā) /ub.lu.waː/: second-person dual imperative of بَلَا (balā)\n# اُبْلُوا (ublū) /ub.luː/: second-person masculine plural imperative of بَلَا (balā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ubluwā", "balā", "ublū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ابلون",
+      "tur": "verb",
+      "baslik": "اُبْلُونَ • (ublūna) (form I) /ub.luː.na/\n# second-person feminine plural imperative of بَلَا (balā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ublūna", "balā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بلوتما",
+      "tur": "verb",
+      "baslik": "بَلَوْتُمَا • (balawtumā) (form I) /ba.law.tu.maː/\n# second-person dual past active of بَلَا (balā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["balawtumā", "balā"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "بلا", "r7"]
+  ],
+  "mana": {
     "ince": "season.v.01",
     "orta": "verb.perception",
     "ust": "zihin ve ilim",
@@ -398,22 +291,15 @@
     "dayanak_tanim": "lend flavor to",
     "synset_sayisi": 3
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["artifact.n.01", "season.v.01", "status.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["artifact.n.01", "season.v.01", "status.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

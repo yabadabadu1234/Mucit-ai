@@ -1,362 +1,267 @@
 {
   "kok": "اتبع",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "اتبع", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يتبع",
-        "u": "يتبع",
-        "p": "verb",
-        "n": "1.2",
-        "h": "ar-verb form",
-        "e": "يتبع (form VIII)\n# يَتَّبِعُ (yattabiʕu) /jat.ta.bi.ʕu/: third-person masculine singular non-past active indicative of اِتَّبَعَ (ittabaʕa)\n# يُتَّبَعُ (yuttabaʕu) /jut.ta.ba.ʕu/: third-person masculine singular non-past passive indicative of اِتَّبَعَ (ittabaʕa)\n# يَتَّبِعَ (yattabiʕa) /jat.ta.bi.ʕa/: third-person masculine singular non-past active subjunctive of اِتَّبَعَ (ittabaʕa)\n# يُتَّبَعَ ",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattabiʕu", "ittabaʕa", "yuttabaʕu"],
-        "k": "اتبع",
-        "yol": "kök"
-      },
-      {
-        "w": "تتبع",
-        "u": "تتبع",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تتبع (form VIII)\n# تَتَّبِعُ (tattabiʕu) /tat.ta.bi.ʕu/: inflection of اِتَّبَعَ (ittabaʕa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُتَّبَعُ (tuttabaʕu) /tut.ta.ba.ʕu/: inflection of اِتَّبَعَ (ittabaʕa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past ",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattabiʕu", "ittabaʕa", "tuttabaʕu"],
-        "k": "اتبع",
-        "yol": "kök"
-      },
-      {
-        "w": "اتبعت",
-        "u": "اتبعت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتبعت (form VIII)\n# اِتَّبَعْتُ (ittabaʕtu) /it.ta.baʕ.tu/: first-person singular past active of اِتَّبَعَ (ittabaʕa)\n# اِتَّبَعْتَ (ittabaʕta) /it.ta.baʕ.ta/: second-person masculine singular past active of اِتَّبَعَ (ittabaʕa)\n# اِتَّبَعْتِ (ittabaʕti) /it.ta.baʕ.ti/: second-person feminine singular past active of اِتَّبَعَ (ittabaʕa)\n# اِتَّبَعَتْ (ittabaʕat) /it.ta.ba.ʕat/: third-person femini",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittabaʕtu", "ittabaʕa", "ittabaʕta"],
-        "k": "اتبع",
-        "yol": "kök"
-      },
-      {
-        "w": "تتبعين",
-        "u": "تتبعين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تتبعين (form VIII)\n# تَتَّبِعِينَ (tattabiʕīna) /tat.ta.bi.ʕiː.na/: second-person feminine singular non-past active indicative of اِتَّبَعَ (ittabaʕa)\n# تُتَّبَعِينَ (tuttabaʕīna) /tut.ta.ba.ʕiː.na/: second-person feminine singular non-past passive indicative of اِتَّبَعَ (ittabaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattabiʕīna", "ittabaʕa", "tuttabaʕīna"],
-        "k": "اتبع",
-        "yol": "kök"
-      },
-      {
-        "w": "تتبعي",
-        "u": "تتبعي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تتبعي (form VIII)\n# تَتَّبِعِي (tattabiʕī) /tat.ta.bi.ʕiː/: second-person feminine singular non-past active subjunctive/jussive of اِتَّبَعَ (ittabaʕa)\n# تُتَّبَعِي (tuttabaʕī) /tut.ta.ba.ʕiː/: second-person feminine singular non-past passive subjunctive/jussive of اِتَّبَعَ (ittabaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattabiʕī", "ittabaʕa", "tuttabaʕī"],
-        "k": "اتبع",
-        "yol": "kök"
-      },
-      {
-        "w": "اتبعي",
-        "u": "اتبعي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "اِتَّبِعِي • (ittabiʕī) (form VIII) /it.ta.bi.ʕiː/\n# second-person feminine singular imperative of اِتَّبَعَ (ittabaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittabiʕī", "ittabaʕa"],
-        "k": "اتبع",
-        "yol": "kök"
-      },
-      {
-        "w": "أتبع",
-        "u": "أتبع",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أتبع (form VIII)\n# أَتَّبِعُ (ʔattabiʕu) /ʔat.ta.bi.ʕu/: first-person singular non-past active indicative of اِتَّبَعَ (ittabaʕa)\n# أُتَّبَعُ (ʔuttabaʕu) /ʔut.ta.ba.ʕu/: first-person singular non-past passive indicative of اِتَّبَعَ (ittabaʕa)\n# أَتَّبِعَ (ʔattabiʕa) /ʔat.ta.bi.ʕa/: first-person singular non-past active subjunctive of اِتَّبَعَ (ittabaʕa)\n# أُتَّبَعَ (ʔuttabaʕa) /ʔut.ta.ba.ʕa/: fi",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ʔattabiʕu", "ittabaʕa", "ʔuttabaʕu"],
-        "k": "اتبع",
-        "yol": "kök"
-      },
-      {
-        "w": "اتبعنا",
-        "u": "اتبعنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتبعنا (form VIII)\n# اِتَّبَعْنَا (ittabaʕnā) /it.ta.baʕ.naː/: first-person plural past active of اِتَّبَعَ (ittabaʕa)\n# اُتُّبِعْنَا (uttubiʕnā) /ut.tu.biʕ.naː/: first-person plural past passive of اِتَّبَعَ (ittabaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittabaʕnā", "ittabaʕa", "uttubiʕnā"],
-        "k": "اتبع",
-        "yol": "kök"
-      },
-      {
-        "w": "نتبع",
-        "u": "نتبع",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نتبع (form VIII)\n# نَتَّبِعُ (nattabiʕu) /nat.ta.bi.ʕu/: first-person plural non-past active indicative of اِتَّبَعَ (ittabaʕa)\n# نُتَّبَعُ (nuttabaʕu) /nut.ta.ba.ʕu/: first-person plural non-past passive indicative of اِتَّبَعَ (ittabaʕa)\n# نَتَّبِعَ (nattabiʕa) /nat.ta.bi.ʕa/: first-person plural non-past active subjunctive of اِتَّبَعَ (ittabaʕa)\n# نُتَّبَعَ (nuttabaʕa) /nut.ta.ba.ʕa/: first-pe",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["nattabiʕu", "ittabaʕa", "nuttabaʕu"],
-        "k": "اتبع",
-        "yol": "kök"
-      },
-      {
-        "w": "اتبعتم",
-        "u": "اتبعتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتبعتم (form VIII)\n# اِتَّبَعْتُمْ (ittabaʕtum) /it.ta.baʕ.tum/: second-person masculine plural past active of اِتَّبَعَ (ittabaʕa)\n# اُتُّبِعْتُمْ (uttubiʕtum) /ut.tu.biʕ.tum/: second-person masculine plural past passive of اِتَّبَعَ (ittabaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittabaʕtum", "ittabaʕa", "uttubiʕtum"],
-        "k": "اتبع",
-        "yol": "kök"
-      },
-      {
-        "w": "تتبعون",
-        "u": "تتبعون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تتبعون (form VIII)\n# تَتَّبِعُونَ (tattabiʕūna) /tat.ta.bi.ʕuː.na/: second-person masculine plural non-past active indicative of اِتَّبَعَ (ittabaʕa)\n# تُتَّبَعُونَ (tuttabaʕūna) /tut.ta.ba.ʕuː.na/: second-person masculine plural non-past passive indicative of اِتَّبَعَ (ittabaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattabiʕūna", "ittabaʕa", "tuttabaʕūna"],
-        "k": "اتبع",
-        "yol": "kök"
-      },
-      {
-        "w": "اتبعوا",
-        "u": "اتبعوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اتبعوا (form VIII)\n# اِتَّبَعُوا (ittabaʕū) /it.ta.ba.ʕuː/: third-person masculine plural past active of اِتَّبَعَ (ittabaʕa)\n# اُتُّبِعُوا (uttubiʕū) /ut.tu.bi.ʕuː/: third-person masculine plural past passive of اِتَّبَعَ (ittabaʕa)\n# اِتَّبِعُوا (ittabiʕū) /it.ta.bi.ʕuː/: second-person masculine plural imperative of اِتَّبَعَ (ittabaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittabaʕū", "ittabaʕa", "uttubiʕū"],
-        "k": "اتبع",
-        "yol": "kök"
-      },
-      {
-        "w": "يتبعون",
-        "u": "يتبعون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يتبعون (form VIII)\n# يَتَّبِعُونَ (yattabiʕūna) /jat.ta.bi.ʕuː.na/: third-person masculine plural non-past active indicative of اِتَّبَعَ (ittabaʕa)\n# يُتَّبَعُونَ (yuttabaʕūna) /jut.ta.ba.ʕuː.na/: third-person masculine plural non-past passive indicative of اِتَّبَعَ (ittabaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattabiʕūna", "ittabaʕa", "yuttabaʕūna"],
-        "k": "اتبع",
-        "yol": "kök"
-      },
-      {
-        "w": "يتبعوا",
-        "u": "يتبعوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يتبعوا (form VIII)\n# يَتَّبِعُوا (yattabiʕū) /jat.ta.bi.ʕuː/: third-person masculine plural non-past active subjunctive/jussive of اِتَّبَعَ (ittabaʕa)\n# يُتَّبَعُوا (yuttabaʕū) /jut.ta.ba.ʕuː/: third-person masculine plural non-past passive subjunctive/jussive of اِتَّبَعَ (ittabaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattabiʕū", "ittabaʕa", "yuttabaʕū"],
-        "k": "اتبع",
-        "yol": "kök"
-      },
-      {
-        "w": "تتبعوا",
-        "u": "تتبعوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تتبعوا (form VIII)\n# تَتَّبِعُوا (tattabiʕū) /tat.ta.bi.ʕuː/: second-person masculine plural non-past active subjunctive/jussive of اِتَّبَعَ (ittabaʕa)\n# تُتَّبَعُوا (tuttabaʕū) /tut.ta.ba.ʕuː/: second-person masculine plural non-past passive subjunctive/jussive of اِتَّبَعَ (ittabaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattabiʕū", "ittabaʕa", "tuttabaʕū"],
-        "k": "اتبع",
-        "yol": "kök"
-      },
-      {
-        "w": "اتبعتن",
-        "u": "اتبعتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتبعتن (form VIII)\n# اِتَّبَعْتُنَّ (ittabaʕtunna) /it.ta.baʕ.tun.na/: second-person feminine plural past active of اِتَّبَعَ (ittabaʕa)\n# اُتُّبِعْتُنَّ (uttubiʕtunna) /ut.tu.biʕ.tun.na/: second-person feminine plural past passive of اِتَّبَعَ (ittabaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittabaʕtunna", "ittabaʕa", "uttubiʕtunna"],
-        "k": "اتبع",
-        "yol": "kök"
-      },
-      {
-        "w": "تتبعن",
-        "u": "تتبعن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تتبعن (form VIII)\n# تَتَّبِعْنَ (tattabiʕna) /tat.ta.biʕ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of اِتَّبَعَ (ittabaʕa)\n# تُتَّبَعْنَ (tuttabaʕna) /tut.ta.baʕ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of اِتَّبَعَ (ittabaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattabiʕna", "ittabaʕa", "tuttabaʕna"],
-        "k": "اتبع",
-        "yol": "kök"
-      },
-      {
-        "w": "اتبعن",
-        "u": "اتبعن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "اتبعن (form VIII)\n# اِتَّبَعْنَ (ittabaʕna) /it.ta.baʕ.na/: third-person feminine plural past active of اِتَّبَعَ (ittabaʕa)\n# اُتُّبِعْنَ (uttubiʕna) /ut.tu.biʕ.na/: third-person feminine plural past passive of اِتَّبَعَ (ittabaʕa)\n# اِتَّبِعْنَ (ittabiʕna) /it.ta.biʕ.na/: second-person feminine plural imperative of اِتَّبَعَ (ittabaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittabaʕna", "ittabaʕa", "uttubiʕna"],
-        "k": "اتبع",
-        "yol": "kök"
-      },
-      {
-        "w": "يتبعن",
-        "u": "يتبعن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يتبعن (form VIII)\n# يَتَّبِعْنَ (yattabiʕna) /jat.ta.biʕ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of اِتَّبَعَ (ittabaʕa)\n# يُتَّبَعْنَ (yuttabaʕna) /jut.ta.baʕ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of اِتَّبَعَ (ittabaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattabiʕna", "ittabaʕa", "yuttabaʕna"],
-        "k": "اتبع",
-        "yol": "kök"
-      },
-      {
-        "w": "تتبعان",
-        "u": "تتبعان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تتبعان (form VIII)\n# تَتَّبِعَانِ (tattabiʕāni) /tat.ta.bi.ʕaː.ni/: inflection of اِتَّبَعَ (ittabaʕa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُتَّبَعَانِ (tuttabaʕāni) /tut.ta.ba.ʕaː.ni/: inflection of اِتَّبَعَ (ittabaʕa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicati",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattabiʕāni", "ittabaʕa", "tuttabaʕāni"],
-        "k": "اتبع",
-        "yol": "kök"
-      },
-      {
-        "w": "يتبعان",
-        "u": "يتبعان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يتبعان (form VIII)\n# يَتَّبِعَانِ (yattabiʕāni) /jat.ta.bi.ʕaː.ni/: third-person masculine dual non-past active indicative of اِتَّبَعَ (ittabaʕa)\n# يُتَّبَعَانِ (yuttabaʕāni) /jut.ta.ba.ʕaː.ni/: third-person masculine dual non-past passive indicative of اِتَّبَعَ (ittabaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattabiʕāni", "ittabaʕa", "yuttabaʕāni"],
-        "k": "اتبع",
-        "yol": "kök"
-      },
-      {
-        "w": "يتبعا",
-        "u": "يتبعا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يتبعا (form VIII)\n# يَتَّبِعَا (yattabiʕā) /jat.ta.bi.ʕaː/: third-person masculine dual non-past active subjunctive/jussive of اِتَّبَعَ (ittabaʕa)\n# يُتَّبَعَا (yuttabaʕā) /jut.ta.ba.ʕaː/: third-person masculine dual non-past passive subjunctive/jussive of اِتَّبَعَ (ittabaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattabiʕā", "ittabaʕa", "yuttabaʕā"],
-        "k": "اتبع",
-        "yol": "kök"
-      },
-      {
-        "w": "تتبعا",
-        "u": "تتبعا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تتبعا (form VIII)\n# تَتَّبِعَا (tattabiʕā) /tat.ta.bi.ʕaː/: inflection of اِتَّبَعَ (ittabaʕa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُتَّبَعَا (tuttabaʕā) /tut.ta.ba.ʕaː/: inflection of اِتَّبَعَ (ittabaʕa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past pass",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattabiʕā", "ittabaʕa", "tuttabaʕā"],
-        "k": "اتبع",
-        "yol": "kök"
-      },
-      {
-        "w": "اتبعتما",
-        "u": "اتبعتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتبعتما (form VIII)\n# اِتَّبَعْتُمَا (ittabaʕtumā) /it.ta.baʕ.tu.maː/: second-person dual past active of اِتَّبَعَ (ittabaʕa)\n# اُتُّبِعْتُمَا (uttubiʕtumā) /ut.tu.biʕ.tu.maː/: second-person dual past passive of اِتَّبَعَ (ittabaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittabaʕtumā", "ittabaʕa", "uttubiʕtumā"],
-        "k": "اتبع",
-        "yol": "kök"
-      },
-      {
-        "w": "اتبعا",
-        "u": "اتبعا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اتبعا (form VIII)\n# اِتَّبَعَا (ittabaʕā) /it.ta.ba.ʕaː/: third-person masculine dual past active of اِتَّبَعَ (ittabaʕa)\n# اُتُّبِعَا (uttubiʕā) /ut.tu.bi.ʕaː/: third-person masculine dual past passive of اِتَّبَعَ (ittabaʕa)\n# اِتَّبِعَا (ittabiʕā) /it.ta.bi.ʕaː/: second-person dual imperative of اِتَّبَعَ (ittabaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittabaʕā", "ittabaʕa", "uttubiʕā"],
-        "k": "اتبع",
-        "yol": "kök"
-      },
-      {
-        "w": "اتبعتا",
-        "u": "اتبعتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتبعتا (form VIII)\n# اِتَّبَعَتَا (ittabaʕatā) /it.ta.ba.ʕa.taː/: third-person feminine dual past active of اِتَّبَعَ (ittabaʕa)\n# اُتُّبِعَتَا (uttubiʕatā) /ut.tu.bi.ʕa.taː/: third-person feminine dual past passive of اِتَّبَعَ (ittabaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittabaʕatā", "ittabaʕa", "uttubiʕatā"],
-        "k": "اتبع",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تب",
+  "ses": {
     "harf": "ا",
+    "fasil": "تب",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "يتبع",
+      "tur": "verb",
+      "etim_no": "1.2",
+      "baslik": "يتبع (form VIII)\n# يَتَّبِعُ (yattabiʕu) /jat.ta.bi.ʕu/: third-person masculine singular non-past active indicative of اِتَّبَعَ (ittabaʕa)\n# يُتَّبَعُ (yuttabaʕu) /jut.ta.ba.ʕu/: third-person masculine singular non-past passive indicative of اِتَّبَعَ (ittabaʕa)\n# يَتَّبِعَ (yattabiʕa) /jat.ta.bi.ʕa/: third-person masculine singular non-past active subjunctive of اِتَّبَعَ (ittabaʕa)\n# يُتَّبَعَ ",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattabiʕu", "ittabaʕa", "yuttabaʕu"]
+    },
+    {
+      "madde": "تتبع",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تتبع (form VIII)\n# تَتَّبِعُ (tattabiʕu) /tat.ta.bi.ʕu/: inflection of اِتَّبَعَ (ittabaʕa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُتَّبَعُ (tuttabaʕu) /tut.ta.ba.ʕu/: inflection of اِتَّبَعَ (ittabaʕa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past ",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattabiʕu", "ittabaʕa", "tuttabaʕu"]
+    },
+    {
+      "madde": "اتبعت",
+      "tur": "verb",
+      "baslik": "اتبعت (form VIII)\n# اِتَّبَعْتُ (ittabaʕtu) /it.ta.baʕ.tu/: first-person singular past active of اِتَّبَعَ (ittabaʕa)\n# اِتَّبَعْتَ (ittabaʕta) /it.ta.baʕ.ta/: second-person masculine singular past active of اِتَّبَعَ (ittabaʕa)\n# اِتَّبَعْتِ (ittabaʕti) /it.ta.baʕ.ti/: second-person feminine singular past active of اِتَّبَعَ (ittabaʕa)\n# اِتَّبَعَتْ (ittabaʕat) /it.ta.ba.ʕat/: third-person femini",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittabaʕtu", "ittabaʕa", "ittabaʕta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتبعين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تتبعين (form VIII)\n# تَتَّبِعِينَ (tattabiʕīna) /tat.ta.bi.ʕiː.na/: second-person feminine singular non-past active indicative of اِتَّبَعَ (ittabaʕa)\n# تُتَّبَعِينَ (tuttabaʕīna) /tut.ta.ba.ʕiː.na/: second-person feminine singular non-past passive indicative of اِتَّبَعَ (ittabaʕa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattabiʕīna", "ittabaʕa", "tuttabaʕīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتبعي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تتبعي (form VIII)\n# تَتَّبِعِي (tattabiʕī) /tat.ta.bi.ʕiː/: second-person feminine singular non-past active subjunctive/jussive of اِتَّبَعَ (ittabaʕa)\n# تُتَّبَعِي (tuttabaʕī) /tut.ta.ba.ʕiː/: second-person feminine singular non-past passive subjunctive/jussive of اِتَّبَعَ (ittabaʕa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattabiʕī", "ittabaʕa", "tuttabaʕī"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اتبعي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "اِتَّبِعِي • (ittabiʕī) (form VIII) /it.ta.bi.ʕiː/\n# second-person feminine singular imperative of اِتَّبَعَ (ittabaʕa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittabiʕī", "ittabaʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أتبع",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أتبع (form VIII)\n# أَتَّبِعُ (ʔattabiʕu) /ʔat.ta.bi.ʕu/: first-person singular non-past active indicative of اِتَّبَعَ (ittabaʕa)\n# أُتَّبَعُ (ʔuttabaʕu) /ʔut.ta.ba.ʕu/: first-person singular non-past passive indicative of اِتَّبَعَ (ittabaʕa)\n# أَتَّبِعَ (ʔattabiʕa) /ʔat.ta.bi.ʕa/: first-person singular non-past active subjunctive of اِتَّبَعَ (ittabaʕa)\n# أُتَّبَعَ (ʔuttabaʕa) /ʔut.ta.ba.ʕa/: fi",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ʔattabiʕu", "ittabaʕa", "ʔuttabaʕu"]
+    },
+    {
+      "madde": "اتبعنا",
+      "tur": "verb",
+      "baslik": "اتبعنا (form VIII)\n# اِتَّبَعْنَا (ittabaʕnā) /it.ta.baʕ.naː/: first-person plural past active of اِتَّبَعَ (ittabaʕa)\n# اُتُّبِعْنَا (uttubiʕnā) /ut.tu.biʕ.naː/: first-person plural past passive of اِتَّبَعَ (ittabaʕa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittabaʕnā", "ittabaʕa", "uttubiʕnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نتبع",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نتبع (form VIII)\n# نَتَّبِعُ (nattabiʕu) /nat.ta.bi.ʕu/: first-person plural non-past active indicative of اِتَّبَعَ (ittabaʕa)\n# نُتَّبَعُ (nuttabaʕu) /nut.ta.ba.ʕu/: first-person plural non-past passive indicative of اِتَّبَعَ (ittabaʕa)\n# نَتَّبِعَ (nattabiʕa) /nat.ta.bi.ʕa/: first-person plural non-past active subjunctive of اِتَّبَعَ (ittabaʕa)\n# نُتَّبَعَ (nuttabaʕa) /nut.ta.ba.ʕa/: first-pe",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["nattabiʕu", "ittabaʕa", "nuttabaʕu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اتبعتم",
+      "tur": "verb",
+      "baslik": "اتبعتم (form VIII)\n# اِتَّبَعْتُمْ (ittabaʕtum) /it.ta.baʕ.tum/: second-person masculine plural past active of اِتَّبَعَ (ittabaʕa)\n# اُتُّبِعْتُمْ (uttubiʕtum) /ut.tu.biʕ.tum/: second-person masculine plural past passive of اِتَّبَعَ (ittabaʕa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittabaʕtum", "ittabaʕa", "uttubiʕtum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتبعون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تتبعون (form VIII)\n# تَتَّبِعُونَ (tattabiʕūna) /tat.ta.bi.ʕuː.na/: second-person masculine plural non-past active indicative of اِتَّبَعَ (ittabaʕa)\n# تُتَّبَعُونَ (tuttabaʕūna) /tut.ta.ba.ʕuː.na/: second-person masculine plural non-past passive indicative of اِتَّبَعَ (ittabaʕa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattabiʕūna", "ittabaʕa", "tuttabaʕūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اتبعوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اتبعوا (form VIII)\n# اِتَّبَعُوا (ittabaʕū) /it.ta.ba.ʕuː/: third-person masculine plural past active of اِتَّبَعَ (ittabaʕa)\n# اُتُّبِعُوا (uttubiʕū) /ut.tu.bi.ʕuː/: third-person masculine plural past passive of اِتَّبَعَ (ittabaʕa)\n# اِتَّبِعُوا (ittabiʕū) /it.ta.bi.ʕuː/: second-person masculine plural imperative of اِتَّبَعَ (ittabaʕa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittabaʕū", "ittabaʕa", "uttubiʕū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتبعون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يتبعون (form VIII)\n# يَتَّبِعُونَ (yattabiʕūna) /jat.ta.bi.ʕuː.na/: third-person masculine plural non-past active indicative of اِتَّبَعَ (ittabaʕa)\n# يُتَّبَعُونَ (yuttabaʕūna) /jut.ta.ba.ʕuː.na/: third-person masculine plural non-past passive indicative of اِتَّبَعَ (ittabaʕa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattabiʕūna", "ittabaʕa", "yuttabaʕūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتبعوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يتبعوا (form VIII)\n# يَتَّبِعُوا (yattabiʕū) /jat.ta.bi.ʕuː/: third-person masculine plural non-past active subjunctive/jussive of اِتَّبَعَ (ittabaʕa)\n# يُتَّبَعُوا (yuttabaʕū) /jut.ta.ba.ʕuː/: third-person masculine plural non-past passive subjunctive/jussive of اِتَّبَعَ (ittabaʕa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattabiʕū", "ittabaʕa", "yuttabaʕū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتبعوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تتبعوا (form VIII)\n# تَتَّبِعُوا (tattabiʕū) /tat.ta.bi.ʕuː/: second-person masculine plural non-past active subjunctive/jussive of اِتَّبَعَ (ittabaʕa)\n# تُتَّبَعُوا (tuttabaʕū) /tut.ta.ba.ʕuː/: second-person masculine plural non-past passive subjunctive/jussive of اِتَّبَعَ (ittabaʕa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattabiʕū", "ittabaʕa", "tuttabaʕū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اتبعتن",
+      "tur": "verb",
+      "baslik": "اتبعتن (form VIII)\n# اِتَّبَعْتُنَّ (ittabaʕtunna) /it.ta.baʕ.tun.na/: second-person feminine plural past active of اِتَّبَعَ (ittabaʕa)\n# اُتُّبِعْتُنَّ (uttubiʕtunna) /ut.tu.biʕ.tun.na/: second-person feminine plural past passive of اِتَّبَعَ (ittabaʕa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittabaʕtunna", "ittabaʕa", "uttubiʕtunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتبعن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تتبعن (form VIII)\n# تَتَّبِعْنَ (tattabiʕna) /tat.ta.biʕ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of اِتَّبَعَ (ittabaʕa)\n# تُتَّبَعْنَ (tuttabaʕna) /tut.ta.baʕ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of اِتَّبَعَ (ittabaʕa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattabiʕna", "ittabaʕa", "tuttabaʕna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اتبعن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "اتبعن (form VIII)\n# اِتَّبَعْنَ (ittabaʕna) /it.ta.baʕ.na/: third-person feminine plural past active of اِتَّبَعَ (ittabaʕa)\n# اُتُّبِعْنَ (uttubiʕna) /ut.tu.biʕ.na/: third-person feminine plural past passive of اِتَّبَعَ (ittabaʕa)\n# اِتَّبِعْنَ (ittabiʕna) /it.ta.biʕ.na/: second-person feminine plural imperative of اِتَّبَعَ (ittabaʕa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittabaʕna", "ittabaʕa", "uttubiʕna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتبعن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يتبعن (form VIII)\n# يَتَّبِعْنَ (yattabiʕna) /jat.ta.biʕ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of اِتَّبَعَ (ittabaʕa)\n# يُتَّبَعْنَ (yuttabaʕna) /jut.ta.baʕ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of اِتَّبَعَ (ittabaʕa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattabiʕna", "ittabaʕa", "yuttabaʕna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتبعان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تتبعان (form VIII)\n# تَتَّبِعَانِ (tattabiʕāni) /tat.ta.bi.ʕaː.ni/: inflection of اِتَّبَعَ (ittabaʕa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُتَّبَعَانِ (tuttabaʕāni) /tut.ta.ba.ʕaː.ni/: inflection of اِتَّبَعَ (ittabaʕa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicati",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattabiʕāni", "ittabaʕa", "tuttabaʕāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتبعان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يتبعان (form VIII)\n# يَتَّبِعَانِ (yattabiʕāni) /jat.ta.bi.ʕaː.ni/: third-person masculine dual non-past active indicative of اِتَّبَعَ (ittabaʕa)\n# يُتَّبَعَانِ (yuttabaʕāni) /jut.ta.ba.ʕaː.ni/: third-person masculine dual non-past passive indicative of اِتَّبَعَ (ittabaʕa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattabiʕāni", "ittabaʕa", "yuttabaʕāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتبعا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يتبعا (form VIII)\n# يَتَّبِعَا (yattabiʕā) /jat.ta.bi.ʕaː/: third-person masculine dual non-past active subjunctive/jussive of اِتَّبَعَ (ittabaʕa)\n# يُتَّبَعَا (yuttabaʕā) /jut.ta.ba.ʕaː/: third-person masculine dual non-past passive subjunctive/jussive of اِتَّبَعَ (ittabaʕa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattabiʕā", "ittabaʕa", "yuttabaʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتبعا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تتبعا (form VIII)\n# تَتَّبِعَا (tattabiʕā) /tat.ta.bi.ʕaː/: inflection of اِتَّبَعَ (ittabaʕa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُتَّبَعَا (tuttabaʕā) /tut.ta.ba.ʕaː/: inflection of اِتَّبَعَ (ittabaʕa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past pass",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattabiʕā", "ittabaʕa", "tuttabaʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اتبعتما",
+      "tur": "verb",
+      "baslik": "اتبعتما (form VIII)\n# اِتَّبَعْتُمَا (ittabaʕtumā) /it.ta.baʕ.tu.maː/: second-person dual past active of اِتَّبَعَ (ittabaʕa)\n# اُتُّبِعْتُمَا (uttubiʕtumā) /ut.tu.biʕ.tu.maː/: second-person dual past passive of اِتَّبَعَ (ittabaʕa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittabaʕtumā", "ittabaʕa", "uttubiʕtumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اتبعا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اتبعا (form VIII)\n# اِتَّبَعَا (ittabaʕā) /it.ta.ba.ʕaː/: third-person masculine dual past active of اِتَّبَعَ (ittabaʕa)\n# اُتُّبِعَا (uttubiʕā) /ut.tu.bi.ʕaː/: third-person masculine dual past passive of اِتَّبَعَ (ittabaʕa)\n# اِتَّبِعَا (ittabiʕā) /it.ta.bi.ʕaː/: second-person dual imperative of اِتَّبَعَ (ittabaʕa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittabaʕā", "ittabaʕa", "uttubiʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اتبعتا",
+      "tur": "verb",
+      "baslik": "اتبعتا (form VIII)\n# اِتَّبَعَتَا (ittabaʕatā) /it.ta.ba.ʕa.taː/: third-person feminine dual past active of اِتَّبَعَ (ittabaʕa)\n# اُتُّبِعَتَا (uttubiʕatā) /ut.tu.bi.ʕa.taː/: third-person feminine dual past passive of اِتَّبَعَ (ittabaʕa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittabaʕatā", "ittabaʕa", "uttubiʕatā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "اتبع", "r6"]
+  ],
+  "mana": {
     "ince": "annex.v.01",
     "orta": "verb.possession",
     "ust": "insan ve toplum",
@@ -364,22 +269,15 @@
     "dayanak_tanim": "take (territory) as if by conquest",
     "synset_sayisi": 4
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["act.n.02", "annex.v.01", "chase.v.01", "pursue.v.02"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["act.n.02", "annex.v.01", "chase.v.01", "pursue.v.02"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

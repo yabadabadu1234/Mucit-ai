@@ -1,364 +1,263 @@
 {
   "kok": "قرقع",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "قرقع", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "etymarab": {
-      "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
-      "latin": "QRQʕ",
-      "dolu": true,
-      "kok_maddesi": "Back to library EtymArab QRQʕ قرقع BP – • HDAL • © SG | 20Oct2024 √QRQʕ \"root\" ▪ QRQʕ_1 ‘to be noisy, boisterous; to creak, grate; to crack, pop’ ↗ qarqaʕa ▪ QRQʕ_2 … ▪ [v1] According to Ehret1989 (#85), qarqaʕ (vn.) ‘to publish, make publicly known’ is an extension in intensive * ‑ḳ and sunderative * ‑ʕ from a »pre-protSem« 2-cons. root * ḳr ‘to utter, make a sound, speak’. For other extensions from the same nucleus, see ↗ qaraʔa , ↗ taqāraḍa , ↗ qaraqa , and ↗ qarqara . See also disambiguation entry ↗*QR for homonymous nuclei and their extensions. ▪ … – ▪ … ▪ See above, section CONC. – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
-      "kelime_maddeleri": []
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "قرقع",
-        "u": "قرقع",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "قَرْقَعَ • (qarqaʕa) Iq (non-past يُقَرْقِعُ (yuqarqiʕu), verbal noun قَرْقَعَة (qarqaʕa))",
-        "g": ["to crackle, to rumble, to creak"],
-        "r": ["qarqaʕa"],
-        "ipa": ["/qar.qa.ʕa/"],
-        "k": "قرقع",
-        "yol": "kök"
-      },
-      {
-        "w": "قرقعت",
-        "u": "قرقعت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قرقعت (form Iq)\n# قَرْقَعْتُ (qarqaʕtu) /qar.qaʕ.tu/: first-person singular past active of قَرْقَعَ (qarqaʕa)\n# قَرْقَعْتَ (qarqaʕta) /qar.qaʕ.ta/: second-person masculine singular past active of قَرْقَعَ (qarqaʕa)\n# قَرْقَعْتِ (qarqaʕti) /qar.qaʕ.ti/: second-person feminine singular past active of قَرْقَعَ (qarqaʕa)\n# قَرْقَعَتْ (qarqaʕat) /qar.qa.ʕat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["qarqaʕtu", "qarqaʕa", "qarqaʕta"],
-        "k": "قرقع",
-        "yol": "kök"
-      },
-      {
-        "w": "قرقعتا",
-        "u": "قرقعتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قرقعتا (form Iq)\n# قَرْقَعَتَا (qarqaʕatā) /qar.qa.ʕa.taː/: third-person feminine dual past active of قَرْقَعَ (qarqaʕa)\n# قُرْقِعَتَا (qurqiʕatā) /qur.qi.ʕa.taː/: third-person feminine dual past passive of قَرْقَعَ (qarqaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["qarqaʕatā", "qarqaʕa", "qurqiʕatā"],
-        "k": "قرقع",
-        "yol": "kök"
-      },
-      {
-        "w": "قرقعتما",
-        "u": "قرقعتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قرقعتما (form Iq)\n# قَرْقَعْتُمَا (qarqaʕtumā) /qar.qaʕ.tu.maː/: second-person dual past active of قَرْقَعَ (qarqaʕa)\n# قُرْقِعْتُمَا (qurqiʕtumā) /qur.qiʕ.tu.maː/: second-person dual past passive of قَرْقَعَ (qarqaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["qarqaʕtumā", "qarqaʕa", "qurqiʕtumā"],
-        "k": "قرقع",
-        "yol": "kök"
-      },
-      {
-        "w": "قرقعنا",
-        "u": "قرقعنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قرقعنا (form Iq)\n# قَرْقَعْنَا (qarqaʕnā) /qar.qaʕ.naː/: first-person plural past active of قَرْقَعَ (qarqaʕa)\n# قُرْقِعْنَا (qurqiʕnā) /qur.qiʕ.naː/: first-person plural past passive of قَرْقَعَ (qarqaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["qarqaʕnā", "qarqaʕa", "qurqiʕnā"],
-        "k": "قرقع",
-        "yol": "kök"
-      },
-      {
-        "w": "قرقعا",
-        "u": "قرقعا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قرقعا (form Iq)\n# قَرْقَعَا (qarqaʕā) /qar.qa.ʕaː/: third-person masculine dual past active of قَرْقَعَ (qarqaʕa)\n# قُرْقِعَا (qurqiʕā) /qur.qi.ʕaː/: third-person masculine dual past passive of قَرْقَعَ (qarqaʕa)\n# قَرْقِعَا (qarqiʕā) /qar.qi.ʕaː/: second-person dual imperative of قَرْقَعَ (qarqaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["qarqaʕā", "qarqaʕa", "qurqiʕā"],
-        "k": "قرقع",
-        "yol": "kök"
-      },
-      {
-        "w": "قرقعتم",
-        "u": "قرقعتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قرقعتم (form Iq)\n# قَرْقَعْتُمْ (qarqaʕtum) /qar.qaʕ.tum/: second-person masculine plural past active of قَرْقَعَ (qarqaʕa)\n# قُرْقِعْتُمْ (qurqiʕtum) /qur.qiʕ.tum/: second-person masculine plural past passive of قَرْقَعَ (qarqaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["qarqaʕtum", "qarqaʕa", "qurqiʕtum"],
-        "k": "قرقع",
-        "yol": "kök"
-      },
-      {
-        "w": "قرقعوا",
-        "u": "قرقعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قرقعوا (form Iq)\n# قَرْقَعُوا (qarqaʕū) /qar.qa.ʕuː/: third-person masculine plural past active of قَرْقَعَ (qarqaʕa)\n# قُرْقِعُوا (qurqiʕū) /qur.qi.ʕuː/: third-person masculine plural past passive of قَرْقَعَ (qarqaʕa)\n# قَرْقِعُوا (qarqiʕū) /qar.qi.ʕuː/: second-person masculine plural imperative of قَرْقَعَ (qarqaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["qarqaʕū", "qarqaʕa", "qurqiʕū"],
-        "k": "قرقع",
-        "yol": "kök"
-      },
-      {
-        "w": "أقرقع",
-        "u": "أقرقع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أقرقع (form Iq)\n# أُقَرْقِعُ (ʔuqarqiʕu) /ʔu.qar.qi.ʕu/: first-person singular non-past active indicative of قَرْقَعَ (qarqaʕa)\n# أُقَرْقَعُ (ʔuqarqaʕu) /ʔu.qar.qa.ʕu/: first-person singular non-past passive indicative of قَرْقَعَ (qarqaʕa)\n# أُقَرْقِعَ (ʔuqarqiʕa) /ʔu.qar.qi.ʕa/: first-person singular non-past active subjunctive of قَرْقَعَ (qarqaʕa)\n# أُقَرْقَعَ (ʔuqarqaʕa) /ʔu.qar.qa.ʕa/: first",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʔuqarqiʕu", "qarqaʕa", "ʔuqarqaʕu"],
-        "k": "قرقع",
-        "yol": "kök"
-      },
-      {
-        "w": "قرقعن",
-        "u": "قرقعن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قرقعن (form Iq)\n# قَرْقَعْنَ (qarqaʕna) /qar.qaʕ.na/: third-person feminine plural past active of قَرْقَعَ (qarqaʕa)\n# قُرْقِعْنَ (qurqiʕna) /qur.qiʕ.na/: third-person feminine plural past passive of قَرْقَعَ (qarqaʕa)\n# قَرْقِعْنَ (qarqiʕna) /qar.qiʕ.na/: second-person feminine plural imperative of قَرْقَعَ (qarqaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["qarqaʕna", "qarqaʕa", "qurqiʕna"],
-        "k": "قرقع",
-        "yol": "kök"
-      },
-      {
-        "w": "تقرقع",
-        "u": "تقرقع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تقرقع (form Iq)\n# تُقَرْقِعُ (tuqarqiʕu) /tu.qar.qi.ʕu/: inflection of قَرْقَعَ (qarqaʕa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُقَرْقَعُ (tuqarqaʕu) /tu.qar.qa.ʕu/: inflection of قَرْقَعَ (qarqaʕa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past pas",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuqarqiʕu", "qarqaʕa", "tuqarqaʕu"],
-        "k": "قرقع",
-        "yol": "kök"
-      },
-      {
-        "w": "قرقعتن",
-        "u": "قرقعتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قرقعتن (form Iq)\n# قَرْقَعْتُنَّ (qarqaʕtunna) /qar.qaʕ.tun.na/: second-person feminine plural past active of قَرْقَعَ (qarqaʕa)\n# قُرْقِعْتُنَّ (qurqiʕtunna) /qur.qiʕ.tun.na/: second-person feminine plural past passive of قَرْقَعَ (qarqaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["qarqaʕtunna", "qarqaʕa", "qurqiʕtunna"],
-        "k": "قرقع",
-        "yol": "kök"
-      },
-      {
-        "w": "تقرقعين",
-        "u": "تقرقعين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تقرقعين (form Iq)\n# تُقَرْقِعِينَ (tuqarqiʕīna) /tu.qar.qi.ʕiː.na/: second-person feminine singular non-past active indicative of قَرْقَعَ (qarqaʕa)\n# تُقَرْقَعِينَ (tuqarqaʕīna) /tu.qar.qa.ʕiː.na/: second-person feminine singular non-past passive indicative of قَرْقَعَ (qarqaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuqarqiʕīna", "qarqaʕa", "tuqarqaʕīna"],
-        "k": "قرقع",
-        "yol": "kök"
-      },
-      {
-        "w": "نقرقع",
-        "u": "نقرقع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نقرقع (form Iq)\n# نُقَرْقِعُ (nuqarqiʕu) /nu.qar.qi.ʕu/: first-person plural non-past active indicative of قَرْقَعَ (qarqaʕa)\n# نُقَرْقَعُ (nuqarqaʕu) /nu.qar.qa.ʕu/: first-person plural non-past passive indicative of قَرْقَعَ (qarqaʕa)\n# نُقَرْقِعَ (nuqarqiʕa) /nu.qar.qi.ʕa/: first-person plural non-past active subjunctive of قَرْقَعَ (qarqaʕa)\n# نُقَرْقَعَ (nuqarqaʕa) /nu.qar.qa.ʕa/: first-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["nuqarqiʕu", "qarqaʕa", "nuqarqaʕu"],
-        "k": "قرقع",
-        "yol": "kök"
-      },
-      {
-        "w": "يقرقع",
-        "u": "يقرقع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يقرقع (form Iq)\n# يُقَرْقِعُ (yuqarqiʕu) /ju.qar.qi.ʕu/: third-person masculine singular non-past active indicative of قَرْقَعَ (qarqaʕa)\n# يُقَرْقَعُ (yuqarqaʕu) /ju.qar.qa.ʕu/: third-person masculine singular non-past passive indicative of قَرْقَعَ (qarqaʕa)\n# يُقَرْقِعَ (yuqarqiʕa) /ju.qar.qi.ʕa/: third-person masculine singular non-past active subjunctive of قَرْقَعَ (qarqaʕa)\n# يُقَرْقَعَ (yu",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuqarqiʕu", "qarqaʕa", "yuqarqaʕu"],
-        "k": "قرقع",
-        "yol": "kök"
-      },
-      {
-        "w": "تقرقعان",
-        "u": "تقرقعان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تقرقعان (form Iq)\n# تُقَرْقِعَانِ (tuqarqiʕāni) /tu.qar.qi.ʕaː.ni/: inflection of قَرْقَعَ (qarqaʕa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُقَرْقَعَانِ (tuqarqaʕāni) /tu.qar.qa.ʕaː.ni/: inflection of قَرْقَعَ (qarqaʕa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuqarqiʕāni", "qarqaʕa", "tuqarqaʕāni"],
-        "k": "قرقع",
-        "yol": "kök"
-      },
-      {
-        "w": "يقرقعان",
-        "u": "يقرقعان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يقرقعان (form Iq)\n# يُقَرْقِعَانِ (yuqarqiʕāni) /ju.qar.qi.ʕaː.ni/: third-person masculine dual non-past active indicative of قَرْقَعَ (qarqaʕa)\n# يُقَرْقَعَانِ (yuqarqaʕāni) /ju.qar.qa.ʕaː.ni/: third-person masculine dual non-past passive indicative of قَرْقَعَ (qarqaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuqarqiʕāni", "qarqaʕa", "yuqarqaʕāni"],
-        "k": "قرقع",
-        "yol": "kök"
-      },
-      {
-        "w": "يقرقعون",
-        "u": "يقرقعون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يقرقعون (form Iq)\n# يُقَرْقِعُونَ (yuqarqiʕūna) /ju.qar.qi.ʕuː.na/: third-person masculine plural non-past active indicative of قَرْقَعَ (qarqaʕa)\n# يُقَرْقَعُونَ (yuqarqaʕūna) /ju.qar.qa.ʕuː.na/: third-person masculine plural non-past passive indicative of قَرْقَعَ (qarqaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuqarqiʕūna", "qarqaʕa", "yuqarqaʕūna"],
-        "k": "قرقع",
-        "yol": "kök"
-      },
-      {
-        "w": "تقرقعن",
-        "u": "تقرقعن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تقرقعن (form Iq)\n# تُقَرْقِعْنَ (tuqarqiʕna) /tu.qar.qiʕ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of قَرْقَعَ (qarqaʕa)\n# تُقَرْقَعْنَ (tuqarqaʕna) /tu.qar.qaʕ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of قَرْقَعَ (qarqaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuqarqiʕna", "qarqaʕa", "tuqarqaʕna"],
-        "k": "قرقع",
-        "yol": "kök"
-      },
-      {
-        "w": "يقرقعا",
-        "u": "يقرقعا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يقرقعا (form Iq)\n# يُقَرْقِعَا (yuqarqiʕā) /ju.qar.qi.ʕaː/: third-person masculine dual non-past active subjunctive/jussive of قَرْقَعَ (qarqaʕa)\n# يُقَرْقَعَا (yuqarqaʕā) /ju.qar.qa.ʕaː/: third-person masculine dual non-past passive subjunctive/jussive of قَرْقَعَ (qarqaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuqarqiʕā", "qarqaʕa", "yuqarqaʕā"],
-        "k": "قرقع",
-        "yol": "kök"
-      },
-      {
-        "w": "تقرقعون",
-        "u": "تقرقعون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تقرقعون (form Iq)\n# تُقَرْقِعُونَ (tuqarqiʕūna) /tu.qar.qi.ʕuː.na/: second-person masculine plural non-past active indicative of قَرْقَعَ (qarqaʕa)\n# تُقَرْقَعُونَ (tuqarqaʕūna) /tu.qar.qa.ʕuː.na/: second-person masculine plural non-past passive indicative of قَرْقَعَ (qarqaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuqarqiʕūna", "qarqaʕa", "tuqarqaʕūna"],
-        "k": "قرقع",
-        "yol": "kök"
-      },
-      {
-        "w": "تقرقعي",
-        "u": "تقرقعي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تقرقعي (form Iq)\n# تُقَرْقِعِي (tuqarqiʕī) /tu.qar.qi.ʕiː/: second-person feminine singular non-past active subjunctive/jussive of قَرْقَعَ (qarqaʕa)\n# تُقَرْقَعِي (tuqarqaʕī) /tu.qar.qa.ʕiː/: second-person feminine singular non-past passive subjunctive/jussive of قَرْقَعَ (qarqaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuqarqiʕī", "qarqaʕa", "tuqarqaʕī"],
-        "k": "قرقع",
-        "yol": "kök"
-      },
-      {
-        "w": "تقرقعا",
-        "u": "تقرقعا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تقرقعا (form Iq)\n# تُقَرْقِعَا (tuqarqiʕā) /tu.qar.qi.ʕaː/: inflection of قَرْقَعَ (qarqaʕa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُقَرْقَعَا (tuqarqaʕā) /tu.qar.qa.ʕaː/: inflection of قَرْقَعَ (qarqaʕa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuqarqiʕā", "qarqaʕa", "tuqarqaʕā"],
-        "k": "قرقع",
-        "yol": "kök"
-      },
-      {
-        "w": "قرقعي",
-        "u": "قرقعي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قَرْقِعِي • (qarqiʕī) (form Iq) /qar.qi.ʕiː/\n# second-person feminine singular imperative of قَرْقَعَ (qarqaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["qarqiʕī", "qarqaʕa"],
-        "k": "قرقع",
-        "yol": "kök"
-      },
-      {
-        "w": "يقرقعن",
-        "u": "يقرقعن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يقرقعن (form Iq)\n# يُقَرْقِعْنَ (yuqarqiʕna) /ju.qar.qiʕ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of قَرْقَعَ (qarqaʕa)\n# يُقَرْقَعْنَ (yuqarqaʕna) /ju.qar.qaʕ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of قَرْقَعَ (qarqaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuqarqiʕna", "qarqaʕa", "yuqarqaʕna"],
-        "k": "قرقع",
-        "yol": "kök"
-      },
-      {
-        "w": "تقرقعوا",
-        "u": "تقرقعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تقرقعوا (form Iq)\n# تُقَرْقِعُوا (tuqarqiʕū) /tu.qar.qi.ʕuː/: second-person masculine plural non-past active subjunctive/jussive of قَرْقَعَ (qarqaʕa)\n# تُقَرْقَعُوا (tuqarqaʕū) /tu.qar.qa.ʕuː/: second-person masculine plural non-past passive subjunctive/jussive of قَرْقَعَ (qarqaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuqarqiʕū", "qarqaʕa", "tuqarqaʕū"],
-        "k": "قرقع",
-        "yol": "kök"
-      },
-      {
-        "w": "يقرقعوا",
-        "u": "يقرقعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يقرقعوا (form Iq)\n# يُقَرْقِعُوا (yuqarqiʕū) /ju.qar.qi.ʕuː/: third-person masculine plural non-past active subjunctive/jussive of قَرْقَعَ (qarqaʕa)\n# يُقَرْقَعُوا (yuqarqaʕū) /ju.qar.qa.ʕuː/: third-person masculine plural non-past passive subjunctive/jussive of قَرْقَعَ (qarqaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuqarqiʕū", "qarqaʕa", "yuqarqaʕū"],
-        "k": "قرقع",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "قر",
+  "ses": {
     "harf": "ق",
+    "fasil": "قر",
     "mahrec": "lehaviyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "قرقع",
+      "tur": "verb",
+      "baslik": "قَرْقَعَ • (qarqaʕa) Iq (non-past يُقَرْقِعُ (yuqarqiʕu), verbal noun قَرْقَعَة (qarqaʕa))",
+      "anlam": ["to crackle, to rumble, to creak"],
+      "okunus": ["qarqaʕa"],
+      "ipa": ["/qar.qa.ʕa/"]
+    },
+    {
+      "madde": "قرقعت",
+      "tur": "verb",
+      "baslik": "قرقعت (form Iq)\n# قَرْقَعْتُ (qarqaʕtu) /qar.qaʕ.tu/: first-person singular past active of قَرْقَعَ (qarqaʕa)\n# قَرْقَعْتَ (qarqaʕta) /qar.qaʕ.ta/: second-person masculine singular past active of قَرْقَعَ (qarqaʕa)\n# قَرْقَعْتِ (qarqaʕti) /qar.qaʕ.ti/: second-person feminine singular past active of قَرْقَعَ (qarqaʕa)\n# قَرْقَعَتْ (qarqaʕat) /qar.qa.ʕat/: third-person feminine singular past active ",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["qarqaʕtu", "qarqaʕa", "qarqaʕta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "قرقعتا",
+      "tur": "verb",
+      "baslik": "قرقعتا (form Iq)\n# قَرْقَعَتَا (qarqaʕatā) /qar.qa.ʕa.taː/: third-person feminine dual past active of قَرْقَعَ (qarqaʕa)\n# قُرْقِعَتَا (qurqiʕatā) /qur.qi.ʕa.taː/: third-person feminine dual past passive of قَرْقَعَ (qarqaʕa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["qarqaʕatā", "qarqaʕa", "qurqiʕatā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "قرقعتما",
+      "tur": "verb",
+      "baslik": "قرقعتما (form Iq)\n# قَرْقَعْتُمَا (qarqaʕtumā) /qar.qaʕ.tu.maː/: second-person dual past active of قَرْقَعَ (qarqaʕa)\n# قُرْقِعْتُمَا (qurqiʕtumā) /qur.qiʕ.tu.maː/: second-person dual past passive of قَرْقَعَ (qarqaʕa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["qarqaʕtumā", "qarqaʕa", "qurqiʕtumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "قرقعنا",
+      "tur": "verb",
+      "baslik": "قرقعنا (form Iq)\n# قَرْقَعْنَا (qarqaʕnā) /qar.qaʕ.naː/: first-person plural past active of قَرْقَعَ (qarqaʕa)\n# قُرْقِعْنَا (qurqiʕnā) /qur.qiʕ.naː/: first-person plural past passive of قَرْقَعَ (qarqaʕa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["qarqaʕnā", "qarqaʕa", "qurqiʕnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "قرقعا",
+      "tur": "verb",
+      "baslik": "قرقعا (form Iq)\n# قَرْقَعَا (qarqaʕā) /qar.qa.ʕaː/: third-person masculine dual past active of قَرْقَعَ (qarqaʕa)\n# قُرْقِعَا (qurqiʕā) /qur.qi.ʕaː/: third-person masculine dual past passive of قَرْقَعَ (qarqaʕa)\n# قَرْقِعَا (qarqiʕā) /qar.qi.ʕaː/: second-person dual imperative of قَرْقَعَ (qarqaʕa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["qarqaʕā", "qarqaʕa", "qurqiʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "قرقعتم",
+      "tur": "verb",
+      "baslik": "قرقعتم (form Iq)\n# قَرْقَعْتُمْ (qarqaʕtum) /qar.qaʕ.tum/: second-person masculine plural past active of قَرْقَعَ (qarqaʕa)\n# قُرْقِعْتُمْ (qurqiʕtum) /qur.qiʕ.tum/: second-person masculine plural past passive of قَرْقَعَ (qarqaʕa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["qarqaʕtum", "qarqaʕa", "qurqiʕtum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "قرقعوا",
+      "tur": "verb",
+      "baslik": "قرقعوا (form Iq)\n# قَرْقَعُوا (qarqaʕū) /qar.qa.ʕuː/: third-person masculine plural past active of قَرْقَعَ (qarqaʕa)\n# قُرْقِعُوا (qurqiʕū) /qur.qi.ʕuː/: third-person masculine plural past passive of قَرْقَعَ (qarqaʕa)\n# قَرْقِعُوا (qarqiʕū) /qar.qi.ʕuː/: second-person masculine plural imperative of قَرْقَعَ (qarqaʕa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["qarqaʕū", "qarqaʕa", "qurqiʕū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أقرقع",
+      "tur": "verb",
+      "baslik": "أقرقع (form Iq)\n# أُقَرْقِعُ (ʔuqarqiʕu) /ʔu.qar.qi.ʕu/: first-person singular non-past active indicative of قَرْقَعَ (qarqaʕa)\n# أُقَرْقَعُ (ʔuqarqaʕu) /ʔu.qar.qa.ʕu/: first-person singular non-past passive indicative of قَرْقَعَ (qarqaʕa)\n# أُقَرْقِعَ (ʔuqarqiʕa) /ʔu.qar.qi.ʕa/: first-person singular non-past active subjunctive of قَرْقَعَ (qarqaʕa)\n# أُقَرْقَعَ (ʔuqarqaʕa) /ʔu.qar.qa.ʕa/: first",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʔuqarqiʕu", "qarqaʕa", "ʔuqarqaʕu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "قرقعن",
+      "tur": "verb",
+      "baslik": "قرقعن (form Iq)\n# قَرْقَعْنَ (qarqaʕna) /qar.qaʕ.na/: third-person feminine plural past active of قَرْقَعَ (qarqaʕa)\n# قُرْقِعْنَ (qurqiʕna) /qur.qiʕ.na/: third-person feminine plural past passive of قَرْقَعَ (qarqaʕa)\n# قَرْقِعْنَ (qarqiʕna) /qar.qiʕ.na/: second-person feminine plural imperative of قَرْقَعَ (qarqaʕa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["qarqaʕna", "qarqaʕa", "qurqiʕna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تقرقع",
+      "tur": "verb",
+      "baslik": "تقرقع (form Iq)\n# تُقَرْقِعُ (tuqarqiʕu) /tu.qar.qi.ʕu/: inflection of قَرْقَعَ (qarqaʕa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُقَرْقَعُ (tuqarqaʕu) /tu.qar.qa.ʕu/: inflection of قَرْقَعَ (qarqaʕa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past pas",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuqarqiʕu", "qarqaʕa", "tuqarqaʕu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "قرقعتن",
+      "tur": "verb",
+      "baslik": "قرقعتن (form Iq)\n# قَرْقَعْتُنَّ (qarqaʕtunna) /qar.qaʕ.tun.na/: second-person feminine plural past active of قَرْقَعَ (qarqaʕa)\n# قُرْقِعْتُنَّ (qurqiʕtunna) /qur.qiʕ.tun.na/: second-person feminine plural past passive of قَرْقَعَ (qarqaʕa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["qarqaʕtunna", "qarqaʕa", "qurqiʕtunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تقرقعين",
+      "tur": "verb",
+      "baslik": "تقرقعين (form Iq)\n# تُقَرْقِعِينَ (tuqarqiʕīna) /tu.qar.qi.ʕiː.na/: second-person feminine singular non-past active indicative of قَرْقَعَ (qarqaʕa)\n# تُقَرْقَعِينَ (tuqarqaʕīna) /tu.qar.qa.ʕiː.na/: second-person feminine singular non-past passive indicative of قَرْقَعَ (qarqaʕa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuqarqiʕīna", "qarqaʕa", "tuqarqaʕīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نقرقع",
+      "tur": "verb",
+      "baslik": "نقرقع (form Iq)\n# نُقَرْقِعُ (nuqarqiʕu) /nu.qar.qi.ʕu/: first-person plural non-past active indicative of قَرْقَعَ (qarqaʕa)\n# نُقَرْقَعُ (nuqarqaʕu) /nu.qar.qa.ʕu/: first-person plural non-past passive indicative of قَرْقَعَ (qarqaʕa)\n# نُقَرْقِعَ (nuqarqiʕa) /nu.qar.qi.ʕa/: first-person plural non-past active subjunctive of قَرْقَعَ (qarqaʕa)\n# نُقَرْقَعَ (nuqarqaʕa) /nu.qar.qa.ʕa/: first-perso",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["nuqarqiʕu", "qarqaʕa", "nuqarqaʕu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يقرقع",
+      "tur": "verb",
+      "baslik": "يقرقع (form Iq)\n# يُقَرْقِعُ (yuqarqiʕu) /ju.qar.qi.ʕu/: third-person masculine singular non-past active indicative of قَرْقَعَ (qarqaʕa)\n# يُقَرْقَعُ (yuqarqaʕu) /ju.qar.qa.ʕu/: third-person masculine singular non-past passive indicative of قَرْقَعَ (qarqaʕa)\n# يُقَرْقِعَ (yuqarqiʕa) /ju.qar.qi.ʕa/: third-person masculine singular non-past active subjunctive of قَرْقَعَ (qarqaʕa)\n# يُقَرْقَعَ (yu",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuqarqiʕu", "qarqaʕa", "yuqarqaʕu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تقرقعان",
+      "tur": "verb",
+      "baslik": "تقرقعان (form Iq)\n# تُقَرْقِعَانِ (tuqarqiʕāni) /tu.qar.qi.ʕaː.ni/: inflection of قَرْقَعَ (qarqaʕa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُقَرْقَعَانِ (tuqarqaʕāni) /tu.qar.qa.ʕaː.ni/: inflection of قَرْقَعَ (qarqaʕa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuqarqiʕāni", "qarqaʕa", "tuqarqaʕāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يقرقعان",
+      "tur": "verb",
+      "baslik": "يقرقعان (form Iq)\n# يُقَرْقِعَانِ (yuqarqiʕāni) /ju.qar.qi.ʕaː.ni/: third-person masculine dual non-past active indicative of قَرْقَعَ (qarqaʕa)\n# يُقَرْقَعَانِ (yuqarqaʕāni) /ju.qar.qa.ʕaː.ni/: third-person masculine dual non-past passive indicative of قَرْقَعَ (qarqaʕa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuqarqiʕāni", "qarqaʕa", "yuqarqaʕāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يقرقعون",
+      "tur": "verb",
+      "baslik": "يقرقعون (form Iq)\n# يُقَرْقِعُونَ (yuqarqiʕūna) /ju.qar.qi.ʕuː.na/: third-person masculine plural non-past active indicative of قَرْقَعَ (qarqaʕa)\n# يُقَرْقَعُونَ (yuqarqaʕūna) /ju.qar.qa.ʕuː.na/: third-person masculine plural non-past passive indicative of قَرْقَعَ (qarqaʕa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuqarqiʕūna", "qarqaʕa", "yuqarqaʕūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تقرقعن",
+      "tur": "verb",
+      "baslik": "تقرقعن (form Iq)\n# تُقَرْقِعْنَ (tuqarqiʕna) /tu.qar.qiʕ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of قَرْقَعَ (qarqaʕa)\n# تُقَرْقَعْنَ (tuqarqaʕna) /tu.qar.qaʕ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of قَرْقَعَ (qarqaʕa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuqarqiʕna", "qarqaʕa", "tuqarqaʕna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يقرقعا",
+      "tur": "verb",
+      "baslik": "يقرقعا (form Iq)\n# يُقَرْقِعَا (yuqarqiʕā) /ju.qar.qi.ʕaː/: third-person masculine dual non-past active subjunctive/jussive of قَرْقَعَ (qarqaʕa)\n# يُقَرْقَعَا (yuqarqaʕā) /ju.qar.qa.ʕaː/: third-person masculine dual non-past passive subjunctive/jussive of قَرْقَعَ (qarqaʕa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuqarqiʕā", "qarqaʕa", "yuqarqaʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تقرقعون",
+      "tur": "verb",
+      "baslik": "تقرقعون (form Iq)\n# تُقَرْقِعُونَ (tuqarqiʕūna) /tu.qar.qi.ʕuː.na/: second-person masculine plural non-past active indicative of قَرْقَعَ (qarqaʕa)\n# تُقَرْقَعُونَ (tuqarqaʕūna) /tu.qar.qa.ʕuː.na/: second-person masculine plural non-past passive indicative of قَرْقَعَ (qarqaʕa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuqarqiʕūna", "qarqaʕa", "tuqarqaʕūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تقرقعي",
+      "tur": "verb",
+      "baslik": "تقرقعي (form Iq)\n# تُقَرْقِعِي (tuqarqiʕī) /tu.qar.qi.ʕiː/: second-person feminine singular non-past active subjunctive/jussive of قَرْقَعَ (qarqaʕa)\n# تُقَرْقَعِي (tuqarqaʕī) /tu.qar.qa.ʕiː/: second-person feminine singular non-past passive subjunctive/jussive of قَرْقَعَ (qarqaʕa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuqarqiʕī", "qarqaʕa", "tuqarqaʕī"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تقرقعا",
+      "tur": "verb",
+      "baslik": "تقرقعا (form Iq)\n# تُقَرْقِعَا (tuqarqiʕā) /tu.qar.qi.ʕaː/: inflection of قَرْقَعَ (qarqaʕa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُقَرْقَعَا (tuqarqaʕā) /tu.qar.qa.ʕaː/: inflection of قَرْقَعَ (qarqaʕa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuqarqiʕā", "qarqaʕa", "tuqarqaʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "قرقعي",
+      "tur": "verb",
+      "baslik": "قَرْقِعِي • (qarqiʕī) (form Iq) /qar.qi.ʕiː/\n# second-person feminine singular imperative of قَرْقَعَ (qarqaʕa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["qarqiʕī", "qarqaʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يقرقعن",
+      "tur": "verb",
+      "baslik": "يقرقعن (form Iq)\n# يُقَرْقِعْنَ (yuqarqiʕna) /ju.qar.qiʕ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of قَرْقَعَ (qarqaʕa)\n# يُقَرْقَعْنَ (yuqarqaʕna) /ju.qar.qaʕ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of قَرْقَعَ (qarqaʕa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuqarqiʕna", "qarqaʕa", "yuqarqaʕna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تقرقعوا",
+      "tur": "verb",
+      "baslik": "تقرقعوا (form Iq)\n# تُقَرْقِعُوا (tuqarqiʕū) /tu.qar.qi.ʕuː/: second-person masculine plural non-past active subjunctive/jussive of قَرْقَعَ (qarqaʕa)\n# تُقَرْقَعُوا (tuqarqaʕū) /tu.qar.qa.ʕuː/: second-person masculine plural non-past passive subjunctive/jussive of قَرْقَعَ (qarqaʕa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuqarqiʕū", "qarqaʕa", "tuqarqaʕū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يقرقعوا",
+      "tur": "verb",
+      "baslik": "يقرقعوا (form Iq)\n# يُقَرْقِعُوا (yuqarqiʕū) /ju.qar.qi.ʕuː/: third-person masculine plural non-past active subjunctive/jussive of قَرْقَعَ (qarqaʕa)\n# يُقَرْقَعُوا (yuqarqaʕū) /ju.qar.qa.ʕuː/: third-person masculine plural non-past passive subjunctive/jussive of قَرْقَعَ (qarqaʕa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuqarqiʕū", "qarqaʕa", "yuqarqaʕū"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "etymarab": {
+    "latin": "QRQʕ",
+    "kok_maddesi": "Back to library EtymArab QRQʕ قرقع BP – • HDAL • © SG | 20Oct2024 √QRQʕ \"root\" ▪ QRQʕ_1 ‘to be noisy, boisterous; to creak, grate; to crack, pop’ ↗ qarqaʕa ▪ QRQʕ_2 … ▪ [v1] According to Ehret1989 (#85), qarqaʕ (vn.) ‘to publish, make publicly known’ is an extension in intensive * ‑ḳ and sunderative * ‑ʕ from a »pre-protSem« 2-cons. root * ḳr ‘to utter, make a sound, speak’. For other extensions from the same nucleus, see ↗ qaraʔa , ↗ taqāraḍa , ↗ qaraqa , and ↗ qarqara . See also disambiguation entry ↗*QR for homonymous nuclei and their extensions. ▪ … – ▪ … ▪ See above, section CONC. – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
+    "kelime_maddeleri": []
+  },
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "قرقع", "r6"]
+  ],
+  "mana": {
     "ince": "crepitate.v.01",
     "orta": "verb.perception",
     "ust": "zihin ve ilim",
@@ -366,20 +265,8 @@
     "dayanak_tanim": "make a crackling sound",
     "dayanak_karsilik": "crackle"
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m2",
+  "gomme": {
     "ust": {
       "kume": 8,
       "merkez_kok": "سير",
@@ -399,6 +286,10 @@
       "boy": 4
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

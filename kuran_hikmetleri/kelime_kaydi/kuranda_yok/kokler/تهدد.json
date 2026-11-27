@@ -1,366 +1,259 @@
 {
   "kok": "تهدد",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تهدد", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تهددي",
-        "u": "تهددي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَهَدَّدِي • (tahaddadī) (form V) /ta.had.da.diː/\n# second-person feminine singular imperative of تَهَدَّدَ (tahaddada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahaddadī", "tahaddada"],
-        "k": "تهدد",
-        "yol": "kök"
-      },
-      {
-        "w": "تهددوا",
-        "u": "تهددوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَهَدَّدُوا • (tahaddadū) (form V) /ta.had.da.duː/\n# inflection of تَهَدَّدَ (tahaddada):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahaddadū", "tahaddada"],
-        "k": "تهدد",
-        "yol": "kök"
-      },
-      {
-        "w": "تهددن",
-        "u": "تهددن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَهَدَّدْنَ • (tahaddadna) (form V) /ta.had.dad.na/\n# inflection of تَهَدَّدَ (tahaddada):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahaddadna", "tahaddada"],
-        "k": "تهدد",
-        "yol": "kök"
-      },
-      {
-        "w": "تهددت",
-        "u": "تهددت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهددت (form V)\n# تَهَدَّدْتُ (tahaddadtu) /ta.had.dad.tu/: first-person singular past active of تَهَدَّدَ (tahaddada)\n# تَهَدَّدْتَ (tahaddadta) /ta.had.dad.ta/: second-person masculine singular past active of تَهَدَّدَ (tahaddada)\n# تَهَدَّدْتِ (tahaddadti) /ta.had.dad.ti/: second-person feminine singular past active of تَهَدَّدَ (tahaddada)\n# تَهَدَّدَتْ (tahaddadat) /ta.had.da.dat/: third-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahaddadtu", "tahaddada", "tahaddadta"],
-        "k": "تهدد",
-        "yol": "kök"
-      },
-      {
-        "w": "تهددتما",
-        "u": "تهددتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهَدَّدْتُمَا • (tahaddadtumā) (form V) /ta.had.dad.tu.maː/\n# second-person dual past active of تَهَدَّدَ (tahaddada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahaddadtumā", "tahaddada"],
-        "k": "تهدد",
-        "yol": "kök"
-      },
-      {
-        "w": "تهددتا",
-        "u": "تهددتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهَدَّدَتَا • (tahaddadatā) (form V) /ta.had.da.da.taː/\n# third-person feminine dual past active of تَهَدَّدَ (tahaddada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahaddadatā", "tahaddada"],
-        "k": "تهدد",
-        "yol": "kök"
-      },
-      {
-        "w": "تهددا",
-        "u": "تهددا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَهَدَّدَا • (tahaddadā) (form V) /ta.had.da.daː/\n# inflection of تَهَدَّدَ (tahaddada):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahaddadā", "tahaddada"],
-        "k": "تهدد",
-        "yol": "kök"
-      },
-      {
-        "w": "تهددنا",
-        "u": "تهددنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهَدَّدْنَا • (tahaddadnā) (form V) /ta.had.dad.naː/\n# first-person plural past active of تَهَدَّدَ (tahaddada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahaddadnā", "tahaddada"],
-        "k": "تهدد",
-        "yol": "kök"
-      },
-      {
-        "w": "تهددتم",
-        "u": "تهددتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهَدَّدْتُمْ • (tahaddadtum) (form V) /ta.had.dad.tum/\n# second-person masculine plural past active of تَهَدَّدَ (tahaddada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahaddadtum", "tahaddada"],
-        "k": "تهدد",
-        "yol": "kök"
-      },
-      {
-        "w": "تهددتن",
-        "u": "تهددتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَهَدَّدْتُنَّ • (tahaddadtunna) (form V) /ta.had.dad.tun.na/\n# second-person feminine plural past active of تَهَدَّدَ (tahaddada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tahaddadtunna", "tahaddada"],
-        "k": "تهدد",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهددين",
-        "u": "تتهددين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَهَدَّدِينَ • (tatahaddadīna) (form V) /ta.ta.had.da.diː.na/\n# second-person feminine singular non-past active indicative of تَهَدَّدَ (tahaddada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatahaddadīna", "tahaddada"],
-        "k": "تهدد",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهدد",
-        "u": "تتهدد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتهدد (form V)\n# تَتَهَدَّدُ (tatahaddadu) /ta.ta.had.da.du/: inflection of تَهَدَّدَ (tahaddada):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَهَدَّدَ (tatahaddada) /ta.ta.had.da.da/: inflection of تَهَدَّدَ (tahaddada):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatahaddadu", "tahaddada", "tatahaddada"],
-        "k": "تهدد",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهددان",
-        "u": "تتهددان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَهَدَّدَانِ • (tatahaddadāni) (form V) /ta.ta.had.da.daː.ni/\n# inflection of تَهَدَّدَ (tahaddada):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatahaddadāni", "tahaddada"],
-        "k": "تهدد",
-        "yol": "kök"
-      },
-      {
-        "w": "يتهدد",
-        "u": "يتهدد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتهدد (form V)\n# يَتَهَدَّدُ (yatahaddadu) /ja.ta.had.da.du/: third-person masculine singular non-past active indicative of تَهَدَّدَ (tahaddada)\n# يُتَهَدَّدُ (yutahaddadu) /ju.ta.had.da.du/: third-person masculine singular non-past passive indicative of تَهَدَّدَ (tahaddada)\n# يَتَهَدَّدَ (yatahaddada) /ja.ta.had.da.da/: third-person masculine singular non-past active subjunctive of تَهَدَّدَ (t",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatahaddadu", "tahaddada", "yutahaddadu"],
-        "k": "تهدد",
-        "yol": "kök"
-      },
-      {
-        "w": "يتهددان",
-        "u": "يتهددان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَهَدَّدَانِ • (yatahaddadāni) (form V) /ja.ta.had.da.daː.ni/\n# third-person masculine dual non-past active indicative of تَهَدَّدَ (tahaddada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatahaddadāni", "tahaddada"],
-        "k": "تهدد",
-        "yol": "kök"
-      },
-      {
-        "w": "أتهدد",
-        "u": "أتهدد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتهدد (form V)\n# أَتَهَدَّدُ (ʔatahaddadu) /ʔa.ta.had.da.du/: first-person singular non-past active indicative of تَهَدَّدَ (tahaddada)\n# أَتَهَدَّدَ (ʔatahaddada) /ʔa.ta.had.da.da/: first-person singular non-past active subjunctive of تَهَدَّدَ (tahaddada)\n# أَتَهَدَّدْ (ʔatahaddad) /ʔa.ta.had.dad/: first-person singular non-past active jussive of تَهَدَّدَ (tahaddada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔatahaddadu", "tahaddada", "ʔatahaddada"],
-        "k": "تهدد",
-        "yol": "kök"
-      },
-      {
-        "w": "نتهدد",
-        "u": "نتهدد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتهدد (form V)\n# نَتَهَدَّدُ (natahaddadu) /na.ta.had.da.du/: first-person plural non-past active indicative of تَهَدَّدَ (tahaddada)\n# نَتَهَدَّدَ (natahaddada) /na.ta.had.da.da/: first-person plural non-past active subjunctive of تَهَدَّدَ (tahaddada)\n# نَتَهَدَّدْ (natahaddad) /na.ta.had.dad/: first-person plural non-past active jussive of تَهَدَّدَ (tahaddada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["natahaddadu", "tahaddada", "natahaddada"],
-        "k": "تهدد",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهددون",
-        "u": "تتهددون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَهَدَّدُونَ • (tatahaddadūna) (form V) /ta.ta.had.da.duː.na/\n# second-person masculine plural non-past active indicative of تَهَدَّدَ (tahaddada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatahaddadūna", "tahaddada"],
-        "k": "تهدد",
-        "yol": "kök"
-      },
-      {
-        "w": "يتهددون",
-        "u": "يتهددون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَهَدَّدُونَ • (yatahaddadūna) (form V) /ja.ta.had.da.duː.na/\n# third-person masculine plural non-past active indicative of تَهَدَّدَ (tahaddada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatahaddadūna", "tahaddada"],
-        "k": "تهدد",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهددن",
-        "u": "تتهددن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَهَدَّدْنَ • (tatahaddadna) (form V) /ta.ta.had.dad.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَهَدَّدَ (tahaddada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatahaddadna", "tahaddada"],
-        "k": "تهدد",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهددا",
-        "u": "تتهددا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَهَدَّدَا • (tatahaddadā) (form V) /ta.ta.had.da.daː/\n# inflection of تَهَدَّدَ (tahaddada):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatahaddadā", "tahaddada"],
-        "k": "تهدد",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهددي",
-        "u": "تتهددي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَهَدَّدِي • (tatahaddadī) (form V) /ta.ta.had.da.diː/\n# second-person feminine singular non-past active subjunctive/jussive of تَهَدَّدَ (tahaddada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatahaddadī", "tahaddada"],
-        "k": "تهدد",
-        "yol": "kök"
-      },
-      {
-        "w": "يتهددن",
-        "u": "يتهددن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَهَدَّدْنَ • (yatahaddadna) (form V) /ja.ta.had.dad.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَهَدَّدَ (tahaddada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatahaddadna", "tahaddada"],
-        "k": "تهدد",
-        "yol": "kök"
-      },
-      {
-        "w": "يتهددا",
-        "u": "يتهددا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَهَدَّدَا • (yatahaddadā) (form V) /ja.ta.had.da.daː/\n# third-person masculine dual non-past active subjunctive/jussive of تَهَدَّدَ (tahaddada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatahaddadā", "tahaddada"],
-        "k": "تهدد",
-        "yol": "kök"
-      },
-      {
-        "w": "تتهددوا",
-        "u": "تتهددوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَهَدَّدُوا • (tatahaddadū) (form V) /ta.ta.had.da.duː/\n# second-person masculine plural non-past active subjunctive/jussive of تَهَدَّدَ (tahaddada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatahaddadū", "tahaddada"],
-        "k": "تهدد",
-        "yol": "kök"
-      },
-      {
-        "w": "يتهددوا",
-        "u": "يتهددوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَهَدَّدُوا • (yatahaddadū) (form V) /ja.ta.had.da.duː/\n# third-person masculine plural non-past active subjunctive/jussive of تَهَدَّدَ (tahaddada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatahaddadū", "tahaddada"],
-        "k": "تهدد",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "ته",
+  "ses": {
     "harf": "ت",
+    "fasil": "ته",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تهددي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَهَدَّدِي • (tahaddadī) (form V) /ta.had.da.diː/\n# second-person feminine singular imperative of تَهَدَّدَ (tahaddada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahaddadī", "tahaddada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهددوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَهَدَّدُوا • (tahaddadū) (form V) /ta.had.da.duː/\n# inflection of تَهَدَّدَ (tahaddada):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahaddadū", "tahaddada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهددن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَهَدَّدْنَ • (tahaddadna) (form V) /ta.had.dad.na/\n# inflection of تَهَدَّدَ (tahaddada):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahaddadna", "tahaddada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهددت",
+      "tur": "verb",
+      "baslik": "تهددت (form V)\n# تَهَدَّدْتُ (tahaddadtu) /ta.had.dad.tu/: first-person singular past active of تَهَدَّدَ (tahaddada)\n# تَهَدَّدْتَ (tahaddadta) /ta.had.dad.ta/: second-person masculine singular past active of تَهَدَّدَ (tahaddada)\n# تَهَدَّدْتِ (tahaddadti) /ta.had.dad.ti/: second-person feminine singular past active of تَهَدَّدَ (tahaddada)\n# تَهَدَّدَتْ (tahaddadat) /ta.had.da.dat/: third-perso",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahaddadtu", "tahaddada", "tahaddadta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهددتما",
+      "tur": "verb",
+      "baslik": "تَهَدَّدْتُمَا • (tahaddadtumā) (form V) /ta.had.dad.tu.maː/\n# second-person dual past active of تَهَدَّدَ (tahaddada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahaddadtumā", "tahaddada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهددتا",
+      "tur": "verb",
+      "baslik": "تَهَدَّدَتَا • (tahaddadatā) (form V) /ta.had.da.da.taː/\n# third-person feminine dual past active of تَهَدَّدَ (tahaddada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahaddadatā", "tahaddada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهددا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَهَدَّدَا • (tahaddadā) (form V) /ta.had.da.daː/\n# inflection of تَهَدَّدَ (tahaddada):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahaddadā", "tahaddada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهددنا",
+      "tur": "verb",
+      "baslik": "تَهَدَّدْنَا • (tahaddadnā) (form V) /ta.had.dad.naː/\n# first-person plural past active of تَهَدَّدَ (tahaddada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahaddadnā", "tahaddada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهددتم",
+      "tur": "verb",
+      "baslik": "تَهَدَّدْتُمْ • (tahaddadtum) (form V) /ta.had.dad.tum/\n# second-person masculine plural past active of تَهَدَّدَ (tahaddada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahaddadtum", "tahaddada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهددتن",
+      "tur": "verb",
+      "baslik": "تَهَدَّدْتُنَّ • (tahaddadtunna) (form V) /ta.had.dad.tun.na/\n# second-person feminine plural past active of تَهَدَّدَ (tahaddada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tahaddadtunna", "tahaddada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهددين",
+      "tur": "verb",
+      "baslik": "تَتَهَدَّدِينَ • (tatahaddadīna) (form V) /ta.ta.had.da.diː.na/\n# second-person feminine singular non-past active indicative of تَهَدَّدَ (tahaddada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatahaddadīna", "tahaddada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهدد",
+      "tur": "verb",
+      "baslik": "تتهدد (form V)\n# تَتَهَدَّدُ (tatahaddadu) /ta.ta.had.da.du/: inflection of تَهَدَّدَ (tahaddada):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَهَدَّدَ (tatahaddada) /ta.ta.had.da.da/: inflection of تَهَدَّدَ (tahaddada):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatahaddadu", "tahaddada", "tatahaddada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهددان",
+      "tur": "verb",
+      "baslik": "تَتَهَدَّدَانِ • (tatahaddadāni) (form V) /ta.ta.had.da.daː.ni/\n# inflection of تَهَدَّدَ (tahaddada):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatahaddadāni", "tahaddada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتهدد",
+      "tur": "verb",
+      "baslik": "يتهدد (form V)\n# يَتَهَدَّدُ (yatahaddadu) /ja.ta.had.da.du/: third-person masculine singular non-past active indicative of تَهَدَّدَ (tahaddada)\n# يُتَهَدَّدُ (yutahaddadu) /ju.ta.had.da.du/: third-person masculine singular non-past passive indicative of تَهَدَّدَ (tahaddada)\n# يَتَهَدَّدَ (yatahaddada) /ja.ta.had.da.da/: third-person masculine singular non-past active subjunctive of تَهَدَّدَ (t",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatahaddadu", "tahaddada", "yutahaddadu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتهددان",
+      "tur": "verb",
+      "baslik": "يَتَهَدَّدَانِ • (yatahaddadāni) (form V) /ja.ta.had.da.daː.ni/\n# third-person masculine dual non-past active indicative of تَهَدَّدَ (tahaddada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatahaddadāni", "tahaddada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتهدد",
+      "tur": "verb",
+      "baslik": "أتهدد (form V)\n# أَتَهَدَّدُ (ʔatahaddadu) /ʔa.ta.had.da.du/: first-person singular non-past active indicative of تَهَدَّدَ (tahaddada)\n# أَتَهَدَّدَ (ʔatahaddada) /ʔa.ta.had.da.da/: first-person singular non-past active subjunctive of تَهَدَّدَ (tahaddada)\n# أَتَهَدَّدْ (ʔatahaddad) /ʔa.ta.had.dad/: first-person singular non-past active jussive of تَهَدَّدَ (tahaddada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔatahaddadu", "tahaddada", "ʔatahaddada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتهدد",
+      "tur": "verb",
+      "baslik": "نتهدد (form V)\n# نَتَهَدَّدُ (natahaddadu) /na.ta.had.da.du/: first-person plural non-past active indicative of تَهَدَّدَ (tahaddada)\n# نَتَهَدَّدَ (natahaddada) /na.ta.had.da.da/: first-person plural non-past active subjunctive of تَهَدَّدَ (tahaddada)\n# نَتَهَدَّدْ (natahaddad) /na.ta.had.dad/: first-person plural non-past active jussive of تَهَدَّدَ (tahaddada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["natahaddadu", "tahaddada", "natahaddada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهددون",
+      "tur": "verb",
+      "baslik": "تَتَهَدَّدُونَ • (tatahaddadūna) (form V) /ta.ta.had.da.duː.na/\n# second-person masculine plural non-past active indicative of تَهَدَّدَ (tahaddada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatahaddadūna", "tahaddada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتهددون",
+      "tur": "verb",
+      "baslik": "يَتَهَدَّدُونَ • (yatahaddadūna) (form V) /ja.ta.had.da.duː.na/\n# third-person masculine plural non-past active indicative of تَهَدَّدَ (tahaddada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatahaddadūna", "tahaddada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهددن",
+      "tur": "verb",
+      "baslik": "تَتَهَدَّدْنَ • (tatahaddadna) (form V) /ta.ta.had.dad.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَهَدَّدَ (tahaddada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatahaddadna", "tahaddada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهددا",
+      "tur": "verb",
+      "baslik": "تَتَهَدَّدَا • (tatahaddadā) (form V) /ta.ta.had.da.daː/\n# inflection of تَهَدَّدَ (tahaddada):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatahaddadā", "tahaddada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهددي",
+      "tur": "verb",
+      "baslik": "تَتَهَدَّدِي • (tatahaddadī) (form V) /ta.ta.had.da.diː/\n# second-person feminine singular non-past active subjunctive/jussive of تَهَدَّدَ (tahaddada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatahaddadī", "tahaddada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتهددن",
+      "tur": "verb",
+      "baslik": "يَتَهَدَّدْنَ • (yatahaddadna) (form V) /ja.ta.had.dad.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَهَدَّدَ (tahaddada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatahaddadna", "tahaddada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتهددا",
+      "tur": "verb",
+      "baslik": "يَتَهَدَّدَا • (yatahaddadā) (form V) /ja.ta.had.da.daː/\n# third-person masculine dual non-past active subjunctive/jussive of تَهَدَّدَ (tahaddada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatahaddadā", "tahaddada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتهددوا",
+      "tur": "verb",
+      "baslik": "تَتَهَدَّدُوا • (tatahaddadū) (form V) /ta.ta.had.da.duː/\n# second-person masculine plural non-past active subjunctive/jussive of تَهَدَّدَ (tahaddada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatahaddadū", "tahaddada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتهددوا",
+      "tur": "verb",
+      "baslik": "يَتَهَدَّدُوا • (yatahaddadū) (form V) /ja.ta.had.da.duː/\n# third-person masculine plural non-past active subjunctive/jussive of تَهَدَّدَ (tahaddada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatahaddadū", "tahaddada"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تهدد", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

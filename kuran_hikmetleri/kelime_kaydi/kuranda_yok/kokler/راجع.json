@@ -1,469 +1,334 @@
 {
   "kok": "راجع",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "راجع", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تراجع",
-        "u": "تراجع",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تراجع (form III)\n# تُرَاجِعُ (turājiʕu) /tu.raː.d͡ʒi.ʕu/: inflection of رَاجَعَ (rājaʕa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُرَاجَعُ (turājaʕu) /tu.raː.d͡ʒa.ʕu/: inflection of رَاجَعَ (rājaʕa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passiv",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turājiʕu", "rājaʕa", "turājaʕu"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "يراجع",
-        "u": "يراجع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يراجع (form III)\n# يُرَاجِعُ (yurājiʕu) /ju.raː.d͡ʒi.ʕu/: third-person masculine singular non-past active indicative of رَاجَعَ (rājaʕa)\n# يُرَاجَعُ (yurājaʕu) /ju.raː.d͡ʒa.ʕu/: third-person masculine singular non-past passive indicative of رَاجَعَ (rājaʕa)\n# يُرَاجِعَ (yurājiʕa) /ju.raː.d͡ʒi.ʕa/: third-person masculine singular non-past active subjunctive of رَاجَعَ (rājaʕa)\n# يُرَاجَعَ (yurājaʕa",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yurājiʕu", "rājaʕa", "yurājaʕu"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "روجع",
-        "u": "روجع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُوجِعَ • (rūjiʕa) (form III) /ruː.d͡ʒi.ʕa/\n# third-person masculine singular past passive of رَاجَعَ (rājaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rūjiʕa", "rājaʕa"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "راجعت",
-        "u": "راجعت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "راجعت (form III)\n# رَاجَعْتُ (rājaʕtu) /raː.d͡ʒaʕ.tu/: first-person singular past active of رَاجَعَ (rājaʕa)\n# رَاجَعْتَ (rājaʕta) /raː.d͡ʒaʕ.ta/: second-person masculine singular past active of رَاجَعَ (rājaʕa)\n# رَاجَعْتِ (rājaʕti) /raː.d͡ʒaʕ.ti/: second-person feminine singular past active of رَاجَعَ (rājaʕa)\n# رَاجَعَتْ (rājaʕat) /raː.d͡ʒa.ʕat/: third-person feminine singular past active of رَ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rājaʕtu", "rājaʕa", "rājaʕta"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "روجعت",
-        "u": "روجعت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "روجعت (form III)\n# رُوجِعْتُ (rūjiʕtu) /ruː.d͡ʒiʕ.tu/: first-person singular past passive of رَاجَعَ (rājaʕa)\n# رُوجِعْتَ (rūjiʕta) /ruː.d͡ʒiʕ.ta/: second-person masculine singular past passive of رَاجَعَ (rājaʕa)\n# رُوجِعْتِ (rūjiʕti) /ruː.d͡ʒiʕ.ti/: second-person feminine singular past passive of رَاجَعَ (rājaʕa)\n# رُوجِعَتْ (rūjiʕat) /ruː.d͡ʒi.ʕat/: third-person feminine singular past passive o",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rūjiʕtu", "rājaʕa", "rūjiʕta"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "تراجعي",
-        "u": "تراجعي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تراجعي (form III)\n# تُرَاجِعِي (turājiʕī) /tu.raː.d͡ʒi.ʕiː/: second-person feminine singular non-past active subjunctive/jussive of رَاجَعَ (rājaʕa)\n# تُرَاجَعِي (turājaʕī) /tu.raː.d͡ʒa.ʕiː/: second-person feminine singular non-past passive subjunctive/jussive of رَاجَعَ (rājaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turājiʕī", "rājaʕa", "turājaʕī"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "تراجعين",
-        "u": "تراجعين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تراجعين (form III)\n# تُرَاجِعِينَ (turājiʕīna) /tu.raː.d͡ʒi.ʕiː.na/: second-person feminine singular non-past active indicative of رَاجَعَ (rājaʕa)\n# تُرَاجَعِينَ (turājaʕīna) /tu.raː.d͡ʒa.ʕiː.na/: second-person feminine singular non-past passive indicative of رَاجَعَ (rājaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turājiʕīna", "rājaʕa", "turājaʕīna"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "راجعي",
-        "u": "راجعي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاجِعِي • (rājiʕī) (form III) /raː.d͡ʒi.ʕiː/\n# second-person feminine singular imperative of رَاجَعَ (rājaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rājiʕī", "rājaʕa"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "أراجع",
-        "u": "أراجع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أراجع (form III)\n# أُرَاجِعُ (ʔurājiʕu) /ʔu.raː.d͡ʒi.ʕu/: first-person singular non-past active indicative of رَاجَعَ (rājaʕa)\n# أُرَاجَعُ (ʔurājaʕu) /ʔu.raː.d͡ʒa.ʕu/: first-person singular non-past passive indicative of رَاجَعَ (rājaʕa)\n# أُرَاجِعَ (ʔurājiʕa) /ʔu.raː.d͡ʒi.ʕa/: first-person singular non-past active subjunctive of رَاجَعَ (rājaʕa)\n# أُرَاجَعَ (ʔurājaʕa) /ʔu.raː.d͡ʒa.ʕa/: first-pers",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔurājiʕu", "rājaʕa", "ʔurājaʕu"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "راجعنا",
-        "u": "راجعنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاجَعْنَا • (rājaʕnā) (form III) /raː.d͡ʒaʕ.naː/\n# first-person plural past active of رَاجَعَ (rājaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rājaʕnā", "rājaʕa"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "نراجع",
-        "u": "نراجع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نراجع (form III)\n# نُرَاجِعُ (nurājiʕu) /nu.raː.d͡ʒi.ʕu/: first-person plural non-past active indicative of رَاجَعَ (rājaʕa)\n# نُرَاجَعُ (nurājaʕu) /nu.raː.d͡ʒa.ʕu/: first-person plural non-past passive indicative of رَاجَعَ (rājaʕa)\n# نُرَاجِعَ (nurājiʕa) /nu.raː.d͡ʒi.ʕa/: first-person plural non-past active subjunctive of رَاجَعَ (rājaʕa)\n# نُرَاجَعَ (nurājaʕa) /nu.raː.d͡ʒa.ʕa/: first-person plu",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nurājiʕu", "rājaʕa", "nurājaʕu"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "روجعنا",
-        "u": "روجعنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُوجِعْنَا • (rūjiʕnā) (form III) /ruː.d͡ʒiʕ.naː/\n# first-person plural past passive of رَاجَعَ (rājaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rūjiʕnā", "rājaʕa"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "راجعتم",
-        "u": "راجعتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاجَعْتُمْ • (rājaʕtum) (form III) /raː.d͡ʒaʕ.tum/\n# second-person masculine plural past active of رَاجَعَ (rājaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rājaʕtum", "rājaʕa"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "تراجعون",
-        "u": "تراجعون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تراجعون (form III)\n# تُرَاجِعُونَ (turājiʕūna) /tu.raː.d͡ʒi.ʕuː.na/: second-person masculine plural non-past active indicative of رَاجَعَ (rājaʕa)\n# تُرَاجَعُونَ (turājaʕūna) /tu.raː.d͡ʒa.ʕuː.na/: second-person masculine plural non-past passive indicative of رَاجَعَ (rājaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turājiʕūna", "rājaʕa", "turājaʕūna"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "روجعتم",
-        "u": "روجعتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُوجِعْتُمْ • (rūjiʕtum) (form III) /ruː.d͡ʒiʕ.tum/\n# second-person masculine plural past passive of رَاجَعَ (rājaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rūjiʕtum", "rājaʕa"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "تراجعوا",
-        "u": "تراجعوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تراجعوا (form III)\n# تُرَاجِعُوا (turājiʕū) /tu.raː.d͡ʒi.ʕuː/: second-person masculine plural non-past active subjunctive/jussive of رَاجَعَ (rājaʕa)\n# تُرَاجَعُوا (turājaʕū) /tu.raː.d͡ʒa.ʕuː/: second-person masculine plural non-past passive subjunctive/jussive of رَاجَعَ (rājaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turājiʕū", "rājaʕa", "turājaʕū"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "راجعوا",
-        "u": "راجعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "راجعوا (form III)\n# رَاجَعُوا (rājaʕū) /raː.d͡ʒa.ʕuː/: third-person masculine plural past active of رَاجَعَ (rājaʕa)\n# رَاجِعُوا (rājiʕū) /raː.d͡ʒi.ʕuː/: second-person masculine plural imperative of رَاجَعَ (rājaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rājaʕū", "rājaʕa", "rājiʕū"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "يراجعون",
-        "u": "يراجعون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يراجعون (form III)\n# يُرَاجِعُونَ (yurājiʕūna) /ju.raː.d͡ʒi.ʕuː.na/: third-person masculine plural non-past active indicative of رَاجَعَ (rājaʕa)\n# يُرَاجَعُونَ (yurājaʕūna) /ju.raː.d͡ʒa.ʕuː.na/: third-person masculine plural non-past passive indicative of رَاجَعَ (rājaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yurājiʕūna", "rājaʕa", "yurājaʕūna"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "يراجعوا",
-        "u": "يراجعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يراجعوا (form III)\n# يُرَاجِعُوا (yurājiʕū) /ju.raː.d͡ʒi.ʕuː/: third-person masculine plural non-past active subjunctive/jussive of رَاجَعَ (rājaʕa)\n# يُرَاجَعُوا (yurājaʕū) /ju.raː.d͡ʒa.ʕuː/: third-person masculine plural non-past passive subjunctive/jussive of رَاجَعَ (rājaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yurājiʕū", "rājaʕa", "yurājaʕū"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "روجعوا",
-        "u": "روجعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُوجِعُوا • (rūjiʕū) (form III) /ruː.d͡ʒi.ʕuː/\n# third-person masculine plural past passive of رَاجَعَ (rājaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rūjiʕū", "rājaʕa"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "تراجعن",
-        "u": "تراجعن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تراجعن (form III)\n# تُرَاجِعْنَ (turājiʕna) /tu.raː.d͡ʒiʕ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of رَاجَعَ (rājaʕa)\n# تُرَاجَعْنَ (turājaʕna) /tu.raː.d͡ʒaʕ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of رَاجَعَ (rājaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turājiʕna", "rājaʕa", "turājaʕna"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "راجعتن",
-        "u": "راجعتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاجَعْتُنَّ • (rājaʕtunna) (form III) /raː.d͡ʒaʕ.tun.na/\n# second-person feminine plural past active of رَاجَعَ (rājaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rājaʕtunna", "rājaʕa"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "راجعن",
-        "u": "راجعن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "راجعن (form III)\n# رَاجَعْنَ (rājaʕna) /raː.d͡ʒaʕ.na/: third-person feminine plural past active of رَاجَعَ (rājaʕa)\n# رَاجِعْنَ (rājiʕna) /raː.d͡ʒiʕ.na/: second-person feminine plural imperative of رَاجَعَ (rājaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rājaʕna", "rājaʕa", "rājiʕna"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "روجعتن",
-        "u": "روجعتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُوجِعْتُنَّ • (rūjiʕtunna) (form III) /ruː.d͡ʒiʕ.tun.na/\n# second-person feminine plural past passive of رَاجَعَ (rājaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rūjiʕtunna", "rājaʕa"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "يراجعن",
-        "u": "يراجعن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يراجعن (form III)\n# يُرَاجِعْنَ (yurājiʕna) /ju.raː.d͡ʒiʕ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of رَاجَعَ (rājaʕa)\n# يُرَاجَعْنَ (yurājaʕna) /ju.raː.d͡ʒaʕ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of رَاجَعَ (rājaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yurājiʕna", "rājaʕa", "yurājaʕna"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "روجعن",
-        "u": "روجعن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُوجِعْنَ • (rūjiʕna) (form III) /ruː.d͡ʒiʕ.na/\n# third-person feminine plural past passive of رَاجَعَ (rājaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rūjiʕna", "rājaʕa"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "تراجعا",
-        "u": "تراجعا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تراجعا (form III)\n# تُرَاجِعَا (turājiʕā) /tu.raː.d͡ʒi.ʕaː/: inflection of رَاجَعَ (rājaʕa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُرَاجَعَا (turājaʕā) /tu.raː.d͡ʒa.ʕaː/: inflection of رَاجَعَ (rājaʕa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive su",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turājiʕā", "rājaʕa", "turājaʕā"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "راجعتما",
-        "u": "راجعتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاجَعْتُمَا • (rājaʕtumā) (form III) /raː.d͡ʒaʕ.tu.maː/\n# second-person dual past active of رَاجَعَ (rājaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rājaʕtumā", "rājaʕa"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "راجعتا",
-        "u": "راجعتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رَاجَعَتَا • (rājaʕatā) (form III) /raː.d͡ʒa.ʕa.taː/\n# third-person feminine dual past active of رَاجَعَ (rājaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rājaʕatā", "rājaʕa"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "راجعا",
-        "u": "راجعا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "راجعا (form III)\n# رَاجَعَا (rājaʕā) /raː.d͡ʒa.ʕaː/: third-person masculine dual past active of رَاجَعَ (rājaʕa)\n# رَاجِعَا (rājiʕā) /raː.d͡ʒi.ʕaː/: second-person dual imperative of رَاجَعَ (rājaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rājaʕā", "rājaʕa", "rājiʕā"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "روجعتما",
-        "u": "روجعتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُوجِعْتُمَا • (rūjiʕtumā) (form III) /ruː.d͡ʒiʕ.tu.maː/\n# second-person dual past passive of رَاجَعَ (rājaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rūjiʕtumā", "rājaʕa"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "روجعتا",
-        "u": "روجعتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُوجِعَتَا • (rūjiʕatā) (form III) /ruː.d͡ʒi.ʕa.taː/\n# third-person feminine dual past passive of رَاجَعَ (rājaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rūjiʕatā", "rājaʕa"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "روجعا",
-        "u": "روجعا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "رُوجِعَا • (rūjiʕā) (form III) /ruː.d͡ʒi.ʕaː/\n# third-person masculine dual past passive of رَاجَعَ (rājaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["rūjiʕā", "rājaʕa"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "يراجعان",
-        "u": "يراجعان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يراجعان (form III)\n# يُرَاجِعَانِ (yurājiʕāni) /ju.raː.d͡ʒi.ʕaː.ni/: third-person masculine dual non-past active indicative of رَاجَعَ (rājaʕa)\n# يُرَاجَعَانِ (yurājaʕāni) /ju.raː.d͡ʒa.ʕaː.ni/: third-person masculine dual non-past passive indicative of رَاجَعَ (rājaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yurājiʕāni", "rājaʕa", "yurājaʕāni"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "تراجعان",
-        "u": "تراجعان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تراجعان (form III)\n# تُرَاجِعَانِ (turājiʕāni) /tu.raː.d͡ʒi.ʕaː.ni/: inflection of رَاجَعَ (rājaʕa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُرَاجَعَانِ (turājaʕāni) /tu.raː.d͡ʒa.ʕaː.ni/: inflection of رَاجَعَ (rājaʕa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["turājiʕāni", "rājaʕa", "turājaʕāni"],
-        "k": "راجع",
-        "yol": "kök"
-      },
-      {
-        "w": "يراجعا",
-        "u": "يراجعا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يراجعا (form III)\n# يُرَاجِعَا (yurājiʕā) /ju.raː.d͡ʒi.ʕaː/: third-person masculine dual non-past active subjunctive/jussive of رَاجَعَ (rājaʕa)\n# يُرَاجَعَا (yurājaʕā) /ju.raː.d͡ʒa.ʕaː/: third-person masculine dual non-past passive subjunctive/jussive of رَاجَعَ (rājaʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yurājiʕā", "rājaʕa", "yurājaʕā"],
-        "k": "راجع",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "رج",
+  "ses": {
     "harf": "ر",
+    "fasil": "رج",
     "mahrec": "zelakiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "تراجع",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تراجع (form III)\n# تُرَاجِعُ (turājiʕu) /tu.raː.d͡ʒi.ʕu/: inflection of رَاجَعَ (rājaʕa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُرَاجَعُ (turājaʕu) /tu.raː.d͡ʒa.ʕu/: inflection of رَاجَعَ (rājaʕa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passiv",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turājiʕu", "rājaʕa", "turājaʕu"]
+    },
+    {
+      "madde": "يراجع",
+      "tur": "verb",
+      "baslik": "يراجع (form III)\n# يُرَاجِعُ (yurājiʕu) /ju.raː.d͡ʒi.ʕu/: third-person masculine singular non-past active indicative of رَاجَعَ (rājaʕa)\n# يُرَاجَعُ (yurājaʕu) /ju.raː.d͡ʒa.ʕu/: third-person masculine singular non-past passive indicative of رَاجَعَ (rājaʕa)\n# يُرَاجِعَ (yurājiʕa) /ju.raː.d͡ʒi.ʕa/: third-person masculine singular non-past active subjunctive of رَاجَعَ (rājaʕa)\n# يُرَاجَعَ (yurājaʕa",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yurājiʕu", "rājaʕa", "yurājaʕu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "روجع",
+      "tur": "verb",
+      "baslik": "رُوجِعَ • (rūjiʕa) (form III) /ruː.d͡ʒi.ʕa/\n# third-person masculine singular past passive of رَاجَعَ (rājaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rūjiʕa", "rājaʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "راجعت",
+      "tur": "verb",
+      "baslik": "راجعت (form III)\n# رَاجَعْتُ (rājaʕtu) /raː.d͡ʒaʕ.tu/: first-person singular past active of رَاجَعَ (rājaʕa)\n# رَاجَعْتَ (rājaʕta) /raː.d͡ʒaʕ.ta/: second-person masculine singular past active of رَاجَعَ (rājaʕa)\n# رَاجَعْتِ (rājaʕti) /raː.d͡ʒaʕ.ti/: second-person feminine singular past active of رَاجَعَ (rājaʕa)\n# رَاجَعَتْ (rājaʕat) /raː.d͡ʒa.ʕat/: third-person feminine singular past active of رَ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rājaʕtu", "rājaʕa", "rājaʕta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "روجعت",
+      "tur": "verb",
+      "baslik": "روجعت (form III)\n# رُوجِعْتُ (rūjiʕtu) /ruː.d͡ʒiʕ.tu/: first-person singular past passive of رَاجَعَ (rājaʕa)\n# رُوجِعْتَ (rūjiʕta) /ruː.d͡ʒiʕ.ta/: second-person masculine singular past passive of رَاجَعَ (rājaʕa)\n# رُوجِعْتِ (rūjiʕti) /ruː.d͡ʒiʕ.ti/: second-person feminine singular past passive of رَاجَعَ (rājaʕa)\n# رُوجِعَتْ (rūjiʕat) /ruː.d͡ʒi.ʕat/: third-person feminine singular past passive o",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rūjiʕtu", "rājaʕa", "rūjiʕta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تراجعي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تراجعي (form III)\n# تُرَاجِعِي (turājiʕī) /tu.raː.d͡ʒi.ʕiː/: second-person feminine singular non-past active subjunctive/jussive of رَاجَعَ (rājaʕa)\n# تُرَاجَعِي (turājaʕī) /tu.raː.d͡ʒa.ʕiː/: second-person feminine singular non-past passive subjunctive/jussive of رَاجَعَ (rājaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turājiʕī", "rājaʕa", "turājaʕī"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تراجعين",
+      "tur": "verb",
+      "baslik": "تراجعين (form III)\n# تُرَاجِعِينَ (turājiʕīna) /tu.raː.d͡ʒi.ʕiː.na/: second-person feminine singular non-past active indicative of رَاجَعَ (rājaʕa)\n# تُرَاجَعِينَ (turājaʕīna) /tu.raː.d͡ʒa.ʕiː.na/: second-person feminine singular non-past passive indicative of رَاجَعَ (rājaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turājiʕīna", "rājaʕa", "turājaʕīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "راجعي",
+      "tur": "verb",
+      "baslik": "رَاجِعِي • (rājiʕī) (form III) /raː.d͡ʒi.ʕiː/\n# second-person feminine singular imperative of رَاجَعَ (rājaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rājiʕī", "rājaʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أراجع",
+      "tur": "verb",
+      "baslik": "أراجع (form III)\n# أُرَاجِعُ (ʔurājiʕu) /ʔu.raː.d͡ʒi.ʕu/: first-person singular non-past active indicative of رَاجَعَ (rājaʕa)\n# أُرَاجَعُ (ʔurājaʕu) /ʔu.raː.d͡ʒa.ʕu/: first-person singular non-past passive indicative of رَاجَعَ (rājaʕa)\n# أُرَاجِعَ (ʔurājiʕa) /ʔu.raː.d͡ʒi.ʕa/: first-person singular non-past active subjunctive of رَاجَعَ (rājaʕa)\n# أُرَاجَعَ (ʔurājaʕa) /ʔu.raː.d͡ʒa.ʕa/: first-pers",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔurājiʕu", "rājaʕa", "ʔurājaʕu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "راجعنا",
+      "tur": "verb",
+      "baslik": "رَاجَعْنَا • (rājaʕnā) (form III) /raː.d͡ʒaʕ.naː/\n# first-person plural past active of رَاجَعَ (rājaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rājaʕnā", "rājaʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نراجع",
+      "tur": "verb",
+      "baslik": "نراجع (form III)\n# نُرَاجِعُ (nurājiʕu) /nu.raː.d͡ʒi.ʕu/: first-person plural non-past active indicative of رَاجَعَ (rājaʕa)\n# نُرَاجَعُ (nurājaʕu) /nu.raː.d͡ʒa.ʕu/: first-person plural non-past passive indicative of رَاجَعَ (rājaʕa)\n# نُرَاجِعَ (nurājiʕa) /nu.raː.d͡ʒi.ʕa/: first-person plural non-past active subjunctive of رَاجَعَ (rājaʕa)\n# نُرَاجَعَ (nurājaʕa) /nu.raː.d͡ʒa.ʕa/: first-person plu",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nurājiʕu", "rājaʕa", "nurājaʕu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "روجعنا",
+      "tur": "verb",
+      "baslik": "رُوجِعْنَا • (rūjiʕnā) (form III) /ruː.d͡ʒiʕ.naː/\n# first-person plural past passive of رَاجَعَ (rājaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rūjiʕnā", "rājaʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "راجعتم",
+      "tur": "verb",
+      "baslik": "رَاجَعْتُمْ • (rājaʕtum) (form III) /raː.d͡ʒaʕ.tum/\n# second-person masculine plural past active of رَاجَعَ (rājaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rājaʕtum", "rājaʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تراجعون",
+      "tur": "verb",
+      "baslik": "تراجعون (form III)\n# تُرَاجِعُونَ (turājiʕūna) /tu.raː.d͡ʒi.ʕuː.na/: second-person masculine plural non-past active indicative of رَاجَعَ (rājaʕa)\n# تُرَاجَعُونَ (turājaʕūna) /tu.raː.d͡ʒa.ʕuː.na/: second-person masculine plural non-past passive indicative of رَاجَعَ (rājaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turājiʕūna", "rājaʕa", "turājaʕūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "روجعتم",
+      "tur": "verb",
+      "baslik": "رُوجِعْتُمْ • (rūjiʕtum) (form III) /ruː.d͡ʒiʕ.tum/\n# second-person masculine plural past passive of رَاجَعَ (rājaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rūjiʕtum", "rājaʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تراجعوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تراجعوا (form III)\n# تُرَاجِعُوا (turājiʕū) /tu.raː.d͡ʒi.ʕuː/: second-person masculine plural non-past active subjunctive/jussive of رَاجَعَ (rājaʕa)\n# تُرَاجَعُوا (turājaʕū) /tu.raː.d͡ʒa.ʕuː/: second-person masculine plural non-past passive subjunctive/jussive of رَاجَعَ (rājaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turājiʕū", "rājaʕa", "turājaʕū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "راجعوا",
+      "tur": "verb",
+      "baslik": "راجعوا (form III)\n# رَاجَعُوا (rājaʕū) /raː.d͡ʒa.ʕuː/: third-person masculine plural past active of رَاجَعَ (rājaʕa)\n# رَاجِعُوا (rājiʕū) /raː.d͡ʒi.ʕuː/: second-person masculine plural imperative of رَاجَعَ (rājaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rājaʕū", "rājaʕa", "rājiʕū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يراجعون",
+      "tur": "verb",
+      "baslik": "يراجعون (form III)\n# يُرَاجِعُونَ (yurājiʕūna) /ju.raː.d͡ʒi.ʕuː.na/: third-person masculine plural non-past active indicative of رَاجَعَ (rājaʕa)\n# يُرَاجَعُونَ (yurājaʕūna) /ju.raː.d͡ʒa.ʕuː.na/: third-person masculine plural non-past passive indicative of رَاجَعَ (rājaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yurājiʕūna", "rājaʕa", "yurājaʕūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يراجعوا",
+      "tur": "verb",
+      "baslik": "يراجعوا (form III)\n# يُرَاجِعُوا (yurājiʕū) /ju.raː.d͡ʒi.ʕuː/: third-person masculine plural non-past active subjunctive/jussive of رَاجَعَ (rājaʕa)\n# يُرَاجَعُوا (yurājaʕū) /ju.raː.d͡ʒa.ʕuː/: third-person masculine plural non-past passive subjunctive/jussive of رَاجَعَ (rājaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yurājiʕū", "rājaʕa", "yurājaʕū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "روجعوا",
+      "tur": "verb",
+      "baslik": "رُوجِعُوا • (rūjiʕū) (form III) /ruː.d͡ʒi.ʕuː/\n# third-person masculine plural past passive of رَاجَعَ (rājaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rūjiʕū", "rājaʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تراجعن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تراجعن (form III)\n# تُرَاجِعْنَ (turājiʕna) /tu.raː.d͡ʒiʕ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of رَاجَعَ (rājaʕa)\n# تُرَاجَعْنَ (turājaʕna) /tu.raː.d͡ʒaʕ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of رَاجَعَ (rājaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turājiʕna", "rājaʕa", "turājaʕna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "راجعتن",
+      "tur": "verb",
+      "baslik": "رَاجَعْتُنَّ • (rājaʕtunna) (form III) /raː.d͡ʒaʕ.tun.na/\n# second-person feminine plural past active of رَاجَعَ (rājaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rājaʕtunna", "rājaʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "راجعن",
+      "tur": "verb",
+      "baslik": "راجعن (form III)\n# رَاجَعْنَ (rājaʕna) /raː.d͡ʒaʕ.na/: third-person feminine plural past active of رَاجَعَ (rājaʕa)\n# رَاجِعْنَ (rājiʕna) /raː.d͡ʒiʕ.na/: second-person feminine plural imperative of رَاجَعَ (rājaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rājaʕna", "rājaʕa", "rājiʕna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "روجعتن",
+      "tur": "verb",
+      "baslik": "رُوجِعْتُنَّ • (rūjiʕtunna) (form III) /ruː.d͡ʒiʕ.tun.na/\n# second-person feminine plural past passive of رَاجَعَ (rājaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rūjiʕtunna", "rājaʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يراجعن",
+      "tur": "verb",
+      "baslik": "يراجعن (form III)\n# يُرَاجِعْنَ (yurājiʕna) /ju.raː.d͡ʒiʕ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of رَاجَعَ (rājaʕa)\n# يُرَاجَعْنَ (yurājaʕna) /ju.raː.d͡ʒaʕ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of رَاجَعَ (rājaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yurājiʕna", "rājaʕa", "yurājaʕna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "روجعن",
+      "tur": "verb",
+      "baslik": "رُوجِعْنَ • (rūjiʕna) (form III) /ruː.d͡ʒiʕ.na/\n# third-person feminine plural past passive of رَاجَعَ (rājaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rūjiʕna", "rājaʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تراجعا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تراجعا (form III)\n# تُرَاجِعَا (turājiʕā) /tu.raː.d͡ʒi.ʕaː/: inflection of رَاجَعَ (rājaʕa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُرَاجَعَا (turājaʕā) /tu.raː.d͡ʒa.ʕaː/: inflection of رَاجَعَ (rājaʕa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive su",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turājiʕā", "rājaʕa", "turājaʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "راجعتما",
+      "tur": "verb",
+      "baslik": "رَاجَعْتُمَا • (rājaʕtumā) (form III) /raː.d͡ʒaʕ.tu.maː/\n# second-person dual past active of رَاجَعَ (rājaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rājaʕtumā", "rājaʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "راجعتا",
+      "tur": "verb",
+      "baslik": "رَاجَعَتَا • (rājaʕatā) (form III) /raː.d͡ʒa.ʕa.taː/\n# third-person feminine dual past active of رَاجَعَ (rājaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rājaʕatā", "rājaʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "راجعا",
+      "tur": "verb",
+      "baslik": "راجعا (form III)\n# رَاجَعَا (rājaʕā) /raː.d͡ʒa.ʕaː/: third-person masculine dual past active of رَاجَعَ (rājaʕa)\n# رَاجِعَا (rājiʕā) /raː.d͡ʒi.ʕaː/: second-person dual imperative of رَاجَعَ (rājaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rājaʕā", "rājaʕa", "rājiʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "روجعتما",
+      "tur": "verb",
+      "baslik": "رُوجِعْتُمَا • (rūjiʕtumā) (form III) /ruː.d͡ʒiʕ.tu.maː/\n# second-person dual past passive of رَاجَعَ (rājaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rūjiʕtumā", "rājaʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "روجعتا",
+      "tur": "verb",
+      "baslik": "رُوجِعَتَا • (rūjiʕatā) (form III) /ruː.d͡ʒi.ʕa.taː/\n# third-person feminine dual past passive of رَاجَعَ (rājaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rūjiʕatā", "rājaʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "روجعا",
+      "tur": "verb",
+      "baslik": "رُوجِعَا • (rūjiʕā) (form III) /ruː.d͡ʒi.ʕaː/\n# third-person masculine dual past passive of رَاجَعَ (rājaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["rūjiʕā", "rājaʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يراجعان",
+      "tur": "verb",
+      "baslik": "يراجعان (form III)\n# يُرَاجِعَانِ (yurājiʕāni) /ju.raː.d͡ʒi.ʕaː.ni/: third-person masculine dual non-past active indicative of رَاجَعَ (rājaʕa)\n# يُرَاجَعَانِ (yurājaʕāni) /ju.raː.d͡ʒa.ʕaː.ni/: third-person masculine dual non-past passive indicative of رَاجَعَ (rājaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yurājiʕāni", "rājaʕa", "yurājaʕāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تراجعان",
+      "tur": "verb",
+      "baslik": "تراجعان (form III)\n# تُرَاجِعَانِ (turājiʕāni) /tu.raː.d͡ʒi.ʕaː.ni/: inflection of رَاجَعَ (rājaʕa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُرَاجَعَانِ (turājaʕāni) /tu.raː.d͡ʒa.ʕaː.ni/: inflection of رَاجَعَ (rājaʕa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["turājiʕāni", "rājaʕa", "turājaʕāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يراجعا",
+      "tur": "verb",
+      "baslik": "يراجعا (form III)\n# يُرَاجِعَا (yurājiʕā) /ju.raː.d͡ʒi.ʕaː/: third-person masculine dual non-past active subjunctive/jussive of رَاجَعَ (rājaʕa)\n# يُرَاجَعَا (yurājaʕā) /ju.raː.d͡ʒa.ʕaː/: third-person masculine dual non-past passive subjunctive/jussive of رَاجَعَ (rājaʕa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yurājiʕā", "rājaʕa", "yurājaʕā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "راجع", "r6"]
+  ],
+  "mana": {
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
@@ -471,16 +336,11 @@
     "dayanak_tanim": "(military) withdrawal of troops to a more favorable position to escape the enemy's superior forces or after a defeat",
     "synset_sayisi": 17
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "act.n.02",
     "complain.v.01",
     "condition.n.03",
@@ -497,12 +357,10 @@
     "unmake.v.01",
     "withdraw.v.01"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

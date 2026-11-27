@@ -1,627 +1,480 @@
 {
   "kok": "ءتاح",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءتاح", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أتحت",
-        "u": "أتحت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتحت (form IV)\n# أَتَحْتُ (ʔataḥtu) /ʔa.taħ.tu/: first-person singular past active of أَتَاحَ (ʔatāḥa)\n# أَتَحْتَ (ʔataḥta) /ʔa.taħ.ta/: second-person masculine singular past active of أَتَاحَ (ʔatāḥa)\n# أَتَحْتِ (ʔataḥti) /ʔa.taħ.ti/: second-person feminine singular past active of أَتَاحَ (ʔatāḥa)\n# أُتِحْتُ (ʔutiḥtu) /ʔu.tiħ.tu/: first-person singular past passive of أَتَاحَ (ʔatāḥa)\n# أُتِحْتَ ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔataḥtu", "ʔatāḥa", "ʔataḥta"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "أتاحت",
-        "u": "أتاحت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَتَاحَتْ • (ʔatāḥat) (form IV) /ʔa.taː.ħat/\n# third-person feminine singular past active of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔatāḥat", "ʔatāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "أتحنا",
-        "u": "أتحنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتحنا (form IV)\n# أَتَحْنَا (ʔataḥnā) /ʔa.taħ.naː/: first-person plural past active of أَتَاحَ (ʔatāḥa)\n# أُتِحْنَا (ʔutiḥnā) /ʔu.tiħ.naː/: first-person plural past passive of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔataḥnā", "ʔatāḥa", "ʔutiḥnā"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "أتحتما",
-        "u": "أتحتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتحتما (form IV)\n# أَتَحْتُمَا (ʔataḥtumā) /ʔa.taħ.tu.maː/: second-person dual past active of أَتَاحَ (ʔatāḥa)\n# أُتِحْتُمَا (ʔutiḥtumā) /ʔu.tiħ.tu.maː/: second-person dual past passive of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔataḥtumā", "ʔatāḥa", "ʔutiḥtumā"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "أتاحا",
-        "u": "أتاحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَتَاحَا • (ʔatāḥā) (form IV) /ʔa.taː.ħaː/\n# third-person masculine dual past active of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔatāḥā", "ʔatāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "أتاحتا",
-        "u": "أتاحتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَتَاحَتَا • (ʔatāḥatā) (form IV) /ʔa.taː.ħa.taː/\n# third-person feminine dual past active of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔatāḥatā", "ʔatāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "أتحتم",
-        "u": "أتحتم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أتحتم (form IV)\n# أَتَحْتُمْ (ʔataḥtum) /ʔa.taħ.tum/: second-person masculine plural past active of أَتَاحَ (ʔatāḥa)\n# أُتِحْتُمْ (ʔutiḥtum) /ʔu.tiħ.tum/: second-person masculine plural past passive of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔataḥtum", "ʔatāḥa", "ʔutiḥtum"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "أتيح",
-        "u": "أتيح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتيح (form IV)\n# أُتِيحَ (ʔutīḥa) /ʔu.tiː.ħa/: inflection of أَتَاحَ (ʔatāḥa):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُتِيحُ (ʔutīḥu) /ʔu.tiː.ħu/: first-person singular non-past active indicative of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔutīḥa", "ʔatāḥa", "ʔutīḥu"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "أتحتن",
-        "u": "أتحتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتحتن (form IV)\n# أَتَحْتُنَّ (ʔataḥtunna) /ʔa.taħ.tun.na/: second-person feminine plural past active of أَتَاحَ (ʔatāḥa)\n# أُتِحْتُنَّ (ʔutiḥtunna) /ʔu.tiħ.tun.na/: second-person feminine plural past passive of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔataḥtunna", "ʔatāḥa", "ʔutiḥtunna"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "أتحن",
-        "u": "أتحن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتحن (form IV)\n# أَتَحْنَ (ʔataḥna) /ʔa.taħ.na/: third-person feminine plural past active of أَتَاحَ (ʔatāḥa)\n# أُتِحْنَ (ʔutiḥna) /ʔu.tiħ.na/: third-person feminine plural past passive of أَتَاحَ (ʔatāḥa)\n# أَتِحْنَ (ʔatiḥna) /ʔa.tiħ.na/: second-person feminine plural imperative of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔataḥna", "ʔatāḥa", "ʔutiḥna"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "أتاحوا",
-        "u": "أتاحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَتَاحُوا • (ʔatāḥū) (form IV) /ʔa.taː.ħuː/\n# third-person masculine plural past active of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔatāḥū", "ʔatāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "أتيحت",
-        "u": "أتيحت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُتِيحَتْ • (ʔutīḥat) (form IV) /ʔu.tiː.ħat/\n# third-person feminine singular past passive of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔutīḥat", "ʔatāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "أتيحا",
-        "u": "أتيحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتيحا (form IV)\n# أُتِيحَا (ʔutīḥā) /ʔu.tiː.ħaː/: third-person masculine dual past passive of أَتَاحَ (ʔatāḥa)\n# أَتِيحَا (ʔatīḥā) /ʔa.tiː.ħaː/: second-person dual imperative of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔutīḥā", "ʔatāḥa", "ʔatīḥā"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "أتيحتا",
-        "u": "أتيحتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُتِيحَتَا • (ʔutīḥatā) (form IV) /ʔu.tiː.ħa.taː/\n# third-person feminine dual past passive of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔutīḥatā", "ʔatāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "يتيحان",
-        "u": "يتيحان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُتِيحَانِ • (yutīḥāni) (form IV) /ju.tiː.ħaː.ni/\n# third-person masculine dual non-past active indicative of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yutīḥāni", "ʔatāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "أتيحوا",
-        "u": "أتيحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتيحوا (form IV)\n# أُتِيحُوا (ʔutīḥū) /ʔu.tiː.ħuː/: third-person masculine plural past passive of أَتَاحَ (ʔatāḥa)\n# أَتِيحُوا (ʔatīḥū) /ʔa.tiː.ħuː/: second-person masculine plural imperative of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔutīḥū", "ʔatāḥa", "ʔatīḥū"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تتيح",
-        "u": "تتيح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتيح (form IV)\n# تُتِيحُ (tutīḥu) /tu.tiː.ħu/: inflection of أَتَاحَ (ʔatāḥa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُتِيحَ (tutīḥa) /tu.tiː.ħa/: inflection of أَتَاحَ (ʔatāḥa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tutīḥu", "ʔatāḥa", "tutīḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "يتيح",
-        "u": "يتيح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتيح (form IV)\n# يُتِيحُ (yutīḥu) /ju.tiː.ħu/: third-person masculine singular non-past active indicative of أَتَاحَ (ʔatāḥa)\n# يُتِيحَ (yutīḥa) /ju.tiː.ħa/: third-person masculine singular non-past active subjunctive of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yutīḥu", "ʔatāḥa", "yutīḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تتيحين",
-        "u": "تتيحين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُتِيحِينَ • (tutīḥīna) (form IV) /tu.tiː.ħiː.na/\n# second-person feminine singular non-past active indicative of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tutīḥīna", "ʔatāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تتيحان",
-        "u": "تتيحان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُتِيحَانِ • (tutīḥāni) (form IV) /tu.tiː.ħaː.ni/\n# inflection of أَتَاحَ (ʔatāḥa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tutīḥāni", "ʔatāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "نتيح",
-        "u": "نتيح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتيح (form IV)\n# نُتِيحُ (nutīḥu) /nu.tiː.ħu/: first-person plural non-past active indicative of أَتَاحَ (ʔatāḥa)\n# نُتِيحَ (nutīḥa) /nu.tiː.ħa/: first-person plural non-past active subjunctive of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nutīḥu", "ʔatāḥa", "nutīḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تتيحون",
-        "u": "تتيحون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُتِيحُونَ • (tutīḥūna) (form IV) /tu.tiː.ħuː.na/\n# second-person masculine plural non-past active indicative of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tutīḥūna", "ʔatāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "يتيحون",
-        "u": "يتيحون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُتِيحُونَ • (yutīḥūna) (form IV) /ju.tiː.ħuː.na/\n# third-person masculine plural non-past active indicative of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yutīḥūna", "ʔatāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تتحن",
-        "u": "تتحن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتحن (form IV)\n# تُتِحْنَ (tutiḥna) /tu.tiħ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَتَاحَ (ʔatāḥa)\n# تُتَحْنَ (tutaḥna) /tu.taħ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tutiḥna", "ʔatāḥa", "tutaḥna"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تتاحان",
-        "u": "تتاحان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُتَاحَانِ • (tutāḥāni) (form IV) /tu.taː.ħaː.ni/\n# inflection of أَتَاحَ (ʔatāḥa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tutāḥāni", "ʔatāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تتاح",
-        "u": "تتاح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتاح (form IV)\n# تُتَاحُ (tutāḥu) /tu.taː.ħu/: inflection of أَتَاحَ (ʔatāḥa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُتَاحَ (tutāḥa) /tu.taː.ħa/: inflection of أَتَاحَ (ʔatāḥa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tutāḥu", "ʔatāḥa", "tutāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "يتحن",
-        "u": "يتحن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتحن (form IV)\n# يُتِحْنَ (yutiḥna) /ju.tiħ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَتَاحَ (ʔatāḥa)\n# يُتَحْنَ (yutaḥna) /ju.taħ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yutiḥna", "ʔatāḥa", "yutaḥna"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تتاحون",
-        "u": "تتاحون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُتَاحُونَ • (tutāḥūna) (form IV) /tu.taː.ħuː.na/\n# second-person masculine plural non-past passive indicative of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tutāḥūna", "ʔatāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تتاحين",
-        "u": "تتاحين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُتَاحِينَ • (tutāḥīna) (form IV) /tu.taː.ħiː.na/\n# second-person feminine singular non-past passive indicative of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tutāḥīna", "ʔatāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "يتاح",
-        "u": "يتاح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتاح (form IV)\n# يُتَاحُ (yutāḥu) /ju.taː.ħu/: third-person masculine singular non-past passive indicative of أَتَاحَ (ʔatāḥa)\n# يُتَاحَ (yutāḥa) /ju.taː.ħa/: third-person masculine singular non-past passive subjunctive of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yutāḥu", "ʔatāḥa", "yutāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تتيحي",
-        "u": "تتيحي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُتِيحِي • (tutīḥī) (form IV) /tu.tiː.ħiː/\n# second-person feminine singular non-past active subjunctive/jussive of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tutīḥī", "ʔatāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "يتاحان",
-        "u": "يتاحان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُتَاحَانِ • (yutāḥāni) (form IV) /ju.taː.ħaː.ni/\n# third-person masculine dual non-past passive indicative of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yutāḥāni", "ʔatāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "نتاح",
-        "u": "نتاح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتاح (form IV)\n# نُتَاحُ (nutāḥu) /nu.taː.ħu/: first-person plural non-past passive indicative of أَتَاحَ (ʔatāḥa)\n# نُتَاحَ (nutāḥa) /nu.taː.ħa/: first-person plural non-past passive subjunctive of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nutāḥu", "ʔatāḥa", "nutāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "يتيحا",
-        "u": "يتيحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُتِيحَا • (yutīḥā) (form IV) /ju.tiː.ħaː/\n# third-person masculine dual non-past active subjunctive/jussive of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yutīḥā", "ʔatāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "يتاحا",
-        "u": "يتاحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُتَاحَا • (yutāḥā) (form IV) /ju.taː.ħaː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yutāḥā", "ʔatāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تتيحوا",
-        "u": "تتيحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُتِيحُوا • (tutīḥū) (form IV) /tu.tiː.ħuː/\n# second-person masculine plural non-past active subjunctive/jussive of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tutīḥū", "ʔatāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "يتيحوا",
-        "u": "يتيحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُتِيحُوا • (yutīḥū) (form IV) /ju.tiː.ħuː/\n# third-person masculine plural non-past active subjunctive/jussive of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yutīḥū", "ʔatāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تتاحي",
-        "u": "تتاحي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُتَاحِي • (tutāḥī) (form IV) /tu.taː.ħiː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tutāḥī", "ʔatāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "يتاحون",
-        "u": "يتاحون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُتَاحُونَ • (yutāḥūna) (form IV) /ju.taː.ħuː.na/\n# third-person masculine plural non-past passive indicative of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yutāḥūna", "ʔatāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تتيحا",
-        "u": "تتيحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُتِيحَا • (tutīḥā) (form IV) /tu.tiː.ħaː/\n# inflection of أَتَاحَ (ʔatāḥa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tutīḥā", "ʔatāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تتاحا",
-        "u": "تتاحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُتَاحَا • (tutāḥā) (form IV) /tu.taː.ħaː/\n# inflection of أَتَاحَ (ʔatāḥa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tutāḥā", "ʔatāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تتاحوا",
-        "u": "تتاحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُتَاحُوا • (tutāḥū) (form IV) /tu.taː.ħuː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tutāḥū", "ʔatāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "أتح",
-        "u": "أتح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتح (form IV)\n# أُتِحْ (ʔutiḥ) /ʔu.tiħ/: first-person singular non-past active jussive of أَتَاحَ (ʔatāḥa)\n# أُتَحْ (ʔutaḥ) /ʔu.taħ/: first-person singular non-past passive jussive of أَتَاحَ (ʔatāḥa)\n# أَتِحْ (ʔatiḥ) /ʔa.tiħ/: second-person masculine singular imperative of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔutiḥ", "ʔatāḥa", "ʔutaḥ"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "نتح",
-        "u": "نتح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتح (form IV)\n# نُتِحْ (nutiḥ) /nu.tiħ/: first-person plural non-past active jussive of أَتَاحَ (ʔatāḥa)\n# نُتَحْ (nutaḥ) /nu.taħ/: first-person plural non-past passive jussive of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nutiḥ", "ʔatāḥa", "nutaḥ"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "يتح",
-        "u": "يتح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتح (form IV)\n# يُتِحْ (yutiḥ) /ju.tiħ/: third-person masculine singular non-past active jussive of أَتَاحَ (ʔatāḥa)\n# يُتَحْ (yutaḥ) /ju.taħ/: third-person masculine singular non-past passive jussive of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yutiḥ", "ʔatāḥa", "yutaḥ"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "تتح",
-        "u": "تتح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتح (form IV)\n# تُتِحْ (tutiḥ) /tu.tiħ/: inflection of أَتَاحَ (ʔatāḥa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُتَحْ (tutaḥ) /tu.taħ/: inflection of أَتَاحَ (ʔatāḥa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tutiḥ", "ʔatāḥa", "tutaḥ"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "يتاحوا",
-        "u": "يتاحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُتَاحُوا • (yutāḥū) (form IV) /ju.taː.ħuː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yutāḥū", "ʔatāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      },
-      {
-        "w": "أتيحي",
-        "u": "أتيحي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَتِيحِي • (ʔatīḥī) (form IV) /ʔa.tiː.ħiː/\n# second-person feminine singular imperative of أَتَاحَ (ʔatāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔatīḥī", "ʔatāḥa"],
-        "k": "أتاح",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تح",
+  "ses": {
     "harf": "ء",
+    "fasil": "تح",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "أتحت",
+      "tur": "verb",
+      "baslik": "أتحت (form IV)\n# أَتَحْتُ (ʔataḥtu) /ʔa.taħ.tu/: first-person singular past active of أَتَاحَ (ʔatāḥa)\n# أَتَحْتَ (ʔataḥta) /ʔa.taħ.ta/: second-person masculine singular past active of أَتَاحَ (ʔatāḥa)\n# أَتَحْتِ (ʔataḥti) /ʔa.taħ.ti/: second-person feminine singular past active of أَتَاحَ (ʔatāḥa)\n# أُتِحْتُ (ʔutiḥtu) /ʔu.tiħ.tu/: first-person singular past passive of أَتَاحَ (ʔatāḥa)\n# أُتِحْتَ ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔataḥtu", "ʔatāḥa", "ʔataḥta"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتاحت",
+      "tur": "verb",
+      "baslik": "أَتَاحَتْ • (ʔatāḥat) (form IV) /ʔa.taː.ħat/\n# third-person feminine singular past active of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔatāḥat", "ʔatāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتحنا",
+      "tur": "verb",
+      "baslik": "أتحنا (form IV)\n# أَتَحْنَا (ʔataḥnā) /ʔa.taħ.naː/: first-person plural past active of أَتَاحَ (ʔatāḥa)\n# أُتِحْنَا (ʔutiḥnā) /ʔu.tiħ.naː/: first-person plural past passive of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔataḥnā", "ʔatāḥa", "ʔutiḥnā"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتحتما",
+      "tur": "verb",
+      "baslik": "أتحتما (form IV)\n# أَتَحْتُمَا (ʔataḥtumā) /ʔa.taħ.tu.maː/: second-person dual past active of أَتَاحَ (ʔatāḥa)\n# أُتِحْتُمَا (ʔutiḥtumā) /ʔu.tiħ.tu.maː/: second-person dual past passive of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔataḥtumā", "ʔatāḥa", "ʔutiḥtumā"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتاحا",
+      "tur": "verb",
+      "baslik": "أَتَاحَا • (ʔatāḥā) (form IV) /ʔa.taː.ħaː/\n# third-person masculine dual past active of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔatāḥā", "ʔatāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتاحتا",
+      "tur": "verb",
+      "baslik": "أَتَاحَتَا • (ʔatāḥatā) (form IV) /ʔa.taː.ħa.taː/\n# third-person feminine dual past active of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔatāḥatā", "ʔatāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتحتم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أتحتم (form IV)\n# أَتَحْتُمْ (ʔataḥtum) /ʔa.taħ.tum/: second-person masculine plural past active of أَتَاحَ (ʔatāḥa)\n# أُتِحْتُمْ (ʔutiḥtum) /ʔu.tiħ.tum/: second-person masculine plural past passive of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔataḥtum", "ʔatāḥa", "ʔutiḥtum"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتيح",
+      "tur": "verb",
+      "baslik": "أتيح (form IV)\n# أُتِيحَ (ʔutīḥa) /ʔu.tiː.ħa/: inflection of أَتَاحَ (ʔatāḥa):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُتِيحُ (ʔutīḥu) /ʔu.tiː.ħu/: first-person singular non-past active indicative of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔutīḥa", "ʔatāḥa", "ʔutīḥu"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتحتن",
+      "tur": "verb",
+      "baslik": "أتحتن (form IV)\n# أَتَحْتُنَّ (ʔataḥtunna) /ʔa.taħ.tun.na/: second-person feminine plural past active of أَتَاحَ (ʔatāḥa)\n# أُتِحْتُنَّ (ʔutiḥtunna) /ʔu.tiħ.tun.na/: second-person feminine plural past passive of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔataḥtunna", "ʔatāḥa", "ʔutiḥtunna"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتحن",
+      "tur": "verb",
+      "baslik": "أتحن (form IV)\n# أَتَحْنَ (ʔataḥna) /ʔa.taħ.na/: third-person feminine plural past active of أَتَاحَ (ʔatāḥa)\n# أُتِحْنَ (ʔutiḥna) /ʔu.tiħ.na/: third-person feminine plural past passive of أَتَاحَ (ʔatāḥa)\n# أَتِحْنَ (ʔatiḥna) /ʔa.tiħ.na/: second-person feminine plural imperative of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔataḥna", "ʔatāḥa", "ʔutiḥna"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتاحوا",
+      "tur": "verb",
+      "baslik": "أَتَاحُوا • (ʔatāḥū) (form IV) /ʔa.taː.ħuː/\n# third-person masculine plural past active of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔatāḥū", "ʔatāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتيحت",
+      "tur": "verb",
+      "baslik": "أُتِيحَتْ • (ʔutīḥat) (form IV) /ʔu.tiː.ħat/\n# third-person feminine singular past passive of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔutīḥat", "ʔatāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتيحا",
+      "tur": "verb",
+      "baslik": "أتيحا (form IV)\n# أُتِيحَا (ʔutīḥā) /ʔu.tiː.ħaː/: third-person masculine dual past passive of أَتَاحَ (ʔatāḥa)\n# أَتِيحَا (ʔatīḥā) /ʔa.tiː.ħaː/: second-person dual imperative of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔutīḥā", "ʔatāḥa", "ʔatīḥā"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتيحتا",
+      "tur": "verb",
+      "baslik": "أُتِيحَتَا • (ʔutīḥatā) (form IV) /ʔu.tiː.ħa.taː/\n# third-person feminine dual past passive of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔutīḥatā", "ʔatāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتيحان",
+      "tur": "verb",
+      "baslik": "يُتِيحَانِ • (yutīḥāni) (form IV) /ju.tiː.ħaː.ni/\n# third-person masculine dual non-past active indicative of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yutīḥāni", "ʔatāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتيحوا",
+      "tur": "verb",
+      "baslik": "أتيحوا (form IV)\n# أُتِيحُوا (ʔutīḥū) /ʔu.tiː.ħuː/: third-person masculine plural past passive of أَتَاحَ (ʔatāḥa)\n# أَتِيحُوا (ʔatīḥū) /ʔa.tiː.ħuː/: second-person masculine plural imperative of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔutīḥū", "ʔatāḥa", "ʔatīḥū"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتيح",
+      "tur": "verb",
+      "baslik": "تتيح (form IV)\n# تُتِيحُ (tutīḥu) /tu.tiː.ħu/: inflection of أَتَاحَ (ʔatāḥa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُتِيحَ (tutīḥa) /tu.tiː.ħa/: inflection of أَتَاحَ (ʔatāḥa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tutīḥu", "ʔatāḥa", "tutīḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتيح",
+      "tur": "verb",
+      "baslik": "يتيح (form IV)\n# يُتِيحُ (yutīḥu) /ju.tiː.ħu/: third-person masculine singular non-past active indicative of أَتَاحَ (ʔatāḥa)\n# يُتِيحَ (yutīḥa) /ju.tiː.ħa/: third-person masculine singular non-past active subjunctive of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yutīḥu", "ʔatāḥa", "yutīḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتيحين",
+      "tur": "verb",
+      "baslik": "تُتِيحِينَ • (tutīḥīna) (form IV) /tu.tiː.ħiː.na/\n# second-person feminine singular non-past active indicative of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tutīḥīna", "ʔatāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتيحان",
+      "tur": "verb",
+      "baslik": "تُتِيحَانِ • (tutīḥāni) (form IV) /tu.tiː.ħaː.ni/\n# inflection of أَتَاحَ (ʔatāḥa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tutīḥāni", "ʔatāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتيح",
+      "tur": "verb",
+      "baslik": "نتيح (form IV)\n# نُتِيحُ (nutīḥu) /nu.tiː.ħu/: first-person plural non-past active indicative of أَتَاحَ (ʔatāḥa)\n# نُتِيحَ (nutīḥa) /nu.tiː.ħa/: first-person plural non-past active subjunctive of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nutīḥu", "ʔatāḥa", "nutīḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتيحون",
+      "tur": "verb",
+      "baslik": "تُتِيحُونَ • (tutīḥūna) (form IV) /tu.tiː.ħuː.na/\n# second-person masculine plural non-past active indicative of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tutīḥūna", "ʔatāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتيحون",
+      "tur": "verb",
+      "baslik": "يُتِيحُونَ • (yutīḥūna) (form IV) /ju.tiː.ħuː.na/\n# third-person masculine plural non-past active indicative of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yutīḥūna", "ʔatāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتحن",
+      "tur": "verb",
+      "baslik": "تتحن (form IV)\n# تُتِحْنَ (tutiḥna) /tu.tiħ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَتَاحَ (ʔatāḥa)\n# تُتَحْنَ (tutaḥna) /tu.taħ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tutiḥna", "ʔatāḥa", "tutaḥna"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتاحان",
+      "tur": "verb",
+      "baslik": "تُتَاحَانِ • (tutāḥāni) (form IV) /tu.taː.ħaː.ni/\n# inflection of أَتَاحَ (ʔatāḥa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tutāḥāni", "ʔatāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتاح",
+      "tur": "verb",
+      "baslik": "تتاح (form IV)\n# تُتَاحُ (tutāḥu) /tu.taː.ħu/: inflection of أَتَاحَ (ʔatāḥa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُتَاحَ (tutāḥa) /tu.taː.ħa/: inflection of أَتَاحَ (ʔatāḥa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tutāḥu", "ʔatāḥa", "tutāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتحن",
+      "tur": "verb",
+      "baslik": "يتحن (form IV)\n# يُتِحْنَ (yutiḥna) /ju.tiħ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَتَاحَ (ʔatāḥa)\n# يُتَحْنَ (yutaḥna) /ju.taħ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yutiḥna", "ʔatāḥa", "yutaḥna"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتاحون",
+      "tur": "verb",
+      "baslik": "تُتَاحُونَ • (tutāḥūna) (form IV) /tu.taː.ħuː.na/\n# second-person masculine plural non-past passive indicative of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tutāḥūna", "ʔatāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتاحين",
+      "tur": "verb",
+      "baslik": "تُتَاحِينَ • (tutāḥīna) (form IV) /tu.taː.ħiː.na/\n# second-person feminine singular non-past passive indicative of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tutāḥīna", "ʔatāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتاح",
+      "tur": "verb",
+      "baslik": "يتاح (form IV)\n# يُتَاحُ (yutāḥu) /ju.taː.ħu/: third-person masculine singular non-past passive indicative of أَتَاحَ (ʔatāḥa)\n# يُتَاحَ (yutāḥa) /ju.taː.ħa/: third-person masculine singular non-past passive subjunctive of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yutāḥu", "ʔatāḥa", "yutāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتيحي",
+      "tur": "verb",
+      "baslik": "تُتِيحِي • (tutīḥī) (form IV) /tu.tiː.ħiː/\n# second-person feminine singular non-past active subjunctive/jussive of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tutīḥī", "ʔatāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتاحان",
+      "tur": "verb",
+      "baslik": "يُتَاحَانِ • (yutāḥāni) (form IV) /ju.taː.ħaː.ni/\n# third-person masculine dual non-past passive indicative of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yutāḥāni", "ʔatāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتاح",
+      "tur": "verb",
+      "baslik": "نتاح (form IV)\n# نُتَاحُ (nutāḥu) /nu.taː.ħu/: first-person plural non-past passive indicative of أَتَاحَ (ʔatāḥa)\n# نُتَاحَ (nutāḥa) /nu.taː.ħa/: first-person plural non-past passive subjunctive of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nutāḥu", "ʔatāḥa", "nutāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتيحا",
+      "tur": "verb",
+      "baslik": "يُتِيحَا • (yutīḥā) (form IV) /ju.tiː.ħaː/\n# third-person masculine dual non-past active subjunctive/jussive of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yutīḥā", "ʔatāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتاحا",
+      "tur": "verb",
+      "baslik": "يُتَاحَا • (yutāḥā) (form IV) /ju.taː.ħaː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yutāḥā", "ʔatāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتيحوا",
+      "tur": "verb",
+      "baslik": "تُتِيحُوا • (tutīḥū) (form IV) /tu.tiː.ħuː/\n# second-person masculine plural non-past active subjunctive/jussive of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tutīḥū", "ʔatāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتيحوا",
+      "tur": "verb",
+      "baslik": "يُتِيحُوا • (yutīḥū) (form IV) /ju.tiː.ħuː/\n# third-person masculine plural non-past active subjunctive/jussive of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yutīḥū", "ʔatāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتاحي",
+      "tur": "verb",
+      "baslik": "تُتَاحِي • (tutāḥī) (form IV) /tu.taː.ħiː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tutāḥī", "ʔatāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتاحون",
+      "tur": "verb",
+      "baslik": "يُتَاحُونَ • (yutāḥūna) (form IV) /ju.taː.ħuː.na/\n# third-person masculine plural non-past passive indicative of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yutāḥūna", "ʔatāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتيحا",
+      "tur": "verb",
+      "baslik": "تُتِيحَا • (tutīḥā) (form IV) /tu.tiː.ħaː/\n# inflection of أَتَاحَ (ʔatāḥa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tutīḥā", "ʔatāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتاحا",
+      "tur": "verb",
+      "baslik": "تُتَاحَا • (tutāḥā) (form IV) /tu.taː.ħaː/\n# inflection of أَتَاحَ (ʔatāḥa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tutāḥā", "ʔatāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتاحوا",
+      "tur": "verb",
+      "baslik": "تُتَاحُوا • (tutāḥū) (form IV) /tu.taː.ħuː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tutāḥū", "ʔatāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتح",
+      "tur": "verb",
+      "baslik": "أتح (form IV)\n# أُتِحْ (ʔutiḥ) /ʔu.tiħ/: first-person singular non-past active jussive of أَتَاحَ (ʔatāḥa)\n# أُتَحْ (ʔutaḥ) /ʔu.taħ/: first-person singular non-past passive jussive of أَتَاحَ (ʔatāḥa)\n# أَتِحْ (ʔatiḥ) /ʔa.tiħ/: second-person masculine singular imperative of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔutiḥ", "ʔatāḥa", "ʔutaḥ"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتح",
+      "tur": "verb",
+      "baslik": "نتح (form IV)\n# نُتِحْ (nutiḥ) /nu.tiħ/: first-person plural non-past active jussive of أَتَاحَ (ʔatāḥa)\n# نُتَحْ (nutaḥ) /nu.taħ/: first-person plural non-past passive jussive of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nutiḥ", "ʔatāḥa", "nutaḥ"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتح",
+      "tur": "verb",
+      "baslik": "يتح (form IV)\n# يُتِحْ (yutiḥ) /ju.tiħ/: third-person masculine singular non-past active jussive of أَتَاحَ (ʔatāḥa)\n# يُتَحْ (yutaḥ) /ju.taħ/: third-person masculine singular non-past passive jussive of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yutiḥ", "ʔatāḥa", "yutaḥ"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتح",
+      "tur": "verb",
+      "baslik": "تتح (form IV)\n# تُتِحْ (tutiḥ) /tu.tiħ/: inflection of أَتَاحَ (ʔatāḥa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُتَحْ (tutaḥ) /tu.taħ/: inflection of أَتَاحَ (ʔatāḥa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tutiḥ", "ʔatāḥa", "tutaḥ"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتاحوا",
+      "tur": "verb",
+      "baslik": "يُتَاحُوا • (yutāḥū) (form IV) /ju.taː.ħuː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yutāḥū", "ʔatāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتيحي",
+      "tur": "verb",
+      "baslik": "أَتِيحِي • (ʔatīḥī) (form IV) /ʔa.tiː.ħiː/\n# second-person feminine singular imperative of أَتَاحَ (ʔatāḥa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔatīḥī", "ʔatāḥa"],
+      "kok_yazilis": "أتاح",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءتاح", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

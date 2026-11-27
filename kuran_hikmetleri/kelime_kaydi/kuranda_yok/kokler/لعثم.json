@@ -1,45 +1,46 @@
 {
   "kok": "لعثم",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "لعثم", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تلعثم",
-        "u": "تلعثم",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "تَلَعْثَمَ • (talaʕṯama) IIq (non-past يَتَلَعْثَمُ (yatalaʕṯamu), verbal noun تَلَعْثُم (talaʕṯum))",
-        "g": ["to stammer, to falter, to hesitate, to stutter"],
-        "r": ["talaʕṯama"],
-        "ipa": ["/ta.laʕ.θa.ma/"],
-        "k": "لعثم",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "لع",
+  "ses": {
     "harf": "ل",
+    "fasil": "لع",
     "mahrec": "zelakiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "تلعثم",
+      "tur": "verb",
+      "baslik": "تَلَعْثَمَ • (talaʕṯama) IIq (non-past يَتَلَعْثَمُ (yatalaʕṯamu), verbal noun تَلَعْثُم (talaʕṯum))",
+      "anlam": ["to stammer, to falter, to hesitate, to stutter"],
+      "okunus": ["talaʕṯama"],
+      "ipa": ["/ta.laʕ.θa.ma/"]
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "لعثم", "r6"]
+  ],
+  "mana": {
     "ince": "talk.v.02",
     "orta": "verb.communication",
     "ust": "söz ve haber",
@@ -47,20 +48,8 @@
     "dayanak_tanim": "speak haltingly",
     "synset_sayisi": 3
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["botch.v.01", "bumble.v.03", "chatter.v.04"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 9,
       "merkez_kok": "سفك",
@@ -80,6 +69,11 @@
       "boy": 9
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["botch.v.01", "bumble.v.03", "chatter.v.04"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

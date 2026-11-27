@@ -1,362 +1,255 @@
 {
   "kok": "تحمس",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تحمس", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تحمسا",
-        "u": "تحمسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحَمَّسَا • (taḥammasā) (form V) /ta.ħam.ma.saː/\n# inflection of تَحَمَّسَ (taḥammasa):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥammasā", "taḥammasa"],
-        "k": "تحمس",
-        "yol": "kök"
-      },
-      {
-        "w": "تحمست",
-        "u": "تحمست",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تحمست (form V)\n# تَحَمَّسْتُ (taḥammastu) /ta.ħam.mas.tu/: first-person singular past active of تَحَمَّسَ (taḥammasa)\n# تَحَمَّسْتَ (taḥammasta) /ta.ħam.mas.ta/: second-person masculine singular past active of تَحَمَّسَ (taḥammasa)\n# تَحَمَّسْتِ (taḥammasti) /ta.ħam.mas.ti/: second-person feminine singular past active of تَحَمَّسَ (taḥammasa)\n# تَحَمَّسَتْ (taḥammasat) /ta.ħam.ma.sat/: third-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥammastu", "taḥammasa", "taḥammasta"],
-        "k": "تحمس",
-        "yol": "kök"
-      },
-      {
-        "w": "تحمستا",
-        "u": "تحمستا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحَمَّسَتَا • (taḥammasatā) (form V) /ta.ħam.ma.sa.taː/\n# third-person feminine dual past active of تَحَمَّسَ (taḥammasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥammasatā", "taḥammasa"],
-        "k": "تحمس",
-        "yol": "kök"
-      },
-      {
-        "w": "تحمسنا",
-        "u": "تحمسنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحَمَّسْنَا • (taḥammasnā) (form V) /ta.ħam.mas.naː/\n# first-person plural past active of تَحَمَّسَ (taḥammasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥammasnā", "taḥammasa"],
-        "k": "تحمس",
-        "yol": "kök"
-      },
-      {
-        "w": "تحمستما",
-        "u": "تحمستما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحَمَّسْتُمَا • (taḥammastumā) (form V) /ta.ħam.mas.tu.maː/\n# second-person dual past active of تَحَمَّسَ (taḥammasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥammastumā", "taḥammasa"],
-        "k": "تحمس",
-        "yol": "kök"
-      },
-      {
-        "w": "تحمستم",
-        "u": "تحمستم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحَمَّسْتُمْ • (taḥammastum) (form V) /ta.ħam.mas.tum/\n# second-person masculine plural past active of تَحَمَّسَ (taḥammasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥammastum", "taḥammasa"],
-        "k": "تحمس",
-        "yol": "kök"
-      },
-      {
-        "w": "تحمسوا",
-        "u": "تحمسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحَمَّسُوا • (taḥammasū) (form V) /ta.ħam.ma.suː/\n# inflection of تَحَمَّسَ (taḥammasa):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥammasū", "taḥammasa"],
-        "k": "تحمس",
-        "yol": "kök"
-      },
-      {
-        "w": "تحمسن",
-        "u": "تحمسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحَمَّسْنَ • (taḥammasna) (form V) /ta.ħam.mas.na/\n# inflection of تَحَمَّسَ (taḥammasa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥammasna", "taḥammasa"],
-        "k": "تحمس",
-        "yol": "kök"
-      },
-      {
-        "w": "أتحمس",
-        "u": "أتحمس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتحمس (form V)\n# أَتَحَمَّسُ (ʔataḥammasu) /ʔa.ta.ħam.ma.su/: first-person singular non-past active indicative of تَحَمَّسَ (taḥammasa)\n# أَتَحَمَّسَ (ʔataḥammasa) /ʔa.ta.ħam.ma.sa/: first-person singular non-past active subjunctive of تَحَمَّسَ (taḥammasa)\n# أَتَحَمَّسْ (ʔataḥammas) /ʔa.ta.ħam.mas/: first-person singular non-past active jussive of تَحَمَّسَ (taḥammasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔataḥammasu", "taḥammasa", "ʔataḥammasa"],
-        "k": "تحمس",
-        "yol": "kök"
-      },
-      {
-        "w": "نتحمس",
-        "u": "نتحمس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتحمس (form V)\n# نَتَحَمَّسُ (nataḥammasu) /na.ta.ħam.ma.su/: first-person plural non-past active indicative of تَحَمَّسَ (taḥammasa)\n# نَتَحَمَّسَ (nataḥammasa) /na.ta.ħam.ma.sa/: first-person plural non-past active subjunctive of تَحَمَّسَ (taḥammasa)\n# نَتَحَمَّسْ (nataḥammas) /na.ta.ħam.mas/: first-person plural non-past active jussive of تَحَمَّسَ (taḥammasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["nataḥammasu", "taḥammasa", "nataḥammasa"],
-        "k": "تحمس",
-        "yol": "kök"
-      },
-      {
-        "w": "تحمستن",
-        "u": "تحمستن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحَمَّسْتُنَّ • (taḥammastunna) (form V) /ta.ħam.mas.tun.na/\n# second-person feminine plural past active of تَحَمَّسَ (taḥammasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥammastunna", "taḥammasa"],
-        "k": "تحمس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتحمس",
-        "u": "تتحمس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتحمس (form V)\n# تَتَحَمَّسُ (tataḥammasu) /ta.ta.ħam.ma.su/: inflection of تَحَمَّسَ (taḥammasa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَحَمَّسَ (tataḥammasa) /ta.ta.ħam.ma.sa/: inflection of تَحَمَّسَ (taḥammasa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḥammasu", "taḥammasa", "tataḥammasa"],
-        "k": "تحمس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتحمسين",
-        "u": "تتحمسين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَحَمَّسِينَ • (tataḥammasīna) (form V) /ta.ta.ħam.ma.siː.na/\n# second-person feminine singular non-past active indicative of تَحَمَّسَ (taḥammasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḥammasīna", "taḥammasa"],
-        "k": "تحمس",
-        "yol": "kök"
-      },
-      {
-        "w": "يتحمس",
-        "u": "يتحمس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتحمس (form V)\n# يَتَحَمَّسُ (yataḥammasu) /ja.ta.ħam.ma.su/: third-person masculine singular non-past active indicative of تَحَمَّسَ (taḥammasa)\n# يَتَحَمَّسَ (yataḥammasa) /ja.ta.ħam.ma.sa/: third-person masculine singular non-past active subjunctive of تَحَمَّسَ (taḥammasa)\n# يَتَحَمَّسْ (yataḥammas) /ja.ta.ħam.mas/: third-person masculine singular non-past active jussive of تَحَمَّسَ (taḥammas",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḥammasu", "taḥammasa", "yataḥammasa"],
-        "k": "تحمس",
-        "yol": "kök"
-      },
-      {
-        "w": "يتحمسان",
-        "u": "يتحمسان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَحَمَّسَانِ • (yataḥammasāni) (form V) /ja.ta.ħam.ma.saː.ni/\n# third-person masculine dual non-past active indicative of تَحَمَّسَ (taḥammasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḥammasāni", "taḥammasa"],
-        "k": "تحمس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتحمسون",
-        "u": "تتحمسون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَحَمَّسُونَ • (tataḥammasūna) (form V) /ta.ta.ħam.ma.suː.na/\n# second-person masculine plural non-past active indicative of تَحَمَّسَ (taḥammasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḥammasūna", "taḥammasa"],
-        "k": "تحمس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتحمسن",
-        "u": "تتحمسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَحَمَّسْنَ • (tataḥammasna) (form V) /ta.ta.ħam.mas.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَحَمَّسَ (taḥammasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḥammasna", "taḥammasa"],
-        "k": "تحمس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتحمسا",
-        "u": "تتحمسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَحَمَّسَا • (tataḥammasā) (form V) /ta.ta.ħam.ma.saː/\n# inflection of تَحَمَّسَ (taḥammasa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḥammasā", "taḥammasa"],
-        "k": "تحمس",
-        "yol": "kök"
-      },
-      {
-        "w": "يتحمسا",
-        "u": "يتحمسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَحَمَّسَا • (yataḥammasā) (form V) /ja.ta.ħam.ma.saː/\n# third-person masculine dual non-past active subjunctive/jussive of تَحَمَّسَ (taḥammasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḥammasā", "taḥammasa"],
-        "k": "تحمس",
-        "yol": "kök"
-      },
-      {
-        "w": "يتحمسن",
-        "u": "يتحمسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَحَمَّسْنَ • (yataḥammasna) (form V) /ja.ta.ħam.mas.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَحَمَّسَ (taḥammasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḥammasna", "taḥammasa"],
-        "k": "تحمس",
-        "yol": "kök"
-      },
-      {
-        "w": "تحمسي",
-        "u": "تحمسي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَحَمَّسِي • (taḥammasī) (form V) /ta.ħam.ma.siː/\n# second-person feminine singular imperative of تَحَمَّسَ (taḥammasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taḥammasī", "taḥammasa"],
-        "k": "تحمس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتحمسي",
-        "u": "تتحمسي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَحَمَّسِي • (tataḥammasī) (form V) /ta.ta.ħam.ma.siː/\n# second-person feminine singular non-past active subjunctive/jussive of تَحَمَّسَ (taḥammasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḥammasī", "taḥammasa"],
-        "k": "تحمس",
-        "yol": "kök"
-      },
-      {
-        "w": "يتحمسون",
-        "u": "يتحمسون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَحَمَّسُونَ • (yataḥammasūna) (form V) /ja.ta.ħam.ma.suː.na/\n# third-person masculine plural non-past active indicative of تَحَمَّسَ (taḥammasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḥammasūna", "taḥammasa"],
-        "k": "تحمس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتحمسوا",
-        "u": "تتحمسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَحَمَّسُوا • (tataḥammasū) (form V) /ta.ta.ħam.ma.suː/\n# second-person masculine plural non-past active subjunctive/jussive of تَحَمَّسَ (taḥammasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḥammasū", "taḥammasa"],
-        "k": "تحمس",
-        "yol": "kök"
-      },
-      {
-        "w": "تتحمسان",
-        "u": "تتحمسان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَحَمَّسَانِ • (tataḥammasāni) (form V) /ta.ta.ħam.ma.saː.ni/\n# inflection of تَحَمَّسَ (taḥammasa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataḥammasāni", "taḥammasa"],
-        "k": "تحمس",
-        "yol": "kök"
-      },
-      {
-        "w": "يتحمسوا",
-        "u": "يتحمسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَحَمَّسُوا • (yataḥammasū) (form V) /ja.ta.ħam.ma.suː/\n# third-person masculine plural non-past active subjunctive/jussive of تَحَمَّسَ (taḥammasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataḥammasū", "taḥammasa"],
-        "k": "تحمس",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تح",
+  "ses": {
     "harf": "ت",
+    "fasil": "تح",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تحمسا",
+      "tur": "verb",
+      "baslik": "تَحَمَّسَا • (taḥammasā) (form V) /ta.ħam.ma.saː/\n# inflection of تَحَمَّسَ (taḥammasa):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥammasā", "taḥammasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحمست",
+      "tur": "verb",
+      "baslik": "تحمست (form V)\n# تَحَمَّسْتُ (taḥammastu) /ta.ħam.mas.tu/: first-person singular past active of تَحَمَّسَ (taḥammasa)\n# تَحَمَّسْتَ (taḥammasta) /ta.ħam.mas.ta/: second-person masculine singular past active of تَحَمَّسَ (taḥammasa)\n# تَحَمَّسْتِ (taḥammasti) /ta.ħam.mas.ti/: second-person feminine singular past active of تَحَمَّسَ (taḥammasa)\n# تَحَمَّسَتْ (taḥammasat) /ta.ħam.ma.sat/: third-perso",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥammastu", "taḥammasa", "taḥammasta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحمستا",
+      "tur": "verb",
+      "baslik": "تَحَمَّسَتَا • (taḥammasatā) (form V) /ta.ħam.ma.sa.taː/\n# third-person feminine dual past active of تَحَمَّسَ (taḥammasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥammasatā", "taḥammasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحمسنا",
+      "tur": "verb",
+      "baslik": "تَحَمَّسْنَا • (taḥammasnā) (form V) /ta.ħam.mas.naː/\n# first-person plural past active of تَحَمَّسَ (taḥammasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥammasnā", "taḥammasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحمستما",
+      "tur": "verb",
+      "baslik": "تَحَمَّسْتُمَا • (taḥammastumā) (form V) /ta.ħam.mas.tu.maː/\n# second-person dual past active of تَحَمَّسَ (taḥammasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥammastumā", "taḥammasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحمستم",
+      "tur": "verb",
+      "baslik": "تَحَمَّسْتُمْ • (taḥammastum) (form V) /ta.ħam.mas.tum/\n# second-person masculine plural past active of تَحَمَّسَ (taḥammasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥammastum", "taḥammasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحمسوا",
+      "tur": "verb",
+      "baslik": "تَحَمَّسُوا • (taḥammasū) (form V) /ta.ħam.ma.suː/\n# inflection of تَحَمَّسَ (taḥammasa):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥammasū", "taḥammasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحمسن",
+      "tur": "verb",
+      "baslik": "تَحَمَّسْنَ • (taḥammasna) (form V) /ta.ħam.mas.na/\n# inflection of تَحَمَّسَ (taḥammasa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥammasna", "taḥammasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتحمس",
+      "tur": "verb",
+      "baslik": "أتحمس (form V)\n# أَتَحَمَّسُ (ʔataḥammasu) /ʔa.ta.ħam.ma.su/: first-person singular non-past active indicative of تَحَمَّسَ (taḥammasa)\n# أَتَحَمَّسَ (ʔataḥammasa) /ʔa.ta.ħam.ma.sa/: first-person singular non-past active subjunctive of تَحَمَّسَ (taḥammasa)\n# أَتَحَمَّسْ (ʔataḥammas) /ʔa.ta.ħam.mas/: first-person singular non-past active jussive of تَحَمَّسَ (taḥammasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔataḥammasu", "taḥammasa", "ʔataḥammasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتحمس",
+      "tur": "verb",
+      "baslik": "نتحمس (form V)\n# نَتَحَمَّسُ (nataḥammasu) /na.ta.ħam.ma.su/: first-person plural non-past active indicative of تَحَمَّسَ (taḥammasa)\n# نَتَحَمَّسَ (nataḥammasa) /na.ta.ħam.ma.sa/: first-person plural non-past active subjunctive of تَحَمَّسَ (taḥammasa)\n# نَتَحَمَّسْ (nataḥammas) /na.ta.ħam.mas/: first-person plural non-past active jussive of تَحَمَّسَ (taḥammasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["nataḥammasu", "taḥammasa", "nataḥammasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحمستن",
+      "tur": "verb",
+      "baslik": "تَحَمَّسْتُنَّ • (taḥammastunna) (form V) /ta.ħam.mas.tun.na/\n# second-person feminine plural past active of تَحَمَّسَ (taḥammasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥammastunna", "taḥammasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتحمس",
+      "tur": "verb",
+      "baslik": "تتحمس (form V)\n# تَتَحَمَّسُ (tataḥammasu) /ta.ta.ħam.ma.su/: inflection of تَحَمَّسَ (taḥammasa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَحَمَّسَ (tataḥammasa) /ta.ta.ħam.ma.sa/: inflection of تَحَمَّسَ (taḥammasa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine sing",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḥammasu", "taḥammasa", "tataḥammasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتحمسين",
+      "tur": "verb",
+      "baslik": "تَتَحَمَّسِينَ • (tataḥammasīna) (form V) /ta.ta.ħam.ma.siː.na/\n# second-person feminine singular non-past active indicative of تَحَمَّسَ (taḥammasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḥammasīna", "taḥammasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتحمس",
+      "tur": "verb",
+      "baslik": "يتحمس (form V)\n# يَتَحَمَّسُ (yataḥammasu) /ja.ta.ħam.ma.su/: third-person masculine singular non-past active indicative of تَحَمَّسَ (taḥammasa)\n# يَتَحَمَّسَ (yataḥammasa) /ja.ta.ħam.ma.sa/: third-person masculine singular non-past active subjunctive of تَحَمَّسَ (taḥammasa)\n# يَتَحَمَّسْ (yataḥammas) /ja.ta.ħam.mas/: third-person masculine singular non-past active jussive of تَحَمَّسَ (taḥammas",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḥammasu", "taḥammasa", "yataḥammasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتحمسان",
+      "tur": "verb",
+      "baslik": "يَتَحَمَّسَانِ • (yataḥammasāni) (form V) /ja.ta.ħam.ma.saː.ni/\n# third-person masculine dual non-past active indicative of تَحَمَّسَ (taḥammasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḥammasāni", "taḥammasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتحمسون",
+      "tur": "verb",
+      "baslik": "تَتَحَمَّسُونَ • (tataḥammasūna) (form V) /ta.ta.ħam.ma.suː.na/\n# second-person masculine plural non-past active indicative of تَحَمَّسَ (taḥammasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḥammasūna", "taḥammasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتحمسن",
+      "tur": "verb",
+      "baslik": "تَتَحَمَّسْنَ • (tataḥammasna) (form V) /ta.ta.ħam.mas.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَحَمَّسَ (taḥammasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḥammasna", "taḥammasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتحمسا",
+      "tur": "verb",
+      "baslik": "تَتَحَمَّسَا • (tataḥammasā) (form V) /ta.ta.ħam.ma.saː/\n# inflection of تَحَمَّسَ (taḥammasa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḥammasā", "taḥammasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتحمسا",
+      "tur": "verb",
+      "baslik": "يَتَحَمَّسَا • (yataḥammasā) (form V) /ja.ta.ħam.ma.saː/\n# third-person masculine dual non-past active subjunctive/jussive of تَحَمَّسَ (taḥammasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḥammasā", "taḥammasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتحمسن",
+      "tur": "verb",
+      "baslik": "يَتَحَمَّسْنَ • (yataḥammasna) (form V) /ja.ta.ħam.mas.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَحَمَّسَ (taḥammasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḥammasna", "taḥammasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تحمسي",
+      "tur": "verb",
+      "baslik": "تَحَمَّسِي • (taḥammasī) (form V) /ta.ħam.ma.siː/\n# second-person feminine singular imperative of تَحَمَّسَ (taḥammasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taḥammasī", "taḥammasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتحمسي",
+      "tur": "verb",
+      "baslik": "تَتَحَمَّسِي • (tataḥammasī) (form V) /ta.ta.ħam.ma.siː/\n# second-person feminine singular non-past active subjunctive/jussive of تَحَمَّسَ (taḥammasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḥammasī", "taḥammasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتحمسون",
+      "tur": "verb",
+      "baslik": "يَتَحَمَّسُونَ • (yataḥammasūna) (form V) /ja.ta.ħam.ma.suː.na/\n# third-person masculine plural non-past active indicative of تَحَمَّسَ (taḥammasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḥammasūna", "taḥammasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتحمسوا",
+      "tur": "verb",
+      "baslik": "تَتَحَمَّسُوا • (tataḥammasū) (form V) /ta.ta.ħam.ma.suː/\n# second-person masculine plural non-past active subjunctive/jussive of تَحَمَّسَ (taḥammasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḥammasū", "taḥammasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتحمسان",
+      "tur": "verb",
+      "baslik": "تَتَحَمَّسَانِ • (tataḥammasāni) (form V) /ta.ta.ħam.ma.saː.ni/\n# inflection of تَحَمَّسَ (taḥammasa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataḥammasāni", "taḥammasa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتحمسوا",
+      "tur": "verb",
+      "baslik": "يَتَحَمَّسُوا • (yataḥammasū) (form V) /ja.ta.ħam.ma.suː/\n# third-person masculine plural non-past active subjunctive/jussive of تَحَمَّسَ (taḥammasa)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataḥammasū", "taḥammasa"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تحمس", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

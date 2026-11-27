@@ -1,470 +1,335 @@
 {
   "kok": "باح",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "باح", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يبوح",
-        "u": "يبوح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبوح (form I)\n# يَبُوحُ (yabūḥu) /ja.buː.ħu/: third-person masculine singular non-past active indicative of بَاحَ (bāḥa)\n# يَبُوحَ (yabūḥa) /ja.buː.ħa/: third-person masculine singular non-past active subjunctive of بَاحَ (bāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabūḥu", "bāḥa", "yabūḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "يباح",
-        "u": "يباح",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يباح (form I)\n# يُبَاحُ (yubāḥu) /ju.baː.ħu/: third-person masculine singular non-past passive indicative of بَاحَ (bāḥa)\n# يُبَاحَ (yubāḥa) /ju.baː.ħa/: third-person masculine singular non-past passive subjunctive of بَاحَ (bāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yubāḥu", "bāḥa", "yubāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "يبح",
-        "u": "يبح",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يبح (form I)\n# يَبُحْ (yabuḥ) /ja.buħ/: third-person masculine singular non-past active jussive of بَاحَ (bāḥa)\n# يُبَحْ (yubaḥ) /ju.baħ/: third-person masculine singular non-past passive jussive of بَاحَ (bāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabuḥ", "bāḥa", "yubaḥ"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "بيح",
-        "u": "بيح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بِيحَ • (bīḥa) (form I) /biː.ħa/\n# third-person masculine singular past passive of بَاحَ (bāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bīḥa", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "باحت",
-        "u": "باحت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَاحَتْ • (bāḥat) (form I) /baː.ħat/\n# third-person feminine singular past active of بَاحَ (bāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bāḥat", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "تبوح",
-        "u": "تبوح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبوح (form I)\n# تَبُوحُ (tabūḥu) /ta.buː.ħu/: inflection of بَاحَ (bāḥa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَبُوحَ (tabūḥa) /ta.buː.ħa/: inflection of بَاحَ (bāḥa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabūḥu", "bāḥa", "tabūḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "تبح",
-        "u": "تبح",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَبُحْ • (tabuḥ) (form I) /ta.buħ/\n# inflection of بَاحَ (bāḥa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabuḥ", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "بحت",
-        "u": "بحت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "بحت (form I)\n# بُحْتُ (buḥtu) /buħ.tu/: first-person singular past active of بَاحَ (bāḥa)\n# بُحْتَ (buḥta) /buħ.ta/: second-person masculine singular past active of بَاحَ (bāḥa)\n# بُحْتِ (buḥti) /buħ.ti/: second-person feminine singular past active of بَاحَ (bāḥa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["buḥtu", "bāḥa", "buḥta"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "بح",
-        "u": "بح",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "بُحْ • (buḥ) (form I) /buħ/\n# second-person masculine singular imperative of بَاحَ (bāḥa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["buḥ", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "تبوحين",
-        "u": "تبوحين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَبُوحِينَ • (tabūḥīna) (form I) /ta.buː.ħiː.na/\n# second-person feminine singular non-past active indicative of بَاحَ (bāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabūḥīna", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "تبوحي",
-        "u": "تبوحي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَبُوحِي • (tabūḥī) (form I) /ta.buː.ħiː/\n# second-person feminine singular non-past active subjunctive/jussive of بَاحَ (bāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabūḥī", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "بوحي",
-        "u": "بوحي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بُوحِي • (būḥī) (form I) /buː.ħiː/\n# second-person feminine singular imperative of بَاحَ (bāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["būḥī", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "أبوح",
-        "u": "أبوح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبوح (form I)\n# أَبُوحُ (ʔabūḥu) /ʔa.buː.ħu/: first-person singular non-past active indicative of بَاحَ (bāḥa)\n# أَبُوحَ (ʔabūḥa) /ʔa.buː.ħa/: first-person singular non-past active subjunctive of بَاحَ (bāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔabūḥu", "bāḥa", "ʔabūḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "أبح",
-        "u": "أبح",
-        "p": "verb",
-        "n": "1.2",
-        "h": "ar-verb form",
-        "e": "أَبُحْ • (ʔabuḥ) (form I) /ʔa.buħ/\n# first-person singular non-past active jussive of بَاحَ (bāḥa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔabuḥ", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "بحنا",
-        "u": "بحنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بُحْنَا • (buḥnā) (form I) /buħ.naː/\n# first-person plural past active of بَاحَ (bāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["buḥnā", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "نبوح",
-        "u": "نبوح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نبوح (form I)\n# نَبُوحُ (nabūḥu) /na.buː.ħu/: first-person plural non-past active indicative of بَاحَ (bāḥa)\n# نَبُوحَ (nabūḥa) /na.buː.ħa/: first-person plural non-past active subjunctive of بَاحَ (bāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nabūḥu", "bāḥa", "nabūḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "نبح",
-        "u": "نبح",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نَبُحْ • (nabuḥ) (form I) /na.buħ/\n# first-person plural non-past active jussive of بَاحَ (bāḥa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nabuḥ", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "بحتم",
-        "u": "بحتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بُحْتُمْ • (buḥtum) (form I) /buħ.tum/\n# second-person masculine plural past active of بَاحَ (bāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["buḥtum", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "تبوحون",
-        "u": "تبوحون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَبُوحُونَ • (tabūḥūna) (form I) /ta.buː.ħuː.na/\n# second-person masculine plural non-past active indicative of بَاحَ (bāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabūḥūna", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "تبوحوا",
-        "u": "تبوحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَبُوحُوا • (tabūḥū) (form I) /ta.buː.ħuː/\n# second-person masculine plural non-past active subjunctive/jussive of بَاحَ (bāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabūḥū", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "بوحوا",
-        "u": "بوحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بُوحُوا • (būḥū) (form I) /buː.ħuː/\n# second-person masculine plural imperative of بَاحَ (bāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["būḥū", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "باحوا",
-        "u": "باحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَاحُوا • (bāḥū) (form I) /baː.ħuː/\n# third-person masculine plural past active of بَاحَ (bāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bāḥū", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "يبوحون",
-        "u": "يبوحون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَبُوحُونَ • (yabūḥūna) (form I) /ja.buː.ħuː.na/\n# third-person masculine plural non-past active indicative of بَاحَ (bāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabūḥūna", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "يبوحوا",
-        "u": "يبوحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَبُوحُوا • (yabūḥū) (form I) /ja.buː.ħuː/\n# third-person masculine plural non-past active subjunctive/jussive of بَاحَ (bāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabūḥū", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "بحتن",
-        "u": "بحتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بُحْتُنَّ • (buḥtunna) (form I) /buħ.tun.na/\n# second-person feminine plural past active of بَاحَ (bāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["buḥtunna", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "تبحن",
-        "u": "تبحن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَبُحْنَ • (tabuḥna) (form I) /ta.buħ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of بَاحَ (bāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabuḥna", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "بحن",
-        "u": "بحن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بُحْنَ • (buḥna) (form I) /buħ.na/\n# inflection of بَاحَ (bāḥa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["buḥna", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "يبحن",
-        "u": "يبحن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَبُحْنَ • (yabuḥna) (form I) /ja.buħ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of بَاحَ (bāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabuḥna", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "بحتما",
-        "u": "بحتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بُحْتُمَا • (buḥtumā) (form I) /buħ.tu.maː/\n# second-person dual past active of بَاحَ (bāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["buḥtumā", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "باحا",
-        "u": "باحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَاحَا • (bāḥā) (form I) /baː.ħaː/\n# third-person masculine dual past active of بَاحَ (bāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bāḥā", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "باحتا",
-        "u": "باحتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَاحَتَا • (bāḥatā) (form I) /baː.ħa.taː/\n# third-person feminine dual past active of بَاحَ (bāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bāḥatā", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "تبوحان",
-        "u": "تبوحان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَبُوحَانِ • (tabūḥāni) (form I) /ta.buː.ħaː.ni/\n# inflection of بَاحَ (bāḥa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabūḥāni", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "يبوحان",
-        "u": "يبوحان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَبُوحَانِ • (yabūḥāni) (form I) /ja.buː.ħaː.ni/\n# third-person masculine dual non-past active indicative of بَاحَ (bāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabūḥāni", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "تبوحا",
-        "u": "تبوحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَبُوحَا • (tabūḥā) (form I) /ta.buː.ħaː/\n# inflection of بَاحَ (bāḥa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabūḥā", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "يبوحا",
-        "u": "يبوحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَبُوحَا • (yabūḥā) (form I) /ja.buː.ħaː/\n# third-person masculine dual non-past active subjunctive/jussive of بَاحَ (bāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabūḥā", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      },
-      {
-        "w": "بوحا",
-        "u": "بوحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بُوحَا • (būḥā) (form I) /buː.ħaː/\n# second-person dual imperative of بَاحَ (bāḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["būḥā", "bāḥa"],
-        "k": "باح",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "بح",
+  "ses": {
     "harf": "ب",
+    "fasil": "بح",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "يبوح",
+      "tur": "verb",
+      "baslik": "يبوح (form I)\n# يَبُوحُ (yabūḥu) /ja.buː.ħu/: third-person masculine singular non-past active indicative of بَاحَ (bāḥa)\n# يَبُوحَ (yabūḥa) /ja.buː.ħa/: third-person masculine singular non-past active subjunctive of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabūḥu", "bāḥa", "yabūḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يباح",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يباح (form I)\n# يُبَاحُ (yubāḥu) /ju.baː.ħu/: third-person masculine singular non-past passive indicative of بَاحَ (bāḥa)\n# يُبَاحَ (yubāḥa) /ju.baː.ħa/: third-person masculine singular non-past passive subjunctive of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yubāḥu", "bāḥa", "yubāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبح",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يبح (form I)\n# يَبُحْ (yabuḥ) /ja.buħ/: third-person masculine singular non-past active jussive of بَاحَ (bāḥa)\n# يُبَحْ (yubaḥ) /ju.baħ/: third-person masculine singular non-past passive jussive of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabuḥ", "bāḥa", "yubaḥ"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بيح",
+      "tur": "verb",
+      "baslik": "بِيحَ • (bīḥa) (form I) /biː.ħa/\n# third-person masculine singular past passive of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bīḥa", "bāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "باحت",
+      "tur": "verb",
+      "baslik": "بَاحَتْ • (bāḥat) (form I) /baː.ħat/\n# third-person feminine singular past active of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bāḥat", "bāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبوح",
+      "tur": "verb",
+      "baslik": "تبوح (form I)\n# تَبُوحُ (tabūḥu) /ta.buː.ħu/: inflection of بَاحَ (bāḥa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَبُوحَ (tabūḥa) /ta.buː.ħa/: inflection of بَاحَ (bāḥa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabūḥu", "bāḥa", "tabūḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبح",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَبُحْ • (tabuḥ) (form I) /ta.buħ/\n# inflection of بَاحَ (bāḥa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabuḥ", "bāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بحت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "بحت (form I)\n# بُحْتُ (buḥtu) /buħ.tu/: first-person singular past active of بَاحَ (bāḥa)\n# بُحْتَ (buḥta) /buħ.ta/: second-person masculine singular past active of بَاحَ (bāḥa)\n# بُحْتِ (buḥti) /buħ.ti/: second-person feminine singular past active of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["buḥtu", "bāḥa", "buḥta"]
+    },
+    {
+      "madde": "بح",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "بُحْ • (buḥ) (form I) /buħ/\n# second-person masculine singular imperative of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["buḥ", "bāḥa"]
+    },
+    {
+      "madde": "تبوحين",
+      "tur": "verb",
+      "baslik": "تَبُوحِينَ • (tabūḥīna) (form I) /ta.buː.ħiː.na/\n# second-person feminine singular non-past active indicative of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabūḥīna", "bāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبوحي",
+      "tur": "verb",
+      "baslik": "تَبُوحِي • (tabūḥī) (form I) /ta.buː.ħiː/\n# second-person feminine singular non-past active subjunctive/jussive of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabūḥī", "bāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بوحي",
+      "tur": "verb",
+      "baslik": "بُوحِي • (būḥī) (form I) /buː.ħiː/\n# second-person feminine singular imperative of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["būḥī", "bāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبوح",
+      "tur": "verb",
+      "baslik": "أبوح (form I)\n# أَبُوحُ (ʔabūḥu) /ʔa.buː.ħu/: first-person singular non-past active indicative of بَاحَ (bāḥa)\n# أَبُوحَ (ʔabūḥa) /ʔa.buː.ħa/: first-person singular non-past active subjunctive of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔabūḥu", "bāḥa", "ʔabūḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبح",
+      "tur": "verb",
+      "etim_no": "1.2",
+      "baslik": "أَبُحْ • (ʔabuḥ) (form I) /ʔa.buħ/\n# first-person singular non-past active jussive of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔabuḥ", "bāḥa"]
+    },
+    {
+      "madde": "بحنا",
+      "tur": "verb",
+      "baslik": "بُحْنَا • (buḥnā) (form I) /buħ.naː/\n# first-person plural past active of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["buḥnā", "bāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نبوح",
+      "tur": "verb",
+      "baslik": "نبوح (form I)\n# نَبُوحُ (nabūḥu) /na.buː.ħu/: first-person plural non-past active indicative of بَاحَ (bāḥa)\n# نَبُوحَ (nabūḥa) /na.buː.ħa/: first-person plural non-past active subjunctive of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nabūḥu", "bāḥa", "nabūḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نبح",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نَبُحْ • (nabuḥ) (form I) /na.buħ/\n# first-person plural non-past active jussive of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nabuḥ", "bāḥa"]
+    },
+    {
+      "madde": "بحتم",
+      "tur": "verb",
+      "baslik": "بُحْتُمْ • (buḥtum) (form I) /buħ.tum/\n# second-person masculine plural past active of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["buḥtum", "bāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبوحون",
+      "tur": "verb",
+      "baslik": "تَبُوحُونَ • (tabūḥūna) (form I) /ta.buː.ħuː.na/\n# second-person masculine plural non-past active indicative of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabūḥūna", "bāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبوحوا",
+      "tur": "verb",
+      "baslik": "تَبُوحُوا • (tabūḥū) (form I) /ta.buː.ħuː/\n# second-person masculine plural non-past active subjunctive/jussive of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabūḥū", "bāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بوحوا",
+      "tur": "verb",
+      "baslik": "بُوحُوا • (būḥū) (form I) /buː.ħuː/\n# second-person masculine plural imperative of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["būḥū", "bāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "باحوا",
+      "tur": "verb",
+      "baslik": "بَاحُوا • (bāḥū) (form I) /baː.ħuː/\n# third-person masculine plural past active of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bāḥū", "bāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبوحون",
+      "tur": "verb",
+      "baslik": "يَبُوحُونَ • (yabūḥūna) (form I) /ja.buː.ħuː.na/\n# third-person masculine plural non-past active indicative of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabūḥūna", "bāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبوحوا",
+      "tur": "verb",
+      "baslik": "يَبُوحُوا • (yabūḥū) (form I) /ja.buː.ħuː/\n# third-person masculine plural non-past active subjunctive/jussive of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabūḥū", "bāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بحتن",
+      "tur": "verb",
+      "baslik": "بُحْتُنَّ • (buḥtunna) (form I) /buħ.tun.na/\n# second-person feminine plural past active of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["buḥtunna", "bāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبحن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَبُحْنَ • (tabuḥna) (form I) /ta.buħ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabuḥna", "bāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بحن",
+      "tur": "verb",
+      "baslik": "بُحْنَ • (buḥna) (form I) /buħ.na/\n# inflection of بَاحَ (bāḥa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["buḥna", "bāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبحن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَبُحْنَ • (yabuḥna) (form I) /ja.buħ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabuḥna", "bāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بحتما",
+      "tur": "verb",
+      "baslik": "بُحْتُمَا • (buḥtumā) (form I) /buħ.tu.maː/\n# second-person dual past active of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["buḥtumā", "bāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "باحا",
+      "tur": "verb",
+      "baslik": "بَاحَا • (bāḥā) (form I) /baː.ħaː/\n# third-person masculine dual past active of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bāḥā", "bāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "باحتا",
+      "tur": "verb",
+      "baslik": "بَاحَتَا • (bāḥatā) (form I) /baː.ħa.taː/\n# third-person feminine dual past active of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bāḥatā", "bāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبوحان",
+      "tur": "verb",
+      "baslik": "تَبُوحَانِ • (tabūḥāni) (form I) /ta.buː.ħaː.ni/\n# inflection of بَاحَ (bāḥa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabūḥāni", "bāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبوحان",
+      "tur": "verb",
+      "baslik": "يَبُوحَانِ • (yabūḥāni) (form I) /ja.buː.ħaː.ni/\n# third-person masculine dual non-past active indicative of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabūḥāni", "bāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبوحا",
+      "tur": "verb",
+      "baslik": "تَبُوحَا • (tabūḥā) (form I) /ta.buː.ħaː/\n# inflection of بَاحَ (bāḥa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabūḥā", "bāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبوحا",
+      "tur": "verb",
+      "baslik": "يَبُوحَا • (yabūḥā) (form I) /ja.buː.ħaː/\n# third-person masculine dual non-past active subjunctive/jussive of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabūḥā", "bāḥa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بوحا",
+      "tur": "verb",
+      "baslik": "بُوحَا • (būḥā) (form I) /buː.ħaː/\n# second-person dual imperative of بَاحَ (bāḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["būḥā", "bāḥa"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "باح", "r7"]
+  ],
+  "mana": {
     "ince": "talk.v.02",
     "orta": "verb.communication",
     "ust": "söz ve haber",
@@ -472,22 +337,15 @@
     "dayanak_tanim": "speak in an unfriendly tone",
     "synset_sayisi": 4
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["bark.v.01", "bark.v.04", "cry.v.02", "shout.v.02"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["bark.v.01", "bark.v.04", "cry.v.02", "shout.v.02"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

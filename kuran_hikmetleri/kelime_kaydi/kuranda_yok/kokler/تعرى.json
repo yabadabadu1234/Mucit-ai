@@ -1,410 +1,291 @@
 {
   "kok": "تعرى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تعرى", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تعر",
-        "u": "تعر",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَعَرَّ • (taʕarra) (form V) /ta.ʕar.ra/\n# second-person masculine singular imperative of تَعَرَّى (taʕarrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʕarra", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعريت",
-        "u": "تعريت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تعريت (form V)\n# تَعَرَّيْتُ (taʕarraytu) /ta.ʕar.raj.tu/: first-person singular past active of تَعَرَّى (taʕarrā)\n# تَعَرَّيْتَ (taʕarrayta) /ta.ʕar.raj.ta/: second-person masculine singular past active of تَعَرَّى (taʕarrā)\n# تَعَرَّيْتِ (taʕarrayti) /ta.ʕar.raj.ti/: second-person feminine singular past active of تَعَرَّى (taʕarrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʕarraytu", "taʕarrā", "taʕarrayta"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعرت",
-        "u": "تعرت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَعَرَّتْ • (taʕarrat) (form V) /ta.ʕar.rat/\n# third-person feminine singular past active of تَعَرَّى (taʕarrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʕarrat", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعريتما",
-        "u": "تعريتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَعَرَّيْتُمَا • (taʕarraytumā) (form V) /ta.ʕar.raj.tu.maː/\n# second-person dual past active of تَعَرَّى (taʕarrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʕarraytumā", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعرتا",
-        "u": "تعرتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَعَرَّتَا • (taʕarratā) (form V) /ta.ʕar.ra.taː/\n# third-person feminine dual past active of تَعَرَّى (taʕarrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʕarratā", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعريا",
-        "u": "تعريا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَعَرَّيَا • (taʕarrayā) (form V) /ta.ʕar.ra.jaː/\n# inflection of تَعَرَّى (taʕarrā):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʕarrayā", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعريتم",
-        "u": "تعريتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَعَرَّيْتُمْ • (taʕarraytum) (form V) /ta.ʕar.raj.tum/\n# second-person masculine plural past active of تَعَرَّى (taʕarrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʕarraytum", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعريتن",
-        "u": "تعريتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَعَرَّيْتُنَّ • (taʕarraytunna) (form V) /ta.ʕar.raj.tun.na/\n# second-person feminine plural past active of تَعَرَّى (taʕarrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʕarraytunna", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعروا",
-        "u": "تعروا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَعَرَّوْا • (taʕarraw) (form V) /ta.ʕar.raw/\n# inflection of تَعَرَّى (taʕarrā):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʕarraw", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "أتعرى",
-        "u": "أتعرى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَتَعَرَّى • (ʔataʕarrā) (form V) /ʔa.ta.ʕar.raː/\n# first-person singular non-past active indicative/subjunctive of تَعَرَّى (taʕarrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔataʕarrā", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعرين",
-        "u": "تعرين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَعَرَّيْنَ • (taʕarrayna) (form V) /ta.ʕar.raj.na/\n# inflection of تَعَرَّى (taʕarrā):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʕarrayna", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعرينا",
-        "u": "تعرينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَعَرَّيْنَا • (taʕarraynā) (form V) /ta.ʕar.raj.naː/\n# first-person plural past active of تَعَرَّى (taʕarrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʕarraynā", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتعرين",
-        "u": "تتعرين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَعَرَّيْنَ • (tataʕarrayna) (form V) /ta.ta.ʕar.raj.na/\n# inflection of تَعَرَّى (taʕarrā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʕarrayna", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتعرى",
-        "u": "تتعرى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَعَرَّى • (tataʕarrā) (form V) /ta.ta.ʕar.raː/\n# inflection of تَعَرَّى (taʕarrā):\n## second-person masculine singular non-past active indicative/subjunctive\n## third-person feminine singular non-past active indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʕarrā", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتعريان",
-        "u": "تتعريان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَعَرَّيَانِ • (tataʕarrayāni) (form V) /ta.ta.ʕar.ra.jaː.ni/\n# inflection of تَعَرَّى (taʕarrā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʕarrayāni", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتعرى",
-        "u": "يتعرى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَعَرَّى • (yataʕarrā) (form V) /ja.ta.ʕar.raː/\n# third-person masculine singular non-past active indicative/subjunctive of تَعَرَّى (taʕarrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʕarrā", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتعريان",
-        "u": "يتعريان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَعَرَّيَانِ • (yataʕarrayāni) (form V) /ja.ta.ʕar.ra.jaː.ni/\n# third-person masculine dual non-past active indicative of تَعَرَّى (taʕarrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʕarrayāni", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "نتعرى",
-        "u": "نتعرى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَتَعَرَّى • (nataʕarrā) (form V) /na.ta.ʕar.raː/\n# first-person plural non-past active indicative/subjunctive of تَعَرَّى (taʕarrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["nataʕarrā", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتعرون",
-        "u": "تتعرون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَعَرَّوْنَ • (tataʕarrawna) (form V) /ta.ta.ʕar.raw.na/\n# second-person masculine plural non-past active indicative of تَعَرَّى (taʕarrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʕarrawna", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتعرين",
-        "u": "يتعرين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَعَرَّيْنَ • (yataʕarrayna) (form V) /ja.ta.ʕar.raj.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَعَرَّى (taʕarrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʕarrayna", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتعري",
-        "u": "تتعري",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَعَرَّيْ • (tataʕarray) (form V) /ta.ta.ʕar.raj/\n# second-person feminine singular non-past active subjunctive/jussive of تَعَرَّى (taʕarrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʕarray", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتعرون",
-        "u": "يتعرون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَعَرَّوْنَ • (yataʕarrawna) (form V) /ja.ta.ʕar.raw.na/\n# third-person masculine plural non-past active indicative of تَعَرَّى (taʕarrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʕarrawna", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتعر",
-        "u": "يتعر",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَعَرَّ • (yataʕarra) (form V) /ja.ta.ʕar.ra/\n# third-person masculine singular non-past active jussive of تَعَرَّى (taʕarrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʕarra", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتعريا",
-        "u": "تتعريا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَعَرَّيَا • (tataʕarrayā) (form V) /ta.ta.ʕar.ra.jaː/\n# inflection of تَعَرَّى (taʕarrā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʕarrayā", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتعروا",
-        "u": "يتعروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَعَرَّوْا • (yataʕarraw) (form V) /ja.ta.ʕar.raw/\n# third-person masculine plural non-past active subjunctive/jussive of تَعَرَّى (taʕarrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʕarraw", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتعريا",
-        "u": "يتعريا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَعَرَّيَا • (yataʕarrayā) (form V) /ja.ta.ʕar.ra.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of تَعَرَّى (taʕarrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʕarrayā", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "أتعر",
-        "u": "أتعر",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَتَعَرَّ • (ʔataʕarra) (form V) /ʔa.ta.ʕar.ra/\n# first-person singular non-past active jussive of تَعَرَّى (taʕarrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔataʕarra", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتعروا",
-        "u": "تتعروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَعَرَّوْا • (tataʕarraw) (form V) /ta.ta.ʕar.raw/\n# second-person masculine plural non-past active subjunctive/jussive of تَعَرَّى (taʕarrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʕarraw", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "نتعر",
-        "u": "نتعر",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَتَعَرَّ • (nataʕarra) (form V) /na.ta.ʕar.ra/\n# first-person plural non-past active jussive of تَعَرَّى (taʕarrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["nataʕarra", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تعري",
-        "u": "تعري",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَعَرَّيْ • (taʕarray) (form V) /ta.ʕar.raj/\n# second-person feminine singular imperative of تَعَرَّى (taʕarrā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʕarray", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتعر",
-        "u": "تتعر",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَعَرَّ • (tataʕarra) (form V) /ta.ta.ʕar.ra/\n# inflection of تَعَرَّى (taʕarrā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʕarra", "taʕarrā"],
-        "k": "تعرى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تع",
+  "ses": {
     "harf": "ت",
+    "fasil": "تع",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "تعر",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَعَرَّ • (taʕarra) (form V) /ta.ʕar.ra/\n# second-person masculine singular imperative of تَعَرَّى (taʕarrā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʕarra", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعريت",
+      "tur": "verb",
+      "baslik": "تعريت (form V)\n# تَعَرَّيْتُ (taʕarraytu) /ta.ʕar.raj.tu/: first-person singular past active of تَعَرَّى (taʕarrā)\n# تَعَرَّيْتَ (taʕarrayta) /ta.ʕar.raj.ta/: second-person masculine singular past active of تَعَرَّى (taʕarrā)\n# تَعَرَّيْتِ (taʕarrayti) /ta.ʕar.raj.ti/: second-person feminine singular past active of تَعَرَّى (taʕarrā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʕarraytu", "taʕarrā", "taʕarrayta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعرت",
+      "tur": "verb",
+      "baslik": "تَعَرَّتْ • (taʕarrat) (form V) /ta.ʕar.rat/\n# third-person feminine singular past active of تَعَرَّى (taʕarrā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʕarrat", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعريتما",
+      "tur": "verb",
+      "baslik": "تَعَرَّيْتُمَا • (taʕarraytumā) (form V) /ta.ʕar.raj.tu.maː/\n# second-person dual past active of تَعَرَّى (taʕarrā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʕarraytumā", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعرتا",
+      "tur": "verb",
+      "baslik": "تَعَرَّتَا • (taʕarratā) (form V) /ta.ʕar.ra.taː/\n# third-person feminine dual past active of تَعَرَّى (taʕarrā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʕarratā", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعريا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَعَرَّيَا • (taʕarrayā) (form V) /ta.ʕar.ra.jaː/\n# inflection of تَعَرَّى (taʕarrā):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʕarrayā", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعريتم",
+      "tur": "verb",
+      "baslik": "تَعَرَّيْتُمْ • (taʕarraytum) (form V) /ta.ʕar.raj.tum/\n# second-person masculine plural past active of تَعَرَّى (taʕarrā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʕarraytum", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعريتن",
+      "tur": "verb",
+      "baslik": "تَعَرَّيْتُنَّ • (taʕarraytunna) (form V) /ta.ʕar.raj.tun.na/\n# second-person feminine plural past active of تَعَرَّى (taʕarrā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʕarraytunna", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعروا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَعَرَّوْا • (taʕarraw) (form V) /ta.ʕar.raw/\n# inflection of تَعَرَّى (taʕarrā):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʕarraw", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتعرى",
+      "tur": "verb",
+      "baslik": "أَتَعَرَّى • (ʔataʕarrā) (form V) /ʔa.ta.ʕar.raː/\n# first-person singular non-past active indicative/subjunctive of تَعَرَّى (taʕarrā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔataʕarrā", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعرين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَعَرَّيْنَ • (taʕarrayna) (form V) /ta.ʕar.raj.na/\n# inflection of تَعَرَّى (taʕarrā):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʕarrayna", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعرينا",
+      "tur": "verb",
+      "baslik": "تَعَرَّيْنَا • (taʕarraynā) (form V) /ta.ʕar.raj.naː/\n# first-person plural past active of تَعَرَّى (taʕarrā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʕarraynā", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتعرين",
+      "tur": "verb",
+      "baslik": "تَتَعَرَّيْنَ • (tataʕarrayna) (form V) /ta.ta.ʕar.raj.na/\n# inflection of تَعَرَّى (taʕarrā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʕarrayna", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتعرى",
+      "tur": "verb",
+      "baslik": "تَتَعَرَّى • (tataʕarrā) (form V) /ta.ta.ʕar.raː/\n# inflection of تَعَرَّى (taʕarrā):\n## second-person masculine singular non-past active indicative/subjunctive\n## third-person feminine singular non-past active indicative/subjunctive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʕarrā", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتعريان",
+      "tur": "verb",
+      "baslik": "تَتَعَرَّيَانِ • (tataʕarrayāni) (form V) /ta.ta.ʕar.ra.jaː.ni/\n# inflection of تَعَرَّى (taʕarrā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʕarrayāni", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتعرى",
+      "tur": "verb",
+      "baslik": "يَتَعَرَّى • (yataʕarrā) (form V) /ja.ta.ʕar.raː/\n# third-person masculine singular non-past active indicative/subjunctive of تَعَرَّى (taʕarrā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʕarrā", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتعريان",
+      "tur": "verb",
+      "baslik": "يَتَعَرَّيَانِ • (yataʕarrayāni) (form V) /ja.ta.ʕar.ra.jaː.ni/\n# third-person masculine dual non-past active indicative of تَعَرَّى (taʕarrā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʕarrayāni", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتعرى",
+      "tur": "verb",
+      "baslik": "نَتَعَرَّى • (nataʕarrā) (form V) /na.ta.ʕar.raː/\n# first-person plural non-past active indicative/subjunctive of تَعَرَّى (taʕarrā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["nataʕarrā", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتعرون",
+      "tur": "verb",
+      "baslik": "تَتَعَرَّوْنَ • (tataʕarrawna) (form V) /ta.ta.ʕar.raw.na/\n# second-person masculine plural non-past active indicative of تَعَرَّى (taʕarrā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʕarrawna", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتعرين",
+      "tur": "verb",
+      "baslik": "يَتَعَرَّيْنَ • (yataʕarrayna) (form V) /ja.ta.ʕar.raj.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَعَرَّى (taʕarrā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʕarrayna", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتعري",
+      "tur": "verb",
+      "baslik": "تَتَعَرَّيْ • (tataʕarray) (form V) /ta.ta.ʕar.raj/\n# second-person feminine singular non-past active subjunctive/jussive of تَعَرَّى (taʕarrā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʕarray", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتعرون",
+      "tur": "verb",
+      "baslik": "يَتَعَرَّوْنَ • (yataʕarrawna) (form V) /ja.ta.ʕar.raw.na/\n# third-person masculine plural non-past active indicative of تَعَرَّى (taʕarrā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʕarrawna", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتعر",
+      "tur": "verb",
+      "baslik": "يَتَعَرَّ • (yataʕarra) (form V) /ja.ta.ʕar.ra/\n# third-person masculine singular non-past active jussive of تَعَرَّى (taʕarrā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʕarra", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتعريا",
+      "tur": "verb",
+      "baslik": "تَتَعَرَّيَا • (tataʕarrayā) (form V) /ta.ta.ʕar.ra.jaː/\n# inflection of تَعَرَّى (taʕarrā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʕarrayā", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتعروا",
+      "tur": "verb",
+      "baslik": "يَتَعَرَّوْا • (yataʕarraw) (form V) /ja.ta.ʕar.raw/\n# third-person masculine plural non-past active subjunctive/jussive of تَعَرَّى (taʕarrā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʕarraw", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتعريا",
+      "tur": "verb",
+      "baslik": "يَتَعَرَّيَا • (yataʕarrayā) (form V) /ja.ta.ʕar.ra.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of تَعَرَّى (taʕarrā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʕarrayā", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتعر",
+      "tur": "verb",
+      "baslik": "أَتَعَرَّ • (ʔataʕarra) (form V) /ʔa.ta.ʕar.ra/\n# first-person singular non-past active jussive of تَعَرَّى (taʕarrā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔataʕarra", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتعروا",
+      "tur": "verb",
+      "baslik": "تَتَعَرَّوْا • (tataʕarraw) (form V) /ta.ta.ʕar.raw/\n# second-person masculine plural non-past active subjunctive/jussive of تَعَرَّى (taʕarrā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʕarraw", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتعر",
+      "tur": "verb",
+      "baslik": "نَتَعَرَّ • (nataʕarra) (form V) /na.ta.ʕar.ra/\n# first-person plural non-past active jussive of تَعَرَّى (taʕarrā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["nataʕarra", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعري",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَعَرَّيْ • (taʕarray) (form V) /ta.ʕar.raj/\n# second-person feminine singular imperative of تَعَرَّى (taʕarrā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʕarray", "taʕarrā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتعر",
+      "tur": "verb",
+      "baslik": "تَتَعَرَّ • (tataʕarra) (form V) /ta.ta.ʕar.ra/\n# inflection of تَعَرَّى (taʕarrā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʕarra", "taʕarrā"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "تعرى", "r6"]
+  ],
+  "mana": {
     "ince": "state.n.02",
     "orta": "noun.state",
     "ust": "hâl ve vasıf",
@@ -412,22 +293,15 @@
     "dayanak_tanim": "the state of being without clothing or covering of any kind",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["condition.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["condition.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

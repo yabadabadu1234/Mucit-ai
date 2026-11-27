@@ -1,474 +1,338 @@
 {
   "kok": "ناف",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ناف", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أنف",
-        "u": "أنف",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "أنف (form I)\n# أَنُفْ (ʔanuf) /ʔa.nuf/: first-person singular non-past active jussive of نَافَ (nāfa)\n# أُنَفْ (ʔunaf) /ʔu.naf/: first-person singular non-past passive jussive of نَافَ (nāfa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔanuf", "nāfa", "ʔunaf"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "نفت",
-        "u": "نفت",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "نفت (form I)\n# نُفْتُ (nuftu) /nuf.tu/: first-person singular past active of نَافَ (nāfa)\n# نُفْتَ (nufta) /nuf.ta/: second-person masculine singular past active of نَافَ (nāfa)\n# نُفْتِ (nufti) /nuf.ti/: second-person feminine singular past active of نَافَ (nāfa)\n# نِفْتُ (niftu) /nif.tu/: first-person singular past passive of نَافَ (nāfa)\n# نِفْتَ (nifta) /nif.ta/: second-person masculine singul",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuftu", "nāfa", "nufta"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "أنوف",
-        "u": "أنوف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أنوف (form I)\n# أَنُوفُ (ʔanūfu) /ʔa.nuː.fu/: first-person singular non-past active indicative of نَافَ (nāfa)\n# أَنُوفَ (ʔanūfa) /ʔa.nuː.fa/: first-person singular non-past active subjunctive of نَافَ (nāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔanūfu", "nāfa", "ʔanūfa"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "ينف",
-        "u": "ينف",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "ينف (form I)\n# يَنُفْ (yanuf) /ja.nuf/: third-person masculine singular non-past active jussive of نَافَ (nāfa)\n# يُنَفْ (yunaf) /ju.naf/: third-person masculine singular non-past passive jussive of نَافَ (nāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanuf", "nāfa", "yunaf"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "تنف",
-        "u": "تنف",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تنف (form I)\n# تَنُفْ (tanuf) /ta.nuf/: inflection of نَافَ (nāfa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُنَفْ (tunaf) /tu.naf/: inflection of نَافَ (nāfa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanuf", "nāfa", "tunaf"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "نفن",
-        "u": "نفن",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "نفن (form I)\n# نُفْنَ (nufna) /nuf.na/: inflection of نَافَ (nāfa):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# نِفْنَ (nifna) /nif.na/: third-person feminine plural past passive of نَافَ (nāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nufna", "nāfa", "nifna"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "نوفي",
-        "u": "نوفي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نُوفِي • (nūfī) (form I) /nuː.fiː/\n# second-person feminine singular imperative of نَافَ (nāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nūfī", "nāfa"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "ننف",
-        "u": "ننف",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "ننف (form I)\n# نَنُفْ (nanuf) /na.nuf/: first-person plural non-past active jussive of نَافَ (nāfa)\n# نُنَفْ (nunaf) /nu.naf/: first-person plural non-past passive jussive of نَافَ (nāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nanuf", "nāfa", "nunaf"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "نف",
-        "u": "نف",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نُفْ • (nuf) (form I) /nuf/\n# second-person masculine singular imperative of نَافَ (nāfa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuf", "nāfa"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "ينفن",
-        "u": "ينفن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ينفن (form I)\n# يَنُفْنَ (yanufna) /ja.nuf.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of نَافَ (nāfa)\n# يُنَفْنَ (yunafna) /ju.naf.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of نَافَ (nāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanufna", "nāfa", "yunafna"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "تنفن",
-        "u": "تنفن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تنفن (form I)\n# تَنُفْنَ (tanufna) /ta.nuf.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of نَافَ (nāfa)\n# تُنَفْنَ (tunafna) /tu.naf.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of نَافَ (nāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanufna", "nāfa", "tunafna"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوفي",
-        "u": "تنوفي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَنُوفِي • (tanūfī) (form I) /ta.nuː.fiː/\n# second-person feminine singular non-past active subjunctive/jussive of نَافَ (nāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūfī", "nāfa"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "نفتن",
-        "u": "نفتن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نفتن (form I)\n# نُفْتُنَّ (nuftunna) /nuf.tun.na/: second-person feminine plural past active of نَافَ (nāfa)\n# نِفْتُنَّ (niftunna) /nif.tun.na/: second-person feminine plural past passive of نَافَ (nāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuftunna", "nāfa", "niftunna"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "نفتما",
-        "u": "نفتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نفتما (form I)\n# نُفْتُمَا (nuftumā) /nuf.tu.maː/: second-person dual past active of نَافَ (nāfa)\n# نِفْتُمَا (niftumā) /nif.tu.maː/: second-person dual past passive of نَافَ (nāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuftumā", "nāfa", "niftumā"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "نافا",
-        "u": "نافا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَافَا • (nāfā) (form I) /naː.faː/\n# third-person masculine dual past active of نَافَ (nāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nāfā", "nāfa"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "نافتا",
-        "u": "نافتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نَافَتَا • (nāfatā) (form I) /naː.fa.taː/\n# third-person feminine dual past active of نَافَ (nāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nāfatā", "nāfa"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "نافت",
-        "u": "نافت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نَافَتْ • (nāfat) (form I) /naː.fat/\n# third-person feminine singular past active of نَافَ (nāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nāfat", "nāfa"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "نفنا",
-        "u": "نفنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نفنا (form I)\n# نُفْنَا (nufnā) /nuf.naː/: first-person plural past active of نَافَ (nāfa)\n# نِفْنَا (nifnā) /nif.naː/: first-person plural past passive of نَافَ (nāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nufnā", "nāfa", "nifnā"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوف",
-        "u": "تنوف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تنوف (form I)\n# تَنُوفُ (tanūfu) /ta.nuː.fu/: inflection of نَافَ (nāfa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَنُوفَ (tanūfa) /ta.nuː.fa/: inflection of نَافَ (nāfa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūfu", "nāfa", "tanūfa"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "نافوا",
-        "u": "نافوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نَافُوا • (nāfū) (form I) /naː.fuː/\n# third-person masculine plural past active of نَافَ (nāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nāfū", "nāfa"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوفان",
-        "u": "تنوفان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنُوفَانِ • (tanūfāni) (form I) /ta.nuː.faː.ni/\n# inflection of نَافَ (nāfa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūfāni", "nāfa"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "نفتم",
-        "u": "نفتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نفتم (form I)\n# نُفْتُمْ (nuftum) /nuf.tum/: second-person masculine plural past active of نَافَ (nāfa)\n# نِفْتُمْ (niftum) /nif.tum/: second-person masculine plural past passive of نَافَ (nāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuftum", "nāfa", "niftum"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "ينوف",
-        "u": "ينوف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ينوف (form I)\n# يَنُوفُ (yanūfu) /ja.nuː.fu/: third-person masculine singular non-past active indicative of نَافَ (nāfa)\n# يَنُوفَ (yanūfa) /ja.nuː.fa/: third-person masculine singular non-past active subjunctive of نَافَ (nāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanūfu", "nāfa", "yanūfa"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوفين",
-        "u": "تنوفين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنُوفِينَ • (tanūfīna) (form I) /ta.nuː.fiː.na/\n# second-person feminine singular non-past active indicative of نَافَ (nāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūfīna", "nāfa"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "ننوف",
-        "u": "ننوف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ننوف (form I)\n# نَنُوفُ (nanūfu) /na.nuː.fu/: first-person plural non-past active indicative of نَافَ (nāfa)\n# نَنُوفَ (nanūfa) /na.nuː.fa/: first-person plural non-past active subjunctive of نَافَ (nāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nanūfu", "nāfa", "nanūfa"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "ينوفان",
-        "u": "ينوفان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَنُوفَانِ • (yanūfāni) (form I) /ja.nuː.faː.ni/\n# third-person masculine dual non-past active indicative of نَافَ (nāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanūfāni", "nāfa"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "ينوفون",
-        "u": "ينوفون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَنُوفُونَ • (yanūfūna) (form I) /ja.nuː.fuː.na/\n# third-person masculine plural non-past active indicative of نَافَ (nāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanūfūna", "nāfa"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوفون",
-        "u": "تنوفون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنُوفُونَ • (tanūfūna) (form I) /ta.nuː.fuː.na/\n# second-person masculine plural non-past active indicative of نَافَ (nāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūfūna", "nāfa"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوفا",
-        "u": "تنوفا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنُوفَا • (tanūfā) (form I) /ta.nuː.faː/\n# inflection of نَافَ (nāfa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūfā", "nāfa"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "ينوفا",
-        "u": "ينوفا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَنُوفَا • (yanūfā) (form I) /ja.nuː.faː/\n# third-person masculine dual non-past active subjunctive/jussive of نَافَ (nāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanūfā", "nāfa"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "نوفا",
-        "u": "نوفا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوفَا • (nūfā) (form I) /nuː.faː/\n# second-person dual imperative of نَافَ (nāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nūfā", "nāfa"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوفوا",
-        "u": "تنوفوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنُوفُوا • (tanūfū) (form I) /ta.nuː.fuː/\n# second-person masculine plural non-past active subjunctive/jussive of نَافَ (nāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūfū", "nāfa"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "ينوفوا",
-        "u": "ينوفوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَنُوفُوا • (yanūfū) (form I) /ja.nuː.fuː/\n# third-person masculine plural non-past active subjunctive/jussive of نَافَ (nāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanūfū", "nāfa"],
-        "k": "ناف",
-        "yol": "kök"
-      },
-      {
-        "w": "نوفوا",
-        "u": "نوفوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نُوفُوا • (nūfū) (form I) /nuː.fuː/\n# second-person masculine plural imperative of نَافَ (nāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nūfū", "nāfa"],
-        "k": "ناف",
-        "yol": "kök"
-      }
-    ],
-    "tercume": {}
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "نف",
+  "ses": {
     "harf": "ن",
+    "fasil": "نف",
     "mahrec": "zelakiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "أنف",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "أنف (form I)\n# أَنُفْ (ʔanuf) /ʔa.nuf/: first-person singular non-past active jussive of نَافَ (nāfa)\n# أُنَفْ (ʔunaf) /ʔu.naf/: first-person singular non-past passive jussive of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔanuf", "nāfa", "ʔunaf"]
+    },
+    {
+      "madde": "نفت",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "نفت (form I)\n# نُفْتُ (nuftu) /nuf.tu/: first-person singular past active of نَافَ (nāfa)\n# نُفْتَ (nufta) /nuf.ta/: second-person masculine singular past active of نَافَ (nāfa)\n# نُفْتِ (nufti) /nuf.ti/: second-person feminine singular past active of نَافَ (nāfa)\n# نِفْتُ (niftu) /nif.tu/: first-person singular past passive of نَافَ (nāfa)\n# نِفْتَ (nifta) /nif.ta/: second-person masculine singul",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuftu", "nāfa", "nufta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أنوف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أنوف (form I)\n# أَنُوفُ (ʔanūfu) /ʔa.nuː.fu/: first-person singular non-past active indicative of نَافَ (nāfa)\n# أَنُوفَ (ʔanūfa) /ʔa.nuː.fa/: first-person singular non-past active subjunctive of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔanūfu", "nāfa", "ʔanūfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينف",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "ينف (form I)\n# يَنُفْ (yanuf) /ja.nuf/: third-person masculine singular non-past active jussive of نَافَ (nāfa)\n# يُنَفْ (yunaf) /ju.naf/: third-person masculine singular non-past passive jussive of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanuf", "nāfa", "yunaf"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنف",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تنف (form I)\n# تَنُفْ (tanuf) /ta.nuf/: inflection of نَافَ (nāfa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُنَفْ (tunaf) /tu.naf/: inflection of نَافَ (nāfa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanuf", "nāfa", "tunaf"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نفن",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "نفن (form I)\n# نُفْنَ (nufna) /nuf.na/: inflection of نَافَ (nāfa):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# نِفْنَ (nifna) /nif.na/: third-person feminine plural past passive of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nufna", "nāfa", "nifna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوفي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نُوفِي • (nūfī) (form I) /nuː.fiː/\n# second-person feminine singular imperative of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nūfī", "nāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ننف",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "ننف (form I)\n# نَنُفْ (nanuf) /na.nuf/: first-person plural non-past active jussive of نَافَ (nāfa)\n# نُنَفْ (nunaf) /nu.naf/: first-person plural non-past passive jussive of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nanuf", "nāfa", "nunaf"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نف",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نُفْ • (nuf) (form I) /nuf/\n# second-person masculine singular imperative of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuf", "nāfa"]
+    },
+    {
+      "madde": "ينفن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ينفن (form I)\n# يَنُفْنَ (yanufna) /ja.nuf.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of نَافَ (nāfa)\n# يُنَفْنَ (yunafna) /ju.naf.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanufna", "nāfa", "yunafna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنفن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تنفن (form I)\n# تَنُفْنَ (tanufna) /ta.nuf.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of نَافَ (nāfa)\n# تُنَفْنَ (tunafna) /tu.naf.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanufna", "nāfa", "tunafna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنوفي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَنُوفِي • (tanūfī) (form I) /ta.nuː.fiː/\n# second-person feminine singular non-past active subjunctive/jussive of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūfī", "nāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نفتن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نفتن (form I)\n# نُفْتُنَّ (nuftunna) /nuf.tun.na/: second-person feminine plural past active of نَافَ (nāfa)\n# نِفْتُنَّ (niftunna) /nif.tun.na/: second-person feminine plural past passive of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuftunna", "nāfa", "niftunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نفتما",
+      "tur": "verb",
+      "baslik": "نفتما (form I)\n# نُفْتُمَا (nuftumā) /nuf.tu.maː/: second-person dual past active of نَافَ (nāfa)\n# نِفْتُمَا (niftumā) /nif.tu.maː/: second-person dual past passive of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuftumā", "nāfa", "niftumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نافا",
+      "tur": "verb",
+      "baslik": "نَافَا • (nāfā) (form I) /naː.faː/\n# third-person masculine dual past active of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nāfā", "nāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نافتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نَافَتَا • (nāfatā) (form I) /naː.fa.taː/\n# third-person feminine dual past active of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nāfatā", "nāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نافت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نَافَتْ • (nāfat) (form I) /naː.fat/\n# third-person feminine singular past active of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nāfat", "nāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نفنا",
+      "tur": "verb",
+      "baslik": "نفنا (form I)\n# نُفْنَا (nufnā) /nuf.naː/: first-person plural past active of نَافَ (nāfa)\n# نِفْنَا (nifnā) /nif.naː/: first-person plural past passive of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nufnā", "nāfa", "nifnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنوف",
+      "tur": "verb",
+      "baslik": "تنوف (form I)\n# تَنُوفُ (tanūfu) /ta.nuː.fu/: inflection of نَافَ (nāfa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَنُوفَ (tanūfa) /ta.nuː.fa/: inflection of نَافَ (nāfa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūfu", "nāfa", "tanūfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نافوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نَافُوا • (nāfū) (form I) /naː.fuː/\n# third-person masculine plural past active of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nāfū", "nāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنوفان",
+      "tur": "verb",
+      "baslik": "تَنُوفَانِ • (tanūfāni) (form I) /ta.nuː.faː.ni/\n# inflection of نَافَ (nāfa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūfāni", "nāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نفتم",
+      "tur": "verb",
+      "baslik": "نفتم (form I)\n# نُفْتُمْ (nuftum) /nuf.tum/: second-person masculine plural past active of نَافَ (nāfa)\n# نِفْتُمْ (niftum) /nif.tum/: second-person masculine plural past passive of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuftum", "nāfa", "niftum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينوف",
+      "tur": "verb",
+      "baslik": "ينوف (form I)\n# يَنُوفُ (yanūfu) /ja.nuː.fu/: third-person masculine singular non-past active indicative of نَافَ (nāfa)\n# يَنُوفَ (yanūfa) /ja.nuː.fa/: third-person masculine singular non-past active subjunctive of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanūfu", "nāfa", "yanūfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنوفين",
+      "tur": "verb",
+      "baslik": "تَنُوفِينَ • (tanūfīna) (form I) /ta.nuː.fiː.na/\n# second-person feminine singular non-past active indicative of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūfīna", "nāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ننوف",
+      "tur": "verb",
+      "baslik": "ننوف (form I)\n# نَنُوفُ (nanūfu) /na.nuː.fu/: first-person plural non-past active indicative of نَافَ (nāfa)\n# نَنُوفَ (nanūfa) /na.nuː.fa/: first-person plural non-past active subjunctive of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nanūfu", "nāfa", "nanūfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينوفان",
+      "tur": "verb",
+      "baslik": "يَنُوفَانِ • (yanūfāni) (form I) /ja.nuː.faː.ni/\n# third-person masculine dual non-past active indicative of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanūfāni", "nāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينوفون",
+      "tur": "verb",
+      "baslik": "يَنُوفُونَ • (yanūfūna) (form I) /ja.nuː.fuː.na/\n# third-person masculine plural non-past active indicative of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanūfūna", "nāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنوفون",
+      "tur": "verb",
+      "baslik": "تَنُوفُونَ • (tanūfūna) (form I) /ta.nuː.fuː.na/\n# second-person masculine plural non-past active indicative of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūfūna", "nāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنوفا",
+      "tur": "verb",
+      "baslik": "تَنُوفَا • (tanūfā) (form I) /ta.nuː.faː/\n# inflection of نَافَ (nāfa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūfā", "nāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينوفا",
+      "tur": "verb",
+      "baslik": "يَنُوفَا • (yanūfā) (form I) /ja.nuː.faː/\n# third-person masculine dual non-past active subjunctive/jussive of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanūfā", "nāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوفا",
+      "tur": "verb",
+      "baslik": "نُوفَا • (nūfā) (form I) /nuː.faː/\n# second-person dual imperative of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nūfā", "nāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنوفوا",
+      "tur": "verb",
+      "baslik": "تَنُوفُوا • (tanūfū) (form I) /ta.nuː.fuː/\n# second-person masculine plural non-past active subjunctive/jussive of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūfū", "nāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينوفوا",
+      "tur": "verb",
+      "baslik": "يَنُوفُوا • (yanūfū) (form I) /ja.nuː.fuː/\n# third-person masculine plural non-past active subjunctive/jussive of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanūfū", "nāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوفوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نُوفُوا • (nūfū) (form I) /nuː.fuː/\n# second-person masculine plural imperative of نَافَ (nāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nūfū", "nāfa"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ناف", "r7"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

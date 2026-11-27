@@ -1,440 +1,345 @@
 {
   "kok": "تءتى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تءتى", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تؤتي",
-        "u": "تؤتي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تُؤُتِّيَ • (tuʔuttiya) (form V) /tu.ʔut.ti.ja/\n# third-person masculine singular past passive of تَأَتَّى (taʔattā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tuʔuttiya", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "تأتي",
-        "u": "تأتي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَأَتَّيْ • (taʔattay) (form V) /ta.ʔat.taj/\n# second-person feminine singular imperative of تَأَتَّى (taʔattā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔattay", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "تأت",
-        "u": "تأت",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَأَتَّ • (taʔatta) (form V) /ta.ʔat.ta/\n# second-person masculine singular imperative of تَأَتَّى (taʔattā)",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔatta", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "تأتين",
-        "u": "تأتين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَأَتَّيْنَ • (taʔattayna) (form V) /ta.ʔat.taj.na/\n# inflection of تَأَتَّى (taʔattā):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔattayna", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "تأتوا",
-        "u": "تأتوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَأَتَّوْا • (taʔattaw) (form V) /ta.ʔat.taw/\n# inflection of تَأَتَّى (taʔattā):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔattaw", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "تأتيا",
-        "u": "تأتيا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَأَتَّيَا • (taʔattayā) (form V) /ta.ʔat.ta.jaː/\n# inflection of تَأَتَّى (taʔattā):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔattayā", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "تأتيت",
-        "u": "تأتيت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تأتيت (form V)\n# تَأَتَّيْتُ (taʔattaytu) /ta.ʔat.taj.tu/: first-person singular past active of تَأَتَّى (taʔattā)\n# تَأَتَّيْتَ (taʔattayta) /ta.ʔat.taj.ta/: second-person masculine singular past active of تَأَتَّى (taʔattā)\n# تَأَتَّيْتِ (taʔattayti) /ta.ʔat.taj.ti/: second-person feminine singular past active of تَأَتَّى (taʔattā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔattaytu", "taʔattā", "taʔattayta"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "تأتيتما",
-        "u": "تأتيتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَتَّيْتُمَا • (taʔattaytumā) (form V) /ta.ʔat.taj.tu.maː/\n# second-person dual past active of تَأَتَّى (taʔattā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔattaytumā", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "تأتيتم",
-        "u": "تأتيتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَتَّيْتُمْ • (taʔattaytum) (form V) /ta.ʔat.taj.tum/\n# second-person masculine plural past active of تَأَتَّى (taʔattā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔattaytum", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "تأتيتن",
-        "u": "تأتيتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَتَّيْتُنَّ • (taʔattaytunna) (form V) /ta.ʔat.taj.tun.na/\n# second-person feminine plural past active of تَأَتَّى (taʔattā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔattaytunna", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "تأتت",
-        "u": "تأتت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَتَّتْ • (taʔattat) (form V) /ta.ʔat.tat/\n# third-person feminine singular past active of تَأَتَّى (taʔattā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔattat", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "تأتتا",
-        "u": "تأتتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَتَّتَا • (taʔattatā) (form V) /ta.ʔat.ta.taː/\n# third-person feminine dual past active of تَأَتَّى (taʔattā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔattatā", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "أتأتى",
-        "u": "أتأتى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَتَأَتَّى • (ʔataʔattā) (form V) /ʔa.ta.ʔat.taː/\n# first-person singular non-past active indicative/subjunctive of تَأَتَّى (taʔattā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔataʔattā", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتأتى",
-        "u": "يتأتى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتأتى (form V)\n# يَتَأَتَّى (yataʔattā) /ja.ta.ʔat.taː/: third-person masculine singular non-past active indicative/subjunctive of تَأَتَّى (taʔattā)\n# يُتَأَتَّى (yutaʔattā) /ju.ta.ʔat.taː/: third-person masculine singular non-past passive indicative/subjunctive of تَأَتَّى (taʔattā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔattā", "taʔattā", "yutaʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "تأتينا",
-        "u": "تأتينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَأَتَّيْنَا • (taʔattaynā) (form V) /ta.ʔat.taj.naː/\n# first-person plural past active of تَأَتَّى (taʔattā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["taʔattaynā", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأتى",
-        "u": "تتأتى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَتَّى • (tataʔattā) (form V) /ta.ta.ʔat.taː/\n# inflection of تَأَتَّى (taʔattā):\n## second-person masculine singular non-past active indicative/subjunctive\n## third-person feminine singular non-past active indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔattā", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأتين",
-        "u": "تتأتين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَتَّيْنَ • (tataʔattayna) (form V) /ta.ta.ʔat.taj.na/\n# inflection of تَأَتَّى (taʔattā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔattayna", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأتيان",
-        "u": "تتأتيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَتَّيَانِ • (tataʔattayāni) (form V) /ta.ta.ʔat.ta.jaː.ni/\n# inflection of تَأَتَّى (taʔattā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔattayāni", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "نتأتى",
-        "u": "نتأتى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَتَأَتَّى • (nataʔattā) (form V) /na.ta.ʔat.taː/\n# first-person plural non-past active indicative/subjunctive of تَأَتَّى (taʔattā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["nataʔattā", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتأتون",
-        "u": "يتأتون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَأَتَّوْنَ • (yataʔattawna) (form V) /ja.ta.ʔat.taw.na/\n# third-person masculine plural non-past active indicative of تَأَتَّى (taʔattā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔattawna", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأتي",
-        "u": "تتأتي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَتَّيْ • (tataʔattay) (form V) /ta.ta.ʔat.taj/\n# second-person feminine singular non-past active subjunctive/jussive of تَأَتَّى (taʔattā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔattay", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتأتيان",
-        "u": "يتأتيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَأَتَّيَانِ • (yataʔattayāni) (form V) /ja.ta.ʔat.ta.jaː.ni/\n# third-person masculine dual non-past active indicative of تَأَتَّى (taʔattā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔattayāni", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأتون",
-        "u": "تتأتون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَتَّوْنَ • (tataʔattawna) (form V) /ta.ta.ʔat.taw.na/\n# second-person masculine plural non-past active indicative of تَأَتَّى (taʔattā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔattawna", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتأتيا",
-        "u": "يتأتيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَأَتَّيَا • (yataʔattayā) (form V) /ja.ta.ʔat.ta.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of تَأَتَّى (taʔattā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔattayā", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأتيا",
-        "u": "تتأتيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَتَّيَا • (tataʔattayā) (form V) /ta.ta.ʔat.ta.jaː/\n# inflection of تَأَتَّى (taʔattā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔattayā", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "أتأت",
-        "u": "أتأت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَتَأَتَّ • (ʔataʔatta) (form V) /ʔa.ta.ʔat.ta/\n# first-person singular non-past active jussive of تَأَتَّى (taʔattā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔataʔatta", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتأتوا",
-        "u": "يتأتوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَأَتَّوْا • (yataʔattaw) (form V) /ja.ta.ʔat.taw/\n# third-person masculine plural non-past active subjunctive/jussive of تَأَتَّى (taʔattā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔattaw", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأتوا",
-        "u": "تتأتوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَتَّوْا • (tataʔattaw) (form V) /ta.ta.ʔat.taw/\n# second-person masculine plural non-past active subjunctive/jussive of تَأَتَّى (taʔattā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔattaw", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "تتأت",
-        "u": "تتأت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَأَتَّ • (tataʔatta) (form V) /ta.ta.ʔat.ta/\n# inflection of تَأَتَّى (taʔattā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tataʔatta", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتأت",
-        "u": "يتأت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتأت (form V)\n# يَتَأَتَّ (yataʔatta) /ja.ta.ʔat.ta/: third-person masculine singular non-past active jussive of تَأَتَّى (taʔattā)\n# يُتَأَتَّ (yutaʔatta) /ju.ta.ʔat.ta/: third-person masculine singular non-past passive jussive of تَأَتَّى (taʔattā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔatta", "taʔattā", "yutaʔatta"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "نتأت",
-        "u": "نتأت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نَتَأَتَّ • (nataʔatta) (form V) /na.ta.ʔat.ta/\n# first-person plural non-past active jussive of تَأَتَّى (taʔattā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["nataʔatta", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      },
-      {
-        "w": "يتأتين",
-        "u": "يتأتين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَأَتَّيْنَ • (yataʔattayna) (form V) /ja.ta.ʔat.taj.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَأَتَّى (taʔattā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yataʔattayna", "taʔattā"],
-        "k": "تأتى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تت",
+  "ses": {
     "harf": "ت",
+    "fasil": "تت",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تؤتي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تُؤُتِّيَ • (tuʔuttiya) (form V) /tu.ʔut.ti.ja/\n# third-person masculine singular past passive of تَأَتَّى (taʔattā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tuʔuttiya", "taʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأتي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَأَتَّيْ • (taʔattay) (form V) /ta.ʔat.taj/\n# second-person feminine singular imperative of تَأَتَّى (taʔattā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔattay", "taʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأت",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَأَتَّ • (taʔatta) (form V) /ta.ʔat.ta/\n# second-person masculine singular imperative of تَأَتَّى (taʔattā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔatta", "taʔattā"],
+      "kok_yazilis": "تأتى"
+    },
+    {
+      "madde": "تأتين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَأَتَّيْنَ • (taʔattayna) (form V) /ta.ʔat.taj.na/\n# inflection of تَأَتَّى (taʔattā):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔattayna", "taʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأتوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَأَتَّوْا • (taʔattaw) (form V) /ta.ʔat.taw/\n# inflection of تَأَتَّى (taʔattā):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔattaw", "taʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأتيا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَأَتَّيَا • (taʔattayā) (form V) /ta.ʔat.ta.jaː/\n# inflection of تَأَتَّى (taʔattā):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔattayā", "taʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأتيت",
+      "tur": "verb",
+      "baslik": "تأتيت (form V)\n# تَأَتَّيْتُ (taʔattaytu) /ta.ʔat.taj.tu/: first-person singular past active of تَأَتَّى (taʔattā)\n# تَأَتَّيْتَ (taʔattayta) /ta.ʔat.taj.ta/: second-person masculine singular past active of تَأَتَّى (taʔattā)\n# تَأَتَّيْتِ (taʔattayti) /ta.ʔat.taj.ti/: second-person feminine singular past active of تَأَتَّى (taʔattā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔattaytu", "taʔattā", "taʔattayta"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأتيتما",
+      "tur": "verb",
+      "baslik": "تَأَتَّيْتُمَا • (taʔattaytumā) (form V) /ta.ʔat.taj.tu.maː/\n# second-person dual past active of تَأَتَّى (taʔattā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔattaytumā", "taʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأتيتم",
+      "tur": "verb",
+      "baslik": "تَأَتَّيْتُمْ • (taʔattaytum) (form V) /ta.ʔat.taj.tum/\n# second-person masculine plural past active of تَأَتَّى (taʔattā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔattaytum", "taʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأتيتن",
+      "tur": "verb",
+      "baslik": "تَأَتَّيْتُنَّ • (taʔattaytunna) (form V) /ta.ʔat.taj.tun.na/\n# second-person feminine plural past active of تَأَتَّى (taʔattā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔattaytunna", "taʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأتت",
+      "tur": "verb",
+      "baslik": "تَأَتَّتْ • (taʔattat) (form V) /ta.ʔat.tat/\n# third-person feminine singular past active of تَأَتَّى (taʔattā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔattat", "taʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأتتا",
+      "tur": "verb",
+      "baslik": "تَأَتَّتَا • (taʔattatā) (form V) /ta.ʔat.ta.taː/\n# third-person feminine dual past active of تَأَتَّى (taʔattā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔattatā", "taʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتأتى",
+      "tur": "verb",
+      "baslik": "أَتَأَتَّى • (ʔataʔattā) (form V) /ʔa.ta.ʔat.taː/\n# first-person singular non-past active indicative/subjunctive of تَأَتَّى (taʔattā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔataʔattā", "taʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتأتى",
+      "tur": "verb",
+      "baslik": "يتأتى (form V)\n# يَتَأَتَّى (yataʔattā) /ja.ta.ʔat.taː/: third-person masculine singular non-past active indicative/subjunctive of تَأَتَّى (taʔattā)\n# يُتَأَتَّى (yutaʔattā) /ju.ta.ʔat.taː/: third-person masculine singular non-past passive indicative/subjunctive of تَأَتَّى (taʔattā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔattā", "taʔattā", "yutaʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تأتينا",
+      "tur": "verb",
+      "baslik": "تَأَتَّيْنَا • (taʔattaynā) (form V) /ta.ʔat.taj.naː/\n# first-person plural past active of تَأَتَّى (taʔattā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["taʔattaynā", "taʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأتى",
+      "tur": "verb",
+      "baslik": "تَتَأَتَّى • (tataʔattā) (form V) /ta.ta.ʔat.taː/\n# inflection of تَأَتَّى (taʔattā):\n## second-person masculine singular non-past active indicative/subjunctive\n## third-person feminine singular non-past active indicative/subjunctive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔattā", "taʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأتين",
+      "tur": "verb",
+      "baslik": "تَتَأَتَّيْنَ • (tataʔattayna) (form V) /ta.ta.ʔat.taj.na/\n# inflection of تَأَتَّى (taʔattā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔattayna", "taʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأتيان",
+      "tur": "verb",
+      "baslik": "تَتَأَتَّيَانِ • (tataʔattayāni) (form V) /ta.ta.ʔat.ta.jaː.ni/\n# inflection of تَأَتَّى (taʔattā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔattayāni", "taʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتأتى",
+      "tur": "verb",
+      "baslik": "نَتَأَتَّى • (nataʔattā) (form V) /na.ta.ʔat.taː/\n# first-person plural non-past active indicative/subjunctive of تَأَتَّى (taʔattā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["nataʔattā", "taʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتأتون",
+      "tur": "verb",
+      "baslik": "يَتَأَتَّوْنَ • (yataʔattawna) (form V) /ja.ta.ʔat.taw.na/\n# third-person masculine plural non-past active indicative of تَأَتَّى (taʔattā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔattawna", "taʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأتي",
+      "tur": "verb",
+      "baslik": "تَتَأَتَّيْ • (tataʔattay) (form V) /ta.ta.ʔat.taj/\n# second-person feminine singular non-past active subjunctive/jussive of تَأَتَّى (taʔattā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔattay", "taʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتأتيان",
+      "tur": "verb",
+      "baslik": "يَتَأَتَّيَانِ • (yataʔattayāni) (form V) /ja.ta.ʔat.ta.jaː.ni/\n# third-person masculine dual non-past active indicative of تَأَتَّى (taʔattā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔattayāni", "taʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأتون",
+      "tur": "verb",
+      "baslik": "تَتَأَتَّوْنَ • (tataʔattawna) (form V) /ta.ta.ʔat.taw.na/\n# second-person masculine plural non-past active indicative of تَأَتَّى (taʔattā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔattawna", "taʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتأتيا",
+      "tur": "verb",
+      "baslik": "يَتَأَتَّيَا • (yataʔattayā) (form V) /ja.ta.ʔat.ta.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of تَأَتَّى (taʔattā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔattayā", "taʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأتيا",
+      "tur": "verb",
+      "baslik": "تَتَأَتَّيَا • (tataʔattayā) (form V) /ta.ta.ʔat.ta.jaː/\n# inflection of تَأَتَّى (taʔattā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔattayā", "taʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتأت",
+      "tur": "verb",
+      "baslik": "أَتَأَتَّ • (ʔataʔatta) (form V) /ʔa.ta.ʔat.ta/\n# first-person singular non-past active jussive of تَأَتَّى (taʔattā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔataʔatta", "taʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتأتوا",
+      "tur": "verb",
+      "baslik": "يَتَأَتَّوْا • (yataʔattaw) (form V) /ja.ta.ʔat.taw/\n# third-person masculine plural non-past active subjunctive/jussive of تَأَتَّى (taʔattā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔattaw", "taʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأتوا",
+      "tur": "verb",
+      "baslik": "تَتَأَتَّوْا • (tataʔattaw) (form V) /ta.ta.ʔat.taw/\n# second-person masculine plural non-past active subjunctive/jussive of تَأَتَّى (taʔattā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔattaw", "taʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتأت",
+      "tur": "verb",
+      "baslik": "تَتَأَتَّ • (tataʔatta) (form V) /ta.ta.ʔat.ta/\n# inflection of تَأَتَّى (taʔattā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tataʔatta", "taʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتأت",
+      "tur": "verb",
+      "baslik": "يتأت (form V)\n# يَتَأَتَّ (yataʔatta) /ja.ta.ʔat.ta/: third-person masculine singular non-past active jussive of تَأَتَّى (taʔattā)\n# يُتَأَتَّ (yutaʔatta) /ju.ta.ʔat.ta/: third-person masculine singular non-past passive jussive of تَأَتَّى (taʔattā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔatta", "taʔattā", "yutaʔatta"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتأت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نَتَأَتَّ • (nataʔatta) (form V) /na.ta.ʔat.ta/\n# first-person plural non-past active jussive of تَأَتَّى (taʔattā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["nataʔatta", "taʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتأتين",
+      "tur": "verb",
+      "baslik": "يَتَأَتَّيْنَ • (yataʔattayna) (form V) /ja.ta.ʔat.taj.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَأَتَّى (taʔattā)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yataʔattayna", "taʔattā"],
+      "kok_yazilis": "تأتى",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تءتى", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

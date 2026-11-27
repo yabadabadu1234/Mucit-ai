@@ -1,56 +1,55 @@
 {
   "kok": "سبغل",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "سبغل", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "اسبغل",
-        "u": "اسبغل",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "اِسْبَغَلَّ • (isbaḡalla) IVq (non-past يَسْبَغِلُّ (yasbaḡillu), verbal noun اِسْبِغْلَال (isbiḡlāl))",
-        "g": ["to be wet through", "to be oiled, anointed"],
-        "r": ["isbaḡalla"],
-        "k": "سبغل",
-        "yol": "kök"
-      },
-      {
-        "w": "اسبغلال",
-        "u": "اسبغلال",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "اِسْبِغْلَال • (isbiḡlāl) m",
-        "g": ["verbal noun of اِسْبَغَلَّ (isbaḡalla) (form IVq)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["اِسْبَغَلَّ"],
-        "r": ["isbiḡlāl"],
-        "yol": "asıl madde"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "سب",
+  "ses": {
     "harf": "س",
+    "fasil": "سب",
     "mahrec": "esaliyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "اسبغل",
+      "tur": "verb",
+      "baslik": "اِسْبَغَلَّ • (isbaḡalla) IVq (non-past يَسْبَغِلُّ (yasbaḡillu), verbal noun اِسْبِغْلَال (isbiḡlāl))",
+      "anlam": ["to be wet through", "to be oiled, anointed"],
+      "okunus": ["isbaḡalla"]
+    },
+    {
+      "madde": "اسبغلال",
+      "tur": "noun",
+      "baslik": "اِسْبِغْلَال • (isbiḡlāl) m",
+      "anlam": ["verbal noun of اِسْبَغَلَّ (isbaḡalla) (form IVq)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["اِسْبَغَلَّ"],
+      "okunus": ["isbiḡlāl"],
+      "bag": "asıl madde"
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "سبغل", "r6"]
+  ],
+  "mana": {
     "ince": "oil.v.01",
     "orta": "verb.contact",
     "ust": "fiil ve hadise",
@@ -58,20 +57,8 @@
     "dayanak_tanim": "cover with oil, as if by rubbing",
     "dayanak_karsilik": "be oiled"
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m2",
+  "gomme": {
     "ust": {
       "kume": 9,
       "merkez_kok": "سفك",
@@ -91,6 +78,10 @@
       "boy": 13
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

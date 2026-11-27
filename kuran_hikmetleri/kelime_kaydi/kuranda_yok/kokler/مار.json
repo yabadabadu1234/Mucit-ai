@@ -1,476 +1,346 @@
 {
   "kok": "مار",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "مار", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أمر",
-        "u": "أمر",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "أَمُرْ • (ʔamur) (form I) /ʔa.mur/\n# first-person singular non-past active jussive of مَارَ (māra)",
-        "tag": ["form-i", "intransitive", "no-gloss"],
-        "r": ["ʔamur", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "مرنا",
-        "u": "مرنا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "مُرْنَا • (murnā) (form I) /mur.naː/\n# first-person plural past active of مَارَ (māra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["murnā", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "نمر",
-        "u": "نمر",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نَمُرْ • (namur) (form I) /na.mur/\n# first-person plural non-past active jussive of مَارَ (māra)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["namur", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "مارت",
-        "u": "مارت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَارَتْ • (mārat) (form I) /maː.rat/\n# third-person feminine singular past active of مَارَ (māra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["mārat", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "تمر",
-        "u": "تمر",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَمُرْ • (tamur) (form I) /ta.mur/\n# inflection of مَارَ (māra):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamur", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "مر",
-        "u": "مر",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "مُرْ • (mur) (form I) /mur/\n# second-person masculine singular imperative of مَارَ (māra)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["mur", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "أمور",
-        "u": "أمور",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أمور (form I)\n# أَمُورُ (ʔamūru) /ʔa.muː.ru/: first-person singular non-past active indicative of مَارَ (māra)\n# أَمُورَ (ʔamūra) /ʔa.muː.ra/: first-person singular non-past active subjunctive of مَارَ (māra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔamūru", "māra", "ʔamūra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "نمور",
-        "u": "نمور",
-        "p": "noun",
-        "n": "1",
-        "h": "ar-head",
-        "e": "نُمُور • (numūr) m pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of نِمْر (nimr)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["نِمْر"],
-        "r": ["numūr"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "نمور",
-        "u": "نمور",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نمور (form I)\n# نَمُورُ (namūru) /na.muː.ru/: first-person plural non-past active indicative of مَارَ (māra)\n# نَمُورَ (namūra) /na.muː.ra/: first-person plural non-past active subjunctive of مَارَ (māra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["namūru", "māra", "namūra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "يمر",
-        "u": "يمر",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَمُرْ • (yamur) (form I) /ja.mur/\n# third-person masculine singular non-past active jussive of مَارَ (māra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamur", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "مرن",
-        "u": "مرن",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "مُرْنَ • (murna) (form I) /mur.na/\n# inflection of مَارَ (māra):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["murna", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "يمرن",
-        "u": "يمرن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يَمُرْنَ • (yamurna) (form I) /ja.mur.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of مَارَ (māra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamurna", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "مرت",
-        "u": "مرت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "مرت (form I)\n# مُرْتُ (murtu) /mur.tu/: first-person singular past active of مَارَ (māra)\n# مُرْتَ (murta) /mur.ta/: second-person masculine singular past active of مَارَ (māra)\n# مُرْتِ (murti) /mur.ti/: second-person feminine singular past active of مَارَ (māra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["murtu", "māra", "murta"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "تمرن",
-        "u": "تمرن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَمُرْنَ • (tamurna) (form I) /ta.mur.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of مَارَ (māra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamurna", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "تمرة",
-        "u": "تمرة",
-        "p": "noun",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["singulative of تَمْر (tamr, “dates (fruit)”)"],
-        "tag": ["form-of", "singulative"],
-        "fo": ["تَمْر"],
-        "r": ["tamra"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "مورا",
-        "u": "مورا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُورَا • (mūrā) (form I) /muː.raː/\n# second-person dual imperative of مَارَ (māra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["mūrā", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "تمور",
-        "u": "تمور",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تمور (form I)\n# تَمُورُ (tamūru) /ta.muː.ru/: inflection of مَارَ (māra):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَمُورَ (tamūra) /ta.muː.ra/: inflection of مَارَ (māra):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamūru", "māra", "tamūra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "تموروا",
-        "u": "تموروا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَمُورُوا • (tamūrū) (form I) /ta.muː.ruː/\n# second-person masculine plural non-past active subjunctive/jussive of مَارَ (māra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamūrū", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "تمورا",
-        "u": "تمورا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَمُورَا • (tamūrā) (form I) /ta.muː.raː/\n# inflection of مَارَ (māra):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamūrā", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "تموري",
-        "u": "تموري",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَمُورِي • (tamūrī) (form I) /ta.muː.riː/\n# second-person feminine singular non-past active subjunctive/jussive of مَارَ (māra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamūrī", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "مرتن",
-        "u": "مرتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُرْتُنَّ • (murtunna) (form I) /mur.tun.na/\n# second-person feminine plural past active of مَارَ (māra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["murtunna", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "مارا",
-        "u": "مارا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَارَا • (mārā) (form I) /maː.raː/\n# third-person masculine dual past active of مَارَ (māra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["mārā", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "ماروا",
-        "u": "ماروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَارُوا • (mārū) (form I) /maː.ruː/\n# third-person masculine plural past active of مَارَ (māra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["mārū", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "مرتما",
-        "u": "مرتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُرْتُمَا • (murtumā) (form I) /mur.tu.maː/\n# second-person dual past active of مَارَ (māra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["murtumā", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "مارتا",
-        "u": "مارتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَارَتَا • (māratā) (form I) /maː.ra.taː/\n# third-person feminine dual past active of مَارَ (māra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["māratā", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "مرتم",
-        "u": "مرتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُرْتُمْ • (murtum) (form I) /mur.tum/\n# second-person masculine plural past active of مَارَ (māra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["murtum", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "يمور",
-        "u": "يمور",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يمور (form I)\n# يَمُورُ (yamūru) /ja.muː.ru/: third-person masculine singular non-past active indicative of مَارَ (māra)\n# يَمُورَ (yamūra) /ja.muː.ra/: third-person masculine singular non-past active subjunctive of مَارَ (māra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamūru", "māra", "yamūra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "تموران",
-        "u": "تموران",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَمُورَانِ • (tamūrāni) (form I) /ta.muː.raː.ni/\n# inflection of مَارَ (māra):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamūrāni", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "يموران",
-        "u": "يموران",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَمُورَانِ • (yamūrāni) (form I) /ja.muː.raː.ni/\n# third-person masculine dual non-past active indicative of مَارَ (māra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamūrāni", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "يمورون",
-        "u": "يمورون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَمُورُونَ • (yamūrūna) (form I) /ja.muː.ruː.na/\n# third-person masculine plural non-past active indicative of مَارَ (māra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamūrūna", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "موري",
-        "u": "موري",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُورِي • (mūrī) (form I) /muː.riː/\n# second-person feminine singular imperative of مَارَ (māra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["mūrī", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "تمورون",
-        "u": "تمورون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَمُورُونَ • (tamūrūna) (form I) /ta.muː.ruː.na/\n# second-person masculine plural non-past active indicative of مَارَ (māra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamūrūna", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "تمورين",
-        "u": "تمورين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَمُورِينَ • (tamūrīna) (form I) /ta.muː.riː.na/\n# second-person feminine singular non-past active indicative of مَارَ (māra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamūrīna", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "يمورا",
-        "u": "يمورا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَمُورَا • (yamūrā) (form I) /ja.muː.raː/\n# third-person masculine dual non-past active subjunctive/jussive of مَارَ (māra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamūrā", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "يموروا",
-        "u": "يموروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَمُورُوا • (yamūrū) (form I) /ja.muː.ruː/\n# third-person masculine plural non-past active subjunctive/jussive of مَارَ (māra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamūrū", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      },
-      {
-        "w": "موروا",
-        "u": "موروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُورُوا • (mūrū) (form I) /muː.ruː/\n# second-person masculine plural imperative of مَارَ (māra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["mūrū", "māra"],
-        "k": "مار",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "مر",
+  "ses": {
     "harf": "م",
+    "fasil": "مر",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "أمر",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "أَمُرْ • (ʔamur) (form I) /ʔa.mur/\n# first-person singular non-past active jussive of مَارَ (māra)",
+      "etiket": ["form-i", "intransitive", "no-gloss"],
+      "okunus": ["ʔamur", "māra"]
+    },
+    {
+      "madde": "مرنا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "مُرْنَا • (murnā) (form I) /mur.naː/\n# first-person plural past active of مَارَ (māra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["murnā", "māra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نمر",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نَمُرْ • (namur) (form I) /na.mur/\n# first-person plural non-past active jussive of مَارَ (māra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["namur", "māra"]
+    },
+    {
+      "madde": "مارت",
+      "tur": "verb",
+      "baslik": "مَارَتْ • (mārat) (form I) /maː.rat/\n# third-person feminine singular past active of مَارَ (māra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["mārat", "māra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمر",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَمُرْ • (tamur) (form I) /ta.mur/\n# inflection of مَارَ (māra):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamur", "māra"]
+    },
+    {
+      "madde": "مر",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "مُرْ • (mur) (form I) /mur/\n# second-person masculine singular imperative of مَارَ (māra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["mur", "māra"]
+    },
+    {
+      "madde": "أمور",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أمور (form I)\n# أَمُورُ (ʔamūru) /ʔa.muː.ru/: first-person singular non-past active indicative of مَارَ (māra)\n# أَمُورَ (ʔamūra) /ʔa.muː.ra/: first-person singular non-past active subjunctive of مَارَ (māra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔamūru", "māra", "ʔamūra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نمور",
+      "tur": "noun",
+      "etim_no": "1",
+      "baslik": "نُمُور • (numūr) m pl",
+      "anlam": ["plural of نِمْر (nimr)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["نِمْر"],
+      "okunus": ["numūr"],
+      "bag": "asıl madde",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نمور",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نمور (form I)\n# نَمُورُ (namūru) /na.muː.ru/: first-person plural non-past active indicative of مَارَ (māra)\n# نَمُورَ (namūra) /na.muː.ra/: first-person plural non-past active subjunctive of مَارَ (māra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["namūru", "māra", "namūra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يمر",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَمُرْ • (yamur) (form I) /ja.mur/\n# third-person masculine singular non-past active jussive of مَارَ (māra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamur", "māra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مرن",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "مُرْنَ • (murna) (form I) /mur.na/\n# inflection of مَارَ (māra):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["murna", "māra"]
+    },
+    {
+      "madde": "يمرن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يَمُرْنَ • (yamurna) (form I) /ja.mur.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of مَارَ (māra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamurna", "māra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مرت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "مرت (form I)\n# مُرْتُ (murtu) /mur.tu/: first-person singular past active of مَارَ (māra)\n# مُرْتَ (murta) /mur.ta/: second-person masculine singular past active of مَارَ (māra)\n# مُرْتِ (murti) /mur.ti/: second-person feminine singular past active of مَارَ (māra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["murtu", "māra", "murta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمرن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَمُرْنَ • (tamurna) (form I) /ta.mur.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of مَارَ (māra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamurna", "māra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمرة",
+      "tur": "noun",
+      "anlam": ["singulative of تَمْر (tamr, “dates (fruit)”)"],
+      "etiket": ["form-of", "singulative"],
+      "form_of": ["تَمْر"],
+      "okunus": ["tamra"],
+      "bag": "asıl madde",
+      "etimoloji": 1
+    },
+    {
+      "madde": "مورا",
+      "tur": "verb",
+      "baslik": "مُورَا • (mūrā) (form I) /muː.raː/\n# second-person dual imperative of مَارَ (māra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["mūrā", "māra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمور",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تمور (form I)\n# تَمُورُ (tamūru) /ta.muː.ru/: inflection of مَارَ (māra):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَمُورَ (tamūra) /ta.muː.ra/: inflection of مَارَ (māra):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamūru", "māra", "tamūra"]
+    },
+    {
+      "madde": "تموروا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَمُورُوا • (tamūrū) (form I) /ta.muː.ruː/\n# second-person masculine plural non-past active subjunctive/jussive of مَارَ (māra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamūrū", "māra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمورا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَمُورَا • (tamūrā) (form I) /ta.muː.raː/\n# inflection of مَارَ (māra):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamūrā", "māra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تموري",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَمُورِي • (tamūrī) (form I) /ta.muː.riː/\n# second-person feminine singular non-past active subjunctive/jussive of مَارَ (māra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamūrī", "māra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مرتن",
+      "tur": "verb",
+      "baslik": "مُرْتُنَّ • (murtunna) (form I) /mur.tun.na/\n# second-person feminine plural past active of مَارَ (māra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["murtunna", "māra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مارا",
+      "tur": "verb",
+      "baslik": "مَارَا • (mārā) (form I) /maː.raː/\n# third-person masculine dual past active of مَارَ (māra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["mārā", "māra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ماروا",
+      "tur": "verb",
+      "baslik": "مَارُوا • (mārū) (form I) /maː.ruː/\n# third-person masculine plural past active of مَارَ (māra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["mārū", "māra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مرتما",
+      "tur": "verb",
+      "baslik": "مُرْتُمَا • (murtumā) (form I) /mur.tu.maː/\n# second-person dual past active of مَارَ (māra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["murtumā", "māra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مارتا",
+      "tur": "verb",
+      "baslik": "مَارَتَا • (māratā) (form I) /maː.ra.taː/\n# third-person feminine dual past active of مَارَ (māra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["māratā", "māra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مرتم",
+      "tur": "verb",
+      "baslik": "مُرْتُمْ • (murtum) (form I) /mur.tum/\n# second-person masculine plural past active of مَارَ (māra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["murtum", "māra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يمور",
+      "tur": "verb",
+      "baslik": "يمور (form I)\n# يَمُورُ (yamūru) /ja.muː.ru/: third-person masculine singular non-past active indicative of مَارَ (māra)\n# يَمُورَ (yamūra) /ja.muː.ra/: third-person masculine singular non-past active subjunctive of مَارَ (māra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamūru", "māra", "yamūra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تموران",
+      "tur": "verb",
+      "baslik": "تَمُورَانِ • (tamūrāni) (form I) /ta.muː.raː.ni/\n# inflection of مَارَ (māra):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamūrāni", "māra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يموران",
+      "tur": "verb",
+      "baslik": "يَمُورَانِ • (yamūrāni) (form I) /ja.muː.raː.ni/\n# third-person masculine dual non-past active indicative of مَارَ (māra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamūrāni", "māra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يمورون",
+      "tur": "verb",
+      "baslik": "يَمُورُونَ • (yamūrūna) (form I) /ja.muː.ruː.na/\n# third-person masculine plural non-past active indicative of مَارَ (māra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamūrūna", "māra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "موري",
+      "tur": "verb",
+      "baslik": "مُورِي • (mūrī) (form I) /muː.riː/\n# second-person feminine singular imperative of مَارَ (māra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["mūrī", "māra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمورون",
+      "tur": "verb",
+      "baslik": "تَمُورُونَ • (tamūrūna) (form I) /ta.muː.ruː.na/\n# second-person masculine plural non-past active indicative of مَارَ (māra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamūrūna", "māra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمورين",
+      "tur": "verb",
+      "baslik": "تَمُورِينَ • (tamūrīna) (form I) /ta.muː.riː.na/\n# second-person feminine singular non-past active indicative of مَارَ (māra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamūrīna", "māra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يمورا",
+      "tur": "verb",
+      "baslik": "يَمُورَا • (yamūrā) (form I) /ja.muː.raː/\n# third-person masculine dual non-past active subjunctive/jussive of مَارَ (māra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamūrā", "māra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يموروا",
+      "tur": "verb",
+      "baslik": "يَمُورُوا • (yamūrū) (form I) /ja.muː.ruː/\n# third-person masculine plural non-past active subjunctive/jussive of مَارَ (māra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamūrū", "māra"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "موروا",
+      "tur": "verb",
+      "baslik": "مُورُوا • (mūrū) (form I) /muː.ruː/\n# second-person masculine plural imperative of مَارَ (māra)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["mūrū", "māra"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "مار", "r7"]
+  ],
+  "mana": {
     "ince": "communicate.v.01",
     "orta": "verb.communication",
     "ust": "söz ve haber",
@@ -478,16 +348,11 @@
     "dayanak_tanim": "give instructions to or direct somebody to do something with authority",
     "synset_sayisi": 37
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "act.n.02",
     "advance.v.01",
     "aim.v.01",
@@ -522,12 +387,10 @@
     "warn.v.01",
     "writing.n.02"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

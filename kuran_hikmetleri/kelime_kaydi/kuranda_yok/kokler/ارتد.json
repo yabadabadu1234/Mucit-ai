@@ -1,448 +1,317 @@
 {
   "kok": "ارتد",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ارتد", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يرتد",
-        "u": "يرتد",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يرتد (form VIII)\n# يَرْتَدُّ (yartaddu) /jar.tad.du/: third-person masculine singular non-past active indicative of اِرْتَدَّ (irtadda)\n# يُرْتَدُّ (yurtaddu) /jur.tad.du/: third-person masculine singular non-past passive indicative of اِرْتَدَّ (irtadda)\n# يَرْتَدَّ (yartadda) /jar.tad.da/: third-person masculine singular non-past active subjunctive/jussive of اِرْتَدَّ (irtadda)\n# يُرْتَدَّ (yur",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yartaddu", "irtadda", "yurtaddu"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "يرتدد",
-        "u": "يرتدد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يرتدد (form VIII)\n# يَرْتَدِدْ (yartadid) /jar.ta.did/: third-person masculine singular non-past active jussive of اِرْتَدَّ (irtadda)\n# يُرْتَدَدْ (yurtadad) /jur.ta.dad/: third-person masculine singular non-past passive jussive of اِرْتَدَّ (irtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yartadid", "irtadda", "yurtadad"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "ارتدي",
-        "u": "ارتدي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِرْتَدِّي • (irtaddī) (form VIII) /ir.tad.diː/\n# second-person feminine singular imperative of اِرْتَدَّ (irtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["irtaddī", "irtadda"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "ارتدت",
-        "u": "ارتدت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِرْتَدَّتْ • (irtaddat) (form VIII) /ir.tad.dat/\n# third-person feminine singular past active of اِرْتَدَّ (irtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["irtaddat", "irtadda"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "ترتد",
-        "u": "ترتد",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ترتد (form VIII)\n# تَرْتَدُّ (tartaddu) /tar.tad.du/: inflection of اِرْتَدَّ (irtadda):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَرْتَدَّ (tartadda) /tar.tad.da/: inflection of اِرْتَدَّ (irtadda):\n## second-person masculine singular non-past active subjunctive/jussive\n## third-person feminine singular non-past ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tartaddu", "irtadda", "tartadda"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "ترتدد",
-        "u": "ترتدد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَرْتَدِدْ • (tartadid) (form VIII) /tar.ta.did/\n# inflection of اِرْتَدَّ (irtadda):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tartadid", "irtadda"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "ترتدي",
-        "u": "ترتدي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَرْتَدِّي • (tartaddī) (form VIII) /tar.tad.diː/\n# second-person feminine singular non-past active subjunctive/jussive of اِرْتَدَّ (irtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tartaddī", "irtadda"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "ارتددت",
-        "u": "ارتددت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ارتددت (form VIII)\n# اِرْتَدَدْتُ (irtadadtu) /ir.ta.dad.tu/: first-person singular past active of اِرْتَدَّ (irtadda)\n# اِرْتَدَدْتَ (irtadadta) /ir.ta.dad.ta/: second-person masculine singular past active of اِرْتَدَّ (irtadda)\n# اِرْتَدَدْتِ (irtadadti) /ir.ta.dad.ti/: second-person feminine singular past active of اِرْتَدَّ (irtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["irtadadtu", "irtadda", "irtadadta"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "ارتدد",
-        "u": "ارتدد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِرْتَدِدْ • (irtadid) (form VIII) /ir.ta.did/\n# second-person masculine singular imperative of اِرْتَدَّ (irtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["irtadid", "irtadda"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "ترتدين",
-        "u": "ترتدين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَرْتَدِّينَ • (tartaddīna) (form VIII) /tar.tad.diː.na/\n# second-person feminine singular non-past active indicative of اِرْتَدَّ (irtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tartaddīna", "irtadda"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "أرتد",
-        "u": "أرتد",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أرتد (form VIII)\n# أَرْتَدُّ (ʔartaddu) /ʔar.tad.du/: first-person singular non-past active indicative of اِرْتَدَّ (irtadda)\n# أَرْتَدَّ (ʔartadda) /ʔar.tad.da/: first-person singular non-past active subjunctive/jussive of اِرْتَدَّ (irtadda)\n# أَرْتَدِّ (ʔartaddi) /ʔar.tad.di/: first-person singular non-past active jussive of اِرْتَدَّ (irtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ʔartaddu", "irtadda", "ʔartadda"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "أرتدد",
-        "u": "أرتدد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَرْتَدِدْ • (ʔartadid) (form VIII) /ʔar.ta.did/\n# first-person singular non-past active jussive of اِرْتَدَّ (irtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ʔartadid", "irtadda"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "ارتددنا",
-        "u": "ارتددنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِرْتَدَدْنَا • (irtadadnā) (form VIII) /ir.ta.dad.naː/\n# first-person plural past active of اِرْتَدَّ (irtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["irtadadnā", "irtadda"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "نرتد",
-        "u": "نرتد",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نرتد (form VIII)\n# نَرْتَدُّ (nartaddu) /nar.tad.du/: first-person plural non-past active indicative of اِرْتَدَّ (irtadda)\n# نَرْتَدَّ (nartadda) /nar.tad.da/: first-person plural non-past active subjunctive/jussive of اِرْتَدَّ (irtadda)\n# نَرْتَدِّ (nartaddi) /nar.tad.di/: first-person plural non-past active jussive of اِرْتَدَّ (irtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["nartaddu", "irtadda", "nartadda"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "نرتدد",
-        "u": "نرتدد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَرْتَدِدْ • (nartadid) (form VIII) /nar.ta.did/\n# first-person plural non-past active jussive of اِرْتَدَّ (irtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["nartadid", "irtadda"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "ارتددتم",
-        "u": "ارتددتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِرْتَدَدْتُمْ • (irtadadtum) (form VIII) /ir.ta.dad.tum/\n# second-person masculine plural past active of اِرْتَدَّ (irtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["irtadadtum", "irtadda"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "ترتدون",
-        "u": "ترتدون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَرْتَدُّونَ • (tartaddūna) (form VIII) /tar.tad.duː.na/\n# second-person masculine plural non-past active indicative of اِرْتَدَّ (irtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tartaddūna", "irtadda"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "ترتدوا",
-        "u": "ترتدوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَرْتَدُّوا • (tartaddū) (form VIII) /tar.tad.duː/\n# second-person masculine plural non-past active subjunctive/jussive of اِرْتَدَّ (irtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tartaddū", "irtadda"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "ارتدوا",
-        "u": "ارتدوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِرْتَدُّوا • (irtaddū) (form VIII) /ir.tad.duː/\n# inflection of اِرْتَدَّ (irtadda):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["irtaddū", "irtadda"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "يرتدون",
-        "u": "يرتدون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَرْتَدُّونَ • (yartaddūna) (form VIII) /jar.tad.duː.na/\n# third-person masculine plural non-past active indicative of اِرْتَدَّ (irtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yartaddūna", "irtadda"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "يرتدوا",
-        "u": "يرتدوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَرْتَدُّوا • (yartaddū) (form VIII) /jar.tad.duː/\n# third-person masculine plural non-past active subjunctive/jussive of اِرْتَدَّ (irtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yartaddū", "irtadda"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "ارتددتن",
-        "u": "ارتددتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِرْتَدَدْتُنَّ • (irtadadtunna) (form VIII) /ir.ta.dad.tun.na/\n# second-person feminine plural past active of اِرْتَدَّ (irtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["irtadadtunna", "irtadda"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "ترتددن",
-        "u": "ترتددن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَرْتَدِدْنَ • (tartadidna) (form VIII) /tar.ta.did.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِرْتَدَّ (irtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tartadidna", "irtadda"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "ارتددن",
-        "u": "ارتددن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ارتددن (form VIII)\n# اِرْتَدَدْنَ (irtadadna) /ir.ta.dad.na/: third-person feminine plural past active of اِرْتَدَّ (irtadda)\n# اِرْتَدِدْنَ (irtadidna) /ir.ta.did.na/: second-person feminine plural imperative of اِرْتَدَّ (irtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["irtadadna", "irtadda", "irtadidna"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "يرتددن",
-        "u": "يرتددن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَرْتَدِدْنَ • (yartadidna) (form VIII) /jar.ta.did.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِرْتَدَّ (irtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yartadidna", "irtadda"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "ارتدا",
-        "u": "ارتدا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِرْتَدَّا • (irtaddā) (form VIII) /ir.tad.daː/\n# inflection of اِرْتَدَّ (irtadda):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["irtaddā", "irtadda"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "ارتددتما",
-        "u": "ارتددتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِرْتَدَدْتُمَا • (irtadadtumā) (form VIII) /ir.ta.dad.tu.maː/\n# second-person dual past active of اِرْتَدَّ (irtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["irtadadtumā", "irtadda"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "يرتدان",
-        "u": "يرتدان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَرْتَدَّانِ • (yartaddāni) (form VIII) /jar.tad.daː.ni/\n# third-person masculine dual non-past active indicative of اِرْتَدَّ (irtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yartaddāni", "irtadda"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "ترتدان",
-        "u": "ترتدان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَرْتَدَّانِ • (tartaddāni) (form VIII) /tar.tad.daː.ni/\n# inflection of اِرْتَدَّ (irtadda):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tartaddāni", "irtadda"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "ارتدتا",
-        "u": "ارتدتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِرْتَدَّتَا • (irtaddatā) (form VIII) /ir.tad.da.taː/\n# third-person feminine dual past active of اِرْتَدَّ (irtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["irtaddatā", "irtadda"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "ترتدا",
-        "u": "ترتدا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَرْتَدَّا • (tartaddā) (form VIII) /tar.tad.daː/\n# inflection of اِرْتَدَّ (irtadda):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tartaddā", "irtadda"],
-        "k": "ارتد",
-        "yol": "kök"
-      },
-      {
-        "w": "يرتدا",
-        "u": "يرتدا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَرْتَدَّا • (yartaddā) (form VIII) /jar.tad.daː/\n# third-person masculine dual non-past active subjunctive/jussive of اِرْتَدَّ (irtadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yartaddā", "irtadda"],
-        "k": "ارتد",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "رت",
+  "ses": {
     "harf": "ا",
+    "fasil": "رت",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يرتد",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يرتد (form VIII)\n# يَرْتَدُّ (yartaddu) /jar.tad.du/: third-person masculine singular non-past active indicative of اِرْتَدَّ (irtadda)\n# يُرْتَدُّ (yurtaddu) /jur.tad.du/: third-person masculine singular non-past passive indicative of اِرْتَدَّ (irtadda)\n# يَرْتَدَّ (yartadda) /jar.tad.da/: third-person masculine singular non-past active subjunctive/jussive of اِرْتَدَّ (irtadda)\n# يُرْتَدَّ (yur",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yartaddu", "irtadda", "yurtaddu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يرتدد",
+      "tur": "verb",
+      "baslik": "يرتدد (form VIII)\n# يَرْتَدِدْ (yartadid) /jar.ta.did/: third-person masculine singular non-past active jussive of اِرْتَدَّ (irtadda)\n# يُرْتَدَدْ (yurtadad) /jur.ta.dad/: third-person masculine singular non-past passive jussive of اِرْتَدَّ (irtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yartadid", "irtadda", "yurtadad"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ارتدي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِرْتَدِّي • (irtaddī) (form VIII) /ir.tad.diː/\n# second-person feminine singular imperative of اِرْتَدَّ (irtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["irtaddī", "irtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ارتدت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِرْتَدَّتْ • (irtaddat) (form VIII) /ir.tad.dat/\n# third-person feminine singular past active of اِرْتَدَّ (irtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["irtaddat", "irtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ترتد",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ترتد (form VIII)\n# تَرْتَدُّ (tartaddu) /tar.tad.du/: inflection of اِرْتَدَّ (irtadda):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَرْتَدَّ (tartadda) /tar.tad.da/: inflection of اِرْتَدَّ (irtadda):\n## second-person masculine singular non-past active subjunctive/jussive\n## third-person feminine singular non-past ",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tartaddu", "irtadda", "tartadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ترتدد",
+      "tur": "verb",
+      "baslik": "تَرْتَدِدْ • (tartadid) (form VIII) /tar.ta.did/\n# inflection of اِرْتَدَّ (irtadda):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tartadid", "irtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ترتدي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَرْتَدِّي • (tartaddī) (form VIII) /tar.tad.diː/\n# second-person feminine singular non-past active subjunctive/jussive of اِرْتَدَّ (irtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tartaddī", "irtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ارتددت",
+      "tur": "verb",
+      "baslik": "ارتددت (form VIII)\n# اِرْتَدَدْتُ (irtadadtu) /ir.ta.dad.tu/: first-person singular past active of اِرْتَدَّ (irtadda)\n# اِرْتَدَدْتَ (irtadadta) /ir.ta.dad.ta/: second-person masculine singular past active of اِرْتَدَّ (irtadda)\n# اِرْتَدَدْتِ (irtadadti) /ir.ta.dad.ti/: second-person feminine singular past active of اِرْتَدَّ (irtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["irtadadtu", "irtadda", "irtadadta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ارتدد",
+      "tur": "verb",
+      "baslik": "اِرْتَدِدْ • (irtadid) (form VIII) /ir.ta.did/\n# second-person masculine singular imperative of اِرْتَدَّ (irtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["irtadid", "irtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ترتدين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَرْتَدِّينَ • (tartaddīna) (form VIII) /tar.tad.diː.na/\n# second-person feminine singular non-past active indicative of اِرْتَدَّ (irtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tartaddīna", "irtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أرتد",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أرتد (form VIII)\n# أَرْتَدُّ (ʔartaddu) /ʔar.tad.du/: first-person singular non-past active indicative of اِرْتَدَّ (irtadda)\n# أَرْتَدَّ (ʔartadda) /ʔar.tad.da/: first-person singular non-past active subjunctive/jussive of اِرْتَدَّ (irtadda)\n# أَرْتَدِّ (ʔartaddi) /ʔar.tad.di/: first-person singular non-past active jussive of اِرْتَدَّ (irtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ʔartaddu", "irtadda", "ʔartadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أرتدد",
+      "tur": "verb",
+      "baslik": "أَرْتَدِدْ • (ʔartadid) (form VIII) /ʔar.ta.did/\n# first-person singular non-past active jussive of اِرْتَدَّ (irtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ʔartadid", "irtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ارتددنا",
+      "tur": "verb",
+      "baslik": "اِرْتَدَدْنَا • (irtadadnā) (form VIII) /ir.ta.dad.naː/\n# first-person plural past active of اِرْتَدَّ (irtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["irtadadnā", "irtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نرتد",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نرتد (form VIII)\n# نَرْتَدُّ (nartaddu) /nar.tad.du/: first-person plural non-past active indicative of اِرْتَدَّ (irtadda)\n# نَرْتَدَّ (nartadda) /nar.tad.da/: first-person plural non-past active subjunctive/jussive of اِرْتَدَّ (irtadda)\n# نَرْتَدِّ (nartaddi) /nar.tad.di/: first-person plural non-past active jussive of اِرْتَدَّ (irtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["nartaddu", "irtadda", "nartadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نرتدد",
+      "tur": "verb",
+      "baslik": "نَرْتَدِدْ • (nartadid) (form VIII) /nar.ta.did/\n# first-person plural non-past active jussive of اِرْتَدَّ (irtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["nartadid", "irtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ارتددتم",
+      "tur": "verb",
+      "baslik": "اِرْتَدَدْتُمْ • (irtadadtum) (form VIII) /ir.ta.dad.tum/\n# second-person masculine plural past active of اِرْتَدَّ (irtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["irtadadtum", "irtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ترتدون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَرْتَدُّونَ • (tartaddūna) (form VIII) /tar.tad.duː.na/\n# second-person masculine plural non-past active indicative of اِرْتَدَّ (irtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tartaddūna", "irtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ترتدوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَرْتَدُّوا • (tartaddū) (form VIII) /tar.tad.duː/\n# second-person masculine plural non-past active subjunctive/jussive of اِرْتَدَّ (irtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tartaddū", "irtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ارتدوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِرْتَدُّوا • (irtaddū) (form VIII) /ir.tad.duː/\n# inflection of اِرْتَدَّ (irtadda):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["irtaddū", "irtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يرتدون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَرْتَدُّونَ • (yartaddūna) (form VIII) /jar.tad.duː.na/\n# third-person masculine plural non-past active indicative of اِرْتَدَّ (irtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yartaddūna", "irtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يرتدوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَرْتَدُّوا • (yartaddū) (form VIII) /jar.tad.duː/\n# third-person masculine plural non-past active subjunctive/jussive of اِرْتَدَّ (irtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yartaddū", "irtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ارتددتن",
+      "tur": "verb",
+      "baslik": "اِرْتَدَدْتُنَّ • (irtadadtunna) (form VIII) /ir.ta.dad.tun.na/\n# second-person feminine plural past active of اِرْتَدَّ (irtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["irtadadtunna", "irtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ترتددن",
+      "tur": "verb",
+      "baslik": "تَرْتَدِدْنَ • (tartadidna) (form VIII) /tar.ta.did.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِرْتَدَّ (irtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tartadidna", "irtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ارتددن",
+      "tur": "verb",
+      "baslik": "ارتددن (form VIII)\n# اِرْتَدَدْنَ (irtadadna) /ir.ta.dad.na/: third-person feminine plural past active of اِرْتَدَّ (irtadda)\n# اِرْتَدِدْنَ (irtadidna) /ir.ta.did.na/: second-person feminine plural imperative of اِرْتَدَّ (irtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["irtadadna", "irtadda", "irtadidna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يرتددن",
+      "tur": "verb",
+      "baslik": "يَرْتَدِدْنَ • (yartadidna) (form VIII) /jar.ta.did.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِرْتَدَّ (irtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yartadidna", "irtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ارتدا",
+      "tur": "verb",
+      "baslik": "اِرْتَدَّا • (irtaddā) (form VIII) /ir.tad.daː/\n# inflection of اِرْتَدَّ (irtadda):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["irtaddā", "irtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ارتددتما",
+      "tur": "verb",
+      "baslik": "اِرْتَدَدْتُمَا • (irtadadtumā) (form VIII) /ir.ta.dad.tu.maː/\n# second-person dual past active of اِرْتَدَّ (irtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["irtadadtumā", "irtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يرتدان",
+      "tur": "verb",
+      "baslik": "يَرْتَدَّانِ • (yartaddāni) (form VIII) /jar.tad.daː.ni/\n# third-person masculine dual non-past active indicative of اِرْتَدَّ (irtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yartaddāni", "irtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ترتدان",
+      "tur": "verb",
+      "baslik": "تَرْتَدَّانِ • (tartaddāni) (form VIII) /tar.tad.daː.ni/\n# inflection of اِرْتَدَّ (irtadda):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tartaddāni", "irtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ارتدتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِرْتَدَّتَا • (irtaddatā) (form VIII) /ir.tad.da.taː/\n# third-person feminine dual past active of اِرْتَدَّ (irtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["irtaddatā", "irtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ترتدا",
+      "tur": "verb",
+      "baslik": "تَرْتَدَّا • (tartaddā) (form VIII) /tar.tad.daː/\n# inflection of اِرْتَدَّ (irtadda):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tartaddā", "irtadda"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يرتدا",
+      "tur": "verb",
+      "baslik": "يَرْتَدَّا • (yartaddā) (form VIII) /jar.tad.daː/\n# third-person masculine dual non-past active subjunctive/jussive of اِرْتَدَّ (irtadda)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yartaddā", "irtadda"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ارتد", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

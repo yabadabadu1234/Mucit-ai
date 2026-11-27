@@ -1,462 +1,335 @@
 {
   "kok": "جاف",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "جاف", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "نجف",
-        "u": "نجف",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "نجف (form I)\n# نَجُفْ (najuf) /na.d͡ʒuf/: first-person plural non-past active jussive of جَافَ (jāfa)\n# نُجَفْ (nujaf) /nu.d͡ʒaf/: first-person plural non-past passive jussive of جَافَ (jāfa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["najuf", "jāfa", "nujaf"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "جفن",
-        "u": "جفن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "جفن (form I)\n# جُفْنَ (jufna) /d͡ʒuf.na/: inflection of جَافَ (jāfa):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# جِفْنَ (jifna) /d͡ʒif.na/: third-person feminine plural past passive of جَافَ (jāfa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jufna", "jāfa", "jifna"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "جفت",
-        "u": "جفت",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "جفت (form I)\n# جُفْتُ (juftu) /d͡ʒuf.tu/: first-person singular past active of جَافَ (jāfa)\n# جُفْتَ (jufta) /d͡ʒuf.ta/: second-person masculine singular past active of جَافَ (jāfa)\n# جُفْتِ (jufti) /d͡ʒuf.ti/: second-person feminine singular past active of جَافَ (jāfa)\n# جِفْتُ (jiftu) /d͡ʒif.tu/: first-person singular past passive of جَافَ (jāfa)\n# جِفْتَ (jifta) /d͡ʒif.ta/: second-person mascul",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["juftu", "jāfa", "jufta"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "أجوف",
-        "u": "أجوف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أجوف (form I)\n# أَجُوفُ (ʔajūfu) /ʔa.d͡ʒuː.fu/: first-person singular non-past active indicative of جَافَ (jāfa)\n# أَجُوفَ (ʔajūfa) /ʔa.d͡ʒuː.fa/: first-person singular non-past active subjunctive of جَافَ (jāfa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔajūfu", "jāfa", "ʔajūfa"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "أجف",
-        "u": "أجف",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أجف (form I)\n# أَجُفْ (ʔajuf) /ʔa.d͡ʒuf/: first-person singular non-past active jussive of جَافَ (jāfa)\n# أُجَفْ (ʔujaf) /ʔu.d͡ʒaf/: first-person singular non-past passive jussive of جَافَ (jāfa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔajuf", "jāfa", "ʔujaf"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يجوف",
-        "u": "يجوف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يجوف (form I)\n# يَجُوفُ (yajūfu) /ja.d͡ʒuː.fu/: third-person masculine singular non-past active indicative of جَافَ (jāfa)\n# يَجُوفَ (yajūfa) /ja.d͡ʒuː.fa/: third-person masculine singular non-past active subjunctive of جَافَ (jāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajūfu", "jāfa", "yajūfa"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تجوف",
-        "u": "تجوف",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تجوف (form I)\n# تَجُوفُ (tajūfu) /ta.d͡ʒuː.fu/: inflection of جَافَ (jāfa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَجُوفَ (tajūfa) /ta.d͡ʒuː.fa/: inflection of جَافَ (jāfa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajūfu", "jāfa", "tajūfa"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تجوفين",
-        "u": "تجوفين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَجُوفِينَ • (tajūfīna) (form I) /ta.d͡ʒuː.fiː.na/\n# second-person feminine singular non-past active indicative of جَافَ (jāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajūfīna", "jāfa"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تجوفي",
-        "u": "تجوفي",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تَجُوفِي • (tajūfī) (form I) /ta.d͡ʒuː.fiː/\n# second-person feminine singular non-past active subjunctive/jussive of جَافَ (jāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajūfī", "jāfa"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "جوفي",
-        "u": "جوفي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "جُوفِي • (jūfī) (form I) /d͡ʒuː.fiː/\n# second-person feminine singular imperative of جَافَ (jāfa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jūfī", "jāfa"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "نجوف",
-        "u": "نجوف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نجوف (form I)\n# نَجُوفُ (najūfu) /na.d͡ʒuː.fu/: first-person plural non-past active indicative of جَافَ (jāfa)\n# نَجُوفَ (najūfa) /na.d͡ʒuː.fa/: first-person plural non-past active subjunctive of جَافَ (jāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["najūfu", "jāfa", "najūfa"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تجوفون",
-        "u": "تجوفون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَجُوفُونَ • (tajūfūna) (form I) /ta.d͡ʒuː.fuː.na/\n# second-person masculine plural non-past active indicative of جَافَ (jāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajūfūna", "jāfa"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تجوفوا",
-        "u": "تجوفوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَجُوفُوا • (tajūfū) (form I) /ta.d͡ʒuː.fuː/\n# second-person masculine plural non-past active subjunctive/jussive of جَافَ (jāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajūfū", "jāfa"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "جوفوا",
-        "u": "جوفوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "جُوفُوا • (jūfū) (form I) /d͡ʒuː.fuː/\n# second-person masculine plural imperative of جَافَ (jāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jūfū", "jāfa"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يجوفون",
-        "u": "يجوفون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَجُوفُونَ • (yajūfūna) (form I) /ja.d͡ʒuː.fuː.na/\n# third-person masculine plural non-past active indicative of جَافَ (jāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajūfūna", "jāfa"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يجوفوا",
-        "u": "يجوفوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَجُوفُوا • (yajūfū) (form I) /ja.d͡ʒuː.fuː/\n# third-person masculine plural non-past active subjunctive/jussive of جَافَ (jāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajūfū", "jāfa"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "جف",
-        "u": "جف",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "جُفْ • (juf) (form I) /d͡ʒuf/\n# second-person masculine singular imperative of جَافَ (jāfa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["juf", "jāfa"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "جفتن",
-        "u": "جفتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جفتن (form I)\n# جُفْتُنَّ (juftunna) /d͡ʒuf.tun.na/: second-person feminine plural past active of جَافَ (jāfa)\n# جِفْتُنَّ (jiftunna) /d͡ʒif.tun.na/: second-person feminine plural past passive of جَافَ (jāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["juftunna", "jāfa", "jiftunna"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "جافا",
-        "u": "جافا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "جَافَا • (jāfā) (form I) /d͡ʒaː.faː/\n# third-person masculine dual past active of جَافَ (jāfa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jāfā", "jāfa"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تجفن",
-        "u": "تجفن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تجفن (form I)\n# تَجُفْنَ (tajufna) /ta.d͡ʒuf.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of جَافَ (jāfa)\n# تُجَفْنَ (tujafna) /tu.d͡ʒaf.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of جَافَ (jāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajufna", "jāfa", "tujafna"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يجفن",
-        "u": "يجفن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يجفن (form I)\n# يَجُفْنَ (yajufna) /ja.d͡ʒuf.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of جَافَ (jāfa)\n# يُجَفْنَ (yujafna) /ju.d͡ʒaf.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of جَافَ (jāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajufna", "jāfa", "yujafna"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تجف",
-        "u": "تجف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تجف (form I)\n# تَجُفْ (tajuf) /ta.d͡ʒuf/: inflection of جَافَ (jāfa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُجَفْ (tujaf) /tu.d͡ʒaf/: inflection of جَافَ (jāfa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajuf", "jāfa", "tujaf"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يجف",
-        "u": "يجف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يجف (form I)\n# يَجُفْ (yajuf) /ja.d͡ʒuf/: third-person masculine singular non-past active jussive of جَافَ (jāfa)\n# يُجَفْ (yujaf) /ju.d͡ʒaf/: third-person masculine singular non-past passive jussive of جَافَ (jāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajuf", "jāfa", "yujaf"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تجوفا",
-        "u": "تجوفا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَجُوفَا • (tajūfā) (form I) /ta.d͡ʒuː.faː/\n# inflection of جَافَ (jāfa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajūfā", "jāfa"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "جافتا",
-        "u": "جافتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "جَافَتَا • (jāfatā) (form I) /d͡ʒaː.fa.taː/\n# third-person feminine dual past active of جَافَ (jāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jāfatā", "jāfa"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "جفتما",
-        "u": "جفتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جفتما (form I)\n# جُفْتُمَا (juftumā) /d͡ʒuf.tu.maː/: second-person dual past active of جَافَ (jāfa)\n# جِفْتُمَا (jiftumā) /d͡ʒif.tu.maː/: second-person dual past passive of جَافَ (jāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["juftumā", "jāfa", "jiftumā"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تجوفان",
-        "u": "تجوفان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَجُوفَانِ • (tajūfāni) (form I) /ta.d͡ʒuː.faː.ni/\n# inflection of جَافَ (jāfa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajūfāni", "jāfa"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "جافت",
-        "u": "جافت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "جَافَتْ • (jāfat) (form I) /d͡ʒaː.fat/\n# third-person feminine singular past active of جَافَ (jāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jāfat", "jāfa"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يجوفان",
-        "u": "يجوفان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَجُوفَانِ • (yajūfāni) (form I) /ja.d͡ʒuː.faː.ni/\n# third-person masculine dual non-past active indicative of جَافَ (jāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajūfāni", "jāfa"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "جفنا",
-        "u": "جفنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جفنا (form I)\n# جُفْنَا (jufnā) /d͡ʒuf.naː/: first-person plural past active of جَافَ (jāfa)\n# جِفْنَا (jifnā) /d͡ʒif.naː/: first-person plural past passive of جَافَ (jāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jufnā", "jāfa", "jifnā"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "جفتم",
-        "u": "جفتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جفتم (form I)\n# جُفْتُمْ (juftum) /d͡ʒuf.tum/: second-person masculine plural past active of جَافَ (jāfa)\n# جِفْتُمْ (jiftum) /d͡ʒif.tum/: second-person masculine plural past passive of جَافَ (jāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["juftum", "jāfa", "jiftum"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "جوفا",
-        "u": "جوفا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "جُوفَا • (jūfā) (form I) /d͡ʒuː.faː/\n# second-person dual imperative of جَافَ (jāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jūfā", "jāfa"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يجوفا",
-        "u": "يجوفا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَجُوفَا • (yajūfā) (form I) /ja.d͡ʒuː.faː/\n# third-person masculine dual non-past active subjunctive/jussive of جَافَ (jāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajūfā", "jāfa"],
-        "k": "جاف",
-        "yol": "kök"
-      },
-      {
-        "w": "جافوا",
-        "u": "جافوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "جَافُوا • (jāfū) (form I) /d͡ʒaː.fuː/\n# third-person masculine plural past active of جَافَ (jāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jāfū", "jāfa"],
-        "k": "جاف",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "جف",
+  "ses": {
     "harf": "ج",
+    "fasil": "جف",
     "mahrec": "şeceriyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "نجف",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "نجف (form I)\n# نَجُفْ (najuf) /na.d͡ʒuf/: first-person plural non-past active jussive of جَافَ (jāfa)\n# نُجَفْ (nujaf) /nu.d͡ʒaf/: first-person plural non-past passive jussive of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["najuf", "jāfa", "nujaf"]
+    },
+    {
+      "madde": "جفن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "جفن (form I)\n# جُفْنَ (jufna) /d͡ʒuf.na/: inflection of جَافَ (jāfa):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# جِفْنَ (jifna) /d͡ʒif.na/: third-person feminine plural past passive of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jufna", "jāfa", "jifna"]
+    },
+    {
+      "madde": "جفت",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "جفت (form I)\n# جُفْتُ (juftu) /d͡ʒuf.tu/: first-person singular past active of جَافَ (jāfa)\n# جُفْتَ (jufta) /d͡ʒuf.ta/: second-person masculine singular past active of جَافَ (jāfa)\n# جُفْتِ (jufti) /d͡ʒuf.ti/: second-person feminine singular past active of جَافَ (jāfa)\n# جِفْتُ (jiftu) /d͡ʒif.tu/: first-person singular past passive of جَافَ (jāfa)\n# جِفْتَ (jifta) /d͡ʒif.ta/: second-person mascul",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["juftu", "jāfa", "jufta"]
+    },
+    {
+      "madde": "أجوف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أجوف (form I)\n# أَجُوفُ (ʔajūfu) /ʔa.d͡ʒuː.fu/: first-person singular non-past active indicative of جَافَ (jāfa)\n# أَجُوفَ (ʔajūfa) /ʔa.d͡ʒuː.fa/: first-person singular non-past active subjunctive of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔajūfu", "jāfa", "ʔajūfa"]
+    },
+    {
+      "madde": "أجف",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أجف (form I)\n# أَجُفْ (ʔajuf) /ʔa.d͡ʒuf/: first-person singular non-past active jussive of جَافَ (jāfa)\n# أُجَفْ (ʔujaf) /ʔu.d͡ʒaf/: first-person singular non-past passive jussive of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔajuf", "jāfa", "ʔujaf"]
+    },
+    {
+      "madde": "يجوف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يجوف (form I)\n# يَجُوفُ (yajūfu) /ja.d͡ʒuː.fu/: third-person masculine singular non-past active indicative of جَافَ (jāfa)\n# يَجُوفَ (yajūfa) /ja.d͡ʒuː.fa/: third-person masculine singular non-past active subjunctive of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajūfu", "jāfa", "yajūfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجوف",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تجوف (form I)\n# تَجُوفُ (tajūfu) /ta.d͡ʒuː.fu/: inflection of جَافَ (jāfa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَجُوفَ (tajūfa) /ta.d͡ʒuː.fa/: inflection of جَافَ (jāfa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajūfu", "jāfa", "tajūfa"]
+    },
+    {
+      "madde": "تجوفين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَجُوفِينَ • (tajūfīna) (form I) /ta.d͡ʒuː.fiː.na/\n# second-person feminine singular non-past active indicative of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajūfīna", "jāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجوفي",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تَجُوفِي • (tajūfī) (form I) /ta.d͡ʒuː.fiː/\n# second-person feminine singular non-past active subjunctive/jussive of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajūfī", "jāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "جوفي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "جُوفِي • (jūfī) (form I) /d͡ʒuː.fiː/\n# second-person feminine singular imperative of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jūfī", "jāfa"]
+    },
+    {
+      "madde": "نجوف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نجوف (form I)\n# نَجُوفُ (najūfu) /na.d͡ʒuː.fu/: first-person plural non-past active indicative of جَافَ (jāfa)\n# نَجُوفَ (najūfa) /na.d͡ʒuː.fa/: first-person plural non-past active subjunctive of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["najūfu", "jāfa", "najūfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجوفون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَجُوفُونَ • (tajūfūna) (form I) /ta.d͡ʒuː.fuː.na/\n# second-person masculine plural non-past active indicative of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajūfūna", "jāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجوفوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَجُوفُوا • (tajūfū) (form I) /ta.d͡ʒuː.fuː/\n# second-person masculine plural non-past active subjunctive/jussive of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajūfū", "jāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "جوفوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "جُوفُوا • (jūfū) (form I) /d͡ʒuː.fuː/\n# second-person masculine plural imperative of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jūfū", "jāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يجوفون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَجُوفُونَ • (yajūfūna) (form I) /ja.d͡ʒuː.fuː.na/\n# third-person masculine plural non-past active indicative of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajūfūna", "jāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يجوفوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَجُوفُوا • (yajūfū) (form I) /ja.d͡ʒuː.fuː/\n# third-person masculine plural non-past active subjunctive/jussive of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajūfū", "jāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "جف",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "جُفْ • (juf) (form I) /d͡ʒuf/\n# second-person masculine singular imperative of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["juf", "jāfa"]
+    },
+    {
+      "madde": "جفتن",
+      "tur": "verb",
+      "baslik": "جفتن (form I)\n# جُفْتُنَّ (juftunna) /d͡ʒuf.tun.na/: second-person feminine plural past active of جَافَ (jāfa)\n# جِفْتُنَّ (jiftunna) /d͡ʒif.tun.na/: second-person feminine plural past passive of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["juftunna", "jāfa", "jiftunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "جافا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "جَافَا • (jāfā) (form I) /d͡ʒaː.faː/\n# third-person masculine dual past active of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jāfā", "jāfa"]
+    },
+    {
+      "madde": "تجفن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تجفن (form I)\n# تَجُفْنَ (tajufna) /ta.d͡ʒuf.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of جَافَ (jāfa)\n# تُجَفْنَ (tujafna) /tu.d͡ʒaf.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajufna", "jāfa", "tujafna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يجفن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يجفن (form I)\n# يَجُفْنَ (yajufna) /ja.d͡ʒuf.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of جَافَ (jāfa)\n# يُجَفْنَ (yujafna) /ju.d͡ʒaf.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajufna", "jāfa", "yujafna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تجف (form I)\n# تَجُفْ (tajuf) /ta.d͡ʒuf/: inflection of جَافَ (jāfa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُجَفْ (tujaf) /tu.d͡ʒaf/: inflection of جَافَ (jāfa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajuf", "jāfa", "tujaf"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يجف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يجف (form I)\n# يَجُفْ (yajuf) /ja.d͡ʒuf/: third-person masculine singular non-past active jussive of جَافَ (jāfa)\n# يُجَفْ (yujaf) /ju.d͡ʒaf/: third-person masculine singular non-past passive jussive of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajuf", "jāfa", "yujaf"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجوفا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَجُوفَا • (tajūfā) (form I) /ta.d͡ʒuː.faː/\n# inflection of جَافَ (jāfa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajūfā", "jāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "جافتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "جَافَتَا • (jāfatā) (form I) /d͡ʒaː.fa.taː/\n# third-person feminine dual past active of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jāfatā", "jāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "جفتما",
+      "tur": "verb",
+      "baslik": "جفتما (form I)\n# جُفْتُمَا (juftumā) /d͡ʒuf.tu.maː/: second-person dual past active of جَافَ (jāfa)\n# جِفْتُمَا (jiftumā) /d͡ʒif.tu.maː/: second-person dual past passive of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["juftumā", "jāfa", "jiftumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجوفان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَجُوفَانِ • (tajūfāni) (form I) /ta.d͡ʒuː.faː.ni/\n# inflection of جَافَ (jāfa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajūfāni", "jāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "جافت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "جَافَتْ • (jāfat) (form I) /d͡ʒaː.fat/\n# third-person feminine singular past active of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jāfat", "jāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يجوفان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَجُوفَانِ • (yajūfāni) (form I) /ja.d͡ʒuː.faː.ni/\n# third-person masculine dual non-past active indicative of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajūfāni", "jāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "جفنا",
+      "tur": "verb",
+      "baslik": "جفنا (form I)\n# جُفْنَا (jufnā) /d͡ʒuf.naː/: first-person plural past active of جَافَ (jāfa)\n# جِفْنَا (jifnā) /d͡ʒif.naː/: first-person plural past passive of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jufnā", "jāfa", "jifnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "جفتم",
+      "tur": "verb",
+      "baslik": "جفتم (form I)\n# جُفْتُمْ (juftum) /d͡ʒuf.tum/: second-person masculine plural past active of جَافَ (jāfa)\n# جِفْتُمْ (jiftum) /d͡ʒif.tum/: second-person masculine plural past passive of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["juftum", "jāfa", "jiftum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "جوفا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "جُوفَا • (jūfā) (form I) /d͡ʒuː.faː/\n# second-person dual imperative of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jūfā", "jāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يجوفا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَجُوفَا • (yajūfā) (form I) /ja.d͡ʒuː.faː/\n# third-person masculine dual non-past active subjunctive/jussive of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajūfā", "jāfa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "جافوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "جَافُوا • (jāfū) (form I) /d͡ʒaː.fuː/\n# third-person masculine plural past active of جَافَ (jāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jāfū", "jāfa"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "جاف", "r7"]
+  ],
+  "mana": {
     "ince": "season.v.01",
     "orta": "verb.perception",
     "ust": "zihin ve ilim",
@@ -464,22 +337,15 @@
     "dayanak_tanim": "lend flavor to",
     "synset_sayisi": 3
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["dry.v.02", "enfeeble.v.01", "season.v.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["dry.v.02", "enfeeble.v.01", "season.v.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,431 +1,312 @@
 {
   "kok": "تجار",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تجار", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تجارت",
-        "u": "تجارت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَجَارَّتْ • (tajārrat) (form VI) /ta.d͡ʒaːr.rat/\n# third-person feminine singular past active of تَجَارَّ (tajārra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tajārrat", "tajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "تجارر",
-        "u": "تجارر",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَجَارَرْ • (tajārar) (form VI) /ta.d͡ʒaː.rar/\n# second-person masculine singular imperative of تَجَارَّ (tajārra)",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tajārar", "tajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "يتجار",
-        "u": "يتجار",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتجار (form VI)\n# يَتَجَارُّ (yatajārru) /ja.ta.d͡ʒaːr.ru/: third-person masculine singular non-past active indicative of تَجَارَّ (tajārra)\n# يَتَجَارَّ (yatajārra) /ja.ta.d͡ʒaːr.ra/: third-person masculine singular non-past active subjunctive/jussive of تَجَارَّ (tajārra)\n# يَتَجَارِّ (yatajārri) /ja.ta.d͡ʒaːr.ri/: third-person masculine singular non-past active jussive of تَجَارَّ (tajārra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["yatajārru", "tajārra", "yatajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "يتجارر",
-        "u": "يتجارر",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَتَجَارَرْ • (yatajārar) (form VI) /ja.ta.d͡ʒaː.rar/\n# third-person masculine singular non-past active jussive of تَجَارَّ (tajārra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["yatajārar", "tajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "تجاري",
-        "u": "تجاري",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تَجَارِّي • (tajārrī) (form VI) /ta.d͡ʒaːr.riː/\n# second-person feminine singular imperative of تَجَارَّ (tajārra)",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tajārrī", "tajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "تجاررت",
-        "u": "تجاررت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تجاررت (form VI)\n# تَجَارَرْتُ (tajārartu) /ta.d͡ʒaː.rar.tu/: first-person singular past active of تَجَارَّ (tajārra)\n# تَجَارَرْتَ (tajārarta) /ta.d͡ʒaː.rar.ta/: second-person masculine singular past active of تَجَارَّ (tajārra)\n# تَجَارَرْتِ (tajārarti) /ta.d͡ʒaː.rar.ti/: second-person feminine singular past active of تَجَارَّ (tajārra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tajārartu", "tajārra", "tajārarta"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجار",
-        "u": "تتجار",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتجار (form VI)\n# تَتَجَارُّ (tatajārru) /ta.ta.d͡ʒaːr.ru/: inflection of تَجَارَّ (tajārra):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَجَارَّ (tatajārra) /ta.ta.d͡ʒaːr.ra/: inflection of تَجَارَّ (tajārra):\n## second-person masculine singular non-past active subjunctive/jussive\n## third-person feminine singula",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tatajārru", "tajārra", "tatajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجارر",
-        "u": "تتجارر",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَتَجَارَرْ • (tatajārar) (form VI) /ta.ta.d͡ʒaː.rar/\n# inflection of تَجَارَّ (tajārra):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tatajārar", "tajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجارين",
-        "u": "تتجارين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَجَارِّينَ • (tatajārrīna) (form VI) /ta.ta.d͡ʒaːr.riː.na/\n# second-person feminine singular non-past active indicative of تَجَارَّ (tajārra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tatajārrīna", "tajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجاري",
-        "u": "تتجاري",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَجَارِّي • (tatajārrī) (form VI) /ta.ta.d͡ʒaːr.riː/\n# second-person feminine singular non-past active subjunctive/jussive of تَجَارَّ (tajārra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tatajārrī", "tajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "أتجار",
-        "u": "أتجار",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتجار (form VI)\n# أَتَجَارُّ (ʔatajārru) /ʔa.ta.d͡ʒaːr.ru/: first-person singular non-past active indicative of تَجَارَّ (tajārra)\n# أَتَجَارَّ (ʔatajārra) /ʔa.ta.d͡ʒaːr.ra/: first-person singular non-past active subjunctive/jussive of تَجَارَّ (tajārra)\n# أَتَجَارِّ (ʔatajārri) /ʔa.ta.d͡ʒaːr.ri/: first-person singular non-past active jussive of تَجَارَّ (tajārra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["ʔatajārru", "tajārra", "ʔatajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "أتجارر",
-        "u": "أتجارر",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أَتَجَارَرْ • (ʔatajārar) (form VI) /ʔa.ta.d͡ʒaː.rar/\n# first-person singular non-past active jussive of تَجَارَّ (tajārra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["ʔatajārar", "tajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "تجاررنا",
-        "u": "تجاررنا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَجَارَرْنَا • (tajārarnā) (form VI) /ta.d͡ʒaː.rar.naː/\n# first-person plural past active of تَجَارَّ (tajārra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tajārarnā", "tajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "نتجار",
-        "u": "نتجار",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتجار (form VI)\n# نَتَجَارُّ (natajārru) /na.ta.d͡ʒaːr.ru/: first-person plural non-past active indicative of تَجَارَّ (tajārra)\n# نَتَجَارَّ (natajārra) /na.ta.d͡ʒaːr.ra/: first-person plural non-past active subjunctive/jussive of تَجَارَّ (tajārra)\n# نَتَجَارِّ (natajārri) /na.ta.d͡ʒaːr.ri/: first-person plural non-past active jussive of تَجَارَّ (tajārra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["natajārru", "tajārra", "natajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "نتجارر",
-        "u": "نتجارر",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نَتَجَارَرْ • (natajārar) (form VI) /na.ta.d͡ʒaː.rar/\n# first-person plural non-past active jussive of تَجَارَّ (tajārra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["natajārar", "tajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "تجاررتم",
-        "u": "تجاررتم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَجَارَرْتُمْ • (tajārartum) (form VI) /ta.d͡ʒaː.rar.tum/\n# second-person masculine plural past active of تَجَارَّ (tajārra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tajārartum", "tajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجارون",
-        "u": "تتجارون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَجَارُّونَ • (tatajārrūna) (form VI) /ta.ta.d͡ʒaːr.ruː.na/\n# second-person masculine plural non-past active indicative of تَجَارَّ (tajārra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tatajārrūna", "tajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجاروا",
-        "u": "تتجاروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَجَارُّوا • (tatajārrū) (form VI) /ta.ta.d͡ʒaːr.ruː/\n# second-person masculine plural non-past active subjunctive/jussive of تَجَارَّ (tajārra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tatajārrū", "tajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "تجاروا",
-        "u": "تجاروا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَجَارُّوا • (tajārrū) (form VI) /ta.d͡ʒaːr.ruː/\n# inflection of تَجَارَّ (tajārra):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tajārrū", "tajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "يتجارون",
-        "u": "يتجارون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَجَارُّونَ • (yatajārrūna) (form VI) /ja.ta.d͡ʒaːr.ruː.na/\n# third-person masculine plural non-past active indicative of تَجَارَّ (tajārra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["yatajārrūna", "tajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "يتجاروا",
-        "u": "يتجاروا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَجَارُّوا • (yatajārrū) (form VI) /ja.ta.d͡ʒaːr.ruː/\n# third-person masculine plural non-past active subjunctive/jussive of تَجَارَّ (tajārra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["yatajārrū", "tajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "تجاررتن",
-        "u": "تجاررتن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَجَارَرْتُنَّ • (tajārartunna) (form VI) /ta.d͡ʒaː.rar.tun.na/\n# second-person feminine plural past active of تَجَارَّ (tajārra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tajārartunna", "tajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجاررن",
-        "u": "تتجاررن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَتَجَارَرْنَ • (tatajārarna) (form VI) /ta.ta.d͡ʒaː.rar.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَجَارَّ (tajārra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tatajārarna", "tajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "تجاررن",
-        "u": "تجاررن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَجَارَرْنَ • (tajārarna) (form VI) /ta.d͡ʒaː.rar.na/\n# inflection of تَجَارَّ (tajārra):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tajārarna", "tajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "يتجاررن",
-        "u": "يتجاررن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَتَجَارَرْنَ • (yatajārarna) (form VI) /ja.ta.d͡ʒaː.rar.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَجَارَّ (tajārra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["yatajārarna", "tajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "تجارا",
-        "u": "تجارا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَجَارَّا • (tajārrā) (form VI) /ta.d͡ʒaːr.raː/\n# inflection of تَجَارَّ (tajārra):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tajārrā", "tajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجاران",
-        "u": "تتجاران",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَجَارَّانِ • (tatajārrāni) (form VI) /ta.ta.d͡ʒaːr.raː.ni/\n# inflection of تَجَارَّ (tajārra):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tatajārrāni", "tajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "يتجاران",
-        "u": "يتجاران",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَجَارَّانِ • (yatajārrāni) (form VI) /ja.ta.d͡ʒaːr.raː.ni/\n# third-person masculine dual non-past active indicative of تَجَارَّ (tajārra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["yatajārrāni", "tajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "تجارتا",
-        "u": "تجارتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَجَارَّتَا • (tajārratā) (form VI) /ta.d͡ʒaːr.ra.taː/\n# third-person feminine dual past active of تَجَارَّ (tajārra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tajārratā", "tajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجارا",
-        "u": "تتجارا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَجَارَّا • (tatajārrā) (form VI) /ta.ta.d͡ʒaːr.raː/\n# inflection of تَجَارَّ (tajārra):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tatajārrā", "tajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "تجاررتما",
-        "u": "تجاررتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَجَارَرْتُمَا • (tajārartumā) (form VI) /ta.d͡ʒaː.rar.tu.maː/\n# second-person dual past active of تَجَارَّ (tajārra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["tajārartumā", "tajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      },
-      {
-        "w": "يتجارا",
-        "u": "يتجارا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَجَارَّا • (yatajārrā) (form VI) /ja.ta.d͡ʒaːr.raː/\n# third-person masculine dual non-past active subjunctive/jussive of تَجَارَّ (tajārra)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-vi", "no-gloss"],
-        "r": ["yatajārrā", "tajārra"],
-        "k": "تجار",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تج",
+  "ses": {
     "harf": "ت",
+    "fasil": "تج",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "تجارت",
+      "tur": "verb",
+      "baslik": "تَجَارَّتْ • (tajārrat) (form VI) /ta.d͡ʒaːr.rat/\n# third-person feminine singular past active of تَجَارَّ (tajārra)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tajārrat", "tajārra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجارر",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَجَارَرْ • (tajārar) (form VI) /ta.d͡ʒaː.rar/\n# second-person masculine singular imperative of تَجَارَّ (tajārra)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tajārar", "tajārra"]
+    },
+    {
+      "madde": "يتجار",
+      "tur": "verb",
+      "baslik": "يتجار (form VI)\n# يَتَجَارُّ (yatajārru) /ja.ta.d͡ʒaːr.ru/: third-person masculine singular non-past active indicative of تَجَارَّ (tajārra)\n# يَتَجَارَّ (yatajārra) /ja.ta.d͡ʒaːr.ra/: third-person masculine singular non-past active subjunctive/jussive of تَجَارَّ (tajārra)\n# يَتَجَارِّ (yatajārri) /ja.ta.d͡ʒaːr.ri/: third-person masculine singular non-past active jussive of تَجَارَّ (tajārra)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["yatajārru", "tajārra", "yatajārra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتجارر",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَتَجَارَرْ • (yatajārar) (form VI) /ja.ta.d͡ʒaː.rar/\n# third-person masculine singular non-past active jussive of تَجَارَّ (tajārra)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["yatajārar", "tajārra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجاري",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تَجَارِّي • (tajārrī) (form VI) /ta.d͡ʒaːr.riː/\n# second-person feminine singular imperative of تَجَارَّ (tajārra)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tajārrī", "tajārra"]
+    },
+    {
+      "madde": "تجاررت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تجاررت (form VI)\n# تَجَارَرْتُ (tajārartu) /ta.d͡ʒaː.rar.tu/: first-person singular past active of تَجَارَّ (tajārra)\n# تَجَارَرْتَ (tajārarta) /ta.d͡ʒaː.rar.ta/: second-person masculine singular past active of تَجَارَّ (tajārra)\n# تَجَارَرْتِ (tajārarti) /ta.d͡ʒaː.rar.ti/: second-person feminine singular past active of تَجَارَّ (tajārra)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tajārartu", "tajārra", "tajārarta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجار",
+      "tur": "verb",
+      "baslik": "تتجار (form VI)\n# تَتَجَارُّ (tatajārru) /ta.ta.d͡ʒaːr.ru/: inflection of تَجَارَّ (tajārra):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَجَارَّ (tatajārra) /ta.ta.d͡ʒaːr.ra/: inflection of تَجَارَّ (tajārra):\n## second-person masculine singular non-past active subjunctive/jussive\n## third-person feminine singula",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tatajārru", "tajārra", "tatajārra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجارر",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَتَجَارَرْ • (tatajārar) (form VI) /ta.ta.d͡ʒaː.rar/\n# inflection of تَجَارَّ (tajārra):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tatajārar", "tajārra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجارين",
+      "tur": "verb",
+      "baslik": "تَتَجَارِّينَ • (tatajārrīna) (form VI) /ta.ta.d͡ʒaːr.riː.na/\n# second-person feminine singular non-past active indicative of تَجَارَّ (tajārra)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tatajārrīna", "tajārra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجاري",
+      "tur": "verb",
+      "baslik": "تَتَجَارِّي • (tatajārrī) (form VI) /ta.ta.d͡ʒaːr.riː/\n# second-person feminine singular non-past active subjunctive/jussive of تَجَارَّ (tajārra)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tatajārrī", "tajārra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتجار",
+      "tur": "verb",
+      "baslik": "أتجار (form VI)\n# أَتَجَارُّ (ʔatajārru) /ʔa.ta.d͡ʒaːr.ru/: first-person singular non-past active indicative of تَجَارَّ (tajārra)\n# أَتَجَارَّ (ʔatajārra) /ʔa.ta.d͡ʒaːr.ra/: first-person singular non-past active subjunctive/jussive of تَجَارَّ (tajārra)\n# أَتَجَارِّ (ʔatajārri) /ʔa.ta.d͡ʒaːr.ri/: first-person singular non-past active jussive of تَجَارَّ (tajārra)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["ʔatajārru", "tajārra", "ʔatajārra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتجارر",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أَتَجَارَرْ • (ʔatajārar) (form VI) /ʔa.ta.d͡ʒaː.rar/\n# first-person singular non-past active jussive of تَجَارَّ (tajārra)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["ʔatajārar", "tajārra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجاررنا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَجَارَرْنَا • (tajārarnā) (form VI) /ta.d͡ʒaː.rar.naː/\n# first-person plural past active of تَجَارَّ (tajārra)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tajārarnā", "tajārra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتجار",
+      "tur": "verb",
+      "baslik": "نتجار (form VI)\n# نَتَجَارُّ (natajārru) /na.ta.d͡ʒaːr.ru/: first-person plural non-past active indicative of تَجَارَّ (tajārra)\n# نَتَجَارَّ (natajārra) /na.ta.d͡ʒaːr.ra/: first-person plural non-past active subjunctive/jussive of تَجَارَّ (tajārra)\n# نَتَجَارِّ (natajārri) /na.ta.d͡ʒaːr.ri/: first-person plural non-past active jussive of تَجَارَّ (tajārra)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["natajārru", "tajārra", "natajārra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتجارر",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نَتَجَارَرْ • (natajārar) (form VI) /na.ta.d͡ʒaː.rar/\n# first-person plural non-past active jussive of تَجَارَّ (tajārra)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["natajārar", "tajārra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجاررتم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَجَارَرْتُمْ • (tajārartum) (form VI) /ta.d͡ʒaː.rar.tum/\n# second-person masculine plural past active of تَجَارَّ (tajārra)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tajārartum", "tajārra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجارون",
+      "tur": "verb",
+      "baslik": "تَتَجَارُّونَ • (tatajārrūna) (form VI) /ta.ta.d͡ʒaːr.ruː.na/\n# second-person masculine plural non-past active indicative of تَجَارَّ (tajārra)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tatajārrūna", "tajārra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجاروا",
+      "tur": "verb",
+      "baslik": "تَتَجَارُّوا • (tatajārrū) (form VI) /ta.ta.d͡ʒaːr.ruː/\n# second-person masculine plural non-past active subjunctive/jussive of تَجَارَّ (tajārra)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tatajārrū", "tajārra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجاروا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَجَارُّوا • (tajārrū) (form VI) /ta.d͡ʒaːr.ruː/\n# inflection of تَجَارَّ (tajārra):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tajārrū", "tajārra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتجارون",
+      "tur": "verb",
+      "baslik": "يَتَجَارُّونَ • (yatajārrūna) (form VI) /ja.ta.d͡ʒaːr.ruː.na/\n# third-person masculine plural non-past active indicative of تَجَارَّ (tajārra)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["yatajārrūna", "tajārra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتجاروا",
+      "tur": "verb",
+      "baslik": "يَتَجَارُّوا • (yatajārrū) (form VI) /ja.ta.d͡ʒaːr.ruː/\n# third-person masculine plural non-past active subjunctive/jussive of تَجَارَّ (tajārra)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["yatajārrū", "tajārra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجاررتن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَجَارَرْتُنَّ • (tajārartunna) (form VI) /ta.d͡ʒaː.rar.tun.na/\n# second-person feminine plural past active of تَجَارَّ (tajārra)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tajārartunna", "tajārra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجاررن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَتَجَارَرْنَ • (tatajārarna) (form VI) /ta.ta.d͡ʒaː.rar.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَجَارَّ (tajārra)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tatajārarna", "tajārra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجاررن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَجَارَرْنَ • (tajārarna) (form VI) /ta.d͡ʒaː.rar.na/\n# inflection of تَجَارَّ (tajārra):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tajārarna", "tajārra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتجاررن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَتَجَارَرْنَ • (yatajārarna) (form VI) /ja.ta.d͡ʒaː.rar.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَجَارَّ (tajārra)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["yatajārarna", "tajārra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجارا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَجَارَّا • (tajārrā) (form VI) /ta.d͡ʒaːr.raː/\n# inflection of تَجَارَّ (tajārra):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tajārrā", "tajārra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجاران",
+      "tur": "verb",
+      "baslik": "تَتَجَارَّانِ • (tatajārrāni) (form VI) /ta.ta.d͡ʒaːr.raː.ni/\n# inflection of تَجَارَّ (tajārra):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tatajārrāni", "tajārra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتجاران",
+      "tur": "verb",
+      "baslik": "يَتَجَارَّانِ • (yatajārrāni) (form VI) /ja.ta.d͡ʒaːr.raː.ni/\n# third-person masculine dual non-past active indicative of تَجَارَّ (tajārra)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["yatajārrāni", "tajārra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجارتا",
+      "tur": "verb",
+      "baslik": "تَجَارَّتَا • (tajārratā) (form VI) /ta.d͡ʒaːr.ra.taː/\n# third-person feminine dual past active of تَجَارَّ (tajārra)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tajārratā", "tajārra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجارا",
+      "tur": "verb",
+      "baslik": "تَتَجَارَّا • (tatajārrā) (form VI) /ta.ta.d͡ʒaːr.raː/\n# inflection of تَجَارَّ (tajārra):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tatajārrā", "tajārra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجاررتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَجَارَرْتُمَا • (tajārartumā) (form VI) /ta.d͡ʒaː.rar.tu.maː/\n# second-person dual past active of تَجَارَّ (tajārra)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["tajārartumā", "tajārra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتجارا",
+      "tur": "verb",
+      "baslik": "يَتَجَارَّا • (yatajārrā) (form VI) /ja.ta.d͡ʒaːr.raː/\n# third-person masculine dual non-past active subjunctive/jussive of تَجَارَّ (tajārra)",
+      "etiket": ["form-vi", "no-gloss"],
+      "okunus": ["yatajārrā", "tajārra"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "تجار", "r6"]
+  ],
+  "mana": {
     "ince": "commercial.a.01",
     "orta": "adj.all",
     "ust": "hâl ve vasıf",
@@ -433,22 +314,15 @@
     "dayanak_tanim": "connected with or engaged in or sponsored by or used in commerce or commercial enterprises",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["commercial.a.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["commercial.a.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

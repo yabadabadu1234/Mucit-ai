@@ -1,898 +1,631 @@
 {
   "kok": "وشى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "وشى", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "mekayis": [
-      {
-        "baslik": "وَشَى",
-        "metin": "(وَشَى) الْوَاوُ وَالشِّينُ وَالْحَرْفُ الْمُعْتَلُّ: أَصْلَانِ، أَحَدُهُمَا يَدُلُّ عَلَى تَحْسِينِ شَيْءٍ وَتَزْيِينِهِ، وَالْآخَرُ عَلَى نَمَاءٍ وَزِيَادَةٍ.\nالْأَوَّلُ: وَشَيْتُ الثَّوْبَ أَشِيهِ وَشْيًا. وَيَقُولُونَ لِلَّذِي يَكْذِبُ وَيَنِمُّ وَيُزَخْرِفُ كَلَامَهُ: قَدْ وَشَى، وَهُوَ وَاشٍ.\nوَالْأَصْلُ الْآخَرُ: الْمَرْأَةُ الْوَاشِيَةُ: الْكَثِيرَةُ الْوَلَدِ. وَيُقَالُ ذَلِكَ لِكُلِّ مَا يَلِدُ. وَالْوَاشِي: الرَّجُلُ الْكَثِيرُ النَّسْلِ. وَالْوَشْيُ: الْكَثْرَةُ. وَوَشَى بَنُو فُلَانٍ: كَثُرُوا. وَمَا وَشَتْ هَذِهِ الْمَاشِيَةُ عِنْدِي، أَيْ مَا وَلَدَتْ."
-      }
-    ],
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "السين والهاء",
-      "baslik": "وشى",
-      "mihveri": "زيادة دقيقة تنشأ من الشيء لطيفة لاصقة به، كبقع اللون التي تخالف لونَ جِلْد الفرس وغيره. {مُسَلَّمَةٌ لَا شِيَةَ فِيهَا} وكالأولاد الصغيرة للبهائم، وكالنبات أولَ ظهوره من الأرض نُكَتًا خضراء على وجه الأرض السوداء. ومن ذلك \"تَوَشَّى فيه الشيبُ: ظهر \"فهو نكت بياض في الشعر الأسود. ومن مادي نشوء الدقاق من الشيء - أيضًا: \"الواشيةُ: الكثيرة الولد - يقال ذلك في كل ما يلد. وَشَى بنو فلان: كثروا. ما وَشَتْ هذه الماشية عندي بشيء: ما ولدت \". ثم قالوا \"أوشى المَعْدِن (وهو ما نسميه المَنْجَم): وُجد فيه شيء يسير من ذهب، والنخلةُ: خرج أول رُطَبها، والرجلُ: كثرت ماشيته \". ومن مادّي ذلك أيضًا قالوا: \"ائتشى العظمُ: جَبَر/ بَرَأَ من كَسْر كان به \"فجبور كَسْر العظم يحدث بنُمُوّ (زيادة) فيه وفي مخّه وفي اللحم المحيط به. وقالوا \"أوشَى الشيءَ: استخرجه برفق. استوْشَى الحديث: استخرجه بالبَحْث والمسألة. أَوْشَى: استخرج معنَى كلام أو شعر. أوشَى الفرسَ: أخذ ما عنده من الجري/ استخرج جَرْيه برَكْضِه/ بضَرْبِه جنبَه بَعقِبه. وكلّ ما دَعَوتَه وحَرّكتَه لترسله فقد استوشيته. أوْشاه: استحثّه بمِحْجَن أو كِلاب \"فالاستخراج (2/1097) استنشاء. وفي الركض والضرب يكون اللطف هو كون الخارج طاقة خفية مختزنة). وأخيرًا فمن نشوء اللطيف \"أوشَي الشيءَ: عَلِمَه \"من حيث إن العلم حصول صورة في الذهن مأخوذة من الشيء. لكنها خفية في الذهن. ومن مجاز الأصل ذلك الاستعمال المشهور \"وَشَي الكَذِبَ والحديثَ: رَقَمَه وصَوَّره. النمام يشي الكذب: يؤلفه ويلونه ويزينه. وشي به وشيًا ووشاية: نَمَّ به. وشى به إلى السلطان: سعى \"فالوشاية فيها إضافات مك",
-      "sesler": "",
-      "tam_metin": "{مُسَلَّمَةٌ لَا شِيَةَ فِيهَا} [البقرة: 71]\n\"الحائك واشٍ يَشِي الثوبَ وَشْيًا أي نَسْجًا وتأليفًا. الوشْىُ في اللون خَلْطُ لَوْن بلون. الشِيَةُ: بياض في سواد أو سواد في بياض/ كل لون يخالف معظمَ لون الفرس وغيره. الوَشَاء: تناسل المال وكثرته. أوشت الأرض خرج أول نبتها \".\n° المعنى المحوري\nزيادة دقيقة تنشأ من الشيء لطيفة لاصقة به، كبقع اللون التي تخالف لونَ جِلْد الفرس وغيره. {مُسَلَّمَةٌ لَا شِيَةَ فِيهَا} وكالأولاد الصغيرة للبهائم، وكالنبات أولَ ظهوره من الأرض نُكَتًا خضراء على وجه الأرض السوداء. ومن ذلك \"تَوَشَّى فيه الشيبُ: ظهر \"فهو نكت بياض في الشعر الأسود.\nومن مادي نشوء الدقاق من الشيء - أيضًا: \"الواشيةُ: الكثيرة الولد - يقال ذلك في كل ما يلد. وَشَى بنو فلان: كثروا. ما وَشَتْ هذه الماشية عندي بشيء: ما ولدت \". ثم قالوا \"أوشى المَعْدِن (وهو ما نسميه المَنْجَم): وُجد فيه شيء يسير من ذهب، والنخلةُ: خرج أول رُطَبها، والرجلُ: كثرت ماشيته \".\nومن مادّي ذلك أيضًا قالوا: \"ائتشى العظمُ: جَبَر/ بَرَأَ من كَسْر كان به \"فجبور كَسْر العظم يحدث بنُمُوّ (زيادة) فيه وفي مخّه وفي اللحم المحيط به. وقالوا \"أوشَى الشيءَ: استخرجه برفق. استوْشَى الحديث: استخرجه بالبَحْث والمسألة. أَوْشَى: استخرج معنَى كلام أو شعر. أوشَى الفرسَ: أخذ ما عنده من الجري/ استخرج جَرْيه برَكْضِه/ بضَرْبِه جنبَه بَعقِبه. وكلّ ما دَعَوتَه وحَرّكتَه لترسله فقد استوشيته. أوْشاه: استحثّه بمِحْجَن أو كِلاب \"فالاستخراج\n(2/1097)\nاستنشاء. وفي الركض والضرب يكون اللطف هو كون الخارج طاقة خفية مختزنة).\nوأخيرًا فمن نشوء اللطيف \"أوشَي الشيءَ: عَلِمَه \"من حيث إن العلم حصول صورة في الذهن مأخوذة من الشيء. لكنها خفية في الذهن.\nومن مجاز الأصل ذلك الاستعمال المشهور \"وَشَي الكَذِبَ والحديثَ: رَقَمَه وصَوَّره. النمام يشي الكذب: يؤلفه ويلونه ويزينه. وشي به وشيًا ووشاية: نَمَّ به. وشى به إلى السلطان: سعى \"فالوشاية فيها إضافات مكذوبة لنسج الكلام وتلفيقه وفيها تزيين لينطلي على المكذوب له. ويلحظ أن النمّ (الإيصال) ليس أصيلًا هنا، ولكنه مطلوب الواشي عادة.",
-      "fasil_ozeti": "° معنى الفصل المعجمي (سه): هو الفراغ المُتَخَلّل كما في السهوة الكوة والأرض اللينة التربة كلما شرحناها في (سهو)، وكما في النبع الدائم للماء من ساهور الماء - في (سهر) والماء مادة مائعة تقارب الفراغ أو الهواء في الخفة، وكما في السِهْل والسِهْلة بالكسر: التراب الذي كالرمل حيث يتخلل ذراتِه فراغٌ فيجعل مادته متسيبة كذلك، وكالسهم القِدْح حيث يُتَوَخَّى فيه أن يكون دقيقًا نحيلًا لينفذ من حلق الدروع إذا رُمِىَ به. ونحوله هذا من تخفيف مادته باقتطاع أَغْلَظه أى إقلال مادته فكأنه أُخْلِى وأُفْرِغَ من الغِلَظ، ومثل هذا السُهام: الضُمْر وتغير اللون فهو خُلُوُّ من قدر كبير من المادة - في (سهم)."
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "ش",
-        "u": "ش",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "شِ • (ši) (form I) /ʃi/\n# second-person masculine singular imperative of وَشَى (wašā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ši", "wašā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "وش",
-        "u": "وش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وَشِّ • (wašši) (form II) /waʃ.ʃi/\n# second-person masculine singular imperative of وَشَّى (waššā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["wašši", "waššā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "شين",
-        "u": "شين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "شِينَ • (šīna) (form I) /ʃiː.na/\n# second-person feminine plural imperative of وَشَى (wašā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šīna", "wašā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوش",
-        "u": "نوش",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نوش (form II)\n# نُوَشِّ (nuwašši) /nu.waʃ.ʃi/: first-person plural non-past active jussive of وَشَّى (waššā)\n# نُوَشَّ (nuwašša) /nu.waʃ.ʃa/: first-person plural non-past passive jussive of وَشَّى (waššā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuwašši", "waššā", "nuwašša"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "شي",
-        "u": "شي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "شِي • (šī) (form I) /ʃiː/\n# second-person feminine singular imperative of وَشَى (wašā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šī", "wašā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "تش",
-        "u": "تش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَشِ • (taši) (form I) /ta.ʃi/\n# inflection of وَشَى (wašā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taši", "wašā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "وشي",
-        "u": "وشي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وشي (form II)\n# وُشِّيَ (wuššiya) /wuʃ.ʃi.ja/: third-person masculine singular past passive of وَشَّى (waššā)\n# وَشِّي (waššī) /waʃ.ʃiː/: second-person feminine singular imperative of وَشَّى (waššā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["wuššiya", "waššā", "waššī"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "توش",
-        "u": "توش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "توش (form II)\n# تُوَشِّ (tuwašši) /tu.waʃ.ʃi/: inflection of وَشَّى (waššā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُوَشَّ (tuwašša) /tu.waʃ.ʃa/: inflection of وَشَّى (waššā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwašši", "waššā", "tuwašša"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "نش",
-        "u": "نش",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نَشِ • (naši) (form I) /na.ʃi/\n# first-person plural non-past active jussive of وَشَى (wašā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naši", "wašā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "نشيش",
-        "u": "نشيش",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "نَشِيش • (našīš) m",
-        "g": ["verbal noun of نَشَّ (našša) (form I)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["نَشَّ"],
-        "r": ["našīš"],
-        "ipa": ["/na.ʃiːʃ/"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "يش",
-        "u": "يش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَشِ • (yaši) (form I) /ja.ʃi/\n# third-person masculine singular non-past active jussive of وَشَى (wašā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaši", "wašā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "شيا",
-        "u": "شيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "شِيَا • (šiyā) (form I) /ʃi.jaː/\n# second-person dual imperative of وَشَى (wašā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šiyā", "wašā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "شوا",
-        "u": "شوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "شُوا • (šū) (form I) /ʃuː/\n# second-person masculine plural imperative of وَشَى (wašā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["šū", "wašā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "نشي",
-        "u": "نشي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نشي (form I)\n# نَشِي (našī) /na.ʃiː/: first-person plural non-past active indicative of وَشَى (wašā)\n# نَشِيَ (našiya) /na.ʃi.ja/: first-person plural non-past active subjunctive of وَشَى (wašā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["našī", "wašā", "našiya"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "وشينا",
-        "u": "وشينا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وشينا (form I)\n# وَشَيْنَا (wašaynā) /wa.ʃaj.naː/: first-person plural past active of وَشَى (wašā)\n# وُشِينَا (wušīnā) /wu.ʃiː.naː/: first-person plural past passive of وَشَى (wašā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wašaynā", "wašā", "wušīnā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "وشينا",
-        "u": "وشينا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وشينا (form II)\n# وَشَّيْنَا (waššaynā) /waʃ.ʃaj.naː/: first-person plural past active of وَشَّى (waššā)\n# وُشِّينَا (wuššīnā) /wuʃ.ʃiː.naː/: first-person plural past passive of وَشَّى (waššā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waššaynā", "waššā", "wuššīnā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "وشيتما",
-        "u": "وشيتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وشيتما (form I)\n# وَشَيْتُمَا (wašaytumā) /wa.ʃaj.tu.maː/: second-person dual past active of وَشَى (wašā)\n# وُشِيتُمَا (wušītumā) /wu.ʃiː.tu.maː/: second-person dual past passive of وَشَى (wašā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wašaytumā", "wašā", "wušītumā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "وشيتما",
-        "u": "وشيتما",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وشيتما (form II)\n# وَشَّيْتُمَا (waššaytumā) /waʃ.ʃaj.tu.maː/: second-person dual past active of وَشَّى (waššā)\n# وُشِّيتُمَا (wuššītumā) /wuʃ.ʃiː.tu.maː/: second-person dual past passive of وَشَّى (waššā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waššaytumā", "waššā", "wuššītumā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "وشت",
-        "u": "وشت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وَشَتْ • (wašat) (form I) /wa.ʃat/\n# third-person feminine singular past active of وَشَى (wašā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wašat", "wašā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "وشت",
-        "u": "وشت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وَشَّتْ • (waššat) (form II) /waʃ.ʃat/\n# third-person feminine singular past active of وَشَّى (waššā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waššat", "waššā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "وشيا",
-        "u": "وشيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وشيا (form I)\n# وَشَيَا (wašayā) /wa.ʃa.jaː/: third-person masculine dual past active of وَشَى (wašā)\n# وُشِيَا (wušiyā) /wu.ʃi.jaː/: third-person masculine dual past passive of وَشَى (wašā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wašayā", "wašā", "wušiyā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "وشيا",
-        "u": "وشيا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وشيا (form II)\n# وَشَّيَا (waššayā) /waʃ.ʃa.jaː/: third-person masculine dual past active of وَشَّى (waššā)\n# وُشِّيَا (wuššiyā) /wuʃ.ʃi.jaː/: third-person masculine dual past passive of وَشَّى (waššā)\n# وَشِّيَا (waššiyā) /waʃ.ʃi.jaː/: second-person dual imperative of وَشَّى (waššā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waššayā", "waššā", "wuššiyā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "وشيتن",
-        "u": "وشيتن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وشيتن (form I)\n# وَشَيْتُنَّ (wašaytunna) /wa.ʃaj.tun.na/: second-person feminine plural past active of وَشَى (wašā)\n# وُشِيتُنَّ (wušītunna) /wu.ʃiː.tun.na/: second-person feminine plural past passive of وَشَى (wašā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wašaytunna", "wašā", "wušītunna"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "وشيتن",
-        "u": "وشيتن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وشيتن (form II)\n# وَشَّيْتُنَّ (waššaytunna) /waʃ.ʃaj.tun.na/: second-person feminine plural past active of وَشَّى (waššā)\n# وُشِّيتُنَّ (wuššītunna) /wuʃ.ʃiː.tun.na/: second-person feminine plural past passive of وَشَّى (waššā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waššaytunna", "waššā", "wuššītunna"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "وشوا",
-        "u": "وشوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وشوا (form I)\n# وَشَوْا (wašaw) /wa.ʃaw/: third-person masculine plural past active of وَشَى (wašā)\n# وُشُوا (wušū) /wu.ʃuː/: third-person masculine plural past passive of وَشَى (wašā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wašaw", "wašā", "wušū"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "وشوا",
-        "u": "وشوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وشوا (form II)\n# وَشَّوْا (waššaw) /waʃ.ʃaw/: third-person masculine plural past active of وَشَّى (waššā)\n# وُشُّوا (wuššū) /wuʃ.ʃuː/: third-person masculine plural past passive of وَشَّى (waššā)\n# وَشُّوا (waššū) /waʃ.ʃuː/: second-person masculine plural imperative of وَشَّى (waššā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waššaw", "waššā", "wuššū"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "وشتا",
-        "u": "وشتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وَشَتَا • (wašatā) (form I) /wa.ʃa.taː/\n# third-person feminine dual past active of وَشَى (wašā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wašatā", "wašā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "وشتا",
-        "u": "وشتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وَشَّتَا • (waššatā) (form II) /waʃ.ʃa.taː/\n# third-person feminine dual past active of وَشَّى (waššā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waššatā", "waššā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "وشيت",
-        "u": "وشيت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وشيت (form I)\n# وَشَيْتُ (wašaytu) /wa.ʃaj.tu/: first-person singular past active of وَشَى (wašā)\n# وَشَيْتَ (wašayta) /wa.ʃaj.ta/: second-person masculine singular past active of وَشَى (wašā)\n# وَشَيْتِ (wašayti) /wa.ʃaj.ti/: second-person feminine singular past active of وَشَى (wašā)\n# وُشِيتُ (wušītu) /wu.ʃiː.tu/: first-person singular past passive of وَشَى (wašā)\n# وُشِيتَ (wušīta) /wu.ʃiː.ta/",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wašaytu", "wašā", "wašayta"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "وشيت",
-        "u": "وشيت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وشيت (form II)\n# وَشَّيْتُ (waššaytu) /waʃ.ʃaj.tu/: first-person singular past active of وَشَّى (waššā)\n# وَشَّيْتَ (waššayta) /waʃ.ʃaj.ta/: second-person masculine singular past active of وَشَّى (waššā)\n# وَشَّيْتِ (waššayti) /waʃ.ʃaj.ti/: second-person feminine singular past active of وَشَّى (waššā)\n# وُشِّيتُ (wuššītu) /wuʃ.ʃiː.tu/: first-person singular past passive of وَشَّى (waššā)\n# وُشِّيت",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waššaytu", "waššā", "waššayta"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "يشي",
-        "u": "يشي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يشي (form I)\n# يَشِي (yašī) /ja.ʃiː/: third-person masculine singular non-past active indicative of وَشَى (wašā)\n# يَشِيَ (yašiya) /ja.ʃi.ja/: third-person masculine singular non-past active subjunctive of وَشَى (wašā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašī", "wašā", "yašiya"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "وشيتم",
-        "u": "وشيتم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وشيتم (form I)\n# وَشَيْتُمْ (wašaytum) /wa.ʃaj.tum/: second-person masculine plural past active of وَشَى (wašā)\n# وُشِيتُمْ (wušītum) /wu.ʃiː.tum/: second-person masculine plural past passive of وَشَى (wašā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wašaytum", "wašā", "wušītum"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "وشيتم",
-        "u": "وشيتم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وشيتم (form II)\n# وَشَّيْتُمْ (waššaytum) /waʃ.ʃaj.tum/: second-person masculine plural past active of وَشَّى (waššā)\n# وُشِّيتُمْ (wuššītum) /wuʃ.ʃiː.tum/: second-person masculine plural past passive of وَشَّى (waššā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waššaytum", "waššā", "wuššītum"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "وشين",
-        "u": "وشين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "وشين (form I)\n# وَشَيْنَ (wašayna) /wa.ʃaj.na/: third-person feminine plural past active of وَشَى (wašā)\n# وُشِينَ (wušīna) /wu.ʃiː.na/: third-person feminine plural past passive of وَشَى (wašā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wašayna", "wašā", "wušīna"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "وشين",
-        "u": "وشين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وشين (form II)\n# وَشَّيْنَ (waššayna) /waʃ.ʃaj.na/: third-person feminine plural past active of وَشَّى (waššā)\n# وُشِّينَ (wuššīna) /wuʃ.ʃiː.na/: third-person feminine plural past passive of وَشَّى (waššā)\n# وَشِّينَ (waššīna) /waʃ.ʃiː.na/: second-person feminine plural imperative of وَشَّى (waššā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["waššayna", "waššā", "wuššīna"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "أشي",
-        "u": "أشي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أشي (form I)\n# أَشِي (ʔašī) /ʔa.ʃiː/: first-person singular non-past active indicative of وَشَى (wašā)\n# أَشِيَ (ʔašiya) /ʔa.ʃi.ja/: first-person singular non-past active subjunctive of وَشَى (wašā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔašī", "wašā", "ʔašiya"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "تشيان",
-        "u": "تشيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَشِيَانِ • (tašiyāni) (form I) /ta.ʃi.jaː.ni/\n# inflection of وَشَى (wašā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašiyāni", "wašā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "تشين",
-        "u": "تشين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَشِينَ • (tašīna) (form I) /ta.ʃiː.na/\n# inflection of وَشَى (wašā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašīna", "wašā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "تشي",
-        "u": "تشي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تشي (form I)\n# تَشِي (tašī) /ta.ʃiː/: inflection of وَشَى (wašā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَشِيَ (tašiya) /ta.ʃi.ja/: inflection of وَشَى (wašā):\n## second-person masculine singular non-past active subjunctive\n## third-person f",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašī", "wašā", "tašiya"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "تشون",
-        "u": "تشون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَشُونَ • (tašūna) (form I) /ta.ʃuː.na/\n# second-person masculine plural non-past active indicative of وَشَى (wašā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašūna", "wašā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "يشيان",
-        "u": "يشيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَشِيَانِ • (yašiyāni) (form I) /ja.ʃi.jaː.ni/\n# third-person masculine dual non-past active indicative of وَشَى (wašā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašiyāni", "wašā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "يشين",
-        "u": "يشين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَشِينَ • (yašīna) (form I) /ja.ʃiː.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of وَشَى (wašā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašīna", "wašā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "يشون",
-        "u": "يشون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَشُونَ • (yašūna) (form I) /ja.ʃuː.na/\n# third-person masculine plural non-past active indicative of وَشَى (wašā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašūna", "wašā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "تشيا",
-        "u": "تشيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَشِيَا • (tašiyā) (form I) /ta.ʃi.jaː/\n# inflection of وَشَى (wašā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašiyā", "wašā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "يشيا",
-        "u": "يشيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَشِيَا • (yašiyā) (form I) /ja.ʃi.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of وَشَى (wašā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašiyā", "wašā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "تشوا",
-        "u": "تشوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَشُوا • (tašū) (form I) /ta.ʃuː/\n# second-person masculine plural non-past active subjunctive/jussive of وَشَى (wašā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tašū", "wašā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "توشي",
-        "u": "توشي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "توشي (form II)\n# تُوَشِّي (tuwaššī) /tu.waʃ.ʃiː/: inflection of وَشَّى (waššā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُوَشِّيَ (tuwaššiya) /tu.waʃ.ʃi.ja/: inflection of وَشَّى (waššā):\n## second-person masculine singular non-past active sub",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaššī", "waššā", "tuwaššiya"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوشي",
-        "u": "يوشي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يوشي (form II)\n# يُوَشِّي (yuwaššī) /ju.waʃ.ʃiː/: third-person masculine singular non-past active indicative of وَشَّى (waššā)\n# يُوَشِّيَ (yuwaššiya) /ju.waʃ.ʃi.ja/: third-person masculine singular non-past active subjunctive of وَشَّى (waššā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaššī", "waššā", "yuwaššiya"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "أوشي",
-        "u": "أوشي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوشي (form II)\n# أُوَشِّي (ʔuwaššī) /ʔu.waʃ.ʃiː/: first-person singular non-past active indicative of وَشَّى (waššā)\n# أُوَشِّيَ (ʔuwaššiya) /ʔu.waʃ.ʃi.ja/: first-person singular non-past active subjunctive of وَشَّى (waššā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuwaššī", "waššā", "ʔuwaššiya"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "يشوا",
-        "u": "يشوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَشُوا • (yašū) (form I) /ja.ʃuː/\n# third-person masculine plural non-past active subjunctive/jussive of وَشَى (wašā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yašū", "wašā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "وشيتا",
-        "u": "وشيتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وُشِّيَتَا • (wuššiyatā) (form II) /wuʃ.ʃi.ja.taː/\n# third-person feminine dual past passive of وَشَّى (waššā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["wuššiyatā", "waššā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "توشون",
-        "u": "توشون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "توشون (form II)\n# تُوَشُّونَ (tuwaššūna) /tu.waʃ.ʃuː.na/: second-person masculine plural non-past active indicative of وَشَّى (waššā)\n# تُوَشَّوْنَ (tuwaššawna) /tu.waʃ.ʃaw.na/: second-person masculine plural non-past passive indicative of وَشَّى (waššā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaššūna", "waššā", "tuwaššawna"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "توشيان",
-        "u": "توشيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "توشيان (form II)\n# تُوَشِّيَانِ (tuwaššiyāni) /tu.waʃ.ʃi.jaː.ni/: inflection of وَشَّى (waššā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُوَشَّيَانِ (tuwaššayāni) /tu.waʃ.ʃa.jaː.ni/: inflection of وَشَّى (waššā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaššiyāni", "waššā", "tuwaššayāni"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوشي",
-        "u": "نوشي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نوشي (form II)\n# نُوَشِّي (nuwaššī) /nu.waʃ.ʃiː/: first-person plural non-past active indicative of وَشَّى (waššā)\n# نُوَشِّيَ (nuwaššiya) /nu.waʃ.ʃi.ja/: first-person plural non-past active subjunctive of وَشَّى (waššā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuwaššī", "waššā", "nuwaššiya"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوشون",
-        "u": "يوشون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يوشون (form II)\n# يُوَشُّونَ (yuwaššūna) /ju.waʃ.ʃuː.na/: third-person masculine plural non-past active indicative of وَشَّى (waššā)\n# يُوَشَّوْنَ (yuwaššawna) /ju.waʃ.ʃaw.na/: third-person masculine plural non-past passive indicative of وَشَّى (waššā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaššūna", "waššā", "yuwaššawna"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوشيان",
-        "u": "يوشيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يوشيان (form II)\n# يُوَشِّيَانِ (yuwaššiyāni) /ju.waʃ.ʃi.jaː.ni/: third-person masculine dual non-past active indicative of وَشَّى (waššā)\n# يُوَشَّيَانِ (yuwaššayāni) /ju.waʃ.ʃa.jaː.ni/: third-person masculine dual non-past passive indicative of وَشَّى (waššā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaššiyāni", "waššā", "yuwaššayāni"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوشى",
-        "u": "يوشى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُوَشَّى • (yuwaššā) (form II) /ju.waʃ.ʃaː/\n# third-person masculine singular non-past passive indicative/subjunctive of وَشَّى (waššā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaššā", "waššā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "أوشى",
-        "u": "أوشى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُوَشَّى • (ʔuwaššā) (form II) /ʔu.waʃ.ʃaː/\n# first-person singular non-past passive indicative/subjunctive of وَشَّى (waššā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuwaššā", "waššā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "توشين",
-        "u": "توشين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "توشين (form II)\n# تُوَشِّينَ (tuwaššīna) /tu.waʃ.ʃiː.na/: inflection of وَشَّى (waššā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُوَشَّيْنَ (tuwaššayna) /tu.waʃ.ʃaj.na/: inflection of وَشَّى (waššā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plur",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaššīna", "waššā", "tuwaššayna"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "توشى",
-        "u": "توشى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُوَشَّى • (tuwaššā) (form II) /tu.waʃ.ʃaː/\n# inflection of وَشَّى (waššā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaššā", "waššā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوشى",
-        "u": "نوشى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوَشَّى • (nuwaššā) (form II) /nu.waʃ.ʃaː/\n# first-person plural non-past passive indicative/subjunctive of وَشَّى (waššā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuwaššā", "waššā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوشيا",
-        "u": "يوشيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يوشيا (form II)\n# يُوَشِّيَا (yuwaššiyā) /ju.waʃ.ʃi.jaː/: third-person masculine dual non-past active subjunctive/jussive of وَشَّى (waššā)\n# يُوَشَّيَا (yuwaššayā) /ju.waʃ.ʃa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of وَشَّى (waššā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaššiyā", "waššā", "yuwaššayā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "توشيا",
-        "u": "توشيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "توشيا (form II)\n# تُوَشِّيَا (tuwaššiyā) /tu.waʃ.ʃi.jaː/: inflection of وَشَّى (waššā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُوَشَّيَا (tuwaššayā) /tu.waʃ.ʃa.jaː/: inflection of وَشَّى (waššā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctiv",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaššiyā", "waššā", "tuwaššayā"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوشين",
-        "u": "يوشين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يوشين (form II)\n# يُوَشِّينَ (yuwaššīna) /ju.waʃ.ʃiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of وَشَّى (waššā)\n# يُوَشَّيْنَ (yuwaššayna) /ju.waʃ.ʃaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of وَشَّى (waššā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaššīna", "waššā", "yuwaššayna"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "توشوا",
-        "u": "توشوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "توشوا (form II)\n# تُوَشُّوا (tuwaššū) /tu.waʃ.ʃuː/: second-person masculine plural non-past active subjunctive/jussive of وَشَّى (waššā)\n# تُوَشَّوْا (tuwaššaw) /tu.waʃ.ʃaw/: second-person masculine plural non-past passive subjunctive/jussive of وَشَّى (waššā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuwaššū", "waššā", "tuwaššaw"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوش",
-        "u": "يوش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يوش (form II)\n# يُوَشِّ (yuwašši) /ju.waʃ.ʃi/: third-person masculine singular non-past active jussive of وَشَّى (waššā)\n# يُوَشَّ (yuwašša) /ju.waʃ.ʃa/: third-person masculine singular non-past passive jussive of وَشَّى (waššā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwašši", "waššā", "yuwašša"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "أوش",
-        "u": "أوش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوش (form II)\n# أُوَشِّ (ʔuwašši) /ʔu.waʃ.ʃi/: first-person singular non-past active jussive of وَشَّى (waššā)\n# أُوَشَّ (ʔuwašša) /ʔu.waʃ.ʃa/: first-person singular non-past passive jussive of وَشَّى (waššā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuwašši", "waššā", "ʔuwašša"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوشوا",
-        "u": "يوشوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يوشوا (form II)\n# يُوَشُّوا (yuwaššū) /ju.waʃ.ʃuː/: third-person masculine plural non-past active subjunctive/jussive of وَشَّى (waššā)\n# يُوَشَّوْا (yuwaššaw) /ju.waʃ.ʃaw/: third-person masculine plural non-past passive subjunctive/jussive of وَشَّى (waššā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuwaššū", "waššā", "yuwaššaw"],
-        "k": "وشى",
-        "yol": "kök"
-      },
-      {
-        "w": "أش",
-        "u": "أش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَشِ • (ʔaši) (form I) /ʔa.ʃi/\n# first-person singular non-past active jussive of وَشَى (wašā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaši", "wašā"],
-        "k": "وشى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "شى",
+  "ses": {
     "harf": "و",
+    "fasil": "شى",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "mekayis": [
+    {
+      "baslik": "وَشَى",
+      "metin": "(وَشَى) الْوَاوُ وَالشِّينُ وَالْحَرْفُ الْمُعْتَلُّ: أَصْلَانِ، أَحَدُهُمَا يَدُلُّ عَلَى تَحْسِينِ شَيْءٍ وَتَزْيِينِهِ، وَالْآخَرُ عَلَى نَمَاءٍ وَزِيَادَةٍ.\nالْأَوَّلُ: وَشَيْتُ الثَّوْبَ أَشِيهِ وَشْيًا. وَيَقُولُونَ لِلَّذِي يَكْذِبُ وَيَنِمُّ وَيُزَخْرِفُ كَلَامَهُ: قَدْ وَشَى، وَهُوَ وَاشٍ.\nوَالْأَصْلُ الْآخَرُ: الْمَرْأَةُ الْوَاشِيَةُ: الْكَثِيرَةُ الْوَلَدِ. وَيُقَالُ ذَلِكَ لِكُلِّ مَا يَلِدُ. وَالْوَاشِي: الرَّجُلُ الْكَثِيرُ النَّسْلِ. وَالْوَشْيُ: الْكَثْرَةُ. وَوَشَى بَنُو فُلَانٍ: كَثُرُوا. وَمَا وَشَتْ هَذِهِ الْمَاشِيَةُ عِنْدِي، أَيْ مَا وَلَدَتْ."
+    }
+  ],
+  "cebel": {
+    "fasil": "السين والهاء",
+    "baslik": "وشى",
+    "mihveri": "زيادة دقيقة تنشأ من الشيء لطيفة لاصقة به، كبقع اللون التي تخالف لونَ جِلْد الفرس وغيره. {مُسَلَّمَةٌ لَا شِيَةَ فِيهَا} وكالأولاد الصغيرة للبهائم، وكالنبات أولَ ظهوره من الأرض نُكَتًا خضراء على وجه الأرض السوداء. ومن ذلك \"تَوَشَّى فيه الشيبُ: ظهر \"فهو نكت بياض في الشعر الأسود. ومن مادي نشوء الدقاق من الشيء - أيضًا: \"الواشيةُ: الكثيرة الولد - يقال ذلك في كل ما يلد. وَشَى بنو فلان: كثروا. ما وَشَتْ هذه الماشية عندي بشيء: ما ولدت \". ثم قالوا \"أوشى المَعْدِن (وهو ما نسميه المَنْجَم): وُجد فيه شيء يسير من ذهب، والنخلةُ: خرج أول رُطَبها، والرجلُ: كثرت ماشيته \". ومن مادّي ذلك أيضًا قالوا: \"ائتشى العظمُ: جَبَر/ بَرَأَ من كَسْر كان به \"فجبور كَسْر العظم يحدث بنُمُوّ (زيادة) فيه وفي مخّه وفي اللحم المحيط به. وقالوا \"أوشَى الشيءَ: استخرجه برفق. استوْشَى الحديث: استخرجه بالبَحْث والمسألة. أَوْشَى: استخرج معنَى كلام أو شعر. أوشَى الفرسَ: أخذ ما عنده من الجري/ استخرج جَرْيه برَكْضِه/ بضَرْبِه جنبَه بَعقِبه. وكلّ ما دَعَوتَه وحَرّكتَه لترسله فقد استوشيته. أوْشاه: استحثّه بمِحْجَن أو كِلاب \"فالاستخراج (2/1097) استنشاء. وفي الركض والضرب يكون اللطف هو كون الخارج طاقة خفية مختزنة). وأخيرًا فمن نشوء اللطيف \"أوشَي الشيءَ: عَلِمَه \"من حيث إن العلم حصول صورة في الذهن مأخوذة من الشيء. لكنها خفية في الذهن. ومن مجاز الأصل ذلك الاستعمال المشهور \"وَشَي الكَذِبَ والحديثَ: رَقَمَه وصَوَّره. النمام يشي الكذب: يؤلفه ويلونه ويزينه. وشي به وشيًا ووشاية: نَمَّ به. وشى به إلى السلطان: سعى \"فالوشاية فيها إضافات مك",
+    "tam_metin": "{مُسَلَّمَةٌ لَا شِيَةَ فِيهَا} [البقرة: 71]\n\"الحائك واشٍ يَشِي الثوبَ وَشْيًا أي نَسْجًا وتأليفًا. الوشْىُ في اللون خَلْطُ لَوْن بلون. الشِيَةُ: بياض في سواد أو سواد في بياض/ كل لون يخالف معظمَ لون الفرس وغيره. الوَشَاء: تناسل المال وكثرته. أوشت الأرض خرج أول نبتها \".\n° المعنى المحوري\nزيادة دقيقة تنشأ من الشيء لطيفة لاصقة به، كبقع اللون التي تخالف لونَ جِلْد الفرس وغيره. {مُسَلَّمَةٌ لَا شِيَةَ فِيهَا} وكالأولاد الصغيرة للبهائم، وكالنبات أولَ ظهوره من الأرض نُكَتًا خضراء على وجه الأرض السوداء. ومن ذلك \"تَوَشَّى فيه الشيبُ: ظهر \"فهو نكت بياض في الشعر الأسود.\nومن مادي نشوء الدقاق من الشيء - أيضًا: \"الواشيةُ: الكثيرة الولد - يقال ذلك في كل ما يلد. وَشَى بنو فلان: كثروا. ما وَشَتْ هذه الماشية عندي بشيء: ما ولدت \". ثم قالوا \"أوشى المَعْدِن (وهو ما نسميه المَنْجَم): وُجد فيه شيء يسير من ذهب، والنخلةُ: خرج أول رُطَبها، والرجلُ: كثرت ماشيته \".\nومن مادّي ذلك أيضًا قالوا: \"ائتشى العظمُ: جَبَر/ بَرَأَ من كَسْر كان به \"فجبور كَسْر العظم يحدث بنُمُوّ (زيادة) فيه وفي مخّه وفي اللحم المحيط به. وقالوا \"أوشَى الشيءَ: استخرجه برفق. استوْشَى الحديث: استخرجه بالبَحْث والمسألة. أَوْشَى: استخرج معنَى كلام أو شعر. أوشَى الفرسَ: أخذ ما عنده من الجري/ استخرج جَرْيه برَكْضِه/ بضَرْبِه جنبَه بَعقِبه. وكلّ ما دَعَوتَه وحَرّكتَه لترسله فقد استوشيته. أوْشاه: استحثّه بمِحْجَن أو كِلاب \"فالاستخراج\n(2/1097)\nاستنشاء. وفي الركض والضرب يكون اللطف هو كون الخارج طاقة خفية مختزنة).\nوأخيرًا فمن نشوء اللطيف \"أوشَي الشيءَ: عَلِمَه \"من حيث إن العلم حصول صورة في الذهن مأخوذة من الشيء. لكنها خفية في الذهن.\nومن مجاز الأصل ذلك الاستعمال المشهور \"وَشَي الكَذِبَ والحديثَ: رَقَمَه وصَوَّره. النمام يشي الكذب: يؤلفه ويلونه ويزينه. وشي به وشيًا ووشاية: نَمَّ به. وشى به إلى السلطان: سعى \"فالوشاية فيها إضافات مكذوبة لنسج الكلام وتلفيقه وفيها تزيين لينطلي على المكذوب له. ويلحظ أن النمّ (الإيصال) ليس أصيلًا هنا، ولكنه مطلوب الواشي عادة.",
+    "fasil_ozeti": "° معنى الفصل المعجمي (سه): هو الفراغ المُتَخَلّل كما في السهوة الكوة والأرض اللينة التربة كلما شرحناها في (سهو)، وكما في النبع الدائم للماء من ساهور الماء - في (سهر) والماء مادة مائعة تقارب الفراغ أو الهواء في الخفة، وكما في السِهْل والسِهْلة بالكسر: التراب الذي كالرمل حيث يتخلل ذراتِه فراغٌ فيجعل مادته متسيبة كذلك، وكالسهم القِدْح حيث يُتَوَخَّى فيه أن يكون دقيقًا نحيلًا لينفذ من حلق الدروع إذا رُمِىَ به. ونحوله هذا من تخفيف مادته باقتطاع أَغْلَظه أى إقلال مادته فكأنه أُخْلِى وأُفْرِغَ من الغِلَظ، ومثل هذا السُهام: الضُمْر وتغير اللون فهو خُلُوُّ من قدر كبير من المادة - في (سهم)."
+  },
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "ش",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "شِ • (ši) (form I) /ʃi/\n# second-person masculine singular imperative of وَشَى (wašā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ši", "wašā"]
+    },
+    {
+      "madde": "وش",
+      "tur": "verb",
+      "baslik": "وَشِّ • (wašši) (form II) /waʃ.ʃi/\n# second-person masculine singular imperative of وَشَّى (waššā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["wašši", "waššā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "شِينَ • (šīna) (form I) /ʃiː.na/\n# second-person feminine plural imperative of وَشَى (wašā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šīna", "wašā"]
+    },
+    {
+      "madde": "نوش",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نوش (form II)\n# نُوَشِّ (nuwašši) /nu.waʃ.ʃi/: first-person plural non-past active jussive of وَشَّى (waššā)\n# نُوَشَّ (nuwašša) /nu.waʃ.ʃa/: first-person plural non-past passive jussive of وَشَّى (waššā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuwašši", "waššā", "nuwašša"]
+    },
+    {
+      "madde": "شي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "شِي • (šī) (form I) /ʃiː/\n# second-person feminine singular imperative of وَشَى (wašā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šī", "wašā"]
+    },
+    {
+      "madde": "تش",
+      "tur": "verb",
+      "baslik": "تَشِ • (taši) (form I) /ta.ʃi/\n# inflection of وَشَى (wašā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taši", "wašā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وشي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وشي (form II)\n# وُشِّيَ (wuššiya) /wuʃ.ʃi.ja/: third-person masculine singular past passive of وَشَّى (waššā)\n# وَشِّي (waššī) /waʃ.ʃiː/: second-person feminine singular imperative of وَشَّى (waššā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["wuššiya", "waššā", "waššī"]
+    },
+    {
+      "madde": "توش",
+      "tur": "verb",
+      "baslik": "توش (form II)\n# تُوَشِّ (tuwašši) /tu.waʃ.ʃi/: inflection of وَشَّى (waššā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُوَشَّ (tuwašša) /tu.waʃ.ʃa/: inflection of وَشَّى (waššā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwašši", "waššā", "tuwašša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نش",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نَشِ • (naši) (form I) /na.ʃi/\n# first-person plural non-past active jussive of وَشَى (wašā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naši", "wašā"]
+    },
+    {
+      "madde": "نشيش",
+      "tur": "noun",
+      "baslik": "نَشِيش • (našīš) m",
+      "anlam": ["verbal noun of نَشَّ (našša) (form I)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["نَشَّ"],
+      "okunus": ["našīš"],
+      "ipa": ["/na.ʃiːʃ/"],
+      "bag": "asıl madde"
+    },
+    {
+      "madde": "يش",
+      "tur": "verb",
+      "baslik": "يَشِ • (yaši) (form I) /ja.ʃi/\n# third-person masculine singular non-past active jussive of وَشَى (wašā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaši", "wašā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شيا",
+      "tur": "verb",
+      "baslik": "شِيَا • (šiyā) (form I) /ʃi.jaː/\n# second-person dual imperative of وَشَى (wašā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šiyā", "wašā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "شوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "شُوا • (šū) (form I) /ʃuː/\n# second-person masculine plural imperative of وَشَى (wašā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["šū", "wašā"]
+    },
+    {
+      "madde": "نشي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نشي (form I)\n# نَشِي (našī) /na.ʃiː/: first-person plural non-past active indicative of وَشَى (wašā)\n# نَشِيَ (našiya) /na.ʃi.ja/: first-person plural non-past active subjunctive of وَشَى (wašā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["našī", "wašā", "našiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وشينا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وشينا (form I)\n# وَشَيْنَا (wašaynā) /wa.ʃaj.naː/: first-person plural past active of وَشَى (wašā)\n# وُشِينَا (wušīnā) /wu.ʃiː.naː/: first-person plural past passive of وَشَى (wašā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wašaynā", "wašā", "wušīnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وشينا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وشينا (form II)\n# وَشَّيْنَا (waššaynā) /waʃ.ʃaj.naː/: first-person plural past active of وَشَّى (waššā)\n# وُشِّينَا (wuššīnā) /wuʃ.ʃiː.naː/: first-person plural past passive of وَشَّى (waššā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waššaynā", "waššā", "wuššīnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وشيتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وشيتما (form I)\n# وَشَيْتُمَا (wašaytumā) /wa.ʃaj.tu.maː/: second-person dual past active of وَشَى (wašā)\n# وُشِيتُمَا (wušītumā) /wu.ʃiː.tu.maː/: second-person dual past passive of وَشَى (wašā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wašaytumā", "wašā", "wušītumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وشيتما",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وشيتما (form II)\n# وَشَّيْتُمَا (waššaytumā) /waʃ.ʃaj.tu.maː/: second-person dual past active of وَشَّى (waššā)\n# وُشِّيتُمَا (wuššītumā) /wuʃ.ʃiː.tu.maː/: second-person dual past passive of وَشَّى (waššā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waššaytumā", "waššā", "wuššītumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وشت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وَشَتْ • (wašat) (form I) /wa.ʃat/\n# third-person feminine singular past active of وَشَى (wašā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wašat", "wašā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وشت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وَشَّتْ • (waššat) (form II) /waʃ.ʃat/\n# third-person feminine singular past active of وَشَّى (waššā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waššat", "waššā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وشيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وشيا (form I)\n# وَشَيَا (wašayā) /wa.ʃa.jaː/: third-person masculine dual past active of وَشَى (wašā)\n# وُشِيَا (wušiyā) /wu.ʃi.jaː/: third-person masculine dual past passive of وَشَى (wašā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wašayā", "wašā", "wušiyā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وشيا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وشيا (form II)\n# وَشَّيَا (waššayā) /waʃ.ʃa.jaː/: third-person masculine dual past active of وَشَّى (waššā)\n# وُشِّيَا (wuššiyā) /wuʃ.ʃi.jaː/: third-person masculine dual past passive of وَشَّى (waššā)\n# وَشِّيَا (waššiyā) /waʃ.ʃi.jaː/: second-person dual imperative of وَشَّى (waššā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waššayā", "waššā", "wuššiyā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وشيتن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وشيتن (form I)\n# وَشَيْتُنَّ (wašaytunna) /wa.ʃaj.tun.na/: second-person feminine plural past active of وَشَى (wašā)\n# وُشِيتُنَّ (wušītunna) /wu.ʃiː.tun.na/: second-person feminine plural past passive of وَشَى (wašā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wašaytunna", "wašā", "wušītunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وشيتن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وشيتن (form II)\n# وَشَّيْتُنَّ (waššaytunna) /waʃ.ʃaj.tun.na/: second-person feminine plural past active of وَشَّى (waššā)\n# وُشِّيتُنَّ (wuššītunna) /wuʃ.ʃiː.tun.na/: second-person feminine plural past passive of وَشَّى (waššā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waššaytunna", "waššā", "wuššītunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وشوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وشوا (form I)\n# وَشَوْا (wašaw) /wa.ʃaw/: third-person masculine plural past active of وَشَى (wašā)\n# وُشُوا (wušū) /wu.ʃuː/: third-person masculine plural past passive of وَشَى (wašā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wašaw", "wašā", "wušū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وشوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وشوا (form II)\n# وَشَّوْا (waššaw) /waʃ.ʃaw/: third-person masculine plural past active of وَشَّى (waššā)\n# وُشُّوا (wuššū) /wuʃ.ʃuː/: third-person masculine plural past passive of وَشَّى (waššā)\n# وَشُّوا (waššū) /waʃ.ʃuː/: second-person masculine plural imperative of وَشَّى (waššā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waššaw", "waššā", "wuššū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وشتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وَشَتَا • (wašatā) (form I) /wa.ʃa.taː/\n# third-person feminine dual past active of وَشَى (wašā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wašatā", "wašā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وشتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وَشَّتَا • (waššatā) (form II) /waʃ.ʃa.taː/\n# third-person feminine dual past active of وَشَّى (waššā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waššatā", "waššā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وشيت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وشيت (form I)\n# وَشَيْتُ (wašaytu) /wa.ʃaj.tu/: first-person singular past active of وَشَى (wašā)\n# وَشَيْتَ (wašayta) /wa.ʃaj.ta/: second-person masculine singular past active of وَشَى (wašā)\n# وَشَيْتِ (wašayti) /wa.ʃaj.ti/: second-person feminine singular past active of وَشَى (wašā)\n# وُشِيتُ (wušītu) /wu.ʃiː.tu/: first-person singular past passive of وَشَى (wašā)\n# وُشِيتَ (wušīta) /wu.ʃiː.ta/",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wašaytu", "wašā", "wašayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وشيت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وشيت (form II)\n# وَشَّيْتُ (waššaytu) /waʃ.ʃaj.tu/: first-person singular past active of وَشَّى (waššā)\n# وَشَّيْتَ (waššayta) /waʃ.ʃaj.ta/: second-person masculine singular past active of وَشَّى (waššā)\n# وَشَّيْتِ (waššayti) /waʃ.ʃaj.ti/: second-person feminine singular past active of وَشَّى (waššā)\n# وُشِّيتُ (wuššītu) /wuʃ.ʃiː.tu/: first-person singular past passive of وَشَّى (waššā)\n# وُشِّيت",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waššaytu", "waššā", "waššayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يشي",
+      "tur": "verb",
+      "baslik": "يشي (form I)\n# يَشِي (yašī) /ja.ʃiː/: third-person masculine singular non-past active indicative of وَشَى (wašā)\n# يَشِيَ (yašiya) /ja.ʃi.ja/: third-person masculine singular non-past active subjunctive of وَشَى (wašā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašī", "wašā", "yašiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وشيتم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وشيتم (form I)\n# وَشَيْتُمْ (wašaytum) /wa.ʃaj.tum/: second-person masculine plural past active of وَشَى (wašā)\n# وُشِيتُمْ (wušītum) /wu.ʃiː.tum/: second-person masculine plural past passive of وَشَى (wašā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wašaytum", "wašā", "wušītum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وشيتم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وشيتم (form II)\n# وَشَّيْتُمْ (waššaytum) /waʃ.ʃaj.tum/: second-person masculine plural past active of وَشَّى (waššā)\n# وُشِّيتُمْ (wuššītum) /wuʃ.ʃiː.tum/: second-person masculine plural past passive of وَشَّى (waššā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waššaytum", "waššā", "wuššītum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وشين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "وشين (form I)\n# وَشَيْنَ (wašayna) /wa.ʃaj.na/: third-person feminine plural past active of وَشَى (wašā)\n# وُشِينَ (wušīna) /wu.ʃiː.na/: third-person feminine plural past passive of وَشَى (wašā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wašayna", "wašā", "wušīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وشين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وشين (form II)\n# وَشَّيْنَ (waššayna) /waʃ.ʃaj.na/: third-person feminine plural past active of وَشَّى (waššā)\n# وُشِّينَ (wuššīna) /wuʃ.ʃiː.na/: third-person feminine plural past passive of وَشَّى (waššā)\n# وَشِّينَ (waššīna) /waʃ.ʃiː.na/: second-person feminine plural imperative of وَشَّى (waššā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["waššayna", "waššā", "wuššīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أشي",
+      "tur": "verb",
+      "baslik": "أشي (form I)\n# أَشِي (ʔašī) /ʔa.ʃiː/: first-person singular non-past active indicative of وَشَى (wašā)\n# أَشِيَ (ʔašiya) /ʔa.ʃi.ja/: first-person singular non-past active subjunctive of وَشَى (wašā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔašī", "wašā", "ʔašiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تشيان",
+      "tur": "verb",
+      "baslik": "تَشِيَانِ • (tašiyāni) (form I) /ta.ʃi.jaː.ni/\n# inflection of وَشَى (wašā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašiyāni", "wašā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تشين",
+      "tur": "verb",
+      "baslik": "تَشِينَ • (tašīna) (form I) /ta.ʃiː.na/\n# inflection of وَشَى (wašā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašīna", "wašā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تشي",
+      "tur": "verb",
+      "baslik": "تشي (form I)\n# تَشِي (tašī) /ta.ʃiː/: inflection of وَشَى (wašā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَشِيَ (tašiya) /ta.ʃi.ja/: inflection of وَشَى (wašā):\n## second-person masculine singular non-past active subjunctive\n## third-person f",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašī", "wašā", "tašiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تشون",
+      "tur": "verb",
+      "baslik": "تَشُونَ • (tašūna) (form I) /ta.ʃuː.na/\n# second-person masculine plural non-past active indicative of وَشَى (wašā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašūna", "wašā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يشيان",
+      "tur": "verb",
+      "baslik": "يَشِيَانِ • (yašiyāni) (form I) /ja.ʃi.jaː.ni/\n# third-person masculine dual non-past active indicative of وَشَى (wašā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašiyāni", "wašā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يشين",
+      "tur": "verb",
+      "baslik": "يَشِينَ • (yašīna) (form I) /ja.ʃiː.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of وَشَى (wašā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašīna", "wašā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يشون",
+      "tur": "verb",
+      "baslik": "يَشُونَ • (yašūna) (form I) /ja.ʃuː.na/\n# third-person masculine plural non-past active indicative of وَشَى (wašā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašūna", "wašā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تشيا",
+      "tur": "verb",
+      "baslik": "تَشِيَا • (tašiyā) (form I) /ta.ʃi.jaː/\n# inflection of وَشَى (wašā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašiyā", "wašā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يشيا",
+      "tur": "verb",
+      "baslik": "يَشِيَا • (yašiyā) (form I) /ja.ʃi.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of وَشَى (wašā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašiyā", "wašā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تشوا",
+      "tur": "verb",
+      "baslik": "تَشُوا • (tašū) (form I) /ta.ʃuː/\n# second-person masculine plural non-past active subjunctive/jussive of وَشَى (wašā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tašū", "wašā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "توشي",
+      "tur": "verb",
+      "baslik": "توشي (form II)\n# تُوَشِّي (tuwaššī) /tu.waʃ.ʃiː/: inflection of وَشَّى (waššā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُوَشِّيَ (tuwaššiya) /tu.waʃ.ʃi.ja/: inflection of وَشَّى (waššā):\n## second-person masculine singular non-past active sub",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaššī", "waššā", "tuwaššiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يوشي",
+      "tur": "verb",
+      "baslik": "يوشي (form II)\n# يُوَشِّي (yuwaššī) /ju.waʃ.ʃiː/: third-person masculine singular non-past active indicative of وَشَّى (waššā)\n# يُوَشِّيَ (yuwaššiya) /ju.waʃ.ʃi.ja/: third-person masculine singular non-past active subjunctive of وَشَّى (waššā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaššī", "waššā", "yuwaššiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أوشي",
+      "tur": "verb",
+      "baslik": "أوشي (form II)\n# أُوَشِّي (ʔuwaššī) /ʔu.waʃ.ʃiː/: first-person singular non-past active indicative of وَشَّى (waššā)\n# أُوَشِّيَ (ʔuwaššiya) /ʔu.waʃ.ʃi.ja/: first-person singular non-past active subjunctive of وَشَّى (waššā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuwaššī", "waššā", "ʔuwaššiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يشوا",
+      "tur": "verb",
+      "baslik": "يَشُوا • (yašū) (form I) /ja.ʃuː/\n# third-person masculine plural non-past active subjunctive/jussive of وَشَى (wašā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yašū", "wašā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وشيتا",
+      "tur": "verb",
+      "baslik": "وُشِّيَتَا • (wuššiyatā) (form II) /wuʃ.ʃi.ja.taː/\n# third-person feminine dual past passive of وَشَّى (waššā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["wuššiyatā", "waššā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "توشون",
+      "tur": "verb",
+      "baslik": "توشون (form II)\n# تُوَشُّونَ (tuwaššūna) /tu.waʃ.ʃuː.na/: second-person masculine plural non-past active indicative of وَشَّى (waššā)\n# تُوَشَّوْنَ (tuwaššawna) /tu.waʃ.ʃaw.na/: second-person masculine plural non-past passive indicative of وَشَّى (waššā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaššūna", "waššā", "tuwaššawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "توشيان",
+      "tur": "verb",
+      "baslik": "توشيان (form II)\n# تُوَشِّيَانِ (tuwaššiyāni) /tu.waʃ.ʃi.jaː.ni/: inflection of وَشَّى (waššā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُوَشَّيَانِ (tuwaššayāni) /tu.waʃ.ʃa.jaː.ni/: inflection of وَشَّى (waššā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaššiyāni", "waššā", "tuwaššayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوشي",
+      "tur": "verb",
+      "baslik": "نوشي (form II)\n# نُوَشِّي (nuwaššī) /nu.waʃ.ʃiː/: first-person plural non-past active indicative of وَشَّى (waššā)\n# نُوَشِّيَ (nuwaššiya) /nu.waʃ.ʃi.ja/: first-person plural non-past active subjunctive of وَشَّى (waššā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuwaššī", "waššā", "nuwaššiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يوشون",
+      "tur": "verb",
+      "baslik": "يوشون (form II)\n# يُوَشُّونَ (yuwaššūna) /ju.waʃ.ʃuː.na/: third-person masculine plural non-past active indicative of وَشَّى (waššā)\n# يُوَشَّوْنَ (yuwaššawna) /ju.waʃ.ʃaw.na/: third-person masculine plural non-past passive indicative of وَشَّى (waššā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaššūna", "waššā", "yuwaššawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يوشيان",
+      "tur": "verb",
+      "baslik": "يوشيان (form II)\n# يُوَشِّيَانِ (yuwaššiyāni) /ju.waʃ.ʃi.jaː.ni/: third-person masculine dual non-past active indicative of وَشَّى (waššā)\n# يُوَشَّيَانِ (yuwaššayāni) /ju.waʃ.ʃa.jaː.ni/: third-person masculine dual non-past passive indicative of وَشَّى (waššā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaššiyāni", "waššā", "yuwaššayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يوشى",
+      "tur": "verb",
+      "baslik": "يُوَشَّى • (yuwaššā) (form II) /ju.waʃ.ʃaː/\n# third-person masculine singular non-past passive indicative/subjunctive of وَشَّى (waššā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaššā", "waššā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أوشى",
+      "tur": "verb",
+      "baslik": "أُوَشَّى • (ʔuwaššā) (form II) /ʔu.waʃ.ʃaː/\n# first-person singular non-past passive indicative/subjunctive of وَشَّى (waššā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuwaššā", "waššā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "توشين",
+      "tur": "verb",
+      "baslik": "توشين (form II)\n# تُوَشِّينَ (tuwaššīna) /tu.waʃ.ʃiː.na/: inflection of وَشَّى (waššā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُوَشَّيْنَ (tuwaššayna) /tu.waʃ.ʃaj.na/: inflection of وَشَّى (waššā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plur",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaššīna", "waššā", "tuwaššayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "توشى",
+      "tur": "verb",
+      "baslik": "تُوَشَّى • (tuwaššā) (form II) /tu.waʃ.ʃaː/\n# inflection of وَشَّى (waššā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaššā", "waššā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوشى",
+      "tur": "verb",
+      "baslik": "نُوَشَّى • (nuwaššā) (form II) /nu.waʃ.ʃaː/\n# first-person plural non-past passive indicative/subjunctive of وَشَّى (waššā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuwaššā", "waššā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يوشيا",
+      "tur": "verb",
+      "baslik": "يوشيا (form II)\n# يُوَشِّيَا (yuwaššiyā) /ju.waʃ.ʃi.jaː/: third-person masculine dual non-past active subjunctive/jussive of وَشَّى (waššā)\n# يُوَشَّيَا (yuwaššayā) /ju.waʃ.ʃa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of وَشَّى (waššā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaššiyā", "waššā", "yuwaššayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "توشيا",
+      "tur": "verb",
+      "baslik": "توشيا (form II)\n# تُوَشِّيَا (tuwaššiyā) /tu.waʃ.ʃi.jaː/: inflection of وَشَّى (waššā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُوَشَّيَا (tuwaššayā) /tu.waʃ.ʃa.jaː/: inflection of وَشَّى (waššā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctiv",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaššiyā", "waššā", "tuwaššayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يوشين",
+      "tur": "verb",
+      "baslik": "يوشين (form II)\n# يُوَشِّينَ (yuwaššīna) /ju.waʃ.ʃiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of وَشَّى (waššā)\n# يُوَشَّيْنَ (yuwaššayna) /ju.waʃ.ʃaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of وَشَّى (waššā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaššīna", "waššā", "yuwaššayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "توشوا",
+      "tur": "verb",
+      "baslik": "توشوا (form II)\n# تُوَشُّوا (tuwaššū) /tu.waʃ.ʃuː/: second-person masculine plural non-past active subjunctive/jussive of وَشَّى (waššā)\n# تُوَشَّوْا (tuwaššaw) /tu.waʃ.ʃaw/: second-person masculine plural non-past passive subjunctive/jussive of وَشَّى (waššā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuwaššū", "waššā", "tuwaššaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يوش",
+      "tur": "verb",
+      "baslik": "يوش (form II)\n# يُوَشِّ (yuwašši) /ju.waʃ.ʃi/: third-person masculine singular non-past active jussive of وَشَّى (waššā)\n# يُوَشَّ (yuwašša) /ju.waʃ.ʃa/: third-person masculine singular non-past passive jussive of وَشَّى (waššā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwašši", "waššā", "yuwašša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أوش",
+      "tur": "verb",
+      "baslik": "أوش (form II)\n# أُوَشِّ (ʔuwašši) /ʔu.waʃ.ʃi/: first-person singular non-past active jussive of وَشَّى (waššā)\n# أُوَشَّ (ʔuwašša) /ʔu.waʃ.ʃa/: first-person singular non-past passive jussive of وَشَّى (waššā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuwašši", "waššā", "ʔuwašša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يوشوا",
+      "tur": "verb",
+      "baslik": "يوشوا (form II)\n# يُوَشُّوا (yuwaššū) /ju.waʃ.ʃuː/: third-person masculine plural non-past active subjunctive/jussive of وَشَّى (waššā)\n# يُوَشَّوْا (yuwaššaw) /ju.waʃ.ʃaw/: third-person masculine plural non-past passive subjunctive/jussive of وَشَّى (waššā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuwaššū", "waššā", "yuwaššaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أش",
+      "tur": "verb",
+      "baslik": "أَشِ • (ʔaši) (form I) /ʔa.ʃi/\n# first-person singular non-past active jussive of وَشَى (wašā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaši", "wašā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "وشى", "r7"]
+  ],
+  "mana": {
     "ince": "grill.v.01",
     "orta": "verb.change",
     "ust": "fiil ve hadise",
@@ -900,25 +633,8 @@
     "dayanak_tanim": "cook over a grill",
     "synset_sayisi": 3
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "السين والهاء",
-    "mihveri": "زيادة دقيقة تنشأ من الشيء لطيفة لاصقة به، كبقع اللون التي تخالف لونَ جِلْد الفرس وغيره. {مُسَلَّمَةٌ لَا شِيَةَ فِيهَا} وكالأولاد الصغيرة للبهائم، وكالنبات أولَ ظهوره من الأرض نُكَتًا خضراء على وجه الأرض السوداء. ومن ذلك \"تَوَشَّى فيه الشيبُ: ظهر \"فهو نكت بياض في الشعر الأسود. ومن مادي نشوء الدقاق من الشيء - أيضًا: \"الواشيةُ: الكثيرة الولد - يقال ذلك في كل ما يلد. وَشَى بنو فلان: كثروا. ما وَشَتْ هذه الماشية عندي بشيء: ما ولدت \". ثم قالوا \"أوشى المَعْدِن (وهو ما نسميه المَنْجَم): وُجد فيه شيء يسير من ذهب، والنخلةُ: خرج أول رُطَبها، والرجلُ: كثرت ماشيته \". ومن مادّي ذلك أيضًا قالوا: \"ائتشى العظمُ: جَبَر/ بَرَأَ من كَسْر كان به \"فجبور كَسْر العظم يحدث بنُمُوّ (زيادة) فيه وفي مخّه وفي اللحم المحيط به. وقالوا \"أوشَى الشيءَ: استخرجه برفق. استوْشَى الحديث: استخرجه بالبَحْث والمسألة. أَوْشَى: استخرج معنَى كلام أو شعر. أوشَى الفرسَ: أخذ ما عنده من الجري/ استخرج جَرْيه برَكْضِه/ بضَرْبِه جنبَه بَعقِبه. وكلّ ما دَعَوتَه وحَرّكتَه لترسله فقد استوشيته. أوْشاه: استحثّه بمِحْجَن أو كِلاب \"فالاستخراج (2/1097) استنشاء. وفي الركض والضرب يكون اللطف هو كون الخارج طاقة خفية مختزنة). وأخيرًا فمن نشوء اللطيف \"أوشَي الشيءَ: عَلِمَه \"من حيث إن العلم حصول صورة في الذهن مأخوذة من الشيء. لكنها خفية في الذهن. ومن مجاز الأصل ذلك الاستعمال المشهور \"وَشَي الكَذِبَ والحديثَ: رَقَمَه وصَوَّره. النمام يشي الكذب: يؤلفه ويلونه ويزينه. وشي به وشيًا ووشاية: نَمَّ به. وشى به إلى السلطان: سعى \"فالوشاية فيها إضافات مك",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (سه): هو الفراغ المُتَخَلّل كما في السهوة الكوة والأرض اللينة التربة كلما شرحناها في (سهو)، وكما في النبع الدائم للماء من ساهور الماء - في (سهر) والماء مادة مائعة تقارب الفراغ أو الهواء في الخفة، وكما في السِهْل والسِهْلة بالكسر: التراب الذي كالرمل حيث يتخلل ذراتِه فراغٌ فيجعل مادته متسيبة كذلك، وكالسهم القِدْح حيث يُتَوَخَّى فيه أن يكون دقيقًا نحيلًا لينفذ من حلق الدروع إذا رُمِىَ به. ونحوله هذا من تخفيف مادته باقتطاع أَغْلَظه أى إقلال مادته فكأنه أُخْلِى وأُفْرِغَ من الغِلَظ، ومثل هذا السُهام: الضُمْر وتغير اللون فهو خُلُوُّ من قدر كبير من المادة - في (سهم).",
-    "tam_metin": "{مُسَلَّمَةٌ لَا شِيَةَ فِيهَا} [البقرة: 71]\n\"الحائك واشٍ يَشِي الثوبَ وَشْيًا أي نَسْجًا وتأليفًا. الوشْىُ في اللون خَلْطُ لَوْن بلون. الشِيَةُ: بياض في سواد أو سواد في بياض/ كل لون يخالف معظمَ لون الفرس وغيره. الوَشَاء: تناسل المال وكثرته. أوشت الأرض خرج أول نبتها \".\n° المعنى المحوري\nزيادة دقيقة تنشأ من الشيء لطيفة لاصقة به، كبقع اللون التي تخالف لونَ جِلْد الفرس وغيره. {مُسَلَّمَةٌ لَا شِيَةَ فِيهَا} وكالأولاد الصغيرة للبهائم، وكالنبات أولَ ظهوره من الأرض نُكَتًا خضراء على وجه الأرض السوداء. ومن ذلك \"تَوَشَّى فيه الشيبُ: ظهر \"فهو نكت بياض في الشعر الأسود.\nومن مادي نشوء الدقاق من الشيء - أيضًا: \"الواشيةُ: الكثيرة الولد - يقال ذلك في كل ما يلد. وَشَى بنو فلان: كثروا. ما وَشَتْ هذه الماشية عندي بشيء: ما ولدت \". ثم قالوا \"أوشى المَعْدِن (وهو ما نسميه المَنْجَم): وُجد فيه شيء يسير من ذهب، والنخلةُ: خرج أول رُطَبها، والرجلُ: كثرت ماشيته \".\nومن مادّي ذلك أيضًا قالوا: \"ائتشى العظمُ: جَبَر/ بَرَأَ من كَسْر كان به \"فجبور كَسْر العظم يحدث بنُمُوّ (زيادة) فيه وفي مخّه وفي اللحم المحيط به. وقالوا \"أوشَى الشيءَ: استخرجه برفق. استوْشَى الحديث: استخرجه بالبَحْث والمسألة. أَوْشَى: استخرج معنَى كلام أو شعر. أوشَى الفرسَ: أخذ ما عنده من الجري/ استخرج جَرْيه برَكْضِه/ بضَرْبِه جنبَه بَعقِبه. وكلّ ما دَعَوتَه وحَرّكتَه لترسله فقد استوشيته. أوْشاه: استحثّه بمِحْجَن أو كِلاب \"فالاستخراج\n(2/1097)\nاستنشاء. وفي الركض والضرب يكون اللطف هو كون الخارج طاقة خفية مختزنة).\nوأخيرًا فمن نشوء اللطيف \"أوشَي الشيءَ: عَلِمَه \"من حيث إن العلم حصول صورة في الذهن مأخوذة من الشيء. لكنها خفية في الذهن.\nومن مجاز الأصل ذلك الاستعمال المشهور \"وَشَي الكَذِبَ والحديثَ: رَقَمَه وصَوَّره. النمام يشي الكذب: يؤلفه ويلونه ويزينه. وشي به وشيًا ووشاية: نَمَّ به. وشى به إلى السلطان: سعى \"فالوشاية فيها إضافات مكذوبة لنسج الكلام وتلفيقه وفيها تزيين لينطلي على المكذوب له. ويلحظ أن النمّ (الإيصال) ليس أصيلًا هنا، ولكنه مطلوب الواشي عادة."
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["grill.v.01", "happening.n.01", "statement.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 2,
       "merkez_kok": "حنج",
@@ -938,6 +654,11 @@
       "boy": 33
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["grill.v.01", "happening.n.01", "statement.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,81 +1,71 @@
 {
   "kok": "دلهم",
+  "tur": "fiil",
+  "tur_guven": "orta",
+  "tur_dayanak": ["lugat-fiil"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "دلهم", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "ادلهم",
-        "u": "ادلهم",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "اِدْلَهَمَّ • (idlahamma) IVq (non-past يَدْلَهِمُّ (yadlahimmu), verbal noun اِدْلِهْمَام (idlihmām))",
-        "g": ["to become deep dark"],
-        "tag": ["literary"],
-        "r": ["idlahamma"],
-        "ipa": ["/id.la.ham.ma/"],
-        "k": "دلهم",
-        "yol": "kök"
-      },
-      {
-        "w": "ادلهمام",
-        "u": "ادلهمام",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "اِدْلِهْمَام • (idlihmām) m",
-        "t": "Verbal noun of اِدْلَهَمَّ (idlahamma).",
-        "s": [
-          ["ar-verbal noun", "Verbal noun"]
-        ],
-        "g": ["verbal noun of اِدْلَهَمّ (idlahamm)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["اِدْلَهَمّ"],
-        "r": ["idlihmām"],
-        "ipa": ["/id.lih.maːm/"],
-        "el": [
-          ["اِدْلَهَمَّ", "ادلهم#Arabic"]
-        ],
-        "yol": "asıl madde"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "دل",
+  "ses": {
     "harf": "د",
+    "fasil": "دل",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "ادلهم",
+      "tur": "verb",
+      "baslik": "اِدْلَهَمَّ • (idlahamma) IVq (non-past يَدْلَهِمُّ (yadlahimmu), verbal noun اِدْلِهْمَام (idlihmām))",
+      "anlam": ["to become deep dark"],
+      "etiket": ["literary"],
+      "okunus": ["idlahamma"],
+      "ipa": ["/id.la.ham.ma/"]
+    },
+    {
+      "madde": "ادلهمام",
+      "tur": "noun",
+      "baslik": "اِدْلِهْمَام • (idlihmām) m",
+      "etim_sablon": [
+        ["ar-verbal noun", "Verbal noun"]
+      ],
+      "anlam": ["verbal noun of اِدْلَهَمّ (idlahamm)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["اِدْلَهَمّ"],
+      "okunus": ["idlihmām"],
+      "ipa": ["/id.lih.maːm/"],
+      "bag": "asıl madde",
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "Verbal noun of اِدْلَهَمَّ (idlahamma).",
+      "kognatlar": [
+        ["اِدْلَهَمَّ", "ادلهم#Arabic"]
+      ]
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "دلهم", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "ust": {
       "kume": 7,
       "merkez_kok": "حدق",
@@ -95,6 +85,10 @@
       "boy": 3
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

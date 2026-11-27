@@ -1,501 +1,368 @@
 {
   "kok": "بات",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "بات", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "بيت",
-        "u": "بيت",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "بِيتَ • (bīta) (form I) /biː.ta/\n# third-person masculine singular past passive of بَاتَ (bāta)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bīta", "bāta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "بت",
-        "u": "بت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "بت (form I)\n# بِتُّ (bittu) /bit.tu/: first-person singular past active of بَاتَ (bāta)\n# بِتَّ (bitta) /bit.ta/: second-person masculine singular past active of بَاتَ (bāta)\n# بِتِّ (bitti) /bit.ti/: second-person feminine singular past active of بَاتَ (bāta)\n# بِتْ (bit) /bit/: second-person masculine singular imperative of بَاتَ (bāta)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bittu", "bāta", "bitta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "تبت",
-        "u": "تبت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَبِتْ • (tabit) (form I) /ta.bit/\n# inflection of بَاتَ (bāta):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabit", "bāta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "نبيت",
-        "u": "نبيت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نبيت (form I)\n# نَبِيتُ (nabītu) /na.biː.tu/: first-person plural non-past active indicative of بَاتَ (bāta)\n# نَبِيتَ (nabīta) /na.biː.ta/: first-person plural non-past active subjunctive of بَاتَ (bāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nabītu", "bāta", "nabīta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "بيوت",
-        "u": "بيوت",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "بُيُوتْ • (buyūt) m pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of بَيْت (bayt)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["بَيْت"],
-        "r": ["buyūt"],
-        "ipa": ["/bu.juːt/"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "بيوتات",
-        "u": "بيوتات",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "بُيُوتَاتْ • (buyūtāt) m pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of بَيْت (bayt)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["بَيْت"],
-        "r": ["buyūtāt"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "أبيات",
-        "u": "أبيات",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "أَبْيَات • (ʔabyāt) m pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of بَيْت (bayt)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["بَيْت"],
-        "r": ["ʔabyāt"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "يبيت",
-        "u": "يبيت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يبيت (form I)\n# يَبِيتُ (yabītu) /ja.biː.tu/: third-person masculine singular non-past active indicative of بَاتَ (bāta)\n# يَبِيتَ (yabīta) /ja.biː.ta/: third-person masculine singular non-past active subjunctive of بَاتَ (bāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabītu", "bāta", "yabīta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "يبات",
-        "u": "يبات",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبات (form I)\n# يُبَاتُ (yubātu) /ju.baː.tu/: third-person masculine singular non-past passive indicative of بَاتَ (bāta)\n# يُبَاتَ (yubāta) /ju.baː.ta/: third-person masculine singular non-past passive subjunctive of بَاتَ (bāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yubātu", "bāta", "yubāta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "يبت",
-        "u": "يبت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يبت (form I)\n# يَبِتْ (yabit) /ja.bit/: third-person masculine singular non-past active jussive of بَاتَ (bāta)\n# يُبَتْ (yubat) /ju.bat/: third-person masculine singular non-past passive jussive of بَاتَ (bāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabit", "bāta", "yubat"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "أبت",
-        "u": "أبت",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "أَبِتْ • (ʔabit) (form I) /ʔa.bit/\n# first-person singular non-past active jussive of بَاتَ (bāta)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔabit", "bāta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "أبيت",
-        "u": "أبيت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أبيت (form I)\n# أَبِيتُ (ʔabītu) /ʔa.biː.tu/: first-person singular non-past active indicative of بَاتَ (bāta)\n# أَبِيتَ (ʔabīta) /ʔa.biː.ta/: first-person singular non-past active subjunctive of بَاتَ (bāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔabītu", "bāta", "ʔabīta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "باتت",
-        "u": "باتت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَاتَتْ • (bātat) (form I) /baː.tat/\n# third-person feminine singular past active of بَاتَ (bāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bātat", "bāta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيت",
-        "u": "تبيت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تبيت (form I)\n# تَبِيتُ (tabītu) /ta.biː.tu/: inflection of بَاتَ (bāta):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَبِيتَ (tabīta) /ta.biː.ta/: inflection of بَاتَ (bāta):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabītu", "bāta", "tabīta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيتين",
-        "u": "تبيتين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَبِيتِينَ • (tabītīna) (form I) /ta.biː.tiː.na/\n# second-person feminine singular non-past active indicative of بَاتَ (bāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabītīna", "bāta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيتي",
-        "u": "تبيتي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَبِيتِي • (tabītī) (form I) /ta.biː.tiː/\n# second-person feminine singular non-past active subjunctive/jussive of بَاتَ (bāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabītī", "bāta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "بيتي",
-        "u": "بيتي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "بِيتِي • (bītī) (form I) /biː.tiː/\n# second-person feminine singular imperative of بَاتَ (bāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bītī", "bāta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "بتنا",
-        "u": "بتنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بِتْنَا • (bitnā) (form I) /bit.naː/\n# first-person plural past active of بَاتَ (bāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bitnā", "bāta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "نبت",
-        "u": "نبت",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نَبِتْ • (nabit) (form I) /na.bit/\n# first-person plural non-past active jussive of بَاتَ (bāta)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nabit", "bāta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "بتم",
-        "u": "بتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بِتُّمْ • (bittum) (form I) /bit.tum/\n# second-person masculine plural past active of بَاتَ (bāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bittum", "bāta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيتون",
-        "u": "تبيتون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَبِيتُونَ • (tabītūna) (form I) /ta.biː.tuː.na/\n# second-person masculine plural non-past active indicative of بَاتَ (bāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabītūna", "bāta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيتوا",
-        "u": "تبيتوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَبِيتُوا • (tabītū) (form I) /ta.biː.tuː/\n# second-person masculine plural non-past active subjunctive/jussive of بَاتَ (bāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabītū", "bāta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "باتوا",
-        "u": "باتوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَاتُوا • (bātū) (form I) /baː.tuː/\n# third-person masculine plural past active of بَاتَ (bāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bātū", "bāta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "يبيتون",
-        "u": "يبيتون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَبِيتُونَ • (yabītūna) (form I) /ja.biː.tuː.na/\n# third-person masculine plural non-past active indicative of بَاتَ (bāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabītūna", "bāta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "يبيتوا",
-        "u": "يبيتوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَبِيتُوا • (yabītū) (form I) /ja.biː.tuː/\n# third-person masculine plural non-past active subjunctive/jussive of بَاتَ (bāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabītū", "bāta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "بيتوا",
-        "u": "بيتوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "بِيتُوا • (bītū) (form I) /biː.tuː/\n# second-person masculine plural imperative of بَاتَ (bāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bītū", "bāta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "بتن",
-        "u": "بتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بتن (form I)\n# بِتُّنَّ (bittunna) /bit.tun.na/: second-person feminine plural past active of بَاتَ (bāta)\n# بِتْنَ (bitna) /bit.na/: inflection of بَاتَ (bāta):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bittunna", "bāta", "bitna"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "تبتن",
-        "u": "تبتن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَبِتْنَ • (tabitna) (form I) /ta.bit.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of بَاتَ (bāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabitna", "bāta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "يبتن",
-        "u": "يبتن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَبِتْنَ • (yabitna) (form I) /ja.bit.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of بَاتَ (bāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabitna", "bāta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "بيتا",
-        "u": "بيتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "بِيتَا • (bītā) (form I) /biː.taː/\n# second-person dual imperative of بَاتَ (bāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bītā", "bāta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "باتا",
-        "u": "باتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَاتَا • (bātā) (form I) /baː.taː/\n# third-person masculine dual past active of بَاتَ (bāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bātā", "bāta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "باتتا",
-        "u": "باتتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَاتَتَا • (bātatā) (form I) /baː.ta.taː/\n# third-person feminine dual past active of بَاتَ (bāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bātatā", "bāta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "بتما",
-        "u": "بتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بِتُّمَا • (bittumā) (form I) /bit.tu.maː/\n# second-person dual past active of بَاتَ (bāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bittumā", "bāta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "يبيتان",
-        "u": "يبيتان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَبِيتَانِ • (yabītāni) (form I) /ja.biː.taː.ni/\n# third-person masculine dual non-past active indicative of بَاتَ (bāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabītāni", "bāta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيتان",
-        "u": "تبيتان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَبِيتَانِ • (tabītāni) (form I) /ta.biː.taː.ni/\n# inflection of بَاتَ (bāta):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabītāni", "bāta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "يبيتا",
-        "u": "يبيتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَبِيتَا • (yabītā) (form I) /ja.biː.taː/\n# third-person masculine dual non-past active subjunctive/jussive of بَاتَ (bāta)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabītā", "bāta"],
-        "k": "بات",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيتا",
-        "u": "تبيتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَبِيتَا • (tabītā) (form I) /ta.biː.taː/\n# inflection of بَاتَ (bāta):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabītā", "bāta"],
-        "k": "بات",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "بت",
+  "ses": {
     "harf": "ب",
+    "fasil": "بت",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "بيت",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "بِيتَ • (bīta) (form I) /biː.ta/\n# third-person masculine singular past passive of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bīta", "bāta"]
+    },
+    {
+      "madde": "بت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "بت (form I)\n# بِتُّ (bittu) /bit.tu/: first-person singular past active of بَاتَ (bāta)\n# بِتَّ (bitta) /bit.ta/: second-person masculine singular past active of بَاتَ (bāta)\n# بِتِّ (bitti) /bit.ti/: second-person feminine singular past active of بَاتَ (bāta)\n# بِتْ (bit) /bit/: second-person masculine singular imperative of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bittu", "bāta", "bitta"]
+    },
+    {
+      "madde": "تبت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَبِتْ • (tabit) (form I) /ta.bit/\n# inflection of بَاتَ (bāta):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabit", "bāta"]
+    },
+    {
+      "madde": "نبيت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نبيت (form I)\n# نَبِيتُ (nabītu) /na.biː.tu/: first-person plural non-past active indicative of بَاتَ (bāta)\n# نَبِيتَ (nabīta) /na.biː.ta/: first-person plural non-past active subjunctive of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nabītu", "bāta", "nabīta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بيوت",
+      "tur": "noun",
+      "baslik": "بُيُوتْ • (buyūt) m pl",
+      "anlam": ["plural of بَيْت (bayt)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["بَيْت"],
+      "okunus": ["buyūt"],
+      "ipa": ["/bu.juːt/"],
+      "bag": "asıl madde",
+      "etimoloji": 1
+    },
+    {
+      "madde": "بيوتات",
+      "tur": "noun",
+      "baslik": "بُيُوتَاتْ • (buyūtāt) m pl",
+      "anlam": ["plural of بَيْت (bayt)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["بَيْت"],
+      "okunus": ["buyūtāt"],
+      "bag": "asıl madde",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبيات",
+      "tur": "noun",
+      "baslik": "أَبْيَات • (ʔabyāt) m pl",
+      "anlam": ["plural of بَيْت (bayt)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["بَيْت"],
+      "okunus": ["ʔabyāt"],
+      "bag": "asıl madde",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبيت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يبيت (form I)\n# يَبِيتُ (yabītu) /ja.biː.tu/: third-person masculine singular non-past active indicative of بَاتَ (bāta)\n# يَبِيتَ (yabīta) /ja.biː.ta/: third-person masculine singular non-past active subjunctive of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabītu", "bāta", "yabīta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبات",
+      "tur": "verb",
+      "baslik": "يبات (form I)\n# يُبَاتُ (yubātu) /ju.baː.tu/: third-person masculine singular non-past passive indicative of بَاتَ (bāta)\n# يُبَاتَ (yubāta) /ju.baː.ta/: third-person masculine singular non-past passive subjunctive of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yubātu", "bāta", "yubāta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يبت (form I)\n# يَبِتْ (yabit) /ja.bit/: third-person masculine singular non-past active jussive of بَاتَ (bāta)\n# يُبَتْ (yubat) /ju.bat/: third-person masculine singular non-past passive jussive of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabit", "bāta", "yubat"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبت",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "أَبِتْ • (ʔabit) (form I) /ʔa.bit/\n# first-person singular non-past active jussive of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔabit", "bāta"]
+    },
+    {
+      "madde": "أبيت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أبيت (form I)\n# أَبِيتُ (ʔabītu) /ʔa.biː.tu/: first-person singular non-past active indicative of بَاتَ (bāta)\n# أَبِيتَ (ʔabīta) /ʔa.biː.ta/: first-person singular non-past active subjunctive of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔabītu", "bāta", "ʔabīta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "باتت",
+      "tur": "verb",
+      "baslik": "بَاتَتْ • (bātat) (form I) /baː.tat/\n# third-person feminine singular past active of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bātat", "bāta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبيت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تبيت (form I)\n# تَبِيتُ (tabītu) /ta.biː.tu/: inflection of بَاتَ (bāta):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَبِيتَ (tabīta) /ta.biː.ta/: inflection of بَاتَ (bāta):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabītu", "bāta", "tabīta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبيتين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَبِيتِينَ • (tabītīna) (form I) /ta.biː.tiː.na/\n# second-person feminine singular non-past active indicative of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabītīna", "bāta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبيتي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَبِيتِي • (tabītī) (form I) /ta.biː.tiː/\n# second-person feminine singular non-past active subjunctive/jussive of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabītī", "bāta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بيتي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "بِيتِي • (bītī) (form I) /biː.tiː/\n# second-person feminine singular imperative of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bītī", "bāta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بتنا",
+      "tur": "verb",
+      "baslik": "بِتْنَا • (bitnā) (form I) /bit.naː/\n# first-person plural past active of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bitnā", "bāta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نبت",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نَبِتْ • (nabit) (form I) /na.bit/\n# first-person plural non-past active jussive of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nabit", "bāta"]
+    },
+    {
+      "madde": "بتم",
+      "tur": "verb",
+      "baslik": "بِتُّمْ • (bittum) (form I) /bit.tum/\n# second-person masculine plural past active of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bittum", "bāta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبيتون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَبِيتُونَ • (tabītūna) (form I) /ta.biː.tuː.na/\n# second-person masculine plural non-past active indicative of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabītūna", "bāta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبيتوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَبِيتُوا • (tabītū) (form I) /ta.biː.tuː/\n# second-person masculine plural non-past active subjunctive/jussive of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabītū", "bāta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "باتوا",
+      "tur": "verb",
+      "baslik": "بَاتُوا • (bātū) (form I) /baː.tuː/\n# third-person masculine plural past active of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bātū", "bāta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبيتون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَبِيتُونَ • (yabītūna) (form I) /ja.biː.tuː.na/\n# third-person masculine plural non-past active indicative of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabītūna", "bāta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبيتوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَبِيتُوا • (yabītū) (form I) /ja.biː.tuː/\n# third-person masculine plural non-past active subjunctive/jussive of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabītū", "bāta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بيتوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "بِيتُوا • (bītū) (form I) /biː.tuː/\n# second-person masculine plural imperative of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bītū", "bāta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بتن",
+      "tur": "verb",
+      "baslik": "بتن (form I)\n# بِتُّنَّ (bittunna) /bit.tun.na/: second-person feminine plural past active of بَاتَ (bāta)\n# بِتْنَ (bitna) /bit.na/: inflection of بَاتَ (bāta):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bittunna", "bāta", "bitna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبتن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَبِتْنَ • (tabitna) (form I) /ta.bit.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabitna", "bāta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبتن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَبِتْنَ • (yabitna) (form I) /ja.bit.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabitna", "bāta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بيتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "بِيتَا • (bītā) (form I) /biː.taː/\n# second-person dual imperative of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bītā", "bāta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "باتا",
+      "tur": "verb",
+      "baslik": "بَاتَا • (bātā) (form I) /baː.taː/\n# third-person masculine dual past active of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bātā", "bāta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "باتتا",
+      "tur": "verb",
+      "baslik": "بَاتَتَا • (bātatā) (form I) /baː.ta.taː/\n# third-person feminine dual past active of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bātatā", "bāta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بتما",
+      "tur": "verb",
+      "baslik": "بِتُّمَا • (bittumā) (form I) /bit.tu.maː/\n# second-person dual past active of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bittumā", "bāta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبيتان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَبِيتَانِ • (yabītāni) (form I) /ja.biː.taː.ni/\n# third-person masculine dual non-past active indicative of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabītāni", "bāta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبيتان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَبِيتَانِ • (tabītāni) (form I) /ta.biː.taː.ni/\n# inflection of بَاتَ (bāta):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabītāni", "bāta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبيتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَبِيتَا • (yabītā) (form I) /ja.biː.taː/\n# third-person masculine dual non-past active subjunctive/jussive of بَاتَ (bāta)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabītā", "bāta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبيتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَبِيتَا • (tabītā) (form I) /ta.biː.taː/\n# inflection of بَاتَ (bāta):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabītā", "bāta"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "بات", "r7"]
+  ],
+  "mana": {
     "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
@@ -503,16 +370,11 @@
     "dayanak_tanim": "a building in which something is sheltered or located",
     "synset_sayisi": 14
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "artifact.n.01",
     "decide.v.02",
     "develop.v.10",
@@ -525,12 +387,10 @@
     "situation.n.01",
     "unit_of_measurement.n.01"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

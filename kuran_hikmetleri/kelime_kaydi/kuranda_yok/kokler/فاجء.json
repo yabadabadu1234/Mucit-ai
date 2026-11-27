@@ -1,702 +1,541 @@
 {
   "kok": "فاجء",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "فاجء", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يفاجئ",
-        "u": "يفاجئ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يفاجئ (form III)\n# يُفَاجِئُ (yufājiʔu) /ju.faː.d͡ʒi.ʔu/: third-person masculine singular non-past active indicative of فَاجَأَ (fājaʔa)\n# يُفَاجِئَ (yufājiʔa) /ju.faː.d͡ʒi.ʔa/: third-person masculine singular non-past active subjunctive of فَاجَأَ (fājaʔa)\n# يُفَاجِئْ (yufājiʔ) /ju.faː.d͡ʒiʔ/: third-person masculine singular non-past active jussive of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yufājiʔu", "fājaʔa", "yufājiʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يفاجأ",
-        "u": "يفاجأ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يفاجأ (form III)\n# يُفَاجَأُ (yufājaʔu) /ju.faː.d͡ʒa.ʔu/: third-person masculine singular non-past passive indicative of فَاجَأَ (fājaʔa)\n# يُفَاجَأَ (yufājaʔa) /ju.faː.d͡ʒa.ʔa/: third-person masculine singular non-past passive subjunctive of فَاجَأَ (fājaʔa)\n# يُفَاجَأْ (yufājaʔ) /ju.faː.d͡ʒaʔ/: third-person masculine singular non-past passive jussive of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yufājaʔu", "fājaʔa", "yufājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "فوجئ",
-        "u": "فوجئ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فُوجِئَ • (fūjiʔa) (form III) /fuː.d͡ʒi.ʔa/\n# third-person masculine singular past passive of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["fūjiʔa", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "فاجأت",
-        "u": "فاجأت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فاجأت (form III)\n# فَاجَأْتُ (fājaʔtu) /faː.d͡ʒaʔ.tu/: first-person singular past active of فَاجَأَ (fājaʔa)\n# فَاجَأْتَ (fājaʔta) /faː.d͡ʒaʔ.ta/: second-person masculine singular past active of فَاجَأَ (fājaʔa)\n# فَاجَأْتِ (fājaʔti) /faː.d͡ʒaʔ.ti/: second-person feminine singular past active of فَاجَأَ (fājaʔa)\n# فَاجَأَتْ (fājaʔat) /faː.d͡ʒa.ʔat/: third-person feminine singular past active of فَ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["fājaʔtu", "fājaʔa", "fājaʔta"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تفاجئ",
-        "u": "تفاجئ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تفاجئ (form III)\n# تُفَاجِئُ (tufājiʔu) /tu.faː.d͡ʒi.ʔu/: inflection of فَاجَأَ (fājaʔa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُفَاجِئَ (tufājiʔa) /tu.faː.d͡ʒi.ʔa/: inflection of فَاجَأَ (fājaʔa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tufājiʔu", "fājaʔa", "tufājiʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "فوجئت",
-        "u": "فوجئت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فوجئت (form III)\n# فُوجِئْتُ (fūjiʔtu) /fuː.d͡ʒiʔ.tu/: first-person singular past passive of فَاجَأَ (fājaʔa)\n# فُوجِئْتَ (fūjiʔta) /fuː.d͡ʒiʔ.ta/: second-person masculine singular past passive of فَاجَأَ (fājaʔa)\n# فُوجِئْتِ (fūjiʔti) /fuː.d͡ʒiʔ.ti/: second-person feminine singular past passive of فَاجَأَ (fājaʔa)\n# فُوجِئَتْ (fūjiʔat) /fuː.d͡ʒi.ʔat/: third-person feminine singular past passive o",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["fūjiʔtu", "fājaʔa", "fūjiʔta"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تفاجأ",
-        "u": "تفاجأ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تفاجأ (form III)\n# تُفَاجَأُ (tufājaʔu) /tu.faː.d͡ʒa.ʔu/: inflection of فَاجَأَ (fājaʔa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُفَاجَأَ (tufājaʔa) /tu.faː.d͡ʒa.ʔa/: inflection of فَاجَأَ (fājaʔa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past pas",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tufājaʔu", "fājaʔa", "tufājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "فاجئ",
-        "u": "فاجئ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فَاجِئْ • (fājiʔ) (form III) /faː.d͡ʒiʔ/\n# second-person masculine singular imperative of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["fājiʔ", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تفاجئين",
-        "u": "تفاجئين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تفاجئين (form III)\n# تُفَاجِئِينَ (tufājiʔīna) /tu.faː.d͡ʒi.ʔiː.na/: second-person feminine singular non-past active indicative of فَاجَأَ (fājaʔa)\n# تُفَاجَئِينَ (tufājaʔīna) /tu.faː.d͡ʒa.ʔiː.na/: second-person feminine singular non-past passive indicative of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tufājiʔīna", "fājaʔa", "tufājaʔīna"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تفاجئي",
-        "u": "تفاجئي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تفاجئي (form III)\n# تُفَاجِئِي (tufājiʔī) /tu.faː.d͡ʒi.ʔiː/: second-person feminine singular non-past active subjunctive/jussive of فَاجَأَ (fājaʔa)\n# تُفَاجَئِي (tufājaʔī) /tu.faː.d͡ʒa.ʔiː/: second-person feminine singular non-past passive subjunctive/jussive of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tufājiʔī", "fājaʔa", "tufājaʔī"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "فاجئي",
-        "u": "فاجئي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فَاجِئِي • (fājiʔī) (form III) /faː.d͡ʒi.ʔiː/\n# second-person feminine singular imperative of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["fājiʔī", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "أفاجئ",
-        "u": "أفاجئ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أفاجئ (form III)\n# أُفَاجِئُ (ʔufājiʔu) /ʔu.faː.d͡ʒi.ʔu/: first-person singular non-past active indicative of فَاجَأَ (fājaʔa)\n# أُفَاجِئَ (ʔufājiʔa) /ʔu.faː.d͡ʒi.ʔa/: first-person singular non-past active subjunctive of فَاجَأَ (fājaʔa)\n# أُفَاجِئْ (ʔufājiʔ) /ʔu.faː.d͡ʒiʔ/: first-person singular non-past active jussive of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔufājiʔu", "fājaʔa", "ʔufājiʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "أفاجأ",
-        "u": "أفاجأ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أفاجأ (form III)\n# أُفَاجَأُ (ʔufājaʔu) /ʔu.faː.d͡ʒa.ʔu/: first-person singular non-past passive indicative of فَاجَأَ (fājaʔa)\n# أُفَاجَأَ (ʔufājaʔa) /ʔu.faː.d͡ʒa.ʔa/: first-person singular non-past passive subjunctive of فَاجَأَ (fājaʔa)\n# أُفَاجَأْ (ʔufājaʔ) /ʔu.faː.d͡ʒaʔ/: first-person singular non-past passive jussive of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔufājaʔu", "fājaʔa", "ʔufājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "فاجأنا",
-        "u": "فاجأنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فَاجَأْنَا • (fājaʔnā) (form III) /faː.d͡ʒaʔ.naː/\n# first-person plural past active of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["fājaʔnā", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "نفاجئ",
-        "u": "نفاجئ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نفاجئ (form III)\n# نُفَاجِئُ (nufājiʔu) /nu.faː.d͡ʒi.ʔu/: first-person plural non-past active indicative of فَاجَأَ (fājaʔa)\n# نُفَاجِئَ (nufājiʔa) /nu.faː.d͡ʒi.ʔa/: first-person plural non-past active subjunctive of فَاجَأَ (fājaʔa)\n# نُفَاجِئْ (nufājiʔ) /nu.faː.d͡ʒiʔ/: first-person plural non-past active jussive of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nufājiʔu", "fājaʔa", "nufājiʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "فوجئنا",
-        "u": "فوجئنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فُوجِئْنَا • (fūjiʔnā) (form III) /fuː.d͡ʒiʔ.naː/\n# first-person plural past passive of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["fūjiʔnā", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "نفاجأ",
-        "u": "نفاجأ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نفاجأ (form III)\n# نُفَاجَأُ (nufājaʔu) /nu.faː.d͡ʒa.ʔu/: first-person plural non-past passive indicative of فَاجَأَ (fājaʔa)\n# نُفَاجَأَ (nufājaʔa) /nu.faː.d͡ʒa.ʔa/: first-person plural non-past passive subjunctive of فَاجَأَ (fājaʔa)\n# نُفَاجَأْ (nufājaʔ) /nu.faː.d͡ʒaʔ/: first-person plural non-past passive jussive of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nufājaʔu", "fājaʔa", "nufājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "فاجأتم",
-        "u": "فاجأتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فَاجَأْتُمْ • (fājaʔtum) (form III) /faː.d͡ʒaʔ.tum/\n# second-person masculine plural past active of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["fājaʔtum", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تفاجئون",
-        "u": "تفاجئون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُفَاجِئُونَ • (tufājiʔūna) (form III) /tu.faː.d͡ʒi.ʔuː.na/\n# second-person masculine plural non-past active indicative of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tufājiʔūna", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تفاجئوا",
-        "u": "تفاجئوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُفَاجِئُوا • (tufājiʔū) (form III) /tu.faː.d͡ʒi.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tufājiʔū", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "فاجئوا",
-        "u": "فاجئوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فَاجِئُوا • (fājiʔū) (form III) /faː.d͡ʒi.ʔuː/\n# second-person masculine plural imperative of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["fājiʔū", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "فوجئتم",
-        "u": "فوجئتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فُوجِئْتُمْ • (fūjiʔtum) (form III) /fuː.d͡ʒiʔ.tum/\n# second-person masculine plural past passive of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["fūjiʔtum", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تفاجؤون",
-        "u": "تفاجؤون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُفَاجَؤُونَ • (tufājaʔūna) (form III) /tu.faː.d͡ʒa.ʔuː.na/\n# second-person masculine plural non-past passive indicative of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tufājaʔūna", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تفاجؤوا",
-        "u": "تفاجؤوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُفَاجَؤُوا • (tufājaʔū) (form III) /tu.faː.d͡ʒa.ʔuː/\n# second-person masculine plural non-past passive subjunctive/jussive of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tufājaʔū", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "فاجؤوا",
-        "u": "فاجؤوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فَاجَؤُوا • (fājaʔū) (form III) /faː.d͡ʒa.ʔuː/\n# third-person masculine plural past active of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["fājaʔū", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يفاجئون",
-        "u": "يفاجئون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُفَاجِئُونَ • (yufājiʔūna) (form III) /ju.faː.d͡ʒi.ʔuː.na/\n# third-person masculine plural non-past active indicative of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yufājiʔūna", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يفاجئوا",
-        "u": "يفاجئوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُفَاجِئُوا • (yufājiʔū) (form III) /ju.faː.d͡ʒi.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yufājiʔū", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "فوجئوا",
-        "u": "فوجئوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فُوجِئُوا • (fūjiʔū) (form III) /fuː.d͡ʒi.ʔuː/\n# third-person masculine plural past passive of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["fūjiʔū", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يفاجؤون",
-        "u": "يفاجؤون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُفَاجَؤُونَ • (yufājaʔūna) (form III) /ju.faː.d͡ʒa.ʔuː.na/\n# third-person masculine plural non-past passive indicative of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yufājaʔūna", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يفاجؤوا",
-        "u": "يفاجؤوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُفَاجَؤُوا • (yufājaʔū) (form III) /ju.faː.d͡ʒa.ʔuː/\n# third-person masculine plural non-past passive subjunctive/jussive of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yufājaʔū", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "فاجأتن",
-        "u": "فاجأتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فَاجَأْتُنَّ • (fājaʔtunna) (form III) /faː.d͡ʒaʔ.tun.na/\n# second-person feminine plural past active of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["fājaʔtunna", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تفاجئن",
-        "u": "تفاجئن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُفَاجِئْنَ • (tufājiʔna) (form III) /tu.faː.d͡ʒiʔ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tufājiʔna", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "فاجئن",
-        "u": "فاجئن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فَاجِئْنَ • (fājiʔna) (form III) /faː.d͡ʒiʔ.na/\n# second-person feminine plural imperative of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["fājiʔna", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "فوجئتن",
-        "u": "فوجئتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فُوجِئْتُنَّ • (fūjiʔtunna) (form III) /fuː.d͡ʒiʔ.tun.na/\n# second-person feminine plural past passive of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["fūjiʔtunna", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تفاجأن",
-        "u": "تفاجأن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُفَاجَأْنَ • (tufājaʔna) (form III) /tu.faː.d͡ʒaʔ.na/\n# second-person feminine plural non-past passive indicative/subjunctive/jussive of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tufājaʔna", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "فاجأن",
-        "u": "فاجأن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فَاجَأْنَ • (fājaʔna) (form III) /faː.d͡ʒaʔ.na/\n# third-person feminine plural past active of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["fājaʔna", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يفاجئن",
-        "u": "يفاجئن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُفَاجِئْنَ • (yufājiʔna) (form III) /ju.faː.d͡ʒiʔ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yufājiʔna", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "فوجئن",
-        "u": "فوجئن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فُوجِئْنَ • (fūjiʔna) (form III) /fuː.d͡ʒiʔ.na/\n# third-person feminine plural past passive of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["fūjiʔna", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يفاجأن",
-        "u": "يفاجأن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُفَاجَأْنَ • (yufājaʔna) (form III) /ju.faː.d͡ʒaʔ.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yufājaʔna", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تفاجآ",
-        "u": "تفاجآ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُفَاجَآ • (tufājaʔā) (form III) /tu.faː.d͡ʒa.ʔaː/\n# inflection of فَاجَأَ (fājaʔa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tufājaʔā", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "فاجأتما",
-        "u": "فاجأتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فَاجَأْتُمَا • (fājaʔtumā) (form III) /faː.d͡ʒaʔ.tu.maː/\n# second-person dual past active of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["fājaʔtumā", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "فاجآ",
-        "u": "فاجآ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فَاجَآ • (fājaʔā) (form III) /faː.d͡ʒa.ʔaː/\n# third-person masculine dual past active of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["fājaʔā", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "فوجئتا",
-        "u": "فوجئتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فُوجِئَتَا • (fūjiʔatā) (form III) /fuː.d͡ʒi.ʔa.taː/\n# third-person feminine dual past passive of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["fūjiʔatā", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "فاجأتا",
-        "u": "فاجأتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فَاجَأَتَا • (fājaʔatā) (form III) /faː.d͡ʒa.ʔa.taː/\n# third-person feminine dual past active of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["fājaʔatā", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يفاجئان",
-        "u": "يفاجئان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُفَاجِئَانِ • (yufājiʔāni) (form III) /ju.faː.d͡ʒi.ʔaː.ni/\n# third-person masculine dual non-past active indicative of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yufājiʔāni", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "فوجئا",
-        "u": "فوجئا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فُوجِئَا • (fūjiʔā) (form III) /fuː.d͡ʒi.ʔaː/\n# third-person masculine dual past passive of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["fūjiʔā", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تفاجئان",
-        "u": "تفاجئان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُفَاجِئَانِ • (tufājiʔāni) (form III) /tu.faː.d͡ʒi.ʔaː.ni/\n# inflection of فَاجَأَ (fājaʔa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tufājiʔāni", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يفاجآن",
-        "u": "يفاجآن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُفَاجَآنِ • (yufājaʔāni) (form III) /ju.faː.d͡ʒa.ʔaː.ni/\n# third-person masculine dual non-past passive indicative of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yufājaʔāni", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تفاجآن",
-        "u": "تفاجآن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُفَاجَآنِ • (tufājaʔāni) (form III) /tu.faː.d͡ʒa.ʔaː.ni/\n# inflection of فَاجَأَ (fājaʔa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tufājaʔāni", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يفاجآ",
-        "u": "يفاجآ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُفَاجَآ • (yufājaʔā) (form III) /ju.faː.d͡ʒa.ʔaː/\n# third-person masculine dual non-past passive subjunctive/jussive of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yufājaʔā", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "فوجئتما",
-        "u": "فوجئتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فُوجِئْتُمَا • (fūjiʔtumā) (form III) /fuː.d͡ʒiʔ.tu.maː/\n# second-person dual past passive of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["fūjiʔtumā", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "يفاجئا",
-        "u": "يفاجئا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُفَاجِئَا • (yufājiʔā) (form III) /ju.faː.d͡ʒi.ʔaː/\n# third-person masculine dual non-past active subjunctive/jussive of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yufājiʔā", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "فاجئا",
-        "u": "فاجئا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فَاجِئَا • (fājiʔā) (form III) /faː.d͡ʒi.ʔaː/\n# second-person dual imperative of فَاجَأَ (fājaʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["fājiʔā", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      },
-      {
-        "w": "تفاجئا",
-        "u": "تفاجئا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُفَاجِئَا • (tufājiʔā) (form III) /tu.faː.d͡ʒi.ʔaː/\n# inflection of فَاجَأَ (fājaʔa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tufājiʔā", "fājaʔa"],
-        "k": "فاجأ",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "فج",
+  "ses": {
     "harf": "ف",
+    "fasil": "فج",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يفاجئ",
+      "tur": "verb",
+      "baslik": "يفاجئ (form III)\n# يُفَاجِئُ (yufājiʔu) /ju.faː.d͡ʒi.ʔu/: third-person masculine singular non-past active indicative of فَاجَأَ (fājaʔa)\n# يُفَاجِئَ (yufājiʔa) /ju.faː.d͡ʒi.ʔa/: third-person masculine singular non-past active subjunctive of فَاجَأَ (fājaʔa)\n# يُفَاجِئْ (yufājiʔ) /ju.faː.d͡ʒiʔ/: third-person masculine singular non-past active jussive of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yufājiʔu", "fājaʔa", "yufājiʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يفاجأ",
+      "tur": "verb",
+      "baslik": "يفاجأ (form III)\n# يُفَاجَأُ (yufājaʔu) /ju.faː.d͡ʒa.ʔu/: third-person masculine singular non-past passive indicative of فَاجَأَ (fājaʔa)\n# يُفَاجَأَ (yufājaʔa) /ju.faː.d͡ʒa.ʔa/: third-person masculine singular non-past passive subjunctive of فَاجَأَ (fājaʔa)\n# يُفَاجَأْ (yufājaʔ) /ju.faː.d͡ʒaʔ/: third-person masculine singular non-past passive jussive of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yufājaʔu", "fājaʔa", "yufājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "فوجئ",
+      "tur": "verb",
+      "baslik": "فُوجِئَ • (fūjiʔa) (form III) /fuː.d͡ʒi.ʔa/\n# third-person masculine singular past passive of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["fūjiʔa", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "فاجأت",
+      "tur": "verb",
+      "baslik": "فاجأت (form III)\n# فَاجَأْتُ (fājaʔtu) /faː.d͡ʒaʔ.tu/: first-person singular past active of فَاجَأَ (fājaʔa)\n# فَاجَأْتَ (fājaʔta) /faː.d͡ʒaʔ.ta/: second-person masculine singular past active of فَاجَأَ (fājaʔa)\n# فَاجَأْتِ (fājaʔti) /faː.d͡ʒaʔ.ti/: second-person feminine singular past active of فَاجَأَ (fājaʔa)\n# فَاجَأَتْ (fājaʔat) /faː.d͡ʒa.ʔat/: third-person feminine singular past active of فَ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["fājaʔtu", "fājaʔa", "fājaʔta"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفاجئ",
+      "tur": "verb",
+      "baslik": "تفاجئ (form III)\n# تُفَاجِئُ (tufājiʔu) /tu.faː.d͡ʒi.ʔu/: inflection of فَاجَأَ (fājaʔa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُفَاجِئَ (tufājiʔa) /tu.faː.d͡ʒi.ʔa/: inflection of فَاجَأَ (fājaʔa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tufājiʔu", "fājaʔa", "tufājiʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "فوجئت",
+      "tur": "verb",
+      "baslik": "فوجئت (form III)\n# فُوجِئْتُ (fūjiʔtu) /fuː.d͡ʒiʔ.tu/: first-person singular past passive of فَاجَأَ (fājaʔa)\n# فُوجِئْتَ (fūjiʔta) /fuː.d͡ʒiʔ.ta/: second-person masculine singular past passive of فَاجَأَ (fājaʔa)\n# فُوجِئْتِ (fūjiʔti) /fuː.d͡ʒiʔ.ti/: second-person feminine singular past passive of فَاجَأَ (fājaʔa)\n# فُوجِئَتْ (fūjiʔat) /fuː.d͡ʒi.ʔat/: third-person feminine singular past passive o",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["fūjiʔtu", "fājaʔa", "fūjiʔta"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفاجأ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تفاجأ (form III)\n# تُفَاجَأُ (tufājaʔu) /tu.faː.d͡ʒa.ʔu/: inflection of فَاجَأَ (fājaʔa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُفَاجَأَ (tufājaʔa) /tu.faː.d͡ʒa.ʔa/: inflection of فَاجَأَ (fājaʔa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past pas",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tufājaʔu", "fājaʔa", "tufājaʔa"],
+      "kok_yazilis": "فاجأ"
+    },
+    {
+      "madde": "فاجئ",
+      "tur": "verb",
+      "baslik": "فَاجِئْ • (fājiʔ) (form III) /faː.d͡ʒiʔ/\n# second-person masculine singular imperative of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["fājiʔ", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفاجئين",
+      "tur": "verb",
+      "baslik": "تفاجئين (form III)\n# تُفَاجِئِينَ (tufājiʔīna) /tu.faː.d͡ʒi.ʔiː.na/: second-person feminine singular non-past active indicative of فَاجَأَ (fājaʔa)\n# تُفَاجَئِينَ (tufājaʔīna) /tu.faː.d͡ʒa.ʔiː.na/: second-person feminine singular non-past passive indicative of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tufājiʔīna", "fājaʔa", "tufājaʔīna"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفاجئي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تفاجئي (form III)\n# تُفَاجِئِي (tufājiʔī) /tu.faː.d͡ʒi.ʔiː/: second-person feminine singular non-past active subjunctive/jussive of فَاجَأَ (fājaʔa)\n# تُفَاجَئِي (tufājaʔī) /tu.faː.d͡ʒa.ʔiː/: second-person feminine singular non-past passive subjunctive/jussive of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tufājiʔī", "fājaʔa", "tufājaʔī"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "فاجئي",
+      "tur": "verb",
+      "baslik": "فَاجِئِي • (fājiʔī) (form III) /faː.d͡ʒi.ʔiː/\n# second-person feminine singular imperative of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["fājiʔī", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أفاجئ",
+      "tur": "verb",
+      "baslik": "أفاجئ (form III)\n# أُفَاجِئُ (ʔufājiʔu) /ʔu.faː.d͡ʒi.ʔu/: first-person singular non-past active indicative of فَاجَأَ (fājaʔa)\n# أُفَاجِئَ (ʔufājiʔa) /ʔu.faː.d͡ʒi.ʔa/: first-person singular non-past active subjunctive of فَاجَأَ (fājaʔa)\n# أُفَاجِئْ (ʔufājiʔ) /ʔu.faː.d͡ʒiʔ/: first-person singular non-past active jussive of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔufājiʔu", "fājaʔa", "ʔufājiʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أفاجأ",
+      "tur": "verb",
+      "baslik": "أفاجأ (form III)\n# أُفَاجَأُ (ʔufājaʔu) /ʔu.faː.d͡ʒa.ʔu/: first-person singular non-past passive indicative of فَاجَأَ (fājaʔa)\n# أُفَاجَأَ (ʔufājaʔa) /ʔu.faː.d͡ʒa.ʔa/: first-person singular non-past passive subjunctive of فَاجَأَ (fājaʔa)\n# أُفَاجَأْ (ʔufājaʔ) /ʔu.faː.d͡ʒaʔ/: first-person singular non-past passive jussive of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔufājaʔu", "fājaʔa", "ʔufājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "فاجأنا",
+      "tur": "verb",
+      "baslik": "فَاجَأْنَا • (fājaʔnā) (form III) /faː.d͡ʒaʔ.naː/\n# first-person plural past active of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["fājaʔnā", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نفاجئ",
+      "tur": "verb",
+      "baslik": "نفاجئ (form III)\n# نُفَاجِئُ (nufājiʔu) /nu.faː.d͡ʒi.ʔu/: first-person plural non-past active indicative of فَاجَأَ (fājaʔa)\n# نُفَاجِئَ (nufājiʔa) /nu.faː.d͡ʒi.ʔa/: first-person plural non-past active subjunctive of فَاجَأَ (fājaʔa)\n# نُفَاجِئْ (nufājiʔ) /nu.faː.d͡ʒiʔ/: first-person plural non-past active jussive of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nufājiʔu", "fājaʔa", "nufājiʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "فوجئنا",
+      "tur": "verb",
+      "baslik": "فُوجِئْنَا • (fūjiʔnā) (form III) /fuː.d͡ʒiʔ.naː/\n# first-person plural past passive of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["fūjiʔnā", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نفاجأ",
+      "tur": "verb",
+      "baslik": "نفاجأ (form III)\n# نُفَاجَأُ (nufājaʔu) /nu.faː.d͡ʒa.ʔu/: first-person plural non-past passive indicative of فَاجَأَ (fājaʔa)\n# نُفَاجَأَ (nufājaʔa) /nu.faː.d͡ʒa.ʔa/: first-person plural non-past passive subjunctive of فَاجَأَ (fājaʔa)\n# نُفَاجَأْ (nufājaʔ) /nu.faː.d͡ʒaʔ/: first-person plural non-past passive jussive of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nufājaʔu", "fājaʔa", "nufājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "فاجأتم",
+      "tur": "verb",
+      "baslik": "فَاجَأْتُمْ • (fājaʔtum) (form III) /faː.d͡ʒaʔ.tum/\n# second-person masculine plural past active of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["fājaʔtum", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفاجئون",
+      "tur": "verb",
+      "baslik": "تُفَاجِئُونَ • (tufājiʔūna) (form III) /tu.faː.d͡ʒi.ʔuː.na/\n# second-person masculine plural non-past active indicative of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tufājiʔūna", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفاجئوا",
+      "tur": "verb",
+      "baslik": "تُفَاجِئُوا • (tufājiʔū) (form III) /tu.faː.d͡ʒi.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tufājiʔū", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "فاجئوا",
+      "tur": "verb",
+      "baslik": "فَاجِئُوا • (fājiʔū) (form III) /faː.d͡ʒi.ʔuː/\n# second-person masculine plural imperative of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["fājiʔū", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "فوجئتم",
+      "tur": "verb",
+      "baslik": "فُوجِئْتُمْ • (fūjiʔtum) (form III) /fuː.d͡ʒiʔ.tum/\n# second-person masculine plural past passive of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["fūjiʔtum", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفاجؤون",
+      "tur": "verb",
+      "baslik": "تُفَاجَؤُونَ • (tufājaʔūna) (form III) /tu.faː.d͡ʒa.ʔuː.na/\n# second-person masculine plural non-past passive indicative of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tufājaʔūna", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفاجؤوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُفَاجَؤُوا • (tufājaʔū) (form III) /tu.faː.d͡ʒa.ʔuː/\n# second-person masculine plural non-past passive subjunctive/jussive of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tufājaʔū", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "فاجؤوا",
+      "tur": "verb",
+      "baslik": "فَاجَؤُوا • (fājaʔū) (form III) /faː.d͡ʒa.ʔuː/\n# third-person masculine plural past active of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["fājaʔū", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يفاجئون",
+      "tur": "verb",
+      "baslik": "يُفَاجِئُونَ • (yufājiʔūna) (form III) /ju.faː.d͡ʒi.ʔuː.na/\n# third-person masculine plural non-past active indicative of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yufājiʔūna", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يفاجئوا",
+      "tur": "verb",
+      "baslik": "يُفَاجِئُوا • (yufājiʔū) (form III) /ju.faː.d͡ʒi.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yufājiʔū", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "فوجئوا",
+      "tur": "verb",
+      "baslik": "فُوجِئُوا • (fūjiʔū) (form III) /fuː.d͡ʒi.ʔuː/\n# third-person masculine plural past passive of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["fūjiʔū", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يفاجؤون",
+      "tur": "verb",
+      "baslik": "يُفَاجَؤُونَ • (yufājaʔūna) (form III) /ju.faː.d͡ʒa.ʔuː.na/\n# third-person masculine plural non-past passive indicative of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yufājaʔūna", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يفاجؤوا",
+      "tur": "verb",
+      "baslik": "يُفَاجَؤُوا • (yufājaʔū) (form III) /ju.faː.d͡ʒa.ʔuː/\n# third-person masculine plural non-past passive subjunctive/jussive of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yufājaʔū", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "فاجأتن",
+      "tur": "verb",
+      "baslik": "فَاجَأْتُنَّ • (fājaʔtunna) (form III) /faː.d͡ʒaʔ.tun.na/\n# second-person feminine plural past active of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["fājaʔtunna", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفاجئن",
+      "tur": "verb",
+      "baslik": "تُفَاجِئْنَ • (tufājiʔna) (form III) /tu.faː.d͡ʒiʔ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tufājiʔna", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "فاجئن",
+      "tur": "verb",
+      "baslik": "فَاجِئْنَ • (fājiʔna) (form III) /faː.d͡ʒiʔ.na/\n# second-person feminine plural imperative of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["fājiʔna", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "فوجئتن",
+      "tur": "verb",
+      "baslik": "فُوجِئْتُنَّ • (fūjiʔtunna) (form III) /fuː.d͡ʒiʔ.tun.na/\n# second-person feminine plural past passive of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["fūjiʔtunna", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفاجأن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُفَاجَأْنَ • (tufājaʔna) (form III) /tu.faː.d͡ʒaʔ.na/\n# second-person feminine plural non-past passive indicative/subjunctive/jussive of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tufājaʔna", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "فاجأن",
+      "tur": "verb",
+      "baslik": "فَاجَأْنَ • (fājaʔna) (form III) /faː.d͡ʒaʔ.na/\n# third-person feminine plural past active of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["fājaʔna", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يفاجئن",
+      "tur": "verb",
+      "baslik": "يُفَاجِئْنَ • (yufājiʔna) (form III) /ju.faː.d͡ʒiʔ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yufājiʔna", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "فوجئن",
+      "tur": "verb",
+      "baslik": "فُوجِئْنَ • (fūjiʔna) (form III) /fuː.d͡ʒiʔ.na/\n# third-person feminine plural past passive of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["fūjiʔna", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يفاجأن",
+      "tur": "verb",
+      "baslik": "يُفَاجَأْنَ • (yufājaʔna) (form III) /ju.faː.d͡ʒaʔ.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yufājaʔna", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفاجآ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُفَاجَآ • (tufājaʔā) (form III) /tu.faː.d͡ʒa.ʔaː/\n# inflection of فَاجَأَ (fājaʔa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tufājaʔā", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "فاجأتما",
+      "tur": "verb",
+      "baslik": "فَاجَأْتُمَا • (fājaʔtumā) (form III) /faː.d͡ʒaʔ.tu.maː/\n# second-person dual past active of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["fājaʔtumā", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "فاجآ",
+      "tur": "verb",
+      "baslik": "فَاجَآ • (fājaʔā) (form III) /faː.d͡ʒa.ʔaː/\n# third-person masculine dual past active of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["fājaʔā", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "فوجئتا",
+      "tur": "verb",
+      "baslik": "فُوجِئَتَا • (fūjiʔatā) (form III) /fuː.d͡ʒi.ʔa.taː/\n# third-person feminine dual past passive of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["fūjiʔatā", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "فاجأتا",
+      "tur": "verb",
+      "baslik": "فَاجَأَتَا • (fājaʔatā) (form III) /faː.d͡ʒa.ʔa.taː/\n# third-person feminine dual past active of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["fājaʔatā", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يفاجئان",
+      "tur": "verb",
+      "baslik": "يُفَاجِئَانِ • (yufājiʔāni) (form III) /ju.faː.d͡ʒi.ʔaː.ni/\n# third-person masculine dual non-past active indicative of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yufājiʔāni", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "فوجئا",
+      "tur": "verb",
+      "baslik": "فُوجِئَا • (fūjiʔā) (form III) /fuː.d͡ʒi.ʔaː/\n# third-person masculine dual past passive of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["fūjiʔā", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفاجئان",
+      "tur": "verb",
+      "baslik": "تُفَاجِئَانِ • (tufājiʔāni) (form III) /tu.faː.d͡ʒi.ʔaː.ni/\n# inflection of فَاجَأَ (fājaʔa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tufājiʔāni", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يفاجآن",
+      "tur": "verb",
+      "baslik": "يُفَاجَآنِ • (yufājaʔāni) (form III) /ju.faː.d͡ʒa.ʔaː.ni/\n# third-person masculine dual non-past passive indicative of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yufājaʔāni", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفاجآن",
+      "tur": "verb",
+      "baslik": "تُفَاجَآنِ • (tufājaʔāni) (form III) /tu.faː.d͡ʒa.ʔaː.ni/\n# inflection of فَاجَأَ (fājaʔa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tufājaʔāni", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يفاجآ",
+      "tur": "verb",
+      "baslik": "يُفَاجَآ • (yufājaʔā) (form III) /ju.faː.d͡ʒa.ʔaː/\n# third-person masculine dual non-past passive subjunctive/jussive of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yufājaʔā", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "فوجئتما",
+      "tur": "verb",
+      "baslik": "فُوجِئْتُمَا • (fūjiʔtumā) (form III) /fuː.d͡ʒiʔ.tu.maː/\n# second-person dual past passive of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["fūjiʔtumā", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يفاجئا",
+      "tur": "verb",
+      "baslik": "يُفَاجِئَا • (yufājiʔā) (form III) /ju.faː.d͡ʒi.ʔaː/\n# third-person masculine dual non-past active subjunctive/jussive of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yufājiʔā", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "فاجئا",
+      "tur": "verb",
+      "baslik": "فَاجِئَا • (fājiʔā) (form III) /faː.d͡ʒi.ʔaː/\n# second-person dual imperative of فَاجَأَ (fājaʔa)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["fājiʔā", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تفاجئا",
+      "tur": "verb",
+      "baslik": "تُفَاجِئَا • (tufājiʔā) (form III) /tu.faː.d͡ʒi.ʔaː/\n# inflection of فَاجَأَ (fājaʔa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tufājiʔā", "fājaʔa"],
+      "kok_yazilis": "فاجأ",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "فاجء", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

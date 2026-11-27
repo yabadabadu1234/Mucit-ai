@@ -1,365 +1,287 @@
 {
   "kok": "ءنفق",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءنفق", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "ينفق",
-        "u": "ينفق",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "ينفق (form IV)\n# يُنْفِقُ (yunfiqu) /jun.fi.qu/: third-person masculine singular non-past active indicative of أَنْفَقَ (ʔanfaqa)\n# يُنْفَقُ (yunfaqu) /jun.fa.qu/: third-person masculine singular non-past passive indicative of أَنْفَقَ (ʔanfaqa)\n# يُنْفِقَ (yunfiqa) /jun.fi.qa/: third-person masculine singular non-past active subjunctive of أَنْفَقَ (ʔanfaqa)\n# يُنْفَقَ (yunfaqa) /jun.fa.qa/: thir",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunfiqu", "ʔanfaqa", "yunfaqu"],
-        "k": "أنفق",
-        "yol": "kök"
-      },
-      {
-        "w": "تنفق",
-        "u": "تنفق",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تنفق (form IV)\n# تُنْفِقُ (tunfiqu) /tun.fi.qu/: inflection of أَنْفَقَ (ʔanfaqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُنْفَقُ (tunfaqu) /tun.fa.qu/: inflection of أَنْفَقَ (ʔanfaqa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunfiqu", "ʔanfaqa", "tunfaqu"],
-        "k": "أنفق",
-        "yol": "kök"
-      },
-      {
-        "w": "تنفقين",
-        "u": "تنفقين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تنفقين (form IV)\n# تُنْفِقِينَ (tunfiqīna) /tun.fi.qiː.na/: second-person feminine singular non-past active indicative of أَنْفَقَ (ʔanfaqa)\n# تُنْفَقِينَ (tunfaqīna) /tun.fa.qiː.na/: second-person feminine singular non-past passive indicative of أَنْفَقَ (ʔanfaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunfiqīna", "ʔanfaqa", "tunfaqīna"],
-        "k": "أنفق",
-        "yol": "kök"
-      },
-      {
-        "w": "تنفقي",
-        "u": "تنفقي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تنفقي (form IV)\n# تُنْفِقِي (tunfiqī) /tun.fi.qiː/: second-person feminine singular non-past active subjunctive/jussive of أَنْفَقَ (ʔanfaqa)\n# تُنْفَقِي (tunfaqī) /tun.fa.qiː/: second-person feminine singular non-past passive subjunctive/jussive of أَنْفَقَ (ʔanfaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunfiqī", "ʔanfaqa", "tunfaqī"],
-        "k": "أنفق",
-        "yol": "kök"
-      },
-      {
-        "w": "ننفق",
-        "u": "ننفق",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "ننفق (form IV)\n# نُنْفِقُ (nunfiqu) /nun.fi.qu/: first-person plural non-past active indicative of أَنْفَقَ (ʔanfaqa)\n# نُنْفَقُ (nunfaqu) /nun.fa.qu/: first-person plural non-past passive indicative of أَنْفَقَ (ʔanfaqa)\n# نُنْفِقَ (nunfiqa) /nun.fi.qa/: first-person plural non-past active subjunctive of أَنْفَقَ (ʔanfaqa)\n# نُنْفَقَ (nunfaqa) /nun.fa.qa/: first-person plural non-past passive sub",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nunfiqu", "ʔanfaqa", "nunfaqu"],
-        "k": "أنفق",
-        "yol": "kök"
-      },
-      {
-        "w": "تنفقون",
-        "u": "تنفقون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تنفقون (form IV)\n# تُنْفِقُونَ (tunfiqūna) /tun.fi.quː.na/: second-person masculine plural non-past active indicative of أَنْفَقَ (ʔanfaqa)\n# تُنْفَقُونَ (tunfaqūna) /tun.fa.quː.na/: second-person masculine plural non-past passive indicative of أَنْفَقَ (ʔanfaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunfiqūna", "ʔanfaqa", "tunfaqūna"],
-        "k": "أنفق",
-        "yol": "kök"
-      },
-      {
-        "w": "تنفقوا",
-        "u": "تنفقوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تنفقوا (form IV)\n# تُنْفِقُوا (tunfiqū) /tun.fi.quː/: second-person masculine plural non-past active subjunctive/jussive of أَنْفَقَ (ʔanfaqa)\n# تُنْفَقُوا (tunfaqū) /tun.fa.quː/: second-person masculine plural non-past passive subjunctive/jussive of أَنْفَقَ (ʔanfaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunfiqū", "ʔanfaqa", "tunfaqū"],
-        "k": "أنفق",
-        "yol": "kök"
-      },
-      {
-        "w": "ينفقون",
-        "u": "ينفقون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "ينفقون (form IV)\n# يُنْفِقُونَ (yunfiqūna) /jun.fi.quː.na/: third-person masculine plural non-past active indicative of أَنْفَقَ (ʔanfaqa)\n# يُنْفَقُونَ (yunfaqūna) /jun.fa.quː.na/: third-person masculine plural non-past passive indicative of أَنْفَقَ (ʔanfaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunfiqūna", "ʔanfaqa", "yunfaqūna"],
-        "k": "أنفق",
-        "yol": "kök"
-      },
-      {
-        "w": "ينفقوا",
-        "u": "ينفقوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "ينفقوا (form IV)\n# يُنْفِقُوا (yunfiqū) /jun.fi.quː/: third-person masculine plural non-past active subjunctive/jussive of أَنْفَقَ (ʔanfaqa)\n# يُنْفَقُوا (yunfaqū) /jun.fa.quː/: third-person masculine plural non-past passive subjunctive/jussive of أَنْفَقَ (ʔanfaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunfiqū", "ʔanfaqa", "yunfaqū"],
-        "k": "أنفق",
-        "yol": "kök"
-      },
-      {
-        "w": "تنفقن",
-        "u": "تنفقن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تنفقن (form IV)\n# تُنْفِقْنَ (tunfiqna) /tun.fiq.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَنْفَقَ (ʔanfaqa)\n# تُنْفَقْنَ (tunfaqna) /tun.faq.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَنْفَقَ (ʔanfaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunfiqna", "ʔanfaqa", "tunfaqna"],
-        "k": "أنفق",
-        "yol": "kök"
-      },
-      {
-        "w": "ينفقن",
-        "u": "ينفقن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "ينفقن (form IV)\n# يُنْفِقْنَ (yunfiqna) /jun.fiq.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَنْفَقَ (ʔanfaqa)\n# يُنْفَقْنَ (yunfaqna) /jun.faq.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَنْفَقَ (ʔanfaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunfiqna", "ʔanfaqa", "yunfaqna"],
-        "k": "أنفق",
-        "yol": "kök"
-      },
-      {
-        "w": "أنفقت",
-        "u": "أنفقت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنفقت (form IV)\n# أَنْفَقْتُ (ʔanfaqtu) /ʔan.faq.tu/: first-person singular past active of أَنْفَقَ (ʔanfaqa)\n# أَنْفَقْتَ (ʔanfaqta) /ʔan.faq.ta/: second-person masculine singular past active of أَنْفَقَ (ʔanfaqa)\n# أَنْفَقْتِ (ʔanfaqti) /ʔan.faq.ti/: second-person feminine singular past active of أَنْفَقَ (ʔanfaqa)\n# أَنْفَقَتْ (ʔanfaqat) /ʔan.fa.qat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanfaqtu", "ʔanfaqa", "ʔanfaqta"],
-        "k": "أنفق",
-        "yol": "kök"
-      },
-      {
-        "w": "أنفقا",
-        "u": "أنفقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنفقا (form IV)\n# أَنْفَقَا (ʔanfaqā) /ʔan.fa.qaː/: third-person masculine dual past active of أَنْفَقَ (ʔanfaqa)\n# أُنْفِقَا (ʔunfiqā) /ʔun.fi.qaː/: third-person masculine dual past passive of أَنْفَقَ (ʔanfaqa)\n# أَنْفِقَا (ʔanfiqā) /ʔan.fi.qaː/: second-person dual imperative of أَنْفَقَ (ʔanfaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanfaqā", "ʔanfaqa", "ʔunfiqā"],
-        "k": "أنفق",
-        "yol": "kök"
-      },
-      {
-        "w": "أنفقتما",
-        "u": "أنفقتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنفقتما (form IV)\n# أَنْفَقْتُمَا (ʔanfaqtumā) /ʔan.faq.tu.maː/: second-person dual past active of أَنْفَقَ (ʔanfaqa)\n# أُنْفِقْتُمَا (ʔunfiqtumā) /ʔun.fiq.tu.maː/: second-person dual past passive of أَنْفَقَ (ʔanfaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanfaqtumā", "ʔanfaqa", "ʔunfiqtumā"],
-        "k": "أنفق",
-        "yol": "kök"
-      },
-      {
-        "w": "أنفقنا",
-        "u": "أنفقنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنفقنا (form IV)\n# أَنْفَقْنَا (ʔanfaqnā) /ʔan.faq.naː/: first-person plural past active of أَنْفَقَ (ʔanfaqa)\n# أُنْفِقْنَا (ʔunfiqnā) /ʔun.fiq.naː/: first-person plural past passive of أَنْفَقَ (ʔanfaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanfaqnā", "ʔanfaqa", "ʔunfiqnā"],
-        "k": "أنفق",
-        "yol": "kök"
-      },
-      {
-        "w": "أنفقتا",
-        "u": "أنفقتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنفقتا (form IV)\n# أَنْفَقَتَا (ʔanfaqatā) /ʔan.fa.qa.taː/: third-person feminine dual past active of أَنْفَقَ (ʔanfaqa)\n# أُنْفِقَتَا (ʔunfiqatā) /ʔun.fi.qa.taː/: third-person feminine dual past passive of أَنْفَقَ (ʔanfaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanfaqatā", "ʔanfaqa", "ʔunfiqatā"],
-        "k": "أنفق",
-        "yol": "kök"
-      },
-      {
-        "w": "أنفقن",
-        "u": "أنفقن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنفقن (form IV)\n# أَنْفَقْنَ (ʔanfaqna) /ʔan.faq.na/: third-person feminine plural past active of أَنْفَقَ (ʔanfaqa)\n# أُنْفِقْنَ (ʔunfiqna) /ʔun.fiq.na/: third-person feminine plural past passive of أَنْفَقَ (ʔanfaqa)\n# أَنْفِقْنَ (ʔanfiqna) /ʔan.fiq.na/: second-person feminine plural imperative of أَنْفَقَ (ʔanfaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanfaqna", "ʔanfaqa", "ʔunfiqna"],
-        "k": "أنفق",
-        "yol": "kök"
-      },
-      {
-        "w": "أنفقوا",
-        "u": "أنفقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنفقوا (form IV)\n# أَنْفَقُوا (ʔanfaqū) /ʔan.fa.quː/: third-person masculine plural past active of أَنْفَقَ (ʔanfaqa)\n# أُنْفِقُوا (ʔunfiqū) /ʔun.fi.quː/: third-person masculine plural past passive of أَنْفَقَ (ʔanfaqa)\n# أَنْفِقُوا (ʔanfiqū) /ʔan.fi.quː/: second-person masculine plural imperative of أَنْفَقَ (ʔanfaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanfaqū", "ʔanfaqa", "ʔunfiqū"],
-        "k": "أنفق",
-        "yol": "kök"
-      },
-      {
-        "w": "أنفقتم",
-        "u": "أنفقتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنفقتم (form IV)\n# أَنْفَقْتُمْ (ʔanfaqtum) /ʔan.faq.tum/: second-person masculine plural past active of أَنْفَقَ (ʔanfaqa)\n# أُنْفِقْتُمْ (ʔunfiqtum) /ʔun.fiq.tum/: second-person masculine plural past passive of أَنْفَقَ (ʔanfaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanfaqtum", "ʔanfaqa", "ʔunfiqtum"],
-        "k": "أنفق",
-        "yol": "kök"
-      },
-      {
-        "w": "أنفقتن",
-        "u": "أنفقتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنفقتن (form IV)\n# أَنْفَقْتُنَّ (ʔanfaqtunna) /ʔan.faq.tun.na/: second-person feminine plural past active of أَنْفَقَ (ʔanfaqa)\n# أُنْفِقْتُنَّ (ʔunfiqtunna) /ʔun.fiq.tun.na/: second-person feminine plural past passive of أَنْفَقَ (ʔanfaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanfaqtunna", "ʔanfaqa", "ʔunfiqtunna"],
-        "k": "أنفق",
-        "yol": "kök"
-      },
-      {
-        "w": "ينفقا",
-        "u": "ينفقا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ينفقا (form IV)\n# يُنْفِقَا (yunfiqā) /jun.fi.qaː/: third-person masculine dual non-past active subjunctive/jussive of أَنْفَقَ (ʔanfaqa)\n# يُنْفَقَا (yunfaqā) /jun.fa.qaː/: third-person masculine dual non-past passive subjunctive/jussive of أَنْفَقَ (ʔanfaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunfiqā", "ʔanfaqa", "yunfaqā"],
-        "k": "أنفق",
-        "yol": "kök"
-      },
-      {
-        "w": "تنفقان",
-        "u": "تنفقان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنفقان (form IV)\n# تُنْفِقَانِ (tunfiqāni) /tun.fi.qaː.ni/: inflection of أَنْفَقَ (ʔanfaqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُنْفَقَانِ (tunfaqāni) /tun.fa.qaː.ni/: inflection of أَنْفَقَ (ʔanfaqa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunfiqāni", "ʔanfaqa", "tunfaqāni"],
-        "k": "أنفق",
-        "yol": "kök"
-      },
-      {
-        "w": "ينفقان",
-        "u": "ينفقان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ينفقان (form IV)\n# يُنْفِقَانِ (yunfiqāni) /jun.fi.qaː.ni/: third-person masculine dual non-past active indicative of أَنْفَقَ (ʔanfaqa)\n# يُنْفَقَانِ (yunfaqāni) /jun.fa.qaː.ni/: third-person masculine dual non-past passive indicative of أَنْفَقَ (ʔanfaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yunfiqāni", "ʔanfaqa", "yunfaqāni"],
-        "k": "أنفق",
-        "yol": "kök"
-      },
-      {
-        "w": "أنفقي",
-        "u": "أنفقي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَنْفِقِي • (ʔanfiqī) (form IV) /ʔan.fi.qiː/\n# second-person feminine singular imperative of أَنْفَقَ (ʔanfaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔanfiqī", "ʔanfaqa"],
-        "k": "أنفق",
-        "yol": "kök"
-      },
-      {
-        "w": "تنفقا",
-        "u": "تنفقا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تنفقا (form IV)\n# تُنْفِقَا (tunfiqā) /tun.fi.qaː/: inflection of أَنْفَقَ (ʔanfaqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُنْفَقَا (tunfaqā) /tun.fa.qaː/: inflection of أَنْفَقَ (ʔanfaqa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/ju",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tunfiqā", "ʔanfaqa", "tunfaqā"],
-        "k": "أنفق",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "نف",
+  "ses": {
     "harf": "ء",
+    "fasil": "نف",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "ينفق",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "ينفق (form IV)\n# يُنْفِقُ (yunfiqu) /jun.fi.qu/: third-person masculine singular non-past active indicative of أَنْفَقَ (ʔanfaqa)\n# يُنْفَقُ (yunfaqu) /jun.fa.qu/: third-person masculine singular non-past passive indicative of أَنْفَقَ (ʔanfaqa)\n# يُنْفِقَ (yunfiqa) /jun.fi.qa/: third-person masculine singular non-past active subjunctive of أَنْفَقَ (ʔanfaqa)\n# يُنْفَقَ (yunfaqa) /jun.fa.qa/: thir",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunfiqu", "ʔanfaqa", "yunfaqu"],
+      "kok_yazilis": "أنفق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنفق",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تنفق (form IV)\n# تُنْفِقُ (tunfiqu) /tun.fi.qu/: inflection of أَنْفَقَ (ʔanfaqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُنْفَقُ (tunfaqu) /tun.fa.qu/: inflection of أَنْفَقَ (ʔanfaqa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunfiqu", "ʔanfaqa", "tunfaqu"],
+      "kok_yazilis": "أنفق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنفقين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تنفقين (form IV)\n# تُنْفِقِينَ (tunfiqīna) /tun.fi.qiː.na/: second-person feminine singular non-past active indicative of أَنْفَقَ (ʔanfaqa)\n# تُنْفَقِينَ (tunfaqīna) /tun.fa.qiː.na/: second-person feminine singular non-past passive indicative of أَنْفَقَ (ʔanfaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunfiqīna", "ʔanfaqa", "tunfaqīna"],
+      "kok_yazilis": "أنفق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنفقي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تنفقي (form IV)\n# تُنْفِقِي (tunfiqī) /tun.fi.qiː/: second-person feminine singular non-past active subjunctive/jussive of أَنْفَقَ (ʔanfaqa)\n# تُنْفَقِي (tunfaqī) /tun.fa.qiː/: second-person feminine singular non-past passive subjunctive/jussive of أَنْفَقَ (ʔanfaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunfiqī", "ʔanfaqa", "tunfaqī"],
+      "kok_yazilis": "أنفق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ننفق",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "ننفق (form IV)\n# نُنْفِقُ (nunfiqu) /nun.fi.qu/: first-person plural non-past active indicative of أَنْفَقَ (ʔanfaqa)\n# نُنْفَقُ (nunfaqu) /nun.fa.qu/: first-person plural non-past passive indicative of أَنْفَقَ (ʔanfaqa)\n# نُنْفِقَ (nunfiqa) /nun.fi.qa/: first-person plural non-past active subjunctive of أَنْفَقَ (ʔanfaqa)\n# نُنْفَقَ (nunfaqa) /nun.fa.qa/: first-person plural non-past passive sub",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nunfiqu", "ʔanfaqa", "nunfaqu"],
+      "kok_yazilis": "أنفق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنفقون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تنفقون (form IV)\n# تُنْفِقُونَ (tunfiqūna) /tun.fi.quː.na/: second-person masculine plural non-past active indicative of أَنْفَقَ (ʔanfaqa)\n# تُنْفَقُونَ (tunfaqūna) /tun.fa.quː.na/: second-person masculine plural non-past passive indicative of أَنْفَقَ (ʔanfaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunfiqūna", "ʔanfaqa", "tunfaqūna"],
+      "kok_yazilis": "أنفق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنفقوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تنفقوا (form IV)\n# تُنْفِقُوا (tunfiqū) /tun.fi.quː/: second-person masculine plural non-past active subjunctive/jussive of أَنْفَقَ (ʔanfaqa)\n# تُنْفَقُوا (tunfaqū) /tun.fa.quː/: second-person masculine plural non-past passive subjunctive/jussive of أَنْفَقَ (ʔanfaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunfiqū", "ʔanfaqa", "tunfaqū"],
+      "kok_yazilis": "أنفق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينفقون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "ينفقون (form IV)\n# يُنْفِقُونَ (yunfiqūna) /jun.fi.quː.na/: third-person masculine plural non-past active indicative of أَنْفَقَ (ʔanfaqa)\n# يُنْفَقُونَ (yunfaqūna) /jun.fa.quː.na/: third-person masculine plural non-past passive indicative of أَنْفَقَ (ʔanfaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunfiqūna", "ʔanfaqa", "yunfaqūna"],
+      "kok_yazilis": "أنفق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينفقوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "ينفقوا (form IV)\n# يُنْفِقُوا (yunfiqū) /jun.fi.quː/: third-person masculine plural non-past active subjunctive/jussive of أَنْفَقَ (ʔanfaqa)\n# يُنْفَقُوا (yunfaqū) /jun.fa.quː/: third-person masculine plural non-past passive subjunctive/jussive of أَنْفَقَ (ʔanfaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunfiqū", "ʔanfaqa", "yunfaqū"],
+      "kok_yazilis": "أنفق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنفقن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تنفقن (form IV)\n# تُنْفِقْنَ (tunfiqna) /tun.fiq.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَنْفَقَ (ʔanfaqa)\n# تُنْفَقْنَ (tunfaqna) /tun.faq.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَنْفَقَ (ʔanfaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunfiqna", "ʔanfaqa", "tunfaqna"],
+      "kok_yazilis": "أنفق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينفقن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "ينفقن (form IV)\n# يُنْفِقْنَ (yunfiqna) /jun.fiq.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَنْفَقَ (ʔanfaqa)\n# يُنْفَقْنَ (yunfaqna) /jun.faq.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَنْفَقَ (ʔanfaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunfiqna", "ʔanfaqa", "yunfaqna"],
+      "kok_yazilis": "أنفق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنفقت",
+      "tur": "verb",
+      "baslik": "أنفقت (form IV)\n# أَنْفَقْتُ (ʔanfaqtu) /ʔan.faq.tu/: first-person singular past active of أَنْفَقَ (ʔanfaqa)\n# أَنْفَقْتَ (ʔanfaqta) /ʔan.faq.ta/: second-person masculine singular past active of أَنْفَقَ (ʔanfaqa)\n# أَنْفَقْتِ (ʔanfaqti) /ʔan.faq.ti/: second-person feminine singular past active of أَنْفَقَ (ʔanfaqa)\n# أَنْفَقَتْ (ʔanfaqat) /ʔan.fa.qat/: third-person feminine singular past active ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanfaqtu", "ʔanfaqa", "ʔanfaqta"],
+      "kok_yazilis": "أنفق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنفقا",
+      "tur": "verb",
+      "baslik": "أنفقا (form IV)\n# أَنْفَقَا (ʔanfaqā) /ʔan.fa.qaː/: third-person masculine dual past active of أَنْفَقَ (ʔanfaqa)\n# أُنْفِقَا (ʔunfiqā) /ʔun.fi.qaː/: third-person masculine dual past passive of أَنْفَقَ (ʔanfaqa)\n# أَنْفِقَا (ʔanfiqā) /ʔan.fi.qaː/: second-person dual imperative of أَنْفَقَ (ʔanfaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanfaqā", "ʔanfaqa", "ʔunfiqā"],
+      "kok_yazilis": "أنفق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنفقتما",
+      "tur": "verb",
+      "baslik": "أنفقتما (form IV)\n# أَنْفَقْتُمَا (ʔanfaqtumā) /ʔan.faq.tu.maː/: second-person dual past active of أَنْفَقَ (ʔanfaqa)\n# أُنْفِقْتُمَا (ʔunfiqtumā) /ʔun.fiq.tu.maː/: second-person dual past passive of أَنْفَقَ (ʔanfaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanfaqtumā", "ʔanfaqa", "ʔunfiqtumā"],
+      "kok_yazilis": "أنفق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنفقنا",
+      "tur": "verb",
+      "baslik": "أنفقنا (form IV)\n# أَنْفَقْنَا (ʔanfaqnā) /ʔan.faq.naː/: first-person plural past active of أَنْفَقَ (ʔanfaqa)\n# أُنْفِقْنَا (ʔunfiqnā) /ʔun.fiq.naː/: first-person plural past passive of أَنْفَقَ (ʔanfaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanfaqnā", "ʔanfaqa", "ʔunfiqnā"],
+      "kok_yazilis": "أنفق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنفقتا",
+      "tur": "verb",
+      "baslik": "أنفقتا (form IV)\n# أَنْفَقَتَا (ʔanfaqatā) /ʔan.fa.qa.taː/: third-person feminine dual past active of أَنْفَقَ (ʔanfaqa)\n# أُنْفِقَتَا (ʔunfiqatā) /ʔun.fi.qa.taː/: third-person feminine dual past passive of أَنْفَقَ (ʔanfaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanfaqatā", "ʔanfaqa", "ʔunfiqatā"],
+      "kok_yazilis": "أنفق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنفقن",
+      "tur": "verb",
+      "baslik": "أنفقن (form IV)\n# أَنْفَقْنَ (ʔanfaqna) /ʔan.faq.na/: third-person feminine plural past active of أَنْفَقَ (ʔanfaqa)\n# أُنْفِقْنَ (ʔunfiqna) /ʔun.fiq.na/: third-person feminine plural past passive of أَنْفَقَ (ʔanfaqa)\n# أَنْفِقْنَ (ʔanfiqna) /ʔan.fiq.na/: second-person feminine plural imperative of أَنْفَقَ (ʔanfaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanfaqna", "ʔanfaqa", "ʔunfiqna"],
+      "kok_yazilis": "أنفق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنفقوا",
+      "tur": "verb",
+      "baslik": "أنفقوا (form IV)\n# أَنْفَقُوا (ʔanfaqū) /ʔan.fa.quː/: third-person masculine plural past active of أَنْفَقَ (ʔanfaqa)\n# أُنْفِقُوا (ʔunfiqū) /ʔun.fi.quː/: third-person masculine plural past passive of أَنْفَقَ (ʔanfaqa)\n# أَنْفِقُوا (ʔanfiqū) /ʔan.fi.quː/: second-person masculine plural imperative of أَنْفَقَ (ʔanfaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanfaqū", "ʔanfaqa", "ʔunfiqū"],
+      "kok_yazilis": "أنفق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنفقتم",
+      "tur": "verb",
+      "baslik": "أنفقتم (form IV)\n# أَنْفَقْتُمْ (ʔanfaqtum) /ʔan.faq.tum/: second-person masculine plural past active of أَنْفَقَ (ʔanfaqa)\n# أُنْفِقْتُمْ (ʔunfiqtum) /ʔun.fiq.tum/: second-person masculine plural past passive of أَنْفَقَ (ʔanfaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanfaqtum", "ʔanfaqa", "ʔunfiqtum"],
+      "kok_yazilis": "أنفق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنفقتن",
+      "tur": "verb",
+      "baslik": "أنفقتن (form IV)\n# أَنْفَقْتُنَّ (ʔanfaqtunna) /ʔan.faq.tun.na/: second-person feminine plural past active of أَنْفَقَ (ʔanfaqa)\n# أُنْفِقْتُنَّ (ʔunfiqtunna) /ʔun.fiq.tun.na/: second-person feminine plural past passive of أَنْفَقَ (ʔanfaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanfaqtunna", "ʔanfaqa", "ʔunfiqtunna"],
+      "kok_yazilis": "أنفق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينفقا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ينفقا (form IV)\n# يُنْفِقَا (yunfiqā) /jun.fi.qaː/: third-person masculine dual non-past active subjunctive/jussive of أَنْفَقَ (ʔanfaqa)\n# يُنْفَقَا (yunfaqā) /jun.fa.qaː/: third-person masculine dual non-past passive subjunctive/jussive of أَنْفَقَ (ʔanfaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunfiqā", "ʔanfaqa", "yunfaqā"],
+      "kok_yazilis": "أنفق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنفقان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنفقان (form IV)\n# تُنْفِقَانِ (tunfiqāni) /tun.fi.qaː.ni/: inflection of أَنْفَقَ (ʔanfaqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُنْفَقَانِ (tunfaqāni) /tun.fa.qaː.ni/: inflection of أَنْفَقَ (ʔanfaqa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunfiqāni", "ʔanfaqa", "tunfaqāni"],
+      "kok_yazilis": "أنفق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "ينفقان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ينفقان (form IV)\n# يُنْفِقَانِ (yunfiqāni) /jun.fi.qaː.ni/: third-person masculine dual non-past active indicative of أَنْفَقَ (ʔanfaqa)\n# يُنْفَقَانِ (yunfaqāni) /jun.fa.qaː.ni/: third-person masculine dual non-past passive indicative of أَنْفَقَ (ʔanfaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yunfiqāni", "ʔanfaqa", "yunfaqāni"],
+      "kok_yazilis": "أنفق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أنفقي",
+      "tur": "verb",
+      "baslik": "أَنْفِقِي • (ʔanfiqī) (form IV) /ʔan.fi.qiː/\n# second-person feminine singular imperative of أَنْفَقَ (ʔanfaqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔanfiqī", "ʔanfaqa"],
+      "kok_yazilis": "أنفق",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تنفقا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تنفقا (form IV)\n# تُنْفِقَا (tunfiqā) /tun.fi.qaː/: inflection of أَنْفَقَ (ʔanfaqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُنْفَقَا (tunfaqā) /tun.fa.qaː/: inflection of أَنْفَقَ (ʔanfaqa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/ju",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tunfiqā", "ʔanfaqa", "tunfaqā"],
+      "kok_yazilis": "أنفق",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءنفق", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

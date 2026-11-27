@@ -1,517 +1,366 @@
 {
   "kok": "ماء",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ماء", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "مؤ",
-        "u": "مؤ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "مُؤْ • (muʔ) (form I) /muʔ/\n# second-person masculine singular imperative of مَاءَ (māʔa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["muʔ", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "تمؤ",
-        "u": "تمؤ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَمُؤْ • (tamuʔ) (form I) /ta.muʔ/\n# inflection of مَاءَ (māʔa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamuʔ", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "أمؤ",
-        "u": "أمؤ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَمُؤْ • (ʔamuʔ) (form I) /ʔa.muʔ/\n# first-person singular non-past active jussive of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔamuʔ", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "نمؤ",
-        "u": "نمؤ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نَمُؤْ • (namuʔ) (form I) /na.muʔ/\n# first-person plural non-past active jussive of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["namuʔ", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "يمؤ",
-        "u": "يمؤ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَمُؤْ • (yamuʔ) (form I) /ja.muʔ/\n# third-person masculine singular non-past active jussive of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamuʔ", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "مؤتما",
-        "u": "مؤتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُؤْتُمَا • (muʔtumā) (form I) /muʔ.tu.maː/\n# second-person dual past active of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["muʔtumā", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "مؤت",
-        "u": "مؤت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مؤت (form I)\n# مُؤْتُ (muʔtu) /muʔ.tu/: first-person singular past active of مَاءَ (māʔa)\n# مُؤْتَ (muʔta) /muʔ.ta/: second-person masculine singular past active of مَاءَ (māʔa)\n# مُؤْتِ (muʔti) /muʔ.ti/: second-person feminine singular past active of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["muʔtu", "māʔa", "muʔta"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "ماءا",
-        "u": "ماءا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَاءَا • (māʔā) (form I) /maː.ʔaː/\n# third-person masculine dual past active of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["māʔā", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "ماءت",
-        "u": "ماءت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَاءَتْ • (māʔat) (form I) /maː.ʔat/\n# third-person feminine singular past active of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["māʔat", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "ماءتا",
-        "u": "ماءتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَاءَتَا • (māʔatā) (form I) /maː.ʔa.taː/\n# third-person feminine dual past active of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["māʔatā", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "مؤتم",
-        "u": "مؤتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُؤْتُمْ • (muʔtum) (form I) /muʔ.tum/\n# second-person masculine plural past active of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["muʔtum", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "مؤتن",
-        "u": "مؤتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُؤْتُنَّ • (muʔtunna) (form I) /muʔ.tun.na/\n# second-person feminine plural past active of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["muʔtunna", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "مؤن",
-        "u": "مؤن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُؤْنَ • (muʔna) (form I) /muʔ.na/\n# inflection of مَاءَ (māʔa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["muʔna", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "مؤنا",
-        "u": "مؤنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُؤْنَا • (muʔnā) (form I) /muʔ.naː/\n# first-person plural past active of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["muʔnā", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "مائوا",
-        "u": "مائوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَائُوا • (māʔū) (form I) /maː.ʔuː/\n# third-person masculine plural past active of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["māʔū", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "ماؤوا",
-        "u": "ماؤوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَاؤُوا • (māʔū) (form I) /maː.ʔuː/\n# third-person masculine plural past active of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["māʔū", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "تموء",
-        "u": "تموء",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تموء (form I)\n# تَمُوءُ (tamūʔu) /ta.muː.ʔu/: inflection of مَاءَ (māʔa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَمُوءَ (tamūʔa) /ta.muː.ʔa/: inflection of مَاءَ (māʔa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamūʔu", "māʔa", "tamūʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "يموء",
-        "u": "يموء",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يموء (form I)\n# يَمُوءُ (yamūʔu) /ja.muː.ʔu/: third-person masculine singular non-past active indicative of مَاءَ (māʔa)\n# يَمُوءَ (yamūʔa) /ja.muː.ʔa/: third-person masculine singular non-past active subjunctive of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamūʔu", "māʔa", "yamūʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "تموئين",
-        "u": "تموئين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَمُوئِينَ • (tamūʔīna) (form I) /ta.muː.ʔiː.na/\n# second-person feminine singular non-past active indicative of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamūʔīna", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "أموء",
-        "u": "أموء",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أموء (form I)\n# أَمُوءُ (ʔamūʔu) /ʔa.muː.ʔu/: first-person singular non-past active indicative of مَاءَ (māʔa)\n# أَمُوءَ (ʔamūʔa) /ʔa.muː.ʔa/: first-person singular non-past active subjunctive of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔamūʔu", "māʔa", "ʔamūʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "تموءان",
-        "u": "تموءان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَمُوءَانِ • (tamūʔāni) (form I) /ta.muː.ʔaː.ni/\n# inflection of مَاءَ (māʔa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamūʔāni", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "يموءان",
-        "u": "يموءان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَمُوءَانِ • (yamūʔāni) (form I) /ja.muː.ʔaː.ni/\n# third-person masculine dual non-past active indicative of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamūʔāni", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "تموئون",
-        "u": "تموئون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَمُوئُونَ • (tamūʔūna) (form I) /ta.muː.ʔuː.na/\n# second-person masculine plural non-past active indicative of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamūʔūna", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "نموء",
-        "u": "نموء",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نموء (form I)\n# نَمُوءُ (namūʔu) /na.muː.ʔu/: first-person plural non-past active indicative of مَاءَ (māʔa)\n# نَمُوءَ (namūʔa) /na.muː.ʔa/: first-person plural non-past active subjunctive of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["namūʔu", "māʔa", "namūʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "تمؤن",
-        "u": "تمؤن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَمُؤْنَ • (tamuʔna) (form I) /ta.muʔ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamuʔna", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "تموئي",
-        "u": "تموئي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَمُوئِي • (tamūʔī) (form I) /ta.muː.ʔiː/\n# second-person feminine singular non-past active subjunctive/jussive of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamūʔī", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "تموءون",
-        "u": "تموءون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَمُوءُونَ • (tamūʔūna) (form I) /ta.muː.ʔuː.na/\n# second-person masculine plural non-past active indicative of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamūʔūna", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "تموءا",
-        "u": "تموءا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَمُوءَا • (tamūʔā) (form I) /ta.muː.ʔaː/\n# inflection of مَاءَ (māʔa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamūʔā", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "يمؤن",
-        "u": "يمؤن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَمُؤْنَ • (yamuʔna) (form I) /ja.muʔ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamuʔna", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "يموئون",
-        "u": "يموئون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَمُوئُونَ • (yamūʔūna) (form I) /ja.muː.ʔuː.na/\n# third-person masculine plural non-past active indicative of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamūʔūna", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "يموءا",
-        "u": "يموءا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَمُوءَا • (yamūʔā) (form I) /ja.muː.ʔaː/\n# third-person masculine dual non-past active subjunctive/jussive of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamūʔā", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "تموئوا",
-        "u": "تموئوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَمُوئُوا • (tamūʔū) (form I) /ta.muː.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamūʔū", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "يموئوا",
-        "u": "يموئوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَمُوئُوا • (yamūʔū) (form I) /ja.muː.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamūʔū", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "موئي",
-        "u": "موئي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُوئِي • (mūʔī) (form I) /muː.ʔiː/\n# second-person feminine singular imperative of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["mūʔī", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "يموءون",
-        "u": "يموءون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَمُوءُونَ • (yamūʔūna) (form I) /ja.muː.ʔuː.na/\n# third-person masculine plural non-past active indicative of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamūʔūna", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "يموءوا",
-        "u": "يموءوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَمُوءُوا • (yamūʔū) (form I) /ja.muː.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yamūʔū", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "موئوا",
-        "u": "موئوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُوئُوا • (mūʔū) (form I) /muː.ʔuː/\n# second-person masculine plural imperative of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["mūʔū", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "تموءوا",
-        "u": "تموءوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَمُوءُوا • (tamūʔū) (form I) /ta.muː.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tamūʔū", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "موءا",
-        "u": "موءا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُوءَا • (mūʔā) (form I) /muː.ʔaː/\n# second-person dual imperative of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["mūʔā", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      },
-      {
-        "w": "موءوا",
-        "u": "موءوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُوءُوا • (mūʔū) (form I) /muː.ʔuː/\n# second-person masculine plural imperative of مَاءَ (māʔa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["mūʔū", "māʔa"],
-        "k": "ماء",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "مم",
+  "ses": {
     "harf": "م",
+    "fasil": "مم",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "مؤ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "مُؤْ • (muʔ) (form I) /muʔ/\n# second-person masculine singular imperative of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["muʔ", "māʔa"]
+    },
+    {
+      "madde": "تمؤ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَمُؤْ • (tamuʔ) (form I) /ta.muʔ/\n# inflection of مَاءَ (māʔa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamuʔ", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أمؤ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَمُؤْ • (ʔamuʔ) (form I) /ʔa.muʔ/\n# first-person singular non-past active jussive of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔamuʔ", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نمؤ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نَمُؤْ • (namuʔ) (form I) /na.muʔ/\n# first-person plural non-past active jussive of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["namuʔ", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يمؤ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَمُؤْ • (yamuʔ) (form I) /ja.muʔ/\n# third-person masculine singular non-past active jussive of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamuʔ", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مؤتما",
+      "tur": "verb",
+      "baslik": "مُؤْتُمَا • (muʔtumā) (form I) /muʔ.tu.maː/\n# second-person dual past active of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["muʔtumā", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مؤت",
+      "tur": "verb",
+      "baslik": "مؤت (form I)\n# مُؤْتُ (muʔtu) /muʔ.tu/: first-person singular past active of مَاءَ (māʔa)\n# مُؤْتَ (muʔta) /muʔ.ta/: second-person masculine singular past active of مَاءَ (māʔa)\n# مُؤْتِ (muʔti) /muʔ.ti/: second-person feminine singular past active of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["muʔtu", "māʔa", "muʔta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ماءا",
+      "tur": "verb",
+      "baslik": "مَاءَا • (māʔā) (form I) /maː.ʔaː/\n# third-person masculine dual past active of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["māʔā", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ماءت",
+      "tur": "verb",
+      "baslik": "مَاءَتْ • (māʔat) (form I) /maː.ʔat/\n# third-person feminine singular past active of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["māʔat", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ماءتا",
+      "tur": "verb",
+      "baslik": "مَاءَتَا • (māʔatā) (form I) /maː.ʔa.taː/\n# third-person feminine dual past active of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["māʔatā", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مؤتم",
+      "tur": "verb",
+      "baslik": "مُؤْتُمْ • (muʔtum) (form I) /muʔ.tum/\n# second-person masculine plural past active of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["muʔtum", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مؤتن",
+      "tur": "verb",
+      "baslik": "مُؤْتُنَّ • (muʔtunna) (form I) /muʔ.tun.na/\n# second-person feminine plural past active of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["muʔtunna", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مؤن",
+      "tur": "verb",
+      "baslik": "مُؤْنَ • (muʔna) (form I) /muʔ.na/\n# inflection of مَاءَ (māʔa):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["muʔna", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مؤنا",
+      "tur": "verb",
+      "baslik": "مُؤْنَا • (muʔnā) (form I) /muʔ.naː/\n# first-person plural past active of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["muʔnā", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "مائوا",
+      "tur": "verb",
+      "baslik": "مَائُوا • (māʔū) (form I) /maː.ʔuː/\n# third-person masculine plural past active of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["māʔū", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ماؤوا",
+      "tur": "verb",
+      "baslik": "مَاؤُوا • (māʔū) (form I) /maː.ʔuː/\n# third-person masculine plural past active of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["māʔū", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تموء",
+      "tur": "verb",
+      "baslik": "تموء (form I)\n# تَمُوءُ (tamūʔu) /ta.muː.ʔu/: inflection of مَاءَ (māʔa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَمُوءَ (tamūʔa) /ta.muː.ʔa/: inflection of مَاءَ (māʔa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamūʔu", "māʔa", "tamūʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يموء",
+      "tur": "verb",
+      "baslik": "يموء (form I)\n# يَمُوءُ (yamūʔu) /ja.muː.ʔu/: third-person masculine singular non-past active indicative of مَاءَ (māʔa)\n# يَمُوءَ (yamūʔa) /ja.muː.ʔa/: third-person masculine singular non-past active subjunctive of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamūʔu", "māʔa", "yamūʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تموئين",
+      "tur": "verb",
+      "baslik": "تَمُوئِينَ • (tamūʔīna) (form I) /ta.muː.ʔiː.na/\n# second-person feminine singular non-past active indicative of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamūʔīna", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أموء",
+      "tur": "verb",
+      "baslik": "أموء (form I)\n# أَمُوءُ (ʔamūʔu) /ʔa.muː.ʔu/: first-person singular non-past active indicative of مَاءَ (māʔa)\n# أَمُوءَ (ʔamūʔa) /ʔa.muː.ʔa/: first-person singular non-past active subjunctive of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔamūʔu", "māʔa", "ʔamūʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تموءان",
+      "tur": "verb",
+      "baslik": "تَمُوءَانِ • (tamūʔāni) (form I) /ta.muː.ʔaː.ni/\n# inflection of مَاءَ (māʔa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamūʔāni", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يموءان",
+      "tur": "verb",
+      "baslik": "يَمُوءَانِ • (yamūʔāni) (form I) /ja.muː.ʔaː.ni/\n# third-person masculine dual non-past active indicative of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamūʔāni", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تموئون",
+      "tur": "verb",
+      "baslik": "تَمُوئُونَ • (tamūʔūna) (form I) /ta.muː.ʔuː.na/\n# second-person masculine plural non-past active indicative of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamūʔūna", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نموء",
+      "tur": "verb",
+      "baslik": "نموء (form I)\n# نَمُوءُ (namūʔu) /na.muː.ʔu/: first-person plural non-past active indicative of مَاءَ (māʔa)\n# نَمُوءَ (namūʔa) /na.muː.ʔa/: first-person plural non-past active subjunctive of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["namūʔu", "māʔa", "namūʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تمؤن",
+      "tur": "verb",
+      "baslik": "تَمُؤْنَ • (tamuʔna) (form I) /ta.muʔ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamuʔna", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تموئي",
+      "tur": "verb",
+      "baslik": "تَمُوئِي • (tamūʔī) (form I) /ta.muː.ʔiː/\n# second-person feminine singular non-past active subjunctive/jussive of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamūʔī", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تموءون",
+      "tur": "verb",
+      "baslik": "تَمُوءُونَ • (tamūʔūna) (form I) /ta.muː.ʔuː.na/\n# second-person masculine plural non-past active indicative of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamūʔūna", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تموءا",
+      "tur": "verb",
+      "baslik": "تَمُوءَا • (tamūʔā) (form I) /ta.muː.ʔaː/\n# inflection of مَاءَ (māʔa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamūʔā", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يمؤن",
+      "tur": "verb",
+      "baslik": "يَمُؤْنَ • (yamuʔna) (form I) /ja.muʔ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamuʔna", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يموئون",
+      "tur": "verb",
+      "baslik": "يَمُوئُونَ • (yamūʔūna) (form I) /ja.muː.ʔuː.na/\n# third-person masculine plural non-past active indicative of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamūʔūna", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يموءا",
+      "tur": "verb",
+      "baslik": "يَمُوءَا • (yamūʔā) (form I) /ja.muː.ʔaː/\n# third-person masculine dual non-past active subjunctive/jussive of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamūʔā", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تموئوا",
+      "tur": "verb",
+      "baslik": "تَمُوئُوا • (tamūʔū) (form I) /ta.muː.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamūʔū", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يموئوا",
+      "tur": "verb",
+      "baslik": "يَمُوئُوا • (yamūʔū) (form I) /ja.muː.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamūʔū", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "موئي",
+      "tur": "verb",
+      "baslik": "مُوئِي • (mūʔī) (form I) /muː.ʔiː/\n# second-person feminine singular imperative of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["mūʔī", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يموءون",
+      "tur": "verb",
+      "baslik": "يَمُوءُونَ • (yamūʔūna) (form I) /ja.muː.ʔuː.na/\n# third-person masculine plural non-past active indicative of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamūʔūna", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يموءوا",
+      "tur": "verb",
+      "baslik": "يَمُوءُوا • (yamūʔū) (form I) /ja.muː.ʔuː/\n# third-person masculine plural non-past active subjunctive/jussive of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yamūʔū", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "موئوا",
+      "tur": "verb",
+      "baslik": "مُوئُوا • (mūʔū) (form I) /muː.ʔuː/\n# second-person masculine plural imperative of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["mūʔū", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تموءوا",
+      "tur": "verb",
+      "baslik": "تَمُوءُوا • (tamūʔū) (form I) /ta.muː.ʔuː/\n# second-person masculine plural non-past active subjunctive/jussive of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tamūʔū", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "موءا",
+      "tur": "verb",
+      "baslik": "مُوءَا • (mūʔā) (form I) /muː.ʔaː/\n# second-person dual imperative of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["mūʔā", "māʔa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "موءوا",
+      "tur": "verb",
+      "baslik": "مُوءُوا • (mūʔū) (form I) /muː.ʔuː/\n# second-person masculine plural imperative of مَاءَ (māʔa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["mūʔū", "māʔa"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ماء", "r7"]
+  ],
+  "mana": {
     "ince": "substance.n.07",
     "orta": "noun.food",
     "ust": "canlı ve beden",
@@ -519,22 +368,15 @@
     "dayanak_tanim": "a liquid necessary for the life of most animals and plants",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["nutrient.n.02"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["nutrient.n.02"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

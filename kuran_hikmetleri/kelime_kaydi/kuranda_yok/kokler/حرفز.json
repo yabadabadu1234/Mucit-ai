@@ -1,77 +1,74 @@
 {
   "kok": "حرفز",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "حرفز", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "احرنفز",
-        "u": "احرنفز",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "اِحْرَنْفَزَ • (iḥranfaza) IIIq (non-past يَحْرَنْفِزُ (yaḥranfizu), verbal noun اِحْرِنْفَاز (iḥrinfāz))",
-        "g": ["to gather, to assemble"],
-        "tag": ["intransitive"],
-        "r": ["iḥranfaza"],
-        "k": "حرفز",
-        "yol": "kök"
-      },
-      {
-        "w": "احرنفاز",
-        "u": "احرنفاز",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "اِحْرِنْفَاز • (iḥrinfāz) m",
-        "g": ["verbal noun of اِحْرَنْفَزَ (iḥranfaza) (form IIIq)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["اِحْرَنْفَزَ"],
-        "r": ["iḥrinfāz"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "محرنفز",
-        "u": "محرنفز",
-        "p": "verb",
-        "g": ["active participle of اِحْرَنْفَزَ (iḥranfaza)"],
-        "tag": ["active", "form-iiiq", "form-of", "participle"],
-        "fo": ["اِحْرَنْفَزَ"],
-        "r": ["muḥranfiz"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "محرنفز",
-        "u": "محرنفز",
-        "p": "verb",
-        "g": ["passive participle of اِحْرَنْفَزَ (iḥranfaza)"],
-        "tag": ["form-iiiq", "form-of", "participle", "passive"],
-        "fo": ["اِحْرَنْفَزَ"],
-        "r": ["muḥranfaz"],
-        "yol": "asıl madde"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "حر",
+  "ses": {
     "harf": "ح",
+    "fasil": "حر",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "احرنفز",
+      "tur": "verb",
+      "baslik": "اِحْرَنْفَزَ • (iḥranfaza) IIIq (non-past يَحْرَنْفِزُ (yaḥranfizu), verbal noun اِحْرِنْفَاز (iḥrinfāz))",
+      "anlam": ["to gather, to assemble"],
+      "etiket": ["intransitive"],
+      "okunus": ["iḥranfaza"]
+    },
+    {
+      "madde": "احرنفاز",
+      "tur": "noun",
+      "baslik": "اِحْرِنْفَاز • (iḥrinfāz) m",
+      "anlam": ["verbal noun of اِحْرَنْفَزَ (iḥranfaza) (form IIIq)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["اِحْرَنْفَزَ"],
+      "okunus": ["iḥrinfāz"],
+      "bag": "asıl madde"
+    },
+    {
+      "madde": "محرنفز",
+      "tur": "verb",
+      "anlam": ["active participle of اِحْرَنْفَزَ (iḥranfaza)"],
+      "etiket": ["active", "form-iiiq", "form-of", "participle"],
+      "form_of": ["اِحْرَنْفَزَ"],
+      "okunus": ["muḥranfiz"],
+      "bag": "asıl madde"
+    },
+    {
+      "madde": "محرنفز",
+      "tur": "verb",
+      "anlam": ["passive participle of اِحْرَنْفَزَ (iḥranfaza)"],
+      "etiket": ["form-iiiq", "form-of", "participle", "passive"],
+      "form_of": ["اِحْرَنْفَزَ"],
+      "okunus": ["muḥranfaz"],
+      "bag": "asıl madde"
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "حرفز", "r6"]
+  ],
+  "mana": {
     "ince": "gather.v.01",
     "orta": "verb.contact",
     "ust": "fiil ve hadise",
@@ -79,20 +76,8 @@
     "dayanak_tanim": "assemble or get together",
     "dayanak_karsilik": "gather"
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m2",
+  "gomme": {
     "ust": {
       "kume": 4,
       "merkez_kok": "درك",
@@ -112,6 +97,10 @@
       "boy": 5
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,46 +1,47 @@
 {
   "kok": "عركس",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "عركس", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "اعرنكس",
-        "u": "اعرنكس",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "اِعْرَنْكَسَ • (iʕrankasa) IIIq (non-past يَعْرَنْكِسُ (yaʕrankisu), verbal noun اِعْرِنْكَاس (iʕrinkās))",
-        "g": ["to pile up", "to pile [+direct object] up"],
-        "tag": ["intransitive", "transitive"],
-        "r": ["iʕrankasa"],
-        "ipa": ["/iʕ.ran.ka.sa/"],
-        "k": "عركس",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "عر",
+  "ses": {
     "harf": "ع",
+    "fasil": "عر",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "اعرنكس",
+      "tur": "verb",
+      "baslik": "اِعْرَنْكَسَ • (iʕrankasa) IIIq (non-past يَعْرَنْكِسُ (yaʕrankisu), verbal noun اِعْرِنْكَاس (iʕrinkās))",
+      "anlam": ["to pile up", "to pile [+direct object] up"],
+      "etiket": ["intransitive", "transitive"],
+      "okunus": ["iʕrankasa"],
+      "ipa": ["/iʕ.ran.ka.sa/"]
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "عركس", "r6"]
+  ],
+  "mana": {
     "ince": "accumulate.v.02",
     "orta": "verb.change",
     "ust": "fiil ve hadise",
@@ -48,20 +49,8 @@
     "dayanak_tanim": "collect or gather",
     "dayanak_karsilik": "pile up"
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m2",
+  "gomme": {
     "ust": {
       "kume": 8,
       "merkez_kok": "سير",
@@ -81,6 +70,10 @@
       "boy": 8
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

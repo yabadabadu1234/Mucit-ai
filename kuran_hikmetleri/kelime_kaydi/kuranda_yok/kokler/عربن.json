@@ -1,309 +1,225 @@
 {
   "kok": "عربن",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "عربن", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "etymarab": {
-      "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
-      "latin": "ʕRBN",
-      "dolu": false,
-      "kok_maddesi": "Back to library EtymArab ʕRBN عربن BP – • HDAL • © SG | 15Feb2021 √ʕRBN “root” … ▪ … ▪ … ▪ … ▪ … … ▪ For Engl arbiter , earnest , cf. ↗ ʕurbūn and ↗ ʕarrāb . – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
-      "kelime_maddeleri": []
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "تعربنا",
-        "u": "تعربنا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تعربنا (form Iq)\n# تُعَرْبِنَا (tuʕarbinā) /tu.ʕar.bi.naː/: inflection of عَرْبَنَ (ʕarbana):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُعَرْبَنَا (tuʕarbanā) /tu.ʕar.ba.naː/: inflection of عَرْبَنَ (ʕarbana):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuʕarbinā", "ʕarbana", "tuʕarbanā"],
-        "k": "عربن",
-        "yol": "kök"
-      },
-      {
-        "w": "عربنا",
-        "u": "عربنا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "عربنا (form Iq)\n# عَرْبَنَا (ʕarbanā) /ʕar.ba.naː/: third-person masculine dual past active of عَرْبَنَ (ʕarbana)\n# عَرْبَنَّا (ʕarbannā) /ʕar.ban.naː/: first-person plural past active of عَرْبَنَ (ʕarbana)\n# عُرْبِنَا (ʕurbinā) /ʕur.bi.naː/: third-person masculine dual past passive of عَرْبَنَ (ʕarbana)\n# عُرْبِنَّا (ʕurbinnā) /ʕur.bin.naː/: first-person plural past passive of عَرْبَنَ (ʕarbana)\n",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʕarbanā", "ʕarbana", "ʕarbannā"],
-        "k": "عربن",
-        "yol": "kök"
-      },
-      {
-        "w": "تعربن",
-        "u": "تعربن",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تعربن (form Iq)\n# تُعَرْبِنُ (tuʕarbinu) /tu.ʕar.bi.nu/: inflection of عَرْبَنَ (ʕarbana):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُعَرْبِنَّ (tuʕarbinna) /tu.ʕar.bin.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of عَرْبَنَ (ʕarbana)\n# تُعَرْبَنُ (tuʕarbanu) /tu.ʕar.ba.nu/: i",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuʕarbinu", "ʕarbana", "tuʕarbinna"],
-        "k": "عربن",
-        "yol": "kök"
-      },
-      {
-        "w": "أعربن",
-        "u": "أعربن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أعربن (form Iq)\n# أُعَرْبِنُ (ʔuʕarbinu) /ʔu.ʕar.bi.nu/: first-person singular non-past active indicative of عَرْبَنَ (ʕarbana)\n# أُعَرْبَنُ (ʔuʕarbanu) /ʔu.ʕar.ba.nu/: first-person singular non-past passive indicative of عَرْبَنَ (ʕarbana)\n# أُعَرْبِنَ (ʔuʕarbina) /ʔu.ʕar.bi.na/: first-person singular non-past active subjunctive of عَرْبَنَ (ʕarbana)\n# أُعَرْبَنَ (ʔuʕarbana) /ʔu.ʕar.ba.na/: first",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʔuʕarbinu", "ʕarbana", "ʔuʕarbanu"],
-        "k": "عربن",
-        "yol": "kök"
-      },
-      {
-        "w": "يعربن",
-        "u": "يعربن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يعربن (form Iq)\n# يُعَرْبِنُ (yuʕarbinu) /ju.ʕar.bi.nu/: third-person masculine singular non-past active indicative of عَرْبَنَ (ʕarbana)\n# يُعَرْبِنَّ (yuʕarbinna) /ju.ʕar.bin.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of عَرْبَنَ (ʕarbana)\n# يُعَرْبَنُ (yuʕarbanu) /ju.ʕar.ba.nu/: third-person masculine singular non-past passive indicative of عَرْبَنَ (ʕarban",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuʕarbinu", "ʕarbana", "yuʕarbinna"],
-        "k": "عربن",
-        "yol": "kök"
-      },
-      {
-        "w": "عربنتما",
-        "u": "عربنتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عربنتما (form Iq)\n# عَرْبَنْتُمَا (ʕarbantumā) /ʕar.ban.tu.maː/: second-person dual past active of عَرْبَنَ (ʕarbana)\n# عُرْبِنْتُمَا (ʕurbintumā) /ʕur.bin.tu.maː/: second-person dual past passive of عَرْبَنَ (ʕarbana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʕarbantumā", "ʕarbana", "ʕurbintumā"],
-        "k": "عربن",
-        "yol": "kök"
-      },
-      {
-        "w": "عربنتن",
-        "u": "عربنتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عربنتن (form Iq)\n# عَرْبَنْتُنَّ (ʕarbantunna) /ʕar.ban.tun.na/: second-person feminine plural past active of عَرْبَنَ (ʕarbana)\n# عُرْبِنْتُنَّ (ʕurbintunna) /ʕur.bin.tun.na/: second-person feminine plural past passive of عَرْبَنَ (ʕarbana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʕarbantunna", "ʕarbana", "ʕurbintunna"],
-        "k": "عربن",
-        "yol": "kök"
-      },
-      {
-        "w": "عربنت",
-        "u": "عربنت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عربنت (form Iq)\n# عَرْبَنْتُ (ʕarbantu) /ʕar.ban.tu/: first-person singular past active of عَرْبَنَ (ʕarbana)\n# عَرْبَنْتَ (ʕarbanta) /ʕar.ban.ta/: second-person masculine singular past active of عَرْبَنَ (ʕarbana)\n# عَرْبَنْتِ (ʕarbanti) /ʕar.ban.ti/: second-person feminine singular past active of عَرْبَنَ (ʕarbana)\n# عَرْبَنَتْ (ʕarbanat) /ʕar.ba.nat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʕarbantu", "ʕarbana", "ʕarbanta"],
-        "k": "عربن",
-        "yol": "kök"
-      },
-      {
-        "w": "عربنتا",
-        "u": "عربنتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عربنتا (form Iq)\n# عَرْبَنَتَا (ʕarbanatā) /ʕar.ba.na.taː/: third-person feminine dual past active of عَرْبَنَ (ʕarbana)\n# عُرْبِنَتَا (ʕurbinatā) /ʕur.bi.na.taː/: third-person feminine dual past passive of عَرْبَنَ (ʕarbana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʕarbanatā", "ʕarbana", "ʕurbinatā"],
-        "k": "عربن",
-        "yol": "kök"
-      },
-      {
-        "w": "عربنتم",
-        "u": "عربنتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عربنتم (form Iq)\n# عَرْبَنْتُمْ (ʕarbantum) /ʕar.ban.tum/: second-person masculine plural past active of عَرْبَنَ (ʕarbana)\n# عُرْبِنْتُمْ (ʕurbintum) /ʕur.bin.tum/: second-person masculine plural past passive of عَرْبَنَ (ʕarbana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʕarbantum", "ʕarbana", "ʕurbintum"],
-        "k": "عربن",
-        "yol": "kök"
-      },
-      {
-        "w": "تعربنين",
-        "u": "تعربنين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تعربنين (form Iq)\n# تُعَرْبِنِينَ (tuʕarbinīna) /tu.ʕar.bi.niː.na/: second-person feminine singular non-past active indicative of عَرْبَنَ (ʕarbana)\n# تُعَرْبَنِينَ (tuʕarbanīna) /tu.ʕar.ba.niː.na/: second-person feminine singular non-past passive indicative of عَرْبَنَ (ʕarbana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuʕarbinīna", "ʕarbana", "tuʕarbanīna"],
-        "k": "عربن",
-        "yol": "kök"
-      },
-      {
-        "w": "عربنوا",
-        "u": "عربنوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عربنوا (form Iq)\n# عَرْبَنُوا (ʕarbanū) /ʕar.ba.nuː/: third-person masculine plural past active of عَرْبَنَ (ʕarbana)\n# عُرْبِنُوا (ʕurbinū) /ʕur.bi.nuː/: third-person masculine plural past passive of عَرْبَنَ (ʕarbana)\n# عَرْبِنُوا (ʕarbinū) /ʕar.bi.nuː/: second-person masculine plural imperative of عَرْبَنَ (ʕarbana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʕarbanū", "ʕarbana", "ʕurbinū"],
-        "k": "عربن",
-        "yol": "kök"
-      },
-      {
-        "w": "نعربن",
-        "u": "نعربن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نعربن (form Iq)\n# نُعَرْبِنُ (nuʕarbinu) /nu.ʕar.bi.nu/: first-person plural non-past active indicative of عَرْبَنَ (ʕarbana)\n# نُعَرْبَنُ (nuʕarbanu) /nu.ʕar.ba.nu/: first-person plural non-past passive indicative of عَرْبَنَ (ʕarbana)\n# نُعَرْبِنَ (nuʕarbina) /nu.ʕar.bi.na/: first-person plural non-past active subjunctive of عَرْبَنَ (ʕarbana)\n# نُعَرْبَنَ (nuʕarbana) /nu.ʕar.ba.na/: first-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["nuʕarbinu", "ʕarbana", "nuʕarbanu"],
-        "k": "عربن",
-        "yol": "kök"
-      },
-      {
-        "w": "تعربنان",
-        "u": "تعربنان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تعربنان (form Iq)\n# تُعَرْبِنَانِ (tuʕarbināni) /tu.ʕar.bi.naː.ni/: inflection of عَرْبَنَ (ʕarbana):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُعَرْبَنَانِ (tuʕarbanāni) /tu.ʕar.ba.naː.ni/: inflection of عَرْبَنَ (ʕarbana):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuʕarbināni", "ʕarbana", "tuʕarbanāni"],
-        "k": "عربن",
-        "yol": "kök"
-      },
-      {
-        "w": "يعربنان",
-        "u": "يعربنان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يعربنان (form Iq)\n# يُعَرْبِنَانِ (yuʕarbināni) /ju.ʕar.bi.naː.ni/: third-person masculine dual non-past active indicative of عَرْبَنَ (ʕarbana)\n# يُعَرْبَنَانِ (yuʕarbanāni) /ju.ʕar.ba.naː.ni/: third-person masculine dual non-past passive indicative of عَرْبَنَ (ʕarbana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuʕarbināni", "ʕarbana", "yuʕarbanāni"],
-        "k": "عربن",
-        "yol": "kök"
-      },
-      {
-        "w": "يعربنون",
-        "u": "يعربنون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يعربنون (form Iq)\n# يُعَرْبِنُونَ (yuʕarbinūna) /ju.ʕar.bi.nuː.na/: third-person masculine plural non-past active indicative of عَرْبَنَ (ʕarbana)\n# يُعَرْبَنُونَ (yuʕarbanūna) /ju.ʕar.ba.nuː.na/: third-person masculine plural non-past passive indicative of عَرْبَنَ (ʕarbana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuʕarbinūna", "ʕarbana", "yuʕarbanūna"],
-        "k": "عربن",
-        "yol": "kök"
-      },
-      {
-        "w": "تعربنون",
-        "u": "تعربنون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تعربنون (form Iq)\n# تُعَرْبِنُونَ (tuʕarbinūna) /tu.ʕar.bi.nuː.na/: second-person masculine plural non-past active indicative of عَرْبَنَ (ʕarbana)\n# تُعَرْبَنُونَ (tuʕarbanūna) /tu.ʕar.ba.nuː.na/: second-person masculine plural non-past passive indicative of عَرْبَنَ (ʕarbana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuʕarbinūna", "ʕarbana", "tuʕarbanūna"],
-        "k": "عربن",
-        "yol": "kök"
-      },
-      {
-        "w": "يعربنا",
-        "u": "يعربنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يعربنا (form Iq)\n# يُعَرْبِنَا (yuʕarbinā) /ju.ʕar.bi.naː/: third-person masculine dual non-past active subjunctive/jussive of عَرْبَنَ (ʕarbana)\n# يُعَرْبَنَا (yuʕarbanā) /ju.ʕar.ba.naː/: third-person masculine dual non-past passive subjunctive/jussive of عَرْبَنَ (ʕarbana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuʕarbinā", "ʕarbana", "yuʕarbanā"],
-        "k": "عربن",
-        "yol": "kök"
-      },
-      {
-        "w": "تعربني",
-        "u": "تعربني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تعربني (form Iq)\n# تُعَرْبِنِي (tuʕarbinī) /tu.ʕar.bi.niː/: second-person feminine singular non-past active subjunctive/jussive of عَرْبَنَ (ʕarbana)\n# تُعَرْبَنِي (tuʕarbanī) /tu.ʕar.ba.niː/: second-person feminine singular non-past passive subjunctive/jussive of عَرْبَنَ (ʕarbana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuʕarbinī", "ʕarbana", "tuʕarbanī"],
-        "k": "عربن",
-        "yol": "kök"
-      },
-      {
-        "w": "يعربنوا",
-        "u": "يعربنوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يعربنوا (form Iq)\n# يُعَرْبِنُوا (yuʕarbinū) /ju.ʕar.bi.nuː/: third-person masculine plural non-past active subjunctive/jussive of عَرْبَنَ (ʕarbana)\n# يُعَرْبَنُوا (yuʕarbanū) /ju.ʕar.ba.nuː/: third-person masculine plural non-past passive subjunctive/jussive of عَرْبَنَ (ʕarbana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuʕarbinū", "ʕarbana", "yuʕarbanū"],
-        "k": "عربن",
-        "yol": "kök"
-      },
-      {
-        "w": "تعربنوا",
-        "u": "تعربنوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تعربنوا (form Iq)\n# تُعَرْبِنُوا (tuʕarbinū) /tu.ʕar.bi.nuː/: second-person masculine plural non-past active subjunctive/jussive of عَرْبَنَ (ʕarbana)\n# تُعَرْبَنُوا (tuʕarbanū) /tu.ʕar.ba.nuː/: second-person masculine plural non-past passive subjunctive/jussive of عَرْبَنَ (ʕarbana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuʕarbinū", "ʕarbana", "tuʕarbanū"],
-        "k": "عربن",
-        "yol": "kök"
-      },
-      {
-        "w": "عربني",
-        "u": "عربني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عَرْبِنِي • (ʕarbinī) (form Iq) /ʕar.bi.niː/\n# second-person feminine singular imperative of عَرْبَنَ (ʕarbana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʕarbinī", "ʕarbana"],
-        "k": "عربن",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "عر",
+  "ses": {
     "harf": "ع",
+    "fasil": "عر",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "تعربنا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تعربنا (form Iq)\n# تُعَرْبِنَا (tuʕarbinā) /tu.ʕar.bi.naː/: inflection of عَرْبَنَ (ʕarbana):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُعَرْبَنَا (tuʕarbanā) /tu.ʕar.ba.naː/: inflection of عَرْبَنَ (ʕarbana):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuʕarbinā", "ʕarbana", "tuʕarbanā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عربنا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "عربنا (form Iq)\n# عَرْبَنَا (ʕarbanā) /ʕar.ba.naː/: third-person masculine dual past active of عَرْبَنَ (ʕarbana)\n# عَرْبَنَّا (ʕarbannā) /ʕar.ban.naː/: first-person plural past active of عَرْبَنَ (ʕarbana)\n# عُرْبِنَا (ʕurbinā) /ʕur.bi.naː/: third-person masculine dual past passive of عَرْبَنَ (ʕarbana)\n# عُرْبِنَّا (ʕurbinnā) /ʕur.bin.naː/: first-person plural past passive of عَرْبَنَ (ʕarbana)\n",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʕarbanā", "ʕarbana", "ʕarbannā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعربن",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تعربن (form Iq)\n# تُعَرْبِنُ (tuʕarbinu) /tu.ʕar.bi.nu/: inflection of عَرْبَنَ (ʕarbana):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُعَرْبِنَّ (tuʕarbinna) /tu.ʕar.bin.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of عَرْبَنَ (ʕarbana)\n# تُعَرْبَنُ (tuʕarbanu) /tu.ʕar.ba.nu/: i",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuʕarbinu", "ʕarbana", "tuʕarbinna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أعربن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أعربن (form Iq)\n# أُعَرْبِنُ (ʔuʕarbinu) /ʔu.ʕar.bi.nu/: first-person singular non-past active indicative of عَرْبَنَ (ʕarbana)\n# أُعَرْبَنُ (ʔuʕarbanu) /ʔu.ʕar.ba.nu/: first-person singular non-past passive indicative of عَرْبَنَ (ʕarbana)\n# أُعَرْبِنَ (ʔuʕarbina) /ʔu.ʕar.bi.na/: first-person singular non-past active subjunctive of عَرْبَنَ (ʕarbana)\n# أُعَرْبَنَ (ʔuʕarbana) /ʔu.ʕar.ba.na/: first",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʔuʕarbinu", "ʕarbana", "ʔuʕarbanu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعربن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يعربن (form Iq)\n# يُعَرْبِنُ (yuʕarbinu) /ju.ʕar.bi.nu/: third-person masculine singular non-past active indicative of عَرْبَنَ (ʕarbana)\n# يُعَرْبِنَّ (yuʕarbinna) /ju.ʕar.bin.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of عَرْبَنَ (ʕarbana)\n# يُعَرْبَنُ (yuʕarbanu) /ju.ʕar.ba.nu/: third-person masculine singular non-past passive indicative of عَرْبَنَ (ʕarban",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuʕarbinu", "ʕarbana", "yuʕarbinna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عربنتما",
+      "tur": "verb",
+      "baslik": "عربنتما (form Iq)\n# عَرْبَنْتُمَا (ʕarbantumā) /ʕar.ban.tu.maː/: second-person dual past active of عَرْبَنَ (ʕarbana)\n# عُرْبِنْتُمَا (ʕurbintumā) /ʕur.bin.tu.maː/: second-person dual past passive of عَرْبَنَ (ʕarbana)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʕarbantumā", "ʕarbana", "ʕurbintumā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عربنتن",
+      "tur": "verb",
+      "baslik": "عربنتن (form Iq)\n# عَرْبَنْتُنَّ (ʕarbantunna) /ʕar.ban.tun.na/: second-person feminine plural past active of عَرْبَنَ (ʕarbana)\n# عُرْبِنْتُنَّ (ʕurbintunna) /ʕur.bin.tun.na/: second-person feminine plural past passive of عَرْبَنَ (ʕarbana)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʕarbantunna", "ʕarbana", "ʕurbintunna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عربنت",
+      "tur": "verb",
+      "baslik": "عربنت (form Iq)\n# عَرْبَنْتُ (ʕarbantu) /ʕar.ban.tu/: first-person singular past active of عَرْبَنَ (ʕarbana)\n# عَرْبَنْتَ (ʕarbanta) /ʕar.ban.ta/: second-person masculine singular past active of عَرْبَنَ (ʕarbana)\n# عَرْبَنْتِ (ʕarbanti) /ʕar.ban.ti/: second-person feminine singular past active of عَرْبَنَ (ʕarbana)\n# عَرْبَنَتْ (ʕarbanat) /ʕar.ba.nat/: third-person feminine singular past active ",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʕarbantu", "ʕarbana", "ʕarbanta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عربنتا",
+      "tur": "verb",
+      "baslik": "عربنتا (form Iq)\n# عَرْبَنَتَا (ʕarbanatā) /ʕar.ba.na.taː/: third-person feminine dual past active of عَرْبَنَ (ʕarbana)\n# عُرْبِنَتَا (ʕurbinatā) /ʕur.bi.na.taː/: third-person feminine dual past passive of عَرْبَنَ (ʕarbana)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʕarbanatā", "ʕarbana", "ʕurbinatā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عربنتم",
+      "tur": "verb",
+      "baslik": "عربنتم (form Iq)\n# عَرْبَنْتُمْ (ʕarbantum) /ʕar.ban.tum/: second-person masculine plural past active of عَرْبَنَ (ʕarbana)\n# عُرْبِنْتُمْ (ʕurbintum) /ʕur.bin.tum/: second-person masculine plural past passive of عَرْبَنَ (ʕarbana)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʕarbantum", "ʕarbana", "ʕurbintum"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعربنين",
+      "tur": "verb",
+      "baslik": "تعربنين (form Iq)\n# تُعَرْبِنِينَ (tuʕarbinīna) /tu.ʕar.bi.niː.na/: second-person feminine singular non-past active indicative of عَرْبَنَ (ʕarbana)\n# تُعَرْبَنِينَ (tuʕarbanīna) /tu.ʕar.ba.niː.na/: second-person feminine singular non-past passive indicative of عَرْبَنَ (ʕarbana)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuʕarbinīna", "ʕarbana", "tuʕarbanīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عربنوا",
+      "tur": "verb",
+      "baslik": "عربنوا (form Iq)\n# عَرْبَنُوا (ʕarbanū) /ʕar.ba.nuː/: third-person masculine plural past active of عَرْبَنَ (ʕarbana)\n# عُرْبِنُوا (ʕurbinū) /ʕur.bi.nuː/: third-person masculine plural past passive of عَرْبَنَ (ʕarbana)\n# عَرْبِنُوا (ʕarbinū) /ʕar.bi.nuː/: second-person masculine plural imperative of عَرْبَنَ (ʕarbana)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʕarbanū", "ʕarbana", "ʕurbinū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نعربن",
+      "tur": "verb",
+      "baslik": "نعربن (form Iq)\n# نُعَرْبِنُ (nuʕarbinu) /nu.ʕar.bi.nu/: first-person plural non-past active indicative of عَرْبَنَ (ʕarbana)\n# نُعَرْبَنُ (nuʕarbanu) /nu.ʕar.ba.nu/: first-person plural non-past passive indicative of عَرْبَنَ (ʕarbana)\n# نُعَرْبِنَ (nuʕarbina) /nu.ʕar.bi.na/: first-person plural non-past active subjunctive of عَرْبَنَ (ʕarbana)\n# نُعَرْبَنَ (nuʕarbana) /nu.ʕar.ba.na/: first-perso",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["nuʕarbinu", "ʕarbana", "nuʕarbanu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعربنان",
+      "tur": "verb",
+      "baslik": "تعربنان (form Iq)\n# تُعَرْبِنَانِ (tuʕarbināni) /tu.ʕar.bi.naː.ni/: inflection of عَرْبَنَ (ʕarbana):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُعَرْبَنَانِ (tuʕarbanāni) /tu.ʕar.ba.naː.ni/: inflection of عَرْبَنَ (ʕarbana):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuʕarbināni", "ʕarbana", "tuʕarbanāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعربنان",
+      "tur": "verb",
+      "baslik": "يعربنان (form Iq)\n# يُعَرْبِنَانِ (yuʕarbināni) /ju.ʕar.bi.naː.ni/: third-person masculine dual non-past active indicative of عَرْبَنَ (ʕarbana)\n# يُعَرْبَنَانِ (yuʕarbanāni) /ju.ʕar.ba.naː.ni/: third-person masculine dual non-past passive indicative of عَرْبَنَ (ʕarbana)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuʕarbināni", "ʕarbana", "yuʕarbanāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعربنون",
+      "tur": "verb",
+      "baslik": "يعربنون (form Iq)\n# يُعَرْبِنُونَ (yuʕarbinūna) /ju.ʕar.bi.nuː.na/: third-person masculine plural non-past active indicative of عَرْبَنَ (ʕarbana)\n# يُعَرْبَنُونَ (yuʕarbanūna) /ju.ʕar.ba.nuː.na/: third-person masculine plural non-past passive indicative of عَرْبَنَ (ʕarbana)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuʕarbinūna", "ʕarbana", "yuʕarbanūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعربنون",
+      "tur": "verb",
+      "baslik": "تعربنون (form Iq)\n# تُعَرْبِنُونَ (tuʕarbinūna) /tu.ʕar.bi.nuː.na/: second-person masculine plural non-past active indicative of عَرْبَنَ (ʕarbana)\n# تُعَرْبَنُونَ (tuʕarbanūna) /tu.ʕar.ba.nuː.na/: second-person masculine plural non-past passive indicative of عَرْبَنَ (ʕarbana)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuʕarbinūna", "ʕarbana", "tuʕarbanūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعربنا",
+      "tur": "verb",
+      "baslik": "يعربنا (form Iq)\n# يُعَرْبِنَا (yuʕarbinā) /ju.ʕar.bi.naː/: third-person masculine dual non-past active subjunctive/jussive of عَرْبَنَ (ʕarbana)\n# يُعَرْبَنَا (yuʕarbanā) /ju.ʕar.ba.naː/: third-person masculine dual non-past passive subjunctive/jussive of عَرْبَنَ (ʕarbana)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuʕarbinā", "ʕarbana", "yuʕarbanā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعربني",
+      "tur": "verb",
+      "baslik": "تعربني (form Iq)\n# تُعَرْبِنِي (tuʕarbinī) /tu.ʕar.bi.niː/: second-person feminine singular non-past active subjunctive/jussive of عَرْبَنَ (ʕarbana)\n# تُعَرْبَنِي (tuʕarbanī) /tu.ʕar.ba.niː/: second-person feminine singular non-past passive subjunctive/jussive of عَرْبَنَ (ʕarbana)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuʕarbinī", "ʕarbana", "tuʕarbanī"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يعربنوا",
+      "tur": "verb",
+      "baslik": "يعربنوا (form Iq)\n# يُعَرْبِنُوا (yuʕarbinū) /ju.ʕar.bi.nuː/: third-person masculine plural non-past active subjunctive/jussive of عَرْبَنَ (ʕarbana)\n# يُعَرْبَنُوا (yuʕarbanū) /ju.ʕar.ba.nuː/: third-person masculine plural non-past passive subjunctive/jussive of عَرْبَنَ (ʕarbana)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuʕarbinū", "ʕarbana", "yuʕarbanū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تعربنوا",
+      "tur": "verb",
+      "baslik": "تعربنوا (form Iq)\n# تُعَرْبِنُوا (tuʕarbinū) /tu.ʕar.bi.nuː/: second-person masculine plural non-past active subjunctive/jussive of عَرْبَنَ (ʕarbana)\n# تُعَرْبَنُوا (tuʕarbanū) /tu.ʕar.ba.nuː/: second-person masculine plural non-past passive subjunctive/jussive of عَرْبَنَ (ʕarbana)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuʕarbinū", "ʕarbana", "tuʕarbanū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "عربني",
+      "tur": "verb",
+      "baslik": "عَرْبِنِي • (ʕarbinī) (form Iq) /ʕar.bi.niː/\n# second-person feminine singular imperative of عَرْبَنَ (ʕarbana)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʕarbinī", "ʕarbana"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "etymarab": {
+    "latin": "ʕRBN",
+    "kok_maddesi": "Back to library EtymArab ʕRBN عربن BP – • HDAL • © SG | 15Feb2021 √ʕRBN “root” … ▪ … ▪ … ▪ … ▪ … … ▪ For Engl arbiter , earnest , cf. ↗ ʕurbūn and ↗ ʕarrāb . – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
+    "kelime_maddeleri": [],
+    "yer_tutucu": true
+  },
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "عربن", "r6"]
+  ],
+  "mana": {
     "ince": "possession.n.02",
     "orta": "noun.possession",
     "ust": "insan ve toplum",
@@ -311,22 +227,15 @@
     "dayanak_tanim": "money given as security for an article acquired for temporary use",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["transferred_property.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["transferred_property.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,628 +1,449 @@
 {
   "kok": "صفا",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "صفا", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "صفت",
-        "u": "صفت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صَفَتْ • (ṣafat) (form I) /sˤa.fat/\n# third-person feminine singular past active of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣafat", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "نصف",
-        "u": "نصف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نصف (form I)\n# نَصْفُ (naṣfu) /nasˤ.fu/: first-person plural non-past active jussive of صَفَا (ṣafā)\n# نُصْفَ (nuṣfa) /nusˤ.fa/: first-person plural non-past passive jussive of صَفَا (ṣafā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naṣfu", "ṣafā", "nuṣfa"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "يصف",
-        "u": "يصف",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يصف (form I)\n# يَصْفُ (yaṣfu) /jasˤ.fu/: third-person masculine singular non-past active jussive of صَفَا (ṣafā)\n# يُصْفَ (yuṣfa) /jusˤ.fa/: third-person masculine singular non-past passive jussive of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṣfu", "ṣafā", "yuṣfa"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "صفي",
-        "u": "صفي",
-        "p": "verb",
-        "n": "1.2",
-        "h": "ar-verb form",
-        "e": "صُفِيَ • (ṣufiya) (form I) /sˤu.fi.ja/\n# third-person masculine singular past passive of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "s": [
-          ["nonlemma", "See the etymology of the corresponding lemma form."]
-        ],
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣufiya", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "أصفى",
-        "u": "أصفى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أُصْفَى • (ʔuṣfā) (form I) /ʔusˤ.faː/\n# first-person singular non-past passive indicative/subjunctive of صَفَا (ṣafā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔuṣfā", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "يصفو",
-        "u": "يصفو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يصفو (form I)\n# يَصْفُو (yaṣfū) /jasˤ.fuː/: third-person masculine singular non-past active indicative of صَفَا (ṣafā)\n# يَصْفُوَ (yaṣfuwa) /jasˤ.fu.wa/: third-person masculine singular non-past active subjunctive of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṣfū", "ṣafā", "yaṣfuwa"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "يصفى",
-        "u": "يصفى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُصْفَى • (yuṣfā) (form I) /jusˤ.faː/\n# third-person masculine singular non-past passive indicative/subjunctive of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuṣfā", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "تصفو",
-        "u": "تصفو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تصفو (form I)\n# تَصْفُو (taṣfū) /tasˤ.fuː/: inflection of صَفَا (ṣafā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَصْفُوَ (taṣfuwa) /tasˤ.fu.wa/: inflection of صَفَا (ṣafā):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣfū", "ṣafā", "taṣfuwa"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "تصف",
-        "u": "تصف",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تصف (form I)\n# تَصْفُ (taṣfu) /tasˤ.fu/: inflection of صَفَا (ṣafā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُصْفَ (tuṣfa) /tusˤ.fa/: inflection of صَفَا (ṣafā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣfu", "ṣafā", "tuṣfa"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "صفيت",
-        "u": "صفيت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صفيت (form I)\n# صُفِيتُ (ṣufītu) /sˤu.fiː.tu/: first-person singular past passive of صَفَا (ṣafā)\n# صُفِيتَ (ṣufīta) /sˤu.fiː.ta/: second-person masculine singular past passive of صَفَا (ṣafā)\n# صُفِيتِ (ṣufīti) /sˤu.fiː.ti/: second-person feminine singular past passive of صَفَا (ṣafā)\n# صُفِيَتْ (ṣufiyat) /sˤu.fi.jat/: third-person feminine singular past passive of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣufītu", "ṣafā", "ṣufīta"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "تصفى",
-        "u": "تصفى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُصْفَى • (tuṣfā) (form I) /tusˤ.faː/\n# inflection of صَفَا (ṣafā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṣfā", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "صفوت",
-        "u": "صفوت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صفوت (form I)\n# صَفَوْتُ (ṣafawtu) /sˤa.faw.tu/: first-person singular past active of صَفَا (ṣafā)\n# صَفَوْتَ (ṣafawta) /sˤa.faw.ta/: second-person masculine singular past active of صَفَا (ṣafā)\n# صَفَوْتِ (ṣafawti) /sˤa.faw.ti/: second-person feminine singular past active of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣafawtu", "ṣafā", "ṣafawta"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "اصف",
-        "u": "اصف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُصْفُ • (uṣfu) (form I) /usˤ.fu/\n# second-person masculine singular imperative of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uṣfu", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "تصفين",
-        "u": "تصفين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تصفين (form I)\n# تَصْفِينَ (taṣfīna) /tasˤ.fiː.na/: second-person feminine singular non-past active indicative of صَفَا (ṣafā)\n# تُصْفَيْنَ (tuṣfayna) /tusˤ.faj.na/: inflection of صَفَا (ṣafā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣfīna", "ṣafā", "tuṣfayna"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "تصفي",
-        "u": "تصفي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تصفي (form I)\n# تَصْفِي (taṣfī) /tasˤ.fiː/: second-person feminine singular non-past active subjunctive/jussive of صَفَا (ṣafā)\n# تُصْفَيْ (tuṣfay) /tusˤ.faj/: second-person feminine singular non-past passive subjunctive/jussive of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣfī", "ṣafā", "tuṣfay"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "اصفي",
-        "u": "اصفي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُصْفِي • (uṣfī) (form I) /usˤ.fiː/\n# second-person feminine singular imperative of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uṣfī", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "أصفو",
-        "u": "أصفو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أصفو (form I)\n# أَصْفُو (ʔaṣfū) /ʔasˤ.fuː/: first-person singular non-past active indicative of صَفَا (ṣafā)\n# أَصْفُوَ (ʔaṣfuwa) /ʔasˤ.fu.wa/: first-person singular non-past active subjunctive of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaṣfū", "ṣafā", "ʔaṣfuwa"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "أصف",
-        "u": "أصف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أصف (form I)\n# أَصْفُ (ʔaṣfu) /ʔasˤ.fu/: first-person singular non-past active jussive of صَفَا (ṣafā)\n# أُصْفَ (ʔuṣfa) /ʔusˤ.fa/: first-person singular non-past passive jussive of صَفَا (ṣafā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaṣfu", "ṣafā", "ʔuṣfa"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "صفونا",
-        "u": "صفونا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَفَوْنَا • (ṣafawnā) (form I) /sˤa.faw.naː/\n# first-person plural past active of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣafawnā", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "نصفو",
-        "u": "نصفو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نصفو (form I)\n# نَصْفُو (naṣfū) /nasˤ.fuː/: first-person plural non-past active indicative of صَفَا (ṣafā)\n# نَصْفُوَ (naṣfuwa) /nasˤ.fu.wa/: first-person plural non-past active subjunctive of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naṣfū", "ṣafā", "naṣfuwa"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "صفينا",
-        "u": "صفينا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صُفِينَا • (ṣufīnā) (form I) /sˤu.fiː.naː/\n# first-person plural past passive of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣufīnā", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "نصفى",
-        "u": "نصفى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نُصْفَى • (nuṣfā) (form I) /nusˤ.faː/\n# first-person plural non-past passive indicative/subjunctive of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuṣfā", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "صفوتم",
-        "u": "صفوتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَفَوْتُمْ • (ṣafawtum) (form I) /sˤa.faw.tum/\n# second-person masculine plural past active of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣafawtum", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "تصفون",
-        "u": "تصفون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تصفون (form I)\n# تَصْفُونَ (taṣfūna) /tasˤ.fuː.na/: inflection of صَفَا (ṣafā):\n## second-person masculine/feminine plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُصْفَوْنَ (tuṣfawna) /tusˤ.faw.na/: second-person masculine plural non-past passive indicative of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣfūna", "ṣafā", "tuṣfawna"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "تصفوا",
-        "u": "تصفوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تصفوا (form I)\n# تَصْفُوَا (taṣfuwā) /tasˤ.fu.waː/: inflection of صَفَا (ṣafā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تَصْفُوا (taṣfū) /tasˤ.fuː/: second-person masculine plural non-past active subjunctive/jussive of صَفَا (ṣafā)\n# تُصْفَوْا (tuṣfaw) /tusˤ.faw/: second-person masculine plural non-past passive s",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣfuwā", "ṣafā", "taṣfū"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "اصفوا",
-        "u": "اصفوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اصفوا (form I)\n# اُصْفُوَا (uṣfuwā) /usˤ.fu.waː/: second-person dual imperative of صَفَا (ṣafā)\n# اُصْفُوا (uṣfū) /usˤ.fuː/: second-person masculine plural imperative of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uṣfuwā", "ṣafā", "uṣfū"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "صفيتم",
-        "u": "صفيتم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صُفِيتُمْ • (ṣufītum) (form I) /sˤu.fiː.tum/\n# second-person masculine plural past passive of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣufītum", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "صفوا",
-        "u": "صفوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صفوا (form I)\n# صَفَوَا (ṣafawā) /sˤa.fa.waː/: third-person masculine dual past active of صَفَا (ṣafā)\n# صَفَوْا (ṣafaw) /sˤa.faw/: third-person masculine plural past active of صَفَا (ṣafā)\n# صُفُوا (ṣufū) /sˤu.fuː/: third-person masculine plural past passive of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣafawā", "ṣafā", "ṣafaw"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "يصفون",
-        "u": "يصفون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يصفون (form I)\n# يَصْفُونَ (yaṣfūna) /jasˤ.fuː.na/: inflection of صَفَا (ṣafā):\n## third-person masculine/feminine plural non-past active indicative\n## third-person feminine plural non-past active subjunctive/jussive\n# يُصْفَوْنَ (yuṣfawna) /jusˤ.faw.na/: third-person masculine plural non-past passive indicative of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṣfūna", "ṣafā", "yuṣfawna"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "يصفوا",
-        "u": "يصفوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يصفوا (form I)\n# يَصْفُوَا (yaṣfuwā) /jasˤ.fu.waː/: third-person masculine dual non-past active subjunctive/jussive of صَفَا (ṣafā)\n# يَصْفُوا (yaṣfū) /jasˤ.fuː/: third-person masculine plural non-past active subjunctive/jussive of صَفَا (ṣafā)\n# يُصْفَوْا (yuṣfaw) /jusˤ.faw/: third-person masculine plural non-past passive subjunctive/jussive of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṣfuwā", "ṣafā", "yaṣfū"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "صفوتن",
-        "u": "صفوتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَفَوْتُنَّ • (ṣafawtunna) (form I) /sˤa.faw.tun.na/\n# second-person feminine plural past active of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣafawtunna", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "اصفون",
-        "u": "اصفون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُصْفُونَ • (uṣfūna) (form I) /usˤ.fuː.na/\n# second-person feminine plural imperative of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uṣfūna", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "صفيتن",
-        "u": "صفيتن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صُفِيتُنَّ • (ṣufītunna) (form I) /sˤu.fiː.tun.na/\n# second-person feminine plural past passive of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣufītunna", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "صفون",
-        "u": "صفون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَفَوْنَ • (ṣafawna) (form I) /sˤa.faw.na/\n# third-person feminine plural past active of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣafawna", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "صفين",
-        "u": "صفين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صُفِينَ • (ṣufīna) (form I) /sˤu.fiː.na/\n# third-person feminine plural past passive of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣufīna", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "يصفين",
-        "u": "يصفين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُصْفَيْنَ • (yuṣfayna) (form I) /jusˤ.faj.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuṣfayna", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "صفتا",
-        "u": "صفتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "صَفَتَا • (ṣafatā) (form I) /sˤa.fa.taː/\n# third-person feminine dual past active of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣafatā", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "صفوتما",
-        "u": "صفوتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "صَفَوْتُمَا • (ṣafawtumā) (form I) /sˤa.faw.tu.maː/\n# second-person dual past active of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣafawtumā", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "صفيا",
-        "u": "صفيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صُفِيَا • (ṣufiyā) (form I) /sˤu.fi.jaː/\n# third-person masculine dual past passive of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣufiyā", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "صفيتما",
-        "u": "صفيتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صُفِيتُمَا • (ṣufītumā) (form I) /sˤu.fiː.tu.maː/\n# second-person dual past passive of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣufītumā", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "صفيتا",
-        "u": "صفيتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "صُفِيَتَا • (ṣufiyatā) (form I) /sˤu.fi.ja.taː/\n# third-person feminine dual past passive of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ṣufiyatā", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "تصفوان",
-        "u": "تصفوان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَصْفُوَانِ • (taṣfuwāni) (form I) /tasˤ.fu.waː.ni/\n# inflection of صَفَا (ṣafā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taṣfuwāni", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "يصفوان",
-        "u": "يصفوان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَصْفُوَانِ • (yaṣfuwāni) (form I) /jasˤ.fu.waː.ni/\n# third-person masculine dual non-past active indicative of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaṣfuwāni", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "تصفيان",
-        "u": "تصفيان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُصْفَيَانِ • (tuṣfayāni) (form I) /tusˤ.fa.jaː.ni/\n# inflection of صَفَا (ṣafā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṣfayāni", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "يصفيان",
-        "u": "يصفيان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُصْفَيَانِ • (yuṣfayāni) (form I) /jusˤ.fa.jaː.ni/\n# third-person masculine dual non-past passive indicative of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuṣfayāni", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "تصفيا",
-        "u": "تصفيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُصْفَيَا • (tuṣfayā) (form I) /tusˤ.fa.jaː/\n# inflection of صَفَا (ṣafā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuṣfayā", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      },
-      {
-        "w": "يصفيا",
-        "u": "يصفيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُصْفَيَا • (yuṣfayā) (form I) /jusˤ.fa.jaː/\n# third-person masculine dual non-past passive subjunctive/jussive of صَفَا (ṣafā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuṣfayā", "ṣafā"],
-        "k": "صفا",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "صف",
+  "ses": {
     "harf": "ص",
+    "fasil": "صف",
     "mahrec": "esaliyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "صفت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صَفَتْ • (ṣafat) (form I) /sˤa.fat/\n# third-person feminine singular past active of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣafat", "ṣafā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نصف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نصف (form I)\n# نَصْفُ (naṣfu) /nasˤ.fu/: first-person plural non-past active jussive of صَفَا (ṣafā)\n# نُصْفَ (nuṣfa) /nusˤ.fa/: first-person plural non-past passive jussive of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naṣfu", "ṣafā", "nuṣfa"]
+    },
+    {
+      "madde": "يصف",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يصف (form I)\n# يَصْفُ (yaṣfu) /jasˤ.fu/: third-person masculine singular non-past active jussive of صَفَا (ṣafā)\n# يُصْفَ (yuṣfa) /jusˤ.fa/: third-person masculine singular non-past passive jussive of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṣfu", "ṣafā", "yuṣfa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صفي",
+      "tur": "verb",
+      "etim_no": "1.2",
+      "baslik": "صُفِيَ • (ṣufiya) (form I) /sˤu.fi.ja/\n# third-person masculine singular past passive of صَفَا (ṣafā)",
+      "etim_sablon": [
+        ["nonlemma", "See the etymology of the corresponding lemma form."]
+      ],
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣufiya", "ṣafā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أصفى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أُصْفَى • (ʔuṣfā) (form I) /ʔusˤ.faː/\n# first-person singular non-past passive indicative/subjunctive of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔuṣfā", "ṣafā"]
+    },
+    {
+      "madde": "يصفو",
+      "tur": "verb",
+      "baslik": "يصفو (form I)\n# يَصْفُو (yaṣfū) /jasˤ.fuː/: third-person masculine singular non-past active indicative of صَفَا (ṣafā)\n# يَصْفُوَ (yaṣfuwa) /jasˤ.fu.wa/: third-person masculine singular non-past active subjunctive of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṣfū", "ṣafā", "yaṣfuwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصفى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُصْفَى • (yuṣfā) (form I) /jusˤ.faː/\n# third-person masculine singular non-past passive indicative/subjunctive of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuṣfā", "ṣafā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصفو",
+      "tur": "verb",
+      "baslik": "تصفو (form I)\n# تَصْفُو (taṣfū) /tasˤ.fuː/: inflection of صَفَا (ṣafā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَصْفُوَ (taṣfuwa) /tasˤ.fu.wa/: inflection of صَفَا (ṣafā):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣfū", "ṣafā", "taṣfuwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصف",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تصف (form I)\n# تَصْفُ (taṣfu) /tasˤ.fu/: inflection of صَفَا (ṣafā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُصْفَ (tuṣfa) /tusˤ.fa/: inflection of صَفَا (ṣafā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣfu", "ṣafā", "tuṣfa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صفيت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صفيت (form I)\n# صُفِيتُ (ṣufītu) /sˤu.fiː.tu/: first-person singular past passive of صَفَا (ṣafā)\n# صُفِيتَ (ṣufīta) /sˤu.fiː.ta/: second-person masculine singular past passive of صَفَا (ṣafā)\n# صُفِيتِ (ṣufīti) /sˤu.fiː.ti/: second-person feminine singular past passive of صَفَا (ṣafā)\n# صُفِيَتْ (ṣufiyat) /sˤu.fi.jat/: third-person feminine singular past passive of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣufītu", "ṣafā", "ṣufīta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصفى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُصْفَى • (tuṣfā) (form I) /tusˤ.faː/\n# inflection of صَفَا (ṣafā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṣfā", "ṣafā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صفوت",
+      "tur": "verb",
+      "baslik": "صفوت (form I)\n# صَفَوْتُ (ṣafawtu) /sˤa.faw.tu/: first-person singular past active of صَفَا (ṣafā)\n# صَفَوْتَ (ṣafawta) /sˤa.faw.ta/: second-person masculine singular past active of صَفَا (ṣafā)\n# صَفَوْتِ (ṣafawti) /sˤa.faw.ti/: second-person feminine singular past active of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣafawtu", "ṣafā", "ṣafawta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اصف",
+      "tur": "verb",
+      "baslik": "اُصْفُ • (uṣfu) (form I) /usˤ.fu/\n# second-person masculine singular imperative of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uṣfu", "ṣafā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصفين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تصفين (form I)\n# تَصْفِينَ (taṣfīna) /tasˤ.fiː.na/: second-person feminine singular non-past active indicative of صَفَا (ṣafā)\n# تُصْفَيْنَ (tuṣfayna) /tusˤ.faj.na/: inflection of صَفَا (ṣafā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣfīna", "ṣafā", "tuṣfayna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصفي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تصفي (form I)\n# تَصْفِي (taṣfī) /tasˤ.fiː/: second-person feminine singular non-past active subjunctive/jussive of صَفَا (ṣafā)\n# تُصْفَيْ (tuṣfay) /tusˤ.faj/: second-person feminine singular non-past passive subjunctive/jussive of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣfī", "ṣafā", "tuṣfay"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اصفي",
+      "tur": "verb",
+      "baslik": "اُصْفِي • (uṣfī) (form I) /usˤ.fiː/\n# second-person feminine singular imperative of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uṣfī", "ṣafā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أصفو",
+      "tur": "verb",
+      "baslik": "أصفو (form I)\n# أَصْفُو (ʔaṣfū) /ʔasˤ.fuː/: first-person singular non-past active indicative of صَفَا (ṣafā)\n# أَصْفُوَ (ʔaṣfuwa) /ʔasˤ.fu.wa/: first-person singular non-past active subjunctive of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaṣfū", "ṣafā", "ʔaṣfuwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أصف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أصف (form I)\n# أَصْفُ (ʔaṣfu) /ʔasˤ.fu/: first-person singular non-past active jussive of صَفَا (ṣafā)\n# أُصْفَ (ʔuṣfa) /ʔusˤ.fa/: first-person singular non-past passive jussive of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaṣfu", "ṣafā", "ʔuṣfa"]
+    },
+    {
+      "madde": "صفونا",
+      "tur": "verb",
+      "baslik": "صَفَوْنَا • (ṣafawnā) (form I) /sˤa.faw.naː/\n# first-person plural past active of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣafawnā", "ṣafā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نصفو",
+      "tur": "verb",
+      "baslik": "نصفو (form I)\n# نَصْفُو (naṣfū) /nasˤ.fuː/: first-person plural non-past active indicative of صَفَا (ṣafā)\n# نَصْفُوَ (naṣfuwa) /nasˤ.fu.wa/: first-person plural non-past active subjunctive of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naṣfū", "ṣafā", "naṣfuwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صفينا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صُفِينَا • (ṣufīnā) (form I) /sˤu.fiː.naː/\n# first-person plural past passive of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣufīnā", "ṣafā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نصفى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نُصْفَى • (nuṣfā) (form I) /nusˤ.faː/\n# first-person plural non-past passive indicative/subjunctive of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuṣfā", "ṣafā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صفوتم",
+      "tur": "verb",
+      "baslik": "صَفَوْتُمْ • (ṣafawtum) (form I) /sˤa.faw.tum/\n# second-person masculine plural past active of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣafawtum", "ṣafā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصفون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تصفون (form I)\n# تَصْفُونَ (taṣfūna) /tasˤ.fuː.na/: inflection of صَفَا (ṣafā):\n## second-person masculine/feminine plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُصْفَوْنَ (tuṣfawna) /tusˤ.faw.na/: second-person masculine plural non-past passive indicative of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣfūna", "ṣafā", "tuṣfawna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصفوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تصفوا (form I)\n# تَصْفُوَا (taṣfuwā) /tasˤ.fu.waː/: inflection of صَفَا (ṣafā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تَصْفُوا (taṣfū) /tasˤ.fuː/: second-person masculine plural non-past active subjunctive/jussive of صَفَا (ṣafā)\n# تُصْفَوْا (tuṣfaw) /tusˤ.faw/: second-person masculine plural non-past passive s",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣfuwā", "ṣafā", "taṣfū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اصفوا",
+      "tur": "verb",
+      "baslik": "اصفوا (form I)\n# اُصْفُوَا (uṣfuwā) /usˤ.fu.waː/: second-person dual imperative of صَفَا (ṣafā)\n# اُصْفُوا (uṣfū) /usˤ.fuː/: second-person masculine plural imperative of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uṣfuwā", "ṣafā", "uṣfū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صفيتم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صُفِيتُمْ • (ṣufītum) (form I) /sˤu.fiː.tum/\n# second-person masculine plural past passive of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣufītum", "ṣafā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صفوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صفوا (form I)\n# صَفَوَا (ṣafawā) /sˤa.fa.waː/: third-person masculine dual past active of صَفَا (ṣafā)\n# صَفَوْا (ṣafaw) /sˤa.faw/: third-person masculine plural past active of صَفَا (ṣafā)\n# صُفُوا (ṣufū) /sˤu.fuː/: third-person masculine plural past passive of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣafawā", "ṣafā", "ṣafaw"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصفون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يصفون (form I)\n# يَصْفُونَ (yaṣfūna) /jasˤ.fuː.na/: inflection of صَفَا (ṣafā):\n## third-person masculine/feminine plural non-past active indicative\n## third-person feminine plural non-past active subjunctive/jussive\n# يُصْفَوْنَ (yuṣfawna) /jusˤ.faw.na/: third-person masculine plural non-past passive indicative of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṣfūna", "ṣafā", "yuṣfawna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصفوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يصفوا (form I)\n# يَصْفُوَا (yaṣfuwā) /jasˤ.fu.waː/: third-person masculine dual non-past active subjunctive/jussive of صَفَا (ṣafā)\n# يَصْفُوا (yaṣfū) /jasˤ.fuː/: third-person masculine plural non-past active subjunctive/jussive of صَفَا (ṣafā)\n# يُصْفَوْا (yuṣfaw) /jusˤ.faw/: third-person masculine plural non-past passive subjunctive/jussive of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṣfuwā", "ṣafā", "yaṣfū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صفوتن",
+      "tur": "verb",
+      "baslik": "صَفَوْتُنَّ • (ṣafawtunna) (form I) /sˤa.faw.tun.na/\n# second-person feminine plural past active of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣafawtunna", "ṣafā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اصفون",
+      "tur": "verb",
+      "baslik": "اُصْفُونَ • (uṣfūna) (form I) /usˤ.fuː.na/\n# second-person feminine plural imperative of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uṣfūna", "ṣafā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صفيتن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صُفِيتُنَّ • (ṣufītunna) (form I) /sˤu.fiː.tun.na/\n# second-person feminine plural past passive of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣufītunna", "ṣafā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صفون",
+      "tur": "verb",
+      "baslik": "صَفَوْنَ • (ṣafawna) (form I) /sˤa.faw.na/\n# third-person feminine plural past active of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣafawna", "ṣafā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صفين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صُفِينَ • (ṣufīna) (form I) /sˤu.fiː.na/\n# third-person feminine plural past passive of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣufīna", "ṣafā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصفين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُصْفَيْنَ • (yuṣfayna) (form I) /jusˤ.faj.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuṣfayna", "ṣafā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صفتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "صَفَتَا • (ṣafatā) (form I) /sˤa.fa.taː/\n# third-person feminine dual past active of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣafatā", "ṣafā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صفوتما",
+      "tur": "verb",
+      "baslik": "صَفَوْتُمَا • (ṣafawtumā) (form I) /sˤa.faw.tu.maː/\n# second-person dual past active of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣafawtumā", "ṣafā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صفيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صُفِيَا • (ṣufiyā) (form I) /sˤu.fi.jaː/\n# third-person masculine dual past passive of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣufiyā", "ṣafā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صفيتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صُفِيتُمَا • (ṣufītumā) (form I) /sˤu.fiː.tu.maː/\n# second-person dual past passive of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣufītumā", "ṣafā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "صفيتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "صُفِيَتَا • (ṣufiyatā) (form I) /sˤu.fi.ja.taː/\n# third-person feminine dual past passive of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ṣufiyatā", "ṣafā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصفوان",
+      "tur": "verb",
+      "baslik": "تَصْفُوَانِ • (taṣfuwāni) (form I) /tasˤ.fu.waː.ni/\n# inflection of صَفَا (ṣafā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taṣfuwāni", "ṣafā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصفوان",
+      "tur": "verb",
+      "baslik": "يَصْفُوَانِ • (yaṣfuwāni) (form I) /jasˤ.fu.waː.ni/\n# third-person masculine dual non-past active indicative of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaṣfuwāni", "ṣafā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصفيان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُصْفَيَانِ • (tuṣfayāni) (form I) /tusˤ.fa.jaː.ni/\n# inflection of صَفَا (ṣafā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṣfayāni", "ṣafā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصفيان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُصْفَيَانِ • (yuṣfayāni) (form I) /jusˤ.fa.jaː.ni/\n# third-person masculine dual non-past passive indicative of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuṣfayāni", "ṣafā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تصفيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُصْفَيَا • (tuṣfayā) (form I) /tusˤ.fa.jaː/\n# inflection of صَفَا (ṣafā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuṣfayā", "ṣafā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يصفيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُصْفَيَا • (yuṣfayā) (form I) /jusˤ.fa.jaː/\n# third-person masculine dual non-past passive subjunctive/jussive of صَفَا (ṣafā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuṣfayā", "ṣafā"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "صفا", "r7"]
+  ],
+  "mana": {
     "ince": "definite_quantity.n.01",
     "orta": "noun.quantity",
     "ust": "ölçü, mekân ve zaman",
@@ -630,22 +451,15 @@
     "dayanak_tanim": "one of two equal parts of a divisible whole",
     "synset_sayisi": 3
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["content.n.05", "half.r.01", "number.n.02"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["content.n.05", "half.r.01", "number.n.02"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

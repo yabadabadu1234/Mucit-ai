@@ -26,17 +26,14 @@ def duz_tercume(kok):
 def hazirla(kok, bolum_boyu=20):
     duz = duz_tercume(kok)
     f = os.path.join(M.GIRDI, 'kuranda_var', 'kokler', kok + '.json')
-    d = json.load(open(f, encoding='utf-8'))
+    d = M.MS.genislet(json.load(open(f, encoding='utf-8')))
     ad = os.path.join(KOKDIZIN, kok)
     os.makedirs(os.path.join(ad, 'KAYNAKLAR'), exist_ok=True)
     kim = M.kimlik_kur(d)
-    for k, v in kim['sozlukler'].items():
-        json.dump(v, open(os.path.join(ad, 'KAYNAKLAR', 'sozluk_' + k + '.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-    for k in ('ses_mana_tasnif', 'hakikat_mecaz_tasnif', 'prototip_yayilim_tasnif'):
-        json.dump(kim[k], open(os.path.join(ad, 'KAYNAKLAR', k + '.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    for k, v in kim['kaynaklar'].items():
+        json.dump(v, open(os.path.join(ad, 'KAYNAKLAR', k + '.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     open(os.path.join(ad, 'KAYNAKLAR', 'wordnet_dayanak.txt'), 'w', encoding='utf-8').write(kim['wordnet_dayanak_tanimi'] + '\n')
     A, U = M.toplama(d)
-    kl = d.get('kaliplar') or {}
     satirlar = {'kok': [], 'kelime': [], 'mustak': {}}
     for k, (t, c) in U.items():
         if t in ('S', 'KA'):
@@ -44,7 +41,7 @@ def hazirla(kok, bolum_boyu=20):
         elif t == 'K':
             satirlar['kelime'].append((k, c['arapca'], 'tür: %s; bâb: %s; zaman: %s; %s' % (c['sozluk_turu'], c['bab'], c['zaman'], 'LEMMA (sözlük biçimi)' if c['tip'] == 'lemma' else 'kelime biçimi')))
         elif t == 'M':
-            x = kl.get(str(c['idx'])) or ['', '', '', '']
+            x = [''] + d['mustak'][c['kalip']][c['idx']][:2]
             satirlar['mustak'].setdefault(c['kalip'], []).append((c['idx'], k, c['arapca'], 'kalıp: %s; vezin: %s (%s); ingilizce_tanik: %s' % (c['kalip'], x[1], x[2], c['tanik'])))
     bolumler = []
     bolumler.append(('kok', 'Kök anlamı ve fiil sapı', [(k, a, b) for k, a, b in satirlar['kok']]))

@@ -1,58 +1,58 @@
 {
   "kok": "مفصل",
+  "tur": "isim",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["fiil-yok"],
+  "lugat_fiil": false,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "مفصل", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "مفصل",
-        "u": "مفصل",
-        "p": "noun",
-        "n": "1",
-        "h": "ar-noun",
-        "e": "مَفْصِل • (mafṣil) m (plural مَفَاصِل (mafāṣil))",
-        "t": "Noun of place from the root ف ص ل (f ṣ l), with the noun itself forming the denominal root م ف ص ل (m f ṣ l), whence تَمَفْصَلَ (tamafṣala, “to connect as joints; to form a joint”), among others, derives.",
-        "s": [
-          ["ar-noun of place", "Noun of place"],
-          ["ar-root", "ف ص ل (f ṣ l)"],
-          ["ar-root", "م ف ص ل (m f ṣ l)"]
-        ],
-        "synonyms": ["بُرْجُمَة", "مَوْصِل", "مِفْتَاح"],
-        "g": ["knuckle", "joint", "railroad switch, turnout, points"],
-        "r": ["mafṣil"],
-        "dr": ["مَفْصِلِيّ"],
-        "el": [
-          ["ف ص ل", "Appendix:Arabic roots/ف ص ل"],
-          ["م ف ص ل", "Appendix:Arabic roots/م ف ص ل"],
-          ["تَمَفْصَلَ", "تمفصل#Arabic"]
-        ],
-        "k": "مفصل",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "مف",
+  "ses": {
     "harf": "م",
+    "fasil": "مف",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "مفصل",
+      "tur": "noun",
+      "etim_no": "1",
+      "baslik": "مَفْصِل • (mafṣil) m (plural مَفَاصِل (mafāṣil))",
+      "etim_sablon": [
+        ["ar-noun of place", "Noun of place"],
+        ["ar-root", "ف ص ل (f ṣ l)"],
+        ["ar-root", "م ف ص ل (m f ṣ l)"]
+      ],
+      "esanlamli": ["بُرْجُمَة", "مَوْصِل", "مِفْتَاح"],
+      "anlam": ["knuckle", "joint", "railroad switch, turnout, points"],
+      "okunus": ["mafṣil"],
+      "dr": ["مَفْصِلِيّ"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "Noun of place from the root ف ص ل (f ṣ l), with the noun itself forming the denominal root م ف ص ل (m f ṣ l), whence تَمَفْصَلَ (tamafṣala, “to connect as joints; to form a joint”), among others, derives.",
+      "kognatlar": [
+        ["ف ص ل", "Appendix:Arabic roots/ف ص ل"],
+        ["م ف ص ل", "Appendix:Arabic roots/م ف ص ل"],
+        ["تَمَفْصَلَ", "تمفصل#Arabic"]
+      ]
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "مفصل", "r6"]
+  ],
+  "mana": {
     "ince": "part.n.03",
     "orta": "noun.body",
     "ust": "canlı ve beden",
@@ -60,20 +60,8 @@
     "dayanak_tanim": "(anatomy) the point of connection between two bones or elements of a skeleton (especially if it allows motion)",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["body_part.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 8,
       "merkez_kok": "سير",
@@ -93,6 +81,11 @@
       "boy": 6
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["body_part.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

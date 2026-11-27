@@ -1,524 +1,376 @@
 {
   "kok": "جزى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "جزى", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الجيم والزاي",
-      "baslik": "جزى",
-      "mihveri": "تحصيل شيء مقصود من تناول شيء أو معالجته. كالشحم والغذاء من اللحم فهما مقابل أكله المقصود منه، وكالخراج من الأرض",
-      "sesler": "تعبر الجيم عن تجمع هلامي له حدة ما، والزاي عن مادة متكاثفة مكتنزة، والفصل منهما يعبر عن إنفصالٍ أو تميز لمَا مادَّتُه متداخلة بعضها في بعض كجِزَّة الصوف وهو كثيف من دقاق متناشبة. وفي (جزى) تعبر الياء عن الاتصال، ويعبر التركيب عن تحصل مقابل (أي متصل) بتلك المادة الكثيفة (المهمة). وفي (جوز) تعبر الواو عن الاشتمال ويعبر التركيب عن جمع جانبين متميزين (كثيفين) بالعبور من أحدهما إلى الآخر. وفي (جزأ) تضيف الهمزة الضغط ويعبر التركيب معها عن نوع من تمييز طرف من ذلك الكثيف يتمثل في جُزْء الشيء. وفي (جزع) تعبر العين عن التحام ورقة، ويعبر التركيب معها عن انقطاع وسط الشيء الكثيف (الانقطاع مقابل الرقة)، مع اتصال ظاهره أي التحامه كفراغ وسط الخرز.",
-      "tam_metin": "{وَجَزَاهُم بِمَا صَبَرُوا جَنَّةً وَحَرِيرًا} [الإنسان: 12].\n\"يقال: اللحمُ السمينُ أَجْزَى من المهزول. والجِزْيَةُ - بالكسر: خَراجُ الأَرْض \".\n° المعنى المحوري\nتحصيل شيء مقصود من تناول شيء أو معالجته. كالشحم والغذاء من اللحم فهما مقابل أكله المقصود منه، وكالخراج من الأرض\n__________\n(1) (صوتيًّا): تعبر الجيم عن تجمع هلامي له حدة ما، والزاي عن مادة متكاثفة مكتنزة، والفصل منهما يعبر عن إنفصالٍ أو تميز لمَا مادَّتُه متداخلة بعضها في بعض كجِزَّة الصوف وهو كثيف من دقاق متناشبة. وفي \n(جزى)\n تعبر الياء عن الاتصال، ويعبر التركيب عن تحصل مقابل (أي متصل) بتلك المادة الكثيفة (المهمة). وفي (جوز) تعبر الواو عن الاشتمال ويعبر التركيب عن جمع جانبين متميزين (كثيفين) بالعبور من أحدهما إلى الآخر. وفي (جزأ) تضيف الهمزة الضغط ويعبر التركيب معها عن نوع من تمييز طرف من ذلك الكثيف يتمثل في جُزْء الشيء. وفي (جزع) تعبر العين عن التحام ورقة، ويعبر التركيب معها عن انقطاع وسط الشيء الكثيف (الانقطاع مقابل الرقة)، مع اتصال ظاهره أي التحامه كفراغ وسط الخرز.\n(1/306)\nمقابل العمل فيها. ومنه \"الجِزية المال الذي يؤخذ من أهل الذمة (مقابل حمايتهم، وعدم حشرهم، وتوفير الخدمات المجتمعية لهم - كما تنفق فيها زكاة المسلمين) \" {حَتَّى يُعْطُوا الْجِزْيَةَ عَنْ يَدٍ وَهُمْ صَاغِرُونَ} [التوبة: 29].\nومنه \"الْجَزاء: المكافأة على الشيء \" (كلمة مكافأة عامة في الخير والشر) ويصدق في الثواب والعقاب، لأن ما يستخرج من الشيء جزء منه وهو من جنسه حلوًا أو مرًّا {وَجَزَاءُ سَيِّئَةٍ سَيِّئَةٌ مِثْلُهَا} [الشورى: 40]، {هَلْ جَزَاءُ الْإِحْسَانِ إِلَّا الْإِحْسَانُ} [الرحمن: 60]. وكل ما في القرآن من التركيب فهو من الجزاء بالمعنى الذي ذكرناه. \"ومنه جَزَيْتُه حقَّه: قضيتُه \".\nولمعنى المقابلة والقَصْد قيل \"جزى الشيءُ كَفَى. وجَزَى عنك الشيء: قضى \" (أي تم المراد به) {وَاتَّقُوا يَوْمًا لَا تَجْزِي نَفْسٌ عَنْ نَفْسٍ شَيْئًا} [البقرة: 48].",
-      "fasil_ozeti": "° معنى الفصل المعجمي (جز): تميز الشيء الكثيف أو انفصاله كجِزَّة الشاة __________ (1) هم يستعملون القطع هنا بمعنى العبور وأنا أنظر إلى فراغ وسط الوادي والخرز."
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "جزي",
-        "u": "جزي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "جُزِيَ • (juziya) (form I) /d͡ʒu.zi.ja/\n# third-person masculine singular past passive of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["juziya", "jazā"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "يجزي",
-        "u": "يجزي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يجزي (form I)\n# يَجْزِي (yajzī) /jad͡ʒ.ziː/: third-person masculine singular non-past active indicative of جَزَى (jazā)\n# يَجْزِيَ (yajziya) /jad͡ʒ.zi.ja/: third-person masculine singular non-past active subjunctive of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajzī", "jazā", "yajziya"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "يجزى",
-        "u": "يجزى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُجْزَى • (yujzā) (form I) /jud͡ʒ.zaː/\n# third-person masculine singular non-past passive indicative/subjunctive of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yujzā", "jazā"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "يجز",
-        "u": "يجز",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يجز (form I)\n# يَجْزِ (yajzi) /jad͡ʒ.zi/: third-person masculine singular non-past active jussive of جَزَى (jazā)\n# يُجْزَ (yujza) /jud͡ʒ.za/: third-person masculine singular non-past passive jussive of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajzi", "jazā", "yujza"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "تجز",
-        "u": "تجز",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تجز (form I)\n# تَجْزِ (tajzi) /tad͡ʒ.zi/: inflection of جَزَى (jazā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُجْزَ (tujza) /tud͡ʒ.za/: inflection of جَزَى (jazā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajzi", "jazā", "tujza"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "جزت",
-        "u": "جزت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "جَزَتْ • (jazat) (form I) /d͡ʒa.zat/\n# third-person feminine singular past active of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jazat", "jazā"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "تجزي",
-        "u": "تجزي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تجزي (form I)\n# تَجْزِي (tajzī) /tad͡ʒ.ziː/: inflection of جَزَى (jazā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَجْزِيَ (tajziya) /tad͡ʒ.zi.ja/: inflection of جَزَى (jazā):\n## second-person masculine singular non-past active subjunctive\n## t",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajzī", "jazā", "tajziya"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "جزيت",
-        "u": "جزيت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جزيت (form I)\n# جَزَيْتُ (jazaytu) /d͡ʒa.zaj.tu/: first-person singular past active of جَزَى (jazā)\n# جَزَيْتَ (jazayta) /d͡ʒa.zaj.ta/: second-person masculine singular past active of جَزَى (jazā)\n# جَزَيْتِ (jazayti) /d͡ʒa.zaj.ti/: second-person feminine singular past active of جَزَى (jazā)\n# جُزِيتُ (juzītu) /d͡ʒu.ziː.tu/: first-person singular past passive of جَزَى (jazā)\n# جُزِيتَ (juzīta) /d͡",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jazaytu", "jazā", "jazayta"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "تجزى",
-        "u": "تجزى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُجْزَى • (tujzā) (form I) /tud͡ʒ.zaː/\n# inflection of جَزَى (jazā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tujzā", "jazā"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "اجز",
-        "u": "اجز",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِجْزِ • (ijzi) (form I) /id͡ʒ.zi/\n# second-person masculine singular imperative of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ijzi", "jazā"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "تجزين",
-        "u": "تجزين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تجزين (form I)\n# تَجْزِينَ (tajzīna) /tad͡ʒ.ziː.na/: inflection of جَزَى (jazā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُجْزَيْنَ (tujzayna) /tud͡ʒ.zaj.na/: inflection of جَزَى (jazā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past p",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajzīna", "jazā", "tujzayna"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "اجزي",
-        "u": "اجزي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِجْزِي • (ijzī) (form I) /id͡ʒ.ziː/\n# second-person feminine singular imperative of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ijzī", "jazā"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "أجز",
-        "u": "أجز",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "أجز (form I)\n# أَجْزِ (ʔajzi) /ʔad͡ʒ.zi/: first-person singular non-past active jussive of جَزَى (jazā)\n# أُجْزَ (ʔujza) /ʔud͡ʒ.za/: first-person singular non-past passive jussive of جَزَى (jazā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔajzi", "jazā", "ʔujza"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "أجزي",
-        "u": "أجزي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أجزي (form I)\n# أَجْزِي (ʔajzī) /ʔad͡ʒ.ziː/: first-person singular non-past active indicative of جَزَى (jazā)\n# أَجْزِيَ (ʔajziya) /ʔad͡ʒ.zi.ja/: first-person singular non-past active subjunctive of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔajzī", "jazā", "ʔajziya"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "أجزى",
-        "u": "أجزى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُجْزَى • (ʔujzā) (form I) /ʔud͡ʒ.zaː/\n# first-person singular non-past passive indicative/subjunctive of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔujzā", "jazā"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "نجز",
-        "u": "نجز",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نجز (form I)\n# نَجْزِ (najzi) /nad͡ʒ.zi/: first-person plural non-past active jussive of جَزَى (jazā)\n# نُجْزَ (nujza) /nud͡ʒ.za/: first-person plural non-past passive jussive of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["najzi", "jazā", "nujza"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "جزينا",
-        "u": "جزينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جزينا (form I)\n# جَزَيْنَا (jazaynā) /d͡ʒa.zaj.naː/: first-person plural past active of جَزَى (jazā)\n# جُزِينَا (juzīnā) /d͡ʒu.ziː.naː/: first-person plural past passive of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jazaynā", "jazā", "juzīnā"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "نجزي",
-        "u": "نجزي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نجزي (form I)\n# نَجْزِي (najzī) /nad͡ʒ.ziː/: first-person plural non-past active indicative of جَزَى (jazā)\n# نَجْزِيَ (najziya) /nad͡ʒ.zi.ja/: first-person plural non-past active subjunctive of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["najzī", "jazā", "najziya"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "نجزى",
-        "u": "نجزى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُجْزَى • (nujzā) (form I) /nud͡ʒ.zaː/\n# first-person plural non-past passive indicative/subjunctive of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nujzā", "jazā"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "جزيتم",
-        "u": "جزيتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جزيتم (form I)\n# جَزَيْتُمْ (jazaytum) /d͡ʒa.zaj.tum/: second-person masculine plural past active of جَزَى (jazā)\n# جُزِيتُمْ (juzītum) /d͡ʒu.ziː.tum/: second-person masculine plural past passive of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jazaytum", "jazā", "juzītum"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "تجزون",
-        "u": "تجزون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تجزون (form I)\n# تَجْزُونَ (tajzūna) /tad͡ʒ.zuː.na/: second-person masculine plural non-past active indicative of جَزَى (jazā)\n# تُجْزَوْنَ (tujzawna) /tud͡ʒ.zaw.na/: second-person masculine plural non-past passive indicative of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajzūna", "jazā", "tujzawna"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "تجزوا",
-        "u": "تجزوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تجزوا (form I)\n# تَجْزُوا (tajzū) /tad͡ʒ.zuː/: second-person masculine plural non-past active subjunctive/jussive of جَزَى (jazā)\n# تُجْزَوْا (tujzaw) /tud͡ʒ.zaw/: second-person masculine plural non-past passive subjunctive/jussive of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajzū", "jazā", "tujzaw"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "اجزوا",
-        "u": "اجزوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِجْزُوا • (ijzū) (form I) /id͡ʒ.zuː/\n# second-person masculine plural imperative of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ijzū", "jazā"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "جزوا",
-        "u": "جزوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "جزوا (form I)\n# جَزَوْا (jazaw) /d͡ʒa.zaw/: third-person masculine plural past active of جَزَى (jazā)\n# جُزُوا (juzū) /d͡ʒu.zuː/: third-person masculine plural past passive of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jazaw", "jazā", "juzū"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "يجزون",
-        "u": "يجزون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يجزون (form I)\n# يَجْزُونَ (yajzūna) /jad͡ʒ.zuː.na/: third-person masculine plural non-past active indicative of جَزَى (jazā)\n# يُجْزَوْنَ (yujzawna) /jud͡ʒ.zaw.na/: third-person masculine plural non-past passive indicative of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajzūna", "jazā", "yujzawna"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "يجزوا",
-        "u": "يجزوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يجزوا (form I)\n# يَجْزُوا (yajzū) /jad͡ʒ.zuː/: third-person masculine plural non-past active subjunctive/jussive of جَزَى (jazā)\n# يُجْزَوْا (yujzaw) /jud͡ʒ.zaw/: third-person masculine plural non-past passive subjunctive/jussive of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajzū", "jazā", "yujzaw"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "جزيتن",
-        "u": "جزيتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جزيتن (form I)\n# جَزَيْتُنَّ (jazaytunna) /d͡ʒa.zaj.tun.na/: second-person feminine plural past active of جَزَى (jazā)\n# جُزِيتُنَّ (juzītunna) /d͡ʒu.ziː.tun.na/: second-person feminine plural past passive of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jazaytunna", "jazā", "juzītunna"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "اجزين",
-        "u": "اجزين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِجْزِينَ • (ijzīna) (form I) /id͡ʒ.ziː.na/\n# second-person feminine plural imperative of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ijzīna", "jazā"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "جزين",
-        "u": "جزين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "جزين (form I)\n# جَزَيْنَ (jazayna) /d͡ʒa.zaj.na/: third-person feminine plural past active of جَزَى (jazā)\n# جُزِينَ (juzīna) /d͡ʒu.ziː.na/: third-person feminine plural past passive of جَزَى (jazā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jazayna", "jazā", "juzīna"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "يجزين",
-        "u": "يجزين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يجزين (form I)\n# يَجْزِينَ (yajzīna) /jad͡ʒ.ziː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of جَزَى (jazā)\n# يُجْزَيْنَ (yujzayna) /jud͡ʒ.zaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajzīna", "jazā", "yujzayna"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "جزتا",
-        "u": "جزتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "جَزَتَا • (jazatā) (form I) /d͡ʒa.za.taː/\n# third-person feminine dual past active of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jazatā", "jazā"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "جزيا",
-        "u": "جزيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جزيا (form I)\n# جَزَيَا (jazayā) /d͡ʒa.za.jaː/: third-person masculine dual past active of جَزَى (jazā)\n# جُزِيَا (juziyā) /d͡ʒu.zi.jaː/: third-person masculine dual past passive of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jazayā", "jazā", "juziyā"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "جزيتما",
-        "u": "جزيتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جزيتما (form I)\n# جَزَيْتُمَا (jazaytumā) /d͡ʒa.zaj.tu.maː/: second-person dual past active of جَزَى (jazā)\n# جُزِيتُمَا (juzītumā) /d͡ʒu.ziː.tu.maː/: second-person dual past passive of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jazaytumā", "jazā", "juzītumā"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "جزيتا",
-        "u": "جزيتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "جُزِيَتَا • (juziyatā) (form I) /d͡ʒu.zi.ja.taː/\n# third-person feminine dual past passive of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["juziyatā", "jazā"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "تجزيان",
-        "u": "تجزيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجزيان (form I)\n# تَجْزِيَانِ (tajziyāni) /tad͡ʒ.zi.jaː.ni/: inflection of جَزَى (jazā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُجْزَيَانِ (tujzayāni) /tud͡ʒ.za.jaː.ni/: inflection of جَزَى (jazā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajziyāni", "jazā", "tujzayāni"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "يجزيان",
-        "u": "يجزيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يجزيان (form I)\n# يَجْزِيَانِ (yajziyāni) /jad͡ʒ.zi.jaː.ni/: third-person masculine dual non-past active indicative of جَزَى (jazā)\n# يُجْزَيَانِ (yujzayāni) /jud͡ʒ.za.jaː.ni/: third-person masculine dual non-past passive indicative of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajziyāni", "jazā", "yujzayāni"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "تجزيا",
-        "u": "تجزيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجزيا (form I)\n# تَجْزِيَا (tajziyā) /tad͡ʒ.zi.jaː/: inflection of جَزَى (jazā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُجْزَيَا (tujzayā) /tud͡ʒ.za.jaː/: inflection of جَزَى (jazā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajziyā", "jazā", "tujzayā"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "يجزيا",
-        "u": "يجزيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يجزيا (form I)\n# يَجْزِيَا (yajziyā) /jad͡ʒ.zi.jaː/: third-person masculine dual non-past active subjunctive/jussive of جَزَى (jazā)\n# يُجْزَيَا (yujzayā) /jud͡ʒ.za.jaː/: third-person masculine dual non-past passive subjunctive/jussive of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajziyā", "jazā", "yujzayā"],
-        "k": "جزى",
-        "yol": "kök"
-      },
-      {
-        "w": "اجزيا",
-        "u": "اجزيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِجْزِيَا • (ijziyā) (form I) /id͡ʒ.zi.jaː/\n# second-person dual imperative of جَزَى (jazā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ijziyā", "jazā"],
-        "k": "جزى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "جز",
+  "ses": {
     "harf": "ج",
+    "fasil": "جز",
     "mahrec": "şeceriyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "cebel": {
+    "fasil": "الجيم والزاي",
+    "baslik": "جزى",
+    "mihveri": "تحصيل شيء مقصود من تناول شيء أو معالجته. كالشحم والغذاء من اللحم فهما مقابل أكله المقصود منه، وكالخراج من الأرض",
+    "sesler": "تعبر الجيم عن تجمع هلامي له حدة ما، والزاي عن مادة متكاثفة مكتنزة، والفصل منهما يعبر عن إنفصالٍ أو تميز لمَا مادَّتُه متداخلة بعضها في بعض كجِزَّة الصوف وهو كثيف من دقاق متناشبة. وفي (جزى) تعبر الياء عن الاتصال، ويعبر التركيب عن تحصل مقابل (أي متصل) بتلك المادة الكثيفة (المهمة). وفي (جوز) تعبر الواو عن الاشتمال ويعبر التركيب عن جمع جانبين متميزين (كثيفين) بالعبور من أحدهما إلى الآخر. وفي (جزأ) تضيف الهمزة الضغط ويعبر التركيب معها عن نوع من تمييز طرف من ذلك الكثيف يتمثل في جُزْء الشيء. وفي (جزع) تعبر العين عن التحام ورقة، ويعبر التركيب معها عن انقطاع وسط الشيء الكثيف (الانقطاع مقابل الرقة)، مع اتصال ظاهره أي التحامه كفراغ وسط الخرز.",
+    "tam_metin": "{وَجَزَاهُم بِمَا صَبَرُوا جَنَّةً وَحَرِيرًا} [الإنسان: 12].\n\"يقال: اللحمُ السمينُ أَجْزَى من المهزول. والجِزْيَةُ - بالكسر: خَراجُ الأَرْض \".\n° المعنى المحوري\nتحصيل شيء مقصود من تناول شيء أو معالجته. كالشحم والغذاء من اللحم فهما مقابل أكله المقصود منه، وكالخراج من الأرض\n__________\n(1) (صوتيًّا): تعبر الجيم عن تجمع هلامي له حدة ما، والزاي عن مادة متكاثفة مكتنزة، والفصل منهما يعبر عن إنفصالٍ أو تميز لمَا مادَّتُه متداخلة بعضها في بعض كجِزَّة الصوف وهو كثيف من دقاق متناشبة. وفي \n(جزى)\n تعبر الياء عن الاتصال، ويعبر التركيب عن تحصل مقابل (أي متصل) بتلك المادة الكثيفة (المهمة). وفي (جوز) تعبر الواو عن الاشتمال ويعبر التركيب عن جمع جانبين متميزين (كثيفين) بالعبور من أحدهما إلى الآخر. وفي (جزأ) تضيف الهمزة الضغط ويعبر التركيب معها عن نوع من تمييز طرف من ذلك الكثيف يتمثل في جُزْء الشيء. وفي (جزع) تعبر العين عن التحام ورقة، ويعبر التركيب معها عن انقطاع وسط الشيء الكثيف (الانقطاع مقابل الرقة)، مع اتصال ظاهره أي التحامه كفراغ وسط الخرز.\n(1/306)\nمقابل العمل فيها. ومنه \"الجِزية المال الذي يؤخذ من أهل الذمة (مقابل حمايتهم، وعدم حشرهم، وتوفير الخدمات المجتمعية لهم - كما تنفق فيها زكاة المسلمين) \" {حَتَّى يُعْطُوا الْجِزْيَةَ عَنْ يَدٍ وَهُمْ صَاغِرُونَ} [التوبة: 29].\nومنه \"الْجَزاء: المكافأة على الشيء \" (كلمة مكافأة عامة في الخير والشر) ويصدق في الثواب والعقاب، لأن ما يستخرج من الشيء جزء منه وهو من جنسه حلوًا أو مرًّا {وَجَزَاءُ سَيِّئَةٍ سَيِّئَةٌ مِثْلُهَا} [الشورى: 40]، {هَلْ جَزَاءُ الْإِحْسَانِ إِلَّا الْإِحْسَانُ} [الرحمن: 60]. وكل ما في القرآن من التركيب فهو من الجزاء بالمعنى الذي ذكرناه. \"ومنه جَزَيْتُه حقَّه: قضيتُه \".\nولمعنى المقابلة والقَصْد قيل \"جزى الشيءُ كَفَى. وجَزَى عنك الشيء: قضى \" (أي تم المراد به) {وَاتَّقُوا يَوْمًا لَا تَجْزِي نَفْسٌ عَنْ نَفْسٍ شَيْئًا} [البقرة: 48].",
+    "fasil_ozeti": "° معنى الفصل المعجمي (جز): تميز الشيء الكثيف أو انفصاله كجِزَّة الشاة __________ (1) هم يستعملون القطع هنا بمعنى العبور وأنا أنظر إلى فراغ وسط الوادي والخرز."
+  },
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "جزي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "جُزِيَ • (juziya) (form I) /d͡ʒu.zi.ja/\n# third-person masculine singular past passive of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["juziya", "jazā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجزي",
+      "tur": "verb",
+      "baslik": "يجزي (form I)\n# يَجْزِي (yajzī) /jad͡ʒ.ziː/: third-person masculine singular non-past active indicative of جَزَى (jazā)\n# يَجْزِيَ (yajziya) /jad͡ʒ.zi.ja/: third-person masculine singular non-past active subjunctive of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajzī", "jazā", "yajziya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجزى",
+      "tur": "verb",
+      "baslik": "يُجْزَى • (yujzā) (form I) /jud͡ʒ.zaː/\n# third-person masculine singular non-past passive indicative/subjunctive of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yujzā", "jazā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجز",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يجز (form I)\n# يَجْزِ (yajzi) /jad͡ʒ.zi/: third-person masculine singular non-past active jussive of جَزَى (jazā)\n# يُجْزَ (yujza) /jud͡ʒ.za/: third-person masculine singular non-past passive jussive of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajzi", "jazā", "yujza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجز",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تجز (form I)\n# تَجْزِ (tajzi) /tad͡ʒ.zi/: inflection of جَزَى (jazā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُجْزَ (tujza) /tud͡ʒ.za/: inflection of جَزَى (jazā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajzi", "jazā", "tujza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جزت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "جَزَتْ • (jazat) (form I) /d͡ʒa.zat/\n# third-person feminine singular past active of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jazat", "jazā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجزي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تجزي (form I)\n# تَجْزِي (tajzī) /tad͡ʒ.ziː/: inflection of جَزَى (jazā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَجْزِيَ (tajziya) /tad͡ʒ.zi.ja/: inflection of جَزَى (jazā):\n## second-person masculine singular non-past active subjunctive\n## t",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajzī", "jazā", "tajziya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جزيت",
+      "tur": "verb",
+      "baslik": "جزيت (form I)\n# جَزَيْتُ (jazaytu) /d͡ʒa.zaj.tu/: first-person singular past active of جَزَى (jazā)\n# جَزَيْتَ (jazayta) /d͡ʒa.zaj.ta/: second-person masculine singular past active of جَزَى (jazā)\n# جَزَيْتِ (jazayti) /d͡ʒa.zaj.ti/: second-person feminine singular past active of جَزَى (jazā)\n# جُزِيتُ (juzītu) /d͡ʒu.ziː.tu/: first-person singular past passive of جَزَى (jazā)\n# جُزِيتَ (juzīta) /d͡",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jazaytu", "jazā", "jazayta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجزى",
+      "tur": "verb",
+      "baslik": "تُجْزَى • (tujzā) (form I) /tud͡ʒ.zaː/\n# inflection of جَزَى (jazā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tujzā", "jazā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اجز",
+      "tur": "verb",
+      "baslik": "اِجْزِ • (ijzi) (form I) /id͡ʒ.zi/\n# second-person masculine singular imperative of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ijzi", "jazā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجزين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تجزين (form I)\n# تَجْزِينَ (tajzīna) /tad͡ʒ.ziː.na/: inflection of جَزَى (jazā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُجْزَيْنَ (tujzayna) /tud͡ʒ.zaj.na/: inflection of جَزَى (jazā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past p",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajzīna", "jazā", "tujzayna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اجزي",
+      "tur": "verb",
+      "baslik": "اِجْزِي • (ijzī) (form I) /id͡ʒ.ziː/\n# second-person feminine singular imperative of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ijzī", "jazā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجز",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "أجز (form I)\n# أَجْزِ (ʔajzi) /ʔad͡ʒ.zi/: first-person singular non-past active jussive of جَزَى (jazā)\n# أُجْزَ (ʔujza) /ʔud͡ʒ.za/: first-person singular non-past passive jussive of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔajzi", "jazā", "ʔujza"]
+    },
+    {
+      "madde": "أجزي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أجزي (form I)\n# أَجْزِي (ʔajzī) /ʔad͡ʒ.ziː/: first-person singular non-past active indicative of جَزَى (jazā)\n# أَجْزِيَ (ʔajziya) /ʔad͡ʒ.zi.ja/: first-person singular non-past active subjunctive of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔajzī", "jazā", "ʔajziya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أجزى",
+      "tur": "verb",
+      "baslik": "أُجْزَى • (ʔujzā) (form I) /ʔud͡ʒ.zaː/\n# first-person singular non-past passive indicative/subjunctive of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔujzā", "jazā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نجز",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نجز (form I)\n# نَجْزِ (najzi) /nad͡ʒ.zi/: first-person plural non-past active jussive of جَزَى (jazā)\n# نُجْزَ (nujza) /nud͡ʒ.za/: first-person plural non-past passive jussive of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["najzi", "jazā", "nujza"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جزينا",
+      "tur": "verb",
+      "baslik": "جزينا (form I)\n# جَزَيْنَا (jazaynā) /d͡ʒa.zaj.naː/: first-person plural past active of جَزَى (jazā)\n# جُزِينَا (juzīnā) /d͡ʒu.ziː.naː/: first-person plural past passive of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jazaynā", "jazā", "juzīnā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نجزي",
+      "tur": "verb",
+      "baslik": "نجزي (form I)\n# نَجْزِي (najzī) /nad͡ʒ.ziː/: first-person plural non-past active indicative of جَزَى (jazā)\n# نَجْزِيَ (najziya) /nad͡ʒ.zi.ja/: first-person plural non-past active subjunctive of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["najzī", "jazā", "najziya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نجزى",
+      "tur": "verb",
+      "baslik": "نُجْزَى • (nujzā) (form I) /nud͡ʒ.zaː/\n# first-person plural non-past passive indicative/subjunctive of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nujzā", "jazā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جزيتم",
+      "tur": "verb",
+      "baslik": "جزيتم (form I)\n# جَزَيْتُمْ (jazaytum) /d͡ʒa.zaj.tum/: second-person masculine plural past active of جَزَى (jazā)\n# جُزِيتُمْ (juzītum) /d͡ʒu.ziː.tum/: second-person masculine plural past passive of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jazaytum", "jazā", "juzītum"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجزون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تجزون (form I)\n# تَجْزُونَ (tajzūna) /tad͡ʒ.zuː.na/: second-person masculine plural non-past active indicative of جَزَى (jazā)\n# تُجْزَوْنَ (tujzawna) /tud͡ʒ.zaw.na/: second-person masculine plural non-past passive indicative of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajzūna", "jazā", "tujzawna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجزوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تجزوا (form I)\n# تَجْزُوا (tajzū) /tad͡ʒ.zuː/: second-person masculine plural non-past active subjunctive/jussive of جَزَى (jazā)\n# تُجْزَوْا (tujzaw) /tud͡ʒ.zaw/: second-person masculine plural non-past passive subjunctive/jussive of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajzū", "jazā", "tujzaw"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اجزوا",
+      "tur": "verb",
+      "baslik": "اِجْزُوا • (ijzū) (form I) /id͡ʒ.zuː/\n# second-person masculine plural imperative of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ijzū", "jazā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جزوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "جزوا (form I)\n# جَزَوْا (jazaw) /d͡ʒa.zaw/: third-person masculine plural past active of جَزَى (jazā)\n# جُزُوا (juzū) /d͡ʒu.zuː/: third-person masculine plural past passive of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jazaw", "jazā", "juzū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجزون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يجزون (form I)\n# يَجْزُونَ (yajzūna) /jad͡ʒ.zuː.na/: third-person masculine plural non-past active indicative of جَزَى (jazā)\n# يُجْزَوْنَ (yujzawna) /jud͡ʒ.zaw.na/: third-person masculine plural non-past passive indicative of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajzūna", "jazā", "yujzawna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجزوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يجزوا (form I)\n# يَجْزُوا (yajzū) /jad͡ʒ.zuː/: third-person masculine plural non-past active subjunctive/jussive of جَزَى (jazā)\n# يُجْزَوْا (yujzaw) /jud͡ʒ.zaw/: third-person masculine plural non-past passive subjunctive/jussive of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajzū", "jazā", "yujzaw"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جزيتن",
+      "tur": "verb",
+      "baslik": "جزيتن (form I)\n# جَزَيْتُنَّ (jazaytunna) /d͡ʒa.zaj.tun.na/: second-person feminine plural past active of جَزَى (jazā)\n# جُزِيتُنَّ (juzītunna) /d͡ʒu.ziː.tun.na/: second-person feminine plural past passive of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jazaytunna", "jazā", "juzītunna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اجزين",
+      "tur": "verb",
+      "baslik": "اِجْزِينَ • (ijzīna) (form I) /id͡ʒ.ziː.na/\n# second-person feminine plural imperative of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ijzīna", "jazā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جزين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "جزين (form I)\n# جَزَيْنَ (jazayna) /d͡ʒa.zaj.na/: third-person feminine plural past active of جَزَى (jazā)\n# جُزِينَ (juzīna) /d͡ʒu.ziː.na/: third-person feminine plural past passive of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jazayna", "jazā", "juzīna"]
+    },
+    {
+      "madde": "يجزين",
+      "tur": "verb",
+      "baslik": "يجزين (form I)\n# يَجْزِينَ (yajzīna) /jad͡ʒ.ziː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of جَزَى (jazā)\n# يُجْزَيْنَ (yujzayna) /jud͡ʒ.zaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajzīna", "jazā", "yujzayna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جزتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "جَزَتَا • (jazatā) (form I) /d͡ʒa.za.taː/\n# third-person feminine dual past active of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jazatā", "jazā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جزيا",
+      "tur": "verb",
+      "baslik": "جزيا (form I)\n# جَزَيَا (jazayā) /d͡ʒa.za.jaː/: third-person masculine dual past active of جَزَى (jazā)\n# جُزِيَا (juziyā) /d͡ʒu.zi.jaː/: third-person masculine dual past passive of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jazayā", "jazā", "juziyā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جزيتما",
+      "tur": "verb",
+      "baslik": "جزيتما (form I)\n# جَزَيْتُمَا (jazaytumā) /d͡ʒa.zaj.tu.maː/: second-person dual past active of جَزَى (jazā)\n# جُزِيتُمَا (juzītumā) /d͡ʒu.ziː.tu.maː/: second-person dual past passive of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jazaytumā", "jazā", "juzītumā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "جزيتا",
+      "tur": "verb",
+      "baslik": "جُزِيَتَا • (juziyatā) (form I) /d͡ʒu.zi.ja.taː/\n# third-person feminine dual past passive of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["juziyatā", "jazā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجزيان",
+      "tur": "verb",
+      "baslik": "تجزيان (form I)\n# تَجْزِيَانِ (tajziyāni) /tad͡ʒ.zi.jaː.ni/: inflection of جَزَى (jazā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُجْزَيَانِ (tujzayāni) /tud͡ʒ.za.jaː.ni/: inflection of جَزَى (jazā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajziyāni", "jazā", "tujzayāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجزيان",
+      "tur": "verb",
+      "baslik": "يجزيان (form I)\n# يَجْزِيَانِ (yajziyāni) /jad͡ʒ.zi.jaː.ni/: third-person masculine dual non-past active indicative of جَزَى (jazā)\n# يُجْزَيَانِ (yujzayāni) /jud͡ʒ.za.jaː.ni/: third-person masculine dual non-past passive indicative of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajziyāni", "jazā", "yujzayāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجزيا",
+      "tur": "verb",
+      "baslik": "تجزيا (form I)\n# تَجْزِيَا (tajziyā) /tad͡ʒ.zi.jaː/: inflection of جَزَى (jazā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُجْزَيَا (tujzayā) /tud͡ʒ.za.jaː/: inflection of جَزَى (jazā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajziyā", "jazā", "tujzayā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يجزيا",
+      "tur": "verb",
+      "baslik": "يجزيا (form I)\n# يَجْزِيَا (yajziyā) /jad͡ʒ.zi.jaː/: third-person masculine dual non-past active subjunctive/jussive of جَزَى (jazā)\n# يُجْزَيَا (yujzayā) /jud͡ʒ.za.jaː/: third-person masculine dual non-past passive subjunctive/jussive of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajziyā", "jazā", "yujzayā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اجزيا",
+      "tur": "verb",
+      "baslik": "اِجْزِيَا • (ijziyā) (form I) /id͡ʒ.zi.jaː/\n# second-person dual imperative of جَزَى (jazā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ijziyā", "jazā"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "جزى", "r7"]
+  ],
+  "mana": {
     "ince": "satisfy.v.01",
     "orta": "verb.stative",
     "ust": "hâl ve vasıf",
@@ -526,21 +378,28 @@
     "dayanak_tanim": "be sufficient; be adequate, either in quality or quantity",
     "synset_sayisi": 19
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "الجيم والزاي",
-    "mihveri": "تحصيل شيء مقصود من تناول شيء أو معالجته. كالشحم والغذاء من اللحم فهما مقابل أكله المقصود منه، وكالخراج من الأرض",
-    "sesler": "تعبر الجيم عن تجمع هلامي له حدة ما، والزاي عن مادة متكاثفة مكتنزة، والفصل منهما يعبر عن إنفصالٍ أو تميز لمَا مادَّتُه متداخلة بعضها في بعض كجِزَّة الصوف وهو كثيف من دقاق متناشبة. وفي (جزى) تعبر الياء عن الاتصال، ويعبر التركيب عن تحصل مقابل (أي متصل) بتلك المادة الكثيفة (المهمة). وفي (جوز) تعبر الواو عن الاشتمال ويعبر التركيب عن جمع جانبين متميزين (كثيفين) بالعبور من أحدهما إلى الآخر. وفي (جزأ) تضيف الهمزة الضغط ويعبر التركيب معها عن نوع من تمييز طرف من ذلك الكثيف يتمثل في جُزْء الشيء. وفي (جزع) تعبر العين عن التحام ورقة، ويعبر التركيب معها عن انقطاع وسط الشيء الكثيف (الانقطاع مقابل الرقة)، مع اتصال ظاهره أي التحامه كفراغ وسط الخرز.",
-    "fasil_ozeti": "° معنى الفصل المعجمي (جز): تميز الشيء الكثيف أو انفصاله كجِزَّة الشاة __________ (1) هم يستعملون القطع هنا بمعنى العبور وأنا أنظر إلى فراغ وسط الوادي والخرز.",
-    "tam_metin": "{وَجَزَاهُم بِمَا صَبَرُوا جَنَّةً وَحَرِيرًا} [الإنسان: 12].\n\"يقال: اللحمُ السمينُ أَجْزَى من المهزول. والجِزْيَةُ - بالكسر: خَراجُ الأَرْض \".\n° المعنى المحوري\nتحصيل شيء مقصود من تناول شيء أو معالجته. كالشحم والغذاء من اللحم فهما مقابل أكله المقصود منه، وكالخراج من الأرض\n__________\n(1) (صوتيًّا): تعبر الجيم عن تجمع هلامي له حدة ما، والزاي عن مادة متكاثفة مكتنزة، والفصل منهما يعبر عن إنفصالٍ أو تميز لمَا مادَّتُه متداخلة بعضها في بعض كجِزَّة الصوف وهو كثيف من دقاق متناشبة. وفي \n(جزى)\n تعبر الياء عن الاتصال، ويعبر التركيب عن تحصل مقابل (أي متصل) بتلك المادة الكثيفة (المهمة). وفي (جوز) تعبر الواو عن الاشتمال ويعبر التركيب عن جمع جانبين متميزين (كثيفين) بالعبور من أحدهما إلى الآخر. وفي (جزأ) تضيف الهمزة الضغط ويعبر التركيب معها عن نوع من تمييز طرف من ذلك الكثيف يتمثل في جُزْء الشيء. وفي (جزع) تعبر العين عن التحام ورقة، ويعبر التركيب معها عن انقطاع وسط الشيء الكثيف (الانقطاع مقابل الرقة)، مع اتصال ظاهره أي التحامه كفراغ وسط الخرز.\n(1/306)\nمقابل العمل فيها. ومنه \"الجِزية المال الذي يؤخذ من أهل الذمة (مقابل حمايتهم، وعدم حشرهم، وتوفير الخدمات المجتمعية لهم - كما تنفق فيها زكاة المسلمين) \" {حَتَّى يُعْطُوا الْجِزْيَةَ عَنْ يَدٍ وَهُمْ صَاغِرُونَ} [التوبة: 29].\nومنه \"الْجَزاء: المكافأة على الشيء \" (كلمة مكافأة عامة في الخير والشر) ويصدق في الثواب والعقاب، لأن ما يستخرج من الشيء جزء منه وهو من جنسه حلوًا أو مرًّا {وَجَزَاءُ سَيِّئَةٍ سَيِّئَةٌ مِثْلُهَا} [الشورى: 40]، {هَلْ جَزَاءُ الْإِحْسَانِ إِلَّا الْإِحْسَانُ} [الرحمن: 60]. وكل ما في القرآن من التركيب فهو من الجزاء بالمعنى الذي ذكرناه. \"ومنه جَزَيْتُه حقَّه: قضيتُه \".\nولمعنى المقابلة والقَصْد قيل \"جزى الشيءُ كَفَى. وجَزَى عنك الشيء: قضى \" (أي تم المراد به) {وَاتَّقُوا يَوْمًا لَا تَجْزِي نَفْسٌ عَنْ نَفْسٍ شَيْئًا} [البقرة: 48]."
+  "mana_yontem": "m1",
+  "gomme": {
+    "ust": {
+      "kume": 7,
+      "merkez_kok": "حدق",
+      "merkez_mana": "Hadak: göz bebeği; hadaka: bakmak",
+      "boy": 986
+    },
+    "orta": {
+      "kume": 26,
+      "merkez_kok": "بلع",
+      "merkez_mana": "Bel': yutmak; bel'a: yutkunma",
+      "boy": 61
+    },
+    "ince": {
+      "kume": 157,
+      "merkez_kok": "جعع",
+      "merkez_mana": "hunger",
+      "boy": 7
+    }
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "achieve.v.01",
     "act.v.02",
     "advance.v.12",
@@ -561,29 +420,10 @@
     "satisfy.v.01",
     "suffice.v.01"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "ust": {
-      "kume": 7,
-      "merkez_kok": "حدق",
-      "merkez_mana": "Hadak: göz bebeği; hadaka: bakmak",
-      "boy": 986
-    },
-    "orta": {
-      "kume": 26,
-      "merkez_kok": "بلع",
-      "merkez_mana": "Bel': yutmak; bel'a: yutkunma",
-      "boy": 61
-    },
-    "ince": {
-      "kume": 157,
-      "merkez_kok": "جعع",
-      "merkez_mana": "hunger",
-      "boy": 7
-    }
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

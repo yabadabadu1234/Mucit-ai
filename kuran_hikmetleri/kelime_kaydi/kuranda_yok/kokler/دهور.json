@@ -1,47 +1,48 @@
 {
   "kok": "دهور",
+  "tur": "isim",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["fiil-yok"],
+  "lugat_fiil": false,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "دهور", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تدهور",
-        "u": "تدهور",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "تَدَهْوُر • (tadahwur) m",
-        "g": ["verbal noun of تَدَهْوَرَ (tadahwara) (form IIq)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["تَدَهْوَرَ"],
-        "r": ["tadahwur"],
-        "ipa": ["/ta.dah.wur/"],
-        "k": "دهور",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "ده",
+  "ses": {
     "harf": "د",
+    "fasil": "ده",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "تدهور",
+      "tur": "noun",
+      "baslik": "تَدَهْوُر • (tadahwur) m",
+      "anlam": ["verbal noun of تَدَهْوَرَ (tadahwara) (form IIq)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["تَدَهْوَرَ"],
+      "okunus": ["tadahwur"],
+      "ipa": ["/ta.dah.wur/"]
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "دهور", "r6"]
+  ],
+  "mana": {
     "ince": "devolve.v.03",
     "orta": "verb.body",
     "ust": "canlı ve beden",
@@ -49,16 +50,11 @@
     "dayanak_tanim": "grow worse",
     "synset_sayisi": 14
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "break_down.v.08",
     "break_up.v.16",
     "crumble.v.01",
@@ -74,12 +70,10 @@
     "suffer.v.06",
     "tumble.v.01"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

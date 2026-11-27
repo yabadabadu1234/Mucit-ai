@@ -1,684 +1,480 @@
 {
   "kok": "ناس",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ناس", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "ناسا",
-        "u": "ناسا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نَاسَا • (nāsā) (form I) /naː.saː/\n# third-person masculine dual past active of نَاسَ (nāsa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nāsā", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "نس",
-        "u": "نس",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نُسْ • (nus) (form I) /nus/\n# second-person masculine singular imperative of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nus", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "تنسن",
-        "u": "تنسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تنسن (form I)\n# تَنُسْنَ (tanusna) /ta.nus.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of نَاسَ (nāsa)\n# تُنَسْنَ (tunasna) /tu.nas.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanusna", "nāsa", "tunasna"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "نوسا",
-        "u": "نوسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوسَا • (nūsā) (form I) /nuː.saː/\n# second-person dual imperative of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nūsā", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "أناس",
-        "u": "أناس",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أناس (form I)\n# أُنَاسُ (ʔunāsu) /ʔu.naː.su/: first-person singular non-past passive indicative of نَاسَ (nāsa)\n# أُنَاسَ (ʔunāsa) /ʔu.naː.sa/: first-person singular non-past passive subjunctive of نَاسَ (nāsa)",
-        "tag": ["form-i", "no-gloss", "plural", "plural-only"],
-        "r": ["ʔunāsu", "nāsa", "ʔunāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "ينس",
-        "u": "ينس",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "ينس (form I)\n# يَنُسْ (yanus) /ja.nus/: third-person masculine singular non-past active jussive of نَاسَ (nāsa)\n# يُنَسْ (yunas) /ju.nas/: third-person masculine singular non-past passive jussive of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanus", "nāsa", "yunas"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "نست",
-        "u": "نست",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نست (form I)\n# نُسْتُ (nustu) /nus.tu/: first-person singular past active of نَاسَ (nāsa)\n# نُسْتَ (nusta) /nus.ta/: second-person masculine singular past active of نَاسَ (nāsa)\n# نُسْتِ (nusti) /nus.ti/: second-person feminine singular past active of نَاسَ (nāsa)\n# نِسْتُ (nistu) /nis.tu/: first-person singular past passive of نَاسَ (nāsa)\n# نِسْتَ (nista) /nis.ta/: second-person masculine singul",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nustu", "nāsa", "nusta"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "تنس",
-        "u": "تنس",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تنس (form I)\n# تَنُسْ (tanus) /ta.nus/: inflection of نَاسَ (nāsa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُنَسْ (tunas) /tu.nas/: inflection of نَاسَ (nāsa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanus", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "أنس",
-        "u": "أنس",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "أنس (form I)\n# أَنُسْ (ʔanus) /ʔa.nus/: first-person singular non-past active jussive of نَاسَ (nāsa)\n# أُنَسْ (ʔunas) /ʔu.nas/: first-person singular non-past passive jussive of نَاسَ (nāsa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔanus", "nāsa", "ʔunas"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "نسن",
-        "u": "نسن",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "نسن (form I)\n# نُسْنَ (nusna) /nus.na/: inflection of نَاسَ (nāsa):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# نِسْنَ (nisna) /nis.na/: third-person feminine plural past passive of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nusna", "nāsa", "nisna"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "نستن",
-        "u": "نستن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نستن (form I)\n# نُسْتُنَّ (nustunna) /nus.tun.na/: second-person feminine plural past active of نَاسَ (nāsa)\n# نِسْتُنَّ (nistunna) /nis.tun.na/: second-person feminine plural past passive of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nustunna", "nāsa", "nistunna"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "ننس",
-        "u": "ننس",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "ننس (form I)\n# نَنُسْ (nanus) /na.nus/: first-person plural non-past active jussive of نَاسَ (nāsa)\n# نُنَسْ (nunas) /nu.nas/: first-person plural non-past passive jussive of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nanus", "nāsa", "nunas"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "نيس",
-        "u": "نيس",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نِيسَ • (nīsa) (form I) /niː.sa/\n# third-person masculine singular past passive of نَاسَ (nāsa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nīsa", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "نسنا",
-        "u": "نسنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نسنا (form I)\n# نُسْنَا (nusnā) /nus.naː/: first-person plural past active of نَاسَ (nāsa)\n# نِسْنَا (nisnā) /nis.naː/: first-person plural past passive of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nusnā", "nāsa", "nisnā"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوس",
-        "u": "تنوس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تنوس (form I)\n# تَنُوسُ (tanūsu) /ta.nuː.su/: inflection of نَاسَ (nāsa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَنُوسَ (tanūsa) /ta.nuː.sa/: inflection of نَاسَ (nāsa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūsu", "nāsa", "tanūsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "نستم",
-        "u": "نستم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نستم (form I)\n# نُسْتُمْ (nustum) /nus.tum/: second-person masculine plural past active of نَاسَ (nāsa)\n# نِسْتُمْ (nistum) /nis.tum/: second-person masculine plural past passive of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nustum", "nāsa", "nistum"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "تناسوا",
-        "u": "تناسوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُنَاسُوا • (tunāsū) (form I) /tu.naː.suː/\n# second-person masculine plural non-past passive subjunctive/jussive of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tunāsū", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوسي",
-        "u": "تنوسي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَنُوسِي • (tanūsī) (form I) /ta.nuː.siː/\n# second-person feminine singular non-past active subjunctive/jussive of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūsī", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوسوا",
-        "u": "تنوسوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَنُوسُوا • (tanūsū) (form I) /ta.nuː.suː/\n# second-person masculine plural non-past active subjunctive/jussive of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūsū", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوسين",
-        "u": "تنوسين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَنُوسِينَ • (tanūsīna) (form I) /ta.nuː.siː.na/\n# second-person feminine singular non-past active indicative of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūsīna", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "تناسين",
-        "u": "تناسين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُنَاسِينَ • (tunāsīna) (form I) /tu.naː.siː.na/\n# second-person feminine singular non-past passive indicative of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tunāsīna", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "تناس",
-        "u": "تناس",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تناس (form I)\n# تُنَاسُ (tunāsu) /tu.naː.su/: inflection of نَاسَ (nāsa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُنَاسَ (tunāsa) /tu.naː.sa/: inflection of نَاسَ (nāsa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tunāsu", "nāsa", "tunāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "تناسي",
-        "u": "تناسي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُنَاسِي • (tunāsī) (form I) /tu.naː.siː/\n# second-person feminine singular non-past passive subjunctive/jussive of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tunāsī", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "ناست",
-        "u": "ناست",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَاسَتْ • (nāsat) (form I) /naː.sat/\n# third-person feminine singular past active of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nāsat", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "ناستا",
-        "u": "ناستا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَاسَتَا • (nāsatā) (form I) /naː.sa.taː/\n# third-person feminine dual past active of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nāsatā", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "نستما",
-        "u": "نستما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نستما (form I)\n# نُسْتُمَا (nustumā) /nus.tu.maː/: second-person dual past active of نَاسَ (nāsa)\n# نِسْتُمَا (nistumā) /nis.tu.maː/: second-person dual past passive of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nustumā", "nāsa", "nistumā"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "ناسوا",
-        "u": "ناسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَاسُوا • (nāsū) (form I) /naː.suː/\n# third-person masculine plural past active of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nāsū", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "نيسا",
-        "u": "نيسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نِيسَا • (nīsā) (form I) /niː.saː/\n# third-person masculine dual past passive of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nīsā", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "نيست",
-        "u": "نيست",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نِيسَتْ • (nīsat) (form I) /niː.sat/\n# third-person feminine singular past passive of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nīsat", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "نيسوا",
-        "u": "نيسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نِيسُوا • (nīsū) (form I) /niː.suː/\n# third-person masculine plural past passive of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nīsū", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "نيستا",
-        "u": "نيستا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نِيسَتَا • (nīsatā) (form I) /niː.sa.taː/\n# third-person feminine dual past passive of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nīsatā", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "أنوس",
-        "u": "أنوس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنوس (form I)\n# أَنُوسُ (ʔanūsu) /ʔa.nuː.su/: first-person singular non-past active indicative of نَاسَ (nāsa)\n# أَنُوسَ (ʔanūsa) /ʔa.nuː.sa/: first-person singular non-past active subjunctive of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔanūsu", "nāsa", "ʔanūsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوسان",
-        "u": "تنوسان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنُوسَانِ • (tanūsāni) (form I) /ta.nuː.saː.ni/\n# inflection of نَاسَ (nāsa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūsāni", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "ينوس",
-        "u": "ينوس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ينوس (form I)\n# يَنُوسُ (yanūsu) /ja.nuː.su/: third-person masculine singular non-past active indicative of نَاسَ (nāsa)\n# يَنُوسَ (yanūsa) /ja.nuː.sa/: third-person masculine singular non-past active subjunctive of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanūsu", "nāsa", "yanūsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوسون",
-        "u": "تنوسون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنُوسُونَ • (tanūsūna) (form I) /ta.nuː.suː.na/\n# second-person masculine plural non-past active indicative of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūsūna", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "ننوس",
-        "u": "ننوس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ننوس (form I)\n# نَنُوسُ (nanūsu) /na.nuː.su/: first-person plural non-past active indicative of نَاسَ (nāsa)\n# نَنُوسَ (nanūsa) /na.nuː.sa/: first-person plural non-past active subjunctive of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nanūsu", "nāsa", "nanūsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "ينوسون",
-        "u": "ينوسون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَنُوسُونَ • (yanūsūna) (form I) /ja.nuː.suː.na/\n# third-person masculine plural non-past active indicative of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanūsūna", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "ينوسان",
-        "u": "ينوسان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَنُوسَانِ • (yanūsāni) (form I) /ja.nuː.saː.ni/\n# third-person masculine dual non-past active indicative of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanūsāni", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "ينسن",
-        "u": "ينسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ينسن (form I)\n# يَنُسْنَ (yanusna) /ja.nus.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of نَاسَ (nāsa)\n# يُنَسْنَ (yunasna) /ju.nas.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanusna", "nāsa", "yunasna"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "يناس",
-        "u": "يناس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يناس (form I)\n# يُنَاسُ (yunāsu) /ju.naː.su/: third-person masculine singular non-past passive indicative of نَاسَ (nāsa)\n# يُنَاسَ (yunāsa) /ju.naː.sa/: third-person masculine singular non-past passive subjunctive of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yunāsu", "nāsa", "yunāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "يناسان",
-        "u": "يناسان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُنَاسَانِ • (yunāsāni) (form I) /ju.naː.saː.ni/\n# third-person masculine dual non-past passive indicative of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yunāsāni", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "نناس",
-        "u": "نناس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نناس (form I)\n# نُنَاسُ (nunāsu) /nu.naː.su/: first-person plural non-past passive indicative of نَاسَ (nāsa)\n# نُنَاسَ (nunāsa) /nu.naː.sa/: first-person plural non-past passive subjunctive of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nunāsu", "nāsa", "nunāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "تناسان",
-        "u": "تناسان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُنَاسَانِ • (tunāsāni) (form I) /tu.naː.saː.ni/\n# inflection of نَاسَ (nāsa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tunāsāni", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "تناسون",
-        "u": "تناسون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُنَاسُونَ • (tunāsūna) (form I) /tu.naː.suː.na/\n# second-person masculine plural non-past passive indicative of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tunāsūna", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "يناسون",
-        "u": "يناسون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُنَاسُونَ • (yunāsūna) (form I) /ju.naː.suː.na/\n# third-person masculine plural non-past passive indicative of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yunāsūna", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "تنوسا",
-        "u": "تنوسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَنُوسَا • (tanūsā) (form I) /ta.nuː.saː/\n# inflection of نَاسَ (nāsa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanūsā", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "ينوسا",
-        "u": "ينوسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَنُوسَا • (yanūsā) (form I) /ja.nuː.saː/\n# third-person masculine dual non-past active subjunctive/jussive of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanūsā", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "ينوسوا",
-        "u": "ينوسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَنُوسُوا • (yanūsū) (form I) /ja.nuː.suː/\n# third-person masculine plural non-past active subjunctive/jussive of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanūsū", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "تناسا",
-        "u": "تناسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُنَاسَا • (tunāsā) (form I) /tu.naː.saː/\n# inflection of نَاسَ (nāsa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tunāsā", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "يناسوا",
-        "u": "يناسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُنَاسُوا • (yunāsū) (form I) /ju.naː.suː/\n# third-person masculine plural non-past passive subjunctive/jussive of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yunāsū", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "يناسا",
-        "u": "يناسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُنَاسَا • (yunāsā) (form I) /ju.naː.saː/\n# third-person masculine dual non-past passive subjunctive/jussive of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yunāsā", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "نوسي",
-        "u": "نوسي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوسِي • (nūsī) (form I) /nuː.siː/\n# second-person feminine singular imperative of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nūsī", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      },
-      {
-        "w": "نوسوا",
-        "u": "نوسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوسُوا • (nūsū) (form I) /nuː.suː/\n# second-person masculine plural imperative of نَاسَ (nāsa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nūsū", "nāsa"],
-        "k": "ناس",
-        "yol": "kök"
-      }
-    ],
-    "tercume": {}
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "نس",
+  "ses": {
     "harf": "ن",
+    "fasil": "نس",
     "mahrec": "zelakiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "ناسا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نَاسَا • (nāsā) (form I) /naː.saː/\n# third-person masculine dual past active of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nāsā", "nāsa"]
+    },
+    {
+      "madde": "نس",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نُسْ • (nus) (form I) /nus/\n# second-person masculine singular imperative of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nus", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنسن",
+      "tur": "verb",
+      "baslik": "تنسن (form I)\n# تَنُسْنَ (tanusna) /ta.nus.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of نَاسَ (nāsa)\n# تُنَسْنَ (tunasna) /tu.nas.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanusna", "nāsa", "tunasna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوسا",
+      "tur": "verb",
+      "baslik": "نُوسَا • (nūsā) (form I) /nuː.saː/\n# second-person dual imperative of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nūsā", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أناس",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أناس (form I)\n# أُنَاسُ (ʔunāsu) /ʔu.naː.su/: first-person singular non-past passive indicative of نَاسَ (nāsa)\n# أُنَاسَ (ʔunāsa) /ʔu.naː.sa/: first-person singular non-past passive subjunctive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss", "plural", "plural-only"],
+      "okunus": ["ʔunāsu", "nāsa", "ʔunāsa"]
+    },
+    {
+      "madde": "ينس",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "ينس (form I)\n# يَنُسْ (yanus) /ja.nus/: third-person masculine singular non-past active jussive of نَاسَ (nāsa)\n# يُنَسْ (yunas) /ju.nas/: third-person masculine singular non-past passive jussive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanus", "nāsa", "yunas"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نست",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نست (form I)\n# نُسْتُ (nustu) /nus.tu/: first-person singular past active of نَاسَ (nāsa)\n# نُسْتَ (nusta) /nus.ta/: second-person masculine singular past active of نَاسَ (nāsa)\n# نُسْتِ (nusti) /nus.ti/: second-person feminine singular past active of نَاسَ (nāsa)\n# نِسْتُ (nistu) /nis.tu/: first-person singular past passive of نَاسَ (nāsa)\n# نِسْتَ (nista) /nis.ta/: second-person masculine singul",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nustu", "nāsa", "nusta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنس",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تنس (form I)\n# تَنُسْ (tanus) /ta.nus/: inflection of نَاسَ (nāsa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُنَسْ (tunas) /tu.nas/: inflection of نَاسَ (nāsa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanus", "nāsa"]
+    },
+    {
+      "madde": "أنس",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "أنس (form I)\n# أَنُسْ (ʔanus) /ʔa.nus/: first-person singular non-past active jussive of نَاسَ (nāsa)\n# أُنَسْ (ʔunas) /ʔu.nas/: first-person singular non-past passive jussive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔanus", "nāsa", "ʔunas"]
+    },
+    {
+      "madde": "نسن",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "نسن (form I)\n# نُسْنَ (nusna) /nus.na/: inflection of نَاسَ (nāsa):\n## third-person feminine plural past active\n## second-person feminine plural imperative\n# نِسْنَ (nisna) /nis.na/: third-person feminine plural past passive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nusna", "nāsa", "nisna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نستن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نستن (form I)\n# نُسْتُنَّ (nustunna) /nus.tun.na/: second-person feminine plural past active of نَاسَ (nāsa)\n# نِسْتُنَّ (nistunna) /nis.tun.na/: second-person feminine plural past passive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nustunna", "nāsa", "nistunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ننس",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "ننس (form I)\n# نَنُسْ (nanus) /na.nus/: first-person plural non-past active jussive of نَاسَ (nāsa)\n# نُنَسْ (nunas) /nu.nas/: first-person plural non-past passive jussive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nanus", "nāsa", "nunas"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نيس",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نِيسَ • (nīsa) (form I) /niː.sa/\n# third-person masculine singular past passive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nīsa", "nāsa"]
+    },
+    {
+      "madde": "نسنا",
+      "tur": "verb",
+      "baslik": "نسنا (form I)\n# نُسْنَا (nusnā) /nus.naː/: first-person plural past active of نَاسَ (nāsa)\n# نِسْنَا (nisnā) /nis.naː/: first-person plural past passive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nusnā", "nāsa", "nisnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنوس",
+      "tur": "verb",
+      "baslik": "تنوس (form I)\n# تَنُوسُ (tanūsu) /ta.nuː.su/: inflection of نَاسَ (nāsa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَنُوسَ (tanūsa) /ta.nuː.sa/: inflection of نَاسَ (nāsa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūsu", "nāsa", "tanūsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نستم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نستم (form I)\n# نُسْتُمْ (nustum) /nus.tum/: second-person masculine plural past active of نَاسَ (nāsa)\n# نِسْتُمْ (nistum) /nis.tum/: second-person masculine plural past passive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nustum", "nāsa", "nistum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تناسوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُنَاسُوا • (tunāsū) (form I) /tu.naː.suː/\n# second-person masculine plural non-past passive subjunctive/jussive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tunāsū", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنوسي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَنُوسِي • (tanūsī) (form I) /ta.nuː.siː/\n# second-person feminine singular non-past active subjunctive/jussive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūsī", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنوسوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَنُوسُوا • (tanūsū) (form I) /ta.nuː.suː/\n# second-person masculine plural non-past active subjunctive/jussive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūsū", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنوسين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَنُوسِينَ • (tanūsīna) (form I) /ta.nuː.siː.na/\n# second-person feminine singular non-past active indicative of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūsīna", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تناسين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُنَاسِينَ • (tunāsīna) (form I) /tu.naː.siː.na/\n# second-person feminine singular non-past passive indicative of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tunāsīna", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تناس",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تناس (form I)\n# تُنَاسُ (tunāsu) /tu.naː.su/: inflection of نَاسَ (nāsa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُنَاسَ (tunāsa) /tu.naː.sa/: inflection of نَاسَ (nāsa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tunāsu", "nāsa", "tunāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تناسي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُنَاسِي • (tunāsī) (form I) /tu.naː.siː/\n# second-person feminine singular non-past passive subjunctive/jussive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tunāsī", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ناست",
+      "tur": "verb",
+      "baslik": "نَاسَتْ • (nāsat) (form I) /naː.sat/\n# third-person feminine singular past active of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nāsat", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ناستا",
+      "tur": "verb",
+      "baslik": "نَاسَتَا • (nāsatā) (form I) /naː.sa.taː/\n# third-person feminine dual past active of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nāsatā", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نستما",
+      "tur": "verb",
+      "baslik": "نستما (form I)\n# نُسْتُمَا (nustumā) /nus.tu.maː/: second-person dual past active of نَاسَ (nāsa)\n# نِسْتُمَا (nistumā) /nis.tu.maː/: second-person dual past passive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nustumā", "nāsa", "nistumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ناسوا",
+      "tur": "verb",
+      "baslik": "نَاسُوا • (nāsū) (form I) /naː.suː/\n# third-person masculine plural past active of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nāsū", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نيسا",
+      "tur": "verb",
+      "baslik": "نِيسَا • (nīsā) (form I) /niː.saː/\n# third-person masculine dual past passive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nīsā", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نيست",
+      "tur": "verb",
+      "baslik": "نِيسَتْ • (nīsat) (form I) /niː.sat/\n# third-person feminine singular past passive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nīsat", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نيسوا",
+      "tur": "verb",
+      "baslik": "نِيسُوا • (nīsū) (form I) /niː.suː/\n# third-person masculine plural past passive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nīsū", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نيستا",
+      "tur": "verb",
+      "baslik": "نِيسَتَا • (nīsatā) (form I) /niː.sa.taː/\n# third-person feminine dual past passive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nīsatā", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أنوس",
+      "tur": "verb",
+      "baslik": "أنوس (form I)\n# أَنُوسُ (ʔanūsu) /ʔa.nuː.su/: first-person singular non-past active indicative of نَاسَ (nāsa)\n# أَنُوسَ (ʔanūsa) /ʔa.nuː.sa/: first-person singular non-past active subjunctive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔanūsu", "nāsa", "ʔanūsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنوسان",
+      "tur": "verb",
+      "baslik": "تَنُوسَانِ • (tanūsāni) (form I) /ta.nuː.saː.ni/\n# inflection of نَاسَ (nāsa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūsāni", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينوس",
+      "tur": "verb",
+      "baslik": "ينوس (form I)\n# يَنُوسُ (yanūsu) /ja.nuː.su/: third-person masculine singular non-past active indicative of نَاسَ (nāsa)\n# يَنُوسَ (yanūsa) /ja.nuː.sa/: third-person masculine singular non-past active subjunctive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanūsu", "nāsa", "yanūsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنوسون",
+      "tur": "verb",
+      "baslik": "تَنُوسُونَ • (tanūsūna) (form I) /ta.nuː.suː.na/\n# second-person masculine plural non-past active indicative of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūsūna", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ننوس",
+      "tur": "verb",
+      "baslik": "ننوس (form I)\n# نَنُوسُ (nanūsu) /na.nuː.su/: first-person plural non-past active indicative of نَاسَ (nāsa)\n# نَنُوسَ (nanūsa) /na.nuː.sa/: first-person plural non-past active subjunctive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nanūsu", "nāsa", "nanūsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينوسون",
+      "tur": "verb",
+      "baslik": "يَنُوسُونَ • (yanūsūna) (form I) /ja.nuː.suː.na/\n# third-person masculine plural non-past active indicative of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanūsūna", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينوسان",
+      "tur": "verb",
+      "baslik": "يَنُوسَانِ • (yanūsāni) (form I) /ja.nuː.saː.ni/\n# third-person masculine dual non-past active indicative of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanūsāni", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينسن",
+      "tur": "verb",
+      "baslik": "ينسن (form I)\n# يَنُسْنَ (yanusna) /ja.nus.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of نَاسَ (nāsa)\n# يُنَسْنَ (yunasna) /ju.nas.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanusna", "nāsa", "yunasna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يناس",
+      "tur": "verb",
+      "baslik": "يناس (form I)\n# يُنَاسُ (yunāsu) /ju.naː.su/: third-person masculine singular non-past passive indicative of نَاسَ (nāsa)\n# يُنَاسَ (yunāsa) /ju.naː.sa/: third-person masculine singular non-past passive subjunctive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yunāsu", "nāsa", "yunāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يناسان",
+      "tur": "verb",
+      "baslik": "يُنَاسَانِ • (yunāsāni) (form I) /ju.naː.saː.ni/\n# third-person masculine dual non-past passive indicative of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yunāsāni", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نناس",
+      "tur": "verb",
+      "baslik": "نناس (form I)\n# نُنَاسُ (nunāsu) /nu.naː.su/: first-person plural non-past passive indicative of نَاسَ (nāsa)\n# نُنَاسَ (nunāsa) /nu.naː.sa/: first-person plural non-past passive subjunctive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nunāsu", "nāsa", "nunāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تناسان",
+      "tur": "verb",
+      "baslik": "تُنَاسَانِ • (tunāsāni) (form I) /tu.naː.saː.ni/\n# inflection of نَاسَ (nāsa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tunāsāni", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تناسون",
+      "tur": "verb",
+      "baslik": "تُنَاسُونَ • (tunāsūna) (form I) /tu.naː.suː.na/\n# second-person masculine plural non-past passive indicative of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tunāsūna", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يناسون",
+      "tur": "verb",
+      "baslik": "يُنَاسُونَ • (yunāsūna) (form I) /ju.naː.suː.na/\n# third-person masculine plural non-past passive indicative of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yunāsūna", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تنوسا",
+      "tur": "verb",
+      "baslik": "تَنُوسَا • (tanūsā) (form I) /ta.nuː.saː/\n# inflection of نَاسَ (nāsa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanūsā", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينوسا",
+      "tur": "verb",
+      "baslik": "يَنُوسَا • (yanūsā) (form I) /ja.nuː.saː/\n# third-person masculine dual non-past active subjunctive/jussive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanūsā", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ينوسوا",
+      "tur": "verb",
+      "baslik": "يَنُوسُوا • (yanūsū) (form I) /ja.nuː.suː/\n# third-person masculine plural non-past active subjunctive/jussive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanūsū", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تناسا",
+      "tur": "verb",
+      "baslik": "تُنَاسَا • (tunāsā) (form I) /tu.naː.saː/\n# inflection of نَاسَ (nāsa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tunāsā", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يناسوا",
+      "tur": "verb",
+      "baslik": "يُنَاسُوا • (yunāsū) (form I) /ju.naː.suː/\n# third-person masculine plural non-past passive subjunctive/jussive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yunāsū", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يناسا",
+      "tur": "verb",
+      "baslik": "يُنَاسَا • (yunāsā) (form I) /ju.naː.saː/\n# third-person masculine dual non-past passive subjunctive/jussive of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yunāsā", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوسي",
+      "tur": "verb",
+      "baslik": "نُوسِي • (nūsī) (form I) /nuː.siː/\n# second-person feminine singular imperative of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nūsī", "nāsa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نوسوا",
+      "tur": "verb",
+      "baslik": "نُوسُوا • (nūsū) (form I) /nuː.suː/\n# second-person masculine plural imperative of نَاسَ (nāsa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nūsū", "nāsa"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ناس", "r7"]
+  ],
+  "mana": {
     "ince": "citizenry.n.01",
     "orta": "noun.group",
     "ust": "insan ve toplum",
@@ -686,22 +482,15 @@
     "dayanak_tanim": "the body of citizens of a state or country",
     "synset_sayisi": 2
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["citizenry.n.01", "region.n.03"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["citizenry.n.01", "region.n.03"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

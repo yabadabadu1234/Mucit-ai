@@ -1,439 +1,352 @@
 {
   "kok": "ءغنى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءغنى", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يغني",
-        "u": "يغني",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يغني (form IV)\n# يُغْنِي (yuḡnī) /juɣ.niː/: third-person masculine singular non-past active indicative of أَغْنَى (ʔaḡnā)\n# يُغْنِيَ (yuḡniya) /juɣ.ni.ja/: third-person masculine singular non-past active subjunctive of أَغْنَى (ʔaḡnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḡnī", "ʔaḡnā", "yuḡniya"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "يغنى",
-        "u": "يغنى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُغْنَى • (yuḡnā) (form IV) /juɣ.naː/\n# third-person masculine singular non-past passive indicative/subjunctive of أَغْنَى (ʔaḡnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḡnā", "ʔaḡnā"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "يغن",
-        "u": "يغن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يغن (form IV)\n# يُغْنِ (yuḡni) /juɣ.ni/: third-person masculine singular non-past active jussive of أَغْنَى (ʔaḡnā)\n# يُغْنَ (yuḡna) /juɣ.na/: third-person masculine singular non-past passive jussive of أَغْنَى (ʔaḡnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḡni", "ʔaḡnā", "yuḡna"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغني",
-        "u": "تغني",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تغني (form IV)\n# تُغْنِي (tuḡnī) /tuɣ.niː/: inflection of أَغْنَى (ʔaḡnā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُغْنِيَ (tuḡniya) /tuɣ.ni.ja/: inflection of أَغْنَى (ʔaḡnā):\n## second-person masculine singular non-past active subjunctive\n#",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḡnī", "ʔaḡnā", "tuḡniya"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغن",
-        "u": "تغن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تغن (form IV)\n# تُغْنِ (tuḡni) /tuɣ.ni/: inflection of أَغْنَى (ʔaḡnā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُغْنَ (tuḡna) /tuɣ.na/: inflection of أَغْنَى (ʔaḡnā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḡni", "ʔaḡnā", "tuḡna"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغنى",
-        "u": "تغنى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُغْنَى • (tuḡnā) (form IV) /tuɣ.naː/\n# inflection of أَغْنَى (ʔaḡnā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḡnā", "ʔaḡnā"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغنين",
-        "u": "تغنين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تغنين (form IV)\n# تُغْنِينَ (tuḡnīna) /tuɣ.niː.na/: inflection of أَغْنَى (ʔaḡnā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُغْنَيْنَ (tuḡnayna) /tuɣ.naj.na/: inflection of أَغْنَى (ʔaḡnā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-pas",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḡnīna", "ʔaḡnā", "tuḡnayna"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أغني",
-        "u": "أغني",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أغني (form IV)\n# أُغْنِيَ (ʔuḡniya) /ʔuɣ.ni.ja/: inflection of أَغْنَى (ʔaḡnā):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُغْنِي (ʔuḡnī) /ʔuɣ.niː/: first-person singular non-past active indicative of أَغْنَى (ʔaḡnā)\n# أَغْنِي (ʔaḡnī) /ʔaɣ.niː/: second-person feminine singular imperative of أَغْنَى (ʔaḡnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuḡniya", "ʔaḡnā", "ʔuḡnī"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أغن",
-        "u": "أغن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أغن (form IV)\n# أُغْنِ (ʔuḡni) /ʔuɣ.ni/: first-person singular non-past active jussive of أَغْنَى (ʔaḡnā)\n# أُغْنَ (ʔuḡna) /ʔuɣ.na/: first-person singular non-past passive jussive of أَغْنَى (ʔaḡnā)\n# أَغْنِ (ʔaḡni) /ʔaɣ.ni/: second-person masculine singular imperative of أَغْنَى (ʔaḡnā)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuḡni", "ʔaḡnā", "ʔuḡna"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "نغني",
-        "u": "نغني",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نغني (form IV)\n# نُغْنِي (nuḡnī) /nuɣ.niː/: first-person plural non-past active indicative of أَغْنَى (ʔaḡnā)\n# نُغْنِيَ (nuḡniya) /nuɣ.ni.ja/: first-person plural non-past active subjunctive of أَغْنَى (ʔaḡnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuḡnī", "ʔaḡnā", "nuḡniya"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "نغن",
-        "u": "نغن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نغن (form IV)\n# نُغْنِ (nuḡni) /nuɣ.ni/: first-person plural non-past active jussive of أَغْنَى (ʔaḡnā)\n# نُغْنَ (nuḡna) /nuɣ.na/: first-person plural non-past passive jussive of أَغْنَى (ʔaḡnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuḡni", "ʔaḡnā", "nuḡna"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "نغنى",
-        "u": "نغنى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نُغْنَى • (nuḡnā) (form IV) /nuɣ.naː/\n# first-person plural non-past passive indicative/subjunctive of أَغْنَى (ʔaḡnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuḡnā", "ʔaḡnā"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغنون",
-        "u": "تغنون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تغنون (form IV)\n# تُغْنُونَ (tuḡnūna) /tuɣ.nuː.na/: second-person masculine plural non-past active indicative of أَغْنَى (ʔaḡnā)\n# تُغْنَوْنَ (tuḡnawna) /tuɣ.naw.na/: second-person masculine plural non-past passive indicative of أَغْنَى (ʔaḡnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḡnūna", "ʔaḡnā", "tuḡnawna"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغنوا",
-        "u": "تغنوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تغنوا (form IV)\n# تُغْنُوا (tuḡnū) /tuɣ.nuː/: second-person masculine plural non-past active subjunctive/jussive of أَغْنَى (ʔaḡnā)\n# تُغْنَوْا (tuḡnaw) /tuɣ.naw/: second-person masculine plural non-past passive subjunctive/jussive of أَغْنَى (ʔaḡnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḡnū", "ʔaḡnā", "tuḡnaw"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "يغنون",
-        "u": "يغنون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يغنون (form IV)\n# يُغْنُونَ (yuḡnūna) /juɣ.nuː.na/: third-person masculine plural non-past active indicative of أَغْنَى (ʔaḡnā)\n# يُغْنَوْنَ (yuḡnawna) /juɣ.naw.na/: third-person masculine plural non-past passive indicative of أَغْنَى (ʔaḡnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḡnūna", "ʔaḡnā", "yuḡnawna"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "يغنوا",
-        "u": "يغنوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يغنوا (form IV)\n# يُغْنُوا (yuḡnū) /juɣ.nuː/: third-person masculine plural non-past active subjunctive/jussive of أَغْنَى (ʔaḡnā)\n# يُغْنَوْا (yuḡnaw) /juɣ.naw/: third-person masculine plural non-past passive subjunctive/jussive of أَغْنَى (ʔaḡnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḡnū", "ʔaḡnā", "yuḡnaw"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "يغنين",
-        "u": "يغنين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يغنين (form IV)\n# يُغْنِينَ (yuḡnīna) /juɣ.niː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَغْنَى (ʔaḡnā)\n# يُغْنَيْنَ (yuḡnayna) /juɣ.naj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَغْنَى (ʔaḡnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḡnīna", "ʔaḡnā", "yuḡnayna"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أغنت",
-        "u": "أغنت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَغْنَتْ • (ʔaḡnat) (form IV) /ʔaɣ.nat/\n# third-person feminine singular past active of أَغْنَى (ʔaḡnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḡnat", "ʔaḡnā"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أغنتا",
-        "u": "أغنتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَغْنَتَا • (ʔaḡnatā) (form IV) /ʔaɣ.na.taː/\n# third-person feminine dual past active of أَغْنَى (ʔaḡnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḡnatā", "ʔaḡnā"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أغنوا",
-        "u": "أغنوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أغنوا (form IV)\n# أَغْنَوْا (ʔaḡnaw) /ʔaɣ.naw/: third-person masculine plural past active of أَغْنَى (ʔaḡnā)\n# أُغْنُوا (ʔuḡnū) /ʔuɣ.nuː/: third-person masculine plural past passive of أَغْنَى (ʔaḡnā)\n# أَغْنُوا (ʔaḡnū) /ʔaɣ.nuː/: second-person masculine plural imperative of أَغْنَى (ʔaḡnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḡnaw", "ʔaḡnā", "ʔuḡnū"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أغنيتما",
-        "u": "أغنيتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أغنيتما (form IV)\n# أَغْنَيْتُمَا (ʔaḡnaytumā) /ʔaɣ.naj.tu.maː/: second-person dual past active of أَغْنَى (ʔaḡnā)\n# أُغْنِيتُمَا (ʔuḡnītumā) /ʔuɣ.niː.tu.maː/: second-person dual past passive of أَغْنَى (ʔaḡnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḡnaytumā", "ʔaḡnā", "ʔuḡnītumā"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أغنيت",
-        "u": "أغنيت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أغنيت (form IV)\n# أَغْنَيْتُ (ʔaḡnaytu) /ʔaɣ.naj.tu/: first-person singular past active of أَغْنَى (ʔaḡnā)\n# أَغْنَيْتَ (ʔaḡnayta) /ʔaɣ.naj.ta/: second-person masculine singular past active of أَغْنَى (ʔaḡnā)\n# أَغْنَيْتِ (ʔaḡnayti) /ʔaɣ.naj.ti/: second-person feminine singular past active of أَغْنَى (ʔaḡnā)\n# أُغْنِيتُ (ʔuḡnītu) /ʔuɣ.niː.tu/: first-person singular past passive of أَغْنَى (ʔaḡnā)\n",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḡnaytu", "ʔaḡnā", "ʔaḡnayta"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أغنينا",
-        "u": "أغنينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أغنينا (form IV)\n# أَغْنَيْنَا (ʔaḡnaynā) /ʔaɣ.naj.naː/: first-person plural past active of أَغْنَى (ʔaḡnā)\n# أُغْنِينَا (ʔuḡnīnā) /ʔuɣ.niː.naː/: first-person plural past passive of أَغْنَى (ʔaḡnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḡnaynā", "ʔaḡnā", "ʔuḡnīnā"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أغنيا",
-        "u": "أغنيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أغنيا (form IV)\n# أَغْنَيَا (ʔaḡnayā) /ʔaɣ.na.jaː/: third-person masculine dual past active of أَغْنَى (ʔaḡnā)\n# أُغْنِيَا (ʔuḡniyā) /ʔuɣ.ni.jaː/: third-person masculine dual past passive of أَغْنَى (ʔaḡnā)\n# أَغْنِيَا (ʔaḡniyā) /ʔaɣ.ni.jaː/: second-person dual imperative of أَغْنَى (ʔaḡnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḡnayā", "ʔaḡnā", "ʔuḡniyā"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أغنيتم",
-        "u": "أغنيتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أغنيتم (form IV)\n# أَغْنَيْتُمْ (ʔaḡnaytum) /ʔaɣ.naj.tum/: second-person masculine plural past active of أَغْنَى (ʔaḡnā)\n# أُغْنِيتُمْ (ʔuḡnītum) /ʔuɣ.niː.tum/: second-person masculine plural past passive of أَغْنَى (ʔaḡnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḡnaytum", "ʔaḡnā", "ʔuḡnītum"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أغنيتن",
-        "u": "أغنيتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أغنيتن (form IV)\n# أَغْنَيْتُنَّ (ʔaḡnaytunna) /ʔaɣ.naj.tun.na/: second-person feminine plural past active of أَغْنَى (ʔaḡnā)\n# أُغْنِيتُنَّ (ʔuḡnītunna) /ʔuɣ.niː.tun.na/: second-person feminine plural past passive of أَغْنَى (ʔaḡnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḡnaytunna", "ʔaḡnā", "ʔuḡnītunna"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أغنيتا",
-        "u": "أغنيتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُغْنِيَتَا • (ʔuḡniyatā) (form IV) /ʔuɣ.ni.ja.taː/\n# third-person feminine dual past passive of أَغْنَى (ʔaḡnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuḡniyatā", "ʔaḡnā"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "أغنين",
-        "u": "أغنين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أغنين (form IV)\n# أَغْنَيْنَ (ʔaḡnayna) /ʔaɣ.naj.na/: third-person feminine plural past active of أَغْنَى (ʔaḡnā)\n# أُغْنِينَ (ʔuḡnīna) /ʔuɣ.niː.na/: third-person feminine plural past passive of أَغْنَى (ʔaḡnā)\n# أَغْنِينَ (ʔaḡnīna) /ʔaɣ.niː.na/: second-person feminine plural imperative of أَغْنَى (ʔaḡnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaḡnayna", "ʔaḡnā", "ʔuḡnīna"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "يغنيان",
-        "u": "يغنيان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يغنيان (form IV)\n# يُغْنِيَانِ (yuḡniyāni) /juɣ.ni.jaː.ni/: third-person masculine dual non-past active indicative of أَغْنَى (ʔaḡnā)\n# يُغْنَيَانِ (yuḡnayāni) /juɣ.na.jaː.ni/: third-person masculine dual non-past passive indicative of أَغْنَى (ʔaḡnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḡniyāni", "ʔaḡnā", "yuḡnayāni"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغنيا",
-        "u": "تغنيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تغنيا (form IV)\n# تُغْنِيَا (tuḡniyā) /tuɣ.ni.jaː/: inflection of أَغْنَى (ʔaḡnā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُغْنَيَا (tuḡnayā) /tuɣ.na.jaː/: inflection of أَغْنَى (ʔaḡnā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḡniyā", "ʔaḡnā", "tuḡnayā"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "تغنيان",
-        "u": "تغنيان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تغنيان (form IV)\n# تُغْنِيَانِ (tuḡniyāni) /tuɣ.ni.jaː.ni/: inflection of أَغْنَى (ʔaḡnā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُغْنَيَانِ (tuḡnayāni) /tuɣ.na.jaː.ni/: inflection of أَغْنَى (ʔaḡnā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuḡniyāni", "ʔaḡnā", "tuḡnayāni"],
-        "k": "أغنى",
-        "yol": "kök"
-      },
-      {
-        "w": "يغنيا",
-        "u": "يغنيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يغنيا (form IV)\n# يُغْنِيَا (yuḡniyā) /juɣ.ni.jaː/: third-person masculine dual non-past active subjunctive/jussive of أَغْنَى (ʔaḡnā)\n# يُغْنَيَا (yuḡnayā) /juɣ.na.jaː/: third-person masculine dual non-past passive subjunctive/jussive of أَغْنَى (ʔaḡnā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuḡniyā", "ʔaḡnā", "yuḡnayā"],
-        "k": "أغنى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "غن",
+  "ses": {
     "harf": "ء",
+    "fasil": "غن",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "يغني",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يغني (form IV)\n# يُغْنِي (yuḡnī) /juɣ.niː/: third-person masculine singular non-past active indicative of أَغْنَى (ʔaḡnā)\n# يُغْنِيَ (yuḡniya) /juɣ.ni.ja/: third-person masculine singular non-past active subjunctive of أَغْنَى (ʔaḡnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḡnī", "ʔaḡnā", "yuḡniya"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغنى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُغْنَى • (yuḡnā) (form IV) /juɣ.naː/\n# third-person masculine singular non-past passive indicative/subjunctive of أَغْنَى (ʔaḡnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḡnā", "ʔaḡnā"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يغن (form IV)\n# يُغْنِ (yuḡni) /juɣ.ni/: third-person masculine singular non-past active jussive of أَغْنَى (ʔaḡnā)\n# يُغْنَ (yuḡna) /juɣ.na/: third-person masculine singular non-past passive jussive of أَغْنَى (ʔaḡnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḡni", "ʔaḡnā", "yuḡna"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغني",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تغني (form IV)\n# تُغْنِي (tuḡnī) /tuɣ.niː/: inflection of أَغْنَى (ʔaḡnā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُغْنِيَ (tuḡniya) /tuɣ.ni.ja/: inflection of أَغْنَى (ʔaḡnā):\n## second-person masculine singular non-past active subjunctive\n#",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḡnī", "ʔaḡnā", "tuḡniya"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تغن (form IV)\n# تُغْنِ (tuḡni) /tuɣ.ni/: inflection of أَغْنَى (ʔaḡnā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُغْنَ (tuḡna) /tuɣ.na/: inflection of أَغْنَى (ʔaḡnā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḡni", "ʔaḡnā", "tuḡna"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغنى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُغْنَى • (tuḡnā) (form IV) /tuɣ.naː/\n# inflection of أَغْنَى (ʔaḡnā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḡnā", "ʔaḡnā"],
+      "kok_yazilis": "أغنى"
+    },
+    {
+      "madde": "تغنين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تغنين (form IV)\n# تُغْنِينَ (tuḡnīna) /tuɣ.niː.na/: inflection of أَغْنَى (ʔaḡnā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُغْنَيْنَ (tuḡnayna) /tuɣ.naj.na/: inflection of أَغْنَى (ʔaḡnā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-pas",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḡnīna", "ʔaḡnā", "tuḡnayna"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغني",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أغني (form IV)\n# أُغْنِيَ (ʔuḡniya) /ʔuɣ.ni.ja/: inflection of أَغْنَى (ʔaḡnā):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُغْنِي (ʔuḡnī) /ʔuɣ.niː/: first-person singular non-past active indicative of أَغْنَى (ʔaḡnā)\n# أَغْنِي (ʔaḡnī) /ʔaɣ.niː/: second-person feminine singular imperative of أَغْنَى (ʔaḡnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuḡniya", "ʔaḡnā", "ʔuḡnī"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أغن (form IV)\n# أُغْنِ (ʔuḡni) /ʔuɣ.ni/: first-person singular non-past active jussive of أَغْنَى (ʔaḡnā)\n# أُغْنَ (ʔuḡna) /ʔuɣ.na/: first-person singular non-past passive jussive of أَغْنَى (ʔaḡnā)\n# أَغْنِ (ʔaḡni) /ʔaɣ.ni/: second-person masculine singular imperative of أَغْنَى (ʔaḡnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuḡni", "ʔaḡnā", "ʔuḡna"],
+      "kok_yazilis": "أغنى"
+    },
+    {
+      "madde": "نغني",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نغني (form IV)\n# نُغْنِي (nuḡnī) /nuɣ.niː/: first-person plural non-past active indicative of أَغْنَى (ʔaḡnā)\n# نُغْنِيَ (nuḡniya) /nuɣ.ni.ja/: first-person plural non-past active subjunctive of أَغْنَى (ʔaḡnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuḡnī", "ʔaḡnā", "nuḡniya"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نغن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نغن (form IV)\n# نُغْنِ (nuḡni) /nuɣ.ni/: first-person plural non-past active jussive of أَغْنَى (ʔaḡnā)\n# نُغْنَ (nuḡna) /nuɣ.na/: first-person plural non-past passive jussive of أَغْنَى (ʔaḡnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuḡni", "ʔaḡnā", "nuḡna"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نغنى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نُغْنَى • (nuḡnā) (form IV) /nuɣ.naː/\n# first-person plural non-past passive indicative/subjunctive of أَغْنَى (ʔaḡnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuḡnā", "ʔaḡnā"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغنون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تغنون (form IV)\n# تُغْنُونَ (tuḡnūna) /tuɣ.nuː.na/: second-person masculine plural non-past active indicative of أَغْنَى (ʔaḡnā)\n# تُغْنَوْنَ (tuḡnawna) /tuɣ.naw.na/: second-person masculine plural non-past passive indicative of أَغْنَى (ʔaḡnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḡnūna", "ʔaḡnā", "tuḡnawna"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغنوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تغنوا (form IV)\n# تُغْنُوا (tuḡnū) /tuɣ.nuː/: second-person masculine plural non-past active subjunctive/jussive of أَغْنَى (ʔaḡnā)\n# تُغْنَوْا (tuḡnaw) /tuɣ.naw/: second-person masculine plural non-past passive subjunctive/jussive of أَغْنَى (ʔaḡnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḡnū", "ʔaḡnā", "tuḡnaw"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغنون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يغنون (form IV)\n# يُغْنُونَ (yuḡnūna) /juɣ.nuː.na/: third-person masculine plural non-past active indicative of أَغْنَى (ʔaḡnā)\n# يُغْنَوْنَ (yuḡnawna) /juɣ.naw.na/: third-person masculine plural non-past passive indicative of أَغْنَى (ʔaḡnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḡnūna", "ʔaḡnā", "yuḡnawna"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغنوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يغنوا (form IV)\n# يُغْنُوا (yuḡnū) /juɣ.nuː/: third-person masculine plural non-past active subjunctive/jussive of أَغْنَى (ʔaḡnā)\n# يُغْنَوْا (yuḡnaw) /juɣ.naw/: third-person masculine plural non-past passive subjunctive/jussive of أَغْنَى (ʔaḡnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḡnū", "ʔaḡnā", "yuḡnaw"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغنين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يغنين (form IV)\n# يُغْنِينَ (yuḡnīna) /juɣ.niː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَغْنَى (ʔaḡnā)\n# يُغْنَيْنَ (yuḡnayna) /juɣ.naj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَغْنَى (ʔaḡnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḡnīna", "ʔaḡnā", "yuḡnayna"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغنت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَغْنَتْ • (ʔaḡnat) (form IV) /ʔaɣ.nat/\n# third-person feminine singular past active of أَغْنَى (ʔaḡnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḡnat", "ʔaḡnā"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغنتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَغْنَتَا • (ʔaḡnatā) (form IV) /ʔaɣ.na.taː/\n# third-person feminine dual past active of أَغْنَى (ʔaḡnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḡnatā", "ʔaḡnā"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغنوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أغنوا (form IV)\n# أَغْنَوْا (ʔaḡnaw) /ʔaɣ.naw/: third-person masculine plural past active of أَغْنَى (ʔaḡnā)\n# أُغْنُوا (ʔuḡnū) /ʔuɣ.nuː/: third-person masculine plural past passive of أَغْنَى (ʔaḡnā)\n# أَغْنُوا (ʔaḡnū) /ʔaɣ.nuː/: second-person masculine plural imperative of أَغْنَى (ʔaḡnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḡnaw", "ʔaḡnā", "ʔuḡnū"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغنيتما",
+      "tur": "verb",
+      "baslik": "أغنيتما (form IV)\n# أَغْنَيْتُمَا (ʔaḡnaytumā) /ʔaɣ.naj.tu.maː/: second-person dual past active of أَغْنَى (ʔaḡnā)\n# أُغْنِيتُمَا (ʔuḡnītumā) /ʔuɣ.niː.tu.maː/: second-person dual past passive of أَغْنَى (ʔaḡnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḡnaytumā", "ʔaḡnā", "ʔuḡnītumā"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغنيت",
+      "tur": "verb",
+      "baslik": "أغنيت (form IV)\n# أَغْنَيْتُ (ʔaḡnaytu) /ʔaɣ.naj.tu/: first-person singular past active of أَغْنَى (ʔaḡnā)\n# أَغْنَيْتَ (ʔaḡnayta) /ʔaɣ.naj.ta/: second-person masculine singular past active of أَغْنَى (ʔaḡnā)\n# أَغْنَيْتِ (ʔaḡnayti) /ʔaɣ.naj.ti/: second-person feminine singular past active of أَغْنَى (ʔaḡnā)\n# أُغْنِيتُ (ʔuḡnītu) /ʔuɣ.niː.tu/: first-person singular past passive of أَغْنَى (ʔaḡnā)\n",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḡnaytu", "ʔaḡnā", "ʔaḡnayta"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغنينا",
+      "tur": "verb",
+      "baslik": "أغنينا (form IV)\n# أَغْنَيْنَا (ʔaḡnaynā) /ʔaɣ.naj.naː/: first-person plural past active of أَغْنَى (ʔaḡnā)\n# أُغْنِينَا (ʔuḡnīnā) /ʔuɣ.niː.naː/: first-person plural past passive of أَغْنَى (ʔaḡnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḡnaynā", "ʔaḡnā", "ʔuḡnīnā"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغنيا",
+      "tur": "verb",
+      "baslik": "أغنيا (form IV)\n# أَغْنَيَا (ʔaḡnayā) /ʔaɣ.na.jaː/: third-person masculine dual past active of أَغْنَى (ʔaḡnā)\n# أُغْنِيَا (ʔuḡniyā) /ʔuɣ.ni.jaː/: third-person masculine dual past passive of أَغْنَى (ʔaḡnā)\n# أَغْنِيَا (ʔaḡniyā) /ʔaɣ.ni.jaː/: second-person dual imperative of أَغْنَى (ʔaḡnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḡnayā", "ʔaḡnā", "ʔuḡniyā"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغنيتم",
+      "tur": "verb",
+      "baslik": "أغنيتم (form IV)\n# أَغْنَيْتُمْ (ʔaḡnaytum) /ʔaɣ.naj.tum/: second-person masculine plural past active of أَغْنَى (ʔaḡnā)\n# أُغْنِيتُمْ (ʔuḡnītum) /ʔuɣ.niː.tum/: second-person masculine plural past passive of أَغْنَى (ʔaḡnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḡnaytum", "ʔaḡnā", "ʔuḡnītum"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغنيتن",
+      "tur": "verb",
+      "baslik": "أغنيتن (form IV)\n# أَغْنَيْتُنَّ (ʔaḡnaytunna) /ʔaɣ.naj.tun.na/: second-person feminine plural past active of أَغْنَى (ʔaḡnā)\n# أُغْنِيتُنَّ (ʔuḡnītunna) /ʔuɣ.niː.tun.na/: second-person feminine plural past passive of أَغْنَى (ʔaḡnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḡnaytunna", "ʔaḡnā", "ʔuḡnītunna"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغنيتا",
+      "tur": "verb",
+      "baslik": "أُغْنِيَتَا • (ʔuḡniyatā) (form IV) /ʔuɣ.ni.ja.taː/\n# third-person feminine dual past passive of أَغْنَى (ʔaḡnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuḡniyatā", "ʔaḡnā"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أغنين",
+      "tur": "verb",
+      "baslik": "أغنين (form IV)\n# أَغْنَيْنَ (ʔaḡnayna) /ʔaɣ.naj.na/: third-person feminine plural past active of أَغْنَى (ʔaḡnā)\n# أُغْنِينَ (ʔuḡnīna) /ʔuɣ.niː.na/: third-person feminine plural past passive of أَغْنَى (ʔaḡnā)\n# أَغْنِينَ (ʔaḡnīna) /ʔaɣ.niː.na/: second-person feminine plural imperative of أَغْنَى (ʔaḡnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaḡnayna", "ʔaḡnā", "ʔuḡnīna"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغنيان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يغنيان (form IV)\n# يُغْنِيَانِ (yuḡniyāni) /juɣ.ni.jaː.ni/: third-person masculine dual non-past active indicative of أَغْنَى (ʔaḡnā)\n# يُغْنَيَانِ (yuḡnayāni) /juɣ.na.jaː.ni/: third-person masculine dual non-past passive indicative of أَغْنَى (ʔaḡnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḡniyāni", "ʔaḡnā", "yuḡnayāni"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغنيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تغنيا (form IV)\n# تُغْنِيَا (tuḡniyā) /tuɣ.ni.jaː/: inflection of أَغْنَى (ʔaḡnā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُغْنَيَا (tuḡnayā) /tuɣ.na.jaː/: inflection of أَغْنَى (ʔaḡnā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḡniyā", "ʔaḡnā", "tuḡnayā"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "تغنيان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تغنيان (form IV)\n# تُغْنِيَانِ (tuḡniyāni) /tuɣ.ni.jaː.ni/: inflection of أَغْنَى (ʔaḡnā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُغْنَيَانِ (tuḡnayāni) /tuɣ.na.jaː.ni/: inflection of أَغْنَى (ʔaḡnā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuḡniyāni", "ʔaḡnā", "tuḡnayāni"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يغنيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يغنيا (form IV)\n# يُغْنِيَا (yuḡniyā) /juɣ.ni.jaː/: third-person masculine dual non-past active subjunctive/jussive of أَغْنَى (ʔaḡnā)\n# يُغْنَيَا (yuḡnayā) /juɣ.na.jaː/: third-person masculine dual non-past passive subjunctive/jussive of أَغْنَى (ʔaḡnā)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuḡniyā", "ʔaḡnā", "yuḡnayā"],
+      "kok_yazilis": "أغنى",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ءغنى", "r6"]
+  ],
+  "mana": {
     "ince": "talk.v.02",
     "orta": "verb.creation",
     "ust": "fiil ve hadise",
@@ -441,22 +354,15 @@
     "dayanak_tanim": "produce tones with the voice",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["sing.v.02"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["sing.v.02"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

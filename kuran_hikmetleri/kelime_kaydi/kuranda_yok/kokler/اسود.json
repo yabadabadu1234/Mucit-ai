@@ -1,433 +1,314 @@
 {
   "kok": "اسود",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "اسود", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أسود",
-        "u": "أسود",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "أسود (form IX)\n# أَسْوَدُّ (ʔaswaddu) /ʔas.wad.du/: first-person singular non-past active indicative of اِسْوَدَّ (iswadda)\n# أَسْوَدَّ (ʔaswadda) /ʔas.wad.da/: first-person singular non-past active subjunctive/jussive of اِسْوَدَّ (iswadda)\n# أَسْوَدِّ (ʔaswaddi) /ʔas.wad.di/: first-person singular non-past active jussive of اِسْوَدَّ (iswadda)",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["ʔaswaddu", "iswadda", "ʔaswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "اسودت",
-        "u": "اسودت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِسْوَدَّتْ • (iswaddat) (form IX) /is.wad.dat/\n# third-person feminine singular past active of اِسْوَدَّ (iswadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iswaddat", "iswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "اسودا",
-        "u": "اسودا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِسْوَدَّا • (iswaddā) (form IX) /is.wad.daː/\n# inflection of اِسْوَدَّ (iswadda):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iswaddā", "iswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "اسوددتما",
-        "u": "اسوددتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِسْوَدَدْتُمَا • (iswadadtumā) (form IX) /is.wa.dad.tu.maː/\n# second-person dual past active of اِسْوَدَّ (iswadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iswadadtumā", "iswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "اسوددت",
-        "u": "اسوددت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اسوددت (form IX)\n# اِسْوَدَدْتُ (iswadadtu) /is.wa.dad.tu/: first-person singular past active of اِسْوَدَّ (iswadda)\n# اِسْوَدَدْتَ (iswadadta) /is.wa.dad.ta/: second-person masculine singular past active of اِسْوَدَّ (iswadda)\n# اِسْوَدَدْتِ (iswadadti) /is.wa.dad.ti/: second-person feminine singular past active of اِسْوَدَّ (iswadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iswadadtu", "iswadda", "iswadadta"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "اسوددتم",
-        "u": "اسوددتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِسْوَدَدْتُمْ • (iswadadtum) (form IX) /is.wa.dad.tum/\n# second-person masculine plural past active of اِسْوَدَّ (iswadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iswadadtum", "iswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "اسوددنا",
-        "u": "اسوددنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِسْوَدَدْنَا • (iswadadnā) (form IX) /is.wa.dad.naː/\n# first-person plural past active of اِسْوَدَّ (iswadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iswadadnā", "iswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "اسودتا",
-        "u": "اسودتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِسْوَدَّتَا • (iswaddatā) (form IX) /is.wad.da.taː/\n# third-person feminine dual past active of اِسْوَدَّ (iswadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iswaddatā", "iswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "اسوددتن",
-        "u": "اسوددتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِسْوَدَدْتُنَّ • (iswadadtunna) (form IX) /is.wa.dad.tun.na/\n# second-person feminine plural past active of اِسْوَدَّ (iswadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iswadadtunna", "iswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "اسودوا",
-        "u": "اسودوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِسْوَدُّوا • (iswaddū) (form IX) /is.wad.duː/\n# inflection of اِسْوَدَّ (iswadda):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iswaddū", "iswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "اسوددن",
-        "u": "اسوددن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اسوددن (form IX)\n# اِسْوَدَدْنَ (iswadadna) /is.wa.dad.na/: third-person feminine plural past active of اِسْوَدَّ (iswadda)\n# اِسْوَدِدْنَ (iswadidna) /is.wa.did.na/: second-person feminine plural imperative of اِسْوَدَّ (iswadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iswadadna", "iswadda", "iswadidna"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "تسوددن",
-        "u": "تسوددن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَسْوَدِدْنَ • (taswadidna) (form IX) /tas.wa.did.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِسْوَدَّ (iswadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["taswadidna", "iswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "تسودين",
-        "u": "تسودين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَسْوَدِّينَ • (taswaddīna) (form IX) /tas.wad.diː.na/\n# second-person feminine singular non-past active indicative of اِسْوَدَّ (iswadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["taswaddīna", "iswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "يسودان",
-        "u": "يسودان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَسْوَدَّانِ • (yaswaddāni) (form IX) /jas.wad.daː.ni/\n# third-person masculine dual non-past active indicative of اِسْوَدَّ (iswadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["yaswaddāni", "iswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "تسودان",
-        "u": "تسودان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَسْوَدَّانِ • (taswaddāni) (form IX) /tas.wad.daː.ni/\n# inflection of اِسْوَدَّ (iswadda):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["taswaddāni", "iswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "يسود",
-        "u": "يسود",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يسود (form IX)\n# يَسْوَدُّ (yaswaddu) /jas.wad.du/: third-person masculine singular non-past active indicative of اِسْوَدَّ (iswadda)\n# يَسْوَدَّ (yaswadda) /jas.wad.da/: third-person masculine singular non-past active subjunctive/jussive of اِسْوَدَّ (iswadda)\n# يَسْوَدِّ (yaswaddi) /jas.wad.di/: third-person masculine singular non-past active jussive of اِسْوَدَّ (iswadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["yaswaddu", "iswadda", "yaswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "تسودون",
-        "u": "تسودون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَسْوَدُّونَ • (taswaddūna) (form IX) /tas.wad.duː.na/\n# second-person masculine plural non-past active indicative of اِسْوَدَّ (iswadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["taswaddūna", "iswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "نسود",
-        "u": "نسود",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نسود (form IX)\n# نَسْوَدُّ (naswaddu) /nas.wad.du/: first-person plural non-past active indicative of اِسْوَدَّ (iswadda)\n# نَسْوَدَّ (naswadda) /nas.wad.da/: first-person plural non-past active subjunctive/jussive of اِسْوَدَّ (iswadda)\n# نَسْوَدِّ (naswaddi) /nas.wad.di/: first-person plural non-past active jussive of اِسْوَدَّ (iswadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["naswaddu", "iswadda", "naswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "يسوددن",
-        "u": "يسوددن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَسْوَدِدْنَ • (yaswadidna) (form IX) /jas.wa.did.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِسْوَدَّ (iswadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["yaswadidna", "iswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "تسود",
-        "u": "تسود",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تسود (form IX)\n# تَسْوَدُّ (taswaddu) /tas.wad.du/: inflection of اِسْوَدَّ (iswadda):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَسْوَدَّ (taswadda) /tas.wad.da/: inflection of اِسْوَدَّ (iswadda):\n## second-person masculine singular non-past active subjunctive/jussive\n## third-person feminine singular non-past ac",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["taswaddu", "iswadda", "taswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "يسودا",
-        "u": "يسودا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَسْوَدَّا • (yaswaddā) (form IX) /jas.wad.daː/\n# third-person masculine dual non-past active subjunctive/jussive of اِسْوَدَّ (iswadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["yaswaddā", "iswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "تسودا",
-        "u": "تسودا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَسْوَدَّا • (taswaddā) (form IX) /tas.wad.daː/\n# inflection of اِسْوَدَّ (iswadda):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["taswaddā", "iswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "يسودون",
-        "u": "يسودون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَسْوَدُّونَ • (yaswaddūna) (form IX) /jas.wad.duː.na/\n# third-person masculine plural non-past active indicative of اِسْوَدَّ (iswadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["yaswaddūna", "iswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "تسودي",
-        "u": "تسودي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَسْوَدِّي • (taswaddī) (form IX) /tas.wad.diː/\n# second-person feminine singular non-past active subjunctive/jussive of اِسْوَدَّ (iswadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["taswaddī", "iswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "تسودد",
-        "u": "تسودد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَسْوَدِدْ • (taswadid) (form IX) /tas.wa.did/\n# inflection of اِسْوَدَّ (iswadda):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["taswadid", "iswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "أسودد",
-        "u": "أسودد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَسْوَدِدْ • (ʔaswadid) (form IX) /ʔas.wa.did/\n# first-person singular non-past active jussive of اِسْوَدَّ (iswadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["ʔaswadid", "iswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "اسودد",
-        "u": "اسودد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِسْوَدِدْ • (iswadid) (form IX) /is.wa.did/\n# second-person masculine singular imperative of اِسْوَدَّ (iswadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iswadid", "iswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "تسودوا",
-        "u": "تسودوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَسْوَدُّوا • (taswaddū) (form IX) /tas.wad.duː/\n# second-person masculine plural non-past active subjunctive/jussive of اِسْوَدَّ (iswadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["taswaddū", "iswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "نسودد",
-        "u": "نسودد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نَسْوَدِدْ • (naswadid) (form IX) /nas.wa.did/\n# first-person plural non-past active jussive of اِسْوَدَّ (iswadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["naswadid", "iswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "اسودي",
-        "u": "اسودي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِسْوَدِّي • (iswaddī) (form IX) /is.wad.diː/\n# second-person feminine singular imperative of اِسْوَدَّ (iswadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["iswaddī", "iswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "يسودوا",
-        "u": "يسودوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَسْوَدُّوا • (yaswaddū) (form IX) /jas.wad.duː/\n# third-person masculine plural non-past active subjunctive/jussive of اِسْوَدَّ (iswadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["yaswaddū", "iswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      },
-      {
-        "w": "يسودد",
-        "u": "يسودد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَسْوَدِدْ • (yaswadid) (form IX) /jas.wa.did/\n# third-person masculine singular non-past active jussive of اِسْوَدَّ (iswadda)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ix", "no-gloss"],
-        "r": ["yaswadid", "iswadda"],
-        "k": "اسود",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "سد",
+  "ses": {
     "harf": "ا",
+    "fasil": "سد",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "أسود",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "أسود (form IX)\n# أَسْوَدُّ (ʔaswaddu) /ʔas.wad.du/: first-person singular non-past active indicative of اِسْوَدَّ (iswadda)\n# أَسْوَدَّ (ʔaswadda) /ʔas.wad.da/: first-person singular non-past active subjunctive/jussive of اِسْوَدَّ (iswadda)\n# أَسْوَدِّ (ʔaswaddi) /ʔas.wad.di/: first-person singular non-past active jussive of اِسْوَدَّ (iswadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["ʔaswaddu", "iswadda", "ʔaswadda"]
+    },
+    {
+      "madde": "اسودت",
+      "tur": "verb",
+      "baslik": "اِسْوَدَّتْ • (iswaddat) (form IX) /is.wad.dat/\n# third-person feminine singular past active of اِسْوَدَّ (iswadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iswaddat", "iswadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اسودا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِسْوَدَّا • (iswaddā) (form IX) /is.wad.daː/\n# inflection of اِسْوَدَّ (iswadda):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iswaddā", "iswadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اسوددتما",
+      "tur": "verb",
+      "baslik": "اِسْوَدَدْتُمَا • (iswadadtumā) (form IX) /is.wa.dad.tu.maː/\n# second-person dual past active of اِسْوَدَّ (iswadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iswadadtumā", "iswadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اسوددت",
+      "tur": "verb",
+      "baslik": "اسوددت (form IX)\n# اِسْوَدَدْتُ (iswadadtu) /is.wa.dad.tu/: first-person singular past active of اِسْوَدَّ (iswadda)\n# اِسْوَدَدْتَ (iswadadta) /is.wa.dad.ta/: second-person masculine singular past active of اِسْوَدَّ (iswadda)\n# اِسْوَدَدْتِ (iswadadti) /is.wa.dad.ti/: second-person feminine singular past active of اِسْوَدَّ (iswadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iswadadtu", "iswadda", "iswadadta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اسوددتم",
+      "tur": "verb",
+      "baslik": "اِسْوَدَدْتُمْ • (iswadadtum) (form IX) /is.wa.dad.tum/\n# second-person masculine plural past active of اِسْوَدَّ (iswadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iswadadtum", "iswadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اسوددنا",
+      "tur": "verb",
+      "baslik": "اِسْوَدَدْنَا • (iswadadnā) (form IX) /is.wa.dad.naː/\n# first-person plural past active of اِسْوَدَّ (iswadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iswadadnā", "iswadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اسودتا",
+      "tur": "verb",
+      "baslik": "اِسْوَدَّتَا • (iswaddatā) (form IX) /is.wad.da.taː/\n# third-person feminine dual past active of اِسْوَدَّ (iswadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iswaddatā", "iswadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اسوددتن",
+      "tur": "verb",
+      "baslik": "اِسْوَدَدْتُنَّ • (iswadadtunna) (form IX) /is.wa.dad.tun.na/\n# second-person feminine plural past active of اِسْوَدَّ (iswadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iswadadtunna", "iswadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اسودوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِسْوَدُّوا • (iswaddū) (form IX) /is.wad.duː/\n# inflection of اِسْوَدَّ (iswadda):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iswaddū", "iswadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اسوددن",
+      "tur": "verb",
+      "baslik": "اسوددن (form IX)\n# اِسْوَدَدْنَ (iswadadna) /is.wa.dad.na/: third-person feminine plural past active of اِسْوَدَّ (iswadda)\n# اِسْوَدِدْنَ (iswadidna) /is.wa.did.na/: second-person feminine plural imperative of اِسْوَدَّ (iswadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iswadadna", "iswadda", "iswadidna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسوددن",
+      "tur": "verb",
+      "baslik": "تَسْوَدِدْنَ • (taswadidna) (form IX) /tas.wa.did.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِسْوَدَّ (iswadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["taswadidna", "iswadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسودين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَسْوَدِّينَ • (taswaddīna) (form IX) /tas.wad.diː.na/\n# second-person feminine singular non-past active indicative of اِسْوَدَّ (iswadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["taswaddīna", "iswadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسودان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَسْوَدَّانِ • (yaswaddāni) (form IX) /jas.wad.daː.ni/\n# third-person masculine dual non-past active indicative of اِسْوَدَّ (iswadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["yaswaddāni", "iswadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسودان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَسْوَدَّانِ • (taswaddāni) (form IX) /tas.wad.daː.ni/\n# inflection of اِسْوَدَّ (iswadda):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["taswaddāni", "iswadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسود",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يسود (form IX)\n# يَسْوَدُّ (yaswaddu) /jas.wad.du/: third-person masculine singular non-past active indicative of اِسْوَدَّ (iswadda)\n# يَسْوَدَّ (yaswadda) /jas.wad.da/: third-person masculine singular non-past active subjunctive/jussive of اِسْوَدَّ (iswadda)\n# يَسْوَدِّ (yaswaddi) /jas.wad.di/: third-person masculine singular non-past active jussive of اِسْوَدَّ (iswadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["yaswaddu", "iswadda", "yaswadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسودون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَسْوَدُّونَ • (taswaddūna) (form IX) /tas.wad.duː.na/\n# second-person masculine plural non-past active indicative of اِسْوَدَّ (iswadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["taswaddūna", "iswadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نسود",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نسود (form IX)\n# نَسْوَدُّ (naswaddu) /nas.wad.du/: first-person plural non-past active indicative of اِسْوَدَّ (iswadda)\n# نَسْوَدَّ (naswadda) /nas.wad.da/: first-person plural non-past active subjunctive/jussive of اِسْوَدَّ (iswadda)\n# نَسْوَدِّ (naswaddi) /nas.wad.di/: first-person plural non-past active jussive of اِسْوَدَّ (iswadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["naswaddu", "iswadda", "naswadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسوددن",
+      "tur": "verb",
+      "baslik": "يَسْوَدِدْنَ • (yaswadidna) (form IX) /jas.wa.did.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِسْوَدَّ (iswadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["yaswadidna", "iswadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسود",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تسود (form IX)\n# تَسْوَدُّ (taswaddu) /tas.wad.du/: inflection of اِسْوَدَّ (iswadda):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَسْوَدَّ (taswadda) /tas.wad.da/: inflection of اِسْوَدَّ (iswadda):\n## second-person masculine singular non-past active subjunctive/jussive\n## third-person feminine singular non-past ac",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["taswaddu", "iswadda", "taswadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسودا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَسْوَدَّا • (yaswaddā) (form IX) /jas.wad.daː/\n# third-person masculine dual non-past active subjunctive/jussive of اِسْوَدَّ (iswadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["yaswaddā", "iswadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسودا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَسْوَدَّا • (taswaddā) (form IX) /tas.wad.daː/\n# inflection of اِسْوَدَّ (iswadda):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["taswaddā", "iswadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسودون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَسْوَدُّونَ • (yaswaddūna) (form IX) /jas.wad.duː.na/\n# third-person masculine plural non-past active indicative of اِسْوَدَّ (iswadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["yaswaddūna", "iswadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسودي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَسْوَدِّي • (taswaddī) (form IX) /tas.wad.diː/\n# second-person feminine singular non-past active subjunctive/jussive of اِسْوَدَّ (iswadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["taswaddī", "iswadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسودد",
+      "tur": "verb",
+      "baslik": "تَسْوَدِدْ • (taswadid) (form IX) /tas.wa.did/\n# inflection of اِسْوَدَّ (iswadda):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["taswadid", "iswadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أسودد",
+      "tur": "verb",
+      "baslik": "أَسْوَدِدْ • (ʔaswadid) (form IX) /ʔas.wa.did/\n# first-person singular non-past active jussive of اِسْوَدَّ (iswadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["ʔaswadid", "iswadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اسودد",
+      "tur": "verb",
+      "baslik": "اِسْوَدِدْ • (iswadid) (form IX) /is.wa.did/\n# second-person masculine singular imperative of اِسْوَدَّ (iswadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iswadid", "iswadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تسودوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَسْوَدُّوا • (taswaddū) (form IX) /tas.wad.duː/\n# second-person masculine plural non-past active subjunctive/jussive of اِسْوَدَّ (iswadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["taswaddū", "iswadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نسودد",
+      "tur": "verb",
+      "baslik": "نَسْوَدِدْ • (naswadid) (form IX) /nas.wa.did/\n# first-person plural non-past active jussive of اِسْوَدَّ (iswadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["naswadid", "iswadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اسودي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِسْوَدِّي • (iswaddī) (form IX) /is.wad.diː/\n# second-person feminine singular imperative of اِسْوَدَّ (iswadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["iswaddī", "iswadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسودوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَسْوَدُّوا • (yaswaddū) (form IX) /jas.wad.duː/\n# third-person masculine plural non-past active subjunctive/jussive of اِسْوَدَّ (iswadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["yaswaddū", "iswadda"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يسودد",
+      "tur": "verb",
+      "baslik": "يَسْوَدِدْ • (yaswadid) (form IX) /jas.wa.did/\n# third-person masculine singular non-past active jussive of اِسْوَدَّ (iswadda)",
+      "etiket": ["form-ix", "no-gloss"],
+      "okunus": ["yaswadid", "iswadda"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "اسود", "r6"]
+  ],
+  "mana": {
     "ince": "black.a.01",
     "orta": "adj.all",
     "ust": "hâl ve vasıf",
@@ -435,22 +316,15 @@
     "dayanak_tanim": "being of the achromatic color of maximum darkness; having little or no hue owing to absorption of almost all incident light",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["black.a.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["black.a.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

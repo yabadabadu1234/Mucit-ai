@@ -1,45 +1,46 @@
 {
   "kok": "فيهق",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "فيهق", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تفيهق",
-        "u": "تفيهق",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "تَفَيْهَقَ • (tafayhaqa) IIq (non-past يَتَفَيْهَقُ (yatafayhaqu), verbal noun تَفَيْهُق (tafayhuq))",
-        "g": ["to boast, brag", "to show prolixity, verbosity in speech", "to strut, swagger in walk"],
-        "r": ["tafayhaqa"],
-        "ipa": ["/ta.faj.ha.qa/"],
-        "k": "فيهق",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "فه",
+  "ses": {
     "harf": "ف",
+    "fasil": "فه",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "تفيهق",
+      "tur": "verb",
+      "baslik": "تَفَيْهَقَ • (tafayhaqa) IIq (non-past يَتَفَيْهَقُ (yatafayhaqu), verbal noun تَفَيْهُق (tafayhuq))",
+      "anlam": ["to boast, brag", "to show prolixity, verbosity in speech", "to strut, swagger in walk"],
+      "okunus": ["tafayhaqa"],
+      "ipa": ["/ta.faj.ha.qa/"]
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "فيهق", "r6"]
+  ],
+  "mana": {
     "ince": "inform.v.01",
     "orta": "verb.communication",
     "ust": "söz ve haber",
@@ -47,20 +48,8 @@
     "dayanak_tanim": "show off",
     "dayanak_karsilik": "boast"
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m2",
+  "gomme": {
     "ust": {
       "kume": 5,
       "merkez_kok": "خون",
@@ -80,6 +69,10 @@
       "boy": 12
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

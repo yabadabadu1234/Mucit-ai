@@ -1,391 +1,284 @@
 {
   "kok": "فلا",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "فلا", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "نفل",
-        "u": "نفل",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "نفل (form I)\n# نَفْلُ (naflu) /naf.lu/: first-person plural non-past active jussive of فَلَا (falā)\n# نُفْلَ (nufla) /nuf.la/: first-person plural non-past passive jussive of فَلَا (falā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naflu", "falā", "nufla"],
-        "k": "فلا",
-        "yol": "kök"
-      },
-      {
-        "w": "تفل",
-        "u": "تفل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تفل (form I)\n# تَفْلُ (taflu) /taf.lu/: inflection of فَلَا (falā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُفْلَ (tufla) /tuf.la/: inflection of فَلَا (falā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taflu", "falā", "tufla"],
-        "k": "فلا",
-        "yol": "kök"
-      },
-      {
-        "w": "أفل",
-        "u": "أفل",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "أفل (form I)\n# أَفْلُ (ʔaflu) /ʔaf.lu/: first-person singular non-past active jussive of فَلَا (falā)\n# أُفْلَ (ʔufla) /ʔuf.la/: first-person singular non-past passive jussive of فَلَا (falā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaflu", "falā", "ʔufla"],
-        "k": "فلا",
-        "yol": "kök"
-      },
-      {
-        "w": "فلت",
-        "u": "فلت",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "فَلَتْ • (falat) (form I) /fa.lat/\n# third-person feminine singular past active of فَلَا (falā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["falat", "falā"],
-        "k": "فلا",
-        "yol": "kök"
-      },
-      {
-        "w": "تفلي",
-        "u": "تفلي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تفلي (form I)\n# تَفْلِي (taflī) /taf.liː/: second-person feminine singular non-past active subjunctive/jussive of فَلَا (falā)\n# تُفْلَيْ (tuflay) /tuf.laj/: second-person feminine singular non-past passive subjunctive/jussive of فَلَا (falā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taflī", "falā", "tuflay"],
-        "k": "فلا",
-        "yol": "kök"
-      },
-      {
-        "w": "تفلين",
-        "u": "تفلين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تفلين (form I)\n# تَفْلِينَ (taflīna) /taf.liː.na/: second-person feminine singular non-past active indicative of فَلَا (falā)\n# تُفْلَيْنَ (tuflayna) /tuf.laj.na/: inflection of فَلَا (falā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taflīna", "falā", "tuflayna"],
-        "k": "فلا",
-        "yol": "kök"
-      },
-      {
-        "w": "تفلون",
-        "u": "تفلون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تفلون (form I)\n# تَفْلُونَ (taflūna) /taf.luː.na/: inflection of فَلَا (falā):\n## second-person masculine/feminine plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُفْلَوْنَ (tuflawna) /tuf.law.na/: second-person masculine plural non-past passive indicative of فَلَا (falā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taflūna", "falā", "tuflawna"],
-        "k": "فلا",
-        "yol": "kök"
-      },
-      {
-        "w": "يفلون",
-        "u": "يفلون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يفلون (form I)\n# يَفْلُونَ (yaflūna) /jaf.luː.na/: inflection of فَلَا (falā):\n## third-person masculine/feminine plural non-past active indicative\n## third-person feminine plural non-past active subjunctive/jussive\n# يُفْلَوْنَ (yuflawna) /juf.law.na/: third-person masculine plural non-past passive indicative of فَلَا (falā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaflūna", "falā", "yuflawna"],
-        "k": "فلا",
-        "yol": "kök"
-      },
-      {
-        "w": "يفلوا",
-        "u": "يفلوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يفلوا (form I)\n# يَفْلُوَا (yafluwā) /jaf.lu.waː/: third-person masculine dual non-past active subjunctive/jussive of فَلَا (falā)\n# يَفْلُوا (yaflū) /jaf.luː/: third-person masculine plural non-past active subjunctive/jussive of فَلَا (falā)\n# يُفْلَوْا (yuflaw) /juf.law/: third-person masculine plural non-past passive subjunctive/jussive of فَلَا (falā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yafluwā", "falā", "yaflū"],
-        "k": "فلا",
-        "yol": "kök"
-      },
-      {
-        "w": "تفلوا",
-        "u": "تفلوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تفلوا (form I)\n# تَفْلُوَا (tafluwā) /taf.lu.waː/: inflection of فَلَا (falā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تَفْلُوا (taflū) /taf.luː/: second-person masculine plural non-past active subjunctive/jussive of فَلَا (falā)\n# تُفْلَوْا (tuflaw) /tuf.law/: second-person masculine plural non-past passive subj",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tafluwā", "falā", "taflū"],
-        "k": "فلا",
-        "yol": "kök"
-      },
-      {
-        "w": "يفل",
-        "u": "يفل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يفل (form I)\n# يَفْلُ (yaflu) /jaf.lu/: third-person masculine singular non-past active jussive of فَلَا (falā)\n# يُفْلَ (yufla) /juf.la/: third-person masculine singular non-past passive jussive of فَلَا (falā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaflu", "falā", "yufla"],
-        "k": "فلا",
-        "yol": "kök"
-      },
-      {
-        "w": "فلتا",
-        "u": "فلتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "فَلَتَا • (falatā) (form I) /fa.la.taː/\n# third-person feminine dual past active of فَلَا (falā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["falatā", "falā"],
-        "k": "فلا",
-        "yol": "kök"
-      },
-      {
-        "w": "فلوا",
-        "u": "فلوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "فلوا (form I)\n# فَلَوَا (falawā) /fa.la.waː/: third-person masculine dual past active of فَلَا (falā)\n# فَلَوْا (falaw) /fa.law/: third-person masculine plural past active of فَلَا (falā)\n# فُلُوا (fulū) /fu.luː/: third-person masculine plural past passive of فَلَا (falā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["falawā", "falā", "falaw"],
-        "k": "فلا",
-        "yol": "kök"
-      },
-      {
-        "w": "فلوت",
-        "u": "فلوت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فلوت (form I)\n# فَلَوْتُ (falawtu) /fa.law.tu/: first-person singular past active of فَلَا (falā)\n# فَلَوْتَ (falawta) /fa.law.ta/: second-person masculine singular past active of فَلَا (falā)\n# فَلَوْتِ (falawti) /fa.law.ti/: second-person feminine singular past active of فَلَا (falā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["falawtu", "falā", "falawta"],
-        "k": "فلا",
-        "yol": "kök"
-      },
-      {
-        "w": "فلوتما",
-        "u": "فلوتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فَلَوْتُمَا • (falawtumā) (form I) /fa.law.tu.maː/\n# second-person dual past active of فَلَا (falā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["falawtumā", "falā"],
-        "k": "فلا",
-        "yol": "kök"
-      },
-      {
-        "w": "فلونا",
-        "u": "فلونا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فَلَوْنَا • (falawnā) (form I) /fa.law.naː/\n# first-person plural past active of فَلَا (falā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["falawnā", "falā"],
-        "k": "فلا",
-        "yol": "kök"
-      },
-      {
-        "w": "فلون",
-        "u": "فلون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فَلَوْنَ • (falawna) (form I) /fa.law.na/\n# third-person feminine plural past active of فَلَا (falā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["falawna", "falā"],
-        "k": "فلا",
-        "yol": "kök"
-      },
-      {
-        "w": "فلوتن",
-        "u": "فلوتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فَلَوْتُنَّ • (falawtunna) (form I) /fa.law.tun.na/\n# second-person feminine plural past active of فَلَا (falā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["falawtunna", "falā"],
-        "k": "فلا",
-        "yol": "kök"
-      },
-      {
-        "w": "أفلو",
-        "u": "أفلو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أفلو (form I)\n# أَفْلُو (ʔaflū) /ʔaf.luː/: first-person singular non-past active indicative of فَلَا (falā)\n# أَفْلُوَ (ʔafluwa) /ʔaf.lu.wa/: first-person singular non-past active subjunctive of فَلَا (falā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaflū", "falā", "ʔafluwa"],
-        "k": "فلا",
-        "yol": "kök"
-      },
-      {
-        "w": "فلوتم",
-        "u": "فلوتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "فَلَوْتُمْ • (falawtum) (form I) /fa.law.tum/\n# second-person masculine plural past active of فَلَا (falā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["falawtum", "falā"],
-        "k": "فلا",
-        "yol": "kök"
-      },
-      {
-        "w": "تفلو",
-        "u": "تفلو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تفلو (form I)\n# تَفْلُو (taflū) /taf.luː/: inflection of فَلَا (falā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَفْلُوَ (tafluwa) /taf.lu.wa/: inflection of فَلَا (falā):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taflū", "falā", "tafluwa"],
-        "k": "فلا",
-        "yol": "kök"
-      },
-      {
-        "w": "يفلو",
-        "u": "يفلو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يفلو (form I)\n# يَفْلُو (yaflū) /jaf.luː/: third-person masculine singular non-past active indicative of فَلَا (falā)\n# يَفْلُوَ (yafluwa) /jaf.lu.wa/: third-person masculine singular non-past active subjunctive of فَلَا (falā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaflū", "falā", "yafluwa"],
-        "k": "فلا",
-        "yol": "kök"
-      },
-      {
-        "w": "يفلوان",
-        "u": "يفلوان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَفْلُوَانِ • (yafluwāni) (form I) /jaf.lu.waː.ni/\n# third-person masculine dual non-past active indicative of فَلَا (falā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yafluwāni", "falā"],
-        "k": "فلا",
-        "yol": "kök"
-      },
-      {
-        "w": "تفلوان",
-        "u": "تفلوان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَفْلُوَانِ • (tafluwāni) (form I) /taf.lu.waː.ni/\n# inflection of فَلَا (falā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tafluwāni", "falā"],
-        "k": "فلا",
-        "yol": "kök"
-      },
-      {
-        "w": "افل",
-        "u": "افل",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُفْلُ • (uflu) (form I) /uf.lu/\n# second-person masculine singular imperative of فَلَا (falā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uflu", "falā"],
-        "k": "فلا",
-        "yol": "kök"
-      },
-      {
-        "w": "نفلو",
-        "u": "نفلو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نفلو (form I)\n# نَفْلُو (naflū) /naf.luː/: first-person plural non-past active indicative of فَلَا (falā)\n# نَفْلُوَ (nafluwa) /naf.lu.wa/: first-person plural non-past active subjunctive of فَلَا (falā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naflū", "falā", "nafluwa"],
-        "k": "فلا",
-        "yol": "kök"
-      },
-      {
-        "w": "افلوا",
-        "u": "افلوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "افلوا (form I)\n# اُفْلُوَا (ufluwā) /uf.lu.waː/: second-person dual imperative of فَلَا (falā)\n# اُفْلُوا (uflū) /uf.luː/: second-person masculine plural imperative of فَلَا (falā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ufluwā", "falā", "uflū"],
-        "k": "فلا",
-        "yol": "kök"
-      },
-      {
-        "w": "افلي",
-        "u": "افلي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُفْلِي • (uflī) (form I) /uf.liː/\n# second-person feminine singular imperative of فَلَا (falā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uflī", "falā"],
-        "k": "فلا",
-        "yol": "kök"
-      },
-      {
-        "w": "افلون",
-        "u": "افلون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُفْلُونَ • (uflūna) (form I) /uf.luː.na/\n# second-person feminine plural imperative of فَلَا (falā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["uflūna", "falā"],
-        "k": "فلا",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "فل",
+  "ses": {
     "harf": "ف",
+    "fasil": "فل",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "نفل",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "نفل (form I)\n# نَفْلُ (naflu) /naf.lu/: first-person plural non-past active jussive of فَلَا (falā)\n# نُفْلَ (nufla) /nuf.la/: first-person plural non-past passive jussive of فَلَا (falā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naflu", "falā", "nufla"]
+    },
+    {
+      "madde": "تفل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تفل (form I)\n# تَفْلُ (taflu) /taf.lu/: inflection of فَلَا (falā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُفْلَ (tufla) /tuf.la/: inflection of فَلَا (falā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taflu", "falā", "tufla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أفل",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "أفل (form I)\n# أَفْلُ (ʔaflu) /ʔaf.lu/: first-person singular non-past active jussive of فَلَا (falā)\n# أُفْلَ (ʔufla) /ʔuf.la/: first-person singular non-past passive jussive of فَلَا (falā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaflu", "falā", "ʔufla"]
+    },
+    {
+      "madde": "فلت",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "فَلَتْ • (falat) (form I) /fa.lat/\n# third-person feminine singular past active of فَلَا (falā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["falat", "falā"]
+    },
+    {
+      "madde": "تفلي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تفلي (form I)\n# تَفْلِي (taflī) /taf.liː/: second-person feminine singular non-past active subjunctive/jussive of فَلَا (falā)\n# تُفْلَيْ (tuflay) /tuf.laj/: second-person feminine singular non-past passive subjunctive/jussive of فَلَا (falā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taflī", "falā", "tuflay"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تفلين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تفلين (form I)\n# تَفْلِينَ (taflīna) /taf.liː.na/: second-person feminine singular non-past active indicative of فَلَا (falā)\n# تُفْلَيْنَ (tuflayna) /tuf.laj.na/: inflection of فَلَا (falā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taflīna", "falā", "tuflayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تفلون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تفلون (form I)\n# تَفْلُونَ (taflūna) /taf.luː.na/: inflection of فَلَا (falā):\n## second-person masculine/feminine plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُفْلَوْنَ (tuflawna) /tuf.law.na/: second-person masculine plural non-past passive indicative of فَلَا (falā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taflūna", "falā", "tuflawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يفلون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يفلون (form I)\n# يَفْلُونَ (yaflūna) /jaf.luː.na/: inflection of فَلَا (falā):\n## third-person masculine/feminine plural non-past active indicative\n## third-person feminine plural non-past active subjunctive/jussive\n# يُفْلَوْنَ (yuflawna) /juf.law.na/: third-person masculine plural non-past passive indicative of فَلَا (falā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaflūna", "falā", "yuflawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يفلوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يفلوا (form I)\n# يَفْلُوَا (yafluwā) /jaf.lu.waː/: third-person masculine dual non-past active subjunctive/jussive of فَلَا (falā)\n# يَفْلُوا (yaflū) /jaf.luː/: third-person masculine plural non-past active subjunctive/jussive of فَلَا (falā)\n# يُفْلَوْا (yuflaw) /juf.law/: third-person masculine plural non-past passive subjunctive/jussive of فَلَا (falā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yafluwā", "falā", "yaflū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تفلوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تفلوا (form I)\n# تَفْلُوَا (tafluwā) /taf.lu.waː/: inflection of فَلَا (falā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تَفْلُوا (taflū) /taf.luː/: second-person masculine plural non-past active subjunctive/jussive of فَلَا (falā)\n# تُفْلَوْا (tuflaw) /tuf.law/: second-person masculine plural non-past passive subj",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tafluwā", "falā", "taflū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يفل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يفل (form I)\n# يَفْلُ (yaflu) /jaf.lu/: third-person masculine singular non-past active jussive of فَلَا (falā)\n# يُفْلَ (yufla) /juf.la/: third-person masculine singular non-past passive jussive of فَلَا (falā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaflu", "falā", "yufla"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "فلتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "فَلَتَا • (falatā) (form I) /fa.la.taː/\n# third-person feminine dual past active of فَلَا (falā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["falatā", "falā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "فلوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "فلوا (form I)\n# فَلَوَا (falawā) /fa.la.waː/: third-person masculine dual past active of فَلَا (falā)\n# فَلَوْا (falaw) /fa.law/: third-person masculine plural past active of فَلَا (falā)\n# فُلُوا (fulū) /fu.luː/: third-person masculine plural past passive of فَلَا (falā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["falawā", "falā", "falaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "فلوت",
+      "tur": "verb",
+      "baslik": "فلوت (form I)\n# فَلَوْتُ (falawtu) /fa.law.tu/: first-person singular past active of فَلَا (falā)\n# فَلَوْتَ (falawta) /fa.law.ta/: second-person masculine singular past active of فَلَا (falā)\n# فَلَوْتِ (falawti) /fa.law.ti/: second-person feminine singular past active of فَلَا (falā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["falawtu", "falā", "falawta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "فلوتما",
+      "tur": "verb",
+      "baslik": "فَلَوْتُمَا • (falawtumā) (form I) /fa.law.tu.maː/\n# second-person dual past active of فَلَا (falā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["falawtumā", "falā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "فلونا",
+      "tur": "verb",
+      "baslik": "فَلَوْنَا • (falawnā) (form I) /fa.law.naː/\n# first-person plural past active of فَلَا (falā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["falawnā", "falā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "فلون",
+      "tur": "verb",
+      "baslik": "فَلَوْنَ • (falawna) (form I) /fa.law.na/\n# third-person feminine plural past active of فَلَا (falā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["falawna", "falā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "فلوتن",
+      "tur": "verb",
+      "baslik": "فَلَوْتُنَّ • (falawtunna) (form I) /fa.law.tun.na/\n# second-person feminine plural past active of فَلَا (falā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["falawtunna", "falā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أفلو",
+      "tur": "verb",
+      "baslik": "أفلو (form I)\n# أَفْلُو (ʔaflū) /ʔaf.luː/: first-person singular non-past active indicative of فَلَا (falā)\n# أَفْلُوَ (ʔafluwa) /ʔaf.lu.wa/: first-person singular non-past active subjunctive of فَلَا (falā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaflū", "falā", "ʔafluwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "فلوتم",
+      "tur": "verb",
+      "baslik": "فَلَوْتُمْ • (falawtum) (form I) /fa.law.tum/\n# second-person masculine plural past active of فَلَا (falā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["falawtum", "falā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تفلو",
+      "tur": "verb",
+      "baslik": "تفلو (form I)\n# تَفْلُو (taflū) /taf.luː/: inflection of فَلَا (falā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَفْلُوَ (tafluwa) /taf.lu.wa/: inflection of فَلَا (falā):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taflū", "falā", "tafluwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يفلو",
+      "tur": "verb",
+      "baslik": "يفلو (form I)\n# يَفْلُو (yaflū) /jaf.luː/: third-person masculine singular non-past active indicative of فَلَا (falā)\n# يَفْلُوَ (yafluwa) /jaf.lu.wa/: third-person masculine singular non-past active subjunctive of فَلَا (falā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaflū", "falā", "yafluwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يفلوان",
+      "tur": "verb",
+      "baslik": "يَفْلُوَانِ • (yafluwāni) (form I) /jaf.lu.waː.ni/\n# third-person masculine dual non-past active indicative of فَلَا (falā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yafluwāni", "falā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تفلوان",
+      "tur": "verb",
+      "baslik": "تَفْلُوَانِ • (tafluwāni) (form I) /taf.lu.waː.ni/\n# inflection of فَلَا (falā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tafluwāni", "falā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "افل",
+      "tur": "verb",
+      "baslik": "اُفْلُ • (uflu) (form I) /uf.lu/\n# second-person masculine singular imperative of فَلَا (falā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uflu", "falā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نفلو",
+      "tur": "verb",
+      "baslik": "نفلو (form I)\n# نَفْلُو (naflū) /naf.luː/: first-person plural non-past active indicative of فَلَا (falā)\n# نَفْلُوَ (nafluwa) /naf.lu.wa/: first-person plural non-past active subjunctive of فَلَا (falā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naflū", "falā", "nafluwa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "افلوا",
+      "tur": "verb",
+      "baslik": "افلوا (form I)\n# اُفْلُوَا (ufluwā) /uf.lu.waː/: second-person dual imperative of فَلَا (falā)\n# اُفْلُوا (uflū) /uf.luː/: second-person masculine plural imperative of فَلَا (falā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ufluwā", "falā", "uflū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "افلي",
+      "tur": "verb",
+      "baslik": "اُفْلِي • (uflī) (form I) /uf.liː/\n# second-person feminine singular imperative of فَلَا (falā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uflī", "falā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "افلون",
+      "tur": "verb",
+      "baslik": "اُفْلُونَ • (uflūna) (form I) /uf.luː.na/\n# second-person feminine plural imperative of فَلَا (falā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["uflūna", "falā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "فلا", "r7"]
+  ],
+  "mana": {
     "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
@@ -393,22 +286,15 @@
     "dayanak_tanim": "a high-pitched woodwind instrument; a slender tube closed at one end with finger holes on one end and an opening near the closed end across which the breath is blown",
     "synset_sayisi": 2
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["artifact.n.01", "escape.v.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["artifact.n.01", "escape.v.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

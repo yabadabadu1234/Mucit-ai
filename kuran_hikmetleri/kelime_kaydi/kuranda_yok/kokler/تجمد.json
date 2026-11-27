@@ -1,366 +1,259 @@
 {
   "kok": "تجمد",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "تجمد", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تجمدي",
-        "u": "تجمدي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَجَمَّدِي • (tajammadī) (form V) /ta.d͡ʒam.ma.diː/\n# second-person feminine singular imperative of تَجَمَّدَ (tajammada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tajammadī", "tajammada"],
-        "k": "تجمد",
-        "yol": "kök"
-      },
-      {
-        "w": "تجمدوا",
-        "u": "تجمدوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَجَمَّدُوا • (tajammadū) (form V) /ta.d͡ʒam.ma.duː/\n# inflection of تَجَمَّدَ (tajammada):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tajammadū", "tajammada"],
-        "k": "تجمد",
-        "yol": "kök"
-      },
-      {
-        "w": "تجمدن",
-        "u": "تجمدن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَجَمَّدْنَ • (tajammadna) (form V) /ta.d͡ʒam.mad.na/\n# inflection of تَجَمَّدَ (tajammada):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tajammadna", "tajammada"],
-        "k": "تجمد",
-        "yol": "kök"
-      },
-      {
-        "w": "تجمدتما",
-        "u": "تجمدتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَجَمَّدْتُمَا • (tajammadtumā) (form V) /ta.d͡ʒam.mad.tu.maː/\n# second-person dual past active of تَجَمَّدَ (tajammada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tajammadtumā", "tajammada"],
-        "k": "تجمد",
-        "yol": "kök"
-      },
-      {
-        "w": "تجمدت",
-        "u": "تجمدت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تجمدت (form V)\n# تَجَمَّدْتُ (tajammadtu) /ta.d͡ʒam.mad.tu/: first-person singular past active of تَجَمَّدَ (tajammada)\n# تَجَمَّدْتَ (tajammadta) /ta.d͡ʒam.mad.ta/: second-person masculine singular past active of تَجَمَّدَ (tajammada)\n# تَجَمَّدْتِ (tajammadti) /ta.d͡ʒam.mad.ti/: second-person feminine singular past active of تَجَمَّدَ (tajammada)\n# تَجَمَّدَتْ (tajammadat) /ta.d͡ʒam.ma.dat/: thi",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tajammadtu", "tajammada", "tajammadta"],
-        "k": "تجمد",
-        "yol": "kök"
-      },
-      {
-        "w": "تجمدتا",
-        "u": "تجمدتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَجَمَّدَتَا • (tajammadatā) (form V) /ta.d͡ʒam.ma.da.taː/\n# third-person feminine dual past active of تَجَمَّدَ (tajammada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tajammadatā", "tajammada"],
-        "k": "تجمد",
-        "yol": "kök"
-      },
-      {
-        "w": "تجمدنا",
-        "u": "تجمدنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَجَمَّدْنَا • (tajammadnā) (form V) /ta.d͡ʒam.mad.naː/\n# first-person plural past active of تَجَمَّدَ (tajammada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tajammadnā", "tajammada"],
-        "k": "تجمد",
-        "yol": "kök"
-      },
-      {
-        "w": "تجمدا",
-        "u": "تجمدا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَجَمَّدَا • (tajammadā) (form V) /ta.d͡ʒam.ma.daː/\n# inflection of تَجَمَّدَ (tajammada):\n## third-person masculine dual past active\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tajammadā", "tajammada"],
-        "k": "تجمد",
-        "yol": "kök"
-      },
-      {
-        "w": "تجمدتم",
-        "u": "تجمدتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَجَمَّدْتُمْ • (tajammadtum) (form V) /ta.d͡ʒam.mad.tum/\n# second-person masculine plural past active of تَجَمَّدَ (tajammada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tajammadtum", "tajammada"],
-        "k": "تجمد",
-        "yol": "kök"
-      },
-      {
-        "w": "أتجمد",
-        "u": "أتجمد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتجمد (form V)\n# أَتَجَمَّدُ (ʔatajammadu) /ʔa.ta.d͡ʒam.ma.du/: first-person singular non-past active indicative of تَجَمَّدَ (tajammada)\n# أَتَجَمَّدَ (ʔatajammada) /ʔa.ta.d͡ʒam.ma.da/: first-person singular non-past active subjunctive of تَجَمَّدَ (tajammada)\n# أَتَجَمَّدْ (ʔatajammad) /ʔa.ta.d͡ʒam.mad/: first-person singular non-past active jussive of تَجَمَّدَ (tajammada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["ʔatajammadu", "tajammada", "ʔatajammada"],
-        "k": "تجمد",
-        "yol": "kök"
-      },
-      {
-        "w": "تجمدتن",
-        "u": "تجمدتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَجَمَّدْتُنَّ • (tajammadtunna) (form V) /ta.d͡ʒam.mad.tun.na/\n# second-person feminine plural past active of تَجَمَّدَ (tajammada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tajammadtunna", "tajammada"],
-        "k": "تجمد",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجمدين",
-        "u": "تتجمدين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَجَمَّدِينَ • (tatajammadīna) (form V) /ta.ta.d͡ʒam.ma.diː.na/\n# second-person feminine singular non-past active indicative of تَجَمَّدَ (tajammada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatajammadīna", "tajammada"],
-        "k": "تجمد",
-        "yol": "kök"
-      },
-      {
-        "w": "يتجمد",
-        "u": "يتجمد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتجمد (form V)\n# يَتَجَمَّدُ (yatajammadu) /ja.ta.d͡ʒam.ma.du/: third-person masculine singular non-past active indicative of تَجَمَّدَ (tajammada)\n# يَتَجَمَّدَ (yatajammada) /ja.ta.d͡ʒam.ma.da/: third-person masculine singular non-past active subjunctive of تَجَمَّدَ (tajammada)\n# يَتَجَمَّدْ (yatajammad) /ja.ta.d͡ʒam.mad/: third-person masculine singular non-past active jussive of تَجَمَّدَ (ta",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatajammadu", "tajammada", "yatajammada"],
-        "k": "تجمد",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجمدان",
-        "u": "تتجمدان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَجَمَّدَانِ • (tatajammadāni) (form V) /ta.ta.d͡ʒam.ma.daː.ni/\n# inflection of تَجَمَّدَ (tajammada):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatajammadāni", "tajammada"],
-        "k": "تجمد",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجمد",
-        "u": "تتجمد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتجمد (form V)\n# تَتَجَمَّدُ (tatajammadu) /ta.ta.d͡ʒam.ma.du/: inflection of تَجَمَّدَ (tajammada):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَجَمَّدَ (tatajammada) /ta.ta.d͡ʒam.ma.da/: inflection of تَجَمَّدَ (tajammada):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatajammadu", "tajammada", "tatajammada"],
-        "k": "تجمد",
-        "yol": "kök"
-      },
-      {
-        "w": "يتجمدان",
-        "u": "يتجمدان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَجَمَّدَانِ • (yatajammadāni) (form V) /ja.ta.d͡ʒam.ma.daː.ni/\n# third-person masculine dual non-past active indicative of تَجَمَّدَ (tajammada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatajammadāni", "tajammada"],
-        "k": "تجمد",
-        "yol": "kök"
-      },
-      {
-        "w": "يتجمدون",
-        "u": "يتجمدون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَجَمَّدُونَ • (yatajammadūna) (form V) /ja.ta.d͡ʒam.ma.duː.na/\n# third-person masculine plural non-past active indicative of تَجَمَّدَ (tajammada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatajammadūna", "tajammada"],
-        "k": "تجمد",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجمدون",
-        "u": "تتجمدون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَجَمَّدُونَ • (tatajammadūna) (form V) /ta.ta.d͡ʒam.ma.duː.na/\n# second-person masculine plural non-past active indicative of تَجَمَّدَ (tajammada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatajammadūna", "tajammada"],
-        "k": "تجمد",
-        "yol": "kök"
-      },
-      {
-        "w": "نتجمد",
-        "u": "نتجمد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتجمد (form V)\n# نَتَجَمَّدُ (natajammadu) /na.ta.d͡ʒam.ma.du/: first-person plural non-past active indicative of تَجَمَّدَ (tajammada)\n# نَتَجَمَّدَ (natajammada) /na.ta.d͡ʒam.ma.da/: first-person plural non-past active subjunctive of تَجَمَّدَ (tajammada)\n# نَتَجَمَّدْ (natajammad) /na.ta.d͡ʒam.mad/: first-person plural non-past active jussive of تَجَمَّدَ (tajammada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["natajammadu", "tajammada", "natajammada"],
-        "k": "تجمد",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجمدا",
-        "u": "تتجمدا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَجَمَّدَا • (tatajammadā) (form V) /ta.ta.d͡ʒam.ma.daː/\n# inflection of تَجَمَّدَ (tajammada):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatajammadā", "tajammada"],
-        "k": "تجمد",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجمدن",
-        "u": "تتجمدن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَجَمَّدْنَ • (tatajammadna) (form V) /ta.ta.d͡ʒam.mad.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَجَمَّدَ (tajammada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatajammadna", "tajammada"],
-        "k": "تجمد",
-        "yol": "kök"
-      },
-      {
-        "w": "يتجمدا",
-        "u": "يتجمدا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَجَمَّدَا • (yatajammadā) (form V) /ja.ta.d͡ʒam.ma.daː/\n# third-person masculine dual non-past active subjunctive/jussive of تَجَمَّدَ (tajammada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatajammadā", "tajammada"],
-        "k": "تجمد",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجمدي",
-        "u": "تتجمدي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَجَمَّدِي • (tatajammadī) (form V) /ta.ta.d͡ʒam.ma.diː/\n# second-person feminine singular non-past active subjunctive/jussive of تَجَمَّدَ (tajammada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatajammadī", "tajammada"],
-        "k": "تجمد",
-        "yol": "kök"
-      },
-      {
-        "w": "يتجمدوا",
-        "u": "يتجمدوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَجَمَّدُوا • (yatajammadū) (form V) /ja.ta.d͡ʒam.ma.duː/\n# third-person masculine plural non-past active subjunctive/jussive of تَجَمَّدَ (tajammada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatajammadū", "tajammada"],
-        "k": "تجمد",
-        "yol": "kök"
-      },
-      {
-        "w": "تتجمدوا",
-        "u": "تتجمدوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَجَمَّدُوا • (tatajammadū) (form V) /ta.ta.d͡ʒam.ma.duː/\n# second-person masculine plural non-past active subjunctive/jussive of تَجَمَّدَ (tajammada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["tatajammadū", "tajammada"],
-        "k": "تجمد",
-        "yol": "kök"
-      },
-      {
-        "w": "يتجمدن",
-        "u": "يتجمدن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَجَمَّدْنَ • (yatajammadna) (form V) /ja.ta.d͡ʒam.mad.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَجَمَّدَ (tajammada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-v", "no-gloss"],
-        "r": ["yatajammadna", "tajammada"],
-        "k": "تجمد",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تج",
+  "ses": {
     "harf": "ت",
+    "fasil": "تج",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تجمدي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَجَمَّدِي • (tajammadī) (form V) /ta.d͡ʒam.ma.diː/\n# second-person feminine singular imperative of تَجَمَّدَ (tajammada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tajammadī", "tajammada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجمدوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَجَمَّدُوا • (tajammadū) (form V) /ta.d͡ʒam.ma.duː/\n# inflection of تَجَمَّدَ (tajammada):\n## third-person masculine plural past active\n## second-person masculine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tajammadū", "tajammada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجمدن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَجَمَّدْنَ • (tajammadna) (form V) /ta.d͡ʒam.mad.na/\n# inflection of تَجَمَّدَ (tajammada):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tajammadna", "tajammada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجمدتما",
+      "tur": "verb",
+      "baslik": "تَجَمَّدْتُمَا • (tajammadtumā) (form V) /ta.d͡ʒam.mad.tu.maː/\n# second-person dual past active of تَجَمَّدَ (tajammada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tajammadtumā", "tajammada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجمدت",
+      "tur": "verb",
+      "baslik": "تجمدت (form V)\n# تَجَمَّدْتُ (tajammadtu) /ta.d͡ʒam.mad.tu/: first-person singular past active of تَجَمَّدَ (tajammada)\n# تَجَمَّدْتَ (tajammadta) /ta.d͡ʒam.mad.ta/: second-person masculine singular past active of تَجَمَّدَ (tajammada)\n# تَجَمَّدْتِ (tajammadti) /ta.d͡ʒam.mad.ti/: second-person feminine singular past active of تَجَمَّدَ (tajammada)\n# تَجَمَّدَتْ (tajammadat) /ta.d͡ʒam.ma.dat/: thi",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tajammadtu", "tajammada", "tajammadta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجمدتا",
+      "tur": "verb",
+      "baslik": "تَجَمَّدَتَا • (tajammadatā) (form V) /ta.d͡ʒam.ma.da.taː/\n# third-person feminine dual past active of تَجَمَّدَ (tajammada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tajammadatā", "tajammada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجمدنا",
+      "tur": "verb",
+      "baslik": "تَجَمَّدْنَا • (tajammadnā) (form V) /ta.d͡ʒam.mad.naː/\n# first-person plural past active of تَجَمَّدَ (tajammada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tajammadnā", "tajammada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجمدا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَجَمَّدَا • (tajammadā) (form V) /ta.d͡ʒam.ma.daː/\n# inflection of تَجَمَّدَ (tajammada):\n## third-person masculine dual past active\n## second-person dual imperative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tajammadā", "tajammada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجمدتم",
+      "tur": "verb",
+      "baslik": "تَجَمَّدْتُمْ • (tajammadtum) (form V) /ta.d͡ʒam.mad.tum/\n# second-person masculine plural past active of تَجَمَّدَ (tajammada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tajammadtum", "tajammada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتجمد",
+      "tur": "verb",
+      "baslik": "أتجمد (form V)\n# أَتَجَمَّدُ (ʔatajammadu) /ʔa.ta.d͡ʒam.ma.du/: first-person singular non-past active indicative of تَجَمَّدَ (tajammada)\n# أَتَجَمَّدَ (ʔatajammada) /ʔa.ta.d͡ʒam.ma.da/: first-person singular non-past active subjunctive of تَجَمَّدَ (tajammada)\n# أَتَجَمَّدْ (ʔatajammad) /ʔa.ta.d͡ʒam.mad/: first-person singular non-past active jussive of تَجَمَّدَ (tajammada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["ʔatajammadu", "tajammada", "ʔatajammada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تجمدتن",
+      "tur": "verb",
+      "baslik": "تَجَمَّدْتُنَّ • (tajammadtunna) (form V) /ta.d͡ʒam.mad.tun.na/\n# second-person feminine plural past active of تَجَمَّدَ (tajammada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tajammadtunna", "tajammada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجمدين",
+      "tur": "verb",
+      "baslik": "تَتَجَمَّدِينَ • (tatajammadīna) (form V) /ta.ta.d͡ʒam.ma.diː.na/\n# second-person feminine singular non-past active indicative of تَجَمَّدَ (tajammada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatajammadīna", "tajammada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتجمد",
+      "tur": "verb",
+      "baslik": "يتجمد (form V)\n# يَتَجَمَّدُ (yatajammadu) /ja.ta.d͡ʒam.ma.du/: third-person masculine singular non-past active indicative of تَجَمَّدَ (tajammada)\n# يَتَجَمَّدَ (yatajammada) /ja.ta.d͡ʒam.ma.da/: third-person masculine singular non-past active subjunctive of تَجَمَّدَ (tajammada)\n# يَتَجَمَّدْ (yatajammad) /ja.ta.d͡ʒam.mad/: third-person masculine singular non-past active jussive of تَجَمَّدَ (ta",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatajammadu", "tajammada", "yatajammada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجمدان",
+      "tur": "verb",
+      "baslik": "تَتَجَمَّدَانِ • (tatajammadāni) (form V) /ta.ta.d͡ʒam.ma.daː.ni/\n# inflection of تَجَمَّدَ (tajammada):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatajammadāni", "tajammada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجمد",
+      "tur": "verb",
+      "baslik": "تتجمد (form V)\n# تَتَجَمَّدُ (tatajammadu) /ta.ta.d͡ʒam.ma.du/: inflection of تَجَمَّدَ (tajammada):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَجَمَّدَ (tatajammada) /ta.ta.d͡ʒam.ma.da/: inflection of تَجَمَّدَ (tajammada):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine ",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatajammadu", "tajammada", "tatajammada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتجمدان",
+      "tur": "verb",
+      "baslik": "يَتَجَمَّدَانِ • (yatajammadāni) (form V) /ja.ta.d͡ʒam.ma.daː.ni/\n# third-person masculine dual non-past active indicative of تَجَمَّدَ (tajammada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatajammadāni", "tajammada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتجمدون",
+      "tur": "verb",
+      "baslik": "يَتَجَمَّدُونَ • (yatajammadūna) (form V) /ja.ta.d͡ʒam.ma.duː.na/\n# third-person masculine plural non-past active indicative of تَجَمَّدَ (tajammada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatajammadūna", "tajammada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجمدون",
+      "tur": "verb",
+      "baslik": "تَتَجَمَّدُونَ • (tatajammadūna) (form V) /ta.ta.d͡ʒam.ma.duː.na/\n# second-person masculine plural non-past active indicative of تَجَمَّدَ (tajammada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatajammadūna", "tajammada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتجمد",
+      "tur": "verb",
+      "baslik": "نتجمد (form V)\n# نَتَجَمَّدُ (natajammadu) /na.ta.d͡ʒam.ma.du/: first-person plural non-past active indicative of تَجَمَّدَ (tajammada)\n# نَتَجَمَّدَ (natajammada) /na.ta.d͡ʒam.ma.da/: first-person plural non-past active subjunctive of تَجَمَّدَ (tajammada)\n# نَتَجَمَّدْ (natajammad) /na.ta.d͡ʒam.mad/: first-person plural non-past active jussive of تَجَمَّدَ (tajammada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["natajammadu", "tajammada", "natajammada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجمدا",
+      "tur": "verb",
+      "baslik": "تَتَجَمَّدَا • (tatajammadā) (form V) /ta.ta.d͡ʒam.ma.daː/\n# inflection of تَجَمَّدَ (tajammada):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatajammadā", "tajammada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجمدن",
+      "tur": "verb",
+      "baslik": "تَتَجَمَّدْنَ • (tatajammadna) (form V) /ta.ta.d͡ʒam.mad.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of تَجَمَّدَ (tajammada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatajammadna", "tajammada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتجمدا",
+      "tur": "verb",
+      "baslik": "يَتَجَمَّدَا • (yatajammadā) (form V) /ja.ta.d͡ʒam.ma.daː/\n# third-person masculine dual non-past active subjunctive/jussive of تَجَمَّدَ (tajammada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatajammadā", "tajammada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجمدي",
+      "tur": "verb",
+      "baslik": "تَتَجَمَّدِي • (tatajammadī) (form V) /ta.ta.d͡ʒam.ma.diː/\n# second-person feminine singular non-past active subjunctive/jussive of تَجَمَّدَ (tajammada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatajammadī", "tajammada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتجمدوا",
+      "tur": "verb",
+      "baslik": "يَتَجَمَّدُوا • (yatajammadū) (form V) /ja.ta.d͡ʒam.ma.duː/\n# third-person masculine plural non-past active subjunctive/jussive of تَجَمَّدَ (tajammada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatajammadū", "tajammada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتجمدوا",
+      "tur": "verb",
+      "baslik": "تَتَجَمَّدُوا • (tatajammadū) (form V) /ta.ta.d͡ʒam.ma.duː/\n# second-person masculine plural non-past active subjunctive/jussive of تَجَمَّدَ (tajammada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["tatajammadū", "tajammada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتجمدن",
+      "tur": "verb",
+      "baslik": "يَتَجَمَّدْنَ • (yatajammadna) (form V) /ja.ta.d͡ʒam.mad.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of تَجَمَّدَ (tajammada)",
+      "etiket": ["form-v", "no-gloss"],
+      "okunus": ["yatajammadna", "tajammada"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "تجمد", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

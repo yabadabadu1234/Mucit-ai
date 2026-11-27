@@ -1,514 +1,383 @@
 {
   "kok": "ذال",
+  "tur": "fiil",
+  "tur_guven": "orta",
+  "tur_dayanak": ["lugat-fiil"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ذال", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أذيل",
-        "u": "أذيل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أذيل (form I)\n# أَذِيلُ (ʔaḏīlu) /ʔa.ðiː.lu/: first-person singular non-past active indicative of ذَالَ (ḏāla)\n# أَذِيلَ (ʔaḏīla) /ʔa.ðiː.la/: first-person singular non-past active subjunctive of ذَالَ (ḏāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḏīlu", "ḏāla", "ʔaḏīla"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "ذل",
-        "u": "ذل",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "ذِلْ • (ḏil) (form I) /ðil/\n# second-person masculine singular imperative of ذَالَ (ḏāla)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḏil", "ḏāla"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "نذل",
-        "u": "نذل",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "نذل (form I)\n# نَذِلْ (naḏil) /na.ðil/: first-person plural non-past active jussive of ذَالَ (ḏāla)\n# نُذَلْ (nuḏal) /nu.ðal/: first-person plural non-past passive jussive of ذَالَ (ḏāla)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḏil", "ḏāla", "nuḏal"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "ذلت",
-        "u": "ذلت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ذلت (form I)\n# ذِلْتُ (ḏiltu) /ðil.tu/: first-person singular past active/passive of ذَالَ (ḏāla)\n# ذِلْتَ (ḏilta) /ðil.ta/: second-person masculine singular past active/passive of ذَالَ (ḏāla)\n# ذِلْتِ (ḏilti) /ðil.ti/: second-person feminine singular past active/passive of ذَالَ (ḏāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḏiltu", "ḏāla", "ḏilta"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "ذلة",
-        "u": "ذلة",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "ذِلَّة • (ḏilla) f",
-        "t": "Verbal noun of ذَلَّ (ḏalla).",
-        "s": [
-          ["ar-verbal noun", "Verbal noun"]
-        ],
-        "antonyms": ["عِزَّة"],
-        "g": ["verbal noun of ذَلَّ (ḏalla) (form I)", "abjectness, degradation, humiliation"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["ذَلَّ"],
-        "r": ["ḏilla"],
-        "ipa": ["/ðil.la/"],
-        "ds": [
-          ["az", "zillət", ""],
-          ["ota", "ذلت", "zillet"],
-          ["fa", "ذلت", ""]
-        ],
-        "el": [
-          ["ذَلَّ", "ذل#Arabic"]
-        ],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "ذلالة",
-        "u": "ذلالة",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "ذَلَالَة • (ḏalāla) f",
-        "t": "Verbal noun of ذَلَّ (ḏalla).",
-        "s": [
-          ["ar-verbal noun", "Verbal noun"]
-        ],
-        "g": ["verbal noun of ذَلَّ (ḏalla) (form I)", "humiliation, disgrace, dishonour"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["ذَلَّ"],
-        "r": ["ḏalāla"],
-        "ipa": ["/ða.laː.la/"],
-        "ds": [
-          ["az", "zəlalət", ""],
-          ["ota", "ذلالت", "zelâlet"],
-          ["fa", "ذلالت", ""]
-        ],
-        "el": [
-          ["ذَلَّ", "ذل#Arabic"]
-        ],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "أذل",
-        "u": "أذل",
-        "p": "verb",
-        "n": "2.1",
-        "h": "ar-verb form",
-        "e": "أذل (form I)\n# أَذِلْ (ʔaḏil) /ʔa.ðil/: first-person singular non-past active jussive of ذَالَ (ḏāla)\n# أُذَلْ (ʔuḏal) /ʔu.ðal/: first-person singular non-past passive jussive of ذَالَ (ḏāla)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḏil", "ḏāla", "ʔuḏal"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "يذيل",
-        "u": "يذيل",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يذيل (form I)\n# يَذِيلُ (yaḏīlu) /ja.ðiː.lu/: third-person masculine singular non-past active indicative of ذَالَ (ḏāla)\n# يَذِيلَ (yaḏīla) /ja.ðiː.la/: third-person masculine singular non-past active subjunctive of ذَالَ (ḏāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḏīlu", "ḏāla", "yaḏīla"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "تذيلين",
-        "u": "تذيلين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَذِيلِينَ • (taḏīlīna) (form I) /ta.ðiː.liː.na/\n# second-person feminine singular non-past active indicative of ذَالَ (ḏāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḏīlīna", "ḏāla"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "تذيل",
-        "u": "تذيل",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تذيل (form I)\n# تَذِيلُ (taḏīlu) /ta.ðiː.lu/: inflection of ذَالَ (ḏāla):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَذِيلَ (taḏīla) /ta.ðiː.la/: inflection of ذَالَ (ḏāla):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḏīlu", "ḏāla", "taḏīla"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "نذيل",
-        "u": "نذيل",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نذيل (form I)\n# نَذِيلُ (naḏīlu) /na.ðiː.lu/: first-person plural non-past active indicative of ذَالَ (ḏāla)\n# نَذِيلَ (naḏīla) /na.ðiː.la/: first-person plural non-past active subjunctive of ذَالَ (ḏāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḏīlu", "ḏāla", "naḏīla"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "تذيلان",
-        "u": "تذيلان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَذِيلَانِ • (taḏīlāni) (form I) /ta.ðiː.laː.ni/\n# inflection of ذَالَ (ḏāla):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḏīlāni", "ḏāla"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "يذيلان",
-        "u": "يذيلان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَذِيلَانِ • (yaḏīlāni) (form I) /ja.ðiː.laː.ni/\n# third-person masculine dual non-past active indicative of ذَالَ (ḏāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḏīlāni", "ḏāla"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "تذلن",
-        "u": "تذلن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تذلن (form I)\n# تَذِلْنَ (taḏilna) /ta.ðil.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of ذَالَ (ḏāla)\n# تُذَلْنَ (tuḏalna) /tu.ðal.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of ذَالَ (ḏāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḏilna", "ḏāla", "tuḏalna"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "يذيلون",
-        "u": "يذيلون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَذِيلُونَ • (yaḏīlūna) (form I) /ja.ðiː.luː.na/\n# third-person masculine plural non-past active indicative of ذَالَ (ḏāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḏīlūna", "ḏāla"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "يذلن",
-        "u": "يذلن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يذلن (form I)\n# يَذِلْنَ (yaḏilna) /ja.ðil.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of ذَالَ (ḏāla)\n# يُذَلْنَ (yuḏalna) /ju.ðal.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of ذَالَ (ḏāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḏilna", "ḏāla", "yuḏalna"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "تذيلون",
-        "u": "تذيلون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَذِيلُونَ • (taḏīlūna) (form I) /ta.ðiː.luː.na/\n# second-person masculine plural non-past active indicative of ذَالَ (ḏāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḏīlūna", "ḏāla"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "تذيلي",
-        "u": "تذيلي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَذِيلِي • (taḏīlī) (form I) /ta.ðiː.liː/\n# second-person feminine singular non-past active subjunctive/jussive of ذَالَ (ḏāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḏīlī", "ḏāla"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "تذيلا",
-        "u": "تذيلا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَذِيلَا • (taḏīlā) (form I) /ta.ðiː.laː/\n# inflection of ذَالَ (ḏāla):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḏīlā", "ḏāla"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "يذيلوا",
-        "u": "يذيلوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَذِيلُوا • (yaḏīlū) (form I) /ja.ðiː.luː/\n# third-person masculine plural non-past active subjunctive/jussive of ذَالَ (ḏāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḏīlū", "ḏāla"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "يذيلا",
-        "u": "يذيلا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَذِيلَا • (yaḏīlā) (form I) /ja.ðiː.laː/\n# third-person masculine dual non-past active subjunctive/jussive of ذَالَ (ḏāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḏīlā", "ḏāla"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "تذيلوا",
-        "u": "تذيلوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَذِيلُوا • (taḏīlū) (form I) /ta.ðiː.luː/\n# second-person masculine plural non-past active subjunctive/jussive of ذَالَ (ḏāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḏīlū", "ḏāla"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "يذل",
-        "u": "يذل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يذل (form I)\n# يَذِلْ (yaḏil) /ja.ðil/: third-person masculine singular non-past active jussive of ذَالَ (ḏāla)\n# يُذَلْ (yuḏal) /ju.ðal/: third-person masculine singular non-past passive jussive of ذَالَ (ḏāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḏil", "ḏāla", "yuḏal"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "تذل",
-        "u": "تذل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تذل (form I)\n# تَذِلْ (taḏil) /ta.ðil/: inflection of ذَالَ (ḏāla):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُذَلْ (tuḏal) /tu.ðal/: inflection of ذَالَ (ḏāla):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḏil", "ḏāla", "tuḏal"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "ذلتما",
-        "u": "ذلتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ذِلْتُمَا • (ḏiltumā) (form I) /ðil.tu.maː/\n# second-person dual past active/passive of ذَالَ (ḏāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḏiltumā", "ḏāla"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "ذالا",
-        "u": "ذالا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ذَالَا • (ḏālā) (form I) /ðaː.laː/\n# third-person masculine dual past active of ذَالَ (ḏāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḏālā", "ḏāla"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "ذالتا",
-        "u": "ذالتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ذَالَتَا • (ḏālatā) (form I) /ðaː.la.taː/\n# third-person feminine dual past active of ذَالَ (ḏāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḏālatā", "ḏāla"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "ذلنا",
-        "u": "ذلنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ذِلْنَا • (ḏilnā) (form I) /ðil.naː/\n# first-person plural past active/passive of ذَالَ (ḏāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḏilnā", "ḏāla"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "ذالت",
-        "u": "ذالت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ذَالَتْ • (ḏālat) (form I) /ðaː.lat/\n# third-person feminine singular past active of ذَالَ (ḏāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḏālat", "ḏāla"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "ذلتم",
-        "u": "ذلتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ذِلْتُمْ • (ḏiltum) (form I) /ðil.tum/\n# second-person masculine plural past active/passive of ذَالَ (ḏāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḏiltum", "ḏāla"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "ذلتن",
-        "u": "ذلتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ذِلْتُنَّ • (ḏiltunna) (form I) /ðil.tun.na/\n# second-person feminine plural past active/passive of ذَالَ (ḏāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḏiltunna", "ḏāla"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "ذالوا",
-        "u": "ذالوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ذَالُوا • (ḏālū) (form I) /ðaː.luː/\n# third-person masculine plural past active of ذَالَ (ḏāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḏālū", "ḏāla"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "ذلن",
-        "u": "ذلن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ذِلْنَ • (ḏilna) (form I) /ðil.na/\n# inflection of ذَالَ (ḏāla):\n## third-person feminine plural past active/passive\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḏilna", "ḏāla"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "ذيلا",
-        "u": "ذيلا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ذِيلَا • (ḏīlā) (form I) /ðiː.laː/\n# inflection of ذَالَ (ḏāla):\n## third-person masculine dual past passive\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḏīlā", "ḏāla"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "ذيلوا",
-        "u": "ذيلوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ذِيلُوا • (ḏīlū) (form I) /ðiː.luː/\n# inflection of ذَالَ (ḏāla):\n## third-person masculine plural past passive\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḏīlū", "ḏāla"],
-        "k": "ذال",
-        "yol": "kök"
-      },
-      {
-        "w": "ذيلي",
-        "u": "ذيلي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "ذِيلِي • (ḏīlī) (form I) /ðiː.liː/\n# second-person feminine singular imperative of ذَالَ (ḏāla)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḏīlī", "ḏāla"],
-        "k": "ذال",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "ذل",
+  "ses": {
     "harf": "ذ",
+    "fasil": "ذل",
     "mahrec": "lessiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "أذيل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أذيل (form I)\n# أَذِيلُ (ʔaḏīlu) /ʔa.ðiː.lu/: first-person singular non-past active indicative of ذَالَ (ḏāla)\n# أَذِيلَ (ʔaḏīla) /ʔa.ðiː.la/: first-person singular non-past active subjunctive of ذَالَ (ḏāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḏīlu", "ḏāla", "ʔaḏīla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ذل",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "ذِلْ • (ḏil) (form I) /ðil/\n# second-person masculine singular imperative of ذَالَ (ḏāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḏil", "ḏāla"]
+    },
+    {
+      "madde": "نذل",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "نذل (form I)\n# نَذِلْ (naḏil) /na.ðil/: first-person plural non-past active jussive of ذَالَ (ḏāla)\n# نُذَلْ (nuḏal) /nu.ðal/: first-person plural non-past passive jussive of ذَالَ (ḏāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḏil", "ḏāla", "nuḏal"]
+    },
+    {
+      "madde": "ذلت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ذلت (form I)\n# ذِلْتُ (ḏiltu) /ðil.tu/: first-person singular past active/passive of ذَالَ (ḏāla)\n# ذِلْتَ (ḏilta) /ðil.ta/: second-person masculine singular past active/passive of ذَالَ (ḏāla)\n# ذِلْتِ (ḏilti) /ðil.ti/: second-person feminine singular past active/passive of ذَالَ (ḏāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḏiltu", "ḏāla", "ḏilta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ذلة",
+      "tur": "noun",
+      "baslik": "ذِلَّة • (ḏilla) f",
+      "etim_sablon": [
+        ["ar-verbal noun", "Verbal noun"]
+      ],
+      "zit": ["عِزَّة"],
+      "anlam": ["verbal noun of ذَلَّ (ḏalla) (form I)", "abjectness, degradation, humiliation"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["ذَلَّ"],
+      "okunus": ["ḏilla"],
+      "ipa": ["/ðil.la/"],
+      "torunlar": [
+        ["az", "zillət", ""],
+        ["ota", "ذلت", "zillet"],
+        ["fa", "ذلت", ""]
+      ],
+      "bag": "asıl madde",
+      "etimoloji": 2
+    },
+    {
+      "madde": "ذلالة",
+      "tur": "noun",
+      "baslik": "ذَلَالَة • (ḏalāla) f",
+      "etim_sablon": [
+        ["ar-verbal noun", "Verbal noun"]
+      ],
+      "anlam": ["verbal noun of ذَلَّ (ḏalla) (form I)", "humiliation, disgrace, dishonour"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["ذَلَّ"],
+      "okunus": ["ḏalāla"],
+      "ipa": ["/ða.laː.la/"],
+      "torunlar": [
+        ["az", "zəlalət", ""],
+        ["ota", "ذلالت", "zelâlet"],
+        ["fa", "ذلالت", ""]
+      ],
+      "bag": "asıl madde",
+      "etimoloji": 2
+    },
+    {
+      "madde": "أذل",
+      "tur": "verb",
+      "etim_no": "2.1",
+      "baslik": "أذل (form I)\n# أَذِلْ (ʔaḏil) /ʔa.ðil/: first-person singular non-past active jussive of ذَالَ (ḏāla)\n# أُذَلْ (ʔuḏal) /ʔu.ðal/: first-person singular non-past passive jussive of ذَالَ (ḏāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḏil", "ḏāla", "ʔuḏal"]
+    },
+    {
+      "madde": "يذيل",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يذيل (form I)\n# يَذِيلُ (yaḏīlu) /ja.ðiː.lu/: third-person masculine singular non-past active indicative of ذَالَ (ḏāla)\n# يَذِيلَ (yaḏīla) /ja.ðiː.la/: third-person masculine singular non-past active subjunctive of ذَالَ (ḏāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḏīlu", "ḏāla", "yaḏīla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تذيلين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَذِيلِينَ • (taḏīlīna) (form I) /ta.ðiː.liː.na/\n# second-person feminine singular non-past active indicative of ذَالَ (ḏāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḏīlīna", "ḏāla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تذيل",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تذيل (form I)\n# تَذِيلُ (taḏīlu) /ta.ðiː.lu/: inflection of ذَالَ (ḏāla):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَذِيلَ (taḏīla) /ta.ðiː.la/: inflection of ذَالَ (ḏāla):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḏīlu", "ḏāla", "taḏīla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نذيل",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نذيل (form I)\n# نَذِيلُ (naḏīlu) /na.ðiː.lu/: first-person plural non-past active indicative of ذَالَ (ḏāla)\n# نَذِيلَ (naḏīla) /na.ðiː.la/: first-person plural non-past active subjunctive of ذَالَ (ḏāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḏīlu", "ḏāla", "naḏīla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تذيلان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَذِيلَانِ • (taḏīlāni) (form I) /ta.ðiː.laː.ni/\n# inflection of ذَالَ (ḏāla):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḏīlāni", "ḏāla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يذيلان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَذِيلَانِ • (yaḏīlāni) (form I) /ja.ðiː.laː.ni/\n# third-person masculine dual non-past active indicative of ذَالَ (ḏāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḏīlāni", "ḏāla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تذلن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تذلن (form I)\n# تَذِلْنَ (taḏilna) /ta.ðil.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of ذَالَ (ḏāla)\n# تُذَلْنَ (tuḏalna) /tu.ðal.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of ذَالَ (ḏāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḏilna", "ḏāla", "tuḏalna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يذيلون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَذِيلُونَ • (yaḏīlūna) (form I) /ja.ðiː.luː.na/\n# third-person masculine plural non-past active indicative of ذَالَ (ḏāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḏīlūna", "ḏāla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يذلن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يذلن (form I)\n# يَذِلْنَ (yaḏilna) /ja.ðil.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of ذَالَ (ḏāla)\n# يُذَلْنَ (yuḏalna) /ju.ðal.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of ذَالَ (ḏāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḏilna", "ḏāla", "yuḏalna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تذيلون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَذِيلُونَ • (taḏīlūna) (form I) /ta.ðiː.luː.na/\n# second-person masculine plural non-past active indicative of ذَالَ (ḏāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḏīlūna", "ḏāla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تذيلي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَذِيلِي • (taḏīlī) (form I) /ta.ðiː.liː/\n# second-person feminine singular non-past active subjunctive/jussive of ذَالَ (ḏāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḏīlī", "ḏāla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تذيلا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَذِيلَا • (taḏīlā) (form I) /ta.ðiː.laː/\n# inflection of ذَالَ (ḏāla):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḏīlā", "ḏāla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يذيلوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَذِيلُوا • (yaḏīlū) (form I) /ja.ðiː.luː/\n# third-person masculine plural non-past active subjunctive/jussive of ذَالَ (ḏāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḏīlū", "ḏāla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يذيلا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَذِيلَا • (yaḏīlā) (form I) /ja.ðiː.laː/\n# third-person masculine dual non-past active subjunctive/jussive of ذَالَ (ḏāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḏīlā", "ḏāla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تذيلوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَذِيلُوا • (taḏīlū) (form I) /ta.ðiː.luː/\n# second-person masculine plural non-past active subjunctive/jussive of ذَالَ (ḏāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḏīlū", "ḏāla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يذل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يذل (form I)\n# يَذِلْ (yaḏil) /ja.ðil/: third-person masculine singular non-past active jussive of ذَالَ (ḏāla)\n# يُذَلْ (yuḏal) /ju.ðal/: third-person masculine singular non-past passive jussive of ذَالَ (ḏāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḏil", "ḏāla", "yuḏal"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تذل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تذل (form I)\n# تَذِلْ (taḏil) /ta.ðil/: inflection of ذَالَ (ḏāla):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُذَلْ (tuḏal) /tu.ðal/: inflection of ذَالَ (ḏāla):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḏil", "ḏāla", "tuḏal"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ذلتما",
+      "tur": "verb",
+      "baslik": "ذِلْتُمَا • (ḏiltumā) (form I) /ðil.tu.maː/\n# second-person dual past active/passive of ذَالَ (ḏāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḏiltumā", "ḏāla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ذالا",
+      "tur": "verb",
+      "baslik": "ذَالَا • (ḏālā) (form I) /ðaː.laː/\n# third-person masculine dual past active of ذَالَ (ḏāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḏālā", "ḏāla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ذالتا",
+      "tur": "verb",
+      "baslik": "ذَالَتَا • (ḏālatā) (form I) /ðaː.la.taː/\n# third-person feminine dual past active of ذَالَ (ḏāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḏālatā", "ḏāla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ذلنا",
+      "tur": "verb",
+      "baslik": "ذِلْنَا • (ḏilnā) (form I) /ðil.naː/\n# first-person plural past active/passive of ذَالَ (ḏāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḏilnā", "ḏāla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ذالت",
+      "tur": "verb",
+      "baslik": "ذَالَتْ • (ḏālat) (form I) /ðaː.lat/\n# third-person feminine singular past active of ذَالَ (ḏāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḏālat", "ḏāla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ذلتم",
+      "tur": "verb",
+      "baslik": "ذِلْتُمْ • (ḏiltum) (form I) /ðil.tum/\n# second-person masculine plural past active/passive of ذَالَ (ḏāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḏiltum", "ḏāla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ذلتن",
+      "tur": "verb",
+      "baslik": "ذِلْتُنَّ • (ḏiltunna) (form I) /ðil.tun.na/\n# second-person feminine plural past active/passive of ذَالَ (ḏāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḏiltunna", "ḏāla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ذالوا",
+      "tur": "verb",
+      "baslik": "ذَالُوا • (ḏālū) (form I) /ðaː.luː/\n# third-person masculine plural past active of ذَالَ (ḏāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḏālū", "ḏāla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ذلن",
+      "tur": "verb",
+      "baslik": "ذِلْنَ • (ḏilna) (form I) /ðil.na/\n# inflection of ذَالَ (ḏāla):\n## third-person feminine plural past active/passive\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḏilna", "ḏāla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ذيلا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ذِيلَا • (ḏīlā) (form I) /ðiː.laː/\n# inflection of ذَالَ (ḏāla):\n## third-person masculine dual past passive\n## second-person dual imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḏīlā", "ḏāla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ذيلوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ذِيلُوا • (ḏīlū) (form I) /ðiː.luː/\n# inflection of ذَالَ (ḏāla):\n## third-person masculine plural past passive\n## second-person masculine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḏīlū", "ḏāla"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ذيلي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "ذِيلِي • (ḏīlī) (form I) /ðiː.liː/\n# second-person feminine singular imperative of ذَالَ (ḏāla)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḏīlī", "ḏāla"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "Verbal noun of ذَلَّ (ḏalla).",
+      "kognatlar": [
+        ["ذَلَّ", "ذل#Arabic"]
+      ]
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ذال", "r7"]
+  ],
+  "mana": {
     "ince": "state.n.02",
     "orta": "noun.state",
     "ust": "hâl ve vasıf",
@@ -516,20 +385,8 @@
     "dayanak_tanim": "a state of shame or disgrace",
     "synset_sayisi": 5
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["fawn.v.01", "humiliate.v.01", "status.n.01", "take_down.v.02"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 5,
       "merkez_kok": "خون",
@@ -549,6 +406,11 @@
       "boy": 10
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["fawn.v.01", "humiliate.v.01", "status.n.01", "take_down.v.02"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

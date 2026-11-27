@@ -1,52 +1,39 @@
 {
   "kok": "قما",
+  "tur": "isim",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["fiil-yok"],
+  "lugat_fiil": false,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "قما", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "mekayis": [
-      {
-        "baslik": "قَمَا",
-        "metin": "(قَمَا) الْقَافُ وَالْمِيمُ وَالْحَرْفُ الْمُعْتَلُّ كَلِمَةٌ تَدُلُّ عَلَى حَقَارَةٍ وَذُلٍّ. يُقَالُ: هُوَ قَمِيٌّ بَيَّنُ الْقَمَاءَةِ، أَيِ الْحَقَارَةِ. وَأَقْمَيْتُهُ أَنَا: أَذْلَلْتُهُ.\nوَإِذَا هُمِزَ كَانَ لَهُ مَعْنًى آخَرُ، وَذَلِكَ قَوْلُهُمْ: تَقَمَّأْتُ الشَّيْءَ، إِذَا طَلَبْتَهُ، تَقَمُّؤًا. وَزَعَمَ نَاسٌ أَنَّ هَذَا مِنْ بَابِ الْإِعْجَابِ، يُقَالُ أَقْمَأَنِي الشَّيْءُ: أَعْجَبَنِي. وَأَقْمَأَتِ الْإِبِلُ: سَمِنَتْ. وَتَقَمَّأْتُ الشَّيْءَ: جَمَعْتُهُ شَيْئًا بَعْدَ شَيْءٍ. قَالَ:\nلَقَدْ قَضَيْتُ فَلَا تَسْتَهْزِئَا سَفَهًا ... مِمَّا تَقَمَّأْتُهُ مِنْ لَذَّةٍ وَطَرِي."
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "قم",
+  "ses": {
     "harf": "ق",
+    "fasil": "قم",
     "mahrec": "lehaviyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "mekayis": [
+    {
+      "baslik": "قَمَا",
+      "metin": "(قَمَا) الْقَافُ وَالْمِيمُ وَالْحَرْفُ الْمُعْتَلُّ كَلِمَةٌ تَدُلُّ عَلَى حَقَارَةٍ وَذُلٍّ. يُقَالُ: هُوَ قَمِيٌّ بَيَّنُ الْقَمَاءَةِ، أَيِ الْحَقَارَةِ. وَأَقْمَيْتُهُ أَنَا: أَذْلَلْتُهُ.\nوَإِذَا هُمِزَ كَانَ لَهُ مَعْنًى آخَرُ، وَذَلِكَ قَوْلُهُمْ: تَقَمَّأْتُ الشَّيْءَ، إِذَا طَلَبْتَهُ، تَقَمُّؤًا. وَزَعَمَ نَاسٌ أَنَّ هَذَا مِنْ بَابِ الْإِعْجَابِ، يُقَالُ أَقْمَأَنِي الشَّيْءُ: أَعْجَبَنِي. وَأَقْمَأَتِ الْإِبِلُ: سَمِنَتْ. وَتَقَمَّأْتُ الشَّيْءَ: جَمَعْتُهُ شَيْئًا بَعْدَ شَيْءٍ. قَالَ:\nلَقَدْ قَضَيْتُ فَلَا تَسْتَهْزِئَا سَفَهًا ... مِمَّا تَقَمَّأْتُهُ مِنْ لَذَّةٍ وَطَرِي."
+    }
+  ],
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "قما", "r7"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "ust": {
       "kume": 3,
       "merkez_kok": "فقص",
@@ -66,6 +53,10 @@
       "boy": 75
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

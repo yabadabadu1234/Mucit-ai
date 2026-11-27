@@ -1,681 +1,486 @@
 {
   "kok": "باض",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "باض", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أبيض",
-        "u": "أبيض",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أبيض (form I)\n# أَبِيضُ (ʔabīḍu) /ʔa.biː.dˤu/: first-person singular non-past active indicative of بَاضَ (bāḍa)\n# أَبِيضَ (ʔabīḍa) /ʔa.biː.dˤa/: first-person singular non-past active subjunctive of بَاضَ (bāḍa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔabīḍu", "bāḍa", "ʔabīḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "نبض",
-        "u": "نبض",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "نبض (form I)\n# نَبِضْ (nabiḍ) /na.bidˤ/: first-person plural non-past active jussive of بَاضَ (bāḍa)\n# نُبَضْ (nubaḍ) /nu.badˤ/: first-person plural non-past passive jussive of بَاضَ (bāḍa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nabiḍ", "bāḍa", "nubaḍ"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "بيض",
-        "u": "بيض",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "بِيضَ • (bīḍa) (form I) /biː.dˤa/\n# third-person masculine singular past passive of بَاضَ (bāḍa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bīḍa", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "يبيض",
-        "u": "يبيض",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يبيض (form I)\n# يَبِيضُ (yabīḍu) /ja.biː.dˤu/: third-person masculine singular non-past active indicative of بَاضَ (bāḍa)\n# يَبِيضَ (yabīḍa) /ja.biː.dˤa/: third-person masculine singular non-past active subjunctive of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabīḍu", "bāḍa", "yabīḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيض",
-        "u": "تبيض",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تبيض (form I)\n# تَبِيضُ (tabīḍu) /ta.biː.dˤu/: inflection of بَاضَ (bāḍa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَبِيضَ (tabīḍa) /ta.biː.dˤa/: inflection of بَاضَ (bāḍa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabīḍu", "bāḍa", "tabīḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيضين",
-        "u": "تبيضين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَبِيضِينَ • (tabīḍīna) (form I) /ta.biː.dˤiː.na/\n# second-person feminine singular non-past active indicative of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabīḍīna", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيضي",
-        "u": "تبيضي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَبِيضِي • (tabīḍī) (form I) /ta.biː.dˤiː/\n# second-person feminine singular non-past active subjunctive/jussive of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabīḍī", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "نبيض",
-        "u": "نبيض",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نبيض (form I)\n# نَبِيضُ (nabīḍu) /na.biː.dˤu/: first-person plural non-past active indicative of بَاضَ (bāḍa)\n# نَبِيضَ (nabīḍa) /na.biː.dˤa/: first-person plural non-past active subjunctive of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nabīḍu", "bāḍa", "nabīḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيضون",
-        "u": "تبيضون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَبِيضُونَ • (tabīḍūna) (form I) /ta.biː.dˤuː.na/\n# second-person masculine plural non-past active indicative of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabīḍūna", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيضوا",
-        "u": "تبيضوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَبِيضُوا • (tabīḍū) (form I) /ta.biː.dˤuː/\n# second-person masculine plural non-past active subjunctive/jussive of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabīḍū", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "يبيضون",
-        "u": "يبيضون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يَبِيضُونَ • (yabīḍūna) (form I) /ja.biː.dˤuː.na/\n# third-person masculine plural non-past active indicative of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabīḍūna", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "يبيضوا",
-        "u": "يبيضوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يَبِيضُوا • (yabīḍū) (form I) /ja.biː.dˤuː/\n# third-person masculine plural non-past active subjunctive/jussive of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabīḍū", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "أباض",
-        "u": "أباض",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أباض (form I)\n# أُبَاضُ (ʔubāḍu) /ʔu.baː.dˤu/: first-person singular non-past passive indicative of بَاضَ (bāḍa)\n# أُبَاضَ (ʔubāḍa) /ʔu.baː.dˤa/: first-person singular non-past passive subjunctive of بَاضَ (bāḍa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔubāḍu", "bāḍa", "ʔubāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيضان",
-        "u": "تبيضان",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَبِيضَانِ • (tabīḍāni) (form I) /ta.biː.dˤaː.ni/\n# inflection of بَاضَ (bāḍa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabīḍāni", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "يبيضان",
-        "u": "يبيضان",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يَبِيضَانِ • (yabīḍāni) (form I) /ja.biː.dˤaː.ni/\n# third-person masculine dual non-past active indicative of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabīḍāni", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "يبضن",
-        "u": "يبضن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يبضن (form I)\n# يَبِضْنَ (yabiḍna) /ja.bidˤ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of بَاضَ (bāḍa)\n# يُبَضْنَ (yubaḍna) /ju.badˤ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabiḍna", "bāḍa", "yubaḍna"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "تبضن",
-        "u": "تبضن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تبضن (form I)\n# تَبِضْنَ (tabiḍna) /ta.bidˤ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of بَاضَ (bāḍa)\n# تُبَضْنَ (tubaḍna) /tu.badˤ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabiḍna", "bāḍa", "tubaḍna"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "تباض",
-        "u": "تباض",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تباض (form I)\n# تُبَاضُ (tubāḍu) /tu.baː.dˤu/: inflection of بَاضَ (bāḍa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُبَاضَ (tubāḍa) /tu.baː.dˤa/: inflection of بَاضَ (bāḍa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tubāḍu", "bāḍa", "tubāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "تباضين",
-        "u": "تباضين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُبَاضِينَ • (tubāḍīna) (form I) /tu.baː.dˤiː.na/\n# second-person feminine singular non-past passive indicative of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tubāḍīna", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "نباض",
-        "u": "نباض",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نباض (form I)\n# نُبَاضُ (nubāḍu) /nu.baː.dˤu/: first-person plural non-past passive indicative of بَاضَ (bāḍa)\n# نُبَاضَ (nubāḍa) /nu.baː.dˤa/: first-person plural non-past passive subjunctive of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nubāḍu", "bāḍa", "nubāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "يباضان",
-        "u": "يباضان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُبَاضَانِ • (yubāḍāni) (form I) /ju.baː.dˤaː.ni/\n# third-person masculine dual non-past passive indicative of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yubāḍāni", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "تباضون",
-        "u": "تباضون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُبَاضُونَ • (tubāḍūna) (form I) /tu.baː.dˤuː.na/\n# second-person masculine plural non-past passive indicative of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tubāḍūna", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "يباض",
-        "u": "يباض",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يباض (form I)\n# يُبَاضُ (yubāḍu) /ju.baː.dˤu/: third-person masculine singular non-past passive indicative of بَاضَ (bāḍa)\n# يُبَاضَ (yubāḍa) /ju.baː.dˤa/: third-person masculine singular non-past passive subjunctive of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yubāḍu", "bāḍa", "yubāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "يباضون",
-        "u": "يباضون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُبَاضُونَ • (yubāḍūna) (form I) /ju.baː.dˤuː.na/\n# third-person masculine plural non-past passive indicative of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yubāḍūna", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "تباضا",
-        "u": "تباضا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُبَاضَا • (tubāḍā) (form I) /tu.baː.dˤaː/\n# inflection of بَاضَ (bāḍa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tubāḍā", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "تباضان",
-        "u": "تباضان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُبَاضَانِ • (tubāḍāni) (form I) /tu.baː.dˤaː.ni/\n# inflection of بَاضَ (bāḍa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tubāḍāni", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "تباضي",
-        "u": "تباضي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُبَاضِي • (tubāḍī) (form I) /tu.baː.dˤiː/\n# second-person feminine singular non-past passive subjunctive/jussive of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tubāḍī", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "تبيضا",
-        "u": "تبيضا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَبِيضَا • (tabīḍā) (form I) /ta.biː.dˤaː/\n# inflection of بَاضَ (bāḍa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabīḍā", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "يبيضا",
-        "u": "يبيضا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يَبِيضَا • (yabīḍā) (form I) /ja.biː.dˤaː/\n# third-person masculine dual non-past active subjunctive/jussive of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabīḍā", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "يباضا",
-        "u": "يباضا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُبَاضَا • (yubāḍā) (form I) /ju.baː.dˤaː/\n# third-person masculine dual non-past passive subjunctive/jussive of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yubāḍā", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "تباضوا",
-        "u": "تباضوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُبَاضُوا • (tubāḍū) (form I) /tu.baː.dˤuː/\n# second-person masculine plural non-past passive subjunctive/jussive of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tubāḍū", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "يباضوا",
-        "u": "يباضوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُبَاضُوا • (yubāḍū) (form I) /ju.baː.dˤuː/\n# third-person masculine plural non-past passive subjunctive/jussive of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yubāḍū", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "أبض",
-        "u": "أبض",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أبض (form I)\n# أَبِضْ (ʔabiḍ) /ʔa.bidˤ/: first-person singular non-past active jussive of بَاضَ (bāḍa)\n# أُبَضْ (ʔubaḍ) /ʔu.badˤ/: first-person singular non-past passive jussive of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔabiḍ", "bāḍa", "ʔubaḍ"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "يبض",
-        "u": "يبض",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يبض (form I)\n# يَبِضْ (yabiḍ) /ja.bidˤ/: third-person masculine singular non-past active jussive of بَاضَ (bāḍa)\n# يُبَضْ (yubaḍ) /ju.badˤ/: third-person masculine singular non-past passive jussive of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yabiḍ", "bāḍa", "yubaḍ"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "تبض",
-        "u": "تبض",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تبض (form I)\n# تَبِضْ (tabiḍ) /ta.bidˤ/: inflection of بَاضَ (bāḍa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُبَضْ (tubaḍ) /tu.badˤ/: inflection of بَاضَ (bāḍa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tabiḍ", "bāḍa", "tubaḍ"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "بضتما",
-        "u": "بضتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بِضْتُمَا • (biḍtumā) (form I) /bidˤ.tu.maː/\n# second-person dual past active/passive of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["biḍtumā", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "بضت",
-        "u": "بضت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بضت (form I)\n# بِضْتُ (biḍtu) /bidˤ.tu/: first-person singular past active/passive of بَاضَ (bāḍa)\n# بِضْتَ (biḍta) /bidˤ.ta/: second-person masculine singular past active/passive of بَاضَ (bāḍa)\n# بِضْتِ (biḍti) /bidˤ.ti/: second-person feminine singular past active/passive of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["biḍtu", "bāḍa", "biḍta"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "باضتا",
-        "u": "باضتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَاضَتَا • (bāḍatā) (form I) /baː.dˤa.taː/\n# third-person feminine dual past active of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bāḍatā", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "باضا",
-        "u": "باضا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَاضَا • (bāḍā) (form I) /baː.dˤaː/\n# third-person masculine dual past active of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bāḍā", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "بضنا",
-        "u": "بضنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بِضْنَا • (biḍnā) (form I) /bidˤ.naː/\n# first-person plural past active/passive of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["biḍnā", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "بضتم",
-        "u": "بضتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بِضْتُمْ • (biḍtum) (form I) /bidˤ.tum/\n# second-person masculine plural past active/passive of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["biḍtum", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "باضوا",
-        "u": "باضوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَاضُوا • (bāḍū) (form I) /baː.dˤuː/\n# third-person masculine plural past active of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bāḍū", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "بضتن",
-        "u": "بضتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بِضْتُنَّ • (biḍtunna) (form I) /bidˤ.tun.na/\n# second-person feminine plural past active/passive of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["biḍtunna", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "بضن",
-        "u": "بضن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بِضْنَ • (biḍna) (form I) /bidˤ.na/\n# inflection of بَاضَ (bāḍa):\n## third-person feminine plural past active/passive\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["biḍna", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "بيضت",
-        "u": "بيضت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "بِيضَتْ • (bīḍat) (form I) /biː.dˤat/\n# third-person feminine singular past passive of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bīḍat", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "بيضا",
-        "u": "بيضا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "بِيضَا • (bīḍā) (form I) /biː.dˤaː/\n# inflection of بَاضَ (bāḍa):\n## third-person masculine dual past passive\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bīḍā", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "بيضتا",
-        "u": "بيضتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "بِيضَتَا • (bīḍatā) (form I) /biː.dˤa.taː/\n# third-person feminine dual past passive of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bīḍatā", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "باضت",
-        "u": "باضت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَاضَتْ • (bāḍat) (form I) /baː.dˤat/\n# third-person feminine singular past active of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bāḍat", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "بض",
-        "u": "بض",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بِضْ • (biḍ) (form I) /bidˤ/\n# second-person masculine singular imperative of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["biḍ", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "بيضوا",
-        "u": "بيضوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "بِيضُوا • (bīḍū) (form I) /biː.dˤuː/\n# inflection of بَاضَ (bāḍa):\n## third-person masculine plural past passive\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bīḍū", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      },
-      {
-        "w": "بيضي",
-        "u": "بيضي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "بِيضِي • (bīḍī) (form I) /biː.dˤiː/\n# second-person feminine singular imperative of بَاضَ (bāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["bīḍī", "bāḍa"],
-        "k": "باض",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "بض",
+  "ses": {
     "harf": "ب",
+    "fasil": "بض",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "أبيض",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أبيض (form I)\n# أَبِيضُ (ʔabīḍu) /ʔa.biː.dˤu/: first-person singular non-past active indicative of بَاضَ (bāḍa)\n# أَبِيضَ (ʔabīḍa) /ʔa.biː.dˤa/: first-person singular non-past active subjunctive of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔabīḍu", "bāḍa", "ʔabīḍa"]
+    },
+    {
+      "madde": "نبض",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "نبض (form I)\n# نَبِضْ (nabiḍ) /na.bidˤ/: first-person plural non-past active jussive of بَاضَ (bāḍa)\n# نُبَضْ (nubaḍ) /nu.badˤ/: first-person plural non-past passive jussive of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nabiḍ", "bāḍa", "nubaḍ"]
+    },
+    {
+      "madde": "بيض",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "بِيضَ • (bīḍa) (form I) /biː.dˤa/\n# third-person masculine singular past passive of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bīḍa", "bāḍa"]
+    },
+    {
+      "madde": "يبيض",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يبيض (form I)\n# يَبِيضُ (yabīḍu) /ja.biː.dˤu/: third-person masculine singular non-past active indicative of بَاضَ (bāḍa)\n# يَبِيضَ (yabīḍa) /ja.biː.dˤa/: third-person masculine singular non-past active subjunctive of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabīḍu", "bāḍa", "yabīḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبيض",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تبيض (form I)\n# تَبِيضُ (tabīḍu) /ta.biː.dˤu/: inflection of بَاضَ (bāḍa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَبِيضَ (tabīḍa) /ta.biː.dˤa/: inflection of بَاضَ (bāḍa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabīḍu", "bāḍa", "tabīḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبيضين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَبِيضِينَ • (tabīḍīna) (form I) /ta.biː.dˤiː.na/\n# second-person feminine singular non-past active indicative of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabīḍīna", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبيضي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَبِيضِي • (tabīḍī) (form I) /ta.biː.dˤiː/\n# second-person feminine singular non-past active subjunctive/jussive of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabīḍī", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نبيض",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نبيض (form I)\n# نَبِيضُ (nabīḍu) /na.biː.dˤu/: first-person plural non-past active indicative of بَاضَ (bāḍa)\n# نَبِيضَ (nabīḍa) /na.biː.dˤa/: first-person plural non-past active subjunctive of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nabīḍu", "bāḍa", "nabīḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبيضون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَبِيضُونَ • (tabīḍūna) (form I) /ta.biː.dˤuː.na/\n# second-person masculine plural non-past active indicative of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabīḍūna", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبيضوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَبِيضُوا • (tabīḍū) (form I) /ta.biː.dˤuː/\n# second-person masculine plural non-past active subjunctive/jussive of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabīḍū", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبيضون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يَبِيضُونَ • (yabīḍūna) (form I) /ja.biː.dˤuː.na/\n# third-person masculine plural non-past active indicative of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabīḍūna", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبيضوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يَبِيضُوا • (yabīḍū) (form I) /ja.biː.dˤuː/\n# third-person masculine plural non-past active subjunctive/jussive of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabīḍū", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أباض",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أباض (form I)\n# أُبَاضُ (ʔubāḍu) /ʔu.baː.dˤu/: first-person singular non-past passive indicative of بَاضَ (bāḍa)\n# أُبَاضَ (ʔubāḍa) /ʔu.baː.dˤa/: first-person singular non-past passive subjunctive of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔubāḍu", "bāḍa", "ʔubāḍa"]
+    },
+    {
+      "madde": "تبيضان",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَبِيضَانِ • (tabīḍāni) (form I) /ta.biː.dˤaː.ni/\n# inflection of بَاضَ (bāḍa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabīḍāni", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبيضان",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يَبِيضَانِ • (yabīḍāni) (form I) /ja.biː.dˤaː.ni/\n# third-person masculine dual non-past active indicative of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabīḍāni", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبضن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يبضن (form I)\n# يَبِضْنَ (yabiḍna) /ja.bidˤ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of بَاضَ (bāḍa)\n# يُبَضْنَ (yubaḍna) /ju.badˤ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabiḍna", "bāḍa", "yubaḍna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبضن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تبضن (form I)\n# تَبِضْنَ (tabiḍna) /ta.bidˤ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of بَاضَ (bāḍa)\n# تُبَضْنَ (tubaḍna) /tu.badˤ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabiḍna", "bāḍa", "tubaḍna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تباض",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تباض (form I)\n# تُبَاضُ (tubāḍu) /tu.baː.dˤu/: inflection of بَاضَ (bāḍa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُبَاضَ (tubāḍa) /tu.baː.dˤa/: inflection of بَاضَ (bāḍa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tubāḍu", "bāḍa", "tubāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تباضين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُبَاضِينَ • (tubāḍīna) (form I) /tu.baː.dˤiː.na/\n# second-person feminine singular non-past passive indicative of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tubāḍīna", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نباض",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نباض (form I)\n# نُبَاضُ (nubāḍu) /nu.baː.dˤu/: first-person plural non-past passive indicative of بَاضَ (bāḍa)\n# نُبَاضَ (nubāḍa) /nu.baː.dˤa/: first-person plural non-past passive subjunctive of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nubāḍu", "bāḍa", "nubāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يباضان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُبَاضَانِ • (yubāḍāni) (form I) /ju.baː.dˤaː.ni/\n# third-person masculine dual non-past passive indicative of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yubāḍāni", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تباضون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُبَاضُونَ • (tubāḍūna) (form I) /tu.baː.dˤuː.na/\n# second-person masculine plural non-past passive indicative of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tubāḍūna", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يباض",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يباض (form I)\n# يُبَاضُ (yubāḍu) /ju.baː.dˤu/: third-person masculine singular non-past passive indicative of بَاضَ (bāḍa)\n# يُبَاضَ (yubāḍa) /ju.baː.dˤa/: third-person masculine singular non-past passive subjunctive of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yubāḍu", "bāḍa", "yubāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يباضون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُبَاضُونَ • (yubāḍūna) (form I) /ju.baː.dˤuː.na/\n# third-person masculine plural non-past passive indicative of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yubāḍūna", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تباضا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُبَاضَا • (tubāḍā) (form I) /tu.baː.dˤaː/\n# inflection of بَاضَ (bāḍa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tubāḍā", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تباضان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُبَاضَانِ • (tubāḍāni) (form I) /tu.baː.dˤaː.ni/\n# inflection of بَاضَ (bāḍa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tubāḍāni", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تباضي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُبَاضِي • (tubāḍī) (form I) /tu.baː.dˤiː/\n# second-person feminine singular non-past passive subjunctive/jussive of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tubāḍī", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبيضا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَبِيضَا • (tabīḍā) (form I) /ta.biː.dˤaː/\n# inflection of بَاضَ (bāḍa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabīḍā", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبيضا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يَبِيضَا • (yabīḍā) (form I) /ja.biː.dˤaː/\n# third-person masculine dual non-past active subjunctive/jussive of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabīḍā", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يباضا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُبَاضَا • (yubāḍā) (form I) /ju.baː.dˤaː/\n# third-person masculine dual non-past passive subjunctive/jussive of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yubāḍā", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تباضوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُبَاضُوا • (tubāḍū) (form I) /tu.baː.dˤuː/\n# second-person masculine plural non-past passive subjunctive/jussive of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tubāḍū", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يباضوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُبَاضُوا • (yubāḍū) (form I) /ju.baː.dˤuː/\n# third-person masculine plural non-past passive subjunctive/jussive of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yubāḍū", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أبض",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أبض (form I)\n# أَبِضْ (ʔabiḍ) /ʔa.bidˤ/: first-person singular non-past active jussive of بَاضَ (bāḍa)\n# أُبَضْ (ʔubaḍ) /ʔu.badˤ/: first-person singular non-past passive jussive of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔabiḍ", "bāḍa", "ʔubaḍ"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يبض",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يبض (form I)\n# يَبِضْ (yabiḍ) /ja.bidˤ/: third-person masculine singular non-past active jussive of بَاضَ (bāḍa)\n# يُبَضْ (yubaḍ) /ju.badˤ/: third-person masculine singular non-past passive jussive of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yabiḍ", "bāḍa", "yubaḍ"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تبض",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تبض (form I)\n# تَبِضْ (tabiḍ) /ta.bidˤ/: inflection of بَاضَ (bāḍa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُبَضْ (tubaḍ) /tu.badˤ/: inflection of بَاضَ (bāḍa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tabiḍ", "bāḍa", "tubaḍ"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بضتما",
+      "tur": "verb",
+      "baslik": "بِضْتُمَا • (biḍtumā) (form I) /bidˤ.tu.maː/\n# second-person dual past active/passive of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["biḍtumā", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بضت",
+      "tur": "verb",
+      "baslik": "بضت (form I)\n# بِضْتُ (biḍtu) /bidˤ.tu/: first-person singular past active/passive of بَاضَ (bāḍa)\n# بِضْتَ (biḍta) /bidˤ.ta/: second-person masculine singular past active/passive of بَاضَ (bāḍa)\n# بِضْتِ (biḍti) /bidˤ.ti/: second-person feminine singular past active/passive of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["biḍtu", "bāḍa", "biḍta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "باضتا",
+      "tur": "verb",
+      "baslik": "بَاضَتَا • (bāḍatā) (form I) /baː.dˤa.taː/\n# third-person feminine dual past active of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bāḍatā", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "باضا",
+      "tur": "verb",
+      "baslik": "بَاضَا • (bāḍā) (form I) /baː.dˤaː/\n# third-person masculine dual past active of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bāḍā", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بضنا",
+      "tur": "verb",
+      "baslik": "بِضْنَا • (biḍnā) (form I) /bidˤ.naː/\n# first-person plural past active/passive of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["biḍnā", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بضتم",
+      "tur": "verb",
+      "baslik": "بِضْتُمْ • (biḍtum) (form I) /bidˤ.tum/\n# second-person masculine plural past active/passive of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["biḍtum", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "باضوا",
+      "tur": "verb",
+      "baslik": "بَاضُوا • (bāḍū) (form I) /baː.dˤuː/\n# third-person masculine plural past active of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bāḍū", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بضتن",
+      "tur": "verb",
+      "baslik": "بِضْتُنَّ • (biḍtunna) (form I) /bidˤ.tun.na/\n# second-person feminine plural past active/passive of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["biḍtunna", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بضن",
+      "tur": "verb",
+      "baslik": "بِضْنَ • (biḍna) (form I) /bidˤ.na/\n# inflection of بَاضَ (bāḍa):\n## third-person feminine plural past active/passive\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["biḍna", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بيضت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "بِيضَتْ • (bīḍat) (form I) /biː.dˤat/\n# third-person feminine singular past passive of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bīḍat", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بيضا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "بِيضَا • (bīḍā) (form I) /biː.dˤaː/\n# inflection of بَاضَ (bāḍa):\n## third-person masculine dual past passive\n## second-person dual imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bīḍā", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بيضتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "بِيضَتَا • (bīḍatā) (form I) /biː.dˤa.taː/\n# third-person feminine dual past passive of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bīḍatā", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "باضت",
+      "tur": "verb",
+      "baslik": "بَاضَتْ • (bāḍat) (form I) /baː.dˤat/\n# third-person feminine singular past active of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bāḍat", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بض",
+      "tur": "verb",
+      "baslik": "بِضْ • (biḍ) (form I) /bidˤ/\n# second-person masculine singular imperative of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["biḍ", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بيضوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "بِيضُوا • (bīḍū) (form I) /biː.dˤuː/\n# inflection of بَاضَ (bāḍa):\n## third-person masculine plural past passive\n## second-person masculine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bīḍū", "bāḍa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "بيضي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "بِيضِي • (bīḍī) (form I) /biː.dˤiː/\n# second-person feminine singular imperative of بَاضَ (bāḍa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["bīḍī", "bāḍa"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "باض", "r7"]
+  ],
+  "mana": {
     "ince": "event.n.01",
     "orta": "noun.event",
     "ust": "fiil ve hadise",
@@ -683,22 +488,15 @@
     "dayanak_tanim": "(electronics) a sharp transient wave in the normal electrical state (or a series of such transients)",
     "synset_sayisi": 8
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["beat.v.04", "food.n.01", "happening.n.01", "pulsate.v.01", "white.a.01", "white.a.02", "whitewash.v.02"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["beat.v.04", "food.n.01", "happening.n.01", "pulsate.v.01", "white.a.01", "white.a.02", "whitewash.v.02"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

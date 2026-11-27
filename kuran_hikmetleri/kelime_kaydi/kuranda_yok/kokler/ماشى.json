@@ -1,564 +1,397 @@
 {
   "kok": "ماشى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ماشى", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "ماش",
-        "u": "ماش",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "مَاشِ • (māši) (form III) /maː.ʃi/\n# second-person masculine singular imperative of مَاشَى (māšā)",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["māši", "māšā"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "ماشي",
-        "u": "ماشي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "مَاشِي • (māšī) (form III) /maː.ʃiː/\n# second-person feminine singular imperative of مَاشَى (māšā)",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["māšī", "māšā"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "تماشى",
-        "u": "تماشى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُمَاشَى • (tumāšā) (form III) /tu.maː.ʃaː/\n# inflection of مَاشَى (māšā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tumāšā", "māšā"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "تماش",
-        "u": "تماش",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تماش (form III)\n# تُمَاشِ (tumāši) /tu.maː.ʃi/: inflection of مَاشَى (māšā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُمَاشَ (tumāša) /tu.maː.ʃa/: inflection of مَاشَى (māšā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tumāši", "māšā", "tumāša"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "تماشي",
-        "u": "تماشي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تماشي (form III)\n# تُمَاشِي (tumāšī) /tu.maː.ʃiː/: inflection of مَاشَى (māšā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُمَاشِيَ (tumāšiya) /tu.maː.ʃi.ja/: inflection of مَاشَى (māšā):\n## second-person masculine singular non-past active subju",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tumāšī", "māšā", "tumāšiya"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "تماشيا",
-        "u": "تماشيا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تماشيا (form III)\n# تُمَاشِيَا (tumāšiyā) /tu.maː.ʃi.jaː/: inflection of مَاشَى (māšā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُمَاشَيَا (tumāšayā) /tu.maː.ʃa.jaː/: inflection of مَاشَى (māšā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tumāšiyā", "māšā", "tumāšayā"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "تماشين",
-        "u": "تماشين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تماشين (form III)\n# تُمَاشِينَ (tumāšīna) /tu.maː.ʃiː.na/: inflection of مَاشَى (māšā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُمَاشَيْنَ (tumāšayna) /tu.maː.ʃaj.na/: inflection of مَاشَى (māšā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tumāšīna", "māšā", "tumāšayna"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "تماشوا",
-        "u": "تماشوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تماشوا (form III)\n# تُمَاشُوا (tumāšū) /tu.maː.ʃuː/: second-person masculine plural non-past active subjunctive/jussive of مَاشَى (māšā)\n# تُمَاشَوْا (tumāšaw) /tu.maː.ʃaw/: second-person masculine plural non-past passive subjunctive/jussive of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tumāšū", "māšā", "tumāšaw"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "ماشت",
-        "u": "ماشت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَاشَتْ • (māšat) (form III) /maː.ʃat/\n# third-person feminine singular past active of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["māšat", "māšā"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "ماشيتما",
-        "u": "ماشيتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَاشَيْتُمَا • (māšaytumā) (form III) /maː.ʃaj.tu.maː/\n# second-person dual past active of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["māšaytumā", "māšā"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "ماشيا",
-        "u": "ماشيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ماشيا (form III)\n# مَاشَيَا (māšayā) /maː.ʃa.jaː/: third-person masculine dual past active of مَاشَى (māšā)\n# مَاشِيَا (māšiyā) /maː.ʃi.jaː/: second-person dual imperative of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["māšayā", "māšā", "māšiyā"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "ماشيت",
-        "u": "ماشيت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ماشيت (form III)\n# مَاشَيْتُ (māšaytu) /maː.ʃaj.tu/: first-person singular past active of مَاشَى (māšā)\n# مَاشَيْتَ (māšayta) /maː.ʃaj.ta/: second-person masculine singular past active of مَاشَى (māšā)\n# مَاشَيْتِ (māšayti) /maː.ʃaj.ti/: second-person feminine singular past active of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["māšaytu", "māšā", "māšayta"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "ماشينا",
-        "u": "ماشينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَاشَيْنَا • (māšaynā) (form III) /maː.ʃaj.naː/\n# first-person plural past active of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["māšaynā", "māšā"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "ماشيتن",
-        "u": "ماشيتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَاشَيْتُنَّ • (māšaytunna) (form III) /maː.ʃaj.tun.na/\n# second-person feminine plural past active of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["māšaytunna", "māšā"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "ماشتا",
-        "u": "ماشتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَاشَتَا • (māšatā) (form III) /maː.ʃa.taː/\n# third-person feminine dual past active of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["māšatā", "māšā"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "ماشوا",
-        "u": "ماشوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ماشوا (form III)\n# مَاشَوْا (māšaw) /maː.ʃaw/: third-person masculine plural past active of مَاشَى (māšā)\n# مَاشُوا (māšū) /maː.ʃuː/: second-person masculine plural imperative of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["māšaw", "māšā", "māšū"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "ماشيتم",
-        "u": "ماشيتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مَاشَيْتُمْ • (māšaytum) (form III) /maː.ʃaj.tum/\n# second-person masculine plural past active of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["māšaytum", "māšā"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "ماشين",
-        "u": "ماشين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ماشين (form III)\n# مَاشَيْنَ (māšayna) /maː.ʃaj.na/: third-person feminine plural past active of مَاشَى (māšā)\n# مَاشِينَ (māšīna) /maː.ʃiː.na/: second-person feminine plural imperative of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["māšayna", "māšā", "māšīna"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "موشيا",
-        "u": "موشيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُوشِيَا • (mūšiyā) (form III) /muː.ʃi.jaː/\n# third-person masculine dual past passive of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["mūšiyā", "māšā"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "موشيت",
-        "u": "موشيت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "موشيت (form III)\n# مُوشِيتُ (mūšītu) /muː.ʃiː.tu/: first-person singular past passive of مَاشَى (māšā)\n# مُوشِيتَ (mūšīta) /muː.ʃiː.ta/: second-person masculine singular past passive of مَاشَى (māšā)\n# مُوشِيتِ (mūšīti) /muː.ʃiː.ti/: second-person feminine singular past passive of مَاشَى (māšā)\n# مُوشِيَتْ (mūšiyat) /muː.ʃi.jat/: third-person feminine singular past passive of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["mūšītu", "māšā", "mūšīta"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "موشيتما",
-        "u": "موشيتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُوشِيتُمَا • (mūšītumā) (form III) /muː.ʃiː.tu.maː/\n# second-person dual past passive of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["mūšītumā", "māšā"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "موشي",
-        "u": "موشي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُوشِيَ • (mūšiya) (form III) /muː.ʃi.ja/\n# third-person masculine singular past passive of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["mūšiya", "māšā"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "موشيتم",
-        "u": "موشيتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُوشِيتُمْ • (mūšītum) (form III) /muː.ʃiː.tum/\n# second-person masculine plural past passive of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["mūšītum", "māšā"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "موشيتن",
-        "u": "موشيتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُوشِيتُنَّ • (mūšītunna) (form III) /muː.ʃiː.tun.na/\n# second-person feminine plural past passive of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["mūšītunna", "māšā"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "موشيتا",
-        "u": "موشيتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُوشِيَتَا • (mūšiyatā) (form III) /muː.ʃi.ja.taː/\n# third-person feminine dual past passive of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["mūšiyatā", "māšā"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "موشينا",
-        "u": "موشينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُوشِينَا • (mūšīnā) (form III) /muː.ʃiː.naː/\n# first-person plural past passive of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["mūšīnā", "māšā"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "موشوا",
-        "u": "موشوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُوشُوا • (mūšū) (form III) /muː.ʃuː/\n# third-person masculine plural past passive of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["mūšū", "māšā"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "موشين",
-        "u": "موشين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "مُوشِينَ • (mūšīna) (form III) /muː.ʃiː.na/\n# third-person feminine plural past passive of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["mūšīna", "māšā"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "أماشي",
-        "u": "أماشي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أماشي (form III)\n# أُمَاشِي (ʔumāšī) /ʔu.maː.ʃiː/: first-person singular non-past active indicative of مَاشَى (māšā)\n# أُمَاشِيَ (ʔumāšiya) /ʔu.maː.ʃi.ja/: first-person singular non-past active subjunctive of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔumāšī", "māšā", "ʔumāšiya"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "تماشيان",
-        "u": "تماشيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تماشيان (form III)\n# تُمَاشِيَانِ (tumāšiyāni) /tu.maː.ʃi.jaː.ni/: inflection of مَاشَى (māšā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُمَاشَيَانِ (tumāšayāni) /tu.maː.ʃa.jaː.ni/: inflection of مَاشَى (māšā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tumāšiyāni", "māšā", "tumāšayāni"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "يماشي",
-        "u": "يماشي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يماشي (form III)\n# يُمَاشِي (yumāšī) /ju.maː.ʃiː/: third-person masculine singular non-past active indicative of مَاشَى (māšā)\n# يُمَاشِيَ (yumāšiya) /ju.maː.ʃi.ja/: third-person masculine singular non-past active subjunctive of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yumāšī", "māšā", "yumāšiya"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "يماشيان",
-        "u": "يماشيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يماشيان (form III)\n# يُمَاشِيَانِ (yumāšiyāni) /ju.maː.ʃi.jaː.ni/: third-person masculine dual non-past active indicative of مَاشَى (māšā)\n# يُمَاشَيَانِ (yumāšayāni) /ju.maː.ʃa.jaː.ni/: third-person masculine dual non-past passive indicative of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yumāšiyāni", "māšā", "yumāšayāni"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "تماشون",
-        "u": "تماشون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تماشون (form III)\n# تُمَاشُونَ (tumāšūna) /tu.maː.ʃuː.na/: second-person masculine plural non-past active indicative of مَاشَى (māšā)\n# تُمَاشَوْنَ (tumāšawna) /tu.maː.ʃaw.na/: second-person masculine plural non-past passive indicative of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tumāšūna", "māšā", "tumāšawna"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "نماشي",
-        "u": "نماشي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نماشي (form III)\n# نُمَاشِي (numāšī) /nu.maː.ʃiː/: first-person plural non-past active indicative of مَاشَى (māšā)\n# نُمَاشِيَ (numāšiya) /nu.maː.ʃi.ja/: first-person plural non-past active subjunctive of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["numāšī", "māšā", "numāšiya"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "يماشين",
-        "u": "يماشين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يماشين (form III)\n# يُمَاشِينَ (yumāšīna) /ju.maː.ʃiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of مَاشَى (māšā)\n# يُمَاشَيْنَ (yumāšayna) /ju.maː.ʃaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yumāšīna", "māšā", "yumāšayna"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "يماشون",
-        "u": "يماشون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يماشون (form III)\n# يُمَاشُونَ (yumāšūna) /ju.maː.ʃuː.na/: third-person masculine plural non-past active indicative of مَاشَى (māšā)\n# يُمَاشَوْنَ (yumāšawna) /ju.maː.ʃaw.na/: third-person masculine plural non-past passive indicative of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yumāšūna", "māšā", "yumāšawna"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "نماشى",
-        "u": "نماشى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُمَاشَى • (numāšā) (form III) /nu.maː.ʃaː/\n# first-person plural non-past passive indicative/subjunctive of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["numāšā", "māšā"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "يماشى",
-        "u": "يماشى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُمَاشَى • (yumāšā) (form III) /ju.maː.ʃaː/\n# third-person masculine singular non-past passive indicative/subjunctive of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yumāšā", "māšā"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "يماشوا",
-        "u": "يماشوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يماشوا (form III)\n# يُمَاشُوا (yumāšū) /ju.maː.ʃuː/: third-person masculine plural non-past active subjunctive/jussive of مَاشَى (māšā)\n# يُمَاشَوْا (yumāšaw) /ju.maː.ʃaw/: third-person masculine plural non-past passive subjunctive/jussive of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yumāšū", "māšā", "yumāšaw"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "أماش",
-        "u": "أماش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أماش (form III)\n# أُمَاشِ (ʔumāši) /ʔu.maː.ʃi/: first-person singular non-past active jussive of مَاشَى (māšā)\n# أُمَاشَ (ʔumāša) /ʔu.maː.ʃa/: first-person singular non-past passive jussive of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔumāši", "māšā", "ʔumāša"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "أماشى",
-        "u": "أماشى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُمَاشَى • (ʔumāšā) (form III) /ʔu.maː.ʃaː/\n# first-person singular non-past passive indicative/subjunctive of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔumāšā", "māšā"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "يماش",
-        "u": "يماش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يماش (form III)\n# يُمَاشِ (yumāši) /ju.maː.ʃi/: third-person masculine singular non-past active jussive of مَاشَى (māšā)\n# يُمَاشَ (yumāša) /ju.maː.ʃa/: third-person masculine singular non-past passive jussive of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yumāši", "māšā", "yumāša"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "يماشيا",
-        "u": "يماشيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يماشيا (form III)\n# يُمَاشِيَا (yumāšiyā) /ju.maː.ʃi.jaː/: third-person masculine dual non-past active subjunctive/jussive of مَاشَى (māšā)\n# يُمَاشَيَا (yumāšayā) /ju.maː.ʃa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yumāšiyā", "māšā", "yumāšayā"],
-        "k": "ماشى",
-        "yol": "kök"
-      },
-      {
-        "w": "نماش",
-        "u": "نماش",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نماش (form III)\n# نُمَاشِ (numāši) /nu.maː.ʃi/: first-person plural non-past active jussive of مَاشَى (māšā)\n# نُمَاشَ (numāša) /nu.maː.ʃa/: first-person plural non-past passive jussive of مَاشَى (māšā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["numāši", "māšā", "numāša"],
-        "k": "ماشى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "مش",
+  "ses": {
     "harf": "م",
+    "fasil": "مش",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "ماش",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "مَاشِ • (māši) (form III) /maː.ʃi/\n# second-person masculine singular imperative of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["māši", "māšā"]
+    },
+    {
+      "madde": "ماشي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "مَاشِي • (māšī) (form III) /maː.ʃiː/\n# second-person feminine singular imperative of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["māšī", "māšā"]
+    },
+    {
+      "madde": "تماشى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُمَاشَى • (tumāšā) (form III) /tu.maː.ʃaː/\n# inflection of مَاشَى (māšā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tumāšā", "māšā"]
+    },
+    {
+      "madde": "تماش",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تماش (form III)\n# تُمَاشِ (tumāši) /tu.maː.ʃi/: inflection of مَاشَى (māšā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُمَاشَ (tumāša) /tu.maː.ʃa/: inflection of مَاشَى (māšā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tumāši", "māšā", "tumāša"]
+    },
+    {
+      "madde": "تماشي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تماشي (form III)\n# تُمَاشِي (tumāšī) /tu.maː.ʃiː/: inflection of مَاشَى (māšā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُمَاشِيَ (tumāšiya) /tu.maː.ʃi.ja/: inflection of مَاشَى (māšā):\n## second-person masculine singular non-past active subju",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tumāšī", "māšā", "tumāšiya"]
+    },
+    {
+      "madde": "تماشيا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تماشيا (form III)\n# تُمَاشِيَا (tumāšiyā) /tu.maː.ʃi.jaː/: inflection of مَاشَى (māšā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُمَاشَيَا (tumāšayā) /tu.maː.ʃa.jaː/: inflection of مَاشَى (māšā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tumāšiyā", "māšā", "tumāšayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تماشين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تماشين (form III)\n# تُمَاشِينَ (tumāšīna) /tu.maː.ʃiː.na/: inflection of مَاشَى (māšā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُمَاشَيْنَ (tumāšayna) /tu.maː.ʃaj.na/: inflection of مَاشَى (māšā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tumāšīna", "māšā", "tumāšayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تماشوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تماشوا (form III)\n# تُمَاشُوا (tumāšū) /tu.maː.ʃuː/: second-person masculine plural non-past active subjunctive/jussive of مَاشَى (māšā)\n# تُمَاشَوْا (tumāšaw) /tu.maː.ʃaw/: second-person masculine plural non-past passive subjunctive/jussive of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tumāšū", "māšā", "tumāšaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ماشت",
+      "tur": "verb",
+      "baslik": "مَاشَتْ • (māšat) (form III) /maː.ʃat/\n# third-person feminine singular past active of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["māšat", "māšā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ماشيتما",
+      "tur": "verb",
+      "baslik": "مَاشَيْتُمَا • (māšaytumā) (form III) /maː.ʃaj.tu.maː/\n# second-person dual past active of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["māšaytumā", "māšā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ماشيا",
+      "tur": "verb",
+      "baslik": "ماشيا (form III)\n# مَاشَيَا (māšayā) /maː.ʃa.jaː/: third-person masculine dual past active of مَاشَى (māšā)\n# مَاشِيَا (māšiyā) /maː.ʃi.jaː/: second-person dual imperative of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["māšayā", "māšā", "māšiyā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ماشيت",
+      "tur": "verb",
+      "baslik": "ماشيت (form III)\n# مَاشَيْتُ (māšaytu) /maː.ʃaj.tu/: first-person singular past active of مَاشَى (māšā)\n# مَاشَيْتَ (māšayta) /maː.ʃaj.ta/: second-person masculine singular past active of مَاشَى (māšā)\n# مَاشَيْتِ (māšayti) /maː.ʃaj.ti/: second-person feminine singular past active of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["māšaytu", "māšā", "māšayta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ماشينا",
+      "tur": "verb",
+      "baslik": "مَاشَيْنَا • (māšaynā) (form III) /maː.ʃaj.naː/\n# first-person plural past active of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["māšaynā", "māšā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ماشيتن",
+      "tur": "verb",
+      "baslik": "مَاشَيْتُنَّ • (māšaytunna) (form III) /maː.ʃaj.tun.na/\n# second-person feminine plural past active of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["māšaytunna", "māšā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ماشتا",
+      "tur": "verb",
+      "baslik": "مَاشَتَا • (māšatā) (form III) /maː.ʃa.taː/\n# third-person feminine dual past active of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["māšatā", "māšā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ماشوا",
+      "tur": "verb",
+      "baslik": "ماشوا (form III)\n# مَاشَوْا (māšaw) /maː.ʃaw/: third-person masculine plural past active of مَاشَى (māšā)\n# مَاشُوا (māšū) /maː.ʃuː/: second-person masculine plural imperative of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["māšaw", "māšā", "māšū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ماشيتم",
+      "tur": "verb",
+      "baslik": "مَاشَيْتُمْ • (māšaytum) (form III) /maː.ʃaj.tum/\n# second-person masculine plural past active of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["māšaytum", "māšā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "ماشين",
+      "tur": "verb",
+      "baslik": "ماشين (form III)\n# مَاشَيْنَ (māšayna) /maː.ʃaj.na/: third-person feminine plural past active of مَاشَى (māšā)\n# مَاشِينَ (māšīna) /maː.ʃiː.na/: second-person feminine plural imperative of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["māšayna", "māšā", "māšīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "موشيا",
+      "tur": "verb",
+      "baslik": "مُوشِيَا • (mūšiyā) (form III) /muː.ʃi.jaː/\n# third-person masculine dual past passive of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["mūšiyā", "māšā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "موشيت",
+      "tur": "verb",
+      "baslik": "موشيت (form III)\n# مُوشِيتُ (mūšītu) /muː.ʃiː.tu/: first-person singular past passive of مَاشَى (māšā)\n# مُوشِيتَ (mūšīta) /muː.ʃiː.ta/: second-person masculine singular past passive of مَاشَى (māšā)\n# مُوشِيتِ (mūšīti) /muː.ʃiː.ti/: second-person feminine singular past passive of مَاشَى (māšā)\n# مُوشِيَتْ (mūšiyat) /muː.ʃi.jat/: third-person feminine singular past passive of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["mūšītu", "māšā", "mūšīta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "موشيتما",
+      "tur": "verb",
+      "baslik": "مُوشِيتُمَا • (mūšītumā) (form III) /muː.ʃiː.tu.maː/\n# second-person dual past passive of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["mūšītumā", "māšā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "موشي",
+      "tur": "verb",
+      "baslik": "مُوشِيَ • (mūšiya) (form III) /muː.ʃi.ja/\n# third-person masculine singular past passive of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["mūšiya", "māšā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "موشيتم",
+      "tur": "verb",
+      "baslik": "مُوشِيتُمْ • (mūšītum) (form III) /muː.ʃiː.tum/\n# second-person masculine plural past passive of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["mūšītum", "māšā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "موشيتن",
+      "tur": "verb",
+      "baslik": "مُوشِيتُنَّ • (mūšītunna) (form III) /muː.ʃiː.tun.na/\n# second-person feminine plural past passive of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["mūšītunna", "māšā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "موشيتا",
+      "tur": "verb",
+      "baslik": "مُوشِيَتَا • (mūšiyatā) (form III) /muː.ʃi.ja.taː/\n# third-person feminine dual past passive of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["mūšiyatā", "māšā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "موشينا",
+      "tur": "verb",
+      "baslik": "مُوشِينَا • (mūšīnā) (form III) /muː.ʃiː.naː/\n# first-person plural past passive of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["mūšīnā", "māšā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "موشوا",
+      "tur": "verb",
+      "baslik": "مُوشُوا • (mūšū) (form III) /muː.ʃuː/\n# third-person masculine plural past passive of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["mūšū", "māšā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "موشين",
+      "tur": "verb",
+      "baslik": "مُوشِينَ • (mūšīna) (form III) /muː.ʃiː.na/\n# third-person feminine plural past passive of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["mūšīna", "māšā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أماشي",
+      "tur": "verb",
+      "baslik": "أماشي (form III)\n# أُمَاشِي (ʔumāšī) /ʔu.maː.ʃiː/: first-person singular non-past active indicative of مَاشَى (māšā)\n# أُمَاشِيَ (ʔumāšiya) /ʔu.maː.ʃi.ja/: first-person singular non-past active subjunctive of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔumāšī", "māšā", "ʔumāšiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تماشيان",
+      "tur": "verb",
+      "baslik": "تماشيان (form III)\n# تُمَاشِيَانِ (tumāšiyāni) /tu.maː.ʃi.jaː.ni/: inflection of مَاشَى (māšā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُمَاشَيَانِ (tumāšayāni) /tu.maː.ʃa.jaː.ni/: inflection of مَاشَى (māšā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tumāšiyāni", "māšā", "tumāšayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يماشي",
+      "tur": "verb",
+      "baslik": "يماشي (form III)\n# يُمَاشِي (yumāšī) /ju.maː.ʃiː/: third-person masculine singular non-past active indicative of مَاشَى (māšā)\n# يُمَاشِيَ (yumāšiya) /ju.maː.ʃi.ja/: third-person masculine singular non-past active subjunctive of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yumāšī", "māšā", "yumāšiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يماشيان",
+      "tur": "verb",
+      "baslik": "يماشيان (form III)\n# يُمَاشِيَانِ (yumāšiyāni) /ju.maː.ʃi.jaː.ni/: third-person masculine dual non-past active indicative of مَاشَى (māšā)\n# يُمَاشَيَانِ (yumāšayāni) /ju.maː.ʃa.jaː.ni/: third-person masculine dual non-past passive indicative of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yumāšiyāni", "māšā", "yumāšayāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تماشون",
+      "tur": "verb",
+      "baslik": "تماشون (form III)\n# تُمَاشُونَ (tumāšūna) /tu.maː.ʃuː.na/: second-person masculine plural non-past active indicative of مَاشَى (māšā)\n# تُمَاشَوْنَ (tumāšawna) /tu.maː.ʃaw.na/: second-person masculine plural non-past passive indicative of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tumāšūna", "māšā", "tumāšawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نماشي",
+      "tur": "verb",
+      "baslik": "نماشي (form III)\n# نُمَاشِي (numāšī) /nu.maː.ʃiː/: first-person plural non-past active indicative of مَاشَى (māšā)\n# نُمَاشِيَ (numāšiya) /nu.maː.ʃi.ja/: first-person plural non-past active subjunctive of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["numāšī", "māšā", "numāšiya"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يماشين",
+      "tur": "verb",
+      "baslik": "يماشين (form III)\n# يُمَاشِينَ (yumāšīna) /ju.maː.ʃiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of مَاشَى (māšā)\n# يُمَاشَيْنَ (yumāšayna) /ju.maː.ʃaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yumāšīna", "māšā", "yumāšayna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يماشون",
+      "tur": "verb",
+      "baslik": "يماشون (form III)\n# يُمَاشُونَ (yumāšūna) /ju.maː.ʃuː.na/: third-person masculine plural non-past active indicative of مَاشَى (māšā)\n# يُمَاشَوْنَ (yumāšawna) /ju.maː.ʃaw.na/: third-person masculine plural non-past passive indicative of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yumāšūna", "māšā", "yumāšawna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نماشى",
+      "tur": "verb",
+      "baslik": "نُمَاشَى • (numāšā) (form III) /nu.maː.ʃaː/\n# first-person plural non-past passive indicative/subjunctive of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["numāšā", "māšā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يماشى",
+      "tur": "verb",
+      "baslik": "يُمَاشَى • (yumāšā) (form III) /ju.maː.ʃaː/\n# third-person masculine singular non-past passive indicative/subjunctive of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yumāšā", "māšā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يماشوا",
+      "tur": "verb",
+      "baslik": "يماشوا (form III)\n# يُمَاشُوا (yumāšū) /ju.maː.ʃuː/: third-person masculine plural non-past active subjunctive/jussive of مَاشَى (māšā)\n# يُمَاشَوْا (yumāšaw) /ju.maː.ʃaw/: third-person masculine plural non-past passive subjunctive/jussive of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yumāšū", "māšā", "yumāšaw"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أماش",
+      "tur": "verb",
+      "baslik": "أماش (form III)\n# أُمَاشِ (ʔumāši) /ʔu.maː.ʃi/: first-person singular non-past active jussive of مَاشَى (māšā)\n# أُمَاشَ (ʔumāša) /ʔu.maː.ʃa/: first-person singular non-past passive jussive of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔumāši", "māšā", "ʔumāša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أماشى",
+      "tur": "verb",
+      "baslik": "أُمَاشَى • (ʔumāšā) (form III) /ʔu.maː.ʃaː/\n# first-person singular non-past passive indicative/subjunctive of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔumāšā", "māšā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يماش",
+      "tur": "verb",
+      "baslik": "يماش (form III)\n# يُمَاشِ (yumāši) /ju.maː.ʃi/: third-person masculine singular non-past active jussive of مَاشَى (māšā)\n# يُمَاشَ (yumāša) /ju.maː.ʃa/: third-person masculine singular non-past passive jussive of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yumāši", "māšā", "yumāša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يماشيا",
+      "tur": "verb",
+      "baslik": "يماشيا (form III)\n# يُمَاشِيَا (yumāšiyā) /ju.maː.ʃi.jaː/: third-person masculine dual non-past active subjunctive/jussive of مَاشَى (māšā)\n# يُمَاشَيَا (yumāšayā) /ju.maː.ʃa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yumāšiyā", "māšā", "yumāšayā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نماش",
+      "tur": "verb",
+      "baslik": "نماش (form III)\n# نُمَاشِ (numāši) /nu.maː.ʃi/: first-person plural non-past active jussive of مَاشَى (māšā)\n# نُمَاشَ (numāša) /nu.maː.ʃa/: first-person plural non-past passive jussive of مَاشَى (māšā)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["numāši", "māšā", "numāša"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "ماشى", "r6"]
+  ],
+  "mana": {
     "ince": "pit.v.01",
     "orta": "verb.competition",
     "ust": "insan ve toplum",
@@ -566,22 +399,15 @@
     "dayanak_tanim": "set into opposition or rivalry",
     "synset_sayisi": 6
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["equal.v.03", "match.v.01", "match.v.05", "meet.v.06", "pit.v.01", "substance.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["equal.v.03", "match.v.01", "match.v.05", "meet.v.06", "pit.v.01", "substance.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

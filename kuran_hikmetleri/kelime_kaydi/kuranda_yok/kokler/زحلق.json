@@ -1,377 +1,274 @@
 {
   "kok": "زحلق",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "زحلق", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تزحلق",
-        "u": "تزحلق",
-        "p": "noun",
-        "n": "1",
-        "h": "ar-noun",
-        "e": "تَزَحْلُق • (tazaḥluq) m",
-        "s": [
-          ["ar-rootbox", ""]
-        ],
-        "g": ["skiing"],
-        "r": ["tazaḥluq"],
-        "ipa": ["/ta.zaħ.luq/"],
-        "k": "زحلق",
-        "yol": "kök"
-      },
-      {
-        "w": "تزحلق",
-        "u": "تزحلق",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تزحلق (form Iq)\n# تُزَحْلِقُ (tuzaḥliqu) /tu.zaħ.li.qu/: inflection of زَحْلَقَ (zaḥlaqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُزَحْلَقُ (tuzaḥlaqu) /tu.zaħ.la.qu/: inflection of زَحْلَقَ (zaḥlaqa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past pas",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzaḥliqu", "zaḥlaqa", "tuzaḥlaqu"],
-        "k": "زحلق",
-        "yol": "kök"
-      },
-      {
-        "w": "زحلق",
-        "u": "زحلق",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "زَحْلَقَ • (zaḥlaqa) Iq (non-past يُزَحْلِقُ (yuzaḥliqu), verbal noun زَحْلَقَة (zaḥlaqa))",
-        "g": ["to let slide, roll"],
-        "r": ["zaḥlaqa"],
-        "ipa": ["/za.ħa.la.qa/"],
-        "k": "زحلق",
-        "yol": "kök"
-      },
-      {
-        "w": "تزحلقا",
-        "u": "تزحلقا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تزحلقا (form Iq)\n# تُزَحْلِقَا (tuzaḥliqā) /tu.zaħ.li.qaː/: inflection of زَحْلَقَ (zaḥlaqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُزَحْلَقَا (tuzaḥlaqā) /tu.zaħ.la.qaː/: inflection of زَحْلَقَ (zaḥlaqa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzaḥliqā", "zaḥlaqa", "tuzaḥlaqā"],
-        "k": "زحلق",
-        "yol": "kök"
-      },
-      {
-        "w": "تزحلقن",
-        "u": "تزحلقن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تزحلقن (form Iq)\n# تُزَحْلِقْنَ (tuzaḥliqna) /tu.zaħ.liq.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of زَحْلَقَ (zaḥlaqa)\n# تُزَحْلَقْنَ (tuzaḥlaqna) /tu.zaħ.laq.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of زَحْلَقَ (zaḥlaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzaḥliqna", "zaḥlaqa", "tuzaḥlaqna"],
-        "k": "زحلق",
-        "yol": "kök"
-      },
-      {
-        "w": "تزحلقوا",
-        "u": "تزحلقوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تزحلقوا (form Iq)\n# تُزَحْلِقُوا (tuzaḥliqū) /tu.zaħ.li.quː/: second-person masculine plural non-past active subjunctive/jussive of زَحْلَقَ (zaḥlaqa)\n# تُزَحْلَقُوا (tuzaḥlaqū) /tu.zaħ.la.quː/: second-person masculine plural non-past passive subjunctive/jussive of زَحْلَقَ (zaḥlaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzaḥliqū", "zaḥlaqa", "tuzaḥlaqū"],
-        "k": "زحلق",
-        "yol": "kök"
-      },
-      {
-        "w": "تزحلقي",
-        "u": "تزحلقي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تزحلقي (form Iq)\n# تُزَحْلِقِي (tuzaḥliqī) /tu.zaħ.li.qiː/: second-person feminine singular non-past active subjunctive/jussive of زَحْلَقَ (zaḥlaqa)\n# تُزَحْلَقِي (tuzaḥlaqī) /tu.zaħ.la.qiː/: second-person feminine singular non-past passive subjunctive/jussive of زَحْلَقَ (zaḥlaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzaḥliqī", "zaḥlaqa", "tuzaḥlaqī"],
-        "k": "زحلق",
-        "yol": "kök"
-      },
-      {
-        "w": "زحلقت",
-        "u": "زحلقت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زحلقت (form Iq)\n# زَحْلَقْتُ (zaḥlaqtu) /zaħ.laq.tu/: first-person singular past active of زَحْلَقَ (zaḥlaqa)\n# زَحْلَقْتَ (zaḥlaqta) /zaħ.laq.ta/: second-person masculine singular past active of زَحْلَقَ (zaḥlaqa)\n# زَحْلَقْتِ (zaḥlaqti) /zaħ.laq.ti/: second-person feminine singular past active of زَحْلَقَ (zaḥlaqa)\n# زَحْلَقَتْ (zaḥlaqat) /zaħ.la.qat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaḥlaqtu", "zaḥlaqa", "zaḥlaqta"],
-        "k": "زحلق",
-        "yol": "kök"
-      },
-      {
-        "w": "زحلقا",
-        "u": "زحلقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زحلقا (form Iq)\n# زَحْلَقَا (zaḥlaqā) /zaħ.la.qaː/: third-person masculine dual past active of زَحْلَقَ (zaḥlaqa)\n# زُحْلِقَا (zuḥliqā) /zuħ.li.qaː/: third-person masculine dual past passive of زَحْلَقَ (zaḥlaqa)\n# زَحْلِقَا (zaḥliqā) /zaħ.li.qaː/: second-person dual imperative of زَحْلَقَ (zaḥlaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaḥlaqā", "zaḥlaqa", "zuḥliqā"],
-        "k": "زحلق",
-        "yol": "kök"
-      },
-      {
-        "w": "زحلقتما",
-        "u": "زحلقتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زحلقتما (form Iq)\n# زَحْلَقْتُمَا (zaḥlaqtumā) /zaħ.laq.tu.maː/: second-person dual past active of زَحْلَقَ (zaḥlaqa)\n# زُحْلِقْتُمَا (zuḥliqtumā) /zuħ.liq.tu.maː/: second-person dual past passive of زَحْلَقَ (zaḥlaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaḥlaqtumā", "zaḥlaqa", "zuḥliqtumā"],
-        "k": "زحلق",
-        "yol": "kök"
-      },
-      {
-        "w": "زحلقتا",
-        "u": "زحلقتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زحلقتا (form Iq)\n# زَحْلَقَتَا (zaḥlaqatā) /zaħ.la.qa.taː/: third-person feminine dual past active of زَحْلَقَ (zaḥlaqa)\n# زُحْلِقَتَا (zuḥliqatā) /zuħ.li.qa.taː/: third-person feminine dual past passive of زَحْلَقَ (zaḥlaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaḥlaqatā", "zaḥlaqa", "zuḥliqatā"],
-        "k": "زحلق",
-        "yol": "kök"
-      },
-      {
-        "w": "زحلقنا",
-        "u": "زحلقنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زحلقنا (form Iq)\n# زَحْلَقْنَا (zaḥlaqnā) /zaħ.laq.naː/: first-person plural past active of زَحْلَقَ (zaḥlaqa)\n# زُحْلِقْنَا (zuḥliqnā) /zuħ.liq.naː/: first-person plural past passive of زَحْلَقَ (zaḥlaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaḥlaqnā", "zaḥlaqa", "zuḥliqnā"],
-        "k": "زحلق",
-        "yol": "kök"
-      },
-      {
-        "w": "زحلقتن",
-        "u": "زحلقتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زحلقتن (form Iq)\n# زَحْلَقْتُنَّ (zaḥlaqtunna) /zaħ.laq.tun.na/: second-person feminine plural past active of زَحْلَقَ (zaḥlaqa)\n# زُحْلِقْتُنَّ (zuḥliqtunna) /zuħ.liq.tun.na/: second-person feminine plural past passive of زَحْلَقَ (zaḥlaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaḥlaqtunna", "zaḥlaqa", "zuḥliqtunna"],
-        "k": "زحلق",
-        "yol": "kök"
-      },
-      {
-        "w": "زحلقوا",
-        "u": "زحلقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زحلقوا (form Iq)\n# زَحْلَقُوا (zaḥlaqū) /zaħ.la.quː/: third-person masculine plural past active of زَحْلَقَ (zaḥlaqa)\n# زُحْلِقُوا (zuḥliqū) /zuħ.li.quː/: third-person masculine plural past passive of زَحْلَقَ (zaḥlaqa)\n# زَحْلِقُوا (zaḥliqū) /zaħ.li.quː/: second-person masculine plural imperative of زَحْلَقَ (zaḥlaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaḥlaqū", "zaḥlaqa", "zuḥliqū"],
-        "k": "زحلق",
-        "yol": "kök"
-      },
-      {
-        "w": "زحلقتم",
-        "u": "زحلقتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زحلقتم (form Iq)\n# زَحْلَقْتُمْ (zaḥlaqtum) /zaħ.laq.tum/: second-person masculine plural past active of زَحْلَقَ (zaḥlaqa)\n# زُحْلِقْتُمْ (zuḥliqtum) /zuħ.liq.tum/: second-person masculine plural past passive of زَحْلَقَ (zaḥlaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaḥlaqtum", "zaḥlaqa", "zuḥliqtum"],
-        "k": "زحلق",
-        "yol": "kök"
-      },
-      {
-        "w": "زحلقن",
-        "u": "زحلقن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زحلقن (form Iq)\n# زَحْلَقْنَ (zaḥlaqna) /zaħ.laq.na/: third-person feminine plural past active of زَحْلَقَ (zaḥlaqa)\n# زُحْلِقْنَ (zuḥliqna) /zuħ.liq.na/: third-person feminine plural past passive of زَحْلَقَ (zaḥlaqa)\n# زَحْلِقْنَ (zaḥliqna) /zaħ.liq.na/: second-person feminine plural imperative of زَحْلَقَ (zaḥlaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaḥlaqna", "zaḥlaqa", "zuḥliqna"],
-        "k": "زحلق",
-        "yol": "kök"
-      },
-      {
-        "w": "أزحلق",
-        "u": "أزحلق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أزحلق (form Iq)\n# أُزَحْلِقُ (ʔuzaḥliqu) /ʔu.zaħ.li.qu/: first-person singular non-past active indicative of زَحْلَقَ (zaḥlaqa)\n# أُزَحْلَقُ (ʔuzaḥlaqu) /ʔu.zaħ.la.qu/: first-person singular non-past passive indicative of زَحْلَقَ (zaḥlaqa)\n# أُزَحْلِقَ (ʔuzaḥliqa) /ʔu.zaħ.li.qa/: first-person singular non-past active subjunctive of زَحْلَقَ (zaḥlaqa)\n# أُزَحْلَقَ (ʔuzaḥlaqa) /ʔu.zaħ.la.qa/: first",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʔuzaḥliqu", "zaḥlaqa", "ʔuzaḥlaqu"],
-        "k": "زحلق",
-        "yol": "kök"
-      },
-      {
-        "w": "يزحلق",
-        "u": "يزحلق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يزحلق (form Iq)\n# يُزَحْلِقُ (yuzaḥliqu) /ju.zaħ.li.qu/: third-person masculine singular non-past active indicative of زَحْلَقَ (zaḥlaqa)\n# يُزَحْلَقُ (yuzaḥlaqu) /ju.zaħ.la.qu/: third-person masculine singular non-past passive indicative of زَحْلَقَ (zaḥlaqa)\n# يُزَحْلِقَ (yuzaḥliqa) /ju.zaħ.li.qa/: third-person masculine singular non-past active subjunctive of زَحْلَقَ (zaḥlaqa)\n# يُزَحْلَقَ (yu",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuzaḥliqu", "zaḥlaqa", "yuzaḥlaqu"],
-        "k": "زحلق",
-        "yol": "kök"
-      },
-      {
-        "w": "تزحلقان",
-        "u": "تزحلقان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تزحلقان (form Iq)\n# تُزَحْلِقَانِ (tuzaḥliqāni) /tu.zaħ.li.qaː.ni/: inflection of زَحْلَقَ (zaḥlaqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُزَحْلَقَانِ (tuzaḥlaqāni) /tu.zaħ.la.qaː.ni/: inflection of زَحْلَقَ (zaḥlaqa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzaḥliqāni", "zaḥlaqa", "tuzaḥlaqāni"],
-        "k": "زحلق",
-        "yol": "kök"
-      },
-      {
-        "w": "نزحلق",
-        "u": "نزحلق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نزحلق (form Iq)\n# نُزَحْلِقُ (nuzaḥliqu) /nu.zaħ.li.qu/: first-person plural non-past active indicative of زَحْلَقَ (zaḥlaqa)\n# نُزَحْلَقُ (nuzaḥlaqu) /nu.zaħ.la.qu/: first-person plural non-past passive indicative of زَحْلَقَ (zaḥlaqa)\n# نُزَحْلِقَ (nuzaḥliqa) /nu.zaħ.li.qa/: first-person plural non-past active subjunctive of زَحْلَقَ (zaḥlaqa)\n# نُزَحْلَقَ (nuzaḥlaqa) /nu.zaħ.la.qa/: first-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["nuzaḥliqu", "zaḥlaqa", "nuzaḥlaqu"],
-        "k": "زحلق",
-        "yol": "kök"
-      },
-      {
-        "w": "تزحلقين",
-        "u": "تزحلقين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تزحلقين (form Iq)\n# تُزَحْلِقِينَ (tuzaḥliqīna) /tu.zaħ.li.qiː.na/: second-person feminine singular non-past active indicative of زَحْلَقَ (zaḥlaqa)\n# تُزَحْلَقِينَ (tuzaḥlaqīna) /tu.zaħ.la.qiː.na/: second-person feminine singular non-past passive indicative of زَحْلَقَ (zaḥlaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzaḥliqīna", "zaḥlaqa", "tuzaḥlaqīna"],
-        "k": "زحلق",
-        "yol": "kök"
-      },
-      {
-        "w": "يزحلقان",
-        "u": "يزحلقان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يزحلقان (form Iq)\n# يُزَحْلِقَانِ (yuzaḥliqāni) /ju.zaħ.li.qaː.ni/: third-person masculine dual non-past active indicative of زَحْلَقَ (zaḥlaqa)\n# يُزَحْلَقَانِ (yuzaḥlaqāni) /ju.zaħ.la.qaː.ni/: third-person masculine dual non-past passive indicative of زَحْلَقَ (zaḥlaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuzaḥliqāni", "zaḥlaqa", "yuzaḥlaqāni"],
-        "k": "زحلق",
-        "yol": "kök"
-      },
-      {
-        "w": "تزحلقون",
-        "u": "تزحلقون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تزحلقون (form Iq)\n# تُزَحْلِقُونَ (tuzaḥliqūna) /tu.zaħ.li.quː.na/: second-person masculine plural non-past active indicative of زَحْلَقَ (zaḥlaqa)\n# تُزَحْلَقُونَ (tuzaḥlaqūna) /tu.zaħ.la.quː.na/: second-person masculine plural non-past passive indicative of زَحْلَقَ (zaḥlaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzaḥliqūna", "zaḥlaqa", "tuzaḥlaqūna"],
-        "k": "زحلق",
-        "yol": "kök"
-      },
-      {
-        "w": "يزحلقون",
-        "u": "يزحلقون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يزحلقون (form Iq)\n# يُزَحْلِقُونَ (yuzaḥliqūna) /ju.zaħ.li.quː.na/: third-person masculine plural non-past active indicative of زَحْلَقَ (zaḥlaqa)\n# يُزَحْلَقُونَ (yuzaḥlaqūna) /ju.zaħ.la.quː.na/: third-person masculine plural non-past passive indicative of زَحْلَقَ (zaḥlaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuzaḥliqūna", "zaḥlaqa", "yuzaḥlaqūna"],
-        "k": "زحلق",
-        "yol": "kök"
-      },
-      {
-        "w": "يزحلقن",
-        "u": "يزحلقن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يزحلقن (form Iq)\n# يُزَحْلِقْنَ (yuzaḥliqna) /ju.zaħ.liq.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of زَحْلَقَ (zaḥlaqa)\n# يُزَحْلَقْنَ (yuzaḥlaqna) /ju.zaħ.laq.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of زَحْلَقَ (zaḥlaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuzaḥliqna", "zaḥlaqa", "yuzaḥlaqna"],
-        "k": "زحلق",
-        "yol": "kök"
-      },
-      {
-        "w": "يزحلقوا",
-        "u": "يزحلقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يزحلقوا (form Iq)\n# يُزَحْلِقُوا (yuzaḥliqū) /ju.zaħ.li.quː/: third-person masculine plural non-past active subjunctive/jussive of زَحْلَقَ (zaḥlaqa)\n# يُزَحْلَقُوا (yuzaḥlaqū) /ju.zaħ.la.quː/: third-person masculine plural non-past passive subjunctive/jussive of زَحْلَقَ (zaḥlaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuzaḥliqū", "zaḥlaqa", "yuzaḥlaqū"],
-        "k": "زحلق",
-        "yol": "kök"
-      },
-      {
-        "w": "زحلقي",
-        "u": "زحلقي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زَحْلِقِي • (zaḥliqī) (form Iq) /zaħ.li.qiː/\n# second-person feminine singular imperative of زَحْلَقَ (zaḥlaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaḥliqī", "zaḥlaqa"],
-        "k": "زحلق",
-        "yol": "kök"
-      },
-      {
-        "w": "يزحلقا",
-        "u": "يزحلقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يزحلقا (form Iq)\n# يُزَحْلِقَا (yuzaḥliqā) /ju.zaħ.li.qaː/: third-person masculine dual non-past active subjunctive/jussive of زَحْلَقَ (zaḥlaqa)\n# يُزَحْلَقَا (yuzaḥlaqā) /ju.zaħ.la.qaː/: third-person masculine dual non-past passive subjunctive/jussive of زَحْلَقَ (zaḥlaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuzaḥliqā", "zaḥlaqa", "yuzaḥlaqā"],
-        "k": "زحلق",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "زح",
+  "ses": {
     "harf": "ز",
+    "fasil": "زح",
     "mahrec": "esaliyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "تزحلق",
+      "tur": "noun",
+      "etim_no": "1",
+      "baslik": "تَزَحْلُق • (tazaḥluq) m",
+      "etim_sablon": [
+        ["ar-rootbox", ""]
+      ],
+      "anlam": ["skiing"],
+      "okunus": ["tazaḥluq"],
+      "ipa": ["/ta.zaħ.luq/"]
+    },
+    {
+      "madde": "تزحلق",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تزحلق (form Iq)\n# تُزَحْلِقُ (tuzaḥliqu) /tu.zaħ.li.qu/: inflection of زَحْلَقَ (zaḥlaqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُزَحْلَقُ (tuzaḥlaqu) /tu.zaħ.la.qu/: inflection of زَحْلَقَ (zaḥlaqa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past pas",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuzaḥliqu", "zaḥlaqa", "tuzaḥlaqu"]
+    },
+    {
+      "madde": "زحلق",
+      "tur": "verb",
+      "baslik": "زَحْلَقَ • (zaḥlaqa) Iq (non-past يُزَحْلِقُ (yuzaḥliqu), verbal noun زَحْلَقَة (zaḥlaqa))",
+      "anlam": ["to let slide, roll"],
+      "okunus": ["zaḥlaqa"],
+      "ipa": ["/za.ħa.la.qa/"]
+    },
+    {
+      "madde": "تزحلقا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تزحلقا (form Iq)\n# تُزَحْلِقَا (tuzaḥliqā) /tu.zaħ.li.qaː/: inflection of زَحْلَقَ (zaḥlaqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُزَحْلَقَا (tuzaḥlaqā) /tu.zaħ.la.qaː/: inflection of زَحْلَقَ (zaḥlaqa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuzaḥliqā", "zaḥlaqa", "tuzaḥlaqā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزحلقن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تزحلقن (form Iq)\n# تُزَحْلِقْنَ (tuzaḥliqna) /tu.zaħ.liq.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of زَحْلَقَ (zaḥlaqa)\n# تُزَحْلَقْنَ (tuzaḥlaqna) /tu.zaħ.laq.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of زَحْلَقَ (zaḥlaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuzaḥliqna", "zaḥlaqa", "tuzaḥlaqna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزحلقوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تزحلقوا (form Iq)\n# تُزَحْلِقُوا (tuzaḥliqū) /tu.zaħ.li.quː/: second-person masculine plural non-past active subjunctive/jussive of زَحْلَقَ (zaḥlaqa)\n# تُزَحْلَقُوا (tuzaḥlaqū) /tu.zaħ.la.quː/: second-person masculine plural non-past passive subjunctive/jussive of زَحْلَقَ (zaḥlaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuzaḥliqū", "zaḥlaqa", "tuzaḥlaqū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزحلقي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تزحلقي (form Iq)\n# تُزَحْلِقِي (tuzaḥliqī) /tu.zaħ.li.qiː/: second-person feminine singular non-past active subjunctive/jussive of زَحْلَقَ (zaḥlaqa)\n# تُزَحْلَقِي (tuzaḥlaqī) /tu.zaħ.la.qiː/: second-person feminine singular non-past passive subjunctive/jussive of زَحْلَقَ (zaḥlaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuzaḥliqī", "zaḥlaqa", "tuzaḥlaqī"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زحلقت",
+      "tur": "verb",
+      "baslik": "زحلقت (form Iq)\n# زَحْلَقْتُ (zaḥlaqtu) /zaħ.laq.tu/: first-person singular past active of زَحْلَقَ (zaḥlaqa)\n# زَحْلَقْتَ (zaḥlaqta) /zaħ.laq.ta/: second-person masculine singular past active of زَحْلَقَ (zaḥlaqa)\n# زَحْلَقْتِ (zaḥlaqti) /zaħ.laq.ti/: second-person feminine singular past active of زَحْلَقَ (zaḥlaqa)\n# زَحْلَقَتْ (zaḥlaqat) /zaħ.la.qat/: third-person feminine singular past active ",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zaḥlaqtu", "zaḥlaqa", "zaḥlaqta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زحلقا",
+      "tur": "verb",
+      "baslik": "زحلقا (form Iq)\n# زَحْلَقَا (zaḥlaqā) /zaħ.la.qaː/: third-person masculine dual past active of زَحْلَقَ (zaḥlaqa)\n# زُحْلِقَا (zuḥliqā) /zuħ.li.qaː/: third-person masculine dual past passive of زَحْلَقَ (zaḥlaqa)\n# زَحْلِقَا (zaḥliqā) /zaħ.li.qaː/: second-person dual imperative of زَحْلَقَ (zaḥlaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zaḥlaqā", "zaḥlaqa", "zuḥliqā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زحلقتما",
+      "tur": "verb",
+      "baslik": "زحلقتما (form Iq)\n# زَحْلَقْتُمَا (zaḥlaqtumā) /zaħ.laq.tu.maː/: second-person dual past active of زَحْلَقَ (zaḥlaqa)\n# زُحْلِقْتُمَا (zuḥliqtumā) /zuħ.liq.tu.maː/: second-person dual past passive of زَحْلَقَ (zaḥlaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zaḥlaqtumā", "zaḥlaqa", "zuḥliqtumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زحلقتا",
+      "tur": "verb",
+      "baslik": "زحلقتا (form Iq)\n# زَحْلَقَتَا (zaḥlaqatā) /zaħ.la.qa.taː/: third-person feminine dual past active of زَحْلَقَ (zaḥlaqa)\n# زُحْلِقَتَا (zuḥliqatā) /zuħ.li.qa.taː/: third-person feminine dual past passive of زَحْلَقَ (zaḥlaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zaḥlaqatā", "zaḥlaqa", "zuḥliqatā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زحلقنا",
+      "tur": "verb",
+      "baslik": "زحلقنا (form Iq)\n# زَحْلَقْنَا (zaḥlaqnā) /zaħ.laq.naː/: first-person plural past active of زَحْلَقَ (zaḥlaqa)\n# زُحْلِقْنَا (zuḥliqnā) /zuħ.liq.naː/: first-person plural past passive of زَحْلَقَ (zaḥlaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zaḥlaqnā", "zaḥlaqa", "zuḥliqnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زحلقتن",
+      "tur": "verb",
+      "baslik": "زحلقتن (form Iq)\n# زَحْلَقْتُنَّ (zaḥlaqtunna) /zaħ.laq.tun.na/: second-person feminine plural past active of زَحْلَقَ (zaḥlaqa)\n# زُحْلِقْتُنَّ (zuḥliqtunna) /zuħ.liq.tun.na/: second-person feminine plural past passive of زَحْلَقَ (zaḥlaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zaḥlaqtunna", "zaḥlaqa", "zuḥliqtunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زحلقوا",
+      "tur": "verb",
+      "baslik": "زحلقوا (form Iq)\n# زَحْلَقُوا (zaḥlaqū) /zaħ.la.quː/: third-person masculine plural past active of زَحْلَقَ (zaḥlaqa)\n# زُحْلِقُوا (zuḥliqū) /zuħ.li.quː/: third-person masculine plural past passive of زَحْلَقَ (zaḥlaqa)\n# زَحْلِقُوا (zaḥliqū) /zaħ.li.quː/: second-person masculine plural imperative of زَحْلَقَ (zaḥlaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zaḥlaqū", "zaḥlaqa", "zuḥliqū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زحلقتم",
+      "tur": "verb",
+      "baslik": "زحلقتم (form Iq)\n# زَحْلَقْتُمْ (zaḥlaqtum) /zaħ.laq.tum/: second-person masculine plural past active of زَحْلَقَ (zaḥlaqa)\n# زُحْلِقْتُمْ (zuḥliqtum) /zuħ.liq.tum/: second-person masculine plural past passive of زَحْلَقَ (zaḥlaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zaḥlaqtum", "zaḥlaqa", "zuḥliqtum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زحلقن",
+      "tur": "verb",
+      "baslik": "زحلقن (form Iq)\n# زَحْلَقْنَ (zaḥlaqna) /zaħ.laq.na/: third-person feminine plural past active of زَحْلَقَ (zaḥlaqa)\n# زُحْلِقْنَ (zuḥliqna) /zuħ.liq.na/: third-person feminine plural past passive of زَحْلَقَ (zaḥlaqa)\n# زَحْلِقْنَ (zaḥliqna) /zaħ.liq.na/: second-person feminine plural imperative of زَحْلَقَ (zaḥlaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zaḥlaqna", "zaḥlaqa", "zuḥliqna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أزحلق",
+      "tur": "verb",
+      "baslik": "أزحلق (form Iq)\n# أُزَحْلِقُ (ʔuzaḥliqu) /ʔu.zaħ.li.qu/: first-person singular non-past active indicative of زَحْلَقَ (zaḥlaqa)\n# أُزَحْلَقُ (ʔuzaḥlaqu) /ʔu.zaħ.la.qu/: first-person singular non-past passive indicative of زَحْلَقَ (zaḥlaqa)\n# أُزَحْلِقَ (ʔuzaḥliqa) /ʔu.zaħ.li.qa/: first-person singular non-past active subjunctive of زَحْلَقَ (zaḥlaqa)\n# أُزَحْلَقَ (ʔuzaḥlaqa) /ʔu.zaħ.la.qa/: first",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʔuzaḥliqu", "zaḥlaqa", "ʔuzaḥlaqu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزحلق",
+      "tur": "verb",
+      "baslik": "يزحلق (form Iq)\n# يُزَحْلِقُ (yuzaḥliqu) /ju.zaħ.li.qu/: third-person masculine singular non-past active indicative of زَحْلَقَ (zaḥlaqa)\n# يُزَحْلَقُ (yuzaḥlaqu) /ju.zaħ.la.qu/: third-person masculine singular non-past passive indicative of زَحْلَقَ (zaḥlaqa)\n# يُزَحْلِقَ (yuzaḥliqa) /ju.zaħ.li.qa/: third-person masculine singular non-past active subjunctive of زَحْلَقَ (zaḥlaqa)\n# يُزَحْلَقَ (yu",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuzaḥliqu", "zaḥlaqa", "yuzaḥlaqu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزحلقان",
+      "tur": "verb",
+      "baslik": "تزحلقان (form Iq)\n# تُزَحْلِقَانِ (tuzaḥliqāni) /tu.zaħ.li.qaː.ni/: inflection of زَحْلَقَ (zaḥlaqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُزَحْلَقَانِ (tuzaḥlaqāni) /tu.zaħ.la.qaː.ni/: inflection of زَحْلَقَ (zaḥlaqa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuzaḥliqāni", "zaḥlaqa", "tuzaḥlaqāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نزحلق",
+      "tur": "verb",
+      "baslik": "نزحلق (form Iq)\n# نُزَحْلِقُ (nuzaḥliqu) /nu.zaħ.li.qu/: first-person plural non-past active indicative of زَحْلَقَ (zaḥlaqa)\n# نُزَحْلَقُ (nuzaḥlaqu) /nu.zaħ.la.qu/: first-person plural non-past passive indicative of زَحْلَقَ (zaḥlaqa)\n# نُزَحْلِقَ (nuzaḥliqa) /nu.zaħ.li.qa/: first-person plural non-past active subjunctive of زَحْلَقَ (zaḥlaqa)\n# نُزَحْلَقَ (nuzaḥlaqa) /nu.zaħ.la.qa/: first-perso",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["nuzaḥliqu", "zaḥlaqa", "nuzaḥlaqu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزحلقين",
+      "tur": "verb",
+      "baslik": "تزحلقين (form Iq)\n# تُزَحْلِقِينَ (tuzaḥliqīna) /tu.zaħ.li.qiː.na/: second-person feminine singular non-past active indicative of زَحْلَقَ (zaḥlaqa)\n# تُزَحْلَقِينَ (tuzaḥlaqīna) /tu.zaħ.la.qiː.na/: second-person feminine singular non-past passive indicative of زَحْلَقَ (zaḥlaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuzaḥliqīna", "zaḥlaqa", "tuzaḥlaqīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزحلقان",
+      "tur": "verb",
+      "baslik": "يزحلقان (form Iq)\n# يُزَحْلِقَانِ (yuzaḥliqāni) /ju.zaħ.li.qaː.ni/: third-person masculine dual non-past active indicative of زَحْلَقَ (zaḥlaqa)\n# يُزَحْلَقَانِ (yuzaḥlaqāni) /ju.zaħ.la.qaː.ni/: third-person masculine dual non-past passive indicative of زَحْلَقَ (zaḥlaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuzaḥliqāni", "zaḥlaqa", "yuzaḥlaqāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزحلقون",
+      "tur": "verb",
+      "baslik": "تزحلقون (form Iq)\n# تُزَحْلِقُونَ (tuzaḥliqūna) /tu.zaħ.li.quː.na/: second-person masculine plural non-past active indicative of زَحْلَقَ (zaḥlaqa)\n# تُزَحْلَقُونَ (tuzaḥlaqūna) /tu.zaħ.la.quː.na/: second-person masculine plural non-past passive indicative of زَحْلَقَ (zaḥlaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuzaḥliqūna", "zaḥlaqa", "tuzaḥlaqūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزحلقون",
+      "tur": "verb",
+      "baslik": "يزحلقون (form Iq)\n# يُزَحْلِقُونَ (yuzaḥliqūna) /ju.zaħ.li.quː.na/: third-person masculine plural non-past active indicative of زَحْلَقَ (zaḥlaqa)\n# يُزَحْلَقُونَ (yuzaḥlaqūna) /ju.zaħ.la.quː.na/: third-person masculine plural non-past passive indicative of زَحْلَقَ (zaḥlaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuzaḥliqūna", "zaḥlaqa", "yuzaḥlaqūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزحلقن",
+      "tur": "verb",
+      "baslik": "يزحلقن (form Iq)\n# يُزَحْلِقْنَ (yuzaḥliqna) /ju.zaħ.liq.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of زَحْلَقَ (zaḥlaqa)\n# يُزَحْلَقْنَ (yuzaḥlaqna) /ju.zaħ.laq.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of زَحْلَقَ (zaḥlaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuzaḥliqna", "zaḥlaqa", "yuzaḥlaqna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزحلقوا",
+      "tur": "verb",
+      "baslik": "يزحلقوا (form Iq)\n# يُزَحْلِقُوا (yuzaḥliqū) /ju.zaħ.li.quː/: third-person masculine plural non-past active subjunctive/jussive of زَحْلَقَ (zaḥlaqa)\n# يُزَحْلَقُوا (yuzaḥlaqū) /ju.zaħ.la.quː/: third-person masculine plural non-past passive subjunctive/jussive of زَحْلَقَ (zaḥlaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuzaḥliqū", "zaḥlaqa", "yuzaḥlaqū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "زحلقي",
+      "tur": "verb",
+      "baslik": "زَحْلِقِي • (zaḥliqī) (form Iq) /zaħ.li.qiː/\n# second-person feminine singular imperative of زَحْلَقَ (zaḥlaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zaḥliqī", "zaḥlaqa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يزحلقا",
+      "tur": "verb",
+      "baslik": "يزحلقا (form Iq)\n# يُزَحْلِقَا (yuzaḥliqā) /ju.zaħ.li.qaː/: third-person masculine dual non-past active subjunctive/jussive of زَحْلَقَ (zaḥlaqa)\n# يُزَحْلَقَا (yuzaḥlaqā) /ju.zaħ.la.qaː/: third-person masculine dual non-past passive subjunctive/jussive of زَحْلَقَ (zaḥlaqa)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuzaḥliqā", "zaḥlaqa", "yuzaḥlaqā"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "زحلق", "r6"]
+  ],
+  "mana": {
     "ince": "ski.v.01",
     "orta": "verb.motion",
     "ust": "fiil ve hadise",
@@ -379,20 +276,8 @@
     "dayanak_tanim": "move along on skis",
     "synset_sayisi": 3
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["ski.v.01", "skid.v.04", "slide.v.03"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 8,
       "merkez_kok": "سير",
@@ -412,6 +297,11 @@
       "boy": 8
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["ski.v.01", "skid.v.04", "slide.v.03"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,644 +1,499 @@
 {
   "kok": "ءعاق",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءعاق", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "نعق",
-        "u": "نعق",
-        "p": "noun",
-        "n": "2",
-        "h": "ar-noun",
-        "e": "نَعْق • (naʕq) m",
-        "g": ["verbal noun of نَعَقَ (naʕaqa) (form I)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["نَعَقَ"],
-        "r": ["naʕq"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "نعق",
-        "u": "نعق",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نعق (form IV)\n# نُعِقْ (nuʕiq) /nu.ʕiq/: first-person plural non-past active jussive of أَعَاقَ (ʔaʕāqa)\n# نُعَقْ (nuʕaq) /nu.ʕaq/: first-person plural non-past passive jussive of أَعَاقَ (ʔaʕāqa)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuʕiq", "ʔaʕāqa", "nuʕaq"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "نعيق",
-        "u": "نعيق",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نعيق (form IV)\n# نُعِيقُ (nuʕīqu) /nu.ʕiː.qu/: first-person plural non-past active indicative of أَعَاقَ (ʔaʕāqa)\n# نُعِيقَ (nuʕīqa) /nu.ʕiː.qa/: first-person plural non-past active subjunctive of أَعَاقَ (ʔaʕāqa)",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuʕīqu", "ʔaʕāqa", "nuʕīqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أعقت",
-        "u": "أعقت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعقت (form IV)\n# أَعَقْتُ (ʔaʕaqtu) /ʔa.ʕaq.tu/: first-person singular past active of أَعَاقَ (ʔaʕāqa)\n# أَعَقْتَ (ʔaʕaqta) /ʔa.ʕaq.ta/: second-person masculine singular past active of أَعَاقَ (ʔaʕāqa)\n# أَعَقْتِ (ʔaʕaqti) /ʔa.ʕaq.ti/: second-person feminine singular past active of أَعَاقَ (ʔaʕāqa)\n# أُعِقْتُ (ʔuʕiqtu) /ʔu.ʕiq.tu/: first-person singular past passive of أَعَاقَ (ʔaʕāqa)\n# أُعِقْتَ ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕaqtu", "ʔaʕāqa", "ʔaʕaqta"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أعاقت",
-        "u": "أعاقت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَعَاقَتْ • (ʔaʕāqat) (form IV) /ʔa.ʕaː.qat/\n# third-person feminine singular past active of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕāqat", "ʔaʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أعقتما",
-        "u": "أعقتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعقتما (form IV)\n# أَعَقْتُمَا (ʔaʕaqtumā) /ʔa.ʕaq.tu.maː/: second-person dual past active of أَعَاقَ (ʔaʕāqa)\n# أُعِقْتُمَا (ʔuʕiqtumā) /ʔu.ʕiq.tu.maː/: second-person dual past passive of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕaqtumā", "ʔaʕāqa", "ʔuʕiqtumā"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أعاقا",
-        "u": "أعاقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَعَاقَا • (ʔaʕāqā) (form IV) /ʔa.ʕaː.qaː/\n# third-person masculine dual past active of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕāqā", "ʔaʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أعاقتا",
-        "u": "أعاقتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَعَاقَتَا • (ʔaʕāqatā) (form IV) /ʔa.ʕaː.qa.taː/\n# third-person feminine dual past active of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕāqatā", "ʔaʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أعقتن",
-        "u": "أعقتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعقتن (form IV)\n# أَعَقْتُنَّ (ʔaʕaqtunna) /ʔa.ʕaq.tun.na/: second-person feminine plural past active of أَعَاقَ (ʔaʕāqa)\n# أُعِقْتُنَّ (ʔuʕiqtunna) /ʔu.ʕiq.tun.na/: second-person feminine plural past passive of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕaqtunna", "ʔaʕāqa", "ʔuʕiqtunna"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أعقتم",
-        "u": "أعقتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعقتم (form IV)\n# أَعَقْتُمْ (ʔaʕaqtum) /ʔa.ʕaq.tum/: second-person masculine plural past active of أَعَاقَ (ʔaʕāqa)\n# أُعِقْتُمْ (ʔuʕiqtum) /ʔu.ʕiq.tum/: second-person masculine plural past passive of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕaqtum", "ʔaʕāqa", "ʔuʕiqtum"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أعاقوا",
-        "u": "أعاقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَعَاقُوا • (ʔaʕāqū) (form IV) /ʔa.ʕaː.quː/\n# third-person masculine plural past active of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕāqū", "ʔaʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أعقن",
-        "u": "أعقن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعقن (form IV)\n# أَعَقْنَ (ʔaʕaqna) /ʔa.ʕaq.na/: third-person feminine plural past active of أَعَاقَ (ʔaʕāqa)\n# أُعِقْنَ (ʔuʕiqna) /ʔu.ʕiq.na/: third-person feminine plural past passive of أَعَاقَ (ʔaʕāqa)\n# أَعِقْنَ (ʔaʕiqna) /ʔa.ʕiq.na/: second-person feminine plural imperative of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕaqna", "ʔaʕāqa", "ʔuʕiqna"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أعقنا",
-        "u": "أعقنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعقنا (form IV)\n# أَعَقْنَا (ʔaʕaqnā) /ʔa.ʕaq.naː/: first-person plural past active of أَعَاقَ (ʔaʕāqa)\n# أُعِقْنَا (ʔuʕiqnā) /ʔu.ʕiq.naː/: first-person plural past passive of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕaqnā", "ʔaʕāqa", "ʔuʕiqnā"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أعيق",
-        "u": "أعيق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعيق (form IV)\n# أُعِيقَ (ʔuʕīqa) /ʔu.ʕiː.qa/: inflection of أَعَاقَ (ʔaʕāqa):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُعِيقُ (ʔuʕīqu) /ʔu.ʕiː.qu/: first-person singular non-past active indicative of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuʕīqa", "ʔaʕāqa", "ʔuʕīqu"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أعيقت",
-        "u": "أعيقت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُعِيقَتْ • (ʔuʕīqat) (form IV) /ʔu.ʕiː.qat/\n# third-person feminine singular past passive of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuʕīqat", "ʔaʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أعيقا",
-        "u": "أعيقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعيقا (form IV)\n# أُعِيقَا (ʔuʕīqā) /ʔu.ʕiː.qaː/: third-person masculine dual past passive of أَعَاقَ (ʔaʕāqa)\n# أَعِيقَا (ʔaʕīqā) /ʔa.ʕiː.qaː/: second-person dual imperative of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuʕīqā", "ʔaʕāqa", "ʔaʕīqā"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تعيق",
-        "u": "تعيق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تعيق (form IV)\n# تُعِيقُ (tuʕīqu) /tu.ʕiː.qu/: inflection of أَعَاقَ (ʔaʕāqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُعِيقَ (tuʕīqa) /tu.ʕiː.qa/: inflection of أَعَاقَ (ʔaʕāqa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕīqu", "ʔaʕāqa", "tuʕīqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أعيقتا",
-        "u": "أعيقتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُعِيقَتَا • (ʔuʕīqatā) (form IV) /ʔu.ʕiː.qa.taː/\n# third-person feminine dual past passive of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuʕīqatā", "ʔaʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يعيق",
-        "u": "يعيق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يعيق (form IV)\n# يُعِيقُ (yuʕīqu) /ju.ʕiː.qu/: third-person masculine singular non-past active indicative of أَعَاقَ (ʔaʕāqa)\n# يُعِيقَ (yuʕīqa) /ju.ʕiː.qa/: third-person masculine singular non-past active subjunctive of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕīqu", "ʔaʕāqa", "yuʕīqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أعيقوا",
-        "u": "أعيقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعيقوا (form IV)\n# أُعِيقُوا (ʔuʕīqū) /ʔu.ʕiː.quː/: third-person masculine plural past passive of أَعَاقَ (ʔaʕāqa)\n# أَعِيقُوا (ʔaʕīqū) /ʔa.ʕiː.quː/: second-person masculine plural imperative of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuʕīqū", "ʔaʕāqa", "ʔaʕīqū"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تعيقين",
-        "u": "تعيقين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُعِيقِينَ • (tuʕīqīna) (form IV) /tu.ʕiː.qiː.na/\n# second-person feminine singular non-past active indicative of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕīqīna", "ʔaʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تعيقان",
-        "u": "تعيقان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُعِيقَانِ • (tuʕīqāni) (form IV) /tu.ʕiː.qaː.ni/\n# inflection of أَعَاقَ (ʔaʕāqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕīqāni", "ʔaʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تعيقون",
-        "u": "تعيقون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُعِيقُونَ • (tuʕīqūna) (form IV) /tu.ʕiː.quː.na/\n# second-person masculine plural non-past active indicative of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕīqūna", "ʔaʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يعيقان",
-        "u": "يعيقان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُعِيقَانِ • (yuʕīqāni) (form IV) /ju.ʕiː.qaː.ni/\n# third-person masculine dual non-past active indicative of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕīqāni", "ʔaʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يعيقون",
-        "u": "يعيقون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُعِيقُونَ • (yuʕīqūna) (form IV) /ju.ʕiː.quː.na/\n# third-person masculine plural non-past active indicative of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕīqūna", "ʔaʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تعقن",
-        "u": "تعقن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تعقن (form IV)\n# تُعِقْنَ (tuʕiqna) /tu.ʕiq.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَعَاقَ (ʔaʕāqa)\n# تُعَقْنَ (tuʕaqna) /tu.ʕaq.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕiqna", "ʔaʕāqa", "tuʕaqna"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تعاق",
-        "u": "تعاق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تعاق (form IV)\n# تُعَاقُ (tuʕāqu) /tu.ʕaː.qu/: inflection of أَعَاقَ (ʔaʕāqa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُعَاقَ (tuʕāqa) /tu.ʕaː.qa/: inflection of أَعَاقَ (ʔaʕāqa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕāqu", "ʔaʕāqa", "tuʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يعاق",
-        "u": "يعاق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يعاق (form IV)\n# يُعَاقُ (yuʕāqu) /ju.ʕaː.qu/: third-person masculine singular non-past passive indicative of أَعَاقَ (ʔaʕāqa)\n# يُعَاقَ (yuʕāqa) /ju.ʕaː.qa/: third-person masculine singular non-past passive subjunctive of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕāqu", "ʔaʕāqa", "yuʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يعقن",
-        "u": "يعقن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يعقن (form IV)\n# يُعِقْنَ (yuʕiqna) /ju.ʕiq.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَعَاقَ (ʔaʕāqa)\n# يُعَقْنَ (yuʕaqna) /ju.ʕaq.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕiqna", "ʔaʕāqa", "yuʕaqna"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تعاقين",
-        "u": "تعاقين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُعَاقِينَ • (tuʕāqīna) (form IV) /tu.ʕaː.qiː.na/\n# second-person feminine singular non-past passive indicative of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕāqīna", "ʔaʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تعاقان",
-        "u": "تعاقان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُعَاقَانِ • (tuʕāqāni) (form IV) /tu.ʕaː.qaː.ni/\n# inflection of أَعَاقَ (ʔaʕāqa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕāqāni", "ʔaʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "نعاق",
-        "u": "نعاق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نعاق (form IV)\n# نُعَاقُ (nuʕāqu) /nu.ʕaː.qu/: first-person plural non-past passive indicative of أَعَاقَ (ʔaʕāqa)\n# نُعَاقَ (nuʕāqa) /nu.ʕaː.qa/: first-person plural non-past passive subjunctive of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nuʕāqu", "ʔaʕāqa", "nuʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تعاقون",
-        "u": "تعاقون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُعَاقُونَ • (tuʕāqūna) (form IV) /tu.ʕaː.quː.na/\n# second-person masculine plural non-past passive indicative of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕāqūna", "ʔaʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تعيقا",
-        "u": "تعيقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُعِيقَا • (tuʕīqā) (form IV) /tu.ʕiː.qaː/\n# inflection of أَعَاقَ (ʔaʕāqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕīqā", "ʔaʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يعاقون",
-        "u": "يعاقون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُعَاقُونَ • (yuʕāqūna) (form IV) /ju.ʕaː.quː.na/\n# third-person masculine plural non-past passive indicative of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕāqūna", "ʔaʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تعيقي",
-        "u": "تعيقي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُعِيقِي • (tuʕīqī) (form IV) /tu.ʕiː.qiː/\n# second-person feminine singular non-past active subjunctive/jussive of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕīqī", "ʔaʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تعيقوا",
-        "u": "تعيقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُعِيقُوا • (tuʕīqū) (form IV) /tu.ʕiː.quː/\n# second-person masculine plural non-past active subjunctive/jussive of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕīqū", "ʔaʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يعاقان",
-        "u": "يعاقان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُعَاقَانِ • (yuʕāqāni) (form IV) /ju.ʕaː.qaː.ni/\n# third-person masculine dual non-past passive indicative of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕāqāni", "ʔaʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يعيقوا",
-        "u": "يعيقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُعِيقُوا • (yuʕīqū) (form IV) /ju.ʕiː.quː/\n# third-person masculine plural non-past active subjunctive/jussive of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕīqū", "ʔaʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تعاقي",
-        "u": "تعاقي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُعَاقِي • (tuʕāqī) (form IV) /tu.ʕaː.qiː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕāqī", "ʔaʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تعاقوا",
-        "u": "تعاقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُعَاقُوا • (tuʕāqū) (form IV) /tu.ʕaː.quː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕāqū", "ʔaʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تعاقا",
-        "u": "تعاقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُعَاقَا • (tuʕāqā) (form IV) /tu.ʕaː.qaː/\n# inflection of أَعَاقَ (ʔaʕāqa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕāqā", "ʔaʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يعاقوا",
-        "u": "يعاقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُعَاقُوا • (yuʕāqū) (form IV) /ju.ʕaː.quː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕāqū", "ʔaʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يعيقا",
-        "u": "يعيقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُعِيقَا • (yuʕīqā) (form IV) /ju.ʕiː.qaː/\n# third-person masculine dual non-past active subjunctive/jussive of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕīqā", "ʔaʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يعاقا",
-        "u": "يعاقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُعَاقَا • (yuʕāqā) (form IV) /ju.ʕaː.qaː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕāqā", "ʔaʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "تعق",
-        "u": "تعق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تعق (form IV)\n# تُعِقْ (tuʕiq) /tu.ʕiq/: inflection of أَعَاقَ (ʔaʕāqa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُعَقْ (tuʕaq) /tu.ʕaq/: inflection of أَعَاقَ (ʔaʕāqa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tuʕiq", "ʔaʕāqa", "tuʕaq"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أعق",
-        "u": "أعق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أعق (form IV)\n# أُعِقْ (ʔuʕiq) /ʔu.ʕiq/: first-person singular non-past active jussive of أَعَاقَ (ʔaʕāqa)\n# أُعَقْ (ʔuʕaq) /ʔu.ʕaq/: first-person singular non-past passive jussive of أَعَاقَ (ʔaʕāqa)\n# أَعِقْ (ʔaʕiq) /ʔa.ʕiq/: second-person masculine singular imperative of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔuʕiq", "ʔaʕāqa", "ʔuʕaq"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "يعق",
-        "u": "يعق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يعق (form IV)\n# يُعِقْ (yuʕiq) /ju.ʕiq/: third-person masculine singular non-past active jussive of أَعَاقَ (ʔaʕāqa)\n# يُعَقْ (yuʕaq) /ju.ʕaq/: third-person masculine singular non-past passive jussive of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yuʕiq", "ʔaʕāqa", "yuʕaq"],
-        "k": "أعاق",
-        "yol": "kök"
-      },
-      {
-        "w": "أعيقي",
-        "u": "أعيقي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَعِيقِي • (ʔaʕīqī) (form IV) /ʔa.ʕiː.qiː/\n# second-person feminine singular imperative of أَعَاقَ (ʔaʕāqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔaʕīqī", "ʔaʕāqa"],
-        "k": "أعاق",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "عق",
+  "ses": {
     "harf": "ء",
+    "fasil": "عق",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "نعق",
+      "tur": "noun",
+      "etim_no": "2",
+      "baslik": "نَعْق • (naʕq) m",
+      "anlam": ["verbal noun of نَعَقَ (naʕaqa) (form I)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["نَعَقَ"],
+      "okunus": ["naʕq"],
+      "bag": "asıl madde"
+    },
+    {
+      "madde": "نعق",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نعق (form IV)\n# نُعِقْ (nuʕiq) /nu.ʕiq/: first-person plural non-past active jussive of أَعَاقَ (ʔaʕāqa)\n# نُعَقْ (nuʕaq) /nu.ʕaq/: first-person plural non-past passive jussive of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuʕiq", "ʔaʕāqa", "nuʕaq"],
+      "kok_yazilis": "أعاق"
+    },
+    {
+      "madde": "نعيق",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نعيق (form IV)\n# نُعِيقُ (nuʕīqu) /nu.ʕiː.qu/: first-person plural non-past active indicative of أَعَاقَ (ʔaʕāqa)\n# نُعِيقَ (nuʕīqa) /nu.ʕiː.qa/: first-person plural non-past active subjunctive of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuʕīqu", "ʔaʕāqa", "nuʕīqa"],
+      "kok_yazilis": "أعاق"
+    },
+    {
+      "madde": "أعقت",
+      "tur": "verb",
+      "baslik": "أعقت (form IV)\n# أَعَقْتُ (ʔaʕaqtu) /ʔa.ʕaq.tu/: first-person singular past active of أَعَاقَ (ʔaʕāqa)\n# أَعَقْتَ (ʔaʕaqta) /ʔa.ʕaq.ta/: second-person masculine singular past active of أَعَاقَ (ʔaʕāqa)\n# أَعَقْتِ (ʔaʕaqti) /ʔa.ʕaq.ti/: second-person feminine singular past active of أَعَاقَ (ʔaʕāqa)\n# أُعِقْتُ (ʔuʕiqtu) /ʔu.ʕiq.tu/: first-person singular past passive of أَعَاقَ (ʔaʕāqa)\n# أُعِقْتَ ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕaqtu", "ʔaʕāqa", "ʔaʕaqta"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعاقت",
+      "tur": "verb",
+      "baslik": "أَعَاقَتْ • (ʔaʕāqat) (form IV) /ʔa.ʕaː.qat/\n# third-person feminine singular past active of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕāqat", "ʔaʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعقتما",
+      "tur": "verb",
+      "baslik": "أعقتما (form IV)\n# أَعَقْتُمَا (ʔaʕaqtumā) /ʔa.ʕaq.tu.maː/: second-person dual past active of أَعَاقَ (ʔaʕāqa)\n# أُعِقْتُمَا (ʔuʕiqtumā) /ʔu.ʕiq.tu.maː/: second-person dual past passive of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕaqtumā", "ʔaʕāqa", "ʔuʕiqtumā"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعاقا",
+      "tur": "verb",
+      "baslik": "أَعَاقَا • (ʔaʕāqā) (form IV) /ʔa.ʕaː.qaː/\n# third-person masculine dual past active of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕāqā", "ʔaʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعاقتا",
+      "tur": "verb",
+      "baslik": "أَعَاقَتَا • (ʔaʕāqatā) (form IV) /ʔa.ʕaː.qa.taː/\n# third-person feminine dual past active of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕāqatā", "ʔaʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعقتن",
+      "tur": "verb",
+      "baslik": "أعقتن (form IV)\n# أَعَقْتُنَّ (ʔaʕaqtunna) /ʔa.ʕaq.tun.na/: second-person feminine plural past active of أَعَاقَ (ʔaʕāqa)\n# أُعِقْتُنَّ (ʔuʕiqtunna) /ʔu.ʕiq.tun.na/: second-person feminine plural past passive of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕaqtunna", "ʔaʕāqa", "ʔuʕiqtunna"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعقتم",
+      "tur": "verb",
+      "baslik": "أعقتم (form IV)\n# أَعَقْتُمْ (ʔaʕaqtum) /ʔa.ʕaq.tum/: second-person masculine plural past active of أَعَاقَ (ʔaʕāqa)\n# أُعِقْتُمْ (ʔuʕiqtum) /ʔu.ʕiq.tum/: second-person masculine plural past passive of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕaqtum", "ʔaʕāqa", "ʔuʕiqtum"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعاقوا",
+      "tur": "verb",
+      "baslik": "أَعَاقُوا • (ʔaʕāqū) (form IV) /ʔa.ʕaː.quː/\n# third-person masculine plural past active of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕāqū", "ʔaʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعقن",
+      "tur": "verb",
+      "baslik": "أعقن (form IV)\n# أَعَقْنَ (ʔaʕaqna) /ʔa.ʕaq.na/: third-person feminine plural past active of أَعَاقَ (ʔaʕāqa)\n# أُعِقْنَ (ʔuʕiqna) /ʔu.ʕiq.na/: third-person feminine plural past passive of أَعَاقَ (ʔaʕāqa)\n# أَعِقْنَ (ʔaʕiqna) /ʔa.ʕiq.na/: second-person feminine plural imperative of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕaqna", "ʔaʕāqa", "ʔuʕiqna"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعقنا",
+      "tur": "verb",
+      "baslik": "أعقنا (form IV)\n# أَعَقْنَا (ʔaʕaqnā) /ʔa.ʕaq.naː/: first-person plural past active of أَعَاقَ (ʔaʕāqa)\n# أُعِقْنَا (ʔuʕiqnā) /ʔu.ʕiq.naː/: first-person plural past passive of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕaqnā", "ʔaʕāqa", "ʔuʕiqnā"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعيق",
+      "tur": "verb",
+      "baslik": "أعيق (form IV)\n# أُعِيقَ (ʔuʕīqa) /ʔu.ʕiː.qa/: inflection of أَعَاقَ (ʔaʕāqa):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُعِيقُ (ʔuʕīqu) /ʔu.ʕiː.qu/: first-person singular non-past active indicative of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuʕīqa", "ʔaʕāqa", "ʔuʕīqu"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعيقت",
+      "tur": "verb",
+      "baslik": "أُعِيقَتْ • (ʔuʕīqat) (form IV) /ʔu.ʕiː.qat/\n# third-person feminine singular past passive of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuʕīqat", "ʔaʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعيقا",
+      "tur": "verb",
+      "baslik": "أعيقا (form IV)\n# أُعِيقَا (ʔuʕīqā) /ʔu.ʕiː.qaː/: third-person masculine dual past passive of أَعَاقَ (ʔaʕāqa)\n# أَعِيقَا (ʔaʕīqā) /ʔa.ʕiː.qaː/: second-person dual imperative of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuʕīqā", "ʔaʕāqa", "ʔaʕīqā"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعيق",
+      "tur": "verb",
+      "baslik": "تعيق (form IV)\n# تُعِيقُ (tuʕīqu) /tu.ʕiː.qu/: inflection of أَعَاقَ (ʔaʕāqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُعِيقَ (tuʕīqa) /tu.ʕiː.qa/: inflection of أَعَاقَ (ʔaʕāqa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕīqu", "ʔaʕāqa", "tuʕīqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعيقتا",
+      "tur": "verb",
+      "baslik": "أُعِيقَتَا • (ʔuʕīqatā) (form IV) /ʔu.ʕiː.qa.taː/\n# third-person feminine dual past passive of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuʕīqatā", "ʔaʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعيق",
+      "tur": "verb",
+      "baslik": "يعيق (form IV)\n# يُعِيقُ (yuʕīqu) /ju.ʕiː.qu/: third-person masculine singular non-past active indicative of أَعَاقَ (ʔaʕāqa)\n# يُعِيقَ (yuʕīqa) /ju.ʕiː.qa/: third-person masculine singular non-past active subjunctive of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕīqu", "ʔaʕāqa", "yuʕīqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعيقوا",
+      "tur": "verb",
+      "baslik": "أعيقوا (form IV)\n# أُعِيقُوا (ʔuʕīqū) /ʔu.ʕiː.quː/: third-person masculine plural past passive of أَعَاقَ (ʔaʕāqa)\n# أَعِيقُوا (ʔaʕīqū) /ʔa.ʕiː.quː/: second-person masculine plural imperative of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuʕīqū", "ʔaʕāqa", "ʔaʕīqū"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعيقين",
+      "tur": "verb",
+      "baslik": "تُعِيقِينَ • (tuʕīqīna) (form IV) /tu.ʕiː.qiː.na/\n# second-person feminine singular non-past active indicative of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕīqīna", "ʔaʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعيقان",
+      "tur": "verb",
+      "baslik": "تُعِيقَانِ • (tuʕīqāni) (form IV) /tu.ʕiː.qaː.ni/\n# inflection of أَعَاقَ (ʔaʕāqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕīqāni", "ʔaʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعيقون",
+      "tur": "verb",
+      "baslik": "تُعِيقُونَ • (tuʕīqūna) (form IV) /tu.ʕiː.quː.na/\n# second-person masculine plural non-past active indicative of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕīqūna", "ʔaʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعيقان",
+      "tur": "verb",
+      "baslik": "يُعِيقَانِ • (yuʕīqāni) (form IV) /ju.ʕiː.qaː.ni/\n# third-person masculine dual non-past active indicative of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕīqāni", "ʔaʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعيقون",
+      "tur": "verb",
+      "baslik": "يُعِيقُونَ • (yuʕīqūna) (form IV) /ju.ʕiː.quː.na/\n# third-person masculine plural non-past active indicative of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕīqūna", "ʔaʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعقن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تعقن (form IV)\n# تُعِقْنَ (tuʕiqna) /tu.ʕiq.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of أَعَاقَ (ʔaʕāqa)\n# تُعَقْنَ (tuʕaqna) /tu.ʕaq.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕiqna", "ʔaʕāqa", "tuʕaqna"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعاق",
+      "tur": "verb",
+      "baslik": "تعاق (form IV)\n# تُعَاقُ (tuʕāqu) /tu.ʕaː.qu/: inflection of أَعَاقَ (ʔaʕāqa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُعَاقَ (tuʕāqa) /tu.ʕaː.qa/: inflection of أَعَاقَ (ʔaʕāqa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕāqu", "ʔaʕāqa", "tuʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعاق",
+      "tur": "verb",
+      "baslik": "يعاق (form IV)\n# يُعَاقُ (yuʕāqu) /ju.ʕaː.qu/: third-person masculine singular non-past passive indicative of أَعَاقَ (ʔaʕāqa)\n# يُعَاقَ (yuʕāqa) /ju.ʕaː.qa/: third-person masculine singular non-past passive subjunctive of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕāqu", "ʔaʕāqa", "yuʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعقن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يعقن (form IV)\n# يُعِقْنَ (yuʕiqna) /ju.ʕiq.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of أَعَاقَ (ʔaʕāqa)\n# يُعَقْنَ (yuʕaqna) /ju.ʕaq.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕiqna", "ʔaʕāqa", "yuʕaqna"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعاقين",
+      "tur": "verb",
+      "baslik": "تُعَاقِينَ • (tuʕāqīna) (form IV) /tu.ʕaː.qiː.na/\n# second-person feminine singular non-past passive indicative of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕāqīna", "ʔaʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعاقان",
+      "tur": "verb",
+      "baslik": "تُعَاقَانِ • (tuʕāqāni) (form IV) /tu.ʕaː.qaː.ni/\n# inflection of أَعَاقَ (ʔaʕāqa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕāqāni", "ʔaʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "نعاق",
+      "tur": "verb",
+      "baslik": "نعاق (form IV)\n# نُعَاقُ (nuʕāqu) /nu.ʕaː.qu/: first-person plural non-past passive indicative of أَعَاقَ (ʔaʕāqa)\n# نُعَاقَ (nuʕāqa) /nu.ʕaː.qa/: first-person plural non-past passive subjunctive of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nuʕāqu", "ʔaʕāqa", "nuʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعاقون",
+      "tur": "verb",
+      "baslik": "تُعَاقُونَ • (tuʕāqūna) (form IV) /tu.ʕaː.quː.na/\n# second-person masculine plural non-past passive indicative of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕāqūna", "ʔaʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعيقا",
+      "tur": "verb",
+      "baslik": "تُعِيقَا • (tuʕīqā) (form IV) /tu.ʕiː.qaː/\n# inflection of أَعَاقَ (ʔaʕāqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕīqā", "ʔaʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعاقون",
+      "tur": "verb",
+      "baslik": "يُعَاقُونَ • (yuʕāqūna) (form IV) /ju.ʕaː.quː.na/\n# third-person masculine plural non-past passive indicative of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕāqūna", "ʔaʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعيقي",
+      "tur": "verb",
+      "baslik": "تُعِيقِي • (tuʕīqī) (form IV) /tu.ʕiː.qiː/\n# second-person feminine singular non-past active subjunctive/jussive of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕīqī", "ʔaʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعيقوا",
+      "tur": "verb",
+      "baslik": "تُعِيقُوا • (tuʕīqū) (form IV) /tu.ʕiː.quː/\n# second-person masculine plural non-past active subjunctive/jussive of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕīqū", "ʔaʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعاقان",
+      "tur": "verb",
+      "baslik": "يُعَاقَانِ • (yuʕāqāni) (form IV) /ju.ʕaː.qaː.ni/\n# third-person masculine dual non-past passive indicative of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕāqāni", "ʔaʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعيقوا",
+      "tur": "verb",
+      "baslik": "يُعِيقُوا • (yuʕīqū) (form IV) /ju.ʕiː.quː/\n# third-person masculine plural non-past active subjunctive/jussive of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕīqū", "ʔaʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعاقي",
+      "tur": "verb",
+      "baslik": "تُعَاقِي • (tuʕāqī) (form IV) /tu.ʕaː.qiː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕāqī", "ʔaʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعاقوا",
+      "tur": "verb",
+      "baslik": "تُعَاقُوا • (tuʕāqū) (form IV) /tu.ʕaː.quː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕāqū", "ʔaʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعاقا",
+      "tur": "verb",
+      "baslik": "تُعَاقَا • (tuʕāqā) (form IV) /tu.ʕaː.qaː/\n# inflection of أَعَاقَ (ʔaʕāqa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕāqā", "ʔaʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعاقوا",
+      "tur": "verb",
+      "baslik": "يُعَاقُوا • (yuʕāqū) (form IV) /ju.ʕaː.quː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕāqū", "ʔaʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعيقا",
+      "tur": "verb",
+      "baslik": "يُعِيقَا • (yuʕīqā) (form IV) /ju.ʕiː.qaː/\n# third-person masculine dual non-past active subjunctive/jussive of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕīqā", "ʔaʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعاقا",
+      "tur": "verb",
+      "baslik": "يُعَاقَا • (yuʕāqā) (form IV) /ju.ʕaː.qaː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕāqā", "ʔaʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تعق (form IV)\n# تُعِقْ (tuʕiq) /tu.ʕiq/: inflection of أَعَاقَ (ʔaʕāqa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُعَقْ (tuʕaq) /tu.ʕaq/: inflection of أَعَاقَ (ʔaʕāqa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tuʕiq", "ʔaʕāqa", "tuʕaq"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أعق (form IV)\n# أُعِقْ (ʔuʕiq) /ʔu.ʕiq/: first-person singular non-past active jussive of أَعَاقَ (ʔaʕāqa)\n# أُعَقْ (ʔuʕaq) /ʔu.ʕaq/: first-person singular non-past passive jussive of أَعَاقَ (ʔaʕāqa)\n# أَعِقْ (ʔaʕiq) /ʔa.ʕiq/: second-person masculine singular imperative of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔuʕiq", "ʔaʕāqa", "ʔuʕaq"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يعق (form IV)\n# يُعِقْ (yuʕiq) /ju.ʕiq/: third-person masculine singular non-past active jussive of أَعَاقَ (ʔaʕāqa)\n# يُعَقْ (yuʕaq) /ju.ʕaq/: third-person masculine singular non-past passive jussive of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yuʕiq", "ʔaʕāqa", "yuʕaq"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعيقي",
+      "tur": "verb",
+      "baslik": "أَعِيقِي • (ʔaʕīqī) (form IV) /ʔa.ʕiː.qiː/\n# second-person feminine singular imperative of أَعَاقَ (ʔaʕāqa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔaʕīqī", "ʔaʕāqa"],
+      "kok_yazilis": "أعاق",
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءعاق", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

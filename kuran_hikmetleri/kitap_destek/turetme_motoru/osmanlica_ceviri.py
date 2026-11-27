@@ -6,6 +6,9 @@ import sys
 import time
 import urllib.request
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import kok_sadelestir as KS
+
 KOK = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 UC = 'https://evren-llmapi.ssyz.org.tr/v1/chat/completions'
 SISTEM = ("Sen Türkçe metinleri Osmanlı Türkçesine (Latin harfli) çeviren mütercimsin. Her öğeyi MUTLAKA Osmanlı kelime dağarcığıyla yeniden yaz: sade Türkçe kelimelerin yerine yerleşik Arapça-Fârisî asıllı karşılıkları kullan "
@@ -50,9 +53,8 @@ def sor(anahtar, model, yuk):
 
 def kok_yukle(f):
     d = json.load(open(f, encoding='utf-8'))
-    ka = (d.get('sozlukler') or {}).get('kok_anlamlari') or {}
-    kel = [(k.get('turkce') or {}).get('yuzey', '') for k in d.get('kelimeler', [])]
-    return d, {'anlam': ka.get('turkce', ''), 'kelimeler': kel}
+    kel = [b.get('tr', '') for g in d.get('kelimeler', []) for b in g.get('bicimler', [])]
+    return d, {'anlam': d.get('anlam', ''), 'kelimeler': kel}
 
 
 def isle(anahtar, model, f):
@@ -64,7 +66,7 @@ def isle(anahtar, model, f):
         return f, 'hata'
     d['osmanlica'] = {'anlam': o['anlam'], 'kelimeler': o['kelimeler'], 'yontem': 'EVREN ' + model + ' ile Osmanlıcaya çevrildi (Ömer Seyfettin ve Mehmed Âkif üslûbu istemi); doğrulanmadı'}
     tmp = f + '.yeni'
-    json.dump(d, open(tmp, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    open(tmp, 'w', encoding='utf-8').write(KS.okunur(d) + '\n')
     os.replace(tmp, f)
     return f, 'tamam'
 

@@ -1,642 +1,461 @@
 {
   "kok": "كرا",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "كرا", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "كروت",
-        "u": "كروت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كروت (form I)\n# كَرَوْتُ (karawtu) /ka.raw.tu/: first-person singular past active of كَرَا (karā)\n# كَرَوْتَ (karawta) /ka.raw.ta/: second-person masculine singular past active of كَرَا (karā)\n# كَرَوْتِ (karawti) /ka.raw.ti/: second-person feminine singular past active of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["karawtu", "karā", "karawta"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "كري",
-        "u": "كري",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "كُرِيَ • (kuriya) (form I) /ku.ri.ja/\n# third-person masculine singular past passive of كَرَا (karā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kuriya", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "كرى",
-        "u": "كرى",
-        "p": "noun",
-        "n": "2",
-        "h": "ar-noun",
-        "e": "كَرًى • (karan) m (construct state كَرَى (karā))",
-        "synonyms": ["نَوْم"],
-        "g": ["verbal noun of كَرِيَ (kariya, “to sleep”) (form I)", "sleep, slumber"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["كَرِيَ"],
-        "r": ["karan"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "نكر",
-        "u": "نكر",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نكر (form I)\n# نَكْرُ (nakru) /nak.ru/: first-person plural non-past active jussive of كَرَا (karā)\n# نُكْرَ (nukra) /nuk.ra/: first-person plural non-past passive jussive of كَرَا (karā) and كَرَى (karā)\n# نَكْرِ (nakri) /nak.ri/: first-person plural non-past active jussive of كَرَى (karā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nakru", "karā", "nukra"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "أكرى",
-        "u": "أكرى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أُكْرَى • (ʔukrā) (form I) /ʔuk.raː/\n# first-person singular non-past passive indicative/subjunctive of كَرَا (karā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔukrā", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "كريت",
-        "u": "كريت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "كريت (form I)\n# كُرِيتُ (kurītu) /ku.riː.tu/: first-person singular past passive of كَرَا (karā)\n# كُرِيتَ (kurīta) /ku.riː.ta/: second-person masculine singular past passive of كَرَا (karā)\n# كُرِيتِ (kurīti) /ku.riː.ti/: second-person feminine singular past passive of كَرَا (karā)\n# كُرِيَتْ (kuriyat) /ku.ri.jat/: third-person feminine singular past passive of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kurītu", "karā", "kurīta"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "كرت",
-        "u": "كرت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "كَرَتْ • (karat) (form I) /ka.rat/\n# third-person feminine singular past active of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["karat", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "تكرون",
-        "u": "تكرون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تكرون (form I)\n# تَكْرُونَ (takrūna) /tak.ruː.na/: inflection of كَرَا (karā):\n## second-person masculine/feminine plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُكْرَوْنَ (tukrawna) /tuk.raw.na/: second-person masculine plural non-past passive indicative of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takrūna", "karā", "tukrawna"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "اكر",
-        "u": "اكر",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اُكْرُ • (ukru) (form I) /uk.ru/\n# second-person masculine singular imperative of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ukru", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "تكريان",
-        "u": "تكريان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُكْرَيَانِ • (tukrayāni) (form I) /tuk.ra.jaː.ni/\n# inflection of كَرَا (karā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tukrayāni", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "تكري",
-        "u": "تكري",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تكري (form I)\n# تَكْرِي (takrī) /tak.riː/: second-person feminine singular non-past active subjunctive/jussive of كَرَا (karā)\n# تُكْرَيْ (tukray) /tuk.raj/: second-person feminine singular non-past passive subjunctive/jussive of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takrī", "karā", "tukray"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "تكرين",
-        "u": "تكرين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تكرين (form I)\n# تَكْرِينَ (takrīna) /tak.riː.na/: second-person feminine singular non-past active indicative of كَرَا (karā)\n# تُكْرَيْنَ (tukrayna) /tuk.raj.na/: inflection of كَرَا (karā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takrīna", "karā", "tukrayna"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "يكريان",
-        "u": "يكريان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُكْرَيَانِ • (yukrayāni) (form I) /juk.ra.jaː.ni/\n# third-person masculine dual non-past passive indicative of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yukrayāni", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "يكرون",
-        "u": "يكرون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يكرون (form I)\n# يَكْرُونَ (yakrūna) /jak.ruː.na/: inflection of كَرَا (karā):\n## third-person masculine/feminine plural non-past active indicative\n## third-person feminine plural non-past active subjunctive/jussive\n# يُكْرَوْنَ (yukrawna) /juk.raw.na/: third-person masculine plural non-past passive indicative of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yakrūna", "karā", "yukrawna"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "يكرين",
-        "u": "يكرين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُكْرَيْنَ • (yukrayna) (form I) /juk.raj.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yukrayna", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "تكرى",
-        "u": "تكرى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُكْرَى • (tukrā) (form I) /tuk.raː/\n# inflection of كَرَا (karā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tukrā", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "تكريا",
-        "u": "تكريا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُكْرَيَا • (tukrayā) (form I) /tuk.ra.jaː/\n# inflection of كَرَا (karā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tukrayā", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "يكرى",
-        "u": "يكرى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُكْرَى • (yukrā) (form I) /juk.raː/\n# third-person masculine singular non-past passive indicative/subjunctive of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yukrā", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "يكريا",
-        "u": "يكريا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُكْرَيَا • (yukrayā) (form I) /juk.ra.jaː/\n# third-person masculine dual non-past passive subjunctive/jussive of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yukrayā", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "نكرى",
-        "u": "نكرى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نُكْرَى • (nukrā) (form I) /nuk.raː/\n# first-person plural non-past passive indicative/subjunctive of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nukrā", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "يكروا",
-        "u": "يكروا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يكروا (form I)\n# يَكْرُوَا (yakruwā) /jak.ru.waː/: third-person masculine dual non-past active subjunctive/jussive of كَرَا (karā)\n# يَكْرُوا (yakrū) /jak.ruː/: third-person masculine plural non-past active subjunctive/jussive of كَرَا (karā)\n# يُكْرَوْا (yukraw) /juk.raw/: third-person masculine plural non-past passive subjunctive/jussive of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yakruwā", "karā", "yakrū"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "تكروا",
-        "u": "تكروا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تكروا (form I)\n# تَكْرُوَا (takruwā) /tak.ru.waː/: inflection of كَرَا (karā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تَكْرُوا (takrū) /tak.ruː/: second-person masculine plural non-past active subjunctive/jussive of كَرَا (karā)\n# تُكْرَوْا (tukraw) /tuk.raw/: second-person masculine plural non-past passive subj",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takruwā", "karā", "takrū"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "أكر",
-        "u": "أكر",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أكر (form I)\n# أَكْرُ (ʔakru) /ʔak.ru/: first-person singular non-past active jussive of كَرَا (karā)\n# أُكْرَ (ʔukra) /ʔuk.ra/: first-person singular non-past passive jussive of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔakru", "karā", "ʔukra"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "تكر",
-        "u": "تكر",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تكر (form I)\n# تَكْرُ (takru) /tak.ru/: inflection of كَرَا (karā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُكْرَ (tukra) /tuk.ra/: inflection of كَرَا (karā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takru", "karā", "tukra"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "يكر",
-        "u": "يكر",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يكر (form I)\n# يَكْرُ (yakru) /jak.ru/: third-person masculine singular non-past active jussive of كَرَا (karā)\n# يُكْرَ (yukra) /juk.ra/: third-person masculine singular non-past passive jussive of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yakru", "karā", "yukra"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "كرتا",
-        "u": "كرتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "كَرَتَا • (karatā) (form I) /ka.ra.taː/\n# third-person feminine dual past active of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["karatā", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "كروا",
-        "u": "كروا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "كروا (form I)\n# كَرَوَا (karawā) /ka.ra.waː/: third-person masculine dual past active of كَرَا (karā)\n# كَرَوْا (karaw) /ka.raw/: third-person masculine plural past active of كَرَا (karā)\n# كُرُوا (kurū) /ku.ruː/: third-person masculine plural past passive of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["karawā", "karā", "karaw"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "كروتما",
-        "u": "كروتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كَرَوْتُمَا • (karawtumā) (form I) /ka.raw.tu.maː/\n# second-person dual past active of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["karawtumā", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "كرونا",
-        "u": "كرونا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كَرَوْنَا • (karawnā) (form I) /ka.raw.naː/\n# first-person plural past active of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["karawnā", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "كروتم",
-        "u": "كروتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كَرَوْتُمْ • (karawtum) (form I) /ka.raw.tum/\n# second-person masculine plural past active of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["karawtum", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "كرون",
-        "u": "كرون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كَرَوْنَ • (karawna) (form I) /ka.raw.na/\n# third-person feminine plural past active of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["karawna", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "كريتما",
-        "u": "كريتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "كُرِيتُمَا • (kurītumā) (form I) /ku.riː.tu.maː/\n# second-person dual past passive of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kurītumā", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "كروتن",
-        "u": "كروتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "كَرَوْتُنَّ • (karawtunna) (form I) /ka.raw.tun.na/\n# second-person feminine plural past active of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["karawtunna", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "كريا",
-        "u": "كريا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "كُرِيَا • (kuriyā) (form I) /ku.ri.jaː/\n# third-person masculine dual past passive of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kuriyā", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "كريتا",
-        "u": "كريتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "كُرِيَتَا • (kuriyatā) (form I) /ku.ri.ja.taː/\n# third-person feminine dual past passive of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kuriyatā", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "كرينا",
-        "u": "كرينا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "كُرِينَا • (kurīnā) (form I) /ku.riː.naː/\n# first-person plural past passive of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kurīnā", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "كرين",
-        "u": "كرين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "كُرِينَ • (kurīna) (form I) /ku.riː.na/\n# third-person feminine plural past passive of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kurīna", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "أكرو",
-        "u": "أكرو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أكرو (form I)\n# أَكْرُو (ʔakrū) /ʔak.ruː/: first-person singular non-past active indicative of كَرَا (karā)\n# أَكْرُوَ (ʔakruwa) /ʔak.ru.wa/: first-person singular non-past active subjunctive of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔakrū", "karā", "ʔakruwa"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "تكرو",
-        "u": "تكرو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تكرو (form I)\n# تَكْرُو (takrū) /tak.ruː/: inflection of كَرَا (karā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَكْرُوَ (takruwa) /tak.ru.wa/: inflection of كَرَا (karā):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takrū", "karā", "takruwa"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "كريتم",
-        "u": "كريتم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "كُرِيتُمْ • (kurītum) (form I) /ku.riː.tum/\n# second-person masculine plural past passive of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kurītum", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "كريتن",
-        "u": "كريتن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "كُرِيتُنَّ • (kurītunna) (form I) /ku.riː.tun.na/\n# second-person feminine plural past passive of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["kurītunna", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "يكرو",
-        "u": "يكرو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يكرو (form I)\n# يَكْرُو (yakrū) /jak.ruː/: third-person masculine singular non-past active indicative of كَرَا (karā)\n# يَكْرُوَ (yakruwa) /jak.ru.wa/: third-person masculine singular non-past active subjunctive of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yakrū", "karā", "yakruwa"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "يكروان",
-        "u": "يكروان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَكْرُوَانِ • (yakruwāni) (form I) /jak.ru.waː.ni/\n# third-person masculine dual non-past active indicative of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yakruwāni", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "تكروان",
-        "u": "تكروان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَكْرُوَانِ • (takruwāni) (form I) /tak.ru.waː.ni/\n# inflection of كَرَا (karā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["takruwāni", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "اكري",
-        "u": "اكري",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اُكْرِي • (ukrī) (form I) /uk.riː/\n# second-person feminine singular imperative of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ukrī", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "نكرو",
-        "u": "نكرو",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نكرو (form I)\n# نَكْرُو (nakrū) /nak.ruː/: first-person plural non-past active indicative of كَرَا (karā)\n# نَكْرُوَ (nakruwa) /nak.ru.wa/: first-person plural non-past active subjunctive of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nakrū", "karā", "nakruwa"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "اكروا",
-        "u": "اكروا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اكروا (form I)\n# اُكْرُوَا (ukruwā) /uk.ru.waː/: second-person dual imperative of كَرَا (karā)\n# اُكْرُوا (ukrū) /uk.ruː/: second-person masculine plural imperative of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ukruwā", "karā", "ukrū"],
-        "k": "كرا",
-        "yol": "kök"
-      },
-      {
-        "w": "اكرون",
-        "u": "اكرون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اُكْرُونَ • (ukrūna) (form I) /uk.ruː.na/\n# second-person feminine plural imperative of كَرَا (karā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ukrūna", "karā"],
-        "k": "كرا",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "كر",
+  "ses": {
     "harf": "ك",
+    "fasil": "كر",
     "mahrec": "lehaviyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "كروت",
+      "tur": "verb",
+      "baslik": "كروت (form I)\n# كَرَوْتُ (karawtu) /ka.raw.tu/: first-person singular past active of كَرَا (karā)\n# كَرَوْتَ (karawta) /ka.raw.ta/: second-person masculine singular past active of كَرَا (karā)\n# كَرَوْتِ (karawti) /ka.raw.ti/: second-person feminine singular past active of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["karawtu", "karā", "karawta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "كري",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "كُرِيَ • (kuriya) (form I) /ku.ri.ja/\n# third-person masculine singular past passive of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kuriya", "karā"]
+    },
+    {
+      "madde": "كرى",
+      "tur": "noun",
+      "etim_no": "2",
+      "baslik": "كَرًى • (karan) m (construct state كَرَى (karā))",
+      "esanlamli": ["نَوْم"],
+      "anlam": ["verbal noun of كَرِيَ (kariya, “to sleep”) (form I)", "sleep, slumber"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["كَرِيَ"],
+      "okunus": ["karan"],
+      "bag": "asıl madde"
+    },
+    {
+      "madde": "نكر",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نكر (form I)\n# نَكْرُ (nakru) /nak.ru/: first-person plural non-past active jussive of كَرَا (karā)\n# نُكْرَ (nukra) /nuk.ra/: first-person plural non-past passive jussive of كَرَا (karā) and كَرَى (karā)\n# نَكْرِ (nakri) /nak.ri/: first-person plural non-past active jussive of كَرَى (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nakru", "karā", "nukra"]
+    },
+    {
+      "madde": "أكرى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أُكْرَى • (ʔukrā) (form I) /ʔuk.raː/\n# first-person singular non-past passive indicative/subjunctive of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔukrā", "karā"]
+    },
+    {
+      "madde": "كريت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "كريت (form I)\n# كُرِيتُ (kurītu) /ku.riː.tu/: first-person singular past passive of كَرَا (karā)\n# كُرِيتَ (kurīta) /ku.riː.ta/: second-person masculine singular past passive of كَرَا (karā)\n# كُرِيتِ (kurīti) /ku.riː.ti/: second-person feminine singular past passive of كَرَا (karā)\n# كُرِيَتْ (kuriyat) /ku.ri.jat/: third-person feminine singular past passive of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kurītu", "karā", "kurīta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "كرت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "كَرَتْ • (karat) (form I) /ka.rat/\n# third-person feminine singular past active of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["karat", "karā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكرون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تكرون (form I)\n# تَكْرُونَ (takrūna) /tak.ruː.na/: inflection of كَرَا (karā):\n## second-person masculine/feminine plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُكْرَوْنَ (tukrawna) /tuk.raw.na/: second-person masculine plural non-past passive indicative of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takrūna", "karā", "tukrawna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اكر",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اُكْرُ • (ukru) (form I) /uk.ru/\n# second-person masculine singular imperative of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ukru", "karā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكريان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُكْرَيَانِ • (tukrayāni) (form I) /tuk.ra.jaː.ni/\n# inflection of كَرَا (karā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tukrayāni", "karā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكري",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تكري (form I)\n# تَكْرِي (takrī) /tak.riː/: second-person feminine singular non-past active subjunctive/jussive of كَرَا (karā)\n# تُكْرَيْ (tukray) /tuk.raj/: second-person feminine singular non-past passive subjunctive/jussive of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takrī", "karā", "tukray"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكرين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تكرين (form I)\n# تَكْرِينَ (takrīna) /tak.riː.na/: second-person feminine singular non-past active indicative of كَرَا (karā)\n# تُكْرَيْنَ (tukrayna) /tuk.raj.na/: inflection of كَرَا (karā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takrīna", "karā", "tukrayna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يكريان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُكْرَيَانِ • (yukrayāni) (form I) /juk.ra.jaː.ni/\n# third-person masculine dual non-past passive indicative of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yukrayāni", "karā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يكرون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يكرون (form I)\n# يَكْرُونَ (yakrūna) /jak.ruː.na/: inflection of كَرَا (karā):\n## third-person masculine/feminine plural non-past active indicative\n## third-person feminine plural non-past active subjunctive/jussive\n# يُكْرَوْنَ (yukrawna) /juk.raw.na/: third-person masculine plural non-past passive indicative of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yakrūna", "karā", "yukrawna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يكرين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُكْرَيْنَ • (yukrayna) (form I) /juk.raj.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yukrayna", "karā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكرى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُكْرَى • (tukrā) (form I) /tuk.raː/\n# inflection of كَرَا (karā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tukrā", "karā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكريا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُكْرَيَا • (tukrayā) (form I) /tuk.ra.jaː/\n# inflection of كَرَا (karā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tukrayā", "karā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يكرى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُكْرَى • (yukrā) (form I) /juk.raː/\n# third-person masculine singular non-past passive indicative/subjunctive of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yukrā", "karā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يكريا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُكْرَيَا • (yukrayā) (form I) /juk.ra.jaː/\n# third-person masculine dual non-past passive subjunctive/jussive of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yukrayā", "karā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نكرى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نُكْرَى • (nukrā) (form I) /nuk.raː/\n# first-person plural non-past passive indicative/subjunctive of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nukrā", "karā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يكروا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يكروا (form I)\n# يَكْرُوَا (yakruwā) /jak.ru.waː/: third-person masculine dual non-past active subjunctive/jussive of كَرَا (karā)\n# يَكْرُوا (yakrū) /jak.ruː/: third-person masculine plural non-past active subjunctive/jussive of كَرَا (karā)\n# يُكْرَوْا (yukraw) /juk.raw/: third-person masculine plural non-past passive subjunctive/jussive of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yakruwā", "karā", "yakrū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكروا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تكروا (form I)\n# تَكْرُوَا (takruwā) /tak.ru.waː/: inflection of كَرَا (karā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تَكْرُوا (takrū) /tak.ruː/: second-person masculine plural non-past active subjunctive/jussive of كَرَا (karā)\n# تُكْرَوْا (tukraw) /tuk.raw/: second-person masculine plural non-past passive subj",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takruwā", "karā", "takrū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أكر",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أكر (form I)\n# أَكْرُ (ʔakru) /ʔak.ru/: first-person singular non-past active jussive of كَرَا (karā)\n# أُكْرَ (ʔukra) /ʔuk.ra/: first-person singular non-past passive jussive of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔakru", "karā", "ʔukra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكر",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تكر (form I)\n# تَكْرُ (takru) /tak.ru/: inflection of كَرَا (karā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُكْرَ (tukra) /tuk.ra/: inflection of كَرَا (karā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takru", "karā", "tukra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يكر",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يكر (form I)\n# يَكْرُ (yakru) /jak.ru/: third-person masculine singular non-past active jussive of كَرَا (karā)\n# يُكْرَ (yukra) /juk.ra/: third-person masculine singular non-past passive jussive of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yakru", "karā", "yukra"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "كرتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "كَرَتَا • (karatā) (form I) /ka.ra.taː/\n# third-person feminine dual past active of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["karatā", "karā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "كروا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "كروا (form I)\n# كَرَوَا (karawā) /ka.ra.waː/: third-person masculine dual past active of كَرَا (karā)\n# كَرَوْا (karaw) /ka.raw/: third-person masculine plural past active of كَرَا (karā)\n# كُرُوا (kurū) /ku.ruː/: third-person masculine plural past passive of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["karawā", "karā", "karaw"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "كروتما",
+      "tur": "verb",
+      "baslik": "كَرَوْتُمَا • (karawtumā) (form I) /ka.raw.tu.maː/\n# second-person dual past active of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["karawtumā", "karā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "كرونا",
+      "tur": "verb",
+      "baslik": "كَرَوْنَا • (karawnā) (form I) /ka.raw.naː/\n# first-person plural past active of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["karawnā", "karā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "كروتم",
+      "tur": "verb",
+      "baslik": "كَرَوْتُمْ • (karawtum) (form I) /ka.raw.tum/\n# second-person masculine plural past active of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["karawtum", "karā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "كرون",
+      "tur": "verb",
+      "baslik": "كَرَوْنَ • (karawna) (form I) /ka.raw.na/\n# third-person feminine plural past active of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["karawna", "karā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "كريتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "كُرِيتُمَا • (kurītumā) (form I) /ku.riː.tu.maː/\n# second-person dual past passive of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kurītumā", "karā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "كروتن",
+      "tur": "verb",
+      "baslik": "كَرَوْتُنَّ • (karawtunna) (form I) /ka.raw.tun.na/\n# second-person feminine plural past active of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["karawtunna", "karā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "كريا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "كُرِيَا • (kuriyā) (form I) /ku.ri.jaː/\n# third-person masculine dual past passive of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kuriyā", "karā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "كريتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "كُرِيَتَا • (kuriyatā) (form I) /ku.ri.ja.taː/\n# third-person feminine dual past passive of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kuriyatā", "karā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "كرينا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "كُرِينَا • (kurīnā) (form I) /ku.riː.naː/\n# first-person plural past passive of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kurīnā", "karā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "كرين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "كُرِينَ • (kurīna) (form I) /ku.riː.na/\n# third-person feminine plural past passive of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kurīna", "karā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أكرو",
+      "tur": "verb",
+      "baslik": "أكرو (form I)\n# أَكْرُو (ʔakrū) /ʔak.ruː/: first-person singular non-past active indicative of كَرَا (karā)\n# أَكْرُوَ (ʔakruwa) /ʔak.ru.wa/: first-person singular non-past active subjunctive of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔakrū", "karā", "ʔakruwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكرو",
+      "tur": "verb",
+      "baslik": "تكرو (form I)\n# تَكْرُو (takrū) /tak.ruː/: inflection of كَرَا (karā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَكْرُوَ (takruwa) /tak.ru.wa/: inflection of كَرَا (karā):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takrū", "karā", "takruwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "كريتم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "كُرِيتُمْ • (kurītum) (form I) /ku.riː.tum/\n# second-person masculine plural past passive of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kurītum", "karā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "كريتن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "كُرِيتُنَّ • (kurītunna) (form I) /ku.riː.tun.na/\n# second-person feminine plural past passive of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["kurītunna", "karā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يكرو",
+      "tur": "verb",
+      "baslik": "يكرو (form I)\n# يَكْرُو (yakrū) /jak.ruː/: third-person masculine singular non-past active indicative of كَرَا (karā)\n# يَكْرُوَ (yakruwa) /jak.ru.wa/: third-person masculine singular non-past active subjunctive of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yakrū", "karā", "yakruwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يكروان",
+      "tur": "verb",
+      "baslik": "يَكْرُوَانِ • (yakruwāni) (form I) /jak.ru.waː.ni/\n# third-person masculine dual non-past active indicative of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yakruwāni", "karā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تكروان",
+      "tur": "verb",
+      "baslik": "تَكْرُوَانِ • (takruwāni) (form I) /tak.ru.waː.ni/\n# inflection of كَرَا (karā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["takruwāni", "karā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اكري",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اُكْرِي • (ukrī) (form I) /uk.riː/\n# second-person feminine singular imperative of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ukrī", "karā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نكرو",
+      "tur": "verb",
+      "baslik": "نكرو (form I)\n# نَكْرُو (nakrū) /nak.ruː/: first-person plural non-past active indicative of كَرَا (karā)\n# نَكْرُوَ (nakruwa) /nak.ru.wa/: first-person plural non-past active subjunctive of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nakrū", "karā", "nakruwa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اكروا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اكروا (form I)\n# اُكْرُوَا (ukruwā) /uk.ru.waː/: second-person dual imperative of كَرَا (karā)\n# اُكْرُوا (ukrū) /uk.ruː/: second-person masculine plural imperative of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ukruwā", "karā", "ukrū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اكرون",
+      "tur": "verb",
+      "baslik": "اُكْرُونَ • (ukrūna) (form I) /uk.ruː.na/\n# second-person feminine plural imperative of كَرَا (karā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ukrūna", "karā"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "كرا", "r7"]
+  ],
+  "mana": {
     "ince": "disown.v.02",
     "orta": "verb.communication",
     "ust": "söz ve haber",
@@ -644,28 +463,8 @@
     "dayanak_tanim": "be resistant to",
     "synset_sayisi": 7
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
-    "abdicate.v.01",
-    "contradict.v.02",
-    "deny.v.02",
-    "disbelieve.v.01",
-    "disown.v.02",
-    "island.n.01",
-    "refute.v.01"
-  ],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 6,
       "merkez_kok": "كفت",
@@ -685,6 +484,19 @@
       "boy": 12
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": [
+    "abdicate.v.01",
+    "contradict.v.02",
+    "deny.v.02",
+    "disbelieve.v.01",
+    "disown.v.02",
+    "island.n.01",
+    "refute.v.01"
+  ],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

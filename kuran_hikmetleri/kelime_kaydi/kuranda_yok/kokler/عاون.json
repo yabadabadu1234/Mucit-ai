@@ -1,395 +1,284 @@
 {
   "kok": "عاون",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "عاون", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تعاون",
-        "u": "تعاون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تعاون (form III)\n# تُعَاوِنُ (tuʕāwinu) /tu.ʕaː.wi.nu/: inflection of عَاوَنَ (ʕāwana):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُعَاوِنَّ (tuʕāwinna) /tu.ʕaː.win.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of عَاوَنَ (ʕāwana)\n# تُعَاوَنُ (tuʕāwanu) /tu.ʕaː.wa.nu/: inflection",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuʕāwinu", "ʕāwana", "tuʕāwinna"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "يعاون",
-        "u": "يعاون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يعاون (form III)\n# يُعَاوِنُ (yuʕāwinu) /ju.ʕaː.wi.nu/: third-person masculine singular non-past active indicative of عَاوَنَ (ʕāwana)\n# يُعَاوِنَّ (yuʕāwinna) /ju.ʕaː.win.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of عَاوَنَ (ʕāwana)\n# يُعَاوَنُ (yuʕāwanu) /ju.ʕaː.wa.nu/: third-person masculine singular non-past passive indicative of عَاوَنَ (ʕāwana)\n# يُعَاو",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuʕāwinu", "ʕāwana", "yuʕāwinna"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "عوون",
-        "u": "عوون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عوون (form III)\n# عُووِنَ (ʕūwina) /ʕuː.wi.na/: third-person masculine singular past passive of عَاوَنَ (ʕāwana)\n# عُووِنَّ (ʕūwinna) /ʕuː.win.na/: third-person feminine plural past passive of عَاوَنَ (ʕāwana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕūwina", "ʕāwana", "ʕūwinna"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "عاونت",
-        "u": "عاونت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عاونت (form III)\n# عَاوَنْتُ (ʕāwantu) /ʕaː.wan.tu/: first-person singular past active of عَاوَنَ (ʕāwana)\n# عَاوَنْتَ (ʕāwanta) /ʕaː.wan.ta/: second-person masculine singular past active of عَاوَنَ (ʕāwana)\n# عَاوَنْتِ (ʕāwanti) /ʕaː.wan.ti/: second-person feminine singular past active of عَاوَنَ (ʕāwana)\n# عَاوَنَتْ (ʕāwanat) /ʕaː.wa.nat/: third-person feminine singular past active of عَاوَنَ (ʕ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕāwantu", "ʕāwana", "ʕāwanta"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "عوونت",
-        "u": "عوونت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عوونت (form III)\n# عُووِنْتُ (ʕūwintu) /ʕuː.win.tu/: first-person singular past passive of عَاوَنَ (ʕāwana)\n# عُووِنْتَ (ʕūwinta) /ʕuː.win.ta/: second-person masculine singular past passive of عَاوَنَ (ʕāwana)\n# عُووِنْتِ (ʕūwinti) /ʕuː.win.ti/: second-person feminine singular past passive of عَاوَنَ (ʕāwana)\n# عُووِنَتْ (ʕūwinat) /ʕuː.wi.nat/: third-person feminine singular past passive of عَاوَن",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕūwintu", "ʕāwana", "ʕūwinta"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "تعاوني",
-        "u": "تعاوني",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تعاوني (form III)\n# تُعَاوِنِي (tuʕāwinī) /tu.ʕaː.wi.niː/: second-person feminine singular non-past active subjunctive/jussive of عَاوَنَ (ʕāwana)\n# تُعَاوَنِي (tuʕāwanī) /tu.ʕaː.wa.niː/: second-person feminine singular non-past passive subjunctive/jussive of عَاوَنَ (ʕāwana)",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuʕāwinī", "ʕāwana", "tuʕāwanī"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "تعاونين",
-        "u": "تعاونين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تعاونين (form III)\n# تُعَاوِنِينَ (tuʕāwinīna) /tu.ʕaː.wi.niː.na/: second-person feminine singular non-past active indicative of عَاوَنَ (ʕāwana)\n# تُعَاوَنِينَ (tuʕāwanīna) /tu.ʕaː.wa.niː.na/: second-person feminine singular non-past passive indicative of عَاوَنَ (ʕāwana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuʕāwinīna", "ʕāwana", "tuʕāwanīna"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "عاوني",
-        "u": "عاوني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عَاوِنِي • (ʕāwinī) (form III) /ʕaː.wi.niː/\n# second-person feminine singular imperative of عَاوَنَ (ʕāwana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕāwinī", "ʕāwana"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "أعاون",
-        "u": "أعاون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أعاون (form III)\n# أُعَاوِنُ (ʔuʕāwinu) /ʔu.ʕaː.wi.nu/: first-person singular non-past active indicative of عَاوَنَ (ʕāwana)\n# أُعَاوَنُ (ʔuʕāwanu) /ʔu.ʕaː.wa.nu/: first-person singular non-past passive indicative of عَاوَنَ (ʕāwana)\n# أُعَاوِنَ (ʔuʕāwina) /ʔu.ʕaː.wi.na/: first-person singular non-past active subjunctive of عَاوَنَ (ʕāwana)\n# أُعَاوَنَ (ʔuʕāwana) /ʔu.ʕaː.wa.na/: first-person singu",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔuʕāwinu", "ʕāwana", "ʔuʕāwanu"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "تعاونا",
-        "u": "تعاونا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تعاونا (form III)\n# تُعَاوِنَا (tuʕāwinā) /tu.ʕaː.wi.naː/: inflection of عَاوَنَ (ʕāwana):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُعَاوَنَا (tuʕāwanā) /tu.ʕaː.wa.naː/: inflection of عَاوَنَ (ʕāwana):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjun",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuʕāwinā", "ʕāwana", "tuʕāwanā"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "عاونا",
-        "u": "عاونا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عاونا (form III)\n# عَاوَنَا (ʕāwanā) /ʕaː.wa.naː/: third-person masculine dual past active of عَاوَنَ (ʕāwana)\n# عَاوَنَّا (ʕāwannā) /ʕaː.wan.naː/: first-person plural past active of عَاوَنَ (ʕāwana)\n# عَاوِنَا (ʕāwinā) /ʕaː.wi.naː/: second-person dual imperative of عَاوَنَ (ʕāwana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕāwanā", "ʕāwana", "ʕāwannā"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "نعاون",
-        "u": "نعاون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نعاون (form III)\n# نُعَاوِنُ (nuʕāwinu) /nu.ʕaː.wi.nu/: first-person plural non-past active indicative of عَاوَنَ (ʕāwana)\n# نُعَاوَنُ (nuʕāwanu) /nu.ʕaː.wa.nu/: first-person plural non-past passive indicative of عَاوَنَ (ʕāwana)\n# نُعَاوِنَ (nuʕāwina) /nu.ʕaː.wi.na/: first-person plural non-past active subjunctive of عَاوَنَ (ʕāwana)\n# نُعَاوَنَ (nuʕāwana) /nu.ʕaː.wa.na/: first-person plural non-",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nuʕāwinu", "ʕāwana", "nuʕāwanu"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "عوونا",
-        "u": "عوونا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عوونا (form III)\n# عُووِنَا (ʕūwinā) /ʕuː.wi.naː/: third-person masculine dual past passive of عَاوَنَ (ʕāwana)\n# عُووِنَّا (ʕūwinnā) /ʕuː.win.naː/: first-person plural past passive of عَاوَنَ (ʕāwana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕūwinā", "ʕāwana", "ʕūwinnā"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "عاونتم",
-        "u": "عاونتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عَاوَنْتُمْ • (ʕāwantum) (form III) /ʕaː.wan.tum/\n# second-person masculine plural past active of عَاوَنَ (ʕāwana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕāwantum", "ʕāwana"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "تعاونون",
-        "u": "تعاونون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تعاونون (form III)\n# تُعَاوِنُونَ (tuʕāwinūna) /tu.ʕaː.wi.nuː.na/: second-person masculine plural non-past active indicative of عَاوَنَ (ʕāwana)\n# تُعَاوَنُونَ (tuʕāwanūna) /tu.ʕaː.wa.nuː.na/: second-person masculine plural non-past passive indicative of عَاوَنَ (ʕāwana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuʕāwinūna", "ʕāwana", "tuʕāwanūna"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "عوونتم",
-        "u": "عوونتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عُووِنْتُمْ • (ʕūwintum) (form III) /ʕuː.win.tum/\n# second-person masculine plural past passive of عَاوَنَ (ʕāwana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕūwintum", "ʕāwana"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "تعاونوا",
-        "u": "تعاونوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تعاونوا (form III)\n# تُعَاوِنُوا (tuʕāwinū) /tu.ʕaː.wi.nuː/: second-person masculine plural non-past active subjunctive/jussive of عَاوَنَ (ʕāwana)\n# تُعَاوَنُوا (tuʕāwanū) /tu.ʕaː.wa.nuː/: second-person masculine plural non-past passive subjunctive/jussive of عَاوَنَ (ʕāwana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuʕāwinū", "ʕāwana", "tuʕāwanū"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "عاونوا",
-        "u": "عاونوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عاونوا (form III)\n# عَاوَنُوا (ʕāwanū) /ʕaː.wa.nuː/: third-person masculine plural past active of عَاوَنَ (ʕāwana)\n# عَاوِنُوا (ʕāwinū) /ʕaː.wi.nuː/: second-person masculine plural imperative of عَاوَنَ (ʕāwana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕāwanū", "ʕāwana", "ʕāwinū"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "يعاونون",
-        "u": "يعاونون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يعاونون (form III)\n# يُعَاوِنُونَ (yuʕāwinūna) /ju.ʕaː.wi.nuː.na/: third-person masculine plural non-past active indicative of عَاوَنَ (ʕāwana)\n# يُعَاوَنُونَ (yuʕāwanūna) /ju.ʕaː.wa.nuː.na/: third-person masculine plural non-past passive indicative of عَاوَنَ (ʕāwana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuʕāwinūna", "ʕāwana", "yuʕāwanūna"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "يعاونوا",
-        "u": "يعاونوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يعاونوا (form III)\n# يُعَاوِنُوا (yuʕāwinū) /ju.ʕaː.wi.nuː/: third-person masculine plural non-past active subjunctive/jussive of عَاوَنَ (ʕāwana)\n# يُعَاوَنُوا (yuʕāwanū) /ju.ʕaː.wa.nuː/: third-person masculine plural non-past passive subjunctive/jussive of عَاوَنَ (ʕāwana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuʕāwinū", "ʕāwana", "yuʕāwanū"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "عوونوا",
-        "u": "عوونوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عُووِنُوا • (ʕūwinū) (form III) /ʕuː.wi.nuː/\n# third-person masculine plural past passive of عَاوَنَ (ʕāwana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕūwinū", "ʕāwana"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "عاونتن",
-        "u": "عاونتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عَاوَنْتُنَّ • (ʕāwantunna) (form III) /ʕaː.wan.tun.na/\n# second-person feminine plural past active of عَاوَنَ (ʕāwana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕāwantunna", "ʕāwana"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "عوونتن",
-        "u": "عوونتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عُووِنْتُنَّ • (ʕūwintunna) (form III) /ʕuː.win.tun.na/\n# second-person feminine plural past passive of عَاوَنَ (ʕāwana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕūwintunna", "ʕāwana"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "عاونتما",
-        "u": "عاونتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عَاوَنْتُمَا • (ʕāwantumā) (form III) /ʕaː.wan.tu.maː/\n# second-person dual past active of عَاوَنَ (ʕāwana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕāwantumā", "ʕāwana"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "عاونتا",
-        "u": "عاونتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عَاوَنَتَا • (ʕāwanatā) (form III) /ʕaː.wa.na.taː/\n# third-person feminine dual past active of عَاوَنَ (ʕāwana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕāwanatā", "ʕāwana"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "يعاونان",
-        "u": "يعاونان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يعاونان (form III)\n# يُعَاوِنَانِ (yuʕāwināni) /ju.ʕaː.wi.naː.ni/: third-person masculine dual non-past active indicative of عَاوَنَ (ʕāwana)\n# يُعَاوَنَانِ (yuʕāwanāni) /ju.ʕaː.wa.naː.ni/: third-person masculine dual non-past passive indicative of عَاوَنَ (ʕāwana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuʕāwināni", "ʕāwana", "yuʕāwanāni"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "عوونتما",
-        "u": "عوونتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عُووِنْتُمَا • (ʕūwintumā) (form III) /ʕuː.win.tu.maː/\n# second-person dual past passive of عَاوَنَ (ʕāwana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕūwintumā", "ʕāwana"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "عوونتا",
-        "u": "عوونتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عُووِنَتَا • (ʕūwinatā) (form III) /ʕuː.wi.na.taː/\n# third-person feminine dual past passive of عَاوَنَ (ʕāwana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʕūwinatā", "ʕāwana"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "يعاونا",
-        "u": "يعاونا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يعاونا (form III)\n# يُعَاوِنَا (yuʕāwinā) /ju.ʕaː.wi.naː/: third-person masculine dual non-past active subjunctive/jussive of عَاوَنَ (ʕāwana)\n# يُعَاوَنَا (yuʕāwanā) /ju.ʕaː.wa.naː/: third-person masculine dual non-past passive subjunctive/jussive of عَاوَنَ (ʕāwana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuʕāwinā", "ʕāwana", "yuʕāwanā"],
-        "k": "عاون",
-        "yol": "kök"
-      },
-      {
-        "w": "تعاونان",
-        "u": "تعاونان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تعاونان (form III)\n# تُعَاوِنَانِ (tuʕāwināni) /tu.ʕaː.wi.naː.ni/: inflection of عَاوَنَ (ʕāwana):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُعَاوَنَانِ (tuʕāwanāni) /tu.ʕaː.wa.naː.ni/: inflection of عَاوَنَ (ʕāwana):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuʕāwināni", "ʕāwana", "tuʕāwanāni"],
-        "k": "عاون",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "عن",
+  "ses": {
     "harf": "ع",
+    "fasil": "عن",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "تعاون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تعاون (form III)\n# تُعَاوِنُ (tuʕāwinu) /tu.ʕaː.wi.nu/: inflection of عَاوَنَ (ʕāwana):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُعَاوِنَّ (tuʕāwinna) /tu.ʕaː.win.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of عَاوَنَ (ʕāwana)\n# تُعَاوَنُ (tuʕāwanu) /tu.ʕaː.wa.nu/: inflection",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuʕāwinu", "ʕāwana", "tuʕāwinna"]
+    },
+    {
+      "madde": "يعاون",
+      "tur": "verb",
+      "baslik": "يعاون (form III)\n# يُعَاوِنُ (yuʕāwinu) /ju.ʕaː.wi.nu/: third-person masculine singular non-past active indicative of عَاوَنَ (ʕāwana)\n# يُعَاوِنَّ (yuʕāwinna) /ju.ʕaː.win.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of عَاوَنَ (ʕāwana)\n# يُعَاوَنُ (yuʕāwanu) /ju.ʕaː.wa.nu/: third-person masculine singular non-past passive indicative of عَاوَنَ (ʕāwana)\n# يُعَاو",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuʕāwinu", "ʕāwana", "yuʕāwinna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عوون",
+      "tur": "verb",
+      "baslik": "عوون (form III)\n# عُووِنَ (ʕūwina) /ʕuː.wi.na/: third-person masculine singular past passive of عَاوَنَ (ʕāwana)\n# عُووِنَّ (ʕūwinna) /ʕuː.win.na/: third-person feminine plural past passive of عَاوَنَ (ʕāwana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕūwina", "ʕāwana", "ʕūwinna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عاونت",
+      "tur": "verb",
+      "baslik": "عاونت (form III)\n# عَاوَنْتُ (ʕāwantu) /ʕaː.wan.tu/: first-person singular past active of عَاوَنَ (ʕāwana)\n# عَاوَنْتَ (ʕāwanta) /ʕaː.wan.ta/: second-person masculine singular past active of عَاوَنَ (ʕāwana)\n# عَاوَنْتِ (ʕāwanti) /ʕaː.wan.ti/: second-person feminine singular past active of عَاوَنَ (ʕāwana)\n# عَاوَنَتْ (ʕāwanat) /ʕaː.wa.nat/: third-person feminine singular past active of عَاوَنَ (ʕ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕāwantu", "ʕāwana", "ʕāwanta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عوونت",
+      "tur": "verb",
+      "baslik": "عوونت (form III)\n# عُووِنْتُ (ʕūwintu) /ʕuː.win.tu/: first-person singular past passive of عَاوَنَ (ʕāwana)\n# عُووِنْتَ (ʕūwinta) /ʕuː.win.ta/: second-person masculine singular past passive of عَاوَنَ (ʕāwana)\n# عُووِنْتِ (ʕūwinti) /ʕuː.win.ti/: second-person feminine singular past passive of عَاوَنَ (ʕāwana)\n# عُووِنَتْ (ʕūwinat) /ʕuː.wi.nat/: third-person feminine singular past passive of عَاوَن",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕūwintu", "ʕāwana", "ʕūwinta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعاوني",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تعاوني (form III)\n# تُعَاوِنِي (tuʕāwinī) /tu.ʕaː.wi.niː/: second-person feminine singular non-past active subjunctive/jussive of عَاوَنَ (ʕāwana)\n# تُعَاوَنِي (tuʕāwanī) /tu.ʕaː.wa.niː/: second-person feminine singular non-past passive subjunctive/jussive of عَاوَنَ (ʕāwana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuʕāwinī", "ʕāwana", "tuʕāwanī"]
+    },
+    {
+      "madde": "تعاونين",
+      "tur": "verb",
+      "baslik": "تعاونين (form III)\n# تُعَاوِنِينَ (tuʕāwinīna) /tu.ʕaː.wi.niː.na/: second-person feminine singular non-past active indicative of عَاوَنَ (ʕāwana)\n# تُعَاوَنِينَ (tuʕāwanīna) /tu.ʕaː.wa.niː.na/: second-person feminine singular non-past passive indicative of عَاوَنَ (ʕāwana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuʕāwinīna", "ʕāwana", "tuʕāwanīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عاوني",
+      "tur": "verb",
+      "baslik": "عَاوِنِي • (ʕāwinī) (form III) /ʕaː.wi.niː/\n# second-person feminine singular imperative of عَاوَنَ (ʕāwana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕāwinī", "ʕāwana"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعاون",
+      "tur": "verb",
+      "baslik": "أعاون (form III)\n# أُعَاوِنُ (ʔuʕāwinu) /ʔu.ʕaː.wi.nu/: first-person singular non-past active indicative of عَاوَنَ (ʕāwana)\n# أُعَاوَنُ (ʔuʕāwanu) /ʔu.ʕaː.wa.nu/: first-person singular non-past passive indicative of عَاوَنَ (ʕāwana)\n# أُعَاوِنَ (ʔuʕāwina) /ʔu.ʕaː.wi.na/: first-person singular non-past active subjunctive of عَاوَنَ (ʕāwana)\n# أُعَاوَنَ (ʔuʕāwana) /ʔu.ʕaː.wa.na/: first-person singu",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔuʕāwinu", "ʕāwana", "ʔuʕāwanu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعاونا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تعاونا (form III)\n# تُعَاوِنَا (tuʕāwinā) /tu.ʕaː.wi.naː/: inflection of عَاوَنَ (ʕāwana):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُعَاوَنَا (tuʕāwanā) /tu.ʕaː.wa.naː/: inflection of عَاوَنَ (ʕāwana):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjun",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuʕāwinā", "ʕāwana", "tuʕāwanā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عاونا",
+      "tur": "verb",
+      "baslik": "عاونا (form III)\n# عَاوَنَا (ʕāwanā) /ʕaː.wa.naː/: third-person masculine dual past active of عَاوَنَ (ʕāwana)\n# عَاوَنَّا (ʕāwannā) /ʕaː.wan.naː/: first-person plural past active of عَاوَنَ (ʕāwana)\n# عَاوِنَا (ʕāwinā) /ʕaː.wi.naː/: second-person dual imperative of عَاوَنَ (ʕāwana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕāwanā", "ʕāwana", "ʕāwannā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نعاون",
+      "tur": "verb",
+      "baslik": "نعاون (form III)\n# نُعَاوِنُ (nuʕāwinu) /nu.ʕaː.wi.nu/: first-person plural non-past active indicative of عَاوَنَ (ʕāwana)\n# نُعَاوَنُ (nuʕāwanu) /nu.ʕaː.wa.nu/: first-person plural non-past passive indicative of عَاوَنَ (ʕāwana)\n# نُعَاوِنَ (nuʕāwina) /nu.ʕaː.wi.na/: first-person plural non-past active subjunctive of عَاوَنَ (ʕāwana)\n# نُعَاوَنَ (nuʕāwana) /nu.ʕaː.wa.na/: first-person plural non-",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nuʕāwinu", "ʕāwana", "nuʕāwanu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عوونا",
+      "tur": "verb",
+      "baslik": "عوونا (form III)\n# عُووِنَا (ʕūwinā) /ʕuː.wi.naː/: third-person masculine dual past passive of عَاوَنَ (ʕāwana)\n# عُووِنَّا (ʕūwinnā) /ʕuː.win.naː/: first-person plural past passive of عَاوَنَ (ʕāwana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕūwinā", "ʕāwana", "ʕūwinnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عاونتم",
+      "tur": "verb",
+      "baslik": "عَاوَنْتُمْ • (ʕāwantum) (form III) /ʕaː.wan.tum/\n# second-person masculine plural past active of عَاوَنَ (ʕāwana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕāwantum", "ʕāwana"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعاونون",
+      "tur": "verb",
+      "baslik": "تعاونون (form III)\n# تُعَاوِنُونَ (tuʕāwinūna) /tu.ʕaː.wi.nuː.na/: second-person masculine plural non-past active indicative of عَاوَنَ (ʕāwana)\n# تُعَاوَنُونَ (tuʕāwanūna) /tu.ʕaː.wa.nuː.na/: second-person masculine plural non-past passive indicative of عَاوَنَ (ʕāwana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuʕāwinūna", "ʕāwana", "tuʕāwanūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عوونتم",
+      "tur": "verb",
+      "baslik": "عُووِنْتُمْ • (ʕūwintum) (form III) /ʕuː.win.tum/\n# second-person masculine plural past passive of عَاوَنَ (ʕāwana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕūwintum", "ʕāwana"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعاونوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تعاونوا (form III)\n# تُعَاوِنُوا (tuʕāwinū) /tu.ʕaː.wi.nuː/: second-person masculine plural non-past active subjunctive/jussive of عَاوَنَ (ʕāwana)\n# تُعَاوَنُوا (tuʕāwanū) /tu.ʕaː.wa.nuː/: second-person masculine plural non-past passive subjunctive/jussive of عَاوَنَ (ʕāwana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuʕāwinū", "ʕāwana", "tuʕāwanū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عاونوا",
+      "tur": "verb",
+      "baslik": "عاونوا (form III)\n# عَاوَنُوا (ʕāwanū) /ʕaː.wa.nuː/: third-person masculine plural past active of عَاوَنَ (ʕāwana)\n# عَاوِنُوا (ʕāwinū) /ʕaː.wi.nuː/: second-person masculine plural imperative of عَاوَنَ (ʕāwana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕāwanū", "ʕāwana", "ʕāwinū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعاونون",
+      "tur": "verb",
+      "baslik": "يعاونون (form III)\n# يُعَاوِنُونَ (yuʕāwinūna) /ju.ʕaː.wi.nuː.na/: third-person masculine plural non-past active indicative of عَاوَنَ (ʕāwana)\n# يُعَاوَنُونَ (yuʕāwanūna) /ju.ʕaː.wa.nuː.na/: third-person masculine plural non-past passive indicative of عَاوَنَ (ʕāwana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuʕāwinūna", "ʕāwana", "yuʕāwanūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعاونوا",
+      "tur": "verb",
+      "baslik": "يعاونوا (form III)\n# يُعَاوِنُوا (yuʕāwinū) /ju.ʕaː.wi.nuː/: third-person masculine plural non-past active subjunctive/jussive of عَاوَنَ (ʕāwana)\n# يُعَاوَنُوا (yuʕāwanū) /ju.ʕaː.wa.nuː/: third-person masculine plural non-past passive subjunctive/jussive of عَاوَنَ (ʕāwana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuʕāwinū", "ʕāwana", "yuʕāwanū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عوونوا",
+      "tur": "verb",
+      "baslik": "عُووِنُوا • (ʕūwinū) (form III) /ʕuː.wi.nuː/\n# third-person masculine plural past passive of عَاوَنَ (ʕāwana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕūwinū", "ʕāwana"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عاونتن",
+      "tur": "verb",
+      "baslik": "عَاوَنْتُنَّ • (ʕāwantunna) (form III) /ʕaː.wan.tun.na/\n# second-person feminine plural past active of عَاوَنَ (ʕāwana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕāwantunna", "ʕāwana"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عوونتن",
+      "tur": "verb",
+      "baslik": "عُووِنْتُنَّ • (ʕūwintunna) (form III) /ʕuː.win.tun.na/\n# second-person feminine plural past passive of عَاوَنَ (ʕāwana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕūwintunna", "ʕāwana"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عاونتما",
+      "tur": "verb",
+      "baslik": "عَاوَنْتُمَا • (ʕāwantumā) (form III) /ʕaː.wan.tu.maː/\n# second-person dual past active of عَاوَنَ (ʕāwana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕāwantumā", "ʕāwana"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عاونتا",
+      "tur": "verb",
+      "baslik": "عَاوَنَتَا • (ʕāwanatā) (form III) /ʕaː.wa.na.taː/\n# third-person feminine dual past active of عَاوَنَ (ʕāwana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕāwanatā", "ʕāwana"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعاونان",
+      "tur": "verb",
+      "baslik": "يعاونان (form III)\n# يُعَاوِنَانِ (yuʕāwināni) /ju.ʕaː.wi.naː.ni/: third-person masculine dual non-past active indicative of عَاوَنَ (ʕāwana)\n# يُعَاوَنَانِ (yuʕāwanāni) /ju.ʕaː.wa.naː.ni/: third-person masculine dual non-past passive indicative of عَاوَنَ (ʕāwana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuʕāwināni", "ʕāwana", "yuʕāwanāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عوونتما",
+      "tur": "verb",
+      "baslik": "عُووِنْتُمَا • (ʕūwintumā) (form III) /ʕuː.win.tu.maː/\n# second-person dual past passive of عَاوَنَ (ʕāwana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕūwintumā", "ʕāwana"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عوونتا",
+      "tur": "verb",
+      "baslik": "عُووِنَتَا • (ʕūwinatā) (form III) /ʕuː.wi.na.taː/\n# third-person feminine dual past passive of عَاوَنَ (ʕāwana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʕūwinatā", "ʕāwana"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعاونا",
+      "tur": "verb",
+      "baslik": "يعاونا (form III)\n# يُعَاوِنَا (yuʕāwinā) /ju.ʕaː.wi.naː/: third-person masculine dual non-past active subjunctive/jussive of عَاوَنَ (ʕāwana)\n# يُعَاوَنَا (yuʕāwanā) /ju.ʕaː.wa.naː/: third-person masculine dual non-past passive subjunctive/jussive of عَاوَنَ (ʕāwana)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuʕāwinā", "ʕāwana", "yuʕāwanā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعاونان",
+      "tur": "verb",
+      "baslik": "تعاونان (form III)\n# تُعَاوِنَانِ (tuʕāwināni) /tu.ʕaː.wi.naː.ni/: inflection of عَاوَنَ (ʕāwana):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُعَاوَنَانِ (tuʕāwanāni) /tu.ʕaː.wa.naː.ni/: inflection of عَاوَنَ (ʕāwana):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuʕāwināni", "ʕāwana", "tuʕāwanāni"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "عاون", "r6"]
+  ],
+  "mana": {
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
@@ -397,16 +286,11 @@
     "dayanak_tanim": "the practice of cooperating",
     "synset_sayisi": 7
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "act.n.02",
     "agree.v.01",
     "collaborate.v.01",
@@ -415,12 +299,10 @@
     "unite.v.01",
     "unite.v.06"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

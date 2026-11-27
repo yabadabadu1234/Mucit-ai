@@ -1,362 +1,255 @@
 {
   "kok": "بروز",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "بروز", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "بروزت",
-        "u": "بروزت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بروزت (form Iq)\n# بَرْوَزْتُ (barwaztu) /bar.waz.tu/: first-person singular past active of بَرْوَزَ (barwaza)\n# بَرْوَزْتَ (barwazta) /bar.waz.ta/: second-person masculine singular past active of بَرْوَزَ (barwaza)\n# بَرْوَزْتِ (barwazti) /bar.waz.ti/: second-person feminine singular past active of بَرْوَزَ (barwaza)\n# بَرْوَزَتْ (barwazat) /bar.wa.zat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["barwaztu", "barwaza", "barwazta"],
-        "k": "بروز",
-        "yol": "kök"
-      },
-      {
-        "w": "بروزتما",
-        "u": "بروزتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بروزتما (form Iq)\n# بَرْوَزْتُمَا (barwaztumā) /bar.waz.tu.maː/: second-person dual past active of بَرْوَزَ (barwaza)\n# بُرْوِزْتُمَا (burwiztumā) /bur.wiz.tu.maː/: second-person dual past passive of بَرْوَزَ (barwaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["barwaztumā", "barwaza", "burwiztumā"],
-        "k": "بروز",
-        "yol": "kök"
-      },
-      {
-        "w": "بروزا",
-        "u": "بروزا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بروزا (form Iq)\n# بَرْوَزَا (barwazā) /bar.wa.zaː/: third-person masculine dual past active of بَرْوَزَ (barwaza)\n# بُرْوِزَا (burwizā) /bur.wi.zaː/: third-person masculine dual past passive of بَرْوَزَ (barwaza)\n# بَرْوِزَا (barwizā) /bar.wi.zaː/: second-person dual imperative of بَرْوَزَ (barwaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["barwazā", "barwaza", "burwizā"],
-        "k": "بروز",
-        "yol": "kök"
-      },
-      {
-        "w": "بروزتا",
-        "u": "بروزتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بروزتا (form Iq)\n# بَرْوَزَتَا (barwazatā) /bar.wa.za.taː/: third-person feminine dual past active of بَرْوَزَ (barwaza)\n# بُرْوِزَتَا (burwizatā) /bur.wi.za.taː/: third-person feminine dual past passive of بَرْوَزَ (barwaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["barwazatā", "barwaza", "burwizatā"],
-        "k": "بروز",
-        "yol": "kök"
-      },
-      {
-        "w": "بروزنا",
-        "u": "بروزنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بروزنا (form Iq)\n# بَرْوَزْنَا (barwaznā) /bar.waz.naː/: first-person plural past active of بَرْوَزَ (barwaza)\n# بُرْوِزْنَا (burwiznā) /bur.wiz.naː/: first-person plural past passive of بَرْوَزَ (barwaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["barwaznā", "barwaza", "burwiznā"],
-        "k": "بروز",
-        "yol": "kök"
-      },
-      {
-        "w": "بروزتم",
-        "u": "بروزتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بروزتم (form Iq)\n# بَرْوَزْتُمْ (barwaztum) /bar.waz.tum/: second-person masculine plural past active of بَرْوَزَ (barwaza)\n# بُرْوِزْتُمْ (burwiztum) /bur.wiz.tum/: second-person masculine plural past passive of بَرْوَزَ (barwaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["barwaztum", "barwaza", "burwiztum"],
-        "k": "بروز",
-        "yol": "kök"
-      },
-      {
-        "w": "بروزتن",
-        "u": "بروزتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بروزتن (form Iq)\n# بَرْوَزْتُنَّ (barwaztunna) /bar.waz.tun.na/: second-person feminine plural past active of بَرْوَزَ (barwaza)\n# بُرْوِزْتُنَّ (burwiztunna) /bur.wiz.tun.na/: second-person feminine plural past passive of بَرْوَزَ (barwaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["barwaztunna", "barwaza", "burwiztunna"],
-        "k": "بروز",
-        "yol": "kök"
-      },
-      {
-        "w": "بروزوا",
-        "u": "بروزوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بروزوا (form Iq)\n# بَرْوَزُوا (barwazū) /bar.wa.zuː/: third-person masculine plural past active of بَرْوَزَ (barwaza)\n# بُرْوِزُوا (burwizū) /bur.wi.zuː/: third-person masculine plural past passive of بَرْوَزَ (barwaza)\n# بَرْوِزُوا (barwizū) /bar.wi.zuː/: second-person masculine plural imperative of بَرْوَزَ (barwaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["barwazū", "barwaza", "burwizū"],
-        "k": "بروز",
-        "yol": "kök"
-      },
-      {
-        "w": "بروزن",
-        "u": "بروزن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بروزن (form Iq)\n# بَرْوَزْنَ (barwazna) /bar.waz.na/: third-person feminine plural past active of بَرْوَزَ (barwaza)\n# بُرْوِزْنَ (burwizna) /bur.wiz.na/: third-person feminine plural past passive of بَرْوَزَ (barwaza)\n# بَرْوِزْنَ (barwizna) /bar.wiz.na/: second-person feminine plural imperative of بَرْوَزَ (barwaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["barwazna", "barwaza", "burwizna"],
-        "k": "بروز",
-        "yol": "kök"
-      },
-      {
-        "w": "أبروز",
-        "u": "أبروز",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبروز (form Iq)\n# أُبَرْوِزُ (ʔubarwizu) /ʔu.bar.wi.zu/: first-person singular non-past active indicative of بَرْوَزَ (barwaza)\n# أُبَرْوَزُ (ʔubarwazu) /ʔu.bar.wa.zu/: first-person singular non-past passive indicative of بَرْوَزَ (barwaza)\n# أُبَرْوِزَ (ʔubarwiza) /ʔu.bar.wi.za/: first-person singular non-past active subjunctive of بَرْوَزَ (barwaza)\n# أُبَرْوَزَ (ʔubarwaza) /ʔu.bar.wa.za/: first",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʔubarwizu", "barwaza", "ʔubarwazu"],
-        "k": "بروز",
-        "yol": "kök"
-      },
-      {
-        "w": "تبروز",
-        "u": "تبروز",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبروز (form Iq)\n# تُبَرْوِزُ (tubarwizu) /tu.bar.wi.zu/: inflection of بَرْوَزَ (barwaza):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُبَرْوَزُ (tubarwazu) /tu.bar.wa.zu/: inflection of بَرْوَزَ (barwaza):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past pas",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tubarwizu", "barwaza", "tubarwazu"],
-        "k": "بروز",
-        "yol": "kök"
-      },
-      {
-        "w": "تبروزين",
-        "u": "تبروزين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبروزين (form Iq)\n# تُبَرْوِزِينَ (tubarwizīna) /tu.bar.wi.ziː.na/: second-person feminine singular non-past active indicative of بَرْوَزَ (barwaza)\n# تُبَرْوَزِينَ (tubarwazīna) /tu.bar.wa.ziː.na/: second-person feminine singular non-past passive indicative of بَرْوَزَ (barwaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tubarwizīna", "barwaza", "tubarwazīna"],
-        "k": "بروز",
-        "yol": "kök"
-      },
-      {
-        "w": "يبروز",
-        "u": "يبروز",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبروز (form Iq)\n# يُبَرْوِزُ (yubarwizu) /ju.bar.wi.zu/: third-person masculine singular non-past active indicative of بَرْوَزَ (barwaza)\n# يُبَرْوَزُ (yubarwazu) /ju.bar.wa.zu/: third-person masculine singular non-past passive indicative of بَرْوَزَ (barwaza)\n# يُبَرْوِزَ (yubarwiza) /ju.bar.wi.za/: third-person masculine singular non-past active subjunctive of بَرْوَزَ (barwaza)\n# يُبَرْوَزَ (yu",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yubarwizu", "barwaza", "yubarwazu"],
-        "k": "بروز",
-        "yol": "kök"
-      },
-      {
-        "w": "يبروزان",
-        "u": "يبروزان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبروزان (form Iq)\n# يُبَرْوِزَانِ (yubarwizāni) /ju.bar.wi.zaː.ni/: third-person masculine dual non-past active indicative of بَرْوَزَ (barwaza)\n# يُبَرْوَزَانِ (yubarwazāni) /ju.bar.wa.zaː.ni/: third-person masculine dual non-past passive indicative of بَرْوَزَ (barwaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yubarwizāni", "barwaza", "yubarwazāni"],
-        "k": "بروز",
-        "yol": "kök"
-      },
-      {
-        "w": "نبروز",
-        "u": "نبروز",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نبروز (form Iq)\n# نُبَرْوِزُ (nubarwizu) /nu.bar.wi.zu/: first-person plural non-past active indicative of بَرْوَزَ (barwaza)\n# نُبَرْوَزُ (nubarwazu) /nu.bar.wa.zu/: first-person plural non-past passive indicative of بَرْوَزَ (barwaza)\n# نُبَرْوِزَ (nubarwiza) /nu.bar.wi.za/: first-person plural non-past active subjunctive of بَرْوَزَ (barwaza)\n# نُبَرْوَزَ (nubarwaza) /nu.bar.wa.za/: first-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["nubarwizu", "barwaza", "nubarwazu"],
-        "k": "بروز",
-        "yol": "kök"
-      },
-      {
-        "w": "تبروزون",
-        "u": "تبروزون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبروزون (form Iq)\n# تُبَرْوِزُونَ (tubarwizūna) /tu.bar.wi.zuː.na/: second-person masculine plural non-past active indicative of بَرْوَزَ (barwaza)\n# تُبَرْوَزُونَ (tubarwazūna) /tu.bar.wa.zuː.na/: second-person masculine plural non-past passive indicative of بَرْوَزَ (barwaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tubarwizūna", "barwaza", "tubarwazūna"],
-        "k": "بروز",
-        "yol": "kök"
-      },
-      {
-        "w": "تبروزان",
-        "u": "تبروزان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبروزان (form Iq)\n# تُبَرْوِزَانِ (tubarwizāni) /tu.bar.wi.zaː.ni/: inflection of بَرْوَزَ (barwaza):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُبَرْوَزَانِ (tubarwazāni) /tu.bar.wa.zaː.ni/: inflection of بَرْوَزَ (barwaza):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tubarwizāni", "barwaza", "tubarwazāni"],
-        "k": "بروز",
-        "yol": "kök"
-      },
-      {
-        "w": "تبروزن",
-        "u": "تبروزن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبروزن (form Iq)\n# تُبَرْوِزْنَ (tubarwizna) /tu.bar.wiz.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of بَرْوَزَ (barwaza)\n# تُبَرْوَزْنَ (tubarwazna) /tu.bar.waz.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of بَرْوَزَ (barwaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tubarwizna", "barwaza", "tubarwazna"],
-        "k": "بروز",
-        "yol": "kök"
-      },
-      {
-        "w": "يبروزون",
-        "u": "يبروزون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبروزون (form Iq)\n# يُبَرْوِزُونَ (yubarwizūna) /ju.bar.wi.zuː.na/: third-person masculine plural non-past active indicative of بَرْوَزَ (barwaza)\n# يُبَرْوَزُونَ (yubarwazūna) /ju.bar.wa.zuː.na/: third-person masculine plural non-past passive indicative of بَرْوَزَ (barwaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yubarwizūna", "barwaza", "yubarwazūna"],
-        "k": "بروز",
-        "yol": "kök"
-      },
-      {
-        "w": "يبروزن",
-        "u": "يبروزن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبروزن (form Iq)\n# يُبَرْوِزْنَ (yubarwizna) /ju.bar.wiz.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of بَرْوَزَ (barwaza)\n# يُبَرْوَزْنَ (yubarwazna) /ju.bar.waz.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of بَرْوَزَ (barwaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yubarwizna", "barwaza", "yubarwazna"],
-        "k": "بروز",
-        "yol": "kök"
-      },
-      {
-        "w": "تبروزا",
-        "u": "تبروزا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبروزا (form Iq)\n# تُبَرْوِزَا (tubarwizā) /tu.bar.wi.zaː/: inflection of بَرْوَزَ (barwaza):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُبَرْوَزَا (tubarwazā) /tu.bar.wa.zaː/: inflection of بَرْوَزَ (barwaza):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tubarwizā", "barwaza", "tubarwazā"],
-        "k": "بروز",
-        "yol": "kök"
-      },
-      {
-        "w": "تبروزي",
-        "u": "تبروزي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبروزي (form Iq)\n# تُبَرْوِزِي (tubarwizī) /tu.bar.wi.ziː/: second-person feminine singular non-past active subjunctive/jussive of بَرْوَزَ (barwaza)\n# تُبَرْوَزِي (tubarwazī) /tu.bar.wa.ziː/: second-person feminine singular non-past passive subjunctive/jussive of بَرْوَزَ (barwaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tubarwizī", "barwaza", "tubarwazī"],
-        "k": "بروز",
-        "yol": "kök"
-      },
-      {
-        "w": "يبروزوا",
-        "u": "يبروزوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبروزوا (form Iq)\n# يُبَرْوِزُوا (yubarwizū) /ju.bar.wi.zuː/: third-person masculine plural non-past active subjunctive/jussive of بَرْوَزَ (barwaza)\n# يُبَرْوَزُوا (yubarwazū) /ju.bar.wa.zuː/: third-person masculine plural non-past passive subjunctive/jussive of بَرْوَزَ (barwaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yubarwizū", "barwaza", "yubarwazū"],
-        "k": "بروز",
-        "yol": "kök"
-      },
-      {
-        "w": "يبروزا",
-        "u": "يبروزا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبروزا (form Iq)\n# يُبَرْوِزَا (yubarwizā) /ju.bar.wi.zaː/: third-person masculine dual non-past active subjunctive/jussive of بَرْوَزَ (barwaza)\n# يُبَرْوَزَا (yubarwazā) /ju.bar.wa.zaː/: third-person masculine dual non-past passive subjunctive/jussive of بَرْوَزَ (barwaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yubarwizā", "barwaza", "yubarwazā"],
-        "k": "بروز",
-        "yol": "kök"
-      },
-      {
-        "w": "تبروزوا",
-        "u": "تبروزوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبروزوا (form Iq)\n# تُبَرْوِزُوا (tubarwizū) /tu.bar.wi.zuː/: second-person masculine plural non-past active subjunctive/jussive of بَرْوَزَ (barwaza)\n# تُبَرْوَزُوا (tubarwazū) /tu.bar.wa.zuː/: second-person masculine plural non-past passive subjunctive/jussive of بَرْوَزَ (barwaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tubarwizū", "barwaza", "tubarwazū"],
-        "k": "بروز",
-        "yol": "kök"
-      },
-      {
-        "w": "بروزي",
-        "u": "بروزي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَرْوِزِي • (barwizī) (form Iq) /bar.wi.ziː/\n# second-person feminine singular imperative of بَرْوَزَ (barwaza)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["barwizī", "barwaza"],
-        "k": "بروز",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "بر",
+  "ses": {
     "harf": "ب",
+    "fasil": "بر",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "بروزت",
+      "tur": "verb",
+      "baslik": "بروزت (form Iq)\n# بَرْوَزْتُ (barwaztu) /bar.waz.tu/: first-person singular past active of بَرْوَزَ (barwaza)\n# بَرْوَزْتَ (barwazta) /bar.waz.ta/: second-person masculine singular past active of بَرْوَزَ (barwaza)\n# بَرْوَزْتِ (barwazti) /bar.waz.ti/: second-person feminine singular past active of بَرْوَزَ (barwaza)\n# بَرْوَزَتْ (barwazat) /bar.wa.zat/: third-person feminine singular past active ",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["barwaztu", "barwaza", "barwazta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بروزتما",
+      "tur": "verb",
+      "baslik": "بروزتما (form Iq)\n# بَرْوَزْتُمَا (barwaztumā) /bar.waz.tu.maː/: second-person dual past active of بَرْوَزَ (barwaza)\n# بُرْوِزْتُمَا (burwiztumā) /bur.wiz.tu.maː/: second-person dual past passive of بَرْوَزَ (barwaza)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["barwaztumā", "barwaza", "burwiztumā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بروزا",
+      "tur": "verb",
+      "baslik": "بروزا (form Iq)\n# بَرْوَزَا (barwazā) /bar.wa.zaː/: third-person masculine dual past active of بَرْوَزَ (barwaza)\n# بُرْوِزَا (burwizā) /bur.wi.zaː/: third-person masculine dual past passive of بَرْوَزَ (barwaza)\n# بَرْوِزَا (barwizā) /bar.wi.zaː/: second-person dual imperative of بَرْوَزَ (barwaza)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["barwazā", "barwaza", "burwizā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بروزتا",
+      "tur": "verb",
+      "baslik": "بروزتا (form Iq)\n# بَرْوَزَتَا (barwazatā) /bar.wa.za.taː/: third-person feminine dual past active of بَرْوَزَ (barwaza)\n# بُرْوِزَتَا (burwizatā) /bur.wi.za.taː/: third-person feminine dual past passive of بَرْوَزَ (barwaza)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["barwazatā", "barwaza", "burwizatā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بروزنا",
+      "tur": "verb",
+      "baslik": "بروزنا (form Iq)\n# بَرْوَزْنَا (barwaznā) /bar.waz.naː/: first-person plural past active of بَرْوَزَ (barwaza)\n# بُرْوِزْنَا (burwiznā) /bur.wiz.naː/: first-person plural past passive of بَرْوَزَ (barwaza)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["barwaznā", "barwaza", "burwiznā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بروزتم",
+      "tur": "verb",
+      "baslik": "بروزتم (form Iq)\n# بَرْوَزْتُمْ (barwaztum) /bar.waz.tum/: second-person masculine plural past active of بَرْوَزَ (barwaza)\n# بُرْوِزْتُمْ (burwiztum) /bur.wiz.tum/: second-person masculine plural past passive of بَرْوَزَ (barwaza)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["barwaztum", "barwaza", "burwiztum"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بروزتن",
+      "tur": "verb",
+      "baslik": "بروزتن (form Iq)\n# بَرْوَزْتُنَّ (barwaztunna) /bar.waz.tun.na/: second-person feminine plural past active of بَرْوَزَ (barwaza)\n# بُرْوِزْتُنَّ (burwiztunna) /bur.wiz.tun.na/: second-person feminine plural past passive of بَرْوَزَ (barwaza)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["barwaztunna", "barwaza", "burwiztunna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بروزوا",
+      "tur": "verb",
+      "baslik": "بروزوا (form Iq)\n# بَرْوَزُوا (barwazū) /bar.wa.zuː/: third-person masculine plural past active of بَرْوَزَ (barwaza)\n# بُرْوِزُوا (burwizū) /bur.wi.zuː/: third-person masculine plural past passive of بَرْوَزَ (barwaza)\n# بَرْوِزُوا (barwizū) /bar.wi.zuː/: second-person masculine plural imperative of بَرْوَزَ (barwaza)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["barwazū", "barwaza", "burwizū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بروزن",
+      "tur": "verb",
+      "baslik": "بروزن (form Iq)\n# بَرْوَزْنَ (barwazna) /bar.waz.na/: third-person feminine plural past active of بَرْوَزَ (barwaza)\n# بُرْوِزْنَ (burwizna) /bur.wiz.na/: third-person feminine plural past passive of بَرْوَزَ (barwaza)\n# بَرْوِزْنَ (barwizna) /bar.wiz.na/: second-person feminine plural imperative of بَرْوَزَ (barwaza)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["barwazna", "barwaza", "burwizna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أبروز",
+      "tur": "verb",
+      "baslik": "أبروز (form Iq)\n# أُبَرْوِزُ (ʔubarwizu) /ʔu.bar.wi.zu/: first-person singular non-past active indicative of بَرْوَزَ (barwaza)\n# أُبَرْوَزُ (ʔubarwazu) /ʔu.bar.wa.zu/: first-person singular non-past passive indicative of بَرْوَزَ (barwaza)\n# أُبَرْوِزَ (ʔubarwiza) /ʔu.bar.wi.za/: first-person singular non-past active subjunctive of بَرْوَزَ (barwaza)\n# أُبَرْوَزَ (ʔubarwaza) /ʔu.bar.wa.za/: first",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʔubarwizu", "barwaza", "ʔubarwazu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبروز",
+      "tur": "verb",
+      "baslik": "تبروز (form Iq)\n# تُبَرْوِزُ (tubarwizu) /tu.bar.wi.zu/: inflection of بَرْوَزَ (barwaza):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُبَرْوَزُ (tubarwazu) /tu.bar.wa.zu/: inflection of بَرْوَزَ (barwaza):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past pas",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tubarwizu", "barwaza", "tubarwazu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبروزين",
+      "tur": "verb",
+      "baslik": "تبروزين (form Iq)\n# تُبَرْوِزِينَ (tubarwizīna) /tu.bar.wi.ziː.na/: second-person feminine singular non-past active indicative of بَرْوَزَ (barwaza)\n# تُبَرْوَزِينَ (tubarwazīna) /tu.bar.wa.ziː.na/: second-person feminine singular non-past passive indicative of بَرْوَزَ (barwaza)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tubarwizīna", "barwaza", "tubarwazīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبروز",
+      "tur": "verb",
+      "baslik": "يبروز (form Iq)\n# يُبَرْوِزُ (yubarwizu) /ju.bar.wi.zu/: third-person masculine singular non-past active indicative of بَرْوَزَ (barwaza)\n# يُبَرْوَزُ (yubarwazu) /ju.bar.wa.zu/: third-person masculine singular non-past passive indicative of بَرْوَزَ (barwaza)\n# يُبَرْوِزَ (yubarwiza) /ju.bar.wi.za/: third-person masculine singular non-past active subjunctive of بَرْوَزَ (barwaza)\n# يُبَرْوَزَ (yu",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yubarwizu", "barwaza", "yubarwazu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبروزان",
+      "tur": "verb",
+      "baslik": "يبروزان (form Iq)\n# يُبَرْوِزَانِ (yubarwizāni) /ju.bar.wi.zaː.ni/: third-person masculine dual non-past active indicative of بَرْوَزَ (barwaza)\n# يُبَرْوَزَانِ (yubarwazāni) /ju.bar.wa.zaː.ni/: third-person masculine dual non-past passive indicative of بَرْوَزَ (barwaza)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yubarwizāni", "barwaza", "yubarwazāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نبروز",
+      "tur": "verb",
+      "baslik": "نبروز (form Iq)\n# نُبَرْوِزُ (nubarwizu) /nu.bar.wi.zu/: first-person plural non-past active indicative of بَرْوَزَ (barwaza)\n# نُبَرْوَزُ (nubarwazu) /nu.bar.wa.zu/: first-person plural non-past passive indicative of بَرْوَزَ (barwaza)\n# نُبَرْوِزَ (nubarwiza) /nu.bar.wi.za/: first-person plural non-past active subjunctive of بَرْوَزَ (barwaza)\n# نُبَرْوَزَ (nubarwaza) /nu.bar.wa.za/: first-perso",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["nubarwizu", "barwaza", "nubarwazu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبروزون",
+      "tur": "verb",
+      "baslik": "تبروزون (form Iq)\n# تُبَرْوِزُونَ (tubarwizūna) /tu.bar.wi.zuː.na/: second-person masculine plural non-past active indicative of بَرْوَزَ (barwaza)\n# تُبَرْوَزُونَ (tubarwazūna) /tu.bar.wa.zuː.na/: second-person masculine plural non-past passive indicative of بَرْوَزَ (barwaza)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tubarwizūna", "barwaza", "tubarwazūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبروزان",
+      "tur": "verb",
+      "baslik": "تبروزان (form Iq)\n# تُبَرْوِزَانِ (tubarwizāni) /tu.bar.wi.zaː.ni/: inflection of بَرْوَزَ (barwaza):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُبَرْوَزَانِ (tubarwazāni) /tu.bar.wa.zaː.ni/: inflection of بَرْوَزَ (barwaza):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tubarwizāni", "barwaza", "tubarwazāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبروزن",
+      "tur": "verb",
+      "baslik": "تبروزن (form Iq)\n# تُبَرْوِزْنَ (tubarwizna) /tu.bar.wiz.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of بَرْوَزَ (barwaza)\n# تُبَرْوَزْنَ (tubarwazna) /tu.bar.waz.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of بَرْوَزَ (barwaza)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tubarwizna", "barwaza", "tubarwazna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبروزون",
+      "tur": "verb",
+      "baslik": "يبروزون (form Iq)\n# يُبَرْوِزُونَ (yubarwizūna) /ju.bar.wi.zuː.na/: third-person masculine plural non-past active indicative of بَرْوَزَ (barwaza)\n# يُبَرْوَزُونَ (yubarwazūna) /ju.bar.wa.zuː.na/: third-person masculine plural non-past passive indicative of بَرْوَزَ (barwaza)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yubarwizūna", "barwaza", "yubarwazūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبروزن",
+      "tur": "verb",
+      "baslik": "يبروزن (form Iq)\n# يُبَرْوِزْنَ (yubarwizna) /ju.bar.wiz.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of بَرْوَزَ (barwaza)\n# يُبَرْوَزْنَ (yubarwazna) /ju.bar.waz.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of بَرْوَزَ (barwaza)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yubarwizna", "barwaza", "yubarwazna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبروزا",
+      "tur": "verb",
+      "baslik": "تبروزا (form Iq)\n# تُبَرْوِزَا (tubarwizā) /tu.bar.wi.zaː/: inflection of بَرْوَزَ (barwaza):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُبَرْوَزَا (tubarwazā) /tu.bar.wa.zaː/: inflection of بَرْوَزَ (barwaza):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tubarwizā", "barwaza", "tubarwazā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبروزي",
+      "tur": "verb",
+      "baslik": "تبروزي (form Iq)\n# تُبَرْوِزِي (tubarwizī) /tu.bar.wi.ziː/: second-person feminine singular non-past active subjunctive/jussive of بَرْوَزَ (barwaza)\n# تُبَرْوَزِي (tubarwazī) /tu.bar.wa.ziː/: second-person feminine singular non-past passive subjunctive/jussive of بَرْوَزَ (barwaza)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tubarwizī", "barwaza", "tubarwazī"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبروزوا",
+      "tur": "verb",
+      "baslik": "يبروزوا (form Iq)\n# يُبَرْوِزُوا (yubarwizū) /ju.bar.wi.zuː/: third-person masculine plural non-past active subjunctive/jussive of بَرْوَزَ (barwaza)\n# يُبَرْوَزُوا (yubarwazū) /ju.bar.wa.zuː/: third-person masculine plural non-past passive subjunctive/jussive of بَرْوَزَ (barwaza)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yubarwizū", "barwaza", "yubarwazū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يبروزا",
+      "tur": "verb",
+      "baslik": "يبروزا (form Iq)\n# يُبَرْوِزَا (yubarwizā) /ju.bar.wi.zaː/: third-person masculine dual non-past active subjunctive/jussive of بَرْوَزَ (barwaza)\n# يُبَرْوَزَا (yubarwazā) /ju.bar.wa.zaː/: third-person masculine dual non-past passive subjunctive/jussive of بَرْوَزَ (barwaza)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yubarwizā", "barwaza", "yubarwazā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تبروزوا",
+      "tur": "verb",
+      "baslik": "تبروزوا (form Iq)\n# تُبَرْوِزُوا (tubarwizū) /tu.bar.wi.zuː/: second-person masculine plural non-past active subjunctive/jussive of بَرْوَزَ (barwaza)\n# تُبَرْوَزُوا (tubarwazū) /tu.bar.wa.zuː/: second-person masculine plural non-past passive subjunctive/jussive of بَرْوَزَ (barwaza)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tubarwizū", "barwaza", "tubarwazū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "بروزي",
+      "tur": "verb",
+      "baslik": "بَرْوِزِي • (barwizī) (form Iq) /bar.wi.ziː/\n# second-person feminine singular imperative of بَرْوَزَ (barwaza)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["barwizī", "barwaza"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "بروز", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

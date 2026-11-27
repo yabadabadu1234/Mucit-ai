@@ -1,450 +1,327 @@
 {
   "kok": "عاش",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "عاش", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "عش",
-        "u": "عش",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "عِشْ • (ʕiš) (form I) /ʕiʃ/\n# second-person masculine singular imperative of عَاشَ (ʕāša)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕiš", "ʕāša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "تعش",
-        "u": "تعش",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَعِشْ • (taʕiš) (form I) /ta.ʕiʃ/\n# inflection of عَاشَ (ʕāša):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʕiš", "ʕāša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "يعيش",
-        "u": "يعيش",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يعيش (form I)\n# يَعِيشُ (yaʕīšu) /ja.ʕiː.ʃu/: third-person masculine singular non-past active indicative of عَاشَ (ʕāša)\n# يَعِيشَ (yaʕīša) /ja.ʕiː.ʃa/: third-person masculine singular non-past active subjunctive of عَاشَ (ʕāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʕīšu", "ʕāša", "yaʕīša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "يعش",
-        "u": "يعش",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَعِشْ • (yaʕiš) (form I) /ja.ʕiʃ/\n# third-person masculine singular non-past active jussive of عَاشَ (ʕāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʕiš", "ʕāša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "عاشت",
-        "u": "عاشت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عَاشَتْ • (ʕāšat) (form I) /ʕaː.ʃat/\n# third-person feminine singular past active of عَاشَ (ʕāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕāšat", "ʕāša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "تعيش",
-        "u": "تعيش",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تعيش (form I)\n# تَعِيشُ (taʕīšu) /ta.ʕiː.ʃu/: inflection of عَاشَ (ʕāša):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَعِيشَ (taʕīša) /ta.ʕiː.ʃa/: inflection of عَاشَ (ʕāša):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʕīšu", "ʕāša", "taʕīša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "عشت",
-        "u": "عشت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "عشت (form I)\n# عِشْتُ (ʕištu) /ʕiʃ.tu/: first-person singular past active of عَاشَ (ʕāša)\n# عِشْتَ (ʕišta) /ʕiʃ.ta/: second-person masculine singular past active of عَاشَ (ʕāša)\n# عِشْتِ (ʕišti) /ʕiʃ.ti/: second-person feminine singular past active of عَاشَ (ʕāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕištu", "ʕāša", "ʕišta"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "تعيشين",
-        "u": "تعيشين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَعِيشِينَ • (taʕīšīna) (form I) /ta.ʕiː.ʃiː.na/\n# second-person feminine singular non-past active indicative of عَاشَ (ʕāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʕīšīna", "ʕāša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "تعيشي",
-        "u": "تعيشي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَعِيشِي • (taʕīšī) (form I) /ta.ʕiː.ʃiː/\n# second-person feminine singular non-past active subjunctive/jussive of عَاشَ (ʕāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʕīšī", "ʕāša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "عيشي",
-        "u": "عيشي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "عِيشِي • (ʕīšī) (form I) /ʕiː.ʃiː/\n# second-person feminine singular imperative of عَاشَ (ʕāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕīšī", "ʕāša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "أعيش",
-        "u": "أعيش",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أعيش (form I)\n# أَعِيشُ (ʔaʕīšu) /ʔa.ʕiː.ʃu/: first-person singular non-past active indicative of عَاشَ (ʕāša)\n# أَعِيشَ (ʔaʕīša) /ʔa.ʕiː.ʃa/: first-person singular non-past active subjunctive of عَاشَ (ʕāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaʕīšu", "ʕāša", "ʔaʕīša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "أعش",
-        "u": "أعش",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أَعِشْ • (ʔaʕiš) (form I) /ʔa.ʕiʃ/\n# first-person singular non-past active jussive of عَاشَ (ʕāša)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaʕiš", "ʕāša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "عشنا",
-        "u": "عشنا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "عِشْنَا • (ʕišnā) (form I) /ʕiʃ.naː/\n# first-person plural past active of عَاشَ (ʕāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕišnā", "ʕāša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "نعيش",
-        "u": "نعيش",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نعيش (form I)\n# نَعِيشُ (naʕīšu) /na.ʕiː.ʃu/: first-person plural non-past active indicative of عَاشَ (ʕāša)\n# نَعِيشَ (naʕīša) /na.ʕiː.ʃa/: first-person plural non-past active subjunctive of عَاشَ (ʕāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naʕīšu", "ʕāša", "naʕīša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "عشتم",
-        "u": "عشتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عِشْتُمْ • (ʕištum) (form I) /ʕiʃ.tum/\n# second-person masculine plural past active of عَاشَ (ʕāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕištum", "ʕāša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "تعيشون",
-        "u": "تعيشون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَعِيشُونَ • (taʕīšūna) (form I) /ta.ʕiː.ʃuː.na/\n# second-person masculine plural non-past active indicative of عَاشَ (ʕāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʕīšūna", "ʕāša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "تعيشوا",
-        "u": "تعيشوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَعِيشُوا • (taʕīšū) (form I) /ta.ʕiː.ʃuː/\n# second-person masculine plural non-past active subjunctive/jussive of عَاشَ (ʕāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʕīšū", "ʕāša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "عاشوا",
-        "u": "عاشوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عَاشُوا • (ʕāšū) (form I) /ʕaː.ʃuː/\n# third-person masculine plural past active of عَاشَ (ʕāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕāšū", "ʕāša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "يعيشون",
-        "u": "يعيشون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَعِيشُونَ • (yaʕīšūna) (form I) /ja.ʕiː.ʃuː.na/\n# third-person masculine plural non-past active indicative of عَاشَ (ʕāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʕīšūna", "ʕāša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "يعيشوا",
-        "u": "يعيشوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَعِيشُوا • (yaʕīšū) (form I) /ja.ʕiː.ʃuː/\n# third-person masculine plural non-past active subjunctive/jussive of عَاشَ (ʕāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʕīšū", "ʕāša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "عيشوا",
-        "u": "عيشوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "عِيشُوا • (ʕīšū) (form I) /ʕiː.ʃuː/\n# second-person masculine plural imperative of عَاشَ (ʕāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕīšū", "ʕāša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "عشتن",
-        "u": "عشتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عِشْتُنَّ • (ʕištunna) (form I) /ʕiʃ.tun.na/\n# second-person feminine plural past active of عَاشَ (ʕāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕištunna", "ʕāša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "تعشن",
-        "u": "تعشن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَعِشْنَ • (taʕišna) (form I) /ta.ʕiʃ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of عَاشَ (ʕāša)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʕišna", "ʕāša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "عشن",
-        "u": "عشن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "عِشْنَ • (ʕišna) (form I) /ʕiʃ.na/\n# inflection of عَاشَ (ʕāša):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕišna", "ʕāša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "يعشن",
-        "u": "يعشن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَعِشْنَ • (yaʕišna) (form I) /ja.ʕiʃ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of عَاشَ (ʕāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʕišna", "ʕāša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "عشتما",
-        "u": "عشتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عِشْتُمَا • (ʕištumā) (form I) /ʕiʃ.tu.maː/\n# second-person dual past active of عَاشَ (ʕāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕištumā", "ʕāša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "عاشا",
-        "u": "عاشا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عَاشَا • (ʕāšā) (form I) /ʕaː.ʃaː/\n# third-person masculine dual past active of عَاشَ (ʕāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕāšā", "ʕāša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "عاشتا",
-        "u": "عاشتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "عَاشَتَا • (ʕāšatā) (form I) /ʕaː.ʃa.taː/\n# third-person feminine dual past active of عَاشَ (ʕāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕāšatā", "ʕāša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "يعيشان",
-        "u": "يعيشان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَعِيشَانِ • (yaʕīšāni) (form I) /ja.ʕiː.ʃaː.ni/\n# third-person masculine dual non-past active indicative of عَاشَ (ʕāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʕīšāni", "ʕāša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "يعيشا",
-        "u": "يعيشا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يَعِيشَا • (yaʕīšā) (form I) /ja.ʕiː.ʃaː/\n# third-person masculine dual non-past active subjunctive/jussive of عَاشَ (ʕāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaʕīšā", "ʕāša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "عيشا",
-        "u": "عيشا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "عِيشَا • (ʕīšā) (form I) /ʕiː.ʃaː/\n# second-person dual imperative of عَاشَ (ʕāša)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʕīšā", "ʕāša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "تعيشان",
-        "u": "تعيشان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَعِيشَانِ • (taʕīšāni) (form I) /ta.ʕiː.ʃaː.ni/\n# inflection of عَاشَ (ʕāša):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʕīšāni", "ʕāša"],
-        "k": "عاش",
-        "yol": "kök"
-      },
-      {
-        "w": "تعيشا",
-        "u": "تعيشا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَعِيشَا • (taʕīšā) (form I) /ta.ʕiː.ʃaː/\n# inflection of عَاشَ (ʕāša):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taʕīšā", "ʕāša"],
-        "k": "عاش",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "عش",
+  "ses": {
     "harf": "ع",
+    "fasil": "عش",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "عش",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "عِشْ • (ʕiš) (form I) /ʕiʃ/\n# second-person masculine singular imperative of عَاشَ (ʕāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕiš", "ʕāša"]
+    },
+    {
+      "madde": "تعش",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَعِشْ • (taʕiš) (form I) /ta.ʕiʃ/\n# inflection of عَاشَ (ʕāša):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʕiš", "ʕāša"]
+    },
+    {
+      "madde": "يعيش",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يعيش (form I)\n# يَعِيشُ (yaʕīšu) /ja.ʕiː.ʃu/: third-person masculine singular non-past active indicative of عَاشَ (ʕāša)\n# يَعِيشَ (yaʕīša) /ja.ʕiː.ʃa/: third-person masculine singular non-past active subjunctive of عَاشَ (ʕāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʕīšu", "ʕāša", "yaʕīša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعش",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَعِشْ • (yaʕiš) (form I) /ja.ʕiʃ/\n# third-person masculine singular non-past active jussive of عَاشَ (ʕāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʕiš", "ʕāša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عاشت",
+      "tur": "verb",
+      "baslik": "عَاشَتْ • (ʕāšat) (form I) /ʕaː.ʃat/\n# third-person feminine singular past active of عَاشَ (ʕāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕāšat", "ʕāša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعيش",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تعيش (form I)\n# تَعِيشُ (taʕīšu) /ta.ʕiː.ʃu/: inflection of عَاشَ (ʕāša):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَعِيشَ (taʕīša) /ta.ʕiː.ʃa/: inflection of عَاشَ (ʕāša):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʕīšu", "ʕāša", "taʕīša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عشت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "عشت (form I)\n# عِشْتُ (ʕištu) /ʕiʃ.tu/: first-person singular past active of عَاشَ (ʕāša)\n# عِشْتَ (ʕišta) /ʕiʃ.ta/: second-person masculine singular past active of عَاشَ (ʕāša)\n# عِشْتِ (ʕišti) /ʕiʃ.ti/: second-person feminine singular past active of عَاشَ (ʕāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕištu", "ʕāša", "ʕišta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعيشين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَعِيشِينَ • (taʕīšīna) (form I) /ta.ʕiː.ʃiː.na/\n# second-person feminine singular non-past active indicative of عَاشَ (ʕāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʕīšīna", "ʕāša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعيشي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَعِيشِي • (taʕīšī) (form I) /ta.ʕiː.ʃiː/\n# second-person feminine singular non-past active subjunctive/jussive of عَاشَ (ʕāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʕīšī", "ʕāša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عيشي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "عِيشِي • (ʕīšī) (form I) /ʕiː.ʃiː/\n# second-person feminine singular imperative of عَاشَ (ʕāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕīšī", "ʕāša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعيش",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أعيش (form I)\n# أَعِيشُ (ʔaʕīšu) /ʔa.ʕiː.ʃu/: first-person singular non-past active indicative of عَاشَ (ʕāša)\n# أَعِيشَ (ʔaʕīša) /ʔa.ʕiː.ʃa/: first-person singular non-past active subjunctive of عَاشَ (ʕāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaʕīšu", "ʕāša", "ʔaʕīša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أعش",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أَعِشْ • (ʔaʕiš) (form I) /ʔa.ʕiʃ/\n# first-person singular non-past active jussive of عَاشَ (ʕāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaʕiš", "ʕāša"]
+    },
+    {
+      "madde": "عشنا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "عِشْنَا • (ʕišnā) (form I) /ʕiʃ.naː/\n# first-person plural past active of عَاشَ (ʕāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕišnā", "ʕāša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نعيش",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نعيش (form I)\n# نَعِيشُ (naʕīšu) /na.ʕiː.ʃu/: first-person plural non-past active indicative of عَاشَ (ʕāša)\n# نَعِيشَ (naʕīša) /na.ʕiː.ʃa/: first-person plural non-past active subjunctive of عَاشَ (ʕāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naʕīšu", "ʕāša", "naʕīša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عشتم",
+      "tur": "verb",
+      "baslik": "عِشْتُمْ • (ʕištum) (form I) /ʕiʃ.tum/\n# second-person masculine plural past active of عَاشَ (ʕāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕištum", "ʕāša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعيشون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَعِيشُونَ • (taʕīšūna) (form I) /ta.ʕiː.ʃuː.na/\n# second-person masculine plural non-past active indicative of عَاشَ (ʕāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʕīšūna", "ʕāša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعيشوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَعِيشُوا • (taʕīšū) (form I) /ta.ʕiː.ʃuː/\n# second-person masculine plural non-past active subjunctive/jussive of عَاشَ (ʕāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʕīšū", "ʕāša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عاشوا",
+      "tur": "verb",
+      "baslik": "عَاشُوا • (ʕāšū) (form I) /ʕaː.ʃuː/\n# third-person masculine plural past active of عَاشَ (ʕāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕāšū", "ʕāša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعيشون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَعِيشُونَ • (yaʕīšūna) (form I) /ja.ʕiː.ʃuː.na/\n# third-person masculine plural non-past active indicative of عَاشَ (ʕāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʕīšūna", "ʕāša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعيشوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَعِيشُوا • (yaʕīšū) (form I) /ja.ʕiː.ʃuː/\n# third-person masculine plural non-past active subjunctive/jussive of عَاشَ (ʕāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʕīšū", "ʕāša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عيشوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "عِيشُوا • (ʕīšū) (form I) /ʕiː.ʃuː/\n# second-person masculine plural imperative of عَاشَ (ʕāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕīšū", "ʕāša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عشتن",
+      "tur": "verb",
+      "baslik": "عِشْتُنَّ • (ʕištunna) (form I) /ʕiʃ.tun.na/\n# second-person feminine plural past active of عَاشَ (ʕāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕištunna", "ʕāša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعشن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَعِشْنَ • (taʕišna) (form I) /ta.ʕiʃ.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of عَاشَ (ʕāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʕišna", "ʕāša"]
+    },
+    {
+      "madde": "عشن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "عِشْنَ • (ʕišna) (form I) /ʕiʃ.na/\n# inflection of عَاشَ (ʕāša):\n## third-person feminine plural past active\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕišna", "ʕāša"]
+    },
+    {
+      "madde": "يعشن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَعِشْنَ • (yaʕišna) (form I) /ja.ʕiʃ.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of عَاشَ (ʕāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʕišna", "ʕāša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عشتما",
+      "tur": "verb",
+      "baslik": "عِشْتُمَا • (ʕištumā) (form I) /ʕiʃ.tu.maː/\n# second-person dual past active of عَاشَ (ʕāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕištumā", "ʕāša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عاشا",
+      "tur": "verb",
+      "baslik": "عَاشَا • (ʕāšā) (form I) /ʕaː.ʃaː/\n# third-person masculine dual past active of عَاشَ (ʕāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕāšā", "ʕāša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عاشتا",
+      "tur": "verb",
+      "baslik": "عَاشَتَا • (ʕāšatā) (form I) /ʕaː.ʃa.taː/\n# third-person feminine dual past active of عَاشَ (ʕāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕāšatā", "ʕāša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعيشان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَعِيشَانِ • (yaʕīšāni) (form I) /ja.ʕiː.ʃaː.ni/\n# third-person masculine dual non-past active indicative of عَاشَ (ʕāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʕīšāni", "ʕāša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يعيشا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يَعِيشَا • (yaʕīšā) (form I) /ja.ʕiː.ʃaː/\n# third-person masculine dual non-past active subjunctive/jussive of عَاشَ (ʕāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaʕīšā", "ʕāša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "عيشا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "عِيشَا • (ʕīšā) (form I) /ʕiː.ʃaː/\n# second-person dual imperative of عَاشَ (ʕāša)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʕīšā", "ʕāša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعيشان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَعِيشَانِ • (taʕīšāni) (form I) /ta.ʕiː.ʃaː.ni/\n# inflection of عَاشَ (ʕāša):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʕīšāni", "ʕāša"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تعيشا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَعِيشَا • (taʕīšā) (form I) /ta.ʕiː.ʃaː/\n# inflection of عَاشَ (ʕāša):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taʕīšā", "ʕāša"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "عاش", "r7"]
+  ],
+  "mana": {
     "ince": "catch.v.02",
     "orta": "verb.perception",
     "ust": "zihin ve ilim",
@@ -452,16 +329,11 @@
     "dayanak_tanim": "perceive with the senses quickly, suddenly, or momentarily",
     "synset_sayisi": 7
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
+  "mana_yontem": "m1",
+  "gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
+  "wordnet": [
     "catch.v.02",
     "elate.v.01",
     "inspire.v.01",
@@ -470,12 +342,10 @@
     "pick_up.v.01",
     "regenerate.v.09"
   ],
-  "muhassas_tasnif": {
+  "muhassas": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
-  },
-  "kaliplar": {},
-  "kelimeler": []
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

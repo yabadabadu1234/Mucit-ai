@@ -1,482 +1,335 @@
 {
   "kok": "لاكم",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "لاكم", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "لاكما",
-        "u": "لاكما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لاكما (form III)\n# لَاكَمَا (lākamā) /laː.ka.maː/: third-person masculine dual past active of لَاكَمَ (lākama)\n# لَاكِمَا (lākimā) /laː.ki.maː/: second-person dual imperative of لَاكَمَ (lākama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lākamā", "lākama", "lākimā"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "لاكمتما",
-        "u": "لاكمتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لَاكَمْتُمَا • (lākamtumā) (form III) /laː.kam.tu.maː/\n# second-person dual past active of لَاكَمَ (lākama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lākamtumā", "lākama"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "لاكمت",
-        "u": "لاكمت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لاكمت (form III)\n# لَاكَمْتُ (lākamtu) /laː.kam.tu/: first-person singular past active of لَاكَمَ (lākama)\n# لَاكَمْتَ (lākamta) /laː.kam.ta/: second-person masculine singular past active of لَاكَمَ (lākama)\n# لَاكَمْتِ (lākamti) /laː.kam.ti/: second-person feminine singular past active of لَاكَمَ (lākama)\n# لَاكَمَتْ (lākamat) /laː.ka.mat/: third-person feminine singular past active of لَاكَمَ (l",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lākamtu", "lākama", "lākamta"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "لاكمتا",
-        "u": "لاكمتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لَاكَمَتَا • (lākamatā) (form III) /laː.ka.ma.taː/\n# third-person feminine dual past active of لَاكَمَ (lākama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lākamatā", "lākama"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "لاكمنا",
-        "u": "لاكمنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لَاكَمْنَا • (lākamnā) (form III) /laː.kam.naː/\n# first-person plural past active of لَاكَمَ (lākama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lākamnā", "lākama"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "لاكمن",
-        "u": "لاكمن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لاكمن (form III)\n# لَاكَمْنَ (lākamna) /laː.kam.na/: third-person feminine plural past active of لَاكَمَ (lākama)\n# لَاكِمْنَ (lākimna) /laː.kim.na/: second-person feminine plural imperative of لَاكَمَ (lākama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lākamna", "lākama", "lākimna"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "لاكمتن",
-        "u": "لاكمتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لَاكَمْتُنَّ • (lākamtunna) (form III) /laː.kam.tun.na/\n# second-person feminine plural past active of لَاكَمَ (lākama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lākamtunna", "lākama"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "لاكموا",
-        "u": "لاكموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لاكموا (form III)\n# لَاكَمُوا (lākamū) /laː.ka.muː/: third-person masculine plural past active of لَاكَمَ (lākama)\n# لَاكِمُوا (lākimū) /laː.ki.muː/: second-person masculine plural imperative of لَاكَمَ (lākama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lākamū", "lākama", "lākimū"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "لوكم",
-        "u": "لوكم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لُوكِمَ • (lūkima) (form III) /luː.ki.ma/\n# third-person masculine singular past passive of لَاكَمَ (lākama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lūkima", "lākama"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "لاكمتم",
-        "u": "لاكمتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لَاكَمْتُمْ • (lākamtum) (form III) /laː.kam.tum/\n# second-person masculine plural past active of لَاكَمَ (lākama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lākamtum", "lākama"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "لوكمت",
-        "u": "لوكمت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لوكمت (form III)\n# لُوكِمْتُ (lūkimtu) /luː.kim.tu/: first-person singular past passive of لَاكَمَ (lākama)\n# لُوكِمْتَ (lūkimta) /luː.kim.ta/: second-person masculine singular past passive of لَاكَمَ (lākama)\n# لُوكِمْتِ (lūkimti) /luː.kim.ti/: second-person feminine singular past passive of لَاكَمَ (lākama)\n# لُوكِمَتْ (lūkimat) /luː.ki.mat/: third-person feminine singular past passive of لَاكَم",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lūkimtu", "lākama", "lūkimta"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "لوكمتما",
-        "u": "لوكمتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لُوكِمْتُمَا • (lūkimtumā) (form III) /luː.kim.tu.maː/\n# second-person dual past passive of لَاكَمَ (lākama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lūkimtumā", "lākama"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "لوكمتم",
-        "u": "لوكمتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لُوكِمْتُمْ • (lūkimtum) (form III) /luː.kim.tum/\n# second-person masculine plural past passive of لَاكَمَ (lākama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lūkimtum", "lākama"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "لوكمتا",
-        "u": "لوكمتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لُوكِمَتَا • (lūkimatā) (form III) /luː.ki.ma.taː/\n# third-person feminine dual past passive of لَاكَمَ (lākama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lūkimatā", "lākama"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "لوكمتن",
-        "u": "لوكمتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لُوكِمْتُنَّ • (lūkimtunna) (form III) /luː.kim.tun.na/\n# second-person feminine plural past passive of لَاكَمَ (lākama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lūkimtunna", "lākama"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "تلاكمين",
-        "u": "تلاكمين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تلاكمين (form III)\n# تُلَاكِمِينَ (tulākimīna) /tu.laː.ki.miː.na/: second-person feminine singular non-past active indicative of لَاكَمَ (lākama)\n# تُلَاكَمِينَ (tulākamīna) /tu.laː.ka.miː.na/: second-person feminine singular non-past passive indicative of لَاكَمَ (lākama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tulākimīna", "lākama", "tulākamīna"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "لوكمنا",
-        "u": "لوكمنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لُوكِمْنَا • (lūkimnā) (form III) /luː.kim.naː/\n# first-person plural past passive of لَاكَمَ (lākama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lūkimnā", "lākama"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "ألاكم",
-        "u": "ألاكم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ألاكم (form III)\n# أُلَاكِمُ (ʔulākimu) /ʔu.laː.ki.mu/: first-person singular non-past active indicative of لَاكَمَ (lākama)\n# أُلَاكَمُ (ʔulākamu) /ʔu.laː.ka.mu/: first-person singular non-past passive indicative of لَاكَمَ (lākama)\n# أُلَاكِمَ (ʔulākima) /ʔu.laː.ki.ma/: first-person singular non-past active subjunctive of لَاكَمَ (lākama)\n# أُلَاكَمَ (ʔulākama) /ʔu.laː.ka.ma/: first-person singu",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔulākimu", "lākama", "ʔulākamu"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "لوكموا",
-        "u": "لوكموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لُوكِمُوا • (lūkimū) (form III) /luː.ki.muː/\n# third-person masculine plural past passive of لَاكَمَ (lākama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lūkimū", "lākama"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "لوكمن",
-        "u": "لوكمن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لُوكِمْنَ • (lūkimna) (form III) /luː.kim.na/\n# third-person feminine plural past passive of لَاكَمَ (lākama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lūkimna", "lākama"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "تلاكم",
-        "u": "تلاكم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تلاكم (form III)\n# تُلَاكِمُ (tulākimu) /tu.laː.ki.mu/: inflection of لَاكَمَ (lākama):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُلَاكَمُ (tulākamu) /tu.laː.ka.mu/: inflection of لَاكَمَ (lākama):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive in",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tulākimu", "lākama", "tulākamu"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "نلاكم",
-        "u": "نلاكم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نلاكم (form III)\n# نُلَاكِمُ (nulākimu) /nu.laː.ki.mu/: first-person plural non-past active indicative of لَاكَمَ (lākama)\n# نُلَاكَمُ (nulākamu) /nu.laː.ka.mu/: first-person plural non-past passive indicative of لَاكَمَ (lākama)\n# نُلَاكِمَ (nulākima) /nu.laː.ki.ma/: first-person plural non-past active subjunctive of لَاكَمَ (lākama)\n# نُلَاكَمَ (nulākama) /nu.laː.ka.ma/: first-person plural non-",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nulākimu", "lākama", "nulākamu"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "يلاكم",
-        "u": "يلاكم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يلاكم (form III)\n# يُلَاكِمُ (yulākimu) /ju.laː.ki.mu/: third-person masculine singular non-past active indicative of لَاكَمَ (lākama)\n# يُلَاكَمُ (yulākamu) /ju.laː.ka.mu/: third-person masculine singular non-past passive indicative of لَاكَمَ (lākama)\n# يُلَاكِمَ (yulākima) /ju.laː.ki.ma/: third-person masculine singular non-past active subjunctive of لَاكَمَ (lākama)\n# يُلَاكَمَ (yulākama) /ju.",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yulākimu", "lākama", "yulākamu"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "لوكما",
-        "u": "لوكما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لُوكِمَا • (lūkimā) (form III) /luː.ki.maː/\n# third-person masculine dual past passive of لَاكَمَ (lākama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lūkimā", "lākama"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "يلاكمان",
-        "u": "يلاكمان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يلاكمان (form III)\n# يُلَاكِمَانِ (yulākimāni) /ju.laː.ki.maː.ni/: third-person masculine dual non-past active indicative of لَاكَمَ (lākama)\n# يُلَاكَمَانِ (yulākamāni) /ju.laː.ka.maː.ni/: third-person masculine dual non-past passive indicative of لَاكَمَ (lākama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yulākimāni", "lākama", "yulākamāni"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "تلاكمان",
-        "u": "تلاكمان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تلاكمان (form III)\n# تُلَاكِمَانِ (tulākimāni) /tu.laː.ki.maː.ni/: inflection of لَاكَمَ (lākama):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُلَاكَمَانِ (tulākamāni) /tu.laː.ka.maː.ni/: inflection of لَاكَمَ (lākama):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tulākimāni", "lākama", "tulākamāni"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "تلاكمون",
-        "u": "تلاكمون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تلاكمون (form III)\n# تُلَاكِمُونَ (tulākimūna) /tu.laː.ki.muː.na/: second-person masculine plural non-past active indicative of لَاكَمَ (lākama)\n# تُلَاكَمُونَ (tulākamūna) /tu.laː.ka.muː.na/: second-person masculine plural non-past passive indicative of لَاكَمَ (lākama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tulākimūna", "lākama", "tulākamūna"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "تلاكمن",
-        "u": "تلاكمن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تلاكمن (form III)\n# تُلَاكِمْنَ (tulākimna) /tu.laː.kim.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of لَاكَمَ (lākama)\n# تُلَاكَمْنَ (tulākamna) /tu.laː.kam.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of لَاكَمَ (lākama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tulākimna", "lākama", "tulākamna"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "يلاكمن",
-        "u": "يلاكمن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يلاكمن (form III)\n# يُلَاكِمْنَ (yulākimna) /ju.laː.kim.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of لَاكَمَ (lākama)\n# يُلَاكَمْنَ (yulākamna) /ju.laː.kam.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of لَاكَمَ (lākama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yulākimna", "lākama", "yulākamna"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "تلاكمي",
-        "u": "تلاكمي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تلاكمي (form III)\n# تُلَاكِمِي (tulākimī) /tu.laː.ki.miː/: second-person feminine singular non-past active subjunctive/jussive of لَاكَمَ (lākama)\n# تُلَاكَمِي (tulākamī) /tu.laː.ka.miː/: second-person feminine singular non-past passive subjunctive/jussive of لَاكَمَ (lākama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tulākimī", "lākama", "tulākamī"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "يلاكمون",
-        "u": "يلاكمون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يلاكمون (form III)\n# يُلَاكِمُونَ (yulākimūna) /ju.laː.ki.muː.na/: third-person masculine plural non-past active indicative of لَاكَمَ (lākama)\n# يُلَاكَمُونَ (yulākamūna) /ju.laː.ka.muː.na/: third-person masculine plural non-past passive indicative of لَاكَمَ (lākama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yulākimūna", "lākama", "yulākamūna"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "يلاكما",
-        "u": "يلاكما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يلاكما (form III)\n# يُلَاكِمَا (yulākimā) /ju.laː.ki.maː/: third-person masculine dual non-past active subjunctive/jussive of لَاكَمَ (lākama)\n# يُلَاكَمَا (yulākamā) /ju.laː.ka.maː/: third-person masculine dual non-past passive subjunctive/jussive of لَاكَمَ (lākama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yulākimā", "lākama", "yulākamā"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "تلاكما",
-        "u": "تلاكما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تلاكما (form III)\n# تُلَاكِمَا (tulākimā) /tu.laː.ki.maː/: inflection of لَاكَمَ (lākama):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُلَاكَمَا (tulākamā) /tu.laː.ka.maː/: inflection of لَاكَمَ (lākama):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjun",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tulākimā", "lākama", "tulākamā"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "لاكمي",
-        "u": "لاكمي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لَاكِمِي • (lākimī) (form III) /laː.ki.miː/\n# second-person feminine singular imperative of لَاكَمَ (lākama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["lākimī", "lākama"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "يلاكموا",
-        "u": "يلاكموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يلاكموا (form III)\n# يُلَاكِمُوا (yulākimū) /ju.laː.ki.muː/: third-person masculine plural non-past active subjunctive/jussive of لَاكَمَ (lākama)\n# يُلَاكَمُوا (yulākamū) /ju.laː.ka.muː/: third-person masculine plural non-past passive subjunctive/jussive of لَاكَمَ (lākama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yulākimū", "lākama", "yulākamū"],
-        "k": "لاكم",
-        "yol": "kök"
-      },
-      {
-        "w": "تلاكموا",
-        "u": "تلاكموا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تلاكموا (form III)\n# تُلَاكِمُوا (tulākimū) /tu.laː.ki.muː/: second-person masculine plural non-past active subjunctive/jussive of لَاكَمَ (lākama)\n# تُلَاكَمُوا (tulākamū) /tu.laː.ka.muː/: second-person masculine plural non-past passive subjunctive/jussive of لَاكَمَ (lākama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tulākimū", "lākama", "tulākamū"],
-        "k": "لاكم",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "لك",
+  "ses": {
     "harf": "ل",
+    "fasil": "لك",
     "mahrec": "zelakiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "لاكما",
+      "tur": "verb",
+      "baslik": "لاكما (form III)\n# لَاكَمَا (lākamā) /laː.ka.maː/: third-person masculine dual past active of لَاكَمَ (lākama)\n# لَاكِمَا (lākimā) /laː.ki.maː/: second-person dual imperative of لَاكَمَ (lākama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lākamā", "lākama", "lākimā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "لاكمتما",
+      "tur": "verb",
+      "baslik": "لَاكَمْتُمَا • (lākamtumā) (form III) /laː.kam.tu.maː/\n# second-person dual past active of لَاكَمَ (lākama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lākamtumā", "lākama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "لاكمت",
+      "tur": "verb",
+      "baslik": "لاكمت (form III)\n# لَاكَمْتُ (lākamtu) /laː.kam.tu/: first-person singular past active of لَاكَمَ (lākama)\n# لَاكَمْتَ (lākamta) /laː.kam.ta/: second-person masculine singular past active of لَاكَمَ (lākama)\n# لَاكَمْتِ (lākamti) /laː.kam.ti/: second-person feminine singular past active of لَاكَمَ (lākama)\n# لَاكَمَتْ (lākamat) /laː.ka.mat/: third-person feminine singular past active of لَاكَمَ (l",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lākamtu", "lākama", "lākamta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "لاكمتا",
+      "tur": "verb",
+      "baslik": "لَاكَمَتَا • (lākamatā) (form III) /laː.ka.ma.taː/\n# third-person feminine dual past active of لَاكَمَ (lākama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lākamatā", "lākama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "لاكمنا",
+      "tur": "verb",
+      "baslik": "لَاكَمْنَا • (lākamnā) (form III) /laː.kam.naː/\n# first-person plural past active of لَاكَمَ (lākama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lākamnā", "lākama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "لاكمن",
+      "tur": "verb",
+      "baslik": "لاكمن (form III)\n# لَاكَمْنَ (lākamna) /laː.kam.na/: third-person feminine plural past active of لَاكَمَ (lākama)\n# لَاكِمْنَ (lākimna) /laː.kim.na/: second-person feminine plural imperative of لَاكَمَ (lākama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lākamna", "lākama", "lākimna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "لاكمتن",
+      "tur": "verb",
+      "baslik": "لَاكَمْتُنَّ • (lākamtunna) (form III) /laː.kam.tun.na/\n# second-person feminine plural past active of لَاكَمَ (lākama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lākamtunna", "lākama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "لاكموا",
+      "tur": "verb",
+      "baslik": "لاكموا (form III)\n# لَاكَمُوا (lākamū) /laː.ka.muː/: third-person masculine plural past active of لَاكَمَ (lākama)\n# لَاكِمُوا (lākimū) /laː.ki.muː/: second-person masculine plural imperative of لَاكَمَ (lākama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lākamū", "lākama", "lākimū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "لوكم",
+      "tur": "verb",
+      "baslik": "لُوكِمَ • (lūkima) (form III) /luː.ki.ma/\n# third-person masculine singular past passive of لَاكَمَ (lākama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lūkima", "lākama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "لاكمتم",
+      "tur": "verb",
+      "baslik": "لَاكَمْتُمْ • (lākamtum) (form III) /laː.kam.tum/\n# second-person masculine plural past active of لَاكَمَ (lākama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lākamtum", "lākama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "لوكمت",
+      "tur": "verb",
+      "baslik": "لوكمت (form III)\n# لُوكِمْتُ (lūkimtu) /luː.kim.tu/: first-person singular past passive of لَاكَمَ (lākama)\n# لُوكِمْتَ (lūkimta) /luː.kim.ta/: second-person masculine singular past passive of لَاكَمَ (lākama)\n# لُوكِمْتِ (lūkimti) /luː.kim.ti/: second-person feminine singular past passive of لَاكَمَ (lākama)\n# لُوكِمَتْ (lūkimat) /luː.ki.mat/: third-person feminine singular past passive of لَاكَم",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lūkimtu", "lākama", "lūkimta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "لوكمتما",
+      "tur": "verb",
+      "baslik": "لُوكِمْتُمَا • (lūkimtumā) (form III) /luː.kim.tu.maː/\n# second-person dual past passive of لَاكَمَ (lākama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lūkimtumā", "lākama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "لوكمتم",
+      "tur": "verb",
+      "baslik": "لُوكِمْتُمْ • (lūkimtum) (form III) /luː.kim.tum/\n# second-person masculine plural past passive of لَاكَمَ (lākama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lūkimtum", "lākama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "لوكمتا",
+      "tur": "verb",
+      "baslik": "لُوكِمَتَا • (lūkimatā) (form III) /luː.ki.ma.taː/\n# third-person feminine dual past passive of لَاكَمَ (lākama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lūkimatā", "lākama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "لوكمتن",
+      "tur": "verb",
+      "baslik": "لُوكِمْتُنَّ • (lūkimtunna) (form III) /luː.kim.tun.na/\n# second-person feminine plural past passive of لَاكَمَ (lākama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lūkimtunna", "lākama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تلاكمين",
+      "tur": "verb",
+      "baslik": "تلاكمين (form III)\n# تُلَاكِمِينَ (tulākimīna) /tu.laː.ki.miː.na/: second-person feminine singular non-past active indicative of لَاكَمَ (lākama)\n# تُلَاكَمِينَ (tulākamīna) /tu.laː.ka.miː.na/: second-person feminine singular non-past passive indicative of لَاكَمَ (lākama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tulākimīna", "lākama", "tulākamīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "لوكمنا",
+      "tur": "verb",
+      "baslik": "لُوكِمْنَا • (lūkimnā) (form III) /luː.kim.naː/\n# first-person plural past passive of لَاكَمَ (lākama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lūkimnā", "lākama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ألاكم",
+      "tur": "verb",
+      "baslik": "ألاكم (form III)\n# أُلَاكِمُ (ʔulākimu) /ʔu.laː.ki.mu/: first-person singular non-past active indicative of لَاكَمَ (lākama)\n# أُلَاكَمُ (ʔulākamu) /ʔu.laː.ka.mu/: first-person singular non-past passive indicative of لَاكَمَ (lākama)\n# أُلَاكِمَ (ʔulākima) /ʔu.laː.ki.ma/: first-person singular non-past active subjunctive of لَاكَمَ (lākama)\n# أُلَاكَمَ (ʔulākama) /ʔu.laː.ka.ma/: first-person singu",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔulākimu", "lākama", "ʔulākamu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "لوكموا",
+      "tur": "verb",
+      "baslik": "لُوكِمُوا • (lūkimū) (form III) /luː.ki.muː/\n# third-person masculine plural past passive of لَاكَمَ (lākama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lūkimū", "lākama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "لوكمن",
+      "tur": "verb",
+      "baslik": "لُوكِمْنَ • (lūkimna) (form III) /luː.kim.na/\n# third-person feminine plural past passive of لَاكَمَ (lākama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lūkimna", "lākama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تلاكم",
+      "tur": "verb",
+      "baslik": "تلاكم (form III)\n# تُلَاكِمُ (tulākimu) /tu.laː.ki.mu/: inflection of لَاكَمَ (lākama):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُلَاكَمُ (tulākamu) /tu.laː.ka.mu/: inflection of لَاكَمَ (lākama):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive in",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tulākimu", "lākama", "tulākamu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نلاكم",
+      "tur": "verb",
+      "baslik": "نلاكم (form III)\n# نُلَاكِمُ (nulākimu) /nu.laː.ki.mu/: first-person plural non-past active indicative of لَاكَمَ (lākama)\n# نُلَاكَمُ (nulākamu) /nu.laː.ka.mu/: first-person plural non-past passive indicative of لَاكَمَ (lākama)\n# نُلَاكِمَ (nulākima) /nu.laː.ki.ma/: first-person plural non-past active subjunctive of لَاكَمَ (lākama)\n# نُلَاكَمَ (nulākama) /nu.laː.ka.ma/: first-person plural non-",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nulākimu", "lākama", "nulākamu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يلاكم",
+      "tur": "verb",
+      "baslik": "يلاكم (form III)\n# يُلَاكِمُ (yulākimu) /ju.laː.ki.mu/: third-person masculine singular non-past active indicative of لَاكَمَ (lākama)\n# يُلَاكَمُ (yulākamu) /ju.laː.ka.mu/: third-person masculine singular non-past passive indicative of لَاكَمَ (lākama)\n# يُلَاكِمَ (yulākima) /ju.laː.ki.ma/: third-person masculine singular non-past active subjunctive of لَاكَمَ (lākama)\n# يُلَاكَمَ (yulākama) /ju.",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yulākimu", "lākama", "yulākamu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "لوكما",
+      "tur": "verb",
+      "baslik": "لُوكِمَا • (lūkimā) (form III) /luː.ki.maː/\n# third-person masculine dual past passive of لَاكَمَ (lākama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lūkimā", "lākama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يلاكمان",
+      "tur": "verb",
+      "baslik": "يلاكمان (form III)\n# يُلَاكِمَانِ (yulākimāni) /ju.laː.ki.maː.ni/: third-person masculine dual non-past active indicative of لَاكَمَ (lākama)\n# يُلَاكَمَانِ (yulākamāni) /ju.laː.ka.maː.ni/: third-person masculine dual non-past passive indicative of لَاكَمَ (lākama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yulākimāni", "lākama", "yulākamāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تلاكمان",
+      "tur": "verb",
+      "baslik": "تلاكمان (form III)\n# تُلَاكِمَانِ (tulākimāni) /tu.laː.ki.maː.ni/: inflection of لَاكَمَ (lākama):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُلَاكَمَانِ (tulākamāni) /tu.laː.ka.maː.ni/: inflection of لَاكَمَ (lākama):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tulākimāni", "lākama", "tulākamāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تلاكمون",
+      "tur": "verb",
+      "baslik": "تلاكمون (form III)\n# تُلَاكِمُونَ (tulākimūna) /tu.laː.ki.muː.na/: second-person masculine plural non-past active indicative of لَاكَمَ (lākama)\n# تُلَاكَمُونَ (tulākamūna) /tu.laː.ka.muː.na/: second-person masculine plural non-past passive indicative of لَاكَمَ (lākama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tulākimūna", "lākama", "tulākamūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تلاكمن",
+      "tur": "verb",
+      "baslik": "تلاكمن (form III)\n# تُلَاكِمْنَ (tulākimna) /tu.laː.kim.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of لَاكَمَ (lākama)\n# تُلَاكَمْنَ (tulākamna) /tu.laː.kam.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of لَاكَمَ (lākama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tulākimna", "lākama", "tulākamna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يلاكمن",
+      "tur": "verb",
+      "baslik": "يلاكمن (form III)\n# يُلَاكِمْنَ (yulākimna) /ju.laː.kim.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of لَاكَمَ (lākama)\n# يُلَاكَمْنَ (yulākamna) /ju.laː.kam.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of لَاكَمَ (lākama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yulākimna", "lākama", "yulākamna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تلاكمي",
+      "tur": "verb",
+      "baslik": "تلاكمي (form III)\n# تُلَاكِمِي (tulākimī) /tu.laː.ki.miː/: second-person feminine singular non-past active subjunctive/jussive of لَاكَمَ (lākama)\n# تُلَاكَمِي (tulākamī) /tu.laː.ka.miː/: second-person feminine singular non-past passive subjunctive/jussive of لَاكَمَ (lākama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tulākimī", "lākama", "tulākamī"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يلاكمون",
+      "tur": "verb",
+      "baslik": "يلاكمون (form III)\n# يُلَاكِمُونَ (yulākimūna) /ju.laː.ki.muː.na/: third-person masculine plural non-past active indicative of لَاكَمَ (lākama)\n# يُلَاكَمُونَ (yulākamūna) /ju.laː.ka.muː.na/: third-person masculine plural non-past passive indicative of لَاكَمَ (lākama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yulākimūna", "lākama", "yulākamūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يلاكما",
+      "tur": "verb",
+      "baslik": "يلاكما (form III)\n# يُلَاكِمَا (yulākimā) /ju.laː.ki.maː/: third-person masculine dual non-past active subjunctive/jussive of لَاكَمَ (lākama)\n# يُلَاكَمَا (yulākamā) /ju.laː.ka.maː/: third-person masculine dual non-past passive subjunctive/jussive of لَاكَمَ (lākama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yulākimā", "lākama", "yulākamā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تلاكما",
+      "tur": "verb",
+      "baslik": "تلاكما (form III)\n# تُلَاكِمَا (tulākimā) /tu.laː.ki.maː/: inflection of لَاكَمَ (lākama):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُلَاكَمَا (tulākamā) /tu.laː.ka.maː/: inflection of لَاكَمَ (lākama):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjun",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tulākimā", "lākama", "tulākamā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "لاكمي",
+      "tur": "verb",
+      "baslik": "لَاكِمِي • (lākimī) (form III) /laː.ki.miː/\n# second-person feminine singular imperative of لَاكَمَ (lākama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["lākimī", "lākama"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يلاكموا",
+      "tur": "verb",
+      "baslik": "يلاكموا (form III)\n# يُلَاكِمُوا (yulākimū) /ju.laː.ki.muː/: third-person masculine plural non-past active subjunctive/jussive of لَاكَمَ (lākama)\n# يُلَاكَمُوا (yulākamū) /ju.laː.ka.muː/: third-person masculine plural non-past passive subjunctive/jussive of لَاكَمَ (lākama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yulākimū", "lākama", "yulākamū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تلاكموا",
+      "tur": "verb",
+      "baslik": "تلاكموا (form III)\n# تُلَاكِمُوا (tulākimū) /tu.laː.ki.muː/: second-person masculine plural non-past active subjunctive/jussive of لَاكَمَ (lākama)\n# تُلَاكَمُوا (tulākamū) /tu.laː.ka.muː/: second-person masculine plural non-past passive subjunctive/jussive of لَاكَمَ (lākama)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tulākimū", "lākama", "tulākamū"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "لاكم", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

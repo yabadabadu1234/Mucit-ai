@@ -1,691 +1,532 @@
 {
   "kok": "ءيءس",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ءيءس", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يوءس",
-        "u": "يوءس",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يوءس (form IV)\n# يُوءَسُ (yūʔasu) /juː.ʔa.su/: third-person masculine singular non-past passive indicative of أَيْئَسَ (ʔayʔasa)\n# يُوءَسَ (yūʔasa) /juː.ʔa.sa/: third-person masculine singular non-past passive subjunctive of أَيْئَسَ (ʔayʔasa)\n# يُوءَسْ (yūʔas) /juː.ʔas/: third-person masculine singular non-past passive jussive of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūʔasu", "ʔayʔasa", "yūʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "توءس",
-        "u": "توءس",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "توءس (form IV)\n# تُوءَسُ (tūʔasu) /tuː.ʔa.su/: inflection of أَيْئَسَ (ʔayʔasa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُوءَسَ (tūʔasa) /tuː.ʔa.sa/: inflection of أَيْئَسَ (ʔayʔasa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūʔasu", "ʔayʔasa", "tūʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "توءسين",
-        "u": "توءسين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُوءَسِينَ • (tūʔasīna) (form IV) /tuː.ʔa.siː.na/\n# second-person feminine singular non-past passive indicative of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūʔasīna", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "توءسي",
-        "u": "توءسي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُوءَسِي • (tūʔasī) (form IV) /tuː.ʔa.siː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūʔasī", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "أيئس",
-        "u": "أيئس",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أيئس (form IV)\n# أَيْئَسَ (ʔayʔasa) /ʔaj.ʔa.sa/: third-person masculine singular past active of أَيْئَسَ (ʔayʔasa)\n# أَيْئِسْ (ʔayʔis) /ʔaj.ʔis/: second-person masculine singular imperative of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔayʔasa", "ʔayʔis"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "أوءس",
-        "u": "أوءس",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أوءس (form IV)\n# أُوءَسُ (ʔūʔasu) /ʔuː.ʔa.su/: first-person singular non-past passive indicative of أَيْئَسَ (ʔayʔasa)\n# أُوءَسَ (ʔūʔasa) /ʔuː.ʔa.sa/: first-person singular non-past passive subjunctive of أَيْئَسَ (ʔayʔasa)\n# أُوءَسْ (ʔūʔas) /ʔuː.ʔas/: first-person singular non-past passive jussive of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔūʔasu", "ʔayʔasa", "ʔūʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "نوءس",
-        "u": "نوءس",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نوءس (form IV)\n# نُوءَسُ (nūʔasu) /nuː.ʔa.su/: first-person plural non-past passive indicative of أَيْئَسَ (ʔayʔasa)\n# نُوءَسَ (nūʔasa) /nuː.ʔa.sa/: first-person plural non-past passive subjunctive of أَيْئَسَ (ʔayʔasa)\n# نُوءَسْ (nūʔas) /nuː.ʔas/: first-person plural non-past passive jussive of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nūʔasu", "ʔayʔasa", "nūʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "توءسون",
-        "u": "توءسون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُوءَسُونَ • (tūʔasūna) (form IV) /tuː.ʔa.suː.na/\n# second-person masculine plural non-past passive indicative of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūʔasūna", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "توءسوا",
-        "u": "توءسوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُوءَسُوا • (tūʔasū) (form IV) /tuː.ʔa.suː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūʔasū", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "يوءسون",
-        "u": "يوءسون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُوءَسُونَ • (yūʔasūna) (form IV) /juː.ʔa.suː.na/\n# third-person masculine plural non-past passive indicative of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūʔasūna", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "يوءسوا",
-        "u": "يوءسوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُوءَسُوا • (yūʔasū) (form IV) /juː.ʔa.suː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūʔasū", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "توءسن",
-        "u": "توءسن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُوءَسْنَ • (tūʔasna) (form IV) /tuː.ʔas.na/\n# second-person feminine plural non-past passive indicative/subjunctive/jussive of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūʔasna", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "يوءسن",
-        "u": "يوءسن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يُوءَسْنَ • (yūʔasna) (form IV) /juː.ʔas.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūʔasna", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "أيئستما",
-        "u": "أيئستما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَيْئَسْتُمَا • (ʔayʔastumā) (form IV) /ʔaj.ʔas.tu.maː/\n# second-person dual past active of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔayʔastumā", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "أيئست",
-        "u": "أيئست",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أيئست (form IV)\n# أَيْئَسْتُ (ʔayʔastu) /ʔaj.ʔas.tu/: first-person singular past active of أَيْئَسَ (ʔayʔasa)\n# أَيْئَسْتَ (ʔayʔasta) /ʔaj.ʔas.ta/: second-person masculine singular past active of أَيْئَسَ (ʔayʔasa)\n# أَيْئَسْتِ (ʔayʔasti) /ʔaj.ʔas.ti/: second-person feminine singular past active of أَيْئَسَ (ʔayʔasa)\n# أَيْئَسَتْ (ʔayʔasat) /ʔaj.ʔa.sat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔayʔastu", "ʔayʔasa", "ʔayʔasta"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "أيئسا",
-        "u": "أيئسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أيئسا (form IV)\n# أَيْئَسَا (ʔayʔasā) /ʔaj.ʔa.saː/: third-person masculine dual past active of أَيْئَسَ (ʔayʔasa)\n# أَيْئِسَا (ʔayʔisā) /ʔaj.ʔi.saː/: second-person dual imperative of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔayʔasā", "ʔayʔasa", "ʔayʔisā"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "أيئستا",
-        "u": "أيئستا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَيْئَسَتَا • (ʔayʔasatā) (form IV) /ʔaj.ʔa.sa.taː/\n# third-person feminine dual past active of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔayʔasatā", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "أيئسنا",
-        "u": "أيئسنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَيْئَسْنَا • (ʔayʔasnā) (form IV) /ʔaj.ʔas.naː/\n# first-person plural past active of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔayʔasnā", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "أيئستم",
-        "u": "أيئستم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَيْئَسْتُمْ • (ʔayʔastum) (form IV) /ʔaj.ʔas.tum/\n# second-person masculine plural past active of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔayʔastum", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "أيئستن",
-        "u": "أيئستن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَيْئَسْتُنَّ • (ʔayʔastunna) (form IV) /ʔaj.ʔas.tun.na/\n# second-person feminine plural past active of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔayʔastunna", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "أيئسوا",
-        "u": "أيئسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أيئسوا (form IV)\n# أَيْئَسُوا (ʔayʔasū) /ʔaj.ʔa.suː/: third-person masculine plural past active of أَيْئَسَ (ʔayʔasa)\n# أَيْئِسُوا (ʔayʔisū) /ʔaj.ʔi.suː/: second-person masculine plural imperative of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔayʔasū", "ʔayʔasa", "ʔayʔisū"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "أوئست",
-        "u": "أوئست",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوئست (form IV)\n# أُوئِسْتُ (ʔūʔistu) /ʔuː.ʔis.tu/: first-person singular past passive of أَيْئَسَ (ʔayʔasa)\n# أُوئِسْتَ (ʔūʔista) /ʔuː.ʔis.ta/: second-person masculine singular past passive of أَيْئَسَ (ʔayʔasa)\n# أُوئِسْتِ (ʔūʔisti) /ʔuː.ʔis.ti/: second-person feminine singular past passive of أَيْئَسَ (ʔayʔasa)\n# أُوئِسَتْ (ʔūʔisat) /ʔuː.ʔi.sat/: third-person feminine singular past passive of أ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔūʔistu", "ʔayʔasa", "ʔūʔista"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "أيئسن",
-        "u": "أيئسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أيئسن (form IV)\n# أَيْئَسْنَ (ʔayʔasna) /ʔaj.ʔas.na/: third-person feminine plural past active of أَيْئَسَ (ʔayʔasa)\n# أَيْئِسْنَ (ʔayʔisna) /ʔaj.ʔis.na/: second-person feminine plural imperative of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔayʔasna", "ʔayʔasa", "ʔayʔisna"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "أوئستما",
-        "u": "أوئستما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُوئِسْتُمَا • (ʔūʔistumā) (form IV) /ʔuː.ʔis.tu.maː/\n# second-person dual past passive of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔūʔistumā", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "أوئس",
-        "u": "أوئس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أوئس (form IV)\n# أُوئِسَ (ʔūʔisa) /ʔuː.ʔi.sa/: inflection of أَيْئَسَ (ʔayʔasa):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُوئِسُ (ʔūʔisu) /ʔuː.ʔi.su/: first-person singular non-past active indicative of أَيْئَسَ (ʔayʔasa)\n# أُوئِسْ (ʔūʔis) /ʔuː.ʔis/: first-person singular non-past active jussive of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔūʔisa", "ʔayʔasa", "ʔūʔisu"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "أوئسا",
-        "u": "أوئسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُوئِسَا • (ʔūʔisā) (form IV) /ʔuː.ʔi.saː/\n# third-person masculine dual past passive of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔūʔisā", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "أوئستا",
-        "u": "أوئستا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُوئِسَتَا • (ʔūʔisatā) (form IV) /ʔuː.ʔi.sa.taː/\n# third-person feminine dual past passive of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔūʔisatā", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "أوئسنا",
-        "u": "أوئسنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُوئِسْنَا • (ʔūʔisnā) (form IV) /ʔuː.ʔis.naː/\n# first-person plural past passive of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔūʔisnā", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "أوئستم",
-        "u": "أوئستم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُوئِسْتُمْ • (ʔūʔistum) (form IV) /ʔuː.ʔis.tum/\n# second-person masculine plural past passive of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔūʔistum", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "أوئستن",
-        "u": "أوئستن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُوئِسْتُنَّ • (ʔūʔistunna) (form IV) /ʔuː.ʔis.tun.na/\n# second-person feminine plural past passive of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔūʔistunna", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "أوئسوا",
-        "u": "أوئسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُوئِسُوا • (ʔūʔisū) (form IV) /ʔuː.ʔi.suː/\n# third-person masculine plural past passive of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔūʔisū", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "أوئسن",
-        "u": "أوئسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُوئِسْنَ • (ʔūʔisna) (form IV) /ʔuː.ʔis.na/\n# third-person feminine plural past passive of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔūʔisna", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "توئس",
-        "u": "توئس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "توئس (form IV)\n# تُوئِسُ (tūʔisu) /tuː.ʔi.su/: inflection of أَيْئَسَ (ʔayʔasa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُوئِسَ (tūʔisa) /tuː.ʔi.sa/: inflection of أَيْئَسَ (ʔayʔasa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive\n# ت",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūʔisu", "ʔayʔasa", "tūʔisa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "يوئس",
-        "u": "يوئس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يوئس (form IV)\n# يُوئِسُ (yūʔisu) /juː.ʔi.su/: third-person masculine singular non-past active indicative of أَيْئَسَ (ʔayʔasa)\n# يُوئِسَ (yūʔisa) /juː.ʔi.sa/: third-person masculine singular non-past active subjunctive of أَيْئَسَ (ʔayʔasa)\n# يُوئِسْ (yūʔis) /juː.ʔis/: third-person masculine singular non-past active jussive of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūʔisu", "ʔayʔasa", "yūʔisa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "نوئس",
-        "u": "نوئس",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نوئس (form IV)\n# نُوئِسُ (nūʔisu) /nuː.ʔi.su/: first-person plural non-past active indicative of أَيْئَسَ (ʔayʔasa)\n# نُوئِسَ (nūʔisa) /nuː.ʔi.sa/: first-person plural non-past active subjunctive of أَيْئَسَ (ʔayʔasa)\n# نُوئِسْ (nūʔis) /nuː.ʔis/: first-person plural non-past active jussive of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["nūʔisu", "ʔayʔasa", "nūʔisa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "توئسين",
-        "u": "توئسين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُوئِسِينَ • (tūʔisīna) (form IV) /tuː.ʔi.siː.na/\n# second-person feminine singular non-past active indicative of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūʔisīna", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "توئسان",
-        "u": "توئسان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُوئِسَانِ • (tūʔisāni) (form IV) /tuː.ʔi.saː.ni/\n# inflection of أَيْئَسَ (ʔayʔasa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūʔisāni", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "يوئسان",
-        "u": "يوئسان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُوئِسَانِ • (yūʔisāni) (form IV) /juː.ʔi.saː.ni/\n# third-person masculine dual non-past active indicative of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūʔisāni", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "توئسون",
-        "u": "توئسون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُوئِسُونَ • (tūʔisūna) (form IV) /tuː.ʔi.suː.na/\n# second-person masculine plural non-past active indicative of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūʔisūna", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "توئسن",
-        "u": "توئسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُوئِسْنَ • (tūʔisna) (form IV) /tuː.ʔis.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūʔisna", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "يوءسان",
-        "u": "يوءسان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُوءَسَانِ • (yūʔasāni) (form IV) /juː.ʔa.saː.ni/\n# third-person masculine dual non-past passive indicative of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūʔasāni", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "توءسان",
-        "u": "توءسان",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُوءَسَانِ • (tūʔasāni) (form IV) /tuː.ʔa.saː.ni/\n# inflection of أَيْئَسَ (ʔayʔasa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūʔasāni", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "يوئسا",
-        "u": "يوئسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُوئِسَا • (yūʔisā) (form IV) /juː.ʔi.saː/\n# third-person masculine dual non-past active subjunctive/jussive of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūʔisā", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "يوئسون",
-        "u": "يوئسون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُوئِسُونَ • (yūʔisūna) (form IV) /juː.ʔi.suː.na/\n# third-person masculine plural non-past active indicative of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūʔisūna", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "يوئسن",
-        "u": "يوئسن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُوئِسْنَ • (yūʔisna) (form IV) /juː.ʔis.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūʔisna", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "توئسي",
-        "u": "توئسي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُوئِسِي • (tūʔisī) (form IV) /tuː.ʔi.siː/\n# second-person feminine singular non-past active subjunctive/jussive of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūʔisī", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "يوءسا",
-        "u": "يوءسا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُوءَسَا • (yūʔasā) (form IV) /juː.ʔa.saː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūʔasā", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "يوئسوا",
-        "u": "يوئسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُوئِسُوا • (yūʔisū) (form IV) /juː.ʔi.suː/\n# third-person masculine plural non-past active subjunctive/jussive of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["yūʔisū", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "توئسوا",
-        "u": "توئسوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُوئِسُوا • (tūʔisū) (form IV) /tuː.ʔi.suː/\n# second-person masculine plural non-past active subjunctive/jussive of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūʔisū", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "توئسا",
-        "u": "توئسا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُوئِسَا • (tūʔisā) (form IV) /tuː.ʔi.saː/\n# inflection of أَيْئَسَ (ʔayʔasa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūʔisā", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "توءسا",
-        "u": "توءسا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُوءَسَا • (tūʔasā) (form IV) /tuː.ʔa.saː/\n# inflection of أَيْئَسَ (ʔayʔasa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["tūʔasā", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      },
-      {
-        "w": "أيئسي",
-        "u": "أيئسي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَيْئِسِي • (ʔayʔisī) (form IV) /ʔaj.ʔi.siː/\n# second-person feminine singular imperative of أَيْئَسَ (ʔayʔasa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iv", "no-gloss"],
-        "r": ["ʔayʔisī", "ʔayʔasa"],
-        "k": "أيأس",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "سس",
+  "ses": {
     "harf": "ء",
+    "fasil": "سس",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يوءس",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يوءس (form IV)\n# يُوءَسُ (yūʔasu) /juː.ʔa.su/: third-person masculine singular non-past passive indicative of أَيْئَسَ (ʔayʔasa)\n# يُوءَسَ (yūʔasa) /juː.ʔa.sa/: third-person masculine singular non-past passive subjunctive of أَيْئَسَ (ʔayʔasa)\n# يُوءَسْ (yūʔas) /juː.ʔas/: third-person masculine singular non-past passive jussive of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūʔasu", "ʔayʔasa", "yūʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توءس",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "توءس (form IV)\n# تُوءَسُ (tūʔasu) /tuː.ʔa.su/: inflection of أَيْئَسَ (ʔayʔasa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تُوءَسَ (tūʔasa) /tuː.ʔa.sa/: inflection of أَيْئَسَ (ʔayʔasa):\n## second-person masculine singular non-past passive subjunctive\n## third-person feminine singular non-past passive subjunctive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūʔasu", "ʔayʔasa", "tūʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توءسين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُوءَسِينَ • (tūʔasīna) (form IV) /tuː.ʔa.siː.na/\n# second-person feminine singular non-past passive indicative of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūʔasīna", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توءسي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُوءَسِي • (tūʔasī) (form IV) /tuː.ʔa.siː/\n# second-person feminine singular non-past passive subjunctive/jussive of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūʔasī", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أيئس",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أيئس (form IV)\n# أَيْئَسَ (ʔayʔasa) /ʔaj.ʔa.sa/: third-person masculine singular past active of أَيْئَسَ (ʔayʔasa)\n# أَيْئِسْ (ʔayʔis) /ʔaj.ʔis/: second-person masculine singular imperative of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔayʔasa", "ʔayʔis"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوءس",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أوءس (form IV)\n# أُوءَسُ (ʔūʔasu) /ʔuː.ʔa.su/: first-person singular non-past passive indicative of أَيْئَسَ (ʔayʔasa)\n# أُوءَسَ (ʔūʔasa) /ʔuː.ʔa.sa/: first-person singular non-past passive subjunctive of أَيْئَسَ (ʔayʔasa)\n# أُوءَسْ (ʔūʔas) /ʔuː.ʔas/: first-person singular non-past passive jussive of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔūʔasu", "ʔayʔasa", "ʔūʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نوءس",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نوءس (form IV)\n# نُوءَسُ (nūʔasu) /nuː.ʔa.su/: first-person plural non-past passive indicative of أَيْئَسَ (ʔayʔasa)\n# نُوءَسَ (nūʔasa) /nuː.ʔa.sa/: first-person plural non-past passive subjunctive of أَيْئَسَ (ʔayʔasa)\n# نُوءَسْ (nūʔas) /nuː.ʔas/: first-person plural non-past passive jussive of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nūʔasu", "ʔayʔasa", "nūʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توءسون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُوءَسُونَ • (tūʔasūna) (form IV) /tuː.ʔa.suː.na/\n# second-person masculine plural non-past passive indicative of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūʔasūna", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توءسوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُوءَسُوا • (tūʔasū) (form IV) /tuː.ʔa.suː/\n# second-person masculine plural non-past passive subjunctive/jussive of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūʔasū", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوءسون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُوءَسُونَ • (yūʔasūna) (form IV) /juː.ʔa.suː.na/\n# third-person masculine plural non-past passive indicative of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūʔasūna", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوءسوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُوءَسُوا • (yūʔasū) (form IV) /juː.ʔa.suː/\n# third-person masculine plural non-past passive subjunctive/jussive of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūʔasū", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توءسن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُوءَسْنَ • (tūʔasna) (form IV) /tuː.ʔas.na/\n# second-person feminine plural non-past passive indicative/subjunctive/jussive of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūʔasna", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوءسن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يُوءَسْنَ • (yūʔasna) (form IV) /juː.ʔas.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūʔasna", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أيئستما",
+      "tur": "verb",
+      "baslik": "أَيْئَسْتُمَا • (ʔayʔastumā) (form IV) /ʔaj.ʔas.tu.maː/\n# second-person dual past active of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔayʔastumā", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أيئست",
+      "tur": "verb",
+      "baslik": "أيئست (form IV)\n# أَيْئَسْتُ (ʔayʔastu) /ʔaj.ʔas.tu/: first-person singular past active of أَيْئَسَ (ʔayʔasa)\n# أَيْئَسْتَ (ʔayʔasta) /ʔaj.ʔas.ta/: second-person masculine singular past active of أَيْئَسَ (ʔayʔasa)\n# أَيْئَسْتِ (ʔayʔasti) /ʔaj.ʔas.ti/: second-person feminine singular past active of أَيْئَسَ (ʔayʔasa)\n# أَيْئَسَتْ (ʔayʔasat) /ʔaj.ʔa.sat/: third-person feminine singular past active ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔayʔastu", "ʔayʔasa", "ʔayʔasta"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أيئسا",
+      "tur": "verb",
+      "baslik": "أيئسا (form IV)\n# أَيْئَسَا (ʔayʔasā) /ʔaj.ʔa.saː/: third-person masculine dual past active of أَيْئَسَ (ʔayʔasa)\n# أَيْئِسَا (ʔayʔisā) /ʔaj.ʔi.saː/: second-person dual imperative of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔayʔasā", "ʔayʔasa", "ʔayʔisā"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أيئستا",
+      "tur": "verb",
+      "baslik": "أَيْئَسَتَا • (ʔayʔasatā) (form IV) /ʔaj.ʔa.sa.taː/\n# third-person feminine dual past active of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔayʔasatā", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أيئسنا",
+      "tur": "verb",
+      "baslik": "أَيْئَسْنَا • (ʔayʔasnā) (form IV) /ʔaj.ʔas.naː/\n# first-person plural past active of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔayʔasnā", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أيئستم",
+      "tur": "verb",
+      "baslik": "أَيْئَسْتُمْ • (ʔayʔastum) (form IV) /ʔaj.ʔas.tum/\n# second-person masculine plural past active of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔayʔastum", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أيئستن",
+      "tur": "verb",
+      "baslik": "أَيْئَسْتُنَّ • (ʔayʔastunna) (form IV) /ʔaj.ʔas.tun.na/\n# second-person feminine plural past active of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔayʔastunna", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أيئسوا",
+      "tur": "verb",
+      "baslik": "أيئسوا (form IV)\n# أَيْئَسُوا (ʔayʔasū) /ʔaj.ʔa.suː/: third-person masculine plural past active of أَيْئَسَ (ʔayʔasa)\n# أَيْئِسُوا (ʔayʔisū) /ʔaj.ʔi.suː/: second-person masculine plural imperative of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔayʔasū", "ʔayʔasa", "ʔayʔisū"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوئست",
+      "tur": "verb",
+      "baslik": "أوئست (form IV)\n# أُوئِسْتُ (ʔūʔistu) /ʔuː.ʔis.tu/: first-person singular past passive of أَيْئَسَ (ʔayʔasa)\n# أُوئِسْتَ (ʔūʔista) /ʔuː.ʔis.ta/: second-person masculine singular past passive of أَيْئَسَ (ʔayʔasa)\n# أُوئِسْتِ (ʔūʔisti) /ʔuː.ʔis.ti/: second-person feminine singular past passive of أَيْئَسَ (ʔayʔasa)\n# أُوئِسَتْ (ʔūʔisat) /ʔuː.ʔi.sat/: third-person feminine singular past passive of أ",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔūʔistu", "ʔayʔasa", "ʔūʔista"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أيئسن",
+      "tur": "verb",
+      "baslik": "أيئسن (form IV)\n# أَيْئَسْنَ (ʔayʔasna) /ʔaj.ʔas.na/: third-person feminine plural past active of أَيْئَسَ (ʔayʔasa)\n# أَيْئِسْنَ (ʔayʔisna) /ʔaj.ʔis.na/: second-person feminine plural imperative of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔayʔasna", "ʔayʔasa", "ʔayʔisna"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوئستما",
+      "tur": "verb",
+      "baslik": "أُوئِسْتُمَا • (ʔūʔistumā) (form IV) /ʔuː.ʔis.tu.maː/\n# second-person dual past passive of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔūʔistumā", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوئس",
+      "tur": "verb",
+      "baslik": "أوئس (form IV)\n# أُوئِسَ (ʔūʔisa) /ʔuː.ʔi.sa/: inflection of أَيْئَسَ (ʔayʔasa):\n## third-person masculine singular past passive\n## first-person singular non-past active subjunctive\n# أُوئِسُ (ʔūʔisu) /ʔuː.ʔi.su/: first-person singular non-past active indicative of أَيْئَسَ (ʔayʔasa)\n# أُوئِسْ (ʔūʔis) /ʔuː.ʔis/: first-person singular non-past active jussive of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔūʔisa", "ʔayʔasa", "ʔūʔisu"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوئسا",
+      "tur": "verb",
+      "baslik": "أُوئِسَا • (ʔūʔisā) (form IV) /ʔuː.ʔi.saː/\n# third-person masculine dual past passive of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔūʔisā", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوئستا",
+      "tur": "verb",
+      "baslik": "أُوئِسَتَا • (ʔūʔisatā) (form IV) /ʔuː.ʔi.sa.taː/\n# third-person feminine dual past passive of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔūʔisatā", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوئسنا",
+      "tur": "verb",
+      "baslik": "أُوئِسْنَا • (ʔūʔisnā) (form IV) /ʔuː.ʔis.naː/\n# first-person plural past passive of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔūʔisnā", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوئستم",
+      "tur": "verb",
+      "baslik": "أُوئِسْتُمْ • (ʔūʔistum) (form IV) /ʔuː.ʔis.tum/\n# second-person masculine plural past passive of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔūʔistum", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوئستن",
+      "tur": "verb",
+      "baslik": "أُوئِسْتُنَّ • (ʔūʔistunna) (form IV) /ʔuː.ʔis.tun.na/\n# second-person feminine plural past passive of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔūʔistunna", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوئسوا",
+      "tur": "verb",
+      "baslik": "أُوئِسُوا • (ʔūʔisū) (form IV) /ʔuː.ʔi.suː/\n# third-person masculine plural past passive of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔūʔisū", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوئسن",
+      "tur": "verb",
+      "baslik": "أُوئِسْنَ • (ʔūʔisna) (form IV) /ʔuː.ʔis.na/\n# third-person feminine plural past passive of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔūʔisna", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توئس",
+      "tur": "verb",
+      "baslik": "توئس (form IV)\n# تُوئِسُ (tūʔisu) /tuː.ʔi.su/: inflection of أَيْئَسَ (ʔayʔasa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُوئِسَ (tūʔisa) /tuː.ʔi.sa/: inflection of أَيْئَسَ (ʔayʔasa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive\n# ت",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūʔisu", "ʔayʔasa", "tūʔisa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوئس",
+      "tur": "verb",
+      "baslik": "يوئس (form IV)\n# يُوئِسُ (yūʔisu) /juː.ʔi.su/: third-person masculine singular non-past active indicative of أَيْئَسَ (ʔayʔasa)\n# يُوئِسَ (yūʔisa) /juː.ʔi.sa/: third-person masculine singular non-past active subjunctive of أَيْئَسَ (ʔayʔasa)\n# يُوئِسْ (yūʔis) /juː.ʔis/: third-person masculine singular non-past active jussive of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūʔisu", "ʔayʔasa", "yūʔisa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "نوئس",
+      "tur": "verb",
+      "baslik": "نوئس (form IV)\n# نُوئِسُ (nūʔisu) /nuː.ʔi.su/: first-person plural non-past active indicative of أَيْئَسَ (ʔayʔasa)\n# نُوئِسَ (nūʔisa) /nuː.ʔi.sa/: first-person plural non-past active subjunctive of أَيْئَسَ (ʔayʔasa)\n# نُوئِسْ (nūʔis) /nuː.ʔis/: first-person plural non-past active jussive of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["nūʔisu", "ʔayʔasa", "nūʔisa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توئسين",
+      "tur": "verb",
+      "baslik": "تُوئِسِينَ • (tūʔisīna) (form IV) /tuː.ʔi.siː.na/\n# second-person feminine singular non-past active indicative of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūʔisīna", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توئسان",
+      "tur": "verb",
+      "baslik": "تُوئِسَانِ • (tūʔisāni) (form IV) /tuː.ʔi.saː.ni/\n# inflection of أَيْئَسَ (ʔayʔasa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūʔisāni", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوئسان",
+      "tur": "verb",
+      "baslik": "يُوئِسَانِ • (yūʔisāni) (form IV) /juː.ʔi.saː.ni/\n# third-person masculine dual non-past active indicative of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūʔisāni", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توئسون",
+      "tur": "verb",
+      "baslik": "تُوئِسُونَ • (tūʔisūna) (form IV) /tuː.ʔi.suː.na/\n# second-person masculine plural non-past active indicative of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūʔisūna", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توئسن",
+      "tur": "verb",
+      "baslik": "تُوئِسْنَ • (tūʔisna) (form IV) /tuː.ʔis.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūʔisna", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوءسان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُوءَسَانِ • (yūʔasāni) (form IV) /juː.ʔa.saː.ni/\n# third-person masculine dual non-past passive indicative of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūʔasāni", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توءسان",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُوءَسَانِ • (tūʔasāni) (form IV) /tuː.ʔa.saː.ni/\n# inflection of أَيْئَسَ (ʔayʔasa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūʔasāni", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوئسا",
+      "tur": "verb",
+      "baslik": "يُوئِسَا • (yūʔisā) (form IV) /juː.ʔi.saː/\n# third-person masculine dual non-past active subjunctive/jussive of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūʔisā", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوئسون",
+      "tur": "verb",
+      "baslik": "يُوئِسُونَ • (yūʔisūna) (form IV) /juː.ʔi.suː.na/\n# third-person masculine plural non-past active indicative of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūʔisūna", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوئسن",
+      "tur": "verb",
+      "baslik": "يُوئِسْنَ • (yūʔisna) (form IV) /juː.ʔis.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūʔisna", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توئسي",
+      "tur": "verb",
+      "baslik": "تُوئِسِي • (tūʔisī) (form IV) /tuː.ʔi.siː/\n# second-person feminine singular non-past active subjunctive/jussive of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūʔisī", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوءسا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُوءَسَا • (yūʔasā) (form IV) /juː.ʔa.saː/\n# third-person masculine dual non-past passive subjunctive/jussive of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūʔasā", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوئسوا",
+      "tur": "verb",
+      "baslik": "يُوئِسُوا • (yūʔisū) (form IV) /juː.ʔi.suː/\n# third-person masculine plural non-past active subjunctive/jussive of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["yūʔisū", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توئسوا",
+      "tur": "verb",
+      "baslik": "تُوئِسُوا • (tūʔisū) (form IV) /tuː.ʔi.suː/\n# second-person masculine plural non-past active subjunctive/jussive of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūʔisū", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توئسا",
+      "tur": "verb",
+      "baslik": "تُوئِسَا • (tūʔisā) (form IV) /tuː.ʔi.saː/\n# inflection of أَيْئَسَ (ʔayʔasa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūʔisā", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "توءسا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُوءَسَا • (tūʔasā) (form IV) /tuː.ʔa.saː/\n# inflection of أَيْئَسَ (ʔayʔasa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["tūʔasā", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    },
+    {
+      "madde": "أيئسي",
+      "tur": "verb",
+      "baslik": "أَيْئِسِي • (ʔayʔisī) (form IV) /ʔaj.ʔi.siː/\n# second-person feminine singular imperative of أَيْئَسَ (ʔayʔasa)",
+      "etiket": ["form-iv", "no-gloss"],
+      "okunus": ["ʔayʔisī", "ʔayʔasa"],
+      "kok_yazilis": "أيأس",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ءيءس", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,486 +1,343 @@
 {
   "kok": "طارد",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "طارد", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "تطارد",
-        "u": "تطارد",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تطارد (form III)\n# تُطَارِدُ (tuṭāridu) /tu.tˤaː.ri.du/: inflection of طَارَدَ (ṭārada):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُطَارَدُ (tuṭāradu) /tu.tˤaː.ra.du/: inflection of طَارَدَ (ṭārada):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive ",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṭāridu", "ṭārada", "tuṭāradu"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "تطاردا",
-        "u": "تطاردا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تطاردا (form III)\n# تُطَارِدَا (tuṭāridā) /tu.tˤaː.ri.daː/: inflection of طَارَدَ (ṭārada):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُطَارَدَا (tuṭāradā) /tu.tˤaː.ra.daː/: inflection of طَارَدَ (ṭārada):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subj",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṭāridā", "ṭārada", "tuṭāradā"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "تطاردن",
-        "u": "تطاردن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تطاردن (form III)\n# تُطَارِدْنَ (tuṭāridna) /tu.tˤaː.rid.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of طَارَدَ (ṭārada)\n# تُطَارَدْنَ (tuṭāradna) /tu.tˤaː.rad.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of طَارَدَ (ṭārada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṭāridna", "ṭārada", "tuṭāradna"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "تطاردوا",
-        "u": "تطاردوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تطاردوا (form III)\n# تُطَارِدُوا (tuṭāridū) /tu.tˤaː.ri.duː/: second-person masculine plural non-past active subjunctive/jussive of طَارَدَ (ṭārada)\n# تُطَارَدُوا (tuṭāradū) /tu.tˤaː.ra.duː/: second-person masculine plural non-past passive subjunctive/jussive of طَارَدَ (ṭārada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṭāridū", "ṭārada", "tuṭāradū"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "تطاردي",
-        "u": "تطاردي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تطاردي (form III)\n# تُطَارِدِي (tuṭāridī) /tu.tˤaː.ri.diː/: second-person feminine singular non-past active subjunctive/jussive of طَارَدَ (ṭārada)\n# تُطَارَدِي (tuṭāradī) /tu.tˤaː.ra.diː/: second-person feminine singular non-past passive subjunctive/jussive of طَارَدَ (ṭārada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṭāridī", "ṭārada", "tuṭāradī"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "طاردت",
-        "u": "طاردت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طاردت (form III)\n# طَارَدْتُ (ṭāradtu) /tˤaː.rad.tu/: first-person singular past active of طَارَدَ (ṭārada)\n# طَارَدْتَ (ṭāradta) /tˤaː.rad.ta/: second-person masculine singular past active of طَارَدَ (ṭārada)\n# طَارَدْتِ (ṭāradti) /tˤaː.rad.ti/: second-person feminine singular past active of طَارَدَ (ṭārada)\n# طَارَدَتْ (ṭāradat) /tˤaː.ra.dat/: third-person feminine singular past active of طَارَد",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭāradtu", "ṭārada", "ṭāradta"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "طاردا",
-        "u": "طاردا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طاردا (form III)\n# طَارَدَا (ṭāradā) /tˤaː.ra.daː/: third-person masculine dual past active of طَارَدَ (ṭārada)\n# طَارِدَا (ṭāridā) /tˤaː.ri.daː/: second-person dual imperative of طَارَدَ (ṭārada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭāradā", "ṭārada", "ṭāridā"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "طاردتا",
-        "u": "طاردتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَارَدَتَا • (ṭāradatā) (form III) /tˤaː.ra.da.taː/\n# third-person feminine dual past active of طَارَدَ (ṭārada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭāradatā", "ṭārada"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "طاردنا",
-        "u": "طاردنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَارَدْنَا • (ṭāradnā) (form III) /tˤaː.rad.naː/\n# first-person plural past active of طَارَدَ (ṭārada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭāradnā", "ṭārada"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "طاردتم",
-        "u": "طاردتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَارَدْتُمْ • (ṭāradtum) (form III) /tˤaː.rad.tum/\n# second-person masculine plural past active of طَارَدَ (ṭārada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭāradtum", "ṭārada"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "طاردتن",
-        "u": "طاردتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَارَدْتُنَّ • (ṭāradtunna) (form III) /tˤaː.rad.tun.na/\n# second-person feminine plural past active of طَارَدَ (ṭārada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭāradtunna", "ṭārada"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "طاردوا",
-        "u": "طاردوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طاردوا (form III)\n# طَارَدُوا (ṭāradū) /tˤaː.ra.duː/: third-person masculine plural past active of طَارَدَ (ṭārada)\n# طَارِدُوا (ṭāridū) /tˤaː.ri.duː/: second-person masculine plural imperative of طَارَدَ (ṭārada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭāradū", "ṭārada", "ṭāridū"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "طاردن",
-        "u": "طاردن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طاردن (form III)\n# طَارَدْنَ (ṭāradna) /tˤaː.rad.na/: third-person feminine plural past active of طَارَدَ (ṭārada)\n# طَارِدْنَ (ṭāridna) /tˤaː.rid.na/: second-person feminine plural imperative of طَارَدَ (ṭārada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭāradna", "ṭārada", "ṭāridna"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "طوردت",
-        "u": "طوردت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طوردت (form III)\n# طُورِدْتُ (ṭūridtu) /tˤuː.rid.tu/: first-person singular past passive of طَارَدَ (ṭārada)\n# طُورِدْتَ (ṭūridta) /tˤuː.rid.ta/: second-person masculine singular past passive of طَارَدَ (ṭārada)\n# طُورِدْتِ (ṭūridti) /tˤuː.rid.ti/: second-person feminine singular past passive of طَارَدَ (ṭārada)\n# طُورِدَتْ (ṭūridat) /tˤuː.ri.dat/: third-person feminine singular past passive of طَ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūridtu", "ṭārada", "ṭūridta"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "طوردا",
-        "u": "طوردا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُورِدَا • (ṭūridā) (form III) /tˤuː.ri.daː/\n# third-person masculine dual past passive of طَارَدَ (ṭārada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūridā", "ṭārada"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "طوردتما",
-        "u": "طوردتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُورِدْتُمَا • (ṭūridtumā) (form III) /tˤuː.rid.tu.maː/\n# second-person dual past passive of طَارَدَ (ṭārada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūridtumā", "ṭārada"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "طورد",
-        "u": "طورد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُورِدَ • (ṭūrida) (form III) /tˤuː.ri.da/\n# third-person masculine singular past passive of طَارَدَ (ṭārada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūrida", "ṭārada"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "طوردتا",
-        "u": "طوردتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُورِدَتَا • (ṭūridatā) (form III) /tˤuː.ri.da.taː/\n# third-person feminine dual past passive of طَارَدَ (ṭārada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūridatā", "ṭārada"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "طوردتن",
-        "u": "طوردتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُورِدْتُنَّ • (ṭūridtunna) (form III) /tˤuː.rid.tun.na/\n# second-person feminine plural past passive of طَارَدَ (ṭārada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūridtunna", "ṭārada"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "طوردنا",
-        "u": "طوردنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُورِدْنَا • (ṭūridnā) (form III) /tˤuː.rid.naː/\n# first-person plural past passive of طَارَدَ (ṭārada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūridnā", "ṭārada"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "طوردتم",
-        "u": "طوردتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُورِدْتُمْ • (ṭūridtum) (form III) /tˤuː.rid.tum/\n# second-person masculine plural past passive of طَارَدَ (ṭārada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūridtum", "ṭārada"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "تطاردين",
-        "u": "تطاردين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطاردين (form III)\n# تُطَارِدِينَ (tuṭāridīna) /tu.tˤaː.ri.diː.na/: second-person feminine singular non-past active indicative of طَارَدَ (ṭārada)\n# تُطَارَدِينَ (tuṭāradīna) /tu.tˤaː.ra.diː.na/: second-person feminine singular non-past passive indicative of طَارَدَ (ṭārada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṭāridīna", "ṭārada", "tuṭāradīna"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "طوردن",
-        "u": "طوردن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُورِدْنَ • (ṭūridna) (form III) /tˤuː.rid.na/\n# third-person feminine plural past passive of طَارَدَ (ṭārada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūridna", "ṭārada"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "أطارد",
-        "u": "أطارد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أطارد (form III)\n# أُطَارِدُ (ʔuṭāridu) /ʔu.tˤaː.ri.du/: first-person singular non-past active indicative of طَارَدَ (ṭārada)\n# أُطَارَدُ (ʔuṭāradu) /ʔu.tˤaː.ra.du/: first-person singular non-past passive indicative of طَارَدَ (ṭārada)\n# أُطَارِدَ (ʔuṭārida) /ʔu.tˤaː.ri.da/: first-person singular non-past active subjunctive of طَارَدَ (ṭārada)\n# أُطَارَدَ (ʔuṭārada) /ʔu.tˤaː.ra.da/: first-person s",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ʔuṭāridu", "ṭārada", "ʔuṭāradu"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "طوردوا",
-        "u": "طوردوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طُورِدُوا • (ṭūridū) (form III) /tˤuː.ri.duː/\n# third-person masculine plural past passive of طَارَدَ (ṭārada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭūridū", "ṭārada"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "يطارد",
-        "u": "يطارد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطارد (form III)\n# يُطَارِدُ (yuṭāridu) /ju.tˤaː.ri.du/: third-person masculine singular non-past active indicative of طَارَدَ (ṭārada)\n# يُطَارَدُ (yuṭāradu) /ju.tˤaː.ra.du/: third-person masculine singular non-past passive indicative of طَارَدَ (ṭārada)\n# يُطَارِدَ (yuṭārida) /ju.tˤaː.ri.da/: third-person masculine singular non-past active subjunctive of طَارَدَ (ṭārada)\n# يُطَارَدَ (yuṭārada) /",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṭāridu", "ṭārada", "yuṭāradu"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "يطاردان",
-        "u": "يطاردان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطاردان (form III)\n# يُطَارِدَانِ (yuṭāridāni) /ju.tˤaː.ri.daː.ni/: third-person masculine dual non-past active indicative of طَارَدَ (ṭārada)\n# يُطَارَدَانِ (yuṭāradāni) /ju.tˤaː.ra.daː.ni/: third-person masculine dual non-past passive indicative of طَارَدَ (ṭārada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṭāridāni", "ṭārada", "yuṭāradāni"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "نطارد",
-        "u": "نطارد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نطارد (form III)\n# نُطَارِدُ (nuṭāridu) /nu.tˤaː.ri.du/: first-person plural non-past active indicative of طَارَدَ (ṭārada)\n# نُطَارَدُ (nuṭāradu) /nu.tˤaː.ra.du/: first-person plural non-past passive indicative of طَارَدَ (ṭārada)\n# نُطَارِدَ (nuṭārida) /nu.tˤaː.ri.da/: first-person plural non-past active subjunctive of طَارَدَ (ṭārada)\n# نُطَارَدَ (nuṭārada) /nu.tˤaː.ra.da/: first-person plural ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["nuṭāridu", "ṭārada", "nuṭāradu"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "يطاردون",
-        "u": "يطاردون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطاردون (form III)\n# يُطَارِدُونَ (yuṭāridūna) /ju.tˤaː.ri.duː.na/: third-person masculine plural non-past active indicative of طَارَدَ (ṭārada)\n# يُطَارَدُونَ (yuṭāradūna) /ju.tˤaː.ra.duː.na/: third-person masculine plural non-past passive indicative of طَارَدَ (ṭārada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṭāridūna", "ṭārada", "yuṭāradūna"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "يطاردا",
-        "u": "يطاردا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطاردا (form III)\n# يُطَارِدَا (yuṭāridā) /ju.tˤaː.ri.daː/: third-person masculine dual non-past active subjunctive/jussive of طَارَدَ (ṭārada)\n# يُطَارَدَا (yuṭāradā) /ju.tˤaː.ra.daː/: third-person masculine dual non-past passive subjunctive/jussive of طَارَدَ (ṭārada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṭāridā", "ṭārada", "yuṭāradā"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "يطاردن",
-        "u": "يطاردن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطاردن (form III)\n# يُطَارِدْنَ (yuṭāridna) /ju.tˤaː.rid.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of طَارَدَ (ṭārada)\n# يُطَارَدْنَ (yuṭāradna) /ju.tˤaː.rad.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of طَارَدَ (ṭārada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṭāridna", "ṭārada", "yuṭāradna"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "تطاردون",
-        "u": "تطاردون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطاردون (form III)\n# تُطَارِدُونَ (tuṭāridūna) /tu.tˤaː.ri.duː.na/: second-person masculine plural non-past active indicative of طَارَدَ (ṭārada)\n# تُطَارَدُونَ (tuṭāradūna) /tu.tˤaː.ra.duː.na/: second-person masculine plural non-past passive indicative of طَارَدَ (ṭārada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṭāridūna", "ṭārada", "tuṭāradūna"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "طاردتما",
-        "u": "طاردتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَارَدْتُمَا • (ṭāradtumā) (form III) /tˤaː.rad.tu.maː/\n# second-person dual past active of طَارَدَ (ṭārada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭāradtumā", "ṭārada"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "تطاردان",
-        "u": "تطاردان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تطاردان (form III)\n# تُطَارِدَانِ (tuṭāridāni) /tu.tˤaː.ri.daː.ni/: inflection of طَارَدَ (ṭārada):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُطَارَدَانِ (tuṭāradāni) /tu.tˤaː.ra.daː.ni/: inflection of طَارَدَ (ṭārada):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["tuṭāridāni", "ṭārada", "tuṭāradāni"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "طاردي",
-        "u": "طاردي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "طَارِدِي • (ṭāridī) (form III) /tˤaː.ri.diː/\n# second-person feminine singular imperative of طَارَدَ (ṭārada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["ṭāridī", "ṭārada"],
-        "k": "طارد",
-        "yol": "kök"
-      },
-      {
-        "w": "يطاردوا",
-        "u": "يطاردوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يطاردوا (form III)\n# يُطَارِدُوا (yuṭāridū) /ju.tˤaː.ri.duː/: third-person masculine plural non-past active subjunctive/jussive of طَارَدَ (ṭārada)\n# يُطَارَدُوا (yuṭāradū) /ju.tˤaː.ra.duː/: third-person masculine plural non-past passive subjunctive/jussive of طَارَدَ (ṭārada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iii", "no-gloss"],
-        "r": ["yuṭāridū", "ṭārada", "yuṭāradū"],
-        "k": "طارد",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "طر",
+  "ses": {
     "harf": "ط",
+    "fasil": "طر",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "تطارد",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تطارد (form III)\n# تُطَارِدُ (tuṭāridu) /tu.tˤaː.ri.du/: inflection of طَارَدَ (ṭārada):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُطَارَدُ (tuṭāradu) /tu.tˤaː.ra.du/: inflection of طَارَدَ (ṭārada):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṭāridu", "ṭārada", "tuṭāradu"]
+    },
+    {
+      "madde": "تطاردا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تطاردا (form III)\n# تُطَارِدَا (tuṭāridā) /tu.tˤaː.ri.daː/: inflection of طَارَدَ (ṭārada):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُطَارَدَا (tuṭāradā) /tu.tˤaː.ra.daː/: inflection of طَارَدَ (ṭārada):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subj",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṭāridā", "ṭārada", "tuṭāradā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطاردن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تطاردن (form III)\n# تُطَارِدْنَ (tuṭāridna) /tu.tˤaː.rid.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of طَارَدَ (ṭārada)\n# تُطَارَدْنَ (tuṭāradna) /tu.tˤaː.rad.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of طَارَدَ (ṭārada)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṭāridna", "ṭārada", "tuṭāradna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطاردوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تطاردوا (form III)\n# تُطَارِدُوا (tuṭāridū) /tu.tˤaː.ri.duː/: second-person masculine plural non-past active subjunctive/jussive of طَارَدَ (ṭārada)\n# تُطَارَدُوا (tuṭāradū) /tu.tˤaː.ra.duː/: second-person masculine plural non-past passive subjunctive/jussive of طَارَدَ (ṭārada)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṭāridū", "ṭārada", "tuṭāradū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطاردي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تطاردي (form III)\n# تُطَارِدِي (tuṭāridī) /tu.tˤaː.ri.diː/: second-person feminine singular non-past active subjunctive/jussive of طَارَدَ (ṭārada)\n# تُطَارَدِي (tuṭāradī) /tu.tˤaː.ra.diː/: second-person feminine singular non-past passive subjunctive/jussive of طَارَدَ (ṭārada)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṭāridī", "ṭārada", "tuṭāradī"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طاردت",
+      "tur": "verb",
+      "baslik": "طاردت (form III)\n# طَارَدْتُ (ṭāradtu) /tˤaː.rad.tu/: first-person singular past active of طَارَدَ (ṭārada)\n# طَارَدْتَ (ṭāradta) /tˤaː.rad.ta/: second-person masculine singular past active of طَارَدَ (ṭārada)\n# طَارَدْتِ (ṭāradti) /tˤaː.rad.ti/: second-person feminine singular past active of طَارَدَ (ṭārada)\n# طَارَدَتْ (ṭāradat) /tˤaː.ra.dat/: third-person feminine singular past active of طَارَد",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭāradtu", "ṭārada", "ṭāradta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طاردا",
+      "tur": "verb",
+      "baslik": "طاردا (form III)\n# طَارَدَا (ṭāradā) /tˤaː.ra.daː/: third-person masculine dual past active of طَارَدَ (ṭārada)\n# طَارِدَا (ṭāridā) /tˤaː.ri.daː/: second-person dual imperative of طَارَدَ (ṭārada)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭāradā", "ṭārada", "ṭāridā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طاردتا",
+      "tur": "verb",
+      "baslik": "طَارَدَتَا • (ṭāradatā) (form III) /tˤaː.ra.da.taː/\n# third-person feminine dual past active of طَارَدَ (ṭārada)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭāradatā", "ṭārada"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طاردنا",
+      "tur": "verb",
+      "baslik": "طَارَدْنَا • (ṭāradnā) (form III) /tˤaː.rad.naː/\n# first-person plural past active of طَارَدَ (ṭārada)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭāradnā", "ṭārada"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طاردتم",
+      "tur": "verb",
+      "baslik": "طَارَدْتُمْ • (ṭāradtum) (form III) /tˤaː.rad.tum/\n# second-person masculine plural past active of طَارَدَ (ṭārada)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭāradtum", "ṭārada"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طاردتن",
+      "tur": "verb",
+      "baslik": "طَارَدْتُنَّ • (ṭāradtunna) (form III) /tˤaː.rad.tun.na/\n# second-person feminine plural past active of طَارَدَ (ṭārada)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭāradtunna", "ṭārada"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طاردوا",
+      "tur": "verb",
+      "baslik": "طاردوا (form III)\n# طَارَدُوا (ṭāradū) /tˤaː.ra.duː/: third-person masculine plural past active of طَارَدَ (ṭārada)\n# طَارِدُوا (ṭāridū) /tˤaː.ri.duː/: second-person masculine plural imperative of طَارَدَ (ṭārada)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭāradū", "ṭārada", "ṭāridū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طاردن",
+      "tur": "verb",
+      "baslik": "طاردن (form III)\n# طَارَدْنَ (ṭāradna) /tˤaː.rad.na/: third-person feminine plural past active of طَارَدَ (ṭārada)\n# طَارِدْنَ (ṭāridna) /tˤaː.rid.na/: second-person feminine plural imperative of طَارَدَ (ṭārada)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭāradna", "ṭārada", "ṭāridna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طوردت",
+      "tur": "verb",
+      "baslik": "طوردت (form III)\n# طُورِدْتُ (ṭūridtu) /tˤuː.rid.tu/: first-person singular past passive of طَارَدَ (ṭārada)\n# طُورِدْتَ (ṭūridta) /tˤuː.rid.ta/: second-person masculine singular past passive of طَارَدَ (ṭārada)\n# طُورِدْتِ (ṭūridti) /tˤuː.rid.ti/: second-person feminine singular past passive of طَارَدَ (ṭārada)\n# طُورِدَتْ (ṭūridat) /tˤuː.ri.dat/: third-person feminine singular past passive of طَ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūridtu", "ṭārada", "ṭūridta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طوردا",
+      "tur": "verb",
+      "baslik": "طُورِدَا • (ṭūridā) (form III) /tˤuː.ri.daː/\n# third-person masculine dual past passive of طَارَدَ (ṭārada)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūridā", "ṭārada"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طوردتما",
+      "tur": "verb",
+      "baslik": "طُورِدْتُمَا • (ṭūridtumā) (form III) /tˤuː.rid.tu.maː/\n# second-person dual past passive of طَارَدَ (ṭārada)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūridtumā", "ṭārada"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طورد",
+      "tur": "verb",
+      "baslik": "طُورِدَ • (ṭūrida) (form III) /tˤuː.ri.da/\n# third-person masculine singular past passive of طَارَدَ (ṭārada)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūrida", "ṭārada"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طوردتا",
+      "tur": "verb",
+      "baslik": "طُورِدَتَا • (ṭūridatā) (form III) /tˤuː.ri.da.taː/\n# third-person feminine dual past passive of طَارَدَ (ṭārada)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūridatā", "ṭārada"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طوردتن",
+      "tur": "verb",
+      "baslik": "طُورِدْتُنَّ • (ṭūridtunna) (form III) /tˤuː.rid.tun.na/\n# second-person feminine plural past passive of طَارَدَ (ṭārada)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūridtunna", "ṭārada"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طوردنا",
+      "tur": "verb",
+      "baslik": "طُورِدْنَا • (ṭūridnā) (form III) /tˤuː.rid.naː/\n# first-person plural past passive of طَارَدَ (ṭārada)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūridnā", "ṭārada"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طوردتم",
+      "tur": "verb",
+      "baslik": "طُورِدْتُمْ • (ṭūridtum) (form III) /tˤuː.rid.tum/\n# second-person masculine plural past passive of طَارَدَ (ṭārada)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūridtum", "ṭārada"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطاردين",
+      "tur": "verb",
+      "baslik": "تطاردين (form III)\n# تُطَارِدِينَ (tuṭāridīna) /tu.tˤaː.ri.diː.na/: second-person feminine singular non-past active indicative of طَارَدَ (ṭārada)\n# تُطَارَدِينَ (tuṭāradīna) /tu.tˤaː.ra.diː.na/: second-person feminine singular non-past passive indicative of طَارَدَ (ṭārada)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṭāridīna", "ṭārada", "tuṭāradīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طوردن",
+      "tur": "verb",
+      "baslik": "طُورِدْنَ • (ṭūridna) (form III) /tˤuː.rid.na/\n# third-person feminine plural past passive of طَارَدَ (ṭārada)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūridna", "ṭārada"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أطارد",
+      "tur": "verb",
+      "baslik": "أطارد (form III)\n# أُطَارِدُ (ʔuṭāridu) /ʔu.tˤaː.ri.du/: first-person singular non-past active indicative of طَارَدَ (ṭārada)\n# أُطَارَدُ (ʔuṭāradu) /ʔu.tˤaː.ra.du/: first-person singular non-past passive indicative of طَارَدَ (ṭārada)\n# أُطَارِدَ (ʔuṭārida) /ʔu.tˤaː.ri.da/: first-person singular non-past active subjunctive of طَارَدَ (ṭārada)\n# أُطَارَدَ (ʔuṭārada) /ʔu.tˤaː.ra.da/: first-person s",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ʔuṭāridu", "ṭārada", "ʔuṭāradu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طوردوا",
+      "tur": "verb",
+      "baslik": "طُورِدُوا • (ṭūridū) (form III) /tˤuː.ri.duː/\n# third-person masculine plural past passive of طَارَدَ (ṭārada)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭūridū", "ṭārada"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطارد",
+      "tur": "verb",
+      "baslik": "يطارد (form III)\n# يُطَارِدُ (yuṭāridu) /ju.tˤaː.ri.du/: third-person masculine singular non-past active indicative of طَارَدَ (ṭārada)\n# يُطَارَدُ (yuṭāradu) /ju.tˤaː.ra.du/: third-person masculine singular non-past passive indicative of طَارَدَ (ṭārada)\n# يُطَارِدَ (yuṭārida) /ju.tˤaː.ri.da/: third-person masculine singular non-past active subjunctive of طَارَدَ (ṭārada)\n# يُطَارَدَ (yuṭārada) /",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṭāridu", "ṭārada", "yuṭāradu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطاردان",
+      "tur": "verb",
+      "baslik": "يطاردان (form III)\n# يُطَارِدَانِ (yuṭāridāni) /ju.tˤaː.ri.daː.ni/: third-person masculine dual non-past active indicative of طَارَدَ (ṭārada)\n# يُطَارَدَانِ (yuṭāradāni) /ju.tˤaː.ra.daː.ni/: third-person masculine dual non-past passive indicative of طَارَدَ (ṭārada)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṭāridāni", "ṭārada", "yuṭāradāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نطارد",
+      "tur": "verb",
+      "baslik": "نطارد (form III)\n# نُطَارِدُ (nuṭāridu) /nu.tˤaː.ri.du/: first-person plural non-past active indicative of طَارَدَ (ṭārada)\n# نُطَارَدُ (nuṭāradu) /nu.tˤaː.ra.du/: first-person plural non-past passive indicative of طَارَدَ (ṭārada)\n# نُطَارِدَ (nuṭārida) /nu.tˤaː.ri.da/: first-person plural non-past active subjunctive of طَارَدَ (ṭārada)\n# نُطَارَدَ (nuṭārada) /nu.tˤaː.ra.da/: first-person plural ",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["nuṭāridu", "ṭārada", "nuṭāradu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطاردون",
+      "tur": "verb",
+      "baslik": "يطاردون (form III)\n# يُطَارِدُونَ (yuṭāridūna) /ju.tˤaː.ri.duː.na/: third-person masculine plural non-past active indicative of طَارَدَ (ṭārada)\n# يُطَارَدُونَ (yuṭāradūna) /ju.tˤaː.ra.duː.na/: third-person masculine plural non-past passive indicative of طَارَدَ (ṭārada)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṭāridūna", "ṭārada", "yuṭāradūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطاردا",
+      "tur": "verb",
+      "baslik": "يطاردا (form III)\n# يُطَارِدَا (yuṭāridā) /ju.tˤaː.ri.daː/: third-person masculine dual non-past active subjunctive/jussive of طَارَدَ (ṭārada)\n# يُطَارَدَا (yuṭāradā) /ju.tˤaː.ra.daː/: third-person masculine dual non-past passive subjunctive/jussive of طَارَدَ (ṭārada)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṭāridā", "ṭārada", "yuṭāradā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطاردن",
+      "tur": "verb",
+      "baslik": "يطاردن (form III)\n# يُطَارِدْنَ (yuṭāridna) /ju.tˤaː.rid.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of طَارَدَ (ṭārada)\n# يُطَارَدْنَ (yuṭāradna) /ju.tˤaː.rad.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of طَارَدَ (ṭārada)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṭāridna", "ṭārada", "yuṭāradna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطاردون",
+      "tur": "verb",
+      "baslik": "تطاردون (form III)\n# تُطَارِدُونَ (tuṭāridūna) /tu.tˤaː.ri.duː.na/: second-person masculine plural non-past active indicative of طَارَدَ (ṭārada)\n# تُطَارَدُونَ (tuṭāradūna) /tu.tˤaː.ra.duː.na/: second-person masculine plural non-past passive indicative of طَارَدَ (ṭārada)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṭāridūna", "ṭārada", "tuṭāradūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طاردتما",
+      "tur": "verb",
+      "baslik": "طَارَدْتُمَا • (ṭāradtumā) (form III) /tˤaː.rad.tu.maː/\n# second-person dual past active of طَارَدَ (ṭārada)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭāradtumā", "ṭārada"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تطاردان",
+      "tur": "verb",
+      "baslik": "تطاردان (form III)\n# تُطَارِدَانِ (tuṭāridāni) /tu.tˤaː.ri.daː.ni/: inflection of طَارَدَ (ṭārada):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُطَارَدَانِ (tuṭāradāni) /tu.tˤaː.ra.daː.ni/: inflection of طَارَدَ (ṭārada):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["tuṭāridāni", "ṭārada", "tuṭāradāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "طاردي",
+      "tur": "verb",
+      "baslik": "طَارِدِي • (ṭāridī) (form III) /tˤaː.ri.diː/\n# second-person feminine singular imperative of طَارَدَ (ṭārada)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["ṭāridī", "ṭārada"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يطاردوا",
+      "tur": "verb",
+      "baslik": "يطاردوا (form III)\n# يُطَارِدُوا (yuṭāridū) /ju.tˤaː.ri.duː/: third-person masculine plural non-past active subjunctive/jussive of طَارَدَ (ṭārada)\n# يُطَارَدُوا (yuṭāradū) /ju.tˤaː.ra.duː/: third-person masculine plural non-past passive subjunctive/jussive of طَارَدَ (ṭārada)",
+      "etiket": ["form-iii", "no-gloss"],
+      "okunus": ["yuṭāridū", "ṭārada", "yuṭāradū"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "طارد", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

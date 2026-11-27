@@ -1,364 +1,269 @@
 {
   "kok": "اتخم",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "اتخم", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "أتخم",
-        "u": "أتخم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أتخم (form VIII)\n# أَتَّخِمُ (ʔattaḵimu) /ʔat.ta.xi.mu/: first-person singular non-past active indicative of اِتَّخَمَ (ittaḵama)\n# أَتَّخِمَ (ʔattaḵima) /ʔat.ta.xi.ma/: first-person singular non-past active subjunctive of اِتَّخَمَ (ittaḵama)\n# أَتَّخِمْ (ʔattaḵim) /ʔat.ta.xim/: first-person singular non-past active jussive of اِتَّخَمَ (ittaḵama)",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ʔattaḵimu", "ittaḵama", "ʔattaḵima"],
-        "k": "اتخم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتخم",
-        "u": "يتخم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يتخم (form VIII)\n# يَتَّخِمُ (yattaḵimu) /jat.ta.xi.mu/: third-person masculine singular non-past active indicative of اِتَّخَمَ (ittaḵama)\n# يَتَّخِمَ (yattaḵima) /jat.ta.xi.ma/: third-person masculine singular non-past active subjunctive of اِتَّخَمَ (ittaḵama)\n# يَتَّخِمْ (yattaḵim) /jat.ta.xim/: third-person masculine singular non-past active jussive of اِتَّخَمَ (ittaḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattaḵimu", "ittaḵama", "yattaḵima"],
-        "k": "اتخم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتخمان",
-        "u": "يتخمان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَتَّخِمَانِ • (yattaḵimāni) (form VIII) /jat.ta.xi.maː.ni/\n# third-person masculine dual non-past active indicative of اِتَّخَمَ (ittaḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattaḵimāni", "ittaḵama"],
-        "k": "اتخم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتخما",
-        "u": "تتخما",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَتَّخِمَا • (tattaḵimā) (form VIII) /tat.ta.xi.maː/\n# inflection of اِتَّخَمَ (ittaḵama):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattaḵimā", "ittaḵama"],
-        "k": "اتخم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتخمي",
-        "u": "تتخمي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَتَّخِمِي • (tattaḵimī) (form VIII) /tat.ta.xi.miː/\n# second-person feminine singular non-past active subjunctive/jussive of اِتَّخَمَ (ittaḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattaḵimī", "ittaḵama"],
-        "k": "اتخم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتخموا",
-        "u": "يتخموا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَتَّخِمُوا • (yattaḵimū) (form VIII) /jat.ta.xi.muː/\n# third-person masculine plural non-past active subjunctive/jussive of اِتَّخَمَ (ittaḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattaḵimū", "ittaḵama"],
-        "k": "اتخم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتخموا",
-        "u": "تتخموا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَتَّخِمُوا • (tattaḵimū) (form VIII) /tat.ta.xi.muː/\n# second-person masculine plural non-past active subjunctive/jussive of اِتَّخَمَ (ittaḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattaḵimū", "ittaḵama"],
-        "k": "اتخم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتخما",
-        "u": "يتخما",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَتَّخِمَا • (yattaḵimā) (form VIII) /jat.ta.xi.maː/\n# third-person masculine dual non-past active subjunctive/jussive of اِتَّخَمَ (ittaḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattaḵimā", "ittaḵama"],
-        "k": "اتخم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتخمن",
-        "u": "تتخمن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَتَّخِمْنَ • (tattaḵimna) (form VIII) /tat.ta.xim.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِتَّخَمَ (ittaḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattaḵimna", "ittaḵama"],
-        "k": "اتخم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتخم",
-        "u": "تتخم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تتخم (form VIII)\n# تَتَّخِمُ (tattaḵimu) /tat.ta.xi.mu/: inflection of اِتَّخَمَ (ittaḵama):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَّخِمَ (tattaḵima) /tat.ta.xi.ma/: inflection of اِتَّخَمَ (ittaḵama):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattaḵimu", "ittaḵama", "tattaḵima"],
-        "k": "اتخم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتخمون",
-        "u": "تتخمون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَتَّخِمُونَ • (tattaḵimūna) (form VIII) /tat.ta.xi.muː.na/\n# second-person masculine plural non-past active indicative of اِتَّخَمَ (ittaḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattaḵimūna", "ittaḵama"],
-        "k": "اتخم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتخمان",
-        "u": "تتخمان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَتَّخِمَانِ • (tattaḵimāni) (form VIII) /tat.ta.xi.maː.ni/\n# inflection of اِتَّخَمَ (ittaḵama):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattaḵimāni", "ittaḵama"],
-        "k": "اتخم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتخمون",
-        "u": "يتخمون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَتَّخِمُونَ • (yattaḵimūna) (form VIII) /jat.ta.xi.muː.na/\n# third-person masculine plural non-past active indicative of اِتَّخَمَ (ittaḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattaḵimūna", "ittaḵama"],
-        "k": "اتخم",
-        "yol": "kök"
-      },
-      {
-        "w": "تتخمين",
-        "u": "تتخمين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَتَّخِمِينَ • (tattaḵimīna) (form VIII) /tat.ta.xi.miː.na/\n# second-person feminine singular non-past active indicative of اِتَّخَمَ (ittaḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattaḵimīna", "ittaḵama"],
-        "k": "اتخم",
-        "yol": "kök"
-      },
-      {
-        "w": "يتخمن",
-        "u": "يتخمن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَتَّخِمْنَ • (yattaḵimna) (form VIII) /jat.ta.xim.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِتَّخَمَ (ittaḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattaḵimna", "ittaḵama"],
-        "k": "اتخم",
-        "yol": "kök"
-      },
-      {
-        "w": "نتخم",
-        "u": "نتخم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نتخم (form VIII)\n# نَتَّخِمُ (nattaḵimu) /nat.ta.xi.mu/: first-person plural non-past active indicative of اِتَّخَمَ (ittaḵama)\n# نَتَّخِمَ (nattaḵima) /nat.ta.xi.ma/: first-person plural non-past active subjunctive of اِتَّخَمَ (ittaḵama)\n# نَتَّخِمْ (nattaḵim) /nat.ta.xim/: first-person plural non-past active jussive of اِتَّخَمَ (ittaḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["nattaḵimu", "ittaḵama", "nattaḵima"],
-        "k": "اتخم",
-        "yol": "kök"
-      },
-      {
-        "w": "اتخمتما",
-        "u": "اتخمتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّخَمْتُمَا • (ittaḵamtumā) (form VIII) /it.ta.xam.tu.maː/\n# second-person dual past active of اِتَّخَمَ (ittaḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaḵamtumā", "ittaḵama"],
-        "k": "اتخم",
-        "yol": "kök"
-      },
-      {
-        "w": "اتخمت",
-        "u": "اتخمت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتخمت (form VIII)\n# اِتَّخَمْتُ (ittaḵamtu) /it.ta.xam.tu/: first-person singular past active of اِتَّخَمَ (ittaḵama)\n# اِتَّخَمْتَ (ittaḵamta) /it.ta.xam.ta/: second-person masculine singular past active of اِتَّخَمَ (ittaḵama)\n# اِتَّخَمْتِ (ittaḵamti) /it.ta.xam.ti/: second-person feminine singular past active of اِتَّخَمَ (ittaḵama)\n# اِتَّخَمَتْ (ittaḵamat) /it.ta.xa.mat/: third-person femini",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaḵamtu", "ittaḵama", "ittaḵamta"],
-        "k": "اتخم",
-        "yol": "kök"
-      },
-      {
-        "w": "اتخما",
-        "u": "اتخما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اتخما (form VIII)\n# اِتَّخَمَا (ittaḵamā) /it.ta.xa.maː/: third-person masculine dual past active of اِتَّخَمَ (ittaḵama)\n# اِتَّخِمَا (ittaḵimā) /it.ta.xi.maː/: second-person dual imperative of اِتَّخَمَ (ittaḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaḵamā", "ittaḵama", "ittaḵimā"],
-        "k": "اتخم",
-        "yol": "kök"
-      },
-      {
-        "w": "اتخمتم",
-        "u": "اتخمتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّخَمْتُمْ • (ittaḵamtum) (form VIII) /it.ta.xam.tum/\n# second-person masculine plural past active of اِتَّخَمَ (ittaḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaḵamtum", "ittaḵama"],
-        "k": "اتخم",
-        "yol": "kök"
-      },
-      {
-        "w": "اتخمنا",
-        "u": "اتخمنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّخَمْنَا • (ittaḵamnā) (form VIII) /it.ta.xam.naː/\n# first-person plural past active of اِتَّخَمَ (ittaḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaḵamnā", "ittaḵama"],
-        "k": "اتخم",
-        "yol": "kök"
-      },
-      {
-        "w": "اتخمتن",
-        "u": "اتخمتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّخَمْتُنَّ • (ittaḵamtunna) (form VIII) /it.ta.xam.tun.na/\n# second-person feminine plural past active of اِتَّخَمَ (ittaḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaḵamtunna", "ittaḵama"],
-        "k": "اتخم",
-        "yol": "kök"
-      },
-      {
-        "w": "اتخمن",
-        "u": "اتخمن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اتخمن (form VIII)\n# اِتَّخَمْنَ (ittaḵamna) /it.ta.xam.na/: third-person feminine plural past active of اِتَّخَمَ (ittaḵama)\n# اِتَّخِمْنَ (ittaḵimna) /it.ta.xim.na/: second-person feminine plural imperative of اِتَّخَمَ (ittaḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaḵamna", "ittaḵama", "ittaḵimna"],
-        "k": "اتخم",
-        "yol": "kök"
-      },
-      {
-        "w": "اتخمتا",
-        "u": "اتخمتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّخَمَتَا • (ittaḵamatā) (form VIII) /it.ta.xa.ma.taː/\n# third-person feminine dual past active of اِتَّخَمَ (ittaḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaḵamatā", "ittaḵama"],
-        "k": "اتخم",
-        "yol": "kök"
-      },
-      {
-        "w": "اتخمي",
-        "u": "اتخمي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اِتَّخِمِي • (ittaḵimī) (form VIII) /it.ta.xi.miː/\n# second-person feminine singular imperative of اِتَّخَمَ (ittaḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaḵimī", "ittaḵama"],
-        "k": "اتخم",
-        "yol": "kök"
-      },
-      {
-        "w": "اتخموا",
-        "u": "اتخموا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "اتخموا (form VIII)\n# اِتَّخَمُوا (ittaḵamū) /it.ta.xa.muː/: third-person masculine plural past active of اِتَّخَمَ (ittaḵama)\n# اِتَّخِمُوا (ittaḵimū) /it.ta.xi.muː/: second-person masculine plural imperative of اِتَّخَمَ (ittaḵama)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittaḵamū", "ittaḵama", "ittaḵimū"],
-        "k": "اتخم",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تخ",
+  "ses": {
     "harf": "ا",
+    "fasil": "تخ",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "أتخم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أتخم (form VIII)\n# أَتَّخِمُ (ʔattaḵimu) /ʔat.ta.xi.mu/: first-person singular non-past active indicative of اِتَّخَمَ (ittaḵama)\n# أَتَّخِمَ (ʔattaḵima) /ʔat.ta.xi.ma/: first-person singular non-past active subjunctive of اِتَّخَمَ (ittaḵama)\n# أَتَّخِمْ (ʔattaḵim) /ʔat.ta.xim/: first-person singular non-past active jussive of اِتَّخَمَ (ittaḵama)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ʔattaḵimu", "ittaḵama", "ʔattaḵima"]
+    },
+    {
+      "madde": "يتخم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يتخم (form VIII)\n# يَتَّخِمُ (yattaḵimu) /jat.ta.xi.mu/: third-person masculine singular non-past active indicative of اِتَّخَمَ (ittaḵama)\n# يَتَّخِمَ (yattaḵima) /jat.ta.xi.ma/: third-person masculine singular non-past active subjunctive of اِتَّخَمَ (ittaḵama)\n# يَتَّخِمْ (yattaḵim) /jat.ta.xim/: third-person masculine singular non-past active jussive of اِتَّخَمَ (ittaḵama)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattaḵimu", "ittaḵama", "yattaḵima"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتخمان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَتَّخِمَانِ • (yattaḵimāni) (form VIII) /jat.ta.xi.maː.ni/\n# third-person masculine dual non-past active indicative of اِتَّخَمَ (ittaḵama)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattaḵimāni", "ittaḵama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتخما",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَتَّخِمَا • (tattaḵimā) (form VIII) /tat.ta.xi.maː/\n# inflection of اِتَّخَمَ (ittaḵama):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattaḵimā", "ittaḵama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتخمي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَتَّخِمِي • (tattaḵimī) (form VIII) /tat.ta.xi.miː/\n# second-person feminine singular non-past active subjunctive/jussive of اِتَّخَمَ (ittaḵama)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattaḵimī", "ittaḵama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتخموا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَتَّخِمُوا • (yattaḵimū) (form VIII) /jat.ta.xi.muː/\n# third-person masculine plural non-past active subjunctive/jussive of اِتَّخَمَ (ittaḵama)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattaḵimū", "ittaḵama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتخموا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَتَّخِمُوا • (tattaḵimū) (form VIII) /tat.ta.xi.muː/\n# second-person masculine plural non-past active subjunctive/jussive of اِتَّخَمَ (ittaḵama)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattaḵimū", "ittaḵama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتخما",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَتَّخِمَا • (yattaḵimā) (form VIII) /jat.ta.xi.maː/\n# third-person masculine dual non-past active subjunctive/jussive of اِتَّخَمَ (ittaḵama)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattaḵimā", "ittaḵama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتخمن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَتَّخِمْنَ • (tattaḵimna) (form VIII) /tat.ta.xim.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِتَّخَمَ (ittaḵama)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattaḵimna", "ittaḵama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتخم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تتخم (form VIII)\n# تَتَّخِمُ (tattaḵimu) /tat.ta.xi.mu/: inflection of اِتَّخَمَ (ittaḵama):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَّخِمَ (tattaḵima) /tat.ta.xi.ma/: inflection of اِتَّخَمَ (ittaḵama):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past ",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattaḵimu", "ittaḵama", "tattaḵima"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتخمون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَتَّخِمُونَ • (tattaḵimūna) (form VIII) /tat.ta.xi.muː.na/\n# second-person masculine plural non-past active indicative of اِتَّخَمَ (ittaḵama)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattaḵimūna", "ittaḵama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتخمان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَتَّخِمَانِ • (tattaḵimāni) (form VIII) /tat.ta.xi.maː.ni/\n# inflection of اِتَّخَمَ (ittaḵama):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattaḵimāni", "ittaḵama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتخمون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَتَّخِمُونَ • (yattaḵimūna) (form VIII) /jat.ta.xi.muː.na/\n# third-person masculine plural non-past active indicative of اِتَّخَمَ (ittaḵama)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattaḵimūna", "ittaḵama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تتخمين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَتَّخِمِينَ • (tattaḵimīna) (form VIII) /tat.ta.xi.miː.na/\n# second-person feminine singular non-past active indicative of اِتَّخَمَ (ittaḵama)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattaḵimīna", "ittaḵama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يتخمن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَتَّخِمْنَ • (yattaḵimna) (form VIII) /jat.ta.xim.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِتَّخَمَ (ittaḵama)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattaḵimna", "ittaḵama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نتخم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نتخم (form VIII)\n# نَتَّخِمُ (nattaḵimu) /nat.ta.xi.mu/: first-person plural non-past active indicative of اِتَّخَمَ (ittaḵama)\n# نَتَّخِمَ (nattaḵima) /nat.ta.xi.ma/: first-person plural non-past active subjunctive of اِتَّخَمَ (ittaḵama)\n# نَتَّخِمْ (nattaḵim) /nat.ta.xim/: first-person plural non-past active jussive of اِتَّخَمَ (ittaḵama)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["nattaḵimu", "ittaḵama", "nattaḵima"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اتخمتما",
+      "tur": "verb",
+      "baslik": "اِتَّخَمْتُمَا • (ittaḵamtumā) (form VIII) /it.ta.xam.tu.maː/\n# second-person dual past active of اِتَّخَمَ (ittaḵama)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaḵamtumā", "ittaḵama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اتخمت",
+      "tur": "verb",
+      "baslik": "اتخمت (form VIII)\n# اِتَّخَمْتُ (ittaḵamtu) /it.ta.xam.tu/: first-person singular past active of اِتَّخَمَ (ittaḵama)\n# اِتَّخَمْتَ (ittaḵamta) /it.ta.xam.ta/: second-person masculine singular past active of اِتَّخَمَ (ittaḵama)\n# اِتَّخَمْتِ (ittaḵamti) /it.ta.xam.ti/: second-person feminine singular past active of اِتَّخَمَ (ittaḵama)\n# اِتَّخَمَتْ (ittaḵamat) /it.ta.xa.mat/: third-person femini",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaḵamtu", "ittaḵama", "ittaḵamta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اتخما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اتخما (form VIII)\n# اِتَّخَمَا (ittaḵamā) /it.ta.xa.maː/: third-person masculine dual past active of اِتَّخَمَ (ittaḵama)\n# اِتَّخِمَا (ittaḵimā) /it.ta.xi.maː/: second-person dual imperative of اِتَّخَمَ (ittaḵama)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaḵamā", "ittaḵama", "ittaḵimā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اتخمتم",
+      "tur": "verb",
+      "baslik": "اِتَّخَمْتُمْ • (ittaḵamtum) (form VIII) /it.ta.xam.tum/\n# second-person masculine plural past active of اِتَّخَمَ (ittaḵama)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaḵamtum", "ittaḵama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اتخمنا",
+      "tur": "verb",
+      "baslik": "اِتَّخَمْنَا • (ittaḵamnā) (form VIII) /it.ta.xam.naː/\n# first-person plural past active of اِتَّخَمَ (ittaḵama)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaḵamnā", "ittaḵama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اتخمتن",
+      "tur": "verb",
+      "baslik": "اِتَّخَمْتُنَّ • (ittaḵamtunna) (form VIII) /it.ta.xam.tun.na/\n# second-person feminine plural past active of اِتَّخَمَ (ittaḵama)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaḵamtunna", "ittaḵama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اتخمن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اتخمن (form VIII)\n# اِتَّخَمْنَ (ittaḵamna) /it.ta.xam.na/: third-person feminine plural past active of اِتَّخَمَ (ittaḵama)\n# اِتَّخِمْنَ (ittaḵimna) /it.ta.xim.na/: second-person feminine plural imperative of اِتَّخَمَ (ittaḵama)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaḵamna", "ittaḵama", "ittaḵimna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اتخمتا",
+      "tur": "verb",
+      "baslik": "اِتَّخَمَتَا • (ittaḵamatā) (form VIII) /it.ta.xa.ma.taː/\n# third-person feminine dual past active of اِتَّخَمَ (ittaḵama)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaḵamatā", "ittaḵama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اتخمي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اِتَّخِمِي • (ittaḵimī) (form VIII) /it.ta.xi.miː/\n# second-person feminine singular imperative of اِتَّخَمَ (ittaḵama)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaḵimī", "ittaḵama"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اتخموا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "اتخموا (form VIII)\n# اِتَّخَمُوا (ittaḵamū) /it.ta.xa.muː/: third-person masculine plural past active of اِتَّخَمَ (ittaḵama)\n# اِتَّخِمُوا (ittaḵimū) /it.ta.xi.muː/: second-person masculine plural imperative of اِتَّخَمَ (ittaḵama)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittaḵamū", "ittaḵama", "ittaḵimū"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "اتخم", "r6"]
+  ],
+  "mana": {
     "ince": "cram.v.04",
     "orta": "verb.change",
     "ust": "fiil ve hadise",
@@ -366,22 +271,15 @@
     "dayanak_tanim": "prepare (students) hastily for an impending exam",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["cram.v.04"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": ["cram.v.04"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

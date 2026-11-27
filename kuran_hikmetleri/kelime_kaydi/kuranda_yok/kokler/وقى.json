@@ -1,704 +1,491 @@
 {
   "kok": "وقى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "وقى", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "mekayis": [
-      {
-        "baslik": "وَقَى",
-        "metin": "(وَقَى) الْوَاوُ وَالْقَافُ وَالْيَاءُ: كَلِمَةٌ وَاحِدَةٌ تَدُلُّ عَلَى دَفْعِ شَيْءٍ عَنْ شَيْءٍ بِغَيْرِهِ. وَوَقَيْتُهُ أَقِيهِ وَقْيًا. وَالْوِقَايَةُ: مَا يَقِي الشَّيْءَ. وَاتَّقِ اللَّهَ: تَوَقَّهُ، أَيِ اجْعَلْ بَيْنَكَ وَبَيْنَهُ كَالْوِقَايَةِ. قَالَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ: «اتَّقُوا النَّارَ وَلَوْ بِشِقِ تَمْرَةٍ» ، وَكَأَنَّهُ أَرَادَ: اجْعَلُوهَا وِقَايَةً بَيْنَكُمْ وَبَيْنَهَا.\nوَمِمَّا شَذَّ عَنِ الْبَابِ الْوَقْيُ، قَالُوا: هُوَ الظَّلْعُ الْيَسِيرُ."
-      }
-    ],
-    "kaikki_vikisozluk": [
-      {
-        "w": "وقت",
-        "u": "وقت",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "وَقَتْ • (waqat) (form I) /wa.qat/\n# third-person feminine singular past active of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["waqat", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "ق",
-        "u": "ق",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "قِ • (qi) (form I) /qi/\n# second-person masculine singular imperative of وَقَى (waqā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qi", "waqā"],
-        "ipa": ["/qaːf/", "/q/", "/ʔ/"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "تقوا",
-        "u": "تقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَقُوا • (taqū) (form I) /ta.quː/\n# second-person masculine plural non-past active subjunctive/jussive of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taqū", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "قي",
-        "u": "قي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "قِي • (qī) (form I) /qiː/\n# second-person feminine singular imperative of وَقَى (waqā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qī", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "وقي",
-        "u": "وقي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "وُقِيَ • (wuqiya) (form I) /wu.qi.ja/\n# third-person masculine singular past passive of وَقَى (waqā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wuqiya", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يقي",
-        "u": "يقي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يقي (form I)\n# يَقِي (yaqī) /ja.qiː/: third-person masculine singular non-past active indicative of وَقَى (waqā)\n# يَقِيَ (yaqiya) /ja.qi.ja/: third-person masculine singular non-past active subjunctive of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaqī", "waqā", "yaqiya"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوقى",
-        "u": "يوقى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُوقَى • (yūqā) (form I) /juː.qaː/\n# third-person masculine singular non-past passive indicative/subjunctive of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yūqā", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "توقى",
-        "u": "توقى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُوقَى • (tūqā) (form I) /tuː.qaː/\n# inflection of وَقَى (waqā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tūqā", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "نقي",
-        "u": "نقي",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "نقي (form I)\n# نَقِي (naqī) /na.qiː/: first-person plural non-past active indicative of وَقَى (waqā)\n# نَقِيَ (naqiya) /na.qi.ja/: first-person plural non-past active subjunctive of وَقَى (waqā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naqī", "waqā", "naqiya"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "توق",
-        "u": "توق",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُوقَ • (tūqa) (form I) /tuː.qa/\n# inflection of وَقَى (waqā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tūqa", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوق",
-        "u": "نوق",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نُوقَ • (nūqa) (form I) /nuː.qa/\n# first-person plural non-past passive jussive of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nūqa", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "توقي",
-        "u": "توقي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُوقَيْ • (tūqay) (form I) /tuː.qaj/\n# second-person feminine singular non-past passive subjunctive/jussive of وَقَى (waqā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tūqay", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يق",
-        "u": "يق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَقِ • (yaqi) (form I) /ja.qi/\n# third-person masculine singular non-past active jussive of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaqi", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوق",
-        "u": "يوق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُوقَ • (yūqa) (form I) /juː.qa/\n# third-person masculine singular non-past passive jussive of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yūqa", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "تقي",
-        "u": "تقي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تقي (form I)\n# تَقِي (taqī) /ta.qiː/: inflection of وَقَى (waqā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَقِيَ (taqiya) /ta.qi.ja/: inflection of وَقَى (waqā):\n## second-person masculine singular non-past active subjunctive\n## third-person f",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taqī", "waqā", "taqiya"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "تق",
-        "u": "تق",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَقِ • (taqi) (form I) /ta.qi/\n# inflection of وَقَى (waqā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taqi", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "وقيت",
-        "u": "وقيت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وقيت (form I)\n# وَقَيْتُ (waqaytu) /wa.qaj.tu/: first-person singular past active of وَقَى (waqā)\n# وَقَيْتَ (waqayta) /wa.qaj.ta/: second-person masculine singular past active of وَقَى (waqā)\n# وَقَيْتِ (waqayti) /wa.qaj.ti/: second-person feminine singular past active of وَقَى (waqā)\n# وُقِيتُ (wuqītu) /wu.qiː.tu/: first-person singular past passive of وَقَى (waqā)\n# وُقِيتَ (wuqīta) /wu.qiː.ta/",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["waqaytu", "waqā", "waqayta"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "تقين",
-        "u": "تقين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تَقِينَ • (taqīna) (form I) /ta.qiː.na/\n# inflection of وَقَى (waqā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taqīna", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "توقين",
-        "u": "توقين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُوقَيْنَ • (tūqayna) (form I) /tuː.qaj.na/\n# inflection of وَقَى (waqā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tūqayna", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "أقي",
-        "u": "أقي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أقي (form I)\n# أَقِي (ʔaqī) /ʔa.qiː/: first-person singular non-past active indicative of وَقَى (waqā)\n# أَقِيَ (ʔaqiya) /ʔa.qi.ja/: first-person singular non-past active subjunctive of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaqī", "waqā", "ʔaqiya"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "أق",
-        "u": "أق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَقِ • (ʔaqi) (form I) /ʔa.qi/\n# first-person singular non-past active jussive of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaqi", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "أوقى",
-        "u": "أوقى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُوقَى • (ʔūqā) (form I) /ʔuː.qaː/\n# first-person singular non-past passive indicative/subjunctive of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔūqā", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "أوق",
-        "u": "أوق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أُوقَ • (ʔūqa) (form I) /ʔuː.qa/\n# first-person singular non-past passive jussive of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔūqa", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "وقينا",
-        "u": "وقينا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وقينا (form I)\n# وَقَيْنَا (waqaynā) /wa.qaj.naː/: first-person plural past active of وَقَى (waqā)\n# وُقِينَا (wuqīnā) /wu.qiː.naː/: first-person plural past passive of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["waqaynā", "waqā", "wuqīnā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "نق",
-        "u": "نق",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نَقِ • (naqi) (form I) /na.qi/\n# first-person plural non-past active jussive of وَقَى (waqā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naqi", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "نوقى",
-        "u": "نوقى",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نُوقَى • (nūqā) (form I) /nuː.qaː/\n# first-person plural non-past passive indicative/subjunctive of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nūqā", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "توقوا",
-        "u": "توقوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تُوقَوْا • (tūqaw) (form I) /tuː.qaw/\n# second-person masculine plural non-past passive subjunctive/jussive of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tūqaw", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "وقيتم",
-        "u": "وقيتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وقيتم (form I)\n# وَقَيْتُمْ (waqaytum) /wa.qaj.tum/: second-person masculine plural past active of وَقَى (waqā)\n# وُقِيتُمْ (wuqītum) /wu.qiː.tum/: second-person masculine plural past passive of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["waqaytum", "waqā", "wuqītum"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "تقون",
-        "u": "تقون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَقُونَ • (taqūna) (form I) /ta.quː.na/\n# second-person masculine plural non-past active indicative of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taqūna", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "قوا",
-        "u": "قوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قُوا • (qū) (form I) /quː/\n# second-person masculine plural imperative of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qū", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "توقون",
-        "u": "توقون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُوقَوْنَ • (tūqawna) (form I) /tuː.qaw.na/\n# second-person masculine plural non-past passive indicative of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tūqawna", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "وقوا",
-        "u": "وقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وقوا (form I)\n# وَقَوْا (waqaw) /wa.qaw/: third-person masculine plural past active of وَقَى (waqā)\n# وُقُوا (wuqū) /wu.quː/: third-person masculine plural past passive of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["waqaw", "waqā", "wuqū"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يقون",
-        "u": "يقون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَقُونَ • (yaqūna) (form I) /ja.quː.na/\n# third-person masculine plural non-past active indicative of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaqūna", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يقوا",
-        "u": "يقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَقُوا • (yaqū) (form I) /ja.quː/\n# third-person masculine plural non-past active subjunctive/jussive of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaqū", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوقون",
-        "u": "يوقون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُوقَوْنَ • (yūqawna) (form I) /juː.qaw.na/\n# third-person masculine plural non-past passive indicative of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yūqawna", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوقوا",
-        "u": "يوقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُوقَوْا • (yūqaw) (form I) /juː.qaw/\n# third-person masculine plural non-past passive subjunctive/jussive of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yūqaw", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "وقيتن",
-        "u": "وقيتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وقيتن (form I)\n# وَقَيْتُنَّ (waqaytunna) /wa.qaj.tun.na/: second-person feminine plural past active of وَقَى (waqā)\n# وُقِيتُنَّ (wuqītunna) /wu.qiː.tun.na/: second-person feminine plural past passive of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["waqaytunna", "waqā", "wuqītunna"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "قين",
-        "u": "قين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "قِينَ • (qīna) (form I) /qiː.na/\n# second-person feminine plural imperative of وَقَى (waqā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qīna", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "وقين",
-        "u": "وقين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وقين (form I)\n# وَقَيْنَ (waqayna) /wa.qaj.na/: third-person feminine plural past active of وَقَى (waqā)\n# وُقِينَ (wuqīna) /wu.qiː.na/: third-person feminine plural past passive of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["waqayna", "waqā", "wuqīna"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يقين",
-        "u": "يقين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَقِينَ • (yaqīna) (form I) /ja.qiː.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of وَقَى (waqā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaqīna", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوقين",
-        "u": "يوقين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُوقَيْنَ • (yūqayna) (form I) /juː.qaj.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yūqayna", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "توقيا",
-        "u": "توقيا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُوقَيَا • (tūqayā) (form I) /tuː.qa.jaː/\n# inflection of وَقَى (waqā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tūqayā", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "وقتا",
-        "u": "وقتا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "وَقَتَا • (waqatā) (form I) /wa.qa.taː/\n# third-person feminine dual past active of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["waqatā", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "وقيتما",
-        "u": "وقيتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وقيتما (form I)\n# وَقَيْتُمَا (waqaytumā) /wa.qaj.tu.maː/: second-person dual past active of وَقَى (waqā)\n# وُقِيتُمَا (wuqītumā) /wu.qiː.tu.maː/: second-person dual past passive of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["waqaytumā", "waqā", "wuqītumā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "وقيتا",
-        "u": "وقيتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وُقِيَتَا • (wuqiyatā) (form I) /wu.qi.ja.taː/\n# third-person feminine dual past passive of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wuqiyatā", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "وقيا",
-        "u": "وقيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وقيا (form I)\n# وَقَيَا (waqayā) /wa.qa.jaː/: third-person masculine dual past active of وَقَى (waqā)\n# وُقِيَا (wuqiyā) /wu.qi.jaː/: third-person masculine dual past passive of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["waqayā", "waqā", "wuqiyā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "تقيان",
-        "u": "تقيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَقِيَانِ • (taqiyāni) (form I) /ta.qi.jaː.ni/\n# inflection of وَقَى (waqā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taqiyāni", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "تقيا",
-        "u": "تقيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَقِيَا • (taqiyā) (form I) /ta.qi.jaː/\n# inflection of وَقَى (waqā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taqiyā", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يقيان",
-        "u": "يقيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَقِيَانِ • (yaqiyāni) (form I) /ja.qi.jaː.ni/\n# third-person masculine dual non-past active indicative of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaqiyāni", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوقيان",
-        "u": "يوقيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُوقَيَانِ • (yūqayāni) (form I) /juː.qa.jaː.ni/\n# third-person masculine dual non-past passive indicative of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yūqayāni", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "توقيان",
-        "u": "توقيان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تُوقَيَانِ • (tūqayāni) (form I) /tuː.qa.jaː.ni/\n# inflection of وَقَى (waqā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tūqayāni", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يقيا",
-        "u": "يقيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَقِيَا • (yaqiyā) (form I) /ja.qi.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaqiyā", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "قيا",
-        "u": "قيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "قِيَا • (qiyā) (form I) /qi.jaː/\n# second-person dual imperative of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qiyā", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      },
-      {
-        "w": "يوقيا",
-        "u": "يوقيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يُوقَيَا • (yūqayā) (form I) /juː.qa.jaː/\n# third-person masculine dual non-past passive subjunctive/jussive of وَقَى (waqā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yūqayā", "waqā"],
-        "k": "وقى",
-        "yol": "kök"
-      }
-    ],
-    "tercume": {
-      "mekayis": [
-        {
-          "baslik": "(وَقَى): korumak, vikāye etmek.",
-          "metin": "(وَقَى) Vâv, kāf ve yâ: bir tek kelimedir ki bir şeyi bir şeyden, kendisinden başka bir şey ile defetmeye delâlet eder. «Vekaytühû ekîhi vekyen» derler; yani onu korudum, korurum, korumak. Vikāye (الْوِقَايَةُ): bir şeyi koruyan şeydir. «Allah'tan sakın» (اتَّقِ اللَّهَ) demek, O'ndan tevekkî et, yani seninle O'nun arasına bir vikāye gibi perde koy, demektir. Nebî sallallâhu aleyhi ve âlihî ve sellem buyurdu: «Yarım hurma ile olsun, ateşten sakının» (اتَّقُوا النَّارَ وَلَوْ بِشِقِّ تَمْرَةٍ). Sanki şunu murat etmiştir: Onu, sizinle ateş arasında bir vikāye kılın.\nBu bâbdan şâz olarak ayrılanlardan biri de «vekî» (الْوَقْيُ)dir; hafif topallıktır, dediler."
-        }
-      ]
-    }
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "قى",
+  "ses": {
     "harf": "و",
+    "fasil": "قى",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "mekayis": [
+    {
+      "baslik": "وَقَى",
+      "metin": "(وَقَى) الْوَاوُ وَالْقَافُ وَالْيَاءُ: كَلِمَةٌ وَاحِدَةٌ تَدُلُّ عَلَى دَفْعِ شَيْءٍ عَنْ شَيْءٍ بِغَيْرِهِ. وَوَقَيْتُهُ أَقِيهِ وَقْيًا. وَالْوِقَايَةُ: مَا يَقِي الشَّيْءَ. وَاتَّقِ اللَّهَ: تَوَقَّهُ، أَيِ اجْعَلْ بَيْنَكَ وَبَيْنَهُ كَالْوِقَايَةِ. قَالَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ: «اتَّقُوا النَّارَ وَلَوْ بِشِقِ تَمْرَةٍ» ، وَكَأَنَّهُ أَرَادَ: اجْعَلُوهَا وِقَايَةً بَيْنَكُمْ وَبَيْنَهَا.\nوَمِمَّا شَذَّ عَنِ الْبَابِ الْوَقْيُ، قَالُوا: هُوَ الظَّلْعُ الْيَسِيرُ.",
+      "baslik_tr": "(وَقَى): korumak, vikāye etmek.",
+      "metin_tr": "(وَقَى) Vâv, kāf ve yâ: bir tek kelimedir ki bir şeyi bir şeyden, kendisinden başka bir şey ile defetmeye delâlet eder. «Vekaytühû ekîhi vekyen» derler; yani onu korudum, korurum, korumak. Vikāye (الْوِقَايَةُ): bir şeyi koruyan şeydir. «Allah'tan sakın» (اتَّقِ اللَّهَ) demek, O'ndan tevekkî et, yani seninle O'nun arasına bir vikāye gibi perde koy, demektir. Nebî sallallâhu aleyhi ve âlihî ve sellem buyurdu: «Yarım hurma ile olsun, ateşten sakının» (اتَّقُوا النَّارَ وَلَوْ بِشِقِّ تَمْرَةٍ). Sanki şunu murat etmiştir: Onu, sizinle ateş arasında bir vikāye kılın.\nBu bâbdan şâz olarak ayrılanlardan biri de «vekî» (الْوَقْيُ)dir; hafif topallıktır, dediler."
+    }
+  ],
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "وقت",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "وَقَتْ • (waqat) (form I) /wa.qat/\n# third-person feminine singular past active of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["waqat", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ق",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "قِ • (qi) (form I) /qi/\n# second-person masculine singular imperative of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qi", "waqā"],
+      "ipa": ["/qaːf/", "/q/", "/ʔ/"]
+    },
+    {
+      "madde": "تقوا",
+      "tur": "verb",
+      "baslik": "تَقُوا • (taqū) (form I) /ta.quː/\n# second-person masculine plural non-past active subjunctive/jussive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taqū", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "قِي • (qī) (form I) /qiː/\n# second-person feminine singular imperative of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qī", "waqā"]
+    },
+    {
+      "madde": "وقي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "وُقِيَ • (wuqiya) (form I) /wu.qi.ja/\n# third-person masculine singular past passive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wuqiya", "waqā"]
+    },
+    {
+      "madde": "يقي",
+      "tur": "verb",
+      "baslik": "يقي (form I)\n# يَقِي (yaqī) /ja.qiː/: third-person masculine singular non-past active indicative of وَقَى (waqā)\n# يَقِيَ (yaqiya) /ja.qi.ja/: third-person masculine singular non-past active subjunctive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaqī", "waqā", "yaqiya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوقى",
+      "tur": "verb",
+      "baslik": "يُوقَى • (yūqā) (form I) /juː.qaː/\n# third-person masculine singular non-past passive indicative/subjunctive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yūqā", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "توقى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُوقَى • (tūqā) (form I) /tuː.qaː/\n# inflection of وَقَى (waqā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tūqā", "waqā"]
+    },
+    {
+      "madde": "نقي",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "نقي (form I)\n# نَقِي (naqī) /na.qiː/: first-person plural non-past active indicative of وَقَى (waqā)\n# نَقِيَ (naqiya) /na.qi.ja/: first-person plural non-past active subjunctive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naqī", "waqā", "naqiya"]
+    },
+    {
+      "madde": "توق",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُوقَ • (tūqa) (form I) /tuː.qa/\n# inflection of وَقَى (waqā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tūqa", "waqā"]
+    },
+    {
+      "madde": "نوق",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نُوقَ • (nūqa) (form I) /nuː.qa/\n# first-person plural non-past passive jussive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nūqa", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "توقي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُوقَيْ • (tūqay) (form I) /tuː.qaj/\n# second-person feminine singular non-past passive subjunctive/jussive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tūqay", "waqā"]
+    },
+    {
+      "madde": "يق",
+      "tur": "verb",
+      "baslik": "يَقِ • (yaqi) (form I) /ja.qi/\n# third-person masculine singular non-past active jussive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaqi", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوق",
+      "tur": "verb",
+      "baslik": "يُوقَ • (yūqa) (form I) /juː.qa/\n# third-person masculine singular non-past passive jussive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yūqa", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تقي (form I)\n# تَقِي (taqī) /ta.qiː/: inflection of وَقَى (waqā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَقِيَ (taqiya) /ta.qi.ja/: inflection of وَقَى (waqā):\n## second-person masculine singular non-past active subjunctive\n## third-person f",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taqī", "waqā", "taqiya"]
+    },
+    {
+      "madde": "تق",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَقِ • (taqi) (form I) /ta.qi/\n# inflection of وَقَى (waqā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taqi", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "وقيت",
+      "tur": "verb",
+      "baslik": "وقيت (form I)\n# وَقَيْتُ (waqaytu) /wa.qaj.tu/: first-person singular past active of وَقَى (waqā)\n# وَقَيْتَ (waqayta) /wa.qaj.ta/: second-person masculine singular past active of وَقَى (waqā)\n# وَقَيْتِ (waqayti) /wa.qaj.ti/: second-person feminine singular past active of وَقَى (waqā)\n# وُقِيتُ (wuqītu) /wu.qiː.tu/: first-person singular past passive of وَقَى (waqā)\n# وُقِيتَ (wuqīta) /wu.qiː.ta/",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["waqaytu", "waqā", "waqayta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَقِينَ • (taqīna) (form I) /ta.qiː.na/\n# inflection of وَقَى (waqā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taqīna", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "توقين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُوقَيْنَ • (tūqayna) (form I) /tuː.qaj.na/\n# inflection of وَقَى (waqā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tūqayna", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقي",
+      "tur": "verb",
+      "baslik": "أقي (form I)\n# أَقِي (ʔaqī) /ʔa.qiː/: first-person singular non-past active indicative of وَقَى (waqā)\n# أَقِيَ (ʔaqiya) /ʔa.qi.ja/: first-person singular non-past active subjunctive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaqī", "waqā", "ʔaqiya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أق",
+      "tur": "verb",
+      "baslik": "أَقِ • (ʔaqi) (form I) /ʔa.qi/\n# first-person singular non-past active jussive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaqi", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوقى",
+      "tur": "verb",
+      "baslik": "أُوقَى • (ʔūqā) (form I) /ʔuː.qaː/\n# first-person singular non-past passive indicative/subjunctive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔūqā", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أوق",
+      "tur": "verb",
+      "baslik": "أُوقَ • (ʔūqa) (form I) /ʔuː.qa/\n# first-person singular non-past passive jussive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔūqa", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "وقينا",
+      "tur": "verb",
+      "baslik": "وقينا (form I)\n# وَقَيْنَا (waqaynā) /wa.qaj.naː/: first-person plural past active of وَقَى (waqā)\n# وُقِينَا (wuqīnā) /wu.qiː.naː/: first-person plural past passive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["waqaynā", "waqā", "wuqīnā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نق",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نَقِ • (naqi) (form I) /na.qi/\n# first-person plural non-past active jussive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naqi", "waqā"]
+    },
+    {
+      "madde": "نوقى",
+      "tur": "verb",
+      "baslik": "نُوقَى • (nūqā) (form I) /nuː.qaː/\n# first-person plural non-past passive indicative/subjunctive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nūqā", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "توقوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تُوقَوْا • (tūqaw) (form I) /tuː.qaw/\n# second-person masculine plural non-past passive subjunctive/jussive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tūqaw", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "وقيتم",
+      "tur": "verb",
+      "baslik": "وقيتم (form I)\n# وَقَيْتُمْ (waqaytum) /wa.qaj.tum/: second-person masculine plural past active of وَقَى (waqā)\n# وُقِيتُمْ (wuqītum) /wu.qiː.tum/: second-person masculine plural past passive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["waqaytum", "waqā", "wuqītum"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقون",
+      "tur": "verb",
+      "baslik": "تَقُونَ • (taqūna) (form I) /ta.quː.na/\n# second-person masculine plural non-past active indicative of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taqūna", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قوا",
+      "tur": "verb",
+      "baslik": "قُوا • (qū) (form I) /quː/\n# second-person masculine plural imperative of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qū", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "توقون",
+      "tur": "verb",
+      "baslik": "تُوقَوْنَ • (tūqawna) (form I) /tuː.qaw.na/\n# second-person masculine plural non-past passive indicative of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tūqawna", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "وقوا",
+      "tur": "verb",
+      "baslik": "وقوا (form I)\n# وَقَوْا (waqaw) /wa.qaw/: third-person masculine plural past active of وَقَى (waqā)\n# وُقُوا (wuqū) /wu.quː/: third-person masculine plural past passive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["waqaw", "waqā", "wuqū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقون",
+      "tur": "verb",
+      "baslik": "يَقُونَ • (yaqūna) (form I) /ja.quː.na/\n# third-person masculine plural non-past active indicative of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaqūna", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقوا",
+      "tur": "verb",
+      "baslik": "يَقُوا • (yaqū) (form I) /ja.quː/\n# third-person masculine plural non-past active subjunctive/jussive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaqū", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوقون",
+      "tur": "verb",
+      "baslik": "يُوقَوْنَ • (yūqawna) (form I) /juː.qaw.na/\n# third-person masculine plural non-past passive indicative of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yūqawna", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوقوا",
+      "tur": "verb",
+      "baslik": "يُوقَوْا • (yūqaw) (form I) /juː.qaw/\n# third-person masculine plural non-past passive subjunctive/jussive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yūqaw", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "وقيتن",
+      "tur": "verb",
+      "baslik": "وقيتن (form I)\n# وَقَيْتُنَّ (waqaytunna) /wa.qaj.tun.na/: second-person feminine plural past active of وَقَى (waqā)\n# وُقِيتُنَّ (wuqītunna) /wu.qiː.tun.na/: second-person feminine plural past passive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["waqaytunna", "waqā", "wuqītunna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "قِينَ • (qīna) (form I) /qiː.na/\n# second-person feminine plural imperative of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qīna", "waqā"]
+    },
+    {
+      "madde": "وقين",
+      "tur": "verb",
+      "baslik": "وقين (form I)\n# وَقَيْنَ (waqayna) /wa.qaj.na/: third-person feminine plural past active of وَقَى (waqā)\n# وُقِينَ (wuqīna) /wu.qiː.na/: third-person feminine plural past passive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["waqayna", "waqā", "wuqīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَقِينَ • (yaqīna) (form I) /ja.qiː.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaqīna", "waqā"]
+    },
+    {
+      "madde": "يوقين",
+      "tur": "verb",
+      "baslik": "يُوقَيْنَ • (yūqayna) (form I) /juː.qaj.na/\n# third-person feminine plural non-past passive indicative/subjunctive/jussive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yūqayna", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "توقيا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُوقَيَا • (tūqayā) (form I) /tuː.qa.jaː/\n# inflection of وَقَى (waqā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tūqayā", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "وقتا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "وَقَتَا • (waqatā) (form I) /wa.qa.taː/\n# third-person feminine dual past active of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["waqatā", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "وقيتما",
+      "tur": "verb",
+      "baslik": "وقيتما (form I)\n# وَقَيْتُمَا (waqaytumā) /wa.qaj.tu.maː/: second-person dual past active of وَقَى (waqā)\n# وُقِيتُمَا (wuqītumā) /wu.qiː.tu.maː/: second-person dual past passive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["waqaytumā", "waqā", "wuqītumā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "وقيتا",
+      "tur": "verb",
+      "baslik": "وُقِيَتَا • (wuqiyatā) (form I) /wu.qi.ja.taː/\n# third-person feminine dual past passive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wuqiyatā", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "وقيا",
+      "tur": "verb",
+      "baslik": "وقيا (form I)\n# وَقَيَا (waqayā) /wa.qa.jaː/: third-person masculine dual past active of وَقَى (waqā)\n# وُقِيَا (wuqiyā) /wu.qi.jaː/: third-person masculine dual past passive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["waqayā", "waqā", "wuqiyā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقيان",
+      "tur": "verb",
+      "baslik": "تَقِيَانِ • (taqiyāni) (form I) /ta.qi.jaː.ni/\n# inflection of وَقَى (waqā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taqiyāni", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقيا",
+      "tur": "verb",
+      "baslik": "تَقِيَا • (taqiyā) (form I) /ta.qi.jaː/\n# inflection of وَقَى (waqā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taqiyā", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقيان",
+      "tur": "verb",
+      "baslik": "يَقِيَانِ • (yaqiyāni) (form I) /ja.qi.jaː.ni/\n# third-person masculine dual non-past active indicative of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaqiyāni", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوقيان",
+      "tur": "verb",
+      "baslik": "يُوقَيَانِ • (yūqayāni) (form I) /juː.qa.jaː.ni/\n# third-person masculine dual non-past passive indicative of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yūqayāni", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "توقيان",
+      "tur": "verb",
+      "baslik": "تُوقَيَانِ • (tūqayāni) (form I) /tuː.qa.jaː.ni/\n# inflection of وَقَى (waqā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tūqayāni", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقيا",
+      "tur": "verb",
+      "baslik": "يَقِيَا • (yaqiyā) (form I) /ja.qi.jaː/\n# third-person masculine dual non-past active subjunctive/jussive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaqiyā", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قيا",
+      "tur": "verb",
+      "baslik": "قِيَا • (qiyā) (form I) /qi.jaː/\n# second-person dual imperative of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qiyā", "waqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يوقيا",
+      "tur": "verb",
+      "baslik": "يُوقَيَا • (yūqayā) (form I) /juː.qa.jaː/\n# third-person masculine dual non-past passive subjunctive/jussive of وَقَى (waqā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yūqayā", "waqā"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "وقى", "r7"]
+  ],
+  "mana": {
     "ince": "fundamental_quantity.n.01",
     "orta": "noun.time",
     "ust": "ölçü, mekân ve zaman",
@@ -706,33 +493,8 @@
     "dayanak_tanim": "some point or period in time",
     "synset_sayisi": 17
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
-    "act.n.02",
-    "certainty.n.02",
-    "condition.n.01",
-    "feeling.n.01",
-    "happening.n.01",
-    "information.n.02",
-    "magnitude.n.01",
-    "quantify.v.02",
-    "schedule.v.02",
-    "substance.n.01",
-    "time_period.n.01",
-    "time_slot.n.01"
-  ],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 1,
       "merkez_kok": "قره",
@@ -752,6 +514,24 @@
       "boy": 241
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": [
+    "act.n.02",
+    "certainty.n.02",
+    "condition.n.01",
+    "feeling.n.01",
+    "happening.n.01",
+    "information.n.02",
+    "magnitude.n.01",
+    "quantify.v.02",
+    "schedule.v.02",
+    "substance.n.01",
+    "time_period.n.01",
+    "time_slot.n.01"
+  ],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

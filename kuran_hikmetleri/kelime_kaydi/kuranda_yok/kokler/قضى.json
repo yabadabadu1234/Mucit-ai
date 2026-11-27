@@ -1,1001 +1,712 @@
 {
   "kok": "قضى",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "قضى", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "القاف والضاد",
-      "baslik": "قضى",
-      "mihveri": "انفصال أو فراغ من شيء بعد قطعه أو تمامه: كتلك الجلدة تيسّر خروج الصبي نقيّ الوجه، وكالفراغ من عمل الثوب والدار، وكأداء الدين والقتل، وذهابُ الشيء فراغ منه. وقوله تعالى: {ثُمَّ لْيَقْضُوا تَفَثَهُمْ} [الحج: 29] أي ليزيلوا الثَفَث، وذلك بقصّ الأظفار وحَلْق العانة ونتف الإبط {فَوَكَزَهُ مُوسَى فَقَضَى عَلَيْهِ} [القصص: 15]. قتله - كما قال تعالى {وَقَتَلْتَ نَفْسًا} [طه: 40]. ومن الفراغ من الشيء بإتمامه حسب المراد أداء أو تحصيلًا أو إتمامَ عمل: \"قضى دينه: أدّاه إلى الغريم {فَلَمَّا قَضَى مُوسَى الْأَجَلَ} [القصص: 29] , {فَلَمَّا قَضَى زَيْدٌ مِنْهَا وَطَرًا زَوَّجْنَاكَهَا} [الأحزاب: 37] , {إِلَّا حَاجَةً فِي نَفْسِ يَعْقُوبَ قَضَاهَا} [يوسف: 68] , {فَقَضَاهُنَّ سَبْعَ سَمَاوَاتٍ فِي يَوْمَيْنِ} [فصلت: 12]. ومن الإتمام استُعْملت في التعبير عن إبرام الأمر {وَقَضَى رَبُّكَ أَلَّا تَعْبُدُوا إِلَّا إِيَّاهُ} [الإسراء: 23] , {سُبْحَانَهُ إِذَا قَضَى أَمْرًا فَإِنَّمَا يَقُولُ لَهُ كُنْ فَيَكُونُ} [مريم: 35]. (4/1799) واستُعْمِلَت في فصل ما اختلط وتشابك من الأمور، ومن هذا \"القضاء: الحكم \" {ثُمَّ لَا يَجِدُوا فِي أَنْفُسِهِمْ حَرَجًا مِمَّا قَضَيْتَ} [النساء: 65]، {وَقُضِيَ بَيْنَهُمْ بِالْقِسْطِ} [يونس: 54]. والخلاصة في الاستعمالات القرآنية لهذا التركيب أن الذي جاء فيه بمعنى حكم هو (قَضَى) أمرًا، أجلًا، ألا تعبدوا، لتفسدن، قضى عليها الموت، مما قضيت، فاقص أنت قاص، لا يقضون بشيء، وكل (يقَضْي بين، قُضِيَ بين). وسائر ما في القرآن من التركيب فهو بمعنى إتمام الأمر وإنهائه.",
-      "sesler": "",
-      "tam_metin": "{إِذَا قَضَى أَمْرًا فَإِنَّمَا يَقُولُ لَهُ كُنْ فَيَكُونُ} [آل عمران: 47]\n\"القَضَاةُ - كفتاة [وفي ق كرُماة]: الجِلْدة الرقيقة التي تكون على وَجْه الصبي حين يولد. وكلُّ ما أُحْكِمَ عمله فَقَدْ قُضِىَ. تقول قَضَيْت هذا الثوب وهذه الدارَ إذا عَمِلْتها وأَحْكَمْتَ عَمَلها. وقَضَى الغريم دَيْنَه: أَدَّاه إليه. وضربه فَقَضَى عليه: قَتَلَه كأنه فَرَغَ منه. وسُمٌّ قاض: قَاتل. وقَضَى: مات. والانقضاء: ذَهاب الشيء وفناؤه \".\n° المعنى المحوري\nانفصال أو فراغ من شيء بعد قطعه أو تمامه: كتلك الجلدة تيسّر خروج الصبي نقيّ الوجه، وكالفراغ من عمل الثوب والدار، وكأداء الدين والقتل، وذهابُ الشيء فراغ منه. وقوله تعالى: {ثُمَّ لْيَقْضُوا تَفَثَهُمْ} [الحج: 29] أي ليزيلوا الثَفَث، وذلك بقصّ الأظفار وحَلْق العانة ونتف الإبط {فَوَكَزَهُ مُوسَى فَقَضَى عَلَيْهِ} [القصص: 15]. قتله - كما قال تعالى {وَقَتَلْتَ نَفْسًا} [طه: 40].\nومن الفراغ من الشيء بإتمامه حسب المراد أداء أو تحصيلًا أو إتمامَ عمل: \"قضى دينه: أدّاه إلى الغريم {فَلَمَّا قَضَى مُوسَى الْأَجَلَ} [القصص: 29] , {فَلَمَّا قَضَى زَيْدٌ مِنْهَا وَطَرًا زَوَّجْنَاكَهَا} [الأحزاب: 37] , {إِلَّا حَاجَةً فِي نَفْسِ يَعْقُوبَ قَضَاهَا} [يوسف: 68] , {فَقَضَاهُنَّ سَبْعَ سَمَاوَاتٍ فِي يَوْمَيْنِ} [فصلت: 12].\nومن الإتمام استُعْملت في التعبير عن إبرام الأمر {وَقَضَى رَبُّكَ أَلَّا تَعْبُدُوا إِلَّا إِيَّاهُ} [الإسراء: 23] , {سُبْحَانَهُ إِذَا قَضَى أَمْرًا فَإِنَّمَا يَقُولُ لَهُ كُنْ فَيَكُونُ} [مريم: 35].\n(4/1799)\nواستُعْمِلَت في فصل ما اختلط وتشابك من الأمور، ومن هذا \"القضاء: الحكم \" {ثُمَّ لَا يَجِدُوا فِي أَنْفُسِهِمْ حَرَجًا مِمَّا قَضَيْتَ} [النساء: 65]، {وَقُضِيَ بَيْنَهُمْ بِالْقِسْطِ} [يونس: 54].\nوالخلاصة في الاستعمالات القرآنية لهذا التركيب أن الذي جاء فيه بمعنى حكم هو (قَضَى) أمرًا، أجلًا، ألا تعبدوا، لتفسدن، قضى عليها الموت، مما قضيت، فاقص أنت قاص، لا يقضون بشيء، وكل (يقَضْي بين، قُضِيَ بين). وسائر ما في القرآن من التركيب فهو بمعنى إتمام الأمر وإنهائه.",
-      "fasil_ozeti": "° معنى الفصل المعجمي (قض): الكسر والفصل بعنف أو قوة وما إلى ذلك كقض اللؤلؤة ثقبها والقَضْقَضة كسر العظام - في (قضض)، وكالقَضَاة الجلدة التي تكون على وجه الصبي حين يولد فتيسر خروجه أي انفصاله دون أذى صحيحا وهذه قوة، وكالقضاء على شخص أي قتله - في (قضى)، وكانفلاق قشر البيضة في (قيض)، وكقطع الأغصان في (قضب)."
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "يقضي",
-        "u": "يقضي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يقضي (form I)\n# يَقْضِي (yaqḍī) /jaq.dˤiː/: third-person masculine singular non-past active indicative of قَضَى (qaḍā)\n# يَقْضِيَ (yaqḍiya) /jaq.dˤi.ja/: third-person masculine singular non-past active subjunctive of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaqḍī", "qaḍā", "yaqḍiya"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "يقضي",
-        "u": "يقضي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يقضي (form II)\n# يُقَضِّي (yuqaḍḍī) /ju.qadˤ.dˤiː/: third-person masculine singular non-past active indicative of قَضَّى (qaḍḍā)\n# يُقَضِّيَ (yuqaḍḍiya) /ju.qadˤ.dˤi.ja/: third-person masculine singular non-past active subjunctive of قَضَّى (qaḍḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuqaḍḍī", "qaḍḍā", "yuqaḍḍiya"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "يقضى",
-        "u": "يقضى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يُقْضَى • (yuqḍā) (form I) /juq.dˤaː/\n# third-person masculine singular non-past passive indicative/subjunctive of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yuqḍā", "qaḍā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "يقضى",
-        "u": "يقضى",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يُقَضَّى • (yuqaḍḍā) (form II) /ju.qadˤ.dˤaː/\n# third-person masculine singular non-past passive indicative/subjunctive of قَضَّى (qaḍḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuqaḍḍā", "qaḍḍā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "قضي",
-        "u": "قضي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "قُضِيَ • (quḍiya) (form I) /qu.dˤi.ja/\n# third-person masculine singular past passive of قَضَى (qaḍā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["quḍiya", "qaḍā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "قضي",
-        "u": "قضي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "قضي (form II)\n# قُضِّيَ (quḍḍiya) /qudˤ.dˤi.ja/: third-person masculine singular past passive of قَضَّى (qaḍḍā)\n# قَضِّي (qaḍḍī) /qadˤ.dˤiː/: second-person feminine singular imperative of قَضَّى (qaḍḍā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["quḍḍiya", "qaḍḍā", "qaḍḍī"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "يقض",
-        "u": "يقض",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يقض (form I)\n# يَقْضِ (yaqḍi) /jaq.dˤi/: third-person masculine singular non-past active jussive of قَضَى (qaḍā)\n# يُقْضَ (yuqḍa) /juq.dˤa/: third-person masculine singular non-past passive jussive of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaqḍi", "qaḍā", "yuqḍa"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "يقض",
-        "u": "يقض",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "يقض (form II)\n# يُقَضِّ (yuqaḍḍi) /ju.qadˤ.dˤi/: third-person masculine singular non-past active jussive of قَضَّى (qaḍḍā)\n# يُقَضَّ (yuqaḍḍa) /ju.qadˤ.dˤa/: third-person masculine singular non-past passive jussive of قَضَّى (qaḍḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuqaḍḍi", "qaḍḍā", "yuqaḍḍa"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "قضت",
-        "u": "قضت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "قَضَتْ • (qaḍat) (form I) /qa.dˤat/\n# third-person feminine singular past active of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qaḍat", "qaḍā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "قضت",
-        "u": "قضت",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "قَضَّتْ • (qaḍḍat) (form II) /qadˤ.dˤat/\n# third-person feminine singular past active of قَضَّى (qaḍḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["qaḍḍat", "qaḍḍā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "تقضي",
-        "u": "تقضي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تقضي (form I)\n# تَقْضِي (taqḍī) /taq.dˤiː/: inflection of قَضَى (qaḍā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَقْضِيَ (taqḍiya) /taq.dˤi.ja/: inflection of قَضَى (qaḍā):\n## second-person masculine singular non-past active subjunctive\n## thi",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taqḍī", "qaḍā", "taqḍiya"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "تقضي",
-        "u": "تقضي",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تقضي (form II)\n# تُقَضِّي (tuqaḍḍī) /tu.qadˤ.dˤiː/: inflection of قَضَّى (qaḍḍā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُقَضِّيَ (tuqaḍḍiya) /tu.qadˤ.dˤi.ja/: inflection of قَضَّى (qaḍḍā):\n## second-person masculine singular non-past active",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuqaḍḍī", "qaḍḍā", "tuqaḍḍiya"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "تقض",
-        "u": "تقض",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تقض (form I)\n# تَقْضِ (taqḍi) /taq.dˤi/: inflection of قَضَى (qaḍā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُقْضَ (tuqḍa) /tuq.dˤa/: inflection of قَضَى (qaḍā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taqḍi", "qaḍā", "tuqḍa"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "تقض",
-        "u": "تقض",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "تقض (form II)\n# تُقَضِّ (tuqaḍḍi) /tu.qadˤ.dˤi/: inflection of قَضَّى (qaḍḍā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُقَضَّ (tuqaḍḍa) /tu.qadˤ.dˤa/: inflection of قَضَّى (qaḍḍā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuqaḍḍi", "qaḍḍā", "tuqaḍḍa"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "قضيت",
-        "u": "قضيت",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "قضيت (form I)\n# قَضَيْتُ (qaḍaytu) /qa.dˤaj.tu/: first-person singular past active of قَضَى (qaḍā)\n# قَضَيْتَ (qaḍayta) /qa.dˤaj.ta/: second-person masculine singular past active of قَضَى (qaḍā)\n# قَضَيْتِ (qaḍayti) /qa.dˤaj.ti/: second-person feminine singular past active of قَضَى (qaḍā)\n# قُضِيتُ (quḍītu) /qu.dˤiː.tu/: first-person singular past passive of قَضَى (qaḍā)\n# قُضِيتَ (quḍīta) /qu.dˤi",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qaḍaytu", "qaḍā", "qaḍayta"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "قضيت",
-        "u": "قضيت",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "قضيت (form II)\n# قَضَّيْتُ (qaḍḍaytu) /qadˤ.dˤaj.tu/: first-person singular past active of قَضَّى (qaḍḍā)\n# قَضَّيْتَ (qaḍḍayta) /qadˤ.dˤaj.ta/: second-person masculine singular past active of قَضَّى (qaḍḍā)\n# قَضَّيْتِ (qaḍḍayti) /qadˤ.dˤaj.ti/: second-person feminine singular past active of قَضَّى (qaḍḍā)\n# قُضِّيتُ (quḍḍītu) /qudˤ.dˤiː.tu/: first-person singular past passive of قَضَّى (qaḍḍā)\n#",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["qaḍḍaytu", "qaḍḍā", "qaḍḍayta"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "تقضى",
-        "u": "تقضى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تُقْضَى • (tuqḍā) (form I) /tuq.dˤaː/\n# inflection of قَضَى (qaḍā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "s": [
-          ["nonlemma", "See the etymology of the corresponding lemma form."]
-        ],
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tuqḍā", "qaḍā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "تقضى",
-        "u": "تقضى",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تُقَضَّى • (tuqaḍḍā) (form II) /tu.qadˤ.dˤaː/\n# inflection of قَضَّى (qaḍḍā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuqaḍḍā", "qaḍḍā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "اقض",
-        "u": "اقض",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِقْضِ • (iqḍi) (form I) /iq.dˤi/\n# second-person masculine singular imperative of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iqḍi", "qaḍā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "تقضين",
-        "u": "تقضين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تقضين (form I)\n# تَقْضِينَ (taqḍīna) /taq.dˤiː.na/: inflection of قَضَى (qaḍā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُقْضَيْنَ (tuqḍayna) /tuq.dˤaj.na/: inflection of قَضَى (qaḍā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past pas",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taqḍīna", "qaḍā", "tuqḍayna"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "تقضين",
-        "u": "تقضين",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تقضين (form II)\n# تُقَضِّينَ (tuqaḍḍīna) /tu.qadˤ.dˤiː.na/: inflection of قَضَّى (qaḍḍā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُقَضَّيْنَ (tuqaḍḍayna) /tu.qadˤ.dˤaj.na/: inflection of قَضَّى (qaḍḍā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuqaḍḍīna", "qaḍḍā", "tuqaḍḍayna"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "اقضي",
-        "u": "اقضي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِقْضِي • (iqḍī) (form I) /iq.dˤiː/\n# second-person feminine singular imperative of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iqḍī", "qaḍā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "أقضي",
-        "u": "أقضي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "أقضي (form I)\n# أَقْضِي (ʔaqḍī) /ʔaq.dˤiː/: first-person singular non-past active indicative of قَضَى (qaḍā)\n# أَقْضِيَ (ʔaqḍiya) /ʔaq.dˤi.ja/: first-person singular non-past active subjunctive of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaqḍī", "qaḍā", "ʔaqḍiya"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "أقضي",
-        "u": "أقضي",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "أقضي (form II)\n# أُقَضِّي (ʔuqaḍḍī) /ʔu.qadˤ.dˤiː/: first-person singular non-past active indicative of قَضَّى (qaḍḍā)\n# أُقَضِّيَ (ʔuqaḍḍiya) /ʔu.qadˤ.dˤi.ja/: first-person singular non-past active subjunctive of قَضَّى (qaḍḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuqaḍḍī", "qaḍḍā", "ʔuqaḍḍiya"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "أقض",
-        "u": "أقض",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "أقض (form I)\n# أَقْضِ (ʔaqḍi) /ʔaq.dˤi/: first-person singular non-past active jussive of قَضَى (qaḍā)\n# أُقْضَ (ʔuqḍa) /ʔuq.dˤa/: first-person singular non-past passive jussive of قَضَى (qaḍā)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaqḍi", "qaḍā", "ʔuqḍa"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "أقض",
-        "u": "أقض",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "أقض (form II)\n# أُقَضِّ (ʔuqaḍḍi) /ʔu.qadˤ.dˤi/: first-person singular non-past active jussive of قَضَّى (qaḍḍā)\n# أُقَضَّ (ʔuqaḍḍa) /ʔu.qadˤ.dˤa/: first-person singular non-past passive jussive of قَضَّى (qaḍḍā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuqaḍḍi", "qaḍḍā", "ʔuqaḍḍa"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "أقضى",
-        "u": "أقضى",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أُقْضَى • (ʔuqḍā) (form I) /ʔuq.dˤaː/\n# first-person singular non-past passive indicative/subjunctive of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "s": [
-          ["nonlemma", "See the etymology of the corresponding lemma form."]
-        ],
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔuqḍā", "qaḍā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "أقضى",
-        "u": "أقضى",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أُقَضَّى • (ʔuqaḍḍā) (form II) /ʔu.qadˤ.dˤaː/\n# first-person singular non-past passive indicative/subjunctive of قَضَّى (qaḍḍā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["ʔuqaḍḍā", "qaḍḍā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "قضينا",
-        "u": "قضينا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "قضينا (form I)\n# قَضَيْنَا (qaḍaynā) /qa.dˤaj.naː/: first-person plural past active of قَضَى (qaḍā)\n# قُضِينَا (quḍīnā) /qu.dˤiː.naː/: first-person plural past passive of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qaḍaynā", "qaḍā", "quḍīnā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "قضينا",
-        "u": "قضينا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "قضينا (form II)\n# قَضَّيْنَا (qaḍḍaynā) /qadˤ.dˤaj.naː/: first-person plural past active of قَضَّى (qaḍḍā)\n# قُضِّينَا (quḍḍīnā) /qudˤ.dˤiː.naː/: first-person plural past passive of قَضَّى (qaḍḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["qaḍḍaynā", "qaḍḍā", "quḍḍīnā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "نقضي",
-        "u": "نقضي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نقضي (form I)\n# نَقْضِي (naqḍī) /naq.dˤiː/: first-person plural non-past active indicative of قَضَى (qaḍā)\n# نَقْضِيَ (naqḍiya) /naq.dˤi.ja/: first-person plural non-past active subjunctive of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naqḍī", "qaḍā", "naqḍiya"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "نقضي",
-        "u": "نقضي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نقضي (form II)\n# نُقَضِّي (nuqaḍḍī) /nu.qadˤ.dˤiː/: first-person plural non-past active indicative of قَضَّى (qaḍḍā)\n# نُقَضِّيَ (nuqaḍḍiya) /nu.qadˤ.dˤi.ja/: first-person plural non-past active subjunctive of قَضَّى (qaḍḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuqaḍḍī", "qaḍḍā", "nuqaḍḍiya"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "نقض",
-        "u": "نقض",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نقض (form I)\n# نَقْضِ (naqḍi) /naq.dˤi/: first-person plural non-past active jussive of قَضَى (qaḍā)\n# نُقْضَ (nuqḍa) /nuq.dˤa/: first-person plural non-past passive jussive of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "s": [
-          ["nonlemma", "See the etymology of the corresponding lemma form."]
-        ],
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naqḍi", "qaḍā", "nuqḍa"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "نقض",
-        "u": "نقض",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "نقض (form II)\n# نُقَضِّ (nuqaḍḍi) /nu.qadˤ.dˤi/: first-person plural non-past active jussive of قَضَّى (qaḍḍā)\n# نُقَضَّ (nuqaḍḍa) /nu.qadˤ.dˤa/: first-person plural non-past passive jussive of قَضَّى (qaḍḍā)",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuqaḍḍi", "qaḍḍā", "nuqaḍḍa"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "نقضى",
-        "u": "نقضى",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "نُقْضَى • (nuqḍā) (form I) /nuq.dˤaː/\n# first-person plural non-past passive indicative/subjunctive of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nuqḍā", "qaḍā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "نقضى",
-        "u": "نقضى",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نُقَضَّى • (nuqaḍḍā) (form II) /nu.qadˤ.dˤaː/\n# first-person plural non-past passive indicative/subjunctive of قَضَّى (qaḍḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["nuqaḍḍā", "qaḍḍā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "قضيتم",
-        "u": "قضيتم",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "قضيتم (form I)\n# قَضَيْتُمْ (qaḍaytum) /qa.dˤaj.tum/: second-person masculine plural past active of قَضَى (qaḍā)\n# قُضِيتُمْ (quḍītum) /qu.dˤiː.tum/: second-person masculine plural past passive of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qaḍaytum", "qaḍā", "quḍītum"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "قضيتم",
-        "u": "قضيتم",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "قضيتم (form II)\n# قَضَّيْتُمْ (qaḍḍaytum) /qadˤ.dˤaj.tum/: second-person masculine plural past active of قَضَّى (qaḍḍā)\n# قُضِّيتُمْ (quḍḍītum) /qudˤ.dˤiː.tum/: second-person masculine plural past passive of قَضَّى (qaḍḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["qaḍḍaytum", "qaḍḍā", "quḍḍītum"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "تقضون",
-        "u": "تقضون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تقضون (form I)\n# تَقْضُونَ (taqḍūna) /taq.dˤuː.na/: second-person masculine plural non-past active indicative of قَضَى (qaḍā)\n# تُقْضَوْنَ (tuqḍawna) /tuq.dˤaw.na/: second-person masculine plural non-past passive indicative of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taqḍūna", "qaḍā", "tuqḍawna"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "تقضون",
-        "u": "تقضون",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تقضون (form II)\n# تُقَضُّونَ (tuqaḍḍūna) /tu.qadˤ.dˤuː.na/: second-person masculine plural non-past active indicative of قَضَّى (qaḍḍā)\n# تُقَضَّوْنَ (tuqaḍḍawna) /tu.qadˤ.dˤaw.na/: second-person masculine plural non-past passive indicative of قَضَّى (qaḍḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuqaḍḍūna", "qaḍḍā", "tuqaḍḍawna"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "تقضوا",
-        "u": "تقضوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تقضوا (form I)\n# تَقْضُوا (taqḍū) /taq.dˤuː/: second-person masculine plural non-past active subjunctive/jussive of قَضَى (qaḍā)\n# تُقْضَوْا (tuqḍaw) /tuq.dˤaw/: second-person masculine plural non-past passive subjunctive/jussive of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taqḍū", "qaḍā", "tuqḍaw"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "تقضوا",
-        "u": "تقضوا",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تقضوا (form II)\n# تُقَضُّوا (tuqaḍḍū) /tu.qadˤ.dˤuː/: second-person masculine plural non-past active subjunctive/jussive of قَضَّى (qaḍḍā)\n# تُقَضَّوْا (tuqaḍḍaw) /tu.qadˤ.dˤaw/: second-person masculine plural non-past passive subjunctive/jussive of قَضَّى (qaḍḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuqaḍḍū", "qaḍḍā", "tuqaḍḍaw"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "اقضوا",
-        "u": "اقضوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِقْضُوا • (iqḍū) (form I) /iq.dˤuː/\n# second-person masculine plural imperative of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iqḍū", "qaḍā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "قضوا",
-        "u": "قضوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "قضوا (form I)\n# قَضَوْا (qaḍaw) /qa.dˤaw/: third-person masculine plural past active of قَضَى (qaḍā)\n# قُضُوا (quḍū) /qu.dˤuː/: third-person masculine plural past passive of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qaḍaw", "qaḍā", "quḍū"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "قضوا",
-        "u": "قضوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "قضوا (form II)\n# قَضَّوْا (qaḍḍaw) /qadˤ.dˤaw/: third-person masculine plural past active of قَضَّى (qaḍḍā)\n# قُضُّوا (quḍḍū) /qudˤ.dˤuː/: third-person masculine plural past passive of قَضَّى (qaḍḍā)\n# قَضُّوا (qaḍḍū) /qadˤ.dˤuː/: second-person masculine plural imperative of قَضَّى (qaḍḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["qaḍḍaw", "qaḍḍā", "quḍḍū"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "يقضون",
-        "u": "يقضون",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يقضون (form I)\n# يَقْضُونَ (yaqḍūna) /jaq.dˤuː.na/: third-person masculine plural non-past active indicative of قَضَى (qaḍā)\n# يُقْضَوْنَ (yuqḍawna) /juq.dˤaw.na/: third-person masculine plural non-past passive indicative of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaqḍūna", "qaḍā", "yuqḍawna"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "يقضون",
-        "u": "يقضون",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يقضون (form II)\n# يُقَضُّونَ (yuqaḍḍūna) /ju.qadˤ.dˤuː.na/: third-person masculine plural non-past active indicative of قَضَّى (qaḍḍā)\n# يُقَضَّوْنَ (yuqaḍḍawna) /ju.qadˤ.dˤaw.na/: third-person masculine plural non-past passive indicative of قَضَّى (qaḍḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuqaḍḍūna", "qaḍḍā", "yuqaḍḍawna"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "يقضوا",
-        "u": "يقضوا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يقضوا (form I)\n# يَقْضُوا (yaqḍū) /jaq.dˤuː/: third-person masculine plural non-past active subjunctive/jussive of قَضَى (qaḍā)\n# يُقْضَوْا (yuqḍaw) /juq.dˤaw/: third-person masculine plural non-past passive subjunctive/jussive of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaqḍū", "qaḍā", "yuqḍaw"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "يقضوا",
-        "u": "يقضوا",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "يقضوا (form II)\n# يُقَضُّوا (yuqaḍḍū) /ju.qadˤ.dˤuː/: third-person masculine plural non-past active subjunctive/jussive of قَضَّى (qaḍḍā)\n# يُقَضَّوْا (yuqaḍḍaw) /ju.qadˤ.dˤaw/: third-person masculine plural non-past passive subjunctive/jussive of قَضَّى (qaḍḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuqaḍḍū", "qaḍḍā", "yuqaḍḍaw"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "قضيتن",
-        "u": "قضيتن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "قضيتن (form I)\n# قَضَيْتُنَّ (qaḍaytunna) /qa.dˤaj.tun.na/: second-person feminine plural past active of قَضَى (qaḍā)\n# قُضِيتُنَّ (quḍītunna) /qu.dˤiː.tun.na/: second-person feminine plural past passive of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qaḍaytunna", "qaḍā", "quḍītunna"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "قضيتن",
-        "u": "قضيتن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "قضيتن (form II)\n# قَضَّيْتُنَّ (qaḍḍaytunna) /qadˤ.dˤaj.tun.na/: second-person feminine plural past active of قَضَّى (qaḍḍā)\n# قُضِّيتُنَّ (quḍḍītunna) /qudˤ.dˤiː.tun.na/: second-person feminine plural past passive of قَضَّى (qaḍḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["qaḍḍaytunna", "qaḍḍā", "quḍḍītunna"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "اقضين",
-        "u": "اقضين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِقْضِينَ • (iqḍīna) (form I) /iq.dˤiː.na/\n# second-person feminine plural imperative of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iqḍīna", "qaḍā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "قضين",
-        "u": "قضين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "قضين (form I)\n# قَضَيْنَ (qaḍayna) /qa.dˤaj.na/: third-person feminine plural past active of قَضَى (qaḍā)\n# قُضِينَ (quḍīna) /qu.dˤiː.na/: third-person feminine plural past passive of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qaḍayna", "qaḍā", "quḍīna"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "قضين",
-        "u": "قضين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "قضين (form II)\n# قَضَّيْنَ (qaḍḍayna) /qadˤ.dˤaj.na/: third-person feminine plural past active of قَضَّى (qaḍḍā)\n# قُضِّينَ (quḍḍīna) /qudˤ.dˤiː.na/: third-person feminine plural past passive of قَضَّى (qaḍḍā)\n# قَضِّينَ (qaḍḍīna) /qadˤ.dˤiː.na/: second-person feminine plural imperative of قَضَّى (qaḍḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["qaḍḍayna", "qaḍḍā", "quḍḍīna"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "يقضين",
-        "u": "يقضين",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "يقضين (form I)\n# يَقْضِينَ (yaqḍīna) /jaq.dˤiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of قَضَى (qaḍā)\n# يُقْضَيْنَ (yuqḍayna) /juq.dˤaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaqḍīna", "qaḍā", "yuqḍayna"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "يقضين",
-        "u": "يقضين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يقضين (form II)\n# يُقَضِّينَ (yuqaḍḍīna) /ju.qadˤ.dˤiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of قَضَّى (qaḍḍā)\n# يُقَضَّيْنَ (yuqaḍḍayna) /ju.qadˤ.dˤaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of قَضَّى (qaḍḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuqaḍḍīna", "qaḍḍā", "yuqaḍḍayna"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "يقضيان",
-        "u": "يقضيان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يقضيان (form I)\n# يَقْضِيَانِ (yaqḍiyāni) /jaq.dˤi.jaː.ni/: third-person masculine dual non-past active indicative of قَضَى (qaḍā)\n# يُقْضَيَانِ (yuqḍayāni) /juq.dˤa.jaː.ni/: third-person masculine dual non-past passive indicative of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaqḍiyāni", "qaḍā", "yuqḍayāni"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "يقضيان",
-        "u": "يقضيان",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يقضيان (form II)\n# يُقَضِّيَانِ (yuqaḍḍiyāni) /ju.qadˤ.dˤi.jaː.ni/: third-person masculine dual non-past active indicative of قَضَّى (qaḍḍā)\n# يُقَضَّيَانِ (yuqaḍḍayāni) /ju.qadˤ.dˤa.jaː.ni/: third-person masculine dual non-past passive indicative of قَضَّى (qaḍḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuqaḍḍiyāni", "qaḍḍā", "yuqaḍḍayāni"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "تقضيا",
-        "u": "تقضيا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تقضيا (form I)\n# تَقْضِيَا (taqḍiyā) /taq.dˤi.jaː/: inflection of قَضَى (qaḍā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُقْضَيَا (tuqḍayā) /tuq.dˤa.jaː/: inflection of قَضَى (qaḍā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taqḍiyā", "qaḍā", "tuqḍayā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "تقضيا",
-        "u": "تقضيا",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "تقضيا (form II)\n# تُقَضِّيَا (tuqaḍḍiyā) /tu.qadˤ.dˤi.jaː/: inflection of قَضَّى (qaḍḍā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُقَضَّيَا (tuqaḍḍayā) /tu.qadˤ.dˤa.jaː/: inflection of قَضَّى (qaḍḍā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjun",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuqaḍḍiyā", "qaḍḍā", "tuqaḍḍayā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "تقضيان",
-        "u": "تقضيان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تقضيان (form I)\n# تَقْضِيَانِ (taqḍiyāni) /taq.dˤi.jaː.ni/: inflection of قَضَى (qaḍā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُقْضَيَانِ (tuqḍayāni) /tuq.dˤa.jaː.ni/: inflection of قَضَى (qaḍā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taqḍiyāni", "qaḍā", "tuqḍayāni"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "تقضيان",
-        "u": "تقضيان",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تقضيان (form II)\n# تُقَضِّيَانِ (tuqaḍḍiyāni) /tu.qadˤ.dˤi.jaː.ni/: inflection of قَضَّى (qaḍḍā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُقَضَّيَانِ (tuqaḍḍayāni) /tu.qadˤ.dˤa.jaː.ni/: inflection of قَضَّى (qaḍḍā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["tuqaḍḍiyāni", "qaḍḍā", "tuqaḍḍayāni"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "يقضيا",
-        "u": "يقضيا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يقضيا (form I)\n# يَقْضِيَا (yaqḍiyā) /jaq.dˤi.jaː/: third-person masculine dual non-past active subjunctive/jussive of قَضَى (qaḍā)\n# يُقْضَيَا (yuqḍayā) /juq.dˤa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaqḍiyā", "qaḍā", "yuqḍayā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "يقضيا",
-        "u": "يقضيا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يقضيا (form II)\n# يُقَضِّيَا (yuqaḍḍiyā) /ju.qadˤ.dˤi.jaː/: third-person masculine dual non-past active subjunctive/jussive of قَضَّى (qaḍḍā)\n# يُقَضَّيَا (yuqaḍḍayā) /ju.qadˤ.dˤa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of قَضَّى (qaḍḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["yuqaḍḍiyā", "qaḍḍā", "yuqaḍḍayā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "قض",
-        "u": "قض",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "قَضِّ • (qaḍḍi) (form II) /qadˤ.dˤi/\n# second-person masculine singular imperative of قَضَّى (qaḍḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["qaḍḍi", "qaḍḍā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "قضتا",
-        "u": "قضتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "قَضَتَا • (qaḍatā) (form I) /qa.dˤa.taː/\n# third-person feminine dual past active of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qaḍatā", "qaḍā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "قضتا",
-        "u": "قضتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "قَضَّتَا • (qaḍḍatā) (form II) /qadˤ.dˤa.taː/\n# third-person feminine dual past active of قَضَّى (qaḍḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["qaḍḍatā", "qaḍḍā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "اقضيا",
-        "u": "اقضيا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِقْضِيَا • (iqḍiyā) (form I) /iq.dˤi.jaː/\n# second-person dual imperative of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["iqḍiyā", "qaḍā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "قضيتا",
-        "u": "قضيتا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "قُضِيَتَا • (quḍiyatā) (form I) /qu.dˤi.ja.taː/\n# third-person feminine dual past passive of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["quḍiyatā", "qaḍā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "قضيتا",
-        "u": "قضيتا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "قُضِّيَتَا • (quḍḍiyatā) (form II) /qudˤ.dˤi.ja.taː/\n# third-person feminine dual past passive of قَضَّى (qaḍḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["quḍḍiyatā", "qaḍḍā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "قضيا",
-        "u": "قضيا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "قضيا (form I)\n# قَضَيَا (qaḍayā) /qa.dˤa.jaː/: third-person masculine dual past active of قَضَى (qaḍā)\n# قُضِيَا (quḍiyā) /qu.dˤi.jaː/: third-person masculine dual past passive of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qaḍayā", "qaḍā", "quḍiyā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "قضيا",
-        "u": "قضيا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "قضيا (form II)\n# قَضَّيَا (qaḍḍayā) /qadˤ.dˤa.jaː/: third-person masculine dual past active of قَضَّى (qaḍḍā)\n# قُضِّيَا (quḍḍiyā) /qudˤ.dˤi.jaː/: third-person masculine dual past passive of قَضَّى (qaḍḍā)\n# قَضِّيَا (qaḍḍiyā) /qadˤ.dˤi.jaː/: second-person dual imperative of قَضَّى (qaḍḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["qaḍḍayā", "qaḍḍā", "quḍḍiyā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "قضيتما",
-        "u": "قضيتما",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "قضيتما (form I)\n# قَضَيْتُمَا (qaḍaytumā) /qa.dˤaj.tu.maː/: second-person dual past active of قَضَى (qaḍā)\n# قُضِيتُمَا (quḍītumā) /qu.dˤiː.tu.maː/: second-person dual past passive of قَضَى (qaḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["qaḍaytumā", "qaḍā", "quḍītumā"],
-        "k": "قضى",
-        "yol": "kök"
-      },
-      {
-        "w": "قضيتما",
-        "u": "قضيتما",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "قضيتما (form II)\n# قَضَّيْتُمَا (qaḍḍaytumā) /qadˤ.dˤaj.tu.maː/: second-person dual past active of قَضَّى (qaḍḍā)\n# قُضِّيتُمَا (quḍḍītumā) /qudˤ.dˤiː.tu.maː/: second-person dual past passive of قَضَّى (qaḍḍā)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-ii", "no-gloss"],
-        "r": ["qaḍḍaytumā", "qaḍḍā", "quḍḍītumā"],
-        "k": "قضى",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "قض",
+  "ses": {
     "harf": "ق",
+    "fasil": "قض",
     "mahrec": "lehaviyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "cebel": {
+    "fasil": "القاف والضاد",
+    "baslik": "قضى",
+    "mihveri": "انفصال أو فراغ من شيء بعد قطعه أو تمامه: كتلك الجلدة تيسّر خروج الصبي نقيّ الوجه، وكالفراغ من عمل الثوب والدار، وكأداء الدين والقتل، وذهابُ الشيء فراغ منه. وقوله تعالى: {ثُمَّ لْيَقْضُوا تَفَثَهُمْ} [الحج: 29] أي ليزيلوا الثَفَث، وذلك بقصّ الأظفار وحَلْق العانة ونتف الإبط {فَوَكَزَهُ مُوسَى فَقَضَى عَلَيْهِ} [القصص: 15]. قتله - كما قال تعالى {وَقَتَلْتَ نَفْسًا} [طه: 40]. ومن الفراغ من الشيء بإتمامه حسب المراد أداء أو تحصيلًا أو إتمامَ عمل: \"قضى دينه: أدّاه إلى الغريم {فَلَمَّا قَضَى مُوسَى الْأَجَلَ} [القصص: 29] , {فَلَمَّا قَضَى زَيْدٌ مِنْهَا وَطَرًا زَوَّجْنَاكَهَا} [الأحزاب: 37] , {إِلَّا حَاجَةً فِي نَفْسِ يَعْقُوبَ قَضَاهَا} [يوسف: 68] , {فَقَضَاهُنَّ سَبْعَ سَمَاوَاتٍ فِي يَوْمَيْنِ} [فصلت: 12]. ومن الإتمام استُعْملت في التعبير عن إبرام الأمر {وَقَضَى رَبُّكَ أَلَّا تَعْبُدُوا إِلَّا إِيَّاهُ} [الإسراء: 23] , {سُبْحَانَهُ إِذَا قَضَى أَمْرًا فَإِنَّمَا يَقُولُ لَهُ كُنْ فَيَكُونُ} [مريم: 35]. (4/1799) واستُعْمِلَت في فصل ما اختلط وتشابك من الأمور، ومن هذا \"القضاء: الحكم \" {ثُمَّ لَا يَجِدُوا فِي أَنْفُسِهِمْ حَرَجًا مِمَّا قَضَيْتَ} [النساء: 65]، {وَقُضِيَ بَيْنَهُمْ بِالْقِسْطِ} [يونس: 54]. والخلاصة في الاستعمالات القرآنية لهذا التركيب أن الذي جاء فيه بمعنى حكم هو (قَضَى) أمرًا، أجلًا، ألا تعبدوا، لتفسدن، قضى عليها الموت، مما قضيت، فاقص أنت قاص، لا يقضون بشيء، وكل (يقَضْي بين، قُضِيَ بين). وسائر ما في القرآن من التركيب فهو بمعنى إتمام الأمر وإنهائه.",
+    "tam_metin": "{إِذَا قَضَى أَمْرًا فَإِنَّمَا يَقُولُ لَهُ كُنْ فَيَكُونُ} [آل عمران: 47]\n\"القَضَاةُ - كفتاة [وفي ق كرُماة]: الجِلْدة الرقيقة التي تكون على وَجْه الصبي حين يولد. وكلُّ ما أُحْكِمَ عمله فَقَدْ قُضِىَ. تقول قَضَيْت هذا الثوب وهذه الدارَ إذا عَمِلْتها وأَحْكَمْتَ عَمَلها. وقَضَى الغريم دَيْنَه: أَدَّاه إليه. وضربه فَقَضَى عليه: قَتَلَه كأنه فَرَغَ منه. وسُمٌّ قاض: قَاتل. وقَضَى: مات. والانقضاء: ذَهاب الشيء وفناؤه \".\n° المعنى المحوري\nانفصال أو فراغ من شيء بعد قطعه أو تمامه: كتلك الجلدة تيسّر خروج الصبي نقيّ الوجه، وكالفراغ من عمل الثوب والدار، وكأداء الدين والقتل، وذهابُ الشيء فراغ منه. وقوله تعالى: {ثُمَّ لْيَقْضُوا تَفَثَهُمْ} [الحج: 29] أي ليزيلوا الثَفَث، وذلك بقصّ الأظفار وحَلْق العانة ونتف الإبط {فَوَكَزَهُ مُوسَى فَقَضَى عَلَيْهِ} [القصص: 15]. قتله - كما قال تعالى {وَقَتَلْتَ نَفْسًا} [طه: 40].\nومن الفراغ من الشيء بإتمامه حسب المراد أداء أو تحصيلًا أو إتمامَ عمل: \"قضى دينه: أدّاه إلى الغريم {فَلَمَّا قَضَى مُوسَى الْأَجَلَ} [القصص: 29] , {فَلَمَّا قَضَى زَيْدٌ مِنْهَا وَطَرًا زَوَّجْنَاكَهَا} [الأحزاب: 37] , {إِلَّا حَاجَةً فِي نَفْسِ يَعْقُوبَ قَضَاهَا} [يوسف: 68] , {فَقَضَاهُنَّ سَبْعَ سَمَاوَاتٍ فِي يَوْمَيْنِ} [فصلت: 12].\nومن الإتمام استُعْملت في التعبير عن إبرام الأمر {وَقَضَى رَبُّكَ أَلَّا تَعْبُدُوا إِلَّا إِيَّاهُ} [الإسراء: 23] , {سُبْحَانَهُ إِذَا قَضَى أَمْرًا فَإِنَّمَا يَقُولُ لَهُ كُنْ فَيَكُونُ} [مريم: 35].\n(4/1799)\nواستُعْمِلَت في فصل ما اختلط وتشابك من الأمور، ومن هذا \"القضاء: الحكم \" {ثُمَّ لَا يَجِدُوا فِي أَنْفُسِهِمْ حَرَجًا مِمَّا قَضَيْتَ} [النساء: 65]، {وَقُضِيَ بَيْنَهُمْ بِالْقِسْطِ} [يونس: 54].\nوالخلاصة في الاستعمالات القرآنية لهذا التركيب أن الذي جاء فيه بمعنى حكم هو (قَضَى) أمرًا، أجلًا، ألا تعبدوا، لتفسدن، قضى عليها الموت، مما قضيت، فاقص أنت قاص، لا يقضون بشيء، وكل (يقَضْي بين، قُضِيَ بين). وسائر ما في القرآن من التركيب فهو بمعنى إتمام الأمر وإنهائه.",
+    "fasil_ozeti": "° معنى الفصل المعجمي (قض): الكسر والفصل بعنف أو قوة وما إلى ذلك كقض اللؤلؤة ثقبها والقَضْقَضة كسر العظام - في (قضض)، وكالقَضَاة الجلدة التي تكون على وجه الصبي حين يولد فتيسر خروجه أي انفصاله دون أذى صحيحا وهذه قوة، وكالقضاء على شخص أي قتله - في (قضى)، وكانفلاق قشر البيضة في (قيض)، وكقطع الأغصان في (قضب)."
+  },
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "يقضي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يقضي (form I)\n# يَقْضِي (yaqḍī) /jaq.dˤiː/: third-person masculine singular non-past active indicative of قَضَى (qaḍā)\n# يَقْضِيَ (yaqḍiya) /jaq.dˤi.ja/: third-person masculine singular non-past active subjunctive of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaqḍī", "qaḍā", "yaqḍiya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقضي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يقضي (form II)\n# يُقَضِّي (yuqaḍḍī) /ju.qadˤ.dˤiː/: third-person masculine singular non-past active indicative of قَضَّى (qaḍḍā)\n# يُقَضِّيَ (yuqaḍḍiya) /ju.qadˤ.dˤi.ja/: third-person masculine singular non-past active subjunctive of قَضَّى (qaḍḍā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuqaḍḍī", "qaḍḍā", "yuqaḍḍiya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقضى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يُقْضَى • (yuqḍā) (form I) /juq.dˤaː/\n# third-person masculine singular non-past passive indicative/subjunctive of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yuqḍā", "qaḍā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقضى",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يُقَضَّى • (yuqaḍḍā) (form II) /ju.qadˤ.dˤaː/\n# third-person masculine singular non-past passive indicative/subjunctive of قَضَّى (qaḍḍā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuqaḍḍā", "qaḍḍā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قضي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "قُضِيَ • (quḍiya) (form I) /qu.dˤi.ja/\n# third-person masculine singular past passive of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["quḍiya", "qaḍā"]
+    },
+    {
+      "madde": "قضي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "قضي (form II)\n# قُضِّيَ (quḍḍiya) /qudˤ.dˤi.ja/: third-person masculine singular past passive of قَضَّى (qaḍḍā)\n# قَضِّي (qaḍḍī) /qadˤ.dˤiː/: second-person feminine singular imperative of قَضَّى (qaḍḍā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["quḍḍiya", "qaḍḍā", "qaḍḍī"]
+    },
+    {
+      "madde": "يقض",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يقض (form I)\n# يَقْضِ (yaqḍi) /jaq.dˤi/: third-person masculine singular non-past active jussive of قَضَى (qaḍā)\n# يُقْضَ (yuqḍa) /juq.dˤa/: third-person masculine singular non-past passive jussive of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaqḍi", "qaḍā", "yuqḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقض",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "يقض (form II)\n# يُقَضِّ (yuqaḍḍi) /ju.qadˤ.dˤi/: third-person masculine singular non-past active jussive of قَضَّى (qaḍḍā)\n# يُقَضَّ (yuqaḍḍa) /ju.qadˤ.dˤa/: third-person masculine singular non-past passive jussive of قَضَّى (qaḍḍā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuqaḍḍi", "qaḍḍā", "yuqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قضت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "قَضَتْ • (qaḍat) (form I) /qa.dˤat/\n# third-person feminine singular past active of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qaḍat", "qaḍā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قضت",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "قَضَّتْ • (qaḍḍat) (form II) /qadˤ.dˤat/\n# third-person feminine singular past active of قَضَّى (qaḍḍā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["qaḍḍat", "qaḍḍā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقضي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تقضي (form I)\n# تَقْضِي (taqḍī) /taq.dˤiː/: inflection of قَضَى (qaḍā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تَقْضِيَ (taqḍiya) /taq.dˤi.ja/: inflection of قَضَى (qaḍā):\n## second-person masculine singular non-past active subjunctive\n## thi",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taqḍī", "qaḍā", "taqḍiya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقضي",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تقضي (form II)\n# تُقَضِّي (tuqaḍḍī) /tu.qadˤ.dˤiː/: inflection of قَضَّى (qaḍḍā):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n## second-person feminine singular non-past active subjunctive/jussive\n# تُقَضِّيَ (tuqaḍḍiya) /tu.qadˤ.dˤi.ja/: inflection of قَضَّى (qaḍḍā):\n## second-person masculine singular non-past active",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuqaḍḍī", "qaḍḍā", "tuqaḍḍiya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقض",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تقض (form I)\n# تَقْضِ (taqḍi) /taq.dˤi/: inflection of قَضَى (qaḍā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُقْضَ (tuqḍa) /tuq.dˤa/: inflection of قَضَى (qaḍā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taqḍi", "qaḍā", "tuqḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقض",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "تقض (form II)\n# تُقَضِّ (tuqaḍḍi) /tu.qadˤ.dˤi/: inflection of قَضَّى (qaḍḍā):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُقَضَّ (tuqaḍḍa) /tu.qadˤ.dˤa/: inflection of قَضَّى (qaḍḍā):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuqaḍḍi", "qaḍḍā", "tuqaḍḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قضيت",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "قضيت (form I)\n# قَضَيْتُ (qaḍaytu) /qa.dˤaj.tu/: first-person singular past active of قَضَى (qaḍā)\n# قَضَيْتَ (qaḍayta) /qa.dˤaj.ta/: second-person masculine singular past active of قَضَى (qaḍā)\n# قَضَيْتِ (qaḍayti) /qa.dˤaj.ti/: second-person feminine singular past active of قَضَى (qaḍā)\n# قُضِيتُ (quḍītu) /qu.dˤiː.tu/: first-person singular past passive of قَضَى (qaḍā)\n# قُضِيتَ (quḍīta) /qu.dˤi",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qaḍaytu", "qaḍā", "qaḍayta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قضيت",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "قضيت (form II)\n# قَضَّيْتُ (qaḍḍaytu) /qadˤ.dˤaj.tu/: first-person singular past active of قَضَّى (qaḍḍā)\n# قَضَّيْتَ (qaḍḍayta) /qadˤ.dˤaj.ta/: second-person masculine singular past active of قَضَّى (qaḍḍā)\n# قَضَّيْتِ (qaḍḍayti) /qadˤ.dˤaj.ti/: second-person feminine singular past active of قَضَّى (qaḍḍā)\n# قُضِّيتُ (quḍḍītu) /qudˤ.dˤiː.tu/: first-person singular past passive of قَضَّى (qaḍḍā)\n#",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["qaḍḍaytu", "qaḍḍā", "qaḍḍayta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقضى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تُقْضَى • (tuqḍā) (form I) /tuq.dˤaː/\n# inflection of قَضَى (qaḍā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etim_sablon": [
+        ["nonlemma", "See the etymology of the corresponding lemma form."]
+      ],
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tuqḍā", "qaḍā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقضى",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تُقَضَّى • (tuqaḍḍā) (form II) /tu.qadˤ.dˤaː/\n# inflection of قَضَّى (qaḍḍā):\n## second-person masculine singular non-past passive indicative/subjunctive\n## third-person feminine singular non-past passive indicative/subjunctive",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuqaḍḍā", "qaḍḍā"]
+    },
+    {
+      "madde": "اقض",
+      "tur": "verb",
+      "baslik": "اِقْضِ • (iqḍi) (form I) /iq.dˤi/\n# second-person masculine singular imperative of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iqḍi", "qaḍā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقضين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تقضين (form I)\n# تَقْضِينَ (taqḍīna) /taq.dˤiː.na/: inflection of قَضَى (qaḍā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُقْضَيْنَ (tuqḍayna) /tuq.dˤaj.na/: inflection of قَضَى (qaḍā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine plural non-past pas",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taqḍīna", "qaḍā", "tuqḍayna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقضين",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تقضين (form II)\n# تُقَضِّينَ (tuqaḍḍīna) /tu.qadˤ.dˤiː.na/: inflection of قَضَّى (qaḍḍā):\n## second-person feminine singular/plural non-past active indicative\n## second-person feminine plural non-past active subjunctive/jussive\n# تُقَضَّيْنَ (tuqaḍḍayna) /tu.qadˤ.dˤaj.na/: inflection of قَضَّى (qaḍḍā):\n## second-person feminine singular/plural non-past passive indicative\n## second-person feminine ",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuqaḍḍīna", "qaḍḍā", "tuqaḍḍayna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اقضي",
+      "tur": "verb",
+      "baslik": "اِقْضِي • (iqḍī) (form I) /iq.dˤiː/\n# second-person feminine singular imperative of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iqḍī", "qaḍā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقضي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "أقضي (form I)\n# أَقْضِي (ʔaqḍī) /ʔaq.dˤiː/: first-person singular non-past active indicative of قَضَى (qaḍā)\n# أَقْضِيَ (ʔaqḍiya) /ʔaq.dˤi.ja/: first-person singular non-past active subjunctive of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaqḍī", "qaḍā", "ʔaqḍiya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقضي",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "أقضي (form II)\n# أُقَضِّي (ʔuqaḍḍī) /ʔu.qadˤ.dˤiː/: first-person singular non-past active indicative of قَضَّى (qaḍḍā)\n# أُقَضِّيَ (ʔuqaḍḍiya) /ʔu.qadˤ.dˤi.ja/: first-person singular non-past active subjunctive of قَضَّى (qaḍḍā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuqaḍḍī", "qaḍḍā", "ʔuqaḍḍiya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقض",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "أقض (form I)\n# أَقْضِ (ʔaqḍi) /ʔaq.dˤi/: first-person singular non-past active jussive of قَضَى (qaḍā)\n# أُقْضَ (ʔuqḍa) /ʔuq.dˤa/: first-person singular non-past passive jussive of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaqḍi", "qaḍā", "ʔuqḍa"]
+    },
+    {
+      "madde": "أقض",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "أقض (form II)\n# أُقَضِّ (ʔuqaḍḍi) /ʔu.qadˤ.dˤi/: first-person singular non-past active jussive of قَضَّى (qaḍḍā)\n# أُقَضَّ (ʔuqaḍḍa) /ʔu.qadˤ.dˤa/: first-person singular non-past passive jussive of قَضَّى (qaḍḍā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuqaḍḍi", "qaḍḍā", "ʔuqaḍḍa"]
+    },
+    {
+      "madde": "أقضى",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أُقْضَى • (ʔuqḍā) (form I) /ʔuq.dˤaː/\n# first-person singular non-past passive indicative/subjunctive of قَضَى (qaḍā)",
+      "etim_sablon": [
+        ["nonlemma", "See the etymology of the corresponding lemma form."]
+      ],
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔuqḍā", "qaḍā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أقضى",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أُقَضَّى • (ʔuqaḍḍā) (form II) /ʔu.qadˤ.dˤaː/\n# first-person singular non-past passive indicative/subjunctive of قَضَّى (qaḍḍā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["ʔuqaḍḍā", "qaḍḍā"]
+    },
+    {
+      "madde": "قضينا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "قضينا (form I)\n# قَضَيْنَا (qaḍaynā) /qa.dˤaj.naː/: first-person plural past active of قَضَى (qaḍā)\n# قُضِينَا (quḍīnā) /qu.dˤiː.naː/: first-person plural past passive of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qaḍaynā", "qaḍā", "quḍīnā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قضينا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "قضينا (form II)\n# قَضَّيْنَا (qaḍḍaynā) /qadˤ.dˤaj.naː/: first-person plural past active of قَضَّى (qaḍḍā)\n# قُضِّينَا (quḍḍīnā) /qudˤ.dˤiː.naː/: first-person plural past passive of قَضَّى (qaḍḍā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["qaḍḍaynā", "qaḍḍā", "quḍḍīnā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نقضي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نقضي (form I)\n# نَقْضِي (naqḍī) /naq.dˤiː/: first-person plural non-past active indicative of قَضَى (qaḍā)\n# نَقْضِيَ (naqḍiya) /naq.dˤi.ja/: first-person plural non-past active subjunctive of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naqḍī", "qaḍā", "naqḍiya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نقضي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نقضي (form II)\n# نُقَضِّي (nuqaḍḍī) /nu.qadˤ.dˤiː/: first-person plural non-past active indicative of قَضَّى (qaḍḍā)\n# نُقَضِّيَ (nuqaḍḍiya) /nu.qadˤ.dˤi.ja/: first-person plural non-past active subjunctive of قَضَّى (qaḍḍā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuqaḍḍī", "qaḍḍā", "nuqaḍḍiya"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نقض",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نقض (form I)\n# نَقْضِ (naqḍi) /naq.dˤi/: first-person plural non-past active jussive of قَضَى (qaḍā)\n# نُقْضَ (nuqḍa) /nuq.dˤa/: first-person plural non-past passive jussive of قَضَى (qaḍā)",
+      "etim_sablon": [
+        ["nonlemma", "See the etymology of the corresponding lemma form."]
+      ],
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naqḍi", "qaḍā", "nuqḍa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نقض",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "نقض (form II)\n# نُقَضِّ (nuqaḍḍi) /nu.qadˤ.dˤi/: first-person plural non-past active jussive of قَضَّى (qaḍḍā)\n# نُقَضَّ (nuqaḍḍa) /nu.qadˤ.dˤa/: first-person plural non-past passive jussive of قَضَّى (qaḍḍā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuqaḍḍi", "qaḍḍā", "nuqaḍḍa"]
+    },
+    {
+      "madde": "نقضى",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نُقْضَى • (nuqḍā) (form I) /nuq.dˤaː/\n# first-person plural non-past passive indicative/subjunctive of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nuqḍā", "qaḍā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نقضى",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نُقَضَّى • (nuqaḍḍā) (form II) /nu.qadˤ.dˤaː/\n# first-person plural non-past passive indicative/subjunctive of قَضَّى (qaḍḍā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["nuqaḍḍā", "qaḍḍā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قضيتم",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "قضيتم (form I)\n# قَضَيْتُمْ (qaḍaytum) /qa.dˤaj.tum/: second-person masculine plural past active of قَضَى (qaḍā)\n# قُضِيتُمْ (quḍītum) /qu.dˤiː.tum/: second-person masculine plural past passive of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qaḍaytum", "qaḍā", "quḍītum"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قضيتم",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "قضيتم (form II)\n# قَضَّيْتُمْ (qaḍḍaytum) /qadˤ.dˤaj.tum/: second-person masculine plural past active of قَضَّى (qaḍḍā)\n# قُضِّيتُمْ (quḍḍītum) /qudˤ.dˤiː.tum/: second-person masculine plural past passive of قَضَّى (qaḍḍā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["qaḍḍaytum", "qaḍḍā", "quḍḍītum"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقضون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تقضون (form I)\n# تَقْضُونَ (taqḍūna) /taq.dˤuː.na/: second-person masculine plural non-past active indicative of قَضَى (qaḍā)\n# تُقْضَوْنَ (tuqḍawna) /tuq.dˤaw.na/: second-person masculine plural non-past passive indicative of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taqḍūna", "qaḍā", "tuqḍawna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقضون",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تقضون (form II)\n# تُقَضُّونَ (tuqaḍḍūna) /tu.qadˤ.dˤuː.na/: second-person masculine plural non-past active indicative of قَضَّى (qaḍḍā)\n# تُقَضَّوْنَ (tuqaḍḍawna) /tu.qadˤ.dˤaw.na/: second-person masculine plural non-past passive indicative of قَضَّى (qaḍḍā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuqaḍḍūna", "qaḍḍā", "tuqaḍḍawna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقضوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تقضوا (form I)\n# تَقْضُوا (taqḍū) /taq.dˤuː/: second-person masculine plural non-past active subjunctive/jussive of قَضَى (qaḍā)\n# تُقْضَوْا (tuqḍaw) /tuq.dˤaw/: second-person masculine plural non-past passive subjunctive/jussive of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taqḍū", "qaḍā", "tuqḍaw"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقضوا",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تقضوا (form II)\n# تُقَضُّوا (tuqaḍḍū) /tu.qadˤ.dˤuː/: second-person masculine plural non-past active subjunctive/jussive of قَضَّى (qaḍḍā)\n# تُقَضَّوْا (tuqaḍḍaw) /tu.qadˤ.dˤaw/: second-person masculine plural non-past passive subjunctive/jussive of قَضَّى (qaḍḍā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuqaḍḍū", "qaḍḍā", "tuqaḍḍaw"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اقضوا",
+      "tur": "verb",
+      "baslik": "اِقْضُوا • (iqḍū) (form I) /iq.dˤuː/\n# second-person masculine plural imperative of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iqḍū", "qaḍā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قضوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "قضوا (form I)\n# قَضَوْا (qaḍaw) /qa.dˤaw/: third-person masculine plural past active of قَضَى (qaḍā)\n# قُضُوا (quḍū) /qu.dˤuː/: third-person masculine plural past passive of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qaḍaw", "qaḍā", "quḍū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قضوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "قضوا (form II)\n# قَضَّوْا (qaḍḍaw) /qadˤ.dˤaw/: third-person masculine plural past active of قَضَّى (qaḍḍā)\n# قُضُّوا (quḍḍū) /qudˤ.dˤuː/: third-person masculine plural past passive of قَضَّى (qaḍḍā)\n# قَضُّوا (qaḍḍū) /qadˤ.dˤuː/: second-person masculine plural imperative of قَضَّى (qaḍḍā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["qaḍḍaw", "qaḍḍā", "quḍḍū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقضون",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يقضون (form I)\n# يَقْضُونَ (yaqḍūna) /jaq.dˤuː.na/: third-person masculine plural non-past active indicative of قَضَى (qaḍā)\n# يُقْضَوْنَ (yuqḍawna) /juq.dˤaw.na/: third-person masculine plural non-past passive indicative of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaqḍūna", "qaḍā", "yuqḍawna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقضون",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يقضون (form II)\n# يُقَضُّونَ (yuqaḍḍūna) /ju.qadˤ.dˤuː.na/: third-person masculine plural non-past active indicative of قَضَّى (qaḍḍā)\n# يُقَضَّوْنَ (yuqaḍḍawna) /ju.qadˤ.dˤaw.na/: third-person masculine plural non-past passive indicative of قَضَّى (qaḍḍā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuqaḍḍūna", "qaḍḍā", "yuqaḍḍawna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقضوا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يقضوا (form I)\n# يَقْضُوا (yaqḍū) /jaq.dˤuː/: third-person masculine plural non-past active subjunctive/jussive of قَضَى (qaḍā)\n# يُقْضَوْا (yuqḍaw) /juq.dˤaw/: third-person masculine plural non-past passive subjunctive/jussive of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaqḍū", "qaḍā", "yuqḍaw"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقضوا",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "يقضوا (form II)\n# يُقَضُّوا (yuqaḍḍū) /ju.qadˤ.dˤuː/: third-person masculine plural non-past active subjunctive/jussive of قَضَّى (qaḍḍā)\n# يُقَضَّوْا (yuqaḍḍaw) /ju.qadˤ.dˤaw/: third-person masculine plural non-past passive subjunctive/jussive of قَضَّى (qaḍḍā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuqaḍḍū", "qaḍḍā", "yuqaḍḍaw"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قضيتن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "قضيتن (form I)\n# قَضَيْتُنَّ (qaḍaytunna) /qa.dˤaj.tun.na/: second-person feminine plural past active of قَضَى (qaḍā)\n# قُضِيتُنَّ (quḍītunna) /qu.dˤiː.tun.na/: second-person feminine plural past passive of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qaḍaytunna", "qaḍā", "quḍītunna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قضيتن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "قضيتن (form II)\n# قَضَّيْتُنَّ (qaḍḍaytunna) /qadˤ.dˤaj.tun.na/: second-person feminine plural past active of قَضَّى (qaḍḍā)\n# قُضِّيتُنَّ (quḍḍītunna) /qudˤ.dˤiː.tun.na/: second-person feminine plural past passive of قَضَّى (qaḍḍā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["qaḍḍaytunna", "qaḍḍā", "quḍḍītunna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اقضين",
+      "tur": "verb",
+      "baslik": "اِقْضِينَ • (iqḍīna) (form I) /iq.dˤiː.na/\n# second-person feminine plural imperative of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iqḍīna", "qaḍā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قضين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "قضين (form I)\n# قَضَيْنَ (qaḍayna) /qa.dˤaj.na/: third-person feminine plural past active of قَضَى (qaḍā)\n# قُضِينَ (quḍīna) /qu.dˤiː.na/: third-person feminine plural past passive of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qaḍayna", "qaḍā", "quḍīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قضين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "قضين (form II)\n# قَضَّيْنَ (qaḍḍayna) /qadˤ.dˤaj.na/: third-person feminine plural past active of قَضَّى (qaḍḍā)\n# قُضِّينَ (quḍḍīna) /qudˤ.dˤiː.na/: third-person feminine plural past passive of قَضَّى (qaḍḍā)\n# قَضِّينَ (qaḍḍīna) /qadˤ.dˤiː.na/: second-person feminine plural imperative of قَضَّى (qaḍḍā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["qaḍḍayna", "qaḍḍā", "quḍḍīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقضين",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "يقضين (form I)\n# يَقْضِينَ (yaqḍīna) /jaq.dˤiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of قَضَى (qaḍā)\n# يُقْضَيْنَ (yuqḍayna) /juq.dˤaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaqḍīna", "qaḍā", "yuqḍayna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقضين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يقضين (form II)\n# يُقَضِّينَ (yuqaḍḍīna) /ju.qadˤ.dˤiː.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of قَضَّى (qaḍḍā)\n# يُقَضَّيْنَ (yuqaḍḍayna) /ju.qadˤ.dˤaj.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of قَضَّى (qaḍḍā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuqaḍḍīna", "qaḍḍā", "yuqaḍḍayna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقضيان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يقضيان (form I)\n# يَقْضِيَانِ (yaqḍiyāni) /jaq.dˤi.jaː.ni/: third-person masculine dual non-past active indicative of قَضَى (qaḍā)\n# يُقْضَيَانِ (yuqḍayāni) /juq.dˤa.jaː.ni/: third-person masculine dual non-past passive indicative of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaqḍiyāni", "qaḍā", "yuqḍayāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقضيان",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يقضيان (form II)\n# يُقَضِّيَانِ (yuqaḍḍiyāni) /ju.qadˤ.dˤi.jaː.ni/: third-person masculine dual non-past active indicative of قَضَّى (qaḍḍā)\n# يُقَضَّيَانِ (yuqaḍḍayāni) /ju.qadˤ.dˤa.jaː.ni/: third-person masculine dual non-past passive indicative of قَضَّى (qaḍḍā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuqaḍḍiyāni", "qaḍḍā", "yuqaḍḍayāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقضيا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تقضيا (form I)\n# تَقْضِيَا (taqḍiyā) /taq.dˤi.jaː/: inflection of قَضَى (qaḍā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُقْضَيَا (tuqḍayā) /tuq.dˤa.jaː/: inflection of قَضَى (qaḍā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taqḍiyā", "qaḍā", "tuqḍayā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقضيا",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "تقضيا (form II)\n# تُقَضِّيَا (tuqaḍḍiyā) /tu.qadˤ.dˤi.jaː/: inflection of قَضَّى (qaḍḍā):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُقَضَّيَا (tuqaḍḍayā) /tu.qadˤ.dˤa.jaː/: inflection of قَضَّى (qaḍḍā):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjun",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuqaḍḍiyā", "qaḍḍā", "tuqaḍḍayā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقضيان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تقضيان (form I)\n# تَقْضِيَانِ (taqḍiyāni) /taq.dˤi.jaː.ni/: inflection of قَضَى (qaḍā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُقْضَيَانِ (tuqḍayāni) /tuq.dˤa.jaː.ni/: inflection of قَضَى (qaḍā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taqḍiyāni", "qaḍā", "tuqḍayāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تقضيان",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تقضيان (form II)\n# تُقَضِّيَانِ (tuqaḍḍiyāni) /tu.qadˤ.dˤi.jaː.ni/: inflection of قَضَّى (qaḍḍā):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُقَضَّيَانِ (tuqaḍḍayāni) /tu.qadˤ.dˤa.jaː.ni/: inflection of قَضَّى (qaḍḍā):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["tuqaḍḍiyāni", "qaḍḍā", "tuqaḍḍayāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقضيا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يقضيا (form I)\n# يَقْضِيَا (yaqḍiyā) /jaq.dˤi.jaː/: third-person masculine dual non-past active subjunctive/jussive of قَضَى (qaḍā)\n# يُقْضَيَا (yuqḍayā) /juq.dˤa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaqḍiyā", "qaḍā", "yuqḍayā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يقضيا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يقضيا (form II)\n# يُقَضِّيَا (yuqaḍḍiyā) /ju.qadˤ.dˤi.jaː/: third-person masculine dual non-past active subjunctive/jussive of قَضَّى (qaḍḍā)\n# يُقَضَّيَا (yuqaḍḍayā) /ju.qadˤ.dˤa.jaː/: third-person masculine dual non-past passive subjunctive/jussive of قَضَّى (qaḍḍā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["yuqaḍḍiyā", "qaḍḍā", "yuqaḍḍayā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قض",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "قَضِّ • (qaḍḍi) (form II) /qadˤ.dˤi/\n# second-person masculine singular imperative of قَضَّى (qaḍḍā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["qaḍḍi", "qaḍḍā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قضتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "قَضَتَا • (qaḍatā) (form I) /qa.dˤa.taː/\n# third-person feminine dual past active of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qaḍatā", "qaḍā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قضتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "قَضَّتَا • (qaḍḍatā) (form II) /qadˤ.dˤa.taː/\n# third-person feminine dual past active of قَضَّى (qaḍḍā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["qaḍḍatā", "qaḍḍā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اقضيا",
+      "tur": "verb",
+      "baslik": "اِقْضِيَا • (iqḍiyā) (form I) /iq.dˤi.jaː/\n# second-person dual imperative of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["iqḍiyā", "qaḍā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قضيتا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "قُضِيَتَا • (quḍiyatā) (form I) /qu.dˤi.ja.taː/\n# third-person feminine dual past passive of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["quḍiyatā", "qaḍā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قضيتا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "قُضِّيَتَا • (quḍḍiyatā) (form II) /qudˤ.dˤi.ja.taː/\n# third-person feminine dual past passive of قَضَّى (qaḍḍā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["quḍḍiyatā", "qaḍḍā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قضيا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "قضيا (form I)\n# قَضَيَا (qaḍayā) /qa.dˤa.jaː/: third-person masculine dual past active of قَضَى (qaḍā)\n# قُضِيَا (quḍiyā) /qu.dˤi.jaː/: third-person masculine dual past passive of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qaḍayā", "qaḍā", "quḍiyā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قضيا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "قضيا (form II)\n# قَضَّيَا (qaḍḍayā) /qadˤ.dˤa.jaː/: third-person masculine dual past active of قَضَّى (qaḍḍā)\n# قُضِّيَا (quḍḍiyā) /qudˤ.dˤi.jaː/: third-person masculine dual past passive of قَضَّى (qaḍḍā)\n# قَضِّيَا (qaḍḍiyā) /qadˤ.dˤi.jaː/: second-person dual imperative of قَضَّى (qaḍḍā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["qaḍḍayā", "qaḍḍā", "quḍḍiyā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قضيتما",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "قضيتما (form I)\n# قَضَيْتُمَا (qaḍaytumā) /qa.dˤaj.tu.maː/: second-person dual past active of قَضَى (qaḍā)\n# قُضِيتُمَا (quḍītumā) /qu.dˤiː.tu.maː/: second-person dual past passive of قَضَى (qaḍā)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["qaḍaytumā", "qaḍā", "quḍītumā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "قضيتما",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "قضيتما (form II)\n# قَضَّيْتُمَا (qaḍḍaytumā) /qadˤ.dˤaj.tu.maː/: second-person dual past active of قَضَّى (qaḍḍā)\n# قُضِّيتُمَا (quḍḍītumā) /qudˤ.dˤiː.tu.maː/: second-person dual past passive of قَضَّى (qaḍḍā)",
+      "etiket": ["form-ii", "no-gloss"],
+      "okunus": ["qaḍḍaytumā", "qaḍḍā", "quḍḍītumā"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
+  },
+  "reddedilen": [
+    ["kök", "قضى", "r7"]
+  ],
+  "mana": {
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
@@ -1003,38 +714,8 @@
     "dayanak_tanim": "(law) the act of rescinding; the cancellation of a contract and the return of the parties to the positions they would have had if the contract had not been made",
     "synset_sayisi": 12
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "القاف والضاد",
-    "mihveri": "انفصال أو فراغ من شيء بعد قطعه أو تمامه: كتلك الجلدة تيسّر خروج الصبي نقيّ الوجه، وكالفراغ من عمل الثوب والدار، وكأداء الدين والقتل، وذهابُ الشيء فراغ منه. وقوله تعالى: {ثُمَّ لْيَقْضُوا تَفَثَهُمْ} [الحج: 29] أي ليزيلوا الثَفَث، وذلك بقصّ الأظفار وحَلْق العانة ونتف الإبط {فَوَكَزَهُ مُوسَى فَقَضَى عَلَيْهِ} [القصص: 15]. قتله - كما قال تعالى {وَقَتَلْتَ نَفْسًا} [طه: 40]. ومن الفراغ من الشيء بإتمامه حسب المراد أداء أو تحصيلًا أو إتمامَ عمل: \"قضى دينه: أدّاه إلى الغريم {فَلَمَّا قَضَى مُوسَى الْأَجَلَ} [القصص: 29] , {فَلَمَّا قَضَى زَيْدٌ مِنْهَا وَطَرًا زَوَّجْنَاكَهَا} [الأحزاب: 37] , {إِلَّا حَاجَةً فِي نَفْسِ يَعْقُوبَ قَضَاهَا} [يوسف: 68] , {فَقَضَاهُنَّ سَبْعَ سَمَاوَاتٍ فِي يَوْمَيْنِ} [فصلت: 12]. ومن الإتمام استُعْملت في التعبير عن إبرام الأمر {وَقَضَى رَبُّكَ أَلَّا تَعْبُدُوا إِلَّا إِيَّاهُ} [الإسراء: 23] , {سُبْحَانَهُ إِذَا قَضَى أَمْرًا فَإِنَّمَا يَقُولُ لَهُ كُنْ فَيَكُونُ} [مريم: 35]. (4/1799) واستُعْمِلَت في فصل ما اختلط وتشابك من الأمور، ومن هذا \"القضاء: الحكم \" {ثُمَّ لَا يَجِدُوا فِي أَنْفُسِهِمْ حَرَجًا مِمَّا قَضَيْتَ} [النساء: 65]، {وَقُضِيَ بَيْنَهُمْ بِالْقِسْطِ} [يونس: 54]. والخلاصة في الاستعمالات القرآنية لهذا التركيب أن الذي جاء فيه بمعنى حكم هو (قَضَى) أمرًا، أجلًا، ألا تعبدوا، لتفسدن، قضى عليها الموت، مما قضيت، فاقص أنت قاص، لا يقضون بشيء، وكل (يقَضْي بين، قُضِيَ بين). وسائر ما في القرآن من التركيب فهو بمعنى إتمام الأمر وإنهائه.",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (قض): الكسر والفصل بعنف أو قوة وما إلى ذلك كقض اللؤلؤة ثقبها والقَضْقَضة كسر العظام - في (قضض)، وكالقَضَاة الجلدة التي تكون على وجه الصبي حين يولد فتيسر خروجه أي انفصاله دون أذى صحيحا وهذه قوة، وكالقضاء على شخص أي قتله - في (قضى)، وكانفلاق قشر البيضة في (قيض)، وكقطع الأغصان في (قضب).",
-    "tam_metin": "{إِذَا قَضَى أَمْرًا فَإِنَّمَا يَقُولُ لَهُ كُنْ فَيَكُونُ} [آل عمران: 47]\n\"القَضَاةُ - كفتاة [وفي ق كرُماة]: الجِلْدة الرقيقة التي تكون على وَجْه الصبي حين يولد. وكلُّ ما أُحْكِمَ عمله فَقَدْ قُضِىَ. تقول قَضَيْت هذا الثوب وهذه الدارَ إذا عَمِلْتها وأَحْكَمْتَ عَمَلها. وقَضَى الغريم دَيْنَه: أَدَّاه إليه. وضربه فَقَضَى عليه: قَتَلَه كأنه فَرَغَ منه. وسُمٌّ قاض: قَاتل. وقَضَى: مات. والانقضاء: ذَهاب الشيء وفناؤه \".\n° المعنى المحوري\nانفصال أو فراغ من شيء بعد قطعه أو تمامه: كتلك الجلدة تيسّر خروج الصبي نقيّ الوجه، وكالفراغ من عمل الثوب والدار، وكأداء الدين والقتل، وذهابُ الشيء فراغ منه. وقوله تعالى: {ثُمَّ لْيَقْضُوا تَفَثَهُمْ} [الحج: 29] أي ليزيلوا الثَفَث، وذلك بقصّ الأظفار وحَلْق العانة ونتف الإبط {فَوَكَزَهُ مُوسَى فَقَضَى عَلَيْهِ} [القصص: 15]. قتله - كما قال تعالى {وَقَتَلْتَ نَفْسًا} [طه: 40].\nومن الفراغ من الشيء بإتمامه حسب المراد أداء أو تحصيلًا أو إتمامَ عمل: \"قضى دينه: أدّاه إلى الغريم {فَلَمَّا قَضَى مُوسَى الْأَجَلَ} [القصص: 29] , {فَلَمَّا قَضَى زَيْدٌ مِنْهَا وَطَرًا زَوَّجْنَاكَهَا} [الأحزاب: 37] , {إِلَّا حَاجَةً فِي نَفْسِ يَعْقُوبَ قَضَاهَا} [يوسف: 68] , {فَقَضَاهُنَّ سَبْعَ سَمَاوَاتٍ فِي يَوْمَيْنِ} [فصلت: 12].\nومن الإتمام استُعْملت في التعبير عن إبرام الأمر {وَقَضَى رَبُّكَ أَلَّا تَعْبُدُوا إِلَّا إِيَّاهُ} [الإسراء: 23] , {سُبْحَانَهُ إِذَا قَضَى أَمْرًا فَإِنَّمَا يَقُولُ لَهُ كُنْ فَيَكُونُ} [مريم: 35].\n(4/1799)\nواستُعْمِلَت في فصل ما اختلط وتشابك من الأمور، ومن هذا \"القضاء: الحكم \" {ثُمَّ لَا يَجِدُوا فِي أَنْفُسِهِمْ حَرَجًا مِمَّا قَضَيْتَ} [النساء: 65]، {وَقُضِيَ بَيْنَهُمْ بِالْقِسْطِ} [يونس: 54].\nوالخلاصة في الاستعمالات القرآنية لهذا التركيب أن الذي جاء فيه بمعنى حكم هو (قَضَى) أمرًا، أجلًا، ألا تعبدوا، لتفسدن، قضى عليها الموت، مما قضيت، فاقص أنت قاص، لا يقضون بشيء، وكل (يقَضْي بين، قُضِيَ بين). وسائر ما في القرآن من التركيب فهو بمعنى إتمام الأمر وإنهائه."
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
-    "act.n.02",
-    "break.v.02",
-    "break.v.04",
-    "break.v.05",
-    "dart.v.02",
-    "deny.v.01",
-    "descend.v.01",
-    "dissolve.v.09",
-    "precipitate.v.03",
-    "refute.v.01",
-    "separate.v.08",
-    "tell.v.02"
-  ],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 2,
       "merkez_kok": "حنج",
@@ -1054,6 +735,24 @@
       "boy": 43
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "wordnet": [
+    "act.n.02",
+    "break.v.02",
+    "break.v.04",
+    "break.v.05",
+    "dart.v.02",
+    "deny.v.01",
+    "descend.v.01",
+    "dissolve.v.09",
+    "precipitate.v.03",
+    "refute.v.01",
+    "separate.v.08",
+    "tell.v.02"
+  ],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

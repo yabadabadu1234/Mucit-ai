@@ -1,478 +1,339 @@
 {
   "kok": "ضاف",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "ضاف", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يضيف",
-        "u": "يضيف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يضيف (form I)\n# يَضِيفُ (yaḍīfu) /ja.dˤiː.fu/: third-person masculine singular non-past active indicative of ضَافَ (ḍāfa)\n# يَضِيفَ (yaḍīfa) /ja.dˤiː.fa/: third-person masculine singular non-past active subjunctive of ضَافَ (ḍāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḍīfu", "ḍāfa", "yaḍīfa"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يضف",
-        "u": "يضف",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يضف (form I)\n# يَضِفْ (yaḍif) /ja.dˤif/: third-person masculine singular non-past active jussive of ضَافَ (ḍāfa)\n# يُضَفْ (yuḍaf) /ju.dˤaf/: third-person masculine singular non-past passive jussive of ضَافَ (ḍāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḍif", "ḍāfa", "yuḍaf"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "أضيف",
-        "u": "أضيف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "أضيف (form I)\n# أَضِيفُ (ʔaḍīfu) /ʔa.dˤiː.fu/: first-person singular non-past active indicative of ضَافَ (ḍāfa)\n# أَضِيفَ (ʔaḍīfa) /ʔa.dˤiː.fa/: first-person singular non-past active subjunctive of ضَافَ (ḍāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḍīfu", "ḍāfa", "ʔaḍīfa"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تضيف",
-        "u": "تضيف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تضيف (form I)\n# تَضِيفُ (taḍīfu) /ta.dˤiː.fu/: inflection of ضَافَ (ḍāfa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَضِيفَ (taḍīfa) /ta.dˤiː.fa/: inflection of ضَافَ (ḍāfa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḍīfu", "ḍāfa", "taḍīfa"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تضف",
-        "u": "تضف",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تضف (form I)\n# تَضِفْ (taḍif) /ta.dˤif/: inflection of ضَافَ (ḍāfa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُضَفْ (tuḍaf) /tu.dˤaf/: inflection of ضَافَ (ḍāfa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḍif", "ḍāfa", "tuḍaf"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "أضف",
-        "u": "أضف",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "أضف (form I)\n# أَضِفْ (ʔaḍif) /ʔa.dˤif/: first-person singular non-past active jussive of ضَافَ (ḍāfa)\n# أُضَفْ (ʔuḍaf) /ʔu.dˤaf/: first-person singular non-past passive jussive of ضَافَ (ḍāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaḍif", "ḍāfa", "ʔuḍaf"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تضيفين",
-        "u": "تضيفين",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَضِيفِينَ • (taḍīfīna) (form I) /ta.dˤiː.fiː.na/\n# second-person feminine singular non-past active indicative of ضَافَ (ḍāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḍīfīna", "ḍāfa"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تضيفي",
-        "u": "تضيفي",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَضِيفِي • (taḍīfī) (form I) /ta.dˤiː.fiː/\n# second-person feminine singular non-past active subjunctive/jussive of ضَافَ (ḍāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḍīfī", "ḍāfa"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "نضيف",
-        "u": "نضيف",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نضيف (form I)\n# نَضِيفُ (naḍīfu) /na.dˤiː.fu/: first-person plural non-past active indicative of ضَافَ (ḍāfa)\n# نَضِيفَ (naḍīfa) /na.dˤiː.fa/: first-person plural non-past active subjunctive of ضَافَ (ḍāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḍīfu", "ḍāfa", "naḍīfa"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "نضف",
-        "u": "نضف",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "نضف (form I)\n# نَضِفْ (naḍif) /na.dˤif/: first-person plural non-past active jussive of ضَافَ (ḍāfa)\n# نُضَفْ (nuḍaf) /nu.dˤaf/: first-person plural non-past passive jussive of ضَافَ (ḍāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḍif", "ḍāfa", "nuḍaf"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تضيفون",
-        "u": "تضيفون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَضِيفُونَ • (taḍīfūna) (form I) /ta.dˤiː.fuː.na/\n# second-person masculine plural non-past active indicative of ضَافَ (ḍāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḍīfūna", "ḍāfa"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تضيفوا",
-        "u": "تضيفوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَضِيفُوا • (taḍīfū) (form I) /ta.dˤiː.fuː/\n# second-person masculine plural non-past active subjunctive/jussive of ضَافَ (ḍāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḍīfū", "ḍāfa"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يضيفون",
-        "u": "يضيفون",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَضِيفُونَ • (yaḍīfūna) (form I) /ja.dˤiː.fuː.na/\n# third-person masculine plural non-past active indicative of ضَافَ (ḍāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḍīfūna", "ḍāfa"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يضيفوا",
-        "u": "يضيفوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَضِيفُوا • (yaḍīfū) (form I) /ja.dˤiː.fuː/\n# third-person masculine plural non-past active subjunctive/jussive of ضَافَ (ḍāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḍīfū", "ḍāfa"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تضفن",
-        "u": "تضفن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تضفن (form I)\n# تَضِفْنَ (taḍifna) /ta.dˤif.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of ضَافَ (ḍāfa)\n# تُضَفْنَ (tuḍafna) /tu.dˤaf.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of ضَافَ (ḍāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḍifna", "ḍāfa", "tuḍafna"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يضفن",
-        "u": "يضفن",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يضفن (form I)\n# يَضِفْنَ (yaḍifna) /ja.dˤif.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of ضَافَ (ḍāfa)\n# يُضَفْنَ (yuḍafna) /ju.dˤaf.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of ضَافَ (ḍāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḍifna", "ḍāfa", "yuḍafna"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تضيفان",
-        "u": "تضيفان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَضِيفَانِ • (taḍīfāni) (form I) /ta.dˤiː.faː.ni/\n# inflection of ضَافَ (ḍāfa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḍīfāni", "ḍāfa"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يضيفان",
-        "u": "يضيفان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَضِيفَانِ • (yaḍīfāni) (form I) /ja.dˤiː.faː.ni/\n# third-person masculine dual non-past active indicative of ضَافَ (ḍāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḍīfāni", "ḍāfa"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "تضيفا",
-        "u": "تضيفا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَضِيفَا • (taḍīfā) (form I) /ta.dˤiː.faː/\n# inflection of ضَافَ (ḍāfa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["taḍīfā", "ḍāfa"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "يضيفا",
-        "u": "يضيفا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَضِيفَا • (yaḍīfā) (form I) /ja.dˤiː.faː/\n# third-person masculine dual non-past active subjunctive/jussive of ضَافَ (ḍāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yaḍīfā", "ḍāfa"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "ضافت",
-        "u": "ضافت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ضَافَتْ • (ḍāfat) (form I) /dˤaː.fat/\n# third-person feminine singular past active of ضَافَ (ḍāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḍāfat", "ḍāfa"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "ضفت",
-        "u": "ضفت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ضفت (form I)\n# ضِفْتُ (ḍiftu) /dˤif.tu/: first-person singular past active/passive of ضَافَ (ḍāfa)\n# ضِفْتَ (ḍifta) /dˤif.ta/: second-person masculine singular past active/passive of ضَافَ (ḍāfa)\n# ضِفْتِ (ḍifti) /dˤif.ti/: second-person feminine singular past active/passive of ضَافَ (ḍāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḍiftu", "ḍāfa", "ḍifta"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "ضفتما",
-        "u": "ضفتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ضِفْتُمَا • (ḍiftumā) (form I) /dˤif.tu.maː/\n# second-person dual past active/passive of ضَافَ (ḍāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḍiftumā", "ḍāfa"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "ضفنا",
-        "u": "ضفنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ضِفْنَا • (ḍifnā) (form I) /dˤif.naː/\n# first-person plural past active/passive of ضَافَ (ḍāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḍifnā", "ḍāfa"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "ضافا",
-        "u": "ضافا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ضَافَا • (ḍāfā) (form I) /dˤaː.faː/\n# third-person masculine dual past active of ضَافَ (ḍāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḍāfā", "ḍāfa"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "ضفتم",
-        "u": "ضفتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ضِفْتُمْ • (ḍiftum) (form I) /dˤif.tum/\n# second-person masculine plural past active/passive of ضَافَ (ḍāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḍiftum", "ḍāfa"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "ضافتا",
-        "u": "ضافتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ضَافَتَا • (ḍāfatā) (form I) /dˤaː.fa.taː/\n# third-person feminine dual past active of ضَافَ (ḍāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḍāfatā", "ḍāfa"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "ضفتن",
-        "u": "ضفتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ضِفْتُنَّ • (ḍiftunna) (form I) /dˤif.tun.na/\n# second-person feminine plural past active/passive of ضَافَ (ḍāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḍiftunna", "ḍāfa"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "ضفن",
-        "u": "ضفن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ضِفْنَ • (ḍifna) (form I) /dˤif.na/\n# inflection of ضَافَ (ḍāfa):\n## third-person feminine plural past active/passive\n## second-person feminine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḍifna", "ḍāfa"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "ضف",
-        "u": "ضف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ضِفْ • (ḍif) (form I) /dˤif/\n# second-person masculine singular imperative of ضَافَ (ḍāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḍif", "ḍāfa"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "ضيفي",
-        "u": "ضيفي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ضِيفِي • (ḍīfī) (form I) /dˤiː.fiː/\n# second-person feminine singular imperative of ضَافَ (ḍāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḍīfī", "ḍāfa"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "ضيفا",
-        "u": "ضيفا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ضِيفَا • (ḍīfā) (form I) /dˤiː.faː/\n# inflection of ضَافَ (ḍāfa):\n## third-person masculine dual past passive\n## second-person dual imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḍīfā", "ḍāfa"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "ضافوا",
-        "u": "ضافوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ضَافُوا • (ḍāfū) (form I) /dˤaː.fuː/\n# third-person masculine plural past active of ضَافَ (ḍāfa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḍāfū", "ḍāfa"],
-        "k": "ضاف",
-        "yol": "kök"
-      },
-      {
-        "w": "ضيفوا",
-        "u": "ضيفوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ضِيفُوا • (ḍīfū) (form I) /dˤiː.fuː/\n# inflection of ضَافَ (ḍāfa):\n## third-person masculine plural past passive\n## second-person masculine plural imperative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ḍīfū", "ḍāfa"],
-        "k": "ضاف",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "ضف",
+  "ses": {
     "harf": "ض",
+    "fasil": "ضف",
     "mahrec": "şeceriyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يضيف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يضيف (form I)\n# يَضِيفُ (yaḍīfu) /ja.dˤiː.fu/: third-person masculine singular non-past active indicative of ضَافَ (ḍāfa)\n# يَضِيفَ (yaḍīfa) /ja.dˤiː.fa/: third-person masculine singular non-past active subjunctive of ضَافَ (ḍāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḍīfu", "ḍāfa", "yaḍīfa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يضف",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يضف (form I)\n# يَضِفْ (yaḍif) /ja.dˤif/: third-person masculine singular non-past active jussive of ضَافَ (ḍāfa)\n# يُضَفْ (yuḍaf) /ju.dˤaf/: third-person masculine singular non-past passive jussive of ضَافَ (ḍāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḍif", "ḍāfa", "yuḍaf"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أضيف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "أضيف (form I)\n# أَضِيفُ (ʔaḍīfu) /ʔa.dˤiː.fu/: first-person singular non-past active indicative of ضَافَ (ḍāfa)\n# أَضِيفَ (ʔaḍīfa) /ʔa.dˤiː.fa/: first-person singular non-past active subjunctive of ضَافَ (ḍāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḍīfu", "ḍāfa", "ʔaḍīfa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضيف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تضيف (form I)\n# تَضِيفُ (taḍīfu) /ta.dˤiː.fu/: inflection of ضَافَ (ḍāfa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَضِيفَ (taḍīfa) /ta.dˤiː.fa/: inflection of ضَافَ (ḍāfa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḍīfu", "ḍāfa", "taḍīfa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضف",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تضف (form I)\n# تَضِفْ (taḍif) /ta.dˤif/: inflection of ضَافَ (ḍāfa):\n## second-person masculine singular non-past active jussive\n## third-person feminine singular non-past active jussive\n# تُضَفْ (tuḍaf) /tu.dˤaf/: inflection of ضَافَ (ḍāfa):\n## second-person masculine singular non-past passive jussive\n## third-person feminine singular non-past passive jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḍif", "ḍāfa", "tuḍaf"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أضف",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "أضف (form I)\n# أَضِفْ (ʔaḍif) /ʔa.dˤif/: first-person singular non-past active jussive of ضَافَ (ḍāfa)\n# أُضَفْ (ʔuḍaf) /ʔu.dˤaf/: first-person singular non-past passive jussive of ضَافَ (ḍāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔaḍif", "ḍāfa", "ʔuḍaf"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضيفين",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَضِيفِينَ • (taḍīfīna) (form I) /ta.dˤiː.fiː.na/\n# second-person feminine singular non-past active indicative of ضَافَ (ḍāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḍīfīna", "ḍāfa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضيفي",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَضِيفِي • (taḍīfī) (form I) /ta.dˤiː.fiː/\n# second-person feminine singular non-past active subjunctive/jussive of ضَافَ (ḍāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḍīfī", "ḍāfa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نضيف",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نضيف (form I)\n# نَضِيفُ (naḍīfu) /na.dˤiː.fu/: first-person plural non-past active indicative of ضَافَ (ḍāfa)\n# نَضِيفَ (naḍīfa) /na.dˤiː.fa/: first-person plural non-past active subjunctive of ضَافَ (ḍāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḍīfu", "ḍāfa", "naḍīfa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نضف",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "نضف (form I)\n# نَضِفْ (naḍif) /na.dˤif/: first-person plural non-past active jussive of ضَافَ (ḍāfa)\n# نُضَفْ (nuḍaf) /nu.dˤaf/: first-person plural non-past passive jussive of ضَافَ (ḍāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḍif", "ḍāfa", "nuḍaf"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضيفون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَضِيفُونَ • (taḍīfūna) (form I) /ta.dˤiː.fuː.na/\n# second-person masculine plural non-past active indicative of ضَافَ (ḍāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḍīfūna", "ḍāfa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضيفوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَضِيفُوا • (taḍīfū) (form I) /ta.dˤiː.fuː/\n# second-person masculine plural non-past active subjunctive/jussive of ضَافَ (ḍāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḍīfū", "ḍāfa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يضيفون",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَضِيفُونَ • (yaḍīfūna) (form I) /ja.dˤiː.fuː.na/\n# third-person masculine plural non-past active indicative of ضَافَ (ḍāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḍīfūna", "ḍāfa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يضيفوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَضِيفُوا • (yaḍīfū) (form I) /ja.dˤiː.fuː/\n# third-person masculine plural non-past active subjunctive/jussive of ضَافَ (ḍāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḍīfū", "ḍāfa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضفن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تضفن (form I)\n# تَضِفْنَ (taḍifna) /ta.dˤif.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of ضَافَ (ḍāfa)\n# تُضَفْنَ (tuḍafna) /tu.dˤaf.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of ضَافَ (ḍāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḍifna", "ḍāfa", "tuḍafna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يضفن",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يضفن (form I)\n# يَضِفْنَ (yaḍifna) /ja.dˤif.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of ضَافَ (ḍāfa)\n# يُضَفْنَ (yuḍafna) /ju.dˤaf.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of ضَافَ (ḍāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḍifna", "ḍāfa", "yuḍafna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضيفان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَضِيفَانِ • (taḍīfāni) (form I) /ta.dˤiː.faː.ni/\n# inflection of ضَافَ (ḍāfa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḍīfāni", "ḍāfa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يضيفان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَضِيفَانِ • (yaḍīfāni) (form I) /ja.dˤiː.faː.ni/\n# third-person masculine dual non-past active indicative of ضَافَ (ḍāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḍīfāni", "ḍāfa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تضيفا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَضِيفَا • (taḍīfā) (form I) /ta.dˤiː.faː/\n# inflection of ضَافَ (ḍāfa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["taḍīfā", "ḍāfa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يضيفا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَضِيفَا • (yaḍīfā) (form I) /ja.dˤiː.faː/\n# third-person masculine dual non-past active subjunctive/jussive of ضَافَ (ḍāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yaḍīfā", "ḍāfa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ضافت",
+      "tur": "verb",
+      "baslik": "ضَافَتْ • (ḍāfat) (form I) /dˤaː.fat/\n# third-person feminine singular past active of ضَافَ (ḍāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḍāfat", "ḍāfa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ضفت",
+      "tur": "verb",
+      "baslik": "ضفت (form I)\n# ضِفْتُ (ḍiftu) /dˤif.tu/: first-person singular past active/passive of ضَافَ (ḍāfa)\n# ضِفْتَ (ḍifta) /dˤif.ta/: second-person masculine singular past active/passive of ضَافَ (ḍāfa)\n# ضِفْتِ (ḍifti) /dˤif.ti/: second-person feminine singular past active/passive of ضَافَ (ḍāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḍiftu", "ḍāfa", "ḍifta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ضفتما",
+      "tur": "verb",
+      "baslik": "ضِفْتُمَا • (ḍiftumā) (form I) /dˤif.tu.maː/\n# second-person dual past active/passive of ضَافَ (ḍāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḍiftumā", "ḍāfa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ضفنا",
+      "tur": "verb",
+      "baslik": "ضِفْنَا • (ḍifnā) (form I) /dˤif.naː/\n# first-person plural past active/passive of ضَافَ (ḍāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḍifnā", "ḍāfa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ضافا",
+      "tur": "verb",
+      "baslik": "ضَافَا • (ḍāfā) (form I) /dˤaː.faː/\n# third-person masculine dual past active of ضَافَ (ḍāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḍāfā", "ḍāfa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ضفتم",
+      "tur": "verb",
+      "baslik": "ضِفْتُمْ • (ḍiftum) (form I) /dˤif.tum/\n# second-person masculine plural past active/passive of ضَافَ (ḍāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḍiftum", "ḍāfa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ضافتا",
+      "tur": "verb",
+      "baslik": "ضَافَتَا • (ḍāfatā) (form I) /dˤaː.fa.taː/\n# third-person feminine dual past active of ضَافَ (ḍāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḍāfatā", "ḍāfa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ضفتن",
+      "tur": "verb",
+      "baslik": "ضِفْتُنَّ • (ḍiftunna) (form I) /dˤif.tun.na/\n# second-person feminine plural past active/passive of ضَافَ (ḍāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḍiftunna", "ḍāfa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ضفن",
+      "tur": "verb",
+      "baslik": "ضِفْنَ • (ḍifna) (form I) /dˤif.na/\n# inflection of ضَافَ (ḍāfa):\n## third-person feminine plural past active/passive\n## second-person feminine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḍifna", "ḍāfa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ضف",
+      "tur": "verb",
+      "baslik": "ضِفْ • (ḍif) (form I) /dˤif/\n# second-person masculine singular imperative of ضَافَ (ḍāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḍif", "ḍāfa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ضيفي",
+      "tur": "verb",
+      "baslik": "ضِيفِي • (ḍīfī) (form I) /dˤiː.fiː/\n# second-person feminine singular imperative of ضَافَ (ḍāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḍīfī", "ḍāfa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ضيفا",
+      "tur": "verb",
+      "baslik": "ضِيفَا • (ḍīfā) (form I) /dˤiː.faː/\n# inflection of ضَافَ (ḍāfa):\n## third-person masculine dual past passive\n## second-person dual imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḍīfā", "ḍāfa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ضافوا",
+      "tur": "verb",
+      "baslik": "ضَافُوا • (ḍāfū) (form I) /dˤaː.fuː/\n# third-person masculine plural past active of ضَافَ (ḍāfa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḍāfū", "ḍāfa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "ضيفوا",
+      "tur": "verb",
+      "baslik": "ضِيفُوا • (ḍīfū) (form I) /dˤiː.fuː/\n# inflection of ضَافَ (ḍāfa):\n## third-person masculine plural past passive\n## second-person masculine plural imperative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ḍīfū", "ḍāfa"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "ضاف", "r7"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,362 +1,255 @@
 {
   "kok": "اتفق",
+  "tur": "fiil",
+  "tur_guven": "zayıf",
+  "tur_dayanak": ["claude-hukmu"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "اتفق", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "يتفق",
-        "u": "يتفق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يتفق (form VIII)\n# يَتَّفِقُ (yattafiqu) /jat.ta.fi.qu/: third-person masculine singular non-past active indicative of اِتَّفَقَ (ittafaqa)\n# يُتَّفَقُ (yuttafaqu) /jut.ta.fa.qu/: third-person masculine singular non-past passive indicative of اِتَّفَقَ (ittafaqa)\n# يَتَّفِقَ (yattafiqa) /jat.ta.fi.qa/: third-person masculine singular non-past active subjunctive of اِتَّفَقَ (ittafaqa)\n# يُتَّفَقَ ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattafiqu", "ittafaqa", "yuttafaqu"],
-        "k": "اتفق",
-        "yol": "kök"
-      },
-      {
-        "w": "اتفقت",
-        "u": "اتفقت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتفقت (form VIII)\n# اِتَّفَقْتُ (ittafaqtu) /it.ta.faq.tu/: first-person singular past active of اِتَّفَقَ (ittafaqa)\n# اِتَّفَقْتَ (ittafaqta) /it.ta.faq.ta/: second-person masculine singular past active of اِتَّفَقَ (ittafaqa)\n# اِتَّفَقْتِ (ittafaqti) /it.ta.faq.ti/: second-person feminine singular past active of اِتَّفَقَ (ittafaqa)\n# اِتَّفَقَتْ (ittafaqat) /it.ta.fa.qat/: third-person femini",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittafaqtu", "ittafaqa", "ittafaqta"],
-        "k": "اتفق",
-        "yol": "kök"
-      },
-      {
-        "w": "تتفق",
-        "u": "تتفق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تتفق (form VIII)\n# تَتَّفِقُ (tattafiqu) /tat.ta.fi.qu/: inflection of اِتَّفَقَ (ittafaqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَّفِقَ (tattafiqa) /tat.ta.fi.qa/: inflection of اِتَّفَقَ (ittafaqa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattafiqu", "ittafaqa", "tattafiqa"],
-        "k": "اتفق",
-        "yol": "kök"
-      },
-      {
-        "w": "تتفقين",
-        "u": "تتفقين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَّفِقِينَ • (tattafiqīna) (form VIII) /tat.ta.fi.qiː.na/\n# second-person feminine singular non-past active indicative of اِتَّفَقَ (ittafaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattafiqīna", "ittafaqa"],
-        "k": "اتفق",
-        "yol": "kök"
-      },
-      {
-        "w": "تتفقي",
-        "u": "تتفقي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَّفِقِي • (tattafiqī) (form VIII) /tat.ta.fi.qiː/\n# second-person feminine singular non-past active subjunctive/jussive of اِتَّفَقَ (ittafaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattafiqī", "ittafaqa"],
-        "k": "اتفق",
-        "yol": "kök"
-      },
-      {
-        "w": "اتفقي",
-        "u": "اتفقي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّفِقِي • (ittafiqī) (form VIII) /it.ta.fi.qiː/\n# second-person feminine singular imperative of اِتَّفَقَ (ittafaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittafiqī", "ittafaqa"],
-        "k": "اتفق",
-        "yol": "kök"
-      },
-      {
-        "w": "أتفق",
-        "u": "أتفق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أتفق (form VIII)\n# أَتَّفِقُ (ʔattafiqu) /ʔat.ta.fi.qu/: first-person singular non-past active indicative of اِتَّفَقَ (ittafaqa)\n# أَتَّفِقَ (ʔattafiqa) /ʔat.ta.fi.qa/: first-person singular non-past active subjunctive of اِتَّفَقَ (ittafaqa)\n# أَتَّفِقْ (ʔattafiq) /ʔat.ta.fiq/: first-person singular non-past active jussive of اِتَّفَقَ (ittafaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ʔattafiqu", "ittafaqa", "ʔattafiqa"],
-        "k": "اتفق",
-        "yol": "kök"
-      },
-      {
-        "w": "اتفقنا",
-        "u": "اتفقنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّفَقْنَا • (ittafaqnā) (form VIII) /it.ta.faq.naː/\n# first-person plural past active of اِتَّفَقَ (ittafaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittafaqnā", "ittafaqa"],
-        "k": "اتفق",
-        "yol": "kök"
-      },
-      {
-        "w": "نتفق",
-        "u": "نتفق",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نتفق (form VIII)\n# نَتَّفِقُ (nattafiqu) /nat.ta.fi.qu/: first-person plural non-past active indicative of اِتَّفَقَ (ittafaqa)\n# نَتَّفِقَ (nattafiqa) /nat.ta.fi.qa/: first-person plural non-past active subjunctive of اِتَّفَقَ (ittafaqa)\n# نَتَّفِقْ (nattafiq) /nat.ta.fiq/: first-person plural non-past active jussive of اِتَّفَقَ (ittafaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["nattafiqu", "ittafaqa", "nattafiqa"],
-        "k": "اتفق",
-        "yol": "kök"
-      },
-      {
-        "w": "اتفقتم",
-        "u": "اتفقتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّفَقْتُمْ • (ittafaqtum) (form VIII) /it.ta.faq.tum/\n# second-person masculine plural past active of اِتَّفَقَ (ittafaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittafaqtum", "ittafaqa"],
-        "k": "اتفق",
-        "yol": "kök"
-      },
-      {
-        "w": "تتفقون",
-        "u": "تتفقون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَّفِقُونَ • (tattafiqūna) (form VIII) /tat.ta.fi.quː.na/\n# second-person masculine plural non-past active indicative of اِتَّفَقَ (ittafaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattafiqūna", "ittafaqa"],
-        "k": "اتفق",
-        "yol": "kök"
-      },
-      {
-        "w": "تتفقوا",
-        "u": "تتفقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَّفِقُوا • (tattafiqū) (form VIII) /tat.ta.fi.quː/\n# second-person masculine plural non-past active subjunctive/jussive of اِتَّفَقَ (ittafaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattafiqū", "ittafaqa"],
-        "k": "اتفق",
-        "yol": "kök"
-      },
-      {
-        "w": "اتفقوا",
-        "u": "اتفقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتفقوا (form VIII)\n# اِتَّفَقُوا (ittafaqū) /it.ta.fa.quː/: third-person masculine plural past active of اِتَّفَقَ (ittafaqa)\n# اِتَّفِقُوا (ittafiqū) /it.ta.fi.quː/: second-person masculine plural imperative of اِتَّفَقَ (ittafaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittafaqū", "ittafaqa", "ittafiqū"],
-        "k": "اتفق",
-        "yol": "kök"
-      },
-      {
-        "w": "يتفقون",
-        "u": "يتفقون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَّفِقُونَ • (yattafiqūna) (form VIII) /jat.ta.fi.quː.na/\n# third-person masculine plural non-past active indicative of اِتَّفَقَ (ittafaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattafiqūna", "ittafaqa"],
-        "k": "اتفق",
-        "yol": "kök"
-      },
-      {
-        "w": "يتفقوا",
-        "u": "يتفقوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَّفِقُوا • (yattafiqū) (form VIII) /jat.ta.fi.quː/\n# third-person masculine plural non-past active subjunctive/jussive of اِتَّفَقَ (ittafaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattafiqū", "ittafaqa"],
-        "k": "اتفق",
-        "yol": "kök"
-      },
-      {
-        "w": "اتفقتن",
-        "u": "اتفقتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّفَقْتُنَّ • (ittafaqtunna) (form VIII) /it.ta.faq.tun.na/\n# second-person feminine plural past active of اِتَّفَقَ (ittafaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittafaqtunna", "ittafaqa"],
-        "k": "اتفق",
-        "yol": "kök"
-      },
-      {
-        "w": "تتفقن",
-        "u": "تتفقن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَّفِقْنَ • (tattafiqna) (form VIII) /tat.ta.fiq.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِتَّفَقَ (ittafaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattafiqna", "ittafaqa"],
-        "k": "اتفق",
-        "yol": "kök"
-      },
-      {
-        "w": "اتفقن",
-        "u": "اتفقن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتفقن (form VIII)\n# اِتَّفَقْنَ (ittafaqna) /it.ta.faq.na/: third-person feminine plural past active of اِتَّفَقَ (ittafaqa)\n# اِتَّفِقْنَ (ittafiqna) /it.ta.fiq.na/: second-person feminine plural imperative of اِتَّفَقَ (ittafaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittafaqna", "ittafaqa", "ittafiqna"],
-        "k": "اتفق",
-        "yol": "kök"
-      },
-      {
-        "w": "يتفقن",
-        "u": "يتفقن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَّفِقْنَ • (yattafiqna) (form VIII) /jat.ta.fiq.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِتَّفَقَ (ittafaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattafiqna", "ittafaqa"],
-        "k": "اتفق",
-        "yol": "kök"
-      },
-      {
-        "w": "اتفقتما",
-        "u": "اتفقتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّفَقْتُمَا • (ittafaqtumā) (form VIII) /it.ta.faq.tu.maː/\n# second-person dual past active of اِتَّفَقَ (ittafaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittafaqtumā", "ittafaqa"],
-        "k": "اتفق",
-        "yol": "kök"
-      },
-      {
-        "w": "اتفقتا",
-        "u": "اتفقتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِتَّفَقَتَا • (ittafaqatā) (form VIII) /it.ta.fa.qa.taː/\n# third-person feminine dual past active of اِتَّفَقَ (ittafaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittafaqatā", "ittafaqa"],
-        "k": "اتفق",
-        "yol": "kök"
-      },
-      {
-        "w": "اتفقا",
-        "u": "اتفقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اتفقا (form VIII)\n# اِتَّفَقَا (ittafaqā) /it.ta.fa.qaː/: third-person masculine dual past active of اِتَّفَقَ (ittafaqa)\n# اِتَّفِقَا (ittafiqā) /it.ta.fi.qaː/: second-person dual imperative of اِتَّفَقَ (ittafaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["ittafaqā", "ittafaqa", "ittafiqā"],
-        "k": "اتفق",
-        "yol": "kök"
-      },
-      {
-        "w": "تتفقان",
-        "u": "تتفقان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَّفِقَانِ • (tattafiqāni) (form VIII) /tat.ta.fi.qaː.ni/\n# inflection of اِتَّفَقَ (ittafaqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattafiqāni", "ittafaqa"],
-        "k": "اتفق",
-        "yol": "kök"
-      },
-      {
-        "w": "يتفقان",
-        "u": "يتفقان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَّفِقَانِ • (yattafiqāni) (form VIII) /jat.ta.fi.qaː.ni/\n# third-person masculine dual non-past active indicative of اِتَّفَقَ (ittafaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattafiqāni", "ittafaqa"],
-        "k": "اتفق",
-        "yol": "kök"
-      },
-      {
-        "w": "يتفقا",
-        "u": "يتفقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يَتَّفِقَا • (yattafiqā) (form VIII) /jat.ta.fi.qaː/\n# third-person masculine dual non-past active subjunctive/jussive of اِتَّفَقَ (ittafaqa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["yattafiqā", "ittafaqa"],
-        "k": "اتفق",
-        "yol": "kök"
-      },
-      {
-        "w": "تتفقا",
-        "u": "تتفقا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَتَّفِقَا • (tattafiqā) (form VIII) /tat.ta.fi.qaː/\n# inflection of اِتَّفَقَ (ittafaqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-viii", "no-gloss"],
-        "r": ["tattafiqā", "ittafaqa"],
-        "k": "اتفق",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تف",
+  "ses": {
     "harf": "ا",
+    "fasil": "تف",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "يتفق",
+      "tur": "verb",
+      "baslik": "يتفق (form VIII)\n# يَتَّفِقُ (yattafiqu) /jat.ta.fi.qu/: third-person masculine singular non-past active indicative of اِتَّفَقَ (ittafaqa)\n# يُتَّفَقُ (yuttafaqu) /jut.ta.fa.qu/: third-person masculine singular non-past passive indicative of اِتَّفَقَ (ittafaqa)\n# يَتَّفِقَ (yattafiqa) /jat.ta.fi.qa/: third-person masculine singular non-past active subjunctive of اِتَّفَقَ (ittafaqa)\n# يُتَّفَقَ ",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattafiqu", "ittafaqa", "yuttafaqu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتفقت",
+      "tur": "verb",
+      "baslik": "اتفقت (form VIII)\n# اِتَّفَقْتُ (ittafaqtu) /it.ta.faq.tu/: first-person singular past active of اِتَّفَقَ (ittafaqa)\n# اِتَّفَقْتَ (ittafaqta) /it.ta.faq.ta/: second-person masculine singular past active of اِتَّفَقَ (ittafaqa)\n# اِتَّفَقْتِ (ittafaqti) /it.ta.faq.ti/: second-person feminine singular past active of اِتَّفَقَ (ittafaqa)\n# اِتَّفَقَتْ (ittafaqat) /it.ta.fa.qat/: third-person femini",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittafaqtu", "ittafaqa", "ittafaqta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتفق",
+      "tur": "verb",
+      "baslik": "تتفق (form VIII)\n# تَتَّفِقُ (tattafiqu) /tat.ta.fi.qu/: inflection of اِتَّفَقَ (ittafaqa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَتَّفِقَ (tattafiqa) /tat.ta.fi.qa/: inflection of اِتَّفَقَ (ittafaqa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past ",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattafiqu", "ittafaqa", "tattafiqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتفقين",
+      "tur": "verb",
+      "baslik": "تَتَّفِقِينَ • (tattafiqīna) (form VIII) /tat.ta.fi.qiː.na/\n# second-person feminine singular non-past active indicative of اِتَّفَقَ (ittafaqa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattafiqīna", "ittafaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتفقي",
+      "tur": "verb",
+      "baslik": "تَتَّفِقِي • (tattafiqī) (form VIII) /tat.ta.fi.qiː/\n# second-person feminine singular non-past active subjunctive/jussive of اِتَّفَقَ (ittafaqa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattafiqī", "ittafaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتفقي",
+      "tur": "verb",
+      "baslik": "اِتَّفِقِي • (ittafiqī) (form VIII) /it.ta.fi.qiː/\n# second-person feminine singular imperative of اِتَّفَقَ (ittafaqa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittafiqī", "ittafaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أتفق",
+      "tur": "verb",
+      "baslik": "أتفق (form VIII)\n# أَتَّفِقُ (ʔattafiqu) /ʔat.ta.fi.qu/: first-person singular non-past active indicative of اِتَّفَقَ (ittafaqa)\n# أَتَّفِقَ (ʔattafiqa) /ʔat.ta.fi.qa/: first-person singular non-past active subjunctive of اِتَّفَقَ (ittafaqa)\n# أَتَّفِقْ (ʔattafiq) /ʔat.ta.fiq/: first-person singular non-past active jussive of اِتَّفَقَ (ittafaqa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ʔattafiqu", "ittafaqa", "ʔattafiqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتفقنا",
+      "tur": "verb",
+      "baslik": "اِتَّفَقْنَا • (ittafaqnā) (form VIII) /it.ta.faq.naː/\n# first-person plural past active of اِتَّفَقَ (ittafaqa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittafaqnā", "ittafaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نتفق",
+      "tur": "verb",
+      "baslik": "نتفق (form VIII)\n# نَتَّفِقُ (nattafiqu) /nat.ta.fi.qu/: first-person plural non-past active indicative of اِتَّفَقَ (ittafaqa)\n# نَتَّفِقَ (nattafiqa) /nat.ta.fi.qa/: first-person plural non-past active subjunctive of اِتَّفَقَ (ittafaqa)\n# نَتَّفِقْ (nattafiq) /nat.ta.fiq/: first-person plural non-past active jussive of اِتَّفَقَ (ittafaqa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["nattafiqu", "ittafaqa", "nattafiqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتفقتم",
+      "tur": "verb",
+      "baslik": "اِتَّفَقْتُمْ • (ittafaqtum) (form VIII) /it.ta.faq.tum/\n# second-person masculine plural past active of اِتَّفَقَ (ittafaqa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittafaqtum", "ittafaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتفقون",
+      "tur": "verb",
+      "baslik": "تَتَّفِقُونَ • (tattafiqūna) (form VIII) /tat.ta.fi.quː.na/\n# second-person masculine plural non-past active indicative of اِتَّفَقَ (ittafaqa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattafiqūna", "ittafaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتفقوا",
+      "tur": "verb",
+      "baslik": "تَتَّفِقُوا • (tattafiqū) (form VIII) /tat.ta.fi.quː/\n# second-person masculine plural non-past active subjunctive/jussive of اِتَّفَقَ (ittafaqa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattafiqū", "ittafaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتفقوا",
+      "tur": "verb",
+      "baslik": "اتفقوا (form VIII)\n# اِتَّفَقُوا (ittafaqū) /it.ta.fa.quː/: third-person masculine plural past active of اِتَّفَقَ (ittafaqa)\n# اِتَّفِقُوا (ittafiqū) /it.ta.fi.quː/: second-person masculine plural imperative of اِتَّفَقَ (ittafaqa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittafaqū", "ittafaqa", "ittafiqū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتفقون",
+      "tur": "verb",
+      "baslik": "يَتَّفِقُونَ • (yattafiqūna) (form VIII) /jat.ta.fi.quː.na/\n# third-person masculine plural non-past active indicative of اِتَّفَقَ (ittafaqa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattafiqūna", "ittafaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتفقوا",
+      "tur": "verb",
+      "baslik": "يَتَّفِقُوا • (yattafiqū) (form VIII) /jat.ta.fi.quː/\n# third-person masculine plural non-past active subjunctive/jussive of اِتَّفَقَ (ittafaqa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattafiqū", "ittafaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتفقتن",
+      "tur": "verb",
+      "baslik": "اِتَّفَقْتُنَّ • (ittafaqtunna) (form VIII) /it.ta.faq.tun.na/\n# second-person feminine plural past active of اِتَّفَقَ (ittafaqa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittafaqtunna", "ittafaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتفقن",
+      "tur": "verb",
+      "baslik": "تَتَّفِقْنَ • (tattafiqna) (form VIII) /tat.ta.fiq.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of اِتَّفَقَ (ittafaqa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattafiqna", "ittafaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتفقن",
+      "tur": "verb",
+      "baslik": "اتفقن (form VIII)\n# اِتَّفَقْنَ (ittafaqna) /it.ta.faq.na/: third-person feminine plural past active of اِتَّفَقَ (ittafaqa)\n# اِتَّفِقْنَ (ittafiqna) /it.ta.fiq.na/: second-person feminine plural imperative of اِتَّفَقَ (ittafaqa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittafaqna", "ittafaqa", "ittafiqna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتفقن",
+      "tur": "verb",
+      "baslik": "يَتَّفِقْنَ • (yattafiqna) (form VIII) /jat.ta.fiq.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of اِتَّفَقَ (ittafaqa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattafiqna", "ittafaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتفقتما",
+      "tur": "verb",
+      "baslik": "اِتَّفَقْتُمَا • (ittafaqtumā) (form VIII) /it.ta.faq.tu.maː/\n# second-person dual past active of اِتَّفَقَ (ittafaqa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittafaqtumā", "ittafaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتفقتا",
+      "tur": "verb",
+      "baslik": "اِتَّفَقَتَا • (ittafaqatā) (form VIII) /it.ta.fa.qa.taː/\n# third-person feminine dual past active of اِتَّفَقَ (ittafaqa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittafaqatā", "ittafaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "اتفقا",
+      "tur": "verb",
+      "baslik": "اتفقا (form VIII)\n# اِتَّفَقَا (ittafaqā) /it.ta.fa.qaː/: third-person masculine dual past active of اِتَّفَقَ (ittafaqa)\n# اِتَّفِقَا (ittafiqā) /it.ta.fi.qaː/: second-person dual imperative of اِتَّفَقَ (ittafaqa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["ittafaqā", "ittafaqa", "ittafiqā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتفقان",
+      "tur": "verb",
+      "baslik": "تَتَّفِقَانِ • (tattafiqāni) (form VIII) /tat.ta.fi.qaː.ni/\n# inflection of اِتَّفَقَ (ittafaqa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattafiqāni", "ittafaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتفقان",
+      "tur": "verb",
+      "baslik": "يَتَّفِقَانِ • (yattafiqāni) (form VIII) /jat.ta.fi.qaː.ni/\n# third-person masculine dual non-past active indicative of اِتَّفَقَ (ittafaqa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattafiqāni", "ittafaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يتفقا",
+      "tur": "verb",
+      "baslik": "يَتَّفِقَا • (yattafiqā) (form VIII) /jat.ta.fi.qaː/\n# third-person masculine dual non-past active subjunctive/jussive of اِتَّفَقَ (ittafaqa)",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["yattafiqā", "ittafaqa"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تتفقا",
+      "tur": "verb",
+      "baslik": "تَتَّفِقَا • (tattafiqā) (form VIII) /tat.ta.fi.qaː/\n# inflection of اِتَّفَقَ (ittafaqa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-viii", "no-gloss"],
+      "okunus": ["tattafiqā", "ittafaqa"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "اتفق", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

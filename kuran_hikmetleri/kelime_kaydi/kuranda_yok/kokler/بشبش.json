@@ -1,60 +1,40 @@
 {
   "kok": "بشبش",
+  "tur": "isim",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["fiil-yok"],
+  "lugat_fiil": false,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "بشبش", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الباء والشين",
-      "baslik": "بشش - بشبش",
-      "mihveri": "هو: انتشارٌ وتفشٍّ لغض أو لطيف في ظاهر الجرم أو منه (1). كالنبت أول ما يخرج من سطح الأرض منتشرًا. ومنه: \"البشاشة - كسحابة: طلاقة الوجه (انبساطُ أسارير الوجه انتشارٌ لها)، وقد بَشِشْتَ (بكسر العين). وتَبَشْبَشَ به: آنَسَه \".",
-      "sesler": "",
-      "tam_metin": "\"أَبَشَّت الأرضُ: التفَّ نبتها، أو أنبتت أول نباتها \" [ق].\n° المعنى المحوري\nهو: انتشارٌ وتفشٍّ لغض أو لطيف في ظاهر الجرم أو منه (1). كالنبت أول ما يخرج من سطح الأرض منتشرًا. ومنه: \"البشاشة - كسحابة: طلاقة الوجه (انبساطُ أسارير الوجه انتشارٌ لها)، وقد بَشِشْتَ (بكسر العين). وتَبَشْبَشَ به: آنَسَه \".",
-      "fasil_ozeti": "° معنى الفصل المعجمي (بش): التفشي الظاهر كما يتمثل في انتشار النبت أول ما يخرج - على وجه الأرض - في (بشش)، وفي تزايد الآدميين (البشر) على وجه الأرض حتى أصبحوا الآن بضعة بلايين من الناس، وهم في تزايد مستمر. وسائر الأحياء في تناقص - في (بشر)."
-    }
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "بش",
+  "ses": {
     "harf": "ب",
+    "fasil": "بش",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+  "cebel": {
     "fasil": "الباء والشين",
+    "baslik": "بشش - بشبش",
     "mihveri": "هو: انتشارٌ وتفشٍّ لغض أو لطيف في ظاهر الجرم أو منه (1). كالنبت أول ما يخرج من سطح الأرض منتشرًا. ومنه: \"البشاشة - كسحابة: طلاقة الوجه (انبساطُ أسارير الوجه انتشارٌ لها)، وقد بَشِشْتَ (بكسر العين). وتَبَشْبَشَ به: آنَسَه \".",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (بش): التفشي الظاهر كما يتمثل في انتشار النبت أول ما يخرج - على وجه الأرض - في (بشش)، وفي تزايد الآدميين (البشر) على وجه الأرض حتى أصبحوا الآن بضعة بلايين من الناس، وهم في تزايد مستمر. وسائر الأحياء في تناقص - في (بشر).",
-    "tam_metin": "\"أَبَشَّت الأرضُ: التفَّ نبتها، أو أنبتت أول نباتها \" [ق].\n° المعنى المحوري\nهو: انتشارٌ وتفشٍّ لغض أو لطيف في ظاهر الجرم أو منه (1). كالنبت أول ما يخرج من سطح الأرض منتشرًا. ومنه: \"البشاشة - كسحابة: طلاقة الوجه (انبساطُ أسارير الوجه انتشارٌ لها)، وقد بَشِشْتَ (بكسر العين). وتَبَشْبَشَ به: آنَسَه \"."
+    "tam_metin": "\"أَبَشَّت الأرضُ: التفَّ نبتها، أو أنبتت أول نباتها \" [ق].\n° المعنى المحوري\nهو: انتشارٌ وتفشٍّ لغض أو لطيف في ظاهر الجرم أو منه (1). كالنبت أول ما يخرج من سطح الأرض منتشرًا. ومنه: \"البشاشة - كسحابة: طلاقة الوجه (انبساطُ أسارير الوجه انتشارٌ لها)، وقد بَشِشْتَ (بكسر العين). وتَبَشْبَشَ به: آنَسَه \".",
+    "fasil_ozeti": "° معنى الفصل المعجمي (بش): التفشي الظاهر كما يتمثل في انتشار النبت أول ما يخرج - على وجه الأرض - في (بشش)، وفي تزايد الآدميين (البشر) على وجه الأرض حتى أصبحوا الآن بضعة بلايين من الناس، وهم في تزايد مستمر. وسائر الأحياء في تناقص - في (بشر)."
   },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "بشبش", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "ust": {
       "kume": 7,
       "merkez_kok": "حدق",
@@ -74,6 +54,10 @@
       "boy": 9
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }

@@ -1,71 +1,59 @@
 {
   "kok": "سترج",
+  "tur": "isim",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["fiil-yok"],
+  "lugat_fiil": false,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 0
+  },
   "sinif": "reddedildi",
-  "turkce_fiil": null,
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "سترج", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kaikki_vikisozluk": [
-      {
-        "w": "سترجة",
-        "u": "سترجة",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "سَتْرَجَة • (satraja) f (plural سَتْرَجَات (satrajāt))",
-        "t": "From the root س ت ر ج (s t r j); itself Borrowed from French sous-titrage.",
-        "s": [
-          ["ar-root", "س ت ر ج (s t r j)"],
-          ["bor+", "Borrowed from French sous-titrage"]
-        ],
-        "g": ["verbal noun of سَتْرَجَ (satraja) (form Iq)", "subtitling"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["سَتْرَجَ"],
-        "r": ["satraja"],
-        "ipa": ["/sat.ra.d͡ʒa/"],
-        "el": [
-          ["س ت ر ج", "Appendix:Arabic roots/س ت ر ج"],
-          ["sous-titrage", "sous-titrage#French"]
-        ],
-        "k": "سترج",
-        "yol": "kök"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": false,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "ست",
+  "ses": {
     "harf": "س",
+    "fasil": "ست",
     "mahrec": "esaliyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "سترجة",
+      "tur": "noun",
+      "baslik": "سَتْرَجَة • (satraja) f (plural سَتْرَجَات (satrajāt))",
+      "etim_sablon": [
+        ["ar-root", "س ت ر ج (s t r j)"],
+        ["bor+", "Borrowed from French sous-titrage"]
+      ],
+      "anlam": ["verbal noun of سَتْرَجَ (satraja) (form Iq)", "subtitling"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["سَتْرَجَ"],
+      "okunus": ["satraja"],
+      "ipa": ["/sat.ra.d͡ʒa/"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "From the root س ت ر ج (s t r j); itself Borrowed from French sous-titrage.",
+      "kognatlar": [
+        ["س ت ر ج", "Appendix:Arabic roots/س ت ر ج"],
+        ["sous-titrage", "sous-titrage#French"]
+      ]
+    }
+  ],
+  "kuran": {
+    "morfoloji_gecis": 0
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "reddedilen": [
+    ["kök", "سترج", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "ust": {
       "kume": 8,
       "merkez_kok": "سير",
@@ -85,6 +73,10 @@
       "boy": 7
     }
   },
-  "kaliplar": {},
-  "kelimeler": []
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
+  }
 }
